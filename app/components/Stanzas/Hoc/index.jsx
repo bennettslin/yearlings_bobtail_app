@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import { getParentOfVerseClassNamesForIndices } from '../helper'
-import { getStanzaVerseIndices } from '../../../album/api/stanzas'
+import { getVerseIndicesForStanza } from '../../../album/api/stanzas'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }
@@ -45,7 +45,7 @@ const propTypes = {
 
                 // "Parent of verse index."
                 getParentOfVerseClassNamesForIndices({
-                    entities: getStanzaVerseIndices(
+                    entities: getVerseIndicesForStanza(
                         lyricSongIndex,
                         stanzaIndex
                     )

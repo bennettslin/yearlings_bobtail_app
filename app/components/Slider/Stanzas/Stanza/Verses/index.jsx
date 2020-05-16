@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { getStanzaVerseIndices } from '../../../../../album/api/stanzas'
+import { getVerseIndicesForStanza } from '../../../../../album/api/stanzas'
 import {
     getStartTimeForStanza,
     getStartTimeForVerse
@@ -34,7 +34,7 @@ const SliderVerses = ({
 }) => {
 
     const
-        stanzaVerseIndices = getStanzaVerseIndices(
+        stanzaVerseIndices = getVerseIndicesForStanza(
             lyricSongIndex,
             stanzaIndex
         ),

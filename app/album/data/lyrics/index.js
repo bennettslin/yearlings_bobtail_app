@@ -104,7 +104,6 @@ songs.forEach(song => {
         // TODO
         addVerseMetadata(song, indexedVerses, finalSong)
 
-        // TODO: Clean up end times method after verse configs.
         addStanzaMetadata({
             lyricUnits,
             totalTime,

@@ -3,7 +3,7 @@ import mp3s from '../../../../assets/mp3s'
 import { getSongVersesCount } from '../../../album/api/verses'
 import {
     getStartTimeForVerse,
-    getEndTimeForVerseIndex
+    getEndTimeForVerse
 } from '../../../album/api/time'
 
 export const getMp3s = () => (
@@ -36,7 +36,7 @@ export const getTimeRelativeToVerseIndex = (
      */
     const
         verseStartTime = getStartTimeForVerse(songIndex, verseIndex),
-        verseEndTime = getEndTimeForVerseIndex(songIndex, verseIndex)
+        verseEndTime = getEndTimeForVerse(songIndex, verseIndex)
 
     if (time < verseStartTime) {
         return -1
