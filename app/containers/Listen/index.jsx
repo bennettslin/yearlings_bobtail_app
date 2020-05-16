@@ -31,7 +31,6 @@ import WikiListener from '../../handlers/Wiki/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
 
 import AudioPlayerManager from '../../managers/AudioPlayer'
-import LogManager from '../../managers/Log'
 
 import FocusContainer from '../Focus'
 
@@ -98,8 +97,6 @@ class ListenContainer extends PureComponent {
                 <WikiWormholeListener />
 
                 <AudioPlayerManager />
-                <LogManager />
-
                 <FocusContainer />
             </>
         )
