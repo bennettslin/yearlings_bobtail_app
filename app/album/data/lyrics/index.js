@@ -25,7 +25,7 @@ import {
     addVerseConfigs
 } from './helpers/verse'
 import { addHasSideCardStatus } from './helpers/unit'
-import { addStanzaTypes } from './helpers/stanzaType'
+import { addStanzaTypeIndices } from './helpers/stanzaTypeIndices'
 import { addStanzaTimes } from './helpers/stanzaTime'
 import {
     addSceneConfigs,
@@ -70,18 +70,17 @@ addSongIndices(songs)
 
 export const finalSongs = []
 
-songs.forEach((song, index) => {
+songs.forEach(song => {
 
     const finalSong = {}
 
-    // TODO: Make this better.
-    if (index !== 0 && index !== 19) {
+    if (!song.logue) {
         addIndexedVerses(song)
 
         // This needs to come after indexed verses.
         addVerseConfigs(song)
         addHasSideCardStatus(song)
-        addStanzaTypes(song)
+        finalSong.stanzaTypeIndices = addStanzaTypeIndices(song)
 
         // This needs to come after verse configs.
         finalSong.stanzaTimes = addStanzaTimes(song)

@@ -13,6 +13,7 @@ import SongStanzasTitle from '../Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 
+import { getStanzaTypeIndex } from '../../../album/api/stanzas'
 import { getIndexedVersesForUnit } from '../../../album/api/verses'
 
 import { getUnit } from '../../../album/api/units'
@@ -69,7 +70,6 @@ class Unit extends PureComponent {
             } = unit,
 
             {
-                stanzaTypeIndex,
                 stanzaType,
                 subCardType,
                 sideCardType,
@@ -83,6 +83,7 @@ class Unit extends PureComponent {
                 hasBottomSideCard
             } = unitMap,
 
+            stanzaTypeIndex = getStanzaTypeIndex(lyricSongIndex, unitIndex),
             hasSide = Boolean(hasTopSideCard || hasBottomSideCard),
             isLoneUnitDot = Boolean(unitDot) && !mainVerses
 

@@ -9,7 +9,7 @@ const _addStanzaIndexToVerseConfig = ({
     songVerseConfigs[verseIndex].stanzaIndex = stanzaIndex
 }
 
-const _getInitialStanzaTimes = (song) => {
+const _initialiseStanzaTimes = (song) => {
     const { lyricUnits } = song
 
     if (!lyricUnits) {
@@ -108,7 +108,7 @@ export const addStanzaTimes = (song) => {
      * based on its time length.
      */
     // Initialise the stanza configs.
-    const stanzaTimes = _getInitialStanzaTimes(song)
+    const stanzaTimes = _initialiseStanzaTimes(song)
 
     if (stanzaTimes) {
         // Add verse durations.

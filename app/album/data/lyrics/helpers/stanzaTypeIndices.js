@@ -1,9 +1,10 @@
-export const addStanzaTypes = (song) => {
+export const addStanzaTypeIndices = (song) => {
     /**
      * Associate a type and index for each stanza, like verse, chorus, and so
      * forth.
      */
-    const { lyricUnits } = song
+    const { lyricUnits } = song,
+        stanzaTypeIndices = []
 
     if (lyricUnits) {
         const stanzaTypeCounters = {}
@@ -26,8 +27,10 @@ export const addStanzaTypes = (song) => {
                     ) + 1
                 }
 
-                // Tell unit its stanza type index.
-                unitMap.stanzaTypeIndex = stanzaTypeCounters[stanzaType]
+                stanzaTypeIndices.push(stanzaTypeCounters[stanzaType])
+
+            } else {
+                stanzaTypeIndices.push(-1)
             }
         })
 
@@ -35,20 +38,22 @@ export const addStanzaTypes = (song) => {
          * Now that we know the count for each stanza type, loop through all
          * lyric units again.
          */
-        lyricUnits.forEach(unit => {
+        lyricUnits.forEach((unit, unitIndex) => {
             const
                 { unitMap } = unit,
                 { stanzaType } = unitMap
 
             if (stanzaType) {
                 /**
-                 * Don't show index if there is only one of stanza of that type
+                 * Don't show index if there is only one stanza of that type
                  * for the entire song.
                  */
                 if (stanzaTypeCounters[stanzaType] === 1) {
-                    unitMap.stanzaTypeIndex = -1
+                    stanzaTypeIndices[unitIndex] = -1
                 }
             }
         })
     }
+
+    return stanzaTypeIndices
 }
