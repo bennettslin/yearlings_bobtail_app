@@ -49,9 +49,7 @@ const _getInitialStanzaConfigs = (song) => {
             // Tell stanza that it owns this unit.
             stanzaConfig.stanzaUnitIndices.push(unitIndex)
 
-            // Then tell unit its stanza index.
-            unitMap.stanzaIndex = stanzaIndex
-
+            // TODO: Do this in verse config.
             getIndexedVersesForUnit(unit).forEach(verse => {
 
                 stanzaConfig.stanzaVerseIndices.push(verse.verseIndex)
