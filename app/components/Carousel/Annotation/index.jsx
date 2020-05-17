@@ -7,6 +7,7 @@ import cx from 'classnames'
 
 import Annotation from '../../Annotation'
 
+import { getDotKeysForAnnotation } from '../../../album/api/annotations'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 
@@ -45,12 +46,11 @@ class CarouselAnnotation extends PureComponent {
                 isSelected,
                 annotationIndex
             } = this.props,
-
-            {
-                columnKey,
-                dotKeys
-
-            } = getCarouselAnnotationData({
+            annotationDotKeys = getDotKeysForAnnotation(
+                lyricSongIndex,
+                annotationIndex
+            ),
+            columnKey = getCarouselAnnotationData({
                 songIndex: lyricSongIndex,
                 annotationIndex
             })
@@ -69,7 +69,7 @@ class CarouselAnnotation extends PureComponent {
                             `CarouselAnnotation__inEarColumn__${columnKey}`,
 
                         getPrefixedDotLetterClassNames(
-                            dotKeys,
+                            annotationDotKeys,
                             // "Child carousel annotation letter."
                             'CcA'
                         ),

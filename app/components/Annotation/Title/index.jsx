@@ -10,8 +10,8 @@ import AnnotationTitleText from './TitleText'
 import AnnotationAccess from './Access'
 
 import {
-    getAnnotationDotKeys,
-    getAnnotationTitle
+    getDotKeysForAnnotation,
+    getTitleForAnnotation
 } from '../../../album/api/annotations'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
@@ -74,12 +74,12 @@ class AnnotationTitle extends PureComponent {
                 selectedDotKeys
             }),
 
-            annotationDotKeys = getAnnotationDotKeys(
+            annotationDotKeys = getDotKeysForAnnotation(
                 lyricSongIndex,
                 annotationIndex
             ),
 
-            annotationTitle = getAnnotationTitle(
+            annotationTitle = getTitleForAnnotation(
                 lyricSongIndex,
                 annotationIndex
             ),

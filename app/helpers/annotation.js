@@ -1,7 +1,7 @@
 import {
     getAnnotationColumnIndex,
     getAnnotationsCount,
-    getAnnotationDotKeys
+    getDotKeysForAnnotation
 } from '../album/api/annotations'
 import { intersects } from '../helpers/dot'
 
@@ -109,7 +109,7 @@ export const getAnnotationIndexForDirection = ({
             }
 
             // Check that this annotation is enabled, given selected dot keys.
-            doesIntersect = intersects(getAnnotationDotKeys(
+            doesIntersect = intersects(getDotKeysForAnnotation(
                 selectedSongIndex,
                 returnIndex
             ), selectedDotKeys)

@@ -9,7 +9,7 @@ import {
     intersects,
     getDotKeysFromBitNumber
 } from '../../../helpers/dot'
-import { getAnnotationDotKeys } from '../../../album/api/annotations'
+import { getDotKeysForAnnotation } from '../../../album/api/annotations'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 
 class AnnotationDispatcher extends PureComponent {
@@ -49,7 +49,7 @@ class AnnotationDispatcher extends PureComponent {
 
         // If selecting an annotation, make sure that its dots intersect.
         if (selectedAnnotationIndex) {
-            const annotationDotKeys = getAnnotationDotKeys(
+            const annotationDotKeys = getDotKeysForAnnotation(
                 selectedSongIndex,
                 selectedAnnotationIndex
             )

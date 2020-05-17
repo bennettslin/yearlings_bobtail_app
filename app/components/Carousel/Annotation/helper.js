@@ -6,22 +6,14 @@ export const getCarouselAnnotationData = ({
     annotationIndex
 }) => {
 
-    const annotationObject = getAnnotation(
+    const { columnIndex } = getAnnotation(
             songIndex,
             annotationIndex
         ),
-
-        {
-            columnIndex,
-            dotKeys
-        } = annotationObject,
 
         columnKey = Number.isFinite(columnIndex) ?
             EAR_COLUMN_KEYS[columnIndex] :
             ''
 
-    return {
-        columnKey,
-        dotKeys
-    }
+    return columnKey
 }
