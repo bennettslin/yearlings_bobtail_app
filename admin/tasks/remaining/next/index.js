@@ -10,7 +10,7 @@ export default [
     },
     {
         taskName: `Data refactor.`,
-        workedHours: 21
+        workedHours: 23
     },
 
     /* Week work. */

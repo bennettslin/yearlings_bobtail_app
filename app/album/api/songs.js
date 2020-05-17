@@ -9,7 +9,7 @@ export const getSongsNotLoguesCount = () => {
     return songs.length - 2
 }
 
-// TODO: Don't pass song object directly.
+// TODO: Only used by unit api now.
 export const getSong = songIndex => {
     return songs[songIndex]
 }

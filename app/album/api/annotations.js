@@ -17,10 +17,7 @@ export const getAnnotationCountForSong = (songIndex) => (
     getAnnotationIndicesArray(songIndex).length
 )
 
-export const getAnnotation = (
-    songIndex,
-    annotationIndex
-) => {
+export const getAnnotation = (songIndex, annotationIndex) => {
     const { annotations } = getFinalSong(songIndex)
     return annotations ? annotations[annotationIndex - 1] : null
 }
