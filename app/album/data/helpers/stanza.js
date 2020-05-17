@@ -3,7 +3,7 @@ import albumLyrics from '../lyrics'
 const _addInitialStanzaMetadata = ({
     songIndex,
     unitVerseIndicesList,
-    finalSong
+    song
 
 }) => {
     const { lyricUnits } = albumLyrics[songIndex],
@@ -56,10 +56,10 @@ const _addInitialStanzaMetadata = ({
         }
     })
 
-    finalSong.stanzaFormTypes = stanzaFormTypes
-    finalSong.stanzaUnitIndicesList = stanzaUnitIndicesList
-    finalSong.stanzaVerseIndicesList = stanzaVerseIndicesList
-    finalSong.verseStanzaIndices = verseStanzaIndices
+    song.stanzaFormTypes = stanzaFormTypes
+    song.stanzaUnitIndicesList = stanzaUnitIndicesList
+    song.stanzaVerseIndicesList = stanzaVerseIndicesList
+    song.verseStanzaIndices = verseStanzaIndices
 
     return stanzaVerseIndicesList
 }
@@ -68,7 +68,7 @@ const _addStanzaEndTimes = ({
     songDuration,
     stanzaVerseIndicesList,
     verseStartTimes,
-    finalSong
+    song
 
 }) => {
     const endTimes = []
@@ -94,7 +94,7 @@ const _addStanzaEndTimes = ({
         endTimes.push(endTime)
     })
 
-    finalSong.stanzaEndTimes = endTimes
+    song.stanzaEndTimes = endTimes
 }
 
 export const addStanzaMetadata = ({
@@ -102,7 +102,7 @@ export const addStanzaMetadata = ({
     songDuration,
     unitVerseIndicesList,
     verseStartTimes,
-    finalSong
+    song
 
 }) => {
     /**
@@ -113,7 +113,7 @@ export const addStanzaMetadata = ({
         _addInitialStanzaMetadata({
             songIndex,
             unitVerseIndicesList,
-            finalSong
+            song
         })
 
     _addStanzaEndTimes({
@@ -121,6 +121,6 @@ export const addStanzaMetadata = ({
         songDuration,
         stanzaVerseIndicesList,
         verseStartTimes,
-        finalSong
+        song
     })
 }

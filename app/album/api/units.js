@@ -1,4 +1,4 @@
-import { getSong, getFinalSong } from './songs'
+import { getSong } from './songs'
 
 export const getUnit = (songIndex, unitIndex) => {
     const { lyricUnits } = getSong(songIndex)
@@ -33,11 +33,11 @@ export const getLastUnitDotCardIndex = (songIndex) => {
 }
 
 export const getFormTypeForUnit = (songIndex, unitIndex) => {
-    const { unitFormTypeIndices } = getFinalSong(songIndex)
+    const { unitFormTypeIndices } = getSong(songIndex)
     return unitFormTypeIndices[unitIndex]
 }
 
 export const getVerseIndicesForUnit = (songIndex, unitIndex) => {
-    const { unitVerseIndicesList } = getFinalSong(songIndex)
+    const { unitVerseIndicesList } = getSong(songIndex)
     return unitVerseIndicesList[unitIndex]
 }

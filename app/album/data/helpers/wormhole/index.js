@@ -22,7 +22,7 @@ export const addWormholeMetadata = (annotationsList, album) => {
             })
 
             album
-                .finalSongs[songIndex]
+                .songs[songIndex]
                 .annotationWikiWormholes = annotationWikiWormholes
         }
     })

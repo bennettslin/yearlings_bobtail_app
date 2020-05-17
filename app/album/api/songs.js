@@ -1,24 +1,22 @@
-import songs from '../data/lyrics'
-import { finalAlbum } from '..'
+import album from '..'
 
 import { getArrayOfLength } from '../../helpers/general'
 
-const getSongIndices = () => (
-    getArrayOfLength(songs.length)
+export const getAlbum = () => (
+    album
 )
 
-export const getSongsAndLoguesCount = () => {
-    return songs.length
-}
+export const getSongsAndLoguesCount = () => (
+    getAlbum().songs.length
+)
 
-export const getSongsNotLoguesCount = () => {
-    return songs.length - 2
-}
+export const getSongsNotLoguesCount = () => (
+    getSongsAndLoguesCount() - 2
+)
 
-// TODO: Only used by unit api now.
-export const getSong = songIndex => {
-    return songs[songIndex]
-}
+const getSongIndices = () => (
+    getArrayOfLength(getSongsAndLoguesCount())
+)
 
 export const getIsSongValid = songIndex => {
     const songIndices = getSongIndices(songIndex)
@@ -30,21 +28,17 @@ export const getStartingIndexForBook = (bookIndex) => {
     return bookIndex * bookLength + 1
 }
 
-export const getBookForSongIndex = songIndex => {
-    return songIndex < getStartingIndexForBook(1) ? 0 : 1
-}
+export const getBookForSongIndex = songIndex => (
+    songIndex < getStartingIndexForBook(1) ? 0 : 1
+)
 
-const getFinalSongs = () => {
-    return finalAlbum.finalSongs
-}
+export const getSong = songIndex => (
+    getAlbum().songs[songIndex]
+)
 
-export const getFinalSong = songIndex => {
-    return getFinalSongs()[songIndex]
-}
-
-export const getSongIsLogue = songIndex => {
-    return songIndex === 0 || songIndex === getSongsAndLoguesCount() - 1
-}
+export const getSongIsLogue = songIndex => (
+    songIndex === 0 || songIndex === getSongsAndLoguesCount() - 1
+)
 
 export const getTitleForSong = ({
     songIndex,
@@ -52,20 +46,20 @@ export const getTitleForSong = ({
 }) => {
     const
         isLogue = getSongIsLogue(songIndex),
-        title = getFinalSong(songIndex).title
+        title = getSong(songIndex).title
 
     return `${showIndex && !isLogue ? songIndex + '. ' : ''}${title}`
 }
 
-export const getOverviewForSong = songIndex => {
-    return getFinalSong(songIndex).overview
-}
+export const getOverviewForSong = songIndex => (
+    getSong(songIndex).overview
+)
 
 export const getEarStatusForSong = songIndex => {
     const {
         hasSideCards,
         isDoublespeaker
-    } = getFinalSong(songIndex)
+    } = getSong(songIndex)
 
     return {
         hasSideCards,

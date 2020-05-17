@@ -1,5 +1,5 @@
 import {
-    getFinalSong,
+    getSong,
     getSongIsLogue
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
@@ -9,7 +9,7 @@ export const getVerseIndices = (songIndex) => (
         [] :
         getArrayOfLength(
             // Which verse array we use is arbitrary.
-            getFinalSong(songIndex).verseDurations.length
+            getSong(songIndex).verseDurations.length
         )
 )
 
@@ -19,7 +19,7 @@ export const getIsVerseValid = (songIndex, verseIndex) => {
 }
 
 export const getVerse = (songIndex, verseIndex) => {
-    const { indexedVerses } = getFinalSong(songIndex)
+    const { indexedVerses } = getSong(songIndex)
     return indexedVerses ? indexedVerses[verseIndex] : null
 }
 
@@ -28,12 +28,12 @@ export const getVerseCountForSong = (songIndex) => (
 )
 
 export const getSceneIndexForVerse = (songIndex, verseIndex) => {
-    const { verseSceneIndices } = getFinalSong(songIndex)
+    const { verseSceneIndices } = getSong(songIndex)
     return verseSceneIndices ? verseSceneIndices[verseIndex] : 0
 }
 
 export const getStanzaIndexForVerse = (songIndex, verseIndex) => {
-    const { verseStanzaIndices } = getFinalSong(songIndex)
+    const { verseStanzaIndices } = getSong(songIndex)
     return verseStanzaIndices[verseIndex]
 }
 

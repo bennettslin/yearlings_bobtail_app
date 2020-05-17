@@ -1,5 +1,5 @@
 import {
-    getFinalSong,
+    getSong,
     getSongIsLogue
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
@@ -9,21 +9,21 @@ export const getStanzaIndices = (songIndex) => (
         [] :
         getArrayOfLength(
             // Which stanza array we use is arbitrary.
-            getFinalSong(songIndex).stanzaFormTypes.length
+            getSong(songIndex).stanzaFormTypes.length
         )
 )
 
 export const getFormTypeForStanza = (songIndex, stanzaIndex) => {
-    const { stanzaFormTypes } = getFinalSong(songIndex)
+    const { stanzaFormTypes } = getSong(songIndex)
     return stanzaFormTypes[stanzaIndex]
 }
 
 export const getUnitIndicesForStanza = (songIndex, stanzaIndex) => {
-    const { stanzaUnitIndicesList } = getFinalSong(songIndex)
+    const { stanzaUnitIndicesList } = getSong(songIndex)
     return stanzaUnitIndicesList[stanzaIndex]
 }
 
 export const getVerseIndicesForStanza = (songIndex, stanzaIndex) => {
-    const { stanzaVerseIndicesList } = getFinalSong(songIndex)
+    const { stanzaVerseIndicesList } = getSong(songIndex)
     return stanzaVerseIndicesList[stanzaIndex]
 }

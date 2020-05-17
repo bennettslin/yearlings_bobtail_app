@@ -1,3 +1,4 @@
+import { getSongIndicesArray } from './lyrics'
 import {
     addSongAndLogueMetadata,
     addSongMetadata
@@ -10,9 +11,6 @@ import { addAnnotationMetadata } from './helpers/annotation'
 import { addAdminMetadata } from './helpers/admin'
 import { addWormholeMetadata } from './helpers/wormhole'
 
-// TODO: Eventually don't grab songs here.
-import songs, { getSongIndicesArray } from './lyrics'
-
 logServe({
     log: 'Begin parsing album.',
     action: 'begin',
@@ -21,18 +19,18 @@ logServe({
 
 const annotationsList = []
 
-const finalSongs = getSongIndicesArray().map(songIndex => {
-    const finalSong = {}
+const songs = getSongIndicesArray().map(songIndex => {
+    const song = {}
     let annotations
 
     const isLogue =
-        addSongAndLogueMetadata(songIndex, finalSong)
+        addSongAndLogueMetadata(songIndex, song)
 
     if (!isLogue) {
         const songDuration =
-            addSongMetadata(songIndex, finalSong)
+            addSongMetadata(songIndex, song)
 
-        addLyricMetadata(songIndex, finalSong)
+        addLyricMetadata(songIndex, song)
 
         // TODO: Still need to remove annotations from verses.
         const {
@@ -41,7 +39,7 @@ const finalSongs = getSongIndicesArray().map(songIndex => {
         } = addUnitAndVerseMetadata({
             songIndex,
             songDuration,
-            finalSong
+            song
         })
 
         addStanzaMetadata({
@@ -49,7 +47,7 @@ const finalSongs = getSongIndicesArray().map(songIndex => {
             songDuration,
             unitVerseIndicesList,
             verseStartTimes,
-            finalSong
+            song
         })
 
         addSceneMetadata({
@@ -57,31 +55,25 @@ const finalSongs = getSongIndicesArray().map(songIndex => {
             songDuration,
             unitVerseIndicesList,
             verseStartTimes,
-            finalSong
+            song
         })
 
         // TODO: Remove extraneous stuff from cards.
         annotations =
-            addAnnotationMetadata(songIndex, finalSong)
-
-        // TODO: Add lyric units to finalSongs.
+            addAnnotationMetadata(songIndex, song)
     }
 
     annotationsList.push(annotations)
-    return finalSong
+    return song
 })
-export const finalAlbum = { finalSongs }
+export const album = { songs }
 
-const album = { songs }
-
-addWormholeMetadata(annotationsList, finalAlbum)
-addAdminMetadata(annotationsList, finalAlbum)
+addWormholeMetadata(annotationsList, album)
+addAdminMetadata(annotationsList, album)
 
 // TODO: Move to helper that adds based on delivery.
 global.album = album
-global.finalAlbum = finalAlbum
-global.a = (songIndex) => album.songs[songIndex]
-global.f = (songIndex) => finalAlbum.finalSongs[songIndex]
+global.f = (songIndex) => album.songs[songIndex]
 
 logServe({
     log: 'End parsing album.',

@@ -1,4 +1,3 @@
-// TODO: Refactor this. Separate into smaller files
 import { registerCardsDotKeys } from './register'
 import { getFormattedAnnotationTitle } from '../../../../../helpers/format'
 

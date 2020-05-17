@@ -1,6 +1,6 @@
 import albumLyrics from '../lyrics'
 
-export const addHasSideCard = (songIndex, finalSong) => {
+export const addHasSideCard = (songIndex, song) => {
     const { lyricUnits } = albumLyrics[songIndex]
     /**
      * Let app know that song has side stanzas. Only applies to "On a Golden
@@ -19,6 +19,6 @@ export const addHasSideCard = (songIndex, finalSong) => {
     ))
 
     if (hasSideCards) {
-        finalSong.hasSideCards = true
+        song.hasSideCards = true
     }
 }

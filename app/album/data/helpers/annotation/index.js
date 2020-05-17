@@ -74,16 +74,9 @@ const _recurseThroughVerse = ({
     }
 }
 
-export const addAnnotationMetadata = (songIndex, finalSong) => {
-    const song = albumLyrics[songIndex],
-        { lyricUnits } = song
-
-    const annotations = [],
-        annotationColumnIndices = [],
-        annotationDotKeysList = [],
-        annotationTitles = [],
-        annotationVerseIndices = [],
-        annotationCardsList = []
+export const addAnnotationMetadata = (songIndex, song) => {
+    const { lyricUnits } = albumLyrics[songIndex],
+        annotations = []
 
     lyricUnits.forEach(unit => {
         const {
@@ -120,6 +113,13 @@ export const addAnnotationMetadata = (songIndex, finalSong) => {
         })
     })
 
+    const
+        annotationColumnIndices = [],
+        annotationDotKeysList = [],
+        annotationTitles = [],
+        annotationVerseIndices = [],
+        annotationCardsList = []
+
     /**
      * Now that we have recursively gone through the lyrics and the annotation
      * data has been populated, we will now spread them out into arrays for
@@ -145,11 +145,11 @@ export const addAnnotationMetadata = (songIndex, finalSong) => {
 
     // Don't bother to add if it's all left column.
     if (annotationColumnIndices.some(index => index === 1)) {
-        finalSong.annotationColumnIndices = annotationColumnIndices
+        song.annotationColumnIndices = annotationColumnIndices
     }
-    finalSong.annotationDotKeysList = annotationDotKeysList
-    finalSong.annotationTitles = annotationTitles
-    finalSong.annotationVerseIndices = annotationVerseIndices
-    finalSong.annotationCardsList = annotationCardsList
+    song.annotationDotKeysList = annotationDotKeysList
+    song.annotationTitles = annotationTitles
+    song.annotationVerseIndices = annotationVerseIndices
+    song.annotationCardsList = annotationCardsList
     return annotations
 }

@@ -1,5 +1,5 @@
 import {
-    getFinalSong,
+    getSong,
     getSongIsLogue
 } from './songs'
 import albumScenes from '../data/scenes'
@@ -25,7 +25,7 @@ export const getSceneIndices = (songIndex) => (
         [] :
         getArrayOfLength(
             // Which scene array we use is arbitrary.
-            getFinalSong(songIndex).sceneDurations.length
+            getSong(songIndex).sceneDurations.length
         )
 )
 
@@ -34,7 +34,7 @@ export const getSceneCountForSong = (songIndex) => (
 )
 
 export const getVerseIndexForScene = (songIndex, sceneIndex) => {
-    const { sceneVerseIndices } = getFinalSong(songIndex)
+    const { sceneVerseIndices } = getSong(songIndex)
     return sceneVerseIndices[sceneIndex]
 }
 

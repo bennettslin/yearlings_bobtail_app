@@ -1,24 +1,24 @@
-import { finalAlbum } from '../../../app/album'
+import { getAlbum } from '../../../app/album/api/songs'
 
 export const getGlobalAnnotationCount = () => {
-    const { globalAnnotationIndicesList } = finalAlbum
+    const { globalAnnotationIndicesList } = getAlbum()
     return globalAnnotationIndicesList.length
 }
 
 export const getGlobalAnnotationDoneCount = () => {
-    const { globalAnnotationDoneCount } = finalAlbum
+    const { globalAnnotationDoneCount } = getAlbum()
     return globalAnnotationDoneCount
 }
 
 const _getMetadataForGlobalAnnotation = globalIndex => {
-    const { globalAnnotationIndicesList } = finalAlbum,
+    const { globalAnnotationIndicesList } = getAlbum(),
         globalAnnotationIndices = globalAnnotationIndicesList[globalIndex]
 
     return globalAnnotationIndices || null
 }
 
 const _getTodoForGlobalAnnotation = globalIndex => {
-    const { globalAnnotationTodos } = finalAlbum
+    const { globalAnnotationTodos } = getAlbum()
     return globalAnnotationTodos[globalIndex]
 }
 

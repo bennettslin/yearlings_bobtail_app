@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 // Import these here just to make them available.
 import './utils/logger'
 import './utils/analytics'
+import './album'
 
 import { createStore } from 'redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'

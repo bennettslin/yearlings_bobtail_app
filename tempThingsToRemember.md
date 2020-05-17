@@ -13,34 +13,20 @@ Switching ear deselects neutral annotation.
 
 # Album refactor
 
-## Figure out what these need, build them from scratch
-* annotations
-    * TODO
+# TODO
+* Add scenes and tips to album object, add them to API
+* Move global logging into admin folder
+* Get album through global env
+* Get album from data folder or global env based on delivery
+* Do global logging based on delivery
 
-* indexedVerses
-    * lyric, centre, left, or right
-        * delete anchor metadata?
-    * verseAnnotationIndices
-    * lastAnnotationIndex
-    * delete verseIndex?
-    * delete time?
+## TODO next
+* Remove annotations from verses.
+* Remove verses from units.
+* Remove extra stuff from cards.
 
-* lyricUnits
-    * TODO
-
-* Need unitVerseIndicesList
-
-# Can be completely separate
-    * times
-    * tips
-
-* songs
-    * lyrics
-    * scenes
-    * tips
-
-# Annotation todos
-If single card, just pass it instead of array.
-If just single card, don't have dot keys, and then get dot keys from annotation
-If wiki or wormhole index is single, just pass it instead of array.
-Make dot keys bit numbers
+## Annotations
+* If single card, just pass it instead of array.
+* If just single card, don't have dot keys, and then get dot keys from annotation
+* If wiki or wormhole index is single, just pass it instead of array.
+* Make dot keys bit numbers?

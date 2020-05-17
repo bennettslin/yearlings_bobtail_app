@@ -5,12 +5,8 @@ export default [
         workedHours: 0
     },
     {
-        taskName: `File organisation refactor.`,
-        workedHours: 3
-    },
-    {
         taskName: `Data refactor.`,
-        workedHours: 23
+        workedHours: 30
     },
 
     /* Week work. */
@@ -40,15 +36,15 @@ export default [
         workedHours: 0,
         neededHours: 5
     },
+    {
+        taskName: `Clean up routing and storage.`,
+        workedHours: 0,
+        neededHours: 10
+    },
 
     /* Weekend work. */
     {
         taskName: `Editing. Include overviews.`,
         workedHours: 0
-    },
-    {
-        taskName: `Clean up routing container.`,
-        workedHours: 0,
-        neededHours: 10
     }
 ]

@@ -1,4 +1,3 @@
-// TODO: Separate further into smaller files?
 import { REFERENCE } from '../../../../../constants/dots'
 import { WIKI } from '../../../../../constants/lyrics'
 

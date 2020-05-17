@@ -1,6 +1,6 @@
 import {
-    getSongIsLogue,
-    getFinalSong
+    getSong,
+    getSongIsLogue
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
 
@@ -9,7 +9,7 @@ export const getAnnotationIndices = (songIndex) => (
         [] :
         getArrayOfLength(
             // Which annotation array we use is arbitrary.
-            getFinalSong(songIndex).annotationDotKeysList.length
+            getSong(songIndex).annotationDotKeysList.length
         )
 )
 
@@ -23,29 +23,29 @@ export const getIsAnnotationValid = (songIndex, annotationIndex) => {
 }
 
 export const getDotKeysForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationDotKeysList } = getFinalSong(songIndex)
+    const { annotationDotKeysList } = getSong(songIndex)
     return annotationDotKeysList[annotationIndex - 1]
 }
 
 export const getTitleForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationTitles } = getFinalSong(songIndex)
+    const { annotationTitles } = getSong(songIndex)
     return annotationTitles[annotationIndex - 1]
 }
 
 export const getTodosForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationTodos } = getFinalSong(songIndex)
+    const { annotationTodos } = getSong(songIndex)
     return annotationTodos[annotationIndex - 1]
 }
 
 export const getWikiWormholesForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationWikiWormholes } = getFinalSong(songIndex)
+    const { annotationWikiWormholes } = getSong(songIndex)
     return annotationWikiWormholes ?
         annotationWikiWormholes[annotationIndex - 1] :
         0
 }
 
 export const getVerseIndexForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationVerseIndices } = getFinalSong(songIndex),
+    const { annotationVerseIndices } = getSong(songIndex),
         annotationVerseIndex = annotationVerseIndices[annotationIndex - 1]
 
     // If no verse index for annotation, value is -1.
@@ -53,7 +53,7 @@ export const getVerseIndexForAnnotation = (songIndex, annotationIndex) => {
 }
 
 export const getColumnIndexForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationColumnIndices } = getFinalSong(songIndex)
+    const { annotationColumnIndices } = getSong(songIndex)
 
     if (!annotationColumnIndices) {
         return null
@@ -65,7 +65,7 @@ export const getColumnIndexForAnnotation = (songIndex, annotationIndex) => {
 }
 
 export const getCardsForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationCardsList } = getFinalSong(songIndex)
+    const { annotationCardsList } = getSong(songIndex)
     return annotationCardsList[annotationIndex - 1] || null
 }
 

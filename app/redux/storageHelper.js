@@ -1,5 +1,5 @@
 // Helper for getting and setting state persisted in user's local storage.
-import album from '../album'
+import { getAlbum } from '../album/api/songs'
 
 import { getVerseCountForSong } from '../album/api/verses'
 
@@ -32,14 +32,14 @@ import {
 
 const _getValidatedStoredSong = () => {
     const selectedSongIndex = _validateIndexForKey(SELECTED_SONG_INDEX)
-    return album.songs[selectedSongIndex]
+    return getAlbum().songs[selectedSongIndex]
 }
 
 const _getValidatedStoredSongIndex = () => {
     return _validateIndexForKey(SELECTED_SONG_INDEX)
 }
 
-const _validateIndexForKey = (key) => {
+const _validateIndexForKey = key => {
     const
         parsedValue = parseInt(getWindowStorage()[key]),
         valueIsNumber = Number.isFinite(parsedValue)
@@ -53,7 +53,7 @@ const _validateIndexForKey = (key) => {
             isValid =
                 valueIsNumber &&
                 parsedValue > -1 &&
-                parsedValue < album.songs.length
+                parsedValue < getAlbum().songs.length
             break
         case SELECTED_ANNOTATION_INDEX:
         {
