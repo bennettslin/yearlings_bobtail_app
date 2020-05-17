@@ -5,16 +5,15 @@ import {
     addWormholeLinksToCard
 } from './helpers/source'
 
-const TEMP_WORMHOLE_LINKS = {}
+const wormholeLinks = {}
 
-export const addWormholeMetadata = (songs) => {
-    initialiseTempWormholeLinks(songs, TEMP_WORMHOLE_LINKS)
-    tellEachSourceLinkItsDestination(songs, TEMP_WORMHOLE_LINKS)
-    registerWikiWormholeLinks(songs)
-    addWormholeLinksToCard(songs, TEMP_WORMHOLE_LINKS)
+export const addWormholeMetadata = (annotationsList, album) => {
+    initialiseTempWormholeLinks(annotationsList, wormholeLinks)
+    tellEachSourceLinkItsDestination(annotationsList, wormholeLinks)
+    registerWikiWormholeLinks(annotationsList)
+    addWormholeLinksToCard(annotationsList, wormholeLinks)
 
-    songs.forEach(song => {
-        const { annotations } = song
+    annotationsList.forEach((annotations, songIndex) => {
         if (annotations) {
             const annotationWikiWormholes = []
 
@@ -22,7 +21,9 @@ export const addWormholeMetadata = (songs) => {
                 annotationWikiWormholes.push(annotation.wikiWormholes || null)
             })
 
-            song.annotationWikiWormholes = annotationWikiWormholes
+            album
+                .finalSongs[songIndex]
+                .annotationWikiWormholes = annotationWikiWormholes
         }
     })
 }

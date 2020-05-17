@@ -42,9 +42,8 @@ export const getFinalSong = songIndex => {
     return getFinalSongs()[songIndex]
 }
 
-// TODO: Change to use final song.
 export const getSongIsLogue = songIndex => {
-    return songIndex === 0 || songIndex === 19
+    return songIndex === 0 || songIndex === getSongsAndLoguesCount() - 1
 }
 
 export const getTitleForSong = ({

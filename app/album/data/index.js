@@ -19,8 +19,11 @@ logServe({
     label: 'album'
 })
 
-export const finalSongs = getSongIndicesArray().map(songIndex => {
+const annotationsList = []
+
+const finalSongs = getSongIndicesArray().map(songIndex => {
     const finalSong = {}
+    let annotations
 
     const isLogue =
         addSongAndLogueMetadata(songIndex, finalSong)
@@ -57,19 +60,24 @@ export const finalSongs = getSongIndicesArray().map(songIndex => {
             finalSong
         })
 
-        addAnnotationMetadata(songIndex, finalSong)
+        // TODO: Remove extraneous stuff from cards.
+        annotations =
+            addAnnotationMetadata(songIndex, finalSong)
+
+        // TODO: Add lyric units to finalSongs.
     }
 
+    annotationsList.push(annotations)
     return finalSong
 })
-
-const album = { songs }
 export const finalAlbum = { finalSongs }
 
-addWormholeMetadata(finalSongs)
-addAdminMetadata(finalAlbum)
+const album = { songs }
 
-// FIXME: Remove.
+addWormholeMetadata(annotationsList, finalAlbum)
+addAdminMetadata(annotationsList, finalAlbum)
+
+// TODO: Move to helper that adds based on delivery.
 global.album = album
 global.finalAlbum = finalAlbum
 global.a = (songIndex) => album.songs[songIndex]

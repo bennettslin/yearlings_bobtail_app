@@ -49,8 +49,11 @@ const _addCardWormholeLinksToTempAlbumLinks = ({
     annotation.dotKeys[WORMHOLE] = true
 }
 
-export const initialiseTempWormholeLinks = (songs, tempWormholeLinks) => {
-    songs.forEach(({ annotations }, songIndex) => {
+export const initialiseTempWormholeLinks = (
+    annotationsList,
+    tempWormholeLinks
+) => {
+    annotationsList.forEach((annotations, songIndex) => {
         if (annotations) {
             annotations.forEach(annotation => {
                 const { cards } = annotation

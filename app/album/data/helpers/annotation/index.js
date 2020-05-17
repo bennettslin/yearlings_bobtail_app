@@ -147,5 +147,5 @@ export const addAnnotationMetadata = (songIndex, finalSong) => {
     finalSong.annotationTitles = annotationTitles
     finalSong.annotationVerseIndices = annotationVerseIndices
     finalSong.annotationCardsList = annotationCardsList
-    finalSong.annotations = annotations
+    return annotations
 }

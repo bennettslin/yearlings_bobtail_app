@@ -1,11 +1,11 @@
-export const addAdminMetadata = (album) => {
-    const { finalSongs } = album,
+export const addAdminMetadata = (annotationsList, album) => {
+    const
         globalAnnotationIndicesList = [],
         globalAnnotationTodos = []
 
     let globalAnnotationDoneCount = 0
 
-    finalSongs.forEach(({ annotations }, songIndex) => {
+    annotationsList.forEach((annotations, songIndex) => {
         if (annotations) {
             annotations.forEach(annotation => {
                 const { annotationIndex } = annotation

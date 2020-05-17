@@ -1,13 +1,16 @@
-const getAnnotationObject = (
-    songs,
+const _getAnnotation = (
+    annotationsList,
     songIndex,
     annotationIndex
 ) => {
-    const { annotations } = songs[songIndex]
+    const annotations = annotationsList[songIndex]
     return annotations ? annotations[annotationIndex - 1] : null
 }
 
-export const tellEachSourceLinkItsDestination = (songs, tempWormholeLinks) => {
+export const tellEachSourceLinkItsDestination = (
+    annotationsList,
+    tempWormholeLinks
+) => {
     /**
      * For each annotation with a wormhole, add an array of links to all
      * other wormholes.
@@ -23,7 +26,11 @@ export const tellEachSourceLinkItsDestination = (songs, tempWormholeLinks) => {
                 } = tempLink,
 
                 // Find the card for this link.
-                { cards } = getAnnotationObject(songs, songIndex, annotationIndex),
+                { cards } = _getAnnotation(
+                    annotationsList,
+                    songIndex,
+                    annotationIndex
+                ),
                 card = cards[cardIndex]
 
             // Let it know every other link for this wormhole key.
@@ -46,7 +53,7 @@ export const tellEachSourceLinkItsDestination = (songs, tempWormholeLinks) => {
     }
 }
 
-export const addWormholeLinksToCard = (songs, tempWormholeLinks) => {
+export const addWormholeLinksToCard = (annotationsList, tempWormholeLinks) => {
     // Now that each wormhole knows its source index, get destination indices.
     for (const linkKey in tempWormholeLinks) {
         const tempLinks = tempWormholeLinks[linkKey]
@@ -58,12 +65,14 @@ export const addWormholeLinksToCard = (songs, tempWormholeLinks) => {
                     cardIndex,
                     tempSourceWormholeLinks
                 } = destinationLink,
-
-                annotation = getAnnotationObject(songs, songIndex, annotationIndex),
                 {
                     cards,
                     tempSourceWormholeIndices
-                } = annotation,
+                } = _getAnnotation(
+                    annotationsList,
+                    songIndex,
+                    annotationIndex
+                ),
                 card = cards[cardIndex]
 
             card.wormholeLinks = tempLinks.filter((destinationLink, thisIndex) => {

@@ -121,8 +121,8 @@ const _registerWikiWormholeLinksForCard = ({
     }
 }
 
-export const registerWikiWormholeLinks = (songs) => {
-    songs.forEach(({ annotations }, songIndex) => {
+export const registerWikiWormholeLinks = (annotationsList) => {
+    annotationsList.forEach((annotations, songIndex) => {
         if (annotations) {
             /**
              * Add wiki and wormhole indices. These can only be determined

@@ -38,10 +38,10 @@ Ellipsis is too short when only right cards are shown.
     * tips
 
 # Annotation todos
-Put global annotations and other admin values including todos in a single admin object at the album top level.
+Fix logue
 Fix carousel annotation not hiding upon ear click (might need to reconsider making 0 the default, maybe pass -1 to api, then api passes null to component)
-Pass annotations externally instead of through finalSongs
+
 If single card, just pass it instead of array.
 If just single card, don't have dot keys, and then get dot keys from annotation
-If wiki or wormhole is single, just pass it instead of array.
+If wiki or wormhole index is single, just pass it instead of array.
 Make dot keys bit numbers
