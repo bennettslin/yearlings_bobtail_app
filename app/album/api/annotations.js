@@ -55,10 +55,13 @@ export const getVerseIndexForAnnotation = (songIndex, annotationIndex) => {
 export const getColumnIndexForAnnotation = (songIndex, annotationIndex) => {
     const { annotationColumnIndices } = getFinalSong(songIndex)
 
-    // Default to left if it's not explicitly right.
-    return annotationColumnIndices ?
-        annotationColumnIndices[annotationIndex] :
-        0
+    if (!annotationColumnIndices) {
+        return null
+    }
+
+    const columnIndex = annotationColumnIndices[annotationIndex - 1]
+
+    return Number.isFinite(columnIndex) ? columnIndex : null
 }
 
 export const getCardsForAnnotation = (songIndex, annotationIndex) => {

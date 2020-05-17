@@ -8,6 +8,8 @@ Put mapWormholeLinkForDispatch in own dispatch dispatchWormhole
 
 # FIXME
 Ellipsis is too short when only right cards are shown.
+Loading with annotation for right ear column deselects annotation.
+Switching ear deselects neutral annotation.
 
 # Album refactor
 
@@ -38,8 +40,6 @@ Ellipsis is too short when only right cards are shown.
     * tips
 
 # Annotation todos
-Fix carousel annotation not hiding upon ear click (might need to reconsider making 0 the default, maybe pass -1 to api, then api passes null to component)
-
 If single card, just pass it instead of array.
 If just single card, don't have dot keys, and then get dot keys from annotation
 If wiki or wormhole index is single, just pass it instead of array.

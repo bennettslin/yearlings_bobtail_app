@@ -128,7 +128,11 @@ export const addAnnotationMetadata = (songIndex, finalSong) => {
      * push default values to keep the array lengths equal.
      */
     annotations.forEach(annotation => {
-        annotationColumnIndices.push(annotation.columnIndex || 0)
+        annotationColumnIndices.push(
+            Number.isFinite(annotation.columnIndex) ?
+                annotation.columnIndex :
+                -1
+        )
         annotationDotKeysList.push(annotation.dotKeys)
         annotationTitles.push(annotation.title)
         annotationVerseIndices.push(
