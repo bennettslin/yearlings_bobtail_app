@@ -18,8 +18,8 @@ export const getAnnotation = (
 }
 
 export const getDotKeysForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationDotKeys } = getFinalSong(songIndex)
-    return annotationDotKeys[annotationIndex - 1]
+    const { annotationDotKeysList } = getFinalSong(songIndex)
+    return annotationDotKeysList[annotationIndex - 1]
 }
 
 export const getTitleForAnnotation = (songIndex, annotationIndex) => {
@@ -27,21 +27,22 @@ export const getTitleForAnnotation = (songIndex, annotationIndex) => {
     return annotationTitles[annotationIndex - 1]
 }
 
+export const getTodosForAnnotation = (songIndex, annotationIndex) => {
+    const { annotationTodos } = getFinalSong(songIndex)
+    return annotationTodos[annotationIndex - 1]
+}
+
 export const getWikiWormholesForAnnotation = (songIndex, annotationIndex) => {
     const { annotationWikiWormholes } = getFinalSong(songIndex)
     return annotationWikiWormholes[annotationIndex - 1]
 }
 
-export const getVerseIndexForAnnotationIndex = (
-    songIndex,
-    annotationIndex
-) => {
-    const annotation = getAnnotation(
-        songIndex,
-        annotationIndex
-    )
+export const getVerseIndexForAnnotation = (songIndex, annotationIndex) => {
+    const { annotationVerseIndices } = getFinalSong(songIndex),
+        annotationVerseIndex = annotationVerseIndices[annotationIndex - 1]
 
-    return annotation ? annotation.verseIndex : -1
+    // If no verse index for annotation, value is -1.
+    return annotationVerseIndex >= 0 ? annotationVerseIndex : null
 }
 
 export const getAnnotationColumnIndex = (

@@ -8,7 +8,7 @@ import AnnotationDispatcher from '../Dispatcher'
 import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
 
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
-import { getVerseIndexForAnnotationIndex } from '../../../album/api/annotations'
+import { getVerseIndexForAnnotation } from '../../../album/api/annotations'
 import { populateRefs } from '../../../helpers/ref'
 
 class AnnotationListener extends PureComponent {
@@ -53,16 +53,20 @@ class AnnotationListener extends PureComponent {
 
             /**
              * If annotation in lyric verse was clicked, and annotation is not
-             * selectable, interactive underlying verse instead.
+             * selectable, activate underlying verse, but only if it is
+             * interactable.
              */
             if (queuedAnnotationFromLyricVerse && !canDispatchAnnotation) {
-                const { selectedSongIndex } = this.props
-                this.activateVerseIndex(
-                    getVerseIndexForAnnotationIndex(
+                const
+                    { selectedSongIndex } = this.props,
+                    annotationVerseIndex = getVerseIndexForAnnotation(
                         selectedSongIndex,
                         queuedAnnotationIndex
                     )
-                )
+
+                if (Number.isFinite(annotationVerseIndex)) {
+                    this.activateVerseIndex(annotationVerseIndex)
+                }
             }
 
             this.props.resetAnnotationQueue()

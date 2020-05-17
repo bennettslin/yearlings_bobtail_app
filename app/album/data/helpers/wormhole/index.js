@@ -23,6 +23,7 @@ export const addWormholeMetadata = (songs) => {
 
                 // TODO: Eventually get rid of these, since we won't pass annotation object to begin with.
                 delete annotation.dotKeys
+                delete annotation.verseIndex
                 delete annotation.wikiWormholes
             })
 

@@ -79,8 +79,10 @@ export const addAnnotations = (songIndex, finalSong) => {
         { lyricUnits } = song
 
     const annotations = [],
-        annotationDotKeys = [],
-        annotationTitles = []
+        annotationDotKeysList = [],
+        annotationTitles = [],
+        annotationTodos = [],
+        annotationVerseIndices = []
 
     lyricUnits.forEach(unit => {
         const {
@@ -118,14 +120,23 @@ export const addAnnotations = (songIndex, finalSong) => {
     })
 
     annotations.forEach(annotation => {
-        annotationDotKeys.push(annotation.dotKeys)
+        annotationDotKeysList.push(annotation.dotKeys)
         annotationTitles.push(annotation.title)
+        annotationTodos.push(annotation.todo)
+        annotationVerseIndices.push(
+            Number.isFinite(annotation.verseIndex) ?
+                annotation.verseIndex :
+                -1
+        )
 
         // TODO: Eventually get rid of these, since we won't pass annotation object to begin with.
         delete annotation.title
+        // delete annotation.todo
     })
 
-    finalSong.annotationDotKeys = annotationDotKeys
+    finalSong.annotationDotKeysList = annotationDotKeysList
     finalSong.annotationTitles = annotationTitles
+    finalSong.annotationTodos = annotationTodos
+    finalSong.annotationVerseIndices = annotationVerseIndices
     finalSong.annotations = annotations
 }
