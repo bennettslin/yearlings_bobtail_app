@@ -19,7 +19,7 @@ import Scene_17 from './17_VeganProclamation'
 import Scene_18 from './18_My100000thDream'
 import Scene_19 from './19_Epilogue'
 
-import { addLayersToScenes } from './helper'
+import { addLayersToScenes } from './helpers'
 
 const albumScenes = [
     Scene_00,

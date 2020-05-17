@@ -8,7 +8,7 @@ import {
     getNextGlobalAnnotationForInterval,
     getGlobalAnnotationsCount,
     getGlobalAnnotationsDoneCount
-} from '../../../app/album/api/admin'
+} from '../../album/api/globalAnnotation'
 
 import { getArrayOfLength } from '../../../app/helpers/general'
 

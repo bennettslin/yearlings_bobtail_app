@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
 
-import Shared from './Shared'
+import Drawing from './Drawing'
 import AdminNav from './AdminNav'
 
 import { logSvgCount } from '../../utils/log'
@@ -29,7 +29,7 @@ class Progress extends PureComponent {
                     <div className="Admin__field album">
                         <AdminNav />
                     </div>
-                    <Shared {...this.props} />
+                    <Drawing />
                 </div>
             </div>
         )

@@ -1,4 +1,4 @@
-import drawings from '../drawings'
+import drawings from './drawings'
 
 export const getDrawings = () => (
     drawings

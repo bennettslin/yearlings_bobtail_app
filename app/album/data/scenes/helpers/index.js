@@ -1,7 +1,7 @@
-import ALL_ARRANGEMENTS_ACTORS from '../../../scene/aggregators/actors'
-import ALL_ARRANGEMENTS_THINGS from '../../../scene/aggregators/things'
+import ALL_ARRANGEMENTS_ACTORS from '../../../../scene/aggregators/actors'
+import ALL_ARRANGEMENTS_THINGS from '../../../../scene/aggregators/things'
 
-import { ACTOR } from '../../../constants/scene'
+import { ACTOR } from '../../../../constants/scene'
 
 const _addPresenceToSceneLayer = ({
     arrangementObject,

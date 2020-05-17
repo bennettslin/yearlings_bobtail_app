@@ -1,14 +1,5 @@
-// TODO: Move into admin folder.
-import { finalAlbum } from '..'
-import { getAnnotation } from './annotations'
-
-const _getAnnotationIndexForInterval = ({
-    intervalIndex,
-    count
-}) => {
-    const { globalAnnotationIndices } = finalAlbum
-    return parseInt(globalAnnotationIndices.length / count * intervalIndex)
-}
+import { finalAlbum } from '../../../app/album'
+import { getAnnotation } from '../../../app/album/api/annotations'
 
 const getGlobalAnnotation = (globalIndex) => {
     const { globalAnnotationIndices } = finalAlbum,
@@ -27,6 +18,14 @@ const getGlobalAnnotation = (globalIndex) => {
         songIndex,
         annotationIndex
     )
+}
+
+const _getAnnotationIndexForInterval = ({
+    intervalIndex,
+    count
+}) => {
+    const { globalAnnotationIndices } = finalAlbum
+    return parseInt(globalAnnotationIndices.length / count * intervalIndex)
 }
 
 export const getNextGlobalAnnotationForInterval = ({

@@ -77,11 +77,6 @@ module.exports = {
         LYRIC_RIGHT
     ],
 
-    // This is only used by the stats helper.
-    STAT_TEXT_KEYS: [
-        ANCHOR
-    ],
-
     FLASHBACK_TO_WORMHOLE_PREFIX: 'flashback to',
     FORESHADOW_OF_WORMHOLE_PREFIX: 'foreshadow of'
 }

@@ -1,4 +1,4 @@
-import drawings from '../../../containers/Progress/drawings'
+import drawings from '../../../containers/Progress/Drawing/helpers/drawings'
 
 export const addDrawingTasksToSongTasks = (songTasksArray) => {
 

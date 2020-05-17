@@ -1,8 +1,0 @@
-.TaskSection {
-
-    .SubtaskBlock {
-        padding-left: 25px;
-    }
-
-    @include mixin__progressBar($task-total-colour, $task-filled-colour);
-}

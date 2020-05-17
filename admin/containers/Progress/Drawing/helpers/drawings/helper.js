@@ -1,6 +1,6 @@
-import albumScenes from '../../../scenes'
+import albumScenes from '../../../../../scenes'
 
-import { ACTOR } from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../../../app/constants/scene'
 
 const
     // The time spent thus far per drawing.

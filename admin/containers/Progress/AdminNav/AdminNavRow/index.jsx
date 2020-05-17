@@ -1,15 +1,13 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-import SongDispatcher from '../../../../app/handlers/Song/Dispatcher'
-import ProgressBar from '../ProgressBar'
+import SongDispatcher from '../../../../../app/handlers/Song/Dispatcher'
+import ProgressBar from '../../ProgressBar'
 
-import { getTitleForSong } from '../../../../app/album/api/songs'
-import { populateRefs } from '../../../../app/helpers/ref'
-import {
-    getSongTasks,
-    getSumOfTasks
-} from './helper'
+import { getTitleForSong } from '../../../../../app/album/api/songs'
+import { populateRefs } from '../../../../../app/helpers/ref'
+import { getSongTasks } from './helper'
+import { getSumOfTasks } from '../helper'
 
 /*************
  * CONTAINER *

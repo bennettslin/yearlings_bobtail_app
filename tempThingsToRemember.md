@@ -33,7 +33,7 @@ Rethink some dot category shapes?
     * tips
 
 # Annotation todos
-Move global annotation api to admin folder.
+Put global annotations and other admin values including todos in a single admin object at the album top level.
 Fix carousel annotation not hiding upon ear click (might need to reconsider making 0 the default, maybe pass -1 to api, then api passes null to component)
 Pass annotations externally instead of through finalSongs
 Make dot keys bit numbers
