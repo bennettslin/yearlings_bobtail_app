@@ -8,10 +8,7 @@ import {
 import { addVerseDurations } from './helpers/verse'
 import { addFormTypeIndices } from './helpers/formType'
 import { addHasSideCard } from './helpers/sideCard'
-import {
-    addUnitVerseIndices,
-    addIndexedVerses
-} from './helpers/unit'
+import { addUnitAndVerseMetadata } from './helpers/unit'
 import { addStanzaMetadata } from './helpers/stanza'
 import { addSceneMetadata } from './helpers/scene'
 import { addAnnotations } from './helpers/annotation'
@@ -20,7 +17,6 @@ import {
     addPluralCardsCount,
     addGlobalAnnotationIndices
 } from './helpers/admin'
-
 import { addWormholeStuff } from './helpers/wormhole'
 
 // TODO: Eventually don't grab songs here.
@@ -32,10 +28,7 @@ logServe({
     label: 'album'
 })
 
-export const finalSongs = []
-
-getSongIndicesArray().forEach(songIndex => {
-
+export const finalSongs = getSongIndicesArray().map(songIndex => {
     const finalSong = {}
 
     const isLogue =
@@ -51,12 +44,11 @@ getSongIndicesArray().forEach(songIndex => {
         const songDuration =
             addDuration(songIndex, finalSong)
 
-        const unitVerseIndicesList =
-            addUnitVerseIndices(songIndex, finalSong)
-
         // TODO: Still need to remove annotations from verses.
-        const verseStartTimes =
-            addIndexedVerses(songIndex, finalSong)
+        const {
+            unitVerseIndicesList,
+            verseStartTimes
+        } = addUnitAndVerseMetadata(songIndex, finalSong)
 
         addVerseDurations({
             songDuration,
@@ -86,7 +78,7 @@ getSongIndicesArray().forEach(songIndex => {
         addPluralCardsCount(songs[songIndex])
     }
 
-    finalSongs.push(finalSong)
+    return finalSong
 })
 
 logServe({

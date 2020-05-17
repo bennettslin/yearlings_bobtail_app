@@ -1,4 +1,7 @@
-import { getFinalSong, getSongIsLogue } from './songs'
+import {
+    getFinalSong,
+    getSongIsLogue
+} from './songs'
 import { getArrayOfLength } from '../../helpers/general'
 
 export const getStanzaIndicesArray = (songIndex) => (
