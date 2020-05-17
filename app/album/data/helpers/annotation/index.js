@@ -31,8 +31,6 @@ const _recurseThroughVerse = ({
 
         // Add latest annotation index.
         lyricEntity.lastAnnotationIndex = annotations.length
-
-        song.mostRecentVerseIndex = verseIndex
     }
 
     // Recurse until object with anchor key is found.
@@ -85,7 +83,6 @@ export const addAnnotations = (songIndex, finalSong) => {
         { lyricUnits } = song
 
     song.annotations = []
-    song.mostRecentVerseIndex = 0
 
     lyricUnits.forEach(unit => {
         const {
@@ -122,7 +119,4 @@ export const addAnnotations = (songIndex, finalSong) => {
             })
         })
     })
-
-    // Clean up.
-    delete song.mostRecentVerseIndex
 }

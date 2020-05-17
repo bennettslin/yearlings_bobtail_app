@@ -55,8 +55,6 @@ export const registerAnnotation = ({
      * Otherwise, tell it the most recent verse index. For first dot stanza,
      * this is 0.
      */
-    } else {
-        annotation.mostRecentVerseIndex = song.mostRecentVerseIndex
     }
 
     // Add formatted title to annotation.
