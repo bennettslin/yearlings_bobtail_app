@@ -24,7 +24,7 @@ import {
     getSongIsLogue,
     getBookForSongIndex
 } from '../album/api/songs'
-import { getAnnotationColumnIndex } from '../album/api/annotations'
+import { getColumnIndexForAnnotation } from '../album/api/annotations'
 
 import { getBoolFromStorage } from '../utils/window'
 
@@ -84,7 +84,7 @@ const
     storedSongIndex = getIndexFromStorage(SELECTED_SONG_INDEX),
     storedVerseIndex = getIndexFromStorage(SELECTED_VERSE_INDEX),
     isStoredLogue = getSongIsLogue(storedSongIndex),
-    storedEarColumnIndex = getAnnotationColumnIndex(
+    storedEarColumnIndex = getColumnIndexForAnnotation(
         storedSongIndex,
         storedAnnotationIndex
     ),

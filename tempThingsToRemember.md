@@ -32,8 +32,9 @@ Rethink some dot category shapes?
     * scenes
     * tips
 
-# Logue
-logue
-overview
-songIndex
-title
+# Annotation todos
+Make dot keys bit numbers
+If single card, just pass it instead of array.
+If just single card, don't have dot keys, and then get dot keys from annotation
+
+If wiki or wormhole is single, just pass it instead of array.

@@ -1,6 +1,6 @@
 import {
-    getAnnotationColumnIndex,
-    getAnnotationsCount,
+    getColumnIndexForAnnotation,
+    getAnnotationCountForSong,
     getDotKeysForAnnotation
 } from '../album/api/annotations'
 import { intersects } from '../helpers/dot'
@@ -12,7 +12,7 @@ export const getShowAnnotationForColumn = ({
     isEarShown
 }) => {
 
-    const columnIndex = getAnnotationColumnIndex(
+    const columnIndex = getColumnIndexForAnnotation(
             selectedSongIndex,
             selectedAnnotationIndex
         ),
@@ -42,7 +42,7 @@ export const getAnnotationIndexForDirection = ({
     specifiedDirection
 }) => {
 
-    const annotationsCount = getAnnotationsCount(selectedSongIndex),
+    const annotationsCount = getAnnotationCountForSong(selectedSongIndex),
 
         // If a direction is given for this method, it has modulo.
         useModulo = Boolean(direction)

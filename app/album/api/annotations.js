@@ -1,13 +1,23 @@
-import { getFinalSong } from './songs'
+import {
+    getSongIsLogue,
+    getFinalSong
+} from './songs'
+import { getArrayOfLength } from '../../helpers/general'
 
 import { COLUMN_INDEX } from '../../constants/lyrics'
 
-export const getAnnotationsCount = (songIndex) => {
-    const { annotations } = getFinalSong(songIndex)
-    return annotations ?
-        annotations.length :
-        0
-}
+export const getAnnotationIndicesArray = (songIndex) => (
+    getSongIsLogue(songIndex) ?
+        [] :
+        getArrayOfLength(
+            // Which annotation array we use is arbitrary.
+            getFinalSong(songIndex).annotationDotKeysList.length
+        )
+)
+
+export const getAnnotationCountForSong = (songIndex) => (
+    getAnnotationIndicesArray(songIndex).length
+)
 
 export const getAnnotation = (
     songIndex,
@@ -45,7 +55,7 @@ export const getVerseIndexForAnnotation = (songIndex, annotationIndex) => {
     return annotationVerseIndex >= 0 ? annotationVerseIndex : null
 }
 
-export const getAnnotationColumnIndex = (
+export const getColumnIndexForAnnotation = (
     songIndex,
     annotationIndex
 ) => {

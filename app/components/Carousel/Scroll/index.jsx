@@ -9,8 +9,7 @@ import Transition from 'react-transition-group/Transition'
 import ScrollCarouselListener from '../../../listeners/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
 
-import { getAnnotationsCount } from '../../../album/api/annotations'
-import { getArrayOfLength } from '../../../helpers/general'
+import { getAnnotationIndicesArray } from '../../../album/api/annotations'
 import { populateRefs } from '../../../helpers/ref'
 
 const mapStateToProps = ({
@@ -72,14 +71,12 @@ class CarouselScroll extends PureComponent {
             isAccessedIndexedAnchorShown
         } = this.props
 
-        const annotationsCount = getAnnotationsCount(lyricSongIndex),
-
-            /**
-             * Dynamically create array of just indices. CarouselScroll
-             * annotation will fetch annotation object directly from data
-             * helper.
-             */
-            annotationsIndices = getArrayOfLength(annotationsCount)
+        /**
+         * Dynamically create array of just indices. CarouselScroll
+         * annotation will fetch annotation object directly from data
+         * helper.
+         */
+        const annotationIndices = getAnnotationIndicesArray(lyricSongIndex)
 
         return (
             <Transition
@@ -94,7 +91,7 @@ class CarouselScroll extends PureComponent {
                     className="CarouselScroll"
                 >
                     <ScrollCarouselListener {...{ getRefs: this._getRefs }} />
-                    {annotationsIndices.map(index => {
+                    {annotationIndices.map(index => {
 
                         const annotationIndex = index + 1,
 
