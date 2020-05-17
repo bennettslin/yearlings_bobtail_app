@@ -72,7 +72,7 @@ export const finalSongs = getSongIndicesArray().map(songIndex => {
             finalSong
         })
 
-        addAnnotations(songs[songIndex])
+        addAnnotations(songIndex, finalSong)
 
         addDotUnitsCount(songs[songIndex])
         addPluralCardsCount(songs[songIndex])

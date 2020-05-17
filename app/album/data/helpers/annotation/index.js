@@ -1,3 +1,5 @@
+import albumLyrics from '../../lyrics'
+
 // TODO: This could be a little neater.
 import { registerAnnotation } from './helpers'
 
@@ -8,7 +10,7 @@ import {
     LYRIC_RIGHT
 } from '../../../../constants/lyrics'
 
-const _recurseToFindAnnotations = ({
+const _recurseThroughVerse = ({
     song,
     verse,
     columnKey,
@@ -37,7 +39,7 @@ const _recurseToFindAnnotations = ({
     if (Array.isArray(lyricEntity)) {
 
         lyricEntity.forEach(childEntity => {
-            _recurseToFindAnnotations({
+            _recurseThroughVerse({
                 song,
                 verse,
                 columnKey,
@@ -50,6 +52,8 @@ const _recurseToFindAnnotations = ({
     } else if (typeof lyricEntity === 'object') {
 
         if (lyricEntity[ANCHOR]) {
+
+            // Annotation is found, so register it.
             registerAnnotation({
                 song,
                 verse,
@@ -62,7 +66,7 @@ const _recurseToFindAnnotations = ({
         } else {
             ANNOTATION_SEARCH_KEYS.forEach(childKey => {
                 if (lyricEntity[childKey]) {
-                    _recurseToFindAnnotations({
+                    _recurseThroughVerse({
                         song,
                         verse,
                         columnKey,
@@ -76,49 +80,49 @@ const _recurseToFindAnnotations = ({
     }
 }
 
-export const addAnnotations = (song) => {
-    const { lyricUnits } = song
+export const addAnnotations = (songIndex, finalSong) => {
+    const song = albumLyrics[songIndex],
+        { lyricUnits } = song
 
-    if (lyricUnits) {
-        song.annotations = []
-        song.mostRecentVerseIndex = 0
+    song.annotations = []
+    song.mostRecentVerseIndex = 0
 
-        lyricUnits.forEach(unit => {
-            const {
-                    unitMap,
-                    mainVerses
-                } = unit,
+    lyricUnits.forEach(unit => {
+        const {
+                unitMap,
+                mainVerses
+            } = unit,
 
-                mainVersesAndUnitMap = [
-                    ...mainVerses || [],
-                    unitMap
-                ]
+            mainVersesAndUnitMap = [
+                ...mainVerses || [],
+                unitMap
+            ]
 
-            mainVersesAndUnitMap.forEach(verse => {
-                let columnKey
+        // Go through each indexed verse and then the unit map.
+        mainVersesAndUnitMap.forEach(verse => {
+            let columnKey
 
-                // If this unit has a side card...
-                if (unitMap.sideCard) {
+            // If this is a sideCard verse, show in right column.
+            if (verse.sideCard) {
+                columnKey = LYRIC_RIGHT
 
-                    // ... and this verse is in it, show in right column.
-                    if (verse.sideCard) {
-                        columnKey = LYRIC_RIGHT
+            /**
+             * Otherwise, if this is an indexed verse in a unit with a
+             * sideCard verse, show in left column.
+             */
+            } else if (unitMap.sideCard) {
+                columnKey = LYRIC_LEFT
+            }
 
-                    // ... otherwise, show in left column.
-                    } else {
-                        columnKey = LYRIC_LEFT
-                    }
-                }
-
-                _recurseToFindAnnotations({
-                    song,
-                    verse,
-                    columnKey
-                })
+            _recurseThroughVerse({
+                song,
+                verse,
+                columnKey,
+                finalSong
             })
         })
+    })
 
-        // Clean up.
-        delete song.mostRecentVerseIndex
-    }
+    // Clean up.
+    delete song.mostRecentVerseIndex
 }

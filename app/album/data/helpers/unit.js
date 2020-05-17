@@ -6,8 +6,8 @@ export const _getIndexedVersesForUnit = (unit) => {
      * are not indexed.
      */
     const {
-        mainVerses,
-        unitMap: { subVerse }
+        unitMap: { subVerse },
+        mainVerses
     } = unit
 
     return [

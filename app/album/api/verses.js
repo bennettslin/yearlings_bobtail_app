@@ -28,7 +28,7 @@ export const getVerseCountForSong = (songIndex) => (
 
 export const getSceneIndexForVerse = (songIndex, verseIndex) => {
     const { verseSceneIndices } = getFinalSong(songIndex)
-    return verseSceneIndices[verseIndex]
+    return verseSceneIndices ? verseSceneIndices[verseIndex] : 0
 }
 
 export const getStanzaIndexForVerse = (songIndex, verseIndex) => {
