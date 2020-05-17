@@ -1,6 +1,6 @@
 import {
     getFinalSong,
-    getFinalSongIsLogue
+    getSongIsLogue
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
 
@@ -14,7 +14,7 @@ export const isValidVerse = (songIndex, verseIndex) => {
 }
 
 export const getVerseIndicesArray = (songIndex) => (
-    getFinalSongIsLogue(songIndex) ?
+    getSongIsLogue(songIndex) ?
         [] :
         getArrayOfLength(
             // Which verse array we use is arbitrary.

@@ -15,8 +15,8 @@ import UnitDot from './Dot'
 
 import {
     getUnit,
-    getUnitFormTypeIndex,
-    getUnitVerseIndices
+    getFormTypeForUnit,
+    getVerseIndicesForUnit
 } from '../../../album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
@@ -84,7 +84,7 @@ class Unit extends PureComponent {
                 hasBottomSideCard
             } = unitMap,
 
-            formTypeIndex = getUnitFormTypeIndex(lyricSongIndex, unitIndex),
+            formTypeIndex = getFormTypeForUnit(lyricSongIndex, unitIndex),
             hasSide = Boolean(hasTopSideCard || hasBottomSideCard),
             isLoneUnitDot = Boolean(unitDot) && !mainVerses
 
@@ -93,7 +93,7 @@ class Unit extends PureComponent {
                 className={cx(
                     // "Parent of verse index."
                     getParentOfVerseClassNamesForIndices({
-                        entities: getUnitVerseIndices(
+                        entities: getVerseIndicesForUnit(
                             lyricSongIndex,
                             unitIndex
                         )

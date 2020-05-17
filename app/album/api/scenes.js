@@ -1,6 +1,6 @@
 import {
     getFinalSong,
-    getFinalSongIsLogue
+    getSongIsLogue
 } from './songs'
 import albumScenes from '../data/scenes'
 import { getArrayOfLength } from '../../helpers/general'
@@ -21,7 +21,7 @@ const DEFAULT_SCENE = {
 }
 
 export const getSceneIndicesArray = (songIndex) => (
-    getFinalSongIsLogue(songIndex) ?
+    getSongIsLogue(songIndex) ?
         [] :
         getArrayOfLength(
             // Which scene array we use is arbitrary.

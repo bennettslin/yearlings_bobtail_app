@@ -1,8 +1,9 @@
 import {
     addIsLogue,
     addOverview,
+    addTitle,
     addIsDoublespeaker,
-    addSongTotalTime
+    addDuration
 } from './helpers/song'
 import { addVerseDurations } from './helpers/verse'
 import { addFormTypeIndices } from './helpers/formType'
@@ -40,13 +41,15 @@ getSongIndicesArray().forEach(songIndex => {
     const isLogue =
         addIsLogue(songIndex, finalSong)
     addOverview(songIndex, finalSong)
+    addTitle(songIndex, finalSong)
 
     if (!isLogue) {
         addIsDoublespeaker(songIndex, finalSong)
         addHasSideCard(songIndex, finalSong)
         addFormTypeIndices(songIndex, finalSong)
+
         const songDuration =
-            addSongTotalTime(songIndex, finalSong)
+            addDuration(songIndex, finalSong)
 
         const unitVerseIndicesList =
             addUnitVerseIndices(songIndex, finalSong)

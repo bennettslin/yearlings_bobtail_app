@@ -1,4 +1,4 @@
-import { getSongTitle } from '../../album/api/songs'
+import { getTitleForSong } from '../../album/api/songs'
 
 import {
     ABOUT_BUTTON_KEY,
@@ -115,7 +115,7 @@ export const getShowButtonIcon = buttonName => {
 
 export const getTooltipText = ({ buttonName, buttonIdentifier }) => {
     if (buttonName === NAV_SONG_BUTTON_KEY) {
-        return getSongTitle({
+        return getTitleForSong({
             songIndex: buttonIdentifier,
             showIndex: false
         })

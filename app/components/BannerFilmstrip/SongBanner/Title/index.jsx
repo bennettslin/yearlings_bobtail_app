@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getSongTitle } from '../../../../album/api/songs'
+import { getTitleForSong } from '../../../../album/api/songs'
 
 const mapStateToProps = ({
     selectedStore: { selectedSongIndex }
@@ -23,7 +23,7 @@ class SongBannerTitle extends PureComponent {
     render() {
         const
             { selectedSongIndex } = this.props,
-            songTitle = getSongTitle({ songIndex: selectedSongIndex })
+            songTitle = getTitleForSong({ songIndex: selectedSongIndex })
 
         return (
             <div

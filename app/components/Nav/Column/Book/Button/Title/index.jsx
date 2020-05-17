@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getSongTitle } from '../../../../../../album/api/songs'
+import { getTitleForSong } from '../../../../../../album/api/songs'
 
 import { getIndexCharacter } from '../Character/helper'
 
@@ -15,7 +15,7 @@ const NavButtonTitle = ({
 
     const title = Number.isFinite(bookIndex) ?
         `Book ${getIndexCharacter({ bookIndex })}` :
-        getSongTitle({ songIndex, showIndex: false })
+        getTitleForSong({ songIndex, showIndex: false })
 
     return Boolean(title) && (
         <div

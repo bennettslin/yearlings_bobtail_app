@@ -14,21 +14,6 @@ export const getSong = songIndex => {
     return songs[songIndex]
 }
 
-export const getSongIsLogue = songIndex => {
-    return songIndex === 0 || songIndex === songs.length - 1
-}
-
-export const getSongTitle = ({
-    songIndex,
-    showIndex = true
-}) => {
-    const
-        song = getSong(songIndex),
-        isLogue = getSongIsLogue(songIndex)
-
-    return `${showIndex && !isLogue ? songIndex + '. ' : ''}${song.title}`
-}
-
 export const getStartingIndexForBook = (bookIndex) => {
     const bookLength = getSongsNotLoguesCount() / 2
     return bookIndex * bookLength + 1
@@ -46,11 +31,23 @@ export const getFinalSong = songIndex => {
     return getFinalSongs()[songIndex]
 }
 
-export const getFinalSongIsLogue = songIndex => {
-    return getFinalSong(songIndex).isLogue
+// TODO: Change to use final song.
+export const getSongIsLogue = songIndex => {
+    return songIndex === 0 || songIndex === 19
 }
 
-export const getSongOverview = songIndex => {
+export const getTitleForSong = ({
+    songIndex,
+    showIndex = true
+}) => {
+    const
+        isLogue = getSongIsLogue(songIndex),
+        title = getFinalSong(songIndex).title
+
+    return `${showIndex && !isLogue ? songIndex + '. ' : ''}${title}`
+}
+
+export const getOverviewForSong = songIndex => {
     return getFinalSong(songIndex).overview
 }
 

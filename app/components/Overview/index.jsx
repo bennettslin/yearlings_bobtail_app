@@ -8,7 +8,7 @@ import cx from 'classnames'
 import Texts from '../Texts'
 import OverviewToggle from '../Main/OverviewToggle'
 
-import { getSongOverview } from '../../album/api/songs'
+import { getOverviewForSong } from '../../album/api/songs'
 import { getIsToggleInOverview } from './helper'
 
 const mapStateToProps = ({
@@ -43,7 +43,7 @@ class Overview extends PureComponent {
                 isLyricLogue
             } = this.props,
 
-            overviewText = getSongOverview(lyricSongIndex),
+            overviewText = getOverviewForSong(lyricSongIndex),
 
             isToggleInOverview = getIsToggleInOverview({
                 isPhoneWidth,

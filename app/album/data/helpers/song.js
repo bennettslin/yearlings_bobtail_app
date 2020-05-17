@@ -15,6 +15,11 @@ export const addOverview = (songIndex, finalSong) => {
     finalSong.overview = overview
 }
 
+export const addTitle = (songIndex, finalSong) => {
+    const { title } = albumLyrics[songIndex]
+    finalSong.title = title
+}
+
 export const addIsDoublespeaker = (songIndex, finalSong) => {
     const { isDoublespeaker } = albumLyrics[songIndex]
 
@@ -23,7 +28,7 @@ export const addIsDoublespeaker = (songIndex, finalSong) => {
     }
 }
 
-export const addSongTotalTime = (songIndex, finalSong) => {
+export const addDuration = (songIndex, finalSong) => {
     const { duration } = albumLyrics[songIndex]
     finalSong.songDuration = duration
 

@@ -32,12 +32,12 @@ export const getLastUnitDotCardIndex = (songIndex) => {
     return -1
 }
 
-export const getUnitFormTypeIndex = (songIndex, unitIndex) => {
+export const getFormTypeForUnit = (songIndex, unitIndex) => {
     const { unitFormTypeIndices } = getFinalSong(songIndex)
     return unitFormTypeIndices[unitIndex]
 }
 
-export const getUnitVerseIndices = (songIndex, unitIndex) => {
+export const getVerseIndicesForUnit = (songIndex, unitIndex) => {
     const { unitVerseIndicesList } = getFinalSong(songIndex)
     return unitVerseIndicesList[unitIndex]
 }
