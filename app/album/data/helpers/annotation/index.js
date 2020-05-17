@@ -1,7 +1,6 @@
 import albumLyrics from '../../lyrics'
-
-// TODO: This could be a little neater.
 import { registerAnnotation } from './helpers'
+// import { addAnnotationTitles } from './helpers/title'
 
 import {
     ANNOTATION_SEARCH_KEYS,
@@ -11,22 +10,19 @@ import {
 } from '../../../../constants/lyrics'
 
 const _recurseThroughVerse = ({
-    song,
     verse,
     columnKey,
     rootVerseIndex = -1,
     lyricEntity = verse,
-    textKey
+    textKey,
+    annotations
 }) => {
-
     const { verseIndex } = lyricEntity
 
     /**
      * Let subsequent recursions know that we are in a timed verse.
      */
     if (Number.isFinite(verseIndex)) {
-        const { annotations } = song
-
         rootVerseIndex = verseIndex
 
         // Add latest annotation index.
@@ -38,12 +34,12 @@ const _recurseThroughVerse = ({
 
         lyricEntity.forEach(childEntity => {
             _recurseThroughVerse({
-                song,
                 verse,
                 columnKey,
                 rootVerseIndex,
                 lyricEntity: childEntity,
-                textKey
+                textKey,
+                annotations
             })
         })
 
@@ -53,24 +49,24 @@ const _recurseThroughVerse = ({
 
             // Annotation is found, so register it.
             registerAnnotation({
-                song,
                 verse,
                 columnKey,
                 rootVerseIndex,
                 lyricAnnotation: lyricEntity,
-                textKey
+                textKey,
+                annotations
             })
 
         } else {
             ANNOTATION_SEARCH_KEYS.forEach(childKey => {
                 if (lyricEntity[childKey]) {
                     _recurseThroughVerse({
-                        song,
                         verse,
                         columnKey,
                         rootVerseIndex,
                         lyricEntity: lyricEntity[childKey],
-                        textKey: (textKey || childKey)
+                        textKey: (textKey || childKey),
+                        annotations
                     })
                 }
             })
@@ -82,7 +78,8 @@ export const addAnnotations = (songIndex, finalSong) => {
     const song = albumLyrics[songIndex],
         { lyricUnits } = song
 
-    song.annotations = []
+    const annotations = [],
+        annotationTitles = []
 
     lyricUnits.forEach(unit => {
         const {
@@ -112,11 +109,20 @@ export const addAnnotations = (songIndex, finalSong) => {
             }
 
             _recurseThroughVerse({
-                song,
                 verse,
                 columnKey,
-                finalSong
+                annotations
             })
         })
     })
+
+    annotations.forEach(annotation => {
+        annotationTitles.push(annotation.title)
+
+        // TODO: Eventually get rid of these, since we won't pass annotation object to begin with.
+        delete annotation.title
+    })
+
+    finalSong.annotationTitles = annotationTitles
+    finalSong.annotations = annotations
 }

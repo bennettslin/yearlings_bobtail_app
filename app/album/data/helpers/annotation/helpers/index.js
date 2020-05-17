@@ -1,7 +1,5 @@
 // TODO: Refactor this. Separate into smaller files
-
 import { registerCardsDotKeys } from './register'
-
 import { getFormattedAnnotationTitle } from '../../../../../helpers/format'
 
 import {
@@ -11,19 +9,19 @@ import {
 } from '../../../../../constants/lyrics'
 
 export const registerAnnotation = ({
-    song,
     verse,
     columnKey,
     rootVerseIndex = -1,
     lyricAnnotation,
-    textKey
+    textKey,
+    annotations
 
 }) => {
 
     // Annotation will either have an array of cards or just a single card.
     const cards = lyricAnnotation.cards || [lyricAnnotation.card],
 
-        annotationIndex = song.annotations.length + 1,
+        annotationIndex = annotations.length + 1,
 
         // Create new annotation object to be known by song.
         annotation = { todo: lyricAnnotation.todo },
@@ -82,7 +80,7 @@ export const registerAnnotation = ({
     lyricAnnotation.dotKeys = dotKeys
 
     // Add annotation object to annotations array.
-    song.annotations.push(annotation)
+    annotations.push(annotation)
 
     // Clean up lyric object.
     delete lyricAnnotation.properNoun

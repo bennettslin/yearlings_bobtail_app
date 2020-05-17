@@ -9,6 +9,7 @@ import AnnotationTitleText from './TitleText'
 
 import AnnotationAccess from './Access'
 
+import { getAnnotationTitle } from '../../../album/api/annotations'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
 
@@ -66,7 +67,6 @@ class AnnotationTitle extends PureComponent {
 
             {
                 dotKeys,
-                title,
                 accessibleWikiWormholesLength
 
             } = getAnnotationTitleData({
@@ -75,9 +75,14 @@ class AnnotationTitle extends PureComponent {
                 selectedDotKeys
             }),
 
+            annotationTitle = getAnnotationTitle(
+                lyricSongIndex,
+                annotationIndex
+            ),
+
             showUpDown = isSelected && accessibleWikiWormholesLength > 1,
 
-            isDot = title === IS_UNIT_DOT
+            isDot = annotationTitle === IS_UNIT_DOT
 
         return (
             <div
@@ -114,7 +119,7 @@ class AnnotationTitle extends PureComponent {
                         {...{
                             isAccessed,
                             isSelected,
-                            text: `\u201c${title}\u201d`,
+                            text: `\u201c${annotationTitle}\u201d`,
                             sequenceDotKeys: dotKeys,
                             handleAnchorClick: this._handleTitleClick
                         }}

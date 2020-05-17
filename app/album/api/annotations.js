@@ -1,9 +1,9 @@
-import { getSong } from './songs'
+import { getFinalSong } from './songs'
 
 import { COLUMN_INDEX } from '../../constants/lyrics'
 
 export const getAnnotationsCount = (songIndex) => {
-    const { annotations } = getSong(songIndex)
+    const { annotations } = getFinalSong(songIndex)
     return annotations ?
         annotations.length :
         0
@@ -13,8 +13,13 @@ export const getAnnotation = (
     songIndex,
     annotationIndex
 ) => {
-    const { annotations } = getSong(songIndex)
+    const { annotations } = getFinalSong(songIndex)
     return annotations ? annotations[annotationIndex - 1] : null
+}
+
+export const getAnnotationTitle = (songIndex, annotationIndex) => {
+    const { annotationTitles } = getFinalSong(songIndex)
+    return annotationTitles[annotationIndex - 1]
 }
 
 export const getVerseIndexForAnnotationIndex = (

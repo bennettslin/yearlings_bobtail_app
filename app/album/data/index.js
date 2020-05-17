@@ -90,7 +90,7 @@ logServe({
 const album = { songs }
 export const finalAlbum = { finalSongs }
 
-addWormholeMetadata(songs)
+addWormholeMetadata(finalSongs)
 addGlobalAnnotationIndices(album)
 
 // FIXME: Remove.
