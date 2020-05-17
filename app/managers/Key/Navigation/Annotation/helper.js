@@ -47,6 +47,7 @@ export const getWikiWormholeEntity = ({
     songIndex,
     annotationIndex,
     accessedIndex
+
 }) => {
     const annotationWikiWormholes = getWikiWormholesForAnnotation(
         songIndex,

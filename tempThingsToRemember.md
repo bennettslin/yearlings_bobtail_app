@@ -38,7 +38,6 @@ Ellipsis is too short when only right cards are shown.
     * tips
 
 # Annotation todos
-Fix logue
 Fix carousel annotation not hiding upon ear click (might need to reconsider making 0 the default, maybe pass -1 to api, then api passes null to component)
 
 If single card, just pass it instead of array.

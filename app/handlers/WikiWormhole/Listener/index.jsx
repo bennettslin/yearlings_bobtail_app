@@ -17,14 +17,14 @@ class WikiWormholeListener extends PureComponent {
     }
 
     componentDidMount() {
-        this.dispatchAccessedWikiWormhole()
+        this._accessWikiWormhole()
     }
 
     componentDidUpdate(prevProps) {
         this._accessWikiWormhole(prevProps)
     }
 
-    _accessWikiWormhole(prevProps) {
+    _accessWikiWormhole(prevProps = {}) {
         const
             {
                 selectedSongIndex,
