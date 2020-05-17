@@ -1,7 +1,5 @@
-import {
-    getCardWormholeLinksArray,
-    parseWormholeLinkForDispatch
-} from '../../../../../helpers/wormhole'
+import { mapWormholeLinkForDispatch } from '../../../../../helpers/wormhole'
+import { getWormholeLinksForAnnotationCard } from '../../../../../album/api/annotations'
 
 export const getCardWormholeLink = ({
     songIndex,
@@ -10,16 +8,16 @@ export const getCardWormholeLink = ({
     wormholeLinkIndex
 }) => {
     // Called by annotation wormhole component.
-    const wormholeLinksArray = getCardWormholeLinksArray({
+    const wormholeLinks = getWormholeLinksForAnnotationCard(
         songIndex,
         annotationIndex,
         cardIndex
-    })
+    )
 
-    if (wormholeLinksArray) {
+    if (wormholeLinks) {
         // Rename keys for dispatch.
-        const wormholeLink = wormholeLinksArray[wormholeLinkIndex]
-        return parseWormholeLinkForDispatch(wormholeLink)
+        const wormholeLink = wormholeLinks[wormholeLinkIndex]
+        return mapWormholeLinkForDispatch(wormholeLink)
 
     } else {
         return null

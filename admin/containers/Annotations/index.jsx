@@ -5,13 +5,16 @@ import cx from 'classnames'
 import AnnotationCards from './AnnotationCards'
 
 import {
-    getNextGlobalAnnotationForInterval,
+    getMetadataForNextGlobalAnnotation,
     getGlobalAnnotationCount,
     getGlobalAnnotationDoneCount
 } from '../../album/api/globalAnnotation'
+import {
+    getTitleForAnnotation,
+    getCardsForAnnotation
+} from '../../../app/album/api/annotations'
 
 import { getArrayOfLength } from '../../../app/helpers/general'
-
 import { removeLoadingIndicator } from '../../../app/utils/window'
 
 const INTERVALS_COUNT = 4
@@ -28,30 +31,33 @@ const TempGlobalAnnotationsCounter = () => (
 
 const TempGlobalAnnotation = ({ intervalIndex }) => {
 
-    const annotationObject = getNextGlobalAnnotationForInterval({
+    const {
+        songIndex,
+        annotationIndex,
+        globalIndex
+
+    } = getMetadataForNextGlobalAnnotation({
         intervalIndex,
         count: INTERVALS_COUNT
     })
 
-    if (!annotationObject) {
+    if (!songIndex || !annotationIndex) {
         return null
     }
 
-    const {
-        title,
-        cards,
-        globalIndex
-    } = annotationObject
+    const
+        annotationTitle = getTitleForAnnotation(songIndex, annotationIndex),
+        annotationCards = getCardsForAnnotation(songIndex, annotationIndex)
 
     return (
         <div className="TempGlobalAnnotation">
             {/* {true && JSON.stringify(annotationObject)} */}
 
             <div className="TempGlobalAnnotation__header">
-                {globalIndex}. {title}
+                {globalIndex}. {annotationTitle}
             </div>
 
-            <AnnotationCards {...{ cards }} />
+            <AnnotationCards {...{ cards: annotationCards }} />
         </div>
     )
 }

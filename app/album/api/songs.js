@@ -1,6 +1,12 @@
 import songs from '../data/lyrics'
 import { finalAlbum } from '..'
 
+import { getArrayOfLength } from '../../helpers/general'
+
+const getSongIndices = () => (
+    getArrayOfLength(songs.length)
+)
+
 export const getSongsAndLoguesCount = () => {
     return songs.length
 }
@@ -12,6 +18,11 @@ export const getSongsNotLoguesCount = () => {
 // TODO: Only used by unit api now.
 export const getSong = songIndex => {
     return songs[songIndex]
+}
+
+export const getIsSongValid = songIndex => {
+    const songIndices = getSongIndices(songIndex)
+    return songIndices.some(index => index === songIndex)
 }
 
 export const getStartingIndexForBook = (bookIndex) => {

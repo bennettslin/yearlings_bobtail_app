@@ -16,10 +16,6 @@ export const addAdminMetadata = (album) => {
 
                 globalAnnotationTodos.push(annotation.todo)
 
-                // FIXME: Don't need this.
-                delete annotation.todo
-                delete annotation.annotationIndex
-
                 globalAnnotationIndicesList.push({
                     songIndex,
                     annotationIndex

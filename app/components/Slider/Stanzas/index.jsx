@@ -8,7 +8,7 @@ import cx from 'classnames'
 import StanzaHoc from '../../Stanzas/Hoc'
 import SliderStanza from './Stanza'
 
-import { getStanzaIndicesArray } from '../../../album/api/stanzas'
+import { getStanzaIndices } from '../../../album/api/stanzas'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }
@@ -24,16 +24,14 @@ class SliderStanzas extends PureComponent {
     }
 
     render() {
-        const
-            { lyricSongIndex } = this.props,
-            stanzaIndicesArray = getStanzaIndicesArray(lyricSongIndex)
+        const { lyricSongIndex } = this.props
 
         return (
             <div className={cx(
                 'SliderStanzas',
                 'abF'
             )}>
-                {stanzaIndicesArray.map(stanzaIndex => (
+                {getStanzaIndices(lyricSongIndex).map(stanzaIndex => (
                     <StanzaHoc
                         {...{
                             key: stanzaIndex,

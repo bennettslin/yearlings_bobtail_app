@@ -1,6 +1,8 @@
 import albumLyrics from '../lyrics'
 
-export const _getIndexedVersesForUnit = (unit) => {
+import { addVerseDurations } from './verse'
+
+const _getIndexedVersesForUnit = (unit) => {
     /**
      * Only main verses and sub verses are indexed. Side cards and unit dots
      * are not indexed.
@@ -16,7 +18,7 @@ export const _getIndexedVersesForUnit = (unit) => {
     ]
 }
 
-export const addUnitAndVerseMetadata = (songIndex, finalSong) => {
+const _addUnitVerseIndices = (songIndex, finalSong) => {
     const { lyricUnits } = albumLyrics[songIndex]
 
     const
@@ -26,10 +28,10 @@ export const addUnitAndVerseMetadata = (songIndex, finalSong) => {
     let verseIndex = 0
 
     lyricUnits.forEach(unit => {
-        const verseIndices = []
+        const unitVerseIndices = []
 
         _getIndexedVersesForUnit(unit).forEach(verse => {
-            verseIndices.push(verseIndex)
+            unitVerseIndices.push(verseIndex)
 
             // Also tell verse its index.
             verse.verseIndex = verseIndex
@@ -39,12 +41,34 @@ export const addUnitAndVerseMetadata = (songIndex, finalSong) => {
             verseIndex++
         })
 
-        unitVerseIndicesList.push(verseIndices)
+        unitVerseIndicesList.push(unitVerseIndices)
     })
 
     finalSong.unitVerseIndicesList = unitVerseIndicesList
     finalSong.indexedVerses = indexedVerses
     finalSong.verseStartTimes = verseStartTimes
+
+    return {
+        unitVerseIndicesList,
+        verseStartTimes
+    }
+}
+
+export const addUnitAndVerseMetadata = ({
+    songIndex,
+    songDuration,
+    finalSong
+}) => {
+    const {
+        unitVerseIndicesList,
+        verseStartTimes
+    } = _addUnitVerseIndices(songIndex, finalSong)
+
+    addVerseDurations({
+        songDuration,
+        verseStartTimes,
+        finalSong
+    })
 
     return {
         unitVerseIndicesList,

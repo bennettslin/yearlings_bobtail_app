@@ -4,7 +4,7 @@ import {
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
 
-export const getAnnotationIndicesArray = (songIndex) => (
+export const getAnnotationIndices = (songIndex) => (
     getSongIsLogue(songIndex) ?
         [] :
         getArrayOfLength(
@@ -14,12 +14,12 @@ export const getAnnotationIndicesArray = (songIndex) => (
 )
 
 export const getAnnotationCountForSong = (songIndex) => (
-    getAnnotationIndicesArray(songIndex).length
+    getAnnotationIndices(songIndex).length
 )
 
-export const getAnnotation = (songIndex, annotationIndex) => {
-    const { annotations } = getFinalSong(songIndex)
-    return annotations ? annotations[annotationIndex - 1] : null
+export const getIsAnnotationValid = (songIndex, annotationIndex) => {
+    const annotationIndicesArray = getAnnotationIndices(songIndex)
+    return annotationIndicesArray.some(index => index === annotationIndex - 1)
 }
 
 export const getDotKeysForAnnotation = (songIndex, annotationIndex) => {
@@ -59,16 +59,26 @@ export const getColumnIndexForAnnotation = (songIndex, annotationIndex) => {
         0
 }
 
-export const getAnnotationCardObject = ({
+export const getCardsForAnnotation = (songIndex, annotationIndex) => {
+    const { annotationCardsList } = getFinalSong(songIndex)
+    return annotationCardsList[annotationIndex - 1] || null
+}
+
+export const getCardCountForAnnotation = (songIndex, annotationIndex) => {
+    const cards = getCardsForAnnotation(songIndex, annotationIndex)
+    return cards ? cards.length : 0
+}
+
+export const getCardForAnnotation = (songIndex, annotationIndex, cardIndex) => {
+    const cards = getCardsForAnnotation(songIndex, annotationIndex)
+    return cards ? cards[cardIndex] : null
+}
+
+export const getWormholeLinksForAnnotationCard = (
     songIndex,
     annotationIndex,
     cardIndex
-}) => {
-    // Called by annotation card component.
-    const annotationObject = getAnnotation(
-        songIndex,
-        annotationIndex
-    )
-
-    return annotationObject ? annotationObject.cards[cardIndex] : null
+) => {
+    const card = getCardForAnnotation(songIndex, annotationIndex, cardIndex)
+    return card ? card.wormholeLinks : null
 }

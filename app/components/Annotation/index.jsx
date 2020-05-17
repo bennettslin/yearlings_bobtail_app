@@ -9,9 +9,9 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 
+import { getCardCountForAnnotation } from '../../album/api/annotations'
 import { populateRefs } from '../../helpers/ref'
 import { getArrayOfLength } from '../../helpers/general'
-import { getAnnotationCardsLength } from './helper'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }
@@ -55,13 +55,13 @@ class Annotation extends PureComponent {
                 annotationIndex
             } = this.props,
 
-            cardsLength = getAnnotationCardsLength({
-                songIndex: lyricSongIndex,
+            cardCount = getCardCountForAnnotation(
+                lyricSongIndex,
                 annotationIndex
-            })
+            )
 
         // If in popup, annotation won't always exist.
-        return Boolean(cardsLength) && (
+        return Boolean(cardCount) && (
             <>
                 <div
                     {...{
@@ -93,7 +93,7 @@ class Annotation extends PureComponent {
                         }}
                     />
 
-                    {getArrayOfLength(cardsLength).map(cardIndex => (
+                    {getArrayOfLength(cardCount).map(cardIndex => (
                         <AnnotationCard
                             {...{
                                 key: cardIndex,

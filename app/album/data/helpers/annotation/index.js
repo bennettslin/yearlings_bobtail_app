@@ -82,7 +82,8 @@ export const addAnnotationMetadata = (songIndex, finalSong) => {
         annotationColumnIndices = [],
         annotationDotKeysList = [],
         annotationTitles = [],
-        annotationVerseIndices = []
+        annotationVerseIndices = [],
+        annotationCardsList = []
 
     lyricUnits.forEach(unit => {
         const {
@@ -135,9 +136,7 @@ export const addAnnotationMetadata = (songIndex, finalSong) => {
                 annotation.verseIndex :
                 -1
         )
-
-        // TODO: Eventually get rid of these, since we won't pass annotation object to begin with.
-        delete annotation.title
+        annotationCardsList.push(annotation.cards)
     })
 
     // Don't bother to add if it's all left column.
@@ -147,5 +146,6 @@ export const addAnnotationMetadata = (songIndex, finalSong) => {
     finalSong.annotationDotKeysList = annotationDotKeysList
     finalSong.annotationTitles = annotationTitles
     finalSong.annotationVerseIndices = annotationVerseIndices
+    finalSong.annotationCardsList = annotationCardsList
     finalSong.annotations = annotations
 }

@@ -44,11 +44,6 @@ const albumLyrics = [
     _19_Epilogue
 ]
 
-// TODO: Eventually get rid of this?
-albumLyrics.forEach((albumLyric, index) => {
-    albumLyric.songIndex = index
-})
-
 export const getSongIndicesArray = () => (
     getArrayOfLength(albumLyrics.length)
 )

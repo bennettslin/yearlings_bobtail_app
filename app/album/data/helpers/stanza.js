@@ -25,11 +25,11 @@ const _addInitialStanzaMetadata = ({
              * If it's the first unit of this form type, initialise these
              * values. Otherwise, fetch them from the previous unit.
              */
-            const unitFormType = subsequent ?
+            const stanzaFormType = subsequent ?
                 stanzaFormTypes[stanzaFormTypes.length - 1] : formType
-            const unitIndices = subsequent ?
+            const stanzaUnitIndices = subsequent ?
                 stanzaUnitIndicesList[stanzaUnitIndicesList.length - 1] : []
-            const verseIndices = subsequent ?
+            const stanzaVerseIndices = subsequent ?
                 stanzaVerseIndicesList[stanzaVerseIndicesList.length - 1] : []
 
             if (!subsequent) {
@@ -41,17 +41,17 @@ const _addInitialStanzaMetadata = ({
             }
 
             // Tell stanza that it owns this unit.
-            unitIndices.push(unitIndex)
+            stanzaUnitIndices.push(unitIndex)
 
             unitVerseIndicesList[unitIndex].forEach(verseIndex => {
-                verseIndices.push(verseIndex)
+                stanzaVerseIndices.push(verseIndex)
                 verseStanzaIndices.push(stanzaIndex)
             })
 
             if (!subsequent) {
-                stanzaFormTypes.push(unitFormType)
-                stanzaUnitIndicesList.push(unitIndices)
-                stanzaVerseIndicesList.push(verseIndices)
+                stanzaFormTypes.push(stanzaFormType)
+                stanzaUnitIndicesList.push(stanzaUnitIndices)
+                stanzaVerseIndicesList.push(stanzaVerseIndices)
             }
         }
     })
@@ -73,12 +73,12 @@ const _addStanzaEndTimes = ({
 }) => {
     const endTimes = []
 
-    stanzaVerseIndicesList.forEach((verseIndices, stanzaIndex) => {
+    stanzaVerseIndicesList.forEach((stanzaVerseIndices, stanzaIndex) => {
         let endTime
 
-        verseIndices.forEach((verseIndex, index) => {
+        stanzaVerseIndices.forEach((verseIndex, index) => {
             // If this is the last verse of the stanza...
-            if (index === verseIndices.length - 1) {
+            if (index === stanzaVerseIndices.length - 1) {
 
                 // If it is followed by another stanza...
                 if (stanzaIndex < stanzaVerseIndicesList.length - 1) {

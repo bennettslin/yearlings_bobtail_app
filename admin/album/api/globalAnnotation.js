@@ -1,5 +1,4 @@
 import { finalAlbum } from '../../../app/album'
-import { getAnnotation } from '../../../app/album/api/annotations'
 
 export const getGlobalAnnotationCount = () => {
     const { globalAnnotationIndicesList } = finalAlbum
@@ -11,28 +10,16 @@ export const getGlobalAnnotationDoneCount = () => {
     return globalAnnotationDoneCount
 }
 
-const _getIndicesForGlobalAnnotation = globalIndex => {
+const _getMetadataForGlobalAnnotation = globalIndex => {
     const { globalAnnotationIndicesList } = finalAlbum,
         globalAnnotationIndices = globalAnnotationIndicesList[globalIndex]
 
-    return globalAnnotationIndices || {}
+    return globalAnnotationIndices || null
 }
 
 const _getTodoForGlobalAnnotation = globalIndex => {
     const { globalAnnotationTodos } = finalAlbum
     return globalAnnotationTodos[globalIndex]
-}
-
-const getGlobalAnnotation = globalIndex => {
-    const {
-        songIndex,
-        annotationIndex
-    } = _getIndicesForGlobalAnnotation(globalIndex)
-
-    return songIndex && annotationIndex ? getAnnotation(
-        songIndex,
-        annotationIndex
-    ) : null
 }
 
 const _getAnnotationIndexForInterval = ({
@@ -42,7 +29,7 @@ const _getAnnotationIndexForInterval = ({
     parseInt(getGlobalAnnotationCount() / count * intervalIndex)
 )
 
-export const getNextGlobalAnnotationForInterval = ({
+export const getMetadataForNextGlobalAnnotation = ({
     intervalIndex,
     count
 }) => {
@@ -70,17 +57,18 @@ export const getNextGlobalAnnotationForInterval = ({
     while (
         isLastIntervalIndex || globalIndex < nextGlobalIndex
     ) {
-        const globalAnnotation = getGlobalAnnotation(globalIndex)
+        const globalAnnotationMetadata =
+            _getMetadataForGlobalAnnotation(globalIndex)
 
         // It's the last interval and there are no more annotations.
-        if (!globalAnnotation) {
+        if (!globalAnnotationMetadata) {
             return null
         }
 
         // This is the annotation we want.
         if (_getTodoForGlobalAnnotation(globalIndex)) {
             return {
-                ...globalAnnotation,
+                ...globalAnnotationMetadata,
                 globalIndex
             }
         }

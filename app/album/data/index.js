@@ -1,13 +1,8 @@
 import {
-    addIsLogue,
-    addOverview,
-    addTitle,
-    addIsDoublespeaker,
-    addDuration
+    addSongAndLogueMetadata,
+    addSongMetadata
 } from './helpers/song'
-import { addVerseDurations } from './helpers/verse'
-import { addFormTypeIndices } from './helpers/formType'
-import { addHasSideCard } from './helpers/sideCard'
+import { addLyricMetadata } from './helpers/lyric'
 import { addUnitAndVerseMetadata } from './helpers/unit'
 import { addStanzaMetadata } from './helpers/stanza'
 import { addSceneMetadata } from './helpers/scene'
@@ -28,28 +23,21 @@ export const finalSongs = getSongIndicesArray().map(songIndex => {
     const finalSong = {}
 
     const isLogue =
-        addIsLogue(songIndex, finalSong)
-    addOverview(songIndex, finalSong)
-    addTitle(songIndex, finalSong)
+        addSongAndLogueMetadata(songIndex, finalSong)
 
     if (!isLogue) {
-        addIsDoublespeaker(songIndex, finalSong)
-        addHasSideCard(songIndex, finalSong)
-        addFormTypeIndices(songIndex, finalSong)
-
         const songDuration =
-            addDuration(songIndex, finalSong)
+            addSongMetadata(songIndex, finalSong)
+
+        addLyricMetadata(songIndex, finalSong)
 
         // TODO: Still need to remove annotations from verses.
         const {
             unitVerseIndicesList,
             verseStartTimes
-        } = addUnitAndVerseMetadata(songIndex, finalSong)
-
-        // TODO: Add to unit and verse metadata.
-        addVerseDurations({
+        } = addUnitAndVerseMetadata({
+            songIndex,
             songDuration,
-            verseStartTimes,
             finalSong
         })
 
@@ -75,21 +63,22 @@ export const finalSongs = getSongIndicesArray().map(songIndex => {
     return finalSong
 })
 
-logServe({
-    log: 'End parsing album.',
-    action: 'end',
-    label: 'album'
-})
-
 const album = { songs }
 export const finalAlbum = { finalSongs }
 
 addWormholeMetadata(finalSongs)
-
 addAdminMetadata(finalAlbum)
 
 // FIXME: Remove.
 global.album = album
 global.finalAlbum = finalAlbum
+global.a = (songIndex) => album.songs[songIndex]
+global.f = (songIndex) => finalAlbum.finalSongs[songIndex]
+
+logServe({
+    log: 'End parsing album.',
+    action: 'end',
+    label: 'album'
+})
 
 export default album

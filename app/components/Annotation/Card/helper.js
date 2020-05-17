@@ -1,4 +1,4 @@
-import { getAnnotationCardObject } from '../../../album/api/annotations'
+import { getCardForAnnotation } from '../../../album/api/annotations'
 import { WORMHOLE } from '../../../constants/dots'
 
 export const getAnnotationCard = ({
@@ -6,11 +6,11 @@ export const getAnnotationCard = ({
     annotationIndex,
     cardIndex
 }) => {
-    const cardObject = getAnnotationCardObject({
+    const cardObject = getCardForAnnotation(
             songIndex,
             annotationIndex,
             cardIndex
-        }),
+        ),
 
         {
             description: text,

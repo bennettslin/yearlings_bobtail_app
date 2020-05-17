@@ -6,11 +6,9 @@ import {
     addActorTasksToSongDrawingTasks
 } from './helper'
 
-const
-    drawings = {},
-    songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
+const drawings = {}
 
-songIndicesArray.forEach(songIndex => {
+getArrayOfLength(getSongsAndLoguesCount()).forEach(songIndex => {
     initialiseDrawings(drawings, songIndex)
 })
 

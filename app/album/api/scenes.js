@@ -20,7 +20,7 @@ const DEFAULT_SCENE = {
     }
 }
 
-export const getSceneIndicesArray = (songIndex) => (
+export const getSceneIndices = (songIndex) => (
     getSongIsLogue(songIndex) ?
         [] :
         getArrayOfLength(
@@ -30,7 +30,7 @@ export const getSceneIndicesArray = (songIndex) => (
 )
 
 export const getSceneCountForSong = (songIndex) => (
-    getSceneIndicesArray(songIndex).length
+    getSceneIndices(songIndex).length
 )
 
 export const getVerseIndexForScene = (songIndex, sceneIndex) => {

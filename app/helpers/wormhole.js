@@ -1,6 +1,4 @@
-import { getAnnotationCardObject } from '../album/api/annotations'
-
-export const parseWormholeLinkForDispatch = (wormholeLink) => {
+export const mapWormholeLinkForDispatch = (wormholeLink) => {
     const {
         songIndex: selectedSongIndex,
         annotationIndex: selectedAnnotationIndex,
@@ -18,19 +16,4 @@ export const parseWormholeLinkForDispatch = (wormholeLink) => {
         destinationWormholeIndex,
         wormholePrefix
     }
-}
-
-export const getCardWormholeLinksArray = ({
-    songIndex,
-    annotationIndex,
-    cardIndex
-}) => {
-    // Called by annotation wormholes block component.
-    const cardObject = getAnnotationCardObject({
-        songIndex,
-        annotationIndex,
-        cardIndex
-    })
-
-    return cardObject ? cardObject.wormholeLinks : null
 }

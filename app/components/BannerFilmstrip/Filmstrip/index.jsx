@@ -10,7 +10,7 @@ import AccessDirectionLetter from '../../Access/DirectionLetter'
 import SceneDispatcher from '../../../dispatchers/Scene'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 
-import { getSceneIndicesArray } from '../../../album/api/scenes'
+import { getSceneIndices } from '../../../album/api/scenes'
 import {
     getDurationForSong,
     getStartTimeForScene,
@@ -85,8 +85,7 @@ class Filmstrip extends PureComponent {
                 isSelectedLogue
             } = this.props,
 
-            songDuration = getDurationForSong(selectedSongIndex),
-            sceneIndicesArray = getSceneIndicesArray(selectedSongIndex)
+            songDuration = getDurationForSong(selectedSongIndex)
 
         return (
             <div
@@ -100,7 +99,7 @@ class Filmstrip extends PureComponent {
                     )
                 }}
             >
-                {sceneIndicesArray.map(sceneIndex => {
+                {getSceneIndices(selectedSongIndex).map(sceneIndex => {
                     const
                         sceneStartTime = getStartTimeForScene(
                             selectedSongIndex,

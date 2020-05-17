@@ -20,12 +20,6 @@ export const addWormholeMetadata = (songs) => {
 
             annotations.forEach(annotation => {
                 annotationWikiWormholes.push(annotation.wikiWormholes || null)
-
-                // TODO: Eventually get rid of these, since we won't pass annotation object to begin with.
-                delete annotation.columnIndex
-                delete annotation.dotKeys
-                delete annotation.verseIndex
-                delete annotation.wikiWormholes
             })
 
             song.annotationWikiWormholes = annotationWikiWormholes

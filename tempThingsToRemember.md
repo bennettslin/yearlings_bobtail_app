@@ -4,6 +4,7 @@ See about sharing configs for couches and others.
 Make cardboards stroke line different.
 Rethink some dot category shapes?
 Don't use cursor width to determine whether to render tracker in Filmstrip Cell?
+Put mapWormholeLinkForDispatch in own dispatch dispatchWormhole
 
 # FIXME
 Ellipsis is too short when only right cards are shown.

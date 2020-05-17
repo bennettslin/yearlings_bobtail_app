@@ -45,5 +45,10 @@ export default [
     {
         taskName: `Editing. Include overviews.`,
         workedHours: 0
+    },
+    {
+        taskName: `Clean up routing container.`,
+        workedHours: 0,
+        neededHours: 10
     }
 ]

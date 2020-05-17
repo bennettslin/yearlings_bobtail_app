@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
-import { getCardWormholeLinksArray } from '../../../../helpers/wormhole'
+import { getWormholeLinksForAnnotationCard } from '../../../../album/api/annotations'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex },
@@ -36,13 +36,13 @@ class AnnotationWormholes extends PureComponent {
                 cardIndex
             } = this.props,
 
-            wormholeLinksArray = getCardWormholeLinksArray({
-                songIndex: lyricSongIndex,
+            wormholeLinks = getWormholeLinksForAnnotationCard(
+                lyricSongIndex,
                 annotationIndex,
                 cardIndex
-            })
+            )
 
-        return wormholeLinksArray.map((wormholeObject, wormholeLinkIndex) => {
+        return wormholeLinks.map((wormholeObject, wormholeLinkIndex) => {
             /**
              * The wormholeLinkIndex is solely to fetch the wormhole object
              * from the data helper when there are two wormholes in the same

@@ -126,9 +126,6 @@ export const addWormholeLinksToCard = (songs, tempWormholeLinks) => {
                     sourceWormholeIndex
                 }
             })
-
-            // Clean up.
-            delete annotation.tempSourceWormholeIndices
         })
     }
 }
