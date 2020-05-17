@@ -4,8 +4,6 @@ import {
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
 
-import { COLUMN_INDEX } from '../../constants/lyrics'
-
 export const getAnnotationIndicesArray = (songIndex) => (
     getSongIsLogue(songIndex) ?
         [] :
@@ -55,18 +53,12 @@ export const getVerseIndexForAnnotation = (songIndex, annotationIndex) => {
     return annotationVerseIndex >= 0 ? annotationVerseIndex : null
 }
 
-export const getColumnIndexForAnnotation = (
-    songIndex,
-    annotationIndex
-) => {
-    const annotation = getAnnotation(
-        songIndex,
-        annotationIndex
-    )
+export const getColumnIndexForAnnotation = (songIndex, annotationIndex) => {
+    const { annotationColumnIndices } = getFinalSong(songIndex)
 
     // Default to left if it's not explicitly right.
-    return annotation ?
-        annotation[COLUMN_INDEX] :
+    return annotationColumnIndices ?
+        annotationColumnIndices[annotationIndex] :
         0
 }
 

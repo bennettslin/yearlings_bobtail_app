@@ -1,4 +1,4 @@
-import { getAnnotation } from '../../../album/api/annotations'
+import { getColumnIndexForAnnotation } from '../../../album/api/annotations'
 import { EAR_COLUMN_KEYS } from '../../../constants/lyrics'
 
 export const getCarouselAnnotationData = ({
@@ -6,7 +6,7 @@ export const getCarouselAnnotationData = ({
     annotationIndex
 }) => {
 
-    const { columnIndex } = getAnnotation(
+    const columnIndex = getColumnIndexForAnnotation(
             songIndex,
             annotationIndex
         ),

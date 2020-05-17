@@ -33,6 +33,9 @@ Rethink some dot category shapes?
     * tips
 
 # Annotation todos
+Fix global annotations
+Fix carousel annotation not hiding upon ear click (might need to reconsider making 0 the default, maybe pass -1 to api, then api passes null to component)
+Pass annotations externally instead of through finalSongs
 Make dot keys bit numbers
 If single card, just pass it instead of array.
 If just single card, don't have dot keys, and then get dot keys from annotation

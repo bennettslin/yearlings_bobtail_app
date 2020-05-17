@@ -79,6 +79,7 @@ export const addAnnotations = (songIndex, finalSong) => {
         { lyricUnits } = song
 
     const annotations = [],
+        annotationColumnIndices = [],
         annotationDotKeysList = [],
         annotationTitles = [],
         annotationTodos = [],
@@ -120,6 +121,7 @@ export const addAnnotations = (songIndex, finalSong) => {
     })
 
     annotations.forEach(annotation => {
+        annotationColumnIndices.push(annotation.columnIndex || 0)
         annotationDotKeysList.push(annotation.dotKeys)
         annotationTitles.push(annotation.title)
         annotationTodos.push(annotation.todo)
@@ -134,6 +136,10 @@ export const addAnnotations = (songIndex, finalSong) => {
         // delete annotation.todo
     })
 
+    // Don't bother to add if it's all left column.
+    if (annotationColumnIndices.some(index => index === 1)) {
+        finalSong.annotationColumnIndices = annotationColumnIndices
+    }
     finalSong.annotationDotKeysList = annotationDotKeysList
     finalSong.annotationTitles = annotationTitles
     finalSong.annotationTodos = annotationTodos
