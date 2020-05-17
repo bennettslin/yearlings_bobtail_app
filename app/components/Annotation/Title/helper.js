@@ -7,10 +7,10 @@ import {
     REFERENCE
 } from '../../../constants/dots'
 
-const _getAccessibleWikiWormholesLength = ({
+export const getAccessibleWikiWormholesCount = ({
     songIndex,
     annotationIndex,
-    dotKeys
+    selectedDotKeys
 }) => {
 
     const annotation = getAnnotation(
@@ -24,44 +24,16 @@ const _getAccessibleWikiWormholesLength = ({
             return (
                 (
                     // It's a wiki anchor, and reference dot is selected.
-                    isString(wikiWormhole) && dotKeys[REFERENCE]
+                    isString(wikiWormhole) && selectedDotKeys[REFERENCE]
 
                 ) || (
                     // It's a wormhole index, and wormhole dot is selected.
-                    Number.isFinite(wikiWormhole) && dotKeys[WORMHOLE]
+                    Number.isFinite(wikiWormhole) && selectedDotKeys[WORMHOLE]
                 )
             ) ? sum + 1 : sum
         }, 0)
 
     } else {
         return 0
-    }
-}
-
-export const getAnnotationTitleData = ({
-    songIndex,
-    annotationIndex,
-    selectedDotKeys
-}) => {
-    const {
-            dotKeys,
-            title
-
-        } = getAnnotation(
-            songIndex,
-            annotationIndex
-        ),
-
-        accessibleWikiWormholesLength =
-            _getAccessibleWikiWormholesLength({
-                songIndex,
-                annotationIndex,
-                dotKeys: selectedDotKeys
-            })
-
-    return {
-        dotKeys,
-        title,
-        accessibleWikiWormholesLength
     }
 }

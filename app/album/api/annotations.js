@@ -17,6 +17,11 @@ export const getAnnotation = (
     return annotations ? annotations[annotationIndex - 1] : null
 }
 
+export const getAnnotationDotKeys = (songIndex, annotationIndex) => {
+    const { annotationDotKeys } = getFinalSong(songIndex)
+    return annotationDotKeys[annotationIndex - 1]
+}
+
 export const getAnnotationTitle = (songIndex, annotationIndex) => {
     const { annotationTitles } = getFinalSong(songIndex)
     return annotationTitles[annotationIndex - 1]

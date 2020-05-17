@@ -9,11 +9,14 @@ import AnnotationTitleText from './TitleText'
 
 import AnnotationAccess from './Access'
 
-import { getAnnotationTitle } from '../../../album/api/annotations'
+import {
+    getAnnotationDotKeys,
+    getAnnotationTitle
+} from '../../../album/api/annotations'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
 
-import { getAnnotationTitleData } from './helper'
+import { getAccessibleWikiWormholesCount } from './helper'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex },
@@ -65,15 +68,16 @@ class AnnotationTitle extends PureComponent {
 
             selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
-            {
-                dotKeys,
-                accessibleWikiWormholesLength
-
-            } = getAnnotationTitleData({
+            accessibleWikiWormholesLength = getAccessibleWikiWormholesCount({
                 songIndex: lyricSongIndex,
                 annotationIndex,
                 selectedDotKeys
             }),
+
+            annotationDotKeys = getAnnotationDotKeys(
+                lyricSongIndex,
+                annotationIndex
+            ),
 
             annotationTitle = getAnnotationTitle(
                 lyricSongIndex,
@@ -110,7 +114,7 @@ class AnnotationTitle extends PureComponent {
                         {...{
                             isAccessed,
                             isSelected,
-                            stanzaDotKeys: dotKeys,
+                            stanzaDotKeys: annotationDotKeys,
                             handleAnchorClick: this._handleTitleClick
                         }}
                     />
@@ -120,7 +124,7 @@ class AnnotationTitle extends PureComponent {
                             isAccessed,
                             isSelected,
                             text: `\u201c${annotationTitle}\u201d`,
-                            sequenceDotKeys: dotKeys,
+                            sequenceDotKeys: annotationDotKeys,
                             handleAnchorClick: this._handleTitleClick
                         }}
                     />

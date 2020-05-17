@@ -1,5 +1,5 @@
 import { initialiseTempWormholeLinks } from './helpers/initialise'
-import { registerWikiAndWormholeLinks } from './helpers/register'
+import { registerWikiWormholeLinks } from './helpers/register'
 import {
     tellEachSourceLinkItsDestination,
     addWormholeLinksToCard
@@ -10,6 +10,6 @@ const TEMP_WORMHOLE_LINKS = {}
 export const addWormholeMetadata = (songs) => {
     initialiseTempWormholeLinks(songs, TEMP_WORMHOLE_LINKS)
     tellEachSourceLinkItsDestination(songs, TEMP_WORMHOLE_LINKS)
-    registerWikiAndWormholeLinks(songs)
+    registerWikiWormholeLinks(songs)
     addWormholeLinksToCard(songs, TEMP_WORMHOLE_LINKS)
 }

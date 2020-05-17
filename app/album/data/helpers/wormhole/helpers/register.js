@@ -98,7 +98,7 @@ const _registerWormholeLinksForCard = ({
     })
 }
 
-const _registerWikiAndWormholeLinksForCard = ({
+const _registerWikiWormholeLinksForCard = ({
     songIndex,
     annotation,
     card: {
@@ -121,7 +121,7 @@ const _registerWikiAndWormholeLinksForCard = ({
     }
 }
 
-export const registerWikiAndWormholeLinks = (songs) => {
+export const registerWikiWormholeLinks = (songs) => {
     songs.forEach(({ annotations }, songIndex) => {
         if (annotations) {
             /**
@@ -132,7 +132,7 @@ export const registerWikiAndWormholeLinks = (songs) => {
                 const { cards } = annotation
 
                 cards.forEach(card => {
-                    _registerWikiAndWormholeLinksForCard({
+                    _registerWikiWormholeLinksForCard({
                         songIndex,
                         annotation,
                         card
