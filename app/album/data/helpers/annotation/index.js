@@ -74,7 +74,7 @@ const _recurseThroughVerse = ({
     }
 }
 
-export const addAnnotations = (songIndex, finalSong) => {
+export const addAnnotationMetadata = (songIndex, finalSong) => {
     const song = albumLyrics[songIndex],
         { lyricUnits } = song
 
@@ -120,6 +120,13 @@ export const addAnnotations = (songIndex, finalSong) => {
         })
     })
 
+    /**
+     * Now that we have recursively gone through the lyrics and the annotation
+     * data has been populated, we will now spread them out into arrays for
+     * the final build. This is necessary because we don't know the final
+     * annotation count and some values are empty, so we need to be able to
+     * push default values to keep the array lengths equal.
+     */
     annotations.forEach(annotation => {
         annotationColumnIndices.push(annotation.columnIndex || 0)
         annotationDotKeysList.push(annotation.dotKeys)
@@ -133,7 +140,6 @@ export const addAnnotations = (songIndex, finalSong) => {
 
         // TODO: Eventually get rid of these, since we won't pass annotation object to begin with.
         delete annotation.title
-        // delete annotation.todo
     })
 
     // Don't bother to add if it's all left column.

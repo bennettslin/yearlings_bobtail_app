@@ -34,18 +34,12 @@ export const addPluralCardsCount = (song) => {
 }
 
 export const addGlobalAnnotationIndices = (album) => {
-    const
-        { songs } = album,
+    const { finalSongs } = album,
         annotationIndices = []
 
     let globalAnnotationIndicesDone = 0
 
-    songs.forEach(song => {
-        const {
-            annotations,
-            songIndex
-        } = song
-
+    finalSongs.forEach(({ annotations }, songIndex) => {
         if (annotations) {
             annotations.forEach(annotation => {
                 const { annotationIndex } = annotation

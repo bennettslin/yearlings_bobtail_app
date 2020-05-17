@@ -11,7 +11,7 @@ import { addHasSideCard } from './helpers/sideCard'
 import { addUnitAndVerseMetadata } from './helpers/unit'
 import { addStanzaMetadata } from './helpers/stanza'
 import { addSceneMetadata } from './helpers/scene'
-import { addAnnotations } from './helpers/annotation'
+import { addAnnotationMetadata } from './helpers/annotation'
 import {
     addDotUnitsCount,
     addPluralCardsCount,
@@ -50,6 +50,7 @@ export const finalSongs = getSongIndicesArray().map(songIndex => {
             verseStartTimes
         } = addUnitAndVerseMetadata(songIndex, finalSong)
 
+        // TODO: Add to unit and verse metadata.
         addVerseDurations({
             songDuration,
             verseStartTimes,
@@ -72,7 +73,7 @@ export const finalSongs = getSongIndicesArray().map(songIndex => {
             finalSong
         })
 
-        addAnnotations(songIndex, finalSong)
+        addAnnotationMetadata(songIndex, finalSong)
 
         addDotUnitsCount(songs[songIndex])
         addPluralCardsCount(songs[songIndex])
@@ -91,7 +92,7 @@ const album = { songs }
 export const finalAlbum = { finalSongs }
 
 addWormholeMetadata(finalSongs)
-addGlobalAnnotationIndices(album)
+addGlobalAnnotationIndices(finalAlbum)
 
 // FIXME: Remove.
 global.album = album
