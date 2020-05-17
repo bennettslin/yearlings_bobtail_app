@@ -27,6 +27,11 @@ export const getAnnotationTitle = (songIndex, annotationIndex) => {
     return annotationTitles[annotationIndex - 1]
 }
 
+export const getWikiWormholesForAnnotation = (songIndex, annotationIndex) => {
+    const { annotationWikiWormholes } = getFinalSong(songIndex)
+    return annotationWikiWormholes[annotationIndex - 1]
+}
+
 export const getVerseIndexForAnnotationIndex = (
     songIndex,
     annotationIndex

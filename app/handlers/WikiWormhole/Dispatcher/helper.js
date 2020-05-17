@@ -1,6 +1,6 @@
 import { isString } from '../../../helpers/general'
 
-import { getAnnotation } from '../../../album/api/annotations'
+import { getWikiWormholesForAnnotation } from '../../../album/api/annotations'
 
 import {
     WORMHOLE,
@@ -15,15 +15,13 @@ export const getWikiWormholeIndexForDirection = ({
     direction
 
 }) => {
-    const annotation = getAnnotation(
+    const annotationWikiWormholes = getWikiWormholesForAnnotation(
         selectedSongIndex,
         selectedAnnotationIndex
     )
 
-    if (annotation && annotation.wikiWormholes) {
-
-        const { wikiWormholes } = annotation,
-            wikiWormholesCount = wikiWormholes.length
+    if (annotationWikiWormholes) {
+        const wikiWormholesCount = annotationWikiWormholes.length
 
         let returnIndex = initialWikiWormholeIndex,
             counter = 0
@@ -48,7 +46,7 @@ export const getWikiWormholeIndexForDirection = ({
              * or it's a wormhole index and wormhole dot is selected. Remember
              * that wiki wormholes are 1-based.
              */
-            const isWiki = isString(wikiWormholes[returnIndex - 1])
+            const isWiki = isString(annotationWikiWormholes[returnIndex - 1])
             if (
                 (isWiki && selectedDotKeys[REFERENCE]) ||
                 (!isWiki && selectedDotKeys[WORMHOLE])

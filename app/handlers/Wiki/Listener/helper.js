@@ -1,4 +1,4 @@
-import { getAnnotation } from '../../../album/api/annotations'
+import { getWikiWormholesForAnnotation } from '../../../album/api/annotations'
 
 export const getWikiUrl = ({
     selectedSongIndex,
@@ -15,12 +15,12 @@ export const getWikiUrl = ({
                 carouselAnnotationIndex ||
                 selectedAnnotationIndex,
 
-            annotation = getAnnotation(
+            annotationWikiWormholes = getWikiWormholesForAnnotation(
                 selectedSongIndex,
                 annotationIndex
             ),
 
-            partialPath = annotation.wikiWormholes[selectedWikiIndex - 1],
+            partialPath = annotationWikiWormholes[selectedWikiIndex - 1],
 
             domainPath = isMobileWiki ?
                 'https://en.m.wikipedia.org/wiki/' :

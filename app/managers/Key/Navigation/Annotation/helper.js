@@ -1,4 +1,7 @@
-import { getAnnotation } from '../../../../album/api/annotations'
+import {
+    getAnnotation,
+    getWikiWormholesForAnnotation
+} from '../../../../album/api/annotations'
 import { parseWormholeLinkForDispatch } from '../../../../helpers/wormhole'
 
 export const getWormholeLinkFromIndex = ({
@@ -45,17 +48,13 @@ export const getWikiWormholeEntity = ({
     annotationIndex,
     accessedIndex
 }) => {
-    const annotationObject = getAnnotation(
+    const annotationWikiWormholes = getWikiWormholesForAnnotation(
         songIndex,
         annotationIndex
     )
 
-    if (
-        annotationObject &&
-        annotationObject.wikiWormholes &&
-        annotationObject.wikiWormholes.length
-    ) {
-        return annotationObject.wikiWormholes[accessedIndex - 1]
+    if (annotationWikiWormholes) {
+        return annotationWikiWormholes[accessedIndex - 1]
     }
 
     return null

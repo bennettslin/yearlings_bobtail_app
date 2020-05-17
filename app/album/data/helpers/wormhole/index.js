@@ -12,4 +12,20 @@ export const addWormholeMetadata = (songs) => {
     tellEachSourceLinkItsDestination(songs, TEMP_WORMHOLE_LINKS)
     registerWikiWormholeLinks(songs)
     addWormholeLinksToCard(songs, TEMP_WORMHOLE_LINKS)
+
+    songs.forEach(song => {
+        const { annotations } = song
+        if (annotations) {
+            const annotationWikiWormholes = []
+
+            annotations.forEach(annotation => {
+                annotationWikiWormholes.push(annotation.wikiWormholes || null)
+
+                // TODO: Eventually get rid of these, since we won't pass annotation object to begin with.
+                delete annotation.wikiWormholes
+            })
+
+            song.annotationWikiWormholes = annotationWikiWormholes
+        }
+    })
 }

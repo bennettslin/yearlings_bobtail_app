@@ -1,6 +1,6 @@
 import { isString } from '../../../helpers/general'
 
-import { getAnnotation } from '../../../album/api/annotations'
+import { getWikiWormholesForAnnotation } from '../../../album/api/annotations'
 
 import {
     WORMHOLE,
@@ -13,14 +13,13 @@ export const getAccessibleWikiWormholesCount = ({
     selectedDotKeys
 }) => {
 
-    const annotation = getAnnotation(
-            songIndex,
-            annotationIndex
-        ),
-        { wikiWormholes } = annotation
+    const annotationWikiWormholes = getWikiWormholesForAnnotation(
+        songIndex,
+        annotationIndex
+    )
 
-    if (wikiWormholes) {
-        return wikiWormholes.reduce((sum, wikiWormhole) => {
+    if (annotationWikiWormholes) {
+        return annotationWikiWormholes.reduce((sum, wikiWormhole) => {
             return (
                 (
                     // It's a wiki anchor, and reference dot is selected.
