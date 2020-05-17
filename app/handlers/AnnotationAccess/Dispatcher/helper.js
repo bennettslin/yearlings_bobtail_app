@@ -1,6 +1,6 @@
 import {
-    getAnnotation,
-    getAnnotationsCount
+    getAnnotationsCount,
+    getAnnotationDotKeys
 } from '../../../album/api/annotations'
 import { getVerse } from '../../../album/api/verses'
 import {
@@ -51,14 +51,17 @@ export const getAnnotationIndexForVerseIndex = ({
             // Move inward, which is the opposite direction.
             currentCounter -= direction
 
-            const annotation = getAnnotation(selectedSongIndex, returnIndex),
+            const annotationDotKeys = getAnnotationDotKeys(
+                    selectedSongIndex,
+                    returnIndex
+                ),
                 showAnnotationForColumn = getShowAnnotationForColumn({
                     selectedSongIndex,
                     selectedAnnotationIndex: returnIndex,
                     earColumnIndex,
                     isEarShown
                 }),
-                doesIntersect = intersects(annotation.dotKeys, selectedDotKeys)
+                doesIntersect = intersects(annotationDotKeys, selectedDotKeys)
 
             /**
              * Return while not shown for column or dot keys don't intersect,
