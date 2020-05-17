@@ -12,11 +12,7 @@ import { addUnitAndVerseMetadata } from './helpers/unit'
 import { addStanzaMetadata } from './helpers/stanza'
 import { addSceneMetadata } from './helpers/scene'
 import { addAnnotationMetadata } from './helpers/annotation'
-import {
-    addDotUnitsCount,
-    addPluralCardsCount,
-    addGlobalAnnotationIndices
-} from './helpers/admin'
+import { addAdminMetadata } from './helpers/admin'
 import { addWormholeMetadata } from './helpers/wormhole'
 
 // TODO: Eventually don't grab songs here.
@@ -74,9 +70,6 @@ export const finalSongs = getSongIndicesArray().map(songIndex => {
         })
 
         addAnnotationMetadata(songIndex, finalSong)
-
-        addDotUnitsCount(songs[songIndex])
-        addPluralCardsCount(songs[songIndex])
     }
 
     return finalSong
@@ -92,7 +85,8 @@ const album = { songs }
 export const finalAlbum = { finalSongs }
 
 addWormholeMetadata(finalSongs)
-addGlobalAnnotationIndices(finalAlbum)
+
+addAdminMetadata(finalAlbum)
 
 // FIXME: Remove.
 global.album = album

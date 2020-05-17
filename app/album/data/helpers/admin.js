@@ -1,57 +1,26 @@
-export const addDotUnitsCount = (song) => {
-    const { lyricUnits } = song
-
-    if (lyricUnits) {
-        let dotUnitsCount = 0
-
-        lyricUnits.forEach(unit => {
-            const { unitMap: { unitDot } } = unit
-
-            if (unitDot) {
-                dotUnitsCount++
-            }
-        })
-
-        song.adminDotUnitsCount = dotUnitsCount
-    }
-}
-
-export const addPluralCardsCount = (song) => {
-    const { annotations } = song
-
-    if (annotations) {
-        let pluralCardsCount = 0
-
-        annotations.forEach(annotation => {
-            const { cards } = annotation
-            if (cards.length > 1) {
-                pluralCardsCount++
-            }
-        })
-
-        song.adminPluralCardsCount = pluralCardsCount
-    }
-}
-
-export const addGlobalAnnotationIndices = (album) => {
+export const addAdminMetadata = (album) => {
     const { finalSongs } = album,
-        annotationIndices = []
+        globalAnnotationIndicesList = [],
+        globalAnnotationTodos = []
 
-    let globalAnnotationIndicesDone = 0
+    let globalAnnotationDoneCount = 0
 
     finalSongs.forEach(({ annotations }, songIndex) => {
         if (annotations) {
             annotations.forEach(annotation => {
                 const { annotationIndex } = annotation
 
-                // Let annotation object know its global index.
-                annotation.globalIndex = annotationIndices.length
-
                 if (!annotation.todo) {
-                    globalAnnotationIndicesDone += 1
+                    globalAnnotationDoneCount += 1
                 }
 
-                annotationIndices.push({
+                globalAnnotationTodos.push(annotation.todo)
+
+                // FIXME: Don't need this.
+                delete annotation.todo
+                delete annotation.annotationIndex
+
+                globalAnnotationIndicesList.push({
                     songIndex,
                     annotationIndex
                 })
@@ -59,6 +28,7 @@ export const addGlobalAnnotationIndices = (album) => {
         }
     })
 
-    album.globalAnnotationIndicesDone = globalAnnotationIndicesDone
-    album.globalAnnotationIndices = annotationIndices
+    album.globalAnnotationIndicesList = globalAnnotationIndicesList
+    album.globalAnnotationTodos = globalAnnotationTodos
+    album.globalAnnotationDoneCount = globalAnnotationDoneCount
 }

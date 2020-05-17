@@ -82,7 +82,6 @@ export const addAnnotationMetadata = (songIndex, finalSong) => {
         annotationColumnIndices = [],
         annotationDotKeysList = [],
         annotationTitles = [],
-        annotationTodos = [],
         annotationVerseIndices = []
 
     lyricUnits.forEach(unit => {
@@ -131,7 +130,6 @@ export const addAnnotationMetadata = (songIndex, finalSong) => {
         annotationColumnIndices.push(annotation.columnIndex || 0)
         annotationDotKeysList.push(annotation.dotKeys)
         annotationTitles.push(annotation.title)
-        annotationTodos.push(annotation.todo)
         annotationVerseIndices.push(
             Number.isFinite(annotation.verseIndex) ?
                 annotation.verseIndex :
@@ -148,7 +146,6 @@ export const addAnnotationMetadata = (songIndex, finalSong) => {
     }
     finalSong.annotationDotKeysList = annotationDotKeysList
     finalSong.annotationTitles = annotationTitles
-    finalSong.annotationTodos = annotationTodos
     finalSong.annotationVerseIndices = annotationVerseIndices
     finalSong.annotations = annotations
 }

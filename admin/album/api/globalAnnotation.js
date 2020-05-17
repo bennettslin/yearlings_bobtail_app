@@ -1,32 +1,46 @@
 import { finalAlbum } from '../../../app/album'
 import { getAnnotation } from '../../../app/album/api/annotations'
 
-const getGlobalAnnotation = (globalIndex) => {
-    const { globalAnnotationIndices } = finalAlbum,
-        annotationObject = globalAnnotationIndices[globalIndex]
+export const getGlobalAnnotationCount = () => {
+    const { globalAnnotationIndicesList } = finalAlbum
+    return globalAnnotationIndicesList.length
+}
 
-    if (!annotationObject) {
-        return null
-    }
+export const getGlobalAnnotationDoneCount = () => {
+    const { globalAnnotationDoneCount } = finalAlbum
+    return globalAnnotationDoneCount
+}
 
+const _getIndicesForGlobalAnnotation = globalIndex => {
+    const { globalAnnotationIndicesList } = finalAlbum,
+        globalAnnotationIndices = globalAnnotationIndicesList[globalIndex]
+
+    return globalAnnotationIndices || {}
+}
+
+const _getTodoForGlobalAnnotation = globalIndex => {
+    const { globalAnnotationTodos } = finalAlbum
+    return globalAnnotationTodos[globalIndex]
+}
+
+const getGlobalAnnotation = globalIndex => {
     const {
         songIndex,
         annotationIndex
-    } = annotationObject
+    } = _getIndicesForGlobalAnnotation(globalIndex)
 
-    return getAnnotation(
+    return songIndex && annotationIndex ? getAnnotation(
         songIndex,
         annotationIndex
-    )
+    ) : null
 }
 
 const _getAnnotationIndexForInterval = ({
     intervalIndex,
     count
-}) => {
-    const { globalAnnotationIndices } = finalAlbum
-    return parseInt(globalAnnotationIndices.length / count * intervalIndex)
-}
+}) => (
+    parseInt(getGlobalAnnotationCount() / count * intervalIndex)
+)
 
 export const getNextGlobalAnnotationForInterval = ({
     intervalIndex,
@@ -64,7 +78,7 @@ export const getNextGlobalAnnotationForInterval = ({
         }
 
         // This is the annotation we want.
-        if (globalAnnotation.todo) {
+        if (_getTodoForGlobalAnnotation(globalIndex)) {
             return {
                 ...globalAnnotation,
                 globalIndex
@@ -75,14 +89,4 @@ export const getNextGlobalAnnotationForInterval = ({
     }
 
     return null
-}
-
-export const getGlobalAnnotationsCount = () => {
-    const { globalAnnotationIndices } = finalAlbum
-    return globalAnnotationIndices.length
-}
-
-export const getGlobalAnnotationsDoneCount = () => {
-    const { globalAnnotationIndicesDone } = finalAlbum
-    return globalAnnotationIndicesDone
 }

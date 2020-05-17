@@ -6,8 +6,8 @@ import AnnotationCards from './AnnotationCards'
 
 import {
     getNextGlobalAnnotationForInterval,
-    getGlobalAnnotationsCount,
-    getGlobalAnnotationsDoneCount
+    getGlobalAnnotationCount,
+    getGlobalAnnotationDoneCount
 } from '../../album/api/globalAnnotation'
 
 import { getArrayOfLength } from '../../../app/helpers/general'
@@ -21,7 +21,7 @@ import './style.scss'
 const TempGlobalAnnotationsCounter = () => (
     <div className="TempGlobalAnnotationsCounter">
         <div className="TempGlobalAnnotation__header">
-            {getGlobalAnnotationsDoneCount()} / {getGlobalAnnotationsCount()} done!
+            {getGlobalAnnotationDoneCount()} / {getGlobalAnnotationCount()} done!
         </div>
     </div>
 )
