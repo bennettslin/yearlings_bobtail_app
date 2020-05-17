@@ -66,15 +66,3 @@ export const registerCardsDotKeys = ({
         _addCardDotKeysToAnnotation(card, dotKeys)
     })
 }
-
-export const registerCardsWormholes = ({
-    verse,
-    cards
-
-}) => {
-    cards.forEach((card) => {
-        if (card.wormhole) {
-            verse.tempVerseHasWormhole = true
-        }
-    })
-}
