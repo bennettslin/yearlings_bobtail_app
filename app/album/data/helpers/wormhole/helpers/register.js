@@ -98,7 +98,7 @@ const _registerWormholeLinksForCard = ({
     })
 }
 
-export const registerWikiAndWormholeLinksForCard = ({
+const _registerWikiAndWormholeLinksForCard = ({
     songIndex,
     annotation,
     card: {
@@ -119,4 +119,26 @@ export const registerWikiAndWormholeLinksForCard = ({
             wormholeLinks
         })
     }
+}
+
+export const registerWikiAndWormholeLinks = (songs) => {
+    songs.forEach(({ annotations }, songIndex) => {
+        if (annotations) {
+            /**
+             * Add wiki and wormhole indices. These can only be determined
+             * after collecting wormhole links from the entire album.
+             */
+            annotations.forEach(annotation => {
+                const { cards } = annotation
+
+                cards.forEach(card => {
+                    _registerWikiAndWormholeLinksForCard({
+                        songIndex,
+                        annotation,
+                        card
+                    })
+                })
+            })
+        }
+    })
 }

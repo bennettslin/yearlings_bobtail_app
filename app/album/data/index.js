@@ -17,7 +17,7 @@ import {
     addPluralCardsCount,
     addGlobalAnnotationIndices
 } from './helpers/admin'
-import { addWormholeStuff } from './helpers/wormhole'
+import { addWormholeMetadata } from './helpers/wormhole'
 
 // TODO: Eventually don't grab songs here.
 import songs, { getSongIndicesArray } from './lyrics'
@@ -90,7 +90,7 @@ logServe({
 const album = { songs }
 export const finalAlbum = { finalSongs }
 
-addWormholeStuff(songs)
+addWormholeMetadata(songs)
 addGlobalAnnotationIndices(album)
 
 // FIXME: Remove.
