@@ -11,14 +11,10 @@ Ellipsis is too short when only right cards are shown.
 Loading with annotation for right ear column deselects annotation.
 Switching ear deselects neutral annotation.
 
-# Album refactor
-
-## TODO next
+## TODO data refactor
 * Remove annotations from verses.
 * Remove verses from units.
 * Remove extra stuff from cards.
-
-## Annotations
 * If single card, just pass it instead of array.
 * If just single card, don't have dot keys, and then get dot keys from annotation
 * If wiki or wormhole index is single, just pass it instead of array.

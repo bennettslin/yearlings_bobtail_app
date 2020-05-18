@@ -4656,5 +4656,9 @@ export default [
     {
         taskName: `Improve logging. Only show analytics logging in development. In production, just change background colour. Make event logs more minimal.`,
         workedHours: 1
+    },
+    {
+        taskName: `Data refactor.`,
+        workedHours: 35
     }
 ]

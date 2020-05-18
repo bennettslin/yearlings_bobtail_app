@@ -4,10 +4,6 @@ export default [
         taskName: `Cutout render revisions.`,
         workedHours: 0
     },
-    {
-        taskName: `Data refactor.`,
-        workedHours: 30
-    },
 
     /* Week work. */
     {
@@ -40,6 +36,11 @@ export default [
         taskName: `Clean up routing and storage.`,
         workedHours: 0,
         neededHours: 10
+    },
+    {
+        taskName: `Finish data refactor.`,
+        workedHours: 0,
+        neededHours: 20
     },
 
     /* Weekend work. */
