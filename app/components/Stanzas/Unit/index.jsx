@@ -26,7 +26,7 @@ import {
     getShowStanzaTabTip,
     getShowWormholesTip,
     getShowWikiTip
-} from '../../../album/data/tips'
+} from '../../../album/api/tips'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }

@@ -10,6 +10,7 @@ import { addSceneMetadata } from './helpers/scene'
 import { addAnnotationMetadata } from './helpers/annotation'
 import { addAdminMetadata } from './helpers/admin'
 import { addWormholeMetadata } from './helpers/wormhole'
+import { addTip } from './helpers/tips'
 
 logServe({
     log: 'Begin parsing album.',
@@ -61,6 +62,8 @@ const songs = getSongIndicesArray().map(songIndex => {
         // TODO: Remove extraneous stuff from cards.
         annotations =
             addAnnotationMetadata(songIndex, song)
+
+        addTip(songIndex, song)
     }
 
     annotationsList.push(annotations)
@@ -73,7 +76,7 @@ addAdminMetadata(annotationsList, album)
 
 // TODO: Move to helper that adds based on delivery.
 global.album = album
-global.f = songIndex => album.songs[songIndex]
+global.a = songIndex => album.songs[songIndex]
 
 logServe({
     log: 'End parsing album.',

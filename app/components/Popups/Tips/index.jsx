@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import Tips from '../../Tips'
 import Popup from '../../Popup'
 
-import { getShowTipForDevice } from '../../../album/data/tips'
+import { getShowTipForDevice } from '../../../album/api/tips'
 import { SHOWN } from '../../../constants/options'
 
 const mapStateToProps = ({

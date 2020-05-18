@@ -1,47 +1,47 @@
-import Scene_00 from './00_Prologue'
-import Scene_01 from './01_Didi'
-import Scene_02 from './02_WillyTheCocoa'
-import Scene_03 from './03_DearSaskia'
-import Scene_04 from './04_Odin'
-import Scene_05 from './05_PchelkasStarryJourney'
-import Scene_06 from './06_AshWednesday'
-import Scene_07 from './07_M'
-import Scene_08 from './08_GoodNightSita'
-import Scene_09 from './09_GrasshoppersLieHeavy'
-import Scene_10 from './10_Constellations'
-import Scene_11 from './11_LookBackInAnger'
-import Scene_12 from './12_Garryowen'
-import Scene_13 from './13_OnAGoldenCord'
-import Scene_14 from './14_Kyon'
-import Scene_15 from './15_UncannyValleyBoy'
-import Scene_16 from './16_Cremated'
-import Scene_17 from './17_VeganProclamation'
-import Scene_18 from './18_My100000thDream'
-import Scene_19 from './19_Epilogue'
+import _00_Prologue from './00_Prologue'
+import _01_Didi from './01_Didi'
+import _02_WillyTheCocoa from './02_WillyTheCocoa'
+import _03_DearSaskia from './03_DearSaskia'
+import _04_Odin from './04_Odin'
+import _05_PchelkasStarryJourney from './05_PchelkasStarryJourney'
+import _06_AshWednesday from './06_AshWednesday'
+import _07_M from './07_M'
+import _08_GoodNightSita from './08_GoodNightSita'
+import _09_GrasshoppersLieHeavy from './09_GrasshoppersLieHeavy'
+import _10_Constellations from './10_Constellations'
+import _11_LookBackInAnger from './11_LookBackInAnger'
+import _12_Garryowen from './12_Garryowen'
+import _13_OnAGoldenCord from './13_OnAGoldenCord'
+import _14_Kyon from './14_Kyon'
+import _15_UncannyValleyBoy from './15_UncannyValleyBoy'
+import _16_Cremated from './16_Cremated'
+import _17_VeganProclamation from './17_VeganProclamation'
+import _18_My100000thDream from './18_My100000thDream'
+import _19_Epilogue from './19_Epilogue'
 
 import { addLayersToScenes } from './helpers'
 
 const albumScenes = [
-    Scene_00,
-    Scene_01,
-    Scene_02,
-    Scene_03,
-    Scene_04,
-    Scene_05,
-    Scene_06,
-    Scene_07,
-    Scene_08,
-    Scene_09,
-    Scene_10,
-    Scene_11,
-    Scene_12,
-    Scene_13,
-    Scene_14,
-    Scene_15,
-    Scene_16,
-    Scene_17,
-    Scene_18,
-    Scene_19
+    _00_Prologue,
+    _01_Didi,
+    _02_WillyTheCocoa,
+    _03_DearSaskia,
+    _04_Odin,
+    _05_PchelkasStarryJourney,
+    _06_AshWednesday,
+    _07_M,
+    _08_GoodNightSita,
+    _09_GrasshoppersLieHeavy,
+    _10_Constellations,
+    _11_LookBackInAnger,
+    _12_Garryowen,
+    _13_OnAGoldenCord,
+    _14_Kyon,
+    _15_UncannyValleyBoy,
+    _16_Cremated,
+    _17_VeganProclamation,
+    _18_My100000thDream,
+    _19_Epilogue
 ]
 
 addLayersToScenes(albumScenes)
