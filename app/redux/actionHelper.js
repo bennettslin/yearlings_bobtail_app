@@ -16,10 +16,6 @@ export const getDefinedOnlyPayload = (payload) => {
         Object.keys(payload).length !==
         Object.keys(definedOnlyPayload).length
     ) {
-        /**
-         * TODO: Eventually get rid of getDefinedOnlyPayload if it's not
-         * passing any more undefined values.
-         */
         logError({
             log: 'Payload tried to pass undefined value!'
         })

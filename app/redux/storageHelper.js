@@ -18,6 +18,7 @@ import {
     AUDIO_OPTIONS,
     GENERAL_OPTIONS
 } from '../constants/options'
+// import { getArrayOfLength } from '../helpers/general'
 import { getWindowStorage, setInStorage } from '../utils/window'
 
 import {
@@ -90,6 +91,7 @@ export const getSelectedIndicesFromStorage = () => {
     }
 }
 
+// TODO: This should follow getter and setter pattern.
 const _getValidatedDotsBitNumber = () => {
     const
         parsedBitNumber = parseInt(getWindowStorage()[DOTS_BIT_NUMBER]),
@@ -104,21 +106,6 @@ const _getValidatedDotsBitNumber = () => {
         // If invalid, reset in storage to default state.
         setInStorage(DOTS_BIT_NUMBER, INITIAL_DOTS_BIT_NUMBER)
         return INITIAL_DOTS_BIT_NUMBER
-    }
-}
-
-// TODO: Put this in a better place. This isn't really a storage helper.
-export const getEmptyDotsStore = () => {
-    // Get true-false object from bit number.
-    const dotsSlideBitNumber = 0,
-        dotsObject = getObjectFromBitNumber({
-            keysArray: ORDERED_DOT_KEYS,
-            bitNumber: dotsSlideBitNumber
-        })
-
-    return {
-        dotsSlideBitNumber,
-        ...dotsObject
     }
 }
 
@@ -150,9 +137,5 @@ export const setOptionInStorage = (key, value) => {
      * Always start page with all the options hidden, because mounting calls
      * the same methods as if the song changed.
      */
-    if (value === SHOWN) {
-        value = HIDDEN
-    }
-
-    getWindowStorage()[key] = value
+    getWindowStorage()[key] = value === SHOWN ? HIDDEN : value
 }

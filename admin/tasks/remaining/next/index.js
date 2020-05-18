@@ -33,9 +33,14 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Clean up routing and storage.`,
+        taskName: `Clean up routing.`,
         workedHours: 0,
         neededHours: 10
+    },
+    {
+        taskName: `Clean up and organise default states, and consolidate storage helper. Storage helpers should just be getters, and have setters done through actions, which shouldn't need validation. Maybe move storage helpers to reducers? Also alphabetise stores.`,
+        workedHours: 0,
+        neededHours: 5
     },
     {
         taskName: `Finish data refactor.`,

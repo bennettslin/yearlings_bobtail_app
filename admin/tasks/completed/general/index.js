@@ -4659,6 +4659,6 @@ export default [
     },
     {
         taskName: `Data refactor.`,
-        workedHours: 35
+        workedHours: 37
     }
 ]

@@ -1,3 +1,5 @@
+import { getObjectFromBitNumber } from '../helpers/bit'
+
 export const AFTERWORD = 'afterword'
 export const BACKSTORY = 'backstory'
 export const NARRATIVE = 'narrative'
@@ -31,3 +33,8 @@ export const DOT_DESCRIPTIONS = {
     [SONGWRITING]: 'How the music was made.',
     [AFTERWORD]: 'What came next.'
 }
+
+export const EMPTY_DOTS_STORE = getObjectFromBitNumber({
+    keysArray: ORDERED_DOT_KEYS,
+    bitNumber: 0
+})

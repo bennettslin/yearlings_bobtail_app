@@ -4,8 +4,7 @@ import {
     getIndexFromStorage,
     getSelectedIndicesFromStorage,
     getDotsFromStorage,
-    getOptionFromStorage,
-    getEmptyDotsStore
+    getOptionFromStorage
 } from './storageHelper'
 
 import { DEVICE_WIDTH_CONFIGS } from '../constants/responsive/deviceWidth'
@@ -41,6 +40,7 @@ import {
     STAGE_STORE,
     THEATRE_STORE
 } from './storeKeys'
+import { EMPTY_DOTS_STORE } from '../constants/dots'
 
 /**
  * Transition values. Kept together up here for dev clarity.
@@ -135,7 +135,10 @@ export const BANNER_DEFAULTS = {
  * for dev clarity.
  */
 export const DOTS_DEFAULTS = getDotsFromStorage()
-export const DOTS_SLIDE_DEFAULTS = getEmptyDotsStore()
+export const DOTS_SLIDE_DEFAULTS = {
+    dotsSlideBitNumber: 0,
+    ...EMPTY_DOTS_STORE
+}
 
 export const FOCUS_DEFAULTS = {
     queuedFocus: false
