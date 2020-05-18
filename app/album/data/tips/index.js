@@ -20,7 +20,7 @@ import {
 } from '../../../constants/tips'
 
 export default [
-    {},
+    null,
     {
         // Didi.
         type: ANNOTATION,
@@ -111,5 +111,5 @@ export default [
         type: OVERVIEW,
         description: `To prevent the narrative overview from showing at the start of each new song, click the Bennett button once or twice until he is wearing headphones.`
     },
-    {}
+    null
 ]

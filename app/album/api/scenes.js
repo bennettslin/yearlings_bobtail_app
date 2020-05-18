@@ -2,7 +2,6 @@ import {
     getSong,
     getSongIsLogue
 } from './songs'
-import albumScenes from '../data/scenes'
 import { getArrayOfLength } from '../../helpers/general'
 
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
@@ -43,9 +42,8 @@ export const getScene = (
     songIndex,
     sceneIndex = -1
 ) => {
-    const songScene = albumScenes[songIndex]
-
-    return sceneIndex > -1 && songScene[sceneIndex] ?
-        songScene[sceneIndex] :
+    const scenes = getSong(songIndex).scenes
+    return sceneIndex > -1 && scenes[sceneIndex] ?
+        scenes[sceneIndex] :
         DEFAULT_SCENE
 }

@@ -6,7 +6,10 @@ import {
 import { addLyricMetadata } from './helpers/lyric'
 import { addUnitAndVerseMetadata } from './helpers/unit'
 import { addStanzaMetadata } from './helpers/stanza'
-import { addSceneMetadata } from './helpers/scene'
+import {
+    addScenes,
+    addSceneMetadata
+} from './helpers/scene'
 import { addAnnotationMetadata } from './helpers/annotation'
 import { addAdminMetadata } from './helpers/admin'
 import { addWormholeMetadata } from './helpers/wormhole'
@@ -33,7 +36,7 @@ const songs = getSongIndicesArray().map(songIndex => {
 
         addLyricMetadata(songIndex, song)
 
-        // TODO: Still need to remove annotations from verses.
+        // TODO: Remove annotations from verses, verses from units.
         const {
             unitVerseIndicesList,
             verseStartTimes
@@ -51,6 +54,7 @@ const songs = getSongIndicesArray().map(songIndex => {
             song
         })
 
+        // TODO: Simplify scenes.
         addSceneMetadata({
             songIndex,
             songDuration,
@@ -65,6 +69,8 @@ const songs = getSongIndicesArray().map(songIndex => {
 
         addTip(songIndex, song)
     }
+
+    addScenes(songIndex, song)
 
     annotationsList.push(annotations)
     return song

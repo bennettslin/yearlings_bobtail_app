@@ -8,16 +8,18 @@ import {
 } from '../../constants/tips'
 
 const getSongTip = songIndex => {
-    return getSong(songIndex).tip
+    return getSong(songIndex).tip || null
 }
 
-export const getSongTipText = songIndex => (
-    getSongTip(songIndex).description
-)
+export const getSongTipText = songIndex => {
+    const tip = getSongTip(songIndex)
+    return tip ? tip.description : null
+}
 
-export const getSongTipType = songIndex => (
-    getSongTip(songIndex).type
-)
+export const getSongTipType = songIndex => {
+    const tip = getSongTip(songIndex)
+    return tip ? tip.type : null
+}
 
 export const getShowTipForDevice = ({
     songIndex,

@@ -67,6 +67,11 @@ export const _addVerseSceneIndices = ({
     song.verseSceneIndices = verseSceneIndices
 }
 
+export const addScenes = (songIndex, song) => {
+    const scenes = albumScenes[songIndex]
+    song.scenes = scenes
+}
+
 export const addSceneMetadata = ({
     songIndex,
     songDuration,
@@ -104,4 +109,3 @@ export const addSceneMetadata = ({
         song
     })
 }
-
