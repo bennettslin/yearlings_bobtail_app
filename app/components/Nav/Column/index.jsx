@@ -36,7 +36,7 @@ class NavColumn extends PureComponent {
         this.dispatchNavBook()
     }
 
-    _handleNavSongSelect = (songIndex) => {
+    _handleNavSongSelect = songIndex => {
         this.dispatchSong({
             selectedSongIndex: songIndex,
             doDismissNav: true

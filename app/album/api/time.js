@@ -2,7 +2,7 @@ import { getSong } from './songs'
 import { getVerseIndicesForStanza } from './stanzas'
 import { getVerseCountForSong } from './verses'
 
-export const getDurationForSong = (songIndex) => {
+export const getDurationForSong = songIndex => {
     const { songDuration } = getSong(songIndex)
     return songDuration || Number.MAX_SAFE_INTEGER
 }

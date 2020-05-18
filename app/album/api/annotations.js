@@ -4,7 +4,7 @@ import {
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
 
-export const getAnnotationIndices = (songIndex) => (
+export const getAnnotationIndices = songIndex => (
     getSongIsLogue(songIndex) ?
         [] :
         getArrayOfLength(
@@ -13,7 +13,7 @@ export const getAnnotationIndices = (songIndex) => (
         )
 )
 
-export const getAnnotationCountForSong = (songIndex) => (
+export const getAnnotationCountForSong = songIndex => (
     getAnnotationIndices(songIndex).length
 )
 

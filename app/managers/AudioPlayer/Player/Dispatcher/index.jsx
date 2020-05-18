@@ -24,7 +24,7 @@ class PlayerDispatcher extends PureComponent {
         })
     }
 
-    dispatchPlayerCanPlayThrough = (songIndex) => {
+    dispatchPlayerCanPlayThrough = songIndex => {
         const { playersBitNumber } = this.props,
 
             // Convert to bit number before setting in Redux.

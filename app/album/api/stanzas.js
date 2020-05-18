@@ -4,7 +4,7 @@ import {
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
 
-export const getStanzaIndices = (songIndex) => (
+export const getStanzaIndices = songIndex => (
     getSongIsLogue(songIndex) ?
         [] :
         getArrayOfLength(

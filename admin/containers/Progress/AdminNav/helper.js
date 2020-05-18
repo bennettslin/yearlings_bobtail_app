@@ -2,7 +2,7 @@ import albumTasks from '../../../tasks/completed/songs'
 import tasks from '../../../tasks'
 import tasksV2 from '../../../tasks/v2'
 
-export const getSongTasks = (songIndex) => (
+export const getSongTasks = songIndex => (
     albumTasks[songIndex]
 )
 

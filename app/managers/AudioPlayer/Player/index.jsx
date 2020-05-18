@@ -95,7 +95,7 @@ class PlayerManager extends PureComponent {
         )
     }
 
-    setPlayerCanPlayThrough = (songIndex) => {
+    setPlayerCanPlayThrough = songIndex => {
         this.dispatchPlayerCanPlayThrough(songIndex)
     }
 

@@ -4,7 +4,7 @@ import {
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
 
-export const getVerseIndices = (songIndex) => (
+export const getVerseIndices = songIndex => (
     getSongIsLogue(songIndex) ?
         [] :
         getArrayOfLength(
@@ -23,7 +23,7 @@ export const getVerse = (songIndex, verseIndex) => {
     return indexedVerses ? indexedVerses[verseIndex] : null
 }
 
-export const getVerseCountForSong = (songIndex) => (
+export const getVerseCountForSong = songIndex => (
     getVerseIndices(songIndex).length
 )
 

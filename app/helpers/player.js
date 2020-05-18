@@ -15,7 +15,7 @@ export const getPlayersCanPlayThroughFromBitNumber = (bitNumber) => {
     })
 }
 
-export const getStoreKeyForPlayer = (songIndex) => {
+export const getStoreKeyForPlayer = songIndex => {
     return `player${songIndex}`
 }
 

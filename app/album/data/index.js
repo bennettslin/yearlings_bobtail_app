@@ -73,7 +73,7 @@ addAdminMetadata(annotationsList, album)
 
 // TODO: Move to helper that adds based on delivery.
 global.album = album
-global.f = (songIndex) => album.songs[songIndex]
+global.f = songIndex => album.songs[songIndex]
 
 logServe({
     log: 'End parsing album.',

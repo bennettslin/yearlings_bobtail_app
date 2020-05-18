@@ -8,7 +8,7 @@ export const getUnit = (songIndex, unitIndex) => {
         []
 }
 
-export const getLastUnitDotCardIndex = (songIndex) => {
+export const getLastUnitDotCardIndex = songIndex => {
     /**
      * Return an index if the last unit is a dot card. Otherwise, return -1.
      * Note that this assumes there can only be one last unit that isn't a
