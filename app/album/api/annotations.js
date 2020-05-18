@@ -60,8 +60,7 @@ export const getColumnIndexForAnnotation = (songIndex, annotationIndex) => {
     }
 
     const columnIndex = annotationColumnIndices[annotationIndex - 1]
-
-    return Number.isFinite(columnIndex) ? columnIndex : null
+    return columnIndex >= 0 ? columnIndex : null
 }
 
 export const getCardsForAnnotation = (songIndex, annotationIndex) => {
