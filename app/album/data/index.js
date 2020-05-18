@@ -15,11 +15,11 @@ import { addAdminMetadata } from './helpers/admin'
 import { addWormholeMetadata } from './helpers/wormhole'
 import { addTip } from './helpers/tips'
 
-logServe({
-    log: 'Begin parsing album.',
-    action: 'begin',
-    label: 'album'
-})
+// logServe({
+//     log: 'Begin parsing album.',
+//     action: 'begin',
+//     label: 'album'
+// })
 
 const annotationsList = []
 
@@ -80,14 +80,10 @@ export const album = { songs }
 addWormholeMetadata(annotationsList, album)
 addAdminMetadata(annotationsList, album)
 
-// TODO: Move to helper that adds based on delivery.
-global.album = album
-global.a = songIndex => album.songs[songIndex]
-
-logServe({
-    log: 'End parsing album.',
-    action: 'end',
-    label: 'album'
-})
+// logServe({
+//     log: 'End parsing album.',
+//     action: 'end',
+//     label: 'album'
+// })
 
 export default album

@@ -3,6 +3,7 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import album from './app/album'
 import format from 'date-fns/format'
 
 const SHOW_BUNDLE_ANALYZER = false
@@ -28,10 +29,12 @@ const getConfig = ({
         plugins: [
             // Define global constant at compile time.
             new webpack.DefinePlugin({
+                ALBUM: JSON.stringify(album),
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
                 ),
-                IS_DELIVERY: isDeliveryEnvironment
+                IS_DELIVERY: isDeliveryEnvironment,
+                IS_LOCAL: isLocalDevelopment
             }),
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, 'app/index.html')

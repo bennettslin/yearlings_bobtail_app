@@ -14,7 +14,6 @@ Switching ear deselects neutral annotation.
 # Album refactor
 
 # TODO
-* Get album through global env
 * Get album from data folder or global env based on delivery
 * Do global logging based on delivery
 

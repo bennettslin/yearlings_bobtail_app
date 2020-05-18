@@ -22,8 +22,10 @@ module.exports = {
     ],
     "globals": {
         "__dirname": true,
+        "ALBUM": true,
         "BUILD_DATE_TIME": true,
         "IS_DELIVERY": true,
+        "IS_LOCAL": true,
         "dataLayer": true,
         "expect": true,
         "ga": true,
