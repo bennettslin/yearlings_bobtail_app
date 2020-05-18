@@ -22,6 +22,10 @@ export const getIsAnnotationValid = (songIndex, annotationIndex) => {
     return annotationIndicesArray.some(index => index === annotationIndex - 1)
 }
 
+export const getValidAnnotationIndex = (songIndex, annotationIndex) => (
+    getIsAnnotationValid(songIndex, annotationIndex) ? annotationIndex : 0
+)
+
 export const getDotKeysForAnnotation = (songIndex, annotationIndex) => {
     const { annotationDotKeysList } = getSong(songIndex)
     return annotationDotKeysList[annotationIndex - 1]

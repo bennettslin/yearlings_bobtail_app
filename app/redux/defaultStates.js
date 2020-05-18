@@ -2,12 +2,12 @@
 
 import {
     getIndexFromStorage,
+    getSelectedIndicesFromStorage,
     getDotsFromStorage,
     getOptionFromStorage,
     getEmptyDotsStore
 } from './storageHelper'
 
-import { SHOWN } from '../constants/options'
 import { DEVICE_WIDTH_CONFIGS } from '../constants/responsive/deviceWidth'
 
 import { getCubesForKey } from '../scene/aggregators/cubes'
@@ -32,10 +32,6 @@ import { getBoolFromStorage } from '../utils/window'
 import {
     IS_ACCESS_ON,
     IS_CAROUSEL_SHOWN,
-
-    SELECTED_ANNOTATION_INDEX,
-    SELECTED_SONG_INDEX,
-    SELECTED_VERSE_INDEX,
 
     SELECTED_AUDIO_OPTION_INDEX,
     SELECTED_OVERVIEW_OPTION,
@@ -80,10 +76,11 @@ const SELECTED_TRANSITION_DEFAULTS = {
     isSongSelectInFlux: false
 }
 
-const
-    storedAnnotationIndex = getIndexFromStorage(SELECTED_ANNOTATION_INDEX),
-    storedSongIndex = getIndexFromStorage(SELECTED_SONG_INDEX),
-    storedVerseIndex = getIndexFromStorage(SELECTED_VERSE_INDEX),
+const {
+        storedSongIndex,
+        storedVerseIndex,
+        storedAnnotationIndex
+    } = getSelectedIndicesFromStorage(),
     isStoredLogue = getSongIsLogue(storedSongIndex),
     storedEarColumnIndex = getColumnIndexForAnnotation(
         storedSongIndex,
@@ -165,10 +162,8 @@ export const MOUNT_DEFAULTS = {
 
 export const OPTION_DEFAULTS = {
     isLogueOverviewShown: isStoredLogue,
-    selectedOverviewOption:
-        getOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
-    selectedTipsOption:
-        getOptionFromStorage(SELECTED_TIPS_OPTION) || SHOWN,
+    selectedOverviewOption: getOptionFromStorage(SELECTED_OVERVIEW_OPTION),
+    selectedTipsOption: getOptionFromStorage(SELECTED_TIPS_OPTION),
     isForcedShownOverview: false,
     isSongShownOverview: false,
     isSongShownTips: false

@@ -18,6 +18,10 @@ export const getIsVerseValid = (songIndex, verseIndex) => {
     return verseIndicesArray.some(index => index === verseIndex)
 }
 
+export const getValidVerseIndex = (songIndex, verseIndex) => (
+    getIsVerseValid(songIndex, verseIndex) ? verseIndex : 0
+)
+
 export const getVerse = (songIndex, verseIndex) => {
     const { indexedVerses } = getSong(songIndex)
     return indexedVerses ? indexedVerses[verseIndex] : null

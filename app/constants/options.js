@@ -10,6 +10,12 @@ export const AUDIO_OPTIONS = [
     REPEAT
 ]
 
+export const GENERAL_OPTIONS = [
+    SHOWN,
+    HIDDEN,
+    DISABLED
+]
+
 export const IS_CAROUSEL_SHOWN = 'isCarouselShown'
 export const IS_NAV_SHOWN = 'isNavShown'
 export const IS_NEITHER_SHOWN = 'isCarouselNavHidden'

@@ -1,7 +1,7 @@
-// Helper for getting and setting state persisted in user's local storage.
-import { getAlbum } from '../album/api/songs'
-
-import { getVerseCountForSong } from '../album/api/verses'
+// Helpers for getting and setting state persisted in user's local storage.
+import { getValidSongIndex } from '../album/api/songs'
+import { getValidVerseIndex } from '../album/api/verses'
+import { getValidAnnotationIndex } from '../album/api/annotations'
 
 import {
     getTwoToThePowerOfN,
@@ -15,8 +15,8 @@ import {
 import {
     SHOWN,
     HIDDEN,
-    DISABLED,
-    AUDIO_OPTIONS
+    AUDIO_OPTIONS,
+    GENERAL_OPTIONS
 } from '../constants/options'
 import { getWindowStorage, setInStorage } from '../utils/window'
 
@@ -30,15 +30,7 @@ import {
     SELECTED_AUDIO_OPTION_INDEX
 } from './storeKeys'
 
-const _getValidatedStoredSong = () => {
-    const selectedSongIndex = _validateIndexForKey(SELECTED_SONG_INDEX)
-    return getAlbum().songs[selectedSongIndex]
-}
-
-const _getValidatedStoredSongIndex = () => {
-    return _validateIndexForKey(SELECTED_SONG_INDEX)
-}
-
+// TODO: This is now used only for audio options. Just do an array create and some.
 const _validateIndexForKey = key => {
     const
         parsedValue = parseInt(getWindowStorage()[key]),
@@ -47,38 +39,6 @@ const _validateIndexForKey = key => {
     let isValid
 
     switch (key) {
-
-        // These are dependent on the album object.
-        case SELECTED_SONG_INDEX:
-            isValid =
-                valueIsNumber &&
-                parsedValue > -1 &&
-                parsedValue < getAlbum().songs.length
-            break
-        case SELECTED_ANNOTATION_INDEX:
-        {
-            const annotations = _getValidatedStoredSong().annotations
-
-            // Logues do not have annotations.
-            isValid = valueIsNumber && annotations ?
-                parsedValue <= annotations.length : parsedValue === 0
-            break
-        }
-        case SELECTED_VERSE_INDEX:
-        {
-            const songVersesCount = getVerseCountForSong(
-                _getValidatedStoredSongIndex()
-            )
-
-            // Logues do not have songVersesCount.
-            isValid =
-                valueIsNumber &&
-                parsedValue > -1 &&
-                songVersesCount ?
-                    parsedValue < songVersesCount :
-                    parsedValue === 0
-            break
-        }
         // These must be less than the length of options.
         case SELECTED_AUDIO_OPTION_INDEX:
             isValid = valueIsNumber && parsedValue < AUDIO_OPTIONS.length
@@ -101,6 +61,35 @@ const _validateIndexForKey = key => {
     }
 }
 
+export const getIndexFromStorage = key => {
+    return _validateIndexForKey(key)
+}
+
+const _getParsedStoredIndex = key => (
+    parseInt(getWindowStorage()[key])
+)
+
+export const getSelectedIndicesFromStorage = () => {
+    const
+        storedSongIndex = getValidSongIndex(
+            _getParsedStoredIndex(SELECTED_SONG_INDEX)
+        ),
+        storedVerseIndex = getValidVerseIndex(
+            storedSongIndex,
+            _getParsedStoredIndex(SELECTED_VERSE_INDEX)
+        ),
+        storedAnnotationIndex = getValidAnnotationIndex(
+            storedSongIndex,
+            _getParsedStoredIndex(SELECTED_ANNOTATION_INDEX)
+        )
+
+    return {
+        storedSongIndex,
+        storedVerseIndex,
+        storedAnnotationIndex
+    }
+}
+
 const _getValidatedDotsBitNumber = () => {
     const
         parsedBitNumber = parseInt(getWindowStorage()[DOTS_BIT_NUMBER]),
@@ -116,10 +105,6 @@ const _getValidatedDotsBitNumber = () => {
         setInStorage(DOTS_BIT_NUMBER, INITIAL_DOTS_BIT_NUMBER)
         return INITIAL_DOTS_BIT_NUMBER
     }
-}
-
-export const getIndexFromStorage = (key) => {
-    return _validateIndexForKey(key)
 }
 
 // TODO: Put this in a better place. This isn't really a storage helper.
@@ -153,18 +138,11 @@ export const getDotsFromStorage = () => {
     }
 }
 
-export const getOptionFromStorage = (key) => {
-    const storedValue = getWindowStorage()[key]
-
-    if (
-        storedValue === SHOWN ||
-        storedValue === HIDDEN ||
-        storedValue === DISABLED
-    ) {
-        return storedValue
-    } else {
-        return undefined
-    }
+export const getOptionFromStorage = key => {
+    const storedOption = getWindowStorage()[key]
+    return GENERAL_OPTIONS.some(option => option === storedOption) ?
+        storedOption :
+        SHOWN
 }
 
 export const setOptionInStorage = (key, value) => {

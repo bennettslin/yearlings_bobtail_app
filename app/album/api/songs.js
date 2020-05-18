@@ -23,6 +23,10 @@ export const getIsSongValid = songIndex => {
     return songIndices.some(index => index === songIndex)
 }
 
+export const getValidSongIndex = songIndex => (
+    getIsSongValid(songIndex) ? songIndex : 0
+)
+
 export const getStartingIndexForBook = bookIndex => {
     const bookLength = getSongsNotLoguesCount() / 2
     return bookIndex * bookLength + 1

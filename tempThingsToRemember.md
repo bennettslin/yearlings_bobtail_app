@@ -8,8 +8,6 @@ Put mapWormholeLinkForDispatch in own dispatch dispatchWormhole
 
 # FIXME
 Ellipsis is too short when only right cards are shown.
-Loading with annotation for right ear column deselects annotation.
-Switching ear deselects neutral annotation.
 
 ## TODO data refactor
 * Remove annotations from verses.
