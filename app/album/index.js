@@ -1,8 +1,13 @@
-import album from './data'
+// Get album depending on whether in local or deployed environment.
+// eslint-disable-next-line import/no-unresolved
+import album from 'data'
 
-// TODO: Move to helper that adds based on delivery.
-global.album = ALBUM
-global.a = songIndex => album.songs[songIndex]
-global.b = songIndex => ALBUM.songs[songIndex]
+// Allow access to album in local delivery.
+if (IS_DELIVERY) {
+    global.album = album
+    global.a = (songIndex = window.localStorage.selectedSongIndex) => (
+        album.songs[songIndex]
+    )
+}
 
 export default album

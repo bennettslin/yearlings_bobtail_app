@@ -3,7 +3,7 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
-import album from './app/album'
+import album from './admin/data'
 import format from 'date-fns/format'
 
 const SHOW_BUNDLE_ANALYZER = false
@@ -13,7 +13,11 @@ const getConfig = ({
     local: isLocalDevelopment = false,
 
     // Applies to both local development and delivery release.
-    delivery: isDeliveryEnvironment = false
+    delivery: isDeliveryEnvironment = false,
+
+    // Debug this webpack build if needed.
+    // eslint-disable-next-line no-unused-vars
+    debug: isDebugMode = false
 } = {}) => {
     return {
         entry: path.resolve(__dirname, 'app'),
@@ -29,7 +33,10 @@ const getConfig = ({
         plugins: [
             // Define global constant at compile time.
             new webpack.DefinePlugin({
-                ALBUM: JSON.stringify(album),
+                // Grab album from global env only when not running locally.
+                ...!isLocalDevelopment && {
+                    ALBUM: JSON.stringify(album)
+                },
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
                 ),
@@ -57,7 +64,11 @@ const getConfig = ({
                 // Allow admin routes only in delivery.
                 routes: isDeliveryEnvironment ?
                     path.resolve(__dirname, './admin/routes') :
-                    path.resolve(__dirname, './app/routes')
+                    path.resolve(__dirname, './app/routes'),
+                // Grab data from admin folder in local development.
+                data: isLocalDevelopment ?
+                    path.resolve(__dirname, './admin/data') :
+                    path.resolve(__dirname, './app/data')
             }
         },
         module: {
