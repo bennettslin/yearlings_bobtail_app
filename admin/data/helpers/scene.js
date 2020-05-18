@@ -68,8 +68,24 @@ export const _addVerseSceneIndices = ({
 }
 
 export const addScenes = (songIndex, song) => {
-    const scenes = albumScenes[songIndex]
-    song.scenes = scenes
+    const
+        scenes = albumScenes[songIndex],
+        sceneCubesKeys = [],
+        sceneLayersList = [],
+        sceneSkyTimes = [],
+        sceneSkySeasons = []
+
+    scenes.forEach(scene => {
+        sceneCubesKeys.push(scene.cubes)
+        sceneLayersList.push(scene.layers)
+        sceneSkyTimes.push(scene.sky.time)
+        sceneSkySeasons.push(scene.sky.season)
+    })
+
+    song.sceneCubesKeys = sceneCubesKeys
+    song.sceneLayersList = sceneLayersList
+    song.sceneSkyTimes = sceneSkyTimes
+    song.sceneSkySeasons = sceneSkySeasons
 }
 
 export const addSceneMetadata = ({

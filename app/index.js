@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 
 // Import these here just to make them available.
+import './album'
 import './utils/logger'
 import './utils/analytics'
-import './album'
 
 import { createStore } from 'redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'

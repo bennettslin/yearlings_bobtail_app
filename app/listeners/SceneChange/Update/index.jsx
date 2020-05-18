@@ -5,12 +5,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSceneStore } from '../../../redux/scene/action'
 
-import { getScene } from '../../../album/api/scenes'
-
 import {
-    TIME_STAGE,
-    SEASON_STAGE
-} from '../../../scene/sky/keys'
+    getCubesKeyForScene,
+    getLayersForScene,
+    getSkyTimeForScene,
+    getSkySeasonForScene
+} from '../../../album/api/scenes'
 
 class SceneChangeUpdateDispatcher extends PureComponent {
 
@@ -58,18 +58,11 @@ class SceneChangeUpdateDispatcher extends PureComponent {
         songIndex = this.props.selectedSongIndex,
         sceneIndex = this.props.selectedSceneIndex
     }) {
-        const {
-            cubes: sceneCubesKey,
-            layers: scenePresenceLayers,
-            sky: {
-                time: sceneTime = TIME_STAGE,
-                season: sceneSeason = SEASON_STAGE
-            }
-
-        } = getScene(
-            songIndex,
-            sceneIndex
-        )
+        const
+            sceneCubesKey = getCubesKeyForScene(songIndex, sceneIndex),
+            sceneLayers = getLayersForScene(songIndex, sceneIndex),
+            sceneSkyTime = getSkyTimeForScene(songIndex, sceneIndex),
+            sceneSkySeason = getSkySeasonForScene(songIndex, sceneIndex)
 
         this.props.updateSceneStore({
             ...isUpdate ? {
@@ -80,9 +73,9 @@ class SceneChangeUpdateDispatcher extends PureComponent {
             sceneCubesKey,
             sceneSongIndex: songIndex,
             sceneSceneIndex: sceneIndex,
-            scenePresenceLayers,
-            sceneTime,
-            sceneSeason
+            sceneLayers,
+            sceneSkyTime,
+            sceneSkySeason
         })
     }
 

@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import LayersActor from './LayersActor'
 import LayersThing from './LayersThing'
 
-import { getScene } from '../../album/api/scenes'
+import { getLayersForScene } from '../../album/api/scenes'
 import { CUBE_Y_INDICES_WITH_NEG } from '../../constants/cubeIndex'
 
 import { ACTOR } from '../../constants/scene'
@@ -42,19 +42,19 @@ class Presences extends PureComponent {
                 yIndex
             } = this.props,
 
-            { layers: scenePresenceLayers } = getScene(
+            sceneLayers = getLayersForScene(
                 sceneSongIndex,
                 sceneSceneIndex
             ),
 
-            scenePresenceLayer = scenePresenceLayers[`layer${yIndex}`]
+            sceneLayer = sceneLayers[`layer${yIndex}`]
 
         // If this layer has no presences, just don't render it at all.
-        if (scenePresenceLayer) {
+        if (sceneLayer) {
             const {
                 [ACTOR]: actors,
                 ...rest
-            } = scenePresenceLayer
+            } = sceneLayer
 
             return (
                 <div

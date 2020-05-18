@@ -27,7 +27,7 @@ import {
 const
     getMapStateToProps = (yIndex, xIndex) => ({
         sceneStore: {
-            sceneCubes: {
+            sceneCubesKeys: {
                 ceiling: {
                     hslaColours: ceilingHslaColours,
                     zIndices: ceilingZIndices

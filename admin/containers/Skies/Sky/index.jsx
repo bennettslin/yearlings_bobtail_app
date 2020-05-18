@@ -7,14 +7,14 @@ class AdminSky extends PureComponent {
 
     static propTypes = {
         // From parent.
-        sceneTime: PropTypes.string,
-        sceneSeason: PropTypes.string.isRequired
+        sceneSkyTime: PropTypes.string,
+        sceneSkySeason: PropTypes.string.isRequired
     }
 
     render() {
         const {
-            sceneTime = TIME_STAGE,
-            sceneSeason
+            sceneSkyTime = TIME_STAGE,
+            sceneSkySeason
         } = this.props
 
         return (
@@ -24,7 +24,7 @@ class AdminSky extends PureComponent {
                 <div
                     className={cx(
                         'TimeOfDay',
-                        `TimeOfDay__${sceneTime}`,
+                        `TimeOfDay__${sceneSkyTime}`,
                         'Sky__filter',
                         'abF'
                     )}
@@ -32,7 +32,7 @@ class AdminSky extends PureComponent {
                 <div
                     className={cx(
                         'Season',
-                        `Season__${sceneSeason}`,
+                        `Season__${sceneSkySeason}`,
                         'Sky__filter',
                         'abF'
                     )}
@@ -46,7 +46,7 @@ class AdminSky extends PureComponent {
                         )
                     }}
                 >
-                    <div>{`${sceneTime} | ${sceneSeason}`}</div>
+                    <div>{`${sceneSkyTime} | ${sceneSkySeason}`}</div>
                 </div>
             </div>
         )

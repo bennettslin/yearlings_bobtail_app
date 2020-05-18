@@ -10,15 +10,6 @@ import {
     SEASON_STAGE
 } from '../../scene/sky/keys'
 
-const DEFAULT_SCENE = {
-    cubes: DEFAULT_STAGE_KEY,
-    layers: {},
-    sky: {
-        time: TIME_STAGE,
-        season: SEASON_STAGE
-    }
-}
-
 export const getSceneIndices = songIndex => (
     getSongIsLogue(songIndex) ?
         [] :
@@ -37,13 +28,23 @@ export const getVerseIndexForScene = (songIndex, sceneIndex) => {
     return sceneVerseIndices[sceneIndex]
 }
 
-// TODO: This should be the one that knows the defaults.
-export const getScene = (
-    songIndex,
-    sceneIndex = -1
-) => {
-    const scenes = getSong(songIndex).scenes
-    return sceneIndex > -1 && scenes[sceneIndex] ?
-        scenes[sceneIndex] :
-        DEFAULT_SCENE
+// TODO: Explore why sceneIndex is sometimes -1 when loading.
+export const getCubesKeyForScene = (songIndex, sceneIndex) => {
+    const { sceneCubesKeys } = getSong(songIndex)
+    return sceneIndex >= 0 ? sceneCubesKeys[sceneIndex] : DEFAULT_STAGE_KEY
+}
+
+export const getLayersForScene = (songIndex, sceneIndex) => {
+    const { sceneLayersList } = getSong(songIndex)
+    return sceneIndex >= 0 ? sceneLayersList[sceneIndex] : {}
+}
+
+export const getSkyTimeForScene = (songIndex, sceneIndex) => {
+    const { sceneSkyTimes } = getSong(songIndex)
+    return sceneIndex >= 0 ? sceneSkyTimes[sceneIndex] : TIME_STAGE
+}
+
+export const getSkySeasonForScene = (songIndex, sceneIndex) => {
+    const { sceneSkySeasons } = getSong(songIndex)
+    return sceneIndex >= 0 ? sceneSkySeasons[sceneIndex] : SEASON_STAGE
 }

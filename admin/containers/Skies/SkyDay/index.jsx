@@ -18,24 +18,24 @@ class SkyDay extends PureComponent {
 
     static propTypes = {
         // From parent.
-        sceneSeason: PropTypes.string.isRequired
+        sceneSkySeason: PropTypes.string.isRequired
     }
 
     render() {
-        const { sceneSeason } = this.props
+        const { sceneSkySeason } = this.props
 
         return (
             <div className={cx(
                 'SkyDay',
                 'flexCentreContainer'
             )}>
-                <Sky {...{ sceneTime: TIME_TWILIGHT, sceneSeason }} />
-                <Sky {...{ sceneTime: TIME_DAWN, sceneSeason }} />
-                <Sky {...{ sceneTime: TIME_MORNING, sceneSeason }} />
-                <Sky {...{ sceneTime: TIME_NOON, sceneSeason }} />
-                <Sky {...{ sceneTime: TIME_AFTERNOON, sceneSeason }} />
-                <Sky {...{ sceneTime: TIME_EVENING, sceneSeason }} />
-                <Sky {...{ sceneTime: TIME_NIGHT, sceneSeason }} />
+                <Sky {...{ sceneSkyTime: TIME_TWILIGHT, sceneSkySeason }} />
+                <Sky {...{ sceneSkyTime: TIME_DAWN, sceneSkySeason }} />
+                <Sky {...{ sceneSkyTime: TIME_MORNING, sceneSkySeason }} />
+                <Sky {...{ sceneSkyTime: TIME_NOON, sceneSkySeason }} />
+                <Sky {...{ sceneSkyTime: TIME_AFTERNOON, sceneSkySeason }} />
+                <Sky {...{ sceneSkyTime: TIME_EVENING, sceneSkySeason }} />
+                <Sky {...{ sceneSkyTime: TIME_NIGHT, sceneSkySeason }} />
             </div>
         )
     }

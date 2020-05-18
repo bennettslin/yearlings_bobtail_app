@@ -17,7 +17,6 @@ Switching ear deselects neutral annotation.
 * Remove annotations from verses.
 * Remove verses from units.
 * Remove extra stuff from cards.
-* Remove extra stuff from scenes.
 
 ## Annotations
 * If single card, just pass it instead of array.

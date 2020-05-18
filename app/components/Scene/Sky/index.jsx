@@ -7,26 +7,26 @@ import cx from 'classnames'
 
 const mapStateToProps = ({
     sceneStore: {
-        sceneTime,
-        sceneSeason
+        sceneSkyTime,
+        sceneSkySeason
     }
 }) => ({
-    sceneTime,
-    sceneSeason
+    sceneSkyTime,
+    sceneSkySeason
 })
 
 class Sky extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        sceneTime: PropTypes.string.isRequired,
-        sceneSeason: PropTypes.string.isRequired
+        sceneSkyTime: PropTypes.string.isRequired,
+        sceneSkySeason: PropTypes.string.isRequired
     }
 
     render() {
         const {
-            sceneTime,
-            sceneSeason
+            sceneSkyTime,
+            sceneSkySeason
         } = this.props
 
         return (
@@ -37,7 +37,7 @@ class Sky extends PureComponent {
                 <div
                     className={cx(
                         'TimeOfDay',
-                        `TimeOfDay__${sceneTime}`,
+                        `TimeOfDay__${sceneSkyTime}`,
                         'Sky__filter',
                         'abF'
                     )}
@@ -45,7 +45,7 @@ class Sky extends PureComponent {
                 <div
                     className={cx(
                         'Season',
-                        `Season__${sceneSeason}`,
+                        `Season__${sceneSkySeason}`,
                         'Sky__filter',
                         'abF'
                     )}

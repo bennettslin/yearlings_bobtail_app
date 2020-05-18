@@ -13,7 +13,7 @@ export const updateSceneStore = (payload = SCENE_DEFAULTS) => {
     const { sceneCubesKey } = payload
 
     if (hasKey(sceneCubesKey)) {
-        payload.sceneCubes = getCubesForKey(sceneCubesKey)
+        payload.sceneCubesKeys = getCubesForKey(sceneCubesKey)
     }
 
     return ({

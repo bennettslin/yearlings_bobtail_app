@@ -13,11 +13,12 @@ import { DEVICE_WIDTH_CONFIGS } from '../constants/responsive/deviceWidth'
 import { getCubesForKey } from '../scene/aggregators/cubes'
 
 import {
-    TIME_STAGE,
-    SEASON_STAGE
-} from '../scene/sky/keys'
+    getCubesKeyForScene,
+    getLayersForScene,
+    getSkyTimeForScene,
+    getSkySeasonForScene
+} from '../album/api/scenes'
 
-import { getScene } from '../album/api/scenes'
 import { getStartTimeForVerse } from '../album/api/time'
 import { getSceneIndexForVerse } from '../album/api/verses'
 import {
@@ -193,34 +194,27 @@ export const RESPONSIVE_DEFAULTS = {
     isLyricExpandable: false
 }
 
-// Begin in default stage scene.
-const {
-        cubes: sceneCubesKey,
-        sky: {
-            time: sceneTime = TIME_STAGE,
-            season: sceneSeason = SEASON_STAGE
-        },
-        layers: scenePresenceLayers
-    } = getScene(
-        storedSongIndex,
-        storedSceneIndex
-    ),
-    sceneCubes = getCubesForKey(sceneCubesKey)
+const
+    sceneCubesKey = getCubesKeyForScene(storedSongIndex, storedSceneIndex),
+    sceneLayers = getLayersForScene(storedSongIndex, storedSceneIndex),
+    sceneSkyTime = getSkyTimeForScene(storedSongIndex, storedSceneIndex),
+    sceneSkySeason = getSkySeasonForScene(storedSongIndex, storedSceneIndex),
+    sceneCubesKeys = getCubesForKey(sceneCubesKey)
 
 export const SCENE_DEFAULTS = {
     ...SCENE_TRANSITION_DEFAULTS,
     sceneCubesKey,
-    sceneTime,
-    sceneSeason,
+    sceneSkyTime,
+    sceneSkySeason,
     sceneSongIndex: storedSongIndex,
     sceneSceneIndex: storedSceneIndex,
-    sceneCubes,
+    sceneCubesKeys,
 
     /**
      * Stored only for dev clarity. Components will retrieve these layers
      * through indices to avoid unnecessary updates.
      */
-    scenePresenceLayers
+    sceneLayers
 }
 
 export const SCROLL_CAROUSEL_DEFAULTS = {
