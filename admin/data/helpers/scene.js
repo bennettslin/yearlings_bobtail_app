@@ -1,5 +1,7 @@
 import albumScenes from '../scenes'
 
+import { TIME_STAGE } from '../../../app/scene/sky/keys'
+
 const _addDurationsToSceneConfigs = ({
     songDuration,
     sceneStartTimes,
@@ -78,7 +80,7 @@ export const addScenes = (songIndex, song) => {
     scenes.forEach(scene => {
         sceneCubesKeys.push(scene.cubes)
         sceneLayersList.push(scene.layers)
-        sceneSkyTimes.push(scene.sky.time)
+        sceneSkyTimes.push(scene.sky.time || TIME_STAGE)
         sceneSkySeasons.push(scene.sky.season)
     })
 
