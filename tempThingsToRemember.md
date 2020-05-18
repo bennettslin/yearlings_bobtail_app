@@ -14,8 +14,6 @@ Switching ear deselects neutral annotation.
 # Album refactor
 
 # TODO
-* Add scenes and tips to album object, add them to API
-* Move global logging into admin folder
 * Get album through global env
 * Get album from data folder or global env based on delivery
 * Do global logging based on delivery
