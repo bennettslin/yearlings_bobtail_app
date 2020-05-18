@@ -19,6 +19,16 @@ export default [
         workedHours: 0,
         neededHours: 5
     },
+    {
+        taskName: `Be smarter about what I want analytics to measure. Selected indices.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Do not support Internet Explorer.`,
+        workedHours: 0,
+        neededHours: 3
+    },
 
     /**
      * Content.

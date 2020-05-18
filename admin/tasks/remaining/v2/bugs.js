@@ -8,5 +8,10 @@ export default [
         taskName: `Annotation tip still shows hand when annotation's dot is not selected.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Ellipsis is too short when only right column is shown.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

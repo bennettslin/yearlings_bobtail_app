@@ -33,5 +33,10 @@ export default [
         taskName: `Blood on demonstrators.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Rethink some dot category shapes?`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]

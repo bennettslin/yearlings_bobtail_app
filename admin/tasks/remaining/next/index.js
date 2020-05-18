@@ -7,12 +7,17 @@ export default [
 
     /* Week work. */
     {
-        taskName: `Do not support Internet Explorer.`,
+        taskName: `Put delivery behind CloudFront.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 2
     },
     {
-        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled. Store png with Illustrator files.`,
+        taskName: `Clean up and organise default states, and consolidate storage helper. Storage helpers should just be getters, and have setters done through actions, which shouldn't need validation. Maybe move storage helpers to reducers? Also alphabetise stores.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled.`,
         resource: `https://www.npmjs.com/package/webpack-pwa-manifest`,
         workedHours: 0,
         neededHours: 3
@@ -33,19 +38,14 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Clean up routing.`,
+        taskName: `Clean up routing. Make verse and annotation query strings.`,
         workedHours: 0,
         neededHours: 10
     },
     {
-        taskName: `Clean up and organise default states, and consolidate storage helper. Storage helpers should just be getters, and have setters done through actions, which shouldn't need validation. Maybe move storage helpers to reducers? Also alphabetise stores.`,
+        taskName: `Window helper. Start with store already knowing window.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Finish data refactor.`,
-        workedHours: 0,
-        neededHours: 20
     },
 
     /* Weekend work. */
