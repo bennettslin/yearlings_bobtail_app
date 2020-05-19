@@ -4660,5 +4660,9 @@ export default [
     {
         taskName: `Data refactor.`,
         workedHours: 37
+    },
+    {
+        taskName: `Put delivery behind CloudFront.`,
+        workedHours: 1
     }
 ]
