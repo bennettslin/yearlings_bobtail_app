@@ -1,15 +1,23 @@
+import bobtailYearlings from './bobtailYearlings'
 import bugs from './bugs'
-import content from './content'
+import illustration from './illustration'
 import important from './important'
 import layout from './layout'
+import lowPriority from './lowPriority'
 import maintenance from './maintenance'
 import presence from './presence'
+import styling from './styling'
+import wow from './wow'
 
 export default [
+    ...bobtailYearlings,
     ...bugs,
-    ...content,
+    ...illustration,
     ...important,
     ...layout,
+    ...lowPriority,
     ...maintenance,
-    ...presence
+    ...presence,
+    ...styling,
+    ...wow
 ]

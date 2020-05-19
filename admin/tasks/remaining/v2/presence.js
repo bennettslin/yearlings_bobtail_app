@@ -23,20 +23,5 @@ export default [
         taskName: `Darken presences in one-time dark scenes.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Ocean waves panel.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Blood on demonstrators.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Rethink some dot category shapes?`,
-        workedHours: 0,
-        neededHours: 5
     }
 ]
