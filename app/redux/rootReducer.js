@@ -30,6 +30,7 @@ import {
     ACCESS_STORE,
     ACTIVATED_STORE,
     ANNOTATION_STORE,
+    APP_STORE,
     AUDIO_STORE,
     BANNER_STORE,
     DOTS_STORE,
@@ -37,7 +38,6 @@ import {
     FOCUS_STORE,
     LOAD_STORE,
     LYRIC_STORE,
-    APP_STORE,
     MOUNT_STORE,
     OPTION_STORE,
     PLAYERS_STORE,
@@ -55,39 +55,32 @@ import {
     VIEWPORT_STORE
 } from '../constants/store/keys'
 
-const rootReducer = combineReducers({
-    [BANNER_STORE]: BannerReducer,
-    [SCROLL_OVERLAY_STORE]: ScrollOverlayReducer,
-    [ACTIVATED_STORE]: ActivatedReducer,
-    [VIEWPORT_STORE]: ViewportReducer,
+export default combineReducers({
     [ACCESS_STORE]: AccessReducer,
-    [TOGGLE_STORE]: ToggleReducer,
-    [SESSION_STORE]: SessionReducer,
-    [RESPONSIVE_STORE]: ResponsiveReducer,
-    [OPTION_STORE]: OptionReducer,
-    [TRANSIENT_STORE]: TransientReducer,
+    [ACTIVATED_STORE]: ActivatedReducer,
+    [ANNOTATION_STORE]: AnnotationReducer,
     [APP_STORE]: AppReducer,
-    [MOUNT_STORE]: MountReducer,
-
-    [SELECTED_STORE]: SelectedReducer,
-    [LYRIC_STORE]: LyricReducer,
-    [SCENE_STORE]: SceneReducer,
-
     [AUDIO_STORE]: AudioReducer,
-    [PLAYERS_STORE]: PlayersReducer,
-
+    [BANNER_STORE]: BannerReducer,
     [DOTS_STORE]: DotsReducer,
     [DOTS_SLIDE_STORE]: DotsSlideReducer,
-    [SLIDER_STORE]: SliderReducer,
-
-    [LOAD_STORE]: LoadReducer,
-
-    // Queued event stores.
     [FOCUS_STORE]: FocusReducer,
-    [ANNOTATION_STORE]: AnnotationReducer,
-    [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
+    [LOAD_STORE]: LoadReducer,
+    [LYRIC_STORE]: LyricReducer,
+    [MOUNT_STORE]: MountReducer,
+    [OPTION_STORE]: OptionReducer,
+    [PLAYERS_STORE]: PlayersReducer,
+    [RESPONSIVE_STORE]: ResponsiveReducer,
+    [SCENE_STORE]: SceneReducer,
     [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
-    [VERSE_BARS_STORE]: VerseBarsReducer
+    [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
+    [SCROLL_OVERLAY_STORE]: ScrollOverlayReducer,
+    [SELECTED_STORE]: SelectedReducer,
+    [SESSION_STORE]: SessionReducer,
+    [SLIDER_STORE]: SliderReducer,
+    [TOGGLE_STORE]: ToggleReducer,
+    [TRANSIENT_STORE]: TransientReducer,
+    [VERSE_BARS_STORE]: VerseBarsReducer,
+    [VIEWPORT_STORE]: ViewportReducer
 })
 
-export default rootReducer
