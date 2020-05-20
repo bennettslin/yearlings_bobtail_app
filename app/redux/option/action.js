@@ -10,7 +10,7 @@ import {
     OPTION_STORE,
     SELECTED_OVERVIEW_OPTION,
     SELECTED_TIPS_OPTION
-} from '../storeKeys'
+} from '../../constants/store/keys'
 import { OPTION_DEFAULTS } from '../defaultStates'
 
 export const updateOptionStore = (payload = OPTION_DEFAULTS) => {

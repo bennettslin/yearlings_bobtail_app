@@ -1,7 +1,7 @@
 // Actions for determining verse bars.
 import { getDefinedOnlyPayload } from '../actionHelper'
 
-import { VERSE_BARS_STORE } from '../storeKeys'
+import { VERSE_BARS_STORE } from '../../constants/store/keys'
 import {
     VERSE_BARS_DEFAULTS,
     VERSE_BARS_POSITION_DEFAULTS,

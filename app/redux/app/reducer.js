@@ -3,7 +3,7 @@
  * here because we only render client-side, and I don't have the bandwidth to
  * set up middleware.
  */
-import { APP_STORE } from '../storeKeys'
+import { APP_STORE } from '../../constants/store/keys'
 import { APP_DEFAULTS } from './default'
 
 export default (

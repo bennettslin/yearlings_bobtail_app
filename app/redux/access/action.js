@@ -8,7 +8,7 @@ import {
 import {
     IS_ACCESS_ON,
     ACCESS_STORE
-} from '../storeKeys'
+} from '../../constants/store/keys'
 import {
     ACCESS_DEFAULTS,
     ACCESS_DOT_DEFAULTS,

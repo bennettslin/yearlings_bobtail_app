@@ -1,5 +1,5 @@
 // Reducers for audio updates.
-import { AUDIO_STORE } from '../storeKeys'
+import { AUDIO_STORE } from '../../constants/store/keys'
 import { AUDIO_DEFAULTS } from '../defaultStates'
 
 export default (

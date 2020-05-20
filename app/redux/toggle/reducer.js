@@ -1,5 +1,5 @@
 // Reducers for window size.
-import { TOGGLE_STORE } from '../storeKeys'
+import { TOGGLE_STORE } from '../../constants/store/keys'
 import { TOGGLE_DEFAULTS } from '../defaultStates'
 
 export default (

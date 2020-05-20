@@ -53,7 +53,7 @@ import {
     TRANSIENT_STORE,
     VERSE_BARS_STORE,
     VIEWPORT_STORE
-} from './storeKeys'
+} from '../constants/store/keys'
 
 const rootReducer = combineReducers({
     [BANNER_STORE]: BannerReducer,

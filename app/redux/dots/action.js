@@ -8,7 +8,7 @@ import { setInStorage } from '../../utils/window'
 import {
     DOTS_STORE,
     DOTS_BIT_NUMBER
-} from '../storeKeys'
+} from '../../constants/store/keys'
 import { DOTS_DEFAULTS } from '../defaultStates'
 
 export const updateDotsStore = (payload = DOTS_DEFAULTS) => {

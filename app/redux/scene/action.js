@@ -6,7 +6,7 @@ import {
 
 import { getCubesForKey } from '../../scene/aggregators/cubes'
 
-import { SCENE_STORE } from '../storeKeys'
+import { SCENE_STORE } from '../../constants/store/keys'
 import { SCENE_DEFAULTS } from '../defaultStates'
 
 export const updateSceneStore = (payload = SCENE_DEFAULTS) => {

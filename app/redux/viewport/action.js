@@ -4,7 +4,7 @@ import {
     getDefinedOnlyPayload
 } from '../actionHelper'
 
-import { VIEWPORT_STORE } from '../storeKeys'
+import { VIEWPORT_STORE } from '../../constants/store/keys'
 import {
     VIEWPORT_DEFAULTS,
     VIEWPORT_TRANSITION_DEFAULTS

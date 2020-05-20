@@ -1,5 +1,5 @@
 // Reducers for dots slide activated texts.
-import { DOTS_SLIDE_STORE } from '../storeKeys'
+import { DOTS_SLIDE_STORE } from '../../constants/store/keys'
 import { DOTS_SLIDE_DEFAULTS } from '../defaultStates'
 
 export default (

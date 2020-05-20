@@ -1,5 +1,5 @@
 // Reducers for lyric and carousel state.
-import { LYRIC_STORE } from '../storeKeys'
+import { LYRIC_STORE } from '../../constants/store/keys'
 import { LYRIC_DEFAULTS } from '../defaultStates'
 
 export default (

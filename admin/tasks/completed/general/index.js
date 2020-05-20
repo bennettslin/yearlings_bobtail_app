@@ -4664,5 +4664,9 @@ export default [
     {
         taskName: `Put delivery behind CloudFront.`,
         workedHours: 1
+    },
+    {
+        taskName: `Reorganise tasks.`,
+        workedHours: 1
     }
 ]

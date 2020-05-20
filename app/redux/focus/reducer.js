@@ -1,5 +1,5 @@
 // Reducers for focus values.
-import { FOCUS_STORE } from '../storeKeys'
+import { FOCUS_STORE } from '../../constants/store/keys'
 import { FOCUS_DEFAULTS } from '../defaultStates'
 
 export default (

@@ -1,6 +1,6 @@
 import { getDefinedOnlyPayload } from '../../actionHelper'
 
-import { STAGE_STORE } from '../../storeKeys'
+import { STAGE_STORE } from '../../../constants/store/keys'
 import { STAGE_DEFAULTS } from '../../defaultStates'
 
 export const updateStageStore = (payload = STAGE_DEFAULTS) => ({

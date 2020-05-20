@@ -12,7 +12,7 @@ import {
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX
-} from '../storeKeys'
+} from '../../constants/store/keys'
 import { SELECTED_DEFAULTS } from '../defaultStates'
 
 export const updateSelectedStore = (payload = SELECTED_DEFAULTS) => {

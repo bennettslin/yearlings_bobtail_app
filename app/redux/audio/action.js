@@ -1,7 +1,7 @@
 // Actions for audio updates.
 import { getDefinedOnlyPayload } from '../actionHelper'
 
-import { AUDIO_STORE } from '../storeKeys'
+import { AUDIO_STORE } from '../../constants/store/keys'
 import { AUDIO_DEFAULTS } from '../defaultStates'
 
 export const updateAudioStore = (payload = AUDIO_DEFAULTS) => ({

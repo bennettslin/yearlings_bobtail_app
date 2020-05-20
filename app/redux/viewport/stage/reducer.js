@@ -1,4 +1,4 @@
-import { STAGE_STORE } from '../../storeKeys'
+import { STAGE_STORE } from '../../../constants/store/keys'
 import { STAGE_DEFAULTS } from '../../defaultStates'
 
 export default (

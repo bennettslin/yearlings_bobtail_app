@@ -6,7 +6,7 @@ import {
     getDefinedOnlyPayload
 } from '../actionHelper'
 
-import { LYRIC_STORE } from '../storeKeys'
+import { LYRIC_STORE } from '../../constants/store/keys'
 import { LYRIC_DEFAULTS } from '../defaultStates'
 
 export const updateLyricStore = (payload = LYRIC_DEFAULTS) => {

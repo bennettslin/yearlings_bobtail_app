@@ -29,7 +29,7 @@ import {
     SELECTED_ANNOTATION_INDEX,
 
     SELECTED_AUDIO_OPTION_INDEX
-} from './storeKeys'
+} from '../constants/store/keys'
 
 // TODO: This is now used only for audio options. Just do an array create and some.
 const _validateIndexForKey = key => {

@@ -4,7 +4,7 @@ import {
     getDefinedOnlyPayload
 } from '../actionHelper'
 
-import { SCROLL_CAROUSEL_STORE } from '../storeKeys'
+import { SCROLL_CAROUSEL_STORE } from '../../constants/store/keys'
 import { SCROLL_CAROUSEL_DEFAULTS } from '../defaultStates'
 
 export const updateScrollCarouselStore = (

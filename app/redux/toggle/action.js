@@ -8,7 +8,7 @@ import {
 import {
     TOGGLE_STORE,
     IS_CAROUSEL_SHOWN
-} from '../storeKeys'
+} from '../../constants/store/keys'
 import { TOGGLE_DEFAULTS } from '../defaultStates'
 
 export const updateToggleStore = (payload = TOGGLE_DEFAULTS) => {

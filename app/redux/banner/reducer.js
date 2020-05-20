@@ -1,5 +1,5 @@
 // Reducers for banner state.
-import { BANNER_STORE } from '../storeKeys'
+import { BANNER_STORE } from '../../constants/store/keys'
 import { BANNER_DEFAULTS } from '../defaultStates'
 
 export default (

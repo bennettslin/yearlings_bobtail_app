@@ -1,5 +1,5 @@
 // Reducers for players values.
-import { PLAYERS_STORE } from '../storeKeys'
+import { PLAYERS_STORE } from '../../constants/store/keys'
 import { PLAYERS_DEFAULTS } from '../defaultStates'
 
 export default (

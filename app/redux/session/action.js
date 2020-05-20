@@ -9,7 +9,7 @@ import {
 import {
     SESSION_STORE,
     SELECTED_AUDIO_OPTION_INDEX
-} from '../storeKeys'
+} from '../../constants/store/keys'
 import {
     SESSION_DEFAULTS,
     SESSION_WIKI_DEFAULTS

@@ -1,7 +1,7 @@
 // Actions for scrolling overlay values.
 import { getDefinedOnlyPayload } from '../actionHelper'
 
-import { SCROLL_OVERLAY_STORE } from '../storeKeys'
+import { SCROLL_OVERLAY_STORE } from '../../constants/store/keys'
 import { SCROLL_OVERLAY_DEFAULTS } from '../defaultStates'
 
 export const updateScrollOverlayStore = (

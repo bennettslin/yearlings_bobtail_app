@@ -39,7 +39,7 @@ import {
     PROSCENIUM_STORE,
     STAGE_STORE,
     THEATRE_STORE
-} from './storeKeys'
+} from '../constants/store/keys'
 import { EMPTY_DOTS_STORE } from '../constants/dots'
 
 /**

@@ -1,5 +1,5 @@
 // Reducers for event values.
-import { SCENE_STORE } from '../storeKeys'
+import { SCENE_STORE } from '../../constants/store/keys'
 import { SCENE_DEFAULTS } from '../defaultStates'
 
 export default (

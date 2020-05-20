@@ -1,5 +1,5 @@
 // Reducers for accessed values.
-import { ACCESS_STORE } from '../storeKeys'
+import { ACCESS_STORE } from '../../constants/store/keys'
 import { ACCESS_DEFAULTS } from '../defaultStates'
 
 export default (

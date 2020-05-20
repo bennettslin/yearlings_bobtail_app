@@ -4,7 +4,7 @@ import {
     getDefinedOnlyPayload
 } from '../actionHelper'
 
-import { ACTIVATED_STORE } from '../storeKeys'
+import { ACTIVATED_STORE } from '../../constants/store/keys'
 import { ACTIVATED_DEFAULTS } from '../defaultStates'
 
 export const updateActivatedStore = (payload = ACTIVATED_DEFAULTS) => {

@@ -4,7 +4,7 @@ import {
     PROSCENIUM_STORE,
     STAGE_STORE,
     THEATRE_STORE
-} from '../storeKeys'
+} from '../../constants/store/keys'
 import { VIEWPORT_DEFAULTS } from '../defaultStates'
 
 import ProsceniumReducer from './proscenium/reducer'

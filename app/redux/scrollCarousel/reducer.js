@@ -1,5 +1,5 @@
 // Reducers for scrolling carousel values.
-import { SCROLL_CAROUSEL_STORE } from '../storeKeys'
+import { SCROLL_CAROUSEL_STORE } from '../../constants/store/keys'
 import { SCROLL_CAROUSEL_DEFAULTS } from '../defaultStates'
 
 export default (
