@@ -10,7 +10,7 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Use async and await to fix all that canEnter and didEnter weirdness. Needed in preparation for Gatsby.`,
+        taskName: `Do audit of what needs to be rendered upon page load for SEO, what can wait, and in what order. Use async and await to fix all that canEnter and didEnter weirdness. Needed in preparation for Gatsby.`,
         workedHours: 0,
         neededHours: 8
     },

@@ -116,24 +116,14 @@ export const getValidRoutingIndices = ({
          * If routing song index is set, always set routing verse index.
          * Default to 0.
          */
-        if (
-            getIsVerseValid(
-                rawSongIndex,
-                rawVerseIndex
-            )
-        ) {
+        if (getIsVerseValid(rawSongIndex, rawVerseIndex)) {
             routingIndicesObject.routingVerseIndex = rawVerseIndex
         }
 
         /**
          * Routing annotation index is optional.
          */
-        if (
-            getIsAnnotationValid(
-                rawSongIndex,
-                rawAnnotationIndex
-            )
-        ) {
+        if (getIsAnnotationValid(rawSongIndex, rawAnnotationIndex)) {
             routingIndicesObject.routingAnnotationIndex = rawAnnotationIndex
         }
 

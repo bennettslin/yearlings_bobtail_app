@@ -15,7 +15,6 @@ import {
 } from '../constants/dots'
 import {
     SHOWN,
-    HIDDEN,
     AUDIO_OPTIONS,
     GENERAL_OPTIONS
 } from '../constants/options'
@@ -70,14 +69,6 @@ export const getOptionFromStorage = key => {
     return GENERAL_OPTIONS.some(option => option === storedOption) ?
         storedOption :
         SHOWN
-}
-
-export const setOptionInStorage = (key, value) => {
-    /**
-     * Always start page with all the options hidden, because mounting calls
-     * the same methods as if the song changed.
-     */
-    getWindowStorage()[key] = value === SHOWN ? HIDDEN : value
 }
 
 const _getValidatedDotsBitNumber = () => {
