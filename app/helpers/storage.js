@@ -7,6 +7,7 @@ import {
     getTwoToThePowerOfN,
     getObjectFromBitNumber
 } from './bit'
+import { getArrayOfLength } from './general'
 
 import {
     ORDERED_DOT_KEYS,
@@ -18,69 +19,32 @@ import {
     AUDIO_OPTIONS,
     GENERAL_OPTIONS
 } from '../constants/options'
-import { getWindowStorage, setInStorage } from '../utils/window'
+import { getWindowStorage } from '../utils/window'
 
 import {
     DOTS_BIT_NUMBER,
-
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
-
     SELECTED_AUDIO_OPTION_INDEX
 } from '../constants/store'
 
-// TODO: This is now used only for audio options. Just do an array create and some.
-const _validateIndexForKey = key => {
-    const
-        parsedValue = parseInt(getWindowStorage()[key]),
-        valueIsNumber = Number.isFinite(parsedValue)
-
-    let isValid
-
-    switch (key) {
-        // These must be less than the length of options.
-        case SELECTED_AUDIO_OPTION_INDEX:
-            isValid = valueIsNumber && parsedValue < AUDIO_OPTIONS.length
-            break
-
-        default:
-            isValid = valueIsNumber
-    }
-
-    /**
-     * If value is invalid, select and persist the default value of 0.
-     */
-    if (!isValid) {
-        const defaultValue = 0
-        setInStorage(key, defaultValue)
-        return defaultValue
-
-    } else {
-        return parsedValue
-    }
-}
-
-export const getIndexFromStorage = key => {
-    return _validateIndexForKey(key)
-}
-
-const _getParsedStoredIndex = key => (
+const _getParsedStoredInteger = key => (
     parseInt(getWindowStorage()[key])
 )
 
 export const getSelectedIndicesFromStorage = () => {
     const
         storedSongIndex = getValidSongIndex(
-            _getParsedStoredIndex(SELECTED_SONG_INDEX)
+            _getParsedStoredInteger(SELECTED_SONG_INDEX)
         ),
         storedVerseIndex = getValidVerseIndex(
             storedSongIndex,
-            _getParsedStoredIndex(SELECTED_VERSE_INDEX)
+            _getParsedStoredInteger(SELECTED_VERSE_INDEX)
         ),
         storedAnnotationIndex = getValidAnnotationIndex(
             storedSongIndex,
-            _getParsedStoredIndex(SELECTED_ANNOTATION_INDEX)
+            _getParsedStoredInteger(SELECTED_ANNOTATION_INDEX)
         )
 
     return {
@@ -90,38 +54,15 @@ export const getSelectedIndicesFromStorage = () => {
     }
 }
 
-// TODO: This should follow getter and setter pattern.
-const _getValidatedDotsBitNumber = () => {
-    const
-        parsedBitNumber = parseInt(getWindowStorage()[DOTS_BIT_NUMBER]),
-        valueIsNumber = Number.isFinite(parsedBitNumber),
-        maxBitNumber = getTwoToThePowerOfN(ORDERED_DOT_KEYS.length),
-        isValid = valueIsNumber && parsedBitNumber < maxBitNumber
+export const getAudioOptionFromStorage = () => {
+    const storedAudioOptionIndex =
+        _getParsedStoredInteger(SELECTED_AUDIO_OPTION_INDEX)
 
-    if (isValid) {
-        return parsedBitNumber
-
-    } else {
-        // If invalid, reset in storage to default state.
-        setInStorage(DOTS_BIT_NUMBER, INITIAL_DOTS_BIT_NUMBER)
-        return INITIAL_DOTS_BIT_NUMBER
-    }
-}
-
-export const getDotsFromStorage = () => {
-    const validatedValue = _getValidatedDotsBitNumber(),
-
-        // Get true-false object from bit number.
-        dotsBitNumber = validatedValue,
-        dotsObject = getObjectFromBitNumber({
-            keysArray: ORDERED_DOT_KEYS,
-            bitNumber: dotsBitNumber
-        })
-
-    return {
-        dotsBitNumber,
-        ...dotsObject
-    }
+    return getArrayOfLength(AUDIO_OPTIONS.length).some(
+        index => index === storedAudioOptionIndex
+    ) ?
+        storedAudioOptionIndex :
+        0
 }
 
 export const getOptionFromStorage = key => {
@@ -137,4 +78,25 @@ export const setOptionInStorage = (key, value) => {
      * the same methods as if the song changed.
      */
     getWindowStorage()[key] = value === SHOWN ? HIDDEN : value
+}
+
+const _getValidatedDotsBitNumber = () => {
+    const
+        parsedBitNumber = _getParsedStoredInteger(DOTS_BIT_NUMBER),
+        isValid =
+            Number.isFinite(parsedBitNumber) &&
+            parsedBitNumber < getTwoToThePowerOfN(ORDERED_DOT_KEYS.length)
+
+    return isValid ? parsedBitNumber : INITIAL_DOTS_BIT_NUMBER
+}
+
+export const getDotsFromStorage = () => {
+    const validatedValue = _getValidatedDotsBitNumber()
+    return {
+        dotsBitNumber: validatedValue,
+        ...getObjectFromBitNumber({
+            keysArray: ORDERED_DOT_KEYS,
+            bitNumber: validatedValue
+        })
+    }
 }
