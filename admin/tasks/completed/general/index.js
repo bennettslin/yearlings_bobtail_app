@@ -4668,5 +4668,9 @@ export default [
     {
         taskName: `Reorganise tasks.`,
         workedHours: 1
+    },
+    {
+        taskName: `Clean up and organise default states, move storage constants and helpers to separate files, and alphabetise stores.`,
+        workedHours: 3
     }
 ]

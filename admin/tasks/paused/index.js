@@ -5,45 +5,12 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `allow annotation, score, wiki to remain selected when song advances to next song.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Recalculate whether selected verse is shown when changing height.`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Get unit tests working again.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Overview comes in from behind carousel. Don't worry about this for now.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: `Popup button hover gets obscured by embed. This only happens in Canary, so far.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Separate out event handlers into helper components in the same way. Pausing this for now, as this is a lot of work, and the event handlers are so tightly coupled, that I'm not sure of the benefit.`,
-        workedHours: 0,
-        neededHours: 12
-    },
-
-    {
-        taskName: `Animate tiles.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -61,33 +28,9 @@ export default [
     },
 
     {
-        taskName: `Verse audio knows it's after cursor through CSS logic.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Know when not to show up or down access icons in lyric column, based on whether it's scrolled to the very top or bottom?`,
         workedHours: 0,
         neededHours: 1
-    },
-
-    {
-        taskName: `Revisit Willy, Odin, and Constellations overlap cards.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Position lyric column access icons all on right.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Use Web Worker for parsing album. Mostly a proof of concept.`,
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: `Improve method to get verse index for slider ratio. Begin by assuming closeness to slider verse index.`,
@@ -119,29 +62,9 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Optimise shouldComponentUpdate.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: `Hover over verse to show lyric button.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Hook up text constants.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Set storage expiration date.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Hover over stage shows buttons to switch scenes.`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Deal with ugliness when forced scrollbar is set.`,
@@ -152,21 +75,6 @@ export default [
         taskName: `Selecting last carousel annotation in Odin, and then toggling lyric column, makes carousel needlessly scroll.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Slider locks up, preventing touch moving, for some reason. Might have to do with Root Component being active? Nope... Can't repro at this point?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Sometimes audio nav buttons get in state where they only select one song at a time?! Haven't reproed since?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Look into using SmartComponent.`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     /**
@@ -238,16 +146,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Allow presences to specify zIndex. Position presences in slanted cubes. (I'm going to assume that without window blinds, this is no longer necessary.)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `See if heavy data stuff can be loaded server side. I would like to see this get done, but it's going to take way, way more time than I have.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Refactor bit number methods.`,
         workedHours: 0,
         neededHours: 2
@@ -256,11 +154,6 @@ export default [
         taskName: `Dot unit animation? Do based on visibility or opacity instead of display none? Looks like styling won't be so easy, so punting this.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `nav images. (Just take from existing heads.)`,
-        workedHours: 0,
-        neededHours: 5
     },
 
     /**
@@ -285,11 +178,6 @@ export default [
         taskName: `Mount VerseTracker upon transition.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Get rid of getDefinedOnlyPayload, once I've confirmed that nothing ever passes undefined value.`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     /** Admin bugs. Doubt I'll ever care to do them. */
