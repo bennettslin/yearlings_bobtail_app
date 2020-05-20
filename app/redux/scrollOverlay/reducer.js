@@ -1,6 +1,6 @@
 // Reducers for scrolling lyric values.
-import { SCROLL_OVERLAY_STORE } from '../../constants/store/keys'
-import { SCROLL_OVERLAY_DEFAULTS } from '../defaultStates'
+import { SCROLL_OVERLAY_STORE } from '../../constants/store'
+import { SCROLL_OVERLAY_DEFAULTS } from './default'
 
 export default (
     state = SCROLL_OVERLAY_DEFAULTS,

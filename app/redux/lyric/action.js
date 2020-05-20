@@ -1,15 +1,12 @@
 // Actions for lyric and carousel state.
 import { getSongIsLogue } from '../../album/api/songs'
-
 import {
     hasKey,
     getDefinedOnlyPayload
-} from '../actionHelper'
+} from '../../helpers/action'
+import { LYRIC_STORE } from '../../constants/store'
 
-import { LYRIC_STORE } from '../../constants/store/keys'
-import { LYRIC_DEFAULTS } from '../defaultStates'
-
-export const updateLyricStore = (payload = LYRIC_DEFAULTS) => {
+export const updateLyricStore = (payload) => {
     const {
         lyricSongIndex
     } = payload

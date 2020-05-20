@@ -2,13 +2,9 @@
 import {
     hasKey,
     getDefinedOnlyPayload
-} from '../actionHelper'
-
-import { VIEWPORT_STORE } from '../../constants/store/keys'
-import {
-    VIEWPORT_DEFAULTS,
-    VIEWPORT_TRANSITION_DEFAULTS
-} from '../defaultStates'
+} from '../../helpers/action'
+import { VIEWPORT_STORE } from '../../constants/store'
+import { VIEWPORT_TRANSITION_DEFAULTS } from './default'
 
 import {
     getIsDesktopWidth,
@@ -16,7 +12,7 @@ import {
     getIsPhoneWidth
 } from '../../helpers/responsive'
 
-export const updateViewportStore = (payload = VIEWPORT_DEFAULTS) => {
+export const updateViewportStore = (payload) => {
     const { deviceWidthIndex } = payload
 
     if (hasKey(deviceWidthIndex)) {

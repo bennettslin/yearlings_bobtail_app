@@ -2,14 +2,11 @@
 import {
     hasKey,
     getDefinedOnlyPayload
-} from '../actionHelper'
-
+} from '../../helpers/action'
 import { getCubesForKey } from '../../scene/aggregators/cubes'
+import { SCENE_STORE } from '../../constants/store'
 
-import { SCENE_STORE } from '../../constants/store/keys'
-import { SCENE_DEFAULTS } from '../defaultStates'
-
-export const updateSceneStore = (payload = SCENE_DEFAULTS) => {
+export const updateSceneStore = (payload) => {
     const { sceneCubesKey } = payload
 
     if (hasKey(sceneCubesKey)) {

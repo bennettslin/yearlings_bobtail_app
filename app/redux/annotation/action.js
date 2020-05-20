@@ -1,10 +1,10 @@
 // Actions for queued song values.
-import { getDefinedOnlyPayload } from '../actionHelper'
+import { getDefinedOnlyPayload } from '../../helpers/action'
 
-import { ANNOTATION_STORE } from '../../constants/store/keys'
-import { ANNOTATION_DEFAULTS } from '../defaultStates'
+import { ANNOTATION_STORE } from '../../constants/store'
+import { ANNOTATION_DEFAULTS } from './default'
 
-export const updateAnnotationStore = (payload = ANNOTATION_DEFAULTS) => ({
+export const updateAnnotationStore = (payload) => ({
     type: ANNOTATION_STORE,
     payload: getDefinedOnlyPayload(payload)
 })

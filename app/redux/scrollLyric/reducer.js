@@ -1,6 +1,6 @@
 // Reducers for scrolling lyric values.
-import { SCROLL_LYRIC_STORE } from '../../constants/store/keys'
-import { SCROLL_LYRIC_DEFAULTS } from '../defaultStates'
+import { SCROLL_LYRIC_STORE } from '../../constants/store'
+import { SCROLL_LYRIC_DEFAULTS } from './default'
 
 export default (
     state = SCROLL_LYRIC_DEFAULTS,

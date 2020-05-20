@@ -1,19 +1,16 @@
 // Actions for options state.
-import { setOptionInStorage } from '../storageHelper'
-
+import { setOptionInStorage } from '../../helpers/storage'
 import {
     hasKey,
     getDefinedOnlyPayload
-} from '../actionHelper'
-
+} from '../../helpers/action'
 import {
     OPTION_STORE,
     SELECTED_OVERVIEW_OPTION,
     SELECTED_TIPS_OPTION
-} from '../../constants/store/keys'
-import { OPTION_DEFAULTS } from '../defaultStates'
+} from '../../constants/store'
 
-export const updateOptionStore = (payload = OPTION_DEFAULTS) => {
+export const updateOptionStore = (payload) => {
 
     const {
         selectedOverviewOption,

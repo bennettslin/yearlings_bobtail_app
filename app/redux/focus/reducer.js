@@ -1,6 +1,6 @@
 // Reducers for focus values.
-import { FOCUS_STORE } from '../../constants/store/keys'
-import { FOCUS_DEFAULTS } from '../defaultStates'
+import { FOCUS_STORE } from '../../constants/store'
+import { FOCUS_DEFAULTS } from './default'
 
 export default (
     state = FOCUS_DEFAULTS,

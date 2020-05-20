@@ -1,6 +1,6 @@
 // Reducers for selected dots.
-import { DOTS_STORE } from '../../constants/store/keys'
-import { DOTS_DEFAULTS } from '../defaultStates'
+import { DOTS_STORE } from '../../constants/store'
+import { DOTS_DEFAULTS } from './default'
 
 export default (
     state = DOTS_DEFAULTS,

@@ -1,10 +1,8 @@
 // Actions for whether to mount.
-import { getDefinedOnlyPayload } from '../actionHelper'
+import { getDefinedOnlyPayload } from '../../helpers/action'
+import { MOUNT_STORE } from '../../constants/store'
 
-import { MOUNT_STORE } from '../../constants/store/keys'
-import { MOUNT_DEFAULTS } from '../defaultStates'
-
-export const updateMountStore = (payload = MOUNT_DEFAULTS) => ({
+export const updateMountStore = (payload) => ({
     type: MOUNT_STORE,
     payload: getDefinedOnlyPayload(payload)
 })

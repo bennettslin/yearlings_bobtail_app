@@ -2,15 +2,11 @@
 import {
     hasKey,
     getDefinedOnlyPayload
-} from '../actionHelper'
+} from '../../helpers/action'
+import { SCROLL_CAROUSEL_STORE } from '../../constants/store'
+import { SCROLL_CAROUSEL_DEFAULTS } from './default'
 
-import { SCROLL_CAROUSEL_STORE } from '../../constants/store/keys'
-import { SCROLL_CAROUSEL_DEFAULTS } from '../defaultStates'
-
-export const updateScrollCarouselStore = (
-    payload = SCROLL_CAROUSEL_DEFAULTS
-
-) => {
+export const updateScrollCarouselStore = (payload = SCROLL_CAROUSEL_DEFAULTS) => {
     const { queuedScrollCarouselIndex } = payload
 
     if (hasKey(queuedScrollCarouselIndex)) {

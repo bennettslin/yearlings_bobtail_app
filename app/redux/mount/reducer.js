@@ -1,6 +1,6 @@
 // Reducers for whether to mount.
-import { MOUNT_STORE } from '../../constants/store/keys'
-import { MOUNT_DEFAULTS } from '../defaultStates'
+import { MOUNT_STORE } from '../../constants/store'
+import { MOUNT_DEFAULTS } from './default'
 
 export default (
     state = MOUNT_DEFAULTS,

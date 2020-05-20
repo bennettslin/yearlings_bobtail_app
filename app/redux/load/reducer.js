@@ -1,6 +1,6 @@
 // Reducers for audio values.
-import { LOAD_STORE } from '../../constants/store/keys'
-import { LOAD_DEFAULTS } from '../defaultStates'
+import { LOAD_STORE } from '../../constants/store'
+import { LOAD_DEFAULTS } from './default'
 
 export default (
     state = LOAD_DEFAULTS,

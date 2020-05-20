@@ -1,6 +1,6 @@
 // Reducers for activated state.
-import { ACTIVATED_STORE } from '../../constants/store/keys'
-import { ACTIVATED_DEFAULTS } from '../defaultStates'
+import { ACTIVATED_STORE } from '../../constants/store'
+import { ACTIVATED_DEFAULTS } from './default'
 
 export default (
     state = ACTIVATED_DEFAULTS,

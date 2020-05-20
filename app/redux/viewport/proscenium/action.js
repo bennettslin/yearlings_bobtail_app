@@ -1,9 +1,7 @@
-import { getDefinedOnlyPayload } from '../../actionHelper'
+import { getDefinedOnlyPayload } from '../../../helpers/action'
+import { PROSCENIUM_STORE } from '../../../constants/store'
 
-import { PROSCENIUM_STORE } from '../../../constants/store/keys'
-import { PROSCENIUM_DEFAULTS } from '../../defaultStates'
-
-export const updateProsceniumStore = (payload = PROSCENIUM_DEFAULTS) => ({
+export const updateProsceniumStore = (payload) => ({
     type: PROSCENIUM_STORE,
     payload: getDefinedOnlyPayload(payload)
 })

@@ -53,7 +53,7 @@ import {
     TRANSIENT_STORE,
     VERSE_BARS_STORE,
     VIEWPORT_STORE
-} from '../constants/store/keys'
+} from '../constants/store'
 
 export default combineReducers({
     [ACCESS_STORE]: AccessReducer,

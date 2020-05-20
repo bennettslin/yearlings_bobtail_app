@@ -2,16 +2,14 @@
 import {
     hasKey,
     getDefinedOnlyPayload
-} from '../actionHelper'
+} from '../../helpers/action'
 import { setInStorage } from '../../utils/window'
-
 import {
     DOTS_STORE,
     DOTS_BIT_NUMBER
-} from '../../constants/store/keys'
-import { DOTS_DEFAULTS } from '../defaultStates'
+} from '../../constants/store'
 
-export const updateDotsStore = (payload = DOTS_DEFAULTS) => {
+export const updateDotsStore = (payload) => {
     const { dotsBitNumber } = payload
 
     if (hasKey(dotsBitNumber)) {

@@ -6,7 +6,7 @@ import { getValidAnnotationIndex } from '../album/api/annotations'
 import {
     getTwoToThePowerOfN,
     getObjectFromBitNumber
-} from '../helpers/bit'
+} from './bit'
 
 import {
     ORDERED_DOT_KEYS,
@@ -18,7 +18,6 @@ import {
     AUDIO_OPTIONS,
     GENERAL_OPTIONS
 } from '../constants/options'
-// import { getArrayOfLength } from '../helpers/general'
 import { getWindowStorage, setInStorage } from '../utils/window'
 
 import {
@@ -29,7 +28,7 @@ import {
     SELECTED_ANNOTATION_INDEX,
 
     SELECTED_AUDIO_OPTION_INDEX
-} from '../constants/store/keys'
+} from '../constants/store'
 
 // TODO: This is now used only for audio options. Just do an array create and some.
 const _validateIndexForKey = key => {

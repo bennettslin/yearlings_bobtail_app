@@ -1,6 +1,6 @@
 // Reducers for state based on window size.
-import { RESPONSIVE_STORE } from '../../constants/store/keys'
-import { RESPONSIVE_DEFAULTS } from '../defaultStates'
+import { RESPONSIVE_STORE } from '../../constants/store'
+import { RESPONSIVE_DEFAULTS } from './default'
 
 export default (
     state = RESPONSIVE_DEFAULTS,

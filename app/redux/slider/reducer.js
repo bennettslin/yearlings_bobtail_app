@@ -1,6 +1,6 @@
 // Reducers for slider state.
-import { SLIDER_STORE } from '../../constants/store/keys'
-import { SLIDER_DEFAULTS } from '../defaultStates'
+import { SLIDER_STORE } from '../../constants/store'
+import { SLIDER_DEFAULTS } from './default'
 
 export default (
     state = SLIDER_DEFAULTS,

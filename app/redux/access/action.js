@@ -3,19 +3,17 @@ import { setBoolInStorage } from '../../utils/window'
 import {
     hasKey,
     getDefinedOnlyPayload
-} from '../actionHelper'
-
+} from '../../helpers/action'
 import {
     IS_ACCESS_ON,
     ACCESS_STORE
-} from '../../constants/store/keys'
+} from '../../constants/store'
 import {
-    ACCESS_DEFAULTS,
     ACCESS_DOT_DEFAULTS,
     ACCESS_NAV_DEFAULTS
-} from '../defaultStates'
+} from './default'
 
-export const updateAccessStore = (payload = ACCESS_DEFAULTS) => {
+export const updateAccessStore = (payload) => {
 
     const { isAccessOn } = payload
 

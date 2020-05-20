@@ -1,6 +1,6 @@
 // Reducers for session values.
-import { SESSION_STORE } from '../../constants/store/keys'
-import { SESSION_DEFAULTS } from '../defaultStates'
+import { SESSION_STORE } from '../../constants/store'
+import { SESSION_DEFAULTS } from './default'
 
 export default (
     state = SESSION_DEFAULTS,

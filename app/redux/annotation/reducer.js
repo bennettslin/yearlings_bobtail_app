@@ -1,6 +1,6 @@
 // Reducers for queued song values.
-import { ANNOTATION_STORE } from '../../constants/store/keys'
-import { ANNOTATION_DEFAULTS } from '../defaultStates'
+import { ANNOTATION_STORE } from '../../constants/store'
+import { ANNOTATION_DEFAULTS } from './default'
 
 export default (
     state = ANNOTATION_DEFAULTS,

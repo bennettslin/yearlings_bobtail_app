@@ -1,6 +1,6 @@
 // Reducers for song and player state.
-import { SELECTED_STORE } from '../../constants/store/keys'
-import { SELECTED_DEFAULTS } from '../defaultStates'
+import { SELECTED_STORE } from '../../constants/store'
+import { SELECTED_DEFAULTS } from './default'
 
 export default (
     state = SELECTED_DEFAULTS,

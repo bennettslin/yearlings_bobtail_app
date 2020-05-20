@@ -1,10 +1,8 @@
 // Actions for focus values.
-import { getDefinedOnlyPayload } from '../actionHelper'
+import { getDefinedOnlyPayload } from '../../helpers/action'
+import { FOCUS_STORE } from '../../constants/store'
 
-import { FOCUS_STORE } from '../../constants/store/keys'
-import { FOCUS_DEFAULTS } from '../defaultStates'
-
-export const updateFocusStore = (payload = FOCUS_DEFAULTS) => ({
+export const updateFocusStore = (payload) => ({
     type: FOCUS_STORE,
     payload: getDefinedOnlyPayload(payload)
 })

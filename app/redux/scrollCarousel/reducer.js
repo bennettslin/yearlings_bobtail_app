@@ -1,6 +1,6 @@
 // Reducers for scrolling carousel values.
-import { SCROLL_CAROUSEL_STORE } from '../../constants/store/keys'
-import { SCROLL_CAROUSEL_DEFAULTS } from '../defaultStates'
+import { SCROLL_CAROUSEL_STORE } from '../../constants/store'
+import { SCROLL_CAROUSEL_DEFAULTS } from './default'
 
 export default (
     state = SCROLL_CAROUSEL_DEFAULTS,

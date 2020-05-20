@@ -1,10 +1,8 @@
 // Actions for transient states.
-import { getDefinedOnlyPayload } from '../actionHelper'
+import { getDefinedOnlyPayload } from '../../helpers/action'
+import { TRANSIENT_STORE } from '../../constants/store'
 
-import { TRANSIENT_STORE } from '../../constants/store/keys'
-import { TRANSIENT_DEFAULTS } from '../defaultStates'
-
-export const updateTransientStore = (payload = TRANSIENT_DEFAULTS) => ({
+export const updateTransientStore = (payload) => ({
     type: TRANSIENT_STORE,
     payload: getDefinedOnlyPayload(payload)
 })

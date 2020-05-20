@@ -1,21 +1,16 @@
 // Actions for session values.
 import { setInStorage } from '../../utils/window'
-
 import {
     hasKey,
     getDefinedOnlyPayload
-} from '../actionHelper'
-
+} from '../../helpers/action'
 import {
     SESSION_STORE,
     SELECTED_AUDIO_OPTION_INDEX
-} from '../../constants/store/keys'
-import {
-    SESSION_DEFAULTS,
-    SESSION_WIKI_DEFAULTS
-} from '../defaultStates'
+} from '../../constants/store'
+import { SESSION_WIKI_DEFAULTS } from './default'
 
-export const updateSessionStore = (payload = SESSION_DEFAULTS) => {
+export const updateSessionStore = (payload) => {
 
     const { selectedAudioOptionIndex } = payload
 

@@ -1,21 +1,18 @@
 // Actions for song state.
 import { getSongIsLogue } from '../../album/api/songs'
 import { setInStorage } from '../../utils/window'
-
 import {
     hasKey,
     getDefinedOnlyPayload
-} from '../actionHelper'
-
+} from '../../helpers/action'
 import {
     SELECTED_STORE,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX
-} from '../../constants/store/keys'
-import { SELECTED_DEFAULTS } from '../defaultStates'
+} from '../../constants/store'
 
-export const updateSelectedStore = (payload = SELECTED_DEFAULTS) => {
+export const updateSelectedStore = (payload) => {
 
     const {
         selectedSongIndex,

@@ -1,6 +1,6 @@
 // Reducers for window size.
-import { TRANSIENT_STORE } from '../../constants/store/keys'
-import { TRANSIENT_DEFAULTS } from '../defaultStates'
+import { TRANSIENT_STORE } from '../../constants/store'
+import { TRANSIENT_DEFAULTS } from './default'
 
 export default (
     state = TRANSIENT_DEFAULTS,

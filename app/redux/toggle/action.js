@@ -3,15 +3,13 @@ import { setBoolInStorage } from '../../utils/window'
 import {
     hasKey,
     getDefinedOnlyPayload
-} from '../actionHelper'
-
+} from '../../helpers/action'
 import {
     TOGGLE_STORE,
     IS_CAROUSEL_SHOWN
-} from '../../constants/store/keys'
-import { TOGGLE_DEFAULTS } from '../defaultStates'
+} from '../../constants/store'
 
-export const updateToggleStore = (payload = TOGGLE_DEFAULTS) => {
+export const updateToggleStore = (payload) => {
 
     const { isCarouselShown } = payload
 

@@ -1,6 +1,6 @@
 // Reducers for determining verse bars.
-import { VERSE_BARS_STORE } from '../../constants/store/keys'
-import { VERSE_BARS_DEFAULTS } from '../defaultStates'
+import { VERSE_BARS_STORE } from '../../constants/store'
+import { VERSE_BARS_DEFAULTS } from './default'
 
 export default (
     state = VERSE_BARS_DEFAULTS,

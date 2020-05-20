@@ -1,5 +1,5 @@
-import { THEATRE_STORE } from '../../../constants/store/keys'
-import { THEATRE_DEFAULTS } from '../../defaultStates'
+import { THEATRE_STORE } from '../../../constants/store'
+import { THEATRE_DEFAULTS } from './default'
 
 export default (
     state = THEATRE_DEFAULTS,

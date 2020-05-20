@@ -1,5 +1,5 @@
-import { PROSCENIUM_STORE } from '../../../constants/store/keys'
-import { PROSCENIUM_DEFAULTS } from '../../defaultStates'
+import { PROSCENIUM_STORE } from '../../../constants/store'
+import { PROSCENIUM_DEFAULTS } from './default'
 
 export default (
     state = PROSCENIUM_DEFAULTS,

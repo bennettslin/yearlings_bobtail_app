@@ -1,8 +1,7 @@
 // Actions for banner state.
-import { getDefinedOnlyPayload } from '../actionHelper'
-
-import { BANNER_STORE } from '../../constants/store/keys'
-import { BANNER_DEFAULTS } from '../defaultStates'
+import { getDefinedOnlyPayload } from '../../helpers/action'
+import { BANNER_STORE } from '../../constants/store'
+import { BANNER_DEFAULTS } from './default'
 
 export const updateBannerStore = (payload = BANNER_DEFAULTS) => ({
     type: BANNER_STORE,

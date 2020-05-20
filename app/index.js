@@ -1,19 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
+import { devToolsEnhancer } from 'redux-devtools-extension'
 
 // Import these here just to make them available.
 import './album'
 import './utils/logger'
 import './utils/analytics'
 
-import { createStore } from 'redux'
-import { devToolsEnhancer } from 'redux-devtools-extension'
-
-import { Provider } from 'react-redux'
-
-import rootReducer from './redux/rootReducer'
+import rootReducer from './redux'
 
 import './scss/app.scss'
 

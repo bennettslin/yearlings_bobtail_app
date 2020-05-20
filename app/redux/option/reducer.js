@@ -1,6 +1,6 @@
 // Reducers for options state.
-import { OPTION_STORE } from '../../constants/store/keys'
-import { OPTION_DEFAULTS } from '../defaultStates'
+import { OPTION_STORE } from '../../constants/store'
+import { OPTION_DEFAULTS } from './default'
 
 export default (
     state = OPTION_DEFAULTS,
