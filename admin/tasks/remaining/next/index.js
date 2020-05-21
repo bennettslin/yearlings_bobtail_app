@@ -6,14 +6,24 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Clean up routing. Prioritise getting from routes before storage for selected indices when setting initial state. Set route upon mount. Make verse and annotation query strings. Routing and Listen containers don't need to wrap Focus container, and don't even need to be containers. Routing can just be another listener, and Listen can be index of listeners.`,
+        taskName: `Prevent iframe src from affecting browser history. Then maybe reconsider history push instead of replace?`,
         workedHours: 0,
-        neededHours: 10
+        neededHours: 3
     },
     {
-        taskName: `Window stuff. Do audit of what needs to know window values, both in general, and set in store. Start with store already knowing window.`,
+        taskName: `If annotation is selected in store, preemptively select all dots.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 1
+    },
+    {
+        taskName: `Make getting indices from routing all or none.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Consolidate all window and window storage helpers.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     /* Ongoing. */

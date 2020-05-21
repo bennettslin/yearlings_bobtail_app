@@ -4676,5 +4676,9 @@ export default [
     {
         taskName: `For SEO, load with About mounted.`,
         workedHours: 1
+    },
+    {
+        taskName: `Clean up routing. Prioritise getting from routes before storage for selected indices when setting initial state. Set route upon mount. Make verse and annotation query strings. Routing can just be another listener.`,
+        workedHours: 5
     }
 ]
