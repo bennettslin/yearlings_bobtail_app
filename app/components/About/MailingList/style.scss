@@ -68,4 +68,8 @@
     &:disabled {
         color: $colour__neutral__dark;
     }
+
+    &:focus {
+        outline: none;
+    }
 }

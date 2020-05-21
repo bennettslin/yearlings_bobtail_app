@@ -1,11 +1,6 @@
 export default [
     /* Week work. */
     {
-        taskName: `For SEO, load with About mounted.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Have About anchors link with hrefs.`,
         workedHours: 0,
         neededHours: 1

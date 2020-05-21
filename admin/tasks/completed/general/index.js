@@ -4672,5 +4672,9 @@ export default [
     {
         taskName: `Clean up and organise default states, move storage constants and helpers to separate files, and alphabetise stores.`,
         workedHours: 3
+    },
+    {
+        taskName: `For SEO, load with About mounted.`,
+        workedHours: 1
     }
 ]
