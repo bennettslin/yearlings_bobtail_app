@@ -1,4 +1,4 @@
-import { STORED_ANNOTATION_INDEX } from '../../constants/storage'
+import { INITIAL_ANNOTATION_INDEX } from '../../constants/storage'
 
 export const TRANSIENT_DEFAULTS = {
     isShelfLeftShown: false,
@@ -8,7 +8,7 @@ export const TRANSIENT_DEFAULTS = {
     isEarShown: false,
     isTipsShowable: false,
     isPopupAnnotationVisible: false,
-    popupAnnotationIndex: STORED_ANNOTATION_INDEX,
+    popupAnnotationIndex: INITIAL_ANNOTATION_INDEX,
     toggleShowsOverviewImmediately: false,
     toggleShowsTipsImmediately: false
 }

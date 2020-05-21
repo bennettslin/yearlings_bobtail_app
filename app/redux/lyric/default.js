@@ -1,7 +1,7 @@
 import {
-    STORED_SONG_INDEX,
-    STORED_VERSE_INDEX,
-    STORED_ANNOTATION_INDEX,
+    INITIAL_SONG_INDEX,
+    INITIAL_VERSE_INDEX,
+    INITIAL_ANNOTATION_INDEX,
     IS_STORED_LOGUE
 } from '../../constants/storage'
 
@@ -22,8 +22,8 @@ const LYRIC_TRANSITION_DEFAULTS = {
 
 export const LYRIC_DEFAULTS = {
     ...LYRIC_TRANSITION_DEFAULTS,
-    lyricSongIndex: STORED_SONG_INDEX,
-    lyricVerseIndex: STORED_VERSE_INDEX,
-    lyricAnnotationIndex: STORED_ANNOTATION_INDEX,
+    lyricSongIndex: INITIAL_SONG_INDEX,
+    lyricVerseIndex: INITIAL_VERSE_INDEX,
+    lyricAnnotationIndex: INITIAL_ANNOTATION_INDEX,
     isLyricLogue: IS_STORED_LOGUE
 }

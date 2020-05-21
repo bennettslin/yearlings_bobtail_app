@@ -1,5 +1,5 @@
 import {
-    STORED_ANNOTATION_INDEX,
+    INITIAL_ANNOTATION_INDEX,
     IS_STORED_ACCESS_ON
 } from '../../constants/storage'
 
@@ -17,6 +17,6 @@ export const ACCESS_DEFAULTS = {
     isAccessOn: IS_STORED_ACCESS_ON || false,
     isAccessedIndexedAnchorShown: false,
     accessedKey: '',
-    accessedAnnotationIndex: STORED_ANNOTATION_INDEX || 0,
+    accessedAnnotationIndex: INITIAL_ANNOTATION_INDEX || 0,
     accessedWikiWormholeIndex: 0
 }

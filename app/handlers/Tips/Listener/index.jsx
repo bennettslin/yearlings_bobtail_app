@@ -16,7 +16,6 @@ class TipsListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isRoutingComplete: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
@@ -30,21 +29,14 @@ class TipsListener extends PureComponent {
         updateTransientStore: PropTypes.func.isRequired
     }
 
+    componentDidMount() {
+        this._handleTipsUpdate(this._getIsTipsShowable())
+    }
+
     componentDidUpdate(prevProps) {
-        this._handleRoutingComplete(prevProps)
         this._handleSongChange(prevProps)
         this._handleForcedOverview(prevProps)
         this._handleDeviceWidthChange(prevProps)
-    }
-
-    _handleRoutingComplete(prevProps) {
-        const
-            { isRoutingComplete } = this.props,
-            { isRoutingComplete: wasRoutingComplete } = prevProps
-
-        if (isRoutingComplete && !wasRoutingComplete) {
-            this._handleTipsUpdate(this._getIsTipsShowable())
-        }
     }
 
     _handleSongChange(prevProps) {
@@ -168,7 +160,6 @@ const mapStateToProps = ({
         lyricAnnotationIndex
     },
     selectedStore: {
-        isRoutingComplete,
         isSelectedLogue
     },
     optionStore: {
@@ -182,7 +173,6 @@ const mapStateToProps = ({
         isDesktopWidth
     }
 }) => ({
-    isRoutingComplete,
     isSelectedLogue,
     selectedTipsOption,
     isForcedShownOverview,

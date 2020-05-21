@@ -7,7 +7,7 @@ import { getStartTimeForVerse } from '../album/api/time'
 import { getSceneIndexForVerse } from '../album/api/verses'
 import {
     getOptionFromStorage,
-    getSelectedIndicesFromStorage,
+    getInitialIndicesFromRoutingOrStorage,
     getAudioOptionFromStorage
 } from '../helpers/storage'
 import { getBoolFromStorage } from '../utils/window'
@@ -19,32 +19,32 @@ import {
 } from './store'
 
 export const {
-    storedSongIndex: STORED_SONG_INDEX,
-    storedVerseIndex: STORED_VERSE_INDEX,
-    storedAnnotationIndex: STORED_ANNOTATION_INDEX
-} = getSelectedIndicesFromStorage()
+    initialSongIndex: INITIAL_SONG_INDEX,
+    initialVerseIndex: INITIAL_VERSE_INDEX,
+    initialAnnotationIndex: INITIAL_ANNOTATION_INDEX
+} = getInitialIndicesFromRoutingOrStorage()
 
-export const IS_STORED_LOGUE = getSongIsLogue(STORED_SONG_INDEX)
+export const IS_STORED_LOGUE = getSongIsLogue(INITIAL_SONG_INDEX)
 
 export const STORED_TIME = getStartTimeForVerse(
-    STORED_SONG_INDEX,
-    STORED_VERSE_INDEX
+    INITIAL_SONG_INDEX,
+    INITIAL_VERSE_INDEX
 )
 
 export const STORED_EAR_COLUMN_INDEX = getColumnIndexForAnnotation(
-    STORED_SONG_INDEX,
-    STORED_ANNOTATION_INDEX
+    INITIAL_SONG_INDEX,
+    INITIAL_ANNOTATION_INDEX
 )
 export const STORED_SCENE_INDEX = getSceneIndexForVerse(
-    STORED_SONG_INDEX,
-    STORED_VERSE_INDEX
+    INITIAL_SONG_INDEX,
+    INITIAL_VERSE_INDEX
 )
 
 export const IS_STORED_ACCESS_ON = getBoolFromStorage(IS_ACCESS_ON)
 
 export const IS_STORED_CAROUSEL_SHOWN = getBoolFromStorage(IS_CAROUSEL_SHOWN)
 
-export const STORED_NAV_BOOK_INDEX = getBookForSongIndex(STORED_SONG_INDEX)
+export const STORED_NAV_BOOK_INDEX = getBookForSongIndex(INITIAL_SONG_INDEX)
 
 export const STORED_AUDIO_OPTION_INDEX = getAudioOptionFromStorage()
 

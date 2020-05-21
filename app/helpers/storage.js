@@ -18,6 +18,11 @@ import {
     AUDIO_OPTIONS,
     GENERAL_OPTIONS
 } from '../constants/options'
+import {
+    getRoutingSongIndex,
+    getRoutingVerseIndex,
+    getRoutingAnnotationIndex
+} from './routing'
 import { getWindowStorage } from '../utils/window'
 
 import {
@@ -32,24 +37,34 @@ const _getParsedStoredInteger = key => (
     parseInt(getWindowStorage()[key])
 )
 
-export const getSelectedIndicesFromStorage = () => {
+export const getInitialIndicesFromRoutingOrStorage = () => {
+    // For each index, favour routing over storage.
     const
-        storedSongIndex = getValidSongIndex(
-            _getParsedStoredInteger(SELECTED_SONG_INDEX)
-        ),
-        storedVerseIndex = getValidVerseIndex(
-            storedSongIndex,
-            _getParsedStoredInteger(SELECTED_VERSE_INDEX)
-        ),
-        storedAnnotationIndex = getValidAnnotationIndex(
-            storedSongIndex,
-            _getParsedStoredInteger(SELECTED_ANNOTATION_INDEX)
-        )
+        routingSongIndex = getRoutingSongIndex(),
+        initialSongIndex = Number.isFinite(routingSongIndex) ?
+            routingSongIndex :
+            getValidSongIndex(
+                _getParsedStoredInteger(SELECTED_SONG_INDEX)
+            ),
+        routingVerseIndex = getRoutingVerseIndex(initialSongIndex),
+        initialVerseIndex = Number.isFinite(routingVerseIndex) ?
+            routingVerseIndex :
+            getValidVerseIndex(
+                initialSongIndex,
+                _getParsedStoredInteger(SELECTED_VERSE_INDEX)
+            ),
+        routingAnnotationIndex = getRoutingAnnotationIndex(initialSongIndex),
+        initialAnnotationIndex = Number.isFinite(routingAnnotationIndex) ?
+            routingAnnotationIndex :
+            getValidAnnotationIndex(
+                initialSongIndex,
+                _getParsedStoredInteger(SELECTED_ANNOTATION_INDEX)
+            )
 
     return {
-        storedSongIndex,
-        storedVerseIndex,
-        storedAnnotationIndex
+        initialSongIndex,
+        initialVerseIndex,
+        initialAnnotationIndex
     }
 }
 

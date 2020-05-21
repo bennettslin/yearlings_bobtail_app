@@ -132,11 +132,11 @@ export const getValidRoutingIndices = ({
     return routingIndicesObject
 }
 
-export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {
+export const getPathForIndices = (songIndex) => {
     const
         // Path is something like "9_GrasshoppersLieHeavy-v20-a22.""
         newPath =
-            `${songIndex}_${HYPHENATED_SONG_PATHS[songIndex]}${verseIndex ? '-v' + verseIndex : ''}${annotationIndex ? '-a' + annotationIndex : ''}`
+            `${songIndex}_${HYPHENATED_SONG_PATHS[songIndex]}`
 
     return newPath
 }

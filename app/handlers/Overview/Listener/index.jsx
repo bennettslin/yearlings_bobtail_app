@@ -12,7 +12,6 @@ class OverviewListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isRoutingComplete: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -21,20 +20,13 @@ class OverviewListener extends PureComponent {
         updateOptionStore: PropTypes.func.isRequired
     }
 
-    componentDidUpdate(prevProps) {
-        this._handleRoutingComplete(prevProps)
-        this._handleSongChange(prevProps)
-        this._handleHeightlessChange(prevProps)
+    componentDidMount() {
+        this._handleOverviewUpdate()
     }
 
-    _handleRoutingComplete(prevProps) {
-        const
-            { isRoutingComplete } = this.props,
-            { isRoutingComplete: wasRoutingComplete } = prevProps
-
-        if (isRoutingComplete && !wasRoutingComplete) {
-            this._handleOverviewUpdate()
-        }
+    componentDidUpdate(prevProps) {
+        this._handleSongChange(prevProps)
+        this._handleHeightlessChange(prevProps)
     }
 
     _handleSongChange(prevProps) {
@@ -107,7 +99,6 @@ class OverviewListener extends PureComponent {
 
 const mapStateToProps = ({
     selectedStore: {
-        isRoutingComplete,
         isSelectedLogue,
         selectedSongIndex,
         selectedAnnotationIndex
@@ -115,7 +106,6 @@ const mapStateToProps = ({
     responsiveStore: { isHeightlessLyric },
     optionStore: { selectedOverviewOption }
 }) => ({
-    isRoutingComplete,
     isSelectedLogue,
     selectedSongIndex,
     selectedAnnotationIndex,
