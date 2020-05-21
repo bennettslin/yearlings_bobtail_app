@@ -6,7 +6,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Clean up routing. Prioritise getting from routes before storage for selected indices when setting initial state. Set route upon mount . Make verse and annotation query strings. Routing and Listen containers don't need to wrap Focus container, and don't even need to be containers. Routing can just be another listener, and Listen can be index of listeners.`,
+        taskName: `Clean up routing. Prioritise getting from routes before storage for selected indices when setting initial state. Set route upon mount. Make verse and annotation query strings. Routing and Listen containers don't need to wrap Focus container, and don't even need to be containers. Routing can just be another listener, and Listen can be index of listeners.`,
         workedHours: 0,
         neededHours: 10
     },
