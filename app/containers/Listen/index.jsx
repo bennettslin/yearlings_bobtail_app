@@ -16,6 +16,7 @@ import LyricIndicesListener from '../../listeners/LyricIndices'
 import MainListener from '../../listeners/Main'
 import OverviewListener from '../../handlers/Overview/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotation'
+import RoutingListener from '../../listeners/Routing'
 import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
 import SceneChangeEnterListener from '../../listeners/SceneChange/Enter'
 import ScoreListener from '../../handlers/Score/Listener'
@@ -78,6 +79,7 @@ class ListenContainer extends PureComponent {
                 <MainListener />
                 <OverviewListener />
                 <PopupAnnotationListener />
+                <RoutingListener />
                 <SceneChangeExitListener />
                 <SceneChangeEnterListener />
                 {canScoreMount && (

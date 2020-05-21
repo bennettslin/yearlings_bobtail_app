@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-import RoutingContainer from '../../app/containers/Routing'
+import ListenContainer from '../../app/containers/Listen'
 import Actors from '../containers/Actors'
 import Annotations from '../containers/Annotations'
 import LegacyPreviewer from '../containers/LegacyPreviewer'
@@ -15,7 +15,7 @@ const DeliveryRoutes = () => (
             exact
             {...{
                 path: '/',
-                component: RoutingContainer
+                component: ListenContainer
             }}
         />
         <Route
@@ -64,7 +64,7 @@ const DeliveryRoutes = () => (
             exact
             {...{
                 path: '/:routingParamString/',
-                component: RoutingContainer
+                component: ListenContainer
             }}
         />
     </Switch>

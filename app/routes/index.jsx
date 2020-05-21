@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-import RoutingContainer from '../containers/Routing'
+import ListenContainer from '../containers/Listen'
 
 const ProductionRoutes = () => (
     <Switch>
@@ -9,14 +9,14 @@ const ProductionRoutes = () => (
             exact
             {...{
                 path: '/',
-                component: RoutingContainer
+                component: ListenContainer
             }}
         />
         <Route
             exact
             {...{
                 path: '/:routingParamString/',
-                component: RoutingContainer
+                component: ListenContainer
             }}
         />
     </Switch>
