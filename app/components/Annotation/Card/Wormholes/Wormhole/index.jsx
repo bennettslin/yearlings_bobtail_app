@@ -18,7 +18,7 @@ import {
     LYRIC_CENTRE
 } from '../../../../../constants/lyrics'
 
-import { getTitleForSong } from '../../../../../album/api/songs'
+import { getIndexedTitleForSong } from '../../../../../album/api/songs'
 import { getVerse } from '../../../../../album/api/verses'
 import { populateRefs } from '../../../../../helpers/ref'
 
@@ -86,7 +86,7 @@ class AnnotationWormhole extends PureComponent {
                 wormholePrefix = 'wormhole to'
             } = wormholeLink,
 
-            songTitle = getTitleForSong({ songIndex }),
+            songTitle = getIndexedTitleForSong(songIndex),
 
             verseObject = getVerse(songIndex, verseIndex)
 

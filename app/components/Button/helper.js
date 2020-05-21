@@ -115,10 +115,7 @@ export const getShowButtonIcon = buttonName => {
 
 export const getTooltipText = ({ buttonName, buttonIdentifier }) => {
     if (buttonName === NAV_SONG_BUTTON_KEY) {
-        return getTitleForSong({
-            songIndex: buttonIdentifier,
-            showIndex: false
-        })
+        return getTitleForSong(buttonIdentifier)
     }
 
     if (buttonName === NAV_BOOK_BUTTON_KEY) {

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import SongDispatcher from '../../../../../app/handlers/Song/Dispatcher'
 import ProgressBar from '../../ProgressBar'
 
-import { getTitleForSong } from '../../../../../app/album/api/songs'
+import { getIndexedTitleForSong } from '../../../../../app/album/api/songs'
 import { populateRefs } from '../../../../../app/helpers/ref'
 import { getSongTasks } from './helper'
 import { getSumOfTasks } from '../helper'
@@ -37,7 +37,7 @@ class AdminNavRow extends PureComponent {
                 ...other
             } = this.props,
 
-            songTitle = getTitleForSong({ songIndex }),
+            songTitle = getIndexedTitleForSong(songIndex),
             albumTasks = getSongTasks(songIndex),
             sumTask = getSumOfTasks(albumTasks)
 

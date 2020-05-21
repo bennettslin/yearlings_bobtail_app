@@ -44,15 +44,18 @@ export const getSongIsLogue = songIndex => (
     songIndex === 0 || songIndex === getSongsAndLoguesCount() - 1
 )
 
-export const getTitleForSong = ({
-    songIndex,
-    showIndex = true
-}) => {
+export const getTitleForSong = songIndex => (
+    getSong(songIndex).title
+)
+
+export const getIndexedTitleForSong = songIndex => {
     const
         isLogue = getSongIsLogue(songIndex),
-        title = getSong(songIndex).title
+        title = getTitleForSong(songIndex)
 
-    return `${showIndex && !isLogue ? songIndex + '. ' : ''}${title}`
+    return !isLogue ?
+        `${songIndex}. ${title}` :
+        title
 }
 
 export const getOverviewForSong = songIndex => (

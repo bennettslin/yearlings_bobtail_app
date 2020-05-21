@@ -8,15 +8,10 @@ import TipsToggle from './Toggle'
 import Texts from '../Texts'
 
 import { getSongTipText } from '../../album/api/tips'
-
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 
 const Tips = () => {
-    const { lyricSongIndex } = useSelector(mapStateToProps)
+    const lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR)
 
     return (
 

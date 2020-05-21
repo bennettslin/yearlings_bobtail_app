@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getTitleForSong } from '../../../album/api/songs'
+import { getIndexedTitleForSong } from '../../../album/api/songs'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }
@@ -23,7 +23,7 @@ class SongStanzasTitle extends PureComponent {
     render() {
         const
             { lyricSongIndex } = this.props,
-            songTitle = getTitleForSong({ songIndex: lyricSongIndex })
+            songTitle = getIndexedTitleForSong(lyricSongIndex)
 
         return (
             <div

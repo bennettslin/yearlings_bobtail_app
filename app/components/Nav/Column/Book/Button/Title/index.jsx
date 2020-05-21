@@ -15,7 +15,7 @@ const NavButtonTitle = ({
 
     const title = Number.isFinite(bookIndex) ?
         `Book ${getIndexCharacter({ bookIndex })}` :
-        getTitleForSong({ songIndex, showIndex: false })
+        getTitleForSong(songIndex)
 
     return Boolean(title) && (
         <div
