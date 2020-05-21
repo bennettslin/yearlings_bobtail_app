@@ -1,4 +1,4 @@
-export const HYPHENATED_SONG_PATHS = [
+export const URL_SONG_NAMES = [
     'Prologue',
     'Didi',
     'WillyTheCocoa',
