@@ -37,29 +37,69 @@ const _getParsedStoredInteger = key => (
     parseInt(getWindowStorage()[key])
 )
 
+const _getStoredSongIndex = () => (
+    getValidSongIndex(_getParsedStoredInteger(SELECTED_SONG_INDEX))
+)
+
+const _getStoredVerseIndex = songIndex => (
+    getValidVerseIndex(
+        songIndex,
+        _getParsedStoredInteger(SELECTED_VERSE_INDEX)
+    )
+)
+
+const _getStoredAnnotationIndex = songIndex => (
+    getValidAnnotationIndex(
+        songIndex,
+        _getParsedStoredInteger(SELECTED_ANNOTATION_INDEX)
+    )
+)
+
 export const getInitialIndicesFromRoutingOrStorage = () => {
-    // For each index, favour routing over storage.
     const
         routingSongIndex = getRoutingSongIndex(),
-        initialSongIndex = Number.isFinite(routingSongIndex) ?
-            routingSongIndex :
-            getValidSongIndex(
-                _getParsedStoredInteger(SELECTED_SONG_INDEX)
-            ),
+        storedSongIndex = _getStoredSongIndex(),
+        isRoutingStoredSameSong = routingSongIndex === storedSongIndex,
+
+        isRoutingSongValid = Number.isFinite(routingSongIndex),
+
+        // Set valid song. Favour routing over stored. Stored defaults to 0.
+        initialSongIndex = isRoutingSongValid ?
+            routingSongIndex : storedSongIndex,
+
         routingVerseIndex = getRoutingVerseIndex(initialSongIndex),
-        initialVerseIndex = Number.isFinite(routingVerseIndex) ?
-            routingVerseIndex :
-            getValidVerseIndex(
-                initialSongIndex,
-                _getParsedStoredInteger(SELECTED_VERSE_INDEX)
-            ),
+        storedVerseIndex = _getStoredVerseIndex(initialSongIndex),
+        isRoutingVerseValid = Number.isFinite(routingVerseIndex),
+
         routingAnnotationIndex = getRoutingAnnotationIndex(initialSongIndex),
-        initialAnnotationIndex = Number.isFinite(routingAnnotationIndex) ?
-            routingAnnotationIndex :
-            getValidAnnotationIndex(
-                initialSongIndex,
-                _getParsedStoredInteger(SELECTED_ANNOTATION_INDEX)
-            )
+        storedAnnotationIndex = _getStoredAnnotationIndex(initialSongIndex),
+        isRoutingAnnotationValid = Number.isFinite(routingAnnotationIndex)
+
+    // Initialise with stored verse and annotation, which default to 0.
+    let initialVerseIndex = storedVerseIndex
+    let initialAnnotationIndex = storedAnnotationIndex
+
+    // If routing song is valid, favour routing verse and annotation.
+    if (isRoutingSongValid) {
+
+        // Set routing verse if valid.
+        if (isRoutingVerseValid) {
+            initialVerseIndex = routingVerseIndex
+
+        // If stored song is not the same as routing song, set to 0.
+        } else if (!isRoutingStoredSameSong) {
+            initialVerseIndex = 0
+        }
+
+        // Set routing annotation if valid.
+        if (isRoutingAnnotationValid) {
+            initialAnnotationIndex = routingAnnotationIndex
+
+        // If stored song is not the same as routing song, set to 0.
+        } else if (!isRoutingStoredSameSong) {
+            initialAnnotationIndex = 0
+        }
+    }
 
     return {
         initialSongIndex,

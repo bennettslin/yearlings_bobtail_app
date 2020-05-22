@@ -8,7 +8,7 @@ import {
 
 import {
     INITIAL_SONG_INDEX,
-    STORED_SCENE_INDEX
+    INITIAL_SCENE_INDEX
 } from '../../constants/storage'
 
 const SCENE_TRANSITION_DEFAULTS = {
@@ -20,10 +20,10 @@ const SCENE_TRANSITION_DEFAULTS = {
 }
 
 const
-    sceneCubesKey = getCubesKeyForScene(INITIAL_SONG_INDEX, STORED_SCENE_INDEX),
-    sceneLayers = getLayersForScene(INITIAL_SONG_INDEX, STORED_SCENE_INDEX),
-    sceneSkyTime = getSkyTimeForScene(INITIAL_SONG_INDEX, STORED_SCENE_INDEX),
-    sceneSkySeason = getSkySeasonForScene(INITIAL_SONG_INDEX, STORED_SCENE_INDEX),
+    sceneCubesKey = getCubesKeyForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
+    sceneLayers = getLayersForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
+    sceneSkyTime = getSkyTimeForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
+    sceneSkySeason = getSkySeasonForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
     sceneCubesKeys = getCubesForKey(sceneCubesKey)
 
 export const SCENE_DEFAULTS = {
@@ -32,7 +32,7 @@ export const SCENE_DEFAULTS = {
     sceneSkyTime,
     sceneSkySeason,
     sceneSongIndex: INITIAL_SONG_INDEX,
-    sceneSceneIndex: STORED_SCENE_INDEX,
+    sceneSceneIndex: INITIAL_SCENE_INDEX,
     sceneCubesKeys,
 
     /**

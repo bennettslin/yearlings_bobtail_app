@@ -24,18 +24,18 @@ export const {
     initialAnnotationIndex: INITIAL_ANNOTATION_INDEX
 } = getInitialIndicesFromRoutingOrStorage()
 
-export const IS_STORED_LOGUE = getSongIsLogue(INITIAL_SONG_INDEX)
+export const IS_INITIAL_LOGUE = getSongIsLogue(INITIAL_SONG_INDEX)
 
-export const STORED_TIME = getStartTimeForVerse(
+export const INITIAL_TIME = getStartTimeForVerse(
     INITIAL_SONG_INDEX,
     INITIAL_VERSE_INDEX
 )
 
-export const STORED_EAR_COLUMN_INDEX = getColumnIndexForAnnotation(
+export const INITIAL_EAR_COLUMN_INDEX = getColumnIndexForAnnotation(
     INITIAL_SONG_INDEX,
     INITIAL_ANNOTATION_INDEX
 )
-export const STORED_SCENE_INDEX = getSceneIndexForVerse(
+export const INITIAL_SCENE_INDEX = getSceneIndexForVerse(
     INITIAL_SONG_INDEX,
     INITIAL_VERSE_INDEX
 )

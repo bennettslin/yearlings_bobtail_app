@@ -21,6 +21,11 @@ export default [
         neededHours: 2
     },
     {
+        taskName: `Set in store through reducer, not action.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Consolidate all window and window storage helpers.`,
         workedHours: 0,
         neededHours: 2
