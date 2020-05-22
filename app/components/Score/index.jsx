@@ -1,58 +1,46 @@
 // Webview to show song score.
 
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateLoadStore } from '../../redux/load/action'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 
 import { getSongScore } from './helper'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const Score = () => {
+    const
+        dispatch = useDispatch(),
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        [score, setScore] = useState(getSongScore(lyricSongIndex)),
 
-class Score extends PureComponent {
+        onLoad = () => {
+            dispatch(updateLoadStore({ isScoreLoaded: true }))
+        }
 
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
-        updateLoadStore: PropTypes.func.isRequired
-    }
+    useEffect(() => {
+        setScore(getSongScore(lyricSongIndex))
+    }, [lyricSongIndex])
 
-    onIframeLoad = () => {
-        this.props.updateLoadStore({ isScoreLoaded: true })
-    }
-
-    render() {
-        const { lyricSongIndex } = this.props,
-            score = getSongScore(lyricSongIndex)
-
-        return (
-            <div
+    return (
+        <div
+            {...{
+                className: cx(
+                    'Score',
+                    'iframeContainer'
+                )
+            }}
+        >
+            <iframe
                 {...{
-                    className: cx(
-                        'Score',
-                        'iframeContainer'
-                    )
+                    className: 'iframeContainer__iframe',
+                    tabIndex: -1,
+                    src: score,
+                    onLoad
                 }}
-            >
-                <iframe
-                    {...{
-                        className: 'iframeContainer__iframe',
-                        tabIndex: -1,
-                        src: score,
-                        onLoad: this.onIframeLoad
-                    }}
-                />
-            </div>
-        )
-    }
+            />
+        </div>
+    )
 }
 
-export default connect(
-    mapStateToProps,
-    { updateLoadStore }
-)(Score)
+export default Score

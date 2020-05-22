@@ -4688,5 +4688,9 @@ export default [
     {
         taskName: `Have About anchors link with hrefs.`,
         workedHours: 1
+    },
+    {
+        taskName: `Make getting indices from routing all or none. Just validate now.`,
+        workedHours: 2
     }
 ]

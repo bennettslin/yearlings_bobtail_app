@@ -7,11 +7,6 @@ export default [
     },
 
     /* Lunch time. */
-    {
-        taskName: `Make getting indices from routing all or none. Just validate now.`,
-        workedHours: 2,
-        neededHours: 3
-    },
 
     /* Evening. */
     {

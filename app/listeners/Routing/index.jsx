@@ -13,11 +13,11 @@ import { getPathForIndices } from './helper'
 
 const RoutingListener = () => {
     const
+        history = useHistory(),
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
         lyricVerseIndex = useSelector(LYRIC_VERSE_INDEX_SELECTOR),
         lyricAnnotationIndex = useSelector(LYRIC_ANNOTATION_INDEX_SELECTOR),
         isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
-        history = useHistory(),
         songTitle = isLyricLogue ?
             `Yearling's Bobtail` :
             `${getTitleForSong(lyricSongIndex)} | Yearling's Bobtail`
