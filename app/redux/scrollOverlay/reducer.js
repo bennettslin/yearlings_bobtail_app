@@ -4,13 +4,13 @@ import { SCROLL_OVERLAY_DEFAULTS } from './default'
 
 export default (
     state = SCROLL_OVERLAY_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case SCROLL_OVERLAY_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

@@ -4,13 +4,13 @@ import { RESPONSIVE_DEFAULTS } from './default'
 
 export default (
     state = RESPONSIVE_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case RESPONSIVE_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

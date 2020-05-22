@@ -4,13 +4,13 @@ import { SESSION_DEFAULTS } from './default'
 
 export default (
     state = SESSION_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case SESSION_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

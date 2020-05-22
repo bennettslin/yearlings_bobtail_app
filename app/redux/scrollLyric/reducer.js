@@ -4,13 +4,13 @@ import { SCROLL_LYRIC_DEFAULTS } from './default'
 
 export default (
     state = SCROLL_LYRIC_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case SCROLL_LYRIC_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

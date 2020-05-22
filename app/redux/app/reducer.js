@@ -8,13 +8,13 @@ import { APP_DEFAULTS } from './default'
 
 export default (
     state = APP_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case APP_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

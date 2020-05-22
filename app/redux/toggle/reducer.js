@@ -4,13 +4,13 @@ import { TOGGLE_DEFAULTS } from './default'
 
 export default (
     state = TOGGLE_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case TOGGLE_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

@@ -4,13 +4,13 @@ import { LYRIC_DEFAULTS } from './default'
 
 export default (
     state = LYRIC_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case LYRIC_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

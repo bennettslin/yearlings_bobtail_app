@@ -3,13 +3,13 @@ import { PROSCENIUM_DEFAULTS } from './default'
 
 export default (
     state = PROSCENIUM_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case PROSCENIUM_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

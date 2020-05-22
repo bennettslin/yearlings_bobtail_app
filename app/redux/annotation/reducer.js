@@ -4,13 +4,13 @@ import { ANNOTATION_DEFAULTS } from './default'
 
 export default (
     state = ANNOTATION_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case ANNOTATION_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

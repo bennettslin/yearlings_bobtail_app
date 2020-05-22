@@ -4,13 +4,13 @@ import { AUDIO_DEFAULTS } from './default'
 
 export default (
     state = AUDIO_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case AUDIO_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

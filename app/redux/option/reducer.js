@@ -4,13 +4,13 @@ import { OPTION_DEFAULTS } from './default'
 
 export default (
     state = OPTION_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case OPTION_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

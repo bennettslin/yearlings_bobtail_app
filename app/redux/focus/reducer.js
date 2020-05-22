@@ -4,13 +4,13 @@ import { FOCUS_DEFAULTS } from './default'
 
 export default (
     state = FOCUS_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case FOCUS_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

@@ -4,13 +4,13 @@ import { SCENE_DEFAULTS } from './default'
 
 export default (
     state = SCENE_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case SCENE_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

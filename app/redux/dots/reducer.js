@@ -4,13 +4,13 @@ import { DOTS_DEFAULTS } from './default'
 
 export default (
     state = DOTS_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case DOTS_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

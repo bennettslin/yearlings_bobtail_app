@@ -4,13 +4,13 @@ import { PLAYERS_DEFAULTS } from './default'
 
 export default (
     state = PLAYERS_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case PLAYERS_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state

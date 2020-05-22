@@ -4,13 +4,13 @@ import { VERSE_BARS_DEFAULTS } from './default'
 
 export default (
     state = VERSE_BARS_DEFAULTS,
-    action
+    { type, payload }
 ) => {
-    switch (action.type) {
+    switch (type) {
         case VERSE_BARS_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...payload
             }
         default:
             return state
