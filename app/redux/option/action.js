@@ -3,7 +3,7 @@ import {
     hasKey,
     getDefinedOnlyPayload
 } from '../../helpers/action'
-import { setInStorage } from '../../utils/window'
+import { setInStorage } from '../../helpers/storage'
 import {
     SHOWN,
     HIDDEN

@@ -4680,5 +4680,9 @@ export default [
     {
         taskName: `Clean up routing. Prioritise getting from routes before storage for selected indices when setting initial state. Set route upon mount. Make verse and annotation query strings. Routing can just be another listener.`,
         workedHours: 5
+    },
+    {
+        taskName: `Set safe values in store in initial getter.`,
+        workedHours: 2
     }
 ]

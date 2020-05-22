@@ -15,11 +15,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Animate in presences.`,
-        workedHours: 0,
-        neededHours: 20
-    },
-    {
         taskName: `Add stars.`,
         workedHours: 0,
         neededHours: 3

@@ -23,7 +23,6 @@ import {
     getRoutingVerseIndex,
     getRoutingAnnotationIndex
 } from './routing'
-import { getWindowStorage } from '../utils/window'
 
 import {
     DOTS_BIT_NUMBER,
@@ -32,6 +31,28 @@ import {
     SELECTED_ANNOTATION_INDEX,
     SELECTED_AUDIO_OPTION_INDEX
 } from '../constants/store'
+
+export const getWindowStorage = () => {
+    return window.localStorage
+}
+
+export const setInStorage = (key, value) => {
+    getWindowStorage()[key] = value
+}
+
+export const getBoolFromStorage = key => {
+    const
+        storedValue = getWindowStorage()[key],
+        savedValue = storedValue === 'true'
+
+    // This only saves upon initial retrieval.
+    setBoolInStorage(key, savedValue)
+    return savedValue
+}
+
+export const setBoolInStorage = (key, value) => {
+    getWindowStorage()[key] = value ? 'true' : 'false'
+}
 
 const _getParsedStoredInteger = key => (
     parseInt(getWindowStorage()[key])
@@ -101,6 +122,10 @@ export const getInitialIndicesFromRoutingOrStorage = () => {
         }
     }
 
+    // This only saves upon initial retrieval.
+    setInStorage(SELECTED_SONG_INDEX, initialSongIndex)
+    setInStorage(SELECTED_VERSE_INDEX, initialVerseIndex)
+    setInStorage(SELECTED_ANNOTATION_INDEX, initialAnnotationIndex)
     return {
         initialSongIndex,
         initialVerseIndex,
@@ -109,40 +134,51 @@ export const getInitialIndicesFromRoutingOrStorage = () => {
 }
 
 export const getAudioOptionFromStorage = () => {
-    const storedAudioOptionIndex =
-        _getParsedStoredInteger(SELECTED_AUDIO_OPTION_INDEX)
+    const
+        storedOptionIndex =
+            _getParsedStoredInteger(SELECTED_AUDIO_OPTION_INDEX),
 
-    return getArrayOfLength(AUDIO_OPTIONS.length).some(
-        index => index === storedAudioOptionIndex
-    ) ?
-        storedAudioOptionIndex :
-        0
+        savedOptionIndex =
+            getArrayOfLength(AUDIO_OPTIONS.length).some(
+                index => index === storedOptionIndex
+            ) ?
+                storedOptionIndex :
+                0
+
+    // This only saves upon initial retrieval.
+    setInStorage(SELECTED_AUDIO_OPTION_INDEX, savedOptionIndex)
+    return savedOptionIndex
 }
 
 export const getOptionFromStorage = key => {
-    const storedOption = getWindowStorage()[key]
-    return GENERAL_OPTIONS.some(option => option === storedOption) ?
-        storedOption :
-        SHOWN
-}
-
-const _getValidatedDotsBitNumber = () => {
     const
-        parsedBitNumber = _getParsedStoredInteger(DOTS_BIT_NUMBER),
-        isValid =
-            Number.isFinite(parsedBitNumber) &&
-            parsedBitNumber < getTwoToThePowerOfN(ORDERED_DOT_KEYS.length)
+        storedOption = getWindowStorage()[key],
+        savedOption =
+            GENERAL_OPTIONS.some(option => option === storedOption) ?
+                storedOption :
+                SHOWN
 
-    return isValid ? parsedBitNumber : INITIAL_DOTS_BIT_NUMBER
+    // This only saves upon initial retrieval.
+    setInStorage(key, savedOption)
+    return savedOption
 }
 
 export const getDotsFromStorage = () => {
-    const validatedValue = _getValidatedDotsBitNumber()
+    const
+        storedBitNumber = _getParsedStoredInteger(DOTS_BIT_NUMBER),
+        savedBitNumber =
+            Number.isFinite(storedBitNumber) &&
+            storedBitNumber < getTwoToThePowerOfN(ORDERED_DOT_KEYS.length) ?
+                storedBitNumber :
+                INITIAL_DOTS_BIT_NUMBER
+
+    // This only saves upon initial retrieval.
+    setInStorage(DOTS_BIT_NUMBER, savedBitNumber)
     return {
-        dotsBitNumber: validatedValue,
+        dotsBitNumber: savedBitNumber,
         ...getObjectFromBitNumber({
             keysArray: ORDERED_DOT_KEYS,
-            bitNumber: validatedValue
+            bitNumber: savedBitNumber
         })
     }
 }

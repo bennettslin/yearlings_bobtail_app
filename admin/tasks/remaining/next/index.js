@@ -1,5 +1,5 @@
 export default [
-    /* Week work. */
+    /* Morning time. */
     {
         taskName: `Have About anchors link with hrefs.`,
         workedHours: 0,
@@ -10,25 +10,24 @@ export default [
         workedHours: 0,
         neededHours: 3
     },
+
+    /* Lunch time. */
     {
-        taskName: `If annotation is selected in store, preemptively select all dots.`,
-        workedHours: 0,
-        neededHours: 1
+        taskName: `Make getting indices from routing all or none. Just validate now.`,
+        workedHours: 2,
+        neededHours: 3
     },
-    {
-        taskName: `Make getting indices from routing all or none.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Set in store through reducer, not action.`,
-        workedHours: 0,
-        neededHours: 2
-    },
+
+    /* Evening. */
     {
         taskName: `Consolidate all window and window storage helpers.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `If annotation is selected in store, preemptively select all dots.`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     /* Ongoing. */

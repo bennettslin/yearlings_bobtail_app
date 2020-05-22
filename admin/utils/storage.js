@@ -1,7 +1,7 @@
 import {
     getWindowStorage,
     setInStorage
-} from '../../app/utils/window'
+} from '../../app/helpers/storage'
 
 import WHOLE_ACTORS_LIST from '../constants/actors'
 import THINGS_LIST from '../constants/things'

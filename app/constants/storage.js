@@ -6,11 +6,11 @@ import { getColumnIndexForAnnotation } from '../album/api/annotations'
 import { getStartTimeForVerse } from '../album/api/time'
 import { getSceneIndexForVerse } from '../album/api/verses'
 import {
+    getBoolFromStorage,
     getOptionFromStorage,
     getInitialIndicesFromRoutingOrStorage,
     getAudioOptionFromStorage
 } from '../helpers/storage'
-import { getBoolFromStorage } from '../utils/window'
 import {
     IS_ACCESS_ON,
     IS_CAROUSEL_SHOWN,

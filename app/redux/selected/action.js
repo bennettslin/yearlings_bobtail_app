@@ -1,6 +1,6 @@
 // Actions for song state.
 import { getSongIsLogue } from '../../album/api/songs'
-import { setInStorage } from '../../utils/window'
+import { setInStorage } from '../../helpers/storage'
 import {
     hasKey,
     getDefinedOnlyPayload
