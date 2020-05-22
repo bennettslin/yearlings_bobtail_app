@@ -24,6 +24,7 @@ class Anchor extends PureComponent {
 
         // From parent.
         className: PropTypes.string,
+        href: PropTypes.string,
         isAnnotationTitle: PropTypes.bool,
         isAccessed: PropTypes.bool,
         isSelected: PropTypes.bool,
@@ -59,6 +60,7 @@ class Anchor extends PureComponent {
 
         const {
                 className,
+                href,
                 isUserAgentDesktop,
                 isAnnotationTitle,
                 isAccessed: isAccessedBeforeDesktop,
@@ -117,6 +119,10 @@ class Anchor extends PureComponent {
 
                         className
                     ),
+                    ...href && {
+                        href,
+                        target: '_blank'
+                    },
                     onClick: this._handleClick
                 }}
             >

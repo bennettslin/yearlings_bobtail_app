@@ -11,11 +11,13 @@ import {
 class SocialMedia extends Component {
 
     handleFacebookClick = () => {
-        window.open(FACEBOOK_PAGE)
+        // TODO: Analytics.
+        // window.open(FACEBOOK_PAGE)
     }
 
     handleInstagramClick = () => {
-        window.open(INSTAGRAM_PAGE)
+        // TODO: Analytics.
+        // window.open(INSTAGRAM_PAGE)
     }
 
     render() {
@@ -29,6 +31,7 @@ class SocialMedia extends Component {
             >
                 <Anchor
                     {...{
+                        href: FACEBOOK_PAGE,
                         text: 'Facebook',
                         analyticsIdentifier: 'facebook',
                         handleAnchorClick: this.handleFacebookClick
@@ -36,6 +39,7 @@ class SocialMedia extends Component {
                 />
                 <Anchor
                     {...{
+                        href: INSTAGRAM_PAGE,
                         text: 'Instagram',
                         analyticsIdentifier: 'Instagram',
                         handleAnchorClick: this.handleInstagramClick

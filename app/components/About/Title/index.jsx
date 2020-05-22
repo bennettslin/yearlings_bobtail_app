@@ -8,7 +8,8 @@ import { BOBTAIL_YEARLINGS_WEBSITE } from '../../../constants/website'
 class AboutTitle extends Component {
 
     handleAnchorClick = () => {
-        window.open(BOBTAIL_YEARLINGS_WEBSITE)
+        // TODO: Analytics.
+        // window.open(BOBTAIL_YEARLINGS_WEBSITE)
     }
 
     render() {
@@ -38,6 +39,7 @@ class AboutTitle extends Component {
                     >
                         <Anchor
                             {...{
+                                href: BOBTAIL_YEARLINGS_WEBSITE,
                                 text: 'Bobtail Yearlings',
                                 analyticsIdentifier: 'BobtailYearlings',
                                 handleAnchorClick: this.handleAnchorClick

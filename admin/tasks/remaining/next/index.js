@@ -1,11 +1,6 @@
 export default [
     /* Morning time. */
     {
-        taskName: `Have About anchors link with hrefs.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Prevent iframe src from affecting browser history. Then maybe reconsider history push instead of replace?`,
         workedHours: 0,
         neededHours: 3

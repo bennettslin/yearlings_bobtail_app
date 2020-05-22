@@ -1,8 +1,13 @@
 export default [
     {
-        taskName: `Be smarter about what I want analytics to measure. Selected indices.`,
+        taskName: `Be smarter about what I want analytics to measure. Selected indices. About links.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Make About the document activeElement when opened.`,
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: `Remove convoluted CSS verse logic? If so, allow hover styling of activated verse in slider, to be consistent with filmstrip.`,

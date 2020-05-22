@@ -4684,5 +4684,9 @@ export default [
     {
         taskName: `Set safe values in store in initial getter.`,
         workedHours: 2
+    },
+    {
+        taskName: `Have About anchors link with hrefs.`,
+        workedHours: 1
     }
 ]

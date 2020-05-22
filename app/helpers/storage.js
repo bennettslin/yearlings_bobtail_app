@@ -8,7 +8,6 @@ import {
     getObjectFromBitNumber
 } from './bit'
 import { getArrayOfLength } from './general'
-
 import {
     ORDERED_DOT_KEYS,
     INITIAL_DOTS_BIT_NUMBER
@@ -23,7 +22,6 @@ import {
     getRoutingVerseIndex,
     getRoutingAnnotationIndex
 } from './routing'
-
 import {
     DOTS_BIT_NUMBER,
     SELECTED_SONG_INDEX,
