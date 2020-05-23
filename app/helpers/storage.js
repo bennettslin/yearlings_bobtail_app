@@ -6,7 +6,7 @@ import { getValidAnnotationIndex } from '../album/api/annotations'
 import { getArrayOfLength } from './general'
 import {
     INITIAL_DOTS_BIT_NUMBER,
-    FULL_DOTS_STORE
+    FULL_DOTS_BIT_NUMBER
 } from '../constants/dots'
 import {
     SHOWN,
@@ -157,15 +157,22 @@ export const getOptionFromStorage = key => {
     return savedOption
 }
 
-export const getDotsFromStorage = () => {
-    const
-        storedBitNumber = _getParsedStoredInteger(DOTS_BIT_NUMBER),
-        savedBitNumber =
-            Number.isFinite(storedBitNumber) &&
-            storedBitNumber >= 0 &&
-            storedBitNumber <= FULL_DOTS_STORE ?
-                storedBitNumber :
-                INITIAL_DOTS_BIT_NUMBER
+export const getDotsBitNumberFromStorage = (initialAnnotationIndex) => {
+    const storedBitNumber = _getParsedStoredInteger(DOTS_BIT_NUMBER)
+    let savedBitNumber = INITIAL_DOTS_BIT_NUMBER
+
+    // If there is an initial annotation index, preemptively select all dots.
+    if (initialAnnotationIndex) {
+        savedBitNumber = FULL_DOTS_BIT_NUMBER
+
+    // Ensure stored dots bit number is valid.
+    } else if (
+        Number.isFinite(storedBitNumber) &&
+        storedBitNumber >= 0 &&
+        storedBitNumber <= FULL_DOTS_BIT_NUMBER
+    ) {
+        savedBitNumber = storedBitNumber
+    }
 
     // This only saves upon initial retrieval.
     setInStorage(DOTS_BIT_NUMBER, savedBitNumber)

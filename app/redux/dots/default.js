@@ -1,11 +1,9 @@
 import { getObjectFromBitNumber } from '../../helpers/bit'
-import { getDotsFromStorage } from '../../helpers/storage'
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
-
-const dotsBitNumber = getDotsFromStorage()
+import { STORED_DOTS_BIT_NUMBER } from '../../constants/storage'
 
 export const DOTS_DEFAULTS = {
-    dotsBitNumber,
+    dotsBitNumber: STORED_DOTS_BIT_NUMBER,
 
     /**
      * Components only ever retrieve the bit number. The individual dots are
@@ -13,6 +11,6 @@ export const DOTS_DEFAULTS = {
      */
     ...getObjectFromBitNumber({
         keysArray: ORDERED_DOT_KEYS,
-        bitNumber: dotsBitNumber
+        bitNumber: STORED_DOTS_BIT_NUMBER
     })
 }

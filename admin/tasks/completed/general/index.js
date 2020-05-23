@@ -4696,5 +4696,9 @@ export default [
     {
         taskName: `Prevent iframe src from affecting browser history.`,
         workedHours: 1
+    },
+    {
+        taskName: `If annotation is selected in store, preemptively select all dots. Plus refactor.`,
+        workedHours: 2
     }
 ]

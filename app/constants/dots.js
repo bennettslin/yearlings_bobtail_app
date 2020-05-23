@@ -12,8 +12,6 @@ export const PUN = 'pun'
 export const REFERENCE = 'reference'
 export const SONGWRITING = 'songwriting'
 
-export const INITIAL_DOTS_BIT_NUMBER = 7
-
 // Order matters!
 export const ORDERED_DOT_KEYS = [
     NARRATIVE,
@@ -42,4 +40,7 @@ export const EMPTY_DOTS_STORE = getObjectFromBitNumber({
     bitNumber: 0
 })
 
-export const FULL_DOTS_STORE = getTwoToThePowerOfN(ORDERED_DOT_KEYS.length - 1)
+export const INITIAL_DOTS_BIT_NUMBER = 7
+export const FULL_DOTS_BIT_NUMBER = getTwoToThePowerOfN(
+    ORDERED_DOT_KEYS.length
+) - 1

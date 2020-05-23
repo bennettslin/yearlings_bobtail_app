@@ -9,11 +9,6 @@ export default [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `If annotation is selected in store, preemptively select all dots.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     /* Ongoing. */
     {

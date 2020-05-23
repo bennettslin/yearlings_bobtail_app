@@ -7,6 +7,7 @@ import { getStartTimeForVerse } from '../album/api/time'
 import { getSceneIndexForVerse } from '../album/api/verses'
 import {
     getBoolFromStorage,
+    getDotsBitNumberFromStorage,
     getOptionFromStorage,
     getInitialIndicesFromRoutingOrStorage,
     getAudioOptionFromStorage
@@ -26,21 +27,23 @@ export const {
 
 export const IS_INITIAL_LOGUE = getSongIsLogue(INITIAL_SONG_INDEX)
 
-export const INITIAL_TIME = getStartTimeForVerse(
-    INITIAL_SONG_INDEX,
-    INITIAL_VERSE_INDEX
-)
-
-export const INITIAL_EAR_COLUMN_INDEX = getColumnIndexForAnnotation(
-    INITIAL_SONG_INDEX,
-    INITIAL_ANNOTATION_INDEX
-)
 export const INITIAL_SCENE_INDEX = getSceneIndexForVerse(
     INITIAL_SONG_INDEX,
     INITIAL_VERSE_INDEX
 )
 
-// export const STORED_DOTS_BIT_NUMBER
+export const INITIAL_TIME = getStartTimeForVerse(
+    INITIAL_SONG_INDEX,
+    INITIAL_VERSE_INDEX
+)
+
+export const STORED_DOTS_BIT_NUMBER =
+    getDotsBitNumberFromStorage(INITIAL_ANNOTATION_INDEX)
+
+export const INITIAL_EAR_COLUMN_INDEX = getColumnIndexForAnnotation(
+    INITIAL_SONG_INDEX,
+    INITIAL_ANNOTATION_INDEX
+)
 
 export const IS_STORED_ACCESS_ON = getBoolFromStorage(IS_ACCESS_ON)
 
