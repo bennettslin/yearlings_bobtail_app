@@ -3,6 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateMountStore } from '../../../redux/mount/action'
 import { updateResponsiveStore } from '../../../redux/responsive/action'
 import { updateViewportStore } from '../../../redux/viewport/action'
@@ -39,6 +40,7 @@ class ResizeDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        updateEntranceStore: PropTypes.func.isRequired,
         updateMountStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired,
         updateViewportStore: PropTypes.func.isRequired,
@@ -144,7 +146,6 @@ class ResizeDispatcher extends PureComponent {
         })
 
         this.props.updateViewportStore({
-            canTheatreEnter: true,
             deviceWidthIndex,
             windowWidth,
             windowHeight
@@ -174,6 +175,10 @@ class ResizeDispatcher extends PureComponent {
             stageHeight,
             isHeightlessLyric,
             isTwoRowMenu
+        })
+
+        this.props.updateEntranceStore({
+            canTheatreEnter: true
         })
     }
 
@@ -262,6 +267,7 @@ class ResizeDispatcher extends PureComponent {
 export default connect(
     null,
     {
+        updateEntranceStore,
         updateMountStore,
         updateResponsiveStore,
         updateViewportStore,

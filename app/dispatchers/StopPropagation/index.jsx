@@ -45,10 +45,8 @@ class StopPropagationDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = null
-
 export default connect(
-    mapStateToProps,
+    null,
     {
         updateFocusStore,
         updateAccessStore

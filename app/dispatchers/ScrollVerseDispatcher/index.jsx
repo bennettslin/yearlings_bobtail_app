@@ -42,10 +42,8 @@ class ScrollVerseDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = null
-
 export default connect(
-    mapStateToProps,
+    null,
     {
         updateScrollLyricStore,
         updateToggleStore

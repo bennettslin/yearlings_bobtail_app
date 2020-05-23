@@ -6,6 +6,7 @@ import AudioReducer from './audio/reducer'
 import BannerReducer from './banner/reducer'
 import DotsReducer from './dots/reducer'
 import DotsSlideReducer from './dotsSlide/reducer'
+import EntranceReducer from './entrance/reducer'
 import FocusReducer from './focus/reducer'
 import LoadReducer from './load/reducer'
 import LyricReducer from './lyric/reducer'
@@ -33,6 +34,7 @@ import {
     BANNER_STORE,
     DOTS_STORE,
     DOTS_SLIDE_STORE,
+    ENTRANCE_STORE,
     FOCUS_STORE,
     LOAD_STORE,
     LYRIC_STORE,
@@ -61,6 +63,7 @@ export default combineReducers({
     [BANNER_STORE]: BannerReducer,
     [DOTS_STORE]: DotsReducer,
     [DOTS_SLIDE_STORE]: DotsSlideReducer,
+    [ENTRANCE_STORE]: EntranceReducer,
     [FOCUS_STORE]: FocusReducer,
     [LOAD_STORE]: LoadReducer,
     [LYRIC_STORE]: LyricReducer,

@@ -8,13 +8,7 @@ import { PROSCENIUM_DEFAULTS } from './proscenium/default'
 import { STAGE_DEFAULTS } from './stage/default'
 import { THEATRE_DEFAULTS } from './theatre/default'
 
-export const VIEWPORT_TRANSITION_DEFAULTS = {
-    canTheatreEnter: false,
-    didTheatreEnter: false
-}
-
 export const VIEWPORT_DEFAULTS = {
-    ...VIEWPORT_TRANSITION_DEFAULTS,
     deviceWidthIndex: DEVICE_WIDTH_CONFIGS.length - 1,
     isPhoneWidth: false,
     isTabletWidth: false,

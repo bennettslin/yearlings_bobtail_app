@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateViewportStore } from '../../redux/viewport/action'
+import { updateEntranceStore } from '../../redux/entrance/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Stage from '../Stage'
@@ -19,7 +19,7 @@ import Floor from './Floor'
 import { removeLoadingIndicator } from '../../utils/window'
 
 const mapStateToProps = ({
-    viewportStore: { canTheatreEnter }
+    entranceStore: { canTheatreEnter }
 }) => ({
     canTheatreEnter
 })
@@ -29,7 +29,7 @@ class Theatre extends PureComponent {
     static propTypes = {
         // Through Redux.
         canTheatreEnter: PropTypes.bool.isRequired,
-        updateViewportStore: PropTypes.func.isRequired
+        updateEntranceStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -38,7 +38,7 @@ class Theatre extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateViewportStore({ didTheatreEnter: true })
+        this.props.updateEntranceStore({ didTheatreEnter: true })
     }
 
     render() {
@@ -75,5 +75,5 @@ class Theatre extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateViewportStore }
+    { updateEntranceStore }
 )(Theatre)

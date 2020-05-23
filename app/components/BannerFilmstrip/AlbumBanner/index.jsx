@@ -1,31 +1,20 @@
-import React, { PureComponent } from 'react'
-// import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
 import cx from 'classnames'
 
-const mapStateToProps = null
+const AlbumBanner = () => (
+    <div
+        {...{
+            className: cx(
+                'AlbumBanner',
+                'BannerFilmstrip__child',
+                'textShadow__dark',
+                'ovH',
+                'Rancho'
+            )
+        }}
+    >
+        Bobtail Yearlings - <i>{`Yearling's Bobtail`}</i>
+    </div>
+)
 
-class AlbumBanner extends PureComponent {
-
-    static propTypes = {}
-
-    render() {
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'AlbumBanner',
-                        'BannerFilmstrip__child',
-                        'textShadow__dark',
-                        'ovH',
-                        'Rancho'
-                    )
-                }}
-            >
-                Bobtail Yearlings - <i>{`Yearling's Bobtail`}</i>
-            </div>
-        )
-    }
-}
-
-export default connect(mapStateToProps)(AlbumBanner)
+export default AlbumBanner

@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import ResizeDispatcher from '../Dispatcher'
 
-import { resetViewportForTransition } from '../../../redux/viewport/action'
+import { resetTheatreEntrance } from '../../../redux/entrance/action'
 import { getWindowDimensions } from '../../../helpers/resize/device'
 import { populateRefs } from '../../../helpers/ref'
 
@@ -15,7 +15,7 @@ class ResizeListener extends PureComponent {
         // Through Redux.
         windowHeight: PropTypes.number.isRequired,
         windowWidth: PropTypes.number.isRequired,
-        resetViewportForTransition: PropTypes.func.isRequired,
+        resetTheatreEntrance: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -66,7 +66,7 @@ class ResizeListener extends PureComponent {
     }
 
     _beginExitTransition() {
-        this.props.resetViewportForTransition()
+        this.props.resetTheatreEntrance()
 
         // Clear previous timeout.
         clearTimeout(this.state.windowResizeTimeoutId)
@@ -104,5 +104,5 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    { resetViewportForTransition }
+    { resetTheatreEntrance }
 )(ResizeListener)

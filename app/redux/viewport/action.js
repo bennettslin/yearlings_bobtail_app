@@ -4,7 +4,6 @@ import {
     getDefinedOnlyPayload
 } from '../../helpers/action'
 import { VIEWPORT_STORE } from '../../constants/store'
-import { VIEWPORT_TRANSITION_DEFAULTS } from './default'
 
 import {
     getIsDesktopWidth,
@@ -26,8 +25,3 @@ export const updateViewportStore = (payload) => {
         payload: getDefinedOnlyPayload(payload)
     })
 }
-
-export const resetViewportForTransition = () => ({
-    type: VIEWPORT_STORE,
-    payload: VIEWPORT_TRANSITION_DEFAULTS
-})
