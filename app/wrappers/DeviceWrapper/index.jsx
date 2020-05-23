@@ -5,15 +5,14 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
-
 import { getIsTabletWidth } from '../../helpers/responsive'
+import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
+import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 
 class DeviceWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isUserAgentDesktop: PropTypes.bool.isRequired,
         deviceWidthIndex: PropTypes.number.isRequired,
         isPhoneWidth: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired,
@@ -27,7 +26,6 @@ class DeviceWrapper extends PureComponent {
     render() {
         const
             {
-                isUserAgentDesktop,
                 deviceWidthIndex,
                 isPhoneWidth,
                 isDesktopWidth,
@@ -49,7 +47,7 @@ class DeviceWrapper extends PureComponent {
                         'DeviceWrapper',
                         `DW__${deviceWidthKey}Width`,
 
-                        isUserAgentDesktop && 'DW__userAgentDesktop',
+                        IS_USER_AGENT_DESKTOP && 'DW__userAgentDesktop',
 
                         isDesktopWidth ?
                             'DW__desktopWidth' :
@@ -76,7 +74,6 @@ class DeviceWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    appStore: { isUserAgentDesktop },
     viewportStore: {
         deviceWidthIndex,
         isPhoneWidth,
@@ -87,7 +84,6 @@ const mapStateToProps = ({
         canSliderMount
     }
 }) => ({
-    isUserAgentDesktop,
     deviceWidthIndex,
     isPhoneWidth,
     isDesktopWidth,

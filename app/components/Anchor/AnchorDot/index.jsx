@@ -5,25 +5,24 @@ import cx from 'classnames'
 import Dot from '../../Dot'
 import Underline from '../Underline'
 
+import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { ORDERED_DOT_KEYS } from '../../../constants/dots'
 
 const propTypes = {
     // From parent.
-    isUserAgentDesktop: PropTypes.bool.isRequired,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     stanzaDotKeys: PropTypes.object.isRequired
 }
 
 const AnchorDot = ({
-    isUserAgentDesktop,
     isAccessed,
     isSelected,
     stanzaDotKeys
 
 }) => (
     <>
-        {isUserAgentDesktop && (
+        {IS_USER_AGENT_DESKTOP && (
             <Underline
                 isDotAnchor
                 {...{

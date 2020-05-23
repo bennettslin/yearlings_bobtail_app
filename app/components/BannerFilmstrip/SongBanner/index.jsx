@@ -21,9 +21,9 @@ import {
 import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
 import { populateRefs } from '../../../helpers/ref'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
+import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 
 const mapStateToProps = ({
-    appStore: { isUserAgentDesktop },
     audioStore: { isPlaying },
     bannerStore: {
         isBannerHovering,
@@ -39,7 +39,6 @@ const mapStateToProps = ({
     activatedStore: { isActivated },
     sliderStore: { isSliderMoving }
 }) => ({
-    isUserAgentDesktop,
     isPlaying,
     isBannerHovering,
     bannerHoverVerseIndex,
@@ -56,7 +55,6 @@ class SongBanner extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isUserAgentDesktop: PropTypes.bool.isRequired,
         isPlaying: PropTypes.bool.isRequired,
         isBannerHovering: PropTypes.bool.isRequired,
         bannerHoverVerseIndex: PropTypes.number.isRequired,
@@ -136,13 +134,12 @@ class SongBanner extends PureComponent {
             isSliderMoving,
             isActivated,
             isBannerHovering,
-            bannerHoverVerseIndex,
-            isUserAgentDesktop
+            bannerHoverVerseIndex
         } = this.props
 
         if (
             // If user agent desktop, banner must be hovering.
-            (isUserAgentDesktop && !isBannerHovering) ||
+            (IS_USER_AGENT_DESKTOP && !isBannerHovering) ||
             getSongIsLogue(selectedSongIndex)
         ) {
             // Do not register click in logue.
@@ -157,7 +154,7 @@ class SongBanner extends PureComponent {
         }
 
         const verseIndex =
-            isUserAgentDesktop ?
+            IS_USER_AGENT_DESKTOP ?
                 // On desktop, get from banner hover.
                 bannerHoverVerseIndex :
 
@@ -236,8 +233,7 @@ class SongBanner extends PureComponent {
                 isSliderMoving,
                 isActivated,
                 isBannerHovering,
-                isSelectedLogue,
-                isUserAgentDesktop
+                isSelectedLogue
             } = this.props,
             cursorWidth = this.getCursorWidth()
 
@@ -272,7 +268,7 @@ class SongBanner extends PureComponent {
                     ),
                     onClick: this.handleBannerClick,
 
-                    ...isUserAgentDesktop && {
+                    ...IS_USER_AGENT_DESKTOP && {
                         onMouseEnter: this.onMouseEnter,
                         onMouseMove: this.onMouseMove,
                         onMouseLeave: this.onMouseLeave

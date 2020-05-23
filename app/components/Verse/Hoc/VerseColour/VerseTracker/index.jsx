@@ -6,15 +6,14 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import { getDurationForVerse } from '../../../../../album/api/time'
+import { IS_USER_AGENT_DESKTOP } from '../../../../../constants/device'
 
 const mapStateToProps = ({
-    appStore: { isUserAgentDesktop },
     lyricStore: {
         lyricSongIndex,
         lyricVerseIndex
     }
 }) => ({
-    isUserAgentDesktop,
     lyricSongIndex,
     lyricVerseIndex
 })
@@ -23,7 +22,6 @@ class VerseTracker extends Component {
 
     static propTypes = {
         // Through Redux.
-        isUserAgentDesktop: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricVerseIndex: PropTypes.number.isRequired,
 
@@ -69,7 +67,6 @@ class VerseTracker extends Component {
 
     render() {
         const {
-                isUserAgentDesktop,
                 lyricSongIndex,
 
                 verseIndex,
@@ -110,7 +107,7 @@ class VerseTracker extends Component {
 
                         'abF'
                     ),
-                    ...isUserAgentDesktop && {
+                    ...IS_USER_AGENT_DESKTOP && {
                         style: {
                             transition: `${transitionStyle} ${verseDuration}s linear`
                         }

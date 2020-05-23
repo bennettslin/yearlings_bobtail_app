@@ -1,27 +1,18 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
 
 import DotSequence from '../DotSequence'
-
 import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
 
 import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
 
-const mapStateToProps = ({
-    appStore: { isUserAgentDesktop }
-}) => ({
-    isUserAgentDesktop
-})
+import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 
 class Anchor extends PureComponent {
 
     static propTypes = {
-        // Through Redux.
-        isUserAgentDesktop: PropTypes.bool.isRequired,
-
         // From parent.
         className: PropTypes.string,
         href: PropTypes.string,
@@ -61,7 +52,6 @@ class Anchor extends PureComponent {
         const {
                 className,
                 href,
-                isUserAgentDesktop,
                 isAnnotationTitle,
                 isAccessed: isAccessedBeforeDesktop,
                 isSelected,
@@ -77,14 +67,14 @@ class Anchor extends PureComponent {
 
             // If in mobile, only show dot sequence if annotation title.
             showDotSequence = Boolean(sequenceDotKeys) && (
-                isUserAgentDesktop || isAnnotationTitle
+                IS_USER_AGENT_DESKTOP || isAnnotationTitle
             ),
 
             /**
              * Don't show access if in mobile, even though access behaviour is
              * still technically possible.
              */
-            isAccessed = isAccessedBeforeDesktop && isUserAgentDesktop
+            isAccessed = isAccessedBeforeDesktop && IS_USER_AGENT_DESKTOP
 
         return (
             <a
@@ -140,7 +130,6 @@ class Anchor extends PureComponent {
                 {isDotAnchor && (
                     <AnchorDot
                         {...{
-                            isUserAgentDesktop,
                             isAccessed,
                             isSelected,
                             stanzaDotKeys
@@ -151,7 +140,6 @@ class Anchor extends PureComponent {
                 {Boolean(text) && (
                     <AnchorText
                         {...{
-                            isUserAgentDesktop,
                             isAccessed,
                             isSelected,
                             isWikiTextAnchor,
@@ -165,4 +153,4 @@ class Anchor extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(Anchor)
+export default Anchor

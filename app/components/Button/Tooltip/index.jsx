@@ -7,16 +7,16 @@ import ReactTooltip from 'react-tooltip'
 
 import { getTooltipPlacement } from './helper'
 
+import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
+
 const mapStateToProps = ({
     accessStore: { isAccessOn },
-    appStore: { isUserAgentDesktop },
     viewportStore: {
         isDesktopWidth,
         isTabletWidth
     }
 }) => ({
     isAccessOn,
-    isUserAgentDesktop,
     isDesktopWidth,
     isTabletWidth
 })
@@ -24,7 +24,6 @@ const mapStateToProps = ({
 const Tooltip = ({ buttonName }) => {
     const {
             isAccessOn,
-            isUserAgentDesktop,
             isDesktopWidth,
             isTabletWidth
         } = useSelector(mapStateToProps),
@@ -35,7 +34,7 @@ const Tooltip = ({ buttonName }) => {
      * If it's a narrow viewport or a mobile device, always allow the tooltip
      * to show. Otherwise, allow it to show if access is on.
      */
-    return (isPhoneOrMiniWidth || !isUserAgentDesktop || isAccessOn) && (
+    return (!IS_USER_AGENT_DESKTOP || isPhoneOrMiniWidth || isAccessOn) && (
         <ReactTooltip
             {...{
                 className: cx(
@@ -56,12 +55,6 @@ const Tooltip = ({ buttonName }) => {
 }
 
 Tooltip.propTypes = {
-    // Through Redux.
-    // isAccessOn: PropTypes.bool.isRequired,
-    // isUserAgentDesktop: PropTypes.bool.isRequired,
-    // isDesktopWidth: PropTypes.bool.isRequired,
-    // isTabletWidth: PropTypes.bool.isRequired,
-
     buttonName: PropTypes.string.isRequired
 }
 

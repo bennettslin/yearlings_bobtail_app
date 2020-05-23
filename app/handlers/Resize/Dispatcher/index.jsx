@@ -39,7 +39,6 @@ class ResizeDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isUserAgentDesktop: PropTypes.bool.isRequired,
         updateMountStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired,
         updateViewportStore: PropTypes.func.isRequired,
@@ -115,9 +114,8 @@ class ResizeDispatcher extends PureComponent {
         isTwoRowMenu,
         menuHeight
     }) {
-        const { isUserAgentDesktop } = this.props,
+        const
             canCarouselMount = getCanCarouselMount({
-                isUserAgentDesktop,
                 deviceWidthIndex,
                 windowHeight,
                 isHeightlessLyric
@@ -155,12 +153,10 @@ class ResizeDispatcher extends PureComponent {
         this.props.updateMountStore({
             canCarouselMount,
             canScoreMount: getCanScoreMount({
-                deviceWidthIndex,
-                isUserAgentDesktop
+                deviceWidthIndex
             }),
             canSliderMount: getCanSliderMount({
-                deviceWidthIndex,
-                isUserAgentDesktop
+                deviceWidthIndex
             }),
             lyricDynamicHeight: getLyricDynamicHeight({
                 canCarouselMount,
@@ -267,14 +263,8 @@ class ResizeDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    appStore: { isUserAgentDesktop }
-}) => ({
-    isUserAgentDesktop
-})
-
 export default connect(
-    mapStateToProps,
+    null,
     {
         updateMountStore,
         updateResponsiveStore,

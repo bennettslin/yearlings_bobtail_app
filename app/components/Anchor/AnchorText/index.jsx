@@ -6,10 +6,10 @@ import Texts from '../../Texts'
 import Underline from '../Underline'
 
 import { getSpaceIfNeeded, getWordsForWikiAnchor } from './helper'
+import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 
 const propTypes = {
     // From parent.
-    isUserAgentDesktop: PropTypes.bool.isRequired,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isWikiTextAnchor: PropTypes.bool,
@@ -28,7 +28,6 @@ const propTypes = {
 }
 
 const AnchorText = ({
-    isUserAgentDesktop,
     isAccessed,
     isSelected,
     isWikiTextAnchor,
@@ -37,7 +36,7 @@ const AnchorText = ({
 
 }) => {
     // Only split wiki anchor text, and only in higher processor.
-    const words = isWikiTextAnchor && isUserAgentDesktop ?
+    const words = isWikiTextAnchor && IS_USER_AGENT_DESKTOP ?
         getWordsForWikiAnchor(text) : [text]
 
     return (
@@ -79,7 +78,7 @@ const AnchorText = ({
                         </span>
 
                         {/* See styling comment for why this is last child. */}
-                        {isUserAgentDesktop && (
+                        {IS_USER_AGENT_DESKTOP && (
                             <Underline
                                 {...{
                                     isAccessed,
