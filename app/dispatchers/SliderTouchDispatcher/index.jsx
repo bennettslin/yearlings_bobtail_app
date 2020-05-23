@@ -176,7 +176,7 @@ class SliderTouchDispatcher extends PureComponent {
         return false
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

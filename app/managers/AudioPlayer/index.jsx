@@ -9,7 +9,7 @@ import { populateRefs } from '../../helpers/ref'
 
 class AudioPlayerManager extends PureComponent {
 
-    _toggleSelectedPlayer = (payload) => {
+    _toggleSelectedPlayer = payload => {
         return this.toggleSelectedPlayer(payload)
     }
 
@@ -17,7 +17,7 @@ class AudioPlayerManager extends PureComponent {
         return this.handleSongEnd()
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

@@ -78,7 +78,7 @@ class DotsSlideNavigation extends PureComponent {
         return true
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

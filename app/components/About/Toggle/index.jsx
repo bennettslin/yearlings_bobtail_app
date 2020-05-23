@@ -19,7 +19,7 @@ class AboutToggle extends PureComponent {
         this.dispatchAbout()
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

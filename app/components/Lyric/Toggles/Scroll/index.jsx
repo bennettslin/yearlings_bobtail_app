@@ -33,7 +33,7 @@ class LyricToggleScroll extends PureComponent {
         this.dispatchScrollVerse(true)
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

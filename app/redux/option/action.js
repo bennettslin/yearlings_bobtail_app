@@ -22,7 +22,7 @@ export const _setOptionInStorage = (key, value) => {
     setInStorage(key, value === SHOWN ? HIDDEN : value)
 }
 
-export const updateOptionStore = (payload) => {
+export const updateOptionStore = payload => {
     const {
         selectedOverviewOption,
         selectedTipsOption

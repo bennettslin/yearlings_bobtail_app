@@ -42,7 +42,7 @@ class AnnotationPopup extends PureComponent {
         this.dispatchAnnotationDirection(1)
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

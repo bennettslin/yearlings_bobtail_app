@@ -54,11 +54,11 @@ class CarouselScroll extends PureComponent {
         return this.setCarouselParent(node)
     }
 
-    _setCarouselAnnotationElement = (payload) => {
+    _setCarouselAnnotationElement = payload => {
         return this.setCarouselAnnotationElement(payload)
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

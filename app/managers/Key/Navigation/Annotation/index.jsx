@@ -118,7 +118,7 @@ class AnnotationNavigation extends PureComponent {
         }
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

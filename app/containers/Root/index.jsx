@@ -34,7 +34,7 @@ class RootContainer extends PureComponent {
         return this.passRootContainer(node)
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

@@ -77,7 +77,7 @@ class Button extends Component {
 
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

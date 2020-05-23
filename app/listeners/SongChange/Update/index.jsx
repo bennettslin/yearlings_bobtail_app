@@ -92,7 +92,7 @@ class SongChangeUpdateListener extends PureComponent {
         this.dispatchCanSceneUpdate()
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

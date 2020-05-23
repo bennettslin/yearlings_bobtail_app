@@ -39,7 +39,7 @@ class TipsToggle extends PureComponent {
         this.dispatchTips({ isToggled: true })
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

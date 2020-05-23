@@ -52,7 +52,7 @@ class Lyric extends PureComponent {
         this.props.updateLyricStore({ didLyricEnter: true })
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

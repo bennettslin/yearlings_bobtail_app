@@ -11,7 +11,7 @@ import {
     getIsPhoneWidth
 } from '../../helpers/responsive'
 
-export const updateViewportStore = (payload) => {
+export const updateViewportStore = payload => {
     const { deviceWidthIndex } = payload
 
     if (hasKey(deviceWidthIndex)) {

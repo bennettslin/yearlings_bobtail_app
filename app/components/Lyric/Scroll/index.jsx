@@ -63,7 +63,7 @@ class LyricScroll extends PureComponent {
         return this.lyricElement
     }
 
-    _setVerseElement = (payload) => {
+    _setVerseElement = payload => {
         return this.setVerseElement(payload)
     }
 
@@ -78,7 +78,7 @@ class LyricScroll extends PureComponent {
         return this.setLyricParent(node)
     }
 
-    _setLyricAnnotationElement = (payload) => {
+    _setLyricAnnotationElement = payload => {
         return this.setLyricAnnotationElement(payload)
     }
 
@@ -95,7 +95,7 @@ class LyricScroll extends PureComponent {
         this.props.updateLyricStore({ didLyricUpdate: true })
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

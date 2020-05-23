@@ -13,7 +13,7 @@ import {
     ACCESS_NAV_DEFAULTS
 } from './default'
 
-export const updateAccessStore = (payload) => {
+export const updateAccessStore = payload => {
 
     const { isAccessOn } = payload
 

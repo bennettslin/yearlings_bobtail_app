@@ -9,7 +9,7 @@ import {
     IS_CAROUSEL_SHOWN
 } from '../../constants/store'
 
-export const updateToggleStore = (payload) => {
+export const updateToggleStore = payload => {
 
     const { isCarouselShown } = payload
 

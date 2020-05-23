@@ -38,7 +38,7 @@ class CarouselToggle extends PureComponent {
         this.dispatchCarouselNav()
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

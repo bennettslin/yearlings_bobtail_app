@@ -37,7 +37,7 @@ class SceneChangeEnterListener extends PureComponent {
         this.dispatchCanSceneEnter()
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

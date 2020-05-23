@@ -12,7 +12,7 @@ import {
     SELECTED_ANNOTATION_INDEX
 } from '../../constants/store'
 
-export const updateSelectedStore = (payload) => {
+export const updateSelectedStore = payload => {
 
     const {
         selectedSongIndex,

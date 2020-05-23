@@ -40,7 +40,7 @@ class LyricToggleEar extends PureComponent {
         this.dispatchEarColumn()
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

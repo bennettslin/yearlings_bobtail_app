@@ -9,7 +9,7 @@ import {
     DOTS_BIT_NUMBER
 } from '../../constants/store'
 
-export const updateDotsStore = (payload) => {
+export const updateDotsStore = payload => {
     const { dotsBitNumber } = payload
 
     if (hasKey(dotsBitNumber)) {

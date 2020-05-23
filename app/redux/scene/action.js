@@ -6,7 +6,7 @@ import {
 import { getCubesForKey } from '../../scene/aggregators/cubes'
 import { SCENE_STORE } from '../../constants/store'
 
-export const updateSceneStore = (payload) => {
+export const updateSceneStore = payload => {
     const { sceneCubesKey } = payload
 
     if (hasKey(sceneCubesKey)) {

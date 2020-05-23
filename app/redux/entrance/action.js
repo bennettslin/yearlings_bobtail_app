@@ -4,7 +4,7 @@ import { ENTRANCE_STORE } from '../../constants/store'
 
 import { THEATRE_ENTRANCE_DEFAULTS } from './default'
 
-export const updateEntranceStore = (payload) => ({
+export const updateEntranceStore = payload => ({
     type: ENTRANCE_STORE,
     payload: getDefinedOnlyPayload(payload)
 })

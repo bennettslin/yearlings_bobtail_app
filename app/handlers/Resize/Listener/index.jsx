@@ -81,7 +81,7 @@ class ResizeListener extends PureComponent {
         this.setState({ windowResizeTimeoutId })
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

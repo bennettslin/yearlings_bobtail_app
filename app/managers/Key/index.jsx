@@ -193,7 +193,7 @@ class KeyManager extends PureComponent {
         this.props.updateToggleStore({ isAutoScroll: false })
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

@@ -24,7 +24,7 @@ class AdminNavRow extends PureComponent {
         this.dispatchSong({ selectedSongIndex: this.props.songIndex })
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

@@ -222,7 +222,7 @@ class SongBanner extends PureComponent {
         this.props.updateBannerStore()
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

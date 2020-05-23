@@ -42,7 +42,7 @@ class OverviewToggle extends PureComponent {
         this.dispatchOverview({ isToggled: true })
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

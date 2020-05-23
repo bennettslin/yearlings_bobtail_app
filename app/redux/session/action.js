@@ -10,7 +10,7 @@ import {
 } from '../../constants/store'
 import { SESSION_WIKI_DEFAULTS } from './default'
 
-export const updateSessionStore = (payload) => {
+export const updateSessionStore = payload => {
 
     const { selectedAudioOptionIndex } = payload
 

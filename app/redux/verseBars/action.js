@@ -6,7 +6,7 @@ import {
     VERSE_BARS_QUEUE_DEFAULTS
 } from './default'
 
-export const updateVerseBarsStore = (payload) => ({
+export const updateVerseBarsStore = payload => ({
     type: VERSE_BARS_STORE,
     payload: getDefinedOnlyPayload(payload)
 })

@@ -169,7 +169,7 @@ class FocusContainer extends PureComponent {
     _handleKeyDownPress = e => this.handleKeyDownPress(e)
     _handleKeyUpPress = e => this.handleKeyUpPress(e)
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

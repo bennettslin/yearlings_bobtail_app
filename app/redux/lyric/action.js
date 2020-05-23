@@ -6,7 +6,7 @@ import {
 } from '../../helpers/action'
 import { LYRIC_STORE } from '../../constants/store'
 
-export const updateLyricStore = (payload) => {
+export const updateLyricStore = payload => {
     const {
         lyricSongIndex
     } = payload

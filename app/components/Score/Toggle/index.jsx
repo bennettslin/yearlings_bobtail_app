@@ -41,7 +41,7 @@ class ScoreToggle extends PureComponent {
         this.dispatchScore()
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

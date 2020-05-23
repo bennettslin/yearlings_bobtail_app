@@ -60,7 +60,7 @@ class DotsSlide extends PureComponent {
         return getDotKeysFromBitNumber(dotsSlideBitNumber)
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

@@ -67,7 +67,7 @@ class PlayDispatcher extends PureComponent {
         return true
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

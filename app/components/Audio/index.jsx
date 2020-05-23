@@ -149,7 +149,7 @@ class Audio extends PureComponent {
         )
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

@@ -42,7 +42,7 @@ class Slider extends PureComponent {
         this.dispatchTouchBegin(e, this.sliderElement.current)
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

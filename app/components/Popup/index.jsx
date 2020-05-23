@@ -35,7 +35,7 @@ class Popup extends PureComponent {
         this.dispatchStopPropagation(e)
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

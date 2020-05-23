@@ -64,7 +64,7 @@ class AnnotationWormhole extends PureComponent {
         this.dispatchSong(this._getWormholeLink())
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

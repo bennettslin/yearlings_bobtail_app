@@ -47,7 +47,7 @@ class LyricToggleExpand extends PureComponent {
         this.dispatchLyricExpand()
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

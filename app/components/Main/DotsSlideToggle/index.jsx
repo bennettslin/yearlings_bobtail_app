@@ -29,7 +29,7 @@ class DotsSlideToggle extends PureComponent {
         this.dispatchDotsSlide()
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

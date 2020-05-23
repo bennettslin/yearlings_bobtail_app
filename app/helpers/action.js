@@ -3,7 +3,7 @@ export const hasKey = (value) => {
     return value !== undefined
 }
 
-export const getDefinedOnlyPayload = (payload) => {
+export const getDefinedOnlyPayload = payload => {
     const definedOnlyPayload = {}
 
     for (const key in payload) {

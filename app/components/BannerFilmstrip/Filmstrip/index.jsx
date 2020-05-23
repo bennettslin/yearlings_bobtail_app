@@ -56,7 +56,7 @@ class Filmstrip extends PureComponent {
         sliderSceneIndex: PropTypes.number.isRequired
     }
 
-    _getRefs = (payload) => {
+    _getRefs = payload => {
         populateRefs(this, payload)
     }
 

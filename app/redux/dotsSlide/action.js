@@ -2,7 +2,7 @@
 import { getDefinedOnlyPayload } from '../../helpers/action'
 import { DOTS_SLIDE_STORE } from '../../constants/store'
 
-export const updateDotsSlideStore = (payload) => ({
+export const updateDotsSlideStore = payload => ({
     type: DOTS_SLIDE_STORE,
     payload: getDefinedOnlyPayload(payload)
 })
