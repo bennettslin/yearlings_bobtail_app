@@ -8,27 +8,17 @@ import ReactTooltip from 'react-tooltip'
 import { getTooltipPlacement } from './helper'
 
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
-
-const mapStateToProps = ({
-    accessStore: { isAccessOn },
-    viewportStore: {
-        isDesktopWidth,
-        isTabletWidth
-    }
-}) => ({
-    isAccessOn,
-    isDesktopWidth,
-    isTabletWidth
-})
+import { IS_ACCESS_ON_SELECTOR } from '../../../redux/access/selectors'
+import {
+    IS_DESKTOP_WIDTH_SELECTOR,
+    IS_PHONE_OR_MINI_WIDTH_SELECTOR
+} from '../../../redux/viewport/selectors'
 
 const Tooltip = ({ buttonName }) => {
-    const {
-            isAccessOn,
-            isDesktopWidth,
-            isTabletWidth
-        } = useSelector(mapStateToProps),
-
-        isPhoneOrMiniWidth = !isDesktopWidth && !isTabletWidth
+    const
+        isAccessOn = useSelector(IS_ACCESS_ON_SELECTOR),
+        isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
+        isPhoneOrMiniWidth = useSelector(IS_PHONE_OR_MINI_WIDTH_SELECTOR)
 
     /**
      * If it's a narrow viewport or a mobile device, always allow the tooltip
