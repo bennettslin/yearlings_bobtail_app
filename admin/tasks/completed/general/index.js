@@ -4700,5 +4700,9 @@ export default [
     {
         taskName: `If annotation is selected in store, preemptively select all dots. Plus refactor.`,
         workedHours: 2
+    },
+    {
+        taskName: `Entrance store refactor.`,
+        workedHours: 3
     }
 ]
