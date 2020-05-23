@@ -73,10 +73,10 @@ class ResizeDispatcher extends PureComponent {
 
         const
             deviceWidthIndex = getDeviceWidthIndex(),
-            {
+            [
                 windowHeight,
                 windowWidth
-            } = getWindowHeightAndWidth(this.rootElement),
+            ] = getWindowHeightAndWidth(this.rootElement),
 
             isHeightlessLyric = getIsHeightlessLyric({
                 deviceWidthIndex,

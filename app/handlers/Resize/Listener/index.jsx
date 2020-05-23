@@ -47,10 +47,10 @@ class ResizeListener extends PureComponent {
          * Doing this in all cases for now, not just iOS, for simplicity.
          */
         const
-            {
-                windowHeight: newHeight,
-                windowWidth: newWidth
-            } = getWindowHeightAndWidth(this.rootElement),
+            [
+                newHeight,
+                newWidth
+            ] = getWindowHeightAndWidth(this.rootElement),
             {
                 windowHeight: prevHeight,
                 windowWidth: prevWidth

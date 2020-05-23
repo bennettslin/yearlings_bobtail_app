@@ -6,8 +6,8 @@ export default [
     /* Evening. */
     {
         taskName: `Consolidate all window and window storage helpers.`,
-        workedHours: 0,
-        neededHours: 2
+        workedHours: 2,
+        neededHours: 5
     },
 
     /* Ongoing. */
