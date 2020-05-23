@@ -22,3 +22,8 @@ export const updateToggleStore = (payload) => {
         payload: getDefinedOnlyPayload(payload)
     })
 }
+
+export const updateIsAboutShown = (isAboutShown = false) => ({
+    type: TOGGLE_STORE,
+    payload: { isAboutShown }
+})

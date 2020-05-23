@@ -1,9 +1,8 @@
-// Child that knows rules to toggle title. Not needed if just turning off.
-
+// Child that knows rules to toggle about popup.
 import { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateToggleStore } from '../../redux/toggle/action'
+import { updateIsAboutShown } from '../../redux/toggle/action'
 import { IS_ABOUT_SHOWN_SELECTOR } from '../../redux/toggle/selectors'
 
 const AboutDispatcher = ({
@@ -20,7 +19,7 @@ const AboutDispatcher = ({
                 newIsAboutShown = !isAboutShown
             ) {
                 // Turning on or off is always successful.
-                dispatch(updateToggleStore({ isAboutShown: newIsAboutShown }))
+                dispatch(updateIsAboutShown(newIsAboutShown))
                 return true
             }
         })

@@ -10,7 +10,10 @@ import { updateActivatedStore } from '../../redux/activated/action'
 import { updateOptionStore } from '../../redux/option/action'
 import { resetWiki } from '../../redux/session/action'
 import { updateSelectedStore } from '../../redux/selected/action'
-import { updateToggleStore } from '../../redux/toggle/action'
+import {
+    updateToggleStore,
+    updateIsAboutShown
+} from '../../redux/toggle/action'
 
 import {
     SHOWN,
@@ -37,6 +40,7 @@ class CloseHandler extends PureComponent {
         updateOptionStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
+        updateIsAboutShown: PropTypes.func.isRequired,
         updateActivatedStore: PropTypes.func.isRequired,
         resetWiki: PropTypes.func.isRequired,
 
@@ -257,7 +261,7 @@ class CloseHandler extends PureComponent {
             this.props.updateToggleStore({ isScoreShown: false })
 
         } else if (isAboutShown && !exemptAbout) {
-            this.props.updateToggleStore({ isAboutShown: false })
+            this.props.updateIsAboutShown()
 
         } else {
             return false
@@ -364,6 +368,7 @@ export default connect(
         updateOptionStore,
         updateSelectedStore,
         updateToggleStore,
+        updateIsAboutShown,
         updateActivatedStore,
         resetWiki
     }

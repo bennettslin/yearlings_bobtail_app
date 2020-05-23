@@ -24,9 +24,7 @@ export const updateSessionStore = (payload) => {
     })
 }
 
-export const resetWiki = () => {
-    return ({
-        type: SESSION_STORE,
-        payload: SESSION_WIKI_DEFAULTS
-    })
-}
+export const resetWiki = () => ({
+    type: SESSION_STORE,
+    payload: SESSION_WIKI_DEFAULTS
+})

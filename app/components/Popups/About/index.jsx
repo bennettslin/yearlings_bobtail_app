@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateToggleStore } from '../../../redux/toggle/action'
+import { updateIsAboutShown } from '../../../redux/toggle/action'
 
 import About from '../../About'
 import Popup from '../../Popup'
@@ -19,14 +19,16 @@ class AboutPopup extends PureComponent {
     static propTypes = {
     // Through Redux.
         isAboutShown: PropTypes.bool.isRequired,
-        updateToggleStore: PropTypes.func.isRequired
+        updateIsAboutShown: PropTypes.func.isRequired
     }
 
     _closeAbout = () => {
-        this.props.updateToggleStore({ isAboutShown: false })
+        this.props.updateIsAboutShown()
     }
 
     render() {
+        const { isAboutShown } = this.props
+
         return (
             <Popup
                 bounceAnimate
@@ -36,7 +38,7 @@ class AboutPopup extends PureComponent {
                 hasWidePadding
                 {...{
                     popupName: 'AboutPopup',
-                    isVisible: this.props.isAboutShown,
+                    isVisible: isAboutShown,
                     handleCloseClick: this._closeAbout
                 }}
             >
@@ -48,5 +50,5 @@ class AboutPopup extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateToggleStore }
+    { updateIsAboutShown }
 )(AboutPopup)
