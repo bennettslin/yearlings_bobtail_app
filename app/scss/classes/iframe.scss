@@ -7,14 +7,14 @@
     border: 0;
     width: 100%;
     height: 100%;
-    opacity: 1;
+    opacity: 0.1;
 
     .DW__userAgentDesktop
     & {
-        transition: opacity $transitionDuration__default;
+        transition: opacity $transitionDuration__slower;
     }
+}
 
-    &.iframeLoading {
-        opacity: 0.4;
-    }
+.iframeContainer__iframe__loaded {
+    opacity: 1;
 }

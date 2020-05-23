@@ -1,96 +1,68 @@
-// Webview to show Wikipedia page for reference anchor.
-
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
+// eslint-disable-next-line object-curly-newline
+import React, { useEffect, useRef, useState } from 'react'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
+import { SELECTED_WIKI_URL_SELECTOR } from '../../redux/session/selectors'
 
 import Spinner from '../../modules/Spinner'
 
-// TODO: Show that active wiki anchor is disabled.
-// TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/
-// TODO: If loading time is too long, show page with a "There was a problem connecting to Wikipedia. Try again?"
+const Wiki = () => {
 
-const mapStateToProps = ({
-    sessionStore: { selectedWikiUrl }
-}) => ({
-    selectedWikiUrl
-})
+    const
+        selectedWikiUrl = useSelector(SELECTED_WIKI_URL_SELECTOR),
+        [isLoading, setIsLoading] = useState(false),
+        wikiElement = useRef(),
 
-class WikiSection extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        selectedWikiUrl: PropTypes.string.isRequired
-    }
-
-    state = {
-        iframeLoading: true
-    }
-
-    componentDidUpdate(prevProps) {
-        const { selectedWikiUrl } = this.props
-
-        if (selectedWikiUrl !== prevProps.selectedWikiUrl) {
-            this._onWikiUrlReceived(selectedWikiUrl)
+        onLoad = () => {
+            setIsLoading(false)
         }
-    }
 
-    _onWikiUrlReceived(selectedWikiUrl) {
+    useEffect(() => {
+        // This prevents iframe src from adding to browser history.
+        wikiElement.current.contentWindow.location.replace(
+            selectedWikiUrl
+        )
+
         if (selectedWikiUrl) {
-            this.setState({
-                iframeLoading: true
-            })
+            setIsLoading(true)
         }
-    }
+    }, [selectedWikiUrl])
 
-    onIframeLoad = () => {
-        this.setState({
-            iframeLoading: false
-        })
-    }
-
-    render() {
-        const
-            { selectedWikiUrl } = this.props,
-            { iframeLoading } = this.state
-
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'Wiki',
-                        'iframeContainer'
-                    )
-                }}
-            >
-                {iframeLoading &&
-                    <div
-                        {...{
-                            className: cx(
-                                'iframeContainer__spinner',
-                                'abF',
-                                'flexCentreContainer'
-                            )
-                        }}
-                    >
-                        <Spinner />
-                    </div>
-                }
-                <iframe
+    return (
+        <div
+            {...{
+                className: cx(
+                    'Wiki',
+                    'iframeContainer'
+                )
+            }}
+        >
+            {isLoading &&
+                <div
                     {...{
                         className: cx(
-                            'iframeContainer__iframe',
-                            { iframeLoading }
-                        ),
-                        tabIndex: -1,
-                        src: selectedWikiUrl,
-                        onLoad: this.onIframeLoad
+                            'iframeContainer__spinner',
+                            'abF',
+                            'flexCentreContainer'
+                        )
                     }}
-                />
-            </div>
-        )
-    }
+                >
+                    <Spinner />
+                </div>
+            }
+            <iframe
+                {...{
+                    ref: wikiElement,
+                    className: cx(
+                        'iframeContainer__iframe',
+                        !isLoading && 'iframeContainer__iframe__loaded'
+                    ),
+                    tabIndex: -1,
+                    onLoad
+                }}
+            />
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(WikiSection)
+export default Wiki

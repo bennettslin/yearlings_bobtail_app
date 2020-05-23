@@ -10,12 +10,11 @@ const Score = () => {
     const
         dispatch = useDispatch(),
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        scoreElement = useRef(),
 
         onLoad = () => {
             dispatch(updateLoadStore({ isScoreLoaded: true }))
-        },
-
-        scoreElement = useRef()
+        }
 
     useEffect(() => {
         // This prevents iframe src from adding to browser history.

@@ -1,10 +1,5 @@
 export default [
     /* Morning time. */
-    {
-        taskName: `Prevent iframe src from affecting browser history. Then maybe reconsider history push instead of replace?`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     /* Lunch time. */
 

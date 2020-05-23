@@ -4692,5 +4692,9 @@ export default [
     {
         taskName: `Make getting indices from routing all or none. Just validate now.`,
         workedHours: 2
+    },
+    {
+        taskName: `Prevent iframe src from affecting browser history.`,
+        workedHours: 1
     }
 ]
