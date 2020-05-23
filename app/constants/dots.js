@@ -1,4 +1,7 @@
-import { getObjectFromBitNumber } from '../helpers/bit'
+import {
+    getObjectFromBitNumber,
+    getTwoToThePowerOfN
+} from '../helpers/bit'
 
 export const AFTERWORD = 'afterword'
 export const BACKSTORY = 'backstory'
@@ -38,3 +41,5 @@ export const EMPTY_DOTS_STORE = getObjectFromBitNumber({
     keysArray: ORDERED_DOT_KEYS,
     bitNumber: 0
 })
+
+export const FULL_DOTS_STORE = getTwoToThePowerOfN(ORDERED_DOT_KEYS.length - 1)

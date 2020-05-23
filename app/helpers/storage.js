@@ -3,14 +3,12 @@ import { getValidSongIndex } from '../album/api/songs'
 import { getValidVerseIndex } from '../album/api/verses'
 import { getValidAnnotationIndex } from '../album/api/annotations'
 
-import {
-    getTwoToThePowerOfN,
-    getObjectFromBitNumber
-} from './bit'
+import { getObjectFromBitNumber } from './bit'
 import { getArrayOfLength } from './general'
 import {
     ORDERED_DOT_KEYS,
-    INITIAL_DOTS_BIT_NUMBER
+    INITIAL_DOTS_BIT_NUMBER,
+    FULL_DOTS_STORE
 } from '../constants/dots'
 import {
     SHOWN,
@@ -166,7 +164,8 @@ export const getDotsFromStorage = () => {
         storedBitNumber = _getParsedStoredInteger(DOTS_BIT_NUMBER),
         savedBitNumber =
             Number.isFinite(storedBitNumber) &&
-            storedBitNumber < getTwoToThePowerOfN(ORDERED_DOT_KEYS.length) ?
+            storedBitNumber >= 0 &&
+            storedBitNumber <= FULL_DOTS_STORE ?
                 storedBitNumber :
                 INITIAL_DOTS_BIT_NUMBER
 
