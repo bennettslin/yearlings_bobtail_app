@@ -21,9 +21,9 @@ export const updateSelectedStore = payload => {
     } = payload
 
     if (hasKey(selectedSongIndex)) {
-        setInStorage(SELECTED_SONG_INDEX, selectedSongIndex)
-
         payload.isSelectedLogue = getSongIsLogue(selectedSongIndex)
+
+        setInStorage(SELECTED_SONG_INDEX, selectedSongIndex)
     }
     if (hasKey(selectedVerseIndex)) {
         setInStorage(SELECTED_VERSE_INDEX, selectedVerseIndex)

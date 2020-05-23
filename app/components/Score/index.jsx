@@ -35,7 +35,10 @@ const Score = () => {
             <iframe
                 {...{
                     ref: scoreElement,
-                    className: 'iframeContainer__iframe',
+                    className: cx(
+                        'iframeContainer__iframe',
+                        'iframeContainer__iframe__loaded'
+                    ),
                     tabIndex: -1,
                     onLoad
                 }}

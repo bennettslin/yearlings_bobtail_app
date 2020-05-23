@@ -5,9 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAboutShown } from '../../redux/toggle/action'
 import { IS_ABOUT_SHOWN_SELECTOR } from '../../redux/toggle/selectors'
 
-const AboutDispatcher = ({
-    getRefs
-}) => {
+const AboutDispatcher = ({ getRefs }) => {
     const
         isAboutShown = useSelector(IS_ABOUT_SHOWN_SELECTOR),
         dispatch = useDispatch()
