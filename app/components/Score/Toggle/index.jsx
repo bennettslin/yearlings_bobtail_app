@@ -9,8 +9,6 @@ import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
 
-import { populateRefs } from '../../../helpers/ref'
-
 import { SCORE_TOGGLE_KEY } from '../../../constants/access'
 import { SCORES_BUTTON_KEY } from '../../../constants/buttons'
 import { SCORE } from '../../../constants/tips'
@@ -37,12 +35,12 @@ class ScoreToggle extends PureComponent {
         className: PropTypes.string
     }
 
-    _handleScoreButtonClick = () => {
-        this.dispatchScore()
+    componentDidMount() {
+        this.scoreDispatcher = React.createRef()
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    _handleScoreButtonClick = () => {
+        this.scoreDispatcher.current.dispatchScore()
     }
 
     render() {
@@ -77,7 +75,7 @@ class ScoreToggle extends PureComponent {
                         reverse: !isDesktopWidth
                     }}
                 />
-                <ScoreDispatcher {...{ getRefs: this._getRefs }} />
+                <ScoreDispatcher {...{ ref: this.scoreDispatcher }} />
             </div>
         )
     }

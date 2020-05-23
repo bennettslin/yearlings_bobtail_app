@@ -76,6 +76,8 @@ class LetterManager extends PureComponent {
             handleLetter: this.handleLetter,
             handleEscape: this.handleEscape
         })
+
+        this.scoreDispatcher = React.createRef()
     }
 
     handleLetter = (keyName) => {
@@ -129,7 +131,7 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = this.activateSceneDirection(1)
                 break
             case SCORE_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchScore()
+                keyWasRegistered = this.scoreDispatcher.current.dispatchScore()
                 break
             case TIPS_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchTips()
@@ -157,7 +159,7 @@ class LetterManager extends PureComponent {
 
         // Close score popup.
         if (this.props.isScoreShown) {
-            this.dispatchScore(false)
+            this.scoreDispatcher.current.dispatchScore(false)
 
         // Close title popup.
         } else if (this.props.isAboutShown) {
@@ -214,7 +216,7 @@ class LetterManager extends PureComponent {
                 <LyricDispatcher {...{ getRefs: this._getRefs }} />
                 <OverviewDispatcher {...{ getRefs: this._getRefs }} />
                 <PlayDispatcher {...{ getRefs: this._getRefs }} />
-                <ScoreDispatcher {...{ getRefs: this._getRefs }} />
+                <ScoreDispatcher {...{ ref: this.scoreDispatcher }} />
                 <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
                 <TipsDispatcher {...{ getRefs: this._getRefs }} />
