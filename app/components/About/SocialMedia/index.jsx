@@ -12,12 +12,10 @@ class SocialMedia extends Component {
 
     handleFacebookClick = () => {
         // TODO: Analytics.
-        // window.open(FACEBOOK_PAGE)
     }
 
     handleInstagramClick = () => {
         // TODO: Analytics.
-        // window.open(INSTAGRAM_PAGE)
     }
 
     render() {

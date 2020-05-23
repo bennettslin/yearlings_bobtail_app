@@ -7,14 +7,12 @@ import { getIsAnnotationValid } from '../album/api/annotations'
 export const getRoutingSongIndex = () => {
     const { pathname } = window.location,
         routingSongIndex = parseInt(pathname.replace(/\D/g, ''))
+
     return getIsSongValid(routingSongIndex) ? routingSongIndex : NaN
 }
 
 const _getQueryStringIndex = key => {
     const { search } = window.location
-    if (!search) {
-        return null
-    }
 
     return search ?
         parseInt(qs.parse(search, { ignoreQueryPrefix: true })[key]) :

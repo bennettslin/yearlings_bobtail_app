@@ -1,4 +1,4 @@
-// Component to show selected verse when scrolled outside visible window.
+// Component to show selected verse when scrolled above or below window height.
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'

@@ -9,7 +9,6 @@ class AboutTitle extends Component {
 
     handleAnchorClick = () => {
         // TODO: Analytics.
-        // window.open(BOBTAIL_YEARLINGS_WEBSITE)
     }
 
     render() {
