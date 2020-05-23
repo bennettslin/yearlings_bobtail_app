@@ -1,7 +1,9 @@
-import {
-    STORED_NAV_BOOK_INDEX,
-    STORED_AUDIO_OPTION_INDEX
-} from '../../constants/storage'
+import { getBookForSongIndex } from '../../album/api/songs'
+import { getAudioOptionFromStorage } from '../../helpers/storage'
+import { INITIAL_SONG_INDEX } from '../selected/default'
+
+const STORED_NAV_BOOK_INDEX = getBookForSongIndex(INITIAL_SONG_INDEX)
+const STORED_AUDIO_OPTION_INDEX = getAudioOptionFromStorage()
 
 export const SESSION_WIKI_DEFAULTS = {
     selectedWikiIndex: 0,

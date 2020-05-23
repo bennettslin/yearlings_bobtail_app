@@ -1,4 +1,4 @@
-import { INITIAL_ANNOTATION_INDEX } from '../../constants/storage'
+import { INITIAL_ANNOTATION_INDEX } from '../selected/default'
 
 export const TRANSIENT_DEFAULTS = {
     isShelfLeftShown: false,

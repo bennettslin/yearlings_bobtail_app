@@ -3,7 +3,7 @@ import {
     INITIAL_VERSE_INDEX,
     INITIAL_ANNOTATION_INDEX,
     IS_INITIAL_LOGUE
-} from '../../constants/storage'
+} from '../selected/default'
 
 const LYRIC_TRANSITION_DEFAULTS = {
     didCarouselExit: true,

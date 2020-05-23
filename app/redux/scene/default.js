@@ -9,7 +9,7 @@ import {
 import {
     INITIAL_SONG_INDEX,
     INITIAL_SCENE_INDEX
-} from '../../constants/storage'
+} from '../selected/default'
 
 const SCENE_TRANSITION_DEFAULTS = {
     didSceneScrollExit: true,

@@ -1,7 +1,8 @@
-import {
-    INITIAL_ANNOTATION_INDEX,
-    IS_STORED_ACCESS_ON
-} from '../../constants/storage'
+import { getBoolFromStorage } from '../../helpers/storage'
+import { INITIAL_ANNOTATION_INDEX } from '../selected/default'
+import { IS_ACCESS_ON } from '../../constants/store'
+
+const IS_STORED_ACCESS_ON = getBoolFromStorage(IS_ACCESS_ON)
 
 export const ACCESS_DOT_DEFAULTS = {
     accessedDotIndex: -1
@@ -14,9 +15,9 @@ export const ACCESS_NAV_DEFAULTS = {
 export const ACCESS_DEFAULTS = {
     ...ACCESS_DOT_DEFAULTS,
     ...ACCESS_NAV_DEFAULTS,
-    isAccessOn: IS_STORED_ACCESS_ON || false,
+    isAccessOn: IS_STORED_ACCESS_ON,
     isAccessedIndexedAnchorShown: false,
     accessedKey: '',
-    accessedAnnotationIndex: INITIAL_ANNOTATION_INDEX || 0,
+    accessedAnnotationIndex: INITIAL_ANNOTATION_INDEX,
     accessedWikiWormholeIndex: 0
 }

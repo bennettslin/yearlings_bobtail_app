@@ -120,11 +120,7 @@ export const getInitialIndicesFromRoutingOrStorage = () => {
     setInStorage(SELECTED_SONG_INDEX, initialSongIndex)
     setInStorage(SELECTED_VERSE_INDEX, initialVerseIndex)
     setInStorage(SELECTED_ANNOTATION_INDEX, initialAnnotationIndex)
-    return {
-        initialSongIndex,
-        initialVerseIndex,
-        initialAnnotationIndex
-    }
+    return [initialSongIndex, initialVerseIndex, initialAnnotationIndex]
 }
 
 export const getAudioOptionFromStorage = () => {

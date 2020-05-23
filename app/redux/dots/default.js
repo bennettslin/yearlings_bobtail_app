@@ -1,6 +1,10 @@
 import { getObjectFromBitNumber } from '../../helpers/bit'
+import { getDotsBitNumberFromStorage } from '../../helpers/storage'
+import { INITIAL_ANNOTATION_INDEX } from '../selected/default'
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
-import { STORED_DOTS_BIT_NUMBER } from '../../constants/storage'
+
+const STORED_DOTS_BIT_NUMBER =
+    getDotsBitNumberFromStorage(INITIAL_ANNOTATION_INDEX)
 
 export const DOTS_DEFAULTS = {
     dotsBitNumber: STORED_DOTS_BIT_NUMBER,
