@@ -16,7 +16,6 @@ import LyricIndicesListener from '../../listeners/LyricIndices'
 import MainListener from '../../listeners/Main'
 import OverviewListener from '../../handlers/Overview/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotation'
-import RoutingListener from '../../listeners/Routing'
 import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
 import SceneChangeEnterListener from '../../listeners/SceneChange/Enter'
 import ScoreListener from '../../handlers/Score/Listener'
@@ -28,6 +27,7 @@ import SongChangeDoneListener from '../../listeners/SongChange/Done'
 import ScrollRenderListener from '../../listeners/ScrollRender'
 import SliderListener from '../../listeners/Slider'
 import TipsListener from '../../handlers/Tips/Listener'
+import UrlListener from '../../listeners/Url'
 import WikiListener from '../../handlers/Wiki/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
 
@@ -79,7 +79,6 @@ class ListenContainer extends PureComponent {
                 <MainListener />
                 <OverviewListener />
                 <PopupAnnotationListener />
-                <RoutingListener />
                 <SceneChangeExitListener />
                 <SceneChangeEnterListener />
                 {canScoreMount && (
@@ -95,9 +94,9 @@ class ListenContainer extends PureComponent {
                 <SongChangeEnterListener />
                 <SongChangeDoneListener />
                 <TipsListener />
+                <UrlListener />
                 <WikiListener />
                 <WikiWormholeListener />
-
                 <AudioPlayerManager />
                 <FocusContainer />
             </>

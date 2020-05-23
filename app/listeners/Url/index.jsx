@@ -11,7 +11,7 @@ import {
 } from '../../redux/lyric/selectors'
 import { getPathForIndices } from './helper'
 
-const RoutingListener = () => {
+const UrlListener = () => {
     const
         history = useHistory(),
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
@@ -37,4 +37,4 @@ const RoutingListener = () => {
     )
 }
 
-export default RoutingListener
+export default UrlListener
