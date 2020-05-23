@@ -52,13 +52,13 @@ class ResizeListener extends PureComponent {
                 newWidth
             ] = getWindowHeightAndWidth(this.rootElement),
             {
-                windowHeight: prevHeight,
-                windowWidth: prevWidth
+                windowHeight,
+                windowWidth
             } = this.props
 
         if (
-            newHeight !== prevHeight ||
-            newWidth !== prevWidth
+            newHeight !== windowHeight ||
+            newWidth !== windowWidth
         ) {
             this._beginExitTransition()
         }
@@ -75,14 +75,10 @@ class ResizeListener extends PureComponent {
          * Wait for window resize to finish.
          */
         const windowResizeTimeoutId = setTimeout(
-            this._completeWindowResize, 250
+            this.dispatchBeginEnterTransition, 250
         )
 
         this.setState({ windowResizeTimeoutId })
-    }
-
-    _completeWindowResize = () => {
-        this.dispatchBeginEnterTransition()
     }
 
     _getRefs = (payload) => {
