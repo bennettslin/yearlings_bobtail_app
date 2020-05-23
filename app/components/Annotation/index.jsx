@@ -1,8 +1,7 @@
 // Section to show title and all notes and wormholes for each annotation.
-
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
@@ -12,104 +11,93 @@ import AnnotationCard from './Card'
 import { getCardCountForAnnotation } from '../../album/api/annotations'
 import { populateRefs } from '../../helpers/ref'
 import { getArrayOfLength } from '../../helpers/general'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const Annotation = ({
+    inCarousel,
+    isAccessed,
+    isSelected,
+    annotationIndex
 
-class Annotation extends PureComponent {
+}) => {
+    const
+        refDispatch = {},
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
 
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
+        cardCount = getCardCountForAnnotation(
+            lyricSongIndex,
+            annotationIndex
+        ),
 
-        // From parent.
-        inCarousel: PropTypes.bool,
-        isAccessed: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        annotationIndex: PropTypes.number.isRequired
-    }
+        onClick = (e) => {
+            logEvent({ e, componentName: `Annotation ${annotationIndex}` })
 
-    _handleContainerClick = (e) => {
-        const { annotationIndex, isSelected } = this.props
+            if (isSelected) {
+                refDispatch.dispatchStopPropagation(e)
+            }
+        },
 
-        logEvent({ e, componentName: `Annotation ${annotationIndex}` })
-
-        if (isSelected) {
-            this.dispatchStopPropagation(e)
+        getRefs = payload => {
+            populateRefs(refDispatch, payload)
         }
-    }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
-    render() {
-        const {
-                inCarousel,
-                isAccessed,
-                isSelected,
-                lyricSongIndex,
-                annotationIndex
-            } = this.props,
-
-            cardCount = getCardCountForAnnotation(
-                lyricSongIndex,
-                annotationIndex
-            )
-
-        // If in popup, annotation won't always exist.
-        return Boolean(cardCount) && (
-            <>
+    // If in popup, annotation won't always exist.
+    return Boolean(cardCount) && (
+        <>
+            <div
+                {...{
+                    className: cx(
+                        'Annotation'
+                    ),
+                    onClick
+                }}
+            >
                 <div
                     {...{
                         className: cx(
-                            'Annotation'
-                        ),
-                        onClick: this._handleContainerClick
+                            'Annotation__cardField',
+                            'bgColour__annotation',
+                            'bgColour__annotation__pattern',
+                            isSelected && 'bgColour__annotation__selected',
+                            'boxShadow__annotation',
+                            'abF'
+                        )
                     }}
-                >
-                    <div
-                        {...{
-                            className: cx(
-                                'Annotation__cardField',
-                                'bgColour__annotation',
-                                'bgColour__annotation__pattern',
-                                isSelected && 'bgColour__annotation__selected',
-                                'boxShadow__annotation',
-                                'abF'
-                            )
-                        }}
-                    />
+                />
 
-                    <AnnotationHeader
+                <AnnotationHeader
+                    {...{
+                        inCarousel,
+                        isAccessed,
+                        isSelected,
+                        annotationIndex
+                    }}
+                />
+
+                {getArrayOfLength(cardCount).map(cardIndex => (
+                    <AnnotationCard
                         {...{
+                            key: cardIndex,
                             inCarousel,
-                            isAccessed,
                             isSelected,
-                            annotationIndex
+                            annotationIndex,
+                            cardIndex
                         }}
                     />
+                ))}
 
-                    {getArrayOfLength(cardCount).map(cardIndex => (
-                        <AnnotationCard
-                            {...{
-                                key: cardIndex,
-                                inCarousel,
-                                isSelected,
-                                annotationIndex,
-                                cardIndex
-                            }}
-                        />
-                    ))}
-
-                </div>
-                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
-            </>
-        )
-    }
+            </div>
+            <StopPropagationDispatcher {...{ getRefs }} />
+        </>
+    )
 }
 
-export default connect(mapStateToProps)(Annotation)
+Annotation.propTypes = {
+    // From parent.
+    inCarousel: PropTypes.bool,
+    isAccessed: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    annotationIndex: PropTypes.number.isRequired
+}
+
+export default Annotation
