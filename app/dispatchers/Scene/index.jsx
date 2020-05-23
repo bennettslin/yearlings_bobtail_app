@@ -48,7 +48,7 @@ class SceneDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     selectedStore: { selectedSongIndex },
-    sceneStore: { didSceneEnter }
+    entranceStore: { didSceneEnter }
 }) => ({
     selectedSongIndex,
     didSceneEnter

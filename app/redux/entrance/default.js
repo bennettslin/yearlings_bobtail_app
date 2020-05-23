@@ -4,5 +4,11 @@ export const THEATRE_ENTRANCE_DEFAULTS = {
 }
 
 export const ENTRANCE_DEFAULTS = {
-    ...THEATRE_ENTRANCE_DEFAULTS
+    ...THEATRE_ENTRANCE_DEFAULTS,
+
+    didSceneScrollExit: true,
+    canSceneUpdate: false,
+    didSceneUpdate: false,
+    canSceneEnter: false,
+    didSceneEnter: false
 }

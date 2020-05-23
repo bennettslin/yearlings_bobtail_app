@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateSceneStore } from '../../redux/scene/action'
+import { updateEntranceStore } from '../../redux/entrance/action'
 
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
@@ -12,7 +12,7 @@ import PresenceZIndexStylesheet from './Stylesheet'
 import { CUBE_Y_INDICES_WITH_NEG } from '../../constants/cubeIndex'
 
 const mapStateToProps = ({
-    sceneStore: { canSceneUpdate }
+    entranceStore: { canSceneUpdate }
 }) => ({
     canSceneUpdate
 })
@@ -22,7 +22,7 @@ class Scene extends PureComponent {
     static propTypes = {
         // Through Redux.
         canSceneUpdate: PropTypes.bool.isRequired,
-        updateSceneStore: PropTypes.func.isRequired
+        updateEntranceStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -30,7 +30,7 @@ class Scene extends PureComponent {
     }
 
     _handleTransitionUpdated = () => {
-        this.props.updateSceneStore({ didSceneUpdate: true })
+        this.props.updateEntranceStore({ didSceneUpdate: true })
     }
 
     render() {
@@ -70,5 +70,5 @@ class Scene extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateSceneStore }
+    { updateEntranceStore }
 )(Scene)

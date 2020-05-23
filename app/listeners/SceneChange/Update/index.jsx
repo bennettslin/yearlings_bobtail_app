@@ -3,6 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateSceneStore } from '../../../redux/scene/action'
 
 import {
@@ -18,6 +19,7 @@ class SceneChangeUpdateDispatcher extends PureComponent {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
         selectedSceneIndex: PropTypes.number.isRequired,
+        updateEntranceStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -64,12 +66,15 @@ class SceneChangeUpdateDispatcher extends PureComponent {
             sceneSkyTime = getSkyTimeForScene(songIndex, sceneIndex),
             sceneSkySeason = getSkySeasonForScene(songIndex, sceneIndex)
 
-        this.props.updateSceneStore({
+        this.props.updateEntranceStore({
             ...isUpdate ? {
                 canSceneUpdate: true
             } : {
                 canSceneEnter: true
-            },
+            }
+        })
+
+        this.props.updateSceneStore({
             sceneCubesKey,
             sceneSongIndex: songIndex,
             sceneSceneIndex: sceneIndex,
@@ -97,6 +102,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
+        updateEntranceStore,
         updateSceneStore
     }
 )(SceneChangeUpdateDispatcher)

@@ -9,12 +9,12 @@ import { STAGE_DEFAULTS } from './stage/default'
 import { THEATRE_DEFAULTS } from './theatre/default'
 
 export const VIEWPORT_DEFAULTS = {
+    windowHeight: 0,
+    windowWidth: 0,
     deviceWidthIndex: DEVICE_WIDTH_CONFIGS.length - 1,
     isPhoneWidth: false,
     isTabletWidth: false,
     isDesktopWidth: false,
-    windowHeight: 0,
-    windowWidth: 0,
 
     [PROSCENIUM_STORE]: PROSCENIUM_DEFAULTS,
     [STAGE_STORE]: STAGE_DEFAULTS,

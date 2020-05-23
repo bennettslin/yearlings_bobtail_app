@@ -11,14 +11,6 @@ import {
     INITIAL_SCENE_INDEX
 } from '../selected/default'
 
-const SCENE_TRANSITION_DEFAULTS = {
-    didSceneScrollExit: true,
-    canSceneUpdate: false,
-    didSceneUpdate: false,
-    canSceneEnter: false,
-    didSceneEnter: false
-}
-
 const
     sceneCubesKey = getCubesKeyForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
     sceneLayers = getLayersForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
@@ -27,7 +19,6 @@ const
     sceneCubesKeys = getCubesForKey(sceneCubesKey)
 
 export const SCENE_DEFAULTS = {
-    ...SCENE_TRANSITION_DEFAULTS,
     sceneCubesKey,
     sceneSkyTime,
     sceneSkySeason,

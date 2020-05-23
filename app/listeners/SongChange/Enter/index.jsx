@@ -71,7 +71,7 @@ const mapStateToProps = ({
         didLyricUpdate,
         didCarouselUpdate
     },
-    sceneStore: { didSceneUpdate }
+    entranceStore: { didSceneUpdate }
 }) => ({
     canCarouselMount,
     didLyricUpdate,
@@ -81,7 +81,5 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    {
-        updateLyricStore
-    }
+    { updateLyricStore }
 )(SongChangeEnterListener)

@@ -1,7 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSceneStore } from '../../../redux/scene/action'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 
 import {
@@ -33,7 +33,7 @@ class ScrollLyricListener extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
 
-        updateSceneStore: PropTypes.func.isRequired,
+        updateEntranceStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -148,7 +148,7 @@ class ScrollLyricListener extends PureComponent {
     }
 
     _completeSceneChangeExit = () => {
-        this.props.updateSceneStore({ didSceneScrollExit: true })
+        this.props.updateEntranceStore({ didSceneScrollExit: true })
     }
 
     _getScrollElementsArray(scrollClass) {
@@ -234,7 +234,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateSceneStore,
+        updateEntranceStore,
         updateScrollLyricStore
     }
 )(ScrollLyricListener)

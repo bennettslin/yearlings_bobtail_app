@@ -28,7 +28,6 @@ export const getVerseIndexForScene = (songIndex, sceneIndex) => {
     return sceneVerseIndices[sceneIndex]
 }
 
-// TODO: Explore why sceneIndex is sometimes -1 when loading.
 export const getCubesKeyForScene = (songIndex, sceneIndex) => {
     const { sceneCubesKeys } = getSong(songIndex)
     return sceneIndex >= 0 ? sceneCubesKeys[sceneIndex] : DEFAULT_STAGE_KEY

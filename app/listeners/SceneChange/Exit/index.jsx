@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSceneStore } from '../../../redux/scene/action'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 
 class SceneChangeExitListener extends PureComponent {
 
@@ -11,7 +11,7 @@ class SceneChangeExitListener extends PureComponent {
         // Through Redux.
         selectedSceneIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        updateSceneStore: PropTypes.func.isRequired
+        updateEntranceStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -39,7 +39,7 @@ class SceneChangeExitListener extends PureComponent {
     }
 
     _beginExitTransition = () => {
-        this.props.updateSceneStore({
+        this.props.updateEntranceStore({
             didSceneScrollExit: false,
 
             // Scene change bypasses update part of transition.
@@ -71,7 +71,5 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    {
-        updateSceneStore
-    }
+    { updateEntranceStore }
 )(SceneChangeExitListener)
