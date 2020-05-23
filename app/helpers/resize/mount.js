@@ -32,20 +32,15 @@ export const getCanCarouselMount = ({
         windowHeight >= MIN_HEIGHT_WINDOW_FOR_CAROUSEL_NAV
 }
 
-export const getCanScoreMount = ({
-    deviceWidthIndex
-}) => {
-    console.error(IS_USER_AGENT_DESKTOP, deviceWidthIndex)
+export const getCanScoreMount = deviceWidthIndex => (
     // Score can mount if higher processor and not phone width.
-    return IS_USER_AGENT_DESKTOP && !getIsPhoneWidth(deviceWidthIndex)
-}
+    IS_USER_AGENT_DESKTOP && !getIsPhoneWidth(deviceWidthIndex)
+)
 
-export const getCanSliderMount = ({
-    deviceWidthIndex
-}) => {
+export const getCanSliderMount = deviceWidthIndex => (
     // Slider can mount if higher processor and desktop width.
-    return IS_USER_AGENT_DESKTOP && getIsDesktopWidth(deviceWidthIndex)
-}
+    IS_USER_AGENT_DESKTOP && getIsDesktopWidth(deviceWidthIndex)
+)
 
 export const getLyricDynamicHeight = ({
     canCarouselMount,

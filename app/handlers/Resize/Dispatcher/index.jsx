@@ -11,7 +11,7 @@ import { updateStageStore } from '../../../redux/viewport/stage/action'
 import { updateTheatreStore } from '../../../redux/viewport/theatre/action'
 import {
     getDeviceWidthIndex,
-    getWindowHeightAndWidth
+    getWindowDimensions
 } from '../../../helpers/resize/device'
 import { getIsHeightlessLyric } from '../../../helpers/resize/hidden'
 import {
@@ -24,7 +24,7 @@ import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
 } from '../../../helpers/resize/nav'
-import { getProsceniumCoordinates } from '../../../helpers/resize/proscenium'
+import { getProsceniumDimensionCoordinates } from '../../../helpers/resize/proscenium'
 import {
     getIsLyricExpandable,
     getIsTwoRowMenu,
@@ -33,7 +33,7 @@ import {
 } from '../../../helpers/resize/responsive'
 import { getCeilingFloorHeight } from '../../../helpers/resize/theatre'
 import { getIsMobileWiki } from '../../../helpers/resize/wiki'
-import { getStageCoordinates } from '../../../helpers/resize/stage'
+import { getStageDimensionCoordinates } from '../../../helpers/resize/stage'
 
 class ResizeDispatcher extends PureComponent {
 
@@ -72,10 +72,10 @@ class ResizeDispatcher extends PureComponent {
 
         const
             deviceWidthIndex = getDeviceWidthIndex(),
-            [
+            {
                 windowHeight,
                 windowWidth
-            ] = getWindowHeightAndWidth(this.rootElement),
+            } = getWindowDimensions(this.rootElement),
 
             isHeightlessLyric = getIsHeightlessLyric({
                 deviceWidthIndex,
@@ -126,7 +126,7 @@ class ResizeDispatcher extends PureComponent {
                 stageWidth,
                 stageHeight
 
-            } = getStageCoordinates({
+            } = getStageDimensionCoordinates({
                 deviceWidthIndex,
                 windowWidth,
                 windowHeight,
@@ -152,12 +152,8 @@ class ResizeDispatcher extends PureComponent {
 
         this.props.updateMountStore({
             canCarouselMount,
-            canScoreMount: getCanScoreMount({
-                deviceWidthIndex
-            }),
-            canSliderMount: getCanSliderMount({
-                deviceWidthIndex
-            }),
+            canScoreMount: getCanScoreMount(deviceWidthIndex),
+            canSliderMount: getCanSliderMount(deviceWidthIndex),
             lyricDynamicHeight: getLyricDynamicHeight({
                 canCarouselMount,
                 deviceWidthIndex,
@@ -168,7 +164,7 @@ class ResizeDispatcher extends PureComponent {
             })
         })
 
-        this._updateProsceniumStore({
+        this._updateProsceniumTheatreStore({
             deviceWidthIndex,
             windowHeight,
             menuHeight,
@@ -181,7 +177,7 @@ class ResizeDispatcher extends PureComponent {
         })
     }
 
-    _updateProsceniumStore({
+    _updateProsceniumTheatreStore({
         deviceWidthIndex,
         windowHeight,
         menuHeight,
@@ -197,7 +193,7 @@ class ResizeDispatcher extends PureComponent {
                 prosceniumLeft,
                 prosceniumWidth,
                 prosceniumHeight
-            } = getProsceniumCoordinates({
+            } = getProsceniumDimensionCoordinates({
                 stageTop,
                 stageLeft,
                 stageWidth,

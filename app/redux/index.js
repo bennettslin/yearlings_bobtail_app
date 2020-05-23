@@ -2,7 +2,6 @@ import { combineReducers } from 'redux'
 import AccessReducer from './access/reducer'
 import ActivatedReducer from './activated/reducer'
 import AnnotationReducer from './annotation/reducer'
-import AppReducer from './app/reducer'
 import AudioReducer from './audio/reducer'
 import BannerReducer from './banner/reducer'
 import DotsReducer from './dots/reducer'
@@ -30,7 +29,6 @@ import {
     ACCESS_STORE,
     ACTIVATED_STORE,
     ANNOTATION_STORE,
-    APP_STORE,
     AUDIO_STORE,
     BANNER_STORE,
     DOTS_STORE,
@@ -59,7 +57,6 @@ export default combineReducers({
     [ACCESS_STORE]: AccessReducer,
     [ACTIVATED_STORE]: ActivatedReducer,
     [ANNOTATION_STORE]: AnnotationReducer,
-    [APP_STORE]: AppReducer,
     [AUDIO_STORE]: AudioReducer,
     [BANNER_STORE]: BannerReducer,
     [DOTS_STORE]: DotsReducer,

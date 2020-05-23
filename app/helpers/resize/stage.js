@@ -71,7 +71,7 @@ const _getCentreFieldWidth = (
     return windowWidth * overflowPercentage - lyricWidth
 }
 
-export const getStageCoordinates = ({
+export const getStageDimensionCoordinates = ({
     deviceWidthIndex,
     windowWidth,
     windowHeight,

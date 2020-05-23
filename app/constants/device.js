@@ -15,5 +15,3 @@ export const IS_TOUCH_SUPPORTED =
     'ontouchstart' in window ||
     navigator.maxTouchPoints > 0 ||
     navigator.msMaxTouchPoints > 0
-
-console.error(IS_USER_AGENT_DESKTOP, IS_TOUCH_SUPPORTED)

@@ -1,6 +1,6 @@
 const PROSCENIUM_MULTIPLIER = 0.054
 
-export const getProsceniumCoordinates = ({
+export const getProsceniumDimensionCoordinates = ({
     stageTop,
     stageLeft,
     stageWidth,

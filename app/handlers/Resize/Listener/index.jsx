@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import ResizeDispatcher from '../Dispatcher'
 
 import { resetViewportForTransition } from '../../../redux/viewport/action'
-import { getWindowHeightAndWidth } from '../../../helpers/resize/device'
+import { getWindowDimensions } from '../../../helpers/resize/device'
 import { populateRefs } from '../../../helpers/ref'
 
 class ResizeListener extends PureComponent {
@@ -47,10 +47,10 @@ class ResizeListener extends PureComponent {
          * Doing this in all cases for now, not just iOS, for simplicity.
          */
         const
-            [
-                newHeight,
-                newWidth
-            ] = getWindowHeightAndWidth(this.rootElement),
+            {
+                windowHeight: newHeight,
+                windowWidth: newWidth
+            } = getWindowDimensions(this.rootElement),
             {
                 windowHeight,
                 windowWidth

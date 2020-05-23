@@ -1,14 +1,14 @@
 import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 
-export const getWindowHeightAndWidth = rootElement => {
+export const getWindowDimensions = rootElement => {
     const
         windowHeight = rootElement.getBoundingClientRect().height,
         windowWidth = window.innerWidth
 
-    return [
+    return {
         windowHeight,
         windowWidth
-    ]
+    }
 }
 
 export const getDeviceWidthIndex = () => {
