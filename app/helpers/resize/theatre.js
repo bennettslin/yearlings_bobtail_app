@@ -2,9 +2,8 @@ import {
     CSS_HEIGHT_MENU,
     HEIGHT_TWO_ROW_MENU,
     HEIGHT_LYRIC_COLLAPSED
-} from '../../../../constants/responsive'
-
-import { getIsDesktopWidth } from '../../../../helpers/responsive'
+} from '../../constants/responsive'
+import { getIsDesktopWidth } from '../responsive'
 
 /*********
  * STAGE *

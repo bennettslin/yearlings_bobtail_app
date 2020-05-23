@@ -1,14 +1,13 @@
 import {
     getIsDesktopWidth,
     getIsMonitorWidth
-} from '../../../../helpers/responsive'
-
+} from '../responsive'
 import { getCentreFieldHeight } from './theatre'
 
 import {
     STAGE_ASPECT_RATIO,
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
-} from '../../../../constants/stage'
+} from '../../constants/stage'
 
 import {
     CSS_LENGTH_ICON,
@@ -16,7 +15,7 @@ import {
     CSS_LENGTH_ICON_LARGE_TABLET,
     CSS_LENGTH_ICON_LARGE,
     CSS_MARGIN_THIN
-} from '../../../../constants/responsive'
+} from '../../constants/responsive'
 
 import {
     CSS_HEIGHT_NAV,
@@ -28,7 +27,7 @@ import {
     LAPTOP_WIDTH_KEY,
     MONITOR_WIDTH_KEY,
     DEVICE_WIDTH_CONFIGS
-} from '../../../../constants/responsive/deviceWidth'
+} from '../../constants/responsive/deviceWidth'
 
 const _getLeftShelfOverflow = (deviceWidthIndex) => {
     let toggleButtonWidth = 0

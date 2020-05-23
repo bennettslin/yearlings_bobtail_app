@@ -3,12 +3,11 @@ import {
     getIsMiniWidth,
     getIsTabletWidth,
     getIsMonitorWidth
-} from '../../../../helpers/responsive'
-
+} from '../responsive'
 import {
     DEVICE_WIDTH_CONFIGS,
     MINI_WIDTH_CONFIG
-} from '../../../../constants/responsive/deviceWidth'
+} from '../../constants/responsive/deviceWidth'
 
 const _getShowShrunkNavIconForDeviceObject = (
     windowWidth,

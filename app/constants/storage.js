@@ -53,8 +53,7 @@ export const STORED_NAV_BOOK_INDEX = getBookForSongIndex(INITIAL_SONG_INDEX)
 
 export const STORED_AUDIO_OPTION_INDEX = getAudioOptionFromStorage()
 
-export const STORED_OVERVIEW_OPTION = getOptionFromStorage(
-    SELECTED_OVERVIEW_OPTION
-)
+export const STORED_OVERVIEW_OPTION =
+    getOptionFromStorage(SELECTED_OVERVIEW_OPTION)
 
 export const STORED_TIPS_OPTION = getOptionFromStorage(SELECTED_TIPS_OPTION)

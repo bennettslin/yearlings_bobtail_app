@@ -9,34 +9,33 @@ import { updateViewportStore } from '../../../redux/viewport/action'
 import { updateProsceniumStore } from '../../../redux/viewport/proscenium/action'
 import { updateStageStore } from '../../../redux/viewport/stage/action'
 import { updateTheatreStore } from '../../../redux/viewport/theatre/action'
-
 import {
     getDeviceWidthIndex,
     getWindowHeightAndWidth
-} from '../helper'
-import { getIsHeightlessLyric } from './helpers/hidden'
+} from '../../../helpers/resize/device'
+import { getIsHeightlessLyric } from '../../../helpers/resize/hidden'
 import {
     getCanCarouselMount,
     getCanScoreMount,
     getCanSliderMount,
     getLyricDynamicHeight
-} from './helpers/mount'
+} from '../../../helpers/resize/mount'
 import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
-} from './helpers/nav'
-import { getProsceniumCoordinates } from './helpers/proscenium'
+} from '../../../helpers/resize/nav'
+import { getProsceniumCoordinates } from '../../../helpers/resize/proscenium'
 import {
     getIsLyricExpandable,
     getIsTwoRowMenu,
     getMenuHeight,
     getIsSmallBannerText
-} from './helpers/responsive'
-import { getCeilingFloorHeight } from './helpers/theatre'
-import { getIsMobileWiki } from './helpers/wiki'
-import { getStageCoordinates } from './helpers/stage'
+} from '../../../helpers/resize/responsive'
+import { getCeilingFloorHeight } from '../../../helpers/resize/theatre'
+import { getIsMobileWiki } from '../../../helpers/resize/wiki'
+import { getStageCoordinates } from '../../../helpers/resize/stage'
 
-class WindowResizeEnterDispatcher extends PureComponent {
+class ResizeDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -284,4 +283,4 @@ export default connect(
         updateStageStore,
         updateTheatreStore
     }
-)(WindowResizeEnterDispatcher)
+)(ResizeDispatcher)

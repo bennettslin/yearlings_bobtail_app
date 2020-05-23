@@ -14,7 +14,7 @@ import ShownWrapper from '../../wrappers/ShownWrapper'
 import TouchWrapper from '../../wrappers/TouchWrapper'
 import TransitionWrapper from '../../wrappers/TransitionWrapper'
 import LogicWrapper from '../../wrappers/LogicWrapper'
-import WindowResizeExitListener from '../../listeners/WindowResize/Exit'
+import ResizeListener from '../../handlers/Resize/Listener'
 import Live from '../../components/Live'
 
 import { populateRefs } from '../../helpers/ref'
@@ -52,7 +52,7 @@ class RootContainer extends PureComponent {
                     )
                 }}
             >
-                <WindowResizeExitListener {...{ getRefs: this._getRefs }} />
+                <ResizeListener {...{ getRefs: this._getRefs }} />
                 <DeviceWrapper>
                     <PlayingWrapper>
                         <ResponsiveWrapper>

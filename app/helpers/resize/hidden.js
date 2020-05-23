@@ -1,12 +1,11 @@
-import { getIsPhoneWidth } from '../../../../helpers/responsive'
-
+import { getIsPhoneWidth } from '../responsive'
 import { getIsLyricExpandable } from './responsive'
 
 import {
     HEIGHTLESS_LYRIC_MIN,
     HEIGHTLESS_LYRIC_PHONE_MIN,
     HEIGHTLESS_LYRIC_MAX
-} from '../../../../constants/responsive'
+} from '../../constants/responsive'
 
 export const getIsHeightlessLyric = ({
     deviceWidthIndex,

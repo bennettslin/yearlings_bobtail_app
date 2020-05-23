@@ -2,12 +2,11 @@ import {
     getIsPhoneWidth,
     getIsMiniWidth,
     getIsDesktopWidth
-} from '../../../../helpers/responsive'
-
+} from '../responsive'
 import {
     MIN_HEIGHT_WINDOW_FOR_CAROUSEL_NAV,
     HEIGHT_LYRIC_COLLAPSED
-} from '../../../../constants/responsive'
+} from '../../constants/responsive'
 
 export const getCanScoreMount = ({
     deviceWidthIndex,

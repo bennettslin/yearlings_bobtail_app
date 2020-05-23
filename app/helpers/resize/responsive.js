@@ -1,19 +1,18 @@
 import {
     CSS_HEIGHT_MENU,
     HEIGHT_TWO_ROW_MENU
-} from '../../../../constants/responsive'
+} from '../../constants/responsive'
 import {
     BANNER_SMALL_TEXT_WIDTH,
     CSS_WIDTH_MENU_BREAKPOINT,
     CSS_WIDTH_UNCANNY_VALLEY,
     CSS_WIDTH_GOLDEN_CORD
-} from '../../../../constants/responsive/deviceWidth'
-
+} from '../../constants/responsive/deviceWidth'
 import {
     getIsDesktopWidth,
     getIsMonitorWidth,
     getIsLaptopWidth
-} from '../../../../helpers/responsive'
+} from '../responsive'
 
 export const getIsLyricExpandable = (deviceWidthIndex) => {
     return !getIsDesktopWidth(deviceWidthIndex)

@@ -2,15 +2,14 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'debounce'
 import { connect } from 'react-redux'
+
+import ResizeDispatcher from '../Dispatcher'
+
 import { resetViewportForTransition } from '../../../redux/viewport/action'
-
-import WindowResizeEnterDispatcher from '../Enter'
-
+import { getWindowHeightAndWidth } from '../../../helpers/resize/device'
 import { populateRefs } from '../../../helpers/ref'
 
-import { getWindowHeightAndWidth } from '../helper'
-
-class WindowResizeExitListener extends PureComponent {
+class ResizeListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -92,7 +91,7 @@ class WindowResizeExitListener extends PureComponent {
 
     render() {
         return (
-            <WindowResizeEnterDispatcher {...{ getRefs: this._getRefs }} />
+            <ResizeDispatcher {...{ getRefs: this._getRefs }} />
         )
     }
 }
@@ -110,4 +109,4 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     { resetViewportForTransition }
-)(WindowResizeExitListener)
+)(ResizeListener)
