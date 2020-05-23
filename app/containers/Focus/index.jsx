@@ -47,6 +47,8 @@ class FocusContainer extends PureComponent {
     componentDidMount() {
         logMount('FocusContainer')
 
+        this.rootElement = React.createRef()
+
         // Focus lyric section when app is mounted.
         this._focusElementForAccess()
     }
@@ -113,7 +115,7 @@ class FocusContainer extends PureComponent {
             focusedElementString = 'lyric'
 
         } else {
-            focusedElement = this.rootElement
+            focusedElement = this.rootElement.current
             focusedElementString = 'root'
         }
 
@@ -164,7 +166,6 @@ class FocusContainer extends PureComponent {
         this._focusElementForAccess()
     }
 
-    _setRootElement = node => this.rootElement = node
     _handleKeyDownPress = e => this.handleKeyDownPress(e)
     _handleKeyUpPress = e => this.handleKeyUpPress(e)
 
@@ -178,7 +179,7 @@ class FocusContainer extends PureComponent {
         return (
             <div
                 {...{
-                    ref: this._setRootElement,
+                    ref: this.rootElement,
                     className: 'FocusContainer',
                     tabIndex: -1,
                     onClick: this._handleBodyClick,
