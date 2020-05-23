@@ -7,5 +7,5 @@
 // export const SELECTED_ANNOTATION_INDEX_SELECTOR =
 //     ({ selectedStore: { selectedAnnotationIndex } }) => selectedAnnotationIndex
 
-// export const IS_SELECTED_LOGUE_SELECTOR =
-//     ({ selectedStore: { isSelectedLogue } }) => isSelectedLogue
+export const IS_SELECTED_LOGUE_SELECTOR =
+    ({ selectedStore: { isSelectedLogue } }) => isSelectedLogue

@@ -1,64 +1,46 @@
 // Child that knows rules to toggle score. Not needed if just turning off.
-
-import { PureComponent } from 'react'
+import { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
+import { CAN_SCORE_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
+import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
+import { IS_SCORE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
 
-class ScoreDispatcher extends PureComponent {
+const ScoreDispatcher = ({ getRefs }) => {
+    const
+        dispatch = useDispatch(),
+        isScoreShown = useSelector(IS_SCORE_SHOWN_SELECTOR),
+        canScoreMount = useSelector(CAN_SCORE_MOUNT_SELECTOR),
+        isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
+        dispatchScore = (
+            // Just toggle unless parent specifies value.
+            triedIsScoreShown = !isScoreShown
+        ) => {
+            // Turning off is always successful.
+            const isScoreShown = triedIsScoreShown &&
 
-    static propTypes = {
-        // Through Redux.
-        isScoreShown: PropTypes.bool.isRequired,
-        canScoreMount: PropTypes.bool.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
+                // If trying to turn on, score must be mountable, and...
+                canScoreMount &&
 
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
+                // ... also must not be in logue.
+                !isSelectedLogue
 
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchScore: this.dispatchScore
-        })
-    }
+            dispatch(updateToggleStore({ isScoreShown }))
 
-    dispatchScore = (
-        // Just toggle unless parent specifies value.
-        triedIsScoreShown = !this.props.isScoreShown
-    ) => {
-        // Turning off is always successful.
-        const isScoreShown = triedIsScoreShown &&
+            // Try was successful.
+            return isScoreShown === triedIsScoreShown
+        }
 
-            // If trying to turn on, score must be mountable, and...
-            this.props.canScoreMount &&
+    useEffect(() => {
+        getRefs({ dispatchScore })
+    }, [])
 
-            // ... also must not be in logue.
-            !this.props.isSelectedLogue
-
-        this.props.updateToggleStore({ isScoreShown })
-
-        // Try was successful.
-        return isScoreShown === triedIsScoreShown
-    }
-
-    render() {
-        return null
-    }
+    return null
 }
 
-const mapStateToProps = ({
-    toggleStore: { isScoreShown },
-    mountStore: { canScoreMount },
-    selectedStore: { isSelectedLogue }
-}) => ({
-    isScoreShown,
-    canScoreMount,
-    isSelectedLogue
-})
+ScoreDispatcher.propTypes = {
+    getRefs: PropTypes.func.isRequired
+}
 
-export default connect(
-    mapStateToProps,
-    { updateToggleStore }
-)(ScoreDispatcher)
+export default ScoreDispatcher
