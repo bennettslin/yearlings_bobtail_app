@@ -3,10 +3,8 @@ import { getValidSongIndex } from '../album/api/songs'
 import { getValidVerseIndex } from '../album/api/verses'
 import { getValidAnnotationIndex } from '../album/api/annotations'
 
-import { getObjectFromBitNumber } from './bit'
 import { getArrayOfLength } from './general'
 import {
-    ORDERED_DOT_KEYS,
     INITIAL_DOTS_BIT_NUMBER,
     FULL_DOTS_STORE
 } from '../constants/dots'
@@ -171,11 +169,5 @@ export const getDotsFromStorage = () => {
 
     // This only saves upon initial retrieval.
     setInStorage(DOTS_BIT_NUMBER, savedBitNumber)
-    return {
-        dotsBitNumber: savedBitNumber,
-        ...getObjectFromBitNumber({
-            keysArray: ORDERED_DOT_KEYS,
-            bitNumber: savedBitNumber
-        })
-    }
+    return savedBitNumber
 }

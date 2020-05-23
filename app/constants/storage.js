@@ -40,6 +40,8 @@ export const INITIAL_SCENE_INDEX = getSceneIndexForVerse(
     INITIAL_VERSE_INDEX
 )
 
+// export const STORED_DOTS_BIT_NUMBER
+
 export const IS_STORED_ACCESS_ON = getBoolFromStorage(IS_ACCESS_ON)
 
 export const IS_STORED_CAROUSEL_SHOWN = getBoolFromStorage(IS_CAROUSEL_SHOWN)

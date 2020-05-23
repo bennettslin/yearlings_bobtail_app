@@ -49,6 +49,8 @@ class DotSelectDispatcher extends PureComponent {
 
         this.props.updateDotsStore({
             dotsBitNumber,
+
+            // This is just updated for dev clarity.
             [selectedDotKey]: isSelected
         })
 
