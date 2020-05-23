@@ -2,7 +2,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
-import { updateLyricStore } from '../../../redux/lyric/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 
 class SongChangeExitListener extends PureComponent {
@@ -14,7 +13,6 @@ class SongChangeExitListener extends PureComponent {
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         canSceneUpdate: PropTypes.bool.isRequired,
         updateEntranceStore: PropTypes.func.isRequired,
-        updateLyricStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired
     }
 
@@ -47,7 +45,6 @@ class SongChangeExitListener extends PureComponent {
 
         this.props.updateEntranceStore({
             // Song change bypasses scroll exit part of transition.
-
             canSceneUpdate: false,
 
             /**
@@ -65,8 +62,7 @@ class SongChangeExitListener extends PureComponent {
             didSceneEnter: false
         })
 
-        this.props.updateLyricStore({
-
+        this.props.updateEntranceStore({
             ...canLyricCarouselEnter && {
                 didCarouselExit: false,
                 didLyricExit: false,
@@ -112,8 +108,8 @@ class SongChangeExitListener extends PureComponent {
 
 const mapStateToProps = ({
     selectedStore: { selectedSongIndex },
-    entranceStore: { canSceneUpdate },
-    lyricStore: {
+    entranceStore: {
+        canSceneUpdate,
         canLyricCarouselUpdate,
         canLyricCarouselEnter
     }
@@ -127,7 +123,6 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateLyricStore,
         updateEntranceStore,
         updateSelectedStore
     }

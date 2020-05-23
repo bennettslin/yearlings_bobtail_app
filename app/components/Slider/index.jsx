@@ -20,7 +20,7 @@ import {
 import { SLIDER } from '../../constants/tips'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricCarouselEnter }
+    entranceStore: { canLyricCarouselEnter }
 }) => ({
     canLyricCarouselEnter
 })

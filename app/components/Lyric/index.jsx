@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateLyricStore } from '../../redux/lyric/action'
+import { updateEntranceStore } from '../../redux/entrance/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricAccess from './Access'
@@ -16,7 +16,7 @@ import CarouselAccess from '../Carousel/Access'
 import { populateRefs } from '../../helpers/ref'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricCarouselEnter }
+    entranceStore: { canLyricCarouselEnter }
 }) => ({
     canLyricCarouselEnter
 })
@@ -30,7 +30,7 @@ class Lyric extends PureComponent {
     static propTypes = {
         // Through Redux.
         canLyricCarouselEnter: PropTypes.bool.isRequired,
-        updateLyricStore: PropTypes.func.isRequired,
+        updateEntranceStore: PropTypes.func.isRequired,
 
         // From parent.
         setLyricFocusElement: PropTypes.func.isRequired
@@ -45,11 +45,11 @@ class Lyric extends PureComponent {
     }
 
     _handleTransitionExited = () => {
-        this.props.updateLyricStore({ didLyricExit: true })
+        this.props.updateEntranceStore({ didLyricExit: true })
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateLyricStore({ didLyricEnter: true })
+        this.props.updateEntranceStore({ didLyricEnter: true })
     }
 
     _getRefs = payload => {
@@ -117,5 +117,5 @@ class Lyric extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateLyricStore }
+    { updateEntranceStore }
 )(Lyric)

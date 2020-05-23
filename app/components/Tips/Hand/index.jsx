@@ -19,10 +19,8 @@ const mapStateToProps = ({
         reference,
         wormhole
     },
-    lyricStore: {
-        didLyricUpdate,
-        lyricSongIndex
-    },
+    entranceStore: { didLyricUpdate },
+    lyricStore: { lyricSongIndex },
     optionStore: { selectedTipsOption },
     viewportStore: { isPhoneWidth }
 }) => ({

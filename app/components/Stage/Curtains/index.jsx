@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateLyricStore } from '../../../redux/lyric/action'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import AspectRatio from '../AspectRatio'
@@ -14,7 +14,7 @@ import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
 import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricCarouselEnter }
+    entranceStore: { canLyricCarouselEnter }
 }) => ({
     canLyricCarouselEnter
 })
@@ -24,7 +24,7 @@ class Curtains extends PureComponent {
     static propTypes = {
         // Through Redux.
         canLyricCarouselEnter: PropTypes.bool.isRequired,
-        updateLyricStore: PropTypes.func.isRequired
+        updateEntranceStore: PropTypes.func.isRequired
     }
 
     _handleTransitionExited = () => {
@@ -33,11 +33,11 @@ class Curtains extends PureComponent {
     }
 
     _exitTransition = () => {
-        this.props.updateLyricStore({ didCurtainExit: true })
+        this.props.updateEntranceStore({ didCurtainExit: true })
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateLyricStore({ didCurtainEnter: true })
+        this.props.updateEntranceStore({ didCurtainEnter: true })
     }
 
     render() {
@@ -113,5 +113,5 @@ class Curtains extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateLyricStore }
+    { updateEntranceStore }
 )(Curtains)

@@ -1,7 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateLyricStore } from '../../../redux/lyric/action'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 
 class SongChangeEnterListener extends PureComponent {
 
@@ -11,7 +11,7 @@ class SongChangeEnterListener extends PureComponent {
         didSceneUpdate: PropTypes.bool.isRequired,
         didLyricUpdate: PropTypes.bool.isRequired,
         didCarouselUpdate: PropTypes.bool.isRequired,
-        updateLyricStore: PropTypes.func.isRequired
+        updateEntranceStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -57,7 +57,7 @@ class SongChangeEnterListener extends PureComponent {
 
     _beginEnterTransition() {
         logTransition('Lyric carousel can enter.')
-        this.props.updateLyricStore({ canLyricCarouselEnter: true })
+        this.props.updateEntranceStore({ canLyricCarouselEnter: true })
     }
 
     render() {
@@ -67,11 +67,11 @@ class SongChangeEnterListener extends PureComponent {
 
 const mapStateToProps = ({
     mountStore: { canCarouselMount },
-    lyricStore: {
+    entranceStore: {
         didLyricUpdate,
-        didCarouselUpdate
-    },
-    entranceStore: { didSceneUpdate }
+        didCarouselUpdate,
+        didSceneUpdate
+    }
 }) => ({
     canCarouselMount,
     didLyricUpdate,
@@ -81,5 +81,5 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    { updateLyricStore }
+    { updateEntranceStore }
 )(SongChangeEnterListener)

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateLyricStore } from '../../../redux/lyric/action'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 
 import Transition from 'react-transition-group/Transition'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
@@ -15,10 +15,8 @@ import { populateRefs } from '../../../helpers/ref'
 import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
 
 const mapStateToProps = ({
-    lyricStore: {
-        canLyricCarouselUpdate,
-        lyricSongIndex
-    }
+    entranceStore: { canLyricCarouselUpdate },
+    lyricStore: { lyricSongIndex }
 }) => ({
     canLyricCarouselUpdate,
     lyricSongIndex
@@ -34,7 +32,7 @@ class LyricScroll extends PureComponent {
         // Through Redux.
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
-        updateLyricStore: PropTypes.func.isRequired,
+        updateEntranceStore: PropTypes.func.isRequired,
 
         // From parent.
         setLyricFocusElement: PropTypes.func.isRequired,
@@ -92,7 +90,7 @@ class LyricScroll extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateLyricStore({ didLyricUpdate: true })
+        this.props.updateEntranceStore({ didLyricUpdate: true })
     }
 
     _getRefs = payload => {
@@ -169,5 +167,5 @@ class LyricScroll extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateLyricStore }
+    { updateEntranceStore }
 )(LyricScroll)

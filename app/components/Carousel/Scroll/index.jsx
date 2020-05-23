@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateLyricStore } from '../../../redux/lyric/action'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 
 import Transition from 'react-transition-group/Transition'
 import ScrollCarouselListener from '../../../listeners/Scroll/Carousel'
@@ -13,8 +13,8 @@ import { getAnnotationIndices } from '../../../album/api/annotations'
 import { populateRefs } from '../../../helpers/ref'
 
 const mapStateToProps = ({
+    entranceStore: { canLyricCarouselUpdate },
     lyricStore: {
-        canLyricCarouselUpdate,
         lyricSongIndex,
         lyricAnnotationIndex
     },
@@ -39,7 +39,7 @@ class CarouselScroll extends PureComponent {
         lyricAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
-        updateLyricStore: PropTypes.func.isRequired
+        updateEntranceStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -47,7 +47,7 @@ class CarouselScroll extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateLyricStore({ didCarouselUpdate: true })
+        this.props.updateEntranceStore({ didCarouselUpdate: true })
     }
 
     _setCarouselParent = (node) => {
@@ -115,5 +115,5 @@ class CarouselScroll extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateLyricStore }
+    { updateEntranceStore }
 )(CarouselScroll)

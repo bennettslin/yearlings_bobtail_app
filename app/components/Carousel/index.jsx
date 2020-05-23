@@ -4,14 +4,14 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateLyricStore } from '../../redux/lyric/action'
+import { updateEntranceStore } from '../../redux/entrance/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricCarouselEnter }
+    entranceStore: { canLyricCarouselEnter }
 }) => ({
     canLyricCarouselEnter
 })
@@ -21,7 +21,7 @@ class Carousel extends PureComponent {
     static propTypes = {
         // Through Redux.
         canLyricCarouselEnter: PropTypes.bool.isRequired,
-        updateLyricStore: PropTypes.func.isRequired
+        updateEntranceStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -29,11 +29,11 @@ class Carousel extends PureComponent {
     }
 
     _handleTransitionExited = () => {
-        this.props.updateLyricStore({ didCarouselExit: true })
+        this.props.updateEntranceStore({ didCarouselExit: true })
     }
 
     _handleTransitionEntered = () => {
-        this.props.updateLyricStore({ didCarouselEnter: true })
+        this.props.updateEntranceStore({ didCarouselEnter: true })
     }
 
     render() {
@@ -67,5 +67,5 @@ class Carousel extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateLyricStore }
+    { updateEntranceStore }
 )(Carousel)

@@ -10,8 +10,8 @@ import { getShowTipForDevice } from '../../../album/api/tips'
 import { SHOWN } from '../../../constants/options'
 
 const mapStateToProps = ({
+    entranceStore: { canLyricCarouselEnter },
     lyricStore: {
-        canLyricCarouselEnter,
         isLyricLogue,
         lyricSongIndex
     },

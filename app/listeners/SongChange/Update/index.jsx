@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateLyricStore } from '../../../redux/lyric/action'
 
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
@@ -22,6 +23,7 @@ class SongChangeUpdateListener extends PureComponent {
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
 
+        updateEntranceStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired
     }
 
@@ -80,8 +82,11 @@ class SongChangeUpdateListener extends PureComponent {
             selectedAnnotationIndex
         } = this.props
 
+        this.props.updateEntranceStore({
+            canLyricCarouselUpdate: true
+        })
+
         this.props.updateLyricStore({
-            canLyricCarouselUpdate: true,
             lyricSongIndex: selectedSongIndex,
             lyricVerseIndex: selectedVerseIndex,
             lyricAnnotationIndex: selectedAnnotationIndex
@@ -105,7 +110,7 @@ class SongChangeUpdateListener extends PureComponent {
 
 const mapStateToProps = ({
     mountStore: { canCarouselMount },
-    lyricStore: {
+    entranceStore: {
         didCarouselExit,
         didLyricExit,
         didCurtainExit
@@ -130,6 +135,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
+        updateEntranceStore,
         updateLyricStore
     }
 )(SongChangeUpdateListener)

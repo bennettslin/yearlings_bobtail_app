@@ -130,8 +130,8 @@ const mapStateToProps = ({
         isScoreShown,
         isAboutShown
     },
+    entranceStore: { canLyricCarouselEnter },
     lyricStore: {
-        canLyricCarouselEnter,
         lyricAnnotationIndex,
         isLyricLogue
     },

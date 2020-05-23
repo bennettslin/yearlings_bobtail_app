@@ -6,10 +6,8 @@ import { connect } from 'react-redux'
 import { updateTransientStore } from '../../redux/transient/action'
 
 const mapStateToProps = ({
-    lyricStore: {
-        canLyricCarouselEnter,
-        lyricAnnotationIndex
-    },
+    entranceStore: { canLyricCarouselEnter },
+    lyricStore: { lyricAnnotationIndex },
     toggleStore: {
         isAboutShown,
         isScoreShown,

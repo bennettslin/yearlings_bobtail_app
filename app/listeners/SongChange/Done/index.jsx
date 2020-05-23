@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateLyricStore } from '../../../redux/lyric/action'
 
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
 
@@ -75,7 +74,7 @@ class SongChangeDoneListener extends PureComponent {
 
 const mapStateToProps = ({
     mountStore: { canCarouselMount },
-    lyricStore: {
+    entranceStore: {
         didCarouselEnter,
         didLyricEnter,
         didCurtainEnter
@@ -87,9 +86,4 @@ const mapStateToProps = ({
     didCurtainEnter
 })
 
-export default connect(
-    mapStateToProps,
-    {
-        updateLyricStore
-    }
-)(SongChangeDoneListener)
+export default connect(mapStateToProps)(SongChangeDoneListener)

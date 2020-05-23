@@ -46,7 +46,7 @@ class TransitionWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    lyricStore: { canLyricCarouselEnter }
+    entranceStore: { canLyricCarouselEnter }
 }) => ({
     canLyricCarouselEnter
 })

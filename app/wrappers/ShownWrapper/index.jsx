@@ -113,8 +113,8 @@ const mapStateToProps = ({
         wormhole,
         reference
     },
+    entranceStore: { canLyricCarouselEnter },
     lyricStore: {
-        canLyricCarouselEnter,
         isLyricLogue,
         lyricSongIndex,
         lyricAnnotationIndex

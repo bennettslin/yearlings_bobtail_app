@@ -13,7 +13,7 @@ import {
 } from './helper'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricCarouselEnter },
+    entranceStore: { canLyricCarouselEnter },
     transientStore: { isOverlayShown },
     optionStore: {
         isLogueOverviewShown,

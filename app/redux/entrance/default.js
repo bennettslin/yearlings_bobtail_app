@@ -10,5 +10,18 @@ export const ENTRANCE_DEFAULTS = {
     canSceneUpdate: false,
     didSceneUpdate: false,
     canSceneEnter: false,
-    didSceneEnter: false
+    didSceneEnter: false,
+
+    didCarouselExit: true,
+    didLyricExit: true,
+    didCurtainExit: true,
+
+    canLyricCarouselUpdate: false,
+    didLyricUpdate: false,
+    didCarouselUpdate: false,
+
+    canLyricCarouselEnter: false,
+    didLyricEnter: false,
+    didCarouselEnter: false,
+    didCurtainEnter: false
 }
