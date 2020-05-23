@@ -12,17 +12,16 @@ import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
 
 import { populateRefs } from '../../../helpers/ref'
+import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
 
 const mapStateToProps = ({
     lyricStore: {
         canLyricCarouselUpdate,
         lyricSongIndex
-    },
-    appStore: { isTouchSupported }
+    }
 }) => ({
     canLyricCarouselUpdate,
-    lyricSongIndex,
-    isTouchSupported
+    lyricSongIndex
 })
 
 /*************
@@ -35,7 +34,6 @@ class LyricScroll extends PureComponent {
         // Through Redux.
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
-        isTouchSupported: PropTypes.bool.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -103,8 +101,7 @@ class LyricScroll extends PureComponent {
 
     render() {
         const {
-            canLyricCarouselUpdate,
-            isTouchSupported
+            canLyricCarouselUpdate
         } = this.props
 
         return (
@@ -134,7 +131,7 @@ class LyricScroll extends PureComponent {
                             onScroll: this._handleDetermineVerseBars,
                             onWheel: this._handleDetermineAutoScroll
                         }}
-                        {...isTouchSupported && {
+                        {...IS_TOUCH_SUPPORTED && {
                             onTouchMove: this._handleDetermineAutoScroll
                         }}
                     >

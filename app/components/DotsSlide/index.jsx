@@ -13,6 +13,7 @@ import DotsSlideSelect from './Select'
 import { getDotKeysFromBitNumber } from '../../helpers/dot'
 import { populateRefs } from '../../helpers/ref'
 
+import { IS_TOUCH_SUPPORTED } from '../../constants/device'
 import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
 
 const mapStateToProps = ({
@@ -22,15 +23,13 @@ const mapStateToProps = ({
     },
     toggleStore: { isDotsSlideShown },
     dotsStore: { dotsBitNumber },
-    dotsSlideStore: { dotsSlideBitNumber },
-    appStore: { isTouchSupported }
+    dotsSlideStore: { dotsSlideBitNumber }
 }) => ({
     accessedDotIndex,
     isAccessOn,
     isDotsSlideShown,
     dotsBitNumber,
-    dotsSlideBitNumber,
-    isTouchSupported
+    dotsSlideBitNumber
 })
 
 class DotsSlide extends PureComponent {
@@ -42,7 +41,6 @@ class DotsSlide extends PureComponent {
         accessedDotIndex: PropTypes.number,
         dotsBitNumber: PropTypes.number.isRequired,
         dotsSlideBitNumber: PropTypes.number.isRequired,
-        isTouchSupported: PropTypes.bool.isRequired,
         resetActivatedDots: PropTypes.func.isRequired
     }
 
@@ -70,8 +68,7 @@ class DotsSlide extends PureComponent {
         const {
                 isAccessOn,
                 isDotsSlideShown,
-                accessedDotIndex,
-                isTouchSupported
+                accessedDotIndex
             } = this.props,
 
             selectedDotKeys = this.getSelectedDotKeys(),
@@ -102,7 +99,7 @@ class DotsSlide extends PureComponent {
                                  * will prevent mouse from hovering, but this
                                  * is an acceptable tradeoff, at least for now.
                                  */
-                                !isTouchSupported && 'DotsSlide__canHover'
+                                !IS_TOUCH_SUPPORTED && 'DotsSlide__canHover'
                             ),
                             onClick: this._handleContainerClick
                         }}
