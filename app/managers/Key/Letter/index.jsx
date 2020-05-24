@@ -52,7 +52,6 @@ class LetterManager extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isAccessOn: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isNavShown: PropTypes.bool.isRequired,
@@ -76,8 +75,13 @@ class LetterManager extends PureComponent {
             handleLetter: this.handleLetter,
             handleEscape: this.handleEscape
         })
+    }
 
-        this.scoreDispatcher = React.createRef()
+    getDispatchScore = current => {
+        if (current) {
+            const { dispatchScore } = current
+            this.dispatchScore = dispatchScore
+        }
     }
 
     handleLetter = (keyName) => {
@@ -131,7 +135,7 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = this.activateSceneDirection(1)
                 break
             case SCORE_TOGGLE_KEY:
-                keyWasRegistered = this.scoreDispatcher.current.dispatchScore()
+                keyWasRegistered = this.dispatchScore()
                 break
             case TIPS_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchTips()
@@ -159,7 +163,7 @@ class LetterManager extends PureComponent {
 
         // Close score popup.
         if (this.props.isScoreShown) {
-            this.scoreDispatcher.current.dispatchScore(false)
+            this.dispatchScore(false)
 
         // Close title popup.
         } else if (this.props.isAboutShown) {
@@ -216,18 +220,17 @@ class LetterManager extends PureComponent {
                 <LyricDispatcher {...{ getRefs: this._getRefs }} />
                 <OverviewDispatcher {...{ getRefs: this._getRefs }} />
                 <PlayDispatcher {...{ getRefs: this._getRefs }} />
-                <ScoreDispatcher {...{ ref: this.scoreDispatcher }} />
                 <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
                 <TipsDispatcher {...{ getRefs: this._getRefs }} />
                 <AboutDispatcher {...{ getRefs: this._getRefs }} />
+                <ScoreDispatcher {...{ ref: this.getDispatchScore }} />
             </>
         )
     }
 }
 
 const mapStateToProps = ({
-    accessStore: { isAccessOn },
     toggleStore: {
         isDotsSlideShown,
         isLyricExpanded,
@@ -242,7 +245,6 @@ const mapStateToProps = ({
     selectedStore: { selectedAnnotationIndex },
     sessionStore: { selectedWikiIndex }
 }) => ({
-    isAccessOn,
     isDotsSlideShown,
     isLyricExpanded,
     isNavShown,

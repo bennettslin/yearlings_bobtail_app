@@ -199,7 +199,6 @@ class FocusContainer extends PureComponent {
             >
                 <CloseHandler {...{ getRefs: this._getRefs }} />
                 <AccessStylesheet />
-                <KeyManager {...{ getRefs: this._getRefs }} />
                 <RootContainer
                     {...{ setLyricFocusElement: this.setLyricFocusElement }}
                 />
@@ -207,6 +206,7 @@ class FocusContainer extends PureComponent {
                     <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
                 )}
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                <KeyManager {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

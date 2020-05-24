@@ -33,7 +33,6 @@ const ScoreDispatcher = forwardRef((props, ref) => {
         }
 
     useImperativeHandle(ref, () => ({ dispatchScore }))
-
     return null
 })
 
