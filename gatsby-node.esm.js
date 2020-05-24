@@ -11,8 +11,6 @@ export const onCreateWebpackConfig = ({ actions }) => {
         isLocalDevelopment = buildEnvironment === 'local',
         isDeliveryEnvironment = buildEnvironment !== 'production'
 
-    console.log('process.env', buildEnvironment, isLocalDevelopment, isDeliveryEnvironment)
-
     actions.setWebpackConfig({
         plugins: [
             // Define global constant at compile time.
@@ -47,7 +45,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
         //         {
         //             test: /\.jsx?$/,
         //             include: [
-        //                 path.resolve(__dirname, './src'),
+        //                 path.resolve(__dirname, './app'),
         //                 ...isDeliveryEnvironment ? [path.resolve(__dirname, './admin')] : []
         //             ],
         //             enforce: 'pre',
@@ -60,7 +58,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
         //         {
         //             test: /\.scss$/,
         //             include: [
-        //                 path.resolve(__dirname, './src'),
+        //                 path.resolve(__dirname, './app'),
         //                 ...isDeliveryEnvironment ? [path.resolve(__dirname, './admin')] : []
         //             ],
         //             loaders: [
@@ -111,6 +109,6 @@ export const onCreateWebpackConfig = ({ actions }) => {
         //             }
         //         }
         //     ]
-        // },
+        // }
     })
 }
