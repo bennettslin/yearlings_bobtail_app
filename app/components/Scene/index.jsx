@@ -30,6 +30,7 @@ class Scene extends PureComponent {
     }
 
     _handleTransitionUpdated = () => {
+        logTransition('Scene did update.')
         this.props.updateEntranceStore({ didSceneUpdate: true })
     }
 

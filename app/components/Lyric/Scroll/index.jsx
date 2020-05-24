@@ -90,6 +90,7 @@ class LyricScroll extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
+        logTransition('Lyric did update from LyricScroll.')
         this.props.updateEntranceStore({ didLyricUpdate: true })
     }
 

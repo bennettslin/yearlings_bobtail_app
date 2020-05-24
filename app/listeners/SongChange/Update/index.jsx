@@ -82,6 +82,7 @@ class SongChangeUpdateListener extends PureComponent {
             selectedAnnotationIndex
         } = this.props
 
+        logTransition('Lyric carousel can update from song change.')
         this.props.updateEntranceStore({
             canLyricCarouselUpdate: true
         })
@@ -113,10 +114,10 @@ const mapStateToProps = ({
     entranceStore: {
         didCarouselExit,
         didLyricExit,
-        didCurtainExit
+        didCurtainExit,
+        isSongSelectInFlux
     },
     selectedStore: {
-        isSongSelectInFlux,
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex

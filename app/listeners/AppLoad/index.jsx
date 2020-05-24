@@ -49,6 +49,7 @@ class AppLoadListener extends PureComponent {
                 !didSceneEnter
             )
         ) {
+            logTransition('Initial theatre did enter.')
             this.props.updateEntranceStore({
                 canLyricCarouselUpdate: true,
                 didCarouselUpdate: true,

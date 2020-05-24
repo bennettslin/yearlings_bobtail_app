@@ -23,5 +23,7 @@ export const ENTRANCE_DEFAULTS = {
     canLyricCarouselEnter: false,
     didLyricEnter: false,
     didCarouselEnter: false,
-    didCurtainEnter: false
+    didCurtainEnter: false,
+
+    isSongSelectInFlux: false
 }

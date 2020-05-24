@@ -45,10 +45,12 @@ class Lyric extends PureComponent {
     }
 
     _handleTransitionExited = () => {
+        logTransition('Lyric did exit.')
         this.props.updateEntranceStore({ didLyricExit: true })
     }
 
     _handleTransitionEntered = () => {
+        logTransition('Lyric did enter.')
         this.props.updateEntranceStore({ didLyricEnter: true })
     }
 

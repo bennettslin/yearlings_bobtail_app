@@ -66,6 +66,7 @@ class SceneChangeUpdateDispatcher extends PureComponent {
             sceneSkyTime = getSkyTimeForScene(songIndex, sceneIndex),
             sceneSkySeason = getSkySeasonForScene(songIndex, sceneIndex)
 
+        logTransition('Begin enter or update from scene change.')
         this.props.updateEntranceStore({
             ...isUpdate ? {
                 canSceneUpdate: true

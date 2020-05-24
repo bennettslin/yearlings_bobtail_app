@@ -2,7 +2,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
-import { updateSelectedStore } from '../../../redux/selected/action'
 
 class SongChangeExitListener extends PureComponent {
 
@@ -12,8 +11,7 @@ class SongChangeExitListener extends PureComponent {
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         canSceneUpdate: PropTypes.bool.isRequired,
-        updateEntranceStore: PropTypes.func.isRequired,
-        updateSelectedStore: PropTypes.func.isRequired
+        updateEntranceStore: PropTypes.func.isRequired
     }
 
     state = {
@@ -41,9 +39,28 @@ class SongChangeExitListener extends PureComponent {
             canSceneUpdate
         } = this.props
 
-        this.props.updateSelectedStore({ isSongSelectInFlux: true })
-
+        logTransition('Begin exit from song change.')
         this.props.updateEntranceStore({
+            isSongSelectInFlux: true,
+
+            ...canLyricCarouselEnter && {
+                didCarouselExit: false,
+                didLyricExit: false,
+                didCurtainExit: false
+            },
+
+            canLyricCarouselUpdate: false,
+
+            ...canLyricCarouselUpdate && {
+                didLyricUpdate: false,
+                didCarouselUpdate: false
+            },
+
+            canLyricCarouselEnter: false,
+            didLyricEnter: false,
+            didCarouselEnter: false,
+            didCurtainEnter: false,
+
             // Song change bypasses scroll exit part of transition.
             canSceneUpdate: false,
 
@@ -62,26 +79,6 @@ class SongChangeExitListener extends PureComponent {
             didSceneEnter: false
         })
 
-        this.props.updateEntranceStore({
-            ...canLyricCarouselEnter && {
-                didCarouselExit: false,
-                didLyricExit: false,
-                didCurtainExit: false
-            },
-
-            canLyricCarouselUpdate: false,
-
-            ...canLyricCarouselUpdate && {
-                didLyricUpdate: false,
-                didCarouselUpdate: false
-            },
-
-            canLyricCarouselEnter: false,
-            didLyricEnter: false,
-            didCarouselEnter: false,
-            didCurtainEnter: false
-        })
-
         // Clear previous timeout.
         clearTimeout(this.state.songChangeTimeoutId)
 
@@ -98,7 +95,7 @@ class SongChangeExitListener extends PureComponent {
     }
 
     _dispatchSongSelectComplete = () => {
-        this.props.updateSelectedStore({ isSongSelectInFlux: false })
+        this.props.updateEntranceStore({ isSongSelectInFlux: false })
     }
 
     render() {
@@ -122,8 +119,5 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    {
-        updateEntranceStore,
-        updateSelectedStore
-    }
+    { updateEntranceStore }
 )(SongChangeExitListener)

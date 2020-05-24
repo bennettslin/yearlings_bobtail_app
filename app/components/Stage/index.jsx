@@ -31,6 +31,7 @@ class Stage extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
+        logTransition('Scene did enter from Stage.')
         this.props.updateEntranceStore({ didSceneEnter: true })
     }
 

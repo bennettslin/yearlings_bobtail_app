@@ -29,10 +29,12 @@ class Carousel extends PureComponent {
     }
 
     _handleTransitionExited = () => {
+        logTransition('Carousel did exit.')
         this.props.updateEntranceStore({ didCarouselExit: true })
     }
 
     _handleTransitionEntered = () => {
+        logTransition('Carousel did enter.')
         this.props.updateEntranceStore({ didCarouselEnter: true })
     }
 

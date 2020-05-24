@@ -38,6 +38,7 @@ class Theatre extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
+        logTransition('Theatre did enter.')
         this.props.updateEntranceStore({ didTheatreEnter: true })
     }
 

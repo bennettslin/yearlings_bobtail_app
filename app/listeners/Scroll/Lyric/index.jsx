@@ -148,6 +148,7 @@ class ScrollLyricListener extends PureComponent {
     }
 
     _completeSceneChangeExit = () => {
+        logTransition('Scene scroll did exit from lyric scroll.')
         this.props.updateEntranceStore({ didSceneScrollExit: true })
     }
 

@@ -47,6 +47,7 @@ class CarouselScroll extends PureComponent {
     }
 
     _handleTransitionEntered = () => {
+        logTransition('Carousel did update from CarouselScroll.')
         this.props.updateEntranceStore({ didCarouselUpdate: true })
     }
 

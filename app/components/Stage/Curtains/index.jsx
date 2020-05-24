@@ -33,10 +33,12 @@ class Curtains extends PureComponent {
     }
 
     _exitTransition = () => {
+        logTransition('Curtain did exit.')
         this.props.updateEntranceStore({ didCurtainExit: true })
     }
 
     _handleTransitionEntered = () => {
+        logTransition('Curtain did enter.')
         this.props.updateEntranceStore({ didCurtainEnter: true })
     }
 

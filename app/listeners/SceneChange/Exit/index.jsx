@@ -39,6 +39,7 @@ class SceneChangeExitListener extends PureComponent {
     }
 
     _beginExitTransition = () => {
+        logTransition('Begin exit from scene change.')
         this.props.updateEntranceStore({
             didSceneScrollExit: false,
 

@@ -62,14 +62,13 @@ class ResizeDispatcher extends PureComponent {
          * As soon as we have a reference to the root container, begin
          * showing theatre.
          */
+        logTransition('Theatre can enter.')
         this.props.updateEntranceStore({
             canTheatreEnter: true
         })
     }
 
     beginEnterTransition = () => {
-        logTransition('Theatre can enter.')
-
         const
             { getRootElement } = this.props,
             {
@@ -176,6 +175,7 @@ class ResizeDispatcher extends PureComponent {
             isTwoRowMenu
         })
 
+        logTransition('Theatre can enter.')
         this.props.updateEntranceStore({
             canTheatreEnter: true
         })

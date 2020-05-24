@@ -27,12 +27,7 @@ const INITIAL_EAR_COLUMN_INDEX = getColumnIndexForAnnotation(
     INITIAL_ANNOTATION_INDEX
 )
 
-const SELECTED_TRANSITION_DEFAULTS = {
-    isSongSelectInFlux: false
-}
-
 export const SELECTED_DEFAULTS = {
-    ...SELECTED_TRANSITION_DEFAULTS,
     selectedSongIndex: INITIAL_SONG_INDEX,
     selectedVerseIndex: INITIAL_VERSE_INDEX,
     selectedAnnotationIndex: INITIAL_ANNOTATION_INDEX,
