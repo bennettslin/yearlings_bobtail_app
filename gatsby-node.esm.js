@@ -1,38 +1,16 @@
 import webpack from 'webpack'
 import path from 'path'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import { CleanWebpackPlugin } from 'clean-webpack-plugin'
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import album from './admin/data'
 import format from 'date-fns/format'
 
-const SHOW_BUNDLE_ANALYZER = false
+export const onCreateWebpackConfig = ({ actions }) => {
+    const buildEnvironment = process.env.YB_ENV,
+        isLocalDevelopment = buildEnvironment === 'local',
+        isDeliveryEnvironment = buildEnvironment !== 'production'
 
-export const onCreateWebpackConfig = ({
-    actions,
+    console.log('process.env', buildEnvironment, isLocalDevelopment, isDeliveryEnvironment)
 
-    // Applies to just local development
-    local: isLocalDevelopment = false,
-
-    // Applies to both local development and delivery release.
-    delivery: isDeliveryEnvironment = false,
-
-    // Debug this webpack build if needed.
-    // eslint-disable-next-line no-unused-vars
-    debug: isDebugMode = false
-
-} = {}) => {
     actions.setWebpackConfig({
-        // entry: path.resolve(__dirname, 'src'),
-        // output: {
-        //     path: isDeliveryEnvironment ?
-        //         path.resolve(__dirname, 'build__delivery') :
-        //         path.resolve(__dirname, 'build'),
-        //     filename: '[name]-[hash].js',
-        //     ...isLocalDevelopment && {
-        //         devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
-        //     }
-        // },
         plugins: [
             // Define global constant at compile time.
             new webpack.DefinePlugin({
@@ -46,19 +24,6 @@ export const onCreateWebpackConfig = ({
                 IS_DELIVERY: isDeliveryEnvironment,
                 IS_LOCAL: isLocalDevelopment
             })
-            // new HtmlWebpackPlugin({
-            //     template: path.resolve(__dirname, 'src/index.html')
-            // }),
-            // ...isLocalDevelopment ? [
-            //     new webpack.HotModuleReplacementPlugin(),
-
-            //     ...SHOW_BUNDLE_ANALYZER ? [new BundleAnalyzerPlugin()] : []
-            // ] : [
-            //     new webpack.optimize.OccurrenceOrderPlugin(),
-
-            //     // Remove the previous build.
-            //     new CleanWebpackPlugin()
-            // ]
         ],
         resolve: {
             // Import from files without specifying extensions.
@@ -73,7 +38,7 @@ export const onCreateWebpackConfig = ({
                     path.resolve(__dirname, './admin/data') :
                     path.resolve(__dirname, './app/data')
             }
-        },
+        }
         // module: {
         //     rules: [
         //         {
@@ -144,19 +109,5 @@ export const onCreateWebpackConfig = ({
         //         }
         //     ]
         // },
-        // ...isLocalDevelopment && {
-        //     devServer: {
-        //         host: process.env.HOST,
-        //         port: 1113 || process.env.PORT,
-        //         disableHostCheck: true,
-        //         // Needed for proper routing.
-        //         historyApiFallback: true,
-        //         hot: true,
-        //         inline: true,
-        //         overlay: true,
-        //         stats: 'minimal'
-        //     },
-        //     devtool: 'cheap-module-eval-source-map'
-        // }
     })
 }
