@@ -23,7 +23,7 @@ import {
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
-    SELECTED_AUDIO_OPTION_INDEX
+    AUDIO_OPTION_INDEX
 } from '../constants/store'
 
 export const getWindowStorage = () => {
@@ -126,7 +126,7 @@ export const getInitialIndicesFromRoutingOrStorage = () => {
 export const getAudioOptionFromStorage = () => {
     const
         storedOptionIndex =
-            _getParsedStoredInteger(SELECTED_AUDIO_OPTION_INDEX),
+            _getParsedStoredInteger(AUDIO_OPTION_INDEX),
 
         savedOptionIndex =
             getArrayOfLength(AUDIO_OPTIONS.length).some(
@@ -136,7 +136,7 @@ export const getAudioOptionFromStorage = () => {
                 0
 
     // This only saves upon initial retrieval.
-    setInStorage(SELECTED_AUDIO_OPTION_INDEX, savedOptionIndex)
+    setInStorage(AUDIO_OPTION_INDEX, savedOptionIndex)
     return savedOptionIndex
 }
 

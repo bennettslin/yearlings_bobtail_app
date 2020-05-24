@@ -205,6 +205,10 @@ class LetterManager extends PureComponent {
         this.dispatchAbout = dispatch
     }
 
+    getDispatchAudioOption = dispatch => {
+        this.dispatchAudioOption = dispatch
+    }
+
     getDispatchScore = dispatch => {
         this.dispatchScore = dispatch
     }
@@ -212,7 +216,10 @@ class LetterManager extends PureComponent {
     render() {
         return (
             <>
-                <AudioOptionDispatcher {...{ getRefs: this._getRefs }} />
+                <AboutDispatcher {...{ ref: this.getDispatchAbout }} />
+                <AudioOptionDispatcher
+                    {...{ ref: this.getDispatchAudioOption }}
+                />
                 <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
                 <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
                 <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
@@ -224,7 +231,6 @@ class LetterManager extends PureComponent {
                 <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
                 <TipsDispatcher {...{ getRefs: this._getRefs }} />
-                <AboutDispatcher {...{ ref: this.getDispatchAbout }} />
                 <ScoreDispatcher {...{ ref: this.getDispatchScore }} />
             </>
         )

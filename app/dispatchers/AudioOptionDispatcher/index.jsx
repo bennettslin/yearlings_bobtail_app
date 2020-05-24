@@ -1,51 +1,24 @@
 // Child that knows rules to toggle admin.
-
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { updateSessionStore } from '../../redux/session/action'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { updateAudioOptionIndex } from '../../redux/session/action'
 
 import { AUDIO_OPTIONS } from '../../constants/options'
+import { AUDIO_OPTION_INDEX_SELECTOR } from '../../redux/session/selectors'
 
-class AudioOptionDispatcher extends PureComponent {
+const AudioOptionDispatcher = (props, ref) => {
+    const
+        dispatch = useDispatch(),
+        audioOptionIndex = useSelector(AUDIO_OPTION_INDEX_SELECTOR),
+        dispatchAudioOption = () => {
+            dispatch(updateAudioOptionIndex(
+                (audioOptionIndex + 1) % AUDIO_OPTIONS.length
+            ))
+            return true
+        }
 
-    static propTypes = {
-        // Through Redux.
-        selectedAudioOptionIndex: PropTypes.number.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchAudioOption: this.dispatchAudioOption
-        })
-    }
-
-    dispatchAudioOption = (
-        // Just toggle unless parent specifies value.
-        selectedAudioOptionIndex =
-        (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length
-    ) => {
-        // If no argument passed, then just toggle amongst audio options.
-        this.props.updateSessionStore({ selectedAudioOptionIndex })
-        return true
-    }
-
-    render() {
-        return null
-    }
+    useImperativeHandle(ref, () => dispatchAudioOption)
+    return null
 }
 
-const mapStateToProps = ({
-    sessionStore: { selectedAudioOptionIndex }
-}) => ({
-    selectedAudioOptionIndex
-})
-
-export default connect(
-    mapStateToProps,
-    { updateSessionStore }
-)(AudioOptionDispatcher)
+export default forwardRef(AudioOptionDispatcher)

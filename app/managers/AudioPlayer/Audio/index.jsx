@@ -18,7 +18,7 @@ class AudioManager extends PureComponent {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         queuedTogglePlay: PropTypes.bool.isRequired,
-        selectedAudioOptionIndex: PropTypes.number.isRequired,
+        audioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
@@ -72,10 +72,10 @@ class AudioManager extends PureComponent {
          */
         const {
                 selectedSongIndex,
-                selectedAudioOptionIndex
+                audioOptionIndex
             } = this.props,
 
-            selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex]
+            selectedAudioOption = AUDIO_OPTIONS[audioOptionIndex]
 
         /**
          * If option is to continue, advance to next song. Otherwise, stay on
@@ -105,12 +105,12 @@ const mapStateToProps = ({
         isPlaying,
         queuedTogglePlay
     },
-    sessionStore: { selectedAudioOptionIndex },
+    sessionStore: { audioOptionIndex },
     selectedStore: { selectedSongIndex }
 }) => ({
     isPlaying,
     queuedTogglePlay,
-    selectedAudioOptionIndex,
+    audioOptionIndex,
     selectedSongIndex
 })
 

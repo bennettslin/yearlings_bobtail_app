@@ -4704,5 +4704,9 @@ export default [
     {
         taskName: `Entrance store refactor.`,
         workedHours: 3
+    },
+    {
+        taskName: `Initialise store with window dimensions.`,
+        workedHours: 9
     }
 ]

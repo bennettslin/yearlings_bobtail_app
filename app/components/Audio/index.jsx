@@ -32,13 +32,13 @@ const mapStateToProps = ({
     playersStore: { playersBitNumber },
     audioStore: { isPlaying },
     selectedStore: { selectedSongIndex },
-    sessionStore: { selectedAudioOptionIndex },
+    sessionStore: { audioOptionIndex },
     responsiveStore: { isTwoRowMenu },
     viewportStore: { isDesktopWidth }
 }) => ({
     isPlaying,
     playersBitNumber,
-    selectedAudioOptionIndex,
+    audioOptionIndex,
     selectedSongIndex,
     isTwoRowMenu,
     isDesktopWidth
@@ -81,7 +81,7 @@ class Audio extends PureComponent {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         playersBitNumber: PropTypes.number.isRequired,
-        selectedAudioOptionIndex: PropTypes.number.isRequired,
+        audioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired
@@ -108,7 +108,7 @@ class Audio extends PureComponent {
                 selectedSongIndex,
                 playersBitNumber,
                 isPlaying,
-                selectedAudioOptionIndex,
+                audioOptionIndex,
                 isDesktopWidth
             } = this.props,
 
@@ -136,7 +136,7 @@ class Audio extends PureComponent {
                     handleButtonClick: this._handleNextClick
                 },
                 {
-                    buttonIdentifier: selectedAudioOptionIndex,
+                    buttonIdentifier: audioOptionIndex,
                     handleButtonClick: this._handleAudioOptionClick
                 }
             ]
@@ -151,6 +151,10 @@ class Audio extends PureComponent {
 
     _getRefs = payload => {
         populateRefs(this, payload)
+    }
+
+    getDispatchAudioOption = dispatch => {
+        this.dispatchAudioOption = dispatch
     }
 
     render() {
@@ -206,7 +210,9 @@ class Audio extends PureComponent {
                     />
                 )}
 
-                <AudioOptionDispatcher {...{ getRefs: this._getRefs }} />
+                <AudioOptionDispatcher
+                    {...{ ref: this.getDispatchAudioOption }}
+                />
                 <PlayDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
             </div>

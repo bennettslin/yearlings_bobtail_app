@@ -14,5 +14,5 @@ export const SESSION_WIKI_DEFAULTS = {
 export const SESSION_DEFAULTS = {
     ...SESSION_WIKI_DEFAULTS,
     shownNavBookIndex: STORED_NAV_BOOK_INDEX,
-    selectedAudioOptionIndex: STORED_AUDIO_OPTION_INDEX
+    audioOptionIndex: STORED_AUDIO_OPTION_INDEX
 }
