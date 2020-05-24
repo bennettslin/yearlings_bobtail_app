@@ -49,18 +49,14 @@ class ResizeDispatcher extends PureComponent {
         updateTheatreStore: PropTypes.func.isRequired,
 
         // From parent.
-        getRefs: PropTypes.func.isRequired
+        getRootElement: PropTypes.func.isRequired,
+        getBeginEnterTransition: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getRefs({
-            setRootContainer: this.setRootContainer,
-            dispatchBeginEnterTransition: this.beginEnterTransition
-        })
-    }
-
-    setRootContainer = (node) => {
-        this.rootElement = node
+        this.props.getBeginEnterTransition(
+            this.beginEnterTransition
+        )
 
         /**
          * As soon as we have a reference to the root container, begin
@@ -75,10 +71,11 @@ class ResizeDispatcher extends PureComponent {
         logTransition('Theatre can enter.')
 
         const
+            { getRootElement } = this.props,
             {
                 windowHeight,
                 windowWidth
-            } = getWindowDimensions(this.rootElement),
+            } = getWindowDimensions(getRootElement()),
             deviceWidthIndex = getDeviceWidthIndex(windowWidth),
 
             isHeightlessLyric = getIsHeightlessLyric({

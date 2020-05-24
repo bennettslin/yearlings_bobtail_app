@@ -17,8 +17,6 @@ import LogicWrapper from '../../wrappers/LogicWrapper'
 import ResizeListener from '../../handlers/Resize/Listener'
 import Live from '../../components/Live'
 
-import { populateRefs } from '../../helpers/ref'
-
 class RootContainer extends PureComponent {
 
     static propTypes = {
@@ -28,15 +26,12 @@ class RootContainer extends PureComponent {
 
     componentDidMount() {
         logMount('RootContainer')
+        this.rootElement = React.createRef()
     }
 
-    _setRootElement = (node) => {
-        return this.passRootContainer(node)
-    }
-
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
+    getRootElement = () => (
+        this.rootElement.current
+    )
 
     render() {
         const { setLyricFocusElement } = this.props
@@ -52,7 +47,7 @@ class RootContainer extends PureComponent {
                     )
                 }}
             >
-                <ResizeListener {...{ getRefs: this._getRefs }} />
+                <ResizeListener {...{ getRootElement: this.getRootElement }} />
                 <DeviceWrapper>
                     <PlayingWrapper>
                         <ResponsiveWrapper>

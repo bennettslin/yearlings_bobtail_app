@@ -7,7 +7,6 @@ import ResizeDispatcher from '../Dispatcher'
 
 import { resetTheatreEntrance } from '../../../redux/entrance/action'
 import { getWindowDimensions } from '../../../helpers/resize/device'
-import { populateRefs } from '../../../helpers/ref'
 
 class ResizeListener extends PureComponent {
 
@@ -18,7 +17,7 @@ class ResizeListener extends PureComponent {
         resetTheatreEntrance: PropTypes.func.isRequired,
 
         // From parent.
-        getRefs: PropTypes.func.isRequired
+        getRootElement: PropTypes.func.isRequired
     }
 
     state = {
@@ -26,17 +25,11 @@ class ResizeListener extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getRefs({ passRootContainer: this.passRootContainer })
         window.onresize = debounce(this._checkIfGenuineResize, 0)
     }
 
     componentWillUnmount() {
         window.onresize = null
-    }
-
-    passRootContainer = (node) => {
-        this.rootElement = node
-        this.setRootContainer(node)
     }
 
     _checkIfGenuineResize = () => {
@@ -50,7 +43,7 @@ class ResizeListener extends PureComponent {
             {
                 windowHeight: newHeight,
                 windowWidth: newWidth
-            } = getWindowDimensions(this.rootElement),
+            } = getWindowDimensions(this.props.getRootElement()),
             {
                 windowHeight,
                 windowWidth
@@ -62,7 +55,6 @@ class ResizeListener extends PureComponent {
         ) {
             this._beginExitTransition()
         }
-
     }
 
     _beginExitTransition() {
@@ -75,19 +67,25 @@ class ResizeListener extends PureComponent {
          * Wait for window resize to finish.
          */
         const windowResizeTimeoutId = setTimeout(
-            this.dispatchBeginEnterTransition, 250
+            this.beginEnterTransition, 250
         )
 
         this.setState({ windowResizeTimeoutId })
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    setBeginEnterTransition = beginEnterTransition => {
+        this.beginEnterTransition = beginEnterTransition
     }
 
     render() {
+        const { getRootElement } = this.props
         return (
-            <ResizeDispatcher {...{ getRefs: this._getRefs }} />
+            <ResizeDispatcher
+                {...{
+                    getRootElement,
+                    getBeginEnterTransition: this.setBeginEnterTransition
+                }}
+            />
         )
     }
 }
