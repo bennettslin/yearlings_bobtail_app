@@ -1,3 +1,4 @@
+import { getWindow } from '../../utils/browser'
 import {
     GA_ACCOUNT__DELIVERY,
     GA_ACCOUNT__PRODUCTION
@@ -12,10 +13,9 @@ const createGa = () => {
         GA_ACCOUNT__DELIVERY :
         GA_ACCOUNT__PRODUCTION
 
-    window.dataLayer = window.dataLayer || []
     function gtag() {
         // eslint-disable-next-line prefer-rest-params
-        dataLayer.push(arguments)
+        getWindow().dataLayer.push(arguments)
     }
     gtag('js', new Date())
     gtag('config', gaAccount)

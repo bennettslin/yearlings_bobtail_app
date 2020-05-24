@@ -6,21 +6,19 @@ import PreviewerDashboard from '../Previewer/Dashboard'
 import PreviewerSvg from '../Previewer/Svg'
 
 import { getViewBoxSize } from '../../../app/modules/PresenceSvg/helper/size'
-
-import { removeLoadingIndicator } from '../../../app/utils/window'
-
+import {
+    getWindow,
+    removeLoadingIndicator
+} from '../../../app/utils/browser'
 import { accessPresence } from '../../utils/access'
-
 import {
     getPresenceFromStorage,
     getPresenceFromQueryStrings,
     setPresenceInStorage,
     setPresenceInQueryStrings
 } from '../../utils/storage'
-
 import { logSvgCount } from '../../utils/log'
 import { getPreviewerSvgMapForThing } from '../../utils/svg'
-
 import { getHeightAspectRatio } from './helper'
 
 class LegacyPreviewer extends PureComponent {
@@ -46,7 +44,7 @@ class LegacyPreviewer extends PureComponent {
     componentDidMount() {
         logMount('LegacyPreviewer')
         logSvgCount()
-        window.onresize = debounce(this.setHeightAspectRatio, 0)
+        getWindow().onresize = debounce(this.setHeightAspectRatio, 0)
         removeLoadingIndicator()
         this.focusPreviewerElement()
     }

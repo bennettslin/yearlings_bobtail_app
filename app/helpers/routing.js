@@ -3,16 +3,17 @@ import qs from 'qs'
 import { getIsSongValid } from '../album/api/songs'
 import { getIsVerseValid } from '../album/api/verses'
 import { getIsAnnotationValid } from '../album/api/annotations'
+import { getWindow } from '../utils/browser'
 
 export const getRoutingSongIndex = () => {
-    const { pathname } = window.location,
+    const { pathname } = getWindow().location,
         routingSongIndex = parseInt(pathname.replace(/\D/g, ''))
 
     return getIsSongValid(routingSongIndex) ? routingSongIndex : NaN
 }
 
 const _getQueryStringIndex = key => {
-    const { search } = window.location
+    const { search } = getWindow().location
 
     return search ?
         parseInt(qs.parse(search, { ignoreQueryPrefix: true })[key]) :

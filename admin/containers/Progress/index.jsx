@@ -5,7 +5,7 @@ import Drawing from './Drawing'
 import AdminNav from './AdminNav'
 
 import { logSvgCount } from '../../utils/log'
-import { removeLoadingIndicator } from '../../../app/utils/window'
+import { removeLoadingIndicator } from '../../../app/utils/browser'
 
 import './style.scss'
 

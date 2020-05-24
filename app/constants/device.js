@@ -1,6 +1,7 @@
 import MobileDetect from 'mobile-detect'
+import { getWindow } from '../utils/browser'
 
-const md = new MobileDetect(window.navigator.userAgent)
+const md = new MobileDetect(getWindow().navigator.userAgent)
 
 /**
  * FIXME: This uses user agent sniffing to detect whether this is a
@@ -12,11 +13,11 @@ export const IS_USER_AGENT_DESKTOP = !md.mobile()
 
 // http://www.javascriptkit.com/dhtmltutors/sticky-hover-issue-solutions.shtml
 export const IS_TOUCH_SUPPORTED =
-    'ontouchstart' in window ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0
+    'ontouchstart' in getWindow() ||
+    getWindow().navigator.maxTouchPoints > 0 ||
+    getWindow().navigator.msMaxTouchPoints > 0
 
 // https://stackoverflow.com/a/19999868
 export const IS_DEPRECATED_BROWSER =
-    window.navigator.userAgent.indexOf("MSIE ") > 0 ||
-    Boolean(navigator.userAgent.match(/Trident.*rv:11\./))
+    getWindow().navigator.userAgent.indexOf("MSIE ") > 0 ||
+    Boolean(getWindow().navigator.userAgent.match(/Trident.*rv:11\./))

@@ -11,7 +11,7 @@ import {
     convertPresenceKeyToClassName
 } from '../../../app/helpers/format'
 
-import { removeLoadingIndicator } from '../../../app/utils/window'
+import { removeLoadingIndicator } from '../../../app/utils/browser'
 
 import { accessPresence } from '../../utils/access'
 

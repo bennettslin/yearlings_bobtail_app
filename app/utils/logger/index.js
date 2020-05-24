@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-unresolved
+import album from '../../album'
+import { INITIAL_SONG_INDEX } from '../../redux/selected/default'
 import {
     logAccess,
     logAdmin,
@@ -12,6 +15,14 @@ import {
     logError,
     logger
 } from './helpers/logs'
+
+// Allow access to album in local delivery.
+if (IS_DELIVERY) {
+    global.album = album
+    global.a = (songIndex = INITIAL_SONG_INDEX) => (
+        album.songs[songIndex]
+    )
+}
 
 logServe({
     log: `Built ${BUILD_DATE_TIME}.`,

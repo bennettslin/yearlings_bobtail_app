@@ -2,15 +2,14 @@ import {
     getWindowStorage,
     setInStorage
 } from '../../app/helpers/storage'
-
-import WHOLE_ACTORS_LIST from '../constants/actors'
-import THINGS_LIST from '../constants/things'
 import {
     getPreviewerSvgMapForActor,
     getPreviewerSvgMapForThing
 } from './svg'
-
+import { getWindow } from '../../app/utils/browser'
 import { convertPresenceKeyToClassName } from '../../app/helpers/format'
+import WHOLE_ACTORS_LIST from '../constants/actors'
+import THINGS_LIST from '../constants/things'
 
 const getPresencePrefix = (isActor) => {
     return isActor ? 'actor' : 'thing'
@@ -66,7 +65,7 @@ export const getPresenceFromStorage = (isActor) => {
 export const getPresenceFromQueryStrings = (isActor) => {
     // If presence from query strings is valid, set in store.
     const
-        urlParams = new URLSearchParams(window.location.search),
+        urlParams = new URLSearchParams(getWindow().location.search),
         presenceType = urlParams.get('type') || '',
         presenceKey = urlParams.get('key') || ''
 
@@ -95,10 +94,10 @@ export const setPresenceInStorage = ({
 }
 
 export const setPresenceInQueryStrings = ({ presenceType, presenceKey }) => {
-    const urlParams = new URLSearchParams(window.location.search)
+    const urlParams = new URLSearchParams(getWindow().location.search)
 
     urlParams.set('type', presenceType)
     urlParams.set('key', convertPresenceKeyToClassName(presenceKey))
 
-    window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`)
+    getWindow().history.replaceState({}, '', `${getWindow().location.pathname}?${urlParams}`)
 }

@@ -5,6 +5,12 @@ import { getValidAnnotationIndex } from '../album/api/annotations'
 
 import { getArrayOfLength } from './general'
 import {
+    getRoutingSongIndex,
+    getRoutingVerseIndex,
+    getRoutingAnnotationIndex
+} from './routing'
+import { getWindow } from '../utils/browser'
+import {
     INITIAL_DOTS_BIT_NUMBER,
     FULL_DOTS_BIT_NUMBER
 } from '../constants/dots'
@@ -14,11 +20,6 @@ import {
     GENERAL_OPTIONS
 } from '../constants/options'
 import {
-    getRoutingSongIndex,
-    getRoutingVerseIndex,
-    getRoutingAnnotationIndex
-} from './routing'
-import {
     DOTS_BIT_NUMBER,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
@@ -27,7 +28,7 @@ import {
 } from '../constants/store'
 
 export const getWindowStorage = () => {
-    return window.localStorage
+    return getWindow().localStorage
 }
 
 export const setInStorage = (key, value) => {

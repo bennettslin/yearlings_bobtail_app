@@ -1,3 +1,4 @@
+import { getWindow } from '../../utils/browser'
 import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 
 export const getWindowDimensions = rootElement => {
@@ -5,8 +6,8 @@ export const getWindowDimensions = rootElement => {
         windowHeight =
             rootElement ?
                 rootElement.getBoundingClientRect().height :
-                window.innerHeight,
-        windowWidth = window.innerWidth
+                getWindow().innerHeight,
+        windowWidth = getWindow().innerWidth
 
     return {
         windowHeight,

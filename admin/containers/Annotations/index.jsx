@@ -15,7 +15,7 @@ import {
 } from '../../../app/album/api/annotations'
 
 import { getArrayOfLength } from '../../../app/helpers/general'
-import { removeLoadingIndicator } from '../../../app/utils/window'
+import { removeLoadingIndicator } from '../../../app/utils/browser'
 
 const INTERVALS_COUNT = 4
 

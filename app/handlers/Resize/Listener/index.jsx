@@ -7,6 +7,7 @@ import ResizeDispatcher from '../Dispatcher'
 
 import { resetTheatreEntrance } from '../../../redux/entrance/action'
 import { getWindowDimensions } from '../../../helpers/resize/device'
+import { getWindow } from '../../../utils/browser'
 
 class ResizeListener extends PureComponent {
 
@@ -25,11 +26,11 @@ class ResizeListener extends PureComponent {
     }
 
     componentDidMount() {
-        window.onresize = debounce(this._checkIfGenuineResize, 0)
+        getWindow().onresize = debounce(this._checkIfGenuineResize, 0)
     }
 
     componentWillUnmount() {
-        window.onresize = null
+        getWindow().onresize = null
     }
 
     _checkIfGenuineResize = () => {

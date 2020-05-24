@@ -4712,5 +4712,9 @@ export default [
     {
         taskName: `Create page for deprecated browsers.`,
         workedHours: 1
+    },
+    {
+        taskName: `Safe window getter.`,
+        workedHours: 2
     }
 ]
