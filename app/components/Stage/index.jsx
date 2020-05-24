@@ -1,10 +1,10 @@
 // Stage elements that change based on the scene.
 
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect } from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
+import { CAN_SCENE_ENTER_SELECTOR } from '../../redux/entrance/selectors'
 
 import Transition from 'react-transition-group/Transition'
 import AspectRatio from './AspectRatio'
@@ -12,57 +12,40 @@ import Scene from '../Scene'
 import Sky from '../Scene/Sky'
 import Wood from '../Scene/Wood'
 
-const mapStateToProps = ({
-    entranceStore: { canSceneEnter }
-}) => ({
-    canSceneEnter
-})
+const Stage = () => {
+    const
+        dispatch = useDispatch(),
+        canSceneEnter = useSelector(CAN_SCENE_ENTER_SELECTOR),
+        onEntered = () => {
+            logTransition('Scene did enter from Stage.')
+            dispatch(updateEntranceStore({ didSceneEnter: true }))
+        }
 
-class Stage extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        canSceneEnter: PropTypes.bool.isRequired,
-        updateEntranceStore: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
+    useEffect(() => {
         logMount('Stage')
-    }
+    }, [])
 
-    _handleTransitionEntered = () => {
-        logTransition('Scene did enter from Stage.')
-        this.props.updateEntranceStore({ didSceneEnter: true })
-    }
-
-    render() {
-        const { canSceneEnter } = this.props
-
-        return (
-            <AspectRatio>
-                <Transition
-                    {...{
-                        in: canSceneEnter,
-                        timeout: 200,
-                        onEntered: this._handleTransitionEntered
-                    }}
-                >
-                    <div className={cx(
-                        'Stage',
-                        'abF',
-                        'ovH'
-                    )}>
-                        <Sky />
-                        <Wood />
-                        <Scene />
-                    </div>
-                </Transition>
-            </AspectRatio>
-        )
-    }
+    return (
+        <AspectRatio>
+            <Transition
+                {...{
+                    in: canSceneEnter,
+                    timeout: 200,
+                    onEntered
+                }}
+            >
+                <div className={cx(
+                    'Stage',
+                    'abF',
+                    'ovH'
+                )}>
+                    <Sky />
+                    <Wood />
+                    <Scene />
+                </div>
+            </Transition>
+        </AspectRatio>
+    )
 }
 
-export default connect(
-    mapStateToProps,
-    { updateEntranceStore }
-)(Stage)
+export default Stage
