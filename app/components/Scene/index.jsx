@@ -1,8 +1,8 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect, Fragment as ___ } from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
+import { CAN_SCENE_UPDATE_SELECTOR } from '../../redux/entrance/selectors'
 
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
@@ -11,65 +11,48 @@ import PresenceZIndexStylesheet from './Stylesheet'
 
 import { CUBE_Y_INDICES_WITH_NEG } from '../../constants/cubeIndex'
 
-const mapStateToProps = ({
-    entranceStore: { canSceneUpdate }
-}) => ({
-    canSceneUpdate
-})
+const Scene = () => {
+    const
+        dispatch = useDispatch(),
+        canSceneUpdate = useSelector(CAN_SCENE_UPDATE_SELECTOR),
+        onEntered = () => {
+            logTransition('Scene did update.')
+            dispatch(updateEntranceStore({ didSceneUpdate: true }))
+        }
 
-class Scene extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        canSceneUpdate: PropTypes.bool.isRequired,
-        updateEntranceStore: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
+    useEffect(() => {
         logMount('Scene')
-    }
+    }, [])
 
-    _handleTransitionUpdated = () => {
-        logTransition('Scene did update.')
-        this.props.updateEntranceStore({ didSceneUpdate: true })
-    }
-
-    render() {
-        const { canSceneUpdate } = this.props
-
-        return (
-            <Transition
-                {...{
-                    in: canSceneUpdate,
-                    timeout: 200,
-                    onEntered: this._handleTransitionUpdated
-                }}
+    return (
+        <Transition
+            {...{
+                in: canSceneUpdate,
+                timeout: 200,
+                onEntered
+            }}
+        >
+            <div
+                className={cx(
+                    'Scene',
+                    'abF'
+                )}
             >
-                <div
-                    className={cx(
-                        'Scene',
-                        'abF'
-                    )}
-                >
-                    <PresenceZIndexStylesheet />
-                    {CUBE_Y_INDICES_WITH_NEG.map(yIndex => {
-                        const Presences = PresencesConfig[yIndex]
-                        return (
-                            <___ {...{ key: yIndex }}>
-                                {yIndex > -1 && (
-                                    <Cubes {...{ yIndex }} />
-                                )}
-                                <Presences />
-                            </___>
-                        )
-                    })}
-                </div>
-            </Transition>
-        )
-    }
+                <PresenceZIndexStylesheet />
+                {CUBE_Y_INDICES_WITH_NEG.map(yIndex => {
+                    const Presences = PresencesConfig[yIndex]
+                    return (
+                        <___ {...{ key: yIndex }}>
+                            {yIndex > -1 && (
+                                <Cubes {...{ yIndex }} />
+                            )}
+                            <Presences />
+                        </___>
+                    )
+                })}
+            </div>
+        </Transition>
+    )
 }
 
-export default connect(
-    mapStateToProps,
-    { updateEntranceStore }
-)(Scene)
+export default Scene
