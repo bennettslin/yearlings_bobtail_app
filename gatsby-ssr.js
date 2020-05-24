@@ -1,7 +1,9 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+/* eslint-disable no-native-reassign */
+/* eslint-disable no-global-assign */
 
-// You can delete this file if you're not using it
+/**
+ * The gatsby setup files do not allow for ES6, so this is a workaround.
+ * https://github.com/gatsbyjs/gatsby/issues/7810#issuecomment-449741977
+ */
+require = require('esm')(module)
+module.exports = require('./gatsby-ssr.esm.js')
