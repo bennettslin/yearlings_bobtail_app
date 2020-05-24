@@ -15,3 +15,8 @@ export const IS_TOUCH_SUPPORTED =
     'ontouchstart' in window ||
     navigator.maxTouchPoints > 0 ||
     navigator.msMaxTouchPoints > 0
+
+// https://stackoverflow.com/a/19999868
+export const IS_DEPRECATED_BROWSER =
+    window.navigator.userAgent.indexOf("MSIE ") > 0 ||
+    Boolean(navigator.userAgent.match(/Trident.*rv:11\./))

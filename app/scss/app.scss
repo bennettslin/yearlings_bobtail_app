@@ -29,6 +29,7 @@
 @import '../scene/style';
 
 // Order matters!
+@import '../containers/Deprecated/style';
 @import '../containers/Root/style';
 @import '../components/Live/style';
 @import '../components/Main/style';
