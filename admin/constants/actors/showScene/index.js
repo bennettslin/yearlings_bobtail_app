@@ -7,7 +7,7 @@ import { SMIRKING } from '../../../../app/constants/scene/actors/ana'
 import { NOOGIE } from '../../../../app/constants/scene/actors/miriamTristan'
 import { GREETING } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: ANA,
         instance: SMIRKING
@@ -21,5 +21,3 @@ const INSTANCES = [
         instance: NOOGIE
     }
 ]
-
-export default INSTANCES

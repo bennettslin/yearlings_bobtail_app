@@ -17,7 +17,7 @@ import {
     EPILOGUE
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: TOMER,
         instance: ABBEY_ROAD
@@ -59,5 +59,3 @@ const INSTANCES = [
         instance: OFFICER
     }
 ]
-
-export default INSTANCES

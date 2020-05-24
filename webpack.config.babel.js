@@ -8,7 +8,7 @@ import format from 'date-fns/format'
 
 const SHOW_BUNDLE_ANALYZER = false
 
-const getConfig = ({
+export default ({
     // Applies to just local development
     local: isLocalDevelopment = false,
 
@@ -157,5 +157,3 @@ const getConfig = ({
         }
     }
 }
-
-export default getConfig

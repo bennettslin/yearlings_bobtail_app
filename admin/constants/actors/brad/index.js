@@ -11,7 +11,7 @@ import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett
 import { CHARMED_SCHOOLBUS } from '../../../../app/constants/scene/actors/bradSasha'
 import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: BRAD_BENNETT,
         instance: TYING_TETHER
@@ -33,5 +33,3 @@ const INSTANCES = [
         instance: CHARMED_SCHOOLBUS
     }
 ]
-
-export default INSTANCES

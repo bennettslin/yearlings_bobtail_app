@@ -12,7 +12,7 @@ import {
     EPILOGUE
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: ANITA,
         instance: EXASPERATED
@@ -34,5 +34,3 @@ const INSTANCES = [
         instance: YOUNG_CHILD
     }
 ]
-
-export default INSTANCES

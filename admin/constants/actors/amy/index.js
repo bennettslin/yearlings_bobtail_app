@@ -16,7 +16,7 @@ import {
     PROTESTER
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: AMY_STEPHANIE,
         instance: SQUEEZING
@@ -50,5 +50,3 @@ const INSTANCES = [
         instance: DOCTOR
     }
 ]
-
-export default INSTANCES

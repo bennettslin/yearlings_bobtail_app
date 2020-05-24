@@ -7,7 +7,7 @@ import { FEIGNING_FEAR } from '../../../../app/constants/scene/actors/andrew'
 import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett'
 import { INDIGNANT } from '../../../../app/constants/scene/actors/sasha'
 
-const INSTANCES = [
+export default [
     {
         type: SASHA,
         instance: INDIGNANT
@@ -21,5 +21,3 @@ const INSTANCES = [
         instance: TYING_TETHER
     }
 ]
-
-export default INSTANCES

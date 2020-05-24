@@ -11,7 +11,7 @@ import {
     PROTESTER
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: WADE,
         instance: WATCHING
@@ -33,5 +33,3 @@ const INSTANCES = [
         instance: PROTESTER
     }
 ]
-
-export default INSTANCES

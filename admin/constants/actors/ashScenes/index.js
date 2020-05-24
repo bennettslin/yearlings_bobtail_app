@@ -12,7 +12,7 @@ import {
 import { PUZZLED } from '../../../../app/constants/scene/actors/catherine'
 import { CATHOLIC_GUY } from '../../../../app/constants/scene/actors/wade'
 
-const INSTANCES = [
+export default [
     {
         type: WADE,
         instance: CATHOLIC_GUY
@@ -34,5 +34,3 @@ const INSTANCES = [
         instance: PUZZLED
     }
 ]
-
-export default INSTANCES

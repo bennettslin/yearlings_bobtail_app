@@ -9,7 +9,7 @@ import {
     EPILOGUE
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: JACOB,
         instance: FLIRTING
@@ -27,5 +27,3 @@ const INSTANCES = [
         instance: EPILOGUE
     }
 ]
-
-export default INSTANCES

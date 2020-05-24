@@ -12,7 +12,7 @@ import {
     EPILOGUE
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: TRISTAN,
         instance: PUNCHING
@@ -34,5 +34,3 @@ const INSTANCES = [
         instance: PRINCIPAL
     }
 ]
-
-export default INSTANCES

@@ -3,7 +3,7 @@ import { JOGGER, INJURED } from '../../../../app/constants/scene/actors/nestor'
 import { OFFICER } from '../../../../app/constants/scene/actors/amyNestorTomer'
 import { GREETING, EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: NESTOR,
         instance: INJURED
@@ -25,5 +25,3 @@ const INSTANCES = [
         instance: OFFICER
     }
 ]
-
-export default INSTANCES

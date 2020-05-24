@@ -56,7 +56,7 @@ import {
     EPILOGUE
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: LIZ,
         instance: DATE_ENDING
@@ -218,5 +218,3 @@ const INSTANCES = [
         instance: EPILOGUE
     }
 ]
-
-export default INSTANCES

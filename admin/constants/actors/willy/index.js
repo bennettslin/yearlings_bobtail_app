@@ -14,7 +14,7 @@ import {
     EPILOGUE
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: WILLY,
         instance: COLLECTING
@@ -40,5 +40,3 @@ const INSTANCES = [
         instance: CROSSING_GUARD
     }
 ]
-
-export default INSTANCES

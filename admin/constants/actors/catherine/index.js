@@ -11,7 +11,7 @@ import {
     GOPI
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: CATHERINE,
         instance: WEEPING
@@ -33,5 +33,3 @@ const INSTANCES = [
         instance: GOPI
     }
 ]
-
-export default INSTANCES

@@ -14,7 +14,7 @@ import {
 } from '../../../../app/constants/scene/actors/sashaBennett'
 import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: BRAD_SASHA,
         instance: CHARMED_SCHOOLBUS
@@ -40,5 +40,3 @@ const INSTANCES = [
         instance: POPULAR_GIRL
     }
 ]
-
-export default INSTANCES

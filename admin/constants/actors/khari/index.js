@@ -17,7 +17,7 @@ import {
 } from '../../../../app/constants/scene/actors/khariLiz'
 import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: KHARI,
         instance: DOUBLE_ALBERT
@@ -55,5 +55,3 @@ const INSTANCES = [
         instance: EPILOGUE
     }
 ]
-
-export default INSTANCES

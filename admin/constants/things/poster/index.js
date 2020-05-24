@@ -8,7 +8,7 @@ import {
     ELLIOTT_SMITH_POSTER
 } from '../../../../app/constants/scene/things/cardboards'
 
-const INSTANCES = [
+export default [
     {
         type: CARDBOARD,
         instance: TINTIN_POSTER
@@ -30,5 +30,3 @@ const INSTANCES = [
         instance: ELLIOTT_SMITH_POSTER
     }
 ]
-
-export default INSTANCES

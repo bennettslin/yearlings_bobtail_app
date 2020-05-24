@@ -11,7 +11,7 @@ import {
     EPILOGUE
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: MARA,
         instance: FLIRTING
@@ -37,5 +37,3 @@ const INSTANCES = [
         instance: GOPI
     }
 ]
-
-export default INSTANCES

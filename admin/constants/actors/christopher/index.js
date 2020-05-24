@@ -13,7 +13,7 @@ import { BLISSFUL_GUILTY } from '../../../../app/constants/scene/actors/christop
 import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
 import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: CHRISTOPHER,
         instance: TANTRUM
@@ -39,5 +39,3 @@ const INSTANCES = [
         instance: EPILOGUE
     }
 ]
-
-export default INSTANCES

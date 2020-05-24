@@ -6,7 +6,7 @@ import {
 } from '../../../../app/constants/scene/actors/andrew'
 import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: ANDREW,
         instance: FEIGNING_FEAR
@@ -24,5 +24,3 @@ const INSTANCES = [
         instance: EPILOGUE
     }
 ]
-
-export default INSTANCES

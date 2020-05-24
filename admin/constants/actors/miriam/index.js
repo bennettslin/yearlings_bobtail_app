@@ -25,7 +25,7 @@ import {
     GOPI
 } from '../../../../app/constants/scene/actors/songs'
 
-const INSTANCES = [
+export default [
     {
         type: MIRIAM,
         instance: INFANT_CURIOUS
@@ -83,5 +83,3 @@ const INSTANCES = [
         instance: GOPI
     }
 ]
-
-export default INSTANCES
