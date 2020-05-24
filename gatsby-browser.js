@@ -1,9 +1,31 @@
-/* eslint-disable no-native-reassign */
-/* eslint-disable no-global-assign */
+import React from 'react'
+import PropTypes from 'prop-types'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import { devToolsEnhancer } from 'redux-devtools-extension'
 
-/**
- * The gatsby setup files do not allow for ES6, so this is a workaround.
- * https://github.com/gatsbyjs/gatsby/issues/7810#issuecomment-449741977
- */
-require = require('esm')(module)
-module.exports = require('./gatsby-browser.esm.js')
+// Import these here just to make them available.
+import './app/album'
+import './app/utils/logger'
+import './app/utils/analytics'
+
+import rootReducer from './app/redux'
+
+import './app/scss/app.scss'
+
+const store = createStore(
+    rootReducer,
+    devToolsEnhancer()
+)
+
+export const wrapRootElement = ({ element }) => {
+    return (
+        <Provider store={store}>
+            {element}
+        </Provider>
+    )
+}
+
+wrapRootElement.propTypes = {
+    element: PropTypes.node.isRequired
+}
