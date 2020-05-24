@@ -4,6 +4,9 @@ import album from './admin/data'
 import format from 'date-fns/format'
 
 export const onCreateWebpackConfig = ({ actions }) => {
+    /**
+     * The three environments are local, delivery, and production.
+     */
     const buildEnvironment = process.env.YB_ENV,
         isLocalDevelopment = buildEnvironment === 'local',
         isDeliveryEnvironment = buildEnvironment !== 'production'
@@ -27,7 +30,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
         ],
         resolve: {
             // Import from files without specifying extensions.
-            // extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
+            extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
             alias: {
                 // Allow admin routes only in delivery.
                 routes: isDeliveryEnvironment ?
