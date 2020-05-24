@@ -5,9 +5,13 @@ export default [
         workedHours: 0,
         neededHours: 30
     },
+    {
+        taskName: `Link positioning for Bobtail Yearlings website is wonky in iOS.`,
+        workedHours: 0,
+        neededHours: 2
+    },
 
     /* Morning time. */
-
     /* Lunch time. */
 
     /* Evening. */
