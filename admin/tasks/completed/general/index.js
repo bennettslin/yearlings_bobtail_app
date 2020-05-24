@@ -4708,5 +4708,9 @@ export default [
     {
         taskName: `Initialise store with window dimensions.`,
         workedHours: 9
+    },
+    {
+        taskName: `Create page for deprecated browsers.`,
+        workedHours: 1
     }
 ]

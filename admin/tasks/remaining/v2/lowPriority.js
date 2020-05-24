@@ -4,12 +4,17 @@ export default [
         workedHours: 0
     },
     {
+        taskName: `Move to hooks. It feels nice, but I really need to prioritise user-facing tasks.`,
+        workedHours: 0,
+        neededHours: 30
+    },
+    {
         taskName: `Figure out how to let bots access sitemap.xml and robots.txt.`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled.`,
+        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled. (May be irrelevant once moved to Gatsby.)`,
         resource: `https://www.npmjs.com/package/webpack-pwa-manifest`,
         workedHours: 0,
         neededHours: 3
@@ -48,5 +53,10 @@ export default [
         taskName: `Remove animations from mobile for performance. Update: It seems fine to leave transitions out but keep animations in, as it is now.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Internet Explorer is too broken to even reach the deprecated page.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

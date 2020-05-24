@@ -12,7 +12,6 @@ const ScoreDispatcher = (props, ref) => {
         isScoreShown = useSelector(IS_SCORE_SHOWN_SELECTOR),
         canScoreMount = useSelector(CAN_SCORE_MOUNT_SELECTOR),
         isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
-
         dispatchScore = (
             // Just toggle unless parent specifies value.
             triedIsScoreShown = !isScoreShown

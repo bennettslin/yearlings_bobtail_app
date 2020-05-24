@@ -43,10 +43,5 @@ export default [
         taskName: `Consolidate more svg shape class names for shared styles. Wood (light and dark, including furniture foot), cool metal (more bluish), warm metal (more bronzish), stage lights.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Maybe reconsider history push instead of replace?`,
-        workedHours: 0,
-        neededHours: 1
     }
 ]
