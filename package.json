@@ -13,7 +13,11 @@
     "start": "webpack-dev-server --mode development --env.local --env.delivery",
     "lint": "eslint --ext js,jsx app",
     "lint:fix": "eslint --ext js,jsx --fix app",
-    "test": "jest"
+    "build:gatsby": "gatsby build",
+    "develop:gatsby": "gatsby develop",
+    "start:gatsby": "npm run develop:gatsby",
+    "serve:gatsby": "gatsby serve",
+    "clean:gatsby": "gatsby clean"
   },
   "repository": {
     "type": "git",
@@ -34,6 +38,8 @@
     "classnames": "^2.2.6",
     "debounce": "^1.2.0",
     "email-validator": "^2.0.4",
+    "esm": "^3.2.25",
+    "gatsby": "^2.22.9",
     "mobile-detect": "^1.4.4",
     "pino": "^5.16.0",
     "prop-types": "^15.7.2",
