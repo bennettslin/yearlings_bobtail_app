@@ -18,12 +18,12 @@ import { SCORE } from '../../../constants/tips'
 
 const ScoreToggle = ({ className }) => {
     const
-        scoreDispatcher = useRef(),
+        dispatchScore = useRef(),
         isScoreLoaded = useSelector(IS_SCORE_LOADED_SELECTOR),
         isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
         canScoreMount = useSelector(CAN_SCORE_MOUNT_SELECTOR),
         handleButtonClick = () => {
-            scoreDispatcher.current.dispatchScore()
+            dispatchScore.current()
         }
 
     return canScoreMount && (
@@ -50,7 +50,7 @@ const ScoreToggle = ({ className }) => {
                     reverse: !isDesktopWidth
                 }}
             />
-            <ScoreDispatcher {...{ ref: scoreDispatcher }} />
+            <ScoreDispatcher {...{ ref: dispatchScore }} />
         </div>
     )
 }

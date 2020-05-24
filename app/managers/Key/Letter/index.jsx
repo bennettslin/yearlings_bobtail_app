@@ -77,11 +77,8 @@ class LetterManager extends PureComponent {
         })
     }
 
-    getDispatchScore = current => {
-        if (current) {
-            const { dispatchScore } = current
-            this.dispatchScore = dispatchScore
-        }
+    getDispatchScore = dispatchScore => {
+        this.dispatchScore = dispatchScore
     }
 
     handleLetter = (keyName) => {
