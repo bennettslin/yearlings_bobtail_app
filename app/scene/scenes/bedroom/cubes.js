@@ -75,7 +75,7 @@ const DEFAULT_FLOOR = {
     ]
 }
 
-const CUBES = {
+export default {
     [BEDROOM_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,
@@ -168,5 +168,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

@@ -20,7 +20,7 @@ import {
  * ..---.........
  * ..-...........
  */
-const CUBES = {
+export default {
     [WEDDING_KEY]: {
         slantDirection: RIGHT,
         floor: {
@@ -43,5 +43,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

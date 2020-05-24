@@ -7,7 +7,7 @@ import {
     SEAT_COLOUR as S
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [NOHO_SCHOOL_KEY]: {
         floor: {
             hslaColours: [
@@ -29,5 +29,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

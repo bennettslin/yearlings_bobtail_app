@@ -7,7 +7,7 @@ import {
     GRASS_COLOUR as H
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [GO_KARTS_KEY]: {
         floor: {
             hslaColours: [
@@ -27,5 +27,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

@@ -12,7 +12,7 @@ import {
 
 import { f, k } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [CINEMA_STREET_KEY]: {
         ceiling: {
             hslaColours: [
@@ -50,5 +50,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

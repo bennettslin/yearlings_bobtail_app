@@ -25,7 +25,7 @@ export const DEFAULT_CEILING = {
     ]
 }
 
-const CUBES = {
+export default {
     [BASEMENT_KEY]: {
         ceiling: DEFAULT_CEILING,
         floor: {
@@ -48,5 +48,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

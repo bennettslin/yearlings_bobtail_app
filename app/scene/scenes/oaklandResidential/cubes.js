@@ -6,7 +6,7 @@ import {
     PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [OAKLAND_RESIDENTIAL_KEY]: {
         floor: {
             hslaColours: [
@@ -26,5 +26,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

@@ -53,7 +53,7 @@ const DEFAULT_FLOOR = {
  * Blinds and door should match in courtyard.
  * Bed should match in basement.
  */
-const CUBES = {
+export default {
     [BENNETT_BED_KEY]: {
         ceiling: DEFAULT_CEILING,
         floor: DEFAULT_FLOOR
@@ -78,5 +78,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

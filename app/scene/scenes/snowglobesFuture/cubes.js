@@ -10,7 +10,7 @@ import {
 /**
  * Couch should match in lizCouch.
  */
-const CUBES = {
+export default {
     [SNOWGLOBES_FUTURE_KEY]: {
         floor: {
             hslaColours: [
@@ -32,5 +32,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

@@ -12,7 +12,7 @@ import {
 
 import { g, k } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [BERKELEY_CAMPANILE_KEY]: {
         ceiling: {
             hslaColours: [
@@ -48,5 +48,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

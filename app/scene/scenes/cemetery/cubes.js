@@ -6,7 +6,7 @@ import {
     GRASS_COLOUR as H
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [CEMETERY_KEY]: {
         slantDirection: LEFT,
         floor: {
@@ -21,5 +21,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

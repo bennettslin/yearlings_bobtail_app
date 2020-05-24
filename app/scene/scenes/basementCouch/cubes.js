@@ -10,7 +10,7 @@ import {
 
 import { a, e } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [BASEMENT_COUCH_KEY]: {
         ceiling: {
             hslaColours: [
@@ -45,5 +45,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

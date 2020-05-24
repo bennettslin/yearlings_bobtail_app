@@ -13,7 +13,7 @@ import { d, f, k } from '../../cubes/zIndices'
 /**
  * Gate should match in courtyard.
  */
-const CUBES = {
+export default {
     [BENNETT_GATE_KEY]: {
         ceiling: {
             hslaColours: [
@@ -43,5 +43,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

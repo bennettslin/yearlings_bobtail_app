@@ -5,7 +5,7 @@ import {
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [LOGUE_KEY]: {
         floor: {
             hslaColours: [
@@ -27,5 +27,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

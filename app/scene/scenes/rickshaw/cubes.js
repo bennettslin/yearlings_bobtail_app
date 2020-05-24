@@ -6,7 +6,7 @@ import {
     STREET_COLOUR as T
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [RICKSHAW_KEY]: {
         slantDirection: LEFT,
         floor: {
@@ -24,5 +24,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

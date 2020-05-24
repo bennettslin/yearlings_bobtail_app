@@ -11,7 +11,7 @@ import {
 // eslint-disable-next-line object-curly-newline
 import { d, g, k } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [WAITING_ROOM_KEY]: {
         ceiling: {
             hslaColours: [
@@ -45,5 +45,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

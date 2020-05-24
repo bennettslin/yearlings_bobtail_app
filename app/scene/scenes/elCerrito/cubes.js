@@ -24,7 +24,7 @@ import {
  * ..***.........
  * ..*...........
  */
-const CUBES = {
+export default {
     [EL_CERRITO_KEY]: {
         slantDirection: RIGHT,
         floor: {
@@ -68,5 +68,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

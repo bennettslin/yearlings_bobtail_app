@@ -7,7 +7,7 @@ import {
 
 import { d } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [STEAM_TUNNEL_KEY]: {
         ceiling: {
             hslaColours: [
@@ -32,5 +32,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

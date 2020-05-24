@@ -6,7 +6,7 @@ import {
     CONCRETE_PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [FREEWAY_KEY]: {
         floor: {
             hslaColours: [
@@ -26,5 +26,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

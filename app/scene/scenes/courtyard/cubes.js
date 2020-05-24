@@ -16,7 +16,7 @@ import { d, f, k } from '../../cubes/zIndices'
  * Blinds and door should match in bennettBed.
  * Gate should match in bennettGate.
  */
-const CUBES = {
+export default {
     [COURTYARD_KEY]: {
         ceiling: {
             hslaColours: [
@@ -56,5 +56,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

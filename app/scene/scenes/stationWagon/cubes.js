@@ -6,7 +6,7 @@ import {
     CROSSWALK_COLOUR as K
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [STATION_WAGON_KEY]: {
         floor: {
             hslaColours: [
@@ -27,5 +27,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

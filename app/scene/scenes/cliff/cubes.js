@@ -6,7 +6,7 @@ import {
     GRASS_COLOUR as H
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [CLIFF_KEY]: {
         slantDirection: RIGHT,
         floor: {
@@ -29,5 +29,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

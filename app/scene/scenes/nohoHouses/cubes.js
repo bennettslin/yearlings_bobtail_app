@@ -5,7 +5,7 @@ import {
     PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [NOHO_HOUSES_KEY]: {
         floor: {
             hslaColours: [
@@ -22,5 +22,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

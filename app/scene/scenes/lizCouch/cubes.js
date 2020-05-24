@@ -62,7 +62,7 @@ const DEFAULT_FLOOR = {
     ]
 }
 
-const CUBES = {
+export default {
     [LIZ_COUCH_KEY]: {
         ceiling: DEFAULT_CEILING,
         floor: DEFAULT_FLOOR
@@ -125,5 +125,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

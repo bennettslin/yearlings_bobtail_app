@@ -8,7 +8,7 @@ import {
 
 import { g } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [CLUB_FAR_KEY]: {
         ceiling: {
             hslaColours: [
@@ -33,5 +33,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

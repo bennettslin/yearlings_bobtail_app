@@ -3,7 +3,7 @@ import { BUOY_KEY } from '../../../constants/scene/scenes'
 
 import { OCEAN_COLOUR as V } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [BUOY_KEY]: {
         slantDirection: RIGHT,
         floor: {
@@ -16,5 +16,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

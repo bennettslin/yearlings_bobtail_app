@@ -4,7 +4,7 @@ import { NIGHT_COLOUR as Y } from '../../cubes/colours'
 
 import { b, g } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [ATTIC_KEY]: {
         ceiling: {
             hslaColours: [
@@ -30,5 +30,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

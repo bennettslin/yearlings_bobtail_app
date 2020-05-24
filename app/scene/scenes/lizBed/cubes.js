@@ -64,7 +64,7 @@ const OPEN_CEILING = {
     ]
 }
 
-const CUBES = {
+export default {
     [LIZ_BED_KEY]: {
         ceiling: DEFAULT_CEILING,
         floor: DEFAULT_FLOOR
@@ -126,5 +126,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

@@ -5,7 +5,7 @@ import {
     WOOD_FLOOR_COLOUR as F
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [WALGREENS_KEY]: {
         floor: {
             hslaColours: [
@@ -27,5 +27,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

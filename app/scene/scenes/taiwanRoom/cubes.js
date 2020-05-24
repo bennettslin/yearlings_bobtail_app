@@ -4,7 +4,7 @@ import { NIGHT_COLOUR as Y } from '../../cubes/colours'
 
 import { e, g } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [TAIWAN_ROOM_KEY]: {
         ceiling: {
             hslaColours: [
@@ -34,5 +34,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

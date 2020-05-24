@@ -6,7 +6,7 @@ import {
     SNOWGLOBE_PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [SNOWGLOBES_PAST_KEY]: {
         floor: {
             hslaColours: [
@@ -28,5 +28,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

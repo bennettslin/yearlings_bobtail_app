@@ -2,7 +2,7 @@ import { ROYCE_HALL_KEY } from '../../../constants/scene/scenes'
 
 import { PAVEMENT_COLOUR as V } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [ROYCE_HALL_KEY]: {
         floor: {
             hslaColours: [
@@ -15,5 +15,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

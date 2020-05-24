@@ -8,7 +8,7 @@ import {
     MIRIAM_COUCH_COLOUR as Z
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [SNOWGLOBES_PRESENT_KEY]: {
         floor: {
             hslaColours: [
@@ -30,5 +30,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

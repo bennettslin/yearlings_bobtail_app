@@ -29,7 +29,7 @@ import {
  * ..***.........
  * ..*...........
  */
-const CUBES = {
+export default {
     [EL_CERRITO_DEATHBED_KEY]: {
         slantDirection: RIGHT,
         floor: {
@@ -94,5 +94,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

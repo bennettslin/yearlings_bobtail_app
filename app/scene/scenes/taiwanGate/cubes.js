@@ -9,7 +9,7 @@ import {
 
 import { b, g } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [TAIWAN_GATE_KEY]: {
         floor: {
             hslaColours: [
@@ -31,5 +31,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

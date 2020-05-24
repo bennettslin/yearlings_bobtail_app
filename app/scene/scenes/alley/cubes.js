@@ -10,7 +10,7 @@ import {
 
 import { e, k } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [ALLEY_KEY]: {
         ceiling: {
             hslaColours: [
@@ -40,5 +40,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

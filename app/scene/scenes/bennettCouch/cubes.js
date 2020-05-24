@@ -24,7 +24,7 @@ export const DEFAULT_CEILING = {
     ]
 }
 
-const CUBES = {
+export default {
     [BENNETT_COUCH_KEY]: {
         ceiling: DEFAULT_CEILING,
         floor: {
@@ -84,5 +84,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

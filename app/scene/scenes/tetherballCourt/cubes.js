@@ -5,7 +5,7 @@ import {
     PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [TETHERBALL_COURT_KEY]: {
         floor: {
             hslaColours: [
@@ -19,5 +19,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

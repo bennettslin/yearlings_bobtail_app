@@ -6,7 +6,7 @@ import {
     OCEAN_COLOUR as V
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [SHORE_KEY]: {
         slantDirection: RIGHT,
         floor: {
@@ -24,5 +24,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

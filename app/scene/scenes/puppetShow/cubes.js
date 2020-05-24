@@ -2,7 +2,8 @@ import { PUPPET_SHOW_KEY } from '../../../constants/scene/scenes'
 
 import { GROUND_CLEAR_COLOUR as G } from '../../cubes/colours'
 
-const PUPPET_SHOW_CUBES = {
+export default {
+    [PUPPET_SHOW_KEY]: {
         floor: {
             hslaColours: [
                 [G]
@@ -11,10 +12,5 @@ const PUPPET_SHOW_CUBES = {
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [PUPPET_SHOW_KEY]: PUPPET_SHOW_CUBES
     }
-
-export default CUBES
+}

@@ -19,7 +19,7 @@ import { d, f, k } from '../../cubes/zIndices'
 /**
  * Blinds and gate should match in lizCouch.
  */
-const CUBES = {
+export default {
     [LIZ_GATE_KEY]: {
         ceiling: {
             hslaColours: [
@@ -85,5 +85,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

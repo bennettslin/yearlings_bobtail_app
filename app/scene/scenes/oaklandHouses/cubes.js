@@ -12,7 +12,7 @@ import {
     LIZ_COUCH_COLOUR as U
 } from '../../cubes/colours'
 
-const CUBES = {
+export default {
     [OAKLAND_HOUSES_KEY]: {
         floor: {
             hslaColours: [
@@ -66,5 +66,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

@@ -11,7 +11,7 @@ import {
 
 import { f, k } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [VAN_NUYS_LOCKERS_KEY]: {
         ceiling: {
             hslaColours: [
@@ -51,5 +51,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES

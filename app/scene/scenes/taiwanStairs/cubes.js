@@ -10,7 +10,7 @@ import {
 // eslint-disable-next-line object-curly-newline
 import { e, g, k } from '../../cubes/zIndices'
 
-const CUBES = {
+export default {
     [TAIWAN_STAIRS_KEY]: {
         ceiling: {
             hslaColours: [
@@ -46,5 +46,3 @@ const CUBES = {
         }
     }
 }
-
-export default CUBES
