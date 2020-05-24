@@ -7,13 +7,11 @@ import InlineSvg from '../../../modules/InlineSvg'
 import proscenium from '../../../../assets/svgs/theatre/proscenium'
 
 const mapStateToProps = ({
-    viewportStore: {
-        prosceniumStore: {
-            prosceniumTop,
-            prosceniumLeft,
-            prosceniumWidth,
-            prosceniumHeight
-        }
+    prosceniumStore: {
+        prosceniumTop,
+        prosceniumLeft,
+        prosceniumWidth,
+        prosceniumHeight
     }
 }) => ({
     prosceniumTop,

@@ -1,22 +1,26 @@
-import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 import {
-    PROSCENIUM_STORE,
-    STAGE_STORE,
-    THEATRE_STORE
-} from '../../constants/store'
-import { PROSCENIUM_DEFAULTS } from './proscenium/default'
-import { STAGE_DEFAULTS } from './stage/default'
-import { THEATRE_DEFAULTS } from './theatre/default'
+    getWindowDimensions,
+    getDeviceWidthIndex
+} from '../../helpers/resize/device'
+import {
+    getIsDesktopWidth,
+    getIsTabletWidth,
+    getIsPhoneWidth
+} from '../../helpers/responsive'
+
+export const {
+    windowWidth: INITIAL_WINDOW_WIDTH,
+    windowHeight: INITIAL_WINDOW_HEIGHT
+} = getWindowDimensions()
+
+export const INITIAL_DEVICE_WIDTH_INDEX =
+    getDeviceWidthIndex(INITIAL_WINDOW_WIDTH)
 
 export const VIEWPORT_DEFAULTS = {
-    windowHeight: 0,
-    windowWidth: 0,
-    deviceWidthIndex: DEVICE_WIDTH_CONFIGS.length - 1,
-    isPhoneWidth: false,
-    isTabletWidth: false,
-    isDesktopWidth: false,
-
-    [PROSCENIUM_STORE]: PROSCENIUM_DEFAULTS,
-    [STAGE_STORE]: STAGE_DEFAULTS,
-    [THEATRE_STORE]: THEATRE_DEFAULTS
+    windowWidth: INITIAL_WINDOW_WIDTH,
+    windowHeight: INITIAL_WINDOW_HEIGHT,
+    deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX,
+    isPhoneWidth: getIsPhoneWidth(INITIAL_DEVICE_WIDTH_INDEX),
+    isTabletWidth: getIsTabletWidth(INITIAL_DEVICE_WIDTH_INDEX),
+    isDesktopWidth: getIsDesktopWidth(INITIAL_DEVICE_WIDTH_INDEX)
 }

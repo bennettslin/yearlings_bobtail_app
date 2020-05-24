@@ -10,14 +10,12 @@ import CeilingRafter from './Rafter'
 import { getRaftersRowCoordinates } from './helper'
 
 const mapStateToProps = ({
-    viewportStore: {
-        windowWidth,
-        prosceniumStore: {
-            prosceniumLeft,
-            prosceniumWidth
-        },
-        theatreStore: { ceilingHeight }
-    }
+    prosceniumStore: {
+        prosceniumLeft,
+        prosceniumWidth
+    },
+    theatreStore: { ceilingHeight },
+    viewportStore: { windowWidth }
 }) => ({
     windowWidth,
     prosceniumLeft,

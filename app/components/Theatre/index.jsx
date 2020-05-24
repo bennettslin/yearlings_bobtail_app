@@ -46,7 +46,6 @@ class Theatre extends PureComponent {
 
         return (
             <CSSTransition
-                mountOnEnter
                 {...{
                     in: canTheatreEnter,
                     timeout: 200,

@@ -1,12 +1,12 @@
-import { THEATRE_STORE } from '../../../constants/store'
-import { THEATRE_DEFAULTS } from './default'
+import { STAGE_STORE } from '../../constants/store'
+import { STAGE_DEFAULTS } from './default'
 
 export default (
-    state = THEATRE_DEFAULTS,
+    state = STAGE_DEFAULTS,
     { type, payload }
 ) => {
     switch (type) {
-        case THEATRE_STORE:
+        case STAGE_STORE:
             return {
                 ...state,
                 ...payload

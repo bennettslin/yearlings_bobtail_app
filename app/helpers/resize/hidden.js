@@ -12,7 +12,6 @@ export const getIsHeightlessLyric = ({
     windowHeight,
     windowWidth
 }) => {
-
     // Can't be heightless if it isn't expandable.
     if (!getIsLyricExpandable(deviceWidthIndex)) {
         return false

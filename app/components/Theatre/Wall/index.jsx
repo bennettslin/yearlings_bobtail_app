@@ -11,15 +11,15 @@ import {
 } from './helper'
 
 const mapStateToProps = ({
+    prosceniumStore: {
+        prosceniumLeft,
+        prosceniumWidth,
+        prosceniumHeight
+    },
+    theatreStore: { ceilingHeight },
     viewportStore: {
         windowHeight,
-        windowWidth,
-        prosceniumStore: {
-            prosceniumLeft,
-            prosceniumWidth,
-            prosceniumHeight
-        },
-        theatreStore: { ceilingHeight }
+        windowWidth
     }
 }) => ({
     windowHeight,

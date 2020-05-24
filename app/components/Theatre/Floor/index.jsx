@@ -8,14 +8,12 @@ import FloorSeat from './Seat'
 import { getSeatingRowCoordinates } from './helper'
 
 const mapStateToProps = ({
-    viewportStore: {
-        windowWidth,
-        prosceniumStore: {
-            prosceniumLeft,
-            prosceniumWidth
-        },
-        theatreStore: { floorHeight }
-    }
+    prosceniumStore: {
+        prosceniumLeft,
+        prosceniumWidth
+    },
+    theatreStore: { floorHeight },
+    viewportStore: { windowWidth }
 }) => ({
     windowWidth,
     prosceniumLeft,

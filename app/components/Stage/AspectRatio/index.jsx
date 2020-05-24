@@ -3,13 +3,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 const mapStateToProps = ({
-    viewportStore: {
-        stageStore: {
-            stageTop,
-            stageLeft,
-            stageWidth,
-            stageHeight
-        }
+    stageStore: {
+        stageTop,
+        stageLeft,
+        stageWidth,
+        stageHeight
     }
 }) => ({
     stageTop,

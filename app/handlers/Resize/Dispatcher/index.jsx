@@ -7,9 +7,9 @@ import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateMountStore } from '../../../redux/mount/action'
 import { updateResponsiveStore } from '../../../redux/responsive/action'
 import { updateViewportStore } from '../../../redux/viewport/action'
-import { updateProsceniumStore } from '../../../redux/viewport/proscenium/action'
-import { updateStageStore } from '../../../redux/viewport/stage/action'
-import { updateTheatreStore } from '../../../redux/viewport/theatre/action'
+import { updateProsceniumStore } from '../../../redux/proscenium/action'
+import { updateStageStore } from '../../../redux/stage/action'
+import { updateTheatreStore } from '../../../redux/theatre/action'
 import {
     getDeviceWidthIndex,
     getWindowDimensions
@@ -63,21 +63,23 @@ class ResizeDispatcher extends PureComponent {
         this.rootElement = node
 
         /**
-         * As soon as we have a reference to the root container, set state
-         * based on initial window size.
+         * As soon as we have a reference to the root container, begin
+         * showing theatre.
          */
-        this.beginEnterTransition()
+        this.props.updateEntranceStore({
+            canTheatreEnter: true
+        })
     }
 
     beginEnterTransition = () => {
         logTransition('Theatre can enter.')
 
         const
-            deviceWidthIndex = getDeviceWidthIndex(),
             {
                 windowHeight,
                 windowWidth
             } = getWindowDimensions(this.rootElement),
+            deviceWidthIndex = getDeviceWidthIndex(windowWidth),
 
             isHeightlessLyric = getIsHeightlessLyric({
                 deviceWidthIndex,

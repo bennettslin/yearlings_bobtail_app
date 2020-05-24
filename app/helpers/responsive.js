@@ -7,32 +7,32 @@ import {
     DEVICE_WIDTH_CONFIGS
 } from '../constants/responsive/deviceWidth'
 
-export const getIsPhoneWidth = (deviceWidthIndex) => {
+export const getIsPhoneWidth = deviceWidthIndex => {
     const { deviceWidthKey } = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
     return deviceWidthKey === PHONE_WIDTH_KEY
 }
 
-export const getIsMiniWidth = (deviceWidthIndex) => {
+export const getIsMiniWidth = deviceWidthIndex => {
     const { deviceWidthKey } = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
     return deviceWidthKey === MINI_WIDTH_KEY
 }
 
-export const getIsTabletWidth = (deviceWidthIndex) => {
+export const getIsTabletWidth = deviceWidthIndex => {
     const { deviceWidthKey } = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
     return deviceWidthKey === TABLET_WIDTH_KEY
 }
 
-export const getIsLaptopWidth = (deviceWidthIndex) => {
+export const getIsLaptopWidth = deviceWidthIndex => {
     const { deviceWidthKey } = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
     return deviceWidthKey === LAPTOP_WIDTH_KEY
 }
 
-export const getIsMonitorWidth = (deviceWidthIndex) => {
+export const getIsMonitorWidth = deviceWidthIndex => {
     const { deviceWidthKey } = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
     return deviceWidthKey === MONITOR_WIDTH_KEY
 }
 
-export const getIsDesktopWidth = (deviceWidthIndex) => {
+export const getIsDesktopWidth = deviceWidthIndex => {
     return (
         getIsLaptopWidth(deviceWidthIndex) ||
         getIsMonitorWidth(deviceWidthIndex)

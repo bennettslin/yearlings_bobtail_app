@@ -2,7 +2,10 @@ import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 
 export const getWindowDimensions = rootElement => {
     const
-        windowHeight = rootElement.getBoundingClientRect().height,
+        windowHeight =
+            rootElement ?
+                rootElement.getBoundingClientRect().height :
+                window.innerHeight,
         windowWidth = window.innerWidth
 
     return {
@@ -11,12 +14,12 @@ export const getWindowDimensions = rootElement => {
     }
 }
 
-export const getDeviceWidthIndex = () => {
+export const getDeviceWidthIndex = windowWidth => {
     let deviceWidthIndex = 0
 
     while (
         deviceWidthIndex < DEVICE_WIDTH_CONFIGS.length - 1 &&
-        window.innerWidth > DEVICE_WIDTH_CONFIGS[deviceWidthIndex].maxWidth
+        windowWidth > DEVICE_WIDTH_CONFIGS[deviceWidthIndex].maxWidth
     ) {
         deviceWidthIndex++
     }

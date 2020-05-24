@@ -1,12 +1,12 @@
-import { PROSCENIUM_STORE } from '../../../constants/store'
-import { PROSCENIUM_DEFAULTS } from './default'
+import { THEATRE_STORE } from '../../constants/store'
+import { THEATRE_DEFAULTS } from './default'
 
 export default (
-    state = PROSCENIUM_DEFAULTS,
+    state = THEATRE_DEFAULTS,
     { type, payload }
 ) => {
     switch (type) {
-        case PROSCENIUM_STORE:
+        case THEATRE_STORE:
             return {
                 ...state,
                 ...payload
