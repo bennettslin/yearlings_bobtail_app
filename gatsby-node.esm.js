@@ -33,47 +33,47 @@ export const onCreateWebpackConfig = ({
         //         devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
         //     }
         // },
-        // plugins: [
-        //     // Define global constant at compile time.
-        //     new webpack.DefinePlugin({
-        //         // Grab album from global env only when not running locally.
-        //         ...!isLocalDevelopment && {
-        //             ALBUM: JSON.stringify(album)
-        //         },
-        //         BUILD_DATE_TIME: JSON.stringify(
-        //             `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
-        //         ),
-        //         IS_DELIVERY: isDeliveryEnvironment,
-        //         IS_LOCAL: isLocalDevelopment
-        //     }),
-        //     new HtmlWebpackPlugin({
-        //         template: path.resolve(__dirname, 'src/index.html')
-        //     }),
-        //     ...isLocalDevelopment ? [
-        //         new webpack.HotModuleReplacementPlugin(),
+        plugins: [
+            // Define global constant at compile time.
+            new webpack.DefinePlugin({
+                // Grab album from global env only when not running locally.
+                ...!isLocalDevelopment && {
+                    ALBUM: JSON.stringify(album)
+                },
+                BUILD_DATE_TIME: JSON.stringify(
+                    `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
+                ),
+                IS_DELIVERY: isDeliveryEnvironment,
+                IS_LOCAL: isLocalDevelopment
+            })
+            // new HtmlWebpackPlugin({
+            //     template: path.resolve(__dirname, 'src/index.html')
+            // }),
+            // ...isLocalDevelopment ? [
+            //     new webpack.HotModuleReplacementPlugin(),
 
-        //         ...SHOW_BUNDLE_ANALYZER ? [new BundleAnalyzerPlugin()] : []
-        //     ] : [
-        //         new webpack.optimize.OccurrenceOrderPlugin(),
+            //     ...SHOW_BUNDLE_ANALYZER ? [new BundleAnalyzerPlugin()] : []
+            // ] : [
+            //     new webpack.optimize.OccurrenceOrderPlugin(),
 
-        //         // Remove the previous build.
-        //         new CleanWebpackPlugin()
-        //     ]
-        // ],
-        // resolve: {
-        //     // Import from files without specifying extensions.
-        //     extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
-        //     alias: {
-        //         // Allow admin routes only in delivery.
-        //         routes: isDeliveryEnvironment ?
-        //             path.resolve(__dirname, './admin/routes') :
-        //             path.resolve(__dirname, './src/routes'),
-        //         // Grab data from admin folder in local development.
-        //         data: isLocalDevelopment ?
-        //             path.resolve(__dirname, './admin/data') :
-        //             path.resolve(__dirname, './src/data')
-        //     }
-        // },
+            //     // Remove the previous build.
+            //     new CleanWebpackPlugin()
+            // ]
+        ],
+        resolve: {
+            // Import from files without specifying extensions.
+            // extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
+            alias: {
+                // Allow admin routes only in delivery.
+                routes: isDeliveryEnvironment ?
+                    path.resolve(__dirname, './admin/routes') :
+                    path.resolve(__dirname, './app/routes'),
+                // Grab data from admin folder in local development.
+                data: isLocalDevelopment ?
+                    path.resolve(__dirname, './admin/data') :
+                    path.resolve(__dirname, './app/data')
+            }
+        },
         // module: {
         //     rules: [
         //         {
