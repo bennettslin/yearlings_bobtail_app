@@ -1,10 +1,9 @@
 // Section to show the stage illustrations.
-
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect } from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
+import { CAN_THEATRE_ENTER_SELECTOR } from '../../redux/entrance/selectors'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Stage from '../Stage'
@@ -18,62 +17,45 @@ import Floor from './Floor'
 
 import { removeLoadingIndicator } from '../../utils/window'
 
-const mapStateToProps = ({
-    entranceStore: { canTheatreEnter }
-}) => ({
-    canTheatreEnter
-})
+const Theatre = () => {
+    const
+        dispatch = useDispatch(),
+        canTheatreEnter = useSelector(CAN_THEATRE_ENTER_SELECTOR),
+        onEntered = () => {
+            logTransition('Theatre did enter.')
+            dispatch(updateEntranceStore({ didTheatreEnter: true }))
+        }
 
-class Theatre extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        canTheatreEnter: PropTypes.bool.isRequired,
-        updateEntranceStore: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
+    useEffect(() => {
         logMount('Theatre')
         removeLoadingIndicator()
-    }
+    }, [])
 
-    _handleTransitionEntered = () => {
-        logTransition('Theatre did enter.')
-        this.props.updateEntranceStore({ didTheatreEnter: true })
-    }
-
-    render() {
-        const { canTheatreEnter } = this.props
-
-        return (
-            <CSSTransition
-                {...{
-                    in: canTheatreEnter,
-                    timeout: 200,
-                    classNames: { enterDone: 'Theatre__visible' },
-                    onEntered: this._handleTransitionEntered
-                }}
-            >
-                <div className={cx(
-                    'Theatre',
-                    'abF',
-                    'ovH'
-                )}>
-                    <Stage />
-                    <Curtains />
-                    <Proscenium />
-                    <DramaMasks />
-                    <Wall />
-                    <Wall isRight />
-                    <Ceiling />
-                    <Floor />
-                </div>
-            </CSSTransition>
-        )
-    }
+    return (
+        <CSSTransition
+            {...{
+                in: canTheatreEnter,
+                timeout: 200,
+                classNames: { enterDone: 'Theatre__visible' },
+                onEntered
+            }}
+        >
+            <div className={cx(
+                'Theatre',
+                'abF',
+                'ovH'
+            )}>
+                <Stage />
+                <Curtains />
+                <Proscenium />
+                <DramaMasks />
+                <Wall />
+                <Wall isRight />
+                <Ceiling />
+                <Floor />
+            </div>
+        </CSSTransition>
+    )
 }
 
-export default connect(
-    mapStateToProps,
-    { updateEntranceStore }
-)(Theatre)
+export default Theatre
