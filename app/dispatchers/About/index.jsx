@@ -1,33 +1,24 @@
 // Child that knows rules to toggle about popup.
-import { useEffect } from 'react'
-import PropTypes from 'prop-types'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAboutShown } from '../../redux/toggle/action'
 import { IS_ABOUT_SHOWN_SELECTOR } from '../../redux/toggle/selectors'
 
-const AboutDispatcher = ({ getRefs }) => {
+const AboutDispatcher = (props, ref) => {
     const
+        dispatch = useDispatch(),
         isAboutShown = useSelector(IS_ABOUT_SHOWN_SELECTOR),
-        dispatch = useDispatch()
+        dispatchAbout = (
+            // Just toggle unless parent specifies value.
+            newIsAboutShown = !isAboutShown
+        ) => {
+            // Turning on or off is always successful.
+            dispatch(updateIsAboutShown(newIsAboutShown))
+            return true
+        }
 
-    useEffect(() => {
-        getRefs({
-            dispatchAbout(
-                // Just toggle unless parent specifies value.
-                newIsAboutShown = !isAboutShown
-            ) {
-                // Turning on or off is always successful.
-                dispatch(updateIsAboutShown(newIsAboutShown))
-                return true
-            }
-        })
-    }, [isAboutShown])
-
+    useImperativeHandle(ref, () => dispatchAbout)
     return null
 }
 
-AboutDispatcher.propTypes = {
-    getRefs: PropTypes.func.isRequired
-}
-
-export default AboutDispatcher
+export default forwardRef(AboutDispatcher)

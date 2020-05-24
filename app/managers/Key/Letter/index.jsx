@@ -77,10 +77,6 @@ class LetterManager extends PureComponent {
         })
     }
 
-    getDispatchScore = dispatchScore => {
-        this.dispatchScore = dispatchScore
-    }
-
     handleLetter = (keyName) => {
         let annotationIndexWasAccessed = false,
             keyWasRegistered
@@ -205,6 +201,14 @@ class LetterManager extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchAbout = dispatch => {
+        this.dispatchAbout = dispatch
+    }
+
+    getDispatchScore = dispatch => {
+        this.dispatchScore = dispatch
+    }
+
     render() {
         return (
             <>
@@ -220,7 +224,7 @@ class LetterManager extends PureComponent {
                 <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
                 <TipsDispatcher {...{ getRefs: this._getRefs }} />
-                <AboutDispatcher {...{ getRefs: this._getRefs }} />
+                <AboutDispatcher {...{ ref: this.getDispatchAbout }} />
                 <ScoreDispatcher {...{ ref: this.getDispatchScore }} />
             </>
         )
