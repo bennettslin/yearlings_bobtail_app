@@ -6,8 +6,6 @@ const LYRIC_EXPAND_MAP = {
     [false]: lyricExpand
 }
 
-const getIcon = ({ buttonIdentifier: isLyricExpanded }) => {
+export default ({ buttonIdentifier: isLyricExpanded }) => {
     return LYRIC_EXPAND_MAP[isLyricExpanded]
 }
-
-export default getIcon

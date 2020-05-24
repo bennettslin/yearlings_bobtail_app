@@ -6,8 +6,6 @@ const AUDIO_PLAY_MAP = {
     [false]: audioPlay
 }
 
-const getIcon = ({ buttonIdentifier: isPlaying }) => {
+export default ({ buttonIdentifier: isPlaying }) => {
     return AUDIO_PLAY_MAP[isPlaying]
 }
-
-export default getIcon

@@ -14,8 +14,6 @@ const CAROUSEL_NAV_MAP = {
     [IS_NEITHER_SHOWN]: neitherShown
 }
 
-const getIcon = ({ buttonIdentifier }) => {
+export default ({ buttonIdentifier }) => {
     return CAROUSEL_NAV_MAP[buttonIdentifier]
 }
-
-export default getIcon

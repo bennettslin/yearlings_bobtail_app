@@ -8,8 +8,6 @@ const NAV_SONG_MAP = {
     [false]: navSong
 }
 
-const getIcon = ({ buttonIdentifier: songIndex }) => {
+export default ({ buttonIdentifier: songIndex }) => {
     return NAV_SONG_MAP[getSongIsLogue(songIndex)]
 }
-
-export default getIcon

@@ -11,8 +11,6 @@ const LYRIC_EAR_MAP = {
     [LYRIC_RIGHT]: lyricEarRight
 }
 
-const getIcon = ({ buttonIdentifier: direction }) => {
+export default ({ buttonIdentifier: direction }) => {
     return LYRIC_EAR_MAP[direction]
 }
-
-export default getIcon

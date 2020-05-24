@@ -6,8 +6,6 @@ const AUDIO_OPTIONS_MAP = {
     1: audioRepeat
 }
 
-const getIcon = ({ buttonIdentifier: audioOptionIndex }) => {
+export default ({ buttonIdentifier: audioOptionIndex }) => {
     return AUDIO_OPTIONS_MAP[audioOptionIndex]
 }
-
-export default getIcon

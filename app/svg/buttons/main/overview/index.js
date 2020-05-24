@@ -14,8 +14,6 @@ const OVERVIEW_MAP = {
     [DISABLED]: overviewDisabled
 }
 
-const getIcon = ({ buttonIdentifier }) => {
+export default ({ buttonIdentifier }) => {
     return OVERVIEW_MAP[buttonIdentifier]
 }
-
-export default getIcon
