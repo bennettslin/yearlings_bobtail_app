@@ -115,7 +115,7 @@ class Previewer extends PureComponent {
         setPresenceInQueryStrings({ presenceType, presenceKey })
     }
 
-    handleKeyDownPress = (e) => {
+    handleKeyDownPress = e => {
         const
             { isActor } = this.props,
             { presenceType, presenceKey } = this.state

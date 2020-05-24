@@ -7,7 +7,7 @@ import {
     NEXT_SCENE_KEY
 } from '../../constants/access'
 
-export const getKeyName = (e) => {
+export const getKeyName = e => {
     // Do not handle at all if any modifier keys are present.
     if (
         e.altKey ||

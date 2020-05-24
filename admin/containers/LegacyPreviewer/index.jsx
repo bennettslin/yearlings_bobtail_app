@@ -102,7 +102,7 @@ class LegacyPreviewer extends PureComponent {
         })
     }
 
-    handleKeyDownPress = (e) => {
+    handleKeyDownPress = e => {
         const { presenceType, presenceKey } = this.state
 
         accessPresence({

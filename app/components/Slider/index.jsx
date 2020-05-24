@@ -37,7 +37,7 @@ class Slider extends PureComponent {
         this.sliderElement = React.createRef()
     }
 
-    _handleTouchDown = (e) => {
+    _handleTouchDown = e => {
         logEvent({ e, componentName: 'Slider' })
         this.dispatchTouchBegin(e, this.sliderElement.current)
     }

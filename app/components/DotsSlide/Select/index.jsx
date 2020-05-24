@@ -30,7 +30,7 @@ class DotsSlideSelect extends PureComponent {
         this.dispatchSelectDot(this.props.dotIndex)
     }
 
-    _toggleActivatedDot = (e) => {
+    _toggleActivatedDot = e => {
         this.dispatchActivatedDot(this.props.dotIndex)
 
         // Stop propagation if anchor click is valid.

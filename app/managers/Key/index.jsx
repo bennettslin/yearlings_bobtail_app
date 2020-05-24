@@ -51,7 +51,7 @@ class KeyManager extends PureComponent {
         })
     }
 
-    handleKeyDownPress = (e) => {
+    handleKeyDownPress = e => {
 
         if (isEmailFocused()) {
             return false
@@ -97,7 +97,7 @@ class KeyManager extends PureComponent {
         })
     }
 
-    handleKeyUpPress = (e) => {
+    handleKeyUpPress = e => {
 
         if (isEmailFocused()) {
             return false

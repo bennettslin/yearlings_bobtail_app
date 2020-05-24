@@ -31,7 +31,7 @@ class PopupViewButton extends Component {
         return false
     }
 
-    _handleClick = (e) => {
+    _handleClick = e => {
 
         const {
             isPreviousButton,

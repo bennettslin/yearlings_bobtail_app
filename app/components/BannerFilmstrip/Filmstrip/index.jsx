@@ -64,7 +64,7 @@ class Filmstrip extends PureComponent {
         this.dispatchSceneIndex(sceneIndex)
     }
 
-    dispatchStopPropagation = (e) => {
+    dispatchStopPropagation = e => {
         this.dispatchStopPropagation(e)
     }
 

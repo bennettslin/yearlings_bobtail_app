@@ -21,7 +21,7 @@ class FilmstripScene extends PureComponent {
         dispatchStopPropagation: PropTypes.func.isRequired
     }
 
-    _handleSceneClick = (e) => {
+    _handleSceneClick = e => {
         const {
             isSelectedScene,
             sceneIndex

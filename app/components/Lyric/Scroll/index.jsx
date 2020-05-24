@@ -45,7 +45,7 @@ class LyricScroll extends PureComponent {
         })
     }
 
-    handleVerseBarWheel = (e) => {
+    handleVerseBarWheel = e => {
         this.dispatchVerseBarWheel(e, this.lyricElement)
     }
 
@@ -85,7 +85,7 @@ class LyricScroll extends PureComponent {
         this.dispatchScrollTimeout()
     }
 
-    _handleDetermineAutoScroll = (e) => {
+    _handleDetermineAutoScroll = e => {
         this.dispatchLyricTouchMoveOrWheel(e, this.lyricElement)
     }
 

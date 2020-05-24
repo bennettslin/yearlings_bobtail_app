@@ -29,7 +29,7 @@ const Annotation = ({
             annotationIndex
         ),
 
-        onClick = (e) => {
+        onClick = e => {
             logEvent({ e, componentName: `Annotation ${annotationIndex}` })
 
             if (isSelected) {

@@ -40,7 +40,7 @@ const Anchor = ({
          */
         isAccessed = isAccessedBeforeDesktop && IS_USER_AGENT_DESKTOP,
 
-        onClick = (e) => {
+        onClick = e => {
             if (!isDisabled) {
                 logEvent({
                     e,

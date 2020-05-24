@@ -89,7 +89,8 @@ const LOG_STYLES = {
     },
     [TRANSITION]: {
         color: '#b4b',
-        fontSize: '1.35em'
+        // fontSize: '1.35em'
+        fontSize: '2.5em'
     }
 }
 

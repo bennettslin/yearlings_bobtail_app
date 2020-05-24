@@ -54,7 +54,7 @@ class Button extends Component {
         })
     }
 
-    _handleClick = (e) => {
+    _handleClick = e => {
         const {
             buttonName,
             isDisabled,

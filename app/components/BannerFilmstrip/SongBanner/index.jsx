@@ -128,7 +128,7 @@ class SongBanner extends PureComponent {
         return -1
     }
 
-    handleBannerClick = (e) => {
+    handleBannerClick = e => {
         const {
             selectedSongIndex,
             isSliderMoving,

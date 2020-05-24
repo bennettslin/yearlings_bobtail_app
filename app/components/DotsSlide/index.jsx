@@ -44,7 +44,7 @@ class DotsSlide extends PureComponent {
         resetActivatedDots: PropTypes.func.isRequired
     }
 
-    _handleContainerClick = (e) => {
+    _handleContainerClick = e => {
         logEvent({ e, componentName: 'DotsSlide' })
         this.dispatchStopPropagation(e)
         this.props.resetActivatedDots()

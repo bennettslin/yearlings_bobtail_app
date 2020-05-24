@@ -57,7 +57,7 @@ class VerseBar extends PureComponent {
         handleVerseBarWheel: PropTypes.func.isRequired
     }
 
-    _handleVerseBarSelect = (e) => {
+    _handleVerseBarSelect = e => {
         logEvent({ e, componentName: 'VerseBar' })
         if (this.getIsShown()) {
             this.dispatchScrollVerse()

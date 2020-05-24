@@ -43,7 +43,7 @@ class Verse extends PureComponent {
         setVerseRef: PropTypes.func
     }
 
-    _handleInteractivatableClick = (e) => {
+    _handleInteractivatableClick = e => {
         const { verseIndex } = this.props
 
         logEvent({ e, componentName: `Verse ${verseIndex}` })

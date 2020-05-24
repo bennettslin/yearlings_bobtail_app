@@ -40,7 +40,7 @@ class Lyric extends PureComponent {
         logMount('Lyric')
     }
 
-    _handleVerseBarWheel = (e) => {
+    _handleVerseBarWheel = e => {
         this.handleVerseBarWheel(e)
     }
 

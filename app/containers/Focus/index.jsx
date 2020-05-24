@@ -125,11 +125,11 @@ class FocusContainer extends PureComponent {
         }
     }
 
-    _handleTouchMove = (e) => {
+    _handleTouchMove = e => {
         this.dispatchTouchMove(e)
     }
 
-    _handleTouchEnd = (e) => {
+    _handleTouchEnd = e => {
         const isSliderTouchEnding = this.dispatchTouchEnd()
         if (isSliderTouchEnding) {
             logEvent({ e, componentName: 'FocusContainer' })
@@ -147,7 +147,7 @@ class FocusContainer extends PureComponent {
         this.setState({ isSliderTouchEnding: false })
     }
 
-    _handleBodyClick = (e) => {
+    _handleBodyClick = e => {
         if (isEmailFocused()) {
             return false
         }

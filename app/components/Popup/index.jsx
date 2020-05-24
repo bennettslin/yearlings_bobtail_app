@@ -29,7 +29,7 @@ class Popup extends PureComponent {
         handleNextClick: PropTypes.func
     }
 
-    handleContainerClick = (e) => {
+    handleContainerClick = e => {
         const { popupName } = this.props
         logEvent({ e, componentName: popupName })
         this.dispatchStopPropagation(e)

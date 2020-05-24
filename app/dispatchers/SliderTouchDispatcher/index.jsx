@@ -105,7 +105,7 @@ class SliderTouchDispatcher extends PureComponent {
     }
 
     // TODO: These can easily just be a single method.
-    dispatchTouchMove = (e) => {
+    dispatchTouchMove = e => {
         if (this.props.isSliderTouched) {
 
             const clientX = getClientX(e)

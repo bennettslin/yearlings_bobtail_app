@@ -80,7 +80,7 @@ class TextLyricAnchor extends PureComponent {
         handleAnchorClick: PropTypes.func
     }
 
-    _handleAnchorClick = (e) => {
+    _handleAnchorClick = e => {
         const {
                 lyricAnnotationIndex,
                 annotationIndex,
