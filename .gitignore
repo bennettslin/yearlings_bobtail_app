@@ -7,3 +7,6 @@ bundle.js
 .env
 .eslintcache
 .vscode
+
+.cache/
+public/
