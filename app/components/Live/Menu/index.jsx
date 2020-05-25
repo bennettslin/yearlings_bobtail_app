@@ -63,7 +63,7 @@ class Menu extends PureComponent {
             })
 
         // Prevent menu from rendering before windowWidth has been set.
-        return windowWidth && (
+        return (
             <div
                 {...{
                     className: cx(

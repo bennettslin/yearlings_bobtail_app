@@ -9,4 +9,6 @@ bundle.js
 .vscode
 
 .cache/
+build_delivery/
+build_production/
 public/
