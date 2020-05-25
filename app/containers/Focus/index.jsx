@@ -103,9 +103,9 @@ class FocusContainer extends PureComponent {
             (
                 !isHeightlessLyric || isLyricExpanded
             ) &&
-            this.lyricElement
+            this.lyricFocusElement
         ) {
-            focusedElement = this.lyricElement
+            focusedElement = this.lyricFocusElement
             focusedElementString = 'lyric'
 
         } else {
@@ -156,7 +156,7 @@ class FocusContainer extends PureComponent {
     }
 
     setLyricFocusElement = node => {
-        this.lyricElement = node
+        this.lyricFocusElement = node
         this._focusElementForAccess()
     }
 

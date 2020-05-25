@@ -1,24 +1,25 @@
 // These listeners take in no props from parent, so can live anywhere.
-
 import React, { PureComponent } from 'react'
 
 import AudioManager from './Audio'
 import PlayerManager from './Player'
 
-import { populateRefs } from '../../helpers/ref'
-
 class AudioPlayerManager extends PureComponent {
 
-    _toggleSelectedPlayer = payload => {
-        return this.toggleSelectedPlayer(payload)
+    callToggleSelectedPlayer = payload => {
+        this.toggleSelectedPlayer(payload)
     }
 
-    _handleSongEnd = () => {
-        return this.handleSongEnd()
+    callHandleSongEnd = () => {
+        this.handleSongEnd()
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    setHandleSongEnd = dispatch => {
+        this.handleSongEnd = dispatch
+    }
+
+    setToggleSelectedPlayer = dispatch => {
+        this.toggleSelectedPlayer = dispatch
     }
 
     render() {
@@ -26,14 +27,14 @@ class AudioPlayerManager extends PureComponent {
             <>
                 <AudioManager
                     {...{
-                        getRefs: this._getRefs,
-                        toggleSelectedPlayer: this._toggleSelectedPlayer
+                        getHandleSongEnd: this.setHandleSongEnd,
+                        toggleSelectedPlayer: this.callToggleSelectedPlayer
                     }}
                 />
                 <PlayerManager
                     {...{
-                        getRefs: this._getRefs,
-                        handleSongEnd: this._handleSongEnd
+                        getToggleSelectedPlayer: this.setToggleSelectedPlayer,
+                        handleSongEnd: this.callHandleSongEnd
                     }}
                 />
             </>

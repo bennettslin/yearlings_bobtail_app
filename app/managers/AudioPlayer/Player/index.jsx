@@ -64,7 +64,7 @@ class PlayerManager extends PureComponent {
         updateSelectedStore: PropTypes.func.isRequired,
 
         // From parent.
-        getRefs: PropTypes.func.isRequired,
+        getToggleSelectedPlayer: PropTypes.func.isRequired,
         handleSongEnd: PropTypes.func.isRequired
     }
 
@@ -72,9 +72,7 @@ class PlayerManager extends PureComponent {
     players = {}
 
     componentDidMount() {
-        this.props.getRefs({
-            toggleSelectedPlayer: this.toggleSelectedPlayer
-        })
+        this.props.getToggleSelectedPlayer(this.toggleSelectedPlayer)
     }
 
     _playerShouldRender(songIndex) {

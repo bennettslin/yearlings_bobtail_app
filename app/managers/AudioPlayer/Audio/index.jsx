@@ -24,14 +24,12 @@ class AudioManager extends PureComponent {
         updateScrollLyricStore: PropTypes.func.isRequired,
 
         // From parent.
-        getRefs: PropTypes.func.isRequired,
+        getHandleSongEnd: PropTypes.func.isRequired,
         toggleSelectedPlayer: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getRefs({
-            handleSongEnd: this.handleSongEnd
-        })
+        this.props.getHandleSongEnd(this.handleSongEnd)
     }
 
     componentDidUpdate(prevProps) {
