@@ -8,10 +8,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import AboutToggle from '../../About/Toggle'
-import Audio from '../../Audio'
-import BannerFilmstrip from '../../BannerFilmstrip'
-import Slider from '../../Slider'
+import AboutToggle from '../About/Toggle'
+import Audio from '../Audio'
+import BannerFilmstrip from '../BannerFilmstrip'
+import Slider from '../Slider'
 
 import { getMenuMarginInOverlay } from './helper'
 

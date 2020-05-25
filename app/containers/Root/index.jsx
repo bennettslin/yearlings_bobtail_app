@@ -15,7 +15,14 @@ import TouchWrapper from '../../wrappers/TouchWrapper'
 import TransitionWrapper from '../../wrappers/TransitionWrapper'
 import LogicWrapper from '../../wrappers/LogicWrapper'
 import ResizeListener from '../../handlers/Resize/Listener'
-import Live from '../../components/Live'
+
+import Main from '../../components/Main'
+import Theatre from '../../components/Theatre'
+import Menu from '../../components/Menu'
+import MainPopups from '../../components/MainPopups'
+import LyricOverview from '../../components/LyricOverview'
+import PopupOverlay from '../../components/PopupOverlay'
+import TouchOverlay from '../../components/TouchOverlay'
 
 class RootContainer extends PureComponent {
 
@@ -55,9 +62,15 @@ class RootContainer extends PureComponent {
                                 <TouchWrapper>
                                     <TransitionWrapper>
                                         <LogicWrapper>
-                                            <Live
+                                            <Theatre />
+                                            <Main />
+                                            <LyricOverview
                                                 {...{ setLyricFocusElement }}
                                             />
+                                            <PopupOverlay />
+                                            <MainPopups />
+                                            <Menu />
+                                            <TouchOverlay />
                                         </LogicWrapper>
                                     </TransitionWrapper>
                                 </TouchWrapper>

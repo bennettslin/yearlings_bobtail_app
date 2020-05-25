@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import Lyric from '../../Lyric'
-import OverviewPopup from '../../Popups/Overview'
+import Lyric from '../Lyric'
+import OverviewPopup from '../Popups/Overview'
 
 import { getLyricOverviewHeight } from './helper'
 
@@ -33,6 +33,7 @@ const LyricOverview = ({
     setLyricFocusElement
 
 }) => {
+    // TODO: Make this a selector.
     const lyricOverviewHeight = getLyricOverviewHeight({
         isLyricExpanded,
         lyricDynamicHeight,
