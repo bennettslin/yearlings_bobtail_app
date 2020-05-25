@@ -16,13 +16,13 @@ import TransitionWrapper from '../../wrappers/TransitionWrapper'
 import LogicWrapper from '../../wrappers/LogicWrapper'
 import ResizeListener from '../../handlers/Resize/Listener'
 
-import Main from '../../components/Main'
 import Theatre from '../../components/Theatre'
+import Main from '../../components/Main'
 import Menu from '../../components/Menu'
-import MainPopups from '../../components/MainPopups'
 import LyricOverview from '../../components/LyricOverview'
-import PopupOverlay from '../../components/PopupOverlay'
-import TouchOverlay from '../../components/TouchOverlay'
+import MainPopups from '../../components/Popups/MainPopups'
+import PopupOverlay from '../../components/Overlays/PopupOverlay'
+import TouchOverlay from '../../components/Overlays/TouchOverlay'
 
 class RootContainer extends PureComponent {
 
