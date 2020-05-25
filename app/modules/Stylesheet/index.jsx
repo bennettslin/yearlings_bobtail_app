@@ -1,38 +1,38 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-class Stylesheet extends Component {
+import { getStyleString } from './helper'
 
-    static propTypes = {
-        className: PropTypes.string,
-        children: PropTypes.any.isRequired
-    }
+const Stylesheet = ({
+    className,
+    indices,
+    parentPrefix,
+    childPrefix,
+    getStyle
 
-    shouldComponentUpdate() {
+}) => (
+    <style
+        className={cx(
+            'Stylesheet',
+            className
+        )}
+    >
+        {getStyleString({
+            indices,
+            parentPrefix,
+            childPrefix,
+            getStyle
+        })}
+    </style>
+)
 
-        // This behaves like a stylesheet. It should never update!
-        return false
-    }
-
-    render() {
-
-        const {
-            className,
-            children
-        } = this.props
-
-        return (
-            <style
-                className={cx(
-                    'Stylesheet',
-                    className
-                )}
-            >
-                {children}
-            </style>
-        )
-    }
+Stylesheet.propTypes = {
+    className: PropTypes.string.isRequired,
+    indices: PropTypes.array.isRequired,
+    parentPrefix: PropTypes.string,
+    childPrefix: PropTypes.string.isRequired,
+    getStyle: PropTypes.func.isRequired
 }
 
 export default Stylesheet

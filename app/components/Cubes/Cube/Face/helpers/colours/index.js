@@ -28,7 +28,7 @@ export const getSvgFillForFace = ({
             xIndex,
             yIndex,
             zIndex
-        })
+        }).toFixed(2)
 
     return `hsla(${h}, ${s}%, ${luminosity}%, ${alpha})`
 }

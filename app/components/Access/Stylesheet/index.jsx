@@ -1,8 +1,5 @@
-import React, { memo } from 'react'
-import cx from 'classnames'
-
+import React from 'react'
 import Stylesheet from '../../../modules/Stylesheet'
-import StaticStylesheet from '../../../modules/Stylesheet/Static'
 
 import { STYLE_LOGIC_ACCESS_LETTERS } from '../../../constants/access'
 import {
@@ -10,24 +7,16 @@ import {
     CHILD_ACCESS_PREFIX
 } from '../../../constants/prefixes'
 
-const AccessStylesheet = () => {
+const AccessStylesheet = () => (
+    <Stylesheet
+        {...{
+            className: 'AccessStylesheet',
+            indices: STYLE_LOGIC_ACCESS_LETTERS,
+            parentPrefix: PARENT_ACCESS_PREFIX,
+            childPrefix: CHILD_ACCESS_PREFIX,
+            getStyle: () => ({ transform: 'scale(0.9)' })
+        }}
+    />
+)
 
-    return (
-        <Stylesheet
-            className={cx(
-                'AccessStylesheet'
-            )}
-        >
-            <StaticStylesheet
-                {...{
-                    indices: STYLE_LOGIC_ACCESS_LETTERS,
-                    parentPrefix: PARENT_ACCESS_PREFIX,
-                    childPrefix: CHILD_ACCESS_PREFIX,
-                    style: { transform: 'scale(0.9)' }
-                }}
-            />
-        </Stylesheet>
-    )
-}
-
-export default memo(AccessStylesheet)
+export default AccessStylesheet

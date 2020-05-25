@@ -1,4 +1,4 @@
-export const getStaticStyleStringForIndex = ({
+const getStyleStringForIndex = ({
     index,
     parentPrefix,
     childPrefix,
@@ -16,3 +16,20 @@ export const getStaticStyleStringForIndex = ({
 
     return `${selector}{${styleStrings.join('')}}`
 }
+
+export const getStyleString = ({
+    indices,
+    parentPrefix,
+    childPrefix,
+    getStyle
+
+}) => (
+    indices.map(index => (
+        getStyleStringForIndex({
+            index,
+            parentPrefix,
+            childPrefix,
+            style: getStyle(index)
+        })
+    )).join('')
+)

@@ -2,6 +2,7 @@
  * Styling if at least one sequence dot is selected.
  */
 
+// FIXME: Only selectors need to be iterated, not style.
 @each $dotLetter in $dotLettersArray {
 
     // "Root selected dot letter, child dot sequence letter."

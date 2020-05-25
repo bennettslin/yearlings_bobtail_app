@@ -1,3 +1,4 @@
+// FIXME: Only selectors need to be iterated, not style.
 @each $dotLetter in $dotLettersArray {
 
     // "Root selected dot letter, child annotation card."

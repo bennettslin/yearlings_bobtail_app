@@ -1,6 +1,8 @@
-# Easy tasks for tomorrow
-* Make Mara the loading indicator.
+# Easy tasks
 * Figure out why window resizing timeout seems to have regressed.
+
+# Easy reduction tasks
+* Internal stylesheet fixes
 
 # Ongoing Gatsby tasks
 * Pages and routing

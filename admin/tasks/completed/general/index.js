@@ -4724,5 +4724,9 @@ export default [
     {
         taskName: `Fix GA in Gatsby.`,
         workedHours: 1
+    },
+    {
+        taskName: `Refactor internal stylesheet.`,
+        workedHours: 1
     }
 ]

@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 
 import InlineSvg from '../../modules/InlineSvg'
 import dramaMasks from '../../../assets/svgs/theatre/dramaMasks'
@@ -15,4 +15,4 @@ const Spinner = () => (
     </InlineSvg>
 )
 
-export default memo(Spinner)
+export default Spinner
