@@ -9,4 +9,4 @@
 * Favicon
 * Splash page
 * Deprecated page
-* Script to empty Amazon S3 bucket before uploading
+* Look into s3 versioning
