@@ -8,6 +8,7 @@
 * Top level components import own styles
     * Child components also import own styles
 * Simplify Anchor for social media anchors
+* Listeners and Main components know to render themselves
 
 # Ongoing Gatsby tasks
 * Dynamic routes for song indices

@@ -2,9 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
-
 import { getNextOption } from '../../../helpers/options'
-
 import { SHOWN } from '../../../constants/options'
 
 class OverviewDispatcher extends PureComponent {
