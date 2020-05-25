@@ -1,6 +1,4 @@
-import React, { Component } from 'react'
-import cx from 'classnames'
-
+import React from 'react'
 import Anchor from '../../Anchor'
 
 import {
@@ -8,44 +6,36 @@ import {
     INSTAGRAM_PAGE
 } from '../../../constants/website'
 
-class SocialMedia extends Component {
+const SocialMedia = () => {
+    const
+        handleFacebookClick = () => {
+            // TODO: Analytics.
+        },
 
-    handleFacebookClick = () => {
-        // TODO: Analytics.
-    }
+        handleInstagramClick = () => {
+            // TODO: Analytics.
+        }
 
-    handleInstagramClick = () => {
-        // TODO: Analytics.
-    }
-
-    render() {
-        return (
-            <div
+    return (
+        <div {...{ className: 'SocialMedia' }}>
+            <Anchor
                 {...{
-                    className: cx(
-                        'SocialMedia'
-                    )
+                    href: FACEBOOK_PAGE,
+                    text: 'Facebook',
+                    analyticsIdentifier: 'facebook',
+                    handleAnchorClick: handleFacebookClick
                 }}
-            >
-                <Anchor
-                    {...{
-                        href: FACEBOOK_PAGE,
-                        text: 'Facebook',
-                        analyticsIdentifier: 'facebook',
-                        handleAnchorClick: this.handleFacebookClick
-                    }}
-                />
-                <Anchor
-                    {...{
-                        href: INSTAGRAM_PAGE,
-                        text: 'Instagram',
-                        analyticsIdentifier: 'Instagram',
-                        handleAnchorClick: this.handleInstagramClick
-                    }}
-                />
-            </div>
-        )
-    }
+            />
+            <Anchor
+                {...{
+                    href: INSTAGRAM_PAGE,
+                    text: 'Instagram',
+                    analyticsIdentifier: 'Instagram',
+                    handleAnchorClick: handleInstagramClick
+                }}
+            />
+        </div>
+    )
 }
 
 export default SocialMedia

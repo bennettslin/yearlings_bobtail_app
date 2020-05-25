@@ -46,6 +46,7 @@ const Main = () => {
             isHeightlessLyric,
             menuHeight,
             isDesktopWidth
+        // TODO: Get these from selectors.
         } = useSelector(mapStateToProps),
 
         // TODO: Make this a selector.

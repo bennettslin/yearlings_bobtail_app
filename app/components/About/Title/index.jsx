@@ -1,54 +1,51 @@
-import React, { Component } from 'react'
+import React from 'react'
 import cx from 'classnames'
 
 import Anchor from '../../Anchor'
 
 import { BOBTAIL_YEARLINGS_WEBSITE } from '../../../constants/website'
 
-class AboutTitle extends Component {
-
-    handleAnchorClick = () => {
+const AboutTitle = () => {
+    const handleAnchorClick = () => {
         // TODO: Analytics.
     }
 
-    render() {
-        return (
-            <>
-                <i
+    return (
+        <>
+            <i
+                {...{
+                    className: cx(
+                        'About__albumTitle',
+                        'About__colouredText',
+                        'Rancho'
+                    )
+                }}
+            >
+                {`Yearling's Bobtail`}
+            </i>
+            <div {...{ className: 'About__byLine' }}>
+                {'by '}
+                <span
                     {...{
                         className: cx(
-                            'About__albumTitle',
+                            'About__bandName',
                             'About__colouredText',
                             'Rancho'
                         )
                     }}
                 >
-                    {`Yearling's Bobtail`}
-                </i>
-                <div {...{ className: 'About__byLine' }}>
-                    {'by '}
-                    <span
+                    <Anchor
                         {...{
-                            className: cx(
-                                'About__bandName',
-                                'About__colouredText',
-                                'Rancho'
-                            )
+                            href: BOBTAIL_YEARLINGS_WEBSITE,
+                            text: 'Bobtail Yearlings',
+                            analyticsIdentifier: 'BobtailYearlings',
+                            handleAnchorClick
                         }}
-                    >
-                        <Anchor
-                            {...{
-                                href: BOBTAIL_YEARLINGS_WEBSITE,
-                                text: 'Bobtail Yearlings',
-                                analyticsIdentifier: 'BobtailYearlings',
-                                handleAnchorClick: this.handleAnchorClick
-                            }}
-                        />
-                    </span>
-                </div>
-            </>
-        )
-    }
+                    />
+                </span>
+            </div>
+        </>
+    )
 }
 
 export default AboutTitle

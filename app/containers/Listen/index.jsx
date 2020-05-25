@@ -1,6 +1,9 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import {
+    CAN_SCORE_MOUNT_SELECTOR,
+    CAN_SLIDER_MOUNT_SELECTOR
+} from '../../redux/mount/selectors'
 
 import AccessListener from '../../listeners/Access'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
@@ -32,76 +35,55 @@ import WikiListener from '../../handlers/Wiki/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
 
 import AudioPlayerManager from '../../managers/AudioPlayer'
-
 import FocusContainer from '../Focus'
 
-const mapStateToProps = ({
-    mountStore: {
-        canScoreMount,
-        canSliderMount
-    }
-}) => ({
-    canScoreMount,
-    canSliderMount
-})
+const ListenContainer = () => {
+    const
+        canScoreMount = useSelector(CAN_SCORE_MOUNT_SELECTOR),
+        canSliderMount = useSelector(CAN_SLIDER_MOUNT_SELECTOR)
 
-class ListenContainer extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        canScoreMount: PropTypes.bool.isRequired,
-        canSliderMount: PropTypes.bool.isRequired
-    }
-
-    componentDidMount() {
+    useEffect(() => {
         logMount('ListenContainer')
-    }
+    }, [])
 
-    render() {
-        const {
-            canScoreMount,
-            canSliderMount
-        } = this.props
-
-        return (
-            <>
-                <AccessListener />
-                <AnnotationAccessListener />
-                <AnnotationListener />
-                <AppLoadListener />
-                <AudioListener />
-                <CarouselNavListener />
-                <DotsSlideListener />
-                <DoublespeakerListener />
-                <LogueListener />
-                <LyricListener />
-                <LyricIndicesListener />
-                <MainListener />
-                <OverviewListener />
-                <PopupAnnotationListener />
-                <SceneChangeExitListener />
-                <SceneChangeEnterListener />
-                {canScoreMount && (
-                    <ScoreListener />
-                )}
-                <ScrollRenderListener />
-                {canSliderMount && (
-                    <SliderListener />
-                )}
-                <SongListener />
-                <SongChangeExitListener />
-                <SongChangeUpdateListener />
-                <SongChangeEnterListener />
-                <SongChangeDoneListener />
-                <TipsListener />
-                <UrlListener />
-                <WikiListener />
-                <WikiWormholeListener />
-                <AudioPlayerManager />
-                <FocusContainer />
-            </>
-        )
-    }
+    return (
+        <>
+            <AccessListener />
+            <AnnotationAccessListener />
+            <AnnotationListener />
+            <AppLoadListener />
+            <AudioListener />
+            <CarouselNavListener />
+            <DotsSlideListener />
+            <DoublespeakerListener />
+            <LogueListener />
+            <LyricListener />
+            <LyricIndicesListener />
+            <MainListener />
+            <OverviewListener />
+            <PopupAnnotationListener />
+            <SceneChangeExitListener />
+            <SceneChangeEnterListener />
+            {canScoreMount && (
+                <ScoreListener />
+            )}
+            <ScrollRenderListener />
+            {canSliderMount && (
+                <SliderListener />
+            )}
+            <SongListener />
+            <SongChangeExitListener />
+            <SongChangeUpdateListener />
+            <SongChangeEnterListener />
+            <SongChangeDoneListener />
+            <TipsListener />
+            <UrlListener />
+            <WikiListener />
+            <WikiWormholeListener />
+            <AudioPlayerManager />
+            <FocusContainer />
+        </>
+    )
 }
 
-export default connect(mapStateToProps)(ListenContainer)
+export default ListenContainer

@@ -1,5 +1,4 @@
 # Safari audit
-
 * No bright hover for song banner.
 * Filmstrip doesn't have perforations.
 * Weird bright hover for dots slide buttons.
@@ -13,7 +12,6 @@
 * Play button disabled after changing song. Is only good again upon reload.
 
 # Firefox
-
 * Sketchbooks are blank.
 * Wires for bottom bubble above wires for top bubble.
 
