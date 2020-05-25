@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import debounce from 'debounce'
 import { connect } from 'react-redux'
 
 import ResizeDispatcher from '../Dispatcher'
@@ -26,7 +25,7 @@ class ResizeListener extends PureComponent {
     }
 
     componentDidMount() {
-        getWindow().onresize = debounce(this._checkIfGenuineResize, 0)
+        getWindow().onresize = this._checkIfGenuineResize
     }
 
     componentWillUnmount() {
