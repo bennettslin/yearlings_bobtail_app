@@ -66,7 +66,7 @@ class CloseHandler extends PureComponent {
     }
 
     closeForBodyClick = () => {
-        if (!this.closeOverlayPopups()) {
+        if (!this.closeMainPopups()) {
             this.closeMainSections({
                 exemptLyric: true,
 
@@ -82,7 +82,7 @@ class CloseHandler extends PureComponent {
             { selectedAnnotationIndex: prevAnnotationIndex } = prevProps
 
         if (selectedAnnotationIndex && !prevAnnotationIndex) {
-            this.closeOverlayPopups()
+            this.closeMainPopups()
             this.closeMainSections({
                 exemptAnnotation: true,
                 exemptLyric: true
@@ -96,7 +96,7 @@ class CloseHandler extends PureComponent {
             { isCarouselShown: wasCarouselShown } = prevProps
 
         if (isCarouselShown !== wasCarouselShown) {
-            this.closeOverlayPopups()
+            this.closeMainPopups()
             this.closeMainSections({
                 exemptAnnotation: true,
                 exemptDots: true,
@@ -111,7 +111,7 @@ class CloseHandler extends PureComponent {
             { isDotsSlideShown: wasDotsSlideShown } = prevProps
 
         if (isDotsSlideShown && !wasDotsSlideShown) {
-            this.closeOverlayPopups()
+            this.closeMainPopups()
             this.closeMainSections({
                 exemptDots: true
             })
@@ -124,7 +124,7 @@ class CloseHandler extends PureComponent {
             { isLyricExpanded: wasLyricExpanded } = prevProps
 
         if (isLyricExpanded && !wasLyricExpanded) {
-            this.closeOverlayPopups()
+            this.closeMainPopups()
             this.closeMainSections({
                 // Continue to show selected annotation in overlay.
                 exemptAnnotation: true,
@@ -149,7 +149,7 @@ class CloseHandler extends PureComponent {
             (isSliderMoving && !wasSliderMoving) ||
             (isActivated && !wasActivated)
         ) {
-            this.closeOverlayPopups()
+            this.closeMainPopups()
             this.closeMainSections({
                 exemptActivatedVerse: true,
                 exemptLyric: true
@@ -173,7 +173,7 @@ class CloseHandler extends PureComponent {
             }
 
             if (!wasOverviewShown) {
-                this.closeOverlayPopups()
+                this.closeMainPopups()
                 this.closeMainSections({
                     exemptOverview: true,
                     ...isSongShownOverview && {
@@ -200,7 +200,7 @@ class CloseHandler extends PureComponent {
             }
 
             if (!wasTipsShown) {
-                this.closeOverlayPopups()
+                this.closeMainPopups()
                 this.closeMainSections({
                     exemptTips: true,
                     exemptOverview: true
@@ -215,7 +215,7 @@ class CloseHandler extends PureComponent {
             { isScoreShown: wasScoreShown } = prevProps
 
         if (isScoreShown && !wasScoreShown) {
-            this.closeOverlayPopups({ exemptScore: true })
+            this.closeMainPopups({ exemptScore: true })
             this.closeMainSections({ exemptAnnotation: true })
         }
     }
@@ -226,7 +226,7 @@ class CloseHandler extends PureComponent {
             { isAboutShown: wasAboutShown } = prevProps
 
         if (isAboutShown && !wasAboutShown) {
-            this.closeOverlayPopups({ exemptAbout: true })
+            this.closeMainPopups({ exemptAbout: true })
             this.closeMainSections({ exemptAnnotation: true })
         }
     }
@@ -237,12 +237,12 @@ class CloseHandler extends PureComponent {
             { selectedWikiIndex: prevWikiIndex } = prevProps
 
         if (selectedWikiIndex && !prevWikiIndex) {
-            this.closeOverlayPopups({ exemptWiki: true })
+            this.closeMainPopups({ exemptWiki: true })
             this.closeMainSections({ exemptAnnotation: true })
         }
     }
 
-    closeOverlayPopups({
+    closeMainPopups({
         exemptScore,
         exemptAbout,
         exemptWiki

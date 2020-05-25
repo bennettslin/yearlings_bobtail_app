@@ -5,7 +5,7 @@ import Main from '../Main'
 import Theatre from '../Theatre'
 
 import Menu from './Menu'
-import OverlayPopups from './OverlayPopups'
+import MainPopups from './MainPopups'
 import LyricOverview from './LyricOverview'
 import PopupOverlay from './PopupOverlay'
 import TouchOverlay from './TouchOverlay'
@@ -26,7 +26,7 @@ class Live extends PureComponent {
                 <Main />
                 <LyricOverview {...{ setLyricFocusElement }} />
                 <PopupOverlay />
-                <OverlayPopups />
+                <MainPopups />
                 <Menu />
                 <TouchOverlay />
             </>
