@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -36,14 +37,14 @@ const InlineSvg = ({
                 style
             }}
         >
-            <ReactInlineSvg
+            {/* <ReactInlineSvg
                 {...{
                     className: svgClassName,
                     xmlns: 'http://www.w3.org/2000/svg',
                     src: children,
                     ...rest
                 }}
-            />
+            /> */}
         </div>
         {siblingPlacedFront && siblingComponent}
     </>

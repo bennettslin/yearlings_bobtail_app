@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
@@ -13,7 +14,7 @@ import { getPathForIndices } from './helper'
 
 const UrlListener = () => {
     const
-        history = useHistory(),
+        // history = useHistory(),
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
         lyricVerseIndex = useSelector(LYRIC_VERSE_INDEX_SELECTOR),
         lyricAnnotationIndex = useSelector(LYRIC_ANNOTATION_INDEX_SELECTOR),
@@ -23,11 +24,11 @@ const UrlListener = () => {
             `${getTitleForSong(lyricSongIndex)} | Yearling's Bobtail`
 
     useEffect(() => {
-        history.replace(
-            getPathForIndices(
-                lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex
-            )
-        )
+        // history.replace(
+        //     getPathForIndices(
+        //         lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex
+        //     )
+        // )
     }, [lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex])
 
     return (

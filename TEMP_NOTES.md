@@ -1,7 +1,9 @@
-* Just get everything to render locally in src/pages/index
-* Successfully deploy to delivery 
+* Successfully deploy to delivery
+* Fonts
+* Svgs
+* Ensure everything looks good on the user facing side.
 * Clean up old webpack code and configuration, remove unused dependencies
 * Clean up new gatsby code and configuration
-* GA in HTML
+* GA in HTML (GA was already broken in production.)
 * Pages and routing
 * Favicon

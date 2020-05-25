@@ -31,13 +31,13 @@ export const getDocument = () => (
 )
 
 export const getWindow = () => {
-    const window = (
+    const safeWindow = (
         typeof window === 'undefined' ?
             SAFE_WINDOW :
             window
     )
-    window.dataLayer = window.dataLayer || []
-    return window
+    safeWindow.dataLayer = safeWindow.dataLayer || []
+    return safeWindow
 }
 
 export const removeLoadingIndicator = () => {

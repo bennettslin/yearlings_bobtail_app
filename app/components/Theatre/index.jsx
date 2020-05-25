@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Section to show the stage illustrations.
 import React, { useEffect } from 'react'
 import cx from 'classnames'
@@ -45,14 +46,14 @@ const Theatre = () => {
                 'abF',
                 'ovH'
             )}>
-                <Stage />
+                {/* <Stage />
                 <Curtains />
                 <Proscenium />
                 <DramaMasks />
                 <Wall />
                 <Wall isRight />
                 <Ceiling />
-                <Floor />
+                <Floor /> */}
             </div>
         </CSSTransition>
     )
