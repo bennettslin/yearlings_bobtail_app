@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -227,55 +226,54 @@ export default class PresenceSvg extends PureComponent {
                 presenceKey
             })
 
-        return null
-        // return (Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && !hide && (
-        //     <InlineSvg
-        //         {...{
-        //             className: cx(
-        //                 'PresenceSvg',
-        //                 'PresenceSvg__position',
-        //                 noShadow && 'Presence__noShadow',
-        //                 className
-        //             ),
-        //             style: {
-        //                 left: `${adjustedLeft.toFixed(2)}%`,
-        //                 top: `${adjustedTop.toFixed(2)}%`,
-        //                 width: `${adjustedWidth.toFixed(2)}%`,
-        //                 height: `${adjustedHeight.toFixed(2)}%`,
-        //                 ...perspective && {
-        //                     perspective: `${perspective}em`
-        //                 }
-        //             },
-        //             svgClassName: cx(
-        //                 presenceKeyClassName,
-        //                 duplicateKeyClassName,
-        //                 getSharedClassNames(sharedStyle)
-        //             ),
-        //             title: convertPresenceKeyToTitle(presenceKey),
-        //             preProcessor: this.preProcessSvg,
-        //             onLoad: this.postProcessSvg,
+        return (Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && !hide && (
+            <InlineSvg
+                {...{
+                    className: cx(
+                        'PresenceSvg',
+                        'PresenceSvg__position',
+                        noShadow && 'Presence__noShadow',
+                        className
+                    ),
+                    style: {
+                        left: `${adjustedLeft.toFixed(2)}%`,
+                        top: `${adjustedTop.toFixed(2)}%`,
+                        width: `${adjustedWidth.toFixed(2)}%`,
+                        height: `${adjustedHeight.toFixed(2)}%`,
+                        ...perspective && {
+                            perspective: `${perspective}em`
+                        }
+                    },
+                    svgClassName: cx(
+                        presenceKeyClassName,
+                        duplicateKeyClassName,
+                        getSharedClassNames(sharedStyle)
+                    ),
+                    title: convertPresenceKeyToTitle(presenceKey),
+                    preProcessor: this.preProcessSvg,
+                    onLoad: this.postProcessSvg,
 
-        //             // If it's null, then there is no wire.
-        //             ...typeof placedFront === 'boolean' && {
-        //                 siblingPlacedFront: placedFront,
-        //                 siblingComponent: (
-        //                     <Wires
-        //                         {...{
-        //                             actorKey,
-        //                             presenceType,
-        //                             presenceKey,
-        //                             adjustedTop,
-        //                             adjustedLeft,
-        //                             adjustedWidth,
-        //                             adjustedHeight
-        //                         }}
-        //                     />
-        //                 )
-        //             }
-        //         }}
-        //     >
-        //         {children}
-        //     </InlineSvg>
-        // )
+                    // If it's null, then there is no wire.
+                    ...typeof placedFront === 'boolean' && {
+                        siblingPlacedFront: placedFront,
+                        siblingComponent: (
+                            <Wires
+                                {...{
+                                    actorKey,
+                                    presenceType,
+                                    presenceKey,
+                                    adjustedTop,
+                                    adjustedLeft,
+                                    adjustedWidth,
+                                    adjustedHeight
+                                }}
+                            />
+                        )
+                    }
+                }}
+            >
+                {children}
+            </InlineSvg>
+        )
     }
 }
