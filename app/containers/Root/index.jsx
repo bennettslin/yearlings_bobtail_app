@@ -1,9 +1,4 @@
-/**
- * Parent component that handles knowledge of UI state so that child components
- * deal with as little state change as possible.
- */
-
-import React, { PureComponent } from 'react'
+import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -24,63 +19,56 @@ import MainPopups from '../../components/Popups/MainPopups'
 import PopupOverlay from '../../components/Overlays/PopupOverlay'
 import TouchOverlay from '../../components/Overlays/TouchOverlay'
 
-class RootContainer extends PureComponent {
+const RootContainer = ({ setLyricFocusElement }) => {
+    const
+        rootElement = useRef(),
+        getRootElement = () => rootElement.current
 
-    static propTypes = {
-        // From parent.
-        setLyricFocusElement: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
+    useEffect(() => {
         logMount('RootContainer')
-        this.rootElement = React.createRef()
-    }
+    }, [])
 
-    getRootElement = () => (
-        this.rootElement.current
+    return (
+        <div
+            {...{
+                ref: rootElement,
+                className: cx(
+                    'RootContainer',
+                    'ovH',
+                    'PtSansNarrow'
+                )
+            }}
+        >
+            <ResizeListener {...{ getRootElement }} />
+            <DeviceWrapper>
+                <PlayingWrapper>
+                    <ResponsiveWrapper>
+                        <ShownWrapper>
+                            <TouchWrapper>
+                                <TransitionWrapper>
+                                    <LogicWrapper>
+                                        <Theatre />
+                                        <Main />
+                                        <LyricOverview
+                                            {...{ setLyricFocusElement }}
+                                        />
+                                        <PopupOverlay />
+                                        <MainPopups />
+                                        <Menu />
+                                        <TouchOverlay />
+                                    </LogicWrapper>
+                                </TransitionWrapper>
+                            </TouchWrapper>
+                        </ShownWrapper>
+                    </ResponsiveWrapper>
+                </PlayingWrapper>
+            </DeviceWrapper>
+        </div>
     )
+}
 
-    render() {
-        const { setLyricFocusElement } = this.props
-
-        return (
-            <div
-                {...{
-                    ref: this._setRootElement,
-                    className: cx(
-                        'RootContainer',
-                        'ovH',
-                        'PtSansNarrow'
-                    )
-                }}
-            >
-                <ResizeListener {...{ getRootElement: this.getRootElement }} />
-                <DeviceWrapper>
-                    <PlayingWrapper>
-                        <ResponsiveWrapper>
-                            <ShownWrapper>
-                                <TouchWrapper>
-                                    <TransitionWrapper>
-                                        <LogicWrapper>
-                                            <Theatre />
-                                            <Main />
-                                            <LyricOverview
-                                                {...{ setLyricFocusElement }}
-                                            />
-                                            <PopupOverlay />
-                                            <MainPopups />
-                                            <Menu />
-                                            <TouchOverlay />
-                                        </LogicWrapper>
-                                    </TransitionWrapper>
-                                </TouchWrapper>
-                            </ShownWrapper>
-                        </ResponsiveWrapper>
-                    </PlayingWrapper>
-                </DeviceWrapper>
-            </div>
-        )
-    }
+RootContainer.propTypes = {
+    setLyricFocusElement: PropTypes.func.isRequired
 }
 
 export default RootContainer
