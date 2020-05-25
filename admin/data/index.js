@@ -69,7 +69,13 @@ const songs = getSongIndicesArray().map(songIndex => {
     annotationsList.push(annotations)
     return song
 })
-export const album = { songs }
+
+const album = {
+    songs,
+
+    // Dev sanity check. When compiled, this gets replaced.
+    build: 'runtime'
+}
 
 addWormholeMetadata(annotationsList, album)
 addAdminMetadata(annotationsList, album)

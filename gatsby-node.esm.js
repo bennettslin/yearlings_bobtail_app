@@ -11,6 +11,9 @@ export const onCreateWebpackConfig = ({ actions }) => {
         isLocalDevelopment = buildEnvironment === 'local',
         isDeliveryEnvironment = buildEnvironment !== 'production'
 
+    // Dev sanity check.
+    album.build = 'compiled'
+
     actions.setWebpackConfig({
         plugins: [
             // Define global constant at compile time.

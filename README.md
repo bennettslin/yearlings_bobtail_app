@@ -2,8 +2,19 @@
 
 ## Development
 
+Run on local.
+
 ```
 npm run start
+```
+
+## Staging
+
+Run build on local.
+
+```
+npm run build:delivery
+npm run serve
 ```
 
 ## Release
