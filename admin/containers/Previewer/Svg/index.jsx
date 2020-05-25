@@ -11,6 +11,7 @@ import {
     convertPresenceKeyToClassName,
     getSharedClassNames
 } from '../../../../app/helpers/format'
+import { getDocument } from '../../../../app/utils/browser'
 import { getArrangementForPresence } from '../../../../app/components/Presence/helper'
 import { getSharedStyleForActor } from '../../../../app/scene/presences/configs/actors'
 import { getSharedStyleForThing } from '../../../../app/scene/presences/configs/things'
@@ -61,7 +62,7 @@ class PreviewerSvg extends PureComponent {
     handleProcessSvg = (svgString) => {
         const { presenceKey } = this.props,
 
-            element = document.getElementsByClassName(
+            element = getDocument().getElementsByClassName(
                 convertPresenceKeyToClassName(presenceKey)
             )[0]
 

@@ -1,5 +1,12 @@
+const SAFE_DOCUMENT = {
+    activeElement: {},
+    getElementById() {},
+    getElementsByClassName: () => [],
+    querySelector() {}
+}
+
 const SAFE_WINDOW = {
-    datalayer: [],
+    dataLayer: [],
     history: {
         replaceState() {}
     },
@@ -18,6 +25,12 @@ const SAFE_WINDOW = {
     onresize() {}
 }
 
+export const getDocument = () => (
+    typeof document === 'undefined' ?
+        SAFE_DOCUMENT :
+        document
+)
+
 export const getWindow = () => (
     typeof window === 'undefined' ?
         SAFE_WINDOW :
@@ -25,7 +38,7 @@ export const getWindow = () => (
 )
 
 export const removeLoadingIndicator = () => {
-    const loadingIndicator = document.getElementById('DramaMasks__load')
+    const loadingIndicator = getDocument().getElementById('DramaMasks__load')
     if (loadingIndicator) {
         loadingIndicator.parentNode.removeChild(loadingIndicator)
     }

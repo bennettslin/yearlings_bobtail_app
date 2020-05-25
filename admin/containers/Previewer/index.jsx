@@ -11,7 +11,10 @@ import {
     convertPresenceKeyToClassName
 } from '../../../app/helpers/format'
 
-import { removeLoadingIndicator } from '../../../app/utils/browser'
+import {
+    getDocument,
+    removeLoadingIndicator
+} from '../../../app/utils/browser'
 
 import { accessPresence } from '../../utils/access'
 
@@ -133,7 +136,7 @@ class Previewer extends PureComponent {
         presenceType = this.state.presenceType,
         presenceKey = this.state.presenceKey
     } = {}) => {
-        const element = document.querySelector(
+        const element = getDocument().querySelector(
             `.${capitaliseForClassName(presenceType)} .${convertPresenceKeyToClassName(presenceKey)}`
         )
 

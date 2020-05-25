@@ -4,6 +4,7 @@ import {
     getIsDesktopWidth,
     getIsMonitorWidth
 } from '../../helpers/responsive'
+import { getDocument } from '../../utils/browser'
 
 import {
     CSS_WIDTH_GOLDEN_CORD,
@@ -102,7 +103,7 @@ export const scrollElementIntoView = ({
             !Number.isFinite(index) ?
                 scrollClass :
                 `${scrollClass}__${index}`
-        element = document.getElementsByClassName(selector)[0]
+        element = getDocument().getElementsByClassName(selector)[0]
 
         logError({
             log: `${log}\nNo ref found, scrolled by selector: ${scrollClass} ${index}`,
