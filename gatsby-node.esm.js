@@ -39,18 +39,6 @@ export const onCreateWebpackConfig = ({ actions }) => {
                     path.resolve(__dirname, './admin/data') :
                     path.resolve(__dirname, './app/data')
             }
-        },
-        module: {
-            rules: [
-                // {
-                //     test: /\.(png|ico)$/,
-                //     include: path.resolve(__dirname, './assets/favicon'),
-                //     loader: 'file-loader',
-                //     options: {
-                //         name: './assets/favicon/[name].[ext]'
-                //     }
-                // }
-            ]
         }
     })
 }
