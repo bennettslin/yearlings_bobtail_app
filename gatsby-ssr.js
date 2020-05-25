@@ -5,7 +5,6 @@ import { Provider } from 'react-redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 
 // Import these here just to make them available.
-import './app/album'
 import './app/utils/logger'
 import './app/utils/analytics'
 

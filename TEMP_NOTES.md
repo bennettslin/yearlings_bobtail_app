@@ -1,4 +1,3 @@
-* Successfully deploy to delivery
 * Fonts
 * Svgs
 * Ensure everything looks good on the user facing side.
@@ -8,3 +7,6 @@
 * Have delivery and production build to different public folders.
 * Pages and routing
 * Favicon
+* Splash page
+* Deprecated page
+* Script to empty Amazon S3 bucket before uploading
