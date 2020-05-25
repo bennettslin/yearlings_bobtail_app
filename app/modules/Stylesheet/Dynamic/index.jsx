@@ -1,31 +1,28 @@
 import PropTypes from 'prop-types'
 
-import { getDynamicStyleStringForIndex } from './helper'
-
-const defaultProps = {
-    parentPrefixes: []
-}
+import { getStaticStyleStringForIndex } from '../Static/helper'
 
 const propTypes = {
-    parentPrefixes: PropTypes.array,
-    childPrefixes: PropTypes.array.isRequired,
-    style: PropTypes.object.isRequired
+    indices: PropTypes.array.isRequired,
+    childPrefix: PropTypes.string.isRequired,
+    getStyle: PropTypes.func.isRequired
 }
 
 const DynamicStylesheet = ({
-    parentPrefixes,
-    childPrefixes,
-    style
+    indices,
+    childPrefix,
+    getStyle
 
 }) => (
-    getDynamicStyleStringForIndex({
-        parentPrefixes,
-        childPrefixes,
-        style
-    })
+    indices.map(index => (
+        getStaticStyleStringForIndex({
+            index,
+            childPrefix,
+            style: getStyle(index)
+        })
+    )).join('')
 )
 
-DynamicStylesheet.defaultProps = defaultProps
 DynamicStylesheet.propTypes = propTypes
 
 export default DynamicStylesheet

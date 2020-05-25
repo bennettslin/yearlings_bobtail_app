@@ -10,7 +10,7 @@ import { Provider } from 'react-redux'
 
 import rootReducer from './app/redux'
 
-// import './app/scss/app.scss'
+// import './app/scss/app'
 
 const store = createStore(
     rootReducer

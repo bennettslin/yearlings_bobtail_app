@@ -23,9 +23,7 @@ const AccessStylesheet = () => {
                     indices: STYLE_LOGIC_ACCESS_LETTERS,
                     parentPrefix: PARENT_ACCESS_PREFIX,
                     childPrefix: CHILD_ACCESS_PREFIX,
-                    style: {
-                        transform: 'scale(0.9)'
-                    }
+                    style: { transform: 'scale(0.9)' }
                 }}
             />
         </Stylesheet>

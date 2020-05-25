@@ -5,10 +5,14 @@ export const getStaticStyleStringForIndex = ({
     style
 
 }) => {
-    const selector = `.${parentPrefix}${index} .${childPrefix}${index}`,
+    const
+        selector = `${
+            parentPrefix ? `.${parentPrefix}${index} ` : ''
+        }.${childPrefix}${index}`,
+
         styleStrings = Object.keys(style).map(property => (
-            `${property}: ${style[property]};`
+            `${property}:${style[property]};`
         ))
 
-    return `${selector}{${styleStrings.join(' ')}}`
+    return `${selector}{${styleStrings.join('')}}`
 }

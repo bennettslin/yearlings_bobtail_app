@@ -3,7 +3,6 @@
 * Why is font in song banner small?
 * Figure out why window resizing timeout seems to have regressed.
 * GA (GA was already broken in production.)
-* Stringify internal stylesheets
 
 # Ongoing Gatsby tasks
 * Pages and routing

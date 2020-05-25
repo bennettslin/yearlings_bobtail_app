@@ -10,7 +10,7 @@ import './app/utils/analytics'
 
 import rootReducer from './app/redux'
 
-import './app/scss/app.scss'
+import './app/scss/app'
 
 const store = createStore(
     rootReducer,
