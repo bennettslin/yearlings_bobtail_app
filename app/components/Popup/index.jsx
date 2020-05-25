@@ -4,10 +4,7 @@ import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
-
 import PopupView from './View'
-
-import { populateRefs } from '../../helpers/ref'
 
 /*************
  * CONTAINER *
@@ -32,11 +29,11 @@ class Popup extends PureComponent {
     handleContainerClick = e => {
         const { popupName } = this.props
         logEvent({ e, componentName: popupName })
-        this.dispatchStopPropagation(e)
+        this.stopPropagation(e)
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getStopPropagation = dispatch => {
+        this.stopPropagation = dispatch
     }
 
     render() {
@@ -92,7 +89,7 @@ class Popup extends PureComponent {
                             handleContainerClick: this.handleContainerClick
                         }}
                     />
-                    <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                    <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
                 </div>
             </CSSTransition>
         )

@@ -10,7 +10,6 @@ import ButtonIcon from './ButtonIcon'
 import Tooltip from './Tooltip'
 import AccessLetter from '../Access/Letter'
 
-import { populateRefs } from '../../helpers/ref'
 import { getPropsAreShallowEqual } from '../../helpers/general'
 
 import { ENTER } from '../../constants/access'
@@ -62,7 +61,7 @@ class Button extends Component {
         } = this.props
 
         if (!isDisabled) {
-            this.dispatchStopPropagation(e)
+            this.stopPropagation(e)
 
             if (!isClickDisabled) {
                 logEvent({
@@ -74,11 +73,10 @@ class Button extends Component {
                 this.props.handleButtonClick(e)
             }
         }
-
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getStopPropagation = dispatch => {
+        this.stopPropagation = dispatch
     }
 
     render() {
@@ -189,7 +187,7 @@ class Button extends Component {
                 {showTooltip && (
                     <Tooltip {...{ buttonName }} />
                 )}
-                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
             </div>
         )
     }

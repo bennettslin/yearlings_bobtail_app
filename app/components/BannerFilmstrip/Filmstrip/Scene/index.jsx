@@ -18,7 +18,7 @@ class FilmstripScene extends PureComponent {
         sceneWidth: PropTypes.number.isRequired,
         cursorWidth: PropTypes.number,
         dispatchScene: PropTypes.func.isRequired,
-        dispatchStopPropagation: PropTypes.func.isRequired
+        stopPropagation: PropTypes.func.isRequired
     }
 
     _handleSceneClick = e => {
@@ -27,7 +27,7 @@ class FilmstripScene extends PureComponent {
             sceneIndex
         } = this.props
 
-        this.props.dispatchStopPropagation(e)
+        this.props.stopPropagation(e)
 
         if (isSelectedScene) {
             return

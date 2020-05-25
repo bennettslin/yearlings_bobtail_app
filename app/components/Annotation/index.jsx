@@ -1,5 +1,5 @@
 // Section to show title and all notes and wormholes for each annotation.
-import React from 'react'
+import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
@@ -9,7 +9,6 @@ import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 
 import { getCardCountForAnnotation } from '../../album/api/annotations'
-import { populateRefs } from '../../helpers/ref'
 import { getArrayOfLength } from '../../helpers/general'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 
@@ -21,7 +20,7 @@ const Annotation = ({
 
 }) => {
     const
-        refDispatch = {},
+        stopPropagation = useRef(),
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
 
         cardCount = getCardCountForAnnotation(
@@ -33,12 +32,8 @@ const Annotation = ({
             logEvent({ e, componentName: `Annotation ${annotationIndex}` })
 
             if (isSelected) {
-                refDispatch.dispatchStopPropagation(e)
+                stopPropagation.current(e)
             }
-        },
-
-        getRefs = payload => {
-            populateRefs(refDispatch, payload)
         }
 
     // If in popup, annotation won't always exist.
@@ -87,7 +82,7 @@ const Annotation = ({
                 ))}
 
             </div>
-            <StopPropagationDispatcher {...{ getRefs }} />
+            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </>
     )
 }

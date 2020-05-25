@@ -34,13 +34,17 @@ class DotsSlideSelect extends PureComponent {
         this.dispatchActivatedDot(this.props.dotIndex)
 
         // Stop propagation if anchor click is valid.
-        this.dispatchStopPropagation(e)
+        this.stopPropagation(e)
 
         return true
     }
 
     _getRefs = payload => {
         populateRefs(this, payload)
+    }
+
+    getStopPropagation = dispatch => {
+        this.stopPropagation = dispatch
     }
 
     render() {
@@ -114,7 +118,7 @@ class DotsSlideSelect extends PureComponent {
                     />
                 </div>
                 <DotSelectDispatcher {...{ getRefs: this._getRefs }} />
-                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
             </>
         )
     }

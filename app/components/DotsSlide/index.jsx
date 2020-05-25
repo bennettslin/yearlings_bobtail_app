@@ -11,7 +11,6 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import DotsSlideSelect from './Select'
 
 import { getDotKeysFromBitNumber } from '../../helpers/dot'
-import { populateRefs } from '../../helpers/ref'
 
 import { IS_TOUCH_SUPPORTED } from '../../constants/device'
 import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
@@ -46,7 +45,7 @@ class DotsSlide extends PureComponent {
 
     _handleContainerClick = e => {
         logEvent({ e, componentName: 'DotsSlide' })
-        this.dispatchStopPropagation(e)
+        this.stopPropagation(e)
         this.props.resetActivatedDots()
     }
 
@@ -60,8 +59,8 @@ class DotsSlide extends PureComponent {
         return getDotKeysFromBitNumber(dotsSlideBitNumber)
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getStopPropagation = dispatch => {
+        this.stopPropagation = dispatch
     }
 
     render() {
@@ -144,7 +143,7 @@ class DotsSlide extends PureComponent {
                             )
                         })}
                     </div>
-                    <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                    <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
                 </div>
             </CSSTransition>
         )

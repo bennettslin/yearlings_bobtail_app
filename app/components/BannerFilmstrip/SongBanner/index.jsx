@@ -146,7 +146,7 @@ class SongBanner extends PureComponent {
             return
         }
 
-        this.dispatchStopPropagation(e)
+        this.stopPropagation(e)
 
         if (isSliderMoving || isActivated) {
             // Do nothing if lyrics locked, but still register click.
@@ -226,6 +226,10 @@ class SongBanner extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getStopPropagation = dispatch => {
+        this.stopPropagation = dispatch
+    }
+
     render() {
         const {
                 isPlaying,
@@ -278,7 +282,7 @@ class SongBanner extends PureComponent {
                 <Tracker {...{ cursorWidth }} />
                 <SongBannerTitle />
                 <SongBannerTimer />
-                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
                 <VerseDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

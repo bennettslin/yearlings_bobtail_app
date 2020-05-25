@@ -97,7 +97,7 @@ class TextLyricAnchor extends PureComponent {
         }
 
         // Stop propagation if anchor click is valid.
-        this.dispatchStopPropagation(e)
+        this.stopPropagation(e)
 
         if (wikiIndex) {
             return this.dispatchWiki(
@@ -127,6 +127,10 @@ class TextLyricAnchor extends PureComponent {
 
     _getRefs = payload => {
         populateRefs(this, payload)
+    }
+
+    getStopPropagation = dispatch => {
+        this.stopPropagation = dispatch
     }
 
     render() {
@@ -210,7 +214,7 @@ class TextLyricAnchor extends PureComponent {
                 {isWikiTextAnchor && (
                     <WikiDispatcher {...{ getRefs: this._getRefs }} />
                 )}
-                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
             </>
         )
     }

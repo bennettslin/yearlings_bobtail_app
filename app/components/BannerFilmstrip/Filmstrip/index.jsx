@@ -64,8 +64,8 @@ class Filmstrip extends PureComponent {
         this.dispatchSceneIndex(sceneIndex)
     }
 
-    dispatchStopPropagation = e => {
-        this.dispatchStopPropagation(e)
+    stopPropagation = e => {
+        this.stopPropagation(e)
     }
 
     getCursorWidth({
@@ -74,6 +74,10 @@ class Filmstrip extends PureComponent {
     }) {
         const { selectedTime } = this.props
         return (selectedTime - sceneStartTime) / sceneDuration * 100
+    }
+
+    getStopPropagation = dispatch => {
+        this.stopPropagation = dispatch
     }
 
     render() {
@@ -144,7 +148,7 @@ class Filmstrip extends PureComponent {
                                 sceneWidth,
                                 ...isSelectedScene && { cursorWidth },
                                 dispatchScene: this.dispatchScene,
-                                dispatchStopPropagation: this.dispatchStopPropagation
+                                stopPropagation: this.stopPropagation
                             }}
                         />
                     )
@@ -156,7 +160,7 @@ class Filmstrip extends PureComponent {
                 />
                 <TipsHand reverse {...{ tipType: FILMSTRIP }} />
                 <SceneDispatcher {...{ getRefs: this._getRefs }} />
-                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
             </div>
         )
     }

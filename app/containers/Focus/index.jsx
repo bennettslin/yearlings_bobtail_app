@@ -148,7 +148,7 @@ class FocusContainer extends PureComponent {
 
         logEvent({ e, componentName: 'FocusContainer' })
 
-        this.dispatchStopPropagation(e)
+        this.stopPropagation(e)
 
         if (!this.state.isSliderTouchEnding) {
             this.closeForBodyClick()
@@ -165,6 +165,10 @@ class FocusContainer extends PureComponent {
 
     _getRefs = payload => {
         populateRefs(this, payload)
+    }
+
+    getStopPropagation = dispatch => {
+        this.stopPropagation = dispatch
     }
 
     render() {
@@ -198,7 +202,7 @@ class FocusContainer extends PureComponent {
                 {canSliderMount && (
                     <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
                 )}
-                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
                 <KeyManager {...{ getRefs: this._getRefs }} />
             </div>
         )

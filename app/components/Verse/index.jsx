@@ -50,7 +50,7 @@ class Verse extends PureComponent {
 
         // Allow clicks on interactable verses.
         if (this.getIsInteractable()) {
-            this.dispatchStopPropagation(e)
+            this.stopPropagation(e)
             this.activateVerseIndex(verseIndex)
         }
     }
@@ -75,6 +75,10 @@ class Verse extends PureComponent {
 
     _getRefs = payload => {
         populateRefs(this, payload)
+    }
+
+    getStopPropagation = dispatch => {
+        this.stopPropagation = dispatch
     }
 
     render() {
@@ -108,7 +112,7 @@ class Verse extends PureComponent {
                     }}
                 />
                 <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
-                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
             </>
         )
     }
