@@ -4,38 +4,28 @@
   "description": "Website for the Bobtail Yearlings album Yearling's Bobtail.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "build:delivery": "webpack --mode production --env.delivery",
-    "deploy": "aws s3 sync build/ s3://yearlingsbobtail",
-    "deploy:delivery": "aws s3 sync build__delivery/ s3://yearlingsbobtail--delivery",
+    "build": "YB_ENV=production gatsby build",
+    "deploy": "aws s3 sync public/ s3://yearlingsbobtail",
     "release": "npm run build && npm run deploy",
+    "build:delivery": "YB_ENV=delivery gatsby build",
+    "deploy:delivery": "aws s3 sync public/ s3://yearlingsbobtail--delivery",
     "release:delivery": "npm run build:delivery && npm run deploy:delivery",
-    "start": "webpack-dev-server --mode development --env.local --env.delivery",
+    "start": "YB_ENV=local gatsby develop --port 1113",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
     "lint": "eslint --ext js,jsx app",
-    "lint:fix": "eslint --ext js,jsx --fix app",
-    "build:gatsby": "gatsby build",
-    "develop:gatsby": "gatsby develop --port 1113",
-    "start:local": "YB_ENV=local npm run develop:gatsby",
-    "start:delivery": "YB_ENV=delivery npm run develop:gatsby",
-    "start:production": "YB_ENV=production npm run develop:gatsby",
-    "serve:gatsby": "gatsby serve",
-    "clean:gatsby": "gatsby clean"
+    "lint:fix": "eslint --ext js,jsx --fix app"
   },
+  "author": "Bobtail Yearlings",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/bennettslin/yearlings_bobtail_app.git"
   },
-  "author": "Bobtail Yearlings",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/bennettslin/yearlings_bobtail_app/issues"
   },
-  "homepage": "https://github.com/bennettslin/yearlings_bobtail_app",
-  "jest": {
-    "setupFiles": [
-      "<rootDir>/app/utils/unitTestSetup"
-    ]
-  },
+  "homepage": "https://www.yearlingsbobtail.com",
   "dependencies": {
     "classnames": "^2.2.6",
     "debounce": "^1.2.0",
