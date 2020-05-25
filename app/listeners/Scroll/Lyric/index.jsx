@@ -185,7 +185,7 @@ class ScrollLyricListener extends PureComponent {
         }
     }
 
-    setLyricParent = (node) => {
+    setLyricParent = node => {
         this.lyricParentElement = node
     }
 

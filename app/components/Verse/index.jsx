@@ -64,7 +64,7 @@ class Verse extends PureComponent {
         return Number.isFinite(verseIndex) && !inVerseBar
     }
 
-    setVerseRef = (node) => {
+    setVerseRef = node => {
         if (this.getIsInteractable()) {
             this.props.setVerseRef({
                 node,

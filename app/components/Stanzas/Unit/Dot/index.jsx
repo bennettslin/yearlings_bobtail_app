@@ -68,7 +68,7 @@ class UnitDot extends PureComponent {
         return true
     }
 
-    setLyricAnnotationElement = (node) => {
+    setLyricAnnotationElement = node => {
         this.props.setLyricAnnotationElement({
             node,
             index: this.props.unitDot.annotationIndex

@@ -1,22 +1,17 @@
-/**
- * Parent component that handles click, touch, and keyDown events.
- */
-
+// Parent component that handles click, touch, and keyDown events.
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateFocusStore } from '../../redux/focus/action'
 
-import CloseHandler from '../../handlers/Close'
+import CloseHandler from '../../managers/Close'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
 import RootContainer from '../Root'
 import KeyManager from '../../managers/Key'
-import AccessStylesheet from '../../components/Access/Stylesheet'
 
 import { isEmailFocused } from '../../utils/email'
-
 import { populateRefs } from '../../helpers/ref'
 
 const mapStateToProps = ({
@@ -32,7 +27,6 @@ const mapStateToProps = ({
 })
 
 class FocusContainer extends PureComponent {
-
     static propTypes = {
         // Through Redux.
         canSliderMount: PropTypes.bool.isRequired,
@@ -47,7 +41,7 @@ class FocusContainer extends PureComponent {
     componentDidMount() {
         logMount('FocusContainer')
 
-        this.rootElement = React.createRef()
+        this.focusElement = React.createRef()
 
         // Focus lyric section when app is mounted.
         this._focusElementForAccess()
@@ -115,7 +109,7 @@ class FocusContainer extends PureComponent {
             focusedElementString = 'lyric'
 
         } else {
-            focusedElement = this.rootElement.current
+            focusedElement = this.focusElement.current
             focusedElementString = 'root'
         }
 
@@ -161,7 +155,7 @@ class FocusContainer extends PureComponent {
         }
     }
 
-    setLyricFocusElement = (node) => {
+    setLyricFocusElement = node => {
         this.lyricElement = node
         this._focusElementForAccess()
     }
@@ -179,7 +173,7 @@ class FocusContainer extends PureComponent {
         return (
             <div
                 {...{
-                    ref: this.rootElement,
+                    ref: this.focusElement,
                     className: 'FocusContainer',
                     tabIndex: -1,
                     onClick: this._handleBodyClick,
@@ -198,7 +192,6 @@ class FocusContainer extends PureComponent {
                 }}
             >
                 <CloseHandler {...{ getRefs: this._getRefs }} />
-                <AccessStylesheet />
                 <RootContainer
                     {...{ setLyricFocusElement: this.setLyricFocusElement }}
                 />

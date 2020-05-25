@@ -87,7 +87,7 @@ class ScrollCarouselListener extends PureComponent {
         }
     }
 
-    setCarouselParent = (node) => {
+    setCarouselParent = node => {
         this.carouselParentElement = node
     }
 

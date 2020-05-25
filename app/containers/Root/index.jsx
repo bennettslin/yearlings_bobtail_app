@@ -2,13 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DeviceWrapper from '../../wrappers/DeviceWrapper'
-import PlayingWrapper from '../../wrappers/PlayingWrapper'
-import ResponsiveWrapper from '../../wrappers/ResponsiveWrapper'
-import ShownWrapper from '../../wrappers/ShownWrapper'
-import TouchWrapper from '../../wrappers/TouchWrapper'
-import TransitionWrapper from '../../wrappers/TransitionWrapper'
-import LogicWrapper from '../../wrappers/LogicWrapper'
 import ResizeListener from '../../handlers/Resize/Listener'
 
 import Theatre from '../../components/Theatre'
@@ -18,6 +11,7 @@ import LyricOverview from '../../components/LyricOverview'
 import MainPopups from '../../components/Popups/MainPopups'
 import PopupOverlay from '../../components/Overlays/PopupOverlay'
 import TouchOverlay from '../../components/Overlays/TouchOverlay'
+import WrapperContainer from '../Wrapper'
 
 const RootContainer = ({ setLyricFocusElement }) => {
     const
@@ -40,29 +34,15 @@ const RootContainer = ({ setLyricFocusElement }) => {
             }}
         >
             <ResizeListener {...{ getRootElement }} />
-            <DeviceWrapper>
-                <PlayingWrapper>
-                    <ResponsiveWrapper>
-                        <ShownWrapper>
-                            <TouchWrapper>
-                                <TransitionWrapper>
-                                    <LogicWrapper>
-                                        <Theatre />
-                                        <Main />
-                                        <LyricOverview
-                                            {...{ setLyricFocusElement }}
-                                        />
-                                        <PopupOverlay />
-                                        <MainPopups />
-                                        <Menu />
-                                        <TouchOverlay />
-                                    </LogicWrapper>
-                                </TransitionWrapper>
-                            </TouchWrapper>
-                        </ShownWrapper>
-                    </ResponsiveWrapper>
-                </PlayingWrapper>
-            </DeviceWrapper>
+            <WrapperContainer>
+                <Theatre />
+                <Main />
+                <LyricOverview {...{ setLyricFocusElement }} />
+                <PopupOverlay />
+                <MainPopups />
+                <Menu />
+                <TouchOverlay />
+            </WrapperContainer>
         </div>
     )
 }

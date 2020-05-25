@@ -35,7 +35,6 @@ import WikiListener from '../../handlers/Wiki/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
 
 import AudioPlayerManager from '../../managers/AudioPlayer'
-import FocusContainer from '../Focus'
 
 const ListenContainer = () => {
     const
@@ -81,7 +80,6 @@ const ListenContainer = () => {
             <WikiListener />
             <WikiWormholeListener />
             <AudioPlayerManager />
-            <FocusContainer />
         </>
     )
 }

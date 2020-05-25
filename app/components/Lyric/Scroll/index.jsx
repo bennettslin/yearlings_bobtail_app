@@ -65,7 +65,7 @@ class LyricScroll extends PureComponent {
         return this.setVerseElement(payload)
     }
 
-    _setLyricElement = (node) => {
+    _setLyricElement = node => {
         // For lyric and verse bar wheel.
         this.lyricElement = node
 

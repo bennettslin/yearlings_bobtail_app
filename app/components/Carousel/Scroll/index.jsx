@@ -51,7 +51,7 @@ class CarouselScroll extends PureComponent {
         this.props.updateEntranceStore({ didCarouselUpdate: true })
     }
 
-    _setCarouselParent = (node) => {
+    _setCarouselParent = node => {
         return this.setCarouselParent(node)
     }
 

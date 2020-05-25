@@ -1,15 +1,15 @@
 import React from 'react'
-import DeprecatedContainer from '../Deprecated'
-import ListenContainer from '../Listen'
 
-import { IS_DEPRECATED_BROWSER } from '../../constants/device'
+import ListenContainer from '../Listen'
+import FocusContainer from '../Focus'
+import StylesheetContainer from '../Stylesheet'
 
 const AppContainer = () => (
-    IS_DEPRECATED_BROWSER ? (
-        <DeprecatedContainer />
-    ) : (
+    <>
         <ListenContainer />
-    )
+        <FocusContainer />
+        <StylesheetContainer />
+    </>
 )
 
 export default AppContainer

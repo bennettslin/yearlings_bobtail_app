@@ -32,7 +32,7 @@ class CarouselAnnotation extends PureComponent {
         setCarouselAnnotationElement: PropTypes.func.isRequired
     }
 
-    setCarouselAnnotationElement = (node) => {
+    setCarouselAnnotationElement = node => {
         this.props.setCarouselAnnotationElement({
             node,
             index: this.props.annotationIndex

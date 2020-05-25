@@ -7,7 +7,6 @@ import { CAN_SCENE_UPDATE_SELECTOR } from '../../redux/entrance/selectors'
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
 import PresencesConfig from '../Presences'
-import PresenceZIndexStylesheet from './Stylesheet'
 
 import { CUBE_Y_INDICES_WITH_NEG } from '../../constants/cubeIndex'
 
@@ -38,7 +37,6 @@ const Scene = () => {
                     'abF'
                 )}
             >
-                <PresenceZIndexStylesheet />
                 {CUBE_Y_INDICES_WITH_NEG.map(yIndex => {
                     const Presences = PresencesConfig[yIndex]
                     return (

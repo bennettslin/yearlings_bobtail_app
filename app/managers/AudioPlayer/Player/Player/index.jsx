@@ -205,7 +205,7 @@ class Player extends PureComponent {
         this.props.updateEnded()
     }
 
-    _setAudioPlayerRef = (node) => {
+    _setAudioPlayerRef = node => {
         this.audioPlayer = node.audioEl.current
     }
 

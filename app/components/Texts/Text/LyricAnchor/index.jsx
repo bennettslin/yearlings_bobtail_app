@@ -115,7 +115,7 @@ class TextLyricAnchor extends PureComponent {
         }
     }
 
-    setLyricAnnotationElement = (node) => {
+    setLyricAnnotationElement = node => {
         // This method is only passed down by stanza, not carousel annotation.
         if (this.props.setLyricAnnotationElement) {
             this.props.setLyricAnnotationElement({
