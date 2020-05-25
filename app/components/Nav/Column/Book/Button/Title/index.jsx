@@ -35,7 +35,7 @@ const NavButtonTitle = ({
                             'Nav__text__interactable',
                         'Rancho',
                         'textShadow__dark',
-                        'flexCentreContainer'
+                        'fCC'
                     )
                 }}
             >

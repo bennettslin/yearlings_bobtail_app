@@ -1,6 +1,5 @@
 # Easy tasks for tomorrow
 * Make Mara the loading indicator.
-* Why is font in song banner small?
 * Figure out why window resizing timeout seems to have regressed.
 * GA (GA was already broken in production.)
 

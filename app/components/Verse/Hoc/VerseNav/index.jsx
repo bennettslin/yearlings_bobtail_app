@@ -73,7 +73,7 @@ class VerseNav extends PureComponent {
                 <div className={cx(
                     'VerseNav',
                     'padding__verseInLyric',
-                    'flexCentreContainer'
+                    'fCC'
                 )}>
                     <Button
                         isSmallSize

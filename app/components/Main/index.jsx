@@ -131,7 +131,7 @@ class Main extends PureComponent {
                                  * it is on right, aligned either top or bottom.
                                  */
                                 isDesktopWidth ?
-                                    'flexCentreContainer' :
+                                    'fCC' :
                                     [
                                         'Main__flexContainer__side',
                                         'Main__flexContainer__right'

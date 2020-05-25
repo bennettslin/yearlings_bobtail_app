@@ -42,7 +42,7 @@ class Skies extends PureComponent {
                     className: cx(
                         'Skies',
                         'abF',
-                        'flexCentreContainer'
+                        'fCC'
                     )
                 }}
             >
@@ -52,7 +52,7 @@ class Skies extends PureComponent {
                 <SkyDay {...{ sceneSkySeason: SEASON_WINTER }} />
                 <div className={cx(
                     'SkyDay',
-                    'flexCentreContainer'
+                    'fCC'
                 )}>
                     <Sky {...{ sceneSkySeason: SEASON_PAST }} />
                     <Sky {...{ sceneSkySeason: SEASON_PRESENT }} />
@@ -62,7 +62,7 @@ class Skies extends PureComponent {
                 </div>
                 <div className={cx(
                     'SkyDay',
-                    'flexCentreContainer'
+                    'fCC'
                 )}>
                     <Sky {...{ sceneSkySeason: SEASON_STAGE }} />
                     <Sky {...{ sceneSkySeason: SEASON_OCEAN_TOP }} />

@@ -323,7 +323,7 @@ class PlayerManager extends PureComponent {
         return (
             <div className={cx(
                 'Players',
-                'displayNoneContainer'
+                'dNC'
             )}>
                 <PlayerListener
                     {...{ handleSelectPlayer: this.handleSelectPlayer }}

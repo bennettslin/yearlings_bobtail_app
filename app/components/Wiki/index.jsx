@@ -43,7 +43,7 @@ const Wiki = () => {
                         className: cx(
                             'iframeContainer__spinner',
                             'abF',
-                            'flexCentreContainer'
+                            'fCC'
                         )
                     }}
                 >

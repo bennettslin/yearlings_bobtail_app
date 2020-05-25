@@ -49,7 +49,7 @@ const LyricOverview = ({
                     'width__lyricColumn__desktop',
                     'position__lyricColumn__desktop',
                     'position__lyricColumn__mobile',
-                    'flexCentreContainer'
+                    'fCC'
                 ),
                 style: {
                     height: lyricOverviewHeight

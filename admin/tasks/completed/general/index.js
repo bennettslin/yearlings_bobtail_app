@@ -4716,5 +4716,9 @@ export default [
     {
         taskName: `Safe window getter.`,
         workedHours: 2
+    },
+    {
+        taskName: `Minify internal stylesheets.`,
+        workedHours: 1
     }
 ]

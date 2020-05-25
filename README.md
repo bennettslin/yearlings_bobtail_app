@@ -2,7 +2,7 @@
 
 ## Development
 
-Run on local.
+Run runtime build on local.
 
 ```
 npm run start
@@ -10,11 +10,10 @@ npm run start
 
 ## Staging
 
-Run build on local.
+Stage compiled build on local.
 
 ```
-npm run build:delivery
-npm run serve
+npm run stage
 ```
 
 ## Release

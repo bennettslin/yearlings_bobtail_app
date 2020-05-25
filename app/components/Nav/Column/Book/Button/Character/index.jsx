@@ -25,7 +25,7 @@ const NavCharacter = ({
                     getSongIsLogue(songIndex) && 'textShadow__light',
                     'Rancho',
                     'abF',
-                    'flexCentreContainer',
+                    'fCC',
                     'textShadow__dark'
                 )
             }}

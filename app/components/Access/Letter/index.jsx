@@ -82,7 +82,7 @@ const AccessLetter = ({
                     inButtonOrDotAnchor &&
                         'AccessLetter__inButtonOrDotAnchor',
 
-                    'flexCentreContainer',
+                    'fCC',
                     'Neuton'
                 )}
             >

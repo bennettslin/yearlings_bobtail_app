@@ -13,7 +13,7 @@ const DeprecatedContainer = () => {
             'DeprecatedContainer',
             'Rancho',
             'abF',
-            'flexCentreContainer'
+            'fCC'
         )}>
             Sorry, this browser is not supported.
         </div>

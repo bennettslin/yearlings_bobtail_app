@@ -12,8 +12,9 @@
     "empty:delivery": "aws s3 rm s3://yearlingsbobtail--delivery --recursive",
     "deploy:delivery": "aws s3 sync public/ s3://yearlingsbobtail--delivery",
     "release:delivery": "npm run build:delivery && npm run empty:delivery && npm run deploy:delivery",
-    "start": "YB_ENV=local gatsby develop --port 1113",
     "serve": "gatsby serve --port 1114",
+    "stage": "npm run build:delivery && npm run serve",
+    "start": "YB_ENV=local gatsby develop --port 1113",
     "clean": "gatsby clean",
     "lint": "eslint --ext js,jsx app",
     "lint:fix": "eslint --ext js,jsx --fix app"

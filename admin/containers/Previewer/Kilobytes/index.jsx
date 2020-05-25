@@ -14,7 +14,7 @@ const PreviewerKilobytes = ({
             className: cx(
                 'PreviewerKilobytes',
                 hideInMobile && 'PreviewerKilobytes__hideInMobile',
-                'flexCentreContainer',
+                'fCC',
                 className
             )
         }}

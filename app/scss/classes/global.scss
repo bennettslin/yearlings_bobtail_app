@@ -1,7 +1,9 @@
-.displayNoneContainer {
+// Display none container.
+.dNC {
     display: none;
 }
 
+// Absolute full container.
 .abF {
     position: absolute;
     top: 0;
@@ -10,11 +12,13 @@
     height: 100%;
 }
 
+// Overflow hidden container.
 .ovH {
     overflow: hidden;
 }
 
-.flexCentreContainer {
+// Flex centre container.
+.fCC {
     display: flex;
     justify-content: center;
     align-items: center;

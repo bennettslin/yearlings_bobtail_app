@@ -98,7 +98,7 @@ class PreviewerDashboard extends PureComponent {
                     {...{
                         className: cx(
                             'PreviewerDashboard__child',
-                            'flexCentreContainer'
+                            'fCC'
                         ),
                         kilobytes,
                         hideInMobile: hideKilobytesInMobile

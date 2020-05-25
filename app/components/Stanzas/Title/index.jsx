@@ -16,7 +16,7 @@ const SongStanzasTitle = () => {
             {...{
                 className: cx(
                     'SongStanzasTitle',
-                    'flexCentreContainer',
+                    'fCC',
                     'textShadow__dark',
                     'Rancho'
                 )

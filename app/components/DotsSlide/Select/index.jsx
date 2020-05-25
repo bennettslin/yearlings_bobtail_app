@@ -98,7 +98,7 @@ class DotsSlideSelect extends PureComponent {
                                 'SlideSelectDescription__activated',
 
                             'abF',
-                            'flexCentreContainer'
+                            'fCC'
                         )}>
                             {DOT_DESCRIPTIONS[dotKey]}
                         </div>

@@ -2,7 +2,7 @@ export default [
     /* Weekend work. */
     {
         taskName: `Move to Gatsby, get static HTML.`,
-        workedHours: 0,
+        workedHours: 12,
         neededHours: 30
     },
     {

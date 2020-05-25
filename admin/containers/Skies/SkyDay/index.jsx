@@ -27,7 +27,7 @@ class SkyDay extends PureComponent {
         return (
             <div className={cx(
                 'SkyDay',
-                'flexCentreContainer'
+                'fCC'
             )}>
                 <Sky {...{ sceneSkyTime: TIME_TWILIGHT, sceneSkySeason }} />
                 <Sky {...{ sceneSkyTime: TIME_DAWN, sceneSkySeason }} />

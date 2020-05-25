@@ -78,7 +78,7 @@ class Popup extends PureComponent {
                         // For animation styling.
                         {
                             'Popup__notInOverlay': !displaysInOverlay,
-                            'flexCentreContainer': !noFlexCentre,
+                            'fCC': !noFlexCentre,
                             'abF': !noAbsoluteFull
                         }
                     )}

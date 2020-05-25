@@ -18,7 +18,7 @@ const AboutContact = () => (
                 <___
                     {...{ key: index }}
                 >
-                    <span {...{ className: 'displayNoneContainer' }}>
+                    <span {...{ className: 'dNC' }}>
                         {String.fromCharCode(character.charCodeAt(0) + 1)}
                     </span>
                     <span>{character}</span>

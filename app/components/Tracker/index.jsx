@@ -4,11 +4,6 @@ import cx from 'classnames'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 
-const propTypes = {
-    // From parent.
-    cursorWidth: PropTypes.number
-}
-
 const Tracker = ({
     cursorWidth
 
@@ -37,6 +32,8 @@ const Tracker = ({
     </CSSTransition>
 )
 
-Tracker.propTypes = propTypes
+Tracker.propTypes = {
+    cursorWidth: PropTypes.number
+}
 
 export default memo(Tracker)

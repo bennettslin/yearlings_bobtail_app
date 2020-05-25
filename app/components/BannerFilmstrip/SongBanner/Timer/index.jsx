@@ -78,7 +78,7 @@ class SongBannerTimer extends PureComponent {
         return !isSelectedLogue && (
             <div className={cx(
                 'SongBannerTimer',
-                'flexCentreContainer',
+                'fCC',
                 'abF'
             )}>
                 {getFormattedTime(time)}
