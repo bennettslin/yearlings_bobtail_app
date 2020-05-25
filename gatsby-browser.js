@@ -17,13 +17,11 @@ const store = createStore(
     devToolsEnhancer()
 )
 
-export const wrapRootElement = ({ element }) => {
-    return (
-        <Provider store={store}>
-            {element}
-        </Provider>
-    )
-}
+export const wrapRootElement = ({ element }) => (
+    <Provider store={store}>
+        {element}
+    </Provider>
+)
 
 wrapRootElement.propTypes = {
     element: PropTypes.node.isRequired

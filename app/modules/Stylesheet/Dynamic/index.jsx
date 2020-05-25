@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
 import { getDynamicStyleStringForIndex } from './helper'
@@ -14,21 +13,16 @@ const propTypes = {
 }
 
 const DynamicStylesheet = ({
-
     parentPrefixes,
     childPrefixes,
     style
 
 }) => (
-    <>
-
-        {getDynamicStyleStringForIndex({
-            parentPrefixes,
-            childPrefixes,
-            style
-        })}
-
-    </>
+    getDynamicStyleStringForIndex({
+        parentPrefixes,
+        childPrefixes,
+        style
+    })
 )
 
 DynamicStylesheet.defaultProps = defaultProps

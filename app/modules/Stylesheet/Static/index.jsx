@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
 import { getStaticStyleStringForIndex } from './helper'
@@ -11,24 +10,20 @@ const propTypes = {
 }
 
 const StaticStylesheet = ({
-
     indices,
     parentPrefix,
     childPrefix,
     style
 
 }) => (
-    <>
-        {indices.map(index => (
-
-            getStaticStyleStringForIndex({
-                index,
-                parentPrefix,
-                childPrefix,
-                style
-            })
-        ))}
-    </>
+    indices.map(index => (
+        getStaticStyleStringForIndex({
+            index,
+            parentPrefix,
+            childPrefix,
+            style
+        })
+    )).join('')
 )
 
 StaticStylesheet.propTypes = propTypes

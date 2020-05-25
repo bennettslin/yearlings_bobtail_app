@@ -1,5 +1,4 @@
 export const getDynamicStyleStringForIndex = ({
-
     parentPrefixes = [],
     childPrefixes = [],
     style
@@ -25,12 +24,10 @@ export const getDynamicStyleStringForIndex = ({
         properties = Object.keys(style),
 
         styleStrings = properties.map(property => (
-            `    ${property}: ${style[property]};`
+            `${property}: ${style[property]};`
         ))
 
     return (
-        `${selector} {\n`
-        + `${styleStrings.join('\n')}\n`
-        + '}'
+        `${selector} {${styleStrings.join(' ')}}`
     )
 }

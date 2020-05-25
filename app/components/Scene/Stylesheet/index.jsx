@@ -17,27 +17,25 @@ const PresenceZIndexStylesheet = () => {
                 'PresenceZIndexStylesheet'
             )}
         >
-            {CUBE_Y_INDICES.map(yIndex => {
-                return (
-                    <DynamicStylesheet
-                        {...{
-                            key: yIndex,
-                            childPrefixes: [
-                                `Presences.y${
-                                    yIndex
-                                }`
-                            ],
-                            style: {
-                                /**
-                                 * Presences are rendered above every cube in
-                                 * the row for this yIndex.
-                                 */
-                                'z-index': (yIndex + 1) * CUBE_X_AXIS_LENGTH
-                            }
-                        }}
-                    />
-                )
-            })}
+            {CUBE_Y_INDICES.map(yIndex => (
+                <DynamicStylesheet
+                    {...{
+                        key: yIndex,
+                        childPrefixes: [
+                            `Presences.y${
+                                yIndex
+                            }`
+                        ],
+                        style: {
+                            /**
+                             * Presences are rendered above every cube in the
+                             * row for this yIndex.
+                             */
+                            'z-index': (yIndex + 1) * CUBE_X_AXIS_LENGTH
+                        }
+                    }}
+                />
+            ))}
         </Stylesheet>
     )
 }
