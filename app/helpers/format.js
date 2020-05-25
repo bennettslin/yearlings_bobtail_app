@@ -213,6 +213,6 @@ export const getCharStringForNumber = (myNumber) => {
     return myNumber < 10 ? myNumber : String.fromCharCode(myNumber + 87)
 }
 
-export const getJsFromSass = sassVariable => {
+export const getJsFromSass = (sassVariable = '') => {
     return parseFloat(sassVariable.replace(/[^\d.-]/g, ''))
 }

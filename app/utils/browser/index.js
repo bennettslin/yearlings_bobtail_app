@@ -6,7 +6,6 @@ const SAFE_DOCUMENT = {
 }
 
 const SAFE_WINDOW = {
-    dataLayer: [],
     history: {
         replaceState() {}
     },
@@ -31,11 +30,15 @@ export const getDocument = () => (
         document
 )
 
-export const getWindow = () => (
-    typeof window === 'undefined' ?
-        SAFE_WINDOW :
-        window
-)
+export const getWindow = () => {
+    const window = (
+        typeof window === 'undefined' ?
+            SAFE_WINDOW :
+            window
+    )
+    window.dataLayer = window.dataLayer || []
+    return window
+}
 
 export const removeLoadingIndicator = () => {
     const loadingIndicator = getDocument().getElementById('DramaMasks__load')

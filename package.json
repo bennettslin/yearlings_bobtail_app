@@ -43,6 +43,8 @@
     "esm": "^3.2.25",
     "gatsby": "^2.22.9",
     "gatsby-env-variables": "^2.0.0",
+    "gatsby-plugin-postcss": "^2.3.2",
+    "gatsby-plugin-sass": "^2.3.2",
     "mobile-detect": "^1.4.4",
     "pino": "^5.16.0",
     "prop-types": "^15.7.2",
