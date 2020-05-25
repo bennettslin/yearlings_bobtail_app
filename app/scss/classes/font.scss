@@ -1,36 +1,9 @@
-@font-face {
-    font-family: PTSansNarrow;
-    src: url('../../static/fonts/pt_sans/PTN57F.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: PTSansNarrow;
-    src: url('../../static/fonts/pt_sans/PTN77F.ttf') format('truetype');
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: PTSansNarrow;
-    src: url('../../static/fonts/pt_sans/PTS56F.ttf') format('truetype');
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Neuton;
-    src: url('../../static/fonts/Neuton/Neuton-Regular.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: Rancho;
-    src: url('../../static/fonts/Rancho/Rancho-Regular.ttf') format('truetype');
-}
-
 .Neuton {
     font-family: Neuton, Georgia;
 }
 
 .PtSansNarrow {
-    font-family: PtSansNarrow, Arial;
+    font-family: PT Sans Narrow, Arial;
 }
 
 .Rancho {

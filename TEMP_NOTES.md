@@ -1,4 +1,3 @@
-* Fonts
 * Svgs
 * Other assets
 * Ensure everything looks good on the user facing side.

@@ -77,14 +77,6 @@ export const onCreateWebpackConfig = ({ actions }) => {
                 //     }
                 // },
                 // {
-                //     test: /\.ttf$/,
-                //     include: path.resolve(__dirname, './static/fonts'),
-                //     loader: 'file-loader',
-                //     options: {
-                //         name: './static/fonts/[name]-[hash].[ext]'
-                //     }
-                // }
-                // {
                 //     test: /\.mp3$/,
                 //     include: path.resolve(__dirname, './assets/mp3s'),
                 //     loader: 'file-loader',
