@@ -57,6 +57,11 @@ export default [
     {
         taskName: `Internet Explorer is too broken to even reach the deprecated page.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
+    },
+    {
+        taskName: `Look into s3 versioning.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]

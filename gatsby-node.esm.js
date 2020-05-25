@@ -18,7 +18,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
         plugins: [
             // Define global constant at compile time.
             new webpack.DefinePlugin({
-                // Grab album from global env only when not running locally.
+                // Grab album from global env in delivery and production.
                 ...!isLocalDevelopment && {
                     ALBUM: JSON.stringify(album)
                 },

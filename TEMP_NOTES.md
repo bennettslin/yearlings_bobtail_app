@@ -1,15 +1,20 @@
-* Take care of weirdness that results from client/server discrepancies.
-    * Only About, Carousel, and Lyric need to render for SEO
-* GA in HTML (GA was already broken in production.)
+# Easy tasks for tomorrow
+* Make Mara the loading indicator.
+* Why is font in song banner small?
+* Figure out why window resizing timeout seems to have regressed.
+* GA (GA was already broken in production.)
+* Stringify internal stylesheets
+
+# Ongoing Gatsby tasks
 * Pages and routing
+    * 404 page
 * URL replacement
-* Admin routes
+* Add back admin routes
+
 * Favicon
-* 404 page
 * Splash page
 * Deprecated page
-* Look into s3 versioning
-
-* Make Mara the loading indicator
-
-* Why is font in song banner small?
+* Take care of weirdness that results from client/server discrepancies.
+    * Heightless and zoom show the same thing.
+    * Always render Carousel, even in mobile. Show carousel if heightless.
+    * Only About, Carousel, and Lyric need to render for SEO.
