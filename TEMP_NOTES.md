@@ -1,5 +1,3 @@
-* Svgs
-* Other assets
 * Ensure everything looks good on the user facing side.
 * Clean up old webpack code and configuration, remove unused dependencies
 * Clean up new gatsby code and configuration
