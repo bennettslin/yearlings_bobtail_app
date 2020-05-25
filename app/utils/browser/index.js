@@ -1,5 +1,11 @@
+const SAFE_DOCUMENT = {
+    activeElement: {},
+    getElementById() {},
+    getElementsByClassName: () => [],
+    querySelector() {}
+}
+
 const SAFE_WINDOW = {
-    datalayer: [],
     history: {
         replaceState() {}
     },
@@ -18,14 +24,24 @@ const SAFE_WINDOW = {
     onresize() {}
 }
 
-export const getWindow = () => (
-    typeof window === 'undefined' ?
-        SAFE_WINDOW :
-        window
+export const getDocument = () => (
+    typeof document === 'undefined' ?
+        SAFE_DOCUMENT :
+        document
 )
 
+export const getWindow = () => {
+    const safeWindow = (
+        typeof window === 'undefined' ?
+            SAFE_WINDOW :
+            window
+    )
+    safeWindow.dataLayer = safeWindow.dataLayer || []
+    return safeWindow
+}
+
 export const removeLoadingIndicator = () => {
-    const loadingIndicator = document.getElementById('DramaMasks__load')
+    const loadingIndicator = getDocument().getElementById('DramaMasks__load')
     if (loadingIndicator) {
         loadingIndicator.parentNode.removeChild(loadingIndicator)
     }
