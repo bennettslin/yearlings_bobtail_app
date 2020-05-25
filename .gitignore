@@ -1,9 +1,12 @@
 .DS_Store
-build
-build__delivery
-node_modules
+build/
+build__delivery/
+node_modules/
 npm-debug.log
 bundle.js
 .env
 .eslintcache
 .vscode
+
+.cache/
+public/
