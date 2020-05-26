@@ -1,15 +1,14 @@
+@import '../../scss/classes/mixin';
+
 .RootContainer {
+    position: relative;
     display: flex;
     justify-content: center;
     width: 100vw;
     height: 100vh;
     min-height: 100vh;
 
-    position: relative;
-
     font-size: 1.1em;
-
-    // user-select: none;
 
     // Keeping these together for consistency.
     @include mixin__textAndLinkColours();

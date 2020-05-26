@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import ResizeListener from '../../handlers/Resize/Listener'
-
 import Theatre from '../../components/Theatre'
 import Main from '../../components/Main'
 import Menu from '../../components/Menu'
@@ -12,6 +10,7 @@ import MainPopups from '../../components/Popups/MainPopups'
 import PopupOverlay from '../../components/Overlays/PopupOverlay'
 import TouchOverlay from '../../components/Overlays/TouchOverlay'
 import WrapperContainer from '../Wrapper'
+import './style'
 
 const RootContainer = ({ setLyricFocusElement }) => {
     const

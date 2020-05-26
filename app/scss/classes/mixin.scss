@@ -1,3 +1,5 @@
+@import '../constants/colour';
+
 @mixin mixin__textAnchorShadow($bgColour, $important: false) {
     $offset: 0.5px;
     $offset__negative: -$offset;
