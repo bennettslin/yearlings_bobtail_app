@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import { SHOW_SINGLE_NAV_BOOK_SELECTOR } from '../../../redux/responsive/selectors'
 import NavDispatcher from '../../../handlers/Nav/Dispatcher'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import NavBookLogue from './Book/Logue'
@@ -13,13 +14,15 @@ import NavBookToggle from './Book/Toggle'
 
 import { populateRefs } from '../../../helpers/ref'
 
-const mapStateToProps = ({
-    responsiveStore: { showSingleNavBook },
-    sessionStore: { shownNavBookIndex }
-}) => ({
-    showSingleNavBook,
-    shownNavBookIndex
-})
+const mapStateToProps = (state) => {
+    const { sessionStore: { shownNavBookIndex } } = state,
+        showSingleNavBook = SHOW_SINGLE_NAV_BOOK_SELECTOR(state)
+
+    return {
+        showSingleNavBook,
+        shownNavBookIndex
+    }
+}
 
 class NavColumn extends PureComponent {
 

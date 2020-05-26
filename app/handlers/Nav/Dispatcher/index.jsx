@@ -1,6 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { SHOW_SINGLE_NAV_BOOK_SELECTOR } from '../../../redux/responsive/selectors'
 import { updateSessionStore } from '../../../redux/session/action'
 
 class NavDispatcher extends PureComponent {
@@ -48,15 +49,19 @@ class NavDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    toggleStore: { isNavShown },
-    responsiveStore: { showSingleNavBook },
-    sessionStore: { shownNavBookIndex }
-}) => ({
-    showSingleNavBook,
-    shownNavBookIndex,
-    isNavShown
-})
+const mapStateToProps = (state) => {
+    const {
+            toggleStore: { isNavShown },
+            sessionStore: { shownNavBookIndex }
+        } = state,
+        showSingleNavBook = SHOW_SINGLE_NAV_BOOK_SELECTOR(state)
+
+    return {
+        showSingleNavBook,
+        shownNavBookIndex,
+        isNavShown
+    }
+}
 
 export default connect(
     mapStateToProps,

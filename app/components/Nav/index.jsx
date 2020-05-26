@@ -1,59 +1,44 @@
 // Section for user to navigate between songs.
-
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect } from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 
+import { SHOW_SINGLE_NAV_BOOK_SELECTOR } from '../../redux/responsive/selectors'
 import NavListener from '../../handlers/Nav/Listener'
 import NavColumn from './Column'
 
-const mapStateToProps = ({
-    responsiveStore: { showSingleNavBook }
-}) => ({
-    showSingleNavBook
-})
+const Nav = () => {
+    const showSingleNavBook = useSelector(SHOW_SINGLE_NAV_BOOK_SELECTOR)
 
-class Nav extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        showSingleNavBook: PropTypes.bool.isRequired
-    }
-
-    componentDidMount() {
+    useEffect(() => {
         logMount('Nav')
-    }
+    }, [])
 
-    render() {
-        const { showSingleNavBook } = this.props
+    return (
+        <div
+            className={cx(
+                'Nav',
+                showSingleNavBook ?
+                    'Nav__showSingleBook' :
+                    'Nav__showDoubleBook'
+            )}
+        >
+            <NavListener />
+            {/* Placeholder, has no other purpose. */}
+            <div className="CarouselNavToggle__placeholder" />
 
-        return (
             <div
-                className={cx(
-                    'Nav',
-                    showSingleNavBook ?
-                        'Nav__showSingleBook' :
-                        'Nav__showDoubleBook'
-                )}
+                {...{
+                    className: cx(
+                        'NavColumnContainer'
+                    )
+                }}
             >
-                <NavListener />
-                {/* Placeholder, has no other purpose. */}
-                <div className="CarouselNavToggle__placeholder" />
-
-                <div
-                    {...{
-                        className: cx(
-                            'NavColumnContainer'
-                        )
-                    }}
-                >
-                    <NavColumn {...{ bookIndex: 0 }} />
-                    <NavColumn {...{ bookIndex: 1 }} />
-                </div>
+                <NavColumn {...{ bookIndex: 0 }} />
+                <NavColumn {...{ bookIndex: 1 }} />
             </div>
-        )
-    }
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(Nav)
+export default Nav

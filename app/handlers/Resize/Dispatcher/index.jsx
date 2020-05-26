@@ -20,10 +20,8 @@ import {
     getCanScoreMount,
     getCanSliderMount
 } from '../../../helpers/resize/mount'
-import { getShowSingleNavBook } from '../../../helpers/resize/nav'
 import { getProsceniumDimensionCoordinates } from '../../../helpers/resize/proscenium'
 import {
-    getIsLyricExpandable,
     getIsTwoRowMenu,
     getMenuHeight
 } from '../../../helpers/resize/responsive'
@@ -91,9 +89,7 @@ class ResizeDispatcher extends PureComponent {
             menuHeight
         })
 
-        this._updateResponsiveStore({
-            deviceWidthIndex,
-            windowWidth,
+        this.props.updateResponsiveStore({
             isHeightlessLyric,
             isTwoRowMenu,
             menuHeight
@@ -213,25 +209,6 @@ class ResizeDispatcher extends PureComponent {
         this.props.updateTheatreStore({
             ceilingHeight,
             floorHeight
-        })
-    }
-
-    _updateResponsiveStore({
-        deviceWidthIndex,
-        windowWidth,
-        isHeightlessLyric,
-        isTwoRowMenu,
-        menuHeight
-    }) {
-        this.props.updateResponsiveStore({
-            isHeightlessLyric,
-            isTwoRowMenu,
-            menuHeight,
-            showSingleNavBook: getShowSingleNavBook({
-                deviceWidthIndex,
-                windowWidth
-            }),
-            isLyricExpandable: getIsLyricExpandable(deviceWidthIndex)
         })
     }
 

@@ -4,9 +4,6 @@ import {
     getMenuHeight
 } from '../../helpers/resize/responsive'
 import {
-    getShowSingleNavBook
-} from '../../helpers/resize/nav'
-import {
     INITIAL_WINDOW_WIDTH,
     INITIAL_WINDOW_HEIGHT,
     INITIAL_DEVICE_WIDTH_INDEX
@@ -28,9 +25,5 @@ export const INITIAL_MENU_HEIGHT = getMenuHeight({
 export const RESPONSIVE_DEFAULTS = {
     isHeightlessLyric: IS_INITIAL_HEIGHTLESS_LYRIC,
     isTwoRowMenu: IS_INITIAL_TWO_ROW_MENU,
-    menuHeight: INITIAL_MENU_HEIGHT,
-    showSingleNavBook: getShowSingleNavBook({
-        deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX,
-        windowWidth: INITIAL_WINDOW_WIDTH
-    })
+    menuHeight: INITIAL_MENU_HEIGHT
 }
