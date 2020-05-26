@@ -2,45 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { LYRIC_DYNAMIC_HEIGHT_SELECTOR } from '../../redux/mount/selectors'
+import { LYRIC_OVERVIEW_HEIGHT_STYLE_SELECTOR } from '../../redux/mount/selectors'
 
 import Lyric from '../Lyric'
 import OverviewPopup from '../Popups/Overview'
 
-import { getLyricOverviewHeight } from './helper'
-
-const mapStateToProps = ({
-    responsiveStore: {
-        isHeightlessLyric,
-        menuHeight
-    },
-    toggleStore: { isLyricExpanded },
-    lyricStore: { isLyricLogue }
-}) => ({
-    isHeightlessLyric,
-    menuHeight,
-    isLyricExpanded,
-    isLyricLogue
-})
-
 const LyricOverview = ({ setLyricFocusElement }) => {
-    const {
-            // TODO: Get these from selectors.
-            isLyricExpanded,
-            isLyricLogue,
-            isHeightlessLyric,
-            menuHeight
-        } = useSelector(mapStateToProps),
-        lyricDynamicHeight = useSelector(LYRIC_DYNAMIC_HEIGHT_SELECTOR),
-
-        // TODO: Make this a selector.
-        lyricOverviewHeight = getLyricOverviewHeight({
-            isLyricExpanded,
-            lyricDynamicHeight,
-            isLyricLogue,
-            isHeightlessLyric,
-            menuHeight
-        })
+    const lyricOverviewHeightStyle =
+        useSelector(LYRIC_OVERVIEW_HEIGHT_STYLE_SELECTOR)
 
     return (
         <div
@@ -53,7 +22,7 @@ const LyricOverview = ({ setLyricFocusElement }) => {
                     'fCC'
                 ),
                 style: {
-                    height: lyricOverviewHeight
+                    height: lyricOverviewHeightStyle
                 }
             }}
         >

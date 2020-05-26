@@ -76,3 +76,23 @@ export const getLyricDynamicHeight = ({
 
     return Number(lyricDynamicHeight.toFixed(2))
 }
+
+export const getLyricOverviewHeight = ({
+    isLyricExpanded,
+    lyricDynamicHeight,
+    isLyricLogue,
+    isHeightlessLyric,
+    menuHeight
+
+}) => (
+    // Set to window height minus menu if...
+    (
+        // It's heightless in logue.
+        (isLyricLogue && isHeightlessLyric) ||
+
+        // It's expanded in song.
+        (!isLyricLogue && isLyricExpanded)
+    ) ?
+        `calc(100% - ${menuHeight}px)` :
+        `${lyricDynamicHeight * 100}%`
+)
