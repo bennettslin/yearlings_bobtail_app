@@ -1,3 +1,7 @@
+@import "../../../scss/constants/icon";
+@import "../../../scss/constants/menu";
+@import "../../../scss/constants/zIndex";
+
 $height__about: $HEIGHT_MENU - $MARGIN_THIN * 2;
 $width__about: $height__about * 3 / 2;
 
