@@ -1,76 +1,57 @@
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import { getSingleShownEarColumnKey } from './helper'
 
-class ResponsiveWrapper extends PureComponent {
+const ResponsiveWrapper = ({ children }) => {
+    const {
+            earColumnIndex,
+            isCarouselNavShowable,
+            isTipsShowable,
+            isEarShown,
+            isHeightlessLyric,
+            isLyricExpandable,
+            showShrunkNavIcon
+        } = useSelector(mapStateToProps),
 
-    static propTypes = {
-        // Through Redux.
-        earColumnIndex: PropTypes.number.isRequired,
-        isCarouselNavShowable: PropTypes.bool.isRequired,
-        isTipsShowable: PropTypes.bool.isRequired,
-        isEarShown: PropTypes.bool.isRequired,
-        isHeightlessLyric: PropTypes.bool.isRequired,
-        isLyricExpandable: PropTypes.bool.isRequired,
-        showShrunkNavIcon: PropTypes.bool.isRequired,
+        singleShownEarColumnKey = getSingleShownEarColumnKey({
+            isEarShown,
+            earColumnIndex
+        })
 
-        // From parent.
-        children: PropTypes.any.isRequired
-    }
+    return (
+        <div
+            {...{
+                className: cx(
+                    'ResponsiveWrapper',
 
-    render() {
-        const {
-                earColumnIndex,
-                isCarouselNavShowable,
-                isTipsShowable,
-                isEarShown,
-                isHeightlessLyric,
-                isLyricExpandable,
-                showShrunkNavIcon,
-                children
-            } = this.props,
+                    showShrunkNavIcon ?
+                        'RW__navIconShrunk' :
+                        'RW__navIconStatic',
 
-            singleShownEarColumnKey = getSingleShownEarColumnKey({
-                isEarShown,
-                earColumnIndex
-            })
+                    isCarouselNavShowable &&
+                        'RW__carouselNavShowable',
 
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'ResponsiveWrapper',
+                    !isTipsShowable &&
+                        'RW__tipsNotShowable',
 
-                        showShrunkNavIcon ?
-                            'RW__navIconShrunk' :
-                            'RW__navIconStatic',
+                    singleShownEarColumnKey ?
+                        `RW__${singleShownEarColumnKey}EarColumnOnly` :
+                        'RW__bothEarColumnsShown',
 
-                        isCarouselNavShowable &&
-                            'RW__carouselNavShowable',
+                    !isHeightlessLyric &&
+                        'RW__lyricHeighted',
 
-                        !isTipsShowable &&
-                            'RW__tipsNotShowable',
-
-                        singleShownEarColumnKey ?
-                            `RW__${singleShownEarColumnKey}EarColumnOnly` :
-                            'RW__bothEarColumnsShown',
-
-                        !isHeightlessLyric &&
-                            'RW__lyricHeighted',
-
-                        isLyricExpandable ?
-                            'RW__lyricExpandable' :
-                            'RW__lyricNotExpandable'
-                    )
-                }}
-            >
-                {children}
-            </div>
-        )
-    }
+                    isLyricExpandable ?
+                        'RW__lyricExpandable' :
+                        'RW__lyricNotExpandable'
+                )
+            }}
+        >
+            {children}
+        </div>
+    )
 }
 
 const mapStateToProps = ({
@@ -95,4 +76,8 @@ const mapStateToProps = ({
     showShrunkNavIcon
 })
 
-export default connect(mapStateToProps)(ResponsiveWrapper)
+ResponsiveWrapper.propTypes = {
+    children: PropTypes.any.isRequired
+}
+
+export default ResponsiveWrapper

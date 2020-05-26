@@ -1,48 +1,36 @@
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-class TransitionWrapper extends PureComponent {
+const TransitionWrapper = ({ children }) => {
+    const {
+        canLyricCarouselEnter
+    } = useSelector(mapStateToProps)
 
-    static propTypes = {
-        // Through Redux.
-        canLyricCarouselEnter: PropTypes.bool.isRequired,
+    return (
+        <div
+            {...{
+                className: cx(
+                    'TransitionWrapper',
 
-        // From parent.
-        children: PropTypes.any.isRequired
-    }
+                    /**
+                     * When transitioning between songs, explicitly reset
+                     * all verse trackers.
+                     */
+                    canLyricCarouselEnter ?
+                        'TrW__canTrackVerse' :
+                        'TrW__cannotTrackVerse',
 
-    render() {
-        const {
-            canLyricCarouselEnter,
-            children
-        } = this.props
-
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'TransitionWrapper',
-
-                        /**
-                         * When transitioning between songs, explicitly reset
-                         * all verse trackers.
-                         */
-                        canLyricCarouselEnter ?
-                            'TrW__canTrackVerse' :
-                            'TrW__cannotTrackVerse',
-
-                        canLyricCarouselEnter ?
-                            'TrW__canLyricCarouselEnter' :
-                            'TrW__cannotLyricCarouselEnter'
-                    )
-                }}
-            >
-                {children}
-            </div>
-        )
-    }
+                    canLyricCarouselEnter ?
+                        'TrW__canLyricCarouselEnter' :
+                        'TrW__cannotLyricCarouselEnter'
+                )
+            }}
+        >
+            {children}
+        </div>
+    )
 }
 
 const mapStateToProps = ({
@@ -51,4 +39,8 @@ const mapStateToProps = ({
     canLyricCarouselEnter
 })
 
-export default connect(mapStateToProps)(TransitionWrapper)
+TransitionWrapper.propTypes = {
+    children: PropTypes.any.isRequired
+}
+
+export default TransitionWrapper

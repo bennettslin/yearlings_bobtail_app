@@ -1,111 +1,86 @@
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import { getSongTipType } from '../../album/api/tips'
 import { SHOWN } from '../../constants/options'
 import { WIKI, WORMHOLES } from '../../constants/tips'
 
-class ShownWrapper extends PureComponent {
+const ShownWrapper = ({ children }) => {
+    const {
+            wormhole,
+            reference,
+            canLyricCarouselEnter,
+            isLyricLogue,
+            lyricSongIndex,
+            lyricAnnotationIndex,
+            selectedOverviewOption,
+            selectedTipsOption,
+            isCarouselShown,
+            isNavShown,
+            isLyricExpanded,
+            isDotsSlideShown,
+            isOverlayShown
+        } = useSelector(mapStateToProps),
 
-    static propTypes = {
-        // Through Redux.
-        wormhole: PropTypes.bool.isRequired,
-        reference: PropTypes.bool.isRequired,
-        canLyricCarouselEnter: PropTypes.bool.isRequired,
-        isLyricLogue: PropTypes.bool.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
-        lyricAnnotationIndex: PropTypes.number.isRequired,
-        selectedOverviewOption: PropTypes.string.isRequired,
-        selectedTipsOption: PropTypes.string.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
-        isNavShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
-        isDotsSlideShown: PropTypes.bool.isRequired,
-        isOverlayShown: PropTypes.bool.isRequired,
+        songOverviewShown =
+            !isLyricLogue && selectedOverviewOption === SHOWN,
+        tipsShown = selectedTipsOption === SHOWN,
 
-        // From parent.
-        children: PropTypes.any.isRequired
-    }
+        tipType = getSongTipType(lyricSongIndex)
 
-    render() {
-        const {
-                wormhole,
-                reference,
-                canLyricCarouselEnter,
-                isLyricLogue,
-                lyricSongIndex,
-                lyricAnnotationIndex,
-                selectedOverviewOption,
-                selectedTipsOption,
-                isCarouselShown,
-                isNavShown,
-                isLyricExpanded,
-                isDotsSlideShown,
-                isOverlayShown,
-                children
-            } = this.props,
+    return (
+        <div
+            {...{
+                className: cx(
+                    'ShownWrapper',
+                    'abF',
 
-            songOverviewShown =
-                !isLyricLogue && selectedOverviewOption === SHOWN,
-            tipsShown = selectedTipsOption === SHOWN,
+                    lyricAnnotationIndex ?
+                        'ShW__annotationShown' :
+                        'ShW__annotationHidden',
 
-            tipType = getSongTipType(lyricSongIndex)
+                    songOverviewShown ?
+                        'ShW__songOverviewShown' :
+                        'ShW__songOverviewHidden',
 
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'ShownWrapper',
-                        'abF',
+                    // Don't show these class names between songs.
+                    canLyricCarouselEnter && tipsShown && [
+                        'ShW__tipsShown',
+                        `ShW__tips__${tipType}`,
+                        (
+                            /**
+                             * If dot is not selected, render the tips hand
+                             * that is pointed at dots toggle.
+                             */
+                            (tipType === WIKI && !reference) ||
+                            (tipType === WORMHOLES && !wormhole)
+                        ) ?
+                            'ShW__tips__isPointedAtDots' :
+                            'ShW__tips__isPointedAtLyrics'
+                    ],
 
-                        lyricAnnotationIndex ?
-                            'ShW__annotationShown' :
-                            'ShW__annotationHidden',
+                    isCarouselShown &&
+                        'ShW__carouselExpanded',
+                    isNavShown &&
+                        'ShW__navExpanded',
 
-                        songOverviewShown ?
-                            'ShW__songOverviewShown' :
-                            'ShW__songOverviewHidden',
+                    isDotsSlideShown ?
+                        'ShW__dotsShown' :
+                        'ShW__dotsHidden',
+                    isLyricExpanded ?
+                        'ShW__lyricExpanded' :
+                        'ShW__lyricCollapsed',
 
-                        // Don't show these class names between songs.
-                        canLyricCarouselEnter && tipsShown && [
-                            'ShW__tipsShown',
-                            `ShW__tips__${tipType}`,
-                            (
-                                /**
-                                 * If dot is not selected, render the tips hand
-                                 * that is pointed at dots toggle.
-                                 */
-                                (tipType === WIKI && !reference) ||
-                                (tipType === WORMHOLES && !wormhole)
-                            ) ?
-                                'ShW__tips__isPointedAtDots' :
-                                'ShW__tips__isPointedAtLyrics'
-                        ],
-
-                        isCarouselShown &&
-                            'ShW__carouselExpanded',
-                        isNavShown &&
-                            'ShW__navExpanded',
-
-                        isDotsSlideShown ?
-                            'ShW__dotsShown' :
-                            'ShW__dotsHidden',
-                        isLyricExpanded ?
-                            'ShW__lyricExpanded' :
-                            'ShW__lyricCollapsed',
-
-                        isOverlayShown ?
-                            'ShW__overlayShown' :
-                            'ShW__overlayHidden'
-                    )
-                }}
-            >
-                {children}
-            </div>
-        )
-    }
+                    isOverlayShown ?
+                        'ShW__overlayShown' :
+                        'ShW__overlayHidden'
+                )
+            }}
+        >
+            {children}
+        </div>
+    )
 }
 
 const mapStateToProps = ({
@@ -146,4 +121,8 @@ const mapStateToProps = ({
     isOverlayShown
 })
 
-export default connect(mapStateToProps)(ShownWrapper)
+ShownWrapper.propTypes = {
+    children: PropTypes.any.isRequired
+}
+
+export default ShownWrapper

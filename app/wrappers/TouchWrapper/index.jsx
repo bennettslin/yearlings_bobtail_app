@@ -1,57 +1,40 @@
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-class TouchWrapper extends PureComponent {
+const TouchWrapper = ({ children }) => {
+    const {
+        isAutoScroll,
+        isScrolling,
+        isSliderTouched,
+        isSliderMoving,
+        isActivated,
+        isBannerHovering
+    } = useSelector(mapStateToProps)
 
-    static propTypes = {
-        // Through Redux.
-        isAutoScroll: PropTypes.bool.isRequired,
-        isScrolling: PropTypes.bool.isRequired,
-        isSliderMoving: PropTypes.bool.isRequired,
-        isSliderTouched: PropTypes.bool.isRequired,
-        isActivated: PropTypes.bool.isRequired,
-        isBannerHovering: PropTypes.bool.isRequired,
+    return (
+        <div
+            {...{
+                className: cx(
+                    'TouchWrapper',
 
-        // From parent.
-        children: PropTypes.any.isRequired
-    }
+                    !isAutoScroll && 'TW__manualScroll',
+                    isScrolling ? 'TW__isScrolling' : 'TW__isStationary',
+                    isSliderTouched && 'TW__sliderTouched',
+                    isSliderMoving && 'TW__sliderMoving',
+                    isActivated && 'TW__verseActive',
+                    isBannerHovering && 'TW__bannerHovering',
 
-    render() {
-        const {
-            isAutoScroll,
-            isScrolling,
-            isSliderTouched,
-            isSliderMoving,
-            isActivated,
-            isBannerHovering,
-            children
-        } = this.props
-
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'TouchWrapper',
-
-                        !isAutoScroll && 'TW__manualScroll',
-                        isScrolling ? 'TW__isScrolling' : 'TW__isStationary',
-                        isSliderTouched && 'TW__sliderTouched',
-                        isSliderMoving && 'TW__sliderMoving',
-                        isActivated && 'TW__verseActive',
-                        isBannerHovering && 'TW__bannerHovering',
-
-                        (isSliderMoving || isActivated) ?
-                            'TW__lyricsLocked' :
-                            'TW__lyricsUnlocked'
-                    )
-                }}
-            >
-                {children}
-            </div>
-        )
-    }
+                    (isSliderMoving || isActivated) ?
+                        'TW__lyricsLocked' :
+                        'TW__lyricsUnlocked'
+                )
+            }}
+        >
+            {children}
+        </div>
+    )
 }
 
 const mapStateToProps = ({
@@ -72,4 +55,8 @@ const mapStateToProps = ({
     isBannerHovering
 })
 
-export default connect(mapStateToProps)(TouchWrapper)
+TouchWrapper.propTypes = {
+    children: PropTypes.any.isRequired
+}
+
+export default TouchWrapper

@@ -1,58 +1,42 @@
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import { PARENT_ACCESS_PREFIX } from '../../constants/prefixes'
 
-class PlayingWrapper extends PureComponent {
+const PlayingWrapper = ({ children }) => {
+    const {
+        isLyricLogue,
+        isPlaying,
+        isAccessOn,
+        accessedKey
+    } = useSelector(mapStateToProps)
 
-    static propTypes = {
-        // Through Redux.
-        isPlaying: PropTypes.bool.isRequired,
-        isLyricLogue: PropTypes.bool.isRequired,
-        isAccessOn: PropTypes.bool.isRequired,
-        accessedKey: PropTypes.string.isRequired,
+    return (
+        <div
+            {...{
+                className: cx(
+                    'PlayingWrapper',
 
-        // From parent.
-        children: PropTypes.any.isRequired
-    }
+                    isLyricLogue ?
+                        'PlW__logue' :
+                        'PlW__song',
+                    isPlaying ?
+                        'PlW__isPlaying' :
+                        'PlW__isPaused',
 
-    render() {
-        const {
-            isLyricLogue,
-            isPlaying,
-            isAccessOn,
-            accessedKey,
-            children
-        } = this.props
+                    isAccessOn ?
+                        'PlW__accessOn' :
+                        'PlW__accessOff',
 
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'PlayingWrapper',
-
-                        isLyricLogue ?
-                            'PlW__logue' :
-                            'PlW__song',
-                        isPlaying ?
-                            'PlW__isPlaying' :
-                            'PlW__isPaused',
-
-                        isAccessOn ?
-                            'PlW__accessOn' :
-                            'PlW__accessOff',
-
-                        accessedKey &&
-                            `${PARENT_ACCESS_PREFIX}${accessedKey}`
-                    )
-                }}
-            >
-                {children}
-            </div>
-        )
-    }
+                    accessedKey &&
+                        `${PARENT_ACCESS_PREFIX}${accessedKey}`
+                )
+            }}
+        >
+            {children}
+        </div>
+    )
 }
 
 const mapStateToProps = ({
@@ -69,4 +53,8 @@ const mapStateToProps = ({
     accessedKey
 })
 
-export default connect(mapStateToProps)(PlayingWrapper)
+PlayingWrapper.propTypes = {
+    children: PropTypes.any.isRequired
+}
+
+export default PlayingWrapper

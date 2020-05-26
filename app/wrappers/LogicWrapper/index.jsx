@@ -1,8 +1,7 @@
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import {
     getDotKeysFromBitNumber,
     getPrefixedDotLetterClassNames
@@ -10,111 +9,87 @@ import {
 import { getCursorIndex } from '../../helpers/verse'
 import { getStanzaIndexForVerse } from '../../album/api/verses'
 
-class LogicWrapper extends PureComponent {
+const LogicWrapper = ({ children }) => {
+    const {
+            dotsBitNumber,
+            isPlaying,
+            isSliderMoving,
+            isLyricLogue,
+            lyricSongIndex,
+            lyricVerseIndex,
+            sliderVerseIndex,
+            isActivated,
+            activatedVerseIndex,
+            isVerseBarAbove,
+            isVerseBarBelow
+        } = useSelector(mapStateToProps),
 
-    static propTypes = {
-        // Through Redux.
+        selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
-        isVerseBarAbove: PropTypes.bool.isRequired,
-        isVerseBarBelow: PropTypes.bool.isRequired,
+        areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
 
-        isPlaying: PropTypes.bool.isRequired,
-        isSliderMoving: PropTypes.bool.isRequired,
-        isActivated: PropTypes.bool.isRequired,
-        activatedVerseIndex: PropTypes.number.isRequired,
-        isLyricLogue: PropTypes.bool.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
-        lyricVerseIndex: PropTypes.number.isRequired,
-        sliderVerseIndex: PropTypes.number.isRequired,
-        dotsBitNumber: PropTypes.number.isRequired,
+        /**
+         * If slider touched, compare stanza to slider verse. Otherwise,
+         * compare it to selected verse.
+         */
+        cursorVerseIndex = getCursorIndex(
+            sliderVerseIndex,
+            activatedVerseIndex,
+            lyricVerseIndex
+        ),
 
-        // From parent.
-        children: PropTypes.any.isRequired
-    }
+        isLyricsLocked = isSliderMoving || isActivated
 
-    render() {
-        const {
-                dotsBitNumber,
-                isPlaying,
-                isSliderMoving,
-                isLyricLogue,
-                lyricSongIndex,
-                lyricVerseIndex,
-                sliderVerseIndex,
-                isActivated,
-                activatedVerseIndex,
-                isVerseBarAbove,
-                isVerseBarBelow,
-                children
-            } = this.props,
+    return (
+        <div
+            {...{
+                className: cx(
+                    'LogicWrapper',
 
-            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
+                    !isLyricLogue && [
 
-            areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
+                        // "Root cursored stanza index."
+                        `RcS${getStanzaIndexForVerse(
+                            lyricSongIndex,
+                            cursorVerseIndex
+                        )}`,
 
-            /**
-             * If slider touched, compare stanza to slider verse. Otherwise,
-             * compare it to selected verse.
-             */
-            cursorVerseIndex = getCursorIndex(
-                sliderVerseIndex,
-                activatedVerseIndex,
-                lyricVerseIndex
-            ),
+                        isLyricsLocked ?
+                            // "Root slider (or activated) verse index."
+                            `RsV${cursorVerseIndex}` :
+                            // "Root default verse index."
+                            `RdV${cursorVerseIndex}`,
 
-            isLyricsLocked = isSliderMoving || isActivated
+                        isLyricsLocked &&
+                            // "Root selected verse index."
+                            `RxV${lyricVerseIndex}`,
 
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'LogicWrapper',
+                        isPlaying && !isLyricsLocked &&
+                            // "Root playing verse index."
+                            `RpV${cursorVerseIndex}`,
 
-                        !isLyricLogue && [
+                        !isActivated &&
+                            // "Root non-activated verse index."
+                            `RnV${cursorVerseIndex}`,
 
-                            // "Root cursored stanza index."
-                            `RcS${getStanzaIndexForVerse(
-                                lyricSongIndex,
-                                cursorVerseIndex
-                            )}`,
+                        areVerseBarsHidden && !isActivated &&
+                            // "Root cursored lyric verse."
+                            `RlV${cursorVerseIndex}`,
 
-                            isLyricsLocked ?
-                                // "Root slider (or activated) verse index."
-                                `RsV${cursorVerseIndex}` :
-                                // "Root default verse index."
-                                `RdV${cursorVerseIndex}`,
+                        getPrefixedDotLetterClassNames(
+                            selectedDotKeys,
+                            // "Root selected dot letter."
+                            'RsD'
+                        ),
 
-                            isLyricsLocked &&
-                                // "Root selected verse index."
-                                `RxV${lyricVerseIndex}`,
-
-                            isPlaying && !isLyricsLocked &&
-                                // "Root playing verse index."
-                                `RpV${cursorVerseIndex}`,
-
-                            !isActivated &&
-                                // "Root non-activated verse index."
-                                `RnV${cursorVerseIndex}`,
-
-                            areVerseBarsHidden && !isActivated &&
-                                // "Root cursored lyric verse."
-                                `RlV${cursorVerseIndex}`,
-
-                            getPrefixedDotLetterClassNames(
-                                selectedDotKeys,
-                                // "Root selected dot letter."
-                                'RsD'
-                            ),
-
-                            !dotsBitNumber && 'LW__noSelectedDots'
-                        ]
-                    )
-                }}
-            >
-                {children}
-            </div>
-        )
-    }
+                        !dotsBitNumber && 'LW__noSelectedDots'
+                    ]
+                )
+            }}
+        >
+            {children}
+        </div>
+    )
 }
 
 const mapStateToProps = ({
@@ -151,4 +126,8 @@ const mapStateToProps = ({
     isVerseBarBelow
 })
 
-export default connect(mapStateToProps)(LogicWrapper)
+LogicWrapper.propTypes = {
+    children: PropTypes.any.isRequired
+}
+
+export default LogicWrapper
