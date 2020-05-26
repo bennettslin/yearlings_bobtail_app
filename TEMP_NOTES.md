@@ -2,6 +2,7 @@
 * Figure out why window resizing timeout seems to have regressed.
 * Sketchbooks are blank. (Sketches are probably behind them.)
 * Wires for bottom bubble above wires for top bubble. Happens in Chrome now.
+* PT Sans Italic is small?
 
 # Easy reduction tasks
 * Internal stylesheet fixes

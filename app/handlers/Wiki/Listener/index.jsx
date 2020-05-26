@@ -1,64 +1,34 @@
 // Singleton to listen for changes that determine a new wiki url.
 
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateSessionStore } from '../../../redux/session/action'
-
 import { getWikiUrl } from './helper'
 
-class WikiListener extends PureComponent {
+const WikiListener = () => {
+    const
+        dispatch = useDispatch(),
+        {
+            isMobileWiki,
+            selectedSongIndex,
+            selectedWikiIndex,
+            selectedAnnotationIndex,
+            carouselAnnotationIndex
+        } = useSelector(mapStateToProps)
 
-    static propTypes = {
-        // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedWikiIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        carouselAnnotationIndex: PropTypes.number.isRequired,
-        isMobileWiki: PropTypes.bool.isRequired,
-        updateSessionStore: PropTypes.func.isRequired
-    }
+    useEffect(() => {
+        const selectedWikiUrl = getWikiUrl({
+            selectedSongIndex,
+            selectedWikiIndex,
+            selectedAnnotationIndex,
+            carouselAnnotationIndex,
+            isMobileWiki
+        })
 
-    componentDidUpdate(prevProps) {
-        this._setWikiUrlIfNeeded(prevProps)
-    }
+        dispatch(updateSessionStore({ selectedWikiUrl }))
+    }, [selectedWikiIndex, isMobileWiki])
 
-    _setWikiUrlIfNeeded(prevProps) {
-        const
-            {
-                selectedWikiIndex,
-                isMobileWiki
-            } = this.props,
-            {
-                selectedWikiIndex: prevWikiIndex,
-                isMobileWiki: wasMobileWiki
-            } = prevProps
-
-        if (
-            selectedWikiIndex && !prevWikiIndex ||
-            isMobileWiki !== wasMobileWiki
-        ) {
-            const {
-                    selectedSongIndex,
-                    selectedAnnotationIndex,
-                    carouselAnnotationIndex,
-                    isMobileWiki
-                } = this.props,
-                selectedWikiUrl = getWikiUrl({
-                    selectedSongIndex,
-                    selectedWikiIndex,
-                    selectedAnnotationIndex,
-                    carouselAnnotationIndex,
-                    isMobileWiki
-                })
-
-            this.props.updateSessionStore({ selectedWikiUrl })
-        }
-    }
-
-    render() {
-        return null
-    }
+    return null
 }
 
 const mapStateToProps = ({
@@ -79,7 +49,4 @@ const mapStateToProps = ({
     carouselAnnotationIndex
 })
 
-export default connect(
-    mapStateToProps,
-    { updateSessionStore }
-)(WikiListener)
+export default WikiListener
