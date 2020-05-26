@@ -5,16 +5,18 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 
-const mapStateToProps = ({
-    accessStore: { isAccessOn },
-    toggleStore: {
-        isNavShown,
-        isDotsSlideShown,
-        isLyricExpanded
-    },
-    lyricStore: { lyricAnnotationIndex },
-    activatedStore: { isActivated }
-}) => {
+const mapStateToProps = state => {
+    const {
+        accessStore: { isAccessOn },
+        toggleStore: {
+            isNavShown,
+            isDotsSlideShown,
+            isLyricExpanded
+        },
+        lyricStore: { lyricAnnotationIndex },
+        activatedStore: { isActivated }
+    } = state
+
     return {
         isAccessOn,
         isNavShown,

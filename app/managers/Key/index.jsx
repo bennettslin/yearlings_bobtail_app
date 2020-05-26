@@ -207,13 +207,15 @@ class KeyManager extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    accessStore: { isAccessOn },
-    selectedStore: {
-        selectedVerseIndex,
-        selectedAnnotationIndex
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        accessStore: { isAccessOn },
+        selectedStore: {
+            selectedVerseIndex,
+            selectedAnnotationIndex
+        }
+    } = state
+
     return {
         isAccessOn,
         selectedAnnotationIndex,

@@ -328,25 +328,27 @@ class CloseHandler extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    optionStore: {
-        selectedOverviewOption,
-        selectedTipsOption,
-        isSongShownOverview,
-        isSongShownTips
-    },
-    selectedStore: { selectedAnnotationIndex },
-    sliderStore: { isSliderMoving },
-    toggleStore: {
-        isCarouselShown,
-        isDotsSlideShown,
-        isLyricExpanded,
-        isScoreShown,
-        isAboutShown
-    },
-    activatedStore: { isActivated },
-    sessionStore: { selectedWikiIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        optionStore: {
+            selectedOverviewOption,
+            selectedTipsOption,
+            isSongShownOverview,
+            isSongShownTips
+        },
+        selectedStore: { selectedAnnotationIndex },
+        sliderStore: { isSliderMoving },
+        toggleStore: {
+            isCarouselShown,
+            isDotsSlideShown,
+            isLyricExpanded,
+            isScoreShown,
+            isAboutShown
+        },
+        activatedStore: { isActivated },
+        sessionStore: { selectedWikiIndex }
+    } = state
+
     return {
         selectedAnnotationIndex,
         isSliderMoving,

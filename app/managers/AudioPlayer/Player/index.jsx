@@ -23,18 +23,20 @@ import {
     getTimeRelativeToVerseIndex
 } from './helper'
 
-const mapStateToProps = ({
-    playersStore: {
-        playersBitNumber,
-        nextPlayerToRender
-    },
-    audioStore: { isPlaying },
-    selectedStore: {
-        selectedSongIndex,
-        selectedVerseIndex,
-        selectedTime
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        playersStore: {
+            playersBitNumber,
+            nextPlayerToRender
+        },
+        audioStore: { isPlaying },
+        selectedStore: {
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedTime
+        }
+    } = state
+
     return {
         isPlaying,
         selectedSongIndex,

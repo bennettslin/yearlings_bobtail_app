@@ -5,18 +5,20 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateTransientStore } from '../../redux/transient/action'
 
-const mapStateToProps = ({
-    entranceStore: { canLyricCarouselEnter },
-    lyricStore: { lyricAnnotationIndex },
-    toggleStore: {
-        isAboutShown,
-        isScoreShown,
-        isCarouselShown
-    },
-    mountStore: { canCarouselMount },
-    transientStore: { isOverlayingAnnotation },
-    sessionStore: { selectedWikiIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        entranceStore: { canLyricCarouselEnter },
+        lyricStore: { lyricAnnotationIndex },
+        toggleStore: {
+            isAboutShown,
+            isScoreShown,
+            isCarouselShown
+        },
+        mountStore: { canCarouselMount },
+        transientStore: { isOverlayingAnnotation },
+        sessionStore: { selectedWikiIndex }
+    } = state
+
     return {
         isAboutShown,
         isScoreShown,

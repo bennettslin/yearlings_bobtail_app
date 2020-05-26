@@ -92,27 +92,29 @@ const LogicWrapper = ({ children }) => {
     )
 }
 
-const mapStateToProps = ({
-    activatedStore: {
-        isActivated,
-        activatedVerseIndex
-    },
-    audioStore: { isPlaying },
-    dotsStore: { dotsBitNumber },
-    verseBarsStore: {
-        isVerseBarAbove,
-        isVerseBarBelow
-    },
-    lyricStore: {
-        isLyricLogue,
-        lyricSongIndex,
-        lyricVerseIndex
-    },
-    sliderStore: {
-        isSliderMoving,
-        sliderVerseIndex
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        activatedStore: {
+            isActivated,
+            activatedVerseIndex
+        },
+        audioStore: { isPlaying },
+        dotsStore: { dotsBitNumber },
+        verseBarsStore: {
+            isVerseBarAbove,
+            isVerseBarBelow
+        },
+        lyricStore: {
+            isLyricLogue,
+            lyricSongIndex,
+            lyricVerseIndex
+        },
+        sliderStore: {
+            isSliderMoving,
+            sliderVerseIndex
+        }
+    } = state
+
     return {
         isActivated,
         activatedVerseIndex,

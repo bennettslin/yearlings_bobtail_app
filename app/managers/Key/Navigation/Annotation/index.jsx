@@ -134,14 +134,16 @@ class AnnotationNavigation extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    accessStore: { isAccessOn },
-    accessStore: { accessedWikiWormholeIndex },
-    selectedStore: {
-        selectedSongIndex,
-        selectedAnnotationIndex
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        accessStore: { isAccessOn },
+        accessStore: { accessedWikiWormholeIndex },
+        selectedStore: {
+            selectedSongIndex,
+            selectedAnnotationIndex
+        }
+    } = state
+
     return {
         isAccessOn,
         accessedWikiWormholeIndex,

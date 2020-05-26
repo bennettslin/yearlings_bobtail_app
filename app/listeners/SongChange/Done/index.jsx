@@ -72,14 +72,16 @@ class SongChangeDoneListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    mountStore: { canCarouselMount },
-    entranceStore: {
-        didCarouselEnter,
-        didLyricEnter,
-        didCurtainEnter
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        mountStore: { canCarouselMount },
+        entranceStore: {
+            didCarouselEnter,
+            didLyricEnter,
+            didCurtainEnter
+        }
+    } = state
+
     return {
         canCarouselMount,
         didCarouselEnter,

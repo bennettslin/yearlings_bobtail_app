@@ -37,16 +37,18 @@ const TouchWrapper = ({ children }) => {
     )
 }
 
-const mapStateToProps = ({
-    activatedStore: { isActivated },
-    scrollOverlayStore: { isScrolling },
-    toggleStore: { isAutoScroll },
-    sliderStore: {
-        isSliderTouched,
-        isSliderMoving
-    },
-    bannerStore: { isBannerHovering }
-}) => {
+const mapStateToProps = state => {
+    const {
+        activatedStore: { isActivated },
+        scrollOverlayStore: { isScrolling },
+        toggleStore: { isAutoScroll },
+        sliderStore: {
+            isSliderTouched,
+            isSliderMoving
+        },
+        bannerStore: { isBannerHovering }
+    } = state
+
     return {
         isAutoScroll,
         isScrolling,

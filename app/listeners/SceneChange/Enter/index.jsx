@@ -48,9 +48,11 @@ class SceneChangeEnterListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    entranceStore: { didSceneScrollExit }
-}) => {
+const mapStateToProps = state => {
+    const {
+        entranceStore: { didSceneScrollExit }
+    } = state
+
     return {
         didSceneScrollExit
     }

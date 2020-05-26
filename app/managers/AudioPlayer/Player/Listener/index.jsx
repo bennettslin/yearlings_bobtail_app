@@ -95,22 +95,24 @@ class PlayerListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    playersStore: { playersBitNumber },
-    selectedStore: {
-        selectedSongIndex,
-        isSelectedLogue
-    },
-    lyricStore: {
-        lyricSongIndex,
-        lyricVerseIndex
-    },
-    audioStore: {
-        queuedPlayFromLogue,
-        queuedPlaySongIndex,
-        queuedPlayVerseIndex
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        playersStore: { playersBitNumber },
+        selectedStore: {
+            selectedSongIndex,
+            isSelectedLogue
+        },
+        lyricStore: {
+            lyricSongIndex,
+            lyricVerseIndex
+        },
+        audioStore: {
+            queuedPlayFromLogue,
+            queuedPlaySongIndex,
+            queuedPlayVerseIndex
+        }
+    } = state
+
     return {
         playersBitNumber,
         selectedSongIndex,

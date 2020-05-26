@@ -154,25 +154,27 @@ class TipsListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    lyricStore: {
-        lyricSongIndex,
-        lyricAnnotationIndex
-    },
-    selectedStore: {
-        isSelectedLogue
-    },
-    optionStore: {
-        selectedTipsOption,
-        isForcedShownOverview
-    },
-    viewportStore: {
-        deviceWidthIndex,
-        isPhoneWidth,
-        isTabletWidth,
-        isDesktopWidth
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        lyricStore: {
+            lyricSongIndex,
+            lyricAnnotationIndex
+        },
+        selectedStore: {
+            isSelectedLogue
+        },
+        optionStore: {
+            selectedTipsOption,
+            isForcedShownOverview
+        },
+        viewportStore: {
+            deviceWidthIndex,
+            isPhoneWidth,
+            isTabletWidth,
+            isDesktopWidth
+        }
+    } = state
+
     return {
         isSelectedLogue,
         selectedTipsOption,

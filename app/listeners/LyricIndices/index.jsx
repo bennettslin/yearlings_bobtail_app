@@ -91,14 +91,16 @@ class LyricIndicesListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    activatedStore: { activatedVerseIndex },
-    selectedStore: {
-        selectedSongIndex,
-        selectedVerseIndex,
-        selectedAnnotationIndex
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        activatedStore: { activatedVerseIndex },
+        selectedStore: {
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedAnnotationIndex
+        }
+    } = state
+
     return {
         activatedVerseIndex,
         selectedSongIndex,

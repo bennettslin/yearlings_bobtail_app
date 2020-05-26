@@ -39,14 +39,16 @@ const PlayingWrapper = ({ children }) => {
     )
 }
 
-const mapStateToProps = ({
-    audioStore: { isPlaying },
-    lyricStore: { isLyricLogue },
-    accessStore: {
-        isAccessOn,
-        accessedKey
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        audioStore: { isPlaying },
+        lyricStore: { isLyricLogue },
+        accessStore: {
+            isAccessOn,
+            accessedKey
+        }
+    } = state
+
     return {
         isPlaying,
         isLyricLogue,

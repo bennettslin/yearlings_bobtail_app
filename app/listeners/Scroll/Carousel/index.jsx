@@ -96,19 +96,21 @@ class ScrollCarouselListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    scrollCarouselStore: {
-        queuedScrollCarouselLog,
-        queuedScrollCarouselIndex,
-        queuedScrollCarouselNoDuration
-    },
-    toggleStore: { isCarouselShown },
-    viewportStore: {
-        deviceWidthIndex,
-        windowWidth
-    },
-    selectedStore: { isSelectedLogue }
-}) => {
+const mapStateToProps = state => {
+    const {
+        scrollCarouselStore: {
+            queuedScrollCarouselLog,
+            queuedScrollCarouselIndex,
+            queuedScrollCarouselNoDuration
+        },
+        toggleStore: { isCarouselShown },
+        viewportStore: {
+            deviceWidthIndex,
+            windowWidth
+        },
+        selectedStore: { isSelectedLogue }
+    } = state
+
     return {
         queuedScrollCarouselLog,
         queuedScrollCarouselIndex,

@@ -103,14 +103,16 @@ class SongChangeExitListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: { selectedSongIndex },
-    entranceStore: {
-        canSceneUpdate,
-        canLyricCarouselUpdate,
-        canLyricCarouselEnter
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        selectedStore: { selectedSongIndex },
+        entranceStore: {
+            canSceneUpdate,
+            canLyricCarouselUpdate,
+            canLyricCarouselEnter
+        }
+    } = state
+
     return {
         selectedSongIndex,
         canLyricCarouselUpdate,

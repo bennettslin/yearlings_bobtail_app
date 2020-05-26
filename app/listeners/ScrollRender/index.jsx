@@ -74,16 +74,18 @@ class ScrollRenderListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: {
-        isSelectedLogue,
-        selectedAnnotationIndex
-    },
-    entranceStore: {
-        didCarouselEnter,
-        didLyricEnter
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            isSelectedLogue,
+            selectedAnnotationIndex
+        },
+        entranceStore: {
+            didCarouselEnter,
+            didLyricEnter
+        }
+    } = state
+
     return {
         isSelectedLogue,
         didCarouselEnter,

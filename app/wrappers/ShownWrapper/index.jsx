@@ -83,29 +83,31 @@ const ShownWrapper = ({ children }) => {
     )
 }
 
-const mapStateToProps = ({
-    dotsStore: {
-        wormhole,
-        reference
-    },
-    entranceStore: { canLyricCarouselEnter },
-    lyricStore: {
-        isLyricLogue,
-        lyricSongIndex,
-        lyricAnnotationIndex
-    },
-    optionStore: {
-        selectedOverviewOption,
-        selectedTipsOption
-    },
-    toggleStore: {
-        isCarouselShown,
-        isNavShown,
-        isLyricExpanded,
-        isDotsSlideShown
-    },
-    transientStore: { isOverlayShown }
-}) => {
+const mapStateToProps = state => {
+    const {
+        dotsStore: {
+            wormhole,
+            reference
+        },
+        entranceStore: { canLyricCarouselEnter },
+        lyricStore: {
+            isLyricLogue,
+            lyricSongIndex,
+            lyricAnnotationIndex
+        },
+        optionStore: {
+            selectedOverviewOption,
+            selectedTipsOption
+        },
+        toggleStore: {
+            isCarouselShown,
+            isNavShown,
+            isLyricExpanded,
+            isDotsSlideShown
+        },
+        transientStore: { isOverlayShown }
+    } = state
+
     return {
         wormhole,
         reference,

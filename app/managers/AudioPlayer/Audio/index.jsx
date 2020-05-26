@@ -98,14 +98,16 @@ class AudioManager extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    audioStore: {
-        isPlaying,
-        queuedTogglePlay
-    },
-    sessionStore: { audioOptionIndex },
-    selectedStore: { selectedSongIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        audioStore: {
+            isPlaying,
+            queuedTogglePlay
+        },
+        sessionStore: { audioOptionIndex },
+        selectedStore: { selectedSongIndex }
+    } = state
+
     return {
         isPlaying,
         queuedTogglePlay,

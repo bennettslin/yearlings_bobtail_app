@@ -237,21 +237,23 @@ class LetterManager extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    toggleStore: {
-        isDotsSlideShown,
-        isLyricExpanded,
-        isNavShown,
-        isScoreShown,
-        isAboutShown
-    },
-    optionStore: {
-        selectedOverviewOption,
-        selectedTipsOption
-    },
-    selectedStore: { selectedAnnotationIndex },
-    sessionStore: { selectedWikiIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        toggleStore: {
+            isDotsSlideShown,
+            isLyricExpanded,
+            isNavShown,
+            isScoreShown,
+            isAboutShown
+        },
+        optionStore: {
+            selectedOverviewOption,
+            selectedTipsOption
+        },
+        selectedStore: { selectedAnnotationIndex },
+        sessionStore: { selectedWikiIndex }
+    } = state
+
     return {
         isDotsSlideShown,
         isLyricExpanded,

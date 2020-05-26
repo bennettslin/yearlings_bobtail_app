@@ -110,11 +110,13 @@ class NavNavigation extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    accessStore: { accessedNavIndex },
-    selectedStore: { selectedSongIndex },
-    sessionStore: { shownNavBookIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        accessStore: { accessedNavIndex },
+        selectedStore: { selectedSongIndex },
+        sessionStore: { shownNavBookIndex }
+    } = state
+
     return {
         accessedNavIndex,
         selectedSongIndex,

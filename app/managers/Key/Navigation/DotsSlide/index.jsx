@@ -89,12 +89,14 @@ class DotsSlideNavigation extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    accessStore: {
-        isAccessOn,
-        accessedDotIndex
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        accessStore: {
+            isAccessOn,
+            accessedDotIndex
+        }
+    } = state
+
     return {
         isAccessOn,
         accessedDotIndex

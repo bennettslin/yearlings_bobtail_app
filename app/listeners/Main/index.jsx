@@ -122,27 +122,29 @@ class MainListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    viewportStore: { isPhoneWidth },
-    toggleStore: {
-        isDotsSlideShown,
-        isLyricExpanded,
-        isScoreShown,
-        isAboutShown
-    },
-    entranceStore: { canLyricCarouselEnter },
-    lyricStore: {
-        lyricAnnotationIndex,
-        isLyricLogue
-    },
-    activatedStore: { isActivated },
-    sessionStore: { selectedWikiIndex },
-    optionStore: {
-        isLogueOverviewShown,
-        selectedOverviewOption,
-        selectedTipsOption
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        viewportStore: { isPhoneWidth },
+        toggleStore: {
+            isDotsSlideShown,
+            isLyricExpanded,
+            isScoreShown,
+            isAboutShown
+        },
+        entranceStore: { canLyricCarouselEnter },
+        lyricStore: {
+            lyricAnnotationIndex,
+            isLyricLogue
+        },
+        activatedStore: { isActivated },
+        sessionStore: { selectedWikiIndex },
+        optionStore: {
+            isLogueOverviewShown,
+            selectedOverviewOption,
+            selectedTipsOption
+        }
+    } = state
+
     return {
         isPhoneWidth,
         isDotsSlideShown,

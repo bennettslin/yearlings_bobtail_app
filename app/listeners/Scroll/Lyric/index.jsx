@@ -194,28 +194,30 @@ class ScrollLyricListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    scrollLyricStore: {
-        queuedScrollLyricLog,
-        queuedScrollLyricByVerse,
-        queuedScrollLyricIndex,
-        queuedScrollLyricAlways,
-        queuedScrollLyricNoDuration,
-        queuedScrollLyricFromAutoScroll,
-        queuedSceneChangeExitScrollCallback
-    },
-    selectedStore: {
-        selectedVerseIndex,
-        isSelectedLogue
-    },
-    audioStore: { isPlaying },
-    toggleStore: {
-        isAutoScroll,
-        isLyricExpanded
-    },
-    viewportStore: { deviceWidthIndex },
-    responsiveStore: { isHeightlessLyric }
-}) => {
+const mapStateToProps = state => {
+    const {
+        scrollLyricStore: {
+            queuedScrollLyricLog,
+            queuedScrollLyricByVerse,
+            queuedScrollLyricIndex,
+            queuedScrollLyricAlways,
+            queuedScrollLyricNoDuration,
+            queuedScrollLyricFromAutoScroll,
+            queuedSceneChangeExitScrollCallback
+        },
+        selectedStore: {
+            selectedVerseIndex,
+            isSelectedLogue
+        },
+        audioStore: { isPlaying },
+        toggleStore: {
+            isAutoScroll,
+            isLyricExpanded
+        },
+        viewportStore: { deviceWidthIndex },
+        responsiveStore: { isHeightlessLyric }
+    } = state
+
     return {
         queuedScrollLyricLog,
         queuedScrollLyricByVerse,

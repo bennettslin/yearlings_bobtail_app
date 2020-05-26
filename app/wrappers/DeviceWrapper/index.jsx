@@ -55,17 +55,19 @@ const DeviceWrapper = ({ children }) => {
     )
 }
 
-const mapStateToProps = ({
-    viewportStore: {
-        deviceWidthIndex,
-        isPhoneWidth,
-        isDesktopWidth
-    },
-    mountStore: {
-        canCarouselMount,
-        canSliderMount
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        viewportStore: {
+            deviceWidthIndex,
+            isPhoneWidth,
+            isDesktopWidth
+        },
+        mountStore: {
+            canCarouselMount,
+            canSliderMount
+        }
+    } = state
+
     return {
         deviceWidthIndex,
         isPhoneWidth,

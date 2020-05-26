@@ -57,17 +57,19 @@ const ResponsiveWrapper = ({ children }) => {
     )
 }
 
-const mapStateToProps = ({
-    selectedStore: { earColumnIndex },
-    transientStore: {
-        isCarouselNavShowable,
-        isTipsShowable,
-        isEarShown
-    },
-    responsiveStore: {
-        isHeightlessLyric
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        selectedStore: { earColumnIndex },
+        transientStore: {
+            isCarouselNavShowable,
+            isTipsShowable,
+            isEarShown
+        },
+        responsiveStore: {
+            isHeightlessLyric
+        }
+    } = state
+
     return {
         earColumnIndex,
         isCarouselNavShowable,

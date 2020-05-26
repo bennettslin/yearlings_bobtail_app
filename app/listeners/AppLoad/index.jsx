@@ -65,14 +65,16 @@ class AppLoadListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    entranceStore: {
-        didLyricEnter,
-        didCarouselEnter,
-        didTheatreEnter,
-        didSceneEnter
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        entranceStore: {
+            didLyricEnter,
+            didCarouselEnter,
+            didTheatreEnter,
+            didSceneEnter
+        }
+    } = state
+
     return {
         didLyricEnter,
         didCarouselEnter,

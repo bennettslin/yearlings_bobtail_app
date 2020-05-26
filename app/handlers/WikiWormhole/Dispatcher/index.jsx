@@ -62,14 +62,16 @@ class WikiWormholeDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: {
-        selectedSongIndex,
-        selectedAnnotationIndex
-    },
-    accessStore: { accessedWikiWormholeIndex },
-    dotsStore: { dotsBitNumber }
-}) => {
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            selectedSongIndex,
+            selectedAnnotationIndex
+        },
+        accessStore: { accessedWikiWormholeIndex },
+        dotsStore: { dotsBitNumber }
+    } = state
+
     return {
         selectedSongIndex,
         selectedAnnotationIndex,

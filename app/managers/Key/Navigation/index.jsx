@@ -122,21 +122,23 @@ class NavigationManager extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    toggleStore: {
-        isNavShown,
-        isDotsSlideShown,
-        isLyricExpanded,
-        isScoreShown
-    },
-    responsiveStore: { isHeightlessLyric },
-    selectedStore: {
-        selectedAnnotationIndex,
-        isSelectedLogue
-    },
-    activatedStore: { activatedVerseIndex },
-    sessionStore: { selectedWikiIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        toggleStore: {
+            isNavShown,
+            isDotsSlideShown,
+            isLyricExpanded,
+            isScoreShown
+        },
+        responsiveStore: { isHeightlessLyric },
+        selectedStore: {
+            selectedAnnotationIndex,
+            isSelectedLogue
+        },
+        activatedStore: { activatedVerseIndex },
+        sessionStore: { selectedWikiIndex }
+    } = state
+
     return {
         isHeightlessLyric,
         isLyricExpanded,
