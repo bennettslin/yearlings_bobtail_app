@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
 import * as EmailValidator from 'email-validator'
+import './style'
 
 import {
     EMAIL_ACTION,

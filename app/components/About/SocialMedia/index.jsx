@@ -1,10 +1,10 @@
 import React from 'react'
 import Anchor from '../../Anchor'
-
 import {
     FACEBOOK_PAGE,
     INSTAGRAM_PAGE
 } from '../../../constants/website'
+import './style'
 
 const SocialMedia = () => {
     const

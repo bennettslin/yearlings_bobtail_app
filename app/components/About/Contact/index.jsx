@@ -1,7 +1,7 @@
 import React, { Fragment as ___ } from 'react'
 import cx from 'classnames'
-
 import { BENNETT_EMAIL } from '../../../constants/website'
+import './style'
 
 const AboutContact = () => (
     <>

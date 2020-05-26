@@ -49,7 +49,8 @@ export const getShowShrunkNavIcon = ({
 }
 
 export const getShowSingleNavBook = ({
-    deviceWidthIndex, windowWidth
+    deviceWidthIndex,
+    windowWidth
 }) => {
     const deviceWidthConfig = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
 

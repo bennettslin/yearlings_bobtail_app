@@ -10,7 +10,7 @@
     * Child components also import own styles
 * Simplify Anchor for social media anchors
 * Listeners and Main components know to render themselves
-* Mount and responsive values can just be aggregate selectors
+* Mount, transient, and responsive values can just be aggregate selectors
 * Move Carousel to top level of Root
 
 # Ongoing Gatsby tasks

@@ -1,9 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
-
 import Anchor from '../../Anchor'
-
 import { BOBTAIL_YEARLINGS_WEBSITE } from '../../../constants/website'
+import './style'
 
 const AboutTitle = () => {
     const handleAnchorClick = () => {

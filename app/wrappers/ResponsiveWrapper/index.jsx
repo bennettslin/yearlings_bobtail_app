@@ -76,7 +76,7 @@ const mapStateToProps = ({
 })
 
 ResponsiveWrapper.propTypes = {
-    children: PropTypes.any.isRequired
+    children: PropTypes.node.isRequired
 }
 
 export default ResponsiveWrapper
