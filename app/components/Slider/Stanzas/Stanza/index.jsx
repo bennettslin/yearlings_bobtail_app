@@ -1,118 +1,104 @@
-import React, { PureComponent } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
-
+import { useSelector } from 'react-redux'
 import { getFormTypeForStanza } from '../../../../album/api/stanzas'
 import {
     getDurationForSong,
     getStartTimeForStanza,
     getEndTimeForStanza
 } from '../../../../album/api/time'
-
 import SliderVerses from './Verses'
-
 import { CSS_OVERLAP_MARGIN_X_SLIDER } from '../../../../constants/responsive'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../redux/lyric/selectors'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const SliderStanza = ({
+    stanzaIndex,
+    logicSelectors
 
-class SliderStanza extends PureComponent {
+}) => {
+    const
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        stanzaEndTime = getEndTimeForStanza(lyricSongIndex, stanzaIndex),
+        stanzaFormType = getFormTypeForStanza(lyricSongIndex, stanzaIndex),
+        stanzaStartTime = getStartTimeForStanza(
+            lyricSongIndex,
+            stanzaIndex
+        ),
 
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
+        songDuration = getDurationForSong(lyricSongIndex),
 
-        // From parents.
-        stanzaIndex: PropTypes.number.isRequired,
-        logicSelectors: PropTypes.string.isRequired
-    }
+        /**
+         * Width of stanza is exactly proportionate to its duration within
+         * the song. However, each stanza then adds padding of fixed width.
+         * As such, its verse widths remain proportionate to their duration
+         * within the stanza, but *not* within the song.
+         */
+        stanzaRightPercentage =
+            (songDuration - stanzaEndTime) / songDuration * 100,
 
-    render() {
-        const {
-                lyricSongIndex,
-                stanzaIndex,
-                logicSelectors
-            } = this.props,
-            stanzaEndTime = getEndTimeForStanza(lyricSongIndex, stanzaIndex),
-            stanzaFormType = getFormTypeForStanza(lyricSongIndex, stanzaIndex),
-            stanzaStartTime = getStartTimeForStanza(
-                lyricSongIndex,
-                stanzaIndex
-            ),
+        formattedStanzaRight =
+            `calc(${stanzaRightPercentage}% - ${
+                CSS_OVERLAP_MARGIN_X_SLIDER
+            }px)`,
 
-            songDuration = getDurationForSong(lyricSongIndex),
+        /**
+         * Stanza width ends where the next one begins. Its right edge that
+         * gets overlapped by the next stanza is not included in any slider
+         * touch calculations. The last stanza has no overlapped right edge.
+         */
+        stanzaWidthPercentage =
+            (stanzaEndTime - stanzaStartTime) / songDuration * 100,
 
-            /**
-             * Width of stanza is exactly proportionate to its duration within
-             * the song. However, each stanza then adds padding of fixed width.
-             * As such, its verse widths remain proportionate to their duration
-             * within the stanza, but *not* within the song.
-             */
-            stanzaRightPercentage =
-                (songDuration - stanzaEndTime) / songDuration * 100,
+        formattedStanzaWidth =
+            `calc(${stanzaWidthPercentage}% + ${
+                CSS_OVERLAP_MARGIN_X_SLIDER
+            }px)`,
 
-            formattedStanzaRight =
-                `calc(${stanzaRightPercentage}% - ${
-                    CSS_OVERLAP_MARGIN_X_SLIDER
-                }px)`,
+        stanzaStyle = {
+            right: formattedStanzaRight,
+            width: formattedStanzaWidth
+        }
 
-            /**
-             * Stanza width ends where the next one begins. Its right edge that
-             * gets overlapped by the next stanza is not included in any slider
-             * touch calculations. The last stanza has no overlapped right edge.
-             */
-            stanzaWidthPercentage =
-                (stanzaEndTime - stanzaStartTime) / songDuration * 100,
-
-            formattedStanzaWidth =
-                `calc(${stanzaWidthPercentage}% + ${
-                    CSS_OVERLAP_MARGIN_X_SLIDER
-                }px)`,
-
-            stanzaStyle = {
-                right: formattedStanzaRight,
-                width: formattedStanzaWidth
-            }
-
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'SliderStanza',
-                        `SliderStanza__${stanzaFormType}`,
-                        logicSelectors
-                    ),
-                    style: stanzaStyle
-                }}
-            >
-                <div className={cx(
-                    'SliderStanza__sheet',
-                    'bgColour__sliderStanza__pattern',
-                    `bgColour__formType__${stanzaFormType}`,
-                    'abF'
-                )}>
-                    <SliderVerses
-                        {...{
-                            stanzaIndex,
-                            stanzaDuration: stanzaEndTime - stanzaStartTime
-                        }}
-                    />
-                </div>
-
-                {/* This tab covers the sheet's box shadow. */}
-                <div className={cx(
-                    'SliderStanza__tab',
-                    'bgColour__sliderStanza__pattern',
-                    'bgColour__sliderStanza__pattern__reverse',
-                    `bgColour__formType__${stanzaFormType}`
-                )}/>
+    return (
+        <div
+            {...{
+                className: cx(
+                    'SliderStanza',
+                    `SliderStanza__${stanzaFormType}`,
+                    logicSelectors
+                ),
+                style: stanzaStyle
+            }}
+        >
+            <div className={cx(
+                'SliderStanza__sheet',
+                'bgColour__sliderStanza__pattern',
+                `bgColour__formType__${stanzaFormType}`,
+                'abF'
+            )}>
+                <SliderVerses
+                    {...{
+                        stanzaIndex,
+                        stanzaDuration: stanzaEndTime - stanzaStartTime
+                    }}
+                />
             </div>
-        )
-    }
+
+            {/* This tab covers the sheet's box shadow. */}
+            <div className={cx(
+                'SliderStanza__tab',
+                'bgColour__sliderStanza__pattern',
+                'bgColour__sliderStanza__pattern__reverse',
+                `bgColour__formType__${stanzaFormType}`
+            )}/>
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(SliderStanza)
+SliderStanza.propTypes = {
+    stanzaIndex: PropTypes.number.isRequired,
+    logicSelectors: PropTypes.string.isRequired
+}
+
+export default memo(SliderStanza)

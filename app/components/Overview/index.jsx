@@ -18,12 +18,14 @@ const mapStateToProps = ({
         lyricSongIndex,
         isLyricLogue
     }
-}) => ({
-    isPhoneWidth,
-    isHeightlessLyric,
-    lyricSongIndex,
-    isLyricLogue
-})
+}) => {
+    return {
+        isPhoneWidth,
+        isHeightlessLyric,
+        lyricSongIndex,
+        isLyricLogue
+    }
+}
 
 class Overview extends PureComponent {
 

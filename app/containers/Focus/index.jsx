@@ -19,12 +19,14 @@ const mapStateToProps = ({
     responsiveStore: { isHeightlessLyric },
     toggleStore: { isLyricExpanded },
     focusStore: { queuedFocus }
-}) => ({
-    canSliderMount,
-    isHeightlessLyric,
-    isLyricExpanded,
-    queuedFocus
-})
+}) => {
+    return {
+        canSliderMount,
+        isHeightlessLyric,
+        isLyricExpanded,
+        queuedFocus
+    }
+}
 
 class FocusContainer extends PureComponent {
     static propTypes = {

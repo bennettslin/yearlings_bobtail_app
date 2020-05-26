@@ -9,23 +9,27 @@ import {
     ARROW_RIGHT
 } from '../../../constants/access'
 
-const mapStateToProps = ({
-    lyricStore: { lyricAnnotationIndex },
-    toggleStore: {
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricAnnotationIndex },
+        toggleStore: {
+            isCarouselShown,
+            isNavShown,
+            isDotsSlideShown,
+            isLyricExpanded
+        },
+        dotsStore: { dotsBitNumber }
+    } = state
+
+    return {
+        isLyricExpanded,
+        lyricAnnotationIndex,
         isCarouselShown,
         isNavShown,
         isDotsSlideShown,
-        isLyricExpanded
-    },
-    dotsStore: { dotsBitNumber }
-}) => ({
-    isLyricExpanded,
-    lyricAnnotationIndex,
-    isCarouselShown,
-    isNavShown,
-    isDotsSlideShown,
-    dotsBitNumber
-})
+        dotsBitNumber
+    }
+}
 
 class CarouselAccess extends PureComponent {
 

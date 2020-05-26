@@ -29,12 +29,14 @@ const mapStateToProps = ({
         menuHeight
     },
     viewportStore: { isDesktopWidth }
-}) => ({
-    canCarouselMount,
-    isHeightlessLyric,
-    menuHeight,
-    isDesktopWidth
-})
+}) => {
+    return {
+        canCarouselMount,
+        isHeightlessLyric,
+        menuHeight,
+        isDesktopWidth
+    }
+}
 
 const Main = () => {
     const {

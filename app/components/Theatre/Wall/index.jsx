@@ -21,14 +21,16 @@ const mapStateToProps = ({
         windowHeight,
         windowWidth
     }
-}) => ({
-    windowHeight,
-    windowWidth,
-    prosceniumLeft,
-    prosceniumWidth,
-    prosceniumHeight,
-    ceilingHeight
-})
+}) => {
+    return {
+        windowHeight,
+        windowWidth,
+        prosceniumLeft,
+        prosceniumWidth,
+        prosceniumHeight,
+        ceilingHeight
+    }
+}
 
 class Wall extends PureComponent {
 

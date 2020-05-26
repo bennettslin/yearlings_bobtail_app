@@ -12,11 +12,15 @@ import { getUnitIndicesForStanza } from '../../../album/api/stanzas'
 
 import Unit from '../Unit'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricSongIndex }
+    } = state
+
+    return {
+        lyricSongIndex
+    }
+}
 
 const propTypes = {
         // Through Redux.

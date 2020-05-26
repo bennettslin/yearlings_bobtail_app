@@ -21,10 +21,12 @@ const mapStateToProps = ({
         isCarouselShown,
         isNavShown
     }
-}) => ({
-    isCarouselShown,
-    isNavShown
-})
+}) => {
+    return {
+        isCarouselShown,
+        isNavShown
+    }
+}
 
 class CarouselToggle extends PureComponent {
 

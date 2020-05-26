@@ -17,10 +17,12 @@ import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
 const mapStateToProps = ({
     entranceStore: { canLyricCarouselUpdate },
     lyricStore: { lyricSongIndex }
-}) => ({
-    canLyricCarouselUpdate,
-    lyricSongIndex
-})
+}) => {
+    return {
+        canLyricCarouselUpdate,
+        lyricSongIndex
+    }
+}
 
 /*************
  * CONTAINER *

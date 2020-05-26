@@ -20,10 +20,12 @@ import { getOverviewToggleIdentifier } from './helper'
 const mapStateToProps = ({
     lyricStore: { isLyricLogue },
     optionStore: { selectedOverviewOption }
-}) => ({
-    isLyricLogue,
-    selectedOverviewOption
-})
+}) => {
+    return {
+        isLyricLogue,
+        selectedOverviewOption
+    }
+}
 
 class OverviewToggle extends PureComponent {
 

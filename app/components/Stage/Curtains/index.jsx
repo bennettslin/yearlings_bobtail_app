@@ -13,12 +13,15 @@ import InlineSvg from '../../../modules/InlineSvg'
 import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
 import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
 
-const mapStateToProps = ({
-    entranceStore: { canLyricCarouselEnter }
-}) => ({
-    canLyricCarouselEnter
-})
+const mapStateToProps = state => {
+    const {
+        entranceStore: { canLyricCarouselEnter }
+    } = state
 
+    return {
+        canLyricCarouselEnter
+    }
+}
 class Curtains extends PureComponent {
 
     static propTypes = {

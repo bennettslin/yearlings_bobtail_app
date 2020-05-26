@@ -3,11 +3,15 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import AdminNavRow from '../AdminNavRow'
 
-const mapStateToProps = ({
-    selectedStore: { selectedSongIndex }
-}) => ({
-    selectedSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        selectedSongIndex
+    }
+}
 
 /*************
  * CONTAINER *

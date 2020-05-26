@@ -21,11 +21,13 @@ const mapStateToProps = ({
     transientStore: { isEarShown },
     selectedStore: { earColumnIndex },
     viewportStore: { isDesktopWidth }
-}) => ({
-    isEarShown,
-    earColumnIndex,
-    isDesktopWidth
-})
+}) => {
+    return {
+        isEarShown,
+        earColumnIndex,
+        isDesktopWidth
+    }
+}
 
 class LyricToggleEar extends PureComponent {
 

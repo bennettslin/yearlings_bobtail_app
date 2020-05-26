@@ -9,19 +9,23 @@ import CeilingRafter from './Rafter'
 
 import { getRaftersRowCoordinates } from './helper'
 
-const mapStateToProps = ({
-    prosceniumStore: {
+const mapStateToProps = state => {
+    const {
+        prosceniumStore: {
+            prosceniumLeft,
+            prosceniumWidth
+        },
+        theatreStore: { ceilingHeight },
+        viewportStore: { windowWidth }
+    } = state
+
+    return {
+        windowWidth,
         prosceniumLeft,
-        prosceniumWidth
-    },
-    theatreStore: { ceilingHeight },
-    viewportStore: { windowWidth }
-}) => ({
-    windowWidth,
-    prosceniumLeft,
-    prosceniumWidth,
-    ceilingHeight
-})
+        prosceniumWidth,
+        ceilingHeight
+    }
+}
 
 class Ceiling extends PureComponent {
 

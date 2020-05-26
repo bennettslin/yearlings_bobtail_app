@@ -86,9 +86,11 @@ class VerseDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     selectedStore: { selectedSongIndex }
-}) => ({
-    selectedSongIndex
-})
+}) => {
+    return {
+        selectedSongIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

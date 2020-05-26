@@ -18,10 +18,12 @@ import { TIPS } from '../../../constants/tips'
 const mapStateToProps = ({
     optionStore: { selectedTipsOption },
     transientStore: { isTipsShowable }
-}) => ({
-    selectedTipsOption,
-    isTipsShowable
-})
+}) => {
+    return {
+        selectedTipsOption,
+        isTipsShowable
+    }
+}
 
 class TipsToggle extends PureComponent {
 

@@ -6,11 +6,15 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../../../Texts'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricSongIndex }
+    } = state
+
+    return {
+        lyricSongIndex
+    }
+}
 
 class VerseLine extends PureComponent {
 

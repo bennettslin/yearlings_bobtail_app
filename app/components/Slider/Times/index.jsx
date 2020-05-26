@@ -21,14 +21,16 @@ const mapStateToProps = ({
         isActivated,
         activatedTime
     }
-}) => ({
-    lyricSongIndex,
-    selectedTime,
-    isSliderMoving,
-    sliderTime,
-    isActivated,
-    activatedTime
-})
+}) => {
+    return {
+        lyricSongIndex,
+        selectedTime,
+        isSliderMoving,
+        sliderTime,
+        isActivated,
+        activatedTime
+    }
+}
 
 class SliderTimes extends PureComponent {
 

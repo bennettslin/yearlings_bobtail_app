@@ -13,12 +13,14 @@ const mapStateToProps = ({
     },
     toggleStore: { isDotsSlideShown },
     selectedStore: { selectedSongIndex }
-}) => ({
-    isAccessOn,
-    selectedSongIndex,
-    isDotsSlideShown,
-    accessedNavIndex
-})
+}) => {
+    return {
+        isAccessOn,
+        selectedSongIndex,
+        isDotsSlideShown,
+        accessedNavIndex
+    }
+}
 
 class NavButtonIndexed extends PureComponent {
 

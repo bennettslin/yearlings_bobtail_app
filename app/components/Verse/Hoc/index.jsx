@@ -6,11 +6,15 @@ import { connect } from 'react-redux'
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
 
-const mapStateToProps = ({
-    activatedStore: { activatedVerseIndex }
-}) => ({
-    activatedVerseIndex
-})
+const mapStateToProps = state => {
+    const {
+        activatedStore: { activatedVerseIndex }
+    } = state
+
+    return {
+        activatedVerseIndex
+    }
+}
 
 class VerseHoc extends PureComponent {
 

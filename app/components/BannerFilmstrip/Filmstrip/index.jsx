@@ -26,23 +26,27 @@ import {
 } from '../../../constants/access'
 import { FILMSTRIP } from '../../../constants/tips'
 
-const mapStateToProps = ({
-    selectedStore: {
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            isSelectedLogue,
+            selectedSongIndex,
+            selectedSceneIndex,
+            selectedTime
+        },
+        activatedStore: { activatedSceneIndex },
+        sliderStore: { sliderSceneIndex }
+    } = state
+
+    return {
         isSelectedLogue,
         selectedSongIndex,
         selectedSceneIndex,
-        selectedTime
-    },
-    activatedStore: { activatedSceneIndex },
-    sliderStore: { sliderSceneIndex }
-}) => ({
-    isSelectedLogue,
-    selectedSongIndex,
-    selectedSceneIndex,
-    selectedTime,
-    activatedSceneIndex,
-    sliderSceneIndex
-})
+        selectedTime,
+        activatedSceneIndex,
+        sliderSceneIndex
+    }
+}
 
 class Filmstrip extends PureComponent {
 

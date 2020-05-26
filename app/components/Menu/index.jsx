@@ -25,13 +25,15 @@ const mapStateToProps = ({
         isTwoRowMenu,
         menuHeight
     }
-}) => ({
-    windowWidth,
-    isDesktopWidth,
-    canSliderMount,
-    isTwoRowMenu,
-    menuHeight
-})
+}) => {
+    return {
+        windowWidth,
+        isDesktopWidth,
+        canSliderMount,
+        isTwoRowMenu,
+        menuHeight
+    }
+}
 
 class Menu extends PureComponent {
 

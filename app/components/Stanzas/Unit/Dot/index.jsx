@@ -20,13 +20,15 @@ const mapStateToProps = ({
     lyricStore: { lyricAnnotationIndex },
     activatedStore: { isActivated },
     sliderStore: { isSliderMoving }
-}) => ({
-    isAccessedIndexedAnchorShown,
-    accessedAnnotationIndex,
-    lyricAnnotationIndex,
-    isActivated,
-    isSliderMoving
-})
+}) => {
+    return {
+        isAccessedIndexedAnchorShown,
+        accessedAnnotationIndex,
+        lyricAnnotationIndex,
+        isActivated,
+        isSliderMoving
+    }
+}
 
 /*************
  * CONTAINER *

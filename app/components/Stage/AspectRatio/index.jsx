@@ -9,12 +9,14 @@ const mapStateToProps = ({
         stageWidth,
         stageHeight
     }
-}) => ({
-    stageTop,
-    stageLeft,
-    stageWidth,
-    stageHeight
-})
+}) => {
+    return {
+        stageTop,
+        stageLeft,
+        stageWidth,
+        stageHeight
+    }
+}
 
 const AspectRatio = ({
     stageTop,

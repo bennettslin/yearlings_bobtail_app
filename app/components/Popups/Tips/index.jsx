@@ -21,15 +21,17 @@ const mapStateToProps = ({
         isTabletWidth,
         isDesktopWidth
     }
-}) => ({
-    canLyricCarouselEnter,
-    isLyricLogue,
-    lyricSongIndex,
-    selectedTipsOption,
-    isPhoneWidth,
-    isTabletWidth,
-    isDesktopWidth
-})
+}) => {
+    return {
+        canLyricCarouselEnter,
+        isLyricLogue,
+        lyricSongIndex,
+        selectedTipsOption,
+        isPhoneWidth,
+        isTabletWidth,
+        isDesktopWidth
+    }
+}
 
 class TipsPopup extends PureComponent {
 

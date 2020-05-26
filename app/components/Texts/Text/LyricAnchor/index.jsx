@@ -26,18 +26,20 @@ const mapStateToProps = ({
     },
     activatedStore: { isActivated },
     sliderStore: { isSliderMoving }
-}) => ({
-    lyricAnnotationIndex,
+}) => {
+    return {
+        lyricAnnotationIndex,
 
-    // This is just to know when to update.
-    lyricSongIndex,
+        // This is just to know when to update.
+        lyricSongIndex,
 
-    isAccessedIndexedAnchorShown,
-    accessedAnnotationIndex,
-    accessedWikiWormholeIndex,
-    isActivated,
-    isSliderMoving
-})
+        isAccessedIndexedAnchorShown,
+        accessedAnnotationIndex,
+        accessedWikiWormholeIndex,
+        isActivated,
+        isSliderMoving
+    }
+}
 
 class TextLyricAnchor extends PureComponent {
 

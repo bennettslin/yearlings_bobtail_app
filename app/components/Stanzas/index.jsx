@@ -16,11 +16,15 @@ import { getStanzaIndices } from '../../album/api/stanzas'
 import { getLastUnitDotCardIndex } from '../../album/api/units'
 import { populateRefs } from '../../helpers/ref'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricSongIndex }
+    } = state
+
+    return {
+        lyricSongIndex
+    }
+}
 
 class Stanzas extends PureComponent {
 

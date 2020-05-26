@@ -1,39 +1,23 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-
+import { useSelector } from 'react-redux'
 import { getVerseIndicesForStanza } from '../../../../../album/api/stanzas'
 import {
     getStartTimeForStanza,
     getStartTimeForVerse,
     getDurationForVerse
 } from '../../../../../album/api/time'
-
 import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'
-
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
-
-const propTypes = {
-    // Through Redux.
-    lyricSongIndex: PropTypes.number.isRequired,
-
-    // From parents.
-    stanzaIndex: PropTypes.number.isRequired,
-    stanzaDuration: PropTypes.number.isRequired
-}
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../../redux/lyric/selectors'
 
 const SliderVerses = ({
-    lyricSongIndex,
     stanzaIndex,
     stanzaDuration
-}) => {
 
+}) => {
     const
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
         stanzaVerseIndices = getVerseIndicesForStanza(
             lyricSongIndex,
             stanzaIndex
@@ -81,6 +65,9 @@ const SliderVerses = ({
     )
 }
 
-SliderVerses.propTypes = propTypes
+SliderVerses.propTypes = {
+    stanzaIndex: PropTypes.number.isRequired,
+    stanzaDuration: PropTypes.number.isRequired
+}
 
-export default connect(mapStateToProps)(memo(SliderVerses))
+export default memo(SliderVerses)

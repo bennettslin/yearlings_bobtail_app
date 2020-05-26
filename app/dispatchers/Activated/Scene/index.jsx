@@ -107,12 +107,14 @@ const mapStateToProps = ({
         selectedSceneIndex
     },
     activatedStore: { activatedSceneIndex }
-}) => ({
-    isSelectedLogue,
-    selectedSongIndex,
-    selectedSceneIndex,
-    activatedSceneIndex
-})
+}) => {
+    return {
+        isSelectedLogue,
+        selectedSongIndex,
+        selectedSceneIndex,
+        activatedSceneIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

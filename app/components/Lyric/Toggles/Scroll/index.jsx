@@ -18,9 +18,11 @@ import { AUTOSCROLL } from '../../../../constants/tips'
 
 const mapStateToProps = ({
     toggleStore: { isAutoScroll }
-}) => ({
-    isAutoScroll
-})
+}) => {
+    return {
+        isAutoScroll
+    }
+}
 
 class LyricToggleScroll extends PureComponent {
 

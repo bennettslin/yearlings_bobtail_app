@@ -15,11 +15,15 @@ import CarouselAccess from '../Carousel/Access'
 
 import { populateRefs } from '../../helpers/ref'
 
-const mapStateToProps = ({
-    entranceStore: { canLyricCarouselEnter }
-}) => ({
-    canLyricCarouselEnter
-})
+const mapStateToProps = state => {
+    const {
+        entranceStore: { canLyricCarouselEnter }
+    } = state
+
+    return {
+        canLyricCarouselEnter
+    }
+}
 
 /*************
  * CONTAINER *

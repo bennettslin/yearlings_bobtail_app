@@ -10,9 +10,11 @@ import Popup from '../../Popup'
 
 const mapStateToProps = ({
     toggleStore: { isAboutShown }
-}) => ({
-    isAboutShown
-})
+}) => {
+    return {
+        isAboutShown
+    }
+}
 
 class AboutPopup extends PureComponent {
 

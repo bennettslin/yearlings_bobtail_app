@@ -18,13 +18,17 @@ import { IS_UNIT_DOT } from '../../../constants/lyrics'
 
 import { getAccessibleWikiWormholesCount } from './helper'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex },
-    dotsStore: { dotsBitNumber }
-}) => ({
-    lyricSongIndex,
-    dotsBitNumber
-})
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricSongIndex },
+        dotsStore: { dotsBitNumber }
+    } = state
+
+    return {
+        lyricSongIndex,
+        dotsBitNumber
+    }
+}
 
 class AnnotationTitle extends PureComponent {
 

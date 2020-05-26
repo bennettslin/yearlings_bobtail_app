@@ -24,11 +24,15 @@ import { populateRefs } from '../../../../../helpers/ref'
 
 import { getCardWormholeLink } from './helper'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricSongIndex }
+    } = state
+
+    return {
+        lyricSongIndex
+    }
+}
 
 class AnnotationWormhole extends PureComponent {
 

@@ -13,11 +13,15 @@ import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 
 import { getCarouselAnnotationData } from './helper'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricSongIndex }
+    } = state
+
+    return {
+        lyricSongIndex
+    }
+}
 
 class CarouselAnnotation extends PureComponent {
 

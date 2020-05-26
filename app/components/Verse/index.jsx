@@ -13,11 +13,15 @@ import { populateRefs } from '../../helpers/ref'
 
 import { VERSE_SCROLL } from '../../constants/scroll'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricSongIndex }
+    } = state
+
+    return {
+        lyricSongIndex
+    }
+}
 
 /*************
  * CONTAINER *

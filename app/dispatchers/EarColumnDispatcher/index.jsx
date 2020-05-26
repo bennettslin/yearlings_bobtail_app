@@ -57,11 +57,13 @@ const mapStateToProps = ({
         isSelectedLogue,
         earColumnIndex
     }
-}) => ({
-    isEarShown,
-    earColumnIndex,
-    isSelectedLogue
-})
+}) => {
+    return {
+        isEarShown,
+        earColumnIndex,
+        isSelectedLogue
+    }
+}
 
 export default connect(
     mapStateToProps,

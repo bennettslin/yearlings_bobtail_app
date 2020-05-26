@@ -28,21 +28,25 @@ import { getSongsAndLoguesCount } from '../../album/api/songs'
 import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThrough } from '../../helpers/player'
 
-const mapStateToProps = ({
-    playersStore: { playersBitNumber },
-    audioStore: { isPlaying },
-    selectedStore: { selectedSongIndex },
-    sessionStore: { audioOptionIndex },
-    responsiveStore: { isTwoRowMenu },
-    viewportStore: { isDesktopWidth }
-}) => ({
-    isPlaying,
-    playersBitNumber,
-    audioOptionIndex,
-    selectedSongIndex,
-    isTwoRowMenu,
-    isDesktopWidth
-})
+const mapStateToProps = state => {
+    const {
+        playersStore: { playersBitNumber },
+        audioStore: { isPlaying },
+        selectedStore: { selectedSongIndex },
+        sessionStore: { audioOptionIndex },
+        responsiveStore: { isTwoRowMenu },
+        viewportStore: { isDesktopWidth }
+    } = state
+
+    return {
+        isPlaying,
+        playersBitNumber,
+        audioOptionIndex,
+        selectedSongIndex,
+        isTwoRowMenu,
+        isDesktopWidth
+    }
+}
 
 const BUTTON_CLASS_NAME = 'AudioButton'
 

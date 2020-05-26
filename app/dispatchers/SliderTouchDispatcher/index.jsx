@@ -200,16 +200,18 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedVerseIndex
     }
-}) => ({
-    isSliderTouched,
-    isSliderMoving,
-    sliderLeft,
-    sliderWidth,
-    sliderVerseIndex,
-    isSelectedLogue,
-    selectedSongIndex,
-    selectedVerseIndex
-})
+}) => {
+    return {
+        isSliderTouched,
+        isSliderMoving,
+        sliderLeft,
+        sliderWidth,
+        sliderVerseIndex,
+        isSelectedLogue,
+        selectedSongIndex,
+        selectedVerseIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

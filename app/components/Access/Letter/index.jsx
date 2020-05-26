@@ -10,17 +10,21 @@ import AccessIcon from './Icon'
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 import './style'
 
-const mapStateToProps = ({
-    accessStore: { isAccessOn },
-    viewportStore: {
+const mapStateToProps = state => {
+    const {
+        accessStore: { isAccessOn },
+        viewportStore: {
+            isDesktopWidth,
+            isTabletWidth
+        }
+    } = state
+
+    return {
+        isAccessOn,
         isDesktopWidth,
         isTabletWidth
     }
-}) => ({
-    isAccessOn,
-    isDesktopWidth,
-    isTabletWidth
-})
+}
 
 const propTypes = {
     // Through Redux.

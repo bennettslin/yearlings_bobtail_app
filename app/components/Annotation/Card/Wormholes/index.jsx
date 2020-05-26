@@ -6,13 +6,17 @@ import { connect } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
 import { getWormholeLinksForAnnotationCard } from '../../../../album/api/annotations'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex },
-    accessStore: { accessedWikiWormholeIndex }
-}) => ({
-    lyricSongIndex,
-    accessedWikiWormholeIndex
-})
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricSongIndex },
+        accessStore: { accessedWikiWormholeIndex }
+    } = state
+
+    return {
+        lyricSongIndex,
+        accessedWikiWormholeIndex
+    }
+}
 
 class AnnotationWormholes extends PureComponent {
 

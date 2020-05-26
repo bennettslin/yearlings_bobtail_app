@@ -10,9 +10,11 @@ import { ACTOR } from '../../../constants/scene'
 
 const mapStateToProps = ({
     sceneStore: { sceneCubesKey }
-}) => ({
-    sceneCubesKey
-})
+}) => {
+    return {
+        sceneCubesKey
+    }
+}
 
 class Layer extends PureComponent {
 

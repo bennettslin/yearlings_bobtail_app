@@ -6,19 +6,23 @@ import { connect } from 'react-redux'
 import InlineSvg from '../../../modules/InlineSvg'
 import dramaMasks from '../../../../assets/svgs/theatre/dramaMasks'
 
-const mapStateToProps = ({
-    prosceniumStore: {
+const mapStateToProps = state => {
+    const {
+        prosceniumStore: {
+            prosceniumTop,
+            prosceniumLeft,
+            prosceniumWidth,
+            prosceniumHeight
+        }
+    } = state
+
+    return {
         prosceniumTop,
         prosceniumLeft,
         prosceniumWidth,
         prosceniumHeight
     }
-}) => ({
-    prosceniumTop,
-    prosceniumLeft,
-    prosceniumWidth,
-    prosceniumHeight
-})
+}
 
 const DramaMasks = ({
     prosceniumTop,

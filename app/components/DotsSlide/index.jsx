@@ -23,13 +23,15 @@ const mapStateToProps = ({
     toggleStore: { isDotsSlideShown },
     dotsStore: { dotsBitNumber },
     dotsSlideStore: { dotsSlideBitNumber }
-}) => ({
-    accessedDotIndex,
-    isAccessOn,
-    isDotsSlideShown,
-    dotsBitNumber,
-    dotsSlideBitNumber
-})
+}) => {
+    return {
+        accessedDotIndex,
+        isAccessOn,
+        isDotsSlideShown,
+        dotsBitNumber,
+        dotsSlideBitNumber
+    }
+}
 
 class DotsSlide extends PureComponent {
 

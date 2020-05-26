@@ -7,15 +7,19 @@ import cx from 'classnames'
 import { getDurationForVerse } from '../../../../../album/api/time'
 import { IS_USER_AGENT_DESKTOP } from '../../../../../constants/device'
 
-const mapStateToProps = ({
-    lyricStore: {
+const mapStateToProps = state => {
+    const {
+        lyricStore: {
+            lyricSongIndex,
+            lyricVerseIndex
+        }
+    } = state
+
+    return {
         lyricSongIndex,
         lyricVerseIndex
     }
-}) => ({
-    lyricSongIndex,
-    lyricVerseIndex
-})
+}
 
 class VerseTracker extends Component {
 

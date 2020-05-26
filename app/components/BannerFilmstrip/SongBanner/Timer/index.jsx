@@ -7,33 +7,37 @@ import cx from 'classnames'
 
 import { getFormattedTime } from '../../../../helpers/format'
 
-const mapStateToProps = ({
-    selectedStore: {
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            isSelectedLogue,
+            selectedTime
+        },
+        sliderStore: {
+            isSliderMoving,
+            sliderTime
+        },
+        activatedStore: {
+            isActivated,
+            activatedTime
+        },
+        bannerStore: {
+            isBannerHovering,
+            bannerHoverTime
+        }
+    } = state
+
+    return {
         isSelectedLogue,
-        selectedTime
-    },
-    sliderStore: {
+        selectedTime,
         isSliderMoving,
-        sliderTime
-    },
-    activatedStore: {
+        sliderTime,
         isActivated,
-        activatedTime
-    },
-    bannerStore: {
+        activatedTime,
         isBannerHovering,
         bannerHoverTime
     }
-}) => ({
-    isSelectedLogue,
-    selectedTime,
-    isSliderMoving,
-    sliderTime,
-    isActivated,
-    activatedTime,
-    isBannerHovering,
-    bannerHoverTime
-})
+}
 
 class SongBannerTimer extends PureComponent {
 

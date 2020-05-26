@@ -10,11 +10,15 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
 
-const mapStateToProps = ({
-    entranceStore: { canLyricCarouselEnter }
-}) => ({
-    canLyricCarouselEnter
-})
+const mapStateToProps = state => {
+    const {
+        entranceStore: { canLyricCarouselEnter }
+    } = state
+
+    return {
+        canLyricCarouselEnter
+    }
+}
 
 class Carousel extends PureComponent {
 

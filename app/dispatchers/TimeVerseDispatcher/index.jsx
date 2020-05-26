@@ -88,10 +88,12 @@ class TimeVerseDispatcher extends PureComponent {
 const mapStateToProps = ({
     toggleStore: { isAutoScroll },
     selectedStore: { selectedSongIndex }
-}) => ({
-    isAutoScroll,
-    selectedSongIndex
-})
+}) => {
+    return {
+        isAutoScroll,
+        selectedSongIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

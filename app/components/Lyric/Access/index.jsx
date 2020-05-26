@@ -12,10 +12,12 @@ import {
 const mapStateToProps = ({
     lyricStore: { lyricAnnotationIndex },
     toggleStore: { isDotsSlideShown }
-}) => ({
-    lyricAnnotationIndex,
-    isDotsSlideShown
-})
+}) => {
+    return {
+        lyricAnnotationIndex,
+        isDotsSlideShown
+    }
+}
 
 class LyricAccess extends PureComponent {
 

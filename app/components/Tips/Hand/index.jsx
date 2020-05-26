@@ -23,14 +23,16 @@ const mapStateToProps = ({
     lyricStore: { lyricSongIndex },
     optionStore: { selectedTipsOption },
     viewportStore: { isPhoneWidth }
-}) => ({
-    reference,
-    wormhole,
-    didLyricUpdate,
-    lyricSongIndex,
-    selectedTipsOption,
-    isPhoneWidth
-})
+}) => {
+    return {
+        reference,
+        wormhole,
+        didLyricUpdate,
+        lyricSongIndex,
+        selectedTipsOption,
+        isPhoneWidth
+    }
+}
 
 const TipsHand = ({
     reference,

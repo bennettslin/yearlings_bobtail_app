@@ -18,10 +18,12 @@ import NavButtonTitle from './Title'
 const mapStateToProps = ({
     transientStore: { isCarouselNavShowable },
     selectedStore: { selectedAnnotationIndex }
-}) => ({
-    isCarouselNavShowable,
-    selectedAnnotationIndex
-})
+}) => {
+    return {
+        isCarouselNavShowable,
+        selectedAnnotationIndex
+    }
+}
 
 /*************
  * CONTAINER *

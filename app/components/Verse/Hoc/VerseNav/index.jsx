@@ -16,11 +16,15 @@ import {
     AUDIO_REWIND_BUTTON_KEY
 } from '../../../../constants/buttons'
 
-const mapStateToProps = ({
-    selectedStore: { selectedVerseIndex }
-}) => ({
-    selectedVerseIndex
-})
+const mapStateToProps = state => {
+    const {
+        selectedStore: { selectedVerseIndex }
+    } = state
+
+    return {
+        selectedVerseIndex
+    }
+}
 
 class VerseNav extends PureComponent {
 

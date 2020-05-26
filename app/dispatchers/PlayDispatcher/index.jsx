@@ -85,12 +85,14 @@ const mapStateToProps = ({
         selectedSongIndex,
         isSelectedLogue
     }
-}) => ({
-    isPlaying,
-    playersBitNumber,
-    selectedSongIndex,
-    isSelectedLogue
-})
+}) => {
+    return {
+        isPlaying,
+        playersBitNumber,
+        selectedSongIndex,
+        isSelectedLogue
+    }
+}
 
 export default connect(
     mapStateToProps,

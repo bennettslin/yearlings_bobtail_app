@@ -13,10 +13,12 @@ import OverviewToggle from '../OverviewToggle'
 const mapStateToProps = ({
     viewportStore: { isDesktopWidth },
     transientStore: { isShelfLeftShown }
-}) => ({
-    isDesktopWidth,
-    isShelfLeftShown
-})
+}) => {
+    return {
+        isDesktopWidth,
+        isShelfLeftShown
+    }
+}
 
 const propTypes = {
     // Through Redux.

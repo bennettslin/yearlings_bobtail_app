@@ -6,11 +6,15 @@ import { connect } from 'react-redux'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 import { getVerseIndicesForStanza } from '../../../album/api/stanzas'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricSongIndex }
+    } = state
+
+    return {
+        lyricSongIndex
+    }
+}
 
 const propTypes = {
         // Through Redux.

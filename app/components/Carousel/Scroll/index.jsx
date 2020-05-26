@@ -12,23 +12,27 @@ import CarouselAnnotation from '../Annotation'
 import { getAnnotationIndices } from '../../../album/api/annotations'
 import { populateRefs } from '../../../helpers/ref'
 
-const mapStateToProps = ({
-    entranceStore: { canLyricCarouselUpdate },
-    lyricStore: {
+const mapStateToProps = state => {
+    const {
+        entranceStore: { canLyricCarouselUpdate },
+        lyricStore: {
+            lyricSongIndex,
+            lyricAnnotationIndex
+        },
+        accessStore: {
+            isAccessedIndexedAnchorShown,
+            accessedAnnotationIndex
+        }
+    } = state
+
+    return {
+        canLyricCarouselUpdate,
         lyricSongIndex,
-        lyricAnnotationIndex
-    },
-    accessStore: {
+        lyricAnnotationIndex,
         isAccessedIndexedAnchorShown,
         accessedAnnotationIndex
     }
-}) => ({
-    canLyricCarouselUpdate,
-    lyricSongIndex,
-    lyricAnnotationIndex,
-    isAccessedIndexedAnchorShown,
-    accessedAnnotationIndex
-})
+}
 
 class CarouselScroll extends PureComponent {
 

@@ -21,14 +21,16 @@ const mapStateToProps = ({
         selectedTipsOption
     },
     lyricStore: { isLyricLogue }
-}) => ({
-    canLyricCarouselEnter,
-    isOverlayShown,
-    isLogueOverviewShown,
-    selectedOverviewOption,
-    selectedTipsOption,
-    isLyricLogue
-})
+}) => {
+    return {
+        canLyricCarouselEnter,
+        isOverlayShown,
+        isLogueOverviewShown,
+        selectedOverviewOption,
+        selectedTipsOption,
+        isLyricLogue
+    }
+}
 
 class OverviewPopup extends PureComponent {
 

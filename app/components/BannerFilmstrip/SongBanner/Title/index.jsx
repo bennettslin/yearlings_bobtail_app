@@ -7,11 +7,15 @@ import cx from 'classnames'
 
 import { getIndexedTitleForSong } from '../../../../album/api/songs'
 
-const mapStateToProps = ({
-    selectedStore: { selectedSongIndex }
-}) => ({
-    selectedSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        selectedSongIndex
+    }
+}
 
 class SongBannerTitle extends PureComponent {
 

@@ -1,48 +1,32 @@
 // Static field that shows the song stanzas in the slider.
 
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
-
 import StanzaHoc from '../../Stanzas/Hoc'
 import SliderStanza from './Stanza'
-
 import { getStanzaIndices } from '../../../album/api/stanzas'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
-}) => ({
-    lyricSongIndex
-})
+const SliderStanzas = () => {
+    const lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR)
 
-class SliderStanzas extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired
-    }
-
-    render() {
-        const { lyricSongIndex } = this.props
-
-        return (
-            <div className={cx(
-                'SliderStanzas',
-                'abF'
-            )}>
-                {getStanzaIndices(lyricSongIndex).map(stanzaIndex => (
-                    <StanzaHoc
-                        {...{
-                            key: stanzaIndex,
-                            stanzaIndex,
-                            StanzaComponent: SliderStanza
-                        }}
-                    />
-                ))}
-            </div>
-        )
-    }
+    return (
+        <div className={cx(
+            'SliderStanzas',
+            'abF'
+        )}>
+            {getStanzaIndices(lyricSongIndex).map(stanzaIndex => (
+                <StanzaHoc
+                    {...{
+                        key: stanzaIndex,
+                        stanzaIndex,
+                        StanzaComponent: SliderStanza
+                    }}
+                />
+            ))}
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(SliderStanzas)
+export default SliderStanzas

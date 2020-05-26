@@ -9,10 +9,12 @@ const mapStateToProps = ({
         sceneSkyTime,
         sceneSkySeason
     }
-}) => ({
-    sceneSkyTime,
-    sceneSkySeason
-})
+}) => {
+    return {
+        sceneSkyTime,
+        sceneSkySeason
+    }
+}
 
 class Sky extends PureComponent {
 

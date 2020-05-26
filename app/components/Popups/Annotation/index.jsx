@@ -16,11 +16,13 @@ const mapStateToProps = ({
         isPopupAnnotationVisible,
         popupAnnotationIndex
     }
-}) => ({
-    isOverlayingAnnotation,
-    isPopupAnnotationVisible,
-    popupAnnotationIndex
-})
+}) => {
+    return {
+        isOverlayingAnnotation,
+        isPopupAnnotationVisible,
+        popupAnnotationIndex
+    }
+}
 
 class AnnotationPopup extends PureComponent {
 

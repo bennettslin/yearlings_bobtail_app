@@ -7,19 +7,23 @@ import FloorSeat from './Seat'
 
 import { getSeatingRowCoordinates } from './helper'
 
-const mapStateToProps = ({
-    prosceniumStore: {
+const mapStateToProps = state => {
+    const {
+        prosceniumStore: {
+            prosceniumLeft,
+            prosceniumWidth
+        },
+        theatreStore: { floorHeight },
+        viewportStore: { windowWidth }
+    } = state
+
+    return {
+        windowWidth,
         prosceniumLeft,
-        prosceniumWidth
-    },
-    theatreStore: { floorHeight },
-    viewportStore: { windowWidth }
-}) => ({
-    windowWidth,
-    prosceniumLeft,
-    prosceniumWidth,
-    floorHeight
-})
+        prosceniumWidth,
+        floorHeight
+    }
+}
 
 class Floor extends PureComponent {
 

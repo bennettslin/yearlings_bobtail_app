@@ -48,9 +48,11 @@ const mapStateToProps = ({
     dotsStore: {
         [REFERENCE]: isWikiDotSelected
     }
-}) => ({
-    isWikiDotSelected
-})
+}) => {
+    return {
+        isWikiDotSelected
+    }
+}
 
 export default connect(
     mapStateToProps,

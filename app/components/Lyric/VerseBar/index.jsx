@@ -26,15 +26,17 @@ const mapStateToProps = ({
         isVerseBarAbove,
         isVerseBarBelow
     }
-}) => ({
-    isLyricLogue,
-    lyricSongIndex,
-    lyricVerseIndex,
-    activatedVerseIndex,
-    sliderVerseIndex,
-    isVerseBarAbove,
-    isVerseBarBelow
-})
+}) => {
+    return {
+        isLyricLogue,
+        lyricSongIndex,
+        lyricVerseIndex,
+        activatedVerseIndex,
+        sliderVerseIndex,
+        isVerseBarAbove,
+        isVerseBarBelow
+    }
+}
 
 class VerseBar extends PureComponent {
 

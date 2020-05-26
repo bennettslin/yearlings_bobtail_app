@@ -88,9 +88,11 @@ class LyricWheelDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     toggleStore: { isAutoScroll }
-}) => ({
-    isAutoScroll
-})
+}) => {
+    return {
+        isAutoScroll
+    }
+}
 
 export default connect(
     mapStateToProps,

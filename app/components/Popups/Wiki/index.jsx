@@ -10,9 +10,11 @@ import Popup from '../../Popup'
 
 const mapStateToProps = ({
     sessionStore: { selectedWikiIndex }
-}) => ({
-    selectedWikiIndex
-})
+}) => {
+    return {
+        selectedWikiIndex
+    }
+}
 
 class WikiPopup extends PureComponent {
 

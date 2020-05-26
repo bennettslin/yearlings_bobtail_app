@@ -6,9 +6,11 @@ import './style'
 
 const mapStateToProps = ({
     transientStore: { isOverlayShown }
-}) => ({
-    isOverlayShown
-})
+}) => {
+    return {
+        isOverlayShown
+    }
+}
 
 const propTypes = {
     // Through Redux.

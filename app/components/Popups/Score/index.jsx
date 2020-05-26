@@ -11,9 +11,11 @@ import Popup from '../../Popup'
 
 const mapStateToProps = ({
     toggleStore: { isScoreShown }
-}) => ({
-    isScoreShown
-})
+}) => {
+    return {
+        isScoreShown
+    }
+}
 
 class ScorePopup extends PureComponent {
 
