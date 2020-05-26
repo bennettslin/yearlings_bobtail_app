@@ -114,11 +114,13 @@ const mapStateToProps = ({
     accessStore: { accessedNavIndex },
     selectedStore: { selectedSongIndex },
     sessionStore: { shownNavBookIndex }
-}) => ({
-    accessedNavIndex,
-    selectedSongIndex,
-    shownNavBookIndex
-})
+}) => {
+    return {
+        accessedNavIndex,
+        selectedSongIndex,
+        shownNavBookIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

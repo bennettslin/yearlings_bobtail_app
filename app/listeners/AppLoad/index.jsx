@@ -72,12 +72,14 @@ const mapStateToProps = ({
         didTheatreEnter,
         didSceneEnter
     }
-}) => ({
-    didLyricEnter,
-    didCarouselEnter,
-    didTheatreEnter,
-    didSceneEnter
-})
+}) => {
+    return {
+        didLyricEnter,
+        didCarouselEnter,
+        didTheatreEnter,
+        didSceneEnter
+    }
+}
 
 export default connect(
     mapStateToProps,

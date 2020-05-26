@@ -108,15 +108,17 @@ const mapStateToProps = ({
         windowWidth
     },
     selectedStore: { isSelectedLogue }
-}) => ({
-    queuedScrollCarouselLog,
-    queuedScrollCarouselIndex,
-    queuedScrollCarouselNoDuration,
-    isCarouselShown,
-    deviceWidthIndex,
-    windowWidth,
-    isSelectedLogue
-})
+}) => {
+    return {
+        queuedScrollCarouselLog,
+        queuedScrollCarouselIndex,
+        queuedScrollCarouselNoDuration,
+        isCarouselShown,
+        deviceWidthIndex,
+        windowWidth,
+        isSelectedLogue
+    }
+}
 
 export default connect(
     mapStateToProps,

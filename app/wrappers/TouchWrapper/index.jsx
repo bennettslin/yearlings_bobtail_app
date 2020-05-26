@@ -46,14 +46,16 @@ const mapStateToProps = ({
         isSliderMoving
     },
     bannerStore: { isBannerHovering }
-}) => ({
-    isAutoScroll,
-    isScrolling,
-    isSliderTouched,
-    isSliderMoving,
-    isActivated,
-    isBannerHovering
-})
+}) => {
+    return {
+        isAutoScroll,
+        isScrolling,
+        isSliderTouched,
+        isSliderMoving,
+        isActivated,
+        isBannerHovering
+    }
+}
 
 TouchWrapper.propTypes = {
     children: PropTypes.any.isRequired

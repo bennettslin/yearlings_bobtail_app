@@ -90,15 +90,19 @@ class ResizeListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    viewportStore: {
+const mapStateToProps = state => {
+    const {
+        viewportStore: {
+            windowHeight,
+            windowWidth
+        }
+    } = state
+
+    return {
         windowHeight,
         windowWidth
     }
-}) => ({
-    windowHeight,
-    windowWidth
-})
+}
 
 export default connect(
     mapStateToProps,

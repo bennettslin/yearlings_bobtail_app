@@ -14,10 +14,12 @@ import Stanzas from '../../Stanzas'
 import { populateRefs } from '../../../helpers/ref'
 import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
 
-const mapStateToProps = ({
-    entranceStore: { canLyricCarouselUpdate },
-    lyricStore: { lyricSongIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        entranceStore: { canLyricCarouselUpdate },
+        lyricStore: { lyricSongIndex }
+    } = state
+
     return {
         canLyricCarouselUpdate,
         lyricSongIndex

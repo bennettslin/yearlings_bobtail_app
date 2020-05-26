@@ -8,9 +8,11 @@ import { resetWiki } from '../../../redux/session/action'
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
 
-const mapStateToProps = ({
-    sessionStore: { selectedWikiIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        sessionStore: { selectedWikiIndex }
+    } = state
+
     return {
         selectedWikiIndex
     }

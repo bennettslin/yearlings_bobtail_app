@@ -120,33 +120,37 @@ class AnnotationListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    toggleStore: { isDotsSlideShown },
-    transientStore: { isEarShown },
-    activatedStore: { activatedVerseIndex },
-    selectedStore: {
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isDotsSlideShown },
+        transientStore: { isEarShown },
+        activatedStore: { activatedVerseIndex },
+        selectedStore: {
+            earColumnIndex,
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedAnnotationIndex
+        },
+        annotationStore: {
+            queuedAnnotationIndex,
+            queuedAnnotationFromCarousel,
+            queuedAnnotationFromLyricVerse
+        }
+    } = state
+
+    return {
+        isDotsSlideShown,
+        isEarShown,
         earColumnIndex,
+        activatedVerseIndex,
         selectedSongIndex,
         selectedVerseIndex,
-        selectedAnnotationIndex
-    },
-    annotationStore: {
+        selectedAnnotationIndex,
         queuedAnnotationIndex,
         queuedAnnotationFromCarousel,
         queuedAnnotationFromLyricVerse
     }
-}) => ({
-    isDotsSlideShown,
-    isEarShown,
-    earColumnIndex,
-    activatedVerseIndex,
-    selectedSongIndex,
-    selectedVerseIndex,
-    selectedAnnotationIndex,
-    queuedAnnotationIndex,
-    queuedAnnotationFromCarousel,
-    queuedAnnotationFromLyricVerse
-})
+}
 
 export default connect(
     mapStateToProps,

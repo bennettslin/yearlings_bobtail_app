@@ -8,9 +8,10 @@ import { updateIsAboutShown } from '../../../redux/toggle/action'
 import About from '../../About'
 import Popup from '../../Popup'
 
-const mapStateToProps = ({
-    toggleStore: { isAboutShown }
-}) => {
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isAboutShown }
+    } = state
     return {
         isAboutShown
     }

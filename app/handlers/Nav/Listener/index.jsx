@@ -61,13 +61,17 @@ class NavListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    toggleStore: { isNavShown },
-    selectedStore: { selectedSongIndex }
-}) => ({
-    isNavShown,
-    selectedSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isNavShown },
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        isNavShown,
+        selectedSongIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

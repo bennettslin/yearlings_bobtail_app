@@ -117,11 +117,15 @@ class SongDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: { selectedSongIndex }
-}) => ({
-    selectedSongIndex
-})
+const mapStateToProps = state => {
+    const {
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        selectedSongIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

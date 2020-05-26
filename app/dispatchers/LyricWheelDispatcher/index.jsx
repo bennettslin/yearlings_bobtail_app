@@ -86,9 +86,11 @@ class LyricWheelDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    toggleStore: { isAutoScroll }
-}) => {
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isAutoScroll }
+    } = state
+
     return {
         isAutoScroll
     }

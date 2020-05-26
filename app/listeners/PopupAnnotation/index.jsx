@@ -16,16 +16,18 @@ const mapStateToProps = ({
     mountStore: { canCarouselMount },
     transientStore: { isOverlayingAnnotation },
     sessionStore: { selectedWikiIndex }
-}) => ({
-    isAboutShown,
-    isScoreShown,
-    isCarouselShown,
-    canCarouselMount,
-    isOverlayingAnnotation,
-    canLyricCarouselEnter,
-    lyricAnnotationIndex,
-    selectedWikiIndex
-})
+}) => {
+    return {
+        isAboutShown,
+        isScoreShown,
+        isCarouselShown,
+        canCarouselMount,
+        isOverlayingAnnotation,
+        canLyricCarouselEnter,
+        lyricAnnotationIndex,
+        selectedWikiIndex
+    }
+}
 
 class PopupAnnotationListener extends PureComponent {
 

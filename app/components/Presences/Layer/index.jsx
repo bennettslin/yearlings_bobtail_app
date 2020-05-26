@@ -8,9 +8,11 @@ import { getKeysForThing } from '../../../scene/aggregators/things'
 
 import { ACTOR } from '../../../constants/scene'
 
-const mapStateToProps = ({
-    sceneStore: { sceneCubesKey }
-}) => {
+const mapStateToProps = state => {
+    const {
+        sceneStore: { sceneCubesKey }
+    } = state
+
     return {
         sceneCubesKey
     }

@@ -85,10 +85,12 @@ class TimeVerseDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    toggleStore: { isAutoScroll },
-    selectedStore: { selectedSongIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isAutoScroll },
+        selectedStore: { selectedSongIndex }
+    } = state
+
     return {
         isAutoScroll,
         selectedSongIndex

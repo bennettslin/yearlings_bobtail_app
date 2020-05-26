@@ -65,13 +65,15 @@ const mapStateToProps = ({
         canCarouselMount,
         canSliderMount
     }
-}) => ({
-    deviceWidthIndex,
-    isPhoneWidth,
-    isDesktopWidth,
-    canCarouselMount,
-    canSliderMount
-})
+}) => {
+    return {
+        deviceWidthIndex,
+        isPhoneWidth,
+        isDesktopWidth,
+        canCarouselMount,
+        canSliderMount
+    }
+}
 
 DeviceWrapper.propTypes = {
     children: PropTypes.any.isRequired

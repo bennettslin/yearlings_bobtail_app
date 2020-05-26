@@ -33,11 +33,15 @@ const TransitionWrapper = ({ children }) => {
     )
 }
 
-const mapStateToProps = ({
-    entranceStore: { canLyricCarouselEnter }
-}) => ({
-    canLyricCarouselEnter
-})
+const mapStateToProps = state => {
+    const {
+        entranceStore: { canLyricCarouselEnter }
+    } = state
+
+    return {
+        canLyricCarouselEnter
+    }
+}
 
 TransitionWrapper.propTypes = {
     children: PropTypes.any.isRequired

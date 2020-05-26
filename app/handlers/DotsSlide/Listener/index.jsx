@@ -47,11 +47,15 @@ class DotsSlideListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    toggleStore: { isDotsSlideShown }
-}) => ({
-    isDotsSlideShown
-})
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isDotsSlideShown }
+    } = state
+
+    return {
+        isDotsSlideShown
+    }
+}
 
 export default connect(
     mapStateToProps,

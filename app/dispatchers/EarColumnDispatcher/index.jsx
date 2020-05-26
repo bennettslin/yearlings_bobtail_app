@@ -51,13 +51,15 @@ class EarColumnDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    transientStore: { isEarShown },
-    selectedStore: {
-        isSelectedLogue,
-        earColumnIndex
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        transientStore: { isEarShown },
+        selectedStore: {
+            isSelectedLogue,
+            earColumnIndex
+        }
+    } = state
+
     return {
         isEarShown,
         earColumnIndex,

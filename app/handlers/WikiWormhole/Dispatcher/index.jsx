@@ -69,12 +69,14 @@ const mapStateToProps = ({
     },
     accessStore: { accessedWikiWormholeIndex },
     dotsStore: { dotsBitNumber }
-}) => ({
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    accessedWikiWormholeIndex,
-    dotsBitNumber
-})
+}) => {
+    return {
+        selectedSongIndex,
+        selectedAnnotationIndex,
+        accessedWikiWormholeIndex,
+        dotsBitNumber
+    }
+}
 
 export default connect(
     mapStateToProps,

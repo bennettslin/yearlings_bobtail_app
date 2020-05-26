@@ -105,12 +105,14 @@ const mapStateToProps = ({
     },
     sessionStore: { audioOptionIndex },
     selectedStore: { selectedSongIndex }
-}) => ({
-    isPlaying,
-    queuedTogglePlay,
-    audioOptionIndex,
-    selectedSongIndex
-})
+}) => {
+    return {
+        isPlaying,
+        queuedTogglePlay,
+        audioOptionIndex,
+        selectedSongIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

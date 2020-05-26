@@ -14,19 +14,21 @@ import { getVerse } from '../../../album/api/verses'
 import { populateRefs } from '../../../helpers/ref'
 import { getCursorIndex } from '../../../helpers/verse'
 
-const mapStateToProps = ({
-    lyricStore: {
-        isLyricLogue,
-        lyricSongIndex,
-        lyricVerseIndex
-    },
-    activatedStore: { activatedVerseIndex },
-    sliderStore: { sliderVerseIndex },
-    verseBarsStore: {
-        isVerseBarAbove,
-        isVerseBarBelow
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        lyricStore: {
+            isLyricLogue,
+            lyricSongIndex,
+            lyricVerseIndex
+        },
+        activatedStore: { activatedVerseIndex },
+        sliderStore: { sliderVerseIndex },
+        verseBarsStore: {
+            isVerseBarAbove,
+            isVerseBarBelow
+        }
+    } = state
+
     return {
         isLyricLogue,
         lyricSongIndex,

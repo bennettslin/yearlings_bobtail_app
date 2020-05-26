@@ -87,10 +87,12 @@ class DotSelectDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    dotsStore: { dotsBitNumber },
-    dotsSlideStore: { dotsSlideBitNumber }
-}) => {
+const mapStateToProps = state => {
+    const {
+        dotsStore: { dotsBitNumber },
+        dotsSlideStore: { dotsSlideBitNumber }
+    } = state
+
     return {
         dotsBitNumber,
         dotsSlideBitNumber

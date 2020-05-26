@@ -9,9 +9,11 @@ import { updateToggleStore } from '../../../redux/toggle/action'
 import Score from '../../Score'
 import Popup from '../../Popup'
 
-const mapStateToProps = ({
-    toggleStore: { isScoreShown }
-}) => {
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isScoreShown }
+    } = state
+
     return {
         isScoreShown
     }

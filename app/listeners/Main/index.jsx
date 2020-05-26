@@ -142,21 +142,23 @@ const mapStateToProps = ({
         selectedOverviewOption,
         selectedTipsOption
     }
-}) => ({
-    isPhoneWidth,
-    isDotsSlideShown,
-    isLyricExpanded,
-    isScoreShown,
-    isAboutShown,
-    canLyricCarouselEnter,
-    lyricAnnotationIndex,
-    isLyricLogue,
-    isActivated,
-    isLogueOverviewShown,
-    selectedOverviewOption,
-    selectedTipsOption,
-    selectedWikiIndex
-})
+}) => {
+    return {
+        isPhoneWidth,
+        isDotsSlideShown,
+        isLyricExpanded,
+        isScoreShown,
+        isAboutShown,
+        canLyricCarouselEnter,
+        lyricAnnotationIndex,
+        isLyricLogue,
+        isActivated,
+        isLogueOverviewShown,
+        selectedOverviewOption,
+        selectedTipsOption,
+        selectedWikiIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

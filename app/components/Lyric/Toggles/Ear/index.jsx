@@ -17,11 +17,13 @@ import { LYRIC_EAR_BUTTON_KEY } from '../../../../constants/buttons'
 import { EAR_COLUMN_KEYS } from '../../../../constants/lyrics'
 import { DOUBLESPEAKER } from '../../../../constants/tips'
 
-const mapStateToProps = ({
-    transientStore: { isEarShown },
-    selectedStore: { earColumnIndex },
-    viewportStore: { isDesktopWidth }
-}) => {
+const mapStateToProps = state => {
+    const {
+        transientStore: { isEarShown },
+        selectedStore: { earColumnIndex },
+        viewportStore: { isDesktopWidth }
+    } = state
+
     return {
         isEarShown,
         earColumnIndex,

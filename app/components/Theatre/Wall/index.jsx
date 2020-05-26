@@ -10,18 +10,20 @@ import {
     getWallWidth
 } from './helper'
 
-const mapStateToProps = ({
-    prosceniumStore: {
-        prosceniumLeft,
-        prosceniumWidth,
-        prosceniumHeight
-    },
-    theatreStore: { ceilingHeight },
-    viewportStore: {
-        windowHeight,
-        windowWidth
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        prosceniumStore: {
+            prosceniumLeft,
+            prosceniumWidth,
+            prosceniumHeight
+        },
+        theatreStore: { ceilingHeight },
+        viewportStore: {
+            windowHeight,
+            windowWidth
+        }
+    } = state
+
     return {
         windowHeight,
         windowWidth,

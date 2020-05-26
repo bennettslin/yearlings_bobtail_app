@@ -34,14 +34,16 @@ const mapStateToProps = ({
         selectedVerseIndex,
         selectedTime
     }
-}) => ({
-    isPlaying,
-    selectedSongIndex,
-    selectedVerseIndex,
-    selectedTime,
-    playersBitNumber,
-    nextPlayerToRender
-})
+}) => {
+    return {
+        isPlaying,
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedTime,
+        playersBitNumber,
+        nextPlayerToRender
+    }
+}
 
 // Kind of silly, but easiest approach for now.
 const LOGUE_DUMMY_PLAYER = {

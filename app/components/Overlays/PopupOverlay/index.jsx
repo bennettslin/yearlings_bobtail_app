@@ -4,9 +4,11 @@ import { connect } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import './style'
 
-const mapStateToProps = ({
-    transientStore: { isOverlayShown }
-}) => {
+const mapStateToProps = state => {
+    const {
+        transientStore: { isOverlayShown }
+    } = state
+
     return {
         isOverlayShown
     }

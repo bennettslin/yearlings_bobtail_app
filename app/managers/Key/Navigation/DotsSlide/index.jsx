@@ -94,10 +94,12 @@ const mapStateToProps = ({
         isAccessOn,
         accessedDotIndex
     }
-}) => ({
-    isAccessOn,
-    accessedDotIndex
-})
+}) => {
+    return {
+        isAccessOn,
+        accessedDotIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

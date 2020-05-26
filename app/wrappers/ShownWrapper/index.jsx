@@ -105,21 +105,23 @@ const mapStateToProps = ({
         isDotsSlideShown
     },
     transientStore: { isOverlayShown }
-}) => ({
-    wormhole,
-    reference,
-    canLyricCarouselEnter,
-    isLyricLogue,
-    lyricSongIndex,
-    lyricAnnotationIndex,
-    selectedOverviewOption,
-    selectedTipsOption,
-    isCarouselShown,
-    isNavShown,
-    isLyricExpanded,
-    isDotsSlideShown,
-    isOverlayShown
-})
+}) => {
+    return {
+        wormhole,
+        reference,
+        canLyricCarouselEnter,
+        isLyricLogue,
+        lyricSongIndex,
+        lyricAnnotationIndex,
+        selectedOverviewOption,
+        selectedTipsOption,
+        isCarouselShown,
+        isNavShown,
+        isLyricExpanded,
+        isDotsSlideShown,
+        isOverlayShown
+    }
+}
 
 ShownWrapper.propTypes = {
     children: PropTypes.any.isRequired

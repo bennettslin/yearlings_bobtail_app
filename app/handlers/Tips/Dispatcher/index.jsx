@@ -56,19 +56,23 @@ class TipsDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    lyricStore: { isLyricLogue },
-    optionStore: { selectedTipsOption },
-    transientStore: {
+const mapStateToProps = state => {
+    const {
+        lyricStore: { isLyricLogue },
+        optionStore: { selectedTipsOption },
+        transientStore: {
+            isTipsShowable,
+            toggleShowsTipsImmediately
+        }
+    } = state
+
+    return {
+        isLyricLogue,
+        selectedTipsOption,
         isTipsShowable,
         toggleShowsTipsImmediately
     }
-}) => ({
-    isLyricLogue,
-    selectedTipsOption,
-    isTipsShowable,
-    toggleShowsTipsImmediately
-})
+}
 
 export default connect(
     mapStateToProps,

@@ -83,12 +83,14 @@ const mapStateToProps = ({
         didCarouselEnter,
         didLyricEnter
     }
-}) => ({
-    isSelectedLogue,
-    didCarouselEnter,
-    didLyricEnter,
-    selectedAnnotationIndex
-})
+}) => {
+    return {
+        isSelectedLogue,
+        didCarouselEnter,
+        didLyricEnter,
+        selectedAnnotationIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

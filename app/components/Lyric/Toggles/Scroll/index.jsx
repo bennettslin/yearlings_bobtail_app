@@ -16,9 +16,11 @@ import { LYRIC_SCROLL_TOGGLE_KEY } from '../../../../constants/access'
 import { LYRIC_SCROLL_BUTTON_KEY } from '../../../../constants/buttons'
 import { AUTOSCROLL } from '../../../../constants/tips'
 
-const mapStateToProps = ({
-    toggleStore: { isAutoScroll }
-}) => {
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isAutoScroll }
+    } = state
+
     return {
         isAutoScroll
     }

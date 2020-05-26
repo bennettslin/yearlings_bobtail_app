@@ -42,13 +42,17 @@ class ScoreListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    mountStore: { canScoreMount },
-    selectedStore: { isSelectedLogue }
-}) => ({
-    canScoreMount,
-    isSelectedLogue
-})
+const mapStateToProps = state => {
+    const {
+        mountStore: { canScoreMount },
+        selectedStore: { isSelectedLogue }
+    } = state
+
+    return {
+        canScoreMount,
+        isSelectedLogue
+    }
+}
 
 export default connect(
     mapStateToProps,

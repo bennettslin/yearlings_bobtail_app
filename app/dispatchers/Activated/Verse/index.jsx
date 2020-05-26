@@ -103,14 +103,16 @@ class ActivatedVerseDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: {
-        isSelectedLogue,
-        selectedSongIndex,
-        selectedVerseIndex
-    },
-    activatedStore: { activatedVerseIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            isSelectedLogue,
+            selectedSongIndex,
+            selectedVerseIndex
+        },
+        activatedStore: { activatedVerseIndex }
+    } = state
+
     return {
         isSelectedLogue,
         selectedSongIndex,

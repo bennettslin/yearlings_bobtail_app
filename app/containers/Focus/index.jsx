@@ -14,12 +14,14 @@ import KeyManager from '../../managers/Key'
 import { isEmailFocused } from '../../utils/email'
 import { populateRefs } from '../../helpers/ref'
 
-const mapStateToProps = ({
-    mountStore: { canSliderMount },
-    responsiveStore: { isHeightlessLyric },
-    toggleStore: { isLyricExpanded },
-    focusStore: { queuedFocus }
-}) => {
+const mapStateToProps = state => {
+    const {
+        mountStore: { canSliderMount },
+        responsiveStore: { isHeightlessLyric },
+        toggleStore: { isLyricExpanded },
+        focusStore: { queuedFocus }
+    } = state
+
     return {
         canSliderMount,
         isHeightlessLyric,

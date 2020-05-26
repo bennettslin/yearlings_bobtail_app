@@ -97,21 +97,25 @@ class AnnotationAccessDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: {
-        earColumnIndex,
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            earColumnIndex,
+            selectedSongIndex,
+            selectedVerseIndex
+        },
+        dotsStore: { dotsBitNumber },
+        transientStore: { isEarShown }
+    } = state
+
+    return {
         selectedSongIndex,
-        selectedVerseIndex
-    },
-    dotsStore: { dotsBitNumber },
-    transientStore: { isEarShown }
-}) => ({
-    selectedSongIndex,
-    selectedVerseIndex,
-    dotsBitNumber,
-    earColumnIndex,
-    isEarShown
-})
+        selectedVerseIndex,
+        dotsBitNumber,
+        earColumnIndex,
+        isEarShown
+    }
+}
 
 export default connect(
     mapStateToProps,

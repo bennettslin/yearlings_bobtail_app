@@ -62,11 +62,15 @@ class ScrollOverlayHandler extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    scrollOverlayStore: { lyricScrollTop }
-}) => ({
-    lyricScrollTop
-})
+const mapStateToProps = state => {
+    const {
+        scrollOverlayStore: { lyricScrollTop }
+    } = state
+
+    return {
+        lyricScrollTop
+    }
+}
 
 export default connect(
     mapStateToProps,

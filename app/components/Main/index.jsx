@@ -22,14 +22,16 @@ import ShelfRight from './ShelfRight'
 
 import { getMainHeight } from './helper'
 
-const mapStateToProps = ({
-    mountStore: { canCarouselMount },
-    responsiveStore: {
-        isHeightlessLyric,
-        menuHeight
-    },
-    viewportStore: { isDesktopWidth }
-}) => {
+const mapStateToProps = state => {
+    const {
+        mountStore: { canCarouselMount },
+        responsiveStore: {
+            isHeightlessLyric,
+            menuHeight
+        },
+        viewportStore: { isDesktopWidth }
+    } = state
+
     return {
         canCarouselMount,
         isHeightlessLyric,

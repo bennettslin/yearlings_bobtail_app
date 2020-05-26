@@ -94,23 +94,27 @@ class OverviewDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: { isSelectedLogue },
-    responsiveStore: { isHeightlessLyric },
-    optionStore: {
+const mapStateToProps = state => {
+    const {
+        selectedStore: { isSelectedLogue },
+        responsiveStore: { isHeightlessLyric },
+        optionStore: {
+            isLogueOverviewShown,
+            selectedOverviewOption,
+            selectedTipsOption
+        },
+        transientStore: { toggleShowsOverviewImmediately }
+    } = state
+
+    return {
+        isSelectedLogue,
+        isHeightlessLyric,
         isLogueOverviewShown,
         selectedOverviewOption,
-        selectedTipsOption
-    },
-    transientStore: { toggleShowsOverviewImmediately }
-}) => ({
-    isSelectedLogue,
-    isHeightlessLyric,
-    isLogueOverviewShown,
-    selectedOverviewOption,
-    selectedTipsOption,
-    toggleShowsOverviewImmediately
-})
+        selectedTipsOption,
+        toggleShowsOverviewImmediately
+    }
+}
 
 export default connect(
     mapStateToProps,

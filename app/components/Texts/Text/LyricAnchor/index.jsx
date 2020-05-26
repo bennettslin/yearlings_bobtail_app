@@ -14,19 +14,21 @@ import { populateRefs } from '../../../../helpers/ref'
 
 import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
 
-const mapStateToProps = ({
-    lyricStore: {
-        lyricSongIndex,
-        lyricAnnotationIndex
-    },
-    accessStore: {
-        isAccessedIndexedAnchorShown,
-        accessedAnnotationIndex,
-        accessedWikiWormholeIndex
-    },
-    activatedStore: { isActivated },
-    sliderStore: { isSliderMoving }
-}) => {
+const mapStateToProps = state => {
+    const {
+        lyricStore: {
+            lyricSongIndex,
+            lyricAnnotationIndex
+        },
+        accessStore: {
+            isAccessedIndexedAnchorShown,
+            accessedAnnotationIndex,
+            accessedWikiWormholeIndex
+        },
+        activatedStore: { isActivated },
+        sliderStore: { isSliderMoving }
+    } = state
+
     return {
         lyricAnnotationIndex,
 

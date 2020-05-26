@@ -110,12 +110,14 @@ const mapStateToProps = ({
         canLyricCarouselUpdate,
         canLyricCarouselEnter
     }
-}) => ({
-    selectedSongIndex,
-    canLyricCarouselUpdate,
-    canLyricCarouselEnter,
-    canSceneUpdate
-})
+}) => {
+    return {
+        selectedSongIndex,
+        canLyricCarouselUpdate,
+        canLyricCarouselEnter,
+        canSceneUpdate
+    }
+}
 
 export default connect(
     mapStateToProps,

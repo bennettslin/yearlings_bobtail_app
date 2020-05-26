@@ -141,11 +141,13 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedAnnotationIndex
     }
-}) => ({
-    isAccessOn,
-    accessedWikiWormholeIndex,
-    selectedSongIndex,
-    selectedAnnotationIndex
-})
+}) => {
+    return {
+        isAccessOn,
+        accessedWikiWormholeIndex,
+        selectedSongIndex,
+        selectedAnnotationIndex
+    }
+}
 
 export default connect(mapStateToProps)(AnnotationNavigation)

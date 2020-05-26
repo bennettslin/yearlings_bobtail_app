@@ -10,18 +10,20 @@ import SliderTime from './Time'
 import { getDurationForSong } from '../../../album/api/time'
 import { getFormattedTime } from '../../../helpers/format'
 
-const mapStateToProps = ({
-    lyricStore: { lyricSongIndex },
-    selectedStore: { selectedTime },
-    sliderStore: {
-        isSliderMoving,
-        sliderTime
-    },
-    activatedStore: {
-        isActivated,
-        activatedTime
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricSongIndex },
+        selectedStore: { selectedTime },
+        sliderStore: {
+            isSliderMoving,
+            sliderTime
+        },
+        activatedStore: {
+            isActivated,
+            activatedTime
+        }
+    } = state
+
     return {
         lyricSongIndex,
         selectedTime,

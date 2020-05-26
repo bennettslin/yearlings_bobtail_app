@@ -67,13 +67,15 @@ const mapStateToProps = ({
     responsiveStore: {
         isHeightlessLyric
     }
-}) => ({
-    earColumnIndex,
-    isCarouselNavShowable,
-    isTipsShowable,
-    isEarShown,
-    isHeightlessLyric
-})
+}) => {
+    return {
+        earColumnIndex,
+        isCarouselNavShowable,
+        isTipsShowable,
+        isEarShown,
+        isHeightlessLyric
+    }
+}
 
 ResponsiveWrapper.propTypes = {
     children: PropTypes.node.isRequired

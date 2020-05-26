@@ -16,12 +16,14 @@ import { populateRefs } from '../../../helpers/ref'
 import { getCarouselNavIdentifier } from '../../../constants/options'
 import { CAROUSEL, NAV } from '../../../constants/tips'
 
-const mapStateToProps = ({
-    toggleStore: {
-        isCarouselShown,
-        isNavShown
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        toggleStore: {
+            isCarouselShown,
+            isNavShown
+        }
+    } = state
+
     return {
         isCarouselShown,
         isNavShown

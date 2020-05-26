@@ -51,13 +51,17 @@ class CarouselNavListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    mountStore: { canCarouselMount },
-    dotsStore: { dotsBitNumber }
-}) => ({
-    canCarouselMount,
-    dotsBitNumber
-})
+const mapStateToProps = state => {
+    const {
+        mountStore: { canCarouselMount },
+        dotsStore: { dotsBitNumber }
+    } = state
+
+    return {
+        canCarouselMount,
+        dotsBitNumber
+    }
+}
 
 export default connect(
     mapStateToProps,

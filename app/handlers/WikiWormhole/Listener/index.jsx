@@ -54,14 +54,18 @@ class WikiWormholeListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: {
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            selectedSongIndex,
+            selectedAnnotationIndex
+        }
+    } = state
+
+    return {
         selectedSongIndex,
         selectedAnnotationIndex
     }
-}) => ({
-    selectedSongIndex,
-    selectedAnnotationIndex
-})
+}
 
 export default connect(mapStateToProps)(WikiWormholeListener)

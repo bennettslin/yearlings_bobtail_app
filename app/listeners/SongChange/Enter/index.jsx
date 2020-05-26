@@ -72,12 +72,14 @@ const mapStateToProps = ({
         didCarouselUpdate,
         didSceneUpdate
     }
-}) => ({
-    canCarouselMount,
-    didLyricUpdate,
-    didCarouselUpdate,
-    didSceneUpdate
-})
+}) => {
+    return {
+        canCarouselMount,
+        didLyricUpdate,
+        didCarouselUpdate,
+        didSceneUpdate
+    }
+}
 
 export default connect(
     mapStateToProps,

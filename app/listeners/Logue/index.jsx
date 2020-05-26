@@ -35,11 +35,15 @@ class LogueListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: { isSelectedLogue }
-}) => ({
-    isSelectedLogue
-})
+const mapStateToProps = state => {
+    const {
+        selectedStore: { isSelectedLogue }
+    } = state
+
+    return {
+        isSelectedLogue
+    }
+}
 
 export default connect(
     mapStateToProps,

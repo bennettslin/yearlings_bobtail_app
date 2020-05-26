@@ -97,21 +97,25 @@ class OverviewListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: {
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            isSelectedLogue,
+            selectedSongIndex,
+            selectedAnnotationIndex
+        },
+        responsiveStore: { isHeightlessLyric },
+        optionStore: { selectedOverviewOption }
+    } = state
+
+    return {
         isSelectedLogue,
         selectedSongIndex,
-        selectedAnnotationIndex
-    },
-    responsiveStore: { isHeightlessLyric },
-    optionStore: { selectedOverviewOption }
-}) => ({
-    isSelectedLogue,
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    isHeightlessLyric,
-    selectedOverviewOption
-})
+        selectedAnnotationIndex,
+        isHeightlessLyric,
+        selectedOverviewOption
+    }
+}
 
 export default connect(
     mapStateToProps,

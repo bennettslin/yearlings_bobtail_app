@@ -100,14 +100,16 @@ class ActivatedSceneDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: {
-        isSelectedLogue,
-        selectedSongIndex,
-        selectedSceneIndex
-    },
-    activatedStore: { activatedSceneIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            isSelectedLogue,
+            selectedSongIndex,
+            selectedSceneIndex
+        },
+        activatedStore: { activatedSceneIndex }
+    } = state
+
     return {
         isSelectedLogue,
         selectedSongIndex,

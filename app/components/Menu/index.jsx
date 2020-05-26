@@ -15,17 +15,19 @@ import Slider from '../Slider'
 
 import { getMenuMarginInOverlay } from './helper'
 
-const mapStateToProps = ({
-    viewportStore: {
-        windowWidth,
-        isDesktopWidth
-    },
-    mountStore: { canSliderMount },
-    responsiveStore: {
-        isTwoRowMenu,
-        menuHeight
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        viewportStore: {
+            windowWidth,
+            isDesktopWidth
+        },
+        mountStore: { canSliderMount },
+        responsiveStore: {
+            isTwoRowMenu,
+            menuHeight
+        }
+    } = state
+
     return {
         windowWidth,
         isDesktopWidth,

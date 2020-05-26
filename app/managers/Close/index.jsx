@@ -346,21 +346,23 @@ const mapStateToProps = ({
     },
     activatedStore: { isActivated },
     sessionStore: { selectedWikiIndex }
-}) => ({
-    selectedAnnotationIndex,
-    isSliderMoving,
-    isCarouselShown,
-    isDotsSlideShown,
-    isLyricExpanded,
-    isScoreShown,
-    isAboutShown,
-    selectedOverviewOption,
-    selectedTipsOption,
-    isSongShownOverview,
-    isSongShownTips,
-    selectedWikiIndex,
-    isActivated
-})
+}) => {
+    return {
+        selectedAnnotationIndex,
+        isSliderMoving,
+        isCarouselShown,
+        isDotsSlideShown,
+        isLyricExpanded,
+        isScoreShown,
+        isAboutShown,
+        selectedOverviewOption,
+        selectedTipsOption,
+        isSongShownOverview,
+        isSongShownTips,
+        selectedWikiIndex,
+        isActivated
+    }
+}
 
 export default connect(
     mapStateToProps,

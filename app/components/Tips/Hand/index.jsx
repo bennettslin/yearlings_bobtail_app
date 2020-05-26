@@ -14,16 +14,18 @@ import {
     WIKI
 } from '../../../constants/tips'
 
-const mapStateToProps = ({
-    dotsStore: {
-        reference,
-        wormhole
-    },
-    entranceStore: { didLyricUpdate },
-    lyricStore: { lyricSongIndex },
-    optionStore: { selectedTipsOption },
-    viewportStore: { isPhoneWidth }
-}) => {
+const mapStateToProps = state => {
+    const {
+        dotsStore: {
+            reference,
+            wormhole
+        },
+        entranceStore: { didLyricUpdate },
+        lyricStore: { lyricSongIndex },
+        optionStore: { selectedTipsOption },
+        viewportStore: { isPhoneWidth }
+    } = state
+
     return {
         reference,
         wormhole,

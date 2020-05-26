@@ -122,16 +122,18 @@ const mapStateToProps = ({
         selectedVerseIndex,
         selectedAnnotationIndex
     }
-}) => ({
-    canCarouselMount,
-    isSongSelectInFlux,
-    didCarouselExit,
-    didCurtainExit,
-    didLyricExit,
-    selectedSongIndex,
-    selectedVerseIndex,
-    selectedAnnotationIndex
-})
+}) => {
+    return {
+        canCarouselMount,
+        isSongSelectInFlux,
+        didCarouselExit,
+        didCurtainExit,
+        didLyricExit,
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

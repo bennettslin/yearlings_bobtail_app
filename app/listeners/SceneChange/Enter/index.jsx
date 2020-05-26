@@ -50,8 +50,10 @@ class SceneChangeEnterListener extends PureComponent {
 
 const mapStateToProps = ({
     entranceStore: { didSceneScrollExit }
-}) => ({
-    didSceneScrollExit
-})
+}) => {
+    return {
+        didSceneScrollExit
+    }
+}
 
 export default connect(mapStateToProps)(SceneChangeEnterListener)

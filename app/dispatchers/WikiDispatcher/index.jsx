@@ -44,11 +44,13 @@ class WikiDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    dotsStore: {
-        [REFERENCE]: isWikiDotSelected
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        dotsStore: {
+            [REFERENCE]: isWikiDotSelected
+        }
+    } = state
+
     return {
         isWikiDotSelected
     }

@@ -112,19 +112,21 @@ const mapStateToProps = ({
         isSliderMoving,
         sliderVerseIndex
     }
-}) => ({
-    isActivated,
-    activatedVerseIndex,
-    dotsBitNumber,
-    isPlaying,
-    isLyricLogue,
-    lyricSongIndex,
-    lyricVerseIndex,
-    isSliderMoving,
-    sliderVerseIndex,
-    isVerseBarAbove,
-    isVerseBarBelow
-})
+}) => {
+    return {
+        isActivated,
+        activatedVerseIndex,
+        dotsBitNumber,
+        isPlaying,
+        isLyricLogue,
+        lyricSongIndex,
+        lyricVerseIndex,
+        isSliderMoving,
+        sliderVerseIndex,
+        isVerseBarAbove,
+        isVerseBarBelow
+    }
+}
 
 LogicWrapper.propTypes = {
     children: PropTypes.any.isRequired

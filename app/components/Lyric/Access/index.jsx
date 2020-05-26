@@ -9,10 +9,12 @@ import {
     ARROW_DOWN
 } from '../../../constants/access'
 
-const mapStateToProps = ({
-    lyricStore: { lyricAnnotationIndex },
-    toggleStore: { isDotsSlideShown }
-}) => {
+const mapStateToProps = state => {
+    const {
+        lyricStore: { lyricAnnotationIndex },
+        toggleStore: { isDotsSlideShown }
+    } = state
+
     return {
         lyricAnnotationIndex,
         isDotsSlideShown

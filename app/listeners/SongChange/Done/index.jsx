@@ -79,11 +79,13 @@ const mapStateToProps = ({
         didLyricEnter,
         didCurtainEnter
     }
-}) => ({
-    canCarouselMount,
-    didCarouselEnter,
-    didLyricEnter,
-    didCurtainEnter
-})
+}) => {
+    return {
+        canCarouselMount,
+        didCarouselEnter,
+        didLyricEnter,
+        didCurtainEnter
+    }
+}
 
 export default connect(mapStateToProps)(SongChangeDoneListener)

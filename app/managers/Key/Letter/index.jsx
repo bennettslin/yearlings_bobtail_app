@@ -251,17 +251,19 @@ const mapStateToProps = ({
     },
     selectedStore: { selectedAnnotationIndex },
     sessionStore: { selectedWikiIndex }
-}) => ({
-    isDotsSlideShown,
-    isLyricExpanded,
-    isNavShown,
-    isScoreShown,
-    isAboutShown,
-    selectedAnnotationIndex,
-    selectedOverviewOption,
-    selectedTipsOption,
-    selectedWikiIndex
-})
+}) => {
+    return {
+        isDotsSlideShown,
+        isLyricExpanded,
+        isNavShown,
+        isScoreShown,
+        isAboutShown,
+        selectedAnnotationIndex,
+        selectedOverviewOption,
+        selectedTipsOption,
+        selectedWikiIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

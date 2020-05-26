@@ -110,16 +110,18 @@ const mapStateToProps = ({
         queuedPlaySongIndex,
         queuedPlayVerseIndex
     }
-}) => ({
-    playersBitNumber,
-    selectedSongIndex,
-    isSelectedLogue,
-    lyricSongIndex,
-    lyricVerseIndex,
-    queuedPlayFromLogue,
-    queuedPlaySongIndex,
-    queuedPlayVerseIndex
-})
+}) => {
+    return {
+        playersBitNumber,
+        selectedSongIndex,
+        isSelectedLogue,
+        lyricSongIndex,
+        lyricVerseIndex,
+        queuedPlayFromLogue,
+        queuedPlaySongIndex,
+        queuedPlayVerseIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

@@ -42,10 +42,12 @@ class DoublespeakerListener extends PureComponent {
 const mapStateToProps = ({
     viewportStore: { deviceWidthIndex },
     lyricStore: { lyricSongIndex }
-}) => ({
-    deviceWidthIndex,
-    lyricSongIndex
-})
+}) => {
+    return {
+        deviceWidthIndex,
+        lyricSongIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

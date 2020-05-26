@@ -90,15 +90,19 @@ class SceneChangeUpdateDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    selectedStore: {
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            selectedSongIndex,
+            selectedSceneIndex
+        }
+    } = state
+
+    return {
         selectedSongIndex,
         selectedSceneIndex
     }
-}) => ({
-    selectedSongIndex,
-    selectedSceneIndex
-})
+}
 
 export default connect(
     mapStateToProps,

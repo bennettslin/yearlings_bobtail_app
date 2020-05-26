@@ -17,10 +17,12 @@ import { OVERVIEW } from '../../../constants/tips'
 
 import { getOverviewToggleIdentifier } from './helper'
 
-const mapStateToProps = ({
-    lyricStore: { isLyricLogue },
-    optionStore: { selectedOverviewOption }
-}) => {
+const mapStateToProps = state => {
+    const {
+        lyricStore: { isLyricLogue },
+        optionStore: { selectedOverviewOption }
+    } = state
+
     return {
         isLyricLogue,
         selectedOverviewOption

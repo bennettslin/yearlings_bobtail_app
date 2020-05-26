@@ -136,15 +136,18 @@ const mapStateToProps = ({
     },
     activatedStore: { activatedVerseIndex },
     sessionStore: { selectedWikiIndex }
-}) => ({
-    isHeightlessLyric,
-    isLyricExpanded,
-    activatedVerseIndex,
-    isScoreShown,
-    selectedWikiIndex,
-    isSelectedLogue,
-    selectedAnnotationIndex,
-    isDotsSlideShown,
-    isNavShown
-})
+}) => {
+    return {
+        isHeightlessLyric,
+        isLyricExpanded,
+        activatedVerseIndex,
+        isScoreShown,
+        selectedWikiIndex,
+        isSelectedLogue,
+        selectedAnnotationIndex,
+        isDotsSlideShown,
+        isNavShown
+    }
+}
+
 export default connect(mapStateToProps)(NavigationManager)

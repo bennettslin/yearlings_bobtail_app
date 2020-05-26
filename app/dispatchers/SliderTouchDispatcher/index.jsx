@@ -187,20 +187,22 @@ class SliderTouchDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    sliderStore: {
-        isSliderTouched,
-        isSliderMoving,
-        sliderLeft,
-        sliderWidth,
-        sliderVerseIndex
-    },
-    selectedStore: {
-        isSelectedLogue,
-        selectedSongIndex,
-        selectedVerseIndex
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        sliderStore: {
+            isSliderTouched,
+            isSliderMoving,
+            sliderLeft,
+            sliderWidth,
+            sliderVerseIndex
+        },
+        selectedStore: {
+            isSelectedLogue,
+            selectedSongIndex,
+            selectedVerseIndex
+        }
+    } = state
+
     return {
         isSliderTouched,
         isSliderMoving,

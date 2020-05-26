@@ -102,29 +102,33 @@ class CarouselNavDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    dotsStore: { dotsBitNumber },
-    mountStore: { canCarouselMount },
-    accessStore: { accessedAnnotationIndex },
-    selectedStore: {
+const mapStateToProps = state => {
+    const {
+        dotsStore: { dotsBitNumber },
+        mountStore: { canCarouselMount },
+        accessStore: { accessedAnnotationIndex },
+        selectedStore: {
+            selectedAnnotationIndex,
+            isSelectedLogue
+        },
+        toggleStore: {
+            isDotsSlideShown,
+            isCarouselShown,
+            isNavShown
+        }
+    } = state
+
+    return {
+        dotsBitNumber,
+        canCarouselMount,
+        accessedAnnotationIndex,
         selectedAnnotationIndex,
-        isSelectedLogue
-    },
-    toggleStore: {
+        isSelectedLogue,
         isDotsSlideShown,
         isCarouselShown,
         isNavShown
     }
-}) => ({
-    dotsBitNumber,
-    canCarouselMount,
-    accessedAnnotationIndex,
-    selectedAnnotationIndex,
-    isSelectedLogue,
-    isDotsSlideShown,
-    isCarouselShown,
-    isNavShown
-})
+}
 
 export default connect(
     mapStateToProps,

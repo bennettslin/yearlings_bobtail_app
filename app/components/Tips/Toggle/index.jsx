@@ -15,10 +15,12 @@ import { TIPS_TOGGLE_KEY } from '../../../constants/access'
 import { TIPS_BUTTON_KEY } from '../../../constants/buttons'
 import { TIPS } from '../../../constants/tips'
 
-const mapStateToProps = ({
-    optionStore: { selectedTipsOption },
-    transientStore: { isTipsShowable }
-}) => {
+const mapStateToProps = state => {
+    const {
+        optionStore: { selectedTipsOption },
+        transientStore: { isTipsShowable }
+    } = state
+
     return {
         selectedTipsOption,
         isTipsShowable

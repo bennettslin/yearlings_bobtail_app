@@ -78,14 +78,16 @@ class PlayDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    playersStore: { playersBitNumber },
-    audioStore: { isPlaying },
-    selectedStore: {
-        selectedSongIndex,
-        isSelectedLogue
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        playersStore: { playersBitNumber },
+        audioStore: { isPlaying },
+        selectedStore: {
+            selectedSongIndex,
+            isSelectedLogue
+        }
+    } = state
+
     return {
         isPlaying,
         playersBitNumber,

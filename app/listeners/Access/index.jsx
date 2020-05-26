@@ -14,14 +14,16 @@ const mapStateToProps = ({
     },
     lyricStore: { lyricAnnotationIndex },
     activatedStore: { isActivated }
-}) => ({
-    isAccessOn,
-    isNavShown,
-    isDotsSlideShown,
-    isLyricExpanded,
-    lyricAnnotationIndex,
-    isActivated
-})
+}) => {
+    return {
+        isAccessOn,
+        isNavShown,
+        isDotsSlideShown,
+        isLyricExpanded,
+        lyricAnnotationIndex,
+        isActivated
+    }
+}
 
 class AccessListener extends PureComponent {
 

@@ -9,19 +9,21 @@ import Popup from '../../Popup'
 import { getShowTipForDevice } from '../../../album/api/tips'
 import { SHOWN } from '../../../constants/options'
 
-const mapStateToProps = ({
-    entranceStore: { canLyricCarouselEnter },
-    lyricStore: {
-        isLyricLogue,
-        lyricSongIndex
-    },
-    optionStore: { selectedTipsOption },
-    viewportStore: {
-        isPhoneWidth,
-        isTabletWidth,
-        isDesktopWidth
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        entranceStore: { canLyricCarouselEnter },
+        lyricStore: {
+            isLyricLogue,
+            lyricSongIndex
+        },
+        optionStore: { selectedTipsOption },
+        viewportStore: {
+            isPhoneWidth,
+            isTabletWidth,
+            isDesktopWidth
+        }
+    } = state
+
     return {
         canLyricCarouselEnter,
         isLyricLogue,

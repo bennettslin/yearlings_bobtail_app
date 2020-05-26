@@ -124,12 +124,14 @@ const mapStateToProps = ({
     },
     activatedStore: { activatedVerseIndex },
     selectedStore: { selectedVerseIndex }
-}) => ({
-    isAccessOn,
-    accessedAnnotationIndex,
-    activatedVerseIndex,
-    selectedVerseIndex
-})
+}) => {
+    return {
+        isAccessOn,
+        accessedAnnotationIndex,
+        activatedVerseIndex,
+        selectedVerseIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

@@ -12,15 +12,17 @@ import { getPrefixedDotLetterClassNames } from '../../../../helpers/dot'
 
 import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
 
-const mapStateToProps = ({
-    accessStore: {
-        isAccessedIndexedAnchorShown,
-        accessedAnnotationIndex
-    },
-    lyricStore: { lyricAnnotationIndex },
-    activatedStore: { isActivated },
-    sliderStore: { isSliderMoving }
-}) => {
+const mapStateToProps = state => {
+    const {
+        accessStore: {
+            isAccessedIndexedAnchorShown,
+            accessedAnnotationIndex
+        },
+        lyricStore: { lyricAnnotationIndex },
+        activatedStore: { isActivated },
+        sliderStore: { isSliderMoving }
+    } = state
+
     return {
         isAccessedIndexedAnchorShown,
         accessedAnnotationIndex,

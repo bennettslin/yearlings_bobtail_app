@@ -92,20 +92,24 @@ class AnnotationAccessListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    activatedStore: { activatedVerseIndex },
-    selectedStore: {
+const mapStateToProps = state => {
+    const {
+        activatedStore: { activatedVerseIndex },
+        selectedStore: {
+            earColumnIndex,
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedAnnotationIndex
+        }
+    } = state
+
+    return {
         earColumnIndex,
+        activatedVerseIndex,
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex
     }
-}) => ({
-    earColumnIndex,
-    activatedVerseIndex,
-    selectedSongIndex,
-    selectedVerseIndex,
-    selectedAnnotationIndex
-})
+}
 
 export default connect(mapStateToProps)(AnnotationAccessListener)

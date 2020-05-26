@@ -11,14 +11,16 @@ import OverviewToggle from '../Main/OverviewToggle'
 import { getOverviewForSong } from '../../album/api/songs'
 import { getIsToggleInOverview } from './helper'
 
-const mapStateToProps = ({
-    viewportStore: { isPhoneWidth },
-    responsiveStore: { isHeightlessLyric },
-    lyricStore: {
-        lyricSongIndex,
-        isLyricLogue
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        viewportStore: { isPhoneWidth },
+        responsiveStore: { isHeightlessLyric },
+        lyricStore: {
+            lyricSongIndex,
+            isLyricLogue
+        }
+    } = state
+
     return {
         isPhoneWidth,
         isHeightlessLyric,

@@ -6,14 +6,16 @@ import PropTypes from 'prop-types'
 
 import NavButton from '../Button'
 
-const mapStateToProps = ({
-    accessStore: {
-        isAccessOn,
-        accessedNavIndex
-    },
-    toggleStore: { isDotsSlideShown },
-    selectedStore: { selectedSongIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        accessStore: {
+            isAccessOn,
+            accessedNavIndex
+        },
+        toggleStore: { isDotsSlideShown },
+        selectedStore: { selectedSongIndex }
+    } = state
+
     return {
         isAccessOn,
         selectedSongIndex,

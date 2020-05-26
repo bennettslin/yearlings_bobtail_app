@@ -48,11 +48,15 @@ class PlayerDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    playersStore: { playersBitNumber }
-}) => ({
-    playersBitNumber
-})
+const mapStateToProps = state => {
+    const {
+        playersStore: { playersBitNumber }
+    } = state
+
+    return {
+        playersBitNumber
+    }
+}
 
 export default connect(
     mapStateToProps,

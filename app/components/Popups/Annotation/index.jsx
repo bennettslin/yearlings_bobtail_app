@@ -10,13 +10,15 @@ import Popup from '../../Popup'
 
 import { populateRefs } from '../../../helpers/ref'
 
-const mapStateToProps = ({
-    transientStore: { isOverlayingAnnotation },
-    transientStore: {
-        isPopupAnnotationVisible,
-        popupAnnotationIndex
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        transientStore: { isOverlayingAnnotation },
+        transientStore: {
+            isPopupAnnotationVisible,
+            popupAnnotationIndex
+        }
+    } = state
+
     return {
         isOverlayingAnnotation,
         isPopupAnnotationVisible,

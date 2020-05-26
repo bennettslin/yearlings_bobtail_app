@@ -215,22 +215,24 @@ const mapStateToProps = ({
     },
     viewportStore: { deviceWidthIndex },
     responsiveStore: { isHeightlessLyric }
-}) => ({
-    queuedScrollLyricLog,
-    queuedScrollLyricByVerse,
-    queuedScrollLyricIndex,
-    queuedScrollLyricAlways,
-    queuedScrollLyricNoDuration,
-    queuedScrollLyricFromAutoScroll,
-    queuedSceneChangeExitScrollCallback,
-    selectedVerseIndex,
-    isSelectedLogue,
-    isPlaying,
-    isAutoScroll,
-    isLyricExpanded,
-    deviceWidthIndex,
-    isHeightlessLyric
-})
+}) => {
+    return {
+        queuedScrollLyricLog,
+        queuedScrollLyricByVerse,
+        queuedScrollLyricIndex,
+        queuedScrollLyricAlways,
+        queuedScrollLyricNoDuration,
+        queuedScrollLyricFromAutoScroll,
+        queuedSceneChangeExitScrollCallback,
+        selectedVerseIndex,
+        isSelectedLogue,
+        isPlaying,
+        isAutoScroll,
+        isLyricExpanded,
+        deviceWidthIndex,
+        isHeightlessLyric
+    }
+}
 
 export default connect(
     mapStateToProps,

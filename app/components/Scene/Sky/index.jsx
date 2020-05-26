@@ -4,12 +4,14 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-const mapStateToProps = ({
-    sceneStore: {
-        sceneSkyTime,
-        sceneSkySeason
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        sceneStore: {
+            sceneSkyTime,
+            sceneSkySeason
+        }
+    } = state
+
     return {
         sceneSkyTime,
         sceneSkySeason

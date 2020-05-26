@@ -98,12 +98,14 @@ const mapStateToProps = ({
         selectedVerseIndex,
         selectedAnnotationIndex
     }
-}) => ({
-    activatedVerseIndex,
-    selectedSongIndex,
-    selectedVerseIndex,
-    selectedAnnotationIndex
-})
+}) => {
+    return {
+        activatedVerseIndex,
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

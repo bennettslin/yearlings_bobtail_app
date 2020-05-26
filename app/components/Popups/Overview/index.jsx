@@ -12,16 +12,18 @@ import {
     getIsOverviewVisibleBySong
 } from './helper'
 
-const mapStateToProps = ({
-    entranceStore: { canLyricCarouselEnter },
-    transientStore: { isOverlayShown },
-    optionStore: {
-        isLogueOverviewShown,
-        selectedOverviewOption,
-        selectedTipsOption
-    },
-    lyricStore: { isLyricLogue }
-}) => {
+const mapStateToProps = state => {
+    const {
+        entranceStore: { canLyricCarouselEnter },
+        transientStore: { isOverlayShown },
+        optionStore: {
+            isLogueOverviewShown,
+            selectedOverviewOption,
+            selectedTipsOption
+        },
+        lyricStore: { isLyricLogue }
+    } = state
+
     return {
         canLyricCarouselEnter,
         isOverlayShown,

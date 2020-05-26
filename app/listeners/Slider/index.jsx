@@ -35,11 +35,15 @@ class SliderListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    sliderStore: { isSliderTouched }
-}) => ({
-    isSliderTouched
-})
+const mapStateToProps = state => {
+    const {
+        sliderStore: { isSliderTouched }
+    } = state
+
+    return {
+        isSliderTouched
+    }
+}
 
 export default connect(
     mapStateToProps,

@@ -213,11 +213,13 @@ const mapStateToProps = ({
         selectedVerseIndex,
         selectedAnnotationIndex
     }
-}) => ({
-    isAccessOn,
-    selectedAnnotationIndex,
-    selectedVerseIndex
-})
+}) => {
+    return {
+        isAccessOn,
+        selectedAnnotationIndex,
+        selectedVerseIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

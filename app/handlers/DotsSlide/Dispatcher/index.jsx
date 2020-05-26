@@ -44,13 +44,17 @@ class DotsSlideDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    toggleStore: { isDotsSlideShown },
-    selectedStore: { isSelectedLogue }
-}) => ({
-    isDotsSlideShown,
-    isSelectedLogue
-})
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isDotsSlideShown },
+        selectedStore: { isSelectedLogue }
+    } = state
+
+    return {
+        isDotsSlideShown,
+        isSelectedLogue
+    }
+}
 
 export default connect(
     mapStateToProps,

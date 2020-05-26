@@ -10,10 +10,12 @@ import TipsToggle from '../../Tips/Toggle'
 import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
 
-const mapStateToProps = ({
-    viewportStore: { isDesktopWidth },
-    transientStore: { isShelfLeftShown }
-}) => {
+const mapStateToProps = state => {
+    const {
+        viewportStore: { isDesktopWidth },
+        transientStore: { isShelfLeftShown }
+    } = state
+
     return {
         isDesktopWidth,
         isShelfLeftShown

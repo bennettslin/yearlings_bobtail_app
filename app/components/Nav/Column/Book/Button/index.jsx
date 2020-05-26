@@ -15,10 +15,12 @@ import {
 import NavCharacter from './Character'
 import NavButtonTitle from './Title'
 
-const mapStateToProps = ({
-    transientStore: { isCarouselNavShowable },
-    selectedStore: { selectedAnnotationIndex }
-}) => {
+const mapStateToProps = state => {
+    const {
+        transientStore: { isCarouselNavShowable },
+        selectedStore: { selectedAnnotationIndex }
+    } = state
+
     return {
         isCarouselNavShowable,
         selectedAnnotationIndex

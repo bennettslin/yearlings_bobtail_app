@@ -54,12 +54,14 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedVerseIndex
     }
-}) => ({
-    isPlaying,
-    isSliderTouched,
-    selectedSongIndex,
-    selectedVerseIndex
-})
+}) => {
+    return {
+        isPlaying,
+        isSliderTouched,
+        selectedSongIndex,
+        selectedVerseIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

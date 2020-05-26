@@ -172,17 +172,19 @@ const mapStateToProps = ({
         isTabletWidth,
         isDesktopWidth
     }
-}) => ({
-    isSelectedLogue,
-    selectedTipsOption,
-    isForcedShownOverview,
-    lyricSongIndex,
-    lyricAnnotationIndex,
-    deviceWidthIndex,
-    isPhoneWidth,
-    isTabletWidth,
-    isDesktopWidth
-})
+}) => {
+    return {
+        isSelectedLogue,
+        selectedTipsOption,
+        isForcedShownOverview,
+        lyricSongIndex,
+        lyricAnnotationIndex,
+        deviceWidthIndex,
+        isPhoneWidth,
+        isTabletWidth,
+        isDesktopWidth
+    }
+}
 
 export default connect(
     mapStateToProps,

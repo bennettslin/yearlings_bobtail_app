@@ -46,12 +46,14 @@ const mapStateToProps = ({
         isAccessOn,
         accessedKey
     }
-}) => ({
-    isPlaying,
-    isLyricLogue,
-    isAccessOn,
-    accessedKey
-})
+}) => {
+    return {
+        isPlaying,
+        isLyricLogue,
+        isAccessOn,
+        accessedKey
+    }
+}
 
 PlayingWrapper.propTypes = {
     children: PropTypes.any.isRequired

@@ -2,14 +2,16 @@ import { cloneElement, memo } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-const mapStateToProps = ({
-    stageStore: {
-        stageTop,
-        stageLeft,
-        stageWidth,
-        stageHeight
-    }
-}) => {
+const mapStateToProps = state => {
+    const {
+        stageStore: {
+            stageTop,
+            stageLeft,
+            stageWidth,
+            stageHeight
+        }
+    } = state
+
     return {
         stageTop,
         stageLeft,
