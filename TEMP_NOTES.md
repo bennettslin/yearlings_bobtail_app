@@ -10,7 +10,10 @@
     * Child components also import own styles
 * Simplify Anchor for social media anchors
 * Listeners and Main components know to render themselves
-* Mount, transient, and responsive values can just be aggregate selectors
+* Mount, responsive, proscenium, and theatre values can just be aggregate selectors. Basically, get rid of everything in window that's not the window width and height. Replace in map state to props first.
+* Also transient store.
+* Also, all the listeners.
+* Also, all the dispatchers.
 * Move Carousel to top level of Root
 
 # Ongoing Gatsby tasks

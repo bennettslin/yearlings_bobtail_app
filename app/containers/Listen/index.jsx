@@ -31,7 +31,6 @@ import ScrollRenderListener from '../../listeners/ScrollRender'
 import SliderListener from '../../listeners/Slider'
 import TipsListener from '../../handlers/Tips/Listener'
 import UrlListener from '../../listeners/Url'
-import WikiListener from '../../handlers/Wiki/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
 
 import AudioPlayerManager from '../../managers/AudioPlayer'
@@ -77,7 +76,6 @@ const ListenContainer = () => {
             <SongChangeDoneListener />
             <TipsListener />
             <UrlListener />
-            <WikiListener />
             <WikiWormholeListener />
             <AudioPlayerManager />
         </>

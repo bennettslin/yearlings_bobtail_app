@@ -16,14 +16,12 @@ import { LYRIC_EXPAND } from '../../../../constants/tips'
 
 const mapStateToProps = (state) => {
     const {
-            viewportStore: { deviceWidthIndex },
             responsiveStore: { isHeightlessLyric },
             toggleStore: { isLyricExpanded }
         } = state,
         isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state)
 
     return {
-        deviceWidthIndex,
         isHeightlessLyric,
         isLyricExpandable,
         isLyricExpanded
@@ -34,7 +32,6 @@ class LyricToggleExpand extends PureComponent {
 
     static propTypes = {
     // Through Redux.
-        deviceWidthIndex: PropTypes.number.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isLyricExpandable: PropTypes.bool.isRequired,

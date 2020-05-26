@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { updateAnnotationStore } from '../../../../redux/annotation/action'
 
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
-import WikiDispatcher from '../../../../handlers/Wiki/Dispatcher'
+import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 import Anchor from '../../../Anchor'
 
 import { populateRefs } from '../../../../helpers/ref'

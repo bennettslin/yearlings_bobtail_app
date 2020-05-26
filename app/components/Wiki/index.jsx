@@ -3,11 +3,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { SELECTED_WIKI_URL_SELECTOR } from '../../redux/session/selectors'
-
 import Spinner from '../../modules/Spinner'
 
 const Wiki = () => {
-
     const
         selectedWikiUrl = useSelector(SELECTED_WIKI_URL_SELECTOR),
         [isLoading, setIsLoading] = useState(false),

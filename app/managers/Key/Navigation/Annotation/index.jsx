@@ -5,7 +5,7 @@ import { isString } from '../../../../helpers/general'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'
-import WikiDispatcher from '../../../../handlers/Wiki/Dispatcher'
+import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormhole/Dispatcher'
 
 import { populateRefs } from '../../../../helpers/ref'
