@@ -7,6 +7,7 @@ import {
     resetVerseBarsQueue
 } from '../../redux/verseBars/action'
 import { LYRIC_DYNAMIC_HEIGHT_SELECTOR } from '../../redux/mount/selectors'
+import { IS_LYRIC_EXPANDABLE_SELECTOR } from '../../redux/responsive/selectors'
 
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'
@@ -188,7 +189,6 @@ const mapStateToProps = (state) => {
             },
             mountStore: { canSliderMount },
             responsiveStore: {
-                isLyricExpandable,
                 isHeightlessLyric,
                 menuHeight
             },
@@ -202,6 +202,7 @@ const mapStateToProps = (state) => {
             sliderStore: { sliderVerseIndex }
         } = state,
 
+        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
         lyricDynamicHeight = LYRIC_DYNAMIC_HEIGHT_SELECTOR(state)
 
     return {

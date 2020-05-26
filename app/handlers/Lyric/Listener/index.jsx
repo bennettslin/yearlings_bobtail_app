@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
+import { IS_LYRIC_EXPANDABLE_SELECTOR } from '../../../redux/responsive/selectors'
 
 class LyricListener extends PureComponent {
 
@@ -82,19 +83,21 @@ class LyricListener extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    toggleStore: { isLyricExpanded },
-    responsiveStore: {
+const mapStateToProps = (state) => {
+    const {
+            toggleStore: { isLyricExpanded },
+            responsiveStore: { isHeightlessLyric },
+            selectedStore: { isSelectedLogue }
+        } = state,
+        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state)
+
+    return {
+        isLyricExpanded,
         isLyricExpandable,
-        isHeightlessLyric
-    },
-    selectedStore: { isSelectedLogue }
-}) => ({
-    isLyricExpanded,
-    isLyricExpandable,
-    isHeightlessLyric,
-    isSelectedLogue
-})
+        isHeightlessLyric,
+        isSelectedLogue
+    }
+}
 
 export default connect(
     mapStateToProps,

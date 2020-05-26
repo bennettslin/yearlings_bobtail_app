@@ -4,31 +4,31 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricDispatcher from '../../../../handlers/Lyric/Dispatcher'
+import { IS_LYRIC_EXPANDABLE_SELECTOR } from '../../../../redux/responsive/selectors'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
-
 import { populateRefs } from '../../../../helpers/ref'
-
 import { LYRIC_SECTION_EXPAND_KEY } from '../../../../constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from '../../../../constants/buttons'
 import { LYRIC_EXPAND } from '../../../../constants/tips'
 
-const mapStateToProps = ({
-    viewportStore: { deviceWidthIndex },
-    responsiveStore: {
+const mapStateToProps = (state) => {
+    const {
+            viewportStore: { deviceWidthIndex },
+            responsiveStore: { isHeightlessLyric },
+            toggleStore: { isLyricExpanded }
+        } = state,
+        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state)
+
+    return {
+        deviceWidthIndex,
         isHeightlessLyric,
-        isLyricExpandable
-    },
-    toggleStore: { isLyricExpanded }
-}) => ({
-    deviceWidthIndex,
-    isHeightlessLyric,
-    isLyricExpandable,
-    isLyricExpanded
-})
+        isLyricExpandable,
+        isLyricExpanded
+    }
+}
 
 class LyricToggleExpand extends PureComponent {
 

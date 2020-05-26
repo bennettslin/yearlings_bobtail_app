@@ -1,8 +1,7 @@
 import { getIsHeightlessLyric } from '../../helpers/resize/hidden'
 import {
     getIsTwoRowMenu,
-    getMenuHeight,
-    getIsLyricExpandable
+    getMenuHeight
 } from '../../helpers/resize/responsive'
 import {
     getShowShrunkNavIcon,
@@ -38,6 +37,5 @@ export const RESPONSIVE_DEFAULTS = {
     showSingleNavBook: getShowSingleNavBook({
         deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX,
         windowWidth: INITIAL_WINDOW_WIDTH
-    }),
-    isLyricExpandable: getIsLyricExpandable(INITIAL_DEVICE_WIDTH_INDEX)
+    })
 }
