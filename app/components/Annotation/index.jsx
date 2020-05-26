@@ -3,14 +3,13 @@ import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
-
 import { getCardCountForAnnotation } from '../../album/api/annotations'
 import { getArrayOfLength } from '../../helpers/general'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
+import './style'
 
 const Annotation = ({
     inCarousel,

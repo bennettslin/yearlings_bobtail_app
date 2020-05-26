@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
 import { getWormholeLinksForAnnotationCard } from '../../../../album/api/annotations'
+import './style'
 
 const mapStateToProps = state => {
     const {

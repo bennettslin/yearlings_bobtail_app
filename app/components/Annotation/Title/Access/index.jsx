@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-
 import AccessLetters from '../../../Access/Letters'
-
 import {
     ARROW_UP,
     ARROW_DOWN
 } from '../../../../constants/access'
+import './style'
 
 class AnnotationAccess extends PureComponent {
 

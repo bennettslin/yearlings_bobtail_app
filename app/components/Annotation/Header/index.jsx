@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import AnnotationTitle from '../Title'
+import './style'
 
 const propTypes = {
         // From parent.

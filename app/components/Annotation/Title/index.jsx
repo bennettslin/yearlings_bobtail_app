@@ -3,20 +3,17 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
-
 import AnnotationTitleDot from './TitleDot'
 import AnnotationTitleText from './TitleText'
-
 import AnnotationAccess from './Access'
-
 import {
     getDotKeysForAnnotation,
     getTitleForAnnotation
 } from '../../../album/api/annotations'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
-
 import { getAccessibleWikiWormholesCount } from './helper'
+import './style'
 
 const mapStateToProps = state => {
     const {

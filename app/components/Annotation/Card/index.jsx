@@ -9,6 +9,8 @@ import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 import { getAnnotationCard } from './helper'
+import './logic'
+import './style'
 
 const AnnotationCard = ({
     annotationIndex,

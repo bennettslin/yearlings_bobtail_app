@@ -1,6 +1,10 @@
-@import "./Card/style";
-@import "./Header/style";
-@import "./Title/style";
+@import '../../scss/constants/annotation';
+@import '../../scss/constants/border';
+@import '../../scss/constants/colour';
+@import '../../scss/constants/popup';
+@import '../../scss/constants/responsive';
+@import '../../scss/constants/shadow';
+@import '../../scss/constants/transition';
 
 .Annotation {
     position: relative;
