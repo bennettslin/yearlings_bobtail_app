@@ -4,12 +4,11 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import CSSTransition from 'react-transition-group/CSSTransition'
 import AccessField from './Field'
 import AccessIcon from './Icon'
-
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
+import './style'
 
 const mapStateToProps = ({
     accessStore: { isAccessOn },

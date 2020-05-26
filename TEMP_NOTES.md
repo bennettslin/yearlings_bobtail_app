@@ -9,6 +9,7 @@
     * Child components also import own styles
 * Simplify Anchor for social media anchors
 * Listeners and Main components know to render themselves
+* Move Carousel to top level of Root
 
 # Ongoing Gatsby tasks
 * Dynamic routes for song indices

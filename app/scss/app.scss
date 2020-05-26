@@ -29,11 +29,9 @@
 @import '../scene/style';
 
 // Order matters!
-@import '../containers/Deprecated/style';
 @import '../containers/Root/style';
 @import '../components/Main/style';
 
-@import '../components/Access/style';
 @import '../components/Annotation/style';
 @import '../components/Audio/style';
 @import '../components/BannerFilmstrip/style';

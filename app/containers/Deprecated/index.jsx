@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { removeLoadingIndicator } from '../../utils/browser'
+import './style'
 
 const DeprecatedContainer = () => {
     useEffect(() => {

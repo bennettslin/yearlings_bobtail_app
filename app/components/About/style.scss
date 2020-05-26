@@ -1,12 +1,4 @@
-@import "../../scss/constants/colour";
-
-@import "./Child/style";
-@import "./Contact/style";
-@import "./Credits/style";
-@import "./MailingList/style";
-@import "./SocialMedia/style";
-@import "./Title/style";
-@import "./Toggle/style";
+@import '../../scss/constants/colour';
 
 .About__colouredText {
     color: $colour__paused__empty;
