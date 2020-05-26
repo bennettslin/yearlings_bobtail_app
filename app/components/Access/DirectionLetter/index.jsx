@@ -1,57 +1,45 @@
-import React, { PureComponent } from 'react'
-import cx from 'classnames'
-import { connect } from 'react-redux'
+import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+import { useSelector } from 'react-redux'
 import AccessLetter from '../../Access/Letter'
+import { IS_LYRIC_LOGUE_SELECTOR } from '../../../redux/lyric/selectors'
 import './style'
 
-const mapStateToProps = ({
-    lyricStore: { isLyricLogue }
-}) => ({
-    isLyricLogue
-})
+const AccessDirectionLetter = ({
+    accessKey,
+    alignTop,
+    isNext
 
-class AccessDirectionLetter extends PureComponent {
+}) => {
+    const { isLyricLogue } = useSelector(IS_LYRIC_LOGUE_SELECTOR)
 
-    static propTypes = {
-        // Through Redux.
-        isLyricLogue: PropTypes.bool.isRequired,
-
-        // From parent.
-        accessKey: PropTypes.string.isRequired,
-        alignTop: PropTypes.bool,
-        isNext: PropTypes.bool
-    }
-
-    render() {
-        const {
-            isLyricLogue,
-            accessKey,
-            alignTop,
-            isNext
-        } = this.props
-
-        return (
-            <div
+    return (
+        <div
+            {...{
+                // Outer wrapper is necessary for proper transition.
+                className: cx(
+                    'AccessDirectionLetter',
+                    alignTop && 'AccessDirectionLetter__alignTop',
+                    `AccessDirectionLetter__${isNext ? 'next' : 'previous'}`
+                )
+            }}
+        >
+            <AccessLetter
+                animateStandaloneOnKeyDown
                 {...{
-                    // Outer wrapper is necessary for proper transition.
-                    className: cx(
-                        'AccessDirectionLetter',
-                        alignTop && 'AccessDirectionLetter__alignTop',
-                        `AccessDirectionLetter__${isNext ? 'next' : 'previous'}`
-                    )
+                    showIfAccessOn: !isLyricLogue,
+                    accessKey
                 }}
-            >
-                <AccessLetter
-                    animateStandaloneOnKeyDown
-                    {...{
-                        showIfAccessOn: !isLyricLogue,
-                        accessKey
-                    }}
-                />
-            </div>
-        )
-    }
+            />
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(AccessDirectionLetter)
+AccessDirectionLetter.propTypes = {
+    accessKey: PropTypes.string.isRequired,
+    alignTop: PropTypes.bool,
+    isNext: PropTypes.bool
+}
+
+export default AccessDirectionLetter
