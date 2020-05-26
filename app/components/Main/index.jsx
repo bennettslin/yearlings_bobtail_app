@@ -5,6 +5,7 @@
 import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
+import { LYRIC_DYNAMIC_HEIGHT_SELECTOR } from '../../redux/mount/selectors'
 
 import CarouselSelect from './CarouselSelect'
 import CarouselToggle from './CarouselToggle'
@@ -22,10 +23,7 @@ import ShelfRight from './ShelfRight'
 import { getMainHeight } from './helper'
 
 const mapStateToProps = ({
-    mountStore: {
-        canCarouselMount,
-        lyricDynamicHeight
-    },
+    mountStore: { canCarouselMount },
     responsiveStore: {
         isHeightlessLyric,
         menuHeight
@@ -33,7 +31,6 @@ const mapStateToProps = ({
     viewportStore: { isDesktopWidth }
 }) => ({
     canCarouselMount,
-    lyricDynamicHeight,
     isHeightlessLyric,
     menuHeight,
     isDesktopWidth
@@ -41,13 +38,13 @@ const mapStateToProps = ({
 
 const Main = () => {
     const {
+            // TODO: Get these from selectors.
             canCarouselMount,
-            lyricDynamicHeight,
             isHeightlessLyric,
             menuHeight,
             isDesktopWidth
-        // TODO: Get these from selectors.
         } = useSelector(mapStateToProps),
+        lyricDynamicHeight = useSelector(LYRIC_DYNAMIC_HEIGHT_SELECTOR),
 
         // TODO: Make this a selector.
         mainHeight = getMainHeight({

@@ -6,6 +6,7 @@ import {
     updateVerseBarsStore,
     resetVerseBarsQueue
 } from '../../redux/verseBars/action'
+import { LYRIC_DYNAMIC_HEIGHT_SELECTOR } from '../../redux/mount/selectors'
 
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'
@@ -175,49 +176,52 @@ class VerseBarHandler extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    verseBarsStore: {
+const mapStateToProps = (state) => {
+    const {
+            verseBarsStore: {
+                queuedDetermineVerseBars,
+                queuedVerseBarsTimeout
+            },
+            viewportStore: {
+                isDesktopWidth,
+                windowHeight
+            },
+            mountStore: { canSliderMount },
+            responsiveStore: {
+                isLyricExpandable,
+                isHeightlessLyric,
+                menuHeight
+            },
+            toggleStore: { isLyricExpanded },
+            verseBarsStore: {
+                isVerseBarAbove,
+                isVerseBarBelow
+            },
+            selectedStore: { selectedVerseIndex },
+            activatedStore: { activatedVerseIndex },
+            sliderStore: { sliderVerseIndex }
+        } = state,
+
+        lyricDynamicHeight = LYRIC_DYNAMIC_HEIGHT_SELECTOR(state)
+
+    return {
         queuedDetermineVerseBars,
-        queuedVerseBarsTimeout
-    },
-    viewportStore: {
-        isDesktopWidth,
-        windowHeight
-    },
-    mountStore: {
-        canSliderMount,
-        lyricDynamicHeight
-    },
-    responsiveStore: {
+        queuedVerseBarsTimeout,
         isLyricExpandable,
-        isHeightlessLyric,
-        menuHeight
-    },
-    toggleStore: { isLyricExpanded },
-    verseBarsStore: {
+        isDesktopWidth,
+        windowHeight,
+        canSliderMount,
+        isLyricExpanded,
+        lyricDynamicHeight,
         isVerseBarAbove,
-        isVerseBarBelow
-    },
-    selectedStore: { selectedVerseIndex },
-    activatedStore: { activatedVerseIndex },
-    sliderStore: { sliderVerseIndex }
-}) => ({
-    queuedDetermineVerseBars,
-    queuedVerseBarsTimeout,
-    isLyricExpandable,
-    isDesktopWidth,
-    windowHeight,
-    canSliderMount,
-    isLyricExpanded,
-    lyricDynamicHeight,
-    isVerseBarAbove,
-    isVerseBarBelow,
-    isHeightlessLyric,
-    menuHeight,
-    selectedVerseIndex,
-    activatedVerseIndex,
-    sliderVerseIndex
-})
+        isVerseBarBelow,
+        isHeightlessLyric,
+        menuHeight,
+        selectedVerseIndex,
+        activatedVerseIndex,
+        sliderVerseIndex
+    }
+}
 
 export default connect(
     mapStateToProps,

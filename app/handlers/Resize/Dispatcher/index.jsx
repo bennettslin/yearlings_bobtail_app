@@ -18,8 +18,7 @@ import { getIsHeightlessLyric } from '../../../helpers/resize/hidden'
 import {
     getCanCarouselMount,
     getCanScoreMount,
-    getCanSliderMount,
-    getLyricDynamicHeight
+    getCanSliderMount
 } from '../../../helpers/resize/mount'
 import {
     getShowShrunkNavIcon,
@@ -152,15 +151,7 @@ class ResizeDispatcher extends PureComponent {
         this.props.updateMountStore({
             canCarouselMount,
             canScoreMount: getCanScoreMount(deviceWidthIndex),
-            canSliderMount: getCanSliderMount(deviceWidthIndex),
-            lyricDynamicHeight: getLyricDynamicHeight({
-                canCarouselMount,
-                deviceWidthIndex,
-                windowHeight,
-                stageHeight,
-                isHeightlessLyric,
-                menuHeight
-            })
+            canSliderMount: getCanSliderMount(deviceWidthIndex)
         })
 
         this._updateProsceniumTheatreStore({

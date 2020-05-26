@@ -1,7 +1,8 @@
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
+import { LYRIC_DYNAMIC_HEIGHT_SELECTOR } from '../../redux/mount/selectors'
 
 import Lyric from '../Lyric'
 import OverviewPopup from '../Popups/Overview'
@@ -14,33 +15,32 @@ const mapStateToProps = ({
         menuHeight
     },
     toggleStore: { isLyricExpanded },
-    mountStore: { lyricDynamicHeight },
     lyricStore: { isLyricLogue }
 }) => ({
     isHeightlessLyric,
     menuHeight,
-    lyricDynamicHeight,
     isLyricExpanded,
     isLyricLogue
 })
 
-const LyricOverview = ({
-    isLyricExpanded,
-    lyricDynamicHeight,
-    isLyricLogue,
-    isHeightlessLyric,
-    menuHeight,
-    setLyricFocusElement
+const LyricOverview = ({ setLyricFocusElement }) => {
+    const {
+            // TODO: Get these from selectors.
+            isLyricExpanded,
+            isLyricLogue,
+            isHeightlessLyric,
+            menuHeight
+        } = useSelector(mapStateToProps),
+        lyricDynamicHeight = useSelector(LYRIC_DYNAMIC_HEIGHT_SELECTOR),
 
-}) => {
-    // TODO: Make this a selector.
-    const lyricOverviewHeight = getLyricOverviewHeight({
-        isLyricExpanded,
-        lyricDynamicHeight,
-        isLyricLogue,
-        isHeightlessLyric,
-        menuHeight
-    })
+        // TODO: Make this a selector.
+        lyricOverviewHeight = getLyricOverviewHeight({
+            isLyricExpanded,
+            lyricDynamicHeight,
+            isLyricLogue,
+            isHeightlessLyric,
+            menuHeight
+        })
 
     return (
         <div
@@ -64,17 +64,9 @@ const LyricOverview = ({
 }
 
 const propTypes = {
-    // Through Redux.
-    lyricDynamicHeight: PropTypes.number.isRequired,
-    isHeightlessLyric: PropTypes.bool.isRequired,
-    menuHeight: PropTypes.number.isRequired,
-    isLyricExpanded: PropTypes.bool.isRequired,
-    isLyricLogue: PropTypes.bool.isRequired,
-
-    // From parent.
     setLyricFocusElement: PropTypes.func.isRequired
 }
 
 LyricOverview.propTypes = propTypes
 
-export default connect(mapStateToProps)(memo(LyricOverview))
+export default LyricOverview
