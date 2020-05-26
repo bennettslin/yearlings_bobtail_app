@@ -1,14 +1,18 @@
 export default [
     /* Weekend work. */
     {
-        taskName: `Move to Gatsby, get static HTML.`,
-        workedHours: 12,
-        neededHours: 30
+        taskName: `Post-Gatsby fixes..`,
+        workedHours: 0,
+        neededHours: 20
     },
     {
         taskName: `Link positioning for Bobtail Yearlings website is wonky in iOS.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Post-Gatsby refactoring.`,
+        workedHours: 10
     },
 
     /* Morning time. */

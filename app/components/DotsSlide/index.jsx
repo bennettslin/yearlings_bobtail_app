@@ -15,15 +15,17 @@ import { getDotKeysFromBitNumber } from '../../helpers/dot'
 import { IS_TOUCH_SUPPORTED } from '../../constants/device'
 import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
 
-const mapStateToProps = ({
-    accessStore: {
-        isAccessOn,
-        accessedDotIndex
-    },
-    toggleStore: { isDotsSlideShown },
-    dotsStore: { dotsBitNumber },
-    dotsSlideStore: { dotsSlideBitNumber }
-}) => {
+const mapStateToProps = state => {
+    const {
+        accessStore: {
+            isAccessOn,
+            accessedDotIndex
+        },
+        toggleStore: { isDotsSlideShown },
+        dotsStore: { dotsBitNumber },
+        dotsSlideStore: { dotsSlideBitNumber }
+    } = state
+
     return {
         accessedDotIndex,
         isAccessOn,

@@ -4718,6 +4718,10 @@ export default [
         workedHours: 2
     },
     {
+        taskName: `Move to Gatsby.`,
+        workedHours: 12
+    },
+    {
         taskName: `Minify internal stylesheets.`,
         workedHours: 1
     },
