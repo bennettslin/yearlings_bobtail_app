@@ -20,10 +20,7 @@ import {
     getCanScoreMount,
     getCanSliderMount
 } from '../../../helpers/resize/mount'
-import {
-    getShowShrunkNavIcon,
-    getShowSingleNavBook
-} from '../../../helpers/resize/nav'
+import { getShowSingleNavBook } from '../../../helpers/resize/nav'
 import { getProsceniumDimensionCoordinates } from '../../../helpers/resize/proscenium'
 import {
     getIsLyricExpandable,
@@ -230,10 +227,6 @@ class ResizeDispatcher extends PureComponent {
             isHeightlessLyric,
             isTwoRowMenu,
             menuHeight,
-            showShrunkNavIcon: getShowShrunkNavIcon({
-                deviceWidthIndex,
-                windowWidth
-            }),
             showSingleNavBook: getShowSingleNavBook({
                 deviceWidthIndex,
                 windowWidth

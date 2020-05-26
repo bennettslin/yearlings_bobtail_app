@@ -3,6 +3,10 @@ import {
     getIsSmallBannerText
 } from '../../helpers/resize/responsive'
 import { getIsMobileWiki } from '../../helpers/resize/wiki'
+import {
+    getShowShrunkNavIcon,
+    getShowSingleNavBook
+} from '../../helpers/resize/nav'
 
 export const MENU_HEIGHT_SELECTOR =
     ({ responsiveStore: { menuHeight } }) => menuHeight
@@ -24,3 +28,23 @@ export const IS_LYRIC_EXPANDABLE_SELECTOR = ({
 export const IS_SMALL_BANNER_TEXT_SELECTOR = ({
     viewportStore: { windowWidth }
 }) => getIsSmallBannerText(windowWidth)
+
+export const SHOW_SHRUNK_NAV_ICON_SELECTOR = ({
+    viewportStore: {
+        deviceWidthIndex,
+        windowWidth
+    }
+}) => getShowShrunkNavIcon({
+    deviceWidthIndex,
+    windowWidth
+})
+
+export const SHOW_SINGLE_NAV_BOOK_SELECTOR = ({
+    viewportStore: {
+        deviceWidthIndex,
+        windowWidth
+    }
+}) => getShowSingleNavBook({
+    deviceWidthIndex,
+    windowWidth
+})

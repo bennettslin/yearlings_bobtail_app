@@ -3,7 +3,10 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getSingleShownEarColumnKey } from './helper'
-import { IS_LYRIC_EXPANDABLE_SELECTOR } from '../../redux/responsive/selectors'
+import {
+    IS_LYRIC_EXPANDABLE_SELECTOR,
+    SHOW_SHRUNK_NAV_ICON_SELECTOR
+} from '../../redux/responsive/selectors'
 
 const ResponsiveWrapper = ({ children }) => {
     const {
@@ -11,10 +14,10 @@ const ResponsiveWrapper = ({ children }) => {
             isCarouselNavShowable,
             isTipsShowable,
             isEarShown,
-            isHeightlessLyric,
-            showShrunkNavIcon
+            isHeightlessLyric
         } = useSelector(mapStateToProps),
         isLyricExpandable = useSelector(IS_LYRIC_EXPANDABLE_SELECTOR),
+        showShrunkNavIcon = useSelector(SHOW_SHRUNK_NAV_ICON_SELECTOR),
         singleShownEarColumnKey = getSingleShownEarColumnKey({
             isEarShown,
             earColumnIndex
@@ -62,16 +65,14 @@ const mapStateToProps = ({
         isEarShown
     },
     responsiveStore: {
-        isHeightlessLyric,
-        showShrunkNavIcon
+        isHeightlessLyric
     }
 }) => ({
     earColumnIndex,
     isCarouselNavShowable,
     isTipsShowable,
     isEarShown,
-    isHeightlessLyric,
-    showShrunkNavIcon
+    isHeightlessLyric
 })
 
 ResponsiveWrapper.propTypes = {
