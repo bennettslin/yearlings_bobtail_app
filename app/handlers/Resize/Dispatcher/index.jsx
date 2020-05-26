@@ -28,8 +28,7 @@ import { getProsceniumDimensionCoordinates } from '../../../helpers/resize/prosc
 import {
     getIsLyricExpandable,
     getIsTwoRowMenu,
-    getMenuHeight,
-    getIsSmallBannerText
+    getMenuHeight
 } from '../../../helpers/resize/responsive'
 import { getCeilingFloorHeight } from '../../../helpers/resize/theatre'
 import { getStageDimensionCoordinates } from '../../../helpers/resize/stage'
@@ -239,8 +238,7 @@ class ResizeDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowWidth
             }),
-            isLyricExpandable: getIsLyricExpandable(deviceWidthIndex),
-            isSmallBannerText: getIsSmallBannerText(windowWidth)
+            isLyricExpandable: getIsLyricExpandable(deviceWidthIndex)
         })
     }
 

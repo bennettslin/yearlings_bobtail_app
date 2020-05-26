@@ -17,39 +17,44 @@ import {
     getDurationForSong,
     getStartTimeForVerse
 } from '../../../album/api/time'
-
+import { IS_SMALL_BANNER_TEXT_SELECTOR } from '../../../redux/responsive/selectors'
 import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
 import { populateRefs } from '../../../helpers/ref'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 
-const mapStateToProps = ({
-    audioStore: { isPlaying },
-    bannerStore: {
+const mapStateToProps = (state) => {
+    const {
+            audioStore: { isPlaying },
+            bannerStore: {
+                isBannerHovering,
+                bannerHoverVerseIndex,
+                bannerHoverTime
+            },
+            selectedStore: {
+                isSelectedLogue,
+                selectedSongIndex,
+                selectedTime
+            },
+            activatedStore: { isActivated },
+            sliderStore: { isSliderMoving }
+        } = state,
+
+        isSmallBannerText = IS_SMALL_BANNER_TEXT_SELECTOR(state)
+
+    return {
+        isPlaying,
         isBannerHovering,
         bannerHoverVerseIndex,
-        bannerHoverTime
-    },
-    responsiveStore: { isSmallBannerText },
-    selectedStore: {
+        bannerHoverTime,
+        isSmallBannerText,
         isSelectedLogue,
         selectedSongIndex,
-        selectedTime
-    },
-    activatedStore: { isActivated },
-    sliderStore: { isSliderMoving }
-}) => ({
-    isPlaying,
-    isBannerHovering,
-    bannerHoverVerseIndex,
-    bannerHoverTime,
-    isSmallBannerText,
-    isSelectedLogue,
-    selectedSongIndex,
-    selectedTime,
-    isActivated,
-    isSliderMoving
-})
+        selectedTime,
+        isActivated,
+        isSliderMoving
+    }
+}
 
 class SongBanner extends PureComponent {
 
