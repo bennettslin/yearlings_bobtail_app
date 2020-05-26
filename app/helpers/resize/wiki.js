@@ -14,8 +14,6 @@ export const getIsMobileWiki = ({
 
     } else {
         // Wikipedia in mobile seems to max out at 892px.
-        const isMobileWiki = windowWidth - WIKI_SIDE_PADDING_TOTAL < 892
-
-        return isMobileWiki
+        return windowWidth - WIKI_SIDE_PADDING_TOTAL < 892
     }
 }

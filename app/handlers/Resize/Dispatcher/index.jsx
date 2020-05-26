@@ -32,7 +32,6 @@ import {
     getIsSmallBannerText
 } from '../../../helpers/resize/responsive'
 import { getCeilingFloorHeight } from '../../../helpers/resize/theatre'
-import { getIsMobileWiki } from '../../../helpers/resize/wiki'
 import { getStageDimensionCoordinates } from '../../../helpers/resize/stage'
 
 class ResizeDispatcher extends PureComponent {
@@ -232,10 +231,6 @@ class ResizeDispatcher extends PureComponent {
             isHeightlessLyric,
             isTwoRowMenu,
             menuHeight,
-            isMobileWiki: getIsMobileWiki({
-                deviceWidthIndex,
-                windowWidth
-            }),
             showShrunkNavIcon: getShowShrunkNavIcon({
                 deviceWidthIndex,
                 windowWidth

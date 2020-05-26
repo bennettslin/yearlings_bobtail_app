@@ -2,14 +2,15 @@
 
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { IS_MOBILE_WIKI_SELECTOR } from '../../../redux/responsive/selectors'
 import { updateSessionStore } from '../../../redux/session/action'
 import { getWikiUrl } from './helper'
 
 const WikiListener = () => {
     const
         dispatch = useDispatch(),
+        isMobileWiki = useSelector(IS_MOBILE_WIKI_SELECTOR),
         {
-            isMobileWiki,
             selectedSongIndex,
             selectedWikiIndex,
             selectedAnnotationIndex,
@@ -32,7 +33,6 @@ const WikiListener = () => {
 }
 
 const mapStateToProps = ({
-    responsiveStore: { isMobileWiki },
     selectedStore: {
         selectedAnnotationIndex,
         selectedSongIndex
@@ -42,7 +42,6 @@ const mapStateToProps = ({
         carouselAnnotationIndex
     }
 }) => ({
-    isMobileWiki,
     selectedSongIndex,
     selectedWikiIndex,
     selectedAnnotationIndex,

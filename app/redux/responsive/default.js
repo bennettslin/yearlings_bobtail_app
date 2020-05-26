@@ -9,7 +9,6 @@ import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
 } from '../../helpers/resize/nav'
-import { getIsMobileWiki } from '../../helpers/resize/wiki'
 import {
     INITIAL_WINDOW_WIDTH,
     INITIAL_WINDOW_HEIGHT,
@@ -33,10 +32,6 @@ export const RESPONSIVE_DEFAULTS = {
     isHeightlessLyric: IS_INITIAL_HEIGHTLESS_LYRIC,
     isTwoRowMenu: IS_INITIAL_TWO_ROW_MENU,
     menuHeight: INITIAL_MENU_HEIGHT,
-    isMobileWiki: getIsMobileWiki({
-        deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX,
-        windowWidth: INITIAL_WINDOW_WIDTH
-    }),
     showShrunkNavIcon: getShowShrunkNavIcon({
         deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX,
         windowWidth: INITIAL_WINDOW_WIDTH
