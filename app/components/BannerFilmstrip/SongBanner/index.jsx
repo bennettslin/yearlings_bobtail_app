@@ -23,7 +23,7 @@ import { populateRefs } from '../../../helpers/ref'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const {
             audioStore: { isPlaying },
             bannerStore: {
@@ -39,7 +39,6 @@ const mapStateToProps = (state) => {
             activatedStore: { isActivated },
             sliderStore: { isSliderMoving }
         } = state,
-
         isSmallBannerText = IS_SMALL_BANNER_TEXT_SELECTOR(state)
 
     return {

@@ -177,7 +177,7 @@ class VerseBarHandler extends PureComponent {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const {
             verseBarsStore: {
                 queuedDetermineVerseBars,
@@ -201,7 +201,6 @@ const mapStateToProps = (state) => {
             activatedStore: { activatedVerseIndex },
             sliderStore: { sliderVerseIndex }
         } = state,
-
         isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
         lyricDynamicHeight = LYRIC_DYNAMIC_HEIGHT_SELECTOR(state)
 

@@ -4,16 +4,24 @@
 * Wires for bottom bubble above wires for top bubble. Happens in Chrome now.
 * PT Sans Italic is small?
 
+# Brainless JS tasks
+* Change all mapStateToProps to spread in body
+* Make placeholder selectors for all props
+* Change all mapStateToProps to grab from selectors
+* Ensure all selectors only grab their own value from store, any other value must come from another selector
+
+# Brainless CSS tasks
+* Top level components import own styles
+* Child components also import own styles
+
 # Easy reduction tasks
 * Internal stylesheet fixes
-* Top level components import own styles
-    * Child components also import own styles
 * Simplify Anchor for social media anchors
 * Listeners and Main components know to render themselves
 * Mount, responsive, proscenium, and theatre values can just be aggregate selectors. Basically, get rid of everything in window that's not the window width and height. Replace in map state to props first.
 * Also transient store.
-* Also, all the listeners.
-* Also, all the dispatchers.
+* Also, the listeners.
+* Also, the dispatchers?
 * Move Carousel to top level of Root
 
 # Ongoing Gatsby tasks

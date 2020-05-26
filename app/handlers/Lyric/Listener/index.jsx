@@ -83,7 +83,7 @@ class LyricListener extends PureComponent {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const {
             toggleStore: { isLyricExpanded },
             responsiveStore: { isHeightlessLyric },

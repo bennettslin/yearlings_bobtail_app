@@ -3,7 +3,6 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import {
     ENTER,
     ESCAPE,
@@ -19,6 +18,7 @@ import {
     NAVIGATION_DOWN_KEY,
     NAVIGATION_ESCAPE_KEY
 } from '../../../../constants/access'
+import './style'
 
 const propTypes = {
         accessKey: PropTypes.string

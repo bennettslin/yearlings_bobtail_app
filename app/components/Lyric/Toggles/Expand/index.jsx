@@ -14,7 +14,7 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../../../../constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from '../../../../constants/buttons'
 import { LYRIC_EXPAND } from '../../../../constants/tips'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const {
             responsiveStore: { isHeightlessLyric },
             toggleStore: { isLyricExpanded }

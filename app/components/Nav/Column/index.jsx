@@ -14,7 +14,7 @@ import NavBookToggle from './Book/Toggle'
 
 import { populateRefs } from '../../../helpers/ref'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const { sessionStore: { shownNavBookIndex } } = state,
         showSingleNavBook = SHOW_SINGLE_NAV_BOOK_SELECTOR(state)
 

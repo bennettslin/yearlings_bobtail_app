@@ -49,7 +49,7 @@ class LyricDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const {
             toggleStore: { isLyricExpanded },
             selectedStore: { isSelectedLogue }

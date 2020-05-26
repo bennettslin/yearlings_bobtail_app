@@ -49,7 +49,7 @@ class NavDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const {
             toggleStore: { isNavShown },
             sessionStore: { shownNavBookIndex }
