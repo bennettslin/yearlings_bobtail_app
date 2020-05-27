@@ -1,4 +1,4 @@
-// Deprecated.
+/* Used by legacy webpack setup. */
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
@@ -7,7 +7,6 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 
 // Import these here just to make them available.
-import './album'
 import './utils/logger'
 import './utils/analytics'
 
