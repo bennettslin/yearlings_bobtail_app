@@ -1,4 +1,4 @@
-/* Used by legacy webpack setup. */
+/** Used by legacy webpack setup. */
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux'

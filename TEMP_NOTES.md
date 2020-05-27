@@ -3,7 +3,7 @@
     * https://medium.com/@wolovim/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af
 * Revert code to use webpack again.
     * https://github.com/bennettslin/yearlings_bobtail_app/tree/master-before-gatsby
-    * Add back webpack config, package dependencies, root level rc files, fonts.
+    * fonts.
     * Update webpack config for new way of doing things.
     * Have notes to keep track of changes.
 * Update scripts that can deploy candidate, delivery, and production.
