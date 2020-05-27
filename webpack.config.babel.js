@@ -16,6 +16,9 @@ export default ({
     // Applies to both local development and staging release.
     staging: isStagingEnvironment = false
 } = {}) => {
+    // Dev sanity check.
+    album.build = 'compiled'
+
     return {
         entry: path.resolve(__dirname, 'app'),
         output: {
