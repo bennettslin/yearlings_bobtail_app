@@ -4,29 +4,26 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import AudioOptionDispatcher from '../../dispatchers/AudioOptionDispatcher'
 import PlayDispatcher from '../../dispatchers/PlayDispatcher'
 import SongDispatcher from '../../handlers/Song/Dispatcher'
 import Button from '../Button'
-
 import {
     AUDIO_PLAY_KEY,
     AUDIO_OPTIONS_TOGGLE_KEY,
     PREVIOUS_SONG_KEY,
     NEXT_SONG_KEY
 } from '../../constants/access'
-
 import {
     AUDIO_NEXT_BUTTON_KEY,
     AUDIO_OPTIONS_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
-
 import { getSongsAndLoguesCount } from '../../album/api/songs'
 import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThrough } from '../../helpers/player'
+import './style'
 
 const mapStateToProps = state => {
     const {

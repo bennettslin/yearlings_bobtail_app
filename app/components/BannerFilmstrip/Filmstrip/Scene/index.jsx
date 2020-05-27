@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import FilmstripCell from './Cell'
+import './style'
 
 class FilmstripScene extends PureComponent {
 

@@ -9,6 +9,7 @@ import {
     IS_ACTIVATED_SELECTOR,
     ACTIVATED_TIME_SELECTOR
 } from '../../../../redux/activated/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {

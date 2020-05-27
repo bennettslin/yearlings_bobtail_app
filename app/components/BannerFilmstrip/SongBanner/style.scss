@@ -1,7 +1,10 @@
-$padding__songBanner: $MARGIN_THIN * 2;
+@import '../../../scss/constants/border';
+@import '../../../scss/constants/colour';
+@import '../../../scss/constants/icon';
+@import '../../../scss/constants/shadow';
+@import '../../BannerFilmstrip/style';
 
-@import "./Timer/style";
-@import "./Title/style";
+$padding__songBanner: $MARGIN_THIN * 2;
 
 .SongBanner {
     display: flex;

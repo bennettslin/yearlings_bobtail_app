@@ -1,18 +1,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import Tracker from '../../../../Tracker'
-
-const propTypes = {
-    // From parent.
-    isOdd: PropTypes.bool.isRequired,
-    isActivatedScene: PropTypes.bool.isRequired,
-    isSliderScene: PropTypes.bool.isRequired,
-    isSelectedScene: PropTypes.bool.isRequired,
-    isAfterCursor: PropTypes.bool.isRequired,
-    cursorWidth: PropTypes.number
-}
+import './style'
 
 const FilmstripCell = ({
     isOdd,
@@ -59,6 +49,13 @@ const FilmstripCell = ({
     </div>
 )
 
-FilmstripCell.propTypes = propTypes
+FilmstripCell.propTypes = {
+    isOdd: PropTypes.bool.isRequired,
+    isActivatedScene: PropTypes.bool.isRequired,
+    isSliderScene: PropTypes.bool.isRequired,
+    isSelectedScene: PropTypes.bool.isRequired,
+    isAfterCursor: PropTypes.bool.isRequired,
+    cursorWidth: PropTypes.number
+}
 
 export default memo(FilmstripCell)

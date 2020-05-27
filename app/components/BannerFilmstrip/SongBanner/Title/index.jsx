@@ -4,8 +4,8 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import { getIndexedTitleForSong } from '../../../../album/api/songs'
+import './style'
 
 const mapStateToProps = state => {
     const {

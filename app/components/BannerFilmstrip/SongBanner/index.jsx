@@ -2,16 +2,12 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import { updateBannerStore } from '../../../redux/banner/action'
-
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
-
 import Tracker from '../../Tracker'
 import SongBannerTimer from './Timer'
 import SongBannerTitle from './Title'
-
 import { getSongIsLogue } from '../../../album/api/songs'
 import {
     getDurationForSong,
@@ -23,6 +19,7 @@ import { populateRefs } from '../../../helpers/ref'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { IS_ACTIVATED_SELECTOR } from '../../../redux/activated/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {

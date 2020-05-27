@@ -1,3 +1,9 @@
+@import '../../../../../scss/constants/border';
+@import '../../../../../scss/constants/colour';
+@import '../../../../../scss/constants/shadow';
+@import '../../../../../scss/constants/transition';
+@import '../../../../BannerFilmstrip/style';
+
 .FilmstripCell {
     position: relative;
     width: 100%;

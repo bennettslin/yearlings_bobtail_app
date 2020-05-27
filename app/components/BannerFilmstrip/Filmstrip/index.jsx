@@ -21,6 +21,7 @@ import {
 } from '../../../constants/access'
 import { FILMSTRIP } from '../../../constants/tips'
 import { ACTIVATED_SCENE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {
