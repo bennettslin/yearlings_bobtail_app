@@ -1,6 +1,10 @@
 import { createSelector } from 'reselect'
-import { IS_MOBILE_WIKI_SELECTOR } from '../responsive/selectors'
 import { getWikiUrl } from '../../helpers/wiki'
+import { IS_MOBILE_WIKI_SELECTOR } from '../responsive/selectors'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_ANNOTATION_INDEX_SELECTOR
+} from '../selected/selectors'
 
 export const SELECTED_WIKI_INDEX_SELECTOR = (
     { sessionStore: { selectedWikiIndex } }
@@ -11,35 +15,22 @@ export const CAROUSEL_ANNOTATION_INDEX_SELECTOR = (
 ) => carouselAnnotationIndex
 
 export const SELECTED_WIKI_URL_SELECTOR = createSelector(
+    SELECTED_WIKI_INDEX_SELECTOR,
+    CAROUSEL_ANNOTATION_INDEX_SELECTOR,
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_ANNOTATION_INDEX_SELECTOR,
     IS_MOBILE_WIKI_SELECTOR,
-    ({
-        selectedStore: {
-            selectedAnnotationIndex,
-            selectedSongIndex
-        },
-        sessionStore: {
-            selectedWikiIndex,
-            carouselAnnotationIndex
-        }
-    }) => ({
-        selectedSongIndex,
-        selectedWikiIndex,
-        selectedAnnotationIndex,
-        carouselAnnotationIndex
-    }),
     (
-        isMobileWiki,
-        {
-            selectedSongIndex,
-            selectedWikiIndex,
-            selectedAnnotationIndex,
-            carouselAnnotationIndex
-        }
-    ) => getWikiUrl({
-        selectedSongIndex,
         selectedWikiIndex,
-        selectedAnnotationIndex,
         carouselAnnotationIndex,
+        selectedSongIndex,
+        selectedAnnotationIndex,
+        isMobileWiki
+    ) => getWikiUrl({
+        selectedWikiIndex,
+        carouselAnnotationIndex,
+        selectedSongIndex,
+        selectedAnnotationIndex,
         isMobileWiki
     })
 )

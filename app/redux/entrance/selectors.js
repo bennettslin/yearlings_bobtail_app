@@ -69,3 +69,17 @@ export const DID_CURTAIN_ENTER_SELECTOR = (
 export const IS_SONG_SELECT_IN_FLUX_SELECTOR = (
     { entranceStore: { isSongSelectInFlux } }
 ) => isSongSelectInFlux
+
+// import {
+//     IS_PLAYING_SELECTOR,
+//     QUEUED_PLAY_FROM_LOGUE_SELECTOR,
+//     QUEUED_PLAY_SONG_INDEX_SELECTOR,
+//     QUEUED_PLAY_VERSE_INDEX_SELECTOR,
+//     QUEUED_TOGGLE_PLAY_SELECTOR,
+// } from '../../../redux/entrance/selectors'
+
+// isPlaying = IS_PLAYING_SELECTOR(state),
+// queuedPlayFromLogue = QUEUED_PLAY_FROM_LOGUE_SELECTOR(state),
+// queuedPlaySongIndex = QUEUED_PLAY_SONG_INDEX_SELECTOR(state),
+// queuedPlayVerseIndex = QUEUED_PLAY_VERSE_INDEX_SELECTOR(state),
+// queuedTogglePlay = QUEUED_TOGGLE_PLAY_SELECTOR(state)

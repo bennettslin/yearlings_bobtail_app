@@ -3,6 +3,17 @@ import {
     getLyricDynamicHeight,
     getLyricOverviewHeight
 } from '../../helpers/resize/mount'
+import { IS_LYRIC_LOGUE_SELECTOR } from '../lyric/selectors'
+import {
+    IS_HEIGHTLESS_LYRIC_SELECTOR,
+    MENU_HEIGHT_SELECTOR
+} from '../responsive/selectors'
+import { STAGE_HEIGHT_SELECTOR } from '../stage/selectors'
+import { IS_LYRIC_EXPANDED_SELECTOR } from '../toggle/selectors'
+import {
+    DEVICE_WIDTH_INDEX_SELECTOR,
+    WINDOW_HEIGHT_SELECTOR
+} from '../viewport/selectors'
 
 export const CAN_CAROUSEL_MOUNT_SELECTOR = (
     { mountStore: { canCarouselMount } }
@@ -16,56 +27,47 @@ export const CAN_SLIDER_MOUNT_SELECTOR = (
     { mountStore: { canSliderMount } }
 ) => canSliderMount
 
-export const LYRIC_DYNAMIC_HEIGHT_SELECTOR = ({
-    mountStore: { canCarouselMount },
-    responsiveStore: {
+export const LYRIC_DYNAMIC_HEIGHT_SELECTOR = createSelector(
+    CAN_CAROUSEL_MOUNT_SELECTOR,
+    IS_HEIGHTLESS_LYRIC_SELECTOR,
+    MENU_HEIGHT_SELECTOR,
+    STAGE_HEIGHT_SELECTOR,
+    DEVICE_WIDTH_INDEX_SELECTOR,
+    WINDOW_HEIGHT_SELECTOR,
+    (
+        canCarouselMount,
         isHeightlessLyric,
-        menuHeight
-    },
-    stageStore: { stageHeight },
-    viewportStore: {
+        menuHeight,
+        stageHeight,
         deviceWidthIndex,
         windowHeight
-    }
-
-}) => getLyricDynamicHeight({
-    canCarouselMount,
-    deviceWidthIndex,
-    windowHeight,
-    stageHeight,
-    isHeightlessLyric,
-    menuHeight
-})
+    ) => getLyricDynamicHeight({
+        canCarouselMount,
+        isHeightlessLyric,
+        menuHeight,
+        stageHeight,
+        deviceWidthIndex,
+        windowHeight
+    })
+)
 
 export const LYRIC_OVERVIEW_HEIGHT_STYLE_SELECTOR = createSelector(
     LYRIC_DYNAMIC_HEIGHT_SELECTOR,
-    ({
-        responsiveStore: {
-            isHeightlessLyric,
-            menuHeight
-        },
-        toggleStore: { isLyricExpanded },
-        lyricStore: { isLyricLogue }
-
-    }) => ({
-        isLyricExpanded,
-        isLyricLogue,
-        isHeightlessLyric,
-        menuHeight
-    }),
+    IS_LYRIC_LOGUE_SELECTOR,
+    IS_HEIGHTLESS_LYRIC_SELECTOR,
+    MENU_HEIGHT_SELECTOR,
+    IS_LYRIC_EXPANDED_SELECTOR,
     (
         lyricDynamicHeight,
-        {
-            isLyricExpanded,
-            isLyricLogue,
-            isHeightlessLyric,
-            menuHeight
-        }
+        isLyricLogue,
+        isHeightlessLyric,
+        menuHeight,
+        isLyricExpanded
     ) => getLyricOverviewHeight({
-        isLyricExpanded,
         lyricDynamicHeight,
         isLyricLogue,
         isHeightlessLyric,
-        menuHeight
+        menuHeight,
+        isLyricExpanded
     })
 )
