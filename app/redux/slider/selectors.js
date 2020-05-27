@@ -1,27 +1,27 @@
 export const SLIDER_LEFT_SELECTOR = (
-    { selectedStore: { sliderLeft } }
+    { sliderStore: { sliderLeft } }
 ) => sliderLeft
 
 export const SLIDER_WIDTH_SELECTOR = (
-    { selectedStore: { sliderWidth } }
+    { sliderStore: { sliderWidth } }
 ) => sliderWidth
 
 export const IS_SLIDER_MOVING_SELECTOR = (
-    { selectedStore: { isSliderMoving } }
+    { sliderStore: { isSliderMoving } }
 ) => isSliderMoving
 
 export const IS_SLIDER_TOUCHED_SELECTOR = (
-    { selectedStore: { isSliderTouched } }
+    { sliderStore: { isSliderTouched } }
 ) => isSliderTouched
 
 export const SLIDER_VERSE_INDEX_SELECTOR = (
-    { selectedStore: { sliderVerseIndex } }
+    { sliderStore: { sliderVerseIndex } }
 ) => sliderVerseIndex
 
 export const SLIDER_SCENE_INDEX_SELECTOR = (
-    { selectedStore: { sliderSceneIndex } }
+    { sliderStore: { sliderSceneIndex } }
 ) => sliderSceneIndex
 
 export const SLIDER_TIME_SELECTOR = (
-    { selectedStore: { sliderTime } }
+    { sliderStore: { sliderTime } }
 ) => sliderTime
