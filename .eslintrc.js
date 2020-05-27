@@ -24,7 +24,7 @@ module.exports = {
         "__dirname": true,
         "ALBUM": true,
         "BUILD_DATE_TIME": true,
-        "IS_DELIVERY": true,
+        "IS_STAGING": true,
         "IS_LOCAL": true,
         "dataLayer": true,
         "expect": true,

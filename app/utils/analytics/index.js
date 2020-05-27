@@ -1,6 +1,6 @@
 import { getWindow } from '../../utils/browser'
 import {
-    GA_ACCOUNT__DELIVERY,
+    GA_ACCOUNT__STAGING,
     GA_ACCOUNT__PRODUCTION
 } from '../../constants/analytics'
 
@@ -9,8 +9,8 @@ const isGaUndefined = () => (
 )
 
 const createGa = () => {
-    const gaAccount = IS_DELIVERY ?
-        GA_ACCOUNT__DELIVERY :
+    const gaAccount = IS_STAGING ?
+        GA_ACCOUNT__STAGING :
         GA_ACCOUNT__PRODUCTION
 
     function gtag() {

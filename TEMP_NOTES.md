@@ -1,13 +1,14 @@
 # Immediate tasks needed
 * Have separate candidate environment.
     * https://medium.com/@wolovim/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af
-* Rename environment variable as staging environment, to include both candidate and delivery.
-* Deploy gatsby to candidate, webpack to delivery for now.
+* Move delivery and candidate to different ports.
+* Deploy gatsby to candidate, webpack to delivery.
 
-# Bugs
+# Bugs while production hasn't changed.
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small?
 * GA not initialising again?
+* Switching between songs in local is slow, not as slow in staging
 
 # Audit
 * Make sure all presences are properly behind or in front as appropriate.
@@ -45,6 +46,3 @@
     * Heightless and zoom show the same thing.
     * Always render Carousel, even in mobile. Show carousel if heightless.
     * Only About, Carousel, and Lyric need to render for SEO.
-
-# Ongoing weirdness
-* Switching between songs in local is slow, not as slow in staging

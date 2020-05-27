@@ -17,7 +17,7 @@ import {
 } from './helpers/logs'
 
 // Allow access to album in local delivery.
-if (IS_DELIVERY) {
+if (IS_STAGING) {
     global.album = album
     global.a = (songIndex = INITIAL_SONG_INDEX) => (
         album.songs[songIndex]

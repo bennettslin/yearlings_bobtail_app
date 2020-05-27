@@ -1,6 +1,6 @@
-import { getIsDeliveryEnvironment } from './app/utils/server'
+import { getIsStagingEnvironment } from './app/utils/server'
 import {
-    GA_ACCOUNT__DELIVERY,
+    GA_ACCOUNT__STAGING,
     GA_ACCOUNT__PRODUCTION
 } from './app/constants/analytics'
 
@@ -19,8 +19,8 @@ export default {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: getIsDeliveryEnvironment() ?
-                    GA_ACCOUNT__DELIVERY :
+                trackingId: getIsStagingEnvironment() ?
+                    GA_ACCOUNT__STAGING :
                     GA_ACCOUNT__PRODUCTION
             }
         }

@@ -13,13 +13,13 @@ export default ({
     // Applies to just local development
     local: isLocalDevelopment = false,
 
-    // Applies to both local development and delivery release.
-    delivery: isDeliveryEnvironment = false
+    // Applies to both local development and staging release.
+    staging: isStagingEnvironment = false
 } = {}) => {
     return {
         entry: path.resolve(__dirname, 'app'),
         output: {
-            path: isDeliveryEnvironment ?
+            path: isStagingEnvironment ?
                 path.resolve(__dirname, 'build__delivery') :
                 path.resolve(__dirname, 'build'),
             filename: '[name]-[hash].js',
@@ -30,14 +30,14 @@ export default ({
         plugins: [
             // Define global constant at compile time.
             new webpack.DefinePlugin({
-                // Grab album from global env only when not running locally.
+                // Grab album from global env in staging and production.
                 ...!isLocalDevelopment && {
                     ALBUM: JSON.stringify(album)
                 },
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
                 ),
-                IS_DELIVERY: isDeliveryEnvironment,
+                IS_STAGING: isStagingEnvironment,
                 IS_LOCAL: isLocalDevelopment
             }),
             new HtmlWebpackPlugin({
@@ -58,8 +58,8 @@ export default ({
             // Import from files without specifying extensions.
             extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
             alias: {
-                // Allow admin routes only in delivery.
-                routes: isDeliveryEnvironment ?
+                // Allow admin routes only in local and staging.
+                routes: isStagingEnvironment ?
                     path.resolve(__dirname, './admin/routes') :
                     path.resolve(__dirname, './app/routes'),
                 // Grab data from admin folder in local development.
@@ -74,7 +74,7 @@ export default ({
                     test: /\.jsx?$/,
                     include: [
                         path.resolve(__dirname, './app'),
-                        ...isDeliveryEnvironment ? [path.resolve(__dirname, './admin')] : []
+                        ...isStagingEnvironment ? [path.resolve(__dirname, './admin')] : []
                     ],
                     enforce: 'pre',
                     loaders: [
@@ -87,7 +87,7 @@ export default ({
                     test: /\.scss$/,
                     include: [
                         path.resolve(__dirname, './app'),
-                        ...isDeliveryEnvironment ? [path.resolve(__dirname, './admin')] : []
+                        ...isStagingEnvironment ? [path.resolve(__dirname, './admin')] : []
                     ],
                     loaders: [
                         'style-loader',

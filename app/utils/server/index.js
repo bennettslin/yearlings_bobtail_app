@@ -5,6 +5,6 @@ export const getIsLocalDevelopment = () => (
     process.env.YB_ENV === 'local'
 )
 
-export const getIsDeliveryEnvironment = () => (
+export const getIsStagingEnvironment = () => (
     process.env.YB_ENV !== 'production'
 )

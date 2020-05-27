@@ -5,7 +5,7 @@ import album from './admin/data'
 
 import {
     getIsLocalDevelopment,
-    getIsDeliveryEnvironment
+    getIsStagingEnvironment
 } from './app/utils/server'
 
 export const onCreateWebpackConfig = ({ actions }) => {
@@ -16,14 +16,14 @@ export const onCreateWebpackConfig = ({ actions }) => {
         plugins: [
             // Define global constant at compile time.
             new webpack.DefinePlugin({
-                // Grab album from global env in delivery and production.
+                // Grab album from global env in staging and production.
                 ...!getIsLocalDevelopment() && {
                     ALBUM: JSON.stringify(album)
                 },
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
                 ),
-                IS_DELIVERY: getIsDeliveryEnvironment(),
+                IS_STAGING: getIsStagingEnvironment(),
                 IS_LOCAL: getIsLocalDevelopment()
             })
         ],
@@ -31,8 +31,8 @@ export const onCreateWebpackConfig = ({ actions }) => {
             // Import from files without specifying extensions.
             extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
             alias: {
-                // Allow admin routes only in delivery.
-                routes: getIsDeliveryEnvironment() ?
+                // Allow admin routes only in local and staging.
+                routes: getIsStagingEnvironment() ?
                     path.resolve(__dirname, './admin/routes') :
                     path.resolve(__dirname, './app/routes'),
                 // Grab data from admin folder in local development.
