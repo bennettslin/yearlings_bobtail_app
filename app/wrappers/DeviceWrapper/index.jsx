@@ -6,16 +6,23 @@ import cx from 'classnames'
 import { getIsTabletWidth } from '../../helpers/responsive'
 import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
+import {
+    CAN_CAROUSEL_MOUNT_SELECTOR,
+    CAN_SLIDER_MOUNT_SELECTOR
+} from '../../redux/mount/selectors'
+import {
+    DEVICE_WIDTH_INDEX_SELECTOR,
+    IS_PHONE_WIDTH_SELECTOR,
+    IS_DESKTOP_WIDTH_SELECTOR
+} from '../../redux/viewport/selectors'
 
 const DeviceWrapper = ({ children }) => {
     const
-        {
-            deviceWidthIndex,
-            isPhoneWidth,
-            isDesktopWidth,
-            canCarouselMount,
-            canSliderMount
-        } = useSelector(mapStateToProps),
+        deviceWidthIndex = useSelector(DEVICE_WIDTH_INDEX_SELECTOR),
+        isPhoneWidth = useSelector(IS_PHONE_WIDTH_SELECTOR),
+        isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
+        canCarouselMount = useSelector(CAN_CAROUSEL_MOUNT_SELECTOR),
+        canSliderMount = useSelector(CAN_SLIDER_MOUNT_SELECTOR),
 
         deviceWidthKey =
             DEVICE_WIDTH_CONFIGS[deviceWidthIndex] &&
@@ -53,28 +60,6 @@ const DeviceWrapper = ({ children }) => {
             {children}
         </div>
     )
-}
-
-const mapStateToProps = state => {
-    const {
-        viewportStore: {
-            deviceWidthIndex,
-            isPhoneWidth,
-            isDesktopWidth
-        },
-        mountStore: {
-            canCarouselMount,
-            canSliderMount
-        }
-    } = state
-
-    return {
-        deviceWidthIndex,
-        isPhoneWidth,
-        isDesktopWidth,
-        canCarouselMount,
-        canSliderMount
-    }
 }
 
 DeviceWrapper.propTypes = {

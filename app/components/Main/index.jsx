@@ -5,11 +5,8 @@
 import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { LYRIC_DYNAMIC_HEIGHT_SELECTOR } from '../../redux/mount/selectors'
-
 import CarouselSelect from './CarouselSelect'
 import CarouselToggle from './CarouselToggle'
-
 import ShelfLeft from './ShelfLeft'
 import Nav from '../Nav'
 import Carousel from '../Carousel'
@@ -19,35 +16,23 @@ import AnnotationPopup from '../Popups/Annotation'
 import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
 import ShelfRight from './ShelfRight'
-
 import { getMainHeight } from './helper'
-
-const mapStateToProps = state => {
-    const {
-        mountStore: { canCarouselMount },
-        responsiveStore: {
-            isHeightlessLyric,
-            menuHeight
-        },
-        viewportStore: { isDesktopWidth }
-    } = state
-
-    return {
-        canCarouselMount,
-        isHeightlessLyric,
-        menuHeight,
-        isDesktopWidth
-    }
-}
+import {
+    CAN_CAROUSEL_MOUNT_SELECTOR,
+    LYRIC_DYNAMIC_HEIGHT_SELECTOR
+} from '../../redux/mount/selectors'
+import {
+    IS_HEIGHTLESS_LYRIC_SELECTOR,
+    MENU_HEIGHT_SELECTOR
+} from '../../redux/responsive/selectors'
+import { IS_DESKTOP_WIDTH_SELECTOR } from '../../redux/viewport/selectors'
 
 const Main = () => {
-    const {
-            // TODO: Get these from selectors.
-            canCarouselMount,
-            isHeightlessLyric,
-            menuHeight,
-            isDesktopWidth
-        } = useSelector(mapStateToProps),
+    const
+        canCarouselMount = useSelector(CAN_CAROUSEL_MOUNT_SELECTOR),
+        isHeightlessLyric = useSelector(IS_HEIGHTLESS_LYRIC_SELECTOR),
+        menuHeight = useSelector(MENU_HEIGHT_SELECTOR),
+        isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
         lyricDynamicHeight = useSelector(LYRIC_DYNAMIC_HEIGHT_SELECTOR),
 
         // TODO: Make this a selector.

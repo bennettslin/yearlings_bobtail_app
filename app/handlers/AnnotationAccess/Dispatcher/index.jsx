@@ -6,10 +6,30 @@ import { connect } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
-
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { getAnnotationIndexForVerseIndex } from './helper'
+import { IS_EAR_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
+
+const mapStateToProps = state => {
+    const {
+            selectedStore: {
+                earColumnIndex,
+                selectedSongIndex,
+                selectedVerseIndex
+            },
+            dotsStore: { dotsBitNumber }
+        } = state,
+        isEarShown = IS_EAR_SHOWN_SELECTOR(state)
+
+    return {
+        selectedSongIndex,
+        selectedVerseIndex,
+        dotsBitNumber,
+        earColumnIndex,
+        isEarShown
+    }
+}
 
 class AnnotationAccessDispatcher extends PureComponent {
 
@@ -94,26 +114,6 @@ class AnnotationAccessDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: {
-            earColumnIndex,
-            selectedSongIndex,
-            selectedVerseIndex
-        },
-        dotsStore: { dotsBitNumber },
-        transientStore: { isEarShown }
-    } = state
-
-    return {
-        selectedSongIndex,
-        selectedVerseIndex,
-        dotsBitNumber,
-        earColumnIndex,
-        isEarShown
     }
 }
 

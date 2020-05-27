@@ -5,6 +5,8 @@
 * PT Sans Italic is small?
 
 # Brainless JS tasks
+* Change for components that already have useSelector(mapStateToProps)
+* Put all mapStateToProps at top
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.
 

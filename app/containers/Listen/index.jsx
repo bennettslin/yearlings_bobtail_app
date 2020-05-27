@@ -12,7 +12,6 @@ import AppLoadListener from '../../listeners/AppLoad'
 import AudioListener from '../../listeners/Audio'
 import CarouselNavListener from '../../handlers/CarouselNav/Listener'
 import DotsSlideListener from '../../handlers/DotsSlide/Listener'
-import DoublespeakerListener from '../../listeners/Doublespeaker'
 import LogueListener from '../../listeners/Logue'
 import LyricListener from '../../handlers/Lyric/Listener'
 import LyricIndicesListener from '../../listeners/LyricIndices'
@@ -53,7 +52,6 @@ const ListenContainer = () => {
             <AudioListener />
             <CarouselNavListener />
             <DotsSlideListener />
-            <DoublespeakerListener />
             <LogueListener />
             <LyricListener />
             <LyricIndicesListener />

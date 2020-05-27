@@ -9,20 +9,19 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import EarColumnDispatcher from '../../../../dispatchers/EarColumnDispatcher'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
-
 import { populateRefs } from '../../../../helpers/ref'
-
 import { LYRIC_COLUMN_TOGGLE_KEY } from '../../../../constants/access'
 import { LYRIC_EAR_BUTTON_KEY } from '../../../../constants/buttons'
 import { EAR_COLUMN_KEYS } from '../../../../constants/lyrics'
 import { DOUBLESPEAKER } from '../../../../constants/tips'
+import { IS_EAR_SHOWN_SELECTOR } from '../../../../redux/transient/selectors'
 
 const mapStateToProps = state => {
     const {
-        transientStore: { isEarShown },
-        selectedStore: { earColumnIndex },
-        viewportStore: { isDesktopWidth }
-    } = state
+            selectedStore: { earColumnIndex },
+            viewportStore: { isDesktopWidth }
+        } = state,
+        isEarShown = IS_EAR_SHOWN_SELECTOR(state)
 
     return {
         isEarShown,

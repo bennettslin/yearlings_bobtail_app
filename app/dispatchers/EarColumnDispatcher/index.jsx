@@ -3,8 +3,24 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import { updateSelectedStore } from '../../redux/selected/action'
+import { IS_EAR_SHOWN_SELECTOR } from '../../redux/transient/selectors'
+
+const mapStateToProps = state => {
+    const {
+            selectedStore: {
+                isSelectedLogue,
+                earColumnIndex
+            }
+        } = state,
+        isEarShown = IS_EAR_SHOWN_SELECTOR(state)
+
+    return {
+        isEarShown,
+        earColumnIndex,
+        isSelectedLogue
+    }
+}
 
 class EarColumnDispatcher extends PureComponent {
 
@@ -48,22 +64,6 @@ class EarColumnDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        transientStore: { isEarShown },
-        selectedStore: {
-            isSelectedLogue,
-            earColumnIndex
-        }
-    } = state
-
-    return {
-        isEarShown,
-        earColumnIndex,
-        isSelectedLogue
     }
 }
 

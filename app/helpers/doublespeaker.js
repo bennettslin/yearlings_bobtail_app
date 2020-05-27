@@ -1,10 +1,11 @@
-import { getEarStatusForSong } from '../../album/api/songs'
+import { getEarStatusForSong } from '../album/api/songs'
 import {
     getIsPhoneWidth,
     getIsTabletWidth,
     getIsMonitorWidth
-} from '../../helpers/responsive'
+} from './responsive'
 
+// FIXME: This can just get individual device widths directly.
 export const getIsDoublespeakerShown = ({
     deviceWidthIndex,
     songIndex
