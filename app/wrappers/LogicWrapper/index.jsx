@@ -8,6 +8,46 @@ import {
 } from '../../helpers/dot'
 import { getCursorIndex } from '../../helpers/verse'
 import { getStanzaIndexForVerse } from '../../album/api/verses'
+import {
+    IS_ACTIVATED_SELECTOR,
+    ACTIVATED_VERSE_INDEX_SELECTOR
+} from '../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            audioStore: { isPlaying },
+            dotsStore: { dotsBitNumber },
+            verseBarsStore: {
+                isVerseBarAbove,
+                isVerseBarBelow
+            },
+            lyricStore: {
+                isLyricLogue,
+                lyricSongIndex,
+                lyricVerseIndex
+            },
+            sliderStore: {
+                isSliderMoving,
+                sliderVerseIndex
+            }
+        } = state,
+        isActivated = IS_ACTIVATED_SELECTOR(state),
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
+
+    return {
+        isActivated,
+        activatedVerseIndex,
+        dotsBitNumber,
+        isPlaying,
+        isLyricLogue,
+        lyricSongIndex,
+        lyricVerseIndex,
+        isSliderMoving,
+        sliderVerseIndex,
+        isVerseBarAbove,
+        isVerseBarBelow
+    }
+}
 
 const LogicWrapper = ({ children }) => {
     const {
@@ -90,44 +130,6 @@ const LogicWrapper = ({ children }) => {
             {children}
         </div>
     )
-}
-
-const mapStateToProps = state => {
-    const {
-        activatedStore: {
-            isActivated,
-            activatedVerseIndex
-        },
-        audioStore: { isPlaying },
-        dotsStore: { dotsBitNumber },
-        verseBarsStore: {
-            isVerseBarAbove,
-            isVerseBarBelow
-        },
-        lyricStore: {
-            isLyricLogue,
-            lyricSongIndex,
-            lyricVerseIndex
-        },
-        sliderStore: {
-            isSliderMoving,
-            sliderVerseIndex
-        }
-    } = state
-
-    return {
-        isActivated,
-        activatedVerseIndex,
-        dotsBitNumber,
-        isPlaying,
-        isLyricLogue,
-        lyricSongIndex,
-        lyricVerseIndex,
-        isSliderMoving,
-        sliderVerseIndex,
-        isVerseBarAbove,
-        isVerseBarBelow
-    }
 }
 
 LogicWrapper.propTypes = {

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { IS_ACCESS_ON_SELECTOR } from '../../redux/access/selectors'
+import { IS_ACTIVATED_SELECTOR } from '../../redux/activated/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -13,10 +14,10 @@ const mapStateToProps = state => {
                 isDotsSlideShown,
                 isLyricExpanded
             },
-            lyricStore: { lyricAnnotationIndex },
-            activatedStore: { isActivated }
+            lyricStore: { lyricAnnotationIndex }
         } = state,
-        isAccessOn = IS_ACCESS_ON_SELECTOR(state)
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
+        isActivated = IS_ACTIVATED_SELECTOR(state)
 
     return {
         isAccessOn,

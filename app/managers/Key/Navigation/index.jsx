@@ -1,16 +1,44 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
 import NavNavigation from './Nav'
-
 import { populateRefs } from '../../../helpers/ref'
-
 import { ENTER } from '../../../constants/access'
+import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            toggleStore: {
+                isNavShown,
+                isDotsSlideShown,
+                isLyricExpanded,
+                isScoreShown
+            },
+            responsiveStore: { isHeightlessLyric },
+            selectedStore: {
+                selectedAnnotationIndex,
+                isSelectedLogue
+            },
+            sessionStore: { selectedWikiIndex }
+        } = state,
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
+
+    return {
+        isHeightlessLyric,
+        isLyricExpanded,
+        activatedVerseIndex,
+        isScoreShown,
+        selectedWikiIndex,
+        isSelectedLogue,
+        selectedAnnotationIndex,
+        isDotsSlideShown,
+        isNavShown
+    }
+}
 
 class NavigationManager extends PureComponent {
 
@@ -119,36 +147,6 @@ class NavigationManager extends PureComponent {
                 <VerseDispatcher {...{ getRefs: this._getRefs }} />
             </>
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        toggleStore: {
-            isNavShown,
-            isDotsSlideShown,
-            isLyricExpanded,
-            isScoreShown
-        },
-        responsiveStore: { isHeightlessLyric },
-        selectedStore: {
-            selectedAnnotationIndex,
-            isSelectedLogue
-        },
-        activatedStore: { activatedVerseIndex },
-        sessionStore: { selectedWikiIndex }
-    } = state
-
-    return {
-        isHeightlessLyric,
-        isLyricExpanded,
-        activatedVerseIndex,
-        isScoreShown,
-        selectedWikiIndex,
-        isSelectedLogue,
-        selectedAnnotationIndex,
-        isDotsSlideShown,
-        isNavShown
     }
 }
 

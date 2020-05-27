@@ -6,10 +6,28 @@ import { connect } from 'react-redux'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
-
 import { getStartTimeForVerse } from '../../../album/api/time'
 import { getSceneIndexForVerse } from '../../../album/api/verses'
 import { getActivatedVerseForDirection } from './helper'
+import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            selectedStore: {
+                isSelectedLogue,
+                selectedSongIndex,
+                selectedVerseIndex
+            }
+        } = state,
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
+
+    return {
+        isSelectedLogue,
+        selectedSongIndex,
+        selectedVerseIndex,
+        activatedVerseIndex
+    }
+}
 
 class ActivatedVerseDispatcher extends PureComponent {
 
@@ -100,24 +118,6 @@ class ActivatedVerseDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: {
-            isSelectedLogue,
-            selectedSongIndex,
-            selectedVerseIndex
-        },
-        activatedStore: { activatedVerseIndex }
-    } = state
-
-    return {
-        isSelectedLogue,
-        selectedSongIndex,
-        selectedVerseIndex,
-        activatedVerseIndex
     }
 }
 

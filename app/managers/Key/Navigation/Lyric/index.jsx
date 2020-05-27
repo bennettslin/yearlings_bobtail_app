@@ -14,14 +14,15 @@ import {
     IS_ACCESS_ON_SELECTOR,
     ACCESSED_ANNOTATION_INDEX_SELECTOR
 } from '../../../../redux/access/selectors'
+import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../../redux/activated/selectors'
 
 const mapStateToProps = state => {
     const {
-            activatedStore: { activatedVerseIndex },
             selectedStore: { selectedVerseIndex }
         } = state,
         isAccessOn = IS_ACCESS_ON_SELECTOR(state),
-        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state)
+        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
 
     return {
         isAccessOn,

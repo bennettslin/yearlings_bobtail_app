@@ -3,10 +3,29 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import AnnotationAccessDispatcher from '../Dispatcher'
-
 import { populateRefs } from '../../../helpers/ref'
+import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            selectedStore: {
+                earColumnIndex,
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex
+            }
+        } = state,
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
+
+    return {
+        earColumnIndex,
+        activatedVerseIndex,
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    }
+}
 
 class AnnotationAccessListener extends PureComponent {
 
@@ -89,26 +108,6 @@ class AnnotationAccessListener extends PureComponent {
         return (
             <AnnotationAccessDispatcher {...{ getRefs: this._getRefs }} />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        activatedStore: { activatedVerseIndex },
-        selectedStore: {
-            earColumnIndex,
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        }
-    } = state
-
-    return {
-        earColumnIndex,
-        activatedVerseIndex,
-        selectedSongIndex,
-        selectedVerseIndex,
-        selectedAnnotationIndex
     }
 }
 

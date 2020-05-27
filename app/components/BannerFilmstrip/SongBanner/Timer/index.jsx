@@ -4,28 +4,29 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import { getFormattedTime } from '../../../../helpers/format'
+import {
+    IS_ACTIVATED_SELECTOR,
+    ACTIVATED_TIME_SELECTOR
+} from '../../../../redux/activated/selectors'
 
 const mapStateToProps = state => {
     const {
-        selectedStore: {
-            isSelectedLogue,
-            selectedTime
-        },
-        sliderStore: {
-            isSliderMoving,
-            sliderTime
-        },
-        activatedStore: {
-            isActivated,
-            activatedTime
-        },
-        bannerStore: {
-            isBannerHovering,
-            bannerHoverTime
-        }
-    } = state
+            selectedStore: {
+                isSelectedLogue,
+                selectedTime
+            },
+            sliderStore: {
+                isSliderMoving,
+                sliderTime
+            },
+            bannerStore: {
+                isBannerHovering,
+                bannerHoverTime
+            }
+        } = state,
+        isActivated = IS_ACTIVATED_SELECTOR(state),
+        activatedTime = ACTIVATED_TIME_SELECTOR(state)
 
     return {
         isSelectedLogue,

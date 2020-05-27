@@ -6,10 +6,42 @@ import { connect } from 'react-redux'
 import { resetAnnotationQueue } from '../../../redux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
 import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
-
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
 import { getVerseIndexForAnnotation } from '../../../album/api/annotations'
 import { populateRefs } from '../../../helpers/ref'
+import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            toggleStore: { isDotsSlideShown },
+            transientStore: { isEarShown },
+            selectedStore: {
+                earColumnIndex,
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex
+            },
+            annotationStore: {
+                queuedAnnotationIndex,
+                queuedAnnotationFromCarousel,
+                queuedAnnotationFromLyricVerse
+            }
+        } = state,
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
+
+    return {
+        isDotsSlideShown,
+        isEarShown,
+        earColumnIndex,
+        activatedVerseIndex,
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex,
+        queuedAnnotationIndex,
+        queuedAnnotationFromCarousel,
+        queuedAnnotationFromLyricVerse
+    }
+}
 
 class AnnotationListener extends PureComponent {
 
@@ -117,38 +149,6 @@ class AnnotationListener extends PureComponent {
                 <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
             </>
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        toggleStore: { isDotsSlideShown },
-        transientStore: { isEarShown },
-        activatedStore: { activatedVerseIndex },
-        selectedStore: {
-            earColumnIndex,
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        },
-        annotationStore: {
-            queuedAnnotationIndex,
-            queuedAnnotationFromCarousel,
-            queuedAnnotationFromLyricVerse
-        }
-    } = state
-
-    return {
-        isDotsSlideShown,
-        isEarShown,
-        earColumnIndex,
-        activatedVerseIndex,
-        selectedSongIndex,
-        selectedVerseIndex,
-        selectedAnnotationIndex,
-        queuedAnnotationIndex,
-        queuedAnnotationFromCarousel,
-        queuedAnnotationFromLyricVerse
     }
 }
 

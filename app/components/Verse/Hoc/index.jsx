@@ -2,14 +2,13 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
+import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
 
 const mapStateToProps = state => {
-    const {
-        activatedStore: { activatedVerseIndex }
-    } = state
+    const
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
 
     return {
         activatedVerseIndex

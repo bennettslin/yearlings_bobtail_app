@@ -2,41 +2,37 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import FilmstripScene from './Scene'
 import TipsHand from '../../Tips/Hand'
-
 import AccessDirectionLetter from '../../Access/DirectionLetter'
 import SceneDispatcher from '../../../dispatchers/Scene'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
-
 import { getSceneIndices } from '../../../album/api/scenes'
 import {
     getDurationForSong,
     getStartTimeForScene,
     getDurationForScene
 } from '../../../album/api/time'
-
 import { populateRefs } from '../../../helpers/ref'
 import { getCursorIndex } from '../../../helpers/verse'
-
 import {
     PREVIOUS_SCENE_KEY,
     NEXT_SCENE_KEY
 } from '../../../constants/access'
 import { FILMSTRIP } from '../../../constants/tips'
+import { ACTIVATED_SCENE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
 
 const mapStateToProps = state => {
     const {
-        selectedStore: {
-            isSelectedLogue,
-            selectedSongIndex,
-            selectedSceneIndex,
-            selectedTime
-        },
-        activatedStore: { activatedSceneIndex },
-        sliderStore: { sliderSceneIndex }
-    } = state
+            selectedStore: {
+                isSelectedLogue,
+                selectedSongIndex,
+                selectedSceneIndex,
+                selectedTime
+            },
+            sliderStore: { sliderSceneIndex }
+        } = state,
+        activatedSceneIndex = ACTIVATED_SCENE_INDEX_SELECTOR(state)
 
     return {
         isSelectedLogue,

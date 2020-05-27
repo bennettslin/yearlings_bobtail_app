@@ -4,25 +4,25 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import SliderTime from './Time'
-
 import { getDurationForSong } from '../../../album/api/time'
 import { getFormattedTime } from '../../../helpers/format'
+import {
+    IS_ACTIVATED_SELECTOR,
+    ACTIVATED_TIME_SELECTOR
+} from '../../../redux/activated/selectors'
 
 const mapStateToProps = state => {
     const {
-        lyricStore: { lyricSongIndex },
-        selectedStore: { selectedTime },
-        sliderStore: {
-            isSliderMoving,
-            sliderTime
-        },
-        activatedStore: {
-            isActivated,
-            activatedTime
-        }
-    } = state
+            lyricStore: { lyricSongIndex },
+            selectedStore: { selectedTime },
+            sliderStore: {
+                isSliderMoving,
+                sliderTime
+            }
+        } = state,
+        isActivated = IS_ACTIVATED_SELECTOR(state),
+        activatedTime = ACTIVATED_TIME_SELECTOR(state)
 
     return {
         lyricSongIndex,

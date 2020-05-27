@@ -12,15 +12,16 @@ import {
     IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
     ACCESSED_ANNOTATION_INDEX_SELECTOR
 } from '../../../../redux/access/selectors'
+import { IS_ACTIVATED_SELECTOR } from '../../../../redux/activated/selectors'
 
 const mapStateToProps = state => {
     const {
             lyricStore: { lyricAnnotationIndex },
-            activatedStore: { isActivated },
             sliderStore: { isSliderMoving }
         } = state,
         isAccessedIndexedAnchorShown = IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR(state),
-        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state)
+        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
+        isActivated = IS_ACTIVATED_SELECTOR(state)
 
     return {
         isAccessedIndexedAnchorShown,

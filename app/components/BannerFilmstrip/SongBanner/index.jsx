@@ -22,6 +22,7 @@ import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
 import { populateRefs } from '../../../helpers/ref'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
+import { IS_ACTIVATED_SELECTOR } from '../../../redux/activated/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -36,9 +37,9 @@ const mapStateToProps = state => {
                 selectedSongIndex,
                 selectedTime
             },
-            activatedStore: { isActivated },
             sliderStore: { isSliderMoving }
         } = state,
+        isActivated = IS_ACTIVATED_SELECTOR(state),
         isSmallBannerText = IS_SMALL_BANNER_TEXT_SELECTOR(state)
 
     return {

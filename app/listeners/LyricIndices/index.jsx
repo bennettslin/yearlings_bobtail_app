@@ -3,8 +3,26 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { updateLyricStore } from '../../redux/lyric/action'
-
 import { populateRefs } from '../../helpers/ref'
+import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            selectedStore: {
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex
+            }
+        } = state,
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
+
+    return {
+        activatedVerseIndex,
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    }
+}
 
 class LyricIndicesListener extends PureComponent {
 
@@ -88,24 +106,6 @@ class LyricIndicesListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        activatedStore: { activatedVerseIndex },
-        selectedStore: {
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        }
-    } = state
-
-    return {
-        activatedVerseIndex,
-        selectedSongIndex,
-        selectedVerseIndex,
-        selectedAnnotationIndex
     }
 }
 

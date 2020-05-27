@@ -13,21 +13,22 @@ import Verse from '../../Verse'
 import { getVerse } from '../../../album/api/verses'
 import { populateRefs } from '../../../helpers/ref'
 import { getCursorIndex } from '../../../helpers/verse'
+import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
 
 const mapStateToProps = state => {
     const {
-        lyricStore: {
-            isLyricLogue,
-            lyricSongIndex,
-            lyricVerseIndex
-        },
-        activatedStore: { activatedVerseIndex },
-        sliderStore: { sliderVerseIndex },
-        verseBarsStore: {
-            isVerseBarAbove,
-            isVerseBarBelow
-        }
-    } = state
+            lyricStore: {
+                isLyricLogue,
+                lyricSongIndex,
+                lyricVerseIndex
+            },
+            sliderStore: { sliderVerseIndex },
+            verseBarsStore: {
+                isVerseBarAbove,
+                isVerseBarBelow
+            }
+        } = state,
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
 
     return {
         isLyricLogue,

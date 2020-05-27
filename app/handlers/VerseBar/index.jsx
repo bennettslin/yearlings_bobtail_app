@@ -1,16 +1,61 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import {
     updateVerseBarsStore,
     resetVerseBarsQueue
 } from '../../redux/verseBars/action'
 import { LYRIC_DYNAMIC_HEIGHT_SELECTOR } from '../../redux/mount/selectors'
 import { IS_LYRIC_EXPANDABLE_SELECTOR } from '../../redux/responsive/selectors'
-
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'
+import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            verseBarsStore: {
+                queuedDetermineVerseBars,
+                queuedVerseBarsTimeout
+            },
+            viewportStore: {
+                isDesktopWidth,
+                windowHeight
+            },
+            mountStore: { canSliderMount },
+            responsiveStore: {
+                isHeightlessLyric,
+                menuHeight
+            },
+            toggleStore: { isLyricExpanded },
+            verseBarsStore: {
+                isVerseBarAbove,
+                isVerseBarBelow
+            },
+            selectedStore: { selectedVerseIndex },
+            sliderStore: { sliderVerseIndex }
+        } = state,
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
+        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
+        lyricDynamicHeight = LYRIC_DYNAMIC_HEIGHT_SELECTOR(state)
+
+    return {
+        queuedDetermineVerseBars,
+        queuedVerseBarsTimeout,
+        isLyricExpandable,
+        isDesktopWidth,
+        windowHeight,
+        canSliderMount,
+        isLyricExpanded,
+        lyricDynamicHeight,
+        isVerseBarAbove,
+        isVerseBarBelow,
+        isHeightlessLyric,
+        menuHeight,
+        selectedVerseIndex,
+        activatedVerseIndex,
+        sliderVerseIndex
+    }
+}
 
 class VerseBarHandler extends PureComponent {
 
@@ -174,52 +219,6 @@ class VerseBarHandler extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-            verseBarsStore: {
-                queuedDetermineVerseBars,
-                queuedVerseBarsTimeout
-            },
-            viewportStore: {
-                isDesktopWidth,
-                windowHeight
-            },
-            mountStore: { canSliderMount },
-            responsiveStore: {
-                isHeightlessLyric,
-                menuHeight
-            },
-            toggleStore: { isLyricExpanded },
-            verseBarsStore: {
-                isVerseBarAbove,
-                isVerseBarBelow
-            },
-            selectedStore: { selectedVerseIndex },
-            activatedStore: { activatedVerseIndex },
-            sliderStore: { sliderVerseIndex }
-        } = state,
-        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
-        lyricDynamicHeight = LYRIC_DYNAMIC_HEIGHT_SELECTOR(state)
-
-    return {
-        queuedDetermineVerseBars,
-        queuedVerseBarsTimeout,
-        isLyricExpandable,
-        isDesktopWidth,
-        windowHeight,
-        canSliderMount,
-        isLyricExpanded,
-        lyricDynamicHeight,
-        isVerseBarAbove,
-        isVerseBarBelow,
-        isHeightlessLyric,
-        menuHeight,
-        selectedVerseIndex,
-        activatedVerseIndex,
-        sliderVerseIndex
     }
 }
 

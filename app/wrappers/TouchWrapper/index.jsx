@@ -2,6 +2,29 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { IS_ACTIVATED_SELECTOR } from '../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            scrollOverlayStore: { isScrolling },
+            toggleStore: { isAutoScroll },
+            sliderStore: {
+                isSliderTouched,
+                isSliderMoving
+            },
+            bannerStore: { isBannerHovering }
+        } = state,
+        isActivated = IS_ACTIVATED_SELECTOR(state)
+
+    return {
+        isAutoScroll,
+        isScrolling,
+        isSliderTouched,
+        isSliderMoving,
+        isActivated,
+        isBannerHovering
+    }
+}
 
 const TouchWrapper = ({ children }) => {
     const {
@@ -35,28 +58,6 @@ const TouchWrapper = ({ children }) => {
             {children}
         </div>
     )
-}
-
-const mapStateToProps = state => {
-    const {
-        activatedStore: { isActivated },
-        scrollOverlayStore: { isScrolling },
-        toggleStore: { isAutoScroll },
-        sliderStore: {
-            isSliderTouched,
-            isSliderMoving
-        },
-        bannerStore: { isBannerHovering }
-    } = state
-
-    return {
-        isAutoScroll,
-        isScrolling,
-        isSliderTouched,
-        isSliderMoving,
-        isActivated,
-        isBannerHovering
-    }
 }
 
 TouchWrapper.propTypes = {

@@ -4,15 +4,54 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateTransientStore } from '../../redux/transient/action'
-
 import {
     getIsShelfLeftShown,
     getIsOverlayingAnnotation,
     getIsOverlayShown,
     getToggleShowsImmediately
 } from './helper'
-
 import { SHOWN } from '../../constants/options'
+import { IS_ACTIVATED_SELECTOR } from '../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            viewportStore: { isPhoneWidth },
+            toggleStore: {
+                isDotsSlideShown,
+                isLyricExpanded,
+                isScoreShown,
+                isAboutShown
+            },
+            entranceStore: { canLyricCarouselEnter },
+            lyricStore: {
+                lyricAnnotationIndex,
+                isLyricLogue
+            },
+            sessionStore: { selectedWikiIndex },
+            optionStore: {
+                isLogueOverviewShown,
+                selectedOverviewOption,
+                selectedTipsOption
+            }
+        } = state,
+        isActivated = IS_ACTIVATED_SELECTOR(state)
+
+    return {
+        isPhoneWidth,
+        isDotsSlideShown,
+        isLyricExpanded,
+        isScoreShown,
+        isAboutShown,
+        canLyricCarouselEnter,
+        lyricAnnotationIndex,
+        isLyricLogue,
+        isActivated,
+        isLogueOverviewShown,
+        selectedOverviewOption,
+        selectedTipsOption,
+        selectedWikiIndex
+    }
+}
 
 class MainListener extends PureComponent {
 
@@ -119,46 +158,6 @@ class MainListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        viewportStore: { isPhoneWidth },
-        toggleStore: {
-            isDotsSlideShown,
-            isLyricExpanded,
-            isScoreShown,
-            isAboutShown
-        },
-        entranceStore: { canLyricCarouselEnter },
-        lyricStore: {
-            lyricAnnotationIndex,
-            isLyricLogue
-        },
-        activatedStore: { isActivated },
-        sessionStore: { selectedWikiIndex },
-        optionStore: {
-            isLogueOverviewShown,
-            selectedOverviewOption,
-            selectedTipsOption
-        }
-    } = state
-
-    return {
-        isPhoneWidth,
-        isDotsSlideShown,
-        isLyricExpanded,
-        isScoreShown,
-        isAboutShown,
-        canLyricCarouselEnter,
-        lyricAnnotationIndex,
-        isLyricLogue,
-        isActivated,
-        isLogueOverviewShown,
-        selectedOverviewOption,
-        selectedTipsOption,
-        selectedWikiIndex
     }
 }
 

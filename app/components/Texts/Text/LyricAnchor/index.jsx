@@ -15,6 +15,7 @@ import {
     ACCESSED_ANNOTATION_INDEX_SELECTOR,
     ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR
 } from '../../../../redux/access/selectors'
+import { IS_ACTIVATED_SELECTOR } from '../../../../redux/activated/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -22,12 +23,12 @@ const mapStateToProps = state => {
                 lyricSongIndex,
                 lyricAnnotationIndex
             },
-            activatedStore: { isActivated },
             sliderStore: { isSliderMoving }
         } = state,
         isAccessedIndexedAnchorShown = IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR(state),
         accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
-        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state)
+        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state),
+        isActivated = IS_ACTIVATED_SELECTOR(state)
 
     return {
         lyricAnnotationIndex,

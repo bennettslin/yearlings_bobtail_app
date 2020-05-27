@@ -14,11 +14,49 @@ import {
     updateToggleStore,
     updateIsAboutShown
 } from '../../redux/toggle/action'
-
 import {
     SHOWN,
     HIDDEN
 } from '../../constants/options'
+import { IS_ACTIVATED_SELECTOR } from '../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            optionStore: {
+                selectedOverviewOption,
+                selectedTipsOption,
+                isSongShownOverview,
+                isSongShownTips
+            },
+            selectedStore: { selectedAnnotationIndex },
+            sliderStore: { isSliderMoving },
+            toggleStore: {
+                isCarouselShown,
+                isDotsSlideShown,
+                isLyricExpanded,
+                isScoreShown,
+                isAboutShown
+            },
+            sessionStore: { selectedWikiIndex }
+        } = state,
+        isActivated = IS_ACTIVATED_SELECTOR(state)
+
+    return {
+        selectedAnnotationIndex,
+        isSliderMoving,
+        isCarouselShown,
+        isDotsSlideShown,
+        isLyricExpanded,
+        isScoreShown,
+        isAboutShown,
+        selectedOverviewOption,
+        selectedTipsOption,
+        isSongShownOverview,
+        isSongShownTips,
+        selectedWikiIndex,
+        isActivated
+    }
+}
 
 class CloseHandler extends PureComponent {
 
@@ -325,44 +363,6 @@ class CloseHandler extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        optionStore: {
-            selectedOverviewOption,
-            selectedTipsOption,
-            isSongShownOverview,
-            isSongShownTips
-        },
-        selectedStore: { selectedAnnotationIndex },
-        sliderStore: { isSliderMoving },
-        toggleStore: {
-            isCarouselShown,
-            isDotsSlideShown,
-            isLyricExpanded,
-            isScoreShown,
-            isAboutShown
-        },
-        activatedStore: { isActivated },
-        sessionStore: { selectedWikiIndex }
-    } = state
-
-    return {
-        selectedAnnotationIndex,
-        isSliderMoving,
-        isCarouselShown,
-        isDotsSlideShown,
-        isLyricExpanded,
-        isScoreShown,
-        isAboutShown,
-        selectedOverviewOption,
-        selectedTipsOption,
-        isSongShownOverview,
-        isSongShownTips,
-        selectedWikiIndex,
-        isActivated
     }
 }
 

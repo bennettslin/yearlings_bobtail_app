@@ -10,6 +10,25 @@ import { updateToggleStore } from '../../../redux/toggle/action'
 import { getVerseIndexForScene } from '../../../album/api/scenes'
 import { getStartTimeForVerse } from '../../../album/api/time'
 import { getActivatedSceneForDirection } from './helper'
+import { ACTIVATED_SCENE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+
+const mapStateToProps = state => {
+    const {
+            selectedStore: {
+                isSelectedLogue,
+                selectedSongIndex,
+                selectedSceneIndex
+            }
+        } = state,
+        activatedSceneIndex = ACTIVATED_SCENE_INDEX_SELECTOR(state)
+
+    return {
+        isSelectedLogue,
+        selectedSongIndex,
+        selectedSceneIndex,
+        activatedSceneIndex
+    }
+}
 
 class ActivatedSceneDispatcher extends PureComponent {
 
@@ -97,24 +116,6 @@ class ActivatedSceneDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: {
-            isSelectedLogue,
-            selectedSongIndex,
-            selectedSceneIndex
-        },
-        activatedStore: { activatedSceneIndex }
-    } = state
-
-    return {
-        isSelectedLogue,
-        selectedSongIndex,
-        selectedSceneIndex,
-        activatedSceneIndex
     }
 }
 
