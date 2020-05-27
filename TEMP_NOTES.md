@@ -5,7 +5,6 @@
 * PT Sans Italic is small?
 
 # Brainless JS tasks
-* Make placeholder selectors for all props
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors only grab their own value from store, any other value must come from another selector
 

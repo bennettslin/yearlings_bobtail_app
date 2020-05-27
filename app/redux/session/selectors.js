@@ -2,6 +2,14 @@ import { createSelector } from 'reselect'
 import { IS_MOBILE_WIKI_SELECTOR } from '../responsive/selectors'
 import { getWikiUrl } from '../../helpers/wiki'
 
+export const SELECTED_WIKI_INDEX_SELECTOR = (
+    { sessionStore: { selectedWikiIndex } }
+) => selectedWikiIndex
+
+export const CAROUSEL_ANNOTATION_INDEX_SELECTOR = (
+    { sessionStore: { carouselAnnotationIndex } }
+) => carouselAnnotationIndex
+
 export const SELECTED_WIKI_URL_SELECTOR = createSelector(
     IS_MOBILE_WIKI_SELECTOR,
     ({
@@ -36,5 +44,10 @@ export const SELECTED_WIKI_URL_SELECTOR = createSelector(
     })
 )
 
-export const AUDIO_OPTION_INDEX_SELECTOR =
-    ({ sessionStore: { audioOptionIndex } }) => audioOptionIndex
+export const SHOWN_NAV_BOOK_INDEX_SELECTOR = (
+    { sessionStore: { shownNavBookIndex } }
+) => shownNavBookIndex
+
+export const AUDIO_OPTION_INDEX_SELECTOR = (
+    { sessionStore: { audioOptionIndex } }
+) => audioOptionIndex

@@ -4,14 +4,17 @@ import {
     getLyricOverviewHeight
 } from '../../helpers/resize/mount'
 
-export const CAN_CAROUSEL_MOUNT_SELECTOR =
-    ({ mountStore: { canCarouselMount } }) => canCarouselMount
+export const CAN_CAROUSEL_MOUNT_SELECTOR = (
+    { mountStore: { canCarouselMount } }
+) => canCarouselMount
 
-export const CAN_SCORE_MOUNT_SELECTOR =
-    ({ mountStore: { canScoreMount } }) => canScoreMount
+export const CAN_SCORE_MOUNT_SELECTOR = (
+    { mountStore: { canScoreMount } }
+) => canScoreMount
 
-export const CAN_SLIDER_MOUNT_SELECTOR =
-    ({ mountStore: { canSliderMount } }) => canSliderMount
+export const CAN_SLIDER_MOUNT_SELECTOR = (
+    { mountStore: { canSliderMount } }
+) => canSliderMount
 
 export const LYRIC_DYNAMIC_HEIGHT_SELECTOR = ({
     mountStore: { canCarouselMount },

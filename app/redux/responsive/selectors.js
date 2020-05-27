@@ -8,8 +8,17 @@ import {
     getShowSingleNavBook
 } from '../../helpers/resize/nav'
 
-export const MENU_HEIGHT_SELECTOR =
-    ({ responsiveStore: { menuHeight } }) => menuHeight
+export const IS_HEIGHTLESS_LYRIC_SELECTOR = (
+    { responsiveStore: { isHeightlessLyric } }
+) => isHeightlessLyric
+
+export const IS_TWO_ROW_MENU_SELECTOR = (
+    { responsiveStore: { isTwoRowMenu } }
+) => isTwoRowMenu
+
+export const MENU_HEIGHT_SELECTOR = (
+    { responsiveStore: { menuHeight } }
+) => menuHeight
 
 export const IS_MOBILE_WIKI_SELECTOR = ({
     viewportStore: {
