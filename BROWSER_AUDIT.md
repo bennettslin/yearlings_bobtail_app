@@ -12,12 +12,12 @@
 * Play button disabled after changing song. Is only good again upon reload.
 
 # Firefox
-* Sketchbooks are blank.
-* Wires for bottom bubble above wires for top bubble.
+* Sketchbooks are blank. (fixed, still need to validate.)
+* Wires for bottom bubble above wires for top bubble. (fixed, still need to validate.)
 
 # Edge
 
-* Same as Firefox.
+* Same as Firefox. (fixed, still need to validate.)
 
 # Internet Explorer
 

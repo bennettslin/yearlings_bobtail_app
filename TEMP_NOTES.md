@@ -11,17 +11,19 @@
 
 # Bugs
 * Figure out why window resizing timeout seems to have regressed.
-* Sketchbooks are blank. (Sketches are probably behind them.)
-* Wires for bottom bubble above wires for top bubble. Happens in Chrome now.
 * PT Sans Italic is small?
+
+# Audit
+* Make sure all presences are properly behind or in front as appropriate.
 
 # Brainless JS tasks
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.
 
 # Brainless CSS tasks
-* Top level components import own styles
-* Child components also import own styles
+* Component import own styles.
+* Don't import styles in app index.
+* Logic styles should live together. (So that they can be removed together if needed.)
 
 # Easy reduction tasks
 * Internal stylesheet fixes

@@ -147,17 +147,17 @@ export const THINGS_BEDROOM_FEARFUL = {
 
 export const THINGS_BEDROOM_GUILTY = {
     [BUBBLE]: {
-        [DOGS_SKETCH]: {
-            yIndex: 5,
-            xPosition: 2.85,
-            zOffset: 2.15,
-            noShadow: true
-        },
         [SKETCHBOOK__DOGS]: {
             yIndex: 5,
             xPosition: 3,
             zOffset: 1.5,
             scaleFactor: 0.25
+        },
+        [DOGS_SKETCH]: {
+            yIndex: 5,
+            xPosition: 2.85,
+            zOffset: 2.15,
+            noShadow: true
         }
     },
     [FIXTURE]: {

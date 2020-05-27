@@ -34,15 +34,15 @@ export default {
             zOffset: 5.6,
             scaleFactor: 0.3
         },
-        [CINEMA_THOUGHT_RECORDING]: {
-            yIndex: 5,
-            xPosition: 8.1,
-            zOffset: 4.2
-        },
         [CINEMA_THOUGHT_BUYING]: {
             yIndex: 5,
             xPosition: 9.3,
             zOffset: 1.2
+        },
+        [CINEMA_THOUGHT_RECORDING]: {
+            yIndex: 5,
+            xPosition: 8.1,
+            zOffset: 4.2
         }
     },
     [CARDBOARD]: {

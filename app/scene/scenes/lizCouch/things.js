@@ -99,12 +99,6 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
 
 export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
     [BUBBLE]: {
-        [LIZ_THOUGHT]: {
-            yIndex: 5,
-            xPosition: 2.8,
-            zOffset: 3.5,
-            layerYIndex: 4
-        },
         [BUBBLE_LARGE__LIZ]: {
             yIndex: 5,
             xPosition: 5.1,
@@ -124,6 +118,12 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
             xPosition: 4.46,
             zOffset: 3,
             scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [LIZ_THOUGHT]: {
+            yIndex: 5,
+            xPosition: 2.8,
+            zOffset: 3.5,
             layerYIndex: 4
         }
     }

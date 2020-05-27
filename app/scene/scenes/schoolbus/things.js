@@ -24,11 +24,6 @@ import {
 
 export default {
     [BUBBLE]: {
-        [THOUGHT_LARGE__LEFT]: {
-            yIndex: 0,
-            xPosition: 5.5,
-            scaleFactor: 0.6
-        },
         [BUBBLE_LARGE__LEFT]: {
             yIndex: 0,
             xPosition: 0,
@@ -43,6 +38,11 @@ export default {
             yIndex: 0,
             xPosition: 0.8,
             zOffset: 8
+        },
+        [THOUGHT_LARGE__LEFT]: {
+            yIndex: 0,
+            xPosition: 5.5,
+            scaleFactor: 0.6
         }
     },
     [FIXTURE]: {

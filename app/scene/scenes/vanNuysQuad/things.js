@@ -16,13 +16,6 @@ import {
 
 export default {
     [BUBBLE]: {
-        [ESCAPE_POD_SKETCH]: {
-            yIndex: 5,
-            xPosition: 2.75,
-            zOffset: 3.5,
-            noShadow: true,
-            scaleFactor: 0.3
-        },
         [SKETCHBOOK__ESCAPE_POD]: {
             yIndex: 5,
             xPosition: 2.75,
@@ -30,6 +23,13 @@ export default {
             rotate: 270,
             scaleFactor: 0.25,
             flipHorizontal: true
+        },
+        [ESCAPE_POD_SKETCH]: {
+            yIndex: 5,
+            xPosition: 2.75,
+            zOffset: 3.5,
+            noShadow: true,
+            scaleFactor: 0.3
         }
     },
     [CARDBOARD]: {

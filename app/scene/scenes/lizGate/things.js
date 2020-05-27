@@ -31,11 +31,6 @@ import {
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BUBBLE]: {
-        [GO_KART_THOUGHT]: {
-            yIndex: 5,
-            xPosition: 5,
-            zOffset: 4
-        },
         [BUBBLE_LARGE__GO_KART]: {
             yIndex: 5,
             xPosition: 6.9,
@@ -53,6 +48,11 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             xPosition: 8.1,
             zOffset: 5.4,
             scaleFactor: 0.3
+        },
+        [GO_KART_THOUGHT]: {
+            yIndex: 5,
+            xPosition: 5,
+            zOffset: 4
         }
     },
     [CUTOUT]: {

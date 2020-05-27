@@ -116,19 +116,19 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
 
 export const THINGS_PUPPET_SHOW_MIDDLE = {
     [BUBBLE]: {
-        [TOGETHER_SKETCH]: {
-            yIndex: 5,
-            xPosition: 8.25,
-            zOffset: 2.375,
-            noShadow: true,
-            scaleFactor: 0.35
-        },
         [SKETCHBOOK__TOGETHER]: {
             yIndex: 5,
             xPosition: 8.25,
             zOffset: 1.5,
             rotate: 270,
             scaleFactor: 0.25
+        },
+        [TOGETHER_SKETCH]: {
+            yIndex: 5,
+            xPosition: 8.25,
+            zOffset: 2.375,
+            noShadow: true,
+            scaleFactor: 0.35
         }
     },
     [PUPPET]: {
@@ -167,19 +167,19 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
 
 export const THINGS_PUPPET_SHOW_END = {
     [BUBBLE]: {
-        [APART_SKETCH]: {
-            yIndex: 5,
-            xPosition: 2.75,
-            zOffset: 2.5,
-            noShadow: true,
-            scaleFactor: 0.4
-        },
         [SKETCHBOOK__APART]: {
             yIndex: 5,
             xPosition: 2.75,
             zOffset: 1.5,
             rotate: 270,
             scaleFactor: 0.25
+        },
+        [APART_SKETCH]: {
+            yIndex: 5,
+            xPosition: 2.75,
+            zOffset: 2.5,
+            noShadow: true,
+            scaleFactor: 0.4
         }
     },
     [PUPPET]: {
