@@ -1,17 +1,13 @@
 # Immediate tasks needed
 * Have separate candidate environment.
     * https://medium.com/@wolovim/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af
-* Revert code to use webpack again.
-    * https://github.com/bennettslin/yearlings_bobtail_app/tree/master-before-gatsby
-    * fonts.
-    * Update webpack config for new way of doing things.
-    * Have notes to keep track of changes.
-* Update scripts that can deploy candidate, delivery, and production.
+* Rename environment variable as staging environment, to include both candidate and delivery.
 * Deploy gatsby to candidate, webpack to delivery for now.
 
 # Bugs
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small?
+* GA not initialising again?
 
 # Audit
 * Make sure all presences are properly behind or in front as appropriate.
@@ -21,7 +17,7 @@
 * Ensure all selectors are used.
 
 # Brainless CSS tasks
-* Component import own styles.
+* Components import own styles.
 * Don't import styles in app index.
 * Logic styles should live together. (So that they can be removed together if needed.)
 

@@ -1,8 +1,12 @@
+# Code needed only by legacy webpack setup.
+* Font declarations in app/scss/classes/font
+
 # Files needed only by legacy webpack setup.
 * postcss.config.js
 * webpack.config.babel.js
 * app/index.html
 * app/index.js
+* assets/fonts
 
 # Packages needed only by legacy webpack setup.
 * "clean-webpack-plugin": "^3.0.0",

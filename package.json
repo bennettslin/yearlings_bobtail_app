@@ -18,7 +18,7 @@
     "deploy:candidate": "aws s3 sync public/ s3://yearlingsbobtail--candidate",
     "release:candidate": "npm run build:candidate && npm run empty:candidate && npm run deploy:candidate",
     "serve": "gatsby serve --port 1114",
-    "stage": "npm run build:delivery && npm run serve",
+    "stage": "npm run build:candidate && npm run serve",
     "start": "YB_ENV=local gatsby develop --port 1113",
     "clean": "gatsby clean",
     "lint": "eslint --ext js,jsx app",
