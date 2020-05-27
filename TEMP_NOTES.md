@@ -1,9 +1,3 @@
-# Immediate tasks needed
-* Have separate candidate environment.
-    * https://medium.com/@wolovim/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af
-* Move delivery and candidate to different ports.
-* Deploy gatsby to candidate, webpack to delivery.
-
 # Bugs while production hasn't changed.
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.

@@ -4736,5 +4736,9 @@ export default [
     {
         taskName: `Add back legacy webpack setup.`,
         workedHours: 1
+    },
+    {
+        taskName: `Set up candidate environment with CloudFront.`,
+        workedHours: 1
     }
 ]
