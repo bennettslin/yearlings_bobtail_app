@@ -7,6 +7,24 @@ import { updateSelectedStore } from '../../redux/selected/action'
 
 import { getStartTimeForVerse } from '../../album/api/time'
 
+const mapStateToProps = state => {
+    const {
+        audioStore: { isPlaying },
+        sliderStore: { isSliderTouched },
+        selectedStore: {
+            selectedSongIndex,
+            selectedVerseIndex
+        }
+    } = state
+
+    return {
+        isPlaying,
+        isSliderTouched,
+        selectedSongIndex,
+        selectedVerseIndex
+    }
+}
+
 class AudioListener extends PureComponent {
 
     static propTypes = {
@@ -44,24 +62,6 @@ class AudioListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        audioStore: { isPlaying },
-        sliderStore: { isSliderTouched },
-        selectedStore: {
-            selectedSongIndex,
-            selectedVerseIndex
-        }
-    } = state
-
-    return {
-        isPlaying,
-        isSliderTouched,
-        selectedSongIndex,
-        selectedVerseIndex
     }
 }
 

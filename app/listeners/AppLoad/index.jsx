@@ -3,6 +3,24 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
 
+const mapStateToProps = state => {
+    const {
+        entranceStore: {
+            didLyricEnter,
+            didCarouselEnter,
+            didTheatreEnter,
+            didSceneEnter
+        }
+    } = state
+
+    return {
+        didLyricEnter,
+        didCarouselEnter,
+        didTheatreEnter,
+        didSceneEnter
+    }
+}
+
 class AppLoadListener extends PureComponent {
 
     static propTypes = {
@@ -62,24 +80,6 @@ class AppLoadListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        entranceStore: {
-            didLyricEnter,
-            didCarouselEnter,
-            didTheatreEnter,
-            didSceneEnter
-        }
-    } = state
-
-    return {
-        didLyricEnter,
-        didCarouselEnter,
-        didTheatreEnter,
-        didSceneEnter
     }
 }
 

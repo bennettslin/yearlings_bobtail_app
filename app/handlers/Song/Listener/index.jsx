@@ -13,6 +13,16 @@ import { resetVerseBars } from '../../../redux/verseBars/action'
 
 import { getBookForSongIndex } from '../../../album/api/songs'
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        selectedSongIndex
+    }
+}
+
 class SongListener extends PureComponent {
 
     static propTypes = {
@@ -46,16 +56,6 @@ class SongListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: { selectedSongIndex }
-    } = state
-
-    return {
-        selectedSongIndex
     }
 }
 

@@ -9,6 +9,36 @@ import { resetAudioQueue } from '../../../../redux/audio/action'
 import { getPlayersCanPlayThroughFromBitNumber } from '../../../../helpers/player'
 import { getNextPlayerIndexToRender } from './helper'
 
+const mapStateToProps = state => {
+    const {
+        playersStore: { playersBitNumber },
+        selectedStore: {
+            selectedSongIndex,
+            isSelectedLogue
+        },
+        lyricStore: {
+            lyricSongIndex,
+            lyricVerseIndex
+        },
+        audioStore: {
+            queuedPlayFromLogue,
+            queuedPlaySongIndex,
+            queuedPlayVerseIndex
+        }
+    } = state
+
+    return {
+        playersBitNumber,
+        selectedSongIndex,
+        isSelectedLogue,
+        lyricSongIndex,
+        lyricVerseIndex,
+        queuedPlayFromLogue,
+        queuedPlaySongIndex,
+        queuedPlayVerseIndex
+    }
+}
+
 class PlayerListener extends PureComponent {
 
     static propTypes = {
@@ -92,36 +122,6 @@ class PlayerListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        playersStore: { playersBitNumber },
-        selectedStore: {
-            selectedSongIndex,
-            isSelectedLogue
-        },
-        lyricStore: {
-            lyricSongIndex,
-            lyricVerseIndex
-        },
-        audioStore: {
-            queuedPlayFromLogue,
-            queuedPlaySongIndex,
-            queuedPlayVerseIndex
-        }
-    } = state
-
-    return {
-        playersBitNumber,
-        selectedSongIndex,
-        isSelectedLogue,
-        lyricSongIndex,
-        lyricVerseIndex,
-        queuedPlayFromLogue,
-        queuedPlaySongIndex,
-        queuedPlayVerseIndex
     }
 }
 

@@ -8,6 +8,34 @@ import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
 
 import { populateRefs } from '../../../helpers/ref'
 
+const mapStateToProps = state => {
+    const {
+        mountStore: { canCarouselMount },
+        entranceStore: {
+            didCarouselExit,
+            didLyricExit,
+            didCurtainExit,
+            isSongSelectInFlux
+        },
+        selectedStore: {
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedAnnotationIndex
+        }
+    } = state
+
+    return {
+        canCarouselMount,
+        isSongSelectInFlux,
+        didCarouselExit,
+        didCurtainExit,
+        didLyricExit,
+        selectedSongIndex,
+        selectedVerseIndex,
+        selectedAnnotationIndex
+    }
+}
+
 class SongChangeUpdateListener extends PureComponent {
 
     static propTypes = {
@@ -106,34 +134,6 @@ class SongChangeUpdateListener extends PureComponent {
         return (
             <SceneChangeUpdateDispatcher {...{ getRefs: this._getRefs }} />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        mountStore: { canCarouselMount },
-        entranceStore: {
-            didCarouselExit,
-            didLyricExit,
-            didCurtainExit,
-            isSongSelectInFlux
-        },
-        selectedStore: {
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        }
-    } = state
-
-    return {
-        canCarouselMount,
-        isSongSelectInFlux,
-        didCarouselExit,
-        didCurtainExit,
-        didLyricExit,
-        selectedSongIndex,
-        selectedVerseIndex,
-        selectedAnnotationIndex
     }
 }
 

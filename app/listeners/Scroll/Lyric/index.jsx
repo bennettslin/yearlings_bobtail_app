@@ -14,6 +14,48 @@ import {
     VERSE_SCROLL
 } from '../../../constants/scroll'
 
+const mapStateToProps = state => {
+    const {
+        scrollLyricStore: {
+            queuedScrollLyricLog,
+            queuedScrollLyricByVerse,
+            queuedScrollLyricIndex,
+            queuedScrollLyricAlways,
+            queuedScrollLyricNoDuration,
+            queuedScrollLyricFromAutoScroll,
+            queuedSceneChangeExitScrollCallback
+        },
+        selectedStore: {
+            selectedVerseIndex,
+            isSelectedLogue
+        },
+        audioStore: { isPlaying },
+        toggleStore: {
+            isAutoScroll,
+            isLyricExpanded
+        },
+        viewportStore: { deviceWidthIndex },
+        responsiveStore: { isHeightlessLyric }
+    } = state
+
+    return {
+        queuedScrollLyricLog,
+        queuedScrollLyricByVerse,
+        queuedScrollLyricIndex,
+        queuedScrollLyricAlways,
+        queuedScrollLyricNoDuration,
+        queuedScrollLyricFromAutoScroll,
+        queuedSceneChangeExitScrollCallback,
+        selectedVerseIndex,
+        isSelectedLogue,
+        isPlaying,
+        isAutoScroll,
+        isLyricExpanded,
+        deviceWidthIndex,
+        isHeightlessLyric
+    }
+}
+
 class ScrollLyricListener extends PureComponent {
 
     static propTypes = {
@@ -191,48 +233,6 @@ class ScrollLyricListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        scrollLyricStore: {
-            queuedScrollLyricLog,
-            queuedScrollLyricByVerse,
-            queuedScrollLyricIndex,
-            queuedScrollLyricAlways,
-            queuedScrollLyricNoDuration,
-            queuedScrollLyricFromAutoScroll,
-            queuedSceneChangeExitScrollCallback
-        },
-        selectedStore: {
-            selectedVerseIndex,
-            isSelectedLogue
-        },
-        audioStore: { isPlaying },
-        toggleStore: {
-            isAutoScroll,
-            isLyricExpanded
-        },
-        viewportStore: { deviceWidthIndex },
-        responsiveStore: { isHeightlessLyric }
-    } = state
-
-    return {
-        queuedScrollLyricLog,
-        queuedScrollLyricByVerse,
-        queuedScrollLyricIndex,
-        queuedScrollLyricAlways,
-        queuedScrollLyricNoDuration,
-        queuedScrollLyricFromAutoScroll,
-        queuedSceneChangeExitScrollCallback,
-        selectedVerseIndex,
-        isSelectedLogue,
-        isPlaying,
-        isAutoScroll,
-        isLyricExpanded,
-        deviceWidthIndex,
-        isHeightlessLyric
     }
 }
 

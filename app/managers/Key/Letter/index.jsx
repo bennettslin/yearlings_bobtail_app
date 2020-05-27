@@ -48,6 +48,36 @@ import {
     HIDDEN
 } from '../../../constants/options'
 
+const mapStateToProps = state => {
+    const {
+        toggleStore: {
+            isDotsSlideShown,
+            isLyricExpanded,
+            isNavShown,
+            isScoreShown,
+            isAboutShown
+        },
+        optionStore: {
+            selectedOverviewOption,
+            selectedTipsOption
+        },
+        selectedStore: { selectedAnnotationIndex },
+        sessionStore: { selectedWikiIndex }
+    } = state
+
+    return {
+        isDotsSlideShown,
+        isLyricExpanded,
+        isNavShown,
+        isScoreShown,
+        isAboutShown,
+        selectedAnnotationIndex,
+        selectedOverviewOption,
+        selectedTipsOption,
+        selectedWikiIndex
+    }
+}
+
 class LetterManager extends PureComponent {
 
     static propTypes = {
@@ -234,36 +264,6 @@ class LetterManager extends PureComponent {
                 <ScoreDispatcher {...{ ref: this.getDispatchScore }} />
             </>
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        toggleStore: {
-            isDotsSlideShown,
-            isLyricExpanded,
-            isNavShown,
-            isScoreShown,
-            isAboutShown
-        },
-        optionStore: {
-            selectedOverviewOption,
-            selectedTipsOption
-        },
-        selectedStore: { selectedAnnotationIndex },
-        sessionStore: { selectedWikiIndex }
-    } = state
-
-    return {
-        isDotsSlideShown,
-        isLyricExpanded,
-        isNavShown,
-        isScoreShown,
-        isAboutShown,
-        selectedAnnotationIndex,
-        selectedOverviewOption,
-        selectedTipsOption,
-        selectedWikiIndex
     }
 }
 

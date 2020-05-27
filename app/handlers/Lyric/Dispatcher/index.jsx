@@ -6,6 +6,20 @@ import { connect } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { IS_LYRIC_EXPANDABLE_SELECTOR } from '../../../redux/responsive/selectors'
 
+const mapStateToProps = state => {
+    const {
+            toggleStore: { isLyricExpanded },
+            selectedStore: { isSelectedLogue }
+        } = state,
+        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state)
+
+    return {
+        isLyricExpanded,
+        isLyricExpandable,
+        isSelectedLogue
+    }
+}
+
 class LyricDispatcher extends PureComponent {
 
     static propTypes = {
@@ -46,20 +60,6 @@ class LyricDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-            toggleStore: { isLyricExpanded },
-            selectedStore: { isSelectedLogue }
-        } = state,
-        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state)
-
-    return {
-        isLyricExpanded,
-        isLyricExpandable,
-        isSelectedLogue
     }
 }
 

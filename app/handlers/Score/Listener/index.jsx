@@ -5,6 +5,18 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
 
+const mapStateToProps = state => {
+    const {
+        mountStore: { canScoreMount },
+        selectedStore: { isSelectedLogue }
+    } = state
+
+    return {
+        canScoreMount,
+        isSelectedLogue
+    }
+}
+
 class ScoreListener extends PureComponent {
 
     static propTypes = {
@@ -39,18 +51,6 @@ class ScoreListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        mountStore: { canScoreMount },
-        selectedStore: { isSelectedLogue }
-    } = state
-
-    return {
-        canScoreMount,
-        isSelectedLogue
     }
 }
 

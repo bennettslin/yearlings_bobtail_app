@@ -5,6 +5,28 @@ import { updateOptionStore } from '../../../redux/option/action'
 import { getNextOption } from '../../../helpers/options'
 import { SHOWN } from '../../../constants/options'
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: { isSelectedLogue },
+        responsiveStore: { isHeightlessLyric },
+        optionStore: {
+            isLogueOverviewShown,
+            selectedOverviewOption,
+            selectedTipsOption
+        },
+        transientStore: { toggleShowsOverviewImmediately }
+    } = state
+
+    return {
+        isSelectedLogue,
+        isHeightlessLyric,
+        isLogueOverviewShown,
+        selectedOverviewOption,
+        selectedTipsOption,
+        toggleShowsOverviewImmediately
+    }
+}
+
 class OverviewDispatcher extends PureComponent {
 
     static propTypes = {
@@ -91,28 +113,6 @@ class OverviewDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: { isSelectedLogue },
-        responsiveStore: { isHeightlessLyric },
-        optionStore: {
-            isLogueOverviewShown,
-            selectedOverviewOption,
-            selectedTipsOption
-        },
-        transientStore: { toggleShowsOverviewImmediately }
-    } = state
-
-    return {
-        isSelectedLogue,
-        isHeightlessLyric,
-        isLogueOverviewShown,
-        selectedOverviewOption,
-        selectedTipsOption,
-        toggleShowsOverviewImmediately
     }
 }
 

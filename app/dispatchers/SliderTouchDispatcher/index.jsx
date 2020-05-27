@@ -14,6 +14,34 @@ import { populateRefs } from '../../helpers/ref'
 
 import { getVerseIndexforRatio } from '../../helpers/verse'
 
+const mapStateToProps = state => {
+    const {
+        sliderStore: {
+            isSliderTouched,
+            isSliderMoving,
+            sliderLeft,
+            sliderWidth,
+            sliderVerseIndex
+        },
+        selectedStore: {
+            isSelectedLogue,
+            selectedSongIndex,
+            selectedVerseIndex
+        }
+    } = state
+
+    return {
+        isSliderTouched,
+        isSliderMoving,
+        sliderLeft,
+        sliderWidth,
+        sliderVerseIndex,
+        isSelectedLogue,
+        selectedSongIndex,
+        selectedVerseIndex
+    }
+}
+
 class SliderTouchDispatcher extends PureComponent {
 
     static propTypes = {
@@ -184,34 +212,6 @@ class SliderTouchDispatcher extends PureComponent {
         return (
             <VerseDispatcher {...{ getRefs: this._getRefs }} />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        sliderStore: {
-            isSliderTouched,
-            isSliderMoving,
-            sliderLeft,
-            sliderWidth,
-            sliderVerseIndex
-        },
-        selectedStore: {
-            isSelectedLogue,
-            selectedSongIndex,
-            selectedVerseIndex
-        }
-    } = state
-
-    return {
-        isSliderTouched,
-        isSliderMoving,
-        sliderLeft,
-        sliderWidth,
-        sliderVerseIndex,
-        isSelectedLogue,
-        selectedSongIndex,
-        selectedVerseIndex
     }
 }
 

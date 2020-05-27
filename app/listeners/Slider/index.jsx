@@ -6,6 +6,16 @@ import { connect } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateActivatedStore } from '../../redux/activated/action'
 
+const mapStateToProps = state => {
+    const {
+        sliderStore: { isSliderTouched }
+    } = state
+
+    return {
+        isSliderTouched
+    }
+}
+
 class SliderListener extends PureComponent {
 
     static propTypes = {
@@ -32,16 +42,6 @@ class SliderListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        sliderStore: { isSliderTouched }
-    } = state
-
-    return {
-        isSliderTouched
     }
 }
 

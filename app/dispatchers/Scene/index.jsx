@@ -7,6 +7,18 @@ import VerseDispatcher from '../VerseDispatcher'
 import { getVerseIndexForScene } from '../../album/api/scenes'
 import { populateRefs } from '../../helpers/ref'
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: { selectedSongIndex },
+        entranceStore: { didSceneEnter }
+    } = state
+
+    return {
+        selectedSongIndex,
+        didSceneEnter
+    }
+}
+
 class SceneDispatcher extends PureComponent {
 
     static propTypes = {
@@ -43,18 +55,6 @@ class SceneDispatcher extends PureComponent {
         return (
             <VerseDispatcher {...{ getRefs: this._getRefs }} />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: { selectedSongIndex },
-        entranceStore: { didSceneEnter }
-    } = state
-
-    return {
-        selectedSongIndex,
-        didSceneEnter
     }
 }
 

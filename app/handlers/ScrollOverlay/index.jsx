@@ -4,6 +4,16 @@ import { connect } from 'react-redux'
 
 import { updateScrollOverlayStore } from '../../redux/scrollOverlay/action'
 
+const mapStateToProps = state => {
+    const {
+        scrollOverlayStore: { lyricScrollTop }
+    } = state
+
+    return {
+        lyricScrollTop
+    }
+}
+
 class ScrollOverlayHandler extends PureComponent {
 
     static propTypes = {
@@ -59,16 +69,6 @@ class ScrollOverlayHandler extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        scrollOverlayStore: { lyricScrollTop }
-    } = state
-
-    return {
-        lyricScrollTop
     }
 }
 

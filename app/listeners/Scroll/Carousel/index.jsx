@@ -10,6 +10,32 @@ import {
 
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 
+const mapStateToProps = state => {
+    const {
+        scrollCarouselStore: {
+            queuedScrollCarouselLog,
+            queuedScrollCarouselIndex,
+            queuedScrollCarouselNoDuration
+        },
+        toggleStore: { isCarouselShown },
+        viewportStore: {
+            deviceWidthIndex,
+            windowWidth
+        },
+        selectedStore: { isSelectedLogue }
+    } = state
+
+    return {
+        queuedScrollCarouselLog,
+        queuedScrollCarouselIndex,
+        queuedScrollCarouselNoDuration,
+        isCarouselShown,
+        deviceWidthIndex,
+        windowWidth,
+        isSelectedLogue
+    }
+}
+
 class ScrollCarouselListener extends PureComponent {
 
     static propTypes = {
@@ -93,32 +119,6 @@ class ScrollCarouselListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        scrollCarouselStore: {
-            queuedScrollCarouselLog,
-            queuedScrollCarouselIndex,
-            queuedScrollCarouselNoDuration
-        },
-        toggleStore: { isCarouselShown },
-        viewportStore: {
-            deviceWidthIndex,
-            windowWidth
-        },
-        selectedStore: { isSelectedLogue }
-    } = state
-
-    return {
-        queuedScrollCarouselLog,
-        queuedScrollCarouselIndex,
-        queuedScrollCarouselNoDuration,
-        isCarouselShown,
-        deviceWidthIndex,
-        windowWidth,
-        isSelectedLogue
     }
 }
 

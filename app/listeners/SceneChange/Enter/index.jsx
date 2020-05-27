@@ -8,6 +8,16 @@ import SceneChangeUpdateDispatcher from '../Update'
 
 import { populateRefs } from '../../../helpers/ref'
 
+const mapStateToProps = state => {
+    const {
+        entranceStore: { didSceneScrollExit }
+    } = state
+
+    return {
+        didSceneScrollExit
+    }
+}
+
 class SceneChangeEnterListener extends PureComponent {
 
     static propTypes = {
@@ -45,16 +55,6 @@ class SceneChangeEnterListener extends PureComponent {
         return (
             <SceneChangeUpdateDispatcher {...{ getRefs: this._getRefs }} />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        entranceStore: { didSceneScrollExit }
-    } = state
-
-    return {
-        didSceneScrollExit
     }
 }
 

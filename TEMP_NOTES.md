@@ -1,11 +1,12 @@
 # Immediate tasks needed
 * Have separate candidate environment.
+    * https://medium.com/@wolovim/deploying-create-react-app-to-s3-or-cloudfront-48dae4ce0af
 * Revert code to use webpack again.
     * https://github.com/bennettslin/yearlings_bobtail_app/tree/master-before-gatsby
     * Add back webpack config, package dependencies, root level rc files, fonts.
     * Update webpack config for new way of doing things.
     * Have notes to keep track of changes.
-* Have scripts that can deploy candidate, delivery, and production.
+* Update scripts that can deploy candidate, delivery, and production.
 * Deploy gatsby to candidate, webpack to delivery for now.
 
 # Bugs
@@ -15,7 +16,6 @@
 * PT Sans Italic is small?
 
 # Brainless JS tasks
-* Put all mapStateToProps at top
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.
 

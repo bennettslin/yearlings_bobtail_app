@@ -12,6 +12,24 @@ import {
     AUDIO_OPTIONS
 } from '../../../constants/options'
 
+const mapStateToProps = state => {
+    const {
+        audioStore: {
+            isPlaying,
+            queuedTogglePlay
+        },
+        sessionStore: { audioOptionIndex },
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        isPlaying,
+        queuedTogglePlay,
+        audioOptionIndex,
+        selectedSongIndex
+    }
+}
+
 class AudioManager extends PureComponent {
 
     static propTypes = {
@@ -95,24 +113,6 @@ class AudioManager extends PureComponent {
         return (
             <SongDispatcher {...{ getRefs: this._getRefs }} />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        audioStore: {
-            isPlaying,
-            queuedTogglePlay
-        },
-        sessionStore: { audioOptionIndex },
-        selectedStore: { selectedSongIndex }
-    } = state
-
-    return {
-        isPlaying,
-        queuedTogglePlay,
-        audioOptionIndex,
-        selectedSongIndex
     }
 }
 

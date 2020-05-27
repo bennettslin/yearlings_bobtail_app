@@ -10,6 +10,18 @@ import {
 import { updateSessionStore } from '../../../redux/session/action'
 import { getBookForSongIndex } from '../../../album/api/songs'
 
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isNavShown },
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        isNavShown,
+        selectedSongIndex
+    }
+}
+
 class NavListener extends PureComponent {
 
     static propTypes = {
@@ -58,18 +70,6 @@ class NavListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        toggleStore: { isNavShown },
-        selectedStore: { selectedSongIndex }
-    } = state
-
-    return {
-        isNavShown,
-        selectedSongIndex
     }
 }
 

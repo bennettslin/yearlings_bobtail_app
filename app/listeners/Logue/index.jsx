@@ -6,6 +6,16 @@ import { connect } from 'react-redux'
 import { updateAudioStore } from '../../redux/audio/action'
 import { updateToggleStore } from '../../redux/toggle/action'
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: { isSelectedLogue }
+    } = state
+
+    return {
+        isSelectedLogue
+    }
+}
+
 class LogueListener extends PureComponent {
 
     static propTypes = {
@@ -32,16 +42,6 @@ class LogueListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: { isSelectedLogue }
-    } = state
-
-    return {
-        isSelectedLogue
     }
 }
 

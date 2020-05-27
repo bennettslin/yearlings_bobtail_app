@@ -8,6 +8,20 @@ import { resetTheatreEntrance } from '../../../redux/entrance/action'
 import { getWindowDimensions } from '../../../helpers/resize/device'
 import { getWindow } from '../../../utils/browser'
 
+const mapStateToProps = state => {
+    const {
+        viewportStore: {
+            windowHeight,
+            windowWidth
+        }
+    } = state
+
+    return {
+        windowHeight,
+        windowWidth
+    }
+}
+
 class ResizeListener extends PureComponent {
 
     static propTypes = {
@@ -87,20 +101,6 @@ class ResizeListener extends PureComponent {
                 }}
             />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        viewportStore: {
-            windowHeight,
-            windowWidth
-        }
-    } = state
-
-    return {
-        windowHeight,
-        windowWidth
     }
 }
 

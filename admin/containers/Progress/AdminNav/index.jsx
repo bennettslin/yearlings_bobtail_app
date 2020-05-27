@@ -18,6 +18,16 @@ import {
 
 const songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        selectedSongIndex
+    }
+}
+
 /*************
  * CONTAINER *
  *************/
@@ -85,16 +95,6 @@ AdminNav.propTypes = {
     // From parent.
     allTasks: PropTypes.array,
     allTasksV2: PropTypes.array
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: { selectedSongIndex }
-    } = state
-
-    return {
-        selectedSongIndex
-    }
 }
 
 export default connect(mapStateToProps)(AdminNav)

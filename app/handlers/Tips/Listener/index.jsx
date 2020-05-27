@@ -12,6 +12,40 @@ import {
     HIDDEN
 } from '../../../constants/options'
 
+const mapStateToProps = state => {
+    const {
+        lyricStore: {
+            lyricSongIndex,
+            lyricAnnotationIndex
+        },
+        selectedStore: {
+            isSelectedLogue
+        },
+        optionStore: {
+            selectedTipsOption,
+            isForcedShownOverview
+        },
+        viewportStore: {
+            deviceWidthIndex,
+            isPhoneWidth,
+            isTabletWidth,
+            isDesktopWidth
+        }
+    } = state
+
+    return {
+        isSelectedLogue,
+        selectedTipsOption,
+        isForcedShownOverview,
+        lyricSongIndex,
+        lyricAnnotationIndex,
+        deviceWidthIndex,
+        isPhoneWidth,
+        isTabletWidth,
+        isDesktopWidth
+    }
+}
+
 class TipsListener extends PureComponent {
 
     static propTypes = {
@@ -151,40 +185,6 @@ class TipsListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        lyricStore: {
-            lyricSongIndex,
-            lyricAnnotationIndex
-        },
-        selectedStore: {
-            isSelectedLogue
-        },
-        optionStore: {
-            selectedTipsOption,
-            isForcedShownOverview
-        },
-        viewportStore: {
-            deviceWidthIndex,
-            isPhoneWidth,
-            isTabletWidth,
-            isDesktopWidth
-        }
-    } = state
-
-    return {
-        isSelectedLogue,
-        selectedTipsOption,
-        isForcedShownOverview,
-        lyricSongIndex,
-        lyricAnnotationIndex,
-        deviceWidthIndex,
-        isPhoneWidth,
-        isTabletWidth,
-        isDesktopWidth
     }
 }
 

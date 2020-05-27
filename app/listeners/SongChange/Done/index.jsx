@@ -6,6 +6,24 @@ import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
 
 import { populateRefs } from '../../../helpers/ref'
 
+const mapStateToProps = state => {
+    const {
+        mountStore: { canCarouselMount },
+        entranceStore: {
+            didCarouselEnter,
+            didLyricEnter,
+            didCurtainEnter
+        }
+    } = state
+
+    return {
+        canCarouselMount,
+        didCarouselEnter,
+        didLyricEnter,
+        didCurtainEnter
+    }
+}
+
 class SongChangeDoneListener extends PureComponent {
 
     static propTypes = {
@@ -69,24 +87,6 @@ class SongChangeDoneListener extends PureComponent {
         return (
             <SceneChangeUpdateDispatcher {...{ getRefs: this._getRefs }} />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        mountStore: { canCarouselMount },
-        entranceStore: {
-            didCarouselEnter,
-            didLyricEnter,
-            didCurtainEnter
-        }
-    } = state
-
-    return {
-        canCarouselMount,
-        didCarouselEnter,
-        didLyricEnter,
-        didCurtainEnter
     }
 }
 

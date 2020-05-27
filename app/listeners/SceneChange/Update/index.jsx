@@ -13,6 +13,20 @@ import {
     getSkySeasonForScene
 } from '../../../album/api/scenes'
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            selectedSongIndex,
+            selectedSceneIndex
+        }
+    } = state
+
+    return {
+        selectedSongIndex,
+        selectedSceneIndex
+    }
+}
+
 class SceneChangeUpdateDispatcher extends PureComponent {
 
     static propTypes = {
@@ -87,20 +101,6 @@ class SceneChangeUpdateDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: {
-            selectedSongIndex,
-            selectedSceneIndex
-        }
-    } = state
-
-    return {
-        selectedSongIndex,
-        selectedSceneIndex
     }
 }
 

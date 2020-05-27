@@ -10,6 +10,18 @@ import { getDotKeysFromBitNumber } from '../../helpers/dot'
 
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
 
+const mapStateToProps = state => {
+    const {
+        dotsStore: { dotsBitNumber },
+        dotsSlideStore: { dotsSlideBitNumber }
+    } = state
+
+    return {
+        dotsBitNumber,
+        dotsSlideBitNumber
+    }
+}
+
 class DotSelectDispatcher extends PureComponent {
 
     static propTypes = {
@@ -84,18 +96,6 @@ class DotSelectDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        dotsStore: { dotsBitNumber },
-        dotsSlideStore: { dotsSlideBitNumber }
-    } = state
-
-    return {
-        dotsBitNumber,
-        dotsSlideBitNumber
     }
 }
 

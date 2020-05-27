@@ -7,6 +7,16 @@ import { getSongsNotLoguesCount } from '../../../../album/api/songs'
 import { setNewValueInBitNumber } from '../../../../helpers/bit'
 import { getStoreKeyForPlayer } from '../../../../helpers/player'
 
+const mapStateToProps = state => {
+    const {
+        playersStore: { playersBitNumber }
+    } = state
+
+    return {
+        playersBitNumber
+    }
+}
+
 class PlayerDispatcher extends PureComponent {
 
     static propTypes = {
@@ -45,16 +55,6 @@ class PlayerDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        playersStore: { playersBitNumber }
-    } = state
-
-    return {
-        playersBitNumber
     }
 }
 

@@ -9,6 +9,16 @@ import {
 } from '../../../redux/access/action'
 import { resetActivatedDots } from '../../../redux/dotsSlide/action'
 
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isDotsSlideShown }
+    } = state
+
+    return {
+        isDotsSlideShown
+    }
+}
+
 class DotsSlideListener extends PureComponent {
 
     static propTypes = {
@@ -44,16 +54,6 @@ class DotsSlideListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        toggleStore: { isDotsSlideShown }
-    } = state
-
-    return {
-        isDotsSlideShown
     }
 }
 

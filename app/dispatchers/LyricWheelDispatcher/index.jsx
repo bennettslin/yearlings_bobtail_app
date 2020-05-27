@@ -5,6 +5,16 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateToggleStore } from '../../redux/toggle/action'
 
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isAutoScroll }
+    } = state
+
+    return {
+        isAutoScroll
+    }
+}
+
 class LyricWheelDispatcher extends PureComponent {
 
     static propTypes = {
@@ -83,16 +93,6 @@ class LyricWheelDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        toggleStore: { isAutoScroll }
-    } = state
-
-    return {
-        isAutoScroll
     }
 }
 

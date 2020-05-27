@@ -5,6 +5,18 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
 
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isDotsSlideShown },
+        selectedStore: { isSelectedLogue }
+    } = state
+
+    return {
+        isDotsSlideShown,
+        isSelectedLogue
+    }
+}
+
 class DotsSlideDispatcher extends PureComponent {
 
     static propTypes = {
@@ -41,18 +53,6 @@ class DotsSlideDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        toggleStore: { isDotsSlideShown },
-        selectedStore: { isSelectedLogue }
-    } = state
-
-    return {
-        isDotsSlideShown,
-        isSelectedLogue
     }
 }
 

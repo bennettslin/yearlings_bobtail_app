@@ -6,6 +6,18 @@ import { connect } from 'react-redux'
 import { resetAccessedNav } from '../../../redux/access/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 
+const mapStateToProps = state => {
+    const {
+        mountStore: { canCarouselMount },
+        dotsStore: { dotsBitNumber }
+    } = state
+
+    return {
+        canCarouselMount,
+        dotsBitNumber
+    }
+}
+
 class CarouselNavListener extends PureComponent {
 
     static propTypes = {
@@ -48,18 +60,6 @@ class CarouselNavListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        mountStore: { canCarouselMount },
-        dotsStore: { dotsBitNumber }
-    } = state
-
-    return {
-        canCarouselMount,
-        dotsBitNumber
     }
 }
 

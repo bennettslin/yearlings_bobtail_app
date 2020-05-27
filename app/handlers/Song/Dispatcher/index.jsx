@@ -18,6 +18,16 @@ import { getSceneIndexForVerse } from '../../../album/api/verses'
 
 import { getSongsAndLoguesCount } from '../../../album/api/songs'
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        selectedSongIndex
+    }
+}
+
 class SongDispatcher extends PureComponent {
 
     static propTypes = {
@@ -114,16 +124,6 @@ class SongDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: { selectedSongIndex }
-    } = state
-
-    return {
-        selectedSongIndex
     }
 }
 

@@ -10,6 +10,18 @@ import { updateVerseBarsStore } from '../../redux/verseBars/action'
 
 import { getSceneIndexForVerse } from '../../album/api/verses'
 
+const mapStateToProps = state => {
+    const {
+        toggleStore: { isAutoScroll },
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        isAutoScroll,
+        selectedSongIndex
+    }
+}
+
 class TimeVerseDispatcher extends PureComponent {
 
     static propTypes = {
@@ -82,18 +94,6 @@ class TimeVerseDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        toggleStore: { isAutoScroll },
-        selectedStore: { selectedSongIndex }
-    } = state
-
-    return {
-        isAutoScroll,
-        selectedSongIndex
     }
 }
 

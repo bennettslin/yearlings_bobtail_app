@@ -6,6 +6,26 @@ import { connect } from 'react-redux'
 import { updateScrollCarouselStore } from '../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            isSelectedLogue,
+            selectedAnnotationIndex
+        },
+        entranceStore: {
+            didCarouselEnter,
+            didLyricEnter
+        }
+    } = state
+
+    return {
+        isSelectedLogue,
+        didCarouselEnter,
+        didLyricEnter,
+        selectedAnnotationIndex
+    }
+}
+
 class ScrollRenderListener extends PureComponent {
 
     static propTypes = {
@@ -71,26 +91,6 @@ class ScrollRenderListener extends PureComponent {
     }
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: {
-            isSelectedLogue,
-            selectedAnnotationIndex
-        },
-        entranceStore: {
-            didCarouselEnter,
-            didLyricEnter
-        }
-    } = state
-
-    return {
-        isSelectedLogue,
-        didCarouselEnter,
-        didLyricEnter,
-        selectedAnnotationIndex
     }
 }
 

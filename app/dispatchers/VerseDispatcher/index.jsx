@@ -10,6 +10,16 @@ import { resetVerseBars } from '../../redux/verseBars/action'
 import { getStartTimeForVerse } from '../../album/api/time'
 import { getSceneIndexForVerse } from '../../album/api/verses'
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: { selectedSongIndex }
+    } = state
+
+    return {
+        selectedSongIndex
+    }
+}
+
 class VerseDispatcher extends PureComponent {
 
     static propTypes = {
@@ -81,16 +91,6 @@ class VerseDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: { selectedSongIndex }
-    } = state
-
-    return {
-        selectedSongIndex
     }
 }
 

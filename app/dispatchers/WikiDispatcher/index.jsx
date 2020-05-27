@@ -4,6 +4,18 @@ import { connect } from 'react-redux'
 import { updateSessionStore } from '../../redux/session/action'
 import { REFERENCE } from '../../constants/dots'
 
+const mapStateToProps = state => {
+    const {
+        dotsStore: {
+            [REFERENCE]: isWikiDotSelected
+        }
+    } = state
+
+    return {
+        isWikiDotSelected
+    }
+}
+
 class WikiDispatcher extends PureComponent {
 
     static propTypes = {
@@ -41,18 +53,6 @@ class WikiDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        dotsStore: {
-            [REFERENCE]: isWikiDotSelected
-        }
-    } = state
-
-    return {
-        isWikiDotSelected
     }
 }
 

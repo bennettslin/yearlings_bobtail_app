@@ -5,6 +5,24 @@ import { updateOptionStore } from '../../../redux/option/action'
 
 import { getNextOption } from '../../../helpers/options'
 
+const mapStateToProps = state => {
+    const {
+        lyricStore: { isLyricLogue },
+        optionStore: { selectedTipsOption },
+        transientStore: {
+            isTipsShowable,
+            toggleShowsTipsImmediately
+        }
+    } = state
+
+    return {
+        isLyricLogue,
+        selectedTipsOption,
+        isTipsShowable,
+        toggleShowsTipsImmediately
+    }
+}
+
 class TipsDispatcher extends PureComponent {
 
     static propTypes = {
@@ -53,24 +71,6 @@ class TipsDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        lyricStore: { isLyricLogue },
-        optionStore: { selectedTipsOption },
-        transientStore: {
-            isTipsShowable,
-            toggleShowsTipsImmediately
-        }
-    } = state
-
-    return {
-        isLyricLogue,
-        selectedTipsOption,
-        isTipsShowable,
-        toggleShowsTipsImmediately
     }
 }
 

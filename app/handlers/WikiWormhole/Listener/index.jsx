@@ -8,6 +8,20 @@ import WikiWormholeDispatcher from '../Dispatcher'
 
 import { populateRefs } from '../../../helpers/ref'
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            selectedSongIndex,
+            selectedAnnotationIndex
+        }
+    } = state
+
+    return {
+        selectedSongIndex,
+        selectedAnnotationIndex
+    }
+}
+
 class WikiWormholeListener extends PureComponent {
 
     static propTypes = {
@@ -51,20 +65,6 @@ class WikiWormholeListener extends PureComponent {
         return (
             <WikiWormholeDispatcher {...{ getRefs: this._getRefs }} />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: {
-            selectedSongIndex,
-            selectedAnnotationIndex
-        }
-    } = state
-
-    return {
-        selectedSongIndex,
-        selectedAnnotationIndex
     }
 }
 

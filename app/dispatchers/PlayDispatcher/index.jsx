@@ -10,6 +10,24 @@ import SongDispatcher from '../../handlers/Song/Dispatcher'
 import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThrough } from '../../helpers/player'
 
+const mapStateToProps = state => {
+    const {
+        playersStore: { playersBitNumber },
+        audioStore: { isPlaying },
+        selectedStore: {
+            selectedSongIndex,
+            isSelectedLogue
+        }
+    } = state
+
+    return {
+        isPlaying,
+        playersBitNumber,
+        selectedSongIndex,
+        isSelectedLogue
+    }
+}
+
 class PlayDispatcher extends PureComponent {
 
     static propTypes = {
@@ -75,24 +93,6 @@ class PlayDispatcher extends PureComponent {
         return (
             <SongDispatcher {...{ getRefs: this._getRefs }} />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        playersStore: { playersBitNumber },
-        audioStore: { isPlaying },
-        selectedStore: {
-            selectedSongIndex,
-            isSelectedLogue
-        }
-    } = state
-
-    return {
-        isPlaying,
-        playersBitNumber,
-        selectedSongIndex,
-        isSelectedLogue
     }
 }
 

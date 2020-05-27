@@ -8,6 +8,26 @@ import {
     HIDDEN
 } from '../../../constants/options'
 
+const mapStateToProps = state => {
+    const {
+        selectedStore: {
+            isSelectedLogue,
+            selectedSongIndex,
+            selectedAnnotationIndex
+        },
+        responsiveStore: { isHeightlessLyric },
+        optionStore: { selectedOverviewOption }
+    } = state
+
+    return {
+        isSelectedLogue,
+        selectedSongIndex,
+        selectedAnnotationIndex,
+        isHeightlessLyric,
+        selectedOverviewOption
+    }
+}
+
 class OverviewListener extends PureComponent {
 
     static propTypes = {
@@ -94,26 +114,6 @@ class OverviewListener extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: {
-            isSelectedLogue,
-            selectedSongIndex,
-            selectedAnnotationIndex
-        },
-        responsiveStore: { isHeightlessLyric },
-        optionStore: { selectedOverviewOption }
-    } = state
-
-    return {
-        isSelectedLogue,
-        selectedSongIndex,
-        selectedAnnotationIndex,
-        isHeightlessLyric,
-        selectedOverviewOption
     }
 }
 
