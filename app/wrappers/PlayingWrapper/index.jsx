@@ -7,30 +7,15 @@ import {
     IS_ACCESS_ON_SELECTOR,
     ACCESSED_KEY_SELECTOR
 } from '../../redux/access/selectors'
-
-const mapStateToProps = state => {
-    const {
-            audioStore: { isPlaying },
-            lyricStore: { isLyricLogue }
-        } = state,
-        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
-        accessedKey = ACCESSED_KEY_SELECTOR(state)
-
-    return {
-        isPlaying,
-        isLyricLogue,
-        isAccessOn,
-        accessedKey
-    }
-}
+import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
+import { IS_LYRIC_LOGUE_SELECTOR } from '../../redux/lyric/selectors'
 
 const PlayingWrapper = ({ children }) => {
-    const {
-        isLyricLogue,
-        isPlaying,
-        isAccessOn,
-        accessedKey
-    } = useSelector(mapStateToProps)
+    const
+        isAccessOn = useSelector(IS_ACCESS_ON_SELECTOR),
+        accessedKey = useSelector(ACCESSED_KEY_SELECTOR),
+        isPlaying = useSelector(IS_PLAYING_SELECTOR),
+        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR)
 
     return (
         <div

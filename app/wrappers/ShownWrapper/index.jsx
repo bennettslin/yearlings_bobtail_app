@@ -5,23 +5,43 @@ import cx from 'classnames'
 import { getSongTipType } from '../../album/api/tips'
 import { SHOWN } from '../../constants/options'
 import { WIKI, WORMHOLES } from '../../constants/tips'
+import {
+    REFERENCE_SELECTOR,
+    WORMHOLE_SELECTOR
+} from '../../redux/dots/selectors'
+import { CAN_LYRIC_CAROUSEL_ENTER_SELECTOR } from '../../redux/entrance/selectors'
+import {
+    IS_LYRIC_LOGUE_SELECTOR,
+    LYRIC_SONG_INDEX_SELECTOR,
+    LYRIC_ANNOTATION_INDEX_SELECTOR
+} from '../../redux/lyric/selectors'
+import {
+    SELECTED_OVERVIEW_OPTION_SELECTOR,
+    SELECTED_TIPS_OPTION_SELECTOR
+} from '../../redux/option/selectors'
+import {
+    IS_CAROUSEL_SHOWN_SELECTOR,
+    IS_NAV_SHOWN_SELECTOR,
+    IS_LYRIC_EXPANDED_SELECTOR,
+    IS_DOTS_SLIDE_SHOWN_SELECTOR
+} from '../../redux/toggle/selectors'
+import { IS_OVERLAY_SHOWN_SELECTOR } from '../../redux/transient/selectors'
 
 const ShownWrapper = ({ children }) => {
-    const {
-            wormhole,
-            reference,
-            canLyricCarouselEnter,
-            isLyricLogue,
-            lyricSongIndex,
-            lyricAnnotationIndex,
-            selectedOverviewOption,
-            selectedTipsOption,
-            isCarouselShown,
-            isNavShown,
-            isLyricExpanded,
-            isDotsSlideShown,
-            isOverlayShown
-        } = useSelector(mapStateToProps),
+    const
+        reference = useSelector(REFERENCE_SELECTOR),
+        wormhole = useSelector(WORMHOLE_SELECTOR),
+        canLyricCarouselEnter = useSelector(CAN_LYRIC_CAROUSEL_ENTER_SELECTOR),
+        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricAnnotationIndex = useSelector(LYRIC_ANNOTATION_INDEX_SELECTOR),
+        selectedOverviewOption = useSelector(SELECTED_OVERVIEW_OPTION_SELECTOR),
+        selectedTipsOption = useSelector(SELECTED_TIPS_OPTION_SELECTOR),
+        isCarouselShown = useSelector(IS_CAROUSEL_SHOWN_SELECTOR),
+        isNavShown = useSelector(IS_NAV_SHOWN_SELECTOR),
+        isLyricExpanded = useSelector(IS_LYRIC_EXPANDED_SELECTOR),
+        isDotsSlideShown = useSelector(IS_DOTS_SLIDE_SHOWN_SELECTOR),
+        isOverlayShown = useSelector(IS_OVERLAY_SHOWN_SELECTOR),
 
         songOverviewShown =
             !isLyricLogue && selectedOverviewOption === SHOWN,
@@ -81,48 +101,6 @@ const ShownWrapper = ({ children }) => {
             {children}
         </div>
     )
-}
-
-const mapStateToProps = state => {
-    const {
-        dotsStore: {
-            wormhole,
-            reference
-        },
-        entranceStore: { canLyricCarouselEnter },
-        lyricStore: {
-            isLyricLogue,
-            lyricSongIndex,
-            lyricAnnotationIndex
-        },
-        optionStore: {
-            selectedOverviewOption,
-            selectedTipsOption
-        },
-        toggleStore: {
-            isCarouselShown,
-            isNavShown,
-            isLyricExpanded,
-            isDotsSlideShown
-        },
-        transientStore: { isOverlayShown }
-    } = state
-
-    return {
-        wormhole,
-        reference,
-        canLyricCarouselEnter,
-        isLyricLogue,
-        lyricSongIndex,
-        lyricAnnotationIndex,
-        selectedOverviewOption,
-        selectedTipsOption,
-        isCarouselShown,
-        isNavShown,
-        isLyricExpanded,
-        isDotsSlideShown,
-        isOverlayShown
-    }
 }
 
 ShownWrapper.propTypes = {

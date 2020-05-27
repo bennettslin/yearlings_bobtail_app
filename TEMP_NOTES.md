@@ -1,3 +1,9 @@
+# Immediate tasks needed
+* Have separate candidate environment.
+* Revert code to use webpack again.
+* Have scripts that can deploy candidate, delivery, and production.
+* Deploy gatsby to candidate, webpack to delivery for now.
+
 # Bugs
 * Figure out why window resizing timeout seems to have regressed.
 * Sketchbooks are blank. (Sketches are probably behind them.)
@@ -5,7 +11,6 @@
 * PT Sans Italic is small?
 
 # Brainless JS tasks
-* Change for components that already have useSelector(mapStateToProps)
 * Put all mapStateToProps at top
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.
@@ -38,3 +43,6 @@
     * Heightless and zoom show the same thing.
     * Always render Carousel, even in mobile. Show carousel if heightless.
     * Only About, Carousel, and Lyric need to render for SEO.
+
+# Ongoing weirdness
+* Switching between songs in local is slow, not as slow in staging

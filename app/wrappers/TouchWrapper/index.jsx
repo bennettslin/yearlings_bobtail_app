@@ -3,38 +3,22 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { IS_ACTIVATED_SELECTOR } from '../../redux/activated/selectors'
-
-const mapStateToProps = state => {
-    const {
-            scrollOverlayStore: { isScrolling },
-            toggleStore: { isAutoScroll },
-            sliderStore: {
-                isSliderTouched,
-                isSliderMoving
-            },
-            bannerStore: { isBannerHovering }
-        } = state,
-        isActivated = IS_ACTIVATED_SELECTOR(state)
-
-    return {
-        isAutoScroll,
-        isScrolling,
-        isSliderTouched,
-        isSliderMoving,
-        isActivated,
-        isBannerHovering
-    }
-}
+import { IS_BANNER_HOVERING_SELECTOR } from '../../redux/banner/selectors'
+import { IS_SCROLLING_SELECTOR } from '../../redux/scrollOverlay/selectors'
+import {
+    IS_SLIDER_TOUCHED_SELECTOR,
+    IS_SLIDER_MOVING_SELECTOR
+} from '../../redux/slider/selectors'
+import { IS_AUTO_SCROLL_SELECTOR } from '../../redux/toggle/selectors'
 
 const TouchWrapper = ({ children }) => {
-    const {
-        isAutoScroll,
-        isScrolling,
-        isSliderTouched,
-        isSliderMoving,
-        isActivated,
-        isBannerHovering
-    } = useSelector(mapStateToProps)
+    const
+        isActivated = useSelector(IS_ACTIVATED_SELECTOR),
+        isBannerHovering = useSelector(IS_BANNER_HOVERING_SELECTOR),
+        isScrolling = useSelector(IS_SCROLLING_SELECTOR),
+        isSliderTouched = useSelector(IS_SLIDER_TOUCHED_SELECTOR),
+        isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
+        isAutoScroll = useSelector(IS_AUTO_SCROLL_SELECTOR)
 
     return (
         <div

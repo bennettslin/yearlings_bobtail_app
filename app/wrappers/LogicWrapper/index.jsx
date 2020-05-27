@@ -12,60 +12,37 @@ import {
     IS_ACTIVATED_SELECTOR,
     ACTIVATED_VERSE_INDEX_SELECTOR
 } from '../../redux/activated/selectors'
-
-const mapStateToProps = state => {
-    const {
-            audioStore: { isPlaying },
-            dotsStore: { dotsBitNumber },
-            verseBarsStore: {
-                isVerseBarAbove,
-                isVerseBarBelow
-            },
-            lyricStore: {
-                isLyricLogue,
-                lyricSongIndex,
-                lyricVerseIndex
-            },
-            sliderStore: {
-                isSliderMoving,
-                sliderVerseIndex
-            }
-        } = state,
-        isActivated = IS_ACTIVATED_SELECTOR(state),
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
-
-    return {
-        isActivated,
-        activatedVerseIndex,
-        dotsBitNumber,
-        isPlaying,
-        isLyricLogue,
-        lyricSongIndex,
-        lyricVerseIndex,
-        isSliderMoving,
-        sliderVerseIndex,
-        isVerseBarAbove,
-        isVerseBarBelow
-    }
-}
+import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
+import { DOTS_BIT_NUMBER_SELECTOR } from '../../redux/dots/selectors'
+import {
+    IS_LYRIC_LOGUE_SELECTOR,
+    LYRIC_SONG_INDEX_SELECTOR,
+    LYRIC_VERSE_INDEX_SELECTOR
+} from '../../redux/lyric/selectors'
+import {
+    IS_SLIDER_MOVING_SELECTOR,
+    SLIDER_VERSE_INDEX_SELECTOR
+} from '../../redux/slider/selectors'
+import {
+    IS_VERSE_BAR_ABOVE_SELECTOR,
+    IS_VERSE_BAR_BELOW_SELECTOR
+} from '../../redux/verseBars/selectors'
 
 const LogicWrapper = ({ children }) => {
-    const {
-            dotsBitNumber,
-            isPlaying,
-            isSliderMoving,
-            isLyricLogue,
-            lyricSongIndex,
-            lyricVerseIndex,
-            sliderVerseIndex,
-            isActivated,
-            activatedVerseIndex,
-            isVerseBarAbove,
-            isVerseBarBelow
-        } = useSelector(mapStateToProps),
+    const
+        isActivated = useSelector(IS_ACTIVATED_SELECTOR),
+        activatedVerseIndex = useSelector(ACTIVATED_VERSE_INDEX_SELECTOR),
+        isPlaying = useSelector(IS_PLAYING_SELECTOR),
+        dotsBitNumber = useSelector(DOTS_BIT_NUMBER_SELECTOR),
+        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricVerseIndex = useSelector(LYRIC_VERSE_INDEX_SELECTOR),
+        isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
+        sliderVerseIndex = useSelector(SLIDER_VERSE_INDEX_SELECTOR),
+        isVerseBarAbove = useSelector(IS_VERSE_BAR_ABOVE_SELECTOR),
+        isVerseBarBelow = useSelector(IS_VERSE_BAR_BELOW_SELECTOR),
 
         selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
-
         areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
 
         /**

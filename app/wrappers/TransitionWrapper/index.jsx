@@ -2,11 +2,11 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { CAN_LYRIC_CAROUSEL_ENTER_SELECTOR } from '../../redux/entrance/selectors'
 
 const TransitionWrapper = ({ children }) => {
-    const {
-        canLyricCarouselEnter
-    } = useSelector(mapStateToProps)
+    const
+        canLyricCarouselEnter = useSelector(CAN_LYRIC_CAROUSEL_ENTER_SELECTOR)
 
     return (
         <div
@@ -31,16 +31,6 @@ const TransitionWrapper = ({ children }) => {
             {children}
         </div>
     )
-}
-
-const mapStateToProps = state => {
-    const {
-        entranceStore: { canLyricCarouselEnter }
-    } = state
-
-    return {
-        canLyricCarouselEnter
-    }
 }
 
 TransitionWrapper.propTypes = {
