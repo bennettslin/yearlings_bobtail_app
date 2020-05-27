@@ -9,3 +9,4 @@ export const QUEUED_ANNOTATION_FROM_CAROUSEL_SELECTOR = (
 export const QUEUED_ANNOTATION_FROM_LYRIC_VERSE_SELECTOR = (
     { annotationStore: { queuedAnnotationFromLyricVerse } }
 ) => queuedAnnotationFromLyricVerse
+

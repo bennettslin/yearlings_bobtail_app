@@ -10,6 +10,11 @@ import { getShowAnnotationForColumn } from '../../../helpers/annotation'
 import { getVerseIndexForAnnotation } from '../../../album/api/annotations'
 import { populateRefs } from '../../../helpers/ref'
 import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import {
+    QUEUED_ANNOTATION_INDEX_SELECTOR,
+    QUEUED_ANNOTATION_FROM_CAROUSEL_SELECTOR,
+    QUEUED_ANNOTATION_FROM_LYRIC_VERSE_SELECTOR
+} from '../../../redux/annotation/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -20,14 +25,12 @@ const mapStateToProps = state => {
                 selectedSongIndex,
                 selectedVerseIndex,
                 selectedAnnotationIndex
-            },
-            annotationStore: {
-                queuedAnnotationIndex,
-                queuedAnnotationFromCarousel,
-                queuedAnnotationFromLyricVerse
             }
         } = state,
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
+        queuedAnnotationIndex = QUEUED_ANNOTATION_INDEX_SELECTOR(state),
+        queuedAnnotationFromCarousel = QUEUED_ANNOTATION_FROM_CAROUSEL_SELECTOR(state),
+        queuedAnnotationFromLyricVerse = QUEUED_ANNOTATION_FROM_LYRIC_VERSE_SELECTOR(state)
 
     return {
         isDotsSlideShown,
