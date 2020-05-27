@@ -4732,5 +4732,9 @@ export default [
     {
         taskName: `Refactor internal stylesheet.`,
         workedHours: 1
+    },
+    {
+        taskName: `Add back legacy webpack setup.`,
+        workedHours: 1
     }
 ]

@@ -6,7 +6,7 @@
 
 # Bugs while production hasn't changed.
 * Figure out why window resizing timeout seems to have regressed.
-* PT Sans Italic is small?
+* PT Sans Italic is small? e.g. The Man in the High Castle.
 * GA not initialising again?
 * Switching between songs in local is slow, not as slow in staging
 
