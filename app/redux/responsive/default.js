@@ -26,7 +26,7 @@ export const IS_INITIAL_TWO_ROW_MENU = getIsTwoRowMenu({
     deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX
 })
 export const INITIAL_MENU_HEIGHT = getMenuHeight({
-    isTwoRowMenu: INITIAL_MENU_HEIGHT
+    isTwoRowMenu: IS_INITIAL_TWO_ROW_MENU
 })
 
 export const RESPONSIVE_DEFAULTS = {
