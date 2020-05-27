@@ -4,18 +4,19 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
+import { IS_ACCESS_ON_SELECTOR } from '../../redux/access/selectors'
 
 const mapStateToProps = state => {
     const {
-        accessStore: { isAccessOn },
-        toggleStore: {
-            isNavShown,
-            isDotsSlideShown,
-            isLyricExpanded
-        },
-        lyricStore: { lyricAnnotationIndex },
-        activatedStore: { isActivated }
-    } = state
+            toggleStore: {
+                isNavShown,
+                isDotsSlideShown,
+                isLyricExpanded
+            },
+            lyricStore: { lyricAnnotationIndex },
+            activatedStore: { isActivated }
+        } = state,
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state)
 
     return {
         isAccessOn,

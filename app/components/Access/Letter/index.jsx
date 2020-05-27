@@ -8,16 +8,17 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import AccessField from './Field'
 import AccessIcon from './Icon'
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
+import { IS_ACCESS_ON_SELECTOR } from '../../../redux/access/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-        accessStore: { isAccessOn },
-        viewportStore: {
-            isDesktopWidth,
-            isTabletWidth
-        }
-    } = state
+            viewportStore: {
+                isDesktopWidth,
+                isTabletWidth
+            }
+        } = state,
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state)
 
     return {
         isAccessOn,

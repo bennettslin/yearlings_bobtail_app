@@ -4,26 +4,26 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
-
 import Transition from 'react-transition-group/Transition'
 import ScrollCarouselListener from '../../../listeners/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
-
 import { getAnnotationIndices } from '../../../album/api/annotations'
 import { populateRefs } from '../../../helpers/ref'
+import {
+    IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
+    ACCESSED_ANNOTATION_INDEX_SELECTOR
+} from '../../../redux/access/selectors'
 
 const mapStateToProps = state => {
     const {
-        entranceStore: { canLyricCarouselUpdate },
-        lyricStore: {
-            lyricSongIndex,
-            lyricAnnotationIndex
-        },
-        accessStore: {
-            isAccessedIndexedAnchorShown,
-            accessedAnnotationIndex
-        }
-    } = state
+            entranceStore: { canLyricCarouselUpdate },
+            lyricStore: {
+                lyricSongIndex,
+                lyricAnnotationIndex
+            }
+        } = state,
+        isAccessedIndexedAnchorShown = IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR(state),
+        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         canLyricCarouselUpdate,

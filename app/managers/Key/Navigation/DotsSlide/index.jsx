@@ -2,11 +2,8 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from '../../../../redux/access/action'
-
 import DotSelectDispatcher from '../../../../dispatchers/DotSelectDispatcher'
-
 import { populateRefs } from '../../../../helpers/ref'
-
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -15,6 +12,21 @@ import {
     ENTER
 } from '../../../../constants/access'
 import { ORDERED_DOT_KEYS } from '../../../../constants/dots'
+import {
+    IS_ACCESS_ON_SELECTOR,
+    ACCESSED_DOT_INDEX_SELECTOR
+} from '../../../../redux/access/selectors'
+
+const mapStateToProps = state => {
+    const
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
+        accessedDotIndex = ACCESSED_DOT_INDEX_SELECTOR(state)
+
+    return {
+        isAccessOn,
+        accessedDotIndex
+    }
+}
 
 class DotsSlideNavigation extends PureComponent {
 
@@ -86,20 +98,6 @@ class DotsSlideNavigation extends PureComponent {
         return (
             <DotSelectDispatcher {...{ getRefs: this._getRefs }} />
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        accessStore: {
-            isAccessOn,
-            accessedDotIndex
-        }
-    } = state
-
-    return {
-        isAccessOn,
-        accessedDotIndex
     }
 }
 

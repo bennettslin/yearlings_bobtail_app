@@ -5,29 +5,29 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateAnnotationStore } from '../../../../redux/annotation/action'
-
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
 import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 import Anchor from '../../../Anchor'
-
 import { populateRefs } from '../../../../helpers/ref'
-
 import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
+import {
+    IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
+    ACCESSED_ANNOTATION_INDEX_SELECTOR,
+    ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR
+} from '../../../../redux/access/selectors'
 
 const mapStateToProps = state => {
     const {
-        lyricStore: {
-            lyricSongIndex,
-            lyricAnnotationIndex
-        },
-        accessStore: {
-            isAccessedIndexedAnchorShown,
-            accessedAnnotationIndex,
-            accessedWikiWormholeIndex
-        },
-        activatedStore: { isActivated },
-        sliderStore: { isSliderMoving }
-    } = state
+            lyricStore: {
+                lyricSongIndex,
+                lyricAnnotationIndex
+            },
+            activatedStore: { isActivated },
+            sliderStore: { isSliderMoving }
+        } = state,
+        isAccessedIndexedAnchorShown = IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR(state),
+        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
+        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state)
 
     return {
         lyricAnnotationIndex,

@@ -6,13 +6,11 @@ import { connect } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateToggleStore } from '../../redux/toggle/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
-
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
-
 import { populateRefs } from '../../helpers/ref'
-
 import { isEmailFocused } from '../../utils/email'
+import { IS_ACCESS_ON_SELECTOR } from '../../redux/access/selectors'
 
 import {
     getKeyName,
@@ -30,6 +28,22 @@ import {
     SPACE,
     TAB
 } from '../../constants/access'
+
+const mapStateToProps = state => {
+    const {
+            selectedStore: {
+                selectedVerseIndex,
+                selectedAnnotationIndex
+            }
+        } = state,
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state)
+
+    return {
+        isAccessOn,
+        selectedAnnotationIndex,
+        selectedVerseIndex
+    }
+}
 
 class KeyManager extends PureComponent {
 
@@ -204,22 +218,6 @@ class KeyManager extends PureComponent {
                 <LetterManager {...{ getRefs: this._getRefs }} />
             </>
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        accessStore: { isAccessOn },
-        selectedStore: {
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        }
-    } = state
-
-    return {
-        isAccessOn,
-        selectedAnnotationIndex,
-        selectedVerseIndex
     }
 }
 

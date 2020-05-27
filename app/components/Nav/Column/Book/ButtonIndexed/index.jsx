@@ -3,18 +3,19 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-
 import NavButton from '../Button'
+import {
+    IS_ACCESS_ON_SELECTOR,
+    ACCESSED_NAV_INDEX_SELECTOR
+} from '../../../../../redux/access/selectors'
 
 const mapStateToProps = state => {
     const {
-        accessStore: {
-            isAccessOn,
-            accessedNavIndex
-        },
-        toggleStore: { isDotsSlideShown },
-        selectedStore: { selectedSongIndex }
-    } = state
+            toggleStore: { isDotsSlideShown },
+            selectedStore: { selectedSongIndex }
+        } = state,
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
+        accessedNavIndex = ACCESSED_NAV_INDEX_SELECTOR(state)
 
     return {
         isAccessOn,

@@ -6,6 +6,7 @@
 
 # Brainless JS tasks
 * Change all mapStateToProps to grab from selectors
+* Ensure all selectors are used.
 * Ensure all selectors only grab their own value from store, any other value must come from another selector
 
 # Brainless CSS tasks

@@ -2,12 +2,28 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import { updateAccessStore } from '../../../redux/access/action'
-
 import { getWikiWormholeIndexForDirection } from './helper'
-
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
+import { ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR } from '../../../redux/access/selectors'
+
+const mapStateToProps = state => {
+    const {
+            selectedStore: {
+                selectedSongIndex,
+                selectedAnnotationIndex
+            },
+            dotsStore: { dotsBitNumber }
+        } = state,
+        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state)
+
+    return {
+        selectedSongIndex,
+        selectedAnnotationIndex,
+        accessedWikiWormholeIndex,
+        dotsBitNumber
+    }
+}
 
 class WikiWormholeDispatcher extends PureComponent {
 
@@ -59,24 +75,6 @@ class WikiWormholeDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        selectedStore: {
-            selectedSongIndex,
-            selectedAnnotationIndex
-        },
-        accessStore: { accessedWikiWormholeIndex },
-        dotsStore: { dotsBitNumber }
-    } = state
-
-    return {
-        selectedSongIndex,
-        selectedAnnotationIndex,
-        accessedWikiWormholeIndex,
-        dotsBitNumber
     }
 }
 

@@ -1,19 +1,35 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import { updateActivatedStore } from '../../../../redux/activated/action'
-
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Dispatcher'
-
 import { populateRefs } from '../../../../helpers/ref'
-
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
     ENTER
 } from '../../../../constants/access'
+import {
+    IS_ACCESS_ON_SELECTOR,
+    ACCESSED_ANNOTATION_INDEX_SELECTOR
+} from '../../../../redux/access/selectors'
+
+const mapStateToProps = state => {
+    const {
+            activatedStore: { activatedVerseIndex },
+            selectedStore: { selectedVerseIndex }
+        } = state,
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
+        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state)
+
+    return {
+        isAccessOn,
+        accessedAnnotationIndex,
+        activatedVerseIndex,
+        selectedVerseIndex
+    }
+}
 
 class LyricNavigation extends PureComponent {
 
@@ -114,24 +130,6 @@ class LyricNavigation extends PureComponent {
                 <AnnotationAccessDispatcher {...{ getRefs: this._getRefs }} />
             </>
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        accessStore: {
-            isAccessOn,
-            accessedAnnotationIndex
-        },
-        activatedStore: { activatedVerseIndex },
-        selectedStore: { selectedVerseIndex }
-    } = state
-
-    return {
-        isAccessOn,
-        accessedAnnotationIndex,
-        activatedVerseIndex,
-        selectedVerseIndex
     }
 }
 

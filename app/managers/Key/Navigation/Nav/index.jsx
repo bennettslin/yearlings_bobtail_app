@@ -2,21 +2,33 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from '../../../../redux/access/action'
-
 import NavDispatcher from '../../../../handlers/Nav/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'
-
 import {
     getSongsAndLoguesCount,
     getBookForSongIndex
 } from '../../../../album/api/songs'
 import { populateRefs } from '../../../../helpers/ref'
-
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
     ENTER
 } from '../../../../constants/access'
+import { ACCESSED_NAV_INDEX_SELECTOR } from '../../../../redux/access/selectors'
+
+const mapStateToProps = state => {
+    const {
+            selectedStore: { selectedSongIndex },
+            sessionStore: { shownNavBookIndex }
+        } = state,
+        accessedNavIndex = ACCESSED_NAV_INDEX_SELECTOR(state)
+
+    return {
+        accessedNavIndex,
+        selectedSongIndex,
+        shownNavBookIndex
+    }
+}
 
 class NavNavigation extends PureComponent {
 
@@ -107,20 +119,6 @@ class NavNavigation extends PureComponent {
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
             </>
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        accessStore: { accessedNavIndex },
-        selectedStore: { selectedSongIndex },
-        sessionStore: { shownNavBookIndex }
-    } = state
-
-    return {
-        accessedNavIndex,
-        selectedSongIndex,
-        shownNavBookIndex
     }
 }
 

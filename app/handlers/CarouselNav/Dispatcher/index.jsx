@@ -3,6 +3,35 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
+import { ACCESSED_ANNOTATION_INDEX_SELECTOR } from '../../../redux/access/selectors'
+
+const mapStateToProps = state => {
+    const {
+            dotsStore: { dotsBitNumber },
+            mountStore: { canCarouselMount },
+            selectedStore: {
+                selectedAnnotationIndex,
+                isSelectedLogue
+            },
+            toggleStore: {
+                isDotsSlideShown,
+                isCarouselShown,
+                isNavShown
+            }
+        } = state,
+        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state)
+
+    return {
+        dotsBitNumber,
+        canCarouselMount,
+        accessedAnnotationIndex,
+        selectedAnnotationIndex,
+        isSelectedLogue,
+        isDotsSlideShown,
+        isCarouselShown,
+        isNavShown
+    }
+}
 
 class CarouselNavDispatcher extends PureComponent {
 
@@ -99,34 +128,6 @@ class CarouselNavDispatcher extends PureComponent {
 
     render() {
         return null
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        dotsStore: { dotsBitNumber },
-        mountStore: { canCarouselMount },
-        accessStore: { accessedAnnotationIndex },
-        selectedStore: {
-            selectedAnnotationIndex,
-            isSelectedLogue
-        },
-        toggleStore: {
-            isDotsSlideShown,
-            isCarouselShown,
-            isNavShown
-        }
-    } = state
-
-    return {
-        dotsBitNumber,
-        canCarouselMount,
-        accessedAnnotationIndex,
-        selectedAnnotationIndex,
-        isSelectedLogue,
-        isDotsSlideShown,
-        isCarouselShown,
-        isNavShown
     }
 }
 

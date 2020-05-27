@@ -3,6 +3,26 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { PARENT_ACCESS_PREFIX } from '../../constants/prefixes'
+import {
+    IS_ACCESS_ON_SELECTOR,
+    ACCESSED_KEY_SELECTOR
+} from '../../redux/access/selectors'
+
+const mapStateToProps = state => {
+    const {
+            audioStore: { isPlaying },
+            lyricStore: { isLyricLogue }
+        } = state,
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
+        accessedKey = ACCESSED_KEY_SELECTOR(state)
+
+    return {
+        isPlaying,
+        isLyricLogue,
+        isAccessOn,
+        accessedKey
+    }
+}
 
 const PlayingWrapper = ({ children }) => {
     const {
@@ -37,24 +57,6 @@ const PlayingWrapper = ({ children }) => {
             {children}
         </div>
     )
-}
-
-const mapStateToProps = state => {
-    const {
-        audioStore: { isPlaying },
-        lyricStore: { isLyricLogue },
-        accessStore: {
-            isAccessOn,
-            accessedKey
-        }
-    } = state
-
-    return {
-        isPlaying,
-        isLyricLogue,
-        isAccessOn,
-        accessedKey
-    }
 }
 
 PlayingWrapper.propTypes = {

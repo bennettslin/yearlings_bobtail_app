@@ -5,13 +5,14 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
 import { getWormholeLinksForAnnotationCard } from '../../../../album/api/annotations'
+import { ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR } from '../../../../redux/access/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-        lyricStore: { lyricSongIndex },
-        accessStore: { accessedWikiWormholeIndex }
-    } = state
+            lyricStore: { lyricSongIndex }
+        } = state,
+        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state)
 
     return {
         lyricSongIndex,

@@ -5,26 +5,25 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { resetActivatedDots } from '../../redux/dotsSlide/action'
-
 import CSSTransition from 'react-transition-group/CSSTransition'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import DotsSlideSelect from './Select'
-
 import { getDotKeysFromBitNumber } from '../../helpers/dot'
-
 import { IS_TOUCH_SUPPORTED } from '../../constants/device'
 import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
+import {
+    IS_ACCESS_ON_SELECTOR,
+    ACCESSED_DOT_INDEX_SELECTOR
+} from '../../redux/access/selectors'
 
 const mapStateToProps = state => {
     const {
-        accessStore: {
-            isAccessOn,
-            accessedDotIndex
-        },
-        toggleStore: { isDotsSlideShown },
-        dotsStore: { dotsBitNumber },
-        dotsSlideStore: { dotsSlideBitNumber }
-    } = state
+            toggleStore: { isDotsSlideShown },
+            dotsStore: { dotsBitNumber },
+            dotsSlideStore: { dotsSlideBitNumber }
+        } = state,
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
+        accessedDotIndex = ACCESSED_DOT_INDEX_SELECTOR(state)
 
     return {
         accessedDotIndex,

@@ -2,19 +2,15 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { isString } from '../../../../helpers/general'
-
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'
 import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormhole/Dispatcher'
-
 import { populateRefs } from '../../../../helpers/ref'
-
 import {
     getWikiWormholeEntity,
     getWormholeLinkFromIndex
 } from './helper'
-
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -22,6 +18,28 @@ import {
     ARROW_DOWN,
     ENTER
 } from '../../../../constants/access'
+import {
+    IS_ACCESS_ON_SELECTOR,
+    ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR
+} from '../../../../redux/access/selectors'
+
+const mapStateToProps = state => {
+    const {
+            selectedStore: {
+                selectedSongIndex,
+                selectedAnnotationIndex
+            }
+        } = state,
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
+        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state)
+
+    return {
+        isAccessOn,
+        accessedWikiWormholeIndex,
+        selectedSongIndex,
+        selectedAnnotationIndex
+    }
+}
 
 class AnnotationNavigation extends PureComponent {
 
@@ -131,24 +149,6 @@ class AnnotationNavigation extends PureComponent {
                 <WikiWormholeDispatcher {...{ getRefs: this._getRefs }} />
             </>
         )
-    }
-}
-
-const mapStateToProps = state => {
-    const {
-        accessStore: { isAccessOn },
-        accessStore: { accessedWikiWormholeIndex },
-        selectedStore: {
-            selectedSongIndex,
-            selectedAnnotationIndex
-        }
-    } = state
-
-    return {
-        isAccessOn,
-        accessedWikiWormholeIndex,
-        selectedSongIndex,
-        selectedAnnotationIndex
     }
 }
 

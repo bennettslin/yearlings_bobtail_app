@@ -5,23 +5,22 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateAnnotationStore } from '../../../../redux/annotation/action'
-
 import Anchor from '../../../Anchor'
-
 import { getPrefixedDotLetterClassNames } from '../../../../helpers/dot'
-
 import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
+import {
+    IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
+    ACCESSED_ANNOTATION_INDEX_SELECTOR
+} from '../../../../redux/access/selectors'
 
 const mapStateToProps = state => {
     const {
-        accessStore: {
-            isAccessedIndexedAnchorShown,
-            accessedAnnotationIndex
-        },
-        lyricStore: { lyricAnnotationIndex },
-        activatedStore: { isActivated },
-        sliderStore: { isSliderMoving }
-    } = state
+            lyricStore: { lyricAnnotationIndex },
+            activatedStore: { isActivated },
+            sliderStore: { isSliderMoving }
+        } = state,
+        isAccessedIndexedAnchorShown = IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR(state),
+        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         isAccessedIndexedAnchorShown,
