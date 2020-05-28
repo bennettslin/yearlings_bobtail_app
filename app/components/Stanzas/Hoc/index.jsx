@@ -2,14 +2,12 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 import { getVerseIndicesForStanza } from '../../../album/api/stanzas'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
-    const {
-        lyricStore: { lyricSongIndex }
-    } = state
+    const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
 
     return {
         lyricSongIndex

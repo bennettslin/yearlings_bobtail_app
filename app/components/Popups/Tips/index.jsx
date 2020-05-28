@@ -6,22 +6,24 @@ import Tips from '../../Tips'
 import Popup from '../../Popup'
 import { getShowTipForDevice } from '../../../album/api/tips'
 import { SHOWN } from '../../../constants/options'
+import {
+    LYRIC_SONG_INDEX_SELECTOR,
+    IS_LYRIC_LOGUE_SELECTOR
+} from '../../../redux/lyric/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-        entranceStore: { canLyricCarouselEnter },
-        lyricStore: {
-            isLyricLogue,
-            lyricSongIndex
-        },
-        optionStore: { selectedTipsOption },
-        viewportStore: {
-            isPhoneWidth,
-            isTabletWidth,
-            isDesktopWidth
-        }
-    } = state
+            entranceStore: { canLyricCarouselEnter },
+            optionStore: { selectedTipsOption },
+            viewportStore: {
+                isPhoneWidth,
+                isTabletWidth,
+                isDesktopWidth
+            }
+        } = state,
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
+        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
 
     return {
         canLyricCarouselEnter,

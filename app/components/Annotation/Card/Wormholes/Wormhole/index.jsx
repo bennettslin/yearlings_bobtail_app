@@ -1,33 +1,26 @@
 // Component to show individual wormhole in wormholes block.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import SongDispatcher from '../../../../../handlers/Song/Dispatcher'
 import Texts from '../../../../Texts'
 import Button from '../../../../Button'
-
 import { ENTER } from '../../../../../constants/access'
 import { WORMHOLE_BUTTON_KEY } from '../../../../../constants/buttons'
-
 import {
     EAR_COLUMN_KEYS,
     LYRIC,
     LYRIC_CENTRE
 } from '../../../../../constants/lyrics'
-
 import { getIndexedTitleForSong } from '../../../../../album/api/songs'
 import { getVerse } from '../../../../../album/api/verses'
 import { populateRefs } from '../../../../../helpers/ref'
-
 import { getCardWormholeLink } from './helper'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
-    const {
-        lyricStore: { lyricSongIndex }
-    } = state
+    const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
 
     return {
         lyricSongIndex

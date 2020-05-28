@@ -1,18 +1,14 @@
 // Component to touch change played time and verse.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import SliderStanzas from './Stanzas'
 import SliderTimes from './Times'
 import AccessDirectionLetter from '../Access/DirectionLetter'
 import TipsHand from '../Tips/Hand'
-
 import { populateRefs } from '../../helpers/ref'
-
 import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY

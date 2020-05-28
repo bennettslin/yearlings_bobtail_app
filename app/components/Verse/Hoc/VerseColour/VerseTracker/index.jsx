@@ -3,17 +3,17 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import { getDurationForVerse } from '../../../../../album/api/time'
 import { IS_USER_AGENT_DESKTOP } from '../../../../../constants/device'
+import {
+    LYRIC_SONG_INDEX_SELECTOR,
+    LYRIC_VERSE_INDEX_SELECTOR
+} from '../../../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
-    const {
-        lyricStore: {
-            lyricSongIndex,
-            lyricVerseIndex
-        }
-    } = state
+    const
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
+        lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state)
 
     return {
         lyricSongIndex,

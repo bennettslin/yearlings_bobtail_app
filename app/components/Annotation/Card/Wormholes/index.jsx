@@ -6,13 +6,13 @@ import { connect } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
 import { getWormholeLinksForAnnotationCard } from '../../../../album/api/annotations'
 import { ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR } from '../../../../redux/access/selectors'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../redux/lyric/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            lyricStore: { lyricSongIndex }
-        } = state,
-        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state)
+    const
+        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state),
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
 
     return {
         lyricSongIndex,

@@ -3,23 +3,19 @@
  * the basic unit by which the lyric data is organised. A stanza is made up of
  * one or more units. But a unit can also stand alone, such as a lone dot unit.
  */
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import SongStanzasTitle from '../Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
-
 import {
     getUnit,
     getFormTypeForUnit,
     getVerseIndicesForUnit
 } from '../../../album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
-
 import {
     getShowAnnotationTip,
     getShowActivatedTip,
@@ -27,11 +23,10 @@ import {
     getShowWormholesTip,
     getShowWikiTip
 } from '../../../album/api/tips'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
-    const {
-        lyricStore: { lyricSongIndex }
-    } = state
+    const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
 
     return {
         lyricSongIndex

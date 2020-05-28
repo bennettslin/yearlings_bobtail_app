@@ -12,6 +12,10 @@ import {
 } from './helper'
 import { SHOWN } from '../../constants/options'
 import { IS_ACTIVATED_SELECTOR } from '../../redux/activated/selectors'
+import {
+    LYRIC_ANNOTATION_INDEX_SELECTOR,
+    IS_LYRIC_LOGUE_SELECTOR
+} from '../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -23,10 +27,6 @@ const mapStateToProps = state => {
                 isAboutShown
             },
             entranceStore: { canLyricCarouselEnter },
-            lyricStore: {
-                lyricAnnotationIndex,
-                isLyricLogue
-            },
             sessionStore: { selectedWikiIndex },
             optionStore: {
                 isLogueOverviewShown,
@@ -34,7 +34,9 @@ const mapStateToProps = state => {
                 selectedTipsOption
             }
         } = state,
-        isActivated = IS_ACTIVATED_SELECTOR(state)
+        isActivated = IS_ACTIVATED_SELECTOR(state),
+        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
+        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
 
     return {
         isPhoneWidth,

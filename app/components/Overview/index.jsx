@@ -9,17 +9,19 @@ import OverviewToggle from '../Main/OverviewToggle'
 import { getOverviewForSong } from '../../album/api/songs'
 import { getIsToggleInOverview } from './helper'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../redux/responsive/selectors'
+import {
+    LYRIC_SONG_INDEX_SELECTOR,
+    IS_LYRIC_LOGUE_SELECTOR
+} from '../../redux/lyric/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-            viewportStore: { isPhoneWidth },
-            lyricStore: {
-                lyricSongIndex,
-                isLyricLogue
-            }
+            viewportStore: { isPhoneWidth }
         } = state,
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
+        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
 
     return {
         isPhoneWidth,

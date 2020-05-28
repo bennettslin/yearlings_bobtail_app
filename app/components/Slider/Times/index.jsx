@@ -11,10 +11,10 @@ import {
     IS_ACTIVATED_SELECTOR,
     ACTIVATED_TIME_SELECTOR
 } from '../../../redux/activated/selectors'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
     const {
-            lyricStore: { lyricSongIndex },
             selectedStore: { selectedTime },
             sliderStore: {
                 isSliderMoving,
@@ -22,7 +22,8 @@ const mapStateToProps = state => {
             }
         } = state,
         isActivated = IS_ACTIVATED_SELECTOR(state),
-        activatedTime = ACTIVATED_TIME_SELECTOR(state)
+        activatedTime = ACTIVATED_TIME_SELECTOR(state),
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
 
     return {
         lyricSongIndex,

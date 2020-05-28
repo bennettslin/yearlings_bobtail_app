@@ -22,3 +22,15 @@ export const IS_SONG_SHOWN_OVERVIEW_SELECTOR = (
 export const IS_SONG_SHOWN_TIPS_SELECTOR = (
     { optionStore: { isSongShownTips } }
 ) => isSongShownTips
+
+// import {
+//     LYRIC_SONG_INDEX_SELECTOR,
+//     LYRIC_VERSE_INDEX_SELECTOR,
+//     LYRIC_ANNOTATION_INDEX_SELECTOR,
+//     IS_LYRIC_LOGUE_SELECTOR
+// } from '../../../redux/lyric/selectors'
+
+// lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
+// lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
+// lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
+// isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)

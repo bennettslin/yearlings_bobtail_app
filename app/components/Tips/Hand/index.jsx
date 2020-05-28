@@ -3,10 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
-
 import InlineSvg from '../../../modules/InlineSvg'
 import tipsHand from '../../../../assets/svgs/app/tips/tipsHand'
-
 import { getSongTipType } from '../../../album/api/tips'
 import { SHOWN } from '../../../constants/options'
 import {
@@ -17,16 +15,17 @@ import {
     REFERENCE_SELECTOR,
     WORMHOLE_SELECTOR
 } from '../../../redux/dots/selectors'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
     const {
             entranceStore: { didLyricUpdate },
-            lyricStore: { lyricSongIndex },
             optionStore: { selectedTipsOption },
             viewportStore: { isPhoneWidth }
         } = state,
         reference = REFERENCE_SELECTOR(state),
-        wormhole = WORMHOLE_SELECTOR(state)
+        wormhole = WORMHOLE_SELECTOR(state),
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
 
     return {
         reference,

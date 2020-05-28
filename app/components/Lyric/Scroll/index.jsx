@@ -3,22 +3,21 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
-
 import Transition from 'react-transition-group/Transition'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
 import ScrollOverlayHandler from '../../../handlers/ScrollOverlay'
 import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
-
 import { populateRefs } from '../../../helpers/ref'
 import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
     const {
-        entranceStore: { canLyricCarouselUpdate },
-        lyricStore: { lyricSongIndex }
-    } = state
+            entranceStore: { canLyricCarouselUpdate }
+        } = state,
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
 
     return {
         canLyricCarouselUpdate,

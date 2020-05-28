@@ -2,20 +2,16 @@
  * A stanza encompasses all the units grouped under a single stanza type and
  * optional index, such as Verse 1 or Bridge.
  */
-
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import { getUnitIndicesForStanza } from '../../../album/api/stanzas'
-
 import Unit from '../Unit'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
-    const {
-        lyricStore: { lyricSongIndex }
-    } = state
+    const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
 
     return {
         lyricSongIndex

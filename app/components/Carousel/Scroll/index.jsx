@@ -13,18 +13,20 @@ import {
     IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
     ACCESSED_ANNOTATION_INDEX_SELECTOR
 } from '../../../redux/access/selectors'
+import {
+    LYRIC_SONG_INDEX_SELECTOR,
+    LYRIC_ANNOTATION_INDEX_SELECTOR
+} from '../../../redux/lyric/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-            entranceStore: { canLyricCarouselUpdate },
-            lyricStore: {
-                lyricSongIndex,
-                lyricAnnotationIndex
-            }
+            entranceStore: { canLyricCarouselUpdate }
         } = state,
         isAccessedIndexedAnchorShown = IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR(state),
-        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state)
+        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
+        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         canLyricCarouselUpdate,

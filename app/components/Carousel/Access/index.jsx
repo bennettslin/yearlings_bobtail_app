@@ -8,10 +8,10 @@ import {
 } from '../../../constants/access'
 import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
 import './style'
+import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
     const {
-            lyricStore: { lyricAnnotationIndex },
             toggleStore: {
                 isCarouselShown,
                 isNavShown,
@@ -19,7 +19,8 @@ const mapStateToProps = state => {
                 isLyricExpanded
             }
         } = state,
-        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state)
+        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
+        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         isLyricExpanded,

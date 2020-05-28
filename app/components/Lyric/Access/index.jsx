@@ -1,19 +1,18 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-
 import AccessLetters from '../../Access/Letters'
-
 import {
     ARROW_UP,
     ARROW_DOWN
 } from '../../../constants/access'
+import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
     const {
-        lyricStore: { lyricAnnotationIndex },
-        toggleStore: { isDotsSlideShown }
-    } = state
+            toggleStore: { isDotsSlideShown }
+        } = state,
+        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         lyricAnnotationIndex,

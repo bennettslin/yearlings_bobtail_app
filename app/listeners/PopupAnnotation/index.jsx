@@ -3,21 +3,22 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 import { updateTransientStore } from '../../redux/transient/action'
 
 const mapStateToProps = state => {
     const {
-        entranceStore: { canLyricCarouselEnter },
-        lyricStore: { lyricAnnotationIndex },
-        toggleStore: {
-            isAboutShown,
-            isScoreShown,
-            isCarouselShown
-        },
-        mountStore: { canCarouselMount },
-        transientStore: { isOverlayingAnnotation },
-        sessionStore: { selectedWikiIndex }
-    } = state
+            entranceStore: { canLyricCarouselEnter },
+            toggleStore: {
+                isAboutShown,
+                isScoreShown,
+                isCarouselShown
+            },
+            mountStore: { canCarouselMount },
+            transientStore: { isOverlayingAnnotation },
+            sessionStore: { selectedWikiIndex }
+        } = state,
+        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         isAboutShown,

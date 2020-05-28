@@ -4,31 +4,32 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import Transition from 'react-transition-group/Transition'
 import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
-
 import { getVerse } from '../../../album/api/verses'
 import { populateRefs } from '../../../helpers/ref'
 import { getCursorIndex } from '../../../helpers/verse'
 import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import {
+    LYRIC_SONG_INDEX_SELECTOR,
+    LYRIC_VERSE_INDEX_SELECTOR,
+    IS_LYRIC_LOGUE_SELECTOR
+} from '../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
     const {
-            lyricStore: {
-                isLyricLogue,
-                lyricSongIndex,
-                lyricVerseIndex
-            },
             sliderStore: { sliderVerseIndex },
             verseBarsStore: {
                 isVerseBarAbove,
                 isVerseBarBelow
             }
         } = state,
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
+        lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
+        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
 
     return {
         isLyricLogue,
