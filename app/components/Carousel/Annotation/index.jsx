@@ -4,14 +4,13 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import Annotation from '../../Annotation'
-
 import { getDotKeysForAnnotation } from '../../../album/api/annotations'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
-
 import { getCarouselAnnotationData } from './helper'
+import './logic'
+import './style'
 
 const mapStateToProps = state => {
     const {

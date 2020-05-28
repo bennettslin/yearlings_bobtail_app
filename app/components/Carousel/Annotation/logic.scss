@@ -1,3 +1,8 @@
+@import '../../../scss/constants/annotation';
+@import '../../../scss/constants/icon';
+@import '../../../scss/constants/logic';
+@import '../../../scss/constants/popup';
+
 @each $dotLetter in $dotLettersArray {
 
     // "Root selected dot letter, child carousel annotation."

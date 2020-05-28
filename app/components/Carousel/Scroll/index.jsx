@@ -13,6 +13,7 @@ import {
     IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
     ACCESSED_ANNOTATION_INDEX_SELECTOR
 } from '../../../redux/access/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {

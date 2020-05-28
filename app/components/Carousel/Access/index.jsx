@@ -1,13 +1,12 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-
 import AccessLetters from '../../Access/Letters'
-
 import {
     ARROW_LEFT,
     ARROW_RIGHT
 } from '../../../constants/access'
+import './style'
 
 const mapStateToProps = state => {
     const {

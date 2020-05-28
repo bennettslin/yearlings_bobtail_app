@@ -1,6 +1,7 @@
-@import "./Access/style";
-@import "./Annotation/style";
-@import "./Scroll/style";
+@import '../../scss/constants/icon';
+@import '../../scss/constants/responsive';
+@import '../../scss/constants/transition';
+@import '../../scss/constants/zIndex';
 
 /**
  * Make this the full height of the carousel itself, to ensure that nothing is

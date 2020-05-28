@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
-
 import CSSTransition from 'react-transition-group/CSSTransition'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
+import './style'
 
 const mapStateToProps = state => {
     const {
