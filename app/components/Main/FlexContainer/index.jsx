@@ -16,15 +16,24 @@ const MainFlexContainer = ({
         <div
             {...{
                 className: cx(
-                    'MainFlexContainer',
+                    /**
+                     * These class names are just to prevent Gatsby from
+                     * confusing the two on the server side. It still doesn't
+                     * work sometimes...
+                     */
+                    isRight ?
+                        'RightMainFlexContainer' :
+                        'LeftMainFlexContainer',
+
+                    'mainFlexContainer',
                     /**
                      * Left container is always on side. Right container is on
                      * side in mobile.
                      */
                     (!isRight || !isDesktopWidth) &&
-                        'MainFlexContainer__side',
+                        'mainFlexContainer__side',
                     isRight && isDesktopWidth && 'fCC',
-                    isRight && !isDesktopWidth && 'MainFlexContainer__right',
+                    isRight && !isDesktopWidth && 'mainFlexContainer__right',
                     'abF'
                 )
             }}

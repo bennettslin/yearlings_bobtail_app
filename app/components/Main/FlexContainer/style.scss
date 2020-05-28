@@ -1,7 +1,7 @@
 @import '../../../scss/constants/icon';
 @import '../../../scss/constants/lyric';
 
-.MainFlexContainer {
+.mainFlexContainer {
     padding-top: $margin__thick;
     display: flex;
 
@@ -18,7 +18,7 @@
     }
 }
 
-.MainFlexContainer__side {
+.mainFlexContainer__side {
     align-items: flex-start;
 
     .DW__desktopWidth.DW__cannotCarouselMount
@@ -29,6 +29,6 @@
     }
 }
 
-.MainFlexContainer__right {
+.mainFlexContainer__right {
     flex-direction: row-reverse;
 }
