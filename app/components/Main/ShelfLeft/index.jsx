@@ -4,11 +4,11 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import ScoreToggle from '../../Score/Toggle'
 import TipsToggle from '../../Tips/Toggle'
 import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
+import './style'
 
 const mapStateToProps = state => {
     const {

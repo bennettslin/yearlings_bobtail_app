@@ -1,9 +1,7 @@
-@import "./DotsSlideToggle/style";
-@import "./OverviewToggle/style";
-@import "./ShelfLeft/style";
-@import "./CarouselSelect/style";
-@import "./CarouselToggle/style";
-@import "./ShelfRight/style";
+@import '../../scss/constants/icon';
+@import '../../scss/constants/lyric';
+@import '../../scss/constants/responsive';
+@import '../../scss/constants/transition';
 
 .Main {
     overflow: hidden;

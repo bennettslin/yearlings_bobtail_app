@@ -26,6 +26,7 @@ import {
     MENU_HEIGHT_SELECTOR
 } from '../../redux/responsive/selectors'
 import { IS_DESKTOP_WIDTH_SELECTOR } from '../../redux/viewport/selectors'
+import './style'
 
 const Main = () => {
     const

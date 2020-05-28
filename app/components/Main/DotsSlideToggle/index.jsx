@@ -3,13 +3,10 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
-
 import { populateRefs } from '../../../helpers/ref'
-
 import { DOTS_SLIDE_TOGGLE_KEY } from '../../../constants/access'
 import { DOTS_SLIDE_BUTTON_KEY } from '../../../constants/buttons'
 import {
@@ -17,6 +14,7 @@ import {
     WORMHOLES,
     WIKI
 } from '../../../constants/tips'
+import './style'
 
 class DotsSlideToggle extends PureComponent {
 

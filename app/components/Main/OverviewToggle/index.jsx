@@ -1,21 +1,17 @@
 // Toggle button to show, hide, and disable overview section.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import OverviewDispatcher from '../../../handlers/Overview/Dispatcher'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
-
 import { populateRefs } from '../../../helpers/ref'
-
 import { OVERVIEW_TOGGLE_KEY } from '../../../constants/access'
 import { OVERVIEW_BUTTON_KEY } from '../../../constants/buttons'
 import { OVERVIEW } from '../../../constants/tips'
-
 import { getOverviewToggleIdentifier } from './helper'
+import './style'
 
 const mapStateToProps = state => {
     const {
