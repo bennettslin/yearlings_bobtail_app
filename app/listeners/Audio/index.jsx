@@ -4,18 +4,18 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSelectedStore } from '../../redux/selected/action'
-
+import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
 import { getStartTimeForVerse } from '../../album/api/time'
 
 const mapStateToProps = state => {
     const {
-        audioStore: { isPlaying },
-        sliderStore: { isSliderTouched },
-        selectedStore: {
-            selectedSongIndex,
-            selectedVerseIndex
-        }
-    } = state
+            sliderStore: { isSliderTouched },
+            selectedStore: {
+                selectedSongIndex,
+                selectedVerseIndex
+            }
+        } = state,
+        isPlaying = IS_PLAYING_SELECTOR(state)
 
     return {
         isPlaying,

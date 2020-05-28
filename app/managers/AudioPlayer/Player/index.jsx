@@ -1,41 +1,37 @@
 // Manager for audio players.
-
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import { updateAudioStore } from '../../../redux/audio/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
-
 import PlayerDispatcher from './Dispatcher'
 import PlayerListener from './Listener'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
-
 import { getStartTimeForVerse } from '../../../album/api/time'
 import { populateRefs } from '../../../helpers/ref'
 import { getPlayersCanPlayThroughFromBitNumber } from '../../../helpers/player'
-
 import {
     getMp3s,
     getNextVerseIndex,
     getTimeRelativeToVerseIndex
 } from './helper'
+import { IS_PLAYING_SELECTOR } from '../../../redux/audio/selectors'
 
 const mapStateToProps = state => {
     const {
-        playersStore: {
-            playersBitNumber,
-            nextPlayerToRender
-        },
-        audioStore: { isPlaying },
-        selectedStore: {
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedTime
-        }
-    } = state
+            playersStore: {
+                playersBitNumber,
+                nextPlayerToRender
+            },
+            selectedStore: {
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedTime
+            }
+        } = state,
+        isPlaying = IS_PLAYING_SELECTOR(state)
 
     return {
         isPlaying,

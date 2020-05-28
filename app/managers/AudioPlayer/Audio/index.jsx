@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAudioStore } from '../../../redux/audio/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
-
+import {
+    IS_PLAYING_SELECTOR,
+    QUEUED_TOGGLE_PLAY_SELECTOR
+} from '../../../redux/audio/selectors'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import { populateRefs } from '../../../helpers/ref'
-
 import {
     CONTINUE,
     AUDIO_OPTIONS
@@ -14,13 +16,11 @@ import {
 
 const mapStateToProps = state => {
     const {
-        audioStore: {
-            isPlaying,
-            queuedTogglePlay
-        },
-        sessionStore: { audioOptionIndex },
-        selectedStore: { selectedSongIndex }
-    } = state
+            sessionStore: { audioOptionIndex },
+            selectedStore: { selectedSongIndex }
+        } = state,
+        isPlaying = IS_PLAYING_SELECTOR(state),
+        queuedTogglePlay = QUEUED_TOGGLE_PLAY_SELECTOR(state)
 
     return {
         isPlaying,

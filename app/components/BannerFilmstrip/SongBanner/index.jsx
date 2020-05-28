@@ -19,11 +19,11 @@ import { populateRefs } from '../../../helpers/ref'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { IS_ACTIVATED_SELECTOR } from '../../../redux/activated/selectors'
+import { IS_PLAYING_SELECTOR } from '../../../redux/audio/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-            audioStore: { isPlaying },
             bannerStore: {
                 isBannerHovering,
                 bannerHoverVerseIndex,
@@ -37,7 +37,8 @@ const mapStateToProps = state => {
             sliderStore: { isSliderMoving }
         } = state,
         isActivated = IS_ACTIVATED_SELECTOR(state),
-        isSmallBannerText = IS_SMALL_BANNER_TEXT_SELECTOR(state)
+        isSmallBannerText = IS_SMALL_BANNER_TEXT_SELECTOR(state),
+        isPlaying = IS_PLAYING_SELECTOR(state)
 
     return {
         isPlaying,

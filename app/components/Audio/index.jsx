@@ -23,17 +23,18 @@ import {
 import { getSongsAndLoguesCount } from '../../album/api/songs'
 import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThrough } from '../../helpers/player'
+import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-        playersStore: { playersBitNumber },
-        audioStore: { isPlaying },
-        selectedStore: { selectedSongIndex },
-        sessionStore: { audioOptionIndex },
-        responsiveStore: { isTwoRowMenu },
-        viewportStore: { isDesktopWidth }
-    } = state
+            playersStore: { playersBitNumber },
+            selectedStore: { selectedSongIndex },
+            sessionStore: { audioOptionIndex },
+            responsiveStore: { isTwoRowMenu },
+            viewportStore: { isDesktopWidth }
+        } = state,
+        isPlaying = IS_PLAYING_SELECTOR(state)
 
     return {
         isPlaying,

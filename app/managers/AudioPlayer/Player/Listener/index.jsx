@@ -5,27 +5,30 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updatePlayersStore } from '../../../../redux/players/action'
 import { resetAudioQueue } from '../../../../redux/audio/action'
+import {
+    QUEUED_PLAY_FROM_LOGUE_SELECTOR,
+    QUEUED_PLAY_SONG_INDEX_SELECTOR,
+    QUEUED_PLAY_VERSE_INDEX_SELECTOR
+} from '../../../../redux/audio/selectors'
 
 import { getPlayersCanPlayThroughFromBitNumber } from '../../../../helpers/player'
 import { getNextPlayerIndexToRender } from './helper'
 
 const mapStateToProps = state => {
     const {
-        playersStore: { playersBitNumber },
-        selectedStore: {
-            selectedSongIndex,
-            isSelectedLogue
-        },
-        lyricStore: {
-            lyricSongIndex,
-            lyricVerseIndex
-        },
-        audioStore: {
-            queuedPlayFromLogue,
-            queuedPlaySongIndex,
-            queuedPlayVerseIndex
-        }
-    } = state
+            playersStore: { playersBitNumber },
+            selectedStore: {
+                selectedSongIndex,
+                isSelectedLogue
+            },
+            lyricStore: {
+                lyricSongIndex,
+                lyricVerseIndex
+            }
+        } = state,
+        queuedPlayFromLogue = QUEUED_PLAY_FROM_LOGUE_SELECTOR(state),
+        queuedPlaySongIndex = QUEUED_PLAY_SONG_INDEX_SELECTOR(state),
+        queuedPlayVerseIndex = QUEUED_PLAY_VERSE_INDEX_SELECTOR(state)
 
     return {
         playersBitNumber,

@@ -3,12 +3,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
-
+import { IS_PLAYING_SELECTOR } from '../../../redux/audio/selectors'
 import {
     scrollElementIntoView,
     setChildElement
 } from '../helper'
-
 import {
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
@@ -16,27 +15,27 @@ import {
 
 const mapStateToProps = state => {
     const {
-        scrollLyricStore: {
-            queuedScrollLyricLog,
-            queuedScrollLyricByVerse,
-            queuedScrollLyricIndex,
-            queuedScrollLyricAlways,
-            queuedScrollLyricNoDuration,
-            queuedScrollLyricFromAutoScroll,
-            queuedSceneChangeExitScrollCallback
-        },
-        selectedStore: {
-            selectedVerseIndex,
-            isSelectedLogue
-        },
-        audioStore: { isPlaying },
-        toggleStore: {
-            isAutoScroll,
-            isLyricExpanded
-        },
-        viewportStore: { deviceWidthIndex },
-        responsiveStore: { isHeightlessLyric }
-    } = state
+            scrollLyricStore: {
+                queuedScrollLyricLog,
+                queuedScrollLyricByVerse,
+                queuedScrollLyricIndex,
+                queuedScrollLyricAlways,
+                queuedScrollLyricNoDuration,
+                queuedScrollLyricFromAutoScroll,
+                queuedSceneChangeExitScrollCallback
+            },
+            selectedStore: {
+                selectedVerseIndex,
+                isSelectedLogue
+            },
+            toggleStore: {
+                isAutoScroll,
+                isLyricExpanded
+            },
+            viewportStore: { deviceWidthIndex },
+            responsiveStore: { isHeightlessLyric }
+        } = state,
+        isPlaying = IS_PLAYING_SELECTOR(state)
 
     return {
         queuedScrollLyricLog,
