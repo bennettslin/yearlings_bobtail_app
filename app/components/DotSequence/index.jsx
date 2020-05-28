@@ -3,51 +3,48 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
-
 import SequenceDot from './SequenceDot'
+import './logic'
+import './style'
 
-const dotBlockPropTypes = {
+const propTypes = {
+    dotKeys: PropTypes.object.isRequired,
+    inAnnotationCard: PropTypes.bool,
+    inTextAnchor: PropTypes.bool
+}
 
-        // From parent.
-        dotKeys: PropTypes.object.isRequired,
-        inAnnotationCard: PropTypes.bool,
-        inTextAnchor: PropTypes.bool
-    },
+const DotSequence = ({
+    inAnnotationCard,
+    inTextAnchor,
+    dotKeys,
 
-    DotSequence = ({
+    ...other
+}) => (
 
-        inAnnotationCard,
-        inTextAnchor,
-        dotKeys,
+    <div className={cx(
+        'DotSequence',
+        !inAnnotationCard && 'gradientMask__dotSequence',
+        inTextAnchor && 'DotSequence__inTextAnchor'
+    )}>
+        {ORDERED_DOT_KEYS.map(dotKey => {
 
-        ...other
-    }) => (
+            // Go through all dot keys in array to ensure correct order.
+            return dotKeys[dotKey] && (
 
-        <div className={cx(
-            'DotSequence',
-            !inAnnotationCard && 'gradientMask__dotSequence',
-            inTextAnchor && 'DotSequence__inTextAnchor'
-        )}>
-            {ORDERED_DOT_KEYS.map(dotKey => {
+                <SequenceDot {...other}
+                    {...{
+                        key: dotKey,
+                        dotKey,
+                        inTextAnchor,
+                        inAnnotationCard
+                    }}
+                />
+            )
+        })}
+    </div>
+)
 
-                // Go through all dot keys in array to ensure correct order.
-                return dotKeys[dotKey] && (
-
-                    <SequenceDot {...other}
-                        {...{
-                            key: dotKey,
-                            dotKey,
-                            inTextAnchor,
-                            inAnnotationCard
-                        }}
-                    />
-                )
-            })}
-        </div>
-    )
-
-DotSequence.propTypes = dotBlockPropTypes
+DotSequence.propTypes = propTypes
 
 export default memo(DotSequence)

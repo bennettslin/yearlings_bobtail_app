@@ -1,7 +1,8 @@
+@import '../../scss/constants/icon';
+@import '../../scss/constants/logic';
 /**
  * Styling if at least one sequence dot is selected.
  */
-
 // FIXME: Only selectors need to be iterated, not style.
 @each $dotLetter in $dotLettersArray {
 
