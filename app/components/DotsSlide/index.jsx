@@ -15,6 +15,7 @@ import {
     IS_ACCESS_ON_SELECTOR,
     ACCESSED_DOT_INDEX_SELECTOR
 } from '../../redux/access/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {

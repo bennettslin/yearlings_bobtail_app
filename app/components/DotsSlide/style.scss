@@ -1,4 +1,8 @@
-@import "./Select/style";
+@import '../../scss/constants/border';
+@import '../../scss/constants/icon';
+@import '../../scss/constants/shadow';
+@import '../../scss/constants/transition';
+@import '../../scss/constants/zIndex';
 
 $margin__dotsContainer: 12px;
 $margin__dotsContainer__phone: 8px;

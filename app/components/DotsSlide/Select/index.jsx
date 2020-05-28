@@ -2,18 +2,16 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import DotSelectDispatcher from '../../../dispatchers/DotSelectDispatcher'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import Button from '../../Button'
 import Dot from '../../Dot'
 import Anchor from '../../Anchor'
-
 import { populateRefs } from '../../../helpers/ref'
-
 import { ENTER } from '../../../constants/access'
 import { DOTS_SLIDE_SELECT_BUTTON_KEY } from '../../../constants/buttons'
 import { DOT_DESCRIPTIONS } from '../../../constants/dots'
+import './style'
 
 class DotsSlideSelect extends PureComponent {
 
