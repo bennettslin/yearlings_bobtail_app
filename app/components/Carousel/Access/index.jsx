@@ -6,19 +6,20 @@ import {
     ARROW_LEFT,
     ARROW_RIGHT
 } from '../../../constants/access'
+import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-        lyricStore: { lyricAnnotationIndex },
-        toggleStore: {
-            isCarouselShown,
-            isNavShown,
-            isDotsSlideShown,
-            isLyricExpanded
-        },
-        dotsStore: { dotsBitNumber }
-    } = state
+            lyricStore: { lyricAnnotationIndex },
+            toggleStore: {
+                isCarouselShown,
+                isNavShown,
+                isDotsSlideShown,
+                isLyricExpanded
+            }
+        } = state,
+        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state)
 
     return {
         isLyricExpanded,

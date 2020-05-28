@@ -13,13 +13,14 @@ import {
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
 import { getAccessibleWikiWormholesCount } from './helper'
+import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-        lyricStore: { lyricSongIndex },
-        dotsStore: { dotsBitNumber }
-    } = state
+            lyricStore: { lyricSongIndex }
+        } = state,
+        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state)
 
     return {
         lyricSongIndex,

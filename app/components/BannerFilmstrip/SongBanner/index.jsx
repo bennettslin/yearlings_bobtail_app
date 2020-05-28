@@ -20,15 +20,16 @@ import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { IS_ACTIVATED_SELECTOR } from '../../../redux/activated/selectors'
 import { IS_PLAYING_SELECTOR } from '../../../redux/audio/selectors'
+import {
+    IS_BANNER_HOVERING_SELECTOR,
+    BANNER_HOVER_VERSE_INDEX_SELECTOR,
+    BANNER_HOVER_TIME_SELECTOR
+} from '../../../redux/banner/selectors'
+
 import './style'
 
 const mapStateToProps = state => {
     const {
-            bannerStore: {
-                isBannerHovering,
-                bannerHoverVerseIndex,
-                bannerHoverTime
-            },
             selectedStore: {
                 isSelectedLogue,
                 selectedSongIndex,
@@ -38,7 +39,10 @@ const mapStateToProps = state => {
         } = state,
         isActivated = IS_ACTIVATED_SELECTOR(state),
         isSmallBannerText = IS_SMALL_BANNER_TEXT_SELECTOR(state),
-        isPlaying = IS_PLAYING_SELECTOR(state)
+        isPlaying = IS_PLAYING_SELECTOR(state),
+        isBannerHovering = IS_BANNER_HOVERING_SELECTOR(state),
+        bannerHoverVerseIndex = BANNER_HOVER_VERSE_INDEX_SELECTOR(state),
+        bannerHoverTime = BANNER_HOVER_TIME_SELECTOR(state)
 
     return {
         isPlaying,

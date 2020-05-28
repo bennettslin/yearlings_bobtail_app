@@ -15,16 +15,17 @@ import {
     IS_ACCESS_ON_SELECTOR,
     ACCESSED_DOT_INDEX_SELECTOR
 } from '../../redux/access/selectors'
+import { DOTS_BIT_NUMBER_SELECTOR } from '../../redux/dots/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
             toggleStore: { isDotsSlideShown },
-            dotsStore: { dotsBitNumber },
             dotsSlideStore: { dotsSlideBitNumber }
         } = state,
         isAccessOn = IS_ACCESS_ON_SELECTOR(state),
-        accessedDotIndex = ACCESSED_DOT_INDEX_SELECTOR(state)
+        accessedDotIndex = ACCESSED_DOT_INDEX_SELECTOR(state),
+        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state)
 
     return {
         accessedDotIndex,

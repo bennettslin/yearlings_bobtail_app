@@ -4,10 +4,10 @@ import { connect } from 'react-redux'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { ACCESSED_ANNOTATION_INDEX_SELECTOR } from '../../../redux/access/selectors'
+import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
 
 const mapStateToProps = state => {
     const {
-            dotsStore: { dotsBitNumber },
             mountStore: { canCarouselMount },
             selectedStore: {
                 selectedAnnotationIndex,
@@ -19,7 +19,8 @@ const mapStateToProps = state => {
                 isNavShown
             }
         } = state,
-        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state)
+        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
+        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state)
 
     return {
         dotsBitNumber,

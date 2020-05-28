@@ -1,4 +1,5 @@
 # Bugs while production hasn't changed.
+* Hidden tips no longer shows before hidden overview.
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
 * Switching between songs in local is slow, not as slow in staging

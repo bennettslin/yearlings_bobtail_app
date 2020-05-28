@@ -9,6 +9,7 @@ import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { getAnnotationIndexForVerseIndex } from './helper'
+import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
 import { IS_EAR_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
 
 const mapStateToProps = state => {
@@ -17,9 +18,9 @@ const mapStateToProps = state => {
                 earColumnIndex,
                 selectedSongIndex,
                 selectedVerseIndex
-            },
-            dotsStore: { dotsBitNumber }
+            }
         } = state,
+        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
         isEarShown = IS_EAR_SHOWN_SELECTOR(state)
 
     return {

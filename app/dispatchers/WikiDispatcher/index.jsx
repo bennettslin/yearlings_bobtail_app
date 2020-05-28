@@ -2,14 +2,10 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSessionStore } from '../../redux/session/action'
-import { REFERENCE } from '../../constants/dots'
+import { REFERENCE_SELECTOR } from '../../redux/dots/selectors'
 
 const mapStateToProps = state => {
-    const {
-        dotsStore: {
-            [REFERENCE]: isWikiDotSelected
-        }
-    } = state
+    const isWikiDotSelected = REFERENCE_SELECTOR(state)
 
     return {
         isWikiDotSelected

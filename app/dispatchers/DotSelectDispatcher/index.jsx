@@ -4,17 +4,16 @@ import { connect } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateDotsStore } from '../../redux/dots/action'
 import { updateDotsSlideStore } from '../../redux/dotsSlide/action'
-
 import { setNewValueInBitNumber } from '../../helpers/bit'
 import { getDotKeysFromBitNumber } from '../../helpers/dot'
-
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
+import { DOTS_BIT_NUMBER_SELECTOR } from '../../redux/dots/selectors'
 
 const mapStateToProps = state => {
     const {
-        dotsStore: { dotsBitNumber },
-        dotsSlideStore: { dotsSlideBitNumber }
-    } = state
+            dotsSlideStore: { dotsSlideBitNumber }
+        } = state,
+        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state)
 
     return {
         dotsBitNumber,

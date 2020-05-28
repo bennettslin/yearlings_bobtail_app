@@ -13,18 +13,20 @@ import {
     WORMHOLES,
     WIKI
 } from '../../../constants/tips'
+import {
+    REFERENCE_SELECTOR,
+    WORMHOLE_SELECTOR
+} from '../../../redux/dots/selectors'
 
 const mapStateToProps = state => {
     const {
-        dotsStore: {
-            reference,
-            wormhole
-        },
-        entranceStore: { didLyricUpdate },
-        lyricStore: { lyricSongIndex },
-        optionStore: { selectedTipsOption },
-        viewportStore: { isPhoneWidth }
-    } = state
+            entranceStore: { didLyricUpdate },
+            lyricStore: { lyricSongIndex },
+            optionStore: { selectedTipsOption },
+            viewportStore: { isPhoneWidth }
+        } = state,
+        reference = REFERENCE_SELECTOR(state),
+        wormhole = WORMHOLE_SELECTOR(state)
 
     return {
         reference,

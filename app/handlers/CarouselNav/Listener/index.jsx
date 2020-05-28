@@ -5,12 +5,13 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { resetAccessedNav } from '../../../redux/access/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
+import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
 
 const mapStateToProps = state => {
     const {
-        mountStore: { canCarouselMount },
-        dotsStore: { dotsBitNumber }
-    } = state
+            mountStore: { canCarouselMount }
+        } = state,
+        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state)
 
     return {
         canCarouselMount,

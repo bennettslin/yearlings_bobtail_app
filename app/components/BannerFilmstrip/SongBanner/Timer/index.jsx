@@ -9,6 +9,10 @@ import {
     IS_ACTIVATED_SELECTOR,
     ACTIVATED_TIME_SELECTOR
 } from '../../../../redux/activated/selectors'
+import {
+    IS_BANNER_HOVERING_SELECTOR,
+    BANNER_HOVER_TIME_SELECTOR
+} from '../../../../redux/banner/selectors'
 import './style'
 
 const mapStateToProps = state => {
@@ -20,14 +24,12 @@ const mapStateToProps = state => {
             sliderStore: {
                 isSliderMoving,
                 sliderTime
-            },
-            bannerStore: {
-                isBannerHovering,
-                bannerHoverTime
             }
         } = state,
         isActivated = IS_ACTIVATED_SELECTOR(state),
-        activatedTime = ACTIVATED_TIME_SELECTOR(state)
+        activatedTime = ACTIVATED_TIME_SELECTOR(state),
+        isBannerHovering = IS_BANNER_HOVERING_SELECTOR(state),
+        bannerHoverTime = BANNER_HOVER_TIME_SELECTOR(state)
 
     return {
         isSelectedLogue,

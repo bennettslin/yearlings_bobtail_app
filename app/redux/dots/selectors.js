@@ -9,7 +9,3 @@ export const REFERENCE_SELECTOR = (
 export const WORMHOLE_SELECTOR = (
     { dotsStore: { wormhole } }
 ) => wormhole
-
-// import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
-
-// dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state)
