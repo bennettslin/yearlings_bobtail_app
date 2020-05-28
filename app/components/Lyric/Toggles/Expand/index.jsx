@@ -6,7 +6,10 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricDispatcher from '../../../../handlers/Lyric/Dispatcher'
-import { IS_LYRIC_EXPANDABLE_SELECTOR } from '../../../../redux/responsive/selectors'
+import {
+    IS_HEIGHTLESS_LYRIC_SELECTOR,
+    IS_LYRIC_EXPANDABLE_SELECTOR
+} from '../../../../redux/responsive/selectors'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
 import { populateRefs } from '../../../../helpers/ref'
@@ -16,10 +19,10 @@ import { LYRIC_EXPAND } from '../../../../constants/tips'
 
 const mapStateToProps = state => {
     const {
-            responsiveStore: { isHeightlessLyric },
             toggleStore: { isLyricExpanded }
         } = state,
-        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state)
+        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
 
     return {
         isHeightlessLyric,

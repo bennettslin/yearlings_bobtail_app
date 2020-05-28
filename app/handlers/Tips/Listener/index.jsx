@@ -116,7 +116,6 @@ class TipsListener extends PureComponent {
                     selectedTipsOption === SHOWN
                 )
             ) {
-                console.error('show tips for new song', isTipsShowable, selectedTipsOption)
                 this.props.updateOptionStore({
                     selectedTipsOption: isTipsShowable ? SHOWN : HIDDEN,
                     ...isTipsShowable && { isSongShownTips: true }

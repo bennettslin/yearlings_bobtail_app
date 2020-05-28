@@ -12,6 +12,7 @@ import {
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
 } from '../../../constants/scroll'
+import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -32,10 +33,10 @@ const mapStateToProps = state => {
                 isAutoScroll,
                 isLyricExpanded
             },
-            viewportStore: { deviceWidthIndex },
-            responsiveStore: { isHeightlessLyric }
+            viewportStore: { deviceWidthIndex }
         } = state,
-        isPlaying = IS_PLAYING_SELECTOR(state)
+        isPlaying = IS_PLAYING_SELECTOR(state),
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
 
     return {
         queuedScrollLyricLog,

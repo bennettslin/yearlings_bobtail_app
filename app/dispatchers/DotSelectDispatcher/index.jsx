@@ -8,12 +8,12 @@ import { setNewValueInBitNumber } from '../../helpers/bit'
 import { getDotKeysFromBitNumber } from '../../helpers/dot'
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
 import { DOTS_BIT_NUMBER_SELECTOR } from '../../redux/dots/selectors'
+import { DOTS_SLIDE_BIT_NUMBER_SELECTOR } from '../../redux/dotsSlide/selectors'
 
 const mapStateToProps = state => {
-    const {
-            dotsSlideStore: { dotsSlideBitNumber }
-        } = state,
-        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state)
+    const
+        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
+        dotsSlideBitNumber = DOTS_SLIDE_BIT_NUMBER_SELECTOR(state)
 
     return {
         dotsBitNumber,

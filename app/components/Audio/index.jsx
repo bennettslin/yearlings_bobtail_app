@@ -24,6 +24,7 @@ import { getSongsAndLoguesCount } from '../../album/api/songs'
 import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThrough } from '../../helpers/player'
 import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
+import { IS_TWO_ROW_MENU_SELECTOR } from '../../redux/responsive/selectors'
 import './style'
 
 const mapStateToProps = state => {
@@ -31,10 +32,10 @@ const mapStateToProps = state => {
             playersStore: { playersBitNumber },
             selectedStore: { selectedSongIndex },
             sessionStore: { audioOptionIndex },
-            responsiveStore: { isTwoRowMenu },
             viewportStore: { isDesktopWidth }
         } = state,
-        isPlaying = IS_PLAYING_SELECTOR(state)
+        isPlaying = IS_PLAYING_SELECTOR(state),
+        isTwoRowMenu = IS_TWO_ROW_MENU_SELECTOR(state)
 
     return {
         isPlaying,

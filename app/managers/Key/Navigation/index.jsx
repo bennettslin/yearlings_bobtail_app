@@ -9,6 +9,7 @@ import NavNavigation from './Nav'
 import { populateRefs } from '../../../helpers/ref'
 import { ENTER } from '../../../constants/access'
 import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -18,14 +19,14 @@ const mapStateToProps = state => {
                 isLyricExpanded,
                 isScoreShown
             },
-            responsiveStore: { isHeightlessLyric },
             selectedStore: {
                 selectedAnnotationIndex,
                 isSelectedLogue
             },
             sessionStore: { selectedWikiIndex }
         } = state,
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state)
+        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
 
     return {
         isHeightlessLyric,

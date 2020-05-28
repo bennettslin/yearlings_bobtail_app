@@ -2,7 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
-
+import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
 import {
     SHOWN,
     HIDDEN
@@ -10,14 +10,14 @@ import {
 
 const mapStateToProps = state => {
     const {
-        selectedStore: {
-            isSelectedLogue,
-            selectedSongIndex,
-            selectedAnnotationIndex
-        },
-        responsiveStore: { isHeightlessLyric },
-        optionStore: { selectedOverviewOption }
-    } = state
+            selectedStore: {
+                isSelectedLogue,
+                selectedSongIndex,
+                selectedAnnotationIndex
+            },
+            optionStore: { selectedOverviewOption }
+        } = state,
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
 
     return {
         isSelectedLogue,

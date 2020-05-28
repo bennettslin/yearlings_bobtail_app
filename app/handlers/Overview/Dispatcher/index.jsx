@@ -4,18 +4,19 @@ import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
 import { getNextOption } from '../../../helpers/options'
 import { SHOWN } from '../../../constants/options'
+import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
 
 const mapStateToProps = state => {
     const {
-        selectedStore: { isSelectedLogue },
-        responsiveStore: { isHeightlessLyric },
-        optionStore: {
-            isLogueOverviewShown,
-            selectedOverviewOption,
-            selectedTipsOption
-        },
-        transientStore: { toggleShowsOverviewImmediately }
-    } = state
+            selectedStore: { isSelectedLogue },
+            optionStore: {
+                isLogueOverviewShown,
+                selectedOverviewOption,
+                selectedTipsOption
+            },
+            transientStore: { toggleShowsOverviewImmediately }
+        } = state,
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
 
     return {
         isSelectedLogue,

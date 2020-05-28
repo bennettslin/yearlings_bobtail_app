@@ -3,24 +3,22 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateFocusStore } from '../../redux/focus/action'
-
 import CloseHandler from '../../managers/Close'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
-
 import RootContainer from '../Root'
 import KeyManager from '../../managers/Key'
-
 import { isEmailFocused } from '../../utils/email'
 import { populateRefs } from '../../helpers/ref'
+import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../redux/responsive/selectors'
 
 const mapStateToProps = state => {
     const {
-        mountStore: { canSliderMount },
-        responsiveStore: { isHeightlessLyric },
-        toggleStore: { isLyricExpanded },
-        focusStore: { queuedFocus }
-    } = state
+            mountStore: { canSliderMount },
+            toggleStore: { isLyricExpanded },
+            focusStore: { queuedFocus }
+        } = state,
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
 
     return {
         canSliderMount,
