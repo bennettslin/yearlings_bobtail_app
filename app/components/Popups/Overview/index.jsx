@@ -1,16 +1,14 @@
 // Popup container for overview section.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import Overview from '../../Overview'
 import Popup from '../../Popup'
-
 import {
     getIsOverviewVisibleBySection,
     getIsOverviewVisibleBySong
 } from './helper'
+import './style'
 
 const mapStateToProps = state => {
     const {

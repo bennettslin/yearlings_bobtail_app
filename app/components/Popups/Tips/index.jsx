@@ -1,13 +1,12 @@
 // Popup container for tips section.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Tips from '../../Tips'
 import Popup from '../../Popup'
-
 import { getShowTipForDevice } from '../../../album/api/tips'
 import { SHOWN } from '../../../constants/options'
+import './style'
 
 const mapStateToProps = state => {
     const {

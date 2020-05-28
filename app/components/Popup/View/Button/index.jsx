@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../../../Button'
+import './style'
 
 import {
     ARROW_LEFT,
@@ -16,7 +17,6 @@ import {
 } from '../../../../constants/buttons'
 
 class PopupViewButton extends Component {
-
     static propTypes = {
         isCloseButton: PropTypes.bool,
         isPreviousButton: PropTypes.bool,

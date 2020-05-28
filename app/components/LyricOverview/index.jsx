@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { LYRIC_OVERVIEW_HEIGHT_STYLE_SELECTOR } from '../../redux/mount/selectors'
-
 import Lyric from '../Lyric'
 import OverviewPopup from '../Popups/Overview'
+import './style'
 
 const LyricOverview = ({ setLyricFocusElement }) => {
     const lyricOverviewHeightStyle =

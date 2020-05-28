@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import PopupViewButton from './Button'
+import './style'
 
 const propTypes = {
         popupName: PropTypes.string.isRequired,
@@ -24,7 +24,6 @@ const propTypes = {
     },
 
     PopupView = ({
-
         popupName,
         displaysInOverlay,
         bounceAnimate,

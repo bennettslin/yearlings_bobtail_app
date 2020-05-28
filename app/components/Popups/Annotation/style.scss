@@ -1,5 +1,7 @@
-// AnnotationPopup does not have absolute full styling to allow access to nav.
+@import '../../../scss/constants/border';
+@import '../../../scss/constants/icon';
 
+// AnnotationPopup does not have absolute full styling to allow access to nav.
 .AnnotationPopup {
     .Main
     & {

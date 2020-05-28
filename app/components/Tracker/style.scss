@@ -1,3 +1,6 @@
+@import '../../scss/constants/colour';
+@import '../../scss/constants/transition';
+
 .Tracker {
     opacity: 0;
     background-color: $colour__paused__filled;

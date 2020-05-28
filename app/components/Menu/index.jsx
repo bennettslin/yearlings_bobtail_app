@@ -2,18 +2,16 @@
  * Field for about toggle, audio section, and scores and tips section. Knows no
  * state, so should not update.
  */
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import AboutToggle from '../About/Toggle'
 import Audio from '../Audio'
 import BannerFilmstrip from '../BannerFilmstrip'
 import Slider from '../Slider'
-
 import { getMenuMarginInOverlay } from './helper'
+import './style'
 
 const mapStateToProps = state => {
     const {

@@ -4,12 +4,11 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import Texts from '../Texts'
 import OverviewToggle from '../Main/OverviewToggle'
-
 import { getOverviewForSong } from '../../album/api/songs'
 import { getIsToggleInOverview } from './helper'
+import './style'
 
 const mapStateToProps = state => {
     const {

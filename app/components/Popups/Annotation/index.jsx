@@ -1,14 +1,12 @@
 // Popup container for individual annotation section.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Annotation from '../../Annotation'
 import Popup from '../../Popup'
-
 import { populateRefs } from '../../../helpers/ref'
+import './style'
 
 const mapStateToProps = state => {
     const {
