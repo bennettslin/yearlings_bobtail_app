@@ -2,18 +2,16 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
-
+import { IS_TIPS_SHOWABLE_SELECTOR } from '../../../redux/transient/selectors'
 import { getNextOption } from '../../../helpers/options'
 
 const mapStateToProps = state => {
     const {
-        lyricStore: { isLyricLogue },
-        optionStore: { selectedTipsOption },
-        transientStore: {
-            isTipsShowable,
-            toggleShowsTipsImmediately
-        }
-    } = state
+            lyricStore: { isLyricLogue },
+            optionStore: { selectedTipsOption },
+            transientStore: { toggleShowsTipsImmediately }
+        } = state,
+        isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state)
 
     return {
         isLyricLogue,

@@ -16,6 +16,7 @@
 * Logic styles should live together. (So that they can be removed together if needed.)
 
 # Easy reduction tasks
+* Fetch pdf upon score open, not song change.
 * Internal stylesheet fixes
 * Simplify Anchor for social media anchors
 * Listeners and Main components know to render themselves

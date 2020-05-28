@@ -4,22 +4,20 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
-
 import { populateRefs } from '../../../helpers/ref'
-
 import { TIPS_TOGGLE_KEY } from '../../../constants/access'
 import { TIPS_BUTTON_KEY } from '../../../constants/buttons'
 import { TIPS } from '../../../constants/tips'
+import { IS_TIPS_SHOWABLE_SELECTOR } from '../../../redux/transient/selectors'
 
 const mapStateToProps = state => {
     const {
-        optionStore: { selectedTipsOption },
-        transientStore: { isTipsShowable }
-    } = state
+            optionStore: { selectedTipsOption }
+        } = state,
+        isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state)
 
     return {
         selectedTipsOption,
