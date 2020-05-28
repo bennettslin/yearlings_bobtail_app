@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from '../../modules/InlineSvg'
 import Wires from '../../modules/Wires'
-
 import {
     convertPresenceKeyToTitle,
     convertPresenceKeyToClassName,
@@ -21,6 +20,7 @@ import {
 } from './helper/size'
 import { setSvgTransform } from './helper/transform'
 import { DEV_RENDER_ONLY_PRESENCES } from '../../constants/dev'
+import './style'
 
 export default class PresenceSvg extends PureComponent {
     static propTypes = {
