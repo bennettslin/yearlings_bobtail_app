@@ -1,7 +1,8 @@
 import { createSelector } from 'reselect'
 import {
     getLyricDynamicHeight,
-    getLyricOverviewHeight
+    getLyricOverviewHeight,
+    getMainHeight
 } from '../../helpers/resize/mount'
 import { IS_LYRIC_LOGUE_SELECTOR } from '../lyric/selectors'
 import {
@@ -12,7 +13,8 @@ import { STAGE_HEIGHT_SELECTOR } from '../stage/selectors'
 import { IS_LYRIC_EXPANDED_SELECTOR } from '../toggle/selectors'
 import {
     DEVICE_WIDTH_INDEX_SELECTOR,
-    WINDOW_HEIGHT_SELECTOR
+    WINDOW_HEIGHT_SELECTOR,
+    IS_DESKTOP_WIDTH_SELECTOR
 } from '../viewport/selectors'
 
 export const CAN_CAROUSEL_MOUNT_SELECTOR = (
@@ -71,3 +73,25 @@ export const LYRIC_OVERVIEW_HEIGHT_STYLE_SELECTOR = createSelector(
         isLyricExpanded
     })
 )
+
+export const MAIN_HEIGHT_SELECTOR = createSelector(
+    CAN_CAROUSEL_MOUNT_SELECTOR,
+    LYRIC_DYNAMIC_HEIGHT_SELECTOR,
+    IS_HEIGHTLESS_LYRIC_SELECTOR,
+    MENU_HEIGHT_SELECTOR,
+    IS_DESKTOP_WIDTH_SELECTOR,
+    (
+        canCarouselMount,
+        lyricDynamicHeight,
+        isHeightlessLyric,
+        menuHeight,
+        isDesktopWidth
+    ) => getMainHeight({
+        canCarouselMount,
+        lyricDynamicHeight,
+        isHeightlessLyric,
+        menuHeight,
+        isDesktopWidth
+    })
+)
+

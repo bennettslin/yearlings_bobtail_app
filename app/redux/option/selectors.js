@@ -1,23 +1,24 @@
 export const IS_LOGUE_OVERVIEW_SELECTOR = (
-    { lyricStore: { isLogueOverviewShown } }
+    { optionStore: { isLogueOverviewShown } }
 ) => isLogueOverviewShown
 
 export const SELECTED_OVERVIEW_OPTION_SELECTOR = (
-    { lyricStore: { selectedOverviewOption } }
+    { optionStore: { selectedOverviewOption } }
 ) => selectedOverviewOption
 
 export const SELECTED_TIPS_OPTION_SELECTOR = (
-    { lyricStore: { selectedTipsOption } }
+    { optionStore: { selectedTipsOption } }
 ) => selectedTipsOption
 
 export const IS_FORCED_SHOWN_OVERVIEW_SELECTOR = (
-    { lyricStore: { isForcedShownOverview } }
+    { optionStore: { isForcedShownOverview } }
 ) => isForcedShownOverview
 
 export const IS_SONG_SHOWN_OVERVIEW_SELECTOR = (
-    { lyricStore: { isSongShownOverview } }
+    { optionStore: { isSongShownOverview } }
 ) => isSongShownOverview
 
+// TODO: Why is this needed? It's only ever set, never used.
 export const IS_SONG_SHOWN_TIPS_SELECTOR = (
-    { lyricStore: { isSongShownTips } }
+    { optionStore: { isSongShownTips } }
 ) => isSongShownTips

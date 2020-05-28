@@ -5,18 +5,21 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
+import { CAN_LYRIC_CAROUSEL_ENTER_SELECTOR } from '../../redux/entrance/selectors'
+import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../redux/mount/selectors'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-        entranceStore: { canLyricCarouselEnter }
-    } = state
+    const
+        canLyricCarouselEnter = CAN_LYRIC_CAROUSEL_ENTER_SELECTOR(state),
+        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state)
 
     return {
-        canLyricCarouselEnter
+        canLyricCarouselEnter,
+        canCarouselMount
     }
 }
 
@@ -24,6 +27,7 @@ class Carousel extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        canCarouselMount: PropTypes.bool.isRequired,
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         updateEntranceStore: PropTypes.func.isRequired
     }
@@ -43,7 +47,14 @@ class Carousel extends PureComponent {
     }
 
     render() {
-        const { canLyricCarouselEnter } = this.props
+        const {
+            canLyricCarouselEnter,
+            canCarouselMount
+        } = this.props
+
+        if (!canCarouselMount) {
+            return null
+        }
 
         return (
             <CSSTransition

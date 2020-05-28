@@ -49,6 +49,8 @@ const ShownWrapper = ({ children }) => {
 
         tipType = getSongTipType(lyricSongIndex)
 
+    console.error(canLyricCarouselEnter && tipsShown)
+
     return (
         <div
             {...{
