@@ -4,15 +4,11 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import Svg from '../../../modules/Svg'
 import Face from './Face'
-
 import { getCharStringForNumber } from '../../../helpers/format'
 import { getValueInAbridgedMatrix } from '../../../helpers/general'
-
 import { getCssZIndexForCube } from './helpers/zIndices'
-
 import {
     DEFAULT,
     FACES,

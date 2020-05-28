@@ -1,42 +1,7 @@
-@import '../../scss/constants/icon';
-@import '../../scss/constants/lyric';
 @import '../../scss/constants/responsive';
-@import '../../scss/constants/transition';
 
 .Main {
     overflow: hidden;
-}
-
-.Main__flexContainer {
-    padding-top: $margin__thick;
-    display: flex;
-
-    .DW__desktopWidth.DW__cannotCarouselMount
-    &,
-    .DW__miniOrTabletWidth.DW__canCarouselMount
-    & {
-        padding-bottom: $margin__scrollBar;
-    }
-
-    .DW__phoneWidth
-    & {
-        padding-top: $MARGIN_THIN;
-    }
-}
-
-.Main__flexContainer__side {
-    align-items: flex-start;
-
-    .DW__desktopWidth.DW__cannotCarouselMount
-    &,
-    .DW__miniOrTabletWidth.DW__canCarouselMount
-    & {
-        align-items: flex-end;
-    }
-}
-
-.Main__flexContainer__right {
-    flex-direction: row-reverse;
 }
 
 .width__mainColumn {

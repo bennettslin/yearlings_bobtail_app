@@ -1,10 +1,10 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import { getSvgFillForFace } from './helpers/colours'
 import { getSvgDataPathForFace } from './helpers/paths'
 import { getCharStringForNumber } from '../../../../helpers/format'
+import './style'
 
 const propTypes = {
     // From parent.

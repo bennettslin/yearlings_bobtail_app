@@ -2,7 +2,6 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import CubeConfig from './Cube'
 import { CUBE_X_INDICES } from '../../constants/cubeIndex'
 import { DEV_MAXIMUM_Y_INDEX_CUBES } from '../../constants/dev'

@@ -2,6 +2,7 @@
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
 * Switching between songs in local is slow, not as slow in staging
+* Tips Hand on Carousel button in Pchelka
 
 # Audit
 * Make sure all presences are properly behind or in front as appropriate.

@@ -5,6 +5,7 @@
 import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
+import MainFlexContainer from './FlexContainer'
 import CarouselSelect from './CarouselSelect'
 import CarouselToggle from './CarouselToggle'
 import ShelfLeft from './ShelfLeft'
@@ -85,42 +86,16 @@ const Main = () => {
                     <Nav />
                 )}
                 <AnnotationPopup inMain />
-                <div
-                    {...{
-                        className: cx(
-                            'Main__flexContainer',
-                            'Main__flexContainer__side',
-                            'abF'
-                        )
-                    }}
-                >
+                <MainFlexContainer>
                     <ShelfLeft />
                     <OverviewPopup inMain />
-                </div>
-                <div
-                    {...{
-                        className: cx(
-                            'Main__flexContainer',
-
-                            /**
-                             * In desktop, tips popup is centred. In mobile,
-                             * it is on right, aligned either top or bottom.
-                             */
-                            isDesktopWidth ?
-                                'fCC' :
-                                [
-                                    'Main__flexContainer__side',
-                                    'Main__flexContainer__right'
-                                ],
-                            'abF'
-                        )
-                    }}
-                >
+                </MainFlexContainer>
+                <MainFlexContainer isRight>
                     {!isDesktopWidth && (
                         <ShelfRight />
                     )}
                     <TipsPopup />
-                </div>
+                </MainFlexContainer>
                 <LyricToggleExpand inMain />
                 <DotsSlide />
                 {canCarouselMount && (

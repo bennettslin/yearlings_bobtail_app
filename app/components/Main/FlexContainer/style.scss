@@ -1,0 +1,34 @@
+@import '../../../scss/constants/icon';
+@import '../../../scss/constants/lyric';
+
+.MainFlexContainer {
+    padding-top: $margin__thick;
+    display: flex;
+
+    .DW__desktopWidth.DW__cannotCarouselMount
+    &,
+    .DW__miniOrTabletWidth.DW__canCarouselMount
+    & {
+        padding-bottom: $margin__scrollBar;
+    }
+
+    .DW__phoneWidth
+    & {
+        padding-top: $MARGIN_THIN;
+    }
+}
+
+.MainFlexContainer__side {
+    align-items: flex-start;
+
+    .DW__desktopWidth.DW__cannotCarouselMount
+    &,
+    .DW__miniOrTabletWidth.DW__canCarouselMount
+    & {
+        align-items: flex-end;
+    }
+}
+
+.MainFlexContainer__right {
+    flex-direction: row-reverse;
+}
