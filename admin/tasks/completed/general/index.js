@@ -4740,5 +4740,9 @@ export default [
     {
         taskName: `Set up candidate environment with CloudFront.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix bug where hidden tips no longer shows before hidden overview.`,
+        workedHours: 1
     }
 ]

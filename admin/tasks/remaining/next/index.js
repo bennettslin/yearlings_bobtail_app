@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Fix bug where hidden tips no longer shows before hidden overview.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Don't load score until clicked.`,
         workedHours: 0,
         neededHours: 1

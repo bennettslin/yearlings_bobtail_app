@@ -3,15 +3,17 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
 import { IS_TIPS_SHOWABLE_SELECTOR } from '../../../redux/transient/selectors'
-
 import {
     SHOWN,
     HIDDEN
 } from '../../../constants/options'
+import {
+    LYRIC_ANNOTATION_INDEX_SELECTOR,
+    LYRIC_SONG_INDEX_SELECTOR
+} from '../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
     const {
-            lyricStore: { lyricAnnotationIndex },
             selectedStore: { isSelectedLogue },
             optionStore: {
                 selectedTipsOption,
@@ -19,13 +21,16 @@ const mapStateToProps = state => {
             },
             viewportStore: { deviceWidthIndex }
         } = state,
-        isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state)
+        isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state),
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
+        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         isSelectedLogue,
         selectedTipsOption,
         isForcedShownOverview,
         lyricAnnotationIndex,
+        lyricSongIndex,
         deviceWidthIndex,
         isTipsShowable
     }
@@ -36,6 +41,7 @@ class TipsListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         isForcedShownOverview: PropTypes.bool.isRequired,
@@ -49,17 +55,23 @@ class TipsListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this._handleTipsShowableChange(prevProps)
+        this._handleSongChange(prevProps)
         this._handleForcedOverview(prevProps)
         this._handleDeviceWidthChange(prevProps)
     }
 
-    _handleTipsShowableChange(prevProps) {
+    _handleSongChange(prevProps) {
         const
-            { isTipsShowable } = this.props,
-            { isTipsShowable: wasTipsShowable } = prevProps
+            { lyricSongIndex } = this.props,
+            { lyricSongIndex: prevSongIndex } = prevProps
 
-        if (isTipsShowable !== wasTipsShowable) {
+        /**
+         * Technically, this should also check for updates to the viewport
+         * width as well, in case the tip is not to be shown for certain
+         * widths. However, this should happen so infrequently that I won't
+         * bother for now.
+         */
+        if (lyricSongIndex !== prevSongIndex) {
             this._handleTipsUpdate()
         }
     }
@@ -104,6 +116,7 @@ class TipsListener extends PureComponent {
                     selectedTipsOption === SHOWN
                 )
             ) {
+                console.error('show tips for new song', isTipsShowable, selectedTipsOption)
                 this.props.updateOptionStore({
                     selectedTipsOption: isTipsShowable ? SHOWN : HIDDEN,
                     ...isTipsShowable && { isSongShownTips: true }
