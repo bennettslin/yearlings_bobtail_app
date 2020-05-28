@@ -12,7 +12,7 @@ export default [
     },
     {
         taskName: `Post-Gatsby refactoring.`,
-        workedHours: 18
+        workedHours: 22
     },
 
     /* Morning time. */
