@@ -31,7 +31,7 @@ export const SLIDER_TIME_SELECTOR = (
 //     LYRIC_VERSE_INDEX_SELECTOR,
 //     LYRIC_ANNOTATION_INDEX_SELECTOR,
 //     IS_LYRIC_LOGUE_SELECTOR
-// } from '../../../redux/players/selectors'
+// } from '../../../redux/slider/selectors'
 
 // lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
 // lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
