@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getSongTipType } from '../../album/api/tips'
-import { SHOWN } from '../../constants/options'
 import { WIKI, WORMHOLES } from '../../constants/tips'
 import {
     REFERENCE_SELECTOR,
@@ -16,8 +15,8 @@ import {
     LYRIC_ANNOTATION_INDEX_SELECTOR
 } from '../../redux/lyric/selectors'
 import {
-    SELECTED_OVERVIEW_OPTION_SELECTOR,
-    SELECTED_TIPS_OPTION_SELECTOR
+    TIPS_SHOWN_SELECTOR,
+    OVERVIEW_SHOWN_SELECTOR
 } from '../../redux/option/selectors'
 import {
     IS_CAROUSEL_SHOWN_SELECTOR,
@@ -35,8 +34,8 @@ const ShownWrapper = ({ children }) => {
         isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
         lyricAnnotationIndex = useSelector(LYRIC_ANNOTATION_INDEX_SELECTOR),
-        selectedOverviewOption = useSelector(SELECTED_OVERVIEW_OPTION_SELECTOR),
-        selectedTipsOption = useSelector(SELECTED_TIPS_OPTION_SELECTOR),
+        overviewShown = useSelector(OVERVIEW_SHOWN_SELECTOR),
+        tipsShown = useSelector(TIPS_SHOWN_SELECTOR),
         isCarouselShown = useSelector(IS_CAROUSEL_SHOWN_SELECTOR),
         isNavShown = useSelector(IS_NAV_SHOWN_SELECTOR),
         isLyricExpanded = useSelector(IS_LYRIC_EXPANDED_SELECTOR),
@@ -44,9 +43,7 @@ const ShownWrapper = ({ children }) => {
         isOverlayShown = useSelector(IS_OVERLAY_SHOWN_SELECTOR),
 
         songOverviewShown =
-            !isLyricLogue && selectedOverviewOption === SHOWN,
-        tipsShown = selectedTipsOption === SHOWN,
-
+            !isLyricLogue && overviewShown,
         tipType = getSongTipType(lyricSongIndex)
 
     return (

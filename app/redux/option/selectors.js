@@ -1,3 +1,6 @@
+import { createSelector } from 'reselect'
+import { isShown } from '../../helpers/options'
+
 export const IS_LOGUE_OVERVIEW_SHOWN_SELECTOR = (
     { optionStore: { isLogueOverviewShown } }
 ) => isLogueOverviewShown
@@ -17,3 +20,17 @@ export const IS_FORCED_SHOWN_OVERVIEW_SELECTOR = (
 export const IS_SONG_SHOWN_OVERVIEW_SELECTOR = (
     { optionStore: { isSongShownOverview } }
 ) => isSongShownOverview
+
+export const OVERVIEW_SHOWN_SELECTOR = createSelector(
+    SELECTED_OVERVIEW_OPTION_SELECTOR,
+    (
+        selectedOverviewOption
+    ) => isShown(selectedOverviewOption)
+)
+
+export const TIPS_SHOWN_SELECTOR = createSelector(
+    SELECTED_TIPS_OPTION_SELECTOR,
+    (
+        selectedTipsOption
+    ) => isShown(selectedTipsOption)
+)

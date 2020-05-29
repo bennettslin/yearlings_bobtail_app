@@ -66,3 +66,19 @@ export const getIsOverlayShown = ({
         )
     )
 }
+
+export const getIsCarouselNavShowable = ({
+    isOverlayShown,
+    overviewShown,
+    tipsShown,
+    isLyricLogue,
+    isLyricExpanded,
+    isActivated
+}) => (
+    !isOverlayShown &&
+    !overviewShown &&
+    !tipsShown &&
+    !isLyricLogue &&
+    !isLyricExpanded &&
+    !isActivated
+)

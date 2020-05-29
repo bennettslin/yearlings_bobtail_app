@@ -3,23 +3,21 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import Button from '../../../../Button'
-
+import NavCharacter from './Character'
+import NavButtonTitle from './Title'
 import { ENTER } from '../../../../../constants/access'
 import {
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY
 } from '../../../../../constants/buttons'
-
-import NavCharacter from './Character'
-import NavButtonTitle from './Title'
+import { IS_CAROUSEL_NAV_SHOWABLE_SELECTOR } from '../../../../../redux/transient/selectors'
 
 const mapStateToProps = state => {
     const {
-        transientStore: { isCarouselNavShowable },
-        selectedStore: { selectedAnnotationIndex }
-    } = state
+            selectedStore: { selectedAnnotationIndex }
+        } = state,
+        isCarouselNavShowable = IS_CAROUSEL_NAV_SHOWABLE_SELECTOR(state)
 
     return {
         isCarouselNavShowable,

@@ -4,6 +4,8 @@ import {
     DISABLED
 } from '../constants/options'
 
+export const isShown = option => option === SHOWN
+
 export const getNextOption = ({
     isToggled,
     toggleShows,
