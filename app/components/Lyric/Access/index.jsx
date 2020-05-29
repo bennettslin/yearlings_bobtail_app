@@ -7,6 +7,7 @@ import {
     ARROW_DOWN
 } from '../../../constants/access'
 import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {

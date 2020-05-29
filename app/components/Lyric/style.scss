@@ -1,7 +1,7 @@
-@import "./Access/style";
-@import "./Scroll/style";
-@import "./Toggles/style";
-@import "./VerseBar/style";
+@import '../../scss/constants/icon';
+@import '../../scss/constants/responsive';
+@import '../../scss/constants/transition';
+@import '../../scss/constants/zIndex';
 
 .Lyric {
     opacity: 0;

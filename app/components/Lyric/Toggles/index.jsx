@@ -3,10 +3,10 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import LyricToggleEar from './Ear'
 import LyricToggleExpand from './Expand'
 import LyricToggleScroll from './Scroll'
+import './style'
 
 const LyricToggles = ({ isBottomRight }) => (
     <div className={cx(

@@ -12,6 +12,7 @@ import Stanzas from '../../Stanzas'
 import { populateRefs } from '../../../helpers/ref'
 import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {

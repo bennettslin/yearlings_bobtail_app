@@ -5,15 +5,14 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
-
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
 import LyricToggles from './Toggles'
 import VerseBar from './VerseBar'
 import CarouselAccess from '../Carousel/Access'
-
 import { populateRefs } from '../../helpers/ref'
+import './style'
 
 const mapStateToProps = state => {
     const {

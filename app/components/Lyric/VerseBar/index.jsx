@@ -17,6 +17,7 @@ import {
     LYRIC_VERSE_INDEX_SELECTOR,
     IS_LYRIC_LOGUE_SELECTOR
 } from '../../../redux/lyric/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {

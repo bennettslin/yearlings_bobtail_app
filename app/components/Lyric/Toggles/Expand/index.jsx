@@ -16,6 +16,7 @@ import { populateRefs } from '../../../../helpers/ref'
 import { LYRIC_SECTION_EXPAND_KEY } from '../../../../constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from '../../../../constants/buttons'
 import { LYRIC_EXPAND } from '../../../../constants/tips'
+import './style'
 
 const mapStateToProps = state => {
     const {

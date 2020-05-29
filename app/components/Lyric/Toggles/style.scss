@@ -1,5 +1,8 @@
-@import "./Ear/style";
-@import "./Expand/style";
+@import '../../../scss/constants/icon';
+@import '../../../scss/constants/lyric';
+@import '../../../scss/constants/menu';
+@import '../../../scss/constants/transition';
+@import '../../../scss/constants/zIndex';
 
 .LyricToggles {
     position: absolute;
