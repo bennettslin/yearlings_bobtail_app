@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 import { updateTransientStore } from '../../redux/transient/action'
 import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../redux/mount/selectors'
+import { IS_OVERLAYING_ANNOTATION_SELECTOR } from '../../redux/transient/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -15,11 +16,11 @@ const mapStateToProps = state => {
                 isScoreShown,
                 isCarouselShown
             },
-            transientStore: { isOverlayingAnnotation },
             sessionStore: { selectedWikiIndex }
         } = state,
         lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
-        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state)
+        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state),
+        isOverlayingAnnotation = IS_OVERLAYING_ANNOTATION_SELECTOR(state)
 
     return {
         isAboutShown,

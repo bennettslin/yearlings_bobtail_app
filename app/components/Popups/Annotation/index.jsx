@@ -7,15 +7,17 @@ import Annotation from '../../Annotation'
 import Popup from '../../Popup'
 import { populateRefs } from '../../../helpers/ref'
 import './style'
+import {
+    IS_OVERLAYING_ANNOTATION_SELECTOR,
+    IS_POPUP_ANNOTATION_VISIBLE_SELECTOR,
+    POPUP_ANNOTATION_INDEX_SELECTOR
+} from '../../../redux/transient/selectors'
 
 const mapStateToProps = state => {
-    const {
-        transientStore: { isOverlayingAnnotation },
-        transientStore: {
-            isPopupAnnotationVisible,
-            popupAnnotationIndex
-        }
-    } = state
+    const
+        isOverlayingAnnotation = IS_OVERLAYING_ANNOTATION_SELECTOR(state),
+        isPopupAnnotationVisible = IS_POPUP_ANNOTATION_VISIBLE_SELECTOR(state),
+        popupAnnotationIndex = POPUP_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         isOverlayingAnnotation,

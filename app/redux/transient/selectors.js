@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect'
 import { getIsDoublespeakerShown } from '../../helpers/doublespeaker'
 import {
+    getIsOverlayingAnnotation,
     getIsOverlayShown,
     getIsShelfLeftShown,
     getIsCarouselNavShowable
@@ -36,9 +37,17 @@ import {
     IS_DESKTOP_WIDTH_SELECTOR
 } from '../viewport/selectors'
 
-export const IS_OVERLAYING_ANNOTATION_SELECTOR = (
-    { transientStore: { isOverlayingAnnotation } }
-) => isOverlayingAnnotation
+export const IS_OVERLAYING_ANNOTATION_SELECTOR = createSelector(
+    IS_PHONE_WIDTH_SELECTOR,
+    IS_LYRIC_EXPANDED_SELECTOR,
+    (
+        isPhoneWidth,
+        isLyricExpanded
+    ) => getIsOverlayingAnnotation({
+        isPhoneWidth,
+        isLyricExpanded
+    })
+)
 
 export const IS_POPUP_ANNOTATION_VISIBLE_SELECTOR = (
     { transientStore: { isPopupAnnotationVisible } }

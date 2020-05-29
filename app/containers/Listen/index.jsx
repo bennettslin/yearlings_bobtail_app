@@ -14,7 +14,6 @@ import DotsSlideListener from '../../handlers/DotsSlide/Listener'
 import LogueListener from '../../listeners/Logue'
 import LyricListener from '../../handlers/Lyric/Listener'
 import LyricIndicesListener from '../../listeners/LyricIndices'
-import MainListener from '../../listeners/Main'
 import OverviewListener from '../../handlers/Overview/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotation'
 import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
@@ -53,7 +52,6 @@ const ListenContainer = () => {
             <LogueListener />
             <LyricListener />
             <LyricIndicesListener />
-            <MainListener />
             <OverviewListener />
             <PopupAnnotationListener />
             <SceneChangeExitListener />
