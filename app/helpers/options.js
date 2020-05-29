@@ -31,3 +31,56 @@ export const getNextOption = ({
         }
     }
 }
+
+const _getHasInitialToggleConditions = ({
+    lyricAnnotationIndex,
+    isDotsSlideShown,
+    isOverlayShown,
+    isLyricExpanded,
+    isActivated
+}) => (
+    Boolean(lyricAnnotationIndex) ||
+        isDotsSlideShown ||
+        isOverlayShown ||
+        isLyricExpanded ||
+        isActivated
+)
+
+export const getToggleShowsOverviewImmediately = ({
+    tipsShown,
+    lyricAnnotationIndex,
+    isDotsSlideShown,
+    isOverlayShown,
+    isLyricExpanded,
+    isActivated
+
+}) => (
+    // Toggle overview immediately under these conditions.
+    tipsShown || _getHasInitialToggleConditions({
+        lyricAnnotationIndex,
+        isDotsSlideShown,
+        isOverlayShown,
+        isLyricExpanded,
+        isActivated
+    })
+)
+
+export const getToggleShowsTipsImmediately = ({
+    tipsShown,
+    overviewShown,
+    lyricAnnotationIndex,
+    isDotsSlideShown,
+    isOverlayShown,
+    isLyricExpanded,
+    isActivated
+
+}) => (
+    // Toggle tips immediately under these conditions.
+    (!tipsShown && overviewShown) || _getHasInitialToggleConditions({
+        lyricAnnotationIndex,
+        isDotsSlideShown,
+        isOverlayShown,
+        isLyricExpanded,
+        isActivated
+    })
+)

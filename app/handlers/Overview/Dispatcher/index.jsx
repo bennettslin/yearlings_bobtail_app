@@ -5,6 +5,7 @@ import { updateOptionStore } from '../../../redux/option/action'
 import { getNextOption } from '../../../helpers/options'
 import { SHOWN } from '../../../constants/options'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
+import { TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR } from '../../../redux/transient/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -13,10 +14,10 @@ const mapStateToProps = state => {
                 isLogueOverviewShown,
                 selectedOverviewOption,
                 selectedTipsOption
-            },
-            transientStore: { toggleShowsOverviewImmediately }
+            }
         } = state,
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
+        toggleShowsOverviewImmediately = TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR(state)
 
     return {
         isSelectedLogue,

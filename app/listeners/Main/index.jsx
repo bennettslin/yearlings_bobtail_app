@@ -7,8 +7,7 @@ import { updateTransientStore } from '../../redux/transient/action'
 import {
     getIsShelfLeftShown,
     getIsOverlayingAnnotation,
-    getIsOverlayShown,
-    getToggleShowsImmediately
+    getIsOverlayShown
 } from './helper'
 import { SHOWN } from '../../constants/options'
 import { IS_ACTIVATED_SELECTOR } from '../../redux/activated/selectors'
@@ -132,29 +131,13 @@ class MainListener extends PureComponent {
                 isLogueOverviewShown,
                 overviewShown,
                 tipsShown
-            }),
-
-            {
-                toggleShowsOverviewImmediately,
-                toggleShowsTipsImmediately
-
-            } = getToggleShowsImmediately({
-                lyricAnnotationIndex,
-                isDotsSlideShown,
-                isOverlayShown,
-                isLyricExpanded,
-                isActivated,
-                overviewShown,
-                tipsShown
             })
 
         this.props.updateTransientStore({
             isShelfLeftShown,
             isOverlayingAnnotation,
             isOverlayShown,
-            isCarouselNavShowable,
-            toggleShowsOverviewImmediately,
-            toggleShowsTipsImmediately
+            isCarouselNavShowable
         })
     }
 

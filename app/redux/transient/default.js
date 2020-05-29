@@ -6,7 +6,5 @@ export const TRANSIENT_DEFAULTS = {
     isOverlayingAnnotation: false,
     isOverlayShown: false,
     isPopupAnnotationVisible: false,
-    popupAnnotationIndex: INITIAL_ANNOTATION_INDEX,
-    toggleShowsOverviewImmediately: false,
-    toggleShowsTipsImmediately: false
+    popupAnnotationIndex: INITIAL_ANNOTATION_INDEX
 }

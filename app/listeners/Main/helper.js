@@ -66,34 +66,3 @@ export const getIsOverlayShown = ({
         )
     )
 }
-
-export const getToggleShowsImmediately = ({
-    lyricAnnotationIndex,
-    isDotsSlideShown,
-    isOverlayShown,
-    isLyricExpanded,
-    isActivated,
-    overviewShown,
-    tipsShown
-}) => {
-    const
-        initialToggleConditions =
-            Boolean(lyricAnnotationIndex) ||
-            isDotsSlideShown ||
-            isOverlayShown ||
-            isLyricExpanded ||
-            isActivated,
-
-        // Toggle overview immediately under these conditions.
-        toggleShowsOverviewImmediately =
-            tipsShown || initialToggleConditions,
-
-        // Toggle tips immediately under these conditions.
-        toggleShowsTipsImmediately =
-            (!tipsShown && overviewShown) || initialToggleConditions
-
-    return {
-        toggleShowsOverviewImmediately,
-        toggleShowsTipsImmediately
-    }
-}
