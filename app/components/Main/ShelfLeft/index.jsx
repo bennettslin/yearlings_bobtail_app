@@ -8,13 +8,14 @@ import ScoreToggle from '../../Score/Toggle'
 import TipsToggle from '../../Tips/Toggle'
 import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
+import { IS_SHELF_LEFT_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-        viewportStore: { isDesktopWidth },
-        transientStore: { isShelfLeftShown }
-    } = state
+            viewportStore: { isDesktopWidth }
+        } = state,
+        isShelfLeftShown = IS_SHELF_LEFT_SHOWN_SELECTOR(state)
 
     return {
         isDesktopWidth,

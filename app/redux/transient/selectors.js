@@ -1,18 +1,22 @@
 import { createSelector } from 'reselect'
 import { getIsDoublespeakerShown } from '../../helpers/doublespeaker'
+import { getIsShelfLeftShown } from '../../helpers/main'
 import {
     getToggleShowsOverviewImmediately,
     getToggleShowsTipsImmediately
 } from '../../helpers/options'
 import { getShowTipForDevice } from '../../album/api/tips'
 import { IS_ACTIVATED_SELECTOR } from '../activated/selectors'
+import { CAN_LYRIC_CAROUSEL_ENTER_SELECTOR } from '../entrance/selectors'
 import {
     LYRIC_SONG_INDEX_SELECTOR,
-    LYRIC_ANNOTATION_INDEX_SELECTOR
+    LYRIC_ANNOTATION_INDEX_SELECTOR,
+    IS_LYRIC_LOGUE_SELECTOR
 } from '../lyric/selectors'
 import {
     SELECTED_TIPS_OPTION_SELECTOR,
-    SELECTED_OVERVIEW_OPTION_SELECTOR
+    SELECTED_OVERVIEW_OPTION_SELECTOR,
+    IS_LOGUE_OVERVIEW_SHOWN_SELECTOR
 } from '../option/selectors'
 import {
     IS_DOTS_SLIDE_SHOWN_SELECTOR,
@@ -25,10 +29,6 @@ import {
     IS_DESKTOP_WIDTH_SELECTOR
 } from '../viewport/selectors'
 import { SHOWN } from '../../constants/options'
-
-export const IS_SHELF_LEFT_SHOWN_SELECTOR = (
-    { transientStore: { isShelfLeftShown } }
-) => isShelfLeftShown
 
 export const IS_CAROUSEL_NAV_SHOWABLE_SELECTOR = (
     { transientStore: { isCarouselNavShowable } }
@@ -78,6 +78,51 @@ export const IS_TIPS_SHOWABLE_SELECTOR = createSelector(
         isTabletWidth,
         isDesktopWidth
     })
+)
+
+export const IS_SHELF_LEFT_SHOWN_SELECTOR = createSelector(
+    IS_PHONE_WIDTH_SELECTOR,
+    IS_DOTS_SLIDE_SHOWN_SELECTOR,
+    IS_LYRIC_EXPANDED_SELECTOR,
+    IS_ACTIVATED_SELECTOR,
+    IS_OVERLAY_SHOWN_SELECTOR,
+    CAN_LYRIC_CAROUSEL_ENTER_SELECTOR,
+    LYRIC_ANNOTATION_INDEX_SELECTOR,
+    IS_LYRIC_LOGUE_SELECTOR,
+    IS_LOGUE_OVERVIEW_SHOWN_SELECTOR,
+    SELECTED_OVERVIEW_OPTION_SELECTOR,
+    SELECTED_TIPS_OPTION_SELECTOR,
+    (
+        isPhoneWidth,
+        isDotsSlideShown,
+        isLyricExpanded,
+        isActivated,
+        isOverlayShown,
+        canLyricCarouselEnter,
+        lyricAnnotationIndex,
+        isLyricLogue,
+        isLogueOverviewShown,
+        selectedOverviewOption,
+        selectedTipsOption
+    ) => {
+        const
+            overviewShown = selectedOverviewOption === SHOWN,
+            tipsShown = selectedTipsOption === SHOWN
+
+        return getIsShelfLeftShown({
+            isPhoneWidth,
+            isDotsSlideShown,
+            isLyricExpanded,
+            isActivated,
+            isOverlayShown,
+            canLyricCarouselEnter,
+            lyricAnnotationIndex,
+            isLyricLogue,
+            isLogueOverviewShown,
+            overviewShown,
+            tipsShown
+        })
+    }
 )
 
 export const TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR = createSelector(

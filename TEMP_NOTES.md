@@ -2,9 +2,10 @@
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
 * Switching between songs in local is slow, not as slow in staging
-* tips hand in garryowen for sore
+* tips hand in garryowen for score
 
 # Brainless JS tasks
+* Have helpers to get isTipsShown and isOverviewShown
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.
 

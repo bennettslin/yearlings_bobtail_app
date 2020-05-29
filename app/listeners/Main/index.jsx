@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateTransientStore } from '../../redux/transient/action'
 import {
-    getIsShelfLeftShown,
     getIsOverlayingAnnotation,
     getIsOverlayShown
 } from '../../helpers/main'
@@ -16,7 +15,6 @@ import {
     IS_LYRIC_LOGUE_SELECTOR
 } from '../../redux/lyric/selectors'
 import {
-    IS_LOGUE_OVERVIEW_SHOWN_SELECTOR,
     SELECTED_OVERVIEW_OPTION_SELECTOR,
     SELECTED_TIPS_OPTION_SELECTOR
 } from '../../redux/option/selectors'
@@ -25,32 +23,26 @@ const mapStateToProps = state => {
     const {
             viewportStore: { isPhoneWidth },
             toggleStore: {
-                isDotsSlideShown,
                 isLyricExpanded,
                 isScoreShown,
                 isAboutShown
             },
-            entranceStore: { canLyricCarouselEnter },
             sessionStore: { selectedWikiIndex }
         } = state,
         isActivated = IS_ACTIVATED_SELECTOR(state),
         lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
         isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
-        isLogueOverviewShown = IS_LOGUE_OVERVIEW_SHOWN_SELECTOR(state),
         selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
         selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
 
     return {
         isPhoneWidth,
-        isDotsSlideShown,
         isLyricExpanded,
         isScoreShown,
         isAboutShown,
-        canLyricCarouselEnter,
         lyricAnnotationIndex,
         isLyricLogue,
         isActivated,
-        isLogueOverviewShown,
         selectedOverviewOption,
         selectedTipsOption,
         selectedWikiIndex
@@ -62,15 +54,12 @@ class MainListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPhoneWidth: PropTypes.bool.isRequired,
-        isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isAboutShown: PropTypes.bool.isRequired,
-        canLyricCarouselEnter: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         isLyricLogue: PropTypes.bool.isRequired,
         isActivated: PropTypes.bool.isRequired,
-        isLogueOverviewShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
@@ -84,14 +73,11 @@ class MainListener extends PureComponent {
     _determineOverlayAndCarouselNav() {
         const {
                 isPhoneWidth,
-                isDotsSlideShown,
                 isLyricExpanded,
                 lyricAnnotationIndex,
                 isLyricLogue,
-                isLogueOverviewShown,
                 isScoreShown,
                 isAboutShown,
-                canLyricCarouselEnter,
                 selectedOverviewOption,
                 selectedTipsOption,
                 selectedWikiIndex,
@@ -120,24 +106,9 @@ class MainListener extends PureComponent {
                 !tipsShown &&
                 !isLyricLogue &&
                 !isLyricExpanded &&
-                !isActivated,
-
-            isShelfLeftShown = getIsShelfLeftShown({
-                isPhoneWidth,
-                isDotsSlideShown,
-                isLyricExpanded,
-                isActivated,
-                isOverlayShown,
-                canLyricCarouselEnter,
-                lyricAnnotationIndex,
-                isLyricLogue,
-                isLogueOverviewShown,
-                overviewShown,
-                tipsShown
-            })
+                !isActivated
 
         this.props.updateTransientStore({
-            isShelfLeftShown,
             isOverlayingAnnotation,
             isOverlayShown,
             isCarouselNavShowable
