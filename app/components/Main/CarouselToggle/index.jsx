@@ -51,11 +51,12 @@ class CarouselToggle extends PureComponent {
 
     render() {
         const {
+            canCarouselMount,
             isCarouselShown,
             isNavShown
         } = this.props
 
-        return (
+        return canCarouselMount && (
             <div className={cx(
                 'CarouselToggle'
             )}>

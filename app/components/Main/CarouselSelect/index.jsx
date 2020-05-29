@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Button from '../../Button'
 import { populateRefs } from '../../../helpers/ref'
@@ -10,9 +12,21 @@ import {
     CAROUSEL_PREVIOUS_BUTTON_KEY,
     CAROUSEL_NEXT_BUTTON_KEY
 } from '../../../constants/buttons'
+import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
 import './style'
 
+const mapStateToProps = state => {
+    const canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state)
+
+    return {
+        canCarouselMount
+    }
+}
+
 class CarouselSelect extends PureComponent {
+    static propTypes = {
+        canCarouselMount: PropTypes.bool.isRequired
+    }
 
     _handleAnnotationPrevious = () => {
         this.dispatchAnnotationDirection(-1)
@@ -27,7 +41,9 @@ class CarouselSelect extends PureComponent {
     }
 
     render() {
-        return (
+        const { canCarouselMount } = this.props
+
+        return canCarouselMount && (
             <div className="CarouselSelect">
                 <Button
                     isLargeSize
@@ -51,4 +67,4 @@ class CarouselSelect extends PureComponent {
     }
 }
 
-export default CarouselSelect
+export default connect(mapStateToProps)(CarouselSelect)

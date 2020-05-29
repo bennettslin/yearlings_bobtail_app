@@ -73,12 +73,8 @@ const Main = () => {
             </MainFlexContainer>
             <LyricToggleExpand inMain />
             <DotsSlide />
-            {canCarouselMount && (
-                <>
-                    <CarouselToggle />
-                    <CarouselSelect />
-                </>
-            )}
+            <CarouselToggle />
+            <CarouselSelect />
         </div>
     )
 }
