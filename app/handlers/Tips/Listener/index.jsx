@@ -11,19 +11,21 @@ import {
     LYRIC_ANNOTATION_INDEX_SELECTOR,
     LYRIC_SONG_INDEX_SELECTOR
 } from '../../../redux/lyric/selectors'
+import {
+    SELECTED_TIPS_OPTION_SELECTOR,
+    IS_FORCED_SHOWN_OVERVIEW_SELECTOR
+} from '../../../redux/option/selectors'
 
 const mapStateToProps = state => {
     const {
             selectedStore: { isSelectedLogue },
-            optionStore: {
-                selectedTipsOption,
-                isForcedShownOverview
-            },
             viewportStore: { deviceWidthIndex }
         } = state,
         isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state),
         lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state)
+        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
+        isForcedShownOverview = IS_FORCED_SHOWN_OVERVIEW_SELECTOR(state)
 
     return {
         isSelectedLogue,

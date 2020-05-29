@@ -47,23 +47,25 @@ import {
     SHOWN,
     HIDDEN
 } from '../../../constants/options'
+import {
+    SELECTED_OVERVIEW_OPTION_SELECTOR,
+    SELECTED_TIPS_OPTION_SELECTOR
+} from '../../../redux/option/selectors'
 
 const mapStateToProps = state => {
     const {
-        toggleStore: {
-            isDotsSlideShown,
-            isLyricExpanded,
-            isNavShown,
-            isScoreShown,
-            isAboutShown
-        },
-        optionStore: {
-            selectedOverviewOption,
-            selectedTipsOption
-        },
-        selectedStore: { selectedAnnotationIndex },
-        sessionStore: { selectedWikiIndex }
-    } = state
+            toggleStore: {
+                isDotsSlideShown,
+                isLyricExpanded,
+                isNavShown,
+                isScoreShown,
+                isAboutShown
+            },
+            selectedStore: { selectedAnnotationIndex },
+            sessionStore: { selectedWikiIndex }
+        } = state,
+        selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
 
     return {
         isDotsSlideShown,

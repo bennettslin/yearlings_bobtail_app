@@ -10,12 +10,12 @@ import {
     LYRIC_SONG_INDEX_SELECTOR,
     IS_LYRIC_LOGUE_SELECTOR
 } from '../../../redux/lyric/selectors'
+import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
             entranceStore: { canLyricCarouselEnter },
-            optionStore: { selectedTipsOption },
             viewportStore: {
                 isPhoneWidth,
                 isTabletWidth,
@@ -23,7 +23,8 @@ const mapStateToProps = state => {
             }
         } = state,
         lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
+        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
 
     return {
         canLyricCarouselEnter,

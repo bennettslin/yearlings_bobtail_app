@@ -19,14 +19,14 @@ import {
     HIDDEN
 } from '../../constants/options'
 import { IS_ACTIVATED_SELECTOR } from '../../redux/activated/selectors'
+import {
+    SELECTED_OVERVIEW_OPTION_SELECTOR,
+    SELECTED_TIPS_OPTION_SELECTOR,
+    IS_SONG_SHOWN_OVERVIEW_SELECTOR
+} from '../../redux/option/selectors'
 
 const mapStateToProps = state => {
     const {
-            optionStore: {
-                selectedOverviewOption,
-                selectedTipsOption,
-                isSongShownOverview
-            },
             selectedStore: { selectedAnnotationIndex },
             sliderStore: { isSliderMoving },
             toggleStore: {
@@ -38,7 +38,10 @@ const mapStateToProps = state => {
             },
             sessionStore: { selectedWikiIndex }
         } = state,
-        isActivated = IS_ACTIVATED_SELECTOR(state)
+        isActivated = IS_ACTIVATED_SELECTOR(state),
+        selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
+        isSongShownOverview = IS_SONG_SHOWN_OVERVIEW_SELECTOR(state)
 
     return {
         selectedAnnotationIndex,

@@ -12,13 +12,13 @@ import { OVERVIEW_BUTTON_KEY } from '../../../constants/buttons'
 import { OVERVIEW } from '../../../constants/tips'
 import { getOverviewToggleIdentifier } from './helper'
 import { IS_LYRIC_LOGUE_SELECTOR } from '../../../redux/lyric/selectors'
+import { SELECTED_OVERVIEW_OPTION_SELECTOR } from '../../../redux/option/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            optionStore: { selectedOverviewOption }
-        } = state,
-        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
+    const
+        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
+        selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state)
 
     return {
         isLyricLogue,

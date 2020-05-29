@@ -12,12 +12,12 @@ import { TIPS_TOGGLE_KEY } from '../../../constants/access'
 import { TIPS_BUTTON_KEY } from '../../../constants/buttons'
 import { TIPS } from '../../../constants/tips'
 import { IS_TIPS_SHOWABLE_SELECTOR } from '../../../redux/transient/selectors'
+import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
 
 const mapStateToProps = state => {
-    const {
-            optionStore: { selectedTipsOption }
-        } = state,
-        isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state)
+    const
+        isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state),
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
 
     return {
         selectedTipsOption,

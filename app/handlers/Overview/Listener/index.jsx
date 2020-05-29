@@ -7,6 +7,7 @@ import {
     SHOWN,
     HIDDEN
 } from '../../../constants/options'
+import { SELECTED_OVERVIEW_OPTION_SELECTOR } from '../../../redux/option/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -14,10 +15,10 @@ const mapStateToProps = state => {
                 isSelectedLogue,
                 selectedSongIndex,
                 selectedAnnotationIndex
-            },
-            optionStore: { selectedOverviewOption }
+            }
         } = state,
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
+        selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state)
 
     return {
         isSelectedLogue,

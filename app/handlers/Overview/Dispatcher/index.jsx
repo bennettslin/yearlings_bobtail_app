@@ -4,20 +4,23 @@ import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
 import { getNextOption } from '../../../helpers/options'
 import { SHOWN } from '../../../constants/options'
+import {
+    IS_LOGUE_OVERVIEW_SHOWN_SELECTOR,
+    SELECTED_OVERVIEW_OPTION_SELECTOR,
+    SELECTED_TIPS_OPTION_SELECTOR
+} from '../../../redux/option/selectors'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
 import { TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR } from '../../../redux/transient/selectors'
 
 const mapStateToProps = state => {
     const {
-            selectedStore: { isSelectedLogue },
-            optionStore: {
-                isLogueOverviewShown,
-                selectedOverviewOption,
-                selectedTipsOption
-            }
+            selectedStore: { isSelectedLogue }
         } = state,
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
-        toggleShowsOverviewImmediately = TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR(state)
+        toggleShowsOverviewImmediately = TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR(state),
+        isLogueOverviewShown = IS_LOGUE_OVERVIEW_SHOWN_SELECTOR(state),
+        selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
 
     return {
         isSelectedLogue,

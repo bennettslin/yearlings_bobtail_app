@@ -8,14 +8,14 @@ import {
     TOGGLE_SHOWS_TIPS_IMMEDIATELY_SELECTOR
 } from '../../../redux/transient/selectors'
 import { getNextOption } from '../../../helpers/options'
+import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
 
 const mapStateToProps = state => {
-    const {
-            optionStore: { selectedTipsOption }
-        } = state,
+    const
         isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
         isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state),
-        toggleShowsTipsImmediately = TOGGLE_SHOWS_TIPS_IMMEDIATELY_SELECTOR(state)
+        toggleShowsTipsImmediately = TOGGLE_SHOWS_TIPS_IMMEDIATELY_SELECTOR(state),
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
 
     return {
         isLyricLogue,

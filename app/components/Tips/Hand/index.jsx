@@ -16,16 +16,17 @@ import {
     WORMHOLE_SELECTOR
 } from '../../../redux/dots/selectors'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
 
 const mapStateToProps = state => {
     const {
             entranceStore: { didLyricUpdate },
-            optionStore: { selectedTipsOption },
             viewportStore: { isPhoneWidth }
         } = state,
         reference = REFERENCE_SELECTOR(state),
         wormhole = WORMHOLE_SELECTOR(state),
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
+        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
 
     return {
         reference,
