@@ -25,8 +25,7 @@ const mapStateToProps = state => {
             optionStore: {
                 selectedOverviewOption,
                 selectedTipsOption,
-                isSongShownOverview,
-                isSongShownTips
+                isSongShownOverview
             },
             selectedStore: { selectedAnnotationIndex },
             sliderStore: { isSliderMoving },
@@ -52,7 +51,6 @@ const mapStateToProps = state => {
         selectedOverviewOption,
         selectedTipsOption,
         isSongShownOverview,
-        isSongShownTips,
         selectedWikiIndex,
         isActivated
     }
@@ -72,7 +70,6 @@ class CloseHandler extends PureComponent {
         selectedTipsOption: PropTypes.string.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
         isSongShownOverview: PropTypes.bool.isRequired,
-        isSongShownTips: PropTypes.bool.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         isActivated: PropTypes.bool.isRequired,
         updateOptionStore: PropTypes.func.isRequired,
@@ -229,21 +226,12 @@ class CloseHandler extends PureComponent {
             isTipsShown = selectedTipsOption === SHOWN,
             wasTipsShown = prevTipsOption === SHOWN
 
-        if (isTipsShown) {
-            const { isSongShownTips } = this.props
-
-            // Cheesy way to ignore when tips is shown from song change.
-            if (isSongShownTips) {
-                this.props.updateOptionStore({ isSongShownTips: false })
-            }
-
-            if (!wasTipsShown) {
-                this.closeMainPopups()
-                this.closeMainSections({
-                    exemptTips: true,
-                    exemptOverview: true
-                })
-            }
+        if (isTipsShown && !wasTipsShown) {
+            this.closeMainPopups()
+            this.closeMainSections({
+                exemptTips: true,
+                exemptOverview: true
+            })
         }
     }
 

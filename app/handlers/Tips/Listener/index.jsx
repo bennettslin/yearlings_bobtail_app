@@ -117,8 +117,7 @@ class TipsListener extends PureComponent {
                 )
             ) {
                 this.props.updateOptionStore({
-                    selectedTipsOption: isTipsShowable ? SHOWN : HIDDEN,
-                    ...isTipsShowable && { isSongShownTips: true }
+                    selectedTipsOption: isTipsShowable ? SHOWN : HIDDEN
                 })
 
             // If shown, hide when now in logue.

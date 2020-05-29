@@ -18,11 +18,6 @@ export const IS_SONG_SHOWN_OVERVIEW_SELECTOR = (
     { optionStore: { isSongShownOverview } }
 ) => isSongShownOverview
 
-// TODO: Why is this needed? It's only ever set, never used.
-export const IS_SONG_SHOWN_TIPS_SELECTOR = (
-    { optionStore: { isSongShownTips } }
-) => isSongShownTips
-
 // import {
 //     LYRIC_SONG_INDEX_SELECTOR,
 //     LYRIC_VERSE_INDEX_SELECTOR,

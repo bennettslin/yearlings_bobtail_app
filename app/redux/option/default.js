@@ -14,6 +14,5 @@ export const OPTION_DEFAULTS = {
     selectedOverviewOption: STORED_OVERVIEW_OPTION,
     selectedTipsOption: STORED_TIPS_OPTION,
     isForcedShownOverview: false,
-    isSongShownOverview: false,
-    isSongShownTips: false
+    isSongShownOverview: false
 }
