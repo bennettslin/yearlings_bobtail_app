@@ -2,15 +2,13 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updatePlayersStore } from '../../../../redux/players/action'
-
 import { getSongsNotLoguesCount } from '../../../../album/api/songs'
 import { setNewValueInBitNumber } from '../../../../helpers/bit'
 import { getStoreKeyForPlayer } from '../../../../helpers/player'
+import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../../../redux/players/selectors'
 
 const mapStateToProps = state => {
-    const {
-        playersStore: { playersBitNumber }
-    } = state
+    const playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state)
 
     return {
         playersBitNumber

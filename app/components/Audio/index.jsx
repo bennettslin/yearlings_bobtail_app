@@ -25,17 +25,18 @@ import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThrough } from '../../helpers/player'
 import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
 import { IS_TWO_ROW_MENU_SELECTOR } from '../../redux/responsive/selectors'
+import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../redux/players/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-            playersStore: { playersBitNumber },
             selectedStore: { selectedSongIndex },
             sessionStore: { audioOptionIndex },
             viewportStore: { isDesktopWidth }
         } = state,
         isPlaying = IS_PLAYING_SELECTOR(state),
-        isTwoRowMenu = IS_TWO_ROW_MENU_SELECTOR(state)
+        isTwoRowMenu = IS_TWO_ROW_MENU_SELECTOR(state),
+        playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state)
 
     return {
         isPlaying,
