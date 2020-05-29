@@ -11,14 +11,15 @@ import KeyManager from '../../managers/Key'
 import { isEmailFocused } from '../../utils/email'
 import { populateRefs } from '../../helpers/ref'
 import { QUEUED_FOCUS_SELECTOR } from '../../redux/focus/selectors'
+import { CAN_SLIDER_MOUNT_SELECTOR } from '../../redux/mount/selectors'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../redux/responsive/selectors'
 
 const mapStateToProps = state => {
     const {
-            mountStore: { canSliderMount },
             toggleStore: { isLyricExpanded }
         } = state,
         queuedFocus = QUEUED_FOCUS_SELECTOR(state),
+        canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state),
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
 
     return {

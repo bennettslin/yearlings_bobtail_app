@@ -2,16 +2,17 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
+import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
 
 const mapStateToProps = state => {
     const {
-        mountStore: { canCarouselMount },
-        entranceStore: {
-            didLyricUpdate,
-            didCarouselUpdate,
-            didSceneUpdate
-        }
-    } = state
+            entranceStore: {
+                didLyricUpdate,
+                didCarouselUpdate,
+                didSceneUpdate
+            }
+        } = state,
+        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state)
 
     return {
         canCarouselMount,

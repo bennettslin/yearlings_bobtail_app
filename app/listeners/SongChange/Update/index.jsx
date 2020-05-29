@@ -3,26 +3,25 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateLyricStore } from '../../../redux/lyric/action'
-
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
-
 import { populateRefs } from '../../../helpers/ref'
+import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
 
 const mapStateToProps = state => {
     const {
-        mountStore: { canCarouselMount },
-        entranceStore: {
-            didCarouselExit,
-            didLyricExit,
-            didCurtainExit,
-            isSongSelectInFlux
-        },
-        selectedStore: {
-            selectedSongIndex,
-            selectedVerseIndex,
-            selectedAnnotationIndex
-        }
-    } = state
+            entranceStore: {
+                didCarouselExit,
+                didLyricExit,
+                didCurtainExit,
+                isSongSelectInFlux
+            },
+            selectedStore: {
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex
+            }
+        } = state,
+        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state)
 
     return {
         canCarouselMount,

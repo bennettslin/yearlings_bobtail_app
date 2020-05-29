@@ -28,7 +28,7 @@ export const IS_SONG_SHOWN_TIPS_SELECTOR = (
 //     LYRIC_VERSE_INDEX_SELECTOR,
 //     LYRIC_ANNOTATION_INDEX_SELECTOR,
 //     IS_LYRIC_LOGUE_SELECTOR
-// } from '../../../redux/lyric/selectors'
+// } from '../../../redux/option/selectors'
 
 // lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
 // lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),

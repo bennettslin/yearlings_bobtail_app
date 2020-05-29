@@ -27,7 +27,7 @@ export default [
         neededHours: 8
     },
     {
-        taskName: `Post-Gatsby fixes..`,
+        taskName: `Post-Gatsby fixes.`,
         workedHours: 0,
         neededHours: 20
     },

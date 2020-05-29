@@ -11,20 +11,21 @@ import Audio from '../Audio'
 import BannerFilmstrip from '../BannerFilmstrip'
 import Slider from '../Slider'
 import { getMenuMarginInOverlay } from './helper'
+import { CAN_SLIDER_MOUNT_SELECTOR } from '../../redux/mount/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-        viewportStore: {
-            windowWidth,
-            isDesktopWidth
-        },
-        mountStore: { canSliderMount },
-        responsiveStore: {
-            isTwoRowMenu,
-            menuHeight
-        }
-    } = state
+            viewportStore: {
+                windowWidth,
+                isDesktopWidth
+            },
+            responsiveStore: {
+                isTwoRowMenu,
+                menuHeight
+            }
+        } = state,
+        canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state)
 
     return {
         windowWidth,
