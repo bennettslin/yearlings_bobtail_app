@@ -12,17 +12,19 @@ import { getDotKeysForAnnotation } from '../../../album/api/annotations'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
 import { IS_EAR_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_ANNOTATION_INDEX_SELECTOR,
+    EAR_COLUMN_INDEX_SELECTOR
+} from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            selectedStore: {
-                selectedSongIndex,
-                selectedAnnotationIndex,
-                earColumnIndex
-            }
-        } = state,
+    const
         dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
-        isEarShown = IS_EAR_SHOWN_SELECTOR(state)
+        isEarShown = IS_EAR_SHOWN_SELECTOR(state),
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
+        earColumnIndex = EAR_COLUMN_INDEX_SELECTOR(state)
 
     return {
         isEarShown,

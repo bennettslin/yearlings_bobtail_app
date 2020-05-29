@@ -22,16 +22,17 @@ import {
     IS_ACCESS_ON_SELECTOR,
     ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR
 } from '../../../../redux/access/selectors'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_ANNOTATION_INDEX_SELECTOR
+} from '../../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            selectedStore: {
-                selectedSongIndex,
-                selectedAnnotationIndex
-            }
-        } = state,
+    const
         isAccessOn = IS_ACCESS_ON_SELECTOR(state),
-        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state)
+        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state),
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         isAccessOn,

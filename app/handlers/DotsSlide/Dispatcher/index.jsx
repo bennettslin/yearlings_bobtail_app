@@ -1,15 +1,15 @@
 // Child that knows rules to toggle dots slide. Not needed if just turning off.
-
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
+import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
-        toggleStore: { isDotsSlideShown },
-        selectedStore: { isSelectedLogue }
-    } = state
+            toggleStore: { isDotsSlideShown }
+        } = state,
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
 
     return {
         isDotsSlideShown,

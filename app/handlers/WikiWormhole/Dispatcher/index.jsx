@@ -7,16 +7,17 @@ import { getWikiWormholeIndexForDirection } from './helper'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR } from '../../../redux/access/selectors'
 import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_ANNOTATION_INDEX_SELECTOR
+} from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            selectedStore: {
-                selectedSongIndex,
-                selectedAnnotationIndex
-            }
-        } = state,
+    const
         accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state),
-        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state)
+        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         selectedSongIndex,

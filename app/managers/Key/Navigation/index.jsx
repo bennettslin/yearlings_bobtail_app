@@ -10,6 +10,10 @@ import { populateRefs } from '../../../helpers/ref'
 import { ENTER } from '../../../constants/access'
 import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
+import {
+    SELECTED_ANNOTATION_INDEX_SELECTOR,
+    IS_SELECTED_LOGUE_SELECTOR
+} from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -19,14 +23,12 @@ const mapStateToProps = state => {
                 isLyricExpanded,
                 isScoreShown
             },
-            selectedStore: {
-                selectedAnnotationIndex,
-                isSelectedLogue
-            },
             sessionStore: { selectedWikiIndex }
         } = state,
         activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
+        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
 
     return {
         isHeightlessLyric,

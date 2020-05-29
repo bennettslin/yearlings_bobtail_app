@@ -1,25 +1,21 @@
 /**
  * Button that navigates to activated verse.
  */
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Button from '../../../Button'
-
 import { ENTER } from '../../../../constants/access'
 import {
     AUDIO_FAST_FORWARD_BUTTON_KEY,
     AUDIO_REWIND_BUTTON_KEY
 } from '../../../../constants/buttons'
+import { SELECTED_VERSE_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-        selectedStore: { selectedVerseIndex }
-    } = state
+    const selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state)
 
     return {
         selectedVerseIndex

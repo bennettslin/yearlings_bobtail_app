@@ -11,13 +11,11 @@ import LetterManager from './Letter'
 import { populateRefs } from '../../helpers/ref'
 import { isEmailFocused } from '../../utils/email'
 import { IS_ACCESS_ON_SELECTOR } from '../../redux/access/selectors'
-
 import {
     getKeyName,
     getIsNavKeyOrEnter,
     getShouldHandleOnKeyDown
 } from './helper'
-
 import {
     ARROW_UP,
     ARROW_DOWN,
@@ -28,15 +26,16 @@ import {
     SPACE,
     TAB
 } from '../../constants/access'
+import {
+    SELECTED_VERSE_INDEX_SELECTOR,
+    SELECTED_ANNOTATION_INDEX_SELECTOR
+} from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            selectedStore: {
-                selectedVerseIndex,
-                selectedAnnotationIndex
-            }
-        } = state,
-        isAccessOn = IS_ACCESS_ON_SELECTOR(state)
+    const
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
+        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
+        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         isAccessOn,

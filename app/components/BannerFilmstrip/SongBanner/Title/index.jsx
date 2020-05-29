@@ -5,12 +5,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 import { getIndexedTitleForSong } from '../../../../album/api/songs'
+import { SELECTED_SONG_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-        selectedStore: { selectedSongIndex }
-    } = state
+    const selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
 
     return {
         selectedSongIndex

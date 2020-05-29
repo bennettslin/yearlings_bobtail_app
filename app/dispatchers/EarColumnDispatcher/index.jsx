@@ -5,15 +5,16 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { IS_EAR_SHOWN_SELECTOR } from '../../redux/transient/selectors'
+import {
+    IS_SELECTED_LOGUE_SELECTOR,
+    EAR_COLUMN_INDEX_SELECTOR
+} from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            selectedStore: {
-                isSelectedLogue,
-                earColumnIndex
-            }
-        } = state,
-        isEarShown = IS_EAR_SHOWN_SELECTOR(state)
+    const
+        isEarShown = IS_EAR_SHOWN_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        earColumnIndex = EAR_COLUMN_INDEX_SELECTOR(state)
 
     return {
         isEarShown,

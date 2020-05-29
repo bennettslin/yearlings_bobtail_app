@@ -2,11 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import AdminNavRow from '../AdminNavRow'
+import { SELECTED_SONG_INDEX_SELECTOR } from '../../../../../app/redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-        selectedStore: { selectedSongIndex }
-    } = state
+    const selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
 
     return {
         selectedSongIndex

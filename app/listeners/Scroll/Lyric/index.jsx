@@ -13,6 +13,10 @@ import {
     VERSE_SCROLL
 } from '../../../constants/scroll'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
+import {
+    SELECTED_VERSE_INDEX_SELECTOR,
+    IS_SELECTED_LOGUE_SELECTOR
+} from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -25,10 +29,6 @@ const mapStateToProps = state => {
                 queuedScrollLyricFromAutoScroll,
                 queuedSceneChangeExitScrollCallback
             },
-            selectedStore: {
-                selectedVerseIndex,
-                isSelectedLogue
-            },
             toggleStore: {
                 isAutoScroll,
                 isLyricExpanded
@@ -36,7 +36,9 @@ const mapStateToProps = state => {
             viewportStore: { deviceWidthIndex }
         } = state,
         isPlaying = IS_PLAYING_SELECTOR(state),
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
+        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
 
     return {
         queuedScrollLyricLog,

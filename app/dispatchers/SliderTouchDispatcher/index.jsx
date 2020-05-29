@@ -1,34 +1,32 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import { updateSliderStore } from '../../redux/slider/action'
-
 import VerseDispatcher from '../VerseDispatcher'
-
 import { getStartTimeForVerse } from '../../album/api/time'
 import { getSceneIndexForVerse } from '../../album/api/verses'
-
 import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
 import { populateRefs } from '../../helpers/ref'
-
 import { getVerseIndexforRatio } from '../../helpers/verse'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_VERSE_INDEX_SELECTOR,
+    IS_SELECTED_LOGUE_SELECTOR
+} from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
-        sliderStore: {
-            isSliderTouched,
-            isSliderMoving,
-            sliderLeft,
-            sliderWidth,
-            sliderVerseIndex
-        },
-        selectedStore: {
-            isSelectedLogue,
-            selectedSongIndex,
-            selectedVerseIndex
-        }
-    } = state
+            sliderStore: {
+                isSliderTouched,
+                isSliderMoving,
+                sliderLeft,
+                sliderWidth,
+                sliderVerseIndex
+            }
+        } = state,
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
 
     return {
         isSliderTouched,

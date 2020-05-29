@@ -9,16 +9,17 @@ import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThrough } from '../../helpers/player'
 import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
 import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../redux/players/selectors'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    IS_SELECTED_LOGUE_SELECTOR
+} from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            selectedStore: {
-                selectedSongIndex,
-                isSelectedLogue
-            }
-        } = state,
+    const
         isPlaying = IS_PLAYING_SELECTOR(state),
-        playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state)
+        playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
 
     return {
         isPlaying,

@@ -1,20 +1,18 @@
 // Singleton to listen for song change.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import WikiWormholeDispatcher from '../Dispatcher'
-
 import { populateRefs } from '../../../helpers/ref'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_ANNOTATION_INDEX_SELECTOR
+} from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-        selectedStore: {
-            selectedSongIndex,
-            selectedAnnotationIndex
-        }
-    } = state
+    const
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         selectedSongIndex,

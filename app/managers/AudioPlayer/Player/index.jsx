@@ -22,18 +22,20 @@ import {
     PLAYERS_BIT_NUMBER_SELECTOR,
     NEXT_PLAYER_TO_RENDER_SELECTOR
 } from '../../../redux/players/selectors'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_VERSE_INDEX_SELECTOR,
+    SELECTED_TIME_SELECTOR
+} from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            selectedStore: {
-                selectedSongIndex,
-                selectedVerseIndex,
-                selectedTime
-            }
-        } = state,
+    const
         isPlaying = IS_PLAYING_SELECTOR(state),
         playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
-        nextPlayerToRender = NEXT_PLAYER_TO_RENDER_SELECTOR(state)
+        nextPlayerToRender = NEXT_PLAYER_TO_RENDER_SELECTOR(state),
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
+        selectedTime = SELECTED_TIME_SELECTOR(state)
 
     return {
         isPlaying,

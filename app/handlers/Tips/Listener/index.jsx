@@ -15,17 +15,18 @@ import {
     SELECTED_TIPS_OPTION_SELECTOR,
     IS_FORCED_SHOWN_OVERVIEW_SELECTOR
 } from '../../../redux/option/selectors'
+import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
-            selectedStore: { isSelectedLogue },
             viewportStore: { deviceWidthIndex }
         } = state,
         isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state),
         lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
         lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
         selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
-        isForcedShownOverview = IS_FORCED_SHOWN_OVERVIEW_SELECTOR(state)
+        isForcedShownOverview = IS_FORCED_SHOWN_OVERVIEW_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
 
     return {
         isSelectedLogue,

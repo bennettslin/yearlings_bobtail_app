@@ -24,10 +24,10 @@ import {
     SELECTED_TIPS_OPTION_SELECTOR,
     IS_SONG_SHOWN_OVERVIEW_SELECTOR
 } from '../../redux/option/selectors'
+import { SELECTED_ANNOTATION_INDEX_SELECTOR } from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
-            selectedStore: { selectedAnnotationIndex },
             sliderStore: { isSliderMoving },
             toggleStore: {
                 isCarouselShown,
@@ -41,7 +41,8 @@ const mapStateToProps = state => {
         isActivated = IS_ACTIVATED_SELECTOR(state),
         selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
         selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
-        isSongShownOverview = IS_SONG_SHOWN_OVERVIEW_SELECTOR(state)
+        isSongShownOverview = IS_SONG_SHOWN_OVERVIEW_SELECTOR(state),
+        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         selectedAnnotationIndex,

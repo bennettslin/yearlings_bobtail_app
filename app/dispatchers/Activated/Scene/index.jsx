@@ -11,16 +11,18 @@ import { getVerseIndexForScene } from '../../../album/api/scenes'
 import { getStartTimeForVerse } from '../../../album/api/time'
 import { getActivatedSceneForDirection } from './helper'
 import { ACTIVATED_SCENE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_SCENE_INDEX_SELECTOR,
+    IS_SELECTED_LOGUE_SELECTOR
+} from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            selectedStore: {
-                isSelectedLogue,
-                selectedSongIndex,
-                selectedSceneIndex
-            }
-        } = state,
-        activatedSceneIndex = ACTIVATED_SCENE_INDEX_SELECTOR(state)
+    const
+        activatedSceneIndex = ACTIVATED_SCENE_INDEX_SELECTOR(state),
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedSceneIndex = SELECTED_SCENE_INDEX_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
 
     return {
         isSelectedLogue,

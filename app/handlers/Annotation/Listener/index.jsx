@@ -15,23 +15,27 @@ import {
     QUEUED_ANNOTATION_FROM_CAROUSEL_SELECTOR,
     QUEUED_ANNOTATION_FROM_LYRIC_VERSE_SELECTOR
 } from '../../../redux/annotation/selectors'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_VERSE_INDEX_SELECTOR,
+    SELECTED_ANNOTATION_INDEX_SELECTOR,
+    EAR_COLUMN_INDEX_SELECTOR
+} from '../../../redux/selected/selectors'
 import { IS_EAR_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
 
 const mapStateToProps = state => {
     const {
-            toggleStore: { isDotsSlideShown },
-            selectedStore: {
-                earColumnIndex,
-                selectedSongIndex,
-                selectedVerseIndex,
-                selectedAnnotationIndex
-            }
+            toggleStore: { isDotsSlideShown }
         } = state,
         activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
         queuedAnnotationIndex = QUEUED_ANNOTATION_INDEX_SELECTOR(state),
         queuedAnnotationFromCarousel = QUEUED_ANNOTATION_FROM_CAROUSEL_SELECTOR(state),
         queuedAnnotationFromLyricVerse = QUEUED_ANNOTATION_FROM_LYRIC_VERSE_SELECTOR(state),
-        isEarShown = IS_EAR_SHOWN_SELECTOR(state)
+        isEarShown = IS_EAR_SHOWN_SELECTOR(state),
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
+        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
+        earColumnIndex = EAR_COLUMN_INDEX_SELECTOR(state)
 
     return {
         isDotsSlideShown,

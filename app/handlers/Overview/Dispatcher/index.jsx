@@ -11,16 +11,16 @@ import {
 } from '../../../redux/option/selectors'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
 import { TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR } from '../../../redux/transient/selectors'
+import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            selectedStore: { isSelectedLogue }
-        } = state,
+    const
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
         toggleShowsOverviewImmediately = TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR(state),
         isLogueOverviewShown = IS_LOGUE_OVERVIEW_SHOWN_SELECTOR(state),
         selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
 
     return {
         isSelectedLogue,

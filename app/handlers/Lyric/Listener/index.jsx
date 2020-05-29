@@ -9,14 +9,15 @@ import {
     IS_HEIGHTLESS_LYRIC_SELECTOR,
     IS_LYRIC_EXPANDABLE_SELECTOR
 } from '../../../redux/responsive/selectors'
+import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
-            toggleStore: { isLyricExpanded },
-            selectedStore: { isSelectedLogue }
+            toggleStore: { isLyricExpanded }
         } = state,
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
-        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state)
+        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
 
     return {
         isLyricExpanded,

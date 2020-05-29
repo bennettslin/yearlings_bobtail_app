@@ -2,26 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../ProgressFooter'
-
 import { getSongsAndLoguesCount } from '../../../../app/album/api/songs'
 import { getArrayOfLength } from '../../../../app/helpers/general'
-
 import {
     getSumOfTasks,
     getAllTasks,
     getAllTasksV2,
     getMaxTotalNeededHoursFromSongs
 } from './helper'
+import { SELECTED_SONG_INDEX_SELECTOR } from '../../../../app/redux/selected/selectors'
 
 const songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
 
 const mapStateToProps = state => {
-    const {
-        selectedStore: { selectedSongIndex }
-    } = state
+    const selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
 
     return {
         selectedSongIndex

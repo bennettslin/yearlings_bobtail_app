@@ -2,28 +2,27 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
-
 import {
     scrollElementIntoView,
     setChildElement
 } from '../helper'
-
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
+import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
-        scrollCarouselStore: {
-            queuedScrollCarouselLog,
-            queuedScrollCarouselIndex,
-            queuedScrollCarouselNoDuration
-        },
-        toggleStore: { isCarouselShown },
-        viewportStore: {
-            deviceWidthIndex,
-            windowWidth
-        },
-        selectedStore: { isSelectedLogue }
-    } = state
+            scrollCarouselStore: {
+                queuedScrollCarouselLog,
+                queuedScrollCarouselIndex,
+                queuedScrollCarouselNoDuration
+            },
+            toggleStore: { isCarouselShown },
+            viewportStore: {
+                deviceWidthIndex,
+                windowWidth
+            }
+        } = state,
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
 
     return {
         queuedScrollCarouselLog,

@@ -17,21 +17,21 @@ import {
     LYRIC_VERSE_INDEX_SELECTOR
 } from '../../../../redux/lyric/selectors'
 import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../../../redux/players/selectors'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    IS_SELECTED_LOGUE_SELECTOR
+} from '../../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            selectedStore: {
-                selectedSongIndex,
-                isSelectedLogue
-            }
-        } = state,
+    const
         queuedPlayFromLogue = QUEUED_PLAY_FROM_LOGUE_SELECTOR(state),
         queuedPlaySongIndex = QUEUED_PLAY_SONG_INDEX_SELECTOR(state),
         queuedPlayVerseIndex = QUEUED_PLAY_VERSE_INDEX_SELECTOR(state),
         lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
         lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
-        playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state)
-
+        playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
     return {
         playersBitNumber,
         selectedSongIndex,

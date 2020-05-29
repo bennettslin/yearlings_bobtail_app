@@ -21,19 +21,23 @@ import {
 } from '../../../constants/access'
 import { FILMSTRIP } from '../../../constants/tips'
 import { ACTIVATED_SCENE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_SCENE_INDEX_SELECTOR,
+    IS_SELECTED_LOGUE_SELECTOR,
+    SELECTED_TIME_SELECTOR
+} from '../../../redux/selected/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-            selectedStore: {
-                isSelectedLogue,
-                selectedSongIndex,
-                selectedSceneIndex,
-                selectedTime
-            },
             sliderStore: { sliderSceneIndex }
         } = state,
-        activatedSceneIndex = ACTIVATED_SCENE_INDEX_SELECTOR(state)
+        activatedSceneIndex = ACTIVATED_SCENE_INDEX_SELECTOR(state),
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedSceneIndex = SELECTED_SCENE_INDEX_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        selectedTime = SELECTED_TIME_SELECTOR(state)
 
     return {
         isSelectedLogue,

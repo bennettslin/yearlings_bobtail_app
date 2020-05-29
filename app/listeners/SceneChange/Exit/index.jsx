@@ -4,14 +4,15 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    SELECTED_SCENE_INDEX_SELECTOR
+} from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-        selectedStore: {
-            selectedSongIndex,
-            selectedSceneIndex
-        }
-    } = state
+    const
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedSceneIndex = SELECTED_SCENE_INDEX_SELECTOR(state)
 
     return {
         selectedSongIndex,

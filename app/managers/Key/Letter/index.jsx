@@ -5,7 +5,6 @@ import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import { resetWiki } from '../../../redux/session/action'
-
 import AboutDispatcher from '../../../dispatchers/About'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOption'
 import CarouselNavDispatcher from '../../../handlers/CarouselNav/Dispatcher'
@@ -20,9 +19,7 @@ import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
 import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
 import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
-
 import { populateRefs } from '../../../helpers/ref'
-
 import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY,
@@ -42,7 +39,6 @@ import {
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY
 } from '../../../constants/access'
-
 import {
     SHOWN,
     HIDDEN
@@ -51,6 +47,7 @@ import {
     SELECTED_OVERVIEW_OPTION_SELECTOR,
     SELECTED_TIPS_OPTION_SELECTOR
 } from '../../../redux/option/selectors'
+import { SELECTED_ANNOTATION_INDEX_SELECTOR } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -61,11 +58,11 @@ const mapStateToProps = state => {
                 isScoreShown,
                 isAboutShown
             },
-            selectedStore: { selectedAnnotationIndex },
             sessionStore: { selectedWikiIndex }
         } = state,
         selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
+        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
 
     return {
         isDotsSlideShown,

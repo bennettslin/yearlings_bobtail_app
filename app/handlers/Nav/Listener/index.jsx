@@ -9,12 +9,13 @@ import {
 } from '../../../redux/access/action'
 import { updateSessionStore } from '../../../redux/session/action'
 import { getBookForSongIndex } from '../../../album/api/songs'
+import { SELECTED_SONG_INDEX_SELECTOR } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
-        toggleStore: { isNavShown },
-        selectedStore: { selectedSongIndex }
-    } = state
+            toggleStore: { isNavShown }
+        } = state,
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
 
     return {
         isNavShown,

@@ -25,16 +25,15 @@ import {
     BANNER_HOVER_VERSE_INDEX_SELECTOR,
     BANNER_HOVER_TIME_SELECTOR
 } from '../../../redux/banner/selectors'
-
+import {
+    SELECTED_SONG_INDEX_SELECTOR,
+    IS_SELECTED_LOGUE_SELECTOR,
+    SELECTED_TIME_SELECTOR
+} from '../../../redux/selected/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-            selectedStore: {
-                isSelectedLogue,
-                selectedSongIndex,
-                selectedTime
-            },
             sliderStore: { isSliderMoving }
         } = state,
         isActivated = IS_ACTIVATED_SELECTOR(state),
@@ -42,7 +41,10 @@ const mapStateToProps = state => {
         isPlaying = IS_PLAYING_SELECTOR(state),
         isBannerHovering = IS_BANNER_HOVERING_SELECTOR(state),
         bannerHoverVerseIndex = BANNER_HOVER_VERSE_INDEX_SELECTOR(state),
-        bannerHoverTime = BANNER_HOVER_TIME_SELECTOR(state)
+        bannerHoverTime = BANNER_HOVER_TIME_SELECTOR(state),
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        selectedTime = SELECTED_TIME_SELECTOR(state)
 
     return {
         isPlaying,

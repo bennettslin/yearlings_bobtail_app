@@ -14,14 +14,15 @@ import { LYRIC_EAR_BUTTON_KEY } from '../../../../constants/buttons'
 import { EAR_COLUMN_KEYS } from '../../../../constants/lyrics'
 import { DOUBLESPEAKER } from '../../../../constants/tips'
 import { IS_EAR_SHOWN_SELECTOR } from '../../../../redux/transient/selectors'
+import { EAR_COLUMN_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-            selectedStore: { earColumnIndex },
             viewportStore: { isDesktopWidth }
         } = state,
-        isEarShown = IS_EAR_SHOWN_SELECTOR(state)
+        isEarShown = IS_EAR_SHOWN_SELECTOR(state),
+        earColumnIndex = EAR_COLUMN_INDEX_SELECTOR(state)
 
     return {
         isEarShown,
