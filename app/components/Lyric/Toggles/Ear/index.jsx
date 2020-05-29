@@ -5,10 +5,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
-import EarColumnDispatcher from '../../../../dispatchers/EarColumnDispatcher'
+import EarColumnDispatcher from '../../../../dispatchers/EarColumn'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
-import { populateRefs } from '../../../../helpers/ref'
 import { LYRIC_COLUMN_TOGGLE_KEY } from '../../../../constants/access'
 import { LYRIC_EAR_BUTTON_KEY } from '../../../../constants/buttons'
 import { EAR_COLUMN_KEYS } from '../../../../constants/lyrics'
@@ -44,8 +43,8 @@ class LyricToggleEar extends PureComponent {
         this.dispatchEarColumn()
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchEarColumn = dispatch => {
+        this.dispatchEarColumn = dispatch
     }
 
     render() {
@@ -91,7 +90,7 @@ class LyricToggleEar extends PureComponent {
                             reverse: isDesktopWidth
                         }}
                     />
-                    <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
+                    <EarColumnDispatcher {...{ ref: this.getDispatchEarColumn }} />
                 </div>
             </CSSTransition>
         )

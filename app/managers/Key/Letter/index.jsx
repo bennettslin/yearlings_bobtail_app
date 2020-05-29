@@ -9,7 +9,7 @@ import AboutDispatcher from '../../../dispatchers/About'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOption'
 import CarouselNavDispatcher from '../../../handlers/CarouselNav/Dispatcher'
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
-import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
+import EarColumnDispatcher from '../../../dispatchers/EarColumn'
 import ActivatedSceneDispatcher from '../../../dispatchers/Activated/Scene'
 import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
 import LyricDispatcher from '../../../handlers/Lyric/Dispatcher'
@@ -239,6 +239,10 @@ class LetterManager extends PureComponent {
         this.dispatchAudioOption = dispatch
     }
 
+    getDispatchEarColumn = dispatch => {
+        this.dispatchEarColumn = dispatch
+    }
+
     getDispatchScore = dispatch => {
         this.dispatchScore = dispatch
     }
@@ -252,7 +256,7 @@ class LetterManager extends PureComponent {
                 />
                 <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
                 <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
-                <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
+                <EarColumnDispatcher {...{ ref: this.getDispatchEarColumn }} />
                 <ActivatedSceneDispatcher {...{ getRefs: this._getRefs }} />
                 <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <LyricDispatcher {...{ getRefs: this._getRefs }} />
