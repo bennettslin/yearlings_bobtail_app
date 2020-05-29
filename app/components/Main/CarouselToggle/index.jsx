@@ -12,17 +12,21 @@ import { CAROUSEL_NAV_BUTTON_KEY } from '../../../constants/buttons'
 import { populateRefs } from '../../../helpers/ref'
 import { getCarouselNavIdentifier } from '../../../constants/options'
 import { CAROUSEL, NAV } from '../../../constants/tips'
+import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
+import {
+    IS_CAROUSEL_SHOWN_SELECTOR,
+    IS_NAV_SHOWN_SELECTOR
+} from '../../../redux/toggle/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-        toggleStore: {
-            isCarouselShown,
-            isNavShown
-        }
-    } = state
+    const
+        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state),
+        isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
+        isNavShown = IS_NAV_SHOWN_SELECTOR(state)
 
     return {
+        canCarouselMount,
         isCarouselShown,
         isNavShown
     }
@@ -32,6 +36,7 @@ class CarouselToggle extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        canCarouselMount: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isNavShown: PropTypes.bool.isRequired
     }

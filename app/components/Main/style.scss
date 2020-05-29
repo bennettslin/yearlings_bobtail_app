@@ -1,11 +1,8 @@
 @import '../../scss/constants/responsive';
 
-.Main {
-    overflow: hidden;
-}
-
 .width__mainColumn {
     width: 100%;
+    max-width: 100%;
 
     .DW__monitorWidth
     & {
@@ -15,10 +12,5 @@
     .DW__laptopWidth
     & {
         max-width: calc(100% - #{$WIDTH_UNCANNY_VALLEY});
-    }
-
-    .DW__mobileWidth
-    & {
-        max-width: 100%;
     }
 }

@@ -10,7 +10,6 @@ import CarouselSelect from './CarouselSelect'
 import CarouselToggle from './CarouselToggle'
 import ShelfLeft from './ShelfLeft'
 import Nav from '../Nav'
-import Carousel from '../Carousel'
 import DotsSlide from '../DotsSlide'
 import LyricToggleExpand from '../Lyric/Toggles/Expand'
 import AnnotationPopup from '../Popups/Annotation'
@@ -28,23 +27,29 @@ import './style'
 const Main = () => {
     const
         canCarouselMount = useSelector(CAN_CAROUSEL_MOUNT_SELECTOR),
+        mainHeight = useSelector(MAIN_HEIGHT_SELECTOR),
         menuHeight = useSelector(MENU_HEIGHT_SELECTOR),
-        isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
-        mainHeight = useSelector(MAIN_HEIGHT_SELECTOR)
+        isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR)
 
     useEffect(() => {
         logMount('Main')
     }, [])
 
-    /**
-     * In phone, flex container's children have absolute position.
-     */
     return (
         <div
             {...{
                 className: cx(
                     'Main',
-                    'abF'
+
+                    /**
+                     * This column allows Main to take up the full
+                     * viewport width and then have overflow hidden,
+                     * which avoids screen jumpiness when zooming.
+                     */
+                    'width__mainColumn',
+
+                    'abF',
+                    'ovH'
                 ),
                 style: {
                     top: `${menuHeight}px`,
@@ -52,43 +57,28 @@ const Main = () => {
                 }
             }}
         >
-            <Carousel />
-            <div
-                {...{
-                    className: cx(
-                        /**
-                         * This column allows Main to take up the full
-                         * viewport width and then have overflow hidden,
-                         * which avoids screen jumpiness when zooming.
-                         */
-                        'width__mainColumn',
-                        'abF'
-                    )
-                }}
-            >
-                {canCarouselMount && (
-                    <Nav />
+            {canCarouselMount && (
+                <Nav />
+            )}
+            <AnnotationPopup inMain />
+            <MainFlexContainer>
+                <ShelfLeft />
+                <OverviewPopup inMain />
+            </MainFlexContainer>
+            <MainFlexContainer isRight>
+                {!isDesktopWidth && (
+                    <ShelfRight />
                 )}
-                <AnnotationPopup inMain />
-                <MainFlexContainer>
-                    <ShelfLeft />
-                    <OverviewPopup inMain />
-                </MainFlexContainer>
-                <MainFlexContainer isRight>
-                    {!isDesktopWidth && (
-                        <ShelfRight />
-                    )}
-                    <TipsPopup />
-                </MainFlexContainer>
-                <LyricToggleExpand inMain />
-                <DotsSlide />
-                {canCarouselMount && (
-                    <>
-                        <CarouselToggle />
-                        <CarouselSelect />
-                    </>
-                )}
-            </div>
+                <TipsPopup />
+            </MainFlexContainer>
+            <LyricToggleExpand inMain />
+            <DotsSlide />
+            {canCarouselMount && (
+                <>
+                    <CarouselToggle />
+                    <CarouselSelect />
+                </>
+            )}
         </div>
     )
 }

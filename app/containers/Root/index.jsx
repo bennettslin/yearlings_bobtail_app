@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import ResizeListener from '../../handlers/Resize/Listener'
+import MainCarousel from '../../components/Carousel/Main'
 import Theatre from '../../components/Theatre'
 import Main from '../../components/Main'
 import Menu from '../../components/Menu'
@@ -35,6 +36,7 @@ const RootContainer = ({ setLyricFocusElement }) => {
             <ResizeListener {...{ getRootElement }} />
             <WrapperContainer>
                 <Theatre />
+                <MainCarousel />
                 <Main />
                 <LyricOverview {...{ setLyricFocusElement }} />
                 <PopupOverlay />
