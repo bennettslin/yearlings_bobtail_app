@@ -4,10 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateTransientStore } from '../../redux/transient/action'
-import {
-    getIsOverlayingAnnotation,
-    getIsOverlayShown
-} from '../../helpers/main'
+import { getIsOverlayingAnnotation } from '../../helpers/main'
 import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
@@ -38,10 +35,6 @@ class MainListener extends PureComponent {
         // Through Redux.
         isPhoneWidth: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        isScoreShown: PropTypes.bool.isRequired,
-        isAboutShown: PropTypes.bool.isRequired,
-        lyricAnnotationIndex: PropTypes.number.isRequired,
-        selectedWikiIndex: PropTypes.number.isRequired,
         updateTransientStore: PropTypes.func.isRequired
     }
 
@@ -52,29 +45,16 @@ class MainListener extends PureComponent {
     _determineOverlayAndCarouselNav() {
         const {
                 isPhoneWidth,
-                isLyricExpanded,
-                lyricAnnotationIndex,
-                isScoreShown,
-                isAboutShown,
-                selectedWikiIndex
+                isLyricExpanded
             } = this.props,
 
             isOverlayingAnnotation = getIsOverlayingAnnotation({
                 isPhoneWidth,
                 isLyricExpanded
-            }),
-
-            isOverlayShown = getIsOverlayShown({
-                isOverlayingAnnotation,
-                lyricAnnotationIndex,
-                isScoreShown,
-                isAboutShown,
-                selectedWikiIndex
             })
 
         this.props.updateTransientStore({
-            isOverlayingAnnotation,
-            isOverlayShown
+            isOverlayingAnnotation
         })
     }
 

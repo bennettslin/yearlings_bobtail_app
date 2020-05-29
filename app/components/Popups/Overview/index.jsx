@@ -14,18 +14,18 @@ import {
     SELECTED_OVERVIEW_OPTION_SELECTOR,
     SELECTED_TIPS_OPTION_SELECTOR
 } from '../../../redux/option/selectors'
-
+import { IS_OVERLAY_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-            entranceStore: { canLyricCarouselEnter },
-            transientStore: { isOverlayShown }
+            entranceStore: { canLyricCarouselEnter }
         } = state,
         isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
         isLogueOverviewShown = IS_LOGUE_OVERVIEW_SHOWN_SELECTOR(state),
         selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
+        isOverlayShown = IS_OVERLAY_SHOWN_SELECTOR(state)
 
     return {
         canLyricCarouselEnter,

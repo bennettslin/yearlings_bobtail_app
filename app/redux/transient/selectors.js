@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect'
 import { getIsDoublespeakerShown } from '../../helpers/doublespeaker'
 import {
+    getIsOverlayShown,
     getIsShelfLeftShown,
     getIsCarouselNavShowable
 } from '../../helpers/main'
@@ -21,9 +22,12 @@ import {
     OVERVIEW_SHOWN_SELECTOR,
     TIPS_SHOWN_SELECTOR
 } from '../option/selectors'
+import { SELECTED_WIKI_INDEX_SELECTOR } from '../session/selectors'
 import {
     IS_DOTS_SLIDE_SHOWN_SELECTOR,
-    IS_LYRIC_EXPANDED_SELECTOR
+    IS_LYRIC_EXPANDED_SELECTOR,
+    IS_SCORE_SHOWN_SELECTOR,
+    IS_ABOUT_SHOWN_SELECTOR
 } from '../toggle/selectors'
 import {
     DEVICE_WIDTH_INDEX_SELECTOR,
@@ -35,10 +39,6 @@ import {
 export const IS_OVERLAYING_ANNOTATION_SELECTOR = (
     { transientStore: { isOverlayingAnnotation } }
 ) => isOverlayingAnnotation
-
-export const IS_OVERLAY_SHOWN_SELECTOR = (
-    { transientStore: { isOverlayShown } }
-) => isOverlayShown
 
 export const IS_POPUP_ANNOTATION_VISIBLE_SELECTOR = (
     { transientStore: { isPopupAnnotationVisible } }
@@ -75,6 +75,27 @@ export const IS_TIPS_SHOWABLE_SELECTOR = createSelector(
         isPhoneWidth,
         isTabletWidth,
         isDesktopWidth
+    })
+)
+
+export const IS_OVERLAY_SHOWN_SELECTOR = createSelector(
+    IS_OVERLAYING_ANNOTATION_SELECTOR,
+    LYRIC_ANNOTATION_INDEX_SELECTOR,
+    IS_SCORE_SHOWN_SELECTOR,
+    IS_ABOUT_SHOWN_SELECTOR,
+    SELECTED_WIKI_INDEX_SELECTOR,
+    (
+        isOverlayingAnnotation,
+        lyricAnnotationIndex,
+        isScoreShown,
+        isAboutShown,
+        selectedWikiIndex
+    ) => getIsOverlayShown({
+        isOverlayingAnnotation,
+        lyricAnnotationIndex,
+        isScoreShown,
+        isAboutShown,
+        selectedWikiIndex
     })
 )
 
