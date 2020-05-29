@@ -3,11 +3,9 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import { CAN_SCENE_UPDATE_SELECTOR } from '../../redux/entrance/selectors'
-
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
 import PresencesConfig from '../Presences'
-
 import { CUBE_Y_INDICES_WITH_NEG } from '../../constants/cubeIndex'
 
 const Scene = () => {

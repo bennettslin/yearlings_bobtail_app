@@ -1,8 +1,9 @@
 // The scene sky.
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
+import './style'
 
 const mapStateToProps = state => {
     const {
@@ -18,44 +19,39 @@ const mapStateToProps = state => {
     }
 }
 
-class Sky extends PureComponent {
+const Sky = ({
+    sceneSkyTime,
+    sceneSkySeason
+}) => {
+    return (
+        <div className={cx(
+            'Sky',
+            'abF'
+        )}>
+            <div
+                className={cx(
+                    'TimeOfDay',
+                    `TimeOfDay__${sceneSkyTime}`,
+                    'Sky__filter',
+                    'abF'
+                )}
+            />
+            <div
+                className={cx(
+                    'Season',
+                    `Season__${sceneSkySeason}`,
+                    'Sky__filter',
+                    'abF'
+                )}
+            />
+        </div>
+    )
+}
 
-    static propTypes = {
-        // Through Redux.
-        sceneSkyTime: PropTypes.string.isRequired,
-        sceneSkySeason: PropTypes.string.isRequired
-    }
-
-    render() {
-        const {
-            sceneSkyTime,
-            sceneSkySeason
-        } = this.props
-
-        return (
-            <div className={cx(
-                'Sky',
-                'abF'
-            )}>
-                <div
-                    className={cx(
-                        'TimeOfDay',
-                        `TimeOfDay__${sceneSkyTime}`,
-                        'Sky__filter',
-                        'abF'
-                    )}
-                />
-                <div
-                    className={cx(
-                        'Season',
-                        `Season__${sceneSkySeason}`,
-                        'Sky__filter',
-                        'abF'
-                    )}
-                />
-            </div>
-        )
-    }
+Sky.propTypes = {
+    // Through Redux.
+    sceneSkyTime: PropTypes.string.isRequired,
+    sceneSkySeason: PropTypes.string.isRequired
 }
 
 export default connect(mapStateToProps)(Sky)
