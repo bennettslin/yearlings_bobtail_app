@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { SHOW_SINGLE_NAV_BOOK_SELECTOR } from '../../../redux/responsive/selectors'
 import { updateSessionStore } from '../../../redux/session/action'
+import { SHOWN_NAV_BOOK_INDEX_SELECTOR } from '../../../redux/session/selectors'
 
 const mapStateToProps = state => {
     const {
-            toggleStore: { isNavShown },
-            sessionStore: { shownNavBookIndex }
+            toggleStore: { isNavShown }
         } = state,
-        showSingleNavBook = SHOW_SINGLE_NAV_BOOK_SELECTOR(state)
+        showSingleNavBook = SHOW_SINGLE_NAV_BOOK_SELECTOR(state),
+        shownNavBookIndex = SHOWN_NAV_BOOK_INDEX_SELECTOR(state)
 
     return {
         showSingleNavBook,

@@ -6,11 +6,19 @@ import {
     SELECTED_ANNOTATION_INDEX_SELECTOR
 } from '../selected/selectors'
 
+export const SHOWN_NAV_BOOK_INDEX_SELECTOR = (
+    { sessionStore: { shownNavBookIndex } }
+) => shownNavBookIndex
+
+export const AUDIO_OPTION_INDEX_SELECTOR = (
+    { sessionStore: { audioOptionIndex } }
+) => audioOptionIndex
+
 export const SELECTED_WIKI_INDEX_SELECTOR = (
     { sessionStore: { selectedWikiIndex } }
 ) => selectedWikiIndex
 
-export const CAROUSEL_ANNOTATION_INDEX_SELECTOR = (
+const CAROUSEL_ANNOTATION_INDEX_SELECTOR = (
     { sessionStore: { carouselAnnotationIndex } }
 ) => carouselAnnotationIndex
 
@@ -35,22 +43,3 @@ export const SELECTED_WIKI_URL_SELECTOR = createSelector(
     })
 )
 
-export const SHOWN_NAV_BOOK_INDEX_SELECTOR = (
-    { sessionStore: { shownNavBookIndex } }
-) => shownNavBookIndex
-
-export const AUDIO_OPTION_INDEX_SELECTOR = (
-    { sessionStore: { audioOptionIndex } }
-) => audioOptionIndex
-
-// import {
-//     LYRIC_SONG_INDEX_SELECTOR,
-//     LYRIC_VERSE_INDEX_SELECTOR,
-//     LYRIC_ANNOTATION_INDEX_SELECTOR,
-//     IS_LYRIC_LOGUE_SELECTOR
-// } from '../../../redux/session/selectors'
-
-// lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-// lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
-// lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
-// isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)

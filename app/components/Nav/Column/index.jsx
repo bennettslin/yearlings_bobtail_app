@@ -11,14 +11,16 @@ import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
 import { populateRefs } from '../../../helpers/ref'
+import { SHOWN_NAV_BOOK_INDEX_SELECTOR } from '../../../redux/session/selectors'
 import './style'
 
 // TODO: Import this from a Book component.
 import './Book/style'
 
 const mapStateToProps = state => {
-    const { sessionStore: { shownNavBookIndex } } = state,
-        showSingleNavBook = SHOW_SINGLE_NAV_BOOK_SELECTOR(state)
+    const
+        showSingleNavBook = SHOW_SINGLE_NAV_BOOK_SELECTOR(state),
+        shownNavBookIndex = SHOWN_NAV_BOOK_INDEX_SELECTOR(state)
 
     return {
         showSingleNavBook,

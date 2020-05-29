@@ -3,15 +3,13 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { resetWiki } from '../../../redux/session/action'
-
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
+import { resetWiki } from '../../../redux/session/action'
+import { SELECTED_WIKI_INDEX_SELECTOR } from '../../../redux/session/selectors'
 
 const mapStateToProps = state => {
-    const {
-        sessionStore: { selectedWikiIndex }
-    } = state
+    const selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state)
 
     return {
         selectedWikiIndex
