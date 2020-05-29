@@ -6,7 +6,7 @@ import { CAN_SCORE_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
 import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
 import { IS_SCORE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
 
-const ScoreDispatcher = (props, ref) => {
+const ScoreDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         isScoreShown = useSelector(IS_SCORE_SHOWN_SELECTOR),
@@ -33,6 +33,6 @@ const ScoreDispatcher = (props, ref) => {
 
     useImperativeHandle(ref, () => dispatchScore)
     return null
-}
+})
 
-export default forwardRef(ScoreDispatcher)
+export default ScoreDispatcher

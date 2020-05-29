@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { updateFocusStore } from '../../redux/focus/action'
 import { updateAccessStore } from '../../redux/access/action'
 
-const StopPropagationDispatcher = (props, ref) => {
+const StopPropagationDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         stopPropagation = e => {
@@ -26,6 +26,6 @@ const StopPropagationDispatcher = (props, ref) => {
 
     useImperativeHandle(ref, () => stopPropagation)
     return null
-}
+})
 
-export default forwardRef(StopPropagationDispatcher)
+export default StopPropagationDispatcher

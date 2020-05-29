@@ -6,7 +6,7 @@ import { updateAudioOptionIndex } from '../../redux/session/action'
 import { AUDIO_OPTIONS } from '../../constants/options'
 import { AUDIO_OPTION_INDEX_SELECTOR } from '../../redux/session/selectors'
 
-const AudioOptionDispatcher = (props, ref) => {
+const AudioOptionDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         audioOptionIndex = useSelector(AUDIO_OPTION_INDEX_SELECTOR),
@@ -19,6 +19,6 @@ const AudioOptionDispatcher = (props, ref) => {
 
     useImperativeHandle(ref, () => dispatchAudioOption)
     return null
-}
+})
 
-export default forwardRef(AudioOptionDispatcher)
+export default AudioOptionDispatcher

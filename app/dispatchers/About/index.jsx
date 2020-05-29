@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAboutShown } from '../../redux/toggle/action'
 import { IS_ABOUT_SHOWN_SELECTOR } from '../../redux/toggle/selectors'
 
-const AboutDispatcher = (props, ref) => {
+const AboutDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         isAboutShown = useSelector(IS_ABOUT_SHOWN_SELECTOR),
@@ -19,6 +19,6 @@ const AboutDispatcher = (props, ref) => {
 
     useImperativeHandle(ref, () => dispatchAbout)
     return null
-}
+})
 
-export default forwardRef(AboutDispatcher)
+export default AboutDispatcher

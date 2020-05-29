@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Spinner from '../Spinner'
 
-const Iframe = ({
+const Iframe = forwardRef(({
     className,
     isLoading,
     onLoad
@@ -42,12 +42,12 @@ const Iframe = ({
             }}
         />
     </div>
-)
+))
 
 Iframe.propTypes = {
     className: PropTypes.string.isRequired,
-    isLoading: PropTypes.func.isRequired,
+    isLoading: PropTypes.bool.isRequired,
     onLoad: PropTypes.func.isRequired
 }
 
-export default forwardRef(Iframe)
+export default Iframe
