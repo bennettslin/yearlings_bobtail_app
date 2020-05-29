@@ -3,39 +3,32 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import NavButtonIndexed from '../ButtonIndexed'
 import NavRoad from '../Road'
-
 import { getSongsAndLoguesCount } from '../../../../../album/api/songs'
+import './style'
 
-const navBookLoguePropTypes = {
-    // From parent.
-        bookIndex: PropTypes.number.isRequired
-    },
+const NavBookLogue = ({
+    bookIndex,
+    ...other
+}) => {
+    const songIndex = bookIndex === 0 ? 0 : getSongsAndLoguesCount() - 1
 
-    NavBookLogue = ({
+    return (
+        <div className={cx(
+            'NavBookLogue',
+            'NavBook'
+        )}>
+            <NavRoad />
+            <NavButtonIndexed {...other}
+                {...{ songIndex }}
+            />
+        </div>
+    )
+}
 
-        bookIndex,
-
-        ...other
-    }) => {
-
-        const songIndex = bookIndex === 0 ? 0 : getSongsAndLoguesCount() - 1
-
-        return (
-            <div className={cx(
-                'NavBookLogue',
-                'NavBook'
-            )}>
-                <NavRoad />
-                <NavButtonIndexed {...other}
-                    {...{ songIndex }}
-                />
-            </div>
-        )
-    }
-
-NavBookLogue.propTypes = navBookLoguePropTypes
+NavBookLogue.propTypes = {
+    bookIndex: PropTypes.number.isRequired
+}
 
 export default memo(NavBookLogue)

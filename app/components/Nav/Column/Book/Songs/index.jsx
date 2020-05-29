@@ -3,59 +3,51 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import NavButtonIndexed from '../ButtonIndexed'
 import NavRoad from '../Road'
-
 import {
     getSongsAndLoguesCount,
     getStartingIndexForBook
 } from '../../../../../album/api/songs'
-
 import { getArrayOfLength } from '../../../../../helpers/general'
+import './style'
 
-const navBookSongsPropTypes = {
-    // From parent.
-        bookIndex: PropTypes.number.isRequired
-    },
+const NavBookSongs = ({
+    bookIndex,
+    ...other
 
-    NavBookSongs = ({
+}) => {
+    const isFirstColumn = bookIndex === 0,
 
-        // From props.
-        bookIndex,
+        rowReverse = !isFirstColumn,
+        songsCount = getSongsAndLoguesCount(),
 
-        ...other
-    }) => {
+        beginArrayIndex = getStartingIndexForBook(bookIndex),
+        endArrayIndex = isFirstColumn ? getStartingIndexForBook(bookIndex + 1) : songsCount - 1
 
-        const isFirstColumn = bookIndex === 0,
+    return (
+        <div className={cx(
+            'NavBookSongs',
+            'NavBook'
+        )}>
+            <NavRoad />
+            {getArrayOfLength(endArrayIndex - beginArrayIndex).map(currentIndex => {
+                const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
+                return (
+                    <NavButtonIndexed {...other}
+                        {...{
+                            key: currentIndex,
+                            songIndex
+                        }}
+                    />
+                )
+            })}
+        </div>
+    )
+}
 
-            rowReverse = !isFirstColumn,
-            songsCount = getSongsAndLoguesCount(),
-
-            beginArrayIndex = getStartingIndexForBook(bookIndex),
-            endArrayIndex = isFirstColumn ? getStartingIndexForBook(bookIndex + 1) : songsCount - 1
-
-        return (
-            <div className={cx(
-                'NavBookSongs',
-                'NavBook'
-            )}>
-                <NavRoad />
-                {getArrayOfLength(endArrayIndex - beginArrayIndex).map(currentIndex => {
-                    const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
-                    return (
-                        <NavButtonIndexed {...other}
-                            {...{
-                                key: currentIndex,
-                                songIndex
-                            }}
-                        />
-                    )
-                })}
-            </div>
-        )
-    }
-
-NavBookSongs.propTypes = navBookSongsPropTypes
+NavBookSongs.propTypes = {
+    bookIndex: PropTypes.number.isRequired
+}
 
 export default memo(NavBookSongs)

@@ -27,13 +27,25 @@ export const EAR_COLUMN_INDEX_SELECTOR = (
 ) => earColumnIndex
 
 // import {
-//     LYRIC_SONG_INDEX_SELECTOR,
-//     LYRIC_VERSE_INDEX_SELECTOR,
-//     LYRIC_ANNOTATION_INDEX_SELECTOR,
-//     IS_LYRIC_LOGUE_SELECTOR
-// } from '../../../redux/players/selectors'
+//     SELECTED_SONG_INDEX_SELECTOR,
+//     SELECTED_VERSE_INDEX_SELECTOR,
+//     SELECTED_ANNOTATION_INDEX_SELECTOR,
+//     IS_SELECTED_LOGUE_SELECTOR
+// } from '../../../redux/selected/selectors'
 
-// lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-// lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
-// lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
-// isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
+// selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+// selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
+// selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
+// isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
+
+// import { SELECTED_SONG_INDEX_SELECTOR } from '../../../redux/selected/selectors'
+// selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
+
+// import { SELECTED_VERSE_INDEX_SELECTOR } from '../../../redux/selected/selectors'
+// selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state)
+
+// import { SELECTED_ANNOTATION_INDEX_SELECTOR } from '../../../redux/selected/selectors'
+// selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
+
+// import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
+// isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)

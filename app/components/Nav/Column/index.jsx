@@ -4,15 +4,17 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
 import { SHOW_SINGLE_NAV_BOOK_SELECTOR } from '../../../redux/responsive/selectors'
 import NavDispatcher from '../../../handlers/Nav/Dispatcher'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
-
 import { populateRefs } from '../../../helpers/ref'
+import './style'
+
+// TODO: Import this from a Book component.
+import './Book/style'
 
 const mapStateToProps = state => {
     const { sessionStore: { shownNavBookIndex } } = state,

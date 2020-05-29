@@ -12,6 +12,7 @@ import {
     NAV_SONG_BUTTON_KEY
 } from '../../../../../constants/buttons'
 import { IS_CAROUSEL_NAV_SHOWABLE_SELECTOR } from '../../../../../redux/transient/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {

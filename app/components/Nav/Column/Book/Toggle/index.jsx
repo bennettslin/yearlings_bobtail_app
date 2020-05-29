@@ -2,8 +2,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import NavButton from '../Button'
+import './style'
 
 const NavBookToggle = ({
     bookIndex,
@@ -25,7 +25,6 @@ const NavBookToggle = ({
 )
 
 NavBookToggle.propTypes = {
-    // From parent.
     bookIndex: PropTypes.number.isRequired,
     handleButtonClick: PropTypes.func.isRequired
 }

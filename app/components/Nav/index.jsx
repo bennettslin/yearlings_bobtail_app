@@ -2,11 +2,11 @@
 import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-
 import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../redux/mount/selectors'
 import { SHOW_SINGLE_NAV_BOOK_SELECTOR } from '../../redux/responsive/selectors'
 import NavListener from '../../handlers/Nav/Listener'
 import NavColumn from './Column'
+import './style'
 
 const Nav = () => {
     const

@@ -1,25 +1,16 @@
-import React, { memo } from 'react'
-// import PropTypes from 'prop-types'
+import React from 'react'
 import cx from 'classnames'
+import './style'
 
-const propTypes = {
-// From parent.
-    // bookIndex: PropTypes.number.isRequired
-}
+const NavRoad = () => (
+    <div
+        {...{
+            className: cx(
+                'NavRoad',
+                'abF'
+            )
+        }}
+    />
+)
 
-const NavRoad = () => {
-    return (
-        <div
-            {...{
-                className: cx(
-                    'NavRoad',
-                    'abF'
-                )
-            }}
-        />
-    )
-}
-
-NavRoad.propTypes = propTypes
-
-export default memo(NavRoad)
+export default NavRoad

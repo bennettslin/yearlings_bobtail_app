@@ -1,5 +1,6 @@
-@import "./Character/style";
-@import "./Title/style";
+@import '../../../../../scss/constants/colour';
+@import '../../../../../scss/constants/icon';
+@import '../../../../../scss/constants/transition';
 
 .NavButton {
     display: flex;
