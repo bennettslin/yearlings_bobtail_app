@@ -7,7 +7,7 @@ import { updateSelectedStore } from '../../../redux/selected/action'
 import { resetWiki } from '../../../redux/session/action'
 
 import AboutDispatcher from '../../../dispatchers/About'
-import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
+import AudioOptionDispatcher from '../../../dispatchers/AudioOption'
 import CarouselNavDispatcher from '../../../handlers/CarouselNav/Dispatcher'
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
 import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'

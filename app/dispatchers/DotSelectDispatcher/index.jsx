@@ -43,7 +43,6 @@ class DotSelectDispatcher extends PureComponent {
     }
 
     dispatchSelectDot = (selectedDotIndex) => {
-
         // TODO: Make a general helper that toggles the bit number for both.
         const
             { dotsBitNumber: prevBitNumber } = this.props,
@@ -67,12 +66,10 @@ class DotSelectDispatcher extends PureComponent {
 
         // Make most recently toggled dot the accessed dot.
         this.props.updateAccessStore({ accessedDotIndex: selectedDotIndex })
-
         return true
     }
 
     dispatchActivatedDot = (activatedDotIndex) => {
-
         // TODO: Make a general helper that toggles the bit number for both.
         const
             { dotsSlideBitNumber: prevBitNumber } = this.props,

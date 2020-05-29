@@ -37,6 +37,14 @@ import {
     IS_DESKTOP_WIDTH_SELECTOR
 } from '../viewport/selectors'
 
+export const IS_POPUP_ANNOTATION_VISIBLE_SELECTOR = (
+    { transientStore: { isPopupAnnotationVisible } }
+) => isPopupAnnotationVisible
+
+export const POPUP_ANNOTATION_INDEX_SELECTOR = (
+    { transientStore: { popupAnnotationIndex } }
+) => popupAnnotationIndex
+
 export const IS_OVERLAYING_ANNOTATION_SELECTOR = createSelector(
     IS_PHONE_WIDTH_SELECTOR,
     IS_LYRIC_EXPANDED_SELECTOR,
@@ -48,14 +56,6 @@ export const IS_OVERLAYING_ANNOTATION_SELECTOR = createSelector(
         isLyricExpanded
     })
 )
-
-export const IS_POPUP_ANNOTATION_VISIBLE_SELECTOR = (
-    { transientStore: { isPopupAnnotationVisible } }
-) => isPopupAnnotationVisible
-
-export const POPUP_ANNOTATION_INDEX_SELECTOR = (
-    { transientStore: { popupAnnotationIndex } }
-) => popupAnnotationIndex
 
 export const IS_EAR_SHOWN_SELECTOR = createSelector(
     LYRIC_SONG_INDEX_SELECTOR,
@@ -221,15 +221,3 @@ export const TOGGLE_SHOWS_TIPS_IMMEDIATELY_SELECTOR = createSelector(
         isActivated
     })
 )
-
-// import {
-//     LYRIC_SONG_INDEX_SELECTOR,
-//     LYRIC_VERSE_INDEX_SELECTOR,
-//     LYRIC_ANNOTATION_INDEX_SELECTOR,
-//     IS_LYRIC_LOGUE_SELECTOR
-// } from '../../../redux/players/selectors'
-
-// lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-// lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
-// lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
-// isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
