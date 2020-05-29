@@ -21,7 +21,6 @@
 * Simplify Anchor for social media anchors
 * Listeners know to render themselves
 * Mount, responsive, proscenium, and theatre values can just be aggregate selectors. Basically, get rid of everything in window that's not the window width and height. Replace in map state to props first.
-* Also transient store.
 * Also, the listeners.
 * Make dispatchers functions.
 

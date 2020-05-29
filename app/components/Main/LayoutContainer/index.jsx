@@ -24,8 +24,7 @@ const LayoutContainer = ({
             {...{
                 className: cx(
                     className,
-                    'abF',
-                    'ovH'
+                    'abF'
                 ),
                 style: {
                     top: `${menuHeight}px`,
