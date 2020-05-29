@@ -136,6 +136,10 @@ class TextLyricAnchor extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchWiki = dispatch => {
+        this.dispatchWiki = dispatch
+    }
+
     getStopPropagation = dispatch => {
         this.stopPropagation = dispatch
     }
@@ -219,7 +223,7 @@ class TextLyricAnchor extends PureComponent {
                     }}
                 />
                 {isWikiTextAnchor && (
-                    <WikiDispatcher {...{ getRefs: this._getRefs }} />
+                    <WikiDispatcher {...{ ref: this.getDispatchWiki }} />
                 )}
                 <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
             </>

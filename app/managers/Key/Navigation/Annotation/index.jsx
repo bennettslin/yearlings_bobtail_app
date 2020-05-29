@@ -60,6 +60,10 @@ class AnnotationNavigation extends PureComponent {
         })
     }
 
+    getDispatchWiki = dispatch => {
+        this.dispatchWiki = dispatch
+    }
+
     navigateAnnotation = (keyName) => {
         let { accessedWikiWormholeIndex } = this.props,
             annotationIndexWasAccessed = false,
@@ -145,7 +149,7 @@ class AnnotationNavigation extends PureComponent {
             <>
                 <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
-                <WikiDispatcher {...{ getRefs: this._getRefs }} />
+                <WikiDispatcher {...{ ref: this.getDispatchWiki }} />
                 <WikiWormholeDispatcher {...{ getRefs: this._getRefs }} />
             </>
         )
