@@ -16,7 +16,6 @@ export const ACCESS_DEFAULTS = {
     ...ACCESS_DOT_DEFAULTS,
     ...ACCESS_NAV_DEFAULTS,
     isAccessOn: IS_STORED_ACCESS_ON,
-    isAccessedIndexedAnchorShown: false,
     accessedKey: '',
     accessedAnnotationIndex: INITIAL_ANNOTATION_INDEX,
     accessedWikiWormholeIndex: 0

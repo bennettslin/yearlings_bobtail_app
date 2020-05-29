@@ -8,7 +8,7 @@ import {
     getIsShelfLeftShown,
     getIsOverlayingAnnotation,
     getIsOverlayShown
-} from './helper'
+} from '../../helpers/main'
 import { SHOWN } from '../../constants/options'
 import { IS_ACTIVATED_SELECTOR } from '../../redux/activated/selectors'
 import {

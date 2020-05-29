@@ -5,7 +5,6 @@ import {
     CAN_SLIDER_MOUNT_SELECTOR
 } from '../../redux/mount/selectors'
 
-import AccessListener from '../../listeners/Access'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
 import AppLoadListener from '../../listeners/AppLoad'
@@ -45,7 +44,6 @@ const ListenContainer = () => {
 
     return (
         <>
-            <AccessListener />
             <AnnotationAccessListener />
             <AnnotationListener />
             <AppLoadListener />
