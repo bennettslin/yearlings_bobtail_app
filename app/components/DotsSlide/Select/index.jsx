@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import DotSelectDispatcher from '../../../dispatchers/DotSelectDispatcher'
+import DotSelectDispatcher from '../../../dispatchers/DotSelect'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import Button from '../../Button'
 import Dot from '../../Dot'
@@ -39,6 +39,13 @@ class DotsSlideSelect extends PureComponent {
 
     _getRefs = payload => {
         populateRefs(this, payload)
+    }
+
+    getDispatchDotSelect = dispatch => {
+        if (dispatch) {
+            this.dispatchSelectDot = dispatch.dispatchSelectDot
+            this.dispatchActivatedDot = dispatch.dispatchActivatedDot
+        }
     }
 
     getStopPropagation = dispatch => {
@@ -115,7 +122,7 @@ class DotsSlideSelect extends PureComponent {
                         }}
                     />
                 </div>
-                <DotSelectDispatcher {...{ getRefs: this._getRefs }} />
+                <DotSelectDispatcher {...{ ref: this.getDispatchDotSelect }} />
                 <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
             </>
         )

@@ -6,7 +6,6 @@
 * tips hand in garryowen for score
 
 # Brainless JS tasks
-* Have helpers to get isTipsShown and isOverviewShown
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.
 * Change all to use overviewShown and tipsShown. Then prefix with is.

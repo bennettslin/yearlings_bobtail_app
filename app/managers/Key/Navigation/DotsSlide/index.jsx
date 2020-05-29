@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from '../../../../redux/access/action'
-import DotSelectDispatcher from '../../../../dispatchers/DotSelectDispatcher'
+import DotSelectDispatcher from '../../../../dispatchers/DotSelect'
 import { populateRefs } from '../../../../helpers/ref'
 import {
     ARROW_LEFT,
@@ -94,9 +94,15 @@ class DotsSlideNavigation extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchDotSelect = dispatch => {
+        if (dispatch) {
+            this.dispatchSelectDot = dispatch.dispatchSelectDot
+        }
+    }
+
     render() {
         return (
-            <DotSelectDispatcher {...{ getRefs: this._getRefs }} />
+            <DotSelectDispatcher {...{ ref: this.getDispatchDotSelect }} />
         )
     }
 }
