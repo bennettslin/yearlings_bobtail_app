@@ -14,15 +14,13 @@
 * Logic styles should live together. (So that they can be removed together if needed.)
 
 # Easy reduction tasks
-* Fetch pdf upon score open, not song change.
 * Internal stylesheet fixes
 * Simplify Anchor for social media anchors
-* Listeners and Main components know to render themselves
+* Listeners know to render themselves
 * Mount, responsive, proscenium, and theatre values can just be aggregate selectors. Basically, get rid of everything in window that's not the window width and height. Replace in map state to props first.
 * Also transient store.
 * Also, the listeners.
 * Also, the dispatchers?
-* Move Carousel to top level of Root
 
 # Ongoing Gatsby tasks
 * Dynamic routes for song indices

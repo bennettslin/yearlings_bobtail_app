@@ -8,7 +8,6 @@ import DotsReducer from './dots/reducer'
 import DotsSlideReducer from './dotsSlide/reducer'
 import EntranceReducer from './entrance/reducer'
 import FocusReducer from './focus/reducer'
-import LoadReducer from './load/reducer'
 import LyricReducer from './lyric/reducer'
 import MountReducer from './mount/reducer'
 import OptionReducer from './option/reducer'
@@ -39,7 +38,6 @@ import {
     DOTS_SLIDE_STORE,
     ENTRANCE_STORE,
     FOCUS_STORE,
-    LOAD_STORE,
     LYRIC_STORE,
     MOUNT_STORE,
     OPTION_STORE,
@@ -71,7 +69,6 @@ export default combineReducers({
     [DOTS_SLIDE_STORE]: DotsSlideReducer,
     [ENTRANCE_STORE]: EntranceReducer,
     [FOCUS_STORE]: FocusReducer,
-    [LOAD_STORE]: LoadReducer,
     [LYRIC_STORE]: LyricReducer,
     [MOUNT_STORE]: MountReducer,
     [OPTION_STORE]: OptionReducer,

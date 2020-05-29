@@ -4,7 +4,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateActivatedStore } from '../../../redux/activated/action'
-import { updateLoadStore } from '../../../redux/load/action'
 import {
     updateSessionStore,
     resetWiki
@@ -28,7 +27,6 @@ class SongListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
-        updateLoadStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateActivatedStore: PropTypes.func.isRequired,
         resetWiki: PropTypes.func.isRequired,
@@ -47,7 +45,6 @@ class SongListener extends PureComponent {
         if (selectedSongIndex !== prevSongIndex) {
             const shownNavBookIndex = getBookForSongIndex(selectedSongIndex)
             this.props.updateSessionStore({ shownNavBookIndex })
-            this.props.updateLoadStore({ isScoreLoaded: false })
             this.props.updateActivatedStore()
             this.props.resetWiki()
             this.props.resetVerseBars()
@@ -62,7 +59,6 @@ class SongListener extends PureComponent {
 export default connect(
     mapStateToProps,
     {
-        updateLoadStore,
         updateSessionStore,
         updateActivatedStore,
         resetWiki,

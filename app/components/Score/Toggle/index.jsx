@@ -6,7 +6,6 @@ import cx from 'classnames'
 import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
-import { IS_SCORE_LOADED_SELECTOR } from '../../../redux/load/selectors'
 import { CAN_SCORE_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
 import { IS_DESKTOP_WIDTH_SELECTOR } from '../../../redux/viewport/selectors'
 import { SCORE_TOGGLE_KEY } from '../../../constants/access'
@@ -17,7 +16,6 @@ import './style'
 const ScoreToggle = ({ className }) => {
     const
         dispatchScore = useRef(),
-        isScoreLoaded = useSelector(IS_SCORE_LOADED_SELECTOR),
         isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
         canScoreMount = useSelector(CAN_SCORE_MOUNT_SELECTOR),
         handleButtonClick = () => {
@@ -38,7 +36,6 @@ const ScoreToggle = ({ className }) => {
                 {...{
                     buttonName: SCORES_BUTTON_KEY,
                     accessKey: SCORE_TOGGLE_KEY,
-                    isDisabled: !isScoreLoaded,
                     handleButtonClick
                 }}
             />
