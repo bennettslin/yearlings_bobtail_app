@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Don't load score until clicked.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Make sure all presences are properly behind or in front as appropriate. Check Firefox and Edge.`,
         workedHours: 0,
         neededHours: 1

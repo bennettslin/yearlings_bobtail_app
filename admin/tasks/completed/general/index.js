@@ -4748,5 +4748,9 @@ export default [
     {
         taskName: `Carousel and Nav know to render themselves. Carousel is at Root.`,
         workedHours: 1
+    },
+    {
+        taskName: `Don't load score until clicked.`,
+        workedHours: 1
     }
 ]

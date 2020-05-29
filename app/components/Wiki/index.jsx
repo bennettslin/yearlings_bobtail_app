@@ -1,9 +1,8 @@
 // eslint-disable-next-line object-curly-newline
 import React, { useEffect, useRef, useState } from 'react'
-import cx from 'classnames'
 import { useSelector } from 'react-redux'
+import Iframe from '../../modules/Iframe'
 import { SELECTED_WIKI_URL_SELECTOR } from '../../redux/session/selectors'
-import Spinner from '../../modules/Spinner'
 
 const Wiki = () => {
     const
@@ -27,39 +26,14 @@ const Wiki = () => {
     }, [selectedWikiUrl])
 
     return (
-        <div
+        <Iframe
             {...{
-                className: cx(
-                    'Wiki',
-                    'iframeContainer'
-                )
+                ref: wikiElement,
+                className: 'Wiki',
+                isLoading,
+                onLoad
             }}
-        >
-            {isLoading &&
-                <div
-                    {...{
-                        className: cx(
-                            'iframeContainer__spinner',
-                            'abF',
-                            'fCC'
-                        )
-                    }}
-                >
-                    <Spinner />
-                </div>
-            }
-            <iframe
-                {...{
-                    ref: wikiElement,
-                    className: cx(
-                        'iframeContainer__iframe',
-                        !isLoading && 'iframeContainer__iframe__loaded'
-                    ),
-                    tabIndex: -1,
-                    onLoad
-                }}
-            />
-        </div>
+        />
     )
 }
 
