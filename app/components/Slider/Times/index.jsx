@@ -13,6 +13,7 @@ import {
 } from '../../../redux/activated/selectors'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 import { SELECTED_TIME_SELECTOR } from '../../../redux/selected/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {

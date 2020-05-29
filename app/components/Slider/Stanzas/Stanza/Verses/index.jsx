@@ -10,6 +10,7 @@ import {
 import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../../redux/lyric/selectors'
+import './style'
 
 const SliderVerses = ({
     stanzaIndex,

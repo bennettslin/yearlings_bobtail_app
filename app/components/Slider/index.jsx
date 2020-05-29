@@ -14,6 +14,7 @@ import {
     NEXT_VERSE_KEY
 } from '../../constants/access'
 import { SLIDER } from '../../constants/tips'
+import './style'
 
 const mapStateToProps = state => {
     const {

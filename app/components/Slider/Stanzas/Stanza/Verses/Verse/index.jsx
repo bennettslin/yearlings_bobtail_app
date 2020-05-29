@@ -2,6 +2,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import './style'
 
 const SliderVerse = ({
     logicSelectors,

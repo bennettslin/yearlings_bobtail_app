@@ -11,6 +11,7 @@ import {
 import SliderVerses from './Verses'
 import { CSS_OVERLAP_MARGIN_X_SLIDER } from '../../../../constants/responsive'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../redux/lyric/selectors'
+import './style'
 
 const SliderStanza = ({
     stanzaIndex,

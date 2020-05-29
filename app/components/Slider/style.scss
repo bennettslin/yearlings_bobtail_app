@@ -1,5 +1,6 @@
-@import "./Stanzas/style";
-@import "./Times/style";
+@import '../../scss/constants/icon';
+@import '../../scss/constants/transition';
+@import '../../scss/constants/zIndex';
 
 .Slider {
     position: relative;
