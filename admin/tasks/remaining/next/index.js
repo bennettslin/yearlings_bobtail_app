@@ -9,11 +9,6 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Carousel and Nav know to render themselves, and are at the top level of Root.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     /* Weekend work. */
     {

@@ -4,7 +4,7 @@
  */
 import React, { useEffect } from 'react'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
+import MainLayoutContainer from './LayoutContainer'
 import MainFlexContainer from './FlexContainer'
 import CarouselSelect from './CarouselSelect'
 import CarouselToggle from './CarouselToggle'
@@ -16,27 +16,16 @@ import AnnotationPopup from '../Popups/Annotation'
 import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
 import ShelfRight from './ShelfRight'
-import {
-    CAN_CAROUSEL_MOUNT_SELECTOR,
-    MAIN_HEIGHT_SELECTOR
-} from '../../redux/mount/selectors'
-import { MENU_HEIGHT_SELECTOR } from '../../redux/responsive/selectors'
-import { IS_DESKTOP_WIDTH_SELECTOR } from '../../redux/viewport/selectors'
 import './style'
 
 const Main = () => {
-    const
-        canCarouselMount = useSelector(CAN_CAROUSEL_MOUNT_SELECTOR),
-        mainHeight = useSelector(MAIN_HEIGHT_SELECTOR),
-        menuHeight = useSelector(MENU_HEIGHT_SELECTOR),
-        isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR)
-
     useEffect(() => {
         logMount('Main')
     }, [])
 
     return (
-        <div
+        <MainLayoutContainer
+            alwaysRender
             {...{
                 className: cx(
                     'Main',
@@ -46,36 +35,25 @@ const Main = () => {
                      * viewport width and then have overflow hidden,
                      * which avoids screen jumpiness when zooming.
                      */
-                    'width__mainColumn',
-
-                    'abF',
-                    'ovH'
-                ),
-                style: {
-                    top: `${menuHeight}px`,
-                    height: mainHeight
-                }
+                    'width__mainColumn'
+                )
             }}
         >
-            {canCarouselMount && (
-                <Nav />
-            )}
+            <Nav />
             <AnnotationPopup inMain />
             <MainFlexContainer>
                 <ShelfLeft />
                 <OverviewPopup inMain />
             </MainFlexContainer>
             <MainFlexContainer isRight>
-                {!isDesktopWidth && (
-                    <ShelfRight />
-                )}
+                <ShelfRight />
                 <TipsPopup />
             </MainFlexContainer>
             <LyricToggleExpand inMain />
             <DotsSlide />
             <CarouselToggle />
             <CarouselSelect />
-        </div>
+        </MainLayoutContainer>
     )
 }
 

@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import { CAN_LYRIC_CAROUSEL_ENTER_SELECTOR } from '../../redux/entrance/selectors'
 import CSSTransition from 'react-transition-group/CSSTransition'
+import LayoutContainer from '../Main/LayoutContainer'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
 import './style'
@@ -70,7 +71,15 @@ class Carousel extends PureComponent {
     }
 }
 
-export default connect(
+const ConnectedCarousel = connect(
     mapStateToProps,
     { updateEntranceStore }
 )(Carousel)
+
+const CarouselLayoutContainer = () => (
+    <LayoutContainer>
+        <ConnectedCarousel />
+    </ LayoutContainer>
+)
+
+export default CarouselLayoutContainer

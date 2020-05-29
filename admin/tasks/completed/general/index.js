@@ -4744,5 +4744,9 @@ export default [
     {
         taskName: `Fix bug where hidden tips no longer shows before hidden overview.`,
         workedHours: 1
+    },
+    {
+        taskName: `Carousel and Nav know to render themselves. Carousel is at Root.`,
+        workedHours: 1
     }
 ]
