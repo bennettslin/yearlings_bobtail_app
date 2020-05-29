@@ -12,6 +12,10 @@ import BannerFilmstrip from '../BannerFilmstrip'
 import Slider from '../Slider'
 import { getMenuMarginInOverlay } from './helper'
 import { CAN_SLIDER_MOUNT_SELECTOR } from '../../redux/mount/selectors'
+import {
+    IS_TWO_ROW_MENU_SELECTOR,
+    MENU_HEIGHT_SELECTOR
+} from '../../redux/responsive/selectors'
 import './style'
 
 const mapStateToProps = state => {
@@ -19,13 +23,11 @@ const mapStateToProps = state => {
             viewportStore: {
                 windowWidth,
                 isDesktopWidth
-            },
-            responsiveStore: {
-                isTwoRowMenu,
-                menuHeight
             }
         } = state,
-        canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state)
+        canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state),
+        isTwoRowMenu = IS_TWO_ROW_MENU_SELECTOR(state),
+        menuHeight = MENU_HEIGHT_SELECTOR(state)
 
     return {
         windowWidth,

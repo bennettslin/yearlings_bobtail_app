@@ -10,7 +10,12 @@ import {
     CAN_SLIDER_MOUNT_SELECTOR,
     LYRIC_DYNAMIC_HEIGHT_SELECTOR
 } from '../../redux/mount/selectors'
-import { IS_LYRIC_EXPANDABLE_SELECTOR } from '../../redux/responsive/selectors'
+import {
+    IS_HEIGHTLESS_LYRIC_SELECTOR,
+    MENU_HEIGHT_SELECTOR,
+    IS_LYRIC_EXPANDABLE_SELECTOR
+} from '../../redux/responsive/selectors'
+
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'
 
@@ -24,10 +29,6 @@ const mapStateToProps = state => {
                 isDesktopWidth,
                 windowHeight
             },
-            responsiveStore: {
-                isHeightlessLyric,
-                menuHeight
-            },
             toggleStore: { isLyricExpanded },
             verseBarsStore: {
                 isVerseBarAbove,
@@ -39,7 +40,9 @@ const mapStateToProps = state => {
         activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
         isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
         canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state),
-        lyricDynamicHeight = LYRIC_DYNAMIC_HEIGHT_SELECTOR(state)
+        lyricDynamicHeight = LYRIC_DYNAMIC_HEIGHT_SELECTOR(state),
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
+        menuHeight = MENU_HEIGHT_SELECTOR(state)
 
     return {
         queuedDetermineVerseBars,
