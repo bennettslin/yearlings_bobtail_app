@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import AccessLetters from '../../../Access/Letters'
 import {
@@ -7,34 +7,27 @@ import {
 } from '../../../../constants/access'
 import './style'
 
-class AnnotationAccess extends PureComponent {
+const AnnotationAccess = ({
+    isDot,
+    showUpDown
 
-    static propTypes = {
-        // From parent.
-        isDot: PropTypes.bool.isRequired,
-        showUpDown: PropTypes.bool.isRequired
-    }
+}) => showUpDown && (
+    <AccessLetters
+        {...{
+            accessIconsName: 'annotationUpDown',
+            ...isDot && { className: 'AccessLetters__isDot' },
+            showIfAccessOn: showUpDown,
+            accessKeys: [
+                ARROW_UP,
+                ARROW_DOWN
+            ]
+        }}
+    />
+)
 
-    render() {
-        const {
-            isDot,
-            showUpDown
-        } = this.props
-
-        return showUpDown && (
-            <AccessLetters
-                {...{
-                    accessIconsName: 'annotationUpDown',
-                    ...isDot && { className: 'AccessLetters__isDot' },
-                    showIfAccessOn: showUpDown,
-                    accessKeys: [
-                        ARROW_UP,
-                        ARROW_DOWN
-                    ]
-                }}
-            />
-        )
-    }
+AnnotationAccess.propTypes = {
+    isDot: PropTypes.bool.isRequired,
+    showUpDown: PropTypes.bool.isRequired
 }
 
-export default AnnotationAccess
+export default memo(AnnotationAccess)

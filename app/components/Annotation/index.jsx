@@ -87,7 +87,6 @@ const Annotation = ({
 }
 
 Annotation.propTypes = {
-    // From parent.
     inCarousel: PropTypes.bool,
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,

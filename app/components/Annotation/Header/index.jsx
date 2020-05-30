@@ -4,39 +4,36 @@ import cx from 'classnames'
 import AnnotationTitle from '../Title'
 import './style'
 
-const propTypes = {
-        // From parent.
-        inCarousel: PropTypes.bool,
-        isAccessed: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        annotationIndex: PropTypes.number.isRequired
-    },
+const AnnotationHeader = ({
+    inCarousel,
+    isAccessed,
+    isSelected,
+    annotationIndex
 
-    AnnotationHeader = ({
-        inCarousel,
-        isAccessed,
-        isSelected,
-        annotationIndex
+}) => (
+    <div className={cx(
+        'AnnotationHeader',
 
-    }) => (
-        <div className={cx(
-            'AnnotationHeader',
+        // Annotation header needs to be hideable in carousel.
+        inCarousel && 'AnnotationHeaderAnimatable',
 
-            // Annotation header needs to be hideable in carousel.
-            inCarousel && 'AnnotationHeaderAnimatable',
+        'abF'
+    )}>
+        <AnnotationTitle
+            {...{
+                isAccessed,
+                isSelected,
+                annotationIndex
+            }}
+        />
+    </div>
+)
 
-            'abF'
-        )}>
-            <AnnotationTitle
-                {...{
-                    isAccessed,
-                    isSelected,
-                    annotationIndex
-                }}
-            />
-        </div>
-    )
-
-AnnotationHeader.propTypes = propTypes
+AnnotationHeader.propTypes = {
+    inCarousel: PropTypes.bool,
+    isAccessed: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    annotationIndex: PropTypes.number.isRequired
+}
 
 export default memo(AnnotationHeader)
