@@ -3,12 +3,12 @@ import { getVerseCountForSong } from '../../../album/api/verses'
 export const getActivatedVerseForDirection = ({
     selectedSongIndex,
     selectedVerseIndex,
-    currentVerseIndex,
+    activatedVerseIndex,
     direction
 }) => {
     const songVersesCount = getVerseCountForSong(selectedSongIndex)
 
-    let activatedVerseIndex = currentVerseIndex
+    let nextVerseIndex = activatedVerseIndex
 
     // Ensure modulo.
     if (direction === -1) {
@@ -16,20 +16,20 @@ export const getActivatedVerseForDirection = ({
     }
 
     // We are turning on interactivation, so start from selected verse.
-    if (activatedVerseIndex === -1) {
-        activatedVerseIndex =
+    if (nextVerseIndex === -1) {
+        nextVerseIndex =
             (selectedVerseIndex + direction) % songVersesCount
 
     // We already have an activated verse.
     } else {
-        activatedVerseIndex =
-            (activatedVerseIndex + direction) % songVersesCount
+        nextVerseIndex =
+            (nextVerseIndex + direction) % songVersesCount
     }
 
     // If we're returning to the selected verse, turn off interactivation.
-    if (activatedVerseIndex === selectedVerseIndex) {
-        activatedVerseIndex = -1
+    if (nextVerseIndex === selectedVerseIndex) {
+        nextVerseIndex = -1
     }
 
-    return activatedVerseIndex
+    return nextVerseIndex
 }

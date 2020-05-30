@@ -24,6 +24,10 @@ export const getSceneCountForSong = songIndex => (
 )
 
 export const getVerseIndexForScene = (songIndex, sceneIndex) => {
+    if (sceneIndex === -1) {
+        return -1
+    }
+
     const { sceneVerseIndices } = getSong(songIndex)
     return sceneVerseIndices[sceneIndex]
 }

@@ -76,6 +76,12 @@ class Verse extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getActivateVerse = dispatch => {
+        if (dispatch) {
+            this.activateVerseIndex = dispatch.activateVerseIndex
+        }
+    }
+
     getStopPropagation = dispatch => {
         this.stopPropagation = dispatch
     }
@@ -110,7 +116,7 @@ class Verse extends PureComponent {
                         handleInteractivatableClick: this._handleInteractivatableClick
                     }}
                 />
-                <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <ActivatedVerseDispatcher {...{ ref: this.getActivateVerse }} />
                 <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
             </>
         )

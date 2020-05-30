@@ -65,7 +65,7 @@ const ActivatedSceneDispatcher = forwardRef((props, ref) => {
             _activateSceneIndex(getActivatedSceneForDirection({
                 selectedSongIndex,
                 selectedSceneIndex,
-                currentSceneIndex: activatedSceneIndex,
+                activatedSceneIndex,
                 direction
             }))
             return true

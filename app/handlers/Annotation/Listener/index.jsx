@@ -150,11 +150,17 @@ class AnnotationListener extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getActivateVerse = dispatch => {
+        if (dispatch) {
+            this.activateVerseIndex = dispatch.activateVerseIndex
+        }
+    }
+
     render() {
         return (
             <>
                 <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
-                <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <ActivatedVerseDispatcher {...{ ref: this.getActivateVerse }} />
             </>
         )
     }

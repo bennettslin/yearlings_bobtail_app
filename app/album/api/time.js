@@ -8,8 +8,8 @@ export const getDurationForSong = songIndex => {
 }
 
 export const getStartTimeForVerse = (songIndex, verseIndex) => {
-    const { verseStartTimes } = getSong(songIndex)
-    return verseStartTimes ? verseStartTimes[verseIndex] : 0
+    const { verseStartTimes = [] } = getSong(songIndex)
+    return verseStartTimes[verseIndex] || 0
 }
 
 export const getEndTimeForVerse = (songIndex, verseIndex) => {

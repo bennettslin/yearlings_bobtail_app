@@ -3,12 +3,12 @@ import { getSceneCountForSong } from '../../../album/api/scenes'
 export const getActivatedSceneForDirection = ({
     selectedSongIndex,
     selectedSceneIndex,
-    currentSceneIndex,
+    activatedSceneIndex,
     direction
 }) => {
     const songScenesCount = getSceneCountForSong(selectedSongIndex)
 
-    let activatedSceneIndex = currentSceneIndex
+    let nextSceneIndex = activatedSceneIndex
 
     // Ensure modulo.
     if (direction === -1) {
@@ -16,20 +16,20 @@ export const getActivatedSceneForDirection = ({
     }
 
     // We are turning on interactivation, so start from selected scene.
-    if (activatedSceneIndex === -1) {
-        activatedSceneIndex =
+    if (nextSceneIndex === -1) {
+        nextSceneIndex =
             (selectedSceneIndex + direction) % songScenesCount
 
     // We already have an activated scene.
     } else {
-        activatedSceneIndex =
-            (activatedSceneIndex + direction) % songScenesCount
+        nextSceneIndex =
+            (nextSceneIndex + direction) % songScenesCount
     }
 
     // If we're returning to the selected scene, turn off interactivation.
-    if (activatedSceneIndex === selectedSceneIndex) {
-        activatedSceneIndex = -1
+    if (nextSceneIndex === selectedSceneIndex) {
+        nextSceneIndex = -1
     }
 
-    return activatedSceneIndex
+    return nextSceneIndex
 }
