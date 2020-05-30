@@ -12,7 +12,7 @@ const AccessDirectionLetter = ({
     isNext
 
 }) => {
-    const { isLyricLogue } = useSelector(IS_LYRIC_LOGUE_SELECTOR)
+    const isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR)
 
     return (
         <div
