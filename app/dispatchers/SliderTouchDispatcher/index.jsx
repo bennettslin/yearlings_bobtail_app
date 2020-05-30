@@ -13,20 +13,24 @@ import {
     SELECTED_VERSE_INDEX_SELECTOR,
     IS_SELECTED_LOGUE_SELECTOR
 } from '../../redux/selected/selectors'
+import {
+    SLIDER_LEFT_SELECTOR,
+    SLIDER_WIDTH_SELECTOR,
+    IS_SLIDER_MOVING_SELECTOR,
+    IS_SLIDER_TOUCHED_SELECTOR,
+    SLIDER_VERSE_INDEX_SELECTOR
+} from '../../redux/slider/selectors'
 
 const mapStateToProps = state => {
-    const {
-            sliderStore: {
-                isSliderTouched,
-                isSliderMoving,
-                sliderLeft,
-                sliderWidth,
-                sliderVerseIndex
-            }
-        } = state,
+    const
         selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
         selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        sliderLeft = SLIDER_LEFT_SELECTOR(state),
+        sliderWidth = SLIDER_WIDTH_SELECTOR(state),
+        isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state),
+        isSliderTouched = IS_SLIDER_TOUCHED_SELECTOR(state),
+        sliderVerseIndex = SLIDER_VERSE_INDEX_SELECTOR(state)
 
     return {
         isSliderTouched,

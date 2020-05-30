@@ -20,18 +20,18 @@ import {
     LYRIC_SONG_INDEX_SELECTOR,
     LYRIC_ANNOTATION_INDEX_SELECTOR
 } from '../../../../redux/lyric/selectors'
+import { IS_SLIDER_MOVING_SELECTOR } from '../../../../redux/slider/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            sliderStore: { isSliderMoving }
-        } = state,
+    const
         isAccessedIndexedAnchorShown = IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR(state),
         accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
         accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state),
         isActivated = IS_ACTIVATED_SELECTOR(state),
         lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state)
+        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
+        isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state)
 
     return {
         lyricAnnotationIndex,

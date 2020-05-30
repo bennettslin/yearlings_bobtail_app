@@ -26,10 +26,10 @@ import {
 } from '../../redux/option/selectors'
 import { SELECTED_ANNOTATION_INDEX_SELECTOR } from '../../redux/selected/selectors'
 import { SELECTED_WIKI_INDEX_SELECTOR } from '../../redux/session/selectors'
+import { IS_SLIDER_MOVING_SELECTOR } from '../../redux/slider/selectors'
 
 const mapStateToProps = state => {
     const {
-            sliderStore: { isSliderMoving },
             toggleStore: {
                 isCarouselShown,
                 isDotsSlideShown,
@@ -43,7 +43,8 @@ const mapStateToProps = state => {
         selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
         isSongShownOverview = IS_SONG_SHOWN_OVERVIEW_SELECTOR(state),
         selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
-        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state)
+        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
+        isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state)
 
     return {
         selectedAnnotationIndex,

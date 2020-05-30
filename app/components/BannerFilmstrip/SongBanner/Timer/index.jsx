@@ -17,21 +17,22 @@ import {
     IS_SELECTED_LOGUE_SELECTOR,
     SELECTED_TIME_SELECTOR
 } from '../../../../redux/selected/selectors'
+import {
+    IS_SLIDER_MOVING_SELECTOR,
+    SLIDER_TIME_SELECTOR
+} from '../../../../redux/slider/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            sliderStore: {
-                isSliderMoving,
-                sliderTime
-            }
-        } = state,
+    const
         isActivated = IS_ACTIVATED_SELECTOR(state),
         activatedTime = ACTIVATED_TIME_SELECTOR(state),
         isBannerHovering = IS_BANNER_HOVERING_SELECTOR(state),
         bannerHoverTime = BANNER_HOVER_TIME_SELECTOR(state),
         isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
-        selectedTime = SELECTED_TIME_SELECTOR(state)
+        selectedTime = SELECTED_TIME_SELECTOR(state),
+        isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state),
+        sliderTime = SLIDER_TIME_SELECTOR(state)
 
     return {
         isSelectedLogue,

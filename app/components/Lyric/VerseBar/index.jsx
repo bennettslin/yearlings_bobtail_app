@@ -17,11 +17,11 @@ import {
     LYRIC_VERSE_INDEX_SELECTOR,
     IS_LYRIC_LOGUE_SELECTOR
 } from '../../../redux/lyric/selectors'
+import { SLIDER_VERSE_INDEX_SELECTOR } from '../../../redux/slider/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-            sliderStore: { sliderVerseIndex },
             verseBarsStore: {
                 isVerseBarAbove,
                 isVerseBarBelow
@@ -30,7 +30,8 @@ const mapStateToProps = state => {
         activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
         lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
         lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
-        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
+        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
+        sliderVerseIndex = SLIDER_VERSE_INDEX_SELECTOR(state)
 
     return {
         isLyricLogue,

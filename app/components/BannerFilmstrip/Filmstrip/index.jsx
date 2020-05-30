@@ -27,17 +27,17 @@ import {
     IS_SELECTED_LOGUE_SELECTOR,
     SELECTED_TIME_SELECTOR
 } from '../../../redux/selected/selectors'
+import { SLIDER_SCENE_INDEX_SELECTOR } from '../../../redux/slider/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            sliderStore: { sliderSceneIndex }
-        } = state,
+    const
         activatedSceneIndex = ACTIVATED_SCENE_INDEX_SELECTOR(state),
         selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
         selectedSceneIndex = SELECTED_SCENE_INDEX_SELECTOR(state),
         isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
-        selectedTime = SELECTED_TIME_SELECTOR(state)
+        selectedTime = SELECTED_TIME_SELECTOR(state),
+        sliderSceneIndex = SLIDER_SCENE_INDEX_SELECTOR(state)
 
     return {
         isSelectedLogue,

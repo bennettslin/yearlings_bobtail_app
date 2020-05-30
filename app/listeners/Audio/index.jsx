@@ -10,14 +10,14 @@ import {
     SELECTED_SONG_INDEX_SELECTOR,
     SELECTED_VERSE_INDEX_SELECTOR
 } from '../../redux/selected/selectors'
+import { IS_SLIDER_TOUCHED_SELECTOR } from '../../redux/slider/selectors'
 
 const mapStateToProps = state => {
-    const {
-            sliderStore: { isSliderTouched }
-        } = state,
+    const
         isPlaying = IS_PLAYING_SELECTOR(state),
         selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state)
+        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
+        isSliderTouched = IS_SLIDER_TOUCHED_SELECTOR(state)
 
     return {
         isPlaying,
