@@ -1,13 +1,11 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import { updateScrollOverlayStore } from '../../redux/scrollOverlay/action'
+import { LYRIC_SCROLL_TOP_SELECTOR } from '../../redux/scrollOverlay/selectors'
 
 const mapStateToProps = state => {
-    const {
-        scrollOverlayStore: { lyricScrollTop }
-    } = state
+    const lyricScrollTop = LYRIC_SCROLL_TOP_SELECTOR(state)
 
     return {
         lyricScrollTop
