@@ -20,21 +20,9 @@ export const getWormholeLinkFromIndex = ({
             const { wormholeLinks } = cardObject
 
             if (wormholeLinks) {
-                /**
-                 * Loop through wormhole links until we find the wormhole index
-                 * we want.
-                 */
-                foundCardObject = wormholeLinks.reduce((
-                    foundWormholeLink, wormholeLink
-                ) => {
-                    if (
-                        wormholeLink.sourceWormholeIndex === wikiWormholeIndex
-                    ) {
-                        foundWormholeLink = wormholeLink
-                    }
-
-                    return foundWormholeLink
-                }, null)
+                foundCardObject = wormholeLinks.find(wormholeLink => (
+                    wormholeLink.sourceWormholeIndex === wikiWormholeIndex
+                ))
             }
 
             return foundCardObject
