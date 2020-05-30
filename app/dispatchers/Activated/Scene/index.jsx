@@ -1,12 +1,9 @@
 // Child that knows rules to select activated verse.
-
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
-
 import { getVerseIndexForScene } from '../../../album/api/scenes'
 import { getStartTimeForVerse } from '../../../album/api/time'
 import { getActivatedSceneForDirection } from './helper'
@@ -17,115 +14,65 @@ import {
     IS_SELECTED_LOGUE_SELECTOR
 } from '../../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const ActivatedSceneDispatcher = forwardRef((props, ref) => {
     const
-        activatedSceneIndex = ACTIVATED_SCENE_INDEX_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedSceneIndex = SELECTED_SCENE_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
-
-    return {
-        isSelectedLogue,
-        selectedSongIndex,
-        selectedSceneIndex,
-        activatedSceneIndex
-    }
-}
-
-class ActivatedSceneDispatcher extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isSelectedLogue: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedSceneIndex: PropTypes.number.isRequired,
-        activatedSceneIndex: PropTypes.number.isRequired,
-        updateScrollLyricStore: PropTypes.func.isRequired,
-        updateActivatedStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            activateSceneDirection: this.activateSceneDirection
-        })
-    }
-
-    activateSceneDirection = (direction) => {
-        if (this.props.isSelectedLogue) {
-            return false
-        }
-
-        const {
+        dispatch = useDispatch(),
+        activatedSceneIndex = useSelector(ACTIVATED_SCENE_INDEX_SELECTOR),
+        selectedSongIndex = useSelector(SELECTED_SONG_INDEX_SELECTOR),
+        selectedSceneIndex = useSelector(SELECTED_SCENE_INDEX_SELECTOR),
+        isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
+        _queueScrollToActivatedVerse = (
+            nextSceneIndex,
+            activatedVerseIndex
+        ) => {
+            dispatch(updateScrollLyricStore({
+                queuedScrollLyricLog:
+                    `Activate scene ${nextSceneIndex}, verse ${activatedVerseIndex}.`,
+                queuedScrollLyricByVerse: true,
+                queuedScrollLyricIndex: activatedVerseIndex
+            }))
+        },
+        _activateSceneIndex = (nextSceneIndex) => {
+            const activatedVerseIndex = getVerseIndexForScene(
                 selectedSongIndex,
-                selectedSceneIndex,
-                activatedSceneIndex: currentSceneIndex
-            } = this.props,
-
-            activatedSceneIndex = getActivatedSceneForDirection({
-                selectedSongIndex,
-                selectedSceneIndex,
-                currentSceneIndex,
-                direction
-            })
-
-        this._activateSceneIndex(activatedSceneIndex)
-
-        return true
-    }
-
-    _activateSceneIndex = (activatedSceneIndex) => {
-        const { selectedSongIndex } = this.props,
-            activatedVerseIndex = getVerseIndexForScene(
-                selectedSongIndex,
-                activatedSceneIndex
+                nextSceneIndex
             )
 
-        this.props.updateActivatedStore({
-            activatedSceneIndex,
-            activatedVerseIndex,
-            activatedTime: getStartTimeForVerse(
-                selectedSongIndex,
+            dispatch(updateActivatedStore({
+                activatedSceneIndex: nextSceneIndex,
+                activatedVerseIndex,
+                activatedTime: getStartTimeForVerse(
+                    selectedSongIndex,
+                    activatedVerseIndex
+                )
+            }))
+
+            // Turn off auto scroll once verse or scene is activated.
+            dispatch(updateToggleStore({
+                isAutoScroll: false
+            }))
+
+            _queueScrollToActivatedVerse(
+                nextSceneIndex,
                 activatedVerseIndex
             )
-        })
+        },
+        activateSceneDirection = (direction) => {
+            if (isSelectedLogue) {
+                return false
+            }
 
-        // Turn off auto scroll once verse or scene is activated.
-        this.props.updateToggleStore({
-            isAutoScroll: false
-        })
+            _activateSceneIndex(getActivatedSceneForDirection({
+                selectedSongIndex,
+                selectedSceneIndex,
+                currentSceneIndex: activatedSceneIndex,
+                direction
+            }))
+            return true
+        }
 
-        this._queueScrollToActivatedVerse(
-            activatedSceneIndex,
-            activatedVerseIndex
-        )
-    }
+    useImperativeHandle(ref, () => activateSceneDirection)
+    return null
+})
 
-    _queueScrollToActivatedVerse = (
-        activatedSceneIndex,
-        activatedVerseIndex
-    ) => {
-        this.props.updateScrollLyricStore({
-            queuedScrollLyricLog:
-                `Activate scene ${activatedSceneIndex}, verse ${activatedVerseIndex}.`,
-            queuedScrollLyricByVerse: true,
-            queuedScrollLyricIndex: activatedVerseIndex
-        })
-    }
-
-    render() {
-        return null
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    {
-        updateScrollLyricStore,
-        updateActivatedStore,
-        updateToggleStore
-    }
-)(ActivatedSceneDispatcher)
+export default ActivatedSceneDispatcher

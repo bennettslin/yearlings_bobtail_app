@@ -231,6 +231,10 @@ class LetterManager extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getActivateSceneDirection = dispatch => {
+        this.activateSceneDirection = dispatch
+    }
+
     getDispatchAbout = dispatch => {
         this.dispatchAbout = dispatch
     }
@@ -257,7 +261,7 @@ class LetterManager extends PureComponent {
                 <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
                 <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
                 <EarColumnDispatcher {...{ ref: this.getDispatchEarColumn }} />
-                <ActivatedSceneDispatcher {...{ getRefs: this._getRefs }} />
+                <ActivatedSceneDispatcher {...{ ref: this.getActivateSceneDirection }} />
                 <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <LyricDispatcher {...{ getRefs: this._getRefs }} />
                 <OverviewDispatcher {...{ getRefs: this._getRefs }} />

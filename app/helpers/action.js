@@ -19,6 +19,7 @@ export const getDefinedOnlyPayload = payload => {
         logError({
             log: 'Payload tried to pass undefined value!'
         })
+        console.log(payload)
     }
 
     return definedOnlyPayload
