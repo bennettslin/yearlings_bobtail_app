@@ -13,6 +13,7 @@ import { TIPS_BUTTON_KEY } from '../../../constants/buttons'
 import { TIPS } from '../../../constants/tips'
 import { IS_TIPS_SHOWABLE_SELECTOR } from '../../../redux/transient/selectors'
 import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const

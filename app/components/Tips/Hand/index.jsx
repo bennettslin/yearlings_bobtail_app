@@ -17,6 +17,7 @@ import {
 } from '../../../redux/dots/selectors'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {
