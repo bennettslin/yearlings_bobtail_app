@@ -28,7 +28,14 @@ export default [
     },
     {
         taskName: `Post-Gatsby refactoring.`,
-        workedHours: 35
+        workedHours: 36
+    },
+
+    /* Next weekend. */
+    {
+        taskName: `Remove convoluted CSS verse logic? If so, allow hover styling of activated verse in slider, to be consistent with filmstrip.`,
+        workedHours: 0,
+        neededHours: 20
     },
 
     /* Ongoing. */

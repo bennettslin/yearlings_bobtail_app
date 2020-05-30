@@ -10,6 +10,9 @@ import './app/utils/analytics'
 
 import rootReducer from './app/redux'
 
+// TODO: Figure out where best to import these classes.
+import './app/scss/app'
+
 const store = createStore(
     rootReducer,
     devToolsEnhancer()

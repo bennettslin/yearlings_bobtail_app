@@ -4,6 +4,7 @@
 * Switching between songs in local is slow, not as slow in staging
 * tips hand in garryowen for score
 * Even future verse does not have activated or hover colour.
+* Anchor still shows in activated/slider mode.
 
 # Brainless JS tasks
 * Change all mapStateToProps to grab from selectors
@@ -11,8 +12,6 @@
 * Change all to use overviewShown and tipsShown. Then prefix with is.
 
 # Brainless CSS tasks
-* Components import own styles.
-* Don't import styles in app index.
 * Logic styles should live together. (So that they can be removed together if needed.)
 
 # Easy reduction tasks

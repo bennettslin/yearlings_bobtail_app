@@ -1,3 +1,5 @@
+@import '../constants/shadow';
+
 .textShadow__dark {
     color: $colour__text__light;
     text-shadow: $textShadow__dark;
