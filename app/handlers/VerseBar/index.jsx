@@ -20,20 +20,18 @@ import { getCursorIndex } from '../../helpers/verse'
 import { SELECTED_VERSE_INDEX_SELECTOR } from '../../redux/selected/selectors'
 import { SLIDER_VERSE_INDEX_SELECTOR } from '../../redux/slider/selectors'
 import { IS_LYRIC_EXPANDED_SELECTOR } from '../../redux/toggle/selectors'
+import {
+    IS_VERSE_BAR_ABOVE_SELECTOR,
+    IS_VERSE_BAR_BELOW_SELECTOR,
+    QUEUED_DETERMINE_VERSE_BARS_SELECTOR,
+    QUEUED_VERSE_BARS_TIMEOUT_SELECTOR
+} from '../../redux/verseBars/selectors'
 
 const mapStateToProps = state => {
     const {
-            verseBarsStore: {
-                queuedDetermineVerseBars,
-                queuedVerseBarsTimeout
-            },
             viewportStore: {
                 isDesktopWidth,
                 windowHeight
-            },
-            verseBarsStore: {
-                isVerseBarAbove,
-                isVerseBarBelow
             }
         } = state,
         activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
@@ -44,7 +42,11 @@ const mapStateToProps = state => {
         menuHeight = MENU_HEIGHT_SELECTOR(state),
         selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
         sliderVerseIndex = SLIDER_VERSE_INDEX_SELECTOR(state),
-        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
+        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
+        isVerseBarAbove = IS_VERSE_BAR_ABOVE_SELECTOR(state),
+        isVerseBarBelow = IS_VERSE_BAR_BELOW_SELECTOR(state),
+        queuedDetermineVerseBars = QUEUED_DETERMINE_VERSE_BARS_SELECTOR(state),
+        queuedVerseBarsTimeout = QUEUED_VERSE_BARS_TIMEOUT_SELECTOR(state)
 
     return {
         queuedDetermineVerseBars,
