@@ -1,14 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import DotSequence from '../DotSequence'
 import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
-
 import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
-
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
+import './logic'
+import './style'
 
 const Anchor = ({
     className,

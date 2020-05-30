@@ -1,12 +1,12 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import Dot from '../../Dot'
 import Underline from '../Underline'
-
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { ORDERED_DOT_KEYS } from '../../../constants/dots'
+import './logic'
+import './style'
 
 const propTypes = {
     // From parent.

@@ -1,12 +1,11 @@
 import React, { memo, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import Texts from '../../Texts'
 import Underline from '../Underline'
-
 import { getSpaceIfNeeded, getWordsForWikiAnchor } from './helper'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
+import './style'
 
 const propTypes = {
     // From parent.

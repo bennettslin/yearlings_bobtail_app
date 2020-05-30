@@ -128,70 +128,62 @@ class Verse extends PureComponent {
  * PRESENTATION *
  ****************/
 
-const verseViewPropTypes = {
-    // From parent.
-        logicSelectors: PropTypes.string,
-        verseClassName: PropTypes.string,
-        verseIndex: PropTypes.number,
+const VerseView = memo(({
+    // From controller.
+    logicSelectors,
+    verseClassName,
+    isInteractable,
+    handleInteractivatableClick,
+    setRef,
+    children,
+    ...other
 
-        inVerseBar: PropTypes.bool.isRequired,
-        isInteractable: PropTypes.bool.isRequired,
+}) => {
+    const {
+        inVerseBar,
+        verseIndex
+    } = other
 
-        handleInteractivatableClick: PropTypes.func,
-        setRef: PropTypes.func,
+    return (
+        <div
+            {...{
+                key: isInteractable ? verseIndex : undefined,
+                ref: setRef,
+                className: cx(
+                    'Verse',
 
-        children: PropTypes.any
-    },
+                    inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
-    VerseView = memo(({
+                    Number.isFinite(verseIndex) &&
+                        `${VERSE_SCROLL}__${verseIndex}`,
 
-        // From controller.
-        logicSelectors,
-        verseClassName,
-        isInteractable,
+                    // title, even, odd, inSide.
+                    verseClassName && `verse__${verseClassName}`,
+                    isInteractable && 'Verse__interactable',
 
-        handleInteractivatableClick,
-        setRef,
-        children,
+                    'verseColour__hoverParent',
 
-        ...other
-    }) => {
+                    logicSelectors
+                ),
+                onClick: handleInteractivatableClick
+            }}
+        >
+            <VerseLines {...other} />
+            {children}
+        </div>
+    )
+})
 
-        const {
-            inVerseBar,
-            verseIndex
-        } = other
-
-        return (
-            <div
-                {...{
-                    key: isInteractable ? verseIndex : undefined,
-                    ref: setRef,
-                    className: cx(
-                        'Verse',
-
-                        inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
-
-                        Number.isFinite(verseIndex) &&
-                            `${VERSE_SCROLL}__${verseIndex}`,
-
-                        // title, even, odd, inSide.
-                        verseClassName && `verse__${verseClassName}`,
-                        isInteractable && 'Verse__interactable',
-
-                        'verseColour__hoverParent',
-
-                        logicSelectors
-                    ),
-                    onClick: handleInteractivatableClick
-                }}
-            >
-                <VerseLines {...other} />
-                {children}
-            </div>
-        )
-    })
-
-VerseView.propTypes = verseViewPropTypes
+VerseView.propTypes = {
+// From parent.
+    logicSelectors: PropTypes.string,
+    verseClassName: PropTypes.string,
+    verseIndex: PropTypes.number,
+    inVerseBar: PropTypes.bool.isRequired,
+    isInteractable: PropTypes.bool.isRequired,
+    handleInteractivatableClick: PropTypes.func,
+    setRef: PropTypes.func,
+    children: PropTypes.any
+}
 
 export default connect(mapStateToProps)(Verse)
