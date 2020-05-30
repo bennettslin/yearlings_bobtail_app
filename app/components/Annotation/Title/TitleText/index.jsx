@@ -1,41 +1,33 @@
-import React, { PureComponent } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-
 import Anchor from '../../../Anchor'
 
-class AnnotationTitleText extends PureComponent {
+const AnnotationTitleText = ({
+    isAccessed,
+    isSelected,
+    text,
+    sequenceDotKeys,
+    handleAnchorClick
 
-    static propTypes = {
-        // From parent.
-        isAccessed: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        text: PropTypes.string.isRequired,
-        sequenceDotKeys: PropTypes.object.isRequired,
-        handleAnchorClick: PropTypes.func.isRequired
-    }
-
-    render() {
-        const {
+}) => (
+    <Anchor
+        isAnnotationTitle
+        {...{
             isAccessed,
             isSelected,
             text,
             sequenceDotKeys,
             handleAnchorClick
-        } = this.props
+        }}
+    />
+)
 
-        return (
-            <Anchor
-                isAnnotationTitle
-                {...{
-                    isAccessed,
-                    isSelected,
-                    text,
-                    sequenceDotKeys,
-                    handleAnchorClick
-                }}
-            />
-        )
-    }
+AnnotationTitleText.propTypes = {
+    isAccessed: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    text: PropTypes.string.isRequired,
+    sequenceDotKeys: PropTypes.object.isRequired,
+    handleAnchorClick: PropTypes.func.isRequired
 }
 
-export default AnnotationTitleText
+export default memo(AnnotationTitleText)
