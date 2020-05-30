@@ -1,6 +1,5 @@
 // A single pair of ceiling and floor cubes.
-
-import React, { PureComponent } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -72,96 +71,86 @@ const
     },
     CubeConfig = {}
 
-class Cube extends PureComponent {
+const Cube = ({
+    xIndex,
+    yIndex,
+    ceilingHslaKey,
+    floorHslaKey,
+    ceilingZIndex,
+    floorZIndex,
+    slantDirection = DEFAULT
 
-    static defaultProps = {
-        slantDirection: DEFAULT
-    }
+}) => {
+    const xCharIndex = getCharStringForNumber(xIndex)
 
-    static propTypes = {
-        // Through Redux.
-        ceilingHslaKey: PropTypes.string.isRequired,
-        floorHslaKey: PropTypes.string.isRequired,
-        ceilingZIndex: PropTypes.number.isRequired,
-        floorZIndex: PropTypes.number.isRequired,
-        slantDirection: PropTypes.string.isRequired,
+    return (
+        // Individual cubes need to be svgs in order to have a stacking order.
+        <Svg
+            {...{
+                className: cx(
+                    'Cube',
+                    `y${yIndex}`,
+                    `x${xCharIndex}`,
+                    'abF'
+                ),
+                style: {
+                    zIndex: getCssZIndexForCube({
+                        slantDirection,
+                        yIndex,
+                        xIndex
+                    })
+                }
+            }}
+        >
+            {FACES.map(face => (
+                <Face
+                    {...{
+                        key: face,
+                        slantDirection,
+                        level: FLOOR,
+                        yIndex,
+                        xIndex,
+                        hslaKey: floorHslaKey,
+                        zIndex: floorZIndex,
+                        face
+                    }}
+                />
+            ))}
+            {FACES.map(face => (
+                <Face
+                    {...{
+                        key: face,
+                        slantDirection,
+                        level: CEILING,
+                        yIndex,
+                        xIndex,
+                        hslaKey: ceilingHslaKey,
+                        zIndex: ceilingZIndex,
+                        face
+                    }}
+                />
+            ))}
+        </Svg>
+    )
+}
 
-        // From parent.
-        xIndex: PropTypes.number.isRequired,
-        yIndex: PropTypes.number.isRequired
-    }
+Cube.propTypes = {
+    // Through Redux.
+    ceilingHslaKey: PropTypes.string.isRequired,
+    floorHslaKey: PropTypes.string.isRequired,
+    ceilingZIndex: PropTypes.number.isRequired,
+    floorZIndex: PropTypes.number.isRequired,
+    slantDirection: PropTypes.string,
 
-    render() {
-        const
-            {
-                xIndex,
-                yIndex,
-                ceilingHslaKey,
-                floorHslaKey,
-                ceilingZIndex,
-                floorZIndex,
-                slantDirection
-            } = this.props,
-            xCharIndex = getCharStringForNumber(xIndex)
-
-        return (
-
-            // Individual cubes need to be svgs in order to have a stacking order.
-            <Svg
-                {...{
-                    className: cx(
-                        'Cube',
-                        `y${yIndex}`,
-                        `x${xCharIndex}`,
-                        'abF'
-                    ),
-                    style: {
-                        zIndex: getCssZIndexForCube({
-                            slantDirection,
-                            yIndex,
-                            xIndex
-                        })
-                    }
-                }}
-
-            >
-                {FACES.map(face => (
-                    <Face
-                        {...{
-                            key: face,
-                            slantDirection,
-                            level: FLOOR,
-                            yIndex,
-                            xIndex,
-                            hslaKey: floorHslaKey,
-                            zIndex: floorZIndex,
-                            face
-                        }}
-                    />
-                ))}
-                {FACES.map(face => (
-                    <Face
-                        {...{
-                            key: face,
-                            slantDirection,
-                            level: CEILING,
-                            yIndex,
-                            xIndex,
-                            hslaKey: ceilingHslaKey,
-                            zIndex: ceilingZIndex,
-                            face
-                        }}
-                    />
-                ))}
-            </Svg>
-        )
-    }
+    // From parent.
+    xIndex: PropTypes.number.isRequired,
+    yIndex: PropTypes.number.isRequired
 }
 
 CUBE_Y_INDICES.forEach(yIndex => {
     CubeConfig[yIndex] = {}
     CUBE_X_INDICES.forEach(xIndex => {
-        CubeConfig[yIndex][xIndex] = connect(getMapStateToProps(yIndex, xIndex))(Cube)
+        CubeConfig[yIndex][xIndex] = connect(getMapStateToProps(yIndex, xIndex))(memo(Cube))
     })
 })
 
