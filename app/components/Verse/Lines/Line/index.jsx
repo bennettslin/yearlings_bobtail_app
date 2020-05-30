@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../../../Texts'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../redux/lyric/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)

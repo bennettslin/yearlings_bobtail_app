@@ -5,6 +5,7 @@
 * tips hand in garryowen for score
 * Slider access keys show in logues.
 * Tooltip in desktop even when not accessed.
+* Even future verse does not have activated or hover colour.
 
 # Brainless JS tasks
 * Change all mapStateToProps to grab from selectors

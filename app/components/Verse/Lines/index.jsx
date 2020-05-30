@@ -2,16 +2,14 @@
  * This component separates a doublespeaker line into two separate lines, if
  * needed.
  */
-
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import VerseLine from './Line'
-
 import {
     EAR_COLUMN_KEYS, LYRIC_CENTRE, LYRIC
 } from '../../../constants/lyrics'
+import './style'
 
 const verseLinesPropTypes = {
     // From parent.

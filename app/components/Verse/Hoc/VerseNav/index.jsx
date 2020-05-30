@@ -13,6 +13,7 @@ import {
     AUDIO_REWIND_BUTTON_KEY
 } from '../../../../constants/buttons'
 import { SELECTED_VERSE_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state)

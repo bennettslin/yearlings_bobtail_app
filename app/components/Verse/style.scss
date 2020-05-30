@@ -1,5 +1,7 @@
-@import "./Hoc/style";
-@import "./Lines/style";
+@import '../../scss/classes/mixin';
+@import '../../scss/constants/border';
+@import '../../scss/constants/colour';
+@import '../../scss/constants/lyric';
 
 .Verse__inLyric {
     $border: 1px solid rgba(0, 0, 0, 0.15);

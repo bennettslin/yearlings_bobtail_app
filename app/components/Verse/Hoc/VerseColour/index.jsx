@@ -1,85 +1,86 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import VerseTracker from './VerseTracker'
+import './logicCursor'
+import './logicDefault'
+import './logicSlider'
+import './style'
 
-const propTypes = {
-    // From parent.
-        isActivated: PropTypes.bool,
-        verseIndex: PropTypes.number.isRequired,
-        inUnit: PropTypes.bool,
-        inVerseBar: PropTypes.bool,
-        inSlider: PropTypes.bool
-    },
+const VerseColour = ({
+    isActivated,
+    verseIndex,
+    inUnit,
+    inVerseBar,
+    inSlider
 
-    VerseColour = ({
-        isActivated,
-        verseIndex,
-        inUnit,
-        inVerseBar,
-        inSlider
+}) => {
+    const inLyric = inUnit || inVerseBar,
+        isOdd = Boolean(verseIndex % 2)
 
-    }) => {
-        const inLyric = inUnit || inVerseBar,
-            isOdd = Boolean(verseIndex % 2)
+    return (
+        <div
+            className={cx(
 
-        return (
-            <div
-                className={cx(
+                // "Grandchild in lyric."
+                inLyric && 'GcL',
 
-                    // "Grandchild in lyric."
-                    inLyric && 'GcL',
+                // "Grandchild in slider."
+                inSlider && 'GcS',
 
-                    // "Grandchild in slider."
-                    inSlider && 'GcS',
+                // "Grandchild interactable."
+                !inVerseBar && 'GcN',
 
-                    // "Grandchild interactable."
-                    !inVerseBar && 'GcN',
+                // "Grandchild verse colour."
+                'GcV',
 
-                    // "Grandchild verse colour."
-                    'GcV',
+                'VerseColour',
+                'ovH',
 
-                    'VerseColour',
-                    'ovH',
+                inVerseBar && 'VerseColour__inVerseBar',
+                isActivated && 'VerseColour__activated',
 
-                    inVerseBar && 'VerseColour__inVerseBar',
-                    isActivated && 'VerseColour__activated',
+                // Grandchild verse colour even.
+                !isOdd && 'GcE',
 
-                    // Grandchild verse colour even.
-                    !isOdd && 'GcE',
+                'abF'
+            )}
+        >
+            <VerseTracker
+                {...{
+                    verseIndex,
+                    inVerseBar,
+                    inUnit,
+                    inSlider,
+                    ...inVerseBar && {
+                        isHiddenInVerseBar: isOdd
+                    }
+                }}
+            />
 
-                    'abF'
-                )}
-            >
+            {/* Allow verse bar to alternate between odd and even. */}
+            {inVerseBar && (
                 <VerseTracker
                     {...{
                         verseIndex,
                         inVerseBar,
                         inUnit,
                         inSlider,
-                        ...inVerseBar && {
-                            isHiddenInVerseBar: isOdd
-                        }
+                        isHiddenInVerseBar: !isOdd
                     }}
                 />
+            )}
+        </div>
+    )
+}
 
-                {/* Allow verse bar to alternate between odd and even. */}
-                {inVerseBar && (
-                    <VerseTracker
-                        {...{
-                            verseIndex,
-                            inVerseBar,
-                            inUnit,
-                            inSlider,
-                            isHiddenInVerseBar: !isOdd
-                        }}
-                    />
-                )}
-            </div>
-        )
-    }
-
-VerseColour.propTypes = propTypes
+VerseColour.propTypes = {
+// From parent.
+    isActivated: PropTypes.bool,
+    verseIndex: PropTypes.number.isRequired,
+    inUnit: PropTypes.bool,
+    inVerseBar: PropTypes.bool,
+    inSlider: PropTypes.bool
+}
 
 export default memo(VerseColour)

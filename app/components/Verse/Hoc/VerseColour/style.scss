@@ -1,7 +1,6 @@
-@import "./logicDefault";
-@import "./logicSlider";
-@import "./logicCursor";
-@import "./VerseTracker/style";
+@import '../../../../scss/constants/border';
+@import '../../../../scss/constants/shadow';
+@import '../../../../scss/constants/transition';
 
 .VerseColour {
     .DW__userAgentDesktop

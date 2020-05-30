@@ -1,3 +1,8 @@
+@import '../../../../scss/classes/mixin';
+@import '../../../../scss/constants/colour';
+@import '../../../../scss/constants/logic';
+@import '../../../../scss/constants/zIndex';
+
 // Default styling. Kept in this stylesheet for consistency.
 .VerseColour {
     // Styling for verse colours before cursored verse.
