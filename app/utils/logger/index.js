@@ -4,9 +4,11 @@ import {
     getSong
 } from '../../album/api/songs'
 import {
-    INITIAL_SONG_INDEX,
-    INITIAL_ANNOTATION_INDEX
-} from '../../redux/selected/default'
+    getStoredSongIndex,
+    getStoredVerseIndex,
+    getStoredAnnotationIndex
+} from '../../helpers/storage'
+
 import {
     logAccess,
     logAdmin,
@@ -22,16 +24,20 @@ import {
     logger
 } from './helpers/logs'
 import { getCardsForAnnotation } from '../../album/api/annotations'
+import { getVerse } from '../../album/api/verses'
 
 // Allow access to album in local delivery.
 if (IS_STAGING) {
     global.album = getAlbum()
 
-    // TODO: Allow for dynamic values to be passed, not just the initial ones.
-    global.s = getSong(INITIAL_SONG_INDEX)
-    global.a = getCardsForAnnotation(
-        INITIAL_SONG_INDEX,
-        INITIAL_ANNOTATION_INDEX
+    global.s = () => getSong(getStoredSongIndex())
+    global.v = () => getVerse(
+        getStoredSongIndex(),
+        getStoredVerseIndex(getStoredSongIndex())
+    )
+    global.a = () => getCardsForAnnotation(
+        getStoredSongIndex(),
+        getStoredAnnotationIndex(getStoredSongIndex())
     )
 }
 

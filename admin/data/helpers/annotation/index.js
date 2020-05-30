@@ -117,7 +117,10 @@ export const addAnnotationMetadata = (songIndex, song) => {
         annotationDotKeysList = [],
         annotationTitles = [],
         annotationVerseIndices = [],
-        annotationCardsList = []
+        annotationCardsList = [],
+        annotationCardsDescriptionsList = [],
+        annotationCardsDotKeysList = [],
+        annotationCardsWormholeLinksList = []
 
     /**
      * Now that we have recursively gone through the lyrics and the annotation
@@ -145,6 +148,19 @@ export const addAnnotationMetadata = (songIndex, song) => {
                 annotation.cards[0] :
                 annotation.cards
         )
+        annotationCardsDescriptionsList.push(
+            annotation.cards.map(card => card.description || null)
+        )
+        annotationCardsDotKeysList.push(
+            annotation.cards.length === 1 ?
+                annotation.cards[0].dotKeys || null :
+                annotation.cards.map(card => card.dotKeys || null)
+        )
+        annotationCardsWormholeLinksList.push(
+            annotation.cards.length === 1 ?
+                annotation.cards[0].wormholeLinks || null :
+                annotation.cards.map(card => card.wormholeLinks || null)
+        )
     })
 
     // Don't bother to add if it's all left column.
@@ -155,5 +171,8 @@ export const addAnnotationMetadata = (songIndex, song) => {
     song.annotationTitles = annotationTitles
     song.annotationVerseIndices = annotationVerseIndices
     song.annotationCardsList = annotationCardsList
+    song.annotationCardsDescriptionsList = annotationCardsDescriptionsList
+    song.annotationCardsDotKeysList = annotationCardsDotKeysList
+    song.annotationCardsWormholeLinksList = annotationCardsWormholeLinksList
     return annotations
 }

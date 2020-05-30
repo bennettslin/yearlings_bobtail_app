@@ -3,60 +3,49 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateDotsStore } from '../../redux/dots/action'
 import { updateDotsSlideStore } from '../../redux/dotsSlide/action'
-import { setNewValueInBitNumber } from '../../helpers/bit'
-import { getDotKeysFromBitNumber } from '../../helpers/dot'
-import { ORDERED_DOT_KEYS } from '../../constants/dots'
 import { DOTS_BIT_NUMBER_SELECTOR } from '../../redux/dots/selectors'
 import { DOTS_SLIDE_BIT_NUMBER_SELECTOR } from '../../redux/dotsSlide/selectors'
+import { getValueAndDotsBitNumberForToggledDotIndex } from './helpers'
+import { ORDERED_DOT_KEYS } from '../../constants/dots'
 
 const DotSelectDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         dotsBitNumber = useSelector(DOTS_BIT_NUMBER_SELECTOR),
         dotsSlideBitNumber = useSelector(DOTS_SLIDE_BIT_NUMBER_SELECTOR),
-        dispatchSelectDot = (selectedDotIndex) => {
-            // TODO: Make a general helper that toggles the bit number for both.
-            const
-                selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
-                selectedDotKey = ORDERED_DOT_KEYS[selectedDotIndex],
-                isSelected = !selectedDotKeys[selectedDotKey],
-
-                newDotsBitNumber = setNewValueInBitNumber({
-                    keysArray: ORDERED_DOT_KEYS,
-                    bitNumber: dotsBitNumber,
-                    key: selectedDotKey,
-                    value: isSelected
-                })
+        dispatchSelectDot = dotIndex => {
+            const {
+                value,
+                bitNumber
+            } = getValueAndDotsBitNumberForToggledDotIndex({
+                dotIndex,
+                bitNumber: dotsBitNumber
+            })
 
             dispatch(updateDotsStore({
-                dotsBitNumber: newDotsBitNumber,
-                [selectedDotKey]: isSelected
+                dotsBitNumber: bitNumber,
+                [ORDERED_DOT_KEYS[dotIndex]]: value
             }))
 
             // Make most recently toggled dot the accessed dot.
             dispatch(updateAccessStore({
-                accessedDotIndex: selectedDotIndex
+                accessedDotIndex: dotIndex
             }))
             return true
         },
 
-        dispatchActivatedDot = (activatedDotIndex) => {
-            // TODO: Make a general helper that toggles the bit number for both.
-            const
-                activatedDotKeys = getDotKeysFromBitNumber(dotsSlideBitNumber),
-                activatedDotKey = ORDERED_DOT_KEYS[activatedDotIndex],
-                isActivated = !activatedDotKeys[activatedDotKey],
-
-                newDotsSlideBitNumber = setNewValueInBitNumber({
-                    keysArray: ORDERED_DOT_KEYS,
-                    bitNumber: dotsSlideBitNumber,
-                    key: activatedDotKey,
-                    value: isActivated
-                })
+        dispatchActivatedDot = dotIndex => {
+            const {
+                value,
+                bitNumber
+            } = getValueAndDotsBitNumberForToggledDotIndex({
+                dotIndex,
+                bitNumber: dotsSlideBitNumber
+            })
 
             dispatch(updateDotsSlideStore({
-                dotsSlideBitNumber: newDotsSlideBitNumber,
-                [activatedDotKey]: isActivated
+                dotsSlideBitNumber: bitNumber,
+                [ORDERED_DOT_KEYS[dotIndex]]: value
             }))
         }
 

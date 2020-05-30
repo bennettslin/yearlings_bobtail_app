@@ -1,5 +1,5 @@
 // Component to show individual annotation note or all wormholes.
-import React from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -8,9 +8,12 @@ import DotSequence from '../../DotSequence'
 import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
-import { getAnnotationCard } from './helper'
 import './logic'
 import './style'
+import {
+    getDescriptionForAnnotationCard,
+    getDotKeysForAnnotationCard
+} from '../../../album/api/annotations'
 
 const AnnotationCard = ({
     annotationIndex,
@@ -21,17 +24,16 @@ const AnnotationCard = ({
 }) => {
     const
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
-        {
-            text,
-            dotKeys,
-            isTextCard,
-            isWormholeCard
-
-        } = getAnnotationCard({
-            songIndex: lyricSongIndex,
+        description = getDescriptionForAnnotationCard(
+            lyricSongIndex,
             annotationIndex,
             cardIndex
-        })
+        ),
+        dotKeys = getDotKeysForAnnotationCard(
+            lyricSongIndex,
+            annotationIndex,
+            cardIndex
+        )
 
     return (
         <div className={cx(
@@ -48,11 +50,12 @@ const AnnotationCard = ({
             <div className={cx(
                 'AnnotationCard',
                 !inCarousel && 'AnnotationCard__inPopup',
-                isTextCard && 'AnnotationCard__isText',
-                isWormholeCard && 'AnnotationCard__wormhole',
+                description ?
+                    'AnnotationCard__isText' :
+                    'AnnotationCard__wormhole',
                 'fontSize__verse'
             )}>
-                {isTextCard ? (
+                {description ? (
                     <>
                         <DotSequence
                             inAnnotationCard
@@ -61,7 +64,7 @@ const AnnotationCard = ({
                         <div {...{ className: 'AnnotationCard__text' }}>
                             <Texts
                                 {...{
-                                    text,
+                                    text: description,
                                     annotationIndex
                                 }}
                             />
@@ -88,4 +91,4 @@ AnnotationCard.propTypes = {
     cardIndex: PropTypes.number.isRequired
 }
 
-export default AnnotationCard
+export default memo(AnnotationCard)

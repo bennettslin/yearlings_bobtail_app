@@ -12,6 +12,9 @@ import './utils/analytics'
 
 import rootReducer from './redux'
 
+// TODO: Figure out where best to import these classes.
+import './scss/app'
+
 // Get routes depending on whether in delivery or production.
 // eslint-disable-next-line import/no-unresolved
 import Routes from 'routes'

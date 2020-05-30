@@ -18,7 +18,7 @@ export const getTwoToThePowerOfN = (exponent, number = 2) => {
     return getTwoToThePowerOfN(exponent - 1, number * 2)
 }
 
-const _convertTrueFalseKeysToBitNumber = ({
+export const getBitNumberFromObject = ({
     keysArray,
     trueFalseObject
 }) => {
@@ -114,7 +114,7 @@ export const setNewValueInBitNumber = ({
     trueFalseObject[key] = value
 
     // Convert object to new bit number, which is then returned.
-    return _convertTrueFalseKeysToBitNumber({
+    return getBitNumberFromObject({
         keysArray,
         trueFalseObject
     })

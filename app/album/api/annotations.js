@@ -3,6 +3,7 @@ import {
     getSongIsLogue
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
+import { WORMHOLE } from '../../constants/dots'
 
 export const getAnnotationIndices = songIndex => (
     getSongIsLogue(songIndex) ?
@@ -87,6 +88,35 @@ export const getCardCountForAnnotation = (songIndex, annotationIndex) => {
 export const getCardForAnnotation = (songIndex, annotationIndex, cardIndex) => {
     const cards = getCardsForAnnotation(songIndex, annotationIndex)
     return cards ? cards[cardIndex] : null
+}
+
+export const getDescriptionForAnnotationCard = (
+    songIndex, annotationIndex, cardIndex
+) => {
+    const { annotationCardsDescriptionsList } = getSong(songIndex),
+        descriptions = annotationCardsDescriptionsList[annotationIndex - 1]
+    return descriptions ? descriptions[cardIndex] : null
+}
+
+export const getDotKeysForAnnotationCard = (
+    songIndex, annotationIndex, cardIndex
+) => {
+    // Return just wormhole key if it's a wormholes card.
+    if (!getDescriptionForAnnotationCard(
+        songIndex, annotationIndex, cardIndex
+    )) {
+        return { [WORMHOLE]: true }
+    }
+
+    const { annotationCardsDotKeysList } = getSong(songIndex),
+        dotKeysEntity = annotationCardsDotKeysList[annotationIndex - 1]
+
+    if (!dotKeysEntity) {
+        return null
+    }
+    return Array.isArray(dotKeysEntity) ?
+        dotKeysEntity[cardIndex] :
+        dotKeysEntity
 }
 
 export const getWormholeLinksForAnnotationCard = (
