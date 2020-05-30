@@ -6,7 +6,7 @@ import cx from 'classnames'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
-import { getAnnotationCardIndices } from '../../album/api/annotations'
+import { getAnnotationCardIndices } from '../../album/api/cards'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 import './style'
 

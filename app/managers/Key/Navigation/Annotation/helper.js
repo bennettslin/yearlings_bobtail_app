@@ -1,7 +1,5 @@
-import {
-    getCardsForAnnotation,
-    getWikiWormholesForAnnotation
-} from '../../../../album/api/annotations'
+import { getWikiWormholesForAnnotation } from '../../../../album/api/annotations'
+import { getCardsForAnnotation } from '../../../../album/api/cards'
 import { mapWormholeLinkForDispatch } from '../../../../helpers/wormhole'
 
 export const getWormholeLinkFromIndex = ({

@@ -13,7 +13,7 @@ import './style'
 import {
     getDescriptionForAnnotationCard,
     getDotKeysForAnnotationCard
-} from '../../../album/api/annotations'
+} from '../../../album/api/cards'
 
 const AnnotationCard = ({
     annotationIndex,

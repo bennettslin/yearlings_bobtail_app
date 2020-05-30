@@ -23,7 +23,7 @@ import {
     logError,
     logger
 } from './helpers/logs'
-import { getCardsForAnnotation } from '../../album/api/annotations'
+import { getCardsForAnnotation } from '../../album/api/cards'
 import { getVerse } from '../../album/api/verses'
 
 // Allow access to album in local delivery.

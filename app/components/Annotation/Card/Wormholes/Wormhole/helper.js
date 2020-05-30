@@ -1,5 +1,5 @@
 import { mapWormholeLinkForDispatch } from '../../../../../helpers/wormhole'
-import { getWormholeLinksForAnnotationCard } from '../../../../../album/api/annotations'
+import { getWormholeLinksForAnnotationCard } from '../../../../../album/api/cards'
 
 export const getCardWormholeLink = ({
     songIndex,

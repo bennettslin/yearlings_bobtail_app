@@ -7,10 +7,8 @@ import {
     getGlobalAnnotationCount,
     getGlobalAnnotationDoneCount
 } from '../../album/api/globalAnnotation'
-import {
-    getTitleForAnnotation,
-    getCardsForAnnotation
-} from '../../../app/album/api/annotations'
+import { getTitleForAnnotation } from '../../../app/album/api/annotations'
+import { getCardsForAnnotation } from '../../../app/album/api/cards'
 import { getArrayOfLength } from '../../../app/helpers/general'
 import { removeLoadingIndicator } from '../../../app/utils/browser'
 import './style'
