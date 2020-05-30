@@ -9,17 +9,14 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import ScrollVerseDispatcher from '../../../../dispatchers/ScrollVerseDispatcher'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
-
 import { populateRefs } from '../../../../helpers/ref'
-
 import { LYRIC_SCROLL_TOGGLE_KEY } from '../../../../constants/access'
 import { LYRIC_SCROLL_BUTTON_KEY } from '../../../../constants/buttons'
 import { AUTOSCROLL } from '../../../../constants/tips'
+import { IS_AUTO_SCROLL_SELECTOR } from '../../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-        toggleStore: { isAutoScroll }
-    } = state
+    const isAutoScroll = IS_AUTO_SCROLL_SELECTOR(state)
 
     return {
         isAutoScroll

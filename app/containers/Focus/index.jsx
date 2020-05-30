@@ -13,14 +13,14 @@ import { populateRefs } from '../../helpers/ref'
 import { QUEUED_FOCUS_SELECTOR } from '../../redux/focus/selectors'
 import { CAN_SLIDER_MOUNT_SELECTOR } from '../../redux/mount/selectors'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../redux/responsive/selectors'
+import { IS_LYRIC_EXPANDED_SELECTOR } from '../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-            toggleStore: { isLyricExpanded }
-        } = state,
+    const
         queuedFocus = QUEUED_FOCUS_SELECTOR(state),
         canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state),
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
+        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
 
     return {
         canSliderMount,

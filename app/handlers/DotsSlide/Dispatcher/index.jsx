@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
+import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-            toggleStore: { isDotsSlideShown }
-        } = state,
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
+    const
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
 
     return {
         isDotsSlideShown,

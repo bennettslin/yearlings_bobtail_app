@@ -8,20 +8,23 @@ import { updateTransientStore } from '../../redux/transient/action'
 import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../redux/mount/selectors'
 import { IS_OVERLAYING_ANNOTATION_SELECTOR } from '../../redux/transient/selectors'
 import { SELECTED_WIKI_INDEX_SELECTOR } from '../../redux/session/selectors'
+import {
+    IS_CAROUSEL_SHOWN_SELECTOR,
+    IS_SCORE_SHOWN_SELECTOR,
+    IS_ABOUT_SHOWN_SELECTOR
+} from '../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const {
-            entranceStore: { canLyricCarouselEnter },
-            toggleStore: {
-                isAboutShown,
-                isScoreShown,
-                isCarouselShown
-            }
+            entranceStore: { canLyricCarouselEnter }
         } = state,
         lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
         canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state),
         isOverlayingAnnotation = IS_OVERLAYING_ANNOTATION_SELECTOR(state),
-        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state)
+        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
+        isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
+        isScoreShown = IS_SCORE_SHOWN_SELECTOR(state),
+        isAboutShown = IS_ABOUT_SHOWN_SELECTOR(state)
 
     return {
         isAboutShown,

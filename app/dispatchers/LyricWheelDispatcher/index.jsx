@@ -4,11 +4,10 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateToggleStore } from '../../redux/toggle/action'
+import { IS_AUTO_SCROLL_SELECTOR } from '../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-        toggleStore: { isAutoScroll }
-    } = state
+    const isAutoScroll = IS_AUTO_SCROLL_SELECTOR(state)
 
     return {
         isAutoScroll

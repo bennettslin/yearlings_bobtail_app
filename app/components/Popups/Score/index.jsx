@@ -2,17 +2,14 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-// import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
-
 import Score from '../../Score'
 import Popup from '../../Popup'
+import { IS_SCORE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-        toggleStore: { isScoreShown }
-    } = state
+    const isScoreShown = IS_SCORE_SHOWN_SELECTOR(state)
 
     return {
         isScoreShown

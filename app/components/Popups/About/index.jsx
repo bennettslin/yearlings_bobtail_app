@@ -5,12 +5,12 @@ import { connect } from 'react-redux'
 import { updateIsAboutShown } from '../../../redux/toggle/action'
 import About from '../../About'
 import Popup from '../../Popup'
+import { IS_ABOUT_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-        toggleStore: { isAboutShown }
-    } = state
+    const isAboutShown = IS_ABOUT_SHOWN_SELECTOR(state)
+
     return {
         isAboutShown
     }

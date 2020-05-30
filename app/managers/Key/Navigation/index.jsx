@@ -15,21 +15,24 @@ import {
     IS_SELECTED_LOGUE_SELECTOR
 } from '../../../redux/selected/selectors'
 import { SELECTED_WIKI_INDEX_SELECTOR } from '../../../redux/session/selectors'
+import {
+    IS_NAV_SHOWN_SELECTOR,
+    IS_DOTS_SLIDE_SHOWN_SELECTOR,
+    IS_LYRIC_EXPANDED_SELECTOR,
+    IS_SCORE_SHOWN_SELECTOR
+} from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-            toggleStore: {
-                isNavShown,
-                isDotsSlideShown,
-                isLyricExpanded,
-                isScoreShown
-            }
-        } = state,
+    const
         activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
         selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
         isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
-        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state)
+        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
+        isNavShown = IS_NAV_SHOWN_SELECTOR(state),
+        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state),
+        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
+        isScoreShown = IS_SCORE_SHOWN_SELECTOR(state)
 
     return {
         isHeightlessLyric,

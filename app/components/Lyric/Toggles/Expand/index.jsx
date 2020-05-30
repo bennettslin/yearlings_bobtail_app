@@ -16,14 +16,14 @@ import { populateRefs } from '../../../../helpers/ref'
 import { LYRIC_SECTION_EXPAND_KEY } from '../../../../constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from '../../../../constants/buttons'
 import { LYRIC_EXPAND } from '../../../../constants/tips'
+import { IS_LYRIC_EXPANDED_SELECTOR } from '../../../../redux/toggle/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            toggleStore: { isLyricExpanded }
-        } = state,
+    const
         isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state)
+        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
+        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
 
     return {
         isHeightlessLyric,

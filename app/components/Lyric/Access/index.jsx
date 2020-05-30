@@ -7,13 +7,13 @@ import {
     ARROW_DOWN
 } from '../../../constants/access'
 import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            toggleStore: { isDotsSlideShown }
-        } = state,
-        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state)
+    const
+        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
+        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
 
     return {
         lyricAnnotationIndex,

@@ -9,18 +9,21 @@ import {
 import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
 import './style'
 import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import {
+    IS_CAROUSEL_SHOWN_SELECTOR,
+    IS_NAV_SHOWN_SELECTOR,
+    IS_DOTS_SLIDE_SHOWN_SELECTOR,
+    IS_LYRIC_EXPANDED_SELECTOR
+} from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-            toggleStore: {
-                isCarouselShown,
-                isNavShown,
-                isDotsSlideShown,
-                isLyricExpanded
-            }
-        } = state,
+    const
         dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
-        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state)
+        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
+        isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
+        isNavShown = IS_NAV_SHOWN_SELECTOR(state),
+        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state),
+        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
 
     return {
         isLyricExpanded,

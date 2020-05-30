@@ -17,6 +17,10 @@ import {
     SELECTED_VERSE_INDEX_SELECTOR,
     IS_SELECTED_LOGUE_SELECTOR
 } from '../../../redux/selected/selectors'
+import {
+    IS_AUTO_SCROLL_SELECTOR,
+    IS_LYRIC_EXPANDED_SELECTOR
+} from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -29,16 +33,14 @@ const mapStateToProps = state => {
                 queuedScrollLyricFromAutoScroll,
                 queuedSceneChangeExitScrollCallback
             },
-            toggleStore: {
-                isAutoScroll,
-                isLyricExpanded
-            },
             viewportStore: { deviceWidthIndex }
         } = state,
         isPlaying = IS_PLAYING_SELECTOR(state),
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
         selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        isAutoScroll = IS_AUTO_SCROLL_SELECTOR(state),
+        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
 
     return {
         queuedScrollLyricLog,

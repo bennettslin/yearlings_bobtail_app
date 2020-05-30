@@ -5,17 +5,18 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import CeilingRafter from './Rafter'
 import { getRaftersRowCoordinates } from './helper'
+import { CEILING_HEIGHT_SELECTOR } from '../../../redux/theatre/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-        prosceniumStore: {
-            prosceniumLeft,
-            prosceniumWidth
-        },
-        theatreStore: { ceilingHeight },
-        viewportStore: { windowWidth }
-    } = state
+            prosceniumStore: {
+                prosceniumLeft,
+                prosceniumWidth
+            },
+            viewportStore: { windowWidth }
+        } = state,
+        ceilingHeight = CEILING_HEIGHT_SELECTOR(state)
 
     return {
         windowWidth,

@@ -9,14 +9,14 @@ import {
     ACCESSED_NAV_INDEX_SELECTOR
 } from '../../../../../redux/access/selectors'
 import { SELECTED_SONG_INDEX_SELECTOR } from '../../../../../redux/selected/selectors'
+import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-            toggleStore: { isDotsSlideShown }
-        } = state,
+    const
         isAccessOn = IS_ACCESS_ON_SELECTOR(state),
         accessedNavIndex = ACCESSED_NAV_INDEX_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
+        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
 
     return {
         isAccessOn,

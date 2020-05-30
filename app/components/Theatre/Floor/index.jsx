@@ -4,17 +4,18 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import FloorSeat from './Seat'
 import { getSeatingRowCoordinates } from './helper'
+import { FLOOR_HEIGHT_SELECTOR } from '../../../redux/theatre/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-        prosceniumStore: {
-            prosceniumLeft,
-            prosceniumWidth
-        },
-        theatreStore: { floorHeight },
-        viewportStore: { windowWidth }
-    } = state
+            prosceniumStore: {
+                prosceniumLeft,
+                prosceniumWidth
+            },
+            viewportStore: { windowWidth }
+        } = state,
+        floorHeight = FLOOR_HEIGHT_SELECTOR(state)
 
     return {
         windowWidth,

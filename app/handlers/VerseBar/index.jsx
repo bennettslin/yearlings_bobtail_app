@@ -19,6 +19,7 @@ import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'
 import { SELECTED_VERSE_INDEX_SELECTOR } from '../../redux/selected/selectors'
 import { SLIDER_VERSE_INDEX_SELECTOR } from '../../redux/slider/selectors'
+import { IS_LYRIC_EXPANDED_SELECTOR } from '../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -30,7 +31,6 @@ const mapStateToProps = state => {
                 isDesktopWidth,
                 windowHeight
             },
-            toggleStore: { isLyricExpanded },
             verseBarsStore: {
                 isVerseBarAbove,
                 isVerseBarBelow
@@ -43,7 +43,8 @@ const mapStateToProps = state => {
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
         menuHeight = MENU_HEIGHT_SELECTOR(state),
         selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
-        sliderVerseIndex = SLIDER_VERSE_INDEX_SELECTOR(state)
+        sliderVerseIndex = SLIDER_VERSE_INDEX_SELECTOR(state),
+        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
 
     return {
         queuedDetermineVerseBars,

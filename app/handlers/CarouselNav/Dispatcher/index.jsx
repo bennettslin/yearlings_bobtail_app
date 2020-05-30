@@ -10,21 +10,22 @@ import {
     SELECTED_ANNOTATION_INDEX_SELECTOR,
     IS_SELECTED_LOGUE_SELECTOR
 } from '../../../redux/selected/selectors'
+import {
+    IS_CAROUSEL_SHOWN_SELECTOR,
+    IS_NAV_SHOWN_SELECTOR,
+    IS_DOTS_SLIDE_SHOWN_SELECTOR
+} from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-            toggleStore: {
-                isDotsSlideShown,
-                isCarouselShown,
-                isNavShown
-            }
-        } = state,
+    const
         accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
         dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
         canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state),
         selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
-
+        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
+        isNavShown = IS_NAV_SHOWN_SELECTOR(state),
+        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
     return {
         dotsBitNumber,
         canCarouselMount,

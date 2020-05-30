@@ -49,21 +49,25 @@ import {
 } from '../../../redux/option/selectors'
 import { SELECTED_ANNOTATION_INDEX_SELECTOR } from '../../../redux/selected/selectors'
 import { SELECTED_WIKI_INDEX_SELECTOR } from '../../../redux/session/selectors'
+import {
+    IS_NAV_SHOWN_SELECTOR,
+    IS_DOTS_SLIDE_SHOWN_SELECTOR,
+    IS_LYRIC_EXPANDED_SELECTOR,
+    IS_SCORE_SHOWN_SELECTOR,
+    IS_ABOUT_SHOWN_SELECTOR
+} from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-            toggleStore: {
-                isDotsSlideShown,
-                isLyricExpanded,
-                isNavShown,
-                isScoreShown,
-                isAboutShown
-            }
-        } = state,
+    const
         selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
         selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
         selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
-        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state)
+        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
+        isNavShown = IS_NAV_SHOWN_SELECTOR(state),
+        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state),
+        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
+        isScoreShown = IS_SCORE_SHOWN_SELECTOR(state),
+        isAboutShown = IS_ABOUT_SHOWN_SELECTOR(state)
 
     return {
         isDotsSlideShown,
