@@ -265,6 +265,10 @@ class LetterManager extends PureComponent {
         this.dispatchScore = dispatch
     }
 
+    getDispatchTips = dispatch => {
+        this.dispatchTips = dispatch
+    }
+
     render() {
         return (
             <>
@@ -282,7 +286,7 @@ class LetterManager extends PureComponent {
                 <PlayDispatcher {...{ getRefs: this._getRefs }} />
                 <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
-                <TipsDispatcher {...{ getRefs: this._getRefs }} />
+                <TipsDispatcher {...{ ref: this.getDispatchTips }} />
                 <ScoreDispatcher {...{ ref: this.getDispatchScore }} />
             </>
         )

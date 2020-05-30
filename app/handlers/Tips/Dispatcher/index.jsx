@@ -1,6 +1,5 @@
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
 import { IS_LYRIC_LOGUE_SELECTOR } from '../../../redux/lyric/selectors'
 import {
@@ -10,73 +9,35 @@ import {
 import { getNextOption } from '../../../helpers/options'
 import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
 
-const mapStateToProps = state => {
+const TipsDispatcher = forwardRef((props, ref) => {
     const
-        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
-        isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state),
-        toggleShowsTipsImmediately = TOGGLE_SHOWS_TIPS_IMMEDIATELY_SELECTOR(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
+        dispatch = useDispatch(),
+        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
+        isTipsShowable = useSelector(IS_TIPS_SHOWABLE_SELECTOR),
+        toggleShowsTipsImmediately = useSelector(TOGGLE_SHOWS_TIPS_IMMEDIATELY_SELECTOR),
+        selectedTipsOption = useSelector(SELECTED_TIPS_OPTION_SELECTOR),
+        dispatchTips = ({
+            isToggled,
+            tipsOption
+        } = {}) => {
+            // Don't allow toggling in logue, or if no tip for this device width.
+            if (isLyricLogue || !isTipsShowable) {
+                return false
+            }
 
-    return {
-        isLyricLogue,
-        selectedTipsOption,
-        isTipsShowable,
-        toggleShowsTipsImmediately
-    }
-}
+            const newTipsOption = getNextOption({
+                isToggled,
+                toggleShows: toggleShowsTipsImmediately,
+                prevOption: selectedTipsOption,
+                nextOption: tipsOption
+            })
 
-class TipsDispatcher extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isLyricLogue: PropTypes.bool.isRequired,
-        selectedTipsOption: PropTypes.string.isRequired,
-        isTipsShowable: PropTypes.bool.isRequired,
-        toggleShowsTipsImmediately: PropTypes.bool.isRequired,
-        updateOptionStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchTips: this.dispatchTips
-        })
-    }
-
-    dispatchTips = ({
-        isToggled,
-        tipsOption
-    } = {}) => {
-        const {
-            isLyricLogue,
-            isTipsShowable,
-            toggleShowsTipsImmediately
-        } = this.props
-
-        // Don't allow toggling in logue, or if no tip for this device width.
-        if (isLyricLogue || !isTipsShowable) {
-            return false
+            dispatch(updateOptionStore({ selectedTipsOption: newTipsOption }))
+            return true
         }
 
-        const selectedTipsOption = getNextOption({
-            isToggled,
-            toggleShows: toggleShowsTipsImmediately,
-            prevOption: this.props.selectedTipsOption,
-            nextOption: tipsOption
-        })
+    useImperativeHandle(ref, () => dispatchTips)
+    return null
+})
 
-        this.props.updateOptionStore({ selectedTipsOption })
-        return true
-    }
-
-    render() {
-        return null
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    { updateOptionStore }
-)(TipsDispatcher)
+export default TipsDispatcher
