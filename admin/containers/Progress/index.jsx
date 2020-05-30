@@ -1,13 +1,10 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
-
 import Drawing from './Drawing'
 import AdminNav from './AdminNav'
-
 import { logSvgCount } from '../../utils/log'
 import { removeLoadingIndicator } from '../../../app/utils/browser'
-
-import './style.scss'
+import './style'
 
 class Progress extends PureComponent {
 

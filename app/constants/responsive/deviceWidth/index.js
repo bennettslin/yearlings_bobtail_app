@@ -13,7 +13,7 @@ import {
     WIDTH_MENU_BREAKPOINT,
     WIDTH_GOLDEN_CORD,
     WIDTH_UNCANNY_VALLEY
-} from '../../../scss/app'
+} from '../../../scss/exports/style'
 
 import { getJsFromSass } from '../../../helpers/format'
 

@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
-
 import AnnotationCards from './AnnotationCards'
-
 import {
     getMetadataForNextGlobalAnnotation,
     getGlobalAnnotationCount,
@@ -13,13 +11,11 @@ import {
     getTitleForAnnotation,
     getCardsForAnnotation
 } from '../../../app/album/api/annotations'
-
 import { getArrayOfLength } from '../../../app/helpers/general'
 import { removeLoadingIndicator } from '../../../app/utils/browser'
+import './style'
 
 const INTERVALS_COUNT = 4
-
-import './style.scss'
 
 const TempGlobalAnnotationsCounter = () => (
     <div className="TempGlobalAnnotationsCounter">

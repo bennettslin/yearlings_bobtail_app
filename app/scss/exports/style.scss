@@ -1,3 +1,11 @@
+@import '../constants/hue';
+@import '../constants/icon';
+@import '../constants/menu';
+@import '../constants/nav';
+@import '../constants/popup';
+@import '../constants/responsive';
+@import '../constants/slider';
+
 // Sass constants are uppercase when exported to JavaScript.
 :export {
     COUNT_GAPS_SINGLE: $COUNT_GAPS_SINGLE;

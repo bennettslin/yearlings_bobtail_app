@@ -1,11 +1,8 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
-
 import Sky from './Sky'
 import SkyDay from './SkyDay'
-
 import { removeLoadingIndicator } from '../../../app/utils/browser'
-
 import {
     TIME_TWILIGHT_TAIWAN,
     TIME_NIGHT_TAIWAN,
@@ -26,8 +23,7 @@ import {
     SEASON_OCEAN_SIDE,
     SEASON_THOUGHT
 } from '../../../app/scene/sky/keys'
-
-import './style.scss'
+import './style'
 
 class Skies extends PureComponent {
     componentDidMount() {

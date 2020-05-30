@@ -2,37 +2,29 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import scrollIntoView from 'scroll-into-view'
-
 import PreviewerSvg from './Svg'
 import PreviewerDashboard from './Dashboard'
-
 import {
     capitaliseForClassName,
     convertPresenceKeyToClassName
 } from '../../../app/helpers/format'
-
 import {
     getDocument,
     removeLoadingIndicator
 } from '../../../app/utils/browser'
-
 import { accessPresence } from '../../utils/access'
-
 import {
     getPresenceFromStorage,
     getPresenceFromQueryStrings,
     setPresenceInStorage,
     setPresenceInQueryStrings
 } from '../../utils/storage'
-
 import {
     getPreviewerSvgMapForActor,
     getPreviewerSvgMapForThing
 } from '../../utils/svg'
-
 import { BACKDROP } from '../../../app/constants/scene/things'
-
-import './style.scss'
+import './style'
 
 class Previewer extends PureComponent {
     static propTypes = {

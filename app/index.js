@@ -12,7 +12,7 @@ import './utils/analytics'
 
 import rootReducer from './redux'
 
-import './scss/app.scss'
+import './scss/app'
 
 // Get routes depending on whether in delivery or production.
 // eslint-disable-next-line import/no-unresolved
