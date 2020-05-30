@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import InlineSvg from '../../../modules/InlineSvg'
 import proscenium from '../../../../assets/svgs/theatre/proscenium'
+import './style'
 
 const mapStateToProps = state => {
     const {

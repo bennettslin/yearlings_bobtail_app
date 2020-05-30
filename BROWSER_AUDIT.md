@@ -12,13 +12,10 @@
 * Play button disabled after changing song. Is only good again upon reload.
 
 # Firefox
-* Sketchbooks are blank. (fixed, still need to validate.)
-* Wires for bottom bubble above wires for top bubble. (fixed, still need to validate.)
+* Performance is terrible.
 
 # Edge
-
-* Same as Firefox. (fixed, still need to validate.)
+* Colours are weird.
 
 # Internet Explorer
-
-* Unable to get property 'getBoundingClientRect' of undefined or null reference
+* Just broken all around.
