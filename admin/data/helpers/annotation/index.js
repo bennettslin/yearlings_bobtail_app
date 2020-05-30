@@ -115,6 +115,7 @@ const addAnnotationLists = (annotations, song) => {
         )
 
         annotationCardsDotKeysList.push(
+            // If single card, push individual dot keys for dev clarity.
             annotation.cards.length === 1 ?
                 getBitNumberFromDotKeys(
                     annotation.cards[0].dotKeys

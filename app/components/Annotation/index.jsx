@@ -6,8 +6,7 @@ import cx from 'classnames'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
-import { getCardCountForAnnotation } from '../../album/api/annotations'
-import { getArrayOfLength } from '../../helpers/general'
+import { getAnnotationCardIndices } from '../../album/api/annotations'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 import './style'
 
@@ -22,11 +21,6 @@ const Annotation = ({
         stopPropagation = useRef(),
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
 
-        cardCount = getCardCountForAnnotation(
-            lyricSongIndex,
-            annotationIndex
-        ),
-
         onClick = e => {
             logEvent({ e, componentName: `Annotation ${annotationIndex}` })
 
@@ -36,7 +30,7 @@ const Annotation = ({
         }
 
     // If in popup, annotation won't always exist.
-    return Boolean(cardCount) && (
+    return annotationIndex && (
         <>
             <div
                 {...{
@@ -68,7 +62,10 @@ const Annotation = ({
                     }}
                 />
 
-                {getArrayOfLength(cardCount).map(cardIndex => (
+                {getAnnotationCardIndices(
+                    lyricSongIndex,
+                    annotationIndex
+                ).map(cardIndex => (
                     <AnnotationCard
                         {...{
                             key: cardIndex,

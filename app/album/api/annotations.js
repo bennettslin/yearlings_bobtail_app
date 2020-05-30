@@ -81,9 +81,12 @@ export const getCardsForAnnotation = (songIndex, annotationIndex) => {
     return Array.isArray(cards) ? cards : [cards]
 }
 
-export const getCardCountForAnnotation = (songIndex, annotationIndex) => {
-    const cards = getCardsForAnnotation(songIndex, annotationIndex)
-    return cards ? cards.length : 0
+export const getAnnotationCardIndices = (songIndex, annotationIndex) => {
+    const { annotationCardsDescriptionsList } = getSong(songIndex)
+    return getArrayOfLength(
+        // Which card array we use is arbitrary.
+        annotationCardsDescriptionsList[annotationIndex - 1].length
+    )
 }
 
 export const getDescriptionForAnnotationCard = (
@@ -91,7 +94,7 @@ export const getDescriptionForAnnotationCard = (
 ) => {
     const { annotationCardsDescriptionsList } = getSong(songIndex),
         descriptions = annotationCardsDescriptionsList[annotationIndex - 1]
-    return descriptions ? descriptions[cardIndex] : null
+    return descriptions[cardIndex]
 }
 
 export const getDotKeysForAnnotationCard = (
