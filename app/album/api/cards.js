@@ -35,6 +35,7 @@ export const getDotKeysForAnnotationCard = (
     if (!dotKeysEntity) {
         return null
     }
+
     const dotKeysBitNumber = Array.isArray(dotKeysEntity) ?
         dotKeysEntity[cardIndex] :
         dotKeysEntity

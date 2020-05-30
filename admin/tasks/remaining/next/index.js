@@ -7,7 +7,7 @@ export default [
 
     /* Weekend work. */
     {
-        taskName: `Wrap up data refactor. Remove annotations from verses. Remove verses from units. Remove extra stuff from annotation cards. If wiki or wormhole index is single, just pass it instead of array. Cubes should also grab values from a selector, rather than the store.`,
+        taskName: `Wrap up data refactor. Remove annotations from verses. Remove verses from units. Cubes should also grab values from a selector, rather than the store.`,
         workedHours: 0,
         neededHours: 20
     },

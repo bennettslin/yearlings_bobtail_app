@@ -33,19 +33,23 @@ export const addWormholeMetadata = (annotationsList, album) => {
             const annotationCardsWormholeLinksList = []
 
             annotations.forEach(annotation => {
-                const wormholeLinks = []
+                let wormholeLinks = null
 
                 annotation.cards.forEach(card => {
-                    wormholeLinks.push(card.wormholeLinks)
+                    /**
+                     * There is only one wormholeLinks array per annotation. So
+                     * it does not need to be nested under any given card.
+                     */
+                    if (card.wormholeLinks) {
+
+                        // If there is only one link, just add it directly.
+                        wormholeLinks = card.wormholeLinks.length === 1 ?
+                            card.wormholeLinks[0] :
+                            card.wormholeLinks
+                    }
                 })
 
-                annotationCardsWormholeLinksList.push(
-                    /**
-                     * No need to identify by card, because there is only one
-                     * wormholeLinks array per annotation.
-                     */
-                    wormholeLinks.find(links => links) || null
-                )
+                annotationCardsWormholeLinksList.push(wormholeLinks)
             })
 
             album.songs[songIndex].annotationCardsWormholeLinksList = annotationCardsWormholeLinksList
