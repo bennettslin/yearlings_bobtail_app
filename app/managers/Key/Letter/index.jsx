@@ -253,6 +253,10 @@ class LetterManager extends PureComponent {
         this.dispatchAudioOption = dispatch
     }
 
+    getDispatchDotsSlide = dispatch => {
+        this.dispatchDotsSlide = dispatch
+    }
+
     getDispatchEarColumn = dispatch => {
         this.dispatchEarColumn = dispatch
     }
@@ -269,7 +273,7 @@ class LetterManager extends PureComponent {
                     {...{ ref: this.getDispatchAudioOption }}
                 />
                 <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
-                <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
+                <DotsSlideDispatcher {...{ ref: this.getDispatchDotsSlide }} />
                 <EarColumnDispatcher {...{ ref: this.getDispatchEarColumn }} />
                 <ActivatedSceneDispatcher {...{ ref: this.getActivateSceneDirection }} />
                 <ActivatedVerseDispatcher {...{ ref: this.getActivateVerse }} />

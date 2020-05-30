@@ -31,6 +31,10 @@ class DotsSlideToggle extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchDotsSlide = dispatch => {
+        this.dispatchDotsSlide = dispatch
+    }
+
     render() {
         const { className } = this.props
 
@@ -54,7 +58,7 @@ class DotsSlideToggle extends PureComponent {
                 <TipsHand {...{ tipType: DOTS }} />
                 <TipsHand isPointedAtDots {...{ tipType: WORMHOLES }} />
                 <TipsHand isPointedAtDots {...{ tipType: WIKI }} />
-                <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
+                <DotsSlideDispatcher {...{ ref: this.getDispatchDotsSlide }} />
             </div>
         )
     }
