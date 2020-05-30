@@ -74,8 +74,7 @@ const AnnotationCard = ({
                     <AnnotationWormholes
                         {...{
                             isSelected,
-                            annotationIndex,
-                            cardIndex
+                            annotationIndex
                         }}
                     />
                 )}

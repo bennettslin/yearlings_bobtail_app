@@ -6,11 +6,9 @@ import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'
 import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormhole/Dispatcher'
+import { getWikiWormholeEntity } from '../../../../album/api/annotations'
+import { getWormholeLinkForWikiWormhole } from '../../../../album/api/wormholes'
 import { populateRefs } from '../../../../helpers/ref'
-import {
-    getWikiWormholeEntity,
-    getWormholeLinkFromIndex
-} from './helper'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -94,11 +92,11 @@ class AnnotationNavigation extends PureComponent {
                         selectedAnnotationIndex
                     } = this.props,
 
-                    wikiWormholeEntity = getWikiWormholeEntity({
-                        songIndex: selectedSongIndex,
-                        annotationIndex: selectedAnnotationIndex,
-                        accessedIndex: accessedWikiWormholeIndex
-                    })
+                    wikiWormholeEntity = getWikiWormholeEntity(
+                        selectedSongIndex,
+                        selectedAnnotationIndex,
+                        accessedWikiWormholeIndex
+                    )
 
                 if (accessedWikiWormholeIndex && wikiWormholeEntity) {
 
@@ -108,15 +106,12 @@ class AnnotationNavigation extends PureComponent {
 
                     // It's a wormhole index.
                     } else {
-                        const
-                            wormholeLink = getWormholeLinkFromIndex({
-                                songIndex: selectedSongIndex,
-                                annotationIndex: selectedAnnotationIndex,
-                                wikiWormholeIndex: wikiWormholeEntity
-                            })
-
                         keyWasRegistered =
-                            this.dispatchSong(wormholeLink)
+                            this.dispatchSong(getWormholeLinkForWikiWormhole(
+                                selectedSongIndex,
+                                selectedAnnotationIndex,
+                                wikiWormholeEntity
+                            ))
 
                         /**
                          * If song was selected, then annotation index was

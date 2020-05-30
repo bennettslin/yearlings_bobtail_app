@@ -14,9 +14,9 @@ import {
     LYRIC_CENTRE
 } from '../../../../../constants/lyrics'
 import { getIndexedTitleForSong } from '../../../../../album/api/songs'
+import { getWormholeLinkForWormhole } from '../../../../../album/api/wormholes'
 import { getVerse } from '../../../../../album/api/verses'
 import { populateRefs } from '../../../../../helpers/ref'
-import { getCardWormholeLink } from './helper'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
@@ -36,7 +36,6 @@ class AnnotationWormhole extends PureComponent {
         // From parent.
         isAccessedShown: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired,
-        cardIndex: PropTypes.number.isRequired,
         wormholeLinkIndex: PropTypes.number.isRequired
     }
 
@@ -44,16 +43,14 @@ class AnnotationWormhole extends PureComponent {
         const {
             lyricSongIndex,
             annotationIndex,
-            cardIndex,
             wormholeLinkIndex
         } = this.props
 
-        return getCardWormholeLink({
-            songIndex: lyricSongIndex,
+        return getWormholeLinkForWormhole(
+            lyricSongIndex,
             annotationIndex,
-            cardIndex,
             wormholeLinkIndex
-        })
+        )
     }
 
     _handleWormholeClick = () => {

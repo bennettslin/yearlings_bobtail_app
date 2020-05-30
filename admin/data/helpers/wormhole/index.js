@@ -26,4 +26,29 @@ export const addWormholeMetadata = (annotationsList, album) => {
                 .annotationWikiWormholes = annotationWikiWormholes
         }
     })
+
+    // Tell each song its list of wormhole links.
+    annotationsList.forEach((annotations, songIndex) => {
+        if (annotations) {
+            const annotationCardsWormholeLinksList = []
+
+            annotations.forEach(annotation => {
+                const wormholeLinks = []
+
+                annotation.cards.forEach(card => {
+                    wormholeLinks.push(card.wormholeLinks)
+                })
+
+                annotationCardsWormholeLinksList.push(
+                    /**
+                     * No need to identify by card, because there is only one
+                     * wormholeLinks array per annotation.
+                     */
+                    wormholeLinks.find(links => links) || null
+                )
+            })
+
+            album.songs[songIndex].annotationCardsWormholeLinksList = annotationCardsWormholeLinksList
+        }
+    })
 }

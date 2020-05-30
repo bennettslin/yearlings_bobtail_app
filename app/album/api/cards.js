@@ -41,29 +41,3 @@ export const getDotKeysForAnnotationCard = (
 
     return getDotKeysFromBitNumber(dotKeysBitNumber)
 }
-
-export const getCardsForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationCardsList } = getSong(songIndex),
-        cards = annotationCardsList[annotationIndex - 1]
-
-    if (!cards) {
-        return null
-    }
-
-    // If single card object, return wrapped in an array.
-    return Array.isArray(cards) ? cards : [cards]
-}
-
-const getCardForAnnotation = (songIndex, annotationIndex, cardIndex) => {
-    const cards = getCardsForAnnotation(songIndex, annotationIndex)
-    return cards ? cards[cardIndex] : null
-}
-
-export const getWormholeLinksForAnnotationCard = (
-    songIndex,
-    annotationIndex,
-    cardIndex
-) => {
-    const card = getCardForAnnotation(songIndex, annotationIndex, cardIndex)
-    return card ? card.wormholeLinks : null
-}

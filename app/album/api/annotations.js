@@ -42,13 +42,6 @@ export const getTodosForAnnotation = (songIndex, annotationIndex) => {
     return annotationTodos[annotationIndex - 1]
 }
 
-export const getWikiWormholesForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationWikiWormholes } = getSong(songIndex)
-    return annotationWikiWormholes ?
-        annotationWikiWormholes[annotationIndex - 1] :
-        0
-}
-
 export const getVerseIndexForAnnotation = (songIndex, annotationIndex) => {
     const { annotationVerseIndices } = getSong(songIndex),
         annotationVerseIndex = annotationVerseIndices[annotationIndex - 1]
@@ -66,4 +59,27 @@ export const getColumnIndexForAnnotation = (songIndex, annotationIndex) => {
 
     const columnIndex = annotationColumnIndices[annotationIndex - 1]
     return columnIndex >= 0 ? columnIndex : null
+}
+
+export const getWikiWormholesForAnnotation = (songIndex, annotationIndex) => {
+    const { annotationWikiWormholes } = getSong(songIndex)
+    return annotationWikiWormholes ?
+        annotationWikiWormholes[annotationIndex - 1] :
+        0
+}
+
+export const getWikiWormholeEntity = (
+    songIndex,
+    annotationIndex,
+    wikiWormholeIndex
+
+) => {
+    const annotationWikiWormholes = getWikiWormholesForAnnotation(
+        songIndex,
+        annotationIndex
+    )
+
+    return annotationWikiWormholes ?
+        annotationWikiWormholes[wikiWormholeIndex - 1] :
+        null
 }

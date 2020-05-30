@@ -74,13 +74,12 @@ const _recurseThroughVerse = ({
     }
 }
 
-const addAnnotationLists = (annotations, song) => {
+const _registerAnnotationMetadata = (annotations, song) => {
     const
         annotationColumnIndices = [],
         annotationDotKeysList = [],
         annotationTitles = [],
         annotationVerseIndices = [],
-        annotationCardsList = [],
         annotationCardsDescriptionsList = [],
         annotationCardsDotKeysList = []
 
@@ -103,12 +102,6 @@ const addAnnotationLists = (annotations, song) => {
             Number.isFinite(annotation.verseIndex) ?
                 annotation.verseIndex :
                 -1
-        )
-        annotationCardsList.push(
-            // If single card, push individual card object for dev clarity.
-            annotation.cards.length === 1 ?
-                annotation.cards[0] :
-                annotation.cards
         )
         annotationCardsDescriptionsList.push(
             annotation.cards.map(card => card.description || null)
@@ -133,7 +126,6 @@ const addAnnotationLists = (annotations, song) => {
     song.annotationDotKeysList = annotationDotKeysList
     song.annotationTitles = annotationTitles
     song.annotationVerseIndices = annotationVerseIndices
-    song.annotationCardsList = annotationCardsList
     song.annotationCardsDescriptionsList = annotationCardsDescriptionsList
     song.annotationCardsDotKeysList = annotationCardsDotKeysList
 }
@@ -177,7 +169,7 @@ export const addAnnotationMetadata = (songIndex, song) => {
         })
     })
 
-    addAnnotationLists(annotations, song)
+    _registerAnnotationMetadata(annotations, song)
 
     return annotations
 }

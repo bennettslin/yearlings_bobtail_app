@@ -129,10 +129,10 @@ export const addWormholeLinksToCard = (annotationsList, tempWormholeLinks) => {
                     songIndex,
                     verseIndex,
                     annotationIndex,
-                    columnIndex,
-                    wormholePrefix,
                     destinationWormholeIndex,
-                    sourceWormholeIndex
+                    sourceWormholeIndex,
+                    ...Number.isFinite(columnIndex) && { columnIndex },
+                    ...wormholePrefix && { wormholePrefix }
                 }
             })
         })

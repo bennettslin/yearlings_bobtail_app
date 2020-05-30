@@ -1,5 +1,6 @@
 # Bugs while production hasn't changed.
-* Really bad wormhole bug!
+* Really bad wormhole bug! Seems fine now?
+* After accessed wormhole, key navigation does not work until manual focus.
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
 * Switching between songs in local is slow, not as slow in staging
