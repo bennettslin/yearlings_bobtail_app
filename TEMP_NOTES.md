@@ -23,6 +23,7 @@
 * Also, the listeners.
 * Make dispatchers functions.
 * Make isActivated and isSelected selectors.
+* Remove extraneous bit number helpers.
 
 # Ongoing Gatsby tasks
 * Dynamic routes for song indices

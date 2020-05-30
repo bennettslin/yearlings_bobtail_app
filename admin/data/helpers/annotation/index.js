@@ -1,5 +1,6 @@
 import albumLyrics from '../../lyrics'
 import { registerAnnotation } from './helpers'
+import { getBitNumberFromDotKeys } from '../../../../app/helpers/dot'
 
 import {
     ANNOTATION_SEARCH_KEYS,
@@ -73,6 +74,69 @@ const _recurseThroughVerse = ({
     }
 }
 
+const addAnnotationLists = (annotations, song) => {
+    const
+        annotationColumnIndices = [],
+        annotationDotKeysList = [],
+        annotationTitles = [],
+        annotationVerseIndices = [],
+        annotationCardsList = [],
+        annotationCardsDescriptionsList = [],
+        annotationCardsDotKeysList = []
+
+    /**
+     * Now that we have recursively gone through the lyrics and the annotation
+     * data has been populated, we will now spread them out into arrays for
+     * the final build. This is necessary because we don't know the final
+     * annotation count and some values are empty, so we need to be able to
+     * push default values to keep the array lengths equal.
+     */
+    annotations.forEach(annotation => {
+        annotationColumnIndices.push(
+            Number.isFinite(annotation.columnIndex) ?
+                annotation.columnIndex :
+                -1
+        )
+        annotationDotKeysList.push(getBitNumberFromDotKeys(annotation.dotKeys))
+        annotationTitles.push(annotation.title)
+        annotationVerseIndices.push(
+            Number.isFinite(annotation.verseIndex) ?
+                annotation.verseIndex :
+                -1
+        )
+        annotationCardsList.push(
+            // If single card, push individual card object for dev clarity.
+            annotation.cards.length === 1 ?
+                annotation.cards[0] :
+                annotation.cards
+        )
+        annotationCardsDescriptionsList.push(
+            annotation.cards.map(card => card.description || null)
+        )
+
+        annotationCardsDotKeysList.push(
+            annotation.cards.length === 1 ?
+                getBitNumberFromDotKeys(
+                    annotation.cards[0].dotKeys
+                ) || null :
+                annotation.cards.map(card => getBitNumberFromDotKeys(
+                    card.dotKeys
+                ) || null)
+        )
+    })
+
+    // Don't bother to add if it's all left column.
+    if (annotationColumnIndices.some(index => index === 1)) {
+        song.annotationColumnIndices = annotationColumnIndices
+    }
+    song.annotationDotKeysList = annotationDotKeysList
+    song.annotationTitles = annotationTitles
+    song.annotationVerseIndices = annotationVerseIndices
+    song.annotationCardsList = annotationCardsList
+    song.annotationCardsDescriptionsList = annotationCardsDescriptionsList
+    song.annotationCardsDotKeysList = annotationCardsDotKeysList
+}
+
 export const addAnnotationMetadata = (songIndex, song) => {
     const { lyricUnits } = albumLyrics[songIndex],
         annotations = []
@@ -112,67 +176,7 @@ export const addAnnotationMetadata = (songIndex, song) => {
         })
     })
 
-    const
-        annotationColumnIndices = [],
-        annotationDotKeysList = [],
-        annotationTitles = [],
-        annotationVerseIndices = [],
-        annotationCardsList = [],
-        annotationCardsDescriptionsList = [],
-        annotationCardsDotKeysList = [],
-        annotationCardsWormholeLinksList = []
+    addAnnotationLists(annotations, song)
 
-    /**
-     * Now that we have recursively gone through the lyrics and the annotation
-     * data has been populated, we will now spread them out into arrays for
-     * the final build. This is necessary because we don't know the final
-     * annotation count and some values are empty, so we need to be able to
-     * push default values to keep the array lengths equal.
-     */
-    annotations.forEach(annotation => {
-        annotationColumnIndices.push(
-            Number.isFinite(annotation.columnIndex) ?
-                annotation.columnIndex :
-                -1
-        )
-        annotationDotKeysList.push(annotation.dotKeys)
-        annotationTitles.push(annotation.title)
-        annotationVerseIndices.push(
-            Number.isFinite(annotation.verseIndex) ?
-                annotation.verseIndex :
-                -1
-        )
-        annotationCardsList.push(
-            // If single card, push individual card object for dev clarity.
-            annotation.cards.length === 1 ?
-                annotation.cards[0] :
-                annotation.cards
-        )
-        annotationCardsDescriptionsList.push(
-            annotation.cards.map(card => card.description || null)
-        )
-        annotationCardsDotKeysList.push(
-            annotation.cards.length === 1 ?
-                annotation.cards[0].dotKeys || null :
-                annotation.cards.map(card => card.dotKeys || null)
-        )
-        annotationCardsWormholeLinksList.push(
-            annotation.cards.length === 1 ?
-                annotation.cards[0].wormholeLinks || null :
-                annotation.cards.map(card => card.wormholeLinks || null)
-        )
-    })
-
-    // Don't bother to add if it's all left column.
-    if (annotationColumnIndices.some(index => index === 1)) {
-        song.annotationColumnIndices = annotationColumnIndices
-    }
-    song.annotationDotKeysList = annotationDotKeysList
-    song.annotationTitles = annotationTitles
-    song.annotationVerseIndices = annotationVerseIndices
-    song.annotationCardsList = annotationCardsList
-    song.annotationCardsDescriptionsList = annotationCardsDescriptionsList
-    song.annotationCardsDotKeysList = annotationCardsDotKeysList
-    song.annotationCardsWormholeLinksList = annotationCardsWormholeLinksList
     return annotations
 }

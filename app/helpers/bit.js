@@ -80,6 +80,7 @@ export const getObjectFromBitNumber = ({
     return returnObject
 }
 
+// TODO: Get rid of this as well.
 export const getValueInBitNumber = ({
     keysArray,
     keysCount,
@@ -96,6 +97,7 @@ export const getValueInBitNumber = ({
     return trueFalseObject[key]
 }
 
+// TODO: Get rid of this. Just use getBitNumberFromObject.
 export const setNewValueInBitNumber = ({
     keysArray,
     keysCount,

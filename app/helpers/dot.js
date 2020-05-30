@@ -28,10 +28,10 @@ export const getDotKeysFromBitNumber = bitNumber => (
     })
 )
 export const getBitNumberFromDotKeys = dotKeys => (
-    getBitNumberFromObject({
+    dotKeys ? getBitNumberFromObject({
         keysArray: ORDERED_DOT_KEYS,
         trueFalseObject: dotKeys
-    })
+    }) : null
 )
 
 export const getPrefixedDotLetterClassNames = (entity, prefix) => {
