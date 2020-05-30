@@ -1,33 +1,25 @@
-import React, { PureComponent } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import FilmstripCell from './Cell'
 import './style'
 
-class FilmstripScene extends PureComponent {
+const FilmstripScene = ({
+    isOdd,
+    isActivatedScene,
+    isSliderScene,
+    isSelectedScene,
+    isAfterCursor,
+    sceneIndex,
+    sceneLeft,
+    sceneWidth,
+    cursorWidth,
+    dispatchScene,
+    stopPropagation
 
-    static propTypes = {
-        // From parent.
-        isOdd: PropTypes.bool.isRequired,
-        isActivatedScene: PropTypes.bool.isRequired,
-        isSliderScene: PropTypes.bool.isRequired,
-        isSelectedScene: PropTypes.bool.isRequired,
-        isAfterCursor: PropTypes.bool.isRequired,
-        sceneIndex: PropTypes.number.isRequired,
-        sceneLeft: PropTypes.number.isRequired,
-        sceneWidth: PropTypes.number.isRequired,
-        cursorWidth: PropTypes.number,
-        dispatchScene: PropTypes.func.isRequired,
-        stopPropagation: PropTypes.func.isRequired
-    }
-
-    _handleSceneClick = e => {
-        const {
-            isSelectedScene,
-            sceneIndex
-        } = this.props
-
-        this.props.stopPropagation(e)
+}) => {
+    const _handleSceneClick = e => {
+        stopPropagation(e)
 
         if (isSelectedScene) {
             return
@@ -35,51 +27,52 @@ class FilmstripScene extends PureComponent {
 
         logEvent({ e, componentName: 'FilmstripScene' })
 
-        this.props.dispatchScene(sceneIndex)
+        dispatchScene(sceneIndex)
     }
 
-    render() {
-        const {
-            isOdd,
-            isActivatedScene,
-            isSliderScene,
-            isSelectedScene,
-            isAfterCursor,
-            sceneLeft,
-            sceneWidth,
-            cursorWidth
-        } = this.props
-
-        return (
-            <div
+    return (
+        <div
+            {...{
+                className: cx(
+                    'FilmstripScene',
+                    isSelectedScene ?
+                        'FilmstripScene__selected' :
+                        'FilmstripScene__interactable',
+                    'abF'
+                ),
+                style: {
+                    left: `${sceneLeft}%`,
+                    width: `${sceneWidth}%`
+                },
+                onClick: _handleSceneClick
+            }}
+        >
+            <FilmstripCell
                 {...{
-                    className: cx(
-                        'FilmstripScene',
-                        isSelectedScene ?
-                            'FilmstripScene__selected' :
-                            'FilmstripScene__interactable',
-                        'abF'
-                    ),
-                    style: {
-                        left: `${sceneLeft}%`,
-                        width: `${sceneWidth}%`
-                    },
-                    onClick: this._handleSceneClick
+                    isOdd,
+                    isActivatedScene,
+                    isSliderScene,
+                    isSelectedScene,
+                    isAfterCursor,
+                    cursorWidth
                 }}
-            >
-                <FilmstripCell
-                    {...{
-                        isOdd,
-                        isActivatedScene,
-                        isSliderScene,
-                        isSelectedScene,
-                        isAfterCursor,
-                        cursorWidth
-                    }}
-                />
-            </div>
-        )
-    }
+            />
+        </div>
+    )
 }
 
-export default FilmstripScene
+FilmstripScene.propTypes = {
+    isOdd: PropTypes.bool.isRequired,
+    isActivatedScene: PropTypes.bool.isRequired,
+    isSliderScene: PropTypes.bool.isRequired,
+    isSelectedScene: PropTypes.bool.isRequired,
+    isAfterCursor: PropTypes.bool.isRequired,
+    sceneIndex: PropTypes.number.isRequired,
+    sceneLeft: PropTypes.number.isRequired,
+    sceneWidth: PropTypes.number.isRequired,
+    cursorWidth: PropTypes.number,
+    dispatchScene: PropTypes.func.isRequired,
+    stopPropagation: PropTypes.func.isRequired
+}
+
+export default memo(FilmstripScene)
