@@ -1,5 +1,6 @@
-.Stanza {
+@import '../../../scss/constants/icon';
 
+.Stanza {
     /**
      * Going by first child rather than last here, so that there is no margin
      * bottom left over if the last unit is a hidden dot unit.

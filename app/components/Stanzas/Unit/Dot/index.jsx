@@ -14,6 +14,8 @@ import {
 } from '../../../../redux/access/selectors'
 import { IS_ACTIVATED_SELECTOR } from '../../../../redux/activated/selectors'
 import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../../../redux/lyric/selectors'
+import './logic'
+import './style'
 
 const mapStateToProps = state => {
     const {

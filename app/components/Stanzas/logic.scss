@@ -1,3 +1,7 @@
+@import '../../scss/constants/icon';
+@import '../../scss/constants/logic';
+@import '../../scss/constants/zIndex';
+
 @for $stanzaIndex from 0 through $stanzaMax {
 
     // "Root cursored stanza index, child stanza index."

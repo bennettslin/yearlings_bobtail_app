@@ -1,3 +1,6 @@
+@import '../../../../scss/constants/logic';
+@import '../../../../scss/constants/lyric';
+
 @each $dotLetter in $dotLettersArray {
 
     // "Root selected dot letter, child unit dot letter."

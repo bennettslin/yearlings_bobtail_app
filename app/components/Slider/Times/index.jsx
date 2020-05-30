@@ -1,8 +1,7 @@
 // Text displays to indicate time spent and remaining.
 
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import SliderTime from './Time'
 import { getDurationForSong } from '../../../album/api/time'
@@ -13,82 +12,49 @@ import {
 } from '../../../redux/activated/selectors'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 import { SELECTED_TIME_SELECTOR } from '../../../redux/selected/selectors'
+import {
+    IS_SLIDER_MOVING_SELECTOR,
+    SLIDER_TIME_SELECTOR
+} from '../../../redux/slider/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const {
-            sliderStore: {
-                isSliderMoving,
-                sliderTime
-            }
-        } = state,
-        isActivated = IS_ACTIVATED_SELECTOR(state),
-        activatedTime = ACTIVATED_TIME_SELECTOR(state),
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        selectedTime = SELECTED_TIME_SELECTOR(state)
+const SliderTimes = () => {
+    const
+        isActivated = useSelector(IS_ACTIVATED_SELECTOR),
+        activatedTime = useSelector(ACTIVATED_TIME_SELECTOR),
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        selectedTime = useSelector(SELECTED_TIME_SELECTOR),
+        isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
+        sliderTime = useSelector(SLIDER_TIME_SELECTOR)
 
-    return {
-        lyricSongIndex,
-        selectedTime,
-        isSliderMoving,
-        sliderTime,
-        isActivated,
-        activatedTime
+    let time = selectedTime
+
+    if (isSliderMoving) {
+        time = sliderTime
     }
+
+    if (isActivated) {
+        time = activatedTime
+    }
+
+    const remainTime = getDurationForSong(lyricSongIndex) - time
+
+    return (
+        <div className={cx(
+            'SliderTimes',
+            'abF'
+        )}>
+
+            <SliderTime
+                isSpent
+                time={getFormattedTime(time)}
+            />
+
+            <SliderTime
+                time={`\u2013${getFormattedTime(remainTime)}`}
+            />
+        </div>
+    )
 }
 
-class SliderTimes extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
-        selectedTime: PropTypes.number.isRequired,
-        isSliderMoving: PropTypes.bool.isRequired,
-        sliderTime: PropTypes.number.isRequired,
-        isActivated: PropTypes.bool.isRequired,
-        activatedTime: PropTypes.number.isRequired
-    }
-
-    render() {
-
-        const {
-            lyricSongIndex,
-            selectedTime,
-            isSliderMoving,
-            sliderTime,
-            isActivated,
-            activatedTime
-        } = this.props
-
-        let time = selectedTime
-
-        if (isSliderMoving) {
-            time = sliderTime
-        }
-
-        if (isActivated) {
-            time = activatedTime
-        }
-
-        const remainTime = getDurationForSong(lyricSongIndex) - time
-
-        return (
-            <div className={cx(
-                'SliderTimes',
-                'abF'
-            )}>
-
-                <SliderTime
-                    isSpent
-                    time={getFormattedTime(time)}
-                />
-
-                <SliderTime
-                    time={`\u2013${getFormattedTime(remainTime)}`}
-                />
-            </div>
-        )
-    }
-}
-
-export default connect(mapStateToProps)(SliderTimes)
+export default SliderTimes

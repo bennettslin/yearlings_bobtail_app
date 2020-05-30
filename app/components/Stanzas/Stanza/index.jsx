@@ -9,6 +9,7 @@ import { connect } from 'react-redux'
 import { getUnitIndicesForStanza } from '../../../album/api/stanzas'
 import Unit from '../Unit'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
@@ -18,49 +19,47 @@ const mapStateToProps = state => {
     }
 }
 
-const propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
+const Stanza = ({
+    lyricSongIndex,
+    stanzaIndex,
+    logicSelectors,
 
-        // From parent.
-        stanzaIndex: PropTypes.number.isRequired,
-        logicSelectors: PropTypes.string.isRequired
-    },
+    ...other
+}) => {
 
-    Stanza = ({
+    const stanzaUnitIndices = getUnitIndicesForStanza(
         lyricSongIndex,
-        stanzaIndex,
-        logicSelectors,
+        stanzaIndex
+    )
 
-        ...other
-    }) => {
+    return (
+        <div
+            className={cx(
+                'Stanza',
+                logicSelectors
+            )}
+        >
+            {stanzaUnitIndices.map(unitIndex => {
+                return (
+                    <Unit {...other}
+                        {...{
+                            key: unitIndex,
+                            unitIndex
+                        }}
+                    />
+                )
+            })}
+        </div>
+    )
+}
 
-        const stanzaUnitIndices = getUnitIndicesForStanza(
-            lyricSongIndex,
-            stanzaIndex
-        )
+Stanza.propTypes = {
+    // Through Redux.
+    lyricSongIndex: PropTypes.number.isRequired,
 
-        return (
-            <div
-                className={cx(
-                    'Stanza',
-                    logicSelectors
-                )}
-            >
-                {stanzaUnitIndices.map(unitIndex => {
-                    return (
-                        <Unit {...other}
-                            {...{
-                                key: unitIndex,
-                                unitIndex
-                            }}
-                        />
-                    )
-                })}
-            </div>
-        )
-    }
-
-Stanza.propTypes = propTypes
+    // From parent.
+    stanzaIndex: PropTypes.number.isRequired,
+    logicSelectors: PropTypes.string.isRequired
+}
 
 export default connect(mapStateToProps)(memo(Stanza))

@@ -14,53 +14,52 @@ const mapStateToProps = state => {
     }
 }
 
-const propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
+const StanzaHoc = ({
+    lyricSongIndex,
+    StanzaComponent,
+    ...other
 
-        // From parent.
-        stanzaIndex: PropTypes.number.isRequired,
-        StanzaComponent: PropTypes.object.isRequired
-    },
+}) => {
 
-    StanzaHoc = ({
-        lyricSongIndex,
-        StanzaComponent,
-        ...other
-    }) => {
+    const { stanzaIndex } = other,
 
-        const { stanzaIndex } = other,
+        logicSelectors = cx(
+        // "Child component stanza index."
 
-            logicSelectors = cx(
-            // "Child component stanza index."
+            // Aligned selector when on cursor.
+            Number.isFinite(stanzaIndex) &&
+            `ChS${stanzaIndex}`,
 
-                // Aligned selector when on cursor.
-                Number.isFinite(stanzaIndex) &&
-                `ChS${stanzaIndex}`,
+            /**
+             * General selector when before cursor, general
+             * sibling selector when after cursor.
+             */
+            Number.isFinite(stanzaIndex) &&
+            'ChS',
 
-                /**
-                 * General selector when before cursor, general
-                 * sibling selector when after cursor.
-                 */
-                Number.isFinite(stanzaIndex) &&
-                'ChS',
-
-                // "Parent of verse index."
-                getParentOfVerseClassNamesForIndices({
-                    entities: getVerseIndicesForStanza(
-                        lyricSongIndex,
-                        stanzaIndex
-                    )
-                })
-            )
-
-        return (
-            <StanzaComponent {...other}
-                {...{ logicSelectors }}
-            />
+            // "Parent of verse index."
+            getParentOfVerseClassNamesForIndices({
+                entities: getVerseIndicesForStanza(
+                    lyricSongIndex,
+                    stanzaIndex
+                )
+            })
         )
-    }
 
-StanzaHoc.propTypes = propTypes
+    return (
+        <StanzaComponent {...other}
+            {...{ logicSelectors }}
+        />
+    )
+}
+
+StanzaHoc.propTypes = {
+    // Through Redux.
+    lyricSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    stanzaIndex: PropTypes.number.isRequired,
+    StanzaComponent: PropTypes.object.isRequired
+}
 
 export default connect(mapStateToProps)(memo(StanzaHoc))

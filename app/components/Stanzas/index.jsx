@@ -13,6 +13,8 @@ import { getStanzaIndices } from '../../album/api/stanzas'
 import { getLastUnitDotCardIndex } from '../../album/api/units'
 import { populateRefs } from '../../helpers/ref'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
+import './logic'
+import './style'
 
 const mapStateToProps = state => {
     const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)

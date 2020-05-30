@@ -3,13 +3,10 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import { getParentOfVerseClassNamesForIndices } from '../../helper'
-
 import VerseHoc from '../../../Verse/Hoc'
 import Verse from '../../../Verse'
 import TipsHand from '../../../Tips/Hand'
-
 import {
     RESPONSE,
     RHYME
@@ -21,6 +18,7 @@ import {
     WORMHOLES,
     WIKI
 } from '../../../../constants/tips'
+import './style'
 
 /*************
  * CONTAINER *

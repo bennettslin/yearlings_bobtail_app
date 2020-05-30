@@ -3,27 +3,25 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import './style'
 
-const sliderTimePropTypes = {
-        isSpent: PropTypes.bool,
-        time: PropTypes.string.isRequired
-    },
+const SliderTime = ({
+    isSpent,
+    time
 
-    SliderTime = ({
-        isSpent,
-        time
+}) => (
+    <div className={cx(
+        'SliderTime',
+        isSpent ?
+            'SliderTime__spent' :
+            'SliderTime__remain',
+        'textShadow__dark'
+    )}>
+        {time}
+    </div>
+)
 
-    }) => (
-        <div className={cx(
-            'SliderTime',
-            isSpent ?
-                'SliderTime__spent' :
-                'SliderTime__remain',
-            'textShadow__dark'
-        )}>
-            {time}
-        </div>
-    )
-
-SliderTime.propTypes = sliderTimePropTypes
+SliderTime.propTypes = {
+    isSpent: PropTypes.bool,
+    time: PropTypes.string.isRequired
+}
 
 export default memo(SliderTime)
