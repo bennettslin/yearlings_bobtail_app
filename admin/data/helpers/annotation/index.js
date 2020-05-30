@@ -139,7 +139,12 @@ export const addAnnotationMetadata = (songIndex, song) => {
                 annotation.verseIndex :
                 -1
         )
-        annotationCardsList.push(annotation.cards)
+        annotationCardsList.push(
+            // If single card, push individual card object for dev clarity.
+            annotation.cards.length === 1 ?
+                annotation.cards[0] :
+                annotation.cards
+        )
     })
 
     // Don't bother to add if it's all left column.

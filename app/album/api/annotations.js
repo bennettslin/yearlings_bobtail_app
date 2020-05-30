@@ -68,8 +68,15 @@ export const getColumnIndexForAnnotation = (songIndex, annotationIndex) => {
 }
 
 export const getCardsForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationCardsList } = getSong(songIndex)
-    return annotationCardsList[annotationIndex - 1] || null
+    const { annotationCardsList } = getSong(songIndex),
+        cards = annotationCardsList[annotationIndex - 1]
+
+    if (!cards) {
+        return null
+    }
+
+    // If single card object, return wrapped in an array.
+    return Array.isArray(cards) ? cards : [cards]
 }
 
 export const getCardCountForAnnotation = (songIndex, annotationIndex) => {

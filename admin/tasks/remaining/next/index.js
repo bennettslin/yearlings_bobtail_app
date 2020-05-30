@@ -7,7 +7,7 @@ export default [
 
     /* Weekend work. */
     {
-        taskName: `Wrap up data refactor. Remove annotations from verses. Remove verses from units. Remove extra stuff from annotation cards. If single card, just pass it instead of array. If just single card, also don't have dot keys, and then get dot keys from annotation. If wiki or wormhole index is single, just pass it instead of array. Make dot keys bit numbers?`,
+        taskName: `Wrap up data refactor. Remove annotations from verses. Remove verses from units. Remove extra stuff from annotation cards. If single card, just pass it instead of array. If just single card, also don't have dot keys, and then get dot keys from annotation. If wiki or wormhole index is single, just pass it instead of array. Make dot keys bit numbers? Cubes should also grab values from a selector, rather than the store.`,
         workedHours: 0,
         neededHours: 20
     },
