@@ -3,7 +3,6 @@
 * PT Sans Italic is small? e.g. The Man in the High Castle.
 * Switching between songs in local is slow, not as slow in staging
 * tips hand in garryowen for score
-* Tooltip in desktop even when not accessed.
 * Even future verse does not have activated or hover colour.
 
 # Brainless JS tasks

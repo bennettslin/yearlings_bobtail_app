@@ -27,10 +27,10 @@ export const IS_DESKTOP_WIDTH_SELECTOR = (
 export const IS_PHONE_OR_MINI_WIDTH_SELECTOR = createSelector(
     IS_TABLET_WIDTH_SELECTOR,
     IS_DESKTOP_WIDTH_SELECTOR,
-    ({
+    (
         isTabletWidth,
         isDesktopWidth
-    }) => (
+    ) => (
         !isDesktopWidth && !isTabletWidth
     )
 )

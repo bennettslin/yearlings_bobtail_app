@@ -1,12 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-
 import ReactTooltip from 'react-tooltip'
-
 import { getTooltipPlacement } from './helper'
-
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { IS_ACCESS_ON_SELECTOR } from '../../../redux/access/selectors'
 import {
@@ -48,4 +45,4 @@ Tooltip.propTypes = {
     buttonName: PropTypes.string.isRequired
 }
 
-export default Tooltip
+export default memo(Tooltip)
