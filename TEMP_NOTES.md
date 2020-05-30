@@ -4,6 +4,7 @@
 * Switching between songs in local is slow, not as slow in staging
 * tips hand in garryowen for score
 * Slider access keys show in logues.
+* Tooltip in desktop even when not accessed.
 
 # Brainless JS tasks
 * Change all mapStateToProps to grab from selectors

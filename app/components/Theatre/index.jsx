@@ -4,18 +4,16 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import { CAN_THEATRE_ENTER_SELECTOR } from '../../redux/entrance/selectors'
-
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Stage from '../Stage'
 import Curtains from '../Stage/Curtains'
 import DramaMasks from '../Stage/DramaMasks'
 import Proscenium from '../Stage/Proscenium'
-
 import Wall from './Wall'
 import Ceiling from './Ceiling'
 import Floor from './Floor'
-
 import { removeLoadingIndicator } from '../../utils/browser'
+import './style'
 
 const Theatre = () => {
     const

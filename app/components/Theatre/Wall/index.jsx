@@ -2,13 +2,12 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import WallBalcony from './Balcony'
-
 import {
     getBalconyColumnCoordinates,
     getWallWidth
 } from './helper'
+import './style'
 
 const mapStateToProps = state => {
     const {

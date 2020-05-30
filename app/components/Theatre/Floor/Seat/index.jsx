@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import SeatShade from './SeatShade'
+import './style'
 
 const propTypes = {
     /**

@@ -1,8 +1,6 @@
 // Component to show the played audio time.
-
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import { getFormattedTime } from '../../../../helpers/format'
 import {
@@ -23,79 +21,40 @@ import {
 } from '../../../../redux/slider/selectors'
 import './style'
 
-const mapStateToProps = state => {
+const SongBannerTimer = () => {
     const
-        isActivated = IS_ACTIVATED_SELECTOR(state),
-        activatedTime = ACTIVATED_TIME_SELECTOR(state),
-        isBannerHovering = IS_BANNER_HOVERING_SELECTOR(state),
-        bannerHoverTime = BANNER_HOVER_TIME_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
-        selectedTime = SELECTED_TIME_SELECTOR(state),
-        isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state),
-        sliderTime = SLIDER_TIME_SELECTOR(state)
+        isActivated = useSelector(IS_ACTIVATED_SELECTOR),
+        activatedTime = useSelector(ACTIVATED_TIME_SELECTOR),
+        isBannerHovering = useSelector(IS_BANNER_HOVERING_SELECTOR),
+        bannerHoverTime = useSelector(BANNER_HOVER_TIME_SELECTOR),
+        isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
+        selectedTime = useSelector(SELECTED_TIME_SELECTOR),
+        isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
+        sliderTime = useSelector(SLIDER_TIME_SELECTOR)
 
-    return {
-        isSelectedLogue,
-        selectedTime,
-        isSliderMoving,
-        sliderTime,
-        isActivated,
-        activatedTime,
-        isBannerHovering,
-        bannerHoverTime
+    let time = selectedTime
+
+    if (isSliderMoving) {
+        time = sliderTime
     }
+
+    if (isActivated) {
+        time = activatedTime
+    }
+
+    if (isBannerHovering) {
+        time = bannerHoverTime
+    }
+
+    return !isSelectedLogue && (
+        <div className={cx(
+            'SongBannerTimer',
+            'fCC',
+            'abF'
+        )}>
+            {getFormattedTime(time)}
+        </div>
+    )
 }
 
-class SongBannerTimer extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isSelectedLogue: PropTypes.bool.isRequired,
-        selectedTime: PropTypes.number.isRequired,
-        isSliderMoving: PropTypes.bool.isRequired,
-        sliderTime: PropTypes.number.isRequired,
-        isActivated: PropTypes.bool.isRequired,
-        activatedTime: PropTypes.number.isRequired,
-        isBannerHovering: PropTypes.bool.isRequired,
-        bannerHoverTime: PropTypes.number.isRequired
-    }
-
-    render() {
-        const {
-            isSelectedLogue,
-            selectedTime,
-            isSliderMoving,
-            sliderTime,
-            isActivated,
-            activatedTime,
-            isBannerHovering,
-            bannerHoverTime
-        } = this.props
-
-        let time = selectedTime
-
-        if (isSliderMoving) {
-            time = sliderTime
-        }
-
-        if (isActivated) {
-            time = activatedTime
-        }
-
-        if (isBannerHovering) {
-            time = bannerHoverTime
-        }
-
-        return !isSelectedLogue && (
-            <div className={cx(
-                'SongBannerTimer',
-                'fCC',
-                'abF'
-            )}>
-                {getFormattedTime(time)}
-            </div>
-        )
-    }
-}
-
-export default connect(mapStateToProps)(SongBannerTimer)
+export default SongBannerTimer

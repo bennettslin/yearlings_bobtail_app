@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from '../../../../modules/InlineSvg'
 import ceilingRafter from '../../../../../assets/svgs/theatre/ceilingRafter'
+import './style'
 
 const propTypes = {
     top: PropTypes.number.isRequired,

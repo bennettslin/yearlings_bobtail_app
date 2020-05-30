@@ -1,13 +1,11 @@
 // Section to show the stage illustrations.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-
 import CeilingRafter from './Rafter'
-
 import { getRaftersRowCoordinates } from './helper'
+import './style'
 
 const mapStateToProps = state => {
     const {

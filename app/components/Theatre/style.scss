@@ -1,6 +1,5 @@
-@import "./Ceiling/style";
-@import "./Floor/style";
-@import "./Wall/style";
+@import '../../scss/constants/transition';
+@import '../../scss/constants/zIndex';
 
 .Theatre {
     opacity: 0;
