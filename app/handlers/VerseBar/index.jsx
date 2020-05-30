@@ -26,14 +26,13 @@ import {
     QUEUED_DETERMINE_VERSE_BARS_SELECTOR,
     QUEUED_VERSE_BARS_TIMEOUT_SELECTOR
 } from '../../redux/verseBars/selectors'
+import {
+    WINDOW_HEIGHT_SELECTOR,
+    IS_DESKTOP_WIDTH_SELECTOR
+} from '../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
-    const {
-            viewportStore: {
-                isDesktopWidth,
-                windowHeight
-            }
-        } = state,
+    const
         activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
         isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
         canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state),
@@ -46,7 +45,9 @@ const mapStateToProps = state => {
         isVerseBarAbove = IS_VERSE_BAR_ABOVE_SELECTOR(state),
         isVerseBarBelow = IS_VERSE_BAR_BELOW_SELECTOR(state),
         queuedDetermineVerseBars = QUEUED_DETERMINE_VERSE_BARS_SELECTOR(state),
-        queuedVerseBarsTimeout = QUEUED_VERSE_BARS_TIMEOUT_SELECTOR(state)
+        queuedVerseBarsTimeout = QUEUED_VERSE_BARS_TIMEOUT_SELECTOR(state),
+        windowHeight = WINDOW_HEIGHT_SELECTOR(state),
+        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
 
     return {
         queuedDetermineVerseBars,

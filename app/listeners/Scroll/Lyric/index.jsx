@@ -21,6 +21,7 @@ import {
     IS_AUTO_SCROLL_SELECTOR,
     IS_LYRIC_EXPANDED_SELECTOR
 } from '../../../redux/toggle/selectors'
+import { DEVICE_WIDTH_INDEX_SELECTOR } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -32,15 +33,15 @@ const mapStateToProps = state => {
                 queuedScrollLyricNoDuration,
                 queuedScrollLyricFromAutoScroll,
                 queuedSceneChangeExitScrollCallback
-            },
-            viewportStore: { deviceWidthIndex }
+            }
         } = state,
         isPlaying = IS_PLAYING_SELECTOR(state),
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
         selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
         isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
         isAutoScroll = IS_AUTO_SCROLL_SELECTOR(state),
-        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
+        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
+        deviceWidthIndex = DEVICE_WIDTH_INDEX_SELECTOR(state)
 
     return {
         queuedScrollLyricLog,

@@ -9,16 +9,17 @@ import AccessField from './Field'
 import AccessIcon from './Icon'
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 import { IS_ACCESS_ON_SELECTOR } from '../../../redux/access/selectors'
+import {
+    IS_TABLET_WIDTH_SELECTOR,
+    IS_DESKTOP_WIDTH_SELECTOR
+} from '../../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            viewportStore: {
-                isDesktopWidth,
-                isTabletWidth
-            }
-        } = state,
-        isAccessOn = IS_ACCESS_ON_SELECTOR(state)
+    const
+        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
+        isTabletWidth = IS_TABLET_WIDTH_SELECTOR(state),
+        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
 
     return {
         isAccessOn,

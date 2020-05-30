@@ -16,18 +16,19 @@ import {
     IS_TWO_ROW_MENU_SELECTOR,
     MENU_HEIGHT_SELECTOR
 } from '../../redux/responsive/selectors'
+import {
+    WINDOW_WIDTH_SELECTOR,
+    IS_DESKTOP_WIDTH_SELECTOR
+} from '../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            viewportStore: {
-                windowWidth,
-                isDesktopWidth
-            }
-        } = state,
+    const
         canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state),
         isTwoRowMenu = IS_TWO_ROW_MENU_SELECTOR(state),
-        menuHeight = MENU_HEIGHT_SELECTOR(state)
+        menuHeight = MENU_HEIGHT_SELECTOR(state),
+        windowWidth = WINDOW_WIDTH_SELECTOR(state),
+        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
 
     return {
         windowWidth,

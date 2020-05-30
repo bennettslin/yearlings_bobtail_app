@@ -13,15 +13,15 @@ import {
     LYRIC_SONG_INDEX_SELECTOR,
     IS_LYRIC_LOGUE_SELECTOR
 } from '../../redux/lyric/selectors'
+import { IS_PHONE_WIDTH_SELECTOR } from '../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            viewportStore: { isPhoneWidth }
-        } = state,
+    const
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
         lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
+        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
+        isPhoneWidth = IS_PHONE_WIDTH_SELECTOR(state)
 
     return {
         isPhoneWidth,

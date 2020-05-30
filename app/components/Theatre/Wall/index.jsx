@@ -8,6 +8,10 @@ import {
     getWallWidth
 } from './helper'
 import { CEILING_HEIGHT_SELECTOR } from '../../../redux/theatre/selectors'
+import {
+    WINDOW_WIDTH_SELECTOR,
+    WINDOW_HEIGHT_SELECTOR
+} from '../../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
@@ -16,13 +20,11 @@ const mapStateToProps = state => {
                 prosceniumLeft,
                 prosceniumWidth,
                 prosceniumHeight
-            },
-            viewportStore: {
-                windowHeight,
-                windowWidth
             }
         } = state,
-        ceilingHeight = CEILING_HEIGHT_SELECTOR(state)
+        ceilingHeight = CEILING_HEIGHT_SELECTOR(state),
+        windowWidth = WINDOW_WIDTH_SELECTOR(state),
+        windowHeight = WINDOW_HEIGHT_SELECTOR(state)
 
     return {
         windowHeight,

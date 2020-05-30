@@ -35,14 +35,3 @@ export const IS_PHONE_OR_MINI_WIDTH_SELECTOR = createSelector(
     )
 )
 
-// import {
-//     LYRIC_SONG_INDEX_SELECTOR,
-//     LYRIC_VERSE_INDEX_SELECTOR,
-//     LYRIC_ANNOTATION_INDEX_SELECTOR,
-//     IS_LYRIC_LOGUE_SELECTOR
-// } from '../../../redux/viewport/selectors'
-
-// lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-// lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
-// lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
-// isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)

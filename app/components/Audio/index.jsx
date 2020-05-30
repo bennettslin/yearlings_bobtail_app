@@ -28,17 +28,17 @@ import { IS_TWO_ROW_MENU_SELECTOR } from '../../redux/responsive/selectors'
 import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../redux/players/selectors'
 import { SELECTED_SONG_INDEX_SELECTOR } from '../../redux/selected/selectors'
 import { AUDIO_OPTION_INDEX_SELECTOR } from '../../redux/session/selectors'
+import { IS_DESKTOP_WIDTH_SELECTOR } from '../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            viewportStore: { isDesktopWidth }
-        } = state,
+    const
         isPlaying = IS_PLAYING_SELECTOR(state),
         isTwoRowMenu = IS_TWO_ROW_MENU_SELECTOR(state),
         playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
         selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        audioOptionIndex = AUDIO_OPTION_INDEX_SELECTOR(state)
+        audioOptionIndex = AUDIO_OPTION_INDEX_SELECTOR(state),
+        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
 
     return {
         isPlaying,

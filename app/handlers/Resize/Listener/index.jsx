@@ -1,20 +1,19 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import ResizeDispatcher from '../Dispatcher'
-
 import { resetTheatreEntrance } from '../../../redux/entrance/action'
 import { getWindowDimensions } from '../../../helpers/resize/device'
 import { getWindow } from '../../../utils/browser'
+import {
+    WINDOW_WIDTH_SELECTOR,
+    WINDOW_HEIGHT_SELECTOR
+} from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
-    const {
-        viewportStore: {
-            windowHeight,
-            windowWidth
-        }
-    } = state
+    const
+        windowWidth = WINDOW_WIDTH_SELECTOR(state),
+        windowHeight = WINDOW_HEIGHT_SELECTOR(state)
 
     return {
         windowHeight,

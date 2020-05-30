@@ -11,20 +11,23 @@ import {
     IS_LYRIC_LOGUE_SELECTOR
 } from '../../../redux/lyric/selectors'
 import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
+import {
+    IS_PHONE_WIDTH_SELECTOR,
+    IS_TABLET_WIDTH_SELECTOR,
+    IS_DESKTOP_WIDTH_SELECTOR
+} from '../../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const {
-            entranceStore: { canLyricCarouselEnter },
-            viewportStore: {
-                isPhoneWidth,
-                isTabletWidth,
-                isDesktopWidth
-            }
+            entranceStore: { canLyricCarouselEnter }
         } = state,
         lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
         isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state)
+        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
+        isPhoneWidth = IS_PHONE_WIDTH_SELECTOR(state),
+        isTabletWidth = IS_TABLET_WIDTH_SELECTOR(state),
+        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
 
     return {
         canLyricCarouselEnter,

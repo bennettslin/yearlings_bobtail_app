@@ -14,14 +14,14 @@ import { EAR_COLUMN_KEYS } from '../../../../constants/lyrics'
 import { DOUBLESPEAKER } from '../../../../constants/tips'
 import { IS_EAR_SHOWN_SELECTOR } from '../../../../redux/transient/selectors'
 import { EAR_COLUMN_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
+import { IS_DESKTOP_WIDTH_SELECTOR } from '../../../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            viewportStore: { isDesktopWidth }
-        } = state,
+    const
         isEarShown = IS_EAR_SHOWN_SELECTOR(state),
-        earColumnIndex = EAR_COLUMN_INDEX_SELECTOR(state)
+        earColumnIndex = EAR_COLUMN_INDEX_SELECTOR(state),
+        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
 
     return {
         isEarShown,

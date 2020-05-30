@@ -9,13 +9,13 @@ import TipsToggle from '../../Tips/Toggle'
 import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
 import { IS_SHELF_LEFT_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
+import { IS_DESKTOP_WIDTH_SELECTOR } from '../../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const {
-            viewportStore: { isDesktopWidth }
-        } = state,
-        isShelfLeftShown = IS_SHELF_LEFT_SHOWN_SELECTOR(state)
+    const
+        isShelfLeftShown = IS_SHELF_LEFT_SHOWN_SELECTOR(state),
+        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
 
     return {
         isDesktopWidth,

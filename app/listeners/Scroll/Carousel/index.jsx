@@ -9,6 +9,10 @@ import {
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
 import { IS_CAROUSEL_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
+import {
+    WINDOW_WIDTH_SELECTOR,
+    DEVICE_WIDTH_INDEX_SELECTOR
+} from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -16,14 +20,12 @@ const mapStateToProps = state => {
                 queuedScrollCarouselLog,
                 queuedScrollCarouselIndex,
                 queuedScrollCarouselNoDuration
-            },
-            viewportStore: {
-                deviceWidthIndex,
-                windowWidth
             }
         } = state,
         isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
-        isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state)
+        isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
+        windowWidth = WINDOW_WIDTH_SELECTOR(state),
+        deviceWidthIndex = DEVICE_WIDTH_INDEX_SELECTOR(state)
 
     return {
         queuedScrollCarouselLog,
