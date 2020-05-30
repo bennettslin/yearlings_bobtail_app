@@ -2,6 +2,7 @@ import { getWikiWormholesForAnnotation } from '../../../../album/api/annotations
 import { getCardsForAnnotation } from '../../../../album/api/cards'
 import { mapWormholeLinkForDispatch } from '../../../../helpers/wormhole'
 
+// TODO: Put this in cards API.
 export const getWormholeLinkFromIndex = ({
     songIndex,
     annotationIndex,
@@ -29,6 +30,7 @@ export const getWormholeLinkFromIndex = ({
     return mapWormholeLinkForDispatch(wormholeLink)
 }
 
+// TODO: Put this in cards API.
 export const getWikiWormholeEntity = ({
     songIndex,
     annotationIndex,

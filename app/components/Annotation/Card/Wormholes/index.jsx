@@ -40,8 +40,7 @@ const AnnotationWormholes = ({
                 {...{
                     key: wormholeLinkIndex,
                     wormholeLinkIndex,
-                    isAccessed,
-                    isSelected,
+                    isAccessedShown: isAccessed && isSelected,
                     annotationIndex,
                     cardIndex
                 }}

@@ -1,17 +1,23 @@
 // Component to show all notes and wormholes for each annotation.
-
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import AnnotationCard from './AnnotationCard'
+import { getAnnotationCardIndices } from '../../../../app/album/api/cards'
 
-const AnnotationCards = ({ cards }) => {
+const AnnotationCards = ({ songIndex, annotationIndex }) => {
+
     return (
         <div className="TempGlobalAnnotationCards">
-            {cards.map((card, index) => (
+            {getAnnotationCardIndices(
+                songIndex,
+                annotationIndex
+            ).map(cardIndex => (
                 <AnnotationCard
                     {...{
-                        key: index,
-                        card
+                        key: cardIndex,
+                        songIndex,
+                        annotationIndex,
+                        cardIndex
                     }}
                 />
             ))}
@@ -20,7 +26,8 @@ const AnnotationCards = ({ cards }) => {
 }
 
 AnnotationCards.propTypes = {
-    cards: PropTypes.array.isRequired
+    songIndex: PropTypes.number.isRequired,
+    annotationIndex: PropTypes.number.isRequired
 }
 
 export default memo(AnnotationCards)

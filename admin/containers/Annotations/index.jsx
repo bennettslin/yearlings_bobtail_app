@@ -8,12 +8,11 @@ import {
     getGlobalAnnotationDoneCount
 } from '../../album/api/globalAnnotation'
 import { getTitleForAnnotation } from '../../../app/album/api/annotations'
-import { getCardsForAnnotation } from '../../../app/album/api/cards'
 import { getArrayOfLength } from '../../../app/helpers/general'
 import { removeLoadingIndicator } from '../../../app/utils/browser'
 import './style'
 
-const INTERVALS_COUNT = 4
+const INTERVALS_COUNT = 7
 
 const TempGlobalAnnotationsCounter = () => (
     <div className="TempGlobalAnnotationsCounter">
@@ -40,8 +39,7 @@ const TempGlobalAnnotation = ({ intervalIndex }) => {
     }
 
     const
-        annotationTitle = getTitleForAnnotation(songIndex, annotationIndex),
-        annotationCards = getCardsForAnnotation(songIndex, annotationIndex)
+        annotationTitle = getTitleForAnnotation(songIndex, annotationIndex)
 
     return (
         <div className="TempGlobalAnnotation">
@@ -51,7 +49,7 @@ const TempGlobalAnnotation = ({ intervalIndex }) => {
                 {globalIndex}. {annotationTitle}
             </div>
 
-            <AnnotationCards {...{ cards: annotationCards }} />
+            <AnnotationCards {...{ songIndex, annotationIndex }} />
         </div>
     )
 }

@@ -5,8 +5,7 @@ import {
 } from '../../album/api/songs'
 import {
     getStoredSongIndex,
-    getStoredVerseIndex,
-    getStoredAnnotationIndex
+    getStoredVerseIndex
 } from '../../helpers/storage'
 
 import {
@@ -23,7 +22,6 @@ import {
     logError,
     logger
 } from './helpers/logs'
-import { getCardsForAnnotation } from '../../album/api/cards'
 import { getVerse } from '../../album/api/verses'
 
 // Allow access to album in local delivery.
@@ -34,10 +32,6 @@ if (IS_STAGING) {
     global.v = () => getVerse(
         getStoredSongIndex(),
         getStoredVerseIndex(getStoredSongIndex())
-    )
-    global.a = () => getCardsForAnnotation(
-        getStoredSongIndex(),
-        getStoredAnnotationIndex(getStoredSongIndex())
     )
 }
 

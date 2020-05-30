@@ -34,8 +34,7 @@ class AnnotationWormhole extends PureComponent {
         lyricSongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        isAccessed: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired,
+        isAccessedShown: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired,
         cardIndex: PropTypes.number.isRequired,
         wormholeLinkIndex: PropTypes.number.isRequired
@@ -66,10 +65,7 @@ class AnnotationWormhole extends PureComponent {
     }
 
     render() {
-        const {
-                isAccessed,
-                isSelected
-            } = this.props,
+        const { isAccessedShown } = this.props,
 
             wormholeLink = this._getWormholeLink(),
 
@@ -110,7 +106,7 @@ class AnnotationWormhole extends PureComponent {
                         isBrightHover
                         {...{
                             accessKey: ENTER,
-                            isAccessed: isAccessed && isSelected,
+                            isAccessed: isAccessedShown,
                             buttonName: WORMHOLE_BUTTON_KEY,
                             handleButtonClick: this._handleWormholeClick
                         }}

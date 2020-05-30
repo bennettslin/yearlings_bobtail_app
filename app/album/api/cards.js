@@ -3,18 +3,6 @@ import { getDotKeysFromBitNumber } from '../../helpers/dot'
 import { getArrayOfLength } from '../../helpers/general'
 import { WORMHOLE } from '../../constants/dots'
 
-export const getCardsForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationCardsList } = getSong(songIndex),
-        cards = annotationCardsList[annotationIndex - 1]
-
-    if (!cards) {
-        return null
-    }
-
-    // If single card object, return wrapped in an array.
-    return Array.isArray(cards) ? cards : [cards]
-}
-
 export const getAnnotationCardIndices = (songIndex, annotationIndex) => {
     const { annotationCardsDescriptionsList } = getSong(songIndex)
     return getArrayOfLength(
@@ -52,6 +40,18 @@ export const getDotKeysForAnnotationCard = (
         dotKeysEntity
 
     return getDotKeysFromBitNumber(dotKeysBitNumber)
+}
+
+export const getCardsForAnnotation = (songIndex, annotationIndex) => {
+    const { annotationCardsList } = getSong(songIndex),
+        cards = annotationCardsList[annotationIndex - 1]
+
+    if (!cards) {
+        return null
+    }
+
+    // If single card object, return wrapped in an array.
+    return Array.isArray(cards) ? cards : [cards]
 }
 
 const getCardForAnnotation = (songIndex, annotationIndex, cardIndex) => {

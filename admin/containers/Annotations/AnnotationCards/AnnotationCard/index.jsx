@@ -3,12 +3,27 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import Texts from '../../../../../app/components/Texts'
 import { ORDERED_DOT_KEYS } from '../../../../../app/constants/dots'
+import {
+    getDescriptionForAnnotationCard,
+    getDotKeysForAnnotationCard
+} from '../../../../../app/album/api/cards'
 
-const AnnotationCard = ({ card }) => {
-    const {
-        description,
-        dotKeys = {}
-    } = card
+const AnnotationCard = ({
+    songIndex,
+    annotationIndex,
+    cardIndex
+}) => {
+    const
+        description = getDescriptionForAnnotationCard(
+            songIndex,
+            annotationIndex,
+            cardIndex
+        ),
+        dotKeys = getDotKeysForAnnotationCard(
+            songIndex,
+            annotationIndex,
+            cardIndex
+        )
 
     return (
         <div className="TempGlobalAnnotationCard">
@@ -17,13 +32,17 @@ const AnnotationCard = ({ card }) => {
                     dotKeys[dotKey]
                 )).join(', ')}
             </div>
-            <Texts {...{ text: description }} />
+            {description && (
+                <Texts {...{ text: description }} />
+            )}
         </div>
     )
 }
 
 AnnotationCard.propTypes = {
-    card: PropTypes.any.isRequired
+    songIndex: PropTypes.number.isRequired,
+    annotationIndex: PropTypes.number.isRequired,
+    cardIndex: PropTypes.number.isRequired
 }
 
 export default memo(AnnotationCard)
