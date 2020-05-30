@@ -1,20 +1,11 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import InlineSvg from '../../../modules/InlineSvg'
-
 import { getSvgForButton } from '../../../svg/buttons'
-
 import { getButtonIconClassNames } from './helper'
-
 import { NAV_SONG_BUTTON_KEY } from '../../../constants/buttons'
-
-const propTypes = {
-    // From parent.
-    buttonName: PropTypes.string.isRequired,
-    buttonIdentifier: PropTypes.any
-}
+import './style'
 
 const ButtonIcon = ({
     buttonName,
@@ -51,6 +42,9 @@ const ButtonIcon = ({
     )
 }
 
-ButtonIcon.propTypes = propTypes
+ButtonIcon.propTypes = {
+    buttonName: PropTypes.string.isRequired,
+    buttonIdentifier: PropTypes.any
+}
 
 export default memo(ButtonIcon)

@@ -10,6 +10,7 @@ import {
     IS_DESKTOP_WIDTH_SELECTOR,
     IS_PHONE_OR_MINI_WIDTH_SELECTOR
 } from '../../../redux/viewport/selectors'
+import './style'
 
 const Tooltip = ({ buttonName }) => {
     const

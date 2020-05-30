@@ -3,23 +3,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
-
 import ButtonIcon from './ButtonIcon'
 import Tooltip from './Tooltip'
 import AccessLetter from '../Access/Letter'
-
 import { getPropsAreShallowEqual } from '../../helpers/general'
-
 import { ENTER } from '../../constants/access'
 import { CHILD_ACCESS_PREFIX } from '../../constants/prefixes'
-
 import {
     getShowButtonIcon,
     getShowTooltip,
     getTooltipText
 } from './helper'
+import './style'
 
 class Button extends Component {
 
