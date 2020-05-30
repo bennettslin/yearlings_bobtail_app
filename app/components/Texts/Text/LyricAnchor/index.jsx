@@ -20,6 +20,7 @@ import {
     LYRIC_SONG_INDEX_SELECTOR,
     LYRIC_ANNOTATION_INDEX_SELECTOR
 } from '../../../../redux/lyric/selectors'
+import './style'
 
 const mapStateToProps = state => {
     const {

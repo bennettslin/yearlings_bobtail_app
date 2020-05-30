@@ -8,124 +8,121 @@ import TextLyricAnchor from './LyricAnchor'
 import Texts from '..'
 import TextSpan from './Span'
 
-const propTypes = {
-    // From parent.
-        inVerseBar: PropTypes.bool,
-        text: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.object
-        ]),
-        wormholeAnnotationIndex: PropTypes.number
-    },
+const Text = ({
+    text: textEntity,
+    ...props
 
-    Text = ({
-        text: textEntity,
+}) => {
+    const {
+        inVerseBar,
+        ...other
+    } = props
 
-        ...props
-    }) => {
+    // It's a text span.
+    if (isString(textEntity)) {
+        return (
+            <TextSpan {...other}
+                {...{ text: textEntity }}
+            />
+        )
 
+    } else if (typeof textEntity === 'object') {
         const {
-            inVerseBar,
-            ...other
-        } = props
+            lyric,
+            isItalic,
+            isEmphasis
+        } = textEntity
 
-        // It's a text span.
-        if (isString(textEntity)) {
+        if (isItalic || isEmphasis) {
             return (
-                <TextSpan {...other}
-                    {...{ text: textEntity }}
+                <Texts {...props}
+                    hasRecursed
+                    {...{
+                        isItalic,
+                        isEmphasis,
+                        text: lyric
+                    }}
                 />
             )
 
-        } else if (typeof textEntity === 'object') {
+        // It's an anchor.
+        } else {
             const {
-                lyric,
-                isItalic,
-                isEmphasis
-            } = textEntity
+                    anchor,
+                    annotationIndex
+                } = textEntity,
+                { wormholeAnnotationIndex } = props,
 
-            if (isItalic || isEmphasis) {
+                /**
+                 * If recursing, keep knowledge of text being in wormhole
+                 * or verse bar, which is needed by anchor.
+                 */
+                showAsPlainText =
+                    Boolean(wormholeAnnotationIndex) ||
+                    inVerseBar,
+
+                text = anchor
+
+            if (showAsPlainText) {
+
+                /**
+                 * A verse line with a wormhole anchor may contain other
+                 * anchors. Make sure that we know this is the wormhole
+                 * anchor.
+                 */
+                const isWormholeDestinationAnchor =
+                        annotationIndex === wormholeAnnotationIndex
+
                 return (
-                    <Texts {...props}
+                    <Texts {...other}
                         hasRecursed
                         {...{
-                            isItalic,
-                            isEmphasis,
-                            text: lyric
+                            text,
+                            isWormholeDestinationAnchor
                         }}
                     />
                 )
 
-            // It's an anchor.
             } else {
                 const {
-                        anchor,
-                        annotationIndex
-                    } = textEntity,
-                    { wormholeAnnotationIndex } = props,
+                    dotKeys,
+                    wikiIndex,
+                    wikiAnnotationIndex
+                } = textEntity
 
-                    /**
-                     * If recursing, keep knowledge of text being in wormhole
-                     * or verse bar, which is needed by anchor.
-                     */
-                    showAsPlainText =
-                        Boolean(wormholeAnnotationIndex) ||
-                        inVerseBar,
+                return (
+                    <TextLyricAnchor {...other}
+                        {...{
+                            text,
+                            dotKeys,
+                            wikiIndex,
 
-                    text = anchor
-
-                if (showAsPlainText) {
-
-                    /**
-                     * A verse line with a wormhole anchor may contain other
-                     * anchors. Make sure that we know this is the wormhole
-                     * anchor.
-                     */
-                    const isWormholeDestinationAnchor =
-                            annotationIndex === wormholeAnnotationIndex
-
-                    return (
-                        <Texts {...other}
-                            hasRecursed
-                            {...{
-                                text,
-                                isWormholeDestinationAnchor
-                            }}
-                        />
-                    )
-
-                } else {
-                    const {
-                        dotKeys,
-                        wikiIndex,
-                        wikiAnnotationIndex
-                    } = textEntity
-
-                    return (
-                        <TextLyricAnchor {...other}
-                            {...{
-                                text,
-                                dotKeys,
-                                wikiIndex,
-
-                                /**
-                             * There is only ever an annotation index passed
-                             * from the verse, or a wiki annotation index
-                             * passed from the annotation.
-                             */
-                                annotationIndex,
-                                wikiAnnotationIndex
-                            }}
-                        />
-                    )
-                }
+                            /**
+                         * There is only ever an annotation index passed
+                         * from the verse, or a wiki annotation index
+                         * passed from the annotation.
+                         */
+                            annotationIndex,
+                            wikiAnnotationIndex
+                        }}
+                    />
+                )
             }
         }
-
-        // Wormholes don't have a text description, so return null.
-        return null
     }
 
-Text.propTypes = propTypes
+    // Wormholes don't have a text description, so return null.
+    return null
+}
+
+Text.propTypes = {
+    // From parent.
+    inVerseBar: PropTypes.bool,
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ]),
+    wormholeAnnotationIndex: PropTypes.number
+}
 
 export default memo(Text)
