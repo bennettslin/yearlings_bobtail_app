@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
 import AnnotationTitleDot from './TitleDot'
 import AnnotationTitleText from './TitleText'
@@ -17,130 +17,103 @@ import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 import './style'
 
-const mapStateToProps = state => {
+const AnnotationTitle = ({
+    isAccessed,
+    isSelected,
+    annotationIndex
+
+}) => {
     const
-        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
+        dispatch = useDispatch(),
+        dotsBitNumber = useSelector(DOTS_BIT_NUMBER_SELECTOR),
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
-    return {
-        lyricSongIndex,
-        dotsBitNumber
-    }
-}
+        accessibleWikiWormholesLength = getAccessibleWikiWormholesCount({
+            songIndex: lyricSongIndex,
+            annotationIndex,
+            selectedDotKeys
+        }),
 
-class AnnotationTitle extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
-        dotsBitNumber: PropTypes.number.isRequired,
-        updateAnnotationStore: PropTypes.func.isRequired,
-
-        // From parent.
-        isAccessed: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        annotationIndex: PropTypes.number.isRequired
-    }
-
-    _handleTitleClick = () => {
-        const {
-            isSelected,
+        annotationDotKeys = getDotKeysForAnnotation(
+            lyricSongIndex,
             annotationIndex
-        } = this.props
+        ),
 
-        if (isSelected) {
-            return false
+        annotationTitle = getTitleForAnnotation(
+            lyricSongIndex,
+            annotationIndex
+        ),
+
+        showUpDown = isSelected && accessibleWikiWormholesLength > 1,
+
+        isDot = annotationTitle === IS_UNIT_DOT,
+
+        _handleTitleClick = () => {
+            if (isSelected) {
+                return false
+            }
+
+            dispatch(updateAnnotationStore({
+                queuedAnnotationIndex: annotationIndex,
+                queuedAnnotationFromCarousel: true
+            }))
+            return true
         }
 
-        this.props.updateAnnotationStore({
-            queuedAnnotationIndex: annotationIndex,
-            queuedAnnotationFromCarousel: true
-        })
-        return true
-    }
+    return (
+        <div
+            {...{
+                className: cx(
+                    'AnnotationTitle',
 
-    render() {
-        const {
-                isAccessed,
-                isSelected,
-                lyricSongIndex,
-                annotationIndex,
-                dotsBitNumber
-            } = this.props,
+                    isDot && 'AnnotationTitle__dot',
 
-            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
+                    'bgColour__annotation',
+                    'bgColour__annotation__pattern',
+                    'bgColour__annotation__pattern__reverse',
 
-            accessibleWikiWormholesLength = getAccessibleWikiWormholesCount({
-                songIndex: lyricSongIndex,
-                annotationIndex,
-                selectedDotKeys
-            }),
+                    isSelected && 'bgColour__annotation__selected',
+                    isSelected ?
+                        'boxShadow__annotationTab__selected' :
+                        'boxShadow__annotationTab',
 
-            annotationDotKeys = getDotKeysForAnnotation(
-                lyricSongIndex,
-                annotationIndex
-            ),
-
-            annotationTitle = getTitleForAnnotation(
-                lyricSongIndex,
-                annotationIndex
-            ),
-
-            showUpDown = isSelected && accessibleWikiWormholesLength > 1,
-
-            isDot = annotationTitle === IS_UNIT_DOT
-
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'AnnotationTitle',
-
-                        isDot && 'AnnotationTitle__dot',
-
-                        'bgColour__annotation',
-                        'bgColour__annotation__pattern',
-                        'bgColour__annotation__pattern__reverse',
-
-                        isSelected && 'bgColour__annotation__selected',
-                        isSelected ?
-                            'boxShadow__annotationTab__selected' :
-                            'boxShadow__annotationTab',
-
-                        'fontSize__title'
-                    )
-                }}
-            >
-                {isDot ? (
-                    <AnnotationTitleDot
-                        {...{
-                            isAccessed,
-                            isSelected,
-                            stanzaDotKeys: annotationDotKeys,
-                            handleAnchorClick: this._handleTitleClick
-                        }}
-                    />
-                ) : (
-                    <AnnotationTitleText
-                        {...{
-                            isAccessed,
-                            isSelected,
-                            text: `\u201c${annotationTitle}\u201d`,
-                            sequenceDotKeys: annotationDotKeys,
-                            handleAnchorClick: this._handleTitleClick
-                        }}
-                    />
-                )}
-                <AnnotationAccess {...{
-                    isDot,
-                    showUpDown
-                }} />
-            </div>
-        )
-    }
+                    'fontSize__title'
+                )
+            }}
+        >
+            {isDot ? (
+                <AnnotationTitleDot
+                    {...{
+                        isAccessed,
+                        isSelected,
+                        stanzaDotKeys: annotationDotKeys,
+                        handleAnchorClick: _handleTitleClick
+                    }}
+                />
+            ) : (
+                <AnnotationTitleText
+                    {...{
+                        isAccessed,
+                        isSelected,
+                        text: `\u201c${annotationTitle}\u201d`,
+                        sequenceDotKeys: annotationDotKeys,
+                        handleAnchorClick: _handleTitleClick
+                    }}
+                />
+            )}
+            <AnnotationAccess {...{
+                isDot,
+                showUpDown
+            }} />
+        </div>
+    )
 }
 
-export default connect(
-    mapStateToProps,
-    { updateAnnotationStore }
-)(AnnotationTitle)
+AnnotationTitle.propTypes = {
+    isAccessed: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    annotationIndex: PropTypes.number.isRequired
+}
+
+export default memo(AnnotationTitle)
