@@ -64,8 +64,7 @@ class AnnotationWormhole extends PureComponent {
     render() {
         const { isAccessedShown } = this.props,
 
-            wormholeLink = this._getWormholeLink(),
-
+            // TODO: All this logic should live in a separate component.
             {
                 selectedSongIndex: songIndex,
                 selectedAnnotationIndex: annotationIndex,
@@ -74,7 +73,7 @@ class AnnotationWormhole extends PureComponent {
 
                 // Default if no wormhole prefix.
                 wormholePrefix = 'wormhole to'
-            } = wormholeLink,
+            } = this._getWormholeLink(),
 
             songTitle = getIndexedTitleForSong(songIndex),
 

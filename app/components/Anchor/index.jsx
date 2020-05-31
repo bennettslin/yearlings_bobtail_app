@@ -17,7 +17,7 @@ const Anchor = ({
     isSelected,
     isDisabled,
     sequenceDotKeys,
-    stanzaDotKeys,
+    stanzaDotBit,
     isWikiTextAnchor,
     text,
     textConfig,
@@ -26,7 +26,7 @@ const Anchor = ({
     handleAnchorClick
 }) => {
     const
-        isDotAnchor = Boolean(stanzaDotKeys),
+        isDotAnchor = Number.isFinite(stanzaDotBit),
 
         // If in mobile, only show dot sequence if annotation title.
         showDotSequence = Boolean(sequenceDotKeys) && (
@@ -107,7 +107,7 @@ const Anchor = ({
                     {...{
                         isAccessed,
                         isSelected,
-                        stanzaDotKeys
+                        stanzaDotBit
                     }}
                 />
             )}
@@ -136,7 +136,7 @@ Anchor.propTypes = {
     isDisabled: PropTypes.bool,
     isWikiTextAnchor: PropTypes.bool,
     sequenceDotKeys: PropTypes.object,
-    stanzaDotKeys: PropTypes.object,
+    stanzaDotBit: PropTypes.number,
     text: PropTypes.any,
     textConfig: PropTypes.any,
     analyticsIdentifier: PropTypes.string,

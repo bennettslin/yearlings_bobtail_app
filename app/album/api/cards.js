@@ -29,16 +29,16 @@ export const getDotKeysForAnnotationCard = (
         return { [WORMHOLE]: true }
     }
 
-    const { annotationCardsDotKeysList } = getSong(songIndex),
-        dotKeysEntity = annotationCardsDotKeysList[annotationIndex - 1]
+    const { annotationCardsDotBitsList } = getSong(songIndex),
+        dotBitsEntity = annotationCardsDotBitsList[annotationIndex - 1]
 
-    if (!dotKeysEntity) {
+    if (!dotBitsEntity) {
         return null
     }
 
-    const dotKeysBitNumber = Array.isArray(dotKeysEntity) ?
-        dotKeysEntity[cardIndex] :
-        dotKeysEntity
+    const dotBitNumber = Array.isArray(dotBitsEntity) ?
+        dotBitsEntity[cardIndex] :
+        dotBitsEntity
 
-    return getDotKeysFromBitNumber(dotKeysBitNumber)
+    return getDotKeysFromBitNumber(dotBitNumber)
 }

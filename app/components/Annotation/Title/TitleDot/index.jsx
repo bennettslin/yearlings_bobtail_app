@@ -5,7 +5,7 @@ import Anchor from '../../../Anchor'
 const AnnotationTitleDot = ({
     isAccessed,
     isSelected,
-    stanzaDotKeys,
+    stanzaDotBit,
     handleAnchorClick
 
 }) => (
@@ -13,7 +13,7 @@ const AnnotationTitleDot = ({
         {...{
             isAccessed,
             isSelected,
-            stanzaDotKeys,
+            stanzaDotBit,
             handleAnchorClick
         }}
     />
@@ -22,7 +22,7 @@ const AnnotationTitleDot = ({
 AnnotationTitleDot.propTypes = {
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    stanzaDotKeys: PropTypes.object.isRequired,
+    stanzaDotBit: PropTypes.number.isRequired,
     handleAnchorClick: PropTypes.func.isRequired
 }
 

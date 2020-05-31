@@ -6,7 +6,10 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateAnnotationStore } from '../../../../redux/annotation/action'
 import Anchor from '../../../Anchor'
-import { getPrefixedDotLetterClassNames } from '../../../../helpers/dot'
+import {
+    getDotKeysFromBitNumber,
+    getPrefixedDotLetterClassNames
+} from '../../../../helpers/dot'
 import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
 import {
     IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
@@ -88,7 +91,7 @@ class UnitDot extends PureComponent {
         const {
                 unitDot: {
                     annotationIndex,
-                    dotKeys
+                    dotBit
                 },
                 lyricAnnotationIndex,
                 isAccessedIndexedAnchorShown,
@@ -105,7 +108,7 @@ class UnitDot extends PureComponent {
         return (
             <UnitDotView
                 {...{
-                    dotKeys,
+                    dotBit,
                     isSelected,
                     isAccessed,
                     annotationIndex,
@@ -123,18 +126,20 @@ class UnitDot extends PureComponent {
 
 const propTypes = {
     // From parent.
-        dotKeys: PropTypes.object.isRequired,
+        dotBit: PropTypes.number.isRequired,
         annotationIndex: PropTypes.number.isRequired,
         setLyricAnnotationElement: PropTypes.func.isRequired
     },
 
     UnitDotView = ({
         // From controller.
-        dotKeys,
+        dotBit,
         annotationIndex,
         setLyricAnnotationElement,
         ...other
+
     }) => {
+        const dotKeys = getDotKeysFromBitNumber(dotBit)
 
         return (
             <div
@@ -158,7 +163,7 @@ const propTypes = {
                 <Anchor
                     {...other}
                     {...{
-                        stanzaDotKeys: dotKeys,
+                        stanzaDotBit: dotBit,
                         setLyricAnnotationElement
                     }}
                 />

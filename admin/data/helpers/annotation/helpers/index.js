@@ -1,6 +1,6 @@
 import { registerCardsDotKeys } from './register'
+import { getBitNumberFromDotKeys } from '../../../../../app/helpers/dot'
 import { getFormattedAnnotationTitle } from '../../../../../app/helpers/format'
-
 import {
     LYRIC_LEFT,
     LYRIC_RIGHT,
@@ -11,19 +11,19 @@ export const registerAnnotation = ({
     verse,
     columnKey,
     rootVerseIndex = -1,
-    lyricAnnotation,
+    anchoredLyric,
     textKey,
     annotations
 
 }) => {
 
     // Annotation will either have an array of cards or just a single card.
-    const cards = lyricAnnotation.cards || [lyricAnnotation.card],
+    const cards = anchoredLyric.cards || [anchoredLyric.card],
 
         annotationIndex = annotations.length + 1,
 
         // Create new annotation object to be used for the final build.
-        annotation = { todo: lyricAnnotation.todo },
+        annotation = { todo: anchoredLyric.todo },
         dotKeys = {}
 
     // Tell verse object its annotation anchors.
@@ -35,7 +35,7 @@ export const registerAnnotation = ({
 
     // Tell annotation and anchored lyric the index. 1-based index.
     annotation.annotationIndex = annotationIndex
-    lyricAnnotation.annotationIndex = annotationIndex
+    anchoredLyric.annotationIndex = annotationIndex
 
     // If in a verse with time, tell annotation its verse index.
     if (rootVerseIndex > -1) {
@@ -48,7 +48,7 @@ export const registerAnnotation = ({
     }
 
     // Add formatted title to annotation.
-    annotation.title = getFormattedAnnotationTitle(lyricAnnotation)
+    annotation.title = getFormattedAnnotationTitle(anchoredLyric)
 
     if (
         // Let annotation know if it's in a doublespeaker column.
@@ -74,14 +74,18 @@ export const registerAnnotation = ({
     // Let annotation object know its cards.
     annotation.cards = cards
 
-    // Add dot keys to both lyric annotation and annotation object.
+    // Add dot keys to annotation.
     annotation.dotKeys = dotKeys
-    lyricAnnotation.dotKeys = dotKeys
+
+    // Add dot bit number to anchored lyric.
+    anchoredLyric.dotBit = getBitNumberFromDotKeys(dotKeys)
 
     // Add annotation object to annotations array.
     annotations.push(annotation)
 
     // Clean up lyric object.
-    delete lyricAnnotation.properNoun
-    delete lyricAnnotation.annotation
+    delete anchoredLyric.properNoun
+    delete anchoredLyric.annotation
+    delete anchoredLyric.card
+    delete anchoredLyric.cards
 }

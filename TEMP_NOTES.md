@@ -12,6 +12,7 @@
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.
 * Change all to use overviewShown and tipsShown. Then prefix with is.
+* Rename all to dotBit, use selectedDotBit and activatedDotBit?
 
 # Brainless CSS tasks
 * Logic styles should live together. (So that they can be removed together if needed.)

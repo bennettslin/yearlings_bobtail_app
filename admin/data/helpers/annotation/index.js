@@ -46,13 +46,14 @@ const _recurseThroughVerse = ({
     } else if (typeof lyricEntity === 'object') {
 
         if (lyricEntity[ANCHOR]) {
+            const anchoredLyric = lyricEntity
 
             // Annotation is found, so register it.
             registerAnnotation({
                 verse,
                 columnKey,
                 rootVerseIndex,
-                lyricAnnotation: lyricEntity,
+                anchoredLyric,
                 textKey,
                 annotations
             })
@@ -76,12 +77,12 @@ const _recurseThroughVerse = ({
 
 const _registerAnnotationMetadata = (annotations, song) => {
     const
-        annotationColumnIndices = [],
-        annotationDotKeysList = [],
         annotationTitles = [],
+        annotationColumnIndices = [],
         annotationVerseIndices = [],
+        annotationDotBitsList = [],
         annotationCardsDescriptionsList = [],
-        annotationCardsDotKeysList = []
+        annotationCardsDotBitsList = []
 
     /**
      * Now that we have recursively gone through the lyrics and the annotation
@@ -91,23 +92,22 @@ const _registerAnnotationMetadata = (annotations, song) => {
      * push default values to keep the array lengths equal.
      */
     annotations.forEach(annotation => {
+        annotationTitles.push(annotation.title)
         annotationColumnIndices.push(
             Number.isFinite(annotation.columnIndex) ?
                 annotation.columnIndex :
                 -1
         )
-        annotationDotKeysList.push(getBitNumberFromDotKeys(annotation.dotKeys))
-        annotationTitles.push(annotation.title)
         annotationVerseIndices.push(
             Number.isFinite(annotation.verseIndex) ?
                 annotation.verseIndex :
                 -1
         )
+        annotationDotBitsList.push(getBitNumberFromDotKeys(annotation.dotKeys))
         annotationCardsDescriptionsList.push(
             annotation.cards.map(card => card.description || null)
         )
-
-        annotationCardsDotKeysList.push(
+        annotationCardsDotBitsList.push(
             // If single card, push individual dot keys for dev clarity.
             annotation.cards.length === 1 ?
                 getBitNumberFromDotKeys(
@@ -123,11 +123,11 @@ const _registerAnnotationMetadata = (annotations, song) => {
     if (annotationColumnIndices.some(index => index === 1)) {
         song.annotationColumnIndices = annotationColumnIndices
     }
-    song.annotationDotKeysList = annotationDotKeysList
     song.annotationTitles = annotationTitles
+    song.annotationDotBitsList = annotationDotBitsList
     song.annotationVerseIndices = annotationVerseIndices
     song.annotationCardsDescriptionsList = annotationCardsDescriptionsList
-    song.annotationCardsDotKeysList = annotationCardsDotKeysList
+    song.annotationCardsDotBitsList = annotationCardsDotBitsList
 }
 
 export const addAnnotationMetadata = (songIndex, song) => {

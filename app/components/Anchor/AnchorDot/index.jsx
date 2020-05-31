@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Dot from '../../Dot'
 import Underline from '../Underline'
+import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { ORDERED_DOT_KEYS } from '../../../constants/dots'
 import './logic'
@@ -12,46 +13,50 @@ const propTypes = {
     // From parent.
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
-    stanzaDotKeys: PropTypes.object.isRequired
+    stanzaDotBit: PropTypes.number.isRequired
 }
 
 const AnchorDot = ({
     isAccessed,
     isSelected,
-    stanzaDotKeys
+    stanzaDotBit
 
-}) => (
-    <>
-        {IS_USER_AGENT_DESKTOP && (
-            <Underline
-                isDotAnchor
-                {...{
-                    isAccessed,
-                    isSelected
-                }}
-            />
-        )}
-        {ORDERED_DOT_KEYS.map(dotKey => stanzaDotKeys[dotKey] && (
-            <Dot
-                {...{
-                    key: dotKey,
-                    className: cx(
-                        'AnchorDot',
+}) => {
+    const stanzaDotKeys = getDotKeysFromBitNumber(stanzaDotBit)
 
-                        isAccessed && !isSelected && 'DotAnchor__accessed',
-                        !isSelected && 'DotAnchor__selectable',
+    return (
+        <>
+            {IS_USER_AGENT_DESKTOP && (
+                <Underline
+                    isDotAnchor
+                    {...{
+                        isAccessed,
+                        isSelected
+                    }}
+                />
+            )}
+            {ORDERED_DOT_KEYS.map(dotKey => stanzaDotKeys[dotKey] && (
+                <Dot
+                    {...{
+                        key: dotKey,
+                        className: cx(
+                            'AnchorDot',
 
-                        // "Child dot anchor letter."
-                        `CdA${dotKey[0]}`
-                    ),
-                    dotKey,
-                    isAccessed,
-                    isSelected
-                }}
-            />
-        ))}
-    </>
-)
+                            isAccessed && !isSelected && 'DotAnchor__accessed',
+                            !isSelected && 'DotAnchor__selectable',
+
+                            // "Child dot anchor letter."
+                            `CdA${dotKey[0]}`
+                        ),
+                        dotKey,
+                        isAccessed,
+                        isSelected
+                    }}
+                />
+            ))}
+        </>
+    )
+}
 
 AnchorDot.propTypes = propTypes
 

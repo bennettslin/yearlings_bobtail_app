@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
-import AnnotationTitleDot from './TitleDot'
+import Anchor from '../../Anchor'
 import AnnotationTitleText from './TitleText'
 import AnnotationAccess from './Access'
 import {
@@ -83,11 +83,11 @@ const AnnotationTitle = ({
             }}
         >
             {isDot ? (
-                <AnnotationTitleDot
+                <Anchor
                     {...{
                         isAccessed,
                         isSelected,
-                        stanzaDotKeys: annotationDotKeys,
+                        stanzaDotBit: dotsBitNumber,
                         handleAnchorClick: _handleTitleClick
                     }}
                 />

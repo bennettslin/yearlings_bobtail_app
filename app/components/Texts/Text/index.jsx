@@ -85,7 +85,7 @@ const Text = ({
 
             } else {
                 const {
-                    dotKeys,
+                    dotBit,
                     wikiIndex,
                     wikiAnnotationIndex
                 } = textEntity
@@ -94,7 +94,7 @@ const Text = ({
                     <TextLyricAnchor {...other}
                         {...{
                             text,
-                            dotKeys,
+                            dotBit,
                             wikiIndex,
 
                             /**
