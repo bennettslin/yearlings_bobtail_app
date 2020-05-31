@@ -1,9 +1,9 @@
 # TODO today
-* Isolate isBottomSideCard
 * Isolate sideCard, subCard, and sideSubCard
 * Isolate their respective form types
 * Unit card can get sideCard, subCard, and sideSubCard
 * Unit card can get main verses
+* Reorganise side and sub cards to be at same level as main verses?
 
 # Bugs
 * Unit dot reference consistently doesn't get passed to scroll.

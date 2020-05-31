@@ -28,9 +28,10 @@ const _addUnitVerseLists = (songIndex, song) => {
         unitSubsequents = [],
         verseStartTimes = [],
         verses = []
-    let verseIndex = 0
+    let verseIndex = 0,
+        isUnitSideCardOnBottom
 
-    lyricUnits.forEach(unit => {
+    lyricUnits.forEach((unit, unitIndex) => {
         const unitVerseIndices = []
 
         _getIndexedVersesForUnit(unit).forEach(verse => {
@@ -47,11 +48,22 @@ const _addUnitVerseLists = (songIndex, song) => {
         unitMainVerses.push(unit.mainVerses || null)
         unitSubsequents.push(unit.unitMap.subsequent || false)
         unitVerseIndicesList.push(unitVerseIndices)
+
+        if (unit.unitMap.isSideCardOnBottom) {
+            if (!isUnitSideCardOnBottom) {
+                isUnitSideCardOnBottom = {}
+            }
+            isUnitSideCardOnBottom[unitIndex] = true
+        }
     })
 
     song.unitSubsequents = unitSubsequents
     song.unitVerseIndicesList = unitVerseIndicesList
     song.verseStartTimes = verseStartTimes
+
+    if (isUnitSideCardOnBottom) {
+        song.isUnitSideCardOnBottom = isUnitSideCardOnBottom
+    }
 
     // TODO: Eventually get rid of this.
     song.unitMaps = unitMaps

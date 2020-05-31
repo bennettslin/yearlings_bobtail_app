@@ -16,7 +16,8 @@ import {
     getFormTypeForUnit,
     getFormTypeIndexForUnit,
     getSubsequentForUnit,
-    getVerseIndicesForUnit
+    getVerseIndicesForUnit,
+    getIsSideCardOnBottomForUnit
 } from '../../album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../../helpers/stanza'
 import {
@@ -48,12 +49,12 @@ const Unit = ({
             sideSubCardType,
             subCard,
             sideCard,
-            sideSubCard, // This exists solely for "Maranatha."
-            isBottomSideCard
+            sideSubCard // This exists solely for "Maranatha."
         } = getUnitMapForUnit(lyricSongIndex, unitIndex),
         formType = getFormTypeForUnit(lyricSongIndex, unitIndex),
         formTypeIndex = getFormTypeIndexForUnit(lyricSongIndex, unitIndex),
         subsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
+        isSideCardOnBottom = getIsSideCardOnBottomForUnit(lyricSongIndex, unitIndex),
         hasSide = Boolean(sideCard)
 
     return (
@@ -137,7 +138,7 @@ const Unit = ({
                         'Unit__column__side',
 
                         // This happens only once, in Golden Cord.
-                        isBottomSideCard && 'Unit__column__hasBottomSideCard'
+                        isSideCardOnBottom && 'Unit__column__hasBottomSideCard'
                     )}
                 >
                     {sideCard && (

@@ -46,3 +46,8 @@ export const getVerseIndicesForUnit = (songIndex, unitIndex) => {
     const { unitVerseIndicesList } = getSong(songIndex)
     return unitVerseIndicesList[unitIndex]
 }
+
+export const getIsSideCardOnBottomForUnit = (songIndex, unitIndex) => {
+    const { isUnitSideCardOnBottom } = getSong(songIndex)
+    return Boolean(isUnitSideCardOnBottom) && isUnitSideCardOnBottom[unitIndex]
+}
