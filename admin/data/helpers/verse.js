@@ -24,13 +24,13 @@ export const addVerseDurations = ({
     song.verseDurations = verseDurations
 }
 
-const _addVerseLists = song => {
+const _addVerseLists = (verses, song) => {
     const
         verseLyrics = [],
         verseLastAnnotationIndices = [],
         verseAnnotationIndicesList = []
 
-    song.indexedVerses.forEach(verse => {
+    verses.forEach(verse => {
         const {
             lyric,
             lyricCentre,
@@ -55,6 +55,6 @@ const _addVerseLists = song => {
     song.verseAnnotationIndicesList = verseAnnotationIndicesList
 }
 
-export const addVerseMetadata = song => {
-    _addVerseLists(song)
+export const addVerseMetadata = (verses, song) => {
+    _addVerseLists(verses, song)
 }

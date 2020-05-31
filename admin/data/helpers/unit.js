@@ -23,8 +23,8 @@ const _addUnitVerseLists = (songIndex, song) => {
 
     const
         unitVerseIndicesList = [],
-        indexedVerses = [],
-        verseStartTimes = []
+        verseStartTimes = [],
+        verses = []
     let verseIndex = 0
 
     lyricUnits.forEach(unit => {
@@ -32,11 +32,10 @@ const _addUnitVerseLists = (songIndex, song) => {
 
         _getIndexedVersesForUnit(unit).forEach(verse => {
             unitVerseIndices.push(verseIndex)
+            verses.push(verse)
 
             // Also tell verse its index.
             verse.verseIndex = verseIndex
-            indexedVerses.push(verse)
-
             verseStartTimes.push(verse.time)
             verseIndex++
         })
@@ -45,7 +44,6 @@ const _addUnitVerseLists = (songIndex, song) => {
     })
 
     song.unitVerseIndicesList = unitVerseIndicesList
-    song.indexedVerses = indexedVerses
     song.verseStartTimes = verseStartTimes
 
     // TODO: Eventually get rid of this.
@@ -53,7 +51,8 @@ const _addUnitVerseLists = (songIndex, song) => {
 
     return {
         unitVerseIndicesList,
-        verseStartTimes
+        verseStartTimes,
+        verses
     }
 }
 
@@ -64,7 +63,8 @@ export const addUnitAndVerseMetadata = ({
 }) => {
     const {
         unitVerseIndicesList,
-        verseStartTimes
+        verseStartTimes,
+        verses
     } = _addUnitVerseLists(songIndex, song)
 
     addVerseDurations({
@@ -75,6 +75,7 @@ export const addUnitAndVerseMetadata = ({
 
     return {
         unitVerseIndicesList,
-        verseStartTimes
+        verseStartTimes,
+        verses
     }
 }

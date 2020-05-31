@@ -31,10 +31,11 @@ const songs = getSongIndicesArray().map(songIndex => {
 
         addLyricMetadata(songIndex, song)
 
-        // TODO: Remove annotations from verses, verses from units.
+        // TODO: Remove verses from units.
         const {
             unitVerseIndicesList,
-            verseStartTimes
+            verseStartTimes,
+            verses
         } = addUnitAndVerseMetadata({
             songIndex,
             songDuration,
@@ -62,7 +63,7 @@ const songs = getSongIndicesArray().map(songIndex => {
         annotations =
             addAnnotationMetadata(songIndex, song)
 
-        addVerseMetadata(song)
+        addVerseMetadata(verses, song)
         addTip(songIndex, song)
     }
 
