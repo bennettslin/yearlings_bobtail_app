@@ -539,7 +539,6 @@ export default {
                         }
                     }
                 ],
-                hasTopSideCard: true,
                 formType: BRIDGE,
                 sideCardType: BACKING
             },
@@ -616,7 +615,7 @@ export default {
                         }
                     }
                 ],
-                hasBottomSideCard: true,
+                isBottomSideCard: true,
                 formType: BRIDGE,
                 sideCardType: BACKING,
                 subsequent: true

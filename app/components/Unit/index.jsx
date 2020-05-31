@@ -43,17 +43,14 @@ const Unit = ({
             sideCardType,
             sideSubCardType,
             subsequent,
-            unitDot,
             subVerse,
             sideCard,
             sideSubCard, // This exists solely for "Maranatha."
-            hasTopSideCard,
-            hasBottomSideCard
+            isBottomSideCard
         } = getUnitMapForUnit(lyricSongIndex, unitIndex),
 
         formTypeIndex = getFormTypeForUnit(lyricSongIndex, unitIndex),
-        hasSide = Boolean(hasTopSideCard || hasBottomSideCard),
-        isLoneUnitDot = Boolean(unitDot) && !mainVerses
+        hasSide = Boolean(sideCard)
 
     return (
         <div
@@ -81,46 +78,44 @@ const Unit = ({
             {unitIndex === 0 && (
                 <UnitSongTitle />
             )}
-            {!isLoneUnitDot &&
+            {Boolean(mainVerses) &&
                 <div className={cx(
                     'Unit__column__text',
                     'Unit__column',
                     'Unit__column__main'
                 )}>
-                    {mainVerses && (
-                        <UnitCard
-                            {...other}
-                            {...{
-                                versesArray: mainVerses,
-                                formType,
-                                isTruncatable: hasSide,
+                    <UnitCard
+                        {...other}
+                        {...{
+                            versesArray: mainVerses,
+                            formType,
+                            isTruncatable: hasSide,
 
-                                showAnnotationTip: getShowAnnotationTip({
-                                    songIndex: lyricSongIndex,
-                                    unitIndex
-                                }),
-                                showStanzaTabTip: getShowStanzaTabTip({
-                                    songIndex: lyricSongIndex,
-                                    unitIndex
-                                }),
-                                showActivatedTip: getShowActivatedTip({
-                                    songIndex: lyricSongIndex,
-                                    unitIndex
-                                }),
-                                showWormholesTip: getShowWormholesTip({
-                                    songIndex: lyricSongIndex,
-                                    unitIndex
-                                }),
-                                showWikiTip: getShowWikiTip({
-                                    songIndex: lyricSongIndex,
-                                    unitIndex
-                                })
-                            }}
-                            {...!subsequent && {
-                                formTypeIndex
-                            }}
-                        />
-                    )}
+                            showAnnotationTip: getShowAnnotationTip({
+                                songIndex: lyricSongIndex,
+                                unitIndex
+                            }),
+                            showStanzaTabTip: getShowStanzaTabTip({
+                                songIndex: lyricSongIndex,
+                                unitIndex
+                            }),
+                            showActivatedTip: getShowActivatedTip({
+                                songIndex: lyricSongIndex,
+                                unitIndex
+                            }),
+                            showWormholesTip: getShowWormholesTip({
+                                songIndex: lyricSongIndex,
+                                unitIndex
+                            }),
+                            showWikiTip: getShowWikiTip({
+                                songIndex: lyricSongIndex,
+                                unitIndex
+                            })
+                        }}
+                        {...!subsequent && {
+                            formTypeIndex
+                        }}
+                    />
                     {subVerse && (
                         <UnitCard
                             {...other}
@@ -139,7 +134,9 @@ const Unit = ({
                         'Unit__column__text',
                         'Unit__column',
                         'Unit__column__side',
-                        hasBottomSideCard && 'Unit__column__hasBottomSideCard'
+
+                        // This happens only once, in Golden Cord.
+                        isBottomSideCard && 'Unit__column__hasBottomSideCard'
                     )}
                 >
                     {sideCard && (

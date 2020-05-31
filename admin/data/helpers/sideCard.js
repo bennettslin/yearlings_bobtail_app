@@ -7,15 +7,10 @@ export const addHasSideCard = (songIndex, song) => {
      * Cord" and "Uncanny Valley Boy."
      */
     const hasSideCards = lyricUnits.some(({
-        unitMap: {
-            hasTopSideCard,
-            hasBottomSideCard
-        }
-
-    // Tell song it has side stanzas so ear button can be shown if needed.
+        unitMap: { sideCard }
     }) => (
-        hasTopSideCard ||
-        hasBottomSideCard
+        // Tell song it has side stanzas so ear button can be shown if needed.
+        Boolean(sideCard)
     ))
 
     if (hasSideCards) {

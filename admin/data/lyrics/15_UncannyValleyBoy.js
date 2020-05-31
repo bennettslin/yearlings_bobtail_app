@@ -407,7 +407,6 @@ export default {
                         lyric: `the houses you've betrayed.`
                     }
                 ],
-                hasTopSideCard: true,
                 subVerse: [
                     {
                         time: 70,
@@ -474,7 +473,6 @@ export default {
                         lyric: `over suburbia…`
                     }
                 ],
-                hasTopSideCard: true,
                 subVerse: [
                     {
                         time: 82,
@@ -1089,7 +1087,6 @@ export default {
                         ]
                     }
                 ],
-                hasTopSideCard: true,
                 subVerse: [
                     {
                         time: 168,
@@ -1172,7 +1169,6 @@ export default {
                         }
                     }
                 ],
-                hasTopSideCard: true,
                 subVerse: [
                     {
                         time: 181,
@@ -1275,7 +1271,6 @@ export default {
                         }
                     }
                 ],
-                hasTopSideCard: true,
                 formType: CODA,
                 sideCardType: BACKING,
                 sideSubCardType: RESPONSE
