@@ -17,7 +17,7 @@ import OverviewDispatcher from '../../../handlers/Overview/Dispatcher'
 import PlayDispatcher from '../../../dispatchers/PlayDispatcher'
 import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
 import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
-import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
+import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import { populateRefs } from '../../../helpers/ref'
 import {
@@ -265,6 +265,10 @@ class LetterManager extends PureComponent {
         this.dispatchScore = dispatch
     }
 
+    getDispatchScrollVerse = dispatch => {
+        this.dispatchScrollVerse = dispatch
+    }
+
     getDispatchTips = dispatch => {
         this.dispatchTips = dispatch
     }
@@ -284,7 +288,7 @@ class LetterManager extends PureComponent {
                 <LyricDispatcher {...{ getRefs: this._getRefs }} />
                 <OverviewDispatcher {...{ getRefs: this._getRefs }} />
                 <PlayDispatcher {...{ getRefs: this._getRefs }} />
-                <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <ScrollVerseDispatcher {...{ ref: this.getDispatchScrollVerse }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
                 <TipsDispatcher {...{ ref: this.getDispatchTips }} />
                 <ScoreDispatcher {...{ ref: this.getDispatchScore }} />

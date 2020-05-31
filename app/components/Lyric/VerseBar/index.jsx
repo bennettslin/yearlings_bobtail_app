@@ -5,11 +5,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 import Transition from 'react-transition-group/Transition'
-import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
+import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../album/api/verses'
-import { populateRefs } from '../../../helpers/ref'
 import { getCursorIndex } from '../../../helpers/verse'
 import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
 import {
@@ -91,8 +90,8 @@ class VerseBar extends PureComponent {
         )
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchScrollVerse = dispatch => {
+        this.dispatchScrollVerse = dispatch
     }
 
     render() {
@@ -164,7 +163,7 @@ class VerseBar extends PureComponent {
                         />
                     </Transition>
                 </div>
-                <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <ScrollVerseDispatcher {...{ ref: this.getDispatchScrollVerse }} />
             </div>
         )
     }

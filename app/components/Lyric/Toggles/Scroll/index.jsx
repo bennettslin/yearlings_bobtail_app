@@ -6,10 +6,9 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
-import ScrollVerseDispatcher from '../../../../dispatchers/ScrollVerseDispatcher'
+import ScrollVerseDispatcher from '../../../../dispatchers/ScrollVerse'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
-import { populateRefs } from '../../../../helpers/ref'
 import { LYRIC_SCROLL_TOGGLE_KEY } from '../../../../constants/access'
 import { LYRIC_SCROLL_BUTTON_KEY } from '../../../../constants/buttons'
 import { AUTOSCROLL } from '../../../../constants/tips'
@@ -34,8 +33,8 @@ class LyricToggleScroll extends PureComponent {
         this.dispatchScrollVerse(true)
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchScrollVerse = dispatch => {
+        this.dispatchScrollVerse = dispatch
     }
 
     render() {
@@ -68,7 +67,7 @@ class LyricToggleScroll extends PureComponent {
                         }}
                     />
                     <TipsHand reverse {...{ tipType: AUTOSCROLL }} />
-                    <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
+                    <ScrollVerseDispatcher {...{ ref: this.getDispatchScrollVerse }} />
                 </div>
             </CSSTransition>
         )
