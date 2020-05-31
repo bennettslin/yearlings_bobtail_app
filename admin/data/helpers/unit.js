@@ -18,7 +18,7 @@ const _getIndexedVersesForUnit = (unit) => {
     ]
 }
 
-const _addUnitVerseIndices = (songIndex, song) => {
+const _addUnitVerseLists = (songIndex, song) => {
     const { lyricUnits } = albumLyrics[songIndex]
 
     const
@@ -65,7 +65,7 @@ export const addUnitAndVerseMetadata = ({
     const {
         unitVerseIndicesList,
         verseStartTimes
-    } = _addUnitVerseIndices(songIndex, song)
+    } = _addUnitVerseLists(songIndex, song)
 
     addVerseDurations({
         songDuration,

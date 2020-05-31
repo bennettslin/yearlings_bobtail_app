@@ -75,7 +75,7 @@ const _recurseThroughVerse = ({
     }
 }
 
-const _registerAnnotationMetadata = (annotations, song) => {
+const _addAnnotationLists = (annotations, song) => {
     const
         annotationTitles = [],
         annotationColumnIndices = [],
@@ -169,7 +169,7 @@ export const addAnnotationMetadata = (songIndex, song) => {
         })
     })
 
-    _registerAnnotationMetadata(annotations, song)
+    _addAnnotationLists(annotations, song)
 
     return annotations
 }

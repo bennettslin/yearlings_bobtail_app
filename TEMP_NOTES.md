@@ -1,11 +1,12 @@
 # Bugs while production hasn't changed.
 * After accessed wormhole, key navigation does not work until manual focus.
+* R and F keys are wonky.
+* Anchor still shows in activated/slider mode.
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
 * Switching between songs in local is slow, not as slow in staging
 * tips hand in garryowen for score
 * Even future verse does not have activated or hover colour.
-* Anchor still shows in activated/slider mode.
 
 # Brainless JS tasks
 * Change all mapStateToProps to grab from selectors

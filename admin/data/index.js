@@ -14,6 +14,7 @@ import { addAnnotationMetadata } from './helpers/annotation'
 import { addAdminMetadata } from './helpers/admin'
 import { addWormholeMetadata } from './helpers/wormhole'
 import { addTip } from './helpers/tips'
+import { addVerseMetadata } from './helpers/verse'
 
 const annotationsList = []
 
@@ -61,6 +62,7 @@ const songs = getSongIndicesArray().map(songIndex => {
         annotations =
             addAnnotationMetadata(songIndex, song)
 
+        addVerseMetadata(song)
         addTip(songIndex, song)
     }
 

@@ -11,84 +11,74 @@ import {
 } from '../../../constants/lyrics'
 import './style'
 
-const verseLinesPropTypes = {
-    // From parent.
-        isDoublespeakerLine: PropTypes.bool,
-        inVerseBar: PropTypes.bool
-    },
+const VerseLines = ({
+    isDoublespeakerLine,
+    ...other
+}) => {
+    const { inVerseBar } = other
+    return isDoublespeakerLine ? (
 
-    VerseLines = ({
-        isDoublespeakerLine,
-        ...other
-    }) => {
+    // Only wrap in this parent container if it's a doublespeaker line.
+        <div className={cx(
+            'VerseLines',
 
-        const { inVerseBar } = other
+            // Allow anchor in a verse line to know it's in a cursor verse.
+            !inVerseBar && 'sibling__verseCursor',
 
-        return isDoublespeakerLine ? (
+            'fontSize__lyricMultipleColumns'
+        )}>
+            {EAR_COLUMN_KEYS.map(doublespeakerKey => (
+                <VerseLinesChild {...other}
+                    {...{
+                        key: doublespeakerKey,
+                        doublespeakerKey
+                    }}
+                />
+            ))}
+        </div>
 
-        // Only wrap in this parent container if it's a doublespeaker line.
-            <div className={cx(
-                'VerseLines',
+    ) : (
+        <VerseLinesChild {...other} />
+    )
+}
 
-                // Allow anchor in a verse line to know it's in a cursor verse.
-                !inVerseBar && 'sibling__verseCursor',
+const VerseLinesChild = memo(({
+    verseObject,
+    doublespeakerKey,
+    ...other
 
-                'fontSize__lyricMultipleColumns'
-            )}>
-                {EAR_COLUMN_KEYS.map(doublespeakerKey => (
-                    <VerseLinesChild {...other}
-                        {...{
-                            key: doublespeakerKey,
-                            doublespeakerKey
-                        }}
-                    />
-                ))}
-            </div>
+}) => {
+    let columnKey = LYRIC
 
-        ) : (
-            <VerseLinesChild {...other} />
-        )
-    },
+    if (doublespeakerKey) {
+        columnKey = doublespeakerKey
 
-    verseLinesChildPropTypes = {
-    // From parent.
-        verseObject: PropTypes.object.isRequired,
-        doublespeakerKey: PropTypes.string
-    },
+    } else if (verseObject.lyricCentre) {
+        columnKey = LYRIC_CENTRE
+    }
 
-    VerseLinesChild = memo((props) => {
+    return (
+        <VerseLine {...other}
+            {...{
+                text: (
+                    verseObject[LYRIC_CENTRE] ||
+                    verseObject[doublespeakerKey] ||
+                    verseObject[LYRIC]
+                ),
+                columnKey
+            }}
+        />
+    )
+})
 
-        const {
-            verseObject,
-            doublespeakerKey,
-            ...other
-        } = props
+VerseLines.propTypes = {
+    isDoublespeakerLine: PropTypes.bool,
+    inVerseBar: PropTypes.bool
+}
 
-        let columnKey = LYRIC
-
-        if (doublespeakerKey) {
-            columnKey = doublespeakerKey
-
-        } else if (verseObject.lyricCentre) {
-            columnKey = LYRIC_CENTRE
-        }
-
-        return (
-            <VerseLine {...other}
-                {...{
-                    text: (
-                        verseObject[LYRIC_CENTRE] ||
-                        verseObject[doublespeakerKey] ||
-                        verseObject[LYRIC]
-                    ),
-                    columnKey
-                }}
-            />
-        )
-    })
-
-VerseLines.propTypes = verseLinesPropTypes
-
-VerseLinesChild.propTypes = verseLinesChildPropTypes
+VerseLinesChild.propTypes = {
+    verseObject: PropTypes.object.isRequired,
+    doublespeakerKey: PropTypes.string
+}
 
 export default memo(VerseLines)

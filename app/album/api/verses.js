@@ -23,8 +23,8 @@ export const getValidVerseIndex = (songIndex, verseIndex) => (
 )
 
 export const getVerse = (songIndex, verseIndex) => {
-    const { indexedVerses } = getSong(songIndex)
-    return indexedVerses ? indexedVerses[verseIndex] : null
+    const { verseLyrics } = getSong(songIndex)
+    return verseLyrics ? verseLyrics[verseIndex] : null
 }
 
 export const getVerseCountForSong = songIndex => (
@@ -41,3 +41,12 @@ export const getStanzaIndexForVerse = (songIndex, verseIndex) => {
     return verseStanzaIndices[verseIndex]
 }
 
+export const getLastAnnotationIndexForVerse = (songIndex, verseIndex) => {
+    const { verseLastAnnotationIndices } = getSong(songIndex)
+    return verseLastAnnotationIndices[verseIndex]
+}
+
+export const getAnnotationIndicesForVerse = (songIndex, verseIndex) => {
+    const { verseAnnotationIndicesList } = getSong(songIndex)
+    return verseAnnotationIndicesList[verseIndex]
+}

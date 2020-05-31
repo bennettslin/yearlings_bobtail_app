@@ -3,10 +3,7 @@ import {
     getAlbum,
     getSong
 } from '../../album/api/songs'
-import {
-    getStoredSongIndex,
-    getStoredVerseIndex
-} from '../../helpers/storage'
+import { getStoredSongIndex } from '../../helpers/storage'
 
 import {
     logAccess,
@@ -22,17 +19,12 @@ import {
     logError,
     logger
 } from './helpers/logs'
-import { getVerse } from '../../album/api/verses'
 
 // Allow access to album in local delivery.
 if (IS_STAGING) {
     global.album = getAlbum()
 
     global.s = () => getSong(getStoredSongIndex())
-    global.v = () => getVerse(
-        getStoredSongIndex(),
-        getStoredVerseIndex(getStoredSongIndex())
-    )
 }
 
 logServe({

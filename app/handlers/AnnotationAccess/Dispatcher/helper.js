@@ -2,7 +2,10 @@ import {
     getAnnotationCountForSong,
     getDotKeysForAnnotation
 } from '../../../album/api/annotations'
-import { getVerse } from '../../../album/api/verses'
+import {
+    getLastAnnotationIndexForVerse,
+    getAnnotationIndicesForVerse
+} from '../../../album/api/verses'
 import {
     getShowAnnotationForColumn,
     getAnnotationIndexForDirection
@@ -20,18 +23,21 @@ export const getAnnotationIndexForVerseIndex = ({
 
     direction = -1
 }) => {
-    const verseObject = getVerse(selectedSongIndex, verseIndex),
-        annotationsCount = getAnnotationCountForSong(selectedSongIndex)
-
-    if (!verseObject) {
-        return -1
-    }
-
+    const annotationsCount = getAnnotationCountForSong(selectedSongIndex)
     let returnIndex,
         returnToLoop
 
     // If the verse has its own annotation, pick it.
-    const { verseAnnotationIndices } = verseObject
+    const
+        lastAnnotationIndex = getLastAnnotationIndexForVerse(
+            selectedSongIndex,
+            verseIndex
+        ),
+        verseAnnotationIndices = getAnnotationIndicesForVerse(
+            selectedSongIndex,
+            verseIndex
+        )
+
     if (verseAnnotationIndices) {
         const annotationIndicesCount = verseAnnotationIndices.length
 
@@ -77,8 +83,8 @@ export const getAnnotationIndexForVerseIndex = ({
     // Otherwise, return either previous or next depending on direction.
     } else {
         returnIndex = direction === -1 ?
-            verseObject.lastAnnotationIndex :
-            (verseObject.lastAnnotationIndex + 1) % annotationsCount
+            lastAnnotationIndex :
+            (lastAnnotationIndex + 1) % annotationsCount
     }
 
     /**
