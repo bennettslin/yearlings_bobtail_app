@@ -6,7 +6,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import VerseDispatcher from '../../dispatchers/VerseDispatcher'
-import StanzaHoc from './Hoc'
 import Stanza from './Stanza'
 import Unit from './Unit'
 import { getStanzaIndices } from '../../album/api/stanzas'
@@ -60,10 +59,7 @@ class Stanzas extends PureComponent {
             lastUnitDotCardIndex = getLastUnitDotCardIndex(lyricSongIndex)
 
         return stanzaIndices.length && (
-            <div
-                {...{ className: 'Stanzas' }}
-            >
-
+            <div {...{ className: 'Stanzas' }} >
                 {/* This is the first unit dot card. There always is one. */}
                 <Unit
                     {...{
@@ -73,11 +69,10 @@ class Stanzas extends PureComponent {
                 />
 
                 {stanzaIndices.map(stanzaIndex => (
-                    <StanzaHoc
+                    <Stanza
                         {...{
                             key: stanzaIndex,
                             stanzaIndex,
-                            StanzaComponent: Stanza,
                             handleVerseSelect: this._handleVerseSelect,
                             setLyricAnnotationElement,
                             setVerseRef

@@ -3,7 +3,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import StanzaHoc from '../../Stanzas/Hoc'
 import SliderStanza from './Stanza'
 import { getStanzaIndices } from '../../../album/api/stanzas'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
@@ -17,11 +16,10 @@ const SliderStanzas = () => {
             'abF'
         )}>
             {getStanzaIndices(lyricSongIndex).map(stanzaIndex => (
-                <StanzaHoc
+                <SliderStanza
                     {...{
                         key: stanzaIndex,
-                        stanzaIndex,
-                        StanzaComponent: SliderStanza
+                        stanzaIndex
                     }}
                 />
             ))}

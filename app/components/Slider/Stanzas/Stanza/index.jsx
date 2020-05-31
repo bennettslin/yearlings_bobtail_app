@@ -2,20 +2,20 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
+import SliderVerses from './Verses'
 import { getFormTypeForStanza } from '../../../../album/api/stanzas'
 import {
     getDurationForSong,
     getStartTimeForStanza,
     getEndTimeForStanza
 } from '../../../../album/api/time'
-import SliderVerses from './Verses'
+import { getLogicClassNamesForStanza } from '../../../../helpers/stanza'
 import { CSS_OVERLAP_MARGIN_X_SLIDER } from '../../../../constants/responsive'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../redux/lyric/selectors'
 import './style'
 
 const SliderStanza = ({
-    stanzaIndex,
-    logicSelectors
+    stanzaIndex
 
 }) => {
     const
@@ -67,7 +67,7 @@ const SliderStanza = ({
                 className: cx(
                     'SliderStanza',
                     `SliderStanza__${stanzaFormType}`,
-                    logicSelectors
+                    getLogicClassNamesForStanza(lyricSongIndex, stanzaIndex)
                 ),
                 style: stanzaStyle
             }}
@@ -98,8 +98,7 @@ const SliderStanza = ({
 }
 
 SliderStanza.propTypes = {
-    stanzaIndex: PropTypes.number.isRequired,
-    logicSelectors: PropTypes.string.isRequired
+    stanzaIndex: PropTypes.number.isRequired
 }
 
 export default memo(SliderStanza)
