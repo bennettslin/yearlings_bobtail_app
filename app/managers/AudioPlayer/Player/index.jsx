@@ -318,6 +318,10 @@ class PlayerManager extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchPlayerCanPlayThrough = dispatch => {
+        this.dispatchPlayerCanPlayThrough = dispatch
+    }
+
     render() {
         const { selectedSongIndex } = this.props,
             mp3s = getMp3s()
@@ -351,7 +355,7 @@ class PlayerManager extends PureComponent {
                         />
                     )
                 })}
-                <PlayerDispatcher {...{ getRefs: this._getRefs }} />
+                <PlayerDispatcher {...{ ref: this.getDispatchPlayerCanPlayThrough }} />
                 <TimeVerseDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

@@ -1,4 +1,5 @@
 # Bugs.
+* Error when staging in Gatsby.
 * After accessed wormhole, key navigation does not work until manual focus.
 * R and F keys are wonky.
 

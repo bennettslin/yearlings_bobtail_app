@@ -1,6 +1,5 @@
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updatePlayersStore } from '../../../../redux/players/action'
 import {
     getStoreKeyForPlayer,
@@ -8,51 +7,25 @@ import {
 } from '../../../../helpers/player'
 import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../../../redux/players/selectors'
 
-const mapStateToProps = state => {
-    const playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state)
+const PlayerDispatcher = forwardRef((props, ref) => {
+    const
+        dispatch = useDispatch(),
+        playersBitNumber = useSelector(PLAYERS_BIT_NUMBER_SELECTOR),
 
-    return {
-        playersBitNumber
-    }
-}
+        dispatchPlayerCanPlayThrough = songIndex => {
+            dispatch(updatePlayersStore({
+                playersBitNumber: getBitFromPlayerCanPlayThrough({
+                    bitNumber: playersBitNumber,
+                    key: songIndex
+                }),
 
-class PlayerDispatcher extends PureComponent {
+                // Add to store just for dev clarity.
+                [getStoreKeyForPlayer(songIndex)]: true
+            }))
+        }
 
-    static propTypes = {
-        // Through Redux.
-        playersBitNumber: PropTypes.number.isRequired,
-        updatePlayersStore: PropTypes.func.isRequired,
+    useImperativeHandle(ref, () => dispatchPlayerCanPlayThrough)
+    return null
+})
 
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchPlayerCanPlayThrough: this.dispatchPlayerCanPlayThrough
-        })
-    }
-
-    dispatchPlayerCanPlayThrough = songIndex => {
-        const { playersBitNumber } = this.props
-
-        this.props.updatePlayersStore({
-            playersBitNumber: getBitFromPlayerCanPlayThrough({
-                bitNumber: playersBitNumber,
-                key: songIndex
-            }),
-
-            // Added to store just for dev clarity.
-            [getStoreKeyForPlayer(songIndex)]: true
-        })
-    }
-
-    render() {
-        return null
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    { updatePlayersStore }
-)(PlayerDispatcher)
+export default PlayerDispatcher
