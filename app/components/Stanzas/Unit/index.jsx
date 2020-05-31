@@ -5,7 +5,7 @@
  */
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import SongStanzasTitle from '../Title'
 import UnitCard from './Card'
@@ -27,32 +27,14 @@ import {
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
-
-    return {
-        lyricSongIndex
-    }
-}
-
-/*************
- * CONTAINER *
- *************/
-
 const Unit = ({
-    /* eslint-disable no-unused-vars */
-    dispatch,
-    /* eslint-enable no-unused-vars */
-
-    lyricSongIndex,
     unitIndex,
     ...other
+
 }) => {
     const
-        {
-            setLyricAnnotationElement
-        } = other,
-        unitMap = getUnitMapForUnit(lyricSongIndex, unitIndex),
+        { setLyricAnnotationElement } = other,
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
         mainVerses = getMainVersesForUnit(lyricSongIndex, unitIndex),
 
         {
@@ -67,7 +49,7 @@ const Unit = ({
             sideSubCard, // This exists solely for "Maranatha."
             hasTopSideCard,
             hasBottomSideCard
-        } = unitMap,
+        } = getUnitMapForUnit(lyricSongIndex, unitIndex),
 
         formTypeIndex = getFormTypeForUnit(lyricSongIndex, unitIndex),
         hasSide = Boolean(hasTopSideCard || hasBottomSideCard),
@@ -154,10 +136,7 @@ const Unit = ({
                         'Unit__column__text',
                         'Unit__column',
                         'Unit__column__side',
-                        {
-                            'Unit__column__hasBottomSideCard':
-                                hasBottomSideCard
-                        }
+                        hasBottomSideCard && 'Unit__column__hasBottomSideCard'
                     )}
                 >
                     {hasTopSideCard && (
@@ -205,12 +184,7 @@ const Unit = ({
 }
 
 Unit.propTypes = {
-    // Through Redux.
-    lyricSongIndex: PropTypes.number.isRequired,
-    dispatch: PropTypes.func.isRequired,
-
-    // From parent.
     unitIndex: PropTypes.number.isRequired
 }
 
-export default connect(mapStateToProps)(memo(Unit))
+export default memo(Unit)
