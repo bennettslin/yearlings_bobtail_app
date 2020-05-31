@@ -23,7 +23,6 @@ const TempGlobalAnnotationsCounter = () => (
 )
 
 const TempGlobalAnnotation = ({ intervalIndex }) => {
-
     const {
         songIndex,
         annotationIndex,
@@ -38,8 +37,7 @@ const TempGlobalAnnotation = ({ intervalIndex }) => {
         return null
     }
 
-    const
-        annotationTitle = getTitleForAnnotation(songIndex, annotationIndex)
+    const annotationTitle = getTitleForAnnotation(songIndex, annotationIndex)
 
     return (
         <div className="TempGlobalAnnotation">

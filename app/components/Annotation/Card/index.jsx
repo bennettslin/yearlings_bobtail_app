@@ -12,7 +12,6 @@ import './logic'
 import './style'
 import {
     getDescriptionForAnnotationCard,
-    getDotKeysForAnnotationCard,
     getDotBitForAnnotationCard
 } from '../../../album/api/cards'
 
@@ -30,11 +29,6 @@ const AnnotationCard = ({
             annotationIndex,
             cardIndex
         ),
-        dotKeys = getDotKeysForAnnotationCard(
-            lyricSongIndex,
-            annotationIndex,
-            cardIndex
-        ),
         dotBit = getDotBitForAnnotationCard(
             lyricSongIndex,
             annotationIndex,
@@ -46,7 +40,7 @@ const AnnotationCard = ({
             'AnnotationCardContainer',
             inCarousel && 'AnnotationCardContainer__animated',
             getPrefixedDotLetterClassNames(
-                dotKeys,
+                dotBit,
 
                 // "Child annotation card letter."
                 'CaC'

@@ -12,6 +12,7 @@ const AnnotationCard = ({
     songIndex,
     annotationIndex,
     cardIndex
+
 }) => {
     const
         description = getDescriptionForAnnotationCard(

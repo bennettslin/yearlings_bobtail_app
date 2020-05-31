@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Annotation from '../../Annotation'
-import { getDotKeysForAnnotation } from '../../../album/api/annotations'
+import { getDotBitForAnnotation } from '../../../album/api/annotations'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 import { getCarouselAnnotationData } from './helper'
@@ -48,7 +48,7 @@ class CarouselAnnotation extends PureComponent {
                 isSelected,
                 annotationIndex
             } = this.props,
-            annotationDotKeys = getDotKeysForAnnotation(
+            annotationDotBit = getDotBitForAnnotation(
                 lyricSongIndex,
                 annotationIndex
             ),
@@ -71,7 +71,7 @@ class CarouselAnnotation extends PureComponent {
                             `CarouselAnnotation__inEarColumn__${columnKey}`,
 
                         getPrefixedDotLetterClassNames(
-                            annotationDotKeys,
+                            annotationDotBit,
                             // "Child carousel annotation letter."
                             'CcA'
                         ),

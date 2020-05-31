@@ -6,10 +6,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateAnnotationStore } from '../../../../redux/annotation/action'
 import Anchor from '../../../Anchor'
-import {
-    getDotKeysFromBitNumber,
-    getPrefixedDotLetterClassNames
-} from '../../../../helpers/dot'
+import { getPrefixedDotLetterClassNames } from '../../../../helpers/dot'
 import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
 import {
     IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
@@ -99,9 +96,7 @@ class UnitDot extends PureComponent {
                 annotationIndex === accessedAnnotationIndex,
 
             isSelected =
-                annotationIndex === lyricAnnotationIndex,
-
-            dotKeys = getDotKeysFromBitNumber(dotBit)
+                annotationIndex === lyricAnnotationIndex
 
         return (
             <div
@@ -115,7 +110,7 @@ class UnitDot extends PureComponent {
 
                     // Show and hide dot stanza block in and out based on dot keys.
                     getPrefixedDotLetterClassNames(
-                        dotKeys,
+                        dotBit,
                         // "Child unit dot letter."
                         'CuD'
                     )

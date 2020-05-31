@@ -2,10 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import {
-    getDotKeysFromBitNumber,
-    getPrefixedDotLetterClassNames
-} from '../../helpers/dot'
+import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
 import { getCursorIndex } from '../../helpers/verse'
 import { getStanzaIndexForVerse } from '../../album/api/verses'
 import {
@@ -41,8 +38,6 @@ const LogicWrapper = ({ children }) => {
         sliderVerseIndex = useSelector(SLIDER_VERSE_INDEX_SELECTOR),
         isVerseBarAbove = useSelector(IS_VERSE_BAR_ABOVE_SELECTOR),
         isVerseBarBelow = useSelector(IS_VERSE_BAR_BELOW_SELECTOR),
-
-        selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
         areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
 
         /**
@@ -94,7 +89,7 @@ const LogicWrapper = ({ children }) => {
                             `RlV${cursorVerseIndex}`,
 
                         getPrefixedDotLetterClassNames(
-                            selectedDotKeys,
+                            dotsBitNumber,
                             // "Root selected dot letter."
                             'RsD'
                         ),

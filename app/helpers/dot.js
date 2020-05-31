@@ -34,17 +34,10 @@ export const getBitNumberFromDotKeys = dotKeys => (
     }) : null
 )
 
-export const getPrefixedDotLetterClassNames = (entity, prefix) => {
+export const getPrefixedDotLetterClassNames = (dotBit, prefix) => {
+    const dotKeys = getDotKeysFromBitNumber(dotBit)
 
-    if (!entity) {
-        return false
-    }
-
-    const classNamesArray =
-        typeof entity === 'object' ?
-            Object.keys(pickBy(entity)) : entity.split(' ')
-
-    return classNamesArray.map(name => (
+    return Object.keys(pickBy(dotKeys)).map(name => (
         `${prefix}${name[0]}`
     ))
 }
