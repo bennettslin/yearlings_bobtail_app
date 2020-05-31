@@ -6,7 +6,7 @@ import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 import { getIndexedTitleForSong } from '../../../album/api/songs'
 import './style'
 
-const SongStanzasTitle = () => {
+const UnitSongTitle = () => {
     const
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
         songTitle = getIndexedTitleForSong(lyricSongIndex)
@@ -15,7 +15,7 @@ const SongStanzasTitle = () => {
         <div
             {...{
                 className: cx(
-                    'SongStanzasTitle',
+                    'UnitSongTitle',
                     'fCC',
                     'textShadow__dark',
                     'Rancho'
@@ -27,4 +27,4 @@ const SongStanzasTitle = () => {
     )
 }
 
-export default SongStanzasTitle
+export default UnitSongTitle

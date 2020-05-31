@@ -7,7 +7,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import SongStanzasTitle from '../Title'
+import UnitSongTitle from './Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 import {
@@ -15,16 +15,16 @@ import {
     getMainVersesForUnit,
     getFormTypeForUnit,
     getVerseIndicesForUnit
-} from '../../../album/api/units'
-import { getParentOfVerseClassNamesForIndices } from '../helper'
+} from '../../album/api/units'
+import { getParentOfVerseClassNamesForIndices } from '../../helpers/stanza'
 import {
     getShowAnnotationTip,
     getShowActivatedTip,
     getShowStanzaTabTip,
     getShowWormholesTip,
     getShowWikiTip
-} from '../../../album/api/tips'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+} from '../../album/api/tips'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 import './style'
 
 const Unit = ({
@@ -169,7 +169,7 @@ const Unit = ({
                 </div>
             }
             {unitIndex === 0 && (
-                <SongStanzasTitle />
+                <UnitSongTitle />
             )}
             {unitDot &&
                 <UnitDot

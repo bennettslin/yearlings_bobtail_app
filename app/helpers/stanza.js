@@ -1,7 +1,7 @@
 import cx from 'classnames'
 import { getVerseIndicesForStanza } from '../album/api/stanzas'
 
-const getParentOfVerseClassNamesForIndices = ({
+export const getParentOfVerseClassNamesForIndices = ({
     entities = [],
 
     // "Parent of verse index."

@@ -3,21 +3,21 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getParentOfVerseClassNamesForIndices } from '../../helper'
-import VerseHoc from '../../../Verse/Hoc'
-import Verse from '../../../Verse'
-import TipsHand from '../../../Tips/Hand'
+import VerseHoc from '../../Verse/Hoc'
+import Verse from '../../Verse'
+import TipsHand from '../../Tips/Hand'
+import { getParentOfVerseClassNamesForIndices } from '../../../helpers/stanza'
 import {
     RESPONSE,
     RHYME
-} from '../../../../constants/lyrics'
+} from '../../../constants/lyrics'
 import {
     ANNOTATION,
     ACTIVATED_VERSE,
     STANZA_TAB,
     WORMHOLES,
     WIKI
-} from '../../../../constants/tips'
+} from '../../../constants/tips'
 import './style'
 
 /*************
