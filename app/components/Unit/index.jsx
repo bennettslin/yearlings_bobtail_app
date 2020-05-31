@@ -162,15 +162,12 @@ const Unit = ({
                     )}
                 </div>
             }
-            {unitDot &&
-                <UnitDot
-                    {...{
-                        unitDot,
-                        unitIndex,
-                        setLyricAnnotationElement
-                    }}
-                />
-            }
+            <UnitDot
+                {...{
+                    unitIndex,
+                    setLyricAnnotationElement
+                }}
+            />
         </div>
     )
 }

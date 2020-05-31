@@ -4,36 +4,42 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateAnnotationStore } from '../../../redux/annotation/action'
 import Anchor from '../../Anchor'
+import UnitDotParent from './Parent'
+import { getDotForUnit } from '../../../album/api/units'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
+import { updateAnnotationStore } from '../../../redux/annotation/action'
 import { LYRIC_ANNOTATION_SCROLL } from '../../../constants/scroll'
 import {
     IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
     ACCESSED_ANNOTATION_INDEX_SELECTOR
 } from '../../../redux/access/selectors'
 import { IS_ACTIVATED_SELECTOR } from '../../../redux/activated/selectors'
-import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import {
+    LYRIC_SONG_INDEX_SELECTOR,
+    LYRIC_ANNOTATION_INDEX_SELECTOR
+} from '../../../redux/lyric/selectors'
 import { IS_SLIDER_MOVING_SELECTOR } from '../../../redux/slider/selectors'
 import './logic'
 import './style'
 
-const UnitDot = ({
-    // unitIndex,
-    unitDot: {
-        annotationIndex,
-        dotBit
-    },
+export const UnitDot = ({
+    unitIndex,
     setLyricAnnotationElement
 
 }) => {
     const
         dispatch = useDispatch(),
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricAnnotationIndex = useSelector(LYRIC_ANNOTATION_INDEX_SELECTOR),
         isAccessedIndexedAnchorShown = useSelector(IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR),
         accessedAnnotationIndex = useSelector(ACCESSED_ANNOTATION_INDEX_SELECTOR),
         isActivated = useSelector(IS_ACTIVATED_SELECTOR),
-        lyricAnnotationIndex = useSelector(LYRIC_ANNOTATION_INDEX_SELECTOR),
         isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
+        {
+            annotationIndex,
+            dotBit
+        } = getDotForUnit(lyricSongIndex, unitIndex),
 
         isAccessed =
             isAccessedIndexedAnchorShown &&
@@ -93,10 +99,11 @@ const UnitDot = ({
     )
 }
 
-UnitDot.propTypes = {
-    // unitIndex: PropTypes.number.isRequired,
-    unitDot: PropTypes.object.isRequired,
+export const propTypes = {
+    unitIndex: PropTypes.number.isRequired,
     setLyricAnnotationElement: PropTypes.func.isRequired
 }
 
-export default memo(UnitDot)
+UnitDot.propTypes = propTypes
+
+export default memo(UnitDotParent)
