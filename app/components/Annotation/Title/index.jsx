@@ -7,6 +7,7 @@ import Anchor from '../../Anchor'
 import AnnotationTitleText from './TitleText'
 import AnnotationAccess from './Access'
 import {
+    getDotBitForAnnotation,
     getDotKeysForAnnotation,
     getTitleForAnnotation
 } from '../../../album/api/annotations'
@@ -34,6 +35,11 @@ const AnnotationTitle = ({
             annotationIndex,
             selectedDotKeys
         }),
+
+        annotationDotBit = getDotBitForAnnotation(
+            lyricSongIndex,
+            annotationIndex
+        ),
 
         annotationDotKeys = getDotKeysForAnnotation(
             lyricSongIndex,
@@ -87,7 +93,7 @@ const AnnotationTitle = ({
                     {...{
                         isAccessed,
                         isSelected,
-                        stanzaDotBit: dotsBitNumber,
+                        stanzaDotBit: annotationDotBit,
                         handleAnchorClick: _handleTitleClick
                     }}
                 />

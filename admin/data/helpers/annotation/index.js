@@ -80,7 +80,7 @@ const _registerAnnotationMetadata = (annotations, song) => {
         annotationTitles = [],
         annotationColumnIndices = [],
         annotationVerseIndices = [],
-        annotationDotBitsList = [],
+        annotationDotBits = [],
         annotationCardsDescriptionsList = [],
         annotationCardsDotBitsList = []
 
@@ -103,7 +103,7 @@ const _registerAnnotationMetadata = (annotations, song) => {
                 annotation.verseIndex :
                 -1
         )
-        annotationDotBitsList.push(getBitNumberFromDotKeys(annotation.dotKeys))
+        annotationDotBits.push(getBitNumberFromDotKeys(annotation.dotKeys))
         annotationCardsDescriptionsList.push(
             annotation.cards.map(card => card.description || null)
         )
@@ -124,7 +124,7 @@ const _registerAnnotationMetadata = (annotations, song) => {
         song.annotationColumnIndices = annotationColumnIndices
     }
     song.annotationTitles = annotationTitles
-    song.annotationDotBitsList = annotationDotBitsList
+    song.annotationDotBits = annotationDotBits
     song.annotationVerseIndices = annotationVerseIndices
     song.annotationCardsDescriptionsList = annotationCardsDescriptionsList
     song.annotationCardsDotBitsList = annotationCardsDotBitsList
