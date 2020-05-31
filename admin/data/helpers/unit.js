@@ -8,13 +8,13 @@ const _getIndexedVersesForUnit = (unit) => {
      * are not indexed.
      */
     const {
-        unitMap: { subVerse },
+        unitMap: { subCard },
         mainVerses
     } = unit
 
     return [
         ...mainVerses || [],
-        ...subVerse || []
+        ...subCard || []
     ]
 }
 
@@ -44,7 +44,7 @@ const _addUnitVerseLists = (songIndex, song) => {
         })
 
         unitMaps.push(unit.unitMap)
-        unitMainVerses.push(unit.mainVerses)
+        unitMainVerses.push(unit.mainVerses || null)
         unitSubsequents.push(unit.unitMap.subsequent || false)
         unitVerseIndicesList.push(unitVerseIndices)
     })

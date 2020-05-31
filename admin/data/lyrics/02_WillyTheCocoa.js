@@ -168,7 +168,7 @@ export default {
                 formType: VERSES,
                 subCardType: RHYME,
                 subsequent: true,
-                subVerse: [
+                subCard: [
                     {
                         time: 30,
                         lyric: {
@@ -710,7 +710,7 @@ export default {
                 formType: VERSES,
                 subCardType: RHYME,
                 subsequent: true,
-                subVerse: [
+                subCard: [
                     {
                         time: 126,
                         lyric: {

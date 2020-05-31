@@ -47,7 +47,7 @@ export default {
                         }
                     }
                 },
-                subVerse: [
+                subCard: [
                     {
                         time: 33,
                         lyricCentre: {

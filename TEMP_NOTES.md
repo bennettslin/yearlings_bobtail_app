@@ -1,5 +1,12 @@
+# TODO today
+* Isolate isBottomSideCard
+* Isolate sideCard, subCard, and sideSubCard
+* Isolate their respective form types
+* Unit card can get sideCard, subCard, and sideSubCard
+* Unit card can get main verses
+
 # Bugs
-* Unit dot reference consistently doesn't get passed.
+* Unit dot reference consistently doesn't get passed to scroll.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Figure out why window resizing timeout seems to have regressed.
@@ -11,7 +18,7 @@
 * Anchor still shows in activated/slider mode.
 * Even future verse does not have activated or hover colour.
 
-# Buts that may get fixed after canEnter tear out and redo.
+# Bugs that may get fixed after canEnter tear out and redo.
 * Selecting accessed verse has a delay.
 
 # Brainless JS tasks

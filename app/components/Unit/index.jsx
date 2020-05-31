@@ -46,7 +46,7 @@ const Unit = ({
             subCardType,
             sideCardType,
             sideSubCardType,
-            subVerse,
+            subCard,
             sideCard,
             sideSubCard, // This exists solely for "Maranatha."
             isBottomSideCard
@@ -117,11 +117,11 @@ const Unit = ({
                             formTypeIndex
                         }}
                     />
-                    {subVerse && (
+                    {subCard && (
                         <UnitCard
                             {...other}
                             {...{
-                                versesArray: subVerse,
+                                versesArray: subCard,
                                 formType: subCardType,
                                 isTruncatable: hasSide
                             }}

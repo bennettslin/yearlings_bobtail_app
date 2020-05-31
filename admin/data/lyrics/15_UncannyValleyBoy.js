@@ -407,7 +407,7 @@ export default {
                         lyric: `the houses you've betrayed.`
                     }
                 ],
-                subVerse: [
+                subCard: [
                     {
                         time: 70,
                         lyric: {
@@ -473,7 +473,7 @@ export default {
                         lyric: `over suburbia…`
                     }
                 ],
-                subVerse: [
+                subCard: [
                     {
                         time: 82,
                         lyric: {
@@ -890,7 +890,7 @@ export default {
         },
         {
             unitMap: {
-                subVerse: [
+                subCard: [
                     {
                         time: 150,
                         lyric: {
@@ -977,7 +977,7 @@ export default {
         },
         {
             unitMap: {
-                subVerse: [
+                subCard: [
                     {
                         time: 157,
                         lyric: {
@@ -1087,7 +1087,7 @@ export default {
                         ]
                     }
                 ],
-                subVerse: [
+                subCard: [
                     {
                         time: 168,
                         lyric: {
@@ -1169,7 +1169,7 @@ export default {
                         }
                     }
                 ],
-                subVerse: [
+                subCard: [
                     {
                         time: 181,
                         lyric: {

@@ -1372,7 +1372,7 @@ export default {
         },
         {
             unitMap: {
-                subVerse: [
+                subCard: [
                     {
                         time: 128,
                         lyric: {
@@ -1454,7 +1454,7 @@ export default {
         },
         {
             unitMap: {
-                subVerse: [
+                subCard: [
                     {
                         time: 135,
                         lyric: {

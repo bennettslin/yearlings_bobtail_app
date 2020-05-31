@@ -211,7 +211,7 @@ export default {
         },
         {
             unitMap: {
-                subVerse: [
+                subCard: [
                     {
                         time: 34,
                         lyric: {
