@@ -38,10 +38,6 @@ const mapStateToProps = state => {
     }
 }
 
-/*************
- * CONTAINER *
- *************/
-
 class UnitDot extends PureComponent {
 
     static propTypes = {
@@ -103,43 +99,9 @@ class UnitDot extends PureComponent {
                 annotationIndex === accessedAnnotationIndex,
 
             isSelected =
-                annotationIndex === lyricAnnotationIndex
+                annotationIndex === lyricAnnotationIndex,
 
-        return (
-            <UnitDotView
-                {...{
-                    dotBit,
-                    isSelected,
-                    isAccessed,
-                    annotationIndex,
-                    handleAnchorClick: this._handleDotButtonClick,
-                    setLyricAnnotationElement: this.setLyricAnnotationElement
-                }}
-            />
-        )
-    }
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const propTypes = {
-    // From parent.
-        dotBit: PropTypes.number.isRequired,
-        annotationIndex: PropTypes.number.isRequired,
-        setLyricAnnotationElement: PropTypes.func.isRequired
-    },
-
-    UnitDotView = ({
-        // From controller.
-        dotBit,
-        annotationIndex,
-        setLyricAnnotationElement,
-        ...other
-
-    }) => {
-        const dotKeys = getDotKeysFromBitNumber(dotBit)
+            dotKeys = getDotKeysFromBitNumber(dotBit)
 
         return (
             <div
@@ -161,17 +123,19 @@ const propTypes = {
             >
                 {/* Scroll to unit dot at bottom, not unit middle. */}
                 <Anchor
-                    {...other}
                     {...{
                         stanzaDotBit: dotBit,
-                        setLyricAnnotationElement
+                        isSelected,
+                        isAccessed,
+                        annotationIndex,
+                        handleAnchorClick: this._handleDotButtonClick,
+                        setLyricAnnotationElement: this.setLyricAnnotationElement
                     }}
                 />
             </div>
         )
     }
-
-UnitDotView.propTypes = propTypes
+}
 
 export default connect(
     mapStateToProps,
