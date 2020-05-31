@@ -2,7 +2,6 @@ import {
     getObjectFromBitNumber,
     getTwoToThePowerOfN
 } from '../helpers/bit'
-import { getBitNumberFromDotKeys } from '../helpers/dot'
 
 export const AFTERWORD = 'afterword'
 export const BACKSTORY = 'backstory'
@@ -36,21 +35,15 @@ export const DOT_DESCRIPTIONS = {
     [AFTERWORD]: 'What came next.'
 }
 
+// Hard-coded because it fails staging otherwise. Haven't investigated why.
+export const INITIAL_DOTS_BIT_NUMBER = 7
+export const WORMHOLE_BIT_NUMBER = 32
+
 export const EMPTY_DOTS_STORE = getObjectFromBitNumber({
     keysArray: ORDERED_DOT_KEYS,
     bitNumber: 0
 })
 
-export const INITIAL_DOTS_BIT_NUMBER = getBitNumberFromDotKeys({
-    [NARRATIVE]: true,
-    [BACKSTORY]: true,
-    [OBSERVATION]: true
-})
-
 export const FULL_DOTS_BIT_NUMBER = getTwoToThePowerOfN(
     ORDERED_DOT_KEYS.length
 ) - 1
-
-export const WORMHOLE_BIT_NUMBER = getBitNumberFromDotKeys({
-    [WORMHOLE]: true
-})

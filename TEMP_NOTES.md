@@ -1,6 +1,3 @@
-# Bugs.
-* Error when staging in Gatsby.
-
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
