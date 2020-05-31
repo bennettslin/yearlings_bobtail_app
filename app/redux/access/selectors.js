@@ -55,3 +55,15 @@ export const IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR = createSelector(
         isActivated
     })
 )
+
+export const IS_ACCESSED_ANNOTATION = annotationIndex => createSelector(
+    IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
+    ACCESSED_ANNOTATION_INDEX_SELECTOR,
+    (
+        isAccessedIndexedAnchorShown,
+        accessedAnnotationIndex
+    ) => (
+        isAccessedIndexedAnchorShown &&
+        annotationIndex === accessedAnnotationIndex
+    )
+)
