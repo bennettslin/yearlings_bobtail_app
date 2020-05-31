@@ -4752,5 +4752,9 @@ export default [
     {
         taskName: `Don't load score until clicked.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix weird bug with app rendering in iframe, causing focus container to lose focus.`,
+        workedHours: 1
     }
 ]

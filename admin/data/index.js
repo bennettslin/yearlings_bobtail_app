@@ -59,7 +59,6 @@ const songs = getSongIndicesArray().map(songIndex => {
             song
         })
 
-        // TODO: Remove extraneous stuff from cards.
         annotations =
             addAnnotationMetadata(songIndex, song)
 

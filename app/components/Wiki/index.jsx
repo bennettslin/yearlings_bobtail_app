@@ -15,10 +15,10 @@ const Wiki = () => {
         }
 
     useEffect(() => {
-        // This prevents iframe src from adding to browser history.
-        wikiElement.current.contentWindow.location.replace(
-            selectedWikiUrl
-        )
+        if (wikiElement.current) {
+            // This prevents iframe src from adding to browser history.
+            wikiElement.current.contentWindow.location.replace(selectedWikiUrl)
+        }
 
         if (selectedWikiUrl) {
             setIsLoading(true)
@@ -30,6 +30,7 @@ const Wiki = () => {
             {...{
                 ref: wikiElement,
                 className: 'Wiki',
+                isShown: Boolean(selectedWikiUrl),
                 isLoading,
                 onLoad
             }}

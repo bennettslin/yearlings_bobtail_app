@@ -19,10 +19,12 @@ const Score = () => {
 
     useEffect(() => {
         // Only fetch once score is toggled on.
-        const scoreUrl = isScoreShown ? getSongScore(lyricSongIndex) : ''
+        const scoreUrl = getSongScore(lyricSongIndex)
 
-        // This prevents iframe src from adding to browser history.
-        scoreElement.current.contentWindow.location.replace(scoreUrl)
+        if (scoreElement.current) {
+            // This prevents iframe src from adding to browser history.
+            scoreElement.current.contentWindow.location.replace(scoreUrl)
+        }
 
         if (scoreUrl) {
             setIsLoading(true)
@@ -35,6 +37,7 @@ const Score = () => {
             {...{
                 ref: scoreElement,
                 className: 'Score',
+                isShown: isScoreShown,
                 isLoading,
                 onLoad
             }}

@@ -5,6 +5,7 @@ import Spinner from '../Spinner'
 
 const Iframe = forwardRef(({
     className,
+    isShown,
     isLoading,
     onLoad
 
@@ -30,22 +31,25 @@ const Iframe = forwardRef(({
                 <Spinner />
             </div>
         }
-        <iframe
-            {...{
-                ref,
-                className: cx(
-                    'iframeContainer__iframe',
-                    !isLoading && 'iframeContainer__iframe__loaded'
-                ),
-                tabIndex: -1,
-                onLoad
-            }}
-        />
+        {isShown && (
+            <iframe
+                {...{
+                    ref,
+                    className: cx(
+                        'iframeContainer__iframe',
+                        !isLoading && 'iframeContainer__iframe__loaded'
+                    ),
+                    tabIndex: -1,
+                    onLoad
+                }}
+            />
+        )}
     </div>
 ))
 
 Iframe.propTypes = {
     className: PropTypes.string.isRequired,
+    isShown: PropTypes.bool.isRequired,
     isLoading: PropTypes.bool.isRequired,
     onLoad: PropTypes.func.isRequired
 }
