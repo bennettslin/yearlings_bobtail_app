@@ -52,7 +52,6 @@ const mapStateToProps = state => {
 }
 
 class AnnotationListener extends PureComponent {
-
     static propTypes = {
         // Through Redux.
         isDotsSlideShown: PropTypes.bool.isRequired,

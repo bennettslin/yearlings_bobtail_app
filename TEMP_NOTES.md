@@ -22,6 +22,8 @@
 * Logic styles should live together. (So that they can be removed together if needed.)
 
 # Easy reduction tasks
+* Make Annotation handler both functions.
+* Have verse store for queued verse select, just like annotation store.
 * Make dispatchers functions.
 * Internal stylesheet fixes
 * Simplify Anchor for social media anchors

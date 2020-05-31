@@ -36,7 +36,6 @@ const mapStateToProps = state => {
 }
 
 class AnnotationDispatcher extends PureComponent {
-
     static propTypes = {
         // Through Redux.
         isEarShown: PropTypes.bool.isRequired,

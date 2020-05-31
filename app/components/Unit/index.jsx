@@ -139,16 +139,7 @@ const Unit = ({
                         hasBottomSideCard && 'Unit__column__hasBottomSideCard'
                     )}
                 >
-                    {hasTopSideCard && (
-                        <UnitCard
-                            {...other}
-                            {...{
-                                versesArray: sideCard,
-                                formType: sideCardType
-                            }}
-                        />
-                    )}
-                    {hasBottomSideCard && (
+                    {hasSide && (
                         <UnitCard
                             {...other}
                             {...{
