@@ -1,7 +1,7 @@
 import { getSong } from './songs'
 import { getDotKeysFromBitNumber } from '../../helpers/dot'
 import { getArrayOfLength } from '../../helpers/general'
-import { WORMHOLE } from '../../constants/dots'
+import { WORMHOLE_BIT_NUMBER } from '../../constants/dots'
 
 export const getAnnotationCardIndices = (songIndex, annotationIndex) => {
     const { annotationCardsDescriptionsList } = getSong(songIndex)
@@ -19,14 +19,14 @@ export const getDescriptionForAnnotationCard = (
     return descriptions[cardIndex]
 }
 
-export const getDotKeysForAnnotationCard = (
+export const getDotBitForAnnotationCard = (
     songIndex, annotationIndex, cardIndex
 ) => {
     // Return just wormhole key if it's a wormholes card.
     if (!getDescriptionForAnnotationCard(
         songIndex, annotationIndex, cardIndex
     )) {
-        return { [WORMHOLE]: true }
+        return WORMHOLE_BIT_NUMBER
     }
 
     const { annotationCardsDotBitsList } = getSong(songIndex),
@@ -39,6 +39,16 @@ export const getDotKeysForAnnotationCard = (
     const dotBitNumber = Array.isArray(dotBitsEntity) ?
         dotBitsEntity[cardIndex] :
         dotBitsEntity
+
+    return dotBitNumber
+}
+
+export const getDotKeysForAnnotationCard = (
+    songIndex, annotationIndex, cardIndex
+) => {
+    const dotBitNumber = getDotBitForAnnotationCard(
+        songIndex, annotationIndex, cardIndex
+    )
 
     return getDotKeysFromBitNumber(dotBitNumber)
 }

@@ -12,7 +12,8 @@ import './logic'
 import './style'
 import {
     getDescriptionForAnnotationCard,
-    getDotKeysForAnnotationCard
+    getDotKeysForAnnotationCard,
+    getDotBitForAnnotationCard
 } from '../../../album/api/cards'
 
 const AnnotationCard = ({
@@ -30,6 +31,11 @@ const AnnotationCard = ({
             cardIndex
         ),
         dotKeys = getDotKeysForAnnotationCard(
+            lyricSongIndex,
+            annotationIndex,
+            cardIndex
+        ),
+        dotBit = getDotBitForAnnotationCard(
             lyricSongIndex,
             annotationIndex,
             cardIndex
@@ -59,7 +65,7 @@ const AnnotationCard = ({
                     <>
                         <DotSequence
                             inAnnotationCard
-                            {...{ dotKeys }}
+                            {...{ dotBit }}
                         />
                         <div {...{ className: 'AnnotationCard__text' }}>
                             <Texts

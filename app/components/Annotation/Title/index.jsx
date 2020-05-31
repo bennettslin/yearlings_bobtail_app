@@ -4,11 +4,9 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
 import Anchor from '../../Anchor'
-import AnnotationTitleText from './TitleText'
 import AnnotationAccess from './Access'
 import {
     getDotBitForAnnotation,
-    getDotKeysForAnnotation,
     getTitleForAnnotation
 } from '../../../album/api/annotations'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
@@ -37,11 +35,6 @@ const AnnotationTitle = ({
         }),
 
         annotationDotBit = getDotBitForAnnotation(
-            lyricSongIndex,
-            annotationIndex
-        ),
-
-        annotationDotKeys = getDotKeysForAnnotation(
             lyricSongIndex,
             annotationIndex
         ),
@@ -88,26 +81,20 @@ const AnnotationTitle = ({
                 )
             }}
         >
-            {isDot ? (
-                <Anchor
-                    {...{
-                        isAccessed,
-                        isSelected,
-                        stanzaDotBit: annotationDotBit,
-                        handleAnchorClick: _handleTitleClick
-                    }}
-                />
-            ) : (
-                <AnnotationTitleText
-                    {...{
-                        isAccessed,
-                        isSelected,
+            <Anchor
+                {...{
+                    ...isDot ? {
+                        stanzaDotBit: annotationDotBit
+                    } : {
+                        isAnnotationTitle: true,
                         text: `\u201c${annotationTitle}\u201d`,
-                        sequenceDotKeys: annotationDotKeys,
-                        handleAnchorClick: _handleTitleClick
-                    }}
-                />
-            )}
+                        sequenceDotBit: annotationDotBit
+                    },
+                    isAccessed,
+                    isSelected,
+                    handleAnchorClick: _handleTitleClick
+                }}
+            />
             <AnnotationAccess {...{
                 isDot,
                 showUpDown

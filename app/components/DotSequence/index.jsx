@@ -7,9 +7,10 @@ import { ORDERED_DOT_KEYS } from '../../constants/dots'
 import SequenceDot from './SequenceDot'
 import './logic'
 import './style'
+import { getDotKeysFromBitNumber } from '../../helpers/dot'
 
 const propTypes = {
-    dotKeys: PropTypes.object.isRequired,
+    dotBit: PropTypes.number.isRequired,
     inAnnotationCard: PropTypes.bool,
     inTextAnchor: PropTypes.bool
 }
@@ -17,33 +18,34 @@ const propTypes = {
 const DotSequence = ({
     inAnnotationCard,
     inTextAnchor,
-    dotKeys,
-
+    dotBit,
     ...other
-}) => (
 
-    <div className={cx(
-        'DotSequence',
-        !inAnnotationCard && 'gradientMask__dotSequence',
-        inTextAnchor && 'DotSequence__inTextAnchor'
-    )}>
-        {ORDERED_DOT_KEYS.map(dotKey => {
+}) => {
+    const dotKeys = getDotKeysFromBitNumber(dotBit)
+    return (
 
-            // Go through all dot keys in array to ensure correct order.
-            return dotKeys[dotKey] && (
-
-                <SequenceDot {...other}
-                    {...{
-                        key: dotKey,
-                        dotKey,
-                        inTextAnchor,
-                        inAnnotationCard
-                    }}
-                />
-            )
-        })}
-    </div>
-)
+        <div className={cx(
+            'DotSequence',
+            !inAnnotationCard && 'gradientMask__dotSequence',
+            inTextAnchor && 'DotSequence__inTextAnchor'
+        )}>
+            {ORDERED_DOT_KEYS.map(dotKey => (
+                // Go through all dot keys in array to ensure correct order.
+                dotKeys[dotKey] && (
+                    <SequenceDot {...other}
+                        {...{
+                            key: dotKey,
+                            dotKey,
+                            inTextAnchor,
+                            inAnnotationCard
+                        }}
+                    />
+                )
+            ))}
+        </div>
+    )
+}
 
 DotSequence.propTypes = propTypes
 

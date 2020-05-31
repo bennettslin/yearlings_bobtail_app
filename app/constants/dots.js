@@ -2,6 +2,7 @@ import {
     getObjectFromBitNumber,
     getTwoToThePowerOfN
 } from '../helpers/bit'
+import { getBitNumberFromDotKeys } from '../helpers/dot'
 
 export const AFTERWORD = 'afterword'
 export const BACKSTORY = 'backstory'
@@ -40,7 +41,16 @@ export const EMPTY_DOTS_STORE = getObjectFromBitNumber({
     bitNumber: 0
 })
 
-export const INITIAL_DOTS_BIT_NUMBER = 7
+export const INITIAL_DOTS_BIT_NUMBER = getBitNumberFromDotKeys({
+    [NARRATIVE]: true,
+    [BACKSTORY]: true,
+    [OBSERVATION]: true
+})
+
 export const FULL_DOTS_BIT_NUMBER = getTwoToThePowerOfN(
     ORDERED_DOT_KEYS.length
 ) - 1
+
+export const WORMHOLE_BIT_NUMBER = getBitNumberFromDotKeys({
+    [WORMHOLE]: true
+})

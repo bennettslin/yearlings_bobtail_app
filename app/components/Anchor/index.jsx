@@ -4,7 +4,7 @@ import cx from 'classnames'
 import DotSequence from '../DotSequence'
 import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
-import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
+import { getPrefixedDotLetterClassNames, getDotKeysFromBitNumber } from '../../helpers/dot'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import './logic'
 import './style'
@@ -16,7 +16,7 @@ const Anchor = ({
     isAccessed: isAccessedBeforeDesktop,
     isSelected,
     isDisabled,
-    sequenceDotKeys,
+    sequenceDotBit,
     stanzaDotBit,
     isWikiTextAnchor,
     text,
@@ -27,9 +27,10 @@ const Anchor = ({
 }) => {
     const
         isDotAnchor = Number.isFinite(stanzaDotBit),
+        isTextAnchor = Number.isFinite(sequenceDotBit),
 
         // If in mobile, only show dot sequence if annotation title.
-        showDotSequence = Boolean(sequenceDotKeys) && (
+        showDotSequence = isTextAnchor && (
             IS_USER_AGENT_DESKTOP || isAnnotationTitle
         ),
 
@@ -67,9 +68,9 @@ const Anchor = ({
                     // "Child anchor reference letter."
                     isWikiTextAnchor && 'ChAr',
 
-                    sequenceDotKeys &&
+                    isTextAnchor &&
                         getPrefixedDotLetterClassNames(
-                            sequenceDotKeys,
+                            getDotKeysFromBitNumber(sequenceDotBit),
                             // "Child anchor letter."
                             'ChA'
                         ),
@@ -78,7 +79,7 @@ const Anchor = ({
                      * If sequence dot keys are provided, or if it's a wiki
                      * anchor, anchor is not always visible.
                      */
-                    !sequenceDotKeys &&
+                    !isTextAnchor &&
                     !isWikiTextAnchor &&
                         'Anchor__alwaysVisible',
 
@@ -97,7 +98,7 @@ const Anchor = ({
                     {...{
                         isAccessed,
                         isSelected,
-                        dotKeys: sequenceDotKeys
+                        dotBit: sequenceDotBit
                     }}
                 />
             )}
@@ -135,7 +136,7 @@ Anchor.propTypes = {
     isSelected: PropTypes.bool,
     isDisabled: PropTypes.bool,
     isWikiTextAnchor: PropTypes.bool,
-    sequenceDotKeys: PropTypes.object,
+    sequenceDotBit: PropTypes.number,
     stanzaDotBit: PropTypes.number,
     text: PropTypes.any,
     textConfig: PropTypes.any,

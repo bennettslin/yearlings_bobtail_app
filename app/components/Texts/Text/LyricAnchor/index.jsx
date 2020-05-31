@@ -8,7 +8,6 @@ import { updateAnnotationStore } from '../../../../redux/annotation/action'
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
 import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 import Anchor from '../../../Anchor'
-import { getDotKeysFromBitNumber } from '../../../../helpers/dot'
 import { populateRefs } from '../../../../helpers/ref'
 import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
 import {
@@ -220,7 +219,7 @@ class TextLyricAnchor extends PureComponent {
                             beginsVerse,
                             endsVerse
                         },
-                        sequenceDotKeys: getDotKeysFromBitNumber(dotBit),
+                        sequenceDotBit: dotBit,
                         handleAnchorClick: this._handleAnchorClick
                     }}
                 />
