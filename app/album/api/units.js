@@ -9,27 +9,8 @@ export const getUnit = (songIndex, unitIndex) => {
 }
 
 export const getLastUnitDotCardIndex = songIndex => {
-    /**
-     * Return an index if the last unit is a dot card. Otherwise, return -1.
-     * Note that this assumes there can only be one last unit that isn't a
-     * stanza unit.
-     */
-    const { lyricUnits } = getSong(songIndex)
-
-    if (lyricUnits) {
-        const
-            lastUnitIndex = lyricUnits.length - 1,
-            {
-                unitMap: { unitDot },
-                mainVerses
-            } = lyricUnits[lastUnitIndex]
-
-        if (unitDot && !mainVerses) {
-            return lyricUnits.length - 1
-        }
-    }
-
-    return -1
+    const { lastUnitDotIndex } = getSong(songIndex)
+    return lastUnitDotIndex || -1
 }
 
 export const getFormTypeForUnit = (songIndex, unitIndex) => {

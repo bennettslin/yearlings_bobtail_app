@@ -56,6 +56,29 @@ const _addUnitVerseLists = (songIndex, song) => {
     }
 }
 
+export const addLastUnitDotIndex = (songIndex, song) => {
+    /**
+     * Return an index if the last unit is a dot card. Otherwise, return -1.
+     * Note that this assumes there can only be one last unit that isn't a
+     * stanza unit.
+     */
+    const
+        { lyricUnits } = albumLyrics[songIndex],
+        lastUnitIndex = lyricUnits.length - 1,
+        {
+            unitMap: { unitDot },
+            mainVerses
+        } = lyricUnits[lastUnitIndex]
+
+    let lastUnitDotIndex = -1
+
+    if (unitDot && !mainVerses) {
+        lastUnitDotIndex = lyricUnits.length - 1
+    }
+
+    song.lastUnitDotIndex = lastUnitDotIndex
+}
+
 export const addUnitAndVerseMetadata = ({
     songIndex,
     songDuration,
@@ -72,6 +95,8 @@ export const addUnitAndVerseMetadata = ({
         verseStartTimes,
         song
     })
+
+    addLastUnitDotIndex(songIndex, song)
 
     return {
         unitVerseIndicesList,

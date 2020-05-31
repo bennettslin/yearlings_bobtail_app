@@ -1,20 +1,15 @@
 export default [
     {
-        taskName: `Make sure all presences are properly behind or in front as appropriate. Check Firefox and Edge.`,
+        taskName: `Make sure all presences are properly behind or in front as appropriate.`,
         workedHours: 0,
         neededHours: 1
     },
 
     /* Weekend work. */
     {
-        taskName: `Wrap up data refactor. Remove annotations from verses. Remove verses from units. Cubes should also grab values from a selector, rather than the store.`,
+        taskName: `Wrap up data refactor. Remove verses from units. Scene actors, cubes, and things should be in compiled album. Cubes should also grab values from a selector, rather than the store.`,
         workedHours: 0,
         neededHours: 20
-    },
-    {
-        taskName: `For now, just tear out the canEnter and didEnter weirdness.`,
-        workedHours: 0,
-        neededHours: 8
     },
     {
         taskName: `Post-Gatsby fixes.`,
@@ -36,6 +31,13 @@ export default [
         taskName: `Remove convoluted CSS verse logic? If so, allow hover styling of activated verse in slider, to be consistent with filmstrip.`,
         workedHours: 0,
         neededHours: 20
+    },
+
+    /* Next weekend. */
+    {
+        taskName: `For now, just tear out the canEnter and didEnter weirdness.`,
+        workedHours: 0,
+        neededHours: 8
     },
 
     /* Ongoing. */
