@@ -1,12 +1,5 @@
 import { getSong } from './songs'
-
-const getUnit = (songIndex, unitIndex) => {
-    const { lyricUnits } = getSong(songIndex)
-
-    return lyricUnits ?
-        lyricUnits[unitIndex] :
-        []
-}
+import { getFormTypeForStanza } from './stanzas'
 
 export const getDotForUnit = (songIndex, unitIndex) => {
     const unitMap = getUnitMapForUnit(songIndex, unitIndex)
@@ -18,21 +11,35 @@ export const getLastUnitDotCardIndex = songIndex => {
     return lastUnitDotIndex || -1
 }
 
-// TODO: Put this at top level of song.
+// TODO: Eventually get rid of this.
 export const getUnitMapForUnit = (songIndex, unitIndex) => {
-    const unit = getUnit(songIndex, unitIndex)
-    return unit.unitMap
+    const { unitMaps } = getSong(songIndex)
+    return unitMaps[unitIndex]
 }
 
-// TODO: Put this at top level of song
+// TODO: Eventually get rid of this.
 export const getMainVersesForUnit = (songIndex, unitIndex) => {
-    const unit = getUnit(songIndex, unitIndex)
-    return unit.mainVerses
+    const { unitMainVerses } = getSong(songIndex)
+    return unitMainVerses[unitIndex]
 }
 
 export const getFormTypeForUnit = (songIndex, unitIndex) => {
+    const { unitStanzaIndices } = getSong(songIndex),
+        stanzaIndex = unitStanzaIndices[unitIndex]
+
+    return stanzaIndex > -1 ?
+        getFormTypeForStanza(songIndex, stanzaIndex) :
+        null
+}
+
+export const getFormTypeIndexForUnit = (songIndex, unitIndex) => {
     const { unitFormTypeIndices } = getSong(songIndex)
     return unitFormTypeIndices[unitIndex]
+}
+
+export const getSubsequentForUnit = (songIndex, unitIndex) => {
+    const { unitSubsequents } = getSong(songIndex)
+    return unitSubsequents[unitIndex]
 }
 
 export const getVerseIndicesForUnit = (songIndex, unitIndex) => {

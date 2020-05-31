@@ -10,6 +10,7 @@ const _addInitialStanzaMetadata = ({
         stanzaFormTypes = [],
         stanzaUnitIndicesList = [],
         stanzaVerseIndicesList = [],
+        unitStanzaIndices = [],
         verseStanzaIndices = []
     let stanzaIndex
 
@@ -53,12 +54,18 @@ const _addInitialStanzaMetadata = ({
                 stanzaUnitIndicesList.push(stanzaUnitIndices)
                 stanzaVerseIndicesList.push(stanzaVerseIndices)
             }
+
+            unitStanzaIndices.push(stanzaIndex)
+
+        } else {
+            unitStanzaIndices.push(-1)
         }
     })
 
     song.stanzaFormTypes = stanzaFormTypes
     song.stanzaUnitIndicesList = stanzaUnitIndicesList
     song.stanzaVerseIndicesList = stanzaVerseIndicesList
+    song.unitStanzaIndices = unitStanzaIndices
     song.verseStanzaIndices = verseStanzaIndices
 
     return stanzaVerseIndicesList

@@ -22,7 +22,10 @@ const _addUnitVerseLists = (songIndex, song) => {
     const { lyricUnits } = albumLyrics[songIndex]
 
     const
+        unitMaps = [],
+        unitMainVerses = [],
         unitVerseIndicesList = [],
+        unitSubsequents = [],
         verseStartTimes = [],
         verses = []
     let verseIndex = 0
@@ -40,14 +43,19 @@ const _addUnitVerseLists = (songIndex, song) => {
             verseIndex++
         })
 
+        unitMaps.push(unit.unitMap)
+        unitMainVerses.push(unit.mainVerses)
+        unitSubsequents.push(unit.unitMap.subsequent || false)
         unitVerseIndicesList.push(unitVerseIndices)
     })
 
+    song.unitSubsequents = unitSubsequents
     song.unitVerseIndicesList = unitVerseIndicesList
     song.verseStartTimes = verseStartTimes
 
     // TODO: Eventually get rid of this.
-    song.lyricUnits = lyricUnits
+    song.unitMaps = unitMaps
+    song.unitMainVerses = unitMainVerses
 
     return {
         unitVerseIndicesList,

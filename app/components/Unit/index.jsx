@@ -14,6 +14,8 @@ import {
     getUnitMapForUnit,
     getMainVersesForUnit,
     getFormTypeForUnit,
+    getFormTypeIndexForUnit,
+    getSubsequentForUnit,
     getVerseIndicesForUnit
 } from '../../album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../../helpers/stanza'
@@ -36,20 +38,22 @@ const Unit = ({
         { setLyricAnnotationElement } = other,
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
         mainVerses = getMainVersesForUnit(lyricSongIndex, unitIndex),
-
+        verseIndices = getVerseIndicesForUnit(
+            lyricSongIndex,
+            unitIndex
+        ),
         {
-            formType,
             subCardType,
             sideCardType,
             sideSubCardType,
-            subsequent,
             subVerse,
             sideCard,
             sideSubCard, // This exists solely for "Maranatha."
             isBottomSideCard
         } = getUnitMapForUnit(lyricSongIndex, unitIndex),
-
-        formTypeIndex = getFormTypeForUnit(lyricSongIndex, unitIndex),
+        formType = getFormTypeForUnit(lyricSongIndex, unitIndex),
+        formTypeIndex = getFormTypeIndexForUnit(lyricSongIndex, unitIndex),
+        subsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
         hasSide = Boolean(sideCard)
 
     return (
@@ -57,10 +61,7 @@ const Unit = ({
             className={cx(
                 // "Parent of verse index."
                 getParentOfVerseClassNamesForIndices({
-                    entities: getVerseIndicesForUnit(
-                        lyricSongIndex,
-                        unitIndex
-                    )
+                    entities: verseIndices
                 }),
 
                 'Unit',
@@ -78,7 +79,7 @@ const Unit = ({
             {unitIndex === 0 && (
                 <UnitSongTitle />
             )}
-            {Boolean(mainVerses) &&
+            {Boolean(verseIndices.length) &&
                 <div className={cx(
                     'Unit__column__text',
                     'Unit__column',
