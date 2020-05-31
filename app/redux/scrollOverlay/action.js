@@ -6,3 +6,8 @@ export const updateScrollOverlayStore = payload => ({
     type: SCROLL_OVERLAY_STORE,
     payload: getDefinedOnlyPayload(payload)
 })
+
+export const updateIsScrolling = isScrolling => ({
+    type: SCROLL_OVERLAY_STORE,
+    payload: { isScrolling }
+})

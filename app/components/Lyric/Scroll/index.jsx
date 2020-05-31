@@ -6,7 +6,7 @@ import { updateEntranceStore } from '../../../redux/entrance/action'
 import Transition from 'react-transition-group/Transition'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
-import ScrollOverlayHandler from '../../../handlers/ScrollOverlay'
+import ScrollOverlayDispatcher from '../../../dispatchers/ScrollOverlay'
 import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
 import { populateRefs } from '../../../helpers/ref'
@@ -109,6 +109,10 @@ class LyricScroll extends PureComponent {
         }
     }
 
+    getDispatchScrollTimeout = dispatch => {
+        this.dispatchScrollTimeout = dispatch
+    }
+
     render() {
         const {
             canLyricCarouselUpdate
@@ -154,9 +158,9 @@ class LyricScroll extends PureComponent {
                         />
                     </div>
                 </Transition>
-                <ScrollOverlayHandler
+                <ScrollOverlayDispatcher
                     {...{
-                        getRefs: this._getRefs,
+                        ref: this.getDispatchScrollTimeout,
                         getLyricElement: this._getLyricElement
                     }}
                 />
