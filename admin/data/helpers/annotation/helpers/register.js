@@ -1,8 +1,11 @@
-import { REFERENCE } from '../../../../../app/constants/dots'
+import { REFERENCE, WORMHOLE } from '../../../../../app/constants/dots'
 import { WIKI } from '../../../../../app/constants/lyrics'
 
-const _addWikiDotKeyToCard = (card) => {
-    const { description } = card
+const _addWikiWormholeDotKeyToCard = (card) => {
+    const {
+        description,
+        wormhole
+    } = card
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
@@ -19,6 +22,10 @@ const _addWikiDotKeyToCard = (card) => {
             // If card has a wiki link, add 'reference' key to dot keys.
             card.dotKeys[REFERENCE] = true
         }
+
+    } else if (wormhole) {
+        // Wormhole cards do not begin with any dot keys.
+        card.dotKeys = { [WORMHOLE]: true }
     }
 }
 
@@ -59,7 +66,7 @@ export const registerCardsDotKeys = ({
 }) => {
     cards.forEach((card) => {
 
-        _addWikiDotKeyToCard(card)
+        _addWikiWormholeDotKeyToCard(card)
 
         // This needs to come after adding wiki dot key to card.
         _addCardDotKeysToAnnotation(card, dotKeys)

@@ -1,5 +1,3 @@
-import { WORMHOLE } from '../../../../../app/constants/dots'
-
 const _addCardWormholeLinksToTempAlbumLinks = ({
     songIndex,
     annotation,
@@ -44,9 +42,6 @@ const _addCardWormholeLinksToTempAlbumLinks = ({
 
     // Add temp link to temp links array.
     tempWormholeLinks[wormholeKey].push(tempLink)
-
-    // Add wormhole to annotation's dot keys.
-    annotation.dotKeys[WORMHOLE] = true
 }
 
 export const initialiseTempWormholeLinks = (

@@ -1,5 +1,4 @@
 # Bugs while production hasn't changed.
-* Really bad wormhole bug! Seems fine now?
 * After accessed wormhole, key navigation does not work until manual focus.
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
@@ -13,6 +12,7 @@
 * Ensure all selectors are used.
 * Change all to use overviewShown and tipsShown. Then prefix with is.
 * Rename all to dotBit, use selectedDotBit and activatedDotBit?
+* Shorten queued names as well?
 
 # Brainless CSS tasks
 * Logic styles should live together. (So that they can be removed together if needed.)
