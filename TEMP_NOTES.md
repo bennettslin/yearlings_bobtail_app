@@ -8,6 +8,9 @@
 * Anchor still shows in activated/slider mode.
 * Even future verse does not have activated or hover colour.
 
+# Buts that may get fixed after canEnter tear out and redo.
+* Selecting accessed verse has a delay.
+
 # Brainless JS tasks
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.

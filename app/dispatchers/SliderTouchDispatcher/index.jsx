@@ -6,7 +6,6 @@ import VerseDispatcher from '../VerseDispatcher'
 import { getStartTimeForVerse } from '../../album/api/time'
 import { getSceneIndexForVerse } from '../../album/api/verses'
 import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
-import { populateRefs } from '../../helpers/ref'
 import { getVerseIndexforRatio } from '../../helpers/verse'
 import {
     SELECTED_SONG_INDEX_SELECTOR,
@@ -206,13 +205,13 @@ class SliderTouchDispatcher extends PureComponent {
         return false
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchVerse = dispatch => {
+        this.dispatchVerse = dispatch
     }
 
     render() {
         return (
-            <VerseDispatcher {...{ getRefs: this._getRefs }} />
+            <VerseDispatcher {...{ ref: this.getDispatchVerse }} />
         )
     }
 }

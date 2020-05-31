@@ -144,6 +144,10 @@ class NavigationManager extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchVerse = dispatch => {
+        this.dispatchVerse = dispatch
+    }
+
     render() {
         return (
             <>
@@ -151,7 +155,7 @@ class NavigationManager extends PureComponent {
                 <DotsSlideNavigation {...{ getRefs: this._getRefs }} />
                 <LyricNavigation {...{ getRefs: this._getRefs }} />
                 <NavNavigation {...{ getRefs: this._getRefs }} />
-                <VerseDispatcher {...{ getRefs: this._getRefs }} />
+                <VerseDispatcher {...{ ref: this.getDispatchVerse }} />
             </>
         )
     }

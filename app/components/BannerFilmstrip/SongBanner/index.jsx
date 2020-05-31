@@ -15,7 +15,6 @@ import {
 } from '../../../album/api/time'
 import { IS_SMALL_BANNER_TEXT_SELECTOR } from '../../../redux/responsive/selectors'
 import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
-import { populateRefs } from '../../../helpers/ref'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { IS_ACTIVATED_SELECTOR } from '../../../redux/activated/selectors'
@@ -231,12 +230,12 @@ class SongBanner extends PureComponent {
         this.props.updateBannerStore()
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
     getStopPropagation = dispatch => {
         this.stopPropagation = dispatch
+    }
+
+    getDispatchVerse = dispatch => {
+        this.dispatchVerse = dispatch
     }
 
     render() {
@@ -292,7 +291,7 @@ class SongBanner extends PureComponent {
                 <SongBannerTitle />
                 <SongBannerTimer />
                 <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
-                <VerseDispatcher {...{ getRefs: this._getRefs }} />
+                <VerseDispatcher {...{ ref: this.getDispatchVerse }} />
             </div>
         )
     }

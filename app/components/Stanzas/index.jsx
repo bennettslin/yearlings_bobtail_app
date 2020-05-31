@@ -10,7 +10,6 @@ import Stanza from './Stanza'
 import Unit from './Unit'
 import { getStanzaIndices } from '../../album/api/stanzas'
 import { getLastUnitDotCardIndex } from '../../album/api/units'
-import { populateRefs } from '../../helpers/ref'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 import './logic'
 import './style'
@@ -44,8 +43,8 @@ class Stanzas extends PureComponent {
         })
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchVerse = dispatch => {
+        this.dispatchVerse = dispatch
     }
 
     render() {
@@ -89,7 +88,7 @@ class Stanzas extends PureComponent {
                         }}
                     />
                 )}
-                <VerseDispatcher {...{ getRefs: this._getRefs }} />
+                <VerseDispatcher {...{ ref: this.getDispatchVerse }} />
             </div>
         )
     }

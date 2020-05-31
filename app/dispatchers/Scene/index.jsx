@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import VerseDispatcher from '../VerseDispatcher'
 import { getVerseIndexForScene } from '../../album/api/scenes'
-import { populateRefs } from '../../helpers/ref'
 import { SELECTED_SONG_INDEX_SELECTOR } from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
@@ -19,7 +18,6 @@ const mapStateToProps = state => {
 }
 
 class SceneDispatcher extends PureComponent {
-
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
@@ -46,13 +44,13 @@ class SceneDispatcher extends PureComponent {
         })
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchVerse = dispatch => {
+        this.dispatchVerse = dispatch
     }
 
     render() {
         return (
-            <VerseDispatcher {...{ getRefs: this._getRefs }} />
+            <VerseDispatcher {...{ ref: this.getDispatchVerse }} />
         )
     }
 }

@@ -1,6 +1,5 @@
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { updateAudioStore } from '../../redux/audio/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
@@ -10,95 +9,60 @@ import { getStartTimeForVerse } from '../../album/api/time'
 import { getSceneIndexForVerse } from '../../album/api/verses'
 import { SELECTED_SONG_INDEX_SELECTOR } from '../../redux/selected/selectors'
 
-const mapStateToProps = state => {
-    const selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
+const VerseDispatcher = forwardRef((props, ref) => {
+    const
+        dispatch = useDispatch(),
+        selectedSongIndex = useSelector(SELECTED_SONG_INDEX_SELECTOR),
+        dispatchVerse = ({
+            selectedVerseIndex = 0,
+            scrollLog
+        }) => {
 
-    return {
-        selectedSongIndex
-    }
-}
+            const
+                selectedSceneIndex = getSceneIndexForVerse(
+                    selectedSongIndex,
+                    selectedVerseIndex
+                ),
+                selectedTime = getStartTimeForVerse(
+                    selectedSongIndex,
+                    selectedVerseIndex
+                )
 
-class VerseDispatcher extends PureComponent {
+            dispatch(updateAudioStore({
+                queuedPlaySongIndex: selectedSongIndex,
+                queuedPlayVerseIndex: selectedVerseIndex
+            }))
 
-    static propTypes = {
-        // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
-        updateAudioStore: PropTypes.func.isRequired,
-        updateScrollLyricStore: PropTypes.func.isRequired,
-        updateActivatedStore: PropTypes.func.isRequired,
-        updateSelectedStore: PropTypes.func.isRequired,
-        resetVerseBars: PropTypes.func.isRequired,
+            dispatch(updateSelectedStore({
+                selectedVerseIndex,
+                selectedSceneIndex,
+                selectedTime
+            }))
 
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
+            logSelect({
+                action: 'verse',
+                song: selectedSongIndex,
+                verse: selectedVerseIndex,
+                scene: selectedSceneIndex
+            })
 
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchVerse: this.dispatchVerse
-        })
-    }
+            // Ensure that no verse is activated.
+            dispatch(updateActivatedStore())
 
-    dispatchVerse = ({
-        selectedVerseIndex = 0,
-        scrollLog
-    }) => {
+            // Selecting a verse necessarily resets the verse bars.
+            dispatch(resetVerseBars())
 
-        const { selectedSongIndex } = this.props,
-            selectedSceneIndex = getSceneIndexForVerse(
-                selectedSongIndex,
-                selectedVerseIndex
-            ),
-            selectedTime = getStartTimeForVerse(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
+            dispatch(updateScrollLyricStore({
+                queuedScrollLyricLog: scrollLog,
+                queuedScrollLyricByVerse: true,
+                queuedScrollLyricIndex: selectedVerseIndex,
+                queuedScrollLyricAlways: true,
+                queuedSceneChangeExitScrollCallback: true
+            }))
+        }
 
-        this.props.updateAudioStore({
-            queuedPlaySongIndex: selectedSongIndex,
-            queuedPlayVerseIndex: selectedVerseIndex
-        })
+    useImperativeHandle(ref, () => dispatchVerse)
+    return null
+})
 
-        this.props.updateSelectedStore({
-            selectedVerseIndex,
-            selectedSceneIndex,
-            selectedTime
-        })
-
-        logSelect({
-            action: 'verse',
-            song: selectedSongIndex,
-            verse: selectedVerseIndex,
-            scene: selectedSceneIndex
-        })
-
-        // Ensure that no verse is activated.
-        this.props.updateActivatedStore()
-
-        // Selecting a verse necessarily resets the verse bars.
-        this.props.resetVerseBars()
-
-        this.props.updateScrollLyricStore({
-            queuedScrollLyricLog: scrollLog,
-            queuedScrollLyricByVerse: true,
-            queuedScrollLyricIndex: selectedVerseIndex,
-            queuedScrollLyricAlways: true,
-            queuedSceneChangeExitScrollCallback: true
-        })
-    }
-
-    render() {
-        return null
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    {
-        updateAudioStore,
-        updateScrollLyricStore,
-        updateSelectedStore,
-        updateActivatedStore,
-        resetVerseBars
-    }
-)(VerseDispatcher)
+export default VerseDispatcher
