@@ -47,6 +47,7 @@ class UnitDot extends PureComponent {
         updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
+        unitIndex: PropTypes.number.isRequired,
         unitDot: PropTypes.object.isRequired,
         setLyricAnnotationElement: PropTypes.func.isRequired
     }
@@ -79,7 +80,6 @@ class UnitDot extends PureComponent {
     }
 
     render() {
-
         // TODO: Ideal to get unitDot object from indices?
         const {
                 unitDot: {

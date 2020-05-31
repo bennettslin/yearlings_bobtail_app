@@ -8,6 +8,11 @@ const getUnit = (songIndex, unitIndex) => {
         []
 }
 
+export const getDotForUnit = (songIndex, unitIndex) => {
+    const unitMap = getUnitMapForUnit(songIndex, unitIndex)
+    return unitMap.unitDot
+}
+
 export const getLastUnitDotCardIndex = songIndex => {
     const { lastUnitDotIndex } = getSong(songIndex)
     return lastUnitDotIndex || -1

@@ -59,7 +59,7 @@ class Stanzas extends PureComponent {
 
         return stanzaIndices.length && (
             <div {...{ className: 'Stanzas' }} >
-                {/* This is the first unit dot card. There always is one. */}
+                {/* This is the unit title with first unit dot. */}
                 <Unit
                     {...{
                         unitIndex: 0,

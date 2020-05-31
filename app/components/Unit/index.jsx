@@ -78,6 +78,9 @@ const Unit = ({
                     'Unit__notSubsequent'
             )}
         >
+            {unitIndex === 0 && (
+                <UnitSongTitle />
+            )}
             {!isLoneUnitDot &&
                 <div className={cx(
                     'Unit__column__text',
@@ -139,7 +142,7 @@ const Unit = ({
                         hasBottomSideCard && 'Unit__column__hasBottomSideCard'
                     )}
                 >
-                    {hasSide && (
+                    {sideCard && (
                         <UnitCard
                             {...other}
                             {...{
@@ -159,13 +162,11 @@ const Unit = ({
                     )}
                 </div>
             }
-            {unitIndex === 0 && (
-                <UnitSongTitle />
-            )}
             {unitDot &&
                 <UnitDot
                     {...{
                         unitDot,
+                        unitIndex,
                         setLyricAnnotationElement
                     }}
                 />
