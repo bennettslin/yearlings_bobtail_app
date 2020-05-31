@@ -102,6 +102,13 @@ class LyricScroll extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchLyricWheel = dispatch => {
+        if (dispatch) {
+            this.dispatchLyricTouchMoveOrWheel = dispatch.dispatchLyricTouchMoveOrWheel
+            this.dispatchVerseBarWheel = dispatch.dispatchVerseBarWheel
+        }
+    }
+
     render() {
         const {
             canLyricCarouselUpdate
@@ -161,7 +168,7 @@ class LyricScroll extends PureComponent {
                 />
                 <LyricWheelDispatcher
                     {...{
-                        getRefs: this._getRefs,
+                        ref: this.getDispatchLyricWheel,
                         determineVerseBars: this._handleDetermineVerseBars
                     }}
                 />

@@ -11,7 +11,8 @@ import SongStanzasTitle from '../Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 import {
-    getUnit,
+    getUnitMapForUnit,
+    getMainVersesForUnit,
     getFormTypeForUnit,
     getVerseIndicesForUnit
 } from '../../../album/api/units'
@@ -51,12 +52,8 @@ const Unit = ({
         {
             setLyricAnnotationElement
         } = other,
-
-        unit = getUnit(lyricSongIndex, unitIndex),
-        {
-            mainVerses,
-            unitMap
-        } = unit,
+        unitMap = getUnitMapForUnit(lyricSongIndex, unitIndex),
+        mainVerses = getMainVersesForUnit(lyricSongIndex, unitIndex),
 
         {
             formType,

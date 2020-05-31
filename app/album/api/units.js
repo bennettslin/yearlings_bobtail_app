@@ -1,6 +1,6 @@
 import { getSong } from './songs'
 
-export const getUnit = (songIndex, unitIndex) => {
+const getUnit = (songIndex, unitIndex) => {
     const { lyricUnits } = getSong(songIndex)
 
     return lyricUnits ?
@@ -11,6 +11,18 @@ export const getUnit = (songIndex, unitIndex) => {
 export const getLastUnitDotCardIndex = songIndex => {
     const { lastUnitDotIndex } = getSong(songIndex)
     return lastUnitDotIndex || -1
+}
+
+// TODO: Put this at top level of song.
+export const getUnitMapForUnit = (songIndex, unitIndex) => {
+    const unit = getUnit(songIndex, unitIndex)
+    return unit.unitMap
+}
+
+// TODO: Put this at top level of song
+export const getMainVersesForUnit = (songIndex, unitIndex) => {
+    const unit = getUnit(songIndex, unitIndex)
+    return unit.mainVerses
 }
 
 export const getFormTypeForUnit = (songIndex, unitIndex) => {

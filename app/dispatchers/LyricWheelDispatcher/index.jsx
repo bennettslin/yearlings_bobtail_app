@@ -1,101 +1,78 @@
 // Child that knows rules to handle lyric wheel.
-
-import { PureComponent } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../redux/toggle/action'
 import { IS_AUTO_SCROLL_SELECTOR } from '../../redux/toggle/selectors'
 
-const mapStateToProps = state => {
-    const isAutoScroll = IS_AUTO_SCROLL_SELECTOR(state)
+const LyricWheelDispatcher = forwardRef(({ determineVerseBars }, ref) => {
+    const
+        dispatch = useDispatch(),
+        isAutoScroll = useSelector(IS_AUTO_SCROLL_SELECTOR),
+        dispatchLyricTouchMoveOrWheel = (e, lyricElement) => {
+            // If autoScroll is already off, don't bother.
+            if (!isAutoScroll) {
+                return
+            }
 
-    return {
-        isAutoScroll
-    }
-}
+            let hasRoomToScroll = false
 
-class LyricWheelDispatcher extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isAutoScroll: PropTypes.bool.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired,
-        determineVerseBars: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchLyricTouchMoveOrWheel: this.dispatchLyricTouchMoveOrWheel,
-            dispatchVerseBarWheel: this.dispatchVerseBarWheel
-        })
-    }
-
-    dispatchLyricTouchMoveOrWheel = (e, lyricElement) => {
-
-        // If autoScroll is already off, don't bother.
-        if (!this.props.isAutoScroll) {
-            return
-        }
-
-        let hasRoomToScroll = false
-
-        const {
-                deltaY = 0,
-                type
-            } = e,
-            isTouchMoveEvent = type !== 'wheel',
-            { scrollTop } = lyricElement
-
-        // Only wheel event has deltaY.
-        if (deltaY > 0 || isTouchMoveEvent) {
             const {
-                scrollHeight,
-                clientHeight
-            } = lyricElement
+                    deltaY = 0,
+                    type
+                } = e,
+                isTouchMoveEvent = type !== 'wheel',
+                { scrollTop } = lyricElement
 
-            if (scrollTop < scrollHeight - clientHeight) {
-                hasRoomToScroll = true
-            }
+            // Only wheel event has deltaY.
+            if (deltaY > 0 || isTouchMoveEvent) {
+                const {
+                    scrollHeight,
+                    clientHeight
+                } = lyricElement
 
-        /**
-         * TODO: I no longer understand this code. Why should a negative deltaY
-         * make any difference?
-         */
-        } else if (deltaY < 0) {
-            if (scrollTop) {
-                hasRoomToScroll = true
-            }
-        }
-
-        if (
-            hasRoomToScroll &&
+                if (scrollTop < scrollHeight - clientHeight) {
+                    hasRoomToScroll = true
+                }
 
             /**
-             * Select manual scroll only if wheel moved far enough, or
-             * if it's a scroll event.
+             * TODO: I no longer understand this code. Why should a negative
+             * deltaY make any difference?
              */
-            (deltaY > 1 || deltaY < -1 || isTouchMoveEvent)
-        ) {
-            this.props.updateToggleStore({ isAutoScroll: false })
+            } else if (deltaY < 0) {
+                if (scrollTop) {
+                    hasRoomToScroll = true
+                }
+            }
+
+            if (
+                hasRoomToScroll &&
+
+                /**
+                 * Select manual scroll only if wheel moved far enough, or
+                 * if it's a scroll event.
+                 */
+                (deltaY > 1 || deltaY < -1 || isTouchMoveEvent)
+            ) {
+                dispatch(updateToggleStore({ isAutoScroll: false }))
+            }
+        },
+        dispatchVerseBarWheel = (e, lyricElement) => {
+            const { deltaY } = e.nativeEvent
+            lyricElement.scrollTop += deltaY
+
+            determineVerseBars()
         }
-    }
 
-    dispatchVerseBarWheel = (e, lyricElement) => {
-        const { deltaY } = e.nativeEvent
-        lyricElement.scrollTop += deltaY
+    useImperativeHandle(ref, () => ({
+        dispatchLyricTouchMoveOrWheel,
+        dispatchVerseBarWheel
+    }))
+    return null
+})
 
-        this.props.determineVerseBars()
-    }
-
-    render() {
-        return null
-    }
+LyricWheelDispatcher.propTypes = {
+    determineVerseBars: PropTypes.func.isRequired
 }
 
-export default connect(
-    mapStateToProps,
-    { updateToggleStore }
-)(LyricWheelDispatcher)
+export default LyricWheelDispatcher
