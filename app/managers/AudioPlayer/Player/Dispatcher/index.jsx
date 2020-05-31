@@ -2,9 +2,10 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updatePlayersStore } from '../../../../redux/players/action'
-import { getSongsNotLoguesCount } from '../../../../album/api/songs'
-import { setNewValueInBitNumber } from '../../../../helpers/bit'
-import { getStoreKeyForPlayer } from '../../../../helpers/player'
+import {
+    getStoreKeyForPlayer,
+    getBitFromPlayerCanPlayThrough
+} from '../../../../helpers/player'
 import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../../../redux/players/selectors'
 
 const mapStateToProps = state => {
@@ -33,21 +34,16 @@ class PlayerDispatcher extends PureComponent {
     }
 
     dispatchPlayerCanPlayThrough = songIndex => {
-        const { playersBitNumber } = this.props,
-
-            // Convert to bit number before setting in Redux.
-            newBitNumber = setNewValueInBitNumber({
-                keysCount: getSongsNotLoguesCount(),
-                bitNumber: playersBitNumber,
-                key: songIndex,
-                value: true
-            }),
-
-            storeKeyForPlayer = getStoreKeyForPlayer(songIndex)
+        const { playersBitNumber } = this.props
 
         this.props.updatePlayersStore({
-            playersBitNumber: newBitNumber,
-            [storeKeyForPlayer]: true
+            playersBitNumber: getBitFromPlayerCanPlayThrough({
+                bitNumber: playersBitNumber,
+                key: songIndex
+            }),
+
+            // Added to store just for dev clarity.
+            [getStoreKeyForPlayer(songIndex)]: true
         })
     }
 

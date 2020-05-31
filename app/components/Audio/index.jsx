@@ -22,7 +22,7 @@ import {
 } from '../../constants/buttons'
 import { getSongsAndLoguesCount } from '../../album/api/songs'
 import { populateRefs } from '../../helpers/ref'
-import { getPlayerCanPlayThrough } from '../../helpers/player'
+import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
 import { IS_TWO_ROW_MENU_SELECTOR } from '../../redux/responsive/selectors'
 import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../redux/players/selectors'
@@ -121,7 +121,7 @@ class Audio extends PureComponent {
             isPrologue = selectedSongIndex === 0,
             songsCount = getSongsAndLoguesCount(),
             isEpilogue = selectedSongIndex === songsCount - 1,
-            playerCanPlayThrough = getPlayerCanPlayThrough({
+            playerCanPlayThrough = getPlayerCanPlayThroughFromBit({
                 songIndex: selectedSongIndex,
                 playersBitNumber
             }),

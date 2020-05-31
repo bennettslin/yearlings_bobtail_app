@@ -7,7 +7,6 @@ import { pickBy } from '../helpers/general'
 import { ORDERED_DOT_KEYS } from '../constants/dots'
 
 export const intersects = (presentKeys = {}, selectedKeys = {}) => {
-
     const presentKeysArray = Object.keys(presentKeys)
 
     // If presentKeys is empty, return true.

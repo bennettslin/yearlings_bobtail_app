@@ -97,7 +97,7 @@ class PlayerManager extends PureComponent {
         )
     }
 
-    setPlayerCanPlayThrough = songIndex => {
+    dispatchPlayerCanPlayThrough = songIndex => {
         this.dispatchPlayerCanPlayThrough(songIndex)
     }
 
@@ -343,8 +343,8 @@ class PlayerManager extends PureComponent {
                                 updateCurrentTime: this.updatePlayerTime,
                                 updateEnded: this.props.handleSongEnd,
                                 setPlayerRef: this.setPlayerRef,
-                                setPlayerCanPlayThrough:
-                                    this.setPlayerCanPlayThrough,
+                                dispatchPlayerCanPlayThrough:
+                                    this.dispatchPlayerCanPlayThrough,
                                 setSelectedPlayerIsPlaying:
                                     this.setSelectedPlayerIsPlaying
                             }}

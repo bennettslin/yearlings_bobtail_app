@@ -14,7 +14,7 @@ class Player extends PureComponent {
         updateCurrentTime: PropTypes.func.isRequired,
         updateEnded: PropTypes.func.isRequired,
         setPlayerRef: PropTypes.func.isRequired,
-        setPlayerCanPlayThrough: PropTypes.func.isRequired,
+        dispatchPlayerCanPlayThrough: PropTypes.func.isRequired,
         setSelectedPlayerIsPlaying: PropTypes.func.isRequired
     }
 
@@ -175,7 +175,7 @@ class Player extends PureComponent {
     }
 
     _handleSuspendEvent = () => {
-        this.props.setPlayerCanPlayThrough(this.props.songIndex)
+        this.props.dispatchPlayerCanPlayThrough(this.props.songIndex)
     }
 
     _handleTimeUpdateEvent = () => {

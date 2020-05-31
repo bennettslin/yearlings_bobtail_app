@@ -30,7 +30,6 @@
 * Mount, responsive, proscenium, and theatre values can just be aggregate selectors. Basically, get rid of everything in window that's not the window width and height. Replace in map state to props first.
 * Also, the listeners.
 * Make isActivated and isSelected selectors.
-* Remove extraneous bit number helpers used only by players now.
 
 # Ongoing Gatsby tasks
 * Dynamic routes for song indices

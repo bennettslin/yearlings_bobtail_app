@@ -51,10 +51,7 @@ export const getObjectFromBitNumber = ({
      * If no keys array is given, assume 1-based indices. In this case, keys
      * count *must* be passed.
      */
-    keysArray = keysArray || getArrayOfLength(
-        keysCount,
-        1
-    )
+    keysArray = keysArray || getArrayOfLength(keysCount, 1)
 
     let trueFalseObject = {},
         returnObject = {}
@@ -78,46 +75,4 @@ export const getObjectFromBitNumber = ({
     })
 
     return returnObject
-}
-
-// TODO: Get rid of this as well.
-export const getValueInBitNumber = ({
-    keysArray,
-    keysCount,
-    bitNumber = 0,
-    key
-}) => {
-    // Convert the bit number to an object whose values are true or false.
-    const trueFalseObject = getObjectFromBitNumber({
-        keysArray,
-        keysCount,
-        bitNumber
-    })
-
-    return trueFalseObject[key]
-}
-
-// TODO: Get rid of this. Just use getBitNumberFromObject.
-export const setNewValueInBitNumber = ({
-    keysArray,
-    keysCount,
-    bitNumber = 0,
-    key,
-    value
-}) => {
-    // First convert the bit number to an object whose values true or false.
-    const trueFalseObject = getObjectFromBitNumber({
-        keysArray,
-        keysCount,
-        bitNumber
-    })
-
-    // Set the value in this object.
-    trueFalseObject[key] = value
-
-    // Convert object to new bit number, which is then returned.
-    return getBitNumberFromObject({
-        keysArray,
-        trueFalseObject
-    })
 }

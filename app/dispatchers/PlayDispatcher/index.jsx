@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { updateAudioStore } from '../../redux/audio/action'
 import SongDispatcher from '../../handlers/Song/Dispatcher'
 import { populateRefs } from '../../helpers/ref'
-import { getPlayerCanPlayThrough } from '../../helpers/player'
+import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
 import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../redux/players/selectors'
 import {
@@ -56,7 +56,7 @@ class PlayDispatcher extends PureComponent {
                 playersBitNumber
             } = this.props,
 
-            playerCanPlayThrough = getPlayerCanPlayThrough({
+            playerCanPlayThrough = getPlayerCanPlayThroughFromBit({
                 songIndex: selectedSongIndex,
                 playersBitNumber
             })

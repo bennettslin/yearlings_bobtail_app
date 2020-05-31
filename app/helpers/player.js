@@ -1,10 +1,10 @@
 import {
-    getSongsAndLoguesCount,
-    getSongsNotLoguesCount
+    getSongsNotLoguesCount,
+    getSongIsLogue
 } from '../album/api/songs'
 import {
     getObjectFromBitNumber,
-    getValueInBitNumber
+    getBitNumberFromObject
 } from '../helpers/bit'
 import { getArrayOfLength } from '../helpers/general'
 
@@ -15,25 +15,38 @@ export const getPlayersCanPlayThroughFromBitNumber = (bitNumber) => {
     })
 }
 
-export const getStoreKeyForPlayer = songIndex => {
-    return `player${songIndex}`
-}
-
-export const getPlayerCanPlayThrough = ({
+export const getPlayerCanPlayThroughFromBit = ({
     songIndex,
     playersBitNumber
 
+}) => (
+    getObjectFromBitNumber({
+        keysCount: getSongsNotLoguesCount(),
+        bitNumber: playersBitNumber
+
+    // If logue, the player to check is the first song.
+    })[getSongIsLogue(songIndex) ? 1 : songIndex]
+)
+
+export const getBitFromPlayerCanPlayThrough = ({
+    bitNumber = 0,
+    key
 }) => {
-    const
-        songsCount = getSongsAndLoguesCount(),
-        isPrologue = songIndex === 0,
-        isEpilogue = songIndex === songsCount - 1,
+    // First convert the bit number to an object whose values true or false.
+    const trueFalseObject = getObjectFromBitNumber({
+        keysCount: getSongsNotLoguesCount(),
+        bitNumber
+    })
 
-        playerCanPlayThrough = getValueInBitNumber({
-            keysCount: getSongsNotLoguesCount(),
-            bitNumber: playersBitNumber,
-            key: (isPrologue || isEpilogue) ? 1 : songIndex
-        })
+    // Set the value in this object.
+    trueFalseObject[key] = true
 
-    return playerCanPlayThrough
+    // Convert object to new bit number, which is then returned.
+    return getBitNumberFromObject({
+        trueFalseObject
+    })
+}
+
+export const getStoreKeyForPlayer = songIndex => {
+    return `player${songIndex}`
 }
