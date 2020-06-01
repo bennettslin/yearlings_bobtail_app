@@ -1,71 +1,71 @@
-export const CAN_THEATRE_ENTER_SELECTOR = (
+export const mapCanTheatreEnter = (
     { entranceStore: { canTheatreEnter } }
 ) => canTheatreEnter
 
-export const DID_THEATRE_ENTER_SELECTOR = (
+export const mapDidTheatreEnter = (
     { entranceStore: { didTheatreEnter } }
 ) => didTheatreEnter
 
-export const DID_SCENE_SCROLL_EXIT_SELECTOR = (
+export const mapDidSceneScrollExit = (
     { entranceStore: { didSceneScrollExit } }
 ) => didSceneScrollExit
 
-export const CAN_SCENE_UPDATE_SELECTOR = (
+export const mapCanSceneUpdate = (
     { entranceStore: { canSceneUpdate } }
 ) => canSceneUpdate
 
-export const DID_SCENE_UPDATE_SELECTOR = (
+export const mapDidSceneUpdate = (
     { entranceStore: { didSceneUpdate } }
 ) => didSceneUpdate
 
-export const CAN_SCENE_ENTER_SELECTOR = (
+export const mapCanSceneEnter = (
     { entranceStore: { canSceneEnter } }
 ) => canSceneEnter
 
-export const DID_SCENE_ENTER_SELECTOR = (
+export const mapDidSceneEnter = (
     { entranceStore: { didSceneEnter } }
 ) => didSceneEnter
 
-export const DID_CAROUSEL_EXIT_SELECTOR = (
+export const mapDidCarouselExit = (
     { entranceStore: { didCarouselExit } }
 ) => didCarouselExit
 
-export const DID_LYRIC_EXIT_SELECTOR = (
+export const mapDidLyricExit = (
     { entranceStore: { didLyricExit } }
 ) => didLyricExit
 
-export const DID_CURTAIN_EXIT_SELECTOR = (
+export const mapDidCurtainExit = (
     { entranceStore: { didCurtainExit } }
 ) => didCurtainExit
 
-export const CAN_LYRIC_CAROUSEL_UPDATE_SELECTOR = (
+export const mapCanLyricCarouselUpdate = (
     { entranceStore: { canLyricCarouselUpdate } }
 ) => canLyricCarouselUpdate
 
-export const DID_LYRIC_UPDATE_SELECTOR = (
+export const mapDidLyricUpdate = (
     { entranceStore: { didLyricUpdate } }
 ) => didLyricUpdate
 
-export const DID_CAROUSEL_UPDATE_SELECTOR = (
+export const mapDidCarouselUpdate = (
     { entranceStore: { didCarouselUpdate } }
 ) => didCarouselUpdate
 
-export const CAN_LYRIC_CAROUSEL_ENTER_SELECTOR = (
+export const mapCanLyricCarouselEnter = (
     { entranceStore: { canLyricCarouselEnter } }
 ) => canLyricCarouselEnter
 
-export const DID_LYRIC_ENTER_SELECTOR = (
+export const mapDidLyricEnter = (
     { entranceStore: { didLyricEnter } }
 ) => didLyricEnter
 
-export const DID_CAROUSEL_ENTER_SELECTOR = (
+export const mapDidCarouselEnter = (
     { entranceStore: { didCarouselEnter } }
 ) => didCarouselEnter
 
-export const DID_CURTAIN_ENTER_SELECTOR = (
+export const mapDidCurtainEnter = (
     { entranceStore: { didCurtainEnter } }
 ) => didCurtainEnter
 
-export const IS_SONG_SELECT_IN_FLUX_SELECTOR = (
+export const mapIsSongSelectInFlux = (
     { entranceStore: { isSongSelectInFlux } }
 ) => isSongSelectInFlux

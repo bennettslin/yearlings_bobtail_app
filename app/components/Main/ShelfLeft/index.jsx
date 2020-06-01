@@ -11,7 +11,7 @@ import { mapIsShelfLeftShown } from '../../../redux/transient/selectors'
 import { mapIsDesktopWidth } from '../../../redux/viewport/selectors'
 import './style'
 
-const CHILD_SELECTOR = 'ShelfLeft__child'
+const CHILD_CLASS_NAME = 'ShelfLeft__child'
 
 const ShelfLeft = () => {
     const
@@ -24,12 +24,12 @@ const ShelfLeft = () => {
             isShelfLeftShown && 'ShelfLeft__shown',
             'flex__mainSideButtons'
         )}>
-            <OverviewToggle {...{ className: CHILD_SELECTOR }} />
-            <DotsSlideToggle {...{ className: CHILD_SELECTOR }} />
+            <OverviewToggle {...{ className: CHILD_CLASS_NAME }} />
+            <DotsSlideToggle {...{ className: CHILD_CLASS_NAME }} />
             {isDesktopWidth && (
                 <>
-                    <ScoreToggle {...{ className: CHILD_SELECTOR }} />
-                    <TipsToggle {...{ className: CHILD_SELECTOR }} />
+                    <ScoreToggle {...{ className: CHILD_CLASS_NAME }} />
+                    <TipsToggle {...{ className: CHILD_CLASS_NAME }} />
                 </>
             )}
         </div>

@@ -8,7 +8,7 @@ import {
     mapReferenceDot,
     mapWormholeDot
 } from '../../redux/dots/selectors'
-import { CAN_LYRIC_CAROUSEL_ENTER_SELECTOR } from '../../redux/entrance/selectors'
+import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
 import {
     mapIsLyricLogue,
     mapLyricSongIndex,
@@ -30,7 +30,7 @@ const ShownWrapper = ({ children }) => {
     const
         reference = useSelector(mapReferenceDot),
         wormhole = useSelector(mapWormholeDot),
-        canLyricCarouselEnter = useSelector(CAN_LYRIC_CAROUSEL_ENTER_SELECTOR),
+        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),

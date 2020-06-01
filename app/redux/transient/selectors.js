@@ -12,7 +12,7 @@ import {
 } from '../../helpers/options'
 import { getShowTipForDevice } from '../../album/api/tips'
 import { mapIsActivated } from '../activated/selectors'
-import { CAN_LYRIC_CAROUSEL_ENTER_SELECTOR } from '../entrance/selectors'
+import { mapCanLyricCarouselEnter } from '../entrance/selectors'
 import {
     mapLyricSongIndex,
     mapLyricAnnotationIndex,
@@ -138,7 +138,7 @@ export const mapIsShelfLeftShown = createSelector(
     mapIsLyricExpanded,
     mapIsActivated,
     mapIsOverlayShown,
-    CAN_LYRIC_CAROUSEL_ENTER_SELECTOR,
+    mapCanLyricCarouselEnter,
     mapLyricAnnotationIndex,
     mapIsLyricLogue,
     mapIsLogueOverviewShown,

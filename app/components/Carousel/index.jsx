@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
-import { CAN_LYRIC_CAROUSEL_ENTER_SELECTOR } from '../../redux/entrance/selectors'
+import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LayoutContainer from '../Main/LayoutContainer'
 import CarouselAccess from './Access'
@@ -14,7 +14,7 @@ import './style'
 const Carousel = () => {
     const
         dispatch = useDispatch(),
-        canLyricCarouselEnter = useSelector(CAN_LYRIC_CAROUSEL_ENTER_SELECTOR),
+        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
         _handleTransitionExited = () => {
             logTransition('Carousel did exit.')
             dispatch(updateEntranceStore({ didCarouselExit: true }))

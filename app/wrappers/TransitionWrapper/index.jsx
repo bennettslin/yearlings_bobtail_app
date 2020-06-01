@@ -2,11 +2,11 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { CAN_LYRIC_CAROUSEL_ENTER_SELECTOR } from '../../redux/entrance/selectors'
+import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
 
 const TransitionWrapper = ({ children }) => {
     const
-        canLyricCarouselEnter = useSelector(CAN_LYRIC_CAROUSEL_ENTER_SELECTOR)
+        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
 
     return (
         <div

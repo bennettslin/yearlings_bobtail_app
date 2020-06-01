@@ -7,7 +7,7 @@ import TipsToggle from '../../Tips/Toggle'
 import { mapIsDesktopWidth } from '../../../redux/viewport/selectors'
 import './style'
 
-const CHILD_SELECTOR = 'ShelfRight__child'
+const CHILD_CLASS_NAME = 'ShelfRight__child'
 
 const ShelfRight = () => {
     const isDesktopWidth = useSelector(mapIsDesktopWidth)
@@ -17,8 +17,8 @@ const ShelfRight = () => {
             'ShelfRight',
             'flex__mainSideButtons'
         )}>
-            <TipsToggle {...{ className: CHILD_SELECTOR }} />
-            <ScoreToggle {...{ className: CHILD_SELECTOR }} />
+            <TipsToggle {...{ className: CHILD_CLASS_NAME }} />
+            <ScoreToggle {...{ className: CHILD_CLASS_NAME }} />
         </div>
     )
 }

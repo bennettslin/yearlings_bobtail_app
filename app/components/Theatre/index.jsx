@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
-import { CAN_THEATRE_ENTER_SELECTOR } from '../../redux/entrance/selectors'
+import { mapCanTheatreEnter } from '../../redux/entrance/selectors'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Stage from '../Stage'
 import Curtains from '../Stage/Curtains'
@@ -18,7 +18,7 @@ import './style'
 const Theatre = () => {
     const
         dispatch = useDispatch(),
-        canTheatreEnter = useSelector(CAN_THEATRE_ENTER_SELECTOR),
+        canTheatreEnter = useSelector(mapCanTheatreEnter),
         onEntered = () => {
             logTransition('Theatre did enter.')
             dispatch(updateEntranceStore({ didTheatreEnter: true }))
