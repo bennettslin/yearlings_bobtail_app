@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { isShown } from '../../helpers/options'
+import { getIsShown } from '../../helpers/options'
 
 export const IS_LOGUE_OVERVIEW_SHOWN_SELECTOR = (
     { optionStore: { isLogueOverviewShown } }
@@ -25,12 +25,12 @@ export const OVERVIEW_SHOWN_SELECTOR = createSelector(
     SELECTED_OVERVIEW_OPTION_SELECTOR,
     (
         selectedOverviewOption
-    ) => isShown(selectedOverviewOption)
+    ) => getIsShown(selectedOverviewOption)
 )
 
 export const TIPS_SHOWN_SELECTOR = createSelector(
     SELECTED_TIPS_OPTION_SELECTOR,
     (
         selectedTipsOption
-    ) => isShown(selectedTipsOption)
+    ) => getIsShown(selectedTipsOption)
 )

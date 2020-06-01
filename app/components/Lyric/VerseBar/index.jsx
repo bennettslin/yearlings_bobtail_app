@@ -68,12 +68,12 @@ class VerseBar extends PureComponent {
 
     _handleVerseBarSelect = e => {
         logEvent({ e, componentName: 'VerseBar' })
-        if (this.getIsShown()) {
+        if (this.getIsShownInVerseBar()) {
             this.dispatchScrollVerse()
         }
     }
 
-    getIsShown() {
+    getIsShownInVerseBar() {
         const {
                 isAbove,
                 isVerseBarAbove,
@@ -113,7 +113,7 @@ class VerseBar extends PureComponent {
                 lyricVerseIndex
             ),
 
-            isShown = this.getIsShown()
+            isShownInVerseBar = this.getIsShownInVerseBar()
 
         // Logue will not have verse object.
         return !isLyricLogue && (
@@ -127,7 +127,7 @@ class VerseBar extends PureComponent {
                         'VerseBar__below',
 
                     {
-                        'VerseBar__shown': isShown
+                        'VerseBar__shown': isShownInVerseBar
                     }
                 )}
                 {...{
@@ -145,14 +145,14 @@ class VerseBar extends PureComponent {
                 >
                     <Transition
                         {...{
-                            in: isShown,
+                            in: isShownInVerseBar,
                             timeout: 200
                         }}
                     >
                         <VerseHoc
                             inVerseBar
                             {...{
-                                isShownInVerseBar: isShown,
+                                isShownInVerseBar,
                                 verseIndex,
                                 verseObject: getVerse(
                                     lyricSongIndex,

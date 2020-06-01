@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
 import {
-    isShown,
+    getIsShown,
     getNextOption
 } from '../../../helpers/options'
 import {
@@ -49,9 +49,9 @@ const OverviewDispatcher = forwardRef((props, ref) => {
                  * overview by pressing key. This is the only way to handle it.
                  */
                 bothOverviewAndTipsShown =
-                    isShown(nextOverviewOption) &&
-                    isShown(selectedOverviewOption) &&
-                    isShown(selectedTipsOption)
+                    getIsShown(nextOverviewOption) &&
+                    getIsShown(selectedOverviewOption) &&
+                    getIsShown(selectedTipsOption)
 
             dispatch(updateOptionStore({
                 selectedOverviewOption: nextOverviewOption,

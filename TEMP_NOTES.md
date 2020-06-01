@@ -21,6 +21,7 @@
 * Selecting accessed verse has a delay.
 
 # Brainless JS tasks
+* Rename all selectors with map prefix, camelCase
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.
 * Change all to use overviewShown and tipsShown. Then prefix with is.
