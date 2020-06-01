@@ -13,11 +13,11 @@ import {
     mapIsSelectedLogue
 } from '../../redux/selected/selectors'
 import {
-    SLIDER_LEFT_SELECTOR,
-    SLIDER_WIDTH_SELECTOR,
-    IS_SLIDER_MOVING_SELECTOR,
-    IS_SLIDER_TOUCHED_SELECTOR,
-    SLIDER_VERSE_INDEX_SELECTOR
+    mapSliderLeft,
+    mapSliderWidth,
+    mapIsSliderMoving,
+    mapIsSliderTouched,
+    mapSliderVerseIndex
 } from '../../redux/slider/selectors'
 
 const mapStateToProps = state => {
@@ -25,11 +25,11 @@ const mapStateToProps = state => {
         selectedSongIndex = mapSelectedSongIndex(state),
         selectedVerseIndex = mapSelectedVerseIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state),
-        sliderLeft = SLIDER_LEFT_SELECTOR(state),
-        sliderWidth = SLIDER_WIDTH_SELECTOR(state),
-        isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state),
-        isSliderTouched = IS_SLIDER_TOUCHED_SELECTOR(state),
-        sliderVerseIndex = SLIDER_VERSE_INDEX_SELECTOR(state)
+        sliderLeft = mapSliderLeft(state),
+        sliderWidth = mapSliderWidth(state),
+        isSliderMoving = mapIsSliderMoving(state),
+        isSliderTouched = mapIsSliderTouched(state),
+        sliderVerseIndex = mapSliderVerseIndex(state)
 
     return {
         isSliderTouched,

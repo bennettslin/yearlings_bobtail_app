@@ -1,27 +1,27 @@
-export const SLIDER_LEFT_SELECTOR = (
+export const mapSliderLeft = (
     { sliderStore: { sliderLeft } }
 ) => sliderLeft
 
-export const SLIDER_WIDTH_SELECTOR = (
+export const mapSliderWidth = (
     { sliderStore: { sliderWidth } }
 ) => sliderWidth
 
-export const IS_SLIDER_MOVING_SELECTOR = (
+export const mapIsSliderMoving = (
     { sliderStore: { isSliderMoving } }
 ) => isSliderMoving
 
-export const IS_SLIDER_TOUCHED_SELECTOR = (
+export const mapIsSliderTouched = (
     { sliderStore: { isSliderTouched } }
 ) => isSliderTouched
 
-export const SLIDER_VERSE_INDEX_SELECTOR = (
+export const mapSliderVerseIndex = (
     { sliderStore: { sliderVerseIndex } }
 ) => sliderVerseIndex
 
-export const SLIDER_SCENE_INDEX_SELECTOR = (
+export const mapSliderSceneIndex = (
     { sliderStore: { sliderSceneIndex } }
 ) => sliderSceneIndex
 
-export const SLIDER_TIME_SELECTOR = (
+export const mapSliderTime = (
     { sliderStore: { sliderTime } }
 ) => sliderTime

@@ -2,11 +2,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import Iframe from '../../modules/Iframe'
-import { SELECTED_WIKI_URL_SELECTOR } from '../../redux/session/selectors'
+import { mapSelectedWikiUrl } from '../../redux/session/selectors'
 
 const Wiki = () => {
     const
-        selectedWikiUrl = useSelector(SELECTED_WIKI_URL_SELECTOR),
+        selectedWikiUrl = useSelector(mapSelectedWikiUrl),
         [isLoading, setIsLoading] = useState(false),
         wikiElement = useRef(),
 

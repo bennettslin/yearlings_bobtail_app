@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { IS_DESKTOP_WIDTH_SELECTOR } from '../../../redux/viewport/selectors'
+import { mapIsDesktopWidth } from '../../../redux/viewport/selectors'
 import './style'
 
 const MainFlexContainer = ({
@@ -10,7 +10,7 @@ const MainFlexContainer = ({
     children
 
 }) => {
-    const isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR)
+    const isDesktopWidth = useSelector(mapIsDesktopWidth)
 
     return (
         <div

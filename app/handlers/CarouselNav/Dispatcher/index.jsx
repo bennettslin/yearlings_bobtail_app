@@ -11,9 +11,9 @@ import {
     mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
 import {
-    IS_CAROUSEL_SHOWN_SELECTOR,
-    IS_NAV_SHOWN_SELECTOR,
-    IS_DOTS_SLIDE_SHOWN_SELECTOR
+    mapIsCarouselShown,
+    mapIsNavShown,
+    mapIsDotsSlideShown
 } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
@@ -23,9 +23,9 @@ const mapStateToProps = state => {
         canCarouselMount = mapCanCarouselMount(state),
         selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state),
-        isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
-        isNavShown = IS_NAV_SHOWN_SELECTOR(state),
-        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
+        isCarouselShown = mapIsCarouselShown(state),
+        isNavShown = mapIsNavShown(state),
+        isDotsSlideShown = mapIsDotsSlideShown(state)
     return {
         dotsBitNumber,
         canCarouselMount,

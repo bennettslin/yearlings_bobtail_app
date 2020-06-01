@@ -1,11 +1,11 @@
-export const QUEUED_SCROLL_CAROUSEL_LOG_SELECTOR = (
+export const mapQueuedScrollCarouselLog = (
     { scrollCarouselStore: { queuedScrollCarouselLog } }
 ) => queuedScrollCarouselLog
 
-export const QUEUED_SCROLL_CAROUSEL_INDEX_SELECTOR = (
+export const mapQueuedScrollCarouselIndex = (
     { scrollCarouselStore: { queuedScrollCarouselIndex } }
 ) => queuedScrollCarouselIndex
 
-export const QUEUED_SCROLL_CAROUSEL_NO_DURATION_SELECTOR = (
+export const mapQueuedScrollCarouselNoDuration = (
     { scrollCarouselStore: { queuedScrollCarouselNoDuration } }
 ) => queuedScrollCarouselNoDuration

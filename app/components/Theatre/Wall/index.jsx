@@ -7,10 +7,10 @@ import {
     getBalconyColumnCoordinates,
     getWallWidth
 } from './helper'
-import { CEILING_HEIGHT_SELECTOR } from '../../../redux/theatre/selectors'
+import { mapCeilingHeight } from '../../../redux/theatre/selectors'
 import {
-    WINDOW_WIDTH_SELECTOR,
-    WINDOW_HEIGHT_SELECTOR
+    mapWindowWidth,
+    mapWindowHeight
 } from '../../../redux/viewport/selectors'
 import './style'
 
@@ -22,9 +22,9 @@ const mapStateToProps = state => {
                 prosceniumHeight
             }
         } = state,
-        ceilingHeight = CEILING_HEIGHT_SELECTOR(state),
-        windowWidth = WINDOW_WIDTH_SELECTOR(state),
-        windowHeight = WINDOW_HEIGHT_SELECTOR(state)
+        ceilingHeight = mapCeilingHeight(state),
+        windowWidth = mapWindowWidth(state),
+        windowHeight = mapWindowHeight(state)
 
     return {
         windowHeight,

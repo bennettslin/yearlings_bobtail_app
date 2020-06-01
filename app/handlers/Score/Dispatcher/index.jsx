@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { mapCanScoreMount } from '../../../redux/mount/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
-import { IS_SCORE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
+import { mapIsScoreShown } from '../../../redux/toggle/selectors'
 
 const ScoreDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        isScoreShown = useSelector(IS_SCORE_SHOWN_SELECTOR),
+        isScoreShown = useSelector(mapIsScoreShown),
         canScoreMount = useSelector(mapCanScoreMount),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         dispatchScore = (

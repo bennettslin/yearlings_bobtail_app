@@ -7,23 +7,23 @@ import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricDispatcher from '../../../../handlers/Lyric/Dispatcher'
 import {
-    IS_HEIGHTLESS_LYRIC_SELECTOR,
-    IS_LYRIC_EXPANDABLE_SELECTOR
+    mapIsHeightlessLyric,
+    mapIsLyricExpandable
 } from '../../../../redux/responsive/selectors'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
 import { LYRIC_SECTION_EXPAND_KEY } from '../../../../constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from '../../../../constants/buttons'
 import { LYRIC_EXPAND } from '../../../../constants/tips'
-import { IS_LYRIC_EXPANDED_SELECTOR } from '../../../../redux/toggle/selectors'
+import { mapIsLyricExpanded } from '../../../../redux/toggle/selectors'
 import './style'
 
 const LyricToggleExpand = ({ inMain }) => {
     const
         dispatchLyricExpand = useRef(),
-        isLyricExpandable = useSelector(IS_LYRIC_EXPANDABLE_SELECTOR),
-        isHeightlessLyric = useSelector(IS_HEIGHTLESS_LYRIC_SELECTOR),
-        isLyricExpanded = useSelector(IS_LYRIC_EXPANDED_SELECTOR),
+        isLyricExpandable = useSelector(mapIsLyricExpandable),
+        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
+        isLyricExpanded = useSelector(mapIsLyricExpanded),
         handleButtonClick = () => {
             dispatchLyricExpand.current()
         }

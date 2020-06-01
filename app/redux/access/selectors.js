@@ -3,9 +3,9 @@ import { getIsAccessedIndexedAnchorShown } from '../../helpers/access'
 import { mapIsActivated } from '../activated/selectors'
 import { mapLyricAnnotationIndex } from '../lyric/selectors'
 import {
-    IS_DOTS_SLIDE_SHOWN_SELECTOR,
-    IS_NAV_SHOWN_SELECTOR,
-    IS_LYRIC_EXPANDED_SELECTOR
+    mapIsDotsSlideShown,
+    mapIsNavShown,
+    mapIsLyricExpanded
 } from '../toggle/selectors'
 
 export const mapIsAccessOn = (
@@ -34,9 +34,9 @@ export const mapAccessedWikiWormholeIndex = (
 
 export const mapIsAccessedIndexedAnchorShown = createSelector(
     mapIsAccessOn,
-    IS_DOTS_SLIDE_SHOWN_SELECTOR,
-    IS_NAV_SHOWN_SELECTOR,
-    IS_LYRIC_EXPANDED_SELECTOR,
+    mapIsDotsSlideShown,
+    mapIsNavShown,
+    mapIsLyricExpanded,
     mapLyricAnnotationIndex,
     mapIsActivated,
     (

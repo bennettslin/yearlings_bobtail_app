@@ -13,22 +13,22 @@ import Slider from '../Slider'
 import { getMenuMarginInOverlay } from './helper'
 import { mapCanSliderMount } from '../../redux/mount/selectors'
 import {
-    IS_TWO_ROW_MENU_SELECTOR,
-    MENU_HEIGHT_SELECTOR
+    mapIsTwoRowMenu,
+    mapMenuHeight
 } from '../../redux/responsive/selectors'
 import {
-    WINDOW_WIDTH_SELECTOR,
-    IS_DESKTOP_WIDTH_SELECTOR
+    mapWindowWidth,
+    mapIsDesktopWidth
 } from '../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
         canSliderMount = mapCanSliderMount(state),
-        isTwoRowMenu = IS_TWO_ROW_MENU_SELECTOR(state),
-        menuHeight = MENU_HEIGHT_SELECTOR(state),
-        windowWidth = WINDOW_WIDTH_SELECTOR(state),
-        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
+        isTwoRowMenu = mapIsTwoRowMenu(state),
+        menuHeight = mapMenuHeight(state),
+        windowWidth = mapWindowWidth(state),
+        isDesktopWidth = mapIsDesktopWidth(state)
 
     return {
         windowWidth,

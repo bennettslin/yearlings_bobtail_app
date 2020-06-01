@@ -6,18 +6,18 @@ import { connect } from 'react-redux'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import {
-    IS_HEIGHTLESS_LYRIC_SELECTOR,
-    IS_LYRIC_EXPANDABLE_SELECTOR
+    mapIsHeightlessLyric,
+    mapIsLyricExpandable
 } from '../../../redux/responsive/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
-import { IS_LYRIC_EXPANDED_SELECTOR } from '../../../redux/toggle/selectors'
+import { mapIsLyricExpanded } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
-        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
+        isHeightlessLyric = mapIsHeightlessLyric(state),
+        isLyricExpandable = mapIsLyricExpandable(state),
         isSelectedLogue = mapIsSelectedLogue(state),
-        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
+        isLyricExpanded = mapIsLyricExpanded(state)
 
     return {
         isLyricExpanded,

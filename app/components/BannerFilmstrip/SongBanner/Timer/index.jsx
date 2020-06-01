@@ -16,8 +16,8 @@ import {
     mapSelectedTime
 } from '../../../../redux/selected/selectors'
 import {
-    IS_SLIDER_MOVING_SELECTOR,
-    SLIDER_TIME_SELECTOR
+    mapIsSliderMoving,
+    mapSliderTime
 } from '../../../../redux/slider/selectors'
 import './style'
 
@@ -29,8 +29,8 @@ const SongBannerTimer = () => {
         bannerHoverTime = useSelector(mapBannerHoverTime),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         selectedTime = useSelector(mapSelectedTime),
-        isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
-        sliderTime = useSelector(SLIDER_TIME_SELECTOR)
+        isSliderMoving = useSelector(mapIsSliderMoving),
+        sliderTime = useSelector(mapSliderTime)
 
     let time = selectedTime
 

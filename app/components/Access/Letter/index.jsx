@@ -10,16 +10,16 @@ import AccessIcon from './Icon'
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 import { mapIsAccessOn } from '../../../redux/access/selectors'
 import {
-    IS_TABLET_WIDTH_SELECTOR,
-    IS_DESKTOP_WIDTH_SELECTOR
+    mapIsTabletWidth,
+    mapIsDesktopWidth
 } from '../../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
         isAccessOn = mapIsAccessOn(state),
-        isTabletWidth = IS_TABLET_WIDTH_SELECTOR(state),
-        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
+        isTabletWidth = mapIsTabletWidth(state),
+        isDesktopWidth = mapIsDesktopWidth(state)
 
     return {
         isAccessOn,

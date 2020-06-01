@@ -1,7 +1,7 @@
-export const CEILING_HEIGHT_SELECTOR = (
+export const mapCeilingHeight = (
     { theatreStore: { ceilingHeight } }
 ) => ceilingHeight
 
-export const FLOOR_HEIGHT_SELECTOR = (
+export const mapFloorHeight = (
     { theatreStore: { floorHeight } }
 ) => floorHeight

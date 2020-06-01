@@ -4,14 +4,14 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import { SHOW_SINGLE_NAV_BOOK_SELECTOR } from '../../../redux/responsive/selectors'
+import { mapShowSingleNavBook } from '../../../redux/responsive/selectors'
 import NavDispatcher from '../../../handlers/Nav/Dispatcher'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
 import { populateRefs } from '../../../helpers/ref'
-import { SHOWN_NAV_BOOK_INDEX_SELECTOR } from '../../../redux/session/selectors'
+import { mapShownNavBookIndex } from '../../../redux/session/selectors'
 import './style'
 
 // TODO: Import this from a Book component.
@@ -19,8 +19,8 @@ import './Book/style'
 
 const mapStateToProps = state => {
     const
-        showSingleNavBook = SHOW_SINGLE_NAV_BOOK_SELECTOR(state),
-        shownNavBookIndex = SHOWN_NAV_BOOK_INDEX_SELECTOR(state)
+        showSingleNavBook = mapShowSingleNavBook(state),
+        shownNavBookIndex = mapShownNavBookIndex(state)
 
     return {
         showSingleNavBook,

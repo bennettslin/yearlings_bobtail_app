@@ -27,7 +27,7 @@ import {
     mapIsSelectedLogue,
     mapSelectedTime
 } from '../../../redux/selected/selectors'
-import { SLIDER_SCENE_INDEX_SELECTOR } from '../../../redux/slider/selectors'
+import { mapSliderSceneIndex } from '../../../redux/slider/selectors'
 import './style'
 
 const mapStateToProps = state => {
@@ -37,7 +37,7 @@ const mapStateToProps = state => {
         selectedSceneIndex = mapSelectedSceneIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state),
         selectedTime = mapSelectedTime(state),
-        sliderSceneIndex = SLIDER_SCENE_INDEX_SELECTOR(state)
+        sliderSceneIndex = mapSliderSceneIndex(state)
 
     return {
         isSelectedLogue,

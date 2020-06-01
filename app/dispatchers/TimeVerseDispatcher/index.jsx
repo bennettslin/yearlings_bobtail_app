@@ -9,12 +9,12 @@ import { updateSelectedStore } from '../../redux/selected/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
 import { getSceneIndexForVerse } from '../../album/api/verses'
 import { mapSelectedSongIndex } from '../../redux/selected/selectors'
-import { IS_AUTO_SCROLL_SELECTOR } from '../../redux/toggle/selectors'
+import { mapIsAutoScroll } from '../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
         selectedSongIndex = mapSelectedSongIndex(state),
-        isAutoScroll = IS_AUTO_SCROLL_SELECTOR(state)
+        isAutoScroll = mapIsAutoScroll(state)
 
     return {
         isAutoScroll,

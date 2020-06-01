@@ -1,16 +1,16 @@
-export const STAGE_TOP_SELECTOR = (
+export const mapStageTop = (
     { stageStore: { stageTop } }
 ) => stageTop
 
-export const STAGE_LEFT_SELECTOR = (
+export const mapStageLeft = (
     { stageStore: { stageLeft } }
 ) => stageLeft
 
-export const STAGE_WIDTH_SELECTOR = (
+export const mapStageWidth = (
     { stageStore: { stageWidth } }
 ) => stageWidth
 
-export const STAGE_HEIGHT_SELECTOR = (
+export const mapStageHeight = (
     { stageStore: { stageHeight } }
 ) => stageHeight
 

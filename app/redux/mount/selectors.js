@@ -6,15 +6,15 @@ import {
 } from '../../helpers/resize/mount'
 import { mapIsLyricLogue } from '../lyric/selectors'
 import {
-    IS_HEIGHTLESS_LYRIC_SELECTOR,
-    MENU_HEIGHT_SELECTOR
+    mapIsHeightlessLyric,
+    mapMenuHeight
 } from '../responsive/selectors'
-import { STAGE_HEIGHT_SELECTOR } from '../stage/selectors'
-import { IS_LYRIC_EXPANDED_SELECTOR } from '../toggle/selectors'
+import { mapStageHeight } from '../stage/selectors'
+import { mapIsLyricExpanded } from '../toggle/selectors'
 import {
-    DEVICE_WIDTH_INDEX_SELECTOR,
-    WINDOW_HEIGHT_SELECTOR,
-    IS_DESKTOP_WIDTH_SELECTOR
+    mapDeviceWidthIndex,
+    mapWindowHeight,
+    mapIsDesktopWidth
 } from '../viewport/selectors'
 
 export const mapCanCarouselMount = (
@@ -31,11 +31,11 @@ export const mapCanSliderMount = (
 
 export const mapLyricDynamicHeight = createSelector(
     mapCanCarouselMount,
-    IS_HEIGHTLESS_LYRIC_SELECTOR,
-    MENU_HEIGHT_SELECTOR,
-    STAGE_HEIGHT_SELECTOR,
-    DEVICE_WIDTH_INDEX_SELECTOR,
-    WINDOW_HEIGHT_SELECTOR,
+    mapIsHeightlessLyric,
+    mapMenuHeight,
+    mapStageHeight,
+    mapDeviceWidthIndex,
+    mapWindowHeight,
     (
         canCarouselMount,
         isHeightlessLyric,
@@ -56,9 +56,9 @@ export const mapLyricDynamicHeight = createSelector(
 export const mapLyricOverviewHeightStyle = createSelector(
     mapLyricDynamicHeight,
     mapIsLyricLogue,
-    IS_HEIGHTLESS_LYRIC_SELECTOR,
-    MENU_HEIGHT_SELECTOR,
-    IS_LYRIC_EXPANDED_SELECTOR,
+    mapIsHeightlessLyric,
+    mapMenuHeight,
+    mapIsLyricExpanded,
     (
         lyricDynamicHeight,
         isLyricLogue,
@@ -77,9 +77,9 @@ export const mapLyricOverviewHeightStyle = createSelector(
 export const mapMainHeight = createSelector(
     mapCanCarouselMount,
     mapLyricDynamicHeight,
-    IS_HEIGHTLESS_LYRIC_SELECTOR,
-    MENU_HEIGHT_SELECTOR,
-    IS_DESKTOP_WIDTH_SELECTOR,
+    mapIsHeightlessLyric,
+    mapMenuHeight,
+    mapIsDesktopWidth,
     (
         canCarouselMount,
         lyricDynamicHeight,

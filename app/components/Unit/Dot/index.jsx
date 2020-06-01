@@ -16,7 +16,7 @@ import {
     mapLyricSongIndex,
     mapIsSelectedLyricAnnotation
 } from '../../../redux/lyric/selectors'
-import { IS_SLIDER_MOVING_SELECTOR } from '../../../redux/slider/selectors'
+import { mapIsSliderMoving } from '../../../redux/slider/selectors'
 import './logic'
 import './style'
 
@@ -29,7 +29,7 @@ export const UnitDot = ({
         dispatch = useDispatch(),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         isActivated = useSelector(mapIsActivated),
-        isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
+        isSliderMoving = useSelector(mapIsSliderMoving),
         {
             annotationIndex,
             dotBit

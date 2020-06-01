@@ -1,15 +1,15 @@
-export const IS_VERSE_BAR_ABOVE_SELECTOR = (
+export const mapIsVerseBarAbove = (
     { verseBarsStore: { isVerseBarAbove } }
 ) => isVerseBarAbove
 
-export const IS_VERSE_BAR_BELOW_SELECTOR = (
+export const mapIsVerseBarBelow = (
     { verseBarsStore: { isVerseBarBelow } }
 ) => isVerseBarBelow
 
-export const QUEUED_DETERMINE_VERSE_BARS_SELECTOR = (
+export const mapQueuedDetermineVerseBars = (
     { verseBarsStore: { queuedDetermineVerseBars } }
 ) => queuedDetermineVerseBars
 
-export const QUEUED_VERSE_BARS_TIMEOUT_SELECTOR = (
+export const mapQueuedVerseBarsTimeout = (
     { verseBarsStore: { queuedVerseBarsTimeout } }
 ) => queuedVerseBarsTimeout

@@ -5,12 +5,12 @@ import {
     getStoreKeyForPlayer,
     getBitFromPlayerCanPlayThrough
 } from '../../../../helpers/player'
-import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../../../redux/players/selectors'
+import { mapPlayersBitNumber } from '../../../../redux/players/selectors'
 
 const PlayerDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        playersBitNumber = useSelector(PLAYERS_BIT_NUMBER_SELECTOR),
+        playersBitNumber = useSelector(mapPlayersBitNumber),
 
         dispatchPlayerCanPlayThrough = songIndex => {
             dispatch(updatePlayersStore({

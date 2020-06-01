@@ -7,20 +7,20 @@ import Texts from '../Texts'
 import OverviewToggle from '../Main/OverviewToggle'
 import { getOverviewForSong } from '../../album/api/songs'
 import { getIsToggleInOverview } from './helper'
-import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../redux/responsive/selectors'
+import { mapIsHeightlessLyric } from '../../redux/responsive/selectors'
 import {
     mapLyricSongIndex,
     mapIsLyricLogue
 } from '../../redux/lyric/selectors'
-import { IS_PHONE_WIDTH_SELECTOR } from '../../redux/viewport/selectors'
+import { mapIsPhoneWidth } from '../../redux/viewport/selectors'
 import './style'
 
 const Overview = () => {
     const
-        isHeightlessLyric = useSelector(IS_HEIGHTLESS_LYRIC_SELECTOR),
+        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         isLyricLogue = useSelector(mapIsLyricLogue),
-        isPhoneWidth = useSelector(IS_PHONE_WIDTH_SELECTOR),
+        isPhoneWidth = useSelector(mapIsPhoneWidth),
         overviewText = getOverviewForSong(lyricSongIndex),
 
         // TODO: Make this a selector.

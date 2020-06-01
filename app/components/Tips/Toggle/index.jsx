@@ -6,8 +6,8 @@ import cx from 'classnames'
 import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
-import { IS_TIPS_SHOWABLE_SELECTOR } from '../../../redux/transient/selectors'
-import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
+import { mapIsTipsShowable } from '../../../redux/transient/selectors'
+import { mapSelectedTipsOption } from '../../../redux/option/selectors'
 import { TIPS_TOGGLE_KEY } from '../../../constants/access'
 import { TIPS_BUTTON_KEY } from '../../../constants/buttons'
 import { TIPS } from '../../../constants/tips'
@@ -19,8 +19,8 @@ const TipsToggle = ({
 
 }) => {
     const
-        isTipsShowable = useSelector(IS_TIPS_SHOWABLE_SELECTOR),
-        selectedTipsOption = useSelector(SELECTED_TIPS_OPTION_SELECTOR),
+        isTipsShowable = useSelector(mapIsTipsShowable),
+        selectedTipsOption = useSelector(mapSelectedTipsOption),
         dispatchTips = useRef(),
         handleTipsClick = () => {
             dispatchTips.current({ isToggled: true })

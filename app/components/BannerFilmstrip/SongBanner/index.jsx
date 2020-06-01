@@ -13,7 +13,7 @@ import {
     getDurationForSong,
     getStartTimeForVerse
 } from '../../../album/api/time'
-import { IS_SMALL_BANNER_TEXT_SELECTOR } from '../../../redux/responsive/selectors'
+import { mapIsSmallBannerText } from '../../../redux/responsive/selectors'
 import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
@@ -29,13 +29,13 @@ import {
     mapIsSelectedLogue,
     mapSelectedTime
 } from '../../../redux/selected/selectors'
-import { IS_SLIDER_MOVING_SELECTOR } from '../../../redux/slider/selectors'
+import { mapIsSliderMoving } from '../../../redux/slider/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
         isActivated = mapIsActivated(state),
-        isSmallBannerText = IS_SMALL_BANNER_TEXT_SELECTOR(state),
+        isSmallBannerText = mapIsSmallBannerText(state),
         isPlaying = mapIsPlaying(state),
         isBannerHovering = mapIsBannerHovering(state),
         bannerHoverVerseIndex = mapBannerHoverVerseIndex(state),
@@ -43,7 +43,7 @@ const mapStateToProps = state => {
         selectedSongIndex = mapSelectedSongIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state),
         selectedTime = mapSelectedTime(state),
-        isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state)
+        isSliderMoving = mapIsSliderMoving(state)
 
     return {
         isPlaying,

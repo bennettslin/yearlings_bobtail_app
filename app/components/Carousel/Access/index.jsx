@@ -5,10 +5,10 @@ import AccessLetters from '../../Access/Letters'
 import { mapDotsBitNumber } from '../../../redux/dots/selectors'
 import { mapLyricAnnotationIndex } from '../../../redux/lyric/selectors'
 import {
-    IS_CAROUSEL_SHOWN_SELECTOR,
-    IS_NAV_SHOWN_SELECTOR,
-    IS_DOTS_SLIDE_SHOWN_SELECTOR,
-    IS_LYRIC_EXPANDED_SELECTOR
+    mapIsCarouselShown,
+    mapIsNavShown,
+    mapIsDotsSlideShown,
+    mapIsLyricExpanded
 } from '../../../redux/toggle/selectors'
 import { ARROW_LEFT, ARROW_RIGHT } from '../../../constants/access'
 import './style'
@@ -18,10 +18,10 @@ const CarouselAccess = ({ inLyric }) => {
     const
         dotsBitNumber = useSelector(mapDotsBitNumber),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        isCarouselShown = useSelector(IS_CAROUSEL_SHOWN_SELECTOR),
-        isNavShown = useSelector(IS_NAV_SHOWN_SELECTOR),
-        isDotsSlideShown = useSelector(IS_DOTS_SLIDE_SHOWN_SELECTOR),
-        isLyricExpanded = useSelector(IS_LYRIC_EXPANDED_SELECTOR),
+        isCarouselShown = useSelector(mapIsCarouselShown),
+        isNavShown = useSelector(mapIsNavShown),
+        isDotsSlideShown = useSelector(mapIsDotsSlideShown),
+        isLyricExpanded = useSelector(mapIsLyricExpanded),
 
         showIfAccessOn = Boolean(
             /**

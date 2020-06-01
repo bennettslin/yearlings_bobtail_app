@@ -1,32 +1,32 @@
 import { createSelector } from 'reselect'
 
-export const WINDOW_WIDTH_SELECTOR = (
+export const mapWindowWidth = (
     { viewportStore: { windowWidth } }
 ) => windowWidth
 
-export const WINDOW_HEIGHT_SELECTOR = (
+export const mapWindowHeight = (
     { viewportStore: { windowHeight } }
 ) => windowHeight
 
-export const DEVICE_WIDTH_INDEX_SELECTOR = (
+export const mapDeviceWidthIndex = (
     { viewportStore: { deviceWidthIndex } }
 ) => deviceWidthIndex
 
-export const IS_PHONE_WIDTH_SELECTOR = (
+export const mapIsPhoneWidth = (
     { viewportStore: { isPhoneWidth } }
 ) => isPhoneWidth
 
-export const IS_TABLET_WIDTH_SELECTOR = (
+export const mapIsTabletWidth = (
     { viewportStore: { isTabletWidth } }
 ) => isTabletWidth
 
-export const IS_DESKTOP_WIDTH_SELECTOR = (
+export const mapIsDesktopWidth = (
     { viewportStore: { isDesktopWidth } }
 ) => isDesktopWidth
 
-export const IS_PHONE_OR_MINI_WIDTH_SELECTOR = createSelector(
-    IS_TABLET_WIDTH_SELECTOR,
-    IS_DESKTOP_WIDTH_SELECTOR,
+export const mapIsPhoneOrMiniWidth = createSelector(
+    mapIsTabletWidth,
+    mapIsDesktopWidth,
     (
         isTabletWidth,
         isDesktopWidth

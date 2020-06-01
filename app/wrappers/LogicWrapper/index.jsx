@@ -17,12 +17,12 @@ import {
     mapLyricVerseIndex
 } from '../../redux/lyric/selectors'
 import {
-    IS_SLIDER_MOVING_SELECTOR,
-    SLIDER_VERSE_INDEX_SELECTOR
+    mapIsSliderMoving,
+    mapSliderVerseIndex
 } from '../../redux/slider/selectors'
 import {
-    IS_VERSE_BAR_ABOVE_SELECTOR,
-    IS_VERSE_BAR_BELOW_SELECTOR
+    mapIsVerseBarAbove,
+    mapIsVerseBarBelow
 } from '../../redux/verseBars/selectors'
 
 const LogicWrapper = ({ children }) => {
@@ -34,10 +34,10 @@ const LogicWrapper = ({ children }) => {
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
-        isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
-        sliderVerseIndex = useSelector(SLIDER_VERSE_INDEX_SELECTOR),
-        isVerseBarAbove = useSelector(IS_VERSE_BAR_ABOVE_SELECTOR),
-        isVerseBarBelow = useSelector(IS_VERSE_BAR_BELOW_SELECTOR),
+        isSliderMoving = useSelector(mapIsSliderMoving),
+        sliderVerseIndex = useSelector(mapSliderVerseIndex),
+        isVerseBarAbove = useSelector(mapIsVerseBarAbove),
+        isVerseBarBelow = useSelector(mapIsVerseBarBelow),
         areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
 
         /**

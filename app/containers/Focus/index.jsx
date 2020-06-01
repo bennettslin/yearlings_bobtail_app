@@ -12,15 +12,15 @@ import { isEmailFocused } from '../../utils/email'
 import { populateRefs } from '../../helpers/ref'
 import { mapQueuedFocus } from '../../redux/focus/selectors'
 import { mapCanSliderMount } from '../../redux/mount/selectors'
-import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../redux/responsive/selectors'
-import { IS_LYRIC_EXPANDED_SELECTOR } from '../../redux/toggle/selectors'
+import { mapIsHeightlessLyric } from '../../redux/responsive/selectors'
+import { mapIsLyricExpanded } from '../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
         queuedFocus = mapQueuedFocus(state),
         canSliderMount = mapCanSliderMount(state),
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
-        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
+        isHeightlessLyric = mapIsHeightlessLyric(state),
+        isLyricExpanded = mapIsLyricExpanded(state)
 
     return {
         canSliderMount,

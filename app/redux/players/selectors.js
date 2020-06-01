@@ -1,7 +1,7 @@
-export const PLAYERS_BIT_NUMBER_SELECTOR = (
+export const mapPlayersBitNumber = (
     { playersStore: { playersBitNumber } }
 ) => playersBitNumber
 
-export const NEXT_PLAYER_TO_RENDER_SELECTOR = (
+export const mapNextPlayerToRender = (
     { playersStore: { nextPlayerToRender } }
 ) => nextPlayerToRender

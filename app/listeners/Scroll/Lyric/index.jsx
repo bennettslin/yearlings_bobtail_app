@@ -12,42 +12,42 @@ import {
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
 } from '../../../constants/scroll'
-import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
+import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
 import {
-    QUEUED_SCROLL_LYRIC_LOG_SELECTOR,
-    QUEUED_SCROLL_LYRIC_BY_VERSE_SELECTOR,
-    QUEUED_SCROLL_LYRIC_INDEX_SELECTOR,
-    QUEUED_SCROLL_LYRIC_ALWAYS_SELECTOR,
-    QUEUED_SCROLL_LYRIC_NO_DURATION_SELECTOR,
-    QUEUED_SCROLL_LYRIC_FROM_AUTO_SCROLL_SELECTOR,
-    QUEUED_SCENE_CHANGE_EXIT_SCROLL_CALLBACK_SELECTOR
+    mapQueuedScrollLyricLog,
+    mapQueuedScrollLyricByVerse,
+    mapQueuedScrollLyricIndex,
+    mapQueuedScrollLyricAlways,
+    mapQueuedScrollLyricNoDuration,
+    mapQueuedScrollLyricFromAutoScroll,
+    mapQueuedSceneChangeExitScrollCallback
 } from '../../../redux/scrollLyric/selectors'
 import {
     mapSelectedVerseIndex,
     mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
 import {
-    IS_AUTO_SCROLL_SELECTOR,
-    IS_LYRIC_EXPANDED_SELECTOR
+    mapIsAutoScroll,
+    mapIsLyricExpanded
 } from '../../../redux/toggle/selectors'
-import { DEVICE_WIDTH_INDEX_SELECTOR } from '../../../redux/viewport/selectors'
+import { mapDeviceWidthIndex } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const
         isPlaying = mapIsPlaying(state),
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
+        isHeightlessLyric = mapIsHeightlessLyric(state),
         selectedVerseIndex = mapSelectedVerseIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state),
-        isAutoScroll = IS_AUTO_SCROLL_SELECTOR(state),
-        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
-        deviceWidthIndex = DEVICE_WIDTH_INDEX_SELECTOR(state),
-        queuedScrollLyricLog = QUEUED_SCROLL_LYRIC_LOG_SELECTOR(state),
-        queuedScrollLyricByVerse = QUEUED_SCROLL_LYRIC_BY_VERSE_SELECTOR(state),
-        queuedScrollLyricIndex = QUEUED_SCROLL_LYRIC_INDEX_SELECTOR(state),
-        queuedScrollLyricAlways = QUEUED_SCROLL_LYRIC_ALWAYS_SELECTOR(state),
-        queuedScrollLyricNoDuration = QUEUED_SCROLL_LYRIC_NO_DURATION_SELECTOR(state),
-        queuedScrollLyricFromAutoScroll = QUEUED_SCROLL_LYRIC_FROM_AUTO_SCROLL_SELECTOR(state),
-        queuedSceneChangeExitScrollCallback = QUEUED_SCENE_CHANGE_EXIT_SCROLL_CALLBACK_SELECTOR(state)
+        isAutoScroll = mapIsAutoScroll(state),
+        isLyricExpanded = mapIsLyricExpanded(state),
+        deviceWidthIndex = mapDeviceWidthIndex(state),
+        queuedScrollLyricLog = mapQueuedScrollLyricLog(state),
+        queuedScrollLyricByVerse = mapQueuedScrollLyricByVerse(state),
+        queuedScrollLyricIndex = mapQueuedScrollLyricIndex(state),
+        queuedScrollLyricAlways = mapQueuedScrollLyricAlways(state),
+        queuedScrollLyricNoDuration = mapQueuedScrollLyricNoDuration(state),
+        queuedScrollLyricFromAutoScroll = mapQueuedScrollLyricFromAutoScroll(state),
+        queuedSceneChangeExitScrollCallback = mapQueuedSceneChangeExitScrollCallback(state)
 
     return {
         queuedScrollLyricLog,

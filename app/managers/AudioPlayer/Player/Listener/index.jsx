@@ -16,7 +16,7 @@ import {
     mapLyricSongIndex,
     mapLyricVerseIndex
 } from '../../../../redux/lyric/selectors'
-import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../../../redux/players/selectors'
+import { mapPlayersBitNumber } from '../../../../redux/players/selectors'
 import {
     mapSelectedSongIndex,
     mapIsSelectedLogue
@@ -29,7 +29,7 @@ const mapStateToProps = state => {
         queuedPlayVerseIndex = mapQueuedPlayVerseIndex(state),
         lyricSongIndex = mapLyricSongIndex(state),
         lyricVerseIndex = mapLyricVerseIndex(state),
-        playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
+        playersBitNumber = mapPlayersBitNumber(state),
         selectedSongIndex = mapSelectedSongIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state)
     return {

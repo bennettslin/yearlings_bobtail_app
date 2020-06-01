@@ -3,13 +3,13 @@ import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
-import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
+import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
 
 const DotsSlideDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
-        isDotsSlideShown = useSelector(IS_DOTS_SLIDE_SHOWN_SELECTOR),
+        isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         dispatchDotsSlide = (
             // Just toggle unless parent specifies value.
             triedIsDotsSlideShown = !isDotsSlideShown

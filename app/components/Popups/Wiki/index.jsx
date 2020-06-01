@@ -6,10 +6,10 @@ import { connect } from 'react-redux'
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
 import { resetWiki } from '../../../redux/session/action'
-import { SELECTED_WIKI_INDEX_SELECTOR } from '../../../redux/session/selectors'
+import { mapSelectedWikiIndex } from '../../../redux/session/selectors'
 
 const mapStateToProps = state => {
-    const selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state)
+    const selectedWikiIndex = mapSelectedWikiIndex(state)
 
     return {
         selectedWikiIndex

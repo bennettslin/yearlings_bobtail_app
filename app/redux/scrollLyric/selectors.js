@@ -1,27 +1,27 @@
-export const QUEUED_SCROLL_LYRIC_LOG_SELECTOR = (
+export const mapQueuedScrollLyricLog = (
     { scrollLyricStore: { queuedScrollLyricLog } }
 ) => queuedScrollLyricLog
 
-export const QUEUED_SCROLL_LYRIC_BY_VERSE_SELECTOR = (
+export const mapQueuedScrollLyricByVerse = (
     { scrollLyricStore: { queuedScrollLyricByVerse } }
 ) => queuedScrollLyricByVerse
 
-export const QUEUED_SCROLL_LYRIC_INDEX_SELECTOR = (
+export const mapQueuedScrollLyricIndex = (
     { scrollLyricStore: { queuedScrollLyricIndex } }
 ) => queuedScrollLyricIndex
 
-export const QUEUED_SCROLL_LYRIC_ALWAYS_SELECTOR = (
+export const mapQueuedScrollLyricAlways = (
     { scrollLyricStore: { queuedScrollLyricAlways } }
 ) => queuedScrollLyricAlways
 
-export const QUEUED_SCROLL_LYRIC_NO_DURATION_SELECTOR = (
+export const mapQueuedScrollLyricNoDuration = (
     { scrollLyricStore: { queuedScrollLyricNoDuration } }
 ) => queuedScrollLyricNoDuration
 
-export const QUEUED_SCROLL_LYRIC_FROM_AUTO_SCROLL_SELECTOR = (
+export const mapQueuedScrollLyricFromAutoScroll = (
     { scrollLyricStore: { queuedScrollLyricFromAutoScroll } }
 ) => queuedScrollLyricFromAutoScroll
 
-export const QUEUED_SCENE_CHANGE_EXIT_SCROLL_CALLBACK_SELECTOR = (
+export const mapQueuedSceneChangeExitScrollCallback = (
     { scrollLyricStore: { queuedSceneChangeExitScrollCallback } }
 ) => queuedSceneChangeExitScrollCallback

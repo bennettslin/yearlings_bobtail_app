@@ -17,7 +17,7 @@ import {
 } from '../../redux/access/selectors'
 import { mapDotsBitNumber } from '../../redux/dots/selectors'
 import { mapDotsSlideBitNumber } from '../../redux/dotsSlide/selectors'
-import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../redux/toggle/selectors'
+import { mapIsDotsSlideShown } from '../../redux/toggle/selectors'
 import './style'
 
 const mapStateToProps = state => {
@@ -26,7 +26,7 @@ const mapStateToProps = state => {
         accessedDotIndex = mapAccessedDotIndex(state),
         dotsBitNumber = mapDotsBitNumber(state),
         dotsSlideBitNumber = mapDotsSlideBitNumber(state),
-        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
+        isDotsSlideShown = mapIsDotsSlideShown(state)
 
     return {
         accessedDotIndex,

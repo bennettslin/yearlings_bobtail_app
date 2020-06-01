@@ -2,7 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
-import { IS_TIPS_SHOWABLE_SELECTOR } from '../../../redux/transient/selectors'
+import { mapIsTipsShowable } from '../../../redux/transient/selectors'
 import {
     SHOWN,
     HIDDEN
@@ -12,21 +12,21 @@ import {
     mapLyricSongIndex
 } from '../../../redux/lyric/selectors'
 import {
-    SELECTED_TIPS_OPTION_SELECTOR,
-    IS_FORCED_SHOWN_OVERVIEW_SELECTOR
+    mapSelectedTipsOption,
+    mapIsForcedShownOverview
 } from '../../../redux/option/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
-import { DEVICE_WIDTH_INDEX_SELECTOR } from '../../../redux/viewport/selectors'
+import { mapDeviceWidthIndex } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const
-        isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state),
+        isTipsShowable = mapIsTipsShowable(state),
         lyricSongIndex = mapLyricSongIndex(state),
         lyricAnnotationIndex = mapLyricAnnotationIndex(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
-        isForcedShownOverview = IS_FORCED_SHOWN_OVERVIEW_SELECTOR(state),
+        selectedTipsOption = mapSelectedTipsOption(state),
+        isForcedShownOverview = mapIsForcedShownOverview(state),
         isSelectedLogue = mapIsSelectedLogue(state),
-        deviceWidthIndex = DEVICE_WIDTH_INDEX_SELECTOR(state)
+        deviceWidthIndex = mapDeviceWidthIndex(state)
 
     return {
         isSelectedLogue,

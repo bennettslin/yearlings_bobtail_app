@@ -21,8 +21,8 @@ import {
     mapSelectedAnnotationIndex,
     mapEarColumnIndex
 } from '../../../redux/selected/selectors'
-import { IS_EAR_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
-import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
+import { mapIsEarShown } from '../../../redux/transient/selectors'
+import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
@@ -30,12 +30,12 @@ const mapStateToProps = state => {
         queuedAnnotationIndex = mapQueuedAnnotationIndex(state),
         queuedAnnotationFromCarousel = mapQueuedAnnotationFromCarousel(state),
         queuedAnnotationFromLyricVerse = mapQueuedAnnotationFromLyricVerse(state),
-        isEarShown = IS_EAR_SHOWN_SELECTOR(state),
+        isEarShown = mapIsEarShown(state),
         selectedSongIndex = mapSelectedSongIndex(state),
         selectedVerseIndex = mapSelectedVerseIndex(state),
         selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
         earColumnIndex = mapEarColumnIndex(state),
-        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
+        isDotsSlideShown = mapIsDotsSlideShown(state)
 
     return {
         isDotsSlideShown,

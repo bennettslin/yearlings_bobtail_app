@@ -9,30 +9,30 @@ import NavNavigation from './Nav'
 import { populateRefs } from '../../../helpers/ref'
 import { ENTER } from '../../../constants/access'
 import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
-import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
+import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
 import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
-import { SELECTED_WIKI_INDEX_SELECTOR } from '../../../redux/session/selectors'
+import { mapSelectedWikiIndex } from '../../../redux/session/selectors'
 import {
-    IS_NAV_SHOWN_SELECTOR,
-    IS_DOTS_SLIDE_SHOWN_SELECTOR,
-    IS_LYRIC_EXPANDED_SELECTOR,
-    IS_SCORE_SHOWN_SELECTOR
+    mapIsNavShown,
+    mapIsDotsSlideShown,
+    mapIsLyricExpanded,
+    mapIsScoreShown
 } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
         activatedVerseIndex = mapActivatedVerseIndex(state),
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
+        isHeightlessLyric = mapIsHeightlessLyric(state),
         selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state),
-        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
-        isNavShown = IS_NAV_SHOWN_SELECTOR(state),
-        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state),
-        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
-        isScoreShown = IS_SCORE_SHOWN_SELECTOR(state)
+        selectedWikiIndex = mapSelectedWikiIndex(state),
+        isNavShown = mapIsNavShown(state),
+        isDotsSlideShown = mapIsDotsSlideShown(state),
+        isLyricExpanded = mapIsLyricExpanded(state),
+        isScoreShown = mapIsScoreShown(state)
 
     return {
         isHeightlessLyric,

@@ -6,12 +6,12 @@ import { connect } from 'react-redux'
 import { mapLyricAnnotationIndex } from '../../redux/lyric/selectors'
 import { updateTransientStore } from '../../redux/transient/action'
 import { mapCanCarouselMount } from '../../redux/mount/selectors'
-import { IS_OVERLAYING_ANNOTATION_SELECTOR } from '../../redux/transient/selectors'
-import { SELECTED_WIKI_INDEX_SELECTOR } from '../../redux/session/selectors'
+import { mapIsOverlayingAnnotation } from '../../redux/transient/selectors'
+import { mapSelectedWikiIndex } from '../../redux/session/selectors'
 import {
-    IS_CAROUSEL_SHOWN_SELECTOR,
-    IS_SCORE_SHOWN_SELECTOR,
-    IS_ABOUT_SHOWN_SELECTOR
+    mapIsCarouselShown,
+    mapIsScoreShown,
+    mapIsAboutShown
 } from '../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
@@ -20,11 +20,11 @@ const mapStateToProps = state => {
         } = state,
         lyricAnnotationIndex = mapLyricAnnotationIndex(state),
         canCarouselMount = mapCanCarouselMount(state),
-        isOverlayingAnnotation = IS_OVERLAYING_ANNOTATION_SELECTOR(state),
-        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
-        isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
-        isScoreShown = IS_SCORE_SHOWN_SELECTOR(state),
-        isAboutShown = IS_ABOUT_SHOWN_SELECTOR(state)
+        isOverlayingAnnotation = mapIsOverlayingAnnotation(state),
+        selectedWikiIndex = mapSelectedWikiIndex(state),
+        isCarouselShown = mapIsCarouselShown(state),
+        isScoreShown = mapIsScoreShown(state),
+        isAboutShown = mapIsAboutShown(state)
 
     return {
         isAboutShown,

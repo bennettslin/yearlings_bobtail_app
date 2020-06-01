@@ -1,3 +1,3 @@
-export const IS_SCROLLING_SELECTOR = (
+export const mapIsScrolling = (
     { scrollOverlayStore: { isScrolling } }
 ) => isScrolling

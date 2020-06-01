@@ -11,16 +11,16 @@ import {
     mapCanSliderMount
 } from '../../redux/mount/selectors'
 import {
-    DEVICE_WIDTH_INDEX_SELECTOR,
-    IS_PHONE_WIDTH_SELECTOR,
-    IS_DESKTOP_WIDTH_SELECTOR
+    mapDeviceWidthIndex,
+    mapIsPhoneWidth,
+    mapIsDesktopWidth
 } from '../../redux/viewport/selectors'
 
 const DeviceWrapper = ({ children }) => {
     const
-        deviceWidthIndex = useSelector(DEVICE_WIDTH_INDEX_SELECTOR),
-        isPhoneWidth = useSelector(IS_PHONE_WIDTH_SELECTOR),
-        isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
+        deviceWidthIndex = useSelector(mapDeviceWidthIndex),
+        isPhoneWidth = useSelector(mapIsPhoneWidth),
+        isDesktopWidth = useSelector(mapIsDesktopWidth),
         canCarouselMount = useSelector(mapCanCarouselMount),
         canSliderMount = useSelector(mapCanSliderMount),
 

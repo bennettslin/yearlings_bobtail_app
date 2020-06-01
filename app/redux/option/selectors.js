@@ -1,35 +1,35 @@
 import { createSelector } from 'reselect'
 import { getIsShown } from '../../helpers/options'
 
-export const IS_LOGUE_OVERVIEW_SHOWN_SELECTOR = (
+export const mapIsLogueOverviewShown = (
     { optionStore: { isLogueOverviewShown } }
 ) => isLogueOverviewShown
 
-export const SELECTED_OVERVIEW_OPTION_SELECTOR = (
+export const mapSelectedOverviewOption = (
     { optionStore: { selectedOverviewOption } }
 ) => selectedOverviewOption
 
-export const SELECTED_TIPS_OPTION_SELECTOR = (
+export const mapSelectedTipsOption = (
     { optionStore: { selectedTipsOption } }
 ) => selectedTipsOption
 
-export const IS_FORCED_SHOWN_OVERVIEW_SELECTOR = (
+export const mapIsForcedShownOverview = (
     { optionStore: { isForcedShownOverview } }
 ) => isForcedShownOverview
 
-export const IS_SONG_SHOWN_OVERVIEW_SELECTOR = (
+export const mapIsSongShownOverview = (
     { optionStore: { isSongShownOverview } }
 ) => isSongShownOverview
 
-export const OVERVIEW_SHOWN_SELECTOR = createSelector(
-    SELECTED_OVERVIEW_OPTION_SELECTOR,
+export const mapIsOverviewShown = createSelector(
+    mapSelectedOverviewOption,
     (
         selectedOverviewOption
     ) => getIsShown(selectedOverviewOption)
 )
 
-export const TIPS_SHOWN_SELECTOR = createSelector(
-    SELECTED_TIPS_OPTION_SELECTOR,
+export const mapIsTipsShown = createSelector(
+    mapSelectedTipsOption,
     (
         selectedTipsOption
     ) => getIsShown(selectedTipsOption)

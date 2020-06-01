@@ -9,14 +9,14 @@ import {
     mapAccessedNavIndex
 } from '../../../../../redux/access/selectors'
 import { mapSelectedSongIndex } from '../../../../../redux/selected/selectors'
-import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../../../../redux/toggle/selectors'
+import { mapIsDotsSlideShown } from '../../../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
         isAccessOn = mapIsAccessOn(state),
         accessedNavIndex = mapAccessedNavIndex(state),
         selectedSongIndex = mapSelectedSongIndex(state),
-        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
+        isDotsSlideShown = mapIsDotsSlideShown(state)
 
     return {
         isAccessOn,

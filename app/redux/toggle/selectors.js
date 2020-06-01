@@ -1,27 +1,27 @@
-export const IS_AUTO_SCROLL_SELECTOR = (
+export const mapIsAutoScroll = (
     { toggleStore: { isAutoScroll } }
 ) => isAutoScroll
 
-export const IS_CAROUSEL_SHOWN_SELECTOR = (
+export const mapIsCarouselShown = (
     { toggleStore: { isCarouselShown } }
 ) => isCarouselShown
 
-export const IS_NAV_SHOWN_SELECTOR = (
+export const mapIsNavShown = (
     { toggleStore: { isNavShown } }
 ) => isNavShown
 
-export const IS_DOTS_SLIDE_SHOWN_SELECTOR = (
+export const mapIsDotsSlideShown = (
     { toggleStore: { isDotsSlideShown } }
 ) => isDotsSlideShown
 
-export const IS_LYRIC_EXPANDED_SELECTOR = (
+export const mapIsLyricExpanded = (
     { toggleStore: { isLyricExpanded } }
 ) => isLyricExpanded
 
-export const IS_SCORE_SHOWN_SELECTOR = (
+export const mapIsScoreShown = (
     { toggleStore: { isScoreShown } }
 ) => isScoreShown
 
-export const IS_ABOUT_SHOWN_SELECTOR = (
+export const mapIsAboutShown = (
     { toggleStore: { isAboutShown } }
 ) => isAboutShown

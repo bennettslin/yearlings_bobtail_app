@@ -7,7 +7,7 @@ import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { getAnnotationIndexForVerseIndex } from './helper'
 import { mapDotsBitNumber } from '../../../redux/dots/selectors'
-import { IS_EAR_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
+import { mapIsEarShown } from '../../../redux/transient/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
@@ -18,7 +18,7 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         dotsBitNumber = useSelector(mapDotsBitNumber),
-        isEarShown = useSelector(IS_EAR_SHOWN_SELECTOR),
+        isEarShown = useSelector(mapIsEarShown),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         earColumnIndex = useSelector(mapEarColumnIndex),

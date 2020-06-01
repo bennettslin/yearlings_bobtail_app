@@ -14,14 +14,14 @@ import {
     AUDIO_OPTIONS
 } from '../../../constants/options'
 import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
-import { AUDIO_OPTION_INDEX_SELECTOR } from '../../../redux/session/selectors'
+import { mapAudioOptionIndex } from '../../../redux/session/selectors'
 
 const mapStateToProps = state => {
     const
         isPlaying = mapIsPlaying(state),
         queuedTogglePlay = mapQueuedTogglePlay(state),
         selectedSongIndex = mapSelectedSongIndex(state),
-        audioOptionIndex = AUDIO_OPTION_INDEX_SELECTOR(state)
+        audioOptionIndex = mapAudioOptionIndex(state)
 
     return {
         isPlaying,

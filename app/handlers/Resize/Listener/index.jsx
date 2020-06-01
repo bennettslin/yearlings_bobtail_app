@@ -6,14 +6,14 @@ import { resetTheatreEntrance } from '../../../redux/entrance/action'
 import { getWindowDimensions } from '../../../helpers/resize/device'
 import { getWindow } from '../../../utils/browser'
 import {
-    WINDOW_WIDTH_SELECTOR,
-    WINDOW_HEIGHT_SELECTOR
+    mapWindowWidth,
+    mapWindowHeight
 } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const
-        windowWidth = WINDOW_WIDTH_SELECTOR(state),
-        windowHeight = WINDOW_HEIGHT_SELECTOR(state)
+        windowWidth = mapWindowWidth(state),
+        windowHeight = mapWindowHeight(state)
 
     return {
         windowHeight,

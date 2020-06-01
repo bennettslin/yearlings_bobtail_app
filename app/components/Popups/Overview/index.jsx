@@ -10,11 +10,11 @@ import {
 } from './helper'
 import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
 import {
-    IS_LOGUE_OVERVIEW_SHOWN_SELECTOR,
-    SELECTED_OVERVIEW_OPTION_SELECTOR,
-    SELECTED_TIPS_OPTION_SELECTOR
+    mapIsLogueOverviewShown,
+    mapSelectedOverviewOption,
+    mapSelectedTipsOption
 } from '../../../redux/option/selectors'
-import { IS_OVERLAY_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
+import { mapIsOverlayShown } from '../../../redux/transient/selectors'
 import './style'
 
 const mapStateToProps = state => {
@@ -22,10 +22,10 @@ const mapStateToProps = state => {
             entranceStore: { canLyricCarouselEnter }
         } = state,
         isLyricLogue = mapIsLyricLogue(state),
-        isLogueOverviewShown = IS_LOGUE_OVERVIEW_SHOWN_SELECTOR(state),
-        selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
-        isOverlayShown = IS_OVERLAY_SHOWN_SELECTOR(state)
+        isLogueOverviewShown = mapIsLogueOverviewShown(state),
+        selectedOverviewOption = mapSelectedOverviewOption(state),
+        selectedTipsOption = mapSelectedTipsOption(state),
+        isOverlayShown = mapIsOverlayShown(state)
 
     return {
         canLyricCarouselEnter,

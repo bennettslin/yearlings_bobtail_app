@@ -16,8 +16,8 @@ import {
     mapWormholeDot
 } from '../../../redux/dots/selectors'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
-import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
-import { IS_PHONE_WIDTH_SELECTOR } from '../../../redux/viewport/selectors'
+import { mapSelectedTipsOption } from '../../../redux/option/selectors'
+import { mapIsPhoneWidth } from '../../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
@@ -27,8 +27,8 @@ const mapStateToProps = state => {
         reference = mapReferenceDot(state),
         wormhole = mapWormholeDot(state),
         lyricSongIndex = mapLyricSongIndex(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
-        isPhoneWidth = IS_PHONE_WIDTH_SELECTOR(state)
+        selectedTipsOption = mapSelectedTipsOption(state),
+        isPhoneWidth = mapIsPhoneWidth(state)
 
     return {
         reference,

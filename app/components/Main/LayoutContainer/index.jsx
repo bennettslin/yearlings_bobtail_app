@@ -6,7 +6,7 @@ import {
     mapCanCarouselMount,
     mapMainHeight
 } from '../../../redux/mount/selectors'
-import { MENU_HEIGHT_SELECTOR } from '../../../redux/responsive/selectors'
+import { mapMenuHeight } from '../../../redux/responsive/selectors'
 
 const LayoutContainer = ({
     className,
@@ -17,7 +17,7 @@ const LayoutContainer = ({
     const
         canCarouselMount = useSelector(mapCanCarouselMount),
         mainHeight = useSelector(mapMainHeight),
-        menuHeight = useSelector(MENU_HEIGHT_SELECTOR)
+        menuHeight = useSelector(mapMenuHeight)
 
     return (alwaysRender || canCarouselMount) && (
         <div

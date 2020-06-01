@@ -4,26 +4,26 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getSingleShownEarColumnKey } from './helper'
 import {
-    IS_HEIGHTLESS_LYRIC_SELECTOR,
-    IS_LYRIC_EXPANDABLE_SELECTOR,
-    SHOW_SHRUNK_NAV_ICON_SELECTOR
+    mapIsHeightlessLyric,
+    mapIsLyricExpandable,
+    mapShowShrunkNavIcon
 } from '../../redux/responsive/selectors'
 import { mapEarColumnIndex } from '../../redux/selected/selectors'
 import {
-    IS_CAROUSEL_NAV_SHOWABLE_SELECTOR,
-    IS_TIPS_SHOWABLE_SELECTOR,
-    IS_EAR_SHOWN_SELECTOR
+    mapIsCarouselNavShowable,
+    mapIsTipsShowable,
+    mapIsEarShown
 } from '../../redux/transient/selectors'
 
 const ResponsiveWrapper = ({ children }) => {
     const
-        isHeightlessLyric = useSelector(IS_HEIGHTLESS_LYRIC_SELECTOR),
-        isLyricExpandable = useSelector(IS_LYRIC_EXPANDABLE_SELECTOR),
-        showShrunkNavIcon = useSelector(SHOW_SHRUNK_NAV_ICON_SELECTOR),
+        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
+        isLyricExpandable = useSelector(mapIsLyricExpandable),
+        showShrunkNavIcon = useSelector(mapShowShrunkNavIcon),
         earColumnIndex = useSelector(mapEarColumnIndex),
-        isCarouselNavShowable = useSelector(IS_CAROUSEL_NAV_SHOWABLE_SELECTOR),
-        isTipsShowable = useSelector(IS_TIPS_SHOWABLE_SELECTOR),
-        isEarShown = useSelector(IS_EAR_SHOWN_SELECTOR),
+        isCarouselNavShowable = useSelector(mapIsCarouselNavShowable),
+        isTipsShowable = useSelector(mapIsTipsShowable),
+        isEarShown = useSelector(mapIsEarShown),
 
         // TODO: Make this a selector.
         singleShownEarColumnKey = getSingleShownEarColumnKey({

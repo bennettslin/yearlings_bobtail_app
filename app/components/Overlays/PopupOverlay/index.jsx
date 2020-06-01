@@ -1,11 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
-import { IS_OVERLAY_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
+import { mapIsOverlayShown } from '../../../redux/transient/selectors'
 import './style'
 
 const PopupOverlay = () => {
-    const isOverlayShown = useSelector(IS_OVERLAY_SHOWN_SELECTOR)
+    const isOverlayShown = useSelector(mapIsOverlayShown)
 
     return (
         <CSSTransition

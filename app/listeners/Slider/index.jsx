@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateActivatedStore } from '../../redux/activated/action'
-import { IS_SLIDER_TOUCHED_SELECTOR } from '../../redux/slider/selectors'
+import { mapIsSliderTouched } from '../../redux/slider/selectors'
 
 const mapStateToProps = state => {
-    const isSliderTouched = IS_SLIDER_TOUCHED_SELECTOR(state)
+    const isSliderTouched = mapIsSliderTouched(state)
 
     return {
         isSliderTouched

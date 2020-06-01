@@ -9,25 +9,25 @@ import {
     getShowSingleNavBook
 } from '../../helpers/resize/nav'
 import {
-    DEVICE_WIDTH_INDEX_SELECTOR,
-    WINDOW_WIDTH_SELECTOR
+    mapDeviceWidthIndex,
+    mapWindowWidth
 } from '../viewport/selectors'
 
-export const IS_HEIGHTLESS_LYRIC_SELECTOR = (
+export const mapIsHeightlessLyric = (
     { responsiveStore: { isHeightlessLyric } }
 ) => isHeightlessLyric
 
-export const IS_TWO_ROW_MENU_SELECTOR = (
+export const mapIsTwoRowMenu = (
     { responsiveStore: { isTwoRowMenu } }
 ) => isTwoRowMenu
 
-export const MENU_HEIGHT_SELECTOR = (
+export const mapMenuHeight = (
     { responsiveStore: { menuHeight } }
 ) => menuHeight
 
-export const IS_MOBILE_WIKI_SELECTOR = createSelector(
-    DEVICE_WIDTH_INDEX_SELECTOR,
-    WINDOW_WIDTH_SELECTOR,
+export const mapIsMobileWiki = createSelector(
+    mapDeviceWidthIndex,
+    mapWindowWidth,
     (
         deviceWidthIndex,
         windowWidth
@@ -37,23 +37,23 @@ export const IS_MOBILE_WIKI_SELECTOR = createSelector(
     })
 )
 
-export const IS_LYRIC_EXPANDABLE_SELECTOR = createSelector(
-    DEVICE_WIDTH_INDEX_SELECTOR,
+export const mapIsLyricExpandable = createSelector(
+    mapDeviceWidthIndex,
     (
         deviceWidthIndex
     ) => getIsLyricExpandable(deviceWidthIndex)
 )
 
-export const IS_SMALL_BANNER_TEXT_SELECTOR = createSelector(
-    WINDOW_WIDTH_SELECTOR,
+export const mapIsSmallBannerText = createSelector(
+    mapWindowWidth,
     (
         windowWidth
     ) => getIsSmallBannerText(windowWidth)
 )
 
-export const SHOW_SHRUNK_NAV_ICON_SELECTOR = createSelector(
-    DEVICE_WIDTH_INDEX_SELECTOR,
-    WINDOW_WIDTH_SELECTOR,
+export const mapShowShrunkNavIcon = createSelector(
+    mapDeviceWidthIndex,
+    mapWindowWidth,
     (
         deviceWidthIndex,
         windowWidth
@@ -63,9 +63,9 @@ export const SHOW_SHRUNK_NAV_ICON_SELECTOR = createSelector(
     })
 )
 
-export const SHOW_SINGLE_NAV_BOOK_SELECTOR = createSelector(
-    DEVICE_WIDTH_INDEX_SELECTOR,
-    WINDOW_WIDTH_SELECTOR,
+export const mapShowSingleNavBook = createSelector(
+    mapDeviceWidthIndex,
+    mapWindowWidth,
     (
         deviceWidthIndex,
         windowWidth

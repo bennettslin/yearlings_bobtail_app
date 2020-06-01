@@ -10,12 +10,12 @@ import TipsHand from '../../../Tips/Hand'
 import { LYRIC_SCROLL_TOGGLE_KEY } from '../../../../constants/access'
 import { LYRIC_SCROLL_BUTTON_KEY } from '../../../../constants/buttons'
 import { AUTOSCROLL } from '../../../../constants/tips'
-import { IS_AUTO_SCROLL_SELECTOR } from '../../../../redux/toggle/selectors'
+import { mapIsAutoScroll } from '../../../../redux/toggle/selectors'
 
 const LyricToggleScroll = () => {
     const
         dispatchScrollVerse = useRef(),
-        isAutoScroll = useSelector(IS_AUTO_SCROLL_SELECTOR),
+        isAutoScroll = useSelector(mapIsAutoScroll),
         _handleScrollClick = () => {
             dispatchScrollVerse.current(true)
         }

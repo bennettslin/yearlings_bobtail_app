@@ -20,35 +20,35 @@ import {
 } from '../../constants/options'
 import { mapIsActivated } from '../../redux/activated/selectors'
 import {
-    SELECTED_OVERVIEW_OPTION_SELECTOR,
-    SELECTED_TIPS_OPTION_SELECTOR,
-    IS_SONG_SHOWN_OVERVIEW_SELECTOR
+    mapSelectedOverviewOption,
+    mapSelectedTipsOption,
+    mapIsSongShownOverview
 } from '../../redux/option/selectors'
 import { mapSelectedAnnotationIndex } from '../../redux/selected/selectors'
-import { SELECTED_WIKI_INDEX_SELECTOR } from '../../redux/session/selectors'
-import { IS_SLIDER_MOVING_SELECTOR } from '../../redux/slider/selectors'
+import { mapSelectedWikiIndex } from '../../redux/session/selectors'
+import { mapIsSliderMoving } from '../../redux/slider/selectors'
 import {
-    IS_CAROUSEL_SHOWN_SELECTOR,
-    IS_DOTS_SLIDE_SHOWN_SELECTOR,
-    IS_LYRIC_EXPANDED_SELECTOR,
-    IS_SCORE_SHOWN_SELECTOR,
-    IS_ABOUT_SHOWN_SELECTOR
+    mapIsCarouselShown,
+    mapIsDotsSlideShown,
+    mapIsLyricExpanded,
+    mapIsScoreShown,
+    mapIsAboutShown
 } from '../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
         isActivated = mapIsActivated(state),
-        selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
-        isSongShownOverview = IS_SONG_SHOWN_OVERVIEW_SELECTOR(state),
+        selectedOverviewOption = mapSelectedOverviewOption(state),
+        selectedTipsOption = mapSelectedTipsOption(state),
+        isSongShownOverview = mapIsSongShownOverview(state),
         selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
-        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
-        isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state),
-        isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
-        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state),
-        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
-        isScoreShown = IS_SCORE_SHOWN_SELECTOR(state),
-        isAboutShown = IS_ABOUT_SHOWN_SELECTOR(state)
+        selectedWikiIndex = mapSelectedWikiIndex(state),
+        isSliderMoving = mapIsSliderMoving(state),
+        isCarouselShown = mapIsCarouselShown(state),
+        isDotsSlideShown = mapIsDotsSlideShown(state),
+        isLyricExpanded = mapIsLyricExpanded(state),
+        isScoreShown = mapIsScoreShown(state),
+        isAboutShown = mapIsAboutShown(state)
 
     return {
         selectedAnnotationIndex,

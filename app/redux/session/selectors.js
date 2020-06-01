@@ -1,33 +1,33 @@
 import { createSelector } from 'reselect'
 import { getWikiUrl } from '../../helpers/wiki'
-import { IS_MOBILE_WIKI_SELECTOR } from '../responsive/selectors'
+import { mapIsMobileWiki } from '../responsive/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex
 } from '../selected/selectors'
 
-export const SHOWN_NAV_BOOK_INDEX_SELECTOR = (
+export const mapShownNavBookIndex = (
     { sessionStore: { shownNavBookIndex } }
 ) => shownNavBookIndex
 
-export const AUDIO_OPTION_INDEX_SELECTOR = (
+export const mapAudioOptionIndex = (
     { sessionStore: { audioOptionIndex } }
 ) => audioOptionIndex
 
-export const SELECTED_WIKI_INDEX_SELECTOR = (
+export const mapSelectedWikiIndex = (
     { sessionStore: { selectedWikiIndex } }
 ) => selectedWikiIndex
 
-const CAROUSEL_ANNOTATION_INDEX_SELECTOR = (
+const mapCarouselAnnotationIndex = (
     { sessionStore: { carouselAnnotationIndex } }
 ) => carouselAnnotationIndex
 
-export const SELECTED_WIKI_URL_SELECTOR = createSelector(
-    SELECTED_WIKI_INDEX_SELECTOR,
-    CAROUSEL_ANNOTATION_INDEX_SELECTOR,
+export const mapSelectedWikiUrl = createSelector(
+    mapSelectedWikiIndex,
+    mapCarouselAnnotationIndex,
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex,
-    IS_MOBILE_WIKI_SELECTOR,
+    mapIsMobileWiki,
     (
         selectedWikiIndex,
         carouselAnnotationIndex,

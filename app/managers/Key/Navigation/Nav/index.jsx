@@ -16,13 +16,13 @@ import {
 } from '../../../../constants/access'
 import { mapAccessedNavIndex } from '../../../../redux/access/selectors'
 import { mapSelectedSongIndex } from '../../../../redux/selected/selectors'
-import { SHOWN_NAV_BOOK_INDEX_SELECTOR } from '../../../../redux/session/selectors'
+import { mapShownNavBookIndex } from '../../../../redux/session/selectors'
 
 const mapStateToProps = state => {
     const
         accessedNavIndex = mapAccessedNavIndex(state),
         selectedSongIndex = mapSelectedSongIndex(state),
-        shownNavBookIndex = SHOWN_NAV_BOOK_INDEX_SELECTOR(state)
+        shownNavBookIndex = mapShownNavBookIndex(state)
 
     return {
         accessedNavIndex,

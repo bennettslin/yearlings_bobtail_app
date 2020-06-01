@@ -3,13 +3,13 @@ import { useSelector } from 'react-redux'
 import AccessLetters from '../../Access/Letters'
 import { ARROW_UP, ARROW_DOWN } from '../../../constants/access'
 import { mapLyricAnnotationIndex } from '../../../redux/lyric/selectors'
-import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
+import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
 import './style'
 
 const LyricAccess = () => {
     const
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        isDotsSlideShown = useSelector(IS_DOTS_SLIDE_SHOWN_SELECTOR),
+        isDotsSlideShown = useSelector(mapIsDotsSlideShown),
 
         showIfAccessOn = Boolean(
             !isDotsSlideShown &&

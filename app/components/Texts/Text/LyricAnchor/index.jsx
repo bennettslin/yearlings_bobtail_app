@@ -20,7 +20,7 @@ import {
     mapLyricSongIndex,
     mapLyricAnnotationIndex
 } from '../../../../redux/lyric/selectors'
-import { IS_SLIDER_MOVING_SELECTOR } from '../../../../redux/slider/selectors'
+import { mapIsSliderMoving } from '../../../../redux/slider/selectors'
 import './style'
 
 const mapStateToProps = state => {
@@ -31,7 +31,7 @@ const mapStateToProps = state => {
         isActivated = mapIsActivated(state),
         lyricSongIndex = mapLyricSongIndex(state),
         lyricAnnotationIndex = mapLyricAnnotationIndex(state),
-        isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state)
+        isSliderMoving = mapIsSliderMoving(state)
 
     return {
         lyricAnnotationIndex,

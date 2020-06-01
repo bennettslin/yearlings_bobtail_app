@@ -6,10 +6,10 @@ import { connect } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import Score from '../../Score'
 import Popup from '../../Popup'
-import { IS_SCORE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
+import { mapIsScoreShown } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const isScoreShown = IS_SCORE_SHOWN_SELECTOR(state)
+    const isScoreShown = mapIsScoreShown(state)
 
     return {
         isScoreShown

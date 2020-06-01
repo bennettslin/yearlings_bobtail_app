@@ -2,12 +2,12 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
-import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
+import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
 import {
     SHOWN,
     HIDDEN
 } from '../../../constants/options'
-import { SELECTED_OVERVIEW_OPTION_SELECTOR } from '../../../redux/option/selectors'
+import { mapSelectedOverviewOption } from '../../../redux/option/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex,
@@ -16,8 +16,8 @@ import {
 
 const mapStateToProps = state => {
     const
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
-        selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
+        isHeightlessLyric = mapIsHeightlessLyric(state),
+        selectedOverviewOption = mapSelectedOverviewOption(state),
         selectedSongIndex = mapSelectedSongIndex(state),
         selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state)

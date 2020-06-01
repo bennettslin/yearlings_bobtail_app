@@ -8,10 +8,10 @@ import {
     resetAccessedDot
 } from '../../../redux/access/action'
 import { resetActivatedDots } from '../../../redux/dotsSlide/action'
-import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
+import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
+    const isDotsSlideShown = mapIsDotsSlideShown(state)
 
     return {
         isDotsSlideShown

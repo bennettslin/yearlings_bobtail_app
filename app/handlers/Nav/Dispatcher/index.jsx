@@ -1,16 +1,16 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateSessionStore } from '../../../redux/session/action'
-import { SHOW_SINGLE_NAV_BOOK_SELECTOR } from '../../../redux/responsive/selectors'
-import { SHOWN_NAV_BOOK_INDEX_SELECTOR } from '../../../redux/session/selectors'
-import { IS_NAV_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
+import { mapShowSingleNavBook } from '../../../redux/responsive/selectors'
+import { mapShownNavBookIndex } from '../../../redux/session/selectors'
+import { mapIsNavShown } from '../../../redux/toggle/selectors'
 
 const NavDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        showSingleNavBook = useSelector(SHOW_SINGLE_NAV_BOOK_SELECTOR),
-        shownNavBookIndex = useSelector(SHOWN_NAV_BOOK_INDEX_SELECTOR),
-        isNavShown = useSelector(IS_NAV_SHOWN_SELECTOR),
+        showSingleNavBook = useSelector(mapShowSingleNavBook),
+        shownNavBookIndex = useSelector(mapShownNavBookIndex),
+        isNavShown = useSelector(mapIsNavShown),
         dispatchNavBook = () => {
             /**
              * We shouldn't be able to select book column if it's not a single

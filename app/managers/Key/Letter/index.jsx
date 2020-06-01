@@ -44,30 +44,30 @@ import {
     HIDDEN
 } from '../../../constants/options'
 import {
-    SELECTED_OVERVIEW_OPTION_SELECTOR,
-    SELECTED_TIPS_OPTION_SELECTOR
+    mapSelectedOverviewOption,
+    mapSelectedTipsOption
 } from '../../../redux/option/selectors'
 import { mapSelectedAnnotationIndex } from '../../../redux/selected/selectors'
-import { SELECTED_WIKI_INDEX_SELECTOR } from '../../../redux/session/selectors'
+import { mapSelectedWikiIndex } from '../../../redux/session/selectors'
 import {
-    IS_NAV_SHOWN_SELECTOR,
-    IS_DOTS_SLIDE_SHOWN_SELECTOR,
-    IS_LYRIC_EXPANDED_SELECTOR,
-    IS_SCORE_SHOWN_SELECTOR,
-    IS_ABOUT_SHOWN_SELECTOR
+    mapIsNavShown,
+    mapIsDotsSlideShown,
+    mapIsLyricExpanded,
+    mapIsScoreShown,
+    mapIsAboutShown
 } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
-        selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
+        selectedOverviewOption = mapSelectedOverviewOption(state),
+        selectedTipsOption = mapSelectedTipsOption(state),
         selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
-        selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
-        isNavShown = IS_NAV_SHOWN_SELECTOR(state),
-        isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state),
-        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
-        isScoreShown = IS_SCORE_SHOWN_SELECTOR(state),
-        isAboutShown = IS_ABOUT_SHOWN_SELECTOR(state)
+        selectedWikiIndex = mapSelectedWikiIndex(state),
+        isNavShown = mapIsNavShown(state),
+        isDotsSlideShown = mapIsDotsSlideShown(state),
+        isLyricExpanded = mapIsLyricExpanded(state),
+        isScoreShown = mapIsScoreShown(state),
+        isAboutShown = mapIsAboutShown(state)
 
     return {
         isDotsSlideShown,

@@ -24,21 +24,21 @@ import { getSongsAndLoguesCount } from '../../album/api/songs'
 import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { mapIsPlaying } from '../../redux/audio/selectors'
-import { IS_TWO_ROW_MENU_SELECTOR } from '../../redux/responsive/selectors'
-import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../redux/players/selectors'
+import { mapIsTwoRowMenu } from '../../redux/responsive/selectors'
+import { mapPlayersBitNumber } from '../../redux/players/selectors'
 import { mapSelectedSongIndex } from '../../redux/selected/selectors'
-import { AUDIO_OPTION_INDEX_SELECTOR } from '../../redux/session/selectors'
-import { IS_DESKTOP_WIDTH_SELECTOR } from '../../redux/viewport/selectors'
+import { mapAudioOptionIndex } from '../../redux/session/selectors'
+import { mapIsDesktopWidth } from '../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
         isPlaying = mapIsPlaying(state),
-        isTwoRowMenu = IS_TWO_ROW_MENU_SELECTOR(state),
-        playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
+        isTwoRowMenu = mapIsTwoRowMenu(state),
+        playersBitNumber = mapPlayersBitNumber(state),
         selectedSongIndex = mapSelectedSongIndex(state),
-        audioOptionIndex = AUDIO_OPTION_INDEX_SELECTOR(state),
-        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
+        audioOptionIndex = mapAudioOptionIndex(state),
+        isDesktopWidth = mapIsDesktopWidth(state)
 
     return {
         isPlaying,

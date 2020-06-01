@@ -8,7 +8,7 @@ import SongDispatcher from '../../handlers/Song/Dispatcher'
 import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { mapIsPlaying } from '../../redux/audio/selectors'
-import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../redux/players/selectors'
+import { mapPlayersBitNumber } from '../../redux/players/selectors'
 import {
     mapSelectedSongIndex,
     mapIsSelectedLogue
@@ -17,7 +17,7 @@ import {
 const mapStateToProps = state => {
     const
         isPlaying = mapIsPlaying(state),
-        playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
+        playersBitNumber = mapPlayersBitNumber(state),
         selectedSongIndex = mapSelectedSongIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state)
 

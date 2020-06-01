@@ -6,22 +6,22 @@ import {
     getNextOption
 } from '../../../helpers/options'
 import {
-    IS_LOGUE_OVERVIEW_SHOWN_SELECTOR,
-    SELECTED_OVERVIEW_OPTION_SELECTOR,
-    SELECTED_TIPS_OPTION_SELECTOR
+    mapIsLogueOverviewShown,
+    mapSelectedOverviewOption,
+    mapSelectedTipsOption
 } from '../../../redux/option/selectors'
-import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
-import { TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR } from '../../../redux/transient/selectors'
+import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
+import { mapToggleShowsOverviewImmediately } from '../../../redux/transient/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 
 const OverviewDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        isHeightlessLyric = useSelector(IS_HEIGHTLESS_LYRIC_SELECTOR),
-        toggleShowsOverviewImmediately = useSelector(TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR),
-        isLogueOverviewShown = useSelector(IS_LOGUE_OVERVIEW_SHOWN_SELECTOR),
-        selectedOverviewOption = useSelector(SELECTED_OVERVIEW_OPTION_SELECTOR),
-        selectedTipsOption = useSelector(SELECTED_TIPS_OPTION_SELECTOR),
+        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
+        toggleShowsOverviewImmediately = useSelector(mapToggleShowsOverviewImmediately),
+        isLogueOverviewShown = useSelector(mapIsLogueOverviewShown),
+        selectedOverviewOption = useSelector(mapSelectedOverviewOption),
+        selectedTipsOption = useSelector(mapSelectedTipsOption),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         _dispatchLogueOverview = () => {
             // Don't allow overview to be toggled if not heightless.

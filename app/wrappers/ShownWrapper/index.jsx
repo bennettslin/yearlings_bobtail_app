@@ -15,16 +15,16 @@ import {
     mapLyricAnnotationIndex
 } from '../../redux/lyric/selectors'
 import {
-    TIPS_SHOWN_SELECTOR,
-    OVERVIEW_SHOWN_SELECTOR
+    mapIsTipsShown,
+    mapIsOverviewShown
 } from '../../redux/option/selectors'
 import {
-    IS_CAROUSEL_SHOWN_SELECTOR,
-    IS_NAV_SHOWN_SELECTOR,
-    IS_LYRIC_EXPANDED_SELECTOR,
-    IS_DOTS_SLIDE_SHOWN_SELECTOR
+    mapIsCarouselShown,
+    mapIsNavShown,
+    mapIsLyricExpanded,
+    mapIsDotsSlideShown
 } from '../../redux/toggle/selectors'
-import { IS_OVERLAY_SHOWN_SELECTOR } from '../../redux/transient/selectors'
+import { mapIsOverlayShown } from '../../redux/transient/selectors'
 
 const ShownWrapper = ({ children }) => {
     const
@@ -34,13 +34,13 @@ const ShownWrapper = ({ children }) => {
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        overviewShown = useSelector(OVERVIEW_SHOWN_SELECTOR),
-        tipsShown = useSelector(TIPS_SHOWN_SELECTOR),
-        isCarouselShown = useSelector(IS_CAROUSEL_SHOWN_SELECTOR),
-        isNavShown = useSelector(IS_NAV_SHOWN_SELECTOR),
-        isLyricExpanded = useSelector(IS_LYRIC_EXPANDED_SELECTOR),
-        isDotsSlideShown = useSelector(IS_DOTS_SLIDE_SHOWN_SELECTOR),
-        isOverlayShown = useSelector(IS_OVERLAY_SHOWN_SELECTOR),
+        overviewShown = useSelector(mapIsOverviewShown),
+        tipsShown = useSelector(mapIsTipsShown),
+        isCarouselShown = useSelector(mapIsCarouselShown),
+        isNavShown = useSelector(mapIsNavShown),
+        isLyricExpanded = useSelector(mapIsLyricExpanded),
+        isDotsSlideShown = useSelector(mapIsDotsSlideShown),
+        isOverlayShown = useSelector(mapIsOverlayShown),
 
         songOverviewShown =
             !isLyricLogue && overviewShown,

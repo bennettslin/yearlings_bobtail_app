@@ -11,43 +11,43 @@ import {
     mapLyricDynamicHeight
 } from '../../redux/mount/selectors'
 import {
-    IS_HEIGHTLESS_LYRIC_SELECTOR,
-    MENU_HEIGHT_SELECTOR,
-    IS_LYRIC_EXPANDABLE_SELECTOR
+    mapIsHeightlessLyric,
+    mapMenuHeight,
+    mapIsLyricExpandable
 } from '../../redux/responsive/selectors'
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'
 import { mapSelectedVerseIndex } from '../../redux/selected/selectors'
-import { SLIDER_VERSE_INDEX_SELECTOR } from '../../redux/slider/selectors'
-import { IS_LYRIC_EXPANDED_SELECTOR } from '../../redux/toggle/selectors'
+import { mapSliderVerseIndex } from '../../redux/slider/selectors'
+import { mapIsLyricExpanded } from '../../redux/toggle/selectors'
 import {
-    IS_VERSE_BAR_ABOVE_SELECTOR,
-    IS_VERSE_BAR_BELOW_SELECTOR,
-    QUEUED_DETERMINE_VERSE_BARS_SELECTOR,
-    QUEUED_VERSE_BARS_TIMEOUT_SELECTOR
+    mapIsVerseBarAbove,
+    mapIsVerseBarBelow,
+    mapQueuedDetermineVerseBars,
+    mapQueuedVerseBarsTimeout
 } from '../../redux/verseBars/selectors'
 import {
-    WINDOW_HEIGHT_SELECTOR,
-    IS_DESKTOP_WIDTH_SELECTOR
+    mapWindowHeight,
+    mapIsDesktopWidth
 } from '../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const
         activatedVerseIndex = mapActivatedVerseIndex(state),
-        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
+        isLyricExpandable = mapIsLyricExpandable(state),
         canSliderMount = mapCanSliderMount(state),
         lyricDynamicHeight = mapLyricDynamicHeight(state),
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
-        menuHeight = MENU_HEIGHT_SELECTOR(state),
+        isHeightlessLyric = mapIsHeightlessLyric(state),
+        menuHeight = mapMenuHeight(state),
         selectedVerseIndex = mapSelectedVerseIndex(state),
-        sliderVerseIndex = SLIDER_VERSE_INDEX_SELECTOR(state),
-        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
-        isVerseBarAbove = IS_VERSE_BAR_ABOVE_SELECTOR(state),
-        isVerseBarBelow = IS_VERSE_BAR_BELOW_SELECTOR(state),
-        queuedDetermineVerseBars = QUEUED_DETERMINE_VERSE_BARS_SELECTOR(state),
-        queuedVerseBarsTimeout = QUEUED_VERSE_BARS_TIMEOUT_SELECTOR(state),
-        windowHeight = WINDOW_HEIGHT_SELECTOR(state),
-        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
+        sliderVerseIndex = mapSliderVerseIndex(state),
+        isLyricExpanded = mapIsLyricExpanded(state),
+        isVerseBarAbove = mapIsVerseBarAbove(state),
+        isVerseBarBelow = mapIsVerseBarBelow(state),
+        queuedDetermineVerseBars = mapQueuedDetermineVerseBars(state),
+        queuedVerseBarsTimeout = mapQueuedVerseBarsTimeout(state),
+        windowHeight = mapWindowHeight(state),
+        isDesktopWidth = mapIsDesktopWidth(state)
 
     return {
         queuedDetermineVerseBars,

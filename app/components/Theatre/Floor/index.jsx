@@ -4,8 +4,8 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import FloorSeat from './Seat'
 import { getSeatingRowCoordinates } from './helper'
-import { FLOOR_HEIGHT_SELECTOR } from '../../../redux/theatre/selectors'
-import { WINDOW_WIDTH_SELECTOR } from '../../../redux/viewport/selectors'
+import { mapFloorHeight } from '../../../redux/theatre/selectors'
+import { mapWindowWidth } from '../../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
@@ -15,8 +15,8 @@ const mapStateToProps = state => {
                 prosceniumWidth
             }
         } = state,
-        floorHeight = FLOOR_HEIGHT_SELECTOR(state),
-        windowWidth = WINDOW_WIDTH_SELECTOR(state)
+        floorHeight = mapFloorHeight(state),
+        windowWidth = mapWindowWidth(state)
 
     return {
         windowWidth,

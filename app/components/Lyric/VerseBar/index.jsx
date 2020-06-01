@@ -16,10 +16,10 @@ import {
     mapLyricVerseIndex,
     mapIsLyricLogue
 } from '../../../redux/lyric/selectors'
-import { SLIDER_VERSE_INDEX_SELECTOR } from '../../../redux/slider/selectors'
+import { mapSliderVerseIndex } from '../../../redux/slider/selectors'
 import {
-    IS_VERSE_BAR_ABOVE_SELECTOR,
-    IS_VERSE_BAR_BELOW_SELECTOR
+    mapIsVerseBarAbove,
+    mapIsVerseBarBelow
 } from '../../../redux/verseBars/selectors'
 
 import './style'
@@ -30,9 +30,9 @@ const mapStateToProps = state => {
         lyricSongIndex = mapLyricSongIndex(state),
         lyricVerseIndex = mapLyricVerseIndex(state),
         isLyricLogue = mapIsLyricLogue(state),
-        sliderVerseIndex = SLIDER_VERSE_INDEX_SELECTOR(state),
-        isVerseBarAbove = IS_VERSE_BAR_ABOVE_SELECTOR(state),
-        isVerseBarBelow = IS_VERSE_BAR_BELOW_SELECTOR(state)
+        sliderVerseIndex = mapSliderVerseIndex(state),
+        isVerseBarAbove = mapIsVerseBarAbove(state),
+        isVerseBarBelow = mapIsVerseBarBelow(state)
 
     return {
         isLyricLogue,

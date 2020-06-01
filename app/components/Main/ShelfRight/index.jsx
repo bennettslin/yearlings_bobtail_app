@@ -4,13 +4,13 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import ScoreToggle from '../../Score/Toggle'
 import TipsToggle from '../../Tips/Toggle'
-import { IS_DESKTOP_WIDTH_SELECTOR } from '../../../redux/viewport/selectors'
+import { mapIsDesktopWidth } from '../../../redux/viewport/selectors'
 import './style'
 
 const CHILD_SELECTOR = 'ShelfRight__child'
 
 const ShelfRight = () => {
-    const isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR)
+    const isDesktopWidth = useSelector(mapIsDesktopWidth)
 
     return !isDesktopWidth && (
         <div className={cx(

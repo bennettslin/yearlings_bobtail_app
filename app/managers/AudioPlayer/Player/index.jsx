@@ -19,8 +19,8 @@ import {
 } from './helper'
 import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
-    PLAYERS_BIT_NUMBER_SELECTOR,
-    NEXT_PLAYER_TO_RENDER_SELECTOR
+    mapPlayersBitNumber,
+    mapNextPlayerToRender
 } from '../../../redux/players/selectors'
 import {
     mapSelectedSongIndex,
@@ -31,8 +31,8 @@ import {
 const mapStateToProps = state => {
     const
         isPlaying = mapIsPlaying(state),
-        playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
-        nextPlayerToRender = NEXT_PLAYER_TO_RENDER_SELECTOR(state),
+        playersBitNumber = mapPlayersBitNumber(state),
+        nextPlayerToRender = mapNextPlayerToRender(state),
         selectedSongIndex = mapSelectedSongIndex(state),
         selectedVerseIndex = mapSelectedVerseIndex(state),
         selectedTime = mapSelectedTime(state)

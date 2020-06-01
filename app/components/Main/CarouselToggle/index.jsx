@@ -14,16 +14,16 @@ import { getCarouselNavIdentifier } from '../../../constants/options'
 import { CAROUSEL, NAV } from '../../../constants/tips'
 import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 import {
-    IS_CAROUSEL_SHOWN_SELECTOR,
-    IS_NAV_SHOWN_SELECTOR
+    mapIsCarouselShown,
+    mapIsNavShown
 } from '../../../redux/toggle/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
         canCarouselMount = mapCanCarouselMount(state),
-        isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
-        isNavShown = IS_NAV_SHOWN_SELECTOR(state)
+        isCarouselShown = mapIsCarouselShown(state),
+        isNavShown = mapIsNavShown(state)
 
     return {
         canCarouselMount,

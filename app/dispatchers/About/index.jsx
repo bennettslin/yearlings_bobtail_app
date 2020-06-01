@@ -2,12 +2,12 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAboutShown } from '../../redux/toggle/action'
-import { IS_ABOUT_SHOWN_SELECTOR } from '../../redux/toggle/selectors'
+import { mapIsAboutShown } from '../../redux/toggle/selectors'
 
 const AboutDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        isAboutShown = useSelector(IS_ABOUT_SHOWN_SELECTOR),
+        isAboutShown = useSelector(mapIsAboutShown),
         dispatchAbout = (
             // Just toggle unless parent specifies value.
             newIsAboutShown = !isAboutShown

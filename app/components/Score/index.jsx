@@ -3,13 +3,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import Iframe from '../../modules/Iframe'
 import { mapLyricSongIndex } from '../../redux/lyric/selectors'
-import { IS_SCORE_SHOWN_SELECTOR } from '../../redux/toggle/selectors'
+import { mapIsScoreShown } from '../../redux/toggle/selectors'
 import { getSongScore } from './helper'
 
 const Score = () => {
     const
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        isScoreShown = useSelector(IS_SCORE_SHOWN_SELECTOR),
+        isScoreShown = useSelector(mapIsScoreShown),
         [isLoading, setIsLoading] = useState(false),
         scoreElement = useRef(),
 

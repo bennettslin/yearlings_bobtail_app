@@ -3,19 +3,19 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
 import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
 import {
-    IS_TIPS_SHOWABLE_SELECTOR,
-    TOGGLE_SHOWS_TIPS_IMMEDIATELY_SELECTOR
+    mapIsTipsShowable,
+    mapToggleShowsTipsImmediately
 } from '../../../redux/transient/selectors'
 import { getNextOption } from '../../../helpers/options'
-import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
+import { mapSelectedTipsOption } from '../../../redux/option/selectors'
 
 const TipsDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         isLyricLogue = useSelector(mapIsLyricLogue),
-        isTipsShowable = useSelector(IS_TIPS_SHOWABLE_SELECTOR),
-        toggleShowsTipsImmediately = useSelector(TOGGLE_SHOWS_TIPS_IMMEDIATELY_SELECTOR),
-        selectedTipsOption = useSelector(SELECTED_TIPS_OPTION_SELECTOR),
+        isTipsShowable = useSelector(mapIsTipsShowable),
+        toggleShowsTipsImmediately = useSelector(mapToggleShowsTipsImmediately),
+        selectedTipsOption = useSelector(mapSelectedTipsOption),
         dispatchTips = ({
             isToggled,
             tipsOption
