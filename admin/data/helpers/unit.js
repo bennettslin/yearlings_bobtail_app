@@ -57,7 +57,6 @@ const _addUnitLists = (songIndex, song) => {
     const { lyricUnits } = albumLyrics[songIndex]
 
     const
-        unitMainVerses = [],
         unitSubsequents = [],
         withUnitDots = {}
     let withUnitBottomSideCard,
@@ -69,7 +68,6 @@ const _addUnitLists = (songIndex, song) => {
         withUnitSideSubCardTypes
 
     lyricUnits.forEach((unit, unitIndex) => {
-        unitMainVerses.push(unit.mainVerses || null)
         unitSubsequents.push(unit.unitMap.subsequent || false)
 
         const {
@@ -96,6 +94,7 @@ const _addUnitLists = (songIndex, song) => {
             withUnitSideCards = withUnitSideCards || {}
             withUnitSideCards[unitIndex] = sideCard
         }
+        // This exists solely for "Maranatha."
         if (sideSubCard) {
             withUnitSideSubCards = withUnitSideSubCards || {}
             withUnitSideSubCards[unitIndex] = sideSubCard
@@ -117,9 +116,6 @@ const _addUnitLists = (songIndex, song) => {
             withUnitBottomSideCard[unitIndex] = true
         }
     })
-
-    // TODO: Eventually get rid of this.
-    song.unitMainVerses = unitMainVerses
 
     song.unitSubsequents = unitSubsequents
     song.withUnitDots = withUnitDots

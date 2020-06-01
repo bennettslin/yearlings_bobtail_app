@@ -11,17 +11,10 @@ import UnitSongTitle from './Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 import {
-    getMainVersesForUnit,
-    getFormTypeForUnit,
     getSubsequentForUnit,
     getVerseIndicesForUnit,
     getIsSideCardOnBottomForUnit,
-    getSubCardForUnit,
-    getSideCardForUnit,
-    getSideSubCardForUnit,
-    getSubCardTypeForUnit,
-    getSideCardTypeForUnit,
-    getSideSubCardTypeForUnit
+    getSideCardForUnit
 } from '../../album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../../helpers/stanza'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
@@ -35,23 +28,14 @@ const Unit = ({
     const
         { setLyricAnnotationElement } = other,
         lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
-        mainVerses = getMainVersesForUnit(lyricSongIndex, unitIndex),
         verseIndices = getVerseIndicesForUnit(
             lyricSongIndex,
             unitIndex
         ),
-
-        // This exists solely for "Maranatha."
-        subCard = getSubCardForUnit(lyricSongIndex, unitIndex),
-        sideCard = getSideCardForUnit(lyricSongIndex, unitIndex),
-        sideSubCard = getSideSubCardForUnit(lyricSongIndex, unitIndex),
-        subCardType = getSubCardTypeForUnit(lyricSongIndex, unitIndex),
-        sideCardType = getSideCardTypeForUnit(lyricSongIndex, unitIndex),
-        sideSubCardType = getSideSubCardTypeForUnit(lyricSongIndex, unitIndex),
-        formType = getFormTypeForUnit(lyricSongIndex, unitIndex),
         isSubsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
         isBottomSideCard = getIsSideCardOnBottomForUnit(lyricSongIndex, unitIndex),
-        hasSide = Boolean(sideCard)
+        hasMainVerses = Boolean(verseIndices.length),
+        hasSideCard = Boolean(getSideCardForUnit(lyricSongIndex, unitIndex))
 
     return (
         <div
@@ -64,7 +48,7 @@ const Unit = ({
                 'Unit',
                 `unit__${unitIndex}`,
 
-                hasSide ?
+                hasSideCard ?
                     'fontSize__lyricMultipleColumns' :
                     'fontSize__verse',
 
@@ -76,36 +60,23 @@ const Unit = ({
             {unitIndex === 0 && (
                 <UnitSongTitle />
             )}
-            {Boolean(verseIndices.length) &&
+            {hasMainVerses &&
                 <div className={cx(
                     'Unit__column__text',
                     'Unit__column',
                     'Unit__column__main'
                 )}>
                     <UnitCard
-                        tempIsMainVerses
-                        {...other}
-                        {...{
-                            unitIndex,
-                            versesArray: mainVerses,
-                            formType,
-                            isTruncatable: hasSide
-                        }}
+                        isMainVerses
+                        {...{ unitIndex, ...other }}
                     />
-                    {subCard && (
-                        <UnitCard
-                            {...other}
-                            {...{
-                                unitIndex,
-                                versesArray: subCard,
-                                formType: subCardType,
-                                isTruncatable: hasSide
-                            }}
-                        />
-                    )}
+                    <UnitCard
+                        isSubCard
+                        {...{ unitIndex, ...other }}
+                    />
                 </div>
             }
-            {hasSide &&
+            {hasSideCard &&
                 <div
                     className={cx(
                         'Unit__column__text',
@@ -116,26 +87,14 @@ const Unit = ({
                         isBottomSideCard && 'Unit__column__hasBottomSideCard'
                     )}
                 >
-                    {sideCard && (
-                        <UnitCard
-                            {...other}
-                            {...{
-                                unitIndex,
-                                versesArray: sideCard,
-                                formType: sideCardType
-                            }}
-                        />
-                    )}
-                    {sideSubCard && (
-                        <UnitCard
-                            {...other}
-                            {...{
-                                unitIndex,
-                                versesArray: sideSubCard,
-                                formType: sideSubCardType
-                            }}
-                        />
-                    )}
+                    <UnitCard
+                        isSideCard
+                        {...{ unitIndex, ...other }}
+                    />
+                    <UnitCard
+                        isSideSubCard
+                        {...{ unitIndex, ...other }}
+                    />
                 </div>
             }
             <UnitDot

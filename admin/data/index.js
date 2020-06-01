@@ -31,7 +31,6 @@ const songs = getSongIndicesArray().map(songIndex => {
 
         addLyricMetadata(songIndex, song)
 
-        // TODO: Remove verses from units.
         const {
             unitVerseIndicesList,
             verseStartTimes,

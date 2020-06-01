@@ -6,12 +6,6 @@ export const getLastUnitDotCardIndex = songIndex => {
     return lastUnitDotIndex || -1
 }
 
-// TODO: Eventually get rid of this.
-export const getMainVersesForUnit = (songIndex, unitIndex) => {
-    const { unitMainVerses } = getSong(songIndex)
-    return unitMainVerses[unitIndex]
-}
-
 export const getDotForUnit = (songIndex, unitIndex) => {
     const { withUnitDots } = getSong(songIndex)
     return withUnitDots[unitIndex] || null
@@ -68,7 +62,7 @@ export const getSubsequentForUnit = (songIndex, unitIndex) => {
 
 export const getVerseIndicesForUnit = (songIndex, unitIndex) => {
     const { unitVerseIndicesList } = getSong(songIndex)
-    return unitVerseIndicesList[unitIndex]
+    return unitVerseIndicesList[unitIndex] || []
 }
 
 export const getIsSideCardOnBottomForUnit = (songIndex, unitIndex) => {

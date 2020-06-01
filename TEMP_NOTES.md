@@ -1,9 +1,8 @@
-# TODO today
-* Make stanzaTab its own component
-* Unit card parent prevents from mounting if not present
-* Unit card can get sideCard, subCard, and sideSubCard
-* Unit card can get main verses
-* Reorganise side and sub cards to be at same level as main verses?
+# Final bugs from unit refactor
+* Need a way to remove subCard verse index from unit verse indices, or else add a new main verse indices array to song. Right now, subCards are repeated.
+* Logic selectors need to be fixed. Just pass verseIndices directly. Unit has all verses, unit card has only its verses.
+* What can be removed from data? For example, unit dot anchor title? Get rid of all annotation todos?
+* Maybe rename subCard back to subVerse for clarity?
 
 # Bugs
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.

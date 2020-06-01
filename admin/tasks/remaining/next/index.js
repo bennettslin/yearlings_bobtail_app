@@ -7,9 +7,9 @@ export default [
 
     /* Weekend work. */
     {
-        taskName: `Wrap up data refactor. Remove verses from units. Start by extracting unit map and main verses to top level. Then get verses by indices. Scene actors, cubes, and things should be in compiled album. Cubes should also grab values from a selector, rather than the store.`,
-        workedHours: 12,
-        neededHours: 20
+        taskName: `Wrap up data refactor. Scene actors, cubes, and things should be in compiled album. Cubes should also grab values from a selector, rather than the store.`,
+        workedHours: 22,
+        neededHours: 25
     },
     {
         taskName: `Post-Gatsby fixes.`,

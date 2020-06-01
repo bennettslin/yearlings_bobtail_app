@@ -1,5 +1,5 @@
 // Component to show individual box of verses.
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -8,35 +8,64 @@ import UnitTab from '../Tab'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getParentOfVerseClassNamesForIndices } from '../../../helpers/stanza'
+import {
+    getUnitVerses,
+    getIsUnitTruncatable,
+    getUnitFormType
+} from './helper'
 import { getSubsequentForUnit } from '../../../album/api/units'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
-import {
-    RESPONSE,
-    RHYME
-} from '../../../constants/lyrics'
 import './style'
 
 const UnitCard = ({
-    tempIsMainVerses,
     unitIndex,
-    versesArray,
-    formType,
+    isMainVerses,
+    isSubCard,
+    isSideCard,
+    isSideSubCard,
     ...other
 
 }) => {
+    const lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        verses = getUnitVerses({
+            songIndex: lyricSongIndex,
+            unitIndex,
+            isMainVerses,
+            isSubCard,
+            isSideCard,
+            isSideSubCard
+        })
+
+    // Return if no verses to render.
+    if (!verses) {
+        return null
+    }
+
     const
         { handleVerseSelect } = other,
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
-        isSubCard = formType === RESPONSE || formType === RHYME,
         isSubsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
-        isTabbed = tempIsMainVerses && !isSubsequent
+        isTabbed = isMainVerses && !isSubsequent,
+        isTruncatable = getIsUnitTruncatable({
+            lyricSongIndex,
+            unitIndex,
+            isMainVerses,
+            isSubCard
+        }),
+        formType = getUnitFormType({
+            songIndex: lyricSongIndex,
+            unitIndex,
+            isMainVerses,
+            isSubCard,
+            isSideCard,
+            isSideSubCard
+        })
 
     return (
         <div className={cx(
 
             // "Parent of verse index."
             getParentOfVerseClassNamesForIndices({
-                entities: versesArray
+                entities: verses
             }),
 
             'UnitCard',
@@ -49,7 +78,7 @@ const UnitCard = ({
                 'bgColour__unit__pattern',
                 `bgColour__formType__${formType}`
             )}>
-                {versesArray.map((verseObject, stanzaVerseIndex) => {
+                {verses.map((verseObject, stanzaVerseIndex) => {
                     const { verseIndex } = verseObject
 
                     return (
@@ -59,7 +88,8 @@ const UnitCard = ({
                                 key: stanzaVerseIndex,
                                 verseIndex,
                                 verseObject,
-                                VerseComponent: Verse
+                                VerseComponent: Verse,
+                                isTruncatable
                             }}
                         />
                     )
@@ -82,10 +112,11 @@ const UnitCard = ({
 }
 
 UnitCard.propTypes = {
-    tempIsMainVerses: PropTypes.bool,
     unitIndex: PropTypes.number.isRequired,
-    versesArray: PropTypes.array.isRequired,
-    formType: PropTypes.string.isRequired
+    isMainVerses: PropTypes.bool,
+    isSubCard: PropTypes.bool,
+    isSideCard: PropTypes.bool,
+    isSideSubCard: PropTypes.bool
 }
 
-export default UnitCard
+export default memo(UnitCard)
