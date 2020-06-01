@@ -1,8 +1,7 @@
 // Section to show song overview.
 
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../Texts'
 import OverviewToggle from '../Main/OverviewToggle'
@@ -16,63 +15,42 @@ import {
 import { IS_PHONE_WIDTH_SELECTOR } from '../../redux/viewport/selectors'
 import './style'
 
-const mapStateToProps = state => {
+const Overview = () => {
     const
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
-        isPhoneWidth = IS_PHONE_WIDTH_SELECTOR(state)
+        isHeightlessLyric = useSelector(IS_HEIGHTLESS_LYRIC_SELECTOR),
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
+        isPhoneWidth = useSelector(IS_PHONE_WIDTH_SELECTOR),
+        overviewText = getOverviewForSong(lyricSongIndex),
 
-    return {
-        isPhoneWidth,
-        isHeightlessLyric,
-        lyricSongIndex,
-        isLyricLogue
-    }
+        // TODO: Make this a selector.
+        isToggleInOverview = getIsToggleInOverview({
+            isPhoneWidth,
+            isHeightlessLyric,
+            isLyricLogue
+        })
+
+    return (
+        <div
+            {...{
+                className: cx(
+                    'Overview',
+                    'fontSize__verse',
+                    isToggleInOverview && 'Overview__toggleInOverview'
+                )
+            }}
+        >
+            {isToggleInOverview &&
+                <OverviewToggle
+                    isToggleInOverview
+                    {...{
+                        className: 'Overview__toggleFloatContainer'
+                    }}
+                />
+            }
+            <Texts {...{ text: overviewText }} />
+        </div>
+    )
 }
 
-class Overview extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isPhoneWidth: PropTypes.bool.isRequired,
-        isHeightlessLyric: PropTypes.bool.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
-        isLyricLogue: PropTypes.bool.isRequired
-    }
-
-    render() {
-        const {
-                isPhoneWidth,
-                isHeightlessLyric,
-                lyricSongIndex,
-                isLyricLogue
-            } = this.props,
-
-            overviewText = getOverviewForSong(lyricSongIndex),
-
-            isToggleInOverview = getIsToggleInOverview({
-                isPhoneWidth,
-                isHeightlessLyric,
-                isLyricLogue
-            })
-
-        return (
-            <div className={cx(
-                'Overview',
-                'fontSize__verse',
-                isToggleInOverview &&
-                    'Overview__toggleInOverview'
-            )}>
-                {isToggleInOverview &&
-                    <div className="Overview__toggleFloatContainer">
-                        <OverviewToggle isToggleInOverview />
-                    </div>
-                }
-                <Texts {...{ text: overviewText }} />
-            </div>
-        )
-    }
-}
-
-export default connect(mapStateToProps)(Overview)
+export default Overview
