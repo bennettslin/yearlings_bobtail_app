@@ -3,7 +3,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import WikiWormholeDispatcher from '../Dispatcher'
-import { populateRefs } from '../../../helpers/ref'
 import {
     SELECTED_SONG_INDEX_SELECTOR,
     SELECTED_ANNOTATION_INDEX_SELECTOR
@@ -55,13 +54,13 @@ class WikiWormholeListener extends PureComponent {
         }
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchAccessedWikiWormhole = dispatch => {
+        this.dispatchAccessedWikiWormhole = dispatch
     }
 
     render() {
         return (
-            <WikiWormholeDispatcher {...{ getRefs: this._getRefs }} />
+            <WikiWormholeDispatcher {...{ ref: this.getDispatchAccessedWikiWormhole }} />
         )
     }
 }

@@ -1,7 +1,5 @@
-// Child that knows rules to toggle admin.
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { getWikiWormholeIndexForDirection } from './helper'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
@@ -12,75 +10,38 @@ import {
     SELECTED_ANNOTATION_INDEX_SELECTOR
 } from '../../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const WikiWormholeDispatcher = forwardRef((props, ref) => {
     const
-        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state),
-        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
+        dispatch = useDispatch(),
+        accessedWikiWormholeIndex = useSelector(ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR),
+        dotsBitNumber = useSelector(DOTS_BIT_NUMBER_SELECTOR),
+        selectedSongIndex = useSelector(SELECTED_SONG_INDEX_SELECTOR),
+        selectedAnnotationIndex = useSelector(SELECTED_ANNOTATION_INDEX_SELECTOR),
+        dispatchAccessedWikiWormhole = ({
+            annotationIndex = selectedAnnotationIndex,
+            direction
+        } = {}) => {
+            const
+                selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
+                initialWikiWormholeIndex =
+                    // If no direction is given, reset the index.
+                    !Number.isFinite(direction) ?
+                        1 :
+                        accessedWikiWormholeIndex
 
-    return {
-        selectedSongIndex,
-        selectedAnnotationIndex,
-        accessedWikiWormholeIndex,
-        dotsBitNumber
-    }
-}
+            dispatch(updateAccessStore({
+                accessedWikiWormholeIndex: getWikiWormholeIndexForDirection({
+                    selectedSongIndex,
+                    selectedAnnotationIndex: annotationIndex,
+                    selectedDotKeys,
+                    initialWikiWormholeIndex,
+                    direction
+                })
+            }))
+        }
 
-class WikiWormholeDispatcher extends PureComponent {
+    useImperativeHandle(ref, () => dispatchAccessedWikiWormhole)
+    return null
+})
 
-    static propTypes = {
-        // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        dotsBitNumber: PropTypes.number.isRequired,
-        accessedWikiWormholeIndex: PropTypes.number.isRequired,
-        updateAccessStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchAccessedWikiWormhole: this.dispatchAccessedWikiWormhole
-        })
-    }
-
-    dispatchAccessedWikiWormhole = ({
-        selectedAnnotationIndex = this.props.selectedAnnotationIndex,
-        direction
-    } = {}) => {
-        const {
-                selectedSongIndex,
-                dotsBitNumber,
-                accessedWikiWormholeIndex: prevWikiWormholeIndex
-            } = this.props,
-            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
-
-            initialWikiWormholeIndex =
-                // If no direction is given, reset the index.
-                !Number.isFinite(direction) ?
-                    1 :
-                    prevWikiWormholeIndex,
-
-            accessedWikiWormholeIndex = getWikiWormholeIndexForDirection({
-                selectedSongIndex,
-                selectedAnnotationIndex,
-                selectedDotKeys,
-                initialWikiWormholeIndex,
-                direction
-            })
-
-        this.props.updateAccessStore({ accessedWikiWormholeIndex })
-    }
-
-    render() {
-        return null
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    { updateAccessStore }
-)(WikiWormholeDispatcher)
+export default WikiWormholeDispatcher

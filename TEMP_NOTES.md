@@ -6,6 +6,7 @@
 
 # Bugs
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
+* From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Figure out why window resizing timeout seems to have regressed.
