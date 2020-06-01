@@ -7,12 +7,6 @@ export const getLastUnitDotCardIndex = songIndex => {
 }
 
 // TODO: Eventually get rid of this.
-export const getUnitMapForUnit = (songIndex, unitIndex) => {
-    const { unitMaps } = getSong(songIndex)
-    return unitMaps[unitIndex]
-}
-
-// TODO: Eventually get rid of this.
 export const getMainVersesForUnit = (songIndex, unitIndex) => {
     const { unitMainVerses } = getSong(songIndex)
     return unitMainVerses[unitIndex]
@@ -21,6 +15,21 @@ export const getMainVersesForUnit = (songIndex, unitIndex) => {
 export const getDotForUnit = (songIndex, unitIndex) => {
     const { withUnitDots } = getSong(songIndex)
     return withUnitDots[unitIndex] || null
+}
+
+export const getSubCardForUnit = (songIndex, unitIndex) => {
+    const { withUnitSubCards } = getSong(songIndex)
+    return withUnitSubCards[unitIndex] || null
+}
+
+export const getSideCardForUnit = (songIndex, unitIndex) => {
+    const { withUnitSideCards } = getSong(songIndex)
+    return withUnitSideCards[unitIndex] || null
+}
+
+export const getSideSubCardForUnit = (songIndex, unitIndex) => {
+    const { withUnitSideSubCards } = getSong(songIndex)
+    return withUnitSideSubCards[unitIndex] || null
 }
 
 export const getFormTypeForUnit = (songIndex, unitIndex) => {
@@ -35,6 +44,21 @@ export const getFormTypeForUnit = (songIndex, unitIndex) => {
 export const getFormTypeIndexForUnit = (songIndex, unitIndex) => {
     const { unitFormTypeIndices } = getSong(songIndex)
     return unitFormTypeIndices[unitIndex]
+}
+
+export const getSubCardTypeForUnit = (songIndex, unitIndex) => {
+    const { withUnitSubCardTypes } = getSong(songIndex)
+    return withUnitSubCardTypes[unitIndex] || null
+}
+
+export const getSideCardTypeForUnit = (songIndex, unitIndex) => {
+    const { withUnitSideCardTypes } = getSong(songIndex)
+    return withUnitSideCardTypes[unitIndex] || null
+}
+
+export const getSideSubCardTypeForUnit = (songIndex, unitIndex) => {
+    const { withUnitSideSubCardTypes } = getSong(songIndex)
+    return withUnitSideSubCardTypes[unitIndex] || null
 }
 
 export const getSubsequentForUnit = (songIndex, unitIndex) => {

@@ -57,6 +57,7 @@ const UnitCard = ({
 }
 
 UnitCard.propTypes = {
+    unitIndex: PropTypes.number.isRequired,
     formTypeIndex: PropTypes.number,
     formType: PropTypes.string.isRequired,
     versesArray: PropTypes.array.isRequired,
@@ -166,6 +167,7 @@ const UnitCardView = ({
 }
 
 UnitCardView.propTypes = {
+    unitIndex: PropTypes.number.isRequired,
     formTypeIndex: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.number

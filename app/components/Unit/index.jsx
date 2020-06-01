@@ -11,13 +11,18 @@ import UnitSongTitle from './Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 import {
-    getUnitMapForUnit,
     getMainVersesForUnit,
     getFormTypeForUnit,
     getFormTypeIndexForUnit,
     getSubsequentForUnit,
     getVerseIndicesForUnit,
-    getIsSideCardOnBottomForUnit
+    getIsSideCardOnBottomForUnit,
+    getSubCardForUnit,
+    getSideCardForUnit,
+    getSideSubCardForUnit,
+    getSubCardTypeForUnit,
+    getSideCardTypeForUnit,
+    getSideSubCardTypeForUnit
 } from '../../album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../../helpers/stanza'
 import {
@@ -43,14 +48,14 @@ const Unit = ({
             lyricSongIndex,
             unitIndex
         ),
-        {
-            subCardType,
-            sideCardType,
-            sideSubCardType,
-            subCard,
-            sideCard,
-            sideSubCard // This exists solely for "Maranatha."
-        } = getUnitMapForUnit(lyricSongIndex, unitIndex),
+
+        // This exists solely for "Maranatha."
+        subCard = getSubCardForUnit(lyricSongIndex, unitIndex),
+        sideCard = getSideCardForUnit(lyricSongIndex, unitIndex),
+        sideSubCard = getSideSubCardForUnit(lyricSongIndex, unitIndex),
+        subCardType = getSubCardTypeForUnit(lyricSongIndex, unitIndex),
+        sideCardType = getSideCardTypeForUnit(lyricSongIndex, unitIndex),
+        sideSubCardType = getSideSubCardTypeForUnit(lyricSongIndex, unitIndex),
         formType = getFormTypeForUnit(lyricSongIndex, unitIndex),
         formTypeIndex = getFormTypeIndexForUnit(lyricSongIndex, unitIndex),
         subsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
@@ -89,6 +94,7 @@ const Unit = ({
                     <UnitCard
                         {...other}
                         {...{
+                            unitIndex,
                             versesArray: mainVerses,
                             formType,
                             isTruncatable: hasSide,
@@ -122,6 +128,7 @@ const Unit = ({
                         <UnitCard
                             {...other}
                             {...{
+                                unitIndex,
                                 versesArray: subCard,
                                 formType: subCardType,
                                 isTruncatable: hasSide
@@ -145,6 +152,7 @@ const Unit = ({
                         <UnitCard
                             {...other}
                             {...{
+                                unitIndex,
                                 versesArray: sideCard,
                                 formType: sideCardType
                             }}
@@ -154,6 +162,7 @@ const Unit = ({
                         <UnitCard
                             {...other}
                             {...{
+                                unitIndex,
                                 versesArray: sideSubCard,
                                 formType: sideSubCardType
                             }}

@@ -57,17 +57,18 @@ const _addUnitLists = (songIndex, song) => {
     const { lyricUnits } = albumLyrics[songIndex]
 
     const
-        unitMaps = [],
         unitMainVerses = [],
         unitSubsequents = [],
         withUnitDots = {}
     let withUnitBottomSideCard,
         withUnitSubCards,
         withUnitSideCards,
-        withUnitSideSubCards
+        withUnitSideSubCards,
+        withUnitSubCardTypes,
+        withUnitSideCardTypes,
+        withUnitSideSubCardTypes
 
     lyricUnits.forEach((unit, unitIndex) => {
-        unitMaps.push(unit.unitMap)
         unitMainVerses.push(unit.mainVerses || null)
         unitSubsequents.push(unit.unitMap.subsequent || false)
 
@@ -77,7 +78,10 @@ const _addUnitLists = (songIndex, song) => {
                 subCard,
                 sideCard,
                 sideSubCard,
-                isBottomSideCard
+                isBottomSideCard,
+                subCardType,
+                sideCardType,
+                sideSubCardType
             }
         } = unit
 
@@ -96,6 +100,18 @@ const _addUnitLists = (songIndex, song) => {
             withUnitSideSubCards = withUnitSideSubCards || {}
             withUnitSideSubCards[unitIndex] = sideSubCard
         }
+        if (subCardType) {
+            withUnitSubCardTypes = withUnitSubCardTypes || {}
+            withUnitSubCardTypes[unitIndex] = subCardType
+        }
+        if (sideCardType) {
+            withUnitSideCardTypes = withUnitSideCardTypes || {}
+            withUnitSideCardTypes[unitIndex] = sideCardType
+        }
+        if (sideSubCardType) {
+            withUnitSideSubCardTypes = withUnitSideSubCardTypes || {}
+            withUnitSideSubCardTypes[unitIndex] = sideSubCardType
+        }
         if (isBottomSideCard) {
             withUnitBottomSideCard = withUnitBottomSideCard || {}
             withUnitBottomSideCard[unitIndex] = true
@@ -103,7 +119,6 @@ const _addUnitLists = (songIndex, song) => {
     })
 
     // TODO: Eventually get rid of this.
-    song.unitMaps = unitMaps
     song.unitMainVerses = unitMainVerses
 
     song.unitSubsequents = unitSubsequents
@@ -117,6 +132,15 @@ const _addUnitLists = (songIndex, song) => {
     }
     if (withUnitSideSubCards) {
         song.withUnitSideSubCards = withUnitSideSubCards
+    }
+    if (withUnitSubCardTypes) {
+        song.withUnitSubCardTypes = withUnitSubCardTypes
+    }
+    if (withUnitSideCardTypes) {
+        song.withUnitSideCardTypes = withUnitSideCardTypes
+    }
+    if (withUnitSideSubCardTypes) {
+        song.withUnitSideSubCardTypes = withUnitSideSubCardTypes
     }
     if (withUnitBottomSideCard) {
         song.withUnitBottomSideCard = withUnitBottomSideCard

@@ -1,13 +1,11 @@
 # TODO today
-* Isolate sideCard, subCard, and sideSubCard
-* Isolate their respective form types
 * Unit card parent prevents from mounting if not present
 * Unit card can get sideCard, subCard, and sideSubCard
 * Unit card can get main verses
 * Reorganise side and sub cards to be at same level as main verses?
 
 # Bugs
-* Unit dot reference consistently doesn't get passed to scroll.
+* Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Figure out why window resizing timeout seems to have regressed.
