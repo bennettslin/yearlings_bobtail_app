@@ -51,39 +51,24 @@ export const getShowTipForDevice = ({
 }
 
 // Not ideal to hard-code these like this...
-export const getShowAnnotationTip = ({
-    songIndex,
-    unitIndex
-}) => (
+export const getShowAnnotationTip = (songIndex, unitIndex) => (
     songIndex === 1 && unitIndex === 3
 )
 
-export const getShowActivatedTip = ({
-    songIndex,
-    unitIndex
-}) => (
+export const getShowActivatedTip = (songIndex, unitIndex) => (
     songIndex === 6 && unitIndex === 1
 )
 
-export const getShowStanzaTabTip = ({
-    songIndex,
-    unitIndex
-}) => (
+export const getShowStanzaTabTip = (songIndex, unitIndex) => (
     songIndex === 8 && unitIndex === 1
 )
 
-export const getShowWormholesTip = ({
-    songIndex,
-    unitIndex
-}) => (
+export const getShowWormholesTip = (songIndex, unitIndex) => (
     // TODO: Depend on dot category
     songIndex === 9 && unitIndex === 1
 )
 
-export const getShowWikiTip = ({
-    songIndex,
-    unitIndex
-}) => (
+export const getShowWikiTip = (songIndex, unitIndex) => (
     // TODO: Depend on dot category
     songIndex === 10 && unitIndex === 2
 )

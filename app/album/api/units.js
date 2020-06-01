@@ -19,17 +19,17 @@ export const getDotForUnit = (songIndex, unitIndex) => {
 
 export const getSubCardForUnit = (songIndex, unitIndex) => {
     const { withUnitSubCards } = getSong(songIndex)
-    return withUnitSubCards[unitIndex] || null
+    return Boolean(withUnitSubCards) && withUnitSubCards[unitIndex]
 }
 
 export const getSideCardForUnit = (songIndex, unitIndex) => {
     const { withUnitSideCards } = getSong(songIndex)
-    return withUnitSideCards[unitIndex] || null
+    return Boolean(withUnitSideCards) && withUnitSideCards[unitIndex]
 }
 
 export const getSideSubCardForUnit = (songIndex, unitIndex) => {
     const { withUnitSideSubCards } = getSong(songIndex)
-    return withUnitSideSubCards[unitIndex] || null
+    return Boolean(withUnitSideSubCards) && withUnitSideSubCards[unitIndex]
 }
 
 export const getFormTypeForUnit = (songIndex, unitIndex) => {
@@ -48,17 +48,17 @@ export const getFormTypeIndexForUnit = (songIndex, unitIndex) => {
 
 export const getSubCardTypeForUnit = (songIndex, unitIndex) => {
     const { withUnitSubCardTypes } = getSong(songIndex)
-    return withUnitSubCardTypes[unitIndex] || null
+    return Boolean(withUnitSubCardTypes) && withUnitSubCardTypes[unitIndex]
 }
 
 export const getSideCardTypeForUnit = (songIndex, unitIndex) => {
     const { withUnitSideCardTypes } = getSong(songIndex)
-    return withUnitSideCardTypes[unitIndex] || null
+    return Boolean(withUnitSideCardTypes) && withUnitSideCardTypes[unitIndex]
 }
 
 export const getSideSubCardTypeForUnit = (songIndex, unitIndex) => {
     const { withUnitSideSubCardTypes } = getSong(songIndex)
-    return withUnitSideSubCardTypes[unitIndex] || null
+    return Boolean(withUnitSideSubCardTypes) && withUnitSideSubCardTypes[unitIndex]
 }
 
 export const getSubsequentForUnit = (songIndex, unitIndex) => {

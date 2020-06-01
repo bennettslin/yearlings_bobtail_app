@@ -1,0 +1,70 @@
+@import '../../../scss/constants/border';
+@import '../../../scss/constants/colour';
+@import '../../../scss/constants/icon';
+@import '../../../scss/constants/lyric';
+@import '../../../scss/constants/transition';
+
+.UnitTab {
+    position: absolute;
+    height: $height__formTypeTab;
+    top: -$height__formTypeTab;
+    left: 0;
+
+    padding: 0 5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    font-size: 0.6em;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /**
+        * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
+        */
+        height: $height__formTypeTab - 4px;
+        z-index: -1;
+    }
+
+    &, &:before {
+        border-top-left-radius: $borderRadius__narrow;
+        border-top-right-radius: $borderRadius__narrow;
+    }
+}
+
+.UnitTab__top {
+    // Ensure that tab covers sheet.
+    cursor: pointer;
+    user-select: none;
+
+    .DW__userAgentDesktop
+    & {
+        transition: color $transitionDuration__default;
+    }
+
+    &:hover {
+        color: $colour__linkHover__light;
+    }
+
+    &:active {
+        color: $colour__linkActive;
+    }
+}
+
+.UnitTab__text {
+    position: relative;
+    top: 0.6em;
+    padding-left: $MARGIN_THIN;
+    padding-right: $MARGIN_THIN * 1.5;
+
+    &:hover {
+        animation: bounceHover $transitionDuration__default;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}

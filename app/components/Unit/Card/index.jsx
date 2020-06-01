@@ -2,94 +2,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
+import UnitTipsHands from '../TipsHands'
+import UnitTab from '../Tab'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
-import UnitCardTipsHands from './TipsHands'
 import { getParentOfVerseClassNamesForIndices } from '../../../helpers/stanza'
+import { getSubsequentForUnit } from '../../../album/api/units'
+import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 import {
     RESPONSE,
     RHYME
 } from '../../../constants/lyrics'
 import './style'
 
-/*************
- * CONTAINER *
- *************/
-
 const UnitCard = ({
-    // From props.
-    formTypeIndex,
-    formType,
-
-    // From controller.
+    tempIsMainVerses,
+    unitIndex,
     versesArray,
-
+    formType,
     ...other
-}) => {
 
+}) => {
     const
         { handleVerseSelect } = other,
-        handleStanzaTabClick = e => {
-            logEvent({ e, componentName: 'UnitCard' })
-
-            const { verseIndex } = versesArray[0]
-
-            handleVerseSelect({
-                selectedVerseIndex: verseIndex,
-                scrollLog: 'Stanza tab selected verse.'
-            })
-        }
-
-    if (versesArray) {
-        return (
-            <UnitCardView {...other}
-                {...{
-                    versesArray,
-                    formTypeIndex,
-                    formType,
-                    handleStanzaTabClick
-                }}
-            />
-        )
-    } else {
-        return null
-    }
-}
-
-UnitCard.propTypes = {
-    unitIndex: PropTypes.number.isRequired,
-    formTypeIndex: PropTypes.number,
-    formType: PropTypes.string.isRequired,
-    versesArray: PropTypes.array.isRequired,
-    handleVerseSelect: PropTypes.func
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const UnitCardView = ({
-    versesArray,
-    formTypeIndex,
-    formType,
-    showAnnotationTip,
-    showActivatedTip,
-    showStanzaTabTip,
-    showWormholesTip,
-    showWikiTip,
-    handleStanzaTabClick,
-    ...other
-
-}) => {
-    const isTabbed = Boolean(formTypeIndex),
-
-        tabText = `${
-            formType
-        }${
-            formTypeIndex > 0 ? ` ${formTypeIndex}` : ''
-        }`,
-
-        isSubCard = formType === RESPONSE || formType === RHYME
+        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        isSubCard = formType === RESPONSE || formType === RHYME,
+        isSubsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
+        isTabbed = tempIsMainVerses && !isSubsequent
 
     return (
         <div className={cx(
@@ -129,58 +69,23 @@ const UnitCardView = ({
 
             {/* This tab covers the sheet's box shadow. */}
             {isTabbed && (
-                <div
-                    className={cx(
-                        'UnitCard__tab',
-                        'UnitCard__tabTop',
-                        'boxShadow__stanzaTab',
-                        'textShadow__dark',
-                        'bgColour__unit__pattern',
-                        'bgColour__unit__pattern__reverse',
-                        `bgColour__formType__${formType}`
-                    )}
-                    {...{ onClick: handleStanzaTabClick }}
-                >
-                    <div
-                        {...{
-                            className: cx(
-                                'UnitCard__tabText',
-                                'Neuton'
-                            )
-                        }}
-                    >
-                        {tabText}
-                    </div>
-                </div>
+                <UnitTab
+                    {...{
+                        unitIndex,
+                        handleVerseSelect
+                    }}
+                />
             )}
-            <UnitCardTipsHands
-                {...{
-                    showAnnotationTip,
-                    showActivatedTip,
-                    showStanzaTabTip,
-                    showWormholesTip,
-                    showWikiTip
-                }}
-            />
+            <UnitTipsHands {...{ unitIndex }} />
         </div>
     )
 }
 
-UnitCardView.propTypes = {
+UnitCard.propTypes = {
+    tempIsMainVerses: PropTypes.bool,
     unitIndex: PropTypes.number.isRequired,
-    formTypeIndex: PropTypes.oneOfType([
-        PropTypes.bool,
-        PropTypes.number
-    ]),
     versesArray: PropTypes.array.isRequired,
-    formType: PropTypes.string.isRequired,
-
-    showAnnotationTip: PropTypes.bool,
-    showActivatedTip: PropTypes.bool,
-    showStanzaTabTip: PropTypes.bool,
-    showWormholesTip: PropTypes.bool,
-    showWikiTip: PropTypes.bool,
-    handleStanzaTabClick: PropTypes.func.isRequired
+    formType: PropTypes.string.isRequired
 }
 
 export default UnitCard

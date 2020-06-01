@@ -1,4 +1,5 @@
 # TODO today
+* Make stanzaTab its own component
 * Unit card parent prevents from mounting if not present
 * Unit card can get sideCard, subCard, and sideSubCard
 * Unit card can get main verses

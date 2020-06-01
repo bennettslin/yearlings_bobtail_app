@@ -13,7 +13,6 @@ import UnitDot from './Dot'
 import {
     getMainVersesForUnit,
     getFormTypeForUnit,
-    getFormTypeIndexForUnit,
     getSubsequentForUnit,
     getVerseIndicesForUnit,
     getIsSideCardOnBottomForUnit,
@@ -25,13 +24,6 @@ import {
     getSideSubCardTypeForUnit
 } from '../../album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../../helpers/stanza'
-import {
-    getShowAnnotationTip,
-    getShowActivatedTip,
-    getShowStanzaTabTip,
-    getShowWormholesTip,
-    getShowWikiTip
-} from '../../album/api/tips'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
 import './style'
 
@@ -57,8 +49,7 @@ const Unit = ({
         sideCardType = getSideCardTypeForUnit(lyricSongIndex, unitIndex),
         sideSubCardType = getSideSubCardTypeForUnit(lyricSongIndex, unitIndex),
         formType = getFormTypeForUnit(lyricSongIndex, unitIndex),
-        formTypeIndex = getFormTypeIndexForUnit(lyricSongIndex, unitIndex),
-        subsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
+        isSubsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
         isBottomSideCard = getIsSideCardOnBottomForUnit(lyricSongIndex, unitIndex),
         hasSide = Boolean(sideCard)
 
@@ -77,7 +68,7 @@ const Unit = ({
                     'fontSize__lyricMultipleColumns' :
                     'fontSize__verse',
 
-                subsequent ?
+                isSubsequent ?
                     'Unit__subsequent' :
                     'Unit__notSubsequent'
             )}
@@ -92,36 +83,13 @@ const Unit = ({
                     'Unit__column__main'
                 )}>
                     <UnitCard
+                        tempIsMainVerses
                         {...other}
                         {...{
                             unitIndex,
                             versesArray: mainVerses,
                             formType,
-                            isTruncatable: hasSide,
-
-                            showAnnotationTip: getShowAnnotationTip({
-                                songIndex: lyricSongIndex,
-                                unitIndex
-                            }),
-                            showStanzaTabTip: getShowStanzaTabTip({
-                                songIndex: lyricSongIndex,
-                                unitIndex
-                            }),
-                            showActivatedTip: getShowActivatedTip({
-                                songIndex: lyricSongIndex,
-                                unitIndex
-                            }),
-                            showWormholesTip: getShowWormholesTip({
-                                songIndex: lyricSongIndex,
-                                unitIndex
-                            }),
-                            showWikiTip: getShowWikiTip({
-                                songIndex: lyricSongIndex,
-                                unitIndex
-                            })
-                        }}
-                        {...!subsequent && {
-                            formTypeIndex
+                            isTruncatable: hasSide
                         }}
                     />
                     {subCard && (
