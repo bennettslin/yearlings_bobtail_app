@@ -47,6 +47,10 @@ class OverviewToggle extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchOverview = dispatch => {
+        this.dispatchOverview = dispatch
+    }
+
     render() {
         const {
                 isLyricLogue,
@@ -76,7 +80,7 @@ class OverviewToggle extends PureComponent {
                     }}
                 />
                 <TipsHand {...{ tipType: OVERVIEW }} />
-                <OverviewDispatcher {...{ getRefs: this._getRefs }} />
+                <OverviewDispatcher {...{ ref: this.getDispatchOverview }} />
             </div>
         )
     }

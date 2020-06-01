@@ -1,9 +1,10 @@
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
-import { getNextOption } from '../../../helpers/options'
-import { SHOWN } from '../../../constants/options'
+import {
+    isShown,
+    getNextOption
+} from '../../../helpers/options'
 import {
     IS_LOGUE_OVERVIEW_SHOWN_SELECTOR,
     SELECTED_OVERVIEW_OPTION_SELECTOR,
@@ -13,115 +14,67 @@ import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selector
 import { TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR } from '../../../redux/transient/selectors'
 import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const OverviewDispatcher = forwardRef((props, ref) => {
     const
-        isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
-        toggleShowsOverviewImmediately = TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR(state),
-        isLogueOverviewShown = IS_LOGUE_OVERVIEW_SHOWN_SELECTOR(state),
-        selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
-        selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
-
-    return {
-        isSelectedLogue,
-        isHeightlessLyric,
-        isLogueOverviewShown,
-        selectedOverviewOption,
-        selectedTipsOption,
-        toggleShowsOverviewImmediately
-    }
-}
-
-class OverviewDispatcher extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isSelectedLogue: PropTypes.bool.isRequired,
-        isHeightlessLyric: PropTypes.bool.isRequired,
-        isLogueOverviewShown: PropTypes.bool.isRequired,
-        selectedOverviewOption: PropTypes.string.isRequired,
-        selectedTipsOption: PropTypes.string.isRequired,
-        toggleShowsOverviewImmediately: PropTypes.bool.isRequired,
-        updateOptionStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({ dispatchOverview: this.dispatchOverview })
-    }
-
-    dispatchOverview = ({
-        isToggled,
-        overviewOption
-    } = {}) => {
-        const { isSelectedLogue } = this.props
-
-        return isSelectedLogue ?
-            this._dispatchLogueOverview() :
-            this._dispatchSongOverview({
-                isToggled,
-                overviewOption
-            })
-
-    }
-
-    _dispatchLogueOverview({
-        isLogueOverviewShown = !this.props.isLogueOverviewShown
-    } = {}) {
-        const { isHeightlessLyric } = this.props
-
-        // Don't allow overview to be toggled if not heightless.
-        if (!isHeightlessLyric) {
-            return false
-        }
-
-        this.props.updateOptionStore({ isLogueOverviewShown })
-        return true
-    }
-
-    _dispatchSongOverview({
-        isToggled,
-        overviewOption
-    }) {
-        const {
-            toggleShowsOverviewImmediately,
-            selectedOverviewOption: prevOverviewOption,
-            selectedTipsOption
-        } = this.props
-
-        const selectedOverviewOption = getNextOption({
-                isToggled,
-                toggleShows: toggleShowsOverviewImmediately,
-                prevOption: this.props.selectedOverviewOption,
-                nextOption: overviewOption
-            }),
-
-            /**
-             * If both overview and tips are shown, user may try to show the
-             * overview by pressing key. This is the only way to handle it.
-             */
-            bothOverviewAndTipsShown =
-                selectedOverviewOption === SHOWN &&
-                prevOverviewOption === SHOWN &&
-                selectedTipsOption === SHOWN
-
-        this.props.updateOptionStore({
-            selectedOverviewOption,
-            ...bothOverviewAndTipsShown && {
-                isForcedShownOverview: true
+        dispatch = useDispatch(),
+        isHeightlessLyric = useSelector(IS_HEIGHTLESS_LYRIC_SELECTOR),
+        toggleShowsOverviewImmediately = useSelector(TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR),
+        isLogueOverviewShown = useSelector(IS_LOGUE_OVERVIEW_SHOWN_SELECTOR),
+        selectedOverviewOption = useSelector(SELECTED_OVERVIEW_OPTION_SELECTOR),
+        selectedTipsOption = useSelector(SELECTED_TIPS_OPTION_SELECTOR),
+        isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
+        _dispatchLogueOverview = () => {
+            // Don't allow overview to be toggled if not heightless.
+            if (!isHeightlessLyric) {
+                return false
             }
-        })
-        return true
-    }
+            dispatch(updateOptionStore({
+                isLogueOverviewShown: !isLogueOverviewShown
+            }))
+            return true
+        },
+        _dispatchSongOverview = ({
+            isToggled,
+            overviewOption
+        }) => {
+            const nextOverviewOption = getNextOption({
+                    isToggled,
+                    toggleShows: toggleShowsOverviewImmediately,
+                    prevOption: selectedOverviewOption,
+                    nextOption: overviewOption
+                }),
 
-    render() {
-        return null
-    }
-}
+                /**
+                 * If both overview and tips are shown, user may try to show the
+                 * overview by pressing key. This is the only way to handle it.
+                 */
+                bothOverviewAndTipsShown =
+                    isShown(nextOverviewOption) &&
+                    isShown(selectedOverviewOption) &&
+                    isShown(selectedTipsOption)
 
-export default connect(
-    mapStateToProps,
-    { updateOptionStore }
-)(OverviewDispatcher)
+            dispatch(updateOptionStore({
+                selectedOverviewOption: nextOverviewOption,
+                ...bothOverviewAndTipsShown && {
+                    isForcedShownOverview: true
+                }
+            }))
+            return true
+        },
+        dispatchOverview = ({
+            isToggled,
+            overviewOption
+        } = {}) => (
+            isSelectedLogue ?
+                _dispatchLogueOverview() :
+                _dispatchSongOverview({
+                    isToggled,
+                    overviewOption
+                })
+        )
+
+    useImperativeHandle(ref, () => dispatchOverview)
+    return null
+})
+
+export default OverviewDispatcher
