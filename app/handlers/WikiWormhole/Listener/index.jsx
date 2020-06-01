@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import WikiWormholeDispatcher from '../Dispatcher'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_ANNOTATION_INDEX_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedAnnotationIndex
 } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
+        selectedSongIndex = mapSelectedSongIndex(state),
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state)
 
     return {
         selectedSongIndex,

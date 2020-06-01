@@ -23,20 +23,20 @@ import {
 import { getSongsAndLoguesCount } from '../../album/api/songs'
 import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
-import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
+import { mapIsPlaying } from '../../redux/audio/selectors'
 import { IS_TWO_ROW_MENU_SELECTOR } from '../../redux/responsive/selectors'
 import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../redux/players/selectors'
-import { SELECTED_SONG_INDEX_SELECTOR } from '../../redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../redux/selected/selectors'
 import { AUDIO_OPTION_INDEX_SELECTOR } from '../../redux/session/selectors'
 import { IS_DESKTOP_WIDTH_SELECTOR } from '../../redux/viewport/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
-        isPlaying = IS_PLAYING_SELECTOR(state),
+        isPlaying = mapIsPlaying(state),
         isTwoRowMenu = IS_TWO_ROW_MENU_SELECTOR(state),
         playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        selectedSongIndex = mapSelectedSongIndex(state),
         audioOptionIndex = AUDIO_OPTION_INDEX_SELECTOR(state),
         isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
 

@@ -12,11 +12,11 @@ import {
     AUDIO_FAST_FORWARD_BUTTON_KEY,
     AUDIO_REWIND_BUTTON_KEY
 } from '../../../../constants/buttons'
-import { SELECTED_VERSE_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
+import { mapSelectedVerseIndex } from '../../../../redux/selected/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state)
+    const selectedVerseIndex = mapSelectedVerseIndex(state)
 
     return {
         selectedVerseIndex

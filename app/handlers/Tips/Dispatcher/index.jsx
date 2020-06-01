@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
-import { IS_LYRIC_LOGUE_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
 import {
     IS_TIPS_SHOWABLE_SELECTOR,
     TOGGLE_SHOWS_TIPS_IMMEDIATELY_SELECTOR
@@ -12,7 +12,7 @@ import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
 const TipsDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
+        isLyricLogue = useSelector(mapIsLyricLogue),
         isTipsShowable = useSelector(IS_TIPS_SHOWABLE_SELECTOR),
         toggleShowsTipsImmediately = useSelector(TOGGLE_SHOWS_TIPS_IMMEDIATELY_SELECTOR),
         selectedTipsOption = useSelector(SELECTED_TIPS_OPTION_SELECTOR),

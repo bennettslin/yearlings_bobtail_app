@@ -8,9 +8,9 @@ import { getSceneIndexForVerse } from '../../album/api/verses'
 import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
 import { getVerseIndexforRatio } from '../../helpers/verse'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_VERSE_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex,
+    mapIsSelectedLogue
 } from '../../redux/selected/selectors'
 import {
     SLIDER_LEFT_SELECTOR,
@@ -22,9 +22,9 @@ import {
 
 const mapStateToProps = state => {
     const
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        selectedSongIndex = mapSelectedSongIndex(state),
+        selectedVerseIndex = mapSelectedVerseIndex(state),
+        isSelectedLogue = mapIsSelectedLogue(state),
         sliderLeft = SLIDER_LEFT_SELECTOR(state),
         sliderWidth = SLIDER_WIDTH_SELECTOR(state),
         isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state),

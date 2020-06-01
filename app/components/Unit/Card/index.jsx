@@ -14,7 +14,7 @@ import {
     getUnitFormType
 } from './helper'
 import { getSubsequentForUnit, getMainVerseIndicesForUnit } from '../../../album/api/units'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 
 const UnitCard = ({
@@ -26,7 +26,7 @@ const UnitCard = ({
     ...other
 
 }) => {
-    const lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+    const lyricSongIndex = useSelector(mapLyricSongIndex),
         verses = getUnitVerses({
             songIndex: lyricSongIndex,
             unitIndex,

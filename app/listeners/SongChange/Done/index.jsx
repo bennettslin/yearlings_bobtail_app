@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
 import { populateRefs } from '../../../helpers/ref'
-import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
+import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -13,7 +13,7 @@ const mapStateToProps = state => {
                 didCurtainEnter
             }
         } = state,
-        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state)
+        canCarouselMount = mapCanCarouselMount(state)
 
     return {
         canCarouselMount,

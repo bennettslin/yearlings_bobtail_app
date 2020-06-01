@@ -5,17 +5,17 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from '../Button'
 import {
-    IS_ACCESS_ON_SELECTOR,
-    ACCESSED_NAV_INDEX_SELECTOR
+    mapIsAccessOn,
+    mapAccessedNavIndex
 } from '../../../../../redux/access/selectors'
-import { SELECTED_SONG_INDEX_SELECTOR } from '../../../../../redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../../../../redux/selected/selectors'
 import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
-        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
-        accessedNavIndex = ACCESSED_NAV_INDEX_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        isAccessOn = mapIsAccessOn(state),
+        accessedNavIndex = mapAccessedNavIndex(state),
+        selectedSongIndex = mapSelectedSongIndex(state),
         isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
 
     return {

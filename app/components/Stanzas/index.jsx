@@ -10,12 +10,12 @@ import Stanza from './Stanza'
 import Unit from '../Unit'
 import { getStanzaIndices } from '../../album/api/stanzas'
 import { getLastUnitDotCardIndex } from '../../album/api/units'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './logic'
 import './style'
 
 const mapStateToProps = state => {
-    const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
+    const lyricSongIndex = mapLyricSongIndex(state)
 
     return {
         lyricSongIndex

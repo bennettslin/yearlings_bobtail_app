@@ -12,20 +12,20 @@ import { getDotKeysFromBitNumber } from '../../helpers/dot'
 import { IS_TOUCH_SUPPORTED } from '../../constants/device'
 import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
 import {
-    IS_ACCESS_ON_SELECTOR,
-    ACCESSED_DOT_INDEX_SELECTOR
+    mapIsAccessOn,
+    mapAccessedDotIndex
 } from '../../redux/access/selectors'
-import { DOTS_BIT_NUMBER_SELECTOR } from '../../redux/dots/selectors'
-import { DOTS_SLIDE_BIT_NUMBER_SELECTOR } from '../../redux/dotsSlide/selectors'
+import { mapDotsBitNumber } from '../../redux/dots/selectors'
+import { mapDotsSlideBitNumber } from '../../redux/dotsSlide/selectors'
 import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../redux/toggle/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
-        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
-        accessedDotIndex = ACCESSED_DOT_INDEX_SELECTOR(state),
-        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
-        dotsSlideBitNumber = DOTS_SLIDE_BIT_NUMBER_SELECTOR(state),
+        isAccessOn = mapIsAccessOn(state),
+        accessedDotIndex = mapAccessedDotIndex(state),
+        dotsBitNumber = mapDotsBitNumber(state),
+        dotsSlideBitNumber = mapDotsSlideBitNumber(state),
         isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
 
     return {

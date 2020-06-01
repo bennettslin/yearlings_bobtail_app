@@ -7,20 +7,20 @@ import { updateToggleStore } from '../../../redux/toggle/action'
 import { getVerseIndexForScene } from '../../../album/api/scenes'
 import { getStartTimeForVerse } from '../../../album/api/time'
 import { getActivatedSceneForDirection } from './helper'
-import { ACTIVATED_SCENE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import { mapActivatedSceneIndex } from '../../../redux/activated/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_SCENE_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedSceneIndex,
+    mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
 
 const ActivatedSceneDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        activatedSceneIndex = useSelector(ACTIVATED_SCENE_INDEX_SELECTOR),
-        selectedSongIndex = useSelector(SELECTED_SONG_INDEX_SELECTOR),
-        selectedSceneIndex = useSelector(SELECTED_SCENE_INDEX_SELECTOR),
-        isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
+        activatedSceneIndex = useSelector(mapActivatedSceneIndex),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedSceneIndex = useSelector(mapSelectedSceneIndex),
+        isSelectedLogue = useSelector(mapIsSelectedLogue),
         _queueScrollToActivatedVerse = (
             nextSceneIndex,
             activatedVerseIndex

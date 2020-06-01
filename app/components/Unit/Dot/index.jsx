@@ -10,11 +10,11 @@ import { getDotForUnit } from '../../../album/api/units'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
 import { LYRIC_ANNOTATION_SCROLL } from '../../../constants/scroll'
-import { IS_ACCESSED_ANNOTATION } from '../../../redux/access/selectors'
-import { IS_ACTIVATED_SELECTOR } from '../../../redux/activated/selectors'
+import { mapIsAccessedAnnotation } from '../../../redux/access/selectors'
+import { mapIsActivated } from '../../../redux/activated/selectors'
 import {
-    LYRIC_SONG_INDEX_SELECTOR,
-    IS_SELECTED_LYRIC_ANNOTATION
+    mapLyricSongIndex,
+    mapIsSelectedLyricAnnotation
 } from '../../../redux/lyric/selectors'
 import { IS_SLIDER_MOVING_SELECTOR } from '../../../redux/slider/selectors'
 import './logic'
@@ -27,15 +27,15 @@ export const UnitDot = ({
 }) => {
     const
         dispatch = useDispatch(),
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
-        isActivated = useSelector(IS_ACTIVATED_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        isActivated = useSelector(mapIsActivated),
         isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
         {
             annotationIndex,
             dotBit
         } = getDotForUnit(lyricSongIndex, unitIndex),
-        isAccessed = useSelector(IS_ACCESSED_ANNOTATION(annotationIndex)),
-        isSelected = useSelector(IS_SELECTED_LYRIC_ANNOTATION(annotationIndex)),
+        isAccessed = useSelector(mapIsAccessedAnnotation(annotationIndex)),
+        isSelected = useSelector(mapIsSelectedLyricAnnotation(annotationIndex)),
 
         handleAnchorClick = () => {
             if (isSelected || isSliderMoving || isActivated) {

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import ReactTooltip from 'react-tooltip'
 import { getTooltipPlacement } from './helper'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
-import { IS_ACCESS_ON_SELECTOR } from '../../../redux/access/selectors'
+import { mapIsAccessOn } from '../../../redux/access/selectors'
 import {
     IS_DESKTOP_WIDTH_SELECTOR,
     IS_PHONE_OR_MINI_WIDTH_SELECTOR
@@ -14,7 +14,7 @@ import './style'
 
 const Tooltip = ({ buttonName }) => {
     const
-        isAccessOn = useSelector(IS_ACCESS_ON_SELECTOR),
+        isAccessOn = useSelector(mapIsAccessOn),
         isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
         isPhoneOrMiniWidth = useSelector(IS_PHONE_OR_MINI_WIDTH_SELECTOR)
 

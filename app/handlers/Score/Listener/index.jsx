@@ -4,13 +4,13 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { CAN_SCORE_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
-import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
+import { mapCanScoreMount } from '../../../redux/mount/selectors'
+import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const
-        canScoreMount = CAN_SCORE_MOUNT_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
+        canScoreMount = mapCanScoreMount(state),
+        isSelectedLogue = mapIsSelectedLogue(state)
 
     return {
         canScoreMount,

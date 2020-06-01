@@ -10,7 +10,7 @@ import { OVERVIEW_TOGGLE_KEY } from '../../../constants/access'
 import { OVERVIEW_BUTTON_KEY } from '../../../constants/buttons'
 import { OVERVIEW } from '../../../constants/tips'
 import { getOverviewToggleIdentifier } from './helper'
-import { IS_LYRIC_LOGUE_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
 import { SELECTED_OVERVIEW_OPTION_SELECTOR } from '../../../redux/option/selectors'
 import './style'
 
@@ -20,7 +20,7 @@ const OverviewToggle = ({
 }) => {
     const
         dispatchOverview = useRef(),
-        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
+        isLyricLogue = useSelector(mapIsLyricLogue),
         selectedOverviewOption = useSelector(SELECTED_OVERVIEW_OPTION_SELECTOR),
         handleButtonClick = () => {
             // The isToggled argument is ignored by logue overview.

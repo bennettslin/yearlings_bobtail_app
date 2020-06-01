@@ -12,13 +12,13 @@ import {
     NAV_SONG_BUTTON_KEY
 } from '../../../../../constants/buttons'
 import { IS_CAROUSEL_NAV_SHOWABLE_SELECTOR } from '../../../../../redux/transient/selectors'
-import { SELECTED_ANNOTATION_INDEX_SELECTOR } from '../../../../../redux/selected/selectors'
+import { mapSelectedAnnotationIndex } from '../../../../../redux/selected/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
         isCarouselNavShowable = IS_CAROUSEL_NAV_SHOWABLE_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state)
 
     return {
         isCarouselNavShowable,

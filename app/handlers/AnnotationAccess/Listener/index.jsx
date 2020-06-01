@@ -4,21 +4,21 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationAccessDispatcher from '../Dispatcher'
-import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_VERSE_INDEX_SELECTOR,
-    SELECTED_ANNOTATION_INDEX_SELECTOR,
-    EAR_COLUMN_INDEX_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex,
+    mapSelectedAnnotationIndex,
+    mapEarColumnIndex
 } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
-        earColumnIndex = EAR_COLUMN_INDEX_SELECTOR(state)
+        activatedVerseIndex = mapActivatedVerseIndex(state),
+        selectedSongIndex = mapSelectedSongIndex(state),
+        selectedVerseIndex = mapSelectedVerseIndex(state),
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
+        earColumnIndex = mapEarColumnIndex(state)
 
     return {
         earColumnIndex,

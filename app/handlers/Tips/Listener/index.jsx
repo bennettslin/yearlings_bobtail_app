@@ -8,24 +8,24 @@ import {
     HIDDEN
 } from '../../../constants/options'
 import {
-    LYRIC_ANNOTATION_INDEX_SELECTOR,
-    LYRIC_SONG_INDEX_SELECTOR
+    mapLyricAnnotationIndex,
+    mapLyricSongIndex
 } from '../../../redux/lyric/selectors'
 import {
     SELECTED_TIPS_OPTION_SELECTOR,
     IS_FORCED_SHOWN_OVERVIEW_SELECTOR
 } from '../../../redux/option/selectors'
-import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
+import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 import { DEVICE_WIDTH_INDEX_SELECTOR } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const
         isTipsShowable = IS_TIPS_SHOWABLE_SELECTOR(state),
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
+        lyricSongIndex = mapLyricSongIndex(state),
+        lyricAnnotationIndex = mapLyricAnnotationIndex(state),
         selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
         isForcedShownOverview = IS_FORCED_SHOWN_OVERVIEW_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        isSelectedLogue = mapIsSelectedLogue(state),
         deviceWidthIndex = DEVICE_WIDTH_INDEX_SELECTOR(state)
 
     return {

@@ -2,13 +2,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import { getIndexedTitleForSong } from '../../../album/api/songs'
 import './style'
 
 const UnitSongTitle = () => {
     const
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
         songTitle = getIndexedTitleForSong(lyricSongIndex)
 
     return (

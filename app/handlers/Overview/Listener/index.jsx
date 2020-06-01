@@ -9,18 +9,18 @@ import {
 } from '../../../constants/options'
 import { SELECTED_OVERVIEW_OPTION_SELECTOR } from '../../../redux/option/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_ANNOTATION_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedAnnotationIndex,
+    mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
         selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
+        selectedSongIndex = mapSelectedSongIndex(state),
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
+        isSelectedLogue = mapIsSelectedLogue(state)
 
     return {
         isSelectedLogue,

@@ -15,13 +15,13 @@ export const STAGE_HEIGHT_SELECTOR = (
 ) => stageHeight
 
 // import {
-//     LYRIC_SONG_INDEX_SELECTOR,
-//     LYRIC_VERSE_INDEX_SELECTOR,
-//     LYRIC_ANNOTATION_INDEX_SELECTOR,
-//     IS_LYRIC_LOGUE_SELECTOR
+//     mapLyricSongIndex,
+//     mapLyricVerseIndex,
+//     mapLyricAnnotationIndex,
+//     mapIsLyricLogue
 // } from '../../../redux/stage/selectors'
 
-// lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-// lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
-// lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
-// isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state)
+// lyricSongIndex = mapLyricSongIndex(state),
+// lyricVerseIndex = mapLyricVerseIndex(state),
+// lyricAnnotationIndex = mapLyricAnnotationIndex(state),
+// isLyricLogue = mapIsLyricLogue(state)

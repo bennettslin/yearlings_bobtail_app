@@ -17,10 +17,10 @@ import { getIndexedTitleForSong } from '../../../../../album/api/songs'
 import { getWormholeLinkForWormhole } from '../../../../../album/api/wormholes'
 import { getVerse } from '../../../../../album/api/verses'
 import { populateRefs } from '../../../../../helpers/ref'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
-    const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
+    const lyricSongIndex = mapLyricSongIndex(state)
 
     return {
         lyricSongIndex

@@ -7,7 +7,7 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 import { getAnnotationCardIndices } from '../../album/api/cards'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'
 
 const Annotation = ({
@@ -19,7 +19,7 @@ const Annotation = ({
 }) => {
     const
         stopPropagation = useRef(),
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
 
         onClick = e => {
             logEvent({ e, componentName: `Annotation ${annotationIndex}` })

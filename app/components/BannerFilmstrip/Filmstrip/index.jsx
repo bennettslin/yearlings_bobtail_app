@@ -20,23 +20,23 @@ import {
     NEXT_SCENE_KEY
 } from '../../../constants/access'
 import { FILMSTRIP } from '../../../constants/tips'
-import { ACTIVATED_SCENE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import { mapActivatedSceneIndex } from '../../../redux/activated/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_SCENE_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR,
-    SELECTED_TIME_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedSceneIndex,
+    mapIsSelectedLogue,
+    mapSelectedTime
 } from '../../../redux/selected/selectors'
 import { SLIDER_SCENE_INDEX_SELECTOR } from '../../../redux/slider/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
-        activatedSceneIndex = ACTIVATED_SCENE_INDEX_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedSceneIndex = SELECTED_SCENE_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
-        selectedTime = SELECTED_TIME_SELECTOR(state),
+        activatedSceneIndex = mapActivatedSceneIndex(state),
+        selectedSongIndex = mapSelectedSongIndex(state),
+        selectedSceneIndex = mapSelectedSceneIndex(state),
+        isSelectedLogue = mapIsSelectedLogue(state),
+        selectedTime = mapSelectedTime(state),
         sliderSceneIndex = SLIDER_SCENE_INDEX_SELECTOR(state)
 
     return {

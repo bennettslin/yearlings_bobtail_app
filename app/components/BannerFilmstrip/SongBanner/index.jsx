@@ -17,32 +17,32 @@ import { IS_SMALL_BANNER_TEXT_SELECTOR } from '../../../redux/responsive/selecto
 import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
-import { IS_ACTIVATED_SELECTOR } from '../../../redux/activated/selectors'
-import { IS_PLAYING_SELECTOR } from '../../../redux/audio/selectors'
+import { mapIsActivated } from '../../../redux/activated/selectors'
+import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
-    IS_BANNER_HOVERING_SELECTOR,
-    BANNER_HOVER_VERSE_INDEX_SELECTOR,
-    BANNER_HOVER_TIME_SELECTOR
+    mapIsBannerHovering,
+    mapBannerHoverVerseIndex,
+    mapBannerHoverTime
 } from '../../../redux/banner/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR,
-    SELECTED_TIME_SELECTOR
+    mapSelectedSongIndex,
+    mapIsSelectedLogue,
+    mapSelectedTime
 } from '../../../redux/selected/selectors'
 import { IS_SLIDER_MOVING_SELECTOR } from '../../../redux/slider/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
-        isActivated = IS_ACTIVATED_SELECTOR(state),
+        isActivated = mapIsActivated(state),
         isSmallBannerText = IS_SMALL_BANNER_TEXT_SELECTOR(state),
-        isPlaying = IS_PLAYING_SELECTOR(state),
-        isBannerHovering = IS_BANNER_HOVERING_SELECTOR(state),
-        bannerHoverVerseIndex = BANNER_HOVER_VERSE_INDEX_SELECTOR(state),
-        bannerHoverTime = BANNER_HOVER_TIME_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
-        selectedTime = SELECTED_TIME_SELECTOR(state),
+        isPlaying = mapIsPlaying(state),
+        isBannerHovering = mapIsBannerHovering(state),
+        bannerHoverVerseIndex = mapBannerHoverVerseIndex(state),
+        bannerHoverTime = mapBannerHoverTime(state),
+        selectedSongIndex = mapSelectedSongIndex(state),
+        isSelectedLogue = mapIsSelectedLogue(state),
+        selectedTime = mapSelectedTime(state),
         isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state)
 
     return {

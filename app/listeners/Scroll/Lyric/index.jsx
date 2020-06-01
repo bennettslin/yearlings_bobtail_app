@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
-import { IS_PLAYING_SELECTOR } from '../../../redux/audio/selectors'
+import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
     scrollElementIntoView,
     setChildElement
@@ -23,8 +23,8 @@ import {
     QUEUED_SCENE_CHANGE_EXIT_SCROLL_CALLBACK_SELECTOR
 } from '../../../redux/scrollLyric/selectors'
 import {
-    SELECTED_VERSE_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR
+    mapSelectedVerseIndex,
+    mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
 import {
     IS_AUTO_SCROLL_SELECTOR,
@@ -34,10 +34,10 @@ import { DEVICE_WIDTH_INDEX_SELECTOR } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const
-        isPlaying = IS_PLAYING_SELECTOR(state),
+        isPlaying = mapIsPlaying(state),
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
-        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        selectedVerseIndex = mapSelectedVerseIndex(state),
+        isSelectedLogue = mapIsSelectedLogue(state),
         isAutoScroll = IS_AUTO_SCROLL_SELECTOR(state),
         isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
         deviceWidthIndex = DEVICE_WIDTH_INDEX_SELECTOR(state),

@@ -6,15 +6,15 @@ import cx from 'classnames'
 import { getDurationForVerse } from '../../../../../album/api/time'
 import { IS_USER_AGENT_DESKTOP } from '../../../../../constants/device'
 import {
-    LYRIC_SONG_INDEX_SELECTOR,
-    LYRIC_VERSE_INDEX_SELECTOR
+    mapLyricSongIndex,
+    mapLyricVerseIndex
 } from '../../../../../redux/lyric/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state)
+        lyricSongIndex = mapLyricSongIndex(state),
+        lyricVerseIndex = mapLyricVerseIndex(state)
 
     return {
         lyricSongIndex,

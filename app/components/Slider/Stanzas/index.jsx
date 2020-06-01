@@ -5,10 +5,10 @@ import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import SliderStanza from './Stanza'
 import { getStanzaIndices } from '../../../album/api/stanzas'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 
 const SliderStanzas = () => {
-    const lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR)
+    const lyricSongIndex = useSelector(mapLyricSongIndex)
 
     return (
         <div className={cx(

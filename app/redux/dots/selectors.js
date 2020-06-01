@@ -1,11 +1,11 @@
-export const DOTS_BIT_NUMBER_SELECTOR = (
+export const mapDotsBitNumber = (
     { dotsStore: { dotsBitNumber } }
 ) => dotsBitNumber
 
-export const REFERENCE_SELECTOR = (
+export const mapReferenceDot = (
     { dotsStore: { reference } }
 ) => reference
 
-export const WORMHOLE_SELECTOR = (
+export const mapWormholeDot = (
     { dotsStore: { wormhole } }
 ) => wormhole

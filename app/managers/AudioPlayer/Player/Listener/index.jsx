@@ -8,30 +8,30 @@ import { resetAudioQueue } from '../../../../redux/audio/action'
 import { getPlayersCanPlayThroughFromBitNumber } from '../../../../helpers/player'
 import { getNextPlayerIndexToRender } from './helper'
 import {
-    QUEUED_PLAY_FROM_LOGUE_SELECTOR,
-    QUEUED_PLAY_SONG_INDEX_SELECTOR,
-    QUEUED_PLAY_VERSE_INDEX_SELECTOR
+    mapQueuedPlayFromLogue,
+    mapQueuedPlaySongIndex,
+    mapQueuedPlayVerseIndex
 } from '../../../../redux/audio/selectors'
 import {
-    LYRIC_SONG_INDEX_SELECTOR,
-    LYRIC_VERSE_INDEX_SELECTOR
+    mapLyricSongIndex,
+    mapLyricVerseIndex
 } from '../../../../redux/lyric/selectors'
 import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../../../redux/players/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR
+    mapSelectedSongIndex,
+    mapIsSelectedLogue
 } from '../../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const
-        queuedPlayFromLogue = QUEUED_PLAY_FROM_LOGUE_SELECTOR(state),
-        queuedPlaySongIndex = QUEUED_PLAY_SONG_INDEX_SELECTOR(state),
-        queuedPlayVerseIndex = QUEUED_PLAY_VERSE_INDEX_SELECTOR(state),
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
+        queuedPlayFromLogue = mapQueuedPlayFromLogue(state),
+        queuedPlaySongIndex = mapQueuedPlaySongIndex(state),
+        queuedPlayVerseIndex = mapQueuedPlayVerseIndex(state),
+        lyricSongIndex = mapLyricSongIndex(state),
+        lyricVerseIndex = mapLyricVerseIndex(state),
         playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
+        selectedSongIndex = mapSelectedSongIndex(state),
+        isSelectedLogue = mapIsSelectedLogue(state)
     return {
         playersBitNumber,
         selectedSongIndex,

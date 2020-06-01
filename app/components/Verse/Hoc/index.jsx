@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
-import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 
 const VerseHoc = ({
     verseIndex,
@@ -16,7 +16,7 @@ const VerseHoc = ({
 
 }) => {
     const
-        activatedVerseIndex = useSelector(ACTIVATED_VERSE_INDEX_SELECTOR),
+        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         hasVerseIndex = Number.isFinite(verseIndex)
 
     if (!hasVerseIndex) {

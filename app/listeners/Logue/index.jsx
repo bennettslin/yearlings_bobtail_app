@@ -5,10 +5,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAudioStore } from '../../redux/audio/action'
 import { updateToggleStore } from '../../redux/toggle/action'
-import { IS_SELECTED_LOGUE_SELECTOR } from '../../redux/selected/selectors'
+import { mapIsSelectedLogue } from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
+    const isSelectedLogue = mapIsSelectedLogue(state)
 
     return {
         isSelectedLogue

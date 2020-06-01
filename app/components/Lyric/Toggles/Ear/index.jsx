@@ -11,7 +11,7 @@ import { LYRIC_EAR_BUTTON_KEY } from '../../../../constants/buttons'
 import { EAR_COLUMN_KEYS } from '../../../../constants/lyrics'
 import { DOUBLESPEAKER } from '../../../../constants/tips'
 import { IS_EAR_SHOWN_SELECTOR } from '../../../../redux/transient/selectors'
-import { EAR_COLUMN_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
+import { mapEarColumnIndex } from '../../../../redux/selected/selectors'
 import { IS_DESKTOP_WIDTH_SELECTOR } from '../../../../redux/viewport/selectors'
 import './style'
 
@@ -19,7 +19,7 @@ const LyricToggleEar = () => {
     const
         dispatchEarColumn = useRef(),
         isEarShown = useSelector(IS_EAR_SHOWN_SELECTOR),
-        earColumnIndex = useSelector(EAR_COLUMN_INDEX_SELECTOR),
+        earColumnIndex = useSelector(mapEarColumnIndex),
         isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
         handleButtonClick = () => {
             dispatchEarColumn.current()

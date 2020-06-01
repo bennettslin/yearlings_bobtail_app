@@ -5,11 +5,11 @@ import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateLyricStore } from '../../../redux/lyric/action'
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
 import { populateRefs } from '../../../helpers/ref'
-import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
+import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_VERSE_INDEX_SELECTOR,
-    SELECTED_ANNOTATION_INDEX_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex,
+    mapSelectedAnnotationIndex
 } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
@@ -21,10 +21,10 @@ const mapStateToProps = state => {
                 isSongSelectInFlux
             }
         } = state,
-        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
+        canCarouselMount = mapCanCarouselMount(state),
+        selectedSongIndex = mapSelectedSongIndex(state),
+        selectedVerseIndex = mapSelectedVerseIndex(state),
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state)
 
     return {
         canCarouselMount,

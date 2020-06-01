@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux'
 import Unit from '../../Unit'
 import { getUnitIndicesForStanza } from '../../../album/api/stanzas'
 import { getLogicClassNamesForStanza } from '../../../helpers/stanza'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 
 const Stanza = ({
@@ -18,7 +18,7 @@ const Stanza = ({
 
 }) => {
     const
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
         stanzaUnitIndices = getUnitIndicesForStanza(
             lyricSongIndex,
             stanzaIndex

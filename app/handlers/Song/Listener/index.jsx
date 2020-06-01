@@ -10,10 +10,10 @@ import {
 } from '../../../redux/session/action'
 import { resetVerseBars } from '../../../redux/verseBars/action'
 import { getBookForSongIndex } from '../../../album/api/songs'
-import { SELECTED_SONG_INDEX_SELECTOR } from '../../../redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
+    const selectedSongIndex = mapSelectedSongIndex(state)
 
     return {
         selectedSongIndex

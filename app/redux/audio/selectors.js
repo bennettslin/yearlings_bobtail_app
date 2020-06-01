@@ -1,19 +1,19 @@
-export const QUEUED_PLAY_FROM_LOGUE_SELECTOR = (
+export const mapQueuedPlayFromLogue = (
     { audioStore: { queuedPlayFromLogue } }
 ) => queuedPlayFromLogue
 
-export const QUEUED_PLAY_SONG_INDEX_SELECTOR = (
+export const mapQueuedPlaySongIndex = (
     { audioStore: { queuedPlaySongIndex } }
 ) => queuedPlaySongIndex
 
-export const QUEUED_PLAY_VERSE_INDEX_SELECTOR = (
+export const mapQueuedPlayVerseIndex = (
     { audioStore: { queuedPlayVerseIndex } }
 ) => queuedPlayVerseIndex
 
-export const IS_PLAYING_SELECTOR = (
+export const mapIsPlaying = (
     { audioStore: { isPlaying } }
 ) => isPlaying
 
-export const QUEUED_TOGGLE_PLAY_SELECTOR = (
+export const mapQueuedTogglePlay = (
     { audioStore: { queuedTogglePlay } }
 ) => queuedTogglePlay

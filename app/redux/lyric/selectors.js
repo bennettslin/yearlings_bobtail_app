@@ -1,24 +1,24 @@
 import { createSelector } from "reselect"
 
-export const LYRIC_SONG_INDEX_SELECTOR = (
+export const mapLyricSongIndex = (
     { lyricStore: { lyricSongIndex } }
 ) => lyricSongIndex
 
-export const LYRIC_VERSE_INDEX_SELECTOR = (
+export const mapLyricVerseIndex = (
     { lyricStore: { lyricVerseIndex } }
 ) => lyricVerseIndex
 
-export const LYRIC_ANNOTATION_INDEX_SELECTOR = (
+export const mapLyricAnnotationIndex = (
     { lyricStore: { lyricAnnotationIndex } }
 ) => lyricAnnotationIndex
 
-export const IS_LYRIC_LOGUE_SELECTOR = (
+export const mapIsLyricLogue = (
     { lyricStore: { isLyricLogue } }
 ) => isLyricLogue
 
-export const IS_SELECTED_LYRIC_ANNOTATION = annotationIndex => (
+export const mapIsSelectedLyricAnnotation = annotationIndex => (
     createSelector(
-        LYRIC_ANNOTATION_INDEX_SELECTOR,
+        mapLyricAnnotationIndex,
         (
             lyricAnnotationIndex
         ) => (

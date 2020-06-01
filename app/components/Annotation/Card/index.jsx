@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import DotSequence from '../../DotSequence'
 import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
@@ -23,7 +23,7 @@ const AnnotationCard = ({
 
 }) => {
     const
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
         description = getDescriptionForAnnotationCard(
             lyricSongIndex,
             annotationIndex,

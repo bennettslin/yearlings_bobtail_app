@@ -13,10 +13,10 @@ import { updateToggleStore } from '../../../redux/toggle/action'
 import { getStartTimeForVerse } from '../../../album/api/time'
 import { getSceneIndexForVerse } from '../../../album/api/verses'
 import { getSongsAndLoguesCount } from '../../../album/api/songs'
-import { SELECTED_SONG_INDEX_SELECTOR } from '../../../redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
+    const selectedSongIndex = mapSelectedSongIndex(state)
 
     return {
         selectedSongIndex

@@ -9,7 +9,7 @@ import {
     getShowWormholesTip,
     getShowWikiTip
 } from '../../../album/api/tips'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import {
     ANNOTATION,
     ACTIVATED_VERSE,
@@ -23,7 +23,7 @@ const UnitTipsHands = ({
 
 }) => {
     const
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
         showAnnotationTip = getShowAnnotationTip(lyricSongIndex, unitIndex),
         showStanzaTabTip = getShowStanzaTabTip(lyricSongIndex, unitIndex),
         showActivatedTip = getShowActivatedTip(lyricSongIndex, unitIndex),

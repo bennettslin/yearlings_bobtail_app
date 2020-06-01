@@ -7,8 +7,8 @@ import Popup from '../../Popup'
 import { getShowTipForDevice } from '../../../album/api/tips'
 import { SHOWN } from '../../../constants/options'
 import {
-    LYRIC_SONG_INDEX_SELECTOR,
-    IS_LYRIC_LOGUE_SELECTOR
+    mapLyricSongIndex,
+    mapIsLyricLogue
 } from '../../../redux/lyric/selectors'
 import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
 import {
@@ -22,8 +22,8 @@ const mapStateToProps = state => {
     const {
             entranceStore: { canLyricCarouselEnter }
         } = state,
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
+        lyricSongIndex = mapLyricSongIndex(state),
+        isLyricLogue = mapIsLyricLogue(state),
         selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
         isPhoneWidth = IS_PHONE_WIDTH_SELECTOR(state),
         isTabletWidth = IS_TABLET_WIDTH_SELECTOR(state),

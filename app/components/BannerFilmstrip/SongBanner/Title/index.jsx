@@ -3,12 +3,12 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import { getIndexedTitleForSong } from '../../../../album/api/songs'
-import { SELECTED_SONG_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../../../redux/selected/selectors'
 import './style'
 
 const SongBannerTitle = () => {
     const
-        selectedSongIndex = useSelector(SELECTED_SONG_INDEX_SELECTOR),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
         songTitle = getIndexedTitleForSong(selectedSongIndex)
 
     return (

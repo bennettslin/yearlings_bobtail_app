@@ -1,11 +1,11 @@
-export const QUEUED_ANNOTATION_INDEX_SELECTOR = (
+export const mapQueuedAnnotationIndex = (
     { annotationStore: { queuedAnnotationIndex } }
 ) => queuedAnnotationIndex
 
-export const QUEUED_ANNOTATION_FROM_CAROUSEL_SELECTOR = (
+export const mapQueuedAnnotationFromCarousel = (
     { annotationStore: { queuedAnnotationFromCarousel } }
 ) => queuedAnnotationFromCarousel
 
-export const QUEUED_ANNOTATION_FROM_LYRIC_VERSE_SELECTOR = (
+export const mapQueuedAnnotationFromLyricVerse = (
     { annotationStore: { queuedAnnotationFromLyricVerse } }
 ) => queuedAnnotationFromLyricVerse

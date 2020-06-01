@@ -12,14 +12,14 @@ import {
     getSkySeasonForScene
 } from '../../../album/api/scenes'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_SCENE_INDEX_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedSceneIndex
 } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedSceneIndex = SELECTED_SCENE_INDEX_SELECTOR(state)
+        selectedSongIndex = mapSelectedSongIndex(state),
+        selectedSceneIndex = mapSelectedSceneIndex(state)
 
     return {
         selectedSongIndex,

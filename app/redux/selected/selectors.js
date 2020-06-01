@@ -1,27 +1,27 @@
-export const SELECTED_SONG_INDEX_SELECTOR = (
+export const mapSelectedSongIndex = (
     { selectedStore: { selectedSongIndex } }
 ) => selectedSongIndex
 
-export const SELECTED_VERSE_INDEX_SELECTOR = (
+export const mapSelectedVerseIndex = (
     { selectedStore: { selectedVerseIndex } }
 ) => selectedVerseIndex
 
-export const SELECTED_ANNOTATION_INDEX_SELECTOR = (
+export const mapSelectedAnnotationIndex = (
     { selectedStore: { selectedAnnotationIndex } }
 ) => selectedAnnotationIndex
 
-export const SELECTED_SCENE_INDEX_SELECTOR = (
+export const mapSelectedSceneIndex = (
     { selectedStore: { selectedSceneIndex } }
 ) => selectedSceneIndex
 
-export const IS_SELECTED_LOGUE_SELECTOR = (
+export const mapIsSelectedLogue = (
     { selectedStore: { isSelectedLogue } }
 ) => isSelectedLogue
 
-export const SELECTED_TIME_SELECTOR = (
+export const mapSelectedTime = (
     { selectedStore: { selectedTime } }
 ) => selectedTime
 
-export const EAR_COLUMN_INDEX_SELECTOR = (
+export const mapEarColumnIndex = (
     { selectedStore: { earColumnIndex } }
 ) => earColumnIndex

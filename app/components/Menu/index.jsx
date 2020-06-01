@@ -11,7 +11,7 @@ import Audio from '../Audio'
 import BannerFilmstrip from '../BannerFilmstrip'
 import Slider from '../Slider'
 import { getMenuMarginInOverlay } from './helper'
-import { CAN_SLIDER_MOUNT_SELECTOR } from '../../redux/mount/selectors'
+import { mapCanSliderMount } from '../../redux/mount/selectors'
 import {
     IS_TWO_ROW_MENU_SELECTOR,
     MENU_HEIGHT_SELECTOR
@@ -24,7 +24,7 @@ import './style'
 
 const mapStateToProps = state => {
     const
-        canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state),
+        canSliderMount = mapCanSliderMount(state),
         isTwoRowMenu = IS_TWO_ROW_MENU_SELECTOR(state),
         menuHeight = MENU_HEIGHT_SELECTOR(state),
         windowWidth = WINDOW_WIDTH_SELECTOR(state),

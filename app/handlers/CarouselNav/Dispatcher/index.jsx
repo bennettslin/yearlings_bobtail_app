@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { ACCESSED_ANNOTATION_INDEX_SELECTOR } from '../../../redux/access/selectors'
-import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
-import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
+import { mapAccessedAnnotationIndex } from '../../../redux/access/selectors'
+import { mapDotsBitNumber } from '../../../redux/dots/selectors'
+import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 import {
-    SELECTED_ANNOTATION_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR
+    mapSelectedAnnotationIndex,
+    mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
 import {
     IS_CAROUSEL_SHOWN_SELECTOR,
@@ -18,11 +18,11 @@ import {
 
 const mapStateToProps = state => {
     const
-        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
-        dotsBitNumber = DOTS_BIT_NUMBER_SELECTOR(state),
-        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        accessedAnnotationIndex = mapAccessedAnnotationIndex(state),
+        dotsBitNumber = mapDotsBitNumber(state),
+        canCarouselMount = mapCanCarouselMount(state),
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
+        isSelectedLogue = mapIsSelectedLogue(state),
         isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
         isNavShown = IS_NAV_SHOWN_SELECTOR(state),
         isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)

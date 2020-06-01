@@ -7,8 +7,8 @@ import { getIsTabletWidth } from '../../helpers/responsive'
 import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import {
-    CAN_CAROUSEL_MOUNT_SELECTOR,
-    CAN_SLIDER_MOUNT_SELECTOR
+    mapCanCarouselMount,
+    mapCanSliderMount
 } from '../../redux/mount/selectors'
 import {
     DEVICE_WIDTH_INDEX_SELECTOR,
@@ -21,8 +21,8 @@ const DeviceWrapper = ({ children }) => {
         deviceWidthIndex = useSelector(DEVICE_WIDTH_INDEX_SELECTOR),
         isPhoneWidth = useSelector(IS_PHONE_WIDTH_SELECTOR),
         isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
-        canCarouselMount = useSelector(CAN_CAROUSEL_MOUNT_SELECTOR),
-        canSliderMount = useSelector(CAN_SLIDER_MOUNT_SELECTOR),
+        canCarouselMount = useSelector(mapCanCarouselMount),
+        canSliderMount = useSelector(mapCanSliderMount),
 
         deviceWidthKey =
             DEVICE_WIDTH_CONFIGS[deviceWidthIndex] &&

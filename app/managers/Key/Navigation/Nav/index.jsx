@@ -14,14 +14,14 @@ import {
     ARROW_RIGHT,
     ENTER
 } from '../../../../constants/access'
-import { ACCESSED_NAV_INDEX_SELECTOR } from '../../../../redux/access/selectors'
-import { SELECTED_SONG_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
+import { mapAccessedNavIndex } from '../../../../redux/access/selectors'
+import { mapSelectedSongIndex } from '../../../../redux/selected/selectors'
 import { SHOWN_NAV_BOOK_INDEX_SELECTOR } from '../../../../redux/session/selectors'
 
 const mapStateToProps = state => {
     const
-        accessedNavIndex = ACCESSED_NAV_INDEX_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
+        accessedNavIndex = mapAccessedNavIndex(state),
+        selectedSongIndex = mapSelectedSongIndex(state),
         shownNavBookIndex = SHOWN_NAV_BOOK_INDEX_SELECTOR(state)
 
     return {

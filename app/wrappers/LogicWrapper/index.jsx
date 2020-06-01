@@ -6,15 +6,15 @@ import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
 import { getCursorIndex } from '../../helpers/verse'
 import { getStanzaIndexForVerse } from '../../album/api/verses'
 import {
-    IS_ACTIVATED_SELECTOR,
-    ACTIVATED_VERSE_INDEX_SELECTOR
+    mapIsActivated,
+    mapActivatedVerseIndex
 } from '../../redux/activated/selectors'
-import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
-import { DOTS_BIT_NUMBER_SELECTOR } from '../../redux/dots/selectors'
+import { mapIsPlaying } from '../../redux/audio/selectors'
+import { mapDotsBitNumber } from '../../redux/dots/selectors'
 import {
-    IS_LYRIC_LOGUE_SELECTOR,
-    LYRIC_SONG_INDEX_SELECTOR,
-    LYRIC_VERSE_INDEX_SELECTOR
+    mapIsLyricLogue,
+    mapLyricSongIndex,
+    mapLyricVerseIndex
 } from '../../redux/lyric/selectors'
 import {
     IS_SLIDER_MOVING_SELECTOR,
@@ -27,13 +27,13 @@ import {
 
 const LogicWrapper = ({ children }) => {
     const
-        isActivated = useSelector(IS_ACTIVATED_SELECTOR),
-        activatedVerseIndex = useSelector(ACTIVATED_VERSE_INDEX_SELECTOR),
-        isPlaying = useSelector(IS_PLAYING_SELECTOR),
-        dotsBitNumber = useSelector(DOTS_BIT_NUMBER_SELECTOR),
-        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
-        lyricVerseIndex = useSelector(LYRIC_VERSE_INDEX_SELECTOR),
+        isActivated = useSelector(mapIsActivated),
+        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
+        isPlaying = useSelector(mapIsPlaying),
+        dotsBitNumber = useSelector(mapDotsBitNumber),
+        isLyricLogue = useSelector(mapIsLyricLogue),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        lyricVerseIndex = useSelector(mapLyricVerseIndex),
         isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
         sliderVerseIndex = useSelector(SLIDER_VERSE_INDEX_SELECTOR),
         isVerseBarAbove = useSelector(IS_VERSE_BAR_ABOVE_SELECTOR),

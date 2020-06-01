@@ -12,7 +12,7 @@ import { CAROUSEL_NAV_BUTTON_KEY } from '../../../constants/buttons'
 import { populateRefs } from '../../../helpers/ref'
 import { getCarouselNavIdentifier } from '../../../constants/options'
 import { CAROUSEL, NAV } from '../../../constants/tips'
-import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
+import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 import {
     IS_CAROUSEL_SHOWN_SELECTOR,
     IS_NAV_SHOWN_SELECTOR
@@ -21,7 +21,7 @@ import './style'
 
 const mapStateToProps = state => {
     const
-        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state),
+        canCarouselMount = mapCanCarouselMount(state),
         isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
         isNavShown = IS_NAV_SHOWN_SELECTOR(state)
 

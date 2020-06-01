@@ -9,7 +9,7 @@ import {
 } from '../../../../../album/api/time'
 import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../../../redux/lyric/selectors'
 import './style'
 
 const SliderVerses = ({
@@ -18,7 +18,7 @@ const SliderVerses = ({
 
 }) => {
     const
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
         stanzaVerseIndices = getVerseIndicesForStanza(
             lyricSongIndex,
             stanzaIndex

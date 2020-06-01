@@ -1,3 +1,3 @@
-export const DOTS_SLIDE_BIT_NUMBER_SELECTOR = (
+export const mapDotsSlideBitNumber = (
     { dotsSlideStore: { dotsSlideBitNumber } }
 ) => dotsSlideBitNumber

@@ -2,16 +2,16 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { CAN_SCORE_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
-import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
+import { mapCanScoreMount } from '../../../redux/mount/selectors'
+import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 import { IS_SCORE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
 
 const ScoreDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         isScoreShown = useSelector(IS_SCORE_SHOWN_SELECTOR),
-        canScoreMount = useSelector(CAN_SCORE_MOUNT_SELECTOR),
-        isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
+        canScoreMount = useSelector(mapCanScoreMount),
+        isSelectedLogue = useSelector(mapIsSelectedLogue),
         dispatchScore = (
             // Just toggle unless parent specifies value.
             triedIsScoreShown = !isScoreShown

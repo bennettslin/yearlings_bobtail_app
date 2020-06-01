@@ -1,44 +1,44 @@
 import { createSelector } from 'reselect'
 import { getIsAccessedIndexedAnchorShown } from '../../helpers/access'
-import { IS_ACTIVATED_SELECTOR } from '../activated/selectors'
-import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../lyric/selectors'
+import { mapIsActivated } from '../activated/selectors'
+import { mapLyricAnnotationIndex } from '../lyric/selectors'
 import {
     IS_DOTS_SLIDE_SHOWN_SELECTOR,
     IS_NAV_SHOWN_SELECTOR,
     IS_LYRIC_EXPANDED_SELECTOR
 } from '../toggle/selectors'
 
-export const IS_ACCESS_ON_SELECTOR = (
+export const mapIsAccessOn = (
     { accessStore: { isAccessOn } }
 ) => isAccessOn
 
-export const ACCESSED_DOT_INDEX_SELECTOR = (
+export const mapAccessedDotIndex = (
     { accessStore: { accessedDotIndex } }
 ) => accessedDotIndex
 
-export const ACCESSED_NAV_INDEX_SELECTOR = (
+export const mapAccessedNavIndex = (
     { accessStore: { accessedNavIndex } }
 ) => accessedNavIndex
 
-export const ACCESSED_KEY_SELECTOR = (
+export const mapAccessedKey = (
     { accessStore: { accessedKey } }
 ) => accessedKey
 
-export const ACCESSED_ANNOTATION_INDEX_SELECTOR = (
+export const mapAccessedAnnotationIndex = (
     { accessStore: { accessedAnnotationIndex } }
 ) => accessedAnnotationIndex
 
-export const ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR = (
+export const mapAccessedWikiWormholeIndex = (
     { accessStore: { accessedWikiWormholeIndex } }
 ) => accessedWikiWormholeIndex
 
-export const IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR = createSelector(
-    IS_ACCESS_ON_SELECTOR,
+export const mapIsAccessedIndexedAnchorShown = createSelector(
+    mapIsAccessOn,
     IS_DOTS_SLIDE_SHOWN_SELECTOR,
     IS_NAV_SHOWN_SELECTOR,
     IS_LYRIC_EXPANDED_SELECTOR,
-    LYRIC_ANNOTATION_INDEX_SELECTOR,
-    IS_ACTIVATED_SELECTOR,
+    mapLyricAnnotationIndex,
+    mapIsActivated,
     (
         isAccessOn,
         isDotsSlideShown,
@@ -56,9 +56,9 @@ export const IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR = createSelector(
     })
 )
 
-export const IS_ACCESSED_ANNOTATION = annotationIndex => createSelector(
-    IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
-    ACCESSED_ANNOTATION_INDEX_SELECTOR,
+export const mapIsAccessedAnnotation = annotationIndex => createSelector(
+    mapIsAccessedIndexedAnchorShown,
+    mapAccessedAnnotationIndex,
     (
         isAccessedIndexedAnchorShown,
         accessedAnnotationIndex

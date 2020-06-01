@@ -1,12 +1,12 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateSessionStore } from '../../redux/session/action'
-import { REFERENCE_SELECTOR } from '../../redux/dots/selectors'
+import { mapReferenceDot } from '../../redux/dots/selectors'
 
 const WikiDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        isWikiDotSelected = useSelector(REFERENCE_SELECTOR),
+        isWikiDotSelected = useSelector(mapReferenceDot),
         dispatchWiki = (
             selectedWikiIndex,
             carouselAnnotationIndex = 0

@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { CAN_SCORE_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
+import { mapCanScoreMount } from '../../../redux/mount/selectors'
 import { MENU_HEIGHT_SELECTOR } from '../../../redux/responsive/selectors'
 
 import AnnotationPopup from '../Annotation'
@@ -11,7 +11,7 @@ import WikiPopup from '../Wiki'
 
 const MainPopups = () => {
     const
-        canScoreMount = useSelector(CAN_SCORE_MOUNT_SELECTOR),
+        canScoreMount = useSelector(mapCanScoreMount),
         menuHeight = useSelector(MENU_HEIGHT_SELECTOR)
 
     return (

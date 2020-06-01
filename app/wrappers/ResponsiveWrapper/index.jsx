@@ -8,7 +8,7 @@ import {
     IS_LYRIC_EXPANDABLE_SELECTOR,
     SHOW_SHRUNK_NAV_ICON_SELECTOR
 } from '../../redux/responsive/selectors'
-import { EAR_COLUMN_INDEX_SELECTOR } from '../../redux/selected/selectors'
+import { mapEarColumnIndex } from '../../redux/selected/selectors'
 import {
     IS_CAROUSEL_NAV_SHOWABLE_SELECTOR,
     IS_TIPS_SHOWABLE_SELECTOR,
@@ -20,7 +20,7 @@ const ResponsiveWrapper = ({ children }) => {
         isHeightlessLyric = useSelector(IS_HEIGHTLESS_LYRIC_SELECTOR),
         isLyricExpandable = useSelector(IS_LYRIC_EXPANDABLE_SELECTOR),
         showShrunkNavIcon = useSelector(SHOW_SHRUNK_NAV_ICON_SELECTOR),
-        earColumnIndex = useSelector(EAR_COLUMN_INDEX_SELECTOR),
+        earColumnIndex = useSelector(mapEarColumnIndex),
         isCarouselNavShowable = useSelector(IS_CAROUSEL_NAV_SHOWABLE_SELECTOR),
         isTipsShowable = useSelector(IS_TIPS_SHOWABLE_SELECTOR),
         isEarShown = useSelector(IS_EAR_SHOWN_SELECTOR),

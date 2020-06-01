@@ -4,18 +4,18 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { PARENT_ACCESS_PREFIX } from '../../constants/prefixes'
 import {
-    IS_ACCESS_ON_SELECTOR,
-    ACCESSED_KEY_SELECTOR
+    mapIsAccessOn,
+    mapAccessedKey
 } from '../../redux/access/selectors'
-import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
-import { IS_LYRIC_LOGUE_SELECTOR } from '../../redux/lyric/selectors'
+import { mapIsPlaying } from '../../redux/audio/selectors'
+import { mapIsLyricLogue } from '../../redux/lyric/selectors'
 
 const PlayingWrapper = ({ children }) => {
     const
-        isAccessOn = useSelector(IS_ACCESS_ON_SELECTOR),
-        accessedKey = useSelector(ACCESSED_KEY_SELECTOR),
-        isPlaying = useSelector(IS_PLAYING_SELECTOR),
-        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR)
+        isAccessOn = useSelector(mapIsAccessOn),
+        accessedKey = useSelector(mapAccessedKey),
+        isPlaying = useSelector(mapIsPlaying),
+        isLyricLogue = useSelector(mapIsLyricLogue)
 
     return (
         <div

@@ -11,18 +11,18 @@ import {
     ENTER
 } from '../../../../constants/access'
 import {
-    IS_ACCESS_ON_SELECTOR,
-    ACCESSED_ANNOTATION_INDEX_SELECTOR
+    mapIsAccessOn,
+    mapAccessedAnnotationIndex
 } from '../../../../redux/access/selectors'
-import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../../redux/activated/selectors'
-import { SELECTED_VERSE_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
+import { mapActivatedVerseIndex } from '../../../../redux/activated/selectors'
+import { mapSelectedVerseIndex } from '../../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const
-        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
-        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
-        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state)
+        isAccessOn = mapIsAccessOn(state),
+        accessedAnnotationIndex = mapAccessedAnnotationIndex(state),
+        activatedVerseIndex = mapActivatedVerseIndex(state),
+        selectedVerseIndex = mapSelectedVerseIndex(state)
 
     return {
         isAccessOn,

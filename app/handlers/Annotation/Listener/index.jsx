@@ -9,32 +9,32 @@ import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
 import { getVerseIndexForAnnotation } from '../../../album/api/annotations'
 import { populateRefs } from '../../../helpers/ref'
-import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import {
-    QUEUED_ANNOTATION_INDEX_SELECTOR,
-    QUEUED_ANNOTATION_FROM_CAROUSEL_SELECTOR,
-    QUEUED_ANNOTATION_FROM_LYRIC_VERSE_SELECTOR
+    mapQueuedAnnotationIndex,
+    mapQueuedAnnotationFromCarousel,
+    mapQueuedAnnotationFromLyricVerse
 } from '../../../redux/annotation/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_VERSE_INDEX_SELECTOR,
-    SELECTED_ANNOTATION_INDEX_SELECTOR,
-    EAR_COLUMN_INDEX_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex,
+    mapSelectedAnnotationIndex,
+    mapEarColumnIndex
 } from '../../../redux/selected/selectors'
 import { IS_EAR_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
 import { IS_DOTS_SLIDE_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
-        queuedAnnotationIndex = QUEUED_ANNOTATION_INDEX_SELECTOR(state),
-        queuedAnnotationFromCarousel = QUEUED_ANNOTATION_FROM_CAROUSEL_SELECTOR(state),
-        queuedAnnotationFromLyricVerse = QUEUED_ANNOTATION_FROM_LYRIC_VERSE_SELECTOR(state),
+        activatedVerseIndex = mapActivatedVerseIndex(state),
+        queuedAnnotationIndex = mapQueuedAnnotationIndex(state),
+        queuedAnnotationFromCarousel = mapQueuedAnnotationFromCarousel(state),
+        queuedAnnotationFromLyricVerse = mapQueuedAnnotationFromLyricVerse(state),
         isEarShown = IS_EAR_SHOWN_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
-        earColumnIndex = EAR_COLUMN_INDEX_SELECTOR(state),
+        selectedSongIndex = mapSelectedSongIndex(state),
+        selectedVerseIndex = mapSelectedVerseIndex(state),
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
+        earColumnIndex = mapEarColumnIndex(state),
         isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state)
 
     return {

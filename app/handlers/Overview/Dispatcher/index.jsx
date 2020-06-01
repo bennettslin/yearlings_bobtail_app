@@ -12,7 +12,7 @@ import {
 } from '../../../redux/option/selectors'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
 import { TOGGLE_SHOWS_OVERVIEW_IMMEDIATELY_SELECTOR } from '../../../redux/transient/selectors'
-import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
+import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 
 const OverviewDispatcher = forwardRef((props, ref) => {
     const
@@ -22,7 +22,7 @@ const OverviewDispatcher = forwardRef((props, ref) => {
         isLogueOverviewShown = useSelector(IS_LOGUE_OVERVIEW_SHOWN_SELECTOR),
         selectedOverviewOption = useSelector(SELECTED_OVERVIEW_OPTION_SELECTOR),
         selectedTipsOption = useSelector(SELECTED_TIPS_OPTION_SELECTOR),
-        isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
+        isSelectedLogue = useSelector(mapIsSelectedLogue),
         _dispatchLogueOverview = () => {
             // Don't allow overview to be toggled if not heightless.
             if (!isHeightlessLyric) {

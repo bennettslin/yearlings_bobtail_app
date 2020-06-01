@@ -2,8 +2,8 @@ import { createSelector } from 'reselect'
 import { getWikiUrl } from '../../helpers/wiki'
 import { IS_MOBILE_WIKI_SELECTOR } from '../responsive/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_ANNOTATION_INDEX_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedAnnotationIndex
 } from '../selected/selectors'
 
 export const SHOWN_NAV_BOOK_INDEX_SELECTOR = (
@@ -25,8 +25,8 @@ const CAROUSEL_ANNOTATION_INDEX_SELECTOR = (
 export const SELECTED_WIKI_URL_SELECTOR = createSelector(
     SELECTED_WIKI_INDEX_SELECTOR,
     CAROUSEL_ANNOTATION_INDEX_SELECTOR,
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_ANNOTATION_INDEX_SELECTOR,
+    mapSelectedSongIndex,
+    mapSelectedAnnotationIndex,
     IS_MOBILE_WIKI_SELECTOR,
     (
         selectedWikiIndex,

@@ -5,14 +5,14 @@ import cx from 'classnames'
 import { getSongTipType } from '../../album/api/tips'
 import { WIKI, WORMHOLES } from '../../constants/tips'
 import {
-    REFERENCE_SELECTOR,
-    WORMHOLE_SELECTOR
+    mapReferenceDot,
+    mapWormholeDot
 } from '../../redux/dots/selectors'
 import { CAN_LYRIC_CAROUSEL_ENTER_SELECTOR } from '../../redux/entrance/selectors'
 import {
-    IS_LYRIC_LOGUE_SELECTOR,
-    LYRIC_SONG_INDEX_SELECTOR,
-    LYRIC_ANNOTATION_INDEX_SELECTOR
+    mapIsLyricLogue,
+    mapLyricSongIndex,
+    mapLyricAnnotationIndex
 } from '../../redux/lyric/selectors'
 import {
     TIPS_SHOWN_SELECTOR,
@@ -28,12 +28,12 @@ import { IS_OVERLAY_SHOWN_SELECTOR } from '../../redux/transient/selectors'
 
 const ShownWrapper = ({ children }) => {
     const
-        reference = useSelector(REFERENCE_SELECTOR),
-        wormhole = useSelector(WORMHOLE_SELECTOR),
+        reference = useSelector(mapReferenceDot),
+        wormhole = useSelector(mapWormholeDot),
         canLyricCarouselEnter = useSelector(CAN_LYRIC_CAROUSEL_ENTER_SELECTOR),
-        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
-        lyricAnnotationIndex = useSelector(LYRIC_ANNOTATION_INDEX_SELECTOR),
+        isLyricLogue = useSelector(mapIsLyricLogue),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         overviewShown = useSelector(OVERVIEW_SHOWN_SELECTOR),
         tipsShown = useSelector(TIPS_SHOWN_SELECTOR),
         isCarouselShown = useSelector(IS_CAROUSEL_SHOWN_SELECTOR),

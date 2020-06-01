@@ -9,8 +9,8 @@ import { getOverviewForSong } from '../../album/api/songs'
 import { getIsToggleInOverview } from './helper'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../redux/responsive/selectors'
 import {
-    LYRIC_SONG_INDEX_SELECTOR,
-    IS_LYRIC_LOGUE_SELECTOR
+    mapLyricSongIndex,
+    mapIsLyricLogue
 } from '../../redux/lyric/selectors'
 import { IS_PHONE_WIDTH_SELECTOR } from '../../redux/viewport/selectors'
 import './style'
@@ -18,8 +18,8 @@ import './style'
 const Overview = () => {
     const
         isHeightlessLyric = useSelector(IS_HEIGHTLESS_LYRIC_SELECTOR),
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
-        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        isLyricLogue = useSelector(mapIsLyricLogue),
         isPhoneWidth = useSelector(IS_PHONE_WIDTH_SELECTOR),
         overviewText = getOverviewForSong(lyricSongIndex),
 

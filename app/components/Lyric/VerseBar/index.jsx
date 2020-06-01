@@ -10,11 +10,11 @@ import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../album/api/verses'
 import { getCursorIndex } from '../../../helpers/verse'
-import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import {
-    LYRIC_SONG_INDEX_SELECTOR,
-    LYRIC_VERSE_INDEX_SELECTOR,
-    IS_LYRIC_LOGUE_SELECTOR
+    mapLyricSongIndex,
+    mapLyricVerseIndex,
+    mapIsLyricLogue
 } from '../../../redux/lyric/selectors'
 import { SLIDER_VERSE_INDEX_SELECTOR } from '../../../redux/slider/selectors'
 import {
@@ -26,10 +26,10 @@ import './style'
 
 const mapStateToProps = state => {
     const
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        lyricVerseIndex = LYRIC_VERSE_INDEX_SELECTOR(state),
-        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
+        activatedVerseIndex = mapActivatedVerseIndex(state),
+        lyricSongIndex = mapLyricSongIndex(state),
+        lyricVerseIndex = mapLyricVerseIndex(state),
+        isLyricLogue = mapIsLyricLogue(state),
         sliderVerseIndex = SLIDER_VERSE_INDEX_SELECTOR(state),
         isVerseBarAbove = IS_VERSE_BAR_ABOVE_SELECTOR(state),
         isVerseBarBelow = IS_VERSE_BAR_BELOW_SELECTOR(state)

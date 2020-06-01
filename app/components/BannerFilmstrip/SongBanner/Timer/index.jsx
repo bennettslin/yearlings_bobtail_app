@@ -4,16 +4,16 @@ import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import { getFormattedTime } from '../../../../helpers/format'
 import {
-    IS_ACTIVATED_SELECTOR,
-    ACTIVATED_TIME_SELECTOR
+    mapIsActivated,
+    mapActivatedTime
 } from '../../../../redux/activated/selectors'
 import {
-    IS_BANNER_HOVERING_SELECTOR,
-    BANNER_HOVER_TIME_SELECTOR
+    mapIsBannerHovering,
+    mapBannerHoverTime
 } from '../../../../redux/banner/selectors'
 import {
-    IS_SELECTED_LOGUE_SELECTOR,
-    SELECTED_TIME_SELECTOR
+    mapIsSelectedLogue,
+    mapSelectedTime
 } from '../../../../redux/selected/selectors'
 import {
     IS_SLIDER_MOVING_SELECTOR,
@@ -23,12 +23,12 @@ import './style'
 
 const SongBannerTimer = () => {
     const
-        isActivated = useSelector(IS_ACTIVATED_SELECTOR),
-        activatedTime = useSelector(ACTIVATED_TIME_SELECTOR),
-        isBannerHovering = useSelector(IS_BANNER_HOVERING_SELECTOR),
-        bannerHoverTime = useSelector(BANNER_HOVER_TIME_SELECTOR),
-        isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
-        selectedTime = useSelector(SELECTED_TIME_SELECTOR),
+        isActivated = useSelector(mapIsActivated),
+        activatedTime = useSelector(mapActivatedTime),
+        isBannerHovering = useSelector(mapIsBannerHovering),
+        bannerHoverTime = useSelector(mapBannerHoverTime),
+        isSelectedLogue = useSelector(mapIsSelectedLogue),
+        selectedTime = useSelector(mapSelectedTime),
         isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
         sliderTime = useSelector(SLIDER_TIME_SELECTOR)
 

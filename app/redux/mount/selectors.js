@@ -4,7 +4,7 @@ import {
     getLyricOverviewHeight,
     getMainHeight
 } from '../../helpers/resize/mount'
-import { IS_LYRIC_LOGUE_SELECTOR } from '../lyric/selectors'
+import { mapIsLyricLogue } from '../lyric/selectors'
 import {
     IS_HEIGHTLESS_LYRIC_SELECTOR,
     MENU_HEIGHT_SELECTOR
@@ -17,20 +17,20 @@ import {
     IS_DESKTOP_WIDTH_SELECTOR
 } from '../viewport/selectors'
 
-export const CAN_CAROUSEL_MOUNT_SELECTOR = (
+export const mapCanCarouselMount = (
     { mountStore: { canCarouselMount } }
 ) => canCarouselMount
 
-export const CAN_SCORE_MOUNT_SELECTOR = (
+export const mapCanScoreMount = (
     { mountStore: { canScoreMount } }
 ) => canScoreMount
 
-export const CAN_SLIDER_MOUNT_SELECTOR = (
+export const mapCanSliderMount = (
     { mountStore: { canSliderMount } }
 ) => canSliderMount
 
-export const LYRIC_DYNAMIC_HEIGHT_SELECTOR = createSelector(
-    CAN_CAROUSEL_MOUNT_SELECTOR,
+export const mapLyricDynamicHeight = createSelector(
+    mapCanCarouselMount,
     IS_HEIGHTLESS_LYRIC_SELECTOR,
     MENU_HEIGHT_SELECTOR,
     STAGE_HEIGHT_SELECTOR,
@@ -53,9 +53,9 @@ export const LYRIC_DYNAMIC_HEIGHT_SELECTOR = createSelector(
     })
 )
 
-export const LYRIC_OVERVIEW_HEIGHT_STYLE_SELECTOR = createSelector(
-    LYRIC_DYNAMIC_HEIGHT_SELECTOR,
-    IS_LYRIC_LOGUE_SELECTOR,
+export const mapLyricOverviewHeightStyle = createSelector(
+    mapLyricDynamicHeight,
+    mapIsLyricLogue,
     IS_HEIGHTLESS_LYRIC_SELECTOR,
     MENU_HEIGHT_SELECTOR,
     IS_LYRIC_EXPANDED_SELECTOR,
@@ -74,9 +74,9 @@ export const LYRIC_OVERVIEW_HEIGHT_STYLE_SELECTOR = createSelector(
     })
 )
 
-export const MAIN_HEIGHT_SELECTOR = createSelector(
-    CAN_CAROUSEL_MOUNT_SELECTOR,
-    LYRIC_DYNAMIC_HEIGHT_SELECTOR,
+export const mapMainHeight = createSelector(
+    mapCanCarouselMount,
+    mapLyricDynamicHeight,
     IS_HEIGHTLESS_LYRIC_SELECTOR,
     MENU_HEIGHT_SELECTOR,
     IS_DESKTOP_WIDTH_SELECTOR,

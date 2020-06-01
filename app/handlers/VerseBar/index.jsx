@@ -5,10 +5,10 @@ import {
     updateVerseBarsStore,
     resetVerseBarsQueue
 } from '../../redux/verseBars/action'
-import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../redux/activated/selectors'
 import {
-    CAN_SLIDER_MOUNT_SELECTOR,
-    LYRIC_DYNAMIC_HEIGHT_SELECTOR
+    mapCanSliderMount,
+    mapLyricDynamicHeight
 } from '../../redux/mount/selectors'
 import {
     IS_HEIGHTLESS_LYRIC_SELECTOR,
@@ -17,7 +17,7 @@ import {
 } from '../../redux/responsive/selectors'
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'
-import { SELECTED_VERSE_INDEX_SELECTOR } from '../../redux/selected/selectors'
+import { mapSelectedVerseIndex } from '../../redux/selected/selectors'
 import { SLIDER_VERSE_INDEX_SELECTOR } from '../../redux/slider/selectors'
 import { IS_LYRIC_EXPANDED_SELECTOR } from '../../redux/toggle/selectors'
 import {
@@ -33,13 +33,13 @@ import {
 
 const mapStateToProps = state => {
     const
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
+        activatedVerseIndex = mapActivatedVerseIndex(state),
         isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
-        canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state),
-        lyricDynamicHeight = LYRIC_DYNAMIC_HEIGHT_SELECTOR(state),
+        canSliderMount = mapCanSliderMount(state),
+        lyricDynamicHeight = mapLyricDynamicHeight(state),
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
         menuHeight = MENU_HEIGHT_SELECTOR(state),
-        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
+        selectedVerseIndex = mapSelectedVerseIndex(state),
         sliderVerseIndex = SLIDER_VERSE_INDEX_SELECTOR(state),
         isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state),
         isVerseBarAbove = IS_VERSE_BAR_ABOVE_SELECTOR(state),

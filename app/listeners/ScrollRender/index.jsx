@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import { updateScrollCarouselStore } from '../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import {
-    SELECTED_ANNOTATION_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR
+    mapSelectedAnnotationIndex,
+    mapIsSelectedLogue
 } from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
@@ -17,8 +17,8 @@ const mapStateToProps = state => {
                 didLyricEnter
             }
         } = state,
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
+        isSelectedLogue = mapIsSelectedLogue(state)
 
     return {
         isSelectedLogue,

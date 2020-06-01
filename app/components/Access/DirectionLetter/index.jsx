@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import AccessLetter from '../../Access/Letter'
-import { IS_LYRIC_LOGUE_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
 import './style'
 
 const AccessDirectionLetter = ({
@@ -12,7 +12,7 @@ const AccessDirectionLetter = ({
     isNext
 
 }) => {
-    const isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR)
+    const isLyricLogue = useSelector(mapIsLyricLogue)
 
     return (
         <div

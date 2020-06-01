@@ -1,15 +1,15 @@
-export const IS_ACTIVATED_SELECTOR = (
+export const mapIsActivated = (
     { activatedStore: { isActivated } }
 ) => isActivated
 
-export const ACTIVATED_VERSE_INDEX_SELECTOR = (
+export const mapActivatedVerseIndex = (
     { activatedStore: { activatedVerseIndex } }
 ) => activatedVerseIndex
 
-export const ACTIVATED_SCENE_INDEX_SELECTOR = (
+export const mapActivatedSceneIndex = (
     { activatedStore: { activatedSceneIndex } }
 ) => activatedSceneIndex
 
-export const ACTIVATED_TIME_SELECTOR = (
+export const mapActivatedTime = (
     { activatedStore: { activatedTime } }
 ) => activatedTime

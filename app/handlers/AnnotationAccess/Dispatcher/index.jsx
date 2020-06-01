@@ -6,22 +6,22 @@ import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { getAnnotationIndexForVerseIndex } from './helper'
-import { DOTS_BIT_NUMBER_SELECTOR } from '../../../redux/dots/selectors'
+import { mapDotsBitNumber } from '../../../redux/dots/selectors'
 import { IS_EAR_SHOWN_SELECTOR } from '../../../redux/transient/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_VERSE_INDEX_SELECTOR,
-    EAR_COLUMN_INDEX_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex,
+    mapEarColumnIndex
 } from '../../../redux/selected/selectors'
 
 const AnnotationAccessDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        dotsBitNumber = useSelector(DOTS_BIT_NUMBER_SELECTOR),
+        dotsBitNumber = useSelector(mapDotsBitNumber),
         isEarShown = useSelector(IS_EAR_SHOWN_SELECTOR),
-        selectedSongIndex = useSelector(SELECTED_SONG_INDEX_SELECTOR),
-        selectedVerseIndex = useSelector(SELECTED_VERSE_INDEX_SELECTOR),
-        earColumnIndex = useSelector(EAR_COLUMN_INDEX_SELECTOR),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedVerseIndex = useSelector(mapSelectedVerseIndex),
+        earColumnIndex = useSelector(mapEarColumnIndex),
         dispatchAccessedAnnotation = ({
             verseIndex = selectedVerseIndex,
             annotationIndex,

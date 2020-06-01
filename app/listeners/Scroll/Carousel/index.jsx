@@ -12,7 +12,7 @@ import {
     QUEUED_SCROLL_CAROUSEL_INDEX_SELECTOR,
     QUEUED_SCROLL_CAROUSEL_NO_DURATION_SELECTOR
 } from '../../../redux/scrollCarousel/selectors'
-import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
+import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 import { IS_CAROUSEL_SHOWN_SELECTOR } from '../../../redux/toggle/selectors'
 import {
     WINDOW_WIDTH_SELECTOR,
@@ -21,7 +21,7 @@ import {
 
 const mapStateToProps = state => {
     const
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        isSelectedLogue = mapIsSelectedLogue(state),
         isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),
         windowWidth = WINDOW_WIDTH_SELECTOR(state),
         deviceWidthIndex = DEVICE_WIDTH_INDEX_SELECTOR(state),

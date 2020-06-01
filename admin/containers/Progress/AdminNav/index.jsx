@@ -12,12 +12,12 @@ import {
     getAllTasksV2,
     getMaxTotalNeededHoursFromSongs
 } from './helper'
-import { SELECTED_SONG_INDEX_SELECTOR } from '../../../../app/redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../../../app/redux/selected/selectors'
 
 const songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
 
 const mapStateToProps = state => {
-    const selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
+    const selectedSongIndex = mapSelectedSongIndex(state)
 
     return {
         selectedSongIndex

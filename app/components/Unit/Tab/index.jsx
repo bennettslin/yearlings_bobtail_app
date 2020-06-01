@@ -7,7 +7,7 @@ import {
     getFormTypeIndexForUnit,
     getVerseIndicesForUnit
 } from '../../../album/api/units'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 
 const UnitTab = ({
@@ -16,7 +16,7 @@ const UnitTab = ({
 
 }) => {
     const
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
         verseIndex = getVerseIndicesForUnit(lyricSongIndex, unitIndex)[0],
         formType = getFormTypeForUnit(lyricSongIndex, unitIndex),
         formTypeIndex = getFormTypeIndexForUnit(lyricSongIndex, unitIndex),

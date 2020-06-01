@@ -12,16 +12,16 @@ import {
 } from '../../../../constants/access'
 import { DOT_KEYS_COUNT } from '../../../../constants/dots'
 import {
-    IS_ACCESS_ON_SELECTOR,
-    ACCESSED_DOT_INDEX_SELECTOR
+    mapIsAccessOn,
+    mapAccessedDotIndex
 } from '../../../../redux/access/selectors'
 
 const DotsSlideNavigation = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         dispatchSelectDot = useRef(),
-        isAccessOn = useSelector(IS_ACCESS_ON_SELECTOR),
-        accessedDotIndex = useSelector(ACCESSED_DOT_INDEX_SELECTOR),
+        isAccessOn = useSelector(mapIsAccessOn),
+        accessedDotIndex = useSelector(mapAccessedDotIndex),
         navigateDotsSlide = (keyName) => {
             if (isAccessOn) {
                 let nextAccessedDotIndex

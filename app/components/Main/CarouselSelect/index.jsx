@@ -12,11 +12,11 @@ import {
     CAROUSEL_PREVIOUS_BUTTON_KEY,
     CAROUSEL_NEXT_BUTTON_KEY
 } from '../../../constants/buttons'
-import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../../redux/mount/selectors'
+import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state)
+    const canCarouselMount = mapCanCarouselMount(state)
 
     return {
         canCarouselMount

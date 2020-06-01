@@ -7,19 +7,19 @@ import { updateAudioStore } from '../../redux/audio/action'
 import SongDispatcher from '../../handlers/Song/Dispatcher'
 import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
-import { IS_PLAYING_SELECTOR } from '../../redux/audio/selectors'
+import { mapIsPlaying } from '../../redux/audio/selectors'
 import { PLAYERS_BIT_NUMBER_SELECTOR } from '../../redux/players/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR
+    mapSelectedSongIndex,
+    mapIsSelectedLogue
 } from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const
-        isPlaying = IS_PLAYING_SELECTOR(state),
+        isPlaying = mapIsPlaying(state),
         playersBitNumber = PLAYERS_BIT_NUMBER_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state)
+        selectedSongIndex = mapSelectedSongIndex(state),
+        isSelectedLogue = mapIsSelectedLogue(state)
 
     return {
         isPlaying,

@@ -2,8 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { IS_ACTIVATED_SELECTOR } from '../../redux/activated/selectors'
-import { IS_BANNER_HOVERING_SELECTOR } from '../../redux/banner/selectors'
+import { mapIsActivated } from '../../redux/activated/selectors'
+import { mapIsBannerHovering } from '../../redux/banner/selectors'
 import { IS_SCROLLING_SELECTOR } from '../../redux/scrollOverlay/selectors'
 import {
     IS_SLIDER_TOUCHED_SELECTOR,
@@ -13,8 +13,8 @@ import { IS_AUTO_SCROLL_SELECTOR } from '../../redux/toggle/selectors'
 
 const TouchWrapper = ({ children }) => {
     const
-        isActivated = useSelector(IS_ACTIVATED_SELECTOR),
-        isBannerHovering = useSelector(IS_BANNER_HOVERING_SELECTOR),
+        isActivated = useSelector(mapIsActivated),
+        isBannerHovering = useSelector(mapIsBannerHovering),
         isScrolling = useSelector(IS_SCROLLING_SELECTOR),
         isSliderTouched = useSelector(IS_SLIDER_TOUCHED_SELECTOR),
         isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),

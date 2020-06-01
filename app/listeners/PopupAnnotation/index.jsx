@@ -3,9 +3,9 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { LYRIC_ANNOTATION_INDEX_SELECTOR } from '../../redux/lyric/selectors'
+import { mapLyricAnnotationIndex } from '../../redux/lyric/selectors'
 import { updateTransientStore } from '../../redux/transient/action'
-import { CAN_CAROUSEL_MOUNT_SELECTOR } from '../../redux/mount/selectors'
+import { mapCanCarouselMount } from '../../redux/mount/selectors'
 import { IS_OVERLAYING_ANNOTATION_SELECTOR } from '../../redux/transient/selectors'
 import { SELECTED_WIKI_INDEX_SELECTOR } from '../../redux/session/selectors'
 import {
@@ -18,8 +18,8 @@ const mapStateToProps = state => {
     const {
             entranceStore: { canLyricCarouselEnter }
         } = state,
-        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
-        canCarouselMount = CAN_CAROUSEL_MOUNT_SELECTOR(state),
+        lyricAnnotationIndex = mapLyricAnnotationIndex(state),
+        canCarouselMount = mapCanCarouselMount(state),
         isOverlayingAnnotation = IS_OVERLAYING_ANNOTATION_SELECTOR(state),
         selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
         isCarouselShown = IS_CAROUSEL_SHOWN_SELECTOR(state),

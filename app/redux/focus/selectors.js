@@ -1,4 +1,4 @@
-export const QUEUED_FOCUS_SELECTOR = (
+export const mapQueuedFocus = (
     { focusStore: { queuedFocus } }
 ) => queuedFocus
 

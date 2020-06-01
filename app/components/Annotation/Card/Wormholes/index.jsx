@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
 import { getSourceWormholeIndices } from '../../../../album/api/wormholes'
-import { ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR } from '../../../../redux/access/selectors'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../redux/lyric/selectors'
+import { mapAccessedWikiWormholeIndex } from '../../../../redux/access/selectors'
+import { mapLyricSongIndex } from '../../../../redux/lyric/selectors'
 import './style'
 
 const AnnotationWormholes = ({
@@ -15,8 +15,8 @@ const AnnotationWormholes = ({
 
 }) => {
     const
-        accessedWikiWormholeIndex = useSelector(ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR),
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR)
+        accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex),
+        lyricSongIndex = useSelector(mapLyricSongIndex)
 
     /**
      * Iterating through multiple source wormhole indices is necessary only

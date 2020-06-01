@@ -12,10 +12,10 @@ import {
     WIKI
 } from '../../../constants/tips'
 import {
-    REFERENCE_SELECTOR,
-    WORMHOLE_SELECTOR
+    mapReferenceDot,
+    mapWormholeDot
 } from '../../../redux/dots/selectors'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import { SELECTED_TIPS_OPTION_SELECTOR } from '../../../redux/option/selectors'
 import { IS_PHONE_WIDTH_SELECTOR } from '../../../redux/viewport/selectors'
 import './style'
@@ -24,9 +24,9 @@ const mapStateToProps = state => {
     const {
             entranceStore: { didLyricUpdate }
         } = state,
-        reference = REFERENCE_SELECTOR(state),
-        wormhole = WORMHOLE_SELECTOR(state),
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
+        reference = mapReferenceDot(state),
+        wormhole = mapWormholeDot(state),
+        lyricSongIndex = mapLyricSongIndex(state),
         selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
         isPhoneWidth = IS_PHONE_WIDTH_SELECTOR(state)
 

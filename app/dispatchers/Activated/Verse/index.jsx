@@ -7,20 +7,20 @@ import { updateToggleStore } from '../../../redux/toggle/action'
 import { getStartTimeForVerse } from '../../../album/api/time'
 import { getSceneIndexForVerse } from '../../../album/api/verses'
 import { getActivatedVerseForDirection } from './helper'
-import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_VERSE_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex,
+    mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
 
 const ActivatedVerseDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        activatedVerseIndex = useSelector(ACTIVATED_VERSE_INDEX_SELECTOR),
-        selectedSongIndex = useSelector(SELECTED_SONG_INDEX_SELECTOR),
-        selectedVerseIndex = useSelector(SELECTED_VERSE_INDEX_SELECTOR),
-        isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
+        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedVerseIndex = useSelector(mapSelectedVerseIndex),
+        isSelectedLogue = useSelector(mapIsSelectedLogue),
         _queueScrollToActivatedVerse = nextVerseIndex => {
             dispatch(updateScrollLyricStore({
                 queuedScrollLyricLog:

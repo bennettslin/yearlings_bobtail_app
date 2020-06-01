@@ -2,7 +2,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { getDotForUnit } from '../../../../album/api/units'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../../redux/lyric/selectors'
 import { UnitDot, propTypes } from '..'
 
 const UnitDotParent = ({
@@ -11,7 +11,7 @@ const UnitDotParent = ({
 
 }) => {
     const
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
         unitDot = getDotForUnit(lyricSongIndex, unitIndex)
 
     return Boolean(unitDot) && (

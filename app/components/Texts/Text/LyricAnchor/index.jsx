@@ -11,26 +11,26 @@ import Anchor from '../../../Anchor'
 import { populateRefs } from '../../../../helpers/ref'
 import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
 import {
-    IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR,
-    ACCESSED_ANNOTATION_INDEX_SELECTOR,
-    ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR
+    mapIsAccessedIndexedAnchorShown,
+    mapAccessedAnnotationIndex,
+    mapAccessedWikiWormholeIndex
 } from '../../../../redux/access/selectors'
-import { IS_ACTIVATED_SELECTOR } from '../../../../redux/activated/selectors'
+import { mapIsActivated } from '../../../../redux/activated/selectors'
 import {
-    LYRIC_SONG_INDEX_SELECTOR,
-    LYRIC_ANNOTATION_INDEX_SELECTOR
+    mapLyricSongIndex,
+    mapLyricAnnotationIndex
 } from '../../../../redux/lyric/selectors'
 import { IS_SLIDER_MOVING_SELECTOR } from '../../../../redux/slider/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
-        isAccessedIndexedAnchorShown = IS_ACCESSED_INDEXED_ANCHOR_SHOWN_SELECTOR(state),
-        accessedAnnotationIndex = ACCESSED_ANNOTATION_INDEX_SELECTOR(state),
-        accessedWikiWormholeIndex = ACCESSED_WIKI_WORMHOLE_INDEX_SELECTOR(state),
-        isActivated = IS_ACTIVATED_SELECTOR(state),
-        lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state),
-        lyricAnnotationIndex = LYRIC_ANNOTATION_INDEX_SELECTOR(state),
+        isAccessedIndexedAnchorShown = mapIsAccessedIndexedAnchorShown(state),
+        accessedAnnotationIndex = mapAccessedAnnotationIndex(state),
+        accessedWikiWormholeIndex = mapAccessedWikiWormholeIndex(state),
+        isActivated = mapIsActivated(state),
+        lyricSongIndex = mapLyricSongIndex(state),
+        lyricAnnotationIndex = mapLyricAnnotationIndex(state),
         isSliderMoving = IS_SLIDER_MOVING_SELECTOR(state)
 
     return {

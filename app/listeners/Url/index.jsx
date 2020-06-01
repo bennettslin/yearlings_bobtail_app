@@ -5,20 +5,20 @@ import { useHistory } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import { getTitleForSong } from '../../album/api/songs'
 import {
-    LYRIC_SONG_INDEX_SELECTOR,
-    LYRIC_VERSE_INDEX_SELECTOR,
-    LYRIC_ANNOTATION_INDEX_SELECTOR,
-    IS_LYRIC_LOGUE_SELECTOR
+    mapLyricSongIndex,
+    mapLyricVerseIndex,
+    mapLyricAnnotationIndex,
+    mapIsLyricLogue
 } from '../../redux/lyric/selectors'
 import { getPathForIndices } from './helper'
 
 const UrlListener = () => {
     const
         // history = useHistory(),
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
-        lyricVerseIndex = useSelector(LYRIC_VERSE_INDEX_SELECTOR),
-        lyricAnnotationIndex = useSelector(LYRIC_ANNOTATION_INDEX_SELECTOR),
-        isLyricLogue = useSelector(IS_LYRIC_LOGUE_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        lyricVerseIndex = useSelector(mapLyricVerseIndex),
+        lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
+        isLyricLogue = useSelector(mapIsLyricLogue),
         songTitle = isLyricLogue ?
             `Yearling's Bobtail` :
             `${getTitleForSong(lyricSongIndex)} | Yearling's Bobtail`

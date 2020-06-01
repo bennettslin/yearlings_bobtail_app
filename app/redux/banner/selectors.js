@@ -1,11 +1,11 @@
-export const IS_BANNER_HOVERING_SELECTOR = (
+export const mapIsBannerHovering = (
     { bannerStore: { isBannerHovering } }
 ) => isBannerHovering
 
-export const BANNER_HOVER_VERSE_INDEX_SELECTOR = (
+export const mapBannerHoverVerseIndex = (
     { bannerStore: { bannerHoverVerseIndex } }
 ) => bannerHoverVerseIndex
 
-export const BANNER_HOVER_TIME_SELECTOR = (
+export const mapBannerHoverTime = (
     { bannerStore: { bannerHoverTime } }
 ) => bannerHoverTime

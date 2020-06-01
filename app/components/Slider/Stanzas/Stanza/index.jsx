@@ -11,7 +11,7 @@ import {
 } from '../../../../album/api/time'
 import { getLogicClassNamesForStanza } from '../../../../helpers/stanza'
 import { CSS_OVERLAP_MARGIN_X_SLIDER } from '../../../../constants/responsive'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../../redux/lyric/selectors'
 import './style'
 
 const SliderStanza = ({
@@ -19,7 +19,7 @@ const SliderStanza = ({
 
 }) => {
     const
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
         stanzaEndTime = getEndTimeForStanza(lyricSongIndex, stanzaIndex),
         stanzaFormType = getFormTypeForStanza(lyricSongIndex, stanzaIndex),
         stanzaStartTime = getStartTimeForStanza(

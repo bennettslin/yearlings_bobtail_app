@@ -10,15 +10,15 @@ import RootContainer from '../Root'
 import KeyManager from '../../managers/Key'
 import { isEmailFocused } from '../../utils/email'
 import { populateRefs } from '../../helpers/ref'
-import { QUEUED_FOCUS_SELECTOR } from '../../redux/focus/selectors'
-import { CAN_SLIDER_MOUNT_SELECTOR } from '../../redux/mount/selectors'
+import { mapQueuedFocus } from '../../redux/focus/selectors'
+import { mapCanSliderMount } from '../../redux/mount/selectors'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../redux/responsive/selectors'
 import { IS_LYRIC_EXPANDED_SELECTOR } from '../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
-        queuedFocus = QUEUED_FOCUS_SELECTOR(state),
-        canSliderMount = CAN_SLIDER_MOUNT_SELECTOR(state),
+        queuedFocus = mapQueuedFocus(state),
+        canSliderMount = mapCanSliderMount(state),
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
         isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
 

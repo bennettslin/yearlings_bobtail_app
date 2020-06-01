@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import VerseDispatcher from '../VerseDispatcher'
 import { getVerseIndexForScene } from '../../album/api/scenes'
-import { SELECTED_SONG_INDEX_SELECTOR } from '../../redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
             entranceStore: { didSceneEnter }
         } = state,
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
+        selectedSongIndex = mapSelectedSongIndex(state)
 
     return {
         selectedSongIndex,

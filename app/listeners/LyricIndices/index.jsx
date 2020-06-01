@@ -4,19 +4,19 @@ import { connect } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { updateLyricStore } from '../../redux/lyric/action'
 import { populateRefs } from '../../helpers/ref'
-import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../redux/activated/selectors'
 import {
-    SELECTED_SONG_INDEX_SELECTOR,
-    SELECTED_VERSE_INDEX_SELECTOR,
-    SELECTED_ANNOTATION_INDEX_SELECTOR
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex,
+    mapSelectedAnnotationIndex
 } from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state),
-        selectedVerseIndex = SELECTED_VERSE_INDEX_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state)
+        activatedVerseIndex = mapActivatedVerseIndex(state),
+        selectedSongIndex = mapSelectedSongIndex(state),
+        selectedVerseIndex = mapSelectedVerseIndex(state),
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state)
 
     return {
         activatedVerseIndex,

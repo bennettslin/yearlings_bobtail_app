@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import {
-    CAN_SCORE_MOUNT_SELECTOR,
-    CAN_SLIDER_MOUNT_SELECTOR
+    mapCanScoreMount,
+    mapCanSliderMount
 } from '../../redux/mount/selectors'
 
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
@@ -34,8 +34,8 @@ import AudioPlayerManager from '../../managers/AudioPlayer'
 
 const ListenContainer = () => {
     const
-        canScoreMount = useSelector(CAN_SCORE_MOUNT_SELECTOR),
-        canSliderMount = useSelector(CAN_SLIDER_MOUNT_SELECTOR)
+        canScoreMount = useSelector(mapCanScoreMount),
+        canSliderMount = useSelector(mapCanSliderMount)
 
     useEffect(() => {
         logMount('ListenContainer')

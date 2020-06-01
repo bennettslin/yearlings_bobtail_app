@@ -47,7 +47,7 @@ import {
     SELECTED_OVERVIEW_OPTION_SELECTOR,
     SELECTED_TIPS_OPTION_SELECTOR
 } from '../../../redux/option/selectors'
-import { SELECTED_ANNOTATION_INDEX_SELECTOR } from '../../../redux/selected/selectors'
+import { mapSelectedAnnotationIndex } from '../../../redux/selected/selectors'
 import { SELECTED_WIKI_INDEX_SELECTOR } from '../../../redux/session/selectors'
 import {
     IS_NAV_SHOWN_SELECTOR,
@@ -61,7 +61,7 @@ const mapStateToProps = state => {
     const
         selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
         selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
         selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
         isNavShown = IS_NAV_SHOWN_SELECTOR(state),
         isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state),

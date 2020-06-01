@@ -8,7 +8,7 @@ import {
     getIsOverviewVisibleBySection,
     getIsOverviewVisibleBySong
 } from './helper'
-import { IS_LYRIC_LOGUE_SELECTOR } from '../../../redux/lyric/selectors'
+import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
 import {
     IS_LOGUE_OVERVIEW_SHOWN_SELECTOR,
     SELECTED_OVERVIEW_OPTION_SELECTOR,
@@ -21,7 +21,7 @@ const mapStateToProps = state => {
     const {
             entranceStore: { canLyricCarouselEnter }
         } = state,
-        isLyricLogue = IS_LYRIC_LOGUE_SELECTOR(state),
+        isLyricLogue = mapIsLyricLogue(state),
         isLogueOverviewShown = IS_LOGUE_OVERVIEW_SHOWN_SELECTOR(state),
         selectedOverviewOption = SELECTED_OVERVIEW_OPTION_SELECTOR(state),
         selectedTipsOption = SELECTED_TIPS_OPTION_SELECTOR(state),

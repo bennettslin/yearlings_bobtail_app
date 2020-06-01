@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import {
-    CAN_CAROUSEL_MOUNT_SELECTOR,
-    MAIN_HEIGHT_SELECTOR
+    mapCanCarouselMount,
+    mapMainHeight
 } from '../../../redux/mount/selectors'
 import { MENU_HEIGHT_SELECTOR } from '../../../redux/responsive/selectors'
 
@@ -15,8 +15,8 @@ const LayoutContainer = ({
 
 }) => {
     const
-        canCarouselMount = useSelector(CAN_CAROUSEL_MOUNT_SELECTOR),
-        mainHeight = useSelector(MAIN_HEIGHT_SELECTOR),
+        canCarouselMount = useSelector(mapCanCarouselMount),
+        mainHeight = useSelector(mapMainHeight),
         menuHeight = useSelector(MENU_HEIGHT_SELECTOR)
 
     return (alwaysRender || canCarouselMount) && (

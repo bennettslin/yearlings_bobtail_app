@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../../../Texts'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../../redux/lyric/selectors'
 import './style'
 
 const mapStateToProps = state => {
-    const lyricSongIndex = LYRIC_SONG_INDEX_SELECTOR(state)
+    const lyricSongIndex = mapLyricSongIndex(state)
 
     return {
         lyricSongIndex

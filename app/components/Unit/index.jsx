@@ -17,7 +17,7 @@ import {
     getSideCardForUnit
 } from '../../album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../../helpers/stanza'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'
 
 const Unit = ({
@@ -27,7 +27,7 @@ const Unit = ({
 }) => {
     const
         { setLyricAnnotationElement } = other,
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
         verseIndices = getVerseIndicesForUnit(
             lyricSongIndex,
             unitIndex

@@ -8,7 +8,7 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import AccessField from './Field'
 import AccessIcon from './Icon'
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
-import { IS_ACCESS_ON_SELECTOR } from '../../../redux/access/selectors'
+import { mapIsAccessOn } from '../../../redux/access/selectors'
 import {
     IS_TABLET_WIDTH_SELECTOR,
     IS_DESKTOP_WIDTH_SELECTOR
@@ -17,7 +17,7 @@ import './style'
 
 const mapStateToProps = state => {
     const
-        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
+        isAccessOn = mapIsAccessOn(state),
         isTabletWidth = IS_TABLET_WIDTH_SELECTOR(state),
         isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
 

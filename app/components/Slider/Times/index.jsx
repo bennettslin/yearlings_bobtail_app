@@ -7,11 +7,11 @@ import SliderTime from './Time'
 import { getDurationForSong } from '../../../album/api/time'
 import { getFormattedTime } from '../../../helpers/format'
 import {
-    IS_ACTIVATED_SELECTOR,
-    ACTIVATED_TIME_SELECTOR
+    mapIsActivated,
+    mapActivatedTime
 } from '../../../redux/activated/selectors'
-import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
-import { SELECTED_TIME_SELECTOR } from '../../../redux/selected/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
+import { mapSelectedTime } from '../../../redux/selected/selectors'
 import {
     IS_SLIDER_MOVING_SELECTOR,
     SLIDER_TIME_SELECTOR
@@ -20,10 +20,10 @@ import './style'
 
 const SliderTimes = () => {
     const
-        isActivated = useSelector(IS_ACTIVATED_SELECTOR),
-        activatedTime = useSelector(ACTIVATED_TIME_SELECTOR),
-        lyricSongIndex = useSelector(LYRIC_SONG_INDEX_SELECTOR),
-        selectedTime = useSelector(SELECTED_TIME_SELECTOR),
+        isActivated = useSelector(mapIsActivated),
+        activatedTime = useSelector(mapActivatedTime),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        selectedTime = useSelector(mapSelectedTime),
         isSliderMoving = useSelector(IS_SLIDER_MOVING_SELECTOR),
         sliderTime = useSelector(SLIDER_TIME_SELECTOR)
 

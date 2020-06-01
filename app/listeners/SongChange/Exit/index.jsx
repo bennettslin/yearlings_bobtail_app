@@ -2,7 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
-import { SELECTED_SONG_INDEX_SELECTOR } from '../../../redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
     const {
@@ -12,7 +12,7 @@ const mapStateToProps = state => {
                 canLyricCarouselEnter
             }
         } = state,
-        selectedSongIndex = SELECTED_SONG_INDEX_SELECTOR(state)
+        selectedSongIndex = mapSelectedSongIndex(state)
 
     return {
         selectedSongIndex,

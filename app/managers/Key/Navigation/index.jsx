@@ -8,11 +8,11 @@ import LyricNavigation from './Lyric'
 import NavNavigation from './Nav'
 import { populateRefs } from '../../../helpers/ref'
 import { ENTER } from '../../../constants/access'
-import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import { IS_HEIGHTLESS_LYRIC_SELECTOR } from '../../../redux/responsive/selectors'
 import {
-    SELECTED_ANNOTATION_INDEX_SELECTOR,
-    IS_SELECTED_LOGUE_SELECTOR
+    mapSelectedAnnotationIndex,
+    mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
 import { SELECTED_WIKI_INDEX_SELECTOR } from '../../../redux/session/selectors'
 import {
@@ -24,10 +24,10 @@ import {
 
 const mapStateToProps = state => {
     const
-        activatedVerseIndex = ACTIVATED_VERSE_INDEX_SELECTOR(state),
+        activatedVerseIndex = mapActivatedVerseIndex(state),
         isHeightlessLyric = IS_HEIGHTLESS_LYRIC_SELECTOR(state),
-        selectedAnnotationIndex = SELECTED_ANNOTATION_INDEX_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
+        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
+        isSelectedLogue = mapIsSelectedLogue(state),
         selectedWikiIndex = SELECTED_WIKI_INDEX_SELECTOR(state),
         isNavShown = IS_NAV_SHOWN_SELECTOR(state),
         isDotsSlideShown = IS_DOTS_SLIDE_SHOWN_SELECTOR(state),
