@@ -1,9 +1,8 @@
 // Section for dots and overview toggle buttons.
 
-import React, { memo } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import ScoreToggle from '../../Score/Toggle'
 import TipsToggle from '../../Tips/Toggle'
 import DotsSlideToggle from '../DotsSlideToggle'
@@ -12,46 +11,29 @@ import { IS_SHELF_LEFT_SHOWN_SELECTOR } from '../../../redux/transient/selectors
 import { IS_DESKTOP_WIDTH_SELECTOR } from '../../../redux/viewport/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const
-        isShelfLeftShown = IS_SHELF_LEFT_SHOWN_SELECTOR(state),
-        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
-
-    return {
-        isDesktopWidth,
-        isShelfLeftShown
-    }
-}
-
-const propTypes = {
-    // Through Redux.
-    isDesktopWidth: PropTypes.bool.isRequired,
-    isShelfLeftShown: PropTypes.bool.isRequired
-}
-
 const CHILD_SELECTOR = 'ShelfLeft__child'
 
-const ShelfLeft = ({
-    isDesktopWidth,
-    isShelfLeftShown
+const ShelfLeft = () => {
+    const
+        isShelfLeftShown = useSelector(IS_SHELF_LEFT_SHOWN_SELECTOR),
+        isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR)
 
-}) => (
-    <div className={cx(
-        'ShelfLeft',
-        isShelfLeftShown && 'ShelfLeft__shown',
-        'flex__mainSideButtons'
-    )}>
-        <OverviewToggle {...{ className: CHILD_SELECTOR }} />
-        <DotsSlideToggle {...{ className: CHILD_SELECTOR }} />
-        {isDesktopWidth && (
-            <>
-                <ScoreToggle {...{ className: CHILD_SELECTOR }} />
-                <TipsToggle {...{ className: CHILD_SELECTOR }} />
-            </>
-        )}
-    </div>
-)
+    return (
+        <div className={cx(
+            'ShelfLeft',
+            isShelfLeftShown && 'ShelfLeft__shown',
+            'flex__mainSideButtons'
+        )}>
+            <OverviewToggle {...{ className: CHILD_SELECTOR }} />
+            <DotsSlideToggle {...{ className: CHILD_SELECTOR }} />
+            {isDesktopWidth && (
+                <>
+                    <ScoreToggle {...{ className: CHILD_SELECTOR }} />
+                    <TipsToggle {...{ className: CHILD_SELECTOR }} />
+                </>
+            )}
+        </div>
+    )
+}
 
-ShelfLeft.propTypes = propTypes
-
-export default connect(mapStateToProps)(memo(ShelfLeft))
+export default ShelfLeft
