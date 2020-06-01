@@ -8,13 +8,13 @@ const _getIndexedVersesForUnit = (unit) => {
      * are not indexed.
      */
     const {
-        unitMap: { subCard },
-        mainVerses
+        unitMap: { subCard = [] },
+        mainVerses = []
     } = unit
 
     return [
-        ...mainVerses || [],
-        ...subCard || []
+        ...mainVerses,
+        ...subCard
     ]
 }
 

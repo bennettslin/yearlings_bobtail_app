@@ -1,5 +1,5 @@
 import {
-    getVerseIndicesForUnit,
+    getMainVerseIndicesForUnit,
     getSubCardForUnit,
     getSideCardForUnit,
     getSideSubCardForUnit,
@@ -39,7 +39,7 @@ export const getUnitVerses = ({
 
 }) => {
     if (isMainVerses) {
-        const verseIndices = getVerseIndicesForUnit(songIndex, unitIndex)
+        const verseIndices = getMainVerseIndicesForUnit(songIndex, unitIndex)
         if (!verseIndices.length) {
             return null
         }

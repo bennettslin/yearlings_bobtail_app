@@ -13,7 +13,7 @@ import {
     getIsUnitTruncatable,
     getUnitFormType
 } from './helper'
-import { getSubsequentForUnit } from '../../../album/api/units'
+import { getSubsequentForUnit, getMainVerseIndicesForUnit } from '../../../album/api/units'
 import { LYRIC_SONG_INDEX_SELECTOR } from '../../../redux/lyric/selectors'
 import './style'
 
@@ -65,7 +65,7 @@ const UnitCard = ({
 
             // "Parent of verse index."
             getParentOfVerseClassNamesForIndices({
-                entities: verses
+                entities: getMainVerseIndicesForUnit(lyricSongIndex, unitIndex)
             }),
 
             'UnitCard',

@@ -65,6 +65,19 @@ export const getVerseIndicesForUnit = (songIndex, unitIndex) => {
     return unitVerseIndicesList[unitIndex] || []
 }
 
+export const getMainVerseIndicesForUnit = (songIndex, unitIndex) => {
+    const
+        unitVerseIndices = getVerseIndicesForUnit(songIndex, unitIndex),
+        subCard = getSubCardForUnit(songIndex, unitIndex)
+
+    return subCard ?
+        unitVerseIndices.filter(verseIndex => (
+            // If this verse index is in the sub card, it's not a main verse.
+            !subCard.some(verse => verse.verseIndex === verseIndex)
+        )) :
+        unitVerseIndices
+}
+
 export const getIsSideCardOnBottomForUnit = (songIndex, unitIndex) => {
     const { withUnitBottomSideCard } = getSong(songIndex)
     return Boolean(withUnitBottomSideCard) && withUnitBottomSideCard[unitIndex]

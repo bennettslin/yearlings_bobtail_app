@@ -1,6 +1,5 @@
 # Final bugs from unit refactor
-* Need a way to remove subCard verse index from unit verse indices, or else add a new main verse indices array to song. Right now, subCards are repeated.
-* Logic selectors need to be fixed. Just pass verseIndices directly. Unit has all verses, unit card has only its verses.
+* Logic selectors need to be fixed. Just always pass indices array. SubCard should also grab from verseLyrics. Change to withUnitSubCardVerseIndices. Then main verses and subCard should pass verseIndex to verse.
 * What can be removed from data? For example, unit dot anchor title? Get rid of all annotation todos?
 * Maybe rename subCard back to subVerse for clarity?
 
