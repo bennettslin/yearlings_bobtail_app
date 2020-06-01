@@ -113,10 +113,14 @@ class NavNavigation extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchNavBook = dispatch => {
+        this.dispatchNavBook = dispatch
+    }
+
     render() {
         return (
             <>
-                <NavDispatcher {...{ getRefs: this._getRefs }} />
+                <NavDispatcher {...{ ref: this.getDispatchNavBook }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
             </>
         )

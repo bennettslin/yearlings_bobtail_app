@@ -54,6 +54,10 @@ class NavColumn extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchNavBook = dispatch => {
+        this.dispatchNavBook = dispatch
+    }
+
     render() {
         const {
                 showSingleNavBook,
@@ -97,7 +101,7 @@ class NavColumn extends PureComponent {
                         }}
                     />
                 }
-                <NavDispatcher {...{ getRefs: this._getRefs }} />
+                <NavDispatcher {...{ ref: this.getDispatchNavBook }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
