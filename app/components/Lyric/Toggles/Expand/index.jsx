@@ -12,7 +12,6 @@ import {
 } from '../../../../redux/responsive/selectors'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
-import { populateRefs } from '../../../../helpers/ref'
 import { LYRIC_SECTION_EXPAND_KEY } from '../../../../constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from '../../../../constants/buttons'
 import { LYRIC_EXPAND } from '../../../../constants/tips'
@@ -48,8 +47,8 @@ class LyricToggleExpand extends PureComponent {
         this.dispatchLyricExpand()
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchLyricExpand = dispatch => {
+        this.dispatchLyricExpand = dispatch
     }
 
     render() {
@@ -96,7 +95,7 @@ class LyricToggleExpand extends PureComponent {
                         }}
                     />
                     <TipsHand {...{ tipType: LYRIC_EXPAND }} />
-                    <LyricDispatcher {...{ getRefs: this._getRefs }} />
+                    <LyricDispatcher {...{ ref: this.getDispatchLyricExpand }} />
                 </div>
             </CSSTransition>
         )

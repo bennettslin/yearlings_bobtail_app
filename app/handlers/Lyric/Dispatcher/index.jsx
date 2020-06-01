@@ -1,69 +1,40 @@
 // Child that knows rules to toggle lyric. Not needed if just collapsing.
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { IS_LYRIC_EXPANDABLE_SELECTOR } from '../../../redux/responsive/selectors'
 import { IS_SELECTED_LOGUE_SELECTOR } from '../../../redux/selected/selectors'
 import { IS_LYRIC_EXPANDED_SELECTOR } from '../../../redux/toggle/selectors'
 
-const mapStateToProps = state => {
+const LyricDispatcher = forwardRef((props, ref) => {
     const
-        isLyricExpandable = IS_LYRIC_EXPANDABLE_SELECTOR(state),
-        isSelectedLogue = IS_SELECTED_LOGUE_SELECTOR(state),
-        isLyricExpanded = IS_LYRIC_EXPANDED_SELECTOR(state)
+        dispatch = useDispatch(),
+        isLyricExpandable = useSelector(IS_LYRIC_EXPANDABLE_SELECTOR),
+        isSelectedLogue = useSelector(IS_SELECTED_LOGUE_SELECTOR),
+        isLyricExpanded = useSelector(IS_LYRIC_EXPANDED_SELECTOR),
+        dispatchLyricExpand = (
+            // Just toggle unless parent specifies value.
+            attemptedIsLyricExpanded = !isLyricExpanded
+        ) => {
+            // Turning off is always successful.
+            const nextIsLyricExpanded = attemptedIsLyricExpanded &&
 
-    return {
-        isLyricExpanded,
-        isLyricExpandable,
-        isSelectedLogue
-    }
-}
+                // If trying to turn on, lyric must be expandable, and...
+                isLyricExpandable &&
 
-class LyricDispatcher extends PureComponent {
+                // ... also must not be in logue.
+                !isSelectedLogue
 
-    static propTypes = {
-        // Through Redux.
-        isLyricExpanded: PropTypes.bool.isRequired,
-        isLyricExpandable: PropTypes.bool.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
+            dispatch(updateToggleStore({
+                isLyricExpanded: nextIsLyricExpanded
+            }))
 
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
+            // Try was successful.
+            return nextIsLyricExpanded === attemptedIsLyricExpanded
+        }
 
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchLyricExpand: this.dispatchLyricExpand
-        })
-    }
+    useImperativeHandle(ref, () => dispatchLyricExpand)
+    return null
+})
 
-    dispatchLyricExpand = (
-        // Just toggle unless parent specifies value.
-        triedIsLyricExpanded = !this.props.isLyricExpanded
-    ) => {
-        // Turning off is always successful.
-        const isLyricExpanded = triedIsLyricExpanded &&
-
-            // If trying to turn on, lyric must be expandable, and...
-            this.props.isLyricExpandable &&
-
-            // ... also must not be in logue.
-            !this.props.isSelectedLogue
-
-        this.props.updateToggleStore({ isLyricExpanded })
-
-        // Try was successful.
-        return isLyricExpanded === triedIsLyricExpanded
-    }
-
-    render() {
-        return null
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    { updateToggleStore }
-)(LyricDispatcher)
+export default LyricDispatcher

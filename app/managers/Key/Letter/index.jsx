@@ -261,6 +261,10 @@ class LetterManager extends PureComponent {
         this.dispatchEarColumn = dispatch
     }
 
+    getDispatchLyricExpand = dispatch => {
+        this.dispatchLyricExpand = dispatch
+    }
+
     getDispatchScore = dispatch => {
         this.dispatchScore = dispatch
     }
@@ -285,7 +289,7 @@ class LetterManager extends PureComponent {
                 <EarColumnDispatcher {...{ ref: this.getDispatchEarColumn }} />
                 <ActivatedSceneDispatcher {...{ ref: this.getActivateSceneDirection }} />
                 <ActivatedVerseDispatcher {...{ ref: this.getActivateVerse }} />
-                <LyricDispatcher {...{ getRefs: this._getRefs }} />
+                <LyricDispatcher {...{ ref: this.getDispatchLyricExpand }} />
                 <OverviewDispatcher {...{ getRefs: this._getRefs }} />
                 <PlayDispatcher {...{ getRefs: this._getRefs }} />
                 <ScrollVerseDispatcher {...{ ref: this.getDispatchScrollVerse }} />
