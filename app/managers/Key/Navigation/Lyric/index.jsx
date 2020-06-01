@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { updateActivatedStore } from '../../../../redux/activated/action'
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Dispatcher'
-import { populateRefs } from '../../../../helpers/ref'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -120,15 +119,15 @@ class LyricNavigation extends PureComponent {
         return true
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchAccessedAnnotation = dispatch => {
+        this.dispatchAccessedAnnotation = dispatch
     }
 
     render() {
         return (
             <>
                 <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
-                <AnnotationAccessDispatcher {...{ getRefs: this._getRefs }} />
+                <AnnotationAccessDispatcher {...{ ref: this.getDispatchAccessedAnnotation }} />
             </>
         )
     }

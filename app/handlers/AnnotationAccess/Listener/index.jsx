@@ -4,7 +4,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationAccessDispatcher from '../Dispatcher'
-import { populateRefs } from '../../../helpers/ref'
 import { ACTIVATED_VERSE_INDEX_SELECTOR } from '../../../redux/activated/selectors'
 import {
     SELECTED_SONG_INDEX_SELECTOR,
@@ -103,13 +102,13 @@ class AnnotationAccessListener extends PureComponent {
         }
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchAccessedAnnotation = dispatch => {
+        this.dispatchAccessedAnnotation = dispatch
     }
 
     render() {
         return (
-            <AnnotationAccessDispatcher {...{ getRefs: this._getRefs }} />
+            <AnnotationAccessDispatcher {...{ ref: this.getDispatchAccessedAnnotation }} />
         )
     }
 }
