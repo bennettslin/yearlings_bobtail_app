@@ -32,13 +32,13 @@ module.exports = {
     OUTRO: 'outro',
     SOLO: 'solo',
 
-    // subCard type only
+    // subVerse type only
     RHYME: 'rhyme',
 
     // sideCard type only
     BACKING: 'backing',
 
-    // subCard or sideSubCard type
+    // subVerse or sideSubVerse type
     RESPONSE: 'response',
 
     // This is the order by which annotations will be assigned.
@@ -47,9 +47,9 @@ module.exports = {
         LYRIC_CENTRE,
         LYRIC_LEFT,
         LYRIC_RIGHT,
-        'subCard',
+        'subVerse',
         'sideCard',
-        'sideSubCard',
+        'sideSubVerse',
         'unitDot'
     ],
 

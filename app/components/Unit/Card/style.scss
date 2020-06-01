@@ -12,7 +12,7 @@
     box-shadow: $boxShadow__mainCard;
 }
 
-.UnitCard__subCard {
+.UnitCard__subVerse {
     $paddingX__offsetStanza: 17%;
     $marginY__offsetUnit__overlap: 6.5px;
 
@@ -23,7 +23,7 @@
         padding-left: $paddingX__offsetStanza;
     }
 
-    // Fix the issue once and for all with subCards wrapping onto next line.
+    // Fix the issue once and for all with subVerses wrapping onto next line.
     white-space: nowrap;
 }
 

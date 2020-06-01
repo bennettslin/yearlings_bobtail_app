@@ -407,7 +407,7 @@ export default {
                         lyric: `the houses you've betrayed.`
                     }
                 ],
-                subCard: [
+                subVerse: [
                     {
                         time: 70,
                         lyric: {
@@ -417,7 +417,7 @@ export default {
                     }
                 ],
                 formType: CHORUS,
-                subCardType: RHYME,
+                subVerseType: RHYME,
                 sideCardType: BACKING
             },
             mainVerses: [
@@ -473,7 +473,7 @@ export default {
                         lyric: `over suburbia…`
                     }
                 ],
-                subCard: [
+                subVerse: [
                     {
                         time: 82,
                         lyric: {
@@ -483,7 +483,7 @@ export default {
                     }
                 ],
                 formType: CHORUS,
-                subCardType: RHYME,
+                subVerseType: RHYME,
                 sideCardType: BACKING,
                 subsequent: true
             },
@@ -890,7 +890,7 @@ export default {
         },
         {
             unitMap: {
-                subCard: [
+                subVerse: [
                     {
                         time: 150,
                         lyric: {
@@ -914,7 +914,7 @@ export default {
                     }
                 ],
                 formType: PRECHORUS,
-                subCardType: RESPONSE
+                subVerseType: RESPONSE
             },
             mainVerses: [
                 {
@@ -977,7 +977,7 @@ export default {
         },
         {
             unitMap: {
-                subCard: [
+                subVerse: [
                     {
                         time: 157,
                         lyric: {
@@ -1004,7 +1004,7 @@ export default {
                     }
                 ],
                 formType: PRECHORUS,
-                subCardType: RESPONSE,
+                subVerseType: RESPONSE,
                 subsequent: true
             },
             mainVerses: [
@@ -1087,7 +1087,7 @@ export default {
                         ]
                     }
                 ],
-                subCard: [
+                subVerse: [
                     {
                         time: 168,
                         lyric: {
@@ -1097,7 +1097,7 @@ export default {
                     }
                 ],
                 formType: CHORUS,
-                subCardType: RHYME,
+                subVerseType: RHYME,
                 sideCardType: BACKING
             },
             mainVerses: [
@@ -1169,7 +1169,7 @@ export default {
                         }
                     }
                 ],
-                subCard: [
+                subVerse: [
                     {
                         time: 181,
                         lyric: {
@@ -1179,7 +1179,7 @@ export default {
                     }
                 ],
                 formType: CHORUS,
-                subCardType: RHYME,
+                subVerseType: RHYME,
                 sideCardType: BACKING,
                 subsequent: true
             },
@@ -1246,7 +1246,7 @@ export default {
                         }
                     }
                 ],
-                sideSubCard: [
+                sideSubVerse: [
                     {
                         lyric: {
                             anchor: `…Maranatha!`,
@@ -1273,7 +1273,7 @@ export default {
                 ],
                 formType: CODA,
                 sideCardType: BACKING,
-                sideSubCardType: RESPONSE
+                sideSubVerseType: RESPONSE
             },
             mainVerses: [
                 {

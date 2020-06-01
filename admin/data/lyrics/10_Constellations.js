@@ -1372,7 +1372,7 @@ export default {
         },
         {
             unitMap: {
-                subCard: [
+                subVerse: [
                     {
                         time: 128,
                         lyric: {
@@ -1406,7 +1406,7 @@ export default {
                     }
                 ],
                 formType: BRIDGE,
-                subCardType: RESPONSE
+                subVerseType: RESPONSE
             },
             mainVerses: [
                 {
@@ -1454,7 +1454,7 @@ export default {
         },
         {
             unitMap: {
-                subCard: [
+                subVerse: [
                     {
                         time: 135,
                         lyric: {
@@ -1489,7 +1489,7 @@ export default {
                     }
                 ],
                 formType: BRIDGE,
-                subCardType: RESPONSE,
+                subVerseType: RESPONSE,
                 subsequent: true
             },
             mainVerses: [

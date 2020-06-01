@@ -2243,7 +2243,7 @@ export default [
         workedHours: 16
     },
     {
-        taskName: `Willy the Cocoa subCard is not right colour? This is because isSubCard is no longer passed recursively.`,
+        taskName: `Willy the Cocoa subVerse is not right colour? This is because isSubVerse is no longer passed recursively.`,
         workedHours: 1
     },
     {
@@ -2708,7 +2708,7 @@ export default [
         workedHours: 1
     },
     {
-        taskName: `Method to get all verse indices from units array, including subCard verse indices.`,
+        taskName: `Method to get all verse indices from units array, including subVerse verse indices.`,
         workedHours: 1
     },
     {

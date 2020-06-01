@@ -211,7 +211,7 @@ export default {
         },
         {
             unitMap: {
-                subCard: [
+                subVerse: [
                     {
                         time: 34,
                         lyric: {
@@ -237,7 +237,7 @@ export default {
                     }
                 ],
                 formType: PRECHORUS,
-                subCardType: RESPONSE
+                subVerseType: RESPONSE
             },
             mainVerses: [
                 {

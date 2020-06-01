@@ -166,9 +166,9 @@ export default {
         {
             unitMap: {
                 formType: VERSES,
-                subCardType: RHYME,
+                subVerseType: RHYME,
                 subsequent: true,
-                subCard: [
+                subVerse: [
                     {
                         time: 30,
                         lyric: {
@@ -708,9 +708,9 @@ export default {
         {
             unitMap: {
                 formType: VERSES,
-                subCardType: RHYME,
+                subVerseType: RHYME,
                 subsequent: true,
-                subCard: [
+                subVerse: [
                     {
                         time: 126,
                         lyric: {

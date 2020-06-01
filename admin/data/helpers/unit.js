@@ -8,13 +8,13 @@ const _getIndexedVersesForUnit = (unit) => {
      * are not indexed.
      */
     const {
-        unitMap: { subCard = [] },
+        unitMap: { subVerse = [] },
         mainVerses = []
     } = unit
 
     return [
         ...mainVerses,
-        ...subCard
+        ...subVerse
     ]
 }
 
@@ -60,12 +60,12 @@ const _addUnitLists = (songIndex, song) => {
         unitSubsequents = [],
         withUnitDots = {}
     let withUnitBottomSideCard,
-        withUnitSubCards,
+        withUnitSubVerses,
         withUnitSideCards,
-        withUnitSideSubCards,
-        withUnitSubCardTypes,
+        withUnitSideSubVerses,
+        withUnitSubVerseTypes,
         withUnitSideCardTypes,
-        withUnitSideSubCardTypes
+        withUnitSideSubVerseTypes
 
     lyricUnits.forEach((unit, unitIndex) => {
         unitSubsequents.push(unit.unitMap.subsequent || false)
@@ -73,43 +73,43 @@ const _addUnitLists = (songIndex, song) => {
         const {
             unitMap: {
                 unitDot,
-                subCard,
+                subVerse,
                 sideCard,
-                sideSubCard,
+                sideSubVerse,
                 isBottomSideCard,
-                subCardType,
+                subVerseType,
                 sideCardType,
-                sideSubCardType
+                sideSubVerseType
             }
         } = unit
 
         if (unitDot) {
             withUnitDots[unitIndex] = unitDot
         }
-        if (subCard) {
-            withUnitSubCards = withUnitSubCards || {}
-            withUnitSubCards[unitIndex] = subCard
+        if (subVerse) {
+            withUnitSubVerses = withUnitSubVerses || {}
+            withUnitSubVerses[unitIndex] = subVerse
         }
         if (sideCard) {
             withUnitSideCards = withUnitSideCards || {}
             withUnitSideCards[unitIndex] = sideCard
         }
         // This exists solely for "Maranatha."
-        if (sideSubCard) {
-            withUnitSideSubCards = withUnitSideSubCards || {}
-            withUnitSideSubCards[unitIndex] = sideSubCard
+        if (sideSubVerse) {
+            withUnitSideSubVerses = withUnitSideSubVerses || {}
+            withUnitSideSubVerses[unitIndex] = sideSubVerse
         }
-        if (subCardType) {
-            withUnitSubCardTypes = withUnitSubCardTypes || {}
-            withUnitSubCardTypes[unitIndex] = subCardType
+        if (subVerseType) {
+            withUnitSubVerseTypes = withUnitSubVerseTypes || {}
+            withUnitSubVerseTypes[unitIndex] = subVerseType
         }
         if (sideCardType) {
             withUnitSideCardTypes = withUnitSideCardTypes || {}
             withUnitSideCardTypes[unitIndex] = sideCardType
         }
-        if (sideSubCardType) {
-            withUnitSideSubCardTypes = withUnitSideSubCardTypes || {}
-            withUnitSideSubCardTypes[unitIndex] = sideSubCardType
+        if (sideSubVerseType) {
+            withUnitSideSubVerseTypes = withUnitSideSubVerseTypes || {}
+            withUnitSideSubVerseTypes[unitIndex] = sideSubVerseType
         }
         if (isBottomSideCard) {
             withUnitBottomSideCard = withUnitBottomSideCard || {}
@@ -120,23 +120,23 @@ const _addUnitLists = (songIndex, song) => {
     song.unitSubsequents = unitSubsequents
     song.withUnitDots = withUnitDots
 
-    if (withUnitSubCards) {
-        song.withUnitSubCards = withUnitSubCards
+    if (withUnitSubVerses) {
+        song.withUnitSubVerses = withUnitSubVerses
     }
     if (withUnitSideCards) {
         song.withUnitSideCards = withUnitSideCards
     }
-    if (withUnitSideSubCards) {
-        song.withUnitSideSubCards = withUnitSideSubCards
+    if (withUnitSideSubVerses) {
+        song.withUnitSideSubVerses = withUnitSideSubVerses
     }
-    if (withUnitSubCardTypes) {
-        song.withUnitSubCardTypes = withUnitSubCardTypes
+    if (withUnitSubVerseTypes) {
+        song.withUnitSubVerseTypes = withUnitSubVerseTypes
     }
     if (withUnitSideCardTypes) {
         song.withUnitSideCardTypes = withUnitSideCardTypes
     }
-    if (withUnitSideSubCardTypes) {
-        song.withUnitSideSubCardTypes = withUnitSideSubCardTypes
+    if (withUnitSideSubVerseTypes) {
+        song.withUnitSideSubVerseTypes = withUnitSideSubVerseTypes
     }
     if (withUnitBottomSideCard) {
         song.withUnitBottomSideCard = withUnitBottomSideCard

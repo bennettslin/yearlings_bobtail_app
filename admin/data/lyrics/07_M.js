@@ -47,7 +47,7 @@ export default {
                         }
                     }
                 },
-                subCard: [
+                subVerse: [
                     {
                         time: 33,
                         lyricCentre: {
@@ -75,7 +75,7 @@ export default {
                     }
                 ],
                 formType: INTRO,
-                subCardType: RESPONSE
+                subVerseType: RESPONSE
             },
             mainVerses: [
                 {

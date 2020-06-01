@@ -1,7 +1,6 @@
 # Final bugs from unit refactor
-* Logic selectors need to be fixed. Just always pass indices array. SubCard should also grab from verseLyrics. Change to withUnitSubCardVerseIndices. Then main verses and subCard should pass verseIndex to verse.
+* Logic selectors need to be fixed. Just always pass indices array. SubVerse should also grab from verseLyrics. Change to withUnitSubVerseVerseIndices. Then main verses and subVerse should pass verseIndex to verse.
 * What can be removed from data? For example, unit dot anchor title? Get rid of all annotation todos?
-* Maybe rename subCard back to subVerse for clarity?
 
 # Bugs
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.

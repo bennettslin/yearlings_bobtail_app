@@ -71,7 +71,7 @@ const Unit = ({
                         {...{ unitIndex, ...other }}
                     />
                     <UnitCard
-                        isSubCard
+                        isSubVerse
                         {...{ unitIndex, ...other }}
                     />
                 </div>
@@ -92,7 +92,7 @@ const Unit = ({
                         {...{ unitIndex, ...other }}
                     />
                     <UnitCard
-                        isSideSubCard
+                        isSideSubVerse
                         {...{ unitIndex, ...other }}
                     />
                 </div>

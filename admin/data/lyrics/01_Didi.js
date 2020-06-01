@@ -325,8 +325,8 @@ export default {
         {
             unitMap: {
                 formType: PRECHORUS,
-                subCardType: RESPONSE,
-                subCard: [
+                subVerseType: RESPONSE,
+                subVerse: [
                     {
                         time: 97,
                         lyric: {

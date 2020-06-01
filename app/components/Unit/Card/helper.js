@@ -1,12 +1,12 @@
 import {
     getMainVerseIndicesForUnit,
-    getSubCardForUnit,
+    getSubVerseForUnit,
     getSideCardForUnit,
-    getSideSubCardForUnit,
+    getSideSubVerseForUnit,
     getFormTypeForUnit,
-    getSubCardTypeForUnit,
+    getSubVerseTypeForUnit,
     getSideCardTypeForUnit,
-    getSideSubCardTypeForUnit
+    getSideSubVerseTypeForUnit
 } from '../../../album/api/units'
 import { getVerse } from '../../../album/api/verses'
 
@@ -14,18 +14,18 @@ export const getUnitFormType = ({
     songIndex,
     unitIndex,
     isMainVerses,
-    isSubCard,
+    isSubVerse,
     isSideCard,
-    isSideSubCard
+    isSideSubVerse
 }) => {
     if (isMainVerses) {
         return getFormTypeForUnit(songIndex, unitIndex)
-    } else if (isSubCard) {
-        return getSubCardTypeForUnit(songIndex, unitIndex)
+    } else if (isSubVerse) {
+        return getSubVerseTypeForUnit(songIndex, unitIndex)
     } else if (isSideCard) {
         return getSideCardTypeForUnit(songIndex, unitIndex)
-    } else if (isSideSubCard) {
-        return getSideSubCardTypeForUnit(songIndex, unitIndex)
+    } else if (isSideSubVerse) {
+        return getSideSubVerseTypeForUnit(songIndex, unitIndex)
     }
 }
 
@@ -33,9 +33,9 @@ export const getUnitVerses = ({
     songIndex,
     unitIndex,
     isMainVerses,
-    isSubCard,
+    isSubVerse,
     isSideCard,
-    isSideSubCard
+    isSideSubVerse
 
 }) => {
     if (isMainVerses) {
@@ -47,12 +47,12 @@ export const getUnitVerses = ({
             getVerse(songIndex, verseIndex)
         ))
     } else {
-        if (isSubCard) {
-            return getSubCardForUnit(songIndex, unitIndex)
+        if (isSubVerse) {
+            return getSubVerseForUnit(songIndex, unitIndex)
         } else if (isSideCard) {
             return getSideCardForUnit(songIndex, unitIndex)
-        } else if (isSideSubCard) {
-            return getSideSubCardForUnit(songIndex, unitIndex)
+        } else if (isSideSubVerse) {
+            return getSideSubVerseForUnit(songIndex, unitIndex)
         }
     }
 
@@ -63,9 +63,9 @@ export const getIsUnitTruncatable = ({
     lyricSongIndex,
     unitIndex,
     isMainVerses,
-    isSubCard
+    isSubVerse
 
 }) => (
     Boolean(getSideCardForUnit(lyricSongIndex, unitIndex)) &&
-    (isMainVerses || isSubCard)
+    (isMainVerses || isSubVerse)
 )

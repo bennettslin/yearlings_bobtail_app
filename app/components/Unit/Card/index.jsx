@@ -20,9 +20,9 @@ import './style'
 const UnitCard = ({
     unitIndex,
     isMainVerses,
-    isSubCard,
+    isSubVerse,
     isSideCard,
-    isSideSubCard,
+    isSideSubVerse,
     ...other
 
 }) => {
@@ -31,9 +31,9 @@ const UnitCard = ({
             songIndex: lyricSongIndex,
             unitIndex,
             isMainVerses,
-            isSubCard,
+            isSubVerse,
             isSideCard,
-            isSideSubCard
+            isSideSubVerse
         })
 
     // Return if no verses to render.
@@ -49,15 +49,15 @@ const UnitCard = ({
             lyricSongIndex,
             unitIndex,
             isMainVerses,
-            isSubCard
+            isSubVerse
         }),
         formType = getUnitFormType({
             songIndex: lyricSongIndex,
             unitIndex,
             isMainVerses,
-            isSubCard,
+            isSubVerse,
             isSideCard,
-            isSideSubCard
+            isSideSubVerse
         })
 
     return (
@@ -69,7 +69,7 @@ const UnitCard = ({
             }),
 
             'UnitCard',
-            isSubCard && 'UnitCard__subCard',
+            isSubVerse && 'UnitCard__subVerse',
             isTabbed && 'UnitCard__tabbed'
         )}>
             <div className={cx(
@@ -114,9 +114,9 @@ const UnitCard = ({
 UnitCard.propTypes = {
     unitIndex: PropTypes.number.isRequired,
     isMainVerses: PropTypes.bool,
-    isSubCard: PropTypes.bool,
+    isSubVerse: PropTypes.bool,
     isSideCard: PropTypes.bool,
-    isSideSubCard: PropTypes.bool
+    isSideSubVerse: PropTypes.bool
 }
 
 export default memo(UnitCard)
