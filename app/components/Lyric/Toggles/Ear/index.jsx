@@ -1,9 +1,7 @@
 // Button to toggle between left and right columns.
-
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React, { useRef } from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import EarColumnDispatcher from '../../../../dispatchers/EarColumn'
 import Button from '../../../Button'
@@ -17,84 +15,54 @@ import { EAR_COLUMN_INDEX_SELECTOR } from '../../../../redux/selected/selectors'
 import { IS_DESKTOP_WIDTH_SELECTOR } from '../../../../redux/viewport/selectors'
 import './style'
 
-const mapStateToProps = state => {
+const LyricToggleEar = () => {
     const
-        isEarShown = IS_EAR_SHOWN_SELECTOR(state),
-        earColumnIndex = EAR_COLUMN_INDEX_SELECTOR(state),
-        isDesktopWidth = IS_DESKTOP_WIDTH_SELECTOR(state)
+        dispatchEarColumn = useRef(),
+        isEarShown = useSelector(IS_EAR_SHOWN_SELECTOR),
+        earColumnIndex = useSelector(EAR_COLUMN_INDEX_SELECTOR),
+        isDesktopWidth = useSelector(IS_DESKTOP_WIDTH_SELECTOR),
+        handleButtonClick = () => {
+            dispatchEarColumn.current()
+        }
 
-    return {
-        isEarShown,
-        earColumnIndex,
-        isDesktopWidth
-    }
+    return (
+        <CSSTransition
+            appear
+            mountOnEnter
+            unmountOnExit
+            {...{
+                in: isEarShown,
+                timeout: 200,
+                classNames: {
+                    enterActive: 'LyricToggle__shown',
+                    enterDone: 'LyricToggle__shown'
+                }
+            }}
+        >
+            <div className={cx(
+                'LyricToggleEar',
+                'LyricToggle',
+                'length__buttonLarge'
+            )}>
+                <Button
+                    isLargeSize
+                    {...{
+                        buttonName: LYRIC_EAR_BUTTON_KEY,
+                        buttonIdentifier: EAR_COLUMN_KEYS[earColumnIndex],
+                        accessKey: LYRIC_COLUMN_TOGGLE_KEY,
+                        handleButtonClick
+                    }}
+                />
+                <TipsHand
+                    {...{
+                        tipType: DOUBLESPEAKER,
+                        reverse: isDesktopWidth
+                    }}
+                />
+                <EarColumnDispatcher {...{ ref: dispatchEarColumn }} />
+            </div>
+        </CSSTransition>
+    )
 }
 
-class LyricToggleEar extends PureComponent {
-
-    static propTypes = {
-    // Through Redux.
-        isEarShown: PropTypes.bool.isRequired,
-        earColumnIndex: PropTypes.number.isRequired,
-        isDesktopWidth: PropTypes.bool.isRequired
-    }
-
-    handleDoublespeakerClick = () => {
-        this.dispatchEarColumn()
-    }
-
-    getDispatchEarColumn = dispatch => {
-        this.dispatchEarColumn = dispatch
-    }
-
-    render() {
-        const {
-                isEarShown,
-                earColumnIndex,
-                isDesktopWidth
-            } = this.props,
-
-            buttonIdentifier = EAR_COLUMN_KEYS[earColumnIndex]
-
-        return (
-            <CSSTransition
-                appear
-                mountOnEnter
-                unmountOnExit
-                {...{
-                    in: isEarShown,
-                    timeout: 200,
-                    classNames: {
-                        enterActive: 'LyricToggle__shown',
-                        enterDone: 'LyricToggle__shown'
-                    }
-                }}
-            >
-                <div className={cx(
-                    'LyricToggleEar',
-                    'LyricToggle',
-                    'length__buttonLarge'
-                )}>
-                    <Button
-                        isLargeSize
-                        {...{
-                            buttonName: LYRIC_EAR_BUTTON_KEY,
-                            buttonIdentifier,
-                            accessKey: LYRIC_COLUMN_TOGGLE_KEY,
-                            handleButtonClick: this.handleDoublespeakerClick
-                        }}
-                    />
-                    <TipsHand
-                        {...{
-                            tipType: DOUBLESPEAKER,
-                            reverse: isDesktopWidth
-                        }}
-                    />
-                    <EarColumnDispatcher {...{ ref: this.getDispatchEarColumn }} />
-                </div>
-            </CSSTransition>
-        )
-    }
-}
-
-export default connect(mapStateToProps)(LyricToggleEar)
+export default LyricToggleEar
