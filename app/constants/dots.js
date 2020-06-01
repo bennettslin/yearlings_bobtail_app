@@ -24,6 +24,8 @@ export const ORDERED_DOT_KEYS = [
     AFTERWORD
 ]
 
+export const DOT_KEYS_COUNT = ORDERED_DOT_KEYS.length
+
 export const DOT_DESCRIPTIONS = {
     [NARRATIVE]: 'The story as it happens.',
     [BACKSTORY]: 'What took place before.',

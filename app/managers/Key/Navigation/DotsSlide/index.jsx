@@ -1,9 +1,8 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../../redux/access/action'
 import DotSelectDispatcher from '../../../../dispatchers/DotSelect'
-import { populateRefs } from '../../../../helpers/ref'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -11,103 +10,65 @@ import {
     ARROW_DOWN,
     ENTER
 } from '../../../../constants/access'
-import { ORDERED_DOT_KEYS } from '../../../../constants/dots'
+import { DOT_KEYS_COUNT } from '../../../../constants/dots'
 import {
     IS_ACCESS_ON_SELECTOR,
     ACCESSED_DOT_INDEX_SELECTOR
 } from '../../../../redux/access/selectors'
 
-const mapStateToProps = state => {
+const DotsSlideNavigation = forwardRef((props, ref) => {
     const
-        isAccessOn = IS_ACCESS_ON_SELECTOR(state),
-        accessedDotIndex = ACCESSED_DOT_INDEX_SELECTOR(state)
+        dispatch = useDispatch(),
+        dispatchSelectDot = useRef(),
+        isAccessOn = useSelector(IS_ACCESS_ON_SELECTOR),
+        accessedDotIndex = useSelector(ACCESSED_DOT_INDEX_SELECTOR),
+        navigateDotsSlide = (keyName) => {
+            if (isAccessOn) {
+                let nextAccessedDotIndex
 
-    return {
-        isAccessOn,
-        accessedDotIndex
-    }
-}
+                switch (keyName) {
+                    case ARROW_LEFT:
+                        nextAccessedDotIndex = (accessedDotIndex + (DOT_KEYS_COUNT - 1)) % DOT_KEYS_COUNT
+                        break
+                    case ARROW_RIGHT:
+                        nextAccessedDotIndex = (accessedDotIndex + 1) % DOT_KEYS_COUNT
+                        break
+                    case ARROW_UP:
+                        if (accessedDotIndex >= DOT_KEYS_COUNT / 2) {
+                            nextAccessedDotIndex = (accessedDotIndex + (DOT_KEYS_COUNT / 2)) % DOT_KEYS_COUNT
+                        } else if (accessedDotIndex !== 0) {
+                            nextAccessedDotIndex = (accessedDotIndex + (DOT_KEYS_COUNT / 2) - 1) % DOT_KEYS_COUNT
+                        } else {
+                            nextAccessedDotIndex = (accessedDotIndex + (DOT_KEYS_COUNT - 1)) % DOT_KEYS_COUNT
+                        }
+                        break
+                    case ARROW_DOWN:
+                        if (accessedDotIndex < DOT_KEYS_COUNT / 2) {
+                            nextAccessedDotIndex = (accessedDotIndex + (DOT_KEYS_COUNT / 2)) % DOT_KEYS_COUNT
+                        } else if (accessedDotIndex !== DOT_KEYS_COUNT - 1) {
+                            nextAccessedDotIndex = (accessedDotIndex + (DOT_KEYS_COUNT / 2) + 1) % DOT_KEYS_COUNT
+                        } else {
+                            nextAccessedDotIndex = (accessedDotIndex + 1) % DOT_KEYS_COUNT
+                        }
+                        break
+                    case ENTER:
+                        dispatchSelectDot(accessedDotIndex)
+                        return true
+                    default:
+                        return false
+                }
 
-class DotsSlideNavigation extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isAccessOn: PropTypes.bool.isRequired,
-        accessedDotIndex: PropTypes.number.isRequired,
-        updateAccessStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            navigateDotsSlide: this.navigateDotsSlide
-        })
-    }
-
-    navigateDotsSlide = (keyName) => {
-        const { isAccessOn } = this.props
-
-        if (isAccessOn) {
-            const dotKeysCount = ORDERED_DOT_KEYS.length
-            let { accessedDotIndex } = this.props
-
-            switch (keyName) {
-                case ARROW_LEFT:
-                    accessedDotIndex = (accessedDotIndex + (dotKeysCount - 1)) % dotKeysCount
-                    break
-                case ARROW_RIGHT:
-                    accessedDotIndex = (accessedDotIndex + 1) % dotKeysCount
-                    break
-                case ARROW_UP:
-                    if (accessedDotIndex >= dotKeysCount / 2) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2)) % dotKeysCount
-                    } else if (accessedDotIndex !== 0) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2) - 1) % dotKeysCount
-                    } else {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysCount - 1)) % dotKeysCount
-                    }
-                    break
-                case ARROW_DOWN:
-                    if (accessedDotIndex < dotKeysCount / 2) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2)) % dotKeysCount
-                    } else if (accessedDotIndex !== dotKeysCount - 1) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2) + 1) % dotKeysCount
-                    } else {
-                        accessedDotIndex = (accessedDotIndex + 1) % dotKeysCount
-                    }
-                    break
-                case ENTER:
-                    this.dispatchSelectDot(accessedDotIndex)
-                    return true
-                default:
-                    return false
+                dispatch(updateAccessStore({
+                    accessedDotIndex: nextAccessedDotIndex
+                }))
             }
-
-            this.props.updateAccessStore({ accessedDotIndex })
+            return true
         }
-        return true
-    }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
+    useImperativeHandle(ref, () => navigateDotsSlide)
+    return (
+        <DotSelectDispatcher {...{ ref: dispatchSelectDot }} />
+    )
+})
 
-    getDispatchDotSelect = dispatch => {
-        if (dispatch) {
-            this.dispatchSelectDot = dispatch.dispatchSelectDot
-        }
-    }
-
-    render() {
-        return (
-            <DotSelectDispatcher {...{ ref: this.getDispatchDotSelect }} />
-        )
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    { updateAccessStore }
-)(DotsSlideNavigation)
+export default DotsSlideNavigation
