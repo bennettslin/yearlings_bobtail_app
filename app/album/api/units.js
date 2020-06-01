@@ -1,11 +1,6 @@
 import { getSong } from './songs'
 import { getFormTypeForStanza } from './stanzas'
 
-export const getDotForUnit = (songIndex, unitIndex) => {
-    const unitMap = getUnitMapForUnit(songIndex, unitIndex)
-    return unitMap.unitDot
-}
-
 export const getLastUnitDotCardIndex = songIndex => {
     const { lastUnitDotIndex } = getSong(songIndex)
     return lastUnitDotIndex || -1
@@ -21,6 +16,11 @@ export const getUnitMapForUnit = (songIndex, unitIndex) => {
 export const getMainVersesForUnit = (songIndex, unitIndex) => {
     const { unitMainVerses } = getSong(songIndex)
     return unitMainVerses[unitIndex]
+}
+
+export const getDotForUnit = (songIndex, unitIndex) => {
+    const { withUnitDots } = getSong(songIndex)
+    return withUnitDots[unitIndex] || null
 }
 
 export const getFormTypeForUnit = (songIndex, unitIndex) => {
@@ -48,6 +48,6 @@ export const getVerseIndicesForUnit = (songIndex, unitIndex) => {
 }
 
 export const getIsSideCardOnBottomForUnit = (songIndex, unitIndex) => {
-    const { isUnitSideCardOnBottom } = getSong(songIndex)
-    return Boolean(isUnitSideCardOnBottom) && isUnitSideCardOnBottom[unitIndex]
+    const { withUnitBottomSideCard } = getSong(songIndex)
+    return Boolean(withUnitBottomSideCard) && withUnitBottomSideCard[unitIndex]
 }

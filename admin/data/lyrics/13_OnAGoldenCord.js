@@ -615,7 +615,7 @@ export default {
                         }
                     }
                 ],
-                isSideCardOnBottom: true,
+                isBottomSideCard: true,
                 formType: BRIDGE,
                 sideCardType: BACKING,
                 subsequent: true

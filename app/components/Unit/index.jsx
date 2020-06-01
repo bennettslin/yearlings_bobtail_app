@@ -54,7 +54,7 @@ const Unit = ({
         formType = getFormTypeForUnit(lyricSongIndex, unitIndex),
         formTypeIndex = getFormTypeIndexForUnit(lyricSongIndex, unitIndex),
         subsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
-        isSideCardOnBottom = getIsSideCardOnBottomForUnit(lyricSongIndex, unitIndex),
+        isBottomSideCard = getIsSideCardOnBottomForUnit(lyricSongIndex, unitIndex),
         hasSide = Boolean(sideCard)
 
     return (
@@ -138,7 +138,7 @@ const Unit = ({
                         'Unit__column__side',
 
                         // This happens only once, in Golden Cord.
-                        isSideCardOnBottom && 'Unit__column__hasBottomSideCard'
+                        isBottomSideCard && 'Unit__column__hasBottomSideCard'
                     )}
                 >
                     {sideCard && (
