@@ -11,6 +11,7 @@
 # Bugs that may get fixed after logic styling tear out and redo.
 * Anchor still shows in activated/slider mode.
 * Even future verse does not have activated or hover colour.
+* VerseBar should not have hover styling.
 
 # Bugs that may get fixed after canEnter tear out and redo.
 * Selecting accessed verse has a delay.

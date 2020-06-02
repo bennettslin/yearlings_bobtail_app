@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import InlineSvg from '../../../modules/InlineSvg'
 import tipsHand from '../../../../assets/svgs/app/tips/tipsHand'
@@ -15,50 +15,34 @@ import {
     mapReferenceDot,
     mapWormholeDot
 } from '../../../redux/dots/selectors'
+import { mapDidLyricUpdate } from '../../../redux/entrance/selectors'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import { mapSelectedTipsOption } from '../../../redux/option/selectors'
 import { mapIsPhoneWidth } from '../../../redux/viewport/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const {
-            entranceStore: { didLyricUpdate }
-        } = state,
-        reference = mapReferenceDot(state),
-        wormhole = mapWormholeDot(state),
-        lyricSongIndex = mapLyricSongIndex(state),
-        selectedTipsOption = mapSelectedTipsOption(state),
-        isPhoneWidth = mapIsPhoneWidth(state)
-
-    return {
-        reference,
-        wormhole,
-        didLyricUpdate,
-        lyricSongIndex,
-        selectedTipsOption,
-        isPhoneWidth
-    }
-}
-
 const TipsHand = ({
-    reference,
-    wormhole,
-    didLyricUpdate,
-    lyricSongIndex,
-    selectedTipsOption,
-    isPhoneWidth,
     tipType,
-    isPointedAtDots,
+    isPointedAtDots = false,
     reverse
 
 }) => {
+    const
+        reference = useSelector(mapReferenceDot),
+        wormhole = useSelector(mapWormholeDot),
+        didLyricUpdate = useSelector(mapDidLyricUpdate),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        selectedTipsOption = useSelector(mapSelectedTipsOption),
+        isPhoneWidth = useSelector(mapIsPhoneWidth)
+
+    // TODO: Make this a selector.
     let canRender = true
 
     // Don't render in phone, as it takes up too much space.
     if (isPhoneWidth) {
         canRender = false
 
-        // If dot is selected, render the one that is not pointed at dots toggle.
+        // If dot is selected, render the one not pointed at dots toggle.
     } else if (tipType === WORMHOLES) {
         canRender = wormhole !== isPointedAtDots
     } else if (tipType === WIKI) {
@@ -113,23 +97,10 @@ const TipsHand = ({
     )
 }
 
-TipsHand.defaultProps = {
-    isPointedAtDots: false
-}
-
 TipsHand.propTypes = {
-    // Through Redux.
-    reference: PropTypes.bool.isRequired,
-    wormhole: PropTypes.bool.isRequired,
-    isPhoneWidth: PropTypes.bool.isRequired,
-    didLyricUpdate: PropTypes.bool.isRequired,
-    lyricSongIndex: PropTypes.number.isRequired,
-    selectedTipsOption: PropTypes.string.isRequired,
-
-    // From parent.
     tipType: PropTypes.string.isRequired,
     isPointedAtDots: PropTypes.bool.isRequired,
     reverse: PropTypes.bool
 }
 
-export default connect(mapStateToProps)(TipsHand)
+export default TipsHand
