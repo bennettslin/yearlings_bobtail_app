@@ -1,5 +1,5 @@
 // Button in dots section to select and deselect dot.
-import React, { PureComponent } from 'react'
+import React, { memo, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import DotSelectDispatcher from '../../../dispatchers/DotSelect'
@@ -12,116 +12,104 @@ import { DOTS_SLIDE_SELECT_BUTTON_KEY } from '../../../constants/buttons'
 import { DOT_DESCRIPTIONS } from '../../../constants/dots'
 import './style'
 
-class DotsSlideSelect extends PureComponent {
+const DotsSlideSelect = ({
+    dotIndex,
+    dotKey,
+    isAccessed,
+    isSelected,
+    isActivated
+}) => {
+    const
+        dispatchDotSelect = useRef(),
+        stopPropagation = useRef()
 
-    static propTypes = {
-        // From parent.
-        dotIndex: PropTypes.number.isRequired,
-        dotKey: PropTypes.string.isRequired,
-        isAccessed: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        isActivated: PropTypes.bool.isRequired
+    const handleButtonClick = () => {
+        dispatchDotSelect.current.dispatchSelectDot(dotIndex)
     }
 
-    _toggleSelectedDot = () => {
-        this.dispatchSelectDot(this.props.dotIndex)
-    }
-
-    _toggleActivatedDot = e => {
-        this.dispatchActivatedDot(this.props.dotIndex)
+    const handleAnchorClick = e => {
+        dispatchDotSelect.current.dispatchActivatedDot(dotIndex)
 
         // Stop propagation if anchor click is valid.
-        this.stopPropagation(e)
+        stopPropagation.current(e)
 
         return true
     }
 
-    getDispatchDotSelect = dispatch => {
-        if (dispatch) {
-            this.dispatchSelectDot = dispatch.dispatchSelectDot
-            this.dispatchActivatedDot = dispatch.dispatchActivatedDot
-        }
-    }
-
-    getStopPropagation = dispatch => {
-        this.stopPropagation = dispatch
-    }
-
-    render() {
-        const {
-            dotKey,
-            isAccessed,
-            isSelected,
-            isActivated
-        } = this.props
-
-        return (
-            <>
-                <div
+    return (
+        <>
+            <div
+                {...{
+                    className: cx(
+                        'DotsSlideSelect'
+                    )
+                }}
+            >
+                <Button
+                    isCustomSize
+                    isBrightHover
                     {...{
-                        className: cx(
-                            'DotsSlideSelect'
-                        )
+                        className: cx({
+                            /**
+                             * These classes are passed purely to let the
+                             * Button know to update its children. Not
+                             * ideal, but it will do for now.
+                             */
+                            isSelected,
+                            isActivated
+                        }),
+                        buttonName: DOTS_SLIDE_SELECT_BUTTON_KEY,
+                        accessKey: ENTER,
+                        isAccessed,
+                        handleButtonClick
                     }}
                 >
-                    <Button
-                        isCustomSize
-                        isBrightHover
+                    {/* Button handles all drop shadow styling. */}
+                    <Dot
+                        noDropShadow
                         {...{
-                            className: cx({
-                                /**
-                                 * These classes are passed purely to let the
-                                 * Button know to update its children. Not
-                                 * ideal, but it will do for now.
-                                 */
-                                isSelected,
-                                isActivated
-                            }),
-                            buttonName: DOTS_SLIDE_SELECT_BUTTON_KEY,
-                            accessKey: ENTER,
-                            isAccessed,
-                            handleButtonClick: this._toggleSelectedDot
-                        }}
-                    >
-                        {/* Button handles all drop shadow styling. */}
-                        <Dot
-                            noDropShadow
-                            {...{
-                                dotKey,
-                                isDeselected: !isSelected
-                            }}
-                        />
-
-                        <div className={cx(
-                            'SlideSelectDescription',
-
-                            isAccessed &&
-                                'SlideSelectDescription__accessed',
-
-                            isActivated &&
-                                'SlideSelectDescription__activated',
-
-                            'abF',
-                            'fCC'
-                        )}>
-                            {DOT_DESCRIPTIONS[dotKey]}
-                        </div>
-                    </Button>
-
-                    <Anchor
-                        {...{
-                            isAccessed,
-                            isSelected: isActivated,
-                            text: dotKey,
-                            handleAnchorClick: this._toggleActivatedDot
+                            dotKey,
+                            isDeselected: !isSelected
                         }}
                     />
-                </div>
-                <DotSelectDispatcher {...{ ref: this.getDispatchDotSelect }} />
-                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
-            </>
-        )
-    }
+
+                    <div className={cx(
+                        'SlideSelectDescription',
+
+                        isAccessed &&
+                            'SlideSelectDescription__accessed',
+
+                        isActivated &&
+                            'SlideSelectDescription__activated',
+
+                        'abF',
+                        'fCC'
+                    )}>
+                        {DOT_DESCRIPTIONS[dotKey]}
+                    </div>
+                </Button>
+
+                <Anchor
+                    {...{
+                        isAccessed,
+                        isSelected: isActivated,
+                        text: dotKey,
+                        handleAnchorClick
+                    }}
+                />
+            </div>
+            <DotSelectDispatcher {...{ ref: dispatchDotSelect }} />
+            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
+        </>
+    )
 }
 
-export default DotsSlideSelect
+DotsSlideSelect.propTypes = {
+    dotIndex: PropTypes.number.isRequired,
+    dotKey: PropTypes.string.isRequired,
+    isAccessed: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    isActivated: PropTypes.bool.isRequired
+}
+
+export default memo(DotsSlideSelect)
