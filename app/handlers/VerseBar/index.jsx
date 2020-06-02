@@ -114,7 +114,6 @@ const VerseBarHandler = forwardRef(({ getVerseElement }, ref) => {
                 verseElement
             })
 
-            // To improve performance, only set in Redux if changed.
             dispatch(updateVerseBarsStore({
                 isVerseBarAbove,
                 isVerseBarBelow

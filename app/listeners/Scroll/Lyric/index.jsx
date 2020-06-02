@@ -90,7 +90,8 @@ class ScrollLyricListener extends PureComponent {
         updateScrollLyricStore: PropTypes.func.isRequired,
 
         // From parent.
-        getRefs: PropTypes.func.isRequired
+        getRefs: PropTypes.func.isRequired,
+        getLyricScrollParent: PropTypes.func.isRequired
     }
 
     carouselAnnotationElements = {}
@@ -99,7 +100,6 @@ class ScrollLyricListener extends PureComponent {
         this.props.getRefs({
             setVerseElement: this.setVerseElement,
             setLyricAnnotationElement: this.setLyricAnnotationElement,
-            setLyricParent: this.setLyricParent,
             getVerseElement: this.getVerseElement
         })
     }
@@ -178,7 +178,7 @@ class ScrollLyricListener extends PureComponent {
                 scrollElementIntoView({
                     log: queuedScrollLyricLog,
                     scrollClass,
-                    scrollParent: this.lyricParentElement,
+                    scrollParent: this.props.getLyricScrollParent(),
                     scrollChildren: this._getScrollElementsArray(scrollClass),
                     index,
                     noDuration: queuedScrollLyricNoDuration,
@@ -236,10 +236,6 @@ class ScrollLyricListener extends PureComponent {
                 scrollElements: this.lyricAnnotationElements
             })
         }
-    }
-
-    setLyricParent = node => {
-        this.lyricParentElement = node
     }
 
     render() {

@@ -54,15 +54,15 @@ class ScrollCarouselListener extends PureComponent {
         updateScrollCarouselStore: PropTypes.func.isRequired,
 
         // From parent.
-        getRefs: PropTypes.func.isRequired
+        getRefs: PropTypes.func.isRequired,
+        getCarouselScrollParent: PropTypes.func.isRequired
     }
 
     carouselAnnotationElements = {}
 
     componentDidMount() {
         this.props.getRefs({
-            setCarouselAnnotationElement: this.setCarouselAnnotationElement,
-            setCarouselParent: this.setCarouselParent
+            setCarouselAnnotationElement: this.setCarouselAnnotationElement
         })
     }
 
@@ -93,7 +93,7 @@ class ScrollCarouselListener extends PureComponent {
                     isCarousel: true,
                     log: queuedScrollCarouselLog,
                     scrollClass: CAROUSEL_SCROLL,
-                    scrollParent: this.carouselParentElement,
+                    scrollParent: this.props.getCarouselScrollParent(),
                     scrollChildren: this.carouselAnnotationElements,
                     index: queuedScrollCarouselIndex,
                     noDuration: queuedScrollCarouselNoDuration,
@@ -115,10 +115,6 @@ class ScrollCarouselListener extends PureComponent {
                 scrollElements: this.carouselAnnotationElements
             })
         }
-    }
-
-    setCarouselParent = node => {
-        this.carouselParentElement = node
     }
 
     render() {

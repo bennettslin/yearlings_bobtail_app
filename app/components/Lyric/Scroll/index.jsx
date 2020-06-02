@@ -75,10 +75,11 @@ class LyricScroll extends PureComponent {
 
         // For focus.
         this.props.setLyricFocusElement(node)
-
-        // For scrolling.
-        return this.setLyricParent(node)
     }
+
+    getLyricScrollParent = () => (
+        this.lyricElement
+    )
 
     _setLyricAnnotationElement = payload => {
         return this.setLyricAnnotationElement(payload)
@@ -124,7 +125,10 @@ class LyricScroll extends PureComponent {
 
         return (
             <>
-                <ScrollLyricListener {...{ getRefs: this._getRefs }} />
+                <ScrollLyricListener {...{
+                    getRefs: this._getRefs,
+                    getLyricScrollParent: this.getLyricScrollParent
+                }} />
                 <Transition
                     {...{
                         in: canLyricCarouselUpdate,

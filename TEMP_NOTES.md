@@ -28,6 +28,7 @@
 * Logic styles should live together. (So that they can be removed together if needed.)
 
 # Easy reduction tasks
+* Figure out how to get scroll children without storing them.
 * Have verse store for queued verse select, just like annotation store.
 * Internal stylesheet fixes
 * Simplify Anchor for social media anchors

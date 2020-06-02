@@ -59,8 +59,12 @@ class CarouselScroll extends PureComponent {
     }
 
     _setCarouselParent = node => {
-        return this.setCarouselParent(node)
+        this.carouselScrollElement = node
     }
+
+    getCarouselScrollParent = () => (
+        this.carouselScrollElement
+    )
 
     _setCarouselAnnotationElement = payload => {
         return this.setCarouselAnnotationElement(payload)
@@ -88,10 +92,15 @@ class CarouselScroll extends PureComponent {
                 }}
             >
                 <div
-                    ref={this._setCarouselParent}
-                    className="CarouselScroll"
+                    {...{
+                        ref: this._setCarouselParent,
+                        className: 'CarouselScroll'
+                    }}
                 >
-                    <ScrollCarouselListener {...{ getRefs: this._getRefs }} />
+                    <ScrollCarouselListener {...{
+                        getRefs: this._getRefs,
+                        getCarouselScrollParent: this.getCarouselScrollParent
+                    }} />
                     {getAnnotationIndices(lyricSongIndex).map(index => {
 
                         const annotationIndex = index + 1,

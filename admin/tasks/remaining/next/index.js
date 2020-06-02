@@ -9,13 +9,18 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
-
-    /* Weekend work. */
     {
         taskName: `More data refactor. Scene actors, cubes, and things should be in compiled album. Cubes should also grab values from a selector, rather than the store.`,
         workedHours: 0,
         neededHours: 10
     },
+    {
+        taskName: `Remove convoluted CSS verse logic? If so, allow hover styling of activated verse in slider, to be consistent with filmstrip.`,
+        workedHours: 0,
+        neededHours: 20
+    },
+
+    /* Weekend work. */
     {
         taskName: `Post-Gatsby fixes.`,
         workedHours: 0,
@@ -28,14 +33,7 @@ export default [
     },
     {
         taskName: `Post-Gatsby refactoring.`,
-        workedHours: 42
-    },
-
-    /* Next weekend. */
-    {
-        taskName: `Remove convoluted CSS verse logic? If so, allow hover styling of activated verse in slider, to be consistent with filmstrip.`,
-        workedHours: 0,
-        neededHours: 20
+        workedHours: 44
     },
 
     /* Next weekend. */
