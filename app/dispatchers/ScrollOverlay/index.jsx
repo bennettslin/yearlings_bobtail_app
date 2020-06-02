@@ -7,26 +7,28 @@ import { updateIsScrolling } from '../../redux/scrollOverlay/action'
 const ScrollOverlayDispatcher = forwardRef(({ getLyricElement }, ref) => {
     const
         dispatch = useDispatch(),
-        [scrollTimeoutId, setScrollTimeoutId] = useState(''),
-        _dispatchScroll = prevScrollTop => {
-            const nextScrollTop = getLyricElement().scrollTop
+        [scrollTimeoutId, setScrollTimeoutId] = useState('')
 
-            dispatch(updateIsScrolling(prevScrollTop !== nextScrollTop))
-        },
-        dispatchScrollTimeout = (timeoutDuration = 50) => {
-            const prevScrollTop = getLyricElement().scrollTop
+    const _dispatchScroll = prevScrollTop => {
+        const nextScrollTop = getLyricElement().scrollTop
 
-            clearTimeout(scrollTimeoutId)
+        dispatch(updateIsScrolling(prevScrollTop !== nextScrollTop))
+    }
 
-            setScrollTimeoutId(
-                setTimeout(
-                    () => _dispatchScroll(prevScrollTop),
-                    timeoutDuration
-                )
+    const dispatchScrollTimeout = (timeoutDuration = 50) => {
+        const prevScrollTop = getLyricElement().scrollTop
+
+        clearTimeout(scrollTimeoutId)
+
+        setScrollTimeoutId(
+            setTimeout(
+                () => _dispatchScroll(prevScrollTop),
+                timeoutDuration
             )
+        )
 
-            dispatch(updateIsScrolling(true))
-        }
+        dispatch(updateIsScrolling(true))
+    }
 
     useImperativeHandle(ref, () => dispatchScrollTimeout)
     return null

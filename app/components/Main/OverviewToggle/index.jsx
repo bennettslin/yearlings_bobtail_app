@@ -21,11 +21,12 @@ const OverviewToggle = ({
     const
         dispatchOverview = useRef(),
         isLyricLogue = useSelector(mapIsLyricLogue),
-        selectedOverviewOption = useSelector(mapSelectedOverviewOption),
-        handleButtonClick = () => {
-            // The isToggled argument is ignored by logue overview.
-            dispatchOverview.current({ isToggled: true })
-        }
+        selectedOverviewOption = useSelector(mapSelectedOverviewOption)
+
+    const handleButtonClick = () => {
+        // The isToggled argument is ignored by logue overview.
+        dispatchOverview.current({ isToggled: true })
+    }
 
     return (
         <div className={cx(

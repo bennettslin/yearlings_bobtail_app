@@ -5,24 +5,24 @@ import { updateFocusStore } from '../../redux/focus/action'
 import { updateAccessStore } from '../../redux/access/action'
 
 const StopPropagationDispatcher = forwardRef((props, ref) => {
-    const
-        dispatch = useDispatch(),
-        stopPropagation = e => {
-            if (e) {
-                const { type } = e
+    const dispatch = useDispatch()
 
-                // Turn access off if not from a keyboard event.
-                if (type === 'click' || type === 'mousedown') {
-                    dispatch(updateAccessStore({ isAccessOn: false }))
-                }
+    const stopPropagation = e => {
+        if (e) {
+            const { type } = e
 
-                if (e.stopPropagation) {
-                    e.stopPropagation()
+            // Turn access off if not from a keyboard event.
+            if (type === 'click' || type === 'mousedown') {
+                dispatch(updateAccessStore({ isAccessOn: false }))
+            }
 
-                    dispatch(updateFocusStore({ queuedFocus: true }))
-                }
+            if (e.stopPropagation) {
+                e.stopPropagation()
+
+                dispatch(updateFocusStore({ queuedFocus: true }))
             }
         }
+    }
 
     useImperativeHandle(ref, () => stopPropagation)
     return null

@@ -15,10 +15,11 @@ import { mapIsAutoScroll } from '../../../../redux/toggle/selectors'
 const LyricToggleScroll = () => {
     const
         dispatchScrollVerse = useRef(),
-        isAutoScroll = useSelector(mapIsAutoScroll),
-        _handleScrollClick = () => {
-            dispatchScrollVerse.current(true)
-        }
+        isAutoScroll = useSelector(mapIsAutoScroll)
+
+    const handleButtonClick = () => {
+        dispatchScrollVerse.current(true)
+    }
 
     return (
         <CSSTransition
@@ -44,7 +45,7 @@ const LyricToggleScroll = () => {
                     {...{
                         buttonName: LYRIC_SCROLL_BUTTON_KEY,
                         accessKey: LYRIC_SCROLL_TOGGLE_KEY,
-                        handleButtonClick: _handleScrollClick
+                        handleButtonClick
                     }}
                 />
                 <TipsHand reverse {...{ tipType: AUTOSCROLL }} />

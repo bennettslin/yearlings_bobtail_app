@@ -22,56 +22,59 @@ const OverviewDispatcher = forwardRef((props, ref) => {
         isLogueOverviewShown = useSelector(mapIsLogueOverviewShown),
         selectedOverviewOption = useSelector(mapSelectedOverviewOption),
         selectedTipsOption = useSelector(mapSelectedTipsOption),
-        isSelectedLogue = useSelector(mapIsSelectedLogue),
-        _dispatchLogueOverview = () => {
-            // Don't allow overview to be toggled if not heightless.
-            if (!isHeightlessLyric) {
-                return false
-            }
-            dispatch(updateOptionStore({
-                isLogueOverviewShown: !isLogueOverviewShown
-            }))
-            return true
-        },
-        _dispatchSongOverview = ({
-            isToggled,
-            overviewOption
-        }) => {
-            const nextOverviewOption = getNextOption({
-                    isToggled,
-                    toggleShows: toggleShowsOverviewImmediately,
-                    prevOption: selectedOverviewOption,
-                    nextOption: overviewOption
-                }),
+        isSelectedLogue = useSelector(mapIsSelectedLogue)
 
-                /**
+    const _dispatchLogueOverview = () => {
+        // Don't allow overview to be toggled if not heightless.
+        if (!isHeightlessLyric) {
+            return false
+        }
+        dispatch(updateOptionStore({
+            isLogueOverviewShown: !isLogueOverviewShown
+        }))
+        return true
+    }
+
+    const _dispatchSongOverview = ({
+        isToggled,
+        overviewOption
+    }) => {
+        const nextOverviewOption = getNextOption({
+                isToggled,
+                toggleShows: toggleShowsOverviewImmediately,
+                prevOption: selectedOverviewOption,
+                nextOption: overviewOption
+            }),
+
+            /**
                  * If both overview and tips are shown, user may try to show the
                  * overview by pressing key. This is the only way to handle it.
                  */
-                bothOverviewAndTipsShown =
+            bothOverviewAndTipsShown =
                     getIsShown(nextOverviewOption) &&
                     getIsShown(selectedOverviewOption) &&
                     getIsShown(selectedTipsOption)
 
-            dispatch(updateOptionStore({
-                selectedOverviewOption: nextOverviewOption,
-                ...bothOverviewAndTipsShown && {
-                    isForcedShownOverview: true
-                }
-            }))
-            return true
-        },
-        dispatchOverview = ({
-            isToggled,
-            overviewOption
-        } = {}) => (
-            isSelectedLogue ?
-                _dispatchLogueOverview() :
-                _dispatchSongOverview({
-                    isToggled,
-                    overviewOption
-                })
-        )
+        dispatch(updateOptionStore({
+            selectedOverviewOption: nextOverviewOption,
+            ...bothOverviewAndTipsShown && {
+                isForcedShownOverview: true
+            }
+        }))
+        return true
+    }
+
+    const dispatchOverview = ({
+        isToggled,
+        overviewOption
+    } = {}) => (
+        isSelectedLogue ?
+            _dispatchLogueOverview() :
+            _dispatchSongOverview({
+                isToggled,
+                overviewOption
+            })
+    )
 
     useImperativeHandle(ref, () => dispatchOverview)
     return null

@@ -4,11 +4,16 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `What can be removed from data? For example, unit dot anchor title? Get rid of all annotation todos?`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     /* Weekend work. */
     {
-        taskName: `Wrap up data refactor. Scene actors, cubes, and things should be in compiled album. Cubes should also grab values from a selector, rather than the store.`,
-        workedHours: 22,
+        taskName: `More data refactor. Scene actors, cubes, and things should be in compiled album. Cubes should also grab values from a selector, rather than the store.`,
+        workedHours: 24,
         neededHours: 25
     },
     {

@@ -21,15 +21,16 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
         isEarShown = useSelector(mapIsEarShown),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
-        earColumnIndex = useSelector(mapEarColumnIndex),
-        dispatchAccessedAnnotation = ({
-            verseIndex = selectedVerseIndex,
-            annotationIndex,
-            direction
-        } = {}) => {
-            const
-                selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
-                accessedAnnotationIndex =
+        earColumnIndex = useSelector(mapEarColumnIndex)
+
+    const dispatchAccessedAnnotation = ({
+        verseIndex = selectedVerseIndex,
+        annotationIndex,
+        direction
+    } = {}) => {
+        const
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
+            accessedAnnotationIndex =
                     annotationIndex ?
 
                         // If given an annotation index, start from there.
@@ -55,23 +56,23 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
                             direction
                         })
 
-            dispatch(updateAccessStore({ accessedAnnotationIndex }))
+        dispatch(updateAccessStore({ accessedAnnotationIndex }))
 
-            // Only scroll if accessed with a direction.
-            if (direction && accessedAnnotationIndex > 0) {
-                dispatch(updateScrollLyricStore({
-                    queuedScrollLyricLog:
+        // Only scroll if accessed with a direction.
+        if (direction && accessedAnnotationIndex > 0) {
+            dispatch(updateScrollLyricStore({
+                queuedScrollLyricLog:
                         `Direction access annotation ${accessedAnnotationIndex}.`,
-                    queuedScrollLyricIndex: accessedAnnotationIndex
-                }))
-                dispatch(updateScrollCarouselStore({
-                    queuedScrollCarouselLog: 'Access carousel annotation.',
-                    queuedScrollCarouselIndex: accessedAnnotationIndex
-                }))
-            }
-
-            return accessedAnnotationIndex
+                queuedScrollLyricIndex: accessedAnnotationIndex
+            }))
+            dispatch(updateScrollCarouselStore({
+                queuedScrollCarouselLog: 'Access carousel annotation.',
+                queuedScrollCarouselIndex: accessedAnnotationIndex
+            }))
         }
+
+        return accessedAnnotationIndex
+    }
 
     useImperativeHandle(ref, () => dispatchAccessedAnnotation)
     return null

@@ -12,42 +12,43 @@ const DotSelectDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         dotsBitNumber = useSelector(mapDotsBitNumber),
-        dotsSlideBitNumber = useSelector(mapDotsSlideBitNumber),
-        dispatchSelectDot = dotIndex => {
-            const {
-                value,
-                bitNumber
-            } = getValueAndDotsBitNumberForToggledDotIndex({
-                dotIndex,
-                bitNumber: dotsBitNumber
-            })
+        dotsSlideBitNumber = useSelector(mapDotsSlideBitNumber)
 
-            dispatch(updateDotsStore({
-                dotsBitNumber: bitNumber,
-                [ORDERED_DOT_KEYS[dotIndex]]: value
-            }))
+    const dispatchSelectDot = dotIndex => {
+        const {
+            value,
+            bitNumber
+        } = getValueAndDotsBitNumberForToggledDotIndex({
+            dotIndex,
+            bitNumber: dotsBitNumber
+        })
 
-            // Make most recently toggled dot the accessed dot.
-            dispatch(updateAccessStore({
-                accessedDotIndex: dotIndex
-            }))
-            return true
-        },
+        dispatch(updateDotsStore({
+            dotsBitNumber: bitNumber,
+            [ORDERED_DOT_KEYS[dotIndex]]: value
+        }))
 
-        dispatchActivatedDot = dotIndex => {
-            const {
-                value,
-                bitNumber
-            } = getValueAndDotsBitNumberForToggledDotIndex({
-                dotIndex,
-                bitNumber: dotsSlideBitNumber
-            })
+        // Make most recently toggled dot the accessed dot.
+        dispatch(updateAccessStore({
+            accessedDotIndex: dotIndex
+        }))
+        return true
+    }
 
-            dispatch(updateDotsSlideStore({
-                dotsSlideBitNumber: bitNumber,
-                [ORDERED_DOT_KEYS[dotIndex]]: value
-            }))
-        }
+    const dispatchActivatedDot = dotIndex => {
+        const {
+            value,
+            bitNumber
+        } = getValueAndDotsBitNumberForToggledDotIndex({
+            dotIndex,
+            bitNumber: dotsSlideBitNumber
+        })
+
+        dispatch(updateDotsSlideStore({
+            dotsSlideBitNumber: bitNumber,
+            [ORDERED_DOT_KEYS[dotIndex]]: value
+        }))
+    }
 
     useImperativeHandle(ref, () => ({
         dispatchSelectDot,

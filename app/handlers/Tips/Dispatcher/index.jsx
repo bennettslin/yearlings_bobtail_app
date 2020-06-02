@@ -15,26 +15,27 @@ const TipsDispatcher = forwardRef((props, ref) => {
         isLyricLogue = useSelector(mapIsLyricLogue),
         isTipsShowable = useSelector(mapIsTipsShowable),
         toggleShowsTipsImmediately = useSelector(mapToggleShowsTipsImmediately),
-        selectedTipsOption = useSelector(mapSelectedTipsOption),
-        dispatchTips = ({
-            isToggled,
-            tipsOption
-        } = {}) => {
-            // Don't allow toggling in logue, or if no tip for this device width.
-            if (isLyricLogue || !isTipsShowable) {
-                return false
-            }
+        selectedTipsOption = useSelector(mapSelectedTipsOption)
 
-            const newTipsOption = getNextOption({
-                isToggled,
-                toggleShows: toggleShowsTipsImmediately,
-                prevOption: selectedTipsOption,
-                nextOption: tipsOption
-            })
-
-            dispatch(updateOptionStore({ selectedTipsOption: newTipsOption }))
-            return true
+    const dispatchTips = ({
+        isToggled,
+        tipsOption
+    } = {}) => {
+        // Don't allow toggling in logue, or if no tip for this device width.
+        if (isLyricLogue || !isTipsShowable) {
+            return false
         }
+
+        const newTipsOption = getNextOption({
+            isToggled,
+            toggleShows: toggleShowsTipsImmediately,
+            prevOption: selectedTipsOption,
+            nextOption: tipsOption
+        })
+
+        dispatch(updateOptionStore({ selectedTipsOption: newTipsOption }))
+        return true
+    }
 
     useImperativeHandle(ref, () => dispatchTips)
     return null

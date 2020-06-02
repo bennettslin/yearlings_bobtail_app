@@ -6,22 +6,23 @@ import { mapReferenceDot } from '../../redux/dots/selectors'
 const WikiDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        isWikiDotSelected = useSelector(mapReferenceDot),
-        dispatchWiki = (
-            selectedWikiIndex,
-            carouselAnnotationIndex = 0
-        ) => {
-            // Don't register click if reference dot is deselected.
-            if (!isWikiDotSelected) {
-                return false
-            }
+        isWikiDotSelected = useSelector(mapReferenceDot)
 
-            dispatch(updateSessionStore({
-                selectedWikiIndex,
-                carouselAnnotationIndex
-            }))
-            return true
+    const dispatchWiki = (
+        selectedWikiIndex,
+        carouselAnnotationIndex = 0
+    ) => {
+        // Don't register click if reference dot is deselected.
+        if (!isWikiDotSelected) {
+            return false
         }
+
+        dispatch(updateSessionStore({
+            selectedWikiIndex,
+            carouselAnnotationIndex
+        }))
+        return true
+    }
 
     useImperativeHandle(ref, () => dispatchWiki)
     return null

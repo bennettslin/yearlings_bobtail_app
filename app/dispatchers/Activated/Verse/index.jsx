@@ -20,54 +20,57 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
-        isSelectedLogue = useSelector(mapIsSelectedLogue),
-        _queueScrollToActivatedVerse = nextVerseIndex => {
-            dispatch(updateScrollLyricStore({
-                queuedScrollLyricLog:
+        isSelectedLogue = useSelector(mapIsSelectedLogue)
+
+    const _queueScrollToActivatedVerse = nextVerseIndex => {
+        dispatch(updateScrollLyricStore({
+            queuedScrollLyricLog:
                     `Activate verse ${nextVerseIndex}.`,
-                queuedScrollLyricByVerse: true,
-                queuedScrollLyricIndex: nextVerseIndex
-            }))
-        },
-        activateVerseIndex = (nextVerseIndex) => {
-            // Do not allow selected verse to be activated.
-            if (selectedVerseIndex === nextVerseIndex) {
-                return
-            }
+            queuedScrollLyricByVerse: true,
+            queuedScrollLyricIndex: nextVerseIndex
+        }))
+    }
 
-            dispatch(updateActivatedStore({
-                activatedSceneIndex: getSceneIndexForVerse(
-                    selectedSongIndex,
-                    nextVerseIndex
-                ),
-                activatedVerseIndex: nextVerseIndex,
-                activatedTime: getStartTimeForVerse(
-                    selectedSongIndex,
-                    nextVerseIndex
-                )
-            }))
-
-            // Turn off auto scroll once verse or scene is activated.
-            dispatch(updateToggleStore({
-                isAutoScroll: false
-            }))
-        },
-        activateVerseDirection = (direction) => {
-            if (isSelectedLogue) {
-                return false
-            }
-
-            const nextVerseIndex = getActivatedVerseForDirection({
-                selectedSongIndex,
-                selectedVerseIndex,
-                activatedVerseIndex,
-                direction
-            })
-
-            activateVerseIndex(nextVerseIndex)
-            _queueScrollToActivatedVerse(nextVerseIndex)
-            return true
+    const activateVerseIndex = (nextVerseIndex) => {
+        // Do not allow selected verse to be activated.
+        if (selectedVerseIndex === nextVerseIndex) {
+            return
         }
+
+        dispatch(updateActivatedStore({
+            activatedSceneIndex: getSceneIndexForVerse(
+                selectedSongIndex,
+                nextVerseIndex
+            ),
+            activatedVerseIndex: nextVerseIndex,
+            activatedTime: getStartTimeForVerse(
+                selectedSongIndex,
+                nextVerseIndex
+            )
+        }))
+
+        // Turn off auto scroll once verse or scene is activated.
+        dispatch(updateToggleStore({
+            isAutoScroll: false
+        }))
+    }
+
+    const activateVerseDirection = (direction) => {
+        if (isSelectedLogue) {
+            return false
+        }
+
+        const nextVerseIndex = getActivatedVerseForDirection({
+            selectedSongIndex,
+            selectedVerseIndex,
+            activatedVerseIndex,
+            direction
+        })
+
+        activateVerseIndex(nextVerseIndex)
+        _queueScrollToActivatedVerse(nextVerseIndex)
+        return true
+    }
 
     useImperativeHandle(ref, () => ({
         activateVerseIndex,

@@ -9,24 +9,25 @@ const DotsSlideDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
-        isDotsSlideShown = useSelector(mapIsDotsSlideShown),
-        dispatchDotsSlide = (
-            // Just toggle unless parent specifies value.
-            triedIsDotsSlideShown = !isDotsSlideShown
-        ) => {
-            // Turning off is always successful.
-            const newIsDotsSlideShown = triedIsDotsSlideShown &&
+        isDotsSlideShown = useSelector(mapIsDotsSlideShown)
+
+    const dispatchDotsSlide = (
+        // Just toggle unless parent specifies value.
+        triedIsDotsSlideShown = !isDotsSlideShown
+    ) => {
+        // Turning off is always successful.
+        const newIsDotsSlideShown = triedIsDotsSlideShown &&
 
                 // ... also must not be in logue.
                 !isSelectedLogue
 
-            dispatch(updateToggleStore({
-                isDotsSlideShown: newIsDotsSlideShown
-            }))
+        dispatch(updateToggleStore({
+            isDotsSlideShown: newIsDotsSlideShown
+        }))
 
-            // Try was successful.
-            return newIsDotsSlideShown === triedIsDotsSlideShown
-        }
+        // Try was successful.
+        return newIsDotsSlideShown === triedIsDotsSlideShown
+    }
 
     useImperativeHandle(ref, () => dispatchDotsSlide)
     return null

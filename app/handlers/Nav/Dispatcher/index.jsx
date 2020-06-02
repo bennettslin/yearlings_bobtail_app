@@ -10,22 +10,23 @@ const NavDispatcher = forwardRef((props, ref) => {
         dispatch = useDispatch(),
         showSingleNavBook = useSelector(mapShowSingleNavBook),
         shownNavBookIndex = useSelector(mapShownNavBookIndex),
-        isNavShown = useSelector(mapIsNavShown),
-        dispatchNavBook = () => {
-            /**
+        isNavShown = useSelector(mapIsNavShown)
+
+    const dispatchNavBook = () => {
+        /**
              * We shouldn't be able to select book column if it's not a single
              * column, or if nav is collapsed.
              */
-            if (!showSingleNavBook || !isNavShown) {
-                return false
-            }
-
-            // Always just a simple toggle.
-            dispatch(updateSessionStore({
-                shownNavBookIndex: (shownNavBookIndex + 1) % 2
-            }))
-            return true
+        if (!showSingleNavBook || !isNavShown) {
+            return false
         }
+
+        // Always just a simple toggle.
+        dispatch(updateSessionStore({
+            shownNavBookIndex: (shownNavBookIndex + 1) % 2
+        }))
+        return true
+    }
 
     useImperativeHandle(ref, () => dispatchNavBook)
     return null

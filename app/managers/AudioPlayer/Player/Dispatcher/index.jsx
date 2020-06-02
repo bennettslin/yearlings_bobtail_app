@@ -10,19 +10,19 @@ import { mapPlayersBitNumber } from '../../../../redux/players/selectors'
 const PlayerDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        playersBitNumber = useSelector(mapPlayersBitNumber),
+        playersBitNumber = useSelector(mapPlayersBitNumber)
 
-        dispatchPlayerCanPlayThrough = songIndex => {
-            dispatch(updatePlayersStore({
-                playersBitNumber: getBitFromPlayerCanPlayThrough({
-                    bitNumber: playersBitNumber,
-                    key: songIndex
-                }),
+    const dispatchPlayerCanPlayThrough = songIndex => {
+        dispatch(updatePlayersStore({
+            playersBitNumber: getBitFromPlayerCanPlayThrough({
+                bitNumber: playersBitNumber,
+                key: songIndex
+            }),
 
-                // Add to store just for dev clarity.
-                [getStoreKeyForPlayer(songIndex)]: true
-            }))
-        }
+            // Add to store just for dev clarity.
+            [getStoreKeyForPlayer(songIndex)]: true
+        }))
+    }
 
     useImperativeHandle(ref, () => dispatchPlayerCanPlayThrough)
     return null

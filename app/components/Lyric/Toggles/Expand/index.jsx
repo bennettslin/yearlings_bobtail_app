@@ -23,10 +23,11 @@ const LyricToggleExpand = ({ inMain }) => {
         dispatchLyricExpand = useRef(),
         isLyricExpandable = useSelector(mapIsLyricExpandable),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
-        isLyricExpanded = useSelector(mapIsLyricExpanded),
-        handleButtonClick = () => {
-            dispatchLyricExpand.current()
-        }
+        isLyricExpanded = useSelector(mapIsLyricExpanded)
+
+    const handleButtonClick = () => {
+        dispatchLyricExpand.current()
+    }
 
     // Render button in main if lyric column is heightless.
     // TODO: Make this a selector.

@@ -1,6 +1,3 @@
-# Final bugs from unit refactor
-* What can be removed from data? For example, unit dot anchor title? Get rid of all annotation todos?
-
 # Bugs
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.

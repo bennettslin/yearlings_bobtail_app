@@ -11,13 +11,14 @@ const LyricDispatcher = forwardRef((props, ref) => {
         dispatch = useDispatch(),
         isLyricExpandable = useSelector(mapIsLyricExpandable),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
-        isLyricExpanded = useSelector(mapIsLyricExpanded),
-        dispatchLyricExpand = (
-            // Just toggle unless parent specifies value.
-            attemptedIsLyricExpanded = !isLyricExpanded
-        ) => {
-            // Turning off is always successful.
-            const nextIsLyricExpanded = attemptedIsLyricExpanded &&
+        isLyricExpanded = useSelector(mapIsLyricExpanded)
+
+    const dispatchLyricExpand = (
+        // Just toggle unless parent specifies value.
+        attemptedIsLyricExpanded = !isLyricExpanded
+    ) => {
+        // Turning off is always successful.
+        const nextIsLyricExpanded = attemptedIsLyricExpanded &&
 
                 // If trying to turn on, lyric must be expandable, and...
                 isLyricExpandable &&
@@ -25,13 +26,13 @@ const LyricDispatcher = forwardRef((props, ref) => {
                 // ... also must not be in logue.
                 !isSelectedLogue
 
-            dispatch(updateToggleStore({
-                isLyricExpanded: nextIsLyricExpanded
-            }))
+        dispatch(updateToggleStore({
+            isLyricExpanded: nextIsLyricExpanded
+        }))
 
-            // Try was successful.
-            return nextIsLyricExpanded === attemptedIsLyricExpanded
-        }
+        // Try was successful.
+        return nextIsLyricExpanded === attemptedIsLyricExpanded
+    }
 
     useImperativeHandle(ref, () => dispatchLyricExpand)
     return null

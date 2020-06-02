@@ -13,21 +13,22 @@ const EarColumnDispatcher = forwardRef((props, ref) => {
         dispatch = useDispatch(),
         isEarShown = useSelector(mapIsEarShown),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
-        earColumnIndex = useSelector(mapEarColumnIndex),
-        dispatchEarColumn = () => {
-            /**
+        earColumnIndex = useSelector(mapEarColumnIndex)
+
+    const dispatchEarColumn = () => {
+        /**
              * We shouldn't be able to select lyric column if not in a song that
              * has ear toggle, or if in a logue.
              */
-            if (!isEarShown || isSelectedLogue) {
-                return false
-            }
-
-            dispatch(updateSelectedStore({
-                earColumnIndex: (earColumnIndex + 1) % 2
-            }))
-            return true
+        if (!isEarShown || isSelectedLogue) {
+            return false
         }
+
+        dispatch(updateSelectedStore({
+            earColumnIndex: (earColumnIndex + 1) % 2
+        }))
+        return true
+    }
 
     useImperativeHandle(ref, () => dispatchEarColumn)
     return null

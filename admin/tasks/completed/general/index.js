@@ -4756,5 +4756,9 @@ export default [
     {
         taskName: `Fix weird bug with app rendering in iframe, causing focus container to lose focus.`,
         workedHours: 1
+    },
+    {
+        taskName: `Annotation and lyric data refactor.`,
+        workedHours: 24
     }
 ]

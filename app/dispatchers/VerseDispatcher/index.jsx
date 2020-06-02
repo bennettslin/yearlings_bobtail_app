@@ -12,54 +12,55 @@ import { mapSelectedSongIndex } from '../../redux/selected/selectors'
 const VerseDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        selectedSongIndex = useSelector(mapSelectedSongIndex),
-        dispatchVerse = ({
-            selectedVerseIndex = 0,
-            scrollLog
-        }) => {
+        selectedSongIndex = useSelector(mapSelectedSongIndex)
 
-            const
-                selectedSceneIndex = getSceneIndexForVerse(
-                    selectedSongIndex,
-                    selectedVerseIndex
-                ),
-                selectedTime = getStartTimeForVerse(
-                    selectedSongIndex,
-                    selectedVerseIndex
-                )
+    const dispatchVerse = ({
+        selectedVerseIndex = 0,
+        scrollLog
+    }) => {
 
-            dispatch(updateAudioStore({
-                queuedPlaySongIndex: selectedSongIndex,
-                queuedPlayVerseIndex: selectedVerseIndex
-            }))
+        const
+            selectedSceneIndex = getSceneIndexForVerse(
+                selectedSongIndex,
+                selectedVerseIndex
+            ),
+            selectedTime = getStartTimeForVerse(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
 
-            dispatch(updateSelectedStore({
-                selectedVerseIndex,
-                selectedSceneIndex,
-                selectedTime
-            }))
+        dispatch(updateAudioStore({
+            queuedPlaySongIndex: selectedSongIndex,
+            queuedPlayVerseIndex: selectedVerseIndex
+        }))
 
-            logSelect({
-                action: 'verse',
-                song: selectedSongIndex,
-                verse: selectedVerseIndex,
-                scene: selectedSceneIndex
-            })
+        dispatch(updateSelectedStore({
+            selectedVerseIndex,
+            selectedSceneIndex,
+            selectedTime
+        }))
 
-            // Ensure that no verse is activated.
-            dispatch(updateActivatedStore())
+        logSelect({
+            action: 'verse',
+            song: selectedSongIndex,
+            verse: selectedVerseIndex,
+            scene: selectedSceneIndex
+        })
 
-            // Selecting a verse necessarily resets the verse bars.
-            dispatch(resetVerseBars())
+        // Ensure that no verse is activated.
+        dispatch(updateActivatedStore())
 
-            dispatch(updateScrollLyricStore({
-                queuedScrollLyricLog: scrollLog,
-                queuedScrollLyricByVerse: true,
-                queuedScrollLyricIndex: selectedVerseIndex,
-                queuedScrollLyricAlways: true,
-                queuedSceneChangeExitScrollCallback: true
-            }))
-        }
+        // Selecting a verse necessarily resets the verse bars.
+        dispatch(resetVerseBars())
+
+        dispatch(updateScrollLyricStore({
+            queuedScrollLyricLog: scrollLog,
+            queuedScrollLyricByVerse: true,
+            queuedScrollLyricIndex: selectedVerseIndex,
+            queuedScrollLyricAlways: true,
+            queuedSceneChangeExitScrollCallback: true
+        }))
+    }
 
     useImperativeHandle(ref, () => dispatchVerse)
     return null

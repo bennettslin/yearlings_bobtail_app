@@ -11,13 +11,14 @@ const ScoreDispatcher = forwardRef((props, ref) => {
         dispatch = useDispatch(),
         isScoreShown = useSelector(mapIsScoreShown),
         canScoreMount = useSelector(mapCanScoreMount),
-        isSelectedLogue = useSelector(mapIsSelectedLogue),
-        dispatchScore = (
-            // Just toggle unless parent specifies value.
-            triedIsScoreShown = !isScoreShown
-        ) => {
-            // Turning off is always successful.
-            const isScoreShown = triedIsScoreShown &&
+        isSelectedLogue = useSelector(mapIsSelectedLogue)
+
+    const dispatchScore = (
+        // Just toggle unless parent specifies value.
+        triedIsScoreShown = !isScoreShown
+    ) => {
+        // Turning off is always successful.
+        const isScoreShown = triedIsScoreShown &&
 
                 // If trying to turn on, score must be mountable, and...
                 canScoreMount &&
@@ -25,11 +26,11 @@ const ScoreDispatcher = forwardRef((props, ref) => {
                 // ... also must not be in logue.
                 !isSelectedLogue
 
-            dispatch(updateToggleStore({ isScoreShown }))
+        dispatch(updateToggleStore({ isScoreShown }))
 
-            // Try was successful.
-            return isScoreShown === triedIsScoreShown
-        }
+        // Try was successful.
+        return isScoreShown === triedIsScoreShown
+    }
 
     useImperativeHandle(ref, () => dispatchScore)
     return null

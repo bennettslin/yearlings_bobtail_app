@@ -4,21 +4,20 @@ import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import { updateToggleStore } from '../../redux/toggle/action'
 
 const ScrollVerseDispatcher = forwardRef((props, ref) => {
-    const
-        dispatch = useDispatch(),
-        dispatchScrollVerse = (isAutoScroll) => {
+    const dispatch = useDispatch()
 
-            dispatch(updateScrollLyricStore({
-                queuedScrollLyricLog:
+    const dispatchScrollVerse = (isAutoScroll) => {
+        dispatch(updateScrollLyricStore({
+            queuedScrollLyricLog:
                     'VerseBar click or autoScroll toggle back to selected verse.',
-                queuedScrollLyricByVerse: true,
-                queuedScrollLyricAlways: true
-            }))
+            queuedScrollLyricByVerse: true,
+            queuedScrollLyricAlways: true
+        }))
 
-            dispatch(updateToggleStore({
-                ...isAutoScroll && { isAutoScroll }
-            }))
-        }
+        dispatch(updateToggleStore({
+            ...isAutoScroll && { isAutoScroll }
+        }))
+    }
 
     useImperativeHandle(ref, () => dispatchScrollVerse)
     return null

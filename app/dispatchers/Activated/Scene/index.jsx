@@ -20,56 +20,59 @@ const ActivatedSceneDispatcher = forwardRef((props, ref) => {
         activatedSceneIndex = useSelector(mapActivatedSceneIndex),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedSceneIndex = useSelector(mapSelectedSceneIndex),
-        isSelectedLogue = useSelector(mapIsSelectedLogue),
-        _queueScrollToActivatedVerse = (
-            nextSceneIndex,
-            activatedVerseIndex
-        ) => {
-            dispatch(updateScrollLyricStore({
-                queuedScrollLyricLog:
+        isSelectedLogue = useSelector(mapIsSelectedLogue)
+
+    const _queueScrollToActivatedVerse = (
+        nextSceneIndex,
+        activatedVerseIndex
+    ) => {
+        dispatch(updateScrollLyricStore({
+            queuedScrollLyricLog:
                     `Activate scene ${nextSceneIndex}, verse ${activatedVerseIndex}.`,
-                queuedScrollLyricByVerse: true,
-                queuedScrollLyricIndex: activatedVerseIndex
-            }))
-        },
-        _activateSceneIndex = (nextSceneIndex) => {
-            const activatedVerseIndex = getVerseIndexForScene(
+            queuedScrollLyricByVerse: true,
+            queuedScrollLyricIndex: activatedVerseIndex
+        }))
+    }
+
+    const _activateSceneIndex = (nextSceneIndex) => {
+        const activatedVerseIndex = getVerseIndexForScene(
+            selectedSongIndex,
+            nextSceneIndex
+        )
+
+        dispatch(updateActivatedStore({
+            activatedSceneIndex: nextSceneIndex,
+            activatedVerseIndex,
+            activatedTime: getStartTimeForVerse(
                 selectedSongIndex,
-                nextSceneIndex
-            )
-
-            dispatch(updateActivatedStore({
-                activatedSceneIndex: nextSceneIndex,
-                activatedVerseIndex,
-                activatedTime: getStartTimeForVerse(
-                    selectedSongIndex,
-                    activatedVerseIndex
-                )
-            }))
-
-            // Turn off auto scroll once verse or scene is activated.
-            dispatch(updateToggleStore({
-                isAutoScroll: false
-            }))
-
-            _queueScrollToActivatedVerse(
-                nextSceneIndex,
                 activatedVerseIndex
             )
-        },
-        activateSceneDirection = (direction) => {
-            if (isSelectedLogue) {
-                return false
-            }
+        }))
 
-            _activateSceneIndex(getActivatedSceneForDirection({
-                selectedSongIndex,
-                selectedSceneIndex,
-                activatedSceneIndex,
-                direction
-            }))
-            return true
+        // Turn off auto scroll once verse or scene is activated.
+        dispatch(updateToggleStore({
+            isAutoScroll: false
+        }))
+
+        _queueScrollToActivatedVerse(
+            nextSceneIndex,
+            activatedVerseIndex
+        )
+    }
+
+    const activateSceneDirection = (direction) => {
+        if (isSelectedLogue) {
+            return false
         }
+
+        _activateSceneIndex(getActivatedSceneForDirection({
+            selectedSongIndex,
+            selectedSceneIndex,
+            activatedSceneIndex,
+            direction
+        }))
+        return true
+    }
 
     useImperativeHandle(ref, () => activateSceneDirection)
     return null

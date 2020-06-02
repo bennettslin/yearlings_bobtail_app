@@ -19,15 +19,15 @@ const Annotation = ({
 }) => {
     const
         stopPropagation = useRef(),
-        lyricSongIndex = useSelector(mapLyricSongIndex),
+        lyricSongIndex = useSelector(mapLyricSongIndex)
 
-        onClick = e => {
-            logEvent({ e, componentName: `Annotation ${annotationIndex}` })
+    const onClick = e => {
+        logEvent({ e, componentName: `Annotation ${annotationIndex}` })
 
-            if (isSelected) {
-                stopPropagation.current(e)
-            }
+        if (isSelected) {
+            stopPropagation.current(e)
         }
+    }
 
     // If in popup, annotation won't always exist.
     return annotationIndex && (

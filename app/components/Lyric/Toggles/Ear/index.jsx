@@ -20,10 +20,11 @@ const LyricToggleEar = () => {
         dispatchEarColumn = useRef(),
         isEarShown = useSelector(mapIsEarShown),
         earColumnIndex = useSelector(mapEarColumnIndex),
-        isDesktopWidth = useSelector(mapIsDesktopWidth),
-        handleButtonClick = () => {
-            dispatchEarColumn.current()
-        }
+        isDesktopWidth = useSelector(mapIsDesktopWidth)
+
+    const handleButtonClick = () => {
+        dispatchEarColumn.current()
+    }
 
     return (
         <CSSTransition

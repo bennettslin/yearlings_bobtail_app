@@ -7,15 +7,16 @@ import { mapIsAboutShown } from '../../redux/toggle/selectors'
 const AboutDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        isAboutShown = useSelector(mapIsAboutShown),
-        dispatchAbout = (
-            // Just toggle unless parent specifies value.
-            newIsAboutShown = !isAboutShown
-        ) => {
-            // Turning on or off is always successful.
-            dispatch(updateIsAboutShown(newIsAboutShown))
-            return true
-        }
+        isAboutShown = useSelector(mapIsAboutShown)
+
+    const dispatchAbout = (
+        // Just toggle unless parent specifies value.
+        newIsAboutShown = !isAboutShown
+    ) => {
+        // Turning on or off is always successful.
+        dispatch(updateIsAboutShown(newIsAboutShown))
+        return true
+    }
 
     useImperativeHandle(ref, () => dispatchAbout)
     return null

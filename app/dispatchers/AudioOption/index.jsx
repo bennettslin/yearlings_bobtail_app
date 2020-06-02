@@ -9,13 +9,14 @@ import { mapAudioOptionIndex } from '../../redux/session/selectors'
 const AudioOptionDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        audioOptionIndex = useSelector(mapAudioOptionIndex),
-        dispatchAudioOption = () => {
-            dispatch(updateAudioOptionIndex(
-                (audioOptionIndex + 1) % AUDIO_OPTIONS.length
-            ))
-            return true
-        }
+        audioOptionIndex = useSelector(mapAudioOptionIndex)
+
+    const dispatchAudioOption = () => {
+        dispatch(updateAudioOptionIndex(
+            (audioOptionIndex + 1) % AUDIO_OPTIONS.length
+        ))
+        return true
+    }
 
     useImperativeHandle(ref, () => dispatchAudioOption)
     return null

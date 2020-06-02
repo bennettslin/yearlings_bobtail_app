@@ -16,29 +16,30 @@ const WikiWormholeDispatcher = forwardRef((props, ref) => {
         accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex),
         dotsBitNumber = useSelector(mapDotsBitNumber),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
-        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        dispatchAccessedWikiWormhole = ({
-            annotationIndex = selectedAnnotationIndex,
-            direction
-        } = {}) => {
-            const
-                selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
-                initialWikiWormholeIndex =
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex)
+
+    const dispatchAccessedWikiWormhole = ({
+        annotationIndex = selectedAnnotationIndex,
+        direction
+    } = {}) => {
+        const
+            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
+            initialWikiWormholeIndex =
                     // If no direction is given, reset the index.
                     !Number.isFinite(direction) ?
                         1 :
                         accessedWikiWormholeIndex
 
-            dispatch(updateAccessStore({
-                accessedWikiWormholeIndex: getWikiWormholeIndexForDirection({
-                    selectedSongIndex,
-                    selectedAnnotationIndex: annotationIndex,
-                    selectedDotKeys,
-                    initialWikiWormholeIndex,
-                    direction
-                })
-            }))
-        }
+        dispatch(updateAccessStore({
+            accessedWikiWormholeIndex: getWikiWormholeIndexForDirection({
+                selectedSongIndex,
+                selectedAnnotationIndex: annotationIndex,
+                selectedDotKeys,
+                initialWikiWormholeIndex,
+                direction
+            })
+        }))
+    }
 
     useImperativeHandle(ref, () => dispatchAccessedWikiWormhole)
     return null
