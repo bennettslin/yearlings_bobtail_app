@@ -18,6 +18,7 @@
 # Brainless JS tasks
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.
+* Make dispatchers functions.
 * Change all to use overviewShown and tipsShown. Then prefix with is.
 * Rename all to dotBit, use selectedDotBit and activatedDotBit?
 * Shorten queued names as well?
@@ -26,9 +27,7 @@
 * Logic styles should live together. (So that they can be removed together if needed.)
 
 # Easy reduction tasks
-* Make Annotation handler both functions.
 * Have verse store for queued verse select, just like annotation store.
-* Make dispatchers functions.
 * Internal stylesheet fixes
 * Simplify Anchor for social media anchors
 * Listeners know to render themselves
