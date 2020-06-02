@@ -8,14 +8,14 @@ export const getIsShelfLeftShown = ({
     lyricAnnotationIndex,
     isLyricLogue,
     isLogueOverviewShown,
-    overviewShown,
-    tipsShown
+    isOverviewShown,
+    isTipsShown
 }) => {
 
     // If toggle is in overview, hide when...
     if (
         // In song and is phone.
-        (overviewShown && !isLyricLogue && isPhoneWidth) ||
+        (isOverviewShown && !isLyricLogue && isPhoneWidth) ||
 
         // In logue and logue overview is shown.
         (isLogueOverviewShown && isLyricLogue)
@@ -30,7 +30,7 @@ export const getIsShelfLeftShown = ({
         !isLyricExpanded &&
         !isOverlayShown &&
         !lyricAnnotationIndex &&
-        !tipsShown &&
+        !isTipsShown &&
         !isActivated
     )
 }
@@ -69,15 +69,15 @@ export const getIsOverlayShown = ({
 
 export const getIsCarouselNavShowable = ({
     isOverlayShown,
-    overviewShown,
-    tipsShown,
+    isOverviewShown,
+    isTipsShown,
     isLyricLogue,
     isLyricExpanded,
     isActivated
 }) => (
     !isOverlayShown &&
-    !overviewShown &&
-    !tipsShown &&
+    !isOverviewShown &&
+    !isTipsShown &&
     !isLyricLogue &&
     !isLyricExpanded &&
     !isActivated

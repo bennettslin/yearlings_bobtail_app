@@ -49,7 +49,7 @@ const _getHasInitialToggleConditions = ({
 )
 
 export const getToggleShowsOverviewImmediately = ({
-    tipsShown,
+    isTipsShown,
     lyricAnnotationIndex,
     isDotsSlideShown,
     isOverlayShown,
@@ -58,7 +58,7 @@ export const getToggleShowsOverviewImmediately = ({
 
 }) => (
     // Toggle overview immediately under these conditions.
-    tipsShown || _getHasInitialToggleConditions({
+    isTipsShown || _getHasInitialToggleConditions({
         lyricAnnotationIndex,
         isDotsSlideShown,
         isOverlayShown,
@@ -68,8 +68,8 @@ export const getToggleShowsOverviewImmediately = ({
 )
 
 export const getToggleShowsTipsImmediately = ({
-    tipsShown,
-    overviewShown,
+    isTipsShown,
+    isOverviewShown,
     lyricAnnotationIndex,
     isDotsSlideShown,
     isOverlayShown,
@@ -78,7 +78,7 @@ export const getToggleShowsTipsImmediately = ({
 
 }) => (
     // Toggle tips immediately under these conditions.
-    (!tipsShown && overviewShown) || _getHasInitialToggleConditions({
+    (!isTipsShown && isOverviewShown) || _getHasInitialToggleConditions({
         lyricAnnotationIndex,
         isDotsSlideShown,
         isOverlayShown,

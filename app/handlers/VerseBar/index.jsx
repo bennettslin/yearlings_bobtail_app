@@ -112,7 +112,7 @@ class VerseBarHandler extends PureComponent {
         this._determineVerseBarsFromActivatedVerse(prevProps)
     }
 
-    _determineVerseBarsFromDispatch(prevProps) {
+    _determineVerseBarsFromDispatch = (prevProps) => {
         const
             { queuedDetermineVerseBars } = this.props,
             { queuedDetermineVerseBars: didDetermineVerseBars } = prevProps
@@ -125,7 +125,7 @@ class VerseBarHandler extends PureComponent {
         }
     }
 
-    _determineVerseBarsFromSlider(prevProps) {
+    _determineVerseBarsFromSlider = (prevProps) => {
         const
             { sliderVerseIndex } = this.props,
             { sliderVerseIndex: prevVerseIndex } = prevProps
@@ -139,7 +139,7 @@ class VerseBarHandler extends PureComponent {
         }
     }
 
-    _determineVerseBarsFromActivatedVerse(prevProps) {
+    _determineVerseBarsFromActivatedVerse = (prevProps) => {
         /**
          * This is needed because a verse might get activated or deactivated,
          * while the selected verse needs to be shown in a verse bar.

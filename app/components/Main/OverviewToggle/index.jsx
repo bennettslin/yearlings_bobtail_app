@@ -17,6 +17,7 @@ import './style'
 const OverviewToggle = ({
     isToggleInOverview,
     className
+
 }) => {
     const
         dispatchOverview = useRef(),

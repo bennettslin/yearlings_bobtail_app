@@ -156,11 +156,11 @@ class KeyManager extends PureComponent {
         }
     }
 
-    _handleKeyRegister({
+    _handleKeyRegister = ({
         e,
         keyName,
         isKeyDown
-    }) {
+    }) => {
         const shouldHandleOnKeyDown = getShouldHandleOnKeyDown(keyName),
             shouldHandle = isKeyDown === shouldHandleOnKeyDown
 

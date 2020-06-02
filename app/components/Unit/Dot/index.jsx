@@ -35,25 +35,25 @@ export const UnitDot = ({
             dotBit
         } = getDotForUnit(lyricSongIndex, unitIndex),
         isAccessed = useSelector(mapIsAccessedAnnotation(annotationIndex)),
-        isSelected = useSelector(mapIsSelectedLyricAnnotation(annotationIndex)),
+        isSelected = useSelector(mapIsSelectedLyricAnnotation(annotationIndex))
 
-        handleAnchorClick = () => {
-            if (isSelected || isSliderMoving || isActivated) {
-                return false
-            }
-
-            dispatch(updateAnnotationStore({
-                queuedAnnotationIndex: annotationIndex
-            }))
-            return true
-        },
-
-        setAnnotationForUnit = node => {
-            setLyricAnnotationElement({
-                node,
-                index: annotationIndex
-            })
+    const handleAnchorClick = () => {
+        if (isSelected || isSliderMoving || isActivated) {
+            return false
         }
+
+        dispatch(updateAnnotationStore({
+            queuedAnnotationIndex: annotationIndex
+        }))
+        return true
+    }
+
+    const setAnnotationForUnit = node => {
+        setLyricAnnotationElement({
+            node,
+            index: annotationIndex
+        })
+    }
 
     return (
         <div

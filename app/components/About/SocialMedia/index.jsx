@@ -7,14 +7,13 @@ import {
 import './style'
 
 const SocialMedia = () => {
-    const
-        handleFacebookClick = () => {
-            // TODO: Analytics.
-        },
+    const handleFacebookClick = () => {
+        // TODO: Analytics.
+    }
 
-        handleInstagramClick = () => {
-            // TODO: Analytics.
-        }
+    const handleInstagramClick = () => {
+        // TODO: Analytics.
+    }
 
     return (
         <div {...{ className: 'SocialMedia' }}>

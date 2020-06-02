@@ -34,8 +34,8 @@ const ShownWrapper = ({ children }) => {
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        overviewShown = useSelector(mapIsOverviewShown),
-        tipsShown = useSelector(mapIsTipsShown),
+        isOverviewShown = useSelector(mapIsOverviewShown),
+        isTipsShown = useSelector(mapIsTipsShown),
         isCarouselShown = useSelector(mapIsCarouselShown),
         isNavShown = useSelector(mapIsNavShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
@@ -43,7 +43,7 @@ const ShownWrapper = ({ children }) => {
         isOverlayShown = useSelector(mapIsOverlayShown),
 
         songOverviewShown =
-            !isLyricLogue && overviewShown,
+            !isLyricLogue && isOverviewShown,
         tipType = getSongTipType(lyricSongIndex)
 
     return (
@@ -62,7 +62,7 @@ const ShownWrapper = ({ children }) => {
                         'ShW__songOverviewHidden',
 
                     // Don't show these class names between songs.
-                    canLyricCarouselEnter && tipsShown && [
+                    canLyricCarouselEnter && isTipsShown && [
                         'ShW__tipsShown',
                         `ShW__tips__${tipType}`,
                         (

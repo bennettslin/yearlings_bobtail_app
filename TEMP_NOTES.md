@@ -19,7 +19,7 @@
 * Change all mapStateToProps to grab from selectors
 * Ensure all selectors are used.
 * Make dispatchers functions.
-* Change all to use overviewShown and tipsShown. Then prefix with is.
+* Change all to use isOverviewShown and isTipsShown rather than selected options.
 * Rename all to dotBit, use selectedDotBit and activatedDotBit?
 * Shorten queued names as well?
 

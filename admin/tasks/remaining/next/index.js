@@ -13,8 +13,8 @@ export default [
     /* Weekend work. */
     {
         taskName: `More data refactor. Scene actors, cubes, and things should be in compiled album. Cubes should also grab values from a selector, rather than the store.`,
-        workedHours: 24,
-        neededHours: 25
+        workedHours: 0,
+        neededHours: 10
     },
     {
         taskName: `Post-Gatsby fixes.`,

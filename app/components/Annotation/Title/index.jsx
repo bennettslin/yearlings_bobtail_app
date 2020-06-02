@@ -46,19 +46,19 @@ const AnnotationTitle = ({
 
         showUpDown = isSelected && accessibleWikiWormholesLength > 1,
 
-        isDot = annotationTitle === IS_UNIT_DOT,
+        isDot = annotationTitle === IS_UNIT_DOT
 
-        _handleTitleClick = () => {
-            if (isSelected) {
-                return false
-            }
-
-            dispatch(updateAnnotationStore({
-                queuedAnnotationIndex: annotationIndex,
-                queuedAnnotationFromCarousel: true
-            }))
-            return true
+    const handleAnchorClick = () => {
+        if (isSelected) {
+            return false
         }
+
+        dispatch(updateAnnotationStore({
+            queuedAnnotationIndex: annotationIndex,
+            queuedAnnotationFromCarousel: true
+        }))
+        return true
+    }
 
     return (
         <div
@@ -92,7 +92,7 @@ const AnnotationTitle = ({
                     },
                     isAccessed,
                     isSelected,
-                    handleAnchorClick: _handleTitleClick
+                    handleAnchorClick
                 }}
             />
             <AnnotationAccess {...{

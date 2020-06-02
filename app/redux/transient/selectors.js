@@ -117,15 +117,15 @@ export const mapIsCarouselNavShowable = createSelector(
     mapIsActivated,
     (
         isOverlayShown,
-        overviewShown,
-        tipsShown,
+        isOverviewShown,
+        isTipsShown,
         isLyricLogue,
         isLyricExpanded,
         isActivated
     ) => getIsCarouselNavShowable({
         isOverlayShown,
-        overviewShown,
-        tipsShown,
+        isOverviewShown,
+        isTipsShown,
         isLyricLogue,
         isLyricExpanded,
         isActivated
@@ -154,8 +154,8 @@ export const mapIsShelfLeftShown = createSelector(
         lyricAnnotationIndex,
         isLyricLogue,
         isLogueOverviewShown,
-        overviewShown,
-        tipsShown
+        isOverviewShown,
+        isTipsShown
     ) => getIsShelfLeftShown({
         isPhoneWidth,
         isDotsSlideShown,
@@ -166,8 +166,8 @@ export const mapIsShelfLeftShown = createSelector(
         lyricAnnotationIndex,
         isLyricLogue,
         isLogueOverviewShown,
-        overviewShown,
-        tipsShown
+        isOverviewShown,
+        isTipsShown
     })
 )
 
@@ -179,14 +179,14 @@ export const mapToggleShowsOverviewImmediately = createSelector(
     mapIsLyricExpanded,
     mapIsActivated,
     (
-        tipsShown,
+        isTipsShown,
         lyricAnnotationIndex,
         isDotsSlideShown,
         isOverlayShown,
         isLyricExpanded,
         isActivated
     ) => getToggleShowsOverviewImmediately({
-        tipsShown,
+        isTipsShown,
         lyricAnnotationIndex,
         isDotsSlideShown,
         isOverlayShown,
@@ -204,16 +204,16 @@ export const mapToggleShowsTipsImmediately = createSelector(
     mapIsLyricExpanded,
     mapIsActivated,
     (
-        overviewShown,
-        tipsShown,
+        isOverviewShown,
+        isTipsShown,
         lyricAnnotationIndex,
         isDotsSlideShown,
         isOverlayShown,
         isLyricExpanded,
         isActivated
     ) => getToggleShowsTipsImmediately({
-        overviewShown,
-        tipsShown,
+        isOverviewShown,
+        isTipsShown,
         lyricAnnotationIndex,
         isDotsSlideShown,
         isOverlayShown,
