@@ -1,9 +1,7 @@
-/**
- * Button that navigates to activated verse.
- */
-import React, { PureComponent } from 'react'
+// Button that selects activated verse.
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Button from '../../../Button'
@@ -15,84 +13,65 @@ import {
 import { mapSelectedVerseIndex } from '../../../../redux/selected/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const selectedVerseIndex = mapSelectedVerseIndex(state)
+const VerseNav = ({
+    isActivated,
+    verseIndex,
+    handleVerseSelect
 
-    return {
-        selectedVerseIndex
-    }
-}
+}) => {
+    const selectedVerseIndex = useSelector(mapSelectedVerseIndex)
 
-class VerseNav extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        selectedVerseIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        verseIndex: PropTypes.number.isRequired,
-        isActivated: PropTypes.bool.isRequired,
-        handleVerseSelect: PropTypes.func.isRequired
-    }
-
-    _handleButtonClick = () => {
-        const {
-            verseIndex,
-            handleVerseSelect
-        } = this.props
-
+    const handleButtonClick = () => {
         handleVerseSelect({
             selectedVerseIndex: verseIndex,
             scrollLog: `Click select activated verse ${verseIndex}.`
         })
     }
 
-    render() {
-        /**
-         * If activated, disable only if it's selected and song can't play
-         * through.
-         */
-        const {
-            isActivated,
-            verseIndex,
-            selectedVerseIndex
-        } = this.props
-
-        return (
-            <CSSTransition
-                mountOnEnter
-                unmountOnExit
-                {...{
-                    in: isActivated,
-                    timeout: 200,
-                    classNames: {
-                        enterActive: 'VerseNav__activated',
-                        enterDone: 'VerseNav__activated'
-                    }
-                }}
-            >
-                <div className={cx(
-                    'VerseNav',
-                    'padding__verseInLyric',
-                    'fCC'
-                )}>
-                    <Button
-                        isSmallSize
-                        {...{
-                            buttonName:
-                                verseIndex < selectedVerseIndex ?
-                                    AUDIO_REWIND_BUTTON_KEY :
-                                    AUDIO_FAST_FORWARD_BUTTON_KEY,
-                            accessKey: ENTER,
-                            isAccessed: isActivated,
-                            isDisabled: !isActivated,
-                            handleButtonClick: this._handleButtonClick
-                        }}
-                    />
-                </div>
-            </CSSTransition>
-        )
-    }
+    /**
+     * If activated, disable only if it's selected and song can't play
+     * through.
+     */
+    return (
+        <CSSTransition
+            mountOnEnter
+            unmountOnExit
+            {...{
+                in: isActivated,
+                timeout: 200,
+                classNames: {
+                    enterActive: 'VerseNav__activated',
+                    enterDone: 'VerseNav__activated'
+                }
+            }}
+        >
+            <div className={cx(
+                'VerseNav',
+                'padding__verseInLyric',
+                'fCC'
+            )}>
+                <Button
+                    isSmallSize
+                    {...{
+                        buttonName:
+                            verseIndex < selectedVerseIndex ?
+                                AUDIO_REWIND_BUTTON_KEY :
+                                AUDIO_FAST_FORWARD_BUTTON_KEY,
+                        accessKey: ENTER,
+                        isAccessed: isActivated,
+                        isDisabled: !isActivated,
+                        handleButtonClick
+                    }}
+                />
+            </div>
+        </CSSTransition>
+    )
 }
 
-export default connect(mapStateToProps)(VerseNav)
+VerseNav.propTypes = {
+    verseIndex: PropTypes.number.isRequired,
+    isActivated: PropTypes.bool.isRequired,
+    handleVerseSelect: PropTypes.func.isRequired
+}
+
+export default memo(VerseNav)
