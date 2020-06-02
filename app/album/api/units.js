@@ -61,7 +61,7 @@ export const getVerseIndicesForUnit = (songIndex, unitIndex) => {
 }
 
 export const getSubVerseIndicesForUnit = (songIndex, unitIndex) => {
-    const { withUnitSubVerseIndices } = getSong(songIndex)
+    const { withUnitSubVerseIndices = [] } = getSong(songIndex)
     return withUnitSubVerseIndices[unitIndex] || []
 }
 

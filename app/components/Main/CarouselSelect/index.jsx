@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Button from '../../Button'
-import { populateRefs } from '../../../helpers/ref'
 import {
     ARROW_LEFT,
     ARROW_RIGHT
@@ -36,8 +35,10 @@ class CarouselSelect extends PureComponent {
         this.dispatchAnnotationDirection(1)
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchAnnotation = dispatch => {
+        if (dispatch) {
+            this.dispatchAnnotationDirection = dispatch.dispatchAnnotationDirection
+        }
     }
 
     render() {
@@ -61,7 +62,7 @@ class CarouselSelect extends PureComponent {
                         handleButtonClick: this._handleAnnotationNext
                     }}
                 />
-                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
+                <AnnotationDispatcher {...{ ref: this.getDispatchAnnotation }} />
             </div>
         )
     }

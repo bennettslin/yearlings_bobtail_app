@@ -106,7 +106,7 @@ class LyricNavigation extends PureComponent {
         } else {
             if (keyName === ENTER) {
                 return this.dispatchAnnotationIndex({
-                    selectedAnnotationIndex: accessedAnnotationIndex
+                    annotationIndex: accessedAnnotationIndex
                 })
 
             } else if (Number.isFinite(direction)) {
@@ -128,10 +128,16 @@ class LyricNavigation extends PureComponent {
         this.dispatchAccessedAnnotation = dispatch
     }
 
+    getDispatchAnnotation = dispatch => {
+        if (dispatch) {
+            this.dispatchAnnotationIndex = dispatch.dispatchAnnotationIndex
+        }
+    }
+
     render() {
         return (
             <>
-                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
+                <AnnotationDispatcher {...{ ref: this.getDispatchAnnotation }} />
                 <AnnotationAccessDispatcher {...{ ref: this.getDispatchAccessedAnnotation }} />
             </>
         )

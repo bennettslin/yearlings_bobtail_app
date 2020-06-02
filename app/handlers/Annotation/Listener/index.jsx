@@ -8,7 +8,6 @@ import AnnotationDispatcher from '../Dispatcher'
 import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
 import { getVerseIndexForAnnotation } from '../../../album/api/annotations'
-import { populateRefs } from '../../../helpers/ref'
 import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import {
     mapQueuedAnnotationIndex,
@@ -86,7 +85,7 @@ class AnnotationListener extends PureComponent {
                 } = this.props,
 
                 canDispatchAnnotation = this.dispatchAnnotationIndex({
-                    selectedAnnotationIndex: queuedAnnotationIndex,
+                    annotationIndex: queuedAnnotationIndex,
                     fromCarousel: queuedAnnotationFromCarousel
                 })
 
@@ -145,8 +144,10 @@ class AnnotationListener extends PureComponent {
         }
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchAnnotation = dispatch => {
+        if (dispatch) {
+            this.dispatchAnnotationIndex = dispatch.dispatchAnnotationIndex
+        }
     }
 
     getActivateVerse = dispatch => {
@@ -158,7 +159,7 @@ class AnnotationListener extends PureComponent {
     render() {
         return (
             <>
-                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
+                <AnnotationDispatcher {...{ ref: this.getDispatchAnnotation }} />
                 <ActivatedVerseDispatcher {...{ ref: this.getActivateVerse }} />
             </>
         )

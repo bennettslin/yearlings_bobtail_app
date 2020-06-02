@@ -144,10 +144,16 @@ class AnnotationNavigation extends PureComponent {
         this.dispatchAccessedWikiWormhole = dispatch
     }
 
+    getDispatchAnnotation = dispatch => {
+        if (dispatch) {
+            this.dispatchAnnotationDirection = dispatch.dispatchAnnotationDirection
+        }
+    }
+
     render() {
         return (
             <>
-                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
+                <AnnotationDispatcher {...{ ref: this.getDispatchAnnotation }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
                 <WikiDispatcher {...{ ref: this.getDispatchWiki }} />
                 <WikiWormholeDispatcher {...{ ref: this.getDispatchAccessedWikiWormhole }} />

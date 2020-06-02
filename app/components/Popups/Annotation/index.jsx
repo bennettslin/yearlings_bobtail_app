@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Annotation from '../../Annotation'
 import Popup from '../../Popup'
-import { populateRefs } from '../../../helpers/ref'
 import './style'
 import {
     mapIsOverlayingAnnotation,
@@ -46,8 +45,10 @@ class AnnotationPopup extends PureComponent {
         this.dispatchAnnotationDirection(1)
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchAnnotation = dispatch => {
+        if (dispatch) {
+            this.dispatchAnnotationDirection = dispatch.dispatchAnnotationDirection
+        }
     }
 
     render() {
@@ -85,7 +86,7 @@ class AnnotationPopup extends PureComponent {
                     isSelected
                     {...{ annotationIndex }}
                 />
-                <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
+                <AnnotationDispatcher {...{ ref: this.getDispatchAnnotation }} />
             </Popup>
         )
     }

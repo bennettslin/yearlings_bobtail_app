@@ -1,6 +1,5 @@
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
@@ -18,62 +17,38 @@ import {
     mapEarColumnIndex
 } from '../../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const AnnotationDispatcher = forwardRef((props, ref) => {
     const
-        dotsBitNumber = mapDotsBitNumber(state),
-        isEarShown = mapIsEarShown(state),
-        selectedSongIndex = mapSelectedSongIndex(state),
-        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
-        earColumnIndex = mapEarColumnIndex(state)
+        dispatch = useDispatch(),
+        dotsBitNumber = useSelector(mapDotsBitNumber),
+        isEarShown = useSelector(mapIsEarShown),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        earColumnIndex = useSelector(mapEarColumnIndex),
+        selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber)
 
-    return {
-        isEarShown,
-        selectedSongIndex,
-        selectedAnnotationIndex,
-        dotsBitNumber,
-        earColumnIndex
-    }
-}
+    const _dispatchAndLog = annotationIndex => {
+        dispatch(updateSelectedStore({
+            selectedAnnotationIndex: annotationIndex
+        }))
 
-class AnnotationDispatcher extends PureComponent {
-    static propTypes = {
-        // Through Redux.
-        isEarShown: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        dotsBitNumber: PropTypes.number.isRequired,
-        earColumnIndex: PropTypes.number.isRequired,
-        updateScrollCarouselStore: PropTypes.func.isRequired,
-        updateScrollLyricStore: PropTypes.func.isRequired,
-        updateSelectedStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchAnnotationIndex: this.dispatchAnnotationIndex,
-            dispatchAnnotationDirection: this.dispatchAnnotationDirection
+        logSelect({
+            action: 'annotation',
+            song: selectedSongIndex,
+            annotation: annotationIndex
         })
     }
 
-    dispatchAnnotationIndex = ({
-        selectedAnnotationIndex = 0,
+    const dispatchAnnotationIndex = ({
+        annotationIndex = 0,
         fromCarousel
+
     } = {}) => {
-
-        const {
-                selectedSongIndex,
-                dotsBitNumber
-            } = this.props,
-            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber)
-
         // If selecting an annotation, make sure that its dots intersect.
-        if (selectedAnnotationIndex) {
+        if (annotationIndex) {
             const annotationDotKeys = getDotKeysForAnnotation(
                 selectedSongIndex,
-                selectedAnnotationIndex
+                annotationIndex
             )
 
             if (!intersects(annotationDotKeys, selectedDotKeys)) {
@@ -81,90 +56,65 @@ class AnnotationDispatcher extends PureComponent {
             }
         }
 
-        this.dispatchAndLog(selectedAnnotationIndex)
+        _dispatchAndLog(annotationIndex)
 
-        if (selectedAnnotationIndex) {
-
+        if (annotationIndex) {
             // If selecting from carousel, scroll lyric.
             if (fromCarousel) {
-                this.props.updateScrollLyricStore({
+                dispatch(updateScrollLyricStore({
                     queuedScrollLyricLog:
-                        `Carousel select annotation ${selectedAnnotationIndex}.`,
-                    queuedScrollLyricIndex: selectedAnnotationIndex
-                })
+                        `Carousel select annotation ${
+                            annotationIndex
+                        }.`,
+                    queuedScrollLyricIndex: annotationIndex
+                }))
 
             // If selecting from lyric, scroll carousel.
             } else {
-                this.props.updateScrollCarouselStore({
+                dispatch(updateScrollCarouselStore({
                     queuedScrollCarouselLog: 'Lyric selected carousel annotation.',
-                    queuedScrollCarouselIndex: selectedAnnotationIndex
-                })
+                    queuedScrollCarouselIndex: annotationIndex
+                }))
             }
         }
 
         // Tell text lyric anchor to stop propagation if successfully selected.
-        return Boolean(selectedAnnotationIndex)
+        return Boolean(annotationIndex)
     }
 
-    dispatchAnnotationDirection = (direction) => {
-        const {
-                selectedSongIndex,
-                selectedAnnotationIndex: currentAnnotationIndex,
-                dotsBitNumber,
-                earColumnIndex,
-                isEarShown
-            } = this.props,
-            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
+    const dispatchAnnotationDirection = (direction) => {
+        // Called from arrow buttons in popup.
+        const nextAnnotationIndex = getAnnotationIndexForDirection({
+            isEarShown,
+            selectedSongIndex,
+            selectedDotKeys,
+            currentAnnotationIndex: selectedAnnotationIndex,
+            earColumnIndex,
+            direction
+        })
 
-            // Called from arrow buttons in popup.
-            selectedAnnotationIndex = getAnnotationIndexForDirection({
-                isEarShown,
-                selectedSongIndex,
-                selectedDotKeys,
-                currentAnnotationIndex,
-                earColumnIndex,
-                direction
-            })
+        _dispatchAndLog(nextAnnotationIndex)
 
-        this.dispatchAndLog(selectedAnnotationIndex)
-
-        if (selectedAnnotationIndex) {
-            this.props.updateScrollLyricStore({
+        if (nextAnnotationIndex) {
+            dispatch(updateScrollLyricStore({
                 queuedScrollLyricLog:
-                    `Direction select annotation ${selectedAnnotationIndex}.`,
-                queuedScrollLyricIndex: selectedAnnotationIndex
-            })
-            this.props.updateScrollCarouselStore({
+                    `Direction select annotation ${nextAnnotationIndex}.`,
+                queuedScrollLyricIndex: nextAnnotationIndex
+            }))
+            dispatch(updateScrollCarouselStore({
                 queuedScrollCarouselLog: 'Select accessed carousel annotation.',
-                queuedScrollCarouselIndex: selectedAnnotationIndex
-            })
+                queuedScrollCarouselIndex: nextAnnotationIndex
+            }))
         }
 
-        return selectedAnnotationIndex
+        return nextAnnotationIndex
     }
 
-    dispatchAndLog = selectedAnnotationIndex => {
-        const { selectedSongIndex } = this.props
+    useImperativeHandle(ref, () => ({
+        dispatchAnnotationIndex,
+        dispatchAnnotationDirection
+    }))
+    return null
+})
 
-        this.props.updateSelectedStore({ selectedAnnotationIndex })
-
-        logSelect({
-            action: 'annotation',
-            song: selectedSongIndex,
-            annotation: selectedAnnotationIndex
-        })
-    }
-
-    render() {
-        return null
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    {
-        updateScrollCarouselStore,
-        updateScrollLyricStore,
-        updateSelectedStore
-    }
-)(AnnotationDispatcher)
+export default AnnotationDispatcher
