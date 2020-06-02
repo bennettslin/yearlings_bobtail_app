@@ -19,12 +19,13 @@ const TipsToggle = ({
 
 }) => {
     const
-        isTipsShowable = useSelector(mapIsTipsShowable),
-        selectedTipsOption = useSelector(mapSelectedTipsOption),
         dispatchTips = useRef(),
-        handleTipsClick = () => {
-            dispatchTips.current({ isToggled: true })
-        }
+        isTipsShowable = useSelector(mapIsTipsShowable),
+        selectedTipsOption = useSelector(mapSelectedTipsOption)
+
+    const handleButtonClick = () => {
+        dispatchTips.current({ isToggled: true })
+    }
 
     return (
         <div
@@ -43,7 +44,7 @@ const TipsToggle = ({
                     buttonIdentifier: selectedTipsOption,
                     accessKey: TIPS_TOGGLE_KEY,
                     isDisabled: !isTipsShowable,
-                    handleButtonClick: handleTipsClick
+                    handleButtonClick
                 }}
             />
             {inPopup && (

@@ -17,10 +17,11 @@ const ScoreToggle = ({ className }) => {
     const
         dispatchScore = useRef(),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
-        canScoreMount = useSelector(mapCanScoreMount),
-        handleButtonClick = () => {
-            dispatchScore.current()
-        }
+        canScoreMount = useSelector(mapCanScoreMount)
+
+    const handleButtonClick = () => {
+        dispatchScore.current()
+    }
 
     return canScoreMount && (
         <div

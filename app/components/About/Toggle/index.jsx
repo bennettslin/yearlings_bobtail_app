@@ -11,11 +11,11 @@ import { ABOUT } from '../../../constants/tips'
 import './style'
 
 const AboutToggle = () => {
-    const
-        dispatchAbout = useRef(),
-        handleButtonClick = () => {
-            dispatchAbout.current()
-        }
+    const dispatchAbout = useRef()
+
+    const handleButtonClick = () => {
+        dispatchAbout.current()
+    }
 
     return (
         <div className={cx(

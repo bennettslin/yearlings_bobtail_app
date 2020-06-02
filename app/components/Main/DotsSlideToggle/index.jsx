@@ -1,12 +1,10 @@
 // Button to toggle dots slide.
-
-import React, { PureComponent } from 'react'
+import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
-import { populateRefs } from '../../../helpers/ref'
 import { DOTS_SLIDE_TOGGLE_KEY } from '../../../constants/access'
 import { DOTS_SLIDE_BUTTON_KEY } from '../../../constants/buttons'
 import {
@@ -16,52 +14,40 @@ import {
 } from '../../../constants/tips'
 import './style'
 
-class DotsSlideToggle extends PureComponent {
+const DotsSlideToggle = ({ className }) => {
+    const dispatchDotsSlide = useRef()
 
-    static propTypes = {
-        // From parent.
-        className: PropTypes.string
+    const handleButtonClick = () => {
+        dispatchDotsSlide.current()
     }
 
-    handleButtonClick = () => {
-        this.dispatchDotsSlide()
-    }
-
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
-    getDispatchDotsSlide = dispatch => {
-        this.dispatchDotsSlide = dispatch
-    }
-
-    render() {
-        const { className } = this.props
-
-        return (
-            <div
+    return (
+        <div
+            {...{
+                className: cx(
+                    'DotsSlideToggle',
+                    className
+                )
+            }}
+        >
+            <Button
+                isLargeSize
                 {...{
-                    className: cx(
-                        'DotsSlideToggle',
-                        className
-                    )
+                    buttonName: DOTS_SLIDE_BUTTON_KEY,
+                    accessKey: DOTS_SLIDE_TOGGLE_KEY,
+                    handleButtonClick
                 }}
-            >
-                <Button
-                    isLargeSize
-                    {...{
-                        buttonName: DOTS_SLIDE_BUTTON_KEY,
-                        accessKey: DOTS_SLIDE_TOGGLE_KEY,
-                        handleButtonClick: this.handleButtonClick
-                    }}
-                />
-                <TipsHand {...{ tipType: DOTS }} />
-                <TipsHand isPointedAtDots {...{ tipType: WORMHOLES }} />
-                <TipsHand isPointedAtDots {...{ tipType: WIKI }} />
-                <DotsSlideDispatcher {...{ ref: this.getDispatchDotsSlide }} />
-            </div>
-        )
-    }
+            />
+            <TipsHand {...{ tipType: DOTS }} />
+            <TipsHand isPointedAtDots {...{ tipType: WORMHOLES }} />
+            <TipsHand isPointedAtDots {...{ tipType: WIKI }} />
+            <DotsSlideDispatcher {...{ ref: dispatchDotsSlide }} />
+        </div>
+    )
+}
+
+DotsSlideToggle.propTypes = {
+    className: PropTypes.string
 }
 
 export default DotsSlideToggle
