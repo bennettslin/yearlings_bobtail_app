@@ -64,7 +64,7 @@ VerseLine.propTypes = {
         PropTypes.object
     ]).isRequired,
 
-    isTruncatable: PropTypes.bool.isRequired,
+    isTruncatable: PropTypes.bool,
     inVerseBar: PropTypes.bool.isRequired,
     columnKey: PropTypes.string.isRequired
 }

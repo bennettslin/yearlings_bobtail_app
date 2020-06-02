@@ -1,6 +1,8 @@
-import { PureComponent } from 'react'
+import {
+    forwardRef, useImperativeHandle, useEffect, useState
+} from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {
     updateVerseBarsStore,
     resetVerseBarsQueue
@@ -21,8 +23,6 @@ import { mapSelectedVerseIndex } from '../../redux/selected/selectors'
 import { mapSliderVerseIndex } from '../../redux/slider/selectors'
 import { mapIsLyricExpanded } from '../../redux/toggle/selectors'
 import {
-    mapIsVerseBarAbove,
-    mapIsVerseBarBelow,
     mapQueuedDetermineVerseBars,
     mapQueuedVerseBarsTimeout
 } from '../../redux/verseBars/selectors'
@@ -31,152 +31,78 @@ import {
     mapIsDesktopWidth
 } from '../../redux/viewport/selectors'
 
-const mapStateToProps = state => {
+const VerseBarHandler = forwardRef(({ getVerseElement }, ref) => {
     const
-        activatedVerseIndex = mapActivatedVerseIndex(state),
-        isLyricExpandable = mapIsLyricExpandable(state),
-        canSliderMount = mapCanSliderMount(state),
-        lyricDynamicHeight = mapLyricDynamicHeight(state),
-        isHeightlessLyric = mapIsHeightlessLyric(state),
-        menuHeight = mapMenuHeight(state),
-        selectedVerseIndex = mapSelectedVerseIndex(state),
-        sliderVerseIndex = mapSliderVerseIndex(state),
-        isLyricExpanded = mapIsLyricExpanded(state),
-        isVerseBarAbove = mapIsVerseBarAbove(state),
-        isVerseBarBelow = mapIsVerseBarBelow(state),
-        queuedDetermineVerseBars = mapQueuedDetermineVerseBars(state),
-        queuedVerseBarsTimeout = mapQueuedVerseBarsTimeout(state),
-        windowHeight = mapWindowHeight(state),
-        isDesktopWidth = mapIsDesktopWidth(state)
+        dispatch = useDispatch(),
+        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
+        isLyricExpandable = useSelector(mapIsLyricExpandable),
+        canSliderMount = useSelector(mapCanSliderMount),
+        lyricDynamicHeight = useSelector(mapLyricDynamicHeight),
+        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
+        menuHeight = useSelector(mapMenuHeight),
+        selectedVerseIndex = useSelector(mapSelectedVerseIndex),
+        sliderVerseIndex = useSelector(mapSliderVerseIndex),
+        isLyricExpanded = useSelector(mapIsLyricExpanded),
+        queuedDetermineVerseBars = useSelector(mapQueuedDetermineVerseBars),
+        queuedVerseBarsTimeout = useSelector(mapQueuedVerseBarsTimeout),
+        windowHeight = useSelector(mapWindowHeight),
+        isDesktopWidth = useSelector(mapIsDesktopWidth),
+        [verseBarsTimeoutId, setVerseBarsTimeoutId] = useState('')
 
-    return {
-        queuedDetermineVerseBars,
-        queuedVerseBarsTimeout,
-        isLyricExpandable,
-        isDesktopWidth,
-        windowHeight,
-        canSliderMount,
-        isLyricExpanded,
-        lyricDynamicHeight,
-        isVerseBarAbove,
-        isVerseBarBelow,
-        isHeightlessLyric,
-        menuHeight,
-        selectedVerseIndex,
-        activatedVerseIndex,
-        sliderVerseIndex
-    }
-}
-
-class VerseBarHandler extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        queuedDetermineVerseBars: PropTypes.bool.isRequired,
-        queuedVerseBarsTimeout: PropTypes.number.isRequired,
-        isLyricExpandable: PropTypes.bool.isRequired,
-        isDesktopWidth: PropTypes.bool.isRequired,
-        windowHeight: PropTypes.number.isRequired,
-        canSliderMount: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
-        lyricDynamicHeight: PropTypes.number.isRequired,
-        isHeightlessLyric: PropTypes.bool.isRequired,
-        menuHeight: PropTypes.number.isRequired,
-        isVerseBarAbove: PropTypes.bool.isRequired,
-        isVerseBarBelow: PropTypes.bool.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
-        sliderVerseIndex: PropTypes.number.isRequired,
-        activatedVerseIndex: PropTypes.number.isRequired,
-        updateVerseBarsStore: PropTypes.func.isRequired,
-        resetVerseBarsQueue: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired,
-        getVerseElement: PropTypes.func.isRequired
-    }
-
-    state = {
-        verseBarsTimeoutId: ''
-    }
-
-    componentDidMount() {
-        // Allow wheels to dispatch directly.
-        this.props.getRefs({
-            dispatchVerseBarsTimeout: this.dispatchVerseBarsTimeout
-        })
-    }
-
-    componentDidUpdate(prevProps) {
-        this._determineVerseBarsFromDispatch(prevProps)
-        this._determineVerseBarsFromSlider(prevProps)
-        this._determineVerseBarsFromActivatedVerse(prevProps)
-    }
-
-    _determineVerseBarsFromDispatch = (prevProps) => {
-        const
-            { queuedDetermineVerseBars } = this.props,
-            { queuedDetermineVerseBars: didDetermineVerseBars } = prevProps
-
-        if (queuedDetermineVerseBars && !didDetermineVerseBars) {
-            const { queuedVerseBarsTimeout } = this.props
-            this.dispatchVerseBarsTimeout(queuedVerseBarsTimeout)
-
-            this.props.resetVerseBarsQueue()
+    useEffect(() => {
+        if (queuedDetermineVerseBars) {
+            dispatchVerseBarsTimeout(queuedVerseBarsTimeout)
+            dispatch(resetVerseBarsQueue())
         }
-    }
+    }, [queuedDetermineVerseBars])
 
-    _determineVerseBarsFromSlider = (prevProps) => {
-        const
-            { sliderVerseIndex } = this.props,
-            { sliderVerseIndex: prevVerseIndex } = prevProps
-
-        if (
-            // Determine verse bars here while we are sliding.
-            sliderVerseIndex > -1 &&
-            sliderVerseIndex !== prevVerseIndex
-        ) {
-            this._dispatchVerseBars({ sliderVerseIndex })
+    useEffect(() => {
+        // Determine verse bars here while we are sliding.
+        if (sliderVerseIndex > -1) {
+            _dispatchVerseBars({ sliderVerseIndex })
         }
-    }
+    }, [sliderVerseIndex])
 
-    _determineVerseBarsFromActivatedVerse = (prevProps) => {
+    useEffect(() => {
         /**
          * This is needed because a verse might get activated or deactivated,
          * while the selected verse needs to be shown in a verse bar.
          */
+        _dispatchVerseBars()
+    }, [activatedVerseIndex])
 
-        const
-            { activatedVerseIndex } = this.props,
-            { activatedVerseIndex: prevVerseIndex } = prevProps
-
-        if (
-            activatedVerseIndex !== prevVerseIndex
-        ) {
-            this._dispatchVerseBars({ activatedVerseIndex })
-        }
-    }
-
-    dispatchVerseBarsTimeout = (timeoutDuration = 10) => {
+    const dispatchVerseBarsTimeout = (timeoutDuration = 10) => {
         /**
          * It seems to help to both make the call immediately, and then set a
          * timeout for it. For now, I don't think there's any performance hit.
          */
-        this._dispatchVerseBars()
+        _dispatchVerseBars()
 
-        clearTimeout(this.state.verseBarsTimeoutId)
+        clearTimeout(verseBarsTimeoutId)
 
-        const verseBarsTimeoutId = setTimeout(
-            this._dispatchVerseBars,
-            timeoutDuration
+        setVerseBarsTimeoutId(
+            setTimeout(
+                _dispatchVerseBars,
+                timeoutDuration
+            )
         )
-
-        this.setState({
-            verseBarsTimeoutId
-        })
     }
 
-    _dispatchVerseBars = ({ sliderVerseIndex = -1 } = {}) => {
-        const {
+    const _dispatchVerseBars = ({ sliderVerseIndex = -1 } = {}) => {
+        const verseElement = getVerseElement(getCursorIndex(
+            sliderVerseIndex,
+            activatedVerseIndex,
+            selectedVerseIndex
+        ))
+
+        // Check for verse element in case we are loading from a logue.
+        if (verseElement) {
+
+            // TODO: Make this a selector.
+            const {
+                isVerseBarAbove,
+                isVerseBarBelow
+            } = getVerseBarStatus({
                 isLyricExpandable,
                 canSliderMount,
                 isDesktopWidth,
@@ -184,59 +110,25 @@ class VerseBarHandler extends PureComponent {
                 isLyricExpanded,
                 lyricDynamicHeight,
                 isHeightlessLyric,
-                selectedVerseIndex,
-                activatedVerseIndex,
-                menuHeight
-            } = this.props,
-
-            verseElement = this.props.getVerseElement(getCursorIndex(
-                sliderVerseIndex,
-                activatedVerseIndex,
-                selectedVerseIndex
-            ))
-
-        // Check for verse element in case we are loading from a logue.
-        if (verseElement) {
-
-            const verseBarStatusObject = getVerseBarStatus({
-                    isLyricExpandable,
-                    canSliderMount,
-                    isDesktopWidth,
-                    windowHeight,
-                    isLyricExpanded,
-                    lyricDynamicHeight,
-                    isHeightlessLyric,
-                    menuHeight,
-                    verseElement
-                }),
-                {
-                    isVerseBarAbove,
-                    isVerseBarBelow
-                } = verseBarStatusObject,
-                {
-                    isVerseBarAbove: wasVerseBarAbove,
-                    isVerseBarBelow: wasVerseBarBelow
-                } = this.props
+                menuHeight,
+                verseElement
+            })
 
             // To improve performance, only set in Redux if changed.
-            if (isVerseBarAbove !== wasVerseBarAbove) {
-                this.props.updateVerseBarsStore({ isVerseBarAbove })
-            }
-            if (isVerseBarBelow !== wasVerseBarBelow) {
-                this.props.updateVerseBarsStore({ isVerseBarBelow })
-            }
+            dispatch(updateVerseBarsStore({
+                isVerseBarAbove,
+                isVerseBarBelow
+            }))
         }
     }
 
-    render() {
-        return null
-    }
+    useImperativeHandle(ref, () => dispatchVerseBarsTimeout)
+    return null
+}
+)
+
+VerseBarHandler.propTypes = {
+    getVerseElement: PropTypes.func.isRequired
 }
 
-export default connect(
-    mapStateToProps,
-    {
-        updateVerseBarsStore,
-        resetVerseBarsQueue
-    }
-)(VerseBarHandler)
+export default VerseBarHandler

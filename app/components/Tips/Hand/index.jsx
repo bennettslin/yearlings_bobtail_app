@@ -99,7 +99,7 @@ const TipsHand = ({
 
 TipsHand.propTypes = {
     tipType: PropTypes.string.isRequired,
-    isPointedAtDots: PropTypes.bool.isRequired,
+    isPointedAtDots: PropTypes.bool,
     reverse: PropTypes.bool
 }
 

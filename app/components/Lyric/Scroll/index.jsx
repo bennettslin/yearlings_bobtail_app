@@ -113,6 +113,10 @@ class LyricScroll extends PureComponent {
         this.dispatchScrollTimeout = dispatch
     }
 
+    getDispatchVerseBarsTimeout = dispatch => {
+        this.dispatchVerseBarsTimeout = dispatch
+    }
+
     render() {
         const {
             canLyricCarouselUpdate
@@ -166,7 +170,7 @@ class LyricScroll extends PureComponent {
                 />
                 <VerseBarHandler
                     {...{
-                        getRefs: this._getRefs,
+                        ref: this.getDispatchVerseBarsTimeout,
                         getVerseElement: this._getVerseElement
                     }}
                 />
