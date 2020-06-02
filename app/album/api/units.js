@@ -11,19 +11,14 @@ export const getDotForUnit = (songIndex, unitIndex) => {
     return withUnitDots[unitIndex] || null
 }
 
-export const getSubVerseForUnit = (songIndex, unitIndex) => {
-    const { withUnitSubVerses } = getSong(songIndex)
-    return Boolean(withUnitSubVerses) && withUnitSubVerses[unitIndex]
-}
-
 export const getSideCardForUnit = (songIndex, unitIndex) => {
     const { withUnitSideCards } = getSong(songIndex)
     return Boolean(withUnitSideCards) && withUnitSideCards[unitIndex]
 }
 
-export const getSideSubVerseForUnit = (songIndex, unitIndex) => {
-    const { withUnitSideSubVerses } = getSong(songIndex)
-    return Boolean(withUnitSideSubVerses) && withUnitSideSubVerses[unitIndex]
+export const getSideSubCardForUnit = (songIndex, unitIndex) => {
+    const { withUnitSideSubCards } = getSong(songIndex)
+    return Boolean(withUnitSideSubCards) && withUnitSideSubCards[unitIndex]
 }
 
 export const getFormTypeForUnit = (songIndex, unitIndex) => {
@@ -50,9 +45,9 @@ export const getSideCardTypeForUnit = (songIndex, unitIndex) => {
     return Boolean(withUnitSideCardTypes) && withUnitSideCardTypes[unitIndex]
 }
 
-export const getSideSubVerseTypeForUnit = (songIndex, unitIndex) => {
-    const { withUnitSideSubVerseTypes } = getSong(songIndex)
-    return Boolean(withUnitSideSubVerseTypes) && withUnitSideSubVerseTypes[unitIndex]
+export const getSideSubCardTypeForUnit = (songIndex, unitIndex) => {
+    const { withUnitSideSubCardTypes } = getSong(songIndex)
+    return Boolean(withUnitSideSubCardTypes) && withUnitSideSubCardTypes[unitIndex]
 }
 
 export const getSubsequentForUnit = (songIndex, unitIndex) => {
@@ -65,15 +60,20 @@ export const getVerseIndicesForUnit = (songIndex, unitIndex) => {
     return unitVerseIndicesList[unitIndex] || []
 }
 
+export const getSubVerseIndicesForUnit = (songIndex, unitIndex) => {
+    const { withUnitSubVerseIndices } = getSong(songIndex)
+    return withUnitSubVerseIndices[unitIndex] || []
+}
+
 export const getMainVerseIndicesForUnit = (songIndex, unitIndex) => {
     const
         unitVerseIndices = getVerseIndicesForUnit(songIndex, unitIndex),
-        subVerse = getSubVerseForUnit(songIndex, unitIndex)
+        subVerseIndices = getSubVerseIndicesForUnit(songIndex, unitIndex)
 
-    return subVerse ?
+    return subVerseIndices ?
         unitVerseIndices.filter(verseIndex => (
             // If this verse index is in the sub verse, it's not a main verse.
-            !subVerse.some(verse => verse.verseIndex === verseIndex)
+            !subVerseIndices.some(subVerseIndex => subVerseIndex === verseIndex)
         )) :
         unitVerseIndices
 }

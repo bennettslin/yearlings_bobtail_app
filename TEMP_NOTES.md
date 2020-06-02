@@ -1,5 +1,5 @@
 # Final bugs from unit refactor
-* Logic selectors need to be fixed. Just always pass indices array. SubVerse should also grab from verseLyrics. Change to withUnitSubVerseVerseIndices. Then main verses and subVerse should pass verseIndex to verse.
+* Logic selectors need to be fixed. Just always pass indices array. Then main verses and subVerse should pass verseIndex to verse.
 * What can be removed from data? For example, unit dot anchor title? Get rid of all annotation todos?
 
 # Bugs

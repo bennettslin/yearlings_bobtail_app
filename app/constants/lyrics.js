@@ -38,7 +38,7 @@ module.exports = {
     // sideCard type only
     BACKING: 'backing',
 
-    // subVerse or sideSubVerse type
+    // subVerse or sideSubCard type
     RESPONSE: 'response',
 
     // This is the order by which annotations will be assigned.
@@ -49,7 +49,7 @@ module.exports = {
         LYRIC_RIGHT,
         'subVerse',
         'sideCard',
-        'sideSubVerse',
+        'sideSubCard',
         'unitDot'
     ],
 

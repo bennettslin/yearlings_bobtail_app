@@ -1,12 +1,12 @@
 import {
     getMainVerseIndicesForUnit,
-    getSubVerseForUnit,
+    getSubVerseIndicesForUnit,
     getSideCardForUnit,
-    getSideSubVerseForUnit,
+    getSideSubCardForUnit,
     getFormTypeForUnit,
     getSubVerseTypeForUnit,
     getSideCardTypeForUnit,
-    getSideSubVerseTypeForUnit
+    getSideSubCardTypeForUnit
 } from '../../../album/api/units'
 import { getVerse } from '../../../album/api/verses'
 
@@ -16,7 +16,7 @@ export const getUnitFormType = ({
     isMainVerses,
     isSubVerse,
     isSideCard,
-    isSideSubVerse
+    isSideSubCard
 }) => {
     if (isMainVerses) {
         return getFormTypeForUnit(songIndex, unitIndex)
@@ -24,8 +24,8 @@ export const getUnitFormType = ({
         return getSubVerseTypeForUnit(songIndex, unitIndex)
     } else if (isSideCard) {
         return getSideCardTypeForUnit(songIndex, unitIndex)
-    } else if (isSideSubVerse) {
-        return getSideSubVerseTypeForUnit(songIndex, unitIndex)
+    } else if (isSideSubCard) {
+        return getSideSubCardTypeForUnit(songIndex, unitIndex)
     }
 }
 
@@ -35,11 +35,14 @@ export const getUnitVerses = ({
     isMainVerses,
     isSubVerse,
     isSideCard,
-    isSideSubVerse
+    isSideSubCard
 
 }) => {
-    if (isMainVerses) {
-        const verseIndices = getMainVerseIndicesForUnit(songIndex, unitIndex)
+    if (isMainVerses || isSubVerse) {
+        const verseIndices = isMainVerses ?
+            getMainVerseIndicesForUnit(songIndex, unitIndex) :
+            getSubVerseIndicesForUnit(songIndex, unitIndex)
+
         if (!verseIndices.length) {
             return null
         }
@@ -47,12 +50,10 @@ export const getUnitVerses = ({
             getVerse(songIndex, verseIndex)
         ))
     } else {
-        if (isSubVerse) {
-            return getSubVerseForUnit(songIndex, unitIndex)
-        } else if (isSideCard) {
+        if (isSideCard) {
             return getSideCardForUnit(songIndex, unitIndex)
-        } else if (isSideSubVerse) {
-            return getSideSubVerseForUnit(songIndex, unitIndex)
+        } else if (isSideSubCard) {
+            return getSideSubCardForUnit(songIndex, unitIndex)
         }
     }
 

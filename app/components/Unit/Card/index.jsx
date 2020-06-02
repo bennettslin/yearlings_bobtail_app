@@ -22,7 +22,7 @@ const UnitCard = ({
     isMainVerses,
     isSubVerse,
     isSideCard,
-    isSideSubVerse,
+    isSideSubCard,
     ...other
 
 }) => {
@@ -33,7 +33,7 @@ const UnitCard = ({
             isMainVerses,
             isSubVerse,
             isSideCard,
-            isSideSubVerse
+            isSideSubCard
         })
 
     // Return if no verses to render.
@@ -57,7 +57,7 @@ const UnitCard = ({
             isMainVerses,
             isSubVerse,
             isSideCard,
-            isSideSubVerse
+            isSideSubCard
         })
 
     return (
@@ -116,7 +116,7 @@ UnitCard.propTypes = {
     isMainVerses: PropTypes.bool,
     isSubVerse: PropTypes.bool,
     isSideCard: PropTypes.bool,
-    isSideSubVerse: PropTypes.bool
+    isSideSubCard: PropTypes.bool
 }
 
 export default memo(UnitCard)

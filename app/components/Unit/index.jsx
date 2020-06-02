@@ -92,7 +92,7 @@ const Unit = ({
                         {...{ unitIndex, ...other }}
                     />
                     <UnitCard
-                        isSideSubVerse
+                        isSideSubCard
                         {...{ unitIndex, ...other }}
                     />
                 </div>

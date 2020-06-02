@@ -1246,7 +1246,7 @@ export default {
                         }
                     }
                 ],
-                sideSubVerse: [
+                sideSubCard: [
                     {
                         lyric: {
                             anchor: `…Maranatha!`,
@@ -1273,7 +1273,7 @@ export default {
                 ],
                 formType: CODA,
                 sideCardType: BACKING,
-                sideSubVerseType: RESPONSE
+                sideSubCardType: RESPONSE
             },
             mainVerses: [
                 {

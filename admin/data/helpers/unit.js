@@ -60,12 +60,12 @@ const _addUnitLists = (songIndex, song) => {
         unitSubsequents = [],
         withUnitDots = {}
     let withUnitBottomSideCard,
-        withUnitSubVerses,
+        withUnitSubVerseIndices,
         withUnitSideCards,
-        withUnitSideSubVerses,
+        withUnitSideSubCards,
         withUnitSubVerseTypes,
         withUnitSideCardTypes,
-        withUnitSideSubVerseTypes
+        withUnitSideSubCardTypes
 
     lyricUnits.forEach((unit, unitIndex) => {
         unitSubsequents.push(unit.unitMap.subsequent || false)
@@ -75,11 +75,11 @@ const _addUnitLists = (songIndex, song) => {
                 unitDot,
                 subVerse,
                 sideCard,
-                sideSubVerse,
+                sideSubCard,
                 isBottomSideCard,
                 subVerseType,
                 sideCardType,
-                sideSubVerseType
+                sideSubCardType
             }
         } = unit
 
@@ -87,17 +87,19 @@ const _addUnitLists = (songIndex, song) => {
             withUnitDots[unitIndex] = unitDot
         }
         if (subVerse) {
-            withUnitSubVerses = withUnitSubVerses || {}
-            withUnitSubVerses[unitIndex] = subVerse
+            withUnitSubVerseIndices = withUnitSubVerseIndices || {}
+            withUnitSubVerseIndices[unitIndex] = subVerse.map(
+                verse => verse.verseIndex
+            )
         }
         if (sideCard) {
             withUnitSideCards = withUnitSideCards || {}
             withUnitSideCards[unitIndex] = sideCard
         }
         // This exists solely for "Maranatha."
-        if (sideSubVerse) {
-            withUnitSideSubVerses = withUnitSideSubVerses || {}
-            withUnitSideSubVerses[unitIndex] = sideSubVerse
+        if (sideSubCard) {
+            withUnitSideSubCards = withUnitSideSubCards || {}
+            withUnitSideSubCards[unitIndex] = sideSubCard
         }
         if (subVerseType) {
             withUnitSubVerseTypes = withUnitSubVerseTypes || {}
@@ -107,9 +109,9 @@ const _addUnitLists = (songIndex, song) => {
             withUnitSideCardTypes = withUnitSideCardTypes || {}
             withUnitSideCardTypes[unitIndex] = sideCardType
         }
-        if (sideSubVerseType) {
-            withUnitSideSubVerseTypes = withUnitSideSubVerseTypes || {}
-            withUnitSideSubVerseTypes[unitIndex] = sideSubVerseType
+        if (sideSubCardType) {
+            withUnitSideSubCardTypes = withUnitSideSubCardTypes || {}
+            withUnitSideSubCardTypes[unitIndex] = sideSubCardType
         }
         if (isBottomSideCard) {
             withUnitBottomSideCard = withUnitBottomSideCard || {}
@@ -120,14 +122,14 @@ const _addUnitLists = (songIndex, song) => {
     song.unitSubsequents = unitSubsequents
     song.withUnitDots = withUnitDots
 
-    if (withUnitSubVerses) {
-        song.withUnitSubVerses = withUnitSubVerses
+    if (withUnitSubVerseIndices) {
+        song.withUnitSubVerseIndices = withUnitSubVerseIndices
     }
     if (withUnitSideCards) {
         song.withUnitSideCards = withUnitSideCards
     }
-    if (withUnitSideSubVerses) {
-        song.withUnitSideSubVerses = withUnitSideSubVerses
+    if (withUnitSideSubCards) {
+        song.withUnitSideSubCards = withUnitSideSubCards
     }
     if (withUnitSubVerseTypes) {
         song.withUnitSubVerseTypes = withUnitSubVerseTypes
@@ -135,8 +137,8 @@ const _addUnitLists = (songIndex, song) => {
     if (withUnitSideCardTypes) {
         song.withUnitSideCardTypes = withUnitSideCardTypes
     }
-    if (withUnitSideSubVerseTypes) {
-        song.withUnitSideSubVerseTypes = withUnitSideSubVerseTypes
+    if (withUnitSideSubCardTypes) {
+        song.withUnitSideSubCardTypes = withUnitSideSubCardTypes
     }
     if (withUnitBottomSideCard) {
         song.withUnitBottomSideCard = withUnitBottomSideCard
