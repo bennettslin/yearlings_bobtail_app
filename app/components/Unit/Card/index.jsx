@@ -1,4 +1,4 @@
-// Component to show individual box of verses.
+// Component to show individual box of versesArray.
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -7,13 +7,14 @@ import UnitTipsHands from '../TipsHands'
 import UnitTab from '../Tab'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
-import { getParentOfVerseClassNamesForIndices } from '../../../helpers/stanza'
 import {
-    getUnitVerses,
+    getParentOfVerseClassNamesForUnitCard,
+    getUnitCardVerses,
     getIsUnitTruncatable,
     getUnitFormType
 } from './helper'
-import { getSubsequentForUnit, getMainVerseIndicesForUnit } from '../../../album/api/units'
+import { getSubsequentForUnit } from '../../../album/api/units'
+import { getVerse } from '../../../album/api/verses'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 
@@ -27,7 +28,7 @@ const UnitCard = ({
 
 }) => {
     const lyricSongIndex = useSelector(mapLyricSongIndex),
-        verses = getUnitVerses({
+        versesArray = getUnitCardVerses({
             songIndex: lyricSongIndex,
             unitIndex,
             isMainVerses,
@@ -36,14 +37,15 @@ const UnitCard = ({
             isSideSubCard
         })
 
-    // Return if no verses to render.
-    if (!verses) {
+    // Return if nothing to render.
+    if (!versesArray) {
         return null
     }
 
     const
         { handleVerseSelect } = other,
         isSubsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
+        isIndexed = isMainVerses || isSubVerse,
         isTabbed = isMainVerses && !isSubsequent,
         isTruncatable = getIsUnitTruncatable({
             lyricSongIndex,
@@ -62,10 +64,12 @@ const UnitCard = ({
 
     return (
         <div className={cx(
-
             // "Parent of verse index."
-            getParentOfVerseClassNamesForIndices({
-                entities: getMainVerseIndicesForUnit(lyricSongIndex, unitIndex)
+            getParentOfVerseClassNamesForUnitCard({
+                isIndexed,
+                isMainVerses,
+                lyricSongIndex,
+                unitIndex
             }),
 
             'UnitCard',
@@ -78,15 +82,20 @@ const UnitCard = ({
                 'bgColour__unit__pattern',
                 `bgColour__formType__${formType}`
             )}>
-                {verses.map((verseObject, stanzaVerseIndex) => {
-                    const { verseIndex } = verseObject
+                {versesArray.map((verseEntity, index) => {
+                    const verseObject = isIndexed ?
+                        // If indexed verse, it's an array of indices.
+                        getVerse(lyricSongIndex, verseEntity) :
+
+                        // Otherwise, it's an array of verse objects.
+                        verseEntity
 
                     return (
                         <VerseHoc {...other}
                             inUnit
                             {...{
-                                key: stanzaVerseIndex,
-                                verseIndex,
+                                key: index,
+                                ...isIndexed && { verseIndex: verseEntity },
                                 verseObject,
                                 VerseComponent: Verse,
                                 isTruncatable

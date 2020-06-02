@@ -28,27 +28,26 @@ const Unit = ({
     const
         { setLyricAnnotationElement } = other,
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        verseIndices = getVerseIndicesForUnit(
-            lyricSongIndex,
-            unitIndex
+        unitVerseIndices = getVerseIndicesForUnit(
+            lyricSongIndex, unitIndex
         ),
-        isSubsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
-        isBottomSideCard = getIsSideCardOnBottomForUnit(lyricSongIndex, unitIndex),
-        hasMainVerses = Boolean(verseIndices.length),
-        hasSideCard = Boolean(getSideCardForUnit(lyricSongIndex, unitIndex))
+        isBottomSideCard = getIsSideCardOnBottomForUnit(
+            lyricSongIndex, unitIndex
+        ),
+        hasMainVerses = Boolean(unitVerseIndices.length),
+        hasSideCards = Boolean(getSideCardForUnit(lyricSongIndex, unitIndex)),
+        isSubsequent = getSubsequentForUnit(lyricSongIndex, unitIndex)
 
     return (
         <div
             className={cx(
                 // "Parent of verse index."
-                getParentOfVerseClassNamesForIndices({
-                    entities: verseIndices
-                }),
+                getParentOfVerseClassNamesForIndices(unitVerseIndices),
 
                 'Unit',
                 `unit__${unitIndex}`,
 
-                hasSideCard ?
+                hasSideCards ?
                     'fontSize__lyricMultipleColumns' :
                     'fontSize__verse',
 
@@ -76,7 +75,7 @@ const Unit = ({
                     />
                 </div>
             }
-            {hasSideCard &&
+            {hasSideCards &&
                 <div
                     className={cx(
                         'Unit__column__text',

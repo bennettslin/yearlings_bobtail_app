@@ -1,22 +1,13 @@
 import cx from 'classnames'
 import { getVerseIndicesForStanza } from '../album/api/stanzas'
 
-export const getParentOfVerseClassNamesForIndices = ({
-    entities = [],
-
-    // "Parent of verse index."
-    prefix = 'PoV'
-}) => {
-
-    const classNames = entities.map(entity => {
-        const verseIndex = typeof entity === 'object' ?
-            entity.verseIndex :
-            entity
-
-        return Number.isFinite(verseIndex) ?
-            `${prefix}${verseIndex}` :
-            null
-    })
+export const getParentOfVerseClassNamesForIndices = (verseIndices) => {
+    const
+        // "Parent of verse index."
+        prefix = 'PoV',
+        classNames = verseIndices.map(verseIndex => (
+            `${prefix}${verseIndex}`
+        ))
 
     // Include the prefix without an index.
     classNames.push(prefix)
@@ -40,11 +31,11 @@ export const getLogicClassNamesForStanza = (songIndex, stanzaIndex) => (
         'ChS',
 
         // "Parent of verse index."
-        getParentOfVerseClassNamesForIndices({
-            entities: getVerseIndicesForStanza(
+        getParentOfVerseClassNamesForIndices(
+            getVerseIndicesForStanza(
                 songIndex,
                 stanzaIndex
             )
-        })
+        )
     )
 )
