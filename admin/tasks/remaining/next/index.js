@@ -11,7 +11,7 @@ export default [
     },
     {
         taskName: `More data refactor. Scene actors, cubes, and things should be in compiled album. Cubes should also grab values from a selector, rather than the store.`,
-        workedHours: 0,
+        workedHours: 4,
         neededHours: 10
     },
     {

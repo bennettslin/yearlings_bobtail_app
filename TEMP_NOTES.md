@@ -1,3 +1,9 @@
+# Scene data refactor
+* Nothing grabs from scene folder directly. Api grabs from scene, and others grab from api.
+* Move scene to admin. Have api get scene from admin for now, just to confirm.
+* Consolidate all scene into a single object. Import and export it in the api/imports file. Have api get it from api/imports file.
+* Have in local get object from admin, in staging get it from global environment, just like album object.
+
 # Bugs
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.
