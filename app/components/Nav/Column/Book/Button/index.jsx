@@ -26,10 +26,6 @@ const mapStateToProps = state => {
     }
 }
 
-/*************
- * CONTAINER *
- *************/
-
 class NavButton extends PureComponent {
 
     static propTypes = {

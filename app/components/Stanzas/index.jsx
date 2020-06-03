@@ -2,9 +2,9 @@
  * A stanza encompasses all the units grouped under a single stanza type and
  * optional index, such as Verse 1 or Bridge.
  */
-import React, { PureComponent } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import VerseDispatcher from '../../dispatchers/VerseDispatcher'
 import Stanza from './Stanza'
 import Unit from '../Unit'
@@ -14,84 +14,64 @@ import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './logic'
 import './style'
 
-const mapStateToProps = state => {
-    const lyricSongIndex = mapLyricSongIndex(state)
+const Stanzas = ({ setLyricAnnotationElement, setVerseRef }) => {
+    const
+        dispatchVerse = useRef(),
+        lyricSongIndex = useSelector(mapLyricSongIndex)
 
-    return {
-        lyricSongIndex
-    }
-}
-
-class Stanzas extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        setLyricAnnotationElement: PropTypes.func.isRequired,
-        setVerseRef: PropTypes.func.isRequired
-    }
-
-    _handleVerseSelect = ({
+    const handleVerseSelect = ({
         selectedVerseIndex,
         scrollLog
     }) => {
-        this.dispatchVerse({
+        dispatchVerse.current({
             selectedVerseIndex,
             scrollLog
         })
     }
 
-    getDispatchVerse = dispatch => {
-        this.dispatchVerse = dispatch
-    }
+    const
+        stanzaIndices = getStanzaIndices(lyricSongIndex),
+        lastUnitDotCardIndex = getLastUnitDotCardIndex(lyricSongIndex)
 
-    render() {
-        const {
-                lyricSongIndex,
-                setLyricAnnotationElement,
-                setVerseRef
-            } = this.props,
+    return stanzaIndices.length && (
+        <div {...{ className: 'Stanzas' }} >
+            {/* This is the unit title with first unit dot. */}
+            <Unit
+                {...{
+                    unitIndex: 0,
+                    setLyricAnnotationElement
+                }}
+            />
 
-            stanzaIndices = getStanzaIndices(lyricSongIndex),
-            lastUnitDotCardIndex = getLastUnitDotCardIndex(lyricSongIndex)
+            {stanzaIndices.map(stanzaIndex => (
+                <Stanza
+                    {...{
+                        key: stanzaIndex,
+                        stanzaIndex,
+                        handleVerseSelect,
+                        setLyricAnnotationElement,
+                        setVerseRef
+                    }}
+                />
+            ))}
 
-        return stanzaIndices.length && (
-            <div {...{ className: 'Stanzas' }} >
-                {/* This is the unit title with first unit dot. */}
+            {/* This is the last unit dot card, if there is one. */}
+            {lastUnitDotCardIndex > -1 && (
                 <Unit
                     {...{
-                        unitIndex: 0,
+                        unitIndex: lastUnitDotCardIndex,
                         setLyricAnnotationElement
                     }}
                 />
-
-                {stanzaIndices.map(stanzaIndex => (
-                    <Stanza
-                        {...{
-                            key: stanzaIndex,
-                            stanzaIndex,
-                            handleVerseSelect: this._handleVerseSelect,
-                            setLyricAnnotationElement,
-                            setVerseRef
-                        }}
-                    />
-                ))}
-
-                {/* This is the last unit dot card, if there is one. */}
-                {lastUnitDotCardIndex > -1 && (
-                    <Unit
-                        {...{
-                            unitIndex: lastUnitDotCardIndex,
-                            setLyricAnnotationElement
-                        }}
-                    />
-                )}
-                <VerseDispatcher {...{ ref: this.getDispatchVerse }} />
-            </div>
-        )
-    }
+            )}
+            <VerseDispatcher {...{ ref: dispatchVerse }} />
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(Stanzas)
+Stanzas.propTypes = {
+    setLyricAnnotationElement: PropTypes.func.isRequired,
+    setVerseRef: PropTypes.func.isRequired
+}
+
+export default memo(Stanzas)
