@@ -1,10 +1,9 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateActivatedStore } from '../../../../redux/activated/action'
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Dispatcher'
-import { populateRefs } from '../../../../helpers/ref'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -17,40 +16,17 @@ import {
 import { mapActivatedVerseIndex } from '../../../../redux/activated/selectors'
 import { mapSelectedVerseIndex } from '../../../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const LyricNavigation = forwardRef((props, ref) => {
     const
-        isAccessOn = mapIsAccessOn(state),
-        accessedAnnotationIndex = mapAccessedAnnotationIndex(state),
-        activatedVerseIndex = mapActivatedVerseIndex(state),
-        selectedVerseIndex = mapSelectedVerseIndex(state)
+        dispatch = useDispatch(),
+        dispatchAnnotation = useRef(),
+        dispatchAccessedAnnotation = useRef(),
+        isAccessOn = useSelector(mapIsAccessOn),
+        accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
+        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
+        selectedVerseIndex = useSelector(mapSelectedVerseIndex)
 
-    return {
-        isAccessOn,
-        accessedAnnotationIndex,
-        activatedVerseIndex,
-        selectedVerseIndex
-    }
-}
-
-class LyricNavigation extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isAccessOn: PropTypes.bool.isRequired,
-        activatedVerseIndex: PropTypes.number.isRequired,
-        accessedAnnotationIndex: PropTypes.number.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
-        updateActivatedStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({ navigateLyric: this.navigateLyric })
-    }
-
-    navigateLyric = (keyName) => {
+    const navigateLyric = keyName => {
         if (
             keyName !== ARROW_LEFT &&
             keyName !== ARROW_RIGHT &&
@@ -59,15 +35,8 @@ class LyricNavigation extends PureComponent {
             return false
         }
 
-        const
-            {
-                isAccessOn,
-                selectedVerseIndex,
-                activatedVerseIndex,
-                accessedAnnotationIndex
-            } = this.props,
-
-            isVerseActivated = activatedVerseIndex > -1
+        // TODO: Make this a selector.
+        const isVerseActivated = activatedVerseIndex > -1
 
         let direction
 
@@ -90,13 +59,13 @@ class LyricNavigation extends PureComponent {
                     activatedVerseIndex :
                     selectedVerseIndex
 
-            this.dispatchAccessedAnnotation({
+            dispatchAccessedAnnotation.current({
                 verseIndex,
                 direction
             })
 
             if (isVerseActivated) {
-                this.props.updateActivatedStore()
+                dispatch(updateActivatedStore())
             }
 
         /**
@@ -105,12 +74,12 @@ class LyricNavigation extends PureComponent {
          */
         } else {
             if (keyName === ENTER) {
-                return this.dispatchAnnotationIndex({
+                return dispatchAnnotation.current.dispatchAnnotationIndex({
                     annotationIndex: accessedAnnotationIndex
                 })
 
             } else if (Number.isFinite(direction)) {
-                this.dispatchAccessedAnnotation({
+                dispatchAccessedAnnotation.current({
                     annotationIndex: accessedAnnotationIndex,
                     direction
                 })
@@ -120,31 +89,15 @@ class LyricNavigation extends PureComponent {
         return true
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
+    useImperativeHandle(ref, () => navigateLyric)
+    return (
+        <>
+            <AnnotationDispatcher {...{ ref: dispatchAnnotation }} />
+            <AnnotationAccessDispatcher {...{
+                ref: dispatchAccessedAnnotation
+            }} />
+        </>
+    )
+})
 
-    getDispatchAccessedAnnotation = dispatch => {
-        this.dispatchAccessedAnnotation = dispatch
-    }
-
-    getDispatchAnnotation = dispatch => {
-        if (dispatch) {
-            this.dispatchAnnotationIndex = dispatch.dispatchAnnotationIndex
-        }
-    }
-
-    render() {
-        return (
-            <>
-                <AnnotationDispatcher {...{ ref: this.getDispatchAnnotation }} />
-                <AnnotationAccessDispatcher {...{ ref: this.getDispatchAccessedAnnotation }} />
-            </>
-        )
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    { updateActivatedStore }
-)(LyricNavigation)
+export default LyricNavigation
