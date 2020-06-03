@@ -1,4 +1,4 @@
-import album from '.'
+import { album } from '../imports'
 
 import { getArrayOfLength } from '../../helpers/general'
 

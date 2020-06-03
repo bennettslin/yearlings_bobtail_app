@@ -22,7 +22,7 @@ import {
     TIME_NIGHT,
     SEASON_SPRING,
     SEASON_THOUGHT
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     CATHERINE,

@@ -1,6 +1,6 @@
 import albumScenes from '../scenes'
 
-import { TIME_STAGE } from '../../../../app/scene/sky/keys'
+import { TIME_STAGE } from '../../../../app/constants/scene/sky'
 
 const _addDurationsToSceneConfigs = ({
     songDuration,

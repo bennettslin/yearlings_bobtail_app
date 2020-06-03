@@ -27,7 +27,7 @@ import {
     SEASON_WINTER,
     SEASON_FUTURE,
     SEASON_NIGHT_MAGIC
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     PRETEEN_BENNETT,
     MOTHER,

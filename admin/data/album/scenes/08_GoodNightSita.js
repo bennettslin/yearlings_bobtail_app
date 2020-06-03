@@ -19,7 +19,7 @@ import {
     TIME_EVENING,
     TIME_AFTERNOON,
     SEASON_AUTUMN
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     LIZ,

@@ -1,5 +1,5 @@
-import ALL_ARRANGEMENTS_ACTORS from '../../scene/aggregators/actors'
-import ALL_ARRANGEMENTS_THINGS from '../../scene/aggregators/things'
+import { getActorArrangements } from '../../api/scene/actors'
+import { getThingArrangements } from '../../api/scene/things'
 
 import { ACTOR } from '../../constants/scene'
 
@@ -10,8 +10,8 @@ export const getArrangementForPresence = ({
 
 }) => {
     const arrangement = presenceType === ACTOR ?
-        ALL_ARRANGEMENTS_ACTORS[actorKey][presenceKey] :
-        ALL_ARRANGEMENTS_THINGS[presenceType][presenceKey]
+        getActorArrangements()[actorKey][presenceKey] :
+        getThingArrangements()[presenceType][presenceKey]
 
     // If no yIndex is given, default to -1.
     if (!Number.isFinite(arrangement.yIndex)) {

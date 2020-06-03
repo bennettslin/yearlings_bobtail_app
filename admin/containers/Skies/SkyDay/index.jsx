@@ -12,7 +12,7 @@ import {
     TIME_AFTERNOON,
     TIME_EVENING,
     TIME_NIGHT
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 
 class SkyDay extends PureComponent {
 

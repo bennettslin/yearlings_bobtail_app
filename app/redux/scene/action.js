@@ -3,7 +3,7 @@ import {
     hasKey,
     getDefinedOnlyPayload
 } from '../../helpers/action'
-import { getCubesForKey } from '../../scene/aggregators/cubes'
+import { getCubesForKey } from '../../api/scene/cubes'
 import { SCENE_STORE } from '../../constants/store'
 
 export const updateSceneStore = payload => {

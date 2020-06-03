@@ -112,7 +112,7 @@ import THINGS_DEATHBED, {
     THINGS_DEATHBED_DREAM
 } from '../../scene/scenes/deathbed/things'
 
-const SCENE_ARRANGEMENTS = [
+export default [
     THINGS_BACKDROPS,
     THINGS_NOHO_HOUSES,
     THINGS_NOHO_SCHOOL,
@@ -212,9 +212,8 @@ const SCENE_ARRANGEMENTS = [
     THINGS_DEATHBED,
     THINGS_DEATHBED_CREMATED,
     THINGS_DEATHBED_DREAM
-]
 
-const ALL_ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
+].reduce((allArrangements, arrangements) => {
     const thingKeys = Object.keys(arrangements)
 
     thingKeys.forEach(thingKey => {
@@ -226,11 +225,3 @@ const ALL_ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangement
 
     return allArrangements
 }, {})
-
-export const getKeysForThing = (thingKey) => (
-    Object.keys(ALL_ARRANGEMENTS[thingKey])
-)
-
-global.things = ALL_ARRANGEMENTS
-
-export default ALL_ARRANGEMENTS

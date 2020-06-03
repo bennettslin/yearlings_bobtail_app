@@ -22,7 +22,7 @@ import {
     SEASON_PAST,
     SEASON_PRESENT,
     SEASON_FUTURE
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     BENNETT_FATHER,

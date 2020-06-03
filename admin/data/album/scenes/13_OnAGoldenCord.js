@@ -18,7 +18,7 @@ import {
     TIME_TWILIGHT,
     TIME_DAWN,
     SEASON_AUTUMN
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     YOUNG_BENNETT,
     BENNETT,

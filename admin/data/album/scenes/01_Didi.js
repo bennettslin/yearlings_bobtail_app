@@ -22,7 +22,7 @@ import {
     TIME_AFTERNOON,
     SEASON_SPRING,
     SEASON_PAST
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     YOUNG_BENNETT,
     ANITA,

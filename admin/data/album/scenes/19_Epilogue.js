@@ -1,6 +1,6 @@
 import { ACTOR } from '../../../../app/constants/scene'
 import { LOGUE_KEY } from '../../../../app/constants/scene/scenes'
-import { SEASON_STAGE } from '../../../../app/scene/sky/keys'
+import { SEASON_STAGE } from '../../../../app/constants/scene/sky'
 import {
     BENNETTS_CHRISTOPHER_LIZ,
     ANITA_BENNETT,

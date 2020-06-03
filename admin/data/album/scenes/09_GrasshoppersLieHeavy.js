@@ -29,7 +29,7 @@ import {
     SEASON_AUTUMN,
     SEASON_WINTER,
     SEASON_LOVE
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     BENNETT_LIZ,

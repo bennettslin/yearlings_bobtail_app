@@ -23,7 +23,7 @@ import {
     TIME_NIGHT,
     SEASON_WINTER,
     SEASON_LOVE
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     KHARI_LIZ,

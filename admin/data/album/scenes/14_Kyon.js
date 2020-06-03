@@ -22,7 +22,7 @@ import {
     TIME_NIGHT,
     SEASON_AUTUMN,
     SEASON_NIGHT_MAGIC
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     LIZ,
     KHARI

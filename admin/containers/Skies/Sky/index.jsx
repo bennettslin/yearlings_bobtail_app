@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { TIME_STAGE } from '../../../../app/scene/sky/keys'
+import { TIME_STAGE } from '../../../../app/constants/scene/sky'
 
 class AdminSky extends PureComponent {
 

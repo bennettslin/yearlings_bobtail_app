@@ -26,7 +26,7 @@ import {
     TIME_DAWN,
     SEASON_SPRING,
     SEASON_THOUGHT
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     ANA,

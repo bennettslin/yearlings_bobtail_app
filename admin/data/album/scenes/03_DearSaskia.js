@@ -16,7 +16,7 @@ import {
 import {
     SEASON_PRESENT,
     SEASON_THOUGHT
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     PRETEEN_BENNETT,
     SASHA,

@@ -150,7 +150,7 @@ import {
     ACTORS_DEATHBED_DREAM
 } from '../scenes/deathbed'
 
-const SCENE_ARRANGEMENTS = [
+export default [
     ACTORS_LOGUE_PROLOGUE,
     ACTORS_LOGUE_EPILOGUE,
     ACTORS_NOHO_HOUSES_DIDI,
@@ -256,9 +256,8 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_CLIFF,
     ACTORS_DEATHBED_CREMATED,
     ACTORS_DEATHBED_DREAM
-]
 
-const ALL_ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
+].reduce((allArrangements, arrangements) => {
     const actorKeys = Object.keys(arrangements)
 
     actorKeys.forEach(actorKey => {
@@ -270,11 +269,3 @@ const ALL_ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangement
 
     return allArrangements
 }, {})
-
-export const getKeysForActor = (actorKey) => (
-    Object.keys(ALL_ARRANGEMENTS[actorKey])
-)
-
-global.actors = ALL_ARRANGEMENTS
-
-export default ALL_ARRANGEMENTS

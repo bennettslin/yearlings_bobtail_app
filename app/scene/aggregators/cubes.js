@@ -1,5 +1,3 @@
-import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
-
 import CUBES_DEFAULT_STAGE from '../scenes/defaultStage/cubes'
 import CUBES_LOGUE from '../scenes/logue/cubes'
 import CUBES_NOHO_HOUSES from '../scenes/nohoHouses/cubes'
@@ -69,7 +67,7 @@ import CUBES_WEDDING from '../scenes/wedding/cubes'
 import CUBES_CLIFF from '../scenes/cliff/cubes'
 import CUBES_DEATHBED from '../scenes/deathbed/cubes'
 
-const CUBES = {
+export default {
     ...CUBES_DEFAULT_STAGE,
     ...CUBES_LOGUE,
     ...CUBES_NOHO_HOUSES,
@@ -138,28 +136,4 @@ const CUBES = {
     ...CUBES_WEDDING,
     ...CUBES_CLIFF,
     ...CUBES_DEATHBED
-}
-
-const getCubesForKey = (cubesKey) => {
-
-    const defaultStageCubes = CUBES[DEFAULT_STAGE_KEY],
-        keyCubes = CUBES[cubesKey]
-
-    return {
-        ceiling: {
-            ...defaultStageCubes.ceiling,
-            ...keyCubes.ceiling
-        },
-        floor: {
-            ...defaultStageCubes.floor,
-            ...keyCubes.floor
-        },
-        slantDirection: keyCubes.slantDirection
-    }
-}
-
-global.cubes = CUBES
-
-export {
-    getCubesForKey
 }

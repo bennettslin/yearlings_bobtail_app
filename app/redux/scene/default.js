@@ -1,4 +1,4 @@
-import { getCubesForKey } from '../../scene/aggregators/cubes'
+import { getCubesForKey } from '../../api/scene/cubes'
 import {
     getCubesKeyForScene,
     getLayersForScene,

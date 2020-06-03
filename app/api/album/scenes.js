@@ -8,7 +8,7 @@ import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import {
     TIME_STAGE,
     SEASON_STAGE
-} from '../../scene/sky/keys'
+} from '../../constants/scene/sky'
 
 export const getSceneIndices = songIndex => (
     getSongIsLogue(songIndex) ?

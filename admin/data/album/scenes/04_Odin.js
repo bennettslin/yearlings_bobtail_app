@@ -24,7 +24,7 @@ import {
     SEASON_AUTUMN,
     SEASON_OCEAN_TOP,
     SEASON_OCEAN_SIDE
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     PRETEEN_BENNETT,
     SASHA_BENNETT

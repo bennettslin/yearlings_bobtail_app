@@ -26,7 +26,7 @@ import {
     TIME_NIGHT,
     SEASON_SUMMER,
     SEASON_NIGHT_MAGIC
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     PRETEEN_BENNETT,
     WILLY,

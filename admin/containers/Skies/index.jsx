@@ -22,7 +22,7 @@ import {
     SEASON_OCEAN_TOP,
     SEASON_OCEAN_SIDE,
     SEASON_THOUGHT
-} from '../../../app/scene/sky/keys'
+} from '../../../app/constants/scene/sky'
 import './style'
 
 class Skies extends PureComponent {

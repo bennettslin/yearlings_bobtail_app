@@ -20,7 +20,7 @@ import {
     TIME_EVENING,
     SEASON_AUTUMN,
     SEASON_THOUGHT
-} from '../../../../app/scene/sky/keys'
+} from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     MIRIAM,

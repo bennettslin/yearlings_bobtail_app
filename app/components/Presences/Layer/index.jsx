@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import Presence from '../../Presence'
-import { getKeysForActor } from '../../../scene/aggregators/actors'
-import { getKeysForThing } from '../../../scene/aggregators/things'
+import { getKeysForActor } from '../../../api/scene/actors'
+import { getKeysForThing } from '../../../api/scene/things'
 
 import { ACTOR } from '../../../constants/scene'
 
