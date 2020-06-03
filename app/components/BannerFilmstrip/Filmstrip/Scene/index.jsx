@@ -14,12 +14,12 @@ const FilmstripScene = ({
     sceneLeft,
     sceneWidth,
     cursorWidth,
-    dispatchScene,
+    dispatchSceneIndex,
     stopPropagation
 
 }) => {
-    const _handleSceneClick = e => {
-        stopPropagation(e)
+    const onClick = e => {
+        stopPropagation.current(e)
 
         if (isSelectedScene) {
             return
@@ -27,7 +27,7 @@ const FilmstripScene = ({
 
         logEvent({ e, componentName: 'FilmstripScene' })
 
-        dispatchScene(sceneIndex)
+        dispatchSceneIndex.current(sceneIndex)
     }
 
     return (
@@ -44,7 +44,7 @@ const FilmstripScene = ({
                     left: `${sceneLeft}%`,
                     width: `${sceneWidth}%`
                 },
-                onClick: _handleSceneClick
+                onClick
             }}
         >
             <FilmstripCell
@@ -71,8 +71,12 @@ FilmstripScene.propTypes = {
     sceneLeft: PropTypes.number.isRequired,
     sceneWidth: PropTypes.number.isRequired,
     cursorWidth: PropTypes.number,
-    dispatchScene: PropTypes.func.isRequired,
-    stopPropagation: PropTypes.func.isRequired
+    dispatchSceneIndex: PropTypes.shape({
+        current: PropTypes.func
+    }).isRequired,
+    stopPropagation: PropTypes.shape({
+        current: PropTypes.func
+    }).isRequired
 }
 
 export default memo(FilmstripScene)
