@@ -1,62 +1,44 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import InlineSvg from '../../../modules/InlineSvg'
 import dramaMasks from '../../../../assets/svgs/theatre/dramaMasks'
+import {
+    mapProsceniumTop,
+    mapProsceniumLeft,
+    mapProsceniumWidth,
+    mapProsceniumHeight
+} from '../../../redux/proscenium/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const {
-        prosceniumStore: {
-            prosceniumTop,
-            prosceniumLeft,
-            prosceniumWidth,
-            prosceniumHeight
-        }
-    } = state
+const DramaMasks = () => {
+    const
+        prosceniumTop = useSelector(mapProsceniumTop),
+        prosceniumLeft = useSelector(mapProsceniumLeft),
+        prosceniumWidth = useSelector(mapProsceniumWidth),
+        prosceniumHeight = useSelector(mapProsceniumHeight)
 
-    return {
-        prosceniumTop,
-        prosceniumLeft,
-        prosceniumWidth,
-        prosceniumHeight
-    }
+    return (
+        <InlineSvg
+            {...{
+                className: cx(
+                    'DramaMasks'
+                ),
+                style: {
+                    top: `${prosceniumTop + prosceniumHeight * 0.0025}px`,
+                    left: `${prosceniumLeft + prosceniumWidth * 0.5}px`,
+                    width: `${prosceniumWidth * 0.125}px`,
+                    height: `${prosceniumHeight * 0.1}px`
+                },
+                svgClassName: cx(
+                    'dramaMasks',
+                    'fillTransition__dimTheatre'
+                )
+            }}
+        >
+            {dramaMasks}
+        </InlineSvg>
+    )
 }
 
-const DramaMasks = ({
-    prosceniumTop,
-    prosceniumLeft,
-    prosceniumWidth,
-    prosceniumHeight
-}) => (
-    <InlineSvg
-        {...{
-            className: cx(
-                'DramaMasks'
-            ),
-            style: {
-                top: `${prosceniumTop + prosceniumHeight * 0.0025}px`,
-                left: `${prosceniumLeft + prosceniumWidth * 0.5}px`,
-                width: `${prosceniumWidth * 0.125}px`,
-                height: `${prosceniumHeight * 0.1}px`
-            },
-            svgClassName: cx(
-                'dramaMasks',
-                'fillTransition__dimTheatre'
-            )
-        }}
-    >
-        {dramaMasks}
-    </InlineSvg>
-)
-
-DramaMasks.propTypes = {
-    // Through Redux.
-    prosceniumTop: PropTypes.number.isRequired,
-    prosceniumLeft: PropTypes.number.isRequired,
-    prosceniumWidth: PropTypes.number.isRequired,
-    prosceniumHeight: PropTypes.number.isRequired
-}
-
-export default connect(mapStateToProps)(DramaMasks)
+export default DramaMasks
