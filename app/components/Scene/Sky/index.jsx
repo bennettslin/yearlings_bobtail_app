@@ -1,28 +1,18 @@
 // The scene sky.
 import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
+import {
+    mapSceneSkyTime,
+    mapSceneSkySeason
+} from '../../../redux/scene/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const {
-        sceneStore: {
-            sceneSkyTime,
-            sceneSkySeason
-        }
-    } = state
+const Sky = () => {
+    const
+        sceneSkyTime = useSelector(mapSceneSkyTime),
+        sceneSkySeason = useSelector(mapSceneSkySeason)
 
-    return {
-        sceneSkyTime,
-        sceneSkySeason
-    }
-}
-
-const Sky = ({
-    sceneSkyTime,
-    sceneSkySeason
-}) => {
     return (
         <div className={cx(
             'Sky',
@@ -48,11 +38,5 @@ const Sky = ({
     )
 }
 
-Sky.propTypes = {
-    // Through Redux.
-    sceneSkyTime: PropTypes.string.isRequired,
-    sceneSkySeason: PropTypes.string.isRequired
-}
-
-export default connect(mapStateToProps)(Sky)
+export default Sky
 

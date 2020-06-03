@@ -24,7 +24,7 @@ class Layer extends PureComponent {
         // Through Redux.
         sceneCubesKey: PropTypes.string.isRequired,
 
-        // From parent. Parent also passes presenceKeys.
+        // From parent. Parent also passes presenceKeys. Figure out how to do this.
         presenceType: PropTypes.string,
         actorKey: PropTypes.string,
         instanceKey: PropTypes.string
