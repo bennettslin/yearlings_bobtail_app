@@ -1,6 +1,6 @@
 // Button to select book or song in nav section.
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React, { memo } from 'react'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../../../../Button'
@@ -15,42 +15,42 @@ import { mapIsCarouselNavShowable } from '../../../../../redux/transient/selecto
 import { mapSelectedAnnotationIndex } from '../../../../../redux/selected/selectors'
 import './style'
 
-const mapStateToProps = state => {
+const NavButton = ({
+    isAccessed,
+    isSelected,
+    isInShownColumn,
+    isToggle,
+    bookIndex,
+    songIndex,
+    handleButtonClick
+
+}) => {
     const
-        isCarouselNavShowable = mapIsCarouselNavShowable(state),
-        selectedAnnotationIndex = mapSelectedAnnotationIndex(state)
+        isCarouselNavShowable = useSelector(mapIsCarouselNavShowable),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
 
-    return {
-        isCarouselNavShowable,
-        selectedAnnotationIndex
-    }
-}
+        isBook = Number.isFinite(bookIndex),
 
-class NavButton extends PureComponent {
+        buttonIdentifier = isBook ? bookIndex : songIndex,
 
-    static propTypes = {
-        // Through Redux.
-        isCarouselNavShowable: PropTypes.bool.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
+        // Hard-coding indices because I'm lazy.
+        isLeftmost = bookIndex === 0 || songIndex === 0,
+        isRightmost = bookIndex === 1 || songIndex === 19,
 
-        // From parents.
-        isToggle: PropTypes.bool,
-        isAccessed: PropTypes.bool,
-        isSelected: PropTypes.bool,
-        isInShownColumn: PropTypes.bool,
+        isEnabled =
+            isCarouselNavShowable &&
+            (
+                isInShownColumn ||
+                isLeftmost ||
+                isRightmost
+            ),
 
-        bookIndex: PropTypes.number,
-        songIndex: PropTypes.number,
-        handleButtonClick: PropTypes.func.isRequired
-    }
+        isNavigable =
+            !isToggle
+            && isCarouselNavShowable
+            && !selectedAnnotationIndex
 
-    _handleButtonClick = () => {
-        const {
-            isCarouselNavShowable,
-            songIndex,
-            handleButtonClick
-        } = this.props
-
+    const _handleButtonClick = () => {
         if (isCarouselNavShowable) {
             // Select song or logue.
             if (Number.isFinite(songIndex)) {
@@ -63,78 +63,55 @@ class NavButton extends PureComponent {
         }
     }
 
-    render() {
-        const {
-                isAccessed,
-                isSelected,
-                isInShownColumn,
-                isToggle,
-                isCarouselNavShowable,
-                selectedAnnotationIndex,
-                bookIndex,
-                songIndex
-            } = this.props,
-
-            isBook = Number.isFinite(bookIndex),
-
-            buttonIdentifier = isBook ? bookIndex : songIndex,
-
-            // Hard-coding indices because I'm lazy.
-            isLeftmost = bookIndex === 0 || songIndex === 0,
-            isRightmost = bookIndex === 1 || songIndex === 19,
-
-            isEnabled =
-                isCarouselNavShowable &&
-                (
-                    isInShownColumn ||
-                    isLeftmost ||
-                    isRightmost
-                ),
-
-            isNavigable =
-                !isToggle
-                && isCarouselNavShowable
-                && !selectedAnnotationIndex
-
-        return (
-            <div
-                className={cx(
-                    'NavButton'
-                )}
-            >
-                <Button
-                    {...{
-                        buttonName: isBook ?
-                            NAV_BOOK_BUTTON_KEY :
-                            NAV_SONG_BUTTON_KEY,
-                        buttonIdentifier,
-                        isDisabled: !isEnabled,
-                        isClickDisabled: isSelected,
-                        accessKey: isToggle ? '' : ENTER,
-                        isAccessed:
-                            isAccessed &&
-                            isNavigable,
-                        handleButtonClick: this._handleButtonClick,
-                        inanimateChild: (
-                            <NavButtonTitle {...{
-                                bookIndex,
-                                songIndex,
-                                isSelected
-                            }} />
-                        )
-                    }}
-                >
-                    <NavCharacter
-                        {...{
+    return (
+        <div
+            className={cx(
+                'NavButton'
+            )}
+        >
+            <Button
+                {...{
+                    buttonName: isBook ?
+                        NAV_BOOK_BUTTON_KEY :
+                        NAV_SONG_BUTTON_KEY,
+                    buttonIdentifier,
+                    isDisabled: !isEnabled,
+                    isClickDisabled: isSelected,
+                    accessKey: isToggle ? '' : ENTER,
+                    isAccessed:
+                        isAccessed &&
+                        isNavigable,
+                    handleButtonClick: _handleButtonClick,
+                    inanimateChild: (
+                        <NavButtonTitle {...{
                             bookIndex,
                             songIndex,
                             isSelected
-                        }}
-                    />
-                </Button>
-            </div>
-        )
-    }
+                        }} />
+                    )
+                }}
+            >
+                <NavCharacter
+                    {...{
+                        bookIndex,
+                        songIndex,
+                        isSelected
+                    }}
+                />
+            </Button>
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(NavButton)
+NavButton.propTypes = {
+    isToggle: PropTypes.bool,
+    isAccessed: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    isInShownColumn: PropTypes.bool,
+
+    bookIndex: PropTypes.number,
+    songIndex: PropTypes.number,
+    handleButtonClick: PropTypes.func.isRequired
+}
+
+export default memo(NavButton)
