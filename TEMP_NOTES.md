@@ -1,3 +1,7 @@
+# During work
+* Logic styles should live together. (So that they can be removed together if needed.)
+* Some todos to make a selector
+
 # Scene data refactor
 * Nothing grabs from scene folder directly. Api grabs from scene, and others grab from api.
 * Move scene to admin. Have api get scene from admin for now, just to confirm.
@@ -29,9 +33,6 @@
 * Change all to use isOverviewShown and isTipsShown rather than selected options.
 * Rename all to dotBit, use selectedDotBit and activatedDotBit?
 * Shorten queued names as well?
-
-# Brainless CSS tasks
-* Logic styles should live together. (So that they can be removed together if needed.)
 
 # Easy reduction tasks
 * Figure out how to get scroll children without storing them.

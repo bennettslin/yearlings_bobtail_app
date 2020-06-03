@@ -1,8 +1,7 @@
 // Component to show selected verse when scrolled above or below window height.
-
-import React, { PureComponent } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import Transition from 'react-transition-group/Transition'
 import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
@@ -21,104 +20,51 @@ import {
     mapIsVerseBarAbove,
     mapIsVerseBarBelow
 } from '../../../redux/verseBars/selectors'
-
 import './style'
 
-const mapStateToProps = state => {
+const VerseBar = ({
+    isAbove = false,
+    handleVerseBarWheel
+
+}) => {
     const
-        activatedVerseIndex = mapActivatedVerseIndex(state),
-        lyricSongIndex = mapLyricSongIndex(state),
-        lyricVerseIndex = mapLyricVerseIndex(state),
-        isLyricLogue = mapIsLyricLogue(state),
-        sliderVerseIndex = mapSliderVerseIndex(state),
-        isVerseBarAbove = mapIsVerseBarAbove(state),
-        isVerseBarBelow = mapIsVerseBarBelow(state)
+        dispatchScrollVerse = useRef(),
+        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        lyricVerseIndex = useSelector(mapLyricVerseIndex),
+        isLyricLogue = useSelector(mapIsLyricLogue),
+        sliderVerseIndex = useSelector(mapSliderVerseIndex),
+        isVerseBarAbove = useSelector(mapIsVerseBarAbove),
+        isVerseBarBelow = useSelector(mapIsVerseBarBelow),
 
-    return {
-        isLyricLogue,
-        lyricSongIndex,
-        lyricVerseIndex,
-        activatedVerseIndex,
-        sliderVerseIndex,
-        isVerseBarAbove,
-        isVerseBarBelow
-    }
-}
+        // TODO: Make this a selector.
+        verseIndex = getCursorIndex(
+            sliderVerseIndex,
+            activatedVerseIndex,
+            lyricVerseIndex
+        ),
 
-class VerseBar extends PureComponent {
-
-    static defaultProps = {
-        isAbove: false
-    }
-
-    static propTypes = {
-        // Through Redux.
-        isLyricLogue: PropTypes.bool.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
-        lyricVerseIndex: PropTypes.number.isRequired,
-        activatedVerseIndex: PropTypes.number.isRequired,
-        sliderVerseIndex: PropTypes.number.isRequired,
-        isVerseBarAbove: PropTypes.bool.isRequired,
-        isVerseBarBelow: PropTypes.bool.isRequired,
-
-        // From parent.
-        isAbove: PropTypes.bool.isRequired,
-        handleVerseBarWheel: PropTypes.func.isRequired
-    }
-
-    _handleVerseBarSelect = e => {
-        logEvent({ e, componentName: 'VerseBar' })
-        if (this.getIsShownInVerseBar()) {
-            this.dispatchScrollVerse()
-        }
-    }
-
-    getIsShownInVerseBar() {
-        const {
-                isAbove,
-                isVerseBarAbove,
-                isVerseBarBelow
-            } = this.props,
-            isBelow = !isAbove
-
-        return (
+        // TODO: Make this a selector.
+        isShownInVerseBar = (
             isAbove &&
             isVerseBarAbove
         ) || (
-            isBelow &&
+            !isAbove &&
             isVerseBarBelow
         )
+
+    const onClick = e => {
+        logEvent({ e, componentName: 'VerseBar' })
+        if (isShownInVerseBar) {
+            dispatchScrollVerse.current()
+        }
     }
 
-    getDispatchScrollVerse = dispatch => {
-        this.dispatchScrollVerse = dispatch
-    }
-
-    render() {
-
-        const {
-                isAbove,
-                isLyricLogue,
-                lyricSongIndex,
-                lyricVerseIndex,
-                sliderVerseIndex,
-                activatedVerseIndex,
-
-                handleVerseBarWheel
-            } = this.props,
-
-            verseIndex = getCursorIndex(
-                sliderVerseIndex,
-                activatedVerseIndex,
-                lyricVerseIndex
-            ),
-
-            isShownInVerseBar = this.getIsShownInVerseBar()
-
-        // Logue will not have verse object.
-        return !isLyricLogue && (
-            <div
-                className={cx(
+    // Logue will not have verse object.
+    return !isLyricLogue && (
+        <div
+            {...{
+                className: cx(
                     'VerseBar',
                     'fontSize__verse',
 
@@ -126,47 +72,48 @@ class VerseBar extends PureComponent {
                         'VerseBar__above' :
                         'VerseBar__below',
 
-                    {
-                        'VerseBar__shown': isShownInVerseBar
-                    }
+                    isShownInVerseBar && 'VerseBar__shown'
+                ),
+                onWheel: handleVerseBarWheel,
+                onClick
+            }}
+        >
+            <div
+                className={cx(
+                    'VerseBar__animatable',
+                    isAbove ?
+                        'VerseBar__animatable__above' :
+                        'VerseBar__animatable__below'
                 )}
-                {...{
-                    onWheel: handleVerseBarWheel,
-                    onClick: this._handleVerseBarSelect
-                }}
             >
-                <div
-                    className={cx(
-                        'VerseBar__animatable',
-                        isAbove ?
-                            'VerseBar__animatable__above' :
-                            'VerseBar__animatable__below'
-                    )}
+                <Transition
+                    {...{
+                        in: isShownInVerseBar,
+                        timeout: 200
+                    }}
                 >
-                    <Transition
+                    <VerseHoc
+                        inVerseBar
                         {...{
-                            in: isShownInVerseBar,
-                            timeout: 200
+                            isShownInVerseBar,
+                            verseIndex,
+                            verseObject: getVerse(
+                                lyricSongIndex,
+                                verseIndex
+                            ),
+                            VerseComponent: Verse
                         }}
-                    >
-                        <VerseHoc
-                            inVerseBar
-                            {...{
-                                isShownInVerseBar,
-                                verseIndex,
-                                verseObject: getVerse(
-                                    lyricSongIndex,
-                                    verseIndex
-                                ),
-                                VerseComponent: Verse
-                            }}
-                        />
-                    </Transition>
-                </div>
-                <ScrollVerseDispatcher {...{ ref: this.getDispatchScrollVerse }} />
+                    />
+                </Transition>
             </div>
-        )
-    }
+            <ScrollVerseDispatcher {...{ ref: dispatchScrollVerse }} />
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(VerseBar)
+VerseBar.propTypes = {
+    isAbove: PropTypes.bool,
+    handleVerseBarWheel: PropTypes.func.isRequired
+}
+
+export default memo(VerseBar)
