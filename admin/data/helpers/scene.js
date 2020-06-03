@@ -96,6 +96,7 @@ export const addSceneMetadata = ({
     unitVerseIndicesList,
     verseStartTimes,
     song
+
 }) => {
     const
         scenes = albumScenes[songIndex],

@@ -158,6 +158,8 @@ const getCubesForKey = (cubesKey) => {
     }
 }
 
+global.cubes = CUBES
+
 export {
     getCubesForKey
 }

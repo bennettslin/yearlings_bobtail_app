@@ -231,4 +231,6 @@ export const getKeysForThing = (thingKey) => (
     Object.keys(ALL_ARRANGEMENTS[thingKey])
 )
 
+global.things = ALL_ARRANGEMENTS
+
 export default ALL_ARRANGEMENTS

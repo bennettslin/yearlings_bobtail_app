@@ -275,4 +275,6 @@ export const getKeysForActor = (actorKey) => (
     Object.keys(ALL_ARRANGEMENTS[actorKey])
 )
 
+global.actors = ALL_ARRANGEMENTS
+
 export default ALL_ARRANGEMENTS
