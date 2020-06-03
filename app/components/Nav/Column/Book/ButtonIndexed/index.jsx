@@ -1,8 +1,7 @@
 // Container to show logue or song button in nav section.
-
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import NavButton from '../Button'
 import {
     mapIsAccessOn,
@@ -11,69 +10,36 @@ import {
 import { mapSelectedSongIndex } from '../../../../../redux/selected/selectors'
 import { mapIsDotsSlideShown } from '../../../../../redux/toggle/selectors'
 
-const mapStateToProps = state => {
+const NavButtonIndexed = ({ songIndex, ...other }) => {
     const
-        isAccessOn = mapIsAccessOn(state),
-        accessedNavIndex = mapAccessedNavIndex(state),
-        selectedSongIndex = mapSelectedSongIndex(state),
-        isDotsSlideShown = mapIsDotsSlideShown(state)
+        isAccessOn = useSelector(mapIsAccessOn),
+        accessedNavIndex = useSelector(mapAccessedNavIndex),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        isDotsSlideShown = useSelector(mapIsDotsSlideShown)
 
-    return {
-        isAccessOn,
-        selectedSongIndex,
-        isDotsSlideShown,
-        accessedNavIndex
-    }
-}
+    const
+        // TODO: Make this a selector.
+        isSelected = selectedSongIndex === songIndex,
 
-class NavButtonIndexed extends PureComponent {
+        // Don't show access icon if dots slide is open.
+        isAccessed =
+            isAccessOn &&
+            !isDotsSlideShown &&
+            accessedNavIndex === songIndex
 
-    static propTypes = {
-        // Through Redux.
-        accessedNavIndex: PropTypes.number.isRequired,
-        isAccessOn: PropTypes.bool.isRequired,
-        isDotsSlideShown: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        dispatch: PropTypes.func.isRequired,
-
-        // From parent.
-        songIndex: PropTypes.number.isRequired
-    }
-
-    render() {
-
-        const {
-                /* eslint-disable no-unused-vars */
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
+    return (
+        <NavButton {...other}
+            {...{
                 songIndex,
-                isAccessOn,
-                selectedSongIndex,
-                isDotsSlideShown,
-                accessedNavIndex,
-
-                ...other
-            } = this.props,
-
-            isSelected = selectedSongIndex === songIndex,
-
-            // Don't show access icon if dots slide is open.
-            isAccessed =
-                isAccessOn &&
-                !isDotsSlideShown &&
-                accessedNavIndex === songIndex
-
-        return (
-            <NavButton {...other}
-                {...{
-                    songIndex,
-                    isSelected,
-                    isAccessed
-                }}
-            />
-        )
-    }
+                isSelected,
+                isAccessed
+            }}
+        />
+    )
 }
 
-export default connect(mapStateToProps)(NavButtonIndexed)
+NavButtonIndexed.propTypes = {
+    songIndex: PropTypes.number.isRequired
+}
+
+export default memo(NavButtonIndexed)
