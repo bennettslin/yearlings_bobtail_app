@@ -1,56 +1,37 @@
 // Popup container for about section.
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAboutShown } from '../../../redux/toggle/action'
 import About from '../../About'
 import Popup from '../../Popup'
 import { mapIsAboutShown } from '../../../redux/toggle/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const isAboutShown = mapIsAboutShown(state)
+const AboutPopup = () => {
+    const
+        dispatch = useDispatch(),
+        isAboutShown = useSelector(mapIsAboutShown)
 
-    return {
-        isAboutShown
+    const handleCloseClick = () => {
+        dispatch(updateIsAboutShown())
     }
+
+    return (
+        <Popup
+            bounceAnimate
+            displaysInOverlay
+            isCardSize
+            canBeFullHeight
+            hasWidePadding
+            {...{
+                popupName: 'AboutPopup',
+                isVisible: isAboutShown,
+                handleCloseClick
+            }}
+        >
+            <About />
+        </Popup>
+    )
 }
 
-class AboutPopup extends PureComponent {
-
-    static propTypes = {
-    // Through Redux.
-        isAboutShown: PropTypes.bool.isRequired,
-        updateIsAboutShown: PropTypes.func.isRequired
-    }
-
-    _closeAbout = () => {
-        this.props.updateIsAboutShown()
-    }
-
-    render() {
-        const { isAboutShown } = this.props
-
-        return (
-            <Popup
-                bounceAnimate
-                displaysInOverlay
-                isCardSize
-                canBeFullHeight
-                hasWidePadding
-                {...{
-                    popupName: 'AboutPopup',
-                    isVisible: isAboutShown,
-                    handleCloseClick: this._closeAbout
-                }}
-            >
-                <About />
-            </Popup>
-        )
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    { updateIsAboutShown }
-)(AboutPopup)
+export default AboutPopup
