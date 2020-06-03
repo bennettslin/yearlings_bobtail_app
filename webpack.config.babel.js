@@ -4,7 +4,7 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
-import album from './admin/data'
+import album from './admin/data/album'
 import format from 'date-fns/format'
 
 const SHOW_BUNDLE_ANALYZER = false
@@ -17,7 +17,7 @@ export default ({
     staging: isStagingEnvironment = false
 } = {}) => {
     // Dev sanity check.
-    album.build = 'compiled'
+    album._build = 'compiled'
 
     return {
         entry: path.resolve(__dirname, 'app'),

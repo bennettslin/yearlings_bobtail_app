@@ -1,7 +1,7 @@
 import webpack from 'webpack'
 import path from 'path'
 import format from 'date-fns/format'
-import album from './admin/data'
+import album from './admin/data/album'
 
 import {
     getIsLocalDevelopment,
@@ -10,7 +10,7 @@ import {
 
 export const onCreateWebpackConfig = ({ actions }) => {
     // Dev sanity check.
-    album.build = 'compiled'
+    album._build = 'compiled'
 
     actions.setWebpackConfig({
         plugins: [
