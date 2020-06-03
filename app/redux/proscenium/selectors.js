@@ -13,15 +13,3 @@ export const mapProsceniumWidth = (
 export const mapProsceniumHeight = (
     { prosceniumStore: { prosceniumHeight } }
 ) => prosceniumHeight
-
-// import {
-//     mapLyricSongIndex,
-//     mapLyricVerseIndex,
-//     mapLyricAnnotationIndex,
-//     mapIsLyricLogue
-// } from '../../../redux/players/selectors'
-
-// lyricSongIndex = mapLyricSongIndex(state),
-// lyricVerseIndex = mapLyricVerseIndex(state),
-// lyricAnnotationIndex = mapLyricAnnotationIndex(state),
-// isLyricLogue = mapIsLyricLogue(state)

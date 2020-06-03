@@ -1,12 +1,17 @@
-import React, { PureComponent } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import WallBalcony from './Balcony'
 import {
     getBalconyColumnCoordinates,
     getWallWidth
 } from './helper'
+import {
+    mapProsceniumLeft,
+    mapProsceniumWidth,
+    mapProsceniumHeight
+} from '../../../redux/proscenium/selectors'
 import { mapCeilingHeight } from '../../../redux/theatre/selectors'
 import {
     mapWindowWidth,
@@ -14,109 +19,72 @@ import {
 } from '../../../redux/viewport/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const {
-            prosceniumStore: {
-                prosceniumLeft,
-                prosceniumWidth,
-                prosceniumHeight
-            }
-        } = state,
-        ceilingHeight = mapCeilingHeight(state),
-        windowWidth = mapWindowWidth(state),
-        windowHeight = mapWindowHeight(state)
+const Wall = ({ isRight }) => {
+    const
+        prosceniumLeft = useSelector(mapProsceniumLeft),
+        prosceniumWidth = useSelector(mapProsceniumWidth),
+        prosceniumHeight = useSelector(mapProsceniumHeight),
+        ceilingHeight = useSelector(mapCeilingHeight),
+        windowWidth = useSelector(mapWindowWidth),
+        windowHeight = useSelector(mapWindowHeight),
 
-    return {
-        windowHeight,
-        windowWidth,
-        prosceniumLeft,
-        prosceniumWidth,
-        prosceniumHeight,
-        ceilingHeight
-    }
-}
+        wallWidth = getWallWidth({
+            isRight,
+            prosceniumLeft,
+            prosceniumWidth,
+            windowWidth
+        }),
 
-class Wall extends PureComponent {
+        balconyColumnCoordinates = getBalconyColumnCoordinates({
+            isRight,
+            windowWidth,
+            prosceniumLeft,
+            prosceniumWidth,
+            prosceniumHeight,
+            ceilingHeight
+        })
 
-    static propTypes = {
-        // Through Redux.
-        windowHeight: PropTypes.number.isRequired,
-        windowWidth: PropTypes.number.isRequired,
-        prosceniumLeft: PropTypes.number.isRequired,
-        prosceniumWidth: PropTypes.number.isRequired,
-        prosceniumHeight: PropTypes.number.isRequired,
-        ceilingHeight: PropTypes.number.isRequired,
+    return (
+        <div
+            {...{
+                className: cx(
+                    'Wall',
+                    'Theatre__field'
+                ),
+                style: {
+                    width: `${wallWidth}px`,
+                    height: `${windowHeight}`,
 
-        // From parent.
-        isRight: PropTypes.bool
-    }
-
-    render() {
-
-        const {
-                isRight,
-                windowWidth,
-                windowHeight,
-                prosceniumLeft,
-                prosceniumWidth,
-                prosceniumHeight,
-                ceilingHeight
-            } = this.props,
-
-            wallWidth = getWallWidth({
-                isRight,
-                prosceniumLeft,
-                prosceniumWidth,
-                windowWidth
-            }),
-
-            balconyColumnCoordinates = getBalconyColumnCoordinates({
-                isRight,
-                windowWidth,
-                prosceniumLeft,
-                prosceniumWidth,
-                prosceniumHeight,
-                ceilingHeight
-            })
-
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'Wall',
-                        'Theatre__field'
-                    ),
-                    style: {
-                        width: `${wallWidth}px`,
-                        height: `${windowHeight}`,
-
-                        ...isRight && {
-                            left: 'auto',
-                            right: 0
-                        }
+                    ...isRight && {
+                        left: 'auto',
+                        right: 0
                     }
-                }}
-            >
-                {balconyColumnCoordinates.map(({
-                    top,
-                    left,
-                    width,
-                    height
-                }, index) => (
-                    <WallBalcony
-                        {...{
-                            key: index,
-                            top,
-                            left,
-                            width,
-                            height,
-                            isLeft: !isRight
-                        }}
-                    />
-                ))}
-            </div>
-        )
-    }
+                }
+            }}
+        >
+            {balconyColumnCoordinates.map(({
+                top,
+                left,
+                width,
+                height
+            }, index) => (
+                <WallBalcony
+                    {...{
+                        key: index,
+                        top,
+                        left,
+                        width,
+                        height,
+                        isLeft: !isRight
+                    }}
+                />
+            ))}
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(Wall)
+Wall.propTypes = {
+    isRight: PropTypes.bool
+}
+
+export default memo(Wall)
