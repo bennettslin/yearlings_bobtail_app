@@ -81,6 +81,10 @@ class Filmstrip extends PureComponent {
         return (selectedTime - sceneStartTime) / sceneDuration * 100
     }
 
+    getDispatchSceneIndex = dispatch => {
+        this.dispatchSceneIndex = dispatch
+    }
+
     getStopPropagation = dispatch => {
         this.stopPropagation = dispatch
     }
@@ -164,7 +168,7 @@ class Filmstrip extends PureComponent {
                     {...{ accessKey: NEXT_SCENE_KEY }}
                 />
                 <TipsHand reverse {...{ tipType: FILMSTRIP }} />
-                <SceneDispatcher {...{ getRefs: this._getRefs }} />
+                <SceneDispatcher {...{ ref: this.getDispatchSceneIndex }} />
                 <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
             </div>
         )

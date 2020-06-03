@@ -1,58 +1,31 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import { useSelector } from 'react-redux'
 import VerseDispatcher from '../VerseDispatcher'
 import { getVerseIndexForScene } from '../../album/api/scenes'
 import { mapSelectedSongIndex } from '../../redux/selected/selectors'
 
-const mapStateToProps = state => {
-    const {
-            entranceStore: { didSceneEnter }
-        } = state,
-        selectedSongIndex = mapSelectedSongIndex(state)
+const SceneDispatcher = forwardRef((props, ref) => {
+    const
+        dispatchVerse = useRef(),
+        selectedSongIndex = useSelector(mapSelectedSongIndex)
 
-    return {
-        selectedSongIndex,
-        didSceneEnter
-    }
-}
+    const dispatchSceneIndex = (selectedSceneIndex) => {
+        const selectedVerseIndex = getVerseIndexForScene(
+            selectedSongIndex,
+            selectedSceneIndex
+        )
 
-class SceneDispatcher extends PureComponent {
-    static propTypes = {
-        // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
-        didSceneEnter: PropTypes.bool.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({ dispatchSceneIndex: this.dispatchSceneIndex })
-    }
-
-    dispatchSceneIndex = (selectedSceneIndex) => {
-        const { selectedSongIndex } = this.props,
-            selectedVerseIndex = getVerseIndexForScene(
-                selectedSongIndex,
-                selectedSceneIndex
-            )
-
-        this.dispatchVerse({
+        dispatchVerse.current({
             selectedVerseIndex,
             scrollLog: `Select scene ${selectedSceneIndex}, verse ${selectedVerseIndex}.`
         })
     }
 
-    getDispatchVerse = dispatch => {
-        this.dispatchVerse = dispatch
-    }
+    useImperativeHandle(ref, () => dispatchSceneIndex)
+    return (
+        <VerseDispatcher {...{ ref: dispatchVerse }} />
+    )
+})
 
-    render() {
-        return (
-            <VerseDispatcher {...{ ref: this.getDispatchVerse }} />
-        )
-    }
-}
-
-export default connect(mapStateToProps)(SceneDispatcher)
+export default SceneDispatcher
