@@ -1,62 +1,44 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import InlineSvg from '../../../modules/InlineSvg'
 import proscenium from '../../../../assets/svgs/theatre/proscenium'
+import {
+    mapProsceniumTop,
+    mapProsceniumLeft,
+    mapProsceniumWidth,
+    mapProsceniumHeight
+} from '../../../redux/proscenium/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const {
-        prosceniumStore: {
-            prosceniumTop,
-            prosceniumLeft,
-            prosceniumWidth,
-            prosceniumHeight
-        }
-    } = state
+const Proscenium = () => {
+    const
+        prosceniumTop = useSelector(mapProsceniumTop),
+        prosceniumLeft = useSelector(mapProsceniumLeft),
+        prosceniumWidth = useSelector(mapProsceniumWidth),
+        prosceniumHeight = useSelector(mapProsceniumHeight)
 
-    return {
-        prosceniumTop,
-        prosceniumLeft,
-        prosceniumWidth,
-        prosceniumHeight
-    }
+    return (
+        <InlineSvg
+            {...{
+                className: cx(
+                    'Proscenium'
+                ),
+                style: {
+                    top: `${prosceniumTop}px`,
+                    left: `${prosceniumLeft}px`,
+                    width: `${prosceniumWidth}px`,
+                    height: `${prosceniumHeight}px`
+                },
+                svgClassName: cx(
+                    'proscenium',
+                    'fillTransition__dimTheatre'
+                )
+            }}
+        >
+            {proscenium}
+        </InlineSvg>
+    )
 }
 
-const Proscenium = ({
-    prosceniumTop,
-    prosceniumLeft,
-    prosceniumWidth,
-    prosceniumHeight
-}) => (
-    <InlineSvg
-        {...{
-            className: cx(
-                'Proscenium'
-            ),
-            style: {
-                top: `${prosceniumTop}px`,
-                left: `${prosceniumLeft}px`,
-                width: `${prosceniumWidth}px`,
-                height: `${prosceniumHeight}px`
-            },
-            svgClassName: cx(
-                'proscenium',
-                'fillTransition__dimTheatre'
-            )
-        }}
-    >
-        {proscenium}
-    </InlineSvg>
-)
-
-Proscenium.propTypes = {
-    // Through Redux.
-    prosceniumTop: PropTypes.number.isRequired,
-    prosceniumLeft: PropTypes.number.isRequired,
-    prosceniumWidth: PropTypes.number.isRequired,
-    prosceniumHeight: PropTypes.number.isRequired
-}
-
-export default connect(mapStateToProps)(Proscenium)
+export default Proscenium
