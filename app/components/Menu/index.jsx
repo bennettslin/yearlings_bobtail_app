@@ -2,9 +2,8 @@
  * Field for about toggle, audio section, and scores and tips section. Knows no
  * state, so should not update.
  */
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import AboutToggle from '../About/Toggle'
 import Audio from '../Audio'
@@ -22,122 +21,89 @@ import {
 } from '../../redux/viewport/selectors'
 import './style'
 
-const mapStateToProps = state => {
+const Menu = () => {
     const
-        canSliderMount = mapCanSliderMount(state),
-        isTwoRowMenu = mapIsTwoRowMenu(state),
-        menuHeight = mapMenuHeight(state),
-        windowWidth = mapWindowWidth(state),
-        isDesktopWidth = mapIsDesktopWidth(state)
+        canSliderMount = useSelector(mapCanSliderMount),
+        isTwoRowMenu = useSelector(mapIsTwoRowMenu),
+        menuHeight = useSelector(mapMenuHeight),
+        windowWidth = useSelector(mapWindowWidth),
+        isDesktopWidth = useSelector(mapIsDesktopWidth),
 
-    return {
-        windowWidth,
-        isDesktopWidth,
-        canSliderMount,
-        isTwoRowMenu,
-        menuHeight
-    }
-}
+        // This is necessary because transform animation in Safari is janky.
+        menuMarginInOverlay = getMenuMarginInOverlay({
+            isDesktopWidth,
+            windowWidth
+        })
 
-class Menu extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        windowWidth: PropTypes.number.isRequired,
-        isDesktopWidth: PropTypes.bool.isRequired,
-        canSliderMount: PropTypes.bool.isRequired,
-        isTwoRowMenu: PropTypes.bool.isRequired,
-        menuHeight: PropTypes.number.isRequired
-    }
-
-    render() {
-        const
-            {
-                windowWidth,
-                isDesktopWidth,
-                canSliderMount,
-                isTwoRowMenu,
-                menuHeight
-            } = this.props,
-
-            /**
-             * This is necessary because transform animation in Safari is janky.
-             */
-            menuMarginInOverlay = getMenuMarginInOverlay({
-                isDesktopWidth,
-                windowWidth
-            })
-
-        // Prevent menu from rendering before windowWidth has been set.
-        return (
+    // Prevent menu from rendering before windowWidth has been set.
+    return (
+        <div
+            {...{
+                className: cx(
+                    'Menu',
+                    'abF'
+                ),
+                style: {
+                    height: `${menuHeight}px`
+                }
+            }}
+        >
             <div
                 {...{
                     className: cx(
-                        'Menu',
+                        'Menu__main',
+                        'width__mainColumn',
                         'abF'
                     ),
                     style: {
-                        height: `${menuHeight}px`
+                        marginLeft: menuMarginInOverlay,
+                        marginRight: menuMarginInOverlay
                     }
                 }}
             >
                 <div
                     {...{
                         className: cx(
-                            'Menu__main',
-                            'width__mainColumn',
+                            'Menu__mainTop',
+                            'Menu__topField',
                             'abF'
-                        ),
-                        style: {
-                            marginLeft: menuMarginInOverlay,
-                            marginRight: menuMarginInOverlay
-                        }
+                        )
                     }}
                 >
+                    <BannerFilmstrip />
+                    <AboutToggle />
+                    {!isTwoRowMenu && (
+                        <Audio />
+                    )}
+                </div>
+
+                {isTwoRowMenu && (
                     <div
                         {...{
                             className: cx(
-                                'Menu__mainTop',
-                                'Menu__topField',
+                                'Menu__mainBottom',
                                 'abF'
                             )
                         }}
                     >
-                        <BannerFilmstrip />
-                        <AboutToggle />
-                        {!isTwoRowMenu && (
-                            <Audio />
-                        )}
-                    </div>
-
-                    {isTwoRowMenu && (
-                        <div
-                            {...{
-                                className: cx(
-                                    'Menu__mainBottom',
-                                    'abF'
-                                )
-                            }}
-                        >
-                            <Audio />
-                        </div>
-                    )}
-                </div>
-                {canSliderMount && (
-                    <div
-                        className={cx(
-                            'Menu__lyricTop',
-                            'Menu__topField',
-                            'width__lyricColumn__desktop',
-                            'abF'
-                        )}
-                    >
-                        <Slider />
+                        <Audio />
                     </div>
                 )}
             </div>
-        )
-    }
+            {canSliderMount && (
+                <div
+                    className={cx(
+                        'Menu__lyricTop',
+                        'Menu__topField',
+                        'width__lyricColumn__desktop',
+                        'abF'
+                    )}
+                >
+                    <Slider />
+                </div>
+            )}
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(Menu)
+export default Menu
