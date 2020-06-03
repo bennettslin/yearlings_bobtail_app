@@ -23,12 +23,12 @@ const OverviewPopup = ({
 
 }) => {
     const
+        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
         isLyricLogue = useSelector(mapIsLyricLogue),
         isLogueOverviewShown = useSelector(mapIsLogueOverviewShown),
         selectedOverviewOption = useSelector(mapSelectedOverviewOption),
         selectedTipsOption = useSelector(mapSelectedTipsOption),
         isOverlayShown = useSelector(mapIsOverlayShown),
-        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
 
         // TODO: Make this a selector.
         isVisibleBySection = getIsOverviewVisibleBySection({

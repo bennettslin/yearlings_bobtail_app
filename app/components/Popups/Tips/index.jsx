@@ -1,11 +1,11 @@
 // Popup container for tips section.
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import Tips from '../../Tips'
 import Popup from '../../Popup'
 import { getShowTipForDevice } from '../../../api/album/tips'
 import { SHOWN } from '../../../constants/options'
+import { mapCanLyricCarouselEnter } from '../../../redux/entrance/selectors'
 import {
     mapLyricSongIndex,
     mapIsLyricLogue
@@ -18,83 +18,46 @@ import {
 } from '../../../redux/viewport/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const {
-            entranceStore: { canLyricCarouselEnter }
-        } = state,
-        lyricSongIndex = mapLyricSongIndex(state),
-        isLyricLogue = mapIsLyricLogue(state),
-        selectedTipsOption = mapSelectedTipsOption(state),
-        isPhoneWidth = mapIsPhoneWidth(state),
-        isTabletWidth = mapIsTabletWidth(state),
-        isDesktopWidth = mapIsDesktopWidth(state)
+const TipsPopup = () => {
+    const
+        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        isLyricLogue = useSelector(mapIsLyricLogue),
+        selectedTipsOption = useSelector(mapSelectedTipsOption),
+        isPhoneWidth = useSelector(mapIsPhoneWidth),
+        isTabletWidth = useSelector(mapIsTabletWidth),
+        isDesktopWidth = useSelector(mapIsDesktopWidth),
 
-    return {
-        canLyricCarouselEnter,
-        isLyricLogue,
-        lyricSongIndex,
-        selectedTipsOption,
-        isPhoneWidth,
-        isTabletWidth,
-        isDesktopWidth
-    }
-}
+        // TODO: Make this a selector.
+        isVisible =
+            canLyricCarouselEnter &&
+            !isLyricLogue &&
+            selectedTipsOption === SHOWN &&
 
-class TipsPopup extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        canLyricCarouselEnter: PropTypes.bool.isRequired,
-        isLyricLogue: PropTypes.bool.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
-        selectedTipsOption: PropTypes.string.isRequired,
-        isPhoneWidth: PropTypes.bool.isRequired,
-        isTabletWidth: PropTypes.bool.isRequired,
-        isDesktopWidth: PropTypes.bool.isRequired
-    }
-
-    render() {
-        const
-            {
-                canLyricCarouselEnter,
-                isLyricLogue,
-                lyricSongIndex,
-                selectedTipsOption,
+            // Ensure this song's tip can be shown for this viewport width.
+            getShowTipForDevice({
+                songIndex: lyricSongIndex,
                 isPhoneWidth,
                 isTabletWidth,
                 isDesktopWidth
-            } = this.props,
+            })
 
-            isVisible =
-                canLyricCarouselEnter &&
-                !isLyricLogue &&
-                selectedTipsOption === SHOWN &&
-
-                // Ensure this song's tip can be shown for this viewport width.
-                getShowTipForDevice({
-                    songIndex: lyricSongIndex,
-                    isPhoneWidth,
-                    isTabletWidth,
-                    isDesktopWidth
-                })
-
-        return (
-            <Popup
-                doMountonEnter
-                doUnmountOnExit
-                isCardSize
-                bounceAnimate
-                hasNarrowPadding
-                noAbsoluteFull
-                {...{
-                    popupName: 'TipsPopup',
-                    isVisible
-                }}
-            >
-                <Tips />
-            </Popup>
-        )
-    }
+    return (
+        <Popup
+            doMountonEnter
+            doUnmountOnExit
+            isCardSize
+            bounceAnimate
+            hasNarrowPadding
+            noAbsoluteFull
+            {...{
+                popupName: 'TipsPopup',
+                isVisible
+            }}
+        >
+            <Tips />
+        </Popup>
+    )
 }
 
-export default connect(mapStateToProps)(TipsPopup)
+export default TipsPopup
