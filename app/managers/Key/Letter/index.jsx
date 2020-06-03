@@ -256,7 +256,7 @@ class LetterManager extends PureComponent {
     }
 
     getDispatchCarouselNav = dispatch => {
-        this.dispatchCarouselNav = dispatch.
+        this.dispatchCarouselNav = dispatch
     }
 
     getDispatchDotsSlide = dispatch => {
