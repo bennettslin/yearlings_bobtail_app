@@ -49,6 +49,10 @@ class CarouselToggle extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchCarouselNav = dispatch => {
+        this.dispatchCarouselNav = dispatch
+    }
+
     render() {
         const {
             canCarouselMount,
@@ -74,7 +78,7 @@ class CarouselToggle extends PureComponent {
                 />
                 <TipsHand {...{ tipType: CAROUSEL }} />
                 <TipsHand {...{ tipType: NAV }} />
-                <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
+                <CarouselNavDispatcher {...{ ref: this.getDispatchCarouselNav }} />
             </div>
         )
     }

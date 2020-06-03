@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
+import { updateToggleStore } from '../../../redux/toggle/action'
 import { resetWiki } from '../../../redux/session/action'
 import AboutDispatcher from '../../../dispatchers/About'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOption'
@@ -98,6 +99,7 @@ class LetterManager extends PureComponent {
         updateSelectedStore: PropTypes.func.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
         updateActivatedStore: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired,
         resetWiki: PropTypes.func.isRequired,
 
         // From parent.
@@ -222,7 +224,7 @@ class LetterManager extends PureComponent {
 
         // Hide nav.
         } else if (this.props.isNavShown) {
-            this.dispatchHideNav()
+            this.props.updateToggleStore({ isNavShown: false })
 
         // Turn access off.
         } else {
@@ -251,6 +253,10 @@ class LetterManager extends PureComponent {
 
     getDispatchAudioOption = dispatch => {
         this.dispatchAudioOption = dispatch
+    }
+
+    getDispatchCarouselNav = dispatch => {
+        this.dispatchCarouselNav = dispatch.
     }
 
     getDispatchDotsSlide = dispatch => {
@@ -288,7 +294,7 @@ class LetterManager extends PureComponent {
                 <AudioOptionDispatcher
                     {...{ ref: this.getDispatchAudioOption }}
                 />
-                <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
+                <CarouselNavDispatcher {...{ ref: this.getDispatchCarouselNav }} />
                 <DotsSlideDispatcher {...{ ref: this.getDispatchDotsSlide }} />
                 <EarColumnDispatcher {...{ ref: this.getDispatchEarColumn }} />
                 <ActivatedSceneDispatcher {...{ ref: this.getActivateSceneDirection }} />
@@ -311,6 +317,7 @@ export default connect(
         updateSelectedStore,
         updateAccessStore,
         updateActivatedStore,
+        updateToggleStore,
         resetWiki
     }
 )(LetterManager)
