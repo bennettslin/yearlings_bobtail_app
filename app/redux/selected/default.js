@@ -1,7 +1,7 @@
-import { getColumnIndexForAnnotation } from '../../album/api/annotations'
-import { getSongIsLogue } from '../../album/api/songs'
-import { getStartTimeForVerse } from '../../album/api/time'
-import { getSceneIndexForVerse } from '../../album/api/verses'
+import { getColumnIndexForAnnotation } from '../../api/album/annotations'
+import { getSongIsLogue } from '../../api/album/songs'
+import { getStartTimeForVerse } from '../../api/album/time'
+import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getInitialIndicesFromRoutingOrStorage } from '../../helpers/storage'
 
 export const [

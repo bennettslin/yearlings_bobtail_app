@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import TipsToggle from './Toggle'
 import Texts from '../Texts'
-import { getSongTipText } from '../../album/api/tips'
+import { getSongTipText } from '../../api/album/tips'
 import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'
 

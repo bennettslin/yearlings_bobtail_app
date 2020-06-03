@@ -10,7 +10,7 @@ import {
     getToggleShowsOverviewImmediately,
     getToggleShowsTipsImmediately
 } from '../../helpers/options'
-import { getShowTipForDevice } from '../../album/api/tips'
+import { getShowTipForDevice } from '../../api/album/tips'
 import { mapIsActivated } from '../activated/selectors'
 import { mapCanLyricCarouselEnter } from '../entrance/selectors'
 import {

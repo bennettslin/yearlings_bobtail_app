@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { mapIsPlaying } from '../../redux/audio/selectors'
-import { getStartTimeForVerse } from '../../album/api/time'
+import { getStartTimeForVerse } from '../../api/album/time'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex

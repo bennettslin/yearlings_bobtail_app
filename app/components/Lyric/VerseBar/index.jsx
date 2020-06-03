@@ -8,7 +8,7 @@ import Transition from 'react-transition-group/Transition'
 import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
-import { getVerse } from '../../../album/api/verses'
+import { getVerse } from '../../../api/album/verses'
 import { getCursorIndex } from '../../../helpers/verse'
 import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import {

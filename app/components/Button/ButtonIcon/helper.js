@@ -1,4 +1,4 @@
-import { getSongIsLogue } from '../../../album/api/songs'
+import { getSongIsLogue } from '../../../api/album/songs'
 
 import {
     CAROUSEL_NAV_BUTTON_KEY,

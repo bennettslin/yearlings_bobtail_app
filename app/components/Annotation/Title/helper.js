@@ -1,6 +1,6 @@
 import { isString } from '../../../helpers/general'
 
-import { getWikiWormholesForAnnotation } from '../../../album/api/annotations'
+import { getWikiWormholesForAnnotation } from '../../../api/album/annotations'
 
 import {
     WORMHOLE,

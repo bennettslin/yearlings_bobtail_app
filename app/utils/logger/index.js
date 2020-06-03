@@ -2,7 +2,7 @@
 import {
     getAlbum,
     getSong
-} from '../../album/api/songs'
+} from '../../api/album/songs'
 import { getStoredSongIndex } from '../../helpers/storage'
 
 import {

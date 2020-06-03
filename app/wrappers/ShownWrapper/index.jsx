@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getSongTipType } from '../../album/api/tips'
+import { getSongTipType } from '../../api/album/tips'
 import { WIKI, WORMHOLES } from '../../constants/tips'
 import {
     mapReferenceDot,

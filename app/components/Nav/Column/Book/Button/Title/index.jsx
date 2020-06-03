@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getTitleForSong } from '../../../../../../album/api/songs'
+import { getTitleForSong } from '../../../../../../api/album/songs'
 import { getIndexCharacter } from '../Character/helper'
 import './style'
 

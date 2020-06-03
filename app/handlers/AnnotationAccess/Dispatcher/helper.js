@@ -1,11 +1,11 @@
 import {
     getAnnotationCountForSong,
     getDotKeysForAnnotation
-} from '../../../album/api/annotations'
+} from '../../../api/album/annotations'
 import {
     getLastAnnotationIndexForVerse,
     getAnnotationIndicesForVerse
-} from '../../../album/api/verses'
+} from '../../../api/album/verses'
 import {
     getShowAnnotationForColumn,
     getAnnotationIndexForDirection

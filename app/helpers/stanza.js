@@ -1,5 +1,5 @@
 import cx from 'classnames'
-import { getVerseIndicesForStanza } from '../album/api/stanzas'
+import { getVerseIndicesForStanza } from '../api/album/stanzas'
 
 export const getParentOfVerseClassNamesForIndices = (verseIndices) => {
     const

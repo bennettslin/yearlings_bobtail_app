@@ -6,7 +6,7 @@ import { ORDERED_DOT_KEYS } from '../../../../../app/constants/dots'
 import {
     getDescriptionForAnnotationCard,
     getDotKeysForAnnotationCard
-} from '../../../../../app/album/api/cards'
+} from '../../../../../app/api/album/cards'
 
 const AnnotationCard = ({
     songIndex,

@@ -10,7 +10,7 @@ import {
     getLayersForScene,
     getSkyTimeForScene,
     getSkySeasonForScene
-} from '../../../album/api/scenes'
+} from '../../../api/album/scenes'
 import {
     mapSelectedSongIndex,
     mapSelectedSceneIndex

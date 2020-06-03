@@ -6,12 +6,12 @@ import TipsHand from '../../Tips/Hand'
 import AccessDirectionLetter from '../../Access/DirectionLetter'
 import SceneDispatcher from '../../../dispatchers/Scene'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
-import { getSceneIndices } from '../../../album/api/scenes'
+import { getSceneIndices } from '../../../api/album/scenes'
 import {
     getDurationForSong,
     getStartTimeForScene,
     getDurationForScene
-} from '../../../album/api/time'
+} from '../../../api/album/time'
 import { getCursorIndex } from '../../../helpers/verse'
 import {
     PREVIOUS_SCENE_KEY,

@@ -7,7 +7,7 @@ import { updateEntranceStore } from '../../../redux/entrance/action'
 import Transition from 'react-transition-group/Transition'
 import ScrollCarouselListener from '../../../listeners/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
-import { getAnnotationIndices } from '../../../album/api/annotations'
+import { getAnnotationIndices } from '../../../api/album/annotations'
 import { populateRefs } from '../../../helpers/ref'
 import {
     mapIsAccessedIndexedAnchorShown,

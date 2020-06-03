@@ -5,8 +5,8 @@ import { updateAudioStore } from '../../redux/audio/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { resetVerseBars } from '../../redux/verseBars/action'
-import { getStartTimeForVerse } from '../../album/api/time'
-import { getSceneIndexForVerse } from '../../album/api/verses'
+import { getStartTimeForVerse } from '../../api/album/time'
+import { getSceneIndexForVerse } from '../../api/album/verses'
 import { mapSelectedSongIndex } from '../../redux/selected/selectors'
 
 const VerseDispatcher = forwardRef((props, ref) => {

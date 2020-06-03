@@ -1,4 +1,4 @@
-import { getEarStatusForSong } from '../album/api/songs'
+import { getEarStatusForSong } from '../api/album/songs'
 import {
     getIsPhoneWidth,
     getIsTabletWidth,

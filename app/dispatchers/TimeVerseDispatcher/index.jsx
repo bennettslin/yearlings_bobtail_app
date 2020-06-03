@@ -7,7 +7,7 @@ import { updateEntranceStore } from '../../redux/entrance/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
-import { getSceneIndexForVerse } from '../../album/api/verses'
+import { getSceneIndexForVerse } from '../../api/album/verses'
 import { mapSelectedSongIndex } from '../../redux/selected/selectors'
 import { mapIsAutoScroll } from '../../redux/toggle/selectors'
 

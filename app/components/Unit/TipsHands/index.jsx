@@ -8,7 +8,7 @@ import {
     getShowStanzaTabTip,
     getShowWormholesTip,
     getShowWikiTip
-} from '../../../album/api/tips'
+} from '../../../api/album/tips'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import {
     ANNOTATION,

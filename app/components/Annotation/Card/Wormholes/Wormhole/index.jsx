@@ -13,9 +13,9 @@ import {
     LYRIC,
     LYRIC_CENTRE
 } from '../../../../../constants/lyrics'
-import { getIndexedTitleForSong } from '../../../../../album/api/songs'
-import { getWormholeLinkForWormhole } from '../../../../../album/api/wormholes'
-import { getVerse } from '../../../../../album/api/verses'
+import { getIndexedTitleForSong } from '../../../../../api/album/songs'
+import { getWormholeLinkForWormhole } from '../../../../../api/album/wormholes'
+import { getVerse } from '../../../../../api/album/verses'
 import { populateRefs } from '../../../../../helpers/ref'
 import { mapLyricSongIndex } from '../../../../../redux/lyric/selectors'
 

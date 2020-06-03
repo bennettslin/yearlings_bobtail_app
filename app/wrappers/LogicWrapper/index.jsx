@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
 import { getCursorIndex } from '../../helpers/verse'
-import { getStanzaIndexForVerse } from '../../album/api/verses'
+import { getStanzaIndexForVerse } from '../../api/album/verses'
 import {
     mapIsActivated,
     mapActivatedVerseIndex

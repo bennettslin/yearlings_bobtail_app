@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Tips from '../../Tips'
 import Popup from '../../Popup'
-import { getShowTipForDevice } from '../../../album/api/tips'
+import { getShowTipForDevice } from '../../../api/album/tips'
 import { SHOWN } from '../../../constants/options'
 import {
     mapLyricSongIndex,

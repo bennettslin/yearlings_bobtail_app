@@ -13,8 +13,8 @@ import {
     getIsUnitTruncatable,
     getUnitFormType
 } from './helper'
-import { getSubsequentForUnit } from '../../../album/api/units'
-import { getVerse } from '../../../album/api/verses'
+import { getSubsequentForUnit } from '../../../api/album/units'
+import { getVerse } from '../../../api/album/verses'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 

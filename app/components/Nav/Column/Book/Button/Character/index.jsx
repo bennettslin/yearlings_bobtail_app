@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getSongIsLogue } from '../../../../../../album/api/songs'
+import { getSongIsLogue } from '../../../../../../api/album/songs'
 import { getIndexCharacter } from './helper'
 import './style'
 

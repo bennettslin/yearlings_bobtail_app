@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import LayersActor from './LayersActor'
 import LayersThing from './LayersThing'
 
-import { getLayersForScene } from '../../album/api/scenes'
+import { getLayersForScene } from '../../api/album/scenes'
 import { CUBE_Y_INDICES_WITH_NEG } from '../../constants/cubeIndex'
 
 import { ACTOR } from '../../constants/scene'

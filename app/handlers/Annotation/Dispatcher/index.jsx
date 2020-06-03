@@ -7,7 +7,7 @@ import {
     intersects,
     getDotKeysFromBitNumber
 } from '../../../helpers/dot'
-import { getDotKeysForAnnotation } from '../../../album/api/annotations'
+import { getDotKeysForAnnotation } from '../../../api/album/annotations'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { mapDotsBitNumber } from '../../../redux/dots/selectors'
 import { mapIsEarShown } from '../../../redux/transient/selectors'

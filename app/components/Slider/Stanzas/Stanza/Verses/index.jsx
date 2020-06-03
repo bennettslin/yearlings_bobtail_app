@@ -1,12 +1,12 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import { getVerseIndicesForStanza } from '../../../../../album/api/stanzas'
+import { getVerseIndicesForStanza } from '../../../../../api/album/stanzas'
 import {
     getStartTimeForStanza,
     getStartTimeForVerse,
     getDurationForVerse
-} from '../../../../../album/api/time'
+} from '../../../../../api/album/time'
 import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'
 import { mapLyricSongIndex } from '../../../../../redux/lyric/selectors'

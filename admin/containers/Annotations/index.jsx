@@ -6,8 +6,8 @@ import {
     getMetadataForNextGlobalAnnotation,
     getGlobalAnnotationCount,
     getGlobalAnnotationDoneCount
-} from '../../album/api/globalAnnotation'
-import { getTitleForAnnotation } from '../../../app/album/api/annotations'
+} from '../../api/album/globalAnnotation'
+import { getTitleForAnnotation } from '../../../app/api/album/annotations'
 import { getArrayOfLength } from '../../../app/helpers/general'
 import { removeLoadingIndicator } from '../../../app/utils/browser'
 import './style'

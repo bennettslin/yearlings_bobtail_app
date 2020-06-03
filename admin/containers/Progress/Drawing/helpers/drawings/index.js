@@ -1,4 +1,4 @@
-import { getSongsAndLoguesCount } from '../../../../../../app/album/api/songs'
+import { getSongsAndLoguesCount } from '../../../../../../app/api/album/songs'
 import { getArrayOfLength } from '../../../../../../app/helpers/general'
 
 import {

@@ -1,4 +1,4 @@
-import { getWikiWormholesForAnnotation } from '../album/api/annotations'
+import { getWikiWormholesForAnnotation } from '../api/album/annotations'
 
 export const getWikiUrl = ({
     selectedSongIndex,

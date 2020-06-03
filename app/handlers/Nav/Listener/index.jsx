@@ -8,7 +8,7 @@ import {
     resetAccessedNav
 } from '../../../redux/access/action'
 import { updateSessionStore } from '../../../redux/session/action'
-import { getBookForSongIndex } from '../../../album/api/songs'
+import { getBookForSongIndex } from '../../../api/album/songs'
 import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
 import { mapIsNavShown } from '../../../redux/toggle/selectors'
 

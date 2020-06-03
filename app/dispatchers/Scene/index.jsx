@@ -2,7 +2,7 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import VerseDispatcher from '../VerseDispatcher'
-import { getVerseIndexForScene } from '../../album/api/scenes'
+import { getVerseIndexForScene } from '../../api/album/scenes'
 import { mapSelectedSongIndex } from '../../redux/selected/selectors'
 
 const SceneDispatcher = forwardRef((props, ref) => {

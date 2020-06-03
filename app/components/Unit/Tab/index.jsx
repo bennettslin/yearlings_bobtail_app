@@ -6,7 +6,7 @@ import {
     getFormTypeForUnit,
     getFormTypeIndexForUnit,
     getVerseIndicesForUnit
-} from '../../../album/api/units'
+} from '../../../api/album/units'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 

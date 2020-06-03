@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
-import { getTitleForSong } from '../../album/api/songs'
+import { getTitleForSong } from '../../api/album/songs'
 import {
     mapLyricSongIndex,
     mapLyricVerseIndex,

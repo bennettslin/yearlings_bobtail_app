@@ -2,7 +2,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import AnnotationCard from './AnnotationCard'
-import { getAnnotationCardIndices } from '../../../../app/album/api/cards'
+import { getAnnotationCardIndices } from '../../../../app/api/album/cards'
 
 const AnnotationCards = ({ songIndex, annotationIndex }) => (
     <div className="TempGlobalAnnotationCards">

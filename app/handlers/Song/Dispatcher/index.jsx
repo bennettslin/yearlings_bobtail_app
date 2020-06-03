@@ -10,9 +10,9 @@ import { updateAccessStore } from '../../../redux/access/action'
 import { updateAudioStore } from '../../../redux/audio/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { getStartTimeForVerse } from '../../../album/api/time'
-import { getSceneIndexForVerse } from '../../../album/api/verses'
-import { getSongsAndLoguesCount } from '../../../album/api/songs'
+import { getStartTimeForVerse } from '../../../api/album/time'
+import { getSceneIndexForVerse } from '../../../api/album/verses'
+import { getSongsAndLoguesCount } from '../../../api/album/songs'
 import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {

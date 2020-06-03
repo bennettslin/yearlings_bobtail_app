@@ -8,7 +8,7 @@ import AnnotationAccess from './Access'
 import {
     getDotBitForAnnotation,
     getTitleForAnnotation
-} from '../../../album/api/annotations'
+} from '../../../api/album/annotations'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
 import { getAccessibleWikiWormholesCount } from './helper'

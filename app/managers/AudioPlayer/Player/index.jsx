@@ -9,7 +9,7 @@ import PlayerDispatcher from './Dispatcher'
 import PlayerListener from './Listener'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
-import { getStartTimeForVerse } from '../../../album/api/time'
+import { getStartTimeForVerse } from '../../../api/album/time'
 import { populateRefs } from '../../../helpers/ref'
 import { getPlayersCanPlayThroughFromBitNumber } from '../../../helpers/player'
 import {

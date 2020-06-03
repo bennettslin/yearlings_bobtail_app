@@ -1,4 +1,4 @@
-import { getBookForSongIndex } from '../../album/api/songs'
+import { getBookForSongIndex } from '../../api/album/songs'
 import { getAudioOptionFromStorage } from '../../helpers/storage'
 import { INITIAL_SONG_INDEX } from '../selected/default'
 

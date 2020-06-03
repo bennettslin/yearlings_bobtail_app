@@ -7,7 +7,7 @@ import {
     getSubVerseTypeForUnit,
     getSideCardTypeForUnit,
     getSideSubCardTypeForUnit
-} from '../../../album/api/units'
+} from '../../../api/album/units'
 import { getParentOfVerseClassNamesForIndices } from '../../../helpers/stanza'
 
 export const getParentOfVerseClassNamesForUnitCard = ({

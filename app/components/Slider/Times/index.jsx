@@ -4,7 +4,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import SliderTime from './Time'
-import { getDurationForSong } from '../../../album/api/time'
+import { getDurationForSong } from '../../../api/album/time'
 import { getFormattedTime } from '../../../helpers/format'
 import {
     mapIsActivated,

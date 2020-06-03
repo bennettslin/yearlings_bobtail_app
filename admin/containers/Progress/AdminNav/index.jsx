@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../ProgressFooter'
-import { getSongsAndLoguesCount } from '../../../../app/album/api/songs'
+import { getSongsAndLoguesCount } from '../../../../app/api/album/songs'
 import { getArrayOfLength } from '../../../../app/helpers/general'
 import {
     getSumOfTasks,

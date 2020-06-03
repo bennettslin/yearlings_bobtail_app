@@ -7,7 +7,7 @@ import { resetAnnotationQueue } from '../../../redux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
 import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
-import { getVerseIndexForAnnotation } from '../../../album/api/annotations'
+import { getVerseIndexForAnnotation } from '../../../api/album/annotations'
 import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import {
     mapQueuedAnnotationIndex,

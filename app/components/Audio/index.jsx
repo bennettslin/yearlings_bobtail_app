@@ -20,7 +20,7 @@ import {
     AUDIO_PLAY_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
-import { getSongsAndLoguesCount } from '../../album/api/songs'
+import { getSongsAndLoguesCount } from '../../api/album/songs'
 import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { mapIsPlaying } from '../../redux/audio/selectors'

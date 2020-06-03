@@ -9,7 +9,7 @@ import {
     resetWiki
 } from '../../../redux/session/action'
 import { resetVerseBars } from '../../../redux/verseBars/action'
-import { getBookForSongIndex } from '../../../album/api/songs'
+import { getBookForSongIndex } from '../../../api/album/songs'
 import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {

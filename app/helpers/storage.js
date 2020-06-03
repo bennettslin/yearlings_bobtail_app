@@ -1,7 +1,7 @@
 // Helpers for getting and setting state persisted in user's local storage.
-import { getValidSongIndex } from '../album/api/songs'
-import { getValidVerseIndex } from '../album/api/verses'
-import { getValidAnnotationIndex } from '../album/api/annotations'
+import { getValidSongIndex } from '../api/album/songs'
+import { getValidVerseIndex } from '../api/album/verses'
+import { getValidAnnotationIndex } from '../api/album/annotations'
 
 import { getArrayOfLength } from './general'
 import {

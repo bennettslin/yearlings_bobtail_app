@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../Texts'
 import OverviewToggle from '../Main/OverviewToggle'
-import { getOverviewForSong } from '../../album/api/songs'
+import { getOverviewForSong } from '../../api/album/songs'
 import { getIsToggleInOverview } from './helper'
 import { mapIsHeightlessLyric } from '../../redux/responsive/selectors'
 import {

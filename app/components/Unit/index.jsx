@@ -15,7 +15,7 @@ import {
     getVerseIndicesForUnit,
     getIsSideCardOnBottomForUnit,
     getSideCardForUnit
-} from '../../album/api/units'
+} from '../../api/album/units'
 import { getParentOfVerseClassNamesForIndices } from '../../helpers/stanza'
 import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'

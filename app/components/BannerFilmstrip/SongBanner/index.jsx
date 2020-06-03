@@ -8,11 +8,11 @@ import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 import Tracker from '../../Tracker'
 import SongBannerTimer from './Timer'
 import SongBannerTitle from './Title'
-import { getSongIsLogue } from '../../../album/api/songs'
+import { getSongIsLogue } from '../../../api/album/songs'
 import {
     getDurationForSong,
     getStartTimeForVerse
-} from '../../../album/api/time'
+} from '../../../api/album/time'
 import { mapIsSmallBannerText } from '../../../redux/responsive/selectors'
 import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
