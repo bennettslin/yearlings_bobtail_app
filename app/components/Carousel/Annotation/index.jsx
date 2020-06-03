@@ -1,7 +1,6 @@
 // Container to show single annotation in carousel.
-
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React, { memo } from 'react'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Annotation from '../../Annotation'
@@ -13,83 +12,70 @@ import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './logic'
 import './style'
 
-const mapStateToProps = state => {
-    const lyricSongIndex = mapLyricSongIndex(state)
+const CarouselAnnotation = ({
+    isAccessed,
+    isSelected,
+    annotationIndex,
+    setCarouselAnnotationElement
 
-    return {
-        lyricSongIndex
-    }
-}
+}) => {
+    const
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        annotationDotBit = getDotBitForAnnotation(
+            lyricSongIndex,
+            annotationIndex
+        ),
+        columnKey = getCarouselAnnotationData({
+            songIndex: lyricSongIndex,
+            annotationIndex
+        })
 
-class CarouselAnnotation extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        annotationIndex: PropTypes.number.isRequired,
-        isAccessed: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        setCarouselAnnotationElement: PropTypes.func.isRequired
-    }
-
-    setCarouselAnnotationElement = node => {
-        this.props.setCarouselAnnotationElement({
+    const setForCarouselAnnotation = node => {
+        setCarouselAnnotationElement({
             node,
-            index: this.props.annotationIndex
+            index: annotationIndex
         })
     }
 
-    render() {
-        const {
-                lyricSongIndex,
-                isAccessed,
-                isSelected,
-                annotationIndex
-            } = this.props,
-            annotationDotBit = getDotBitForAnnotation(
-                lyricSongIndex,
-                annotationIndex
-            ),
-            columnKey = getCarouselAnnotationData({
-                songIndex: lyricSongIndex,
-                annotationIndex
-            })
+    return (
+        <div
+            {...{
+                key: annotationIndex,
+                ref: setForCarouselAnnotation,
+                className: cx(
+                    'CarouselAnnotation',
 
-        return (
-            <div
+                    `${CAROUSEL_SCROLL}__${annotationIndex}`,
+
+                    columnKey &&
+                        `CarouselAnnotation__inEarColumn__${columnKey}`,
+
+                    getPrefixedDotLetterClassNames(
+                        annotationDotBit,
+                        // "Child carousel annotation letter."
+                        'CcA'
+                    ),
+                    'ovH'
+                )
+            }}
+        >
+            <Annotation
+                inCarousel
                 {...{
-                    key: annotationIndex,
-                    ref: this.setCarouselAnnotationElement,
-                    className: cx(
-                        'CarouselAnnotation',
-
-                        `${CAROUSEL_SCROLL}__${annotationIndex}`,
-
-                        columnKey &&
-                            `CarouselAnnotation__inEarColumn__${columnKey}`,
-
-                        getPrefixedDotLetterClassNames(
-                            annotationDotBit,
-                            // "Child carousel annotation letter."
-                            'CcA'
-                        ),
-                        'ovH'
-                    )
+                    isAccessed,
+                    isSelected,
+                    annotationIndex
                 }}
-            >
-                <Annotation
-                    inCarousel
-                    {...{
-                        isAccessed,
-                        isSelected,
-                        annotationIndex
-                    }}
-                />
-            </div>
-        )
-    }
+            />
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(CarouselAnnotation)
+CarouselAnnotation.propTypes = {
+    annotationIndex: PropTypes.number.isRequired,
+    isAccessed: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    setCarouselAnnotationElement: PropTypes.func.isRequired
+}
+
+export default memo(CarouselAnnotation)
