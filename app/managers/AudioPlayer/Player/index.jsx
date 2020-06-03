@@ -10,7 +10,6 @@ import PlayerListener from './Listener'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
 import { getStartTimeForVerse } from '../../../api/album/time'
-import { populateRefs } from '../../../helpers/ref'
 import { getPlayersCanPlayThroughFromBitNumber } from '../../../helpers/player'
 import {
     getMp3s,
@@ -314,12 +313,12 @@ class PlayerManager extends PureComponent {
         )
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
     getDispatchPlayerCanPlayThrough = dispatch => {
         this.dispatchPlayerCanPlayThrough = dispatch
+    }
+
+    getDispatchTimeVerse = dispatch => {
+        this.dispatchTimeVerse = dispatch
     }
 
     render() {
@@ -356,7 +355,7 @@ class PlayerManager extends PureComponent {
                     )
                 })}
                 <PlayerDispatcher {...{ ref: this.getDispatchPlayerCanPlayThrough }} />
-                <TimeVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <TimeVerseDispatcher {...{ ref: this.getDispatchTimeVerse }} />
             </div>
         )
     }
