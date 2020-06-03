@@ -1,20 +1,20 @@
-import { ACTOR } from '../../app/constants/scene'
+import { ACTOR } from '../../../../../../../app/constants/scene'
 import {
     BENNETT,
     LIZ,
     NESTOR
-} from '../../app/constants/scene/actors'
+} from '../../../../../../../app/constants/scene/actors'
 import {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_ASLEEP
-} from '../../app/constants/scene/actors/bennett'
-import { JOGGER } from '../../app/constants/scene/actors/nestor'
+} from '../../../../../../../app/constants/scene/actors/bennett'
+import { JOGGER } from '../../../../../../../app/constants/scene/actors/nestor'
 import {
     DISHROOM_LANCET,
     GATE_CODE,
     RUMPLED_LINENS
-} from '../../app/constants/scene/actors/songs'
+} from '../../../../../../../app/constants/scene/actors/songs'
 import {
     GINGERBREAD_PRISON,
     CHEEK_UNVEILED,
@@ -24,7 +24,7 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from '../../app/constants/scene/actors/bennettLiz'
+} from '../../../../../../../app/constants/scene/actors/bennettLiz'
 
 export default [
     {

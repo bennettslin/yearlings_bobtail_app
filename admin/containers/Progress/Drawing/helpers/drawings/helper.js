@@ -1,4 +1,4 @@
-import albumScenes from '../../../../../scenes'
+import scenes from './scenes'
 
 import { ACTOR } from '../../../../../../app/constants/scene'
 
@@ -11,7 +11,7 @@ const
 
 export const initialiseDrawings = (drawings, songIndex) => {
 
-    albumScenes[songIndex].forEach((scene, sceneIndex) => {
+    scenes[songIndex].forEach((scene, sceneIndex) => {
 
         // Initialise object for each presence type.
         if (!drawings[ACTOR]) {
