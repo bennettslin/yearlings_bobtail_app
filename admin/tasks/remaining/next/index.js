@@ -33,7 +33,7 @@ export default [
     },
     {
         taskName: `Post-Gatsby refactoring.`,
-        workedHours: 47
+        workedHours: 48
     },
 
     /* Next weekend. */
