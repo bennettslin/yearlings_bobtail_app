@@ -1,5 +1,4 @@
 # During work
-* Logic styles should live together. (So that they can be removed together if needed.)
 * Some todos to make a selector
 
 # Scene data refactor

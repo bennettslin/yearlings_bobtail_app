@@ -17,7 +17,6 @@ import {
     mapIsSelectedLyricAnnotation
 } from '../../../redux/lyric/selectors'
 import { mapIsSliderMoving } from '../../../redux/slider/selectors'
-import './logic'
 import './style'
 
 export const UnitDot = ({

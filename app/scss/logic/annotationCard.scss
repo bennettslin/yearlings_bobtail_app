@@ -1,6 +1,6 @@
-@import '../../../scss/constants/annotation';
-@import '../../../scss/constants/logic';
-@import '../../../scss/constants/shadow';
+@import '../constants/annotation';
+@import '../constants/logic';
+@import '../constants/shadow';
 
 // FIXME: Only selectors need to be iterated, not style.
 @each $dotLetter in $dotLettersArray {

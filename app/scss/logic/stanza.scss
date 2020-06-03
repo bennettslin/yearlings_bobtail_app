@@ -1,6 +1,6 @@
-@import '../../scss/constants/icon';
-@import '../../scss/constants/logic';
-@import '../../scss/constants/zIndex';
+@import '../constants/icon';
+@import '../constants/logic';
+@import '../constants/zIndex';
 
 @for $stanzaIndex from 0 through $stanzaMax {
 

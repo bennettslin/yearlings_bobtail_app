@@ -2,9 +2,6 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import VerseTracker from './VerseTracker'
-import './logicCursor'
-import './logicDefault'
-import './logicSlider'
 import './style'
 
 const VerseColour = ({

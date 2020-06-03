@@ -6,7 +6,6 @@ import Underline from '../Underline'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { ORDERED_DOT_KEYS } from '../../../constants/dots'
-import './logic'
 import './style'
 
 const propTypes = {

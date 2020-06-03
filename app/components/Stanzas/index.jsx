@@ -11,7 +11,6 @@ import Unit from '../Unit'
 import { getStanzaIndices } from '../../api/album/stanzas'
 import { getLastUnitDotCardIndex } from '../../api/album/units'
 import { mapLyricSongIndex } from '../../redux/lyric/selectors'
-import './logic'
 import './style'
 
 const Stanzas = ({ setLyricAnnotationElement, setVerseRef }) => {

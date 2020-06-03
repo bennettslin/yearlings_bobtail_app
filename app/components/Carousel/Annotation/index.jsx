@@ -9,7 +9,6 @@ import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 import { getCarouselAnnotationData } from './helper'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
-import './logic'
 import './style'
 
 const CarouselAnnotation = ({

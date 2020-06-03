@@ -8,4 +8,16 @@
 @import './classes/mixin';
 @import './classes/shadow';
 
+// TODO: Whittle these down.
+@import './logic/anchor';
+@import './logic/anchorDot';
+@import './logic/annotationCard';
+@import './logic/carouselAnnotation';
+@import './logic/dotSequence';
+@import './logic/stanza';
+@import './logic/unitDot';
+@import './logic/verse';
+@import './logic/verseCursor';
+@import './logic/verseSlider';
+
 @import './presences/style';

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
 import SequenceDot from './SequenceDot'
-import './logic'
 import './style'
 import { getDotKeysFromBitNumber } from '../../helpers/dot'
 
