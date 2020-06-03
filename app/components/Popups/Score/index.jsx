@@ -1,54 +1,34 @@
 // Popup container for score section.
-
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import Score from '../../Score'
 import Popup from '../../Popup'
 import { mapIsScoreShown } from '../../../redux/toggle/selectors'
 
-const mapStateToProps = state => {
-    const isScoreShown = mapIsScoreShown(state)
+const ScorePopup = () => {
+    const
+        dispatch = useDispatch(),
+        isScoreShown = useSelector(mapIsScoreShown)
 
-    return {
-        isScoreShown
+    const handleCloseClick = () => {
+        dispatch(updateToggleStore({ isScoreShown: false }))
     }
+
+    return (
+        <Popup
+            isFullWidth
+            isFullHeight
+            displaysInOverlay
+            {...{
+                popupName: 'ScorePopup',
+                isVisible: isScoreShown,
+                handleCloseClick
+            }}
+        >
+            <Score />
+        </Popup>
+    )
 }
 
-class ScorePopup extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isScoreShown: PropTypes.bool.isRequired,
-        updateToggleStore: PropTypes.func.isRequired
-    }
-
-    closeScore = () => {
-        this.props.updateToggleStore({ isScoreShown: false })
-    }
-
-    render() {
-        const { isScoreShown } = this.props
-
-        return (
-            <Popup
-                isFullWidth
-                isFullHeight
-                displaysInOverlay
-                {...{
-                    popupName: 'ScorePopup',
-                    isVisible: isScoreShown,
-                    handleCloseClick: this.closeScore
-                }}
-            >
-                <Score />
-            </Popup>
-        )
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    { updateToggleStore }
-)(ScorePopup)
+export default ScorePopup
