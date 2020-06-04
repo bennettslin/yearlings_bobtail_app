@@ -92,6 +92,7 @@ class PopupAnnotationListener extends PureComponent {
                 !isAboutShown &&
                 !selectedWikiIndex
 
+        // TODO: Move this into selector.
         this.props.updateTransientStore({ isPopupAnnotationVisible })
     }
 
@@ -120,6 +121,7 @@ class PopupAnnotationListener extends PureComponent {
             )
         ) {
             // ... then persist the popup annotation index.
+            // TODO: Move this into selector.
             this.props.updateTransientStore({
                 popupAnnotationIndex: lyricAnnotationIndex
             })

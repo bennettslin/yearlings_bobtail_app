@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -10,112 +10,86 @@ import { ACTOR } from '../../constants/scene'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import './style'
 
-class Presence extends PureComponent {
+const Presence = ({
+    cubesKey = DEFAULT_STAGE_KEY,
+    presenceType,
+    actorKey,
+    presenceKey,
+    existenceValue
 
-    static defaultProps = {
-        cubesKey: DEFAULT_STAGE_KEY
-    }
-
-    static propTypes = {
-        // From parent.
-        cubesKey: PropTypes.string.isRequired,
-        presenceType: PropTypes.string.isRequired,
-        actorKey: PropTypes.string,
-        presenceKey: PropTypes.string.isRequired,
-        existenceValue: PropTypes.bool.isRequired
-    }
-
-    state = {
+}) => {
+    const
         // This determines whether to transition in and out.
-        isTransitionVisible: false,
-
+        [isTransitionVisible, setIsTransitionVisible] = useState(false),
         /**
          * This is a fallback, in case the transition class was added before
          * the svg was loaded and therefore present.
          */
-        isSvgLoaded: false
-    }
+        [isSvgLoaded, setIsSvgLoaded] = useState(false)
 
-    componentDidMount() {
-        this._setIsTransitionVisible()
-    }
-
-    componentDidUpdate(prevProps) {
-        const
-            { existenceValue } = this.props,
-            { existenceValue: prevValue } = prevProps
-
-        if (existenceValue !== prevValue) {
-            this._setIsTransitionVisible()
-        }
-
-        if (!existenceValue && prevValue) {
-            this.setState({ isSvgLoaded: false })
-        }
-    }
-
-    _setIsTransitionVisible() {
-        const { existenceValue } = this.props
-
-        this.setState({ isTransitionVisible: Boolean(existenceValue) })
-    }
-
-    showProcessedSvg = () => {
+    const showProcessedSvg = () => {
         // This handles the possibility that an svg might be loaded late.
-        const { existenceValue } = this.props
         if (existenceValue) {
-            this.setState({ isSvgLoaded: true })
+            setIsSvgLoaded(true)
         }
     }
 
-    render() {
-        const {
-                cubesKey,
-                presenceType,
-                actorKey,
-                presenceKey
-            } = this.props,
+    useEffect(() => {
+        setIsTransitionVisible(Boolean(existenceValue))
+    }, [])
 
-            {
-                isTransitionVisible,
-                isSvgLoaded
-            } = this.state,
+    useEffect(() => {
+        setIsTransitionVisible(Boolean(existenceValue))
 
-            presencesMap = presenceType === ACTOR ?
-                getSvgMapForActor(actorKey) :
-                getSvgMapForThing(presenceType),
+        if (!existenceValue) {
+            setIsSvgLoaded(false)
+        }
 
-            presenceComponent = presencesMap[presenceKey]
+    }, [existenceValue])
 
-        return (
-            <CSSTransition
-                unmountOnExit
-                mountOnEnter
+    const
+        presencesMap = presenceType === ACTOR ?
+            getSvgMapForActor(actorKey) :
+            getSvgMapForThing(presenceType),
+
+        presenceComponent = presencesMap[presenceKey]
+
+    return (
+        <CSSTransition
+            unmountOnExit
+            mountOnEnter
+            {...{
+                in: isTransitionVisible,
+                timeout: 200,
+                classNames: { enterDone: 'Presence__visible' }
+            }}
+        >
+            <PresenceSvg
                 {...{
-                    in: isTransitionVisible,
-                    timeout: 200,
-                    classNames: { enterDone: 'Presence__visible' }
+                    className: cx(
+                        'Presence',
+                        isSvgLoaded && 'Presence__loaded',
+                        capitaliseForClassName(presenceType)
+                    ),
+                    cubesKey,
+                    presenceType,
+                    actorKey,
+                    presenceKey,
+                    showProcessedSvg
                 }}
             >
-                <PresenceSvg
-                    {...{
-                        className: cx(
-                            'Presence',
-                            isSvgLoaded && 'Presence__loaded',
-                            capitaliseForClassName(presenceType)
-                        ),
-                        cubesKey,
-                        presenceType,
-                        actorKey,
-                        presenceKey,
-                        showProcessedSvg: this.showProcessedSvg
-                    }}
-                >
-                    {presenceComponent}
-                </PresenceSvg>
-            </CSSTransition>
-        )
-    }
+                {presenceComponent}
+            </PresenceSvg>
+        </CSSTransition>
+    )
+}
+
+Presence.propTypes = {
+    cubesKey: PropTypes.string.isRequired,
+    presenceType: PropTypes.string.isRequired,
+    actorKey: PropTypes.string,
+    presenceKey: PropTypes.string.isRequired,
+    existenceValue: PropTypes.bool.isRequired
 }
 
 export default Presence

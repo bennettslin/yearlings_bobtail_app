@@ -1,4 +1,6 @@
 # During work
+* Change all mapStateToProps to grab from selectors. Just suck it up and do this.
+* Ensure all selectors are used.
 * Some todos to make a selector
 * Move svg folder to components that use them.
 
@@ -21,8 +23,8 @@
 * Selecting accessed verse has a delay.
 
 # Brainless JS tasks
-* Change all mapStateToProps to grab from selectors
-* Ensure all selectors are used.
+* Get rid of PopupAnnotation listener.
+* Work on SongDispatcher next.
 * Make dispatchers functions.
 * Change all to use isOverviewShown and isTipsShown rather than selected options.
 * Rename all to dotBit, use selectedDotBit and activatedDotBit?
