@@ -6,7 +6,7 @@ import {
     VELVET_FLOOR_COLOUR as F,
     FANCY_WALL_COLOUR as W,
     GENERIC_EXTERIOR_COLOUR as X
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { e, f } from '../../cubes/zIndices'
 

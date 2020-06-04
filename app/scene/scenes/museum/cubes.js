@@ -4,7 +4,7 @@ import {
     WOOD_FLOOR_COLOUR as F,
     FANCY_WALL_COLOUR as W,
     FURNITURE_COLOUR as R
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { d, g } from '../../cubes/zIndices'
 

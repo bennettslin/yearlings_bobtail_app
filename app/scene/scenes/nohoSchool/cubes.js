@@ -5,7 +5,7 @@ import {
     PAVEMENT_COLOUR as V,
     SCHOOL_FLOOR_COLOUR as F,
     SEAT_COLOUR as S
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [NOHO_SCHOOL_KEY]: {

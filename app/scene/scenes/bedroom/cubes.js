@@ -19,7 +19,7 @@ import {
     FURNITURE_COLOUR as R,
     BENNETT_BED_COLOUR as U,
     SEAT_COLOUR as S
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
 import { d, g, k } from '../../cubes/zIndices'

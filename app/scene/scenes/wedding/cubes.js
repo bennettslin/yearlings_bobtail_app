@@ -5,7 +5,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
     PLATFORM_COLOUR as P
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 /**
  * ...........-..

@@ -3,7 +3,7 @@ import { LOGUE_KEY } from '../../../constants/scene/scenes'
 import {
     GROUND_CLEAR_COLOUR as G,
     PLATFORM_COLOUR as P
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [LOGUE_KEY]: {

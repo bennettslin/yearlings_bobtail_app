@@ -10,7 +10,7 @@ import {
     PAVEMENT_COLOUR as V,
     LIZ_FLOOR_COLOUR as F,
     LIZ_COUCH_COLOUR as U
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [OAKLAND_HOUSES_KEY]: {

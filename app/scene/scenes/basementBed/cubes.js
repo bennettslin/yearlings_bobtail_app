@@ -11,7 +11,7 @@ import {
     NIGHT_COLOUR as Y,
     NIGHT_MAGIC_COLOUR as Z,
     BENNETT_BED_COLOUR as U
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { DEFAULT_CEILING } from '../basement/cubes'
 

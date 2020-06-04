@@ -6,7 +6,7 @@ import {
     SNOWGLOBE_PLATFORM_COLOUR as P,
     LIZ_COUCH_COLOUR as U,
     MIRIAM_COUCH_COLOUR as Z
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [SNOWGLOBES_PRESENT_KEY]: {

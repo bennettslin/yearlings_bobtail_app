@@ -6,7 +6,7 @@ import {
     SPOTLIGHT_LIGHTER_COLOUR as M,
     SPOTLIGHT_LIGHTEST_COLOUR as N,
     PAVEMENT_COLOUR as V
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [CHANGELING_CAVE_KEY]: {

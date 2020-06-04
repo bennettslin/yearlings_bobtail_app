@@ -7,7 +7,7 @@ import {
     DIRT_FLOOR_COLOUR as F,
     UNDERGROUND_WALL_COLOUR as W,
     SEAT_COLOUR as S
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
 import { a, e, k } from '../../cubes/zIndices'

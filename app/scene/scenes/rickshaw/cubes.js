@@ -4,7 +4,7 @@ import { RICKSHAW_KEY } from '../../../constants/scene/scenes'
 import {
     SAND_COLOUR as K,
     STREET_COLOUR as T
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [RICKSHAW_KEY]: {

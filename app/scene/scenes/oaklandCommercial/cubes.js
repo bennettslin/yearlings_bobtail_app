@@ -4,7 +4,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [OAKLAND_COMMERCIAL_KEY]: {

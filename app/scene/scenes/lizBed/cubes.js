@@ -14,7 +14,7 @@ import {
     FURNITURE_COLOUR as R,
     LIZ_BED_COLOUR as U,
     SEAT_COLOUR as S
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
 import { e, g, k } from '../../cubes/zIndices'

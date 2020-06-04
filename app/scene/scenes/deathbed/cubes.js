@@ -14,7 +14,7 @@ import {
     STREET_COLOUR as T,
     DEATHBED_FLOOR_COLOUR as F,
     FURNITURE_COLOUR as R
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 /**
  * ...........-..

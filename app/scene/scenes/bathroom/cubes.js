@@ -8,7 +8,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     LINOLEUM_FLOOR_COLOUR as F,
     SOFT_WALL_COLOUR as W
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { f, k } from '../../cubes/zIndices'
 

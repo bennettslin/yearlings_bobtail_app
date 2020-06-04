@@ -7,7 +7,7 @@ import {
     ROOF_COLOUR as C,
     VAN_NUYS_EXTERIOR_COLOUR as X,
     CONCRETE_PLATFORM_COLOUR as P
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { f, k } from '../../cubes/zIndices'
 

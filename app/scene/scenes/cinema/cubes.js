@@ -7,7 +7,7 @@ import {
     ROOF_COLOUR as C,
     VELVET_FLOOR_COLOUR as F,
     CINEMA_EXTERIOR_COLOUR as X
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
 import { e, f, k } from '../../cubes/zIndices'

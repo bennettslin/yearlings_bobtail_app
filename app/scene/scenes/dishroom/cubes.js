@@ -6,7 +6,7 @@ import {
     INDUSTRIAL_WALL_COLOUR as W,
     SCHOOL_WALL_COLOUR as Z,
     CONCRETE_PLATFORM_COLOUR as P
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
 import { a, f, g } from '../../cubes/zIndices'

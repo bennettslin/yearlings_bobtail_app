@@ -8,7 +8,7 @@ import {
     BANCROFT_GATE_COLOUR as A,
     BANCROFT_EXTERIOR_COLOUR as X,
     CONCRETE_PLATFORM_COLOUR as P
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { g, k } from '../../cubes/zIndices'
 

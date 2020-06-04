@@ -3,7 +3,7 @@ import { STEAM_TUNNEL_KEY } from '../../../constants/scene/scenes'
 import {
     DIRT_FLOOR_COLOUR as F,
     UNDERGROUND_WALL_COLOUR as W
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { d } from '../../cubes/zIndices'
 

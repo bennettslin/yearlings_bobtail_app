@@ -5,7 +5,7 @@ import {
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as K,
     GRASS_COLOUR as H
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [GO_KARTS_KEY]: {

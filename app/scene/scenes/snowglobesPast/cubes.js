@@ -4,7 +4,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     SNOW_FLOOR_COLOUR as F,
     SNOWGLOBE_PLATFORM_COLOUR as P
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [SNOWGLOBES_PAST_KEY]: {

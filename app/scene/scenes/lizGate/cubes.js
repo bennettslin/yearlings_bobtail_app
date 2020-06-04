@@ -11,7 +11,7 @@ import {
     ROOF_COLOUR as C,
     LIZ_WALL_COLOUR as W,
     LIZ_EXTERIOR_COLOUR as X
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
 import { d, f, k } from '../../cubes/zIndices'

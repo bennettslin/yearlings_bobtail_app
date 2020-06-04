@@ -5,7 +5,7 @@ import {
     PAVEMENT_COLOUR as V,
     TAIWAN_GATE_COLOUR as A,
     GENERIC_EXTERIOR_COLOUR as X
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { b, g } from '../../cubes/zIndices'
 

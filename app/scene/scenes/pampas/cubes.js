@@ -4,7 +4,7 @@ import { PAMPAS_KEY } from '../../../constants/scene/scenes'
 import {
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [PAMPAS_KEY]: {

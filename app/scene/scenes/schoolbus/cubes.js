@@ -4,7 +4,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as K
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [SCHOOLBUS_KEY]: {

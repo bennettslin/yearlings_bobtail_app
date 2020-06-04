@@ -11,7 +11,7 @@ import {
     NIGHT_COLOUR as Y,
     APARTMENT_EXTERIOR_COLOUR as X,
     BENNETT_BED_COLOUR as U
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
 import { d, g, k } from '../../cubes/zIndices'

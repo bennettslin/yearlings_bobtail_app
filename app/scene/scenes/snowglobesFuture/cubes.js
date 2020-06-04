@@ -5,7 +5,7 @@ import {
     SNOWGLOBE_PLATFORM_COLOUR as P,
     SNOW_FLOOR_COLOUR as F,
     LIZ_COUCH_COLOUR as U
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 /**
  * Couch should match in lizCouch.

@@ -4,7 +4,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     CONCRETE_PLATFORM_COLOUR as P
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [FREEWAY_KEY]: {

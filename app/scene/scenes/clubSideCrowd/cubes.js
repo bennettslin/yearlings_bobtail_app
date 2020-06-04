@@ -4,7 +4,7 @@ import {
     OLD_FLOOR_COLOUR as F,
     CLUB_WALL_COLOUR as W,
     PLATFORM_COLOUR as P
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { d, g } from '../../cubes/zIndices'
 

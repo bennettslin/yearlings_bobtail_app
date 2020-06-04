@@ -7,7 +7,7 @@ import {
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
     APARTMENT_EXTERIOR_COLOUR as X
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
 import { d, f, k } from '../../cubes/zIndices'

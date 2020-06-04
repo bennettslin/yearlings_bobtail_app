@@ -4,7 +4,7 @@ import { SHORE_KEY } from '../../../constants/scene/scenes'
 import {
     SAND_COLOUR as K,
     OCEAN_COLOUR as V
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [SHORE_KEY]: {

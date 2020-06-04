@@ -1,6 +1,6 @@
 import { ROYCE_HALL_KEY } from '../../../constants/scene/scenes'
 
-import { PAVEMENT_COLOUR as V } from '../../cubes/colours'
+import { PAVEMENT_COLOUR as V } from '../../../constants/scene/cubes/colours'
 
 export default {
     [ROYCE_HALL_KEY]: {

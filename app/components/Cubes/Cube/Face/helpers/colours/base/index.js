@@ -6,7 +6,7 @@ import HSLA_MAP, {
     WOOD_FLOOR_COLOUR,
     BENNETT_FLOOR_COLOUR,
     LINOLEUM_FLOOR_COLOUR
-} from '../../../../../../../scene/cubes/colours'
+} from '../../../../../../../constants/scene/cubes/colours'
 
 const BASE_ALPHA = 1,
 

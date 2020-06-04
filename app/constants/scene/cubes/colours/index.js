@@ -13,7 +13,7 @@ import {
     HUE_SNOW,
     HUE_SNOWGLOBE,
     HUE_TENNIS
-} from '../../../scss/exports/style'
+} from '../../../../scss/exports/style'
 
 export const DEFAULT_CLEAR_COLOUR = 'clear'
 export const GROUND_CLEAR_COLOUR = 'ground'

@@ -1,6 +1,6 @@
 import { TAIWAN_ROOM_KEY } from '../../../constants/scene/scenes'
 
-import { NIGHT_COLOUR as Y } from '../../cubes/colours'
+import { NIGHT_COLOUR as Y } from '../../../constants/scene/cubes/colours'
 
 import { e, g } from '../../cubes/zIndices'
 

@@ -5,7 +5,7 @@ import {
     PAVEMENT_COLOUR as V,
     TAIWAN_GATE_COLOUR as A,
     NIGHT_COLOUR as Y
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
 import { e, g, k } from '../../cubes/zIndices'

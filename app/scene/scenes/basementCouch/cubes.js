@@ -6,7 +6,7 @@ import {
     UNDERGROUND_WALL_COLOUR as W,
     FURNITURE_COLOUR as R,
     BENNETT_COUCH_COLOUR as U
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { a, e } from '../../cubes/zIndices'
 

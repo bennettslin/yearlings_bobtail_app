@@ -4,7 +4,7 @@ import {
     SCHOOL_FLOOR_COLOUR as F,
     SCHOOL_WALL_COLOUR as W,
     SEAT_COLOUR as S
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 import { d, g } from '../../cubes/zIndices'
 

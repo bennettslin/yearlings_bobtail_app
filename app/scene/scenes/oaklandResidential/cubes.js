@@ -4,7 +4,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [OAKLAND_RESIDENTIAL_KEY]: {

@@ -6,7 +6,7 @@ import {
     WOOD_FLOOR_COLOUR as F,
     SOFT_WALL_COLOUR as W,
     WAITING_ARMCHAIR_COLOUR as U
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
 import { d, g, k } from '../../cubes/zIndices'

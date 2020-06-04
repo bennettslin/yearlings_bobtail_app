@@ -5,7 +5,7 @@ import {
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as K,
     PAVEMENT_COLOUR as V
-} from '../../cubes/colours'
+} from '../../../constants/scene/cubes/colours'
 
 export default {
     [OAKLAND_PUBLIC_KEY]: {
