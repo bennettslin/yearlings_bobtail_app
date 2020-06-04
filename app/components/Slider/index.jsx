@@ -8,7 +8,6 @@ import SliderStanzas from './Stanzas'
 import SliderTimes from './Times'
 import AccessDirectionLetter from '../Access/DirectionLetter'
 import TipsHand from '../Tips/Hand'
-import { populateRefs } from '../../helpers/ref'
 import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY
@@ -43,8 +42,10 @@ class Slider extends PureComponent {
         this.dispatchTouchBegin(e, this.sliderElement.current)
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchSliderTouch = dispatch => {
+        if (dispatch) {
+            this.dispatchTouchBegin = dispatch.dispatchTouchBegin
+        }
     }
 
     render() {
@@ -75,7 +76,7 @@ class Slider extends PureComponent {
                     {...{ accessKey: NEXT_VERSE_KEY }}
                 />
                 <TipsHand reverse {...{ tipType: SLIDER }} />
-                <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
+                <SliderTouchDispatcher {...{ ref: this.getDispatchSliderTouch }} />
             </div>
         )
     }

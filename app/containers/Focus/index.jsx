@@ -171,6 +171,13 @@ class FocusContainer extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getDispatchSliderTouch = dispatch => {
+        if (dispatch) {
+            this.dispatchTouchMove = dispatch.dispatchTouchMove
+            this.dispatchTouchEnd = dispatch.dispatchTouchEnd
+        }
+    }
+
     getStopPropagation = dispatch => {
         this.stopPropagation = dispatch
     }
@@ -204,7 +211,7 @@ class FocusContainer extends PureComponent {
                     {...{ setLyricFocusElement: this.setLyricFocusElement }}
                 />
                 {canSliderMount && (
-                    <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
+                    <SliderTouchDispatcher {...{ ref: this.getDispatchSliderTouch }} />
                 )}
                 <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
                 <KeyManager {...{ getRefs: this._getRefs }} />
