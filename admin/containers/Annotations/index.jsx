@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { PureComponent } from 'react'
+import React, { useEffect } from 'react'
 import cx from 'classnames'
 import AnnotationCards from './AnnotationCards'
 import {
@@ -52,35 +52,33 @@ const TempGlobalAnnotation = ({ intervalIndex }) => {
     )
 }
 
-class TempGlobalAnnotations extends PureComponent {
+const TempGlobalAnnotations = () => {
 
-    componentDidMount() {
+    useEffect(() => {
         logMount('Annotations')
         removeLoadingIndicator()
-    }
+    }, [])
 
-    render() {
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'TempGlobalAnnotations',
-                        'PtSansNarrow'
-                    )
-                }}
-            >
-                <TempGlobalAnnotationsCounter />
-                {getArrayOfLength(INTERVALS_COUNT).map(intervalIndex => (
-                    <TempGlobalAnnotation
-                        {...{
-                            key: intervalIndex,
-                            intervalIndex
-                        }}
-                    />
-                ))}
-            </div>
-        )
-    }
+    return (
+        <div
+            {...{
+                className: cx(
+                    'TempGlobalAnnotations',
+                    'PtSansNarrow'
+                )
+            }}
+        >
+            <TempGlobalAnnotationsCounter />
+            {getArrayOfLength(INTERVALS_COUNT).map(intervalIndex => (
+                <TempGlobalAnnotation
+                    {...{
+                        key: intervalIndex,
+                        intervalIndex
+                    }}
+                />
+            ))}
+        </div>
+    )
 }
 
 export default TempGlobalAnnotations
