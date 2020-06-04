@@ -1,4 +1,3 @@
-import { convertPresenceKeyToClassName } from '../../../../helpers/format'
 import {
     BUBBLE,
     CARDBOARD,
@@ -64,7 +63,7 @@ const OPAL_COUCH_CONFIG = {
     placedFront: true
 }
 
-const WIRES_MAP = {
+export default {
     [BUBBLE]: {
         [SKETCHBOOK]: BUBBLE_DEFAULT,
         [CINEMA_THOUGHT_BUYING]: BUBBLE_DEFAULT,
@@ -177,10 +176,3 @@ const WIRES_MAP = {
         }
     }
 }
-
-export const getWireForThing = ({
-    presenceType,
-    presenceKey
-}) => (
-    WIRES_MAP[presenceType] || {}
-)[convertPresenceKeyToClassName(presenceKey)]

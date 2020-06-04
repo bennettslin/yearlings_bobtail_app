@@ -36,7 +36,7 @@ const PETTING_SEATED_CONFIG = {
     placedFront: true
 }
 
-const WIRES_MAP = {
+export default {
     [PRETEEN_BENNETT]: {
         [BUOY]: {
             wires: [
@@ -146,10 +146,3 @@ const WIRES_MAP = {
         }
     }
 }
-
-export const getWireForActor = ({
-    actorKey,
-    presenceKey
-}) => (
-    WIRES_MAP[actorKey] || {}
-)[presenceKey]

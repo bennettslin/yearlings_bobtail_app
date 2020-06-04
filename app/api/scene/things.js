@@ -1,6 +1,6 @@
 import { convertPresenceKeyToClassName } from '../../helpers/format'
 import THING_ARRANGEMENTS from '../../scene/aggregators/things'
-import SHARED_THING_STYLES from '../../scene/configs/things'
+import SHARED_THING_STYLES from '../../scene/sharedStyles/things'
 
 export const getThingArrangements = () => (
     THING_ARRANGEMENTS
