@@ -1,14 +1,12 @@
 // Container for text anchor.
-
-import React, { PureComponent } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateAnnotationStore } from '../../../../redux/annotation/action'
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
 import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 import Anchor from '../../../Anchor'
-import { populateRefs } from '../../../../helpers/ref'
 import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
 import {
     mapIsAccessedIndexedAnchorShown,
@@ -16,223 +14,144 @@ import {
     mapAccessedWikiWormholeIndex
 } from '../../../../redux/access/selectors'
 import { mapIsActivated } from '../../../../redux/activated/selectors'
-import {
-    mapLyricSongIndex,
-    mapLyricAnnotationIndex
-} from '../../../../redux/lyric/selectors'
+import { mapLyricAnnotationIndex } from '../../../../redux/lyric/selectors'
 import { mapIsSliderMoving } from '../../../../redux/slider/selectors'
 import './style'
 
-const mapStateToProps = state => {
+const TextLyricAnchor = ({
+    annotationIndex,
+    wikiIndex,
+    wikiAnnotationIndex,
+    text,
+    dotBit,
+    isVerseLyric,
+    isItalic,
+    isEmphasis,
+    beginsVerse,
+    endsVerse,
+    setLyricAnnotationElement
+
+}) => {
     const
-        isAccessedIndexedAnchorShown = mapIsAccessedIndexedAnchorShown(state),
-        accessedAnnotationIndex = mapAccessedAnnotationIndex(state),
-        accessedWikiWormholeIndex = mapAccessedWikiWormholeIndex(state),
-        isActivated = mapIsActivated(state),
-        lyricSongIndex = mapLyricSongIndex(state),
-        lyricAnnotationIndex = mapLyricAnnotationIndex(state),
-        isSliderMoving = mapIsSliderMoving(state)
+        dispatch = useDispatch(),
+        dispatchWiki = useRef(),
+        stopPropagation = useRef(),
+        isAccessedIndexedAnchorShown = useSelector(mapIsAccessedIndexedAnchorShown),
+        accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
+        accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex),
+        isActivated = useSelector(mapIsActivated),
+        lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
+        isSliderMoving = useSelector(mapIsSliderMoving),
 
-    return {
-        lyricAnnotationIndex,
+        // TODO: Make this a selector.
+        isSelected = annotationIndex === lyricAnnotationIndex,
+        isWikiTextAnchor = Boolean(wikiIndex)
 
-        // This is just to know when to update.
-        lyricSongIndex,
+    let isAccessed = false
 
-        isAccessedIndexedAnchorShown,
-        accessedAnnotationIndex,
-        accessedWikiWormholeIndex,
-        isActivated,
-        isSliderMoving
-    }
-}
-
-class TextLyricAnchor extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        lyricAnnotationIndex: PropTypes.number.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
-        isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
-        accessedAnnotationIndex: PropTypes.number.isRequired,
-        accessedWikiWormholeIndex: PropTypes.number.isRequired,
-        isActivated: PropTypes.bool.isRequired,
-        isSliderMoving: PropTypes.bool.isRequired,
-        updateAnnotationStore: PropTypes.func.isRequired,
-        dispatch: PropTypes.func,
-
-        // From parent.
-        wikiIndex: PropTypes.number,
-        wikiAnnotationIndex: PropTypes.number,
-        annotationIndex: PropTypes.number,
-
-        text: PropTypes.oneOfType([
-            PropTypes.string,
-
-            // "Bobtail's words" in M is an array.
-            PropTypes.array,
-
-            // "Ubermensch" in Golden Cord is an object.
-            PropTypes.object
-
-        ]).isRequired,
-
-        isVerseLyric: PropTypes.bool,
-        isItalic: PropTypes.bool,
-        isEmphasis: PropTypes.bool,
-        beginsVerse: PropTypes.bool,
-        endsVerse: PropTypes.bool,
-
-        dotBit: PropTypes.number,
-        setLyricAnnotationElement: PropTypes.func,
-        handleAnchorClick: PropTypes.func
-    }
-
-    _handleAnchorClick = e => {
-        const {
-                lyricAnnotationIndex,
-                annotationIndex,
-                wikiIndex,
-                wikiAnnotationIndex,
-                isSliderMoving,
-                isActivated
-            } = this.props,
-
-            isSelected = annotationIndex === lyricAnnotationIndex
-
+    const handleAnchorClick = e => {
         if (isSelected || isSliderMoving || isActivated) {
             return false
         }
 
         // Stop propagation if anchor click is valid.
-        this.stopPropagation(e)
+        stopPropagation.current(e)
 
         if (wikiIndex) {
-            return this.dispatchWiki(
+            return dispatchWiki.current(
                 wikiIndex,
                 wikiAnnotationIndex
             )
         }
 
         if (annotationIndex) {
-            this.props.updateAnnotationStore({
+            dispatch(updateAnnotationStore({
                 queuedAnnotationIndex: annotationIndex,
                 queuedAnnotationFromLyricVerse: true
-            })
+            }))
             return true
         }
     }
 
-    setLyricAnnotationElement = node => {
+    const setLyricAnnotationForAnchor = node => {
         // This method is only passed down by stanza, not carousel annotation.
-        if (this.props.setLyricAnnotationElement) {
-            this.props.setLyricAnnotationElement({
+        if (setLyricAnnotationElement) {
+            setLyricAnnotationElement({
                 node,
-                index: this.props.annotationIndex
+                index: annotationIndex
             })
         }
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
+    if (isAccessedIndexedAnchorShown) {
+        if (lyricAnnotationIndex) {
+            isAccessed =
+                // Check that we're in the annotation that's selected.
+                lyricAnnotationIndex === wikiAnnotationIndex &&
+                accessedWikiWormholeIndex === wikiIndex
 
-    getDispatchWiki = dispatch => {
-        this.dispatchWiki = dispatch
-    }
-
-    getStopPropagation = dispatch => {
-        this.stopPropagation = dispatch
-    }
-
-    render() {
-
-        const {
-                /* eslint-disable no-unused-vars */
-                lyricSongIndex,
-                handleAnchorClick,
-                setLyricAnnotationElement,
-                updateAnnotationStore,
-                dispatch,
-                /* eslint-enable no-unused-vars */
-
-                annotationIndex,
-                lyricAnnotationIndex,
-                isAccessedIndexedAnchorShown,
-                accessedAnnotationIndex,
-                accessedWikiWormholeIndex,
-
-                wikiIndex,
-                wikiAnnotationIndex,
-                text,
-                dotBit,
-
-                isVerseLyric,
-                isItalic,
-                isEmphasis,
-                beginsVerse,
-                endsVerse
-            } = this.props,
-
-            isSelected = annotationIndex === lyricAnnotationIndex,
-
-            isWikiTextAnchor = Boolean(wikiIndex)
-
-        let isAccessed = false
-
-        if (isAccessedIndexedAnchorShown) {
-            if (lyricAnnotationIndex) {
-                isAccessed =
-                    // Check that we're in the annotation that's selected.
-                    lyricAnnotationIndex === wikiAnnotationIndex &&
-
-                    accessedWikiWormholeIndex === wikiIndex
-
-            } else {
-                isAccessed =
-                    accessedAnnotationIndex === annotationIndex
-            }
+        } else {
+            isAccessed =
+                accessedAnnotationIndex === annotationIndex
         }
-
-        return (
-            <>
-                {/* This space will not show if it starts the verse line. */}
-                {' '}
-                <Anchor
-                    {...{
-                        setLyricAnnotationElement:
-                            this.setLyricAnnotationElement,
-                        className: cx(
-                            annotationIndex &&
-                                `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
-
-                            wikiIndex && `wiki__${wikiIndex}`
-                        ),
-                        isAccessed,
-                        isSelected,
-                        isWikiTextAnchor,
-                        text,
-                        textConfig: {
-                            isVerseLyric,
-                            isItalic,
-                            isEmphasis,
-                            beginsVerse,
-                            endsVerse
-                        },
-                        sequenceDotBit: dotBit,
-                        handleAnchorClick: this._handleAnchorClick
-                    }}
-                />
-                {isWikiTextAnchor && (
-                    <WikiDispatcher {...{ ref: this.getDispatchWiki }} />
-                )}
-                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
-            </>
-        )
     }
+
+    return (
+        <>
+            {/* This space will not show if it starts the verse line. */}
+            {' '}
+            <Anchor
+                {...{
+                    setLyricAnnotationElement:
+                        setLyricAnnotationForAnchor,
+                    className: cx(
+                        annotationIndex &&
+                            `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
+
+                        wikiIndex && `wiki__${wikiIndex}`
+                    ),
+                    isAccessed,
+                    isSelected,
+                    isWikiTextAnchor,
+                    text,
+                    textConfig: {
+                        isVerseLyric,
+                        isItalic,
+                        isEmphasis,
+                        beginsVerse,
+                        endsVerse
+                    },
+                    sequenceDotBit: dotBit,
+                    handleAnchorClick
+                }}
+            />
+            {isWikiTextAnchor && (
+                <WikiDispatcher {...{ ref: dispatchWiki }} />
+            )}
+            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
+        </>
+    )
 }
 
-export default connect(
-    mapStateToProps,
-    { updateAnnotationStore }
-)(TextLyricAnchor)
+TextLyricAnchor.propTypes = {
+    wikiIndex: PropTypes.number,
+    wikiAnnotationIndex: PropTypes.number,
+    annotationIndex: PropTypes.number,
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        // "Bobtail's words" in M is an array.
+        PropTypes.array,
+        // "Ubermensch" in Golden Cord is an object.
+        PropTypes.object
+    ]).isRequired,
+    isVerseLyric: PropTypes.bool,
+    isItalic: PropTypes.bool,
+    isEmphasis: PropTypes.bool,
+    beginsVerse: PropTypes.bool,
+    endsVerse: PropTypes.bool,
+    dotBit: PropTypes.number,
+    setLyricAnnotationElement: PropTypes.func,
+    handleAnchorClick: PropTypes.func
+}
+
+export default memo(TextLyricAnchor)
