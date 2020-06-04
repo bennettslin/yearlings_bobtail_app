@@ -25,9 +25,9 @@ const mapWormholeLinkForDispatch = wormholeLink => {
         selectedSongIndex,
         selectedAnnotationIndex,
         selectedVerseIndex,
-        earColumnIndex,
         destinationWormholeIndex,
-        wormholePrefix
+        ...Number.isFinite(earColumnIndex) && { earColumnIndex },
+        ...wormholePrefix && { wormholePrefix }
     }
 }
 
@@ -72,5 +72,6 @@ export const getWormholeLinkForWikiWormhole = (
     const wormholeLink = wormholeLinks.find(wormholeLink => (
         wormholeLink.sourceWormholeIndex === wikiWormholeIndex
     ))
+
     return mapWormholeLinkForDispatch(wormholeLink)
 }
