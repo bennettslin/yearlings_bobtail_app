@@ -1,121 +1,101 @@
 // Section to show the stage proscenium.
-
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import AspectRatio from '../AspectRatio'
 import InlineSvg from '../../../modules/InlineSvg'
 import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
 import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
+import { mapCanLyricCarouselEnter } from '../../../redux/entrance/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const {
-        entranceStore: { canLyricCarouselEnter }
-    } = state
+const Curtains = () => {
+    const
+        dispatch = useDispatch(),
+        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
 
-    return {
-        canLyricCarouselEnter
-    }
-}
-class Curtains extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        canLyricCarouselEnter: PropTypes.bool.isRequired,
-        updateEntranceStore: PropTypes.func.isRequired
-    }
-
-    _handleTransitionExited = () => {
-        // Ensures curtains are completely closed before proceeding.
-        setTimeout(this._exitTransition, 100)
-    }
-
-    _exitTransition = () => {
+    const _exitTransition = () => {
         logTransition('Curtain did exit.')
-        this.props.updateEntranceStore({ didCurtainExit: true })
+        dispatch(updateEntranceStore({ didCurtainExit: true }))
     }
 
-    _handleTransitionEntered = () => {
+    const onExited = () => {
+        // Ensures curtains are completely closed before proceeding.
+        setTimeout(_exitTransition, 100)
+    }
+
+    const onEntered = () => {
         logTransition('Curtain did enter.')
-        this.props.updateEntranceStore({ didCurtainEnter: true })
+        dispatch(updateEntranceStore({ didCurtainEnter: true }))
     }
 
-    render() {
-        const { canLyricCarouselEnter } = this.props
-
-        return (
-            <AspectRatio>
-                <CSSTransition
+    return (
+        <AspectRatio>
+            <CSSTransition
+                {...{
+                    in: canLyricCarouselEnter,
+                    timeout: 250,
+                    classNames: { enterDone: 'Curtains__parted' },
+                    onExited,
+                    onEntered
+                }}
+            >
+                <div
                     {...{
-                        in: canLyricCarouselEnter,
-                        timeout: 250,
-                        classNames: { enterDone: 'Curtains__parted' },
-                        onExited: this._handleTransitionExited,
-                        onEntered: this._handleTransitionEntered
+                        className: cx(
+                            'Curtains',
+                            'abF',
+                            'ovH'
+                        )
                     }}
                 >
-                    <div
+                    <InlineSvg
                         {...{
                             className: cx(
-                                'Curtains',
-                                'abF',
-                                'ovH'
+                                'Curtains__left',
+                                'Curtains__side'
+                            ),
+                            svgClassName: cx(
+                                'curtainSide',
+                                'fillTransition__dimTheatre'
                             )
                         }}
                     >
-                        <InlineSvg
-                            {...{
-                                className: cx(
-                                    'Curtains__left',
-                                    'Curtains__side'
-                                ),
-                                svgClassName: cx(
-                                    'curtainSide',
-                                    'fillTransition__dimTheatre'
-                                )
-                            }}
-                        >
-                            {curtainSide}
-                        </InlineSvg>
-                        <InlineSvg
-                            {...{
-                                className: cx(
-                                    'Curtains__right',
-                                    'Curtains__side'
-                                ),
-                                svgClassName: cx(
-                                    'curtainSide',
-                                    'fillTransition__dimTheatre'
-                                )
-                            }}
-                        >
-                            {curtainSide}
-                        </InlineSvg>
-                        <InlineSvg
-                            {...{
-                                className: cx(
-                                    'Curtains__top'
-                                ),
-                                svgClassName: cx(
-                                    'curtainTop',
-                                    'fillTransition__dimTheatre'
-                                )
-                            }}
-                        >
-                            {curtainTop}
-                        </InlineSvg>
-                    </div>
-                </CSSTransition>
-            </AspectRatio>
-        )
-    }
+                        {curtainSide}
+                    </InlineSvg>
+                    <InlineSvg
+                        {...{
+                            className: cx(
+                                'Curtains__right',
+                                'Curtains__side'
+                            ),
+                            svgClassName: cx(
+                                'curtainSide',
+                                'fillTransition__dimTheatre'
+                            )
+                        }}
+                    >
+                        {curtainSide}
+                    </InlineSvg>
+                    <InlineSvg
+                        {...{
+                            className: cx(
+                                'Curtains__top'
+                            ),
+                            svgClassName: cx(
+                                'curtainTop',
+                                'fillTransition__dimTheatre'
+                            )
+                        }}
+                    >
+                        {curtainTop}
+                    </InlineSvg>
+                </div>
+            </CSSTransition>
+        </AspectRatio>
+    )
 }
 
-export default connect(
-    mapStateToProps,
-    { updateEntranceStore }
-)(Curtains)
+export default Curtains
