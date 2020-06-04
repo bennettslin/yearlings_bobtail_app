@@ -4,8 +4,9 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
-import album from './admin/data/album'
 import format from 'date-fns/format'
+import album from './admin/data/album'
+import scene from './admin/data/scene'
 
 const SHOW_BUNDLE_ANALYZER = false
 
@@ -18,6 +19,7 @@ export default ({
 } = {}) => {
     // Dev sanity check.
     album._build = 'compiled'
+    scene._build = 'compiled'
 
     return {
         entry: path.resolve(__dirname, 'app'),
@@ -35,7 +37,8 @@ export default ({
             new webpack.DefinePlugin({
                 // Grab album from global env in staging and production.
                 ...!isLocalDevelopment && {
-                    ALBUM: JSON.stringify(album)
+                    ALBUM: JSON.stringify(album),
+                    SCENE: JSON.stringify(scene)
                 },
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`

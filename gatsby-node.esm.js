@@ -2,6 +2,7 @@ import webpack from 'webpack'
 import path from 'path'
 import format from 'date-fns/format'
 import album from './admin/data/album'
+import scene from './admin/data/scene'
 
 import {
     getIsLocalDevelopment,
@@ -11,6 +12,7 @@ import {
 export const onCreateWebpackConfig = ({ actions }) => {
     // Dev sanity check.
     album._build = 'compiled'
+    scene._build = 'compiled'
 
     actions.setWebpackConfig({
         plugins: [
@@ -18,7 +20,8 @@ export const onCreateWebpackConfig = ({ actions }) => {
             new webpack.DefinePlugin({
                 // Grab album from global env in staging and production.
                 ...!getIsLocalDevelopment() && {
-                    ALBUM: JSON.stringify(album)
+                    ALBUM: JSON.stringify(album),
+                    SCENE: JSON.stringify(scene)
                 },
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`

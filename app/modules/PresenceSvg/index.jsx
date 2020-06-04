@@ -8,8 +8,10 @@ import {
     convertPresenceKeyToClassName,
     getSharedClassNames
 } from '../../helpers/format'
-import { getSharedStyleForActor } from '../../api/scene/actors'
-import { getSharedStyleForThing } from '../../api/scene/things'
+import {
+    getSharedStyleForActor,
+    getSharedStyleForThing
+} from '../../api/scene/sharedStyles'
 import { getWirePlacedFront } from '../../api/scene/wires'
 import { getArrangementForPresence } from '../../components/Presence/helper'
 import { getXYForPresence } from './helper/position'

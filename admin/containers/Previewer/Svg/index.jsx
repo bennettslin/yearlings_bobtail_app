@@ -13,8 +13,10 @@ import {
 } from '../../../../app/helpers/format'
 import { getDocument } from '../../../../app/utils/browser'
 import { getArrangementForPresence } from '../../../../app/components/Presence/helper'
-import { getSharedStyleForActor } from '../../../../app/api/scene/actors'
-import { getSharedStyleForThing } from '../../../../app/api/scene/things'
+import {
+    getSharedStyleForActor,
+    getSharedStyleForThing
+} from '../../../../app/api/scene/sharedStyles'
 
 import {
     getPreviewerSvgMapForActor,

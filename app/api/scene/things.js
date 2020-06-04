@@ -1,6 +1,8 @@
-import { convertPresenceKeyToClassName } from '../../helpers/format'
-import THING_ARRANGEMENTS from '../../scene/scenes/things'
-import SHARED_THING_STYLES from '../../scene/sharedStyles/things'
+import { scene } from '../imports'
+
+const {
+    things: THING_ARRANGEMENTS
+} = scene
 
 export const getThingArrangements = () => (
     THING_ARRANGEMENTS
@@ -8,13 +10,4 @@ export const getThingArrangements = () => (
 
 export const getKeysForThing = (thingKey) => (
     Object.keys(THING_ARRANGEMENTS[thingKey])
-)
-
-export const getSharedStyleForThing = ({
-    presenceType,
-    presenceKey
-}) => (
-    SHARED_THING_STYLES[presenceType][
-        convertPresenceKeyToClassName(presenceKey)
-    ]
 )
