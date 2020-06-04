@@ -22,7 +22,7 @@ import {
 } from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { d, g, k } from '../../cubes/zIndices'
+import { d, g, k } from '../../../constants/scene/cubes/zIndices'
 
 /**
  * Blinds and gate should match in lizGate.

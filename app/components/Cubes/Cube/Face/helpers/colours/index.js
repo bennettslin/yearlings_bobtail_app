@@ -1,7 +1,7 @@
 import { getBaseColour } from './base'
 import { getReducedLuminosity } from './luminosity'
 
-import { k } from '../../../../../../scene/cubes/zIndices'
+import { k } from '../../../../../../constants/scene/cubes/zIndices'
 
 export const getSvgFillForFace = ({
     hslaKey,

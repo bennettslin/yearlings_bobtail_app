@@ -5,7 +5,7 @@ import {
     UNDERGROUND_WALL_COLOUR as W
 } from '../../../constants/scene/cubes/colours'
 
-import { d } from '../../cubes/zIndices'
+import { d } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [STEAM_TUNNEL_KEY]: {

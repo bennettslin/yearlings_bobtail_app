@@ -10,7 +10,7 @@ import {
 } from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { d, f, k } from '../../cubes/zIndices'
+import { d, f, k } from '../../../constants/scene/cubes/zIndices'
 
 /**
  * Blinds and door should match in bennettBed.

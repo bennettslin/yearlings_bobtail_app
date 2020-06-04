@@ -6,7 +6,7 @@ import {
     SEAT_COLOUR as S
 } from '../../../constants/scene/cubes/colours'
 
-import { d, g } from '../../cubes/zIndices'
+import { d, g } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [VAN_NUYS_HALLWAY_KEY]: {

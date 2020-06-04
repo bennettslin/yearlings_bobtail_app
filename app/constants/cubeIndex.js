@@ -1,5 +1,5 @@
 import { getArrayOfLength } from '../helpers/general'
-import { k } from '../scene/cubes/zIndices'
+import { k } from './scene/cubes/zIndices'
 
 export const CUBE_X_AXIS_LENGTH = 12
 export const CUBE_Y_AXIS_LENGTH = 6

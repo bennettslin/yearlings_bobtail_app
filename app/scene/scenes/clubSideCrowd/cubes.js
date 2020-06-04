@@ -6,7 +6,7 @@ import {
     PLATFORM_COLOUR as P
 } from '../../../constants/scene/cubes/colours'
 
-import { d, g } from '../../cubes/zIndices'
+import { d, g } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [CLUB_SIDE_CROWD_KEY]: {

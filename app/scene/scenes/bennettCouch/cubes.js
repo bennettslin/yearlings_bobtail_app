@@ -12,7 +12,7 @@ import {
     BENNETT_COUCH_COLOUR as U
 } from '../../../constants/scene/cubes/colours'
 
-import { g } from '../../cubes/zIndices'
+import { g } from '../../../constants/scene/cubes/zIndices'
 
 export const DEFAULT_CEILING = {
     hslaColours: [

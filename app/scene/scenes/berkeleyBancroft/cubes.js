@@ -11,7 +11,7 @@ import {
 } from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { f, g, k } from '../../cubes/zIndices'
+import { f, g, k } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [BERKELEY_BANCROFT_KEY]: {

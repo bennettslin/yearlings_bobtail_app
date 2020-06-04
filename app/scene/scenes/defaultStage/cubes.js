@@ -5,7 +5,7 @@ import {
     GROUND_CLEAR_COLOUR as G
 } from '../../../constants/scene/cubes/colours'
 
-import { k } from '../../cubes/zIndices'
+import { k } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [DEFAULT_STAGE_KEY]: {

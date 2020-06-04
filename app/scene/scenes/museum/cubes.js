@@ -6,7 +6,7 @@ import {
     FURNITURE_COLOUR as R
 } from '../../../constants/scene/cubes/colours'
 
-import { d, g } from '../../cubes/zIndices'
+import { d, g } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [MUSEUM_KEY]: {

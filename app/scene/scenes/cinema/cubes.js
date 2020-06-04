@@ -10,7 +10,7 @@ import {
 } from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { e, f, k } from '../../cubes/zIndices'
+import { e, f, k } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [CINEMA_KEY]: {

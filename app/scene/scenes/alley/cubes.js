@@ -8,7 +8,7 @@ import {
     PLATFORM_COLOUR as P
 } from '../../../constants/scene/cubes/colours'
 
-import { e, k } from '../../cubes/zIndices'
+import { e, k } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [ALLEY_KEY]: {

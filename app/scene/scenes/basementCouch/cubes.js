@@ -8,7 +8,7 @@ import {
     BENNETT_COUCH_COLOUR as U
 } from '../../../constants/scene/cubes/colours'
 
-import { a, e } from '../../cubes/zIndices'
+import { a, e } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [BASEMENT_COUCH_KEY]: {

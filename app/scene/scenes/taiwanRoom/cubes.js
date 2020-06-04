@@ -2,7 +2,7 @@ import { TAIWAN_ROOM_KEY } from '../../../constants/scene/scenes'
 
 import { NIGHT_COLOUR as Y } from '../../../constants/scene/cubes/colours'
 
-import { e, g } from '../../cubes/zIndices'
+import { e, g } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [TAIWAN_ROOM_KEY]: {

@@ -9,7 +9,7 @@ import {
 } from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { a, f, g } from '../../cubes/zIndices'
+import { a, f, g } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [DISHROOM_KEY]: {

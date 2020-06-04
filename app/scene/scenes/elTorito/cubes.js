@@ -8,7 +8,7 @@ import {
     GENERIC_EXTERIOR_COLOUR as X
 } from '../../../constants/scene/cubes/colours'
 
-import { e, f } from '../../cubes/zIndices'
+import { e, f } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [EL_TORITO_KEY]: {

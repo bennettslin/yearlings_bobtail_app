@@ -17,7 +17,7 @@ import {
 } from '../../../constants/scene/cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { e, g, k } from '../../cubes/zIndices'
+import { e, g, k } from '../../../constants/scene/cubes/zIndices'
 
 const DEFAULT_CEILING = {
     hslaColours: [

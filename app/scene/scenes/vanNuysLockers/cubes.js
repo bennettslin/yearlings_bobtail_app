@@ -9,7 +9,7 @@ import {
     CONCRETE_PLATFORM_COLOUR as P
 } from '../../../constants/scene/cubes/colours'
 
-import { f, k } from '../../cubes/zIndices'
+import { f, k } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [VAN_NUYS_LOCKERS_KEY]: {

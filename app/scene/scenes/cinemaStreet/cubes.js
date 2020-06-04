@@ -10,7 +10,7 @@ import {
     CINEMA_EXTERIOR_COLOUR as X
 } from '../../../constants/scene/cubes/colours'
 
-import { f, k } from '../../cubes/zIndices'
+import { f, k } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [CINEMA_STREET_KEY]: {

@@ -10,7 +10,7 @@ import {
     CONCRETE_PLATFORM_COLOUR as P
 } from '../../../constants/scene/cubes/colours'
 
-import { g, k } from '../../cubes/zIndices'
+import { g, k } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [BERKELEY_CAMPANILE_KEY]: {

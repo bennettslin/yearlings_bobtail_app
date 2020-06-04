@@ -5,7 +5,7 @@ import {
     SCHOOL_WALL_COLOUR as W
 } from '../../../constants/scene/cubes/colours'
 
-import { d, g } from '../../cubes/zIndices'
+import { d, g } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [BACKSTAGE_KEY]: {

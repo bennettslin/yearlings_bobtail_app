@@ -10,7 +10,7 @@ import {
     SOFT_WALL_COLOUR as W
 } from '../../../constants/scene/cubes/colours'
 
-import { f, k } from '../../cubes/zIndices'
+import { f, k } from '../../../constants/scene/cubes/zIndices'
 
 export default {
     [BATHROOM_KEY]: {
