@@ -1,9 +1,8 @@
 // Container to show multiple access icons in sequence.
-
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import AccessField from './Field'
 import AccessIcon from './Icon'
@@ -15,42 +14,18 @@ import {
 } from '../../../redux/viewport/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const
-        isAccessOn = mapIsAccessOn(state),
-        isTabletWidth = mapIsTabletWidth(state),
-        isDesktopWidth = mapIsDesktopWidth(state)
-
-    return {
-        isAccessOn,
-        isDesktopWidth,
-        isTabletWidth
-    }
-}
-
-const propTypes = {
-    // Through Redux.
-    isAccessOn: PropTypes.bool.isRequired,
-    isDesktopWidth: PropTypes.bool.isRequired,
-    isTabletWidth: PropTypes.bool.isRequired,
-
-    // From parent.
-    inButtonOrDotAnchor: PropTypes.bool,
-    showIfAccessOn: PropTypes.bool,
-    animateStandaloneOnKeyDown: PropTypes.bool,
-    accessKey: PropTypes.string.isRequired
-}
-
 const AccessLetter = ({
-    isAccessOn,
-    isDesktopWidth,
-    isTabletWidth,
     inButtonOrDotAnchor,
     showIfAccessOn,
     animateStandaloneOnKeyDown,
     accessKey
 
 }) => {
+    const
+        isAccessOn = useSelector(mapIsAccessOn),
+        isTabletWidth = useSelector(mapIsTabletWidth),
+        isDesktopWidth = useSelector(mapIsDesktopWidth)
+
     /**
      * Only prevent access letters from being shown on narrow screens for UI
      * purposes. Keyboard access is technically still available on any device,
@@ -102,6 +77,11 @@ const AccessLetter = ({
     )
 }
 
-AccessLetter.propTypes = propTypes
+AccessLetter.propTypes = {
+    inButtonOrDotAnchor: PropTypes.bool,
+    showIfAccessOn: PropTypes.bool,
+    animateStandaloneOnKeyDown: PropTypes.bool,
+    accessKey: PropTypes.string.isRequired
+}
 
-export default connect(mapStateToProps)(memo(AccessLetter))
+export default memo(AccessLetter)
