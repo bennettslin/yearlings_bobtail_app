@@ -1,6 +1,6 @@
 import { convertPresenceKeyToClassName } from '../../helpers/format'
-import ACTOR_WIRES from '../../scene/sharedStyles/wires/actors'
-import THING_WIRES from '../../scene/sharedStyles/wires/things'
+import ACTOR_WIRES from '../../scene/wires/actors'
+import THING_WIRES from '../../scene/wires/things'
 
 const getWireForActor = ({
     actorKey,
