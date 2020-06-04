@@ -1,4 +1,4 @@
-import CUBES from '../../scene/aggregators/cubes'
+import CUBES from '../../scene/scenes/cubes'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 
 export const getCubesForKey = (cubesKey) => {

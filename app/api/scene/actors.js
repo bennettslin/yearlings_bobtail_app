@@ -1,5 +1,5 @@
 import { isString } from '../../helpers/general'
-import ACTOR_ARRANGEMENTS from '../../scene/aggregators/actors'
+import ACTOR_ARRANGEMENTS from '../../scene/scenes/actors'
 import SHARED_ACTOR_STYLES from '../../scene/sharedStyles/actors'
 import {
     ALL_CLOTHING__SHARED,
