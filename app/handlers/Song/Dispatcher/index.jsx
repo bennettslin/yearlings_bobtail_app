@@ -45,7 +45,7 @@ class SongDispatcher extends PureComponent {
 
     dispatchSong = ({
         isPlayFromLogue = false,
-        selectedSongIndex = 0,
+        selectedSongIndex: nextSongIndex = 0,
         selectedVerseIndex = 0,
         selectedAnnotationIndex = 0,
         earColumnIndex,
@@ -57,11 +57,11 @@ class SongDispatcher extends PureComponent {
 
         // Called from audio section's previous or next buttons.
         if (direction) {
-            selectedSongIndex = this.props.selectedSongIndex + direction
+            nextSongIndex = this.props.selectedSongIndex + direction
 
             if (
-                selectedSongIndex < 0 ||
-                selectedSongIndex >= getSongsAndLoguesCount()
+                nextSongIndex < 0 ||
+                nextSongIndex >= getSongsAndLoguesCount()
             ) {
                 return false
             }
@@ -69,22 +69,22 @@ class SongDispatcher extends PureComponent {
 
         this.props.updateAudioStore({
             queuedPlayFromLogue: isPlayFromLogue,
-            queuedPlaySongIndex: selectedSongIndex,
+            queuedPlaySongIndex: nextSongIndex,
             queuedPlayVerseIndex: selectedVerseIndex
         })
 
         const
             selectedSceneIndex = getSceneIndexForVerse(
-                selectedSongIndex,
+                nextSongIndex,
                 selectedVerseIndex
             ),
             selectedTime = getStartTimeForVerse(
-                selectedSongIndex,
+                nextSongIndex,
                 selectedVerseIndex
             )
 
         this.props.updateSelectedStore({
-            selectedSongIndex,
+            selectedSongIndex: nextSongIndex,
             selectedVerseIndex,
             selectedAnnotationIndex,
             selectedSceneIndex,
@@ -94,14 +94,14 @@ class SongDispatcher extends PureComponent {
 
         logSelect({
             action: 'song',
-            song: selectedSongIndex,
+            song: nextSongIndex,
             verse: selectedVerseIndex,
             annotation: selectedAnnotationIndex,
             scene: selectedSceneIndex
         })
 
         this.props.updateAccessStore({
-            accessedNavIndex: selectedSongIndex,
+            accessedNavIndex: nextSongIndex,
             accessedAnnotationIndex:
                 isWormholeSelected ?
                     selectedAnnotationIndex : 1,
