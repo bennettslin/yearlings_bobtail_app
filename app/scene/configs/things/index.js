@@ -9,8 +9,6 @@ import furnitures from './furnitures'
 import panels from './panels'
 import puppets from './puppets'
 
-import { convertPresenceKeyToClassName } from '../../../helpers/format'
-
 import {
     BACKDROP,
     BUBBLE,
@@ -24,7 +22,7 @@ import {
     PUPPET
 } from '../../../constants/scene/things'
 
-const SHARED_THING_STYLES = {
+export default {
     [BACKDROP]: backdrops,
     [BUBBLE]: bubbles,
     [CARDBOARD]: cardboards,
@@ -36,12 +34,3 @@ const SHARED_THING_STYLES = {
     [PANEL]: panels,
     [PUPPET]: puppets
 }
-
-export const getSharedStyleForThing = ({
-    presenceType,
-    presenceKey
-}) => (
-    SHARED_THING_STYLES[presenceType][
-        convertPresenceKeyToClassName(presenceKey)
-    ]
-)

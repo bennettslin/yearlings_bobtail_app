@@ -14,7 +14,7 @@ import {
 import { getDocument } from '../../../../app/utils/browser'
 import { getArrangementForPresence } from '../../../../app/components/Presence/helper'
 import { getSharedStyleForActor } from '../../../../app/api/scene/actors'
-import { getSharedStyleForThing } from '../../../../app/scene/configs/things'
+import { getSharedStyleForThing } from '../../../../app/api/scene/things'
 
 import {
     getPreviewerSvgMapForActor,

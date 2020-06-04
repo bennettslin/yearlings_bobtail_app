@@ -10,7 +10,7 @@ import {
 } from '../../helpers/format'
 import { getWirePlacedFront } from '../../scene/configs/wires'
 import { getSharedStyleForActor } from '../../api/scene/actors'
-import { getSharedStyleForThing } from '../../scene/configs/things'
+import { getSharedStyleForThing } from '../../api/scene/things'
 import { getArrangementForPresence } from '../../components/Presence/helper'
 import { getXYForPresence } from './helper/position'
 import { getCompoundActorStyleIfNeeded } from './helper/sharedStyle'
