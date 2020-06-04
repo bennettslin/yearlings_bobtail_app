@@ -1,6 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../ProgressFooter'
@@ -16,23 +15,13 @@ import { mapSelectedSongIndex } from '../../../../app/redux/selected/selectors'
 
 const songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
 
-const mapStateToProps = state => {
-    const selectedSongIndex = mapSelectedSongIndex(state)
-
-    return {
-        selectedSongIndex
-    }
-}
-
 /*************
  * CONTAINER *
  *************/
 
-const AdminNav = ({
-    selectedSongIndex
-}) => {
-
+const AdminNav = () => {
     const
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
         maxTotalNeededHours = getMaxTotalNeededHoursFromSongs(),
 
         navItemProps = {
@@ -84,13 +73,4 @@ const AdminNav = ({
     )
 }
 
-AdminNav.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    allTasks: PropTypes.array,
-    allTasksV2: PropTypes.array
-}
-
-export default connect(mapStateToProps)(AdminNav)
+export default AdminNav
