@@ -8,7 +8,6 @@ import {
     getSongsAndLoguesCount,
     getBookForSongIndex
 } from '../../../../api/album/songs'
-import { populateRefs } from '../../../../helpers/ref'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -109,19 +108,19 @@ class NavNavigation extends PureComponent {
         }
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
     getDispatchNavBook = dispatch => {
         this.dispatchNavBook = dispatch
+    }
+
+    getDispatchSong = dispatch => {
+        this.dispatchSong = dispatch
     }
 
     render() {
         return (
             <>
                 <NavDispatcher {...{ ref: this.getDispatchNavBook }} />
-                <SongDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ ref: this.getDispatchSong }} />
             </>
         )
     }

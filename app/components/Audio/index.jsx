@@ -163,6 +163,10 @@ class Audio extends PureComponent {
         this.dispatchAudioOption = dispatch
     }
 
+    getDispatchSong = dispatch => {
+        this.dispatchSong = dispatch
+    }
+
     render() {
         const {
                 isTwoRowMenu,
@@ -220,7 +224,7 @@ class Audio extends PureComponent {
                     {...{ ref: this.getDispatchAudioOption }}
                 />
                 <PlayDispatcher {...{ getRefs: this._getRefs }} />
-                <SongDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ ref: this.getDispatchSong }} />
             </div>
         )
     }

@@ -5,6 +5,7 @@
 * Move svg folder to components that use them.
 
 # Bugs
+* Pompous to pampas always breaks.
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.
 * Stage dimensions act like two row menu in mobile, even when not?
@@ -25,7 +26,6 @@
 
 # Brainless JS tasks
 * Get rid of PopupAnnotation listener.
-* Work on SongDispatcher next.
 * Make dispatchers functions.
 * Change all to use isOverviewShown and isTipsShown rather than selected options.
 * Rename all to dotBit, use selectedDotBit and activatedDotBit?

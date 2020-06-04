@@ -8,7 +8,6 @@ import {
     mapQueuedTogglePlay
 } from '../../../redux/audio/selectors'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
-import { populateRefs } from '../../../helpers/ref'
 import {
     CONTINUE,
     AUDIO_OPTIONS
@@ -106,13 +105,13 @@ class AudioManager extends PureComponent {
         })
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchSong = dispatch => {
+        this.dispatchSong = dispatch
     }
 
     render() {
         return (
-            <SongDispatcher {...{ getRefs: this._getRefs }} />
+            <SongDispatcher {...{ ref: this.getDispatchSong }} />
         )
     }
 }

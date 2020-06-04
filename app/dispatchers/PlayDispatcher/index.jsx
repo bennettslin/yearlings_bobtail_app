@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAudioStore } from '../../redux/audio/action'
 import SongDispatcher from '../../handlers/Song/Dispatcher'
-import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { mapIsPlaying } from '../../redux/audio/selectors'
 import { mapPlayersBitNumber } from '../../redux/players/selectors'
@@ -86,13 +85,13 @@ class PlayDispatcher extends PureComponent {
         return true
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchSong = dispatch => {
+        this.dispatchSong = dispatch
     }
 
     render() {
         return (
-            <SongDispatcher {...{ getRefs: this._getRefs }} />
+            <SongDispatcher {...{ ref: this.getDispatchSong }} />
         )
     }
 }

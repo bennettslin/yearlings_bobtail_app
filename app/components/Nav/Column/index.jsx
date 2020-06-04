@@ -10,7 +10,6 @@ import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
-import { populateRefs } from '../../../helpers/ref'
 import { mapShownNavBookIndex } from '../../../redux/session/selectors'
 import './style'
 
@@ -50,12 +49,12 @@ class NavColumn extends PureComponent {
         })
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
     getDispatchNavBook = dispatch => {
         this.dispatchNavBook = dispatch
+    }
+
+    getDispatchSong = dispatch => {
+        this.dispatchSong = dispatch
     }
 
     render() {
@@ -102,7 +101,7 @@ class NavColumn extends PureComponent {
                     />
                 }
                 <NavDispatcher {...{ ref: this.getDispatchNavBook }} />
-                <SongDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ ref: this.getDispatchSong }} />
             </div>
         )
     }

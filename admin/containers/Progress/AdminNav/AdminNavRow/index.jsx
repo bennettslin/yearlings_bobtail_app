@@ -1,11 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-
 import SongDispatcher from '../../../../../app/handlers/Song/Dispatcher'
 import ProgressBar from '../../ProgressBar'
-
 import { getIndexedTitleForSong } from '../../../../../app/api/album/songs'
-import { populateRefs } from '../../../../../app/helpers/ref'
 import { getSongTasks } from './helper'
 import { getSumOfTasks } from '../helper'
 
@@ -24,8 +21,8 @@ class AdminNavRow extends PureComponent {
         this.dispatchSong({ selectedSongIndex: this.props.songIndex })
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchSong = dispatch => {
+        this.dispatchSong = dispatch
     }
 
     render() {
@@ -51,7 +48,7 @@ class AdminNavRow extends PureComponent {
                         onClick: this._handleSongClick
                     }}
                 />
-                <SongDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ ref: this.getDispatchSong }} />
             </>
         )
     }

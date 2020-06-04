@@ -11,7 +11,7 @@ export const getSourceWormholeIndices = (songIndex, annotationIndex) => {
     ))
 }
 
-const mapWormholeLinkForDispatch = (wormholeLink) => {
+const mapWormholeLinkForDispatch = wormholeLink => {
     const {
         songIndex: selectedSongIndex,
         annotationIndex: selectedAnnotationIndex,

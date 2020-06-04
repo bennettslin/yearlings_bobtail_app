@@ -16,7 +16,6 @@ import {
 import { getIndexedTitleForSong } from '../../../../../api/album/songs'
 import { getWormholeLinkForWormhole } from '../../../../../api/album/wormholes'
 import { getVerse } from '../../../../../api/album/verses'
-import { populateRefs } from '../../../../../helpers/ref'
 import { mapLyricSongIndex } from '../../../../../redux/lyric/selectors'
 
 const mapStateToProps = state => {
@@ -57,8 +56,8 @@ class AnnotationWormhole extends PureComponent {
         this.dispatchSong(this._getWormholeLink())
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchSong = dispatch => {
+        this.dispatchSong = dispatch
     }
 
     render() {
@@ -126,7 +125,7 @@ class AnnotationWormhole extends PureComponent {
                         <span>{'\u201d'}</span>
                     </div>
                 </div>
-                <SongDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ ref: this.getDispatchSong }} />
             </div>
         )
     }

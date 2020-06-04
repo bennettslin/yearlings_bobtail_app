@@ -8,7 +8,6 @@ import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormhole/Dispatcher'
 import { getWikiWormholeEntity } from '../../../../api/album/annotations'
 import { getWormholeLinkForWikiWormhole } from '../../../../api/album/wormholes'
-import { populateRefs } from '../../../../helpers/ref'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -136,10 +135,6 @@ class AnnotationNavigation extends PureComponent {
         }
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
     getDispatchAccessedWikiWormhole = dispatch => {
         this.dispatchAccessedWikiWormhole = dispatch
     }
@@ -150,11 +145,15 @@ class AnnotationNavigation extends PureComponent {
         }
     }
 
+    getDispatchSong = dispatch => {
+        this.dispatchSong = dispatch
+    }
+
     render() {
         return (
             <>
                 <AnnotationDispatcher {...{ ref: this.getDispatchAnnotation }} />
-                <SongDispatcher {...{ getRefs: this._getRefs }} />
+                <SongDispatcher {...{ ref: this.getDispatchSong }} />
                 <WikiDispatcher {...{ ref: this.getDispatchWiki }} />
                 <WikiWormholeDispatcher {...{ ref: this.getDispatchAccessedWikiWormhole }} />
             </>
