@@ -1,32 +1,23 @@
 import React from 'react'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import AdminNavRow from '../AdminNavRow'
 import { mapSelectedSongIndex } from '../../../../../app/redux/selected/selectors'
-
-const mapStateToProps = state => {
-    const selectedSongIndex = mapSelectedSongIndex(state)
-
-    return {
-        selectedSongIndex
-    }
-}
 
 /*************
  * CONTAINER *
  *************/
 
 const AdminNavItem = ({
-
     index,
     isToggle,
     hasSelectedSong,
-    selectedSongIndex,
-
     ...other
-}) => {
 
-    const isSelected = isToggle ? hasSelectedSong : selectedSongIndex === index,
+}) => {
+    const
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        isSelected = isToggle ? hasSelectedSong : selectedSongIndex === index,
         navItemProps = {
             songIndex: index,
             isSelected
@@ -36,13 +27,9 @@ const AdminNavItem = ({
 }
 
 AdminNavItem.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
     index: PropTypes.number,
     isToggle: PropTypes.bool,
     hasSelectedSong: PropTypes.bool
 }
 
-export default connect(mapStateToProps)(AdminNavItem)
+export default AdminNavItem
