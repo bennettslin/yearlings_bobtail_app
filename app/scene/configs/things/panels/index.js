@@ -49,13 +49,13 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_COUCH_MIRIAM
 } from '../../../../constants/scene/things/panels'
-import { OCEAN_LIFE__SHARED } from '../../../presences/shared/animals'
-import { WEDDING__SHARED } from '../../../presences/shared/buildings'
+import { OCEAN_LIFE__SHARED } from '../../../presences/sharedStyles/animals'
+import { WEDDING__SHARED } from '../../../presences/sharedStyles/buildings'
 import {
     CUP__SHARED,
     DISH__SHARED,
     TRAY__SHARED
-} from '../../../presences/shared/dishroom'
+} from '../../../presences/sharedStyles/dishroom'
 import {
     ATTIC_LINENS__SHARED,
     BENNETT_LINENS__SHARED,
@@ -63,20 +63,20 @@ import {
     MIRIAM_LINENS__SHARED,
     PRETEEN_FURNITURE__SHARED,
     WAITING_ARMCHAIR__SHARED
-} from '../../../presences/shared/furniture'
-import { WINDOW__SHARED } from '../../../presences/shared/home'
+} from '../../../presences/sharedStyles/furniture'
+import { WINDOW__SHARED } from '../../../presences/sharedStyles/home'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
     OCEAN_CAVE__SHARED,
     ROCK__SHARED,
     WALL__SHARED
-} from '../../../presences/shared/outdoor'
+} from '../../../presences/sharedStyles/outdoor'
 import {
     SHADOW__SHARED,
     SNOWGLOBE__SHARED
-} from '../../../presences/shared/props'
-import { BUDDHA_SHRINE__SHARED } from '../../../presences/shared/taiwan'
+} from '../../../presences/sharedStyles/props'
+import { BUDDHA_SHRINE__SHARED } from '../../../presences/sharedStyles/taiwan'
 import {
     ALL_VEHICLES__SHARED,
     GO_KART__SHARED,
@@ -84,7 +84,7 @@ import {
     REATTA__SHARED,
     SATURN__SHARED,
     SCHOOLBUS__SHARED
-} from '../../../presences/shared/vehicles'
+} from '../../../presences/sharedStyles/vehicles'
 
 export default {
     [ATTIC_ARMREST]: ATTIC_LINENS__SHARED,

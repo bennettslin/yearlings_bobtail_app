@@ -5,7 +5,7 @@ import {
     CONCERNED
 } from '../../../../constants/scene/actors/khari'
 import { EPILOGUE } from '../../../../constants/scene/actors/songs'
-import { CHINESE_TAKEOUT__SHARED } from '../../../presences/shared/food'
+import { CHINESE_TAKEOUT__SHARED } from '../../../presences/sharedStyles/food'
 
 export default {
     [DOUBLE_ALBERT]: null,

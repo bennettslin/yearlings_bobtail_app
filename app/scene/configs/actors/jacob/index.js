@@ -8,7 +8,7 @@ import {
     DRUMS__SHARED,
     DRUMSTICK__SHARED,
     DRUM_STAND__SHARED
-} from '../../../presences/shared/instruments'
+} from '../../../presences/sharedStyles/instruments'
 
 export default {
     [FLIRTING]: [

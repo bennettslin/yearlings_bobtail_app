@@ -73,12 +73,12 @@ import {
     HEINEKEN__SHARED,
     PAPER_BAG__SHARED,
     PUDDING__SHARED
-} from '../../../presences/shared/food'
+} from '../../../presences/sharedStyles/food'
 import {
     BULB__SHARED,
     LIZ_PHONE__SHARED,
     SCISSORS__SHARED
-} from '../../../presences/shared/household'
+} from '../../../presences/sharedStyles/household'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BASS_CASE__SHARED,
@@ -89,27 +89,27 @@ import {
     ELECTRIC_GUITAR__SHARED,
     GUITAR_CASE__SHARED,
     MICROPHONE__SHARED
-} from '../../../presences/shared/instruments'
+} from '../../../presences/sharedStyles/instruments'
 import {
     FREEWAY_SIGN__SHARED,
     POLE__SHARED,
     TETHERBALL_POLE__SHARED
-} from '../../../presences/shared/outdoor'
+} from '../../../presences/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
     LETTER__SHARED,
     MAGAZINE__SHARED,
     SKETCHBOOK__SHARED
-} from '../../../presences/shared/paper'
+} from '../../../presences/sharedStyles/paper'
 import {
     DOLLAR__SHARED,
     PROMISE_PHOTO__SHARED
-} from '../../../presences/shared/print'
+} from '../../../presences/sharedStyles/print'
 import {
     BACKPACK__SHARED,
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED
-} from '../../../presences/shared/wardrobe'
+} from '../../../presences/sharedStyles/wardrobe'
 
 export default {
     [BACKPACK_BENNETT]: BACKPACK__SHARED,

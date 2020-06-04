@@ -52,18 +52,18 @@ import {
     FUTURE,
     EL_TORITO
 } from '../../../../constants/scene/actors/songs'
-import { TRAY__SHARED } from '../../../presences/shared/dishroom'
+import { TRAY__SHARED } from '../../../presences/sharedStyles/dishroom'
 import {
     BASEMENT_TAKEOUT__SHARED,
     FROZEN_MEATS__SHARED,
     LANCET_PEN__SHARED,
     ROBITUSSIN__SHARED
-} from '../../../presences/shared/food'
+} from '../../../presences/sharedStyles/food'
 import {
     ATTIC_LINENS__SHARED,
     HOSPITAL_LINENS__SHARED
-} from '../../../presences/shared/furniture'
-import { RUBIKS_CUBE__SHARED } from '../../../presences/shared/household'
+} from '../../../presences/sharedStyles/furniture'
+import { RUBIKS_CUBE__SHARED } from '../../../presences/sharedStyles/household'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BASS_CASE__SHARED,
@@ -71,13 +71,13 @@ import {
     ELECTRIC_GUITAR__SHARED,
     GUITAR_CASE__SHARED,
     MANDOLIN__SHARED
-} from '../../../presences/shared/instruments'
+} from '../../../presences/sharedStyles/instruments'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
-} from '../../../presences/shared/paper'
-import { DOLLAR__SHARED } from '../../../presences/shared/print'
-import { GO_KART__SHARED } from '../../../presences/shared/vehicles'
+} from '../../../presences/sharedStyles/paper'
+import { DOLLAR__SHARED } from '../../../presences/sharedStyles/print'
+import { GO_KART__SHARED } from '../../../presences/sharedStyles/vehicles'
 import {
     BRACELET__SHARED,
     CAFETERIA__SHARED,
@@ -85,7 +85,7 @@ import {
     MESSENGER_BAG__SHARED,
     MIRIAM_CONDOM__SHARED,
     WALKMAN__SHARED
-} from '../../../presences/shared/wardrobe'
+} from '../../../presences/sharedStyles/wardrobe'
 
 export default {
     [BREAKUP_DEJECTED]: null,

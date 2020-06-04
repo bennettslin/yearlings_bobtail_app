@@ -41,12 +41,12 @@ import {
     ODIN_GHOST__SHARED,
     OPAL__SHARED,
     PEAFOWL__SHARED
-} from '../../../presences/shared/animals'
-import { SKETCHBOOK__SHARED } from '../../../presences/shared/paper'
+} from '../../../presences/sharedStyles/animals'
+import { SKETCHBOOK__SHARED } from '../../../presences/sharedStyles/paper'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED
-} from '../../../presences/shared/vehicles'
+} from '../../../presences/sharedStyles/vehicles'
 
 export default {
     [GHOST_ODIN_ALLEY]: ODIN_GHOST__SHARED,

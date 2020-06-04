@@ -7,8 +7,8 @@ import {
     LIZ
 } from '../../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../../presences/actors'
-import { PROMISE_PHOTO__SHARED } from '../../../presences/shared/print'
-import { GHOST__SHARED } from '../../../presences/shared/wardrobe'
+import { PROMISE_PHOTO__SHARED } from '../../../presences/sharedStyles/print'
+import { GHOST__SHARED } from '../../../presences/sharedStyles/wardrobe'
 
 export default {
     [HURT_CONSOLING]: [

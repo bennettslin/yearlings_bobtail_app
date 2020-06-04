@@ -1,5 +1,5 @@
 import { CHARMED_SCHOOLBUS } from '../../../../constants/scene/actors/bradSasha'
-import { BOOK__SHARED } from '../../../presences/shared/paper'
+import { BOOK__SHARED } from '../../../presences/sharedStyles/paper'
 
 export default {
     [CHARMED_SCHOOLBUS]: BOOK__SHARED

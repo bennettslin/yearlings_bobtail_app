@@ -7,9 +7,9 @@ import {
     PROTESTER,
     EPILOGUE
 } from '../../../../constants/scene/actors/songs'
-import { BUDWEISER__SHARED } from '../../../presences/shared/food'
-import { BOOK__SHARED } from '../../../presences/shared/paper'
-import { BACKPACK__SHARED } from '../../../presences/shared/wardrobe'
+import { BUDWEISER__SHARED } from '../../../presences/sharedStyles/food'
+import { BOOK__SHARED } from '../../../presences/sharedStyles/paper'
+import { BACKPACK__SHARED } from '../../../presences/sharedStyles/wardrobe'
 
 export default {
     [WATCHING]: BUDWEISER__SHARED,

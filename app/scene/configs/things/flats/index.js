@@ -55,7 +55,7 @@ import {
     TENNIS_COURT,
     VALLEY_FREEWAY
 } from '../../../../constants/scene/things/flats'
-import { OCEAN_LIFE__SHARED } from '../../../presences/shared/animals'
+import { OCEAN_LIFE__SHARED } from '../../../presences/sharedStyles/animals'
 import {
     CAMPUS__SHARED,
     BUILDINGS__SHARED,
@@ -64,12 +64,12 @@ import {
     OAKLAND_HOUSE_LEFT__SHARED,
     OAKLAND_HOUSE_RIGHT__SHARED,
     TAIWAN_HOUSE__SHARED
-} from '../../../presences/shared/buildings'
+} from '../../../presences/sharedStyles/buildings'
 import {
     DOOR__SHARED,
     WINDOW__SHARED
-} from '../../../presences/shared/home'
-import { BULB__SHARED } from '../../../presences/shared/household'
+} from '../../../presences/sharedStyles/home'
+import { BULB__SHARED } from '../../../presences/sharedStyles/household'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
@@ -83,11 +83,11 @@ import {
     TAIWAN_FOLIAGE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
     TRASH_CAN__SHARED
-} from '../../../presences/shared/outdoor'
+} from '../../../presences/sharedStyles/outdoor'
 import {
     ALL_VEHICLES__SHARED,
     SCHOOLBUS__SHARED
-} from '../../../presences/shared/vehicles'
+} from '../../../presences/sharedStyles/vehicles'
 
 export default {
     [BEDROOM_BUS]: [

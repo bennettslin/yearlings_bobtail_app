@@ -5,15 +5,15 @@ import {
     SINGING
 } from '../../../../constants/scene/actors/youngBennett'
 import { YOUNG_CHILD } from '../../../../constants/scene/actors/songs'
-import { VIOLIN__SHARED } from '../../../presences/shared/instruments'
+import { VIOLIN__SHARED } from '../../../presences/sharedStyles/instruments'
 import {
     BOOK__SHARED,
     MAGAZINE__SHARED
-} from '../../../presences/shared/paper'
+} from '../../../presences/sharedStyles/paper'
 import {
     BACKPACK__SHARED,
     YOUNG_BACKPACK__SHARED
-} from '../../../presences/shared/wardrobe'
+} from '../../../presences/sharedStyles/wardrobe'
 
 export default {
     [PANICKED]: [

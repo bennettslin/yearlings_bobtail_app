@@ -10,11 +10,11 @@ import {
     EPILOGUE
 } from '../../../../constants/scene/actors/songs'
 import { MARA } from '../../../../constants/scene/actors'
-import { REATTA__SHARED } from '../../../presences/shared/vehicles'
+import { REATTA__SHARED } from '../../../presences/sharedStyles/vehicles'
 import {
     SARI__SHARED,
     YOUNG_MOM__SHARED
-} from '../../../presences/shared/wardrobe'
+} from '../../../presences/sharedStyles/wardrobe'
 
 export default {
     [INFANT_CURIOUS]: [

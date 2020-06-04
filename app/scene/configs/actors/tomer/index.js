@@ -18,7 +18,7 @@ import {
     HEINEKEN__SHARED,
     ROBITUSSIN__SHARED,
     WINE__SHARED
-} from '../../../presences/shared/food'
+} from '../../../presences/sharedStyles/food'
 
 export default {
     [ABBEY_ROAD]: null,

@@ -8,7 +8,7 @@ import {
     FUTURE,
     EPILOGUE
 } from '../../../../constants/scene/actors/songs'
-import { GHOST__SHARED } from '../../../presences/shared/wardrobe'
+import { GHOST__SHARED } from '../../../presences/sharedStyles/wardrobe'
 
 export default {
     [ROARING]: null,

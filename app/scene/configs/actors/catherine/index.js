@@ -7,8 +7,8 @@ import {
     GOPI,
     EPILOGUE
 } from '../../../../constants/scene/actors/songs'
-import { BOOK__SHARED } from '../../../presences/shared/paper'
-import { SARI__SHARED } from '../../../presences/shared/wardrobe'
+import { BOOK__SHARED } from '../../../presences/sharedStyles/paper'
+import { SARI__SHARED } from '../../../presences/sharedStyles/wardrobe'
 
 export default {
     [WEEPING]: null,

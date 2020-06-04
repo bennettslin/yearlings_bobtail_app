@@ -28,8 +28,8 @@ import {
     BUILDINGS__SHARED,
     HOUSE__SHARED,
     TAIWAN_HOUSE__SHARED
-} from '../../../presences/shared/buildings'
-import { BOOK__SHARED } from '../../../presences/shared/paper'
+} from '../../../presences/sharedStyles/buildings'
+import { BOOK__SHARED } from '../../../presences/sharedStyles/paper'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
@@ -39,7 +39,7 @@ import {
     TAIWAN_MOUNTAIN__SHARED,
     VOLCANO__SHARED,
     WALL__SHARED
-} from '../../../presences/shared/outdoor'
+} from '../../../presences/sharedStyles/outdoor'
 
 export default {
     [DISTANT_BUILDINGS_BACKDROP]: [

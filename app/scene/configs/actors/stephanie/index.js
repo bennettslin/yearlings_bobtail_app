@@ -11,8 +11,8 @@ import {
 } from '../../../../constants/scene/actors/songs'
 import { BENNETT } from '../../../../constants/scene/actors'
 import { BENNETT_FUTURE__SHARED } from '../../../presences/actors'
-import { HEINEKEN__SHARED } from '../../../presences/shared/food'
-import { VIOLIN__SHARED } from '../../../presences/shared/instruments'
+import { HEINEKEN__SHARED } from '../../../presences/sharedStyles/food'
+import { VIOLIN__SHARED } from '../../../presences/sharedStyles/instruments'
 
 export default {
     [BENNETT_KEYBOARD]: BENNETT,

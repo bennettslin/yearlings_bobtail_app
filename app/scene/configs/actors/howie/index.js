@@ -12,9 +12,9 @@ import {
 } from '../../../../constants/scene/actors/songs'
 import { MARA } from '../../../../constants/scene/actors'
 import { USHER__SHARED } from '../../../presences/actors'
-import { ROBITUSSIN__SHARED } from '../../../presences/shared/food'
-import { SATURN__SHARED } from '../../../presences/shared/vehicles'
-import { STEAM_TUNNEL__SHARED } from '../../../presences/shared/wardrobe'
+import { ROBITUSSIN__SHARED } from '../../../presences/sharedStyles/food'
+import { SATURN__SHARED } from '../../../presences/sharedStyles/vehicles'
+import { STEAM_TUNNEL__SHARED } from '../../../presences/sharedStyles/wardrobe'
 
 export default {
     [ABBEY_ROAD]: null,

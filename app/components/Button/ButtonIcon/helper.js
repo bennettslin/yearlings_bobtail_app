@@ -10,9 +10,9 @@ import {
 
 import { OLD_BENNETT } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../../scene/presences/actors'
-import { HEADPHONE__SHARED } from '../../../scene/presences/shared/instruments'
-import { BOOK__SHARED } from '../../../scene/presences/shared/paper'
-import { SNOWGLOBE__SHARED } from '../../../scene/presences/shared/props'
+import { HEADPHONE__SHARED } from '../../../scene/presences/sharedStyles/instruments'
+import { BOOK__SHARED } from '../../../scene/presences/sharedStyles/paper'
+import { SNOWGLOBE__SHARED } from '../../../scene/presences/sharedStyles/props'
 
 import { getSharedClassNames } from '../../../helpers/format'
 

@@ -3,8 +3,8 @@ import {
     PROTECTIVE_CONCERNED,
     CARESS
 } from '../../../../constants/scene/actors/khariLiz'
-import { LIZ_PHONE__SHARED } from '../../../presences/shared/household'
-import { LIZ_PURSE__SHARED } from '../../../presences/shared/wardrobe'
+import { LIZ_PHONE__SHARED } from '../../../presences/sharedStyles/household'
+import { LIZ_PURSE__SHARED } from '../../../presences/sharedStyles/wardrobe'
 import {
     KHARI_FUTURE__SHARED,
     LIZ_FUTURE__SHARED

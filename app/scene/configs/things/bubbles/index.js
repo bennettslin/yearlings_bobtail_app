@@ -34,14 +34,14 @@ import {
     ALL_PEOPLE__SHARED,
     ALL_CLOTHING__SHARED
 } from '../../../presences/actors'
-import { BUBBLE__SHARED } from '../../../presences/shared/props'
+import { BUBBLE__SHARED } from '../../../presences/sharedStyles/props'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BANJO__SHARED,
     HEADPHONE__SHARED,
     MICROPHONE__SHARED,
     MONITOR__SHARED
-} from '../../../presences/shared/instruments'
+} from '../../../presences/sharedStyles/instruments'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
@@ -49,19 +49,19 @@ import {
     POLE__SHARED,
     ROAD__SHARED,
     SHORE__SHARED
-} from '../../../presences/shared/outdoor'
+} from '../../../presences/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
-} from '../../../presences/shared/paper'
+} from '../../../presences/sharedStyles/paper'
 import {
     CONSTELLATION__SHARED,
     DRAWING__SHARED
-} from '../../../presences/shared/sketch'
+} from '../../../presences/sharedStyles/sketch'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED
-} from '../../../presences/shared/vehicles'
+} from '../../../presences/sharedStyles/vehicles'
 
 export default {
     [APART_SKETCH]: DRAWING__SHARED,
