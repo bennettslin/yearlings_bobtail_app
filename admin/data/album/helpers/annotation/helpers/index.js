@@ -88,4 +88,5 @@ export const registerAnnotation = ({
     delete anchoredLyric.annotation
     delete anchoredLyric.card
     delete anchoredLyric.cards
+    delete anchoredLyric.todo
 }

@@ -4760,5 +4760,9 @@ export default [
     {
         taskName: `Annotation and lyric data refactor.`,
         workedHours: 24
+    },
+    {
+        taskName: `What can be removed from data? Just got rid of all annotation todos. Keeping anchors as is, at least for now.`,
+        workedHours: 1
     }
 ]
