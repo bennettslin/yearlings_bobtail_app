@@ -5,6 +5,7 @@ import sharedStyles from './sharedStyles'
 import wires from './wires'
 
 export default {
+    _build: 'runtime',
     actors,
     cubes,
     things,

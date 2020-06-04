@@ -1,4 +1,4 @@
-import { scene } from '../imports'
+import { getScene } from '../imports'
 import { convertPresenceKeyToClassName } from '../../helpers/format'
 
 const {
@@ -6,7 +6,7 @@ const {
         actors: ACTOR_WIRES,
         things: THING_WIRES
     }
-} = scene
+} = getScene()
 
 const getWireForActor = ({
     actorKey,

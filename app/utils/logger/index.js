@@ -1,8 +1,9 @@
 // eslint-disable-next-line import/no-unresolved
 import {
     getAlbum,
-    getSong
-} from '../../api/album/songs'
+    getScene
+} from '../../api/imports'
+import { getSong } from '../../api/album/songs'
 import { getStoredSongIndex } from '../../helpers/storage'
 
 import {
@@ -23,7 +24,7 @@ import {
 // Allow access to album in local delivery.
 if (IS_STAGING) {
     global.album = getAlbum()
-
+    global.scene = getScene()
     global.s = () => getSong(getStoredSongIndex())
 }
 

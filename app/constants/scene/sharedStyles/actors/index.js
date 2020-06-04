@@ -10,3 +10,8 @@ export const MIRIAM_FUTURE__SHARED = 'miriamFuture'
 export const SASHA_PAST__SHARED = 'sashaPast'
 export const SHANE__SHARED = 'shane'
 export const USHER__SHARED = 'usher'
+
+export const ALL_ACTOR_SHARED_STYLES = [
+    ALL_CLOTHING__SHARED,
+    ALL_PEOPLE__SHARED
+]

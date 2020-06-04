@@ -1,8 +1,8 @@
-import { scene } from '../imports'
+import { getScene } from '../imports'
 
 const {
     actors: ACTOR_ARRANGEMENTS
-} = scene
+} = getScene()
 
 export const getActorArrangements = () => (
     ACTOR_ARRANGEMENTS

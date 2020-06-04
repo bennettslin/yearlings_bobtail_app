@@ -1,5 +1,5 @@
 /* eslint-disable object-curly-newline */
-import HSLA_MAP, {
+import {
     GRASS_COLOUR,
     OCEAN_COLOUR,
     SAND_COLOUR,
@@ -7,6 +7,7 @@ import HSLA_MAP, {
     BENNETT_FLOOR_COLOUR,
     LINOLEUM_FLOOR_COLOUR
 } from '../../../../../../../constants/scene/cubes/colours'
+import HSLA_MAP from '../../../../../../../constants/scene/cubes/hsla'
 
 const BASE_ALPHA = 1,
 

@@ -1,5 +1,5 @@
-import { getActorArrangements } from '../../../../../app/api/scene/actors'
-import { getThingArrangements } from '../../../../../app/api/scene/things'
+import ACTOR_ARRANGEMENTS from '../../../scene/scenes/actors'
+import THING_ARRANGEMENTS from '../../../scene/scenes/things'
 
 import { ACTOR } from '../../../../../app/constants/scene'
 
@@ -61,11 +61,11 @@ const _addPresenceToSceneLayerByType = ({
             instance = actor[characterName].instance
         }
 
-        arrangementObject = getActorArrangements()[presenceName][instance]
+        arrangementObject = ACTOR_ARRANGEMENTS[presenceName][instance]
         value = instance
 
     } else {
-        arrangementObject = getThingArrangements()[presenceType][presenceName]
+        arrangementObject = THING_ARRANGEMENTS[presenceType][presenceName]
         // This is a boolean.
         value = dynamicValue
     }

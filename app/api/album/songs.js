@@ -1,10 +1,5 @@
-import { album } from '../imports'
-
+import { getAlbum } from '../imports'
 import { getArrayOfLength } from '../../helpers/general'
-
-export const getAlbum = () => (
-    album
-)
 
 export const getSongsAndLoguesCount = () => (
     getAlbum().songs.length
