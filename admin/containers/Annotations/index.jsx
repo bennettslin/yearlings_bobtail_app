@@ -53,7 +53,6 @@ const TempGlobalAnnotation = ({ intervalIndex }) => {
 }
 
 const TempGlobalAnnotations = () => {
-
     useEffect(() => {
         logMount('Annotations')
         removeLoadingIndicator()

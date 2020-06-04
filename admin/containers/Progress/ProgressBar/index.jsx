@@ -5,8 +5,8 @@ import { getBarWidthStyle } from './helper'
 const ProgressBar = ({
     sumTask,
     maxTotalNeededHours
-}) => {
 
+}) => {
     const {
         workedHours,
         neededHours

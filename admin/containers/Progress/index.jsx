@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useEffect } from 'react'
 import cx from 'classnames'
 import Drawing from './Drawing'
 import AdminNav from './AdminNav'
@@ -6,31 +6,29 @@ import { logSvgCount } from '../../utils/log'
 import { removeLoadingIndicator } from '../../../app/utils/browser'
 import './style'
 
-class Progress extends PureComponent {
+const Progress = () => {
 
-    componentDidMount() {
+    useEffect(() => {
         logMount('Progress')
         logSvgCount()
         removeLoadingIndicator()
-    }
+    }, [])
 
-    render() {
-        return (
-            <div
-                className={cx(
-                    'Admin',
-                    'PtSansNarrow'
-                )}
-            >
-                <div className="Admin__column">
-                    <div className="Admin__field album">
-                        <AdminNav />
-                    </div>
-                    <Drawing />
+    return (
+        <div
+            className={cx(
+                'Admin',
+                'PtSansNarrow'
+            )}
+        >
+            <div className="Admin__column">
+                <div className="Admin__field album">
+                    <AdminNav />
                 </div>
+                <Drawing />
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default Progress

@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-// import PropTypes from 'prop-types'
 import cx from 'classnames'
-
 import {
     getRemainingTimeStringFromHours,
     getNextCheckInDateFromHours
@@ -12,8 +10,8 @@ const ProgressFooter = ({
     isV2,
     thing,
     sumTask
-}) => {
 
+}) => {
     const
         {
             workedHours,

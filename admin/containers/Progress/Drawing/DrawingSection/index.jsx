@@ -1,13 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-
 import DrawingActor from '../DrawingActor'
-
 import { ACTOR } from '../../../../../app/constants/scene'
 
 const DrawingSection = ({
-
-    // From controller.
     [ACTOR]: actors,
     actorsTodoCount,
     actorsHalfTodoCount,
