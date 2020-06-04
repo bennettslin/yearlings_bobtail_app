@@ -3,7 +3,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getWires } from '../../scene/presences/configs/wires'
+import { getWires } from '../../scene/configs/wires'
 import './style'
 
 const defaultProps = {

@@ -1,0 +1,162 @@
+import {
+    BREAKUP_DEJECTED,
+    SOLICITING_OPINION,
+    CATHOLIC_PENSIVE,
+    CATHOLIC_IDEA,
+    PIOUS,
+    PONDERING,
+    RUBIKS_CUBE,
+    COUCH_READING,
+    DISTRACTED,
+    HOPELESSLY_CRUSHED,
+    WONDERING_BABY,
+    MERRILY_DERANGED,
+    DISHROOM_READING,
+    MOP_SOPPED,
+    WAITING_ROOM_ASLEEP,
+    SIDELONG_HESITANCE,
+    REMOVING_SHOES,
+    DROPPING_MEATS,
+    CORD_SIDE,
+    CORD_REAR,
+    REMOVING_PANTS,
+    INFIRM,
+    DISPOSING_CONDOM,
+    CAMPUS_ASHAMED,
+    SHOW_ANNOYED,
+    ALLEY,
+    BROKEN_HEARTED,
+    DEMONSTRATION
+} from '../../../../constants/scene/actors/bennett'
+import {
+    EATING,
+    DATE_ENDING,
+    MUSEUM,
+    BACKSTAGE,
+    GO_KARTS,
+    DATE_ENDED,
+    DISHROOM_LANCET,
+    GATE_CODE,
+    RUMPLED_LINENS,
+    ABBEY_ROAD,
+    WALGREENS,
+    STEAM_TUNNEL,
+    CEMETERY,
+    STATION_WAGON,
+    ATTIC,
+    PERFORMING,
+    FLIRTING,
+    GREETING,
+    LEAVING_CRUMBLED,
+    PAST,
+    FUTURE,
+    EL_TORITO
+} from '../../../../constants/scene/actors/songs'
+import { TRAY__SHARED } from '../../../presences/shared/dishroom'
+import {
+    BASEMENT_TAKEOUT__SHARED,
+    FROZEN_MEATS__SHARED,
+    LANCET_PEN__SHARED,
+    ROBITUSSIN__SHARED
+} from '../../../presences/shared/food'
+import {
+    ATTIC_LINENS__SHARED,
+    HOSPITAL_LINENS__SHARED
+} from '../../../presences/shared/furniture'
+import { RUBIKS_CUBE__SHARED } from '../../../presences/shared/household'
+import {
+    ACOUSTIC_GUITAR__SHARED,
+    BASS_CASE__SHARED,
+    CABLE__SHARED,
+    ELECTRIC_GUITAR__SHARED,
+    GUITAR_CASE__SHARED,
+    MANDOLIN__SHARED
+} from '../../../presences/shared/instruments'
+import {
+    BOOK__SHARED,
+    SKETCHBOOK__SHARED
+} from '../../../presences/shared/paper'
+import { DOLLAR__SHARED } from '../../../presences/shared/print'
+import { GO_KART__SHARED } from '../../../presences/shared/vehicles'
+import {
+    BRACELET__SHARED,
+    CAFETERIA__SHARED,
+    LIZ_PURSE__SHARED,
+    MESSENGER_BAG__SHARED,
+    MIRIAM_CONDOM__SHARED,
+    WALKMAN__SHARED
+} from '../../../presences/shared/wardrobe'
+
+export default {
+    [BREAKUP_DEJECTED]: null,
+    [SOLICITING_OPINION]: [
+        ACOUSTIC_GUITAR__SHARED,
+        SKETCHBOOK__SHARED
+    ],
+    [CATHOLIC_PENSIVE]: null,
+    [CATHOLIC_IDEA]: MESSENGER_BAG__SHARED,
+    [PIOUS]: MESSENGER_BAG__SHARED,
+    [PONDERING]: null,
+    [COUCH_READING]: BOOK__SHARED,
+    [RUBIKS_CUBE]: RUBIKS_CUBE__SHARED,
+    [DISTRACTED]: DOLLAR__SHARED,
+    [EATING]: BASEMENT_TAKEOUT__SHARED,
+    [HOPELESSLY_CRUSHED]: null,
+    [WONDERING_BABY]: null,
+    [MERRILY_DERANGED]: null,
+    [DATE_ENDING]: null,
+    [MUSEUM]: null,
+    [BACKSTAGE]: null,
+    [GO_KARTS]: GO_KART__SHARED,
+    [DATE_ENDED]: null,
+    [DISHROOM_READING]: [
+        BOOK__SHARED,
+        CAFETERIA__SHARED,
+        LANCET_PEN__SHARED,
+        TRAY__SHARED
+    ],
+    [DISHROOM_LANCET]: [
+        BOOK__SHARED,
+        CAFETERIA__SHARED,
+        LANCET_PEN__SHARED
+    ],
+    [MOP_SOPPED]: [
+        MESSENGER_BAG__SHARED,
+        WALKMAN__SHARED
+    ],
+    [GATE_CODE]: [
+        MESSENGER_BAG__SHARED,
+        WALKMAN__SHARED
+    ],
+    [RUMPLED_LINENS]: MESSENGER_BAG__SHARED,
+    [WAITING_ROOM_ASLEEP]: LIZ_PURSE__SHARED,
+    [ABBEY_ROAD]: null,
+    [WALGREENS]: ROBITUSSIN__SHARED,
+    [STEAM_TUNNEL]: null,
+    [CEMETERY]: null,
+    [STATION_WAGON]: null,
+    [ATTIC]: ATTIC_LINENS__SHARED,
+    [PERFORMING]: ELECTRIC_GUITAR__SHARED,
+    [FLIRTING]: CABLE__SHARED,
+    [SIDELONG_HESITANCE]: [
+        BASS_CASE__SHARED,
+        GUITAR_CASE__SHARED
+    ],
+    [REMOVING_SHOES]: null,
+    [DROPPING_MEATS]: FROZEN_MEATS__SHARED,
+    [GREETING]: MANDOLIN__SHARED,
+    [LEAVING_CRUMBLED]: null,
+    [CORD_SIDE]: BRACELET__SHARED,
+    [CORD_REAR]: BRACELET__SHARED,
+    [PAST]: null,
+    [FUTURE]: null,
+    [REMOVING_PANTS]: null,
+    [INFIRM]: HOSPITAL_LINENS__SHARED,
+    [DISPOSING_CONDOM]: MIRIAM_CONDOM__SHARED,
+    [CAMPUS_ASHAMED]: null,
+    [SHOW_ANNOYED]: null,
+    [ALLEY]: null,
+    [BROKEN_HEARTED]: null,
+    [DEMONSTRATION]: null,
+    [EL_TORITO]: null
+}
