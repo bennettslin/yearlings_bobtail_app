@@ -2,9 +2,8 @@
 * Some todos to make a selector
 
 # Scene data refactor
-* Nothing grabs from scene folder directly. Api grabs from scene, and others grab from api.
-* Move scene to admin. Have api get scene from admin for now, just to confirm.
 * Consolidate all scene into a single object. Import and export it in the api/imports file. Have api get it from api/imports file.
+* Move scene to admin. Have api get scene from admin for now, just to confirm.
 * Have in local get object from admin, in staging get it from global environment, just like album object.
 
 # Bugs
