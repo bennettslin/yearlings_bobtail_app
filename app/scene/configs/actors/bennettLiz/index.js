@@ -12,12 +12,12 @@ import {
     CLIFF,
     FINAL_DREAM
 } from '../../../../constants/scene/actors/bennettLiz'
-import { HEINEKEN__SHARED } from '../../../presences/sharedStyles/food'
+import { HEINEKEN__SHARED } from '../../../../constants/scene/sharedStyles/food'
 import {
     CYMBAL__SHARED,
     DOBRO__SHARED,
     RECORDER__SHARED
-} from '../../../presences/sharedStyles/instruments'
+} from '../../../../constants/scene/sharedStyles/instruments'
 import {
     BACKPACK__SHARED,
     BRACELET__SHARED,
@@ -25,7 +25,7 @@ import {
     LIZ_PURSE__SHARED,
     MESSENGER_BAG__SHARED,
     SARI__SHARED
-} from '../../../presences/sharedStyles/wardrobe'
+} from '../../../../constants/scene/sharedStyles/wardrobe'
 
 export default {
     [GINGERBREAD_PRISON]: [

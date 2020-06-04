@@ -55,7 +55,7 @@ import khariLizReflection from './khariLizReflection'
 import {
     ALL_CLOTHING__SHARED,
     ALL_PEOPLE__SHARED
-} from '../../presences/actors'
+} from '../../../constants/scene/sharedStyles/actors'
 
 import {
     YOUNG_BENNETT,

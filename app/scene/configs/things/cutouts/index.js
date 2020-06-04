@@ -56,24 +56,24 @@ import {
     WEDDING_CROWD,
     YELLOW_TAPED_GRILL
 } from '../../../../constants/scene/things/cutouts'
-import { ALL_PEOPLE__SHARED } from '../../../presences/actors'
-import { WEDDING__SHARED } from '../../../presences/sharedStyles/buildings'
+import { ALL_PEOPLE__SHARED } from '../../../../constants/scene/sharedStyles/actors'
+import { WEDDING__SHARED } from '../../../../constants/scene/sharedStyles/buildings'
 import {
     CUP__SHARED,
     DISH__SHARED,
     TRAY__SHARED
-} from '../../../presences/sharedStyles/dishroom'
+} from '../../../../constants/scene/sharedStyles/dishroom'
 import {
     BANANA__SHARED,
     CIGARETTE__SHARED,
     GARBAGE_BAG__SHARED,
     PAPER_BAG__SHARED
-} from '../../../presences/sharedStyles/food'
+} from '../../../../constants/scene/sharedStyles/food'
 import {
     BULB__SHARED,
     FRIDGE__SHARED
-} from '../../../presences/sharedStyles/household'
-import { MONITOR__SHARED } from '../../../presences/sharedStyles/instruments'
+} from '../../../../constants/scene/sharedStyles/household'
+import { MONITOR__SHARED } from '../../../../constants/scene/sharedStyles/instruments'
 import {
     LAMPPOST__SHARED,
     FOLIAGE__SHARED,
@@ -82,10 +82,10 @@ import {
     ROCK__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TRASH_CAN__SHARED
-} from '../../../presences/sharedStyles/outdoor'
-import { NEWSPAPER__SHARED } from '../../../presences/sharedStyles/paper'
-import { BUDDHA_SHRINE__SHARED } from '../../../presences/sharedStyles/taiwan'
-import { ALL_VEHICLES__SHARED } from '../../../presences/sharedStyles/vehicles'
+} from '../../../../constants/scene/sharedStyles/outdoor'
+import { NEWSPAPER__SHARED } from '../../../../constants/scene/sharedStyles/paper'
+import { BUDDHA_SHRINE__SHARED } from '../../../../constants/scene/sharedStyles/taiwan'
+import { ALL_VEHICLES__SHARED } from '../../../../constants/scene/sharedStyles/vehicles'
 
 export default {
     [APARTMENT_PLANT]: FOLIAGE__SHARED,

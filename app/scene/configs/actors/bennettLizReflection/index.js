@@ -3,7 +3,7 @@ import {
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
 } from '../../../../constants/scene/actors/bennettLiz'
-import { LIZ_CONDOM__SHARED } from '../../../presences/sharedStyles/wardrobe'
+import { LIZ_CONDOM__SHARED } from '../../../../constants/scene/sharedStyles/wardrobe'
 
 export default {
     [HARD_ON_REFLECTION]: LIZ_CONDOM__SHARED,

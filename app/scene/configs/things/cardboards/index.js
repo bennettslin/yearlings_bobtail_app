@@ -54,33 +54,33 @@ import {
     CHRISTOPHER_PAST__SHARED,
     BENNETT_FUTURE__SHARED,
     MIRIAM_FUTURE__SHARED
-} from '../../../presences/actors'
+} from '../../../../constants/scene/sharedStyles/actors'
 import {
     ODIN_PAST__SHARED,
     SEA_SERPENT__SHARED
-} from '../../../presences/sharedStyles/animals'
-import { TAIWAN_LINENS__SHARED } from '../../../presences/sharedStyles/furniture'
+} from '../../../../constants/scene/sharedStyles/animals'
+import { TAIWAN_LINENS__SHARED } from '../../../../constants/scene/sharedStyles/furniture'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
     SHORE__SHARED
-} from '../../../presences/sharedStyles/outdoor'
+} from '../../../../constants/scene/sharedStyles/outdoor'
 import {
     POSTER_GLADIATOR__SHARED,
     PROGRESS_CHART__SHARED
-} from '../../../presences/sharedStyles/print'
+} from '../../../../constants/scene/sharedStyles/print'
 import {
     BUBBLE__SHARED,
     SNOWGLOBE__SHARED
-} from '../../../presences/sharedStyles/props'
+} from '../../../../constants/scene/sharedStyles/props'
 import {
     TAIWAN_BUOY__SHARED,
     TAIWAN_RICKSHAW__SHARED
-} from '../../../presences/sharedStyles/taiwan'
+} from '../../../../constants/scene/sharedStyles/taiwan'
 import {
     REATTA__SHARED,
     ALL_VEHICLES__SHARED
-} from '../../../presences/sharedStyles/vehicles'
+} from '../../../../constants/scene/sharedStyles/vehicles'
 
 export default {
     [BENNETT_MAT]: [

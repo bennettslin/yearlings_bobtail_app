@@ -2,7 +2,7 @@ import {
     ALL_PAST__SHARED,
     BENNETT_PAST__SHARED,
     SASHA_PAST__SHARED
-} from '../../../presences/actors'
+} from '../../../../constants/scene/sharedStyles/actors'
 import {
     MERMAID,
     COMFORTING_HUMILIATED

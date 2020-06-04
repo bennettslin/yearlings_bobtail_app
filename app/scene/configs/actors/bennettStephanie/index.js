@@ -2,7 +2,7 @@ import {
     HORSING,
     DRYING_TEARS
 } from '../../../../constants/scene/actors/bennettStephanie'
-import { BRACELET__SHARED } from '../../../presences/sharedStyles/wardrobe'
+import { BRACELET__SHARED } from '../../../../constants/scene/sharedStyles/wardrobe'
 
 export default {
     [HORSING]: BRACELET__SHARED,

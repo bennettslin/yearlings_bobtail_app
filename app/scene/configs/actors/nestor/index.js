@@ -6,7 +6,7 @@ import {
     GREETING,
     EPILOGUE
 } from '../../../../constants/scene/actors/songs'
-import { DRUMSTICK__SHARED } from '../../../presences/sharedStyles/instruments'
+import { DRUMSTICK__SHARED } from '../../../../constants/scene/sharedStyles/instruments'
 
 export default {
     [INJURED]: null,

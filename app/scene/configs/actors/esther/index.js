@@ -6,7 +6,7 @@ import {
     YOUNG_CHILD,
     EPILOGUE
 } from '../../../../constants/scene/actors/songs'
-import { BACKPACK__SHARED } from '../../../presences/sharedStyles/wardrobe'
+import { BACKPACK__SHARED } from '../../../../constants/scene/sharedStyles/wardrobe'
 
 export default {
     [CURIOUS]: BACKPACK__SHARED,

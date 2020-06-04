@@ -44,7 +44,7 @@ import {
     LIZ_GATE__SHARED,
     TAIWAN_GATE__SHARED,
     WINDOW__SHARED
-} from '../../../presences/sharedStyles/home'
+} from '../../../../constants/scene/sharedStyles/home'
 
 export default {
     [BANCROFT_DOOR]: [

@@ -22,11 +22,11 @@ import {
     EL_TORITO
 } from '../../../../constants/scene/actors/songs'
 import { BENNETT } from '../../../../constants/scene/actors'
-import { OPAL__SHARED } from '../../../presences/sharedStyles/animals'
-import { CHINESE_TAKEOUT__SHARED } from '../../../presences/sharedStyles/food'
-import { LIZ_LINENS__SHARED } from '../../../presences/sharedStyles/furniture'
-import { GO_KART__SHARED } from '../../../presences/sharedStyles/vehicles'
-import { BACKPACK__SHARED } from '../../../presences/sharedStyles/wardrobe'
+import { OPAL__SHARED } from '../../../../constants/scene/sharedStyles/animals'
+import { CHINESE_TAKEOUT__SHARED } from '../../../../constants/scene/sharedStyles/food'
+import { LIZ_LINENS__SHARED } from '../../../../constants/scene/sharedStyles/furniture'
+import { GO_KART__SHARED } from '../../../../constants/scene/sharedStyles/vehicles'
+import { BACKPACK__SHARED } from '../../../../constants/scene/sharedStyles/wardrobe'
 
 export default {
     [DATE_ENDING]: null,

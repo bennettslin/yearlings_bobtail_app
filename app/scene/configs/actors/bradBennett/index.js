@@ -2,7 +2,7 @@ import { TYING_TETHER } from '../../../../constants/scene/actors/bradBennett'
 import {
     POLE__SHARED,
     TETHERBALL_POLE__SHARED
-} from '../../../presences/sharedStyles/outdoor'
+} from '../../../../constants/scene/sharedStyles/outdoor'
 
 export default {
     [TYING_TETHER]: [

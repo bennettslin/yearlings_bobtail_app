@@ -14,7 +14,7 @@ import {
     BENNETT_LINENS__SHARED,
     HOSPITAL_LINENS__SHARED,
     LIZ_LINENS__SHARED
-} from '../../../presences/sharedStyles/furniture'
+} from '../../../../constants/scene/sharedStyles/furniture'
 
 export default {
     [ATTIC_PILLOW]: ATTIC_LINENS__SHARED,

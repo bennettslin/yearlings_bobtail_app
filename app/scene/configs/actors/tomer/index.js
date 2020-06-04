@@ -11,14 +11,14 @@ import {
     STATION_WAGON,
     EPILOGUE
 } from '../../../../constants/scene/actors/songs'
-import { SHANE__SHARED } from '../../../presences/actors'
+import { SHANE__SHARED } from '../../../../constants/scene/sharedStyles/actors'
 import {
     EVIAN__SHARED,
     GARBAGE_BAG__SHARED,
     HEINEKEN__SHARED,
     ROBITUSSIN__SHARED,
     WINE__SHARED
-} from '../../../presences/sharedStyles/food'
+} from '../../../../constants/scene/sharedStyles/food'
 
 export default {
     [ABBEY_ROAD]: null,

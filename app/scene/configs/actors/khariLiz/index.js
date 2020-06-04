@@ -3,12 +3,12 @@ import {
     PROTECTIVE_CONCERNED,
     CARESS
 } from '../../../../constants/scene/actors/khariLiz'
-import { LIZ_PHONE__SHARED } from '../../../presences/sharedStyles/household'
-import { LIZ_PURSE__SHARED } from '../../../presences/sharedStyles/wardrobe'
+import { LIZ_PHONE__SHARED } from '../../../../constants/scene/sharedStyles/household'
+import { LIZ_PURSE__SHARED } from '../../../../constants/scene/sharedStyles/wardrobe'
 import {
     KHARI_FUTURE__SHARED,
     LIZ_FUTURE__SHARED
-} from '../../../presences/actors'
+} from '../../../../constants/scene/sharedStyles/actors'
 
 export default {
     [JOKING_LAUGHING]: [

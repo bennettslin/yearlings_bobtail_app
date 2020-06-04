@@ -11,10 +11,10 @@ import {
     EPILOGUE
 } from '../../../../constants/scene/actors/songs'
 import { MARA } from '../../../../constants/scene/actors'
-import { USHER__SHARED } from '../../../presences/actors'
-import { ROBITUSSIN__SHARED } from '../../../presences/sharedStyles/food'
-import { SATURN__SHARED } from '../../../presences/sharedStyles/vehicles'
-import { STEAM_TUNNEL__SHARED } from '../../../presences/sharedStyles/wardrobe'
+import { USHER__SHARED } from '../../../../constants/scene/sharedStyles/actors'
+import { ROBITUSSIN__SHARED } from '../../../../constants/scene/sharedStyles/food'
+import { SATURN__SHARED } from '../../../../constants/scene/sharedStyles/vehicles'
+import { STEAM_TUNNEL__SHARED } from '../../../../constants/scene/sharedStyles/wardrobe'
 
 export default {
     [ABBEY_ROAD]: null,

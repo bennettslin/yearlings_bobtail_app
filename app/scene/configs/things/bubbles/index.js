@@ -33,15 +33,15 @@ import {
 import {
     ALL_PEOPLE__SHARED,
     ALL_CLOTHING__SHARED
-} from '../../../presences/actors'
-import { BUBBLE__SHARED } from '../../../presences/sharedStyles/props'
+} from '../../../../constants/scene/sharedStyles/actors'
+import { BUBBLE__SHARED } from '../../../../constants/scene/sharedStyles/props'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BANJO__SHARED,
     HEADPHONE__SHARED,
     MICROPHONE__SHARED,
     MONITOR__SHARED
-} from '../../../presences/sharedStyles/instruments'
+} from '../../../../constants/scene/sharedStyles/instruments'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
@@ -49,19 +49,19 @@ import {
     POLE__SHARED,
     ROAD__SHARED,
     SHORE__SHARED
-} from '../../../presences/sharedStyles/outdoor'
+} from '../../../../constants/scene/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
-} from '../../../presences/sharedStyles/paper'
+} from '../../../../constants/scene/sharedStyles/paper'
 import {
     CONSTELLATION__SHARED,
     DRAWING__SHARED
-} from '../../../presences/sharedStyles/sketch'
+} from '../../../../constants/scene/sharedStyles/sketch'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED
-} from '../../../presences/sharedStyles/vehicles'
+} from '../../../../constants/scene/sharedStyles/vehicles'
 
 export default {
     [APART_SKETCH]: DRAWING__SHARED,

@@ -1,5 +1,5 @@
 import { CARESS_REFLECTION } from '../../../../constants/scene/actors/khariLiz'
-import { LIZ_PHONE__SHARED } from '../../../presences/sharedStyles/household'
+import { LIZ_PHONE__SHARED } from '../../../../constants/scene/sharedStyles/household'
 
 export default {
     [CARESS_REFLECTION]: LIZ_PHONE__SHARED

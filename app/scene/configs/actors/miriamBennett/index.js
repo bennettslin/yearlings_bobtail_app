@@ -5,7 +5,7 @@ import {
     BLOWJOB
 } from '../../../../constants/scene/actors/miriamBennett'
 import { ASLEEP } from '../../../../constants/scene/actors/songs'
-import { BENNETT_LINENS__SHARED } from '../../../presences/sharedStyles/furniture'
+import { BENNETT_LINENS__SHARED } from '../../../../constants/scene/sharedStyles/furniture'
 
 export default {
     [ASLEEP]: BENNETT_LINENS__SHARED,

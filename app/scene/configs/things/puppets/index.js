@@ -36,17 +36,17 @@ import {
 import {
     ALL_CLOTHING__SHARED,
     ALL_PEOPLE__SHARED
-} from '../../../presences/actors'
+} from '../../../../constants/scene/sharedStyles/actors'
 import {
     ODIN_GHOST__SHARED,
     OPAL__SHARED,
     PEAFOWL__SHARED
-} from '../../../presences/sharedStyles/animals'
-import { SKETCHBOOK__SHARED } from '../../../presences/sharedStyles/paper'
+} from '../../../../constants/scene/sharedStyles/animals'
+import { SKETCHBOOK__SHARED } from '../../../../constants/scene/sharedStyles/paper'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED
-} from '../../../presences/sharedStyles/vehicles'
+} from '../../../../constants/scene/sharedStyles/vehicles'
 
 export default {
     [GHOST_ODIN_ALLEY]: ODIN_GHOST__SHARED,

@@ -11,9 +11,9 @@ import {
 import {
     CIGARETTE__SHARED,
     HEINEKEN__SHARED
-} from '../../../presences/sharedStyles/food'
-import { HOSPITAL_LINENS__SHARED } from '../../../presences/sharedStyles/furniture'
-import { BOOK__SHARED } from '../../../presences/sharedStyles/paper'
+} from '../../../../constants/scene/sharedStyles/food'
+import { HOSPITAL_LINENS__SHARED } from '../../../../constants/scene/sharedStyles/furniture'
+import { BOOK__SHARED } from '../../../../constants/scene/sharedStyles/paper'
 
 export default {
     [SMOKER]: CIGARETTE__SHARED,

@@ -2,7 +2,7 @@ import { EATING } from '../../../../constants/scene/actors/songs'
 import {
     BASEMENT_TAKEOUT__SHARED,
     BUDWEISER__SHARED
-} from '../../../presences/sharedStyles/food'
+} from '../../../../constants/scene/sharedStyles/food'
 
 export default {
     [EATING]: [

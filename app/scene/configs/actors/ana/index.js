@@ -18,12 +18,12 @@ import {
     BUDWEISER__SHARED,
     CIGARETTE__SHARED,
     ROBITUSSIN__SHARED
-} from '../../../presences/sharedStyles/food'
+} from '../../../../constants/scene/sharedStyles/food'
 import {
     BASS__SHARED,
     BASS_CASE__SHARED
-} from '../../../presences/sharedStyles/instruments'
-import { STEAM_TUNNEL__SHARED } from '../../../presences/sharedStyles/wardrobe'
+} from '../../../../constants/scene/sharedStyles/instruments'
+import { STEAM_TUNNEL__SHARED } from '../../../../constants/scene/sharedStyles/wardrobe'
 
 export default {
     [SQUATTING]: [

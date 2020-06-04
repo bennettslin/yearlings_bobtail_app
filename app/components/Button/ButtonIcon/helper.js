@@ -9,10 +9,10 @@ import {
 } from '../../../constants/buttons'
 
 import { OLD_BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../../scene/presences/actors'
-import { HEADPHONE__SHARED } from '../../../scene/presences/sharedStyles/instruments'
-import { BOOK__SHARED } from '../../../scene/presences/sharedStyles/paper'
-import { SNOWGLOBE__SHARED } from '../../../scene/presences/sharedStyles/props'
+import { ALL_PEOPLE__SHARED } from '../../../constants/scene/sharedStyles/actors'
+import { HEADPHONE__SHARED } from '../../../constants/scene/sharedStyles/instruments'
+import { BOOK__SHARED } from '../../../constants/scene/sharedStyles/paper'
+import { SNOWGLOBE__SHARED } from '../../../constants/scene/sharedStyles/props'
 
 import { getSharedClassNames } from '../../../helpers/format'
 
