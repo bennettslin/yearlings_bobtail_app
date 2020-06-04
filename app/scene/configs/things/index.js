@@ -24,7 +24,7 @@ import {
     PUPPET
 } from '../../../constants/scene/things'
 
-const SHARED_STYLES_MAP = {
+const SHARED_THING_STYLES = {
     [BACKDROP]: backdrops,
     [BUBBLE]: bubbles,
     [CARDBOARD]: cardboards,
@@ -41,5 +41,7 @@ export const getSharedStyleForThing = ({
     presenceType,
     presenceKey
 }) => (
-    SHARED_STYLES_MAP[presenceType][convertPresenceKeyToClassName(presenceKey)]
+    SHARED_THING_STYLES[presenceType][
+        convertPresenceKeyToClassName(presenceKey)
+    ]
 )

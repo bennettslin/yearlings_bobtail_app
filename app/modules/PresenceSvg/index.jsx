@@ -9,7 +9,7 @@ import {
     getSharedClassNames
 } from '../../helpers/format'
 import { getWirePlacedFront } from '../../scene/configs/wires'
-import { getSharedStyleForActor } from '../../scene/configs/actors'
+import { getSharedStyleForActor } from '../../api/scene/actors'
 import { getSharedStyleForThing } from '../../scene/configs/things'
 import { getArrangementForPresence } from '../../components/Presence/helper'
 import { getXYForPresence } from './helper/position'

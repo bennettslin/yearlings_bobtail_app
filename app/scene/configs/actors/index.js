@@ -1,5 +1,3 @@
-import { isString } from '../../../helpers/general'
-
 import youngBennett from './youngBennett'
 import preteenBennett from './preteenBennett'
 import bennett from './bennett'
@@ -51,11 +49,6 @@ import bennettReflection from './bennettReflection'
 import bennettLizReflection from './bennettLizReflection'
 import lizReflection from './lizReflection'
 import khariLizReflection from './khariLizReflection'
-
-import {
-    ALL_CLOTHING__SHARED,
-    ALL_PEOPLE__SHARED
-} from '../../../constants/scene/sharedStyles/actors'
 
 import {
     YOUNG_BENNETT,
@@ -111,7 +104,7 @@ import {
     KHARI_LIZ_REFLECTION
 } from '../../../constants/scene/actors'
 
-const SHARED_STYLES_MAP = {
+export default {
     [YOUNG_BENNETT]: youngBennett,
     [PRETEEN_BENNETT]: preteenBennett,
     [BENNETT]: bennett,
@@ -165,24 +158,3 @@ const SHARED_STYLES_MAP = {
     [KHARI_LIZ_REFLECTION]: khariLizReflection
 }
 
-const ALL_SHARED = [
-    ALL_CLOTHING__SHARED,
-    ALL_PEOPLE__SHARED
-]
-
-export const getSharedStyleForActor = ({
-    actorKey,
-    presenceKey
-}) => {
-    const sharedStyle = SHARED_STYLES_MAP[actorKey][presenceKey]
-
-    if (!sharedStyle) {
-        return [...ALL_SHARED]
-    }
-
-    if (isString(sharedStyle)) {
-        return [...ALL_SHARED, sharedStyle]
-    }
-
-    return [...ALL_SHARED, ...sharedStyle]
-}

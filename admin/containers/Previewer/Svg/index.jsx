@@ -13,7 +13,7 @@ import {
 } from '../../../../app/helpers/format'
 import { getDocument } from '../../../../app/utils/browser'
 import { getArrangementForPresence } from '../../../../app/components/Presence/helper'
-import { getSharedStyleForActor } from '../../../../app/scene/configs/actors'
+import { getSharedStyleForActor } from '../../../../app/api/scene/actors'
 import { getSharedStyleForThing } from '../../../../app/scene/configs/things'
 
 import {
