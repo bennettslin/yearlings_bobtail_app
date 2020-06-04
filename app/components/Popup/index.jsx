@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -6,94 +6,81 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import PopupView from './View'
 import './style'
 
-/*************
- * CONTAINER *
- *************/
+const Popup = ({
+    popupName,
+    isVisible,
+    doMountonEnter,
+    doUnmountOnExit,
+    noFlexCentre,
+    noAbsoluteFull,
+    displaysInOverlay,
+    handlePreviousClick,
+    handleNextClick,
+    ...other
 
-class Popup extends PureComponent {
+}) => {
+    const
+        stopPropagation = useRef(),
+        { isFullHeight } = other
 
-    static propTypes = {
-        popupName: PropTypes.string.isRequired,
-        isVisible: PropTypes.bool.isRequired,
-        doMountonEnter: PropTypes.bool,
-        doUnmountOnExit: PropTypes.bool,
-        isFullHeight: PropTypes.bool,
-        noFlexCentre: PropTypes.bool,
-        noAbsoluteFull: PropTypes.bool,
-        displaysInOverlay: PropTypes.bool,
-        handleCloseClick: PropTypes.func,
-        handlePreviousClick: PropTypes.func,
-        handleNextClick: PropTypes.func
-    }
-
-    handleContainerClick = e => {
-        const { popupName } = this.props
+    const handleContainerClick = e => {
         logEvent({ e, componentName: popupName })
-        this.stopPropagation(e)
+        stopPropagation.current(e)
     }
 
-    getStopPropagation = dispatch => {
-        this.stopPropagation = dispatch
-    }
+    return (
+        <CSSTransition
+            {...{
+                in: isVisible,
+                timeout: 200,
+                classNames: {
+                    exitActive: 'Popup__exiting',
+                    enterDone: 'Popup__visible'
+                },
+                mountOnEnter: doMountonEnter,
+                unmountOnExit: doUnmountOnExit
+            }}
+        >
+            <div
+                className={cx(
+                    popupName,
+                    'Popup',
+                    isFullHeight && 'Popup__fullHeight',
 
-    render() {
-        const {
-                popupName,
-                isVisible,
-                doMountonEnter,
-                doUnmountOnExit,
-                noFlexCentre,
-                noAbsoluteFull,
-                displaysInOverlay,
-                handlePreviousClick,
-                handleNextClick,
-
-                ...other
-            } = this.props,
-
-            { isFullHeight } = other
-
-        return (
-            <CSSTransition
-                {...{
-                    in: isVisible,
-                    timeout: 200,
-                    classNames: {
-                        exitActive: 'Popup__exiting',
-                        enterDone: 'Popup__visible'
-                    },
-                    mountOnEnter: doMountonEnter,
-                    unmountOnExit: doUnmountOnExit
-                }}
+                    // For animation styling.
+                    {
+                        'Popup__notInOverlay': !displaysInOverlay,
+                        'fCC': !noFlexCentre,
+                        'abF': !noAbsoluteFull
+                    }
+                )}
             >
-                <div
-                    className={cx(
+                <PopupView {...other}
+                    {...{
                         popupName,
-                        'Popup',
-                        isFullHeight && 'Popup__fullHeight',
+                        displaysInOverlay,
+                        handlePreviousClick,
+                        handleNextClick,
+                        handleContainerClick
+                    }}
+                />
+                <StopPropagationDispatcher {...{ ref: stopPropagation }} />
+            </div>
+        </CSSTransition>
+    )
+}
 
-                        // For animation styling.
-                        {
-                            'Popup__notInOverlay': !displaysInOverlay,
-                            'fCC': !noFlexCentre,
-                            'abF': !noAbsoluteFull
-                        }
-                    )}
-                >
-                    <PopupView {...other}
-                        {...{
-                            popupName,
-                            displaysInOverlay,
-                            handlePreviousClick,
-                            handleNextClick,
-                            handleContainerClick: this.handleContainerClick
-                        }}
-                    />
-                    <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
-                </div>
-            </CSSTransition>
-        )
-    }
+Popup.propTypes = {
+    popupName: PropTypes.string.isRequired,
+    isVisible: PropTypes.bool.isRequired,
+    doMountonEnter: PropTypes.bool,
+    doUnmountOnExit: PropTypes.bool,
+    isFullHeight: PropTypes.bool,
+    noFlexCentre: PropTypes.bool,
+    noAbsoluteFull: PropTypes.bool,
+    displaysInOverlay: PropTypes.bool,
+    handlePreviousClick: PropTypes.func,
+    handleNextClick: PropTypes.func
 }
 
 export default Popup
