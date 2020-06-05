@@ -5,8 +5,10 @@
 * Some todos to make a selector
 
 # Scene refactor
-* Move helpers to api. Structure methods to get individual presences.
 * z() should show each presence and cube layer at the top level.
+* Structure methods to get individual presences from api.
+* Cubes should also get from api.
+* Each layer knows which presences can render in it, and don't bother to mount any that don't exist for that layer.
 * Move svg folder to components that use them.
 
 # Bugs

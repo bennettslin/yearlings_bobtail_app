@@ -5,8 +5,8 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `More data refactor. See how album scene and scene data play together, and consolidate? Cubes should also grab values from a selector, rather than the store.`,
-        workedHours: 8,
+        taskName: `Scene data refactor.`,
+        workedHours: 11,
         neededHours: 10
     },
     {

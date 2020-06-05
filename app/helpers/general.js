@@ -31,6 +31,7 @@ export const getArrayOfLength = (
     )
 )
 
+// TODO: Get rid of this.
 export const getPropsAreShallowEqual = ({
     props = {},
     nextProps = {}

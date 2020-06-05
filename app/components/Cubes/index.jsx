@@ -6,8 +6,8 @@ import CubeConfig from './Cube'
 import { CUBE_X_INDICES } from '../../constants/cubeIndex'
 import { DEV_MAXIMUM_Y_INDEX_CUBES } from '../../constants/dev'
 
-const Cubes = ({ yIndex }) => {
-    return yIndex <= DEV_MAXIMUM_Y_INDEX_CUBES && (
+const Cubes = ({ yIndex }) => (
+    yIndex <= DEV_MAXIMUM_Y_INDEX_CUBES && (
         <div
             className={cx(
                 'Cubes',
@@ -30,7 +30,7 @@ const Cubes = ({ yIndex }) => {
             })}
         </div>
     )
-}
+)
 
 Cubes.propTypes = {
     yIndex: PropTypes.number.isRequired
