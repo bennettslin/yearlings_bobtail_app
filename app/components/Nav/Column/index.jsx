@@ -1,8 +1,7 @@
 // Container for book, logue, and toggle buttons for each book.
-
-import React, { PureComponent } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import { mapShowSingleNavBook } from '../../../redux/responsive/selectors'
 import NavDispatcher from '../../../handlers/Nav/Dispatcher'
@@ -16,95 +15,69 @@ import './style'
 // TODO: Import this from a Book component.
 import './Book/style'
 
-const mapStateToProps = state => {
+const NavColumn = ({ bookIndex }) => {
     const
-        showSingleNavBook = mapShowSingleNavBook(state),
-        shownNavBookIndex = mapShownNavBookIndex(state)
+        dispatchNavBook = useRef(),
+        dispatchSong = useRef(),
+        showSingleNavBook = useSelector(mapShowSingleNavBook),
+        shownNavBookIndex = useSelector(mapShownNavBookIndex)
 
-    return {
-        showSingleNavBook,
-        shownNavBookIndex
-    }
-}
-
-class NavColumn extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        showSingleNavBook: PropTypes.bool.isRequired,
-        shownNavBookIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        bookIndex: PropTypes.number.isRequired
+    const handleNavBookClick = () => {
+        dispatchNavBook.current()
     }
 
-    _handleNavBookClick = () => {
-        this.dispatchNavBook()
-    }
-
-    _handleNavSongSelect = songIndex => {
-        this.dispatchSong({
+    const handleNavSongSelect = songIndex => {
+        dispatchSong.current({
             selectedSongIndex: songIndex,
             doDismissNav: true
         })
     }
 
-    getDispatchNavBook = dispatch => {
-        this.dispatchNavBook = dispatch
-    }
+    // TODO: Make this a selector.
+    const isShownColumn =
+        !showSingleNavBook ||
+        shownNavBookIndex === bookIndex
 
-    getDispatchSong = dispatch => {
-        this.dispatchSong = dispatch
-    }
+    return (
+        <div className={cx(
+            'NavColumn',
+            `NavColumn__${bookIndex ? 'right' : 'left'}`,
+            isShownColumn ?
+                'NavColumn__shown' :
+                'NavColumn__hidden'
+        )}>
+            {/* Nav book. */}
+            <NavBookSongs
+                {...{
+                    bookIndex,
+                    isInShownColumn: isShownColumn,
+                    handleButtonClick: handleNavSongSelect
+                }}
+            />
 
-    render() {
-        const {
-                showSingleNavBook,
-                shownNavBookIndex,
-                bookIndex
-            } = this.props,
-
-            isShownColumn =
-                !showSingleNavBook ||
-                shownNavBookIndex === bookIndex
-
-        return (
-            <div className={cx(
-                'NavColumn',
-                `NavColumn__${bookIndex ? 'right' : 'left'}`,
-                isShownColumn ?
-                    'NavColumn__shown' :
-                    'NavColumn__hidden'
-            )}>
-                {/* Nav book. */}
-                <NavBookSongs
+            {/* Logue or toggle. */}
+            {isShownColumn ?
+                <NavBookLogue
                     {...{
                         bookIndex,
-                        isInShownColumn: isShownColumn,
-                        handleButtonClick: this._handleNavSongSelect
+                        handleButtonClick: handleNavSongSelect
+                    }}
+                /> :
+                <NavBookToggle
+                    {...{
+                        bookIndex,
+                        handleButtonClick: handleNavBookClick
                     }}
                 />
-
-                {/* Logue or toggle. */}
-                {isShownColumn ?
-                    <NavBookLogue
-                        {...{
-                            bookIndex,
-                            handleButtonClick: this._handleNavSongSelect
-                        }}
-                    /> :
-                    <NavBookToggle
-                        {...{
-                            bookIndex,
-                            handleButtonClick: this._handleNavBookClick
-                        }}
-                    />
-                }
-                <NavDispatcher {...{ ref: this.getDispatchNavBook }} />
-                <SongDispatcher {...{ ref: this.getDispatchSong }} />
-            </div>
-        )
-    }
+            }
+            <NavDispatcher {...{ ref: dispatchNavBook }} />
+            <SongDispatcher {...{ ref: dispatchSong }} />
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(NavColumn)
+NavColumn.propTypes = {
+    bookIndex: PropTypes.number.isRequired
+}
+
+export default memo(NavColumn)
