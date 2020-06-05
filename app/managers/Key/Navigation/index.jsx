@@ -152,6 +152,10 @@ class NavigationManager extends PureComponent {
         this.navigateLyric = dispatch
     }
 
+    getNavigateNav = dispatch => {
+        this.navigateNav = dispatch
+    }
+
     getDispatchVerse = dispatch => {
         this.dispatchVerse = dispatch
     }
@@ -162,7 +166,7 @@ class NavigationManager extends PureComponent {
                 <AnnotationNavigation {...{ getRefs: this._getRefs }} />
                 <DotsSlideNavigation {...{ ref: this.getNavigateDotsSlide }} />
                 <LyricNavigation {...{ ref: this.getNavigateLyric }} />
-                <NavNavigation {...{ getRefs: this._getRefs }} />
+                <NavNavigation {...{ ref: this.getNavigateNav }} />
                 <VerseDispatcher {...{ ref: this.getDispatchVerse }} />
             </>
         )

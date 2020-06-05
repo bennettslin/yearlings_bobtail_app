@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+// eslint-disable-next-line object-curly-newline
+import React, { useRef, forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../../redux/access/action'
 import NavDispatcher from '../../../../handlers/Nav/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'
@@ -17,44 +17,20 @@ import { mapAccessedNavIndex } from '../../../../redux/access/selectors'
 import { mapSelectedSongIndex } from '../../../../redux/selected/selectors'
 import { mapShownNavBookIndex } from '../../../../redux/session/selectors'
 
-const mapStateToProps = state => {
+const NavNavigation = forwardRef((props, ref) => {
     const
-        accessedNavIndex = mapAccessedNavIndex(state),
-        selectedSongIndex = mapSelectedSongIndex(state),
-        shownNavBookIndex = mapShownNavBookIndex(state)
+        dispatch = useDispatch(),
+        dispatchNavBook = useRef(),
+        dispatchSong = useRef(),
+        accessedNavIndex = useSelector(mapAccessedNavIndex),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        shownNavBookIndex = useSelector(mapShownNavBookIndex)
 
-    return {
-        accessedNavIndex,
-        selectedSongIndex,
-        shownNavBookIndex
-    }
-}
-
-class NavNavigation extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        accessedNavIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        shownNavBookIndex: PropTypes.number.isRequired,
-        updateAccessStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            navigateNav: this.navigateNav
-        })
-    }
-
-    navigateNav = (keyName) => {
+    const navigateNav = keyName => {
         let annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
-        const { selectedSongIndex } = this.props
-        let { accessedNavIndex } = this.props,
+        let nextNavIndex = accessedNavIndex,
             direction
 
         // Skip appropriate songs if showing single book column.
@@ -67,9 +43,9 @@ class NavNavigation extends PureComponent {
                 break
             case ENTER:
                 // Do not allow currently selected song to be selected.
-                if (selectedSongIndex !== accessedNavIndex) {
-                    keyWasRegistered = this.dispatchSong({
-                        selectedSongIndex: accessedNavIndex,
+                if (selectedSongIndex !== nextNavIndex) {
+                    keyWasRegistered = dispatchSong.current({
+                        selectedSongIndex: nextNavIndex,
                         doDismissNav: true
                     })
                     /**
@@ -85,21 +61,20 @@ class NavNavigation extends PureComponent {
         }
 
         if (direction) {
-            const { shownNavBookIndex } = this.props,
-                songsCount = getSongsAndLoguesCount()
+            const songsCount = getSongsAndLoguesCount()
 
-            accessedNavIndex = (
-                accessedNavIndex + songsCount + direction
+            nextNavIndex = (
+                nextNavIndex + songsCount + direction
             ) % songsCount
 
             // Select the book column that contains the accessed song index.
             if (
-                shownNavBookIndex !== getBookForSongIndex(accessedNavIndex)
+                shownNavBookIndex !== getBookForSongIndex(nextNavIndex)
             ) {
-                this.dispatchNavBook()
+                dispatchNavBook.current()
             }
 
-            this.props.updateAccessStore({ accessedNavIndex })
+            dispatch(updateAccessStore({ accessedNavIndex: nextNavIndex }))
         }
 
         return {
@@ -108,25 +83,13 @@ class NavNavigation extends PureComponent {
         }
     }
 
-    getDispatchNavBook = dispatch => {
-        this.dispatchNavBook = dispatch
-    }
+    useImperativeHandle(ref, () => navigateNav)
+    return (
+        <>
+            <NavDispatcher {...{ ref: dispatchNavBook }} />
+            <SongDispatcher {...{ ref: dispatchSong }} />
+        </>
+    )
+})
 
-    getDispatchSong = dispatch => {
-        this.dispatchSong = dispatch
-    }
-
-    render() {
-        return (
-            <>
-                <NavDispatcher {...{ ref: this.getDispatchNavBook }} />
-                <SongDispatcher {...{ ref: this.getDispatchSong }} />
-            </>
-        )
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    { updateAccessStore }
-)(NavNavigation)
+export default NavNavigation
