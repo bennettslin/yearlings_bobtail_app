@@ -37,15 +37,15 @@ export const getKeyName = e => {
     return keyName
 }
 
-const _getIsNavKey = (keyName) => (
+const _getIsNavKey = keyName => (
     keyName.includes('Arrow')
 )
 
-export const getIsNavKeyOrEnter = (keyName) => {
+export const getIsNavKeyOrEnter = keyName => {
     return _getIsNavKey(keyName) || keyName === ENTER
 }
 
-export const getShouldHandleOnKeyDown = (keyName) => {
+export const getShouldHandleOnKeyDown = keyName => {
     const isNavKey = _getIsNavKey(keyName)
 
     return (

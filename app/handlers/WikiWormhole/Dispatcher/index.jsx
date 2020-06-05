@@ -18,7 +18,7 @@ const WikiWormholeDispatcher = forwardRef((props, ref) => {
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex)
 
-    const dispatchAccessedWikiWormhole = ({
+    const dispatchWikiWormhole = ({
         annotationIndex = selectedAnnotationIndex,
         direction
     } = {}) => {
@@ -41,7 +41,7 @@ const WikiWormholeDispatcher = forwardRef((props, ref) => {
         }))
     }
 
-    useImperativeHandle(ref, () => dispatchAccessedWikiWormhole)
+    useImperativeHandle(ref, () => dispatchWikiWormhole)
     return null
 })
 

@@ -26,7 +26,7 @@ import {
 
 const AnnotationNavigation = forwardRef((props, ref) => {
     const
-        dispatchAccessedWikiWormhole = useRef(),
+        dispatchWikiWormhole = useRef(),
         dispatchAnnotation = useRef(),
         dispatchSong = useRef(),
         dispatchWiki = useRef(),
@@ -54,7 +54,7 @@ const AnnotationNavigation = forwardRef((props, ref) => {
                 // If not accessed on, do nothing and just turn access on.
                 if (isAccessOn) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    dispatchAccessedWikiWormhole.current({ direction })
+                    dispatchWikiWormhole.current({ direction })
                 }
                 break
             }
@@ -109,7 +109,7 @@ const AnnotationNavigation = forwardRef((props, ref) => {
             <AnnotationDispatcher {...{ ref: dispatchAnnotation }} />
             <SongDispatcher {...{ ref: dispatchSong }} />
             <WikiDispatcher {...{ ref: dispatchWiki }} />
-            <WikiWormholeDispatcher {...{ ref: dispatchAccessedWikiWormhole }} />
+            <WikiWormholeDispatcher {...{ ref: dispatchWikiWormhole }} />
         </>
     )
 })

@@ -113,7 +113,7 @@ class LetterManager extends PureComponent {
         })
     }
 
-    handleLetter = (keyName) => {
+    handleLetter = keyName => {
         let annotationIndexWasAccessed = false,
             keyWasRegistered
 

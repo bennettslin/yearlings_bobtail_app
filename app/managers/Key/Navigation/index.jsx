@@ -70,7 +70,7 @@ class NavigationManager extends PureComponent {
         })
     }
 
-    handleNavigation = (keyName) => {
+    handleNavigation = keyName => {
 
         const {
                 isHeightlessLyric,

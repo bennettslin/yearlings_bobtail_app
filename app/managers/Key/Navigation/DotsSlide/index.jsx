@@ -23,7 +23,7 @@ const DotsSlideNavigation = forwardRef((props, ref) => {
         isAccessOn = useSelector(mapIsAccessOn),
         accessedDotIndex = useSelector(mapAccessedDotIndex)
 
-    const navigateDotsSlide = (keyName) => {
+    const navigateDotsSlide = keyName => {
         if (isAccessOn) {
             let nextAccessedDotIndex
 

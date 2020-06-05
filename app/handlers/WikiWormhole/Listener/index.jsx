@@ -50,12 +50,12 @@ class WikiWormholeListener extends PureComponent {
             selectedSongIndex !== prevSongIndex ||
             selectedAnnotationIndex !== prevAnnotationIndex
         ) {
-            this.dispatchAccessedWikiWormhole({ selectedAnnotationIndex })
+            this.dispatchWikiWormhole({ selectedAnnotationIndex })
         }
     }
 
     getDispatchAccessedWikiWormhole = dispatch => {
-        this.dispatchAccessedWikiWormhole = dispatch
+        this.dispatchWikiWormhole = dispatch
     }
 
     render() {
