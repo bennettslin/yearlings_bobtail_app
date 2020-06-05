@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
-import { populateRefs } from '../../../helpers/ref'
 import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 
 const mapStateToProps = state => {
@@ -78,13 +77,15 @@ class SongChangeDoneListener extends PureComponent {
         this.dispatchCanSceneEnter()
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchSceneChange = dispatch => {
+        if (dispatch) {
+            this.dispatchCanSceneEnter = dispatch.dispatchCanSceneEnter
+        }
     }
 
     render() {
         return (
-            <SceneChangeUpdateDispatcher {...{ getRefs: this._getRefs }} />
+            <SceneChangeUpdateDispatcher {...{ ref: this.getDispatchSceneChange }} />
         )
     }
 }

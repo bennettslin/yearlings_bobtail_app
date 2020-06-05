@@ -3,10 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import SceneChangeUpdateDispatcher from '../Update'
-
-import { populateRefs } from '../../../helpers/ref'
 
 const mapStateToProps = state => {
     const {
@@ -47,13 +44,15 @@ class SceneChangeEnterListener extends PureComponent {
         this.dispatchCanSceneEnter()
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchSceneChange = dispatch => {
+        if (dispatch) {
+            this.dispatchCanSceneEnter = dispatch.dispatchCanSceneEnter
+        }
     }
 
     render() {
         return (
-            <SceneChangeUpdateDispatcher {...{ getRefs: this._getRefs }} />
+            <SceneChangeUpdateDispatcher {...{ ref: this.getDispatchSceneChange }} />
         )
     }
 }

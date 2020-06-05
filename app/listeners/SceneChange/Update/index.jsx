@@ -1,8 +1,5 @@
-// Singleton to listen for changes that reset render flow.
-
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateSceneStore } from '../../../redux/scene/action'
 import {
@@ -16,64 +13,18 @@ import {
     mapSelectedSceneIndex
 } from '../../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
     const
-        selectedSongIndex = mapSelectedSongIndex(state),
-        selectedSceneIndex = mapSelectedSceneIndex(state)
+        dispatch = useDispatch(),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedSceneIndex = useSelector(mapSelectedSceneIndex)
 
-    return {
-        selectedSongIndex,
-        selectedSceneIndex
-    }
-}
-
-class SceneChangeUpdateDispatcher extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedSceneIndex: PropTypes.number.isRequired,
-        updateEntranceStore: PropTypes.func.isRequired,
-        updateSceneStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchCanSceneUpdate: this.dispatchCanSceneUpdate,
-            dispatchCanSceneEnter: this.dispatchCanSceneEnter
-        })
-    }
-
-    dispatchCanSceneUpdate = () => {
-        logTransition('Scene can update.')
-
-        this._dispatchCanSceneEnterOrUpdate({
-            isUpdate: true,
-            sceneIndex: -1
-        })
-    }
-
-    dispatchCanSceneEnter = ({
-        songIndex,
-        sceneIndex
-
-    } = {}) => {
-        logTransition('Scene can enter.')
-
-        this._dispatchCanSceneEnterOrUpdate({
-            songIndex,
-            sceneIndex
-        })
-    }
-
-    _dispatchCanSceneEnterOrUpdate({
+    const _dispatchCanSceneEnterOrUpdate = ({
         isUpdate,
-        songIndex = this.props.selectedSongIndex,
-        sceneIndex = this.props.selectedSceneIndex
-    }) {
+        songIndex = selectedSongIndex,
+        sceneIndex = selectedSceneIndex
+
+    }) => {
         const
             sceneCubesKey = getCubesKeyForScene(songIndex, sceneIndex),
             sceneLayers = getLayersForScene(songIndex, sceneIndex),
@@ -81,33 +32,51 @@ class SceneChangeUpdateDispatcher extends PureComponent {
             sceneSkySeason = getSkySeasonForScene(songIndex, sceneIndex)
 
         logTransition('Begin enter or update from scene change.')
-        this.props.updateEntranceStore({
+        dispatch(updateEntranceStore({
             ...isUpdate ? {
                 canSceneUpdate: true
             } : {
                 canSceneEnter: true
             }
-        })
+        }))
 
-        this.props.updateSceneStore({
+        dispatch(updateSceneStore({
             sceneCubesKey,
             sceneSongIndex: songIndex,
             sceneSceneIndex: sceneIndex,
             sceneLayers,
             sceneSkyTime,
             sceneSkySeason
+        }))
+    }
+
+    const dispatchCanSceneUpdate = () => {
+        logTransition('Scene can update.')
+
+        _dispatchCanSceneEnterOrUpdate({
+            isUpdate: true,
+            sceneIndex: -1
         })
     }
 
-    render() {
-        return null
-    }
-}
+    const dispatchCanSceneEnter = ({
+        songIndex,
+        sceneIndex
 
-export default connect(
-    mapStateToProps,
-    {
-        updateEntranceStore,
-        updateSceneStore
+    } = {}) => {
+        logTransition('Scene can enter.')
+
+        _dispatchCanSceneEnterOrUpdate({
+            songIndex,
+            sceneIndex
+        })
     }
-)(SceneChangeUpdateDispatcher)
+
+    useImperativeHandle(ref, () => ({
+        dispatchCanSceneUpdate,
+        dispatchCanSceneEnter
+    }))
+    return null
+})
+
+export default SceneChangeUpdateDispatcher

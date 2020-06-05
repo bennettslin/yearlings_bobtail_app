@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateLyricStore } from '../../../redux/lyric/action'
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
-import { populateRefs } from '../../../helpers/ref'
 import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 import {
     mapSelectedSongIndex,
@@ -128,13 +127,15 @@ class SongChangeUpdateListener extends PureComponent {
         this.dispatchCanSceneUpdate()
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getDispatchSceneChange = dispatch => {
+        if (dispatch) {
+            this.dispatchCanSceneUpdate = dispatch.dispatchCanSceneUpdate
+        }
     }
 
     render() {
         return (
-            <SceneChangeUpdateDispatcher {...{ getRefs: this._getRefs }} />
+            <SceneChangeUpdateDispatcher {...{ ref: this.getDispatchSceneChange }} />
         )
     }
 }
