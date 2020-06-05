@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from '../../modules/InlineSvg'
@@ -24,78 +24,72 @@ import { setSvgTransform } from './helper/transform'
 import { DEV_RENDER_ONLY_PRESENCES } from '../../constants/dev'
 import './style'
 
-export default class PresenceSvg extends PureComponent {
-    state = {
-        adjustedWidth: 0,
-        adjustedHeight: 0
-    }
+const PresenceSvg = ({
+    className,
+    cubesKey,
+    presenceType,
+    actorKey,
+    presenceKey,
+    showProcessedSvg,
+    children
 
-    getArrangement() {
-        const {
-            presenceType,
-            actorKey,
-            presenceKey
-        } = this.props
-
-        return getArrangementForPresence({
+}) => {
+    const
+        [adjustedWidth, setAdjustedWidth] = useState(0),
+        [adjustedHeight, setAdjustedHeight] = useState(0),
+        {
+            yIndex,
+            xPosition,
+            zOffset,
+            scaleFactor,
+            trimBottom,
+            flipHorizontal,
+            rotate,
+            skewX,
+            skewY,
+            rotateX,
+            rotateY,
+            noShadow,
+            perspective,
+            hide,
+            onlyOne
+        } = getArrangementForPresence({
             presenceType,
             presenceKey,
             actorKey
-        })
-    }
-
-    getSize({
-        viewBoxWidth,
-        viewBoxHeight
-    }) {
-        const
-            { presenceType } = this.props,
-            {
-                yIndex,
-                scaleFactor,
-                trimBottom
-            } = this.getArrangement()
-
-        return getSizeForPresence({
-            presenceType,
-            viewBoxWidth,
-            viewBoxHeight,
-            yIndex,
-            scaleFactor,
-            trimBottom
-        })
-    }
-
-    getXY() {
-        const
-            { cubesKey } = this.props,
-            {
-                yIndex,
-                xPosition,
-                zOffset
-            } = this.getArrangement()
-
-        return getXYForPresence({
+        }),
+        {
+            x: adjustedLeft,
+            y: adjustedTop
+        } = getXYForPresence({
             cubesKey,
             yIndex,
             xPosition,
             zOffset
+        }),
+        presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
+        duplicateKeyClassName =
+            presenceKey !== presenceKeyClassName &&
+            presenceKey,
+        sharedStyle = actorKey ?
+            getCompoundActorStyleIfNeeded(
+                actorKey,
+                getSharedStyleForActor({
+                    actorKey,
+                    presenceKey
+                })
+            ) :
+            getSharedStyleForThing({
+                presenceType,
+                presenceKey
+            }),
+        placedFront = getWirePlacedFront({
+            actorKey,
+            presenceType,
+            presenceKey
         })
-    }
 
-    preProcessSvg = (svgString) => {
-        // Set timeout to wait until next lifecycle before setting state.
-        setTimeout(this.setAdjustedSize.bind(null, svgString), 0)
-
-        // Add transform attributes.
-        return this.setSvgTransform(svgString)
-    }
-
-    postProcessSvg = () => {
-        this.props.showProcessedSvg()
-    }
-
-    setAdjustedSize = (svgString) => {
+    const setAdjustedSize = svgString => {
         try {
             const
                 {
@@ -103,35 +97,21 @@ export default class PresenceSvg extends PureComponent {
                     viewBoxHeight
                 } = getViewBoxSize(svgString),
                 {
-                    viewBoxWidth: prevViewBoxWidth,
-                    viewBoxHeight: prevViewBoxHeight
-                } = this.state
-            if (
-                viewBoxWidth !== prevViewBoxWidth ||
-                viewBoxHeight !== prevViewBoxHeight
-            ) {
-                const
-                    {
-                        adjustedWidth,
-                        adjustedHeight
-                    } = this.getSize({
-                        viewBoxWidth,
-                        viewBoxHeight
-                    })
-
-                this.setState({
                     adjustedWidth,
                     adjustedHeight
+                } = getSizeForPresence({
+                    presenceType,
+                    viewBoxWidth,
+                    viewBoxHeight,
+                    yIndex,
+                    scaleFactor,
+                    trimBottom
                 })
-            }
+
+            setAdjustedWidth(adjustedWidth)
+            setAdjustedHeight(adjustedHeight)
 
         } catch (error) {
-            const {
-                presenceType,
-                presenceKey,
-                actorKey
-            } = this.props
-
             logError({
                 log: 'Error parsing viewBox!',
                 action: 'parseSvg',
@@ -142,16 +122,11 @@ export default class PresenceSvg extends PureComponent {
         }
     }
 
-    setSvgTransform(svgString) {
-        const {
-            flipHorizontal,
-            rotate,
-            skewX,
-            skewY,
-            rotateX,
-            rotateY
-        } = this.getArrangement()
+    const preProcessSvg = (svgString) => {
+        // Set timeout to wait until next lifecycle before setting state.
+        setTimeout(setAdjustedSize.bind(null, svgString), 0)
 
+        // Add transform attributes.
         return setSvgTransform({
             svgString,
             flipHorizontal,
@@ -163,110 +138,55 @@ export default class PresenceSvg extends PureComponent {
         })
     }
 
-    getSharedStyle() {
-        const {
-            actorKey,
-            presenceType,
-            presenceKey
-        } = this.props
-
-        if (actorKey) {
-            return getCompoundActorStyleIfNeeded(
-                actorKey,
-                getSharedStyleForActor({
-                    actorKey,
-                    presenceKey
-                })
-            )
-        } else {
-            return getSharedStyleForThing({
-                presenceType,
-                presenceKey
-            })
-        }
-    }
-
-    render() {
-        const {
-                className,
-                actorKey,
-                presenceType,
-                presenceKey,
-                children
-            } = this.props,
-            {
-                noShadow,
-                perspective,
-                hide,
-                onlyOne
-            } = this.getArrangement(),
-            {
-                x: adjustedLeft,
-                y: adjustedTop
-            } = this.getXY(),
-            {
-                adjustedWidth,
-                adjustedHeight
-            } = this.state,
-            presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
-            sharedStyle = this.getSharedStyle(),
-            duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey,
-            placedFront = getWirePlacedFront({
-                actorKey,
-                presenceType,
-                presenceKey
-            })
-
-        return (Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && !hide && (
-            <InlineSvg
-                {...{
-                    className: cx(
-                        'PresenceSvg',
-                        'PresenceSvg__position',
-                        noShadow && 'Presence__noShadow',
-                        className
-                    ),
-                    style: {
-                        left: `${adjustedLeft.toFixed(2)}%`,
-                        top: `${adjustedTop.toFixed(2)}%`,
-                        width: `${adjustedWidth.toFixed(2)}%`,
-                        height: `${adjustedHeight.toFixed(2)}%`,
-                        ...perspective && {
-                            perspective: `${perspective}em`
-                        }
-                    },
-                    svgClassName: cx(
-                        presenceKeyClassName,
-                        duplicateKeyClassName,
-                        getSharedClassNames(sharedStyle)
-                    ),
-                    title: convertPresenceKeyToTitle(presenceKey),
-                    preProcessor: this.preProcessSvg,
-                    onLoad: this.postProcessSvg,
-
-                    // If it's null, then there is no wire.
-                    ...typeof placedFront === 'boolean' && {
-                        siblingPlacedFront: placedFront,
-                        siblingComponent: (
-                            <Wires
-                                {...{
-                                    actorKey,
-                                    presenceType,
-                                    presenceKey,
-                                    adjustedTop,
-                                    adjustedLeft,
-                                    adjustedWidth,
-                                    adjustedHeight
-                                }}
-                            />
-                        )
+    return (Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && !hide && (
+        <InlineSvg
+            {...{
+                className: cx(
+                    'PresenceSvg',
+                    'PresenceSvg__position',
+                    noShadow && 'Presence__noShadow',
+                    className
+                ),
+                style: {
+                    left: `${adjustedLeft.toFixed(2)}%`,
+                    top: `${adjustedTop.toFixed(2)}%`,
+                    width: `${adjustedWidth.toFixed(2)}%`,
+                    height: `${adjustedHeight.toFixed(2)}%`,
+                    ...perspective && {
+                        perspective: `${perspective}em`
                     }
-                }}
-            >
-                {children}
-            </InlineSvg>
-        )
-    }
+                },
+                svgClassName: cx(
+                    presenceKeyClassName,
+                    duplicateKeyClassName,
+                    getSharedClassNames(sharedStyle)
+                ),
+                title: convertPresenceKeyToTitle(presenceKey),
+                preProcessor: preProcessSvg,
+                onLoad: showProcessedSvg,
+
+                // If it's null, then there is no wire.
+                ...typeof placedFront === 'boolean' && {
+                    siblingPlacedFront: placedFront,
+                    siblingComponent: (
+                        <Wires
+                            {...{
+                                actorKey,
+                                presenceType,
+                                presenceKey,
+                                adjustedTop,
+                                adjustedLeft,
+                                adjustedWidth,
+                                adjustedHeight
+                            }}
+                        />
+                    )
+                }
+            }}
+        >
+            {children}
+        </InlineSvg>
+    )
 }
 
 PresenceSvg.propTypes = {
@@ -278,3 +198,5 @@ PresenceSvg.propTypes = {
     showProcessedSvg: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired
 }
+
+export default memo(PresenceSvg)

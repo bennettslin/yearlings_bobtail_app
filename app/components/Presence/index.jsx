@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { useEffect, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -92,4 +93,4 @@ Presence.propTypes = {
     existenceValue: PropTypes.bool.isRequired
 }
 
-export default Presence
+export default memo(Presence)
