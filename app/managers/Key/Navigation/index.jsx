@@ -14,7 +14,7 @@ import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
-import { mapSelectedWikiIndex } from '../../../redux/session/selectors'
+import { mapIsWikiShown } from '../../../redux/session/selectors'
 import {
     mapIsNavShown,
     mapIsDotsSlideShown,
@@ -28,7 +28,7 @@ const mapStateToProps = state => {
         isHeightlessLyric = mapIsHeightlessLyric(state),
         selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state),
-        selectedWikiIndex = mapSelectedWikiIndex(state),
+        isWikiShown = mapIsWikiShown(state),
         isNavShown = mapIsNavShown(state),
         isDotsSlideShown = mapIsDotsSlideShown(state),
         isLyricExpanded = mapIsLyricExpanded(state),
@@ -39,7 +39,7 @@ const mapStateToProps = state => {
         isLyricExpanded,
         activatedVerseIndex,
         isScoreShown,
-        selectedWikiIndex,
+        isWikiShown,
         isSelectedLogue,
         selectedAnnotationIndex,
         isDotsSlideShown,
@@ -55,7 +55,7 @@ class NavigationManager extends PureComponent {
         isLyricExpanded: PropTypes.bool.isRequired,
         activatedVerseIndex: PropTypes.number.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
-        selectedWikiIndex: PropTypes.number.isRequired,
+        isWikiShown: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
@@ -78,7 +78,7 @@ class NavigationManager extends PureComponent {
                 isLyricExpanded,
                 activatedVerseIndex,
                 isScoreShown,
-                selectedWikiIndex,
+                isWikiShown,
                 isSelectedLogue,
                 selectedAnnotationIndex,
                 isDotsSlideShown,
@@ -90,7 +90,7 @@ class NavigationManager extends PureComponent {
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
-        if (!isSelectedLogue && !isScoreShown && !selectedWikiIndex) {
+        if (!isSelectedLogue && !isScoreShown && !isWikiShown) {
 
             // We're selecting the activated verse.
             if (isVerseActivated && keyName === ENTER) {

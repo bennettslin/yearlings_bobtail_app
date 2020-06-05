@@ -53,13 +53,13 @@ export const getIsOverlayShown = ({
     lyricAnnotationIndex,
     isScoreShown,
     isAboutShown,
-    selectedWikiIndex
+    isWikiShown
 
 }) => {
     return (
         isAboutShown ||
         isScoreShown ||
-        Boolean(selectedWikiIndex) ||
+        isWikiShown ||
         (
             Boolean(lyricAnnotationIndex) &&
             isOverlayingAnnotation

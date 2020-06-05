@@ -17,15 +17,3 @@ export const mapSceneSongIndex = (
 export const mapSceneSceneIndex = (
     { sceneStore: { sceneSceneIndex } }
 ) => sceneSceneIndex
-
-// import {
-//     mapLyricSongIndex,
-//     mapLyricVerseIndex,
-//     mapLyricAnnotationIndex,
-//     mapIsLyricLogue
-// } from '../../../redux/scene/selectors'
-
-// lyricSongIndex = mapLyricSongIndex(state),
-// lyricVerseIndex = mapLyricVerseIndex(state),
-// lyricAnnotationIndex = mapLyricAnnotationIndex(state),
-// isLyricLogue = mapIsLyricLogue(state)

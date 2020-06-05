@@ -53,7 +53,7 @@ const DotsSlideNavigation = forwardRef((props, ref) => {
                     }
                     break
                 case ENTER:
-                    dispatchSelectDot(accessedDotIndex)
+                    dispatchSelectDot.current.dispatchSelectDot(accessedDotIndex)
                     return true
                 default:
                     return false

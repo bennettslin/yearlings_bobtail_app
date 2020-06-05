@@ -14,9 +14,14 @@ export const mapAudioOptionIndex = (
     { sessionStore: { audioOptionIndex } }
 ) => audioOptionIndex
 
-export const mapSelectedWikiIndex = (
+const mapSelectedWikiIndex = (
     { sessionStore: { selectedWikiIndex } }
 ) => selectedWikiIndex
+
+export const mapIsWikiShown = createSelector(
+    mapSelectedWikiIndex,
+    selectedWikiIndex => Boolean(selectedWikiIndex)
+)
 
 const mapCarouselAnnotationIndex = (
     { sessionStore: { carouselAnnotationIndex } }

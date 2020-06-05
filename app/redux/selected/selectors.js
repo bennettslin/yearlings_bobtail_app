@@ -10,6 +10,10 @@ export const mapSelectedAnnotationIndex = (
     { selectedStore: { selectedAnnotationIndex } }
 ) => selectedAnnotationIndex
 
+export const mapIsAnnotationShown = (
+    { selectedStore: { selectedAnnotationIndex } }
+) => Boolean(selectedAnnotationIndex)
+
 export const mapSelectedSceneIndex = (
     { selectedStore: { selectedSceneIndex } }
 ) => selectedSceneIndex

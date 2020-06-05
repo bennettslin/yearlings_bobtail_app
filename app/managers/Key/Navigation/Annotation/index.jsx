@@ -58,12 +58,8 @@ class AnnotationNavigation extends PureComponent {
         })
     }
 
-    getDispatchWiki = dispatch => {
-        this.dispatchWiki = dispatch
-    }
-
     navigateAnnotation = (keyName) => {
-        let { accessedWikiWormholeIndex } = this.props,
+        let nextWikiWormholeIndex = this.props.accessedWikiWormholeIndex,
             annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
@@ -94,14 +90,14 @@ class AnnotationNavigation extends PureComponent {
                     wikiWormholeEntity = getWikiWormholeEntity(
                         selectedSongIndex,
                         selectedAnnotationIndex,
-                        accessedWikiWormholeIndex
+                        nextWikiWormholeIndex
                     )
 
-                if (accessedWikiWormholeIndex && wikiWormholeEntity) {
+                if (nextWikiWormholeIndex && wikiWormholeEntity) {
 
                     // It's a wiki anchor.
                     if (isString(wikiWormholeEntity)) {
-                        this.dispatchWiki(accessedWikiWormholeIndex)
+                        this.dispatchWiki(nextWikiWormholeIndex)
 
                     // It's a wormhole index.
                     } else {
@@ -147,6 +143,10 @@ class AnnotationNavigation extends PureComponent {
 
     getDispatchSong = dispatch => {
         this.dispatchSong = dispatch
+    }
+
+    getDispatchWiki = dispatch => {
+        this.dispatchWiki = dispatch
     }
 
     render() {

@@ -25,17 +25,6 @@ import { DEV_RENDER_ONLY_PRESENCES } from '../../constants/dev'
 import './style'
 
 export default class PresenceSvg extends PureComponent {
-    static propTypes = {
-        // From parent.
-        className: PropTypes.string,
-        cubesKey: PropTypes.string.isRequired,
-        presenceType: PropTypes.string.isRequired,
-        actorKey: PropTypes.string,
-        presenceKey: PropTypes.string.isRequired,
-        showProcessedSvg: PropTypes.func.isRequired,
-        children: PropTypes.node.isRequired
-    }
-
     state = {
         adjustedWidth: 0,
         adjustedHeight: 0
@@ -278,4 +267,14 @@ export default class PresenceSvg extends PureComponent {
             </InlineSvg>
         )
     }
+}
+
+PresenceSvg.propTypes = {
+    className: PropTypes.string,
+    cubesKey: PropTypes.string.isRequired,
+    presenceType: PropTypes.string.isRequired,
+    actorKey: PropTypes.string,
+    presenceKey: PropTypes.string.isRequired,
+    showProcessedSvg: PropTypes.func.isRequired,
+    children: PropTypes.node.isRequired
 }

@@ -171,6 +171,10 @@ class FocusContainer extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getCloseForBodyClick = dispatch => {
+        this.closeForBodyClick = dispatch
+    }
+
     getDispatchSliderTouch = dispatch => {
         if (dispatch) {
             this.dispatchTouchMove = dispatch.dispatchTouchMove
@@ -206,7 +210,7 @@ class FocusContainer extends PureComponent {
                     onTouchCancel: this._handleTouchEnd
                 }}
             >
-                <CloseHandler {...{ getRefs: this._getRefs }} />
+                <CloseHandler {...{ ref: this.getCloseForBodyClick }} />
                 <RootContainer
                     {...{ setLyricFocusElement: this.setLyricFocusElement }}
                 />

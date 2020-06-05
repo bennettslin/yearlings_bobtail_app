@@ -23,14 +23,10 @@ export const mapIsSongShownOverview = (
 
 export const mapIsOverviewShown = createSelector(
     mapSelectedOverviewOption,
-    (
-        selectedOverviewOption
-    ) => getIsShown(selectedOverviewOption)
+    selectedOverviewOption => getIsShown(selectedOverviewOption)
 )
 
 export const mapIsTipsShown = createSelector(
     mapSelectedTipsOption,
-    (
-        selectedTipsOption
-    ) => getIsShown(selectedTipsOption)
+    selectedTipsOption => getIsShown(selectedTipsOption)
 )

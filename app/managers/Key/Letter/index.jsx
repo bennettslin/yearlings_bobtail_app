@@ -49,7 +49,7 @@ import {
     mapSelectedTipsOption
 } from '../../../redux/option/selectors'
 import { mapSelectedAnnotationIndex } from '../../../redux/selected/selectors'
-import { mapSelectedWikiIndex } from '../../../redux/session/selectors'
+import { mapIsWikiShown } from '../../../redux/session/selectors'
 import {
     mapIsNavShown,
     mapIsDotsSlideShown,
@@ -63,7 +63,7 @@ const mapStateToProps = state => {
         selectedOverviewOption = mapSelectedOverviewOption(state),
         selectedTipsOption = mapSelectedTipsOption(state),
         selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
-        selectedWikiIndex = mapSelectedWikiIndex(state),
+        isWikiShown = mapIsWikiShown(state),
         isNavShown = mapIsNavShown(state),
         isDotsSlideShown = mapIsDotsSlideShown(state),
         isLyricExpanded = mapIsLyricExpanded(state),
@@ -79,7 +79,7 @@ const mapStateToProps = state => {
         selectedAnnotationIndex,
         selectedOverviewOption,
         selectedTipsOption,
-        selectedWikiIndex
+        isWikiShown
     }
 }
 
@@ -95,7 +95,7 @@ class LetterManager extends PureComponent {
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
-        selectedWikiIndex: PropTypes.number.isRequired,
+        isWikiShown: PropTypes.bool.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
         updateActivatedStore: PropTypes.func.isRequired,
@@ -199,7 +199,7 @@ class LetterManager extends PureComponent {
             this.dispatchAbout(false)
 
         // Close wiki popup.
-        } else if (this.props.selectedWikiIndex) {
+        } else if (this.props.isWikiShown) {
             this.props.resetWiki()
 
         // Close tips popup.

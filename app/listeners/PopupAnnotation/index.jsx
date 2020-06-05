@@ -7,7 +7,7 @@ import { mapLyricAnnotationIndex } from '../../redux/lyric/selectors'
 import { updateTransientStore } from '../../redux/transient/action'
 import { mapCanCarouselMount } from '../../redux/mount/selectors'
 import { mapIsOverlayingAnnotation } from '../../redux/transient/selectors'
-import { mapSelectedWikiIndex } from '../../redux/session/selectors'
+import { mapIsWikiShown } from '../../redux/session/selectors'
 import {
     mapIsCarouselShown,
     mapIsScoreShown,
@@ -21,7 +21,7 @@ const mapStateToProps = state => {
         lyricAnnotationIndex = mapLyricAnnotationIndex(state),
         canCarouselMount = mapCanCarouselMount(state),
         isOverlayingAnnotation = mapIsOverlayingAnnotation(state),
-        selectedWikiIndex = mapSelectedWikiIndex(state),
+        isWikiShown = mapIsWikiShown(state),
         isCarouselShown = mapIsCarouselShown(state),
         isScoreShown = mapIsScoreShown(state),
         isAboutShown = mapIsAboutShown(state)
@@ -34,7 +34,7 @@ const mapStateToProps = state => {
         isOverlayingAnnotation,
         canLyricCarouselEnter,
         lyricAnnotationIndex,
-        selectedWikiIndex
+        isWikiShown
     }
 }
 
@@ -49,7 +49,7 @@ class PopupAnnotationListener extends PureComponent {
         isCarouselShown: PropTypes.bool.isRequired,
         canCarouselMount: PropTypes.bool.isRequired,
         isOverlayingAnnotation: PropTypes.bool.isRequired,
-        selectedWikiIndex: PropTypes.number.isRequired,
+        isWikiShown: PropTypes.bool.isRequired,
         updateTransientStore: PropTypes.func.isRequired
     }
 
@@ -67,7 +67,7 @@ class PopupAnnotationListener extends PureComponent {
                 isCarouselShown,
                 canCarouselMount,
                 isOverlayingAnnotation,
-                selectedWikiIndex
+                isWikiShown
             } = this.props,
 
             isPopupAnnotationVisible =
@@ -90,7 +90,7 @@ class PopupAnnotationListener extends PureComponent {
                  */
                 !isScoreShown &&
                 !isAboutShown &&
-                !selectedWikiIndex
+                !isWikiShown
 
         // TODO: Move this into selector.
         this.props.updateTransientStore({ isPopupAnnotationVisible })

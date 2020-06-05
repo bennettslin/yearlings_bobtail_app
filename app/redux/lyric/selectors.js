@@ -19,9 +19,7 @@ export const mapIsLyricLogue = (
 export const mapIsSelectedLyricAnnotation = annotationIndex => (
     createSelector(
         mapLyricAnnotationIndex,
-        (
-            lyricAnnotationIndex
-        ) => (
+        lyricAnnotationIndex => (
             lyricAnnotationIndex === annotationIndex
         )
     )

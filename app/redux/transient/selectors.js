@@ -23,7 +23,7 @@ import {
     mapIsOverviewShown,
     mapIsTipsShown
 } from '../option/selectors'
-import { mapSelectedWikiIndex } from '../session/selectors'
+import { mapIsWikiShown } from '../session/selectors'
 import {
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
@@ -92,19 +92,19 @@ export const mapIsOverlayShown = createSelector(
     mapLyricAnnotationIndex,
     mapIsScoreShown,
     mapIsAboutShown,
-    mapSelectedWikiIndex,
+    mapIsWikiShown,
     (
         isOverlayingAnnotation,
         lyricAnnotationIndex,
         isScoreShown,
         isAboutShown,
-        selectedWikiIndex
+        isWikiShown
     ) => getIsOverlayShown({
         isOverlayingAnnotation,
         lyricAnnotationIndex,
         isScoreShown,
         isAboutShown,
-        selectedWikiIndex
+        isWikiShown
     })
 )
 

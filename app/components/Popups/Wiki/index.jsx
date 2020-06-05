@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
 import { resetWiki } from '../../../redux/session/action'
-import { mapSelectedWikiIndex } from '../../../redux/session/selectors'
+import { mapIsWikiShown } from '../../../redux/session/selectors'
 
 const WikiPopup = () => {
     const
         dispatch = useDispatch(),
-        selectedWikiIndex = useSelector(mapSelectedWikiIndex)
+        isWikiShown = useSelector(mapIsWikiShown)
 
     const handleCloseClick = () => {
         dispatch(resetWiki())
@@ -24,7 +24,7 @@ const WikiPopup = () => {
             isFullWidth
             isFullHeight
             {...{
-                isVisible: Boolean(selectedWikiIndex),
+                isVisible: isWikiShown,
                 popupName: 'WikiPopup',
                 handleCloseClick
             }}

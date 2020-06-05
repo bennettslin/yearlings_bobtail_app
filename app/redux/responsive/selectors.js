@@ -39,16 +39,12 @@ export const mapIsMobileWiki = createSelector(
 
 export const mapIsLyricExpandable = createSelector(
     mapDeviceWidthIndex,
-    (
-        deviceWidthIndex
-    ) => getIsLyricExpandable(deviceWidthIndex)
+    deviceWidthIndex => getIsLyricExpandable(deviceWidthIndex)
 )
 
 export const mapIsSmallBannerText = createSelector(
     mapWindowWidth,
-    (
-        windowWidth
-    ) => getIsSmallBannerText(windowWidth)
+    windowWidth => getIsSmallBannerText(windowWidth)
 )
 
 export const mapShowShrunkNavIcon = createSelector(
