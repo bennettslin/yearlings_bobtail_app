@@ -20,7 +20,6 @@ import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
 import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
 import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
-import { populateRefs } from '../../../helpers/ref'
 import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY,
@@ -233,10 +232,6 @@ class LetterManager extends PureComponent {
         }
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
     getActivateSceneDirection = dispatch => {
         this.activateSceneDirection = dispatch
     }
@@ -275,6 +270,10 @@ class LetterManager extends PureComponent {
         this.dispatchOverview = dispatch
     }
 
+    getDispatchPlay = dispatch => {
+        this.dispatchPlay = dispatch
+    }
+
     getDispatchScore = dispatch => {
         this.dispatchScore = dispatch
     }
@@ -305,7 +304,7 @@ class LetterManager extends PureComponent {
                 <ActivatedVerseDispatcher {...{ ref: this.getActivateVerse }} />
                 <LyricDispatcher {...{ ref: this.getDispatchLyricExpand }} />
                 <OverviewDispatcher {...{ ref: this.getDispatchOverview }} />
-                <PlayDispatcher {...{ getRefs: this._getRefs }} />
+                <PlayDispatcher {...{ ref: this.getDispatchPlay }} />
                 <ScrollVerseDispatcher {...{ ref: this.getDispatchScrollVerse }} />
                 <SongDispatcher {...{ ref: this.getDispatchSong }} />
                 <TipsDispatcher {...{ ref: this.getDispatchTips }} />

@@ -21,7 +21,6 @@ import {
     AUDIO_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
 import { getSongsAndLoguesCount } from '../../api/album/songs'
-import { populateRefs } from '../../helpers/ref'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { mapIsPlaying } from '../../redux/audio/selectors'
 import { mapIsTwoRowMenu } from '../../redux/responsive/selectors'
@@ -155,12 +154,12 @@ class Audio extends PureComponent {
         )
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
     getDispatchAudioOption = dispatch => {
         this.dispatchAudioOption = dispatch
+    }
+
+    getDispatchPlay = dispatch => {
+        this.dispatchPlay = dispatch
     }
 
     getDispatchSong = dispatch => {
@@ -223,7 +222,7 @@ class Audio extends PureComponent {
                 <AudioOptionDispatcher
                     {...{ ref: this.getDispatchAudioOption }}
                 />
-                <PlayDispatcher {...{ getRefs: this._getRefs }} />
+                <PlayDispatcher {...{ ref: this.getDispatchPlay }} />
                 <SongDispatcher {...{ ref: this.getDispatchSong }} />
             </div>
         )

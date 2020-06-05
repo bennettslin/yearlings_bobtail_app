@@ -1,8 +1,6 @@
-// Child that knows rules to toggle admin.
-
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateAudioStore } from '../../redux/audio/action'
 import SongDispatcher from '../../handlers/Song/Dispatcher'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
@@ -13,59 +11,28 @@ import {
     mapIsSelectedLogue
 } from '../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const PlayDispatcher = forwardRef((props, ref) => {
     const
-        isPlaying = mapIsPlaying(state),
-        playersBitNumber = mapPlayersBitNumber(state),
-        selectedSongIndex = mapSelectedSongIndex(state),
-        isSelectedLogue = mapIsSelectedLogue(state)
+        dispatch = useDispatch(),
+        dispatchSong = useRef(),
+        isPlaying = useSelector(mapIsPlaying),
+        playersBitNumber = useSelector(mapPlayersBitNumber),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        isSelectedLogue = useSelector(mapIsSelectedLogue)
 
-    return {
-        isPlaying,
-        playersBitNumber,
-        selectedSongIndex,
-        isSelectedLogue
-    }
-}
-
-class PlayDispatcher extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isPlaying: PropTypes.bool.isRequired,
-        playersBitNumber: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
-        updateAudioStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            dispatchPlay: this.dispatchPlay
+    const dispatchPlay = (nextIsPlaying = !isPlaying) => {
+        // TODO: Make this a selector
+        const playerCanPlayThrough = getPlayerCanPlayThroughFromBit({
+            songIndex: selectedSongIndex,
+            playersBitNumber
         })
-    }
-
-    dispatchPlay = (isPlaying = !this.props.isPlaying) => {
-        const {
-                selectedSongIndex,
-                isSelectedLogue,
-                playersBitNumber
-            } = this.props,
-
-            playerCanPlayThrough = getPlayerCanPlayThroughFromBit({
-                songIndex: selectedSongIndex,
-                playersBitNumber
-            })
 
         // Do not toggle play if player is not ready to play through.
         if (!playerCanPlayThrough) {
             return false
         }
 
-        const isPlayFromLogue = isSelectedLogue && isPlaying
+        const isPlayFromLogue = isSelectedLogue && nextIsPlaying
 
         /**
          * Select first song if play button in logue is toggled on. In order
@@ -73,30 +40,22 @@ class PlayDispatcher extends PureComponent {
          * handler send queued event to toggle play.
          */
         if (isPlayFromLogue) {
-            this.dispatchSong({
+            dispatchSong.current({
                 isPlayFromLogue: true,
                 selectedSongIndex: 1
             })
 
         } else {
-            this.props.updateAudioStore({ queuedTogglePlay: true })
+            dispatch(updateAudioStore({ queuedTogglePlay: true }))
         }
 
         return true
     }
 
-    getDispatchSong = dispatch => {
-        this.dispatchSong = dispatch
-    }
+    useImperativeHandle(ref, () => dispatchPlay)
+    return (
+        <SongDispatcher {...{ ref: dispatchSong }} />
+    )
+})
 
-    render() {
-        return (
-            <SongDispatcher {...{ ref: this.getDispatchSong }} />
-        )
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    { updateAudioStore }
-)(PlayDispatcher)
+export default PlayDispatcher
