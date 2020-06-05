@@ -28,22 +28,20 @@ const LayersThing = ({
     [PANEL]: panels,
     [PUPPET]: puppets
 
-}) => {
-    return (
-        <>
-            <Layer {...backdrops} {...{ presenceType: BACKDROP }} />
-            <Layer {...flats} {...{ presenceType: FLAT }} />
-            <Layer {...doors} {...{ presenceType: DOOR }} />
-            <Layer {...cutouts} {...{ presenceType: CUTOUT }} />
-            <Layer {...panels} {...{ presenceType: PANEL }} />
-            <Layer {...furnitures} {...{ presenceType: FURNITURE }} />
-            <Layer {...fixtures} {...{ presenceType: FIXTURE }} />
-            <Layer {...puppets} {...{ presenceType: PUPPET }} />
-            <Layer {...bubbles} {...{ presenceType: BUBBLE }} />
-            <Layer {...cardboards} {...{ presenceType: CARDBOARD }} />
-        </>
-    )
-}
+}) => (
+    <>
+        <Layer {...{ ...backdrops, presenceType: BACKDROP }} />
+        <Layer {...{ ...flats, presenceType: FLAT }} />
+        <Layer {...{ ...doors, presenceType: DOOR }} />
+        <Layer {...{ ...cutouts, presenceType: CUTOUT }} />
+        <Layer {...{ ...panels, presenceType: PANEL }} />
+        <Layer {...{ ...furnitures, presenceType: FURNITURE }} />
+        <Layer {...{ ...fixtures, presenceType: FIXTURE }} />
+        <Layer {...{ ...puppets, presenceType: PUPPET }} />
+        <Layer {...{ ...bubbles, presenceType: BUBBLE }} />
+        <Layer {...{ ...cardboards, presenceType: CARDBOARD }} />
+    </>
+)
 
 LayersThing.propTypes = {
     [BACKDROP]: PropTypes.object,
