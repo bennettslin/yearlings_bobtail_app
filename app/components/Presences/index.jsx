@@ -1,85 +1,57 @@
-import React, { PureComponent } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
-
+import { useSelector } from 'react-redux'
 import LayersActor from './LayersActor'
 import LayersThing from './LayersThing'
-
 import { getLayerForScene } from '../../api/album/scenes'
-import { CUBE_Y_INDICES_WITH_NEG } from '../../constants/cubeIndex'
-
+import {
+    mapSceneSongIndex,
+    mapSceneSceneIndex
+} from '../../redux/scene/selectors'
 import { ACTOR } from '../../constants/scene'
 
-const getMapStateToProps = (yIndex) => ({
-    sceneStore: {
-        sceneSongIndex,
-        sceneSceneIndex
-    }
-}) => ({
-    sceneSongIndex,
-    sceneSceneIndex,
-    yIndex
-})
+const Presences = ({ yIndex }) => {
+    const
+        sceneSongIndex = useSelector(mapSceneSongIndex),
+        sceneSceneIndex = useSelector(mapSceneSceneIndex),
+        sceneLayer = getLayerForScene(
+            sceneSongIndex,
+            sceneSceneIndex,
+            yIndex
+        )
 
-const PresencesConfig = {}
-
-class Presences extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        sceneSongIndex: PropTypes.number.isRequired,
-        sceneSceneIndex: PropTypes.number.isRequired,
-
-        // From this parent.
-        yIndex: PropTypes.number.isRequired
-    }
-
-    render() {
+    // If this layer has no presences, just don't render it at all.
+    if (sceneLayer) {
         const {
-                sceneSongIndex,
-                sceneSceneIndex,
-                yIndex
-            } = this.props,
+            [ACTOR]: actors,
+            ...rest
+        } = sceneLayer
 
-            sceneLayer = getLayerForScene(
-                sceneSongIndex,
-                sceneSceneIndex,
-                yIndex
-            )
+        return (
+            <div
+                {...{
+                    className: cx(
+                        'Presences',
+                        `y${yIndex}`,
+                        'abF'
+                    )
+                }}
+            >
+                <LayersThing {...rest} />
 
-        // If this layer has no presences, just don't render it at all.
-        if (sceneLayer) {
-            const {
-                [ACTOR]: actors,
-                ...rest
-            } = sceneLayer
+                {/* Each individual actor has their own layer. */}
+                <LayersActor {...actors} />
+            </div>
+        )
 
-            return (
-                <div
-                    {...{
-                        className: cx(
-                            'Presences',
-                            `y${yIndex}`,
-                            'abF'
-                        )
-                    }}
-                >
-                    <LayersThing {...rest} />
-
-                    {/* Each individual actor has their own layer. */}
-                    <LayersActor {...actors} />
-                </div>
-            )
-
-        } else {
-            return null
-        }
+    } else {
+        return null
     }
 }
 
-CUBE_Y_INDICES_WITH_NEG.forEach(yIndex => {
-    PresencesConfig[yIndex] = connect(getMapStateToProps(yIndex))(Presences)
-})
+Presences.propTypes = {
+    yIndex: PropTypes.number.isRequired
+}
 
-export default PresencesConfig
+export default memo(Presences)

@@ -35,11 +35,11 @@ const Presence = ({
     }
 
     useEffect(() => {
-        setIsTransitionVisible(Boolean(existenceValue))
+        setIsTransitionVisible(existenceValue)
     }, [])
 
     useEffect(() => {
-        setIsTransitionVisible(Boolean(existenceValue))
+        setIsTransitionVisible(existenceValue)
 
         if (!existenceValue) {
             setIsSvgLoaded(false)

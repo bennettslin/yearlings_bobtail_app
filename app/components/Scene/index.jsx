@@ -5,8 +5,8 @@ import { updateEntranceStore } from '../../redux/entrance/action'
 import { mapCanSceneUpdate } from '../../redux/entrance/selectors'
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
-import PresencesConfig from '../Presences'
-import { CUBE_Y_INDICES_WITH_NEG } from '../../constants/cubeIndex'
+import Presences from '../Presences'
+import { CUBE_Y_INDICES } from '../../constants/cubeIndex'
 
 const Scene = () => {
     const
@@ -35,17 +35,13 @@ const Scene = () => {
                     'abF'
                 )}
             >
-                {CUBE_Y_INDICES_WITH_NEG.map(yIndex => {
-                    const Presences = PresencesConfig[yIndex]
-                    return (
-                        <___ {...{ key: yIndex }}>
-                            {yIndex > -1 && (
-                                <Cubes {...{ yIndex }} />
-                            )}
-                            <Presences />
-                        </___>
-                    )
-                })}
+                <Presences {...{ yIndex: -1 }} />
+                {CUBE_Y_INDICES.map(yIndex => (
+                    <___ {...{ key: yIndex }}>
+                        <Cubes {...{ yIndex }} />
+                        <Presences {...{ yIndex }} />
+                    </___>
+                ))}
             </div>
         </Transition>
     )

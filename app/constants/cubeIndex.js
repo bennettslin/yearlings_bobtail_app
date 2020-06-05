@@ -10,7 +10,6 @@ export const BITMAP_MATRIX_INDICES = getArrayOfLength(BITMAP_MATRIX_LENGTH)
 
 export const CUBE_X_INDICES = getArrayOfLength(CUBE_X_AXIS_LENGTH)
 export const CUBE_Y_INDICES = getArrayOfLength(CUBE_Y_AXIS_LENGTH)
-export const CUBE_Y_INDICES_WITH_NEG = [-1].concat(CUBE_Y_INDICES)
 
 // Bottom and top for each zIndex, plus above base for ceiling.
 export const CUBE_Z_INDICES = getArrayOfLength(CUBE_Z_AXIS_LENGTH + 1).concat(k)
