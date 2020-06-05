@@ -4764,5 +4764,9 @@ export default [
     {
         taskName: `What can be removed from data? Just got rid of all annotation todos. Keeping anchors as is, at least for now.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix AnnotationWormhole breakage.`,
+        workedHours: 2
     }
 ]

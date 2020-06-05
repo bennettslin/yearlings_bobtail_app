@@ -5,7 +5,6 @@
 * Move svg folder to components that use them.
 
 # Bugs
-* Pompous to pampas always breaks.
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.
 * Stage dimensions act like two row menu in mobile, even when not?

@@ -1,8 +1,8 @@
 // Component to show individual wormhole in wormholes block.
-import React, { PureComponent } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import SongDispatcher from '../../../../../handlers/Song/Dispatcher'
 import Texts from '../../../../Texts'
 import Button from '../../../../Button'
@@ -18,117 +18,90 @@ import { getWormholeLinkForWormhole } from '../../../../../api/album/wormholes'
 import { getVerse } from '../../../../../api/album/verses'
 import { mapLyricSongIndex } from '../../../../../redux/lyric/selectors'
 
-const mapStateToProps = state => {
-    const lyricSongIndex = mapLyricSongIndex(state)
+const AnnotationWormhole = ({
+    isAccessedShown,
+    annotationIndex,
+    wormholeLinkIndex
 
-    return {
-        lyricSongIndex
-    }
-}
-
-class AnnotationWormhole extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        isAccessedShown: PropTypes.bool.isRequired,
-        annotationIndex: PropTypes.number.isRequired,
-        wormholeLinkIndex: PropTypes.number.isRequired
-    }
-
-    _getWormholeLink() {
-        const {
+}) => {
+    const
+        dispatchSong = useRef(),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        wormholeLink = getWormholeLinkForWormhole(
             lyricSongIndex,
             annotationIndex,
             wormholeLinkIndex
-        } = this.props
+        ),
+        {
+            selectedSongIndex: wormholeSongIndex,
+            selectedAnnotationIndex: wormholeAnnotationIndex,
+            selectedVerseIndex: wormholeVerseIndex,
+            earColumnIndex: wormholeColumnIndex,
 
-        return getWormholeLinkForWormhole(
-            lyricSongIndex,
-            annotationIndex,
-            wormholeLinkIndex
-        )
+            // Default if no wormhole prefix.
+            wormholePrefix = 'wormhole to'
+        } = wormholeLink,
+
+        songTitle = getIndexedTitleForSong(wormholeSongIndex),
+        verseObject = getVerse(wormholeSongIndex, wormholeVerseIndex),
+        columnKey = EAR_COLUMN_KEYS[wormholeColumnIndex],
+        text =
+            verseObject[LYRIC] ||
+            verseObject[LYRIC_CENTRE] ||
+            verseObject[columnKey]
+
+    const handleButtonClick = () => {
+        dispatchSong.current(wormholeLink)
     }
 
-    _handleWormholeClick = () => {
-        this.dispatchSong(this._getWormholeLink())
-    }
+    return (
+        <div className="AnnotationWormhole">
 
-    getDispatchSong = dispatch => {
-        this.dispatchSong = dispatch
-    }
-
-    render() {
-        const { isAccessedShown } = this.props,
-
-            // TODO: All this logic should live in a separate component.
-            {
-                selectedSongIndex: songIndex,
-                selectedAnnotationIndex: annotationIndex,
-                selectedVerseIndex: verseIndex,
-                earColumnIndex: columnIndex,
-
-                // Default if no wormhole prefix.
-                wormholePrefix = 'wormhole to'
-            } = this._getWormholeLink(),
-
-            songTitle = getIndexedTitleForSong(songIndex),
-
-            verseObject = getVerse(songIndex, verseIndex)
-
-        const
-            columnKey = EAR_COLUMN_KEYS[columnIndex],
-
-            text =
-                verseObject[LYRIC] ||
-                verseObject[LYRIC_CENTRE] ||
-                verseObject[columnKey]
-
-        return (
-            <div className="AnnotationWormhole">
-
-                {/* Wrap button so it won't get squished if text wraps. */}
-                <div
+            {/* Wrap button so it won't get squished if text wraps. */}
+            <div
+                {...{
+                    className: cx(
+                        'AnnotationWormhole__button'
+                    )
+                }}
+            >
+                <Button
+                    isBrightHover
                     {...{
-                        className: cx(
-                            'AnnotationWormhole__button'
-                        )
+                        accessKey: ENTER,
+                        isAccessed: isAccessedShown,
+                        buttonName: WORMHOLE_BUTTON_KEY,
+                        handleButtonClick
                     }}
-                >
-                    <Button
-                        isBrightHover
+                />
+            </div>
+
+            <div className="AnnotationWormhole__text">
+                <div className="AnnotationWormhole__title">
+                    {wormholePrefix} <strong>{songTitle}</strong>
+                </div>
+
+                <div className="AnnotationWormhole__verse">
+                    <span>{'\u201c'}</span>
+                    <Texts
+                        isWormholeDestinationVerse
                         {...{
-                            accessKey: ENTER,
-                            isAccessed: isAccessedShown,
-                            buttonName: WORMHOLE_BUTTON_KEY,
-                            handleButtonClick: this._handleWormholeClick
+                            text,
+                            wormholeAnnotationIndex
                         }}
                     />
+                    <span>{'\u201d'}</span>
                 </div>
-
-                <div className="AnnotationWormhole__text">
-                    <div className="AnnotationWormhole__title">
-                        {wormholePrefix} <strong>{songTitle}</strong>
-                    </div>
-
-                    <div className="AnnotationWormhole__verse">
-                        <span>{'\u201c'}</span>
-                        <Texts
-                            isWormholeDestinationVerse
-                            {...{
-                                text,
-                                wormholeAnnotationIndex: annotationIndex
-                            }}
-                        />
-                        <span>{'\u201d'}</span>
-                    </div>
-                </div>
-                <SongDispatcher {...{ ref: this.getDispatchSong }} />
             </div>
-        )
-    }
+            <SongDispatcher {...{ ref: dispatchSong }} />
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(AnnotationWormhole)
+AnnotationWormhole.propTypes = {
+    isAccessedShown: PropTypes.bool.isRequired,
+    annotationIndex: PropTypes.number.isRequired,
+    wormholeLinkIndex: PropTypes.number.isRequired
+}
+
+export default memo(AnnotationWormhole)
