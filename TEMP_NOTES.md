@@ -1,13 +1,17 @@
 # During work
+* Investigate: stage dimensions act like two row menu in mobile, even when not?
 * Change all mapStateToProps to grab from selectors. Just suck it up and do this.
 * Ensure all selectors are used.
 * Some todos to make a selector
+
+# Scene refactor
+* Move helpers to api. Structure methods to get individual presences.
+* z() should show each presence and cube layer at the top level.
 * Move svg folder to components that use them.
 
 # Bugs
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.
-* Stage dimensions act like two row menu in mobile, even when not?
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Figure out why window resizing timeout seems to have regressed.

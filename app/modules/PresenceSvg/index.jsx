@@ -8,12 +8,12 @@ import {
     convertPresenceKeyToClassName,
     getSharedClassNames
 } from '../../helpers/format'
+import { getArrangementForPresence } from '../../api/scene/presences'
 import {
     getSharedStyleForActor,
     getSharedStyleForThing
 } from '../../api/scene/sharedStyles'
 import { getWirePlacedFront } from '../../api/scene/wires'
-import { getArrangementForPresence } from '../../components/Presence/helper'
 import { getXYForPresence } from './helper/position'
 import { getCompoundActorStyleIfNeeded } from './helper/sharedStyle'
 import {
