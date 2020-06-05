@@ -1,13 +1,16 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import { useSelector } from 'react-redux'
 import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
 import NavNavigation from './Nav'
 import { ENTER } from '../../../constants/access'
-import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
+import {
+    mapActivatedVerseIndex,
+    mapIsActivated
+} from '../../../redux/activated/selectors'
 import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
 import {
     mapSelectedAnnotationIndex,
@@ -21,80 +24,34 @@ import {
     mapIsScoreShown
 } from '../../../redux/toggle/selectors'
 
-const mapStateToProps = state => {
+const NavigationManager = forwardRef((props, ref) => {
     const
-        activatedVerseIndex = mapActivatedVerseIndex(state),
-        isHeightlessLyric = mapIsHeightlessLyric(state),
-        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
-        isSelectedLogue = mapIsSelectedLogue(state),
-        isWikiShown = mapIsWikiShown(state),
-        isNavShown = mapIsNavShown(state),
-        isDotsSlideShown = mapIsDotsSlideShown(state),
-        isLyricExpanded = mapIsLyricExpanded(state),
-        isScoreShown = mapIsScoreShown(state)
+        navigateAnnotation = useRef(),
+        navigateDotsSlide = useRef(),
+        navigateLyric = useRef(),
+        navigateNav = useRef(),
+        dispatchVerse = useRef(),
+        isActivated = useSelector(mapIsActivated),
+        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
+        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        isSelectedLogue = useSelector(mapIsSelectedLogue),
+        isWikiShown = useSelector(mapIsWikiShown),
+        isNavShown = useSelector(mapIsNavShown),
+        isDotsSlideShown = useSelector(mapIsDotsSlideShown),
+        isLyricExpanded = useSelector(mapIsLyricExpanded),
+        isScoreShown = useSelector(mapIsScoreShown)
 
-    return {
-        isHeightlessLyric,
-        isLyricExpanded,
-        activatedVerseIndex,
-        isScoreShown,
-        isWikiShown,
-        isSelectedLogue,
-        selectedAnnotationIndex,
-        isDotsSlideShown,
-        isNavShown
-    }
-}
-
-class NavigationManager extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isHeightlessLyric: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
-        activatedVerseIndex: PropTypes.number.isRequired,
-        isScoreShown: PropTypes.bool.isRequired,
-        isWikiShown: PropTypes.bool.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        isDotsSlideShown: PropTypes.bool.isRequired,
-        isNavShown: PropTypes.bool.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            handleNavigation: this.handleNavigation
-        })
-    }
-
-    handleNavigation = keyName => {
-
-        const {
-                isHeightlessLyric,
-                isLyricExpanded,
-                activatedVerseIndex,
-                isScoreShown,
-                isWikiShown,
-                isSelectedLogue,
-                selectedAnnotationIndex,
-                isDotsSlideShown,
-                isNavShown
-            } = this.props,
-
-            isVerseActivated = activatedVerseIndex > -1
-
+    const handleNavigation = keyName => {
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
         if (!isSelectedLogue && !isScoreShown && !isWikiShown) {
 
             // We're selecting the activated verse.
-            if (isVerseActivated && keyName === ENTER) {
+            if (isActivated && keyName === ENTER) {
 
-                keyWasRegistered = this.dispatchVerse({
+                keyWasRegistered = dispatchVerse.current({
                     selectedVerseIndex: activatedVerseIndex,
                     scrollLog: `Key select activated verse ${activatedVerseIndex}.`
                 })
@@ -106,27 +63,27 @@ class NavigationManager extends PureComponent {
                 ({
                     annotationIndexWasAccessed,
                     keyWasRegistered
-                } = this.navigateAnnotation(keyName))
+                } = navigateAnnotation.current(keyName))
 
             // We're in dots section.
             } else if (isDotsSlideShown) {
-                keyWasRegistered = this.navigateDotsSlide(keyName)
+                keyWasRegistered = navigateDotsSlide.current(keyName)
 
             // We're in nav section.
             } else if (
                 isNavShown &&
                 !isLyricExpanded &&
-                !isVerseActivated
+                !isActivated
             ) {
 
                 ({
                     annotationIndexWasAccessed,
                     keyWasRegistered
-                } = this.navigateNav(keyName))
+                } = navigateNav.current(keyName))
 
             // We're in lyrics section.
             } else if (!isHeightlessLyric || isLyricExpanded) {
-                keyWasRegistered = this.navigateLyric(keyName)
+                keyWasRegistered = navigateLyric.current(keyName)
 
                 // If key was registered, then annotation index was accessed.
                 annotationIndexWasAccessed = keyWasRegistered
@@ -139,37 +96,16 @@ class NavigationManager extends PureComponent {
         }
     }
 
-    getNavigateAnnotation = dispatch => {
-        this.navigateAnnotation = dispatch
-    }
+    useImperativeHandle(ref, () => handleNavigation)
+    return (
+        <>
+            <AnnotationNavigation {...{ ref: navigateAnnotation }} />
+            <DotsSlideNavigation {...{ ref: navigateDotsSlide }} />
+            <LyricNavigation {...{ ref: navigateLyric }} />
+            <NavNavigation {...{ ref: navigateNav }} />
+            <VerseDispatcher {...{ ref: dispatchVerse }} />
+        </>
+    )
+})
 
-    getNavigateDotsSlide = dispatch => {
-        this.navigateDotsSlide = dispatch
-    }
-
-    getNavigateLyric = dispatch => {
-        this.navigateLyric = dispatch
-    }
-
-    getNavigateNav = dispatch => {
-        this.navigateNav = dispatch
-    }
-
-    getDispatchVerse = dispatch => {
-        this.dispatchVerse = dispatch
-    }
-
-    render() {
-        return (
-            <>
-                <AnnotationNavigation {...{ ref: this.getNavigateAnnotation }} />
-                <DotsSlideNavigation {...{ ref: this.getNavigateDotsSlide }} />
-                <LyricNavigation {...{ ref: this.getNavigateLyric }} />
-                <NavNavigation {...{ ref: this.getNavigateNav }} />
-                <VerseDispatcher {...{ ref: this.getDispatchVerse }} />
-            </>
-        )
-    }
-}
-
-export default connect(mapStateToProps)(NavigationManager)
+export default NavigationManager

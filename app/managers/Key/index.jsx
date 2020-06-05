@@ -210,10 +210,14 @@ class KeyManager extends PureComponent {
         populateRefs(this, payload)
     }
 
+    getHandleNavigation = dispatch => {
+        this.handleNavigation = dispatch
+    }
+
     render() {
         return (
             <>
-                <NavigationManager {...{ getRefs: this._getRefs }} />
+                <NavigationManager {...{ ref: this.getHandleNavigation }} />
                 <LetterManager {...{ getRefs: this._getRefs }} />
             </>
         )
