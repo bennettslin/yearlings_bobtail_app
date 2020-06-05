@@ -42,6 +42,11 @@ export const getLayersForScene = (songIndex, sceneIndex) => {
     return sceneIndex >= 0 ? sceneLayersList[sceneIndex] : {}
 }
 
+export const getLayerForScene = (songIndex, sceneIndex, yIndex) => {
+    const sceneLayers = getLayersForScene(songIndex, sceneIndex)
+    return sceneLayers[`layer${yIndex}`]
+}
+
 export const getSkyTimeForScene = (songIndex, sceneIndex) => {
     const { sceneSkyTimes } = getSong(songIndex)
     return sceneIndex >= 0 ? sceneSkyTimes[sceneIndex] : TIME_STAGE
