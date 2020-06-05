@@ -6,7 +6,6 @@ import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
 import NavNavigation from './Nav'
-import { populateRefs } from '../../../helpers/ref'
 import { ENTER } from '../../../constants/access'
 import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
@@ -140,8 +139,8 @@ class NavigationManager extends PureComponent {
         }
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getNavigateAnnotation = dispatch => {
+        this.navigateAnnotation = dispatch
     }
 
     getNavigateDotsSlide = dispatch => {
@@ -163,7 +162,7 @@ class NavigationManager extends PureComponent {
     render() {
         return (
             <>
-                <AnnotationNavigation {...{ getRefs: this._getRefs }} />
+                <AnnotationNavigation {...{ ref: this.getNavigateAnnotation }} />
                 <DotsSlideNavigation {...{ ref: this.getNavigateDotsSlide }} />
                 <LyricNavigation {...{ ref: this.getNavigateLyric }} />
                 <NavNavigation {...{ ref: this.getNavigateNav }} />

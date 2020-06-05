@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import { useSelector } from 'react-redux'
 import { isString } from '../../../../helpers/general'
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'
@@ -24,85 +24,57 @@ import {
     mapSelectedAnnotationIndex
 } from '../../../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const AnnotationNavigation = forwardRef((props, ref) => {
     const
-        isAccessOn = mapIsAccessOn(state),
-        accessedWikiWormholeIndex = mapAccessedWikiWormholeIndex(state),
-        selectedSongIndex = mapSelectedSongIndex(state),
-        selectedAnnotationIndex = mapSelectedAnnotationIndex(state)
+        dispatchAccessedWikiWormhole = useRef(),
+        dispatchAnnotation = useRef(),
+        dispatchSong = useRef(),
+        dispatchWiki = useRef(),
+        isAccessOn = useSelector(mapIsAccessOn),
+        accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex)
 
-    return {
-        isAccessOn,
-        accessedWikiWormholeIndex,
-        selectedSongIndex,
-        selectedAnnotationIndex
-    }
-}
-
-class AnnotationNavigation extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isAccessOn: PropTypes.bool.isRequired,
-        accessedWikiWormholeIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            navigateAnnotation: this.navigateAnnotation
-        })
-    }
-
-    navigateAnnotation = (keyName) => {
-        let nextWikiWormholeIndex = this.props.accessedWikiWormholeIndex,
+    const navigateAnnotation = keyName => {
+        let nextWikiWormholeIndex = accessedWikiWormholeIndex,
             annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
         switch (keyName) {
             case ARROW_LEFT:
                 annotationIndexWasAccessed = true
-                this.dispatchAnnotationDirection(-1)
+                dispatchAnnotation.current.dispatchAnnotationDirection(-1)
                 break
             case ARROW_RIGHT:
                 annotationIndexWasAccessed = true
-                this.dispatchAnnotationDirection(1)
+                dispatchAnnotation.current.dispatchAnnotationDirection(1)
                 break
             case ARROW_UP:
             case ARROW_DOWN: {
                 // If not accessed on, do nothing and just turn access on.
-                if (this.props.isAccessOn) {
+                if (isAccessOn) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    this.dispatchAccessedWikiWormhole({ direction })
+                    dispatchAccessedWikiWormhole.current({ direction })
                 }
                 break
             }
             case ENTER: {
-                const {
-                        selectedSongIndex,
-                        selectedAnnotationIndex
-                    } = this.props,
-
-                    wikiWormholeEntity = getWikiWormholeEntity(
-                        selectedSongIndex,
-                        selectedAnnotationIndex,
-                        nextWikiWormholeIndex
-                    )
+                const wikiWormholeEntity = getWikiWormholeEntity(
+                    selectedSongIndex,
+                    selectedAnnotationIndex,
+                    nextWikiWormholeIndex
+                )
 
                 if (nextWikiWormholeIndex && wikiWormholeEntity) {
 
                     // It's a wiki anchor.
                     if (isString(wikiWormholeEntity)) {
-                        this.dispatchWiki(nextWikiWormholeIndex)
+                        dispatchWiki.current(nextWikiWormholeIndex)
 
                     // It's a wormhole index.
                     } else {
                         keyWasRegistered =
-                            this.dispatchSong(getWormholeLinkForWikiWormhole(
+                            dispatchSong.current(getWormholeLinkForWikiWormhole(
                                 selectedSongIndex,
                                 selectedAnnotationIndex,
                                 wikiWormholeEntity
@@ -131,34 +103,15 @@ class AnnotationNavigation extends PureComponent {
         }
     }
 
-    getDispatchAccessedWikiWormhole = dispatch => {
-        this.dispatchAccessedWikiWormhole = dispatch
-    }
+    useImperativeHandle(ref, () => navigateAnnotation)
+    return (
+        <>
+            <AnnotationDispatcher {...{ ref: dispatchAnnotation }} />
+            <SongDispatcher {...{ ref: dispatchSong }} />
+            <WikiDispatcher {...{ ref: dispatchWiki }} />
+            <WikiWormholeDispatcher {...{ ref: dispatchAccessedWikiWormhole }} />
+        </>
+    )
+})
 
-    getDispatchAnnotation = dispatch => {
-        if (dispatch) {
-            this.dispatchAnnotationDirection = dispatch.dispatchAnnotationDirection
-        }
-    }
-
-    getDispatchSong = dispatch => {
-        this.dispatchSong = dispatch
-    }
-
-    getDispatchWiki = dispatch => {
-        this.dispatchWiki = dispatch
-    }
-
-    render() {
-        return (
-            <>
-                <AnnotationDispatcher {...{ ref: this.getDispatchAnnotation }} />
-                <SongDispatcher {...{ ref: this.getDispatchSong }} />
-                <WikiDispatcher {...{ ref: this.getDispatchWiki }} />
-                <WikiWormholeDispatcher {...{ ref: this.getDispatchAccessedWikiWormhole }} />
-            </>
-        )
-    }
-}
-
-export default connect(mapStateToProps)(AnnotationNavigation)
+export default AnnotationNavigation
