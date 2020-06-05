@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import SongDispatcher from '../../../../../app/handlers/Song/Dispatcher'
 import ProgressBar from '../../ProgressBar'
@@ -10,48 +10,41 @@ import { getSumOfTasks } from '../helper'
  * CONTAINER *
  *************/
 
-class AdminNavRow extends PureComponent {
+const AdminNavRow = ({
+    songIndex,
+    isSelected,
+    ...other
 
-    static propTypes = {
-        songIndex: PropTypes.number.isRequired,
-        isSelected: PropTypes.bool.isRequired
+}) => {
+    const dispatchSong = useRef
+
+    const onClick = () => {
+        dispatchSong.current({ selectedSongIndex: songIndex })
     }
 
-    _handleSongClick = () => {
-        this.dispatchSong({ selectedSongIndex: this.props.songIndex })
-    }
+    const
+        songTitle = getIndexedTitleForSong(songIndex),
+        albumTasks = getSongTasks(songIndex),
+        sumTask = getSumOfTasks(albumTasks)
 
-    getDispatchSong = dispatch => {
-        this.dispatchSong = dispatch
-    }
+    return (
+        <>
+            <AdminNavRowView {...other}
+                {...{
+                    isSelected,
+                    songTitle,
+                    sumTask,
+                    onClick
+                }}
+            />
+            <SongDispatcher {...{ ref: dispatchSong }} />
+        </>
+    )
+}
 
-    render() {
-        const {
-
-                songIndex,
-                isSelected,
-
-                ...other
-            } = this.props,
-
-            songTitle = getIndexedTitleForSong(songIndex),
-            albumTasks = getSongTasks(songIndex),
-            sumTask = getSumOfTasks(albumTasks)
-
-        return (
-            <>
-                <AdminNavRowView {...other}
-                    {...{
-                        isSelected,
-                        songTitle,
-                        sumTask,
-                        onClick: this._handleSongClick
-                    }}
-                />
-                <SongDispatcher {...{ ref: this.getDispatchSong }} />
-            </>
-        )
-    }
+AdminNavRow.propTypes = {
+    songIndex: PropTypes.number.isRequired,
+    isSelected: PropTypes.bool.isRequired
 }
 
 /****************
