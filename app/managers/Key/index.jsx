@@ -8,7 +8,6 @@ import { updateToggleStore } from '../../redux/toggle/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
-import { populateRefs } from '../../helpers/ref'
 import { isEmailFocused } from '../../utils/email'
 import { mapIsAccessOn } from '../../redux/access/selectors'
 import {
@@ -206,19 +205,22 @@ class KeyManager extends PureComponent {
         this.props.updateToggleStore({ isAutoScroll: false })
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
     getHandleNavigation = dispatch => {
         this.handleNavigation = dispatch
+    }
+
+    getDispatchLetter = dispatch => {
+        if (dispatch) {
+            this.handleEscape = dispatch.handleEscape
+            this.handleLetter = dispatch.handleLetter
+        }
     }
 
     render() {
         return (
             <>
                 <NavigationManager {...{ ref: this.getHandleNavigation }} />
-                <LetterManager {...{ getRefs: this._getRefs }} />
+                <LetterManager {...{ ref: this.getDispatchLetter }} />
             </>
         )
     }

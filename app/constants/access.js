@@ -5,7 +5,7 @@ export const DOTS_SLIDE_TOGGLE_KEY = 'd'
 export const LYRIC_COLUMN_TOGGLE_KEY = 'e'
 export const PREVIOUS_SONG_KEY = 'r'
 export const NEXT_SONG_KEY = 'f'
-export const LYRIC_SECTION_EXPAND_KEY = 'l'
+export const LYRIC_EXPAND_KEY = 'l'
 export const PREVIOUS_SCENE_KEY = 'n'
 export const NEXT_SCENE_KEY = 'm'
 export const AUDIO_OPTIONS_TOGGLE_KEY = 'o'
@@ -51,7 +51,7 @@ export const STYLE_LOGIC_ACCESS_LETTERS = [
     DOTS_SLIDE_TOGGLE_KEY,
     LYRIC_COLUMN_TOGGLE_KEY,
     LYRIC_SCROLL_TOGGLE_KEY,
-    LYRIC_SECTION_EXPAND_KEY,
+    LYRIC_EXPAND_KEY,
     PREVIOUS_SCENE_KEY,
     NEXT_SCENE_KEY,
     OVERVIEW_TOGGLE_KEY,

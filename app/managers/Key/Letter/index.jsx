@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
@@ -30,7 +30,7 @@ import {
     CAROUSEL_TOGGLE_KEY,
     DOTS_SLIDE_TOGGLE_KEY,
     LYRIC_COLUMN_TOGGLE_KEY,
-    LYRIC_SECTION_EXPAND_KEY,
+    LYRIC_EXPAND_KEY,
     LYRIC_SCROLL_TOGGLE_KEY,
     OVERVIEW_TOGGLE_KEY,
     SCORE_TOGGLE_KEY,
@@ -39,15 +39,12 @@ import {
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY
 } from '../../../constants/access'
+import { HIDDEN } from '../../../constants/options'
 import {
-    SHOWN,
-    HIDDEN
-} from '../../../constants/options'
-import {
-    mapSelectedOverviewOption,
-    mapSelectedTipsOption
+    mapIsOverviewShown,
+    mapIsTipsShown
 } from '../../../redux/option/selectors'
-import { mapSelectedAnnotationIndex } from '../../../redux/selected/selectors'
+import { mapIsAnnotationShown } from '../../../redux/selected/selectors'
 import { mapIsWikiShown } from '../../../redux/session/selectors'
 import {
     mapIsNavShown,
@@ -57,119 +54,91 @@ import {
     mapIsAboutShown
 } from '../../../redux/toggle/selectors'
 
-const mapStateToProps = state => {
+const LetterManager = forwardRef((props, ref) => {
     const
-        selectedOverviewOption = mapSelectedOverviewOption(state),
-        selectedTipsOption = mapSelectedTipsOption(state),
-        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
-        isWikiShown = mapIsWikiShown(state),
-        isNavShown = mapIsNavShown(state),
-        isDotsSlideShown = mapIsDotsSlideShown(state),
-        isLyricExpanded = mapIsLyricExpanded(state),
-        isScoreShown = mapIsScoreShown(state),
-        isAboutShown = mapIsAboutShown(state)
+        dispatch = useDispatch(),
+        dispatchAbout = useRef(),
+        dispatchAudioOption = useRef(),
+        dispatchCarouselNav = useRef(),
+        dispatchDotsSlide = useRef(),
+        dispatchEarColumn = useRef(),
+        activateSceneDirection = useRef(),
+        dispatchActivatedVerse = useRef(),
+        dispatchLyricExpand = useRef(),
+        dispatchOverview = useRef(),
+        dispatchPlay = useRef(),
+        dispatchScrollVerse = useRef(),
+        dispatchSong = useRef(),
+        dispatchTips = useRef(),
+        dispatchScore = useRef(),
+        isOverviewShown = useSelector(mapIsOverviewShown),
+        isTipsShown = useSelector(mapIsTipsShown),
+        isAnnotationShown = useSelector(mapIsAnnotationShown),
+        isWikiShown = useSelector(mapIsWikiShown),
+        isNavShown = useSelector(mapIsNavShown),
+        isDotsSlideShown = useSelector(mapIsDotsSlideShown),
+        isLyricExpanded = useSelector(mapIsLyricExpanded),
+        isScoreShown = useSelector(mapIsScoreShown),
+        isAboutShown = useSelector(mapIsAboutShown)
 
-    return {
-        isDotsSlideShown,
-        isLyricExpanded,
-        isNavShown,
-        isScoreShown,
-        isAboutShown,
-        selectedAnnotationIndex,
-        selectedOverviewOption,
-        selectedTipsOption,
-        isWikiShown
-    }
-}
-
-class LetterManager extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isDotsSlideShown: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
-        isNavShown: PropTypes.bool.isRequired,
-        isScoreShown: PropTypes.bool.isRequired,
-        isAboutShown: PropTypes.bool.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        selectedOverviewOption: PropTypes.string.isRequired,
-        selectedTipsOption: PropTypes.string.isRequired,
-        isWikiShown: PropTypes.bool.isRequired,
-        updateSelectedStore: PropTypes.func.isRequired,
-        updateAccessStore: PropTypes.func.isRequired,
-        updateActivatedStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
-        resetWiki: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            handleLetter: this.handleLetter,
-            handleEscape: this.handleEscape
-        })
-    }
-
-    handleLetter = keyName => {
+    const handleLetter = keyName => {
         let annotationIndexWasAccessed = false,
             keyWasRegistered
 
         switch (keyName) {
             case AUDIO_OPTIONS_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchAudioOption()
+                keyWasRegistered = dispatchAudioOption.current()
                 break
             case AUDIO_PLAY_KEY:
-                keyWasRegistered = this.dispatchPlay()
+                keyWasRegistered = dispatchPlay.current()
                 break
             case PREVIOUS_SONG_KEY:
-                keyWasRegistered = this.dispatchSong({ direction: -1 })
+                keyWasRegistered = dispatchSong.current({ direction: -1 })
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case NEXT_SONG_KEY:
-                keyWasRegistered = this.dispatchSong({ direction: 1 })
+                keyWasRegistered = dispatchSong.current({ direction: 1 })
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case PREVIOUS_VERSE_KEY:
-                keyWasRegistered = this.activateVerseDirection(-1)
+                keyWasRegistered = dispatchActivatedVerse.current.activateVerseDirection(-1)
                 break
             case NEXT_VERSE_KEY:
-                keyWasRegistered = this.activateVerseDirection(1)
+                keyWasRegistered = dispatchActivatedVerse.current.activateVerseDirection(1)
                 break
             case CAROUSEL_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchCarouselNav()
+                keyWasRegistered = dispatchCarouselNav.current()
                 break
             case DOTS_SLIDE_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchDotsSlide()
+                keyWasRegistered = dispatchDotsSlide.current()
                 break
             case LYRIC_COLUMN_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchEarColumn()
+                keyWasRegistered = dispatchEarColumn.current()
                 annotationIndexWasAccessed = keyWasRegistered
                 break
-            case LYRIC_SECTION_EXPAND_KEY:
-                keyWasRegistered = this.dispatchLyricExpand()
+            case LYRIC_EXPAND_KEY:
+                keyWasRegistered = dispatchLyricExpand.current()
                 break
             case LYRIC_SCROLL_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchScrollVerse(true)
+                keyWasRegistered = dispatchScrollVerse.current(true)
                 break
             case OVERVIEW_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchOverview()
+                keyWasRegistered = dispatchOverview.current()
                 break
             case PREVIOUS_SCENE_KEY:
-                keyWasRegistered = this.activateSceneDirection(-1)
+                keyWasRegistered = activateSceneDirection.current(-1)
                 break
             case NEXT_SCENE_KEY:
-                keyWasRegistered = this.activateSceneDirection(1)
+                keyWasRegistered = activateSceneDirection.current(1)
                 break
             case SCORE_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchScore()
+                keyWasRegistered = dispatchScore.current()
                 break
             case TIPS_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchTips()
+                keyWasRegistered = dispatchTips.current()
                 break
             case ABOUT_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchAbout()
+                keyWasRegistered = dispatchAbout.current()
                 break
             default:
                 keyWasRegistered = false
@@ -187,140 +156,74 @@ class LetterManager extends PureComponent {
         }
     }
 
-    handleEscape = () => {
+    const handleEscape = () => {
 
         // Close score popup.
-        if (this.props.isScoreShown) {
-            this.dispatchScore(false)
+        if (isScoreShown) {
+            dispatchScore.current(false)
 
-        // Close title popup.
-        } else if (this.props.isAboutShown) {
-            this.dispatchAbout(false)
+        // Close about popup.
+        } else if (isAboutShown) {
+            dispatchAbout.current(false)
 
         // Close wiki popup.
-        } else if (this.props.isWikiShown) {
-            this.props.resetWiki()
+        } else if (isWikiShown) {
+            dispatch(resetWiki())
 
         // Close tips popup.
-        } else if (this.props.selectedTipsOption === SHOWN) {
-            this.dispatchTips({ tipsOption: HIDDEN })
+        } else if (isTipsShown) {
+            dispatchTips.current({ tipsOption: HIDDEN })
 
         // Close overview popup.
-        } else if (this.props.selectedOverviewOption === SHOWN) {
-            this.dispatchOverview({ overviewOption: HIDDEN })
+        } else if (isOverviewShown) {
+            dispatchOverview.current({ overviewOption: HIDDEN })
 
         // Close dots popup.
-        } else if (this.props.isDotsSlideShown) {
-            this.dispatchDotsSlide(false)
+        } else if (isDotsSlideShown) {
+            dispatchDotsSlide.current(false)
 
         // Close annotation popup.
-        } else if (this.props.selectedAnnotationIndex) {
-            this.props.updateSelectedStore({ selectedAnnotationIndex: 0 })
+        } else if (isAnnotationShown) {
+            dispatch(updateSelectedStore({ selectedAnnotationIndex: 0 }))
 
         // Collapse lyric.
-        } else if (this.props.isLyricExpanded) {
-            this.dispatchLyricExpand(false)
+        } else if (isLyricExpanded) {
+            dispatchLyricExpand.current(false)
 
         // Hide nav.
-        } else if (this.props.isNavShown) {
-            this.props.updateToggleStore({ isNavShown: false })
+        } else if (isNavShown) {
+            dispatch(updateToggleStore({ isNavShown: false }))
 
         // Turn access off.
         } else {
-            this.props.updateAccessStore({ isAccessOn: false })
-            this.props.updateActivatedStore()
+            dispatch(updateAccessStore({ isAccessOn: false }))
+            dispatch(updateActivatedStore())
         }
     }
 
-    getActivateSceneDirection = dispatch => {
-        this.activateSceneDirection = dispatch
-    }
+    useImperativeHandle(ref, () => ({
+        handleEscape,
+        handleLetter
+    }))
+    return (
+        <>
+            <AboutDispatcher {...{ ref: dispatchAbout }} />
+            <AudioOptionDispatcher {...{ ref: dispatchAudioOption }} />
+            <CarouselNavDispatcher {...{ ref: dispatchCarouselNav }} />
+            <DotsSlideDispatcher {...{ ref: dispatchDotsSlide }} />
+            <EarColumnDispatcher {...{ ref: dispatchEarColumn }} />
+            <ActivatedSceneDispatcher {...{ ref: activateSceneDirection }} />
+            <ActivatedVerseDispatcher {...{ ref: dispatchActivatedVerse }} />
+            <LyricDispatcher {...{ ref: dispatchLyricExpand }} />
+            <OverviewDispatcher {...{ ref: dispatchOverview }} />
+            <PlayDispatcher {...{ ref: dispatchPlay }} />
+            <ScrollVerseDispatcher {...{ ref: dispatchScrollVerse }} />
+            <SongDispatcher {...{ ref: dispatchSong }} />
+            <TipsDispatcher {...{ ref: dispatchTips }} />
+            <ScoreDispatcher {...{ ref: dispatchScore }} />
+        </>
+    )
 
-    getActivateVerse = dispatch => {
-        if (dispatch) {
-            this.activateVerseDirection = dispatch.activateVerseDirection
-        }
-    }
+})
 
-    getDispatchAbout = dispatch => {
-        this.dispatchAbout = dispatch
-    }
-
-    getDispatchAudioOption = dispatch => {
-        this.dispatchAudioOption = dispatch
-    }
-
-    getDispatchCarouselNav = dispatch => {
-        this.dispatchCarouselNav = dispatch
-    }
-
-    getDispatchDotsSlide = dispatch => {
-        this.dispatchDotsSlide = dispatch
-    }
-
-    getDispatchEarColumn = dispatch => {
-        this.dispatchEarColumn = dispatch
-    }
-
-    getDispatchLyricExpand = dispatch => {
-        this.dispatchLyricExpand = dispatch
-    }
-
-    getDispatchOverview = dispatch => {
-        this.dispatchOverview = dispatch
-    }
-
-    getDispatchPlay = dispatch => {
-        this.dispatchPlay = dispatch
-    }
-
-    getDispatchScore = dispatch => {
-        this.dispatchScore = dispatch
-    }
-
-    getDispatchScrollVerse = dispatch => {
-        this.dispatchScrollVerse = dispatch
-    }
-
-    getDispatchSong = dispatch => {
-        this.dispatchSong = dispatch
-    }
-
-    getDispatchTips = dispatch => {
-        this.dispatchTips = dispatch
-    }
-
-    render() {
-        return (
-            <>
-                <AboutDispatcher {...{ ref: this.getDispatchAbout }} />
-                <AudioOptionDispatcher
-                    {...{ ref: this.getDispatchAudioOption }}
-                />
-                <CarouselNavDispatcher {...{ ref: this.getDispatchCarouselNav }} />
-                <DotsSlideDispatcher {...{ ref: this.getDispatchDotsSlide }} />
-                <EarColumnDispatcher {...{ ref: this.getDispatchEarColumn }} />
-                <ActivatedSceneDispatcher {...{ ref: this.getActivateSceneDirection }} />
-                <ActivatedVerseDispatcher {...{ ref: this.getActivateVerse }} />
-                <LyricDispatcher {...{ ref: this.getDispatchLyricExpand }} />
-                <OverviewDispatcher {...{ ref: this.getDispatchOverview }} />
-                <PlayDispatcher {...{ ref: this.getDispatchPlay }} />
-                <ScrollVerseDispatcher {...{ ref: this.getDispatchScrollVerse }} />
-                <SongDispatcher {...{ ref: this.getDispatchSong }} />
-                <TipsDispatcher {...{ ref: this.getDispatchTips }} />
-                <ScoreDispatcher {...{ ref: this.getDispatchScore }} />
-            </>
-        )
-    }
-}
-
-export default connect(
-    mapStateToProps,
-    {
-        updateSelectedStore,
-        updateAccessStore,
-        updateActivatedStore,
-        updateToggleStore,
-        resetWiki
-    }
-)(LetterManager)
+export default LetterManager

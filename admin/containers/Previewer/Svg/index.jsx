@@ -12,7 +12,7 @@ import {
     getSharedClassNames
 } from '../../../../app/helpers/format'
 import { getDocument } from '../../../../app/utils/browser'
-import { getArrangementForPresence } from '../../../../app/components/Presence/helper'
+import { getArrangementForPresence } from '../../../../app/api/scene/presences'
 import {
     getSharedStyleForActor,
     getSharedStyleForThing

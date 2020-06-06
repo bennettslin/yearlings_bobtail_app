@@ -12,7 +12,7 @@ import {
 } from '../../../../redux/responsive/selectors'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
-import { LYRIC_SECTION_EXPAND_KEY } from '../../../../constants/access'
+import { LYRIC_EXPAND_KEY } from '../../../../constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from '../../../../constants/buttons'
 import { LYRIC_EXPAND } from '../../../../constants/tips'
 import { mapIsLyricExpanded } from '../../../../redux/toggle/selectors'
@@ -61,7 +61,7 @@ const LyricToggleExpand = ({ inMain }) => {
                     {...{
                         buttonName: LYRIC_EXPAND_BUTTON_KEY,
                         buttonIdentifier: isLyricExpanded,
-                        accessKey: LYRIC_SECTION_EXPAND_KEY,
+                        accessKey: LYRIC_EXPAND_KEY,
                         handleButtonClick
                     }}
                 />
