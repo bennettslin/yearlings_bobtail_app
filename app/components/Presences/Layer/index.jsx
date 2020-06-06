@@ -1,81 +1,57 @@
-import React, { PureComponent } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-
+import { useSelector } from 'react-redux'
 import Presence from '../../Presence'
-import {
-    getKeysForActor,
-    getKeysForThing
-} from '../../../api/scene/presences'
-
+import { getPresenceKeys } from '../../../api/scene/presences'
+import { mapSceneCubesKey } from '../../../redux/scene/selectors'
 import { ACTOR } from '../../../constants/scene'
 
-const mapStateToProps = state => {
-    const {
-        sceneStore: { sceneCubesKey }
-    } = state
+const Layer = ({
+    presenceType,
+    actorKey,
+    instanceKey,
+    ...other
 
-    return {
-        sceneCubesKey
-    }
+}) => {
+    const
+        sceneCubesKey = useSelector(mapSceneCubesKey),
+        presenceKeys = getPresenceKeys({
+            actorKey,
+            presenceType
+        })
+
+    return (
+        presenceKeys.map(presenceKey => {
+            const
+                { [presenceKey]: presenceValue } = other,
+                existenceValue =
+                    actorKey ?
+                        // Actor passes an instance if it exists.
+                        presenceKey === instanceKey :
+                        // Thing passes a presence key with boolean value.
+                        Boolean(presenceValue)
+
+            return (
+                <Presence
+                    {...{
+                        key: presenceKey,
+                        cubesKey: sceneCubesKey,
+                        presenceType: presenceType || ACTOR,
+                        actorKey,
+                        presenceKey,
+                        existenceValue
+                    }}
+                />
+            )
+        })
+    )
 }
 
-class Layer extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        sceneCubesKey: PropTypes.string.isRequired,
-
-        // From parent. Parent also passes presenceKeys. Figure out how to do this.
-        presenceType: PropTypes.string,
-        actorKey: PropTypes.string,
-        instanceKey: PropTypes.string
-    }
-
-    render() {
-        const
-            {
-                sceneCubesKey: cubesKey,
-                presenceType,
-                actorKey
-            } = this.props,
-
-            isActor = Boolean(actorKey),
-
-            presenceKeys = isActor ?
-                getKeysForActor(actorKey) :
-                getKeysForThing(presenceType)
-
-        return (
-            presenceKeys.map(presenceKey => {
-                const {
-                        [presenceKey]: presenceValue,
-                        instanceKey
-                    } = this.props,
-
-                    existenceValue =
-                        isActor ?
-                            // Actor passes an instance if it exists.
-                            presenceKey === instanceKey :
-
-                            // Thing passes a presence key with boolean value.
-                            Boolean(presenceValue)
-
-                return (
-                    <Presence
-                        {...{
-                            key: presenceKey,
-                            cubesKey,
-                            presenceType: presenceType || ACTOR,
-                            actorKey,
-                            presenceKey,
-                            existenceValue
-                        }}
-                    />
-                )
-            })
-        )
-    }
+Layer.propTypes = {
+    // Parent also passes presenceKeys.
+    presenceType: PropTypes.string,
+    actorKey: PropTypes.string,
+    instanceKey: PropTypes.string
 }
 
-export default connect(mapStateToProps)(Layer)
+export default memo(Layer)
