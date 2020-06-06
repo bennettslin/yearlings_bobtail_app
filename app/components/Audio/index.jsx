@@ -1,8 +1,6 @@
 // Component to show buttons for audio navigation.
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
-import { connect } from 'react-redux'
+import React, { useRef } from 'react'
+import { useSelector } from 'react-redux'
 import AudioOptionDispatcher from '../../dispatchers/AudioOption'
 import PlayDispatcher from '../../dispatchers/PlayDispatcher'
 import SongDispatcher from '../../handlers/Song/Dispatcher'
@@ -28,25 +26,6 @@ import { mapSelectedSongIndex } from '../../redux/selected/selectors'
 import { mapAudioOptionIndex } from '../../redux/session/selectors'
 import { mapIsDesktopWidth } from '../../redux/viewport/selectors'
 import './style'
-
-const mapStateToProps = state => {
-    const
-        isPlaying = mapIsPlaying(state),
-        isTwoRowMenu = mapIsTwoRowMenu(state),
-        playersBitNumber = mapPlayersBitNumber(state),
-        selectedSongIndex = mapSelectedSongIndex(state),
-        audioOptionIndex = mapAudioOptionIndex(state),
-        isDesktopWidth = mapIsDesktopWidth(state)
-
-    return {
-        isPlaying,
-        playersBitNumber,
-        audioOptionIndex,
-        selectedSongIndex,
-        isTwoRowMenu,
-        isDesktopWidth
-    }
-}
 
 const BUTTON_CLASS_NAME = 'AudioButton'
 
@@ -79,43 +58,37 @@ const STATIC_BUTTON_CONFIGS = [
     }
 ]
 
-class Audio extends PureComponent {
+const Audio = () => {
+    const
+        dispatchAudioOption = useRef(),
+        dispatchPlay = useRef(),
+        dispatchSong = useRef(),
+        isPlaying = useSelector(mapIsPlaying),
+        isTwoRowMenu = useSelector(mapIsTwoRowMenu),
+        playersBitNumber = useSelector(mapPlayersBitNumber),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        audioOptionIndex = useSelector(mapAudioOptionIndex),
+        isDesktopWidth = useSelector(mapIsDesktopWidth)
 
-    static propTypes = {
-        // Through Redux.
-        isPlaying: PropTypes.bool.isRequired,
-        playersBitNumber: PropTypes.number.isRequired,
-        audioOptionIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        isTwoRowMenu: PropTypes.bool.isRequired,
-        isDesktopWidth: PropTypes.bool.isRequired
+    const _handleAudioOptionClick = () => {
+        dispatchAudioOption.current()
     }
 
-    _handleAudioOptionClick = () => {
-        this.dispatchAudioOption()
+    const _handlePlayClick = () => {
+        dispatchPlay.current()
     }
 
-    _handlePlayClick = () => {
-        this.dispatchPlay()
+    const _handlePreviousClick = () => {
+        dispatchSong.current({ direction: -1 })
     }
 
-    _handlePreviousClick = () => {
-        this.dispatchSong({ direction: -1 })
+    const _handleNextClick = () => {
+        dispatchSong.current({ direction: 1 })
     }
 
-    _handleNextClick = () => {
-        this.dispatchSong({ direction: 1 })
-    }
-
-    getDynamicButtonConfigs = () => {
-        const {
-                selectedSongIndex,
-                playersBitNumber,
-                isPlaying,
-                audioOptionIndex,
-                isDesktopWidth
-            } = this.props,
-
+    const getDynamicButtonConfigs = () => {
+        const
+            // TODO: Make these a selector.
             isPrologue = selectedSongIndex === 0,
             songsCount = getSongsAndLoguesCount(),
             isEpilogue = selectedSongIndex === songsCount - 1,
@@ -127,21 +100,21 @@ class Audio extends PureComponent {
             dynamicButtonConfigs = [
                 {
                     isDisabled: isPrologue,
-                    handleButtonClick: this._handlePreviousClick
+                    handleButtonClick: _handlePreviousClick
                 },
                 {
                     isPulsateAnimated: isPrologue,
                     buttonIdentifier: isPlaying,
                     isDisabled: !playerCanPlayThrough,
-                    handleButtonClick: this._handlePlayClick
+                    handleButtonClick: _handlePlayClick
                 },
                 {
                     isDisabled: isEpilogue,
-                    handleButtonClick: this._handleNextClick
+                    handleButtonClick: _handleNextClick
                 },
                 {
                     buttonIdentifier: audioOptionIndex,
-                    handleButtonClick: this._handleAudioOptionClick
+                    handleButtonClick: _handleAudioOptionClick
                 }
             ]
 
@@ -153,79 +126,37 @@ class Audio extends PureComponent {
         )
     }
 
-    getDispatchAudioOption = dispatch => {
-        this.dispatchAudioOption = dispatch
-    }
+    return (
+        <div {...{ className: 'Audio' }} >
+            {/* Placeholder to create space. */}
+            {isTwoRowMenu && (
+                <div {...{ className: 'Audio__flexPlaceholder' }} />
+            )}
+            {getDynamicButtonConfigs().map((dynamicConfig, index) => {
+                // If desktop width, reverse order to keep tooltips on top.
+                const staticConfig = STATIC_BUTTON_CONFIGS[
+                    isDesktopWidth ?
+                        STATIC_BUTTON_CONFIGS.length - index - 1 :
+                        index
+                ]
 
-    getDispatchPlay = dispatch => {
-        this.dispatchPlay = dispatch
-    }
-
-    getDispatchSong = dispatch => {
-        this.dispatchSong = dispatch
-    }
-
-    render() {
-        const {
-                isTwoRowMenu,
-                isDesktopWidth
-            } = this.props,
-            dynamicButtonConfigs = this.getDynamicButtonConfigs()
-
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'Audio'
-                    )
-                }}
-            >
-                {/* Placeholder to create space. */}
-                {isTwoRowMenu && (
-                    <div
-                        {...{
-                            className: cx(
-                                'Audio__flexPlaceholder'
-                            )
-                        }}
+                return (
+                    <Button
+                        {...dynamicConfig}
+                        {...staticConfig}
                     />
-                )}
-                {dynamicButtonConfigs.map((dynamicConfig, index) => {
+                )
+            })}
 
-                    // If desktop width, reverse order to keep tooltips on top.
-                    const staticConfig = STATIC_BUTTON_CONFIGS[
-                        isDesktopWidth ?
-                            dynamicButtonConfigs.length - index - 1 :
-                            index
-                    ]
-
-                    return (
-                        <Button
-                            {...dynamicConfig}
-                            {...staticConfig}
-                        />
-                    )
-                })}
-
-                {/* Placeholder to create space. */}
-                {isTwoRowMenu && (
-                    <div
-                        {...{
-                            className: cx(
-                                'Audio__flexPlaceholder'
-                            )
-                        }}
-                    />
-                )}
-
-                <AudioOptionDispatcher
-                    {...{ ref: this.getDispatchAudioOption }}
-                />
-                <PlayDispatcher {...{ ref: this.getDispatchPlay }} />
-                <SongDispatcher {...{ ref: this.getDispatchSong }} />
-            </div>
-        )
-    }
+            {/* Placeholder to create space. */}
+            {isTwoRowMenu && (
+                <div {...{ className: 'Audio__flexPlaceholder' }} />
+            )}
+            <AudioOptionDispatcher {...{ ref: dispatchAudioOption }} />
+            <PlayDispatcher {...{ ref: dispatchPlay }} />
+            <SongDispatcher {...{ ref: dispatchSong }} />
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(Audio)
+export default Audio
