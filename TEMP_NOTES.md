@@ -5,13 +5,12 @@
 * Some todos to make a selector
 
 # Scene refactor
-* z() should show each presence and cube layer at the top level.
-* Structure methods to get individual presences from api.
 * Cubes should also get from api.
 * Each layer knows which presences can render in it, and don't bother to mount any that don't exist for that layer.
 * Move svg folder to components that use them.
 
 # Bugs
+* Verse scroll not registered.
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.
 

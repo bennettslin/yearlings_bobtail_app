@@ -4,7 +4,12 @@ import {
     getScene
 } from '../../api/imports'
 import { getSong } from '../../api/album/songs'
-import { getStoredSongIndex } from '../../helpers/storage'
+import { getLayersForScene } from '../../api/album/scenes'
+import { getSceneIndexForVerse } from '../../api/album/verses'
+import {
+    getStoredSongIndex,
+    getStoredVerseIndex
+} from '../../helpers/storage'
 
 import {
     logAccess,
@@ -26,6 +31,7 @@ if (IS_STAGING) {
     global.album = getAlbum()
     global.scene = getScene()
     global.s = () => getSong(getStoredSongIndex())
+    global.z = () => getLayersForScene(getStoredSongIndex(), getSceneIndexForVerse(getStoredSongIndex(), getStoredVerseIndex(getStoredSongIndex())))
 }
 
 logServe({
