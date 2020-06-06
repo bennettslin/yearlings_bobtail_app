@@ -6,17 +6,6 @@ import { getSvgDataPathForFace } from './helpers/paths'
 import { getCharStringForNumber } from '../../../../helpers/format'
 import './style'
 
-const propTypes = {
-    // From parent.
-    slantDirection: PropTypes.string.isRequired,
-    level: PropTypes.string.isRequired,
-    yIndex: PropTypes.number.isRequired,
-    xIndex: PropTypes.number.isRequired,
-    zIndex: PropTypes.number.isRequired,
-    face: PropTypes.string.isRequired,
-    hslaKey: PropTypes.string.isRequired
-}
-
 const Face = ({
     slantDirection,
     level,
@@ -25,10 +14,8 @@ const Face = ({
     zIndex,
     face,
     hslaKey
+
 }) => {
-
-    const xCharIndex = getCharStringForNumber(xIndex)
-
     return (
         <path
             {...{
@@ -37,7 +24,7 @@ const Face = ({
                     level,
                     face,
                     `y${yIndex}`,
-                    `x${xCharIndex}`,
+                    `x${getCharStringForNumber(xIndex)}`,
                     `z${zIndex}`
                 ),
                 d: getSvgDataPathForFace({
@@ -61,6 +48,14 @@ const Face = ({
     )
 }
 
-Face.propTypes = propTypes
+Face.propTypes = {
+    slantDirection: PropTypes.string.isRequired,
+    level: PropTypes.string.isRequired,
+    yIndex: PropTypes.number.isRequired,
+    xIndex: PropTypes.number.isRequired,
+    zIndex: PropTypes.number.isRequired,
+    face: PropTypes.string.isRequired,
+    hslaKey: PropTypes.string.isRequired
+}
 
 export default memo(Face)

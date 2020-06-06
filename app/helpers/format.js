@@ -3,11 +3,11 @@ import { isString } from './general'
 
 import { LYRIC_TEXT_KEYS } from '../constants/lyrics'
 
-const appendSharedSuffix = (style) => (
+const appendSharedSuffix = style => (
     `${style}__shared`
 )
 
-export const getSharedClassNames = (sharedStyle) => {
+export const getSharedClassNames = sharedStyle => {
     if (isString(sharedStyle)) {
         return appendSharedSuffix(sharedStyle)
 
@@ -23,7 +23,7 @@ export const getSharedClassNames = (sharedStyle) => {
     }
 }
 
-const discardAfterDoubleUnderscore = (word) => {
+const discardAfterDoubleUnderscore = word => {
     // Remove anything after double underscore.
     return word.split('__')[0]
 }
@@ -32,11 +32,11 @@ export const convertPresenceKeyToClassName = (word = '') => {
     return discardAfterDoubleUnderscore(word)
 }
 
-export const capitaliseForClassName = (word) => {
+export const capitaliseForClassName = word => {
     return word.charAt(0).toUpperCase() + word.slice(1)
 }
 
-export const convertPresenceKeyToTitle = (string) => {
+export const convertPresenceKeyToTitle = string => {
     // Convert to camel case.
     return string.replace(/([A-Z])/g, ' $1')
 
@@ -45,7 +45,7 @@ export const convertPresenceKeyToTitle = (string) => {
         .toLowerCase()
 }
 
-export const getFormattedTime = (time) => {
+export const getFormattedTime = time => {
     if (time === -1) {
         time = 0
     }
@@ -93,7 +93,7 @@ export const getFormattedAnnotationTitle = ({
     return title.replace(/"/g, "'").trim()
 }
 
-const _getStringFromObject = (textEntity) => {
+const _getStringFromObject = textEntity => {
 
     if (Array.isArray(textEntity)) {
         /**
@@ -118,15 +118,15 @@ const _getStringFromObject = (textEntity) => {
     }
 }
 
-const _getUncapitalisedText = (text) => {
+const _getUncapitalisedText = text => {
     return text.charAt(0).toLowerCase() + text.slice(1)
 }
 
-const _beginsWithPronounI = (text) => {
+const _beginsWithPronounI = text => {
     return text.indexOf('I ') === 0 || text.indexOf('I\'') === 0
 }
 
-const _getDeletedSpecialCharactersText = (text) => {
+const _getDeletedSpecialCharactersText = text => {
     // Eliminate all special characters at end.
     if (_hasSpecialCharacterAtIndex(text, text.length - 1)) {
         text = _getDeletedSpecialCharactersText(text.slice(0, text.length - 1))
@@ -140,7 +140,7 @@ const _getDeletedSpecialCharactersText = (text) => {
     return text
 }
 
-const _getDeletedWrappingCharactersText = (text) => {
+const _getDeletedWrappingCharactersText = text => {
     /**
      * Note that this only knows how to differentiate between one wrapping
      * character versus two.
@@ -185,7 +185,7 @@ const _hasSpecialCharacterAtIndex = (text, index) => {
         indexedChar === '…'
 }
 
-export const getFormattedEndingVerseSpanText = (text) => {
+export const getFormattedEndingVerseSpanText = text => {
     // End in ellipsis.
     if (_hasSpecialCharacterAtIndex(text, text.length - 1)) {
         text = `${text.slice(0, text.length - 1)}…`
@@ -197,7 +197,7 @@ export const getFormattedEndingVerseSpanText = (text) => {
     return text
 }
 
-export const getFormattedLyricSpanText = (text) => {
+export const getFormattedLyricSpanText = text => {
     const lastSpaceIndex = text.lastIndexOf(' ')
 
     if (lastSpaceIndex > -1) {
@@ -208,7 +208,11 @@ export const getFormattedLyricSpanText = (text) => {
     }
 }
 
-export const getCharStringForNumber = (myNumber) => {
+export const getCharStringForNumber = myNumber => {
+    if (myNumber === -1) {
+        return 'n'
+    }
+
     // 10 is a, 11 is b, and so forth.
     return myNumber < 10 ? myNumber : String.fromCharCode(myNumber + 87)
 }

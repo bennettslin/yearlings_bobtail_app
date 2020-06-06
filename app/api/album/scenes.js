@@ -2,8 +2,8 @@ import {
     getSong,
     getSongIsLogue
 } from './songs'
+import { getCharStringForNumber } from '../../helpers/format'
 import { getArrayOfLength } from '../../helpers/general'
-
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import {
     TIME_STAGE,
@@ -44,7 +44,7 @@ export const getLayersForScene = (songIndex, sceneIndex) => {
 
 export const getLayerForScene = (songIndex, sceneIndex, yIndex) => {
     const sceneLayers = getLayersForScene(songIndex, sceneIndex)
-    return sceneLayers[`layer${yIndex}`] || {}
+    return sceneLayers[`layer_${getCharStringForNumber(yIndex)}`] || {}
 }
 
 export const getSkyTimeForScene = (songIndex, sceneIndex) => {

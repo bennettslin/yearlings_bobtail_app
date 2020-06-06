@@ -2,86 +2,33 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import CubeSvg from '../Svg'
 import Face from './Face'
 import { getCharStringForNumber } from '../../../helpers/format'
-import { getValueInAbridgedMatrix } from '../../../helpers/general'
+import {
+    getCeilingHslaForCube,
+    getCeilingZIndexForCube,
+    getFloorHslaForCube,
+    getFloorZIndexForCube,
+    getSlantDirectionForCube
+} from '../../../api/scene/cubes'
 import { getCssZIndexForCube } from './helpers/zIndices'
 import {
-    DEFAULT,
     FACES,
     CEILING,
     FLOOR
 } from '../../../constants/scene/cubes'
-import {
-    CUBE_X_INDICES,
-    CUBE_Y_INDICES
-} from '../../../constants/cubeIndex'
-
-const
-    getMapStateToProps = (yIndex, xIndex) => ({
-        sceneStore: {
-            sceneCubesKeys: {
-                ceiling: {
-                    hslaColours: ceilingHslaColours,
-                    zIndices: ceilingZIndices
-                },
-                floor: {
-                    hslaColours: floorHslaColours,
-                    zIndices: floorZIndices
-                },
-                slantDirection
-            }
-        }
-    }) => {
-        const
-            ceilingHslaKey =
-                getValueInAbridgedMatrix({
-                    matrix: ceilingHslaColours,
-                    xIndex,
-                    yIndex
-                }),
-            floorHslaKey =
-                getValueInAbridgedMatrix({
-                    matrix: floorHslaColours,
-                    xIndex,
-                    yIndex
-                }),
-            ceilingZIndex =
-                getValueInAbridgedMatrix({
-                    matrix: ceilingZIndices,
-                    xIndex,
-                    yIndex
-                }),
-            floorZIndex =
-                getValueInAbridgedMatrix({
-                    matrix: floorZIndices,
-                    xIndex,
-                    yIndex
-                })
-
-        return {
-            ceilingHslaKey,
-            floorHslaKey,
-            ceilingZIndex,
-            floorZIndex,
-            slantDirection
-        }
-    },
-    CubeConfig = {}
+import { mapSceneCubesKey } from '../../../redux/scene/selectors'
 
 const Cube = ({
-    xIndex,
     yIndex,
-    ceilingHslaKey,
-    floorHslaKey,
-    ceilingZIndex,
-    floorZIndex,
-    slantDirection = DEFAULT
+    xIndex
 
 }) => {
-    const xCharIndex = getCharStringForNumber(xIndex)
+    const
+        sceneCubesKey = useSelector(mapSceneCubesKey),
+        slantDirection = getSlantDirectionForCube(sceneCubesKey)
 
     return (
         // Individual cubes need to be svgs in order to have a stacking order.
@@ -90,7 +37,7 @@ const Cube = ({
                 className: cx(
                     'Cube',
                     `y${yIndex}`,
-                    `x${xCharIndex}`,
+                    `x${getCharStringForNumber(xIndex)}`,
                     'abF'
                 ),
                 style: {
@@ -110,8 +57,16 @@ const Cube = ({
                         level: FLOOR,
                         yIndex,
                         xIndex,
-                        hslaKey: floorHslaKey,
-                        zIndex: floorZIndex,
+                        hslaKey: getFloorHslaForCube(
+                            sceneCubesKey,
+                            yIndex,
+                            xIndex
+                        ),
+                        zIndex: getFloorZIndexForCube(
+                            sceneCubesKey,
+                            yIndex,
+                            xIndex
+                        ),
                         face
                     }}
                 />
@@ -124,8 +79,16 @@ const Cube = ({
                         level: CEILING,
                         yIndex,
                         xIndex,
-                        hslaKey: ceilingHslaKey,
-                        zIndex: ceilingZIndex,
+                        hslaKey: getCeilingHslaForCube(
+                            sceneCubesKey,
+                            yIndex,
+                            xIndex
+                        ),
+                        zIndex: getCeilingZIndexForCube(
+                            sceneCubesKey,
+                            yIndex,
+                            xIndex
+                        ),
                         face
                     }}
                 />
@@ -135,23 +98,8 @@ const Cube = ({
 }
 
 Cube.propTypes = {
-    // Through Redux.
-    ceilingHslaKey: PropTypes.string.isRequired,
-    floorHslaKey: PropTypes.string.isRequired,
-    ceilingZIndex: PropTypes.number.isRequired,
-    floorZIndex: PropTypes.number.isRequired,
-    slantDirection: PropTypes.string,
-
-    // From parent.
-    xIndex: PropTypes.number.isRequired,
-    yIndex: PropTypes.number.isRequired
+    yIndex: PropTypes.number.isRequired,
+    xIndex: PropTypes.number.isRequired
 }
 
-CUBE_Y_INDICES.forEach(yIndex => {
-    CubeConfig[yIndex] = {}
-    CUBE_X_INDICES.forEach(xIndex => {
-        CubeConfig[yIndex][xIndex] = connect(getMapStateToProps(yIndex, xIndex))(memo(Cube))
-    })
-})
-
-export default CubeConfig
+export default memo(Cube)

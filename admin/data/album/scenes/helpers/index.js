@@ -1,5 +1,6 @@
 import ACTOR_ARRANGEMENTS from '../../../scene/scenes/actors'
 import THING_ARRANGEMENTS from '../../../scene/scenes/things'
+import { getCharStringForNumber } from '../../../../../app/helpers/format'
 import { ACTOR } from '../../../../../app/constants/scene'
 
 const _addPresenceToSceneLayer = ({
@@ -23,7 +24,7 @@ const _addPresenceToSceneLayer = ({
          * scaling.
          */
         yIndex = Number.isFinite(layerYIndex) ? layerYIndex : arrangedYIndex,
-        layerKey = `layer${yIndex}`
+        layerKey = `layer_${getCharStringForNumber(yIndex)}`
 
     // Initialise this layer if necessary.
     if (!layers[layerKey]) {

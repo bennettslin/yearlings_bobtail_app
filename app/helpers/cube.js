@@ -14,7 +14,14 @@ import {
     RIGHT
 } from '../constants/scene/cubes'
 
-import { getValidYIndex } from '../helpers/general'
+export const getValidYIndex = (yIndex) => {
+    /**
+     * Things have an extra -1 yIndex to allow them to be behind the 0 yIndex
+     * cubes. For positioning and sizing, however, they will be calculated as
+     * if they are 0 yIndex.
+     */
+    return yIndex === -1 ? 0 : yIndex
+}
 
 /***************
  * COORDINATES *

@@ -1,5 +1,5 @@
+import { getValidYIndex } from '../../../../../helpers/cube'
 import { Y_INDEX_SCALE_FACTORS } from '../../../../../constants/cubeRender'
-import { getValidYIndex } from '../../../../../helpers/general'
 import {
     ACTOR,
     ACTOR_DEFAULT_SCALE_FACTOR,
