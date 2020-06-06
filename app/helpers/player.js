@@ -15,11 +15,10 @@ export const getPlayersCanPlayThroughFromBitNumber = (bitNumber) => {
     })
 }
 
-export const getPlayerCanPlayThroughFromBit = ({
+export const getPlayerCanPlayThroughFromBit = (
     songIndex,
     playersBitNumber
-
-}) => (
+) => (
     getObjectFromBitNumber({
         keysCount: getSongsNotLoguesCount(),
         bitNumber: playersBitNumber

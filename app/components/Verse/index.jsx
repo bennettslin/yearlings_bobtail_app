@@ -36,9 +36,7 @@ class Verse extends PureComponent {
         // From parent.
         verseObject: PropTypes.object.isRequired,
         verseIndex: PropTypes.number,
-
         inVerseBar: PropTypes.bool.isRequired,
-
         setVerseRef: PropTypes.func
     }
 

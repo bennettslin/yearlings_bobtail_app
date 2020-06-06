@@ -3,29 +3,19 @@ import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAudioStore } from '../../redux/audio/action'
 import SongDispatcher from '../../handlers/Song/Dispatcher'
-import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { mapIsPlaying } from '../../redux/audio/selectors'
-import { mapPlayersBitNumber } from '../../redux/players/selectors'
-import {
-    mapSelectedSongIndex,
-    mapIsSelectedLogue
-} from '../../redux/selected/selectors'
+import { mapPlayerCanPlayThrough } from '../../redux/players/selectors'
+import { mapIsSelectedLogue } from '../../redux/selected/selectors'
 
 const PlayDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         dispatchSong = useRef(),
         isPlaying = useSelector(mapIsPlaying),
-        playersBitNumber = useSelector(mapPlayersBitNumber),
-        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        playerCanPlayThrough = useSelector(mapPlayerCanPlayThrough),
         isSelectedLogue = useSelector(mapIsSelectedLogue)
 
     const dispatchPlay = (nextIsPlaying = !isPlaying) => {
-        // TODO: Make this a selector
-        const playerCanPlayThrough = getPlayerCanPlayThroughFromBit({
-            songIndex: selectedSongIndex,
-            playersBitNumber
-        })
 
         // Do not toggle play if player is not ready to play through.
         if (!playerCanPlayThrough) {

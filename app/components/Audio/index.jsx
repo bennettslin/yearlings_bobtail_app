@@ -18,10 +18,9 @@ import {
     AUDIO_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
 import { getSongsAndLoguesCount } from '../../api/album/songs'
-import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { mapIsPlaying } from '../../redux/audio/selectors'
 import { mapIsTwoRowMenu } from '../../redux/responsive/selectors'
-import { mapPlayersBitNumber } from '../../redux/players/selectors'
+import { mapPlayerCanPlayThrough } from '../../redux/players/selectors'
 import { mapSelectedSongIndex } from '../../redux/selected/selectors'
 import { mapAudioOptionIndex } from '../../redux/session/selectors'
 import { mapIsDesktopWidth } from '../../redux/viewport/selectors'
@@ -65,7 +64,7 @@ const Audio = () => {
         dispatchSong = useRef(),
         isPlaying = useSelector(mapIsPlaying),
         isTwoRowMenu = useSelector(mapIsTwoRowMenu),
-        playersBitNumber = useSelector(mapPlayersBitNumber),
+        playerCanPlayThrough = useSelector(mapPlayerCanPlayThrough),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         audioOptionIndex = useSelector(mapAudioOptionIndex),
         isDesktopWidth = useSelector(mapIsDesktopWidth)
@@ -88,14 +87,10 @@ const Audio = () => {
 
     const getDynamicButtonConfigs = () => {
         const
-            // TODO: Make these a selector.
+            // TODO: Make this a selector.
             isPrologue = selectedSongIndex === 0,
             songsCount = getSongsAndLoguesCount(),
             isEpilogue = selectedSongIndex === songsCount - 1,
-            playerCanPlayThrough = getPlayerCanPlayThroughFromBit({
-                songIndex: selectedSongIndex,
-                playersBitNumber
-            }),
 
             dynamicButtonConfigs = [
                 {

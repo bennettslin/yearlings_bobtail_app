@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Scene data refactor.`,
-        workedHours: 16,
+        workedHours: 18,
         neededHours: 21
     },
     {
@@ -28,7 +28,7 @@ export default [
     },
     {
         taskName: `Post-Gatsby refactoring.`,
-        workedHours: 53
+        workedHours: 54
     },
 
     /* Next weekend. */

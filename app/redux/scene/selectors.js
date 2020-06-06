@@ -21,6 +21,7 @@ export const mapSceneSkySeason = (
     { sceneStore: { sceneSkySeason } }
 ) => sceneSkySeason
 
+// TODO: Does scene store really need its own song and scene index?
 const mapSceneSongIndex = (
     { sceneStore: { sceneSongIndex } }
 ) => sceneSongIndex
