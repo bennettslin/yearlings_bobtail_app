@@ -1,4 +1,4 @@
-import { getValidYIndex } from '../../../../../helpers/cube'
+import { getValidYIndex } from '../../../../../helpers/cubeIndices'
 import { Y_INDEX_SCALE_FACTORS } from '../../../../../constants/cubeRender'
 import {
     ACTOR,

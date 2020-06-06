@@ -7,6 +7,7 @@
 * Determine if any presence is ever rendered with different zIndex.
     * If not, PresenceSvg should get scene cubes key information from build.
 * Determine if scene store really needs its own song and scene index.
+* Delete all null values in shared styles.
 
 # Bugs
 * Stage dimensions act like two row menu in mobile, even when not?

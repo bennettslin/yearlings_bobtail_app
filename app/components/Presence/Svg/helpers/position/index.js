@@ -1,25 +1,6 @@
-import { CUBE_X_AXIS_LENGTH } from '../../../../../constants/cubeIndex'
-import { getHorizontalPlaneFractions } from '../../../../../helpers/cube'
+import { getNearestXIndex } from '../../../../../helpers/cubeIndices'
+import { getHorizontalPlaneFractions } from '../../../../../helpers/cubePlanes'
 import { getFloorZIndexForCube } from '../../../../../api/scene/cubes'
-
-const _getNearestXIndex = (xPosition) => {
-    let xIndex
-
-    /**
-     * Get the index and offset from the float.
-     */
-    if (xPosition < 0) {
-        xIndex = 0
-
-    } else if (xPosition > CUBE_X_AXIS_LENGTH - 1) {
-        xIndex = CUBE_X_AXIS_LENGTH - 1
-
-    } else {
-        xIndex = Math.round(xPosition)
-    }
-
-    return xIndex
-}
 
 const _getTileCentreForPresence = ({
     cubesKey,
@@ -29,7 +10,7 @@ const _getTileCentreForPresence = ({
 
 }) => {
     const
-        xIndex = _getNearestXIndex(xPosition),
+        xIndex = getNearestXIndex(xPosition),
         xOffset = xPosition - xIndex,
 
         /**

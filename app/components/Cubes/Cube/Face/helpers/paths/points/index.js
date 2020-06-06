@@ -12,7 +12,7 @@ import {
     CUBE_Z_AXIS_LENGTH
 } from '../../../../../../../constants/cubeIndex'
 
-import { getHorizontalPlaneFractions } from '../../../../../../../helpers/cube'
+import { getHorizontalPlaneFractions } from '../../../../../../../helpers/cubePlanes'
 
 const MID_X_INDEX = CUBE_X_AXIS_LENGTH / 2
 
