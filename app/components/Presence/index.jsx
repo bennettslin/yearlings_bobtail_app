@@ -2,12 +2,9 @@
 import React, { useEffect, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from './Svg'
-import { capitaliseForClassName } from '../../helpers/format'
 import { getSvgForPresence } from '../../api/svg'
-import { mapSceneCubesKey } from '../../redux/scene/selectors'
 import './style'
 
 const Presence = ({
@@ -20,9 +17,6 @@ const Presence = ({
 
 }) => {
     const
-        // TODO: Get this from build.
-        sceneCubesKey = useSelector(mapSceneCubesKey),
-
         /**
          * This is a fallback, in case the transition class was added before
          * the svg was loaded and therefore present.
@@ -62,11 +56,8 @@ const Presence = ({
             <PresenceSvg
                 {...{
                     className: cx(
-                        'Presence',
-                        isSvgLoaded && 'Presence__loaded',
-                        capitaliseForClassName(presenceType)
+                        isSvgLoaded && 'Presence__loaded'
                     ),
-                    cubesKey: sceneCubesKey,
                     presenceType,
                     actorKey,
                     presenceKey,

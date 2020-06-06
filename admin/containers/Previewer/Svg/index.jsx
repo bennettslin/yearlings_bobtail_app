@@ -26,8 +26,8 @@ import {
 import {
     getViewBoxSize,
     getSizeForPresence
-} from '../../../../app/modules/PresenceSvg/helper/size'
-import { getCompoundActorStyleIfNeeded } from '../../../../app/modules/PresenceSvg/helper/sharedStyle'
+} from '../../../../app/components/Presence/Svg/helpers/size'
+import { getCompoundActorStyleIfNeeded } from '../../../../app/components/Presence/Svg/helpers/sharedStyle'
 
 import { ACTOR } from '../../../../app/constants/scene'
 import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'

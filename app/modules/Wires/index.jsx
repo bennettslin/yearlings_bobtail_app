@@ -58,7 +58,7 @@ const Wires = ({
                             key: index,
                             className: cx(
                                 'Wire',
-                                'PresenceSvg__position'
+                                'presence__position'
                             ),
                             style: {
                                 left: `${left.toFixed(2)}%`,

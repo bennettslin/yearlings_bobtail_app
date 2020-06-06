@@ -5,7 +5,7 @@ import debounce from 'debounce'
 import PreviewerDashboard from '../Previewer/Dashboard'
 import PreviewerSvg from '../Previewer/Svg'
 
-import { getViewBoxSize } from '../../../app/modules/PresenceSvg/helper/size'
+import { getViewBoxSize } from '../../../app/components/Presence/Svg/helpers/size'
 import {
     getWindow,
     removeLoadingIndicator

@@ -1,12 +1,15 @@
 import React, { useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
+import { mapSceneCubesKey } from '../../../redux/scene/selectors'
 import InlineSvg from '../../../modules/InlineSvg'
 import Wires from '../../../modules/Wires'
 import {
     convertPresenceKeyToTitle,
     convertPresenceKeyToClassName,
-    getSharedClassNames
+    getSharedClassNames,
+    capitaliseForClassName
 } from '../../../helpers/format'
 import { getArrangementForPresence } from '../../../api/scene/presences'
 import {
@@ -26,7 +29,6 @@ import './style'
 
 const PresenceSvg = ({
     className,
-    cubesKey,
     presenceType,
     actorKey,
     presenceKey,
@@ -35,6 +37,7 @@ const PresenceSvg = ({
 
 }) => {
     const
+        sceneCubesKey = useSelector(mapSceneCubesKey),
         [adjustedWidth, setAdjustedWidth] = useState(0),
         [adjustedHeight, setAdjustedHeight] = useState(0),
         {
@@ -62,7 +65,7 @@ const PresenceSvg = ({
             x: adjustedLeft,
             y: adjustedTop
         } = getXYForPresence({
-            cubesKey,
+            cubesKey: sceneCubesKey,
             yIndex,
             xPosition,
             zOffset
@@ -142,8 +145,9 @@ const PresenceSvg = ({
         <InlineSvg
             {...{
                 className: cx(
-                    'PresenceSvg',
-                    'PresenceSvg__position',
+                    'Presence',
+                    capitaliseForClassName(presenceType),
+                    'presence__position',
                     noShadow && 'Presence__noShadow',
                     className
                 ),
@@ -191,7 +195,6 @@ const PresenceSvg = ({
 
 PresenceSvg.propTypes = {
     className: PropTypes.string,
-    cubesKey: PropTypes.string.isRequired,
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
     presenceKey: PropTypes.string.isRequired,
