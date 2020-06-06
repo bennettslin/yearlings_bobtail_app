@@ -1,59 +1,24 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-
 import Layer from '../Layer'
+import { ORDERED_THINGS } from '../../../constants/scene/things'
 
-import {
-    BACKDROP,
-    BUBBLE,
-    CARDBOARD,
-    CUTOUT,
-    DOOR,
-    FIXTURE,
-    FLAT,
-    FURNITURE,
-    PANEL,
-    PUPPET
-} from '../../../constants/scene/things'
-
-const LayersThing = ({
-    [BACKDROP]: backdrops,
-    [BUBBLE]: bubbles,
-    [CARDBOARD]: cardboards,
-    [CUTOUT]: cutouts,
-    [DOOR]: doors,
-    [FIXTURE]: fixtures,
-    [FLAT]: flats,
-    [FURNITURE]: furnitures,
-    [PANEL]: panels,
-    [PUPPET]: puppets
-
-}) => (
-    <>
-        <Layer {...{ ...backdrops, presenceType: BACKDROP }} />
-        <Layer {...{ ...flats, presenceType: FLAT }} />
-        <Layer {...{ ...doors, presenceType: DOOR }} />
-        <Layer {...{ ...cutouts, presenceType: CUTOUT }} />
-        <Layer {...{ ...panels, presenceType: PANEL }} />
-        <Layer {...{ ...furnitures, presenceType: FURNITURE }} />
-        <Layer {...{ ...fixtures, presenceType: FIXTURE }} />
-        <Layer {...{ ...puppets, presenceType: PUPPET }} />
-        <Layer {...{ ...bubbles, presenceType: BUBBLE }} />
-        <Layer {...{ ...cardboards, presenceType: CARDBOARD }} />
-    </>
+const LayersThing = ({ yIndex, ...other }) => (
+    ORDERED_THINGS.map(presenceType => (
+        <Layer
+            {...{
+                key: presenceType,
+                presenceType,
+                yIndex,
+                ...other[presenceType]
+            }}
+        />
+    ))
 )
 
-LayersThing.propTypes = {
-    [BACKDROP]: PropTypes.object,
-    [BUBBLE]: PropTypes.object,
-    [CARDBOARD]: PropTypes.object,
-    [CUTOUT]: PropTypes.object,
-    [DOOR]: PropTypes.object,
-    [FIXTURE]: PropTypes.object,
-    [FLAT]: PropTypes.object,
-    [FURNITURE]: PropTypes.object,
-    [PANEL]: PropTypes.object,
-    [PUPPET]: PropTypes.object
-}
+LayersThing.propTypes = ORDERED_THINGS.reduce((sum, presenceType) => {
+    sum[presenceType] = PropTypes.object
+    return sum
+}, {})
 
 export default memo(LayersThing)

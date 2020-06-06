@@ -8,3 +8,16 @@ export const FLAT = 'flat'
 export const FURNITURE = 'furniture'
 export const PANEL = 'panel'
 export const PUPPET = 'puppet'
+
+export const ORDERED_THINGS = [
+    BACKDROP,
+    FLAT,
+    DOOR,
+    CUTOUT,
+    PANEL,
+    FURNITURE,
+    FIXTURE,
+    PUPPET,
+    BUBBLE,
+    CARDBOARD
+]

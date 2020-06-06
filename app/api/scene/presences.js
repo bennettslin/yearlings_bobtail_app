@@ -6,15 +6,20 @@ const {
     things: THING_ARRANGEMENTS
 } = getScene()
 
-export const getPresenceKeys = ({
+export const getPresencesForLayer = ({
     actorKey,
-    presenceType
+    presenceType,
 
-}) => (
-    actorKey ?
-        Object.keys(ACTOR_ARRANGEMENTS[actorKey]) :
-        Object.keys(THING_ARRANGEMENTS[presenceType])
-)
+    // TODO: Only return arrangements for this yIndex.
+    yIndex
+
+}) => {
+    return (
+        actorKey ?
+            Object.keys(ACTOR_ARRANGEMENTS[actorKey]) :
+            Object.keys(THING_ARRANGEMENTS[presenceType])
+    )
+}
 
 export const getArrangementForPresence = ({
     presenceType,

@@ -1,47 +1,47 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import Presence from '../../Presence'
-import { getPresenceKeys } from '../../../api/scene/presences'
+import { getPresencesForLayer } from '../../../api/scene/presences'
 import { ACTOR } from '../../../constants/scene'
 
 const Layer = ({
     presenceType,
     actorKey,
     instanceKey,
+    yIndex,
     ...other
 
-}) => {
-    const
-        presenceKeys = getPresenceKeys({
-            actorKey,
-            presenceType
-        })
+}) => (
+    getPresencesForLayer({
+        actorKey,
+        presenceType,
+        yIndex
 
-    return (
-        presenceKeys.map(presenceKey => {
-            const
-                { [presenceKey]: presenceValue } = other,
-                existenceValue =
-                    actorKey ?
-                        // Actor passes an instance if it exists.
-                        presenceKey === instanceKey :
-                        // Thing passes a presence key with boolean value.
-                        Boolean(presenceValue)
+    }).map(presenceKey => {
+        const
+            { [presenceKey]: presenceValue } = other,
 
-            return (
-                <Presence
-                    {...{
-                        key: presenceKey,
-                        presenceType: presenceType || ACTOR,
-                        actorKey,
-                        presenceKey,
-                        existenceValue
-                    }}
-                />
-            )
-        })
-    )
-}
+            // TODO: Presence knows its own existence value.
+            existenceValue =
+                actorKey ?
+                    // Actor passes an instance if it exists.
+                    presenceKey === instanceKey :
+                    // Thing passes a presence key with boolean value.
+                    Boolean(presenceValue)
+
+        return (
+            <Presence
+                {...{
+                    key: presenceKey,
+                    presenceType: presenceType || ACTOR,
+                    actorKey,
+                    presenceKey,
+                    existenceValue
+                }}
+            />
+        )
+    })
+)
 
 Layer.propTypes = {
     // Parent also passes presenceKeys.

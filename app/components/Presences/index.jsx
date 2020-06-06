@@ -15,39 +15,31 @@ const Presences = ({ yIndex }) => {
     const
         sceneSongIndex = useSelector(mapSceneSongIndex),
         sceneSceneIndex = useSelector(mapSceneSceneIndex),
-        sceneLayer = getLayerForScene(
+        {
+            [ACTOR]: actors,
+            ...rest
+        } = getLayerForScene(
             sceneSongIndex,
             sceneSceneIndex,
             yIndex
         )
 
-    // If this layer has no presences, just don't render it at all.
-    if (sceneLayer) {
-        const {
-            [ACTOR]: actors,
-            ...rest
-        } = sceneLayer
+    return (
+        <div
+            {...{
+                className: cx(
+                    'Presences',
+                    `y${yIndex}`,
+                    'abF'
+                )
+            }}
+        >
+            <LayersThing {...{ yIndex, ...rest }} />
 
-        return (
-            <div
-                {...{
-                    className: cx(
-                        'Presences',
-                        `y${yIndex}`,
-                        'abF'
-                    )
-                }}
-            >
-                <LayersThing {...rest} />
-
-                {/* Each individual actor has their own layer. */}
-                <LayersActor {...actors} />
-            </div>
-        )
-
-    } else {
-        return null
-    }
+            {/* Each individual actor has their own layer. */}
+            <LayersActor {...{ yIndex, ...actors }} />
+        </div>
+    )
 }
 
 Presences.propTypes = {
