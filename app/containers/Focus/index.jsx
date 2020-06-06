@@ -9,7 +9,6 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import RootContainer from '../Root'
 import KeyManager from '../../managers/Key'
 import { isEmailFocused } from '../../utils/email'
-import { populateRefs } from '../../helpers/ref'
 import { mapQueuedFocus } from '../../redux/focus/selectors'
 import { mapCanSliderMount } from '../../redux/mount/selectors'
 import { mapIsHeightlessLyric } from '../../redux/responsive/selectors'
@@ -167,10 +166,6 @@ class FocusContainer extends PureComponent {
     _handleKeyDownPress = e => this.handleKeyDownPress(e)
     _handleKeyUpPress = e => this.handleKeyUpPress(e)
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
-    }
-
     getCloseForBodyClick = dispatch => {
         this.closeForBodyClick = dispatch
     }
@@ -179,6 +174,13 @@ class FocusContainer extends PureComponent {
         if (dispatch) {
             this.dispatchTouchMove = dispatch.dispatchTouchMove
             this.dispatchTouchEnd = dispatch.dispatchTouchEnd
+        }
+    }
+
+    getDispatchKey = dispatch => {
+        if (dispatch) {
+            this.handleKeyDownPress = dispatch.handleKeyDownPress
+            this.handleKeyUpPress = dispatch.handleKeyUpPress
         }
     }
 
@@ -218,7 +220,7 @@ class FocusContainer extends PureComponent {
                     <SliderTouchDispatcher {...{ ref: this.getDispatchSliderTouch }} />
                 )}
                 <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
-                <KeyManager {...{ getRefs: this._getRefs }} />
+                <KeyManager {...{ ref: this.getDispatchKey }} />
             </div>
         )
     }

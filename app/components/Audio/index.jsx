@@ -1,5 +1,4 @@
 // Component to show buttons for audio navigation.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { updateLyricStore } from '../../redux/lyric/action'
-import { populateRefs } from '../../helpers/ref'
 import { mapActivatedVerseIndex } from '../../redux/activated/selectors'
 import {
     mapSelectedSongIndex,
@@ -100,10 +99,6 @@ class LyricIndicesListener extends PureComponent {
                 this.props.updateActivatedStore()
             }
         }
-    }
-
-    _getRefs = payload => {
-        populateRefs(this, payload)
     }
 
     render() {

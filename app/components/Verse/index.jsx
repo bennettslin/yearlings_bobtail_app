@@ -6,7 +6,6 @@ import cx from 'classnames'
 import ActivatedVerseDispatcher from '../../dispatchers/Activated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import VerseLines from './Lines'
-import { populateRefs } from '../../helpers/ref'
 import { VERSE_SCROLL } from '../../constants/scroll'
 import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'
@@ -71,10 +70,6 @@ class Verse extends PureComponent {
                 index: this.props.verseIndex
             })
         }
-    }
-
-    _getRefs = payload => {
-        populateRefs(this, payload)
     }
 
     getActivateVerse = dispatch => {

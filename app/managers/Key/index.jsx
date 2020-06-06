@@ -1,15 +1,13 @@
 // Component that handles all user events from keyboard.
-
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import { useDispatch } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateToggleStore } from '../../redux/toggle/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
 import { isEmailFocused } from '../../utils/email'
-import { mapIsAccessOn } from '../../redux/access/selectors'
 import {
     getKeyName,
     getIsNavKeyOrEnter,
@@ -25,137 +23,27 @@ import {
     SPACE,
     TAB
 } from '../../constants/access'
-import {
-    mapSelectedVerseIndex,
-    mapSelectedAnnotationIndex
-} from '../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const KeyManager = forwardRef((props, ref) => {
     const
-        isAccessOn = mapIsAccessOn(state),
-        selectedVerseIndex = mapSelectedVerseIndex(state),
-        selectedAnnotationIndex = mapSelectedAnnotationIndex(state)
+        dispatch = useDispatch(),
+        handleNavigation = useRef(),
+        dispatchLetter = useRef()
 
-    return {
-        isAccessOn,
-        selectedAnnotationIndex,
-        selectedVerseIndex
-    }
-}
-
-class KeyManager extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isAccessOn: PropTypes.bool.isRequired,
-        updateAccessStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
-        updateVerseBarsStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getRefs: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            handleKeyDownPress: this.handleKeyDownPress,
-            handleKeyUpPress: this.handleKeyUpPress
-        })
-    }
-
-    handleKeyDownPress = e => {
-
-        if (isEmailFocused()) {
-            return false
-        }
-
-        const keyName = getKeyName(e)
-
-        // Do not allow the event to propagate if it's one of these.
-        if (!keyName) {
-            return false
-        }
-
-        // Show key as registered in the UI.
-        this.props.updateAccessStore({ accessedKey: keyName })
-
+    const _determineVerseBarsWithParameters = () => {
         /**
-         * Once access is turned on and key letter is displayed, ignore non-nav
-         * keys and enter key, which are handled on key up.
+         * Make duration long enough for Chrome, Firefox, and Safari. 150 is
+         * fine for lyric page up and down, but 300 seems to be needed for
+         * navigating between annotations.
          */
-        if (!getShouldHandleOnKeyDown(keyName)) {
-            return false
-
-        } else {
-            // Turn on access.
-            this.props.updateAccessStore({ isAccessOn: true })
-        }
-
-        /**
-         * While these keys do not register, they do scroll the lyric.
-         */
-        if (
-            keyName === SPACE ||
-            keyName === PAGE_UP ||
-            keyName === PAGE_DOWN
-        ) {
-            this.determineVerseBarsWithParameters()
-        }
-
-        this._handleKeyRegister({
-            e,
-            keyName,
-            isKeyDown: true
-        })
+        dispatch(updateVerseBarsStore({
+            queuedDetermineVerseBars: true,
+            queuedVerseBarsTimeout: 150
+        }))
+        dispatch(updateToggleStore({ isAutoScroll: false }))
     }
 
-    handleKeyUpPress = e => {
-
-        if (isEmailFocused()) {
-            return false
-        }
-
-        const keyName = getKeyName(e)
-
-        // Do not allow the event to propagate if it's one of these.
-        if (
-            !keyName ||
-            keyName === TAB ||
-            keyName === CAPS_LOCK
-        ) {
-            return false
-        }
-
-        // Stop showing key as registered in the UI.
-        this.props.updateAccessStore({ accessedKey: '' })
-
-        /**
-         * Once key letter is removed from display, ignore all nav keys plus
-         * rewind and fast forward, which were already handled on key down.
-         */
-        if (getShouldHandleOnKeyDown(keyName)) {
-            return false
-
-        // Turn on access.
-        } else if (keyName !== ESCAPE) {
-            this.props.updateAccessStore({ isAccessOn: true })
-        }
-
-        // Handle escape key.
-        if (keyName === ESCAPE) {
-            this.handleEscape(e)
-
-        } else {
-
-            this._handleKeyRegister({
-                e,
-                keyName,
-                isKeyDown: false
-            })
-        }
-    }
-
-    _handleKeyRegister = ({
+    const _handleKeyRegister = ({
         e,
         keyName,
         isKeyDown
@@ -170,8 +58,8 @@ class KeyManager extends PureComponent {
         const
             { keyWasRegistered } =
                 getIsNavKeyOrEnter(keyName) ?
-                    this.handleNavigation(keyName) :
-                    this.handleLetter(keyName)
+                    handleNavigation.current(keyName) :
+                    dispatchLetter.current.handleLetter(keyName)
 
         // Prevent default for registered key.
         if (keyWasRegistered) {
@@ -188,49 +76,110 @@ class KeyManager extends PureComponent {
             keyName === PAGE_UP ||
             keyName === PAGE_DOWN
         ) {
-            this.determineVerseBarsWithParameters()
+            _determineVerseBarsWithParameters()
         }
     }
 
-    determineVerseBarsWithParameters = () => {
+    const handleKeyDownPress = e => {
+        if (isEmailFocused()) {
+            return false
+        }
+
+        const keyName = getKeyName(e)
+
+        // Do not allow the event to propagate if it's one of these.
+        if (!keyName) {
+            return false
+        }
+
+        // Show key as registered in the UI.
+        dispatch(updateAccessStore({ accessedKey: keyName }))
+
         /**
-         * Make duration long enough for Chrome, Firefox, and Safari. 150 is
-         * fine for lyric page up and down, but 300 seems to be needed for
-         * navigating between annotations.
+         * Once access is turned on and key letter is displayed, ignore non-nav
+         * keys and enter key, which are handled on key up.
          */
-        this.props.updateVerseBarsStore({
-            queuedDetermineVerseBars: true,
-            queuedVerseBarsTimeout: 150
+        if (!getShouldHandleOnKeyDown(keyName)) {
+            return false
+
+        } else {
+            // Turn on access.
+            dispatch(updateAccessStore({ isAccessOn: true }))
+        }
+
+        /**
+         * While these keys do not register, they do scroll the lyric.
+         */
+        if (
+            keyName === SPACE ||
+            keyName === PAGE_UP ||
+            keyName === PAGE_DOWN
+        ) {
+            _determineVerseBarsWithParameters()
+        }
+
+        _handleKeyRegister({
+            e,
+            keyName,
+            isKeyDown: true
         })
-        this.props.updateToggleStore({ isAutoScroll: false })
     }
 
-    getHandleNavigation = dispatch => {
-        this.handleNavigation = dispatch
-    }
+    const handleKeyUpPress = e => {
+        if (isEmailFocused()) {
+            return false
+        }
 
-    getDispatchLetter = dispatch => {
-        if (dispatch) {
-            this.handleEscape = dispatch.handleEscape
-            this.handleLetter = dispatch.handleLetter
+        const keyName = getKeyName(e)
+
+        // Do not allow the event to propagate if it's one of these.
+        if (
+            !keyName ||
+            keyName === TAB ||
+            keyName === CAPS_LOCK
+        ) {
+            return false
+        }
+
+        // Stop showing key as registered in the UI.
+        dispatch(updateAccessStore({ accessedKey: '' }))
+
+        /**
+         * Once key letter is removed from display, ignore all nav keys plus
+         * rewind and fast forward, which were already handled on key down.
+         */
+        if (getShouldHandleOnKeyDown(keyName)) {
+            return false
+
+        // Turn on access.
+        } else if (keyName !== ESCAPE) {
+            dispatch(updateAccessStore({ isAccessOn: true }))
+        }
+
+        // Handle escape key.
+        if (keyName === ESCAPE) {
+            dispatchLetter.current.handleEscape(e)
+
+        } else {
+
+            _handleKeyRegister({
+                e,
+                keyName,
+                isKeyDown: false
+            })
         }
     }
 
-    render() {
-        return (
-            <>
-                <NavigationManager {...{ ref: this.getHandleNavigation }} />
-                <LetterManager {...{ ref: this.getDispatchLetter }} />
-            </>
-        )
-    }
-}
+    useImperativeHandle(ref, () => ({
+        handleKeyDownPress,
+        handleKeyUpPress
+    }))
+    return (
+        <>
+            <NavigationManager {...{ ref: handleNavigation }} />
+            <LetterManager {...{ ref: dispatchLetter }} />
+        </>
+    )
+})
 
-export default connect(
-    mapStateToProps,
-    {
-        updateAccessStore,
-        updateToggleStore,
-        updateVerseBarsStore
-    }
-)(KeyManager)
+export default KeyManager

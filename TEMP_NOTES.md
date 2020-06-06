@@ -21,6 +21,9 @@
 # Bugs that may get fixed after logic styling tear out and redo.
 * VerseBar should not have hover styling.
 
+# Bugs that may get fixed after canEnter tear out.
+* Song selection seems slower through access?
+
 # Brainless JS tasks
 * Get rid of PopupAnnotation listener.
 * Make dispatchers functions.
