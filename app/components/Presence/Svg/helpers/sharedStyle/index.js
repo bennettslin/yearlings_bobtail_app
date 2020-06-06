@@ -1,5 +1,4 @@
-import { isString } from '../../../../helpers/general'
-
+import { isString } from '../../../../../helpers/general'
 import {
     YOUNG_BENNETT,
     PRETEEN_BENNETT,
@@ -49,7 +48,7 @@ import {
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
     KHARI_LIZ_REFLECTION
-} from '../../../../constants/scene/actors'
+} from '../../../../../constants/scene/actors'
 
 const STYLED_ACTOR_MAP = {
     [YOUNG_BENNETT]: BENNETT,

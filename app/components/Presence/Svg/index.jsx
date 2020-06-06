@@ -1,27 +1,27 @@
 import React, { useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import InlineSvg from '../../modules/InlineSvg'
-import Wires from '../../modules/Wires'
+import InlineSvg from '../../../modules/InlineSvg'
+import Wires from '../../../modules/Wires'
 import {
     convertPresenceKeyToTitle,
     convertPresenceKeyToClassName,
     getSharedClassNames
-} from '../../helpers/format'
-import { getArrangementForPresence } from '../../api/scene/presences'
+} from '../../../helpers/format'
+import { getArrangementForPresence } from '../../../api/scene/presences'
 import {
     getSharedStyleForActor,
     getSharedStyleForThing
-} from '../../api/scene/sharedStyles'
-import { getWirePlacedFront } from '../../api/scene/wires'
-import { getXYForPresence } from './helper/position'
-import { getCompoundActorStyleIfNeeded } from './helper/sharedStyle'
+} from '../../../api/scene/sharedStyles'
+import { getWirePlacedFront } from '../../../api/scene/wires'
+import { getXYForPresence } from './helpers/position'
+import { getCompoundActorStyleIfNeeded } from './helpers/sharedStyle'
 import {
     getSizeForPresence,
     getViewBoxSize
-} from './helper/size'
-import { setSvgTransform } from './helper/transform'
-import { DEV_RENDER_ONLY_PRESENCES } from '../../constants/dev'
+} from './helpers/size'
+import { setSvgTransform } from './helpers/transform'
+import { DEV_RENDER_ONLY_PRESENCES } from '../../../constants/dev'
 import './style'
 
 const PresenceSvg = ({

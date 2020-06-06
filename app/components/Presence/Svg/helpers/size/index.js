@@ -1,5 +1,5 @@
-import { Y_INDEX_SCALE_FACTORS } from '../../../../constants/cubeRender'
-import { getValidYIndex } from '../../../../helpers/general'
+import { Y_INDEX_SCALE_FACTORS } from '../../../../../constants/cubeRender'
+import { getValidYIndex } from '../../../../../helpers/general'
 import {
     ACTOR,
     ACTOR_DEFAULT_SCALE_FACTOR,
@@ -7,13 +7,13 @@ import {
     DOOR_DEFAULT_SCALE_FACTOR,
     FIXTURE_DEFAULT_SCALE_FACTOR,
     FURNITURE_DEFAULT_SCALE_FACTOR
-} from '../../../../constants/scene'
+} from '../../../../../constants/scene'
 import {
     BUBBLE,
     DOOR,
     FIXTURE,
     FURNITURE
-} from '../../../../constants/scene/things'
+} from '../../../../../constants/scene/things'
 
 // Illustrator artboards are 1623 by 1082.
 const
