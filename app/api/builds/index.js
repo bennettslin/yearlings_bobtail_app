@@ -5,4 +5,5 @@ import album from 'data/album'
 import scene from 'data/scene'
 
 export const getAlbum = () => album
+
 export const getScene = () => scene

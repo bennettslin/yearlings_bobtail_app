@@ -18,7 +18,7 @@ import {
     AFTERWORD
 } from '../../../constants/dots'
 
-const DOT_ICONS_MAP = {
+export default {
     [NARRATIVE]: narrative,
     [BACKSTORY]: backstory,
     [OBSERVATION]: observation,
@@ -28,5 +28,3 @@ const DOT_ICONS_MAP = {
     [SONGWRITING]: songwriting,
     [AFTERWORD]: afterword
 }
-
-export const getSvgForDot = dotKey => DOT_ICONS_MAP[dotKey]

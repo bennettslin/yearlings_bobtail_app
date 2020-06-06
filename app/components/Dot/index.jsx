@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from '../../modules/InlineSvg'
-import { getSvgForDot } from '../../api/svg/dots'
+import { getSvgForDot } from '../../api/svg'
 import './style'
 
 const propTypes = {

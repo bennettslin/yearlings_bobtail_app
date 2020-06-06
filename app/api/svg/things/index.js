@@ -22,7 +22,7 @@ import {
     PUPPET
 } from '../../../constants/scene/things'
 
-const THING_SVG_MAPS = {
+export default {
     [BACKDROP]: backdrops,
     [BUBBLE]: bubbles,
     [CARDBOARD]: cardboards,
@@ -33,8 +33,4 @@ const THING_SVG_MAPS = {
     [FURNITURE]: furnitures,
     [PANEL]: panels,
     [PUPPET]: puppets
-}
-
-export const getSvgMapForThing = (presenceType) => {
-    return THING_SVG_MAPS[presenceType]
 }

@@ -48,7 +48,7 @@ import {
     TIPS_BUTTON_KEY
 } from '../../../constants/buttons'
 
-const BUTTON_ICONS_MAP = {
+export default {
     [ABOUT_BUTTON_KEY]: about,
     [AUDIO_OPTIONS_BUTTON_KEY]: audioOptions,
     [AUDIO_PLAY_BUTTON_KEY]: audioPlay,
@@ -73,10 +73,3 @@ const BUTTON_ICONS_MAP = {
     [SCORES_BUTTON_KEY]: scores,
     [TIPS_BUTTON_KEY]: tips
 }
-
-export const getSvgForButton = ({
-    buttonName,
-    buttonIdentifier
-}) => (
-    BUTTON_ICONS_MAP[buttonName]({ buttonIdentifier })
-)

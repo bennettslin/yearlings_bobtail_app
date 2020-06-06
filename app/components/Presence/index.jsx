@@ -6,10 +6,8 @@ import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from '../../modules/PresenceSvg'
 import { capitaliseForClassName } from '../../helpers/format'
-import { getSvgMapForActor } from '../../api/svg/actors'
-import { getSvgMapForThing } from '../../api/svg/things'
+import { getSvgForPresence } from '../../api/svg'
 import { mapSceneCubesKey } from '../../redux/scene/selectors'
-import { ACTOR } from '../../constants/scene'
 import './style'
 
 const Presence = ({
@@ -29,7 +27,13 @@ const Presence = ({
          * This is a fallback, in case the transition class was added before
          * the svg was loaded and therefore present.
          */
-        [isSvgLoaded, setIsSvgLoaded] = useState(false)
+        [isSvgLoaded, setIsSvgLoaded] = useState(false),
+
+        presenceSvg = getSvgForPresence({
+            actorKey,
+            presenceType,
+            presenceKey
+        })
 
     const showProcessedSvg = () => {
         // This handles the possibility that an svg might be loaded late.
@@ -44,13 +48,6 @@ const Presence = ({
         }
 
     }, [existenceValue])
-
-    const
-        presencesMap = presenceType === ACTOR ?
-            getSvgMapForActor(actorKey) :
-            getSvgMapForThing(presenceType),
-
-        presenceComponent = presencesMap[presenceKey]
 
     return (
         <CSSTransition
@@ -76,7 +73,7 @@ const Presence = ({
                     showProcessedSvg
                 }}
             >
-                {presenceComponent}
+                {presenceSvg}
             </PresenceSvg>
         </CSSTransition>
     )
