@@ -5,8 +5,8 @@
 
 # Scene refactor
 * Determine if any presence is ever rendered with different zIndex.
-* PresenceSvg should get scene cubes key information from build.
-* Cubes should also get from selector.
+    * If not, PresenceSvg should get scene cubes key information from build.
+* Cubes should know their own metadata from selector, rather than passed from parent.
 * Move getValueInAbridgedMatrix out of general.
 
 # Bugs
