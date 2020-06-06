@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from './Svg'
-import { getSvgForPresence } from '../../api/svg'
 import { mapIsPresenceShownInScene } from '../../redux/scene/selectors'
 import './style'
 
@@ -36,13 +35,7 @@ const Presence = ({
                     actorKey,
                     presenceKey
                 }}
-            >
-                {getSvgForPresence({
-                    actorKey,
-                    presenceType,
-                    presenceKey
-                })}
-            </PresenceSvg>
+            />
         </CSSTransition>
     )
 }

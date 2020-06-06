@@ -17,6 +17,7 @@ import {
     getSharedStyleForThing
 } from '../../../api/scene/sharedStyles'
 import { getWirePlacedFront } from '../../../api/scene/wires'
+import { getSvgForPresence } from '../../../api/svg'
 import { getXYForPresence } from './helpers/position'
 import { getCompoundActorStyleIfNeeded } from './helpers/sharedStyle'
 import {
@@ -28,11 +29,9 @@ import { DEV_RENDER_ONLY_PRESENCES } from '../../../constants/dev'
 import './style'
 
 const PresenceSvg = ({
-    className,
     presenceType,
     actorKey,
-    presenceKey,
-    children
+    presenceKey
 
 }) => {
     const
@@ -153,8 +152,7 @@ const PresenceSvg = ({
                     isLoaded && 'Presence__loaded',
                     capitaliseForClassName(presenceType),
                     'presence__position',
-                    noShadow && 'Presence__noShadow',
-                    className
+                    noShadow && 'Presence__noShadow'
                 ),
                 style: {
                     left: `${adjustedLeft.toFixed(2)}%`,
@@ -193,17 +191,19 @@ const PresenceSvg = ({
                 }
             }}
         >
-            {children}
+            {getSvgForPresence({
+                actorKey,
+                presenceType,
+                presenceKey
+            })}
         </InlineSvg>
     )
 }
 
 PresenceSvg.propTypes = {
-    className: PropTypes.string,
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
-    presenceKey: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired
+    presenceKey: PropTypes.string.isRequired
 }
 
 export default memo(PresenceSvg)
