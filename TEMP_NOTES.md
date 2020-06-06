@@ -6,7 +6,6 @@
 # Scene refactor
 * Presence gets existenceValue from selector that knows song and scene index.
 * PresenceSvg should get scene cubes key information from build.
-* Move Wires into Presence.
 * Move Svg into Cubes.
 * Cubes should also get from selector.
 

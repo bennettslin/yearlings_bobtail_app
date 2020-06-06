@@ -1,9 +1,7 @@
-// Component to safely render an svg by ensuring that all values are valid.
-
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getWires } from '../../api/scene/wires'
+import { getWires } from '../../../api/scene/wires'
 import './style'
 
 const defaultProps = {

@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { mapSceneCubesKey } from '../../../redux/scene/selectors'
 import InlineSvg from '../../../modules/InlineSvg'
-import Wires from '../../../modules/Wires'
+import Wires from '../Wires'
 import {
     convertPresenceKeyToTitle,
     convertPresenceKeyToClassName,
