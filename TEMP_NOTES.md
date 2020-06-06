@@ -7,10 +7,11 @@
 * Presence gets existenceValue from selector that knows song and scene index.
 * PresenceSvg should get scene cubes key information from build.
 * Cubes should also get from selector.
+* Move getValueInAbridgedMatrix out of general.
 
 # Bugs
 * Stage dimensions act like two row menu in mobile, even when not?
-* Verse scroll not registered.
+* Verse scroll key not registered, and doesn't always work.
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.
 

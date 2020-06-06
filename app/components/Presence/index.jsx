@@ -1,7 +1,5 @@
-// eslint-disable-next-line object-curly-newline
-import React, { useEffect, useState, memo } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from './Svg'
 import { getSvgForPresence } from '../../api/svg'
@@ -16,32 +14,11 @@ const Presence = ({
     existenceValue
 
 }) => {
-    const
-        /**
-         * This is a fallback, in case the transition class was added before
-         * the svg was loaded and therefore present.
-         */
-        [isSvgLoaded, setIsSvgLoaded] = useState(false),
-
-        presenceSvg = getSvgForPresence({
-            actorKey,
-            presenceType,
-            presenceKey
-        })
-
-    const showProcessedSvg = () => {
-        // This handles the possibility that an svg might be loaded late.
-        if (existenceValue) {
-            setIsSvgLoaded(true)
-        }
-    }
-
-    useEffect(() => {
-        if (!existenceValue) {
-            setIsSvgLoaded(false)
-        }
-
-    }, [existenceValue])
+    const presenceSvg = getSvgForPresence({
+        actorKey,
+        presenceType,
+        presenceKey
+    })
 
     return (
         <CSSTransition
@@ -49,19 +26,14 @@ const Presence = ({
             mountOnEnter
             {...{
                 in: existenceValue,
-                timeout: 200,
-                classNames: { enterDone: 'Presence__visible' }
+                timeout: 200
             }}
         >
             <PresenceSvg
                 {...{
-                    className: cx(
-                        isSvgLoaded && 'Presence__loaded'
-                    ),
                     presenceType,
                     actorKey,
-                    presenceKey,
-                    showProcessedSvg
+                    presenceKey
                 }}
             >
                 {presenceSvg}

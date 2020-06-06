@@ -32,12 +32,12 @@ const PresenceSvg = ({
     presenceType,
     actorKey,
     presenceKey,
-    showProcessedSvg,
     children
 
 }) => {
     const
         sceneCubesKey = useSelector(mapSceneCubesKey),
+        [isLoaded, setIsLoaded] = useState(false),
         [adjustedWidth, setAdjustedWidth] = useState(0),
         [adjustedHeight, setAdjustedHeight] = useState(0),
         {
@@ -141,11 +141,16 @@ const PresenceSvg = ({
         })
     }
 
+    const onLoad = () => {
+        setIsLoaded(true)
+    }
+
     return (Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && !hide && (
         <InlineSvg
             {...{
                 className: cx(
                     'Presence',
+                    isLoaded && 'Presence__loaded',
                     capitaliseForClassName(presenceType),
                     'presence__position',
                     noShadow && 'Presence__noShadow',
@@ -167,7 +172,7 @@ const PresenceSvg = ({
                 ),
                 title: convertPresenceKeyToTitle(presenceKey),
                 preProcessor: preProcessSvg,
-                onLoad: showProcessedSvg,
+                onLoad,
 
                 // If it's null, then there is no wire.
                 ...typeof placedFront === 'boolean' && {
@@ -198,7 +203,6 @@ PresenceSvg.propTypes = {
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
     presenceKey: PropTypes.string.isRequired,
-    showProcessedSvg: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired
 }
 

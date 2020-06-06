@@ -31,7 +31,7 @@ export const getArrayOfLength = (
     )
 )
 
-// TODO: Get rid of this.
+// TODO: Get rid of this. Just used by Button now.
 export const getPropsAreShallowEqual = ({
     props = {},
     nextProps = {}
