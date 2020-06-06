@@ -1,4 +1,4 @@
-import albumScenes from '../scenes'
+import { albumScenes } from '../scenes'
 
 import { TIME_STAGE } from '../../../../app/constants/scene/sky'
 

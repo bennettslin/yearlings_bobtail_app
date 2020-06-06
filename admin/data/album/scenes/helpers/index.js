@@ -1,6 +1,5 @@
 import ACTOR_ARRANGEMENTS from '../../../scene/scenes/actors'
 import THING_ARRANGEMENTS from '../../../scene/scenes/things'
-
 import { ACTOR } from '../../../../../app/constants/scene'
 
 const _addPresenceToSceneLayer = ({
@@ -8,7 +7,8 @@ const _addPresenceToSceneLayer = ({
     layers,
     presenceType,
     presenceName,
-    value
+    value,
+    layerPresencesList
 
 }) => {
     const
@@ -34,13 +34,35 @@ const _addPresenceToSceneLayer = ({
     }
 
     layers[layerKey][presenceType][presenceName] = value
+
+    // Also add to layer presences.
+    if (!layerPresencesList[yIndex]) {
+        layerPresencesList[yIndex] = {}
+    }
+    if (!layerPresencesList[yIndex][presenceType]) {
+        layerPresencesList[yIndex][presenceType] = {}
+    }
+
+    // It's an actor.
+    if (typeof value === 'string') {
+        if (!layerPresencesList[yIndex][presenceType][presenceName]) {
+            layerPresencesList[yIndex][presenceType][presenceName] = {}
+        }
+        layerPresencesList[yIndex][presenceType][presenceName][value] = true
+
+    // It's a thing.
+    } else {
+        layerPresencesList[yIndex][presenceType][presenceName] = true
+    }
 }
 
 const _addPresenceToSceneLayerByType = ({
     presences,
     presenceType,
     presenceName,
-    layers
+    layers,
+    layerPresencesList
+
 }) => {
     const dynamicValue = presences[presenceType][presenceName]
 
@@ -75,11 +97,16 @@ const _addPresenceToSceneLayerByType = ({
         layers,
         presenceType,
         presenceName,
-        value
+        value,
+        layerPresencesList
     })
 }
 
-export const addLayersToScenes = (albumScenes) => {
+const _getLayeredScenes = (
+    albumScenes,
+    layerPresencesList
+
+) => {
     albumScenes.forEach(songScenes => {
         songScenes.forEach(scene => {
             const
@@ -96,7 +123,8 @@ export const addLayersToScenes = (albumScenes) => {
                         presences,
                         presenceType,
                         presenceName,
-                        layers
+                        layers,
+                        layerPresencesList
                     })
                 })
             })
@@ -104,5 +132,34 @@ export const addLayersToScenes = (albumScenes) => {
             scene.layers = layers
         })
     })
+
+    return albumScenes
 }
 
+export const getSceneData = rawScenes => {
+    const
+        layerPresencesList = {},
+        albumScenes = _getLayeredScenes(rawScenes, layerPresencesList)
+
+    // Convert final entries into arrays.
+    Object.keys(layerPresencesList).forEach(layerKey => {
+        const layer = layerPresencesList[layerKey]
+
+        Object.keys(layer).forEach(presenceKey => {
+            if (presenceKey === ACTOR) {
+                const actors = layer[presenceKey]
+                Object.keys(actors).forEach(actorKey => {
+                    actors[actorKey] = Object.keys(actors[actorKey])
+                })
+
+            } else {
+                layer[presenceKey] = Object.keys(layer[presenceKey])
+            }
+        })
+    })
+
+    return {
+        albumScenes,
+        layerPresencesList
+    }
+}

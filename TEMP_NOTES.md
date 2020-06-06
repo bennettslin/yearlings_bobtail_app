@@ -1,19 +1,17 @@
 # During work
-* Investigate: stage dimensions act like two row menu in mobile, even when not?
 * Change all mapStateToProps to grab from selectors. Just suck it up and do this.
 * Ensure all selectors are used.
-* Some todos to make a selector
+* Some todos to make a selector.
 
 # Scene refactor
 * Presence gets existenceValue from selector that knows song and scene index.
-* Determine which presences are in scenes with different yIndices, and if so, different zIndices."
 * PresenceSvg should get scene cubes key information from build.
-* Each layer knows which presences can render in it, and don't bother to mount any that don't exist for that layer.
 * Move Wires into Presence.
 * Move Svg into Cubes.
 * Cubes should also get from selector.
 
 # Bugs
+* Stage dimensions act like two row menu in mobile, even when not?
 * Verse scroll not registered.
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.
@@ -21,16 +19,12 @@
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
-* Switching between songs in local is slow, not as slow in staging
 * tips hand in garryowen for score
 
 # Bugs that may get fixed after logic styling tear out and redo.
 * Anchor still shows in activated/slider mode.
 * Even future verse does not have activated or hover colour.
 * VerseBar should not have hover styling.
-
-# Bugs that may get fixed after canEnter tear out and redo.
-* Selecting accessed verse has a delay.
 
 # Brainless JS tasks
 * Get rid of PopupAnnotation listener.

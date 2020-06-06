@@ -5,7 +5,7 @@ import { getPresencesForLayer } from '../../../api/scene/presences'
 import { ACTOR } from '../../../constants/scene'
 
 const Layer = ({
-    presenceType,
+    presenceType = ACTOR,
     actorKey,
     instanceKey,
     yIndex,

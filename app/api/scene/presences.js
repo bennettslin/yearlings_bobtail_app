@@ -3,22 +3,22 @@ import { ACTOR } from '../../../app/constants/scene'
 
 const {
     actors: ACTOR_ARRANGEMENTS,
-    things: THING_ARRANGEMENTS
+    things: THING_ARRANGEMENTS,
+    layerPresencesList
 } = getScene()
 
 export const getPresencesForLayer = ({
     actorKey,
     presenceType,
-
-    // TODO: Only return arrangements for this yIndex.
     yIndex
 
 }) => {
+    const presencesEntity = layerPresencesList[yIndex][presenceType]
     return (
         actorKey ?
-            Object.keys(ACTOR_ARRANGEMENTS[actorKey]) :
-            Object.keys(THING_ARRANGEMENTS[presenceType])
-    )
+            presencesEntity[actorKey] :
+            presencesEntity
+    ) || []
 }
 
 export const getArrangementForPresence = ({

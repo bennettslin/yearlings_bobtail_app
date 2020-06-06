@@ -18,10 +18,12 @@ import _16_Cremated from './16_Cremated'
 import _17_VeganProclamation from './17_VeganProclamation'
 import _18_My100000thDream from './18_My100000thDream'
 import _19_Epilogue from './19_Epilogue'
+import { getSceneData } from './helpers'
 
-import { addLayersToScenes } from './helpers'
-
-const albumScenes = [
+export const {
+    albumScenes,
+    layerPresencesList
+} = getSceneData([
     _00_Prologue,
     _01_Didi,
     _02_WillyTheCocoa,
@@ -42,8 +44,4 @@ const albumScenes = [
     _17_VeganProclamation,
     _18_My100000thDream,
     _19_Epilogue
-]
-
-addLayersToScenes(albumScenes)
-
-export default albumScenes
+])
