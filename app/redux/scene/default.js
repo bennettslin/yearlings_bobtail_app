@@ -1,7 +1,6 @@
 import { getCubesForKey } from '../../api/scene/cubes'
 import {
     getCubesKeyForScene,
-    getLayersForScene,
     getSkyTimeForScene,
     getSkySeasonForScene
 } from '../../api/album/scenes'
@@ -13,7 +12,6 @@ import {
 
 const
     sceneCubesKey = getCubesKeyForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
-    sceneLayers = getLayersForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
     sceneSkyTime = getSkyTimeForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
     sceneSkySeason = getSkySeasonForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
     sceneCubesKeys = getCubesForKey(sceneCubesKey)
@@ -24,11 +22,5 @@ export const SCENE_DEFAULTS = {
     sceneSkySeason,
     sceneSongIndex: INITIAL_SONG_INDEX,
     sceneSceneIndex: INITIAL_SCENE_INDEX,
-    sceneCubesKeys,
-
-    /**
-     * Stored only for dev clarity. Components will retrieve these layers
-     * through indices to avoid unnecessary updates.
-     */
-    sceneLayers
+    sceneCubesKeys
 }

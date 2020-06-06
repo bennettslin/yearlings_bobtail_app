@@ -4,7 +4,6 @@ import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateSceneStore } from '../../../redux/scene/action'
 import {
     getCubesKeyForScene,
-    getLayersForScene,
     getSkyTimeForScene,
     getSkySeasonForScene
 } from '../../../api/album/scenes'
@@ -27,7 +26,6 @@ const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
     }) => {
         const
             sceneCubesKey = getCubesKeyForScene(songIndex, sceneIndex),
-            sceneLayers = getLayersForScene(songIndex, sceneIndex),
             sceneSkyTime = getSkyTimeForScene(songIndex, sceneIndex),
             sceneSkySeason = getSkySeasonForScene(songIndex, sceneIndex)
 
@@ -44,7 +42,6 @@ const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
             sceneCubesKey,
             sceneSongIndex: songIndex,
             sceneSceneIndex: sceneIndex,
-            sceneLayers,
             sceneSkyTime,
             sceneSkySeason
         }))
