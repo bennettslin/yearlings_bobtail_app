@@ -5,6 +5,9 @@
 * Some todos to make a selector
 
 # Scene refactor
+* Determine which presences are in scenes with different yIndices, and if so, different zIndices."
+* Presence gets existenceValue from selector that knows song and scene index.
+* Presence should get scene cubes key from build.
 * Cubes should also get from api.
 * Each layer knows which presences can render in it, and don't bother to mount any that don't exist for that layer.
 * Move svg folder to components that use them.

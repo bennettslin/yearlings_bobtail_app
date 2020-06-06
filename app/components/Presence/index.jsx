@@ -2,26 +2,29 @@
 import React, { useEffect, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from '../../modules/PresenceSvg'
 import { capitaliseForClassName } from '../../helpers/format'
 import { getSvgMapForActor } from '../../svg/actors'
 import { getSvgMapForThing } from '../../svg/things'
+import { mapSceneCubesKey } from '../../redux/scene/selectors'
 import { ACTOR } from '../../constants/scene'
-import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import './style'
 
 const Presence = ({
-    cubesKey = DEFAULT_STAGE_KEY,
     presenceType,
     actorKey,
     presenceKey,
+
+    // TODO: Make this a selector.
     existenceValue
 
 }) => {
     const
-        // This determines whether to transition in and out.
-        [isTransitionVisible, setIsTransitionVisible] = useState(false),
+        // TODO: Get this from build.
+        sceneCubesKey = useSelector(mapSceneCubesKey),
+
         /**
          * This is a fallback, in case the transition class was added before
          * the svg was loaded and therefore present.
@@ -36,12 +39,6 @@ const Presence = ({
     }
 
     useEffect(() => {
-        setIsTransitionVisible(existenceValue)
-    }, [])
-
-    useEffect(() => {
-        setIsTransitionVisible(existenceValue)
-
         if (!existenceValue) {
             setIsSvgLoaded(false)
         }
@@ -60,7 +57,7 @@ const Presence = ({
             unmountOnExit
             mountOnEnter
             {...{
-                in: isTransitionVisible,
+                in: existenceValue,
                 timeout: 200,
                 classNames: { enterDone: 'Presence__visible' }
             }}
@@ -72,7 +69,7 @@ const Presence = ({
                         isSvgLoaded && 'Presence__loaded',
                         capitaliseForClassName(presenceType)
                     ),
-                    cubesKey,
+                    cubesKey: sceneCubesKey,
                     presenceType,
                     actorKey,
                     presenceKey,
@@ -86,7 +83,6 @@ const Presence = ({
 }
 
 Presence.propTypes = {
-    cubesKey: PropTypes.string.isRequired,
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
     presenceKey: PropTypes.string.isRequired,

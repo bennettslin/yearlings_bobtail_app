@@ -1,6 +1,8 @@
+import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
+
 export const mapSceneCubesKey = (
     { sceneStore: { sceneCubesKey } }
-) => sceneCubesKey
+) => sceneCubesKey || DEFAULT_STAGE_KEY
 
 export const mapSceneSkyTime = (
     { sceneStore: { sceneSkyTime } }

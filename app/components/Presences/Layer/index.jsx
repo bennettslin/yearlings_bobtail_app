@@ -1,9 +1,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
 import Presence from '../../Presence'
 import { getPresenceKeys } from '../../../api/scene/presences'
-import { mapSceneCubesKey } from '../../../redux/scene/selectors'
 import { ACTOR } from '../../../constants/scene'
 
 const Layer = ({
@@ -14,7 +12,6 @@ const Layer = ({
 
 }) => {
     const
-        sceneCubesKey = useSelector(mapSceneCubesKey),
         presenceKeys = getPresenceKeys({
             actorKey,
             presenceType
@@ -35,7 +32,6 @@ const Layer = ({
                 <Presence
                     {...{
                         key: presenceKey,
-                        cubesKey: sceneCubesKey,
                         presenceType: presenceType || ACTOR,
                         actorKey,
                         presenceKey,
