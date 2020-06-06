@@ -1,5 +1,3 @@
-// Component to safely render an svg by ensuring that all values are valid.
-
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
@@ -16,8 +14,7 @@ const propTypes = {
     children: PropTypes.node
 }
 
-const Svg = ({
-
+const CubeSvg = ({
     className,
     style,
     viewBoxWidth,
@@ -53,7 +50,7 @@ const Svg = ({
     )
 }
 
-Svg.defaultProps = defaultProps
-Svg.propTypes = propTypes
+CubeSvg.defaultProps = defaultProps
+CubeSvg.propTypes = propTypes
 
-export default memo(Svg)
+export default memo(CubeSvg)

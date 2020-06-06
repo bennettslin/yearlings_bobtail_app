@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import Svg from '../../../modules/Svg'
+import CubeSvg from '../Svg'
 import Face from './Face'
 import { getCharStringForNumber } from '../../../helpers/format'
 import { getValueInAbridgedMatrix } from '../../../helpers/general'
@@ -85,7 +85,7 @@ const Cube = ({
 
     return (
         // Individual cubes need to be svgs in order to have a stacking order.
-        <Svg
+        <CubeSvg
             {...{
                 className: cx(
                     'Cube',
@@ -130,7 +130,7 @@ const Cube = ({
                     }}
                 />
             ))}
-        </Svg>
+        </CubeSvg>
     )
 }
 

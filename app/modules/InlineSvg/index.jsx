@@ -23,6 +23,7 @@ const InlineSvg = ({
     siblingPlacedFront,
     siblingComponent,
     ...rest
+
 }) => (
     <>
         {!siblingPlacedFront && siblingComponent}
