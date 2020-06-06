@@ -1,4 +1,11 @@
 import { createSelector } from 'reselect'
+import {
+    getCeilingHslaForCube,
+    getCeilingZIndexForCube,
+    getFloorHslaForCube,
+    getFloorZIndexForCube,
+    getSlantDirectionForCube
+} from '../../api/scene/cubes'
 import { getIsShownInSceneForPresence } from '../../api/scene/presences'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 
@@ -42,4 +49,45 @@ export const mapIsPresenceShownInScene = ({
         actorKey,
         presenceKey
     })
+)
+
+export const mapCubeCeilingHsla = (yIndex, xIndex) => createSelector(
+    mapSceneCubesKey,
+    sceneCubesKey => getCeilingHslaForCube(
+        sceneCubesKey,
+        yIndex,
+        xIndex
+    )
+)
+
+export const mapCubeCeilingZIndex = (yIndex, xIndex) => createSelector(
+    mapSceneCubesKey,
+    sceneCubesKey => getCeilingZIndexForCube(
+        sceneCubesKey,
+        yIndex,
+        xIndex
+    )
+)
+
+export const mapCubeFloorHsla = (yIndex, xIndex) => createSelector(
+    mapSceneCubesKey,
+    sceneCubesKey => getFloorHslaForCube(
+        sceneCubesKey,
+        yIndex,
+        xIndex
+    )
+)
+
+export const mapCubeFloorZIndex = (yIndex, xIndex) => createSelector(
+    mapSceneCubesKey,
+    sceneCubesKey => getFloorZIndexForCube(
+        sceneCubesKey,
+        yIndex,
+        xIndex
+    )
+)
+
+export const mapCubeSlantDirection = createSelector(
+    mapSceneCubesKey,
+    sceneCubesKey => getSlantDirectionForCube(sceneCubesKey)
 )

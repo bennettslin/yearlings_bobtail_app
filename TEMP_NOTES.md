@@ -6,7 +6,6 @@
 # Scene refactor
 * Determine if any presence is ever rendered with different zIndex.
     * If not, PresenceSvg should get scene cubes key information from build.
-* Cubes should know their own metadata from selector, rather than passed from parent.
 
 # Bugs
 * Stage dimensions act like two row menu in mobile, even when not?

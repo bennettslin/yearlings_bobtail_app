@@ -1,4 +1,4 @@
-// A single pair of ceiling and floor cubes.
+// A single pair of floor and floor cubes.
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -6,20 +6,19 @@ import { useSelector } from 'react-redux'
 import CubeSvg from '../Svg'
 import Face from './Face'
 import { getCharStringForNumber } from '../../../helpers/format'
-import {
-    getCeilingHslaForCube,
-    getCeilingZIndexForCube,
-    getFloorHslaForCube,
-    getFloorZIndexForCube,
-    getSlantDirectionForCube
-} from '../../../api/scene/cubes'
 import { getCssZIndexForCube } from './helpers/zIndices'
 import {
     FACES,
     CEILING,
     FLOOR
 } from '../../../constants/scene/cubes'
-import { mapSceneCubesKey } from '../../../redux/scene/selectors'
+import {
+    mapCubeCeilingHsla,
+    mapCubeCeilingZIndex,
+    mapCubeFloorHsla,
+    mapCubeFloorZIndex,
+    mapCubeSlantDirection
+} from '../../../redux/scene/selectors'
 
 const Cube = ({
     yIndex,
@@ -27,8 +26,11 @@ const Cube = ({
 
 }) => {
     const
-        sceneCubesKey = useSelector(mapSceneCubesKey),
-        slantDirection = getSlantDirectionForCube(sceneCubesKey)
+        ceilingHsla = useSelector(mapCubeCeilingHsla(yIndex, xIndex)),
+        ceilingZIndex = useSelector(mapCubeCeilingZIndex(yIndex, xIndex)),
+        floorHsla = useSelector(mapCubeFloorHsla(yIndex, xIndex)),
+        floorZIndex = useSelector(mapCubeFloorZIndex(yIndex, xIndex)),
+        slantDirection = useSelector(mapCubeSlantDirection)
 
     return (
         // Individual cubes need to be svgs in order to have a stacking order.
@@ -57,16 +59,8 @@ const Cube = ({
                         level: FLOOR,
                         yIndex,
                         xIndex,
-                        hslaKey: getFloorHslaForCube(
-                            sceneCubesKey,
-                            yIndex,
-                            xIndex
-                        ),
-                        zIndex: getFloorZIndexForCube(
-                            sceneCubesKey,
-                            yIndex,
-                            xIndex
-                        ),
+                        hslaKey: floorHsla,
+                        zIndex: floorZIndex,
                         face
                     }}
                 />
@@ -79,16 +73,8 @@ const Cube = ({
                         level: CEILING,
                         yIndex,
                         xIndex,
-                        hslaKey: getCeilingHslaForCube(
-                            sceneCubesKey,
-                            yIndex,
-                            xIndex
-                        ),
-                        zIndex: getCeilingZIndexForCube(
-                            sceneCubesKey,
-                            yIndex,
-                            xIndex
-                        ),
+                        hslaKey: ceilingHsla,
+                        zIndex: ceilingZIndex,
                         face
                     }}
                 />
