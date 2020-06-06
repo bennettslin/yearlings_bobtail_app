@@ -4,7 +4,7 @@
 * Some todos to make a selector.
 
 # Scene refactor
-* Presence gets existenceValue from selector that knows song and scene index.
+* Determine if any presence is ever rendered with different zIndex.
 * PresenceSvg should get scene cubes key information from build.
 * Cubes should also get from selector.
 * Move getValueInAbridgedMatrix out of general.
@@ -21,8 +21,6 @@
 * tips hand in garryowen for score
 
 # Bugs that may get fixed after logic styling tear out and redo.
-* Anchor still shows in activated/slider mode.
-* Even future verse does not have activated or hover colour.
 * VerseBar should not have hover styling.
 
 # Brainless JS tasks
@@ -33,6 +31,7 @@
 * Shorten queued names as well?
 
 # Easy reduction tasks
+* Shorten constants
 * Figure out how to get scroll children without storing them.
 * Have verse store for queued verse select, just like annotation store.
 * Internal stylesheet fixes

@@ -56,7 +56,7 @@ export const mapIsAccessedIndexedAnchorShown = createSelector(
     })
 )
 
-export const mapIsAccessedAnnotation = annotationIndex => createSelector(
+export const mapIsAnnotationAccessed = annotationIndex => createSelector(
     mapIsAccessedIndexedAnchorShown,
     mapAccessedAnnotationIndex,
     (

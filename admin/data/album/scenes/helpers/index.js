@@ -56,6 +56,9 @@ const _addPresenceToSceneLayer = ({
     } else {
         layerPresencesList[yIndex][presenceType][presenceName] = true
     }
+
+    // Clean up.
+    delete arrangementObject.layerYIndex
 }
 
 const _addPresenceToSceneLayerByType = ({

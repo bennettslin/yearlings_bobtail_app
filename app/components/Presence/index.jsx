@@ -3,39 +3,30 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from './Svg'
-import { getIsShownInSceneForPresence } from '../../api/scene/presences'
 import { getSvgForPresence } from '../../api/svg'
-import {
-    mapSceneSongIndex,
-    mapSceneSceneIndex
-} from '../../redux/scene/selectors'
+import { mapIsPresenceShownInScene } from '../../redux/scene/selectors'
 import './style'
 
 const Presence = ({
+    yIndex,
     presenceType,
     actorKey,
-    presenceKey,
-    yIndex
+    presenceKey
 
 }) => {
-    const
-        sceneSongIndex = useSelector(mapSceneSongIndex),
-        sceneSceneIndex = useSelector(mapSceneSceneIndex),
-        isShown = getIsShownInSceneForPresence({
-            songIndex: sceneSongIndex,
-            sceneIndex: sceneSceneIndex,
-            yIndex,
-            presenceType,
-            actorKey,
-            presenceKey
-        })
+    const isShownInScene = useSelector(mapIsPresenceShownInScene({
+        yIndex,
+        presenceType,
+        actorKey,
+        presenceKey
+    }))
 
     return (
         <CSSTransition
             unmountOnExit
             mountOnEnter
             {...{
-                in: isShown,
+                in: isShownInScene,
                 timeout: 200
             }}
         >
@@ -57,10 +48,10 @@ const Presence = ({
 }
 
 Presence.propTypes = {
+    yIndex: PropTypes.number.isRequired,
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
-    presenceKey: PropTypes.string.isRequired,
-    yIndex: PropTypes.number.isRequired
+    presenceKey: PropTypes.string.isRequired
 }
 
 export default memo(Presence)

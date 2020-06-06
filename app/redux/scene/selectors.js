@@ -1,3 +1,5 @@
+import { createSelector } from 'reselect'
+import { getIsShownInSceneForPresence } from '../../api/scene/presences'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 
 export const mapSceneCubesKey = (
@@ -19,3 +21,25 @@ export const mapSceneSongIndex = (
 export const mapSceneSceneIndex = (
     { sceneStore: { sceneSceneIndex } }
 ) => sceneSceneIndex
+
+export const mapIsPresenceShownInScene = ({
+    yIndex,
+    presenceType,
+    actorKey,
+    presenceKey
+
+}) => createSelector(
+    mapSceneSongIndex,
+    mapSceneSceneIndex,
+    (
+        songIndex,
+        sceneIndex
+    ) => getIsShownInSceneForPresence({
+        songIndex,
+        sceneIndex,
+        yIndex,
+        presenceType,
+        actorKey,
+        presenceKey
+    })
+)
