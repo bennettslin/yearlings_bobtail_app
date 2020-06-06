@@ -7,9 +7,7 @@ import { ACTOR } from '../../../constants/scene'
 const Layer = ({
     presenceType = ACTOR,
     actorKey,
-    instanceKey,
-    yIndex,
-    ...other
+    yIndex
 
 }) => (
     getPresencesForLayer({
@@ -17,37 +15,23 @@ const Layer = ({
         presenceType,
         yIndex
 
-    }).map(presenceKey => {
-        const
-            { [presenceKey]: presenceValue } = other,
-
-            // TODO: Presence knows its own existence value.
-            existenceValue =
-                actorKey ?
-                    // Actor passes an instance if it exists.
-                    presenceKey === instanceKey :
-                    // Thing passes a presence key with boolean value.
-                    Boolean(presenceValue)
-
-        return (
-            <Presence
-                {...{
-                    key: presenceKey,
-                    presenceType: presenceType || ACTOR,
-                    actorKey,
-                    presenceKey,
-                    existenceValue
-                }}
-            />
-        )
-    })
+    }).map(presenceKey => (
+        <Presence
+            {...{
+                key: presenceKey,
+                presenceType,
+                actorKey,
+                presenceKey,
+                yIndex
+            }}
+        />
+    ))
 )
 
 Layer.propTypes = {
-    // Parent also passes presenceKeys.
     presenceType: PropTypes.string,
     actorKey: PropTypes.string,
-    instanceKey: PropTypes.string
+    yIndex: PropTypes.number
 }
 
 export default memo(Layer)

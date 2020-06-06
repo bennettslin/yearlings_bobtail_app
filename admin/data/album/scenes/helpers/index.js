@@ -13,15 +13,17 @@ const _addPresenceToSceneLayer = ({
 }) => {
     const
         {
-            yIndex = -1,
+            yIndex: arrangedYIndex = -1,
             layerYIndex
         } = arrangementObject,
 
         /**
-         * If layerYIndex exists, then presence will be arranged and scaled
-         * according to yIndex, but placed in the layerYIndex layer.
+         * If layerYIndex exists, then presence is placed in the layerYIndex
+         * layer, which is different from the yIndex used for arrangement and
+         * scaling.
          */
-        layerKey = `layer${Number.isFinite(layerYIndex) ? layerYIndex : yIndex}`
+        yIndex = Number.isFinite(layerYIndex) ? layerYIndex : arrangedYIndex,
+        layerKey = `layer${yIndex}`
 
     // Initialise this layer if necessary.
     if (!layers[layerKey]) {

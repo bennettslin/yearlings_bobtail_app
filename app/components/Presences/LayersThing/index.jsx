@@ -3,22 +3,20 @@ import PropTypes from 'prop-types'
 import Layer from '../Layer'
 import { ORDERED_THINGS } from '../../../constants/scene/things'
 
-const LayersThing = ({ yIndex, ...other }) => (
+const LayersThing = ({ yIndex }) => (
     ORDERED_THINGS.map(presenceType => (
         <Layer
             {...{
                 key: presenceType,
                 presenceType,
-                yIndex,
-                ...other[presenceType]
+                yIndex
             }}
         />
     ))
 )
 
-LayersThing.propTypes = ORDERED_THINGS.reduce((sum, presenceType) => {
-    sum[presenceType] = PropTypes.object
-    return sum
-}, {})
+LayersThing.propTypes = {
+    yIndex: PropTypes.number.isRequired
+}
 
 export default memo(LayersThing)

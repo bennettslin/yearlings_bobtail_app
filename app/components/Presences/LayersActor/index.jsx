@@ -3,22 +3,20 @@ import PropTypes from 'prop-types'
 import Layer from '../Layer'
 import { ORDERED_ACTORS } from '../../../constants/scene/actors'
 
-const LayersActor = ({ yIndex, ...other }) => (
+const LayersActor = ({ yIndex }) => (
     ORDERED_ACTORS.map(actorKey => (
         <Layer
             {...{
                 key: actorKey,
                 actorKey,
-                yIndex,
-                instanceKey: other[actorKey]
+                yIndex
             }}
         />
     ))
 )
 
-LayersActor.propTypes = ORDERED_ACTORS.reduce((sum, actorKey) => {
-    sum[actorKey] = PropTypes.string
-    return sum
-}, {})
+LayersActor.propTypes = {
+    yIndex: PropTypes.number.isRequired
+}
 
 export default memo(LayersActor)

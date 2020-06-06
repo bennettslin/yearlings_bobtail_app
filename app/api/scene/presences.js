@@ -1,4 +1,5 @@
 import { getScene } from '../builds'
+import { getLayerForScene } from '../album/scenes'
 import { ACTOR } from '../../../app/constants/scene'
 
 const {
@@ -8,8 +9,8 @@ const {
 } = getScene()
 
 export const getPresencesForLayer = ({
-    actorKey,
     presenceType,
+    actorKey,
     yIndex
 
 }) => {
@@ -23,8 +24,8 @@ export const getPresencesForLayer = ({
 
 export const getArrangementForPresence = ({
     presenceType,
-    presenceKey,
-    actorKey
+    actorKey,
+    presenceKey
 
 }) => {
     const arrangement = presenceType === ACTOR ?
@@ -37,4 +38,22 @@ export const getArrangementForPresence = ({
     }
 
     return arrangement
+}
+
+export const getIsShownInSceneForPresence = ({
+    songIndex,
+    sceneIndex,
+    yIndex,
+    presenceType,
+    actorKey,
+    presenceKey
+
+}) => {
+    const
+        layer = getLayerForScene(songIndex, sceneIndex, yIndex),
+        layerEntity = layer[presenceType] || {}
+
+    return actorKey ?
+        layerEntity[actorKey] === presenceKey :
+        layerEntity[presenceKey]
 }
