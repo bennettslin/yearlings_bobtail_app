@@ -64,8 +64,8 @@ export const getValidYIndex = (yIndex) => {
 
 export const getValueInAbridgedMatrix = ({
     matrix,
-    xIndex,
-    yIndex
+    yIndex,
+    xIndex
 }) => {
     // Assume that matrix is an array of arrays.
 

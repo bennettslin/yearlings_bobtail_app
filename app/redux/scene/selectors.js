@@ -14,11 +14,11 @@ export const mapSceneSkySeason = (
     { sceneStore: { sceneSkySeason } }
 ) => sceneSkySeason
 
-export const mapSceneSongIndex = (
+const mapSceneSongIndex = (
     { sceneStore: { sceneSongIndex } }
 ) => sceneSongIndex
 
-export const mapSceneSceneIndex = (
+const mapSceneSceneIndex = (
     { sceneStore: { sceneSceneIndex } }
 ) => sceneSceneIndex
 
