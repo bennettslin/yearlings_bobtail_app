@@ -1,4 +1,4 @@
-import { getAlbum } from '../../../app/api/imports'
+import { getAlbum } from '../../../app/api/builds'
 
 export const getGlobalAnnotationCount = () => {
     const { globalAnnotationIndicesList } = getAlbum()

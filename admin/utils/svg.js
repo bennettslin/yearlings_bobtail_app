@@ -1,5 +1,5 @@
-import { getSvgMapForActor } from '../../app/svg/actors'
-import { getSvgMapForThing } from '../../app/svg/things'
+import { getSvgMapForActor } from '../../app/api/svg/actors'
+import { getSvgMapForThing } from '../../app/api/svg/things'
 
 import { WHOLE_ACTOR_INSTANCES } from '../constants/actors'
 import { CUSTOM_THING_INSTANCES } from '../constants/things'

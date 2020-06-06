@@ -1,4 +1,4 @@
-import { getScene } from '../imports'
+import { getScene } from '../builds'
 import { convertPresenceKeyToClassName } from '../../helpers/format'
 import { isString } from '../../helpers/general'
 import { ALL_ACTOR_SHARED_STYLES } from '../../constants/scene/sharedStyles/actors'

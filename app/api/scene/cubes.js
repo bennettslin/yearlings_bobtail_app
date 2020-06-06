@@ -1,4 +1,4 @@
-import { getScene } from '../imports'
+import { getScene } from '../builds'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 
 const {

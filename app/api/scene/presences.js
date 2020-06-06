@@ -1,4 +1,4 @@
-import { getScene } from '../imports'
+import { getScene } from '../builds'
 import { ACTOR } from '../../../app/constants/scene'
 
 const {
