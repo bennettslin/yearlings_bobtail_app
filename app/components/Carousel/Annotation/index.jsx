@@ -11,7 +11,7 @@ import { getCarouselAnnotationData } from './helper'
 import { getMapIsAnnotationAccessed } from '../../../redux/access/selectors'
 import {
     mapLyricSongIndex,
-    getMapIsSelectedLyricAnnotation
+    getMapIsLyricAnnotation
 } from '../../../redux/lyric/selectors'
 import './style'
 
@@ -22,7 +22,7 @@ const CarouselAnnotation = ({
 }) => {
     const
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
-        isSelected = useSelector(getMapIsSelectedLyricAnnotation(annotationIndex)),
+        isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
         lyricSongIndex = useSelector(mapLyricSongIndex),
 
         // TODO: Make this a selector.

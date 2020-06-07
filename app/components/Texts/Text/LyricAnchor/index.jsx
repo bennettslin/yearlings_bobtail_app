@@ -14,7 +14,7 @@ import {
     mapAccessedWikiWormholeIndex
 } from '../../../../redux/access/selectors'
 import { mapIsActivated } from '../../../../redux/activated/selectors'
-import { mapLyricAnnotationIndex } from '../../../../redux/lyric/selectors'
+import { mapLyricAnnotationIndex, getMapIsLyricAnnotation } from '../../../../redux/lyric/selectors'
 import { mapIsSliderMoving } from '../../../../redux/slider/selectors'
 import './style'
 
@@ -40,11 +40,9 @@ const TextLyricAnchor = ({
         accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
         accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex),
         isActivated = useSelector(mapIsActivated),
+        isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         isSliderMoving = useSelector(mapIsSliderMoving),
-
-        // TODO: Make this a selector.
-        isSelected = annotationIndex === lyricAnnotationIndex,
         isWikiTextAnchor = Boolean(wikiIndex)
 
     let isAccessed = false

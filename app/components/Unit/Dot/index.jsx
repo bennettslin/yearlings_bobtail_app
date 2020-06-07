@@ -14,7 +14,7 @@ import { getMapIsAnnotationAccessed } from '../../../redux/access/selectors'
 import { mapIsActivated } from '../../../redux/activated/selectors'
 import {
     mapLyricSongIndex,
-    getMapIsSelectedLyricAnnotation
+    getMapIsLyricAnnotation
 } from '../../../redux/lyric/selectors'
 import { mapIsSliderMoving } from '../../../redux/slider/selectors'
 import './style'
@@ -34,7 +34,7 @@ export const UnitDot = ({
             dotBit
         } = getDotForUnit(lyricSongIndex, unitIndex),
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
-        isSelected = useSelector(getMapIsSelectedLyricAnnotation(annotationIndex))
+        isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex))
 
     const handleAnchorClick = () => {
         if (isSelected || isSliderMoving || isActivated) {
