@@ -6,9 +6,9 @@ import cx from 'classnames'
 import Annotation from '../../Annotation'
 import { getDotsBitForAnnotation } from '../../../api/album/annotations'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
-import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 import { getCarouselAnnotationData } from './helper'
 import { getMapIsAnnotationAccessed } from '../../../redux/access/selectors'
+import { getMapHasSelectedDot } from '../../../redux/dots/selectors'
 import {
     mapLyricSongIndex,
     getMapIsLyricAnnotation
@@ -26,14 +26,15 @@ const CarouselAnnotation = ({
         lyricSongIndex = useSelector(mapLyricSongIndex),
 
         // TODO: Make this a selector.
-        annotationDotsBit = getDotsBitForAnnotation(
+        dotsBit = getDotsBitForAnnotation(
             lyricSongIndex,
             annotationIndex
         ),
         columnKey = getCarouselAnnotationData({
             songIndex: lyricSongIndex,
             annotationIndex
-        })
+        }),
+        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit))
 
     const setCarouselAnnotationElement = node => {
         setCarouselAnnotationChild({
@@ -49,17 +50,12 @@ const CarouselAnnotation = ({
                 ref: setCarouselAnnotationElement,
                 className: cx(
                     'CarouselAnnotation',
+                    hasSelectedDot && 'CarouselAnnotation__shown',
 
                     `${CAROUSEL_SCROLL}__${annotationIndex}`,
 
                     columnKey &&
                         `CarouselAnnotation__inEarColumn__${columnKey}`,
-
-                    getPrefixedDotLetterClassNames(
-                        annotationDotsBit,
-                        // "Child carousel annotation letter."
-                        'CcA'
-                    ),
                     'ovH'
                 )
             }}

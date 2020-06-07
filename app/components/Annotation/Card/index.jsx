@@ -33,18 +33,17 @@ const AnnotationCard = ({
             annotationIndex,
             cardIndex
         ),
-        isSelectedDot = useSelector(getMapHasSelectedDot(dotsBit))
+        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit))
 
     return (
         <div className={cx(
             'AnnotationCardContainer',
-            isSelectedDot && 'AnnotationCardContainer__shown',
+            hasSelectedDot && 'AnnotationCardContainer__shown',
             inCarousel && 'AnnotationCardContainer__animated',
             'ovH'
         )}>
             <div className={cx(
                 'AnnotationCard',
-                // !inCarousel && 'AnnotationCard__inPopup',
                 description ?
                     'AnnotationCard__isText' :
                     'AnnotationCard__wormhole',
