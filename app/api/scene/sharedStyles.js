@@ -13,25 +13,26 @@ const {
 export const getSharedStyleForActor = ({
     actorKey,
     presenceKey
+
 }) => {
-    const sharedStyle = ACTOR_SHARED_STYLES[actorKey][presenceKey]
+    const
+        actorSharedStyles = ACTOR_SHARED_STYLES[actorKey] || [],
+        sharedStyle = actorSharedStyles[presenceKey] || []
 
-    if (!sharedStyle) {
-        return [...ALL_ACTOR_SHARED_STYLES]
-    }
-
-    if (isString(sharedStyle)) {
-        return [...ALL_ACTOR_SHARED_STYLES, sharedStyle]
-    }
-
-    return [...ALL_ACTOR_SHARED_STYLES, ...sharedStyle]
+    return [
+        ...ALL_ACTOR_SHARED_STYLES,
+        ...isString(sharedStyle) ? [sharedStyle] : sharedStyle
+    ]
 }
 
 export const getSharedStyleForThing = ({
     presenceType,
     presenceKey
-}) => (
-    THING_SHARED_STYLES[presenceType][
+
+}) => {
+    const thingSharedStyles = THING_SHARED_STYLES[presenceType]
+
+    return thingSharedStyles ? thingSharedStyles[
         convertPresenceKeyToClassName(presenceKey)
-    ]
-)
+    ] : null
+}

@@ -3,10 +3,6 @@
 * Ensure all selectors are used.
 * Some todos to make a selector.
 
-# Scene refactor
-* Determine if scene store really needs its own song and scene index.
-* Delete all null values in shared styles.
-
 # Bugs
 * Stage dimensions act like two row menu in mobile, even when not?
 * Verse scroll key not registered, and doesn't always work.
@@ -24,6 +20,7 @@
 
 # Bugs that may get fixed after canEnter tear out.
 * Song selection seems slower through access?
+* Determine if scene store really needs its own song and scene index.
 
 # Brainless JS tasks
 * Get rid of PopupAnnotation listener.
