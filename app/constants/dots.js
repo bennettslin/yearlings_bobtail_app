@@ -42,8 +42,8 @@ export const INITIAL_DOTS_BIT = 7
 export const WORMHOLE_BIT = 32
 
 export const EMPTY_DOT_KEYS = getObjectFromBit({
-    keysArray: ORDERED_DOT_KEYS,
-    bitNumber: 0
+    keysList: ORDERED_DOT_KEYS,
+    bit: 0
 })
 
 export const FULL_DOTS_BIT = getTwoToThePowerOfN(

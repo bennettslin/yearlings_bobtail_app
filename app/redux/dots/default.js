@@ -14,7 +14,7 @@ export const DOTS_DEFAULTS = {
      * for dev clarity.
      */
     ...getObjectFromBit({
-        keysArray: ORDERED_DOT_KEYS,
-        bitNumber: STORED_DOTS_BIT
+        keysList: ORDERED_DOT_KEYS,
+        bit: STORED_DOTS_BIT
     })
 }

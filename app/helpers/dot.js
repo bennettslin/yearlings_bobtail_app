@@ -20,15 +20,15 @@ export const intersects = (presentKeys = {}, selectedKeys = {}) => {
     }
 }
 
-export const getDotKeysFromBit = bitNumber => (
+export const getDotKeysFromBit = bit => (
     getObjectFromBit({
-        keysArray: ORDERED_DOT_KEYS,
-        bitNumber
+        keysList: ORDERED_DOT_KEYS,
+        bit
     })
 )
 export const getDotsBitFromKeys = dotKeys => (
     dotKeys ? getBitFromObject({
-        keysArray: ORDERED_DOT_KEYS,
+        keysList: ORDERED_DOT_KEYS,
         trueFalseObject: dotKeys
     }) : null
 )

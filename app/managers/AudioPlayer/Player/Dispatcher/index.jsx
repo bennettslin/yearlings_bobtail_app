@@ -15,7 +15,7 @@ const PlayerDispatcher = forwardRef((props, ref) => {
     const dispatchPlayerCanPlayThrough = songIndex => {
         dispatch(updatePlayersStore({
             playersBitNumber: getBitFromPlayerCanPlayThrough({
-                bitNumber: playersBitNumber,
+                bit: playersBitNumber,
                 key: songIndex
             }),
 

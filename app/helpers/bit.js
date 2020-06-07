@@ -19,12 +19,12 @@ export const getTwoToThePowerOfN = (exponent, number = 2) => {
 }
 
 export const getBitFromObject = ({
-    keysArray,
+    keysList,
     trueFalseObject
 }) => {
 
     // If no keys array is given, assume 1-based indices.
-    keysArray = keysArray || getArrayOfLength(
+    keysList = keysList || getArrayOfLength(
         Object.keys(trueFalseObject).length,
         1
     )
@@ -33,44 +33,44 @@ export const getBitFromObject = ({
      * Allow storage helper to store object as a single number. Order of keys
      * is established through keys array.
      */
-    return keysArray.reduce((bitNumber, key, index) => {
+    return keysList.reduce((bit, key, index) => {
         if (trueFalseObject[key]) {
-            bitNumber += getTwoToThePowerOfN(index)
+            bit += getTwoToThePowerOfN(index)
         }
-        return bitNumber
+        return bit
     }, 0)
 }
 
 export const getObjectFromBit = ({
-    keysArray,
+    keysList,
     keysCount = 0,
-    bitNumber
+    bit
 }) => {
 
     /**
      * If no keys array is given, assume 1-based indices. In this case, keys
      * count *must* be passed.
      */
-    keysArray = keysArray || getArrayOfLength(keysCount, 1)
+    keysList = keysList || getArrayOfLength(keysCount, 1)
 
     let trueFalseObject = {},
         returnObject = {}
 
-    for (let index = keysArray.length - 1; index >= 0; index--) {
+    for (let index = keysList.length - 1; index >= 0; index--) {
         // Start from end.
-        const key = keysArray[index],
+        const key = keysList[index],
             powerNumber = getTwoToThePowerOfN(index),
-            isTrue = bitNumber >= powerNumber
+            isTrue = bit >= powerNumber
 
         trueFalseObject[key] = isTrue
 
         if (isTrue) {
-            bitNumber -= powerNumber
+            bit -= powerNumber
         }
     }
 
     // Ensure that the keys are in the original order.
-    keysArray.forEach(key => {
+    keysList.forEach(key => {
         returnObject[key] = trueFalseObject[key]
     })
 
