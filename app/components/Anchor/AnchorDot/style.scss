@@ -2,6 +2,8 @@
 @import '../../../scss/constants/transition';
 
 .AnchorDot {
+    display: inline-block;
+
     .AnnotationTitle
     & {
         bottom: -$length__iconSmall * 0.1;
