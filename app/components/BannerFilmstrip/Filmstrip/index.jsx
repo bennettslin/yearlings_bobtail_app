@@ -54,6 +54,8 @@ const Filmstrip = () => {
         >
             {getSceneIndices(selectedSongIndex).map(sceneIndex => {
                 const
+
+                    // TODO: Have FilmstripScene know a lot of this data directly.
                     sceneStartTime = getStartTimeForScene(
                         selectedSongIndex,
                         sceneIndex
@@ -69,8 +71,8 @@ const Filmstrip = () => {
                     isSliderScene = sliderSceneIndex === sceneIndex,
 
                     cursorIndex = getCursorIndex(
-                        activatedSceneIndex,
                         sliderSceneIndex,
+                        activatedSceneIndex,
                         selectedSceneIndex
                     ),
                     isAfterCursor = cursorIndex < sceneIndex,
@@ -78,6 +80,7 @@ const Filmstrip = () => {
                     sceneLeft = sceneStartTime / songDuration * 100,
                     sceneWidth = sceneDuration / songDuration * 100,
 
+                    // TODO: Make this a selector. Only selected filmstrip scene gets updates.
                     cursorWidth =
                         (selectedTime - sceneStartTime) /
                         sceneDuration * 100

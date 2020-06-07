@@ -6,7 +6,6 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import InlineSvg from '../../../modules/InlineSvg'
 import tipsHand from '../../../../assets/svgs/app/tips/tipsHand'
 import { getSongTipType } from '../../../api/album/tips'
-import { SHOWN } from '../../../constants/options'
 import {
     WORMHOLES,
     WIKI
@@ -17,7 +16,7 @@ import {
 } from '../../../redux/dots/selectors'
 import { mapDidLyricUpdate } from '../../../redux/entrance/selectors'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
-import { mapSelectedTipsOption } from '../../../redux/option/selectors'
+import { mapIsTipsShown } from '../../../redux/option/selectors'
 import { mapIsPhoneWidth } from '../../../redux/viewport/selectors'
 import './style'
 
@@ -32,7 +31,7 @@ const TipsHand = ({
         wormhole = useSelector(mapWormholeDot),
         didLyricUpdate = useSelector(mapDidLyricUpdate),
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        selectedTipsOption = useSelector(mapSelectedTipsOption),
+        isTipsShown = useSelector(mapIsTipsShown),
         isPhoneWidth = useSelector(mapIsPhoneWidth)
 
     // TODO: Make this a selector.
@@ -57,7 +56,7 @@ const TipsHand = ({
             {...{
                 in: (
                     didLyricUpdate &&
-                    selectedTipsOption === SHOWN &&
+                    isTipsShown &&
                     getSongTipType(lyricSongIndex) === tipType &&
                     canRender
                 ),

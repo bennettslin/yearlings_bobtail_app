@@ -12,8 +12,8 @@ import { mapCanLyricCarouselEnter } from '../../../redux/entrance/selectors'
 import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
 import {
     mapIsLogueOverviewShown,
-    mapSelectedOverviewOption,
-    mapSelectedTipsOption
+    mapIsOverviewShown,
+    mapIsTipsShown
 } from '../../../redux/option/selectors'
 import { mapIsOverlayShown } from '../../../redux/transient/selectors'
 import './style'
@@ -26,9 +26,9 @@ const OverviewPopup = ({
         canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
         isLyricLogue = useSelector(mapIsLyricLogue),
         isLogueOverviewShown = useSelector(mapIsLogueOverviewShown),
-        selectedOverviewOption = useSelector(mapSelectedOverviewOption),
-        selectedTipsOption = useSelector(mapSelectedTipsOption),
+        isOverviewShown = useSelector(mapIsOverviewShown),
         isOverlayShown = useSelector(mapIsOverlayShown),
+        isTipsShown = useSelector(mapIsTipsShown),
 
         // TODO: Make this a selector.
         isVisibleBySection = getIsOverviewVisibleBySection({
@@ -40,8 +40,8 @@ const OverviewPopup = ({
             isLyricLogue,
             isOverlayShown,
             isLogueOverviewShown,
-            selectedTipsOption,
-            selectedOverviewOption
+            isOverviewShown,
+            isTipsShown
         }),
 
         isVisible =

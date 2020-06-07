@@ -8,7 +8,7 @@ import {
 import {
     mapIsLogueOverviewShown,
     mapSelectedOverviewOption,
-    mapSelectedTipsOption
+    mapIsTipsShown
 } from '../../../redux/option/selectors'
 import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
 import { mapToggleShowsOverviewImmediately } from '../../../redux/transient/selectors'
@@ -21,7 +21,7 @@ const OverviewDispatcher = forwardRef((props, ref) => {
         toggleShowsOverviewImmediately = useSelector(mapToggleShowsOverviewImmediately),
         isLogueOverviewShown = useSelector(mapIsLogueOverviewShown),
         selectedOverviewOption = useSelector(mapSelectedOverviewOption),
-        selectedTipsOption = useSelector(mapSelectedTipsOption),
+        isTipsShown = useSelector(mapIsTipsShown),
         isSelectedLogue = useSelector(mapIsSelectedLogue)
 
     const _dispatchLogueOverview = () => {
@@ -53,7 +53,7 @@ const OverviewDispatcher = forwardRef((props, ref) => {
             bothOverviewAndTipsShown =
                     getIsShown(nextOverviewOption) &&
                     getIsShown(selectedOverviewOption) &&
-                    getIsShown(selectedTipsOption)
+                    isTipsShown
 
         dispatch(updateOptionStore({
             selectedOverviewOption: nextOverviewOption,

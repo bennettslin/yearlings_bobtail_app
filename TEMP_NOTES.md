@@ -22,7 +22,6 @@
 
 # Brainless JS tasks
 * Get rid of PopupAnnotation listener.
-* Change all to use isOverviewShown and isTipsShown rather than selected options.
 * Rename all to dotBit, use selectedDotBit and activatedDotBit?
 * Ensure all selectors are used.
 

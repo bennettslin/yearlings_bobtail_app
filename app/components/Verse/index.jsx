@@ -1,5 +1,5 @@
 // Container for lyric audio button and all lines of a single verse.
-import React, { memo, PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'

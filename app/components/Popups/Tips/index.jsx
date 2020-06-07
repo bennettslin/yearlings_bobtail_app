@@ -4,13 +4,12 @@ import { useSelector } from 'react-redux'
 import Tips from '../../Tips'
 import Popup from '../../Popup'
 import { getShowTipForDevice } from '../../../api/album/tips'
-import { SHOWN } from '../../../constants/options'
 import { mapCanLyricCarouselEnter } from '../../../redux/entrance/selectors'
 import {
     mapLyricSongIndex,
     mapIsLyricLogue
 } from '../../../redux/lyric/selectors'
-import { mapSelectedTipsOption } from '../../../redux/option/selectors'
+import { mapIsTipsShown } from '../../../redux/option/selectors'
 import {
     mapIsPhoneWidth,
     mapIsTabletWidth,
@@ -23,7 +22,7 @@ const TipsPopup = () => {
         canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         isLyricLogue = useSelector(mapIsLyricLogue),
-        selectedTipsOption = useSelector(mapSelectedTipsOption),
+        isTipsShown = useSelector(mapIsTipsShown),
         isPhoneWidth = useSelector(mapIsPhoneWidth),
         isTabletWidth = useSelector(mapIsTabletWidth),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
@@ -32,7 +31,7 @@ const TipsPopup = () => {
         isVisible =
             canLyricCarouselEnter &&
             !isLyricLogue &&
-            selectedTipsOption === SHOWN &&
+            isTipsShown &&
 
             // Ensure this song's tip can be shown for this viewport width.
             getShowTipForDevice({

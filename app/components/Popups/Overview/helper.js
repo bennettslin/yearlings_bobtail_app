@@ -1,5 +1,3 @@
-import { SHOWN } from '../../../constants/options'
-
 export const getIsOverviewVisibleBySection = ({
     inMain,
     isLyricLogue
@@ -13,8 +11,8 @@ export const getIsOverviewVisibleBySong = ({
     isLyricLogue,
     isOverlayShown,
     isLogueOverviewShown,
-    selectedTipsOption,
-    selectedOverviewOption
+    isOverviewShown,
+    isTipsShown
 
 }) => {
     // If in logue, hide when overlay is shown.
@@ -27,8 +25,8 @@ export const getIsOverviewVisibleBySong = ({
     // If in song, hide when tip is shown.
     } else {
         return (
-            selectedTipsOption !== SHOWN &&
-            selectedOverviewOption === SHOWN
+            !isTipsShown &&
+            isOverviewShown
         )
     }
 }
