@@ -8,7 +8,6 @@
 * Verse scroll key not registered, and doesn't always work.
 * Unit dot reference consistently doesn't get passed to scroll. Probably Anchor needs to forward ref.
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.
-* Presence layering. Weird bug where record player in Cremated is in front of bed in one scene, then behind it in other.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Figure out why window resizing timeout seems to have regressed.

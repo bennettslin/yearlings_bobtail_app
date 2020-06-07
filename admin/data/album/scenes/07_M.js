@@ -382,8 +382,8 @@ export default [
                 [BUBBLE_SMALL__CINEMA]: true,
                 [BUBBLE_MEDIUM__CINEMA]: true,
                 [BUBBLE_LARGE__CINEMA]: true,
-                [CINEMA_THOUGHT_RECORDING]: true,
-                [CINEMA_THOUGHT_BUYING]: true
+                [CINEMA_THOUGHT_BUYING]: true,
+                [CINEMA_THOUGHT_RECORDING]: true
             },
             [CARDBOARD]: {
                 [GLADIATOR_POSTER]: true,

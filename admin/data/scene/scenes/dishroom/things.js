@@ -62,10 +62,10 @@ export default {
     },
     [PANEL]: {
         [CONVEYOR_BELT]: {
-            yIndex: 2,
+            yIndex: 1,
             xPosition: 4.1,
-            scaleFactor: 0.36,
-            zOffset: 0.275
+            scaleFactor: 0.39,
+            zOffset: -1.8
         },
         [DISHROOM_SINK]: {
             yIndex: 3,

@@ -156,8 +156,8 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true
             },
             [BUBBLE]: {
-                [DOGS_SKETCH]: true,
-                [SKETCHBOOK__DOGS]: true
+                [SKETCHBOOK__DOGS]: true,
+                [DOGS_SKETCH]: true
             },
             [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
@@ -339,8 +339,8 @@ export default [
                 [NEAR_BUILDINGS]: true
             },
             [BUBBLE]: {
-                [ESCAPE_POD_SKETCH]: true,
-                [SKETCHBOOK__ESCAPE_POD]: true
+                [SKETCHBOOK__ESCAPE_POD]: true,
+                [ESCAPE_POD_SKETCH]: true
             },
             [CARDBOARD]: {
                 [VAN_NUYS_LOGO]: true

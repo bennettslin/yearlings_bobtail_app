@@ -57,9 +57,6 @@ const _addPresenceToSceneLayer = ({
     } else {
         layerPresencesList[yIndex][presenceType][presenceName] = true
     }
-
-    // Clean up.
-    delete arrangementObject.layerYIndex
 }
 
 const _addPresenceToSceneLayerByType = ({
@@ -147,7 +144,11 @@ export const getSceneData = rawScenes => {
         layerPresencesList = {},
         albumScenes = _getLayeredScenes(rawScenes, layerPresencesList)
 
-    // Convert final entries into arrays.
+    /**
+     * Convert final entries into arrays. This makes the final rendering order
+     * of presences for the same thing type based on the order of their first
+     * appearance in the scenes themselves.
+     */
     Object.keys(layerPresencesList).forEach(layerKey => {
         const layer = layerPresencesList[layerKey]
 

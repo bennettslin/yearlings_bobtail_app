@@ -444,9 +444,9 @@ export default [
                 [BUBBLE_SMALL__WAITING]: true,
                 [BUBBLE_MEDIUM__WAITING]: true,
                 [BUBBLE_LARGE__WAITING]: true,
-                [WAITING_THOUGHT_WALKING]: true,
+                [WAITING_THOUGHT_STUDYING]: true,
                 [WAITING_THOUGHT_SINGING]: true,
-                [WAITING_THOUGHT_STUDYING]: true
+                [WAITING_THOUGHT_WALKING]: true
             },
             [CARDBOARD]: {
                 [CLIPBOARD]: true,

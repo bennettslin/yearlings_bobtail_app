@@ -124,8 +124,8 @@ export default [
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
             [BUBBLE]: {
-                [TOGETHER_SKETCH]: true,
-                [SKETCHBOOK__TOGETHER]: true
+                [SKETCHBOOK__TOGETHER]: true,
+                [TOGETHER_SKETCH]: true
             },
             [FLAT]: {
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
@@ -231,8 +231,8 @@ export default [
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
             [BUBBLE]: {
-                [APART_SKETCH]: true,
-                [SKETCHBOOK__APART]: true
+                [SKETCHBOOK__APART]: true,
+                [APART_SKETCH]: true
             },
             [FLAT]: {
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
