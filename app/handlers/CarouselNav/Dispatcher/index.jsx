@@ -70,8 +70,8 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
                 selectedAnnotationIndex || accessedAnnotationIndex
 
             dispatch(updateScrollCarouselStore({
-                queuedScrollCarouselLog: 'Nav toggled carousel annotation.',
-                queuedScrollCarouselIndex: annotationIndex
+                scrollCarouselLog: 'Nav toggled carousel annotation.',
+                scrollCarouselIndex: annotationIndex
             }))
         }
 

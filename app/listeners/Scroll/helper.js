@@ -60,7 +60,7 @@ const _getCarouselLeftAlign = (
     }
 }
 
-const _getValidTarget = (scrollParent) => {
+const _getValidTarget = scrollParent => {
     const parentElement = scrollParent
 
     return (element) => {
@@ -135,6 +135,7 @@ export const setChildElement = ({
     node,
     index,
     scrollElements
+
 }) => {
     if (node) {
         scrollElements[index] = node

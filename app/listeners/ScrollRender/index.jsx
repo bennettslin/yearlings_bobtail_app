@@ -62,9 +62,9 @@ class ScrollRenderListener extends PureComponent {
 
             // Scroll to carousel annotation if toggled on.
             this.props.updateScrollCarouselStore({
-                queuedScrollCarouselLog: 'Carousel entered.',
-                queuedScrollCarouselIndex: selectedAnnotationIndex,
-                queuedScrollCarouselNoDuration: true
+                scrollCarouselLog: 'Carousel entered.',
+                scrollCarouselIndex: selectedAnnotationIndex,
+                scrollCarouselNoDuration: true
             })
         }
     }

@@ -7,11 +7,11 @@ import { SCROLL_CAROUSEL_STORE } from '../../constants/store'
 import { SCROLL_CAROUSEL_DEFAULTS } from './default'
 
 export const updateScrollCarouselStore = (payload = SCROLL_CAROUSEL_DEFAULTS) => {
-    const { queuedScrollCarouselIndex } = payload
+    const { scrollCarouselIndex } = payload
 
-    if (hasKey(queuedScrollCarouselIndex)) {
+    if (hasKey(scrollCarouselIndex)) {
         // If given carousel index is 0, scroll instead to 1.
-        payload.queuedScrollCarouselIndex = queuedScrollCarouselIndex || 1
+        payload.scrollCarouselIndex = scrollCarouselIndex || 1
     }
 
     return {

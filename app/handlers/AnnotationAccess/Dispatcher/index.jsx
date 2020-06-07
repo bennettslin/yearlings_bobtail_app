@@ -66,8 +66,8 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
                 queuedScrollLyricIndex: accessedAnnotationIndex
             }))
             dispatch(updateScrollCarouselStore({
-                queuedScrollCarouselLog: 'Access carousel annotation.',
-                queuedScrollCarouselIndex: accessedAnnotationIndex
+                scrollCarouselLog: 'Access carousel annotation.',
+                scrollCarouselIndex: accessedAnnotationIndex
             }))
         }
 

@@ -1,11 +1,11 @@
-export const mapQueuedScrollCarouselLog = (
-    { scrollCarouselStore: { queuedScrollCarouselLog } }
-) => queuedScrollCarouselLog
+export const mapScrollCarouselLog = (
+    { scrollCarouselStore: { scrollCarouselLog } }
+) => scrollCarouselLog
 
-export const mapQueuedScrollCarouselIndex = (
-    { scrollCarouselStore: { queuedScrollCarouselIndex } }
-) => queuedScrollCarouselIndex
+export const mapScrollCarouselIndex = (
+    { scrollCarouselStore: { scrollCarouselIndex } }
+) => scrollCarouselIndex
 
-export const mapQueuedScrollCarouselNoDuration = (
-    { scrollCarouselStore: { queuedScrollCarouselNoDuration } }
-) => queuedScrollCarouselNoDuration
+export const mapScrollCarouselNoDuration = (
+    { scrollCarouselStore: { scrollCarouselNoDuration } }
+) => scrollCarouselNoDuration

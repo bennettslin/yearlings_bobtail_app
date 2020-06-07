@@ -72,8 +72,8 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
             // If selecting from lyric, scroll carousel.
             } else {
                 dispatch(updateScrollCarouselStore({
-                    queuedScrollCarouselLog: 'Lyric selected carousel annotation.',
-                    queuedScrollCarouselIndex: annotationIndex
+                    scrollCarouselLog: 'Lyric selected carousel annotation.',
+                    scrollCarouselIndex: annotationIndex
                 }))
             }
         }
@@ -102,8 +102,8 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
                 queuedScrollLyricIndex: nextAnnotationIndex
             }))
             dispatch(updateScrollCarouselStore({
-                queuedScrollCarouselLog: 'Select accessed carousel annotation.',
-                queuedScrollCarouselIndex: nextAnnotationIndex
+                scrollCarouselLog: 'Select accessed carousel annotation.',
+                scrollCarouselIndex: nextAnnotationIndex
             }))
         }
 

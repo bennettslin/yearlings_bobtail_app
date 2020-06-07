@@ -5,9 +5,9 @@ import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { scrollElementIntoView } from '../helper'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import {
-    mapQueuedScrollCarouselLog,
-    mapQueuedScrollCarouselIndex,
-    mapQueuedScrollCarouselNoDuration
+    mapScrollCarouselLog,
+    mapScrollCarouselIndex,
+    mapScrollCarouselNoDuration
 } from '../../../redux/scrollCarousel/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 import { mapIsCarouselShown } from '../../../redux/toggle/selectors'
@@ -27,21 +27,21 @@ const ScrollCarouselListener = ({
         isCarouselShown = useSelector(mapIsCarouselShown),
         windowWidth = useSelector(mapWindowWidth),
         deviceWidthIndex = useSelector(mapDeviceWidthIndex),
-        queuedScrollCarouselLog = useSelector(mapQueuedScrollCarouselLog),
-        queuedScrollCarouselIndex = useSelector(mapQueuedScrollCarouselIndex),
-        queuedScrollCarouselNoDuration = useSelector(mapQueuedScrollCarouselNoDuration)
+        scrollCarouselLog = useSelector(mapScrollCarouselLog),
+        scrollCarouselIndex = useSelector(mapScrollCarouselIndex),
+        scrollCarouselNoDuration = useSelector(mapScrollCarouselNoDuration)
 
     useEffect(() => {
         // Only scroll if carousel is shown.
-        if (queuedScrollCarouselLog && isCarouselShown) {
+        if (scrollCarouselLog && isCarouselShown) {
             scrollElementIntoView({
                 isCarousel: true,
-                log: queuedScrollCarouselLog,
+                log: scrollCarouselLog,
                 scrollClass: CAROUSEL_SCROLL,
                 scrollParent: getCarouselScrollParent(),
-                scrollChild: getCarouselScrollChild(queuedScrollCarouselIndex),
-                index: queuedScrollCarouselIndex,
-                noDuration: queuedScrollCarouselNoDuration,
+                scrollChild: getCarouselScrollChild(scrollCarouselIndex),
+                index: scrollCarouselIndex,
+                noDuration: scrollCarouselNoDuration,
                 deviceWidthIndex,
                 windowWidth,
                 isSelectedLogue
@@ -49,7 +49,7 @@ const ScrollCarouselListener = ({
 
             dispatch(updateScrollCarouselStore())
         }
-    }, [queuedScrollCarouselLog])
+    }, [scrollCarouselLog])
 
     return null
 }

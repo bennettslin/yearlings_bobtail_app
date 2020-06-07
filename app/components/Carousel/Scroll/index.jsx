@@ -63,7 +63,7 @@ class CarouselScroll extends PureComponent {
         this.carouselScrollParent = node
     }
 
-    _setCarouselAnnotationChild = ({ node, index }) => {
+    _setCarouselScrollChild = ({ node, index }) => {
         this.carouselScrollChildren[index] = node
     }
 
@@ -120,7 +120,7 @@ class CarouselScroll extends PureComponent {
                                     annotationIndex,
                                     isAccessed,
                                     isSelected,
-                                    setCarouselAnnotationChild: this._setCarouselAnnotationChild
+                                    setCarouselAnnotationChild: this._setCarouselScrollChild
                                 }}
                             />
                         )
