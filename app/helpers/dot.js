@@ -33,8 +33,8 @@ export const getDotsBitFromKeys = dotKeys => (
     }) : null
 )
 
-export const getPrefixedDotLetterClassNames = (dotBit, prefix) => {
-    const dotKeys = getDotKeysFromBit(dotBit)
+export const getPrefixedDotLetterClassNames = (dotsBit, prefix) => {
+    const dotKeys = getDotKeysFromBit(dotsBit)
 
     return Object.keys(pickBy(dotKeys)).map(name => (
         `${prefix}${name[0]}`

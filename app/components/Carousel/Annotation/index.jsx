@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Annotation from '../../Annotation'
-import { getDotBitForAnnotation } from '../../../api/album/annotations'
+import { getDotsBitForAnnotation } from '../../../api/album/annotations'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 import { getCarouselAnnotationData } from './helper'
@@ -26,7 +26,7 @@ const CarouselAnnotation = ({
         lyricSongIndex = useSelector(mapLyricSongIndex),
 
         // TODO: Make this a selector.
-        annotationDotBit = getDotBitForAnnotation(
+        annotationDotsBit = getDotsBitForAnnotation(
             lyricSongIndex,
             annotationIndex
         ),
@@ -56,7 +56,7 @@ const CarouselAnnotation = ({
                         `CarouselAnnotation__inEarColumn__${columnKey}`,
 
                     getPrefixedDotLetterClassNames(
-                        annotationDotBit,
+                        annotationDotsBit,
                         // "Child carousel annotation letter."
                         'CcA'
                     ),

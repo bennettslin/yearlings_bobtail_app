@@ -23,7 +23,7 @@ const TextLyricAnchor = ({
     wikiIndex,
     wikiAnnotationIndex,
     text,
-    dotBit,
+    dotsBit,
     isVerseLyric,
     isItalic,
     isEmphasis,
@@ -117,7 +117,7 @@ const TextLyricAnchor = ({
                         beginsVerse,
                         endsVerse
                     },
-                    sequenceDotBit: dotBit,
+                    sequenceDotsBit: dotsBit,
                     handleAnchorClick,
 
                     /**
@@ -153,7 +153,7 @@ TextLyricAnchor.propTypes = {
     isEmphasis: PropTypes.bool,
     beginsVerse: PropTypes.bool,
     endsVerse: PropTypes.bool,
-    dotBit: PropTypes.number,
+    dotsBit: PropTypes.number,
     setLyricAnnotationChild: PropTypes.func,
     handleAnchorClick: PropTypes.func
 }

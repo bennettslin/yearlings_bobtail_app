@@ -9,7 +9,7 @@ import './style'
 import { getDotKeysFromBit } from '../../helpers/dot'
 
 const propTypes = {
-    dotBit: PropTypes.number.isRequired,
+    dotsBit: PropTypes.number.isRequired,
     inAnnotationCard: PropTypes.bool,
     inTextAnchor: PropTypes.bool
 }
@@ -17,11 +17,11 @@ const propTypes = {
 const DotSequence = ({
     inAnnotationCard,
     inTextAnchor,
-    dotBit,
+    dotsBit,
     ...other
 
 }) => {
-    const dotKeys = getDotKeysFromBit(dotBit)
+    const dotKeys = getDotKeysFromBit(dotsBit)
     return (
 
         <div className={cx(

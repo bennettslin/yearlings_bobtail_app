@@ -19,7 +19,7 @@ export const getDescriptionForAnnotationCard = (
     return descriptions[cardIndex]
 }
 
-export const getDotBitForAnnotationCard = (
+export const getDotsBitForAnnotationCard = (
     songIndex, annotationIndex, cardIndex
 ) => {
     // Return just wormhole key if it's a wormholes card.
@@ -29,26 +29,26 @@ export const getDotBitForAnnotationCard = (
         return WORMHOLE_BIT
     }
 
-    const { annotationCardsDotBitsList } = getSong(songIndex),
-        dotBitsEntity = annotationCardsDotBitsList[annotationIndex - 1]
+    const { annotationCardsDotsBitsList } = getSong(songIndex),
+        dotsBitsEntity = annotationCardsDotsBitsList[annotationIndex - 1]
 
-    if (!dotBitsEntity) {
+    if (!dotsBitsEntity) {
         return null
     }
 
-    const dotBitNumber = Array.isArray(dotBitsEntity) ?
-        dotBitsEntity[cardIndex] :
-        dotBitsEntity
+    const dotsBit = Array.isArray(dotsBitsEntity) ?
+        dotsBitsEntity[cardIndex] :
+        dotsBitsEntity
 
-    return dotBitNumber
+    return dotsBit
 }
 
 export const getDotKeysForAnnotationCard = (
     songIndex, annotationIndex, cardIndex
 ) => {
-    const dotBitNumber = getDotBitForAnnotationCard(
+    const dotsBit = getDotsBitForAnnotationCard(
         songIndex, annotationIndex, cardIndex
     )
 
-    return getDotKeysFromBit(dotBitNumber)
+    return getDotKeysFromBit(dotsBit)
 }

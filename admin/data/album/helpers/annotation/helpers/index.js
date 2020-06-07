@@ -78,7 +78,7 @@ export const registerAnnotation = ({
     annotation.dotKeys = dotKeys
 
     // Add dot bit number to anchored lyric.
-    anchoredLyric.dotBit = getDotsBitFromKeys(dotKeys)
+    anchoredLyric.dotsBit = getDotsBitFromKeys(dotKeys)
 
     // Add annotation object to annotations array.
     annotations.push(annotation)

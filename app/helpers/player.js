@@ -8,7 +8,7 @@ import {
 } from '../helpers/bit'
 import { getArrayOfLength } from '../helpers/general'
 
-export const getPlayersCanPlayThroughFromBitNumber = (bit) => {
+export const getPlayersCanPlayThroughFromBit = (bit) => {
     return getObjectFromBit({
         keysList: getArrayOfLength(getSongsNotLoguesCount(), 1),
         bit
@@ -17,11 +17,11 @@ export const getPlayersCanPlayThroughFromBitNumber = (bit) => {
 
 export const getPlayerCanPlayThroughFromBit = (
     songIndex,
-    playersBitNumber
+    playersBit
 ) => (
     getObjectFromBit({
         keysCount: getSongsNotLoguesCount(),
-        bit: playersBitNumber
+        bit: playersBit
 
     // If logue, the player to check is the first song.
     })[getSongIsLogue(songIndex) ? 1 : songIndex]

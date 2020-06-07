@@ -15,8 +15,8 @@ const Anchor = ({
     isAccessed: isAccessedBeforeDesktop,
     isSelected,
     isDisabled,
-    sequenceDotBit,
-    stanzaDotBit,
+    sequenceDotsBit,
+    stanzaDotsBit,
     isWikiTextAnchor,
     text,
     textConfig,
@@ -25,8 +25,8 @@ const Anchor = ({
     handleAnchorClick
 }) => {
     const
-        isDotAnchor = Number.isFinite(stanzaDotBit),
-        isTextAnchor = Number.isFinite(sequenceDotBit),
+        isDotAnchor = Number.isFinite(stanzaDotsBit),
+        isTextAnchor = Number.isFinite(sequenceDotsBit),
 
         // If in mobile, only show dot sequence if annotation title.
         showDotSequence = isTextAnchor && (
@@ -69,7 +69,7 @@ const Anchor = ({
 
                     isTextAnchor &&
                         getPrefixedDotLetterClassNames(
-                            sequenceDotBit,
+                            sequenceDotsBit,
                             // "Child anchor letter."
                             'ChA'
                         ),
@@ -97,7 +97,7 @@ const Anchor = ({
                     {...{
                         isAccessed,
                         isSelected,
-                        dotBit: sequenceDotBit
+                        dotsBit: sequenceDotsBit
                     }}
                 />
             )}
@@ -107,7 +107,7 @@ const Anchor = ({
                     {...{
                         isAccessed,
                         isSelected,
-                        stanzaDotBit
+                        stanzaDotsBit
                     }}
                 />
             )}
@@ -135,8 +135,8 @@ Anchor.propTypes = {
     isSelected: PropTypes.bool,
     isDisabled: PropTypes.bool,
     isWikiTextAnchor: PropTypes.bool,
-    sequenceDotBit: PropTypes.number,
-    stanzaDotBit: PropTypes.number,
+    sequenceDotsBit: PropTypes.number,
+    stanzaDotsBit: PropTypes.number,
     text: PropTypes.any,
     textConfig: PropTypes.any,
     analyticsIdentifier: PropTypes.string,

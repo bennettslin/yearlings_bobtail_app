@@ -10,7 +10,7 @@ export const getAnnotationIndices = songIndex => (
         [] :
         getArrayOfLength(
             // Which annotation array we use is arbitrary.
-            getSong(songIndex).annotationDotBits.length
+            getSong(songIndex).annotationDotsBits.length
         )
 )
 
@@ -27,13 +27,13 @@ export const getValidAnnotationIndex = (songIndex, annotationIndex) => (
     getIsAnnotationValid(songIndex, annotationIndex) ? annotationIndex : 0
 )
 
-export const getDotBitForAnnotation = (songIndex, annotationIndex) => {
-    const { annotationDotBits } = getSong(songIndex)
-    return annotationDotBits[annotationIndex - 1]
+export const getDotsBitForAnnotation = (songIndex, annotationIndex) => {
+    const { annotationDotsBits } = getSong(songIndex)
+    return annotationDotsBits[annotationIndex - 1]
 }
 
 export const getDotKeysForAnnotation = (songIndex, annotationIndex) => {
-    return getDotKeysFromBit(getDotBitForAnnotation(
+    return getDotKeysFromBit(getDotsBitForAnnotation(
         songIndex,
         annotationIndex
     ))

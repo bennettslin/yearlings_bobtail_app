@@ -11,7 +11,7 @@ import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 import './style'
 import {
     getDescriptionForAnnotationCard,
-    getDotBitForAnnotationCard
+    getDotsBitForAnnotationCard
 } from '../../../api/album/cards'
 
 const AnnotationCard = ({
@@ -28,7 +28,7 @@ const AnnotationCard = ({
             annotationIndex,
             cardIndex
         ),
-        dotBit = getDotBitForAnnotationCard(
+        dotsBit = getDotsBitForAnnotationCard(
             lyricSongIndex,
             annotationIndex,
             cardIndex
@@ -39,7 +39,7 @@ const AnnotationCard = ({
             'AnnotationCardContainer',
             inCarousel && 'AnnotationCardContainer__animated',
             getPrefixedDotLetterClassNames(
-                dotBit,
+                dotsBit,
 
                 // "Child annotation card letter."
                 'CaC'
@@ -58,7 +58,7 @@ const AnnotationCard = ({
                     <>
                         <DotSequence
                             inAnnotationCard
-                            {...{ dotBit }}
+                            {...{ dotsBit }}
                         />
                         <div {...{ className: 'AnnotationCard__text' }}>
                             <Texts

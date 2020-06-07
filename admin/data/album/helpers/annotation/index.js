@@ -80,9 +80,9 @@ const _addAnnotationLists = (annotations, song) => {
         annotationTitles = [],
         annotationColumnIndices = [],
         annotationVerseIndices = [],
-        annotationDotBits = [],
+        annotationDotsBits = [],
         annotationCardsDescriptionsList = [],
-        annotationCardsDotBitsList = []
+        annotationCardsDotsBitsList = []
 
     /**
      * Now that we have recursively gone through the lyrics and the annotation
@@ -103,11 +103,11 @@ const _addAnnotationLists = (annotations, song) => {
                 annotation.verseIndex :
                 -1
         )
-        annotationDotBits.push(getDotsBitFromKeys(annotation.dotKeys))
+        annotationDotsBits.push(getDotsBitFromKeys(annotation.dotKeys))
         annotationCardsDescriptionsList.push(
             annotation.cards.map(card => card.description || null)
         )
-        annotationCardsDotBitsList.push(
+        annotationCardsDotsBitsList.push(
             // If single card, push individual dot keys for dev clarity.
             annotation.cards.length === 1 ?
                 getDotsBitFromKeys(
@@ -124,10 +124,10 @@ const _addAnnotationLists = (annotations, song) => {
         song.annotationColumnIndices = annotationColumnIndices
     }
     song.annotationTitles = annotationTitles
-    song.annotationDotBits = annotationDotBits
+    song.annotationDotsBits = annotationDotsBits
     song.annotationVerseIndices = annotationVerseIndices
     song.annotationCardsDescriptionsList = annotationCardsDescriptionsList
-    song.annotationCardsDotBitsList = annotationCardsDotBitsList
+    song.annotationCardsDotsBitsList = annotationCardsDotsBitsList
 }
 
 export const addAnnotationMetadata = (songIndex, song) => {

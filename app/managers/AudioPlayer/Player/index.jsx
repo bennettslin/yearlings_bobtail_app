@@ -10,7 +10,7 @@ import PlayerListener from './Listener'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
 import { getStartTimeForVerse } from '../../../api/album/time'
-import { getPlayersCanPlayThroughFromBitNumber } from '../../../helpers/player'
+import { getPlayersCanPlayThroughFromBit } from '../../../helpers/player'
 import {
     getMp3s,
     getNextVerseIndex,
@@ -18,7 +18,7 @@ import {
 } from './helper'
 import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
-    mapPlayersBitNumber,
+    mapPlayersBit,
     mapNextPlayerToRender
 } from '../../../redux/players/selectors'
 import {
@@ -30,7 +30,7 @@ import {
 const mapStateToProps = state => {
     const
         isPlaying = mapIsPlaying(state),
-        playersBitNumber = mapPlayersBitNumber(state),
+        playersBit = mapPlayersBit(state),
         nextPlayerToRender = mapNextPlayerToRender(state),
         selectedSongIndex = mapSelectedSongIndex(state),
         selectedVerseIndex = mapSelectedVerseIndex(state),
@@ -41,7 +41,7 @@ const mapStateToProps = state => {
         selectedSongIndex,
         selectedVerseIndex,
         selectedTime,
-        playersBitNumber,
+        playersBit,
         nextPlayerToRender
     }
 }
@@ -61,7 +61,7 @@ class PlayerManager extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired,
-        playersBitNumber: PropTypes.number.isRequired,
+        playersBit: PropTypes.number.isRequired,
         nextPlayerToRender: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
@@ -80,11 +80,11 @@ class PlayerManager extends PureComponent {
 
     _playerShouldRender(songIndex) {
         const {
-                playersBitNumber,
+                playersBit,
                 nextPlayerToRender
             } = this.props,
-            playersCanPlayThrough = getPlayersCanPlayThroughFromBitNumber(
-                playersBitNumber
+            playersCanPlayThrough = getPlayersCanPlayThroughFromBit(
+                playersBit
             )
 
         return (

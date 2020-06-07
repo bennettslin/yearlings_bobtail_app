@@ -31,7 +31,7 @@ export const UnitDot = ({
         isSliderMoving = useSelector(mapIsSliderMoving),
         {
             annotationIndex,
-            dotBit
+            dotsBit
         } = getDotForUnit(lyricSongIndex, unitIndex),
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex))
@@ -69,7 +69,7 @@ export const UnitDot = ({
 
                     // Show and hide dot stanza block in and out based on dot keys.
                     getPrefixedDotLetterClassNames(
-                        dotBit,
+                        dotsBit,
                         // "Child unit dot letter."
                         'CuD'
                     )
@@ -79,7 +79,7 @@ export const UnitDot = ({
             {/* Scroll to unit dot at bottom, not unit middle. */}
             <Anchor
                 {...{
-                    stanzaDotBit: dotBit,
+                    stanzaDotsBit: dotsBit,
                     isSelected,
                     isAccessed,
                     annotationIndex,

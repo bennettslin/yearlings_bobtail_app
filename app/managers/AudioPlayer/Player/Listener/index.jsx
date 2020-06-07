@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updatePlayersStore } from '../../../../redux/players/action'
 import { resetAudioQueue } from '../../../../redux/audio/action'
-import { getPlayersCanPlayThroughFromBitNumber } from '../../../../helpers/player'
+import { getPlayersCanPlayThroughFromBit } from '../../../../helpers/player'
 import { getNextPlayerIndexToRender } from './helper'
 import {
     mapQueuedPlayFromLogue,
@@ -16,7 +16,7 @@ import {
     mapLyricSongIndex,
     mapLyricVerseIndex
 } from '../../../../redux/lyric/selectors'
-import { mapPlayersBitNumber } from '../../../../redux/players/selectors'
+import { mapPlayersBit } from '../../../../redux/players/selectors'
 import {
     mapSelectedSongIndex,
     mapIsSelectedLogue
@@ -29,11 +29,11 @@ const mapStateToProps = state => {
         queuedPlayVerseIndex = mapQueuedPlayVerseIndex(state),
         lyricSongIndex = mapLyricSongIndex(state),
         lyricVerseIndex = mapLyricVerseIndex(state),
-        playersBitNumber = mapPlayersBitNumber(state),
+        playersBit = mapPlayersBit(state),
         selectedSongIndex = mapSelectedSongIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state)
     return {
-        playersBitNumber,
+        playersBit,
         selectedSongIndex,
         isSelectedLogue,
         lyricSongIndex,
@@ -50,7 +50,7 @@ class PlayerListener extends PureComponent {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-        playersBitNumber: PropTypes.number.isRequired,
+        playersBit: PropTypes.number.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricVerseIndex: PropTypes.number.isRequired,
         queuedPlayFromLogue: PropTypes.bool.isRequired,
@@ -101,18 +101,18 @@ class PlayerListener extends PureComponent {
 
     _updateNextPlayerToRender(prevProps = {}) {
         const
-            { playersBitNumber } = this.props,
-            { playersBitNumber: prevBitNumber } = prevProps
+            { playersBit } = this.props,
+            { playersBit: prevBit } = prevProps
 
-        if (playersBitNumber !== prevBitNumber) {
+        if (playersBit !== prevBit) {
             const {
                     selectedSongIndex,
                     isSelectedLogue,
-                    playersBitNumber
+                    playersBit
                 } = this.props,
 
-                playersCanPlayThrough = getPlayersCanPlayThroughFromBitNumber(
-                    playersBitNumber
+                playersCanPlayThrough = getPlayersCanPlayThroughFromBit(
+                    playersBit
                 )
 
             this.props.updatePlayersStore({

@@ -3,6 +3,6 @@
  * components. The individual players are just stored for dev clarity.
  */
 export const PLAYERS_DEFAULTS = {
-    playersBitNumber: 0,
+    playersBit: 0,
     nextPlayerToRender: -1
 }

@@ -6,7 +6,7 @@ import { updateAnnotationStore } from '../../../redux/annotation/action'
 import Anchor from '../../Anchor'
 import AnnotationAccess from './Access'
 import {
-    getDotBitForAnnotation,
+    getDotsBitForAnnotation,
     getTitleForAnnotation
 } from '../../../api/album/annotations'
 import { getDotKeysFromBit } from '../../../helpers/dot'
@@ -34,7 +34,7 @@ const AnnotationTitle = ({
             selectedDotKeys
         }),
 
-        annotationDotBit = getDotBitForAnnotation(
+        annotationDotsBit = getDotsBitForAnnotation(
             lyricSongIndex,
             annotationIndex
         ),
@@ -84,11 +84,11 @@ const AnnotationTitle = ({
             <Anchor
                 {...{
                     ...isDot ? {
-                        stanzaDotBit: annotationDotBit
+                        stanzaDotsBit: annotationDotsBit
                     } : {
                         isAnnotationTitle: true,
                         text: `\u201c${annotationTitle}\u201d`,
-                        sequenceDotBit: annotationDotBit
+                        sequenceDotsBit: annotationDotsBit
                     },
                     isAccessed,
                     isSelected,

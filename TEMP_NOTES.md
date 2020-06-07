@@ -22,7 +22,6 @@
 
 # Brainless JS tasks
 * Get rid of PopupAnnotation listener.
-* Rename all to dotBit, use selectedDotBit and activatedDotBit?
 
 # Easy reduction tasks
 * Last getRefs in LyricScroll: https://stackoverflow.com/questions/54633690/how-can-i-use-multiple-refs-for-an-array-of-elements-with-hooks
