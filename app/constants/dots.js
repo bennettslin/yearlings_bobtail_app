@@ -39,6 +39,7 @@ export const DOT_DESCRIPTIONS = {
 
 // Hard-coded because it fails staging otherwise. Haven't investigated why.
 export const INITIAL_DOTS_BIT = 7
+export const REFERENCE_BIT = 16
 export const WORMHOLE_BIT = 32
 
 export const EMPTY_DOT_KEYS = getObjectFromBit({

@@ -1,10 +1,11 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
 import DotSequence from '../DotSequence'
 import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
-import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
+import { getMapHasSelectedDot } from '../../redux/dots/selectors'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import './style'
 
@@ -25,12 +26,20 @@ const Anchor = ({
 
 }) => {
     const
+        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
         isTextAnchor = Boolean(text),
 
-        // If in mobile, only show dot sequence if annotation title.
-        showDotSequence = isTextAnchor && Number.isFinite(dotsBit) && (
-            IS_USER_AGENT_DESKTOP || isAnnotationTitle
-        ),
+        // Anchor is shown if no dotsBit is passed, or there is a selected dot.
+        isShown = !Number.isFinite(dotsBit) || hasSelectedDot,
+
+        showDotSequence =
+            isTextAnchor &&
+            !isWikiTextAnchor &&
+            Number.isFinite(dotsBit) &&
+            (
+                // If in mobile, only show dot sequence if annotation title.
+                IS_USER_AGENT_DESKTOP || isAnnotationTitle
+            ),
 
         /**
          * Don't show access if in mobile, even though access behaviour is
@@ -56,28 +65,10 @@ const Anchor = ({
                 ref: setLyricAnnotationElement,
                 className: cx(
                     'Anchor',
+                    isShown && 'Anchor__shown',
                     isAccessed && !isSelected && 'Anchor__accessed',
                     !isSelected && 'Anchor__selectable',
                     !isWikiTextAnchor && 'Anchor__noWrap',
-
-                    // "Child anchor reference letter."
-                    isWikiTextAnchor && 'ChAr',
-
-                    isTextAnchor &&
-                        getPrefixedDotLetterClassNames(
-                            dotsBit,
-                            // "Child anchor letter."
-                            'ChA'
-                        ),
-
-                    /**
-                     * If sequence dot keys are provided, or if it's a wiki
-                     * anchor, anchor is not always visible.
-                     */
-                    !isTextAnchor &&
-                    !isWikiTextAnchor &&
-                        'Anchor__alwaysVisible',
-
                     className
                 ),
                 ...href && {

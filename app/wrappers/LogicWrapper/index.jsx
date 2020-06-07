@@ -2,10 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
 import { mapIsActivated } from '../../redux/activated/selectors'
 import { mapIsPlaying } from '../../redux/audio/selectors'
-import { mapSelectedDotsBit } from '../../redux/dots/selectors'
 import {
     mapIsLyricLogue,
     mapLyricVerseIndex,
@@ -21,7 +19,6 @@ const LogicWrapper = ({ children }) => {
     const
         isActivated = useSelector(mapIsActivated),
         isPlaying = useSelector(mapIsPlaying),
-        selectedDotsBit = useSelector(mapSelectedDotsBit),
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         cursorVerseIndex = useSelector(mapCursorVerseIndex),
@@ -61,13 +58,7 @@ const LogicWrapper = ({ children }) => {
 
                         areVerseBarsHidden && !isActivated &&
                             // "Root cursored lyric verse."
-                            `RlV${cursorVerseIndex}`,
-
-                        getPrefixedDotLetterClassNames(
-                            selectedDotsBit,
-                            // "Root selected dot letter."
-                            'RsD'
-                        )
+                            `RlV${cursorVerseIndex}`
                     ]
                 )
             }}

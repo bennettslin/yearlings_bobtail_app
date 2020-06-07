@@ -7,6 +7,7 @@ import { updateAnnotationStore } from '../../../../redux/annotation/action'
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
 import WikiDispatcher from '../../../../dispatchers/WikiDispatcher'
 import Anchor from '../../../Anchor'
+import { REFERENCE_BIT } from '../../../../constants/dots'
 import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
 import {
     mapIsAccessedIndexedAnchorShown,
@@ -117,7 +118,7 @@ const TextLyricAnchor = ({
                         beginsVerse,
                         endsVerse
                     },
-                    dotsBit,
+                    dotsBit: isWikiTextAnchor ? REFERENCE_BIT : dotsBit,
                     handleAnchorClick,
 
                     /**

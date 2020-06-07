@@ -20,7 +20,7 @@ export const getMapFirstSelectedDotKey = dotsBit => createSelector(
     }
 )
 
-export const getMapHasSelectedDot = dotsBit => createSelector(
+export const getMapHasSelectedDot = (dotsBit = 0) => createSelector(
     getMapFirstSelectedDotKey(dotsBit),
     firstDotKey => Boolean(firstDotKey)
 )

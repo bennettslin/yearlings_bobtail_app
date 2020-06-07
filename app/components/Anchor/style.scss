@@ -5,6 +5,34 @@
     position: relative;
 }
 
+.Anchor__shown {
+    .TW__isStationary.TW__lyricsUnlocked
+    &.Anchor__selectable {
+        cursor: pointer;
+    }
+
+    // Anchors show as more than text.
+    .TextAnchor__plainText {
+        display: none;
+    }
+    .TextAnchor__linkText__default {
+        display: inline;
+    }
+
+    &.Anchor__accessed {
+        .TextAnchor__linkText__default {
+            display: none;
+        }
+        .TextAnchor__linkText__accessed {
+            display: inline;
+        }
+    }
+
+    .Underline {
+        visibility: visible;
+    }
+}
+
 .Anchor__noWrap {
     white-space: nowrap;
 }

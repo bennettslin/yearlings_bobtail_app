@@ -3,7 +3,6 @@ import {
     getObjectFromBit,
     getBitFromObject
 } from './bit'
-import { pickBy } from '../helpers/general'
 import { ORDERED_DOT_KEYS } from '../constants/dots'
 
 // TODO: Eventually get rid of this.
@@ -33,12 +32,3 @@ export const getDotsBitFromKeys = dotKeys => (
         trueFalseObject: dotKeys
     }) : null
 )
-
-// TODO: Eventually get rid of this.
-export const getPrefixedDotLetterClassNames = (dotsBit, prefix) => {
-    const dotKeys = getDotKeysFromBit(dotsBit)
-
-    return Object.keys(pickBy(dotKeys)).map(name => (
-        `${prefix}${name[0]}`
-    ))
-}

@@ -10,17 +10,6 @@ export const isString = (string) => (
     string && typeof string.valueOf() === "string"
 )
 
-// https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_pickby
-export const pickBy = object => {
-    const newObject = {}
-    for (const key in object) {
-        if (object[key]) {
-            newObject[key] = object[key]
-        }
-    }
-    return newObject
-}
-
 export const getArrayOfLength = (
     length,
     indexBase = 0
