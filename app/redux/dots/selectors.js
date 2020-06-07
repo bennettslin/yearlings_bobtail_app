@@ -6,7 +6,7 @@ export const mapSelectedDotsBit = (
     { dotsStore: { selectedDotsBit } }
 ) => selectedDotsBit
 
-export const getMapFirstDotKey = dotsBit => createSelector(
+export const getMapFirstSelectedDotKey = dotsBit => createSelector(
     mapSelectedDotsBit,
     selectedDotsBit => {
         const
@@ -18,6 +18,11 @@ export const getMapFirstDotKey = dotsBit => createSelector(
             selectedDotKeys[dotKey]
         ))
     }
+)
+
+export const getMapHasSelectedDot = dotsBit => createSelector(
+    getMapFirstSelectedDotKey(dotsBit),
+    firstDotKey => Boolean(firstDotKey)
 )
 
 export const mapReferenceDot = (

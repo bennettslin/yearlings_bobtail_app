@@ -1,4 +1,5 @@
 @import '../../../scss/constants/icon';
+@import '../../../scss/constants/lyric';
 @import '../../../scss/constants/transition';
 
 .UnitDot {
@@ -23,5 +24,16 @@
             max-height $transitionDuration__default,
             margin-top $transitionDuration__default,
             margin-left $transitionDuration__default;
+    }
+}
+
+.UnitDot__shown {
+    max-width: inherit;
+    margin-top: $margin__lyricUnit;
+
+    opacity: 1;
+
+    &:not(:first-child) {
+        margin-left: $marginX__stanzaChildColumn;
     }
 }

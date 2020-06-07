@@ -5,16 +5,16 @@ import { useSelector } from 'react-redux'
 import Dot from '../../Dot'
 import Underline from '../Underline'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
-import { getMapFirstDotKey } from '../../../redux/dots/selectors'
+import { getMapFirstSelectedDotKey } from '../../../redux/dots/selectors'
 import './style'
 
 const AnchorDot = ({
     isAccessed,
     isSelected,
-    stanzaDotsBit
+    unitDotsBit
 
 }) => {
-    const firstAnchorDot = useSelector(getMapFirstDotKey(stanzaDotsBit))
+    const selectedDotKey = useSelector(getMapFirstSelectedDotKey(unitDotsBit))
 
     return (
         <>
@@ -27,7 +27,7 @@ const AnchorDot = ({
                     }}
                 />
             )}
-            {Boolean(firstAnchorDot) && (
+            {Boolean(selectedDotKey) && (
                 <Dot
                     {...{
                         className: cx(
@@ -35,7 +35,7 @@ const AnchorDot = ({
                             isAccessed && !isSelected && 'DotAnchor__accessed',
                             !isSelected && 'DotAnchor__selectable'
                         ),
-                        dotKey: firstAnchorDot,
+                        dotKey: selectedDotKey,
                         isAccessed,
                         isSelected
                     }}
@@ -48,7 +48,7 @@ const AnchorDot = ({
 AnchorDot.propTypes = {
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
-    stanzaDotsBit: PropTypes.number.isRequired
+    unitDotsBit: PropTypes.number.isRequired
 }
 
 export default memo(AnchorDot)

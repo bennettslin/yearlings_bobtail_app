@@ -7,11 +7,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import Anchor from '../../Anchor'
 import UnitDotParent from './Parent'
 import { getDotForUnit } from '../../../api/album/units'
-import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
 import { LYRIC_ANNOTATION_SCROLL } from '../../../constants/scroll'
 import { getMapIsAnnotationAccessed } from '../../../redux/access/selectors'
 import { mapIsActivated } from '../../../redux/activated/selectors'
+import { getMapHasSelectedDot } from '../../../redux/dots/selectors'
 import {
     mapLyricSongIndex,
     getMapIsLyricAnnotation
@@ -33,6 +33,7 @@ export const UnitDot = ({
             annotationIndex,
             dotsBit
         } = getDotForUnit(lyricSongIndex, unitIndex),
+        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex))
 
@@ -62,24 +63,17 @@ export const UnitDot = ({
                 className: cx(
                     'UnitDot',
                     'Unit__column',
+                    hasSelectedDot && 'UnitDot__shown',
 
                     // Scroll to dot stanza block upon annotation selection.
-                    annotationIndex &&
-                    `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
-
-                    // Show and hide dot stanza block in and out based on dot keys.
-                    getPrefixedDotLetterClassNames(
-                        dotsBit,
-                        // "Child unit dot letter."
-                        'CuD'
-                    )
+                    `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`
                 )
             }}
         >
             {/* Scroll to unit dot at bottom, not unit middle. */}
             <Anchor
                 {...{
-                    stanzaDotsBit: dotsBit,
+                    unitDotsBit: dotsBit,
                     isSelected,
                     isAccessed,
                     annotationIndex,

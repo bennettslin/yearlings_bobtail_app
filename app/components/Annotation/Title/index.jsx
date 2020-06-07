@@ -84,7 +84,7 @@ const AnnotationTitle = ({
             <Anchor
                 {...{
                     ...isDot ? {
-                        stanzaDotsBit: annotationDotsBit
+                        unitDotsBit: annotationDotsBit
                     } : {
                         isAnnotationTitle: true,
                         text: `\u201c${annotationTitle}\u201d`,

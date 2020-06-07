@@ -6,6 +6,7 @@ import {
 import { pickBy } from '../helpers/general'
 import { ORDERED_DOT_KEYS } from '../constants/dots'
 
+// TODO: Eventually get rid of this.
 export const intersects = (presentKeys = {}, selectedKeys = {}) => {
     const presentKeysArray = Object.keys(presentKeys)
 
@@ -33,6 +34,7 @@ export const getDotsBitFromKeys = dotKeys => (
     }) : null
 )
 
+// TODO: Eventually get rid of this.
 export const getPrefixedDotLetterClassNames = (dotsBit, prefix) => {
     const dotKeys = getDotKeysFromBit(dotsBit)
 
