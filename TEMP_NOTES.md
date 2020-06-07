@@ -4,6 +4,7 @@
 * Some todos to make a selector.
 
 # Bugs
+* Activated scene index is undefined when accessing back to selected verse.
 * Stage dimensions act like two row menu in mobile, even when not?
 * Verse scroll key not registered, and doesn't always work. Looks like this has always been the case, pre-Gatsby.vbvvv
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.

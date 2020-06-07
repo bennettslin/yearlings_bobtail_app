@@ -1,6 +1,6 @@
-import { PureComponent } from 'react'
+import { memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { mapIsPlaying } from '../../../redux/audio/selectors'
@@ -29,99 +29,48 @@ import {
 } from '../../../redux/toggle/selectors'
 import { mapDeviceWidthIndex } from '../../../redux/viewport/selectors'
 
-const mapStateToProps = state => {
+const ScrollLyricListener = ({
+    getLyricScrollParent,
+    getScrollAnnotationChild,
+    getScrollVerseChild
+
+}) => {
     const
-        isPlaying = mapIsPlaying(state),
-        isHeightlessLyric = mapIsHeightlessLyric(state),
-        selectedVerseIndex = mapSelectedVerseIndex(state),
-        isSelectedLogue = mapIsSelectedLogue(state),
-        isAutoScroll = mapIsAutoScroll(state),
-        isLyricExpanded = mapIsLyricExpanded(state),
-        deviceWidthIndex = mapDeviceWidthIndex(state),
-        queuedScrollLyricLog = mapQueuedScrollLyricLog(state),
-        queuedScrollLyricByVerse = mapQueuedScrollLyricByVerse(state),
-        queuedScrollLyricIndex = mapQueuedScrollLyricIndex(state),
-        queuedScrollLyricAlways = mapQueuedScrollLyricAlways(state),
-        queuedScrollLyricNoDuration = mapQueuedScrollLyricNoDuration(state),
-        queuedScrollLyricFromAutoScroll = mapQueuedScrollLyricFromAutoScroll(state),
-        queuedSceneChangeExitScrollCallback = mapQueuedSceneChangeExitScrollCallback(state)
+        dispatch = useDispatch(),
+        isPlaying = useSelector(mapIsPlaying),
+        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
+        selectedVerseIndex = useSelector(mapSelectedVerseIndex),
+        isSelectedLogue = useSelector(mapIsSelectedLogue),
+        isAutoScroll = useSelector(mapIsAutoScroll),
+        isLyricExpanded = useSelector(mapIsLyricExpanded),
+        deviceWidthIndex = useSelector(mapDeviceWidthIndex),
+        queuedScrollLyricLog = useSelector(mapQueuedScrollLyricLog),
+        queuedScrollLyricByVerse = useSelector(mapQueuedScrollLyricByVerse),
+        queuedScrollLyricIndex = useSelector(mapQueuedScrollLyricIndex),
+        queuedScrollLyricAlways = useSelector(mapQueuedScrollLyricAlways),
+        queuedScrollLyricNoDuration = useSelector(mapQueuedScrollLyricNoDuration),
+        queuedScrollLyricFromAutoScroll = useSelector(mapQueuedScrollLyricFromAutoScroll),
+        queuedSceneChangeExitScrollCallback = useSelector(mapQueuedSceneChangeExitScrollCallback)
 
-    return {
-        queuedScrollLyricLog,
-        queuedScrollLyricByVerse,
-        queuedScrollLyricIndex,
-        queuedScrollLyricAlways,
-        queuedScrollLyricNoDuration,
-        queuedScrollLyricFromAutoScroll,
-        queuedSceneChangeExitScrollCallback,
-        selectedVerseIndex,
-        isSelectedLogue,
-        isPlaying,
-        isAutoScroll,
-        isLyricExpanded,
-        deviceWidthIndex,
-        isHeightlessLyric
-    }
-}
-
-class ScrollLyricListener extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        queuedScrollLyricLog: PropTypes.string.isRequired,
-        queuedScrollLyricByVerse: PropTypes.bool.isRequired,
-        queuedScrollLyricIndex: PropTypes.number.isRequired,
-        queuedScrollLyricAlways: PropTypes.bool.isRequired,
-        queuedScrollLyricNoDuration: PropTypes.bool.isRequired,
-        queuedScrollLyricFromAutoScroll: PropTypes.bool.isRequired,
-        queuedSceneChangeExitScrollCallback: PropTypes.bool.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
-        deviceWidthIndex: PropTypes.number.isRequired,
-        isAutoScroll: PropTypes.bool.isRequired,
-        isPlaying: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
-        isHeightlessLyric: PropTypes.bool.isRequired,
-
-        updateEntranceStore: PropTypes.func.isRequired,
-        updateScrollLyricStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getLyricScrollParent: PropTypes.func.isRequired,
-        getScrollAnnotationChild: PropTypes.func.isRequired,
-        getScrollVerseChild: PropTypes.func.isRequired
+    const _completeSceneChangeExit = () => {
+        logTransition('Scene scroll did exit from lyric scroll.')
+        dispatch(updateEntranceStore({ didSceneScrollExit: true }))
     }
 
-    componentDidUpdate(prevProps) {
-        this._scrollLyric(prevProps)
+    const _setTimeoutForSceneChangeExit = () => {
+        // This timeout is necessary to fully complete scroll animation.
+        setTimeout(_completeSceneChangeExit, 0)
     }
 
-    _scrollLyric(prevProps) {
-        const
-            {
-                isPlaying,
-                isHeightlessLyric,
-                isLyricExpanded,
-                queuedScrollLyricLog,
-                queuedScrollLyricAlways,
-                queuedScrollLyricFromAutoScroll,
-                queuedSceneChangeExitScrollCallback,
-                isAutoScroll
-            } = this.props,
-            { queuedScrollLyricLog: prevScrollLyricLog } = prevProps
-
-        if (
-            queuedScrollLyricLog &&
-            queuedScrollLyricLog !== prevScrollLyricLog
-        ) {
-
+    useEffect(() => {
+        if (queuedScrollLyricLog) {
             if (isHeightlessLyric && !isLyricExpanded) {
                 /**
                  * Don't scroll if not expanded in heightless lyric. Just call
                  * the scene change callback right away.
                  */
                 if (queuedSceneChangeExitScrollCallback) {
-                    this._completeSceneChangeExit()
+                    _completeSceneChangeExit()
                 }
 
             } else if (
@@ -137,16 +86,7 @@ class ScrollLyricListener extends PureComponent {
                  */
                 queuedScrollLyricFromAutoScroll === isAutoScroll
             ) {
-                const {
-                        queuedScrollLyricLog,
-                        queuedScrollLyricByVerse,
-                        queuedScrollLyricIndex,
-                        queuedScrollLyricNoDuration,
-                        deviceWidthIndex,
-                        selectedVerseIndex,
-                        isSelectedLogue
-                    } = this.props,
-
+                const
                     scrollClass = queuedScrollLyricByVerse ?
                         VERSE_SCROLL :
                         LYRIC_ANNOTATION_SCROLL,
@@ -158,56 +98,39 @@ class ScrollLyricListener extends PureComponent {
                     index =
                         queuedScrollLyricIndex === -1 ?
                             selectedVerseIndex :
-                            queuedScrollLyricIndex
+                            queuedScrollLyricIndex,
+
+                    scrollChild = queuedScrollLyricByVerse ?
+                        getScrollVerseChild(index) :
+                        getScrollAnnotationChild(index)
 
                 scrollElementIntoView({
                     log: queuedScrollLyricLog,
                     scrollClass,
-                    scrollParent: this.props.getLyricScrollParent(),
-                    scrollChild: this._getScrollChild(scrollClass, index),
+                    scrollParent: getLyricScrollParent(),
+                    scrollChild,
                     index,
                     noDuration: queuedScrollLyricNoDuration,
                     deviceWidthIndex,
                     isLyricExpanded,
                     isSelectedLogue,
                     ...queuedSceneChangeExitScrollCallback && {
-                        callback: this._setTimeoutForSceneChangeExit
+                        callback: _setTimeoutForSceneChangeExit
                     }
                 })
             }
 
-            this.props.updateScrollLyricStore()
+            dispatch(updateScrollLyricStore())
         }
-    }
+    }, [queuedScrollLyricLog])
 
-    _setTimeoutForSceneChangeExit = () => {
-        // This timeout is necessary to fully complete scroll animation.
-        setTimeout(this._completeSceneChangeExit, 0)
-    }
-
-    _completeSceneChangeExit = () => {
-        logTransition('Scene scroll did exit from lyric scroll.')
-        this.props.updateEntranceStore({ didSceneScrollExit: true })
-    }
-
-    _getScrollChild(scrollClass, index) {
-        switch (scrollClass) {
-            case LYRIC_ANNOTATION_SCROLL:
-                return this.props.getScrollAnnotationChild(index)
-            case VERSE_SCROLL:
-                return this.props.getScrollVerseChild(index)
-        }
-    }
-
-    render() {
-        return null
-    }
+    return null
 }
 
-export default connect(
-    mapStateToProps,
-    {
-        updateEntranceStore,
-        updateScrollLyricStore
-    }
-)(ScrollLyricListener)
+ScrollLyricListener.propTypes = {
+    getLyricScrollParent: PropTypes.func.isRequired,
+    getScrollAnnotationChild: PropTypes.func.isRequired,
+    getScrollVerseChild: PropTypes.func.isRequired
+}
+
+export default memo(ScrollLyricListener)
