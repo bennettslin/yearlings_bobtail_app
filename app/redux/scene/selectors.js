@@ -13,10 +13,6 @@ import {
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import { getNearestXIndex } from '../../helpers/cubeIndices'
 
-export const mapSceneCubesKey = (
-    { sceneStore: { sceneCubesKey } }
-) => sceneCubesKey || DEFAULT_STAGE_KEY
-
 export const mapSceneSkyTime = (
     { sceneStore: { sceneSkyTime } }
 ) => sceneSkyTime
@@ -24,6 +20,10 @@ export const mapSceneSkyTime = (
 export const mapSceneSkySeason = (
     { sceneStore: { sceneSkySeason } }
 ) => sceneSkySeason
+
+const mapSceneCubesKey = (
+    { sceneStore: { sceneCubesKey } }
+) => sceneCubesKey || DEFAULT_STAGE_KEY
 
 export const mapCubeCeilingHsla = (yIndex, xIndex) => createSelector(
     mapSceneCubesKey,
