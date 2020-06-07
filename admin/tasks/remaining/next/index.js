@@ -5,11 +5,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Scene data refactor.`,
-        workedHours: 18,
-        neededHours: 21
-    },
-    {
         taskName: `Remove convoluted CSS verse logic? If so, allow hover styling of activated verse in slider, to be consistent with filmstrip.`,
         workedHours: 0,
         neededHours: 20

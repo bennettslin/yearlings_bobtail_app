@@ -3,24 +3,19 @@ import things from './things'
 
 const _recurseForCleanup = object => {
     Object.keys(object).forEach(key => {
-        if (object[key] === null) {
+        if (key === 'layerYIndex') {
             delete object[key]
         } else if (typeof object[key] === 'object') {
-            if (!_recurseForCleanup(object[key])) {
-                delete object[key]
-            }
+            _recurseForCleanup(object[key])
         }
     })
-
-    if (Object.keys(object).length) {
-        return object
-    }
 }
 
+// Ensure that null values don't get passed to final build.
 _recurseForCleanup(actors)
 _recurseForCleanup(things)
 
-export default {
+export {
     actors,
     things
 }

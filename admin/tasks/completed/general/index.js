@@ -4768,5 +4768,9 @@ export default [
     {
         taskName: `Fix AnnotationWormhole breakage.`,
         workedHours: 2
+    },
+    {
+        taskName: `Scene data refactor.`,
+        workedHours: 23
     }
 ]
