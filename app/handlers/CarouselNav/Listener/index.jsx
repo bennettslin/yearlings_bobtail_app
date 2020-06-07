@@ -5,17 +5,17 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { resetAccessedNav } from '../../../redux/access/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { mapDotsBitNumber } from '../../../redux/dots/selectors'
+import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
 import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 
 const mapStateToProps = state => {
     const
-        dotsBitNumber = mapDotsBitNumber(state),
+        selectedDotsBit = mapSelectedDotsBit(state),
         canCarouselMount = mapCanCarouselMount(state)
 
     return {
         canCarouselMount,
-        dotsBitNumber
+        selectedDotsBit
     }
 }
 
@@ -24,7 +24,7 @@ class CarouselNavListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         canCarouselMount: PropTypes.bool.isRequired,
-        dotsBitNumber: PropTypes.number.isRequired,
+        selectedDotsBit: PropTypes.number.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
         resetAccessedNav: PropTypes.func.isRequired
     }
@@ -50,11 +50,11 @@ class CarouselNavListener extends PureComponent {
 
     _checkDotsSelected(prevProps) {
         const
-            { dotsBitNumber } = this.props,
-            { dotsBitNumber: prevDotsBitNumber } = prevProps
+            { selectedDotsBit } = this.props,
+            { selectedDotsBit: prevDotsBit } = prevProps
 
         // If there are no selected dots, there can be no carousel annotations.
-        if (!dotsBitNumber && prevDotsBitNumber) {
+        if (!selectedDotsBit && prevDotsBit) {
             this.props.updateToggleStore({ isCarouselShown: false })
         }
     }

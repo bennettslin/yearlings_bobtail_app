@@ -6,7 +6,7 @@ import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
 import { getStanzaIndexForVerse } from '../../api/album/verses'
 import { mapIsActivated } from '../../redux/activated/selectors'
 import { mapIsPlaying } from '../../redux/audio/selectors'
-import { mapDotsBitNumber } from '../../redux/dots/selectors'
+import { mapSelectedDotsBit } from '../../redux/dots/selectors'
 import {
     mapIsLyricLogue,
     mapLyricSongIndex,
@@ -23,7 +23,7 @@ const LogicWrapper = ({ children }) => {
     const
         isActivated = useSelector(mapIsActivated),
         isPlaying = useSelector(mapIsPlaying),
-        dotsBitNumber = useSelector(mapDotsBitNumber),
+        selectedDotsBit = useSelector(mapSelectedDotsBit),
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
@@ -73,12 +73,12 @@ const LogicWrapper = ({ children }) => {
                             `RlV${cursorVerseIndex}`,
 
                         getPrefixedDotLetterClassNames(
-                            dotsBitNumber,
+                            selectedDotsBit,
                             // "Root selected dot letter."
                             'RsD'
                         ),
 
-                        !dotsBitNumber && 'LW__noSelectedDots'
+                        !selectedDotsBit && 'LW__noSelectedDots'
                     ]
                 )
             }}

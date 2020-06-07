@@ -18,7 +18,7 @@ export const getTwoToThePowerOfN = (exponent, number = 2) => {
     return getTwoToThePowerOfN(exponent - 1, number * 2)
 }
 
-export const getBitNumberFromObject = ({
+export const getBitFromObject = ({
     keysArray,
     trueFalseObject
 }) => {
@@ -41,7 +41,7 @@ export const getBitNumberFromObject = ({
     }, 0)
 }
 
-export const getObjectFromBitNumber = ({
+export const getObjectFromBit = ({
     keysArray,
     keysCount = 0,
     bitNumber

@@ -9,10 +9,10 @@ import {
     getDotBitForAnnotation,
     getTitleForAnnotation
 } from '../../../api/album/annotations'
-import { getDotKeysFromBitNumber } from '../../../helpers/dot'
+import { getDotKeysFromBit } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
 import { getAccessibleWikiWormholesCount } from './helper'
-import { mapDotsBitNumber } from '../../../redux/dots/selectors'
+import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 
@@ -24,9 +24,9 @@ const AnnotationTitle = ({
 }) => {
     const
         dispatch = useDispatch(),
-        dotsBitNumber = useSelector(mapDotsBitNumber),
+        selectedDotsBit = useSelector(mapSelectedDotsBit),
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
+        selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
 
         accessibleWikiWormholesLength = getAccessibleWikiWormholesCount({
             songIndex: lyricSongIndex,

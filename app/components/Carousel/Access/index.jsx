@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import AccessLetters from '../../Access/Letters'
-import { mapDotsBitNumber } from '../../../redux/dots/selectors'
+import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
 import { mapLyricAnnotationIndex } from '../../../redux/lyric/selectors'
 import {
     mapIsCarouselShown,
@@ -16,7 +16,7 @@ import './style'
 const CarouselAccess = ({ inLyric }) => {
 
     const
-        dotsBitNumber = useSelector(mapDotsBitNumber),
+        selectedDotsBit = useSelector(mapSelectedDotsBit),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         isCarouselShown = useSelector(mapIsCarouselShown),
         isNavShown = useSelector(mapIsNavShown),
@@ -28,7 +28,7 @@ const CarouselAccess = ({ inLyric }) => {
              * Must have at least one selected dot, and no selected
              * annotation.
              */
-            dotsBitNumber &&
+            selectedDotsBit &&
             !lyricAnnotationIndex &&
 
             // Don't show in carousel if carousel is not shown.

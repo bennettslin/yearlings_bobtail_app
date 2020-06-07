@@ -1,7 +1,7 @@
 import { getSong } from './songs'
-import { getDotKeysFromBitNumber } from '../../helpers/dot'
+import { getDotKeysFromBit } from '../../helpers/dot'
 import { getArrayOfLength } from '../../helpers/general'
-import { WORMHOLE_BIT_NUMBER } from '../../constants/dots'
+import { WORMHOLE_BIT } from '../../constants/dots'
 
 export const getAnnotationCardIndices = (songIndex, annotationIndex) => {
     const { annotationCardsDescriptionsList } = getSong(songIndex)
@@ -26,7 +26,7 @@ export const getDotBitForAnnotationCard = (
     if (!getDescriptionForAnnotationCard(
         songIndex, annotationIndex, cardIndex
     )) {
-        return WORMHOLE_BIT_NUMBER
+        return WORMHOLE_BIT
     }
 
     const { annotationCardsDotBitsList } = getSong(songIndex),
@@ -50,5 +50,5 @@ export const getDotKeysForAnnotationCard = (
         songIndex, annotationIndex, cardIndex
     )
 
-    return getDotKeysFromBitNumber(dotBitNumber)
+    return getDotKeysFromBit(dotBitNumber)
 }

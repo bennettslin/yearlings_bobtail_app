@@ -1,7 +1,7 @@
 // Check if at least one present key is selected.
 import {
-    getObjectFromBitNumber,
-    getBitNumberFromObject
+    getObjectFromBit,
+    getBitFromObject
 } from './bit'
 import { pickBy } from '../helpers/general'
 import { ORDERED_DOT_KEYS } from '../constants/dots'
@@ -20,21 +20,21 @@ export const intersects = (presentKeys = {}, selectedKeys = {}) => {
     }
 }
 
-export const getDotKeysFromBitNumber = bitNumber => (
-    getObjectFromBitNumber({
+export const getDotKeysFromBit = bitNumber => (
+    getObjectFromBit({
         keysArray: ORDERED_DOT_KEYS,
         bitNumber
     })
 )
-export const getBitNumberFromDotKeys = dotKeys => (
-    dotKeys ? getBitNumberFromObject({
+export const getDotsBitFromKeys = dotKeys => (
+    dotKeys ? getBitFromObject({
         keysArray: ORDERED_DOT_KEYS,
         trueFalseObject: dotKeys
     }) : null
 )
 
 export const getPrefixedDotLetterClassNames = (dotBit, prefix) => {
-    const dotKeys = getDotKeysFromBitNumber(dotBit)
+    const dotKeys = getDotKeysFromBit(dotBit)
 
     return Object.keys(pickBy(dotKeys)).map(name => (
         `${prefix}${name[0]}`

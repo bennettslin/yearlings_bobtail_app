@@ -5,11 +5,11 @@ import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import {
     intersects,
-    getDotKeysFromBitNumber
+    getDotKeysFromBit
 } from '../../../helpers/dot'
 import { getDotKeysForAnnotation } from '../../../api/album/annotations'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
-import { mapDotsBitNumber } from '../../../redux/dots/selectors'
+import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
 import { mapIsEarShown } from '../../../redux/transient/selectors'
 import {
     mapSelectedSongIndex,
@@ -20,12 +20,12 @@ import {
 const AnnotationDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        dotsBitNumber = useSelector(mapDotsBitNumber),
+        selectedDotsBit = useSelector(mapSelectedDotsBit),
         isEarShown = useSelector(mapIsEarShown),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         earColumnIndex = useSelector(mapEarColumnIndex),
-        selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber)
+        selectedDotKeys = getDotKeysFromBit(selectedDotsBit)
 
     const _dispatchAndLog = annotationIndex => {
         dispatch(updateSelectedStore({

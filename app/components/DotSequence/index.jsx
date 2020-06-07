@@ -6,7 +6,7 @@ import cx from 'classnames'
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
 import SequenceDot from './SequenceDot'
 import './style'
-import { getDotKeysFromBitNumber } from '../../helpers/dot'
+import { getDotKeysFromBit } from '../../helpers/dot'
 
 const propTypes = {
     dotBit: PropTypes.number.isRequired,
@@ -21,7 +21,7 @@ const DotSequence = ({
     ...other
 
 }) => {
-    const dotKeys = getDotKeysFromBitNumber(dotBit)
+    const dotKeys = getDotKeysFromBit(dotBit)
     return (
 
         <div className={cx(

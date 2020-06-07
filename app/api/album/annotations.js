@@ -2,7 +2,7 @@ import {
     getSong,
     getSongIsLogue
 } from './songs'
-import { getDotKeysFromBitNumber } from '../../helpers/dot'
+import { getDotKeysFromBit } from '../../helpers/dot'
 import { getArrayOfLength } from '../../helpers/general'
 
 export const getAnnotationIndices = songIndex => (
@@ -33,7 +33,7 @@ export const getDotBitForAnnotation = (songIndex, annotationIndex) => {
 }
 
 export const getDotKeysForAnnotation = (songIndex, annotationIndex) => {
-    return getDotKeysFromBitNumber(getDotBitForAnnotation(
+    return getDotKeysFromBit(getDotBitForAnnotation(
         songIndex,
         annotationIndex
     ))

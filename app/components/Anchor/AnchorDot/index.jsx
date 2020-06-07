@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import Dot from '../../Dot'
 import Underline from '../Underline'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
-import { getMapFirstAnchorDot } from '../../../redux/dots/selectors'
+import { getMapFirstDotKey } from '../../../redux/dots/selectors'
 import './style'
 
 const AnchorDot = ({
@@ -14,7 +14,7 @@ const AnchorDot = ({
     stanzaDotBit
 
 }) => {
-    const firstAnchorDot = useSelector(getMapFirstAnchorDot(stanzaDotBit))
+    const firstAnchorDot = useSelector(getMapFirstDotKey(stanzaDotBit))
 
     return (
         <>

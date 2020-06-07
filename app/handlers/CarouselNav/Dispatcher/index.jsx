@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { mapAccessedAnnotationIndex } from '../../../redux/access/selectors'
-import { mapDotsBitNumber } from '../../../redux/dots/selectors'
+import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
 import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 import {
     mapSelectedAnnotationIndex,
@@ -19,7 +19,7 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
-        dotsBitNumber = useSelector(mapDotsBitNumber),
+        selectedDotsBit = useSelector(mapSelectedDotsBit),
         canCarouselMount = useSelector(mapCanCarouselMount),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
@@ -43,18 +43,18 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
          * If this would otherwise show the carousel, but there are no dots
          * selected, don't show the carousel.
          */
-        if (nextIsCarouselShown && !dotsBitNumber) {
+        if (nextIsCarouselShown && !selectedDotsBit) {
             nextIsCarouselShown = false
         }
 
         dispatch(updateToggleStore({
             // Do not toggle carousel if no dots are selected.
-            ...Boolean(dotsBitNumber) && {
+            ...Boolean(selectedDotsBit) && {
                 isCarouselShown: nextIsCarouselShown
             },
 
             isNavShown:
-            dotsBitNumber ?
+            selectedDotsBit ?
                 // If dots are selected, toggle nav under these conditions.
                 !nextIsCarouselShown &&
                 !isDotsSlideShown &&

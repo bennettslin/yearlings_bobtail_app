@@ -1,16 +1,16 @@
 import {
-    getDotKeysFromBitNumber,
-    getBitNumberFromDotKeys
+    getDotKeysFromBit,
+    getDotsBitFromKeys
 } from '../../../helpers/dot'
 import { ORDERED_DOT_KEYS } from '../../../constants/dots'
 
-export const getValueAndDotsBitNumberForToggledDotIndex = ({
+export const getValueAndDotsBitForToggledDotIndex = ({
     dotIndex,
-    bitNumber
+    dotsBit
 
 }) => {
     const
-        newDotKeys = getDotKeysFromBitNumber(bitNumber),
+        newDotKeys = getDotKeysFromBit(dotsBit),
         dotKey = ORDERED_DOT_KEYS[dotIndex],
         newValue = !newDotKeys[dotKey]
 
@@ -18,6 +18,6 @@ export const getValueAndDotsBitNumberForToggledDotIndex = ({
 
     return {
         value: newValue,
-        bitNumber: getBitNumberFromDotKeys(newDotKeys)
+        dotsBit: getDotsBitFromKeys(newDotKeys)
     }
 }

@@ -6,14 +6,14 @@ import {
 import { setInStorage } from '../../helpers/storage'
 import {
     DOTS_STORE,
-    DOTS_BIT_NUMBER
+    SELECTED_DOTS_BIT
 } from '../../constants/store'
 
 export const updateDotsStore = payload => {
-    const { dotsBitNumber } = payload
+    const { selectedDotsBit } = payload
 
-    if (hasKey(dotsBitNumber)) {
-        setInStorage(DOTS_BIT_NUMBER, dotsBitNumber)
+    if (hasKey(selectedDotsBit)) {
+        setInStorage(SELECTED_DOTS_BIT, selectedDotsBit)
     }
 
     return ({

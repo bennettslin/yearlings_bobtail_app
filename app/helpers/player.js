@@ -3,13 +3,13 @@ import {
     getSongIsLogue
 } from '../api/album/songs'
 import {
-    getObjectFromBitNumber,
-    getBitNumberFromObject
+    getObjectFromBit,
+    getBitFromObject
 } from '../helpers/bit'
 import { getArrayOfLength } from '../helpers/general'
 
 export const getPlayersCanPlayThroughFromBitNumber = (bitNumber) => {
-    return getObjectFromBitNumber({
+    return getObjectFromBit({
         keysArray: getArrayOfLength(getSongsNotLoguesCount(), 1),
         bitNumber
     })
@@ -19,7 +19,7 @@ export const getPlayerCanPlayThroughFromBit = (
     songIndex,
     playersBitNumber
 ) => (
-    getObjectFromBitNumber({
+    getObjectFromBit({
         keysCount: getSongsNotLoguesCount(),
         bitNumber: playersBitNumber
 
@@ -32,7 +32,7 @@ export const getBitFromPlayerCanPlayThrough = ({
     key
 }) => {
     // First convert the bit number to an object whose values true or false.
-    const trueFalseObject = getObjectFromBitNumber({
+    const trueFalseObject = getObjectFromBit({
         keysCount: getSongsNotLoguesCount(),
         bitNumber
     })
@@ -41,7 +41,7 @@ export const getBitFromPlayerCanPlayThrough = ({
     trueFalseObject[key] = true
 
     // Convert object to new bit number, which is then returned.
-    return getBitNumberFromObject({
+    return getBitFromObject({
         trueFalseObject
     })
 }

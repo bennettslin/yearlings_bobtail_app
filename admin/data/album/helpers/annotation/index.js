@@ -1,6 +1,6 @@
 import albumLyrics from '../../lyrics'
 import { registerAnnotation } from './helpers'
-import { getBitNumberFromDotKeys } from '../../../../../app/helpers/dot'
+import { getDotsBitFromKeys } from '../../../../../app/helpers/dot'
 
 import {
     ANNOTATION_SEARCH_KEYS,
@@ -103,17 +103,17 @@ const _addAnnotationLists = (annotations, song) => {
                 annotation.verseIndex :
                 -1
         )
-        annotationDotBits.push(getBitNumberFromDotKeys(annotation.dotKeys))
+        annotationDotBits.push(getDotsBitFromKeys(annotation.dotKeys))
         annotationCardsDescriptionsList.push(
             annotation.cards.map(card => card.description || null)
         )
         annotationCardsDotBitsList.push(
             // If single card, push individual dot keys for dev clarity.
             annotation.cards.length === 1 ?
-                getBitNumberFromDotKeys(
+                getDotsBitFromKeys(
                     annotation.cards[0].dotKeys
                 ) || null :
-                annotation.cards.map(card => getBitNumberFromDotKeys(
+                annotation.cards.map(card => getDotsBitFromKeys(
                     card.dotKeys
                 ) || null)
         )

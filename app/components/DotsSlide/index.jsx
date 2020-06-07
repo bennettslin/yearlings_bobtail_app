@@ -6,15 +6,15 @@ import { resetActivatedDots } from '../../redux/dotsSlide/action'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import DotsSlideSelect from './Select'
-import { getDotKeysFromBitNumber } from '../../helpers/dot'
+import { getDotKeysFromBit } from '../../helpers/dot'
 import { IS_TOUCH_SUPPORTED } from '../../constants/device'
 import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
 import {
     mapIsAccessOn,
     mapAccessedDotIndex
 } from '../../redux/access/selectors'
-import { mapDotsBitNumber } from '../../redux/dots/selectors'
-import { mapDotsSlideBitNumber } from '../../redux/dotsSlide/selectors'
+import { mapSelectedDotsBit } from '../../redux/dots/selectors'
+import { mapDotsSlideBit } from '../../redux/dotsSlide/selectors'
 import { mapIsDotsSlideShown } from '../../redux/toggle/selectors'
 import './style'
 
@@ -24,12 +24,12 @@ const DotsSlide = () => {
         stopPropagation = useRef(),
         isAccessOn = useSelector(mapIsAccessOn),
         accessedDotIndex = useSelector(mapAccessedDotIndex),
-        dotsBitNumber = useSelector(mapDotsBitNumber),
-        dotsSlideBitNumber = useSelector(mapDotsSlideBitNumber),
+        selectedDotsBit = useSelector(mapSelectedDotsBit),
+        dotsSlideBit = useSelector(mapDotsSlideBit),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
 
-        selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
-        activatedDotKeys = getDotKeysFromBitNumber(dotsSlideBitNumber)
+        selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
+        activatedDotKeys = getDotKeysFromBit(dotsSlideBit)
 
     const onClick = e => {
         logEvent({ e, componentName: 'DotsSlide' })

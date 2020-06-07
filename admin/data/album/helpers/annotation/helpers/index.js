@@ -1,5 +1,5 @@
 import { registerCardsDotKeys } from './register'
-import { getBitNumberFromDotKeys } from '../../../../../../app/helpers/dot'
+import { getDotsBitFromKeys } from '../../../../../../app/helpers/dot'
 import { getFormattedAnnotationTitle } from '../../../../../../app/helpers/format'
 import {
     LYRIC_LEFT,
@@ -78,7 +78,7 @@ export const registerAnnotation = ({
     annotation.dotKeys = dotKeys
 
     // Add dot bit number to anchored lyric.
-    anchoredLyric.dotBit = getBitNumberFromDotKeys(dotKeys)
+    anchoredLyric.dotBit = getDotsBitFromKeys(dotKeys)
 
     // Add annotation object to annotations array.
     annotations.push(annotation)

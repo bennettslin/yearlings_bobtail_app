@@ -2,9 +2,9 @@ import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { getWikiWormholeIndexForDirection } from './helper'
-import { getDotKeysFromBitNumber } from '../../../helpers/dot'
+import { getDotKeysFromBit } from '../../../helpers/dot'
 import { mapAccessedWikiWormholeIndex } from '../../../redux/access/selectors'
-import { mapDotsBitNumber } from '../../../redux/dots/selectors'
+import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex
@@ -14,7 +14,7 @@ const WikiWormholeDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex),
-        dotsBitNumber = useSelector(mapDotsBitNumber),
+        selectedDotsBit = useSelector(mapSelectedDotsBit),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex)
 
@@ -23,7 +23,7 @@ const WikiWormholeDispatcher = forwardRef((props, ref) => {
         direction
     } = {}) => {
         const
-            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
+            selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
             initialWikiWormholeIndex =
                     // If no direction is given, reset the index.
                     !Number.isFinite(direction) ?

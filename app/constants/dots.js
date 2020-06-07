@@ -1,5 +1,5 @@
 import {
-    getObjectFromBitNumber,
+    getObjectFromBit,
     getTwoToThePowerOfN
 } from '../helpers/bit'
 
@@ -38,14 +38,14 @@ export const DOT_DESCRIPTIONS = {
 }
 
 // Hard-coded because it fails staging otherwise. Haven't investigated why.
-export const INITIAL_DOTS_BIT_NUMBER = 7
-export const WORMHOLE_BIT_NUMBER = 32
+export const INITIAL_DOTS_BIT = 7
+export const WORMHOLE_BIT = 32
 
-export const EMPTY_DOTS_STORE = getObjectFromBitNumber({
+export const EMPTY_DOT_KEYS = getObjectFromBit({
     keysArray: ORDERED_DOT_KEYS,
     bitNumber: 0
 })
 
-export const FULL_DOTS_BIT_NUMBER = getTwoToThePowerOfN(
+export const FULL_DOTS_BIT = getTwoToThePowerOfN(
     ORDERED_DOT_KEYS.length
 ) - 1

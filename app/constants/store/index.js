@@ -29,7 +29,7 @@ export const THEATRE_STORE = 'theatreStore'
 
 export const IS_ACCESS_ON = 'isAccessOn'
 export const IS_CAROUSEL_SHOWN = 'isCarouselShown'
-export const DOTS_BIT_NUMBER = 'dotsBitNumber'
+export const SELECTED_DOTS_BIT = 'selectedDotsBit'
 
 export const SELECTED_SONG_INDEX = 'selectedSongIndex'
 export const SELECTED_VERSE_INDEX = 'selectedVerseIndex'

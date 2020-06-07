@@ -3,28 +3,28 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateDotsStore } from '../../redux/dots/action'
 import { updateDotsSlideStore } from '../../redux/dotsSlide/action'
-import { mapDotsBitNumber } from '../../redux/dots/selectors'
-import { mapDotsSlideBitNumber } from '../../redux/dotsSlide/selectors'
-import { getValueAndDotsBitNumberForToggledDotIndex } from './helpers'
+import { mapSelectedDotsBit } from '../../redux/dots/selectors'
+import { mapDotsSlideBit } from '../../redux/dotsSlide/selectors'
+import { getValueAndDotsBitForToggledDotIndex } from './helpers'
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
 
 const DotSelectDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        dotsBitNumber = useSelector(mapDotsBitNumber),
-        dotsSlideBitNumber = useSelector(mapDotsSlideBitNumber)
+        selectedDotsBit = useSelector(mapSelectedDotsBit),
+        dotsSlideBit = useSelector(mapDotsSlideBit)
 
     const dispatchSelectDot = dotIndex => {
         const {
             value,
-            bitNumber
-        } = getValueAndDotsBitNumberForToggledDotIndex({
+            dotsBit
+        } = getValueAndDotsBitForToggledDotIndex({
             dotIndex,
-            bitNumber: dotsBitNumber
+            dotsBit: selectedDotsBit
         })
 
         dispatch(updateDotsStore({
-            dotsBitNumber: bitNumber,
+            selectedDotsBit: dotsBit,
             [ORDERED_DOT_KEYS[dotIndex]]: value
         }))
 
@@ -38,14 +38,14 @@ const DotSelectDispatcher = forwardRef((props, ref) => {
     const dispatchActivatedDot = dotIndex => {
         const {
             value,
-            bitNumber
-        } = getValueAndDotsBitNumberForToggledDotIndex({
+            dotsBit
+        } = getValueAndDotsBitForToggledDotIndex({
             dotIndex,
-            bitNumber: dotsSlideBitNumber
+            dotsBit: dotsSlideBit
         })
 
         dispatch(updateDotsSlideStore({
-            dotsSlideBitNumber: bitNumber,
+            dotsSlideBit: dotsBit,
             [ORDERED_DOT_KEYS[dotIndex]]: value
         }))
     }

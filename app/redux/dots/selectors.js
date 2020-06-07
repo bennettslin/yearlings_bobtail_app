@@ -1,20 +1,20 @@
 import { createSelector } from "reselect"
-import { getDotKeysFromBitNumber } from "../../helpers/dot"
+import { getDotKeysFromBit } from "../../helpers/dot"
 import { ORDERED_DOT_KEYS } from "../../constants/dots"
 
-export const mapDotsBitNumber = (
-    { dotsStore: { dotsBitNumber } }
-) => dotsBitNumber
+export const mapSelectedDotsBit = (
+    { dotsStore: { selectedDotsBit } }
+) => selectedDotsBit
 
-export const getMapFirstAnchorDot = anchorDotsBit => createSelector(
-    mapDotsBitNumber,
-    dotsBitNumber => {
+export const getMapFirstDotKey = dotsBit => createSelector(
+    mapSelectedDotsBit,
+    selectedDotsBit => {
         const
-            selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
-            anchorDotKeys = getDotKeysFromBitNumber(anchorDotsBit)
+            dotKeys = getDotKeysFromBit(dotsBit),
+            selectedDotKeys = getDotKeysFromBit(selectedDotsBit)
 
         return ORDERED_DOT_KEYS.find(dotKey => (
-            anchorDotKeys[dotKey] &&
+            dotKeys[dotKey] &&
             selectedDotKeys[dotKey]
         ))
     }

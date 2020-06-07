@@ -11,8 +11,8 @@ import {
 } from './routing'
 import { getWindow } from '../utils/browser'
 import {
-    INITIAL_DOTS_BIT_NUMBER,
-    FULL_DOTS_BIT_NUMBER
+    INITIAL_DOTS_BIT,
+    FULL_DOTS_BIT
 } from '../constants/dots'
 import {
     SHOWN,
@@ -20,7 +20,7 @@ import {
     GENERAL_OPTIONS
 } from '../constants/options'
 import {
-    DOTS_BIT_NUMBER,
+    SELECTED_DOTS_BIT,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
@@ -154,24 +154,24 @@ export const getOptionFromStorage = key => {
     return savedOption
 }
 
-export const getDotsBitNumberFromStorage = (initialAnnotationIndex) => {
-    const storedBitNumber = _getParsedStoredInteger(DOTS_BIT_NUMBER)
-    let savedBitNumber = INITIAL_DOTS_BIT_NUMBER
+export const getDotsBitFromStorage = (initialAnnotationIndex) => {
+    const storedDotsBit = _getParsedStoredInteger(SELECTED_DOTS_BIT)
+    let savedDotsBit = INITIAL_DOTS_BIT
 
     // If there is an initial annotation index, preemptively select all dots.
     if (initialAnnotationIndex) {
-        savedBitNumber = FULL_DOTS_BIT_NUMBER
+        savedDotsBit = FULL_DOTS_BIT
 
     // Ensure stored dots bit number is valid.
     } else if (
-        Number.isFinite(storedBitNumber) &&
-        storedBitNumber >= 0 &&
-        storedBitNumber <= FULL_DOTS_BIT_NUMBER
+        Number.isFinite(storedDotsBit) &&
+        storedDotsBit >= 0 &&
+        storedDotsBit <= FULL_DOTS_BIT
     ) {
-        savedBitNumber = storedBitNumber
+        savedDotsBit = storedDotsBit
     }
 
     // This only saves upon initial retrieval.
-    setInStorage(DOTS_BIT_NUMBER, savedBitNumber)
-    return savedBitNumber
+    setInStorage(SELECTED_DOTS_BIT, savedDotsBit)
+    return savedDotsBit
 }

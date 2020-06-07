@@ -1,3 +1,3 @@
-export const mapDotsSlideBitNumber = (
-    { dotsSlideStore: { dotsSlideBitNumber } }
-) => dotsSlideBitNumber
+export const mapDotsSlideBit = (
+    { dotsSlideStore: { dotsSlideBit } }
+) => dotsSlideBit
