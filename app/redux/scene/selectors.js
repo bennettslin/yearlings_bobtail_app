@@ -6,8 +6,12 @@ import {
     getFloorZIndexForCube,
     getSlantDirectionForCube
 } from '../../api/scene/cubes'
-import { getIsShownInSceneForPresence } from '../../api/scene/presences'
+import {
+    getIsShownInSceneForPresence,
+    getArrangementForPresence
+} from '../../api/scene/presences'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
+import { getNearestXIndex } from '../../helpers/cubeIndices'
 
 export const mapSceneCubesKey = (
     { sceneStore: { sceneCubesKey } }
@@ -20,37 +24,6 @@ export const mapSceneSkyTime = (
 export const mapSceneSkySeason = (
     { sceneStore: { sceneSkySeason } }
 ) => sceneSkySeason
-
-// TODO: Does scene store really need its own song and scene index?
-const mapSceneSongIndex = (
-    { sceneStore: { sceneSongIndex } }
-) => sceneSongIndex
-
-const mapSceneSceneIndex = (
-    { sceneStore: { sceneSceneIndex } }
-) => sceneSceneIndex
-
-export const mapIsPresenceShownInScene = ({
-    yIndex,
-    presenceType,
-    actorKey,
-    presenceKey
-
-}) => createSelector(
-    mapSceneSongIndex,
-    mapSceneSceneIndex,
-    (
-        songIndex,
-        sceneIndex
-    ) => getIsShownInSceneForPresence({
-        songIndex,
-        sceneIndex,
-        yIndex,
-        presenceType,
-        actorKey,
-        presenceKey
-    })
-)
 
 export const mapCubeCeilingHsla = (yIndex, xIndex) => createSelector(
     mapSceneCubesKey,
@@ -92,3 +65,75 @@ export const mapCubeSlantDirection = createSelector(
     mapSceneCubesKey,
     sceneCubesKey => getSlantDirectionForCube(sceneCubesKey)
 )
+
+// TODO: Does scene store really need its own song and scene index?
+const mapSceneSongIndex = (
+    { sceneStore: { sceneSongIndex } }
+) => sceneSongIndex
+
+const mapSceneSceneIndex = (
+    { sceneStore: { sceneSceneIndex } }
+) => sceneSceneIndex
+
+const mapIsPresenceShownInScene = ({
+    yIndex,
+    presenceType,
+    actorKey,
+    presenceKey
+
+}) => createSelector(
+    mapSceneSongIndex,
+    mapSceneSceneIndex,
+    (
+        songIndex,
+        sceneIndex
+    ) => getIsShownInSceneForPresence({
+        songIndex,
+        sceneIndex,
+        yIndex,
+        presenceType,
+        actorKey,
+        presenceKey
+    })
+)
+
+export const mapPresenceFloorZIndex = ({
+    // This yIndex determines whether to render in a given layer.
+    yIndex,
+    presenceType,
+    actorKey,
+    presenceKey
+
+}) => {
+    const {
+            // This yIndex is for scale and position.
+            yIndex: arrangedYIndex,
+            xPosition
+        } = getArrangementForPresence({
+            presenceType,
+            actorKey,
+            presenceKey
+        }),
+        xIndex = getNearestXIndex(xPosition)
+
+    return createSelector(
+        mapIsPresenceShownInScene({
+            yIndex,
+            presenceType,
+            actorKey,
+            presenceKey
+        }),
+        mapCubeFloorZIndex(
+            arrangedYIndex,
+            xIndex
+        ),
+        (
+            isPresenceShownInScene,
+            cubeFloorZIndex
+
+        // Return null if presence isn't shown in this scene.
+        ) => (
+            isPresenceShownInScene ? cubeFloorZIndex : null
+        )
+    )
+}

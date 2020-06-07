@@ -1,9 +1,8 @@
 import { getNearestXIndex } from '../../../../../helpers/cubeIndices'
 import { getHorizontalPlaneFractions } from '../../../../../helpers/cubePlanes'
-import { getFloorZIndexForCube } from '../../../../../api/scene/cubes'
 
 const _getTileCentreForPresence = ({
-    cubesKey,
+    zIndex,
     xPosition,
     yIndex,
     zOffset = 0
@@ -12,17 +11,6 @@ const _getTileCentreForPresence = ({
     const
         xIndex = getNearestXIndex(xPosition),
         xOffset = xPosition - xIndex,
-
-        /**
-         * Presence needs to know the floor zIndex for positioning. However,
-         * slant direction doesn't matter because presence positions as if
-         * default.
-         */
-        zIndex = getFloorZIndexForCube(
-            cubesKey,
-            yIndex,
-            xIndex
-        ),
 
         tilePercentages = getHorizontalPlaneFractions({
             xIndex,
@@ -48,9 +36,7 @@ const _getTileCentreForPresence = ({
 }
 
 export const getXYForPresence = ({
-
-    // Needed to determine cube's zIndex.
-    cubesKey,
+    zIndex,
 
     // Where to centre on the xIndex axis. Can be a float.
     xPosition = 5.5,
@@ -67,7 +53,7 @@ export const getXYForPresence = ({
             yPercentage
 
         } = _getTileCentreForPresence({
-            cubesKey,
+            zIndex,
             xPosition,
             yIndex,
             zOffset

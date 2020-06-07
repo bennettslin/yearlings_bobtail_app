@@ -1,9 +1,10 @@
-import React, { memo } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { useEffect, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from './Svg'
-import { mapIsPresenceShownInScene } from '../../redux/scene/selectors'
+import { mapPresenceFloorZIndex } from '../../redux/scene/selectors'
 import './style'
 
 const Presence = ({
@@ -13,19 +14,41 @@ const Presence = ({
     presenceKey
 
 }) => {
-    const isShownInScene = useSelector(mapIsPresenceShownInScene({
-        yIndex,
-        presenceType,
-        actorKey,
-        presenceKey
-    }))
+    const
+        floorZIndex = useSelector(mapPresenceFloorZIndex({
+            yIndex,
+            presenceType,
+            actorKey,
+            presenceKey
+        })),
+        [zIndex, setZIndex] = useState(floorZIndex),
+
+        // Floor zIndex is null when presence is not in the current scene.
+        isPresenceShown = Number.isFinite(floorZIndex),
+
+        /**
+         * Instantly pass Redux zIndex to presence, rather than wait one
+         * lifecycle for state to catch up. This avoids presence starting
+         * without zIndex as it transitions in.
+         */
+        presenceZIndex = isPresenceShown ? floorZIndex : zIndex
+
+    useEffect(() => {
+        /**
+         * Only change zIndex to another number, never back to null. This
+         * avoids presence losing zIndex as it transitions out.
+         */
+        if (isPresenceShown) {
+            setZIndex(floorZIndex)
+        }
+    }, [floorZIndex])
 
     return (
         <CSSTransition
             unmountOnExit
             mountOnEnter
             {...{
-                in: isShownInScene,
+                in: isPresenceShown,
                 timeout: 200
             }}
         >
@@ -33,7 +56,8 @@ const Presence = ({
                 {...{
                     presenceType,
                     actorKey,
-                    presenceKey
+                    presenceKey,
+                    zIndex: presenceZIndex
                 }}
             />
         </CSSTransition>

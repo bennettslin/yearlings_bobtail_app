@@ -1,10 +1,5 @@
 import ACTOR_ARRANGEMENTS from '../../../scene/scenes/actors'
-import SCENE_CUBES from '../../../scene/scenes/cubes'
 import THING_ARRANGEMENTS from '../../../scene/scenes/things'
-import {
-    getNearestXIndex,
-    getValueInAbridgedMatrix
-} from '../../../../../app/helpers/cubeIndices'
 import { getCharStringForNumber } from '../../../../../app/helpers/format'
 import { ACTOR } from '../../../../../app/constants/scene'
 
@@ -67,26 +62,7 @@ const _addPresenceToSceneLayer = ({
     delete arrangementObject.layerYIndex
 }
 
-const getFloorZIndexForPresence = (
-    cubes,
-    yIndex,
-    xPosition
-
-) => {
-    const xIndex = getNearestXIndex(xPosition)
-    /**
-     * Presence needs to know the floor zIndex for positioning. Slant direction
-     * doesn't matter because presence positions as if default.
-     */
-    return getValueInAbridgedMatrix(
-        SCENE_CUBES[cubes].floor.zIndices,
-        yIndex,
-        xIndex
-    )
-}
-
 const _addPresenceToSceneLayerByType = ({
-    cubes,
     presences,
     presenceType,
     presenceName,
@@ -122,51 +98,6 @@ const _addPresenceToSceneLayerByType = ({
         value = dynamicValue
     }
 
-    // TODO: To delete.
-    // Add cubes as string if this is the first one.
-    if (!arrangementObject.cubes) {
-        arrangementObject.cubes = cubes
-
-    } else if (typeof arrangementObject.cubes === 'string') {
-        if (cubes !== arrangementObject.cubes) {
-
-            // Create an array with both cubes keys.
-            arrangementObject.cubes = [
-                arrangementObject.cubes,
-                cubes
-            ]
-        }
-
-    } else if (Array.isArray(arrangementObject.cubes)) {
-        if (!arrangementObject.cubes.includes(cubes)) {
-
-            // Add to the array.
-            arrangementObject.cubes.push(cubes)
-        }
-    }
-
-    const floorZIndex = getFloorZIndexForPresence(
-        cubes,
-        arrangementObject.yIndex,
-        arrangementObject.xPosition
-    )
-
-    // TODO: To delete.
-    global.notEqual = {}
-    if (!Number.isFinite(arrangementObject.floorZIndex)) {
-        arrangementObject.floorZIndex = floorZIndex
-    } else {
-        if (floorZIndex !== arrangementObject.floorZIndex) {
-            console.error('not equal', presenceType, presenceName, value, floorZIndex, arrangementObject.floorZIndex, arrangementObject.cubes)
-
-            if (!global.notEqual[presenceType]) {
-                global.notEqual[presenceType] = {}
-            }
-
-            global.notEqual[presenceType][presenceName] = true
-        }
-    }
-
     _addPresenceToSceneLayer({
         arrangementObject,
         layers,
@@ -185,7 +116,7 @@ const _getLayeredScenes = (
     albumScenes.forEach(songScenes => {
         songScenes.forEach(scene => {
             const
-                { cubes, presences } = scene,
+                { presences } = scene,
                 layers = {}
 
             // Iterate through actors, cutouts, fixtures.
@@ -195,7 +126,6 @@ const _getLayeredScenes = (
                 Object.keys(presences[presenceType]).forEach(presenceName => {
 
                     _addPresenceToSceneLayerByType({
-                        cubes,
                         presences,
                         presenceType,
                         presenceName,

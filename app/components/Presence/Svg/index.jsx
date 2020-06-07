@@ -1,8 +1,6 @@
 import React, { useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
-import { mapSceneCubesKey } from '../../../redux/scene/selectors'
 import InlineSvg from '../../../modules/InlineSvg'
 import Wires from '../Wires'
 import {
@@ -31,11 +29,11 @@ import './style'
 const PresenceSvg = ({
     presenceType,
     actorKey,
-    presenceKey
+    presenceKey,
+    zIndex
 
 }) => {
     const
-        sceneCubesKey = useSelector(mapSceneCubesKey),
         [isLoaded, setIsLoaded] = useState(false),
         [adjustedWidth, setAdjustedWidth] = useState(0),
         [adjustedHeight, setAdjustedHeight] = useState(0),
@@ -64,7 +62,7 @@ const PresenceSvg = ({
             x: adjustedLeft,
             y: adjustedTop
         } = getXYForPresence({
-            cubesKey: sceneCubesKey,
+            zIndex,
             yIndex,
             xPosition,
             zOffset
@@ -203,7 +201,8 @@ const PresenceSvg = ({
 PresenceSvg.propTypes = {
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
-    presenceKey: PropTypes.string.isRequired
+    presenceKey: PropTypes.string.isRequired,
+    zIndex: PropTypes.number.isRequired
 }
 
 export default memo(PresenceSvg)
