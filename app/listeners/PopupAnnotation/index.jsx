@@ -3,6 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
 import { mapLyricAnnotationIndex } from '../../redux/lyric/selectors'
 import { updateTransientStore } from '../../redux/transient/action'
 import { mapCanCarouselMount } from '../../redux/mount/selectors'
@@ -15,9 +16,8 @@ import {
 } from '../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
-    const {
-            entranceStore: { canLyricCarouselEnter }
-        } = state,
+    const
+        canLyricCarouselEnter = mapCanLyricCarouselEnter(state),
         lyricAnnotationIndex = mapLyricAnnotationIndex(state),
         canCarouselMount = mapCanCarouselMount(state),
         isOverlayingAnnotation = mapIsOverlayingAnnotation(state),

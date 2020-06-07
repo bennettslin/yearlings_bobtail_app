@@ -12,11 +12,11 @@ import Stanzas from '../../Stanzas'
 import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
+import { mapCanLyricCarouselUpdate } from '../../../redux/entrance/selectors'
 
 const mapStateToProps = state => {
-    const {
-            entranceStore: { canLyricCarouselUpdate }
-        } = state,
+    const
+        canLyricCarouselUpdate = mapCanLyricCarouselUpdate(state),
         lyricSongIndex = mapLyricSongIndex(state)
 
     return {

@@ -2,16 +2,19 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
+import {
+    mapDidLyricEnter,
+    mapDidCarouselEnter,
+    mapDidTheatreEnter,
+    mapDidSceneEnter
+} from '../../redux/entrance/selectors'
 
 const mapStateToProps = state => {
-    const {
-        entranceStore: {
-            didLyricEnter,
-            didCarouselEnter,
-            didTheatreEnter,
-            didSceneEnter
-        }
-    } = state
+    const
+        didLyricEnter = mapDidLyricEnter(state),
+        didCarouselEnter = mapDidCarouselEnter(state),
+        didTheatreEnter = mapDidTheatreEnter(state),
+        didSceneEnter = mapDidSceneEnter(state)
 
     return {
         didLyricEnter,

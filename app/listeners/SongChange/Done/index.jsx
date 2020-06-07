@@ -2,16 +2,18 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
+import {
+    mapDidCarouselEnter,
+    mapDidLyricEnter,
+    mapDidCurtainEnter
+} from '../../../redux/entrance/selectors'
 import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 
 const mapStateToProps = state => {
-    const {
-            entranceStore: {
-                didCarouselEnter,
-                didLyricEnter,
-                didCurtainEnter
-            }
-        } = state,
+    const
+        didCarouselEnter = mapDidCarouselEnter(state),
+        didLyricEnter = mapDidLyricEnter(state),
+        didCurtainEnter = mapDidCurtainEnter(state),
         canCarouselMount = mapCanCarouselMount(state)
 
     return {

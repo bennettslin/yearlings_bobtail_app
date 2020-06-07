@@ -3,6 +3,10 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import {
+    mapDidCarouselEnter,
+    mapDidLyricEnter
+} from '../../redux/entrance/selectors'
 import { updateScrollCarouselStore } from '../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import {
@@ -11,12 +15,9 @@ import {
 } from '../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            entranceStore: {
-                didCarouselEnter,
-                didLyricEnter
-            }
-        } = state,
+    const
+        didCarouselEnter = mapDidCarouselEnter(state),
+        didLyricEnter = mapDidLyricEnter(state),
         selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state)
 

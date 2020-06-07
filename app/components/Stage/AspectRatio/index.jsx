@@ -1,16 +1,19 @@
 import { cloneElement, memo } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import {
+    mapStageTop,
+    mapStageLeft,
+    mapStageWidth,
+    mapStageHeight
+} from '../../../redux/stage/selectors'
 
 const mapStateToProps = state => {
-    const {
-        stageStore: {
-            stageTop,
-            stageLeft,
-            stageWidth,
-            stageHeight
-        }
-    } = state
+    const
+        stageTop = mapStageTop(state),
+        stageLeft = mapStageLeft(state),
+        stageWidth = mapStageWidth(state),
+        stageHeight = mapStageHeight(state)
 
     return {
         stageTop,

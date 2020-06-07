@@ -1,14 +1,12 @@
 // Singleton to listen for changes that reset render flow.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import SceneChangeUpdateDispatcher from '../Update'
+import { mapDidSceneScrollExit } from '../../../redux/entrance/selectors'
 
 const mapStateToProps = state => {
-    const {
-        entranceStore: { didSceneScrollExit }
-    } = state
+    const didSceneScrollExit = mapDidSceneScrollExit(state)
 
     return {
         didSceneScrollExit

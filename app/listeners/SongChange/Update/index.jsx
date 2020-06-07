@@ -4,6 +4,12 @@ import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateLyricStore } from '../../../redux/lyric/action'
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
+import {
+    mapDidCarouselExit,
+    mapDidLyricExit,
+    mapDidCurtainExit,
+    mapIsSongSelectInFlux
+} from '../../../redux/entrance/selectors'
 import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 import {
     mapSelectedSongIndex,
@@ -12,14 +18,11 @@ import {
 } from '../../../redux/selected/selectors'
 
 const mapStateToProps = state => {
-    const {
-            entranceStore: {
-                didCarouselExit,
-                didLyricExit,
-                didCurtainExit,
-                isSongSelectInFlux
-            }
-        } = state,
+    const
+        didCarouselExit = mapDidCarouselExit(state),
+        didLyricExit = mapDidLyricExit(state),
+        didCurtainExit = mapDidCurtainExit(state),
+        isSongSelectInFlux = mapIsSongSelectInFlux(state),
         canCarouselMount = mapCanCarouselMount(state),
         selectedSongIndex = mapSelectedSongIndex(state),
         selectedVerseIndex = mapSelectedVerseIndex(state),

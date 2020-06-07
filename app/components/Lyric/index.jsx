@@ -13,11 +13,10 @@ import VerseBar from './VerseBar'
 import CarouselAccess from '../Carousel/Access'
 import { populateRefs } from '../../helpers/ref'
 import './style'
+import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
 
 const mapStateToProps = state => {
-    const {
-        entranceStore: { canLyricCarouselEnter }
-    } = state
+    const canLyricCarouselEnter = mapCanLyricCarouselEnter(state)
 
     return {
         canLyricCarouselEnter
