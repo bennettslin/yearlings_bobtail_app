@@ -8,14 +8,11 @@ import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../api/album/verses'
-import { getCursorIndex } from '../../../helpers/verse'
-import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import {
     mapLyricSongIndex,
-    mapLyricVerseIndex,
-    mapIsLyricLogue
+    mapIsLyricLogue,
+    mapCursorVerseIndex
 } from '../../../redux/lyric/selectors'
-import { mapSliderVerseIndex } from '../../../redux/slider/selectors'
 import { getMapIsVerseBarShown } from '../../../redux/verseBars/selectors'
 import './style'
 
@@ -26,19 +23,10 @@ const VerseBar = ({
 }) => {
     const
         dispatchScrollVerse = useRef(),
-        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        lyricVerseIndex = useSelector(mapLyricVerseIndex),
         isLyricLogue = useSelector(mapIsLyricLogue),
-        sliderVerseIndex = useSelector(mapSliderVerseIndex),
         isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove)),
-
-        // TODO: Make this a selector.
-        verseIndex = getCursorIndex(
-            sliderVerseIndex,
-            activatedVerseIndex,
-            lyricVerseIndex
-        )
+        cursorVerseIndex = useSelector(mapCursorVerseIndex)
 
     const onClick = e => {
         logEvent({ e, componentName: 'VerseBar' })
@@ -83,10 +71,10 @@ const VerseBar = ({
                         inVerseBar
                         {...{
                             isShownInVerseBar: isVerseBarShown,
-                            verseIndex,
+                            verseIndex: cursorVerseIndex,
                             verseObject: getVerse(
                                 lyricSongIndex,
-                                verseIndex
+                                cursorVerseIndex
                             ),
                             VerseComponent: Verse
                         }}

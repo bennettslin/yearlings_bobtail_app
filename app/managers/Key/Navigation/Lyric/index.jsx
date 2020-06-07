@@ -13,7 +13,10 @@ import {
     mapIsAccessOn,
     mapAccessedAnnotationIndex
 } from '../../../../redux/access/selectors'
-import { mapActivatedVerseIndex } from '../../../../redux/activated/selectors'
+import {
+    mapIsActivated,
+    mapActivatedVerseIndex
+} from '../../../../redux/activated/selectors'
 import { mapSelectedVerseIndex } from '../../../../redux/selected/selectors'
 
 const LyricNavigation = forwardRef((props, ref) => {
@@ -23,6 +26,7 @@ const LyricNavigation = forwardRef((props, ref) => {
         dispatchAccessedAnnotation = useRef(),
         isAccessOn = useSelector(mapIsAccessOn),
         accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
+        isActivated = useSelector(mapIsActivated),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex)
 
@@ -34,9 +38,6 @@ const LyricNavigation = forwardRef((props, ref) => {
         ) {
             return false
         }
-
-        // TODO: Make this a selector.
-        const isVerseActivated = activatedVerseIndex > -1
 
         let direction
 
@@ -53,9 +54,9 @@ const LyricNavigation = forwardRef((props, ref) => {
          * Access is getting turned on, so just choose annotation based on
          * selected verse.
          */
-        if (!isAccessOn || isVerseActivated) {
+        if (!isAccessOn || isActivated) {
             const verseIndex =
-                isVerseActivated ?
+                isActivated ?
                     activatedVerseIndex :
                     selectedVerseIndex
 
@@ -64,7 +65,7 @@ const LyricNavigation = forwardRef((props, ref) => {
                 direction
             })
 
-            if (isVerseActivated) {
+            if (isActivated) {
                 dispatch(updateActivatedStore())
             }
 

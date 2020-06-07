@@ -3,23 +3,17 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
-import { getCursorIndex } from '../../helpers/verse'
 import { getStanzaIndexForVerse } from '../../api/album/verses'
-import {
-    mapIsActivated,
-    mapActivatedVerseIndex
-} from '../../redux/activated/selectors'
+import { mapIsActivated } from '../../redux/activated/selectors'
 import { mapIsPlaying } from '../../redux/audio/selectors'
 import { mapDotsBitNumber } from '../../redux/dots/selectors'
 import {
     mapIsLyricLogue,
     mapLyricSongIndex,
-    mapLyricVerseIndex
+    mapLyricVerseIndex,
+    mapCursorVerseIndex
 } from '../../redux/lyric/selectors'
-import {
-    mapIsSliderMoving,
-    mapSliderVerseIndex
-} from '../../redux/slider/selectors'
+import { mapIsSliderMoving } from '../../redux/slider/selectors'
 import {
     mapIsVerseBarAbove,
     mapIsVerseBarBelow
@@ -28,28 +22,18 @@ import {
 const LogicWrapper = ({ children }) => {
     const
         isActivated = useSelector(mapIsActivated),
-        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         isPlaying = useSelector(mapIsPlaying),
         dotsBitNumber = useSelector(mapDotsBitNumber),
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
+        cursorVerseIndex = useSelector(mapCursorVerseIndex),
         isSliderMoving = useSelector(mapIsSliderMoving),
-        sliderVerseIndex = useSelector(mapSliderVerseIndex),
         isVerseBarAbove = useSelector(mapIsVerseBarAbove),
         isVerseBarBelow = useSelector(mapIsVerseBarBelow),
+
+        // TODO: Make this a selector.
         areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
-
-        /**
-         * If slider touched, compare stanza to slider verse. Otherwise,
-         * compare it to selected verse.
-         */
-        cursorVerseIndex = getCursorIndex(
-            sliderVerseIndex,
-            activatedVerseIndex,
-            lyricVerseIndex
-        ),
-
         isLyricsLocked = isSliderMoving || isActivated
 
     return (
