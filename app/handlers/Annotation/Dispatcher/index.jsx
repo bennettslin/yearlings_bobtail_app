@@ -62,11 +62,11 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
             // If selecting from carousel, scroll lyric.
             if (fromCarousel) {
                 dispatch(updateScrollLyricStore({
-                    queuedScrollLyricLog:
+                    scrollLyricLog:
                         `Carousel select annotation ${
                             annotationIndex
                         }.`,
-                    queuedScrollLyricIndex: annotationIndex
+                    scrollLyricIndex: annotationIndex
                 }))
 
             // If selecting from lyric, scroll carousel.
@@ -97,9 +97,9 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
 
         if (nextAnnotationIndex) {
             dispatch(updateScrollLyricStore({
-                queuedScrollLyricLog:
+                scrollLyricLog:
                     `Direction select annotation ${nextAnnotationIndex}.`,
-                queuedScrollLyricIndex: nextAnnotationIndex
+                scrollLyricIndex: nextAnnotationIndex
             }))
             dispatch(updateScrollCarouselStore({
                 scrollCarouselLog: 'Select accessed carousel annotation.',

@@ -9,7 +9,6 @@ import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
 import ScrollOverlayDispatcher from '../../../dispatchers/ScrollOverlay'
 import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
-import { populateRefs } from '../../../helpers/ref'
 import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
@@ -53,24 +52,8 @@ class LyricScroll extends PureComponent {
     }
 
     handleVerseBarWheel = e => {
-        this.dispatchVerseBarWheel(e, this.lyricElement)
+        this.dispatchVerseBarWheel(e, this.lyricScrollParent)
     }
-
-    _getLyricElement = () => {
-        return this.lyricElement
-    }
-
-    _setLyricElement = node => {
-        // For lyric and verse bar wheel.
-        this.lyricElement = node
-
-        // For focus.
-        this.props.setLyricFocusElement(node)
-    }
-
-    getLyricScrollParent = () => (
-        this.lyricElement
-    )
 
     _handleDetermineVerseBars = () => {
         this.dispatchVerseBarsTimeout()
@@ -78,16 +61,12 @@ class LyricScroll extends PureComponent {
     }
 
     _handleDetermineAutoScroll = e => {
-        this.dispatchLyricTouchMoveOrWheel(e, this.lyricElement)
+        this.dispatchLyricTouchMoveOrWheel(e, this.lyricScrollParent)
     }
 
     _handleTransitionEntered = () => {
         logTransition('Lyric did update from LyricScroll.')
         this.props.updateEntranceStore({ didLyricUpdate: true })
-    }
-
-    _getRefs = payload => {
-        populateRefs(this, payload)
     }
 
     getDispatchLyricWheel = dispatch => {
@@ -105,6 +84,14 @@ class LyricScroll extends PureComponent {
         this.dispatchVerseBarsTimeout = dispatch
     }
 
+    _setLyricScrollParent = node => {
+        // For lyric and verse bar wheel.
+        this.lyricScrollParent = node
+
+        // For focus.
+        this.props.setLyricFocusElement(node)
+    }
+
     _setScrollAnnotationChild = ({ node, index }) => {
         this.scrollAnnotationChildren[index] = node
     }
@@ -112,6 +99,10 @@ class LyricScroll extends PureComponent {
     _setScrollVerseChild = ({ node, index }) => {
         this.scrollVerseChildren[index] = node
     }
+
+    getLyricScrollParent = () => (
+        this.lyricScrollParent
+    )
 
     getScrollAnnotationChild = index => (
         this.scrollAnnotationChildren[index]
@@ -129,7 +120,6 @@ class LyricScroll extends PureComponent {
         return (
             <>
                 <ScrollLyricListener {...{
-                    getRefs: this._getRefs,
                     getLyricScrollParent: this.getLyricScrollParent,
                     getScrollAnnotationChild: this.getScrollAnnotationChild,
                     getScrollVerseChild: this.getScrollVerseChild
@@ -143,7 +133,7 @@ class LyricScroll extends PureComponent {
                 >
                     <div
                         {...{
-                            ref: this._setLyricElement,
+                            ref: this._setLyricScrollParent,
                             className: cx(
                                 'LyricScroll',
                                 'abF',
@@ -174,7 +164,7 @@ class LyricScroll extends PureComponent {
                 <ScrollOverlayDispatcher
                     {...{
                         ref: this.getDispatchScrollTimeout,
-                        getLyricElement: this._getLyricElement
+                        getLyricElement: this.getLyricScrollParent
                     }}
                 />
                 <VerseBarHandler

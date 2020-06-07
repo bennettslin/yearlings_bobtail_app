@@ -61,9 +61,9 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
         // Only scroll if accessed with a direction.
         if (direction && accessedAnnotationIndex > 0) {
             dispatch(updateScrollLyricStore({
-                queuedScrollLyricLog:
+                scrollLyricLog:
                         `Direction access annotation ${accessedAnnotationIndex}.`,
-                queuedScrollLyricIndex: accessedAnnotationIndex
+                scrollLyricIndex: accessedAnnotationIndex
             }))
             dispatch(updateScrollCarouselStore({
                 scrollCarouselLog: 'Access carousel annotation.',

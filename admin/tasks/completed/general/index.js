@@ -4774,7 +4774,7 @@ export default [
         workedHours: 23
     },
     {
-        taskName: `Scrolling investigation.`,
-        workedHours: 3
+        taskName: `Scrolling investigation and some work.`,
+        workedHours: 6
     }
 ]

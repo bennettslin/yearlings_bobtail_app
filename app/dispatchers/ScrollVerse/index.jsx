@@ -8,10 +8,10 @@ const ScrollVerseDispatcher = forwardRef((props, ref) => {
 
     const dispatchScrollVerse = (isAutoScroll) => {
         dispatch(updateScrollLyricStore({
-            queuedScrollLyricLog:
+            scrollLyricLog:
                     'VerseBar click or autoScroll toggle back to selected verse.',
-            queuedScrollLyricByVerse: true,
-            queuedScrollLyricAlways: true
+            scrollLyricByVerse: true,
+            scrollLyricAlways: true
         }))
 
         dispatch(updateToggleStore({

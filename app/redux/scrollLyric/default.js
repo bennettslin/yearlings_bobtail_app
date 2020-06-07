@@ -1,9 +1,9 @@
 export const SCROLL_LYRIC_DEFAULTS = {
-    queuedScrollLyricLog: '',
-    queuedScrollLyricByVerse: false,
-    queuedScrollLyricIndex: -1,
-    queuedScrollLyricAlways: false,
-    queuedScrollLyricNoDuration: false,
-    queuedScrollLyricFromAutoScroll: false,
+    scrollLyricLog: '',
+    scrollLyricByVerse: false,
+    scrollLyricIndex: -1,
+    scrollLyricAlways: false,
+    scrollLyricNoDuration: false,
+    scrollLyricFromAutoScroll: false,
     queuedSceneChangeExitScrollCallback: false
 }

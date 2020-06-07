@@ -1,13 +1,12 @@
 # During work
-* Change all mapStateToProps to grab from selectors. Just suck it up and do this.
-* Ensure all selectors are used.
-* Some todos to make a selector.
 
-# Bugs
-* Activated scene index is undefined when accessing back to selected verse.
+# Pre-Gatsby bugs
+* Activated scene index is undefined when accessing back to selected verse. Solve by just getting rid of those activated values.
+* Verse scroll key not registered, and doesn't always work.
+
+# Post-Gatsby bugs
 * Stage dimensions act like two row menu in mobile, even when not?
-* Verse scroll key not registered, and doesn't always work. Looks like this has always been the case, pre-Gatsby.vbvvv
-* From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed.
+* From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Figure out why window resizing timeout seems to have regressed.
@@ -23,14 +22,13 @@
 
 # Brainless JS tasks
 * Get rid of PopupAnnotation listener.
-* Make dispatchers functions.
 * Change all to use isOverviewShown and isTipsShown rather than selected options.
 * Rename all to dotBit, use selectedDotBit and activatedDotBit?
-* Shorten queued names as well?
+* Ensure all selectors are used.
 
 # Easy reduction tasks
-* Shorten constants
-* Figure out how to get scroll children without storing them.
+* Last getRefs in LyricScroll: https://stackoverflow.com/questions/54633690/how-can-i-use-multiple-refs-for-an-array-of-elements-with-hooks
+* Some todos to make a selector.
 * Have verse store for queued verse select, just like annotation store.
 * Internal stylesheet fixes
 * Simplify Anchor for social media anchors
@@ -38,6 +36,7 @@
 * Mount, responsive, proscenium, and theatre values can just be aggregate selectors. Basically, get rid of everything in window that's not the window width and height. Replace in map state to props first.
 * Also, the listeners.
 * Make isActivated and isSelected selectors.
+* Shorten constants to abbreviations?
 
 # Ongoing Gatsby tasks
 * Dynamic routes for song indices

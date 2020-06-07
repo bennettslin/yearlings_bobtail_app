@@ -74,9 +74,9 @@ class AudioManager extends PureComponent {
 
         if (isPlaying) {
             this.props.updateScrollLyricStore({
-                queuedScrollLyricLog: 'Playing on.',
-                queuedScrollLyricByVerse: true,
-                queuedScrollLyricAlways: true
+                scrollLyricLog: 'Playing on.',
+                scrollLyricByVerse: true,
+                scrollLyricAlways: true
             })
         }
     }

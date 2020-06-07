@@ -74,26 +74,17 @@ export const scrollElementIntoView = ({
     log = '',
     scrollClass,
     scrollParent,
-    scrollChildren,
     scrollChild,
     index,
     noDuration,
     deviceWidthIndex,
     windowWidth,
     isLyricExpanded,
-    isSelectedLogue,
     callback
 
 }) => {
-    if (isSelectedLogue || index < 0) {
-        return
-    }
-
-    const
-        time = noDuration ? 0 : 500,
-        scrollElement = scrollChild ? scrollChild : scrollChildren[index]
-
-    let element = scrollElement
+    const time = noDuration ? 0 : 500
+    let element = scrollChild
 
     if (!element) {
         /**

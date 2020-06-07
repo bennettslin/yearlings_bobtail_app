@@ -83,10 +83,10 @@ class ScrollRenderListener extends PureComponent {
             && !hadLyricEntered
         ) {
             this.props.updateScrollLyricStore({
-                queuedScrollLyricLog: 'Lyric entered.',
-                queuedScrollLyricByVerse: true,
-                queuedScrollLyricNoDuration: true,
-                queuedScrollLyricAlways: true,
+                scrollLyricLog: 'Lyric entered.',
+                scrollLyricByVerse: true,
+                scrollLyricNoDuration: true,
+                scrollLyricAlways: true,
                 queuedSceneChangeExitScrollCallback: true
             })
         }

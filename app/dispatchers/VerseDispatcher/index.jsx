@@ -54,10 +54,10 @@ const VerseDispatcher = forwardRef((props, ref) => {
         dispatch(resetVerseBars())
 
         dispatch(updateScrollLyricStore({
-            queuedScrollLyricLog: scrollLog,
-            queuedScrollLyricByVerse: true,
-            queuedScrollLyricIndex: selectedVerseIndex,
-            queuedScrollLyricAlways: true,
+            scrollLyricLog: scrollLog,
+            scrollLyricByVerse: true,
+            scrollLyricIndex: selectedVerseIndex,
+            scrollLyricAlways: true,
             queuedSceneChangeExitScrollCallback: true
         }))
     }

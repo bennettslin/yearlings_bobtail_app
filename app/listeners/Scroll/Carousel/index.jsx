@@ -9,7 +9,6 @@ import {
     mapScrollCarouselIndex,
     mapScrollCarouselNoDuration
 } from '../../../redux/scrollCarousel/selectors'
-import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 import { mapIsCarouselShown } from '../../../redux/toggle/selectors'
 import {
     mapWindowWidth,
@@ -23,7 +22,6 @@ const ScrollCarouselListener = ({
 }) => {
     const
         dispatch = useDispatch(),
-        isSelectedLogue = useSelector(mapIsSelectedLogue),
         isCarouselShown = useSelector(mapIsCarouselShown),
         windowWidth = useSelector(mapWindowWidth),
         deviceWidthIndex = useSelector(mapDeviceWidthIndex),
@@ -43,8 +41,7 @@ const ScrollCarouselListener = ({
                 index: scrollCarouselIndex,
                 noDuration: scrollCarouselNoDuration,
                 deviceWidthIndex,
-                windowWidth,
-                isSelectedLogue
+                windowWidth
             })
 
             dispatch(updateScrollCarouselStore())

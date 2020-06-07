@@ -1,3 +1,4 @@
+// TODO: Only need activated verse index. The rest can just be createSelectors.
 export const mapIsActivated = (
     { activatedStore: { isActivated } }
 ) => isActivated

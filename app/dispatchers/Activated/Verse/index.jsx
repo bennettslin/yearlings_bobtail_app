@@ -24,10 +24,10 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
 
     const _queueScrollToActivatedVerse = nextVerseIndex => {
         dispatch(updateScrollLyricStore({
-            queuedScrollLyricLog:
+            scrollLyricLog:
                     `Activate verse ${nextVerseIndex}.`,
-            queuedScrollLyricByVerse: true,
-            queuedScrollLyricIndex: nextVerseIndex
+            scrollLyricByVerse: true,
+            scrollLyricIndex: nextVerseIndex
         }))
     }
 
@@ -37,6 +37,7 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
             return
         }
 
+        console.log('activated verse')
         dispatch(updateActivatedStore({
             activatedSceneIndex: getSceneIndexForVerse(
                 selectedSongIndex,

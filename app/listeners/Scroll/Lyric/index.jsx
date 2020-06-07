@@ -11,18 +11,15 @@ import {
 } from '../../../constants/scroll'
 import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
 import {
-    mapQueuedScrollLyricLog,
-    mapQueuedScrollLyricByVerse,
-    mapQueuedScrollLyricIndex,
-    mapQueuedScrollLyricAlways,
-    mapQueuedScrollLyricNoDuration,
-    mapQueuedScrollLyricFromAutoScroll,
+    mapScrollLyricLog,
+    mapScrollLyricByVerse,
+    mapScrollLyricIndex,
+    mapScrollLyricAlways,
+    mapScrollLyricNoDuration,
+    mapScrollLyricFromAutoScroll,
     mapQueuedSceneChangeExitScrollCallback
 } from '../../../redux/scrollLyric/selectors'
-import {
-    mapSelectedVerseIndex,
-    mapIsSelectedLogue
-} from '../../../redux/selected/selectors'
+import { mapSelectedVerseIndex } from '../../../redux/selected/selectors'
 import {
     mapIsAutoScroll,
     mapIsLyricExpanded
@@ -40,16 +37,15 @@ const ScrollLyricListener = ({
         isPlaying = useSelector(mapIsPlaying),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
-        isSelectedLogue = useSelector(mapIsSelectedLogue),
         isAutoScroll = useSelector(mapIsAutoScroll),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         deviceWidthIndex = useSelector(mapDeviceWidthIndex),
-        queuedScrollLyricLog = useSelector(mapQueuedScrollLyricLog),
-        queuedScrollLyricByVerse = useSelector(mapQueuedScrollLyricByVerse),
-        queuedScrollLyricIndex = useSelector(mapQueuedScrollLyricIndex),
-        queuedScrollLyricAlways = useSelector(mapQueuedScrollLyricAlways),
-        queuedScrollLyricNoDuration = useSelector(mapQueuedScrollLyricNoDuration),
-        queuedScrollLyricFromAutoScroll = useSelector(mapQueuedScrollLyricFromAutoScroll),
+        scrollLyricLog = useSelector(mapScrollLyricLog),
+        scrollLyricByVerse = useSelector(mapScrollLyricByVerse),
+        scrollLyricIndex = useSelector(mapScrollLyricIndex),
+        scrollLyricAlways = useSelector(mapScrollLyricAlways),
+        scrollLyricNoDuration = useSelector(mapScrollLyricNoDuration),
+        scrollLyricFromAutoScroll = useSelector(mapScrollLyricFromAutoScroll),
         queuedSceneChangeExitScrollCallback = useSelector(mapQueuedSceneChangeExitScrollCallback)
 
     const _completeSceneChangeExit = () => {
@@ -63,7 +59,8 @@ const ScrollLyricListener = ({
     }
 
     useEffect(() => {
-        if (queuedScrollLyricLog) {
+        if (scrollLyricLog) {
+            // TODO: Make this a selector
             if (isHeightlessLyric && !isLyricExpanded) {
                 /**
                  * Don't scroll if not expanded in heightless lyric. Just call
@@ -73,47 +70,41 @@ const ScrollLyricListener = ({
                     _completeSceneChangeExit()
                 }
 
+            // TODO: Make this a selector.
             } else if (
                 // If paused, always scroll.
                 !isPlaying ||
 
                 // If selecting a new song or verse, always scroll.
-                queuedScrollLyricAlways ||
+                scrollLyricAlways ||
 
                 /**
                  * If autoScroll is on, only scroll from autoScroll, or else if
                  * autoScroll is off, scroll from everything *but* autoScroll.
                  */
-                queuedScrollLyricFromAutoScroll === isAutoScroll
+                scrollLyricFromAutoScroll === isAutoScroll
             ) {
-                const
-                    scrollClass = queuedScrollLyricByVerse ?
-                        VERSE_SCROLL :
-                        LYRIC_ANNOTATION_SCROLL,
-
-                    /**
-                     * If no verse index given, default to selected verse.
-                     * If scrolling to annotation, index is always given.
-                     */
-                    index =
-                        queuedScrollLyricIndex === -1 ?
-                            selectedVerseIndex :
-                            queuedScrollLyricIndex,
-
-                    scrollChild = queuedScrollLyricByVerse ?
-                        getScrollVerseChild(index) :
-                        getScrollAnnotationChild(index)
+                /**
+                 * If no verse index given, default to selected verse. If
+                 * scrolling to annotation, index is always given.
+                 */
+                const index = scrollLyricIndex === -1 ?
+                    selectedVerseIndex :
+                    scrollLyricIndex
 
                 scrollElementIntoView({
-                    log: queuedScrollLyricLog,
-                    scrollClass,
+                    log: scrollLyricLog,
+                    scrollClass: scrollLyricByVerse ?
+                        VERSE_SCROLL :
+                        LYRIC_ANNOTATION_SCROLL,
                     scrollParent: getLyricScrollParent(),
-                    scrollChild,
+                    scrollChild: scrollLyricByVerse ?
+                        getScrollVerseChild(index) :
+                        getScrollAnnotationChild(index),
                     index,
-                    noDuration: queuedScrollLyricNoDuration,
+                    noDuration: scrollLyricNoDuration,
                     deviceWidthIndex,
                     isLyricExpanded,
-                    isSelectedLogue,
                     ...queuedSceneChangeExitScrollCallback && {
                         callback: _setTimeoutForSceneChangeExit
                     }
@@ -122,7 +113,7 @@ const ScrollLyricListener = ({
 
             dispatch(updateScrollLyricStore())
         }
-    }, [queuedScrollLyricLog])
+    }, [scrollLyricLog])
 
     return null
 }

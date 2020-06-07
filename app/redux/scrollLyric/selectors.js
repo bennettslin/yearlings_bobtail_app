@@ -1,27 +1,28 @@
-export const mapQueuedScrollLyricLog = (
-    { scrollLyricStore: { queuedScrollLyricLog } }
-) => queuedScrollLyricLog
+export const mapScrollLyricLog = (
+    { scrollLyricStore: { scrollLyricLog } }
+) => scrollLyricLog
 
-export const mapQueuedScrollLyricByVerse = (
-    { scrollLyricStore: { queuedScrollLyricByVerse } }
-) => queuedScrollLyricByVerse
+export const mapScrollLyricByVerse = (
+    { scrollLyricStore: { scrollLyricByVerse } }
+) => scrollLyricByVerse
 
-export const mapQueuedScrollLyricIndex = (
-    { scrollLyricStore: { queuedScrollLyricIndex } }
-) => queuedScrollLyricIndex
+export const mapScrollLyricIndex = (
+    { scrollLyricStore: { scrollLyricIndex } }
+) => scrollLyricIndex
 
-export const mapQueuedScrollLyricAlways = (
-    { scrollLyricStore: { queuedScrollLyricAlways } }
-) => queuedScrollLyricAlways
+export const mapScrollLyricAlways = (
+    { scrollLyricStore: { scrollLyricAlways } }
+) => scrollLyricAlways
 
-export const mapQueuedScrollLyricNoDuration = (
-    { scrollLyricStore: { queuedScrollLyricNoDuration } }
-) => queuedScrollLyricNoDuration
+export const mapScrollLyricNoDuration = (
+    { scrollLyricStore: { scrollLyricNoDuration } }
+) => scrollLyricNoDuration
 
-export const mapQueuedScrollLyricFromAutoScroll = (
-    { scrollLyricStore: { queuedScrollLyricFromAutoScroll } }
-) => queuedScrollLyricFromAutoScroll
+export const mapScrollLyricFromAutoScroll = (
+    { scrollLyricStore: { scrollLyricFromAutoScroll } }
+) => scrollLyricFromAutoScroll
 
+// TODO: What is this value?
 export const mapQueuedSceneChangeExitScrollCallback = (
     { scrollLyricStore: { queuedSceneChangeExitScrollCallback } }
 ) => queuedSceneChangeExitScrollCallback

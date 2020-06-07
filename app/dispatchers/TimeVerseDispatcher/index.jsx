@@ -41,11 +41,11 @@ const TimeVerseDispatcher = forwardRef((props, ref) => {
         // If autoScroll is on, scroll to selected verse.
         if (isAutoScroll) {
             dispatch(updateScrollLyricStore({
-                queuedScrollLyricLog:
+                scrollLyricLog:
                     `Player autoScroll to verse ${nextVerseIndex}.`,
-                queuedScrollLyricByVerse: true,
-                queuedScrollLyricIndex: nextVerseIndex,
-                queuedScrollLyricFromAutoScroll: true,
+                scrollLyricByVerse: true,
+                scrollLyricIndex: nextVerseIndex,
+                scrollLyricFromAutoScroll: true,
                 queuedSceneChangeExitScrollCallback: true
             }))
 
