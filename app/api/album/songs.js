@@ -35,8 +35,16 @@ export const getSong = songIndex => (
     getAlbum().songs[songIndex]
 )
 
+export const getSongIsPrologue = songIndex => (
+    songIndex === 0
+)
+
+export const getSongIsEpilogue = songIndex => (
+    songIndex === getSongsAndLoguesCount() - 1
+)
+
 export const getSongIsLogue = songIndex => (
-    songIndex === 0 || songIndex === getSongsAndLoguesCount() - 1
+    getSongIsPrologue(songIndex) || getSongIsEpilogue(songIndex)
 )
 
 export const getTitleForSong = songIndex => (

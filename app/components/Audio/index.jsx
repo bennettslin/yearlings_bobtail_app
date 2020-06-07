@@ -17,11 +17,13 @@ import {
     AUDIO_PLAY_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
-import { getSongsAndLoguesCount } from '../../api/album/songs'
 import { mapIsPlaying } from '../../redux/audio/selectors'
 import { mapIsTwoRowMenu } from '../../redux/responsive/selectors'
 import { mapPlayerCanPlayThrough } from '../../redux/players/selectors'
-import { mapSelectedSongIndex } from '../../redux/selected/selectors'
+import {
+    mapIsSelectedPrologue,
+    mapIsSelectedEpilogue
+} from '../../redux/selected/selectors'
 import { mapAudioOptionIndex } from '../../redux/session/selectors'
 import { mapIsDesktopWidth } from '../../redux/viewport/selectors'
 import './style'
@@ -65,7 +67,8 @@ const Audio = () => {
         isPlaying = useSelector(mapIsPlaying),
         isTwoRowMenu = useSelector(mapIsTwoRowMenu),
         playerCanPlayThrough = useSelector(mapPlayerCanPlayThrough),
-        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        isPrologue = useSelector(mapIsSelectedPrologue),
+        isEpilogue = useSelector(mapIsSelectedEpilogue),
         audioOptionIndex = useSelector(mapAudioOptionIndex),
         isDesktopWidth = useSelector(mapIsDesktopWidth)
 
@@ -86,32 +89,26 @@ const Audio = () => {
     }
 
     const getDynamicButtonConfigs = () => {
-        const
-            // TODO: Make this a selector.
-            isPrologue = selectedSongIndex === 0,
-            songsCount = getSongsAndLoguesCount(),
-            isEpilogue = selectedSongIndex === songsCount - 1,
-
-            dynamicButtonConfigs = [
-                {
-                    isDisabled: isPrologue,
-                    handleButtonClick: _handlePreviousClick
-                },
-                {
-                    isPulsateAnimated: isPrologue,
-                    buttonIdentifier: isPlaying,
-                    isDisabled: !playerCanPlayThrough,
-                    handleButtonClick: _handlePlayClick
-                },
-                {
-                    isDisabled: isEpilogue,
-                    handleButtonClick: _handleNextClick
-                },
-                {
-                    buttonIdentifier: audioOptionIndex,
-                    handleButtonClick: _handleAudioOptionClick
-                }
-            ]
+        const dynamicButtonConfigs = [
+            {
+                isDisabled: isPrologue,
+                handleButtonClick: _handlePreviousClick
+            },
+            {
+                isPulsateAnimated: isPrologue,
+                buttonIdentifier: isPlaying,
+                isDisabled: !playerCanPlayThrough,
+                handleButtonClick: _handlePlayClick
+            },
+            {
+                isDisabled: isEpilogue,
+                handleButtonClick: _handleNextClick
+            },
+            {
+                buttonIdentifier: audioOptionIndex,
+                handleButtonClick: _handleAudioOptionClick
+            }
+        ]
 
         // If desktop width, reverse order to keep tooltips on top.
         return (

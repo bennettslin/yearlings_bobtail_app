@@ -1,5 +1,6 @@
+import { getSongIsLogue } from '../../api/album/songs'
 import { getOptionFromStorage } from '../../helpers/storage'
-import { IS_INITIAL_LOGUE } from '../selected/default'
+import { INITIAL_SONG_INDEX } from '../selected/default'
 import {
     SELECTED_OVERVIEW_OPTION,
     SELECTED_TIPS_OPTION
@@ -10,7 +11,7 @@ const
     STORED_TIPS_OPTION = getOptionFromStorage(SELECTED_TIPS_OPTION)
 
 export const OPTION_DEFAULTS = {
-    isLogueOverviewShown: IS_INITIAL_LOGUE,
+    isLogueOverviewShown: getSongIsLogue(INITIAL_SONG_INDEX),
     selectedOverviewOption: STORED_OVERVIEW_OPTION,
     selectedTipsOption: STORED_TIPS_OPTION,
     isForcedShownOverview: false,

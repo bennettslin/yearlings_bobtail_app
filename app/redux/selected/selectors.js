@@ -1,3 +1,10 @@
+import { createSelector } from "reselect"
+import {
+    getSongIsPrologue,
+    getSongIsEpilogue,
+    getSongIsLogue
+} from "../../api/album/songs"
+
 export const mapSelectedSongIndex = (
     { selectedStore: { selectedSongIndex } }
 ) => selectedSongIndex
@@ -18,9 +25,20 @@ export const mapSelectedSceneIndex = (
     { selectedStore: { selectedSceneIndex } }
 ) => selectedSceneIndex
 
-export const mapIsSelectedLogue = (
-    { selectedStore: { isSelectedLogue } }
-) => isSelectedLogue
+export const mapIsSelectedPrologue = createSelector(
+    mapSelectedSongIndex,
+    selectedSongIndex => getSongIsPrologue(selectedSongIndex)
+)
+
+export const mapIsSelectedEpilogue = createSelector(
+    mapSelectedSongIndex,
+    selectedSongIndex => getSongIsEpilogue(selectedSongIndex)
+)
+
+export const mapIsSelectedLogue = createSelector(
+    mapSelectedSongIndex,
+    selectedSongIndex => getSongIsLogue(selectedSongIndex)
+)
 
 export const mapSelectedTime = (
     { selectedStore: { selectedTime } }

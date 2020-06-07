@@ -16,10 +16,7 @@ import {
     mapIsLyricLogue
 } from '../../../redux/lyric/selectors'
 import { mapSliderVerseIndex } from '../../../redux/slider/selectors'
-import {
-    mapIsVerseBarAbove,
-    mapIsVerseBarBelow
-} from '../../../redux/verseBars/selectors'
+import { mapIsVerseBarShown } from '../../../redux/verseBars/selectors'
 import './style'
 
 const VerseBar = ({
@@ -34,28 +31,18 @@ const VerseBar = ({
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         isLyricLogue = useSelector(mapIsLyricLogue),
         sliderVerseIndex = useSelector(mapSliderVerseIndex),
-        isVerseBarAbove = useSelector(mapIsVerseBarAbove),
-        isVerseBarBelow = useSelector(mapIsVerseBarBelow),
+        isVerseBarShown = useSelector(mapIsVerseBarShown(isAbove)),
 
         // TODO: Make this a selector.
         verseIndex = getCursorIndex(
             sliderVerseIndex,
             activatedVerseIndex,
             lyricVerseIndex
-        ),
-
-        // TODO: Make this a selector.
-        isShownInVerseBar = (
-            isAbove &&
-            isVerseBarAbove
-        ) || (
-            !isAbove &&
-            isVerseBarBelow
         )
 
     const onClick = e => {
         logEvent({ e, componentName: 'VerseBar' })
-        if (isShownInVerseBar) {
+        if (isVerseBarShown) {
             dispatchScrollVerse.current()
         }
     }
@@ -72,7 +59,7 @@ const VerseBar = ({
                         'VerseBar__above' :
                         'VerseBar__below',
 
-                    isShownInVerseBar && 'VerseBar__shown'
+                    isVerseBarShown && 'VerseBar__shown'
                 ),
                 onWheel: handleVerseBarWheel,
                 onClick
@@ -88,14 +75,14 @@ const VerseBar = ({
             >
                 <Transition
                     {...{
-                        in: isShownInVerseBar,
+                        in: isVerseBarShown,
                         timeout: 200
                     }}
                 >
                     <VerseHoc
                         inVerseBar
                         {...{
-                            isShownInVerseBar,
+                            isShownInVerseBar: isVerseBarShown,
                             verseIndex,
                             verseObject: getVerse(
                                 lyricSongIndex,

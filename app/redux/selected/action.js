@@ -1,5 +1,4 @@
 // Actions for song state.
-import { getSongIsLogue } from '../../api/album/songs'
 import { setInStorage } from '../../helpers/storage'
 import {
     hasKey,
@@ -21,8 +20,6 @@ export const updateSelectedStore = payload => {
     } = payload
 
     if (hasKey(selectedSongIndex)) {
-        payload.isSelectedLogue = getSongIsLogue(selectedSongIndex)
-
         setInStorage(SELECTED_SONG_INDEX, selectedSongIndex)
     }
     if (hasKey(selectedVerseIndex)) {

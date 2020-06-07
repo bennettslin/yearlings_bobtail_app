@@ -1,3 +1,5 @@
+import { createSelector } from "reselect"
+
 export const mapIsVerseBarAbove = (
     { verseBarsStore: { isVerseBarAbove } }
 ) => isVerseBarAbove
@@ -5,6 +7,21 @@ export const mapIsVerseBarAbove = (
 export const mapIsVerseBarBelow = (
     { verseBarsStore: { isVerseBarBelow } }
 ) => isVerseBarBelow
+
+export const mapIsVerseBarShown = isAbove => createSelector(
+    mapIsVerseBarAbove,
+    mapIsVerseBarBelow,
+    (
+        isVerseBarAbove,
+        isVerseBarBelow
+    ) => (
+        isAbove &&
+        isVerseBarAbove
+    ) || (
+        !isAbove &&
+        isVerseBarBelow
+    )
+)
 
 export const mapQueuedDetermineVerseBars = (
     { verseBarsStore: { queuedDetermineVerseBars } }
