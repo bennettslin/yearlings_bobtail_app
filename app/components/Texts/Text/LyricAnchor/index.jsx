@@ -117,7 +117,7 @@ const TextLyricAnchor = ({
                         beginsVerse,
                         endsVerse
                     },
-                    sequenceDotsBit: dotsBit,
+                    dotsBit,
                     handleAnchorClick,
 
                     /**

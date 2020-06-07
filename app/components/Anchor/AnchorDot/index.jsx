@@ -11,10 +11,10 @@ import './style'
 const AnchorDot = ({
     isAccessed,
     isSelected,
-    unitDotsBit
+    dotsBit
 
 }) => {
-    const selectedDotKey = useSelector(getMapFirstSelectedDotKey(unitDotsBit))
+    const selectedDotKey = useSelector(getMapFirstSelectedDotKey(dotsBit))
 
     return (
         <>
@@ -48,7 +48,7 @@ const AnchorDot = ({
 AnchorDot.propTypes = {
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
-    unitDotsBit: PropTypes.number.isRequired
+    dotsBit: PropTypes.number.isRequired
 }
 
 export default memo(AnchorDot)

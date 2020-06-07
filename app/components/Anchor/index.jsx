@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import DotSequence from '../DotSequence'
@@ -15,21 +15,20 @@ const Anchor = ({
     isAccessed: isAccessedBeforeDesktop,
     isSelected,
     isDisabled,
-    sequenceDotsBit,
-    unitDotsBit,
+    dotsBit,
     isWikiTextAnchor,
     text,
     textConfig,
     analyticsIdentifier,
     setLyricAnnotationElement,
     handleAnchorClick
+
 }) => {
     const
-        isDotAnchor = Number.isFinite(unitDotsBit),
-        isTextAnchor = Number.isFinite(sequenceDotsBit),
+        isTextAnchor = Boolean(text),
 
         // If in mobile, only show dot sequence if annotation title.
-        showDotSequence = isTextAnchor && (
+        showDotSequence = isTextAnchor && Number.isFinite(dotsBit) && (
             IS_USER_AGENT_DESKTOP || isAnnotationTitle
         ),
 
@@ -37,19 +36,19 @@ const Anchor = ({
          * Don't show access if in mobile, even though access behaviour is
          * still technically possible.
          */
-        isAccessed = isAccessedBeforeDesktop && IS_USER_AGENT_DESKTOP,
+        isAccessed = isAccessedBeforeDesktop && IS_USER_AGENT_DESKTOP
 
-        onClick = e => {
-            if (!isDisabled) {
-                logEvent({
-                    e,
-                    componentName: 'Anchor',
-                    analyticsIdentifier
-                })
+    const onClick = e => {
+        if (!isDisabled) {
+            logEvent({
+                e,
+                componentName: 'Anchor',
+                analyticsIdentifier
+            })
 
-                handleAnchorClick(e)
-            }
+            handleAnchorClick(e)
         }
+    }
 
     return (
         <a
@@ -57,11 +56,8 @@ const Anchor = ({
                 ref: setLyricAnnotationElement,
                 className: cx(
                     'Anchor',
-
                     isAccessed && !isSelected && 'Anchor__accessed',
-
                     !isSelected && 'Anchor__selectable',
-
                     !isWikiTextAnchor && 'Anchor__noWrap',
 
                     // "Child anchor reference letter."
@@ -69,7 +65,7 @@ const Anchor = ({
 
                     isTextAnchor &&
                         getPrefixedDotLetterClassNames(
-                            sequenceDotsBit,
+                            dotsBit,
                             // "Child anchor letter."
                             'ChA'
                         ),
@@ -97,22 +93,11 @@ const Anchor = ({
                     {...{
                         isAccessed,
                         isSelected,
-                        dotsBit: sequenceDotsBit
+                        dotsBit
                     }}
                 />
             )}
-
-            {isDotAnchor && (
-                <AnchorDot
-                    {...{
-                        isAccessed,
-                        isSelected,
-                        unitDotsBit
-                    }}
-                />
-            )}
-
-            {Boolean(text) && (
+            {isTextAnchor ? (
                 <AnchorText
                     {...{
                         isAccessed,
@@ -120,6 +105,14 @@ const Anchor = ({
                         isWikiTextAnchor,
                         text,
                         textConfig
+                    }}
+                />
+            ) : (
+                <AnchorDot
+                    {...{
+                        isAccessed,
+                        isSelected,
+                        dotsBit
                     }}
                 />
             )}
@@ -135,8 +128,7 @@ Anchor.propTypes = {
     isSelected: PropTypes.bool,
     isDisabled: PropTypes.bool,
     isWikiTextAnchor: PropTypes.bool,
-    sequenceDotsBit: PropTypes.number,
-    unitDotsBit: PropTypes.number,
+    dotsBit: PropTypes.number,
     text: PropTypes.any,
     textConfig: PropTypes.any,
     analyticsIdentifier: PropTypes.string,
@@ -144,4 +136,4 @@ Anchor.propTypes = {
     handleAnchorClick: PropTypes.func.isRequired
 }
 
-export default Anchor
+export default memo(Anchor)

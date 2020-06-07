@@ -34,7 +34,7 @@ const AnnotationTitle = ({
             selectedDotKeys
         }),
 
-        annotationDotsBit = getDotsBitForAnnotation(
+        dotsBit = getDotsBitForAnnotation(
             lyricSongIndex,
             annotationIndex
         ),
@@ -84,12 +84,11 @@ const AnnotationTitle = ({
             <Anchor
                 {...{
                     ...isDot ? {
-                        unitDotsBit: annotationDotsBit
                     } : {
                         isAnnotationTitle: true,
-                        text: `\u201c${annotationTitle}\u201d`,
-                        sequenceDotsBit: annotationDotsBit
+                        text: `\u201c${annotationTitle}\u201d`
                     },
+                    dotsBit,
                     isAccessed,
                     isSelected,
                     handleAnchorClick

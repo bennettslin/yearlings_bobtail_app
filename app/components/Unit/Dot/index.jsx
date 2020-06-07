@@ -73,7 +73,7 @@ export const UnitDot = ({
             {/* Scroll to unit dot at bottom, not unit middle. */}
             <Anchor
                 {...{
-                    unitDotsBit: dotsBit,
+                    dotsBit,
                     isSelected,
                     isAccessed,
                     annotationIndex,
