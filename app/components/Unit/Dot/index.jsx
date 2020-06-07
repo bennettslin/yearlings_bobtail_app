@@ -56,21 +56,23 @@ export const UnitDot = ({
 
     return (
         <div
-            className={cx(
-                'UnitDot',
-                'Unit__column',
+            {...{
+                className: cx(
+                    'UnitDot',
+                    'Unit__column',
 
-                // Scroll to dot stanza block upon annotation selection.
-                annotationIndex &&
-                `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
+                    // Scroll to dot stanza block upon annotation selection.
+                    annotationIndex &&
+                    `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
-                // Show and hide dot stanza block in and out based on dot keys.
-                getPrefixedDotLetterClassNames(
-                    dotBit,
-                    // "Child unit dot letter."
-                    'CuD'
+                    // Show and hide dot stanza block in and out based on dot keys.
+                    getPrefixedDotLetterClassNames(
+                        dotBit,
+                        // "Child unit dot letter."
+                        'CuD'
+                    )
                 )
-            )}
+            }}
         >
             {/* Scroll to unit dot at bottom, not unit middle. */}
             <Anchor

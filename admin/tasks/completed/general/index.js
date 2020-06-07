@@ -4772,5 +4772,9 @@ export default [
     {
         taskName: `Scene data refactor.`,
         workedHours: 23
+    },
+    {
+        taskName: `Scrolling investigation.`,
+        workedHours: 3
     }
 ]
