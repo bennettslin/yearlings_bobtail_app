@@ -3,12 +3,24 @@
 @import '../../../scss/constants/colour';
 @import '../../../scss/constants/icon';
 @import '../../../scss/constants/popup';
+@import '../../../scss/constants/shadow';
 @import '../../../scss/constants/transition';
 
 .AnnotationCardContainer {
     position: relative;
     max-height: 0;
     opacity: 0;
+}
+
+.AnnotationCardContainer__shown {
+    max-height: 500px; // Arbitrary large number.
+
+    &:not(:first-child) {
+        margin-top: $padding__annotationCard;
+    }
+
+    opacity: 1;
+    box-shadow: $boxShadow__annotationCard;
 }
 
 .AnnotationCardContainer__animated {

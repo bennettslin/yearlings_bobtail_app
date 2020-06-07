@@ -3,16 +3,16 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import DotSequence from '../../DotSequence'
 import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
-import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
-import './style'
 import {
     getDescriptionForAnnotationCard,
     getDotsBitForAnnotationCard
 } from '../../../api/album/cards'
+import { getMapHasSelectedDot } from '../../../redux/dots/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
+import './style'
 
 const AnnotationCard = ({
     annotationIndex,
@@ -32,23 +32,19 @@ const AnnotationCard = ({
             lyricSongIndex,
             annotationIndex,
             cardIndex
-        )
+        ),
+        isSelectedDot = useSelector(getMapHasSelectedDot(dotsBit))
 
     return (
         <div className={cx(
             'AnnotationCardContainer',
+            isSelectedDot && 'AnnotationCardContainer__shown',
             inCarousel && 'AnnotationCardContainer__animated',
-            getPrefixedDotLetterClassNames(
-                dotsBit,
-
-                // "Child annotation card letter."
-                'CaC'
-            ),
             'ovH'
         )}>
             <div className={cx(
                 'AnnotationCard',
-                !inCarousel && 'AnnotationCard__inPopup',
+                // !inCarousel && 'AnnotationCard__inPopup',
                 description ?
                     'AnnotationCard__isText' :
                     'AnnotationCard__wormhole',
