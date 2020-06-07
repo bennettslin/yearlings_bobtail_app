@@ -3,13 +3,11 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
-import { getStanzaIndexForVerse } from '../../api/album/verses'
 import { mapIsActivated } from '../../redux/activated/selectors'
 import { mapIsPlaying } from '../../redux/audio/selectors'
 import { mapSelectedDotsBit } from '../../redux/dots/selectors'
 import {
     mapIsLyricLogue,
-    mapLyricSongIndex,
     mapLyricVerseIndex,
     mapCursorVerseIndex
 } from '../../redux/lyric/selectors'
@@ -25,7 +23,6 @@ const LogicWrapper = ({ children }) => {
         isPlaying = useSelector(mapIsPlaying),
         selectedDotsBit = useSelector(mapSelectedDotsBit),
         isLyricLogue = useSelector(mapIsLyricLogue),
-        lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         cursorVerseIndex = useSelector(mapCursorVerseIndex),
         isSliderMoving = useSelector(mapIsSliderMoving),
@@ -43,12 +40,6 @@ const LogicWrapper = ({ children }) => {
                     'LogicWrapper',
 
                     !isLyricLogue && [
-
-                        // "Root cursored stanza index."
-                        `RcS${getStanzaIndexForVerse(
-                            lyricSongIndex,
-                            cursorVerseIndex
-                        )}`,
 
                         isLyricsLocked ?
                             // "Root slider (or activated) verse index."
@@ -76,9 +67,7 @@ const LogicWrapper = ({ children }) => {
                             selectedDotsBit,
                             // "Root selected dot letter."
                             'RsD'
-                        ),
-
-                        !selectedDotsBit && 'LW__noSelectedDots'
+                        )
                     ]
                 )
             }}

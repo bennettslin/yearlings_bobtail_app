@@ -3,6 +3,7 @@
 @import '../../../../scss/constants/shadow';
 @import '../../../../scss/constants/slider';
 @import '../../../../scss/constants/transition';
+@import '../../../../scss/constants/zIndex';
 
 $marginX__slider: 4px;
 $marginY__slider: 6px;
@@ -22,6 +23,15 @@ $width__sliderStanzaTab: 9px;
 
     bottom: 0;
     border-top-right-radius: $borderRadius__narrower;
+}
+
+.SliderStanza__cursor {
+    /**
+        * Make higher than all other stanzas. But slider stanzas still need to
+        * be below slider times.
+        */
+        z-index: $zIndex__menuChild;
+        height: $LENGTH_ICON_LARGE;
 }
 
 .SliderStanza__tab {

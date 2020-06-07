@@ -7,25 +7,6 @@ import { getSpaceIfNeeded, getWordsForWikiAnchor } from './helper'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import './style'
 
-const propTypes = {
-    // From parent.
-    isAccessed: PropTypes.bool,
-    isSelected: PropTypes.bool,
-    isWikiTextAnchor: PropTypes.bool,
-    text: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.array,
-        PropTypes.object
-    ]).isRequired,
-    textConfig: PropTypes.shape({
-        isVerseLyric: PropTypes.bool,
-        isItalic: PropTypes.bool,
-        isEmphasis: PropTypes.bool,
-        beginsVerse: PropTypes.bool,
-        endsVerse: PropTypes.bool
-    })
-}
-
 const AnchorText = ({
     isAccessed,
     isSelected,
@@ -102,6 +83,22 @@ const AnchorText = ({
     )
 }
 
-AnchorText.propTypes = propTypes
+AnchorText.propTypes = {
+    isAccessed: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    isWikiTextAnchor: PropTypes.bool,
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array,
+        PropTypes.object
+    ]).isRequired,
+    textConfig: PropTypes.shape({
+        isVerseLyric: PropTypes.bool,
+        isItalic: PropTypes.bool,
+        isEmphasis: PropTypes.bool,
+        beginsVerse: PropTypes.bool,
+        endsVerse: PropTypes.bool
+    })
+}
 
 export default memo(AnchorText)

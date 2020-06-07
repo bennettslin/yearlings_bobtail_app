@@ -8,7 +8,6 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import Unit from '../../Unit'
 import { getUnitIndicesForStanza } from '../../../api/album/stanzas'
-import { getLogicClassNamesForStanza } from '../../../helpers/stanza'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 
@@ -27,8 +26,7 @@ const Stanza = ({
     return (
         <div
             className={cx(
-                'Stanza',
-                getLogicClassNamesForStanza(lyricSongIndex, stanzaIndex)
+                'Stanza'
             )}
         >
             {stanzaUnitIndices.map(unitIndex => (

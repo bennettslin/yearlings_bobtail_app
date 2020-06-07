@@ -1,5 +1,3 @@
-# During work
-
 # Pre-Gatsby bugs
 * Activated scene index is undefined when accessing back to selected verse. Solve by just getting rid of those activated values.
 * Verse scroll key not registered, and doesn't always work.
