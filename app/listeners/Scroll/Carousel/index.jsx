@@ -1,6 +1,6 @@
-import { PureComponent } from 'react'
+import { memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { scrollElementIntoView } from '../helper'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
@@ -16,92 +16,47 @@ import {
     mapDeviceWidthIndex
 } from '../../../redux/viewport/selectors'
 
-const mapStateToProps = state => {
+const ScrollCarouselListener = ({
+    getCarouselScrollChild,
+    getCarouselScrollParent
+
+}) => {
     const
-        isSelectedLogue = mapIsSelectedLogue(state),
-        isCarouselShown = mapIsCarouselShown(state),
-        windowWidth = mapWindowWidth(state),
-        deviceWidthIndex = mapDeviceWidthIndex(state),
-        queuedScrollCarouselLog = mapQueuedScrollCarouselLog(state),
-        queuedScrollCarouselIndex = mapQueuedScrollCarouselIndex(state),
-        queuedScrollCarouselNoDuration = mapQueuedScrollCarouselNoDuration(state)
+        dispatch = useDispatch(),
+        isSelectedLogue = useSelector(mapIsSelectedLogue),
+        isCarouselShown = useSelector(mapIsCarouselShown),
+        windowWidth = useSelector(mapWindowWidth),
+        deviceWidthIndex = useSelector(mapDeviceWidthIndex),
+        queuedScrollCarouselLog = useSelector(mapQueuedScrollCarouselLog),
+        queuedScrollCarouselIndex = useSelector(mapQueuedScrollCarouselIndex),
+        queuedScrollCarouselNoDuration = useSelector(mapQueuedScrollCarouselNoDuration)
 
-    return {
-        queuedScrollCarouselLog,
-        queuedScrollCarouselIndex,
-        queuedScrollCarouselNoDuration,
-        isCarouselShown,
-        deviceWidthIndex,
-        windowWidth,
-        isSelectedLogue
-    }
-}
+    useEffect(() => {
+        // Only scroll if carousel is shown.
+        if (queuedScrollCarouselLog && isCarouselShown) {
+            scrollElementIntoView({
+                isCarousel: true,
+                log: queuedScrollCarouselLog,
+                scrollClass: CAROUSEL_SCROLL,
+                scrollParent: getCarouselScrollParent(),
+                scrollChild: getCarouselScrollChild(queuedScrollCarouselIndex),
+                index: queuedScrollCarouselIndex,
+                noDuration: queuedScrollCarouselNoDuration,
+                deviceWidthIndex,
+                windowWidth,
+                isSelectedLogue
+            })
 
-class ScrollCarouselListener extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        queuedScrollCarouselLog: PropTypes.string.isRequired,
-        queuedScrollCarouselIndex: PropTypes.number.isRequired,
-        queuedScrollCarouselNoDuration: PropTypes.bool.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
-        deviceWidthIndex: PropTypes.number.isRequired,
-        windowWidth: PropTypes.number.isRequired,
-        updateScrollCarouselStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getCarouselScrollChild: PropTypes.func.isRequired,
-        getCarouselScrollParent: PropTypes.func.isRequired
-    }
-
-    componentDidUpdate(prevProps) {
-        this._scrollCarousel(prevProps)
-    }
-
-    _scrollCarousel(prevProps) {
-        const
-            { queuedScrollCarouselLog } = this.props,
-            { queuedScrollCarouselLog: prevCarouselLog } = prevProps
-
-        if (queuedScrollCarouselLog && !prevCarouselLog) {
-            const { isCarouselShown } = this.props
-
-            // Only scroll if carousel is shown.
-            if (isCarouselShown) {
-                const {
-                    queuedScrollCarouselLog,
-                    queuedScrollCarouselIndex,
-                    queuedScrollCarouselNoDuration,
-                    deviceWidthIndex,
-                    windowWidth,
-                    isSelectedLogue
-                } = this.props
-
-                scrollElementIntoView({
-                    isCarousel: true,
-                    log: queuedScrollCarouselLog,
-                    scrollClass: CAROUSEL_SCROLL,
-                    scrollParent: this.props.getCarouselScrollParent(),
-                    scrollChild: this.props.getCarouselScrollChild(queuedScrollCarouselIndex),
-                    index: queuedScrollCarouselIndex,
-                    noDuration: queuedScrollCarouselNoDuration,
-                    deviceWidthIndex,
-                    windowWidth,
-                    isSelectedLogue
-                })
-            }
-
-            this.props.updateScrollCarouselStore()
+            dispatch(updateScrollCarouselStore())
         }
-    }
+    }, [queuedScrollCarouselLog])
 
-    render() {
-        return null
-    }
+    return null
 }
 
-export default connect(
-    mapStateToProps,
-    { updateScrollCarouselStore }
-)(ScrollCarouselListener)
+ScrollCarouselListener.propTypes = {
+    getCarouselScrollChild: PropTypes.func.isRequired,
+    getCarouselScrollParent: PropTypes.func.isRequired
+}
+
+export default memo(ScrollCarouselListener)
