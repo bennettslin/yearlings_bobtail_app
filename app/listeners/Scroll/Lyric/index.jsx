@@ -4,10 +4,7 @@ import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { mapIsPlaying } from '../../../redux/audio/selectors'
-import {
-    scrollElementIntoView,
-    setChildElement
-} from '../helper'
+import { scrollElementIntoView } from '../helper'
 import {
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
@@ -90,22 +87,10 @@ class ScrollLyricListener extends PureComponent {
         updateScrollLyricStore: PropTypes.func.isRequired,
 
         // From parent.
-        getRefs: PropTypes.func.isRequired,
-        getLyricScrollParent: PropTypes.func.isRequired
+        getLyricScrollParent: PropTypes.func.isRequired,
+        getScrollAnnotationChild: PropTypes.func.isRequired,
+        getScrollVerseChild: PropTypes.func.isRequired
     }
-
-    carouselAnnotationElements = {}
-
-    componentDidMount() {
-        this.props.getRefs({
-            setVerseChild: this.setVerseChild,
-            setLyricAnnotationChild: this.setLyricAnnotationChild,
-            getVerseChild: this.getVerseChild
-        })
-    }
-
-    verseChildren = {}
-    lyricAnnotationChildren = {}
 
     componentDidUpdate(prevProps) {
         this._scrollLyric(prevProps)
@@ -179,7 +164,7 @@ class ScrollLyricListener extends PureComponent {
                     log: queuedScrollLyricLog,
                     scrollClass,
                     scrollParent: this.props.getLyricScrollParent(),
-                    scrollChildren: this._getScrollChildren(scrollClass),
+                    scrollChild: this._getScrollChild(scrollClass, index),
                     index,
                     noDuration: queuedScrollLyricNoDuration,
                     deviceWidthIndex,
@@ -205,36 +190,12 @@ class ScrollLyricListener extends PureComponent {
         this.props.updateEntranceStore({ didSceneScrollExit: true })
     }
 
-    _getScrollChildren(scrollClass) {
+    _getScrollChild(scrollClass, index) {
         switch (scrollClass) {
             case LYRIC_ANNOTATION_SCROLL:
-                return this.lyricAnnotationChildren
+                return this.props.getScrollAnnotationChild(index)
             case VERSE_SCROLL:
-                return this.verseChildren
-        }
-    }
-
-    getVerseChild = (verseIndex) => {
-        return this.verseChildren[verseIndex]
-    }
-
-    setVerseChild = ({ node, index }) => {
-        if (!this.props.isSelectedLogue) {
-            setChildElement({
-                node,
-                index,
-                scrollElements: this.verseChildren
-            })
-        }
-    }
-
-    setLyricAnnotationChild = ({ node, index }) => {
-        if (!this.props.isSelectedLogue) {
-            setChildElement({
-                node,
-                index,
-                scrollElements: this.lyricAnnotationChildren
-            })
+                return this.props.getScrollVerseChild(index)
         }
     }
 

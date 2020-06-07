@@ -43,6 +43,9 @@ class LyricScroll extends PureComponent {
         getRefs: PropTypes.func.isRequired
     }
 
+    scrollAnnotationChildren = {}
+    scrollVerseChildren = {}
+
     componentDidMount() {
         this.props.getRefs({
             handleVerseBarWheel: this.handleVerseBarWheel
@@ -53,20 +56,8 @@ class LyricScroll extends PureComponent {
         this.dispatchVerseBarWheel(e, this.lyricElement)
     }
 
-    _getVerseElement = (verseIndex) => {
-        /**
-         * Allow verse bar handler to access verse elements stored in scroll
-         * lyric listener.
-         */
-        return this.getVerseChild(verseIndex)
-    }
-
     _getLyricElement = () => {
         return this.lyricElement
-    }
-
-    _setVerseElement = payload => {
-        return this.setVerseChild(payload)
     }
 
     _setLyricElement = node => {
@@ -80,10 +71,6 @@ class LyricScroll extends PureComponent {
     getLyricScrollParent = () => (
         this.lyricElement
     )
-
-    _setLyricAnnotationElement = payload => {
-        return this.setLyricAnnotationChild(payload)
-    }
 
     _handleDetermineVerseBars = () => {
         this.dispatchVerseBarsTimeout()
@@ -118,6 +105,22 @@ class LyricScroll extends PureComponent {
         this.dispatchVerseBarsTimeout = dispatch
     }
 
+    _setScrollAnnotationChild = ({ node, index }) => {
+        this.scrollAnnotationChildren[index] = node
+    }
+
+    _setScrollVerseChild = ({ node, index }) => {
+        this.scrollVerseChildren[index] = node
+    }
+
+    getScrollAnnotationChild = index => (
+        this.scrollAnnotationChildren[index]
+    )
+
+    getScrollVerseChild = index => (
+        this.scrollVerseChildren[index]
+    )
+
     render() {
         const {
             canLyricCarouselUpdate
@@ -127,7 +130,9 @@ class LyricScroll extends PureComponent {
             <>
                 <ScrollLyricListener {...{
                     getRefs: this._getRefs,
-                    getLyricScrollParent: this.getLyricScrollParent
+                    getLyricScrollParent: this.getLyricScrollParent,
+                    getScrollAnnotationChild: this.getScrollAnnotationChild,
+                    getScrollVerseChild: this.getScrollVerseChild
                 }} />
                 <Transition
                     {...{
@@ -160,8 +165,8 @@ class LyricScroll extends PureComponent {
                         <Stanzas
                             {...{
                                 setLyricAnnotationChild:
-                                    this._setLyricAnnotationElement,
-                                setVerseChild: this._setVerseElement
+                                    this._setScrollAnnotationChild,
+                                setVerseChild: this._setScrollVerseChild
                             }}
                         />
                     </div>
@@ -175,7 +180,7 @@ class LyricScroll extends PureComponent {
                 <VerseBarHandler
                     {...{
                         ref: this.getDispatchVerseBarsTimeout,
-                        getVerseChild: this._getVerseElement
+                        getVerseChild: this.getScrollVerseChild
                     }}
                 />
                 <LyricWheelDispatcher

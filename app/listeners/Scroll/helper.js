@@ -130,17 +130,3 @@ export const scrollElementIntoView = ({
         }, callback)
     }
 }
-
-export const setChildElement = ({
-    node,
-    index,
-    scrollElements
-
-}) => {
-    if (node) {
-        scrollElements[index] = node
-
-    } else {
-        delete scrollElements[index]
-    }
-}

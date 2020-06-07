@@ -8,31 +8,18 @@ import Transition from 'react-transition-group/Transition'
 import ScrollCarouselListener from '../../../listeners/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
 import { getAnnotationIndices } from '../../../api/album/annotations'
-import {
-    mapIsAccessedIndexedAnchorShown,
-    mapAccessedAnnotationIndex
-} from '../../../redux/access/selectors'
 import { mapCanLyricCarouselUpdate } from '../../../redux/entrance/selectors'
-import {
-    mapLyricSongIndex,
-    mapLyricAnnotationIndex
-} from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 
 const mapStateToProps = state => {
     const
-        isAccessedIndexedAnchorShown = mapIsAccessedIndexedAnchorShown(state),
-        accessedAnnotationIndex = mapAccessedAnnotationIndex(state),
         canLyricCarouselUpdate = mapCanLyricCarouselUpdate(state),
-        lyricSongIndex = mapLyricSongIndex(state),
-        lyricAnnotationIndex = mapLyricAnnotationIndex(state)
+        lyricSongIndex = mapLyricSongIndex(state)
 
     return {
         canLyricCarouselUpdate,
-        lyricSongIndex,
-        lyricAnnotationIndex,
-        isAccessedIndexedAnchorShown,
-        accessedAnnotationIndex
+        lyricSongIndex
     }
 }
 
@@ -42,9 +29,6 @@ class CarouselScroll extends PureComponent {
         // Through Redux.
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
-        lyricAnnotationIndex: PropTypes.number.isRequired,
-        accessedAnnotationIndex: PropTypes.number.isRequired,
-        isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
         updateEntranceStore: PropTypes.func.isRequired
     }
 
@@ -78,10 +62,7 @@ class CarouselScroll extends PureComponent {
     render() {
         const {
             canLyricCarouselUpdate,
-            lyricSongIndex,
-            lyricAnnotationIndex,
-            accessedAnnotationIndex,
-            isAccessedIndexedAnchorShown
+            lyricSongIndex
         } = this.props
 
         return (
@@ -103,23 +84,13 @@ class CarouselScroll extends PureComponent {
                         getCarouselScrollChild: this.getCarouselScrollChild
                     }} />
                     {getAnnotationIndices(lyricSongIndex).map(index => {
-
-                        const annotationIndex = index + 1,
-
-                            isAccessed =
-                                isAccessedIndexedAnchorShown &&
-                                annotationIndex === accessedAnnotationIndex,
-
-                            isSelected =
-                                annotationIndex === lyricAnnotationIndex
+                        const annotationIndex = index + 1
 
                         return (
                             <CarouselAnnotation
                                 {...{
                                     key: index,
                                     annotationIndex,
-                                    isAccessed,
-                                    isSelected,
                                     setCarouselAnnotationChild: this._setCarouselScrollChild
                                 }}
                             />
