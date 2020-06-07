@@ -9,10 +9,6 @@ const STORED_DOTS_BIT =
 export const DOTS_DEFAULTS = {
     selectedDotsBit: STORED_DOTS_BIT,
 
-    /**
-     * Only reference and wormhole dots are needed in store, but add them all
-     * for dev clarity.
-     */
     ...getObjectFromBit({
         keysList: ORDERED_DOT_KEYS,
         bit: STORED_DOTS_BIT

@@ -5,40 +5,41 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
 import Dot from '../../Dot'
+import { getMapIsSelectedDot } from '../../../redux/dots/selectors'
 import './style'
-
-const propTypes = {
-    dotKey: PropTypes.string.isRequired,
-    inAnnotationCard: PropTypes.bool,
-    inTextAnchor: PropTypes.bool
-}
 
 const SequenceDot = ({
     dotKey,
     inAnnotationCard,
     inTextAnchor,
-
     ...other
-}) => (
-    <Dot
-        isSequenceDot
-        {...{
-            className: cx(
-                'SequenceDot',
 
-                // "Child dot sequence letter."
-                `ChQ${dotKey[0]}`,
+}) => {
+    const isDotShown = useSelector(getMapIsSelectedDot(dotKey))
 
-                inTextAnchor && 'SequenceDot__textAnchor',
-                inAnnotationCard && 'SequenceDot__annotationCard'
-            ),
-            dotKey,
-            ...other
-        }}
-    />
-)
+    return (
+        <Dot
+            isSequenceDot
+            {...{
+                className: cx(
+                    'SequenceDot',
+                    isDotShown && 'SequenceDot__shown',
+                    inTextAnchor && 'SequenceDot__textAnchor',
+                    inAnnotationCard && 'SequenceDot__annotationCard'
+                ),
+                dotKey,
+                ...other
+            }}
+        />
+    )
+}
 
-SequenceDot.propTypes = propTypes
+SequenceDot.propTypes = {
+    dotKey: PropTypes.string.isRequired,
+    inAnnotationCard: PropTypes.bool,
+    inTextAnchor: PropTypes.bool
+}
 
 export default memo(SequenceDot)

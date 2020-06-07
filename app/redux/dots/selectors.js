@@ -25,6 +25,10 @@ export const getMapHasSelectedDot = dotsBit => createSelector(
     firstDotKey => Boolean(firstDotKey)
 )
 
+export const getMapIsSelectedDot = dotKey => (
+    { dotsStore: { [dotKey]: value } }
+) => value
+
 export const mapReferenceDot = (
     { dotsStore: { reference } }
 ) => reference

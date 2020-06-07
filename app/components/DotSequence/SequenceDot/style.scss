@@ -15,19 +15,23 @@
     }
 }
 
+.SequenceDot__shown {
+    opacity: 1;
+
+    &.SequenceDot__annotationCard {
+        width: $length__annotationDot;
+    }
+    &.SequenceDot__textAnchor {
+        width: $length__lyricSequenceDot;
+    }
+}
+
 .SequenceDot__annotationCard {
     height: $length__annotationDot;
 }
 
 .SequenceDot__textAnchor {
     height: $length__lyricSequenceDot;
-
-    // .Anchor__accessed
-    // &,
-    // .Anchor__selectable:hover
-    // & {
-    //     animation: bounceHover $transitionDuration__slow;
-    // }
 
     // "Root accessed letter Enter."
     .PaLEnter
