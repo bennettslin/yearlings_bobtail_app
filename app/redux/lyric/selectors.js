@@ -16,7 +16,7 @@ export const mapIsLyricLogue = (
     { lyricStore: { isLyricLogue } }
 ) => isLyricLogue
 
-export const mapIsSelectedLyricAnnotation = annotationIndex => (
+export const getMapIsSelectedLyricAnnotation = annotationIndex => (
     createSelector(
         mapLyricAnnotationIndex,
         lyricAnnotationIndex => (

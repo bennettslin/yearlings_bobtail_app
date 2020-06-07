@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from './Svg'
-import { mapPresenceFloorZIndex } from '../../redux/scene/selectors'
+import { getMapPresenceFloorZIndex } from '../../redux/scene/selectors'
 import './style'
 
 const Presence = ({
@@ -15,7 +15,7 @@ const Presence = ({
 
 }) => {
     const
-        floorZIndex = useSelector(mapPresenceFloorZIndex({
+        floorZIndex = useSelector(getMapPresenceFloorZIndex({
             yIndex,
             presenceType,
             actorKey,

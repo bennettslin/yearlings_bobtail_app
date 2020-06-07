@@ -8,10 +8,10 @@ import { getDotBitForAnnotation } from '../../../api/album/annotations'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 import { getCarouselAnnotationData } from './helper'
-import { mapIsAnnotationAccessed } from '../../../redux/access/selectors'
+import { getMapIsAnnotationAccessed } from '../../../redux/access/selectors'
 import {
     mapLyricSongIndex,
-    mapIsSelectedLyricAnnotation
+    getMapIsSelectedLyricAnnotation
 } from '../../../redux/lyric/selectors'
 import './style'
 
@@ -21,8 +21,8 @@ const CarouselAnnotation = ({
 
 }) => {
     const
-        isAccessed = useSelector(mapIsAnnotationAccessed(annotationIndex)),
-        isSelected = useSelector(mapIsSelectedLyricAnnotation(annotationIndex)),
+        isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
+        isSelected = useSelector(getMapIsSelectedLyricAnnotation(annotationIndex)),
         lyricSongIndex = useSelector(mapLyricSongIndex),
 
         // TODO: Make this a selector.

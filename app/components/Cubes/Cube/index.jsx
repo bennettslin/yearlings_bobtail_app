@@ -13,10 +13,10 @@ import {
     FLOOR
 } from '../../../constants/scene/cubes'
 import {
-    mapCubeCeilingHsla,
-    mapCubeCeilingZIndex,
-    mapCubeFloorHsla,
-    mapCubeFloorZIndex,
+    getMapCubeCeilingHsla,
+    getMapCubeCeilingZIndex,
+    getMapCubeFloorHsla,
+    getMapCubeFloorZIndex,
     mapCubeSlantDirection
 } from '../../../redux/scene/selectors'
 
@@ -26,10 +26,10 @@ const Cube = ({
 
 }) => {
     const
-        ceilingHsla = useSelector(mapCubeCeilingHsla(yIndex, xIndex)),
-        ceilingZIndex = useSelector(mapCubeCeilingZIndex(yIndex, xIndex)),
-        floorHsla = useSelector(mapCubeFloorHsla(yIndex, xIndex)),
-        floorZIndex = useSelector(mapCubeFloorZIndex(yIndex, xIndex)),
+        ceilingHsla = useSelector(getMapCubeCeilingHsla(yIndex, xIndex)),
+        ceilingZIndex = useSelector(getMapCubeCeilingZIndex(yIndex, xIndex)),
+        floorHsla = useSelector(getMapCubeFloorHsla(yIndex, xIndex)),
+        floorZIndex = useSelector(getMapCubeFloorZIndex(yIndex, xIndex)),
         slantDirection = useSelector(mapCubeSlantDirection)
 
     return (

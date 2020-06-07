@@ -25,7 +25,7 @@ const mapSceneCubesKey = (
     { sceneStore: { sceneCubesKey } }
 ) => sceneCubesKey || DEFAULT_STAGE_KEY
 
-export const mapCubeCeilingHsla = (yIndex, xIndex) => createSelector(
+export const getMapCubeCeilingHsla = (yIndex, xIndex) => createSelector(
     mapSceneCubesKey,
     sceneCubesKey => getCeilingHslaForCube(
         sceneCubesKey,
@@ -34,7 +34,7 @@ export const mapCubeCeilingHsla = (yIndex, xIndex) => createSelector(
     )
 )
 
-export const mapCubeCeilingZIndex = (yIndex, xIndex) => createSelector(
+export const getMapCubeCeilingZIndex = (yIndex, xIndex) => createSelector(
     mapSceneCubesKey,
     sceneCubesKey => getCeilingZIndexForCube(
         sceneCubesKey,
@@ -43,7 +43,7 @@ export const mapCubeCeilingZIndex = (yIndex, xIndex) => createSelector(
     )
 )
 
-export const mapCubeFloorHsla = (yIndex, xIndex) => createSelector(
+export const getMapCubeFloorHsla = (yIndex, xIndex) => createSelector(
     mapSceneCubesKey,
     sceneCubesKey => getFloorHslaForCube(
         sceneCubesKey,
@@ -52,7 +52,7 @@ export const mapCubeFloorHsla = (yIndex, xIndex) => createSelector(
     )
 )
 
-export const mapCubeFloorZIndex = (yIndex, xIndex) => createSelector(
+export const getMapCubeFloorZIndex = (yIndex, xIndex) => createSelector(
     mapSceneCubesKey,
     sceneCubesKey => getFloorZIndexForCube(
         sceneCubesKey,
@@ -97,7 +97,7 @@ const mapIsPresenceShownInScene = ({
     })
 )
 
-export const mapPresenceFloorZIndex = ({
+export const getMapPresenceFloorZIndex = ({
     // This yIndex determines whether to render in a given layer.
     yIndex,
     presenceType,
@@ -123,7 +123,7 @@ export const mapPresenceFloorZIndex = ({
             actorKey,
             presenceKey
         }),
-        mapCubeFloorZIndex(
+        getMapCubeFloorZIndex(
             arrangedYIndex,
             xIndex
         ),

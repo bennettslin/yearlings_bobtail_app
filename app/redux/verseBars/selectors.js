@@ -8,7 +8,7 @@ export const mapIsVerseBarBelow = (
     { verseBarsStore: { isVerseBarBelow } }
 ) => isVerseBarBelow
 
-export const mapIsVerseBarShown = isAbove => createSelector(
+export const getMapIsVerseBarShown = isAbove => createSelector(
     mapIsVerseBarAbove,
     mapIsVerseBarBelow,
     (

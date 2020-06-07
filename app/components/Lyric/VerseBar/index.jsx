@@ -16,7 +16,7 @@ import {
     mapIsLyricLogue
 } from '../../../redux/lyric/selectors'
 import { mapSliderVerseIndex } from '../../../redux/slider/selectors'
-import { mapIsVerseBarShown } from '../../../redux/verseBars/selectors'
+import { getMapIsVerseBarShown } from '../../../redux/verseBars/selectors'
 import './style'
 
 const VerseBar = ({
@@ -31,7 +31,7 @@ const VerseBar = ({
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         isLyricLogue = useSelector(mapIsLyricLogue),
         sliderVerseIndex = useSelector(mapSliderVerseIndex),
-        isVerseBarShown = useSelector(mapIsVerseBarShown(isAbove)),
+        isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove)),
 
         // TODO: Make this a selector.
         verseIndex = getCursorIndex(
