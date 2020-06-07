@@ -75,6 +75,7 @@ export const scrollElementIntoView = ({
     scrollClass,
     scrollParent,
     scrollChildren,
+    scrollChild,
     index,
     noDuration,
     deviceWidthIndex,
@@ -90,7 +91,7 @@ export const scrollElementIntoView = ({
 
     const
         time = noDuration ? 0 : 500,
-        scrollElement = scrollChildren[index]
+        scrollElement = scrollChild ? scrollChild : scrollChildren[index]
 
     let element = scrollElement
 

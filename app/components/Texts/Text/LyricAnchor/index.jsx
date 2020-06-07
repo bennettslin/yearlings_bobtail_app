@@ -29,7 +29,7 @@ const TextLyricAnchor = ({
     isEmphasis,
     beginsVerse,
     endsVerse,
-    setLyricAnnotationElement
+    setLyricAnnotationChild
 
 }) => {
     const
@@ -73,16 +73,16 @@ const TextLyricAnchor = ({
         }
     }
 
-    const setLyricAnnotationForAnchor = node => {
-        // This method is only passed down by stanza, not carousel annotation.
-        if (setLyricAnnotationElement) {
-            setLyricAnnotationElement({
+    const setLyricAnnotationElement = node => {
+        if (node) {
+            setLyricAnnotationChild({
                 node,
                 index: annotationIndex
             })
         }
     }
 
+    // TODO: Make this a selector.
     if (isAccessedIndexedAnchorShown) {
         if (lyricAnnotationIndex) {
             isAccessed =
@@ -102,8 +102,6 @@ const TextLyricAnchor = ({
             {' '}
             <Anchor
                 {...{
-                    setLyricAnnotationElement:
-                        setLyricAnnotationForAnchor,
                     className: cx(
                         annotationIndex &&
                             `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
@@ -122,7 +120,15 @@ const TextLyricAnchor = ({
                         endsVerse
                     },
                     sequenceDotBit: dotBit,
-                    handleAnchorClick
+                    handleAnchorClick,
+
+                    /**
+                     * This method is only passed down by stanza, not carousel
+                     * annotation.
+                     */
+                    ...setLyricAnnotationChild && {
+                        setLyricAnnotationElement
+                    }
                 }}
             />
             {isWikiTextAnchor && (
@@ -150,7 +156,7 @@ TextLyricAnchor.propTypes = {
     beginsVerse: PropTypes.bool,
     endsVerse: PropTypes.bool,
     dotBit: PropTypes.number,
-    setLyricAnnotationElement: PropTypes.func,
+    setLyricAnnotationChild: PropTypes.func,
     handleAnchorClick: PropTypes.func
 }
 

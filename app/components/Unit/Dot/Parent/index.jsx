@@ -7,7 +7,7 @@ import { UnitDot, propTypes } from '..'
 
 const UnitDotParent = ({
     unitIndex,
-    setLyricAnnotationElement
+    setLyricAnnotationChild
 
 }) => {
     const
@@ -18,7 +18,7 @@ const UnitDotParent = ({
         <UnitDot
             {...{
                 unitIndex,
-                setLyricAnnotationElement
+                setLyricAnnotationChild
             }}
         />
     )

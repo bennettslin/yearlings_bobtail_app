@@ -2,10 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
-import {
-    scrollElementIntoView,
-    setChildElement
-} from '../helper'
+import { scrollElementIntoView } from '../helper'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import {
     mapQueuedScrollCarouselLog,
@@ -54,16 +51,8 @@ class ScrollCarouselListener extends PureComponent {
         updateScrollCarouselStore: PropTypes.func.isRequired,
 
         // From parent.
-        getRefs: PropTypes.func.isRequired,
+        getCarouselScrollChild: PropTypes.func.isRequired,
         getCarouselScrollParent: PropTypes.func.isRequired
-    }
-
-    carouselAnnotationElements = {}
-
-    componentDidMount() {
-        this.props.getRefs({
-            setCarouselAnnotationElement: this.setCarouselAnnotationElement
-        })
     }
 
     componentDidUpdate(prevProps) {
@@ -94,7 +83,7 @@ class ScrollCarouselListener extends PureComponent {
                     log: queuedScrollCarouselLog,
                     scrollClass: CAROUSEL_SCROLL,
                     scrollParent: this.props.getCarouselScrollParent(),
-                    scrollChildren: this.carouselAnnotationElements,
+                    scrollChild: this.props.getCarouselScrollChild(queuedScrollCarouselIndex),
                     index: queuedScrollCarouselIndex,
                     noDuration: queuedScrollCarouselNoDuration,
                     deviceWidthIndex,
@@ -104,16 +93,6 @@ class ScrollCarouselListener extends PureComponent {
             }
 
             this.props.updateScrollCarouselStore()
-        }
-    }
-
-    setCarouselAnnotationElement = ({ node, index }) => {
-        if (!this.props.isSelectedLogue) {
-            setChildElement({
-                node,
-                index,
-                scrollElements: this.carouselAnnotationElements
-            })
         }
     }
 

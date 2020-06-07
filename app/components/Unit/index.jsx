@@ -26,7 +26,7 @@ const Unit = ({
 
 }) => {
     const
-        { setLyricAnnotationElement } = other,
+        { setLyricAnnotationChild } = other,
         lyricSongIndex = useSelector(mapLyricSongIndex),
         unitVerseIndices = getVerseIndicesForUnit(
             lyricSongIndex, unitIndex
@@ -99,7 +99,7 @@ const Unit = ({
             <UnitDot
                 {...{
                     unitIndex,
-                    setLyricAnnotationElement
+                    setLyricAnnotationChild
                 }}
             />
         </div>

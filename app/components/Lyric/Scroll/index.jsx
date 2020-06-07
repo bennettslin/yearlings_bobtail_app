@@ -58,7 +58,7 @@ class LyricScroll extends PureComponent {
          * Allow verse bar handler to access verse elements stored in scroll
          * lyric listener.
          */
-        return this.getVerseElement(verseIndex)
+        return this.getVerseChild(verseIndex)
     }
 
     _getLyricElement = () => {
@@ -66,7 +66,7 @@ class LyricScroll extends PureComponent {
     }
 
     _setVerseElement = payload => {
-        return this.setVerseElement(payload)
+        return this.setVerseChild(payload)
     }
 
     _setLyricElement = node => {
@@ -82,7 +82,7 @@ class LyricScroll extends PureComponent {
     )
 
     _setLyricAnnotationElement = payload => {
-        return this.setLyricAnnotationElement(payload)
+        return this.setLyricAnnotationChild(payload)
     }
 
     _handleDetermineVerseBars = () => {
@@ -159,9 +159,9 @@ class LyricScroll extends PureComponent {
                     >
                         <Stanzas
                             {...{
-                                setLyricAnnotationElement:
+                                setLyricAnnotationChild:
                                     this._setLyricAnnotationElement,
-                                setVerseRef: this._setVerseElement
+                                setVerseChild: this._setVerseElement
                             }}
                         />
                     </div>
@@ -175,7 +175,7 @@ class LyricScroll extends PureComponent {
                 <VerseBarHandler
                     {...{
                         ref: this.getDispatchVerseBarsTimeout,
-                        getVerseElement: this._getVerseElement
+                        getVerseChild: this._getVerseElement
                     }}
                 />
                 <LyricWheelDispatcher

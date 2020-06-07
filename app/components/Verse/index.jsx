@@ -18,10 +18,6 @@ const mapStateToProps = state => {
     }
 }
 
-/*************
- * CONTAINER *
- *************/
-
 class Verse extends PureComponent {
 
     static defaultProps = {
@@ -34,10 +30,13 @@ class Verse extends PureComponent {
         dispatch: PropTypes.func.isRequired,
 
         // From parent.
+        logicSelectors: PropTypes.string,
+        verseClassName: PropTypes.string,
         verseObject: PropTypes.object.isRequired,
         verseIndex: PropTypes.number,
         inVerseBar: PropTypes.bool.isRequired,
-        setVerseRef: PropTypes.func
+        setVerseChild: PropTypes.func,
+        children: PropTypes.node
     }
 
     _handleInteractivatableClick = e => {
@@ -61,9 +60,9 @@ class Verse extends PureComponent {
         return Number.isFinite(verseIndex) && !inVerseBar
     }
 
-    setVerseRef = node => {
+    setVerseElement = node => {
         if (this.getIsInteractable()) {
-            this.props.setVerseRef({
+            this.props.setVerseChild({
                 node,
                 index: this.props.verseIndex
             })
@@ -83,15 +82,22 @@ class Verse extends PureComponent {
     render() {
         const {
                 /* eslint-disable no-unused-vars */
+                logicSelectors,
+                verseClassName,
                 lyricSongIndex,
-                setVerseRef,
+                setVerseChild,
                 dispatch,
+                children,
                 /* eslint-enable no-unused-vars */
 
                 ...other
             } = this.props,
 
-            { verseObject } = other,
+            {
+                inVerseBar,
+                verseIndex,
+                verseObject
+            } = other,
 
             {
                 lyric,
@@ -102,81 +108,42 @@ class Verse extends PureComponent {
 
         return (
             <>
-                <VerseView {...other}
+                <div
                     {...{
-                        setRef: this.setVerseRef,
-                        isInteractable,
-                        isDoublespeakerLine: !lyric && !lyricCentre,
-                        handleInteractivatableClick: this._handleInteractivatableClick
+                        key: isInteractable ? verseIndex : undefined,
+                        ref: this.setVerseElement,
+                        className: cx(
+                            'Verse',
+
+                            inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
+
+                            Number.isFinite(verseIndex) &&
+                                `${VERSE_SCROLL}__${verseIndex}`,
+
+                            // title, even, odd, inSide.
+                            verseClassName && `verse__${verseClassName}`,
+                            isInteractable && 'Verse__interactable',
+
+                            'verseColour__hoverParent',
+
+                            logicSelectors
+                        ),
+                        onClick: this._handleInteractivatableClick
                     }}
-                />
+                >
+                    <VerseLines
+                        {...{
+                            isDoublespeakerLine: !lyric && !lyricCentre,
+                            ...other
+                        }}
+                    />
+                    {children}
+                </div>
                 <ActivatedVerseDispatcher {...{ ref: this.getActivateVerse }} />
                 <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
             </>
         )
     }
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const VerseView = memo(({
-    // From controller.
-    logicSelectors,
-    verseClassName,
-    isInteractable,
-    handleInteractivatableClick,
-    setRef,
-    children,
-    ...other
-
-}) => {
-    const {
-        inVerseBar,
-        verseIndex
-    } = other
-
-    return (
-        <div
-            {...{
-                key: isInteractable ? verseIndex : undefined,
-                ref: setRef,
-                className: cx(
-                    'Verse',
-
-                    inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
-
-                    Number.isFinite(verseIndex) &&
-                        `${VERSE_SCROLL}__${verseIndex}`,
-
-                    // title, even, odd, inSide.
-                    verseClassName && `verse__${verseClassName}`,
-                    isInteractable && 'Verse__interactable',
-
-                    'verseColour__hoverParent',
-
-                    logicSelectors
-                ),
-                onClick: handleInteractivatableClick
-            }}
-        >
-            <VerseLines {...other} />
-            {children}
-        </div>
-    )
-})
-
-VerseView.propTypes = {
-// From parent.
-    logicSelectors: PropTypes.string,
-    verseClassName: PropTypes.string,
-    verseIndex: PropTypes.number,
-    inVerseBar: PropTypes.bool.isRequired,
-    isInteractable: PropTypes.bool.isRequired,
-    handleInteractivatableClick: PropTypes.func,
-    setRef: PropTypes.func,
-    children: PropTypes.any
 }
 
 export default connect(mapStateToProps)(Verse)

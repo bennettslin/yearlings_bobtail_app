@@ -21,7 +21,7 @@ import './style'
 
 export const UnitDot = ({
     unitIndex,
-    setLyricAnnotationElement
+    setLyricAnnotationChild
 
 }) => {
     const
@@ -47,11 +47,13 @@ export const UnitDot = ({
         return true
     }
 
-    const setAnnotationForUnit = node => {
-        setLyricAnnotationElement({
-            node,
-            index: annotationIndex
-        })
+    const setLyricAnnotationElement = node => {
+        if (node) {
+            setLyricAnnotationChild({
+                node,
+                index: annotationIndex
+            })
+        }
     }
 
     return (
@@ -82,7 +84,7 @@ export const UnitDot = ({
                     isAccessed,
                     annotationIndex,
                     handleAnchorClick,
-                    setLyricAnnotationElement: setAnnotationForUnit
+                    setLyricAnnotationElement
                 }}
             />
         </div>
@@ -91,7 +93,7 @@ export const UnitDot = ({
 
 export const propTypes = {
     unitIndex: PropTypes.number.isRequired,
-    setLyricAnnotationElement: PropTypes.func.isRequired
+    setLyricAnnotationChild: PropTypes.func.isRequired
 }
 
 UnitDot.propTypes = propTypes

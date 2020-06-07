@@ -15,7 +15,7 @@ const CarouselAnnotation = ({
     isAccessed,
     isSelected,
     annotationIndex,
-    setCarouselAnnotationElement
+    setCarouselAnnotationChild
 
 }) => {
     const
@@ -29,8 +29,8 @@ const CarouselAnnotation = ({
             annotationIndex
         })
 
-    const setForCarouselAnnotation = node => {
-        setCarouselAnnotationElement({
+    const setCarouselAnnotationElement = node => {
+        setCarouselAnnotationChild({
             node,
             index: annotationIndex
         })
@@ -40,7 +40,7 @@ const CarouselAnnotation = ({
         <div
             {...{
                 key: annotationIndex,
-                ref: setForCarouselAnnotation,
+                ref: setCarouselAnnotationElement,
                 className: cx(
                     'CarouselAnnotation',
 
@@ -74,7 +74,7 @@ CarouselAnnotation.propTypes = {
     annotationIndex: PropTypes.number.isRequired,
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    setCarouselAnnotationElement: PropTypes.func.isRequired
+    setCarouselAnnotationChild: PropTypes.func.isRequired
 }
 
 export default memo(CarouselAnnotation)

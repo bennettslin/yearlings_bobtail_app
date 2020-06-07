@@ -13,7 +13,7 @@ import { getLastUnitDotCardIndex } from '../../api/album/units'
 import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'
 
-const Stanzas = ({ setLyricAnnotationElement, setVerseRef }) => {
+const Stanzas = ({ setLyricAnnotationChild, setVerseChild }) => {
     const
         dispatchVerse = useRef(),
         lyricSongIndex = useSelector(mapLyricSongIndex)
@@ -38,7 +38,7 @@ const Stanzas = ({ setLyricAnnotationElement, setVerseRef }) => {
             <Unit
                 {...{
                     unitIndex: 0,
-                    setLyricAnnotationElement
+                    setLyricAnnotationChild
                 }}
             />
 
@@ -48,8 +48,8 @@ const Stanzas = ({ setLyricAnnotationElement, setVerseRef }) => {
                         key: stanzaIndex,
                         stanzaIndex,
                         handleVerseSelect,
-                        setLyricAnnotationElement,
-                        setVerseRef
+                        setLyricAnnotationChild,
+                        setVerseChild
                     }}
                 />
             ))}
@@ -59,7 +59,7 @@ const Stanzas = ({ setLyricAnnotationElement, setVerseRef }) => {
                 <Unit
                     {...{
                         unitIndex: lastUnitDotCardIndex,
-                        setLyricAnnotationElement
+                        setLyricAnnotationChild
                     }}
                 />
             )}
@@ -69,8 +69,8 @@ const Stanzas = ({ setLyricAnnotationElement, setVerseRef }) => {
 }
 
 Stanzas.propTypes = {
-    setLyricAnnotationElement: PropTypes.func.isRequired,
-    setVerseRef: PropTypes.func.isRequired
+    setLyricAnnotationChild: PropTypes.func.isRequired,
+    setVerseChild: PropTypes.func.isRequired
 }
 
 export default memo(Stanzas)

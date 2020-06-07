@@ -98,14 +98,14 @@ class ScrollLyricListener extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            setVerseElement: this.setVerseElement,
-            setLyricAnnotationElement: this.setLyricAnnotationElement,
-            getVerseElement: this.getVerseElement
+            setVerseChild: this.setVerseChild,
+            setLyricAnnotationChild: this.setLyricAnnotationChild,
+            getVerseChild: this.getVerseChild
         })
     }
 
-    verseElements = {}
-    lyricAnnotationElements = {}
+    verseChildren = {}
+    lyricAnnotationChildren = {}
 
     componentDidUpdate(prevProps) {
         this._scrollLyric(prevProps)
@@ -179,7 +179,7 @@ class ScrollLyricListener extends PureComponent {
                     log: queuedScrollLyricLog,
                     scrollClass,
                     scrollParent: this.props.getLyricScrollParent(),
-                    scrollChildren: this._getScrollElementsArray(scrollClass),
+                    scrollChildren: this._getScrollChildren(scrollClass),
                     index,
                     noDuration: queuedScrollLyricNoDuration,
                     deviceWidthIndex,
@@ -205,35 +205,35 @@ class ScrollLyricListener extends PureComponent {
         this.props.updateEntranceStore({ didSceneScrollExit: true })
     }
 
-    _getScrollElementsArray(scrollClass) {
+    _getScrollChildren(scrollClass) {
         switch (scrollClass) {
             case LYRIC_ANNOTATION_SCROLL:
-                return this.lyricAnnotationElements
+                return this.lyricAnnotationChildren
             case VERSE_SCROLL:
-                return this.verseElements
+                return this.verseChildren
         }
     }
 
-    getVerseElement = (verseIndex) => {
-        return this.verseElements[verseIndex]
+    getVerseChild = (verseIndex) => {
+        return this.verseChildren[verseIndex]
     }
 
-    setVerseElement = ({ node, index }) => {
+    setVerseChild = ({ node, index }) => {
         if (!this.props.isSelectedLogue) {
             setChildElement({
                 node,
                 index,
-                scrollElements: this.verseElements
+                scrollElements: this.verseChildren
             })
         }
     }
 
-    setLyricAnnotationElement = ({ node, index }) => {
+    setLyricAnnotationChild = ({ node, index }) => {
         if (!this.props.isSelectedLogue) {
             setChildElement({
                 node,
                 index,
-                scrollElements: this.lyricAnnotationElements
+                scrollElements: this.lyricAnnotationChildren
             })
         }
     }
