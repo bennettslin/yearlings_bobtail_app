@@ -23,10 +23,5 @@ export default [
         taskName: `Darken presences in one-time dark scenes.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Make Mara waiting the loading indicator for iframe. Have iframe component.`,
-        workedHours: 0,
-        neededHours: 3
     }
 ]

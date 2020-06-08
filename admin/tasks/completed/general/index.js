@@ -4774,8 +4774,8 @@ export default [
         workedHours: 23
     },
     {
-        taskName: `Scrolling investigation and some work.`,
-        workedHours: 6
+        taskName: `Scrolling refactor work.`,
+        workedHours: 8
     },
     {
         taskName: `Remove convoluted CSS verse logic? If so, allow hover styling of activated verse in slider, to be consistent with filmstrip.`,

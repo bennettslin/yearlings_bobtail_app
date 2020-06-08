@@ -63,5 +63,10 @@ export default [
         taskName: `Look into s3 versioning.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Make Mara waiting the loading indicator for iframe. Have iframe component.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]

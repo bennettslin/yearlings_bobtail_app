@@ -23,8 +23,6 @@
 * Wrap up scrolling refs.
 * Some todos to make a selector.
 * Have verse store for queued verse select, just like annotation store.
-* Internal stylesheet fixes
-* Simplify Anchor for social media anchors
 * Listeners know to render themselves
 * Mount, responsive, proscenium, and theatre values can just be aggregate selectors. Basically, get rid of everything in window that's not the window width and height. Replace in map state to props first.
 * Also, the listeners.

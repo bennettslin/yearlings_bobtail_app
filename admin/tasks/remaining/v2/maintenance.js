@@ -15,11 +15,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Cube and presence transition order.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: `Put mapWormholeLinkForDispatch in own dispatch called dispatchWormhole.`,
         workedHours: 0,
         neededHours: 1
