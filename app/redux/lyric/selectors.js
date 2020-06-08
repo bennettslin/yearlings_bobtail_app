@@ -44,7 +44,7 @@ export const mapCursorVerseIndex = createSelector(
     )
 )
 
-export const getIsCursorVerse = verseIndex => createSelector(
+export const getMapIsVerseCursor = verseIndex => createSelector(
     mapCursorVerseIndex,
     cursorVerseIndex => verseIndex === cursorVerseIndex
 )

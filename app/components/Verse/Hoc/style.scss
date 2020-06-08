@@ -13,7 +13,10 @@
 
 .Verse__notCursor {
     .TW__lyricsLocked
-    & {
+    &:not(:hover),
+
+    .TW__lyricsLocked
+    &.Verse__selected {
         @include mixin__textAndLinkColours($light: true);
     }
 }

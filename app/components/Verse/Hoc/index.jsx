@@ -4,7 +4,8 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
-import { getIsCursorVerse } from '../../../redux/lyric/selectors'
+import { getMapIsVerseCursor } from '../../../redux/lyric/selectors'
+import { getMapIsVerseSelected } from '../../../redux/selected/selectors'
 import './style'
 
 const VerseHoc = ({
@@ -18,7 +19,8 @@ const VerseHoc = ({
 }) => {
     const
         hasVerseIndex = Number.isFinite(verseIndex),
-        isCursorVerse = useSelector(getIsCursorVerse(verseIndex))
+        isCursorVerse = useSelector(getMapIsVerseCursor(verseIndex)),
+        isSelectedVerse = useSelector(getMapIsVerseSelected(verseIndex))
 
     if (!hasVerseIndex) {
         return (
@@ -40,7 +42,8 @@ const VerseHoc = ({
                     isShownInVerseBar
                 )
             ) ? 'Verse__text' : 'Verse__slider',
-            isCursorVerse ? 'Verse__cursor' : 'Verse__notCursor'
+            isCursorVerse ? 'Verse__cursor' : 'Verse__notCursor',
+            isSelectedVerse ? 'Verse__selected' : 'Verse__notSelected'
         )
 
     return (

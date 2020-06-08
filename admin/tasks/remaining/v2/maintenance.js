@@ -10,6 +10,11 @@ export default [
         neededHours: 1
     },
     {
+        taskName: `Simplify VerseHoc, reconsider logicSelectors.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Cube and presence transition order.`,
         workedHours: 0,
         neededHours: 8

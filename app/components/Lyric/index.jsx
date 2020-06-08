@@ -23,10 +23,6 @@ const mapStateToProps = state => {
     }
 }
 
-/*************
- * CONTAINER *
- *************/
-
 class Lyric extends PureComponent {
 
     static propTypes = {

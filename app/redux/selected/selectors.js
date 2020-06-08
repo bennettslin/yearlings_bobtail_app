@@ -13,6 +13,11 @@ export const mapSelectedVerseIndex = (
     { selectedStore: { selectedVerseIndex } }
 ) => selectedVerseIndex
 
+export const getMapIsVerseSelected = verseIndex => createSelector(
+    mapSelectedVerseIndex,
+    selectedVerseIndex => verseIndex === selectedVerseIndex
+)
+
 export const getMapVerseSelectedStatus = verseIndex => createSelector(
     mapSelectedVerseIndex,
     selectedVerseIndex => {

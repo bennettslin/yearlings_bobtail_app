@@ -16,8 +16,14 @@
             background-color $transitionDuration__faster;
     }
 
+    .TW__lyricsLocked
+    .Verse__notCursor.Verse__selected
+    & {
+        background-color: $colour__neutral__dark;
+    }
+
     .TW__isStationary
-    .Verse__notCursor:hover
+    .Verse__notCursor.Verse__notSelected:hover
     & {
         background-color: $colour__interact__light;
         box-shadow: $boxShadow__activeVerse;
