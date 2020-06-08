@@ -16,7 +16,6 @@ import {
     getIsSideCardOnBottomForUnit,
     getSideCardForUnit
 } from '../../api/album/units'
-import { getParentOfVerseClassNamesForIndices } from '../../helpers/stanza'
 import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'
 
@@ -41,9 +40,6 @@ const Unit = ({
     return (
         <div
             className={cx(
-                // "Parent of verse index."
-                getParentOfVerseClassNamesForIndices(unitVerseIndices),
-
                 'Unit',
                 `unit__${unitIndex}`,
 

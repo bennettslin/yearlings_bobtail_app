@@ -12,6 +12,7 @@ const SliderVerse = ({
     verseIndex,
     isLastVerseOfStanza,
     children
+
 }) => {
     const
         /**
@@ -45,9 +46,8 @@ const SliderVerse = ({
                     'SliderVerse',
 
                     // Just for debug purposes.
-                    `SliderVerse__${verseIndex}`,
+                    `sliderVerse__${verseIndex}`,
 
-                    'verseColour__hoverParent',
                     'abF',
 
                     logicSelectors

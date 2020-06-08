@@ -44,6 +44,24 @@ export const mapCursorVerseIndex = createSelector(
     )
 )
 
+export const getIsCursorVerse = verseIndex => createSelector(
+    mapCursorVerseIndex,
+    cursorVerseIndex => verseIndex === cursorVerseIndex
+)
+
+export const getMapVerseCursorStatus = verseIndex => createSelector(
+    mapCursorVerseIndex,
+    cursorVerseIndex => {
+        if (verseIndex < cursorVerseIndex) {
+            return -1
+        } else if (verseIndex > cursorVerseIndex) {
+            return 1
+        } else {
+            return 0
+        }
+    }
+)
+
 export const getMapIsCursorStanza = stanzaIndex => createSelector(
     mapLyricSongIndex,
     mapCursorVerseIndex,

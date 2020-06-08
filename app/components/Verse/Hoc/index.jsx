@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux'
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
 import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
+import { getIsCursorVerse } from '../../../redux/lyric/selectors'
+import './style'
 
 const VerseHoc = ({
     verseIndex,
@@ -16,8 +18,9 @@ const VerseHoc = ({
 
 }) => {
     const
+        hasVerseIndex = Number.isFinite(verseIndex),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
-        hasVerseIndex = Number.isFinite(verseIndex)
+        isCursorVerse = useSelector(getIsCursorVerse(verseIndex))
 
     if (!hasVerseIndex) {
         return (
@@ -33,19 +36,13 @@ const VerseHoc = ({
         } = other,
 
         logicSelectors = hasVerseIndex && cx(
-            // "Child verse index."
-            `ChV${verseIndex}`,
-            'ChV',
-
-            // "Child in lyric."
             (
                 inUnit || (
                     inVerseBar &&
                     isShownInVerseBar
                 )
-
-            // This class applies background colour and zIndex.
-            ) && 'ChL'
+            ) ? 'Verse__text' : 'Verse__slider',
+            isCursorVerse ? 'Verse__cursor' : 'Verse__notCursor'
         ),
 
         isActivated = verseIndex === activatedVerseIndex
@@ -59,11 +56,10 @@ const VerseHoc = ({
         >
             <VerseColour
                 {...{
+                    verseIndex,
                     inSlider,
                     inVerseBar,
-                    inUnit,
-                    verseIndex,
-                    isActivated
+                    inUnit
                 }}
             />
             {!inSlider && !inVerseBar && (
@@ -80,7 +76,6 @@ const VerseHoc = ({
 }
 
 VerseHoc.propTypes = {
-    // From parent.
     verseIndex: PropTypes.number,
     VerseComponent: PropTypes.oneOfType([
         PropTypes.func,

@@ -1,177 +1,98 @@
 @import '../constants/colour';
 
-@mixin mixin__textAnchorShadow($bgColour, $important: false) {
+@mixin mixin__textAnchorShadow($bgColour) {
     $offset: 0.5px;
     $offset__negative: -$offset;
     $blur: 0.5px;
 
     .TextAnchor__linkText {
-        @if $important {
-            text-shadow:
-                0 $offset__negative $blur $bgColour,
-                $offset 0 $blur $bgColour,
-                $offset__negative 0 $blur $bgColour,
-                0 $offset * 1.5 $blur $bgColour !important;
-        } @else {
-            text-shadow:
-                0 $offset__negative $blur $bgColour,
-                $offset 0 $blur $bgColour,
-                $offset__negative 0 $blur $bgColour,
-                0 $offset * 1.5 $blur $bgColour;
-        }
+        text-shadow:
+            0 $offset__negative $blur $bgColour,
+            $offset 0 $blur $bgColour,
+            $offset__negative 0 $blur $bgColour,
+            0 $offset * 1.5 $blur $bgColour;
     }
 }
 
-@mixin mixin__textAndLinkColours($light: false, $important: false) {
+@mixin mixin__textAndLinkColours($light: false) {
     @if $light {
-        @if $important {
-            color: $colour__text__light !important;
-        } @else {
-            color: $colour__text__light;
-        }
+        color: $colour__text__light;
 
         @include mixin__textAnchorShadow(
-            hsla(0, 0%, 0%, 0.2),
-            $important: $important
+            hsla(0, 0%, 0%, 0.2)
         );
 
     } @else {
-        @if $important {
-            color: $colour__text__dark !important;
-        } @else {
-            color: $colour__text__dark;
-        }
+        color: $colour__text__dark;
 
         @include mixin__textAnchorShadow(
-            hsla(0, 0%, 100%, 0.5),
-            $important: $important
+            hsla(0, 0%, 100%, 0.5)
         );
     }
 
     .TextAnchor__linkText__default {
         @if $light {
-            @if $important {
-                color: $colour__link__light !important;
-            } @else {
-                color: $colour__link__light;
-            }
+            color: $colour__link__light;
         } @else {
-            @if $important {
-                color: $colour__link__dark !important;
-            } @else {
-                color: $colour__link__dark;
-            }
+            color: $colour__link__dark;
         }
     }
 
     .TextAnchor__linkText__accessed {
         @if $light {
-            @if $important {
-                color: $colour__access__light !important;
-            } @else {
-                color: $colour__access__light;
-            }
+            color: $colour__access__light;
         } @else {
-            @if $important {
-                color: $colour__access__dark !important;
-            } @else {
-                color: $colour__access__dark;
-            }
+            color: $colour__access__dark;
         }
     }
 
     .TextAnchor__linkText__selected {
         @if $light {
-            @if $important {
-                color: $colour__select__light !important;
-            } @else {
-                color: $colour__select__light;
-            }
+            color: $colour__select__light;
         } @else {
-            @if $important {
-                color: $colour__select__dark !important;
-            } @else {
-                color: $colour__select__dark;
-            }
+            color: $colour__select__dark;
         }
     }
 
     .Anchor__selectable {
-
         &:hover {
             .TextAnchor__linkText {
                 @if $light {
-                    @if $important {
-                        color: $colour__linkHover__light !important;
-                    } @else {
-                        color: $colour__linkHover__light;
-                    }
+                    color: $colour__linkHover__light;
                 } @else {
-                    @if $important {
-                        color: $colour__linkHover__dark !important;
-                    } @else {
-                        color: $colour__linkHover__dark;
-                    }
+                    color: $colour__linkHover__dark;
                 }
             }
             .TextAnchor__linkText__accessed {
                 @if $light {
-                    @if $important {
-                        color: $colour__accessHover__light !important;
-                    } @else {
-                        color: $colour__accessHover__light;
-                    }
+                    color: $colour__accessHover__light;
                 } @else {
-                    @if $important {
-                        color: $colour__accessHover__dark !important;
-                    } @else {
-                        color: $colour__accessHover__dark;
-                    }
+                    color: $colour__accessHover__dark;
                 }
             }
         }
 
         &:active {
             .TextAnchor__linkText {
-                @if $important {
-                    color: $colour__linkActive !important;
-                } @else {
-                    color: $colour__linkActive;
-                }
+                color: $colour__linkActive;
             }
             .TextAnchor__linkText__accessed {
-                @if $important {
-                    color: $colour__accessActive !important;
-                } @else {
-                    color: $colour__accessActive;
-                }
+                color: $colour__accessActive;
             }
         }
     }
 }
 
-@mixin mixin__underlineColours($important: false) {
+@mixin mixin__underlineColours() {
     .Underline__default {
-        @if $important {
-            background-color: $colour__underline !important;
-        } @else {
-            background-color: $colour__underline;
-        }
+        background-color: $colour__underline;
     }
 
     .Underline__accessed {
-        @if $important {
-            background-color: $colour__underlineAccess !important;
-        } @else {
-            background-color: $colour__underlineAccess;
-        }
+        background-color: $colour__underlineAccess;
     }
 
     .Underline__selected {
-        @if $important {
-            background-color: $colour__underlineSelect !important;
-        } @else {
-            background-color: $colour__underlineSelect;
-        }
+        background-color: $colour__underlineSelect;
     }
 }

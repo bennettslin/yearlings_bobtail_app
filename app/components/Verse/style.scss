@@ -51,11 +51,6 @@
         }
     }
 
-    .TW__lyricsLocked
-    & {
-        @include mixin__textAndLinkColours($light: true);
-    }
-
     &:hover {
         color: $colour__text__dark;
     }

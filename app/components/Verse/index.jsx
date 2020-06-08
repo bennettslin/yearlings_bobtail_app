@@ -124,7 +124,7 @@ class Verse extends PureComponent {
                             verseClassName && `verse__${verseClassName}`,
                             isInteractable && 'Verse__interactable',
 
-                            'verseColour__hoverParent',
+                            // 'verseColour__hoverParent',
 
                             logicSelectors
                         ),

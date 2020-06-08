@@ -8,22 +8,6 @@ import {
     getSideCardTypeForUnit,
     getSideSubCardTypeForUnit
 } from '../../../api/album/units'
-import { getParentOfVerseClassNamesForIndices } from '../../../helpers/stanza'
-
-// TODO: Delete this.
-export const getParentOfVerseClassNamesForUnitCard = ({
-    isIndexedVerse,
-    isMainVerses,
-    lyricSongIndex,
-    unitIndex
-
-}) => (
-    isIndexedVerse && getParentOfVerseClassNamesForIndices(
-        isMainVerses ?
-            getMainVerseIndicesForUnit(lyricSongIndex, unitIndex) :
-            getSubVerseIndicesForUnit(lyricSongIndex, unitIndex)
-    )
-)
 
 export const getUnitFormType = ({
     songIndex,

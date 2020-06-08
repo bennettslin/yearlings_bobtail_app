@@ -1,4 +1,6 @@
 @import '../../../../scss/constants/border';
+@import '../../../../scss/constants/colour';
+@import '../../../../scss/constants/icon';
 @import '../../../../scss/constants/shadow';
 @import '../../../../scss/constants/transition';
 
@@ -13,14 +15,11 @@
             height $transitionDuration__faster,
             background-color $transitionDuration__faster;
     }
-}
 
-.VerseColour__activated {
-    // Do not apply if in VerseBar.
-    .Slider
-    &,
-    .Stanzas
+    .TW__isStationary
+    .Verse__notCursor:hover
     & {
+        background-color: $colour__interact__light;
         box-shadow: $boxShadow__activeVerse;
     }
 }
@@ -32,4 +31,89 @@
 .VerseBar__animatable,
 .VerseColour__inVerseBar {
     border-radius: $borderRadius__narrow;
+}
+
+.VerseColour__beforeCursor {
+    &.VerseColour__odd {
+        background-color: $colour__past__lighter;
+    }
+
+    &.VerseColour__even {
+        background-color: $colour__past__light;
+    }
+
+    .TW__lyricsLocked
+    &.VerseColour__odd {
+        background-color: $colour__past__dark;
+    }
+
+    .TW__lyricsLocked
+    &.VerseColour__even {
+        background-color: $colour__past__darker;
+    }
+}
+
+.VerseColour__afterCursor {
+    &.VerseColour__odd {
+        background-color: $colour__future__lighter;
+    }
+
+    &.VerseColour__even {
+        background-color: $colour__future__light;
+    }
+
+    .TW__lyricsLocked
+    &.VerseColour__odd {
+        background-color: $colour__future__dark;
+    }
+
+    .TW__lyricsLocked
+    &.VerseColour__even {
+        background-color: $colour__future__darker;
+    }
+}
+
+.VerseColour__cursor {
+    background-color: $colour__paused__empty;
+
+    .PlW__isPlaying
+    & {
+        background-color: $colour__playing__empty;
+    }
+
+    .TW__lyricsLocked
+    & {
+        background-color: $colour__access__light;
+    }
+
+    .TW__verseActive
+    &.VerseColour__notVerseBar {
+        box-shadow: $boxShadow__activeVerse;   
+    }
+
+    .TW__verseInactive
+    .Verse__slider
+    & {
+        box-shadow: $boxShadow__cursorVerse__slider;
+        border-radius:
+            $borderRadius__narrow
+            $borderRadius__narrow
+            $borderRadius__narrower
+            $borderRadius__narrower;
+        top: -2px;
+        left: -0.5px;
+        height: calc(100% + 3px);
+        width: calc(100% + 1px);
+    }
+
+    .TW__verseInactive
+    .Verse__text
+    & {
+        box-shadow: $boxShadow__cursorVerse;
+        border-radius: $borderRadius__narrow;
+        top: -$MARGIN_THIN;
+        left: -$MARGIN_THIN;
+        height: calc(100% + #{$MARGIN_THIN * 2});
+        width: calc(100% + #{$MARGIN_THIN * 2});
+    }
 }

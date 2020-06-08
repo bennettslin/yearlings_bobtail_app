@@ -1,45 +1,36 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
 import VerseTracker from './VerseTracker'
+import { getMapVerseCursorStatus } from '../../../../redux/lyric/selectors'
 import './style'
 
 const VerseColour = ({
-    isActivated,
     verseIndex,
     inUnit,
     inVerseBar,
     inSlider
 
 }) => {
-    const inLyric = inUnit || inVerseBar,
+    const
+        verseCursorStatus = useSelector(getMapVerseCursorStatus(verseIndex)),
         isOdd = Boolean(verseIndex % 2)
 
     return (
         <div
             className={cx(
-
-                // "Grandchild in lyric."
-                inLyric && 'GcL',
-
-                // "Grandchild in slider."
-                inSlider && 'GcS',
-
-                // "Grandchild interactable."
-                !inVerseBar && 'GcN',
-
-                // "Grandchild verse colour."
-                'GcV',
-
                 'VerseColour',
+                inVerseBar ?
+                    'VerseColour__inVerseBar' :
+                    'VerseColour__notVerseBar',
+                verseCursorStatus === -1 && 'VerseColour__beforeCursor',
+                verseCursorStatus === 0 && 'VerseColour__cursor',
+                verseCursorStatus === 1 && 'VerseColour__afterCursor',
+                isOdd ?
+                    'VerseColour__odd' :
+                    'VerseColour__even',
                 'ovH',
-
-                inVerseBar && 'VerseColour__inVerseBar',
-                isActivated && 'VerseColour__activated',
-
-                // Grandchild verse colour even.
-                !isOdd && 'GcE',
-
                 'abF'
             )}
         >
@@ -72,8 +63,6 @@ const VerseColour = ({
 }
 
 VerseColour.propTypes = {
-// From parent.
-    isActivated: PropTypes.bool,
     verseIndex: PropTypes.number.isRequired,
     inUnit: PropTypes.bool,
     inVerseBar: PropTypes.bool,

@@ -8,7 +8,6 @@ import UnitTab from '../Tab'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import {
-    getParentOfVerseClassNamesForUnitCard,
     getUnitCardVerses,
     getIsUnitTruncatable,
     getUnitFormType
@@ -64,14 +63,6 @@ const UnitCard = ({
 
     return (
         <div className={cx(
-            // "Parent of verse index."
-            getParentOfVerseClassNamesForUnitCard({
-                isIndexed,
-                isMainVerses,
-                lyricSongIndex,
-                unitIndex
-            }),
-
             'UnitCard',
             isSubVerse && 'UnitCard__subVerse',
             isTabbed && 'UnitCard__tabbed'

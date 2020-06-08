@@ -25,13 +25,14 @@ const TouchWrapper = ({ children }) => {
             {...{
                 className: cx(
                     'TouchWrapper',
-
                     !isAutoScroll && 'TW__manualScroll',
                     isScrolling ? 'TW__isScrolling' : 'TW__isStationary',
                     isSliderTouched && 'TW__sliderTouched',
                     isSliderMoving && 'TW__sliderMoving',
-                    isActivated && 'TW__verseActive',
                     isBannerHovering && 'TW__bannerHovering',
+                    isActivated ?
+                        'TW__verseActive' :
+                        'TW__verseInactive',
 
                     (isSliderMoving || isActivated) ?
                         'TW__lyricsLocked' :
