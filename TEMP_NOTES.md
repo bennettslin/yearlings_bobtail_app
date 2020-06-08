@@ -3,7 +3,6 @@
 * Verse scroll key not registered, and doesn't always work.
 
 # Post-Gatsby bugs
-* Can't activate verse now?!
 * Bug where can select annotation with no dots.
 * Stage dimensions act like two row menu in mobile, even when not?
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
