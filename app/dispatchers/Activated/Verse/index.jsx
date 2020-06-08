@@ -37,7 +37,6 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
             return
         }
 
-        console.log('activated verse')
         dispatch(updateActivatedStore({
             activatedSceneIndex: getSceneIndexForVerse(
                 selectedSongIndex,

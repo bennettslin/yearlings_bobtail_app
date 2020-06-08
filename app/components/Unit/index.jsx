@@ -3,7 +3,7 @@
  * the basic unit by which the lyric data is organised. A stanza is made up of
  * one or more units. But a unit can also stand alone, such as a lone dot unit.
  */
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
@@ -19,11 +19,11 @@ import {
 import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'
 
-const Unit = ({
+const Unit = forwardRef(({
     unitIndex,
     ...other
 
-}) => {
+}, ref) => {
     const
         { setLyricAnnotationChild } = other,
         lyricSongIndex = useSelector(mapLyricSongIndex),
@@ -63,11 +63,19 @@ const Unit = ({
                 )}>
                     <UnitCard
                         isMainVerses
-                        {...{ unitIndex, ...other }}
+                        {...{
+                            ref,
+                            unitIndex,
+                            ...other
+                        }}
                     />
                     <UnitCard
                         isSubVerse
-                        {...{ unitIndex, ...other }}
+                        {...{
+                            ref,
+                            unitIndex,
+                            ...other
+                        }}
                     />
                 </div>
             }
@@ -100,7 +108,7 @@ const Unit = ({
             />
         </div>
     )
-}
+})
 
 Unit.propTypes = {
     unitIndex: PropTypes.number.isRequired

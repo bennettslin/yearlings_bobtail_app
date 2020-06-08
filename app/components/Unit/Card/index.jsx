@@ -1,5 +1,5 @@
 // Component to show individual box of versesArray.
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -17,7 +17,7 @@ import { getVerse } from '../../../api/album/verses'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 
-const UnitCard = ({
+const UnitCard = forwardRef(({
     unitIndex,
     isMainVerses,
     isSubVerse,
@@ -25,7 +25,7 @@ const UnitCard = ({
     isSideSubCard,
     ...other
 
-}) => {
+}, ref) => {
     const lyricSongIndex = useSelector(mapLyricSongIndex),
         versesArray = getUnitCardVerses({
             songIndex: lyricSongIndex,
@@ -86,6 +86,7 @@ const UnitCard = ({
                             inUnit
                             {...{
                                 key: index,
+                                ref,
                                 ...isIndexed && { verseIndex: verseEntity },
                                 verseObject,
                                 VerseComponent: Verse,
@@ -109,7 +110,7 @@ const UnitCard = ({
             <UnitTipsHands {...{ unitIndex }} />
         </div>
     )
-}
+})
 
 UnitCard.propTypes = {
     unitIndex: PropTypes.number.isRequired,

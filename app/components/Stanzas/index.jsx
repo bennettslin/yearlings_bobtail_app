@@ -2,7 +2,8 @@
  * A stanza encompasses all the units grouped under a single stanza type and
  * optional index, such as Verse 1 or Bridge.
  */
-import React, { useRef, memo } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import VerseDispatcher from '../../dispatchers/VerseDispatcher'
@@ -13,7 +14,7 @@ import { getLastUnitDotCardIndex } from '../../api/album/units'
 import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'
 
-const Stanzas = ({ setLyricAnnotationChild, setVerseChild }) => {
+const Stanzas = forwardRef(({ setLyricAnnotationChild }, ref) => {
     const
         dispatchVerse = useRef(),
         lyricSongIndex = useSelector(mapLyricSongIndex)
@@ -46,10 +47,10 @@ const Stanzas = ({ setLyricAnnotationChild, setVerseChild }) => {
                 <Stanza
                     {...{
                         key: stanzaIndex,
+                        ref,
                         stanzaIndex,
                         handleVerseSelect,
-                        setLyricAnnotationChild,
-                        setVerseChild
+                        setLyricAnnotationChild
                     }}
                 />
             ))}
@@ -66,11 +67,10 @@ const Stanzas = ({ setLyricAnnotationChild, setVerseChild }) => {
             <VerseDispatcher {...{ ref: dispatchVerse }} />
         </div>
     )
-}
+})
 
 Stanzas.propTypes = {
-    setLyricAnnotationChild: PropTypes.func.isRequired,
-    setVerseChild: PropTypes.func.isRequired
+    setLyricAnnotationChild: PropTypes.func.isRequired
 }
 
 export default memo(Stanzas)

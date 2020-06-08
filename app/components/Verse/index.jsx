@@ -1,149 +1,102 @@
 // Container for lyric audio button and all lines of a single verse.
-import React, { PureComponent } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useRef, memo } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
 import ActivatedVerseDispatcher from '../../dispatchers/Activated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import VerseLines from './Lines'
 import { VERSE_SCROLL } from '../../constants/scroll'
-import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'
 
-const mapStateToProps = state => {
-    const lyricSongIndex = mapLyricSongIndex(state)
+const Verse = forwardRef(({
+    logicSelectors,
+    verseClassName,
+    children,
+    ...other
 
-    return {
-        lyricSongIndex
-    }
-}
+}, ref) => {
+    const
+        activateVerse = useRef(),
+        stopPropagation = useRef(),
+        {
+            inVerseBar,
+            verseIndex,
+            verseObject
+        } = other,
+        {
+            lyric,
+            lyricCentre
+        } = verseObject,
+        isInteractable = Number.isFinite(verseIndex) && !inVerseBar
 
-class Verse extends PureComponent {
-
-    static defaultProps = {
-        inVerseBar: false
-    }
-
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
-        dispatch: PropTypes.func.isRequired,
-
-        // From parent.
-        logicSelectors: PropTypes.string,
-        verseClassName: PropTypes.string,
-        verseObject: PropTypes.object.isRequired,
-        verseIndex: PropTypes.number,
-        inVerseBar: PropTypes.bool.isRequired,
-        setVerseChild: PropTypes.func,
-        children: PropTypes.node
-    }
-
-    _handleInteractivatableClick = e => {
-        const { verseIndex } = this.props
-
+    const onClick = e => {
         logEvent({ e, componentName: `Verse ${verseIndex}` })
 
         // Allow clicks on interactable verses.
-        if (this.getIsInteractable()) {
-            this.stopPropagation(e)
-            this.activateVerseIndex(verseIndex)
+        if (isInteractable) {
+            activateVerse.current.activateVerseIndex(verseIndex)
+            stopPropagation.current(e)
         }
     }
 
-    getIsInteractable() {
-        const {
-            inVerseBar,
-            verseIndex
-        } = this.props
-
-        return Number.isFinite(verseIndex) && !inVerseBar
-    }
-
-    setVerseElement = node => {
-        if (this.getIsInteractable()) {
-            this.props.setVerseChild({
-                node,
-                index: this.props.verseIndex
-            })
+    const setRef = node => {
+        /**
+         * Verses without indices do not get refs passed. It's not possible to
+         * only call this function in indexed verses, for some reason.
+         */
+        if (ref) {
+            ref.current = ref.current || {}
+            ref.current[verseIndex] = node
         }
     }
 
-    getActivateVerse = dispatch => {
-        if (dispatch) {
-            this.activateVerseIndex = dispatch.activateVerseIndex
-        }
-    }
+    return (
+        <>
+            <div
+                {...{
+                    key: verseIndex,
+                    ref: setRef,
+                    className: cx(
+                        'Verse',
 
-    getStopPropagation = dispatch => {
-        this.stopPropagation = dispatch
-    }
+                        inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
-    render() {
-        const {
-                /* eslint-disable no-unused-vars */
-                logicSelectors,
-                verseClassName,
-                lyricSongIndex,
-                setVerseChild,
-                dispatch,
-                children,
-                /* eslint-enable no-unused-vars */
+                        Number.isFinite(verseIndex) &&
+                            `${VERSE_SCROLL}__${verseIndex}`,
 
-                ...other
-            } = this.props,
+                        // title, even, odd, inSide.
+                        verseClassName && `verse__${verseClassName}`,
+                        isInteractable && 'Verse__interactable',
 
-            {
-                inVerseBar,
-                verseIndex,
-                verseObject
-            } = other,
+                        // 'verseColour__hoverParent',
 
-            {
-                lyric,
-                lyricCentre
-            } = verseObject,
-
-            isInteractable = this.getIsInteractable()
-
-        return (
-            <>
-                <div
+                        logicSelectors
+                    ),
+                    onClick
+                }}
+            >
+                <VerseLines
                     {...{
-                        key: isInteractable ? verseIndex : undefined,
-                        ref: this.setVerseElement,
-                        className: cx(
-                            'Verse',
-
-                            inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
-
-                            Number.isFinite(verseIndex) &&
-                                `${VERSE_SCROLL}__${verseIndex}`,
-
-                            // title, even, odd, inSide.
-                            verseClassName && `verse__${verseClassName}`,
-                            isInteractable && 'Verse__interactable',
-
-                            // 'verseColour__hoverParent',
-
-                            logicSelectors
-                        ),
-                        onClick: this._handleInteractivatableClick
+                        isDoublespeakerLine: !lyric && !lyricCentre,
+                        ...other
                     }}
-                >
-                    <VerseLines
-                        {...{
-                            isDoublespeakerLine: !lyric && !lyricCentre,
-                            ...other
-                        }}
-                    />
-                    {children}
-                </div>
-                <ActivatedVerseDispatcher {...{ ref: this.getActivateVerse }} />
-                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
-            </>
-        )
-    }
+                />
+                {children}
+            </div>
+            <ActivatedVerseDispatcher {...{ ref: activateVerse }} />
+            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
+        </>
+    )
+})
+
+Verse.propTypes = {
+    logicSelectors: PropTypes.string,
+    verseClassName: PropTypes.string,
+    verseObject: PropTypes.object.isRequired,
+    verseIndex: PropTypes.number,
+    inVerseBar: PropTypes.bool,
+    children: PropTypes.node
 }
 
-export default connect(mapStateToProps)(Verse)
+export default memo(Verse)

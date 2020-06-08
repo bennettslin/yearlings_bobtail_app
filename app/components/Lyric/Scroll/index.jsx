@@ -43,7 +43,11 @@ class LyricScroll extends PureComponent {
     }
 
     scrollAnnotationChildren = {}
-    scrollVerseChildren = {}
+
+    constructor(props) {
+        super(props)
+        this.scrollVerseChildren = React.createRef()
+    }
 
     componentDidMount() {
         this.props.getRefs({
@@ -96,10 +100,6 @@ class LyricScroll extends PureComponent {
         this.scrollAnnotationChildren[index] = node
     }
 
-    _setScrollVerseChild = ({ node, index }) => {
-        this.scrollVerseChildren[index] = node
-    }
-
     getLyricScrollParent = () => (
         this.lyricScrollParent
     )
@@ -109,7 +109,7 @@ class LyricScroll extends PureComponent {
     )
 
     getScrollVerseChild = index => (
-        this.scrollVerseChildren[index]
+        this.scrollVerseChildren.current[index]
     )
 
     render() {
@@ -154,9 +154,9 @@ class LyricScroll extends PureComponent {
                     >
                         <Stanzas
                             {...{
+                                ref: this.scrollVerseChildren,
                                 setLyricAnnotationChild:
-                                    this._setScrollAnnotationChild,
-                                setVerseChild: this._setScrollVerseChild
+                                    this._setScrollAnnotationChild
                             }}
                         />
                     </div>

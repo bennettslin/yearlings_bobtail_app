@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -8,7 +8,7 @@ import { getMapIsVerseCursor } from '../../../redux/lyric/selectors'
 import { getMapIsVerseSelected } from '../../../redux/selected/selectors'
 import './style'
 
-const VerseHoc = ({
+const VerseHoc = forwardRef(({
     verseIndex,
     VerseComponent,
     handleVerseSelect,
@@ -16,7 +16,7 @@ const VerseHoc = ({
     isShownInVerseBar,
     ...other
 
-}) => {
+}, ref) => {
     const
         hasVerseIndex = Number.isFinite(verseIndex),
         isCursorVerse = useSelector(getMapIsVerseCursor(verseIndex)),
@@ -49,6 +49,7 @@ const VerseHoc = ({
     return (
         <VerseComponent {...other}
             {...{
+                ref,
                 verseIndex,
                 logicSelectors
             }}
@@ -71,7 +72,7 @@ const VerseHoc = ({
             )}
         </VerseComponent>
     )
-}
+})
 
 VerseHoc.propTypes = {
     verseIndex: PropTypes.number,

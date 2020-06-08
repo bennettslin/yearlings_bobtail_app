@@ -3,6 +3,7 @@
 * Verse scroll key not registered, and doesn't always work.
 
 # Post-Gatsby bugs
+* Can't activate verse now?!
 * Bug where can select annotation with no dots.
 * Stage dimensions act like two row menu in mobile, even when not?
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
@@ -20,7 +21,7 @@
 * Get rid of PopupAnnotation listener.
 
 # Easy reduction tasks
-* Last getRefs in LyricScroll: https://stackoverflow.com/questions/54633690/how-can-i-use-multiple-refs-for-an-array-of-elements-with-hooks
+* Wrap up scrolling refs.
 * Some todos to make a selector.
 * Have verse store for queued verse select, just like annotation store.
 * Internal stylesheet fixes
