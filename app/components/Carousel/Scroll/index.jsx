@@ -32,7 +32,11 @@ class CarouselScroll extends PureComponent {
         updateEntranceStore: PropTypes.func.isRequired
     }
 
-    carouselScrollChildren = {}
+    constructor(props) {
+        super(props)
+        this.carouselScrollParent = React.createRef()
+        this.carouselScrollChildren = React.createRef()
+    }
 
     componentDidMount() {
         logMount('CarouselScroll')
@@ -43,21 +47,13 @@ class CarouselScroll extends PureComponent {
         this.props.updateEntranceStore({ didCarouselUpdate: true })
     }
 
-    _setCarouselScrollParent = node => {
-        this.carouselScrollParent = node
-    }
-
-    _setCarouselScrollChild = ({ node, index }) => {
-        this.carouselScrollChildren[index] = node
-    }
-
     getCarouselScrollParent = () => (
-        this.carouselScrollParent
+        this.carouselScrollParent.current
     )
 
-    getCarouselScrollChild = index => (
-        this.carouselScrollChildren[index]
-    )
+    getCarouselScrollChild = index => {
+        return this.carouselScrollChildren.current[index]
+    }
 
     render() {
         const {
@@ -75,7 +71,7 @@ class CarouselScroll extends PureComponent {
             >
                 <div
                     {...{
-                        ref: this._setCarouselScrollParent,
+                        ref: this.carouselScrollParent,
                         className: 'CarouselScroll'
                     }}
                 >
@@ -90,8 +86,8 @@ class CarouselScroll extends PureComponent {
                             <CarouselAnnotation
                                 {...{
                                     key: index,
-                                    annotationIndex,
-                                    setCarouselAnnotationChild: this._setCarouselScrollChild
+                                    ref: this.carouselScrollChildren,
+                                    annotationIndex
                                 }}
                             />
                         )

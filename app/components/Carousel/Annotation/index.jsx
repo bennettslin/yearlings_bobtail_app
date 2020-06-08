@@ -1,5 +1,5 @@
 // Container to show single annotation in carousel.
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -15,11 +15,7 @@ import {
 } from '../../../redux/lyric/selectors'
 import './style'
 
-const CarouselAnnotation = ({
-    annotationIndex,
-    setCarouselAnnotationChild
-
-}) => {
+const CarouselAnnotation = forwardRef(({ annotationIndex }, ref) => {
     const
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
@@ -36,18 +32,16 @@ const CarouselAnnotation = ({
         }),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit))
 
-    const setCarouselAnnotationElement = node => {
-        setCarouselAnnotationChild({
-            node,
-            index: annotationIndex
-        })
+    const setRef = node => {
+        ref.current = ref.current || {}
+        ref.current[annotationIndex] = node
     }
 
     return (
         <div
             {...{
                 key: annotationIndex,
-                ref: setCarouselAnnotationElement,
+                ref: setRef,
                 className: cx(
                     'CarouselAnnotation',
                     hasSelectedDot && 'CarouselAnnotation__shown',
@@ -70,11 +64,10 @@ const CarouselAnnotation = ({
             />
         </div>
     )
-}
+})
 
 CarouselAnnotation.propTypes = {
-    annotationIndex: PropTypes.number.isRequired,
-    setCarouselAnnotationChild: PropTypes.func.isRequired
+    annotationIndex: PropTypes.number.isRequired
 }
 
 export default memo(CarouselAnnotation)
