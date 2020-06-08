@@ -10,16 +10,18 @@ import {
     AUDIO_FAST_FORWARD_BUTTON_KEY,
     AUDIO_REWIND_BUTTON_KEY
 } from '../../../../constants/buttons'
-import { mapSelectedVerseIndex } from '../../../../redux/selected/selectors'
+import { getMapIsVerseActivated } from '../../../../redux/activated/selectors'
+import { getMapVerseSelectedStatus } from '../../../../redux/selected/selectors'
 import './style'
 
 const VerseNav = ({
-    isActivated,
     verseIndex,
     handleVerseSelect
 
 }) => {
-    const selectedVerseIndex = useSelector(mapSelectedVerseIndex)
+    const verseSelectedStatus = useSelector(
+        getMapVerseSelectedStatus(verseIndex)
+    )
 
     const handleButtonClick = () => {
         handleVerseSelect({
@@ -27,6 +29,38 @@ const VerseNav = ({
             scrollLog: `Click select activated verse ${verseIndex}.`
         })
     }
+
+    return (
+        <div className={cx(
+            'VerseNav',
+            'padding__verseInLyric',
+            'fCC'
+        )}>
+            <Button
+                isSmallSize
+                {...{
+                    buttonName:
+                        /**
+                         * It's either before or after selected verse. This
+                         * will never show if it's the selected verse.
+                         */
+                        verseSelectedStatus === -1 ?
+                            AUDIO_REWIND_BUTTON_KEY :
+                            AUDIO_FAST_FORWARD_BUTTON_KEY,
+                    accessKey: ENTER,
+                    handleButtonClick
+                }}
+            />
+        </div>
+    )
+}
+
+const VerseNavContainer = ({
+    verseIndex,
+    handleVerseSelect
+
+}) => {
+    const isVerseActivated = useSelector(getMapIsVerseActivated(verseIndex))
 
     /**
      * If activated, disable only if it's selected and song can't play
@@ -37,41 +71,29 @@ const VerseNav = ({
             mountOnEnter
             unmountOnExit
             {...{
-                in: isActivated,
+                in: isVerseActivated,
                 timeout: 200,
                 classNames: {
-                    enterActive: 'VerseNav__activated',
-                    enterDone: 'VerseNav__activated'
+                    enterActive: 'VerseNav__shown',
+                    enterDone: 'VerseNav__shown'
                 }
             }}
         >
-            <div className={cx(
-                'VerseNav',
-                'padding__verseInLyric',
-                'fCC'
-            )}>
-                <Button
-                    isSmallSize
-                    {...{
-                        buttonName:
-                            verseIndex < selectedVerseIndex ?
-                                AUDIO_REWIND_BUTTON_KEY :
-                                AUDIO_FAST_FORWARD_BUTTON_KEY,
-                        accessKey: ENTER,
-                        isAccessed: isActivated,
-                        isDisabled: !isActivated,
-                        handleButtonClick
-                    }}
-                />
-            </div>
+            <VerseNav
+                {...{
+                    verseIndex,
+                    handleVerseSelect
+                }}
+            />
         </CSSTransition>
     )
 }
 
 VerseNav.propTypes = {
     verseIndex: PropTypes.number.isRequired,
-    isActivated: PropTypes.bool.isRequired,
     handleVerseSelect: PropTypes.func.isRequired
 }
 
-export default memo(VerseNav)
+VerseNavContainer.propTypes = VerseNav.propTypes
+
+export default memo(VerseNavContainer)

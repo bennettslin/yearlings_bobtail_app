@@ -13,6 +13,19 @@ export const mapSelectedVerseIndex = (
     { selectedStore: { selectedVerseIndex } }
 ) => selectedVerseIndex
 
+export const getMapVerseSelectedStatus = verseIndex => createSelector(
+    mapSelectedVerseIndex,
+    selectedVerseIndex => {
+        if (verseIndex < selectedVerseIndex) {
+            return -1
+        } else if (verseIndex > selectedVerseIndex) {
+            return 1
+        } else {
+            return 0
+        }
+    }
+)
+
 export const mapSelectedAnnotationIndex = (
     { selectedStore: { selectedAnnotationIndex } }
 ) => selectedAnnotationIndex

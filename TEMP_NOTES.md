@@ -1,6 +1,6 @@
 # Verse styling refactor
-* VerseNav knows its own logic.
 * Make logicSelectors easier. Maybe even get rid of VerseHoc?
+* Playing verse should be neutral and not hoverable when activated.
 
 # Pre-Gatsby bugs
 * Activated scene index is undefined when accessing back to selected verse. Solve by just getting rid of those activated values.
@@ -15,9 +15,6 @@
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
 * tips hand in garryowen for score
-
-# Bugs that may get fixed after logic styling tear out and redo.
-* VerseBar should not have hover styling.
 
 # Bugs that may get fixed after canEnter tear out.
 * Song selection seems slower through access?

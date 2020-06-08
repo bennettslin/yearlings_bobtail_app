@@ -4,7 +4,6 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
-import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import { getIsCursorVerse } from '../../../redux/lyric/selectors'
 import './style'
 
@@ -19,7 +18,6 @@ const VerseHoc = ({
 }) => {
     const
         hasVerseIndex = Number.isFinite(verseIndex),
-        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         isCursorVerse = useSelector(getIsCursorVerse(verseIndex))
 
     if (!hasVerseIndex) {
@@ -43,9 +41,7 @@ const VerseHoc = ({
                 )
             ) ? 'Verse__text' : 'Verse__slider',
             isCursorVerse ? 'Verse__cursor' : 'Verse__notCursor'
-        ),
-
-        isActivated = verseIndex === activatedVerseIndex
+        )
 
     return (
         <VerseComponent {...other}
@@ -66,7 +62,6 @@ const VerseHoc = ({
                 <VerseNav
                     {...{
                         verseIndex,
-                        isActivated,
                         handleVerseSelect
                     }}
                 />
