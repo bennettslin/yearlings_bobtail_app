@@ -91,7 +91,7 @@ export const getStageDimensionCoordinates = ({
             windowWidth
         ) - leftShelfOverflow,
 
-        navHeight = canCarouselMount ? CSS_HEIGHT_NAV : 0,
+        navHeight = canCarouselMount && isDesktopWidth ? CSS_HEIGHT_NAV : 0,
 
         centreFieldHeight = getCentreFieldHeight({
             deviceWidthIndex,
@@ -136,6 +136,8 @@ export const getStageDimensionCoordinates = ({
         // Keep centred in mobile, even with dots overview.
         left = (leftShelfOverflow + centreFieldWidth - width) * 0.5
     }
+
+    console.log(top, left, width, height, menuHeight)
 
     return {
         stageTop: Number((top + menuHeight).toFixed(2)),

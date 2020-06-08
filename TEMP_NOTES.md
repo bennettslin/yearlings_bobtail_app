@@ -3,7 +3,6 @@
 
 # Post-Gatsby bugs
 * Bug where can select annotation with no dots.
-* Stage dimensions act like two row menu in mobile, even when not?
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
