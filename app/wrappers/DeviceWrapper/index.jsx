@@ -42,8 +42,7 @@ const DeviceWrapper = ({ children }) => {
                     isDesktopWidth ?
                         'DW__desktopWidth' :
                         'DW__mobileWidth',
-                    !isPhoneWidth &&
-                        'DW__notPhoneWidth',
+
                     !isDesktopWidth && {
                         'DW__miniOrTabletWidth': !isPhoneWidth,
                         'DW__phoneOrMiniWidth': !isTabletWidth

@@ -11,7 +11,6 @@ import {
 import { mapEarColumnIndex } from '../../redux/selected/selectors'
 import {
     mapIsCarouselNavShowable,
-    mapIsTipsShowable,
     mapIsEarShown
 } from '../../redux/transient/selectors'
 
@@ -22,7 +21,6 @@ const ResponsiveWrapper = ({ children }) => {
         showShrunkNavIcon = useSelector(mapShowShrunkNavIcon),
         earColumnIndex = useSelector(mapEarColumnIndex),
         isCarouselNavShowable = useSelector(mapIsCarouselNavShowable),
-        isTipsShowable = useSelector(mapIsTipsShowable),
         isEarShown = useSelector(mapIsEarShown),
 
         // TODO: Make this a selector.
@@ -43,9 +41,6 @@ const ResponsiveWrapper = ({ children }) => {
 
                     isCarouselNavShowable &&
                         'RW__carouselNavShowable',
-
-                    !isTipsShowable &&
-                        'RW__tipsNotShowable',
 
                     singleShownEarColumnKey ?
                         `RW__${singleShownEarColumnKey}EarColumnOnly` :

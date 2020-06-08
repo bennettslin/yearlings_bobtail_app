@@ -85,9 +85,8 @@ const ShownWrapper = ({ children }) => {
                     isDotsSlideShown ?
                         'ShW__dotsShown' :
                         'ShW__dotsHidden',
-                    isLyricExpanded ?
-                        'ShW__lyricExpanded' :
-                        'ShW__lyricCollapsed',
+
+                    isLyricExpanded && 'ShW__lyricExpanded',
 
                     isOverlayShown ?
                         'ShW__overlayShown' :
