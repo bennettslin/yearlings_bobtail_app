@@ -11,11 +11,11 @@ const Score = () => {
         lyricSongIndex = useSelector(mapLyricSongIndex),
         isScoreShown = useSelector(mapIsScoreShown),
         [isLoading, setIsLoading] = useState(false),
-        scoreElement = useRef(),
+        scoreElement = useRef()
 
-        onLoad = () => {
-            setIsLoading(false)
-        }
+    const onLoad = () => {
+        setIsLoading(false)
+    }
 
     useEffect(() => {
         // Only fetch once score is toggled on.

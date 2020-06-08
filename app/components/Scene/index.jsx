@@ -11,11 +11,12 @@ import { CUBE_Y_INDICES } from '../../constants/cubeIndex'
 const Scene = () => {
     const
         dispatch = useDispatch(),
-        canSceneUpdate = useSelector(mapCanSceneUpdate),
-        onEntered = () => {
-            logTransition('Scene did update.')
-            dispatch(updateEntranceStore({ didSceneUpdate: true }))
-        }
+        canSceneUpdate = useSelector(mapCanSceneUpdate)
+
+    const onEntered = () => {
+        logTransition('Scene did update.')
+        dispatch(updateEntranceStore({ didSceneUpdate: true }))
+    }
 
     useEffect(() => {
         logMount('Scene')

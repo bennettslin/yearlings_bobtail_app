@@ -18,11 +18,12 @@ import './style'
 const Theatre = () => {
     const
         dispatch = useDispatch(),
-        canTheatreEnter = useSelector(mapCanTheatreEnter),
-        onEntered = () => {
-            logTransition('Theatre did enter.')
-            dispatch(updateEntranceStore({ didTheatreEnter: true }))
-        }
+        canTheatreEnter = useSelector(mapCanTheatreEnter)
+
+    const onEntered = () => {
+        logTransition('Theatre did enter.')
+        dispatch(updateEntranceStore({ didTheatreEnter: true }))
+    }
 
     useEffect(() => {
         logMount('Theatre')

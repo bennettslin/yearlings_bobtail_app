@@ -8,11 +8,11 @@ const Wiki = () => {
     const
         selectedWikiUrl = useSelector(mapSelectedWikiUrl),
         [isLoading, setIsLoading] = useState(false),
-        wikiElement = useRef(),
+        wikiElement = useRef()
 
-        onLoad = () => {
-            setIsLoading(false)
-        }
+    const onLoad = () => {
+        setIsLoading(false)
+    }
 
     useEffect(() => {
         if (wikiElement.current) {

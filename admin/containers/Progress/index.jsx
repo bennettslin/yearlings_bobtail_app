@@ -7,7 +7,6 @@ import { removeLoadingIndicator } from '../../../app/utils/browser'
 import './style'
 
 const Progress = () => {
-
     useEffect(() => {
         logMount('Progress')
         logSvgCount()

@@ -14,11 +14,12 @@ import Wood from '../Scene/Wood'
 const Stage = () => {
     const
         dispatch = useDispatch(),
-        canSceneEnter = useSelector(mapCanSceneEnter),
-        onEntered = () => {
-            logTransition('Scene did enter from Stage.')
-            dispatch(updateEntranceStore({ didSceneEnter: true }))
-        }
+        canSceneEnter = useSelector(mapCanSceneEnter)
+
+    const onEntered = () => {
+        logTransition('Scene did enter from Stage.')
+        dispatch(updateEntranceStore({ didSceneEnter: true }))
+    }
 
     useEffect(() => {
         logMount('Stage')

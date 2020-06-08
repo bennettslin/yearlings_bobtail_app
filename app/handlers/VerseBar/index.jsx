@@ -49,28 +49,6 @@ const VerseBarHandler = forwardRef(({ getVerseChild }, ref) => {
         isDesktopWidth = useSelector(mapIsDesktopWidth),
         [verseBarsTimeoutId, setVerseBarsTimeoutId] = useState('')
 
-    useEffect(() => {
-        if (queuedDetermineVerseBars) {
-            dispatchVerseBarsTimeout(queuedVerseBarsTimeout)
-            dispatch(resetVerseBarsQueue())
-        }
-    }, [queuedDetermineVerseBars])
-
-    useEffect(() => {
-        // Determine verse bars here while we are sliding.
-        if (sliderVerseIndex > -1) {
-            _dispatchVerseBars({ sliderVerseIndex })
-        }
-    }, [sliderVerseIndex])
-
-    useEffect(() => {
-        /**
-         * This is needed because a verse might get activated or deactivated,
-         * while the selected verse needs to be shown in a verse bar.
-         */
-        _dispatchVerseBars()
-    }, [activatedVerseIndex])
-
     const dispatchVerseBarsTimeout = (timeoutDuration = 10) => {
         /**
          * It seems to help to both make the call immediately, and then set a
@@ -120,6 +98,28 @@ const VerseBarHandler = forwardRef(({ getVerseChild }, ref) => {
             }))
         }
     }
+
+    useEffect(() => {
+        if (queuedDetermineVerseBars) {
+            dispatchVerseBarsTimeout(queuedVerseBarsTimeout)
+            dispatch(resetVerseBarsQueue())
+        }
+    }, [queuedDetermineVerseBars])
+
+    useEffect(() => {
+        // Determine verse bars here while we are sliding.
+        if (sliderVerseIndex > -1) {
+            _dispatchVerseBars({ sliderVerseIndex })
+        }
+    }, [sliderVerseIndex])
+
+    useEffect(() => {
+        /**
+         * This is needed because a verse might get activated or deactivated,
+         * while the selected verse needs to be shown in a verse bar.
+         */
+        _dispatchVerseBars()
+    }, [activatedVerseIndex])
 
     useImperativeHandle(ref, () => dispatchVerseBarsTimeout)
     return null
