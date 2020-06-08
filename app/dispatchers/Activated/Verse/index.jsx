@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { getStartTimeForVerse } from '../../../api/album/time'
-import { getSceneIndexForVerse } from '../../../api/album/verses'
 import { getActivatedVerseForDirection } from './helper'
 import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import {
@@ -31,31 +29,21 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
         }))
     }
 
-    const activateVerseIndex = (nextVerseIndex) => {
+    const activateVerseIndex = nextVerseIndex => {
         // Do not allow selected verse to be activated.
         if (selectedVerseIndex === nextVerseIndex) {
             return
         }
 
         dispatch(updateActivatedStore({
-            activatedSceneIndex: getSceneIndexForVerse(
-                selectedSongIndex,
-                nextVerseIndex
-            ),
-            activatedVerseIndex: nextVerseIndex,
-            activatedTime: getStartTimeForVerse(
-                selectedSongIndex,
-                nextVerseIndex
-            )
+            activatedVerseIndex: nextVerseIndex
         }))
 
         // Turn off auto scroll once verse or scene is activated.
-        dispatch(updateToggleStore({
-            isAutoScroll: false
-        }))
+        dispatch(updateToggleStore({ isAutoScroll: false }))
     }
 
-    const activateVerseDirection = (direction) => {
+    const activateVerseDirection = direction => {
         if (isSelectedLogue) {
             return false
         }

@@ -4780,5 +4780,9 @@ export default [
     {
         taskName: `Remove convoluted CSS verse logic? If so, allow hover styling of activated verse in slider, to be consistent with filmstrip.`,
         workedHours: 12
+    },
+    {
+        taskName: `Activated scene and time are created from verse selector.`,
+        workedHours: 1
     }
 ]

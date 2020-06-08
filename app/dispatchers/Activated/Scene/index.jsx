@@ -5,7 +5,6 @@ import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { getVerseIndexForScene } from '../../../api/album/scenes'
-import { getStartTimeForVerse } from '../../../api/album/time'
 import { getActivatedSceneForDirection } from './helper'
 import { mapActivatedSceneIndex } from '../../../redux/activated/selectors'
 import {
@@ -34,25 +33,16 @@ const ActivatedSceneDispatcher = forwardRef((props, ref) => {
         }))
     }
 
-    const _activateSceneIndex = (nextSceneIndex) => {
+    const _activateSceneIndex = nextSceneIndex => {
         const activatedVerseIndex = getVerseIndexForScene(
             selectedSongIndex,
             nextSceneIndex
         )
 
-        dispatch(updateActivatedStore({
-            activatedSceneIndex: nextSceneIndex,
-            activatedVerseIndex,
-            activatedTime: getStartTimeForVerse(
-                selectedSongIndex,
-                activatedVerseIndex
-            )
-        }))
+        dispatch(updateActivatedStore({ activatedVerseIndex }))
 
         // Turn off auto scroll once verse or scene is activated.
-        dispatch(updateToggleStore({
-            isAutoScroll: false
-        }))
+        dispatch(updateToggleStore({ isAutoScroll: false }))
 
         _queueScrollToActivatedVerse(
             nextSceneIndex,
@@ -60,10 +50,12 @@ const ActivatedSceneDispatcher = forwardRef((props, ref) => {
         )
     }
 
-    const activateSceneDirection = (direction) => {
+    const activateSceneDirection = direction => {
         if (isSelectedLogue) {
             return false
         }
+
+        console.log(activatedSceneIndex, selectedSongIndex, selectedSceneIndex)
 
         _activateSceneIndex(getActivatedSceneForDirection({
             selectedSongIndex,

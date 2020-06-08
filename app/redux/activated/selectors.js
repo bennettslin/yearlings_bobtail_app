@@ -1,4 +1,7 @@
 import { createSelector } from "reselect"
+import { getStartTimeForVerse } from '../../api/album/time'
+import { getSceneIndexForVerse } from '../../api/album/verses'
+import { mapSelectedSongIndex } from "../selected/selectors"
 
 export const mapActivatedVerseIndex = (
     { activatedStore: { activatedVerseIndex } }
@@ -14,11 +17,26 @@ export const getMapIsVerseActivated = verseIndex => createSelector(
     activatedVerseIndex => verseIndex === activatedVerseIndex
 )
 
-// TODO: Only need activated verse index. The rest can just be createSelectors.
-export const mapActivatedSceneIndex = (
-    { activatedStore: { activatedSceneIndex } }
-) => activatedSceneIndex
+export const mapActivatedSceneIndex = createSelector(
+    mapSelectedSongIndex,
+    mapActivatedVerseIndex,
+    (
+        selectedSongIndex,
+        activatedVerseIndex
+    ) => getSceneIndexForVerse(
+        selectedSongIndex,
+        activatedVerseIndex
+    ) || -1
+)
 
-export const mapActivatedTime = (
-    { activatedStore: { activatedTime } }
-) => activatedTime
+export const mapActivatedTime = createSelector(
+    mapSelectedSongIndex,
+    mapActivatedVerseIndex,
+    (
+        selectedSongIndex,
+        activatedVerseIndex
+    ) => getStartTimeForVerse(
+        selectedSongIndex,
+        activatedVerseIndex
+    ) || 0
+)

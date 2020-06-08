@@ -1,5 +1,4 @@
 # Pre-Gatsby bugs
-* Activated scene index is undefined when accessing back to selected verse. Solve by just getting rid of those activated values.
 * Verse scroll key doesn't always work.
 
 # Post-Gatsby bugs
@@ -11,6 +10,7 @@
 * Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
 * tips hand in garryowen for score
+* Do I really want scene activation to work as it does, where you need to go next, then previous, before hitting selected verse that is not the start of scene?
 
 # Bugs that may get fixed after canEnter tear out.
 * Song selection seems slower through access?
