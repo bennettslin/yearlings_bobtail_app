@@ -17,6 +17,8 @@ const ScrollVerseDispatcher = forwardRef((props, ref) => {
         dispatch(updateToggleStore({
             ...isAutoScroll && { isAutoScroll }
         }))
+
+        return true
     }
 
     useImperativeHandle(ref, () => dispatchScrollVerse)

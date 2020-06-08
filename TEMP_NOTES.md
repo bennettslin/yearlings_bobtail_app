@@ -1,6 +1,6 @@
 # Pre-Gatsby bugs
 * Activated scene index is undefined when accessing back to selected verse. Solve by just getting rid of those activated values.
-* Verse scroll key not registered, and doesn't always work.
+* Verse scroll key doesn't always work.
 
 # Post-Gatsby bugs
 * Bug where can select annotation with no dots.
