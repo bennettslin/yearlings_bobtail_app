@@ -9,7 +9,6 @@ import {
     mapIsSliderTouched,
     mapIsSliderMoving
 } from '../../redux/slider/selectors'
-import { mapIsAutoScroll } from '../../redux/toggle/selectors'
 
 const TouchWrapper = ({ children }) => {
     const
@@ -17,15 +16,13 @@ const TouchWrapper = ({ children }) => {
         isBannerHovering = useSelector(mapIsBannerHovering),
         isScrolling = useSelector(mapIsScrolling),
         isSliderTouched = useSelector(mapIsSliderTouched),
-        isSliderMoving = useSelector(mapIsSliderMoving),
-        isAutoScroll = useSelector(mapIsAutoScroll)
+        isSliderMoving = useSelector(mapIsSliderMoving)
 
     return (
         <div
             {...{
                 className: cx(
                     'TouchWrapper',
-                    !isAutoScroll && 'TW__manualScroll',
                     isScrolling ? 'TW__isScrolling' : 'TW__isStationary',
                     isSliderTouched && 'TW__sliderTouched',
                     isSliderMoving && 'TW__sliderMoving',
