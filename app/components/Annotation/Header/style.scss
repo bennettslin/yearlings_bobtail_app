@@ -27,4 +27,9 @@
 
 .AnnotationHeaderAnimatable {
     opacity: 0;
+
+    .CarouselAnnotation__shown
+    & {
+        opacity: 1;
+    }
 }

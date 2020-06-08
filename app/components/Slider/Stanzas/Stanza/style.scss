@@ -27,11 +27,11 @@ $width__sliderStanzaTab: 9px;
 
 .SliderStanza__cursor {
     /**
-        * Make higher than all other stanzas. But slider stanzas still need to
-        * be below slider times.
-        */
-        z-index: $zIndex__menuChild;
-        height: $LENGTH_ICON_LARGE;
+    * Make higher than all other stanzas. But slider stanzas still need to
+    * be below slider times.
+    */
+    z-index: $zIndex__menuChild;
+    height: $LENGTH_ICON_LARGE;
 }
 
 .SliderStanza__tab {

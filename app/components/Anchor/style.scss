@@ -5,31 +5,10 @@
     position: relative;
 }
 
-.Anchor__shown {
+.Anchor__selectable {
     .TW__isStationary.TW__lyricsUnlocked
-    &.Anchor__selectable {
+    &.Anchor__shown {
         cursor: pointer;
-    }
-
-    // Anchors show as more than text.
-    .TextAnchor__plainText {
-        display: none;
-    }
-    .TextAnchor__linkText__default {
-        display: inline;
-    }
-
-    &.Anchor__accessed {
-        .TextAnchor__linkText__default {
-            display: none;
-        }
-        .TextAnchor__linkText__accessed {
-            display: inline;
-        }
-    }
-
-    .Underline {
-        visibility: visible;
     }
 }
 

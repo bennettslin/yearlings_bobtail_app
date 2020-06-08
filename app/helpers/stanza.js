@@ -1,4 +1,5 @@
-export const getParentOfVerseClassNamesForIndices = (verseIndices) => {
+// TODO: Delete this.
+export const getParentOfVerseClassNamesForIndices = verseIndices => {
     const
         // "Parent of verse index."
         prefix = 'PoV',

@@ -40,6 +40,11 @@ $width__underline__bleed: 0.125em;
     & {
         visibility: hidden;
     }
+
+    .Anchor__shown
+    & {
+        visibility: visible;
+    }
 }
 
 .Underline__accessed,

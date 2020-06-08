@@ -10,6 +10,11 @@
     & {
         display: inline;
     }
+
+    .Anchor__shown
+    & {
+        display: none;
+    }
 }
 
 .TextAnchor__linkText {
@@ -53,5 +58,24 @@
     .Anchor
     & {
         display: none;
+    }
+}
+
+.TextAnchor__linkText__default {
+    .Anchor__shown
+    & {
+        display: inline;
+    }
+
+    .Anchor__accessed.Anchor__shown
+    & {
+        display: none;
+    }
+}
+
+.TextAnchor__linkText__accessed {
+    .Anchor__accessed.Anchor__shown
+    & {
+        display: inline;
     }
 }

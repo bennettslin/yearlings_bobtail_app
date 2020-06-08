@@ -10,6 +10,7 @@ import {
 } from '../../../api/album/units'
 import { getParentOfVerseClassNamesForIndices } from '../../../helpers/stanza'
 
+// TODO: Delete this.
 export const getParentOfVerseClassNamesForUnitCard = ({
     isIndexedVerse,
     isMainVerses,
