@@ -4,7 +4,6 @@ import { updateAccessStore } from '../../../redux/access/action'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
-import { getDotKeysFromBit } from '../../../helpers/dot'
 import { getAnnotationIndexForVerseIndex } from './helper'
 import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
 import { mapIsEarShown } from '../../../redux/transient/selectors'
@@ -29,7 +28,6 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
         direction
     } = {}) => {
         const
-            selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
             accessedAnnotationIndex =
                     annotationIndex ?
 
@@ -37,7 +35,7 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
                         getAnnotationIndexForDirection({
                             currentAnnotationIndex: annotationIndex,
                             selectedSongIndex,
-                            selectedDotKeys,
+                            selectedDotsBit,
                             earColumnIndex,
                             isEarShown,
                             direction
@@ -50,7 +48,7 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
                         }) : getAnnotationIndexForVerseIndex({
                             verseIndex,
                             selectedSongIndex,
-                            selectedDotKeys,
+                            selectedDotsBit,
                             earColumnIndex,
                             isEarShown,
                             direction

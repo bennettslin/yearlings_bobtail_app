@@ -1,9 +1,9 @@
 import {
     getColumnIndexForAnnotation,
     getAnnotationCountForSong,
-    getDotKeysForAnnotation
+    getDotsBitForAnnotation
 } from '../api/album/annotations'
-import { intersects } from '../helpers/dot'
+import { getHasSelectedDot } from '../helpers/dot'
 
 export const getShowAnnotationForColumn = ({
     selectedSongIndex,
@@ -33,7 +33,7 @@ export const getAnnotationIndexForDirection = ({
     isEarShown,
     currentAnnotationIndex = 1,
     selectedSongIndex,
-    selectedDotKeys,
+    selectedDotsBit,
     earColumnIndex,
 
     direction,
@@ -58,7 +58,7 @@ export const getAnnotationIndexForDirection = ({
     if (annotationsCount) {
         let returnIndex = currentAnnotationIndex,
             directionSwitchCounter = 0,
-            doesIntersect,
+            hasSelectedDot,
             returnToLoop
 
         // Skip over deselected annotations.
@@ -109,14 +109,17 @@ export const getAnnotationIndexForDirection = ({
             }
 
             // Check that this annotation is enabled, given selected dot keys.
-            doesIntersect = intersects(getDotKeysForAnnotation(
-                selectedSongIndex,
-                returnIndex
-            ), selectedDotKeys)
+            hasSelectedDot = getHasSelectedDot(
+                getDotsBitForAnnotation(
+                    selectedSongIndex,
+                    returnIndex
+                ),
+                selectedDotsBit
+            )
 
             returnToLoop =
                 // Continue if dots don't intersect...
-                (!doesIntersect ||
+                (!hasSelectedDot ||
 
                 // Or if this annotation isn't in the shown column...
                 !getShowAnnotationForColumn({
@@ -146,7 +149,7 @@ export const getAnnotationIndexForDirection = ({
          * Allow for the possibility that all dots are deselected, such that no
          * annotation can be accessed.
          */
-        return doesIntersect ? returnIndex : -1
+        return hasSelectedDot ? returnIndex : -1
     }
 
     return currentAnnotationIndex

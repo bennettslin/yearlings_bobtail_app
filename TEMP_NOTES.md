@@ -2,7 +2,6 @@
 * Verse scroll key doesn't always work.
 
 # Post-Gatsby bugs
-* Bug where can select annotation with no dots.
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
 
 # Minor issues, to be investigated while production is on master before Gatsby.

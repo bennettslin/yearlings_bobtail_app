@@ -1,6 +1,6 @@
 import {
     getAnnotationCountForSong,
-    getDotKeysForAnnotation
+    getDotsBitForAnnotation
 } from '../../../api/album/annotations'
 import {
     getLastAnnotationIndexForVerse,
@@ -10,7 +10,7 @@ import {
     getShowAnnotationForColumn,
     getAnnotationIndexForDirection
 } from '../../../helpers/annotation'
-import { intersects } from '../../../helpers/dot'
+import { getHasSelectedDot } from '../../../helpers/dot'
 
 export const getAnnotationIndexForVerseIndex = ({
     isEarShown,
@@ -18,7 +18,7 @@ export const getAnnotationIndexForVerseIndex = ({
     // Search backwards by default.
     verseIndex,
     selectedSongIndex,
-    selectedDotKeys,
+    selectedDotsBit,
     earColumnIndex,
 
     direction = -1
@@ -57,7 +57,7 @@ export const getAnnotationIndexForVerseIndex = ({
             // Move inward, which is the opposite direction.
             currentCounter -= direction
 
-            const annotationDotKeys = getDotKeysForAnnotation(
+            const dotsBit = getDotsBitForAnnotation(
                     selectedSongIndex,
                     returnIndex
                 ),
@@ -67,7 +67,10 @@ export const getAnnotationIndexForVerseIndex = ({
                     earColumnIndex,
                     isEarShown
                 }),
-                doesIntersect = intersects(annotationDotKeys, selectedDotKeys)
+                hasSelectedDot = getHasSelectedDot(
+                    dotsBit,
+                    selectedDotsBit
+                )
 
             /**
              * Return while not shown for column or dot keys don't intersect,
@@ -76,7 +79,7 @@ export const getAnnotationIndexForVerseIndex = ({
             returnToLoop =
                 currentCounter >= 0 &&
                 currentCounter < annotationIndicesCount &&
-                (!showAnnotationForColumn || !doesIntersect)
+                (!showAnnotationForColumn || !hasSelectedDot)
 
         } while (returnToLoop)
 
@@ -95,7 +98,7 @@ export const getAnnotationIndexForVerseIndex = ({
         isEarShown,
         currentAnnotationIndex: returnIndex,
         selectedSongIndex,
-        selectedDotKeys,
+        selectedDotsBit,
         earColumnIndex,
         specifiedDirection: direction
     })

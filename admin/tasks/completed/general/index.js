@@ -4788,5 +4788,9 @@ export default [
     {
         taskName: `Fix bug where stage dimensions were not maximised in mobile without two-row menu. Not a post-Gatsby bug, it was happening upon resize even pre-Gatsby.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix bug where annotation with no selected dots can be selected by getting rid of intersects method.`,
+        workedHours: 1
     }
 ]

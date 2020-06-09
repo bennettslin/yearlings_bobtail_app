@@ -137,8 +137,6 @@ export const getStageDimensionCoordinates = ({
         left = (leftShelfOverflow + centreFieldWidth - width) * 0.5
     }
 
-    console.log(top, left, width, height, menuHeight)
-
     return {
         stageTop: Number((top + menuHeight).toFixed(2)),
         stageLeft: Number(left.toFixed(2)),

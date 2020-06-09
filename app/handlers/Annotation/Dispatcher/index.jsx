@@ -3,11 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
-import {
-    intersects,
-    getDotKeysFromBit
-} from '../../../helpers/dot'
-import { getDotKeysForAnnotation } from '../../../api/album/annotations'
+import { getHasSelectedDot } from '../../../helpers/dot'
+import { getDotsBitForAnnotation } from '../../../api/album/annotations'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
 import { mapIsEarShown } from '../../../redux/transient/selectors'
@@ -24,8 +21,7 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
         isEarShown = useSelector(mapIsEarShown),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        earColumnIndex = useSelector(mapEarColumnIndex),
-        selectedDotKeys = getDotKeysFromBit(selectedDotsBit)
+        earColumnIndex = useSelector(mapEarColumnIndex)
 
     const _dispatchAndLog = annotationIndex => {
         dispatch(updateSelectedStore({
@@ -44,14 +40,14 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
         fromCarousel
 
     } = {}) => {
-        // If selecting an annotation, make sure that its dots intersect.
         if (annotationIndex) {
-            const annotationDotKeys = getDotKeysForAnnotation(
+            // If selecting an annotation, make sure that its dots intersect.
+            const dotsBit = getDotsBitForAnnotation(
                 selectedSongIndex,
                 annotationIndex
             )
 
-            if (!intersects(annotationDotKeys, selectedDotKeys)) {
+            if (!getHasSelectedDot(dotsBit, selectedDotsBit)) {
                 return false
             }
         }
@@ -87,7 +83,7 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
         const nextAnnotationIndex = getAnnotationIndexForDirection({
             isEarShown,
             selectedSongIndex,
-            selectedDotKeys,
+            selectedDotsBit,
             currentAnnotationIndex: selectedAnnotationIndex,
             earColumnIndex,
             direction

@@ -5,21 +5,6 @@ import {
 } from './bit'
 import { ORDERED_DOT_KEYS } from '../constants/dots'
 
-// TODO: Eventually get rid of this.
-export const intersects = (presentKeys = {}, selectedKeys = {}) => {
-    const presentKeysArray = Object.keys(presentKeys)
-
-    // If presentKeys is empty, return true.
-    if (presentKeysArray.length === 0) {
-        return true
-
-    } else {
-        return presentKeysArray.reduce((intersects, presentKey) => {
-            return intersects || selectedKeys[presentKey]
-        }, false)
-    }
-}
-
 export const getDotKeysFromBit = bit => (
     getObjectFromBit({
         keysList: ORDERED_DOT_KEYS,
@@ -31,4 +16,19 @@ export const getDotsBitFromKeys = dotKeys => (
         keysList: ORDERED_DOT_KEYS,
         trueFalseObject: dotKeys
     }) : null
+)
+
+export const getFirstSelectedDotKey = (dotsBit = 0, selectedDotsBit) => {
+    const
+        dotKeys = getDotKeysFromBit(dotsBit),
+        selectedDotKeys = getDotKeysFromBit(selectedDotsBit)
+
+    return ORDERED_DOT_KEYS.find(dotKey => (
+        dotKeys[dotKey] &&
+        selectedDotKeys[dotKey]
+    ))
+}
+
+export const getHasSelectedDot = (dotsBit, selectedDotsBit) => (
+    Boolean(getFirstSelectedDotKey(dotsBit, selectedDotsBit))
 )
