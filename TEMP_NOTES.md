@@ -9,7 +9,6 @@
 # Post-Gatsby bugs
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
 * Don't style selected verse when verse bar is shown.
-* Get rid of outline in mailing list input.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Figure out why window resizing timeout seems to have regressed.

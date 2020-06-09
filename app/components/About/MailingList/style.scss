@@ -15,6 +15,10 @@
     box-sizing: border-box;
     font-size: 1em;
     padding: 0;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .MailingList__emailField {
@@ -26,7 +30,7 @@
 
     color: $colour__text__dark;
 
-    border: 1px solid $colour__neutral__dark;
+    border: 1px solid $colour__link__light;
     border-radius: $borderRadius__narrow;
 
     .DW__userAgentDesktop
@@ -38,10 +42,13 @@
         color: $colour__annotationWormhole__title;
     }
 
-    &:hover,
+    &:hover {
+        border-color: $colour__linkHover__light;
+    }
+
     &:active,
     &:focus {
-        border-color: $colour__playing__empty;
+        border-color: $colour__linkActive;
     }
 }
 
@@ -71,10 +78,6 @@
     }
 
     &:disabled {
-        color: $colour__neutral__dark;
-    }
-
-    &:focus {
-        outline: none;
+        color: $colour__neutral__medium;
     }
 }
