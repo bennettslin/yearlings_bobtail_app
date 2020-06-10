@@ -1,6 +1,5 @@
 // Component to wrap text span in appropriate parent element.
-
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { isString } from '../../../helpers/general'
 
@@ -8,11 +7,11 @@ import TextLyricAnchor from './LyricAnchor'
 import Texts from '..'
 import TextSpan from './Span'
 
-const Text = ({
+const Text = forwardRef(({
     text: textEntity,
     ...props
 
-}) => {
+}, ref) => {
     const {
         inVerseBar,
         ...other
@@ -38,6 +37,7 @@ const Text = ({
                 <Texts {...props}
                     hasRecursed
                     {...{
+                        ref,
                         isItalic,
                         isEmphasis,
                         text: lyric
@@ -77,6 +77,7 @@ const Text = ({
                     <Texts {...other}
                         hasRecursed
                         {...{
+                            ref,
                             text,
                             isWormholeDestinationAnchor
                         }}
@@ -93,6 +94,7 @@ const Text = ({
                 return (
                     <TextLyricAnchor {...other}
                         {...{
+                            ref,
                             text,
                             dotsBit,
                             wikiIndex,
@@ -113,7 +115,7 @@ const Text = ({
 
     // Wormholes don't have a text description, so return null.
     return null
-}
+})
 
 Text.propTypes = {
     // From parent.

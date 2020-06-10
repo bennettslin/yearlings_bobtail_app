@@ -1,17 +1,17 @@
 // Component for a single line in a verse.
 
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Texts from '../../../Texts'
 import './style'
 
-const VerseLine = ({
+const VerseLine = forwardRef(({
     columnKey,
     isTruncatable,
     ...other
 
-}) => {
+}, ref) => {
     const { inVerseBar } = other
 
     /**
@@ -40,8 +40,12 @@ const VerseLine = ({
                     { 'VerseLine__truncatable': isTruncatable }
                 )}
             >
-                <Texts {...other}
+                <Texts
                     isVerseLyric
+                    {...{
+                        ref,
+                        ...other
+                    }}
                 />
             </div>
 
@@ -55,7 +59,7 @@ const VerseLine = ({
             )}
         </>
     )
-}
+})
 
 VerseLine.propTypes = {
     text: PropTypes.oneOfType([

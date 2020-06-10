@@ -25,7 +25,6 @@ const Unit = forwardRef(({
 
 }, ref) => {
     const
-        { setLyricAnnotationChild } = other,
         lyricSongIndex = useSelector(mapLyricSongIndex),
         unitVerseIndices = getVerseIndicesForUnit(
             lyricSongIndex, unitIndex
@@ -102,8 +101,8 @@ const Unit = forwardRef(({
             }
             <UnitDot
                 {...{
-                    unitIndex,
-                    setLyricAnnotationChild
+                    ref,
+                    unitIndex
                 }}
             />
         </div>

@@ -1,6 +1,5 @@
 // Component to show single dot anchor as its own stanza.
-
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
@@ -19,11 +18,7 @@ import {
 import { mapIsSliderMoving } from '../../../redux/slider/selectors'
 import './style'
 
-export const UnitDot = ({
-    unitIndex,
-    setLyricAnnotationChild
-
-}) => {
+export const UnitDot = forwardRef(({ unitIndex }, ref) => {
     const
         dispatch = useDispatch(),
         lyricSongIndex = useSelector(mapLyricSongIndex),
@@ -48,12 +43,10 @@ export const UnitDot = ({
         return true
     }
 
-    const setLyricAnnotationElement = node => {
-        if (node) {
-            setLyricAnnotationChild({
-                node,
-                index: annotationIndex
-            })
+    const setRef = node => {
+        if (ref) {
+            ref.current = ref.current || { annotation: {}, verse: {} }
+            ref.current.annotation[annotationIndex] = node
         }
     }
 
@@ -73,23 +66,20 @@ export const UnitDot = ({
             {/* Scroll to unit dot at bottom, not unit middle. */}
             <Anchor
                 {...{
+                    ref: setRef,
                     dotsBit,
                     isSelected,
                     isAccessed,
                     annotationIndex,
-                    handleAnchorClick,
-                    setLyricAnnotationElement
+                    handleAnchorClick
                 }}
             />
         </div>
     )
-}
+})
 
-export const propTypes = {
-    unitIndex: PropTypes.number.isRequired,
-    setLyricAnnotationChild: PropTypes.func.isRequired
+UnitDot.propTypes = {
+    unitIndex: PropTypes.number.isRequired
 }
-
-UnitDot.propTypes = propTypes
 
 export default memo(UnitDotParent)

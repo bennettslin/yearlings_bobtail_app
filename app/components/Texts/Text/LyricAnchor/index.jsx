@@ -1,5 +1,5 @@
-// Container for text anchor.
-import React, { useRef, memo } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
@@ -19,7 +19,7 @@ import { mapLyricAnnotationIndex, getMapIsLyricAnnotation } from '../../../../re
 import { mapIsSliderMoving } from '../../../../redux/slider/selectors'
 import './style'
 
-const TextLyricAnchor = ({
+const TextLyricAnchor = forwardRef(({
     annotationIndex,
     wikiIndex,
     wikiAnnotationIndex,
@@ -29,10 +29,9 @@ const TextLyricAnchor = ({
     isItalic,
     isEmphasis,
     beginsVerse,
-    endsVerse,
-    setLyricAnnotationChild
+    endsVerse
 
-}) => {
+}, ref) => {
     const
         dispatch = useDispatch(),
         dispatchWiki = useRef(),
@@ -47,6 +46,20 @@ const TextLyricAnchor = ({
         isWikiTextAnchor = Boolean(wikiIndex)
 
     let isAccessed = false
+
+    // TODO: Make this a selector.
+    if (isAccessedIndexedAnchorShown) {
+        if (lyricAnnotationIndex) {
+            isAccessed =
+                // Check that we're in the annotation that's selected.
+                lyricAnnotationIndex === wikiAnnotationIndex &&
+                accessedWikiWormholeIndex === wikiIndex
+
+        } else {
+            isAccessed =
+                accessedAnnotationIndex === annotationIndex
+        }
+    }
 
     const handleAnchorClick = e => {
         if (isSelected || isSliderMoving || isActivated) {
@@ -72,26 +85,10 @@ const TextLyricAnchor = ({
         }
     }
 
-    const setLyricAnnotationElement = node => {
-        if (node) {
-            setLyricAnnotationChild({
-                node,
-                index: annotationIndex
-            })
-        }
-    }
-
-    // TODO: Make this a selector.
-    if (isAccessedIndexedAnchorShown) {
-        if (lyricAnnotationIndex) {
-            isAccessed =
-                // Check that we're in the annotation that's selected.
-                lyricAnnotationIndex === wikiAnnotationIndex &&
-                accessedWikiWormholeIndex === wikiIndex
-
-        } else {
-            isAccessed =
-                accessedAnnotationIndex === annotationIndex
+    const setRef = node => {
+        if (ref) {
+            ref.current = ref.current || { annotation: {}, verse: {} }
+            ref.current.annotation[annotationIndex] = node
         }
     }
 
@@ -101,6 +98,7 @@ const TextLyricAnchor = ({
             {' '}
             <Anchor
                 {...{
+                    ref: setRef,
                     className: cx(
                         annotationIndex &&
                             `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
@@ -119,15 +117,7 @@ const TextLyricAnchor = ({
                         endsVerse
                     },
                     dotsBit: isWikiTextAnchor ? REFERENCE_BIT : dotsBit,
-                    handleAnchorClick,
-
-                    /**
-                     * This method is only passed down by stanza, not carousel
-                     * annotation.
-                     */
-                    ...setLyricAnnotationChild && {
-                        setLyricAnnotationElement
-                    }
+                    handleAnchorClick
                 }}
             />
             {isWikiTextAnchor && (
@@ -136,7 +126,7 @@ const TextLyricAnchor = ({
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </>
     )
-}
+})
 
 TextLyricAnchor.propTypes = {
     wikiIndex: PropTypes.number,
@@ -155,7 +145,6 @@ TextLyricAnchor.propTypes = {
     beginsVerse: PropTypes.bool,
     endsVerse: PropTypes.bool,
     dotsBit: PropTypes.number,
-    setLyricAnnotationChild: PropTypes.func,
     handleAnchorClick: PropTypes.func
 }
 

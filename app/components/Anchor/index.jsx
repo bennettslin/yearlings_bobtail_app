@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -9,7 +9,7 @@ import { getMapHasSelectedDot } from '../../redux/dots/selectors'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import './style'
 
-const Anchor = ({
+const Anchor = forwardRef(({
     className,
     href,
     isAnnotationTitle,
@@ -21,10 +21,9 @@ const Anchor = ({
     text,
     textConfig,
     analyticsIdentifier,
-    setLyricAnnotationElement,
     handleAnchorClick
 
-}) => {
+}, ref) => {
     const
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
         isTextAnchor = Boolean(text),
@@ -62,7 +61,7 @@ const Anchor = ({
     return (
         <a
             {...{
-                ref: setLyricAnnotationElement,
+                ref,
                 className: cx(
                     'Anchor',
                     isShown && 'Anchor__shown',
@@ -109,7 +108,7 @@ const Anchor = ({
             )}
         </a>
     )
-}
+})
 
 Anchor.propTypes = {
     className: PropTypes.string,
@@ -123,7 +122,6 @@ Anchor.propTypes = {
     text: PropTypes.any,
     textConfig: PropTypes.any,
     analyticsIdentifier: PropTypes.string,
-    setLyricAnnotationElement: PropTypes.func,
     handleAnchorClick: PropTypes.func.isRequired
 }
 

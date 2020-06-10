@@ -1,6 +1,7 @@
 # Next
 * Wrap up scrolling refs.
 * Refactor VerseTracker.
+* Consolidate setRefs.
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.

@@ -4,7 +4,6 @@
  */
 // eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useRef, memo } from 'react'
-import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import VerseDispatcher from '../../dispatchers/VerseDispatcher'
 import Stanza from './Stanza'
@@ -14,7 +13,7 @@ import { getLastUnitDotCardIndex } from '../../api/album/units'
 import { mapLyricSongIndex } from '../../redux/lyric/selectors'
 import './style'
 
-const Stanzas = forwardRef(({ setLyricAnnotationChild }, ref) => {
+const Stanzas = forwardRef((props, ref) => {
     const
         dispatchVerse = useRef(),
         lyricSongIndex = useSelector(mapLyricSongIndex)
@@ -38,8 +37,8 @@ const Stanzas = forwardRef(({ setLyricAnnotationChild }, ref) => {
             {/* This is the unit title with first unit dot. */}
             <Unit
                 {...{
-                    unitIndex: 0,
-                    setLyricAnnotationChild
+                    ref,
+                    unitIndex: 0
                 }}
             />
 
@@ -49,8 +48,7 @@ const Stanzas = forwardRef(({ setLyricAnnotationChild }, ref) => {
                         key: stanzaIndex,
                         ref,
                         stanzaIndex,
-                        handleVerseSelect,
-                        setLyricAnnotationChild
+                        handleVerseSelect
                     }}
                 />
             ))}
@@ -59,8 +57,8 @@ const Stanzas = forwardRef(({ setLyricAnnotationChild }, ref) => {
             {lastUnitDotCardIndex > -1 && (
                 <Unit
                     {...{
-                        unitIndex: lastUnitDotCardIndex,
-                        setLyricAnnotationChild
+                        ref,
+                        unitIndex: lastUnitDotCardIndex
                     }}
                 />
             )}
@@ -68,9 +66,5 @@ const Stanzas = forwardRef(({ setLyricAnnotationChild }, ref) => {
         </div>
     )
 })
-
-Stanzas.propTypes = {
-    setLyricAnnotationChild: PropTypes.func.isRequired
-}
 
 export default memo(Stanzas)

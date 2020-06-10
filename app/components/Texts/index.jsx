@@ -1,16 +1,16 @@
 // Component to iterate through array of text.
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import Text from './Text'
 
-const Texts = ({
+const Texts = forwardRef(({
     hasRecursed = false,
     text: textEntity,
     beginsVerse: prevBeginsVerse,
     endsVerse: prevEndsVerse,
     ...other
 
-}) => (
+}, ref) => (
     Array.isArray(textEntity) ? (
 
         textEntity.map((textEntry, index) => {
@@ -35,6 +35,7 @@ const Texts = ({
                     hasRecursed
                     {...{
                         key: index,
+                        ref,
                         text: textEntry,
                         beginsVerse,
                         endsVerse
@@ -46,6 +47,7 @@ const Texts = ({
     ) : (
         <Text {...other}
             {...{
+                ref,
                 text: textEntity,
 
                 /**
@@ -59,7 +61,7 @@ const Texts = ({
             }}
         />
     )
-)
+))
 
 Texts.propTypes = {
     // From parent.

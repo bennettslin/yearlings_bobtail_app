@@ -42,11 +42,9 @@ class LyricScroll extends PureComponent {
         getRefs: PropTypes.func.isRequired
     }
 
-    scrollAnnotationChildren = {}
-
     constructor(props) {
         super(props)
-        this.scrollVerseChildren = React.createRef()
+        this.scrollChildren = React.createRef()
     }
 
     componentDidMount() {
@@ -96,20 +94,16 @@ class LyricScroll extends PureComponent {
         this.props.setLyricFocusElement(node)
     }
 
-    _setScrollAnnotationChild = ({ node, index }) => {
-        this.scrollAnnotationChildren[index] = node
-    }
-
     getLyricScrollParent = () => (
         this.lyricScrollParent
     )
 
     getScrollAnnotationChild = index => (
-        this.scrollAnnotationChildren[index]
+        this.scrollChildren.current.annotation[index]
     )
 
     getScrollVerseChild = index => (
-        this.scrollVerseChildren.current[index]
+        this.scrollChildren.current.verse[index]
     )
 
     render() {
@@ -153,18 +147,14 @@ class LyricScroll extends PureComponent {
                         }}
                     >
                         <Stanzas
-                            {...{
-                                ref: this.scrollVerseChildren,
-                                setLyricAnnotationChild:
-                                    this._setScrollAnnotationChild
-                            }}
+                            {...{ ref: this.scrollChildren }}
                         />
                     </div>
                 </Transition>
                 <ScrollOverlayDispatcher
                     {...{
                         ref: this.getDispatchScrollTimeout,
-                        getLyricElement: this.getLyricScrollParent
+                        getLyricScrollParent: this.getLyricScrollParent
                     }}
                 />
                 <VerseBarHandler
