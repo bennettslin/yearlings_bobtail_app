@@ -6,29 +6,15 @@ import cx from 'classnames'
 import Texts from '../Texts'
 import OverviewToggle from '../Main/OverviewToggle'
 import { getOverviewForSong } from '../../api/album/songs'
-import { getIsToggleInOverview } from './helper'
-import { mapIsHeightlessLyric } from '../../redux/responsive/selectors'
-import {
-    mapLyricSongIndex,
-    mapIsLyricLogue
-} from '../../redux/lyric/selectors'
-import { mapIsPhoneWidth } from '../../redux/viewport/selectors'
+import { mapLyricSongIndex } from '../../redux/lyric/selectors'
+import { mapIsToggleInOverview } from '../../redux/responsive/selectors'
 import './style'
 
 const Overview = () => {
     const
-        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        isLyricLogue = useSelector(mapIsLyricLogue),
-        isPhoneWidth = useSelector(mapIsPhoneWidth),
-        overviewText = getOverviewForSong(lyricSongIndex),
-
-        // TODO: Make this a selector.
-        isToggleInOverview = getIsToggleInOverview({
-            isPhoneWidth,
-            isHeightlessLyric,
-            isLyricLogue
-        })
+        isToggleInOverview = useSelector(mapIsToggleInOverview),
+        overviewText = getOverviewForSong(lyricSongIndex)
 
     return (
         <div
