@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import Transition from 'react-transition-group/Transition'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
@@ -10,171 +10,116 @@ import ScrollOverlayDispatcher from '../../../dispatchers/ScrollOverlay'
 import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
 import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 import { mapCanLyricCarouselUpdate } from '../../../redux/entrance/selectors'
 
-const mapStateToProps = state => {
+const LyricScroll = forwardRef((props, ref) => {
     const
-        canLyricCarouselUpdate = mapCanLyricCarouselUpdate(state),
-        lyricSongIndex = mapLyricSongIndex(state)
+        dispatch = useDispatch(),
+        scrollParent = useRef(),
+        scrollChildren = useRef(),
+        dispatchLyricWheel = useRef(),
+        dispatchScrollTimeout = useRef(),
+        dispatchVerseBarsTimeout = useRef(),
+        canLyricCarouselUpdate = useSelector(mapCanLyricCarouselUpdate)
 
-    return {
-        canLyricCarouselUpdate,
-        lyricSongIndex
-    }
-}
-
-/*************
- * CONTAINER *
- *************/
-
-class LyricScroll extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        canLyricCarouselUpdate: PropTypes.bool.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
-        updateEntranceStore: PropTypes.func.isRequired,
-
-        // From parent.
-        setLyricFocusElement: PropTypes.func.isRequired,
-        getRefs: PropTypes.func.isRequired
-    }
-
-    constructor(props) {
-        super(props)
-        this.scrollChildren = React.createRef()
-    }
-
-    componentDidMount() {
-        this.props.getRefs({
-            handleVerseBarWheel: this.handleVerseBarWheel
-        })
-    }
-
-    handleVerseBarWheel = e => {
-        this.dispatchVerseBarWheel(e, this.lyricScrollParent)
-    }
-
-    _handleDetermineVerseBars = () => {
-        this.dispatchVerseBarsTimeout()
-        this.dispatchScrollTimeout()
-    }
-
-    _handleDetermineAutoScroll = e => {
-        this.dispatchLyricTouchMoveOrWheel(e, this.lyricScrollParent)
-    }
-
-    _handleTransitionEntered = () => {
+    const onEntered = () => {
         logTransition('Lyric did update from LyricScroll.')
-        this.props.updateEntranceStore({ didLyricUpdate: true })
+        dispatch(updateEntranceStore({ didLyricUpdate: true }))
     }
 
-    getDispatchLyricWheel = dispatch => {
-        if (dispatch) {
-            this.dispatchLyricTouchMoveOrWheel = dispatch.dispatchLyricTouchMoveOrWheel
-            this.dispatchVerseBarWheel = dispatch.dispatchVerseBarWheel
-        }
+    const onScroll = () => {
+        dispatchVerseBarsTimeout.current()
+        dispatchScrollTimeout.current()
     }
 
-    getDispatchScrollTimeout = dispatch => {
-        this.dispatchScrollTimeout = dispatch
-    }
-
-    getDispatchVerseBarsTimeout = dispatch => {
-        this.dispatchVerseBarsTimeout = dispatch
-    }
-
-    _setLyricScrollParent = node => {
-        // For lyric and verse bar wheel.
-        this.lyricScrollParent = node
-
-        // For focus.
-        this.props.setLyricFocusElement(node)
-    }
-
-    getLyricScrollParent = () => (
-        this.lyricScrollParent
-    )
-
-    getScrollAnnotationChild = index => (
-        this.scrollChildren.current.annotation[index]
-    )
-
-    getScrollVerseChild = index => (
-        this.scrollChildren.current.verse[index]
-    )
-
-    render() {
-        const {
-            canLyricCarouselUpdate
-        } = this.props
-
-        return (
-            <>
-                <ScrollLyricListener {...{
-                    getLyricScrollParent: this.getLyricScrollParent,
-                    getScrollAnnotationChild: this.getScrollAnnotationChild,
-                    getScrollVerseChild: this.getScrollVerseChild
-                }} />
-                <Transition
-                    {...{
-                        in: canLyricCarouselUpdate,
-                        timeout: 200,
-                        onEntered: this._handleTransitionEntered
-                    }}
-                >
-                    <div
-                        {...{
-                            ref: this._setLyricScrollParent,
-                            className: cx(
-                                'LyricScroll',
-                                'abF',
-
-                                /**
-                                 * This gradient does not obscure the lyric
-                                 * toggle buttons.
-                                 */
-                                'gradientMask__lyricScroll'
-                            ),
-                            tabIndex: -1,
-                            onScroll: this._handleDetermineVerseBars,
-                            onWheel: this._handleDetermineAutoScroll
-                        }}
-                        {...IS_TOUCH_SUPPORTED && {
-                            onTouchMove: this._handleDetermineAutoScroll
-                        }}
-                    >
-                        <Stanzas
-                            {...{ ref: this.scrollChildren }}
-                        />
-                    </div>
-                </Transition>
-                <ScrollOverlayDispatcher
-                    {...{
-                        ref: this.getDispatchScrollTimeout,
-                        getLyricScrollParent: this.getLyricScrollParent
-                    }}
-                />
-                <VerseBarHandler
-                    {...{
-                        ref: this.getDispatchVerseBarsTimeout,
-                        getVerseChild: this.getScrollVerseChild
-                    }}
-                />
-                <LyricWheelDispatcher
-                    {...{
-                        ref: this.getDispatchLyricWheel,
-                        determineVerseBars: this._handleDetermineVerseBars
-                    }}
-                />
-            </>
+    const onWheel = e => {
+        dispatchLyricWheel.current.dispatchLyricTouchMoveOrWheel(
+            e, scrollParent.current
         )
     }
-}
 
-export default connect(
-    mapStateToProps,
-    { updateEntranceStore }
-)(LyricScroll)
+    const getLyricScrollParent = () => (
+        scrollParent.current
+    )
+
+    const getScrollAnnotationChild = index => (
+        scrollChildren.current.annotation[index]
+    )
+
+    const getScrollVerseChild = index => (
+        scrollChildren.current.verse[index]
+    )
+
+    const handleVerseBarWheel = e => {
+        dispatchLyricWheel.current.dispatchVerseBarWheel(
+            e, scrollParent.current
+        )
+    }
+
+    useImperativeHandle(ref, () => ({
+        handleVerseBarWheel,
+        lyricScroll: scrollParent.current
+    }))
+
+    return (
+        <>
+            <ScrollLyricListener {...{
+                getLyricScrollParent,
+                getScrollAnnotationChild,
+                getScrollVerseChild
+            }} />
+            <Transition
+                {...{
+                    in: canLyricCarouselUpdate,
+                    timeout: 200,
+                    onEntered
+                }}
+            >
+                <div
+                    {...{
+                        ref: scrollParent,
+                        className: cx(
+                            'LyricScroll',
+                            'abF',
+
+                            /**
+                             * This gradient does not obscure the lyric
+                             * toggle buttons.
+                             */
+                            'gradientMask__lyricScroll'
+                        ),
+                        tabIndex: -1,
+                        onScroll,
+                        onWheel,
+                        ...IS_TOUCH_SUPPORTED && {
+                            onTouchMove: onWheel
+                        }
+                    }}
+                >
+                    <Stanzas {...{ ref: scrollChildren }} />
+                </div>
+            </Transition>
+            <ScrollOverlayDispatcher
+                {...{
+                    ref: dispatchScrollTimeout,
+                    getLyricScrollParent
+                }}
+            />
+            <VerseBarHandler
+                {...{
+                    ref: dispatchVerseBarsTimeout,
+                    getScrollVerseChild
+                }}
+            />
+            <LyricWheelDispatcher
+                {...{
+                    ref: dispatchLyricWheel,
+                    determineVerseBars: onScroll
+                }}
+            />
+        </>
+    )
+})
+
+export default LyricScroll

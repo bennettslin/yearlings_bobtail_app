@@ -31,7 +31,7 @@ import {
     mapIsDesktopWidth
 } from '../../redux/viewport/selectors'
 
-const VerseBarHandler = forwardRef(({ getVerseChild }, ref) => {
+const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     const
         dispatch = useDispatch(),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
@@ -67,7 +67,7 @@ const VerseBarHandler = forwardRef(({ getVerseChild }, ref) => {
     }
 
     const _dispatchVerseBars = ({ sliderVerseIndex = -1 } = {}) => {
-        const verseElement = getVerseChild(getCursorIndex(
+        const verseElement = getScrollVerseChild(getCursorIndex(
             sliderVerseIndex,
             activatedVerseIndex,
             selectedVerseIndex
@@ -127,7 +127,7 @@ const VerseBarHandler = forwardRef(({ getVerseChild }, ref) => {
 )
 
 VerseBarHandler.propTypes = {
-    getVerseChild: PropTypes.func.isRequired
+    getScrollVerseChild: PropTypes.func.isRequired
 }
 
 export default VerseBarHandler

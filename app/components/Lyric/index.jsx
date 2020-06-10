@@ -11,7 +11,6 @@ import LyricScroll from './Scroll'
 import LyricToggles from './Toggles'
 import VerseBar from './VerseBar'
 import CarouselAccess from '../Carousel/Access'
-import { populateRefs } from '../../helpers/ref'
 import './style'
 import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
 
@@ -52,14 +51,15 @@ class Lyric extends PureComponent {
         this.props.updateEntranceStore({ didLyricEnter: true })
     }
 
-    _getRefs = payload => {
-        populateRefs(this, payload)
+    getLyricScroll = dispatch => {
+        if (dispatch) {
+            this.handleVerseBarWheel = dispatch.handleVerseBarWheel
+        }
     }
 
     render() {
         const {
-            canLyricCarouselEnter,
-            setLyricFocusElement
+            canLyricCarouselEnter
         } = this.props
 
         return (
@@ -99,9 +99,7 @@ class Lyric extends PureComponent {
                         />
                         <LyricScroll
                             {...{
-                                getRefs: this._getRefs,
-                                determineVerseBars: this.determineVerseBars,
-                                setLyricFocusElement
+                                ref: this.getLyricScroll
                             }}
                         />
                         <LyricToggles />
