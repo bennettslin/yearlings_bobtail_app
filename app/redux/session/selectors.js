@@ -1,6 +1,9 @@
 import { createSelector } from 'reselect'
 import { getWikiUrl } from '../../helpers/wiki'
-import { mapIsMobileWiki } from '../responsive/selectors'
+import {
+    mapIsMobileWiki,
+    mapShowSingleNavBook
+} from '../responsive/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex
@@ -48,3 +51,14 @@ export const mapSelectedWikiUrl = createSelector(
     })
 )
 
+export const getMapIsNavColumnShown = bookIndex => createSelector(
+    mapShowSingleNavBook,
+    mapShownNavBookIndex,
+    (
+        showSingleNavBook,
+        shownNavBookIndex
+    ) => (
+        !showSingleNavBook ||
+        shownNavBookIndex === bookIndex
+    )
+)

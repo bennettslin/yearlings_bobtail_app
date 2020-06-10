@@ -3,13 +3,12 @@ import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import { mapShowSingleNavBook } from '../../../redux/responsive/selectors'
 import NavDispatcher from '../../../handlers/Nav/Dispatcher'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
-import { mapShownNavBookIndex } from '../../../redux/session/selectors'
+import { getMapIsNavColumnShown } from '../../../redux/session/selectors'
 import './style'
 
 // TODO: Import this from a Book component.
@@ -19,8 +18,7 @@ const NavColumn = ({ bookIndex }) => {
     const
         dispatchNavBook = useRef(),
         dispatchSong = useRef(),
-        showSingleNavBook = useSelector(mapShowSingleNavBook),
-        shownNavBookIndex = useSelector(mapShownNavBookIndex)
+        isNavColumnShown = useSelector(getMapIsNavColumnShown(bookIndex))
 
     const handleNavBookClick = () => {
         dispatchNavBook.current()
@@ -33,16 +31,11 @@ const NavColumn = ({ bookIndex }) => {
         })
     }
 
-    // TODO: Make this a selector.
-    const isShownColumn =
-        !showSingleNavBook ||
-        shownNavBookIndex === bookIndex
-
     return (
         <div className={cx(
             'NavColumn',
             `NavColumn__${bookIndex ? 'right' : 'left'}`,
-            isShownColumn ?
+            isNavColumnShown ?
                 'NavColumn__shown' :
                 'NavColumn__hidden'
         )}>
@@ -50,13 +43,13 @@ const NavColumn = ({ bookIndex }) => {
             <NavBookSongs
                 {...{
                     bookIndex,
-                    isInShownColumn: isShownColumn,
+                    isInShownColumn: isNavColumnShown,
                     handleButtonClick: handleNavSongSelect
                 }}
             />
 
             {/* Logue or toggle. */}
-            {isShownColumn ?
+            {isNavColumnShown ?
                 <NavBookLogue
                     {...{
                         bookIndex,

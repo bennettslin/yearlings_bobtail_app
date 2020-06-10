@@ -20,16 +20,14 @@ const CarouselAnnotation = forwardRef(({ annotationIndex }, ref) => {
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
         lyricSongIndex = useSelector(mapLyricSongIndex),
-
-        // TODO: Make this a selector.
         dotsBit = getDotsBitForAnnotation(
             lyricSongIndex,
             annotationIndex
         ),
-        columnKey = getCarouselAnnotationData({
-            songIndex: lyricSongIndex,
+        columnKey = getCarouselAnnotationData(
+            lyricSongIndex,
             annotationIndex
-        }),
+        ),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit))
 
     const setRef = node => {

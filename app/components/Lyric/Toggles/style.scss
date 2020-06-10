@@ -33,17 +33,13 @@
     & {
         right: $margin__scrollBar;
     }
-
-    .RW__lyricExpandable
-    & {
-        left: $margin__scrollBar;
-    }
-
+    
     .RW__lyricExpandable
     & {
         // This overrides the top lyric child rule, so make sure it's after it.
         top: auto;
         bottom: $MARGIN_THIN;
+        left: $margin__scrollBar;
     }
 }
 

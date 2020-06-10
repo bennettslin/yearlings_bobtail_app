@@ -1,10 +1,10 @@
 import { getColumnIndexForAnnotation } from '../../../api/album/annotations'
 import { EAR_COLUMN_KEYS } from '../../../constants/lyrics'
 
-export const getCarouselAnnotationData = ({
+export const getCarouselAnnotationData = (
     songIndex,
     annotationIndex
-}) => {
+) => {
 
     const columnIndex = getColumnIndexForAnnotation(
             songIndex,

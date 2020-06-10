@@ -5,6 +5,7 @@
 * Consolidate refs.
 * Start getting rid of listeners by putting in reducers, or moving completely to selectors. Begin with PopupAnnotation listener.
 * With PopupAnnotation gone, remove transient store. Spread out its selectors to appropriate other stores.
+* Make verseBars a bit number.
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
