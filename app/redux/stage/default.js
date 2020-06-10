@@ -11,25 +11,17 @@ import {
 } from '../responsive/default'
 import { CAN_INITIAL_CAROUSEL_MOUNT } from '../mount/default'
 
-export const {
-    stageTop: INITIAL_STAGE_TOP,
-    stageLeft: INITIAL_STAGE_LEFT,
-    stageWidth: INITIAL_STAGE_WIDTH,
-    stageHeight: INITIAL_STAGE_HEIGHT
-
-} = getStageDimensionCoordinates({
-    deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX,
-    windowWidth: INITIAL_WINDOW_WIDTH,
-    windowHeight: INITIAL_WINDOW_HEIGHT,
-    isHeightlessLyric: IS_INITIAL_HEIGHTLESS_LYRIC,
-    isTwoRowMenu: IS_INITIAL_TWO_ROW_MENU,
-    menuHeight: INITIAL_MENU_HEIGHT,
-    canCarouselMount: CAN_INITIAL_CAROUSEL_MOUNT
-})
+export const INITIAL_STAGE_DIMENSION_COORDINATES =
+    getStageDimensionCoordinates({
+        deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX,
+        windowWidth: INITIAL_WINDOW_WIDTH,
+        windowHeight: INITIAL_WINDOW_HEIGHT,
+        isHeightlessLyric: IS_INITIAL_HEIGHTLESS_LYRIC,
+        isTwoRowMenu: IS_INITIAL_TWO_ROW_MENU,
+        menuHeight: INITIAL_MENU_HEIGHT,
+        canCarouselMount: CAN_INITIAL_CAROUSEL_MOUNT
+    })
 
 export const STAGE_DEFAULTS = {
-    stageTop: INITIAL_STAGE_TOP,
-    stageLeft: INITIAL_STAGE_LEFT,
-    stageWidth: INITIAL_STAGE_WIDTH,
-    stageHeight: INITIAL_STAGE_HEIGHT
+    stageDimensionCoordinates: INITIAL_STAGE_DIMENSION_COORDINATES
 }

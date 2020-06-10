@@ -1,56 +1,33 @@
 import { cloneElement, memo } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import {
-    mapStageTop,
-    mapStageLeft,
-    mapStageWidth,
-    mapStageHeight
-} from '../../../redux/stage/selectors'
+import { useSelector } from 'react-redux'
+import { mapStageDimensionCoordinates } from '../../../redux/stage/selectors'
 
-const mapStateToProps = state => {
+const AspectRatio = ({ children }) => {
     const
-        stageTop = mapStageTop(state),
-        stageLeft = mapStageLeft(state),
-        stageWidth = mapStageWidth(state),
-        stageHeight = mapStageHeight(state)
+        stageDimensionCoordinates = useSelector(mapStageDimensionCoordinates),
+        {
+            stageTop,
+            stageLeft,
+            stageWidth,
+            stageHeight
+        } = JSON.parse(stageDimensionCoordinates)
 
-    return {
-        stageTop,
-        stageLeft,
-        stageWidth,
-        stageHeight
-    }
+    return cloneElement(
+        children,
+        {
+            style: {
+                top: `${stageTop}px`,
+                left: `${stageLeft}px`,
+                width: `${stageWidth}px`,
+                height: `${stageHeight}px`
+            }
+        }
+    )
 }
 
-const AspectRatio = ({
-    stageTop,
-    stageLeft,
-    stageWidth,
-    stageHeight,
-    children
-
-}) => cloneElement(
-    children,
-    {
-        style: {
-            top: `${stageTop}px`,
-            left: `${stageLeft}px`,
-            width: `${stageWidth}px`,
-            height: `${stageHeight}px`
-        }
-    }
-)
-
 AspectRatio.propTypes = {
-    // Through Redux.
-    stageTop: PropTypes.number.isRequired,
-    stageLeft: PropTypes.number.isRequired,
-    stageWidth: PropTypes.number.isRequired,
-    stageHeight: PropTypes.number.isRequired,
-
-    // From parent.
     children: PropTypes.any.isRequired
 }
 
-export default connect(mapStateToProps)(memo(AspectRatio))
+export default memo(AspectRatio)

@@ -1,13 +1,13 @@
 const PROSCENIUM_MULTIPLIER = 0.054
 
-export const getProsceniumDimensionCoordinates = ({
-    stageTop,
-    stageLeft,
-    stageWidth,
-    stageHeight
-
-}) => {
+export const getProsceniumDimensionCoordinates = stageDimensionCoordinates => {
     const
+        {
+            stageTop,
+            stageLeft,
+            stageWidth,
+            stageHeight
+        } = JSON.parse(stageDimensionCoordinates),
         widthOffset = PROSCENIUM_MULTIPLIER * stageWidth,
         heightOffset = PROSCENIUM_MULTIPLIER * stageHeight,
 

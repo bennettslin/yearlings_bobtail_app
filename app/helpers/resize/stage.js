@@ -137,10 +137,10 @@ export const getStageDimensionCoordinates = ({
         left = (leftShelfOverflow + centreFieldWidth - width) * 0.5
     }
 
-    return {
+    return JSON.stringify({
         stageTop: Number((top + menuHeight).toFixed(2)),
         stageLeft: Number(left.toFixed(2)),
         stageWidth: Number(width.toFixed(2)),
         stageHeight: Number(height.toFixed(2))
-    }
+    })
 }

@@ -110,13 +110,7 @@ class ResizeDispatcher extends PureComponent {
                 windowHeight,
                 isHeightlessLyric
             }),
-            {
-                stageTop,
-                stageLeft,
-                stageWidth,
-                stageHeight
-
-            } = getStageDimensionCoordinates({
+            stageDimensionCoordinates = getStageDimensionCoordinates({
                 deviceWidthIndex,
                 windowWidth,
                 windowHeight,
@@ -126,12 +120,7 @@ class ResizeDispatcher extends PureComponent {
                 canCarouselMount
             })
 
-        this.props.updateStageStore({
-            stageTop,
-            stageLeft,
-            stageWidth,
-            stageHeight
-        })
+        this.props.updateStageStore({ stageDimensionCoordinates })
 
         this.props.updateViewportStore({
             deviceWidthIndex,
@@ -149,10 +138,7 @@ class ResizeDispatcher extends PureComponent {
             deviceWidthIndex,
             windowHeight,
             menuHeight,
-            stageTop,
-            stageLeft,
-            stageWidth,
-            stageHeight,
+            stageDimensionCoordinates,
             isHeightlessLyric,
             isTwoRowMenu
         })
@@ -167,10 +153,7 @@ class ResizeDispatcher extends PureComponent {
         deviceWidthIndex,
         windowHeight,
         menuHeight,
-        stageTop,
-        stageLeft,
-        stageWidth,
-        stageHeight,
+        stageDimensionCoordinates,
         isHeightlessLyric,
         isTwoRowMenu
     }) {
@@ -179,12 +162,9 @@ class ResizeDispatcher extends PureComponent {
                 prosceniumLeft,
                 prosceniumWidth,
                 prosceniumHeight
-            } = getProsceniumDimensionCoordinates({
-                stageTop,
-                stageLeft,
-                stageWidth,
-                stageHeight
-            }),
+            } = getProsceniumDimensionCoordinates(
+                stageDimensionCoordinates
+            ),
             {
                 ceilingHeight,
                 floorHeight

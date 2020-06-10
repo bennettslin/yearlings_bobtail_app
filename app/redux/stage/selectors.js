@@ -1,15 +1,12 @@
-export const mapStageTop = (
-    { stageStore: { stageTop } }
-) => stageTop
+import { createSelector } from "reselect"
 
-export const mapStageLeft = (
-    { stageStore: { stageLeft } }
-) => stageLeft
+export const mapStageDimensionCoordinates = (
+    { stageStore: { stageDimensionCoordinates } }
+) => stageDimensionCoordinates
 
-export const mapStageWidth = (
-    { stageStore: { stageWidth } }
-) => stageWidth
-
-export const mapStageHeight = (
-    { stageStore: { stageHeight } }
-) => stageHeight
+export const mapStageHeight = createSelector(
+    mapStageDimensionCoordinates,
+    stageDimensionCoordinates => (
+        JSON.parse(stageDimensionCoordinates).stageHeight
+    )
+)
