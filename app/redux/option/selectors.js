@@ -1,12 +1,21 @@
 import { createSelector } from 'reselect'
+import { getShowTipForDevice } from '../../api/album/tips'
 import { getIsShown } from '../../helpers/options'
-import { mapCanLyricCarouselEnter } from '../entrance/selectors'
-import { mapIsLyricLogue } from '../lyric/selectors'
-import { mapIsOverlayShown } from '../transient/selectors'
 import {
     getIsOverviewVisibleBySection,
     getIsOverviewVisibleBySong
-} from '../../components/Popups/Overview/helper'
+} from '../../helpers/overview'
+import { mapCanLyricCarouselEnter } from '../entrance/selectors'
+import {
+    mapIsLyricLogue,
+    mapLyricSongIndex
+} from '../lyric/selectors'
+import { mapIsOverlayShown } from '../transient/selectors'
+import {
+    mapIsPhoneWidth,
+    mapIsTabletWidth,
+    mapIsDesktopWidth
+} from '../viewport/selectors'
 
 export const mapIsLogueOverviewShown = (
     { optionStore: { isLogueOverviewShown } }
@@ -64,6 +73,37 @@ export const getMapIsOverviewPopupShown = inMain => createSelector(
             isLogueOverviewShown,
             isOverviewShown,
             isTipsShown
+        })
+    )
+)
+
+export const mapIsTipsPopupShown = createSelector(
+    mapCanLyricCarouselEnter,
+    mapLyricSongIndex,
+    mapIsLyricLogue,
+    mapIsTipsShown,
+    mapIsPhoneWidth,
+    mapIsTabletWidth,
+    mapIsDesktopWidth,
+    (
+        canLyricCarouselEnter,
+        lyricSongIndex,
+        isLyricLogue,
+        isTipsShown,
+        isPhoneWidth,
+        isTabletWidth,
+        isDesktopWidth
+    ) => (
+        canLyricCarouselEnter &&
+        !isLyricLogue &&
+        isTipsShown &&
+
+        // Ensure this song's tip can be shown for this viewport width.
+        getShowTipForDevice({
+            songIndex: lyricSongIndex,
+            isPhoneWidth,
+            isTabletWidth,
+            isDesktopWidth
         })
     )
 )

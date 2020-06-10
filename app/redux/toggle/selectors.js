@@ -1,3 +1,9 @@
+import { createSelector } from "reselect"
+import {
+    mapIsLyricExpandable,
+    mapIsHeightlessLyric
+} from "../responsive/selectors"
+
 export const mapIsAutoScroll = (
     { toggleStore: { isAutoScroll } }
 ) => isAutoScroll
@@ -25,3 +31,19 @@ export const mapIsScoreShown = (
 export const mapIsAboutShown = (
     { toggleStore: { isAboutShown } }
 ) => isAboutShown
+
+export const getMapIsExpandToggleShown = inMain => createSelector(
+    mapIsLyricExpandable,
+    mapIsHeightlessLyric,
+    mapIsLyricExpanded,
+    (
+        isLyricExpandable,
+        isHeightlessLyric,
+        isLyricExpanded
+    ) => (
+        isLyricExpandable &&
+
+        // Render button in main if lyric column is heightless.
+        Boolean(inMain) === (isHeightlessLyric && !isLyricExpanded)
+    )
+)

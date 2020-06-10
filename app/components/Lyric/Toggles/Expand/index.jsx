@@ -1,38 +1,30 @@
 // Button to collapse and expand lyric column in mobile widths.
-
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricDispatcher from '../../../../handlers/Lyric/Dispatcher'
-import {
-    mapIsHeightlessLyric,
-    mapIsLyricExpandable
-} from '../../../../redux/responsive/selectors'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
 import { LYRIC_EXPAND_KEY } from '../../../../constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from '../../../../constants/buttons'
 import { LYRIC_EXPAND } from '../../../../constants/tips'
-import { mapIsLyricExpanded } from '../../../../redux/toggle/selectors'
+import {
+    mapIsLyricExpanded,
+    getMapIsExpandToggleShown
+} from '../../../../redux/toggle/selectors'
 import './style'
 
 const LyricToggleExpand = ({ inMain }) => {
     const
         dispatchLyricExpand = useRef(),
-        isLyricExpandable = useSelector(mapIsLyricExpandable),
-        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
+        isExpandToggleShown = useSelector(getMapIsExpandToggleShown(inMain)),
         isLyricExpanded = useSelector(mapIsLyricExpanded)
 
     const handleButtonClick = () => {
         dispatchLyricExpand.current()
     }
-
-    // Render button in main if lyric column is heightless.
-    // TODO: Make this a selector.
-    const shouldRender =
-            Boolean(inMain) === (isHeightlessLyric && !isLyricExpanded)
 
     return (
         <CSSTransition
@@ -40,7 +32,7 @@ const LyricToggleExpand = ({ inMain }) => {
             mountOnEnter
             unmountOnExit
             {...{
-                in: isLyricExpandable && shouldRender,
+                in: isExpandToggleShown,
                 timeout: 200,
                 classNames: {
                     enterActive: 'LyricToggle__shown',
@@ -76,4 +68,4 @@ LyricToggleExpand.propTypes = {
     inMain: PropTypes.bool
 }
 
-export default LyricToggleExpand
+export default memo(LyricToggleExpand)

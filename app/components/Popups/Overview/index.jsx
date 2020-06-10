@@ -7,10 +7,7 @@ import Popup from '../../Popup'
 import { getMapIsOverviewPopupShown } from '../../../redux/option/selectors'
 import './style'
 
-const OverviewPopup = ({
-    inMain = false
-
-}) => {
+const OverviewPopup = ({ inMain = false }) => {
     const isOverviewPopupShown = useSelector(
         getMapIsOverviewPopupShown(inMain)
     )
