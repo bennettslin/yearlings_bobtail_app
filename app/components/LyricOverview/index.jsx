@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { mapLyricOverviewHeightStyle } from '../../redux/mount/selectors'
@@ -7,7 +6,7 @@ import Lyric from '../Lyric'
 import OverviewPopup from '../Popups/Overview'
 import './style'
 
-const LyricOverview = ({ setLyricFocusElement }) => {
+const LyricOverview = forwardRef((props, ref) => {
     const lyricOverviewHeightStyle =
         useSelector(mapLyricOverviewHeightStyle)
 
@@ -26,16 +25,10 @@ const LyricOverview = ({ setLyricFocusElement }) => {
                 }
             }}
         >
-            <Lyric {...{ setLyricFocusElement }} />
+            <Lyric {...{ ref }} />
             <OverviewPopup />
         </div>
     )
-}
-
-const propTypes = {
-    setLyricFocusElement: PropTypes.func.isRequired
-}
-
-LyricOverview.propTypes = propTypes
+})
 
 export default LyricOverview

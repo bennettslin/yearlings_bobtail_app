@@ -1,9 +1,7 @@
-// Container for lyric section.
-
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useEffect, useRef } from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricAccess from './Access'
@@ -14,106 +12,75 @@ import CarouselAccess from '../Carousel/Access'
 import './style'
 import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
 
-const mapStateToProps = state => {
-    const canLyricCarouselEnter = mapCanLyricCarouselEnter(state)
+const Lyric = forwardRef((props, ref) => {
+    const
+        dispatch = useDispatch(),
+        handleVerseBarWheel = useRef(),
+        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
 
-    return {
-        canLyricCarouselEnter
-    }
-}
-
-class Lyric extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        canLyricCarouselEnter: PropTypes.bool.isRequired,
-        updateEntranceStore: PropTypes.func.isRequired,
-
-        // From parent.
-        setLyricFocusElement: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
+    useEffect(() => {
         logMount('Lyric')
-    }
+    }, [])
 
-    _handleVerseBarWheel = e => {
-        this.handleVerseBarWheel(e)
-    }
-
-    _handleTransitionExited = () => {
+    const onExited = () => {
         logTransition('Lyric did exit.')
-        this.props.updateEntranceStore({ didLyricExit: true })
+        dispatch(updateEntranceStore({ didLyricExit: true }))
     }
 
-    _handleTransitionEntered = () => {
+    const onEntered = () => {
         logTransition('Lyric did enter.')
-        this.props.updateEntranceStore({ didLyricEnter: true })
+        dispatch(updateEntranceStore({ didLyricEnter: true }))
     }
 
-    getLyricScroll = dispatch => {
-        if (dispatch) {
-            this.handleVerseBarWheel = dispatch.handleVerseBarWheel
+    const onWheel = e => {
+        handleVerseBarWheel.current(e)
+    }
+
+    const setRef = node => {
+        if (node) {
+            handleVerseBarWheel.current = node.handleVerseBarWheel
+            ref.current = node.lyricScroll
         }
     }
 
-    render() {
-        const {
-            canLyricCarouselEnter
-        } = this.props
-
-        return (
-            <>
-                <CSSTransition
-                    appear
-                    mountOnEnter
+    return (
+        <>
+            <CSSTransition
+                appear
+                mountOnEnter
+                {...{
+                    in: canLyricCarouselEnter,
+                    timeout: 250,
+                    classNames: { enterDone: 'Lyric__visible' },
+                    onExited,
+                    onEntered
+                }}
+            >
+                <div
                     {...{
-                        in: canLyricCarouselEnter,
-                        timeout: 250,
-                        classNames: { enterDone: 'Lyric__visible' },
-                        onExited: this._handleTransitionExited,
-                        onEntered: this._handleTransitionEntered
+                        className: cx(
+                            'Lyric',
+                            'gradientMask__lyricColumn__desktop',
+                            'abF',
+                            'ovH'
+                        )
                     }}
                 >
-                    <div
-                        {...{
-                            className: cx(
-                                'Lyric',
-                                'gradientMask__lyricColumn__desktop',
-                                'abF',
-                                'ovH'
-                            )
-                        }}
-                    >
-                        {/* These are the only two flex children. */}
-                        <VerseBar
-                            isAbove
-                            {...{
-                                handleVerseBarWheel: this._handleVerseBarWheel
-                            }}
-                        />
-                        <VerseBar
-                            {...{
-                                handleVerseBarWheel: this._handleVerseBarWheel
-                            }}
-                        />
-                        <LyricScroll
-                            {...{
-                                ref: this.getLyricScroll
-                            }}
-                        />
-                        <LyricToggles />
-                        <LyricToggles isBottomRight />
-                        <LyricAccess />
-                        <CarouselAccess inLyric />
-                    </div>
-                </CSSTransition>
-            </>
-        )
-    }
-}
+                    {/* These are the only two flex children. */}
+                    <VerseBar
+                        isAbove
+                        {...{ onWheel }}
+                    />
+                    <VerseBar {...{ onWheel }} />
+                    <LyricScroll {...{ ref: setRef }} />
+                    <LyricToggles />
+                    <LyricToggles isBottomRight />
+                    <LyricAccess />
+                    <CarouselAccess inLyric />
+                </div>
+            </CSSTransition>
+        </>
+    )
+})
 
-export default connect(
-    mapStateToProps,
-    { updateEntranceStore }
-)(Lyric)
+export default Lyric

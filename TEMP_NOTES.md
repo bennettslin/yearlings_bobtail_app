@@ -1,7 +1,10 @@
 # Next
-* Wrap up scrolling refs.
-* Refactor VerseTracker.
-* Consolidate setRefs.
+* Final ref: Player.
+* Refactor final components: BannerFilmstrip, FocusContainer, Player, VerseTracker.
+* Everything from device width is just an aggregate selector. Basically, get rid of everything that's not the window width, height, and deviceWidth.
+* Consolidate refs.
+* Start getting rid of listeners by putting in reducers, or moving completely to selectors. Begin with PopupAnnotation listener.
+* With PopupAnnotation gone, remove transient store. Spread out its selectors to appropriate other stores.
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
@@ -20,15 +23,10 @@
 * Song selection seems slower through access?
 * Determine if scene store really needs its own song and scene index.
 
-# Brainless JS tasks
-* Get rid of PopupAnnotation listener.
-
 # Easy reduction tasks
 * Some todos to make a selector.
 * Have verse store for queued verse select, just like annotation store.
 * Listeners know to render themselves
-* Mount, responsive, proscenium, and theatre values can just be aggregate selectors. Basically, get rid of everything in window that's not the window width and height. Replace in map state to props first. Stringify dimension props.
-* Also, the listeners.
 * Make isActivated and isSelected selectors.
 * Shorten constants to abbreviations?
 

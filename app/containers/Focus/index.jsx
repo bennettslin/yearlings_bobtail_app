@@ -41,13 +41,16 @@ class FocusContainer extends PureComponent {
 
     state = { isSliderTouchEnding: false }
 
+    constructor(props) {
+        super(props)
+        this.focusElement = React.createRef()
+        this.lyricFocusElement = React.createRef()
+    }
+
     componentDidMount() {
         logMount('FocusContainer')
-
-        this.focusElement = React.createRef()
-
         // Focus lyric section when app is mounted.
-        this._focusElementForAccess()
+        // this._focusElementForAccess()
     }
 
     componentDidUpdate(prevProps) {
@@ -106,9 +109,9 @@ class FocusContainer extends PureComponent {
             (
                 !isHeightlessLyric || isLyricExpanded
             ) &&
-            this.lyricFocusElement
+            this.lyricFocusElement.current
         ) {
-            focusedElement = this.lyricFocusElement
+            focusedElement = this.lyricFocusElement.current
             focusedElementString = 'lyric'
 
         } else {
@@ -156,11 +159,6 @@ class FocusContainer extends PureComponent {
         if (!this.state.isSliderTouchEnding) {
             this.closeForBodyClick()
         }
-    }
-
-    setLyricFocusElement = node => {
-        this.lyricFocusElement = node
-        this._focusElementForAccess()
     }
 
     _handleKeyDownPress = e => this.handleKeyDownPress(e)
@@ -213,9 +211,7 @@ class FocusContainer extends PureComponent {
                 }}
             >
                 <CloseHandler {...{ ref: this.getCloseForBodyClick }} />
-                <RootContainer
-                    {...{ setLyricFocusElement: this.setLyricFocusElement }}
-                />
+                <RootContainer {...{ ref: this.lyricFocusElement }} />
                 {canSliderMount && (
                     <SliderTouchDispatcher {...{ ref: this.getDispatchSliderTouch }} />
                 )}

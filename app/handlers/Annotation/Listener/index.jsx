@@ -1,5 +1,4 @@
 // Singleton to listen for song change.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -8,7 +7,6 @@ import AnnotationDispatcher from '../Dispatcher'
 import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
 import { getVerseIndexForAnnotation } from '../../../api/album/annotations'
-import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
 import {
     mapQueuedAnnotationIndex,
     mapQueuedAnnotationFromCarousel,
@@ -25,7 +23,6 @@ import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {
     const
-        activatedVerseIndex = mapActivatedVerseIndex(state),
         queuedAnnotationIndex = mapQueuedAnnotationIndex(state),
         queuedAnnotationFromCarousel = mapQueuedAnnotationFromCarousel(state),
         queuedAnnotationFromLyricVerse = mapQueuedAnnotationFromLyricVerse(state),
@@ -40,7 +37,6 @@ const mapStateToProps = state => {
         isDotsSlideShown,
         isEarShown,
         earColumnIndex,
-        activatedVerseIndex,
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex,
@@ -59,7 +55,6 @@ class AnnotationListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        activatedVerseIndex: PropTypes.number.isRequired,
         queuedAnnotationIndex: PropTypes.number.isRequired,
         queuedAnnotationFromCarousel: PropTypes.bool.isRequired,
         queuedAnnotationFromLyricVerse: PropTypes.bool.isRequired,

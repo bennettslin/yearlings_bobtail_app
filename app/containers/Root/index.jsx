@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
+// eslint-disable-next-line object-curly-newline
+import React, { useEffect, forwardRef, useRef } from 'react'
 import cx from 'classnames'
 import ResizeListener from '../../handlers/Resize/Listener'
 import Carousel from '../../components/Carousel'
@@ -13,7 +13,7 @@ import TouchOverlay from '../../components/Overlays/TouchOverlay'
 import WrapperContainer from '../Wrapper'
 import './style'
 
-const RootContainer = ({ setLyricFocusElement }) => {
+const RootContainer = forwardRef((props, ref) => {
     const
         rootElement = useRef(),
         getRootElement = () => rootElement.current
@@ -38,7 +38,7 @@ const RootContainer = ({ setLyricFocusElement }) => {
                 <Theatre />
                 <Carousel />
                 <Main />
-                <LyricOverview {...{ setLyricFocusElement }} />
+                <LyricOverview {...{ ref }} />
                 <PopupOverlay />
                 <MainPopups />
                 <Menu />
@@ -46,10 +46,6 @@ const RootContainer = ({ setLyricFocusElement }) => {
             </WrapperContainer>
         </div>
     )
-}
-
-RootContainer.propTypes = {
-    setLyricFocusElement: PropTypes.func.isRequired
-}
+})
 
 export default RootContainer

@@ -18,7 +18,7 @@ import './style'
 
 const VerseBar = ({
     isAbove = false,
-    handleVerseBarWheel
+    onWheel
 
 }) => {
     const
@@ -49,7 +49,7 @@ const VerseBar = ({
 
                     isVerseBarShown && 'VerseBar__shown'
                 ),
-                onWheel: handleVerseBarWheel,
+                onWheel,
                 onClick
             }}
         >
@@ -88,7 +88,7 @@ const VerseBar = ({
 
 VerseBar.propTypes = {
     isAbove: PropTypes.bool,
-    handleVerseBarWheel: PropTypes.func.isRequired
+    onWheel: PropTypes.func.isRequired
 }
 
 export default memo(VerseBar)
