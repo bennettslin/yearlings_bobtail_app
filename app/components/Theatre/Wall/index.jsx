@@ -7,11 +7,7 @@ import {
     getBalconyColumnCoordinates,
     getWallWidth
 } from './helper'
-import {
-    mapProsceniumLeft,
-    mapProsceniumWidth,
-    mapProsceniumHeight
-} from '../../../redux/proscenium/selectors'
+import { mapProsceniumDimensionCoordinates } from '../../../redux/proscenium/selectors'
 import { mapCeilingHeight } from '../../../redux/theatre/selectors'
 import {
     mapWindowWidth,
@@ -20,10 +16,12 @@ import {
 import './style'
 
 const Wall = ({ isRight }) => {
-    const
-        prosceniumLeft = useSelector(mapProsceniumLeft),
-        prosceniumWidth = useSelector(mapProsceniumWidth),
-        prosceniumHeight = useSelector(mapProsceniumHeight),
+    const {
+            prosceniumLeft,
+            prosceniumWidth,
+            prosceniumHeight
+        } = JSON.parse(useSelector(mapProsceniumDimensionCoordinates)),
+
         ceilingHeight = useSelector(mapCeilingHeight),
         windowWidth = useSelector(mapWindowWidth),
         windowHeight = useSelector(mapWindowHeight),

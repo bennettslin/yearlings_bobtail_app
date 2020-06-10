@@ -3,20 +3,20 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import FloorSeat from './Seat'
 import { getSeatingRowCoordinates } from './helper'
-import {
-    mapProsceniumLeft,
-    mapProsceniumWidth
-} from '../../../redux/proscenium/selectors'
+import { mapProsceniumDimensionCoordinates } from '../../../redux/proscenium/selectors'
 import { mapFloorHeight } from '../../../redux/theatre/selectors'
 import { mapWindowWidth } from '../../../redux/viewport/selectors'
 import './style'
 
 const Floor = () => {
-    const
-        prosceniumLeft = useSelector(mapProsceniumLeft),
-        prosceniumWidth = useSelector(mapProsceniumWidth),
+    const {
+            prosceniumLeft,
+            prosceniumWidth
+        } = JSON.parse(useSelector(mapProsceniumDimensionCoordinates)),
+
         floorHeight = useSelector(mapFloorHeight),
         windowWidth = useSelector(mapWindowWidth),
+
         seatingRowCoordinates = getSeatingRowCoordinates({
             windowWidth,
             prosceniumLeft,

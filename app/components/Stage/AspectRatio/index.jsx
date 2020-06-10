@@ -4,14 +4,12 @@ import { useSelector } from 'react-redux'
 import { mapStageDimensionCoordinates } from '../../../redux/stage/selectors'
 
 const AspectRatio = ({ children }) => {
-    const
-        stageDimensionCoordinates = useSelector(mapStageDimensionCoordinates),
-        {
-            stageTop,
-            stageLeft,
-            stageWidth,
-            stageHeight
-        } = JSON.parse(stageDimensionCoordinates)
+    const {
+        stageTop,
+        stageLeft,
+        stageWidth,
+        stageHeight
+    } = JSON.parse(useSelector(mapStageDimensionCoordinates))
 
     return cloneElement(
         children,

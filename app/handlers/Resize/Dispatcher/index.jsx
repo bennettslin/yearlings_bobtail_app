@@ -78,33 +78,7 @@ class ResizeDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowWidth
             }),
-            menuHeight = getMenuHeight({ isTwoRowMenu })
-
-        this._updateViewportAndMountStores({
-            deviceWidthIndex,
-            windowHeight,
-            windowWidth,
-            isHeightlessLyric,
-            isTwoRowMenu,
-            menuHeight
-        })
-
-        this.props.updateResponsiveStore({
-            isHeightlessLyric,
-            isTwoRowMenu,
-            menuHeight
-        })
-    }
-
-    _updateViewportAndMountStores({
-        deviceWidthIndex,
-        windowHeight,
-        windowWidth,
-        isHeightlessLyric,
-        isTwoRowMenu,
-        menuHeight
-    }) {
-        const
+            menuHeight = getMenuHeight({ isTwoRowMenu }),
             canCarouselMount = getCanCarouselMount({
                 deviceWidthIndex,
                 windowHeight,
@@ -118,14 +92,32 @@ class ResizeDispatcher extends PureComponent {
                 isHeightlessLyric,
                 isTwoRowMenu,
                 canCarouselMount
+            }),
+            prosceniumDimensionCoordinates = getProsceniumDimensionCoordinates(
+                stageDimensionCoordinates
+            ),
+            {
+                ceilingHeight,
+                floorHeight
+            } = getCeilingFloorHeight({
+                deviceWidthIndex,
+                windowHeight,
+                menuHeight,
+                prosceniumDimensionCoordinates,
+                isHeightlessLyric,
+                isTwoRowMenu
             })
-
-        this.props.updateStageStore({ stageDimensionCoordinates })
 
         this.props.updateViewportStore({
             deviceWidthIndex,
             windowWidth,
             windowHeight
+        })
+
+        this.props.updateResponsiveStore({
+            isHeightlessLyric,
+            isTwoRowMenu,
+            menuHeight
         })
 
         this.props.updateMountStore({
@@ -134,61 +126,18 @@ class ResizeDispatcher extends PureComponent {
             canSliderMount: getCanSliderMount(deviceWidthIndex)
         })
 
-        this._updateProsceniumTheatreStore({
-            deviceWidthIndex,
-            windowHeight,
-            menuHeight,
-            stageDimensionCoordinates,
-            isHeightlessLyric,
-            isTwoRowMenu
+        this.props.updateStageStore({ stageDimensionCoordinates })
+
+        this.props.updateProsceniumStore({ prosceniumDimensionCoordinates })
+
+        this.props.updateTheatreStore({
+            ceilingHeight,
+            floorHeight
         })
 
         logTransition('Theatre can enter.')
         this.props.updateEntranceStore({
             canTheatreEnter: true
-        })
-    }
-
-    _updateProsceniumTheatreStore({
-        deviceWidthIndex,
-        windowHeight,
-        menuHeight,
-        stageDimensionCoordinates,
-        isHeightlessLyric,
-        isTwoRowMenu
-    }) {
-        const {
-                prosceniumTop,
-                prosceniumLeft,
-                prosceniumWidth,
-                prosceniumHeight
-            } = getProsceniumDimensionCoordinates(
-                stageDimensionCoordinates
-            ),
-            {
-                ceilingHeight,
-                floorHeight
-
-            } = getCeilingFloorHeight({
-                deviceWidthIndex,
-                windowHeight,
-                menuHeight,
-                prosceniumTop,
-                prosceniumHeight,
-                isHeightlessLyric,
-                isTwoRowMenu
-            })
-
-        this.props.updateProsceniumStore({
-            prosceniumTop,
-            prosceniumLeft,
-            prosceniumWidth,
-            prosceniumHeight
-        })
-
-        this.props.updateTheatreStore({
-            ceilingHeight,
-            floorHeight
         })
     }
 

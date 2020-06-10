@@ -1,7 +1,6 @@
 # Next
 * Wrap up scrolling refs.
 * Refactor VerseTracker.
-* Stringify dimension props.
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.

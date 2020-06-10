@@ -44,13 +44,17 @@ export const getCeilingFloorHeight = ({
     deviceWidthIndex,
     windowHeight,
     menuHeight,
-    prosceniumTop,
-    prosceniumHeight,
+    prosceniumDimensionCoordinates,
     isHeightlessLyric,
     isTwoRowMenu
-}) => {
 
+}) => {
     const
+        {
+            prosceniumTop,
+            prosceniumHeight
+        } = JSON.parse(prosceniumDimensionCoordinates),
+
         lyricColumnHeight = _getLyricColumnHeight(
             deviceWidthIndex,
             isHeightlessLyric,

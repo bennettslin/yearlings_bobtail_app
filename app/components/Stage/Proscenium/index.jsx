@@ -3,20 +3,16 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import InlineSvg from '../../../modules/InlineSvg'
 import proscenium from '../../../../assets/svgs/theatre/proscenium'
-import {
-    mapProsceniumTop,
-    mapProsceniumLeft,
-    mapProsceniumWidth,
-    mapProsceniumHeight
-} from '../../../redux/proscenium/selectors'
+import { mapProsceniumDimensionCoordinates } from '../../../redux/proscenium/selectors'
 import './style'
 
 const Proscenium = () => {
-    const
-        prosceniumTop = useSelector(mapProsceniumTop),
-        prosceniumLeft = useSelector(mapProsceniumLeft),
-        prosceniumWidth = useSelector(mapProsceniumWidth),
-        prosceniumHeight = useSelector(mapProsceniumHeight)
+    const {
+        prosceniumTop,
+        prosceniumLeft,
+        prosceniumWidth,
+        prosceniumHeight
+    } = JSON.parse(useSelector(mapProsceniumDimensionCoordinates))
 
     return (
         <InlineSvg

@@ -3,10 +3,7 @@ import {
     INITIAL_DEVICE_WIDTH_INDEX,
     INITIAL_WINDOW_HEIGHT
 } from '../viewport/default'
-import {
-    INITIAL_PROSCENIUM_TOP,
-    INITIAL_PROSCENIUM_HEIGHT
-} from '../proscenium/default'
+import { INITIAL_PROSCENIUM_DIMENSION_COORDINATES } from '../proscenium/default'
 import {
     IS_INITIAL_HEIGHTLESS_LYRIC,
     IS_INITIAL_TWO_ROW_MENU,
@@ -23,8 +20,7 @@ const {
     isHeightlessLyric: IS_INITIAL_HEIGHTLESS_LYRIC,
     isTwoRowMenu: IS_INITIAL_TWO_ROW_MENU,
     menuHeight: INITIAL_MENU_HEIGHT,
-    prosceniumTop: INITIAL_PROSCENIUM_TOP,
-    prosceniumHeight: INITIAL_PROSCENIUM_HEIGHT
+    prosceniumDimensionCoordinates: INITIAL_PROSCENIUM_DIMENSION_COORDINATES
 })
 
 export const THEATRE_DEFAULTS = {
