@@ -4,50 +4,16 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Overview from '../../Overview'
 import Popup from '../../Popup'
-import {
-    getIsOverviewVisibleBySection,
-    getIsOverviewVisibleBySong
-} from './helper'
-import { mapCanLyricCarouselEnter } from '../../../redux/entrance/selectors'
-import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
-import {
-    mapIsLogueOverviewShown,
-    mapIsOverviewShown,
-    mapIsTipsShown
-} from '../../../redux/option/selectors'
-import { mapIsOverlayShown } from '../../../redux/transient/selectors'
+import { getMapIsOverviewPopupShown } from '../../../redux/option/selectors'
 import './style'
 
 const OverviewPopup = ({
     inMain = false
 
 }) => {
-    const
-        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
-        isLyricLogue = useSelector(mapIsLyricLogue),
-        isLogueOverviewShown = useSelector(mapIsLogueOverviewShown),
-        isOverviewShown = useSelector(mapIsOverviewShown),
-        isOverlayShown = useSelector(mapIsOverlayShown),
-        isTipsShown = useSelector(mapIsTipsShown),
-
-        // TODO: Make this a selector.
-        isVisibleBySection = getIsOverviewVisibleBySection({
-            inMain,
-            isLyricLogue
-        }),
-
-        isVisibleBySong = getIsOverviewVisibleBySong({
-            isLyricLogue,
-            isOverlayShown,
-            isLogueOverviewShown,
-            isOverviewShown,
-            isTipsShown
-        }),
-
-        isVisible =
-            canLyricCarouselEnter &&
-            isVisibleBySection &&
-            isVisibleBySong
+    const isOverviewPopupShown = useSelector(
+        getMapIsOverviewPopupShown(inMain)
+    )
 
     return (
         <Popup
@@ -58,7 +24,7 @@ const OverviewPopup = ({
             noAbsoluteFull
             {...{
                 popupName: 'OverviewPopup',
-                isVisible,
+                isVisible: isOverviewPopupShown,
                 noFlexCentre: inMain
             }}
         >

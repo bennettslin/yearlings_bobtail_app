@@ -1,5 +1,12 @@
 import { createSelector } from 'reselect'
 import { getIsShown } from '../../helpers/options'
+import { mapCanLyricCarouselEnter } from '../entrance/selectors'
+import { mapIsLyricLogue } from '../lyric/selectors'
+import { mapIsOverlayShown } from '../transient/selectors'
+import {
+    getIsOverviewVisibleBySection,
+    getIsOverviewVisibleBySong
+} from '../../components/Popups/Overview/helper'
 
 export const mapIsLogueOverviewShown = (
     { optionStore: { isLogueOverviewShown } }
@@ -29,4 +36,34 @@ export const mapIsOverviewShown = createSelector(
 export const mapIsTipsShown = createSelector(
     mapSelectedTipsOption,
     selectedTipsOption => getIsShown(selectedTipsOption)
+)
+
+export const getMapIsOverviewPopupShown = inMain => createSelector(
+    mapCanLyricCarouselEnter,
+    mapIsLyricLogue,
+    mapIsOverlayShown,
+    mapIsLogueOverviewShown,
+    mapIsOverviewShown,
+    mapIsTipsShown,
+    (
+        canLyricCarouselEnter,
+        isLyricLogue,
+        isOverlayShown,
+        isLogueOverviewShown,
+        isOverviewShown,
+        isTipsShown
+    ) => (
+        canLyricCarouselEnter &&
+        getIsOverviewVisibleBySection({
+            inMain,
+            isLyricLogue
+        }) &&
+        getIsOverviewVisibleBySong({
+            isLyricLogue,
+            isOverlayShown,
+            isLogueOverviewShown,
+            isOverviewShown,
+            isTipsShown
+        })
+    )
 )
