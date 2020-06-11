@@ -1,10 +1,14 @@
 # Thursday
-* Everything from device width is just an aggregate selector. Basically, get rid of everything that's not the window width, height, and deviceWidth.
 * Consolidate refs.
+    * ref is name of dispatcher, plus "dispatch." For example, scrollVerseDispatch.
+    * Remove "dispatch" from method. For example, scrollVerse.
+    * Leave "timeout" out of name, instead refer to callback.
+    * Refer to elements by their component name plus "element," like lyricScrollElement.
+* Everything from device width can live in viewport store. Then they're all set together in the action.
 
 # Friday
 * Start getting rid of listeners by putting in reducers, or moving completely to selectors. Begin with PopupAnnotation listener.
-* With PopupAnnotation gone, remove transient store. Spread out its selectors to appropriate other stores.
+* With PopupAnnotation gone, remove transient store. Spread out its selectors to appropriate other stores. Figure out best way to organise selectors.
 * Make verseBars a bit number.
 
 # Saturday

@@ -6,7 +6,7 @@ import { updateToggleStore } from '../../redux/toggle/action'
 const ScrollVerseDispatcher = forwardRef((props, ref) => {
     const dispatch = useDispatch()
 
-    const dispatchScrollVerse = (isAutoScroll) => {
+    const dispatchScrollVerse = isAutoScroll => {
         dispatch(updateScrollLyricStore({
             scrollLyricLog:
                     'VerseBar click or autoScroll toggle back to selected verse.',
