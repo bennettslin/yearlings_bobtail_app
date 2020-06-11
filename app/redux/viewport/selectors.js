@@ -12,6 +12,18 @@ export const mapDeviceWidthIndex = (
     { viewportStore: { deviceWidthIndex } }
 ) => deviceWidthIndex
 
+export const mapIsHeightlessLyric = (
+    { viewportStore: { isHeightlessLyric } }
+) => isHeightlessLyric
+
+export const mapIsTwoRowMenu = (
+    { viewportStore: { isTwoRowMenu } }
+) => isTwoRowMenu
+
+export const mapMenuHeight = (
+    { viewportStore: { menuHeight } }
+) => menuHeight
+
 export const mapIsPhoneWidth = (
     { viewportStore: { isPhoneWidth } }
 ) => isPhoneWidth

@@ -10,9 +10,9 @@ import {
     mapSelectedOverviewOption,
     mapIsTipsShown
 } from '../../../redux/option/selectors'
-import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
 import { mapToggleShowsOverviewImmediately } from '../../../redux/transient/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
+import { mapIsHeightlessLyric } from '../../../redux/viewport/selectors'
 
 const OverviewDispatcher = forwardRef((props, ref) => {
     const

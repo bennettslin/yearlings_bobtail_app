@@ -2,7 +2,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
-import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
 import {
     SHOWN,
     HIDDEN
@@ -13,6 +12,7 @@ import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
+import { mapIsHeightlessLyric } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getSingleShownEarColumnKey } from './helper'
 import {
-    mapIsHeightlessLyric,
     mapIsLyricExpandable,
     mapShowShrunkNavIcon
 } from '../../redux/responsive/selectors'
@@ -13,6 +12,7 @@ import {
     mapIsCarouselNavShowable,
     mapIsEarShown
 } from '../../redux/transient/selectors'
+import { mapIsHeightlessLyric } from "../../redux/viewport/selectors"
 
 const ResponsiveWrapper = ({ children }) => {
     const

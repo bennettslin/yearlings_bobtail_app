@@ -1,14 +1,12 @@
 import { getCeilingFloorHeight } from '../../helpers/resize/theatre'
-import {
-    INITIAL_DEVICE_WIDTH_INDEX,
-    INITIAL_WINDOW_HEIGHT
-} from '../viewport/default'
 import { INITIAL_PROSCENIUM_DIMENSION_COORDINATES } from '../proscenium/default'
 import {
+    INITIAL_DEVICE_WIDTH_INDEX,
+    INITIAL_WINDOW_HEIGHT,
     IS_INITIAL_HEIGHTLESS_LYRIC,
     IS_INITIAL_TWO_ROW_MENU,
     INITIAL_MENU_HEIGHT
-} from '../responsive/default'
+} from '../viewport/default'
 
 const {
     ceilingHeight,

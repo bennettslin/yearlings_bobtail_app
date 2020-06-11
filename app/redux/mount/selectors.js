@@ -5,16 +5,14 @@ import {
     getMainHeight
 } from '../../helpers/resize/mount'
 import { mapIsLyricLogue } from '../lyric/selectors'
-import {
-    mapIsHeightlessLyric,
-    mapMenuHeight
-} from '../responsive/selectors'
 import { mapStageHeight } from '../stage/selectors'
 import { mapIsLyricExpanded } from '../toggle/selectors'
 import {
     mapDeviceWidthIndex,
     mapWindowHeight,
-    mapIsDesktopWidth
+    mapIsDesktopWidth,
+    mapIsHeightlessLyric,
+    mapMenuHeight
 } from '../viewport/selectors'
 
 export const mapCanCarouselMount = (

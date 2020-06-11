@@ -6,7 +6,7 @@ import {
     mapCanCarouselMount,
     mapMainHeight
 } from '../../../redux/mount/selectors'
-import { mapMenuHeight } from '../../../redux/responsive/selectors'
+import { mapMenuHeight } from '../../../redux/viewport/selectors'
 
 const LayoutContainer = ({
     className,

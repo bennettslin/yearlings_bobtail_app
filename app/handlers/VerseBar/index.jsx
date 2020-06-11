@@ -12,13 +12,9 @@ import {
     mapCanSliderMount,
     mapLyricDynamicHeight
 } from '../../redux/mount/selectors'
-import {
-    mapIsHeightlessLyric,
-    mapMenuHeight,
-    mapIsLyricExpandable
-} from '../../redux/responsive/selectors'
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'
+import { mapIsLyricExpandable } from '../../redux/responsive/selectors'
 import { mapSelectedVerseIndex } from '../../redux/selected/selectors'
 import { mapSliderVerseIndex } from '../../redux/slider/selectors'
 import { mapIsLyricExpanded } from '../../redux/toggle/selectors'
@@ -28,7 +24,9 @@ import {
 } from '../../redux/verseBars/selectors'
 import {
     mapWindowHeight,
-    mapIsDesktopWidth
+    mapIsDesktopWidth,
+    mapIsHeightlessLyric,
+    mapMenuHeight
 } from '../../redux/viewport/selectors'
 
 const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {

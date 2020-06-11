@@ -5,9 +5,9 @@ import {
 } from '../../helpers/resize/mount'
 import {
     INITIAL_WINDOW_HEIGHT,
-    INITIAL_DEVICE_WIDTH_INDEX
+    INITIAL_DEVICE_WIDTH_INDEX,
+    IS_INITIAL_HEIGHTLESS_LYRIC
 } from '../viewport/default'
-import { IS_INITIAL_HEIGHTLESS_LYRIC } from '../responsive/default'
 
 export const CAN_INITIAL_CAROUSEL_MOUNT = getCanCarouselMount({
     deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX,

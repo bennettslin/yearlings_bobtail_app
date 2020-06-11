@@ -12,12 +12,10 @@ import Slider from '../Slider'
 import { getMenuMarginInOverlay } from './helper'
 import { mapCanSliderMount } from '../../redux/mount/selectors'
 import {
+    mapWindowWidth,
+    mapIsDesktopWidth,
     mapIsTwoRowMenu,
     mapMenuHeight
-} from '../../redux/responsive/selectors'
-import {
-    mapWindowWidth,
-    mapIsDesktopWidth
 } from '../../redux/viewport/selectors'
 import './style'
 

@@ -11,7 +11,6 @@ import {
     mapActivatedVerseIndex,
     mapIsActivated
 } from '../../../redux/activated/selectors'
-import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
 import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
@@ -23,6 +22,7 @@ import {
     mapIsLyricExpanded,
     mapIsScoreShown
 } from '../../../redux/toggle/selectors'
+import { mapIsHeightlessLyric } from '../../../redux/viewport/selectors'
 
 const NavigationManager = forwardRef((props, ref) => {
     const

@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { mapCanScoreMount } from '../../../redux/mount/selectors'
-import { mapMenuHeight } from '../../../redux/responsive/selectors'
+import { mapMenuHeight } from '../../../redux/viewport/selectors'
 
 import AnnotationPopup from '../Annotation'
 import AboutPopup from '../About'

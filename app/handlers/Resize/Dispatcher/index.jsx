@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateMountStore } from '../../../redux/mount/action'
-import { updateResponsiveStore } from '../../../redux/responsive/action'
 import { updateViewportStore } from '../../../redux/viewport/action'
 import { updateProsceniumStore } from '../../../redux/proscenium/action'
 import { updateStageStore } from '../../../redux/stage/action'
@@ -34,7 +33,6 @@ class ResizeDispatcher extends PureComponent {
         // Through Redux.
         updateEntranceStore: PropTypes.func.isRequired,
         updateMountStore: PropTypes.func.isRequired,
-        updateResponsiveStore: PropTypes.func.isRequired,
         updateViewportStore: PropTypes.func.isRequired,
         updateProsceniumStore: PropTypes.func.isRequired,
         updateStageStore: PropTypes.func.isRequired,
@@ -111,10 +109,7 @@ class ResizeDispatcher extends PureComponent {
         this.props.updateViewportStore({
             deviceWidthIndex,
             windowWidth,
-            windowHeight
-        })
-
-        this.props.updateResponsiveStore({
+            windowHeight,
             isHeightlessLyric,
             isTwoRowMenu,
             menuHeight
@@ -151,7 +146,6 @@ export default connect(
     {
         updateEntranceStore,
         updateMountStore,
-        updateResponsiveStore,
         updateViewportStore,
         updateProsceniumStore,
         updateStageStore,

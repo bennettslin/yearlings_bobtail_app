@@ -1,6 +1,6 @@
 import { createSelector } from "reselect"
-import { mapIsHeightlessLyric } from "../responsive/selectors"
 import { mapIsLyricExpanded } from "../toggle/selectors"
+import { mapIsHeightlessLyric } from "../viewport/selectors"
 
 export const mapQueuedFocus = (
     { focusStore: { queuedFocus } }

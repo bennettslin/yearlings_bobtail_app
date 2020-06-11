@@ -13,7 +13,6 @@ import MountReducer from './mount/reducer'
 import OptionReducer from './option/reducer'
 import PlayersReducer from './players/reducer'
 import ProsceniumReducer from './proscenium/reducer'
-import ResponsiveReducer from './responsive/reducer'
 import SceneReducer from './scene/reducer'
 import ScrollCarouselReducer from './scrollCarousel/reducer'
 import ScrollLyricReducer from './scrollLyric/reducer'
@@ -43,7 +42,6 @@ import {
     OPTION_STORE,
     PLAYERS_STORE,
     PROSCENIUM_STORE,
-    RESPONSIVE_STORE,
     SCENE_STORE,
     SCROLL_CAROUSEL_STORE,
     SCROLL_LYRIC_STORE,
@@ -74,7 +72,6 @@ export default combineReducers({
     [OPTION_STORE]: OptionReducer,
     [PLAYERS_STORE]: PlayersReducer,
     [PROSCENIUM_STORE]: ProsceniumReducer,
-    [RESPONSIVE_STORE]: ResponsiveReducer,
     [SCENE_STORE]: SceneReducer,
     [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
     [SCROLL_LYRIC_STORE]: ScrollLyricReducer,

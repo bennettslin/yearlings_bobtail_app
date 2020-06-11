@@ -13,20 +13,9 @@ import {
 import {
     mapDeviceWidthIndex,
     mapWindowWidth,
-    mapIsPhoneWidth
+    mapIsPhoneWidth,
+    mapIsHeightlessLyric
 } from '../viewport/selectors'
-
-export const mapIsHeightlessLyric = (
-    { responsiveStore: { isHeightlessLyric } }
-) => isHeightlessLyric
-
-export const mapIsTwoRowMenu = (
-    { responsiveStore: { isTwoRowMenu } }
-) => isTwoRowMenu
-
-export const mapMenuHeight = (
-    { responsiveStore: { menuHeight } }
-) => menuHeight
 
 export const mapIsMobileWiki = createSelector(
     mapDeviceWidthIndex,

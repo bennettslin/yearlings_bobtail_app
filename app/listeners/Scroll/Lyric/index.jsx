@@ -9,7 +9,6 @@ import {
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
 } from '../../../constants/scroll'
-import { mapIsHeightlessLyric } from '../../../redux/responsive/selectors'
 import {
     mapScrollLyricLog,
     mapScrollLyricByVerse,
@@ -24,7 +23,10 @@ import {
     mapIsAutoScroll,
     mapIsLyricExpanded
 } from '../../../redux/toggle/selectors'
-import { mapDeviceWidthIndex } from '../../../redux/viewport/selectors'
+import {
+    mapDeviceWidthIndex,
+    mapIsHeightlessLyric
+} from '../../../redux/viewport/selectors'
 
 const ScrollLyricListener = ({
     getLyricScrollParent,

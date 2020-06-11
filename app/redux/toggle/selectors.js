@@ -1,8 +1,6 @@
 import { createSelector } from "reselect"
-import {
-    mapIsLyricExpandable,
-    mapIsHeightlessLyric
-} from "../responsive/selectors"
+import { mapIsLyricExpandable } from "../responsive/selectors"
+import { mapIsHeightlessLyric } from "../viewport/selectors"
 
 export const mapIsAutoScroll = (
     { toggleStore: { isAutoScroll } }

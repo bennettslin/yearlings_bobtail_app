@@ -5,19 +5,17 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import {
-    mapIsHeightlessLyric,
-    mapIsLyricExpandable
-} from '../../../redux/responsive/selectors'
+import { mapIsLyricExpandable } from '../../../redux/responsive/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 import { mapIsLyricExpanded } from '../../../redux/toggle/selectors'
+import { mapIsHeightlessLyric } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const
-        isHeightlessLyric = mapIsHeightlessLyric(state),
         isLyricExpandable = mapIsLyricExpandable(state),
         isSelectedLogue = mapIsSelectedLogue(state),
-        isLyricExpanded = mapIsLyricExpanded(state)
+        isLyricExpanded = mapIsLyricExpanded(state),
+        isHeightlessLyric = mapIsHeightlessLyric(state)
 
     return {
         isLyricExpanded,
