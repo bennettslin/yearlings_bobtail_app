@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
 import { mapLyricAnnotationIndex } from '../../redux/lyric/selectors'
 import { updateTransientStore } from '../../redux/transient/action'
-import { mapCanCarouselMount } from '../../redux/mount/selectors'
 import { mapIsOverlayingAnnotation } from '../../redux/transient/selectors'
 import { mapIsWikiShown } from '../../redux/session/selectors'
 import {
@@ -14,6 +13,7 @@ import {
     mapIsScoreShown,
     mapIsAboutShown
 } from '../../redux/toggle/selectors'
+import { mapCanCarouselMount } from '../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const

@@ -1,10 +1,5 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import {
-    mapCanScoreMount,
-    mapCanSliderMount
-} from '../../redux/mount/selectors'
-
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
 import AppLoadListener from '../../listeners/AppLoad'
@@ -29,8 +24,11 @@ import SliderListener from '../../listeners/Slider'
 import TipsListener from '../../handlers/Tips/Listener'
 import UrlListener from '../../listeners/Url'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
-
 import AudioPlayerManager from '../../managers/AudioPlayer'
+import {
+    mapCanScoreMount,
+    mapCanSliderMount
+} from '../../redux/viewport/selectors'
 
 const ListenContainer = () => {
     const

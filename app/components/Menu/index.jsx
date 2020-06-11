@@ -10,12 +10,12 @@ import Audio from '../Audio'
 import BannerFilmstrip from '../BannerFilmstrip'
 import Slider from '../Slider'
 import { getMenuMarginInOverlay } from './helper'
-import { mapCanSliderMount } from '../../redux/mount/selectors'
 import {
     mapWindowWidth,
     mapIsDesktopWidth,
     mapIsTwoRowMenu,
-    mapMenuHeight
+    mapMenuHeight,
+    mapCanSliderMount
 } from '../../redux/viewport/selectors'
 import './style'
 

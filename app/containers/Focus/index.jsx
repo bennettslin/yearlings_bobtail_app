@@ -13,7 +13,7 @@ import {
     mapQueuedFocus,
     mapShouldFocusLyric
 } from '../../redux/focus/selectors'
-import { mapCanSliderMount } from '../../redux/mount/selectors'
+import { mapCanSliderMount } from '../../redux/viewport/selectors'
 
 const FocusContainer = () => {
     const

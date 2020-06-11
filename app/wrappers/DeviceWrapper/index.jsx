@@ -7,13 +7,11 @@ import { getIsTabletWidth } from '../../helpers/responsive'
 import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import {
-    mapCanCarouselMount,
-    mapCanSliderMount
-} from '../../redux/mount/selectors'
-import {
     mapDeviceWidthIndex,
     mapIsPhoneWidth,
-    mapIsDesktopWidth
+    mapIsDesktopWidth,
+    mapCanCarouselMount,
+    mapCanSliderMount
 } from '../../redux/viewport/selectors'
 
 const DeviceWrapper = ({ children }) => {

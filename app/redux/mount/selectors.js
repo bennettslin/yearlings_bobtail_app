@@ -12,20 +12,9 @@ import {
     mapWindowHeight,
     mapIsDesktopWidth,
     mapIsHeightlessLyric,
-    mapMenuHeight
+    mapMenuHeight,
+    mapCanCarouselMount
 } from '../viewport/selectors'
-
-export const mapCanCarouselMount = (
-    { mountStore: { canCarouselMount } }
-) => canCarouselMount
-
-export const mapCanScoreMount = (
-    { mountStore: { canScoreMount } }
-) => canScoreMount
-
-export const mapCanSliderMount = (
-    { mountStore: { canSliderMount } }
-) => canSliderMount
 
 export const mapLyricDynamicHeight = createSelector(
     mapCanCarouselMount,

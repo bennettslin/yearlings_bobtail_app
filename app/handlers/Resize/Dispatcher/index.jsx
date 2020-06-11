@@ -4,7 +4,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
-import { updateMountStore } from '../../../redux/mount/action'
 import { updateViewportStore } from '../../../redux/viewport/action'
 import { updateProsceniumStore } from '../../../redux/proscenium/action'
 import { updateStageStore } from '../../../redux/stage/action'
@@ -14,11 +13,7 @@ import {
     getWindowDimensions
 } from '../../../helpers/resize/device'
 import { getIsHeightlessLyric } from '../../../helpers/resize/hidden'
-import {
-    getCanCarouselMount,
-    getCanScoreMount,
-    getCanSliderMount
-} from '../../../helpers/resize/mount'
+import { getCanCarouselMount } from '../../../helpers/resize/mount'
 import { getProsceniumDimensionCoordinates } from '../../../helpers/resize/proscenium'
 import {
     getIsTwoRowMenu,
@@ -32,7 +27,6 @@ class ResizeDispatcher extends PureComponent {
     static propTypes = {
         // Through Redux.
         updateEntranceStore: PropTypes.func.isRequired,
-        updateMountStore: PropTypes.func.isRequired,
         updateViewportStore: PropTypes.func.isRequired,
         updateProsceniumStore: PropTypes.func.isRequired,
         updateStageStore: PropTypes.func.isRequired,
@@ -112,13 +106,8 @@ class ResizeDispatcher extends PureComponent {
             windowHeight,
             isHeightlessLyric,
             isTwoRowMenu,
-            menuHeight
-        })
-
-        this.props.updateMountStore({
-            canCarouselMount,
-            canScoreMount: getCanScoreMount(deviceWidthIndex),
-            canSliderMount: getCanSliderMount(deviceWidthIndex)
+            menuHeight,
+            canCarouselMount
         })
 
         this.props.updateStageStore({ stageDimensionCoordinates })
@@ -145,7 +134,6 @@ export default connect(
     null,
     {
         updateEntranceStore,
-        updateMountStore,
         updateViewportStore,
         updateProsceniumStore,
         updateStageStore,

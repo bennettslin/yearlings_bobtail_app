@@ -2,10 +2,10 @@
 import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { mapCanCarouselMount } from '../../redux/mount/selectors'
-import { mapShowSingleNavBook } from '../../redux/responsive/selectors'
 import NavListener from '../../handlers/Nav/Listener'
 import NavColumn from './Column'
+import { mapShowSingleNavBook } from '../../redux/responsive/selectors'
+import { mapCanCarouselMount } from '../../redux/viewport/selectors'
 import './style'
 
 const Nav = () => {

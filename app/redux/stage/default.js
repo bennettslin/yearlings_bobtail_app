@@ -1,12 +1,12 @@
 import { getStageDimensionCoordinates } from '../../helpers/resize/stage'
-import { CAN_INITIAL_CAROUSEL_MOUNT } from '../mount/default'
 import {
     INITIAL_WINDOW_WIDTH,
     INITIAL_WINDOW_HEIGHT,
     INITIAL_DEVICE_WIDTH_INDEX,
     IS_INITIAL_HEIGHTLESS_LYRIC,
     IS_INITIAL_TWO_ROW_MENU,
-    INITIAL_MENU_HEIGHT
+    INITIAL_MENU_HEIGHT,
+    CAN_INITIAL_CAROUSEL_MOUNT
 } from '../viewport/default'
 
 export const INITIAL_STAGE_DIMENSION_COORDINATES =

@@ -4,9 +4,9 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { resetAccessedNav } from '../../../redux/access/action'
-import { updateToggleStore } from '../../../redux/toggle/action'
 import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
-import { mapCanCarouselMount } from '../../../redux/mount/selectors'
+import { updateToggleStore } from '../../../redux/toggle/action'
+import { mapCanCarouselMount } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const

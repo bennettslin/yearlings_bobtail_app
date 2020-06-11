@@ -9,7 +9,6 @@ import DotsSlideReducer from './dotsSlide/reducer'
 import EntranceReducer from './entrance/reducer'
 import FocusReducer from './focus/reducer'
 import LyricReducer from './lyric/reducer'
-import MountReducer from './mount/reducer'
 import OptionReducer from './option/reducer'
 import PlayersReducer from './players/reducer'
 import ProsceniumReducer from './proscenium/reducer'
@@ -38,7 +37,6 @@ import {
     ENTRANCE_STORE,
     FOCUS_STORE,
     LYRIC_STORE,
-    MOUNT_STORE,
     OPTION_STORE,
     PLAYERS_STORE,
     PROSCENIUM_STORE,
@@ -68,7 +66,6 @@ export default combineReducers({
     [ENTRANCE_STORE]: EntranceReducer,
     [FOCUS_STORE]: FocusReducer,
     [LYRIC_STORE]: LyricReducer,
-    [MOUNT_STORE]: MountReducer,
     [OPTION_STORE]: OptionReducer,
     [PLAYERS_STORE]: PlayersReducer,
     [PROSCENIUM_STORE]: ProsceniumReducer,

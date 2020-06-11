@@ -2,9 +2,9 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { mapCanScoreMount } from '../../../redux/mount/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 import { mapIsScoreShown } from '../../../redux/toggle/selectors'
+import { mapCanScoreMount } from '../../../redux/viewport/selectors'
 
 const ScoreDispatcher = forwardRef((props, ref) => {
     const

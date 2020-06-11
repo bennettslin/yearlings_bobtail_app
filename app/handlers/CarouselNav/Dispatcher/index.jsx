@@ -4,7 +4,6 @@ import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { mapAccessedAnnotationIndex } from '../../../redux/access/selectors'
 import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
-import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
@@ -14,6 +13,7 @@ import {
     mapIsNavShown,
     mapIsDotsSlideShown
 } from '../../../redux/toggle/selectors'
+import { mapCanCarouselMount } from '../../../redux/viewport/selectors'
 
 const CarouselNavDispatcher = forwardRef((props, ref) => {
     const

@@ -9,11 +9,11 @@ import { CAROUSEL_TOGGLE_KEY } from '../../../constants/access'
 import { CAROUSEL_NAV_BUTTON_KEY } from '../../../constants/buttons'
 import { getCarouselNavIdentifier } from '../../../constants/options'
 import { CAROUSEL, NAV } from '../../../constants/tips'
-import { mapCanCarouselMount } from '../../../redux/mount/selectors'
 import {
     mapIsCarouselShown,
     mapIsNavShown
 } from '../../../redux/toggle/selectors'
+import { mapCanCarouselMount } from '../../../redux/viewport/selectors'
 import './style'
 
 const CarouselToggle = () => {

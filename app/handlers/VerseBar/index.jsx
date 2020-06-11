@@ -7,13 +7,10 @@ import {
     updateVerseBarsStore,
     resetVerseBarsQueue
 } from '../../redux/verseBars/action'
-import { mapActivatedVerseIndex } from '../../redux/activated/selectors'
-import {
-    mapCanSliderMount,
-    mapLyricDynamicHeight
-} from '../../redux/mount/selectors'
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'
+import { mapActivatedVerseIndex } from '../../redux/activated/selectors'
+import { mapLyricDynamicHeight } from '../../redux/mount/selectors'
 import { mapIsLyricExpandable } from '../../redux/responsive/selectors'
 import { mapSelectedVerseIndex } from '../../redux/selected/selectors'
 import { mapSliderVerseIndex } from '../../redux/slider/selectors'
@@ -26,7 +23,8 @@ import {
     mapWindowHeight,
     mapIsDesktopWidth,
     mapIsHeightlessLyric,
-    mapMenuHeight
+    mapMenuHeight,
+    mapCanSliderMount
 } from '../../redux/viewport/selectors'
 
 const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {

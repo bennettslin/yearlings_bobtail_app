@@ -1,4 +1,13 @@
 import { createSelector } from 'reselect'
+import {
+    getCanScoreMount,
+    getCanSliderMount
+} from '../../helpers/resize/mount'
+import {
+    getIsPhoneWidth,
+    getIsTabletWidth,
+    getIsDesktopWidth
+} from '../../helpers/responsive'
 
 export const mapWindowWidth = (
     { viewportStore: { windowWidth } }
@@ -24,17 +33,34 @@ export const mapMenuHeight = (
     { viewportStore: { menuHeight } }
 ) => menuHeight
 
-export const mapIsPhoneWidth = (
-    { viewportStore: { isPhoneWidth } }
-) => isPhoneWidth
+export const mapCanCarouselMount = (
+    { viewportStore: { canCarouselMount } }
+) => canCarouselMount
 
-export const mapIsTabletWidth = (
-    { viewportStore: { isTabletWidth } }
-) => isTabletWidth
+export const mapCanScoreMount = createSelector(
+    mapDeviceWidthIndex,
+    deviceWidthIndex => getCanScoreMount(deviceWidthIndex)
+)
 
-export const mapIsDesktopWidth = (
-    { viewportStore: { isDesktopWidth } }
-) => isDesktopWidth
+export const mapCanSliderMount = createSelector(
+    mapDeviceWidthIndex,
+    deviceWidthIndex => getCanSliderMount(deviceWidthIndex)
+)
+
+export const mapIsPhoneWidth = createSelector(
+    mapDeviceWidthIndex,
+    deviceWidthIndex => getIsPhoneWidth(deviceWidthIndex)
+)
+
+export const mapIsTabletWidth = createSelector(
+    mapDeviceWidthIndex,
+    deviceWidthIndex => getIsTabletWidth(deviceWidthIndex)
+)
+
+export const mapIsDesktopWidth = createSelector(
+    mapDeviceWidthIndex,
+    deviceWidthIndex => getIsDesktopWidth(deviceWidthIndex)
+)
 
 export const mapIsPhoneOrMiniWidth = createSelector(
     mapIsTabletWidth,
@@ -46,4 +72,3 @@ export const mapIsPhoneOrMiniWidth = createSelector(
         !isDesktopWidth && !isTabletWidth
     )
 )
-

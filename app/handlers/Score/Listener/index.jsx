@@ -4,8 +4,8 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { mapCanScoreMount } from '../../../redux/mount/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
+import { mapCanScoreMount } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const
