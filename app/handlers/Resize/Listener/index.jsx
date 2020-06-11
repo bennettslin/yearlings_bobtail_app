@@ -86,8 +86,8 @@ class ResizeListener extends PureComponent {
         this.setState({ windowResizeTimeoutId })
     }
 
-    setBeginEnterTransition = beginEnterTransition => {
-        this.beginEnterTransition = beginEnterTransition
+    getBeginEnterTransition = dispatch => {
+        this.beginEnterTransition = dispatch
     }
 
     render() {
@@ -95,8 +95,8 @@ class ResizeListener extends PureComponent {
         return (
             <ResizeDispatcher
                 {...{
-                    getRootElement,
-                    getBeginEnterTransition: this.setBeginEnterTransition
+                    ref: this.getBeginEnterTransition,
+                    getRootElement
                 }}
             />
         )

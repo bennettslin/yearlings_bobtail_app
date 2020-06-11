@@ -1,66 +1,45 @@
-// Singleton to listen for window resize event.
-import { PureComponent } from 'react'
+// eslint-disable-next-line object-curly-newline
+import { forwardRef, useImperativeHandle, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateViewportStore } from '../../../redux/viewport/action'
 import { getWindowDimensions } from '../../../helpers/resize/device'
 
-class ResizeDispatcher extends PureComponent {
+const ResizeDispatcher = forwardRef(({ getRootElement }, ref) => {
+    const dispatch = useDispatch()
 
-    static propTypes = {
-        // Through Redux.
-        updateEntranceStore: PropTypes.func.isRequired,
-        updateViewportStore: PropTypes.func.isRequired,
+    const beginEnterTransition = () => {
+        logTransition('Theatre can enter.')
 
-        // From parent.
-        getRootElement: PropTypes.func.isRequired,
-        getBeginEnterTransition: PropTypes.func.isRequired
+        const {
+            windowHeight,
+            windowWidth
+        } = getWindowDimensions(getRootElement())
+
+        dispatch(updateViewportStore({
+            windowWidth,
+            windowHeight
+        }))
+
+        dispatch(updateEntranceStore({ canTheatreEnter: true }))
     }
 
-    componentDidMount() {
-        this.props.getBeginEnterTransition(
-            this.beginEnterTransition
-        )
-
+    useEffect(() => {
         /**
          * As soon as we have a reference to the root container, begin
          * showing theatre.
          */
         logTransition('Theatre can enter.')
-        this.props.updateEntranceStore({
-            canTheatreEnter: true
-        })
-    }
+        dispatch(updateEntranceStore({ canTheatreEnter: true }))
+    }, [])
 
-    beginEnterTransition = () => {
-        const
-            { getRootElement } = this.props,
-            {
-                windowHeight,
-                windowWidth
-            } = getWindowDimensions(getRootElement())
+    useImperativeHandle(ref, () => beginEnterTransition)
+    return null
+})
 
-        this.props.updateViewportStore({
-            windowWidth,
-            windowHeight
-        })
-
-        logTransition('Theatre can enter.')
-        this.props.updateEntranceStore({
-            canTheatreEnter: true
-        })
-    }
-
-    render() {
-        return null
-    }
+ResizeDispatcher.propTypes = {
+    getRootElement: PropTypes.func.isRequired
 }
 
-export default connect(
-    null,
-    {
-        updateEntranceStore,
-        updateViewportStore
-    }
-)(ResizeDispatcher)
+export default ResizeDispatcher
