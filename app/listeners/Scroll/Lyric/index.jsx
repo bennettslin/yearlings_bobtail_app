@@ -29,8 +29,8 @@ import {
 } from '../../../redux/viewport/selectors'
 
 const ScrollLyricListener = ({
-    getLyricScrollParent,
-    getScrollAnnotationChild,
+    getLyricScrollElement,
+    getScrollAnchorChild,
     getScrollVerseChild
 
 }) => {
@@ -99,10 +99,10 @@ const ScrollLyricListener = ({
                     scrollClass: scrollLyricByVerse ?
                         VERSE_SCROLL :
                         LYRIC_ANNOTATION_SCROLL,
-                    scrollParent: getLyricScrollParent(),
+                    scrollParent: getLyricScrollElement(),
                     scrollChild: scrollLyricByVerse ?
                         getScrollVerseChild(index) :
-                        getScrollAnnotationChild(index),
+                        getScrollAnchorChild(index),
                     index,
                     noDuration: scrollLyricNoDuration,
                     deviceWidthIndex,
@@ -121,8 +121,8 @@ const ScrollLyricListener = ({
 }
 
 ScrollLyricListener.propTypes = {
-    getLyricScrollParent: PropTypes.func.isRequired,
-    getScrollAnnotationChild: PropTypes.func.isRequired,
+    getLyricScrollElement: PropTypes.func.isRequired,
+    getScrollAnchorChild: PropTypes.func.isRequired,
     getScrollVerseChild: PropTypes.func.isRequired
 }
 

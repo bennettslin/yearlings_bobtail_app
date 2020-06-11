@@ -45,8 +45,8 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
 
     const setRef = node => {
         if (ref) {
-            ref.current = ref.current || { annotation: {}, verse: {} }
-            ref.current.annotation[annotationIndex] = node
+            ref.current = ref.current || { anchor: {}, verse: {} }
+            ref.current.anchor[annotationIndex] = node
         }
     }
 

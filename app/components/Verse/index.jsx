@@ -46,7 +46,7 @@ const Verse = forwardRef(({
          * only call this function in indexed verses, for some reason.
          */
         if (ref) {
-            ref.current = ref.current || { annotation: {}, verse: {} }
+            ref.current = ref.current || { anchor: {}, verse: {} }
             ref.current.verse[verseIndex] = node
         }
     }

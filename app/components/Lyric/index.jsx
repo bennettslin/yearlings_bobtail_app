@@ -39,7 +39,7 @@ const Lyric = forwardRef((props, ref) => {
     const setRef = node => {
         if (node) {
             handleVerseBarWheel.current = node.handleVerseBarWheel
-            ref.current = node.lyricScroll
+            ref.current = node.lyricScrollElement
         }
     }
 

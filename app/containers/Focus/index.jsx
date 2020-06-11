@@ -18,8 +18,8 @@ import { mapCanSliderMount } from '../../redux/viewport/selectors'
 const FocusContainer = () => {
     const
         dispatch = useDispatch(),
-        focusElement = useRef(),
-        lyricFocusElement = useRef(),
+        focusContainerElement = useRef(),
+        lyricScrollElement = useRef(),
         dispatchSliderTouch = useRef(),
         stopPropagation = useRef(),
         closeForBodyClick = useRef(),
@@ -35,7 +35,9 @@ const FocusContainer = () => {
         }
 
         const
-            element = shouldFocusLyric ? lyricFocusElement : focusElement,
+            element = shouldFocusLyric ?
+                lyricScrollElement :
+                focusContainerElement,
             logString = shouldFocusLyric ? 'lyric' : 'focusContainer'
 
         if (element.current) {
@@ -96,7 +98,7 @@ const FocusContainer = () => {
     return (
         <div
             {...{
-                ref: focusElement,
+                ref: focusContainerElement,
                 className: 'FocusContainer',
                 tabIndex: -1,
                 onClick,
@@ -116,7 +118,7 @@ const FocusContainer = () => {
             }}
         >
             <CloseHandler {...{ ref: closeForBodyClick }} />
-            <RootContainer {...{ ref: lyricFocusElement }} />
+            <RootContainer {...{ ref: lyricScrollElement }} />
             {canSliderMount && (
                 <SliderTouchDispatcher {...{ ref: dispatchSliderTouch }} />
             )}

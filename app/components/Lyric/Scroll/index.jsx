@@ -20,7 +20,7 @@ import { mapCanLyricCarouselUpdate } from '../../../redux/entrance/selectors'
 const LyricScroll = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        scrollParent = useRef(),
+        lyricScrollElement = useRef(),
         scrollChildren = useRef(),
         dispatchLyricWheel = useRef(),
         dispatchScrollTimeout = useRef(),
@@ -39,16 +39,16 @@ const LyricScroll = forwardRef((props, ref) => {
 
     const onWheel = e => {
         dispatchLyricWheel.current.dispatchLyricTouchMoveOrWheel(
-            e, scrollParent.current
+            e, lyricScrollElement.current
         )
     }
 
-    const getLyricScrollParent = () => (
-        scrollParent.current
+    const getLyricScrollElement = () => (
+        lyricScrollElement.current
     )
 
-    const getScrollAnnotationChild = index => (
-        scrollChildren.current.annotation[index]
+    const getScrollAnchorChild = index => (
+        scrollChildren.current.anchor[index]
     )
 
     const getScrollVerseChild = index => (
@@ -57,7 +57,7 @@ const LyricScroll = forwardRef((props, ref) => {
 
     const handleVerseBarWheel = e => {
         dispatchLyricWheel.current.dispatchVerseBarWheel(
-            e, scrollParent.current
+            e, lyricScrollElement.current
         )
     }
 
@@ -67,14 +67,14 @@ const LyricScroll = forwardRef((props, ref) => {
 
     useImperativeHandle(ref, () => ({
         handleVerseBarWheel,
-        lyricScroll: scrollParent.current
+        lyricScrollElement: lyricScrollElement.current
     }))
 
     return (
         <>
             <ScrollLyricListener {...{
-                getLyricScrollParent,
-                getScrollAnnotationChild,
+                getLyricScrollElement,
+                getScrollAnchorChild,
                 getScrollVerseChild
             }} />
             <Transition
@@ -86,7 +86,7 @@ const LyricScroll = forwardRef((props, ref) => {
             >
                 <div
                     {...{
-                        ref: scrollParent,
+                        ref: lyricScrollElement,
                         className: cx(
                             'LyricScroll',
                             'abF',
@@ -111,7 +111,7 @@ const LyricScroll = forwardRef((props, ref) => {
             <ScrollOverlayDispatcher
                 {...{
                     ref: dispatchScrollTimeout,
-                    getLyricScrollParent
+                    getLyricScrollElement
                 }}
             />
             <VerseBarHandler

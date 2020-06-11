@@ -4,19 +4,19 @@ import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 import { updateIsScrolling } from '../../redux/scrollOverlay/action'
 
-const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollParent }, ref) => {
+const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollElement }, ref) => {
     const
         dispatch = useDispatch(),
         [scrollTimeoutId, setScrollTimeoutId] = useState('')
 
     const _dispatchScroll = prevScrollTop => {
-        const nextScrollTop = getLyricScrollParent().scrollTop
+        const nextScrollTop = getLyricScrollElement().scrollTop
 
         dispatch(updateIsScrolling(prevScrollTop !== nextScrollTop))
     }
 
     const dispatchScrollTimeout = (timeoutDuration = 50) => {
-        const prevScrollTop = getLyricScrollParent().scrollTop
+        const prevScrollTop = getLyricScrollElement().scrollTop
 
         clearTimeout(scrollTimeoutId)
 
@@ -35,7 +35,7 @@ const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollParent }, ref) => {
 })
 
 ScrollOverlayDispatcher.propTypes = {
-    getLyricScrollParent: PropTypes.func.isRequired
+    getLyricScrollElement: PropTypes.func.isRequired
 }
 
 export default ScrollOverlayDispatcher
