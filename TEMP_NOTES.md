@@ -1,6 +1,6 @@
 # Next
 * Final ref: Player.
-* Refactor final components: FocusContainer, Player, VerseTracker.
+* Refactor final components: Player, VerseTracker.
 * Everything from device width is just an aggregate selector. Basically, get rid of everything that's not the window width, height, and deviceWidth.
 * Consolidate refs.
 * Start getting rid of listeners by putting in reducers, or moving completely to selectors. Begin with PopupAnnotation listener.
@@ -23,6 +23,7 @@
 # Bugs that may get fixed after canEnter tear out.
 * Song selection seems slower through access?
 * Determine if scene store really needs its own song and scene index.
+* Focus container can't focus lyric right away because ref doesn't exist. Maybe this will be fine once lyric mounts first?
 
 # Easy reduction tasks
 * Some todos to make a selector.

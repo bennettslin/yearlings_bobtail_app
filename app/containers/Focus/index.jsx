@@ -1,7 +1,7 @@
 // Parent component that handles click, touch, and keyDown events.
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+// eslint-disable-next-line object-curly-newline
+import React, { useEffect, useRef, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateFocusStore } from '../../redux/focus/action'
 import CloseHandler from '../../managers/Close'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
@@ -9,220 +9,125 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import RootContainer from '../Root'
 import KeyManager from '../../managers/Key'
 import { isEmailFocused } from '../../utils/email'
-import { mapQueuedFocus } from '../../redux/focus/selectors'
+import {
+    mapQueuedFocus,
+    mapShouldFocusLyric
+} from '../../redux/focus/selectors'
 import { mapCanSliderMount } from '../../redux/mount/selectors'
-import { mapIsHeightlessLyric } from '../../redux/responsive/selectors'
-import { mapIsLyricExpanded } from '../../redux/toggle/selectors'
 
-const mapStateToProps = state => {
+const FocusContainer = () => {
     const
-        queuedFocus = mapQueuedFocus(state),
-        canSliderMount = mapCanSliderMount(state),
-        isHeightlessLyric = mapIsHeightlessLyric(state),
-        isLyricExpanded = mapIsLyricExpanded(state)
+        dispatch = useDispatch(),
+        focusElement = useRef(),
+        lyricFocusElement = useRef(),
+        dispatchSliderTouch = useRef(),
+        stopPropagation = useRef(),
+        closeForBodyClick = useRef(),
+        dispatchKey = useRef(),
+        queuedFocus = useSelector(mapQueuedFocus),
+        shouldFocusLyric = useSelector(mapShouldFocusLyric),
+        canSliderMount = useSelector(mapCanSliderMount),
+        [isSliderTouchEnding, setIsSliderTouchEnding] = useState(false)
 
-    return {
-        canSliderMount,
-        isHeightlessLyric,
-        isLyricExpanded,
-        queuedFocus
-    }
-}
-
-class FocusContainer extends PureComponent {
-    static propTypes = {
-        // Through Redux.
-        canSliderMount: PropTypes.bool.isRequired,
-        isHeightlessLyric: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
-        queuedFocus: PropTypes.bool.isRequired,
-        updateFocusStore: PropTypes.func.isRequired
-    }
-
-    state = { isSliderTouchEnding: false }
-
-    constructor(props) {
-        super(props)
-        this.focusElement = React.createRef()
-        this.lyricFocusElement = React.createRef()
-    }
-
-    componentDidMount() {
-        logMount('FocusContainer')
-        // Focus lyric section when app is mounted.
-        // this._focusElementForAccess()
-    }
-
-    componentDidUpdate(prevProps) {
-        this._checkFocus(prevProps)
-        this._checkLyricChange(prevProps)
-    }
-
-    _checkFocus(prevProps) {
-        const
-            { queuedFocus } = this.props,
-            { queuedFocus: prevFocus } = prevProps
-
-        if (queuedFocus && !prevFocus) {
-            this._focusElementForAccess()
-
-            this.props.updateFocusStore({ queuedFocus: false })
-        }
-    }
-
-    _checkLyricChange(prevProps) {
-        /**
-         * Determine whether to add or remove focus from lyric element,
-         * depending on whether it is now shown or hidden.
-         */
-        const {
-                isHeightlessLyric,
-                isLyricExpanded
-            } = this.props,
-            {
-                isHeightlessLyric: wasHeightlessLyric,
-                isLyricExpanded: wasLyricExpanded
-            } = prevProps
-
-        if (
-            isHeightlessLyric !== wasHeightlessLyric ||
-            isLyricExpanded !== wasLyricExpanded
-        ) {
-            this._focusElementForAccess()
-        }
-    }
-
-    _focusElementForAccess = () => {
-        const {
-            isHeightlessLyric,
-            isLyricExpanded
-        } = this.props
-
-        let focusedElement,
-            focusedElementString
-
+    const _focusElementForAccess = () => {
         if (isEmailFocused()) {
             return false
         }
 
-        if (
-            (
-                !isHeightlessLyric || isLyricExpanded
-            ) &&
-            this.lyricFocusElement.current
-        ) {
-            focusedElement = this.lyricFocusElement.current
-            focusedElementString = 'lyric'
+        const
+            element = shouldFocusLyric ? lyricFocusElement : focusElement,
+            logString = shouldFocusLyric ? 'lyric' : 'focusContainer'
 
-        } else {
-            focusedElement = this.focusElement.current
-            focusedElementString = 'root'
-        }
-
-        if (focusedElement) {
-            logFocus(`Focus on ${focusedElementString}.`)
-            focusedElement.focus()
+        if (element.current) {
+            logFocus(`Focus on ${logString}.`)
+            element.current.focus()
         }
     }
 
-    _handleTouchMove = e => {
-        this.dispatchTouchMove(e)
+    const onTouchMove = e => {
+        dispatchSliderTouch.current.dispatchTouchMove(e)
     }
 
-    _handleTouchEnd = e => {
-        const isSliderTouchEnding = this.dispatchTouchEnd()
-        if (isSliderTouchEnding) {
+    const _resetTouchEndState = () => {
+        setIsSliderTouchEnding(false)
+    }
+
+    const onTouchEnd = e => {
+        // Slider touch is ending.
+        if (dispatchSliderTouch.current.dispatchTouchEnd()) {
             logEvent({ e, componentName: 'FocusContainer' })
             /**
              * Ignore body click event that gets triggered after touch end on
              * slider, to prevent it from closing out of overlay.
              */
-            setTimeout(this._resetTouchEndState, 200)
-
-            this.setState({ isSliderTouchEnding: true })
+            setTimeout(_resetTouchEndState, 200)
+            setIsSliderTouchEnding(true)
         }
     }
 
-    _resetTouchEndState = () => {
-        this.setState({ isSliderTouchEnding: false })
-    }
-
-    _handleBodyClick = e => {
+    const onClick = e => {
         if (isEmailFocused()) {
             return false
         }
 
         logEvent({ e, componentName: 'FocusContainer' })
 
-        this.stopPropagation(e)
+        stopPropagation.current(e)
 
-        if (!this.state.isSliderTouchEnding) {
-            this.closeForBodyClick()
+        if (!isSliderTouchEnding) {
+            closeForBodyClick.current()
         }
     }
 
-    _handleKeyDownPress = e => this.handleKeyDownPress(e)
-    _handleKeyUpPress = e => this.handleKeyUpPress(e)
+    const onKeyDown = e => dispatchKey.current.handleKeyDownPress(e)
+    const onKeyUp = e => dispatchKey.current.handleKeyUpPress(e)
 
-    getCloseForBodyClick = dispatch => {
-        this.closeForBodyClick = dispatch
-    }
+    useEffect(() => {
+        logMount('FocusContainer')
+    }, [])
 
-    getDispatchSliderTouch = dispatch => {
-        if (dispatch) {
-            this.dispatchTouchMove = dispatch.dispatchTouchMove
-            this.dispatchTouchEnd = dispatch.dispatchTouchEnd
+    useEffect(() => {
+        if (queuedFocus) {
+            _focusElementForAccess()
+            dispatch(updateFocusStore({ queuedFocus: false }))
         }
-    }
+    }, [queuedFocus])
 
-    getDispatchKey = dispatch => {
-        if (dispatch) {
-            this.handleKeyDownPress = dispatch.handleKeyDownPress
-            this.handleKeyUpPress = dispatch.handleKeyUpPress
-        }
-    }
+    useEffect(() => {
+        _focusElementForAccess()
+    }, [shouldFocusLyric])
 
-    getStopPropagation = dispatch => {
-        this.stopPropagation = dispatch
-    }
+    return (
+        <div
+            {...{
+                ref: focusElement,
+                className: 'FocusContainer',
+                tabIndex: -1,
+                onClick,
 
-    render() {
-        const { canSliderMount } = this.props
+                onKeyDown,
+                onKeyUp,
 
-        return (
-            <div
-                {...{
-                    ref: this.focusElement,
-                    className: 'FocusContainer',
-                    tabIndex: -1,
-                    onClick: this._handleBodyClick,
+                ...canSliderMount && {
+                    onTouchMove,
+                    onMouseMove: onTouchMove,
 
-                    onKeyDown: this._handleKeyDownPress,
-                    onKeyUp: this._handleKeyUpPress
-                }}
-                {...canSliderMount && {
-                    onMouseMove: this._handleTouchMove,
-                    onTouchMove: this._handleTouchMove,
-
-                    onMouseUp: this._handleTouchEnd,
-                    onMouseLeave: this._handleTouchEnd,
-                    onTouchEnd: this._handleTouchEnd,
-                    onTouchCancel: this._handleTouchEnd
-                }}
-            >
-                <CloseHandler {...{ ref: this.getCloseForBodyClick }} />
-                <RootContainer {...{ ref: this.lyricFocusElement }} />
-                {canSliderMount && (
-                    <SliderTouchDispatcher {...{ ref: this.getDispatchSliderTouch }} />
-                )}
-                <StopPropagationDispatcher {...{ ref: this.getStopPropagation }} />
-                <KeyManager {...{ ref: this.getDispatchKey }} />
-            </div>
-        )
-    }
+                    onTouchEnd,
+                    onTouchCancel: onTouchEnd,
+                    onMouseUp: onTouchEnd,
+                    onMouseLeave: onTouchEnd
+                }
+            }}
+        >
+            <CloseHandler {...{ ref: closeForBodyClick }} />
+            <RootContainer {...{ ref: lyricFocusElement }} />
+            {canSliderMount && (
+                <SliderTouchDispatcher {...{ ref: dispatchSliderTouch }} />
+            )}
+            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
+            <KeyManager {...{ ref: dispatchKey }} />
+        </div>
+    )
 }
 
-export default connect(
-    mapStateToProps,
-    { updateFocusStore }
-)(FocusContainer)
+export default FocusContainer

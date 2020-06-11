@@ -1,5 +1,9 @@
-// eslint-disable-next-line object-curly-newline
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import React, {
+    forwardRef,
+    useImperativeHandle,
+    useEffect,
+    useRef
+} from 'react'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
@@ -56,6 +60,10 @@ const LyricScroll = forwardRef((props, ref) => {
             e, scrollParent.current
         )
     }
+
+    useEffect(() => {
+        logMount('LyricScroll')
+    }, [])
 
     useImperativeHandle(ref, () => ({
         handleVerseBarWheel,
