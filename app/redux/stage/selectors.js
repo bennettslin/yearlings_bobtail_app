@@ -1,8 +1,5 @@
 import { createSelector } from "reselect"
-
-export const mapStageDimensionCoordinates = (
-    { stageStore: { stageDimensionCoordinates } }
-) => stageDimensionCoordinates
+import { mapStageDimensionCoordinates } from "../viewport/selectors"
 
 export const mapStageHeight = createSelector(
     mapStageDimensionCoordinates,

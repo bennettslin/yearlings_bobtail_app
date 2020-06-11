@@ -3,7 +3,7 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import InlineSvg from '../../../modules/InlineSvg'
 import proscenium from '../../../../assets/svgs/theatre/proscenium'
-import { mapProsceniumDimensionCoordinates } from '../../../redux/proscenium/selectors'
+import { mapProsceniumDimensionCoordinates } from '../../../redux/viewport/selectors'
 import './style'
 
 const Proscenium = () => {

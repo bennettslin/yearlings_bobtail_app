@@ -4,9 +4,11 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import CeilingRafter from './Rafter'
 import { getRaftersRowCoordinates } from './helper'
-import { mapProsceniumDimensionCoordinates } from '../../../redux/proscenium/selectors'
-import { mapCeilingHeight } from '../../../redux/theatre/selectors'
-import { mapWindowWidth } from '../../../redux/viewport/selectors'
+import {
+    mapWindowWidth,
+    mapProsceniumDimensionCoordinates,
+    mapCeilingHeight
+} from '../../../redux/viewport/selectors'
 import './style'
 
 const Ceiling = () => {

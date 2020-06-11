@@ -7,11 +7,11 @@ import {
     getBalconyColumnCoordinates,
     getWallWidth
 } from './helper'
-import { mapProsceniumDimensionCoordinates } from '../../../redux/proscenium/selectors'
-import { mapCeilingHeight } from '../../../redux/theatre/selectors'
 import {
     mapWindowWidth,
-    mapWindowHeight
+    mapWindowHeight,
+    mapProsceniumDimensionCoordinates,
+    mapCeilingHeight
 } from '../../../redux/viewport/selectors'
 import './style'
 

@@ -5,9 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateViewportStore } from '../../../redux/viewport/action'
-import { updateProsceniumStore } from '../../../redux/proscenium/action'
-import { updateStageStore } from '../../../redux/stage/action'
-import { updateTheatreStore } from '../../../redux/theatre/action'
 import {
     getDeviceWidthIndex,
     getWindowDimensions
@@ -28,9 +25,6 @@ class ResizeDispatcher extends PureComponent {
         // Through Redux.
         updateEntranceStore: PropTypes.func.isRequired,
         updateViewportStore: PropTypes.func.isRequired,
-        updateProsceniumStore: PropTypes.func.isRequired,
-        updateStageStore: PropTypes.func.isRequired,
-        updateTheatreStore: PropTypes.func.isRequired,
 
         // From parent.
         getRootElement: PropTypes.func.isRequired,
@@ -107,14 +101,9 @@ class ResizeDispatcher extends PureComponent {
             isHeightlessLyric,
             isTwoRowMenu,
             menuHeight,
-            canCarouselMount
-        })
-
-        this.props.updateStageStore({ stageDimensionCoordinates })
-
-        this.props.updateProsceniumStore({ prosceniumDimensionCoordinates })
-
-        this.props.updateTheatreStore({
+            canCarouselMount,
+            stageDimensionCoordinates,
+            prosceniumDimensionCoordinates,
             ceilingHeight,
             floorHeight
         })
@@ -134,9 +123,6 @@ export default connect(
     null,
     {
         updateEntranceStore,
-        updateViewportStore,
-        updateProsceniumStore,
-        updateStageStore,
-        updateTheatreStore
+        updateViewportStore
     }
 )(ResizeDispatcher)

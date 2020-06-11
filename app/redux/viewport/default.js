@@ -8,42 +8,67 @@ import {
     getIsTwoRowMenu,
     getMenuHeight
 } from '../../helpers/resize/responsive'
+import { getStageDimensionCoordinates } from '../../helpers/resize/stage'
+import { getProsceniumDimensionCoordinates } from '../../helpers/resize/proscenium'
+import { getCeilingFloorHeight } from '../../helpers/resize/theatre'
 
-export const {
-    windowWidth: INITIAL_WINDOW_WIDTH,
-    windowHeight: INITIAL_WINDOW_HEIGHT
-} = getWindowDimensions()
-
-export const INITIAL_DEVICE_WIDTH_INDEX =
-    getDeviceWidthIndex(INITIAL_WINDOW_WIDTH)
-
-export const IS_INITIAL_HEIGHTLESS_LYRIC = getIsHeightlessLyric({
-    windowWidth: INITIAL_WINDOW_WIDTH,
-    windowHeight: INITIAL_WINDOW_HEIGHT,
-    deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX
-})
-
-export const IS_INITIAL_TWO_ROW_MENU = getIsTwoRowMenu({
-    windowWidth: INITIAL_WINDOW_WIDTH,
-    deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX
-})
-
-export const INITIAL_MENU_HEIGHT = getMenuHeight({
-    isTwoRowMenu: IS_INITIAL_TWO_ROW_MENU
-})
-
-export const CAN_INITIAL_CAROUSEL_MOUNT = getCanCarouselMount({
-    deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX,
-    windowHeight: INITIAL_WINDOW_HEIGHT,
-    isHeightlessLyric: IS_INITIAL_HEIGHTLESS_LYRIC
-})
+const
+    {
+        windowWidth,
+        windowHeight
+    } = getWindowDimensions(),
+    deviceWidthIndex = getDeviceWidthIndex(windowWidth),
+    isHeightlessLyric = getIsHeightlessLyric({
+        windowWidth,
+        windowHeight,
+        deviceWidthIndex
+    }),
+    isTwoRowMenu = getIsTwoRowMenu({
+        windowWidth,
+        deviceWidthIndex
+    }),
+    menuHeight = getMenuHeight({
+        isTwoRowMenu
+    }),
+    canCarouselMount = getCanCarouselMount({
+        deviceWidthIndex,
+        windowHeight,
+        isHeightlessLyric
+    }),
+    stageDimensionCoordinates =
+        getStageDimensionCoordinates({
+            deviceWidthIndex,
+            windowWidth,
+            windowHeight,
+            isHeightlessLyric,
+            isTwoRowMenu,
+            menuHeight,
+            canCarouselMount
+        }),
+    prosceniumDimensionCoordinates =
+        getProsceniumDimensionCoordinates(stageDimensionCoordinates),
+    {
+        ceilingHeight,
+        floorHeight
+    } = getCeilingFloorHeight({
+        deviceWidthIndex,
+        windowHeight,
+        isHeightlessLyric,
+        isTwoRowMenu,
+        menuHeight,
+        prosceniumDimensionCoordinates
+    })
 
 export const VIEWPORT_DEFAULTS = {
-    windowWidth: INITIAL_WINDOW_WIDTH,
-    windowHeight: INITIAL_WINDOW_HEIGHT,
-    deviceWidthIndex: INITIAL_DEVICE_WIDTH_INDEX,
-    isHeightlessLyric: IS_INITIAL_HEIGHTLESS_LYRIC,
-    isTwoRowMenu: IS_INITIAL_TWO_ROW_MENU,
-    menuHeight: INITIAL_MENU_HEIGHT,
-    canCarouselMount: CAN_INITIAL_CAROUSEL_MOUNT
+    windowWidth,
+    windowHeight,
+    deviceWidthIndex,
+    isHeightlessLyric,
+    isTwoRowMenu,
+    menuHeight,
+    canCarouselMount,
+    stageDimensionCoordinates,
+    prosceniumDimensionCoordinates,
+    ceilingHeight,
+    floorHeight
 }

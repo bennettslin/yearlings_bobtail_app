@@ -72,3 +72,19 @@ export const mapIsPhoneOrMiniWidth = createSelector(
         !isDesktopWidth && !isTabletWidth
     )
 )
+
+export const mapStageDimensionCoordinates = (
+    { viewportStore: { stageDimensionCoordinates } }
+) => stageDimensionCoordinates
+
+export const mapProsceniumDimensionCoordinates = (
+    { viewportStore: { prosceniumDimensionCoordinates } }
+) => prosceniumDimensionCoordinates
+
+export const mapCeilingHeight = (
+    { viewportStore: { ceilingHeight } }
+) => ceilingHeight
+
+export const mapFloorHeight = (
+    { viewportStore: { floorHeight } }
+) => floorHeight
