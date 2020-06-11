@@ -21,7 +21,6 @@
 * Don't style selected verse when verse bar is shown.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
-* Figure out why window resizing timeout seems to have regressed.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
 * tips hand in garryowen for score
 * Do I really want scene activation to work as it does, where you need to go next, then previous, before hitting selected verse that is not the start of scene?

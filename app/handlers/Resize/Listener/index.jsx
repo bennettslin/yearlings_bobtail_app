@@ -1,6 +1,7 @@
-import React, { PureComponent } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import ResizeDispatcher from '../Dispatcher'
 import { resetTheatreEntrance } from '../../../redux/entrance/action'
 import { getWindowDimensions } from '../../../helpers/resize/device'
@@ -10,42 +11,27 @@ import {
     mapWindowHeight
 } from '../../../redux/viewport/selectors'
 
-const mapStateToProps = state => {
+const ResizeListener = ({ getRootElement }) => {
     const
-        windowWidth = mapWindowWidth(state),
-        windowHeight = mapWindowHeight(state)
+        dispatch = useDispatch(),
+        beginEnterTransition = useRef(),
+        windowWidth = useSelector(mapWindowWidth),
+        windowHeight = useSelector(mapWindowHeight),
+        [windowResizeTimeoutId, setWindowResizeTimeoutId] = useState('')
 
-    return {
-        windowHeight,
-        windowWidth
-    }
-}
+    const _beginExitTransition = () => {
+        dispatch(resetTheatreEntrance())
 
-class ResizeListener extends PureComponent {
+        // Clear previous timeout.
+        clearTimeout(windowResizeTimeoutId)
 
-    static propTypes = {
-        // Through Redux.
-        windowHeight: PropTypes.number.isRequired,
-        windowWidth: PropTypes.number.isRequired,
-        resetTheatreEntrance: PropTypes.func.isRequired,
-
-        // From parent.
-        getRootElement: PropTypes.func.isRequired
+        // Wait for window resize to finish.
+        setWindowResizeTimeoutId(
+            setTimeout(beginEnterTransition.current, 250)
+        )
     }
 
-    state = {
-        windowResizeTimeoutId: ''
-    }
-
-    componentDidMount() {
-        getWindow().onresize = this._checkIfGenuineResize
-    }
-
-    componentWillUnmount() {
-        getWindow().onresize = null
-    }
-
-    _checkIfGenuineResize = () => {
+    const _beginExitTransitionIfGenuineResize = () => {
         /**
          * This check is needed because iOS will arbitrarily set window height
          * based on whether browser header and footer are shown. So we'll use
@@ -54,56 +40,38 @@ class ResizeListener extends PureComponent {
          */
         const
             {
-                windowHeight: newHeight,
-                windowWidth: newWidth
-            } = getWindowDimensions(this.props.getRootElement()),
-            {
-                windowHeight,
-                windowWidth
-            } = this.props
+                windowHeight: nextHeight,
+                windowWidth: nextWidth
+            } = getWindowDimensions(getRootElement())
 
         if (
-            newHeight !== windowHeight ||
-            newWidth !== windowWidth
+            nextHeight !== windowHeight ||
+            nextWidth !== windowWidth
         ) {
-            this._beginExitTransition()
+            _beginExitTransition()
         }
     }
 
-    _beginExitTransition() {
-        this.props.resetTheatreEntrance()
+    useEffect(() => {
+        getWindow().onresize = _beginExitTransitionIfGenuineResize
 
-        // Clear previous timeout.
-        clearTimeout(this.state.windowResizeTimeoutId)
+        return () => {
+            getWindow().onresize = null
+        }
+    }, [windowResizeTimeoutId])
 
-        /**
-         * Wait for window resize to finish.
-         */
-        const windowResizeTimeoutId = setTimeout(
-            this.beginEnterTransition, 250
-        )
-
-        this.setState({ windowResizeTimeoutId })
-    }
-
-    getBeginEnterTransition = dispatch => {
-        this.beginEnterTransition = dispatch
-    }
-
-    render() {
-        const { getRootElement } = this.props
-        return (
-            <ResizeDispatcher
-                {...{
-                    ref: this.getBeginEnterTransition,
-                    getRootElement
-                }}
-            />
-        )
-    }
+    return (
+        <ResizeDispatcher
+            {...{
+                ref: beginEnterTransition,
+                getRootElement
+            }}
+        />
+    )
 }
 
-export default connect(
-    mapStateToProps,
-    { resetTheatreEntrance }
-)(ResizeListener)
+ResizeListener.propTypes = {
+    getRootElement: PropTypes.func.isRequired
+}
+
+export default ResizeListener
