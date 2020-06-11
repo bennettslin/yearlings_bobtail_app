@@ -6,7 +6,7 @@ import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateViewportStore } from '../../../redux/viewport/action'
 import { getWindowDimensions } from '../../../helpers/resize/device'
 
-const ResizeDispatcher = forwardRef(({ getRootElement }, ref) => {
+const ResizeDispatcher = forwardRef(({ getRootContainerElement }, ref) => {
     const dispatch = useDispatch()
 
     const beginEnterTransition = () => {
@@ -15,7 +15,7 @@ const ResizeDispatcher = forwardRef(({ getRootElement }, ref) => {
         const {
             windowHeight,
             windowWidth
-        } = getWindowDimensions(getRootElement())
+        } = getWindowDimensions(getRootContainerElement())
 
         dispatch(updateViewportStore({
             windowWidth,
@@ -39,7 +39,7 @@ const ResizeDispatcher = forwardRef(({ getRootElement }, ref) => {
 })
 
 ResizeDispatcher.propTypes = {
-    getRootElement: PropTypes.func.isRequired
+    getRootContainerElement: PropTypes.func.isRequired
 }
 
 export default ResizeDispatcher

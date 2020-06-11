@@ -32,7 +32,7 @@ import './style'
 const SongBanner = () => {
     const
         dispatch = useDispatch(),
-        bannerElement = useRef(),
+        songBannerElement = useRef(),
         dispatchVerse = useRef(),
         stopPropagation = useRef(),
         isActivated = useSelector(mapIsActivated),
@@ -55,7 +55,7 @@ const SongBanner = () => {
                 {
                     left,
                     width
-                } = bannerElement.current.getBoundingClientRect(),
+                } = songBannerElement.current.getBoundingClientRect(),
                 bannerRatio = getElementRatioForClientX({
                     clientX: nextClientX,
                     elementLeft: left,
@@ -155,7 +155,7 @@ const SongBanner = () => {
     return (
         <div
             {...{
-                ref: bannerElement,
+                ref: songBannerElement,
                 className: cx(
                     'SongBanner',
                     'BannerFilmstrip__child',

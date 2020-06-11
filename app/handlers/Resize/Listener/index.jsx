@@ -11,7 +11,7 @@ import {
     mapWindowHeight
 } from '../../../redux/viewport/selectors'
 
-const ResizeListener = ({ getRootElement }) => {
+const ResizeListener = ({ getRootContainerElement }) => {
     const
         dispatch = useDispatch(),
         beginEnterTransition = useRef(),
@@ -42,7 +42,7 @@ const ResizeListener = ({ getRootElement }) => {
             {
                 windowHeight: nextHeight,
                 windowWidth: nextWidth
-            } = getWindowDimensions(getRootElement())
+            } = getWindowDimensions(getRootContainerElement())
 
         if (
             nextHeight !== windowHeight ||
@@ -64,14 +64,14 @@ const ResizeListener = ({ getRootElement }) => {
         <ResizeDispatcher
             {...{
                 ref: beginEnterTransition,
-                getRootElement
+                getRootContainerElement
             }}
         />
     )
 }
 
 ResizeListener.propTypes = {
-    getRootElement: PropTypes.func.isRequired
+    getRootContainerElement: PropTypes.func.isRequired
 }
 
 export default ResizeListener

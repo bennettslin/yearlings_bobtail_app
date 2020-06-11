@@ -15,8 +15,8 @@ import './style'
 
 const RootContainer = forwardRef((props, ref) => {
     const
-        rootElement = useRef(),
-        getRootElement = () => rootElement.current
+        rootContainerElement = useRef(),
+        getRootContainerElement = () => rootContainerElement.current
 
     useEffect(() => {
         logMount('RootContainer')
@@ -25,7 +25,7 @@ const RootContainer = forwardRef((props, ref) => {
     return (
         <div
             {...{
-                ref: rootElement,
+                ref: rootContainerElement,
                 className: cx(
                     'RootContainer',
                     'ovH',
@@ -33,7 +33,7 @@ const RootContainer = forwardRef((props, ref) => {
                 )
             }}
         >
-            <ResizeListener {...{ getRootElement }} />
+            <ResizeListener {...{ getRootContainerElement }} />
             <WrapperContainer>
                 <Theatre />
                 <Carousel />

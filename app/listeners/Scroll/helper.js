@@ -60,15 +60,6 @@ const _getCarouselLeftAlign = (
     }
 }
 
-const _getValidTarget = scrollParent => {
-    const parentElement = scrollParent
-
-    return (element) => {
-        const isParent = element === parentElement
-        return isParent
-    }
-}
-
 export const scrollElementIntoView = ({
     isCarousel,
     log = '',
@@ -83,7 +74,6 @@ export const scrollElementIntoView = ({
     callback
 
 }) => {
-    const time = noDuration ? 0 : 500
     let element = scrollChild
 
     if (!element) {
@@ -98,7 +88,7 @@ export const scrollElementIntoView = ({
         element = getDocument().getElementsByClassName(selector)[0]
 
         logError({
-            log: `${log}\nNo ref found, scrolled by selector: ${scrollClass} ${index}`,
+            log: `${log}\nNo ref found, scrolled by selector: ${selector}`,
             action: 'scroll',
             label: `class: ${scrollClass}, index: ${index}`
         })
@@ -108,16 +98,17 @@ export const scrollElementIntoView = ({
         logScroll(log)
 
         const
+            // TODO: Make this a selector.
             align = isCarousel ?
                 _getCarouselLeftAlign(deviceWidthIndex, windowWidth) :
-                _getLyricTopAlign(deviceWidthIndex, isLyricExpanded),
-
-            validTarget = _getValidTarget(scrollParent)
+                _getLyricTopAlign(deviceWidthIndex, isLyricExpanded)
 
         scrollIntoView(element, {
-            time,
             align,
-            validTarget
+            time: noDuration ? 0 : 500,
+            validTarget: element => (
+                element === scrollParent
+            )
         }, callback)
     }
 }

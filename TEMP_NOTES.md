@@ -3,7 +3,6 @@
     * ref is name of dispatcher, plus "dispatch." For example, scrollVerseDispatch.
     * Remove "dispatch" from method. For example, scrollVerse.
     * Leave "timeout" out of name, instead refer to callback.
-    * Refer to elements by their component name plus "element," like lyricScrollElement.
 
 # Friday
 * Start getting rid of listeners by putting in reducers, or moving completely to selectors. Begin with PopupAnnotation listener.

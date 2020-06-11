@@ -17,7 +17,7 @@ import {
 
 const ScrollCarouselListener = ({
     getCarouselScrollChild,
-    getCarouselScrollParent
+    getCarouselScrollElement
 
 }) => {
     const
@@ -36,7 +36,7 @@ const ScrollCarouselListener = ({
                 isCarousel: true,
                 log: scrollCarouselLog,
                 scrollClass: CAROUSEL_SCROLL,
-                scrollParent: getCarouselScrollParent(),
+                scrollParent: getCarouselScrollElement(),
                 scrollChild: getCarouselScrollChild(scrollCarouselIndex),
                 index: scrollCarouselIndex,
                 noDuration: scrollCarouselNoDuration,
@@ -53,7 +53,7 @@ const ScrollCarouselListener = ({
 
 ScrollCarouselListener.propTypes = {
     getCarouselScrollChild: PropTypes.func.isRequired,
-    getCarouselScrollParent: PropTypes.func.isRequired
+    getCarouselScrollElement: PropTypes.func.isRequired
 }
 
 export default memo(ScrollCarouselListener)

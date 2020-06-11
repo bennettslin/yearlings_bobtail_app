@@ -13,7 +13,7 @@ import './style'
 const CarouselScroll = () => {
     const
         dispatch = useDispatch(),
-        carouselScrollParent = useRef(),
+        carouselScrollElement = useRef(),
         carouselScrollChildren = useRef(),
         canLyricCarouselUpdate = useSelector(mapCanLyricCarouselUpdate),
         lyricSongIndex = useSelector(mapLyricSongIndex)
@@ -23,8 +23,8 @@ const CarouselScroll = () => {
         dispatch(updateEntranceStore({ didCarouselUpdate: true }))
     }
 
-    const getCarouselScrollParent = () => (
-        carouselScrollParent.current
+    const getCarouselScrollElement = () => (
+        carouselScrollElement.current
     )
 
     const getCarouselScrollChild = index => (
@@ -45,12 +45,12 @@ const CarouselScroll = () => {
         >
             <div
                 {...{
-                    ref: carouselScrollParent,
+                    ref: carouselScrollElement,
                     className: 'CarouselScroll'
                 }}
             >
                 <ScrollCarouselListener {...{
-                    getCarouselScrollParent,
+                    getCarouselScrollElement,
                     getCarouselScrollChild
                 }} />
                 {getAnnotationIndices(lyricSongIndex).map(index => {
