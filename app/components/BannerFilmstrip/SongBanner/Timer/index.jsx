@@ -3,48 +3,14 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import { getFormattedTime } from '../../../../helpers/format'
-import {
-    mapIsActivated,
-    mapActivatedTime
-} from '../../../../redux/activated/selectors'
-import {
-    mapIsBannerHovering,
-    mapBannerHoverTime
-} from '../../../../redux/banner/selectors'
-import {
-    mapIsSelectedLogue,
-    mapSelectedTime
-} from '../../../../redux/selected/selectors'
-import {
-    mapIsSliderMoving,
-    mapSliderTime
-} from '../../../../redux/slider/selectors'
+import { mapCursorTime } from '../../../../redux/banner/selectors'
+import { mapIsSelectedLogue } from '../../../../redux/selected/selectors'
 import './style'
 
 const SongBannerTimer = () => {
     const
-        isActivated = useSelector(mapIsActivated),
-        activatedTime = useSelector(mapActivatedTime),
-        isBannerHovering = useSelector(mapIsBannerHovering),
-        bannerHoverTime = useSelector(mapBannerHoverTime),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
-        selectedTime = useSelector(mapSelectedTime),
-        isSliderMoving = useSelector(mapIsSliderMoving),
-        sliderTime = useSelector(mapSliderTime)
-
-    let time = selectedTime
-
-    if (isSliderMoving) {
-        time = sliderTime
-    }
-
-    if (isActivated) {
-        time = activatedTime
-    }
-
-    if (isBannerHovering) {
-        time = bannerHoverTime
-    }
+        cursorTime = useSelector(mapCursorTime)
 
     return !isSelectedLogue && (
         <div className={cx(
@@ -52,7 +18,7 @@ const SongBannerTimer = () => {
             'fCC',
             'abF'
         )}>
-            {getFormattedTime(time)}
+            {getFormattedTime(cursorTime)}
         </div>
     )
 }

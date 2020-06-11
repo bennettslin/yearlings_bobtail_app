@@ -1,9 +1,17 @@
 import { createSelector } from "reselect"
 import { getDurationForSong } from "../../api/album/time"
 import {
+    mapIsActivated,
+    mapActivatedTime
+} from "../activated/selectors"
+import {
     mapSelectedSongIndex,
     mapSelectedTime
 } from "../selected/selectors"
+import {
+    mapIsSliderMoving,
+    mapSliderTime
+} from "../slider/selectors"
 
 export const mapIsBannerHovering = (
     { bannerStore: { isBannerHovering } }
@@ -33,5 +41,30 @@ export const mapSongBannerCursorWidth = createSelector(
             songDuration = getDurationForSong(selectedSongIndex)
 
         return playedTime / songDuration * 100
+    }
+)
+
+export const mapCursorTime = createSelector(
+    mapSelectedTime,
+    mapIsActivated,
+    mapActivatedTime,
+    mapIsSliderMoving,
+    mapSliderTime,
+    (
+        selectedTime,
+        isActivated,
+        activatedTime,
+        isSliderMoving,
+        sliderTime
+    ) => {
+        if (isSliderMoving) {
+            return sliderTime
+        }
+
+        if (isActivated) {
+            return activatedTime
+        }
+
+        return selectedTime
     }
 )

@@ -6,38 +6,16 @@ import cx from 'classnames'
 import SliderTime from './Time'
 import { getDurationForSong } from '../../../api/album/time'
 import { getFormattedTime } from '../../../helpers/format'
-import {
-    mapIsActivated,
-    mapActivatedTime
-} from '../../../redux/activated/selectors'
+import { mapCursorTime } from '../../../redux/banner/selectors'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
-import { mapSelectedTime } from '../../../redux/selected/selectors'
-import {
-    mapIsSliderMoving,
-    mapSliderTime
-} from '../../../redux/slider/selectors'
 import './style'
 
 const SliderTimes = () => {
     const
-        isActivated = useSelector(mapIsActivated),
-        activatedTime = useSelector(mapActivatedTime),
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        selectedTime = useSelector(mapSelectedTime),
-        isSliderMoving = useSelector(mapIsSliderMoving),
-        sliderTime = useSelector(mapSliderTime)
+        cursorTime = useSelector(mapCursorTime)
 
-    let time = selectedTime
-
-    if (isSliderMoving) {
-        time = sliderTime
-    }
-
-    if (isActivated) {
-        time = activatedTime
-    }
-
-    const remainTime = getDurationForSong(lyricSongIndex) - time
+    const remainTime = getDurationForSong(lyricSongIndex) - cursorTime
 
     return (
         <div className={cx(
@@ -47,7 +25,7 @@ const SliderTimes = () => {
 
             <SliderTime
                 isSpent
-                time={getFormattedTime(time)}
+                time={getFormattedTime(cursorTime)}
             />
 
             <SliderTime

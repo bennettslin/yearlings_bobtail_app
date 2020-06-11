@@ -14,7 +14,6 @@ import { mapIsSmallBannerText } from '../../../redux/responsive/selectors'
 import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
-import { mapIsActivated } from '../../../redux/activated/selectors'
 import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
     mapIsBannerHovering,
@@ -26,7 +25,7 @@ import {
     mapIsSelectedLogue,
     mapSelectedTime
 } from '../../../redux/selected/selectors'
-import { mapIsSliderMoving } from '../../../redux/slider/selectors'
+import { mapIsLyricsLocked } from '../../../redux/slider/selectors'
 import './style'
 
 const SongBanner = () => {
@@ -35,7 +34,6 @@ const SongBanner = () => {
         songBannerElement = useRef(),
         dispatchVerse = useRef(),
         stopPropagation = useRef(),
-        isActivated = useSelector(mapIsActivated),
         isSmallBannerText = useSelector(mapIsSmallBannerText),
         isPlaying = useSelector(mapIsPlaying),
         isBannerHovering = useSelector(mapIsBannerHovering),
@@ -44,7 +42,7 @@ const SongBanner = () => {
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         selectedTime = useSelector(mapSelectedTime),
-        isSliderMoving = useSelector(mapIsSliderMoving),
+        isLyricsLocked = useSelector(mapIsLyricsLocked),
         [clientX, setClientX] = useState(0)
 
     const getVerseIndexFromEvent = e => {
@@ -96,8 +94,7 @@ const SongBanner = () => {
 
     const onMouseEnter = e => {
         if (
-            isSliderMoving ||
-            isActivated ||
+            isLyricsLocked ||
             getSongIsLogue(selectedSongIndex)
         ) {
             // Do not toggle banner hovering state.
@@ -125,7 +122,7 @@ const SongBanner = () => {
 
         stopPropagation.current(e)
 
-        if (isSliderMoving || isActivated) {
+        if (isLyricsLocked) {
             // Do nothing if lyrics locked, but still register click.
             return
         }
@@ -164,8 +161,7 @@ const SongBanner = () => {
 
                     (
                         isPlaying ||
-                        isSliderMoving ||
-                        isActivated
+                        isLyricsLocked
                     ) ?
                         'textShadow__light' :
                         'textShadow__dark',
@@ -173,8 +169,7 @@ const SongBanner = () => {
                     'dropShadow',
 
                     isBannerHovering &&
-                    !isSliderMoving &&
-                    !isActivated &&
+                    !isLyricsLocked &&
                     !isSelectedLogue &&
                         'dropShadow__lightHover',
 

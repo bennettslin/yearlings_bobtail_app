@@ -1,3 +1,6 @@
+import { createSelector } from "reselect"
+import { mapIsActivated } from "../activated/selectors"
+
 export const mapSliderLeft = (
     { sliderStore: { sliderLeft } }
 ) => sliderLeft
@@ -25,3 +28,12 @@ export const mapSliderSceneIndex = (
 export const mapSliderTime = (
     { sliderStore: { sliderTime } }
 ) => sliderTime
+
+export const mapIsLyricsLocked = createSelector(
+    mapIsActivated,
+    mapIsSliderMoving,
+    (
+        isActivated,
+        isSliderMoving
+    ) => isActivated || isSliderMoving
+)

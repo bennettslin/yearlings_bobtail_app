@@ -7,7 +7,7 @@ import { mapIsBannerHovering } from '../../redux/banner/selectors'
 import { mapIsScrolling } from '../../redux/scrollOverlay/selectors'
 import {
     mapIsSliderTouched,
-    mapIsSliderMoving
+    mapIsLyricsLocked
 } from '../../redux/slider/selectors'
 
 const TouchWrapper = ({ children }) => {
@@ -16,7 +16,7 @@ const TouchWrapper = ({ children }) => {
         isBannerHovering = useSelector(mapIsBannerHovering),
         isScrolling = useSelector(mapIsScrolling),
         isSliderTouched = useSelector(mapIsSliderTouched),
-        isSliderMoving = useSelector(mapIsSliderMoving)
+        isLyricsLocked = useSelector(mapIsLyricsLocked)
 
     return (
         <div
@@ -29,9 +29,7 @@ const TouchWrapper = ({ children }) => {
                     isActivated ?
                         'TW__verseActive' :
                         'TW__verseInactive',
-
-                    // TODO: Make this a selector.
-                    (isSliderMoving || isActivated) ?
+                    isLyricsLocked ?
                         'TW__lyricsLocked' :
                         'TW__lyricsUnlocked'
                 )
