@@ -124,7 +124,7 @@ const PresenceSvg = ({
 
     const preProcessSvg = (svgString) => {
         // Set timeout to wait until next lifecycle before setting state.
-        setTimeout(setAdjustedSize.bind(null, svgString), 0)
+        setTimeout(() => setAdjustedSize(svgString), 0)
 
         // Add transform attributes.
         return setSvgTransform({

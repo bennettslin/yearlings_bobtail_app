@@ -57,7 +57,7 @@ class PreviewerSvg extends PureComponent {
 
     processSvg = (svgString) => {
         // Set timeout to wait until next lifecycle before setting state.
-        setTimeout(this.handleProcessSvg.bind(null, svgString), 0)
+        setTimeout(() => this.handleProcessSvg(svgString), 0)
         return svgString
     }
 
@@ -191,7 +191,7 @@ class PreviewerSvg extends PureComponent {
                     {...{
                         className: cx(
                             'Presence',
-                            'Presence__visible',
+                            'Presence__loaded',
                             showKilobytes && 'Presence__kilobytes',
                             isActor && capitaliseForClassName(ACTOR),
                             capitaliseForClassName(presenceType)

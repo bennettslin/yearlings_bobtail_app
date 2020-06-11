@@ -10,12 +10,9 @@ import { getNextPlayerIndexToRender } from './helper'
 import {
     mapQueuedPlayFromLogue,
     mapQueuedPlaySongIndex,
-    mapQueuedPlayVerseIndex
+    mapQueuedPlayVerseIndex,
+    mapIsSelectPlayReady
 } from '../../../../redux/audio/selectors'
-import {
-    mapLyricSongIndex,
-    mapLyricVerseIndex
-} from '../../../../redux/lyric/selectors'
 import { mapPlayersBit } from '../../../../redux/players/selectors'
 import {
     mapSelectedSongIndex,
@@ -27,8 +24,7 @@ const mapStateToProps = state => {
         queuedPlayFromLogue = mapQueuedPlayFromLogue(state),
         queuedPlaySongIndex = mapQueuedPlaySongIndex(state),
         queuedPlayVerseIndex = mapQueuedPlayVerseIndex(state),
-        lyricSongIndex = mapLyricSongIndex(state),
-        lyricVerseIndex = mapLyricVerseIndex(state),
+        isSelectPlayReady = mapIsSelectPlayReady(state),
         playersBit = mapPlayersBit(state),
         selectedSongIndex = mapSelectedSongIndex(state),
         isSelectedLogue = mapIsSelectedLogue(state)
@@ -36,11 +32,10 @@ const mapStateToProps = state => {
         playersBit,
         selectedSongIndex,
         isSelectedLogue,
-        lyricSongIndex,
-        lyricVerseIndex,
         queuedPlayFromLogue,
         queuedPlaySongIndex,
-        queuedPlayVerseIndex
+        queuedPlayVerseIndex,
+        isSelectPlayReady
     }
 }
 
@@ -51,11 +46,10 @@ class PlayerListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         playersBit: PropTypes.number.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
-        lyricVerseIndex: PropTypes.number.isRequired,
         queuedPlayFromLogue: PropTypes.bool.isRequired,
         queuedPlaySongIndex: PropTypes.number.isRequired,
         queuedPlayVerseIndex: PropTypes.number.isRequired,
+        isSelectPlayReady: PropTypes.bool.isRequired,
         updatePlayersStore: PropTypes.func.isRequired,
         resetAudioQueue: PropTypes.func.isRequired,
 
@@ -74,17 +68,13 @@ class PlayerListener extends PureComponent {
 
     _checkPlayerChange() {
         const {
-            lyricSongIndex,
-            lyricVerseIndex,
             queuedPlayFromLogue,
             queuedPlaySongIndex,
-            queuedPlayVerseIndex
+            queuedPlayVerseIndex,
+            isSelectPlayReady
         } = this.props
 
-        if (
-            lyricSongIndex === queuedPlaySongIndex &&
-            lyricVerseIndex === queuedPlayVerseIndex
-        ) {
+        if (isSelectPlayReady) {
             /**
              * Wait for song to render, in case the user is cycling through
              * songs in quick succession.

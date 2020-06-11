@@ -1,11 +1,14 @@
-# Next
-* Final ref: Player.
-* Refactor final components: Player, VerseTracker.
+# Thursday
 * Everything from device width is just an aggregate selector. Basically, get rid of everything that's not the window width, height, and deviceWidth.
 * Consolidate refs.
+
+# Friday
 * Start getting rid of listeners by putting in reducers, or moving completely to selectors. Begin with PopupAnnotation listener.
 * With PopupAnnotation gone, remove transient store. Spread out its selectors to appropriate other stores.
 * Make verseBars a bit number.
+
+# Saturday
+* AudioPlayer refactor
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.

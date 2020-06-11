@@ -48,19 +48,15 @@ const FocusContainer = () => {
         dispatchSliderTouch.current.dispatchTouchMove(e)
     }
 
-    const _resetTouchEndState = () => {
-        setIsSliderTouchEnding(false)
-    }
-
     const onTouchEnd = e => {
-        // Slider touch is ending.
+        // If this returns true, then slider touch is ending.
         if (dispatchSliderTouch.current.dispatchTouchEnd()) {
             logEvent({ e, componentName: 'FocusContainer' })
             /**
              * Ignore body click event that gets triggered after touch end on
              * slider, to prevent it from closing out of overlay.
              */
-            setTimeout(_resetTouchEndState, 200)
+            setTimeout(() => setIsSliderTouchEnding(false), 200)
             setIsSliderTouchEnding(true)
         }
     }

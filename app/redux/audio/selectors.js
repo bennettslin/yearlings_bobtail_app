@@ -1,3 +1,9 @@
+import { createSelector } from "reselect"
+import {
+    mapLyricSongIndex,
+    mapLyricVerseIndex
+} from "../lyric/selectors"
+
 export const mapQueuedPlayFromLogue = (
     { audioStore: { queuedPlayFromLogue } }
 ) => queuedPlayFromLogue
@@ -17,3 +23,19 @@ export const mapIsPlaying = (
 export const mapQueuedTogglePlay = (
     { audioStore: { queuedTogglePlay } }
 ) => queuedTogglePlay
+
+export const mapIsSelectPlayReady = createSelector(
+    mapLyricSongIndex,
+    mapLyricVerseIndex,
+    mapQueuedPlaySongIndex,
+    mapQueuedPlayVerseIndex,
+    (
+        lyricSongIndex,
+        lyricVerseIndex,
+        queuedPlaySongIndex,
+        queuedPlayVerseIndex
+    ) => (
+        lyricSongIndex === queuedPlaySongIndex &&
+        lyricVerseIndex === queuedPlayVerseIndex
+    )
+)
