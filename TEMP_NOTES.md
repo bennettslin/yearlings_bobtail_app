@@ -1,6 +1,6 @@
 # Next
 * Final ref: Player.
-* Refactor final components: BannerFilmstrip, FocusContainer, Player, VerseTracker.
+* Refactor final components: FocusContainer, Player, VerseTracker.
 * Everything from device width is just an aggregate selector. Basically, get rid of everything that's not the window width, height, and deviceWidth.
 * Consolidate refs.
 * Start getting rid of listeners by putting in reducers, or moving completely to selectors. Begin with PopupAnnotation listener.
