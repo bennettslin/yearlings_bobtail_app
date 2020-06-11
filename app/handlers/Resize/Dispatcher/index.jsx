@@ -1,23 +1,10 @@
 // Singleton to listen for window resize event.
-
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateViewportStore } from '../../../redux/viewport/action'
-import {
-    getDeviceWidthIndex,
-    getWindowDimensions
-} from '../../../helpers/resize/device'
-import { getIsHeightlessLyric } from '../../../helpers/resize/hidden'
-import { getCanCarouselMount } from '../../../helpers/resize/mount'
-import { getProsceniumDimensionCoordinates } from '../../../helpers/resize/proscenium'
-import {
-    getIsTwoRowMenu,
-    getMenuHeight
-} from '../../../helpers/resize/responsive'
-import { getCeilingFloorHeight } from '../../../helpers/resize/theatre'
-import { getStageDimensionCoordinates } from '../../../helpers/resize/stage'
+import { getWindowDimensions } from '../../../helpers/resize/device'
 
 class ResizeDispatcher extends PureComponent {
 
@@ -52,60 +39,11 @@ class ResizeDispatcher extends PureComponent {
             {
                 windowHeight,
                 windowWidth
-            } = getWindowDimensions(getRootElement()),
-            deviceWidthIndex = getDeviceWidthIndex(windowWidth),
-
-            isHeightlessLyric = getIsHeightlessLyric({
-                deviceWidthIndex,
-                windowHeight,
-                windowWidth
-            }),
-            isTwoRowMenu = getIsTwoRowMenu({
-                deviceWidthIndex,
-                windowWidth
-            }),
-            menuHeight = getMenuHeight({ isTwoRowMenu }),
-            canCarouselMount = getCanCarouselMount({
-                deviceWidthIndex,
-                windowHeight,
-                isHeightlessLyric
-            }),
-            stageDimensionCoordinates = getStageDimensionCoordinates({
-                deviceWidthIndex,
-                windowWidth,
-                windowHeight,
-                menuHeight,
-                isHeightlessLyric,
-                isTwoRowMenu,
-                canCarouselMount
-            }),
-            prosceniumDimensionCoordinates = getProsceniumDimensionCoordinates(
-                stageDimensionCoordinates
-            ),
-            {
-                ceilingHeight,
-                floorHeight
-            } = getCeilingFloorHeight({
-                deviceWidthIndex,
-                windowHeight,
-                menuHeight,
-                prosceniumDimensionCoordinates,
-                isHeightlessLyric,
-                isTwoRowMenu
-            })
+            } = getWindowDimensions(getRootElement())
 
         this.props.updateViewportStore({
-            deviceWidthIndex,
             windowWidth,
-            windowHeight,
-            isHeightlessLyric,
-            isTwoRowMenu,
-            menuHeight,
-            canCarouselMount,
-            stageDimensionCoordinates,
-            prosceniumDimensionCoordinates,
-            ceilingHeight,
-            floorHeight
+            windowHeight
         })
 
         logTransition('Theatre can enter.')

@@ -4,7 +4,6 @@
     * Remove "dispatch" from method. For example, scrollVerse.
     * Leave "timeout" out of name, instead refer to callback.
     * Refer to elements by their component name plus "element," like lyricScrollElement.
-* Everything from device width can live in viewport store. Then they're all set together in the action.
 
 # Friday
 * Start getting rid of listeners by putting in reducers, or moving completely to selectors. Begin with PopupAnnotation listener.
