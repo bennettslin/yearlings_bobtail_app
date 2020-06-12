@@ -3,7 +3,10 @@ import {
     getDeviceWidthIndex
 } from '../../helpers/resize/device'
 import { getIsHeightlessLyric } from '../../helpers/resize/hidden'
-import { getCanCarouselMount } from '../../helpers/resize/mount'
+import {
+    getCanCarouselMount,
+    getCanScoreMount
+} from '../../helpers/resize/mount'
 import {
     getIsTwoRowMenu,
     getMenuHeight
@@ -67,6 +70,7 @@ export const VIEWPORT_DEFAULTS = {
     isTwoRowMenu,
     menuHeight,
     canCarouselMount,
+    canScoreMount: getCanScoreMount(deviceWidthIndex),
     stageDimensionCoordinates,
     prosceniumDimensionCoordinates,
     ceilingHeight,

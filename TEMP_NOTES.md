@@ -1,3 +1,6 @@
+# Bug
+* Carousel hides after song select. Go through all and check hasKey.
+
 # Friday
 * Spread out selectors to appropriate other stores. Figure out best way to organise selectors.
 * Make verseBars a bit number.
