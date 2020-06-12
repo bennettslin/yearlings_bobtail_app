@@ -10,7 +10,7 @@ import {
     mapSelectedOverviewOption,
     mapIsTipsShown
 } from '../../../redux/option/selectors'
-import { mapToggleShowsOverviewImmediately } from '../../../redux/transient/selectors'
+import { mapToggleShowsOverviewImmediately } from '../../../redux/overview/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 import { mapIsHeightlessLyric } from '../../../redux/viewport/selectors'
 

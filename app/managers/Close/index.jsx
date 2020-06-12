@@ -17,9 +17,9 @@ import { HIDDEN } from '../../constants/options'
 import { mapIsActivated } from '../../redux/activated/selectors'
 import {
     mapIsSongShownOverview,
-    mapIsOverviewShown,
     mapIsTipsShown
 } from '../../redux/option/selectors'
+import { mapIsOverviewShown } from '../../redux/overview/selectors'
 import { mapIsAnnotationShown } from '../../redux/selected/selectors'
 import { mapIsWikiShown } from '../../redux/session/selectors'
 import { mapIsSliderMoving } from '../../redux/slider/selectors'

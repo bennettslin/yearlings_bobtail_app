@@ -7,11 +7,11 @@ import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Annotation from '../../Annotation'
 import Popup from '../../Popup'
 import './style'
-import { mapLyricAnnotationIndex } from '../../../redux/lyric/selectors'
 import {
     mapIsOverlayingAnnotation,
     getMapIsPopupAnnotationShown
-} from '../../../redux/transient/selectors'
+} from '../../../redux/annotationPopup/selectors'
+import { mapLyricAnnotationIndex } from '../../../redux/lyric/selectors'
 
 const AnnotationPopup = ({ inMain }) => {
     const

@@ -14,17 +14,15 @@ import {
     mapLyricSongIndex,
     mapLyricAnnotationIndex
 } from '../../redux/lyric/selectors'
-import {
-    mapIsTipsShown,
-    mapIsOverviewShown
-} from '../../redux/option/selectors'
+import { mapIsTipsShown } from '../../redux/option/selectors'
+import { mapIsOverlayShown } from '../../redux/overlay/selectors'
+import { mapIsOverviewShown } from '../../redux/overview/selectors'
 import {
     mapIsCarouselShown,
     mapIsNavShown,
     mapIsLyricExpanded,
     mapIsDotsSlideShown
 } from '../../redux/toggle/selectors'
-import { mapIsOverlayShown } from '../../redux/transient/selectors'
 
 const ShownWrapper = ({ children }) => {
     const

@@ -1,17 +1,13 @@
 import { createSelector } from 'reselect'
-import { getIsToggleInOverview } from '../../helpers/overview'
 import { getIsLyricExpandable } from '../../helpers/resize/responsive'
 import { getIsMobileWiki } from '../../helpers/resize/wiki'
-import { mapIsLyricLogue } from '../lyric/selectors'
 import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
 } from '../../helpers/resize/nav'
-import { mapIsPhoneWidth } from '../device/selectors'
 import {
     mapDeviceWidthIndex,
-    mapWindowWidth,
-    mapIsHeightlessLyric
+    mapWindowWidth
 } from '../viewport/selectors'
 
 export const mapIsMobileWiki = createSelector(
@@ -52,20 +48,5 @@ export const mapShowSingleNavBook = createSelector(
     ) => getShowSingleNavBook({
         deviceWidthIndex,
         windowWidth
-    })
-)
-
-export const mapIsToggleInOverview = createSelector(
-    mapIsPhoneWidth,
-    mapIsHeightlessLyric,
-    mapIsLyricLogue,
-    (
-        isPhoneWidth,
-        isHeightlessLyric,
-        isLyricLogue
-    ) => getIsToggleInOverview({
-        isPhoneWidth,
-        isHeightlessLyric,
-        isLyricLogue
     })
 )
