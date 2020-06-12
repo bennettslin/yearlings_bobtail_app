@@ -1,7 +1,7 @@
 // eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useSelector } from 'react-redux'
-import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
+import VerseDispatcher from '../../../dispatchers/Verse'
 import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'

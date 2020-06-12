@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
+import SliderTouchDispatcher from '../../dispatchers/SliderTouch'
 import SliderStanzas from './Stanzas'
 import SliderTimes from './Times'
 import AccessDirectionLetter from '../Access/DirectionLetter'

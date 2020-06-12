@@ -1,8 +1,4 @@
 # Thursday
-* Consolidate refs.
-    * ref is name of dispatcher, plus "dispatch." For example, scrollVerseDispatch.
-    * Remove "dispatch" from method. For example, scrollVerse.
-    * Leave "timeout" out of name, instead refer to callback.
 
 # Friday
 * Start getting rid of listeners by putting in reducers, or moving completely to selectors. Begin with PopupAnnotation listener.

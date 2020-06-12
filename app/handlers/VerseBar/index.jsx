@@ -45,23 +45,6 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         isDesktopWidth = useSelector(mapIsDesktopWidth),
         [verseBarsTimeoutId, setVerseBarsTimeoutId] = useState('')
 
-    const dispatchVerseBarsTimeout = (timeoutDuration = 10) => {
-        /**
-         * It seems to help to both make the call immediately, and then set a
-         * timeout for it. For now, I don't think there's any performance hit.
-         */
-        _dispatchVerseBars()
-
-        clearTimeout(verseBarsTimeoutId)
-
-        setVerseBarsTimeoutId(
-            setTimeout(
-                _dispatchVerseBars,
-                timeoutDuration
-            )
-        )
-    }
-
     const _dispatchVerseBars = ({ sliderVerseIndex = -1 } = {}) => {
         const verseElement = getScrollVerseChild(getCursorIndex(
             sliderVerseIndex,
@@ -95,9 +78,26 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         }
     }
 
+    const dispatchVerseBars = (timeoutDuration = 10) => {
+        /**
+         * It seems to help to both make the call immediately, and then set a
+         * timeout for it. For now, I don't think there's any performance hit.
+         */
+        _dispatchVerseBars()
+
+        clearTimeout(verseBarsTimeoutId)
+
+        setVerseBarsTimeoutId(
+            setTimeout(
+                _dispatchVerseBars,
+                timeoutDuration
+            )
+        )
+    }
+
     useEffect(() => {
         if (queuedDetermineVerseBars) {
-            dispatchVerseBarsTimeout(queuedVerseBarsTimeout)
+            dispatchVerseBars(queuedVerseBarsTimeout)
             dispatch(resetVerseBarsQueue())
         }
     }, [queuedDetermineVerseBars])
@@ -117,7 +117,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         _dispatchVerseBars()
     }, [activatedVerseIndex])
 
-    useImperativeHandle(ref, () => dispatchVerseBarsTimeout)
+    useImperativeHandle(ref, () => dispatchVerseBars)
     return null
 }
 )

@@ -15,7 +15,7 @@ const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollElement }, ref) => {
         dispatch(updateIsScrolling(prevScrollTop !== nextScrollTop))
     }
 
-    const dispatchScrollTimeout = (timeoutDuration = 50) => {
+    const dispatchScroll = (timeoutDuration = 50) => {
         const prevScrollTop = getLyricScrollElement().scrollTop
 
         clearTimeout(scrollTimeoutId)
@@ -30,7 +30,7 @@ const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollElement }, ref) => {
         dispatch(updateIsScrolling(true))
     }
 
-    useImperativeHandle(ref, () => dispatchScrollTimeout)
+    useImperativeHandle(ref, () => dispatchScroll)
     return null
 })
 

@@ -2,7 +2,7 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateSliderStore } from '../../redux/slider/action'
-import VerseDispatcher from '../VerseDispatcher'
+import VerseDispatcher from '../Verse'
 import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getClientX, getElementRatioForClientX } from '../../helpers/dom'

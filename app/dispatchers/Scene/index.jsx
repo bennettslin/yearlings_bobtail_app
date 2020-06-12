@@ -1,7 +1,7 @@
 // eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useSelector } from 'react-redux'
-import VerseDispatcher from '../VerseDispatcher'
+import VerseDispatcher from '../Verse'
 import { getVerseIndexForScene } from '../../api/album/scenes'
 import { mapSelectedSongIndex } from '../../redux/selected/selectors'
 

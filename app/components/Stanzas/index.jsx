@@ -5,7 +5,7 @@
 // eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useRef, memo } from 'react'
 import { useSelector } from 'react-redux'
-import VerseDispatcher from '../../dispatchers/VerseDispatcher'
+import VerseDispatcher from '../../dispatchers/Verse'
 import Stanza from './Stanza'
 import Unit from '../Unit'
 import { getStanzaIndices } from '../../api/album/stanzas'

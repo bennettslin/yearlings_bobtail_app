@@ -23,8 +23,8 @@ const LyricScroll = forwardRef((props, ref) => {
         lyricScrollElement = useRef(),
         scrollChildren = useRef(),
         dispatchWheel = useRef(),
-        dispatchScrollTimeout = useRef(),
-        dispatchVerseBarsTimeout = useRef(),
+        dispatchScroll = useRef(),
+        dispatchVerseBars = useRef(),
         canLyricCarouselUpdate = useSelector(mapCanLyricCarouselUpdate)
 
     const onEntered = () => {
@@ -33,8 +33,8 @@ const LyricScroll = forwardRef((props, ref) => {
     }
 
     const onScroll = () => {
-        dispatchVerseBarsTimeout.current()
-        dispatchScrollTimeout.current()
+        dispatchVerseBars.current()
+        dispatchScroll.current()
     }
 
     const onWheel = e => {
@@ -110,13 +110,13 @@ const LyricScroll = forwardRef((props, ref) => {
             </Transition>
             <ScrollOverlayDispatcher
                 {...{
-                    ref: dispatchScrollTimeout,
+                    ref: dispatchScroll,
                     getLyricScrollElement
                 }}
             />
             <VerseBarHandler
                 {...{
-                    ref: dispatchVerseBarsTimeout,
+                    ref: dispatchVerseBars,
                     getScrollVerseChild
                 }}
             />
