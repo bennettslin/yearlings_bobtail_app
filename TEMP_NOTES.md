@@ -1,4 +1,4 @@
-# Next
+# Friday
 * Spread out selectors to appropriate other stores. Figure out best way to organise selectors.
 * Make verseBars a bit number.
 

@@ -79,6 +79,7 @@ class TipsListener extends PureComponent {
         }
     }
 
+    // TODO: Put this in reducer?
     _handleDeviceWidthChange(prevProps) {
         const {
                 isTipsShowable,

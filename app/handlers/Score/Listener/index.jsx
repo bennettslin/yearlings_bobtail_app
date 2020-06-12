@@ -31,6 +31,7 @@ class ScoreListener extends PureComponent {
         this._closeScoreIfNeeded(prevProps)
     }
 
+    // TODO: Put in reducer, but first put canScoreMount back in store.
     _closeScoreIfNeeded(prevProps) {
         const
             {

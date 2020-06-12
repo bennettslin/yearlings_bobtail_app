@@ -10,7 +10,6 @@ import SongBannerTimer from './Timer'
 import SongBannerTitle from './Title'
 import { getSongIsLogue } from '../../../api/album/songs'
 import { getStartTimeForVerse } from '../../../api/album/time'
-import { mapIsSmallBannerText } from '../../../redux/responsive/selectors'
 import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
 import { getVerseIndexforRatio } from '../../../helpers/verse'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
@@ -18,7 +17,8 @@ import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
     mapIsBannerHovering,
     mapBannerHoverVerseIndex,
-    mapSongBannerCursorWidth
+    mapSongBannerCursorWidth,
+    mapIsSmallBannerText
 } from '../../../redux/banner/selectors'
 import {
     mapSelectedSongIndex,

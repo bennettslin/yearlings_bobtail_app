@@ -32,6 +32,7 @@ class DotsSlideListener extends PureComponent {
         this._checkDotsSlideShown(prevProps)
     }
 
+    // TODO: Put this with dispatcher?
     _checkDotsSlideShown = (prevProps = {}) => {
         const { isDotsSlideShown } = this.props,
             { isDotsSlideShown: wasDotsSlideShown } = prevProps

@@ -38,6 +38,7 @@ class NavListener extends PureComponent {
         this._checkNavShown(prevProps)
     }
 
+    // TODO: Put this in dispatcher?
     _checkNavShown = (prevProps = {}) => {
         const {
                 isNavShown,

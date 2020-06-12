@@ -1,9 +1,6 @@
 import { createSelector } from 'reselect'
 import { getIsToggleInOverview } from '../../helpers/overview'
-import {
-    getIsLyricExpandable,
-    getIsSmallBannerText
-} from '../../helpers/resize/responsive'
+import { getIsLyricExpandable } from '../../helpers/resize/responsive'
 import { getIsMobileWiki } from '../../helpers/resize/wiki'
 import { mapIsLyricLogue } from '../lyric/selectors'
 import {
@@ -32,11 +29,6 @@ export const mapIsMobileWiki = createSelector(
 export const mapIsLyricExpandable = createSelector(
     mapDeviceWidthIndex,
     deviceWidthIndex => getIsLyricExpandable(deviceWidthIndex)
-)
-
-export const mapIsSmallBannerText = createSelector(
-    mapWindowWidth,
-    windowWidth => getIsSmallBannerText(windowWidth)
 )
 
 export const mapShowShrunkNavIcon = createSelector(

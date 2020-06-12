@@ -42,6 +42,7 @@ class LyricListener extends PureComponent {
         this._checkLyricExpand(prevProps)
     }
 
+    // TODO: Put in reducer.
     _collapseLyricIfNeeded(prevProps) {
         const
             {
