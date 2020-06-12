@@ -7,9 +7,7 @@ import {
 import { LYRIC_STORE } from '../../constants/store'
 
 export const updateLyricStore = payload => {
-    const {
-        lyricSongIndex
-    } = payload
+    const { lyricSongIndex } = payload
 
     if (hasKey(lyricSongIndex)) {
         payload.isLyricLogue = getSongIsLogue(lyricSongIndex)

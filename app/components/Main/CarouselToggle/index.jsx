@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import CarouselNavDispatcher from '../../../handlers/CarouselNav/Dispatcher'
+import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
 import { CAROUSEL_TOGGLE_KEY } from '../../../constants/access'

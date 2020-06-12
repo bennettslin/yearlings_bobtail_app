@@ -1,9 +1,13 @@
 // Reducers for accessed values.
 import {
     ACCESS_STORE,
-    SLIDER_STORE
+    SLIDER_STORE,
+    VIEWPORT_STORE
 } from '../../constants/store'
-import { ACCESS_DEFAULTS } from './default'
+import {
+    ACCESS_DEFAULTS,
+    ACCESS_NAV_DEFAULTS
+} from './default'
 
 export default (
     state = ACCESS_DEFAULTS,
@@ -22,6 +26,13 @@ export default (
                 ...isSliderTouched && {
                     isAccessOn: false
                 }
+            }
+        }
+        case VIEWPORT_STORE: {
+            const { canCarouselMount } = payload
+            return {
+                ...state,
+                ...!canCarouselMount && ACCESS_NAV_DEFAULTS
             }
         }
         default:
