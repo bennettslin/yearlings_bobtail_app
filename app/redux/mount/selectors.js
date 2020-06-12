@@ -1,10 +1,8 @@
 import { createSelector } from 'reselect'
 import {
     getLyricDynamicHeight,
-    getLyricOverviewHeight,
-    getMainHeight
+    getLyricOverviewHeight
 } from '../../helpers/resize/mount'
-import { mapIsDesktopWidth } from '../device/selectors'
 import { mapIsLyricLogue } from '../lyric/selectors'
 import { mapStageHeight } from '../stage/selectors'
 import { mapIsLyricExpanded } from '../toggle/selectors'
@@ -60,25 +58,3 @@ export const mapLyricOverviewHeightStyle = createSelector(
         isLyricExpanded
     })
 )
-
-export const mapMainHeight = createSelector(
-    mapCanCarouselMount,
-    mapLyricDynamicHeight,
-    mapIsHeightlessLyric,
-    mapMenuHeight,
-    mapIsDesktopWidth,
-    (
-        canCarouselMount,
-        lyricDynamicHeight,
-        isHeightlessLyric,
-        menuHeight,
-        isDesktopWidth
-    ) => getMainHeight({
-        canCarouselMount,
-        lyricDynamicHeight,
-        isHeightlessLyric,
-        menuHeight,
-        isDesktopWidth
-    })
-)
-

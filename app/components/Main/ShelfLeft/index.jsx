@@ -8,7 +8,7 @@ import TipsToggle from '../../Tips/Toggle'
 import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
 import { mapIsDesktopWidth } from '../../../redux/device/selectors'
-import { mapIsShelfLeftShown } from '../../../redux/transient/selectors'
+import { mapIsShelfLeftShown } from '../../../redux/main/selectors'
 import './style'
 
 const CHILD_CLASS_NAME = 'ShelfLeft__child'
