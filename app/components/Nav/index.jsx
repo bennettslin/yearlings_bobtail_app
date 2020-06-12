@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import NavListener from '../../handlers/Nav/Listener'
 import NavColumn from './Column'
-import { mapShowSingleNavBook } from '../../redux/responsive/selectors'
+import { mapShowSingleNavBook } from '../../redux/nav/selectors'
 import { mapCanCarouselMount } from '../../redux/viewport/selectors'
 import './style'
 

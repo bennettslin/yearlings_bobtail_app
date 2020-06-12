@@ -3,10 +3,8 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getSingleShownEarColumnKey } from './helper'
-import {
-    mapIsLyricExpandable,
-    mapShowShrunkNavIcon
-} from '../../redux/responsive/selectors'
+import { mapIsLyricExpandable } from '../../redux/lyricExpand/selectors'
+import { mapShowShrunkNavIcon } from '../../redux/nav/selectors'
 import { mapEarColumnIndex } from '../../redux/selected/selectors'
 import {
     mapIsCarouselNavShowable,

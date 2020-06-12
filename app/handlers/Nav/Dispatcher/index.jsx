@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateSessionStore } from '../../../redux/session/action'
-import { mapShowSingleNavBook } from '../../../redux/responsive/selectors'
+import { mapShowSingleNavBook } from '../../../redux/nav/selectors'
 import { mapShownNavBookIndex } from '../../../redux/session/selectors'
 import { mapIsNavShown } from '../../../redux/toggle/selectors'
 

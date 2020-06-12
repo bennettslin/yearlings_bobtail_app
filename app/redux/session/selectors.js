@@ -1,9 +1,7 @@
 import { createSelector } from 'reselect'
 import { getWikiUrl } from '../../helpers/wiki'
-import {
-    mapIsMobileWiki,
-    mapShowSingleNavBook
-} from '../responsive/selectors'
+import { mapShowSingleNavBook } from '../nav/selectors'
+import { mapIsMobileWiki } from '../responsive/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex

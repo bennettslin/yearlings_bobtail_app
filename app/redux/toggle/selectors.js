@@ -1,6 +1,3 @@
-import { createSelector } from 'reselect'
-import { mapIsLyricExpandable } from '../responsive/selectors'
-import { mapIsHeightlessLyric } from '../viewport/selectors'
 import { TOGGLE_STORE } from '../../constants/store'
 
 export const mapIsAutoScroll = (
@@ -30,19 +27,3 @@ export const mapIsScoreShown = (
 export const mapIsAboutShown = (
     { [TOGGLE_STORE]: { isAboutShown } }
 ) => isAboutShown
-
-export const getMapIsExpandToggleShown = inMain => createSelector(
-    mapIsLyricExpandable,
-    mapIsHeightlessLyric,
-    mapIsLyricExpanded,
-    (
-        isLyricExpandable,
-        isHeightlessLyric,
-        isLyricExpanded
-    ) => (
-        isLyricExpandable &&
-
-        // Render button in main if lyric column is heightless.
-        Boolean(inMain) === (isHeightlessLyric && !isLyricExpanded)
-    )
-)

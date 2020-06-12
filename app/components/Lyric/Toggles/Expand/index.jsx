@@ -10,10 +10,8 @@ import TipsHand from '../../../Tips/Hand'
 import { LYRIC_EXPAND_KEY } from '../../../../constants/access'
 import { LYRIC_EXPAND_BUTTON_KEY } from '../../../../constants/buttons'
 import { LYRIC_EXPAND } from '../../../../constants/tips'
-import {
-    mapIsLyricExpanded,
-    getMapIsExpandToggleShown
-} from '../../../../redux/toggle/selectors'
+import { getMapIsExpandToggleShown } from '../../../../redux/lyricExpand/selectors'
+import { mapIsLyricExpanded } from '../../../../redux/toggle/selectors'
 import './style'
 
 const LyricToggleExpand = ({ inMain }) => {
