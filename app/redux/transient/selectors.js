@@ -13,6 +13,11 @@ import {
 import { getIsPopupAnnotationShown } from '../../helpers/popupAnnotation'
 import { getShowTipForDevice } from '../../api/album/tips'
 import { mapIsActivated } from '../activated/selectors'
+import {
+    mapIsPhoneWidth,
+    mapIsTabletWidth,
+    mapIsDesktopWidth
+} from '../device/selectors'
 import { mapCanLyricCarouselEnter } from '../entrance/selectors'
 import {
     mapLyricSongIndex,
@@ -34,9 +39,6 @@ import {
 } from '../toggle/selectors'
 import {
     mapDeviceWidthIndex,
-    mapIsPhoneWidth,
-    mapIsTabletWidth,
-    mapIsDesktopWidth,
     mapCanCarouselMount
 } from '../viewport/selectors'
 

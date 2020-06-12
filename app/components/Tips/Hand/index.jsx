@@ -10,6 +10,7 @@ import {
     WORMHOLES,
     WIKI
 } from '../../../constants/tips'
+import { mapIsPhoneWidth } from '../../../redux/device/selectors'
 import {
     mapReferenceDot,
     mapWormholeDot
@@ -17,7 +18,6 @@ import {
 import { mapDidLyricUpdate } from '../../../redux/entrance/selectors'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import { mapIsTipsShown } from '../../../redux/option/selectors'
-import { mapIsPhoneWidth } from '../../../redux/viewport/selectors'
 import './style'
 
 const TipsHand = ({

@@ -6,10 +6,8 @@ import cx from 'classnames'
 import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
-import {
-    mapIsDesktopWidth,
-    mapCanScoreMount
-} from '../../../redux/viewport/selectors'
+import { mapIsDesktopWidth } from '../../../redux/device/selectors'
+import { mapCanScoreMount } from '../../../redux/viewport/selectors'
 import { SCORE_TOGGLE_KEY } from '../../../constants/access'
 import { SCORES_BUTTON_KEY } from '../../../constants/buttons'
 import { SCORE } from '../../../constants/tips'

@@ -7,9 +7,11 @@ import { getIsTabletWidth } from '../../helpers/responsive'
 import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import {
-    mapDeviceWidthIndex,
     mapIsPhoneWidth,
-    mapIsDesktopWidth,
+    mapIsDesktopWidth
+} from '../../redux/device/selectors'
+import {
+    mapDeviceWidthIndex,
     mapCanCarouselMount,
     mapCanSliderMount
 } from '../../redux/viewport/selectors'

@@ -10,9 +10,9 @@ import Audio from '../Audio'
 import BannerFilmstrip from '../BannerFilmstrip'
 import Slider from '../Slider'
 import { getMenuMarginInOverlay } from './helper'
+import { mapIsDesktopWidth } from '../../redux/device/selectors'
 import {
     mapWindowWidth,
-    mapIsDesktopWidth,
     mapIsTwoRowMenu,
     mapMenuHeight,
     mapCanSliderMount

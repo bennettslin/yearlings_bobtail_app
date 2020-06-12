@@ -7,10 +7,10 @@ import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
 } from '../../helpers/resize/nav'
+import { mapIsPhoneWidth } from '../device/selectors'
 import {
     mapDeviceWidthIndex,
     mapWindowWidth,
-    mapIsPhoneWidth,
     mapIsHeightlessLyric
 } from '../viewport/selectors'
 

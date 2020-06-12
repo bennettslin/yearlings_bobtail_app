@@ -10,9 +10,9 @@ import { LYRIC_COLUMN_TOGGLE_KEY } from '../../../../constants/access'
 import { LYRIC_EAR_BUTTON_KEY } from '../../../../constants/buttons'
 import { EAR_COLUMN_KEYS } from '../../../../constants/lyrics'
 import { DOUBLESPEAKER } from '../../../../constants/tips'
+import { mapIsDesktopWidth } from '../../../../redux/device/selectors'
 import { mapIsEarShown } from '../../../../redux/transient/selectors'
 import { mapEarColumnIndex } from '../../../../redux/selected/selectors'
-import { mapIsDesktopWidth } from '../../../../redux/viewport/selectors'
 import './style'
 
 const LyricToggleEar = () => {

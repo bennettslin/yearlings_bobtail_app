@@ -5,17 +5,17 @@ import {
     getIsOverviewVisibleBySection,
     getIsOverviewVisibleBySong
 } from '../../helpers/overview'
+import {
+    mapIsPhoneWidth,
+    mapIsTabletWidth,
+    mapIsDesktopWidth
+} from '../device/selectors'
 import { mapCanLyricCarouselEnter } from '../entrance/selectors'
 import {
     mapIsLyricLogue,
     mapLyricSongIndex
 } from '../lyric/selectors'
 import { mapIsOverlayShown } from '../transient/selectors'
-import {
-    mapIsPhoneWidth,
-    mapIsTabletWidth,
-    mapIsDesktopWidth
-} from '../viewport/selectors'
 import { OPTION_STORE } from '../../constants/store'
 
 export const mapIsLogueOverviewShown = (

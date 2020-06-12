@@ -1,10 +1,5 @@
 import { createSelector } from 'reselect'
 import { getCanSliderMount } from '../../helpers/resize/mount'
-import {
-    getIsPhoneWidth,
-    getIsTabletWidth,
-    getIsDesktopWidth
-} from '../../helpers/responsive'
 import { VIEWPORT_STORE } from '../../constants/store'
 
 export const mapWindowWidth = (
@@ -42,32 +37,6 @@ export const mapCanScoreMount = (
 export const mapCanSliderMount = createSelector(
     mapDeviceWidthIndex,
     deviceWidthIndex => getCanSliderMount(deviceWidthIndex)
-)
-
-export const mapIsPhoneWidth = createSelector(
-    mapDeviceWidthIndex,
-    deviceWidthIndex => getIsPhoneWidth(deviceWidthIndex)
-)
-
-export const mapIsTabletWidth = createSelector(
-    mapDeviceWidthIndex,
-    deviceWidthIndex => getIsTabletWidth(deviceWidthIndex)
-)
-
-export const mapIsDesktopWidth = createSelector(
-    mapDeviceWidthIndex,
-    deviceWidthIndex => getIsDesktopWidth(deviceWidthIndex)
-)
-
-export const mapIsPhoneOrMiniWidth = createSelector(
-    mapIsTabletWidth,
-    mapIsDesktopWidth,
-    (
-        isTabletWidth,
-        isDesktopWidth
-    ) => (
-        !isDesktopWidth && !isTabletWidth
-    )
 )
 
 export const mapStageDimensionCoordinates = (

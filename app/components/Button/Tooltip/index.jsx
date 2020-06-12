@@ -9,7 +9,7 @@ import { mapIsAccessOn } from '../../../redux/access/selectors'
 import {
     mapIsDesktopWidth,
     mapIsPhoneOrMiniWidth
-} from '../../../redux/viewport/selectors'
+} from '../../../redux/device/selectors'
 import './style'
 
 const Tooltip = ({ buttonName }) => {

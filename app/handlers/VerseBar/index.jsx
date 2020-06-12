@@ -10,6 +10,7 @@ import {
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'
 import { mapActivatedVerseIndex } from '../../redux/activated/selectors'
+import { mapIsDesktopWidth } from '../../redux/device/selectors'
 import { mapLyricDynamicHeight } from '../../redux/mount/selectors'
 import { mapIsLyricExpandable } from '../../redux/responsive/selectors'
 import { mapSelectedVerseIndex } from '../../redux/selected/selectors'
@@ -21,7 +22,6 @@ import {
 } from '../../redux/verseBars/selectors'
 import {
     mapWindowHeight,
-    mapIsDesktopWidth,
     mapIsHeightlessLyric,
     mapMenuHeight,
     mapCanSliderMount

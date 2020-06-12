@@ -4,13 +4,13 @@ import {
     getLyricOverviewHeight,
     getMainHeight
 } from '../../helpers/resize/mount'
+import { mapIsDesktopWidth } from '../device/selectors'
 import { mapIsLyricLogue } from '../lyric/selectors'
 import { mapStageHeight } from '../stage/selectors'
 import { mapIsLyricExpanded } from '../toggle/selectors'
 import {
     mapDeviceWidthIndex,
     mapWindowHeight,
-    mapIsDesktopWidth,
     mapIsHeightlessLyric,
     mapMenuHeight,
     mapCanCarouselMount
