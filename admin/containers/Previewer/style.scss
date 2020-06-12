@@ -3,9 +3,9 @@ $padding__dashboard: 10px;
 $height__dashboard: $height__input + $padding__dashboard * 2;
 $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
 
-@import "./Dashboard/style";
-@import "./Kilobytes/style";
-@import "./Svg/style";
+@import './Dashboard/style';
+@import './Kilobytes/style';
+@import './Svg/style';
 
 .Previewer__main {
     position: absolute;
