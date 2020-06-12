@@ -18,7 +18,6 @@ import { mapIsActivated } from '../../redux/activated/selectors'
 import { mapIsSongShownOverview } from '../../redux/option/selectors'
 import { mapIsOverviewShown } from '../../redux/overview/selectors'
 import { mapIsAnnotationShown } from '../../redux/selected/selectors'
-import { mapIsWikiShown } from '../../redux/session/selectors'
 import { mapIsSliderMoving } from '../../redux/slider/selectors'
 import { mapIsTipsShown } from '../../redux/tips/selectors'
 import {
@@ -28,6 +27,7 @@ import {
     mapIsScoreShown,
     mapIsAboutShown
 } from '../../redux/toggle/selectors'
+import { mapIsWikiShown } from '../../redux/wiki/selectors'
 
 const CloseHandler = forwardRef((props, ref) => {
     const

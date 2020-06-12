@@ -3,6 +3,7 @@ import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
 } from '../../helpers/resize/nav'
+import { mapShownNavBookIndex } from '../session/selectors'
 import {
     mapDeviceWidthIndex,
     mapWindowWidth
@@ -30,4 +31,16 @@ export const mapShowSingleNavBook = createSelector(
         deviceWidthIndex,
         windowWidth
     })
+)
+
+export const getMapIsNavColumnShown = bookIndex => createSelector(
+    mapShowSingleNavBook,
+    mapShownNavBookIndex,
+    (
+        showSingleNavBook,
+        shownNavBookIndex
+    ) => (
+        !showSingleNavBook ||
+        shownNavBookIndex === bookIndex
+    )
 )

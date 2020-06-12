@@ -15,7 +15,6 @@ import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
-import { mapIsWikiShown } from '../../../redux/session/selectors'
 import {
     mapIsNavShown,
     mapIsDotsSlideShown,
@@ -23,6 +22,7 @@ import {
     mapIsScoreShown
 } from '../../../redux/toggle/selectors'
 import { mapIsHeightlessLyric } from '../../../redux/viewport/selectors'
+import { mapIsWikiShown } from '../../../redux/wiki/selectors'
 
 const NavigationManager = forwardRef((props, ref) => {
     const

@@ -1,9 +1,6 @@
 import { createSelector } from 'reselect'
 import { getIsDoublespeakerShown } from '../../helpers/doublespeaker'
-import {
-    getIsShelfLeftShown,
-    getIsCarouselNavShowable
-} from '../../helpers/main'
+import { getIsShelfLeftShown } from '../../helpers/main'
 import { mapIsActivated } from '../activated/selectors'
 import { mapIsPhoneWidth } from '../device/selectors'
 import { mapCanLyricCarouselEnter } from '../entrance/selectors'
@@ -31,30 +28,6 @@ export const mapIsEarShown = createSelector(
     ) => getIsDoublespeakerShown({
         songIndex: lyricSongIndex,
         deviceWidthIndex
-    })
-)
-
-export const mapIsCarouselNavShowable = createSelector(
-    mapIsOverlayShown,
-    mapIsOverviewShown,
-    mapIsTipsShown,
-    mapIsLyricLogue,
-    mapIsLyricExpanded,
-    mapIsActivated,
-    (
-        isOverlayShown,
-        isOverviewShown,
-        isTipsShown,
-        isLyricLogue,
-        isLyricExpanded,
-        isActivated
-    ) => getIsCarouselNavShowable({
-        isOverlayShown,
-        isOverviewShown,
-        isTipsShown,
-        isLyricLogue,
-        isLyricExpanded,
-        isActivated
     })
 )
 

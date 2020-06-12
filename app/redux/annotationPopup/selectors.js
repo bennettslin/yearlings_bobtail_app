@@ -4,7 +4,6 @@ import { getIsPopupAnnotationShown } from '../../helpers/popupAnnotation'
 import { mapIsPhoneWidth } from '../device/selectors'
 import { mapCanLyricCarouselEnter } from '../entrance/selectors'
 import { mapLyricAnnotationIndex } from '../lyric/selectors'
-import { mapIsWikiShown } from '../session/selectors'
 import {
     mapIsLyricExpanded,
     mapIsScoreShown,
@@ -12,6 +11,7 @@ import {
     mapIsCarouselShown
 } from '../toggle/selectors'
 import { mapCanCarouselMount } from '../viewport/selectors'
+import { mapIsWikiShown } from '../wiki/selectors'
 
 export const mapIsOverlayingAnnotation = createSelector(
     mapIsPhoneWidth,

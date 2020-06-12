@@ -3,13 +3,11 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getSingleShownEarColumnKey } from './helper'
+import { mapIsCarouselNavShowable } from '../../redux/carousel/selectors'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selectors'
 import { mapShowShrunkNavIcon } from '../../redux/nav/selectors'
 import { mapEarColumnIndex } from '../../redux/selected/selectors'
-import {
-    mapIsCarouselNavShowable,
-    mapIsEarShown
-} from '../../redux/transient/selectors'
+import { mapIsEarShown } from '../../redux/transient/selectors'
 import { mapIsHeightlessLyric } from '../../redux/viewport/selectors'
 
 const ResponsiveWrapper = ({ children }) => {

@@ -61,6 +61,7 @@ export const mapSelectedTime = (
     { [SELECTED_STORE]: { selectedTime } }
 ) => selectedTime
 
+// TODO: Move out of selected store.
 export const mapEarColumnIndex = (
     { [SELECTED_STORE]: { earColumnIndex } }
 ) => earColumnIndex

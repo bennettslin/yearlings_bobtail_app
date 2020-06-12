@@ -42,7 +42,6 @@ import {
 import { HIDDEN } from '../../../constants/options'
 import { mapIsOverviewShown } from '../../../redux/overview/selectors'
 import { mapIsAnnotationShown } from '../../../redux/selected/selectors'
-import { mapIsWikiShown } from '../../../redux/session/selectors'
 import { mapIsTipsShown } from '../../../redux/tips/selectors'
 import {
     mapIsNavShown,
@@ -51,6 +50,7 @@ import {
     mapIsScoreShown,
     mapIsAboutShown
 } from '../../../redux/toggle/selectors'
+import { mapIsWikiShown } from '../../../redux/wiki/selectors'
 
 const LetterManager = forwardRef((props, ref) => {
     const
