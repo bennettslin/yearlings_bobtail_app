@@ -7,11 +7,11 @@ import {
 } from '../../../helpers/options'
 import {
     mapIsLogueOverviewShown,
-    mapSelectedOverviewOption,
-    mapIsTipsShown
+    mapSelectedOverviewOption
 } from '../../../redux/option/selectors'
-import { mapToggleShowsOverviewImmediately } from '../../../redux/overview/selectors'
+import { mapToggleShowsOverviewImmediately } from '../../../redux/optionOrder/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
+import { mapIsTipsShown } from '../../../redux/tips/selectors'
 import { mapIsHeightlessLyric } from '../../../redux/viewport/selectors'
 
 const OverviewDispatcher = forwardRef((props, ref) => {

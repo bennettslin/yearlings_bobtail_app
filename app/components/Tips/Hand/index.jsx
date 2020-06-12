@@ -17,7 +17,7 @@ import {
 } from '../../../redux/dots/selectors'
 import { mapDidLyricUpdate } from '../../../redux/entrance/selectors'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
-import { mapIsTipsShown } from '../../../redux/option/selectors'
+import { mapIsTipsShown } from '../../../redux/tips/selectors'
 import './style'
 
 const TipsHand = ({

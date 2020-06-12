@@ -4,28 +4,18 @@ import {
     getIsShelfLeftShown,
     getIsCarouselNavShowable
 } from '../../helpers/main'
-import {
-    getToggleShowsTipsImmediately
-} from '../../helpers/options'
-import { getShowTipForDevice } from '../../api/album/tips'
 import { mapIsActivated } from '../activated/selectors'
-import {
-    mapIsPhoneWidth,
-    mapIsTabletWidth,
-    mapIsDesktopWidth
-} from '../device/selectors'
+import { mapIsPhoneWidth } from '../device/selectors'
 import { mapCanLyricCarouselEnter } from '../entrance/selectors'
 import {
     mapLyricSongIndex,
     mapLyricAnnotationIndex,
     mapIsLyricLogue
 } from '../lyric/selectors'
-import {
-    mapIsLogueOverviewShown,
-    mapIsTipsShown
-} from '../option/selectors'
+import { mapIsLogueOverviewShown } from '../option/selectors'
 import { mapIsOverlayShown } from '../overlay/selectors'
 import { mapIsOverviewShown } from '../overview/selectors'
+import { mapIsTipsShown } from '../tips/selectors'
 import {
     mapIsDotsSlideShown,
     mapIsLyricExpanded
@@ -41,24 +31,6 @@ export const mapIsEarShown = createSelector(
     ) => getIsDoublespeakerShown({
         songIndex: lyricSongIndex,
         deviceWidthIndex
-    })
-)
-
-export const mapIsTipsShowable = createSelector(
-    mapLyricSongIndex,
-    mapIsPhoneWidth,
-    mapIsTabletWidth,
-    mapIsDesktopWidth,
-    (
-        lyricSongIndex,
-        isPhoneWidth,
-        isTabletWidth,
-        isDesktopWidth
-    ) => getShowTipForDevice({
-        songIndex: lyricSongIndex,
-        isPhoneWidth,
-        isTabletWidth,
-        isDesktopWidth
     })
 )
 
@@ -122,32 +94,5 @@ export const mapIsShelfLeftShown = createSelector(
         isLogueOverviewShown,
         isOverviewShown,
         isTipsShown
-    })
-)
-
-export const mapToggleShowsTipsImmediately = createSelector(
-    mapIsOverviewShown,
-    mapIsTipsShown,
-    mapLyricAnnotationIndex,
-    mapIsDotsSlideShown,
-    mapIsOverlayShown,
-    mapIsLyricExpanded,
-    mapIsActivated,
-    (
-        isOverviewShown,
-        isTipsShown,
-        lyricAnnotationIndex,
-        isDotsSlideShown,
-        isOverlayShown,
-        isLyricExpanded,
-        isActivated
-    ) => getToggleShowsTipsImmediately({
-        isOverviewShown,
-        isTipsShown,
-        lyricAnnotationIndex,
-        isDotsSlideShown,
-        isOverlayShown,
-        isLyricExpanded,
-        isActivated
     })
 )

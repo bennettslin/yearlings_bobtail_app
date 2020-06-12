@@ -40,10 +40,10 @@ import {
     ABOUT_TOGGLE_KEY
 } from '../../../constants/access'
 import { HIDDEN } from '../../../constants/options'
-import { mapIsTipsShown } from '../../../redux/option/selectors'
 import { mapIsOverviewShown } from '../../../redux/overview/selectors'
 import { mapIsAnnotationShown } from '../../../redux/selected/selectors'
 import { mapIsWikiShown } from '../../../redux/session/selectors'
+import { mapIsTipsShown } from '../../../redux/tips/selectors'
 import {
     mapIsNavShown,
     mapIsDotsSlideShown,

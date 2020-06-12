@@ -2,7 +2,6 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
-import { mapIsTipsShowable } from '../../../redux/transient/selectors'
 import {
     SHOWN,
     HIDDEN
@@ -16,6 +15,7 @@ import {
     mapIsForcedShownOverview
 } from '../../../redux/option/selectors'
 import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
+import { mapIsTipsShowable } from '../../../redux/tips/selectors'
 import { mapDeviceWidthIndex } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {

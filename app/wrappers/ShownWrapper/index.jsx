@@ -14,9 +14,9 @@ import {
     mapLyricSongIndex,
     mapLyricAnnotationIndex
 } from '../../redux/lyric/selectors'
-import { mapIsTipsShown } from '../../redux/option/selectors'
 import { mapIsOverlayShown } from '../../redux/overlay/selectors'
 import { mapIsOverviewShown } from '../../redux/overview/selectors'
+import { mapIsTipsShown } from '../../redux/tips/selectors'
 import {
     mapIsCarouselShown,
     mapIsNavShown,
