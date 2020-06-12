@@ -19,20 +19,15 @@ import SongChangeUpdateListener from '../../listeners/SongChange/Update'
 import SongChangeEnterListener from '../../listeners/SongChange/Enter'
 import SongChangeDoneListener from '../../listeners/SongChange/Done'
 import ScrollRenderListener from '../../listeners/ScrollRender'
-import SliderListener from '../../listeners/Slider'
 import TipsListener from '../../handlers/Tips/Listener'
 import UrlListener from '../../listeners/Url'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
 import AudioPlayerManager from '../../managers/AudioPlayer'
-import {
-    mapCanScoreMount,
-    mapCanSliderMount
-} from '../../redux/viewport/selectors'
+import { mapCanScoreMount } from '../../redux/viewport/selectors'
 
 const ListenContainer = () => {
     const
-        canScoreMount = useSelector(mapCanScoreMount),
-        canSliderMount = useSelector(mapCanSliderMount)
+        canScoreMount = useSelector(mapCanScoreMount)
 
     useEffect(() => {
         logMount('ListenContainer')
@@ -56,9 +51,6 @@ const ListenContainer = () => {
                 <ScoreListener />
             )}
             <ScrollRenderListener />
-            {canSliderMount && (
-                <SliderListener />
-            )}
             <SongListener />
             <SongChangeExitListener />
             <SongChangeUpdateListener />

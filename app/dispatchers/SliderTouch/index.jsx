@@ -74,9 +74,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
          */
         setTimeout(() => {
             if (isSliderTouched && !isSliderMoving) {
-                dispatch(updateSliderStore({
-                    isSliderMoving: true
-                }))
+                dispatch(updateSliderStore({ isSliderMoving: true }))
             }
         }, 125)
     }
