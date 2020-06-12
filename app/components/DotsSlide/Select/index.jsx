@@ -20,15 +20,15 @@ const DotsSlideSelect = ({
     isActivated
 }) => {
     const
-        dispatchDotSelect = useRef(),
+        dispatchDot = useRef(),
         stopPropagation = useRef()
 
     const handleButtonClick = () => {
-        dispatchDotSelect.current.dispatchSelectDot(dotIndex)
+        dispatchDot.current.select(dotIndex)
     }
 
     const handleAnchorClick = e => {
-        dispatchDotSelect.current.dispatchActivatedDot(dotIndex)
+        dispatchDot.current.activate(dotIndex)
 
         // Stop propagation if anchor click is valid.
         stopPropagation.current(e)
@@ -98,7 +98,7 @@ const DotsSlideSelect = ({
                     }}
                 />
             </div>
-            <DotSelectDispatcher {...{ ref: dispatchDotSelect }} />
+            <DotSelectDispatcher {...{ ref: dispatchDot }} />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </>
     )

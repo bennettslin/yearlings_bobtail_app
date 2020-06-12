@@ -110,7 +110,7 @@ class Previewer extends PureComponent {
         setPresenceInQueryStrings({ presenceType, presenceKey })
     }
 
-    handleKeyDownPress = e => {
+    handleKeyDown = e => {
         const
             { isActor } = this.props,
             { presenceType, presenceKey } = this.state
@@ -166,7 +166,7 @@ class Previewer extends PureComponent {
                         'PtSansNarrow'
                     ),
                     tabIndex: -1,
-                    onKeyDown: this.handleKeyDownPress
+                    onKeyDown: this.handleKeyDown
                 }}
             >
                 <PreviewerDashboard

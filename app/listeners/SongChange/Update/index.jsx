@@ -132,7 +132,7 @@ class SongChangeUpdateListener extends PureComponent {
 
     getDispatchSceneChange = dispatch => {
         if (dispatch) {
-            this.dispatchCanSceneUpdate = dispatch.dispatchCanSceneUpdate
+            this.dispatchCanSceneUpdate = dispatch.update
         }
     }
 

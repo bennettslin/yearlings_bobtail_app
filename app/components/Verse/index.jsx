@@ -35,7 +35,7 @@ const Verse = forwardRef(({
 
         // Allow clicks on interactable verses.
         if (isInteractable) {
-            activateVerse.current.activateVerseIndex(verseIndex)
+            activateVerse.current.index(verseIndex)
             stopPropagation.current(e)
         }
     }

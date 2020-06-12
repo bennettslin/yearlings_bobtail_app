@@ -107,8 +107,8 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => ({
-        dispatchAnnotationIndex,
-        dispatchAnnotationDirection
+        index: dispatchAnnotationIndex,
+        direction: dispatchAnnotationDirection
     }))
     return null
 })

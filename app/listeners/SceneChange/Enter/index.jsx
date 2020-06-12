@@ -44,7 +44,7 @@ class SceneChangeEnterListener extends PureComponent {
 
     getDispatchSceneChange = dispatch => {
         if (dispatch) {
-            this.dispatchCanSceneEnter = dispatch.dispatchCanSceneEnter
+            this.dispatchCanSceneEnter = dispatch.enter
         }
     }
 

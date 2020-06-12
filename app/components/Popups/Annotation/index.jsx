@@ -20,11 +20,11 @@ const AnnotationPopup = ({ inMain }) => {
         popupAnnotationIndex = useSelector(mapPopupAnnotationIndex)
 
     const handlePreviousClick = () => {
-        dispatchAnnotation.current.dispatchAnnotationDirection(-1)
+        dispatchAnnotation.current.direction(-1)
     }
 
     const handleNextClick = () => {
-        dispatchAnnotation.current.dispatchAnnotationDirection(1)
+        dispatchAnnotation.current.direction(1)
     }
 
     return (

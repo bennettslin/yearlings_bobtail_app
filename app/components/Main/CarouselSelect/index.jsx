@@ -19,11 +19,11 @@ const CarouselSelect = () => {
         canCarouselMount = useSelector(mapCanCarouselMount)
 
     const handlePreviousClick = () => {
-        dispatchAnnotation.current.dispatchAnnotationDirection(-1)
+        dispatchAnnotation.current.direction(-1)
     }
 
     const handleNextClick = () => {
-        dispatchAnnotation.current.dispatchAnnotationDirection(1)
+        dispatchAnnotation.current.direction(1)
     }
 
     return canCarouselMount && (

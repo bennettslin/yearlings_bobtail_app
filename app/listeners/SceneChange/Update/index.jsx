@@ -70,8 +70,8 @@ const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => ({
-        dispatchCanSceneUpdate,
-        dispatchCanSceneEnter
+        update: dispatchCanSceneUpdate,
+        enter: dispatchCanSceneEnter
     }))
     return null
 })

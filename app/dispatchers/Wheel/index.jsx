@@ -5,12 +5,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../redux/toggle/action'
 import { mapIsAutoScroll } from '../../redux/toggle/selectors'
 
-const LyricWheelDispatcher = forwardRef(({ determineVerseBars }, ref) => {
+const WheelDispatcher = forwardRef(({ determineVerseBars }, ref) => {
     const
         dispatch = useDispatch(),
         isAutoScroll = useSelector(mapIsAutoScroll)
 
-    const dispatchLyricTouchMoveOrWheel = (e, lyricElement) => {
+    const dispatchLyricWheel = (e, lyricElement) => {
         // If autoScroll is already off, don't bother.
         if (!isAutoScroll) {
             return
@@ -67,14 +67,14 @@ const LyricWheelDispatcher = forwardRef(({ determineVerseBars }, ref) => {
     }
 
     useImperativeHandle(ref, () => ({
-        dispatchLyricTouchMoveOrWheel,
-        dispatchVerseBarWheel
+        lyric: dispatchLyricWheel,
+        verseBar: dispatchVerseBarWheel
     }))
     return null
 })
 
-LyricWheelDispatcher.propTypes = {
+WheelDispatcher.propTypes = {
     determineVerseBars: PropTypes.func.isRequired
 }
 
-export default LyricWheelDispatcher
+export default WheelDispatcher

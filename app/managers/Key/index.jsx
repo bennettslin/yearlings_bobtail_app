@@ -28,7 +28,7 @@ const KeyManager = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         handleNavigation = useRef(),
-        dispatchLetter = useRef()
+        handleLetter = useRef()
 
     const _determineVerseBarsWithParameters = () => {
         /**
@@ -59,7 +59,7 @@ const KeyManager = forwardRef((props, ref) => {
             { keyWasRegistered } =
                 getIsNavKeyOrEnter(keyName) ?
                     handleNavigation.current(keyName) :
-                    dispatchLetter.current.handleLetter(keyName)
+                    handleLetter.current.letter(keyName)
 
         // Prevent default for registered key.
         if (keyWasRegistered) {
@@ -80,7 +80,7 @@ const KeyManager = forwardRef((props, ref) => {
         }
     }
 
-    const handleKeyDownPress = e => {
+    const handleKeyDown = e => {
         if (isEmailFocused()) {
             return false
         }
@@ -125,7 +125,7 @@ const KeyManager = forwardRef((props, ref) => {
         })
     }
 
-    const handleKeyUpPress = e => {
+    const handleKeyUp = e => {
         if (isEmailFocused()) {
             return false
         }
@@ -158,7 +158,7 @@ const KeyManager = forwardRef((props, ref) => {
 
         // Handle escape key.
         if (keyName === ESCAPE) {
-            dispatchLetter.current.handleEscape(e)
+            handleLetter.current.escape(e)
 
         } else {
 
@@ -171,13 +171,13 @@ const KeyManager = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => ({
-        handleKeyDownPress,
-        handleKeyUpPress
+        down: handleKeyDown,
+        up: handleKeyUp
     }))
     return (
         <>
             <NavigationManager {...{ ref: handleNavigation }} />
-            <LetterManager {...{ ref: dispatchLetter }} />
+            <LetterManager {...{ ref: handleLetter }} />
         </>
     )
 })

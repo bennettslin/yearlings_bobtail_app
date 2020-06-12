@@ -100,7 +100,7 @@ class LegacyPreviewer extends PureComponent {
         })
     }
 
-    handleKeyDownPress = e => {
+    handleKeyDown = e => {
         const { presenceType, presenceKey } = this.state
 
         accessPresence({
@@ -132,7 +132,7 @@ class LegacyPreviewer extends PureComponent {
                         'PtSansNarrow'
                     ),
                     tabIndex: -1,
-                    onKeyDown: this.handleKeyDownPress
+                    onKeyDown: this.handleKeyDown
                 }}
             >
                 <PreviewerDashboard

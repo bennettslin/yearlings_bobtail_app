@@ -43,11 +43,11 @@ const AnnotationNavigation = forwardRef((props, ref) => {
         switch (keyName) {
             case ARROW_LEFT:
                 annotationIndexWasAccessed = true
-                dispatchAnnotation.current.dispatchAnnotationDirection(-1)
+                dispatchAnnotation.current.direction(-1)
                 break
             case ARROW_RIGHT:
                 annotationIndexWasAccessed = true
-                dispatchAnnotation.current.dispatchAnnotationDirection(1)
+                dispatchAnnotation.current.direction(1)
                 break
             case ARROW_UP:
             case ARROW_DOWN: {

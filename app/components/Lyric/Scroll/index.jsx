@@ -8,7 +8,7 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import Transition from 'react-transition-group/Transition'
-import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
+import WheelDispatcher from '../../../dispatchers/Wheel'
 import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
 import ScrollOverlayDispatcher from '../../../dispatchers/ScrollOverlay'
 import VerseBarHandler from '../../../handlers/VerseBar'
@@ -22,7 +22,7 @@ const LyricScroll = forwardRef((props, ref) => {
         dispatch = useDispatch(),
         lyricScrollElement = useRef(),
         scrollChildren = useRef(),
-        dispatchLyricWheel = useRef(),
+        dispatchWheel = useRef(),
         dispatchScrollTimeout = useRef(),
         dispatchVerseBarsTimeout = useRef(),
         canLyricCarouselUpdate = useSelector(mapCanLyricCarouselUpdate)
@@ -38,7 +38,7 @@ const LyricScroll = forwardRef((props, ref) => {
     }
 
     const onWheel = e => {
-        dispatchLyricWheel.current.dispatchLyricTouchMoveOrWheel(
+        dispatchWheel.current.lyric(
             e, lyricScrollElement.current
         )
     }
@@ -56,7 +56,7 @@ const LyricScroll = forwardRef((props, ref) => {
     )
 
     const handleVerseBarWheel = e => {
-        dispatchLyricWheel.current.dispatchVerseBarWheel(
+        dispatchWheel.current.verseBar(
             e, lyricScrollElement.current
         )
     }
@@ -120,9 +120,9 @@ const LyricScroll = forwardRef((props, ref) => {
                     getScrollVerseChild
                 }}
             />
-            <LyricWheelDispatcher
+            <WheelDispatcher
                 {...{
-                    ref: dispatchLyricWheel,
+                    ref: dispatchWheel,
                     determineVerseBars: onScroll
                 }}
             />

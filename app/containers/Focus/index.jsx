@@ -23,7 +23,7 @@ const FocusContainer = () => {
         dispatchSliderTouch = useRef(),
         stopPropagation = useRef(),
         closeForBodyClick = useRef(),
-        dispatchKey = useRef(),
+        handleKey = useRef(),
         queuedFocus = useSelector(mapQueuedFocus),
         shouldFocusLyric = useSelector(mapShouldFocusLyric),
         canSliderMount = useSelector(mapCanSliderMount),
@@ -47,12 +47,12 @@ const FocusContainer = () => {
     }
 
     const onTouchMove = e => {
-        dispatchSliderTouch.current.dispatchTouchMove(e)
+        dispatchSliderTouch.current.move(e)
     }
 
     const onTouchEnd = e => {
         // If this returns true, then slider touch is ending.
-        if (dispatchSliderTouch.current.dispatchTouchEnd()) {
+        if (dispatchSliderTouch.current.end()) {
             logEvent({ e, componentName: 'FocusContainer' })
             /**
              * Ignore body click event that gets triggered after touch end on
@@ -77,8 +77,8 @@ const FocusContainer = () => {
         }
     }
 
-    const onKeyDown = e => dispatchKey.current.handleKeyDownPress(e)
-    const onKeyUp = e => dispatchKey.current.handleKeyUpPress(e)
+    const onKeyDown = e => handleKey.current.down(e)
+    const onKeyUp = e => handleKey.current.up(e)
 
     useEffect(() => {
         logMount('FocusContainer')
@@ -123,7 +123,7 @@ const FocusContainer = () => {
                 <SliderTouchDispatcher {...{ ref: dispatchSliderTouch }} />
             )}
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
-            <KeyManager {...{ ref: dispatchKey }} />
+            <KeyManager {...{ ref: handleKey }} />
         </div>
     )
 }

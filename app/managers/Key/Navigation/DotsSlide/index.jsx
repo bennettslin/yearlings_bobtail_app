@@ -19,7 +19,7 @@ import {
 const DotsSlideNavigation = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        dispatchSelectDot = useRef(),
+        dispatchDot = useRef(),
         isAccessOn = useSelector(mapIsAccessOn),
         accessedDotIndex = useSelector(mapAccessedDotIndex)
 
@@ -53,7 +53,7 @@ const DotsSlideNavigation = forwardRef((props, ref) => {
                     }
                     break
                 case ENTER:
-                    dispatchSelectDot.current.dispatchSelectDot(accessedDotIndex)
+                    dispatchDot.current.select(accessedDotIndex)
                     return true
                 default:
                     return false
@@ -68,7 +68,7 @@ const DotsSlideNavigation = forwardRef((props, ref) => {
 
     useImperativeHandle(ref, () => navigateDotsSlide)
     return (
-        <DotSelectDispatcher {...{ ref: dispatchSelectDot }} />
+        <DotSelectDispatcher {...{ ref: dispatchDot }} />
     )
 })
 

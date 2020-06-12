@@ -141,13 +141,13 @@ class AnnotationListener extends PureComponent {
 
     getDispatchAnnotation = dispatch => {
         if (dispatch) {
-            this.dispatchAnnotationIndex = dispatch.dispatchAnnotationIndex
+            this.dispatchAnnotationIndex = dispatch.index
         }
     }
 
     getActivateVerse = dispatch => {
         if (dispatch) {
-            this.activateVerseIndex = dispatch.activateVerseIndex
+            this.activateVerseIndex = dispatch.index
         }
     }
 

@@ -23,7 +23,7 @@ const Slider = () => {
 
     const onTouchStart = e => {
         logEvent({ e, componentName: 'Slider' })
-        dispatchSliderTouch.current.dispatchTouchBegin(e, sliderElement.current)
+        dispatchSliderTouch.current.begin(e, sliderElement.current)
     }
 
     return (

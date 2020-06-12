@@ -75,7 +75,7 @@ const LyricNavigation = forwardRef((props, ref) => {
          */
         } else {
             if (keyName === ENTER) {
-                return dispatchAnnotation.current.dispatchAnnotationIndex({
+                return dispatchAnnotation.current.index({
                     annotationIndex: accessedAnnotationIndex
                 })
 

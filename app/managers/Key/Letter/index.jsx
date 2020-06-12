@@ -63,7 +63,7 @@ const LetterManager = forwardRef((props, ref) => {
         dispatchDotsSlide = useRef(),
         dispatchEarColumn = useRef(),
         activateSceneDirection = useRef(),
-        dispatchActivatedVerse = useRef(),
+        activateVerse = useRef(),
         dispatchLyricExpand = useRef(),
         dispatchOverview = useRef(),
         dispatchPlay = useRef(),
@@ -101,10 +101,10 @@ const LetterManager = forwardRef((props, ref) => {
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case PREVIOUS_VERSE_KEY:
-                keyWasRegistered = dispatchActivatedVerse.current.activateVerseDirection(-1)
+                keyWasRegistered = activateVerse.current.direction(-1)
                 break
             case NEXT_VERSE_KEY:
-                keyWasRegistered = dispatchActivatedVerse.current.activateVerseDirection(1)
+                keyWasRegistered = activateVerse.current.direction(1)
                 break
             case CAROUSEL_TOGGLE_KEY:
                 keyWasRegistered = dispatchCarouselNav.current()
@@ -202,8 +202,8 @@ const LetterManager = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => ({
-        handleEscape,
-        handleLetter
+        escape: handleEscape,
+        letter: handleLetter
     }))
     return (
         <>
@@ -213,7 +213,7 @@ const LetterManager = forwardRef((props, ref) => {
             <DotsSlideDispatcher {...{ ref: dispatchDotsSlide }} />
             <EarColumnDispatcher {...{ ref: dispatchEarColumn }} />
             <ActivatedSceneDispatcher {...{ ref: activateSceneDirection }} />
-            <ActivatedVerseDispatcher {...{ ref: dispatchActivatedVerse }} />
+            <ActivatedVerseDispatcher {...{ ref: activateVerse }} />
             <LyricDispatcher {...{ ref: dispatchLyricExpand }} />
             <OverviewDispatcher {...{ ref: dispatchOverview }} />
             <PlayDispatcher {...{ ref: dispatchPlay }} />

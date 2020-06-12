@@ -14,7 +14,7 @@ const DotSelectDispatcher = forwardRef((props, ref) => {
         selectedDotsBit = useSelector(mapSelectedDotsBit),
         dotsSlideBit = useSelector(mapDotsSlideBit)
 
-    const dispatchSelectDot = dotIndex => {
+    const dispatchSelectedDot = dotIndex => {
         const {
             value,
             dotsBit
@@ -51,8 +51,8 @@ const DotSelectDispatcher = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => ({
-        dispatchSelectDot,
-        dispatchActivatedDot
+        select: dispatchSelectedDot,
+        activate: dispatchActivatedDot
     }))
     return null
 })

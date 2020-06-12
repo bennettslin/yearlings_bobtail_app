@@ -164,9 +164,9 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => ({
-        dispatchTouchBegin,
-        dispatchTouchMove,
-        dispatchTouchEnd
+        begin: dispatchTouchBegin,
+        move: dispatchTouchMove,
+        end: dispatchTouchEnd
     }))
     return (
         <VerseDispatcher {...{ ref: dispatchVerse }} />

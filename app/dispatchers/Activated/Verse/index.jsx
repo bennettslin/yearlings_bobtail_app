@@ -61,8 +61,8 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => ({
-        activateVerseIndex,
-        activateVerseDirection
+        index: activateVerseIndex,
+        direction: activateVerseDirection
     }))
     return null
 })
