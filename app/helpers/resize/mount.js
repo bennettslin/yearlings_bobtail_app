@@ -77,7 +77,7 @@ export const getLyricDynamicHeight = ({
     return Number(lyricDynamicHeight.toFixed(2))
 }
 
-export const getLyricOverviewHeight = ({
+export const getLyricOverviewHeightStyle = ({
     isLyricExpanded,
     lyricDynamicHeight,
     isLyricLogue,

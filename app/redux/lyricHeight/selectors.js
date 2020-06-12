@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 import {
     getLyricDynamicHeight,
-    getLyricOverviewHeight
+    getLyricOverviewHeightStyle
 } from '../../helpers/resize/mount'
 import { mapIsLyricLogue } from '../lyric/selectors'
 import { mapStageHeight } from '../stage/selectors'
@@ -50,7 +50,7 @@ export const mapLyricOverviewHeightStyle = createSelector(
         isHeightlessLyric,
         menuHeight,
         isLyricExpanded
-    ) => getLyricOverviewHeight({
+    ) => getLyricOverviewHeightStyle({
         lyricDynamicHeight,
         isLyricLogue,
         isHeightlessLyric,

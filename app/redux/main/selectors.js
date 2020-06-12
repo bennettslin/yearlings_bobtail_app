@@ -11,7 +11,7 @@ import {
     mapLyricAnnotationIndex,
     mapIsLyricLogue
 } from '../lyric/selectors'
-import { mapLyricDynamicHeight } from '../mount/selectors'
+import { mapLyricDynamicHeight } from '../lyricHeight/selectors'
 import { mapIsLogueOverviewShown } from '../option/selectors'
 import { mapIsOverlayShown } from '../overlay/selectors'
 import { mapIsOverviewShown } from '../overview/selectors'
