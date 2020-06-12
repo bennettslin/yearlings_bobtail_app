@@ -1,5 +1,3 @@
-# Thursday
-
 # Friday
 * Start getting rid of listeners by putting in reducers, or moving completely to selectors. Begin with PopupAnnotation listener.
 * With PopupAnnotation gone, remove transient store. Spread out its selectors to appropriate other stores. Figure out best way to organise selectors.

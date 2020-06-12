@@ -58,7 +58,7 @@ const ResizeListener = ({ getRootContainerElement }) => {
         return () => {
             getWindow().onresize = null
         }
-    }, [windowResizeTimeoutId])
+    }, [windowResizeTimeoutId, windowHeight, windowWidth])
 
     return (
         <ResizeDispatcher
