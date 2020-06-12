@@ -10,7 +10,6 @@ import LogueListener from '../../listeners/Logue'
 import LyricListener from '../../handlers/Lyric/Listener'
 import LyricIndicesListener from '../../listeners/LyricIndices'
 import OverviewListener from '../../handlers/Overview/Listener'
-import PopupAnnotationListener from '../../listeners/PopupAnnotation'
 import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
 import SceneChangeEnterListener from '../../listeners/SceneChange/Enter'
 import ScoreListener from '../../handlers/Score/Listener'
@@ -51,7 +50,6 @@ const ListenContainer = () => {
             <LyricListener />
             <LyricIndicesListener />
             <OverviewListener />
-            <PopupAnnotationListener />
             <SceneChangeExitListener />
             <SceneChangeEnterListener />
             {canScoreMount && (

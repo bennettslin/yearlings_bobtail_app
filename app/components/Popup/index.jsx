@@ -16,6 +16,7 @@ const Popup = ({
     displaysInOverlay,
     handlePreviousClick,
     handleNextClick,
+    onExited,
     ...other
 
 }) => {
@@ -38,7 +39,8 @@ const Popup = ({
                     enterDone: 'Popup__visible'
                 },
                 mountOnEnter: doMountonEnter,
-                unmountOnExit: doUnmountOnExit
+                unmountOnExit: doUnmountOnExit,
+                onExited
             }}
         >
             <div
@@ -80,7 +82,8 @@ Popup.propTypes = {
     noAbsoluteFull: PropTypes.bool,
     displaysInOverlay: PropTypes.bool,
     handlePreviousClick: PropTypes.func,
-    handleNextClick: PropTypes.func
+    handleNextClick: PropTypes.func,
+    onExited: PropTypes.func
 }
 
 export default Popup

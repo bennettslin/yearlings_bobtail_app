@@ -10,6 +10,7 @@ import {
     getToggleShowsOverviewImmediately,
     getToggleShowsTipsImmediately
 } from '../../helpers/options'
+import { getIsPopupAnnotationShown } from '../../helpers/popupAnnotation'
 import { getShowTipForDevice } from '../../api/album/tips'
 import { mapIsActivated } from '../activated/selectors'
 import { mapCanLyricCarouselEnter } from '../entrance/selectors'
@@ -28,18 +29,16 @@ import {
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     mapIsScoreShown,
-    mapIsAboutShown
+    mapIsAboutShown,
+    mapIsCarouselShown
 } from '../toggle/selectors'
 import {
     mapDeviceWidthIndex,
     mapIsPhoneWidth,
     mapIsTabletWidth,
-    mapIsDesktopWidth
+    mapIsDesktopWidth,
+    mapCanCarouselMount
 } from '../viewport/selectors'
-
-export const mapIsPopupAnnotationVisible = (
-    { transientStore: { isPopupAnnotationVisible } }
-) => isPopupAnnotationVisible
 
 export const mapPopupAnnotationIndex = (
     { transientStore: { popupAnnotationIndex } }
@@ -54,6 +53,37 @@ export const mapIsOverlayingAnnotation = createSelector(
     ) => getIsOverlayingAnnotation({
         isPhoneWidth,
         isLyricExpanded
+    })
+)
+
+export const getMapIsPopupAnnotationShown = inMain => createSelector(
+    mapCanLyricCarouselEnter,
+    mapLyricAnnotationIndex,
+    mapIsAboutShown,
+    mapIsScoreShown,
+    mapIsCarouselShown,
+    mapCanCarouselMount,
+    mapIsOverlayingAnnotation,
+    mapIsWikiShown,
+    (
+        canLyricCarouselEnter,
+        lyricAnnotationIndex,
+        isAboutShown,
+        isScoreShown,
+        isCarouselShown,
+        canCarouselMount,
+        isOverlayingAnnotation,
+        isWikiShown
+    ) => getIsPopupAnnotationShown({
+        inMain,
+        canLyricCarouselEnter,
+        lyricAnnotationIndex,
+        isAboutShown,
+        isScoreShown,
+        isCarouselShown,
+        canCarouselMount,
+        isOverlayingAnnotation,
+        isWikiShown
     })
 )
 

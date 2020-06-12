@@ -1,23 +1,27 @@
 // Popup container for individual annotation section.
-import React, { useRef, memo } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { useEffect, useRef, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Annotation from '../../Annotation'
 import Popup from '../../Popup'
 import './style'
+import { mapLyricAnnotationIndex } from '../../../redux/lyric/selectors'
 import {
     mapIsOverlayingAnnotation,
-    mapIsPopupAnnotationVisible,
-    mapPopupAnnotationIndex
+    getMapIsPopupAnnotationShown
 } from '../../../redux/transient/selectors'
 
 const AnnotationPopup = ({ inMain }) => {
     const
         dispatchAnnotation = useRef(),
+        lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         isOverlayingAnnotation = useSelector(mapIsOverlayingAnnotation),
-        isPopupAnnotationVisible = useSelector(mapIsPopupAnnotationVisible),
-        popupAnnotationIndex = useSelector(mapPopupAnnotationIndex)
+        isPopupAnnotationShown = useSelector(
+            getMapIsPopupAnnotationShown(inMain)
+        ),
+        [annotationIndex, setAnnotationIndex] = useState(lyricAnnotationIndex)
 
     const handlePreviousClick = () => {
         dispatchAnnotation.current.direction(-1)
@@ -26,6 +30,18 @@ const AnnotationPopup = ({ inMain }) => {
     const handleNextClick = () => {
         dispatchAnnotation.current.direction(1)
     }
+
+    const onExited = () => {
+        // Only clear annotation index when animation is complete.
+        setAnnotationIndex(0)
+    }
+
+    useEffect(() => {
+        if (isPopupAnnotationShown && lyricAnnotationIndex) {
+            // This will persist the popup annotation as it animates out.
+            setAnnotationIndex(lyricAnnotationIndex)
+        }
+    }, [isPopupAnnotationShown, lyricAnnotationIndex])
 
     return (
         <Popup
@@ -36,23 +52,18 @@ const AnnotationPopup = ({ inMain }) => {
             noBoxShadow
             {...{
                 popupName: 'AnnotationPopup',
-                isVisible:
-                    /**
-                     * Annotation popup is in main, unless lyric column is
-                     * expanded or heightless.
-                     */
-                    Boolean(inMain) !== isOverlayingAnnotation &&
-                    isPopupAnnotationVisible,
+                isVisible: isPopupAnnotationShown,
                 noAbsoluteFull: inMain,
                 displaysInOverlay: isOverlayingAnnotation,
                 handlePreviousClick,
-                handleNextClick
+                handleNextClick,
+                onExited
             }}
         >
             <Annotation
                 isAccessed
                 isSelected
-                {...{ annotationIndex: popupAnnotationIndex }}
+                {...{ annotationIndex }}
             />
             <AnnotationDispatcher {...{ ref: dispatchAnnotation }} />
         </Popup>
