@@ -1,5 +1,8 @@
 // Reducers for audio updates.
-import { AUDIO_STORE } from '../../constants/store'
+import {
+    AUDIO_STORE,
+    SELECTED_STORE
+} from '../../constants/store'
 import { AUDIO_DEFAULTS } from './default'
 
 export default (
@@ -12,6 +15,15 @@ export default (
                 ...state,
                 ...payload
             }
+        case SELECTED_STORE: {
+            const { isSelectedLogue } = payload
+            return {
+                ...state,
+                ...isSelectedLogue && {
+                    isPlaying: false
+                }
+            }
+        }
         default:
             return state
     }

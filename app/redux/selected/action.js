@@ -4,6 +4,7 @@ import {
     hasKey,
     getDefinedOnlyPayload
 } from '../../helpers/action'
+import { getSongIsLogue } from '../../api/album/songs'
 import {
     SELECTED_STORE,
     SELECTED_SONG_INDEX,
@@ -20,6 +21,7 @@ export const updateSelectedStore = payload => {
     } = payload
 
     if (hasKey(selectedSongIndex)) {
+        payload.isSelectedLogue = getSongIsLogue(selectedSongIndex)
         setInStorage(SELECTED_SONG_INDEX, selectedSongIndex)
     }
     if (hasKey(selectedVerseIndex)) {

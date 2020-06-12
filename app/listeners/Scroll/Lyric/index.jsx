@@ -9,6 +9,7 @@ import {
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
 } from '../../../constants/scroll'
+import { mapLyricVerseIndex } from '../../../redux/lyric/selectors'
 import {
     mapScrollLyricLog,
     mapScrollLyricByVerse,
@@ -18,7 +19,6 @@ import {
     mapScrollLyricFromAutoScroll,
     mapQueuedSceneChangeExitScrollCallback
 } from '../../../redux/scrollLyric/selectors'
-import { mapSelectedVerseIndex } from '../../../redux/selected/selectors'
 import {
     mapIsAutoScroll,
     mapIsLyricExpanded
@@ -38,7 +38,7 @@ const ScrollLyricListener = ({
         dispatch = useDispatch(),
         isPlaying = useSelector(mapIsPlaying),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
-        selectedVerseIndex = useSelector(mapSelectedVerseIndex),
+        lyricVerseIndex = useSelector(mapLyricVerseIndex),
         isAutoScroll = useSelector(mapIsAutoScroll),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         deviceWidthIndex = useSelector(mapDeviceWidthIndex),
@@ -91,7 +91,7 @@ const ScrollLyricListener = ({
                  * scrolling to annotation, index is always given.
                  */
                 const index = scrollLyricIndex === -1 ?
-                    selectedVerseIndex :
+                    lyricVerseIndex :
                     scrollLyricIndex
 
                 scrollElementIntoView({

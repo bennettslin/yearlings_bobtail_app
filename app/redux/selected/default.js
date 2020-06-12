@@ -1,4 +1,5 @@
 import { getColumnIndexForAnnotation } from '../../api/album/annotations'
+import { getSongIsLogue } from '../../api/album/songs'
 import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getInitialIndicesFromRoutingOrStorage } from '../../helpers/storage'
@@ -30,5 +31,6 @@ export const SELECTED_DEFAULTS = {
     selectedAnnotationIndex: INITIAL_ANNOTATION_INDEX,
     selectedSceneIndex: INITIAL_SCENE_INDEX,
     selectedTime: INITIAL_TIME,
+    isSelectedLogue: getSongIsLogue(INITIAL_SONG_INDEX),
     earColumnIndex: INITIAL_EAR_COLUMN_INDEX || 0
 }

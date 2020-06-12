@@ -1,16 +1,20 @@
 import { createSelector } from "reselect"
 import {
     getSongIsPrologue,
-    getSongIsEpilogue,
-    getSongIsLogue
+    getSongIsEpilogue
 } from "../../api/album/songs"
+import { SELECTED_STORE } from "../../constants/store"
 
 export const mapSelectedSongIndex = (
-    { selectedStore: { selectedSongIndex } }
+    { [SELECTED_STORE]: { selectedSongIndex } }
 ) => selectedSongIndex
 
+export const mapIsSelectedLogue = (
+    { [SELECTED_STORE]: { isSelectedLogue } }
+) => isSelectedLogue
+
 export const mapSelectedVerseIndex = (
-    { selectedStore: { selectedVerseIndex } }
+    { [SELECTED_STORE]: { selectedVerseIndex } }
 ) => selectedVerseIndex
 
 export const getMapIsVerseSelected = verseIndex => createSelector(
@@ -32,15 +36,15 @@ export const getMapVerseSelectedStatus = verseIndex => createSelector(
 )
 
 export const mapSelectedAnnotationIndex = (
-    { selectedStore: { selectedAnnotationIndex } }
+    { [SELECTED_STORE]: { selectedAnnotationIndex } }
 ) => selectedAnnotationIndex
 
 export const mapIsAnnotationShown = (
-    { selectedStore: { selectedAnnotationIndex } }
+    { [SELECTED_STORE]: { selectedAnnotationIndex } }
 ) => Boolean(selectedAnnotationIndex)
 
 export const mapSelectedSceneIndex = (
-    { selectedStore: { selectedSceneIndex } }
+    { [SELECTED_STORE]: { selectedSceneIndex } }
 ) => selectedSceneIndex
 
 export const mapIsSelectedPrologue = createSelector(
@@ -53,15 +57,10 @@ export const mapIsSelectedEpilogue = createSelector(
     selectedSongIndex => getSongIsEpilogue(selectedSongIndex)
 )
 
-export const mapIsSelectedLogue = createSelector(
-    mapSelectedSongIndex,
-    selectedSongIndex => getSongIsLogue(selectedSongIndex)
-)
-
 export const mapSelectedTime = (
-    { selectedStore: { selectedTime } }
+    { [SELECTED_STORE]: { selectedTime } }
 ) => selectedTime
 
 export const mapEarColumnIndex = (
-    { selectedStore: { earColumnIndex } }
+    { [SELECTED_STORE]: { earColumnIndex } }
 ) => earColumnIndex

@@ -52,7 +52,7 @@ const LyricScroll = forwardRef((props, ref) => {
     )
 
     const getScrollVerseChild = index => (
-        scrollChildren.current.verse[index]
+        scrollChildren.current && scrollChildren.current.verse[index]
     )
 
     const handleVerseBarWheel = e => {

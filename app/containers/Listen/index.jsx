@@ -6,7 +6,6 @@ import AppLoadListener from '../../listeners/AppLoad'
 import AudioListener from '../../listeners/Audio'
 import CarouselNavListener from '../../handlers/CarouselNav/Listener'
 import DotsSlideListener from '../../handlers/DotsSlide/Listener'
-import LogueListener from '../../listeners/Logue'
 import LyricListener from '../../handlers/Lyric/Listener'
 import LyricIndicesListener from '../../listeners/LyricIndices'
 import OverviewListener from '../../handlers/Overview/Listener'
@@ -26,8 +25,7 @@ import AudioPlayerManager from '../../managers/AudioPlayer'
 import { mapCanScoreMount } from '../../redux/viewport/selectors'
 
 const ListenContainer = () => {
-    const
-        canScoreMount = useSelector(mapCanScoreMount)
+    const canScoreMount = useSelector(mapCanScoreMount)
 
     useEffect(() => {
         logMount('ListenContainer')
@@ -41,7 +39,6 @@ const ListenContainer = () => {
             <AudioListener />
             <CarouselNavListener />
             <DotsSlideListener />
-            <LogueListener />
             <LyricListener />
             <LyricIndicesListener />
             <OverviewListener />
