@@ -1,23 +1,24 @@
-import { createSelector } from "reselect"
-import { getStanzaIndexForVerse } from "../../api/album/verses"
-import { getCursorIndex } from "../../helpers/verse"
-import { mapActivatedVerseIndex } from "../activated/selectors"
-import { mapSliderVerseIndex } from "../slider/selectors"
+import { createSelector } from 'reselect'
+import { getStanzaIndexForVerse } from '../../api/album/verses'
+import { getCursorIndex } from '../../helpers/verse'
+import { mapActivatedVerseIndex } from '../activated/selectors'
+import { mapSliderVerseIndex } from '../slider/selectors'
+import { LYRIC_STORE } from '../../constants/store'
 
 export const mapLyricSongIndex = (
-    { lyricStore: { lyricSongIndex } }
+    { [LYRIC_STORE]: { lyricSongIndex } }
 ) => lyricSongIndex
 
 export const mapLyricVerseIndex = (
-    { lyricStore: { lyricVerseIndex } }
+    { [LYRIC_STORE]: { lyricVerseIndex } }
 ) => lyricVerseIndex
 
 export const mapLyricAnnotationIndex = (
-    { lyricStore: { lyricAnnotationIndex } }
+    { [LYRIC_STORE]: { lyricAnnotationIndex } }
 ) => lyricAnnotationIndex
 
 export const mapIsLyricLogue = (
-    { lyricStore: { isLyricLogue } }
+    { [LYRIC_STORE]: { isLyricLogue } }
 ) => isLyricLogue
 
 export const getMapIsLyricAnnotation = annotationIndex => (

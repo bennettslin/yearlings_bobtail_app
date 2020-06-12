@@ -12,23 +12,23 @@ import {
     TIME_NIGHT
 } from '../../../../app/constants/scene/sky'
 
-const SkyDay = ({ sceneSkySeason }) => (
+const SkyDay = ({ sceneSeason }) => (
     <div className={cx(
         'SkyDay',
         'fCC'
     )}>
-        <Sky {...{ sceneSkyTime: TIME_TWILIGHT, sceneSkySeason }} />
-        <Sky {...{ sceneSkyTime: TIME_DAWN, sceneSkySeason }} />
-        <Sky {...{ sceneSkyTime: TIME_MORNING, sceneSkySeason }} />
-        <Sky {...{ sceneSkyTime: TIME_NOON, sceneSkySeason }} />
-        <Sky {...{ sceneSkyTime: TIME_AFTERNOON, sceneSkySeason }} />
-        <Sky {...{ sceneSkyTime: TIME_EVENING, sceneSkySeason }} />
-        <Sky {...{ sceneSkyTime: TIME_NIGHT, sceneSkySeason }} />
+        <Sky {...{ sceneSkyTime: TIME_TWILIGHT, sceneSeason }} />
+        <Sky {...{ sceneSkyTime: TIME_DAWN, sceneSeason }} />
+        <Sky {...{ sceneSkyTime: TIME_MORNING, sceneSeason }} />
+        <Sky {...{ sceneSkyTime: TIME_NOON, sceneSeason }} />
+        <Sky {...{ sceneSkyTime: TIME_AFTERNOON, sceneSeason }} />
+        <Sky {...{ sceneSkyTime: TIME_EVENING, sceneSeason }} />
+        <Sky {...{ sceneSkyTime: TIME_NIGHT, sceneSeason }} />
     </div>
 )
 
 SkyDay.propTypes = {
-    sceneSkySeason: PropTypes.string.isRequired
+    sceneSeason: PropTypes.string.isRequired
 }
 
 export default SkyDay

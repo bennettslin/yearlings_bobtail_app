@@ -1,7 +1,7 @@
 import {
     getCubesKeyForScene,
     getSkyTimeForScene,
-    getSkySeasonForScene
+    getSeasonForScene
 } from '../../api/album/scenes'
 
 import {
@@ -9,15 +9,10 @@ import {
     INITIAL_SCENE_INDEX
 } from '../selected/default'
 
-const
-    sceneCubesKey = getCubesKeyForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
-    sceneSkyTime = getSkyTimeForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
-    sceneSkySeason = getSkySeasonForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX)
-
 export const SCENE_DEFAULTS = {
-    sceneCubesKey,
-    sceneSkyTime,
-    sceneSkySeason,
+    sceneCubesKey: getCubesKeyForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
+    sceneSkyTime: getSkyTimeForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
+    sceneSeason: getSeasonForScene(INITIAL_SONG_INDEX, INITIAL_SCENE_INDEX),
     sceneSongIndex: INITIAL_SONG_INDEX,
     sceneSceneIndex: INITIAL_SCENE_INDEX
 }

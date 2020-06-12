@@ -5,7 +5,7 @@ import { updateSceneStore } from '../../../redux/scene/action'
 import {
     getCubesKeyForScene,
     getSkyTimeForScene,
-    getSkySeasonForScene
+    getSeasonForScene
 } from '../../../api/album/scenes'
 import {
     mapSelectedSongIndex,
@@ -27,7 +27,7 @@ const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
         const
             sceneCubesKey = getCubesKeyForScene(songIndex, sceneIndex),
             sceneSkyTime = getSkyTimeForScene(songIndex, sceneIndex),
-            sceneSkySeason = getSkySeasonForScene(songIndex, sceneIndex)
+            sceneSeason = getSeasonForScene(songIndex, sceneIndex)
 
         logTransition('Begin enter or update from scene change.')
         dispatch(updateEntranceStore({
@@ -43,7 +43,7 @@ const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
             sceneSongIndex: songIndex,
             sceneSceneIndex: sceneIndex,
             sceneSkyTime,
-            sceneSkySeason
+            sceneSeason
         }))
     }
 

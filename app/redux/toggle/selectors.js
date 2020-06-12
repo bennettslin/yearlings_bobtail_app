@@ -1,33 +1,34 @@
-import { createSelector } from "reselect"
-import { mapIsLyricExpandable } from "../responsive/selectors"
-import { mapIsHeightlessLyric } from "../viewport/selectors"
+import { createSelector } from 'reselect'
+import { mapIsLyricExpandable } from '../responsive/selectors'
+import { mapIsHeightlessLyric } from '../viewport/selectors'
+import { TOGGLE_STORE } from '../../constants/store'
 
 export const mapIsAutoScroll = (
-    { toggleStore: { isAutoScroll } }
+    { [TOGGLE_STORE]: { isAutoScroll } }
 ) => isAutoScroll
 
 export const mapIsCarouselShown = (
-    { toggleStore: { isCarouselShown } }
+    { [TOGGLE_STORE]: { isCarouselShown } }
 ) => isCarouselShown
 
 export const mapIsNavShown = (
-    { toggleStore: { isNavShown } }
+    { [TOGGLE_STORE]: { isNavShown } }
 ) => isNavShown
 
 export const mapIsDotsSlideShown = (
-    { toggleStore: { isDotsSlideShown } }
+    { [TOGGLE_STORE]: { isDotsSlideShown } }
 ) => isDotsSlideShown
 
 export const mapIsLyricExpanded = (
-    { toggleStore: { isLyricExpanded } }
+    { [TOGGLE_STORE]: { isLyricExpanded } }
 ) => isLyricExpanded
 
 export const mapIsScoreShown = (
-    { toggleStore: { isScoreShown } }
+    { [TOGGLE_STORE]: { isScoreShown } }
 ) => isScoreShown
 
 export const mapIsAboutShown = (
-    { toggleStore: { isAboutShown } }
+    { [TOGGLE_STORE]: { isAboutShown } }
 ) => isAboutShown
 
 export const getMapIsExpandToggleShown = inMain => createSelector(

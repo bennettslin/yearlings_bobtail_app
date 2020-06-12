@@ -41,30 +41,30 @@ const Skies = () => {
                 )
             }}
         >
-            <SkyDay {...{ sceneSkySeason: SEASON_SPRING }} />
-            <SkyDay {...{ sceneSkySeason: SEASON_SUMMER }} />
-            <SkyDay {...{ sceneSkySeason: SEASON_AUTUMN }} />
-            <SkyDay {...{ sceneSkySeason: SEASON_WINTER }} />
+            <SkyDay {...{ sceneSeason: SEASON_SPRING }} />
+            <SkyDay {...{ sceneSeason: SEASON_SUMMER }} />
+            <SkyDay {...{ sceneSeason: SEASON_AUTUMN }} />
+            <SkyDay {...{ sceneSeason: SEASON_WINTER }} />
             <div className={cx(
                 'SkyDay',
                 'fCC'
             )}>
-                <Sky {...{ sceneSkySeason: SEASON_PAST }} />
-                <Sky {...{ sceneSkySeason: SEASON_PRESENT }} />
-                <Sky {...{ sceneSkySeason: SEASON_FUTURE }} />
-                <Sky {...{ sceneSkyTime: TIME_TWILIGHT_TAIWAN, sceneSkySeason: SEASON_AUTUMN }} />
-                <Sky {...{ sceneSkyTime: TIME_NIGHT_TAIWAN, sceneSkySeason: SEASON_AUTUMN }} />
+                <Sky {...{ sceneSeason: SEASON_PAST }} />
+                <Sky {...{ sceneSeason: SEASON_PRESENT }} />
+                <Sky {...{ sceneSeason: SEASON_FUTURE }} />
+                <Sky {...{ sceneSkyTime: TIME_TWILIGHT_TAIWAN, sceneSeason: SEASON_AUTUMN }} />
+                <Sky {...{ sceneSkyTime: TIME_NIGHT_TAIWAN, sceneSeason: SEASON_AUTUMN }} />
             </div>
             <div className={cx(
                 'SkyDay',
                 'fCC'
             )}>
-                <Sky {...{ sceneSkySeason: SEASON_STAGE }} />
-                <Sky {...{ sceneSkySeason: SEASON_OCEAN_TOP }} />
-                <Sky {...{ sceneSkySeason: SEASON_OCEAN_SIDE }} />
-                <Sky {...{ sceneSkySeason: SEASON_LOVE }} />
-                <Sky {...{ sceneSkySeason: SEASON_THOUGHT }} />
-                <Sky {...{ sceneSkySeason: SEASON_NIGHT_MAGIC }} />
+                <Sky {...{ sceneSeason: SEASON_STAGE }} />
+                <Sky {...{ sceneSeason: SEASON_OCEAN_TOP }} />
+                <Sky {...{ sceneSeason: SEASON_OCEAN_SIDE }} />
+                <Sky {...{ sceneSeason: SEASON_LOVE }} />
+                <Sky {...{ sceneSeason: SEASON_THOUGHT }} />
+                <Sky {...{ sceneSeason: SEASON_NIGHT_MAGIC }} />
             </div>
         </div>
     )

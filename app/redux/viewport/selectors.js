@@ -8,33 +8,34 @@ import {
     getIsTabletWidth,
     getIsDesktopWidth
 } from '../../helpers/responsive'
+import { VIEWPORT_STORE } from '../../constants/store'
 
 export const mapWindowWidth = (
-    { viewportStore: { windowWidth } }
+    { [VIEWPORT_STORE]: { windowWidth } }
 ) => windowWidth
 
 export const mapWindowHeight = (
-    { viewportStore: { windowHeight } }
+    { [VIEWPORT_STORE]: { windowHeight } }
 ) => windowHeight
 
 export const mapDeviceWidthIndex = (
-    { viewportStore: { deviceWidthIndex } }
+    { [VIEWPORT_STORE]: { deviceWidthIndex } }
 ) => deviceWidthIndex
 
 export const mapIsHeightlessLyric = (
-    { viewportStore: { isHeightlessLyric } }
+    { [VIEWPORT_STORE]: { isHeightlessLyric } }
 ) => isHeightlessLyric
 
 export const mapIsTwoRowMenu = (
-    { viewportStore: { isTwoRowMenu } }
+    { [VIEWPORT_STORE]: { isTwoRowMenu } }
 ) => isTwoRowMenu
 
 export const mapMenuHeight = (
-    { viewportStore: { menuHeight } }
+    { [VIEWPORT_STORE]: { menuHeight } }
 ) => menuHeight
 
 export const mapCanCarouselMount = (
-    { viewportStore: { canCarouselMount } }
+    { [VIEWPORT_STORE]: { canCarouselMount } }
 ) => canCarouselMount
 
 export const mapCanScoreMount = createSelector(
@@ -74,17 +75,17 @@ export const mapIsPhoneOrMiniWidth = createSelector(
 )
 
 export const mapStageDimensionCoordinates = (
-    { viewportStore: { stageDimensionCoordinates } }
+    { [VIEWPORT_STORE]: { stageDimensionCoordinates } }
 ) => stageDimensionCoordinates
 
 export const mapProsceniumDimensionCoordinates = (
-    { viewportStore: { prosceniumDimensionCoordinates } }
+    { [VIEWPORT_STORE]: { prosceniumDimensionCoordinates } }
 ) => prosceniumDimensionCoordinates
 
 export const mapCeilingHeight = (
-    { viewportStore: { ceilingHeight } }
+    { [VIEWPORT_STORE]: { ceilingHeight } }
 ) => ceilingHeight
 
 export const mapFloorHeight = (
-    { viewportStore: { floorHeight } }
+    { [VIEWPORT_STORE]: { floorHeight } }
 ) => floorHeight

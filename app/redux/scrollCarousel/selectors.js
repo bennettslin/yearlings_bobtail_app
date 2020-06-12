@@ -1,11 +1,13 @@
+import { SCROLL_CAROUSEL_STORE } from '../../constants/store'
+
 export const mapScrollCarouselLog = (
-    { scrollCarouselStore: { scrollCarouselLog } }
+    { [SCROLL_CAROUSEL_STORE]: { scrollCarouselLog } }
 ) => scrollCarouselLog
 
 export const mapScrollCarouselIndex = (
-    { scrollCarouselStore: { scrollCarouselIndex } }
+    { [SCROLL_CAROUSEL_STORE]: { scrollCarouselIndex } }
 ) => scrollCarouselIndex
 
 export const mapScrollCarouselNoDuration = (
-    { scrollCarouselStore: { scrollCarouselNoDuration } }
+    { [SCROLL_CAROUSEL_STORE]: { scrollCarouselNoDuration } }
 ) => scrollCarouselNoDuration

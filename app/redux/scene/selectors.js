@@ -12,17 +12,18 @@ import {
 } from '../../api/scene/presences'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import { getNearestXIndex } from '../../helpers/cubeIndices'
+import { SCENE_STORE } from '../../constants/store'
 
 export const mapSceneSkyTime = (
-    { sceneStore: { sceneSkyTime } }
+    { [SCENE_STORE]: { sceneSkyTime } }
 ) => sceneSkyTime
 
 export const mapSceneSkySeason = (
-    { sceneStore: { sceneSkySeason } }
-) => sceneSkySeason
+    { [SCENE_STORE]: { sceneSeason } }
+) => sceneSeason
 
 const mapSceneCubesKey = (
-    { sceneStore: { sceneCubesKey } }
+    { [SCENE_STORE]: { sceneCubesKey } }
 ) => sceneCubesKey || DEFAULT_STAGE_KEY
 
 export const getMapCubeCeilingHsla = (yIndex, xIndex) => createSelector(
@@ -68,11 +69,11 @@ export const mapCubeSlantDirection = createSelector(
 
 // TODO: Does scene store really need its own song and scene index?
 const mapSceneSongIndex = (
-    { sceneStore: { sceneSongIndex } }
+    { [SCENE_STORE]: { sceneSongIndex } }
 ) => sceneSongIndex
 
 const mapSceneSceneIndex = (
-    { sceneStore: { sceneSceneIndex } }
+    { [SCENE_STORE]: { sceneSceneIndex } }
 ) => sceneSceneIndex
 
 const mapIsPresenceShownInScene = ({

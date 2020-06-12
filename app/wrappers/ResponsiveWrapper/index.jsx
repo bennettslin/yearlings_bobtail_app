@@ -12,7 +12,7 @@ import {
     mapIsCarouselNavShowable,
     mapIsEarShown
 } from '../../redux/transient/selectors'
-import { mapIsHeightlessLyric } from "../../redux/viewport/selectors"
+import { mapIsHeightlessLyric } from '../../redux/viewport/selectors'
 
 const ResponsiveWrapper = ({ children }) => {
     const

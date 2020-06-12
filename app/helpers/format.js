@@ -90,7 +90,7 @@ export const getFormattedAnnotationTitle = ({
     }
 
     // Finally, replace double quotes with single quotes.
-    return title.replace(/"/g, "'").trim()
+    return title.replace(/"/g, '\'').trim()
 }
 
 const _getStringFromObject = textEntity => {

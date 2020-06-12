@@ -1,28 +1,30 @@
+import { SCROLL_LYRIC_STORE } from '../../constants/store'
+
 export const mapScrollLyricLog = (
-    { scrollLyricStore: { scrollLyricLog } }
+    { [SCROLL_LYRIC_STORE]: { scrollLyricLog } }
 ) => scrollLyricLog
 
 export const mapScrollLyricByVerse = (
-    { scrollLyricStore: { scrollLyricByVerse } }
+    { [SCROLL_LYRIC_STORE]: { scrollLyricByVerse } }
 ) => scrollLyricByVerse
 
 export const mapScrollLyricIndex = (
-    { scrollLyricStore: { scrollLyricIndex } }
+    { [SCROLL_LYRIC_STORE]: { scrollLyricIndex } }
 ) => scrollLyricIndex
 
 export const mapScrollLyricAlways = (
-    { scrollLyricStore: { scrollLyricAlways } }
+    { [SCROLL_LYRIC_STORE]: { scrollLyricAlways } }
 ) => scrollLyricAlways
 
 export const mapScrollLyricNoDuration = (
-    { scrollLyricStore: { scrollLyricNoDuration } }
+    { [SCROLL_LYRIC_STORE]: { scrollLyricNoDuration } }
 ) => scrollLyricNoDuration
 
 export const mapScrollLyricFromAutoScroll = (
-    { scrollLyricStore: { scrollLyricFromAutoScroll } }
+    { [SCROLL_LYRIC_STORE]: { scrollLyricFromAutoScroll } }
 ) => scrollLyricFromAutoScroll
 
 // TODO: What is this value?
 export const mapQueuedSceneChangeExitScrollCallback = (
-    { scrollLyricStore: { queuedSceneChangeExitScrollCallback } }
+    { [SCROLL_LYRIC_STORE]: { queuedSceneChangeExitScrollCallback } }
 ) => queuedSceneChangeExitScrollCallback

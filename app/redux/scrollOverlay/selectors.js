@@ -1,3 +1,5 @@
+import { SCROLL_OVERLAY_STORE } from '../../constants/store'
+
 export const mapIsScrolling = (
-    { scrollOverlayStore: { isScrolling } }
+    { [SCROLL_OVERLAY_STORE]: { isScrolling } }
 ) => isScrolling

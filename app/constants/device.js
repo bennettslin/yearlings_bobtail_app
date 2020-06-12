@@ -19,5 +19,5 @@ export const IS_TOUCH_SUPPORTED =
 
 // https://stackoverflow.com/a/19999868
 export const IS_DEPRECATED_BROWSER =
-    getWindow().navigator.userAgent.indexOf("MSIE ") > 0 ||
+    getWindow().navigator.userAgent.indexOf('MSIE ') > 0 ||
     Boolean(getWindow().navigator.userAgent.match(/Trident.*rv:11\./))

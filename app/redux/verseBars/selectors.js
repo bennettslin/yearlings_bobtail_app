@@ -1,11 +1,12 @@
-import { createSelector } from "reselect"
+import { createSelector } from 'reselect'
+import { VERSE_BARS_STORE } from '../../constants/store'
 
 export const mapIsVerseBarAbove = (
-    { verseBarsStore: { isVerseBarAbove } }
+    { [VERSE_BARS_STORE]: { isVerseBarAbove } }
 ) => isVerseBarAbove
 
 export const mapIsVerseBarBelow = (
-    { verseBarsStore: { isVerseBarBelow } }
+    { [VERSE_BARS_STORE]: { isVerseBarBelow } }
 ) => isVerseBarBelow
 
 export const getMapIsVerseBarShown = isAbove => createSelector(
@@ -24,9 +25,9 @@ export const getMapIsVerseBarShown = isAbove => createSelector(
 )
 
 export const mapQueuedDetermineVerseBars = (
-    { verseBarsStore: { queuedDetermineVerseBars } }
+    { [VERSE_BARS_STORE]: { queuedDetermineVerseBars } }
 ) => queuedDetermineVerseBars
 
 export const mapQueuedVerseBarsTimeout = (
-    { verseBarsStore: { queuedVerseBarsTimeout } }
+    { [VERSE_BARS_STORE]: { queuedVerseBarsTimeout } }
 ) => queuedVerseBarsTimeout

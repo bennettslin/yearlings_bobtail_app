@@ -1,11 +1,13 @@
+import { ANNOTATION_STORE } from '../../constants/store'
+
 export const mapQueuedAnnotationIndex = (
-    { annotationStore: { queuedAnnotationIndex } }
+    { [ANNOTATION_STORE]: { queuedAnnotationIndex } }
 ) => queuedAnnotationIndex
 
 export const mapQueuedAnnotationFromCarousel = (
-    { annotationStore: { queuedAnnotationFromCarousel } }
+    { [ANNOTATION_STORE]: { queuedAnnotationFromCarousel } }
 ) => queuedAnnotationFromCarousel
 
 export const mapQueuedAnnotationFromLyricVerse = (
-    { annotationStore: { queuedAnnotationFromLyricVerse } }
+    { [ANNOTATION_STORE]: { queuedAnnotationFromLyricVerse } }
 ) => queuedAnnotationFromLyricVerse

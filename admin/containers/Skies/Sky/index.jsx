@@ -5,7 +5,7 @@ import { TIME_STAGE } from '../../../../app/constants/scene/sky'
 
 const AdminSky = ({
     sceneSkyTime = TIME_STAGE,
-    sceneSkySeason
+    sceneSeason
 }) => (
     <div className={cx(
         'AdminSky'
@@ -21,7 +21,7 @@ const AdminSky = ({
         <div
             className={cx(
                 'Season',
-                `Season__${sceneSkySeason}`,
+                `Season__${sceneSeason}`,
                 'Sky__filter',
                 'abF'
             )}
@@ -35,14 +35,14 @@ const AdminSky = ({
                 )
             }}
         >
-            <div>{`${sceneSkyTime} | ${sceneSkySeason}`}</div>
+            <div>{`${sceneSkyTime} | ${sceneSeason}`}</div>
         </div>
     </div>
 )
 
 AdminSky.propTypes = {
     sceneSkyTime: PropTypes.string,
-    sceneSkySeason: PropTypes.string.isRequired
+    sceneSeason: PropTypes.string.isRequired
 }
 
 export default AdminSky

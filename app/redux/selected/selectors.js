@@ -1,9 +1,9 @@
-import { createSelector } from "reselect"
+import { createSelector } from 'reselect'
 import {
     getSongIsPrologue,
     getSongIsEpilogue
-} from "../../api/album/songs"
-import { SELECTED_STORE } from "../../constants/store"
+} from '../../api/album/songs'
+import { SELECTED_STORE } from '../../constants/store'
 
 export const mapSelectedSongIndex = (
     { [SELECTED_STORE]: { selectedSongIndex } }

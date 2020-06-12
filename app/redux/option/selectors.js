@@ -16,25 +16,26 @@ import {
     mapIsTabletWidth,
     mapIsDesktopWidth
 } from '../viewport/selectors'
+import { OPTION_STORE } from '../../constants/store'
 
 export const mapIsLogueOverviewShown = (
-    { optionStore: { isLogueOverviewShown } }
+    { [OPTION_STORE]: { isLogueOverviewShown } }
 ) => isLogueOverviewShown
 
 export const mapSelectedOverviewOption = (
-    { optionStore: { selectedOverviewOption } }
+    { [OPTION_STORE]: { selectedOverviewOption } }
 ) => selectedOverviewOption
 
 export const mapSelectedTipsOption = (
-    { optionStore: { selectedTipsOption } }
+    { [OPTION_STORE]: { selectedTipsOption } }
 ) => selectedTipsOption
 
 export const mapIsForcedShownOverview = (
-    { optionStore: { isForcedShownOverview } }
+    { [OPTION_STORE]: { isForcedShownOverview } }
 ) => isForcedShownOverview
 
 export const mapIsSongShownOverview = (
-    { optionStore: { isSongShownOverview } }
+    { [OPTION_STORE]: { isSongShownOverview } }
 ) => isSongShownOverview
 
 export const mapIsOverviewShown = createSelector(

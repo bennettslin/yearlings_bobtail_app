@@ -1,3 +1,5 @@
+import { DOTS_SLIDE_STORE } from '../../constants/store'
+
 export const mapDotsSlideBit = (
-    { dotsSlideStore: { dotsSlideBit } }
+    { [DOTS_SLIDE_STORE]: { dotsSlideBit } }
 ) => dotsSlideBit

@@ -7,29 +7,30 @@ import {
     mapIsNavShown,
     mapIsLyricExpanded
 } from '../toggle/selectors'
+import { ACCESS_STORE } from '../../constants/store'
 
 export const mapIsAccessOn = (
-    { accessStore: { isAccessOn } }
+    { [ACCESS_STORE]: { isAccessOn } }
 ) => isAccessOn
 
 export const mapAccessedDotIndex = (
-    { accessStore: { accessedDotIndex } }
+    { [ACCESS_STORE]: { accessedDotIndex } }
 ) => accessedDotIndex
 
 export const mapAccessedNavIndex = (
-    { accessStore: { accessedNavIndex } }
+    { [ACCESS_STORE]: { accessedNavIndex } }
 ) => accessedNavIndex
 
 export const mapAccessedKey = (
-    { accessStore: { accessedKey } }
+    { [ACCESS_STORE]: { accessedKey } }
 ) => accessedKey
 
 export const mapAccessedAnnotationIndex = (
-    { accessStore: { accessedAnnotationIndex } }
+    { [ACCESS_STORE]: { accessedAnnotationIndex } }
 ) => accessedAnnotationIndex
 
 export const mapAccessedWikiWormholeIndex = (
-    { accessStore: { accessedWikiWormholeIndex } }
+    { [ACCESS_STORE]: { accessedWikiWormholeIndex } }
 ) => accessedWikiWormholeIndex
 
 export const mapIsAccessedIndexedAnchorShown = createSelector(

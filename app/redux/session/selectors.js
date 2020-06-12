@@ -8,17 +8,18 @@ import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex
 } from '../selected/selectors'
+import { SESSION_STORE } from '../../constants/store'
 
 export const mapShownNavBookIndex = (
-    { sessionStore: { shownNavBookIndex } }
+    { [SESSION_STORE]: { shownNavBookIndex } }
 ) => shownNavBookIndex
 
 export const mapAudioOptionIndex = (
-    { sessionStore: { audioOptionIndex } }
+    { [SESSION_STORE]: { audioOptionIndex } }
 ) => audioOptionIndex
 
 const mapSelectedWikiIndex = (
-    { sessionStore: { selectedWikiIndex } }
+    { [SESSION_STORE]: { selectedWikiIndex } }
 ) => selectedWikiIndex
 
 export const mapIsWikiShown = createSelector(
@@ -27,7 +28,7 @@ export const mapIsWikiShown = createSelector(
 )
 
 const mapCarouselAnnotationIndex = (
-    { sessionStore: { carouselAnnotationIndex } }
+    { [SESSION_STORE]: { carouselAnnotationIndex } }
 ) => carouselAnnotationIndex
 
 export const mapSelectedWikiUrl = createSelector(

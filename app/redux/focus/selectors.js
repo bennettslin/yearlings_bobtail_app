@@ -1,9 +1,10 @@
-import { createSelector } from "reselect"
-import { mapIsLyricExpanded } from "../toggle/selectors"
-import { mapIsHeightlessLyric } from "../viewport/selectors"
+import { createSelector } from 'reselect'
+import { mapIsLyricExpanded } from '../toggle/selectors'
+import { mapIsHeightlessLyric } from '../viewport/selectors'
+import { FOCUS_STORE } from '../../constants/store'
 
 export const mapQueuedFocus = (
-    { focusStore: { queuedFocus } }
+    { [FOCUS_STORE]: { queuedFocus } }
 ) => queuedFocus
 
 export const mapShouldFocusLyric = createSelector(

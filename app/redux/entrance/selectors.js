@@ -1,71 +1,73 @@
+import { ENTRANCE_STORE } from '../../constants/store'
+
 export const mapCanTheatreEnter = (
-    { entranceStore: { canTheatreEnter } }
+    { [ENTRANCE_STORE]: { canTheatreEnter } }
 ) => canTheatreEnter
 
 export const mapDidTheatreEnter = (
-    { entranceStore: { didTheatreEnter } }
+    { [ENTRANCE_STORE]: { didTheatreEnter } }
 ) => didTheatreEnter
 
 export const mapDidSceneScrollExit = (
-    { entranceStore: { didSceneScrollExit } }
+    { [ENTRANCE_STORE]: { didSceneScrollExit } }
 ) => didSceneScrollExit
 
 export const mapCanSceneUpdate = (
-    { entranceStore: { canSceneUpdate } }
+    { [ENTRANCE_STORE]: { canSceneUpdate } }
 ) => canSceneUpdate
 
 export const mapDidSceneUpdate = (
-    { entranceStore: { didSceneUpdate } }
+    { [ENTRANCE_STORE]: { didSceneUpdate } }
 ) => didSceneUpdate
 
 export const mapCanSceneEnter = (
-    { entranceStore: { canSceneEnter } }
+    { [ENTRANCE_STORE]: { canSceneEnter } }
 ) => canSceneEnter
 
 export const mapDidSceneEnter = (
-    { entranceStore: { didSceneEnter } }
+    { [ENTRANCE_STORE]: { didSceneEnter } }
 ) => didSceneEnter
 
 export const mapDidCarouselExit = (
-    { entranceStore: { didCarouselExit } }
+    { [ENTRANCE_STORE]: { didCarouselExit } }
 ) => didCarouselExit
 
 export const mapDidLyricExit = (
-    { entranceStore: { didLyricExit } }
+    { [ENTRANCE_STORE]: { didLyricExit } }
 ) => didLyricExit
 
 export const mapDidCurtainExit = (
-    { entranceStore: { didCurtainExit } }
+    { [ENTRANCE_STORE]: { didCurtainExit } }
 ) => didCurtainExit
 
 export const mapCanLyricCarouselUpdate = (
-    { entranceStore: { canLyricCarouselUpdate } }
+    { [ENTRANCE_STORE]: { canLyricCarouselUpdate } }
 ) => canLyricCarouselUpdate
 
 export const mapDidLyricUpdate = (
-    { entranceStore: { didLyricUpdate } }
+    { [ENTRANCE_STORE]: { didLyricUpdate } }
 ) => didLyricUpdate
 
 export const mapDidCarouselUpdate = (
-    { entranceStore: { didCarouselUpdate } }
+    { [ENTRANCE_STORE]: { didCarouselUpdate } }
 ) => didCarouselUpdate
 
 export const mapCanLyricCarouselEnter = (
-    { entranceStore: { canLyricCarouselEnter } }
+    { [ENTRANCE_STORE]: { canLyricCarouselEnter } }
 ) => canLyricCarouselEnter
 
 export const mapDidLyricEnter = (
-    { entranceStore: { didLyricEnter } }
+    { [ENTRANCE_STORE]: { didLyricEnter } }
 ) => didLyricEnter
 
 export const mapDidCarouselEnter = (
-    { entranceStore: { didCarouselEnter } }
+    { [ENTRANCE_STORE]: { didCarouselEnter } }
 ) => didCarouselEnter
 
 export const mapDidCurtainEnter = (
-    { entranceStore: { didCurtainEnter } }
+    { [ENTRANCE_STORE]: { didCurtainEnter } }
 ) => didCurtainEnter
 
 export const mapIsSongSelectInFlux = (
-    { entranceStore: { isSongSelectInFlux } }
+    { [ENTRANCE_STORE]: { isSongSelectInFlux } }
 ) => isSongSelectInFlux

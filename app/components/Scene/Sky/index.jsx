@@ -11,7 +11,7 @@ import './style'
 const Sky = () => {
     const
         sceneSkyTime = useSelector(mapSceneSkyTime),
-        sceneSkySeason = useSelector(mapSceneSkySeason)
+        sceneSeason = useSelector(mapSceneSkySeason)
 
     return (
         <div className={cx(
@@ -29,7 +29,7 @@ const Sky = () => {
             <div
                 className={cx(
                     'Season',
-                    `Season__${sceneSkySeason}`,
+                    `Season__${sceneSeason}`,
                     'Sky__filter',
                     'abF'
                 )}

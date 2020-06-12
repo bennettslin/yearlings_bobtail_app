@@ -1,32 +1,33 @@
-import { createSelector } from "reselect"
-import { mapIsActivated } from "../activated/selectors"
+import { createSelector } from 'reselect'
+import { mapIsActivated } from '../activated/selectors'
+import { SLIDER_STORE } from '../../constants/store'
 
 export const mapSliderLeft = (
-    { sliderStore: { sliderLeft } }
+    { [SLIDER_STORE]: { sliderLeft } }
 ) => sliderLeft
 
 export const mapSliderWidth = (
-    { sliderStore: { sliderWidth } }
+    { [SLIDER_STORE]: { sliderWidth } }
 ) => sliderWidth
 
 export const mapIsSliderMoving = (
-    { sliderStore: { isSliderMoving } }
+    { [SLIDER_STORE]: { isSliderMoving } }
 ) => isSliderMoving
 
 export const mapIsSliderTouched = (
-    { sliderStore: { isSliderTouched } }
+    { [SLIDER_STORE]: { isSliderTouched } }
 ) => isSliderTouched
 
 export const mapSliderVerseIndex = (
-    { sliderStore: { sliderVerseIndex } }
+    { [SLIDER_STORE]: { sliderVerseIndex } }
 ) => sliderVerseIndex
 
 export const mapSliderSceneIndex = (
-    { sliderStore: { sliderSceneIndex } }
+    { [SLIDER_STORE]: { sliderSceneIndex } }
 ) => sliderSceneIndex
 
 export const mapSliderTime = (
-    { sliderStore: { sliderTime } }
+    { [SLIDER_STORE]: { sliderTime } }
 ) => sliderTime
 
 export const mapIsLyricsLocked = createSelector(

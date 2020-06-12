@@ -1,13 +1,14 @@
 import { createSelector } from 'reselect'
 import { mapSelectedSongIndex } from '../selected/selectors'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
+import { PLAYERS_STORE } from '../../constants/store'
 
 export const mapPlayersBit = (
-    { playersStore: { playersBit } }
+    { [PLAYERS_STORE]: { playersBit } }
 ) => playersBit
 
 export const mapNextPlayerToRender = (
-    { playersStore: { nextPlayerToRender } }
+    { [PLAYERS_STORE]: { nextPlayerToRender } }
 ) => nextPlayerToRender
 
 export const mapPlayerCanPlayThrough = createSelector(

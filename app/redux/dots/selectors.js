@@ -1,11 +1,12 @@
-import { createSelector } from "reselect"
+import { createSelector } from 'reselect'
 import {
     getFirstSelectedDotKey,
     getHasSelectedDot
-} from "../../helpers/dot"
+} from '../../helpers/dot'
+import { DOTS_STORE } from '../../constants/store'
 
 export const mapSelectedDotsBit = (
-    { dotsStore: { selectedDotsBit } }
+    { [DOTS_STORE]: { selectedDotsBit } }
 ) => selectedDotsBit
 
 export const getMapFirstSelectedDotKey = dotsBit => createSelector(
@@ -25,13 +26,13 @@ export const getMapHasSelectedDot = dotsBit => createSelector(
 )
 
 export const getMapIsSelectedDot = dotKey => (
-    { dotsStore: { [dotKey]: value } }
+    { [DOTS_STORE]: { [dotKey]: value } }
 ) => value
 
 export const mapReferenceDot = (
-    { dotsStore: { reference } }
+    { [DOTS_STORE]: { reference } }
 ) => reference
 
 export const mapWormholeDot = (
-    { dotsStore: { wormhole } }
+    { [DOTS_STORE]: { wormhole } }
 ) => wormhole

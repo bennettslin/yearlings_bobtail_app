@@ -52,7 +52,7 @@ export const getSkyTimeForScene = (songIndex, sceneIndex) => {
     return sceneIndex >= 0 ? sceneSkyTimes[sceneIndex] : TIME_STAGE
 }
 
-export const getSkySeasonForScene = (songIndex, sceneIndex) => {
+export const getSeasonForScene = (songIndex, sceneIndex) => {
     const { sceneSkySeasons } = getSong(songIndex)
     return sceneIndex >= 0 ? sceneSkySeasons[sceneIndex] : SEASON_STAGE
 }

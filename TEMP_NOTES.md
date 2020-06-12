@@ -1,5 +1,4 @@
-# Friday
-* Start getting rid of listeners by putting in reducers, or moving completely to selectors.
+# Next
 * Spread out selectors to appropriate other stores. Figure out best way to organise selectors.
 * Make verseBars a bit number.
 
