@@ -1,4 +1,5 @@
 // Reducers for audio updates.
+import { hasKey } from '../../helpers/action'
 import {
     AUDIO_STORE,
     SELECTED_STORE
@@ -19,7 +20,7 @@ export default (
             const { isSelectedLogue } = payload
             return {
                 ...state,
-                ...isSelectedLogue && {
+                ...hasKey(isSelectedLogue) && isSelectedLogue && {
                     isPlaying: false
                 }
             }

@@ -5,6 +5,7 @@ import {
     VIEWPORT_STORE
 } from '../../constants/store'
 import { TOGGLE_DEFAULTS } from './default'
+import { hasKey } from '../../helpers/action'
 
 export default (
     state = TOGGLE_DEFAULTS,
@@ -23,7 +24,7 @@ export default (
             } = payload
             return {
                 ...state,
-                ...isSelectedLogue && {
+                ...hasKey(isSelectedLogue) && isSelectedLogue && {
                     isDotsSlideShown: false
                 },
                 /**
@@ -31,7 +32,7 @@ export default (
                  * annotations to show. (May not be needed, because dots can
                  * only be deselected when carousel is not shown?)
                  */
-                ...!selectedDotsBit && {
+                ...hasKey(selectedDotsBit) && !selectedDotsBit && {
                     isCarouselShown: false
                 }
             }
@@ -40,7 +41,7 @@ export default (
             const { canCarouselMount } = payload
             return {
                 ...state,
-                ...!canCarouselMount && {
+                ...hasKey(canCarouselMount) && !canCarouselMount && {
                     isCarouselShown: false,
                     isNavShown: false
                 }

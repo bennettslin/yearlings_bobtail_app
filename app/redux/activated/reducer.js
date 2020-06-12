@@ -1,4 +1,5 @@
 // Reducers for activated state.
+import { hasKey } from '../../helpers/action'
 import {
     ACTIVATED_STORE,
     SLIDER_STORE
@@ -17,7 +18,8 @@ export default (
             }
         case SLIDER_STORE: {
             const { isSliderTouched } = payload
-            return isSliderTouched ? ACTIVATED_DEFAULTS : state
+            return hasKey(isSliderTouched) && isSliderTouched ?
+                ACTIVATED_DEFAULTS : state
         }
         default:
             return state

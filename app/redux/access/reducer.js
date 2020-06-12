@@ -1,4 +1,5 @@
 // Reducers for accessed values.
+import { hasKey } from '../../helpers/action'
 import {
     ACCESS_STORE,
     SLIDER_STORE,
@@ -23,7 +24,7 @@ export default (
             const { isSliderTouched } = payload
             return {
                 ...state,
-                ...isSliderTouched && {
+                ...hasKey(isSliderTouched) && isSliderTouched && {
                     isAccessOn: false
                 }
             }
@@ -32,7 +33,8 @@ export default (
             const { canCarouselMount } = payload
             return {
                 ...state,
-                ...!canCarouselMount && ACCESS_NAV_DEFAULTS
+                ...hasKey(canCarouselMount) && !canCarouselMount &&
+                    ACCESS_NAV_DEFAULTS
             }
         }
         default:
