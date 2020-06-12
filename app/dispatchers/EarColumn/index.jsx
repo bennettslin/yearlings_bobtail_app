@@ -2,7 +2,7 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateSelectedStore } from '../../redux/selected/action'
-import { mapIsEarShown } from '../../redux/transient/selectors'
+import { mapIsEarShown } from '../../redux/ear/selectors'
 import {
     mapIsSelectedLogue,
     mapEarColumnIndex

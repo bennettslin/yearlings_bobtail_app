@@ -11,7 +11,7 @@ import { LYRIC_EAR_BUTTON_KEY } from '../../../../constants/buttons'
 import { EAR_COLUMN_KEYS } from '../../../../constants/lyrics'
 import { DOUBLESPEAKER } from '../../../../constants/tips'
 import { mapIsDesktopWidth } from '../../../../redux/device/selectors'
-import { mapIsEarShown } from '../../../../redux/transient/selectors'
+import { mapIsEarShown } from '../../../../redux/ear/selectors'
 import { mapEarColumnIndex } from '../../../../redux/selected/selectors'
 import './style'
 

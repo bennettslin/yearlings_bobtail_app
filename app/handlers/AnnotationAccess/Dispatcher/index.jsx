@@ -6,7 +6,7 @@ import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { getAnnotationIndexForVerseIndex } from './helper'
 import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
-import { mapIsEarShown } from '../../../redux/transient/selectors'
+import { mapIsEarShown } from '../../../redux/ear/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,

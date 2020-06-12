@@ -7,7 +7,7 @@ import { getHasSelectedDot } from '../../../helpers/dot'
 import { getDotsBitForAnnotation } from '../../../api/album/annotations'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
-import { mapIsEarShown } from '../../../redux/transient/selectors'
+import { mapIsEarShown } from '../../../redux/ear/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex,

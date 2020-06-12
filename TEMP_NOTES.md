@@ -1,5 +1,5 @@
 # Friday
-* Spread out selectors to appropriate other stores. Figure out best way to organise selectors.
+* Be strategic about where store values should live for option, session, and toggle, and have separate actions. Maybe combine dots and dotsSlide stores.
 * Make verseBars a bit number.
 
 # Saturday

@@ -12,13 +12,13 @@ import {
     mapQueuedAnnotationFromCarousel,
     mapQueuedAnnotationFromLyricVerse
 } from '../../../redux/annotation/selectors'
+import { mapIsEarShown } from '../../../redux/ear/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex,
     mapEarColumnIndex
 } from '../../../redux/selected/selectors'
-import { mapIsEarShown } from '../../../redux/transient/selectors'
 import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
 
 const mapStateToProps = state => {

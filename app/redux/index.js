@@ -19,7 +19,6 @@ import SelectedReducer from './selected/reducer'
 import SessionReducer from './session/reducer'
 import SliderReducer from './slider/reducer'
 import ToggleReducer from './toggle/reducer'
-// import TransientReducer from './transient/reducer'
 import VerseBarsReducer from './verseBars/reducer'
 import ViewportReducer from './viewport/reducer'
 
@@ -44,7 +43,6 @@ import {
     SESSION_STORE,
     SLIDER_STORE,
     TOGGLE_STORE,
-    // TRANSIENT_STORE,
     VERSE_BARS_STORE,
     VIEWPORT_STORE
 } from '../constants/store'
@@ -70,7 +68,6 @@ export default combineReducers({
     [SESSION_STORE]: SessionReducer,
     [SLIDER_STORE]: SliderReducer,
     [TOGGLE_STORE]: ToggleReducer,
-    // [TRANSIENT_STORE]: TransientReducer,
     [VERSE_BARS_STORE]: VerseBarsReducer,
     [VIEWPORT_STORE]: ViewportReducer
 })
