@@ -28,7 +28,7 @@ import { getMp3ForSong } from '../../../../api/mp3'
 const Player = forwardRef(({
     songIndex,
     updateCurrentTime,
-    updateEnded,
+    handleSongEnd,
     dispatchPlayerCanPlayThrough
 
 }, ref) => {
@@ -136,7 +136,7 @@ const Player = forwardRef(({
     }
 
     const _handleSuspendEvent = () => {
-        dispatchPlayerCanPlayThrough(songIndex)
+        dispatchPlayerCanPlayThrough.current(songIndex)
     }
 
     const _handleTimeUpdateEvent = () => {
@@ -151,7 +151,7 @@ const Player = forwardRef(({
 
     const _handleEndedEvent = () => {
         logEndByPlayer(songIndex)
-        updateEnded()
+        handleSongEnd.current()
     }
 
     const setRef = node => {
@@ -209,8 +209,8 @@ const Player = forwardRef(({
 Player.propTypes = {
     songIndex: PropTypes.number.isRequired,
     updateCurrentTime: PropTypes.func.isRequired,
-    updateEnded: PropTypes.func.isRequired,
-    dispatchPlayerCanPlayThrough: PropTypes.func.isRequired
+    handleSongEnd: PropTypes.func.isRequired,
+    dispatchPlayerCanPlayThrough: PropTypes.object.isRequired
 }
 
 export default memo(Player)

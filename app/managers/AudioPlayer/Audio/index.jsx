@@ -49,7 +49,7 @@ const AudioManager = forwardRef(({ toggleSelectedPlayer }, ref) => {
             const nextIsPlaying = !isPlaying
 
             // Player manager will decide whether to set isPlaying in store.
-            toggleSelectedPlayer({ isPlaying: nextIsPlaying })
+            toggleSelectedPlayer.current(nextIsPlaying)
 
             if (nextIsPlaying) {
                 dispatch(updateScrollLyricStore({
