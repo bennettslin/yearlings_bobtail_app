@@ -7,6 +7,7 @@ import {
     VIEWPORT_STORE
 } from '../../constants/store'
 import { TOGGLE_DEFAULTS } from './default'
+import { mapCanScoreMount } from '../viewport/selectors'
 
 export default (
     state = TOGGLE_DEFAULTS,
@@ -27,7 +28,8 @@ export default (
                 ...state,
                 ...hasKey(isSelectedLogue) && isSelectedLogue && {
                     isDotsSlideShown: false,
-                    isLyricExpanded: false
+                    isLyricExpanded: false,
+                    isScoreShown: false
                 },
                 /**
                  * If there are no selected dots, there are no carousel
@@ -44,6 +46,9 @@ export default (
                 { canCarouselMount } = payload,
                 isLyricExpandable = mapIsLyricExpandable({
                     [VIEWPORT_STORE]: payload
+                }),
+                canScoreMount = mapCanScoreMount({
+                    [VIEWPORT_STORE]: payload
                 })
             return {
                 ...state,
@@ -53,6 +58,9 @@ export default (
                 },
                 ...hasKey(isLyricExpandable) && !isLyricExpandable && {
                     isLyricExpanded: false
+                },
+                ...hasKey(canScoreMount) && !canScoreMount && {
+                    isScoreShown: false
                 }
             }
         }

@@ -10,10 +10,7 @@ import {
     getIsTwoRowMenu,
     getMenuHeight
 } from '../../helpers/resize/responsive'
-import {
-    getCanCarouselMount,
-    getCanScoreMount
-} from '../../helpers/resize/mount'
+import { getCanCarouselMount } from '../../helpers/resize/mount'
 import { getStageDimensionCoordinates } from '../../helpers/resize/stage'
 import { getProsceniumDimensionCoordinates } from '../../helpers/resize/proscenium'
 import { getCeilingFloorHeight } from '../../helpers/resize/theatre'
@@ -71,7 +68,6 @@ export const updateViewportStore = payload => {
             isTwoRowMenu,
             menuHeight,
             canCarouselMount,
-            canScoreMount: getCanScoreMount(deviceWidthIndex),
             stageDimensionCoordinates,
             prosceniumDimensionCoordinates,
             ceilingHeight,

@@ -1,5 +1,8 @@
 import { createSelector } from 'reselect'
-import { getCanSliderMount } from '../../helpers/resize/mount'
+import {
+    getCanScoreMount,
+    getCanSliderMount
+} from '../../helpers/resize/mount'
 import { VIEWPORT_STORE } from '../../constants/store'
 
 export const mapWindowWidth = (
@@ -30,9 +33,10 @@ export const mapCanCarouselMount = (
     { [VIEWPORT_STORE]: { canCarouselMount } }
 ) => canCarouselMount
 
-export const mapCanScoreMount = (
-    { [VIEWPORT_STORE]: { canScoreMount } }
-) => canScoreMount
+export const mapCanScoreMount = createSelector(
+    mapDeviceWidthIndex,
+    deviceWidthIndex => getCanScoreMount(deviceWidthIndex)
+)
 
 export const mapCanSliderMount = createSelector(
     mapDeviceWidthIndex,

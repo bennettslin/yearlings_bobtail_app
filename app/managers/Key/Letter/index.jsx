@@ -17,7 +17,7 @@ import LyricDispatcher from '../../../handlers/Lyric/Dispatcher'
 import OverviewDispatcher from '../../../handlers/Overview/Dispatcher'
 import PlayDispatcher from '../../../dispatchers/Play'
 import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
-import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
+import ScoreDispatcher from '../../../dispatchers/Score'
 import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import {
