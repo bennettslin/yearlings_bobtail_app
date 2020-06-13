@@ -1,11 +1,12 @@
 // Reducers for toggle buttons and options.
+import { hasKey } from '../../helpers/action'
+import { mapIsLyricExpandable } from '../lyricExpand/selectors'
 import {
     TOGGLE_STORE,
     SELECTED_STORE,
     VIEWPORT_STORE
 } from '../../constants/store'
 import { TOGGLE_DEFAULTS } from './default'
-import { hasKey } from '../../helpers/action'
 
 export default (
     state = TOGGLE_DEFAULTS,
@@ -25,7 +26,8 @@ export default (
             return {
                 ...state,
                 ...hasKey(isSelectedLogue) && isSelectedLogue && {
-                    isDotsSlideShown: false
+                    isDotsSlideShown: false,
+                    isLyricExpanded: false
                 },
                 /**
                  * If there are no selected dots, there are no carousel
@@ -38,12 +40,21 @@ export default (
             }
         }
         case VIEWPORT_STORE: {
-            const { canCarouselMount } = payload
-            return hasKey(canCarouselMount) && !canCarouselMount ? {
+            const
+                { canCarouselMount } = payload,
+                isLyricExpandable = mapIsLyricExpandable({
+                    [VIEWPORT_STORE]: payload
+                })
+            return {
                 ...state,
-                isCarouselShown: false,
-                isNavShown: false
-            } : state
+                ...hasKey(canCarouselMount) && !canCarouselMount && {
+                    isCarouselShown: false,
+                    isNavShown: false
+                },
+                ...hasKey(isLyricExpandable) && !isLyricExpandable && {
+                    isLyricExpanded: false
+                }
+            }
         }
         default:
             return state

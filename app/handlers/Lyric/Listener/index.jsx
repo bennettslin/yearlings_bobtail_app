@@ -5,23 +5,17 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { mapIsLyricExpandable } from '../../../redux/lyricExpand/selectors'
-import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
 import { mapIsLyricExpanded } from '../../../redux/toggle/selectors'
 import { mapIsHeightlessLyric } from '../../../redux/viewport/selectors'
 
 const mapStateToProps = state => {
     const
-        isLyricExpandable = mapIsLyricExpandable(state),
-        isSelectedLogue = mapIsSelectedLogue(state),
         isLyricExpanded = mapIsLyricExpanded(state),
         isHeightlessLyric = mapIsHeightlessLyric(state)
 
     return {
         isLyricExpanded,
-        isLyricExpandable,
-        isHeightlessLyric,
-        isSelectedLogue
+        isHeightlessLyric
     }
 }
 
@@ -30,36 +24,12 @@ class LyricListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         isLyricExpanded: PropTypes.bool.isRequired,
-        isLyricExpandable: PropTypes.bool.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
-        updateScrollLyricStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired
+        updateScrollLyricStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
-        this._collapseLyricIfNeeded(prevProps)
         this._checkLyricExpand(prevProps)
-    }
-
-    // TODO: Put in reducer.
-    _collapseLyricIfNeeded(prevProps) {
-        const
-            {
-                isLyricExpandable,
-                isSelectedLogue
-            } = this.props,
-            {
-                isLyricExpandable: wasLyricExpandable,
-                isSelectedLogue: wasSelectedLogue
-            } = prevProps
-
-        if (
-            (isSelectedLogue && !wasSelectedLogue) ||
-            (!isLyricExpandable && wasLyricExpandable)
-        ) {
-            this.props.updateToggleStore({ isLyricExpanded: false })
-        }
     }
 
     _checkLyricExpand(prevProps) {
