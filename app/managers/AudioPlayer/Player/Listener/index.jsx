@@ -1,8 +1,6 @@
-// Singleton to listen for change from song to logue.
-
-import { PureComponent } from 'react'
+import { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updatePlayersStore } from '../../../../redux/players/action'
 import { resetAudioQueue } from '../../../../redux/audio/action'
 import { getPlayersCanPlayThroughFromBit } from '../../../../helpers/player'
@@ -19,111 +17,52 @@ import {
     mapIsSelectedLogue
 } from '../../../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const PlayerListener = ({ handleSelectPlayer }) => {
     const
-        queuedPlayFromLogue = mapQueuedPlayFromLogue(state),
-        queuedPlaySongIndex = mapQueuedPlaySongIndex(state),
-        queuedPlayVerseIndex = mapQueuedPlayVerseIndex(state),
-        isSelectPlayReady = mapIsSelectPlayReady(state),
-        playersBit = mapPlayersBit(state),
-        selectedSongIndex = mapSelectedSongIndex(state),
-        isSelectedLogue = mapIsSelectedLogue(state)
-    return {
-        playersBit,
-        selectedSongIndex,
-        isSelectedLogue,
-        queuedPlayFromLogue,
-        queuedPlaySongIndex,
-        queuedPlayVerseIndex,
-        isSelectPlayReady
-    }
-}
+        dispatch = useDispatch(),
+        queuedPlayFromLogue = useSelector(mapQueuedPlayFromLogue),
+        queuedPlaySongIndex = useSelector(mapQueuedPlaySongIndex),
+        queuedPlayVerseIndex = useSelector(mapQueuedPlayVerseIndex),
+        isSelectPlayReady = useSelector(mapIsSelectPlayReady),
+        playersBit = useSelector(mapPlayersBit),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        isSelectedLogue = useSelector(mapIsSelectedLogue)
 
-class PlayerListener extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
-        isSelectedLogue: PropTypes.bool.isRequired,
-        playersBit: PropTypes.number.isRequired,
-        queuedPlayFromLogue: PropTypes.bool.isRequired,
-        queuedPlaySongIndex: PropTypes.number.isRequired,
-        queuedPlayVerseIndex: PropTypes.number.isRequired,
-        isSelectPlayReady: PropTypes.bool.isRequired,
-        updatePlayersStore: PropTypes.func.isRequired,
-        resetAudioQueue: PropTypes.func.isRequired,
-
-        // From parent.
-        handleSelectPlayer: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this._updateNextPlayerToRender()
-    }
-
-    componentDidUpdate(prevProps) {
-        this._checkPlayerChange(prevProps)
-        this._updateNextPlayerToRender(prevProps)
-    }
-
-    _checkPlayerChange() {
-        const {
-            queuedPlayFromLogue,
-            queuedPlaySongIndex,
-            queuedPlayVerseIndex,
-            isSelectPlayReady
-        } = this.props
-
+    useEffect(() => {
         if (isSelectPlayReady) {
             /**
              * Wait for song to render, in case the user is cycling through
              * songs in quick succession.
              */
-            this.props.handleSelectPlayer({
+            handleSelectPlayer({
                 isPlayFromLogue: queuedPlayFromLogue,
                 nextSongIndex: queuedPlaySongIndex,
                 nextVerseIndex: queuedPlayVerseIndex
             })
 
-            this.props.resetAudioQueue()
+            dispatch(resetAudioQueue())
         }
-    }
+    }, [isSelectPlayReady])
 
-    _updateNextPlayerToRender(prevProps = {}) {
-        const
-            { playersBit } = this.props,
-            { playersBit: prevBit } = prevProps
+    useEffect(() => {
+        const playersCanPlayThrough = getPlayersCanPlayThroughFromBit(
+            playersBit
+        )
 
-        if (playersBit !== prevBit) {
-            const {
-                    selectedSongIndex,
-                    isSelectedLogue,
-                    playersBit
-                } = this.props,
+        dispatch(updatePlayersStore({
+            nextPlayerToRender: getNextPlayerIndexToRender(
+                selectedSongIndex,
+                isSelectedLogue,
+                playersCanPlayThrough
+            )
+        }))
+    }, [playersBit])
 
-                playersCanPlayThrough = getPlayersCanPlayThroughFromBit(
-                    playersBit
-                )
-
-            this.props.updatePlayersStore({
-                nextPlayerToRender: getNextPlayerIndexToRender(
-                    selectedSongIndex,
-                    isSelectedLogue,
-                    playersCanPlayThrough
-                )
-            })
-        }
-    }
-
-    render() {
-        return null
-    }
+    return null
 }
 
-export default connect(
-    mapStateToProps,
-    {
-        updatePlayersStore,
-        resetAudioQueue
-    }
-)(PlayerListener)
+PlayerListener.propTypes = {
+    handleSelectPlayer: PropTypes.func.isRequired
+}
+
+export default PlayerListener
