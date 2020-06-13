@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
 import AppLoadListener from '../../listeners/AppLoad'
-import AudioListener from '../../listeners/Audio'
 import DotsSlideListener from '../../handlers/DotsSlide/Listener'
 import LyricListener from '../../handlers/Lyric/Listener'
 import LyricIndicesListener from '../../listeners/LyricIndices'
@@ -35,7 +34,6 @@ const ListenContainer = () => {
             <AnnotationAccessListener />
             <AnnotationListener />
             <AppLoadListener />
-            <AudioListener />
             <DotsSlideListener />
             <LyricListener />
             <LyricIndicesListener />

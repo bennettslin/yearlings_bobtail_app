@@ -19,7 +19,8 @@ export default (
         case SLIDER_STORE: {
             const { isSliderTouched } = payload
             return hasKey(isSliderTouched) && isSliderTouched ?
-                ACTIVATED_DEFAULTS : state
+                ACTIVATED_DEFAULTS :
+                state
         }
         default:
             return state

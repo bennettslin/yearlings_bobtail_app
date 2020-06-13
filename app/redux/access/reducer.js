@@ -22,20 +22,17 @@ export default (
             }
         case SLIDER_STORE: {
             const { isSliderTouched } = payload
-            return {
+            return hasKey(isSliderTouched) && isSliderTouched ? {
                 ...state,
-                ...hasKey(isSliderTouched) && isSliderTouched && {
-                    isAccessOn: false
-                }
-            }
+                isAccessOn: false
+            } : state
         }
         case VIEWPORT_STORE: {
             const { canCarouselMount } = payload
-            return {
+            return hasKey(canCarouselMount) && !canCarouselMount ? {
                 ...state,
-                ...hasKey(canCarouselMount) && !canCarouselMount &&
-                    ACCESS_NAV_DEFAULTS
-            }
+                ...ACCESS_NAV_DEFAULTS
+            } : state
         }
         default:
             return state

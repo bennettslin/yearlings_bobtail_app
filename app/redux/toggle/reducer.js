@@ -39,13 +39,11 @@ export default (
         }
         case VIEWPORT_STORE: {
             const { canCarouselMount } = payload
-            return {
+            return hasKey(canCarouselMount) && !canCarouselMount ? {
                 ...state,
-                ...hasKey(canCarouselMount) && !canCarouselMount && {
-                    isCarouselShown: false,
-                    isNavShown: false
-                }
-            }
+                isCarouselShown: false,
+                isNavShown: false
+            } : state
         }
         default:
             return state

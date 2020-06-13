@@ -1,5 +1,5 @@
 # Friday
-* Be strategic about where store values should live for option, session, and toggle, and have separate actions. Maybe combine dots and dotsSlide stores.
+* Be strategic about where store values should live for option, and toggle, and have separate actions. Maybe combine dots and dotsSlide stores.
 * Make verseBars a bit number.
 * Don't listen for scroll in logue.
 

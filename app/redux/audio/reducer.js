@@ -18,12 +18,10 @@ export default (
             }
         case SELECTED_STORE: {
             const { isSelectedLogue } = payload
-            return {
+            return hasKey(isSelectedLogue) && isSelectedLogue ? {
                 ...state,
-                ...hasKey(isSelectedLogue) && isSelectedLogue && {
-                    isPlaying: false
-                }
-            }
+                isPlaying: false
+            } : state
         }
         default:
             return state
