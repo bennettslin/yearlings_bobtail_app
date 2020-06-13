@@ -7,7 +7,7 @@ import {
     updateAccessStore,
     resetAccessedNav
 } from '../../../redux/access/action'
-import { updateSessionStore } from '../../../redux/session/action'
+import { updateShownNavBookIndex } from '../../../redux/session/action'
 import { getBookForSongIndex } from '../../../api/album/songs'
 import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
 import { mapIsNavShown } from '../../../redux/toggle/selectors'
@@ -31,7 +31,7 @@ class NavListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
         resetAccessedNav: PropTypes.func.isRequired,
-        updateSessionStore: PropTypes.func.isRequired
+        updateShownNavBookIndex: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -58,9 +58,9 @@ class NavListener extends PureComponent {
             this.props.updateAccessStore({
                 accessedNavIndex: selectedSongIndex
             })
-            this.props.updateSessionStore({
-                shownNavBookIndex: getBookForSongIndex(selectedSongIndex)
-            })
+            this.props.updateShownNavBookIndex(getBookForSongIndex(
+                selectedSongIndex
+            ))
 
         } else if (
             // Nav is now hidden.
@@ -79,7 +79,7 @@ export default connect(
     mapStateToProps,
     {
         updateAccessStore,
-        updateSessionStore,
+        updateShownNavBookIndex,
         resetAccessedNav
     }
 )(NavListener)

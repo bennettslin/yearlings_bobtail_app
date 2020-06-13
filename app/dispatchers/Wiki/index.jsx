@@ -1,6 +1,6 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateSessionStore } from '../../redux/session/action'
+import { updateWikiIndices } from '../../redux/session/action'
 import { mapReferenceDot } from '../../redux/dots/selectors'
 
 const WikiDispatcher = forwardRef((props, ref) => {
@@ -10,16 +10,16 @@ const WikiDispatcher = forwardRef((props, ref) => {
 
     const dispatchWiki = (
         selectedWikiIndex,
-        carouselAnnotationIndex = 0
+        wikiAnnotationIndex = 0
     ) => {
         // Don't register click if reference dot is deselected.
         if (!isWikiDotSelected) {
             return false
         }
 
-        dispatch(updateSessionStore({
+        dispatch(updateWikiIndices({
             selectedWikiIndex,
-            carouselAnnotationIndex
+            wikiAnnotationIndex
         }))
         return true
     }

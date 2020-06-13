@@ -12,6 +12,6 @@ export const mapSelectedWikiIndex = (
     { [SESSION_STORE]: { selectedWikiIndex } }
 ) => selectedWikiIndex
 
-export const mapCarouselAnnotationIndex = (
-    { [SESSION_STORE]: { carouselAnnotationIndex } }
-) => carouselAnnotationIndex
+export const mapWikiAnnotationIndex = (
+    { [SESSION_STORE]: { wikiAnnotationIndex } }
+) => wikiAnnotationIndex

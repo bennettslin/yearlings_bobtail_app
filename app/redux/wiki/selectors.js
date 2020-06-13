@@ -7,7 +7,7 @@ import {
 } from '../viewport/selectors'
 import {
     mapSelectedWikiIndex,
-    mapCarouselAnnotationIndex
+    mapWikiAnnotationIndex
 } from '../session/selectors'
 import {
     mapSelectedSongIndex,
@@ -33,19 +33,19 @@ const mapIsMobileWiki = createSelector(
 
 export const mapSelectedWikiUrl = createSelector(
     mapSelectedWikiIndex,
-    mapCarouselAnnotationIndex,
+    mapWikiAnnotationIndex,
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex,
     mapIsMobileWiki,
     (
         selectedWikiIndex,
-        carouselAnnotationIndex,
+        wikiAnnotationIndex,
         selectedSongIndex,
         selectedAnnotationIndex,
         isMobileWiki
     ) => getWikiUrl({
         selectedWikiIndex,
-        carouselAnnotationIndex,
+        wikiAnnotationIndex,
         selectedSongIndex,
         selectedAnnotationIndex,
         isMobileWiki

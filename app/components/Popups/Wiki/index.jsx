@@ -3,7 +3,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
-import { resetWiki } from '../../../redux/session/action'
+import { updateWikiIndices } from '../../../redux/session/action'
 import { mapIsWikiShown } from '../../../redux/wiki/selectors'
 
 const WikiPopup = () => {
@@ -12,7 +12,7 @@ const WikiPopup = () => {
         isWikiShown = useSelector(mapIsWikiShown)
 
     const handleCloseClick = () => {
-        dispatch(resetWiki())
+        dispatch(updateWikiIndices())
     }
 
     return (

@@ -70,10 +70,7 @@ const TextLyricAnchor = forwardRef(({
         stopPropagation.current(e)
 
         if (wikiIndex) {
-            return dispatchWiki.current(
-                wikiIndex,
-                wikiAnnotationIndex
-            )
+            return dispatchWiki.current(wikiIndex, wikiAnnotationIndex)
         }
 
         if (annotationIndex) {

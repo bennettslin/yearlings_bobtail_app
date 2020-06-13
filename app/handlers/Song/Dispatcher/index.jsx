@@ -13,6 +13,7 @@ import { getStartTimeForVerse } from '../../../api/album/time'
 import { getSceneIndexForVerse } from '../../../api/album/verses'
 import { getSongsAndLoguesCount } from '../../../api/album/songs'
 import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
+import { updateWikiIndices } from '../../../redux/session/action'
 
 const SongDispatcher = forwardRef((props, ref) => {
     const
@@ -59,6 +60,7 @@ const SongDispatcher = forwardRef((props, ref) => {
                 selectedVerseIndex
             )
 
+        dispatch(updateWikiIndices())
         dispatch(updateSelectedStore({
             selectedSongIndex: nextSongIndex,
             selectedVerseIndex,

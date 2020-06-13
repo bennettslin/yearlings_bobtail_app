@@ -7,7 +7,7 @@ import { forwardRef, useImperativeHandle, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { updateOptionStore } from '../../redux/option/action'
-import { resetWiki } from '../../redux/session/action'
+import { updateWikiIndices } from '../../redux/session/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import {
     updateToggleStore,
@@ -53,7 +53,7 @@ const CloseHandler = forwardRef((props, ref) => {
     } = {}) => {
         // If popup is open, close it and do nothing else.
         if (isWikiShown && !exemptWiki) {
-            dispatch(resetWiki())
+            dispatch(updateWikiIndices())
 
         } else if (isScoreShown && !exemptScore) {
             dispatch(updateToggleStore({ isScoreShown: false }))

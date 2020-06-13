@@ -5,7 +5,7 @@ import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { resetWiki } from '../../../redux/session/action'
+import { updateWikiIndices } from '../../../redux/session/action'
 import AboutDispatcher from '../../../dispatchers/About'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOption'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
@@ -166,7 +166,7 @@ const LetterManager = forwardRef((props, ref) => {
 
         // Close wiki popup.
         } else if (isWikiShown) {
-            dispatch(resetWiki())
+            dispatch(updateWikiIndices())
 
         // Close tips popup.
         } else if (isTipsShown) {

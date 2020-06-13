@@ -1,6 +1,6 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateSessionStore } from '../../../redux/session/action'
+import { updateShownNavBookIndex } from '../../../redux/session/action'
 import { mapShowSingleNavBook } from '../../../redux/nav/selectors'
 import { mapShownNavBookIndex } from '../../../redux/session/selectors'
 import { mapIsNavShown } from '../../../redux/toggle/selectors'
@@ -22,9 +22,7 @@ const NavDispatcher = forwardRef((props, ref) => {
         }
 
         // Always just a simple toggle.
-        dispatch(updateSessionStore({
-            shownNavBookIndex: (shownNavBookIndex + 1) % 2
-        }))
+        dispatch(updateShownNavBookIndex((shownNavBookIndex + 1) % 2))
         return true
     }
 

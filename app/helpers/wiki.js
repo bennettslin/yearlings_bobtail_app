@@ -4,7 +4,7 @@ export const getWikiUrl = ({
     selectedSongIndex,
     selectedWikiIndex,
     selectedAnnotationIndex,
-    carouselAnnotationIndex,
+    wikiAnnotationIndex,
     isMobileWiki
 
 }) => {
@@ -12,7 +12,7 @@ export const getWikiUrl = ({
         // Since annotation index is 1-based, it's invalid if 0.
         const
             annotationIndex =
-                carouselAnnotationIndex ||
+                wikiAnnotationIndex ||
                 selectedAnnotationIndex,
 
             annotationWikiWormholes = getWikiWormholesForAnnotation(

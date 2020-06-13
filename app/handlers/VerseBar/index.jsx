@@ -55,7 +55,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         // Check for verse element in case we are loading from a logue.
         if (verseElement) {
 
-            // TODO: Make this a selector.
+            // TODO: Make this a selector. Maybe by making a bit number?
             const {
                 isVerseBarAbove,
                 isVerseBarBelow

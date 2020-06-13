@@ -7,7 +7,7 @@ const STORED_AUDIO_OPTION_INDEX = getAudioOptionFromStorage()
 
 export const SESSION_WIKI_DEFAULTS = {
     selectedWikiIndex: 0,
-    carouselAnnotationIndex: 0
+    wikiAnnotationIndex: 0
 }
 
 export const SESSION_DEFAULTS = {
