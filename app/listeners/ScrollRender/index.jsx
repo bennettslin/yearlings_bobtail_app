@@ -1,8 +1,5 @@
-// Singleton to listen for song change.
-
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import {
     mapDidCarouselEnter,
     mapDidLyricEnter
@@ -14,93 +11,37 @@ import {
     mapIsSelectedLogue
 } from '../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const ScrollRenderListener = () => {
     const
-        didCarouselEnter = mapDidCarouselEnter(state),
-        didLyricEnter = mapDidLyricEnter(state),
-        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
-        isSelectedLogue = mapIsSelectedLogue(state)
+        dispatch = useDispatch(),
+        didCarouselEnter = useSelector(mapDidCarouselEnter),
+        didLyricEnter = useSelector(mapDidLyricEnter),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        isSelectedLogue = useSelector(mapIsSelectedLogue)
 
-    return {
-        isSelectedLogue,
-        didCarouselEnter,
-        didLyricEnter,
-        selectedAnnotationIndex
-    }
-}
-
-class ScrollRenderListener extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isSelectedLogue: PropTypes.bool.isRequired,
-        didCarouselEnter: PropTypes.bool.isRequired,
-        didLyricEnter: PropTypes.bool.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        updateScrollCarouselStore: PropTypes.func.isRequired,
-        updateScrollLyricStore: PropTypes.func.isRequired
-    }
-
-    componentDidUpdate(prevProps) {
-        this._checkCarouselEntered(prevProps)
-        this._checkLyricEntered(prevProps)
-    }
-
-    _checkCarouselEntered = (prevProps) => {
-        const
-            {
-                isSelectedLogue,
-                didCarouselEnter
-            } = this.props,
-            { didCarouselEnter: hadCarouselEntered } = prevProps
-
-        if (
-            !isSelectedLogue
-            && didCarouselEnter
-            && !hadCarouselEntered
-        ) {
-            const { selectedAnnotationIndex } = this.props
-
-            // Scroll to carousel annotation if toggled on.
-            this.props.updateScrollCarouselStore({
+    useEffect(() => {
+        if (!isSelectedLogue && didCarouselEnter) {
+            dispatch(updateScrollCarouselStore({
                 scrollCarouselLog: 'Carousel entered.',
                 scrollCarouselIndex: selectedAnnotationIndex,
                 scrollCarouselNoDuration: true
-            })
+            }))
         }
-    }
+    }, [didCarouselEnter])
 
-    _checkLyricEntered = (prevProps) => {
-        const
-            {
-                isSelectedLogue,
-                didLyricEnter
-            } = this.props,
-            { didLyricEnter: hadLyricEntered } = prevProps
-
-        if (
-            !isSelectedLogue
-            && didLyricEnter
-            && !hadLyricEntered
-        ) {
-            this.props.updateScrollLyricStore({
+    useEffect(() => {
+        if (!isSelectedLogue && didLyricEnter) {
+            dispatch(updateScrollLyricStore({
                 scrollLyricLog: 'Lyric entered.',
                 scrollLyricByVerse: true,
                 scrollLyricNoDuration: true,
                 scrollLyricAlways: true,
                 queuedSceneChangeExitScrollCallback: true
-            })
+            }))
         }
-    }
-    render() {
-        return null
-    }
+    }, [didLyricEnter])
+
+    return null
 }
 
-export default connect(
-    mapStateToProps,
-    {
-        updateScrollCarouselStore,
-        updateScrollLyricStore
-    }
-)(ScrollRenderListener)
+export default ScrollRenderListener
