@@ -1,78 +1,63 @@
 // Hidden component to wrap an audio DOM element.
-
-import React, { PureComponent } from 'react'
+import React, {
+    forwardRef,
+    useImperativeHandle,
+    useEffect,
+    useRef,
+    useState
+} from 'react'
 import PropTypes from 'prop-types'
+import { useDispatch, useSelector } from 'react-redux'
 import ReactAudioPlayer from 'react-audio-player'
+import {
+    logPause,
+    logIgnoreSubsequentPause,
+    logPlayPromise,
+    logIgnoreSubsequentPromise,
+    logPlayPromiseSuccess,
+    logPlayPromiseFailure,
+    logEndByPlayer
+} from './helpers/log'
+import { updatePlayersStore } from '../../../../redux/players/action'
+import { getMapPlayerPausedTime } from '../../../../redux/players/selectors'
 
-class Player extends PureComponent {
+const Player = forwardRef(({
+    // TODO: Get these from selector.
+    mp3,
+    songIndex,
+    isSelected,
 
-    static propTypes = {
-        // From parent.
-        mp3: PropTypes.string.isRequired,
-        songIndex: PropTypes.number.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        updateCurrentTime: PropTypes.func.isRequired,
-        updateEnded: PropTypes.func.isRequired,
-        setPlayerRef: PropTypes.func.isRequired,
-        dispatchPlayerCanPlayThrough: PropTypes.func.isRequired,
-        setSelectedPlayerIsPlaying: PropTypes.func.isRequired
+    updateCurrentTime,
+    updateEnded,
+    dispatchPlayerCanPlayThrough,
+    setSelectedPlayerIsPlaying
+
+}, ref) => {
+    const
+        // TODO: This is just for debugging, for now.
+        dispatch = useDispatch(),
+        audioPlayerElement = useRef(),
+        playerPausedTime = useSelector(getMapPlayerPausedTime(songIndex)),
+        [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
+
+    const setCurrentTime = () => {
+        audioPlayerElement.current.currentTime = playerPausedTime
+
+        // TODO: This is just for debugging, for now.
+        dispatch(updatePlayersStore({
+            [`player${songIndex}`]: playerPausedTime
+        }))
+
     }
 
-    state = { isPromisingToPlay: false }
-
-    componentDidMount() {
-        this.props.setPlayerRef(this, this.props.songIndex)
-
-        // Tell app that player can now be played without interruption.
-        this.audioPlayer.addEventListener(
-
-            /**
-             * This is effectively the same as canplaythrough. iOS doesn't fire
-             * canplaythrough.
-             */
-            'suspend',
-            this._handleSuspendEvent
-        )
-
-        // Tell app the current player time.
-        this.audioPlayer.addEventListener(
-            'timeupdate',
-            this._handleTimeUpdateEvent
-        )
-
-        // Tell app the player has ended.
-        this.audioPlayer.addEventListener(
-            'ended',
-            this._handleEndedEvent
-        )
-    }
-
-    componentDidUpdate() {
-        // Tell recently unselected player to stop playing.
-        if (!this.props.isSelected) {
-            this.askToPause()
-        }
-    }
-
-    setCurrentTime(currentTime = 0) {
+    const askToPause = () => {
         // Can be called by player manager.
-        this.audioPlayer.currentTime = currentTime
-    }
-
-    askToPause({ currentTime } = {}) {
-        // Can be called by player manager.
-        const { songIndex } = this.props
-
         /**
          * There's a promise to play still out there, so we'll pause it when
          * the promise is returned, not here.
          */
-        if (this.state.isPromisingToPlay) {
-            logPlayer({
-                log: `Ignoring subsequent request to pause ${songIndex}.`,
-                action: 'ignoreSubsequentPause',
-                label: songIndex
-            })
+        if (isPromisingToPlay) {
+            logIgnoreSubsequentPause(songIndex)
             return
         }
 
@@ -81,46 +66,50 @@ class Player extends PureComponent {
          * selected to begin with because the timeout was cleared too soon. So
          * make sure the player is actually playing before pausing it.
          */
-        if (!this.audioPlayer.paused) {
-            logPlayer({
-                log: `Player ${songIndex} paused.`,
-                action: 'pause',
-                label: songIndex
-            })
-
-            this.audioPlayer.pause()
+        if (!audioPlayerElement.current.paused) {
+            logPause(songIndex)
+            audioPlayerElement.current.pause()
 
             /**
              * If still selected, reset time to selected verse. Otherwise, reset
              * time to start of song.
              */
-            this.setCurrentTime(currentTime)
+            setCurrentTime()
         }
     }
 
-    promiseToPlay() {
-        // Only called by player manager.
-        const { songIndex } = this.props
+    const _handlePlayPromise = isPlaying => {
+        setSelectedPlayerIsPlaying({
+            isPlaying,
+            songIndex
+        })
+        setIsPromisingToPlay(false)
+    }
 
+    const _handlePlayPromiseSuccess = () => {
+        logPlayPromiseSuccess(songIndex)
+        _handlePlayPromise(true)
+    }
+
+    const _handlePlayPromiseFailure = error => {
+        logPlayPromiseFailure(songIndex, error)
+        _handlePlayPromise(false)
+    }
+
+    const promiseToPlay = () => {
+        // Only called by player manager.
         /**
          * There's a promise to play still out there, so do nothing.
          */
-        if (this.state.isPromisingToPlay) {
-            logPlayer({
-                log: `Ignoring subsequent promise to play ${songIndex}.`,
-                action: 'ignoreSubsequentPromise',
-                label: songIndex
-            })
+        if (isPromisingToPlay) {
+            logIgnoreSubsequentPromise(songIndex)
             return
         }
 
-        const playPromise = this.audioPlayer.play()
+        setCurrentTime()
+        const playPromise = audioPlayerElement.current.play()
 
-        logPlayer({
-            log: `Promising to play ${this.props.songIndex}\u2026`,
-            action: 'promisePlay',
-            label: songIndex
-        })
+        logPlayPromise(songIndex)
 
         /**
          * Browser supports the return of a promise:
@@ -128,97 +117,102 @@ class Player extends PureComponent {
          */
         if (playPromise !== undefined) {
             playPromise
-                .then(this._handlePlayPromiseSuccess)
-                .catch(this._handlePlayPromiseFailure)
+                .then(_handlePlayPromiseSuccess)
+                .catch(_handlePlayPromiseFailure)
 
         } else {
-            this.props.setSelectedPlayerIsPlaying({
+            setSelectedPlayerIsPlaying({
                 isPlaying: true,
                 songIndex
             })
         }
 
-        this.setState({ isPromisingToPlay: true })
+        setIsPromisingToPlay(true)
     }
 
-    _handlePlayPromiseSuccess = () => {
-        const { songIndex } = this.props
-        logPlayer({
-            log: `Promise to play ${songIndex} succeeded.`,
-            action: 'play',
-            label: songIndex,
-            success: true
-        })
-
-        this.props.setSelectedPlayerIsPlaying({
-            isPlaying: true,
-            songIndex
-        })
-
-        this.setState({ isPromisingToPlay: false })
+    const _handleSuspendEvent = () => {
+        dispatchPlayerCanPlayThrough(songIndex)
     }
 
-    _handlePlayPromiseFailure = (error) => {
-        const { songIndex } = this.props
-        logError({
-            log: `Promise to play ${songIndex} failed: ${error}`,
-            action: 'promisePlay',
-            label: `song: ${songIndex}, error: ${error}`
-        })
-
-        this.props.setSelectedPlayerIsPlaying({
-            isPlaying: false,
-            songIndex
-        })
-
-        this.setState({ isPromisingToPlay: false })
-    }
-
-    _handleSuspendEvent = () => {
-        this.props.dispatchPlayerCanPlayThrough(this.props.songIndex)
-    }
-
-    _handleTimeUpdateEvent = () => {
+    const _handleTimeUpdateEvent = () => {
         const {
             currentTime,
             paused
-        } = this.audioPlayer
+        } = audioPlayerElement.current
 
         if (!paused) {
-            const { songIndex } = this.props
-
-            this.props.updateCurrentTime({
+            updateCurrentTime({
                 currentTime,
                 currentSongIndex: songIndex
             })
         }
     }
 
-    _handleEndedEvent = () => {
-        const { songIndex } = this.props
-
-        logPlayer({
-            log: `Player for ${songIndex} ended itself.`,
-            action: 'endByPlayer',
-            label: songIndex
-        })
-        this.props.updateEnded()
+    const _handleEndedEvent = () => {
+        logEndByPlayer(songIndex)
+        updateEnded()
     }
 
-    _setAudioPlayerRef = node => {
-        this.audioPlayer = node.audioEl.current
+    const setRef = node => {
+        if (node) {
+            audioPlayerElement.current = node.audioEl.current
+        }
     }
 
-    render() {
-        return (
-            <ReactAudioPlayer
-                {...{
-                    ref: this._setAudioPlayerRef,
-                    src: this.props.mp3
-                }}
-            />
+    useEffect(() => {
+        // Tell app that player can now be played without interruption.
+        audioPlayerElement.current.addEventListener(
+            /**
+             * This is effectively the same as canplaythrough. iOS doesn't fire
+             * canplaythrough.
+             */
+            'suspend',
+            _handleSuspendEvent
         )
-    }
+
+        // Tell app the current player time.
+        audioPlayerElement.current.addEventListener(
+            'timeupdate',
+            _handleTimeUpdateEvent
+        )
+
+        // Tell app the player has ended.
+        audioPlayerElement.current.addEventListener(
+            'ended',
+            _handleEndedEvent
+        )
+    }, [])
+
+    useEffect(() => {
+        // Tell recently unselected player to stop playing.
+        if (!isSelected) {
+            askToPause()
+        }
+    }, [isSelected])
+
+    useImperativeHandle(ref, () => ({
+        promiseToPlay,
+        askToPause,
+        songIndex
+    }))
+    return (
+        <ReactAudioPlayer
+            {...{
+                ref: setRef,
+                src: mp3
+            }}
+        />
+    )
+})
+
+Player.propTypes = {
+    mp3: PropTypes.string.isRequired,
+    songIndex: PropTypes.number.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    updateCurrentTime: PropTypes.func.isRequired,
+    updateEnded: PropTypes.func.isRequired,
+    dispatchPlayerCanPlayThrough: PropTypes.func.isRequired,
+    setSelectedPlayerIsPlaying: PropTypes.func.isRequired
 }
 
 export default Player

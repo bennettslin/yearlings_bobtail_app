@@ -45,7 +45,3 @@ export const getBitFromPlayerCanPlayThrough = ({
         trueFalseObject
     })
 }
-
-export const getStoreKeyForPlayer = songIndex => {
-    return `player${songIndex}`
-}

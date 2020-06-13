@@ -1,7 +1,11 @@
 import { createSelector } from 'reselect'
-import { mapSelectedSongIndex } from '../selected/selectors'
+import {
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex
+} from '../selected/selectors'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { PLAYERS_STORE } from '../../constants/store'
+import { getStartTimeForVerse } from '../../api/album/time'
 
 export const mapPlayersBit = (
     { [PLAYERS_STORE]: { playersBit } }
@@ -20,5 +24,42 @@ export const mapPlayerCanPlayThrough = createSelector(
     ) => getPlayerCanPlayThroughFromBit(
         selectedSongIndex,
         playersBit
+    )
+)
+
+export const getMapPlayerShouldRender = songIndex => createSelector(
+    mapPlayersBit,
+    mapNextPlayerToRender,
+    (
+        playersBit,
+        nextPlayerToRender
+    ) => (
+        // Render player if it has already passed canPlayThrough...
+        getPlayerCanPlayThroughFromBit(
+            songIndex,
+            playersBit
+        ) ||
+
+        // Or if it is next in the queue to be rendered.
+        songIndex === nextPlayerToRender
+    )
+)
+
+export const getMapPlayerPausedTime = songIndex => createSelector(
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex,
+    (
+        selectedSongIndex,
+        selectedVerseIndex
+    ) => (
+        songIndex === selectedSongIndex ?
+
+            // If player is selected, get current time from selected verse.
+            getStartTimeForVerse(
+                selectedSongIndex,
+                selectedVerseIndex
+
+            // Otherwise, set it to zero.
+            ) : 0
     )
 )

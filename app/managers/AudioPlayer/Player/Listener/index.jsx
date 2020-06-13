@@ -8,7 +8,6 @@ import { getNextPlayerIndexToRender } from './helper'
 import {
     mapQueuedPlayFromLogue,
     mapQueuedPlaySongIndex,
-    mapQueuedPlayVerseIndex,
     mapIsSelectPlayReady
 } from '../../../../redux/audio/selectors'
 import { mapPlayersBit } from '../../../../redux/players/selectors'
@@ -22,7 +21,6 @@ const PlayerListener = ({ handleSelectPlayer }) => {
         dispatch = useDispatch(),
         queuedPlayFromLogue = useSelector(mapQueuedPlayFromLogue),
         queuedPlaySongIndex = useSelector(mapQueuedPlaySongIndex),
-        queuedPlayVerseIndex = useSelector(mapQueuedPlayVerseIndex),
         isSelectPlayReady = useSelector(mapIsSelectPlayReady),
         playersBit = useSelector(mapPlayersBit),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
@@ -36,8 +34,7 @@ const PlayerListener = ({ handleSelectPlayer }) => {
              */
             handleSelectPlayer({
                 isPlayFromLogue: queuedPlayFromLogue,
-                nextSongIndex: queuedPlaySongIndex,
-                nextVerseIndex: queuedPlayVerseIndex
+                nextSongIndex: queuedPlaySongIndex
             })
 
             dispatch(resetAudioQueue())

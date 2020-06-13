@@ -19,7 +19,8 @@ import {
 import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
     mapPlayersBit,
-    mapNextPlayerToRender
+    mapNextPlayerToRender,
+    getMapPlayerShouldRender
 } from '../../../redux/players/selectors'
 import {
     mapSelectedSongIndex,
@@ -49,8 +50,7 @@ const mapStateToProps = state => {
 // Kind of silly, but easiest approach for now.
 const LOGUE_DUMMY_PLAYER = {
     promiseToPlay() {},
-    askToPause() {},
-    setCurrentTime() {}
+    askToPause() {}
 }
 
 class PlayerManager extends PureComponent {
@@ -73,11 +73,14 @@ class PlayerManager extends PureComponent {
 
     // Initialise player refs.
     players = {}
+    playerChildren = {}
 
+    // Forward this ref.
     componentDidMount() {
         this.props.getToggleSelectedPlayer(this.toggleSelectedPlayer)
     }
 
+    // TODO: Get this from selector
     _playerShouldRender(songIndex) {
         const {
                 playersBit,
@@ -96,10 +99,12 @@ class PlayerManager extends PureComponent {
         )
     }
 
+    // TODO: Pass as ref to child.
     dispatchPlayerCanPlayThrough = songIndex => {
         this.dispatchPlayerCanPlayThrough(songIndex)
     }
 
+    // TODO: Forward this ref.
     toggleSelectedPlayer = ({ isPlaying }) => {
         /**
          * If play is being toggled on, ensure that selected player was able
@@ -119,49 +124,33 @@ class PlayerManager extends PureComponent {
                 songIndex: selectedSongIndex
             })
 
-            return this.getPlayerRef(selectedSongIndex).askToPause({
-
-                // Player manager keeps track of default times of players.
-                currentTime: this.getCurrentTimeForSongIndex()
-            })
+            this.playerChildren[selectedSongIndex].askToPause()
 
         // Playing.
         } else if (isPlaying && !wasPlaying) {
-            return this.askPlayerToBeginPlaying(selectedSongIndex)
+            /**
+             * Play is being toggled on, so don't set in store right away.
+             * Pass callback and wait for successful return.
+             */
+            this.playerChildren[selectedSongIndex].promiseToPlay()
         }
     }
 
     handleSelectPlayer = ({
         isPlayFromLogue,
-        nextSongIndex,
-        nextVerseIndex
+        nextSongIndex
 
     }) => {
-        const nextCurrentTime = getStartTimeForVerse(
-            nextSongIndex,
-            nextVerseIndex
-        )
-
-        // Update selected player's current time.
-        this.getPlayerRef(nextSongIndex).setCurrentTime(nextCurrentTime)
-
         // If playing from logue, begin playing only once player is selected.
         if (this.props.isPlaying || isPlayFromLogue) {
             /**
              * If already playing, begin playing newly selected player.
              */
-            this.askPlayerToBeginPlaying(nextSongIndex)
+            this.playerChildren[nextSongIndex].promiseToPlay()
         }
     }
 
-    askPlayerToBeginPlaying(songIndex) {
-        /**
-         * Play is being toggled on, so don't set in store right away.
-         * Pass callback and wait for successful return.
-         */
-        return this.getPlayerRef(songIndex).promiseToPlay()
-    }
-
+    // TODO: Child can own this entirely.
     setSelectedPlayerIsPlaying = ({
         isPlaying,
         songIndex
@@ -184,10 +173,11 @@ class PlayerManager extends PureComponent {
                 action: 'returnOutdatedPromise',
                 label: songIndex
             })
-            this.getPlayerRef(songIndex).askToPause()
+            this.playerChildren[songIndex].askToPause()
         }
     }
 
+    // TODO: Child can own this as well.
     getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {
         const {
             selectedSongIndex,
@@ -297,20 +287,8 @@ class PlayerManager extends PureComponent {
              * again later, to ensure that the player will not end itself in
              * the interim.
              */
-            this.getPlayerRef(selectedSongIndex).askToPause()
+            this.playerChildren[selectedSongIndex].askToPause()
         }
-    }
-
-    getPlayerRef(songIndex) {
-        return this.players[songIndex] || LOGUE_DUMMY_PLAYER
-    }
-
-    setPlayerRef = (node, songIndex) => {
-        this.players[songIndex] = node
-
-        this.players[songIndex].setCurrentTime(
-            this.getCurrentTimeForSongIndex(songIndex)
-        )
     }
 
     getDispatchPlayerCanPlayThrough = dispatch => {
@@ -319,6 +297,20 @@ class PlayerManager extends PureComponent {
 
     getDispatchTimeVerse = dispatch => {
         this.dispatchTimeVerse = dispatch
+    }
+
+    getPlayer = node => {
+        if (node) {
+            const {
+                promiseToPlay,
+                askToPause,
+                songIndex
+            } = node
+            this.playerChildren[songIndex] = {
+                promiseToPlay,
+                askToPause
+            }
+        }
     }
 
     render() {
@@ -340,12 +332,12 @@ class PlayerManager extends PureComponent {
                         <Player
                             {...{
                                 key: index,
+                                ref: this.getPlayer,
                                 mp3,
                                 songIndex,
                                 isSelected: songIndex === selectedSongIndex,
                                 updateCurrentTime: this.updatePlayerTime,
                                 updateEnded: this.props.handleSongEnd,
-                                setPlayerRef: this.setPlayerRef,
                                 dispatchPlayerCanPlayThrough:
                                     this.dispatchPlayerCanPlayThrough,
                                 setSelectedPlayerIsPlaying:
