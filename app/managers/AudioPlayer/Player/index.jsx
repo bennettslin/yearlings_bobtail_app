@@ -31,7 +31,7 @@ const PlayerManager = forwardRef(({ handleSongEnd }, ref) => {
     const
         dispatch = useDispatch(),
         playerChildren = useRef(),
-        dispatchPlayerCanPlayThrough = useRef(),
+        _dispatchPlayerCanPlayThrough = useRef(),
         dispatchTimeVerse = useRef(),
         isPlaying = useSelector(mapIsPlaying),
         // playerShouldRender = useSelector(getMapPlayerShouldRender(songIndex)),
@@ -113,7 +113,7 @@ const PlayerManager = forwardRef(({ handleSongEnd }, ref) => {
                     action: 'endByUpdatedTime',
                     label: selectedSongIndex
                 })
-                handleSongEnd.current()
+                handleSongEnd()
 
             /**
              * Something weird has happened, so we'll reset the player. This
@@ -135,6 +135,10 @@ const PlayerManager = forwardRef(({ handleSongEnd }, ref) => {
              */
             playerChildren.current[selectedSongIndex].askToPause()
         }
+    }
+
+    const dispatchPlayerCanPlayThrough = songIndex => {
+        _dispatchPlayerCanPlayThrough.current(songIndex)
     }
 
     const setRef = node => {
@@ -171,7 +175,7 @@ const PlayerManager = forwardRef(({ handleSongEnd }, ref) => {
                     }}
                 />
             ))}
-            <PlayerDispatcher {...{ ref: dispatchPlayerCanPlayThrough }} />
+            <PlayerDispatcher {...{ ref: _dispatchPlayerCanPlayThrough }} />
             <TimeVerseDispatcher {...{ ref: dispatchTimeVerse }} />
         </div>
     )

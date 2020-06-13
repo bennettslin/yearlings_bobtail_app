@@ -1,5 +1,4 @@
 # Saturday
-* AudioPlayer refactor
 * Constant renders?!
 * Make sure logue is fine
 * Still weirdness with canPlayThrough

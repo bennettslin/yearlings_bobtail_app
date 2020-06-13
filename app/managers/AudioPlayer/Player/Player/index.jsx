@@ -136,7 +136,7 @@ const Player = forwardRef(({
     }
 
     const _handleSuspendEvent = () => {
-        dispatchPlayerCanPlayThrough.current(songIndex)
+        dispatchPlayerCanPlayThrough(songIndex)
     }
 
     const _handleTimeUpdateEvent = () => {
@@ -151,7 +151,7 @@ const Player = forwardRef(({
 
     const _handleEndedEvent = () => {
         logEndByPlayer(songIndex)
-        handleSongEnd.current()
+        handleSongEnd()
     }
 
     const setRef = node => {
@@ -210,7 +210,7 @@ Player.propTypes = {
     songIndex: PropTypes.number.isRequired,
     updateCurrentTime: PropTypes.func.isRequired,
     handleSongEnd: PropTypes.func.isRequired,
-    dispatchPlayerCanPlayThrough: PropTypes.object.isRequired
+    dispatchPlayerCanPlayThrough: PropTypes.func.isRequired
 }
 
 export default memo(Player)

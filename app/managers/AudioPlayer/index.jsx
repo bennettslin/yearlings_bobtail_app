@@ -5,20 +5,28 @@ import PlayerManager from './Player'
 
 const AudioPlayerManager = () => {
     const
-        handleSongEnd = useRef(),
-        toggleSelectedPlayer = useRef()
+        _handleSongEnd = useRef(),
+        _toggleSelectedPlayer = useRef()
+
+    const handleSongEnd = () => {
+        _handleSongEnd.current()
+    }
+
+    const toggleSelectedPlayer = isPlaying => {
+        _toggleSelectedPlayer.current(isPlaying)
+    }
 
     return (
         <>
             <AudioManager
                 {...{
-                    ref: handleSongEnd,
+                    ref: _handleSongEnd,
                     toggleSelectedPlayer
                 }}
             />
             <PlayerManager
                 {...{
-                    ref: toggleSelectedPlayer,
+                    ref: _toggleSelectedPlayer,
                     handleSongEnd
                 }}
             />
