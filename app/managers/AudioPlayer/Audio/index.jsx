@@ -1,6 +1,7 @@
-import React, { PureComponent } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useImperativeHandle, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateAudioStore } from '../../../redux/audio/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import {
@@ -15,83 +16,21 @@ import {
 import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
 import { mapAudioOptionIndex } from '../../../redux/session/selectors'
 
-const mapStateToProps = state => {
+const AudioManager = forwardRef(({ toggleSelectedPlayer }, ref) => {
     const
-        isPlaying = mapIsPlaying(state),
-        queuedTogglePlay = mapQueuedTogglePlay(state),
-        selectedSongIndex = mapSelectedSongIndex(state),
-        audioOptionIndex = mapAudioOptionIndex(state)
+        dispatch = useDispatch(),
+        dispatchSong = useRef(),
+        isPlaying = useSelector(mapIsPlaying),
+        queuedTogglePlay = useSelector(mapQueuedTogglePlay),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        audioOptionIndex = useSelector(mapAudioOptionIndex)
 
-    return {
-        isPlaying,
-        queuedTogglePlay,
-        audioOptionIndex,
-        selectedSongIndex
-    }
-}
-
-class AudioManager extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isPlaying: PropTypes.bool.isRequired,
-        queuedTogglePlay: PropTypes.bool.isRequired,
-        audioOptionIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        updateAudioStore: PropTypes.func.isRequired,
-        updateScrollLyricStore: PropTypes.func.isRequired,
-
-        // From parent.
-        getHandleSongEnd: PropTypes.func.isRequired,
-        toggleSelectedPlayer: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this.props.getHandleSongEnd(this.handleSongEnd)
-    }
-
-    componentDidUpdate(prevProps) {
-        this._checkTogglePlay(prevProps)
-    }
-
-    _checkTogglePlay(prevProps) {
-        const
-            { queuedTogglePlay } = this.props,
-            { queuedTogglePlay: prevTogglePlay } = prevProps
-
-        if (queuedTogglePlay && !prevTogglePlay) {
-            this._togglePlay()
-
-            this.props.updateAudioStore({ queuedTogglePlay: false })
-        }
-    }
-
-    _togglePlay() {
-        const isPlaying = !this.props.isPlaying
-
-        // Player manager will decide whether to set isPlaying in store.
-        this.props.toggleSelectedPlayer({ isPlaying })
-
-        if (isPlaying) {
-            this.props.updateScrollLyricStore({
-                scrollLyricLog: 'Playing on.',
-                scrollLyricByVerse: true,
-                scrollLyricAlways: true
-            })
-        }
-    }
-
-    handleSongEnd = () => {
+    const handleSongEnd = () => {
         /**
          * When selecting next song through audio player, reset annotation and
          * verse, and scroll element into view, but do not access nav section.
          */
-        const {
-                selectedSongIndex,
-                audioOptionIndex
-            } = this.props,
-
-            selectedAudioOption = AUDIO_OPTIONS[audioOptionIndex]
+        const selectedAudioOption = AUDIO_OPTIONS[audioOptionIndex]
 
         /**
          * If option is to continue, advance to next song. Otherwise, stay on
@@ -100,26 +39,37 @@ class AudioManager extends PureComponent {
         const nextSongIndex = selectedSongIndex
             + (selectedAudioOption === CONTINUE)
 
-        this.dispatchSong({
+        dispatchSong.current({
             selectedSongIndex: nextSongIndex
         })
     }
 
-    getDispatchSong = dispatch => {
-        this.dispatchSong = dispatch
-    }
+    useEffect(() => {
+        if (queuedTogglePlay) {
+            const nextIsPlaying = !isPlaying
 
-    render() {
-        return (
-            <SongDispatcher {...{ ref: this.getDispatchSong }} />
-        )
-    }
+            // Player manager will decide whether to set isPlaying in store.
+            toggleSelectedPlayer({ isPlaying: nextIsPlaying })
+
+            if (nextIsPlaying) {
+                dispatch(updateScrollLyricStore({
+                    scrollLyricLog: 'Playing on.',
+                    scrollLyricByVerse: true,
+                    scrollLyricAlways: true
+                }))
+            }
+            dispatch(updateAudioStore({ queuedTogglePlay: false }))
+        }
+    }, [queuedTogglePlay])
+
+    useImperativeHandle(ref, () => handleSongEnd)
+    return (
+        <SongDispatcher {...{ ref: dispatchSong }} />
+    )
+})
+
+AudioManager.propTypes = {
+    toggleSelectedPlayer: PropTypes.func.isRequired
 }
 
-export default connect(
-    mapStateToProps,
-    {
-        updateAudioStore,
-        updateScrollLyricStore
-    }
-)(AudioManager)
+export default AudioManager

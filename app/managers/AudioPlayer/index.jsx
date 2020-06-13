@@ -14,7 +14,7 @@ class AudioPlayerManager extends PureComponent {
         this.handleSongEnd()
     }
 
-    setHandleSongEnd = dispatch => {
+    getHandleSongEnd = dispatch => {
         this.handleSongEnd = dispatch
     }
 
@@ -27,7 +27,7 @@ class AudioPlayerManager extends PureComponent {
             <>
                 <AudioManager
                     {...{
-                        getHandleSongEnd: this.setHandleSongEnd,
+                        ref: this.getHandleSongEnd,
                         toggleSelectedPlayer: this.callToggleSelectedPlayer
                     }}
                 />
