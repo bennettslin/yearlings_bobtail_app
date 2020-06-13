@@ -1,16 +1,10 @@
-import mp3s from '../../../../assets/mp3s'
-
 import { getVerseCountForSong } from '../../../api/album/verses'
 import {
     getStartTimeForVerse,
     getEndTimeForVerse
 } from '../../../api/album/time'
 
-export const getMp3s = () => (
-    mp3s
-)
-
-export const getNextVerseIndex = (
+const getNextVerseIndex = (
     songIndex,
     verseIndex
 ) => {
@@ -25,7 +19,7 @@ export const getNextVerseIndex = (
         null
 }
 
-export const getTimeRelativeToVerseIndex = (
+const getTimeRelativeToVerseIndex = (
     songIndex,
     verseIndex,
     time
@@ -46,5 +40,58 @@ export const getTimeRelativeToVerseIndex = (
 
     } else {
         return 0
+    }
+}
+
+export const getTimeInVerseStatus = ({
+    currentTime,
+    currentSongIndex,
+    selectedSongIndex,
+    selectedVerseIndex,
+    selectedTime
+
+}) => {
+    if (
+        currentTime === selectedTime ||
+        currentSongIndex !== selectedSongIndex
+    ) {
+        return
+    }
+
+    const
+        timeRelativeToSelectedVerse = getTimeRelativeToVerseIndex(
+            selectedSongIndex,
+            selectedVerseIndex,
+            currentTime
+        ),
+
+        isTimeInSelectedVerse = timeRelativeToSelectedVerse === 0
+
+    let nextVerseIndex,
+        isTimeInNextVerse = false
+
+    /**
+     * This value will be 1 if time is after selected verse. In which case,
+     * we will check if it's in the next verse.
+     */
+    if (timeRelativeToSelectedVerse === 1) {
+
+        nextVerseIndex = getNextVerseIndex(
+            selectedSongIndex,
+            selectedVerseIndex
+        )
+
+        isTimeInNextVerse = nextVerseIndex && getTimeRelativeToVerseIndex(
+            selectedSongIndex,
+            nextVerseIndex,
+            currentTime
+        ) === 0
+    }
+
+    return {
+        isTimeInSelectedVerse,
+        isTimeInNextVerse,
+        nextVerseIndex,
+        isEndOfSong: timeRelativeToSelectedVerse === 1 && !nextVerseIndex
     }
 }

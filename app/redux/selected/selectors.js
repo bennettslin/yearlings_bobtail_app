@@ -9,6 +9,11 @@ export const mapSelectedSongIndex = (
     { [SELECTED_STORE]: { selectedSongIndex } }
 ) => selectedSongIndex
 
+export const getMapIsSongSelected = songIndex => createSelector(
+    mapSelectedSongIndex,
+    selectedSongIndex => songIndex === selectedSongIndex
+)
+
 export const mapIsSelectedLogue = (
     { [SELECTED_STORE]: { isSelectedLogue } }
 ) => isSelectedLogue

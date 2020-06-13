@@ -13,6 +13,10 @@ const getSongIndices = () => (
     getArrayOfLength(getSongsAndLoguesCount())
 )
 
+export const getSongNotLogueIndices = () => (
+    getArrayOfLength(getSongsNotLoguesCount(), 1)
+)
+
 export const getIsSongValid = songIndex => {
     const songIndices = getSongIndices(songIndex)
     return songIndices.some(index => index === songIndex)

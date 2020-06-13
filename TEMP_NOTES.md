@@ -1,7 +1,8 @@
-# Friday
-
 # Saturday
 * AudioPlayer refactor
+* Constant renders?!
+* Make sure logue is fine
+* Still weirdness with canPlayThrough
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.

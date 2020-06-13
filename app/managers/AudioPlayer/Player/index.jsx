@@ -9,13 +9,9 @@ import PlayerDispatcher from './Dispatcher'
 import PlayerListener from './Listener'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerse'
 import Player from './Player'
-import { getStartTimeForVerse } from '../../../api/album/time'
+import { getSongNotLogueIndices } from '../../../api/album/songs'
 import { getPlayersCanPlayThroughFromBit } from '../../../helpers/player'
-import {
-    getMp3s,
-    getNextVerseIndex,
-    getTimeRelativeToVerseIndex
-} from './helper'
+import { getTimeInVerseStatus } from './helper'
 import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
     mapPlayersBit,
@@ -72,7 +68,6 @@ class PlayerManager extends PureComponent {
     }
 
     // Initialise player refs.
-    players = {}
     playerChildren = {}
 
     // Forward this ref.
@@ -99,11 +94,6 @@ class PlayerManager extends PureComponent {
         )
     }
 
-    // TODO: Pass as ref to child.
-    dispatchPlayerCanPlayThrough = songIndex => {
-        this.dispatchPlayerCanPlayThrough(songIndex)
-    }
-
     // TODO: Forward this ref.
     toggleSelectedPlayer = ({ isPlaying }) => {
         /**
@@ -117,13 +107,6 @@ class PlayerManager extends PureComponent {
 
         // Pausing.
         if (!isPlaying && wasPlaying) {
-
-            // Play is being toggled off, so set in store right away.
-            this.setSelectedPlayerIsPlaying({
-                isPlaying: false,
-                songIndex: selectedSongIndex
-            })
-
             this.playerChildren[selectedSongIndex].askToPause()
 
         // Playing.
@@ -150,100 +133,29 @@ class PlayerManager extends PureComponent {
         }
     }
 
-    // TODO: Child can own this entirely.
-    setSelectedPlayerIsPlaying = ({
-        isPlaying,
-        songIndex
-    }) => {
-        /**
-         * If currently selected player is being toggled on, set in store that
-         * it was able to play. If selected song was changed, set in store
-         * whether newly selected player was able to play.
-         */
-        if (songIndex === this.props.selectedSongIndex) {
-            this.props.updateAudioStore({ isPlaying })
-
-        } else {
-            /**
-             * Promise was returned by a player that is no longer selected, so
-             * now ask it to pause.
-             */
-            logPlayer({
-                log: `Outdated promise returned from ${songIndex}.`,
-                action: 'returnOutdatedPromise',
-                label: songIndex
-            })
-            this.playerChildren[songIndex].askToPause()
-        }
-    }
-
-    // TODO: Child can own this as well.
-    getCurrentTimeForSongIndex(songIndex = this.props.selectedSongIndex) {
-        const {
-            selectedSongIndex,
-            selectedVerseIndex
-        } = this.props
-
-        return songIndex === selectedSongIndex ?
-
-            // If player is selected, get current time from selected verse.
-            getStartTimeForVerse(
-                selectedSongIndex,
-                selectedVerseIndex
-
-            // Otherwise, set it to zero.
-            ) : 0
-    }
-
-    updatePlayerTime = ({
+    updateCurrentTime = ({
         currentTime,
         currentSongIndex
     }) => {
 
         const {
             selectedSongIndex,
+            selectedVerseIndex,
             selectedTime
         } = this.props
 
-        if (
-            currentTime === selectedTime ||
-            currentSongIndex !== selectedSongIndex
-        ) {
-            return
-        }
-
         const {
-                selectedVerseIndex
-            } = this.props,
-
-            timeRelativeToSelectedVerse = getTimeRelativeToVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex,
-                currentTime
-            ),
-
-            isTimeInSelectedVerse = timeRelativeToSelectedVerse === 0
-
-        let nextVerseIndex,
-            isTimeInNextVerse = false
-
-        /**
-         * This value will be 1 if time is after selected verse. In which case,
-         * we will check if it's in the next verse.
-         */
-        if (timeRelativeToSelectedVerse === 1) {
-
-            nextVerseIndex = getNextVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
-
-            isTimeInNextVerse = nextVerseIndex && getTimeRelativeToVerseIndex(
-                selectedSongIndex,
-                nextVerseIndex,
-                currentTime
-            ) === 0
-        }
+            isTimeInSelectedVerse,
+            isTimeInNextVerse,
+            nextVerseIndex,
+            isEndOfSong
+        } = getTimeInVerseStatus({
+            currentTime,
+            currentSongIndex,
+            selectedSongIndex,
+            selectedVerseIndex,
+            selectedTime
+        })
 
         // If current time is in selected verse, just update selected time.
         if (isTimeInSelectedVerse) {
@@ -261,7 +173,7 @@ class PlayerManager extends PureComponent {
              * If time is after current verse but there is no next verse, then
              * we have reached the end of the song.
              */
-            if (timeRelativeToSelectedVerse === 1 && !nextVerseIndex) {
+            if (isEndOfSong) {
                 logPlayer({
                     log: 'Updated time will end player.',
                     action: 'endByUpdatedTime',
@@ -314,9 +226,6 @@ class PlayerManager extends PureComponent {
     }
 
     render() {
-        const { selectedSongIndex } = this.props,
-            mp3s = getMp3s()
-
         return (
             <div className={cx(
                 'Players',
@@ -325,27 +234,21 @@ class PlayerManager extends PureComponent {
                 <PlayerListener
                     {...{ handleSelectPlayer: this.handleSelectPlayer }}
                 />
-                {mp3s.map((mp3, index) => {
-                    const songIndex = index + 1
-
-                    return this._playerShouldRender(songIndex) && (
+                {getSongNotLogueIndices().map(songIndex => (
+                    this._playerShouldRender(songIndex) && (
                         <Player
                             {...{
-                                key: index,
+                                key: songIndex,
                                 ref: this.getPlayer,
-                                mp3,
                                 songIndex,
-                                isSelected: songIndex === selectedSongIndex,
-                                updateCurrentTime: this.updatePlayerTime,
+                                updateCurrentTime: this.updateCurrentTime,
                                 updateEnded: this.props.handleSongEnd,
                                 dispatchPlayerCanPlayThrough:
-                                    this.dispatchPlayerCanPlayThrough,
-                                setSelectedPlayerIsPlaying:
-                                    this.setSelectedPlayerIsPlaying
+                                    this.dispatchPlayerCanPlayThrough
                             }}
                         />
                     )
-                })}
+                ))}
                 <PlayerDispatcher {...{ ref: this.getDispatchPlayerCanPlayThrough }} />
                 <TimeVerseDispatcher {...{ ref: this.getDispatchTimeVerse }} />
             </div>

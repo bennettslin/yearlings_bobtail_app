@@ -4,7 +4,8 @@ import React, {
     useImperativeHandle,
     useEffect,
     useRef,
-    useState
+    useState,
+    memo
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
@@ -18,25 +19,24 @@ import {
     logPlayPromiseFailure,
     logEndByPlayer
 } from './helpers/log'
+import { updateAudioStore } from '../../../../redux/audio/action'
 import { updatePlayersStore } from '../../../../redux/players/action'
 import { getMapPlayerPausedTime } from '../../../../redux/players/selectors'
+import { getMapIsSongSelected } from '../../../../redux/selected/selectors'
+import { getMp3ForSong } from '../../../../api/mp3'
 
 const Player = forwardRef(({
-    // TODO: Get these from selector.
-    mp3,
     songIndex,
-    isSelected,
-
     updateCurrentTime,
     updateEnded,
-    dispatchPlayerCanPlayThrough,
-    setSelectedPlayerIsPlaying
+    dispatchPlayerCanPlayThrough
 
 }, ref) => {
     const
         // TODO: This is just for debugging, for now.
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
+        isSelected = useSelector(getMapIsSongSelected(songIndex)),
         playerPausedTime = useSelector(getMapPlayerPausedTime(songIndex)),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
@@ -47,7 +47,17 @@ const Player = forwardRef(({
         dispatch(updatePlayersStore({
             [`player${songIndex}`]: playerPausedTime
         }))
+    }
 
+    const dispatchIsPlaying = isPlaying => {
+        /**
+         * If currently selected player is being toggled on, set in store that
+         * it was able to play. If selected song was changed, set in store
+         * whether newly selected player is able to play.
+         */
+        if (isSelected) {
+            dispatch(updateAudioStore({ isPlaying }))
+        }
     }
 
     const askToPause = () => {
@@ -75,14 +85,12 @@ const Player = forwardRef(({
              * time to start of song.
              */
             setCurrentTime()
+            dispatchIsPlaying(false)
         }
     }
 
     const _handlePlayPromise = isPlaying => {
-        setSelectedPlayerIsPlaying({
-            isPlaying,
-            songIndex
-        })
+        dispatchIsPlaying(isPlaying)
         setIsPromisingToPlay(false)
     }
 
@@ -121,10 +129,7 @@ const Player = forwardRef(({
                 .catch(_handlePlayPromiseFailure)
 
         } else {
-            setSelectedPlayerIsPlaying({
-                isPlaying: true,
-                songIndex
-            })
+            dispatchIsPlaying(true)
         }
 
         setIsPromisingToPlay(true)
@@ -135,11 +140,7 @@ const Player = forwardRef(({
     }
 
     const _handleTimeUpdateEvent = () => {
-        const {
-            currentTime,
-            paused
-        } = audioPlayerElement.current
-
+        const { currentTime, paused } = audioPlayerElement.current
         if (!paused) {
             updateCurrentTime({
                 currentTime,
@@ -199,20 +200,17 @@ const Player = forwardRef(({
         <ReactAudioPlayer
             {...{
                 ref: setRef,
-                src: mp3
+                src: getMp3ForSong(songIndex)
             }}
         />
     )
 })
 
 Player.propTypes = {
-    mp3: PropTypes.string.isRequired,
     songIndex: PropTypes.number.isRequired,
-    isSelected: PropTypes.bool.isRequired,
     updateCurrentTime: PropTypes.func.isRequired,
     updateEnded: PropTypes.func.isRequired,
-    dispatchPlayerCanPlayThrough: PropTypes.func.isRequired,
-    setSelectedPlayerIsPlaying: PropTypes.func.isRequired
+    dispatchPlayerCanPlayThrough: PropTypes.func.isRequired
 }
 
-export default Player
+export default memo(Player)
