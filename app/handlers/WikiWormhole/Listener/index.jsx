@@ -1,68 +1,24 @@
-// Singleton to listen for song change.
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React, { useEffect, useRef } from 'react'
+import { useSelector } from 'react-redux'
 import WikiWormholeDispatcher from '../Dispatcher'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex
 } from '../../../redux/selected/selectors'
 
-const mapStateToProps = state => {
+const WikiWormholeListener = () => {
     const
-        selectedSongIndex = mapSelectedSongIndex(state),
-        selectedAnnotationIndex = mapSelectedAnnotationIndex(state)
+        dispatchWikiWormhole = useRef(),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex)
 
-    return {
-        selectedSongIndex,
-        selectedAnnotationIndex
-    }
+    useEffect(() => {
+        dispatchWikiWormhole.current({ selectedAnnotationIndex })
+    }, [selectedSongIndex, selectedAnnotationIndex])
+
+    return (
+        <WikiWormholeDispatcher {...{ ref: dispatchWikiWormhole }} />
+    )
 }
 
-class WikiWormholeListener extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired
-    }
-
-    componentDidMount() {
-        this._accessWikiWormhole()
-    }
-
-    componentDidUpdate(prevProps) {
-        this._accessWikiWormhole(prevProps)
-    }
-
-    _accessWikiWormhole(prevProps = {}) {
-        const
-            {
-                selectedSongIndex,
-                selectedAnnotationIndex
-            } = this.props,
-            {
-                selectedSongIndex: prevSongIndex,
-                selectedAnnotationIndex: prevAnnotationIndex
-            } = prevProps
-
-        if (
-            selectedSongIndex !== prevSongIndex ||
-            selectedAnnotationIndex !== prevAnnotationIndex
-        ) {
-            this.dispatchWikiWormhole({ selectedAnnotationIndex })
-        }
-    }
-
-    getDispatchAccessedWikiWormhole = dispatch => {
-        this.dispatchWikiWormhole = dispatch
-    }
-
-    render() {
-        return (
-            <WikiWormholeDispatcher {...{ ref: this.getDispatchAccessedWikiWormhole }} />
-        )
-    }
-}
-
-export default connect(mapStateToProps)(WikiWormholeListener)
+export default WikiWormholeListener
