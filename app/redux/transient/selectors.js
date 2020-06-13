@@ -1,17 +1,17 @@
 import { createSelector } from 'reselect'
-import { getIsShelfLeftShown } from '../../helpers/main'
-import { getMainHeight } from '../../helpers/resize/mount'
-import { mapIsActivated } from '../activated/selectors'
+import { getIsDoublespeakerShown } from '../../helpers/doublespeaker'
 import {
-    mapIsPhoneWidth,
-    mapIsDesktopWidth
-} from '../device/selectors'
+    getIsShelfLeftShown,
+    getIsCarouselNavShowable
+} from '../../helpers/main'
+import { mapIsActivated } from '../activated/selectors'
+import { mapIsPhoneWidth } from '../device/selectors'
 import { mapCanLyricCarouselEnter } from '../entrance/selectors'
 import {
+    mapLyricSongIndex,
     mapLyricAnnotationIndex,
     mapIsLyricLogue
 } from '../lyric/selectors'
-import { mapLyricDynamicHeight } from '../lyricHeight/selectors'
 import { mapIsOverlayShown } from '../overlay/selectors'
 import { mapIsOverviewShown } from '../overview/selectors'
 import { mapIsTipsShown } from '../tips/selectors'
@@ -19,30 +19,41 @@ import {
     mapIsDotsSlideShown,
     mapIsLyricExpanded
 } from '../toggle/selectors'
-import {
-    mapIsHeightlessLyric,
-    mapMenuHeight,
-    mapCanCarouselMount
-} from '../viewport/selectors'
+import { mapDeviceWidthIndex } from '../viewport/selectors'
 
-export const mapMainHeight = createSelector(
-    mapCanCarouselMount,
-    mapLyricDynamicHeight,
-    mapIsHeightlessLyric,
-    mapMenuHeight,
-    mapIsDesktopWidth,
+export const mapIsEarShown = createSelector(
+    mapLyricSongIndex,
+    mapDeviceWidthIndex,
     (
-        canCarouselMount,
-        lyricDynamicHeight,
-        isHeightlessLyric,
-        menuHeight,
-        isDesktopWidth
-    ) => getMainHeight({
-        canCarouselMount,
-        lyricDynamicHeight,
-        isHeightlessLyric,
-        menuHeight,
-        isDesktopWidth
+        lyricSongIndex,
+        deviceWidthIndex
+    ) => getIsDoublespeakerShown({
+        songIndex: lyricSongIndex,
+        deviceWidthIndex
+    })
+)
+
+export const mapIsCarouselNavShowable = createSelector(
+    mapIsOverlayShown,
+    mapIsOverviewShown,
+    mapIsTipsShown,
+    mapIsLyricLogue,
+    mapIsLyricExpanded,
+    mapIsActivated,
+    (
+        isOverlayShown,
+        isOverviewShown,
+        isTipsShown,
+        isLyricLogue,
+        isLyricExpanded,
+        isActivated
+    ) => getIsCarouselNavShowable({
+        isOverlayShown,
+        isOverviewShown,
+        isTipsShown,
+        isLyricLogue,
+        isLyricExpanded,
+        isActivated
     })
 )
 

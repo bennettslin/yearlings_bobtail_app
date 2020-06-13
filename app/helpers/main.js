@@ -7,7 +7,6 @@ export const getIsShelfLeftShown = ({
     canLyricCarouselEnter,
     lyricAnnotationIndex,
     isLyricLogue,
-    isLogueOverviewShown,
     isOverviewShown,
     isTipsShown
 }) => {
@@ -17,8 +16,8 @@ export const getIsShelfLeftShown = ({
         // In song and is phone.
         (isOverviewShown && !isLyricLogue && isPhoneWidth) ||
 
-        // In logue and logue overview is shown.
-        (isLogueOverviewShown && isLyricLogue)
+        // In logue.
+        isLyricLogue
     ) {
         return false
     }

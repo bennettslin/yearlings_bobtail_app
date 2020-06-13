@@ -8,10 +8,7 @@ import {
 import { mapCanLyricCarouselEnter } from '../entrance/selectors'
 import { mapIsLyricLogue } from '../lyric/selectors'
 import { mapIsPhoneWidth } from '../device/selectors'
-import {
-    mapSelectedOverviewOption,
-    mapIsLogueOverviewShown
-} from '../option/selectors'
+import { mapSelectedOverviewOption } from '../option/selectors'
 import { mapIsOverlayShown } from '../overlay/selectors'
 import { mapIsTipsShown } from '../tips/selectors'
 import { mapIsHeightlessLyric } from '../viewport/selectors'
@@ -40,14 +37,12 @@ export const getMapIsOverviewPopupShown = inMain => createSelector(
     mapCanLyricCarouselEnter,
     mapIsLyricLogue,
     mapIsOverlayShown,
-    mapIsLogueOverviewShown,
     mapIsOverviewShown,
     mapIsTipsShown,
     (
         canLyricCarouselEnter,
         isLyricLogue,
         isOverlayShown,
-        isLogueOverviewShown,
         isOverviewShown,
         isTipsShown
     ) => (
@@ -59,7 +54,6 @@ export const getMapIsOverviewPopupShown = inMain => createSelector(
         getIsOverviewVisibleBySong({
             isLyricLogue,
             isOverlayShown,
-            isLogueOverviewShown,
             isOverviewShown,
             isTipsShown
         })

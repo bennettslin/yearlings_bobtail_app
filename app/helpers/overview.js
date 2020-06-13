@@ -26,23 +26,18 @@ export const getIsOverviewVisibleBySection = ({
 export const getIsOverviewVisibleBySong = ({
     isLyricLogue,
     isOverlayShown,
-    isLogueOverviewShown,
     isOverviewShown,
     isTipsShown
 
-}) => {
-    // If in logue, hide when overlay is shown.
-    if (isLyricLogue) {
-        return (
-            !isOverlayShown &&
-            isLogueOverviewShown
-        )
+}) => (
+    isLyricLogue ?
 
-    // If in song, hide when tip is shown.
-    } else {
-        return (
+        // If in logue, hide when overlay is shown.
+        !isOverlayShown :
+
+        // If in song, hide when tip is shown.
+        (
             !isTipsShown &&
             isOverviewShown
         )
-    }
-}
+)

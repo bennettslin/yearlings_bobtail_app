@@ -1,9 +1,5 @@
 import { OPTION_STORE } from '../../constants/store'
 
-export const mapIsLogueOverviewShown = (
-    { [OPTION_STORE]: { isLogueOverviewShown } }
-) => isLogueOverviewShown
-
 export const mapSelectedOverviewOption = (
     { [OPTION_STORE]: { selectedOverviewOption } }
 ) => selectedOverviewOption
