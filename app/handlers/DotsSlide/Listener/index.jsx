@@ -1,8 +1,5 @@
-// Singleton to listen for non-toggle events related to carousel closing.
-
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import {
     updateAccessStore,
     resetAccessedDot
@@ -10,58 +7,21 @@ import {
 import { resetActivatedDots } from '../../../redux/dotsSlide/action'
 import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
 
-const mapStateToProps = state => {
-    const isDotsSlideShown = mapIsDotsSlideShown(state)
+const DotsSlideListener = () => {
+    const
+        dispatch = useDispatch(),
+        isDotsSlideShown = useSelector(mapIsDotsSlideShown)
 
-    return {
-        isDotsSlideShown
-    }
-}
-
-class DotsSlideListener extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isDotsSlideShown: PropTypes.bool.isRequired,
-        updateAccessStore: PropTypes.func.isRequired,
-        resetAccessedDot: PropTypes.func.isRequired,
-        resetActivatedDots: PropTypes.func.isRequired
-    }
-
-    componentDidUpdate(prevProps) {
-        this._checkDotsSlideShown(prevProps)
-    }
-
-    // TODO: Put this with dispatcher?
-    _checkDotsSlideShown = (prevProps = {}) => {
-        const { isDotsSlideShown } = this.props,
-            { isDotsSlideShown: wasDotsSlideShown } = prevProps
-
-        if (
-            // Dots slide is just now shown.
-            isDotsSlideShown && !wasDotsSlideShown
-        ) {
-            this.props.updateAccessStore({ accessedDotIndex: 0 })
-
-        } else if (
-            // Dots slide is just now hidden.
-            !isDotsSlideShown && wasDotsSlideShown
-        ) {
-            this.props.resetActivatedDots()
-            this.props.resetAccessedDot()
+    useEffect(() => {
+        if (isDotsSlideShown) {
+            dispatch(updateAccessStore({ accessedDotIndex: 0 }))
+        } else {
+            dispatch(resetActivatedDots())
+            dispatch(resetAccessedDot())
         }
-    }
+    }, [isDotsSlideShown])
 
-    render() {
-        return null
-    }
+    return null
 }
 
-export default connect(
-    mapStateToProps,
-    {
-        updateAccessStore,
-        resetAccessedDot,
-        resetActivatedDots
-    }
-)(DotsSlideListener)
+export default DotsSlideListener
