@@ -1,7 +1,6 @@
 export const QUEUED_AUDIO_DEFAULTS = {
     queuedPlayFromLogue: false,
-    queuedPlaySongIndex: -1,
-    queuedPlayVerseIndex: -1
+    queuedPlaySongIndex: -1
 }
 
 export const AUDIO_DEFAULTS = {

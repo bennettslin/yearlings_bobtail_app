@@ -10,7 +10,6 @@ import TimeVerseDispatcher from '../../../dispatchers/TimeVerse'
 import Player from './Player'
 import { getSongNotLogueIndices } from '../../../api/album/songs'
 import { getTimeInVerseStatus } from './helper'
-import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex
@@ -22,23 +21,8 @@ const PlayerManager = ({ handleSongEnd }) => {
         playerChildren = useRef(),
         dispatchTimeVerse = useRef(),
         _dispatchPlayerCanPlayThrough = useRef(),
-        isPlaying = useSelector(mapIsPlaying),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex)
-
-    const handleSelectPlayer = ({
-        isPlayFromLogue,
-        nextSongIndex
-
-    }) => {
-        // If playing from logue, begin playing only once player is selected.
-        // if (isPlaying || isPlayFromLogue) {
-        //     /**
-        //      * If already playing, begin playing newly selected player.
-        //      */
-        //     playerChildren.current[nextSongIndex].promiseToPlay()
-        // }
-    }
 
     const updateCurrentTime = currentTime => {
         const {
@@ -105,13 +89,11 @@ const PlayerManager = ({ handleSongEnd }) => {
     const setRef = node => {
         if (node) {
             const {
-                promiseToPlay,
                 askToPause,
                 songIndex
             } = node
             playerChildren.current = playerChildren.current || {}
             playerChildren.current[songIndex] = {
-                promiseToPlay,
                 askToPause
             }
         }
@@ -122,7 +104,7 @@ const PlayerManager = ({ handleSongEnd }) => {
             'Players',
             'dNC'
         )}>
-            <PlayerListener {...{ handleSelectPlayer }} />
+            <PlayerListener />
             {getSongNotLogueIndices().map(songIndex => (
                 <Player
                     {...{

@@ -1,8 +1,6 @@
 # Saturday
-* Queued toggle play while selected
-* Select new player while playing
-
-* Playing from logue
+* in updateCurrentTime, pass callback to pause, rather than pausing directly.
+* Get rid of nextPlayerToRender stuff?
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.

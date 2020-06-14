@@ -12,17 +12,21 @@ import { useDispatch, useSelector } from 'react-redux'
 import ReactAudioPlayer from 'react-audio-player'
 import {
     logPause,
-    logIgnoreSubsequentPause,
     logPromisePlay,
     logIgnoreSubsequentPromise,
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
     logEndByPlayer
 } from './helpers/log'
-import { updateAudioStore } from '../../../../redux/audio/action'
+import {
+    updateAudioStore,
+    resetAudioQueue
+} from '../../../../redux/audio/action'
 import {
     mapIsPlaying,
-    mapQueuedTogglePlay
+    mapQueuedTogglePlay,
+    mapQueuedPlayFromLogue,
+    mapIsSelectPlayReady
 } from '../../../../redux/audio/selectors'
 import { getMapPlayerPausedTime } from '../../../../redux/players/selectors'
 import { getMapIsSongSelected } from '../../../../redux/selected/selectors'
@@ -42,81 +46,39 @@ const Player = forwardRef(({
         playerPausedTime = useSelector(getMapPlayerPausedTime(songIndex)),
         isPlaying = useSelector(mapIsPlaying),
         queuedTogglePlay = useSelector(mapQueuedTogglePlay),
+        queuedPlayFromLogue = useSelector(mapQueuedPlayFromLogue),
+        isSelectPlayReady = useSelector(mapIsSelectPlayReady),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
     const setCurrentTime = () => {
         audioPlayerElement.current.currentTime = playerPausedTime
     }
 
-    const dispatchIsPlaying = isPlaying => {
-        /**
-         * If currently selected player is being toggled on, set in store that
-         * it was able to play. If selected song was changed, set in store
-         * whether newly selected player is able to play.
-         */
+    const dispatchIsPlayingIfSelected = isPlaying => {
         if (isSelected) {
             dispatch(updateAudioStore({ isPlaying }))
         }
     }
 
     const askToPause = () => {
-        // Can be called by player manager.
-        /**
-         * There's a promise to play still out there, so we'll pause it when
-         * the promise is returned, not here.
-         */
-        if (isPromisingToPlay) {
-            logIgnoreSubsequentPause(songIndex)
+        if (audioPlayerElement.current.paused) {
             return
         }
 
-        /**
-         * This gets called when the player is unselected, even if it was never
-         * selected to begin with because the timeout was cleared too soon. So
-         * make sure the player is actually playing before pausing it.
-         */
-        if (!audioPlayerElement.current.paused) {
-            logPause(songIndex)
-            audioPlayerElement.current.pause()
-
-            /**
-             * If still selected, reset time to selected verse. Otherwise, reset
-             * time to start of song.
-             */
-            setCurrentTime()
-            dispatchIsPlaying(false)
-        }
-    }
-
-    const _handlePlayPromise = isPlaying => {
-        dispatchIsPlaying(isPlaying)
-        setIsPromisingToPlay(false)
-    }
-
-    const _handlePlayPromiseSuccess = () => {
-        logPlayPromiseSuccess(songIndex)
-        _handlePlayPromise(true)
-    }
-
-    const _handlePlayPromiseFailure = error => {
-        logPlayPromiseFailure(songIndex, error)
-        _handlePlayPromise(false)
+        logPause(songIndex)
+        audioPlayerElement.current.pause()
+        dispatchIsPlayingIfSelected(false)
     }
 
     const promiseToPlay = () => {
-        // Only called by player manager.
-        /**
-         * There's a promise to play still out there, so do nothing.
-         */
         if (isPromisingToPlay) {
             logIgnoreSubsequentPromise(songIndex)
             return
         }
 
         setCurrentTime()
-        const playPromise = audioPlayerElement.current.play()
-
         logPromisePlay(songIndex)
+        const playPromise = audioPlayerElement.current.play()
 
         /**
          * Browser supports the return of a promise:
@@ -124,11 +86,19 @@ const Player = forwardRef(({
          */
         if (playPromise !== undefined) {
             playPromise
-                .then(_handlePlayPromiseSuccess)
-                .catch(_handlePlayPromiseFailure)
+                .then(() => {
+                    logPlayPromiseSuccess(songIndex)
+                    dispatchIsPlayingIfSelected(true)
+                })
+                .catch(error => {
+                    logPlayPromiseFailure(songIndex, error)
+                })
+                .finally(() => {
+                    setIsPromisingToPlay(false)
+                })
 
         } else {
-            dispatchIsPlaying(true)
+            dispatchIsPlayingIfSelected(true)
         }
 
         setIsPromisingToPlay(true)
@@ -161,17 +131,6 @@ const Player = forwardRef(({
     }
 
     useEffect(() => {
-        if (isPlaying) {
-            // If now selected, play. If now deselected, pause.
-            if (isSelected) {
-                promiseToPlay()
-            } else {
-                askToPause()
-            }
-        }
-    }, [isSelected])
-
-    useEffect(() => {
         if (isSelected && queuedTogglePlay) {
             // If now paused, play. If now playing, pause.
             if (!isPlaying) {
@@ -183,8 +142,35 @@ const Player = forwardRef(({
         }
     }, [queuedTogglePlay])
 
+    useEffect(() => {
+        if (
+            /**
+             * Wait for song select to finalise, in case the user is cycling
+             * through songs in quick succession.
+             */
+            isSelected && isSelectPlayReady && (
+
+                /**
+                 * Play only if audio is already playing, or if play toggled
+                 * from logue.
+                 */
+                isPlaying ||
+                queuedPlayFromLogue
+            )
+        ) {
+            promiseToPlay()
+        }
+        dispatch(resetAudioQueue())
+    }, [isSelectPlayReady])
+
+    useEffect(() => {
+        // If no longer selected, pause.
+        if (!isSelected) {
+            askToPause()
+        }
+    }, [isSelected])
+
     useImperativeHandle(ref, () => ({
-        promiseToPlay,
         askToPause,
         songIndex
     }))

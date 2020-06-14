@@ -30,8 +30,7 @@ const VerseDispatcher = forwardRef((props, ref) => {
             )
 
         dispatch(updateAudioStore({
-            queuedPlaySongIndex: selectedSongIndex,
-            queuedPlayVerseIndex: selectedVerseIndex
+            queuedPlaySongIndex: selectedSongIndex
         }))
 
         dispatch(updateSelectedStore({

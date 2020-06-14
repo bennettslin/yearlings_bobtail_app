@@ -6,14 +6,6 @@ export const logPause = songIndex => {
     })
 }
 
-export const logIgnoreSubsequentPause = songIndex => {
-    logPlayer({
-        log: `Ignoring subsequent request to pause ${songIndex}.`,
-        action: 'ignoreSubsequentPause',
-        label: songIndex
-    })
-}
-
 export const logPromisePlay = songIndex => {
     logPlayer({
         log: `Promising to play ${songIndex}\u2026`,
@@ -33,17 +25,17 @@ export const logIgnoreSubsequentPromise = songIndex => {
 export const logPlayPromiseSuccess = songIndex => {
     logPlayer({
         log: `Promise to play ${songIndex} succeeded.`,
-        action: 'play',
+        action: 'playPromiseSuccess',
         label: songIndex,
         success: true
     })
 }
 
 export const logPlayPromiseFailure = (songIndex, error) => {
-    logError({
-        log: `Promise to play ${songIndex} failed: ${error}`,
-        action: 'promisePlay',
-        label: `song: ${songIndex}, error: ${error}`
+    logPlayer({
+        log: `Promise to play ${songIndex} failed: ${error}.`,
+        action: 'playPromiseFailure',
+        label: songIndex
     })
 }
 
