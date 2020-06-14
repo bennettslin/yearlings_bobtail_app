@@ -7,31 +7,20 @@ import {
     getStartTimeForScene,
     getDurationForScene
 } from '../../../../../api/album/time'
-import { getCursorIndex } from '../../../../../helpers/cursor'
-import {
-    mapActivatedSceneIndex,
-    getMapIsSceneActivated
-} from '../../../../../redux/activated/selectors'
+import { getMapSceneCursorStatus } from '../../../../../redux/cursor/selectors'
 import {
     mapSelectedSongIndex,
-    mapSelectedSceneIndex,
     getMapIsSceneSelected,
     mapSelectedTime
 } from '../../../../../redux/selected/selectors'
-import {
-    mapSliderSceneIndex,
-    getMapIsSceneSlid
-} from '../../../../../redux/slider/selectors'
 import './style'
 
 const FilmstripCell = ({ sceneIndex }) => {
     const
-        activatedSceneIndex = useSelector(mapActivatedSceneIndex),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
-        selectedSceneIndex = useSelector(mapSelectedSceneIndex),
+        sceneCursorStatus = useSelector(getMapSceneCursorStatus(sceneIndex)),
         isSceneSelected = useSelector(getMapIsSceneSelected(sceneIndex)),
         selectedTime = useSelector(mapSelectedTime),
-        sliderSceneIndex = useSelector(mapSliderSceneIndex),
         sceneStartTime = getStartTimeForScene(
             selectedSongIndex,
             sceneIndex
@@ -42,44 +31,30 @@ const FilmstripCell = ({ sceneIndex }) => {
         ),
 
         isOdd = Boolean(sceneIndex % 2),
-        isSceneActivated = useSelector(getMapIsSceneActivated(sceneIndex)),
-        isSceneSlid = useSelector(getMapIsSceneSlid(sceneIndex)),
+        isBeforeCursor = sceneCursorStatus === -1,
+        isOnCursor = sceneCursorStatus === 0,
+        isAfterCursor = sceneCursorStatus === 1,
 
-        cursorIndex = getCursorIndex(
-            sliderSceneIndex,
-            activatedSceneIndex,
-            selectedSceneIndex
-        ),
-        isAfterCursor = cursorIndex < sceneIndex,
-
-        // TODO: Make this a selector. Only selected filmstrip scene gets updates.
-        cursorWidth =
+        cursorWidth = isSceneSelected ?
             (selectedTime - sceneStartTime) /
-            sceneDuration * 100
+            sceneDuration * 100 : null
 
     return (
         <div
             {...{
                 className: cx(
                     'FilmstripCell',
-                    isOdd && !isAfterCursor && 'FilmstripCell__oddBefore',
-                    !isOdd && !isAfterCursor && 'FilmstripCell__evenBefore',
+                    isOdd && isBeforeCursor && 'FilmstripCell__oddBefore',
+                    !isOdd && isBeforeCursor && 'FilmstripCell__evenBefore',
+                    isOnCursor && 'FilmstripCell__onCursor',
                     isOdd && isAfterCursor && 'FilmstripCell__oddAfter',
                     !isOdd && isAfterCursor && 'FilmstripCell__evenAfter',
-                    (isSceneActivated || isSceneSlid) &&
-                        'FilmstripCell__lyricsLocked',
-                    isSceneActivated &&
-                        'FilmstripCell__activated',
-                    isSceneSlid &&
-                        'FilmstripCell__slider',
-                    isSceneSelected &&
-                        'FilmstripCell__selected',
                     'ovH'
                 )
             }}
         >
             {/* TODO: Don't rely on cursor width to determine render. */}
-            {isSceneSelected && Number.isFinite(cursorWidth) && (
+            {Number.isFinite(cursorWidth) && (
                 <div
                     {...{
                         className: cx(

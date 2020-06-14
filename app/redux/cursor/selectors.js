@@ -2,16 +2,19 @@ import { createSelector } from 'reselect'
 import { getStanzaIndexForVerse } from '../../api/album/verses'
 import {
     getCursorIndex,
+    getBeforeOnOrAfterCursor,
     getSongCursorWidth,
     getCursorWidth
 } from '../../helpers/cursor'
 import {
     mapIsActivated,
     mapActivatedTime,
+    mapActivatedSceneIndex,
     mapActivatedVerseIndex
 } from '../activated/selectors'
 import {
     mapLyricSongIndex,
+    mapLyricSceneIndex,
     mapLyricVerseIndex
 } from '../lyric/selectors'
 import {
@@ -21,6 +24,7 @@ import {
 import {
     mapIsSliderMoving,
     mapSliderTime,
+    mapSliderSceneIndex,
     mapSliderVerseIndex
 } from '../slider/selectors'
 import {
@@ -67,47 +71,35 @@ export const mapSongCursorWidth = createSelector(
     })
 )
 
-// export const mapSceneCursorWidth = createSelector(
+export const mapSceneCursorIndex = createSelector(
+    mapSliderSceneIndex,
+    mapActivatedSceneIndex,
+    mapLyricSceneIndex,
+    (
+        sliderSceneIndex,
+        activatedSceneIndex,
+        lyricSceneIndex
+    ) => getCursorIndex(
+        sliderSceneIndex,
+        activatedSceneIndex,
+        lyricSceneIndex
+    )
+)
 
-//     (
+export const getMapIsSceneCursor = sceneIndex => createSelector(
+    mapSceneCursorIndex,
+    sceneCursorIndex => sceneIndex === sceneCursorIndex
+)
 
-//     ) => {
-//         const
-//             cursorIndex = getCursorIndex(
-//                 sliderSceneIndex,
-//                 activatedSceneIndex,
-//                 selectedSceneIndex
-//             ),
-//             isAfterCursor = cursorIndex < sceneIndex,
-            
-//             // TODO: Make this a selector. Only selected filmstrip scene gets updates.
-//             cursorWidth =
-//                 (selectedTime - sceneStartTime) /
-//                 sceneDuration * 100
-//     }
-// )
+export const getMapSceneCursorStatus = sceneIndex => createSelector(
+    mapSceneCursorIndex,
+    sceneCursorIndex => getBeforeOnOrAfterCursor(
+        sceneCursorIndex,
+        sceneIndex
+    )
+)
 
-// const
-// activatedSceneIndex = useSelector(mapActivatedSceneIndex),
-// selectedSongIndex = useSelector(mapSelectedSongIndex),
-// selectedSceneIndex = useSelector(mapSelectedSceneIndex),
-// isSceneSelected = useSelector(getMapIsSceneSelected(sceneIndex)),
-// selectedTime = useSelector(mapSelectedTime),
-// sliderSceneIndex = useSelector(mapSliderSceneIndex),
-// sceneStartTime = getStartTimeForScene(
-//     selectedSongIndex,
-//     sceneIndex
-// ),
-// sceneDuration = getDurationForScene(
-//     selectedSongIndex,
-//     sceneIndex
-// ),
-
-// isOdd = Boolean(sceneIndex % 2),
-// isSceneActivated = useSelector(getMapIsSceneActivated(sceneIndex)),
-// isSceneSlid = useSelector(getMapIsSceneSlid(sceneIndex)),
-
-export const mapCursorVerseIndex = createSelector(
+export const mapVerseCursorIndex = createSelector(
     mapSliderVerseIndex,
     mapActivatedVerseIndex,
     mapLyricVerseIndex,
@@ -123,33 +115,28 @@ export const mapCursorVerseIndex = createSelector(
 )
 
 export const getMapIsVerseCursor = verseIndex => createSelector(
-    mapCursorVerseIndex,
-    cursorVerseIndex => verseIndex === cursorVerseIndex
+    mapVerseCursorIndex,
+    verseCursorIndex => verseIndex === verseCursorIndex
 )
 
 export const getMapVerseCursorStatus = verseIndex => createSelector(
-    mapCursorVerseIndex,
-    cursorVerseIndex => {
-        if (verseIndex < cursorVerseIndex) {
-            return -1
-        } else if (verseIndex > cursorVerseIndex) {
-            return 1
-        } else {
-            return 0
-        }
-    }
+    mapVerseCursorIndex,
+    verseCursorIndex => getBeforeOnOrAfterCursor(
+        verseCursorIndex,
+        verseIndex
+    )
 )
 
 export const getMapIsStanzaCursor = stanzaIndex => createSelector(
     mapLyricSongIndex,
-    mapCursorVerseIndex,
+    mapVerseCursorIndex,
     (
         lyricSongIndex,
-        cursorVerseIndex
+        verseCursorIndex
     ) => (
         stanzaIndex === getStanzaIndexForVerse(
             lyricSongIndex,
-            cursorVerseIndex
+            verseCursorIndex
         )
     )
 )

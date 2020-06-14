@@ -8,7 +8,7 @@ import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../api/album/verses'
-import { mapCursorVerseIndex } from '../../../redux/cursor/selectors'
+import { mapVerseCursorIndex } from '../../../redux/cursor/selectors'
 import {
     mapLyricSongIndex,
     mapIsLyricLogue
@@ -26,7 +26,7 @@ const VerseBar = ({
         lyricSongIndex = useSelector(mapLyricSongIndex),
         isLyricLogue = useSelector(mapIsLyricLogue),
         isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove)),
-        cursorVerseIndex = useSelector(mapCursorVerseIndex)
+        verseCursorIndex = useSelector(mapVerseCursorIndex)
 
     const onClick = e => {
         logEvent({ e, componentName: 'VerseBar' })
@@ -71,10 +71,10 @@ const VerseBar = ({
                         inVerseBar
                         {...{
                             isShownInVerseBar: isVerseBarShown,
-                            verseIndex: cursorVerseIndex,
+                            verseIndex: verseCursorIndex,
                             verseObject: getVerse(
                                 lyricSongIndex,
-                                cursorVerseIndex
+                                verseCursorIndex
                             ),
                             VerseComponent: Verse
                         }}

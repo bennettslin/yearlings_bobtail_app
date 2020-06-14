@@ -15,6 +15,11 @@
         transition: background-color $transitionDuration__default;
     }
 
+    .FilmstripScene__selected
+    & {
+        background-color: $colour__neutral__dark;
+    }
+
     .FilmstripScene__interactable:hover
     & {
         background-color: $colour__interact__medium;
@@ -93,16 +98,19 @@
     }
 }
 
-.FilmstripCell__activated {
-
-    .TW__lyricsLocked
+.FilmstripCell {
+    .FilmstripScene__selected
     & {
-        box-shadow: $boxShadow__activeVerse;
+        // This takes precedence over any odd/even, before/after styling.
+        background-color: $colour__neutral__dark;
     }
 }
 
-.FilmstripCell__selected {
-    background-color: $colour__paused__empty;
+.FilmstripCell__onCursor {
+    .TW__lyricsUnlocked
+    & {
+        background-color: $colour__paused__empty;
+    }
 
     .PlW__isPlaying
     & {
@@ -111,25 +119,19 @@
 
     .TW__lyricsLocked
     & {
-        background-color: $colour__neutral__dark;
-    }
-}
-
-.FilmstripCell__lyricsLocked {
-
-    .TW__lyricsLocked
-    & {
         background-color: $colour__access__light;
     }
-}
 
-.TW__lyricsLocked
-.FilmstripCell__slider,
+    .TW__verseActive
+    & {
+        box-shadow: $boxShadow__activeVerse;
+    }
 
-.TW__lyricsUnlocked
-.FilmstripCell__selected {
-    box-shadow: $boxShadow__cursorVerse;
-    border-radius: $borderRadius__narrow;
-    top: -1.5px;
-    height: calc(100% + 3px);
+    .TW__verseInactive
+    & {
+        box-shadow: $boxShadow__cursorVerse;
+        border-radius: $borderRadius__narrow;
+        top: -1.5px;
+        height: calc(100% + 3px);
+    }
 }

@@ -31,7 +31,9 @@ const FilmstripScene = ({
             {...{
                 className: cx(
                     'FilmstripScene',
-                    !isSceneSelected && 'FilmstripScene__interactable',
+                    isSceneSelected ?
+                        'FilmstripScene__selected' :
+                        'FilmstripScene__interactable',
                     'abF'
                 ),
                 style: {

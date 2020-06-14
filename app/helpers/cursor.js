@@ -14,6 +14,16 @@ export const getCursorIndex = (
     }
 }
 
+export const getBeforeOnOrAfterCursor = (cursorIndex, index) => {
+    if (index < cursorIndex) {
+        return -1
+    } else if (index > cursorIndex) {
+        return 1
+    } else {
+        return 0
+    }
+}
+
 export const getSongCursorWidth = ({
     isBannerHovering,
     bannerHoverTime,

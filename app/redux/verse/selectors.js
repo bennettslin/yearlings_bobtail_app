@@ -4,4 +4,4 @@ export const getMapIsVerseTrackerShown = ({
     verseIndex
 }) => () => true
 
-export const getMapVerseCursorLength = verseIndex => () => 50
+export const getMapVerseCursorLength = verseIndex => () => 0
