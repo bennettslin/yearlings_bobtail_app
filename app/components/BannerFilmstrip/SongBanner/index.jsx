@@ -10,16 +10,16 @@ import SongBannerTimer from './Timer'
 import SongBannerTitle from './Title'
 import { getSongIsLogue } from '../../../api/album/songs'
 import { getStartTimeForVerse } from '../../../api/album/time'
-import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
-import { getVerseIndexforRatio } from '../../../helpers/verse'
+import { getClientX } from '../../../helpers/dom'
+import { getVerseIndexFromClientX } from './helper'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
     mapIsBannerHovering,
     mapBannerHoverVerseIndex,
-    mapSongBannerCursorWidth,
     mapIsSmallBannerText
 } from '../../../redux/banner/selectors'
+import { mapSongCursorWidth } from '../../../redux/cursor/selectors'
 import {
     mapSelectedSongIndex,
     mapIsSelectedLogue,
@@ -38,7 +38,7 @@ const SongBanner = () => {
         isPlaying = useSelector(mapIsPlaying),
         isBannerHovering = useSelector(mapIsBannerHovering),
         bannerHoverVerseIndex = useSelector(mapBannerHoverVerseIndex),
-        songBannerCursorWidth = useSelector(mapSongBannerCursorWidth),
+        songCursorWidth = useSelector(mapSongCursorWidth),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         selectedTime = useSelector(mapSelectedTime),
@@ -49,23 +49,12 @@ const SongBanner = () => {
         const nextClientX = e ? getClientX(e) : clientX
 
         if (Number.isFinite(nextClientX)) {
-            const
-                {
-                    left,
-                    width
-                } = songBannerElement.current.getBoundingClientRect(),
-                bannerRatio = getElementRatioForClientX({
-                    clientX: nextClientX,
-                    elementLeft: left,
-                    elementWidth: width
-                })
-
             setClientX(nextClientX)
-
-            return getVerseIndexforRatio(
-                selectedSongIndex,
-                bannerRatio
-            )
+            return getVerseIndexFromClientX({
+                clientX,
+                songBannerElement,
+                selectedSongIndex
+            })
         }
 
         return -1
@@ -185,7 +174,7 @@ const SongBanner = () => {
                 }
             }}
         >
-            <Tracker {...{ cursorWidth: songBannerCursorWidth }} />
+            <Tracker {...{ cursorWidth: songCursorWidth }} />
             <SongBannerTitle />
             <SongBannerTimer />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />

@@ -1,6 +1,6 @@
 import { getDurationForSong } from '../api/album/time'
 
-export const getBannerCursorWidth = ({
+export const getSongCursorWidth = ({
     isBannerHovering,
     bannerHoverTime,
     selectedTime,
@@ -13,7 +13,7 @@ export const getBannerCursorWidth = ({
     return playedTime / songDuration * 100
 }
 
-export const getBannerCursorTime = ({
+export const getCursorWidth = ({
     selectedTime,
     isActivated,
     activatedTime,

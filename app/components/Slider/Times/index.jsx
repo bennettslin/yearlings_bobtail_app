@@ -6,7 +6,7 @@ import cx from 'classnames'
 import SliderTime from './Time'
 import { getDurationForSong } from '../../../api/album/time'
 import { getFormattedTime } from '../../../helpers/format'
-import { mapCursorTime } from '../../../redux/banner/selectors'
+import { mapCursorTime } from '../../../redux/cursor/selectors'
 import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
 import './style'
 

@@ -1,49 +1,6 @@
 @import '../../../../../scss/constants/colour';
 
 .VerseTracker {
-
-    // .PlW__isPaused
-    // &,
-    // .TrW__cannotTrackVerse
-    // &,
-    // &.VerseTracker__unselected {
-
-    //     /**
-    //      * Ensure that verse tracker always resets between toggling play and
-    //      * selecting songs.
-    //      */
-    //     transition: none !important;
-    // }
-
-    // .PlW__isPlaying
-    // .TrW__canTrackVerse
-    // &.VerseTracker__selected {
-    // }
     background-color: $colour__playing__filled;
-
-    // // TODO: Maybe better not to run tracker at all when lyrics are locked?
-    // .TW__lyricsLocked
-    // & {
-    //     opacity: 0;
-    // }
 }
 
-// .VerseTracker__inSlider {
-//     left: -100%;
-
-//     .PlW__isPlaying
-//     .TrW__canTrackVerse
-//     &.VerseTracker__selected {
-//         left: 0;
-//     }
-// }
-
-// .VerseTracker__inLyric {
-//     top: -100%;
-
-//     .PlW__isPlaying
-//     .TrW__canTrackVerse
-//     &.VerseTracker__selected {
-//         top: 0;
-//     }
-// }
