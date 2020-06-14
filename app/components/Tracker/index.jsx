@@ -4,17 +4,13 @@ import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import './style'
 
-const Tracker = ({
-    cursorWidth,
-    className
-
-}) => (
+const Tracker = ({ trackerWidth }) => (
     <CSSTransition
         appear
         unmountOnExit
         mountOnEnter
         {...{
-            in: Number.isFinite(cursorWidth),
+            in: Number.isFinite(trackerWidth),
             timeout: 200,
             classNames: { enterDone: 'Tracker__visible' }
         }}
@@ -23,11 +19,10 @@ const Tracker = ({
             {...{
                 className: cx(
                     'Tracker',
-                    'abF',
-                    className
+                    'abF'
                 ),
                 style: {
-                    width: `${cursorWidth}%`
+                    width: `${trackerWidth}%`
                 }
             }}
         />
@@ -35,8 +30,7 @@ const Tracker = ({
 )
 
 Tracker.propTypes = {
-    cursorWidth: PropTypes.number,
-    className: PropTypes.string
+    trackerWidth: PropTypes.number
 }
 
 export default memo(Tracker)

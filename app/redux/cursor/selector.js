@@ -3,8 +3,7 @@ import { getStanzaIndexForVerse } from '../../api/album/verses'
 import {
     getCursorIndex,
     getBeforeOnOrAfterCursor,
-    getSongCursorWidth,
-    getCursorWidth
+    getCursorTime
 } from '../../helpers/cursor'
 import {
     mapIsActivated,
@@ -17,24 +16,13 @@ import {
     mapLyricSceneIndex,
     mapLyricVerseIndex
 } from '../lyric/selector'
-import {
-    mapSelectedSongIndex,
-    mapSelectedTime
-} from '../selected/selector'
+import { mapSelectedTime } from '../selected/selector'
 import {
     mapIsSliderMoving,
     mapSliderTime,
     mapSliderSceneIndex,
     mapSliderVerseIndex
 } from '../slider/selector'
-import {
-    mapIsBannerHovering,
-    mapBannerHoverTime
-} from '../banner/selector'
-import {
-    getStartTimeForScene,
-    getDurationForScene
-} from '../../api/album/time'
 
 export const mapCursorTime = createSelector(
     mapSelectedTime,
@@ -48,7 +36,7 @@ export const mapCursorTime = createSelector(
         activatedTime,
         isSliderMoving,
         sliderTime
-    ) => getCursorWidth({
+    ) => getCursorTime({
         selectedTime,
         isActivated,
         activatedTime,
@@ -57,25 +45,7 @@ export const mapCursorTime = createSelector(
     })
 )
 
-export const mapSongCursorWidth = createSelector(
-    mapIsBannerHovering,
-    mapBannerHoverTime,
-    mapSelectedTime,
-    mapSelectedSongIndex,
-    (
-        isBannerHovering,
-        bannerHoverTime,
-        selectedTime,
-        selectedSongIndex
-    ) => getSongCursorWidth({
-        isBannerHovering,
-        bannerHoverTime,
-        selectedTime,
-        selectedSongIndex
-    })
-)
-
-const mapSceneCursorIndex = createSelector(
+export const mapSceneCursorIndex = createSelector(
     mapSliderSceneIndex,
     mapActivatedSceneIndex,
     mapLyricSceneIndex,
@@ -96,32 +66,6 @@ export const getMapSceneCursorStatus = sceneIndex => createSelector(
         sceneCursorIndex,
         sceneIndex
     )
-)
-
-export const getMapSceneCursorWidth = sceneIndex => createSelector(
-    mapSceneCursorIndex,
-    mapSelectedSongIndex,
-    mapSelectedTime,
-    (
-        sceneCursorIndex,
-        selectedSongIndex,
-        selectedTime
-    ) => {
-        const
-            isSceneCursor = sceneIndex === sceneCursorIndex,
-            sceneStartTime = getStartTimeForScene(
-                selectedSongIndex,
-                sceneIndex
-            ),
-            sceneDuration = getDurationForScene(
-                selectedSongIndex,
-                sceneIndex
-            )
-
-        return isSceneCursor ?
-            (selectedTime - sceneStartTime) /
-            sceneDuration * 100 : null
-    }
 )
 
 export const mapVerseCursorIndex = createSelector(

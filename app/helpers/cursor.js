@@ -1,5 +1,3 @@
-import { getDurationForSong } from '../api/album/time'
-
 export const getCursorIndex = (
     sliderIndex,
     activatedIndex,
@@ -24,20 +22,7 @@ export const getBeforeOnOrAfterCursor = (cursorIndex, index) => {
     }
 }
 
-export const getSongCursorWidth = ({
-    isBannerHovering,
-    bannerHoverTime,
-    selectedTime,
-    selectedSongIndex
-}) => {
-    const
-        playedTime = isBannerHovering ? bannerHoverTime : selectedTime,
-        songDuration = getDurationForSong(selectedSongIndex)
-
-    return playedTime / songDuration * 100
-}
-
-export const getCursorWidth = ({
+export const getCursorTime = ({
     selectedTime,
     isActivated,
     activatedTime,

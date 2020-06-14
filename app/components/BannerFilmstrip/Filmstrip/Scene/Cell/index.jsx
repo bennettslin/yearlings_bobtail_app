@@ -3,16 +3,14 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import Tracker from '../../../../Tracker'
-import {
-    getMapSceneCursorStatus,
-    getMapSceneCursorWidth
-} from '../../../../../redux/cursor/selector'
+import { getMapSceneCursorStatus } from '../../../../../redux/cursor/selector'
+import { getMapSceneTrackerWidth } from '../../../../../redux/tracker/selector'
 import './style'
 
 const FilmstripCell = ({ sceneIndex }) => {
     const
         sceneCursorStatus = useSelector(getMapSceneCursorStatus(sceneIndex)),
-        sceneCursorWidth = useSelector(getMapSceneCursorWidth(sceneIndex)),
+        sceneTrackerWidth = useSelector(getMapSceneTrackerWidth(sceneIndex)),
 
         isOdd = Boolean(sceneIndex % 2),
         isBeforeCursor = sceneCursorStatus === -1,
@@ -33,7 +31,7 @@ const FilmstripCell = ({ sceneIndex }) => {
                 )
             }}
         >
-            {Number.isFinite(sceneCursorWidth) && (
+            {Number.isFinite(sceneTrackerWidth) && (
                 <div
                     {...{
                         className: cx(
@@ -42,7 +40,7 @@ const FilmstripCell = ({ sceneIndex }) => {
                         )
                     }}
                 >
-                    <Tracker {...{ cursorWidth: sceneCursorWidth }} />
+                    <Tracker {...{ trackerWidth: sceneTrackerWidth }} />
                 </div>
             )}
         </div>

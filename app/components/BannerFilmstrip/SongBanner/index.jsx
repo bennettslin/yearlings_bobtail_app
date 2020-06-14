@@ -19,13 +19,13 @@ import {
     mapBannerHoverVerseIndex,
     mapIsSmallBannerText
 } from '../../../redux/banner/selector'
-import { mapSongCursorWidth } from '../../../redux/cursor/selector'
 import {
     mapSelectedSongIndex,
     mapIsSelectedLogue,
     mapSelectedTime
 } from '../../../redux/selected/selector'
 import { mapIsLyricsLocked } from '../../../redux/slider/selector'
+import { mapSongTrackerWidth } from '../../../redux/tracker/selector'
 import './style'
 
 const SongBanner = () => {
@@ -38,7 +38,7 @@ const SongBanner = () => {
         isPlaying = useSelector(mapIsPlaying),
         isBannerHovering = useSelector(mapIsBannerHovering),
         bannerHoverVerseIndex = useSelector(mapBannerHoverVerseIndex),
-        songCursorWidth = useSelector(mapSongCursorWidth),
+        songTrackerWidth = useSelector(mapSongTrackerWidth),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         selectedTime = useSelector(mapSelectedTime),
@@ -174,7 +174,7 @@ const SongBanner = () => {
                 }
             }}
         >
-            <Tracker {...{ cursorWidth: songCursorWidth }} />
+            <Tracker {...{ trackerWidth: songTrackerWidth }} />
             <SongBannerTitle />
             <SongBannerTimer />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />

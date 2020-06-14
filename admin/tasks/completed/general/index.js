@@ -4796,5 +4796,9 @@ export default [
     {
         taskName: `AudioPlayer refactor and cleanup.`,
         workedHours: 12
+    },
+    {
+        taskName: `Filmstrip refactor.`,
+        workedHours: 4
     }
 ]
