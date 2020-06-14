@@ -27,24 +27,6 @@ export const mapPlayerCanPlayThrough = createSelector(
     )
 )
 
-export const getMapPlayerShouldRender = songIndex => createSelector(
-    mapPlayersBit,
-    mapNextPlayerToRender,
-    (
-        playersBit,
-        nextPlayerToRender
-    ) => (
-        // Render player if it has already passed canPlayThrough...
-        getPlayerCanPlayThroughFromBit(
-            songIndex,
-            playersBit
-        ) ||
-
-        // Or if it is next in the queue to be rendered.
-        songIndex === nextPlayerToRender
-    )
-)
-
 export const getMapPlayerPausedTime = songIndex => createSelector(
     mapSelectedSongIndex,
     mapSelectedVerseIndex,

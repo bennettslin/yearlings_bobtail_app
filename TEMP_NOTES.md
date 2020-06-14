@@ -1,7 +1,8 @@
 # Saturday
-* Constant renders?!
-* Make sure logue is fine
-* Still weirdness with canPlayThrough
+* Queued toggle play while selected
+* Select new player while playing
+
+* Playing from logue
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.

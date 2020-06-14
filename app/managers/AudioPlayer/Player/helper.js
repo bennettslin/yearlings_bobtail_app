@@ -45,19 +45,10 @@ const getTimeRelativeToVerseIndex = (
 
 export const getTimeInVerseStatus = ({
     currentTime,
-    currentSongIndex,
     selectedSongIndex,
-    selectedVerseIndex,
-    selectedTime
+    selectedVerseIndex
 
 }) => {
-    if (
-        currentTime === selectedTime ||
-        currentSongIndex !== selectedSongIndex
-    ) {
-        return
-    }
-
     const
         timeRelativeToSelectedVerse = getTimeRelativeToVerseIndex(
             selectedSongIndex,

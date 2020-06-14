@@ -1,8 +1,6 @@
 // eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useImperativeHandle, useEffect, useRef } from 'react'
-import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateAudioStore } from '../../../redux/audio/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import {
     mapIsPlaying,
@@ -16,7 +14,7 @@ import {
 import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
 import { mapAudioOptionIndex } from '../../../redux/session/selectors'
 
-const AudioManager = forwardRef(({ toggleSelectedPlayer }, ref) => {
+const AudioManager = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         dispatchSong = useRef(),
@@ -48,9 +46,6 @@ const AudioManager = forwardRef(({ toggleSelectedPlayer }, ref) => {
         if (queuedTogglePlay) {
             const nextIsPlaying = !isPlaying
 
-            // Player manager will decide whether to set isPlaying in store.
-            toggleSelectedPlayer(nextIsPlaying)
-
             if (nextIsPlaying) {
                 dispatch(updateScrollLyricStore({
                     scrollLyricLog: 'Playing on.',
@@ -58,7 +53,6 @@ const AudioManager = forwardRef(({ toggleSelectedPlayer }, ref) => {
                     scrollLyricAlways: true
                 }))
             }
-            dispatch(updateAudioStore({ queuedTogglePlay: false }))
         }
     }, [queuedTogglePlay])
 
@@ -67,9 +61,5 @@ const AudioManager = forwardRef(({ toggleSelectedPlayer }, ref) => {
         <SongDispatcher {...{ ref: dispatchSong }} />
     )
 })
-
-AudioManager.propTypes = {
-    toggleSelectedPlayer: PropTypes.func.isRequired
-}
 
 export default AudioManager

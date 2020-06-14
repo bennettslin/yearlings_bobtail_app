@@ -13,14 +13,17 @@ import ReactAudioPlayer from 'react-audio-player'
 import {
     logPause,
     logIgnoreSubsequentPause,
-    logPlayPromise,
+    logPromisePlay,
     logIgnoreSubsequentPromise,
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
     logEndByPlayer
 } from './helpers/log'
 import { updateAudioStore } from '../../../../redux/audio/action'
-import { updatePlayersStore } from '../../../../redux/players/action'
+import {
+    mapIsPlaying,
+    mapQueuedTogglePlay
+} from '../../../../redux/audio/selectors'
 import { getMapPlayerPausedTime } from '../../../../redux/players/selectors'
 import { getMapIsSongSelected } from '../../../../redux/selected/selectors'
 import { getMp3ForSong } from '../../../../api/mp3'
@@ -33,20 +36,16 @@ const Player = forwardRef(({
 
 }, ref) => {
     const
-        // TODO: This is just for debugging, for now.
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
         isSelected = useSelector(getMapIsSongSelected(songIndex)),
         playerPausedTime = useSelector(getMapPlayerPausedTime(songIndex)),
+        isPlaying = useSelector(mapIsPlaying),
+        queuedTogglePlay = useSelector(mapQueuedTogglePlay),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
     const setCurrentTime = () => {
         audioPlayerElement.current.currentTime = playerPausedTime
-
-        // TODO: This is just for debugging, for now.
-        dispatch(updatePlayersStore({
-            [`player${songIndex}`]: playerPausedTime
-        }))
     }
 
     const dispatchIsPlaying = isPlaying => {
@@ -117,7 +116,7 @@ const Player = forwardRef(({
         setCurrentTime()
         const playPromise = audioPlayerElement.current.play()
 
-        logPlayPromise(songIndex)
+        logPromisePlay(songIndex)
 
         /**
          * Browser supports the return of a promise:
@@ -135,21 +134,22 @@ const Player = forwardRef(({
         setIsPromisingToPlay(true)
     }
 
-    const _handleSuspendEvent = () => {
+    const onCanPlayThrough = () => {
+        /**
+         * TODO: Confirm that this works for iOS, because in the old code, this
+         * was attached to the suspend event, because iOS doesn't recognise
+         * canPlayThrough.
+         */
         dispatchPlayerCanPlayThrough(songIndex)
     }
 
-    const _handleTimeUpdateEvent = () => {
-        const { currentTime, paused } = audioPlayerElement.current
-        if (!paused) {
-            updateCurrentTime({
-                currentTime,
-                currentSongIndex: songIndex
-            })
+    const onListen = currentTime => {
+        if (isSelected) {
+            updateCurrentTime(currentTime)
         }
     }
 
-    const _handleEndedEvent = () => {
+    const onEnded = () => {
         logEndByPlayer(songIndex)
         handleSongEnd()
     }
@@ -161,35 +161,27 @@ const Player = forwardRef(({
     }
 
     useEffect(() => {
-        // Tell app that player can now be played without interruption.
-        audioPlayerElement.current.addEventListener(
-            /**
-             * This is effectively the same as canplaythrough. iOS doesn't fire
-             * canplaythrough.
-             */
-            'suspend',
-            _handleSuspendEvent
-        )
-
-        // Tell app the current player time.
-        audioPlayerElement.current.addEventListener(
-            'timeupdate',
-            _handleTimeUpdateEvent
-        )
-
-        // Tell app the player has ended.
-        audioPlayerElement.current.addEventListener(
-            'ended',
-            _handleEndedEvent
-        )
-    }, [])
-
-    useEffect(() => {
-        // Tell recently unselected player to stop playing.
-        if (!isSelected) {
-            askToPause()
+        if (isPlaying) {
+            // If now selected, play. If now deselected, pause.
+            if (isSelected) {
+                promiseToPlay()
+            } else {
+                askToPause()
+            }
         }
     }, [isSelected])
+
+    useEffect(() => {
+        if (isSelected && queuedTogglePlay) {
+            // If now paused, play. If now playing, pause.
+            if (!isPlaying) {
+                promiseToPlay()
+            } else {
+                askToPause()
+            }
+            dispatch(updateAudioStore({ queuedTogglePlay: false }))
+        }
+    }, [queuedTogglePlay])
 
     useImperativeHandle(ref, () => ({
         promiseToPlay,
@@ -200,6 +192,10 @@ const Player = forwardRef(({
         <ReactAudioPlayer
             {...{
                 ref: setRef,
+                listenInterval: 50,
+                onCanPlayThrough,
+                onListen,
+                onEnded,
                 src: getMp3ForSong(songIndex)
             }}
         />

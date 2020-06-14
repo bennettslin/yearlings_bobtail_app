@@ -1,6 +1,5 @@
 // Manager for audio players.
-// eslint-disable-next-line object-curly-newline
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -13,51 +12,19 @@ import { getSongNotLogueIndices } from '../../../api/album/songs'
 import { getTimeInVerseStatus } from './helper'
 import { mapIsPlaying } from '../../../redux/audio/selectors'
 import {
-    // getMapPlayerShouldRender
-} from '../../../redux/players/selectors'
-import {
     mapSelectedSongIndex,
-    mapSelectedVerseIndex,
-    mapSelectedTime
+    mapSelectedVerseIndex
 } from '../../../redux/selected/selectors'
 
-// Kind of silly, but easiest approach for now.
-const LOGUE_DUMMY_PLAYER = {
-    promiseToPlay() {},
-    askToPause() {}
-}
-
-const PlayerManager = forwardRef(({ handleSongEnd }, ref) => {
+const PlayerManager = ({ handleSongEnd }) => {
     const
         dispatch = useDispatch(),
         playerChildren = useRef(),
-        _dispatchPlayerCanPlayThrough = useRef(),
         dispatchTimeVerse = useRef(),
+        _dispatchPlayerCanPlayThrough = useRef(),
         isPlaying = useSelector(mapIsPlaying),
-        // playerShouldRender = useSelector(getMapPlayerShouldRender(songIndex)),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
-        selectedVerseIndex = useSelector(mapSelectedVerseIndex),
-        selectedTime = useSelector(mapSelectedTime)
-
-    const toggleSelectedPlayer = nextIsPlaying => {
-        /**
-         * If play is being toggled on, ensure that selected player was able
-         * to successfully play before storing play status in state.
-         */
-
-        // Pausing.
-        if (!nextIsPlaying && isPlaying) {
-            playerChildren.current[selectedSongIndex].askToPause()
-
-        // Playing.
-        } else if (nextIsPlaying && !isPlaying) {
-            /**
-             * Play is being toggled on, so don't set in store right away.
-             * Pass callback and wait for successful return.
-             */
-            playerChildren.current[selectedSongIndex].promiseToPlay()
-        }
-    }
+        selectedVerseIndex = useSelector(mapSelectedVerseIndex)
 
     const handleSelectPlayer = ({
         isPlayFromLogue,
@@ -65,19 +32,15 @@ const PlayerManager = forwardRef(({ handleSongEnd }, ref) => {
 
     }) => {
         // If playing from logue, begin playing only once player is selected.
-        if (isPlaying || isPlayFromLogue) {
-            /**
-             * If already playing, begin playing newly selected player.
-             */
-            playerChildren.current[nextSongIndex].promiseToPlay()
-        }
+        // if (isPlaying || isPlayFromLogue) {
+        //     /**
+        //      * If already playing, begin playing newly selected player.
+        //      */
+        //     playerChildren.current[nextSongIndex].promiseToPlay()
+        // }
     }
 
-    const updateCurrentTime = ({
-        currentTime,
-        currentSongIndex
-
-    }) => {
+    const updateCurrentTime = currentTime => {
         const {
             isTimeInSelectedVerse,
             isTimeInNextVerse,
@@ -85,10 +48,8 @@ const PlayerManager = forwardRef(({ handleSongEnd }, ref) => {
             isEndOfSong
         } = getTimeInVerseStatus({
             currentTime,
-            currentSongIndex,
             selectedSongIndex,
-            selectedVerseIndex,
-            selectedTime
+            selectedVerseIndex
         })
 
         // If current time is in selected verse, just update selected time.
@@ -156,7 +117,6 @@ const PlayerManager = forwardRef(({ handleSongEnd }, ref) => {
         }
     }
 
-    useImperativeHandle(ref, () => toggleSelectedPlayer)
     return (
         <div className={cx(
             'Players',
@@ -179,7 +139,7 @@ const PlayerManager = forwardRef(({ handleSongEnd }, ref) => {
             <TimeVerseDispatcher {...{ ref: dispatchTimeVerse }} />
         </div>
     )
-})
+}
 
 PlayerManager.propTypes = {
     handleSongEnd: PropTypes.func.isRequired

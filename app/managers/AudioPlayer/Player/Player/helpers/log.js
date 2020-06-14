@@ -14,7 +14,7 @@ export const logIgnoreSubsequentPause = songIndex => {
     })
 }
 
-export const logPlayPromise = songIndex => {
+export const logPromisePlay = songIndex => {
     logPlayer({
         log: `Promising to play ${songIndex}\u2026`,
         action: 'promisePlay',
