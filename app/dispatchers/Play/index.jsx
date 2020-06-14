@@ -1,8 +1,9 @@
 // eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateAudioStore } from '../../redux/audio/action'
 import SongDispatcher from '../../handlers/Song/Dispatcher'
+import { updateAudioStore } from '../../redux/audio/action'
+import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import { mapIsPlaying } from '../../redux/audio/selectors'
 import { mapPlayerCanPlayThrough } from '../../redux/players/selectors'
 import { mapIsSelectedLogue } from '../../redux/selected/selectors'
@@ -37,6 +38,14 @@ const PlayDispatcher = forwardRef((props, ref) => {
 
         } else {
             dispatch(updateAudioStore({ queuedTogglePlay: true }))
+
+            if (nextIsPlaying) {
+                dispatch(updateScrollLyricStore({
+                    scrollLyricLog: 'Playing on.',
+                    scrollLyricByVerse: true,
+                    scrollLyricAlways: true
+                }))
+            }
         }
 
         return true

@@ -1,8 +1,6 @@
 # Saturday
 * handle song end when repeat.
-* Get rid of nextPlayerToRender stuff?
 * Get rid of Audio, make entire thing AudioPlayerManager
-* DispatchPlayerCanPlayThrough can be through reducer.
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.

@@ -3,7 +3,6 @@ import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import { updateSelectedStore } from '../../../redux/selected/action'
-import PlayerDispatcher from './Dispatcher'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerse'
 import Player from './Player'
@@ -23,7 +22,6 @@ const PlayerManager = () => {
         dispatch = useDispatch(),
         dispatchSong = useRef(),
         dispatchTimeVerse = useRef(),
-        _dispatchPlayerCanPlayThrough = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         audioOptionIndex = useSelector(mapAudioOptionIndex)
@@ -97,10 +95,6 @@ const PlayerManager = () => {
         return false
     }
 
-    const dispatchPlayerCanPlayThrough = songIndex => {
-        _dispatchPlayerCanPlayThrough.current(songIndex)
-    }
-
     return (
         <div className={cx(
             'Players',
@@ -111,13 +105,11 @@ const PlayerManager = () => {
                     {...{
                         key: songIndex,
                         songIndex,
-                        updateCurrentTime,
                         handleSongEnd,
-                        dispatchPlayerCanPlayThrough
+                        updateCurrentTime
                     }}
                 />
             ))}
-            <PlayerDispatcher {...{ ref: _dispatchPlayerCanPlayThrough }} />
             <SongDispatcher {...{ ref: dispatchSong }} />
             <TimeVerseDispatcher {...{ ref: dispatchTimeVerse }} />
         </div>

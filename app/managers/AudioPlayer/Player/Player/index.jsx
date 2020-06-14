@@ -29,12 +29,12 @@ import {
 import { getMapPlayerPausedTime } from '../../../../redux/players/selectors'
 import { getMapIsSongSelected } from '../../../../redux/selected/selectors'
 import { getMp3ForSong } from '../../../../api/mp3'
+import { updateCanPlayThroughForSong } from '../../../../redux/players/action'
 
 const Player = ({
     songIndex,
-    updateCurrentTime,
     handleSongEnd,
-    dispatchPlayerCanPlayThrough
+    updateCurrentTime
 
 }) => {
     const
@@ -109,7 +109,7 @@ const Player = ({
          * was attached to the suspend event, because iOS doesn't recognise
          * canPlayThrough.
          */
-        dispatchPlayerCanPlayThrough(songIndex)
+        dispatch(updateCanPlayThroughForSong(songIndex))
     }
 
     const onListen = currentTime => {
@@ -188,9 +188,8 @@ const Player = ({
 
 Player.propTypes = {
     songIndex: PropTypes.number.isRequired,
-    updateCurrentTime: PropTypes.func.isRequired,
     handleSongEnd: PropTypes.func.isRequired,
-    dispatchPlayerCanPlayThrough: PropTypes.func.isRequired
+    updateCurrentTime: PropTypes.func.isRequired
 }
 
 export default memo(Player)
