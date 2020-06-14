@@ -31,6 +31,10 @@ import {
     mapIsBannerHovering,
     mapBannerHoverTime
 } from '../banner/selectors'
+import {
+    getStartTimeForScene,
+    getDurationForScene
+} from '../../api/album/time'
 
 export const mapCursorTime = createSelector(
     mapSelectedTime,
@@ -71,7 +75,7 @@ export const mapSongCursorWidth = createSelector(
     })
 )
 
-export const mapSceneCursorIndex = createSelector(
+const mapSceneCursorIndex = createSelector(
     mapSliderSceneIndex,
     mapActivatedSceneIndex,
     mapLyricSceneIndex,
@@ -86,17 +90,38 @@ export const mapSceneCursorIndex = createSelector(
     )
 )
 
-export const getMapIsSceneCursor = sceneIndex => createSelector(
-    mapSceneCursorIndex,
-    sceneCursorIndex => sceneIndex === sceneCursorIndex
-)
-
 export const getMapSceneCursorStatus = sceneIndex => createSelector(
     mapSceneCursorIndex,
     sceneCursorIndex => getBeforeOnOrAfterCursor(
         sceneCursorIndex,
         sceneIndex
     )
+)
+
+export const getMapSceneCursorWidth = sceneIndex => createSelector(
+    mapSceneCursorIndex,
+    mapSelectedSongIndex,
+    mapSelectedTime,
+    (
+        sceneCursorIndex,
+        selectedSongIndex,
+        selectedTime
+    ) => {
+        const
+            isSceneCursor = sceneIndex === sceneCursorIndex,
+            sceneStartTime = getStartTimeForScene(
+                selectedSongIndex,
+                sceneIndex
+            ),
+            sceneDuration = getDurationForScene(
+                selectedSongIndex,
+                sceneIndex
+            )
+
+        return isSceneCursor ?
+            (selectedTime - sceneStartTime) /
+            sceneDuration * 100 : null
+    }
 )
 
 export const mapVerseCursorIndex = createSelector(

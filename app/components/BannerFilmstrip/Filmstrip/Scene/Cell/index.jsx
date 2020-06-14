@@ -4,40 +4,20 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import Tracker from '../../../../Tracker'
 import {
-    getStartTimeForScene,
-    getDurationForScene
-} from '../../../../../api/album/time'
-import { getMapSceneCursorStatus } from '../../../../../redux/cursor/selectors'
-import {
-    mapSelectedSongIndex,
-    getMapIsSceneSelected,
-    mapSelectedTime
-} from '../../../../../redux/selected/selectors'
+    getMapSceneCursorStatus,
+    getMapSceneCursorWidth
+} from '../../../../../redux/cursor/selectors'
 import './style'
 
 const FilmstripCell = ({ sceneIndex }) => {
     const
-        selectedSongIndex = useSelector(mapSelectedSongIndex),
         sceneCursorStatus = useSelector(getMapSceneCursorStatus(sceneIndex)),
-        isSceneSelected = useSelector(getMapIsSceneSelected(sceneIndex)),
-        selectedTime = useSelector(mapSelectedTime),
-        sceneStartTime = getStartTimeForScene(
-            selectedSongIndex,
-            sceneIndex
-        ),
-        sceneDuration = getDurationForScene(
-            selectedSongIndex,
-            sceneIndex
-        ),
+        sceneCursorWidth = useSelector(getMapSceneCursorWidth(sceneIndex)),
 
         isOdd = Boolean(sceneIndex % 2),
         isBeforeCursor = sceneCursorStatus === -1,
         isOnCursor = sceneCursorStatus === 0,
-        isAfterCursor = sceneCursorStatus === 1,
-
-        cursorWidth = isSceneSelected ?
-            (selectedTime - sceneStartTime) /
-            sceneDuration * 100 : null
+        isAfterCursor = sceneCursorStatus === 1
 
     return (
         <div
@@ -53,8 +33,7 @@ const FilmstripCell = ({ sceneIndex }) => {
                 )
             }}
         >
-            {/* TODO: Don't rely on cursor width to determine render. */}
-            {Number.isFinite(cursorWidth) && (
+            {Number.isFinite(sceneCursorWidth) && (
                 <div
                     {...{
                         className: cx(
@@ -63,7 +42,7 @@ const FilmstripCell = ({ sceneIndex }) => {
                         )
                     }}
                 >
-                    <Tracker {...{ cursorWidth }} />
+                    <Tracker {...{ cursorWidth: sceneCursorWidth }} />
                 </div>
             )}
         </div>
