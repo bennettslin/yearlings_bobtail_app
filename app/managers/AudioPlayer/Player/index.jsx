@@ -18,7 +18,6 @@ import {
 const PlayerManager = ({ handleSongEnd }) => {
     const
         dispatch = useDispatch(),
-        playerChildren = useRef(),
         dispatchTimeVerse = useRef(),
         _dispatchPlayerCanPlayThrough = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
@@ -78,25 +77,14 @@ const PlayerManager = ({ handleSongEnd }) => {
              * again later, to ensure that the player will not end itself in
              * the interim.
              */
-            playerChildren.current[selectedSongIndex].askToPause()
+            return true
         }
+
+        return false
     }
 
     const dispatchPlayerCanPlayThrough = songIndex => {
         _dispatchPlayerCanPlayThrough.current(songIndex)
-    }
-
-    const setRef = node => {
-        if (node) {
-            const {
-                askToPause,
-                songIndex
-            } = node
-            playerChildren.current = playerChildren.current || {}
-            playerChildren.current[songIndex] = {
-                askToPause
-            }
-        }
     }
 
     return (
@@ -109,7 +97,6 @@ const PlayerManager = ({ handleSongEnd }) => {
                 <Player
                     {...{
                         key: songIndex,
-                        ref: setRef,
                         songIndex,
                         updateCurrentTime,
                         handleSongEnd,

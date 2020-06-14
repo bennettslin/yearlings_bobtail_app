@@ -1,7 +1,5 @@
 // Hidden component to wrap an audio DOM element.
 import React, {
-    forwardRef,
-    useImperativeHandle,
     useEffect,
     useRef,
     useState,
@@ -32,13 +30,13 @@ import { getMapPlayerPausedTime } from '../../../../redux/players/selectors'
 import { getMapIsSongSelected } from '../../../../redux/selected/selectors'
 import { getMp3ForSong } from '../../../../api/mp3'
 
-const Player = forwardRef(({
+const Player = ({
     songIndex,
     updateCurrentTime,
     handleSongEnd,
     dispatchPlayerCanPlayThrough
 
-}, ref) => {
+}) => {
     const
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
@@ -115,7 +113,10 @@ const Player = forwardRef(({
 
     const onListen = currentTime => {
         if (isSelected) {
-            updateCurrentTime(currentTime)
+            // This returns true if song ended and player should now pause.
+            if (updateCurrentTime(currentTime)) {
+                askToPause()
+            }
         }
     }
 
@@ -170,10 +171,6 @@ const Player = forwardRef(({
         }
     }, [isSelected])
 
-    useImperativeHandle(ref, () => ({
-        askToPause,
-        songIndex
-    }))
     return (
         <ReactAudioPlayer
             {...{
@@ -186,7 +183,7 @@ const Player = forwardRef(({
             }}
         />
     )
-})
+}
 
 Player.propTypes = {
     songIndex: PropTypes.number.isRequired,
