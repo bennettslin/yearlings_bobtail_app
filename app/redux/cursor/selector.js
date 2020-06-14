@@ -2,7 +2,7 @@ import { createSelector } from 'reselect'
 import { getStanzaIndexForVerse } from '../../api/album/verses'
 import {
     getCursorIndex,
-    getBeforeOnOrAfterCursor,
+    getBeforeOnOrAfter,
     getCursorTime
 } from '../../helpers/cursor'
 import {
@@ -62,7 +62,7 @@ export const mapSceneCursorIndex = createSelector(
 
 export const getMapSceneCursorStatus = sceneIndex => createSelector(
     mapSceneCursorIndex,
-    sceneCursorIndex => getBeforeOnOrAfterCursor(
+    sceneCursorIndex => getBeforeOnOrAfter(
         sceneCursorIndex,
         sceneIndex
     )
@@ -90,7 +90,7 @@ export const getMapIsVerseCursor = verseIndex => createSelector(
 
 export const getMapVerseCursorStatus = verseIndex => createSelector(
     mapVerseCursorIndex,
-    verseCursorIndex => getBeforeOnOrAfterCursor(
+    verseCursorIndex => getBeforeOnOrAfter(
         verseCursorIndex,
         verseIndex
     )
