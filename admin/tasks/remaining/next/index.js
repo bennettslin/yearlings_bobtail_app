@@ -5,7 +5,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Wholesale AudioPlayer and VerseTracker refactor. Make sense of, and make all functional components. Rename for clarity. Make VerseTracker based on selectedTime rather than CSS. Make Player pass time more frequently, maybe every 50ms.`,
+        taskName: `Wholesale AudioPlayer and VerseTracker refactor. Make VerseTracker based on selectedTime rather than CSS. Make Player pass time more frequently, maybe every 50ms.`,
         reference: `https://www.npmjs.com/package/react-audio-player`,
         workedHours: 0,
         neededHours: 12

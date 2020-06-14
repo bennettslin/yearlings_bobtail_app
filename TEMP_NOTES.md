@@ -1,6 +1,5 @@
 # Saturday
 * handle song end when repeat.
-* Get rid of Audio, make entire thing AudioPlayerManager
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
