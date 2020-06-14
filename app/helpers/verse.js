@@ -95,20 +95,6 @@ export const getVerseIndexforRatio = (
     return verseIndex
 }
 
-export const getCursorIndex = (
-    sliderIndex,
-    activatedIndex,
-    defaultIndex
-) => {
-    if (sliderIndex >= 0) {
-        return sliderIndex
-    } else if (activatedIndex >= 0) {
-        return activatedIndex
-    } else {
-        return defaultIndex
-    }
-}
-
 export const getVerseSelectedStatus = ({
     verseIndex,
     selectedVerseIndex

@@ -8,7 +8,7 @@ import {
     resetVerseBarsQueue
 } from '../../redux/verseBars/action'
 import { getVerseBarStatus } from './helper'
-import { getCursorIndex } from '../../helpers/verse'
+import { getCursorIndex } from '../../helpers/cursor'
 import { mapActivatedVerseIndex } from '../../redux/activated/selectors'
 import { mapIsDesktopWidth } from '../../redux/device/selectors'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selectors'

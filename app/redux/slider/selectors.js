@@ -26,6 +26,11 @@ export const mapSliderSceneIndex = (
     { [SLIDER_STORE]: { sliderSceneIndex } }
 ) => sliderSceneIndex
 
+export const getMapIsSceneSlid = sceneIndex => createSelector(
+    mapSliderSceneIndex,
+    sliderSceneIndex => sceneIndex === sliderSceneIndex
+)
+
 export const mapSliderTime = (
     { [SLIDER_STORE]: { sliderTime } }
 ) => sliderTime

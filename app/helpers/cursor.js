@@ -1,5 +1,19 @@
 import { getDurationForSong } from '../api/album/time'
 
+export const getCursorIndex = (
+    sliderIndex,
+    activatedIndex,
+    defaultIndex
+) => {
+    if (sliderIndex >= 0) {
+        return sliderIndex
+    } else if (activatedIndex >= 0) {
+        return activatedIndex
+    } else {
+        return defaultIndex
+    }
+}
+
 export const getSongCursorWidth = ({
     isBannerHovering,
     bannerHoverTime,

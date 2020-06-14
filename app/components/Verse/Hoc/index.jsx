@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
-import { getMapIsVerseCursor } from '../../../redux/lyric/selectors'
+import { getMapIsVerseCursor } from '../../../redux/cursor/selectors'
 import { getMapIsVerseSelected } from '../../../redux/selected/selectors'
 import './style'
 

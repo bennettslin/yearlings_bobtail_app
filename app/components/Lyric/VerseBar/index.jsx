@@ -8,10 +8,10 @@ import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../api/album/verses'
+import { mapCursorVerseIndex } from '../../../redux/cursor/selectors'
 import {
     mapLyricSongIndex,
-    mapIsLyricLogue,
-    mapCursorVerseIndex
+    mapIsLyricLogue
 } from '../../../redux/lyric/selectors'
 import { getMapIsVerseBarShown } from '../../../redux/verseBars/selectors'
 import './style'

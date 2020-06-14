@@ -7,15 +7,21 @@ import {
     getStartTimeForScene,
     getDurationForScene
 } from '../../../../../api/album/time'
-import { getCursorIndex } from '../../../../../helpers/verse'
-import { mapActivatedSceneIndex } from '../../../../../redux/activated/selectors'
+import { getCursorIndex } from '../../../../../helpers/cursor'
+import {
+    mapActivatedSceneIndex,
+    getMapIsSceneActivated
+} from '../../../../../redux/activated/selectors'
 import {
     mapSelectedSongIndex,
     mapSelectedSceneIndex,
     getMapIsSceneSelected,
     mapSelectedTime
 } from '../../../../../redux/selected/selectors'
-import { mapSliderSceneIndex } from '../../../../../redux/slider/selectors'
+import {
+    mapSliderSceneIndex,
+    getMapIsSceneSlid
+} from '../../../../../redux/slider/selectors'
 import './style'
 
 const FilmstripCell = ({ sceneIndex }) => {
@@ -36,8 +42,8 @@ const FilmstripCell = ({ sceneIndex }) => {
         ),
 
         isOdd = Boolean(sceneIndex % 2),
-        isActivatedScene = activatedSceneIndex === sceneIndex,
-        isSliderScene = sliderSceneIndex === sceneIndex,
+        isSceneActivated = useSelector(getMapIsSceneActivated(sceneIndex)),
+        isSceneSlid = useSelector(getMapIsSceneSlid(sceneIndex)),
 
         cursorIndex = getCursorIndex(
             sliderSceneIndex,
@@ -60,11 +66,11 @@ const FilmstripCell = ({ sceneIndex }) => {
                     !isOdd && !isAfterCursor && 'FilmstripCell__evenBefore',
                     isOdd && isAfterCursor && 'FilmstripCell__oddAfter',
                     !isOdd && isAfterCursor && 'FilmstripCell__evenAfter',
-                    (isActivatedScene || isSliderScene) &&
+                    (isSceneActivated || isSceneSlid) &&
                         'FilmstripCell__lyricsLocked',
-                    isActivatedScene &&
+                    isSceneActivated &&
                         'FilmstripCell__activated',
-                    isSliderScene &&
+                    isSceneSlid &&
                         'FilmstripCell__slider',
                     isSceneSelected &&
                         'FilmstripCell__selected',
