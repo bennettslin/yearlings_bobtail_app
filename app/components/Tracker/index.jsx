@@ -5,7 +5,8 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import './style'
 
 const Tracker = ({
-    cursorWidth
+    cursorWidth,
+    className
 
 }) => (
     <CSSTransition
@@ -22,7 +23,8 @@ const Tracker = ({
             {...{
                 className: cx(
                     'Tracker',
-                    'abF'
+                    'abF',
+                    className
                 ),
                 style: {
                     width: `${cursorWidth}%`
@@ -33,7 +35,8 @@ const Tracker = ({
 )
 
 Tracker.propTypes = {
-    cursorWidth: PropTypes.number
+    cursorWidth: PropTypes.number,
+    className: PropTypes.string
 }
 
 export default memo(Tracker)

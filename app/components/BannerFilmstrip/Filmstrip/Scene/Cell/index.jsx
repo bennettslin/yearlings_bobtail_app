@@ -1,61 +1,96 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
 import Tracker from '../../../../Tracker'
+import {
+    getStartTimeForScene,
+    getDurationForScene
+} from '../../../../../api/album/time'
+import { getCursorIndex } from '../../../../../helpers/verse'
+import { mapActivatedSceneIndex } from '../../../../../redux/activated/selectors'
+import {
+    mapSelectedSongIndex,
+    mapSelectedSceneIndex,
+    getMapIsSceneSelected,
+    mapSelectedTime
+} from '../../../../../redux/selected/selectors'
+import { mapSliderSceneIndex } from '../../../../../redux/slider/selectors'
 import './style'
 
-const FilmstripCell = ({
-    isOdd,
-    isActivatedScene,
-    isSliderScene,
-    isSelectedScene,
-    isAfterCursor,
-    cursorWidth
+const FilmstripCell = ({ sceneIndex }) => {
+    const
+        activatedSceneIndex = useSelector(mapActivatedSceneIndex),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedSceneIndex = useSelector(mapSelectedSceneIndex),
+        isSceneSelected = useSelector(getMapIsSceneSelected(sceneIndex)),
+        selectedTime = useSelector(mapSelectedTime),
+        sliderSceneIndex = useSelector(mapSliderSceneIndex),
+        sceneStartTime = getStartTimeForScene(
+            selectedSongIndex,
+            sceneIndex
+        ),
+        sceneDuration = getDurationForScene(
+            selectedSongIndex,
+            sceneIndex
+        ),
 
-}) => (
-    <div
-        {...{
-            className: cx(
-                'FilmstripCell',
-                isOdd && !isAfterCursor && 'FilmstripCell__oddBefore',
-                !isOdd && !isAfterCursor && 'FilmstripCell__evenBefore',
-                isOdd && isAfterCursor && 'FilmstripCell__oddAfter',
-                !isOdd && isAfterCursor && 'FilmstripCell__evenAfter',
-                (isActivatedScene || isSliderScene) &&
-                    'FilmstripCell__lyricsLocked',
-                isActivatedScene &&
-                    'FilmstripCell__activated',
-                isSliderScene &&
-                    'FilmstripCell__slider',
-                isSelectedScene &&
-                    'FilmstripCell__selected',
-                'ovH'
-            )
-        }}
-    >
-        {/* TODO: Don't rely on cursor width to determine render. */}
-        {Number.isFinite(cursorWidth) && (
-            <div
-                {...{
-                    className: cx(
-                        'FilmstripCell__trackerContainer',
-                        'abF'
-                    )
-                }}
-            >
-                <Tracker {...{ cursorWidth }} />
-            </div>
-        )}
-    </div>
-)
+        isOdd = Boolean(sceneIndex % 2),
+        isActivatedScene = activatedSceneIndex === sceneIndex,
+        isSliderScene = sliderSceneIndex === sceneIndex,
+
+        cursorIndex = getCursorIndex(
+            sliderSceneIndex,
+            activatedSceneIndex,
+            selectedSceneIndex
+        ),
+        isAfterCursor = cursorIndex < sceneIndex,
+
+        // TODO: Make this a selector. Only selected filmstrip scene gets updates.
+        cursorWidth =
+            (selectedTime - sceneStartTime) /
+            sceneDuration * 100
+
+    return (
+        <div
+            {...{
+                className: cx(
+                    'FilmstripCell',
+                    isOdd && !isAfterCursor && 'FilmstripCell__oddBefore',
+                    !isOdd && !isAfterCursor && 'FilmstripCell__evenBefore',
+                    isOdd && isAfterCursor && 'FilmstripCell__oddAfter',
+                    !isOdd && isAfterCursor && 'FilmstripCell__evenAfter',
+                    (isActivatedScene || isSliderScene) &&
+                        'FilmstripCell__lyricsLocked',
+                    isActivatedScene &&
+                        'FilmstripCell__activated',
+                    isSliderScene &&
+                        'FilmstripCell__slider',
+                    isSceneSelected &&
+                        'FilmstripCell__selected',
+                    'ovH'
+                )
+            }}
+        >
+            {/* TODO: Don't rely on cursor width to determine render. */}
+            {isSceneSelected && Number.isFinite(cursorWidth) && (
+                <div
+                    {...{
+                        className: cx(
+                            'FilmstripCell__trackerContainer',
+                            'abF'
+                        )
+                    }}
+                >
+                    <Tracker {...{ cursorWidth }} />
+                </div>
+            )}
+        </div>
+    )
+}
 
 FilmstripCell.propTypes = {
-    isOdd: PropTypes.bool.isRequired,
-    isActivatedScene: PropTypes.bool.isRequired,
-    isSliderScene: PropTypes.bool.isRequired,
-    isSelectedScene: PropTypes.bool.isRequired,
-    isAfterCursor: PropTypes.bool.isRequired,
-    cursorWidth: PropTypes.number
+    sceneIndex: PropTypes.number.isRequired
 }
 
 export default memo(FilmstripCell)

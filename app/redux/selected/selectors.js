@@ -48,6 +48,11 @@ export const mapSelectedSceneIndex = (
     { [SELECTED_STORE]: { selectedSceneIndex } }
 ) => selectedSceneIndex
 
+export const getMapIsSceneSelected = sceneIndex => createSelector(
+    mapSelectedSceneIndex,
+    selectedSceneIndex => sceneIndex === selectedSceneIndex
+)
+
 export const mapIsSelectedPrologue = createSelector(
     mapSelectedSongIndex,
     selectedSongIndex => getSongIsPrologue(selectedSongIndex)

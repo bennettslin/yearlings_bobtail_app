@@ -8,37 +8,22 @@ import SceneDispatcher from '../../../dispatchers/Scene'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import { getSceneIndices } from '../../../api/album/scenes'
 import {
-    getDurationForSong,
-    getStartTimeForScene,
-    getDurationForScene
-} from '../../../api/album/time'
-import { getCursorIndex } from '../../../helpers/verse'
-import {
     PREVIOUS_SCENE_KEY,
     NEXT_SCENE_KEY
 } from '../../../constants/access'
 import { FILMSTRIP } from '../../../constants/tips'
-import { mapActivatedSceneIndex } from '../../../redux/activated/selectors'
 import {
     mapSelectedSongIndex,
-    mapSelectedSceneIndex,
-    mapIsSelectedLogue,
-    mapSelectedTime
+    mapIsSelectedLogue
 } from '../../../redux/selected/selectors'
-import { mapSliderSceneIndex } from '../../../redux/slider/selectors'
 import './style'
 
 const Filmstrip = () => {
     const
         dispatchSceneIndex = useRef(),
         stopPropagation = useRef(),
-        activatedSceneIndex = useSelector(mapActivatedSceneIndex),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
-        selectedSceneIndex = useSelector(mapSelectedSceneIndex),
-        isSelectedLogue = useSelector(mapIsSelectedLogue),
-        selectedTime = useSelector(mapSelectedTime),
-        sliderSceneIndex = useSelector(mapSliderSceneIndex),
-        songDuration = getDurationForSong(selectedSongIndex)
+        isSelectedLogue = useSelector(mapIsSelectedLogue)
 
     return (
         <div
@@ -53,51 +38,11 @@ const Filmstrip = () => {
             }}
         >
             {getSceneIndices(selectedSongIndex).map(sceneIndex => {
-                const
-
-                    // TODO: Have FilmstripScene know a lot of this data directly.
-                    sceneStartTime = getStartTimeForScene(
-                        selectedSongIndex,
-                        sceneIndex
-                    ),
-                    sceneDuration = getDurationForScene(
-                        selectedSongIndex,
-                        sceneIndex
-                    ),
-
-                    isOdd = Boolean(sceneIndex % 2),
-                    isSelectedScene = selectedSceneIndex === sceneIndex,
-                    isActivatedScene = activatedSceneIndex === sceneIndex,
-                    isSliderScene = sliderSceneIndex === sceneIndex,
-
-                    cursorIndex = getCursorIndex(
-                        sliderSceneIndex,
-                        activatedSceneIndex,
-                        selectedSceneIndex
-                    ),
-                    isAfterCursor = cursorIndex < sceneIndex,
-
-                    sceneLeft = sceneStartTime / songDuration * 100,
-                    sceneWidth = sceneDuration / songDuration * 100,
-
-                    // TODO: Make this a selector. Only selected filmstrip scene gets updates.
-                    cursorWidth =
-                        (selectedTime - sceneStartTime) /
-                        sceneDuration * 100
-
                 return (
                     <FilmstripScene
                         {...{
                             key: sceneIndex,
-                            isOdd,
-                            isActivatedScene,
-                            isSliderScene,
-                            isSelectedScene,
-                            isAfterCursor,
                             sceneIndex,
-                            sceneLeft,
-                            sceneWidth,
-                            ...isSelectedScene && { cursorWidth },
                             dispatchSceneIndex,
                             stopPropagation
                         }}

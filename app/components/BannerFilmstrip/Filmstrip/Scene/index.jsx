@@ -1,32 +1,28 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
 import FilmstripCell from './Cell'
+import { getMapSceneDimensionCoordinate } from '../../../../redux/filmstrip/selectors'
+import { getMapIsSceneSelected } from '../../../../redux/selected/selectors'
 import './style'
 
 const FilmstripScene = ({
-    isOdd,
-    isActivatedScene,
-    isSliderScene,
-    isSelectedScene,
-    isAfterCursor,
     sceneIndex,
-    sceneLeft,
-    sceneWidth,
-    cursorWidth,
     dispatchSceneIndex,
     stopPropagation
 
 }) => {
+    const
+        {
+            sceneLeft,
+            sceneWidth
+        } = JSON.parse(useSelector(getMapSceneDimensionCoordinate(sceneIndex))),
+        isSceneSelected = useSelector(getMapIsSceneSelected(sceneIndex))
+
     const onClick = e => {
-        stopPropagation.current(e)
-
-        if (isSelectedScene) {
-            return
-        }
-
         logEvent({ e, componentName: 'FilmstripScene' })
-
+        stopPropagation.current(e)
         dispatchSceneIndex.current(sceneIndex)
     }
 
@@ -35,42 +31,23 @@ const FilmstripScene = ({
             {...{
                 className: cx(
                     'FilmstripScene',
-                    isSelectedScene ?
-                        'FilmstripScene__selected' :
-                        'FilmstripScene__interactable',
+                    !isSceneSelected && 'FilmstripScene__interactable',
                     'abF'
                 ),
                 style: {
                     left: `${sceneLeft}%`,
                     width: `${sceneWidth}%`
                 },
-                onClick
+                ...!isSceneSelected && { onClick }
             }}
         >
-            <FilmstripCell
-                {...{
-                    isOdd,
-                    isActivatedScene,
-                    isSliderScene,
-                    isSelectedScene,
-                    isAfterCursor,
-                    cursorWidth
-                }}
-            />
+            <FilmstripCell {...{ sceneIndex }} />
         </div>
     )
 }
 
 FilmstripScene.propTypes = {
-    isOdd: PropTypes.bool.isRequired,
-    isActivatedScene: PropTypes.bool.isRequired,
-    isSliderScene: PropTypes.bool.isRequired,
-    isSelectedScene: PropTypes.bool.isRequired,
-    isAfterCursor: PropTypes.bool.isRequired,
     sceneIndex: PropTypes.number.isRequired,
-    sceneLeft: PropTypes.number.isRequired,
-    sceneWidth: PropTypes.number.isRequired,
-    cursorWidth: PropTypes.number,
     dispatchSceneIndex: PropTypes.shape({
         current: PropTypes.func
     }).isRequired,
