@@ -46,3 +46,11 @@ export const logEndByPlayer = songIndex => {
         label: songIndex
     })
 }
+
+export const logEndByFinalVerse = songIndex => {
+    logPlayer({
+        log: `Player for ${songIndex} reached end of final verse.`,
+        action: 'endByFinalVerse',
+        label: songIndex
+    })
+}

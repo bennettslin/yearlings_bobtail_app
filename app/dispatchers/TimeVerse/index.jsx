@@ -16,9 +16,9 @@ const TimeVerseDispatcher = forwardRef((props, ref) => {
         isAutoScroll = useSelector(mapIsAutoScroll)
 
     const dispatchTimeVerse = ({
-        currentTime,
-        nextVerseIndex
-    }) => {
+        currentTime = 0,
+        nextVerseIndex = 0
+    } = {}) => {
         // This is only ever called by the player.
         const selectedSceneIndex = getSceneIndexForVerse(
             selectedSongIndex,

@@ -1,5 +1,5 @@
 # Saturday
-* handle song end when repeat.
+* Song banner animation when repeating song is janky.
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.

@@ -14,7 +14,8 @@ import {
     logIgnoreSubsequentPromise,
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
-    logEndByPlayer
+    logEndByPlayer,
+    logEndByFinalVerse
 } from './helper'
 import {
     updateAudioStore,
@@ -48,8 +49,8 @@ const Player = ({
         isSelectPlayReady = useSelector(mapIsSelectPlayReady),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
-    const setCurrentTime = () => {
-        audioPlayerElement.current.currentTime = playerPausedTime
+    const setCurrentTime = (time = playerPausedTime) => {
+        audioPlayerElement.current.currentTime = time
     }
 
     const dispatchIsPlayingIfSelected = isPlaying => {
@@ -58,24 +59,24 @@ const Player = ({
         }
     }
 
-    const askToPause = () => {
+    const askToPause = time => {
         if (audioPlayerElement.current.paused) {
             return
         }
 
-        setCurrentTime()
+        setCurrentTime(time)
         logPause(songIndex)
         audioPlayerElement.current.pause()
         dispatchIsPlayingIfSelected(false)
     }
 
-    const promiseToPlay = () => {
+    const promiseToPlay = time => {
         if (isPromisingToPlay) {
             logIgnoreSubsequentPromise(songIndex)
             return
         }
 
-        setCurrentTime()
+        setCurrentTime(time)
         logPromisePlay(songIndex)
         const playPromise = audioPlayerElement.current.play()
 
@@ -112,18 +113,36 @@ const Player = ({
         dispatch(updateCanPlayThroughForSong(songIndex))
     }
 
+    const _prepareToRepeat = () => {
+        // Explicitly reset time. (Not necessary to do both, but whatever.)
+        askToPause(0)
+        promiseToPlay(0)
+    }
+
     const onListen = currentTime => {
         if (isSelected) {
-            // This returns true if song ended and player should now pause.
-            if (updateCurrentTime(currentTime)) {
-                askToPause()
+            // If this returns true, repeat song.
+            const {
+                songEnded,
+                doRepeat
+            } = updateCurrentTime(currentTime)
+
+            if (songEnded) {
+                logEndByFinalVerse(songIndex)
+            }
+
+            if (doRepeat) {
+                _prepareToRepeat()
             }
         }
     }
 
     const onEnded = () => {
         logEndByPlayer(songIndex)
-        handleSongEnd()
+        // If this returns true, repeat song.
+        if (handleSongEnd()) {
+            _prepareToRepeat()
+        }
     }
 
     const setRef = node => {

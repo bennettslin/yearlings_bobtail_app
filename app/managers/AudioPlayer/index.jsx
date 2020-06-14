@@ -27,12 +27,22 @@ const PlayerManager = () => {
         audioOptionIndex = useSelector(mapAudioOptionIndex)
 
     const handleSongEnd = () => {
-        dispatchSong.current({
-            selectedSongIndex: getNextSongIndex(
-                selectedSongIndex,
-                audioOptionIndex
-            )
-        })
+        const nextSongIndex = getNextSongIndex(
+            selectedSongIndex,
+            audioOptionIndex
+        )
+
+        // If repeating the song, just reset time and verse.
+        if (nextSongIndex === selectedSongIndex) {
+            dispatchTimeVerse.current()
+            return true
+
+        } else {
+            dispatchSong.current({
+                selectedSongIndex: nextSongIndex
+            })
+            return false
+        }
     }
 
     const updateCurrentTime = currentTime => {
@@ -47,11 +57,11 @@ const PlayerManager = () => {
             selectedVerseIndex
         })
 
-        // If current time is in selected verse, just update selected time.
+        // If current time is in selected verse, just update time.
         if (isTimeInSelectedVerse) {
             dispatch(updateSelectedStore({ selectedTime: currentTime }))
 
-        // Otherwise, update verse and time.
+        // If it's in the next verse, update time and verse.
         } else if (isTimeInNextVerse) {
             dispatchTimeVerse.current({
                 currentTime,
@@ -61,21 +71,12 @@ const PlayerManager = () => {
         } else {
             /**
              * If time is after current verse but there is no next verse, then
-             * we have reached the end of the song.
+             * this should mean we have reached the end of the song. If this is
+             * not reflected by the time in verse status, then something weird
+             * has happened. This should never get called, so fix the code if
+             * it does!
              */
-            if (isEndOfSong) {
-                logPlayer({
-                    log: 'Updated time will end player.',
-                    action: 'endByUpdatedTime',
-                    label: selectedSongIndex
-                })
-                handleSongEnd()
-
-            /**
-             * Something weird has happened, so we'll reset the player. This
-             * should never get called, so fix the code if it does!
-             */
-            } else {
+            if (!isEndOfSong) {
                 logError({
                     log: `Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`,
                     action: 'syncTimeAndVerse',
@@ -83,13 +84,10 @@ const PlayerManager = () => {
                 })
             }
 
-            /**
-             * Tell the player to end either way. If it ended because the song
-             * ended, we will still call this even though it will be called
-             * again later, to ensure that the player will not end itself in
-             * the interim.
-             */
-            return true
+            return {
+                songEnded: true,
+                doRepeat: handleSongEnd()
+            }
         }
 
         return false
