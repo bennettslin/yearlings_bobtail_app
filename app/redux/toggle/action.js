@@ -10,7 +10,6 @@ import {
 } from '../../constants/store'
 
 export const updateToggleStore = payload => {
-
     const { isCarouselShown } = payload
 
     if (hasKey(isCarouselShown)) {

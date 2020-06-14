@@ -13,7 +13,6 @@ import {
 } from '../../constants/store'
 
 export const updateSelectedStore = payload => {
-
     const {
         selectedSongIndex,
         selectedAnnotationIndex,

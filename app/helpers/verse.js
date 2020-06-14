@@ -108,3 +108,16 @@ export const getCursorIndex = (
         return defaultIndex
     }
 }
+
+export const getVerseSelectedStatus = ({
+    verseIndex,
+    selectedVerseIndex
+}) => {
+    if (verseIndex < selectedVerseIndex) {
+        return -1
+    } else if (verseIndex > selectedVerseIndex) {
+        return 1
+    } else {
+        return 0
+    }
+}

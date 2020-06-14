@@ -3,6 +3,7 @@ import {
     getSongIsPrologue,
     getSongIsEpilogue
 } from '../../api/album/songs'
+import { getVerseSelectedStatus } from '../../helpers/verse'
 import { SELECTED_STORE } from '../../constants/store'
 
 export const mapSelectedSongIndex = (
@@ -29,15 +30,10 @@ export const getMapIsVerseSelected = verseIndex => createSelector(
 
 export const getMapVerseSelectedStatus = verseIndex => createSelector(
     mapSelectedVerseIndex,
-    selectedVerseIndex => {
-        if (verseIndex < selectedVerseIndex) {
-            return -1
-        } else if (verseIndex > selectedVerseIndex) {
-            return 1
-        } else {
-            return 0
-        }
-    }
+    selectedVerseIndex => getVerseSelectedStatus({
+        verseIndex,
+        selectedVerseIndex
+    })
 )
 
 export const mapSelectedAnnotationIndex = (

@@ -31,6 +31,5 @@ export const SELECTED_VERSE_INDEX = 'selectedVerseIndex'
 export const SELECTED_ANNOTATION_INDEX = 'selectedAnnotationIndex'
 
 export const AUDIO_OPTION_INDEX = 'audioOptionIndex'
-export const SELECTED_EAR_COLUMN_INDEX = 'earColumnIndex'
 export const SELECTED_OVERVIEW_OPTION = 'selectedOverviewOption'
 export const SELECTED_TIPS_OPTION = 'selectedTipsOption'
