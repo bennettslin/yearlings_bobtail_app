@@ -4792,5 +4792,9 @@ export default [
     {
         taskName: `Fix bug where annotation with no selected dots can be selected by getting rid of intersects method.`,
         workedHours: 1
+    },
+    {
+        taskName: `AudioPlayer refactor and cleanup.`,
+        workedHours: 12
     }
 ]

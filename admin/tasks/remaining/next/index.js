@@ -1,14 +1,19 @@
 export default [
     {
+        taskName: `VerseTracker refactor. Make VerseTracker based on selectedTime rather than CSS.`,
+        reference: `https://www.npmjs.com/package/react-audio-player`,
+        workedHours: 0,
+        neededHours: 6
+    },
+    {
+        taskName: `Refigure overview and tips logic.`,
+        workedHours: 0,
+        neededHours: 6
+    },
+    {
         taskName: `Make sure all presences are properly behind or in front as appropriate.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Wholesale AudioPlayer and VerseTracker refactor. Make VerseTracker based on selectedTime rather than CSS. Make Player pass time more frequently, maybe every 50ms.`,
-        reference: `https://www.npmjs.com/package/react-audio-player`,
-        workedHours: 0,
-        neededHours: 12
     },
 
     /* Weekend work. */
@@ -19,7 +24,7 @@ export default [
     },
     {
         taskName: `Post-Gatsby refactoring.`,
-        workedHours: 79
+        workedHours: 80
     },
 
     /* Next weekend. */
