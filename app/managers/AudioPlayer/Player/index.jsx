@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import PlayerDispatcher from './Dispatcher'
-import PlayerListener from './Listener'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerse'
 import Player from './Player'
@@ -107,7 +106,6 @@ const PlayerManager = () => {
             'Players',
             'dNC'
         )}>
-            <PlayerListener />
             {getSongNotLogueIndices().map(songIndex => (
                 <Player
                     {...{

@@ -11,10 +11,6 @@ export const mapPlayersBit = (
     { [PLAYERS_STORE]: { playersBit } }
 ) => playersBit
 
-export const mapNextPlayerToRender = (
-    { [PLAYERS_STORE]: { nextPlayerToRender } }
-) => nextPlayerToRender
-
 export const mapPlayerCanPlayThrough = createSelector(
     mapSelectedSongIndex,
     mapPlayersBit,
