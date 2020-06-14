@@ -1,17 +1,41 @@
 // Reducers for selected dots.
-import { DOTS_STORE } from '../../constants/store'
+import { hasKey } from '../../helpers/action'
+import { getDotsBitForToggledDotIndex } from '../../helpers/dot'
+import {
+    DOTS_STORE,
+    SELECTED_DOTS_BIT
+} from '../../constants/store'
 import { DOTS_DEFAULTS } from './default'
+import { setInStorage } from '../../helpers/storage'
 
 export default (
     state = DOTS_DEFAULTS,
     { type, payload }
 ) => {
     switch (type) {
-        case DOTS_STORE:
-            return {
-                ...state,
-                ...payload
+        case DOTS_STORE: {
+            const
+                { dotIndex } = payload,
+                { selectedDotsBit: prevDotsBit } = state
+
+            if (hasKey(dotIndex)) {
+                const selectedDotsBit = getDotsBitForToggledDotIndex({
+                    dotIndex,
+                    dotsBit: prevDotsBit
+                })
+                setInStorage(SELECTED_DOTS_BIT, selectedDotsBit)
+
+                return {
+                    ...state,
+                    selectedDotsBit
+                }
+            } else {
+                return {
+                    ...state,
+                    ...payload
+                }
             }
+        }
         default:
             return state
     }

@@ -13,13 +13,15 @@ export default (
             const
                 { songIndex } = payload,
                 { playersBit } = state
-
-            return hasKey(songIndex) ? {
-                playersBit: getBitFromPlayerCanPlayThrough({
-                    bit: playersBit,
-                    key: songIndex
-                })
-            } : state
+            return {
+                ...state,
+                ...hasKey(songIndex) ? {
+                    playersBit: getBitFromPlayerCanPlayThrough({
+                        bit: playersBit,
+                        key: songIndex
+                    })
+                } : payload
+            }
         }
         default:
             return state

@@ -2,7 +2,7 @@
 import React, { memo, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import DotSelectDispatcher from '../../../dispatchers/DotSelect'
+import { useDispatch } from 'react-redux'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import Button from '../../Button'
 import Dot from '../../Dot'
@@ -10,6 +10,8 @@ import Anchor from '../../Anchor'
 import { ENTER } from '../../../constants/access'
 import { DOTS_SLIDE_SELECT_BUTTON_KEY } from '../../../constants/buttons'
 import { DOT_DESCRIPTIONS } from '../../../constants/dots'
+import { updateDotIndex } from '../../../redux/dots/action'
+import { updateSlideDotIndex } from '../../../redux/dotsSlide/action'
 import './style'
 
 const DotsSlideSelect = ({
@@ -20,15 +22,15 @@ const DotsSlideSelect = ({
     isActivated
 }) => {
     const
-        dispatchDot = useRef(),
+        dispatch = useDispatch(),
         stopPropagation = useRef()
 
     const handleButtonClick = () => {
-        dispatchDot.current.select(dotIndex)
+        dispatch(updateDotIndex(dotIndex))
     }
 
     const handleAnchorClick = e => {
-        dispatchDot.current.activate(dotIndex)
+        dispatch(updateSlideDotIndex(dotIndex))
 
         // Stop propagation if anchor click is valid.
         stopPropagation.current(e)
@@ -98,7 +100,6 @@ const DotsSlideSelect = ({
                     }}
                 />
             </div>
-            <DotSelectDispatcher {...{ ref: dispatchDot }} />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </>
     )

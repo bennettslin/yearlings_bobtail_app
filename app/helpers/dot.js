@@ -32,3 +32,18 @@ export const getFirstSelectedDotKey = (dotsBit = 0, selectedDotsBit) => {
 export const getHasSelectedDot = (dotsBit, selectedDotsBit) => (
     Boolean(getFirstSelectedDotKey(dotsBit, selectedDotsBit))
 )
+
+export const getDotsBitForToggledDotIndex = ({
+    dotIndex,
+    dotsBit
+
+}) => {
+    const
+        newDotKeys = getDotKeysFromBit(dotsBit),
+        dotKey = ORDERED_DOT_KEYS[dotIndex],
+        newValue = !newDotKeys[dotKey]
+
+    newDotKeys[dotKey] = newValue
+
+    return getDotsBitFromKeys(newDotKeys)
+}

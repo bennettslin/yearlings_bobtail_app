@@ -3,7 +3,8 @@ import { hasKey } from '../../helpers/action'
 import {
     ACCESS_STORE,
     SLIDER_STORE,
-    VIEWPORT_STORE
+    VIEWPORT_STORE,
+    DOTS_STORE
 } from '../../constants/store'
 import {
     ACCESS_DEFAULTS,
@@ -20,6 +21,14 @@ export default (
                 ...state,
                 ...payload
             }
+        case DOTS_STORE: {
+            const { dotIndex } = payload
+            return hasKey(dotIndex) ? {
+                ...state,
+                // Make most recently toggled dot the accessed dot.
+                accessedDotIndex: dotIndex
+            } : state
+        }
         case SLIDER_STORE: {
             const { isSliderTouched } = payload
             return hasKey(isSliderTouched) && isSliderTouched ? {

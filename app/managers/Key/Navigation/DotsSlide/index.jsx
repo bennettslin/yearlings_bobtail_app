@@ -1,8 +1,7 @@
 // eslint-disable-next-line object-curly-newline
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../../redux/access/action'
-import DotSelectDispatcher from '../../../../dispatchers/DotSelect'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -15,11 +14,11 @@ import {
     mapIsAccessOn,
     mapAccessedDotIndex
 } from '../../../../redux/access/selectors'
+import { updateDotIndex } from '../../../../redux/dots/action'
 
 const DotsSlideNavigation = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        dispatchDot = useRef(),
         isAccessOn = useSelector(mapIsAccessOn),
         accessedDotIndex = useSelector(mapAccessedDotIndex)
 
@@ -53,7 +52,7 @@ const DotsSlideNavigation = forwardRef((props, ref) => {
                     }
                     break
                 case ENTER:
-                    dispatchDot.current.select(accessedDotIndex)
+                    dispatch(updateDotIndex(accessedDotIndex))
                     return true
                 default:
                     return false
@@ -67,9 +66,7 @@ const DotsSlideNavigation = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => navigateDotsSlide)
-    return (
-        <DotSelectDispatcher {...{ ref: dispatchDot }} />
-    )
+    return null
 })
 
 export default DotsSlideNavigation

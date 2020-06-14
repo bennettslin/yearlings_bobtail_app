@@ -1,12 +1,13 @@
 // Actions for dots slide activated texts.
-import { getDefinedOnlyPayload } from '../../helpers/action'
 import { DOTS_SLIDE_STORE } from '../../constants/store'
+import { DOTS_SLIDE_DEFAULTS } from './default'
 
-export const updateDotsSlideStore = payload => ({
+export const updateSlideDotIndex = dotIndex => ({
     type: DOTS_SLIDE_STORE,
-    payload: getDefinedOnlyPayload(payload)
+    payload: { dotIndex }
 })
 
 export const resetActivatedDots = () => ({
-    type: DOTS_SLIDE_STORE
+    type: DOTS_SLIDE_STORE,
+    payload: DOTS_SLIDE_DEFAULTS
 })
