@@ -9,7 +9,7 @@ import {
     mapLyricVerseIndex,
     mapLyricAnnotationIndex,
     mapIsLyricLogue
-} from '../../redux/lyric/selectors'
+} from '../../redux/lyric/selector'
 import { getPathForIndices } from './helper'
 
 const UrlListener = () => {

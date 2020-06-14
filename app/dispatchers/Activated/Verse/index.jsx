@@ -5,12 +5,12 @@ import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { getActivatedVerseForDirection } from './helper'
-import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../../redux/activated/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapIsSelectedLogue
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 
 const ActivatedVerseDispatcher = forwardRef((props, ref) => {
     const

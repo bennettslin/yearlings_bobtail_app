@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import Iframe from '../../modules/Iframe'
-import { mapSelectedWikiUrl } from '../../redux/wiki/selectors'
+import { mapSelectedWikiUrl } from '../../redux/wiki/selector'
 
 const Wiki = () => {
     const

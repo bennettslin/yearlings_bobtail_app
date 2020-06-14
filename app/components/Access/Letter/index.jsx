@@ -7,11 +7,11 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import AccessField from './Field'
 import AccessIcon from './Icon'
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
-import { mapIsAccessOn } from '../../../redux/access/selectors'
+import { mapIsAccessOn } from '../../../redux/access/selector'
 import {
     mapIsTabletWidth,
     mapIsDesktopWidth
-} from '../../../redux/device/selectors'
+} from '../../../redux/device/selector'
 import './style'
 
 const AccessLetter = ({

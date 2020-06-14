@@ -2,7 +2,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import { getIndexedTitleForSong } from '../../../api/album/songs'
 import './style'
 

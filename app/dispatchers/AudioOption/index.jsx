@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateAudioOptionIndex } from '../../redux/session/action'
 
 import { AUDIO_OPTIONS } from '../../constants/options'
-import { mapAudioOptionIndex } from '../../redux/session/selectors'
+import { mapAudioOptionIndex } from '../../redux/session/selector'
 
 const AudioOptionDispatcher = forwardRef((props, ref) => {
     const

@@ -5,13 +5,13 @@ import {
     getIsOverviewVisibleBySection,
     getIsOverviewVisibleBySong
 } from '../../helpers/overview'
-import { mapCanLyricCarouselEnter } from '../entrance/selectors'
-import { mapIsLyricLogue } from '../lyric/selectors'
-import { mapIsPhoneWidth } from '../device/selectors'
-import { mapSelectedOverviewOption } from '../option/selectors'
-import { mapIsOverlayShown } from '../overlay/selectors'
-import { mapIsTipsShown } from '../tips/selectors'
-import { mapIsHeightlessLyric } from '../viewport/selectors'
+import { mapCanLyricCarouselEnter } from '../entrance/selector'
+import { mapIsLyricLogue } from '../lyric/selector'
+import { mapIsPhoneWidth } from '../device/selector'
+import { mapSelectedOverviewOption } from '../option/selector'
+import { mapIsOverlayShown } from '../overlay/selector'
+import { mapIsTipsShown } from '../tips/selector'
+import { mapIsHeightlessLyric } from '../viewport/selector'
 
 export const mapIsOverviewShown = createSelector(
     mapSelectedOverviewOption,

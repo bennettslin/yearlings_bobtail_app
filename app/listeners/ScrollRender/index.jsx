@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import {
     mapDidCarouselEnter,
     mapDidLyricEnter
-} from '../../redux/entrance/selectors'
+} from '../../redux/entrance/selector'
 import { updateScrollCarouselStore } from '../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
-} from '../../redux/selected/selectors'
+} from '../../redux/selected/selector'
 
 const ScrollRenderListener = () => {
     const

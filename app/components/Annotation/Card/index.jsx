@@ -10,8 +10,8 @@ import {
     getDescriptionForAnnotationCard,
     getDotsBitForAnnotationCard
 } from '../../../api/album/cards'
-import { getMapHasSelectedDot } from '../../../redux/dots/selectors'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
+import { getMapHasSelectedDot } from '../../../redux/dots/selector'
+import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
 const AnnotationCard = ({

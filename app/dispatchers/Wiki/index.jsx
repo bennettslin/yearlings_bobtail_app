@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateWikiIndices } from '../../redux/session/action'
-import { mapReferenceDot } from '../../redux/dots/selectors'
+import { mapReferenceDot } from '../../redux/dots/selector'
 
 const WikiDispatcher = forwardRef((props, ref) => {
     const

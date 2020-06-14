@@ -6,8 +6,8 @@ import {
     mapDidLyricUpdate,
     mapDidCarouselUpdate,
     mapDidSceneUpdate
-} from '../../../redux/entrance/selectors'
-import { mapCanCarouselMount } from '../../../redux/viewport/selectors'
+} from '../../../redux/entrance/selector'
+import { mapCanCarouselMount } from '../../../redux/viewport/selector'
 
 const mapStateToProps = state => {
     const

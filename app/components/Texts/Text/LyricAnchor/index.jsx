@@ -13,10 +13,10 @@ import {
     mapIsAccessedIndexedAnchorShown,
     mapAccessedAnnotationIndex,
     mapAccessedWikiWormholeIndex
-} from '../../../../redux/access/selectors'
-import { mapIsActivated } from '../../../../redux/activated/selectors'
-import { mapLyricAnnotationIndex, getMapIsLyricAnnotation } from '../../../../redux/lyric/selectors'
-import { mapIsSliderMoving } from '../../../../redux/slider/selectors'
+} from '../../../../redux/access/selector'
+import { mapIsActivated } from '../../../../redux/activated/selector'
+import { mapLyricAnnotationIndex, getMapIsLyricAnnotation } from '../../../../redux/lyric/selector'
+import { mapIsSliderMoving } from '../../../../redux/slider/selector'
 import './style'
 
 const TextLyricAnchor = forwardRef(({

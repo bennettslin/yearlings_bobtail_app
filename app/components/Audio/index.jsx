@@ -17,15 +17,15 @@ import {
     AUDIO_PLAY_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
-import { mapIsPlaying } from '../../redux/audio/selectors'
-import { mapIsDesktopWidth } from '../../redux/device/selectors'
-import { mapPlayerCanPlayThrough } from '../../redux/players/selectors'
+import { mapIsPlaying } from '../../redux/audio/selector'
+import { mapIsDesktopWidth } from '../../redux/device/selector'
+import { mapPlayerCanPlayThrough } from '../../redux/players/selector'
 import {
     mapIsSelectedPrologue,
     mapIsSelectedEpilogue
-} from '../../redux/selected/selectors'
-import { mapAudioOptionIndex } from '../../redux/session/selectors'
-import { mapIsTwoRowMenu } from '../../redux/viewport/selectors'
+} from '../../redux/selected/selector'
+import { mapAudioOptionIndex } from '../../redux/session/selector'
+import { mapIsTwoRowMenu } from '../../redux/viewport/selector'
 import './style'
 
 const BUTTON_CLASS_NAME = 'AudioButton'

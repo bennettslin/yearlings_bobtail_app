@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect'
 import { getIsSmallBannerText } from '../../helpers/resize/responsive'
-import { mapWindowWidth } from '../viewport/selectors'
+import { mapWindowWidth } from '../viewport/selector'
 import { BANNER_STORE } from '../../constants/store'
 
 export const mapIsBannerHovering = (

@@ -1,7 +1,7 @@
 import { cloneElement, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import { mapStageDimensionCoordinates } from '../../../redux/viewport/selectors'
+import { mapStageDimensionCoordinates } from '../../../redux/viewport/selector'
 
 const AspectRatio = ({ children }) => {
     const {

@@ -3,8 +3,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import { getFormattedTime } from '../../../../helpers/format'
-import { mapCursorTime } from '../../../../redux/cursor/selectors'
-import { mapIsSelectedLogue } from '../../../../redux/selected/selectors'
+import { mapCursorTime } from '../../../../redux/cursor/selector'
+import { mapIsSelectedLogue } from '../../../../redux/selected/selector'
 import './style'
 
 const SongBannerTimer = () => {

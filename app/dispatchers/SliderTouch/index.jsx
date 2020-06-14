@@ -11,14 +11,14 @@ import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapIsSelectedLogue
-} from '../../redux/selected/selectors'
+} from '../../redux/selected/selector'
 import {
     mapSliderLeft,
     mapSliderWidth,
     mapIsSliderMoving,
     mapIsSliderTouched,
     mapSliderVerseIndex
-} from '../../redux/slider/selectors'
+} from '../../redux/slider/selector'
 
 const SliderTouchDispatcher = forwardRef((props, ref) => {
     const

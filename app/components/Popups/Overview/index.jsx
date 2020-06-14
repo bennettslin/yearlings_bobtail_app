@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Overview from '../../Overview'
 import Popup from '../../Popup'
-import { getMapIsOverviewPopupShown } from '../../../redux/overview/selectors'
+import { getMapIsOverviewPopupShown } from '../../../redux/overview/selector'
 import './style'
 
 const OverviewPopup = ({ inMain = false }) => {

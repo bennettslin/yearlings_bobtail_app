@@ -8,14 +8,14 @@ import UnitDotParent from './Parent'
 import { getDotForUnit } from '../../../api/album/units'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
 import { LYRIC_ANNOTATION_SCROLL } from '../../../constants/scroll'
-import { getMapIsAnnotationAccessed } from '../../../redux/access/selectors'
-import { mapIsActivated } from '../../../redux/activated/selectors'
-import { getMapHasSelectedDot } from '../../../redux/dots/selectors'
+import { getMapIsAnnotationAccessed } from '../../../redux/access/selector'
+import { mapIsActivated } from '../../../redux/activated/selector'
+import { getMapHasSelectedDot } from '../../../redux/dots/selector'
 import {
     mapLyricSongIndex,
     getMapIsLyricAnnotation
-} from '../../../redux/lyric/selectors'
-import { mapIsSliderMoving } from '../../../redux/slider/selectors'
+} from '../../../redux/lyric/selector'
+import { mapIsSliderMoving } from '../../../redux/slider/selector'
 import './style'
 
 export const UnitDot = forwardRef(({ unitIndex }, ref) => {

@@ -2,11 +2,11 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateSelectedStore } from '../../redux/selected/action'
-import { mapIsEarShown } from '../../redux/ear/selectors'
+import { mapIsEarShown } from '../../redux/ear/selector'
 import {
     mapIsSelectedLogue,
     mapEarColumnIndex
-} from '../../redux/selected/selectors'
+} from '../../redux/selected/selector'
 
 const EarColumnDispatcher = forwardRef((props, ref) => {
     const

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import FilmstripCell from './Cell'
-import { getMapSceneDimensionCoordinate } from '../../../../redux/filmstrip/selectors'
-import { getMapIsSceneSelected } from '../../../../redux/selected/selectors'
+import { getMapSceneDimensionCoordinate } from '../../../../redux/filmstrip/selector'
+import { getMapIsSceneSelected } from '../../../../redux/selected/selector'
 import './style'
 
 const FilmstripScene = ({

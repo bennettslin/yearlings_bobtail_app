@@ -15,7 +15,7 @@ import { FILMSTRIP } from '../../../constants/tips'
 import {
     mapSelectedSongIndex,
     mapIsSelectedLogue
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 import './style'
 
 const Filmstrip = () => {

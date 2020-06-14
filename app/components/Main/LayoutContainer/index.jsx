@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { mapMainHeight } from '../../../redux/main/selectors'
+import { mapMainHeight } from '../../../redux/main/selector'
 import {
     mapMenuHeight,
     mapCanCarouselMount
-} from '../../../redux/viewport/selectors'
+} from '../../../redux/viewport/selector'
 
 const LayoutContainer = ({
     className,

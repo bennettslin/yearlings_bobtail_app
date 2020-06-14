@@ -6,8 +6,8 @@ import Transition from 'react-transition-group/Transition'
 import ScrollCarouselListener from '../../../listeners/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
 import { getAnnotationIndices } from '../../../api/album/annotations'
-import { mapCanLyricCarouselUpdate } from '../../../redux/entrance/selectors'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
+import { mapCanLyricCarouselUpdate } from '../../../redux/entrance/selector'
+import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
 const CarouselScroll = () => {

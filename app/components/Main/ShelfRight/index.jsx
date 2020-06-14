@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import ScoreToggle from '../../Score/Toggle'
 import TipsToggle from '../../Tips/Toggle'
-import { mapIsDesktopWidth } from '../../../redux/device/selectors'
+import { mapIsDesktopWidth } from '../../../redux/device/selector'
 import './style'
 
 const CHILD_CLASS_NAME = 'ShelfRight__child'

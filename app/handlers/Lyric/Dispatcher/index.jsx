@@ -2,9 +2,9 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { mapIsLyricExpandable } from '../../../redux/lyricExpand/selectors'
-import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
-import { mapIsLyricExpanded } from '../../../redux/toggle/selectors'
+import { mapIsLyricExpandable } from '../../../redux/lyricExpand/selector'
+import { mapIsSelectedLogue } from '../../../redux/selected/selector'
+import { mapIsLyricExpanded } from '../../../redux/toggle/selector'
 
 const LyricDispatcher = forwardRef((props, ref) => {
     const

@@ -14,8 +14,8 @@ import {
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex
-} from '../../redux/selected/selectors'
-import { mapAudioOptionIndex } from '../../redux/session/selectors'
+} from '../../redux/selected/selector'
+import { mapAudioOptionIndex } from '../../redux/session/selector'
 
 const PlayerManager = () => {
     const

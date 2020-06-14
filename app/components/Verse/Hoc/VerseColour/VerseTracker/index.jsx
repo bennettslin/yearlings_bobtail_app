@@ -6,7 +6,7 @@ import cx from 'classnames'
 import {
     getMapIsVerseTrackerShown,
     getMapVerseCursorLength
-} from '../../../../../redux/verse/selectors'
+} from '../../../../../redux/verse/selector'
 import './style'
 
 const VerseTracker = ({

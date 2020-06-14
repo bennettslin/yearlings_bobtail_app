@@ -13,19 +13,19 @@ import { getStartTimeForVerse } from '../../../api/album/time'
 import { getClientX } from '../../../helpers/dom'
 import { getVerseIndexFromClientX } from './helper'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
-import { mapIsPlaying } from '../../../redux/audio/selectors'
+import { mapIsPlaying } from '../../../redux/audio/selector'
 import {
     mapIsBannerHovering,
     mapBannerHoverVerseIndex,
     mapIsSmallBannerText
-} from '../../../redux/banner/selectors'
-import { mapSongCursorWidth } from '../../../redux/cursor/selectors'
+} from '../../../redux/banner/selector'
+import { mapSongCursorWidth } from '../../../redux/cursor/selector'
 import {
     mapSelectedSongIndex,
     mapIsSelectedLogue,
     mapSelectedTime
-} from '../../../redux/selected/selectors'
-import { mapIsLyricsLocked } from '../../../redux/slider/selectors'
+} from '../../../redux/selected/selector'
+import { mapIsLyricsLocked } from '../../../redux/slider/selector'
 import './style'
 
 const SongBanner = () => {

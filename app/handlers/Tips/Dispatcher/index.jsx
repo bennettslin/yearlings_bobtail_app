@@ -1,11 +1,11 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
-import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
-import { mapIsTipsShowable } from '../../../redux/tips/selectors'
-import { mapToggleShowsTipsImmediately } from '../../../redux/optionOrder/selectors'
+import { mapIsLyricLogue } from '../../../redux/lyric/selector'
+import { mapIsTipsShowable } from '../../../redux/tips/selector'
+import { mapToggleShowsTipsImmediately } from '../../../redux/optionOrder/selector'
 import { getNextOption } from '../../../helpers/options'
-import { mapSelectedTipsOption } from '../../../redux/option/selectors'
+import { mapSelectedTipsOption } from '../../../redux/option/selector'
 
 const TipsDispatcher = forwardRef((props, ref) => {
     const

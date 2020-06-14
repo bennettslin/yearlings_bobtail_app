@@ -2,14 +2,14 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import AccessLetters from '../../Access/Letters'
-import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
-import { mapLyricAnnotationIndex } from '../../../redux/lyric/selectors'
+import { mapSelectedDotsBit } from '../../../redux/dots/selector'
+import { mapLyricAnnotationIndex } from '../../../redux/lyric/selector'
 import {
     mapIsCarouselShown,
     mapIsNavShown,
     mapIsDotsSlideShown,
     mapIsLyricExpanded
-} from '../../../redux/toggle/selectors'
+} from '../../../redux/toggle/selector'
 import { ARROW_LEFT, ARROW_RIGHT } from '../../../constants/access'
 import './style'
 

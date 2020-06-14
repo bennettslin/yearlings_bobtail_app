@@ -4,15 +4,15 @@ import { getWikiUrl } from '../../helpers/wiki'
 import {
     mapDeviceWidthIndex,
     mapWindowWidth
-} from '../viewport/selectors'
+} from '../viewport/selector'
 import {
     mapSelectedWikiIndex,
     mapWikiAnnotationIndex
-} from '../session/selectors'
+} from '../session/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex
-} from '../selected/selectors'
+} from '../selected/selector'
 
 export const mapIsWikiShown = createSelector(
     mapSelectedWikiIndex,

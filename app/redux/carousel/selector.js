@@ -1,11 +1,11 @@
 import { createSelector } from 'reselect'
 import { getIsCarouselNavShowable } from '../../helpers/main'
-import { mapIsActivated } from '../activated/selectors'
-import { mapIsLyricLogue } from '../lyric/selectors'
-import { mapIsOverlayShown } from '../overlay/selectors'
-import { mapIsOverviewShown } from '../overview/selectors'
-import { mapIsTipsShown } from '../tips/selectors'
-import { mapIsLyricExpanded } from '../toggle/selectors'
+import { mapIsActivated } from '../activated/selector'
+import { mapIsLyricLogue } from '../lyric/selector'
+import { mapIsOverlayShown } from '../overlay/selector'
+import { mapIsOverviewShown } from '../overview/selector'
+import { mapIsTipsShown } from '../tips/selector'
+import { mapIsLyricExpanded } from '../toggle/selector'
 
 export const mapIsCarouselNavShowable = createSelector(
     mapIsOverlayShown,

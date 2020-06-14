@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import {
     mapMenuHeight,
     mapCanScoreMount
-} from '../../../redux/viewport/selectors'
+} from '../../../redux/viewport/selector'
 
 import AnnotationPopup from '../Annotation'
 import AboutPopup from '../About'

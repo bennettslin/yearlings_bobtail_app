@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 import { getIsDoublespeakerShown } from '../../helpers/doublespeaker'
-import { mapLyricSongIndex } from '../lyric/selectors'
-import { mapDeviceWidthIndex } from '../viewport/selectors'
+import { mapLyricSongIndex } from '../lyric/selector'
+import { mapDeviceWidthIndex } from '../viewport/selector'
 
 export const mapIsEarShown = createSelector(
     mapLyricSongIndex,

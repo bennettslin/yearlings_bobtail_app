@@ -1,12 +1,12 @@
 import { createSelector } from 'reselect'
 import { getIsAccessedIndexedAnchorShown } from '../../helpers/access'
-import { mapIsActivated } from '../activated/selectors'
-import { mapLyricAnnotationIndex } from '../lyric/selectors'
+import { mapIsActivated } from '../activated/selector'
+import { mapLyricAnnotationIndex } from '../lyric/selector'
 import {
     mapIsDotsSlideShown,
     mapIsNavShown,
     mapIsLyricExpanded
-} from '../toggle/selectors'
+} from '../toggle/selector'
 import { ACCESS_STORE } from '../../constants/store'
 
 export const mapIsAccessOn = (

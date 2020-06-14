@@ -9,7 +9,7 @@ import {
 } from '../../../../../api/album/time'
 import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'
-import { mapLyricSongIndex } from '../../../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../../../redux/lyric/selector'
 import './style'
 
 const SliderVerses = ({

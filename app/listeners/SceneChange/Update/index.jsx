@@ -10,7 +10,7 @@ import {
 import {
     mapSelectedSongIndex,
     mapSelectedSceneIndex
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 
 const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
     const

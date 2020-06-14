@@ -6,13 +6,13 @@ import { updateSelectedStore } from '../../../redux/selected/action'
 import { getHasSelectedDot } from '../../../helpers/dot'
 import { getDotsBitForAnnotation } from '../../../api/album/annotations'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
-import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
-import { mapIsEarShown } from '../../../redux/ear/selectors'
+import { mapSelectedDotsBit } from '../../../redux/dots/selector'
+import { mapIsEarShown } from '../../../redux/ear/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex,
     mapEarColumnIndex
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 
 const AnnotationDispatcher = forwardRef((props, ref) => {
     const

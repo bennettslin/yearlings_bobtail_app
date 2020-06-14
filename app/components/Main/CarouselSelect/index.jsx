@@ -10,7 +10,7 @@ import {
     CAROUSEL_PREVIOUS_BUTTON_KEY,
     CAROUSEL_NEXT_BUTTON_KEY
 } from '../../../constants/buttons'
-import { mapCanCarouselMount } from '../../../redux/viewport/selectors'
+import { mapCanCarouselMount } from '../../../redux/viewport/selector'
 import './style'
 
 const CarouselSelect = () => {

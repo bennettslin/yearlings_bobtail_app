@@ -16,7 +16,7 @@ import {
 import { getIndexedTitleForSong } from '../../../../../api/album/songs'
 import { getWormholeLinkForWormhole } from '../../../../../api/album/wormholes'
 import { getVerse } from '../../../../../api/album/verses'
-import { mapLyricSongIndex } from '../../../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../../../redux/lyric/selector'
 
 const AnnotationWormhole = ({
     isAccessedShown,

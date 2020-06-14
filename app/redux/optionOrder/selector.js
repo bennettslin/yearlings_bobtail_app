@@ -3,15 +3,15 @@ import {
     getToggleShowsOverviewImmediately,
     getToggleShowsTipsImmediately
 } from '../../helpers/options'
-import { mapIsActivated } from '../activated/selectors'
-import { mapLyricAnnotationIndex } from '../lyric/selectors'
-import { mapIsOverlayShown } from '../overlay/selectors'
-import { mapIsOverviewShown } from '../overview/selectors'
-import { mapIsTipsShown } from '../tips/selectors'
+import { mapIsActivated } from '../activated/selector'
+import { mapLyricAnnotationIndex } from '../lyric/selector'
+import { mapIsOverlayShown } from '../overlay/selector'
+import { mapIsOverviewShown } from '../overview/selector'
+import { mapIsTipsShown } from '../tips/selector'
 import {
     mapIsDotsSlideShown,
     mapIsLyricExpanded
-} from '../toggle/selectors'
+} from '../toggle/selector'
 
 export const mapToggleShowsOverviewImmediately = createSelector(
     mapIsTipsShown,

@@ -18,11 +18,11 @@ import {
 import {
     mapIsAccessOn,
     mapAccessedWikiWormholeIndex
-} from '../../../../redux/access/selectors'
+} from '../../../../redux/access/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex
-} from '../../../../redux/selected/selectors'
+} from '../../../../redux/selected/selector'
 
 const AnnotationNavigation = forwardRef((props, ref) => {
     const

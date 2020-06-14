@@ -8,7 +8,7 @@ import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
-import { getMapIsNavColumnShown } from '../../../redux/nav/selectors'
+import { getMapIsNavColumnShown } from '../../../redux/nav/selector'
 import './style'
 
 // TODO: Import this from a Book component.

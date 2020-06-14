@@ -11,7 +11,7 @@ import {
     getAllTasksV2,
     getMaxTotalNeededHoursFromSongs
 } from './helper'
-import { mapSelectedSongIndex } from '../../../../app/redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../../../app/redux/selected/selector'
 
 const songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
 

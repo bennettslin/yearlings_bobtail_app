@@ -12,12 +12,12 @@ import {
 import {
     mapIsAccessOn,
     mapAccessedAnnotationIndex
-} from '../../../../redux/access/selectors'
+} from '../../../../redux/access/selector'
 import {
     mapIsActivated,
     mapActivatedVerseIndex
-} from '../../../../redux/activated/selectors'
-import { mapSelectedVerseIndex } from '../../../../redux/selected/selectors'
+} from '../../../../redux/activated/selector'
+import { mapSelectedVerseIndex } from '../../../../redux/selected/selector'
 
 const LyricNavigation = forwardRef((props, ref) => {
     const

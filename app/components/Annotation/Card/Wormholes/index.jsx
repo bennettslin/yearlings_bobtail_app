@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
 import { getSourceWormholeIndices } from '../../../../api/album/wormholes'
-import { mapAccessedWikiWormholeIndex } from '../../../../redux/access/selectors'
-import { mapLyricSongIndex } from '../../../../redux/lyric/selectors'
+import { mapAccessedWikiWormholeIndex } from '../../../../redux/access/selector'
+import { mapLyricSongIndex } from '../../../../redux/lyric/selector'
 import './style'
 
 const AnnotationWormholes = ({

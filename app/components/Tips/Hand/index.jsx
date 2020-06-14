@@ -10,14 +10,14 @@ import {
     WORMHOLES,
     WIKI
 } from '../../../constants/tips'
-import { mapIsPhoneWidth } from '../../../redux/device/selectors'
+import { mapIsPhoneWidth } from '../../../redux/device/selector'
 import {
     mapReferenceDot,
     mapWormholeDot
-} from '../../../redux/dots/selectors'
-import { mapDidLyricUpdate } from '../../../redux/entrance/selectors'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
-import { mapIsTipsShown } from '../../../redux/tips/selectors'
+} from '../../../redux/dots/selector'
+import { mapDidLyricUpdate } from '../../../redux/entrance/selector'
+import { mapLyricSongIndex } from '../../../redux/lyric/selector'
+import { mapIsTipsShown } from '../../../redux/tips/selector'
 import './style'
 
 const TipsHand = ({

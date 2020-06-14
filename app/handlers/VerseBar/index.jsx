@@ -9,23 +9,23 @@ import {
 } from '../../redux/verseBars/action'
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/cursor'
-import { mapActivatedVerseIndex } from '../../redux/activated/selectors'
-import { mapIsDesktopWidth } from '../../redux/device/selectors'
-import { mapIsLyricExpandable } from '../../redux/lyricExpand/selectors'
-import { mapLyricDynamicHeight } from '../../redux/lyricHeight/selectors'
-import { mapSelectedVerseIndex } from '../../redux/selected/selectors'
-import { mapSliderVerseIndex } from '../../redux/slider/selectors'
-import { mapIsLyricExpanded } from '../../redux/toggle/selectors'
+import { mapActivatedVerseIndex } from '../../redux/activated/selector'
+import { mapIsDesktopWidth } from '../../redux/device/selector'
+import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
+import { mapLyricDynamicHeight } from '../../redux/lyricHeight/selector'
+import { mapSelectedVerseIndex } from '../../redux/selected/selector'
+import { mapSliderVerseIndex } from '../../redux/slider/selector'
+import { mapIsLyricExpanded } from '../../redux/toggle/selector'
 import {
     mapQueuedDetermineVerseBars,
     mapQueuedVerseBarsTimeout
-} from '../../redux/verseBars/selectors'
+} from '../../redux/verseBars/selector'
 import {
     mapWindowHeight,
     mapIsHeightlessLyric,
     mapMenuHeight,
     mapCanSliderMount
-} from '../../redux/viewport/selectors'
+} from '../../redux/viewport/selector'
 
 const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     const

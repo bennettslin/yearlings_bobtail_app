@@ -12,8 +12,8 @@ import {
 import { getDotKeysFromBit } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
 import { getAccessibleWikiWormholesCount } from './helper'
-import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
+import { mapSelectedDotsBit } from '../../../redux/dots/selector'
+import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
 const AnnotationTitle = ({

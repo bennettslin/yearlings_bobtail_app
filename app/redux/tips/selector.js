@@ -5,13 +5,13 @@ import {
     mapIsPhoneWidth,
     mapIsTabletWidth,
     mapIsDesktopWidth
-} from '../device/selectors'
-import { mapCanLyricCarouselEnter } from '../entrance/selectors'
+} from '../device/selector'
+import { mapCanLyricCarouselEnter } from '../entrance/selector'
 import {
     mapLyricSongIndex,
     mapIsLyricLogue
-} from '../lyric/selectors'
-import { mapSelectedTipsOption } from '../option/selectors'
+} from '../lyric/selector'
+import { mapSelectedTipsOption } from '../option/selector'
 
 export const mapIsTipsShown = createSelector(
     mapSelectedTipsOption,

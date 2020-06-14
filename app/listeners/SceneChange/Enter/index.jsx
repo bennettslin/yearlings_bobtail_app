@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import SceneChangeUpdateDispatcher from '../Update'
-import { mapDidSceneScrollExit } from '../../../redux/entrance/selectors'
+import { mapDidSceneScrollExit } from '../../../redux/entrance/selector'
 
 const mapStateToProps = state => {
     const didSceneScrollExit = mapDidSceneScrollExit(state)

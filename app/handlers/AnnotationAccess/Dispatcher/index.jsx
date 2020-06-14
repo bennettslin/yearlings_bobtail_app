@@ -5,13 +5,13 @@ import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { getAnnotationIndexForVerseIndex } from './helper'
-import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
-import { mapIsEarShown } from '../../../redux/ear/selectors'
+import { mapSelectedDotsBit } from '../../../redux/dots/selector'
+import { mapIsEarShown } from '../../../redux/ear/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapEarColumnIndex
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 
 const AnnotationAccessDispatcher = forwardRef((props, ref) => {
     const

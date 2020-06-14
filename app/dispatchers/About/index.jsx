@@ -2,7 +2,7 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAboutShown } from '../../redux/toggle/action'
-import { mapIsAboutShown } from '../../redux/toggle/selectors'
+import { mapIsAboutShown } from '../../redux/toggle/selector'
 
 const AboutDispatcher = forwardRef((props, ref) => {
     const

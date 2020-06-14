@@ -1,17 +1,17 @@
 import { createSelector } from 'reselect'
 import { getIsOverlayingAnnotation } from '../../helpers/main'
 import { getIsPopupAnnotationShown } from '../../helpers/popupAnnotation'
-import { mapIsPhoneWidth } from '../device/selectors'
-import { mapCanLyricCarouselEnter } from '../entrance/selectors'
-import { mapLyricAnnotationIndex } from '../lyric/selectors'
+import { mapIsPhoneWidth } from '../device/selector'
+import { mapCanLyricCarouselEnter } from '../entrance/selector'
+import { mapLyricAnnotationIndex } from '../lyric/selector'
 import {
     mapIsLyricExpanded,
     mapIsScoreShown,
     mapIsAboutShown,
     mapIsCarouselShown
-} from '../toggle/selectors'
-import { mapCanCarouselMount } from '../viewport/selectors'
-import { mapIsWikiShown } from '../wiki/selectors'
+} from '../toggle/selector'
+import { mapCanCarouselMount } from '../viewport/selector'
+import { mapIsWikiShown } from '../wiki/selector'
 
 export const mapIsOverlayingAnnotation = createSelector(
     mapIsPhoneWidth,

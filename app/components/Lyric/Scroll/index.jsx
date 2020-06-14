@@ -15,7 +15,7 @@ import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
 import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
 import './style'
-import { mapCanLyricCarouselUpdate } from '../../../redux/entrance/selectors'
+import { mapCanLyricCarouselUpdate } from '../../../redux/entrance/selector'
 
 const LyricScroll = forwardRef((props, ref) => {
     const

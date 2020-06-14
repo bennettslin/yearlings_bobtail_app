@@ -14,7 +14,7 @@ import {
 } from './helper'
 import { getSubsequentForUnit } from '../../../api/album/units'
 import { getVerse } from '../../../api/album/verses'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
 const UnitCard = forwardRef(({

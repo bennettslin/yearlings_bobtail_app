@@ -8,12 +8,12 @@ import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../api/album/verses'
-import { mapVerseCursorIndex } from '../../../redux/cursor/selectors'
+import { mapVerseCursorIndex } from '../../../redux/cursor/selector'
 import {
     mapLyricSongIndex,
     mapIsLyricLogue
-} from '../../../redux/lyric/selectors'
-import { getMapIsVerseBarShown } from '../../../redux/verseBars/selectors'
+} from '../../../redux/lyric/selector'
+import { getMapIsVerseBarShown } from '../../../redux/verseBars/selector'
 import './style'
 
 const VerseBar = ({

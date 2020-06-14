@@ -10,8 +10,8 @@ import {
     getEndTimeForStanza
 } from '../../../../api/album/time'
 import { CSS_OVERLAP_MARGIN_X_SLIDER } from '../../../../constants/responsive'
-import { getMapIsStanzaCursor } from '../../../../redux/cursor/selectors'
-import { mapLyricSongIndex } from '../../../../redux/lyric/selectors'
+import { getMapIsStanzaCursor } from '../../../../redux/cursor/selector'
+import { mapLyricSongIndex } from '../../../../redux/lyric/selector'
 import './style'
 
 const SliderStanza = ({ stanzaIndex }) => {

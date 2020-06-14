@@ -9,12 +9,12 @@ import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import {
     mapIsPhoneWidth,
     mapIsDesktopWidth
-} from '../../redux/device/selectors'
+} from '../../redux/device/selector'
 import {
     mapDeviceWidthIndex,
     mapCanCarouselMount,
     mapCanSliderMount
-} from '../../redux/viewport/selectors'
+} from '../../redux/viewport/selector'
 
 const DeviceWrapper = ({ children }) => {
     const

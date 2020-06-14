@@ -6,8 +6,8 @@ import cx from 'classnames'
 import Texts from '../Texts'
 import OverviewToggle from '../Main/OverviewToggle'
 import { getOverviewForSong } from '../../api/album/songs'
-import { mapLyricSongIndex } from '../../redux/lyric/selectors'
-import { mapIsToggleInOverview } from '../../redux/overview/selectors'
+import { mapLyricSongIndex } from '../../redux/lyric/selector'
+import { mapIsToggleInOverview } from '../../redux/overview/selector'
 import './style'
 
 const Overview = () => {

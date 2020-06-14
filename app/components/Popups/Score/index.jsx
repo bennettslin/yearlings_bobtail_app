@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import Score from '../../Score'
 import Popup from '../../Popup'
-import { mapIsScoreShown } from '../../../redux/toggle/selectors'
+import { mapIsScoreShown } from '../../../redux/toggle/selector'
 
 const ScorePopup = () => {
     const

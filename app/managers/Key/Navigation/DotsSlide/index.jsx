@@ -13,7 +13,7 @@ import { DOT_KEYS_COUNT } from '../../../../constants/dots'
 import {
     mapIsAccessOn,
     mapAccessedDotIndex
-} from '../../../../redux/access/selectors'
+} from '../../../../redux/access/selector'
 import { updateDotIndex } from '../../../../redux/dots/action'
 
 const DotsSlideNavigation = forwardRef((props, ref) => {

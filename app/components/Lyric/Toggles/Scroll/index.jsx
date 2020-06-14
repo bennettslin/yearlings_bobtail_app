@@ -10,7 +10,7 @@ import TipsHand from '../../../Tips/Hand'
 import { LYRIC_SCROLL_TOGGLE_KEY } from '../../../../constants/access'
 import { LYRIC_SCROLL_BUTTON_KEY } from '../../../../constants/buttons'
 import { AUTOSCROLL } from '../../../../constants/tips'
-import { mapIsAutoScroll } from '../../../../redux/toggle/selectors'
+import { mapIsAutoScroll } from '../../../../redux/toggle/selector'
 
 const LyricToggleScroll = () => {
     const

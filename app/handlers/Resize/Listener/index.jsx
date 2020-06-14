@@ -9,7 +9,7 @@ import { getWindow } from '../../../utils/browser'
 import {
     mapWindowWidth,
     mapWindowHeight
-} from '../../../redux/viewport/selectors'
+} from '../../../redux/viewport/selector'
 
 const ResizeListener = ({ getRootContainerElement }) => {
     const

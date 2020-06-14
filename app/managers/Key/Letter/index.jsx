@@ -40,17 +40,17 @@ import {
     ABOUT_TOGGLE_KEY
 } from '../../../constants/access'
 import { HIDDEN } from '../../../constants/options'
-import { mapIsOverviewShown } from '../../../redux/overview/selectors'
-import { mapIsAnnotationShown } from '../../../redux/selected/selectors'
-import { mapIsTipsShown } from '../../../redux/tips/selectors'
+import { mapIsOverviewShown } from '../../../redux/overview/selector'
+import { mapIsAnnotationShown } from '../../../redux/selected/selector'
+import { mapIsTipsShown } from '../../../redux/tips/selector'
 import {
     mapIsNavShown,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     mapIsScoreShown,
     mapIsAboutShown
-} from '../../../redux/toggle/selectors'
-import { mapIsWikiShown } from '../../../redux/wiki/selectors'
+} from '../../../redux/toggle/selector'
+import { mapIsWikiShown } from '../../../redux/wiki/selector'
 
 const LetterManager = forwardRef((props, ref) => {
     const

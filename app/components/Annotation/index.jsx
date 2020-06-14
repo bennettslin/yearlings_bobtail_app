@@ -7,7 +7,7 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 import { getAnnotationCardIndices } from '../../api/album/cards'
-import { mapLyricSongIndex } from '../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import './style'
 
 const Annotation = ({

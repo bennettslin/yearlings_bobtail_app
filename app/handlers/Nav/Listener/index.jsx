@@ -6,8 +6,8 @@ import {
 } from '../../../redux/access/action'
 import { updateShownNavBookIndex } from '../../../redux/session/action'
 import { getBookForSongIndex } from '../../../api/album/songs'
-import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
-import { mapIsNavShown } from '../../../redux/toggle/selectors'
+import { mapSelectedSongIndex } from '../../../redux/selected/selector'
+import { mapIsNavShown } from '../../../redux/toggle/selector'
 
 const NavListener = () => {
     const

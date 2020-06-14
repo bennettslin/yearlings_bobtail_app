@@ -6,8 +6,8 @@ import {
     mapCanSceneUpdate,
     mapCanLyricCarouselUpdate,
     mapCanLyricCarouselEnter
-} from '../../../redux/entrance/selectors'
-import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
+} from '../../../redux/entrance/selector'
+import { mapSelectedSongIndex } from '../../../redux/selected/selector'
 
 const mapStateToProps = state => {
     const

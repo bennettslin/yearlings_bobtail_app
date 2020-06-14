@@ -10,19 +10,19 @@ import { ENTER } from '../../../constants/access'
 import {
     mapActivatedVerseIndex,
     mapIsActivated
-} from '../../../redux/activated/selectors'
+} from '../../../redux/activated/selector'
 import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 import {
     mapIsNavShown,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     mapIsScoreShown
-} from '../../../redux/toggle/selectors'
-import { mapIsHeightlessLyric } from '../../../redux/viewport/selectors'
-import { mapIsWikiShown } from '../../../redux/wiki/selectors'
+} from '../../../redux/toggle/selector'
+import { mapIsHeightlessLyric } from '../../../redux/viewport/selector'
+import { mapIsWikiShown } from '../../../redux/wiki/selector'
 
 const NavigationManager = forwardRef((props, ref) => {
     const

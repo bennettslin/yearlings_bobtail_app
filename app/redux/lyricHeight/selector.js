@@ -3,16 +3,16 @@ import {
     getLyricDynamicHeight,
     getLyricOverviewHeightStyle
 } from '../../helpers/resize/mount'
-import { mapIsLyricLogue } from '../lyric/selectors'
-import { mapStageHeight } from '../stage/selectors'
-import { mapIsLyricExpanded } from '../toggle/selectors'
+import { mapIsLyricLogue } from '../lyric/selector'
+import { mapStageHeight } from '../stage/selector'
+import { mapIsLyricExpanded } from '../toggle/selector'
 import {
     mapDeviceWidthIndex,
     mapWindowHeight,
     mapIsHeightlessLyric,
     mapMenuHeight,
     mapCanCarouselMount
-} from '../viewport/selectors'
+} from '../viewport/selector'
 
 export const mapLyricDynamicHeight = createSelector(
     mapCanCarouselMount,

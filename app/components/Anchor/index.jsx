@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import DotSequence from '../DotSequence'
 import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
-import { getMapHasSelectedDot } from '../../redux/dots/selectors'
+import { getMapHasSelectedDot } from '../../redux/dots/selector'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import './style'
 

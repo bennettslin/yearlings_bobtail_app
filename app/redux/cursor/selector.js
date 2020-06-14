@@ -11,26 +11,26 @@ import {
     mapActivatedTime,
     mapActivatedSceneIndex,
     mapActivatedVerseIndex
-} from '../activated/selectors'
+} from '../activated/selector'
 import {
     mapLyricSongIndex,
     mapLyricSceneIndex,
     mapLyricVerseIndex
-} from '../lyric/selectors'
+} from '../lyric/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedTime
-} from '../selected/selectors'
+} from '../selected/selector'
 import {
     mapIsSliderMoving,
     mapSliderTime,
     mapSliderSceneIndex,
     mapSliderVerseIndex
-} from '../slider/selectors'
+} from '../slider/selector'
 import {
     mapIsBannerHovering,
     mapBannerHoverTime
-} from '../banner/selectors'
+} from '../banner/selector'
 import {
     getStartTimeForScene,
     getDurationForScene

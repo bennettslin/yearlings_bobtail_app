@@ -6,9 +6,9 @@ import NavButton from '../Button'
 import {
     mapIsAccessOn,
     mapAccessedNavIndex
-} from '../../../../../redux/access/selectors'
-import { mapSelectedSongIndex } from '../../../../../redux/selected/selectors'
-import { mapIsDotsSlideShown } from '../../../../../redux/toggle/selectors'
+} from '../../../../../redux/access/selector'
+import { mapSelectedSongIndex } from '../../../../../redux/selected/selector'
+import { mapIsDotsSlideShown } from '../../../../../redux/toggle/selector'
 
 const NavButtonIndexed = ({ songIndex, ...other }) => {
     const

@@ -6,9 +6,9 @@ import { PARENT_ACCESS_PREFIX } from '../../constants/prefixes'
 import {
     mapIsAccessOn,
     mapAccessedKey
-} from '../../redux/access/selectors'
-import { mapIsPlaying } from '../../redux/audio/selectors'
-import { mapIsLyricLogue } from '../../redux/lyric/selectors'
+} from '../../redux/access/selector'
+import { mapIsPlaying } from '../../redux/audio/selector'
+import { mapIsLyricLogue } from '../../redux/lyric/selector'
 
 const PlayingWrapper = ({ children }) => {
     const

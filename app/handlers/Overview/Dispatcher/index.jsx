@@ -5,10 +5,10 @@ import {
     getIsShown,
     getNextOption
 } from '../../../helpers/options'
-import { mapSelectedOverviewOption } from '../../../redux/option/selectors'
-import { mapToggleShowsOverviewImmediately } from '../../../redux/optionOrder/selectors'
-import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
-import { mapIsTipsShown } from '../../../redux/tips/selectors'
+import { mapSelectedOverviewOption } from '../../../redux/option/selector'
+import { mapToggleShowsOverviewImmediately } from '../../../redux/optionOrder/selector'
+import { mapIsSelectedLogue } from '../../../redux/selected/selector'
+import { mapIsTipsShown } from '../../../redux/tips/selector'
 
 const OverviewDispatcher = forwardRef((props, ref) => {
     const

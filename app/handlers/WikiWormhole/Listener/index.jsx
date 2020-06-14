@@ -4,7 +4,7 @@ import WikiWormholeDispatcher from '../Dispatcher'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 
 const WikiWormholeListener = () => {
     const

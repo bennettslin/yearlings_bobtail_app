@@ -10,15 +10,15 @@ import {
     mapQueuedAnnotationIndex,
     mapQueuedAnnotationFromCarousel,
     mapQueuedAnnotationFromLyricVerse
-} from '../../../redux/annotation/selectors'
-import { mapIsEarShown } from '../../../redux/ear/selectors'
+} from '../../../redux/annotation/selector'
+import { mapIsEarShown } from '../../../redux/ear/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex,
     mapEarColumnIndex
-} from '../../../redux/selected/selectors'
-import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
+} from '../../../redux/selected/selector'
+import { mapIsDotsSlideShown } from '../../../redux/toggle/selector'
 
 const mapStateToProps = state => {
     const

@@ -7,7 +7,7 @@ import { updateSelectedStore } from '../../redux/selected/action'
 import { resetVerseBars } from '../../redux/verseBars/action'
 import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
-import { mapSelectedSongIndex } from '../../redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../redux/selected/selector'
 
 const VerseDispatcher = forwardRef((props, ref) => {
     const

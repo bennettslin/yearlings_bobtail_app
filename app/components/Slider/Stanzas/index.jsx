@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import SliderStanza from './Stanza'
 import { getStanzaIndices } from '../../../api/album/stanzas'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 
 const SliderStanzas = () => {
     const lyricSongIndex = useSelector(mapLyricSongIndex)

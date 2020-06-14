@@ -8,12 +8,12 @@ import {
     mapScrollCarouselLog,
     mapScrollCarouselIndex,
     mapScrollCarouselNoDuration
-} from '../../../redux/scrollCarousel/selectors'
-import { mapIsCarouselShown } from '../../../redux/toggle/selectors'
+} from '../../../redux/scrollCarousel/selector'
+import { mapIsCarouselShown } from '../../../redux/toggle/selector'
 import {
     mapWindowWidth,
     mapDeviceWidthIndex
-} from '../../../redux/viewport/selectors'
+} from '../../../redux/viewport/selector'
 
 const ScrollCarouselListener = ({
     getCarouselScrollChild,

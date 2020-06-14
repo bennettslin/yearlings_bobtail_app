@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import VerseTracker from './VerseTracker'
-import { getMapVerseCursorStatus } from '../../../../redux/cursor/selectors'
+import { getMapVerseCursorStatus } from '../../../../redux/cursor/selector'
 import './style'
 
 const VerseColour = ({

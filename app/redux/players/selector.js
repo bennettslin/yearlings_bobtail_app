@@ -2,7 +2,7 @@ import { createSelector } from 'reselect'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex
-} from '../selected/selectors'
+} from '../selected/selector'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { PLAYERS_STORE } from '../../constants/store'
 import { getStartTimeForVerse } from '../../api/album/time'

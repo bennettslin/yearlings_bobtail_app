@@ -10,8 +10,8 @@ import './style'
 import {
     mapIsOverlayingAnnotation,
     getMapIsPopupAnnotationShown
-} from '../../../redux/annotationPopup/selectors'
-import { mapLyricAnnotationIndex } from '../../../redux/lyric/selectors'
+} from '../../../redux/annotationPopup/selector'
+import { mapLyricAnnotationIndex } from '../../../redux/lyric/selector'
 
 const AnnotationPopup = ({ inMain }) => {
     const

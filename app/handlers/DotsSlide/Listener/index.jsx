@@ -5,7 +5,7 @@ import {
     resetAccessedDot
 } from '../../../redux/access/action'
 import { resetActivatedDots } from '../../../redux/dotsSlide/action'
-import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
+import { mapIsDotsSlideShown } from '../../../redux/toggle/selector'
 
 const DotsSlideListener = () => {
     const

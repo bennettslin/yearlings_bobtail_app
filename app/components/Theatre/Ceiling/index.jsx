@@ -8,7 +8,7 @@ import {
     mapWindowWidth,
     mapProsceniumDimensionCoordinates,
     mapCeilingHeight
-} from '../../../redux/viewport/selectors'
+} from '../../../redux/viewport/selector'
 import './style'
 
 const Ceiling = () => {

@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux'
 import ReactTooltip from 'react-tooltip'
 import { getTooltipPlacement } from './helper'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
-import { mapIsAccessOn } from '../../../redux/access/selectors'
+import { mapIsAccessOn } from '../../../redux/access/selector'
 import {
     mapIsDesktopWidth,
     mapIsPhoneOrMiniWidth
-} from '../../../redux/device/selectors'
+} from '../../../redux/device/selector'
 import './style'
 
 const Tooltip = ({ buttonName }) => {

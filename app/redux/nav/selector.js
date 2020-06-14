@@ -3,11 +3,11 @@ import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
 } from '../../helpers/resize/nav'
-import { mapShownNavBookIndex } from '../session/selectors'
+import { mapShownNavBookIndex } from '../session/selector'
 import {
     mapDeviceWidthIndex,
     mapWindowWidth
-} from '../viewport/selectors'
+} from '../viewport/selector'
 
 export const mapShowShrunkNavIcon = createSelector(
     mapDeviceWidthIndex,

@@ -6,12 +6,12 @@ import {
     SHOWN,
     HIDDEN
 } from '../../../constants/options'
-import { mapSelectedOverviewOption } from '../../../redux/option/selectors'
+import { mapSelectedOverviewOption } from '../../../redux/option/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 
 const mapStateToProps = state => {
     const

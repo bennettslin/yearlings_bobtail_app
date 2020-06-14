@@ -9,14 +9,14 @@ import {
 import {
     mapLyricAnnotationIndex,
     mapLyricSongIndex
-} from '../../../redux/lyric/selectors'
+} from '../../../redux/lyric/selector'
 import {
     mapSelectedTipsOption,
     mapIsForcedShownOverview
-} from '../../../redux/option/selectors'
-import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
-import { mapIsTipsShowable } from '../../../redux/tips/selectors'
-import { mapDeviceWidthIndex } from '../../../redux/viewport/selectors'
+} from '../../../redux/option/selector'
+import { mapIsSelectedLogue } from '../../../redux/selected/selector'
+import { mapIsTipsShowable } from '../../../redux/tips/selector'
+import { mapDeviceWidthIndex } from '../../../redux/viewport/selector'
 
 const mapStateToProps = state => {
     const

@@ -10,7 +10,7 @@ import LyricToggles from './Toggles'
 import VerseBar from './VerseBar'
 import CarouselAccess from '../Carousel/Access'
 import './style'
-import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
+import { mapCanLyricCarouselEnter } from '../../redux/entrance/selector'
 
 const Lyric = forwardRef((props, ref) => {
     const

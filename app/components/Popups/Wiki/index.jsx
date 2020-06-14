@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
 import { updateWikiIndices } from '../../../redux/session/action'
-import { mapIsWikiShown } from '../../../redux/wiki/selectors'
+import { mapIsWikiShown } from '../../../redux/wiki/selector'
 
 const WikiPopup = () => {
     const

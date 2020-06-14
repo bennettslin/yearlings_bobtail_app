@@ -7,7 +7,7 @@ import { updateEntranceStore } from '../../../redux/entrance/action'
 import {
     mapSelectedSongIndex,
     mapSelectedSceneIndex
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 
 const mapStateToProps = state => {
     const

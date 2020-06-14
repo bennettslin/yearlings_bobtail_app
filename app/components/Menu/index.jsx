@@ -10,13 +10,13 @@ import Audio from '../Audio'
 import BannerFilmstrip from '../BannerFilmstrip'
 import Slider from '../Slider'
 import { getMenuMarginInOverlay } from './helper'
-import { mapIsDesktopWidth } from '../../redux/device/selectors'
+import { mapIsDesktopWidth } from '../../redux/device/selector'
 import {
     mapWindowWidth,
     mapIsTwoRowMenu,
     mapMenuHeight,
     mapCanSliderMount
-} from '../../redux/viewport/selectors'
+} from '../../redux/viewport/selector'
 import './style'
 
 const Menu = () => {

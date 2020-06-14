@@ -2,18 +2,18 @@ import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateScrollCarouselStore } from '../../redux/scrollCarousel/action'
 import { updateToggleStore } from '../../redux/toggle/action'
-import { mapAccessedAnnotationIndex } from '../../redux/access/selectors'
-import { mapSelectedDotsBit } from '../../redux/dots/selectors'
+import { mapAccessedAnnotationIndex } from '../../redux/access/selector'
+import { mapSelectedDotsBit } from '../../redux/dots/selector'
 import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
-} from '../../redux/selected/selectors'
+} from '../../redux/selected/selector'
 import {
     mapIsCarouselShown,
     mapIsNavShown,
     mapIsDotsSlideShown
-} from '../../redux/toggle/selectors'
-import { mapCanCarouselMount } from '../../redux/viewport/selectors'
+} from '../../redux/toggle/selector'
+import { mapCanCarouselMount } from '../../redux/viewport/selector'
 
 const CarouselNavDispatcher = forwardRef((props, ref) => {
     const

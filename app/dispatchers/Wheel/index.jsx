@@ -3,7 +3,7 @@ import { forwardRef, useImperativeHandle } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../redux/toggle/action'
-import { mapIsAutoScroll } from '../../redux/toggle/selectors'
+import { mapIsAutoScroll } from '../../redux/toggle/selector'
 
 const WheelDispatcher = forwardRef(({ determineVerseBars }, ref) => {
     const

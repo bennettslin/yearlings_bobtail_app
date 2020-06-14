@@ -7,12 +7,12 @@ import Annotation from '../../Annotation'
 import { getDotsBitForAnnotation } from '../../../api/album/annotations'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import { getCarouselAnnotationData } from './helper'
-import { getMapIsAnnotationAccessed } from '../../../redux/access/selectors'
-import { getMapHasSelectedDot } from '../../../redux/dots/selectors'
+import { getMapIsAnnotationAccessed } from '../../../redux/access/selector'
+import { getMapHasSelectedDot } from '../../../redux/dots/selector'
 import {
     mapLyricSongIndex,
     getMapIsLyricAnnotation
-} from '../../../redux/lyric/selectors'
+} from '../../../redux/lyric/selector'
 import './style'
 
 const CarouselAnnotation = forwardRef(({ annotationIndex }, ref) => {

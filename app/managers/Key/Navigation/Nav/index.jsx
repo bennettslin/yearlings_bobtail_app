@@ -13,9 +13,9 @@ import {
     ARROW_RIGHT,
     ENTER
 } from '../../../../constants/access'
-import { mapAccessedNavIndex } from '../../../../redux/access/selectors'
-import { mapSelectedSongIndex } from '../../../../redux/selected/selectors'
-import { mapShownNavBookIndex } from '../../../../redux/session/selectors'
+import { mapAccessedNavIndex } from '../../../../redux/access/selector'
+import { mapSelectedSongIndex } from '../../../../redux/selected/selector'
+import { mapShownNavBookIndex } from '../../../../redux/session/selector'
 
 const NavNavigation = forwardRef((props, ref) => {
     const

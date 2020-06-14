@@ -6,12 +6,12 @@ import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { getVerseIndexForScene } from '../../../api/album/scenes'
 import { getActivatedSceneForDirection } from './helper'
-import { mapActivatedSceneIndex } from '../../../redux/activated/selectors'
+import { mapActivatedSceneIndex } from '../../../redux/activated/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedSceneIndex,
     mapIsSelectedLogue
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 
 const ActivatedSceneDispatcher = forwardRef((props, ref) => {
     const

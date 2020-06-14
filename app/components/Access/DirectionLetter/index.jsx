@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import AccessLetter from '../../Access/Letter'
-import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
+import { mapIsLyricLogue } from '../../../redux/lyric/selector'
 import './style'
 
 const AccessDirectionLetter = ({

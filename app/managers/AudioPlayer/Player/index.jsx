@@ -26,9 +26,9 @@ import {
     mapQueuedTogglePlay,
     mapQueuedPlayFromLogue,
     mapIsSelectPlayReady
-} from '../../../redux/audio/selectors'
-import { getMapPlayerPausedTime } from '../../../redux/players/selectors'
-import { getMapIsSongSelected } from '../../../redux/selected/selectors'
+} from '../../../redux/audio/selector'
+import { getMapPlayerPausedTime } from '../../../redux/players/selector'
+import { getMapIsSongSelected } from '../../../redux/selected/selector'
 import { getMp3ForSong } from '../../../api/mp3'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 

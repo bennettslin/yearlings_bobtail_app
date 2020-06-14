@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
+import { mapCanLyricCarouselEnter } from '../../redux/entrance/selector'
 
 const TransitionWrapper = ({ children }) => {
     const

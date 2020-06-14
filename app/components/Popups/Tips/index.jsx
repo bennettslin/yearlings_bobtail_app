@@ -3,7 +3,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import Tips from '../../Tips'
 import Popup from '../../Popup'
-import { mapIsTipsPopupShown } from '../../../redux/tips/selectors'
+import { mapIsTipsPopupShown } from '../../../redux/tips/selector'
 import './style'
 
 const TipsPopup = () => {

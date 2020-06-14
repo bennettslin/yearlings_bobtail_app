@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { mapIsDesktopWidth } from '../../../redux/device/selectors'
+import { mapIsDesktopWidth } from '../../../redux/device/selector'
 import './style'
 
 const MainFlexContainer = ({

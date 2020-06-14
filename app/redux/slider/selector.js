@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { mapIsActivated } from '../activated/selectors'
+import { mapIsActivated } from '../activated/selector'
 import { SLIDER_STORE } from '../../constants/store'
 
 export const mapSliderLeft = (

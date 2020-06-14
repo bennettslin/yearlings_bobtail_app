@@ -3,7 +3,7 @@ import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { getDotForUnit } from '../../../../api/album/units'
-import { mapLyricSongIndex } from '../../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../../redux/lyric/selector'
 import { UnitDot } from '..'
 
 const UnitDotParent = forwardRef(({ unitIndex }, ref) => {

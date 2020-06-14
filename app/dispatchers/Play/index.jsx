@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import SongDispatcher from '../../handlers/Song/Dispatcher'
 import { updateAudioStore } from '../../redux/audio/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
-import { mapIsPlaying } from '../../redux/audio/selectors'
-import { mapPlayerCanPlayThrough } from '../../redux/players/selectors'
-import { mapIsSelectedLogue } from '../../redux/selected/selectors'
+import { mapIsPlaying } from '../../redux/audio/selector'
+import { mapPlayerCanPlayThrough } from '../../redux/players/selector'
+import { mapIsSelectedLogue } from '../../redux/selected/selector'
 
 const PlayDispatcher = forwardRef((props, ref) => {
     const

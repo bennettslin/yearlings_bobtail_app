@@ -11,8 +11,8 @@ import {
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY
 } from '../../../../../constants/buttons'
-import { mapIsCarouselNavShowable } from '../../../../../redux/carousel/selectors'
-import { mapSelectedAnnotationIndex } from '../../../../../redux/selected/selectors'
+import { mapIsCarouselNavShowable } from '../../../../../redux/carousel/selector'
+import { mapSelectedAnnotationIndex } from '../../../../../redux/selected/selector'
 import './style'
 
 const NavButton = ({

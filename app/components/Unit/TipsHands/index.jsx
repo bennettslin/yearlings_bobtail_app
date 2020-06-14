@@ -9,7 +9,7 @@ import {
     getShowWormholesTip,
     getShowWikiTip
 } from '../../../api/album/tips'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import {
     ANNOTATION,
     ACTIVATED_VERSE,

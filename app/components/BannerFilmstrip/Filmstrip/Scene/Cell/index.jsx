@@ -6,7 +6,7 @@ import Tracker from '../../../../Tracker'
 import {
     getMapSceneCursorStatus,
     getMapSceneCursorWidth
-} from '../../../../../redux/cursor/selectors'
+} from '../../../../../redux/cursor/selector'
 import './style'
 
 const FilmstripCell = ({ sceneIndex }) => {

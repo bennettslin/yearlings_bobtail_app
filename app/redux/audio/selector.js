@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { mapLyricSongIndex } from '../lyric/selectors'
+import { mapLyricSongIndex } from '../lyric/selector'
 import { AUDIO_STORE } from '../../constants/store'
 
 export const mapQueuedPlayFromLogue = (

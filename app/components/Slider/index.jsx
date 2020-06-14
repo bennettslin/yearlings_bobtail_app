@@ -11,7 +11,7 @@ import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY
 } from '../../constants/access'
-import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
+import { mapCanLyricCarouselEnter } from '../../redux/entrance/selector'
 import { SLIDER } from '../../constants/tips'
 import './style'
 

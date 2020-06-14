@@ -1,9 +1,9 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateShownNavBookIndex } from '../../../redux/session/action'
-import { mapShowSingleNavBook } from '../../../redux/nav/selectors'
-import { mapShownNavBookIndex } from '../../../redux/session/selectors'
-import { mapIsNavShown } from '../../../redux/toggle/selectors'
+import { mapShowSingleNavBook } from '../../../redux/nav/selector'
+import { mapShownNavBookIndex } from '../../../redux/session/selector'
+import { mapIsNavShown } from '../../../redux/toggle/selector'
 
 const NavDispatcher = forwardRef((props, ref) => {
     const

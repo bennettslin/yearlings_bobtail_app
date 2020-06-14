@@ -9,13 +9,13 @@ import {
     mapDidLyricExit,
     mapDidCurtainExit,
     mapIsSongSelectInFlux
-} from '../../../redux/entrance/selectors'
+} from '../../../redux/entrance/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex
-} from '../../../redux/selected/selectors'
-import { mapCanCarouselMount } from '../../../redux/viewport/selectors'
+} from '../../../redux/selected/selector'
+import { mapCanCarouselMount } from '../../../redux/viewport/selector'
 
 const mapStateToProps = state => {
     const

@@ -1,13 +1,13 @@
 // Reducers for toggle buttons and options.
 import { hasKey } from '../../helpers/action'
-import { mapIsLyricExpandable } from '../lyricExpand/selectors'
+import { mapIsLyricExpandable } from '../lyricExpand/selector'
 import {
     TOGGLE_STORE,
     SELECTED_STORE,
     VIEWPORT_STORE
 } from '../../constants/store'
 import { TOGGLE_DEFAULTS } from './default'
-import { mapCanScoreMount } from '../viewport/selectors'
+import { mapCanScoreMount } from '../viewport/selector'
 
 export default (
     state = TOGGLE_DEFAULTS,

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAboutShown } from '../../../redux/toggle/action'
 import About from '../../About'
 import Popup from '../../Popup'
-import { mapIsAboutShown } from '../../../redux/toggle/selectors'
+import { mapIsAboutShown } from '../../../redux/toggle/selector'
 import './style'
 
 const AboutPopup = () => {

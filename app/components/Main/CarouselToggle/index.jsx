@@ -12,8 +12,8 @@ import { CAROUSEL, NAV } from '../../../constants/tips'
 import {
     mapIsCarouselShown,
     mapIsNavShown
-} from '../../../redux/toggle/selectors'
-import { mapCanCarouselMount } from '../../../redux/viewport/selectors'
+} from '../../../redux/toggle/selector'
+import { mapCanCarouselMount } from '../../../redux/viewport/selector'
 import './style'
 
 const CarouselToggle = () => {

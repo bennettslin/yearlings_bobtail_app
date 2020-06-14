@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { getWikiWormholeIndexForDirection } from './helper'
 import { getDotKeysFromBit } from '../../../helpers/dot'
-import { mapAccessedWikiWormholeIndex } from '../../../redux/access/selectors'
-import { mapSelectedDotsBit } from '../../../redux/dots/selectors'
+import { mapAccessedWikiWormholeIndex } from '../../../redux/access/selector'
+import { mapSelectedDotsBit } from '../../../redux/dots/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedAnnotationIndex
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 
 const WikiWormholeDispatcher = forwardRef((props, ref) => {
     const

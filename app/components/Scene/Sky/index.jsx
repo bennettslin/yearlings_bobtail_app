@@ -5,7 +5,7 @@ import cx from 'classnames'
 import {
     mapSceneSkyTime,
     mapSceneSkySeason
-} from '../../../redux/scene/selectors'
+} from '../../../redux/scene/selector'
 import './style'
 
 const Sky = () => {

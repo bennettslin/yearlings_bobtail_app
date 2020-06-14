@@ -10,7 +10,7 @@ import Stanza from './Stanza'
 import Unit from '../Unit'
 import { getStanzaIndices } from '../../api/album/stanzas'
 import { getLastUnitDotCardIndex } from '../../api/album/units'
-import { mapLyricSongIndex } from '../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import './style'
 
 const Stanzas = forwardRef((props, ref) => {

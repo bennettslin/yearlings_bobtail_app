@@ -1,29 +1,29 @@
 import { createSelector } from 'reselect'
 import { getIsShelfLeftShown } from '../../helpers/main'
 import { getMainHeight } from '../../helpers/resize/mount'
-import { mapIsActivated } from '../activated/selectors'
+import { mapIsActivated } from '../activated/selector'
 import {
     mapIsPhoneWidth,
     mapIsDesktopWidth
-} from '../device/selectors'
-import { mapCanLyricCarouselEnter } from '../entrance/selectors'
+} from '../device/selector'
+import { mapCanLyricCarouselEnter } from '../entrance/selector'
 import {
     mapLyricAnnotationIndex,
     mapIsLyricLogue
-} from '../lyric/selectors'
-import { mapLyricDynamicHeight } from '../lyricHeight/selectors'
-import { mapIsOverlayShown } from '../overlay/selectors'
-import { mapIsOverviewShown } from '../overview/selectors'
-import { mapIsTipsShown } from '../tips/selectors'
+} from '../lyric/selector'
+import { mapLyricDynamicHeight } from '../lyricHeight/selector'
+import { mapIsOverlayShown } from '../overlay/selector'
+import { mapIsOverviewShown } from '../overview/selector'
+import { mapIsTipsShown } from '../tips/selector'
 import {
     mapIsDotsSlideShown,
     mapIsLyricExpanded
-} from '../toggle/selectors'
+} from '../toggle/selector'
 import {
     mapIsHeightlessLyric,
     mapMenuHeight,
     mapCanCarouselMount
-} from '../viewport/selectors'
+} from '../viewport/selector'
 
 export const mapMainHeight = createSelector(
     mapCanCarouselMount,

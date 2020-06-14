@@ -8,7 +8,7 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import Unit from '../../Unit'
 import { getUnitIndicesForStanza } from '../../../api/album/stanzas'
-import { mapLyricSongIndex } from '../../../redux/lyric/selectors'
+import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
 const Stanza = forwardRef(({

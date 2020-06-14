@@ -7,22 +7,22 @@ import { WIKI, WORMHOLES } from '../../constants/tips'
 import {
     mapReferenceDot,
     mapWormholeDot
-} from '../../redux/dots/selectors'
-import { mapCanLyricCarouselEnter } from '../../redux/entrance/selectors'
+} from '../../redux/dots/selector'
+import { mapCanLyricCarouselEnter } from '../../redux/entrance/selector'
 import {
     mapIsLyricLogue,
     mapLyricSongIndex,
     mapLyricAnnotationIndex
-} from '../../redux/lyric/selectors'
-import { mapIsOverlayShown } from '../../redux/overlay/selectors'
-import { mapIsOverviewShown } from '../../redux/overview/selectors'
-import { mapIsTipsShown } from '../../redux/tips/selectors'
+} from '../../redux/lyric/selector'
+import { mapIsOverlayShown } from '../../redux/overlay/selector'
+import { mapIsOverviewShown } from '../../redux/overview/selector'
+import { mapIsTipsShown } from '../../redux/tips/selector'
 import {
     mapIsCarouselShown,
     mapIsNavShown,
     mapIsLyricExpanded,
     mapIsDotsSlideShown
-} from '../../redux/toggle/selectors'
+} from '../../redux/toggle/selector'
 
 const ShownWrapper = ({ children }) => {
     const

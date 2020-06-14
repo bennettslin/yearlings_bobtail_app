@@ -2,13 +2,13 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { mapIsActivated } from '../../redux/activated/selectors'
-import { mapIsBannerHovering } from '../../redux/banner/selectors'
-import { mapIsScrolling } from '../../redux/scrollOverlay/selectors'
+import { mapIsActivated } from '../../redux/activated/selector'
+import { mapIsBannerHovering } from '../../redux/banner/selector'
+import { mapIsScrolling } from '../../redux/scrollOverlay/selector'
 import {
     mapIsSliderTouched,
     mapIsLyricsLocked
-} from '../../redux/slider/selectors'
+} from '../../redux/slider/selector'
 
 const TouchWrapper = ({ children }) => {
     const

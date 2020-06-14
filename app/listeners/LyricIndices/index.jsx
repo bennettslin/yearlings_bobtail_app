@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { updateLyricStore } from '../../redux/lyric/action'
-import { mapActivatedVerseIndex } from '../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../redux/activated/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex
-} from '../../redux/selected/selectors'
+} from '../../redux/selected/selector'
 
 const mapStateToProps = state => {
     const

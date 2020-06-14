@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
-import { mapIsPlaying } from '../../../redux/audio/selectors'
+import { mapIsPlaying } from '../../../redux/audio/selector'
 import { scrollElementIntoView } from '../helper'
 import {
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
 } from '../../../constants/scroll'
-import { mapLyricVerseIndex } from '../../../redux/lyric/selectors'
+import { mapLyricVerseIndex } from '../../../redux/lyric/selector'
 import {
     mapScrollLyricLog,
     mapScrollLyricByVerse,
@@ -18,15 +18,15 @@ import {
     mapScrollLyricNoDuration,
     mapScrollLyricFromAutoScroll,
     mapQueuedSceneChangeExitScrollCallback
-} from '../../../redux/scrollLyric/selectors'
+} from '../../../redux/scrollLyric/selector'
 import {
     mapIsAutoScroll,
     mapIsLyricExpanded
-} from '../../../redux/toggle/selectors'
+} from '../../../redux/toggle/selector'
 import {
     mapDeviceWidthIndex,
     mapIsHeightlessLyric
-} from '../../../redux/viewport/selectors'
+} from '../../../redux/viewport/selector'
 
 const ScrollLyricListener = ({
     getLyricScrollElement,

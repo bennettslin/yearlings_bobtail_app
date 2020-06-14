@@ -10,8 +10,8 @@ import { OVERVIEW_TOGGLE_KEY } from '../../../constants/access'
 import { OVERVIEW_BUTTON_KEY } from '../../../constants/buttons'
 import { OVERVIEW } from '../../../constants/tips'
 import { getOverviewToggleIdentifier } from './helper'
-import { mapIsLyricLogue } from '../../../redux/lyric/selectors'
-import { mapSelectedOverviewOption } from '../../../redux/option/selectors'
+import { mapIsLyricLogue } from '../../../redux/lyric/selector'
+import { mapSelectedOverviewOption } from '../../../redux/option/selector'
 import './style'
 
 const OverviewToggle = ({

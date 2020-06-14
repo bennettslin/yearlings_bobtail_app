@@ -2,8 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import AccessLetters from '../../Access/Letters'
 import { ARROW_UP, ARROW_DOWN } from '../../../constants/access'
-import { mapLyricAnnotationIndex } from '../../../redux/lyric/selectors'
-import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
+import { mapLyricAnnotationIndex } from '../../../redux/lyric/selector'
+import { mapIsDotsSlideShown } from '../../../redux/toggle/selector'
 import './style'
 
 const LyricAccess = () => {

@@ -10,8 +10,8 @@ import {
     AUDIO_FAST_FORWARD_BUTTON_KEY,
     AUDIO_REWIND_BUTTON_KEY
 } from '../../../../constants/buttons'
-import { getMapIsVerseActivated } from '../../../../redux/activated/selectors'
-import { getMapVerseSelectedStatus } from '../../../../redux/selected/selectors'
+import { getMapIsVerseActivated } from '../../../../redux/activated/selector'
+import { getMapVerseSelectedStatus } from '../../../../redux/selected/selector'
 import './style'
 
 const VerseNav = ({

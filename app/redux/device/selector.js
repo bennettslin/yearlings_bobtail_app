@@ -4,7 +4,7 @@ import {
     getIsTabletWidth,
     getIsDesktopWidth
 } from '../../helpers/responsive'
-import { mapDeviceWidthIndex } from '../viewport/selectors'
+import { mapDeviceWidthIndex } from '../viewport/selector'
 
 export const mapIsPhoneWidth = createSelector(
     mapDeviceWidthIndex,

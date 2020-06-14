@@ -12,7 +12,7 @@ import { updateToggleStore } from '../../../redux/toggle/action'
 import { getStartTimeForVerse } from '../../../api/album/time'
 import { getSceneIndexForVerse } from '../../../api/album/verses'
 import { getSongsAndLoguesCount } from '../../../api/album/songs'
-import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
+import { mapSelectedSongIndex } from '../../../redux/selected/selector'
 import { updateWikiIndices } from '../../../redux/session/action'
 
 const SongDispatcher = forwardRef((props, ref) => {

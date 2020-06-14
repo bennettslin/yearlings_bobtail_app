@@ -2,13 +2,13 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationAccessDispatcher from '../Dispatcher'
-import { mapActivatedVerseIndex } from '../../../redux/activated/selectors'
+import { mapActivatedVerseIndex } from '../../../redux/activated/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex,
     mapEarColumnIndex
-} from '../../../redux/selected/selectors'
+} from '../../../redux/selected/selector'
 
 const mapStateToProps = state => {
     const

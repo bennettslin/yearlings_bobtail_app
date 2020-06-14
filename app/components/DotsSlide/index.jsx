@@ -12,10 +12,10 @@ import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
 import {
     mapIsAccessOn,
     mapAccessedDotIndex
-} from '../../redux/access/selectors'
-import { mapSelectedDotsBit } from '../../redux/dots/selectors'
-import { mapDotsSlideBit } from '../../redux/dotsSlide/selectors'
-import { mapIsDotsSlideShown } from '../../redux/toggle/selectors'
+} from '../../redux/access/selector'
+import { mapSelectedDotsBit } from '../../redux/dots/selector'
+import { mapDotsSlideBit } from '../../redux/dotsSlide/selector'
+import { mapIsDotsSlideShown } from '../../redux/toggle/selector'
 import './style'
 
 const DotsSlide = () => {

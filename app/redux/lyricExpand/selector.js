@@ -1,10 +1,10 @@
 import { createSelector } from 'reselect'
 import { getIsLyricExpandable } from '../../helpers/resize/responsive'
-import { mapIsLyricExpanded } from '../toggle/selectors'
+import { mapIsLyricExpanded } from '../toggle/selector'
 import {
     mapDeviceWidthIndex,
     mapIsHeightlessLyric
-} from '../viewport/selectors'
+} from '../viewport/selector'
 
 export const mapIsLyricExpandable = createSelector(
     mapDeviceWidthIndex,

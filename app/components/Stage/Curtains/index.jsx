@@ -8,7 +8,7 @@ import AspectRatio from '../AspectRatio'
 import InlineSvg from '../../../modules/InlineSvg'
 import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
 import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
-import { mapCanLyricCarouselEnter } from '../../../redux/entrance/selectors'
+import { mapCanLyricCarouselEnter } from '../../../redux/entrance/selector'
 import './style'
 
 const Curtains = () => {

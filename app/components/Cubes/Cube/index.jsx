@@ -18,7 +18,7 @@ import {
     getMapCubeFloorHsla,
     getMapCubeFloorZIndex,
     mapCubeSlantDirection
-} from '../../../redux/scene/selectors'
+} from '../../../redux/scene/selector'
 
 const Cube = ({
     yIndex,

@@ -4,22 +4,22 @@ import {
     getIsShelfLeftShown,
     getIsCarouselNavShowable
 } from '../../helpers/main'
-import { mapIsActivated } from '../activated/selectors'
-import { mapIsPhoneWidth } from '../device/selectors'
-import { mapCanLyricCarouselEnter } from '../entrance/selectors'
+import { mapIsActivated } from '../activated/selector'
+import { mapIsPhoneWidth } from '../device/selector'
+import { mapCanLyricCarouselEnter } from '../entrance/selector'
 import {
     mapLyricSongIndex,
     mapLyricAnnotationIndex,
     mapIsLyricLogue
-} from '../lyric/selectors'
-import { mapIsOverlayShown } from '../overlay/selectors'
-import { mapIsOverviewShown } from '../overview/selectors'
-import { mapIsTipsShown } from '../tips/selectors'
+} from '../lyric/selector'
+import { mapIsOverlayShown } from '../overlay/selector'
+import { mapIsOverviewShown } from '../overview/selector'
+import { mapIsTipsShown } from '../tips/selector'
 import {
     mapIsDotsSlideShown,
     mapIsLyricExpanded
-} from '../toggle/selectors'
-import { mapDeviceWidthIndex } from '../viewport/selectors'
+} from '../toggle/selector'
+import { mapDeviceWidthIndex } from '../viewport/selector'
 
 export const mapIsEarShown = createSelector(
     mapLyricSongIndex,

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import Dot from '../../Dot'
 import Underline from '../Underline'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
-import { getMapFirstSelectedDotKey } from '../../../redux/dots/selectors'
+import { getMapFirstSelectedDotKey } from '../../../redux/dots/selector'
 import './style'
 
 const AnchorDot = ({

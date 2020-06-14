@@ -4,8 +4,8 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
-import { getMapIsVerseCursor } from '../../../redux/cursor/selectors'
-import { getMapIsVerseSelected } from '../../../redux/selected/selectors'
+import { getMapIsVerseCursor } from '../../../redux/cursor/selector'
+import { getMapIsVerseSelected } from '../../../redux/selected/selector'
 import './style'
 
 const VerseHoc = forwardRef(({

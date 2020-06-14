@@ -2,8 +2,8 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateToggleStore } from '../../../redux/toggle/action'
-import { mapIsSelectedLogue } from '../../../redux/selected/selectors'
-import { mapIsDotsSlideShown } from '../../../redux/toggle/selectors'
+import { mapIsSelectedLogue } from '../../../redux/selected/selector'
+import { mapIsDotsSlideShown } from '../../../redux/toggle/selector'
 
 const DotsSlideDispatcher = forwardRef((props, ref) => {
     const

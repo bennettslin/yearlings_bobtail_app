@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import Dot from '../../Dot'
-import { getMapIsSelectedDot } from '../../../redux/dots/selectors'
+import { getMapIsSelectedDot } from '../../../redux/dots/selector'
 import './style'
 
 const SequenceDot = ({

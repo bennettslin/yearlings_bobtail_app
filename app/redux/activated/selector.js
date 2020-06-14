@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
-import { mapSelectedSongIndex } from '../selected/selectors'
+import { mapSelectedSongIndex } from '../selected/selector'
 import { ACTIVATED_STORE } from '../../constants/store'
 
 export const mapActivatedVerseIndex = (

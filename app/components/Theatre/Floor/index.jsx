@@ -7,7 +7,7 @@ import {
     mapWindowWidth,
     mapProsceniumDimensionCoordinates,
     mapFloorHeight
-} from '../../../redux/viewport/selectors'
+} from '../../../redux/viewport/selector'
 import './style'
 
 const Floor = () => {

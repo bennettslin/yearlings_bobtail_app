@@ -12,8 +12,8 @@ import { isEmailFocused } from '../../utils/email'
 import {
     mapQueuedFocus,
     mapShouldFocusLyric
-} from '../../redux/focus/selectors'
-import { mapCanSliderMount } from '../../redux/viewport/selectors'
+} from '../../redux/focus/selector'
+import { mapCanSliderMount } from '../../redux/viewport/selector'
 
 const FocusContainer = () => {
     const

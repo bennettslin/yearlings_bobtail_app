@@ -7,7 +7,7 @@ import {
     mapDidCarouselEnter,
     mapDidTheatreEnter,
     mapDidSceneEnter
-} from '../../redux/entrance/selectors'
+} from '../../redux/entrance/selector'
 
 const mapStateToProps = state => {
     const
