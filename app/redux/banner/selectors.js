@@ -1,5 +1,8 @@
 import { createSelector } from 'reselect'
-import { getDurationForSong } from '../../api/album/time'
+import {
+    getBannerCursorWidth,
+    getBannerCursorTime
+} from '../../helpers/banner'
 import { getIsSmallBannerText } from '../../helpers/resize/responsive'
 import {
     mapIsActivated,
@@ -28,6 +31,11 @@ export const mapBannerHoverTime = (
     { [BANNER_STORE]: { bannerHoverTime } }
 ) => bannerHoverTime
 
+export const mapIsSmallBannerText = createSelector(
+    mapWindowWidth,
+    windowWidth => getIsSmallBannerText(windowWidth)
+)
+
 export const mapSongBannerCursorWidth = createSelector(
     mapIsBannerHovering,
     mapBannerHoverTime,
@@ -38,13 +46,12 @@ export const mapSongBannerCursorWidth = createSelector(
         bannerHoverTime,
         selectedTime,
         selectedSongIndex
-    ) => {
-        const
-            playedTime = isBannerHovering ? bannerHoverTime : selectedTime,
-            songDuration = getDurationForSong(selectedSongIndex)
-
-        return playedTime / songDuration * 100
-    }
+    ) => getBannerCursorWidth({
+        isBannerHovering,
+        bannerHoverTime,
+        selectedTime,
+        selectedSongIndex
+    })
 )
 
 export const mapCursorTime = createSelector(
@@ -59,20 +66,11 @@ export const mapCursorTime = createSelector(
         activatedTime,
         isSliderMoving,
         sliderTime
-    ) => {
-        if (isSliderMoving) {
-            return sliderTime
-        }
-
-        if (isActivated) {
-            return activatedTime
-        }
-
-        return selectedTime
-    }
-)
-
-export const mapIsSmallBannerText = createSelector(
-    mapWindowWidth,
-    windowWidth => getIsSmallBannerText(windowWidth)
+    ) => getBannerCursorTime({
+        selectedTime,
+        isActivated,
+        activatedTime,
+        isSliderMoving,
+        sliderTime
+    })
 )

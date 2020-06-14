@@ -39,25 +39,9 @@ const VerseColour = ({
                     verseIndex,
                     inVerseBar,
                     inUnit,
-                    inSlider,
-                    ...inVerseBar && {
-                        isHiddenInVerseBar: isOdd
-                    }
+                    inSlider
                 }}
             />
-
-            {/* Allow verse bar to alternate between odd and even. */}
-            {inVerseBar && (
-                <VerseTracker
-                    {...{
-                        verseIndex,
-                        inVerseBar,
-                        inUnit,
-                        inSlider,
-                        isHiddenInVerseBar: !isOdd
-                    }}
-                />
-            )}
         </div>
     )
 }
