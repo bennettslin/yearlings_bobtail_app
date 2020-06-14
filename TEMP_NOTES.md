@@ -1,5 +1,5 @@
 # Saturday
-* in updateCurrentTime, pass callback to pause, rather than pausing directly.
+* handle song end when repeat.
 * Get rid of nextPlayerToRender stuff?
 
 # Pre-Gatsby bugs

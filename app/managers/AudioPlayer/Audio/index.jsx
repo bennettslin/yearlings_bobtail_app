@@ -1,5 +1,4 @@
-// eslint-disable-next-line object-curly-newline
-import React, { forwardRef, useImperativeHandle, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import {
@@ -7,40 +6,13 @@ import {
     mapQueuedTogglePlay
 } from '../../../redux/audio/selectors'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
-import {
-    CONTINUE,
-    AUDIO_OPTIONS
-} from '../../../constants/options'
-import { mapSelectedSongIndex } from '../../../redux/selected/selectors'
-import { mapAudioOptionIndex } from '../../../redux/session/selectors'
 
-const AudioManager = forwardRef((props, ref) => {
+const AudioManager = () => {
     const
         dispatch = useDispatch(),
         dispatchSong = useRef(),
         isPlaying = useSelector(mapIsPlaying),
-        queuedTogglePlay = useSelector(mapQueuedTogglePlay),
-        selectedSongIndex = useSelector(mapSelectedSongIndex),
-        audioOptionIndex = useSelector(mapAudioOptionIndex)
-
-    const handleSongEnd = () => {
-        /**
-         * When selecting next song through audio player, reset annotation and
-         * verse, and scroll element into view, but do not access nav section.
-         */
-        const selectedAudioOption = AUDIO_OPTIONS[audioOptionIndex]
-
-        /**
-         * If option is to continue, advance to next song. Otherwise, stay on
-         * same song, and start at beginning. (True evaluates to 1, false 0.)
-         */
-        const nextSongIndex = selectedSongIndex
-            + (selectedAudioOption === CONTINUE)
-
-        dispatchSong.current({
-            selectedSongIndex: nextSongIndex
-        })
-    }
+        queuedTogglePlay = useSelector(mapQueuedTogglePlay)
 
     useEffect(() => {
         if (queuedTogglePlay) {
@@ -56,10 +28,9 @@ const AudioManager = forwardRef((props, ref) => {
         }
     }, [queuedTogglePlay])
 
-    useImperativeHandle(ref, () => handleSongEnd)
     return (
         <SongDispatcher {...{ ref: dispatchSong }} />
     )
-})
+}
 
 export default AudioManager

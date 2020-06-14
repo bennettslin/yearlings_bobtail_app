@@ -1,27 +1,42 @@
 // Manager for audio players.
 import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import PlayerDispatcher from './Dispatcher'
 import PlayerListener from './Listener'
+import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerse'
 import Player from './Player'
 import { getSongNotLogueIndices } from '../../../api/album/songs'
-import { getTimeInVerseStatus } from './helper'
+import {
+    getNextSongIndex,
+    getTimeInVerseStatus
+} from './helper'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex
 } from '../../../redux/selected/selectors'
+import { mapAudioOptionIndex } from '../../../redux/session/selectors'
 
-const PlayerManager = ({ handleSongEnd }) => {
+const PlayerManager = () => {
     const
         dispatch = useDispatch(),
+        dispatchSong = useRef(),
         dispatchTimeVerse = useRef(),
         _dispatchPlayerCanPlayThrough = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
-        selectedVerseIndex = useSelector(mapSelectedVerseIndex)
+        selectedVerseIndex = useSelector(mapSelectedVerseIndex),
+        audioOptionIndex = useSelector(mapAudioOptionIndex)
+
+    const handleSongEnd = () => {
+        dispatchSong.current({
+            selectedSongIndex: getNextSongIndex(
+                selectedSongIndex,
+                audioOptionIndex
+            )
+        })
+    }
 
     const updateCurrentTime = currentTime => {
         const {
@@ -105,13 +120,10 @@ const PlayerManager = ({ handleSongEnd }) => {
                 />
             ))}
             <PlayerDispatcher {...{ ref: _dispatchPlayerCanPlayThrough }} />
+            <SongDispatcher {...{ ref: dispatchSong }} />
             <TimeVerseDispatcher {...{ ref: dispatchTimeVerse }} />
         </div>
     )
-}
-
-PlayerManager.propTypes = {
-    handleSongEnd: PropTypes.func.isRequired
 }
 
 export default PlayerManager

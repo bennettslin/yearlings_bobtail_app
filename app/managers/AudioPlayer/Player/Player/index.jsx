@@ -63,6 +63,7 @@ const Player = ({
             return
         }
 
+        setCurrentTime()
         logPause(songIndex)
         audioPlayerElement.current.pause()
         dispatchIsPlayingIfSelected(false)
