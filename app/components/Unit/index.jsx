@@ -91,11 +91,19 @@ const Unit = forwardRef(({
                 >
                     <UnitCard
                         isSideCard
-                        {...{ unitIndex, ...other }}
+                        {...{
+                            ref,
+                            unitIndex,
+                            ...other
+                        }}
                     />
                     <UnitCard
                         isSideSubCard
-                        {...{ unitIndex, ...other }}
+                        {...{
+                            ref,
+                            unitIndex,
+                            ...other
+                        }}
                     />
                 </div>
             }

@@ -21,7 +21,7 @@ const VerseHoc = forwardRef(({
     if (!hasVerseIndex) {
         return (
             <VerseComponent {...other}
-                {...{ logicSelectors: 'Verse__noIndexColour' }}
+                {...{ ref, logicSelectors: 'Verse__noIndexColour' }}
             />
         )
     }

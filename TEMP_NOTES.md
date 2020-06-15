@@ -1,6 +1,6 @@
 # Monday
 * Bugs!
-* Also move unitDot to unit level."
+* Also move unitDot to unit level.
 
 # Tuesday
 * Refigure overview and tips logic
@@ -13,7 +13,6 @@
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 * Slider touch doesn't become moving after a while if stationary. (It's because of timeout in slider touch dispatcher.)
-* Annotation in side card does not successfully pass itself through ref.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * PT Sans Italic is small? e.g. The Man in the High Castle.
