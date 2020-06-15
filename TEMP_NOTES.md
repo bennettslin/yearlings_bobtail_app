@@ -3,7 +3,6 @@
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
-* What happened to Odin call and response?
 
 # Post-Gatsby bugs
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
