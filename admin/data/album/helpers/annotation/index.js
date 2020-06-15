@@ -130,41 +130,61 @@ const _addAnnotationLists = (annotations, song) => {
     song.annotationCardsDotsBitsList = annotationCardsDotsBitsList
 }
 
+const _recurseThroughVerseWithColumnKey = ({
+    verse,
+    annotations,
+    isSideCard,
+    unitHasSideCard
+}) => {
+    let columnKey
+
+    // If this is a sideCard verse, show in right column.
+    if (isSideCard) {
+        columnKey = LYRIC_RIGHT
+
+    /**
+     * Otherwise, if this is an indexed verse in a unit with a
+     * sideCard verse, show in left column.
+     */
+    } else if (unitHasSideCard) {
+        columnKey = LYRIC_LEFT
+    }
+
+    _recurseThroughVerse({
+        verse,
+        columnKey,
+        annotations
+    })
+}
+
 export const addAnnotationMetadata = (songIndex, song) => {
     const { lyricUnits } = albumLyrics[songIndex],
         annotations = []
 
     lyricUnits.forEach(unit => {
         const {
-                unitMap,
-                mainVerses
+                unitMap: { sideCardType },
+                mainVerses,
+                subVerse,
+                sideCard,
+                sideSubCard
             } = unit,
+            indexedVerses = [...mainVerses || [], ...subVerse || []],
+            sideVerses = [...sideCard || [], ...sideSubCard || []]
 
-            mainVersesAndUnitMap = [
-                ...mainVerses || [],
-                unitMap
-            ]
-
-        // Go through each indexed verse and then the unit map.
-        mainVersesAndUnitMap.forEach(verse => {
-            let columnKey
-
-            // If this is a sideCard verse, show in right column.
-            if (verse.sideCard) {
-                columnKey = LYRIC_RIGHT
-
-            /**
-             * Otherwise, if this is an indexed verse in a unit with a
-             * sideCard verse, show in left column.
-             */
-            } else if (unitMap.sideCard) {
-                columnKey = LYRIC_LEFT
-            }
-
-            _recurseThroughVerse({
+        indexedVerses.forEach(verse => {
+            _recurseThroughVerseWithColumnKey({
                 verse,
-                columnKey,
-                annotations
+                annotations,
+                unitHasSideCard: Boolean(sideCardType)
+            })
+        })
+        sideVerses.forEach(verse => {
+            _recurseThroughVerseWithColumnKey({
+                verse,
+                annotations,
+                isSideCard: true,
+                unitHasSideCard: true
             })
         })
     })

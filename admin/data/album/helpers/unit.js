@@ -73,14 +73,14 @@ const _addUnitLists = (songIndex, song) => {
         const {
             unitMap: {
                 unitDot,
-                sideCard,
-                sideSubCard,
                 isBottomSideCard,
                 subVerseType,
                 sideCardType,
                 sideSubCardType
             },
-            subVerse
+            subVerse,
+            sideCard,
+            sideSubCard
         } = unit
 
         if (unitDot) {

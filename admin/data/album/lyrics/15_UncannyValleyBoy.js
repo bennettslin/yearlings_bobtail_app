@@ -393,20 +393,6 @@ export default {
                         }
                     }
                 },
-                sideCard: [
-                    {
-                        lyric: `Oh, bastard ingrate!`
-                    },
-                    {
-                        lyric: `Some nights you wake,`
-                    },
-                    {
-                        lyric: `climb and survey`
-                    },
-                    {
-                        lyric: `the houses you've betrayed.`
-                    }
-                ],
                 formType: CHORUS,
                 subVerseType: RHYME,
                 sideCardType: BACKING
@@ -445,34 +431,24 @@ export default {
                         lyric: `to seal out their floods.`
                     }
                 }
+            ],
+            sideCard: [
+                {
+                    lyric: `Oh, bastard ingrate!`
+                },
+                {
+                    lyric: `Some nights you wake,`
+                },
+                {
+                    lyric: `climb and survey`
+                },
+                {
+                    lyric: `the houses you've betrayed.`
+                }
             ]
         },
         {
             unitMap: {
-                sideCard: [
-                    {
-                        lyric: {
-                            anchor: `Scattered your beans`,
-                            todo: true,
-                            card: {
-                                description: [
-                                    `As I recall, the nightmare began with me scattering magic beans all around my neighbourhood. It was clearly based on the English fairy tale`,
-                                    {
-                                        anchor: `"Jack and the Beanstalk,"`,
-                                        wiki: `Jack_and_the_Beanstalk`
-                                    },
-                                    `though I'm not sure why.`
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    },
-                    {
-                        lyric: `over suburbia…`
-                    }
-                ],
                 formType: CHORUS,
                 subVerseType: RHYME,
                 sideCardType: BACKING,
@@ -550,6 +526,30 @@ export default {
                         isItalic: true,
                         lyric: `and healed round your grudge…`
                     }
+                }
+            ],
+            sideCard: [
+                {
+                    lyric: {
+                        anchor: `Scattered your beans`,
+                        todo: true,
+                        card: {
+                            description: [
+                                `As I recall, the nightmare began with me scattering magic beans all around my neighbourhood. It was clearly based on the English fairy tale`,
+                                {
+                                    anchor: `"Jack and the Beanstalk,"`,
+                                    wiki: `Jack_and_the_Beanstalk`
+                                },
+                                `though I'm not sure why.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        }
+                    }
+                },
+                {
+                    lyric: `over suburbia…`
                 }
             ]
         },
@@ -1048,45 +1048,6 @@ export default {
         },
         {
             unitMap: {
-                sideCard: [
-                    {
-                        lyric: `Through tatters of sky,`
-                    },
-                    {
-                        lyric: [
-                            `their`,
-                            {
-                                anchor: `sun tinkles light`,
-                                todo: true,
-                                card: {
-                                    description: `In the nightmare, I was now ruler of the neighbourhood, showering my subjects in my urine, their sole means of subsistence. In hindsight, my brain was probably telling me to get up and use the bathroom.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        lyric: `in needling chimes`
-                    },
-                    {
-                        lyric: [
-                            `that`,
-                            {
-                                anchor: `weave through the vines,`,
-                                todo: true,
-                                card: {
-                                    description: `The magic beans had sprouted into thick, twisted vines, blocking out the sky as far and wide as my helpless subjects could see.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                }
-                            }
-                        ]
-                    }
-                ],
                 formType: CHORUS,
                 subVerseType: RHYME,
                 sideCardType: BACKING
@@ -1139,36 +1100,49 @@ export default {
                         lyric: `to find a cleared path`
                     }
                 }
+            ],
+            sideCard: [
+                {
+                    lyric: `Through tatters of sky,`
+                },
+                {
+                    lyric: [
+                        `their`,
+                        {
+                            anchor: `sun tinkles light`,
+                            todo: true,
+                            card: {
+                                description: `In the nightmare, I was now ruler of the neighbourhood, showering my subjects in my urine, their sole means of subsistence. In hindsight, my brain was probably telling me to get up and use the bathroom.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    lyric: `in needling chimes`
+                },
+                {
+                    lyric: [
+                        `that`,
+                        {
+                            anchor: `weave through the vines,`,
+                            todo: true,
+                            card: {
+                                description: `The magic beans had sprouted into thick, twisted vines, blocking out the sky as far and wide as my helpless subjects could see.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        }
+                    ]
+                }
             ]
         },
         {
             unitMap: {
-                sideCard: [
-                    {
-                        lyric: `cast on your peons,`
-                    },
-                    {
-                        lyric: {
-                            anchor: `old and subservient.`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: `Amongst those I ruled over were my parents, now feeble and senile after a lifetime of following their "son's" bidding.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [PUN]: true
-                                    }
-                                },
-                                {
-                                    description: `It wasn't until college that I was able to appreciate the enormous sacrifices that my parents made for me and my siblings to have a better life than they did. But that this realisation had to come through assigned reading on immigrant history, rather than my own lived experiences, only further added to my guilt.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                ],
                 formType: CHORUS,
                 subVerseType: RHYME,
                 sideCardType: BACKING,
@@ -1216,6 +1190,32 @@ export default {
                         lyric: `to five-year plans.`
                     }
                 }
+            ],
+            sideCard: [
+                {
+                    lyric: `cast on your peons,`
+                },
+                {
+                    lyric: {
+                        anchor: `old and subservient.`,
+                        todo: true,
+                        cards: [
+                            {
+                                description: `Amongst those I ruled over were my parents, now feeble and senile after a lifetime of following their "son's" bidding.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: `It wasn't until college that I was able to appreciate the enormous sacrifices that my parents made for me and my siblings to have a better life than they did. But that this realisation had to come through assigned reading on immigrant history, rather than my own lived experiences, only further added to my guilt.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        ]
+                    }
+                }
             ]
         },
         {
@@ -1230,47 +1230,6 @@ export default {
                         }
                     }
                 },
-                sideCard: [
-                    {
-                        lyric: {
-                            anchor: `Rama, Rama…`,
-                            properNoun: true,
-                            todo: true,
-                            card: {
-                                description: `Like Valmiki as he chanted Rama's name, I desperately wanted to be good again.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [REFERENCE]: true
-                                }
-                            }
-                        }
-                    }
-                ],
-                sideSubCard: [
-                    {
-                        lyric: {
-                            anchor: `…Maranatha!`,
-                            todo: true,
-                            card: {
-                                description: [
-                                    `In my case, however, the syllables slowly shifted until I was chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I embraced instead the promise of acceptance by Western society and its women, as represented by an expression of Western faith. In the New Testament,`,
-                                    {
-                                        isItalic: true,
-                                        lyric: {
-                                            anchor: `maranatha`,
-                                            wiki: `Maranatha`
-                                        }
-                                    },
-                                    `is Aramaic for "our Lord has come."`
-                                ],
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    }
-                ],
                 formType: CODA,
                 sideCardType: BACKING,
                 sideSubCardType: RESPONSE
@@ -1346,6 +1305,47 @@ export default {
                             ]
                         }
                     ]
+                }
+            ],
+            sideCard: [
+                {
+                    lyric: {
+                        anchor: `Rama, Rama…`,
+                        properNoun: true,
+                        todo: true,
+                        card: {
+                            description: `Like Valmiki as he chanted Rama's name, I desperately wanted to be good again.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [REFERENCE]: true
+                            }
+                        }
+                    }
+                }
+            ],
+            sideSubCard: [
+                {
+                    lyric: {
+                        anchor: `…Maranatha!`,
+                        todo: true,
+                        card: {
+                            description: [
+                                `In my case, however, the syllables slowly shifted until I was chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I embraced instead the promise of acceptance by Western society and its women, as represented by an expression of Western faith. In the New Testament,`,
+                                {
+                                    isItalic: true,
+                                    lyric: {
+                                        anchor: `maranatha`,
+                                        wiki: `Maranatha`
+                                    }
+                                },
+                                `is Aramaic for "our Lord has come."`
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
+                        }
+                    }
                 }
             ]
         },
