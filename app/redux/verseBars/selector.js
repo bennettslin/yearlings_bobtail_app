@@ -24,6 +24,15 @@ export const getMapIsVerseBarShown = isAbove => createSelector(
     )
 )
 
+export const mapIsEitherVerseBarShown = createSelector(
+    mapIsVerseBarAbove,
+    mapIsVerseBarBelow,
+    (
+        isVerseBarAbove,
+        isVerseBarBelow
+    ) => isVerseBarAbove || isVerseBarBelow
+)
+
 export const mapQueuedDetermineVerseBars = (
     { [VERSE_BARS_STORE]: { queuedDetermineVerseBars } }
 ) => queuedDetermineVerseBars

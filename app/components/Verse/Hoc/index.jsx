@@ -16,10 +16,7 @@ const VerseHoc = forwardRef(({
     ...other
 
 }, ref) => {
-    const
-        hasVerseIndex = Number.isFinite(verseIndex),
-        isCursorVerse = useSelector(getMapIsVerseCursor(verseIndex)),
-        isSelectedVerse = useSelector(getMapIsVerseSelected(verseIndex))
+    const hasVerseIndex = Number.isFinite(verseIndex)
 
     if (!hasVerseIndex) {
         return (
@@ -33,8 +30,13 @@ const VerseHoc = forwardRef(({
             inSlider,
             inVerseBar
         } = other,
+        isCursorVerse = useSelector(getMapIsVerseCursor({
+            verseIndex,
+            inSlider,
+            inVerseBar
+        })),
+        isSelectedVerse = useSelector(getMapIsVerseSelected(verseIndex)),
         inLyric = inUnit || inVerseBar,
-
         logicSelectors = hasVerseIndex && cx(
             inLyric ? 'Verse__text' : 'Verse__slider',
             isCursorVerse ? 'Verse__cursor' : 'Verse__notCursor',
@@ -53,6 +55,7 @@ const VerseHoc = forwardRef(({
                 {...{
                     verseIndex,
                     inUnit,
+                    inSlider,
                     inVerseBar
                 }}
             />

@@ -19,8 +19,7 @@
 }
 
 .VerseBar__above {
-    margin-top: $MARGIN_THIN;
-    top: 0;
+    margin-top: $margin__thick;
 
     .DW__canSliderMount
     & {
@@ -31,8 +30,7 @@
 }
 
 .VerseBar__below {
-    margin-bottom: $MARGIN_THIN;
-    bottom: 0;
+    margin-bottom: $margin__thick;
 }
 
 .VerseBar__shown {

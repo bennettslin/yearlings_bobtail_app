@@ -10,12 +10,18 @@ import './style'
 const VerseColour = ({
     verseIndex,
     inUnit,
+    inSlider,
     inVerseBar
 
 }) => {
     const
-        verseCursorStatus = useSelector(getMapVerseCursorStatus(verseIndex)),
+        verseCursorStatus = useSelector(getMapVerseCursorStatus({
+            verseIndex,
+            inSlider,
+            inVerseBar
+        })),
         verseTrackerLength = useSelector(getMapVerseTrackerLength(verseIndex)),
+        isNotShown = verseCursorStatus === null,
         isOdd = Boolean(verseIndex % 2)
 
     return (
@@ -28,6 +34,7 @@ const VerseColour = ({
                 verseCursorStatus === -1 && 'VerseColour__beforeCursor',
                 verseCursorStatus === 0 && 'VerseColour__cursor',
                 verseCursorStatus === 1 && 'VerseColour__afterCursor',
+                isNotShown && 'VerseColour__cursorNotShown',
                 isOdd ?
                     'VerseColour__odd' :
                     'VerseColour__even',
@@ -38,7 +45,8 @@ const VerseColour = ({
             <Tracker
                 {...{
                     trackerLength: verseTrackerLength,
-                    isVertical: inUnit || inVerseBar
+                    isVertical: inUnit || inVerseBar,
+                    isNotShown
                 }}
             />
         </div>
@@ -48,6 +56,7 @@ const VerseColour = ({
 VerseColour.propTypes = {
     verseIndex: PropTypes.number.isRequired,
     inUnit: PropTypes.bool,
+    inSlider: PropTypes.bool,
     inVerseBar: PropTypes.bool
 }
 

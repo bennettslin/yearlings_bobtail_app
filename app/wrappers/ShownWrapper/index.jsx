@@ -75,10 +75,8 @@ const ShownWrapper = ({ children }) => {
                             'ShW__tips__isPointedAtLyrics'
                     ],
 
-                    isCarouselShown &&
-                        'ShW__carouselExpanded',
-                    isNavShown &&
-                        'ShW__navExpanded',
+                    isCarouselShown && 'ShW__carouselExpanded',
+                    isNavShown && 'ShW__navExpanded',
 
                     isDotsSlideShown ?
                         'ShW__dotsShown' :

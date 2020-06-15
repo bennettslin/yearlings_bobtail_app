@@ -12,13 +12,18 @@ export const getCursorIndex = (
     }
 }
 
-export const getBeforeOnOrAfter = (cursorIndex, index) => {
+export const getBeforeOnOrAfter = (
+    cursorIndex,
+    index,
+    isCursorShown = true
+
+) => {
     if (index < cursorIndex) {
         return -1
     } else if (index > cursorIndex) {
         return 1
     } else {
-        return 0
+        return isCursorShown ? 0 : null
     }
 }
 

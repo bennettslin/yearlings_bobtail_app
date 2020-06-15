@@ -4805,5 +4805,9 @@ export default [
         taskName: `VerseTracker refactor. Make VerseTracker based on selectedTime rather than CSS. Use Tracker component.`,
         reference: `https://www.npmjs.com/package/react-audio-player`,
         workedHours: 2
+    },
+    {
+        taskName: `Don't style selected verse when verse bar is shown.`,
+        workedHours: 2
     }
 ]

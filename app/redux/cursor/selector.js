@@ -23,6 +23,7 @@ import {
     mapSliderSceneIndex,
     mapSliderVerseIndex
 } from '../slider/selector'
+import { mapIsEitherVerseBarShown } from '../verseBars/selector'
 
 export const mapCursorTime = createSelector(
     mapSelectedTime,
@@ -83,16 +84,41 @@ export const mapVerseCursorIndex = createSelector(
     )
 )
 
-export const getMapIsVerseCursor = verseIndex => createSelector(
-    mapVerseCursorIndex,
-    verseCursorIndex => verseIndex === verseCursorIndex
+const getMapIsVerseCursorShown = (inSlider, inVerseBar) => createSelector(
+    mapIsEitherVerseBarShown,
+    isEitherVerseBarShown => (
+        inSlider ||
+        Boolean(inVerseBar) === isEitherVerseBarShown
+    )
 )
 
-export const getMapVerseCursorStatus = verseIndex => createSelector(
+export const getMapIsVerseCursor = ({
+    verseIndex,
+    inSlider,
+    inVerseBar
+}) => createSelector(
     mapVerseCursorIndex,
-    verseCursorIndex => getBeforeOnOrAfter(
+    getMapIsVerseCursorShown(inSlider, inVerseBar),
+    (
         verseCursorIndex,
-        verseIndex
+        isVerseCursorShown
+    ) => verseIndex === verseCursorIndex && isVerseCursorShown
+)
+
+export const getMapVerseCursorStatus = ({
+    verseIndex,
+    inSlider,
+    inVerseBar
+}) => createSelector(
+    mapVerseCursorIndex,
+    getMapIsVerseCursorShown(inSlider, inVerseBar),
+    (
+        verseCursorIndex,
+        isVerseCursorShown
+    ) => getBeforeOnOrAfter(
+        verseCursorIndex,
+        verseIndex,
+        isVerseCursorShown
     )
 )
 

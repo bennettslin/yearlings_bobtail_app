@@ -79,6 +79,15 @@
     }
 }
 
+.VerseColour__cursorNotShown {
+    background-color: $colour__neutral__light;
+
+    .TW__lyricsLocked
+    & {
+        background-color: $colour__neutral__dark;
+    }
+}
+
 .VerseColour__cursor {
     background-color: $colour__paused__empty;
 

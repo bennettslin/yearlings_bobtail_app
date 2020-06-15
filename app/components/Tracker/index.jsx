@@ -4,7 +4,12 @@ import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import './style'
 
-const Tracker = ({ isVertical, trackerLength }) => (
+const Tracker = ({
+    isNotShown,
+    isVertical,
+    trackerLength
+
+}) => (
     <CSSTransition
         appear
         unmountOnExit
@@ -22,7 +27,14 @@ const Tracker = ({ isVertical, trackerLength }) => (
                     'abF'
                 ),
                 style: {
-                    [isVertical ? 'height' : 'width']: `${trackerLength}%`
+                    [isVertical ? 'height' : 'width']: `${trackerLength}%`,
+                    /**
+                     * This allows tracker in unit verse to stay hidden when
+                     * verse bar is shown.
+                     */
+                    ...isNotShown && {
+                        visibility: 'hidden'
+                    }
                 }
             }}
         />
@@ -30,6 +42,7 @@ const Tracker = ({ isVertical, trackerLength }) => (
 )
 
 Tracker.propTypes = {
+    isNotShown: PropTypes.bool,
     isVertical: PropTypes.bool,
     trackerLength: PropTypes.number
 }
