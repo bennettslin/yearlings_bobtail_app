@@ -7,7 +7,6 @@
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
-* Unit dot in unit with side card shows when in left ear, but is not accessible.
 * Font is not smaller in unit with side card. Fix along with general italic issue.
 
 # Post-Gatsby bugs

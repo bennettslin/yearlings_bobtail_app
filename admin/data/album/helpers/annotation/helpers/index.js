@@ -3,8 +3,7 @@ import { getDotsBitFromKeys } from '../../../../../../app/helpers/dot'
 import { getFormattedAnnotationTitle } from '../../../../../../app/helpers/format'
 import {
     LYRIC_LEFT,
-    LYRIC_RIGHT,
-    COLUMN_INDEX
+    LYRIC_RIGHT
 } from '../../../../../../app/constants/lyrics'
 
 export const registerAnnotation = ({
@@ -57,13 +56,13 @@ export const registerAnnotation = ({
         // Or else let it know if its unit has a side card.
         columnKey === LYRIC_LEFT
     ) {
-        annotation[COLUMN_INDEX] = 0
+        annotation.columnIndex = 0
 
     } else if (
         textKey === LYRIC_RIGHT ||
         columnKey === LYRIC_RIGHT
     ) {
-        annotation[COLUMN_INDEX] = 1
+        annotation.columnIndex = 1
     }
 
     registerCardsDotKeys({

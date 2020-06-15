@@ -13,8 +13,6 @@ module.exports = {
     ANCHOR,
 
     WIKI: 'wiki',
-
-    COLUMN_INDEX: 'columnIndex',
     WIKI_INDEX: 'wikiIndex',
 
     IS_UNIT_DOT: 'isUnitDot',

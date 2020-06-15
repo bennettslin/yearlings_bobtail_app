@@ -146,30 +146,37 @@ export const addAnnotationMetadata = (songIndex, song) => {
                 sideSubCard
             } = unit,
 
-            mainVersesAndUnitMap = [
+            allVerses = [
                 ...mainVerses || [],
                 {
                     subVerse,
                     sideCard,
-                    sideSubCard,
-                    unitDot
-                }
+                    sideSubCard
+                },
+                { unitDot }
             ]
 
         // Go through each indexed verse and then the unit map.
-        mainVersesAndUnitMap.forEach(verse => {
+        allVerses.forEach(verse => {
             let columnKey
 
-            // If this is a sideCard verse, show in right column.
-            if (verse.sideCard) {
-                columnKey = LYRIC_RIGHT
-
             /**
-             * Otherwise, if this is an indexed verse in a unit with a
-             * sideCard verse, show in left column.
+             * If it's the unit dot, it will show in both columns, even if it's
+             * in a unit with side cards.
              */
-            } else if (sideCardType) {
-                columnKey = LYRIC_LEFT
+            if (!verse.unitDot) {
+
+                // If this is a sideCard verse, show in right column.
+                if (verse.sideCard) {
+                    columnKey = LYRIC_RIGHT
+
+                /**
+                 * Otherwise, if this is an indexed verse in a unit with a
+                 * sideCard verse, show in left column.
+                 */
+                } else if (sideCardType) {
+                    columnKey = LYRIC_LEFT
+                }
             }
 
             _recurseThroughVerse({
