@@ -6,9 +6,7 @@ export const addHasSideCard = (songIndex, song) => {
      * Let app know that song has side stanzas. Only applies to "On a Golden
      * Cord" and "Uncanny Valley Boy."
      */
-    const hasSideCards = lyricUnits.some(({
-        unitMap: { sideCard }
-    }) => (
+    const hasSideCards = lyricUnits.some(({ sideCard }) => (
         // Tell song it has side stanzas so ear button can be shown if needed.
         Boolean(sideCard)
     ))

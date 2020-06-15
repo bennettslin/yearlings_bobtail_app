@@ -521,24 +521,6 @@ export default {
         },
         {
             unitMap: {
-                sideCard: [
-                    {
-                        lyric: {
-                            isItalic: true,
-                            lyric: {
-                                anchor: `Odelay!`,
-                                todo: true,
-                                card: {
-                                    description: `The yodelling here reflects the mild euphoria of dehydration that I begin to feel just before daybreak.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [SONGWRITING]: true
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
                 formType: BRIDGE,
                 sideCardType: BACKING
             },
@@ -585,36 +567,28 @@ export default {
                     time: 96,
                     lyricCentre: `just learned he's pecked to death his precious other.`
                 }
-            ]
-        },
-        {
-            unitMap: {
-                sideCard: [
-                    {
+            ],
+            sideCard: [
+                {
+                    lyric: {
+                        isItalic: true,
                         lyric: {
-                            isItalic: true,
-                            lyric: {
-                                anchor: `Mush! Mush!`,
-                                properNoun: true,
-                                todo: true,
-                                card: {
-                                    description: [
-                                        `Marching onward through the brisk twilight, I think back to simpler days as a child, when I would sing Johnny Horton's`,
-                                        {
-                                            anchor: `"North to Alaska,"`,
-                                            wiki: `North_to_Alaska_(song)`
-                                        },
-                                        `and my sister would back me up by heaving "Mush! Mush!"`
-                                    ],
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [NARRATIVE]: true
-                                    }
+                            anchor: `Odelay!`,
+                            todo: true,
+                            card: {
+                                description: `The yodelling here reflects the mild euphoria of dehydration that I begin to feel just before daybreak.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [SONGWRITING]: true
                                 }
                             }
                         }
                     }
-                ],
+                }
+            ]
+        },
+        {
+            unitMap: {
                 isBottomSideCard: true,
                 formType: BRIDGE,
                 sideCardType: BACKING,
@@ -654,6 +628,32 @@ export default {
                 {
                     time: 113,
                     lyricCentre: `Now the jester teeters towards…`
+                }
+            ],
+            sideCard: [
+                {
+                    lyric: {
+                        isItalic: true,
+                        lyric: {
+                            anchor: `Mush! Mush!`,
+                            properNoun: true,
+                            todo: true,
+                            card: {
+                                description: [
+                                    `Marching onward through the brisk twilight, I think back to simpler days as a child, when I would sing Johnny Horton's`,
+                                    {
+                                        anchor: `"North to Alaska,"`,
+                                        wiki: `North_to_Alaska_(song)`
+                                    },
+                                    `and my sister would back me up by heaving "Mush! Mush!"`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        }
+                    }
                 }
             ]
         },

@@ -1,14 +1,20 @@
-# Sunday
+# Monday
+* Bugs!
+* Also move unitDot to unit level."
+
+# Tuesday
 * Refigure overview and tips logic
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
+* Unit dot in unit with side card shows when in left ear, but is not accessible.
+* Font is not smaller in unit with side card. Fix along with general italic issue.
 
 # Post-Gatsby bugs
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 * Slider touch doesn't become moving after a while if stationary. (It's because of timeout in slider touch dispatcher.)
-* Moving sub verse and side card out of unitMap causes weirdness. In sidecard branch.
+* Annotation in side card does not successfully pass itself through ref.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * PT Sans Italic is small? e.g. The Man in the High Castle.

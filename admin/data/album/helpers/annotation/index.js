@@ -136,13 +136,24 @@ export const addAnnotationMetadata = (songIndex, song) => {
 
     lyricUnits.forEach(unit => {
         const {
-                unitMap,
-                mainVerses
+                unitMap: {
+                    sideCardType,
+                    unitDot
+                },
+                mainVerses,
+                subVerse,
+                sideCard,
+                sideSubCard
             } = unit,
 
             mainVersesAndUnitMap = [
                 ...mainVerses || [],
-                unitMap
+                {
+                    subVerse,
+                    sideCard,
+                    sideSubCard,
+                    unitDot
+                }
             ]
 
         // Go through each indexed verse and then the unit map.
@@ -157,7 +168,7 @@ export const addAnnotationMetadata = (songIndex, song) => {
              * Otherwise, if this is an indexed verse in a unit with a
              * sideCard verse, show in left column.
              */
-            } else if (unitMap.sideCard) {
+            } else if (sideCardType) {
                 columnKey = LYRIC_LEFT
             }
 

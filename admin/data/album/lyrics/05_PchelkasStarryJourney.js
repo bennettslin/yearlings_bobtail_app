@@ -211,31 +211,6 @@ export default {
         },
         {
             unitMap: {
-                subVerse: [
-                    {
-                        time: 34,
-                        lyric: {
-                            isEmphasis: true,
-                            lyric: {
-                                anchor: `Poor Sam Peabody!`,
-                                todo: true,
-                                card: {
-                                    description: [
-                                        `When my family visited Canada one late summer, the`,
-                                        {
-                                            anchor: `white-throated sparrow`,
-                                            wiki: `White-throated_sparrow`
-                                        },
-                                        `was in breeding season, and its song was heard everywhere. I found it haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic its cadence and pitch.`
-                                    ],
-                                    dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
-                                }
-                            }
-                        }
-                    }
-                ],
                 formType: PRECHORUS,
                 subVerseType: RESPONSE
             },
@@ -273,6 +248,31 @@ export default {
                         },
                         `throughout the entire weekend!"`
                     ]
+                }
+            ],
+            subVerse: [
+                {
+                    time: 34,
+                    lyric: {
+                        isEmphasis: true,
+                        lyric: {
+                            anchor: `Poor Sam Peabody!`,
+                            todo: true,
+                            card: {
+                                description: [
+                                    `When my family visited Canada one late summer, the`,
+                                    {
+                                        anchor: `white-throated sparrow`,
+                                        wiki: `White-throated_sparrow`
+                                    },
+                                    `was in breeding season, and its song was heard everywhere. I found it haunting and soothing, and longed to hear it again ever afterwards. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic its cadence and pitch.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        }
+                    }
                 }
             ]
         },

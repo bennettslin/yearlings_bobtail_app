@@ -47,33 +47,6 @@ export default {
                         }
                     }
                 },
-                subVerse: [
-                    {
-                        time: 33,
-                        lyricCentre: {
-                            anchor: `Maravijaya…`,
-                            properNoun: true,
-                            todo: true,
-                            card: {
-                                description: [
-                                    {
-                                        isItalic: true,
-                                        lyric: `Maravijaya,`
-                                    },
-                                    `which translates to "victory over Mara" in Sanskrit, is the seated posture of the Buddha as he fended off temptations from`,
-                                    {
-                                        anchor: `Mara,`,
-                                        wiki: `Mara_(demon)`
-                                    },
-                                    `the demon who personifies fear and death in Buddhism. In the same way, I had to summon otherworldly reserves of self-denial to get through band practise after Jacob and Mara started dating.`
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    }
-                ],
                 formType: INTRO,
                 subVerseType: RESPONSE
             },
@@ -83,6 +56,33 @@ export default {
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(Mara's theme)`
+                    }
+                }
+            ],
+            subVerse: [
+                {
+                    time: 33,
+                    lyricCentre: {
+                        anchor: `Maravijaya…`,
+                        properNoun: true,
+                        todo: true,
+                        card: {
+                            description: [
+                                {
+                                    isItalic: true,
+                                    lyric: `Maravijaya,`
+                                },
+                                `which translates to "victory over Mara" in Sanskrit, is the seated posture of the Buddha as he fended off temptations from`,
+                                {
+                                    anchor: `Mara,`,
+                                    wiki: `Mara_(demon)`
+                                },
+                                `the demon who personifies fear and death in Buddhism. In the same way, I had to summon otherworldly reserves of self-denial to get through band practise after Jacob and Mara started dating.`
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
+                        }
                     }
                 }
             ]

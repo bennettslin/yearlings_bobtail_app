@@ -325,16 +325,7 @@ export default {
         {
             unitMap: {
                 formType: PRECHORUS,
-                subVerseType: RESPONSE,
-                subVerse: [
-                    {
-                        time: 97,
-                        lyric: {
-                            isItalic: true,
-                            lyric: `Don't little raisin fingers need to dry?`
-                        }
-                    }
-                ]
+                subVerseType: RESPONSE
             },
             mainVerses: [
                 {
@@ -357,6 +348,15 @@ export default {
                 {
                     time: 91,
                     lyric: `Didi, come out, you can't soak there all night.`
+                }
+            ],
+            subVerse: [
+                {
+                    time: 97,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `Don't little raisin fingers need to dry?`
+                    }
                 }
             ]
         },

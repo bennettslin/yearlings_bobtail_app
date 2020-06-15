@@ -4809,5 +4809,9 @@ export default [
     {
         taskName: `Don't style selected verse when verse bar is shown.`,
         workedHours: 2
+    },
+    {
+        taskName: `Move subVerse and sideCards to unit level.`,
+        workedHours: 1
     }
 ]
