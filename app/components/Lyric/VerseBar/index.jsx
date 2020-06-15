@@ -70,7 +70,6 @@ const VerseBar = ({
                     <VerseHoc
                         inVerseBar
                         {...{
-                            isShownInVerseBar: isVerseBarShown,
                             verseIndex: verseCursorIndex,
                             verseObject: getVerse(
                                 lyricSongIndex,

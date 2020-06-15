@@ -1,7 +1,9 @@
 import {
     getDurationForSong,
     getStartTimeForScene,
-    getDurationForScene
+    getDurationForScene,
+    getStartTimeForVerse,
+    getDurationForVerse
 } from '../api/album/time'
 
 export const getSongTrackerWidth = ({
@@ -40,4 +42,28 @@ export const getSceneTrackerWidth = ({
         )
 
     return (selectedTime - sceneStartTime) / sceneDuration * 100
+}
+
+export const getVerseTrackerLength = ({
+    verseIndex,
+    verseCursorIndex,
+    selectedSongIndex,
+    selectedTime
+
+}) => {
+    if (verseIndex !== verseCursorIndex) {
+        return null
+    }
+
+    const
+        verseStartTime = getStartTimeForVerse(
+            selectedSongIndex,
+            verseIndex
+        ),
+        verseDuration = getDurationForVerse(
+            selectedSongIndex,
+            verseIndex
+        )
+
+    return (selectedTime - verseStartTime) / verseDuration * 100
 }

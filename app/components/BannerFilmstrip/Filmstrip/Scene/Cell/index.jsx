@@ -40,7 +40,7 @@ const FilmstripCell = ({ sceneIndex }) => {
                         )
                     }}
                 >
-                    <Tracker {...{ trackerWidth: sceneTrackerWidth }} />
+                    <Tracker {...{ trackerLength: sceneTrackerWidth }} />
                 </div>
             )}
         </div>

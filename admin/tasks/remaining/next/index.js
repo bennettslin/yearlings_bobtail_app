@@ -1,11 +1,5 @@
 export default [
     {
-        taskName: `VerseTracker refactor. Make VerseTracker based on selectedTime rather than CSS.`,
-        reference: `https://www.npmjs.com/package/react-audio-player`,
-        workedHours: 0,
-        neededHours: 6
-    },
-    {
         taskName: `Refigure overview and tips logic.`,
         workedHours: 0,
         neededHours: 6

@@ -1,5 +1,4 @@
 # Sunday
-* Verse tracker
 * Refigure overview and tips logic
 
 # Pre-Gatsby bugs
@@ -9,6 +8,7 @@
 # Post-Gatsby bugs
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
 * Don't style selected verse when verse bar is shown.
+* Verse bar on bottom lost its margin.
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 * Slider touch doesn't become moving after a while if stationary.
 

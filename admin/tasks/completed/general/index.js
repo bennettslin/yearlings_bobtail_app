@@ -4800,5 +4800,10 @@ export default [
     {
         taskName: `Filmstrip refactor.`,
         workedHours: 4
+    },
+    {
+        taskName: `VerseTracker refactor. Make VerseTracker based on selectedTime rather than CSS. Use Tracker component.`,
+        reference: `https://www.npmjs.com/package/react-audio-player`,
+        workedHours: 2
     }
 ]

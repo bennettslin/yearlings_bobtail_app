@@ -13,7 +13,6 @@ const VerseHoc = forwardRef(({
     VerseComponent,
     handleVerseSelect,
     inUnit,
-    isShownInVerseBar,
     ...other
 
 }, ref) => {
@@ -34,14 +33,10 @@ const VerseHoc = forwardRef(({
             inSlider,
             inVerseBar
         } = other,
+        inLyric = inUnit || inVerseBar,
 
         logicSelectors = hasVerseIndex && cx(
-            (
-                inUnit || (
-                    inVerseBar &&
-                    isShownInVerseBar
-                )
-            ) ? 'Verse__text' : 'Verse__slider',
+            inLyric ? 'Verse__text' : 'Verse__slider',
             isCursorVerse ? 'Verse__cursor' : 'Verse__notCursor',
             isSelectedVerse ? 'Verse__selected' : 'Verse__notSelected'
         )
@@ -57,9 +52,8 @@ const VerseHoc = forwardRef(({
             <VerseColour
                 {...{
                     verseIndex,
-                    inSlider,
-                    inVerseBar,
-                    inUnit
+                    inUnit,
+                    inVerseBar
                 }}
             />
             {!inSlider && !inVerseBar && (
@@ -83,7 +77,6 @@ VerseHoc.propTypes = {
     inSlider: PropTypes.bool,
     inUnit: PropTypes.bool,
     inVerseBar: PropTypes.bool,
-    isShownInVerseBar: PropTypes.bool,
     handleVerseSelect: PropTypes.func
 }
 

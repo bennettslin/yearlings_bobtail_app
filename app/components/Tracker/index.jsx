@@ -4,13 +4,13 @@ import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import './style'
 
-const Tracker = ({ trackerWidth }) => (
+const Tracker = ({ isVertical, trackerLength }) => (
     <CSSTransition
         appear
         unmountOnExit
         mountOnEnter
         {...{
-            in: Number.isFinite(trackerWidth),
+            in: Number.isFinite(trackerLength),
             timeout: 200,
             classNames: { enterDone: 'Tracker__visible' }
         }}
@@ -22,7 +22,7 @@ const Tracker = ({ trackerWidth }) => (
                     'abF'
                 ),
                 style: {
-                    width: `${trackerWidth}%`
+                    [isVertical ? 'height' : 'width']: `${trackerLength}%`
                 }
             }}
         />
@@ -30,7 +30,8 @@ const Tracker = ({ trackerWidth }) => (
 )
 
 Tracker.propTypes = {
-    trackerWidth: PropTypes.number
+    isVertical: PropTypes.bool,
+    trackerLength: PropTypes.number
 }
 
 export default memo(Tracker)

@@ -2,19 +2,20 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import VerseTracker from './VerseTracker'
+import Tracker from '../../../Tracker'
 import { getMapVerseCursorStatus } from '../../../../redux/cursor/selector'
+import { getMapVerseTrackerLength } from '../../../../redux/tracker/selector'
 import './style'
 
 const VerseColour = ({
     verseIndex,
     inUnit,
-    inVerseBar,
-    inSlider
+    inVerseBar
 
 }) => {
     const
         verseCursorStatus = useSelector(getMapVerseCursorStatus(verseIndex)),
+        verseTrackerLength = useSelector(getMapVerseTrackerLength(verseIndex)),
         isOdd = Boolean(verseIndex % 2)
 
     return (
@@ -34,12 +35,10 @@ const VerseColour = ({
                 'abF'
             )}
         >
-            <VerseTracker
+            <Tracker
                 {...{
-                    verseIndex,
-                    inVerseBar,
-                    inUnit,
-                    inSlider
+                    trackerLength: verseTrackerLength,
+                    isVertical: inUnit || inVerseBar
                 }}
             />
         </div>
@@ -49,8 +48,7 @@ const VerseColour = ({
 VerseColour.propTypes = {
     verseIndex: PropTypes.number.isRequired,
     inUnit: PropTypes.bool,
-    inVerseBar: PropTypes.bool,
-    inSlider: PropTypes.bool
+    inVerseBar: PropTypes.bool
 }
 
 export default memo(VerseColour)

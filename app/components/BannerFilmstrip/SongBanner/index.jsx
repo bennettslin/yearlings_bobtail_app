@@ -174,7 +174,7 @@ const SongBanner = () => {
                 }
             }}
         >
-            <Tracker {...{ trackerWidth: songTrackerWidth }} />
+            <Tracker {...{ trackerLength: songTrackerWidth }} />
             <SongBannerTitle />
             <SongBannerTimer />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
