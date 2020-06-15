@@ -1206,45 +1206,6 @@ export default {
         },
         {
             unitMap: {
-                subVerse: [
-                    {
-                        time: 135,
-                        lyric: [
-                            `Can a`,
-                            {
-                                anchor: `holed up hostage`,
-                                todo: true,
-                                card: {
-                                    description: `And yet, the thought of being stuck with a soul forever, a fate promised by the faiths of my classmates, seemed every bit as dreadful.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        time: 137,
-                        lyric: [
-                            `pray for`,
-                            {
-                                anchor: `soulless solace`,
-                                // From Willy the Cocoa ("unsalvaged souls")
-                                // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
-                                todo: true,
-                                card: {
-                                    description: `It seemed bizarre to me that if a true spiritual path did indeed exist, then it wouldn't offer a reward so obviously desirable, for which I could mindlessly strive without being troubled by existential questions on the nature of souls.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            },
-                            `and just play dumb?`
-                        ]
-                    }
-                ],
                 formType: BRIDGE,
                 subVerseType: RESPONSE
             },
@@ -1276,6 +1237,45 @@ export default {
                             }
                         },
                         `has come?`
+                    ]
+                }
+            ],
+            subVerse: [
+                {
+                    time: 135,
+                    lyric: [
+                        `Can a`,
+                        {
+                            anchor: `holed up hostage`,
+                            todo: true,
+                            card: {
+                                description: `And yet, the thought of being stuck with a soul forever, a fate promised by the faiths of my classmates, seemed every bit as dreadful.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    time: 137,
+                    lyric: [
+                        `pray for`,
+                        {
+                            anchor: `soulless solace`,
+                            // From Willy the Cocoa ("unsalvaged souls")
+                            // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
+                            todo: true,
+                            card: {
+                                description: `It seemed bizarre to me that if a true spiritual path did indeed exist, then it wouldn't offer a reward so obviously desirable, for which I could mindlessly strive without being troubled by existential questions on the nature of souls.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        },
+                        `and just play dumb?`
                     ]
                 }
             ]

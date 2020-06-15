@@ -167,28 +167,7 @@ export default {
             unitMap: {
                 formType: VERSES,
                 subVerseType: RHYME,
-                subsequent: true,
-                subVerse: [
-                    {
-                        time: 30,
-                        lyric: {
-                            isItalic: true,
-                            lyric: [
-                                {
-                                    anchor: `Chilled cola's free`,
-                                    todo: true,
-                                    card: {
-                                        description: `Willy eagerly awaits the cold soft drink that comes along with his reimbursement at the recycling center.`,
-                                        dotKeys: {
-                                            [NARRATIVE]: true
-                                        }
-                                    }
-                                },
-                                `with salvage sold…`
-                            ]
-                        }
-                    }
-                ]
+                subsequent: true
             },
             mainVerses: [
                 {
@@ -238,6 +217,27 @@ export default {
                         },
                         `eclipsed in full.`
                     ]
+                }
+            ],
+            subVerse: [
+                {
+                    time: 30,
+                    lyric: {
+                        isItalic: true,
+                        lyric: [
+                            {
+                                anchor: `Chilled cola's free`,
+                                todo: true,
+                                card: {
+                                    description: `Willy eagerly awaits the cold soft drink that comes along with his reimbursement at the recycling center.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                }
+                            },
+                            `with salvage sold…`
+                        ]
+                    }
                 }
             ]
         },
@@ -709,34 +709,7 @@ export default {
             unitMap: {
                 formType: VERSES,
                 subVerseType: RHYME,
-                subsequent: true,
-                subVerse: [
-                    {
-                        time: 126,
-                        lyric: {
-                            isItalic: true,
-                            lyric: [
-                                `Shelled skull has freed`,
-                                {
-                                    anchor: `unsalvaged soul…`,
-                                    todo: true,
-                                    cards: [
-                                        {
-                                            description: `To justify the abuse of sickly children, religious doctrine in the past would often claim that such children were devoid of souls.`,
-                                            dotKeys: {
-                                                [OBSERVATION]: true,
-                                                [REFERENCE]: true
-                                            }
-                                        },
-                                        {
-                                            wormhole: `unsalvaged_sows`
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    }
-                ]
+                subsequent: true
             },
             mainVerses: [
                 {
@@ -770,6 +743,33 @@ export default {
                             }
                         }
                     ]
+                }
+            ],
+            subVerse: [
+                {
+                    time: 126,
+                    lyric: {
+                        isItalic: true,
+                        lyric: [
+                            `Shelled skull has freed`,
+                            {
+                                anchor: `unsalvaged soul…`,
+                                todo: true,
+                                cards: [
+                                    {
+                                        description: `To justify the abuse of sickly children, religious doctrine in the past would often claim that such children were devoid of souls.`,
+                                        dotKeys: {
+                                            [OBSERVATION]: true,
+                                            [REFERENCE]: true
+                                        }
+                                    },
+                                    {
+                                        wormhole: `unsalvaged_sows`
+                                    }
+                                ]
+                            }
+                        ]
+                    }
                 }
             ]
         },

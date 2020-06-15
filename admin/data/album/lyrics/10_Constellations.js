@@ -1372,39 +1372,6 @@ export default {
         },
         {
             unitMap: {
-                subVerse: [
-                    {
-                        time: 128,
-                        lyric: {
-                            isItalic: true,
-                            lyric: {
-                                anchor: `sunk in tarpid lies!`,
-                                todo: true,
-                                cards: [
-                                    {
-                                        description: [
-                                            {
-                                                anchor: `Tar pits`,
-                                                wiki: `Tar_pit`
-                                            },
-                                            `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery.`
-                                        ]
-                                    },
-                                    {
-                                        description: `My mastodon lies "sunk in a tar pit," just as I have "sunk in torpid lies" with my endless excuses to Sita for why we can't spend more nights together when I'm ever eager to make time for my friends.`,
-                                        dotKeys: {
-                                            [NARRATIVE]: true,
-                                            [PUN]: true
-                                        }
-                                    },
-                                    {
-                                        wormhole: `sunken_tirpitz`
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                ],
                 formType: BRIDGE,
                 subVerseType: RESPONSE
             },
@@ -1450,44 +1417,43 @@ export default {
                         `cries…`
                     ]
                 }
-            ]
-        },
-        {
-            unitMap: {
-                subVerse: [
-                    {
-                        time: 135,
+            ],
+            subVerse: [
+                {
+                    time: 128,
+                    lyric: {
+                        isItalic: true,
                         lyric: {
-                            isItalic: true,
-                            lyric: [
-                                `he sees`,
+                            anchor: `sunk in tarpid lies!`,
+                            todo: true,
+                            cards: [
                                 {
-                                    anchor: `Lowkey and Freyed!`,
-                                    properNoun: true,
-                                    todo: true,
-                                    card: {
-                                        description: [
-                                            `As my better self observes me in my "low-key and fried" state, I see a constellation of my brother as`,
-                                            {
-                                                anchor: `"Loki,"`,
-                                                wiki: `Loki`
-                                            },
-                                            `the Norse trickster god, next to one of my sister as`,
-                                            {
-                                                anchor: `"Freyja,"`,
-                                                wiki: `Freyja`
-                                            },
-                                            `the Norse goddess on equal footing with Odin.`
-                                        ],
-                                        dotKeys: {
-                                            [PUN]: true
-                                        }
+                                    description: [
+                                        {
+                                            anchor: `Tar pits`,
+                                            wiki: `Tar_pit`
+                                        },
+                                        `occur when natural asphalt leaks to the surface from underground. Preserving wood and bone, they are rich sources of paleontological discovery.`
+                                    ]
+                                },
+                                {
+                                    description: `My mastodon lies "sunk in a tar pit," just as I have "sunk in torpid lies" with my endless excuses to Sita for why we can't spend more nights together when I'm ever eager to make time for my friends.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true
                                     }
+                                },
+                                {
+                                    wormhole: `sunken_tirpitz`
                                 }
                             ]
                         }
                     }
-                ],
+                }
+            ]
+        },
+        {
+            unitMap: {
                 formType: BRIDGE,
                 subVerseType: RESPONSE,
                 subsequent: true
@@ -1556,6 +1522,40 @@ export default {
                             }
                         }
                     ]
+                }
+            ],
+            subVerse: [
+                {
+                    time: 135,
+                    lyric: {
+                        isItalic: true,
+                        lyric: [
+                            `he sees`,
+                            {
+                                anchor: `Lowkey and Freyed!`,
+                                properNoun: true,
+                                todo: true,
+                                card: {
+                                    description: [
+                                        `As my better self observes me in my "low-key and fried" state, I see a constellation of my brother as`,
+                                        {
+                                            anchor: `"Loki,"`,
+                                            wiki: `Loki`
+                                        },
+                                        `the Norse trickster god, next to one of my sister as`,
+                                        {
+                                            anchor: `"Freyja,"`,
+                                            wiki: `Freyja`
+                                        },
+                                        `the Norse goddess on equal footing with Odin.`
+                                    ],
+                                    dotKeys: {
+                                        [PUN]: true
+                                    }
+                                }
+                            }
+                        ]
+                    }
                 }
             ]
         },

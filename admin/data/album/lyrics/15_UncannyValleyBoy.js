@@ -407,15 +407,6 @@ export default {
                         lyric: `the houses you've betrayed.`
                     }
                 ],
-                subVerse: [
-                    {
-                        time: 70,
-                        lyric: {
-                            isItalic: true,
-                            lyric: `to seal out their floods.`
-                        }
-                    }
-                ],
                 formType: CHORUS,
                 subVerseType: RHYME,
                 sideCardType: BACKING
@@ -445,6 +436,15 @@ export default {
                         }
                     ]
                 }
+            ],
+            subVerse: [
+                {
+                    time: 70,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `to seal out their floods.`
+                    }
+                }
             ]
         },
         {
@@ -471,15 +471,6 @@ export default {
                     },
                     {
                         lyric: `over suburbia…`
-                    }
-                ],
-                subVerse: [
-                    {
-                        time: 82,
-                        lyric: {
-                            isItalic: true,
-                            lyric: `and healed round your grudge…`
-                        }
                     }
                 ],
                 formType: CHORUS,
@@ -550,6 +541,15 @@ export default {
                             }
                         }
                     ]
+                }
+            ],
+            subVerse: [
+                {
+                    time: 82,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `and healed round your grudge…`
+                    }
                 }
             ]
         },
@@ -890,29 +890,6 @@ export default {
         },
         {
             unitMap: {
-                subVerse: [
-                    {
-                        time: 150,
-                        lyric: {
-                            isItalic: true,
-                            lyric: [
-                                `Your`,
-                                {
-                                    anchor: `dulling gold`,
-                                    todo: true,
-                                    card: {
-                                        description: `My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or as people, and most were arguably worse. But rather than work to recover my once treasured bond with Sita, which had lost its lustre only by my neglect, I happily exchanged it for the shiny "bronze" trophies offered by other women.`,
-                                        dotKeys: {
-                                            [OBSERVATION]: true,
-                                            [PUN]: true
-                                        }
-                                    }
-                                },
-                                `now gone…`
-                            ]
-                        }
-                    }
-                ],
                 formType: PRECHORUS,
                 subVerseType: RESPONSE
             },
@@ -973,36 +950,33 @@ export default {
                         }
                     ]
                 }
+            ],
+            subVerse: [
+                {
+                    time: 150,
+                    lyric: {
+                        isItalic: true,
+                        lyric: [
+                            `Your`,
+                            {
+                                anchor: `dulling gold`,
+                                todo: true,
+                                card: {
+                                    description: `My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or as people, and most were arguably worse. But rather than work to recover my once treasured bond with Sita, which had lost its lustre only by my neglect, I happily exchanged it for the shiny "bronze" trophies offered by other women.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true,
+                                        [PUN]: true
+                                    }
+                                }
+                            },
+                            `now gone…`
+                        ]
+                    }
+                }
             ]
         },
         {
             unitMap: {
-                subVerse: [
-                    {
-                        time: 157,
-                        lyric: {
-                            isItalic: true,
-                            lyric: [
-                                `…traded in for the`,
-                                {
-                                    anchor: `trophy blondes.`,
-                                    todo: true,
-                                    cards: [
-                                        {
-                                            description: `To add insult to injury, the women I left Sita for were mostly white, which bothered her greatly. In my defence, it wasn't at all by design, but seeing her loss as my gain, I let her believe the worst.`,
-                                            dotKeys: {
-                                                [BACKSTORY]: true
-                                            }
-                                        },
-                                        {
-                                            wormhole: `trophy_bronze`
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    }
-                ],
                 formType: PRECHORUS,
                 subVerseType: RESPONSE,
                 subsequent: true
@@ -1043,6 +1017,32 @@ export default {
                             }
                         }
                     ]
+                }
+            ],
+            subVerse: [
+                {
+                    time: 157,
+                    lyric: {
+                        isItalic: true,
+                        lyric: [
+                            `…traded in for the`,
+                            {
+                                anchor: `trophy blondes.`,
+                                todo: true,
+                                cards: [
+                                    {
+                                        description: `To add insult to injury, the women I left Sita for were mostly white, which bothered her greatly. In my defence, it wasn't at all by design, but seeing her loss as my gain, I let her believe the worst.`,
+                                        dotKeys: {
+                                            [BACKSTORY]: true
+                                        }
+                                    },
+                                    {
+                                        wormhole: `trophy_bronze`
+                                    }
+                                ]
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -1085,15 +1085,6 @@ export default {
                                 }
                             }
                         ]
-                    }
-                ],
-                subVerse: [
-                    {
-                        time: 168,
-                        lyric: {
-                            isItalic: true,
-                            lyric: `to find a cleared path`
-                        }
                     }
                 ],
                 formType: CHORUS,
@@ -1139,6 +1130,15 @@ export default {
                         `from your spine`
                     ]
                 }
+            ],
+            subVerse: [
+                {
+                    time: 168,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `to find a cleared path`
+                    }
+                }
             ]
         },
         {
@@ -1166,15 +1166,6 @@ export default {
                                     }
                                 }
                             ]
-                        }
-                    }
-                ],
-                subVerse: [
-                    {
-                        time: 181,
-                        lyric: {
-                            isItalic: true,
-                            lyric: `to five-year plans.`
                         }
                     }
                 ],
@@ -1215,6 +1206,15 @@ export default {
                             }
                         }
                     ]
+                }
+            ],
+            subVerse: [
+                {
+                    time: 181,
+                    lyric: {
+                        isItalic: true,
+                        lyric: `to five-year plans.`
+                    }
                 }
             ]
         },
