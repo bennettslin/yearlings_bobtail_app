@@ -1,6 +1,5 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React, { useEffect, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { resetAnnotationQueue } from '../../../redux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
 import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
@@ -14,74 +13,30 @@ import {
 import { mapIsEarShown } from '../../../redux/ear/selector'
 import {
     mapSelectedSongIndex,
-    mapSelectedVerseIndex,
     mapSelectedAnnotationIndex,
     mapEarColumnIndex
 } from '../../../redux/selected/selector'
-import { mapIsDotsSlideShown } from '../../../redux/toggle/selector'
 
-const mapStateToProps = state => {
+const AnnotationListener = () => {
     const
-        queuedAnnotationIndex = mapQueuedAnnotationIndex(state),
-        queuedAnnotationFromCarousel = mapQueuedAnnotationFromCarousel(state),
-        queuedAnnotationFromLyricVerse = mapQueuedAnnotationFromLyricVerse(state),
-        isEarShown = mapIsEarShown(state),
-        selectedSongIndex = mapSelectedSongIndex(state),
-        selectedVerseIndex = mapSelectedVerseIndex(state),
-        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
-        earColumnIndex = mapEarColumnIndex(state),
-        isDotsSlideShown = mapIsDotsSlideShown(state)
+        dispatch = useDispatch(),
+        dispatchAnnotation = useRef(),
+        activateVerse = useRef(),
+        queuedAnnotationIndex = useSelector(mapQueuedAnnotationIndex),
+        queuedAnnotationFromCarousel = useSelector(mapQueuedAnnotationFromCarousel),
+        queuedAnnotationFromLyricVerse = useSelector(mapQueuedAnnotationFromLyricVerse),
+        isEarShown = useSelector(mapIsEarShown),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        earColumnIndex = useSelector(mapEarColumnIndex)
 
-    return {
-        isDotsSlideShown,
-        isEarShown,
-        earColumnIndex,
-        selectedSongIndex,
-        selectedVerseIndex,
-        selectedAnnotationIndex,
-        queuedAnnotationIndex,
-        queuedAnnotationFromCarousel,
-        queuedAnnotationFromLyricVerse
-    }
-}
+    useEffect(() => {
+        if (queuedAnnotationIndex) {
 
-class AnnotationListener extends PureComponent {
-    static propTypes = {
-        // Through Redux.
-        isDotsSlideShown: PropTypes.bool.isRequired,
-        isEarShown: PropTypes.bool.isRequired,
-        earColumnIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        queuedAnnotationIndex: PropTypes.number.isRequired,
-        queuedAnnotationFromCarousel: PropTypes.bool.isRequired,
-        queuedAnnotationFromLyricVerse: PropTypes.bool.isRequired,
-        resetAnnotationQueue: PropTypes.func.isRequired
-    }
-
-    componentDidUpdate(prevProps) {
-        this._deselectAnnotationForEar(prevProps)
-        this._checkAnnotation(prevProps)
-    }
-
-    _checkAnnotation(prevProps) {
-        const {
-                queuedAnnotationIndex
-            } = this.props,
-            { queuedAnnotationIndex: prevAnnotationIndex } = prevProps
-
-        if (queuedAnnotationIndex && !prevAnnotationIndex) {
-
-            const {
-                    queuedAnnotationFromCarousel,
-                    queuedAnnotationFromLyricVerse
-                } = this.props,
-
-                canDispatchAnnotation = this.dispatchAnnotationIndex({
-                    annotationIndex: queuedAnnotationIndex,
-                    fromCarousel: queuedAnnotationFromCarousel
-                })
+            const canDispatchAnnotation = dispatchAnnotation.current.index({
+                annotationIndex: queuedAnnotationIndex,
+                fromCarousel: queuedAnnotationFromCarousel
+            })
 
             /**
              * If annotation in lyric verse was clicked, and annotation is not
@@ -89,42 +44,22 @@ class AnnotationListener extends PureComponent {
              * interactable.
              */
             if (queuedAnnotationFromLyricVerse && !canDispatchAnnotation) {
-                const
-                    { selectedSongIndex } = this.props,
-                    annotationVerseIndex = getVerseIndexForAnnotation(
-                        selectedSongIndex,
-                        queuedAnnotationIndex
-                    )
+                const annotationVerseIndex = getVerseIndexForAnnotation(
+                    selectedSongIndex,
+                    queuedAnnotationIndex
+                )
 
                 if (Number.isFinite(annotationVerseIndex)) {
-                    this.activateVerseIndex(annotationVerseIndex)
+                    activateVerse.current.index(annotationVerseIndex)
                 }
             }
 
-            this.props.resetAnnotationQueue()
+            dispatch(resetAnnotationQueue())
         }
-    }
+    }, [queuedAnnotationIndex])
 
-    _deselectAnnotationForEar(prevProps) {
-        const {
-                selectedAnnotationIndex,
-                earColumnIndex,
-                isEarShown
-            } = this.props,
-            {
-                earColumnIndex: prevEarColumnIndex,
-                isEarShown: wasEarShown
-            } = prevProps
-
-        if (
-            selectedAnnotationIndex &&
-            (
-                earColumnIndex !== prevEarColumnIndex ||
-                (isEarShown && !wasEarShown)
-            )
-        ) {
-            const { selectedSongIndex } = this.props
-
+    useEffect(() => {
+        if (selectedAnnotationIndex) {
             const showAnnotationForColumn = getShowAnnotationForColumn({
                 selectedSongIndex,
                 selectedAnnotationIndex,
@@ -133,34 +68,19 @@ class AnnotationListener extends PureComponent {
             })
 
             if (!showAnnotationForColumn) {
-                this.dispatchAnnotationIndex()
+                dispatchAnnotation.current.index()
             }
         }
-    }
 
-    getDispatchAnnotation = dispatch => {
-        if (dispatch) {
-            this.dispatchAnnotationIndex = dispatch.index
-        }
-    }
+    // TODO: Make this a selector. Or better yet, have ear column index and is ear shown in the same store, and put this logic in the selected reducer.
+    }, [earColumnIndex, isEarShown])
 
-    getActivateVerse = dispatch => {
-        if (dispatch) {
-            this.activateVerseIndex = dispatch.index
-        }
-    }
-
-    render() {
-        return (
-            <>
-                <AnnotationDispatcher {...{ ref: this.getDispatchAnnotation }} />
-                <ActivatedVerseDispatcher {...{ ref: this.getActivateVerse }} />
-            </>
-        )
-    }
+    return (
+        <>
+            <AnnotationDispatcher {...{ ref: dispatchAnnotation }} />
+            <ActivatedVerseDispatcher {...{ ref: activateVerse }} />
+        </>
+    )
 }
 
-export default connect(
-    mapStateToProps,
-    { resetAnnotationQueue }
-)(AnnotationListener)
+export default AnnotationListener

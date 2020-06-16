@@ -1,3 +1,6 @@
+# Bug
+* Dot regression.
+
 # Tuesday
 * Refigure overview and tips logic
 
