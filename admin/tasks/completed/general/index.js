@@ -4813,5 +4813,10 @@ export default [
     {
         taskName: `Move subVerse and sideCards to unit level.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix timeout closure issue.`,
+        reference: `https://github.com/facebook/react/issues/14010`,
+        workedHours: 1
     }
 ]

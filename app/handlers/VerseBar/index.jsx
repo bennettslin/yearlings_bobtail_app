@@ -45,6 +45,10 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         isDesktopWidth = useSelector(mapIsDesktopWidth),
         [verseBarsTimeoutId, setVerseBarsTimeoutId] = useState('')
 
+    /**
+     * This is technically within a timeout closure, but these values shouldn't
+     * change from the time the timeout was set.
+     */
     const _dispatchVerseBars = ({ sliderVerseIndex = -1 } = {}) => {
         const verseElement = getScrollVerseChild(getCursorIndex(
             sliderVerseIndex,
@@ -55,7 +59,6 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         // Check for verse element in case we are loading from a logue.
         if (verseElement) {
 
-            // TODO: Make this a selector. Maybe by making a bit number?
             const {
                 isVerseBarAbove,
                 isVerseBarBelow

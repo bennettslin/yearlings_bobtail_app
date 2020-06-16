@@ -1,21 +1,19 @@
 # Monday
 * Bugs!
-* Also move unitDot to unit level.
+* Font is not smaller in unit with side card. Fix along with general italic issue.
+* PT Sans Italic is small? e.g. The Man in the High Castle.
 
 # Tuesday
 * Refigure overview and tips logic
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
-* Font is not smaller in unit with side card. Fix along with general italic issue.
 
 # Post-Gatsby bugs
 * From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
-* Slider touch doesn't become moving after a while if stationary. (It's because of timeout in slider touch dispatcher.)
 
 # Minor issues, to be investigated while production is on master before Gatsby.
-* PT Sans Italic is small? e.g. The Man in the High Castle.
 * tips hand in garryowen for score
 * Do I really want scene activation to work as it does, where you need to go next, then previous, before hitting selected verse that is not the start of scene?
 

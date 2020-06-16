@@ -24,14 +24,22 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         dispatchVerse = useRef(),
+        timeoutRef = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         sliderLeft = useSelector(mapSliderLeft),
         sliderWidth = useSelector(mapSliderWidth),
+        sliderVerseIndex = useSelector(mapSliderVerseIndex),
         isSliderMoving = useSelector(mapIsSliderMoving),
-        isSliderTouched = useSelector(mapIsSliderTouched),
-        sliderVerseIndex = useSelector(mapSliderVerseIndex)
+        isSliderTouched = useSelector(mapIsSliderTouched)
+
+    timeoutRef.current = isSliderTouched && !isSliderMoving
+    const _handleTouchedNotMoving = () => {
+        if (timeoutRef.current) {
+            dispatch(updateSliderStore({ isSliderMoving: true }))
+        }
+    }
 
     const _touchSliderBegin = (
         {
@@ -72,11 +80,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
          * If the move doesn't happen for a while, we recognise that it is
          * moving anyway for styling purposes.
          */
-        setTimeout(() => {
-            if (isSliderTouched && !isSliderMoving) {
-                dispatch(updateSliderStore({ isSliderMoving: true }))
-            }
-        }, 125)
+        setTimeout(_handleTouchedNotMoving, 125)
     }
 
     // TODO: These can easily just be a single method.

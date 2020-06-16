@@ -15,23 +15,17 @@ const ResizeListener = ({ getRootContainerElement }) => {
     const
         dispatch = useDispatch(),
         beginEnterTransition = useRef(),
+        timeoutRef = useRef(),
         windowWidth = useSelector(mapWindowWidth),
         windowHeight = useSelector(mapWindowHeight),
         [windowResizeTimeoutId, setWindowResizeTimeoutId] = useState('')
 
-    const _beginExitTransition = () => {
-        dispatch(resetTheatreEntrance())
-
-        // Clear previous timeout.
-        clearTimeout(windowResizeTimeoutId)
-
-        // Wait for window resize to finish.
-        setWindowResizeTimeoutId(
-            setTimeout(beginEnterTransition.current, 250)
-        )
+    timeoutRef.current = {
+        windowWidth,
+        windowHeight,
+        windowResizeTimeoutId
     }
-
-    const _beginExitTransitionIfGenuineResize = () => {
+    const _beginExitTransition = () => {
         /**
          * This check is needed because iOS will arbitrarily set window height
          * based on whether browser header and footer are shown. So we'll use
@@ -45,20 +39,27 @@ const ResizeListener = ({ getRootContainerElement }) => {
             } = getWindowDimensions(getRootContainerElement())
 
         if (
-            nextHeight !== windowHeight ||
-            nextWidth !== windowWidth
+            nextHeight !== timeoutRef.current.windowHeight ||
+            nextWidth !== timeoutRef.current.windowWidth
         ) {
-            _beginExitTransition()
+            dispatch(resetTheatreEntrance())
+
+            // Clear previous timeout.
+            clearTimeout(timeoutRef.current.windowResizeTimeoutId)
+
+            // Wait for window resize to finish.
+            setWindowResizeTimeoutId(
+                setTimeout(beginEnterTransition.current, 250)
+            )
         }
     }
 
     useEffect(() => {
-        getWindow().onresize = _beginExitTransitionIfGenuineResize
-
+        getWindow().onresize = _beginExitTransition
         return () => {
             getWindow().onresize = null
         }
-    }, [windowResizeTimeoutId, windowHeight, windowWidth])
+    }, [])
 
     return (
         <ResizeDispatcher
