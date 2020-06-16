@@ -1,8 +1,3 @@
-# Monday
-* Bugs!
-* Font is not smaller in unit with side card. Fix along with general italic issue.
-* PT Sans Italic is small? e.g. The Man in the High Castle.
-
 # Tuesday
 * Refigure overview and tips logic
 
@@ -10,7 +5,6 @@
 * Verse scroll key doesn't always work.
 
 # Post-Gatsby bugs
-* From clean slate, selecting annotation by click, then navigating by key, wiki wormhole takes two keys to become accessed. Not sure if pre or post Gatsby.
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 
 # Minor issues, to be investigated while production is on master before Gatsby.

@@ -16,6 +16,7 @@ import {
     getIsSideCardOnBottomForUnit,
     getSideCardForUnit
 } from '../../api/album/units'
+import { mapIsEarShown } from '../../redux/ear/selector'
 import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import './style'
 
@@ -25,6 +26,7 @@ const Unit = forwardRef(({
 
 }, ref) => {
     const
+        isEarShown = useSelector(mapIsEarShown),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         unitVerseIndices = getVerseIndicesForUnit(
             lyricSongIndex, unitIndex
@@ -42,7 +44,7 @@ const Unit = forwardRef(({
                 'Unit',
                 `unit__${unitIndex}`,
 
-                hasSideCards ?
+                hasSideCards && !isEarShown ?
                     'fontSize__lyricMultipleColumns' :
                     'fontSize__verse',
 

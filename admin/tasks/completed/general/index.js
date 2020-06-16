@@ -4818,5 +4818,9 @@ export default [
         taskName: `Fix timeout closure issue.`,
         reference: `https://github.com/facebook/react/issues/14010`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix font issue.`,
+        workedHours: 1
     }
 ]
