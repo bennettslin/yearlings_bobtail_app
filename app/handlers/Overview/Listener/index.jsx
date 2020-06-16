@@ -1,6 +1,5 @@
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
 import {
     SHOWN,
@@ -13,86 +12,38 @@ import {
     mapIsSelectedLogue
 } from '../../../redux/selected/selector'
 
-const mapStateToProps = state => {
+const OverviewListener = () => {
     const
-        selectedOverviewOption = mapSelectedOverviewOption(state),
-        selectedSongIndex = mapSelectedSongIndex(state),
-        selectedAnnotationIndex = mapSelectedAnnotationIndex(state),
-        isSelectedLogue = mapIsSelectedLogue(state)
+        dispatch = useDispatch(),
+        selectedOverviewOption = useSelector(mapSelectedOverviewOption),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
+        isSelectedLogue = useSelector(mapIsSelectedLogue)
 
-    return {
-        isSelectedLogue,
-        selectedSongIndex,
-        selectedAnnotationIndex,
-        selectedOverviewOption
-    }
-}
-
-class OverviewListener extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isSelectedLogue: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        selectedOverviewOption: PropTypes.string.isRequired,
-        updateOptionStore: PropTypes.func.isRequired
-    }
-
-    componentDidMount() {
-        this._handleOverviewUpdate()
-    }
-
-    componentDidUpdate(prevProps) {
-        this._handleSongChange(prevProps)
-    }
-
-    _handleSongChange(prevProps) {
-        const
-            { selectedSongIndex } = this.props,
-            { selectedSongIndex: prevSongIndex } = prevProps
-
-        if (selectedSongIndex !== prevSongIndex) {
-            this._handleOverviewUpdate()
-        }
-    }
-
-    _handleOverviewUpdate() {
-        const { selectedAnnotationIndex } = this.props
-
+    useEffect(() => {
         // There cannot be a selected annotation.
         if (!selectedAnnotationIndex) {
-            const {
-                isSelectedLogue,
-                selectedOverviewOption
-            } = this.props
-
             if (isSelectedLogue) {
-                this.props.updateOptionStore({
+                dispatch(updateOptionStore({
                     // If shown, hide song overview when now in logue.
                     ...selectedOverviewOption === SHOWN && {
                         selectedOverviewOption: HIDDEN
                     }
-                })
+                }))
 
             } else {
-                this.props.updateOptionStore({
+                dispatch(updateOptionStore({
                     // If just hidden, show song overview when now in new song.
                     ...selectedOverviewOption === HIDDEN && {
                         selectedOverviewOption: SHOWN,
                         isSongShownOverview: true
                     }
-                })
+                }))
             }
         }
-    }
+    }, [selectedSongIndex])
 
-    render() {
-        return null
-    }
+    return null
 }
 
-export default connect(
-    mapStateToProps,
-    { updateOptionStore }
-)(OverviewListener)
+export default OverviewListener

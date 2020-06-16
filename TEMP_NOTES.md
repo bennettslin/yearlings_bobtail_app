@@ -1,5 +1,6 @@
 # Tuesday
 * Refigure overview and tips logic
+* Add back admin routes
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
@@ -28,7 +29,6 @@
 * Pages and routing
     * 404 page
 * URL replacement
-* Add back admin routes
 
 * Favicon
 * Splash page
