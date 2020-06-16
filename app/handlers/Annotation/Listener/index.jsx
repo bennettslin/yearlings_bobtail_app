@@ -31,6 +31,7 @@ const AnnotationListener = () => {
         earColumnIndex = useSelector(mapEarColumnIndex)
 
     useEffect(() => {
+        // Dispatch the queued annotation index if possible.
         if (queuedAnnotationIndex) {
 
             const canDispatchAnnotation = dispatchAnnotation.current.index({
@@ -59,6 +60,7 @@ const AnnotationListener = () => {
     }, [queuedAnnotationIndex])
 
     useEffect(() => {
+        // Selected annotation may need to be deselected.
         if (selectedAnnotationIndex) {
             const showAnnotationForColumn = getShowAnnotationForColumn({
                 selectedSongIndex,
