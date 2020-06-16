@@ -1,5 +1,10 @@
 # Tuesday
 * Refigure overview and tips logic
+    * Only three ways to toggle each: click, letter key, and escape
+    * If both options are shown, only tips is visible
+    * While tips is visible and overview is already shown, overview can be forced by hiding tip.
+    * Upon song change, hidden options are shown again.
+    * Logue overview has its own logic.
 * Add back admin routes
 
 # Pre-Gatsby bugs

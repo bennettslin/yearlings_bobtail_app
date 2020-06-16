@@ -18,6 +18,24 @@ export const mapIsTipsShown = createSelector(
     selectedTipsOption => getIsShown(selectedTipsOption)
 )
 
+export const mapIsTipsShowable = createSelector(
+    mapLyricSongIndex,
+    mapIsPhoneWidth,
+    mapIsTabletWidth,
+    mapIsDesktopWidth,
+    (
+        lyricSongIndex,
+        isPhoneWidth,
+        isTabletWidth,
+        isDesktopWidth
+    ) => getShowTipForDevice({
+        songIndex: lyricSongIndex,
+        isPhoneWidth,
+        isTabletWidth,
+        isDesktopWidth
+    })
+)
+
 export const mapIsTipsPopupShown = createSelector(
     mapCanLyricCarouselEnter,
     mapLyricSongIndex,
@@ -39,6 +57,7 @@ export const mapIsTipsPopupShown = createSelector(
         !isLyricLogue &&
         isTipsShown &&
 
+        // TODO: This is just isTipsShowable.
         // Ensure this song's tip can be shown for this viewport width.
         getShowTipForDevice({
             songIndex: lyricSongIndex,
@@ -47,22 +66,4 @@ export const mapIsTipsPopupShown = createSelector(
             isDesktopWidth
         })
     )
-)
-
-export const mapIsTipsShowable = createSelector(
-    mapLyricSongIndex,
-    mapIsPhoneWidth,
-    mapIsTabletWidth,
-    mapIsDesktopWidth,
-    (
-        lyricSongIndex,
-        isPhoneWidth,
-        isTabletWidth,
-        isDesktopWidth
-    ) => getShowTipForDevice({
-        songIndex: lyricSongIndex,
-        isPhoneWidth,
-        isTabletWidth,
-        isDesktopWidth
-    })
 )
