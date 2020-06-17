@@ -1,5 +1,12 @@
 # Wednesday
 * Final review of dispatchers and listeners to remove.
+    * Audio option dispatcher can just go in reducer.
+    * Song listener can just go in dispatcher.
+    * When is registering key actually important?
+    * Make resize handler just one file.
+    * Wiki listener can just go in dispatcher.
+    * Overview listener can be made into a dispatcher, go into song dispatcher.
+    * Always dismiss nav when dispatching song?
 * Begin thinking about tearing out canEnter.
 
 # Pre-Gatsby bugs
