@@ -4,33 +4,41 @@ import AnnotationAccessDispatcher from '../Dispatcher'
 import {
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex,
-    mapEarColumnIndex
+    mapEarColumnIndex,
+    mapIsSelectedLogue
 } from '../../../redux/selected/selector'
 
 const AnnotationAccessListener = () => {
     const
         dispatchAccessedAnnotation = useRef(),
+        isSelectedLogue = useSelector(mapIsSelectedLogue),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         earColumnIndex = useSelector(mapEarColumnIndex)
 
     useEffect(() => {
         // Access the default annotation.
-        dispatchAccessedAnnotation.current()
+        if (!isSelectedLogue) {
+            dispatchAccessedAnnotation.current()
+        }
     }, [earColumnIndex])
 
     useEffect(() => {
         // Access the selected annotation.
-        dispatchAccessedAnnotation.current({
-            annotationIndex: selectedAnnotationIndex
-        })
+        if (!isSelectedLogue) {
+            dispatchAccessedAnnotation.current({
+                annotationIndex: selectedAnnotationIndex
+            })
+        }
     }, [selectedAnnotationIndex])
 
     useEffect(() => {
         // Access annotation of selected verse.
-        dispatchAccessedAnnotation.current({
-            verseIndex: selectedVerseIndex
-        })
+        if (!isSelectedLogue) {
+            dispatchAccessedAnnotation.current({
+                verseIndex: selectedVerseIndex
+            })
+        }
     }, [selectedVerseIndex])
 
     return (

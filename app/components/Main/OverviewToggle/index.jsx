@@ -25,7 +25,6 @@ const OverviewToggle = ({
         selectedOverviewOption = useSelector(mapSelectedOverviewOption)
 
     const handleButtonClick = () => {
-        // The isToggled argument is ignored by logue overview.
         dispatchOverview.current({ isToggled: true })
     }
 
