@@ -1,7 +1,10 @@
 // Reducers for dots slide activated texts.
 import { hasKey } from '../../helpers/action'
-import { getDotsBitForToggledDotIndex } from '../../helpers/dot'
-import { DOTS_SLIDE_STORE } from '../../constants/store'
+import { getDotsBitForToggledDotIndex, getDotKeysFromBit } from '../../helpers/dot'
+import {
+    DOTS_SLIDE_STORE,
+    TOGGLE_STORE
+} from '../../constants/store'
 import { DOTS_SLIDE_DEFAULTS } from './default'
 
 export default (
@@ -10,18 +13,34 @@ export default (
 ) => {
     switch (type) {
         case DOTS_SLIDE_STORE: {
-            const
-                { dotIndex } = payload,
-                { dotsSlideBit } = state
-            return {
-                ...state,
-                ...hasKey(dotIndex) ? {
-                    dotsSlideBit: getDotsBitForToggledDotIndex({
+            const { dotIndex } = payload
+
+            if (hasKey(dotIndex)) {
+                const
+                    { dotsSlideBit: prevDotsBit } = state,
+                    dotsSlideBit = getDotsBitForToggledDotIndex({
                         dotIndex,
-                        dotsBit: dotsSlideBit
+                        dotsBit: prevDotsBit
                     })
-                } : payload
+
+                return {
+                    ...state,
+                    dotsSlideBit,
+                    ...getDotKeysFromBit(dotsSlideBit)
+                }
+            } else {
+                return {
+                    ...state,
+                    ...payload
+                }
             }
+        }
+        case TOGGLE_STORE: {
+            const { isDotsSlideShown } = payload
+            return hasKey(isDotsSlideShown) && !isDotsSlideShown ? {
+                ...state,
+                ...DOTS_SLIDE_DEFAULTS
+            } : state
         }
         default:
             return state

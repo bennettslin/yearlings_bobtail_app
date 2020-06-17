@@ -12,7 +12,7 @@ import {
 import { updateWikiIndices } from '../../../redux/session/action'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOption'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
-import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
+import DotsSlideDispatcher from '../../../dispatchers/DotsSlide'
 import EarColumnDispatcher from '../../../dispatchers/EarColumn'
 import ActivatedSceneDispatcher from '../../../dispatchers/Activated/Scene'
 import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'

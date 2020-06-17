@@ -1,9 +1,9 @@
 // Child that knows rules to toggle dots slide. Not needed if just turning off.
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateToggleStore } from '../../../redux/toggle/action'
-import { mapIsSelectedLogue } from '../../../redux/selected/selector'
-import { mapIsDotsSlideShown } from '../../../redux/toggle/selector'
+import { updateToggleStore } from '../../redux/toggle/action'
+import { mapIsSelectedLogue } from '../../redux/selected/selector'
+import { mapIsDotsSlideShown } from '../../redux/toggle/selector'
 
 const DotsSlideDispatcher = forwardRef((props, ref) => {
     const

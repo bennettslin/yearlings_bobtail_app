@@ -14,15 +14,15 @@ export default (
 ) => {
     switch (type) {
         case DOTS_STORE: {
-            const
-                { dotIndex } = payload,
-                { selectedDotsBit: prevDotsBit } = state
+            const { dotIndex } = payload
 
             if (hasKey(dotIndex)) {
-                const selectedDotsBit = getDotsBitForToggledDotIndex({
-                    dotIndex,
-                    dotsBit: prevDotsBit
-                })
+                const
+                    { selectedDotsBit: prevDotsBit } = state,
+                    selectedDotsBit = getDotsBitForToggledDotIndex({
+                        dotIndex,
+                        dotsBit: prevDotsBit
+                    })
                 setInStorage(SELECTED_DOTS_BIT, selectedDotsBit)
 
                 return {

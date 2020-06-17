@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
+import DotsSlideDispatcher from '../../../dispatchers/DotsSlide'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
 import { DOTS_SLIDE_TOGGLE_KEY } from '../../../constants/access'

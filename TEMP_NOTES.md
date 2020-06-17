@@ -18,7 +18,6 @@
 * Focus container can't focus lyric right away because ref doesn't exist. Maybe this will be fine once lyric mounts first?
 
 # Easy reduction tasks
-* Can get rid of dots slide listener.
 * Some todos to make a selector.
 * Have verse store for queued verse select, just like annotation store.
 * Make isActivated and isSelected selectors.

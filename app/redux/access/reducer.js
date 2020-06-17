@@ -2,13 +2,15 @@
 import { hasKey } from '../../helpers/action'
 import {
     ACCESS_STORE,
+    DOTS_STORE,
     SLIDER_STORE,
     VIEWPORT_STORE,
-    DOTS_STORE
+    TOGGLE_STORE
 } from '../../constants/store'
 import {
     ACCESS_DEFAULTS,
-    ACCESS_NAV_DEFAULTS
+    ACCESS_NAV_DEFAULTS,
+    ACCESS_DOT_DEFAULTS
 } from './default'
 
 export default (
@@ -34,6 +36,15 @@ export default (
             return hasKey(isSliderTouched) && isSliderTouched ? {
                 ...state,
                 isAccessOn: false
+            } : state
+        }
+        case TOGGLE_STORE: {
+            const { isDotsSlideShown } = payload
+            return hasKey(isDotsSlideShown) ? {
+                ...state,
+                ...isDotsSlideShown ? {
+                    accessedDotIndex: 0
+                } : ACCESS_DOT_DEFAULTS
             } : state
         }
         case VIEWPORT_STORE: {
