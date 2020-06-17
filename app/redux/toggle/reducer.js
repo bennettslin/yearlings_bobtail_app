@@ -14,11 +14,16 @@ export default (
     { type, payload }
 ) => {
     switch (type) {
-        case TOGGLE_STORE:
+        case TOGGLE_STORE: {
+            const { toggleIsAboutShown } = payload
             return {
                 ...state,
-                ...payload
+                ...payload,
+                ...hasKey(toggleIsAboutShown) && {
+                    isAboutShown: !state.isAboutShown
+                }
             }
+        }
         case SELECTED_STORE: {
             const {
                 isSelectedLogue,

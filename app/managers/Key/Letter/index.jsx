@@ -4,9 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
-import { updateToggleStore } from '../../../redux/toggle/action'
+import {
+    updateToggleStore,
+    toggleIsAboutShown,
+    updateIsAboutShown
+} from '../../../redux/toggle/action'
 import { updateWikiIndices } from '../../../redux/session/action'
-import AboutDispatcher from '../../../dispatchers/About'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOption'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
@@ -55,7 +58,6 @@ import { mapIsWikiShown } from '../../../redux/wiki/selector'
 const LetterManager = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        dispatchAbout = useRef(),
         dispatchAudioOption = useRef(),
         dispatchCarouselNav = useRef(),
         dispatchDotsSlide = useRef(),
@@ -136,7 +138,8 @@ const LetterManager = forwardRef((props, ref) => {
                 keyWasRegistered = dispatchTips.current()
                 break
             case ABOUT_TOGGLE_KEY:
-                keyWasRegistered = dispatchAbout.current()
+                dispatch(toggleIsAboutShown())
+                keyWasRegistered = true
                 break
             default:
                 keyWasRegistered = false
@@ -162,7 +165,7 @@ const LetterManager = forwardRef((props, ref) => {
 
         // Close about popup.
         } else if (isAboutShown) {
-            dispatchAbout.current(false)
+            dispatch(updateIsAboutShown())
 
         // Close wiki popup.
         } else if (isWikiShown) {
@@ -205,7 +208,6 @@ const LetterManager = forwardRef((props, ref) => {
     }))
     return (
         <>
-            <AboutDispatcher {...{ ref: dispatchAbout }} />
             <AudioOptionDispatcher {...{ ref: dispatchAudioOption }} />
             <CarouselNavDispatcher {...{ ref: dispatchCarouselNav }} />
             <DotsSlideDispatcher {...{ ref: dispatchDotsSlide }} />

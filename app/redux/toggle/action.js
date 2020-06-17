@@ -22,6 +22,11 @@ export const updateToggleStore = payload => {
     })
 }
 
+export const toggleIsAboutShown = () => ({
+    type: TOGGLE_STORE,
+    payload: { toggleIsAboutShown: true }
+})
+
 export const updateIsAboutShown = (isAboutShown = false) => ({
     type: TOGGLE_STORE,
     payload: { isAboutShown }

@@ -1,20 +1,19 @@
-// Toggle button to show and hide title section.
-
-import React, { useRef } from 'react'
+import React from 'react'
 import cx from 'classnames'
-import AboutDispatcher from '../../../dispatchers/About'
+import { useDispatch } from 'react-redux'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
+import { toggleIsAboutShown } from '../../../redux/toggle/action'
 import { ABOUT_TOGGLE_KEY } from '../../../constants/access'
 import { ABOUT_BUTTON_KEY } from '../../../constants/buttons'
 import { ABOUT } from '../../../constants/tips'
 import './style'
 
 const AboutToggle = () => {
-    const dispatchAbout = useRef()
+    const dispatch = useDispatch()
 
     const handleButtonClick = () => {
-        dispatchAbout.current()
+        dispatch(toggleIsAboutShown())
     }
 
     return (
@@ -30,7 +29,6 @@ const AboutToggle = () => {
                 }}
             />
             <TipsHand {...{ tipType: ABOUT }} />
-            <AboutDispatcher {...{ ref: dispatchAbout }} />
         </div>
     )
 }
