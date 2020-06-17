@@ -4822,5 +4822,9 @@ export default [
     {
         taskName: `Fix font issue.`,
         workedHours: 1
+    },
+    {
+        taskName: `Refigure overview and tips logic.`,
+        workedHours: 4
     }
 ]

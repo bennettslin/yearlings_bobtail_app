@@ -3,7 +3,7 @@ import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import OverviewDispatcher from '../../../handlers/Overview/Dispatcher'
+import OverviewDispatcher from '../../../dispatchers/Overview'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
 import { OVERVIEW_TOGGLE_KEY } from '../../../constants/access'
@@ -14,18 +14,14 @@ import { mapIsLyricLogue } from '../../../redux/lyric/selector'
 import { mapSelectedOverviewOption } from '../../../redux/option/selector'
 import './style'
 
-const OverviewToggle = ({
-    isToggleInOverview,
-    className
-
-}) => {
+const OverviewToggle = ({ className }) => {
     const
         dispatchOverview = useRef(),
         isLyricLogue = useSelector(mapIsLyricLogue),
         selectedOverviewOption = useSelector(mapSelectedOverviewOption)
 
     const handleButtonClick = () => {
-        dispatchOverview.current({ isToggled: true })
+        dispatchOverview.current({ isFromToggle: true })
     }
 
     return (
@@ -40,8 +36,7 @@ const OverviewToggle = ({
                     accessKey: OVERVIEW_TOGGLE_KEY,
                     buttonIdentifier: getOverviewToggleIdentifier({
                         isLyricLogue,
-                        selectedOverviewOption,
-                        isToggleInOverview
+                        selectedOverviewOption
                     }),
                     handleButtonClick
                 }}

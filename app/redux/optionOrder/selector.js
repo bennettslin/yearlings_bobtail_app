@@ -1,7 +1,8 @@
+// This must be a separate file to prevent circular imports.
 import { createSelector } from 'reselect'
 import {
-    getToggleShowsOverviewImmediately,
-    getToggleShowsTipsImmediately
+    getIsOverviewShownNext,
+    getIsTipsShownNext
 } from '../../helpers/options'
 import { mapIsActivated } from '../activated/selector'
 import { mapLyricAnnotationIndex } from '../lyric/selector'
@@ -13,7 +14,7 @@ import {
     mapIsLyricExpanded
 } from '../toggle/selector'
 
-export const mapToggleShowsOverviewImmediately = createSelector(
+export const mapIsOverviewShownNext = createSelector(
     mapIsTipsShown,
     mapLyricAnnotationIndex,
     mapIsDotsSlideShown,
@@ -27,7 +28,7 @@ export const mapToggleShowsOverviewImmediately = createSelector(
         isOverlayShown,
         isLyricExpanded,
         isActivated
-    ) => getToggleShowsOverviewImmediately({
+    ) => getIsOverviewShownNext({
         isTipsShown,
         lyricAnnotationIndex,
         isDotsSlideShown,
@@ -37,7 +38,7 @@ export const mapToggleShowsOverviewImmediately = createSelector(
     })
 )
 
-export const mapToggleShowsTipsImmediately = createSelector(
+export const mapIsTipsShownNext = createSelector(
     mapIsOverviewShown,
     mapIsTipsShown,
     mapLyricAnnotationIndex,
@@ -53,7 +54,7 @@ export const mapToggleShowsTipsImmediately = createSelector(
         isOverlayShown,
         isLyricExpanded,
         isActivated
-    ) => getToggleShowsTipsImmediately({
+    ) => getIsTipsShownNext({
         isOverviewShown,
         isTipsShown,
         lyricAnnotationIndex,

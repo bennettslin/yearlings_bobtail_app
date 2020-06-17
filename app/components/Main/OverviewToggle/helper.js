@@ -1,17 +1,9 @@
-import { SHOWN, OVERVIEW_BUBBLE } from '../../../constants/options'
+import { SHOWN } from '../../../constants/options'
 
 export const getOverviewToggleIdentifier = ({
     isLyricLogue,
-    selectedOverviewOption,
-    isToggleInOverview
+    selectedOverviewOption
 
-}) => {
-    if (isLyricLogue) {
-        return isToggleInOverview ?
-            SHOWN :
-            OVERVIEW_BUBBLE
-
-    } else {
-        return selectedOverviewOption
-    }
-}
+}) => (
+    isLyricLogue ? SHOWN : selectedOverviewOption
+)

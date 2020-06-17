@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Overview from '../../Overview'
 import Popup from '../../Popup'
-import { getMapIsOverviewPopupShown } from '../../../redux/overview/selector'
+import { getMapIsOverviewPopupVisible } from '../../../redux/overview/selector'
 import './style'
 
 const OverviewPopup = ({ inMain = false }) => {
-    const isOverviewPopupShown = useSelector(
-        getMapIsOverviewPopupShown(inMain)
+    const isOverviewPopupVisible = useSelector(
+        getMapIsOverviewPopupVisible(inMain)
     )
 
     return (
@@ -21,7 +21,7 @@ const OverviewPopup = ({ inMain = false }) => {
             noAbsoluteFull
             {...{
                 popupName: 'OverviewPopup',
-                isVisible: isOverviewPopupShown,
+                isVisible: isOverviewPopupVisible,
                 noFlexCentre: inMain
             }}
         >

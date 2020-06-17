@@ -13,8 +13,7 @@ import './style'
 const Overview = () => {
     const
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        isToggleInOverview = useSelector(mapIsToggleInOverview),
-        overviewText = getOverviewForSong(lyricSongIndex)
+        isToggleInOverview = useSelector(mapIsToggleInOverview)
 
     return (
         <div
@@ -28,13 +27,12 @@ const Overview = () => {
         >
             {isToggleInOverview &&
                 <OverviewToggle
-                    isToggleInOverview
                     {...{
                         className: 'Overview__toggleFloatContainer'
                     }}
                 />
             }
-            <Texts {...{ text: overviewText }} />
+            <Texts {...{ text: getOverviewForSong(lyricSongIndex) }} />
         </div>
     )
 }

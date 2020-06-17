@@ -7,12 +7,3 @@ export const mapSelectedOverviewOption = (
 export const mapSelectedTipsOption = (
     { [OPTION_STORE]: { selectedTipsOption } }
 ) => selectedTipsOption
-
-export const mapIsForcedShownOverview = (
-    { [OPTION_STORE]: { isForcedShownOverview } }
-) => isForcedShownOverview
-
-export const mapIsSongShownOverview = (
-    { [OPTION_STORE]: { isSongShownOverview } }
-) => isSongShownOverview
-

@@ -1,11 +1,6 @@
-# Tuesday
-* Refigure overview and tips logic
-    * Only three ways to toggle each: click, letter key, and escape
-    * If both options are shown, only tips is visible
-    * While tips is visible and overview is already shown, overview can be forced by hiding tip.
-    * Upon song change, hidden options are shown again.
-    * Logue overview has its own logic.
-* Add back admin routes
+# Wednesday
+* Final review of dispatchers and listeners to remove.
+* Begin thinking about tearing out canEnter.
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
@@ -30,6 +25,7 @@
 * Shorten constants to abbreviations?
 
 # Ongoing Gatsby tasks
+* Add back admin routes
 * Dynamic routes for song indices
 * Pages and routing
     * 404 page

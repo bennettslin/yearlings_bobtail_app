@@ -15,7 +15,6 @@ import {
 } from '../../redux/toggle/action'
 import { HIDDEN } from '../../constants/options'
 import { mapIsActivated } from '../../redux/activated/selector'
-import { mapIsSongShownOverview } from '../../redux/option/selector'
 import { mapIsOverviewShown } from '../../redux/overview/selector'
 import { mapIsAnnotationShown } from '../../redux/selected/selector'
 import { mapIsSliderMoving } from '../../redux/slider/selector'
@@ -35,7 +34,6 @@ const CloseHandler = forwardRef((props, ref) => {
         isActivated = useSelector(mapIsActivated),
         isOverviewShown = useSelector(mapIsOverviewShown),
         isTipsShown = useSelector(mapIsTipsShown),
-        isSongShownOverview = useSelector(mapIsSongShownOverview),
         isAnnotationShown = useSelector(mapIsAnnotationShown),
         isWikiShown = useSelector(mapIsWikiShown),
         isSliderMoving = useSelector(mapIsSliderMoving),
@@ -169,17 +167,10 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (isOverviewShown) {
-            // Cheesy way to ignore when overview is shown from song change.
-            if (isSongShownOverview) {
-                dispatch(updateOptionStore({ isSongShownOverview: false }))
-            }
-
             closeMainPopups()
             closeMainSections({
                 exemptOverview: true,
-                ...isSongShownOverview && {
-                    exemptTips: true
-                }
+                exemptTips: true
             })
         }
     }, [isOverviewShown])

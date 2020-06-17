@@ -3,11 +3,11 @@ import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
+import TipsDispatcher from '../../../dispatchers/Tips'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
 import { mapSelectedTipsOption } from '../../../redux/option/selector'
-import { mapIsTipsShowable } from '../../../redux/tips/selector'
+import { mapCanTipsShowForDevice } from '../../../redux/tips/selector'
 import { TIPS_TOGGLE_KEY } from '../../../constants/access'
 import { TIPS_BUTTON_KEY } from '../../../constants/buttons'
 import { TIPS } from '../../../constants/tips'
@@ -20,11 +20,11 @@ const TipsToggle = ({
 }) => {
     const
         dispatchTips = useRef(),
-        isTipsShowable = useSelector(mapIsTipsShowable),
+        canTipsShowForDevice = useSelector(mapCanTipsShowForDevice),
         selectedTipsOption = useSelector(mapSelectedTipsOption)
 
     const handleButtonClick = () => {
-        dispatchTips.current({ isToggled: true })
+        dispatchTips.current({ isFromToggle: true })
     }
 
     return (
@@ -43,7 +43,7 @@ const TipsToggle = ({
                     buttonName: TIPS_BUTTON_KEY,
                     buttonIdentifier: selectedTipsOption,
                     accessKey: TIPS_TOGGLE_KEY,
-                    isDisabled: !isTipsShowable,
+                    isDisabled: !canTipsShowForDevice,
                     handleButtonClick
                 }}
             />

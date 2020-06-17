@@ -5,6 +5,7 @@ import {
     getStartTimeForVerse,
     getDurationForVerse
 } from '../api/album/time'
+import { getSongIsLogue } from '../api/album/songs'
 
 export const getSongTrackerWidth = ({
     isBannerHovering,
@@ -51,7 +52,10 @@ export const getVerseTrackerLength = ({
     selectedTime
 
 }) => {
-    if (verseIndex !== verseCursorIndex) {
+    if (
+        verseIndex !== verseCursorIndex ||
+        getSongIsLogue(selectedSongIndex)
+    ) {
         return null
     }
 

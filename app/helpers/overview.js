@@ -14,30 +14,26 @@ export const getIsToggleInOverview = ({
     }
 }
 
-export const getIsOverviewVisibleBySection = ({
+export const getIsOverviewPopupVisible = ({
     inMain,
-    isLyricLogue
-
-}) => (
-    // If in song, show in main. Otherwise, show in lyric.
-    inMain !== isLyricLogue
-)
-
-export const getIsOverviewVisibleBySong = ({
+    canLyricCarouselEnter,
     isLyricLogue,
     isOverlayShown,
-    isOverviewShown,
-    isTipsShown
+    isOverviewShown
 
 }) => (
-    isLyricLogue ?
+    canLyricCarouselEnter &&
 
-        // If in logue, hide when overlay is shown.
-        !isOverlayShown :
+        // If in song, show in main. Otherwise, show in lyric.
+        inMain !== isLyricLogue &&
 
-        // If in song, hide when tip is shown.
         (
-            !isTipsShown &&
-            isOverviewShown
+            isLyricLogue ?
+
+                // If in logue, show when overlay is hidden.
+                !isOverlayShown :
+
+                // If in song, show according to overview option.
+                isOverviewShown
         )
 )

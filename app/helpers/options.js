@@ -7,29 +7,33 @@ import {
 export const getIsShown = option => option === SHOWN
 
 export const getNextOption = ({
-    isToggled,
-    toggleShows,
+    isFromToggle,
+    isShownNext,
     prevOption,
     nextOption
-}) => {
 
-    if (toggleShows) {
+}) => {
+    // Obviously, if next option is shown, return shown.
+    if (isShownNext) {
         return SHOWN
 
-    // If custom overview option is passed, set it.
+    // If custom option is passed, return that.
     } else if (nextOption) {
         return nextOption
 
-    // Otherwise, rotate through options.
+    /**
+     * Otherwise, if from toggle, alternate between shown and disabled. If from
+     * key, cycle through all options.
+     */
     } else {
         switch (prevOption) {
             case HIDDEN:
-                return isToggled ? SHOWN : DISABLED
+                return isFromToggle ? SHOWN : DISABLED
             case DISABLED:
                 return SHOWN
             case SHOWN:
             default:
-                return isToggled ? DISABLED : HIDDEN
+                return isFromToggle ? DISABLED : HIDDEN
         }
     }
 }
@@ -48,7 +52,7 @@ const _getHasInitialToggleConditions = ({
         isActivated
 )
 
-export const getToggleShowsOverviewImmediately = ({
+export const getIsOverviewShownNext = ({
     isTipsShown,
     lyricAnnotationIndex,
     isDotsSlideShown,
@@ -57,7 +61,7 @@ export const getToggleShowsOverviewImmediately = ({
     isActivated
 
 }) => (
-    // Toggle overview immediately under these conditions.
+    // Show overview immediately under these conditions.
     isTipsShown || _getHasInitialToggleConditions({
         lyricAnnotationIndex,
         isDotsSlideShown,
@@ -67,7 +71,7 @@ export const getToggleShowsOverviewImmediately = ({
     })
 )
 
-export const getToggleShowsTipsImmediately = ({
+export const getIsTipsShownNext = ({
     isTipsShown,
     isOverviewShown,
     lyricAnnotationIndex,
@@ -77,7 +81,7 @@ export const getToggleShowsTipsImmediately = ({
     isActivated
 
 }) => (
-    // Toggle tips immediately under these conditions.
+    // Show tips immediately under these conditions.
     (!isTipsShown && isOverviewShown) || _getHasInitialToggleConditions({
         lyricAnnotationIndex,
         isDotsSlideShown,

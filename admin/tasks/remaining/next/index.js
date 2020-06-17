@@ -1,8 +1,9 @@
 export default [
+    /* Weekend work. */
     {
-        taskName: `Refigure overview and tips logic.`,
+        taskName: `For now, just tear out the canEnter and didEnter weirdness.`,
         workedHours: 0,
-        neededHours: 6
+        neededHours: 8
     },
     {
         taskName: `Make sure all presences are properly behind or in front as appropriate.`,
@@ -10,12 +11,6 @@ export default [
         neededHours: 1
     },
 
-    /* Weekend work. */
-    {
-        taskName: `For now, just tear out the canEnter and didEnter weirdness.`,
-        workedHours: 0,
-        neededHours: 8
-    },
     {
         taskName: `Post-Gatsby refactoring.`,
         workedHours: 82

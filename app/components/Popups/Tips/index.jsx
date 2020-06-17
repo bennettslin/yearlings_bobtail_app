@@ -3,11 +3,11 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import Tips from '../../Tips'
 import Popup from '../../Popup'
-import { mapIsTipsPopupShown } from '../../../redux/tips/selector'
+import { mapIsTipsPopupVisible } from '../../../redux/tips/selector'
 import './style'
 
 const TipsPopup = () => {
-    const isTipsPopupShown = useSelector(mapIsTipsPopupShown)
+    const isTipsPopupVisible = useSelector(mapIsTipsPopupVisible)
 
     return (
         <Popup
@@ -19,7 +19,7 @@ const TipsPopup = () => {
             noAbsoluteFull
             {...{
                 popupName: 'TipsPopup',
-                isVisible: isTipsPopupShown
+                isVisible: isTipsPopupVisible
             }}
         >
             <Tips />

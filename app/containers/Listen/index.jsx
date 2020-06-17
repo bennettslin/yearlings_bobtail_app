@@ -5,7 +5,7 @@ import AppLoadListener from '../../listeners/AppLoad'
 import DotsSlideListener from '../../handlers/DotsSlide/Listener'
 import LyricListener from '../../handlers/Lyric/Listener'
 import LyricIndicesListener from '../../listeners/LyricIndices'
-import OverviewListener from '../../handlers/Overview/Listener'
+import OverviewTipsListener from '../../listeners/OverviewTips'
 import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
 import SceneChangeEnterListener from '../../listeners/SceneChange/Enter'
 import SongListener from '../../handlers/Song/Listener'
@@ -14,7 +14,6 @@ import SongChangeUpdateListener from '../../listeners/SongChange/Update'
 import SongChangeEnterListener from '../../listeners/SongChange/Enter'
 import SongChangeDoneListener from '../../listeners/SongChange/Done'
 import ScrollRenderListener from '../../listeners/ScrollRender'
-import TipsListener from '../../handlers/Tips/Listener'
 import UrlListener from '../../listeners/Url'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
 import AudioPlayerManager from '../../managers/AudioPlayer'
@@ -32,7 +31,7 @@ const ListenContainer = () => {
             <DotsSlideListener />
             <LyricListener />
             <LyricIndicesListener />
-            <OverviewListener />
+            <OverviewTipsListener />
             <SceneChangeExitListener />
             <SceneChangeEnterListener />
             <ScrollRenderListener />
@@ -41,7 +40,6 @@ const ListenContainer = () => {
             <SongChangeUpdateListener />
             <SongChangeEnterListener />
             <SongChangeDoneListener />
-            <TipsListener />
             <UrlListener />
             <WikiWormholeListener />
             <AudioPlayerManager />
