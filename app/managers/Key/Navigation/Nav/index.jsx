@@ -3,7 +3,7 @@ import React, { useRef, forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../../redux/access/action'
 import NavDispatcher from '../../../../handlers/Nav/Dispatcher'
-import SongDispatcher from '../../../../handlers/Song/Song'
+import SongDispatcher from '../../../../dispatchers/Song'
 import {
     getSongsAndLoguesCount,
     getBookForSongIndex

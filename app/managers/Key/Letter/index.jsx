@@ -24,7 +24,7 @@ import OverviewDispatcher from '../../../dispatchers/Overview'
 import PlayDispatcher from '../../../dispatchers/Play'
 import TipsDispatcher from '../../../dispatchers/Tips'
 import ScoreDispatcher from '../../../dispatchers/Score'
-import SongDispatcher from '../../../handlers/Song/Song'
+import SongDispatcher from '../../../dispatchers/Song'
 import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY,

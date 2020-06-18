@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
-import SongDispatcher from '../../../../../app/handlers/Song/Dispatcher'
+import SongDispatcher from '../../../../../app/dispatchers/Song'
 import ProgressBar from '../../ProgressBar'
 import { getIndexedTitleForSong } from '../../../../../app/api/album/songs'
 import { getSongTasks } from './helper'
