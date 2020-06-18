@@ -45,8 +45,7 @@ const NavNavigation = forwardRef((props, ref) => {
                 // Do not allow currently selected song to be selected.
                 if (selectedSongIndex !== nextNavIndex) {
                     keyWasRegistered = dispatchSong.current({
-                        selectedSongIndex: nextNavIndex,
-                        doDismissNav: true
+                        selectedSongIndex: nextNavIndex
                     })
                     /**
                      * If song was successfully selected, then annotation index

@@ -27,8 +27,7 @@ const SongDispatcher = forwardRef((props, ref) => {
         selectedAnnotationIndex = 0,
         earColumnIndex,
         destinationWormholeIndex,
-        direction,
-        doDismissNav
+        direction
     }) => {
         const isWormholeSelected = Boolean(destinationWormholeIndex)
 
@@ -87,9 +86,7 @@ const SongDispatcher = forwardRef((props, ref) => {
             }
         }))
 
-        if (doDismissNav) {
-            dispatch(updateToggleStore({ isNavShown: false }))
-        }
+        dispatch(updateToggleStore({ isNavShown: false }))
 
         return true
     }

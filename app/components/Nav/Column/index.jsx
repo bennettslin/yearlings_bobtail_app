@@ -25,10 +25,7 @@ const NavColumn = ({ bookIndex }) => {
     }
 
     const handleNavSongSelect = songIndex => {
-        dispatchSong.current({
-            selectedSongIndex: songIndex,
-            doDismissNav: true
-        })
+        dispatchSong.current({ selectedSongIndex: songIndex })
     }
 
     return (

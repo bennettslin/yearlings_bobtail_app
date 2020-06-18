@@ -1,20 +1,22 @@
 // eslint-disable-next-line object-curly-newline
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import ResizeDispatcher from '../Dispatcher'
-import { resetTheatreEntrance } from '../../../redux/entrance/action'
-import { getWindowDimensions } from '../../../helpers/resize/device'
-import { getWindow } from '../../../utils/browser'
+import {
+    resetTheatreEntrance,
+    updateEntranceStore
+} from '../../redux/entrance/action'
+import { updateViewportStore } from '../../redux/viewport/action'
+import { getWindowDimensions } from '../../helpers/resize/device'
+import { getWindow } from '../../utils/browser'
 import {
     mapWindowWidth,
     mapWindowHeight
-} from '../../../redux/viewport/selector'
+} from '../../redux/viewport/selector'
 
 const ResizeListener = ({ getRootContainerElement }) => {
     const
         dispatch = useDispatch(),
-        beginEnterTransition = useRef(),
         timeoutRef = useRef(),
         windowWidth = useSelector(mapWindowWidth),
         windowHeight = useSelector(mapWindowHeight),
@@ -25,7 +27,27 @@ const ResizeListener = ({ getRootContainerElement }) => {
         windowHeight,
         windowResizeTimeoutId
     }
-    const _beginExitTransition = () => {
+
+    const _updateCanTheatreEnter = () => {
+        logTransition('Theatre can enter.')
+        dispatch(updateEntranceStore({ canTheatreEnter: true }))
+    }
+
+    const beginEnterTransition = () => {
+        const {
+            windowHeight,
+            windowWidth
+        } = getWindowDimensions(getRootContainerElement())
+
+        dispatch(updateViewportStore({
+            windowWidth,
+            windowHeight
+        }))
+
+        _updateCanTheatreEnter()
+    }
+
+    const beginExitTransition = () => {
         /**
          * This check is needed because iOS will arbitrarily set window height
          * based on whether browser header and footer are shown. So we'll use
@@ -49,26 +71,25 @@ const ResizeListener = ({ getRootContainerElement }) => {
 
             // Wait for window resize to finish.
             setWindowResizeTimeoutId(
-                setTimeout(beginEnterTransition.current, 250)
+                setTimeout(beginEnterTransition, 250)
             )
         }
     }
 
     useEffect(() => {
-        getWindow().onresize = _beginExitTransition
+        /**
+         * As soon as we have a reference to the root container, begin
+         * showing theatre.
+         */
+        _updateCanTheatreEnter()
+
+        getWindow().onresize = beginExitTransition
         return () => {
             getWindow().onresize = null
         }
     }, [])
 
-    return (
-        <ResizeDispatcher
-            {...{
-                ref: beginEnterTransition,
-                getRootContainerElement
-            }}
-        />
-    )
+    return null
 }
 
 ResizeListener.propTypes = {
