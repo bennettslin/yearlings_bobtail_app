@@ -2,7 +2,7 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateToggleStore } from '../../redux/toggle/action'
+import { disableAutoScroll } from '../../redux/toggle/action'
 import { mapIsAutoScroll } from '../../redux/toggle/selector'
 
 const WheelDispatcher = forwardRef(({ determineVerseBars }, ref) => {
@@ -55,7 +55,7 @@ const WheelDispatcher = forwardRef(({ determineVerseBars }, ref) => {
                  */
                 (deltaY > 1 || deltaY < -1 || isTouchMoveEvent)
         ) {
-            dispatch(updateToggleStore({ isAutoScroll: false }))
+            dispatch(disableAutoScroll())
         }
     }
 

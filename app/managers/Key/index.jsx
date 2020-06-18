@@ -3,7 +3,7 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
-import { updateToggleStore } from '../../redux/toggle/action'
+import { disableAutoScroll } from '../../redux/toggle/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
@@ -40,7 +40,7 @@ const KeyManager = forwardRef((props, ref) => {
             queuedDetermineVerseBars: true,
             queuedVerseBarsTimeout: 150
         }))
-        dispatch(updateToggleStore({ isAutoScroll: false }))
+        dispatch(disableAutoScroll())
     }
 
     const _handleKeyRegister = ({

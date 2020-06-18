@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
-import LyricDispatcher from '../../../../handlers/Lyric/Dispatcher'
+import LyricExpandDispatcher from '../../../../dispatchers/LyricExpand'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
 import { LYRIC_EXPAND_KEY } from '../../../../constants/access'
@@ -56,7 +56,7 @@ const LyricToggleExpand = ({ inMain }) => {
                     }}
                 />
                 <TipsHand {...{ tipType: LYRIC_EXPAND }} />
-                <LyricDispatcher {...{ ref: dispatchLyricExpand }} />
+                <LyricExpandDispatcher {...{ ref: dispatchLyricExpand }} />
             </div>
         </CSSTransition>
     )

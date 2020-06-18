@@ -1,13 +1,13 @@
 // Component to show selected verse when scrolled above or below window height.
-import React, { useRef, memo } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import Transition from 'react-transition-group/Transition'
-import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../api/album/verses'
+import { enableAutoScroll } from '../../../redux/toggle/action'
 import { mapVerseCursorIndex } from '../../../redux/cursor/selector'
 import {
     mapLyricSongIndex,
@@ -22,7 +22,7 @@ const VerseBar = ({
 
 }) => {
     const
-        dispatchScrollVerse = useRef(),
+        dispatch = useDispatch(),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         isLyricLogue = useSelector(mapIsLyricLogue),
         isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove)),
@@ -31,7 +31,7 @@ const VerseBar = ({
     const onClick = e => {
         logEvent({ e, componentName: 'VerseBar' })
         if (isVerseBarShown) {
-            dispatchScrollVerse.current()
+            dispatch(enableAutoScroll())
         }
     }
 
@@ -80,7 +80,6 @@ const VerseBar = ({
                     />
                 </Transition>
             </div>
-            <ScrollVerseDispatcher {...{ ref: dispatchScrollVerse }} />
         </div>
     )
 }

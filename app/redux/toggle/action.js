@@ -31,3 +31,13 @@ export const updateIsAboutShown = (isAboutShown = false) => ({
     type: TOGGLE_STORE,
     payload: { isAboutShown }
 })
+
+export const enableAutoScroll = () => ({
+    type: TOGGLE_STORE,
+    payload: { isAutoScroll: true }
+})
+
+export const disableAutoScroll = () => ({
+    type: TOGGLE_STORE,
+    payload: { isAutoScroll: false }
+})

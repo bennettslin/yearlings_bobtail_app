@@ -1,24 +1,24 @@
 // Button to toggle between left and right columns.
 
-import React, { useRef } from 'react'
+import React from 'react'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
-import ScrollVerseDispatcher from '../../../../dispatchers/ScrollVerse'
 import Button from '../../../Button'
 import TipsHand from '../../../Tips/Hand'
 import { LYRIC_SCROLL_TOGGLE_KEY } from '../../../../constants/access'
 import { LYRIC_SCROLL_BUTTON_KEY } from '../../../../constants/buttons'
 import { AUTOSCROLL } from '../../../../constants/tips'
 import { mapIsAutoScroll } from '../../../../redux/toggle/selector'
+import { enableAutoScroll } from '../../../../redux/toggle/action'
 
 const LyricToggleScroll = () => {
     const
-        dispatchScrollVerse = useRef(),
+        dispatch = useDispatch(),
         isAutoScroll = useSelector(mapIsAutoScroll)
 
     const handleButtonClick = () => {
-        dispatchScrollVerse.current(true)
+        dispatch(enableAutoScroll())
     }
 
     return (
@@ -49,7 +49,6 @@ const LyricToggleScroll = () => {
                     }}
                 />
                 <TipsHand reverse {...{ tipType: AUTOSCROLL }} />
-                <ScrollVerseDispatcher {...{ ref: dispatchScrollVerse }} />
             </div>
         </CSSTransition>
     )

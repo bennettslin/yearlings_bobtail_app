@@ -7,7 +7,8 @@ import { updateSelectedStore } from '../../../redux/selected/action'
 import {
     updateToggleStore,
     toggleIsAboutShown,
-    updateIsAboutShown
+    updateIsAboutShown,
+    enableAutoScroll
 } from '../../../redux/toggle/action'
 import {
     updateWikiIndices,
@@ -18,12 +19,11 @@ import DotsSlideDispatcher from '../../../dispatchers/DotsSlide'
 import EarColumnDispatcher from '../../../dispatchers/EarColumn'
 import ActivatedSceneDispatcher from '../../../dispatchers/Activated/Scene'
 import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
-import LyricDispatcher from '../../../handlers/Lyric/Dispatcher'
+import LyricExpandDispatcher from '../../../dispatchers/LyricExpand'
 import OverviewDispatcher from '../../../dispatchers/Overview'
 import PlayDispatcher from '../../../dispatchers/Play'
 import TipsDispatcher from '../../../dispatchers/Tips'
 import ScoreDispatcher from '../../../dispatchers/Score'
-import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerse'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import {
     PREVIOUS_VERSE_KEY,
@@ -68,7 +68,6 @@ const LetterManager = forwardRef((props, ref) => {
         dispatchLyricExpand = useRef(),
         dispatchOverview = useRef(),
         dispatchPlay = useRef(),
-        dispatchScrollVerse = useRef(),
         dispatchSong = useRef(),
         dispatchTips = useRef(),
         dispatchScore = useRef(),
@@ -122,7 +121,8 @@ const LetterManager = forwardRef((props, ref) => {
                 keyWasRegistered = dispatchLyricExpand.current()
                 break
             case LYRIC_SCROLL_TOGGLE_KEY:
-                keyWasRegistered = dispatchScrollVerse.current(true)
+                dispatch(enableAutoScroll())
+                keyWasRegistered = true
                 break
             case OVERVIEW_TOGGLE_KEY:
                 keyWasRegistered = dispatchOverview.current()
@@ -215,10 +215,9 @@ const LetterManager = forwardRef((props, ref) => {
             <EarColumnDispatcher {...{ ref: dispatchEarColumn }} />
             <ActivatedSceneDispatcher {...{ ref: activateSceneDirection }} />
             <ActivatedVerseDispatcher {...{ ref: activateVerse }} />
-            <LyricDispatcher {...{ ref: dispatchLyricExpand }} />
+            <LyricExpandDispatcher {...{ ref: dispatchLyricExpand }} />
             <OverviewDispatcher {...{ ref: dispatchOverview }} />
             <PlayDispatcher {...{ ref: dispatchPlay }} />
-            <ScrollVerseDispatcher {...{ ref: dispatchScrollVerse }} />
             <SongDispatcher {...{ ref: dispatchSong }} />
             <TipsDispatcher {...{ ref: dispatchTips }} />
             <ScoreDispatcher {...{ ref: dispatchScore }} />
