@@ -2,7 +2,6 @@
 * Final review of dispatchers and listeners to remove.
     * Song listener can just go in dispatcher.
     * When is registering key actually important?
-    * Wiki listener can just go in dispatcher.
     * Overview listener can be made into a dispatcher, go into song dispatcher.
 * Begin thinking about tearing out canEnter.
 

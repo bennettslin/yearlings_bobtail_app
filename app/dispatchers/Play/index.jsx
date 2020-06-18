@@ -1,7 +1,7 @@
 // eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import SongDispatcher from '../../handlers/Song/Dispatcher'
+import SongDispatcher from '../../handlers/Song/Song'
 import { updateAudioStore } from '../../redux/audio/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import { mapIsPlaying } from '../../redux/audio/selector'

@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import PlayDispatcher from '../../dispatchers/Play'
-import SongDispatcher from '../../handlers/Song/Dispatcher'
+import SongDispatcher from '../../handlers/Song/Song'
 import Button from '../Button'
 import {
     AUDIO_PLAY_KEY,

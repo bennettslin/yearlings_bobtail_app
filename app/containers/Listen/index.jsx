@@ -7,7 +7,6 @@ import LyricIndicesListener from '../../listeners/LyricIndices'
 import OverviewTipsListener from '../../listeners/OverviewTips'
 import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
 import SceneChangeEnterListener from '../../listeners/SceneChange/Enter'
-import SongListener from '../../handlers/Song/Listener'
 import SongChangeExitListener from '../../listeners/SongChange/Exit'
 import SongChangeUpdateListener from '../../listeners/SongChange/Update'
 import SongChangeEnterListener from '../../listeners/SongChange/Enter'
@@ -33,7 +32,6 @@ const ListenContainer = () => {
             <SceneChangeExitListener />
             <SceneChangeEnterListener />
             <ScrollRenderListener />
-            <SongListener />
             <SongChangeExitListener />
             <SongChangeUpdateListener />
             <SongChangeEnterListener />

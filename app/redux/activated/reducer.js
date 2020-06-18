@@ -2,6 +2,7 @@
 import { hasKey } from '../../helpers/action'
 import {
     ACTIVATED_STORE,
+    SELECTED_STORE,
     SLIDER_STORE
 } from '../../constants/store'
 import { ACTIVATED_DEFAULTS } from './default'
@@ -16,6 +17,12 @@ export default (
                 ...state,
                 ...payload
             }
+        case SELECTED_STORE: {
+            const { selectedSongIndex } = payload
+            return hasKey(selectedSongIndex) ?
+                ACTIVATED_DEFAULTS :
+                state
+        }
         case SLIDER_STORE: {
             const { isSliderTouched } = payload
             return hasKey(isSliderTouched) && isSliderTouched ?
