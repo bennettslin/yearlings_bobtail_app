@@ -15,3 +15,7 @@ export const mapSelectedWikiIndex = (
 export const mapWikiAnnotationIndex = (
     { [SESSION_STORE]: { wikiAnnotationIndex } }
 ) => wikiAnnotationIndex
+
+export const mapEarColumnIndex = (
+    { [SESSION_STORE]: { earColumnIndex } }
+) => earColumnIndex

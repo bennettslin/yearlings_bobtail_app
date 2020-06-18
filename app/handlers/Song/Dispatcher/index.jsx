@@ -8,12 +8,15 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { updateAudioStore } from '../../../redux/audio/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
+import {
+    updateEarColumnIndex,
+    updateWikiIndices
+} from '../../../redux/session/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 import { getStartTimeForVerse } from '../../../api/album/time'
 import { getSceneIndexForVerse } from '../../../api/album/verses'
 import { getSongsAndLoguesCount } from '../../../api/album/songs'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
-import { updateWikiIndices } from '../../../redux/session/action'
 
 const SongDispatcher = forwardRef((props, ref) => {
     const
@@ -59,13 +62,15 @@ const SongDispatcher = forwardRef((props, ref) => {
             )
 
         dispatch(updateWikiIndices())
+        if (Number.isFinite(earColumnIndex)) {
+            dispatch(updateEarColumnIndex(earColumnIndex))
+        }
         dispatch(updateSelectedStore({
             selectedSongIndex: nextSongIndex,
             selectedVerseIndex,
             selectedAnnotationIndex,
             selectedSceneIndex,
-            selectedTime,
-            ...Number.isFinite(earColumnIndex) && { earColumnIndex }
+            selectedTime
         }))
 
         logSelect({

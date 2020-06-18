@@ -10,9 +10,9 @@ import { mapSelectedDotsBit } from '../../../redux/dots/selector'
 import { mapIsEarShown } from '../../../redux/ear/selector'
 import {
     mapSelectedSongIndex,
-    mapSelectedAnnotationIndex,
-    mapEarColumnIndex
+    mapSelectedAnnotationIndex
 } from '../../../redux/selected/selector'
+import { mapEarColumnIndex } from '../../../redux/session/selector'
 
 const AnnotationDispatcher = forwardRef((props, ref) => {
     const

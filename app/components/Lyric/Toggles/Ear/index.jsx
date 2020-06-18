@@ -12,7 +12,7 @@ import { EAR_COLUMN_KEYS } from '../../../../constants/lyrics'
 import { DOUBLESPEAKER } from '../../../../constants/tips'
 import { mapIsDesktopWidth } from '../../../../redux/device/selector'
 import { mapIsEarShown } from '../../../../redux/ear/selector'
-import { mapEarColumnIndex } from '../../../../redux/selected/selector'
+import { mapEarColumnIndex } from '../../../../redux/session/selector'
 import './style'
 
 const LyricToggleEar = () => {

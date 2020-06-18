@@ -35,3 +35,8 @@ export const updateWikiIndices = ({
         wikiAnnotationIndex
     }
 })
+
+export const updateEarColumnIndex = earColumnIndex => ({
+    type: SESSION_STORE,
+    payload: { earColumnIndex }
+})

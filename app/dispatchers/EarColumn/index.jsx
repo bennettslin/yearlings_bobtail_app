@@ -1,12 +1,10 @@
 // Singleton to watch for non-toggle events that require collapsing lyric.
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateSelectedStore } from '../../redux/selected/action'
+import { updateEarColumnIndex } from '../../redux/session/action'
 import { mapIsEarShown } from '../../redux/ear/selector'
-import {
-    mapIsSelectedLogue,
-    mapEarColumnIndex
-} from '../../redux/selected/selector'
+import { mapIsSelectedLogue } from '../../redux/selected/selector'
+import { mapEarColumnIndex } from '../../redux/session/selector'
 
 const EarColumnDispatcher = forwardRef((props, ref) => {
     const
@@ -24,9 +22,7 @@ const EarColumnDispatcher = forwardRef((props, ref) => {
             return false
         }
 
-        dispatch(updateSelectedStore({
-            earColumnIndex: (earColumnIndex + 1) % 2
-        }))
+        dispatch(updateEarColumnIndex((earColumnIndex + 1) % 2))
         return true
     }
 

@@ -7,7 +7,7 @@ import { mapIsCarouselNavShowable } from '../../redux/carousel/selector'
 import { mapIsEarShown } from '../../redux/ear/selector'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
 import { mapShowShrunkNavIcon } from '../../redux/nav/selector'
-import { mapEarColumnIndex } from '../../redux/selected/selector'
+import { mapEarColumnIndex } from '../../redux/session/selector'
 import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
 
 const ResponsiveWrapper = ({ children }) => {

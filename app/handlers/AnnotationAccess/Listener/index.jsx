@@ -4,9 +4,9 @@ import AnnotationAccessDispatcher from '../Dispatcher'
 import {
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex,
-    mapEarColumnIndex,
     mapIsSelectedLogue
 } from '../../../redux/selected/selector'
+import { mapEarColumnIndex } from '../../../redux/session/selector'
 
 const AnnotationAccessListener = () => {
     const

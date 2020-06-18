@@ -13,9 +13,9 @@ import {
 import { mapIsEarShown } from '../../../redux/ear/selector'
 import {
     mapSelectedSongIndex,
-    mapSelectedAnnotationIndex,
-    mapEarColumnIndex
+    mapSelectedAnnotationIndex
 } from '../../../redux/selected/selector'
+import { mapEarColumnIndex } from '../../../redux/session/selector'
 
 const AnnotationListener = () => {
     const
