@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
-import { mapIsLyricLogue } from '../../../redux/lyric/selector'
-import { mapIsLyricExpanded } from '../../../redux/toggle/selector'
-import { mapIsHeightlessLyric } from '../../../redux/viewport/selector'
+import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
+import { mapIsLyricLogue } from '../../redux/lyric/selector'
+import { mapIsLyricExpanded } from '../../redux/toggle/selector'
+import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
 
 const LyricListener = () => {
     const
