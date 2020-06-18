@@ -9,8 +9,10 @@ import {
     toggleIsAboutShown,
     updateIsAboutShown
 } from '../../../redux/toggle/action'
-import { updateWikiIndices } from '../../../redux/session/action'
-import AudioOptionDispatcher from '../../../dispatchers/AudioOption'
+import {
+    updateWikiIndices,
+    toggleAudioOptionIndex
+} from '../../../redux/session/action'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlide'
 import EarColumnDispatcher from '../../../dispatchers/EarColumn'
@@ -58,7 +60,6 @@ import { mapIsWikiShown } from '../../../redux/wiki/selector'
 const LetterManager = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        dispatchAudioOption = useRef(),
         dispatchCarouselNav = useRef(),
         dispatchDotsSlide = useRef(),
         dispatchEarColumn = useRef(),
@@ -87,7 +88,8 @@ const LetterManager = forwardRef((props, ref) => {
 
         switch (keyName) {
             case AUDIO_OPTIONS_TOGGLE_KEY:
-                keyWasRegistered = dispatchAudioOption.current()
+                dispatch(toggleAudioOptionIndex())
+                keyWasRegistered = true
                 break
             case AUDIO_PLAY_KEY:
                 keyWasRegistered = dispatchPlay.current()
@@ -208,7 +210,6 @@ const LetterManager = forwardRef((props, ref) => {
     }))
     return (
         <>
-            <AudioOptionDispatcher {...{ ref: dispatchAudioOption }} />
             <CarouselNavDispatcher {...{ ref: dispatchCarouselNav }} />
             <DotsSlideDispatcher {...{ ref: dispatchDotsSlide }} />
             <EarColumnDispatcher {...{ ref: dispatchEarColumn }} />

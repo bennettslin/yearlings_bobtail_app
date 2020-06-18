@@ -1,7 +1,6 @@
 // Component to show buttons for audio navigation.
 import React, { useRef } from 'react'
-import { useSelector } from 'react-redux'
-import AudioOptionDispatcher from '../../dispatchers/AudioOption'
+import { useDispatch, useSelector } from 'react-redux'
 import PlayDispatcher from '../../dispatchers/Play'
 import SongDispatcher from '../../handlers/Song/Dispatcher'
 import Button from '../Button'
@@ -17,6 +16,7 @@ import {
     AUDIO_PLAY_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
+import { toggleAudioOptionIndex } from '../../redux/session/action'
 import { mapIsPlaying } from '../../redux/audio/selector'
 import { mapIsDesktopWidth } from '../../redux/device/selector'
 import { mapPlayerCanPlayThrough } from '../../redux/players/selector'
@@ -61,7 +61,7 @@ const STATIC_BUTTON_CONFIGS = [
 
 const Audio = () => {
     const
-        dispatchAudioOption = useRef(),
+        dispatch = useDispatch(),
         dispatchPlay = useRef(),
         dispatchSong = useRef(),
         isPlaying = useSelector(mapIsPlaying),
@@ -73,7 +73,7 @@ const Audio = () => {
         isDesktopWidth = useSelector(mapIsDesktopWidth)
 
     const _handleAudioOptionClick = () => {
-        dispatchAudioOption.current()
+        dispatch(toggleAudioOptionIndex())
     }
 
     const _handlePlayClick = () => {
@@ -144,7 +144,6 @@ const Audio = () => {
             {isTwoRowMenu && (
                 <div {...{ className: 'Audio__flexPlaceholder' }} />
             )}
-            <AudioOptionDispatcher {...{ ref: dispatchAudioOption }} />
             <PlayDispatcher {...{ ref: dispatchPlay }} />
             <SongDispatcher {...{ ref: dispatchSong }} />
         </div>

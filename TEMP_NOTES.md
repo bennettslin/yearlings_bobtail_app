@@ -1,6 +1,5 @@
 # Wednesday
 * Final review of dispatchers and listeners to remove.
-    * Audio option dispatcher can just go in reducer.
     * Song listener can just go in dispatcher.
     * When is registering key actually important?
     * Make resize handler just one file.

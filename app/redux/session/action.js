@@ -15,6 +15,11 @@ export const updateAudioOptionIndex = audioOptionIndex => {
     })
 }
 
+export const toggleAudioOptionIndex = () => ({
+    type: SESSION_STORE,
+    payload: { toggleAudioOptionIndex: true }
+})
+
 export const updateShownNavBookIndex = shownNavBookIndex => ({
     type: SESSION_STORE,
     payload: { shownNavBookIndex }
