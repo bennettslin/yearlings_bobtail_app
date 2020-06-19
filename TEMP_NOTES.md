@@ -1,5 +1,11 @@
-# Wednesday
+# Entrance store refactor
 * Begin thinking about tearing out canEnter.
+* Carousel, lyric, curtain, scene for song change.
+* Scene for scene change.
+* Theatre for window change.
+
+# Issues
+* What is mapIsSelectPlayReady?
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
