@@ -1,7 +1,4 @@
 # Entrance refactor
-* Have entrance reducer set isSongChangeDone and/or isSceneChangeDone.
-* Do I want isSongChangeDone and isSceneChangeDone to be mutually exclusive? Or to go together? Maybe leaning towards going together right now.
-* Ensure that scene change happens when changing song.
 * Can scene change listener be simplified? Dispatch scene indices at once instead of listening for isSceneChangeDone?
 * Audit all log transitions. Still needed?
 * Make curtain animation smooth.

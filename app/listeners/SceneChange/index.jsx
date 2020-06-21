@@ -29,30 +29,26 @@ const SceneChangeListener = () => {
     }
 
     useEffect(() => {
-        // Only handle scene change here if it's within the same song.
-        if (isSongChangeDone) {
-            // Begin scene change transition.
-            dispatch(updateIsSceneChangeDone())
+        // If song or scene changed, begin scene transition.
 
-            // Clear previous timeout.
-            clearTimeout(timeoutRef.current.sceneChangeTimeoutId)
+        // Clear previous timeout.
+        clearTimeout(timeoutRef.current.sceneChangeTimeoutId)
 
-            // Wait for scene selection to finish.
-            setSceneChangeTimeoutId(setTimeout(
-                completeSceneSelect, 200
-            ))
-        }
-    }, [selectedSceneIndex])
+        // Wait for scene selection to finish.
+        setSceneChangeTimeoutId(setTimeout(
+            completeSceneSelect, 200
+        ))
+    }, [selectedSongIndex, selectedSceneIndex])
 
     useEffect(() => {
-        // Finish song change transition.
-        if (isSongChangeDone && isSceneChangeDone) {
+        // Finish song or scene change transition.
+        if (isSongChangeDone || isSceneChangeDone) {
             dispatch(updateSceneStore({
                 sceneSongIndex: selectedSongIndex,
                 sceneSceneIndex: selectedSceneIndex
             }))
         }
-    }, [isSceneChangeDone])
+    }, [isSongChangeDone, isSceneChangeDone])
 
     return null
 }

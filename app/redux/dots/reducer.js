@@ -1,6 +1,9 @@
 // Reducers for selected dots.
 import { hasKey } from '../../helpers/action'
-import { getDotsBitForToggledDotIndex, getDotKeysFromBit } from '../../helpers/dot'
+import {
+    getDotsBitForToggledDotIndex,
+    getDotKeysFromBit
+} from '../../helpers/dot'
 import {
     DOTS_STORE,
     SELECTED_DOTS_BIT

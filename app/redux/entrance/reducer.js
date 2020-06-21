@@ -1,4 +1,8 @@
-import { ENTRANCE_STORE } from '../../constants/store'
+import { hasKey } from '../../helpers/action'
+import {
+    ENTRANCE_STORE,
+    SELECTED_STORE
+} from '../../constants/store'
 import { ENTRANCE_DEFAULTS } from './default'
 
 export default (
@@ -11,6 +15,18 @@ export default (
                 ...state,
                 ...payload
             }
+        case SELECTED_STORE: {
+            const {
+                selectedSongIndex,
+                selectedSceneIndex
+            } = payload
+
+            return {
+                ...state,
+                ...hasKey(selectedSongIndex) && { isSongChangeDone: false },
+                ...hasKey(selectedSceneIndex) && { isSceneChangeDone: false }
+            }
+        }
         default:
             return state
     }

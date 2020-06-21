@@ -27,8 +27,7 @@ const SongChangeListener = () => {
     }
 
     useEffect(() => {
-        // Begin song change transition.
-        dispatch(updateIsSongChangeDone())
+        // If song changed, begin song transition.
 
         // Clear previous timeout.
         clearTimeout(timeoutRef.current.songChangeTimeoutId)
