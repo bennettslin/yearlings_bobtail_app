@@ -16,13 +16,13 @@ export const getIsToggleInOverview = ({
 
 export const getIsOverviewPopupVisible = ({
     inMain,
-    canLyricCarouselEnter,
+    isSongSelectComplete,
     isLyricLogue,
     isOverlayShown,
     isOverviewShown
 
 }) => (
-    canLyricCarouselEnter &&
+    isSongSelectComplete &&
 
         // If in song, show in main. Otherwise, show in lyric.
         inMain !== isLyricLogue &&

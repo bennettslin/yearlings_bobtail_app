@@ -1,7 +1,8 @@
 # Entrance store refactor
-* Begin thinking about tearing out canEnter.
-* Carousel, lyric, curtain, scene for song change.
-* Scene for scene change.
+* 
+* Consolidate song change listeners.
+* Are scene change dispatchers still needed?
+* Audit all log transitions. Still needed?
 
 # Issues
 * What is mapIsSelectPlayReady?

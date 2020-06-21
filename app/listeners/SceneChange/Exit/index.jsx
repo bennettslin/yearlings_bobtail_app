@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateEntranceStore } from '../../../redux/entrance/action'
 import {
     mapSelectedSongIndex,
     mapSelectedSceneIndex
@@ -25,8 +24,7 @@ class SceneChangeExitListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedSceneIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        updateEntranceStore: PropTypes.func.isRequired
+        selectedSongIndex: PropTypes.number.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -55,14 +53,6 @@ class SceneChangeExitListener extends PureComponent {
 
     _beginExitTransition = () => {
         logTransition('Begin exit from scene change.')
-        this.props.updateEntranceStore({
-            didSceneScrollExit: false,
-
-            // Scene change bypasses update part of transition.
-
-            canSceneEnter: false,
-            didSceneEnter: false
-        })
 
         /**
          * Scene change does not need timeout, because in production, changing
@@ -75,7 +65,4 @@ class SceneChangeExitListener extends PureComponent {
     }
 }
 
-export default connect(
-    mapStateToProps,
-    { updateEntranceStore }
-)(SceneChangeExitListener)
+export default connect(mapStateToProps)(SceneChangeExitListener)

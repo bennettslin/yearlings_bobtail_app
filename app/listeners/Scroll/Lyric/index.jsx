@@ -1,7 +1,6 @@
 import { memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { mapIsPlaying } from '../../../redux/audio/selector'
 import { scrollElementIntoView } from '../helper'
@@ -52,7 +51,6 @@ const ScrollLyricListener = ({
 
     const _completeSceneChangeExit = () => {
         logTransition('Scene scroll did exit from lyric scroll.')
-        dispatch(updateEntranceStore({ didSceneScrollExit: true }))
     }
 
     const _setTimeoutForSceneChangeExit = () => {

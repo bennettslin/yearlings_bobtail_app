@@ -2,11 +2,10 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { mapCanLyricCarouselEnter } from '../../redux/entrance/selector'
+import { mapIsSongSelectComplete } from '../../redux/lyric/selector'
 
 const TransitionWrapper = ({ children }) => {
-    const
-        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
+    const isSongSelectComplete = useSelector(mapIsSongSelectComplete)
 
     return (
         <div
@@ -14,15 +13,7 @@ const TransitionWrapper = ({ children }) => {
                 className: cx(
                     'TransitionWrapper',
 
-                    /**
-                     * When transitioning between songs, explicitly reset
-                     * all verse trackers.
-                     */
-                    canLyricCarouselEnter ?
-                        'TrW__canTrackVerse' :
-                        'TrW__cannotTrackVerse',
-
-                    canLyricCarouselEnter ?
+                    isSongSelectComplete ?
                         'TrW__canLyricCarouselEnter' :
                         'TrW__cannotLyricCarouselEnter'
                 )

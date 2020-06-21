@@ -1,130 +1,35 @@
-import { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { updateEntranceStore } from '../../../redux/entrance/action'
-import {
-    mapCanSceneUpdate,
-    mapCanLyricCarouselUpdate,
-    mapCanLyricCarouselEnter
-} from '../../../redux/entrance/selector'
+// eslint-disable-next-line object-curly-newline
+import { useEffect, useRef, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { updateIsSongSelectComplete } from '../../../redux/lyric/action'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
 
-const mapStateToProps = state => {
+const SongChangeExitListener = () => {
     const
-        canSceneUpdate = mapCanSceneUpdate(state),
-        canLyricCarouselUpdate = mapCanLyricCarouselUpdate(state),
-        canLyricCarouselEnter = mapCanLyricCarouselEnter(state),
-        selectedSongIndex = mapSelectedSongIndex(state)
+        dispatch = useDispatch(),
+        timeoutRef = useRef(),
+        selectedSongIndex = useSelector(mapSelectedSongIndex),
+        [songChangeTimeoutId, setSongChangeTimeoutId] = useState('')
 
-    return {
-        selectedSongIndex,
-        canLyricCarouselUpdate,
-        canLyricCarouselEnter,
-        canSceneUpdate
-    }
-}
+    timeoutRef.current = { songChangeTimeoutId }
 
-class SongChangeExitListener extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
-        canLyricCarouselUpdate: PropTypes.bool.isRequired,
-        canLyricCarouselEnter: PropTypes.bool.isRequired,
-        canSceneUpdate: PropTypes.bool.isRequired,
-        updateEntranceStore: PropTypes.func.isRequired
+    const beginSongSelect = () => {
+        dispatch(updateIsSongSelectComplete(true))
     }
 
-    state = {
-        songChangeTimeoutId: ''
-    }
-
-    componentDidUpdate(prevProps) {
-        this._checkSongChange(prevProps)
-    }
-
-    _checkSongChange(prevProps) {
-        const
-            { selectedSongIndex } = this.props,
-            { selectedSongIndex: prevSongIndex } = prevProps
-
-        if (selectedSongIndex !== prevSongIndex) {
-            this._beginExitTransition()
-        }
-    }
-
-    _beginExitTransition = () => {
-        const {
-            canLyricCarouselUpdate,
-            canLyricCarouselEnter,
-            canSceneUpdate
-        } = this.props
-
-        logTransition('Begin exit from song change.')
-        this.props.updateEntranceStore({
-            isSongSelectInFlux: true,
-
-            ...canLyricCarouselEnter && {
-                didCarouselExit: false,
-                didLyricExit: false,
-                didCurtainExit: false
-            },
-
-            canLyricCarouselUpdate: false,
-
-            ...canLyricCarouselUpdate && {
-                didLyricUpdate: false,
-                didCarouselUpdate: false
-            },
-
-            canLyricCarouselEnter: false,
-            didLyricEnter: false,
-            didCarouselEnter: false,
-            didCurtainEnter: false,
-
-            // Song change bypasses scroll exit part of transition.
-            canSceneUpdate: false,
-
-            /**
-             * Once transition condition has already been met, its callbacks
-             * will not execute again. So only reset the values set in its
-             * callbacks if the condition has not yet been met. (I'm not 100%
-             * certain that this logic is optimal, but at the very least it
-             * works and doesn't break.)
-             */
-            ...canSceneUpdate && {
-                didSceneUpdate: false
-            },
-
-            canSceneEnter: false,
-            didSceneEnter: false
-        })
+    useEffect(() => {
+        dispatch(updateIsSongSelectComplete(false))
 
         // Clear previous timeout.
-        clearTimeout(this.state.songChangeTimeoutId)
+        clearTimeout(timeoutRef.current.songChangeTimeoutId)
 
-        /**
-         * Wait for song selection to finish.
-         */
-        const songChangeTimeoutId = setTimeout(
-            this._dispatchSongSelectComplete, 200
-        )
+        // Wait for song selection to finish.
+        setSongChangeTimeoutId(setTimeout(
+            beginSongSelect, 200
+        ))
+    }, [selectedSongIndex])
 
-        this.setState({
-            songChangeTimeoutId
-        })
-    }
-
-    _dispatchSongSelectComplete = () => {
-        this.props.updateEntranceStore({ isSongSelectInFlux: false })
-    }
-
-    render() {
-        return null
-    }
+    return null
 }
 
-export default connect(
-    mapStateToProps,
-    { updateEntranceStore }
-)(SongChangeExitListener)
+export default SongChangeExitListener

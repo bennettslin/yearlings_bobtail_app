@@ -18,3 +18,8 @@ export const updateLyricStore = payload => {
         payload: getDefinedOnlyPayload(payload)
     })
 }
+
+export const updateIsSongSelectComplete = isSongSelectComplete => ({
+    type: LYRIC_STORE,
+    payload: { isSongSelectComplete }
+})

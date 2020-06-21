@@ -1,6 +1,5 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateSceneStore } from '../../../redux/scene/action'
 import {
     mapSelectedSongIndex,
@@ -14,19 +13,11 @@ const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
         selectedSceneIndex = useSelector(mapSelectedSceneIndex)
 
     const _dispatchCanSceneEnterOrUpdate = ({
-        isUpdate,
         songIndex = selectedSongIndex,
         sceneIndex = selectedSceneIndex
 
     } = {}) => {
         logTransition('Begin enter or update from scene change.')
-        dispatch(updateEntranceStore({
-            ...isUpdate ? {
-                canSceneUpdate: true
-            } : {
-                canSceneEnter: true
-            }
-        }))
 
         dispatch(updateSceneStore({
             sceneSongIndex: songIndex,

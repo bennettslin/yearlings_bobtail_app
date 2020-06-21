@@ -1,6 +1,6 @@
 export const getIsPopupAnnotationShown = ({
     inMain,
-    canLyricCarouselEnter,
+    isSongSelectComplete,
     lyricAnnotationIndex,
     isAboutShown,
     isScoreShown,
@@ -12,7 +12,7 @@ export const getIsPopupAnnotationShown = ({
 }) => {
     // First determine if *any* popup annotation is shown.
     const isSomePopupAnnotationShown =
-        canLyricCarouselEnter &&
+        isSongSelectComplete &&
         Boolean(lyricAnnotationIndex) &&
 
         /**

@@ -7,11 +7,11 @@ import SliderStanzas from './Stanzas'
 import SliderTimes from './Times'
 import AccessDirectionLetter from '../Access/DirectionLetter'
 import TipsHand from '../Tips/Hand'
+import { mapIsSongSelectComplete } from '../../redux/lyric/selector'
 import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY
 } from '../../constants/access'
-import { mapCanLyricCarouselEnter } from '../../redux/entrance/selector'
 import { SLIDER } from '../../constants/tips'
 import './style'
 
@@ -19,7 +19,7 @@ const Slider = () => {
     const
         dispatchSliderTouch = useRef(),
         sliderElement = useRef(),
-        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
+        isSongSelectComplete = useSelector(mapIsSongSelectComplete)
 
     const onTouchStart = e => {
         logEvent({ e, componentName: 'Slider' })
@@ -32,7 +32,7 @@ const Slider = () => {
                 ref: sliderElement,
                 className: cx(
                     'Slider',
-                    canLyricCarouselEnter && 'Slider__visible',
+                    isSongSelectComplete && 'Slider__visible',
                     'Rancho'
                 ),
                 onMouseDown: onTouchStart,

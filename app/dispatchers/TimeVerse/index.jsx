@@ -1,7 +1,6 @@
 // Child that knows rules to dispatch time and verse from player.
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../redux/entrance/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
@@ -58,7 +57,6 @@ const TimeVerseDispatcher = forwardRef((props, ref) => {
 
             // There is no scrolling, so complete scene change exit right away.
             logTransition('Scene scroll did exit from time verse.')
-            dispatch(updateEntranceStore({ didSceneScrollExit: true }))
         }
     }
 

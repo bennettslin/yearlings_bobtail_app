@@ -1,9 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-    mapDidCarouselEnter,
-    mapDidLyricEnter
-} from '../../redux/entrance/selector'
+import { mapIsSongSelectComplete } from '../../redux/lyric/selector'
 import { updateScrollCarouselStore } from '../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import {
@@ -14,23 +11,22 @@ import {
 const ScrollRenderListener = () => {
     const
         dispatch = useDispatch(),
-        didCarouselEnter = useSelector(mapDidCarouselEnter),
-        didLyricEnter = useSelector(mapDidLyricEnter),
+        isSongSelectComplete = useSelector(mapIsSongSelectComplete),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue)
 
     useEffect(() => {
-        if (!isSelectedLogue && didCarouselEnter) {
+        if (!isSelectedLogue && isSongSelectComplete) {
             dispatch(updateScrollCarouselStore({
                 scrollCarouselLog: 'Carousel entered.',
                 scrollCarouselIndex: selectedAnnotationIndex,
                 scrollCarouselNoDuration: true
             }))
         }
-    }, [didCarouselEnter])
+    }, [isSongSelectComplete])
 
     useEffect(() => {
-        if (!isSelectedLogue && didLyricEnter) {
+        if (!isSelectedLogue && isSongSelectComplete) {
             dispatch(updateScrollLyricStore({
                 scrollLyricLog: 'Lyric entered.',
                 scrollLyricByVerse: true,
@@ -39,7 +35,7 @@ const ScrollRenderListener = () => {
                 queuedSceneChangeExitScrollCallback: true
             }))
         }
-    }, [didLyricEnter])
+    }, [isSongSelectComplete])
 
     return null
 }

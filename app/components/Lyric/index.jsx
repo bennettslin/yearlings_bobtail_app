@@ -9,12 +9,12 @@ import LyricToggles from './Toggles'
 import VerseBar from './VerseBar'
 import CarouselAccess from '../Carousel/Access'
 import './style'
-import { mapCanLyricCarouselEnter } from '../../redux/entrance/selector'
+import { mapIsSongSelectComplete } from '../../redux/lyric/selector'
 
 const Lyric = forwardRef((props, ref) => {
     const
         handleVerseBarWheel = useRef(),
-        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
+        isSongSelectComplete = useSelector(mapIsSongSelectComplete)
 
     useEffect(() => {
         logMount('Lyric')
@@ -44,7 +44,7 @@ const Lyric = forwardRef((props, ref) => {
             <CSSTransition
                 appear
                 {...{
-                    in: canLyricCarouselEnter,
+                    in: isSongSelectComplete,
                     timeout: 250,
                     classNames: { enterDone: 'Lyric__visible' },
                     onExited,

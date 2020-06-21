@@ -7,11 +7,11 @@ import AspectRatio from '../AspectRatio'
 import InlineSvg from '../../../modules/InlineSvg'
 import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
 import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
-import { mapCanLyricCarouselEnter } from '../../../redux/entrance/selector'
+import { mapIsSongSelectComplete } from '../../../redux/lyric/selector'
 import './style'
 
 const Curtains = () => {
-    const canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
+    const isSongSelectComplete = useSelector(mapIsSongSelectComplete)
 
     const onExited = () => {
         logTransition('Curtain did exit.')
@@ -26,7 +26,7 @@ const Curtains = () => {
             <CSSTransition
                 appear
                 {...{
-                    in: canLyricCarouselEnter,
+                    in: isSongSelectComplete,
                     timeout: 250,
                     classNames: { enterDone: 'Curtains__parted' },
                     onExited,
