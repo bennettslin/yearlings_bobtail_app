@@ -10,7 +10,6 @@
 * Try to get rid of listeners directory. Either remove or move to managers.
     * Move scrollRender listener dispatches to songChange listener.
     * Move lyric listener dispatches to where those are dispatched.
-    * Lyric indices listener can be in the reducer.
     * Scroll lyric listener has scene change dispatch that can be removed?
 * What is mapIsSelectPlayReady?
 * Is song selection still slower through access after refactor?

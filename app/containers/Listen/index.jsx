@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
 import LyricListener from '../../listeners/Lyric'
-import LyricIndicesListener from '../../listeners/LyricIndices'
 import SceneChangeListener from '../../listeners/SceneChange'
 import SongChangeListener from '../../listeners/SongChange'
 import ScrollRenderListener from '../../listeners/ScrollRender'
@@ -20,7 +19,6 @@ const ListenContainer = () => {
             <AnnotationAccessListener />
             <AnnotationListener />
             <LyricListener />
-            <LyricIndicesListener />
             <ScrollRenderListener />
             <SceneChangeListener />
             <SongChangeListener />

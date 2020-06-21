@@ -1,5 +1,6 @@
 // Reducers for lyric and carousel state.
-import { LYRIC_STORE } from '../../constants/store'
+import { hasKey } from '../../helpers/action'
+import { LYRIC_STORE, SELECTED_STORE } from '../../constants/store'
 import { LYRIC_DEFAULTS } from './default'
 
 export default (
@@ -12,6 +13,29 @@ export default (
                 ...state,
                 ...payload
             }
+        case SELECTED_STORE: {
+            const {
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex
+            } = payload
+
+            return {
+                ...state,
+                /**
+                 * If verse or annotation was changed within the same song, set
+                 * here right away.
+                 */
+                ...!hasKey(selectedSongIndex) && {
+                    ...hasKey(selectedVerseIndex) && {
+                        lyricVerseIndex: selectedVerseIndex
+                    },
+                    ...hasKey(selectedAnnotationIndex) && {
+                        lyricAnnotationIndex: selectedAnnotationIndex
+                    }
+                }
+            }
+        }
         default:
             return state
     }
