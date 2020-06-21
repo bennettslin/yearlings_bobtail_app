@@ -1,9 +1,9 @@
 export default [
     /* Weekend work. */
     {
-        taskName: `For now, just tear out the canEnter and didEnter weirdness.`,
-        workedHours: 0,
-        neededHours: 8
+        taskName: `Entrance refactor.`,
+        workedHours: 8,
+        neededHours: 16
     },
     {
         taskName: `Make sure all presences are properly behind or in front as appropriate.`,

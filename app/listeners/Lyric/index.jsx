@@ -14,6 +14,7 @@ const LyricListener = () => {
 
     const dispatchScrollLyric = scrollLyricLog => {
         if (!isLyricLogue) {
+            // TODO: Create a single action for this.
             dispatch(updateScrollLyricStore({
                 scrollLyricLog,
                 scrollLyricByVerse: true,

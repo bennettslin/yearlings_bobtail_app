@@ -9,7 +9,7 @@ import SongChangeListener from '../../listeners/SongChange'
 import ScrollRenderListener from '../../listeners/ScrollRender'
 import UrlListener from '../../listeners/Url'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
-import AudioPlayerManager from '../../managers/AudioPlayer'
+import AudioManager from '../../managers/Audio'
 
 const ListenContainer = () => {
     useEffect(() => {
@@ -28,7 +28,7 @@ const ListenContainer = () => {
             <SongChangeListener />
             <UrlListener />
             <WikiWormholeListener />
-            <AudioPlayerManager />
+            <AudioManager />
         </>
     )
 }

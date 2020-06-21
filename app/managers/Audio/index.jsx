@@ -17,7 +17,7 @@ import {
 } from '../../redux/selected/selector'
 import { mapAudioOptionIndex } from '../../redux/session/selector'
 
-const PlayerManager = () => {
+const AudioManager = () => {
     const
         dispatch = useDispatch(),
         dispatchSong = useRef(),
@@ -95,7 +95,7 @@ const PlayerManager = () => {
 
     return (
         <div className={cx(
-            'AudioPlayerManager',
+            'AudioManager',
             'dNC'
         )}>
             {getSongNotLogueIndices().map(songIndex => (
@@ -114,4 +114,4 @@ const PlayerManager = () => {
     )
 }
 
-export default PlayerManager
+export default AudioManager

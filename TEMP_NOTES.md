@@ -1,10 +1,25 @@
-# Entrance store refactor
-* If isSongChangeDone is not true, then song change listener handles scene change.
+# Entrance refactor
+* Have entrance reducer set isSongChangeDone and/or isSceneChangeDone.
+* Do I want isSongChangeDone and isSceneChangeDone to be mutually exclusive? Or to go together? Maybe leaning towards going together right now.
+* Ensure that scene change happens when changing song.
+* Can scene change listener be simplified? Dispatch scene indices at once instead of listening for isSceneChangeDone?
 * Audit all log transitions. Still needed?
 * Make curtain animation smooth.
+* Make scrolling smooth.
 
-# Issues
+# Post entrance refactor
+* Audit all handlers and listeners.
+    * Have all handlers be dispatcher/listener pair.
+    * VerseBar handler is really dispatcher and listener.
+    * Resize is manager.
+* Try to get rid of listeners directory. Either remove or move to managers.
+    * Move scrollRender listener dispatches to songChange listener.
+    * Move lyric listener dispatches to where those are dispatched.
+    * Lyric indices listener can be in the reducer.
+    * Scroll lyric listener has scene change dispatch that can be removed?
+    * Can overviewTips listener completely be in reducer?
 * What is mapIsSelectPlayReady?
+* Is song selection still slower through access after refactor?
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
@@ -16,11 +31,6 @@
 # Minor issues, to be investigated while production is on master before Gatsby.
 * tips hand in garryowen for score
 * Do I really want scene activation to work as it does, where you need to go next, then previous, before hitting selected verse that is not the start of scene?
-
-# Bugs that may get fixed after canEnter tear out.
-* Song selection seems slower through access?
-* Determine if scene store really needs its own song and scene index.
-* Focus container can't focus lyric right away because ref doesn't exist. Maybe this will be fine once lyric mounts first?
 
 # Easy reduction tasks
 * Some todos to make a selector.
