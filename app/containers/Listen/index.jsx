@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
-import AppLoadListener from '../../listeners/AppLoad'
 import LyricListener from '../../listeners/Lyric'
 import LyricIndicesListener from '../../listeners/LyricIndices'
 import OverviewTipsListener from '../../listeners/OverviewTips'
@@ -25,7 +24,6 @@ const ListenContainer = () => {
         <>
             <AnnotationAccessListener />
             <AnnotationListener />
-            <AppLoadListener />
             <LyricListener />
             <LyricIndicesListener />
             <OverviewTipsListener />
