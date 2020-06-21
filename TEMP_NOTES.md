@@ -6,7 +6,6 @@
 * Audit all handlers and listeners.
     * Have all handlers be dispatcher/listener pair.
     * VerseBar handler is really dispatcher and listener.
-    * Resize is manager.
 * Try to get rid of listeners directory. Either remove or move to managers.
     * Move scrollRender listener dispatches to songChange listener.
     * Move lyric listener dispatches to where those are dispatched.

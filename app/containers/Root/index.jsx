@@ -1,7 +1,7 @@
 // eslint-disable-next-line object-curly-newline
 import React, { useEffect, forwardRef, useRef } from 'react'
 import cx from 'classnames'
-import ResizeListener from '../../handlers/Resize'
+import ResizeManager from '../../managers/Resize'
 import Carousel from '../../components/Carousel'
 import Theatre from '../../components/Theatre'
 import Main from '../../components/Main'
@@ -33,7 +33,7 @@ const RootContainer = forwardRef((props, ref) => {
                 )
             }}
         >
-            <ResizeListener {...{ getRootContainerElement }} />
+            <ResizeManager {...{ getRootContainerElement }} />
             <WrapperContainer>
                 <Theatre />
                 <Carousel />

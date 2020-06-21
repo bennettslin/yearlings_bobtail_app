@@ -11,7 +11,7 @@ import {
     mapWindowHeight
 } from '../../redux/viewport/selector'
 
-const ResizeListener = ({ getRootContainerElement }) => {
+const ResizeManager = ({ getRootContainerElement }) => {
     const
         dispatch = useDispatch(),
         timeoutRef = useRef(),
@@ -78,8 +78,8 @@ const ResizeListener = ({ getRootContainerElement }) => {
     return null
 }
 
-ResizeListener.propTypes = {
+ResizeManager.propTypes = {
     getRootContainerElement: PropTypes.func.isRequired
 }
 
-export default ResizeListener
+export default ResizeManager
