@@ -4,10 +4,6 @@ export const mapCanTheatreEnter = (
     { [ENTRANCE_STORE]: { canTheatreEnter } }
 ) => canTheatreEnter
 
-export const mapDidTheatreEnter = (
-    { [ENTRANCE_STORE]: { didTheatreEnter } }
-) => didTheatreEnter
-
 export const mapDidSceneScrollExit = (
     { [ENTRANCE_STORE]: { didSceneScrollExit } }
 ) => didSceneScrollExit

@@ -34,6 +34,7 @@ const Curtains = () => {
     return (
         <AspectRatio>
             <CSSTransition
+                appear
                 {...{
                     in: canLyricCarouselEnter,
                     timeout: 250,

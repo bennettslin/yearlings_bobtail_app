@@ -31,7 +31,6 @@ const Carousel = () => {
     return (
         <CSSTransition
             appear
-            mountOnEnter
             {...{
                 in: canLyricCarouselEnter,
                 timeout: 250,

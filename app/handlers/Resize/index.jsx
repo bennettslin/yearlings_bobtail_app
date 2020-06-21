@@ -2,10 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-    resetTheatreEntrance,
-    updateEntranceStore
-} from '../../redux/entrance/action'
+import { updateTheatreEntrance } from '../../redux/entrance/action'
 import { updateViewportStore } from '../../redux/viewport/action'
 import { getWindowDimensions } from '../../helpers/resize/device'
 import { getWindow } from '../../utils/browser'
@@ -28,11 +25,6 @@ const ResizeListener = ({ getRootContainerElement }) => {
         windowResizeTimeoutId
     }
 
-    const _updateCanTheatreEnter = () => {
-        logTransition('Theatre can enter.')
-        dispatch(updateEntranceStore({ canTheatreEnter: true }))
-    }
-
     const beginEnterTransition = () => {
         const {
             windowHeight,
@@ -44,7 +36,7 @@ const ResizeListener = ({ getRootContainerElement }) => {
             windowHeight
         }))
 
-        _updateCanTheatreEnter()
+        dispatch(updateTheatreEntrance(true))
     }
 
     const beginExitTransition = () => {
@@ -64,7 +56,7 @@ const ResizeListener = ({ getRootContainerElement }) => {
             nextHeight !== timeoutRef.current.windowHeight ||
             nextWidth !== timeoutRef.current.windowWidth
         ) {
-            dispatch(resetTheatreEntrance())
+            dispatch(updateTheatreEntrance())
 
             // Clear previous timeout.
             clearTimeout(timeoutRef.current.windowResizeTimeoutId)
@@ -77,12 +69,6 @@ const ResizeListener = ({ getRootContainerElement }) => {
     }
 
     useEffect(() => {
-        /**
-         * As soon as we have a reference to the root container, begin
-         * showing theatre.
-         */
-        _updateCanTheatreEnter()
-
         getWindow().onresize = beginExitTransition
         return () => {
             getWindow().onresize = null

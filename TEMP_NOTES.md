@@ -2,7 +2,6 @@
 * Begin thinking about tearing out canEnter.
 * Carousel, lyric, curtain, scene for song change.
 * Scene for scene change.
-* Theatre for window change.
 
 # Issues
 * What is mapIsSelectPlayReady?
@@ -12,6 +11,7 @@
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
+* Side card in slider should have white text.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * tips hand in garryowen for score

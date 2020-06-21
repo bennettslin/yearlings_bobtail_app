@@ -47,7 +47,6 @@ const Lyric = forwardRef((props, ref) => {
         <>
             <CSSTransition
                 appear
-                mountOnEnter
                 {...{
                     in: canLyricCarouselEnter,
                     timeout: 250,

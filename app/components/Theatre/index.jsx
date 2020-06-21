@@ -1,8 +1,6 @@
-// Section to show the stage illustrations.
 import React, { useEffect } from 'react'
 import cx from 'classnames'
-import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../redux/entrance/action'
+import { useSelector } from 'react-redux'
 import { mapCanTheatreEnter } from '../../redux/entrance/selector'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Stage from '../Stage'
@@ -16,13 +14,10 @@ import { removeLoadingIndicator } from '../../utils/browser'
 import './style'
 
 const Theatre = () => {
-    const
-        dispatch = useDispatch(),
-        canTheatreEnter = useSelector(mapCanTheatreEnter)
+    const canTheatreEnter = useSelector(mapCanTheatreEnter)
 
     const onEntered = () => {
         logTransition('Theatre did enter.')
-        dispatch(updateEntranceStore({ didTheatreEnter: true }))
     }
 
     useEffect(() => {
@@ -32,6 +27,7 @@ const Theatre = () => {
 
     return (
         <CSSTransition
+            appear
             {...{
                 in: canTheatreEnter,
                 timeout: 200,
