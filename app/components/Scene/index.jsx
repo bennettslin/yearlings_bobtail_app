@@ -10,6 +10,10 @@ import { CUBE_Y_INDICES } from '../../constants/cubeIndex'
 const Scene = () => {
     const isSceneChangeDone = useSelector(mapIsSceneChangeDone)
 
+    const onExit = () => {
+        logTransition('Scene did exit.')
+    }
+
     const onEntered = () => {
         logTransition('Scene did enter.')
     }
@@ -23,6 +27,7 @@ const Scene = () => {
             {...{
                 in: isSceneChangeDone,
                 timeout: 200,
+                onExit,
                 onEntered
             }}
         >

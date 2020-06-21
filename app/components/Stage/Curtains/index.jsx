@@ -13,12 +13,12 @@ import './style'
 const Curtains = () => {
     const isSongChangeDone = useSelector(mapIsSongChangeDone)
 
-    const onExited = () => {
-        logTransition('Curtain did exit.')
+    const onExit = () => {
+        logTransition('Curtain did close.')
     }
 
     const onEntered = () => {
-        logTransition('Curtain did enter.')
+        logTransition('Curtain did open.')
     }
 
     return (
@@ -29,7 +29,7 @@ const Curtains = () => {
                     in: isSongChangeDone,
                     timeout: 250,
                     classNames: { enterDone: 'Curtains__parted' },
-                    onExited,
+                    onExit,
                     onEntered
                 }}
             >

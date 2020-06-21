@@ -1,8 +1,8 @@
 # Entrance refactor
 * Can scene change listener be simplified? Dispatch scene indices at once instead of listening for isSceneChangeDone?
-* Audit all log transitions. Still needed?
 * Make curtain animation smooth.
 * Make scrolling smooth.
+* Audit all log transitions. Those in time verse and scroll listen still needed?
 
 # Post entrance refactor
 * Audit all handlers and listeners.

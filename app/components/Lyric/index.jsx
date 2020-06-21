@@ -20,7 +20,7 @@ const Lyric = forwardRef((props, ref) => {
         logMount('Lyric')
     }, [])
 
-    const onExited = () => {
+    const onExit = () => {
         logTransition('Lyric did exit.')
     }
 
@@ -47,7 +47,7 @@ const Lyric = forwardRef((props, ref) => {
                     in: isSongChangeDone,
                     timeout: 250,
                     classNames: { enterDone: 'Lyric__visible' },
-                    onExited,
+                    onExit,
                     onEntered
                 }}
             >

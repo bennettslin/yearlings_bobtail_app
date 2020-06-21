@@ -12,7 +12,7 @@ import './style'
 const Carousel = () => {
     const isSongChangeDone = useSelector(mapIsSongChangeDone)
 
-    const onExited = () => {
+    const onExit = () => {
         logTransition('Carousel did exit.')
     }
 
@@ -31,7 +31,7 @@ const Carousel = () => {
                 in: isSongChangeDone,
                 timeout: 250,
                 classNames: { enterDone: 'Carousel__visible' },
-                onExited,
+                onExit,
                 onEntered
             }}
         >

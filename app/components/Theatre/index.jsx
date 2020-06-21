@@ -16,6 +16,10 @@ import './style'
 const Theatre = () => {
     const isWindowResizeDone = useSelector(mapIsWindowResizeDone)
 
+    const onExit = () => {
+        logTransition('Theatre did exit.')
+    }
+
     const onEntered = () => {
         logTransition('Theatre did enter.')
     }
@@ -32,6 +36,7 @@ const Theatre = () => {
                 in: isWindowResizeDone,
                 timeout: 200,
                 classNames: { enterDone: 'Theatre__visible' },
+                onExit,
                 onEntered
             }}
         >
