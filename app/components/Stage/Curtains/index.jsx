@@ -1,20 +1,24 @@
 // Section to show the stage proscenium.
 import React from 'react'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import AspectRatio from '../AspectRatio'
 import InlineSvg from '../../../modules/InlineSvg'
 import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
 import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
 import { mapIsSongChangeDone } from '../../../redux/entrance/selector'
+import { updateIsSongChangeDone } from '../../../redux/entrance/action'
 import './style'
 
 const Curtains = () => {
-    const isSongChangeDone = useSelector(mapIsSongChangeDone)
+    const
+        dispatch = useDispatch(),
+        isSongChangeDone = useSelector(mapIsSongChangeDone)
 
-    const onExit = () => {
+    const onExited = () => {
         logTransition('Curtain did close.')
+        dispatch(updateIsSongChangeDone(true))
     }
 
     const onEntered = () => {
@@ -27,9 +31,10 @@ const Curtains = () => {
                 appear
                 {...{
                     in: isSongChangeDone,
-                    timeout: 250,
+                    // Allow for CSS transition of 0.25s.
+                    timeout: 275,
                     classNames: { enterDone: 'Curtains__parted' },
-                    onExit,
+                    onExited,
                     onEntered
                 }}
             >

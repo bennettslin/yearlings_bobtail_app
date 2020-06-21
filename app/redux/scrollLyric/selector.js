@@ -23,8 +23,3 @@ export const mapScrollLyricNoDuration = (
 export const mapScrollLyricFromAutoScroll = (
     { [SCROLL_LYRIC_STORE]: { scrollLyricFromAutoScroll } }
 ) => scrollLyricFromAutoScroll
-
-// TODO: What is this value?
-export const mapQueuedSceneChangeExitScrollCallback = (
-    { [SCROLL_LYRIC_STORE]: { queuedSceneChangeExitScrollCallback } }
-) => queuedSceneChangeExitScrollCallback

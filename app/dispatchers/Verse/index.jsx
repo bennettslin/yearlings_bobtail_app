@@ -56,8 +56,7 @@ const VerseDispatcher = forwardRef((props, ref) => {
             scrollLyricLog: scrollLog,
             scrollLyricByVerse: true,
             scrollLyricIndex: selectedVerseIndex,
-            scrollLyricAlways: true,
-            queuedSceneChangeExitScrollCallback: true
+            scrollLyricAlways: true
         }))
     }
 

@@ -31,8 +31,7 @@ const ScrollRenderListener = () => {
                 scrollLyricLog: 'Lyric entered.',
                 scrollLyricByVerse: true,
                 scrollLyricNoDuration: true,
-                scrollLyricAlways: true,
-                queuedSceneChangeExitScrollCallback: true
+                scrollLyricAlways: true
             }))
         }
     }, [isSongChangeDone])

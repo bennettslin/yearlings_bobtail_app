@@ -15,8 +15,7 @@ import {
     mapScrollLyricIndex,
     mapScrollLyricAlways,
     mapScrollLyricNoDuration,
-    mapScrollLyricFromAutoScroll,
-    mapQueuedSceneChangeExitScrollCallback
+    mapScrollLyricFromAutoScroll
 } from '../../../redux/scrollLyric/selector'
 import {
     mapIsAutoScroll,
@@ -46,32 +45,14 @@ const ScrollLyricListener = ({
         scrollLyricIndex = useSelector(mapScrollLyricIndex),
         scrollLyricAlways = useSelector(mapScrollLyricAlways),
         scrollLyricNoDuration = useSelector(mapScrollLyricNoDuration),
-        scrollLyricFromAutoScroll = useSelector(mapScrollLyricFromAutoScroll),
-        queuedSceneChangeExitScrollCallback = useSelector(mapQueuedSceneChangeExitScrollCallback)
-
-    const _completeSceneChangeExit = () => {
-        logTransition('Scene scroll did exit from lyric scroll.')
-    }
-
-    const _setTimeoutForSceneChangeExit = () => {
-        // This timeout is necessary to fully complete scroll animation.
-        setTimeout(_completeSceneChangeExit, 0)
-    }
+        scrollLyricFromAutoScroll = useSelector(mapScrollLyricFromAutoScroll)
 
     useEffect(() => {
         if (scrollLyricLog) {
             // TODO: Make this a selector
-            if (isHeightlessLyric && !isLyricExpanded) {
-                /**
-                 * Don't scroll if not expanded in heightless lyric. Just call
-                 * the scene change callback right away.
-                 */
-                if (queuedSceneChangeExitScrollCallback) {
-                    _completeSceneChangeExit()
-                }
-
-            // TODO: Make this a selector.
-            } else if (
+            if (
+                !isHeightlessLyric ||
+                isLyricExpanded ||
                 // If paused, always scroll.
                 !isPlaying ||
 
@@ -104,10 +85,7 @@ const ScrollLyricListener = ({
                     index,
                     noDuration: scrollLyricNoDuration,
                     deviceWidthIndex,
-                    isLyricExpanded,
-                    ...queuedSceneChangeExitScrollCallback && {
-                        callback: _setTimeoutForSceneChangeExit
-                    }
+                    isLyricExpanded
                 })
             }
 

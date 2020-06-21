@@ -44,8 +44,7 @@ const TimeVerseDispatcher = forwardRef((props, ref) => {
                     `Player autoScroll to verse ${nextVerseIndex}.`,
                 scrollLyricByVerse: true,
                 scrollLyricIndex: nextVerseIndex,
-                scrollLyricFromAutoScroll: true,
-                queuedSceneChangeExitScrollCallback: true
+                scrollLyricFromAutoScroll: true
             }))
 
         } else {
@@ -54,9 +53,6 @@ const TimeVerseDispatcher = forwardRef((props, ref) => {
              * view, to in it, to below it. So, determine verse bars.
              */
             dispatch(updateVerseBarsStore({ queuedDetermineVerseBars: true }))
-
-            // There is no scrolling, so complete scene change exit right away.
-            logTransition('Scene scroll did exit from time verse.')
         }
     }
 

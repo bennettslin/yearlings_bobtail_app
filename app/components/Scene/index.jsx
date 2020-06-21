@@ -1,6 +1,7 @@
 import React, { useEffect, Fragment as ___ } from 'react'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { updateIsSceneChangeDone } from '../../redux/entrance/action'
 import { mapIsSceneChangeDone } from '../../redux/entrance/selector'
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
@@ -8,10 +9,13 @@ import Presences from '../Presences'
 import { CUBE_Y_INDICES } from '../../constants/cubeIndex'
 
 const Scene = () => {
-    const isSceneChangeDone = useSelector(mapIsSceneChangeDone)
+    const
+        dispatch = useDispatch(),
+        isSceneChangeDone = useSelector(mapIsSceneChangeDone)
 
-    const onExit = () => {
+    const onExited = () => {
         logTransition('Scene did exit.')
+        dispatch(updateIsSceneChangeDone(true))
     }
 
     const onEntered = () => {
@@ -26,8 +30,9 @@ const Scene = () => {
         <Transition
             {...{
                 in: isSceneChangeDone,
-                timeout: 200,
-                onExit,
+                // Allow for CSS transition of 0.25s.
+                timeout: 275,
+                onExited,
                 onEntered
             }}
         >

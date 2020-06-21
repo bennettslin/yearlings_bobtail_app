@@ -1,7 +1,6 @@
 # Entrance refactor
-* Can scene change listener be simplified? Dispatch scene indices at once instead of listening for isSceneChangeDone?
-* Make curtain animation smooth.
 * Make scrolling smooth.
+* Scene change is different between song and scene change.
 * Audit all log transitions. Those in time verse and scroll listen still needed?
 
 # Post entrance refactor

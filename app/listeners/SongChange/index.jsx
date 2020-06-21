@@ -1,8 +1,7 @@
-// eslint-disable-next-line object-curly-newline
-import { useEffect, useRef, useState } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateIsSongChangeDone } from '../../redux/entrance/action'
 import { updateLyricStore } from '../../redux/lyric/action'
+import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
@@ -12,13 +11,10 @@ import {
 const SongChangeListener = () => {
     const
         dispatch = useDispatch(),
-        timeoutRef = useRef(),
+        isSongChangeDone = useSelector(mapIsSongChangeDone),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
-        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        [songChangeTimeoutId, setSongChangeTimeoutId] = useState(-1)
-
-    timeoutRef.current = { songChangeTimeoutId }
+        selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex)
 
     const completeSongSelect = () => {
         dispatch(updateLyricStore({
@@ -26,20 +22,15 @@ const SongChangeListener = () => {
             lyricVerseIndex: selectedVerseIndex,
             lyricAnnotationIndex: selectedAnnotationIndex
         }))
-        dispatch(updateIsSongChangeDone(true))
     }
 
     useEffect(() => {
-        // If song changed, begin song transition.
+        if (isSongChangeDone) {
+            completeSongSelect()
+        }
 
-        // Clear previous timeout.
-        clearTimeout(timeoutRef.current.songChangeTimeoutId)
-
-        // Wait for song selection to finish.
-        setSongChangeTimeoutId(setTimeout(
-            completeSongSelect, 200
-        ))
-    }, [selectedSongIndex])
+    // This is set by stage curtain exit.
+    }, [isSongChangeDone])
 
     return null
 }
