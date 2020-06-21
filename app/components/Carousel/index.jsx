@@ -6,11 +6,11 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import LayoutContainer from '../Main/LayoutContainer'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
-import { mapIsSongSelectComplete } from '../../redux/lyric/selector'
+import { mapCanLyricCarouselEnter } from '../../redux/lyric/selector'
 import './style'
 
 const Carousel = () => {
-    const isSongSelectComplete = useSelector(mapIsSongSelectComplete)
+    const canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
 
     const onExited = () => {
         logTransition('Carousel did exit.')
@@ -28,7 +28,7 @@ const Carousel = () => {
         <CSSTransition
             appear
             {...{
-                in: isSongSelectComplete,
+                in: canLyricCarouselEnter,
                 timeout: 250,
                 classNames: { enterDone: 'Carousel__visible' },
                 onExited,

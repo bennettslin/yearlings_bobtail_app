@@ -1,6 +1,11 @@
 # Entrance store refactor
-* Are scene change dispatchers still needed?
+* Get rid of current scene change listeners.
+* Make new scene change listener like song change listener.
+* Rename to isWindowResizeDone, isSongChangeDone, isSceneChange done for clarity.
+* Maybe move canLyricCarouselEnter back to entrance store.
+* If isSongChangeDone is true, then scene change listener handles scene change. If not, then song change listener handles it.
 * Audit all log transitions. Still needed?
+* Make curtain animation smooth.
 
 # Issues
 * What is mapIsSelectPlayReady?

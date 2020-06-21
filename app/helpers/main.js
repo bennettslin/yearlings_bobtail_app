@@ -4,7 +4,7 @@ export const getIsShelfLeftShown = ({
     isLyricExpanded,
     isActivated,
     isOverlayShown,
-    isSongSelectComplete,
+    canLyricCarouselEnter,
     lyricAnnotationIndex,
     isLyricLogue,
     isOverviewShown,
@@ -24,7 +24,7 @@ export const getIsShelfLeftShown = ({
 
     // Otherwise, determine based on these factors.
     return (
-        isSongSelectComplete &&
+        canLyricCarouselEnter &&
         !isDotsSlideShown &&
         !isLyricExpanded &&
         !isOverlayShown &&

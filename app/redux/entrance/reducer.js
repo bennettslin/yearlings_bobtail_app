@@ -1,4 +1,3 @@
-// Reducers for lyric and carousel state.
 import { ENTRANCE_STORE } from '../../constants/store'
 import { ENTRANCE_DEFAULTS } from './default'
 

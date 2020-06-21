@@ -6,7 +6,7 @@ import LyricIndicesListener from '../../listeners/LyricIndices'
 import OverviewTipsListener from '../../listeners/OverviewTips'
 import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
 import SceneChangeEnterListener from '../../listeners/SceneChange/Enter'
-import SongChangeExitListener from '../../listeners/SongChange'
+import SongChangeListener from '../../listeners/SongChange'
 import ScrollRenderListener from '../../listeners/ScrollRender'
 import UrlListener from '../../listeners/Url'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
@@ -27,7 +27,7 @@ const ListenContainer = () => {
             <SceneChangeExitListener />
             <SceneChangeEnterListener />
             <ScrollRenderListener />
-            <SongChangeExitListener />
+            <SongChangeListener />
             <UrlListener />
             <WikiWormholeListener />
             <AudioPlayerManager />

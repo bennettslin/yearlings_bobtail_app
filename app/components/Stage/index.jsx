@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { mapIsSongSelectComplete } from '../../redux/lyric/selector'
+import { mapCanLyricCarouselEnter } from '../../redux/lyric/selector'
 import Transition from 'react-transition-group/Transition'
 import AspectRatio from './AspectRatio'
 import Scene from '../Scene'
@@ -11,7 +11,7 @@ import Sky from '../Scene/Sky'
 import Wood from '../Scene/Wood'
 
 const Stage = () => {
-    const isSongSelectComplete = useSelector(mapIsSongSelectComplete)
+    const canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
 
     const onEntered = () => {
         logTransition('Stage did enter.')
@@ -25,7 +25,7 @@ const Stage = () => {
         <AspectRatio>
             <Transition
                 {...{
-                    in: isSongSelectComplete,
+                    in: canLyricCarouselEnter,
                     timeout: 200,
                     onEntered
                 }}

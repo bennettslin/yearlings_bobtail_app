@@ -19,7 +19,7 @@ export const updateLyricStore = payload => {
     })
 }
 
-export const updateIsSongSelectComplete = isSongSelectComplete => ({
+export const updateLyricCarouselEntrance = canLyricCarouselEnter => ({
     type: LYRIC_STORE,
-    payload: { isSongSelectComplete }
+    payload: { canLyricCarouselEnter }
 })

@@ -7,7 +7,7 @@ import {
     mapIsDesktopWidth
 } from '../device/selector'
 import {
-    mapIsSongSelectComplete,
+    mapCanLyricCarouselEnter,
     mapLyricAnnotationIndex,
     mapIsLyricLogue
 } from '../lyric/selector'
@@ -52,7 +52,7 @@ export const mapIsShelfLeftShown = createSelector(
     mapIsLyricExpanded,
     mapIsActivated,
     mapIsOverlayShown,
-    mapIsSongSelectComplete,
+    mapCanLyricCarouselEnter,
     mapLyricAnnotationIndex,
     mapIsLyricLogue,
     mapIsOverviewShown,
@@ -63,7 +63,7 @@ export const mapIsShelfLeftShown = createSelector(
         isLyricExpanded,
         isActivated,
         isOverlayShown,
-        isSongSelectComplete,
+        canLyricCarouselEnter,
         lyricAnnotationIndex,
         isLyricLogue,
         isOverviewShown,
@@ -74,7 +74,7 @@ export const mapIsShelfLeftShown = createSelector(
         isLyricExpanded,
         isActivated,
         isOverlayShown,
-        isSongSelectComplete,
+        canLyricCarouselEnter,
         lyricAnnotationIndex,
         isLyricLogue,
         isOverviewShown,

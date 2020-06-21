@@ -2,21 +2,21 @@
 import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
-    updateIsSongSelectComplete,
+    updateLyricCarouselEntrance,
     updateLyricStore
 } from '../../redux/lyric/action'
-import { mapIsSongSelectComplete } from '../../redux/lyric/selector'
+import { mapCanLyricCarouselEnter } from '../../redux/lyric/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex
 } from '../../redux/selected/selector'
 
-const SongChangeExitListener = () => {
+const SongChangeListener = () => {
     const
         dispatch = useDispatch(),
         timeoutRef = useRef(),
-        isSongSelectComplete = useSelector(mapIsSongSelectComplete),
+        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
@@ -25,12 +25,12 @@ const SongChangeExitListener = () => {
     timeoutRef.current = { songChangeTimeoutId }
 
     const beginSongSelect = () => {
-        dispatch(updateIsSongSelectComplete(true))
+        dispatch(updateLyricCarouselEntrance(true))
     }
 
     useEffect(() => {
         // Begin song change transition.
-        dispatch(updateIsSongSelectComplete(false))
+        dispatch(updateLyricCarouselEntrance(false))
 
         // Clear previous timeout.
         clearTimeout(timeoutRef.current.songChangeTimeoutId)
@@ -43,16 +43,16 @@ const SongChangeExitListener = () => {
 
     useEffect(() => {
         // Finish song change transition.
-        if (isSongSelectComplete) {
+        if (canLyricCarouselEnter) {
             dispatch(updateLyricStore({
                 lyricSongIndex: selectedSongIndex,
                 lyricVerseIndex: selectedVerseIndex,
                 lyricAnnotationIndex: selectedAnnotationIndex
             }))
         }
-    }, [isSongSelectComplete])
+    }, [canLyricCarouselEnter])
 
     return null
 }
 
-export default SongChangeExitListener
+export default SongChangeListener

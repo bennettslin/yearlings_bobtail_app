@@ -2,10 +2,10 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { mapIsSongSelectComplete } from '../../redux/lyric/selector'
+import { mapCanLyricCarouselEnter } from '../../redux/lyric/selector'
 
 const TransitionWrapper = ({ children }) => {
-    const isSongSelectComplete = useSelector(mapIsSongSelectComplete)
+    const canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
 
     return (
         <div
@@ -13,7 +13,7 @@ const TransitionWrapper = ({ children }) => {
                 className: cx(
                     'TransitionWrapper',
 
-                    isSongSelectComplete ?
+                    canLyricCarouselEnter ?
                         'TrW__canLyricCarouselEnter' :
                         'TrW__cannotLyricCarouselEnter'
                 )

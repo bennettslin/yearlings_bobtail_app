@@ -6,7 +6,7 @@ import {
 } from '../../helpers/overview'
 import { mapIsPhoneWidth } from '../device/selector'
 import {
-    mapIsSongSelectComplete,
+    mapCanLyricCarouselEnter,
     mapIsLyricLogue
 } from '../lyric/selector'
 import { mapSelectedOverviewOption } from '../option/selector'
@@ -42,18 +42,18 @@ export const mapIsToggleInOverview = createSelector(
 )
 
 export const getMapIsOverviewPopupVisible = inMain => createSelector(
-    mapIsSongSelectComplete,
+    mapCanLyricCarouselEnter,
     mapIsLyricLogue,
     mapIsOverlayShown,
     mapIsOverviewShown,
     (
-        isSongSelectComplete,
+        canLyricCarouselEnter,
         isLyricLogue,
         isOverlayShown,
         isOverviewShown
     ) => getIsOverviewPopupVisible({
         inMain,
-        isSongSelectComplete,
+        canLyricCarouselEnter,
         isLyricLogue,
         isOverlayShown,
         isOverviewShown

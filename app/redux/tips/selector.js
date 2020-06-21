@@ -7,7 +7,7 @@ import {
     mapIsDesktopWidth
 } from '../device/selector'
 import {
-    mapIsSongSelectComplete,
+    mapCanLyricCarouselEnter,
     mapLyricSongIndex,
     mapIsLyricLogue
 } from '../lyric/selector'
@@ -44,15 +44,15 @@ export const mapIsTipsShown = createSelector(
 )
 
 export const mapIsTipsPopupVisible = createSelector(
-    mapIsSongSelectComplete,
+    mapCanLyricCarouselEnter,
     mapIsLyricLogue,
     mapIsTipsShown,
     (
-        isSongSelectComplete,
+        canLyricCarouselEnter,
         isLyricLogue,
         isTipsShown
     ) => (
-        isSongSelectComplete &&
+        canLyricCarouselEnter &&
         !isLyricLogue &&
         isTipsShown
     )

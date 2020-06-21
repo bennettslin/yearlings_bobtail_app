@@ -2,9 +2,9 @@ import { createSelector } from 'reselect'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { LYRIC_STORE } from '../../constants/store'
 
-export const mapIsSongSelectComplete = (
-    { [LYRIC_STORE]: { isSongSelectComplete } }
-) => isSongSelectComplete
+export const mapCanLyricCarouselEnter = (
+    { [LYRIC_STORE]: { canLyricCarouselEnter } }
+) => canLyricCarouselEnter
 
 export const mapLyricSongIndex = (
     { [LYRIC_STORE]: { lyricSongIndex } }
