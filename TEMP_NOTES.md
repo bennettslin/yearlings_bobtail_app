@@ -1,6 +1,7 @@
 # Entrance refactor
 * Make scrolling smooth.
 * Scene change is different between song and scene change.
+* Does not allow for rapid song change?
 
 # Post entrance refactor
 * Audit all handlers and listeners.
@@ -11,7 +12,6 @@
     * Move lyric listener dispatches to where those are dispatched.
     * Lyric indices listener can be in the reducer.
     * Scroll lyric listener has scene change dispatch that can be removed?
-    * Can overviewTips listener completely be in reducer?
 * What is mapIsSelectPlayReady?
 * Is song selection still slower through access after refactor?
 
