@@ -2,8 +2,7 @@
 
 import React, { useEffect } from 'react'
 import cx from 'classnames'
-import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../redux/entrance/action'
+import { useSelector } from 'react-redux'
 import { mapCanSceneEnter } from '../../redux/entrance/selector'
 import Transition from 'react-transition-group/Transition'
 import AspectRatio from './AspectRatio'
@@ -12,13 +11,10 @@ import Sky from '../Scene/Sky'
 import Wood from '../Scene/Wood'
 
 const Stage = () => {
-    const
-        dispatch = useDispatch(),
-        canSceneEnter = useSelector(mapCanSceneEnter)
+    const canSceneEnter = useSelector(mapCanSceneEnter)
 
     const onEntered = () => {
-        logTransition('Scene did enter from Stage.')
-        dispatch(updateEntranceStore({ didSceneEnter: true }))
+        logTransition('Stage did enter.')
     }
 
     useEffect(() => {

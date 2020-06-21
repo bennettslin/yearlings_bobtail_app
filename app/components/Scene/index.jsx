@@ -1,7 +1,6 @@
 import React, { useEffect, Fragment as ___ } from 'react'
 import cx from 'classnames'
-import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../redux/entrance/action'
+import { useSelector } from 'react-redux'
 import { mapCanSceneUpdate } from '../../redux/entrance/selector'
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
@@ -9,13 +8,10 @@ import Presences from '../Presences'
 import { CUBE_Y_INDICES } from '../../constants/cubeIndex'
 
 const Scene = () => {
-    const
-        dispatch = useDispatch(),
-        canSceneUpdate = useSelector(mapCanSceneUpdate)
+    const canSceneUpdate = useSelector(mapCanSceneUpdate)
 
     const onEntered = () => {
-        logTransition('Scene did update.')
-        dispatch(updateEntranceStore({ didSceneUpdate: true }))
+        logTransition('Scene did enter.')
     }
 
     useEffect(() => {

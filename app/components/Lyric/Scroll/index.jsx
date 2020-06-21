@@ -5,9 +5,6 @@ import React, {
     useRef
 } from 'react'
 import cx from 'classnames'
-import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../../redux/entrance/action'
-import Transition from 'react-transition-group/Transition'
 import WheelDispatcher from '../../../dispatchers/Wheel'
 import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
 import ScrollOverlayDispatcher from '../../../dispatchers/ScrollOverlay'
@@ -15,22 +12,14 @@ import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
 import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
 import './style'
-import { mapCanLyricCarouselUpdate } from '../../../redux/entrance/selector'
 
 const LyricScroll = forwardRef((props, ref) => {
     const
-        dispatch = useDispatch(),
         lyricScrollElement = useRef(),
         scrollChildren = useRef(),
         dispatchWheel = useRef(),
         dispatchScroll = useRef(),
-        dispatchVerseBars = useRef(),
-        canLyricCarouselUpdate = useSelector(mapCanLyricCarouselUpdate)
-
-    const onEntered = () => {
-        logTransition('Lyric did update from LyricScroll.')
-        dispatch(updateEntranceStore({ didLyricUpdate: true }))
-    }
+        dispatchVerseBars = useRef()
 
     const onScroll = () => {
         dispatchVerseBars.current()
@@ -77,37 +66,29 @@ const LyricScroll = forwardRef((props, ref) => {
                 getScrollAnchorChild,
                 getScrollVerseChild
             }} />
-            <Transition
+            <div
                 {...{
-                    in: canLyricCarouselUpdate,
-                    timeout: 200,
-                    onEntered
+                    ref: lyricScrollElement,
+                    className: cx(
+                        'LyricScroll',
+                        'abF',
+
+                        /**
+                         * This gradient does not obscure the lyric
+                         * toggle buttons.
+                         */
+                        'gradientMask__lyricScroll'
+                    ),
+                    tabIndex: -1,
+                    onScroll,
+                    onWheel,
+                    ...IS_TOUCH_SUPPORTED && {
+                        onTouchMove: onWheel
+                    }
                 }}
             >
-                <div
-                    {...{
-                        ref: lyricScrollElement,
-                        className: cx(
-                            'LyricScroll',
-                            'abF',
-
-                            /**
-                             * This gradient does not obscure the lyric
-                             * toggle buttons.
-                             */
-                            'gradientMask__lyricScroll'
-                        ),
-                        tabIndex: -1,
-                        onScroll,
-                        onWheel,
-                        ...IS_TOUCH_SUPPORTED && {
-                            onTouchMove: onWheel
-                        }
-                    }}
-                >
-                    <Stanzas {...{ ref: scrollChildren }} />
-                </div>
-            </Transition>
+                <Stanzas {...{ ref: scrollChildren }} />
+            </div>
             <ScrollOverlayDispatcher
                 {...{
                     ref: dispatchScroll,

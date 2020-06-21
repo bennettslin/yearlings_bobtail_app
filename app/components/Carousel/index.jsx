@@ -1,9 +1,7 @@
 // Section to show all song annotations in a carousel layout.
-
 import React, { useEffect } from 'react'
 import cx from 'classnames'
-import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../redux/entrance/action'
+import { useSelector } from 'react-redux'
 import { mapCanLyricCarouselEnter } from '../../redux/entrance/selector'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LayoutContainer from '../Main/LayoutContainer'
@@ -12,17 +10,15 @@ import CarouselScroll from './Scroll'
 import './style'
 
 const Carousel = () => {
-    const
-        dispatch = useDispatch(),
-        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
-        _handleTransitionExited = () => {
-            logTransition('Carousel did exit.')
-            dispatch(updateEntranceStore({ didCarouselExit: true }))
-        },
-        _handleTransitionEntered = () => {
-            logTransition('Carousel did enter.')
-            dispatch(updateEntranceStore({ didCarouselEnter: true }))
-        }
+    const canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
+
+    const onExited = () => {
+        logTransition('Carousel did exit.')
+    }
+
+    const onEntered = () => {
+        logTransition('Carousel did enter.')
+    }
 
     useEffect(() => {
         logMount('Carousel')
@@ -35,8 +31,8 @@ const Carousel = () => {
                 in: canLyricCarouselEnter,
                 timeout: 250,
                 classNames: { enterDone: 'Carousel__visible' },
-                onExited: _handleTransitionExited,
-                onEntered: _handleTransitionEntered
+                onExited,
+                onEntered
             }}
         >
             <div

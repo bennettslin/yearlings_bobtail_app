@@ -1,8 +1,7 @@
 // eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useEffect, useRef } from 'react'
 import cx from 'classnames'
-import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../redux/entrance/action'
+import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
@@ -14,7 +13,6 @@ import { mapCanLyricCarouselEnter } from '../../redux/entrance/selector'
 
 const Lyric = forwardRef((props, ref) => {
     const
-        dispatch = useDispatch(),
         handleVerseBarWheel = useRef(),
         canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
 
@@ -24,12 +22,10 @@ const Lyric = forwardRef((props, ref) => {
 
     const onExited = () => {
         logTransition('Lyric did exit.')
-        dispatch(updateEntranceStore({ didLyricExit: true }))
     }
 
     const onEntered = () => {
         logTransition('Lyric did enter.')
-        dispatch(updateEntranceStore({ didLyricEnter: true }))
     }
 
     const onWheel = e => {
