@@ -1,6 +1,4 @@
 # Entrance store refactor
-* 
-* Consolidate song change listeners.
 * Are scene change dispatchers still needed?
 * Audit all log transitions. Still needed?
 

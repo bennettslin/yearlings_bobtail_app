@@ -43,7 +43,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         queuedVerseBarsTimeout = useSelector(mapQueuedVerseBarsTimeout),
         windowHeight = useSelector(mapWindowHeight),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
-        [verseBarsTimeoutId, setVerseBarsTimeoutId] = useState('')
+        [verseBarsTimeoutId, setVerseBarsTimeoutId] = useState(-1)
 
     /**
      * This is technically within a timeout closure, but these values shouldn't
@@ -90,12 +90,10 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 
         clearTimeout(verseBarsTimeoutId)
 
-        setVerseBarsTimeoutId(
-            setTimeout(
-                _dispatchVerseBars,
-                timeoutDuration
-            )
-        )
+        setVerseBarsTimeoutId(setTimeout(
+            _dispatchVerseBars,
+            timeoutDuration
+        ))
     }
 
     useEffect(() => {

@@ -7,7 +7,7 @@ import { updateIsScrolling } from '../../redux/scrollOverlay/action'
 const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollElement }, ref) => {
     const
         dispatch = useDispatch(),
-        [scrollTimeoutId, setScrollTimeoutId] = useState('')
+        [scrollTimeoutId, setScrollTimeoutId] = useState(-1)
 
     const _dispatchScroll = prevScrollTop => {
         const nextScrollTop = getLyricScrollElement().scrollTop
@@ -20,12 +20,10 @@ const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollElement }, ref) => {
 
         clearTimeout(scrollTimeoutId)
 
-        setScrollTimeoutId(
-            setTimeout(
-                () => _dispatchScroll(prevScrollTop),
-                timeoutDuration
-            )
-        )
+        setScrollTimeoutId(setTimeout(
+            () => _dispatchScroll(prevScrollTop),
+            timeoutDuration
+        ))
 
         dispatch(updateIsScrolling(true))
     }

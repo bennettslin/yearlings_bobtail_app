@@ -17,7 +17,7 @@ const ResizeListener = ({ getRootContainerElement }) => {
         timeoutRef = useRef(),
         windowWidth = useSelector(mapWindowWidth),
         windowHeight = useSelector(mapWindowHeight),
-        [windowResizeTimeoutId, setWindowResizeTimeoutId] = useState('')
+        [windowResizeTimeoutId, setWindowResizeTimeoutId] = useState(-1)
 
     timeoutRef.current = {
         windowWidth,
@@ -62,9 +62,9 @@ const ResizeListener = ({ getRootContainerElement }) => {
             clearTimeout(timeoutRef.current.windowResizeTimeoutId)
 
             // Wait for window resize to finish.
-            setWindowResizeTimeoutId(
-                setTimeout(beginEnterTransition, 250)
-            )
+            setWindowResizeTimeoutId(setTimeout(
+                beginEnterTransition, 250
+            ))
         }
     }
 
