@@ -3,11 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateSceneStore } from '../../../redux/scene/action'
 import {
-    getCubesKeyForScene,
-    getSkyTimeForScene,
-    getSeasonForScene
-} from '../../../api/album/scenes'
-import {
     mapSelectedSongIndex,
     mapSelectedSceneIndex
 } from '../../../redux/selected/selector'
@@ -23,12 +18,7 @@ const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
         songIndex = selectedSongIndex,
         sceneIndex = selectedSceneIndex
 
-    }) => {
-        const
-            sceneCubesKey = getCubesKeyForScene(songIndex, sceneIndex),
-            sceneSkyTime = getSkyTimeForScene(songIndex, sceneIndex),
-            sceneSeason = getSeasonForScene(songIndex, sceneIndex)
-
+    } = {}) => {
         logTransition('Begin enter or update from scene change.')
         dispatch(updateEntranceStore({
             ...isUpdate ? {
@@ -39,11 +29,8 @@ const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
         }))
 
         dispatch(updateSceneStore({
-            sceneCubesKey,
             sceneSongIndex: songIndex,
-            sceneSceneIndex: sceneIndex,
-            sceneSkyTime,
-            sceneSeason
+            sceneSceneIndex: sceneIndex
         }))
     }
 
@@ -56,17 +43,9 @@ const SceneChangeUpdateDispatcher = forwardRef((props, ref) => {
         })
     }
 
-    const dispatchCanSceneEnter = ({
-        songIndex,
-        sceneIndex
-
-    } = {}) => {
+    const dispatchCanSceneEnter = () => {
         logTransition('Scene can enter.')
-
-        _dispatchCanSceneEnterOrUpdate({
-            songIndex,
-            sceneIndex
-        })
+        _dispatchCanSceneEnterOrUpdate()
     }
 
     useImperativeHandle(ref, () => ({

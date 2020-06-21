@@ -1,4 +1,9 @@
-import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
+import { createSelector } from 'reselect'
+import {
+    getCubesKeyForScene,
+    getSkyTimeForScene,
+    getSeasonForScene
+} from '../../api/album/scenes'
 import { SCENE_STORE } from '../../constants/store'
 
 export const mapSceneSongIndex = (
@@ -9,14 +14,29 @@ export const mapSceneSceneIndex = (
     { [SCENE_STORE]: { sceneSceneIndex } }
 ) => sceneSceneIndex
 
-export const mapSceneSkyTime = (
-    { [SCENE_STORE]: { sceneSkyTime } }
-) => sceneSkyTime
+export const mapSceneSkyTime = createSelector(
+    mapSceneSongIndex,
+    mapSceneSceneIndex,
+    (
+        sceneSongIndex,
+        sceneSceneIndex
+    ) => getSkyTimeForScene(sceneSongIndex, sceneSceneIndex)
+)
 
-export const mapSceneSkySeason = (
-    { [SCENE_STORE]: { sceneSeason } }
-) => sceneSeason
+export const mapSceneSkySeason = createSelector(
+    mapSceneSongIndex,
+    mapSceneSceneIndex,
+    (
+        sceneSongIndex,
+        sceneSceneIndex
+    ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex)
+)
 
-export const mapSceneCubesKey = (
-    { [SCENE_STORE]: { sceneCubesKey } }
-) => sceneCubesKey || DEFAULT_STAGE_KEY
+export const mapSceneCubesKey = createSelector(
+    mapSceneSongIndex,
+    mapSceneSceneIndex,
+    (
+        sceneSongIndex,
+        sceneSceneIndex
+    ) => getCubesKeyForScene(sceneSongIndex, sceneSceneIndex)
+)
