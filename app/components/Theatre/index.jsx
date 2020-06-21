@@ -34,7 +34,7 @@ const Theatre = () => {
             appear
             {...{
                 in: isWindowResizeDone,
-                timeout: 200,
+                timeout: 275,
                 classNames: { enterDone: 'Theatre__visible' },
                 onExit,
                 onEntered
