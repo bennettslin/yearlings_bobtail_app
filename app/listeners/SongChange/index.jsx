@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsSongChangeDone } from '../../redux/entrance/action'
 import { updateLyricStore } from '../../redux/lyric/action'
-import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
@@ -14,7 +13,6 @@ const SongChangeListener = () => {
     const
         dispatch = useDispatch(),
         timeoutRef = useRef(),
-        isSongChangeDone = useSelector(mapIsSongChangeDone),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
@@ -23,6 +21,11 @@ const SongChangeListener = () => {
     timeoutRef.current = { songChangeTimeoutId }
 
     const completeSongSelect = () => {
+        dispatch(updateLyricStore({
+            lyricSongIndex: selectedSongIndex,
+            lyricVerseIndex: selectedVerseIndex,
+            lyricAnnotationIndex: selectedAnnotationIndex
+        }))
         dispatch(updateIsSongChangeDone(true))
     }
 
@@ -37,17 +40,6 @@ const SongChangeListener = () => {
             completeSongSelect, 200
         ))
     }, [selectedSongIndex])
-
-    useEffect(() => {
-        // Finish song change transition.
-        if (isSongChangeDone) {
-            dispatch(updateLyricStore({
-                lyricSongIndex: selectedSongIndex,
-                lyricVerseIndex: selectedVerseIndex,
-                lyricAnnotationIndex: selectedAnnotationIndex
-            }))
-        }
-    }, [isSongChangeDone])
 
     return null
 }
