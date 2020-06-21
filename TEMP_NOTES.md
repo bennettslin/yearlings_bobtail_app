@@ -1,8 +1,6 @@
 # Entrance store refactor
 * Get rid of current scene change listeners.
 * Make new scene change listener like song change listener.
-* Rename isSongChangeDone, isSceneChange done for clarity.
-* Maybe move canLyricCarouselEnter back to entrance store.
 * If isSongChangeDone is true, then scene change listener handles scene change. If not, then song change listener handles it.
 * Audit all log transitions. Still needed?
 * Make curtain animation smooth.

@@ -18,8 +18,3 @@ export const updateLyricStore = payload => {
         payload: getDefinedOnlyPayload(payload)
     })
 }
-
-export const updateLyricCarouselEntrance = canLyricCarouselEnter => ({
-    type: LYRIC_STORE,
-    payload: { canLyricCarouselEnter }
-})

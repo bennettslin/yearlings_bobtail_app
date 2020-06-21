@@ -6,7 +6,6 @@ import {
 } from '../selected/default'
 
 export const LYRIC_DEFAULTS = {
-    canLyricCarouselEnter: false,
     lyricSongIndex: INITIAL_SONG_INDEX,
     lyricVerseIndex: INITIAL_VERSE_INDEX,
     lyricAnnotationIndex: INITIAL_ANNOTATION_INDEX,

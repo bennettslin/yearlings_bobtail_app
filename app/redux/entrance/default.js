@@ -1,3 +1,4 @@
 export const ENTRANCE_DEFAULTS = {
-    isWindowResizeDone: true
+    isWindowResizeDone: true,
+    isSongChangeDone: true
 }

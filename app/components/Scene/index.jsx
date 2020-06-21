@@ -1,14 +1,14 @@
 import React, { useEffect, Fragment as ___ } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { mapCanLyricCarouselEnter } from '../../redux/lyric/selector'
+import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
 import Presences from '../Presences'
 import { CUBE_Y_INDICES } from '../../constants/cubeIndex'
 
 const Scene = () => {
-    const canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter)
+    const isSongChangeDone = useSelector(mapIsSongChangeDone)
 
     const onEntered = () => {
         logTransition('Scene did enter.')
@@ -21,7 +21,7 @@ const Scene = () => {
     return (
         <Transition
             {...{
-                in: canLyricCarouselEnter,
+                in: isSongChangeDone,
                 timeout: 200,
                 onEntered
             }}

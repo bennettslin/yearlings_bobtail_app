@@ -8,8 +8,8 @@ import {
     mapReferenceDot,
     mapWormholeDot
 } from '../../redux/dots/selector'
+import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import {
-    mapCanLyricCarouselEnter,
     mapIsLyricLogue,
     mapLyricSongIndex,
     mapLyricAnnotationIndex
@@ -28,7 +28,7 @@ const ShownWrapper = ({ children }) => {
     const
         reference = useSelector(mapReferenceDot),
         wormhole = useSelector(mapWormholeDot),
-        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
+        isSongChangeDone = useSelector(mapIsSongChangeDone),
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
@@ -61,7 +61,7 @@ const ShownWrapper = ({ children }) => {
 
                     // TODO: Make this a selector.
                     // Don't show these class names between songs.
-                    canLyricCarouselEnter && isTipsShown && [
+                    isSongChangeDone && isTipsShown && [
                         'ShW__tipsShown',
                         `ShW__tips__${tipType}`,
                         (

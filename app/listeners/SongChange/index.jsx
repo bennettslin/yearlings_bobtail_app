@@ -1,11 +1,9 @@
 // eslint-disable-next-line object-curly-newline
 import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-    updateLyricCarouselEntrance,
-    updateLyricStore
-} from '../../redux/lyric/action'
-import { mapCanLyricCarouselEnter } from '../../redux/lyric/selector'
+import { updateIsSongChangeDone } from '../../redux/entrance/action'
+import { updateLyricStore } from '../../redux/lyric/action'
+import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
@@ -16,7 +14,7 @@ const SongChangeListener = () => {
     const
         dispatch = useDispatch(),
         timeoutRef = useRef(),
-        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
+        isSongChangeDone = useSelector(mapIsSongChangeDone),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
@@ -25,12 +23,12 @@ const SongChangeListener = () => {
     timeoutRef.current = { songChangeTimeoutId }
 
     const beginSongSelect = () => {
-        dispatch(updateLyricCarouselEntrance(true))
+        dispatch(updateIsSongChangeDone(true))
     }
 
     useEffect(() => {
         // Begin song change transition.
-        dispatch(updateLyricCarouselEntrance(false))
+        dispatch(updateIsSongChangeDone())
 
         // Clear previous timeout.
         clearTimeout(timeoutRef.current.songChangeTimeoutId)
@@ -43,14 +41,14 @@ const SongChangeListener = () => {
 
     useEffect(() => {
         // Finish song change transition.
-        if (canLyricCarouselEnter) {
+        if (isSongChangeDone) {
             dispatch(updateLyricStore({
                 lyricSongIndex: selectedSongIndex,
                 lyricVerseIndex: selectedVerseIndex,
                 lyricAnnotationIndex: selectedAnnotationIndex
             }))
         }
-    }, [canLyricCarouselEnter])
+    }, [isSongChangeDone])
 
     return null
 }

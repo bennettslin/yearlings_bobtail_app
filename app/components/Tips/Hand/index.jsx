@@ -15,10 +15,8 @@ import {
     mapReferenceDot,
     mapWormholeDot
 } from '../../../redux/dots/selector'
-import {
-    mapCanLyricCarouselEnter,
-    mapLyricSongIndex
-} from '../../../redux/lyric/selector'
+import { mapIsSongChangeDone } from '../../../redux/entrance/selector'
+import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import { mapIsTipsShown } from '../../../redux/tips/selector'
 import './style'
 
@@ -31,7 +29,7 @@ const TipsHand = ({
     const
         reference = useSelector(mapReferenceDot),
         wormhole = useSelector(mapWormholeDot),
-        canLyricCarouselEnter = useSelector(mapCanLyricCarouselEnter),
+        isSongChangeDone = useSelector(mapIsSongChangeDone),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         isTipsShown = useSelector(mapIsTipsShown),
         isPhoneWidth = useSelector(mapIsPhoneWidth)
@@ -57,7 +55,7 @@ const TipsHand = ({
             unmountOnExit
             {...{
                 in: (
-                    canLyricCarouselEnter &&
+                    isSongChangeDone &&
                     isTipsShown &&
                     getSongTipType(lyricSongIndex) === tipType &&
                     canRender

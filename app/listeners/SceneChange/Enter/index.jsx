@@ -3,13 +3,13 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import SceneChangeUpdateDispatcher from '../Update'
-import { mapCanLyricCarouselEnter } from '../../../redux/lyric/selector'
+import { mapIsSongChangeDone } from '../../../redux/entrance/selector'
 
 const mapStateToProps = state => {
-    const canLyricCarouselEnter = mapCanLyricCarouselEnter(state)
+    const isSongChangeDone = mapIsSongChangeDone(state)
 
     return {
-        canLyricCarouselEnter
+        isSongChangeDone
     }
 }
 
@@ -17,7 +17,7 @@ class SceneChangeEnterListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canLyricCarouselEnter: PropTypes.bool.isRequired
+        isSongChangeDone: PropTypes.bool.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -26,14 +26,14 @@ class SceneChangeEnterListener extends PureComponent {
 
     _checkSceneChange(prevProps) {
         const
-            { canLyricCarouselEnter } = this.props,
-            { canLyricCarouselEnter: wasSongSelectComplete } = prevProps
+            { isSongChangeDone } = this.props,
+            { isSongChangeDone: wasSongSelectComplete } = prevProps
 
         /**
          * Scroll has finished exit transition, so now update state to kick off
          * enter transition.
          */
-        if (canLyricCarouselEnter && !wasSongSelectComplete) {
+        if (isSongChangeDone && !wasSongSelectComplete) {
             this._beginEnterTransitionWithNewState()
         }
     }
