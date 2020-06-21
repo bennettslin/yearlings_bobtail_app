@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { mapCanTheatreEnter } from '../../redux/entrance/selector'
+import { mapIsWindowResizeDone } from '../../redux/entrance/selector'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Stage from '../Stage'
 import Curtains from '../Stage/Curtains'
@@ -14,7 +14,7 @@ import { removeLoadingIndicator } from '../../utils/browser'
 import './style'
 
 const Theatre = () => {
-    const canTheatreEnter = useSelector(mapCanTheatreEnter)
+    const isWindowResizeDone = useSelector(mapIsWindowResizeDone)
 
     const onEntered = () => {
         logTransition('Theatre did enter.')
@@ -29,7 +29,7 @@ const Theatre = () => {
         <CSSTransition
             appear
             {...{
-                in: canTheatreEnter,
+                in: isWindowResizeDone,
                 timeout: 200,
                 classNames: { enterDone: 'Theatre__visible' },
                 onEntered

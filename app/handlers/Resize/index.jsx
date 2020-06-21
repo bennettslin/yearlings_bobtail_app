@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateTheatreEntrance } from '../../redux/entrance/action'
+import { updateIsWindowResizeDone } from '../../redux/entrance/action'
 import { updateViewportStore } from '../../redux/viewport/action'
 import { getWindowDimensions } from '../../helpers/resize/device'
 import { getWindow } from '../../utils/browser'
@@ -36,7 +36,7 @@ const ResizeListener = ({ getRootContainerElement }) => {
             windowHeight
         }))
 
-        dispatch(updateTheatreEntrance(true))
+        dispatch(updateIsWindowResizeDone(true))
     }
 
     const beginExitTransition = () => {
@@ -56,7 +56,7 @@ const ResizeListener = ({ getRootContainerElement }) => {
             nextHeight !== timeoutRef.current.windowHeight ||
             nextWidth !== timeoutRef.current.windowWidth
         ) {
-            dispatch(updateTheatreEntrance())
+            dispatch(updateIsWindowResizeDone())
 
             // Clear previous timeout.
             clearTimeout(timeoutRef.current.windowResizeTimeoutId)

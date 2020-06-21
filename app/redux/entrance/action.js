@@ -1,6 +1,6 @@
 import { ENTRANCE_STORE } from '../../constants/store'
 
-export const updateTheatreEntrance = (canTheatreEnter = false) => ({
+export const updateIsWindowResizeDone = (isWindowResizeDone = false) => ({
     type: ENTRANCE_STORE,
-    payload: { canTheatreEnter }
+    payload: { isWindowResizeDone }
 })
