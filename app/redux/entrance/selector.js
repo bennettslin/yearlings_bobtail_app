@@ -7,3 +7,7 @@ export const mapIsWindowResizeDone = (
 export const mapIsSongChangeDone = (
     { [ENTRANCE_STORE]: { isSongChangeDone } }
 ) => isSongChangeDone
+
+export const mapIsSceneChangeDone = (
+    { [ENTRANCE_STORE]: { isSceneChangeDone } }
+) => isSceneChangeDone

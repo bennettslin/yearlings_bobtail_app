@@ -9,3 +9,8 @@ export const updateIsSongChangeDone = (isSongChangeDone = false) => ({
     type: ENTRANCE_STORE,
     payload: { isSongChangeDone }
 })
+
+export const updateIsSceneChangeDone = (isSceneChangeDone = false) => ({
+    type: ENTRANCE_STORE,
+    payload: { isSceneChangeDone }
+})

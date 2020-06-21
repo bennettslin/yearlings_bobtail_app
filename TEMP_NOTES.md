@@ -1,7 +1,5 @@
 # Entrance store refactor
-* Get rid of current scene change listeners.
-* Make new scene change listener like song change listener.
-* If isSongChangeDone is true, then scene change listener handles scene change. If not, then song change listener handles it.
+* If isSongChangeDone is not true, then song change listener handles scene change.
 * Audit all log transitions. Still needed?
 * Make curtain animation smooth.
 

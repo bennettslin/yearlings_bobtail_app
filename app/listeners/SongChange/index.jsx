@@ -22,7 +22,7 @@ const SongChangeListener = () => {
 
     timeoutRef.current = { songChangeTimeoutId }
 
-    const beginSongSelect = () => {
+    const completeSongSelect = () => {
         dispatch(updateIsSongChangeDone(true))
     }
 
@@ -35,7 +35,7 @@ const SongChangeListener = () => {
 
         // Wait for song selection to finish.
         setSongChangeTimeoutId(setTimeout(
-            beginSongSelect, 200
+            completeSongSelect, 200
         ))
     }, [selectedSongIndex])
 
