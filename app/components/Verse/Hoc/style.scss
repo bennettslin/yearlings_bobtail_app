@@ -1,11 +1,8 @@
 @import '../../../scss/classes/mixin';
 @import '../../../scss/constants/zIndex';
 
-.Verse__cursor {
-    z-index: $zIndex__lyricChild__topMost;
-    
-    .PlW__isPaused
-    .TW__lyricsUnlocked
+.Verse__noIndexColour {
+    .TW__lyricsLocked
     & {
         @include mixin__textAndLinkColours($light: true);
     }
@@ -17,6 +14,16 @@
 
     .TW__lyricsLocked
     &.Verse__selected {
+        @include mixin__textAndLinkColours($light: true);
+    }
+}
+
+.Verse__cursor {
+    z-index: $zIndex__lyricChild__topMost;
+    
+    .PlW__isPaused
+    .TW__lyricsUnlocked
+    & {
         @include mixin__textAndLinkColours($light: true);
     }
 }

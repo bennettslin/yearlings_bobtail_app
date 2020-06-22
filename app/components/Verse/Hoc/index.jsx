@@ -37,7 +37,7 @@ const VerseHoc = forwardRef(({
         })),
         isSelectedVerse = useSelector(getMapIsVerseSelected(verseIndex)),
         inLyric = inUnit || inVerseBar,
-        logicSelectors = hasVerseIndex && cx(
+        logicSelectors = cx(
             inLyric ? 'Verse__text' : 'Verse__slider',
             isCursorVerse ? 'Verse__cursor' : 'Verse__notCursor',
             isSelectedVerse ? 'Verse__selected' : 'Verse__notSelected'

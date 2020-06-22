@@ -17,7 +17,6 @@
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
-* Side card in slider should have white text.
 * Failed to decode downloaded font warning?
 
 # Minor issues, to be investigated while production is on master before Gatsby.
