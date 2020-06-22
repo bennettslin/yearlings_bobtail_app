@@ -1,16 +1,15 @@
 export default [
-    /* Weekend work. */
-    {
-        taskName: `Entrance refactor.`,
-        workedHours: 8,
-        neededHours: 16
-    },
     {
         taskName: `Make sure all presences are properly behind or in front as appropriate.`,
         workedHours: 0,
         neededHours: 1
     },
 
+    {
+        taskName: `Scroll refactor.`,
+        workedHours: 0,
+        neededHours: 12
+    },
     {
         taskName: `Post-Gatsby refactoring.`,
         workedHours: 86

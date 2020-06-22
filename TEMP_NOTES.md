@@ -1,7 +1,7 @@
-# Entrance refactor
-* Make scrolling smooth.
+# Scroll refactor
 
-# Post entrance refactor
+# Issues
+* Make scrolling smooth with scene change smooth.
 * Audit all handlers and listeners.
     * Have all handlers be dispatcher/listener pair.
     * VerseBar handler is really dispatcher and listener.

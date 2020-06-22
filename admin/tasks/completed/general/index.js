@@ -4826,5 +4826,9 @@ export default [
     {
         taskName: `Refigure overview and tips logic.`,
         workedHours: 4
+    },
+    {
+        taskName: `Entrance refactor.`,
+        workedHours: 18
     }
 ]
