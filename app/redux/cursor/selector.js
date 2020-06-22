@@ -13,10 +13,12 @@ import {
 } from '../activated/selector'
 import {
     mapLyricSongIndex,
-    mapLyricSceneIndex,
     mapLyricVerseIndex
 } from '../lyric/selector'
-import { mapSelectedTime } from '../selected/selector'
+import {
+    mapSelectedTime,
+    mapSelectedSceneIndex
+} from '../selected/selector'
 import {
     mapIsSliderMoving,
     mapSliderTime,
@@ -49,15 +51,15 @@ export const mapCursorTime = createSelector(
 export const mapSceneCursorIndex = createSelector(
     mapSliderSceneIndex,
     mapActivatedSceneIndex,
-    mapLyricSceneIndex,
+    mapSelectedSceneIndex,
     (
         sliderSceneIndex,
         activatedSceneIndex,
-        lyricSceneIndex
+        selectedSceneIndex
     ) => getCursorIndex(
         sliderSceneIndex,
         activatedSceneIndex,
-        lyricSceneIndex
+        selectedSceneIndex
     )
 )
 

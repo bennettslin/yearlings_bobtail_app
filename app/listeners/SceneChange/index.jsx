@@ -18,28 +18,15 @@ const SceneChangeListener = () => {
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedSceneIndex = useSelector(mapSelectedSceneIndex)
 
-    const completeSceneSelect = () => {
-        dispatch(updateSceneStore({
-            sceneSongIndex: selectedSongIndex,
-            sceneSceneIndex: selectedSceneIndex
-        }))
-    }
-
     useEffect(() => {
-        if (isSongChangeDone) {
-            completeSceneSelect()
+        if (isSongChangeDone && isSceneChangeDone) {
+            dispatch(updateSceneStore({
+                sceneSongIndex: selectedSongIndex,
+                sceneSceneIndex: selectedSceneIndex
+            }))
         }
 
-    // This is set by stage curtain exit.
-    }, [isSongChangeDone])
-
-    useEffect(() => {
-        if (isSceneChangeDone) {
-            completeSceneSelect()
-        }
-
-    // This is set by scene exit.
-    }, [isSceneChangeDone])
+    }, [isSongChangeDone, isSceneChangeDone])
 
     return null
 }

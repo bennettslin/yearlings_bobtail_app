@@ -8,7 +8,7 @@ import InlineSvg from '../../../modules/InlineSvg'
 import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
 import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
 import { mapIsSongChangeDone } from '../../../redux/entrance/selector'
-import { updateIsSongChangeDone } from '../../../redux/entrance/action'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 import './style'
 
 const Curtains = () => {
@@ -17,12 +17,12 @@ const Curtains = () => {
         isSongChangeDone = useSelector(mapIsSongChangeDone)
 
     const onExited = () => {
-        logTransition('Curtain did close.')
-        dispatch(updateIsSongChangeDone(true))
+        logTransition('Curtains did close.')
+        dispatch(updateEntranceStore({ didCurtainsClose: true }))
     }
 
     const onEntered = () => {
-        logTransition('Curtain did open.')
+        logTransition('Curtains did open.')
     }
 
     return (

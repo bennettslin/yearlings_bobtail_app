@@ -1,7 +1,5 @@
 # Entrance refactor
 * Make scrolling smooth.
-* Scene change is different between song and scene change.
-* Does not allow for rapid song change?
 
 # Post entrance refactor
 * Audit all handlers and listeners.
