@@ -53,10 +53,7 @@ const _getCarouselLeftAlign = (
          * Not sure why this doesn't exactly centre the annotation, but
          * whatever.
          */
-        return {
-            left
-            // leftOffset
-        }
+        return { left }
     }
 }
 
@@ -106,9 +103,7 @@ export const scrollElementIntoView = ({
         scrollIntoView(element, {
             align,
             time: noDuration ? 0 : 500,
-            validTarget: element => (
-                element === scrollParent
-            )
+            validTarget: element => element === scrollParent
         }, callback)
     }
 }

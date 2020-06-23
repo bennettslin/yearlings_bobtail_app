@@ -1,16 +1,26 @@
 # Scroll refactor
+* Move scrollRender listener dispatches to songChange listener.
+* Move lyric listener dispatches to where those are dispatched.
+* Each call to updateScrollStore is its own action creator.
+    * Consolidate them as patterns emerge.
+* Scroll listener refactor.
+    * Move to handlers directory.
+    * Make aligns a selector. Simplify them as well.
+    * Knows not to scroll when logue. Remove this check elsewhere.
+    * Make helper a dispatcher instead.
+* Eventually pass actions as json.
 
 # Issues
-* Make scrolling smooth with scene change smooth.
 * Audit all handlers and listeners.
     * Have all handlers be dispatcher/listener pair.
     * VerseBar handler is really dispatcher and listener.
 * Try to get rid of listeners directory. Either remove or move to managers.
-    * Move scrollRender listener dispatches to songChange listener.
-    * Move lyric listener dispatches to where those are dispatched.
-    * Scroll lyric listener has scene change dispatch that can be removed?
 * What is mapIsSelectPlayReady?
 * Is song selection still slower through access after refactor?
+
+# Entrance refactor revisit
+* Make scrolling smooth with scene change.
+* Song change transition is still kind of janky.
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
