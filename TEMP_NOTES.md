@@ -11,7 +11,6 @@
 * Audit all handlers and listeners.
     * Have all handlers be dispatcher/listener pair.
     * VerseBar handler is really dispatcher and listener.
-* Try to get rid of listeners directory. Either remove or move to managers.
 * What is mapIsSelectPlayReady?
 * Is song selection still slower through access after refactor?
 

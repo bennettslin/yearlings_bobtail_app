@@ -13,7 +13,7 @@ import {
     mapSelectedAnnotationIndex
 } from '../../redux/selected/selector'
 
-const SongChangeListener = () => {
+const SongChangeManager = () => {
     const
         dispatch = useDispatch(),
         timeoutRef = useRef(),
@@ -68,4 +68,4 @@ const SongChangeListener = () => {
     return null
 }
 
-export default SongChangeListener
+export default SongChangeManager

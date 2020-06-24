@@ -4,15 +4,10 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
-
     {
         taskName: `Scroll refactor.`,
         workedHours: 2,
         neededHours: 12
-    },
-    {
-        taskName: `Post-Gatsby refactoring.`,
-        workedHours: 86
     },
 
     /* Next weekend. */

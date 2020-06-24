@@ -10,7 +10,7 @@ import {
     mapSelectedSceneIndex
 } from '../../redux/selected/selector'
 
-const SceneChangeListener = () => {
+const SceneChangeManager = () => {
     const
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
@@ -31,4 +31,4 @@ const SceneChangeListener = () => {
     return null
 }
 
-export default SceneChangeListener
+export default SceneChangeManager

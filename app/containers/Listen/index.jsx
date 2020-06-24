@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
-import SceneChangeListener from '../../listeners/SceneChange'
-import SongChangeListener from '../../listeners/SongChange'
-import UrlListener from '../../listeners/Url'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
+import SceneChangeManager from '../../managers/SceneChange'
+import SongChangeManager from '../../managers/SongChange'
+import UrlManager from '../../managers/Url'
 import AudioManager from '../../managers/Audio'
 
 const ListenContainer = () => {
@@ -16,10 +16,10 @@ const ListenContainer = () => {
         <>
             <AnnotationAccessListener />
             <AnnotationListener />
-            <SceneChangeListener />
-            <SongChangeListener />
-            <UrlListener />
             <WikiWormholeListener />
+            <SceneChangeManager />
+            <SongChangeManager />
+            <UrlManager />
             <AudioManager />
         </>
     )

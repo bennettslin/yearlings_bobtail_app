@@ -4830,5 +4830,9 @@ export default [
     {
         taskName: `Entrance refactor.`,
         workedHours: 18
+    },
+    {
+        taskName: `Post-Gatsby refactoring.`,
+        workedHours: 86
     }
 ]

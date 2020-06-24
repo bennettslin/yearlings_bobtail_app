@@ -12,7 +12,7 @@ import {
 } from '../../redux/lyric/selector'
 import { getPathForIndices } from './helper'
 
-const UrlListener = () => {
+const UrlManager = () => {
     const
         // history = useHistory(),
         lyricSongIndex = useSelector(mapLyricSongIndex),
@@ -38,4 +38,4 @@ const UrlListener = () => {
     )
 }
 
-export default UrlListener
+export default UrlManager
