@@ -2,11 +2,9 @@
 * Each call to updateScrollStore is its own action creator.
     * Consolidate them as patterns emerge.
 * Eventually pass actions as json.
+* Only scroll lyric collapsed if not already collapsed?
 
 # Issues
-* Audit all handlers and listeners.
-    * Have all handlers be dispatcher/listener pair.
-    * VerseBar handler is really dispatcher and listener.
 * What is mapIsSelectPlayReady?
 * Is song selection still slower through access after refactor?
 
