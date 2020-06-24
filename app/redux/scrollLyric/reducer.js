@@ -1,7 +1,8 @@
 // Reducers for scrolling lyric values.
 import {
     SCROLL_LYRIC_STORE,
-    TOGGLE_STORE
+    TOGGLE_STORE,
+    VIEWPORT_STORE
 } from '../../constants/store'
 import { SCROLL_LYRIC_DEFAULTS } from './default'
 import { hasKey } from '../../helpers/action'
@@ -17,12 +18,31 @@ export default (
                 ...payload
             }
         case TOGGLE_STORE: {
-            const { isAutoScroll } = payload
-            return hasKey(isAutoScroll) && isAutoScroll ? {
+            const {
+                isAutoScroll,
+                isLyricExpanded
+            } = payload
+            return {
+                ...state,
+                ...hasKey(isAutoScroll) && isAutoScroll && {
+                    scrollLyricLog: 'VerseBar or autoScroll.',
+                    scrollLyricByVerse: true,
+                    scrollLyricAlways: true
+                },
+                ...hasKey(isLyricExpanded) && {
+                    scrollLyricLog:
+                        `Lyric ${isLyricExpanded ? 'expanded' : 'collapsed'}.`,
+                    scrollLyricByVerse: true,
+                    scrollLyricAlways: true
+                }
+            }
+        }
+        case VIEWPORT_STORE: {
+            const { isHeightlessLyric } = payload
+            return hasKey(isHeightlessLyric) && !isHeightlessLyric ? {
                 ...state,
                 ...{
-                    scrollLyricLog:
-                        'VerseBar or autoScroll back to selected verse.',
+                    scrollLyricLog: 'Lyric heighted.',
                     scrollLyricByVerse: true,
                     scrollLyricAlways: true
                 }

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
-import LyricListener from '../../listeners/Lyric'
 import SceneChangeListener from '../../listeners/SceneChange'
 import SongChangeListener from '../../listeners/SongChange'
 import UrlListener from '../../listeners/Url'
@@ -17,7 +16,6 @@ const ListenContainer = () => {
         <>
             <AnnotationAccessListener />
             <AnnotationListener />
-            <LyricListener />
             <SceneChangeListener />
             <SongChangeListener />
             <UrlListener />
