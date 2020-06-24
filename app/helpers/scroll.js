@@ -1,3 +1,4 @@
+import { getDocument } from '../utils/browser'
 import {
     CSS_WIDTH_GOLDEN_CORD,
     CSS_WIDTH_UNCANNY_VALLEY
@@ -71,3 +72,26 @@ export const getAlignForScroll = ({
             isLyricExpanded
         })
 )
+
+export const getSafeScrollChild = ({
+    log,
+    scrollClass,
+    index
+
+}) => {
+    logError({
+        log: `${log}\nNo ref found, scrolled by selector: ${selector}`,
+        action: 'scroll',
+        label: `class: ${scrollClass}, index: ${index}`
+    })
+
+    /**
+     * This is a fallback. As long as all refs have been set, it should
+     * never get called.
+     */
+    const selector = Number.isFinite(index) ?
+        `${scrollClass}__${index}` :
+        scrollClass
+
+    return getDocument().getElementsByClassName(selector)[0]
+}

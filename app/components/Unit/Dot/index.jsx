@@ -7,7 +7,7 @@ import Anchor from '../../Anchor'
 import UnitDotParent from './Parent'
 import { getDotForUnit } from '../../../api/album/units'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
-import { LYRIC_ANNOTATION_SCROLL } from '../../../constants/scroll'
+import { ANCHOR_SCROLL } from '../../../constants/scroll'
 import { getMapIsAnnotationAccessed } from '../../../redux/access/selector'
 import { mapIsActivated } from '../../../redux/activated/selector'
 import { getMapHasSelectedDot } from '../../../redux/dots/selector'
@@ -59,7 +59,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
                     hasSelectedDot && 'UnitDot__shown',
 
                     // Scroll to dot stanza block upon annotation selection.
-                    `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`
+                    `${ANCHOR_SCROLL}__${annotationIndex}`
                 )
             }}
         >

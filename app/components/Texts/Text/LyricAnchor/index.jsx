@@ -8,7 +8,7 @@ import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
 import WikiDispatcher from '../../../../dispatchers/Wiki'
 import Anchor from '../../../Anchor'
 import { REFERENCE_BIT } from '../../../../constants/dots'
-import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
+import { ANCHOR_SCROLL } from '../../../../constants/scroll'
 import {
     mapIsAccessedIndexedAnchorShown,
     mapAccessedAnnotationIndex,
@@ -98,7 +98,7 @@ const TextLyricAnchor = forwardRef(({
                     ref: setRef,
                     className: cx(
                         annotationIndex &&
-                            `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
+                            `${ANCHOR_SCROLL}__${annotationIndex}`,
 
                         wikiIndex && `wiki__${wikiIndex}`
                     ),

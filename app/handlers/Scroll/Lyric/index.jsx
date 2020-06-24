@@ -6,7 +6,7 @@ import ScrollDispatcher from '../Dispatcher'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { mapIsPlaying } from '../../../redux/audio/selector'
 import {
-    LYRIC_ANNOTATION_SCROLL,
+    ANCHOR_SCROLL,
     VERSE_SCROLL
 } from '../../../constants/scroll'
 import { mapLyricVerseIndex } from '../../../redux/lyric/selector'
@@ -22,10 +22,7 @@ import {
     mapIsAutoScroll,
     mapIsLyricExpanded
 } from '../../../redux/toggle/selector'
-import {
-    mapDeviceWidthIndex,
-    mapIsHeightlessLyric
-} from '../../../redux/viewport/selector'
+import { mapIsHeightlessLyric } from '../../../redux/viewport/selector'
 
 const ScrollLyricListener = ({
     getLyricScrollElement,
@@ -41,7 +38,6 @@ const ScrollLyricListener = ({
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         isAutoScroll = useSelector(mapIsAutoScroll),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
-        deviceWidthIndex = useSelector(mapDeviceWidthIndex),
         scrollLyricLog = useSelector(mapScrollLyricLog),
         scrollLyricByVerse = useSelector(mapScrollLyricByVerse),
         scrollLyricIndex = useSelector(mapScrollLyricIndex),
@@ -49,11 +45,18 @@ const ScrollLyricListener = ({
         scrollLyricNoDuration = useSelector(mapScrollLyricNoDuration),
         scrollLyricFromAutoScroll = useSelector(mapScrollLyricFromAutoScroll)
 
+    const getScrollChild = (index, scrollClass) => (
+        scrollClass === VERSE_SCROLL ?
+            getScrollVerseChild(index) :
+            getScrollAnchorChild(index)
+    )
+
     useEffect(() => {
         if (scrollLyricLog) {
             // TODO: Make this a selector
             if (
                 !isHeightlessLyric ||
+
                 isLyricExpanded ||
                 // If paused, always scroll.
                 !isPlaying ||
@@ -67,26 +70,19 @@ const ScrollLyricListener = ({
                  */
                 scrollLyricFromAutoScroll === isAutoScroll
             ) {
-                /**
-                 * If no verse index given, default to selected verse. If
-                 * scrolling to annotation, index is always given.
-                 */
-                const index = scrollLyricIndex === -1 ?
-                    lyricVerseIndex :
-                    scrollLyricIndex
-
                 scrollElementIntoView.current({
                     log: scrollLyricLog,
                     scrollClass: scrollLyricByVerse ?
                         VERSE_SCROLL :
-                        LYRIC_ANNOTATION_SCROLL,
-                    scrollChild: scrollLyricByVerse ?
-                        getScrollVerseChild(index) :
-                        getScrollAnchorChild(index),
-                    index,
-                    noDuration: scrollLyricNoDuration,
-                    deviceWidthIndex,
-                    isLyricExpanded
+                        ANCHOR_SCROLL,
+                    /**
+                     * If no verse index given, default to selected verse. If
+                     * scrolling to annotation, index is always given.
+                     */
+                    index: scrollLyricIndex === -1 ?
+                        lyricVerseIndex :
+                        scrollLyricIndex,
+                    noDuration: scrollLyricNoDuration
                 })
             }
 
@@ -98,7 +94,8 @@ const ScrollLyricListener = ({
         <ScrollDispatcher
             {...{
                 ref: scrollElementIntoView,
-                getScrollParent: getLyricScrollElement
+                getScrollParent: getLyricScrollElement,
+                getScrollChild
             }}
         />
     )
