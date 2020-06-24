@@ -2,6 +2,7 @@ import { createSelector } from 'reselect'
 import {
     getIsPhoneWidth,
     getIsTabletWidth,
+    getIsMonitorWidth,
     getIsDesktopWidth
 } from '../../helpers/responsive'
 import { mapDeviceWidthIndex } from '../viewport/selector'
@@ -14,6 +15,11 @@ export const mapIsPhoneWidth = createSelector(
 export const mapIsTabletWidth = createSelector(
     mapDeviceWidthIndex,
     deviceWidthIndex => getIsTabletWidth(deviceWidthIndex)
+)
+
+export const mapIsMonitorWidth = createSelector(
+    mapDeviceWidthIndex,
+    deviceWidthIndex => getIsMonitorWidth(deviceWidthIndex)
 )
 
 export const mapIsDesktopWidth = createSelector(

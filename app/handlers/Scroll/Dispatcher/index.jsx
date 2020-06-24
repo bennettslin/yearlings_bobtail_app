@@ -1,76 +1,23 @@
 import { forwardRef, useImperativeHandle } from 'react'
-// import { useDispatch, useSelector } from 'react-redux'
+import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
-
-import {
-    getIsDesktopWidth,
-    getIsMonitorWidth
-} from '../../../helpers/responsive'
 import { getDocument } from '../../../utils/browser'
+import { getMapAlignForScroll } from '../../../redux/scroll/selector'
 
-import {
-    CSS_WIDTH_GOLDEN_CORD,
-    CSS_WIDTH_UNCANNY_VALLEY
-} from '../../../constants/responsive/deviceWidth'
+const ScrollDispatcher = forwardRef(({
+    isCarousel,
+    getScrollParent
 
-const _getLyricTopAlign = (deviceWidthIndex, isLyricExpanded) => {
+}, ref) => {
+    const alignForScroll = useSelector(getMapAlignForScroll(isCarousel))
 
-    // If in desktop or lyric column is expanded, set closer to top.
-    if (getIsDesktopWidth(deviceWidthIndex) || isLyricExpanded) {
-
-        /**
-         * This doesn't accommodate menu height with desktop processor, but
-         * this is fine for now.
-         */
-        return { top: 0.33 }
-
-    // Otherwise set halfway, which is the default.
-    } else {
-        return null
-    }
-}
-
-const _getCarouselLeftAlign = (
-    deviceWidthIndex,
-    windowWidth
-) => {
-
-    // If mobile, then set halfway, which is the default.
-    if (!getIsDesktopWidth(deviceWidthIndex)) {
-        return null
-
-    } else {
-        const
-            earColumnWidth =
-                getIsMonitorWidth(deviceWidthIndex) ?
-                    CSS_WIDTH_GOLDEN_CORD :
-                    CSS_WIDTH_UNCANNY_VALLEY,
-
-            centreFieldWidth = windowWidth - earColumnWidth,
-
-            // Percentage. It would be 0.5 if not for the lyric column.
-            left = (centreFieldWidth * 0.5) / windowWidth
-
-        /**
-         * Not sure why this doesn't exactly centre the annotation, but
-         * whatever.
-         */
-        return { left }
-    }
-}
-
-const ScrollDispatcher = forwardRef((props, ref) => {
     const scrollElementIntoView = ({
-        isCarousel,
         log = '',
         scrollClass,
-        scrollParent,
         scrollChild,
         index,
         noDuration,
-        deviceWidthIndex,
-        windowWidth,
-        isLyricExpanded,
         callback
 
     }) => {
@@ -96,17 +43,10 @@ const ScrollDispatcher = forwardRef((props, ref) => {
 
         if (element) {
             logScroll(log)
-
-            const
-                // TODO: Make this a selector.
-                align = isCarousel ?
-                    _getCarouselLeftAlign(deviceWidthIndex, windowWidth) :
-                    _getLyricTopAlign(deviceWidthIndex, isLyricExpanded)
-
             scrollIntoView(element, {
-                align,
+                align: alignForScroll,
                 time: noDuration ? 0 : 500,
-                validTarget: element => element === scrollParent
+                validTarget: element => element === getScrollParent()
             }, callback)
         }
     }
@@ -114,5 +54,10 @@ const ScrollDispatcher = forwardRef((props, ref) => {
     useImperativeHandle(ref, () => scrollElementIntoView)
     return null
 })
+
+ScrollDispatcher.propTypes = {
+    isCarousel: PropTypes.bool,
+    getScrollParent: PropTypes.func.isRequired
+}
 
 export default ScrollDispatcher

@@ -35,10 +35,8 @@ const ScrollCarouselListener = ({
         // Only scroll if carousel is shown.
         if (scrollCarouselLog && isCarouselShown) {
             scrollElementIntoView.current({
-                isCarousel: true,
                 log: scrollCarouselLog,
                 scrollClass: CAROUSEL_SCROLL,
-                scrollParent: getCarouselScrollElement(),
                 scrollChild: getCarouselScrollChild(scrollCarouselIndex),
                 index: scrollCarouselIndex,
                 noDuration: scrollCarouselNoDuration,
@@ -51,7 +49,13 @@ const ScrollCarouselListener = ({
     }, [scrollCarouselLog])
 
     return (
-        <ScrollDispatcher {...{ ref: scrollElementIntoView }} />
+        <ScrollDispatcher
+            isCarousel
+            {...{
+                ref: scrollElementIntoView,
+                getScrollParent: getCarouselScrollElement
+            }}
+        />
     )
 }
 

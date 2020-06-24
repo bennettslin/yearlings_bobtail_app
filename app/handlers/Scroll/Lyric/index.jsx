@@ -80,7 +80,6 @@ const ScrollLyricListener = ({
                     scrollClass: scrollLyricByVerse ?
                         VERSE_SCROLL :
                         LYRIC_ANNOTATION_SCROLL,
-                    scrollParent: getLyricScrollElement(),
                     scrollChild: scrollLyricByVerse ?
                         getScrollVerseChild(index) :
                         getScrollAnchorChild(index),
@@ -96,7 +95,12 @@ const ScrollLyricListener = ({
     }, [scrollLyricLog])
 
     return (
-        <ScrollDispatcher {...{ ref: scrollElementIntoView }} />
+        <ScrollDispatcher
+            {...{
+                ref: scrollElementIntoView,
+                getScrollParent: getLyricScrollElement
+            }}
+        />
     )
 }
 
