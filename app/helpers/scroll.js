@@ -95,3 +95,39 @@ export const getSafeScrollChild = ({
 
     return getDocument().getElementsByClassName(selector)[0]
 }
+
+export const getCanCarouselScroll = ({
+    isCarouselShown,
+    isLyricLogue
+}) => (
+    !isLyricLogue &&
+    isCarouselShown
+)
+
+export const getCanLyricScroll = ({
+    isPlaying,
+    isLyricLogue,
+    scrollLyricAlways,
+    scrollLyricFromAutoScroll,
+    isAutoScroll,
+    isLyricExpanded,
+    isHeightlessLyric
+
+}) => (
+    !isLyricLogue && (
+        !isHeightlessLyric ||
+        isLyricExpanded
+    ) && (
+        // If paused, always scroll.
+        !isPlaying ||
+
+        // If selecting a new song or verse, always scroll.
+        scrollLyricAlways ||
+
+        /**
+         * If autoScroll is on, only scroll from autoScroll, or else if
+         * autoScroll is off, scroll from everything *but* autoScroll.
+         */
+        scrollLyricFromAutoScroll === isAutoScroll
+    )
+)

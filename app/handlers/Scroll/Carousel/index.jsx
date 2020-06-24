@@ -10,7 +10,6 @@ import {
     mapScrollCarouselIndex,
     mapScrollCarouselNoDuration
 } from '../../../redux/scrollCarousel/selector'
-import { mapIsCarouselShown } from '../../../redux/toggle/selector'
 
 const ScrollCarouselListener = ({
     getCarouselScrollChild,
@@ -20,14 +19,12 @@ const ScrollCarouselListener = ({
     const
         dispatch = useDispatch(),
         scrollElementIntoView = useRef(),
-        isCarouselShown = useSelector(mapIsCarouselShown),
         scrollCarouselLog = useSelector(mapScrollCarouselLog),
         scrollCarouselIndex = useSelector(mapScrollCarouselIndex),
         scrollCarouselNoDuration = useSelector(mapScrollCarouselNoDuration)
 
     useEffect(() => {
-        // Only scroll if carousel is shown.
-        if (scrollCarouselLog && isCarouselShown) {
+        if (scrollCarouselLog) {
             scrollElementIntoView.current({
                 log: scrollCarouselLog,
                 scrollClass: CAROUSEL_SCROLL,

@@ -1,8 +1,6 @@
 # Scroll refactor
 * Each call to updateScrollStore is its own action creator.
     * Consolidate them as patterns emerge.
-* Scroll listener refactor.
-    * Knows not to scroll when logue. Remove this check elsewhere.
 * Eventually pass actions as json.
 
 # Issues
