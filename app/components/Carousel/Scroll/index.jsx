@@ -1,7 +1,7 @@
 // Section to show all song annotations in a carousel layout.
 import React, { useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
-import ScrollCarouselListener from '../../../listeners/Scroll/Carousel'
+import ScrollCarouselListener from '../../../handlers/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
 import { getAnnotationIndices } from '../../../api/album/annotations'
 import { mapLyricSongIndex } from '../../../redux/lyric/selector'

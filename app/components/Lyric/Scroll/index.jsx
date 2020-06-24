@@ -6,7 +6,7 @@ import React, {
 } from 'react'
 import cx from 'classnames'
 import WheelDispatcher from '../../../dispatchers/Wheel'
-import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
+import ScrollLyricListener from '../../../handlers/Scroll/Lyric'
 import ScrollOverlayDispatcher from '../../../dispatchers/ScrollOverlay'
 import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'

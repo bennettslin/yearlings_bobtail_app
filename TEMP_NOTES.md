@@ -4,7 +4,6 @@
 * Each call to updateScrollStore is its own action creator.
     * Consolidate them as patterns emerge.
 * Scroll listener refactor.
-    * Move to handlers directory.
     * Make aligns a selector. Simplify them as well.
     * Knows not to scroll when logue. Remove this check elsewhere.
     * Make helper a dispatcher instead.
