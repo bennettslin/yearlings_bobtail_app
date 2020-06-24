@@ -1,9 +1,10 @@
-import { memo, useEffect } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
+import ScrollDispatcher from '../Dispatcher'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { mapIsPlaying } from '../../../redux/audio/selector'
-import { scrollElementIntoView } from '../helper'
 import {
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
@@ -34,6 +35,7 @@ const ScrollLyricListener = ({
 }) => {
     const
         dispatch = useDispatch(),
+        scrollElementIntoView = useRef(),
         isPlaying = useSelector(mapIsPlaying),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
@@ -73,7 +75,7 @@ const ScrollLyricListener = ({
                     lyricVerseIndex :
                     scrollLyricIndex
 
-                scrollElementIntoView({
+                scrollElementIntoView.current({
                     log: scrollLyricLog,
                     scrollClass: scrollLyricByVerse ?
                         VERSE_SCROLL :
@@ -93,7 +95,9 @@ const ScrollLyricListener = ({
         }
     }, [scrollLyricLog])
 
-    return null
+    return (
+        <ScrollDispatcher {...{ ref: scrollElementIntoView }} />
+    )
 }
 
 ScrollLyricListener.propTypes = {

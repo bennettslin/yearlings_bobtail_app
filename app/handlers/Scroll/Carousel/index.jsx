@@ -1,8 +1,9 @@
-import { memo, useEffect } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
+import ScrollDispatcher from '../Dispatcher'
 import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
-import { scrollElementIntoView } from '../helper'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import {
     mapScrollCarouselLog,
@@ -22,6 +23,7 @@ const ScrollCarouselListener = ({
 }) => {
     const
         dispatch = useDispatch(),
+        scrollElementIntoView = useRef(),
         isCarouselShown = useSelector(mapIsCarouselShown),
         windowWidth = useSelector(mapWindowWidth),
         deviceWidthIndex = useSelector(mapDeviceWidthIndex),
@@ -32,7 +34,7 @@ const ScrollCarouselListener = ({
     useEffect(() => {
         // Only scroll if carousel is shown.
         if (scrollCarouselLog && isCarouselShown) {
-            scrollElementIntoView({
+            scrollElementIntoView.current({
                 isCarousel: true,
                 log: scrollCarouselLog,
                 scrollClass: CAROUSEL_SCROLL,
@@ -48,7 +50,9 @@ const ScrollCarouselListener = ({
         }
     }, [scrollCarouselLog])
 
-    return null
+    return (
+        <ScrollDispatcher {...{ ref: scrollElementIntoView }} />
+    )
 }
 
 ScrollCarouselListener.propTypes = {

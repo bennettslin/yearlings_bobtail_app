@@ -4,7 +4,6 @@
 * Scroll listener refactor.
     * Make aligns a selector. Simplify them as well.
     * Knows not to scroll when logue. Remove this check elsewhere.
-    * Make helper a dispatcher instead.
 * Eventually pass actions as json.
 
 # Issues
