@@ -3,8 +3,11 @@ import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import { updateLyricStore } from '../../redux/lyric/action'
+import { updateScrollCarouselStore } from '../../redux/scrollCarousel/action'
+import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import {
+    mapIsSelectedLogue,
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex
@@ -15,6 +18,7 @@ const SongChangeListener = () => {
         dispatch = useDispatch(),
         timeoutRef = useRef(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
+        isSelectedLogue = useSelector(mapIsSelectedLogue),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
@@ -43,6 +47,21 @@ const SongChangeListener = () => {
                 lyricVerseIndex: selectedVerseIndex,
                 lyricAnnotationIndex: selectedAnnotationIndex
             }))
+
+            // TODO: Have scroll manager know if logue.
+            if (!isSelectedLogue) {
+                dispatch(updateScrollCarouselStore({
+                    scrollCarouselLog: 'Carousel entered.',
+                    scrollCarouselIndex: selectedAnnotationIndex,
+                    scrollCarouselNoDuration: true
+                }))
+                dispatch(updateScrollLyricStore({
+                    scrollLyricLog: 'Lyric entered.',
+                    scrollLyricByVerse: true,
+                    scrollLyricNoDuration: true,
+                    scrollLyricAlways: true
+                }))
+            }
         }
     }, [isSongChangeDone])
 

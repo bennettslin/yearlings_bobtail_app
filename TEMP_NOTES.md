@@ -1,5 +1,4 @@
 # Scroll refactor
-* Move scrollRender listener dispatches to songChange listener.
 * Move lyric listener dispatches to where those are dispatched.
 * Each call to updateScrollStore is its own action creator.
     * Consolidate them as patterns emerge.

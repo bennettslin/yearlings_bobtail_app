@@ -4,7 +4,6 @@ import AnnotationListener from '../../handlers/Annotation/Listener'
 import LyricListener from '../../listeners/Lyric'
 import SceneChangeListener from '../../listeners/SceneChange'
 import SongChangeListener from '../../listeners/SongChange'
-import ScrollRenderListener from '../../listeners/ScrollRender'
 import UrlListener from '../../listeners/Url'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
 import AudioManager from '../../managers/Audio'
@@ -19,7 +18,6 @@ const ListenContainer = () => {
             <AnnotationAccessListener />
             <AnnotationListener />
             <LyricListener />
-            <ScrollRenderListener />
             <SceneChangeListener />
             <SongChangeListener />
             <UrlListener />
