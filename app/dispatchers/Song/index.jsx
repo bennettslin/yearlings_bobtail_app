@@ -12,7 +12,7 @@ import {
     updateEarColumnIndex,
     updateWikiIndices
 } from '../../redux/session/action'
-import { updateToggleStore } from '../../redux/toggle/action'
+import { toggleIsNavShown } from '../../redux/toggle/action'
 import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getSongsAndLoguesCount } from '../../api/album/songs'
@@ -91,7 +91,7 @@ const SongDispatcher = forwardRef((props, ref) => {
             }
         }))
 
-        dispatch(updateToggleStore({ isNavShown: false }))
+        dispatch(toggleIsNavShown())
 
         return true
     }

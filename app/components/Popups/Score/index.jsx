@@ -1,7 +1,7 @@
 // Popup container for score section.
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateToggleStore } from '../../../redux/toggle/action'
+import { toggleIsScoreShown } from '../../../redux/toggle/action'
 import Score from '../../Score'
 import Popup from '../../Popup'
 import { mapIsScoreShown } from '../../../redux/toggle/selector'
@@ -12,7 +12,7 @@ const ScorePopup = () => {
         isScoreShown = useSelector(mapIsScoreShown)
 
     const handleCloseClick = () => {
-        dispatch(updateToggleStore({ isScoreShown: false }))
+        dispatch(toggleIsScoreShown())
     }
 
     return (

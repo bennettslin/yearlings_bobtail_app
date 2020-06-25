@@ -1,7 +1,10 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollCarouselToAnnotation } from '../../redux/scrollCarousel/action'
-import { updateToggleStore } from '../../redux/toggle/action'
+import {
+    toggleIsCarouselShown,
+    toggleIsNavShown
+} from '../../redux/toggle/action'
 import { mapAccessedAnnotationIndex } from '../../redux/access/selector'
 import { mapSelectedDotsBit } from '../../redux/dots/selector'
 import {
@@ -47,13 +50,11 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
             nextIsCarouselShown = false
         }
 
-        dispatch(updateToggleStore({
+        dispatch(toggleIsCarouselShown(
             // Do not toggle carousel if no dots are selected.
-            ...Boolean(selectedDotsBit) && {
-                isCarouselShown: nextIsCarouselShown
-            },
-
-            isNavShown:
+            Boolean(selectedDotsBit) && nextIsCarouselShown
+        ))
+        dispatch(toggleIsNavShown(
             selectedDotsBit ?
                 // If dots are selected, toggle nav under these conditions.
                 !nextIsCarouselShown &&
@@ -62,7 +63,7 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
 
                 // If no dots are selected, just toggle nav.
                 !isNavShown
-        }))
+        ))
 
         // If showing carousel, scroll to selected or accessed annotation.
         if (nextIsCarouselShown) {

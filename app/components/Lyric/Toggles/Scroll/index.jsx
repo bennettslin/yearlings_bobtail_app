@@ -10,7 +10,7 @@ import { LYRIC_SCROLL_TOGGLE_KEY } from '../../../../constants/access'
 import { LYRIC_SCROLL_BUTTON_KEY } from '../../../../constants/buttons'
 import { AUTOSCROLL } from '../../../../constants/tips'
 import { mapIsAutoScroll } from '../../../../redux/toggle/selector'
-import { enableAutoScroll } from '../../../../redux/toggle/action'
+import { toggleIsAutoScroll } from '../../../../redux/toggle/action'
 
 const LyricToggleScroll = () => {
     const
@@ -18,7 +18,7 @@ const LyricToggleScroll = () => {
         isAutoScroll = useSelector(mapIsAutoScroll)
 
     const handleButtonClick = () => {
-        dispatch(enableAutoScroll())
+        dispatch(toggleIsAutoScroll(true))
     }
 
     return (

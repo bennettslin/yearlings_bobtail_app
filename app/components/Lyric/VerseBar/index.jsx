@@ -7,7 +7,7 @@ import Transition from 'react-transition-group/Transition'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../api/album/verses'
-import { enableAutoScroll } from '../../../redux/toggle/action'
+import { toggleIsAutoScroll } from '../../../redux/toggle/action'
 import { mapVerseCursorIndex } from '../../../redux/cursor/selector'
 import {
     mapLyricSongIndex,
@@ -31,7 +31,7 @@ const VerseBar = ({
     const onClick = e => {
         logEvent({ e, componentName: 'VerseBar' })
         if (isVerseBarShown) {
-            dispatch(enableAutoScroll())
+            dispatch(toggleIsAutoScroll(true))
         }
     }
 
