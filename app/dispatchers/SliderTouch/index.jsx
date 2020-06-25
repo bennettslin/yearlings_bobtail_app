@@ -153,7 +153,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
                 // Selected verse is wherever touch ended on slider.
                 dispatchVerse.current({
                     selectedVerseIndex: sliderVerseIndex,
-                    scrollLog: `Select slider verse ${sliderVerseIndex}.`
+                    scrollLog: 'Slider selected'
                 })
             }
 

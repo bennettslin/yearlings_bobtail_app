@@ -90,11 +90,11 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
 
         if (nextAnnotationIndex) {
             dispatch(scrollLyricToAnchor(
-                'Select direction',
+                'Direction selected',
                 nextAnnotationIndex
             ))
             dispatch(scrollCarouselToAnnotation(
-                'Select direction',
+                'Direction selected',
                 nextAnnotationIndex
             ))
         }

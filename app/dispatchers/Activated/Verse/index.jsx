@@ -22,7 +22,7 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
 
     const _queueScrollToActivatedVerse = nextVerseIndex => {
         dispatch(scrollLyricToVerse(
-            'Activate',
+            'Activated',
             nextVerseIndex
         ))
     }

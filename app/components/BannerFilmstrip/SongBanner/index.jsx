@@ -126,7 +126,7 @@ const SongBanner = () => {
 
         dispatchVerse.current({
             selectedVerseIndex: verseIndex,
-            scrollLog: `Select banner verse ${verseIndex}.`
+            scrollLog: 'Banner selected'
         })
 
         // Once clicked, do not allow another click on the same hover.

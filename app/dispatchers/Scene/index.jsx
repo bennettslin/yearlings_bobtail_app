@@ -18,7 +18,7 @@ const SceneDispatcher = forwardRef((props, ref) => {
 
         dispatchVerse.current({
             selectedVerseIndex,
-            scrollLog: `Select scene ${selectedSceneIndex}, verse ${selectedVerseIndex}.`
+            scrollLog: `Filmstrip scene ${selectedSceneIndex} selected`
         })
     }
 

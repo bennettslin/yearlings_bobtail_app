@@ -25,13 +25,13 @@ export default (
             return {
                 ...state,
                 ...hasKey(isAutoScroll) && isAutoScroll && {
-                    scrollLyricLog: 'VerseBar or autoScroll.',
+                    scrollLyricLog: 'AutoScrolled',
                     scrollLyricByVerse: true,
                     scrollLyricAlways: true
                 },
                 ...hasKey(isLyricExpanded) && {
                     scrollLyricLog:
-                        `Lyric ${isLyricExpanded ? 'expanded' : 'collapsed'}.`,
+                        `Lyric ${isLyricExpanded ? 'expanded' : 'collapsed'}`,
                     scrollLyricByVerse: true,
                     scrollLyricAlways: true
                 }
@@ -42,7 +42,7 @@ export default (
             return hasKey(isHeightlessLyric) && !isHeightlessLyric ? {
                 ...state,
                 ...{
-                    scrollLyricLog: 'Lyric heighted.',
+                    scrollLyricLog: 'Lyric heighted',
                     scrollLyricByVerse: true,
                     scrollLyricAlways: true
                 }

@@ -53,7 +53,7 @@ const NavigationManager = forwardRef((props, ref) => {
 
                 keyWasRegistered = dispatchVerse.current({
                     selectedVerseIndex: activatedVerseIndex,
-                    scrollLog: `Key select activated verse ${activatedVerseIndex}.`
+                    scrollLog: 'Key selected'
                 })
 
                 annotationIndexWasAccessed = true

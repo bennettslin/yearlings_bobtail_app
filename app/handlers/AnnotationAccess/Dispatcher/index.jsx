@@ -59,11 +59,11 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
         // Only scroll if accessed with a direction.
         if (direction && accessedAnnotationIndex > 0) {
             dispatch(scrollLyricToAnchor(
-                'Access direction',
+                'Direction accessed',
                 accessedAnnotationIndex
             ))
             dispatch(scrollCarouselToAnnotation(
-                'Access direction',
+                'Direction accessed',
                 accessedAnnotationIndex
             ))
         }

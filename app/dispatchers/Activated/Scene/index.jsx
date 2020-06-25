@@ -26,7 +26,7 @@ const ActivatedSceneDispatcher = forwardRef((props, ref) => {
         activatedVerseIndex
     ) => {
         dispatch(scrollLyricToVerse(
-            `Scene ${nextSceneIndex} activate`,
+            `Filmstrip scene ${nextSceneIndex} activated`,
             activatedVerseIndex
         ))
     }

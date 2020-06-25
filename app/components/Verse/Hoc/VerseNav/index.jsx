@@ -26,7 +26,7 @@ const VerseNav = ({
     const handleButtonClick = () => {
         handleVerseSelect({
             selectedVerseIndex: verseIndex,
-            scrollLog: `Click select activated verse ${verseIndex}.`
+            scrollLog: 'Verse nav selected'
         })
     }
 
