@@ -1,13 +1,6 @@
 // Actions for scrolling lyric values.
-import { getDefinedOnlyPayload } from '../../helpers/action'
 import { SCROLL_LYRIC_STORE } from '../../constants/store'
 import { SCROLL_LYRIC_DEFAULTS } from './default'
-
-// TODO: Remove this.
-export const updateScrollLyricStore = (payload = SCROLL_LYRIC_DEFAULTS) => ({
-    type: SCROLL_LYRIC_STORE,
-    payload: getDefinedOnlyPayload(payload)
-})
 
 export const scrollLyricToAnchor = (log, index) => ({
     type: SCROLL_LYRIC_STORE,
@@ -23,6 +16,17 @@ export const scrollLyricToVerse = (log, index) => ({
         scrollLyricLog: log,
         scrollLyricIndex: index,
         scrollLyricByVerse: true
+    }
+})
+
+// TODO: Is a separate action for always scrolling necessary?
+export const scrollLyricToVerseAlways = (log, index) => ({
+    type: SCROLL_LYRIC_STORE,
+    payload: {
+        scrollLyricLog: log,
+        scrollLyricIndex: index,
+        scrollLyricByVerse: true,
+        scrollLyricAlways: true
     }
 })
 

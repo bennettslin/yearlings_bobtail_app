@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { updateAudioStore } from '../../redux/audio/action'
-import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
+import { scrollLyricToVerseAlways } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { resetVerseBars } from '../../redux/verseBars/action'
 import { getStartTimeForVerse } from '../../api/album/time'
@@ -52,12 +52,10 @@ const VerseDispatcher = forwardRef((props, ref) => {
         // Selecting a verse necessarily resets the verse bars.
         dispatch(resetVerseBars())
 
-        dispatch(updateScrollLyricStore({
-            scrollLyricLog: scrollLog,
-            scrollLyricIndex: selectedVerseIndex,
-            scrollLyricByVerse: true,
-            scrollLyricAlways: true
-        }))
+        dispatch(scrollLyricToVerseAlways(
+            scrollLog,
+            selectedVerseIndex
+        ))
     }
 
     useImperativeHandle(ref, () => dispatchVerse)

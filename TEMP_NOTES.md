@@ -1,5 +1,4 @@
 # Scroll refactor
-* Finish scrollLyric action creators.
 * Eventually pass actions as json.
 * Only scroll lyric collapsed if not already collapsed?
 
