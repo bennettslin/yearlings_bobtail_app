@@ -15,6 +15,11 @@ export const getPresencesForLayer = ({
 
 }) => {
     const presencesEntity = layerPresencesList[yIndex][presenceType]
+
+    if (!presencesEntity) {
+        return []
+    }
+
     return (
         actorKey ?
             presencesEntity[actorKey] :

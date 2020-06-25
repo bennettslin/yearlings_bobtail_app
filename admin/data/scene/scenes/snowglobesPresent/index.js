@@ -11,14 +11,16 @@ import { MISCHIEVOUS_BANJO } from '../../../../../app/constants/scene/actors/mir
 export default {
     [MOTHER]: {
         [PRESENT]: {
+            yIndex: 0,
             xPosition: 3.2,
-            zOffset: 3.4
+            zOffset: 0.9
         }
     },
     [BENNETT_FATHER]: {
         [PRESENT]: {
+            yIndex: 0,
             xPosition: 5.9,
-            zOffset: 3
+            zOffset: -1
         }
     },
     [LIZ]: {

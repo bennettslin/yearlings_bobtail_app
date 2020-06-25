@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Scroll refactor.`,
-        workedHours: 7,
+        workedHours: 10,
         neededHours: 12
     },
 
