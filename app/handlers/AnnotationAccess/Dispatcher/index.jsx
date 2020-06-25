@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
-import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
+import { scrollCarouselToAnnotation } from '../../../redux/scrollCarousel/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { getAnnotationIndexForVerseIndex } from './helper'
@@ -63,10 +63,10 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
                         `Direction access annotation ${accessedAnnotationIndex}.`,
                 scrollLyricIndex: accessedAnnotationIndex
             }))
-            dispatch(updateScrollCarouselStore({
-                scrollCarouselLog: 'Access carousel annotation.',
-                scrollCarouselIndex: accessedAnnotationIndex
-            }))
+            dispatch(scrollCarouselToAnnotation(
+                'Access direction',
+                accessedAnnotationIndex
+            ))
         }
 
         return accessedAnnotationIndex

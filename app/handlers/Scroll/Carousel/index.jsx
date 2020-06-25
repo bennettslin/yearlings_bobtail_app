@@ -3,7 +3,7 @@ import React, { memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import ScrollDispatcher from '../Dispatcher'
-import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
+import { resetScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import {
     mapScrollCarouselLog,
@@ -32,7 +32,7 @@ const ScrollCarouselListener = ({
                 noDuration: scrollCarouselNoDuration
             })
 
-            dispatch(updateScrollCarouselStore())
+            dispatch(resetScrollCarouselStore())
         }
     }, [scrollCarouselLog])
 

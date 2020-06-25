@@ -42,7 +42,12 @@ const ScrollDispatcher = forwardRef(({
             })
 
         if (element) {
-            logScroll(log)
+            if (isCarousel) {
+                logScroll({
+                    isCarousel,
+                    log: `${log} ${index}.`
+                })
+            }
             scrollIntoView(element, {
                 align: alignForScroll,
                 time: noDuration ? 0 : 500,

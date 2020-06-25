@@ -175,25 +175,28 @@ export const logError = ({
 
 /** Non-analytics events */
 
-export const logAdmin = (log) => {
+export const logAdmin = log => {
     _logInfo({
         log,
         category: ADMIN
     })
 }
-export const logFocus = (log) => {
+export const logFocus = log => {
     _logInfo({
         log,
         category: FOCUS
     })
 }
-export const logScroll = (text) => {
+export const logScroll = ({
+    isCarousel,
+    log
+}) => {
     _logInfo({
-        log: `Scroll: ${text}`,
+        log: `Scroll ${isCarousel ? 'carousel' : 'lyric'}: ${log}`,
         category: SCROLL
     })
 }
-export const logTransition = (log) => {
+export const logTransition = log => {
     _logInfo({
         log,
         category: TRANSITION

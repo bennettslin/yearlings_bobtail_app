@@ -1,21 +1,25 @@
 // Actions for scrolling carousel values.
-import {
-    hasKey,
-    getDefinedOnlyPayload
-} from '../../helpers/action'
 import { SCROLL_CAROUSEL_STORE } from '../../constants/store'
 import { SCROLL_CAROUSEL_DEFAULTS } from './default'
 
-export const updateScrollCarouselStore = (payload = SCROLL_CAROUSEL_DEFAULTS) => {
-    const { scrollCarouselIndex } = payload
-
-    if (hasKey(scrollCarouselIndex)) {
-        // If given carousel index is 0, scroll instead to 1.
-        payload.scrollCarouselIndex = scrollCarouselIndex || 1
+export const scrollCarouselToAnnotation = (log, index) => ({
+    type: SCROLL_CAROUSEL_STORE,
+    payload: {
+        scrollCarouselLog: log,
+        scrollCarouselIndex: index
     }
+})
 
-    return {
-        type: SCROLL_CAROUSEL_STORE,
-        payload: getDefinedOnlyPayload(payload)
+export const scrollCarouselForSongChange = index => ({
+    type: SCROLL_CAROUSEL_STORE,
+    payload: {
+        scrollCarouselLog: 'Song change scrolled',
+        scrollCarouselIndex: index,
+        scrollCarouselNoDuration: true
     }
-}
+})
+
+export const resetScrollCarouselStore = () => ({
+    type: SCROLL_CAROUSEL_STORE,
+    payload: SCROLL_CAROUSEL_DEFAULTS
+})
