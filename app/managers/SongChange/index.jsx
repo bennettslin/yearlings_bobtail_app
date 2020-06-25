@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import { updateLyricStore } from '../../redux/lyric/action'
 import { scrollCarouselForSongChange } from '../../redux/scrollCarousel/action'
-import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
+import { scrollLyricForSongChange } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import {
     mapSelectedSongIndex,
@@ -48,12 +48,7 @@ const SongChangeManager = () => {
             dispatch(scrollCarouselForSongChange(
                 selectedAnnotationIndex
             ))
-            dispatch(updateScrollLyricStore({
-                scrollLyricLog: 'Lyric entered.',
-                scrollLyricByVerse: true,
-                scrollLyricNoDuration: true,
-                scrollLyricAlways: true
-            }))
+            dispatch(scrollLyricForSongChange())
         }
     }, [isSongChangeDone])
 

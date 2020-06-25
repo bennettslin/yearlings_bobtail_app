@@ -3,7 +3,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import SongDispatcher from '../Song'
 import { updateAudioStore } from '../../redux/audio/action'
-import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
+import { scrollLyricForAutoScrolledPlay } from '../../redux/scrollLyric/action'
 import { mapIsPlaying } from '../../redux/audio/selector'
 import { mapPlayerCanPlayThrough } from '../../redux/players/selector'
 import { mapIsSelectedLogue } from '../../redux/selected/selector'
@@ -40,11 +40,7 @@ const PlayDispatcher = forwardRef((props, ref) => {
             dispatch(updateAudioStore({ queuedTogglePlay: true }))
 
             if (nextIsPlaying) {
-                dispatch(updateScrollLyricStore({
-                    scrollLyricLog: 'Playing on.',
-                    scrollLyricByVerse: true,
-                    scrollLyricAlways: true
-                }))
+                dispatch(scrollLyricForAutoScrolledPlay())
             }
         }
 

@@ -1,6 +1,5 @@
 # Scroll refactor
-* Each call to updateScrollStore is its own action creator.
-    * Consolidate them as patterns emerge.
+* Finish scrollLyric action creators.
 * Eventually pass actions as json.
 * Only scroll lyric collapsed if not already collapsed?
 

@@ -189,10 +189,17 @@ export const logFocus = log => {
 }
 export const logScroll = ({
     isCarousel,
+    isAnchor,
     log
 }) => {
+    let scrollType = 'verse'
+    if (isCarousel) {
+        scrollType = 'carousel'
+    } else if (isAnchor) {
+        scrollType = 'anchor'
+    }
     _logInfo({
-        log: `Scroll ${isCarousel ? 'carousel' : 'lyric'}: ${log}`,
+        log: `Scroll ${scrollType}: ${log}`,
         category: SCROLL
     })
 }

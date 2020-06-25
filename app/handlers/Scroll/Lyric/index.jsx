@@ -3,7 +3,7 @@ import React, { memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import ScrollDispatcher from '../Dispatcher'
-import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
+import { resetScrollLyricStore } from '../../../redux/scrollLyric/action'
 import {
     ANCHOR_SCROLL,
     VERSE_SCROLL
@@ -54,7 +54,7 @@ const ScrollLyricListener = ({
                 noDuration: scrollLyricNoDuration
             })
 
-            dispatch(updateScrollLyricStore())
+            dispatch(resetScrollLyricStore())
         }
     }, [scrollLyricLog])
 

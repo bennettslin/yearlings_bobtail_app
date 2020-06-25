@@ -1,7 +1,7 @@
 // Child that knows rules to dispatch time and verse from player.
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
+import { scrollLyricForPlayAutoScroll } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
 import { getSceneIndexForVerse } from '../../api/album/verses'
@@ -39,13 +39,7 @@ const TimeVerseDispatcher = forwardRef((props, ref) => {
 
         // If autoScroll is on, scroll to selected verse.
         if (isAutoScroll) {
-            dispatch(updateScrollLyricStore({
-                scrollLyricLog:
-                    `Player autoScroll to verse ${nextVerseIndex}.`,
-                scrollLyricByVerse: true,
-                scrollLyricIndex: nextVerseIndex,
-                scrollLyricFromAutoScroll: true
-            }))
+            dispatch(scrollLyricForPlayAutoScroll(nextVerseIndex))
 
         } else {
             /**

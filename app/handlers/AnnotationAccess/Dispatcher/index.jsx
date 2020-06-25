@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { scrollCarouselToAnnotation } from '../../../redux/scrollCarousel/action'
-import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
+import { scrollLyricToAnchor } from '../../../redux/scrollLyric/action'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { getAnnotationIndexForVerseIndex } from './helper'
 import { mapSelectedDotsBit } from '../../../redux/dots/selector'
@@ -58,11 +58,10 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
 
         // Only scroll if accessed with a direction.
         if (direction && accessedAnnotationIndex > 0) {
-            dispatch(updateScrollLyricStore({
-                scrollLyricLog:
-                        `Direction access annotation ${accessedAnnotationIndex}.`,
-                scrollLyricIndex: accessedAnnotationIndex
-            }))
+            dispatch(scrollLyricToAnchor(
+                'Access direction',
+                accessedAnnotationIndex
+            ))
             dispatch(scrollCarouselToAnnotation(
                 'Access direction',
                 accessedAnnotationIndex

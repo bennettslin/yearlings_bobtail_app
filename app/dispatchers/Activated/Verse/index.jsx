@@ -1,7 +1,7 @@
 // Child that knows rules to select activated verse.
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
+import { scrollLyricToVerse } from '../../../redux/scrollLyric/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { disableAutoScroll } from '../../../redux/toggle/action'
 import { getActivatedVerseForDirection } from './helper'
@@ -21,12 +21,10 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
         isSelectedLogue = useSelector(mapIsSelectedLogue)
 
     const _queueScrollToActivatedVerse = nextVerseIndex => {
-        dispatch(updateScrollLyricStore({
-            scrollLyricLog:
-                    `Activate verse ${nextVerseIndex}.`,
-            scrollLyricByVerse: true,
-            scrollLyricIndex: nextVerseIndex
-        }))
+        dispatch(scrollLyricToVerse(
+            'Activate',
+            nextVerseIndex
+        ))
     }
 
     const activateVerseIndex = nextVerseIndex => {

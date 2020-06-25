@@ -1,7 +1,7 @@
 // Child that knows rules to select activated verse.
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
+import { scrollLyricToVerse } from '../../../redux/scrollLyric/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { disableAutoScroll } from '../../../redux/toggle/action'
 import { getVerseIndexForScene } from '../../../api/album/scenes'
@@ -25,12 +25,10 @@ const ActivatedSceneDispatcher = forwardRef((props, ref) => {
         nextSceneIndex,
         activatedVerseIndex
     ) => {
-        dispatch(updateScrollLyricStore({
-            scrollLyricLog:
-                    `Activate scene ${nextSceneIndex}, verse ${activatedVerseIndex}.`,
-            scrollLyricByVerse: true,
-            scrollLyricIndex: activatedVerseIndex
-        }))
+        dispatch(scrollLyricToVerse(
+            `Scene ${nextSceneIndex} activate`,
+            activatedVerseIndex
+        ))
     }
 
     const _activateSceneIndex = nextSceneIndex => {

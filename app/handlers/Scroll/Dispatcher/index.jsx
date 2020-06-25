@@ -2,6 +2,7 @@ import { forwardRef, useImperativeHandle } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
+import { ANCHOR_SCROLL } from '../../../constants/scroll'
 import { getSafeScrollChild } from '../../../helpers/scroll'
 import {
     getMapAlignForScroll,
@@ -42,12 +43,11 @@ const ScrollDispatcher = forwardRef(({
             })
 
         if (element) {
-            if (isCarousel) {
-                logScroll({
-                    isCarousel,
-                    log: `${log} ${index}.`
-                })
-            }
+            logScroll({
+                isCarousel,
+                isAnchor: scrollClass === ANCHOR_SCROLL,
+                log: `${log} ${index}.`
+            })
             scrollIntoView(element, {
                 align: alignForScroll,
                 time: noDuration ? 0 : 500,

@@ -1,7 +1,7 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollCarouselToAnnotation } from '../../../redux/scrollCarousel/action'
-import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
+import { scrollLyricToAnchor } from '../../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import { getHasSelectedDot } from '../../../helpers/dot'
 import { getDotsBitForAnnotation } from '../../../api/album/annotations'
@@ -57,13 +57,10 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
         if (annotationIndex) {
             // If selecting from carousel, scroll lyric.
             if (fromCarousel) {
-                dispatch(updateScrollLyricStore({
-                    scrollLyricLog:
-                        `Carousel select annotation ${
-                            annotationIndex
-                        }.`,
-                    scrollLyricIndex: annotationIndex
-                }))
+                dispatch(scrollLyricToAnchor(
+                    'Carousel selected',
+                    annotationIndex
+                ))
 
             // If selecting from lyric, scroll carousel.
             } else {
@@ -92,11 +89,10 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
         _dispatchAndLog(nextAnnotationIndex)
 
         if (nextAnnotationIndex) {
-            dispatch(updateScrollLyricStore({
-                scrollLyricLog:
-                    `Direction select annotation ${nextAnnotationIndex}.`,
-                scrollLyricIndex: nextAnnotationIndex
-            }))
+            dispatch(scrollLyricToAnchor(
+                'Select direction',
+                nextAnnotationIndex
+            ))
             dispatch(scrollCarouselToAnnotation(
                 'Select direction',
                 nextAnnotationIndex
