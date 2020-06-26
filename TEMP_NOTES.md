@@ -5,6 +5,7 @@
 # Issues
 * What is mapIsSelectPlayReady?
 * Is song selection still slower through access after refactor?
+* Rename toggle action creators.
 
 # Entrance refactor revisit
 * Make scrolling smooth with scene change.
