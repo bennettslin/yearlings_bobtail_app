@@ -1,6 +1,7 @@
 # Scroll refactor
 * Eventually pass actions as json.
 * Only scroll lyric collapsed if not already collapsed?
+* Scroll first and then pass callback to select verse.
 
 # Issues
 * What is mapIsSelectPlayReady?
