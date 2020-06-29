@@ -1,7 +1,7 @@
 // Child that knows rules to toggle score. Not needed if just turning off.
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleIsScoreShown } from '../../redux/toggle/action'
+import { updateIsScoreShown } from '../../redux/toggle/action'
 import { mapIsSelectedLogue } from '../../redux/selected/selector'
 import { mapIsScoreShown } from '../../redux/toggle/selector'
 import { mapCanScoreMount } from '../../redux/viewport/selector'
@@ -26,7 +26,7 @@ const ScoreDispatcher = forwardRef((props, ref) => {
                 // ... also must not be in logue.
                 !isSelectedLogue
 
-        dispatch(toggleIsScoreShown(isScoreShown))
+        dispatch(updateIsScoreShown(isScoreShown))
 
         // Try was successful.
         return isScoreShown === triedIsScoreShown

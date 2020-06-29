@@ -5,10 +5,10 @@ import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import {
-    toggleIsNavShown,
+    updateIsNavShown,
     toggleIsAboutShown,
     updateIsAboutShown,
-    toggleIsAutoScroll
+    updateIsAutoScroll
 } from '../../../redux/toggle/action'
 import {
     updateWikiIndices,
@@ -121,7 +121,7 @@ const LetterManager = forwardRef((props, ref) => {
                 keyWasRegistered = dispatchLyricExpand.current()
                 break
             case LYRIC_SCROLL_TOGGLE_KEY:
-                dispatch(toggleIsAutoScroll(true))
+                dispatch(updateIsAutoScroll(true))
                 keyWasRegistered = true
                 break
             case OVERVIEW_TOGGLE_KEY:
@@ -195,7 +195,7 @@ const LetterManager = forwardRef((props, ref) => {
 
         // Hide nav.
         } else if (isNavShown) {
-            dispatch(toggleIsNavShown())
+            dispatch(updateIsNavShown())
 
         // Turn access off.
         } else {

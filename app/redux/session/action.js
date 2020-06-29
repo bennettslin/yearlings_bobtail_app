@@ -1,23 +1,10 @@
 // Actions for session values.
-import { setInStorage } from '../../helpers/storage'
-import {
-    SESSION_STORE,
-    AUDIO_OPTION_INDEX
-} from '../../constants/store'
+import { SESSION_STORE } from '../../constants/store'
 import { SESSION_WIKI_DEFAULTS } from './default'
-
-export const updateAudioOptionIndex = audioOptionIndex => {
-    setInStorage(AUDIO_OPTION_INDEX, audioOptionIndex)
-
-    return ({
-        type: SESSION_STORE,
-        payload: { audioOptionIndex }
-    })
-}
 
 export const toggleAudioOptionIndex = () => ({
     type: SESSION_STORE,
-    payload: { toggleAudioOptionIndex: true }
+    payload: { toggledAudioOptionIndex: true }
 })
 
 export const updateShownNavBookIndex = shownNavBookIndex => ({

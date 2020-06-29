@@ -5,7 +5,17 @@ import {
     IS_CAROUSEL_SHOWN
 } from '../../constants/store'
 
-export const toggleIsCarouselShown = isCarouselShown => {
+export const toggleIsAboutShown = () => ({
+    type: TOGGLE_STORE,
+    payload: { toggledIsAboutShown: true }
+})
+
+export const updateIsAboutShown = (isAboutShown = false) => ({
+    type: TOGGLE_STORE,
+    payload: { isAboutShown }
+})
+
+export const updateIsCarouselShown = isCarouselShown => {
     setBoolInStorage(IS_CAROUSEL_SHOWN, isCarouselShown)
 
     return ({
@@ -14,38 +24,27 @@ export const toggleIsCarouselShown = isCarouselShown => {
     })
 }
 
-// TODO: Make these a single action creator?
-export const toggleIsAboutShown = () => ({
-    type: TOGGLE_STORE,
-    payload: { toggleIsAboutShown: true }
-})
-
-export const updateIsAboutShown = (isAboutShown = false) => ({
-    type: TOGGLE_STORE,
-    payload: { isAboutShown }
-})
-
-export const toggleIsAutoScroll = (isAutoScroll = false) => ({
+export const updateIsAutoScroll = (isAutoScroll = false) => ({
     type: TOGGLE_STORE,
     payload: { isAutoScroll }
 })
 
-export const toggleIsDotsSlideShown = (isDotsSlideShown = false) => ({
+export const updateIsDotsSlideShown = (isDotsSlideShown = false) => ({
     type: TOGGLE_STORE,
     payload: { isDotsSlideShown }
 })
 
-export const toggleIsLyricExpanded = (isLyricExpanded = false) => ({
+export const updateIsLyricExpanded = (isLyricExpanded = false) => ({
     type: TOGGLE_STORE,
     payload: { isLyricExpanded }
 })
 
-export const toggleIsNavShown = (isNavShown = false) => ({
+export const updateIsNavShown = (isNavShown = false) => ({
     type: TOGGLE_STORE,
     payload: { isNavShown }
 })
 
-export const toggleIsScoreShown = (isScoreShown = false) => ({
+export const updateIsScoreShown = (isScoreShown = false) => ({
     type: TOGGLE_STORE,
     payload: { isScoreShown }
 })

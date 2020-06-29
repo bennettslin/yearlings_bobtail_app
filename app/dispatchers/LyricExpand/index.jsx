@@ -1,7 +1,7 @@
 // Child that knows rules to toggle lyric. Not needed if just collapsing.
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleIsLyricExpanded } from '../../redux/toggle/action'
+import { updateIsLyricExpanded } from '../../redux/toggle/action'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
 import { mapIsSelectedLogue } from '../../redux/selected/selector'
 import { mapIsLyricExpanded } from '../../redux/toggle/selector'
@@ -26,7 +26,7 @@ const LyricExpandDispatcher = forwardRef((props, ref) => {
                 // ... also must not be in logue.
                 !isSelectedLogue
 
-        dispatch(toggleIsLyricExpanded(nextIsLyricExpanded))
+        dispatch(updateIsLyricExpanded(nextIsLyricExpanded))
 
         // Try was successful.
         return nextIsLyricExpanded === attemptedIsLyricExpanded

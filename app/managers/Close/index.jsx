@@ -10,11 +10,11 @@ import { updateOptionStore } from '../../redux/option/action'
 import { updateWikiIndices } from '../../redux/session/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import {
-    toggleIsLyricExpanded,
+    updateIsLyricExpanded,
     updateIsAboutShown,
-    toggleIsDotsSlideShown,
-    toggleIsNavShown,
-    toggleIsScoreShown
+    updateIsDotsSlideShown,
+    updateIsNavShown,
+    updateIsScoreShown
 } from '../../redux/toggle/action'
 import { HIDDEN } from '../../constants/options'
 import { mapIsActivated } from '../../redux/activated/selector'
@@ -57,7 +57,7 @@ const CloseHandler = forwardRef((props, ref) => {
             dispatch(updateWikiIndices())
 
         } else if (isScoreShown && !exemptScore) {
-            dispatch(toggleIsScoreShown())
+            dispatch(updateIsScoreShown())
 
         } else if (isAboutShown && !exemptAbout) {
             dispatch(updateIsAboutShown())
@@ -84,15 +84,15 @@ const CloseHandler = forwardRef((props, ref) => {
         }
 
         if (!exemptDots) {
-            dispatch(toggleIsDotsSlideShown())
+            dispatch(updateIsDotsSlideShown())
         }
 
         if (!exemptLyric) {
-            dispatch(toggleIsLyricExpanded())
+            dispatch(updateIsLyricExpanded())
         }
 
         if (!exemptNav) {
-            dispatch(toggleIsNavShown())
+            dispatch(updateIsNavShown())
         }
 
         if (!exemptOverview) {
