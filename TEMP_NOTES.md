@@ -1,7 +1,16 @@
 # Scroll refactor
 * Eventually pass actions as json.
 * Only scroll lyric collapsed if not already collapsed?
+    * Also issues with auto scroll and heighted. Put this in a listener again?
+* Scene is changing on every verse select.
+    * Reducer is not behaving as it should. It should trigger only if the song or scene index has changed.
+    * Have scene change manager handle it instead.
+    * Have scene index determined by selector, not in store.
+    * Acceptance criteria: scrolling on just verse change, with no scene change, should be smooth.
 * Scroll first and then pass callback to select verse.
+    * For dispatchVerse and dispatchTimeVerse
+    * At point of dispatch, if scene will change, do not select verse, just scroll.
+    * Acceptance criteria: scrolling on scene change should be smooth.
 
 # Issues
 * What is mapIsSelectPlayReady?

@@ -25,7 +25,7 @@ export default (
             return {
                 ...state,
                 ...hasKey(isAutoScroll) && isAutoScroll && {
-                    scrollLyricLog: 'AutoScrolled',
+                    scrollLyricLog: 'Auto scrolled',
                     scrollLyricByVerse: true,
                     scrollLyricAlways: true
                 },
