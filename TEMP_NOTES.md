@@ -1,8 +1,6 @@
 # Scroll refactor
 * Eventually pass actions as json.
 * Scene is changing on every verse select.
-    * Reducer is not behaving as it should. It should trigger only if the song or scene index has changed.
-    * Have scene change manager handle it instead.
     * Have scene index determined by selector, not in store.
     * Acceptance criteria: scrolling on just verse change, with no scene change, should be smooth.
 * Scroll first and then pass callback to select verse.

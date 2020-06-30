@@ -1,13 +1,5 @@
-import { hasKey } from '../../helpers/action'
-import {
-    ENTRANCE_STORE,
-    SELECTED_STORE
-} from '../../constants/store'
-import {
-    getSongChangeDefaults,
-    getSceneChangeDefaults,
-    ENTRANCE_DEFAULTS
-} from './default'
+import { ENTRANCE_STORE } from '../../constants/store'
+import { ENTRANCE_DEFAULTS } from './default'
 
 export default (
     state = ENTRANCE_DEFAULTS,
@@ -28,38 +20,14 @@ export default (
 
             return {
                 ...newState,
+                // The conditions by which song change is done.
                 ...didCurtainsClose && isSongSelectionComplete && {
                     isSongChangeDone: true
                 },
+                // The conditions by which scene change is done.
                 ...didSceneExit && {
                     isSceneChangeDone: true
                 }
-            }
-        }
-        case SELECTED_STORE: {
-            const
-                {
-                    selectedSongIndex,
-                    selectedSceneIndex
-                } = payload,
-                {
-                    isSongChangeDone,
-                    isSceneChangeDone
-                } = state
-
-            return {
-                ...state,
-
-                // Begin song change.
-                ...hasKey(selectedSongIndex) && isSongChangeDone &&
-                    getSongChangeDefaults(false),
-
-                // Begin scene change.
-                ...(
-                    hasKey(selectedSongIndex) ||
-                    hasKey(selectedSceneIndex)
-                ) && isSongChangeDone && isSceneChangeDone &&
-                    getSceneChangeDefaults(false)
             }
         }
         default:

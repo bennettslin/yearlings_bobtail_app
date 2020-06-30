@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { resetSceneChange } from '../../redux/entrance/action'
 import { updateSceneStore } from '../../redux/scene/action'
 import {
     mapIsSongChangeDone,
@@ -17,6 +18,14 @@ const SceneChangeManager = () => {
         isSceneChangeDone = useSelector(mapIsSceneChangeDone),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedSceneIndex = useSelector(mapSelectedSceneIndex)
+
+    useEffect(() => {
+        // Scene changed, so begin transition if not already in place.
+        if (isSongChangeDone && isSceneChangeDone) {
+            dispatch(resetSceneChange())
+        }
+
+    }, [selectedSongIndex, selectedSceneIndex])
 
     useEffect(() => {
         if (isSongChangeDone && isSceneChangeDone) {

@@ -1,7 +1,10 @@
 // eslint-disable-next-line object-curly-newline
 import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateEntranceStore } from '../../redux/entrance/action'
+import {
+    updateEntranceStore,
+    resetSongChange
+} from '../../redux/entrance/action'
 import { updateLyricStore } from '../../redux/lyric/action'
 import { scrollCarouselForSongChange } from '../../redux/scrollCarousel/action'
 import { scrollLyricForSongChange } from '../../redux/scrollLyric/action'
@@ -36,6 +39,11 @@ const SongChangeManager = () => {
         setSongSelectTimeoutId(setTimeout(
             completeSongSelect, 200
         ))
+
+        // Song changed, so begin transition if not already in place.
+        if (isSongChangeDone) {
+            dispatch(resetSongChange())
+        }
     }, [selectedSongIndex])
 
     useEffect(() => {
