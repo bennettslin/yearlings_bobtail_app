@@ -129,11 +129,10 @@ export const logSelect = ({
     action,
     song,
     verse,
-    annotation,
-    scene
+    annotation
 }) => {
-    if (verse !== undefined && scene !== undefined) {
-        const message = `song: ${song}, scene: ${scene}, verse: ${verse}`
+    if (verse !== undefined) {
+        const message = `song: ${song}, verse: ${verse}`
         _logInfo({
             log: message,
             category: SELECT,
