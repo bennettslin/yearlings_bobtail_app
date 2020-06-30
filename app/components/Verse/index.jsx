@@ -1,4 +1,3 @@
-// Container for lyric audio button and all lines of a single verse.
 // eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useRef, memo } from 'react'
 import PropTypes from 'prop-types'

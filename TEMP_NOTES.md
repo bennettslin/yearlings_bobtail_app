@@ -1,6 +1,7 @@
 # Scroll refactor
 * Eventually pass actions as json.
 * Scene is changing on every verse select.
+    * Figure out onScroll and onWheel in LyricScroll. Does not load with verse bars reset.
     * Acceptance criteria: scrolling on just verse change, with no scene change, should be smooth.
 * Scroll first and then pass callback to select verse.
     * For dispatchVerse and dispatchTimeVerse
