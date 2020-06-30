@@ -22,11 +22,11 @@ const LyricScroll = forwardRef((props, ref) => {
         dispatchVerseBars = useRef()
 
     const onScroll = () => {
-        dispatchVerseBars.current()
         dispatchScroll.current()
     }
 
     const onWheel = e => {
+        dispatchVerseBars.current()
         dispatchWheel.current.lyric(
             e, lyricScrollElement.current
         )

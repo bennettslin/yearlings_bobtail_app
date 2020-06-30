@@ -14,7 +14,10 @@ import { mapIsDesktopWidth } from '../../redux/device/selector'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
 import { mapLyricDynamicHeight } from '../../redux/lyricHeight/selector'
 import { mapSelectedVerseIndex } from '../../redux/selected/selector'
-import { mapSliderVerseIndex } from '../../redux/slider/selector'
+import {
+    mapSliderVerseIndex,
+    mapIsSliderMoving
+} from '../../redux/slider/selector'
 import { mapIsLyricExpanded } from '../../redux/toggle/selector'
 import {
     mapQueuedDetermineVerseBars,
@@ -37,6 +40,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
         menuHeight = useSelector(mapMenuHeight),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
+        isSliderMoving = useSelector(mapIsSliderMoving),
         sliderVerseIndex = useSelector(mapSliderVerseIndex),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         queuedDetermineVerseBars = useSelector(mapQueuedDetermineVerseBars),
@@ -105,7 +109,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 
     useEffect(() => {
         // Determine verse bars here while we are sliding.
-        if (sliderVerseIndex > -1) {
+        if (sliderVerseIndex > -1 && isSliderMoving) {
             _dispatchVerseBars({ sliderVerseIndex })
         }
     }, [sliderVerseIndex])

@@ -1,5 +1,6 @@
 import pino from 'pino'
 import sendToGa from '../../analytics'
+import { getSceneIndexForVerse } from '../../../api/album/verses'
 
 import { getTimeDifference } from './time'
 
@@ -132,7 +133,9 @@ export const logSelect = ({
     annotation
 }) => {
     if (verse !== undefined) {
-        const message = `song: ${song}, verse: ${verse}`
+        const
+            scene = getSceneIndexForVerse(song, verse),
+            message = `song: ${song}, scene: ${scene}, verse: ${verse}.`
         _logInfo({
             log: message,
             category: SELECT,

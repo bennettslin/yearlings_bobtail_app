@@ -164,24 +164,27 @@ const Player = ({
     }, [queuedTogglePlay])
 
     useEffect(() => {
-        if (
-            /**
-             * Wait for song select to finalise, in case the user is cycling
-             * through songs in quick succession.
-             */
-            isSelected && isSelectPlayReady && (
-
+        if (isSelected) {
+            if (
                 /**
-                 * Play only if audio is already playing, or if play toggled
-                 * from logue.
+                 * Wait for song select to finalise, in case the user is cycling
+                 * through songs in quick succession.
                  */
-                isPlaying ||
-                queuedPlayFromLogue
-            )
-        ) {
-            promiseToPlay()
+                isSelectPlayReady && (
+
+                    /**
+                     * Play only if audio is already playing, or if play toggled
+                     * from logue.
+                     */
+                    isPlaying ||
+                    queuedPlayFromLogue
+                )
+            ) {
+                promiseToPlay()
+            }
+
+            dispatch(resetAudioQueue())
         }
-        dispatch(resetAudioQueue())
     }, [isSelectPlayReady])
 
     useEffect(() => {
