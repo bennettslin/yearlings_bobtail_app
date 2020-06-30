@@ -14,7 +14,6 @@ import {
 } from '../../redux/session/action'
 import { updateIsNavShown } from '../../redux/toggle/action'
 import { getStartTimeForVerse } from '../../api/album/time'
-import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getSongsAndLoguesCount } from '../../api/album/songs'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 
@@ -51,15 +50,10 @@ const SongDispatcher = forwardRef((props, ref) => {
             queuedPlaySongIndex: nextSongIndex
         }))
 
-        const
-            selectedSceneIndex = getSceneIndexForVerse(
-                nextSongIndex,
-                selectedVerseIndex
-            ),
-            selectedTime = getStartTimeForVerse(
-                nextSongIndex,
-                selectedVerseIndex
-            )
+        const selectedTime = getStartTimeForVerse(
+            nextSongIndex,
+            selectedVerseIndex
+        )
 
         dispatch(updateWikiIndices())
         if (Number.isFinite(earColumnIndex)) {
@@ -69,7 +63,6 @@ const SongDispatcher = forwardRef((props, ref) => {
             selectedSongIndex: nextSongIndex,
             selectedVerseIndex,
             selectedAnnotationIndex,
-            selectedSceneIndex,
             selectedTime
         }))
 
@@ -77,8 +70,7 @@ const SongDispatcher = forwardRef((props, ref) => {
             action: 'song',
             song: nextSongIndex,
             verse: selectedVerseIndex,
-            annotation: selectedAnnotationIndex,
-            scene: selectedSceneIndex
+            annotation: selectedAnnotationIndex
         })
 
         dispatch(updateAccessStore({

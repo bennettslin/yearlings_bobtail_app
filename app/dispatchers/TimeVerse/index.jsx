@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { scrollLyricForPlayAutoScroll } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
-import { getSceneIndexForVerse } from '../../api/album/verses'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 import { mapIsAutoScroll } from '../../redux/toggle/selector'
 
@@ -19,22 +18,15 @@ const TimeVerseDispatcher = forwardRef((props, ref) => {
         nextVerseIndex = 0
     } = {}) => {
         // This is only ever called by the player.
-        const selectedSceneIndex = getSceneIndexForVerse(
-            selectedSongIndex,
-            nextVerseIndex
-        )
-
         dispatch(updateSelectedStore({
             selectedVerseIndex: nextVerseIndex,
-            selectedSceneIndex,
             selectedTime: currentTime
         }))
 
         logSelect({
             action: 'playerVerse',
             song: selectedSongIndex,
-            verse: nextVerseIndex,
-            scene: selectedSceneIndex
+            verse: nextVerseIndex
         })
 
         // If autoScroll is on, scroll to selected verse.

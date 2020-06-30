@@ -3,6 +3,7 @@ import {
     getSongIsPrologue,
     getSongIsEpilogue
 } from '../../api/album/songs'
+import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getBeforeOnOrAfter } from '../../helpers/cursor'
 import { SELECTED_STORE } from '../../constants/store'
 
@@ -44,9 +45,17 @@ export const mapIsAnnotationShown = (
     { [SELECTED_STORE]: { selectedAnnotationIndex } }
 ) => Boolean(selectedAnnotationIndex)
 
-export const mapSelectedSceneIndex = (
-    { [SELECTED_STORE]: { selectedSceneIndex } }
-) => selectedSceneIndex
+export const mapSelectedSceneIndex = createSelector(
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex,
+    (
+        selectedSongIndex,
+        selectedVerseIndex
+    ) => getSceneIndexForVerse(
+        selectedSongIndex,
+        selectedVerseIndex
+    )
+)
 
 export const getMapIsSceneSelected = sceneIndex => createSelector(
     mapSelectedSceneIndex,

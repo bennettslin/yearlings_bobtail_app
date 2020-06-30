@@ -6,7 +6,6 @@ import { scrollLyricToVerseAlways } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { resetVerseBars } from '../../redux/verseBars/action'
 import { getStartTimeForVerse } from '../../api/album/time'
-import { getSceneIndexForVerse } from '../../api/album/verses'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 
 const VerseDispatcher = forwardRef((props, ref) => {
@@ -19,15 +18,10 @@ const VerseDispatcher = forwardRef((props, ref) => {
         scrollLog
     }) => {
 
-        const
-            selectedSceneIndex = getSceneIndexForVerse(
-                selectedSongIndex,
-                selectedVerseIndex
-            ),
-            selectedTime = getStartTimeForVerse(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
+        const selectedTime = getStartTimeForVerse(
+            selectedSongIndex,
+            selectedVerseIndex
+        )
 
         dispatch(updateAudioStore({
             queuedPlaySongIndex: selectedSongIndex
@@ -35,15 +29,13 @@ const VerseDispatcher = forwardRef((props, ref) => {
 
         dispatch(updateSelectedStore({
             selectedVerseIndex,
-            selectedSceneIndex,
             selectedTime
         }))
 
         logSelect({
             action: 'verse',
             song: selectedSongIndex,
-            verse: selectedVerseIndex,
-            scene: selectedSceneIndex
+            verse: selectedVerseIndex
         })
 
         // Ensure that no verse is activated.
