@@ -19,6 +19,15 @@ export const scrollLyricToVerse = (log, index) => ({
     }
 })
 
+export const scrollLyricForToggle = log => ({
+    type: SCROLL_LYRIC_STORE,
+    payload: {
+        scrollLyricLog: log,
+        scrollLyricByVerse: true,
+        scrollLyricAlways: true
+    }
+})
+
 // TODO: Is a separate action for always scrolling necessary?
 export const scrollLyricToVerseAlways = (log, index) => ({
     type: SCROLL_LYRIC_STORE,
@@ -36,15 +45,6 @@ export const scrollLyricForSongChange = () => ({
         scrollLyricLog: 'Song change scrolled',
         scrollLyricByVerse: true,
         scrollLyricNoDuration: true,
-        scrollLyricAlways: true
-    }
-})
-
-export const scrollLyricForAutoScrolledPlay = () => ({
-    type: SCROLL_LYRIC_STORE,
-    payload: {
-        scrollLyricLog: 'Play toggled',
-        scrollLyricByVerse: true,
         scrollLyricAlways: true
     }
 })

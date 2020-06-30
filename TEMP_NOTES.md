@@ -1,7 +1,5 @@
 # Scroll refactor
 * Eventually pass actions as json.
-* Only scroll lyric collapsed if not already collapsed?
-    * Also issues with auto scroll and heighted. Put this in a listener again?
 * Scene is changing on every verse select.
     * Reducer is not behaving as it should. It should trigger only if the song or scene index has changed.
     * Have scene change manager handle it instead.
