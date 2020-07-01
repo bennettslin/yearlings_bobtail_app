@@ -1,12 +1,14 @@
 // eslint-disable-next-line object-curly-newline
 import { forwardRef, useImperativeHandle, useState } from 'react'
 import PropTypes from 'prop-types'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateIsScrolling } from '../../redux/scrollOverlay/action'
+import { mapIsScrolling } from '../../redux/scrollOverlay/selector'
 
 const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollElement }, ref) => {
     const
         dispatch = useDispatch(),
+        isScrolling = useSelector(mapIsScrolling),
         [scrollTimeoutId, setScrollTimeoutId] = useState(-1)
 
     const _dispatchScrollOverlay = prevScrollTop => {
@@ -25,7 +27,10 @@ const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollElement }, ref) => {
             timeoutDuration
         ))
 
-        dispatch(updateIsScrolling(true))
+        // If isScrolling is already on, don't bother to dispatch again.
+        if (!isScrolling) {
+            dispatch(updateIsScrolling(true))
+        }
     }
 
     useImperativeHandle(ref, () => determineScrollOverlay)
