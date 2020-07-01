@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
     updateAccessStore,
@@ -12,27 +12,31 @@ import { mapIsNavShown } from '../../../redux/toggle/selector'
 const NavListener = () => {
     const
         dispatch = useDispatch(),
+        didMount = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isNavShown = useSelector(mapIsNavShown)
 
     useEffect(() => {
-        if (isNavShown) {
-            /**
-             * Establish the nav index upon showing the nav. This will continue
-             * to be the nav index for as long as the nav stays up, even if
-             * access is turned on and off in between.
-             */
-            dispatch(updateAccessStore({
-                accessedNavIndex: selectedSongIndex
-            }))
-            dispatch(updateShownNavBookIndex(
-                getBookForSongIndex(selectedSongIndex)
-            ))
+        if (didMount.current) {
+            if (isNavShown) {
+                /**
+                 * Establish the nav index upon showing the nav. This will continue
+                 * to be the nav index for as long as the nav stays up, even if
+                 * access is turned on and off in between.
+                 */
+                dispatch(updateAccessStore({
+                    accessedNavIndex: selectedSongIndex
+                }))
+                dispatch(updateShownNavBookIndex(
+                    getBookForSongIndex(selectedSongIndex)
+                ))
 
+            } else {
+                dispatch(resetAccessedNav())
+            }
         } else {
-            dispatch(resetAccessedNav())
+            didMount.current = true
         }
-
     }, [isNavShown])
 
     return null

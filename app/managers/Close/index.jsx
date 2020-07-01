@@ -3,7 +3,7 @@
  * each section, it is better for dev clarity to keep them together.
  */
 // eslint-disable-next-line object-curly-newline
-import { forwardRef, useImperativeHandle, useEffect } from 'react'
+import { forwardRef, useImperativeHandle, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { updateOptionStore } from '../../redux/option/action'
@@ -34,6 +34,7 @@ import { mapIsWikiShown } from '../../redux/wiki/selector'
 const CloseHandler = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
+        [didMount, setDidMount] = useState(false),
         isActivated = useSelector(mapIsActivated),
         isOverviewShown = useSelector(mapIsOverviewShown),
         isTipsShown = useSelector(mapIsTipsShown),
@@ -119,22 +120,30 @@ const CloseHandler = forwardRef((props, ref) => {
     }
 
     useEffect(() => {
-        if (isAnnotationShown) {
-            closeMainPopups()
-            closeMainSections({
-                exemptAnnotation: true,
-                exemptLyric: true
-            })
+        if (didMount) {
+            if (isAnnotationShown) {
+                closeMainPopups()
+                closeMainSections({
+                    exemptAnnotation: true,
+                    exemptLyric: true
+                })
+            }
+        } else {
+            setDidMount(true)
         }
     }, [isAnnotationShown])
 
     useEffect(() => {
-        closeMainPopups()
-        closeMainSections({
-            exemptAnnotation: true,
-            exemptDots: true,
-            exemptNav: true
-        })
+        if (didMount) {
+            closeMainPopups()
+            closeMainSections({
+                exemptAnnotation: true,
+                exemptDots: true,
+                exemptNav: true
+            })
+        } else {
+            setDidMount(true)
+        }
     }, [isCarouselShown])
 
     useEffect(() => {

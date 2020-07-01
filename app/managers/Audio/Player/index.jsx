@@ -41,6 +41,7 @@ const Player = ({
     const
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
+        didMount = useRef(),
         isSelected = useSelector(getMapIsSongSelected(songIndex)),
         playerPausedTime = useSelector(getMapPlayerPausedTime(songIndex)),
         isPlaying = useSelector(mapIsPlaying),
@@ -164,26 +165,30 @@ const Player = ({
     }, [queuedTogglePlay])
 
     useEffect(() => {
-        if (isSelected) {
-            if (
-                /**
-                 * Wait for song select to finalise, in case the user is cycling
-                 * through songs in quick succession.
-                 */
-                isSelectPlayReady && (
-
+        if (didMount.current) {
+            if (isSelected) {
+                if (
                     /**
-                     * Play only if audio is already playing, or if play toggled
-                     * from logue.
+                     * Wait for song select to finalise, in case the user is cycling
+                     * through songs in quick succession.
                      */
-                    isPlaying ||
-                    queuedPlayFromLogue
-                )
-            ) {
-                promiseToPlay()
-            }
+                    isSelectPlayReady && (
 
-            dispatch(resetAudioQueue())
+                        /**
+                         * Play only if audio is already playing, or if play toggled
+                         * from logue.
+                         */
+                        isPlaying ||
+                        queuedPlayFromLogue
+                    )
+                ) {
+                    promiseToPlay()
+                }
+
+                dispatch(resetAudioQueue())
+            }
+        } else {
+            didMount.current = true
         }
     }, [isSelectPlayReady])
 
