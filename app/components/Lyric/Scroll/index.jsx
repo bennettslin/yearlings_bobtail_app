@@ -1,10 +1,7 @@
-import React, {
-    forwardRef,
-    useImperativeHandle,
-    useEffect,
-    useRef
-} from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { forwardRef, useEffect, useRef } from 'react'
 import cx from 'classnames'
+import VerseBar from '../VerseBar'
 import AutoScrollDispatcher from '../../../dispatchers/AutoScroll'
 import ScrollLyricListener from '../../../handlers/Scroll/Lyric'
 import ScrollOverlayDispatcher from '../../../dispatchers/ScrollOverlay'
@@ -32,6 +29,17 @@ const LyricScroll = forwardRef((props, ref) => {
         )
     }
 
+    const onVerseBarWheel = e => {
+        /**
+         * When verse bar is wheeled, offset the lyric scroll element as if it
+         * had been wheeled instead.
+         */
+        const { deltaY } = e.nativeEvent
+        lyricScrollElement.current.scrollTop += deltaY
+
+        onWheel()
+    }
+
     const getLyricScrollElement = () => (
         lyricScrollElement.current
     )
@@ -44,25 +52,14 @@ const LyricScroll = forwardRef((props, ref) => {
         scrollChildren.current && scrollChildren.current.verse[index]
     )
 
-    const onVerseBarWheel = e => {
-        /**
-         * When verse bar is wheeled, offset the lyric scroll element as if it
-         * had been wheeled instead.
-         */
-        const { deltaY } = e.nativeEvent
-        lyricScrollElement.current.scrollTop += deltaY
-
-        onWheel()
+    const setRef = node => {
+        ref.current = node
+        lyricScrollElement.current = node
     }
 
     useEffect(() => {
         logMount('LyricScroll')
     }, [])
-
-    useImperativeHandle(ref, () => ({
-        onVerseBarWheel,
-        lyricScrollElement: lyricScrollElement.current
-    }))
 
     return (
         <>
@@ -71,9 +68,12 @@ const LyricScroll = forwardRef((props, ref) => {
                 getScrollAnchorChild,
                 getScrollVerseChild
             }} />
+            {/* These are the lyric element's only two flex children. */}
+            <VerseBar isAbove {...{ onWheel: onVerseBarWheel }} />
+            <VerseBar {...{ onWheel: onVerseBarWheel }} />
             <div
                 {...{
-                    ref: lyricScrollElement,
+                    ref: setRef,
                     className: cx(
                         'LyricScroll',
                         'abF',
