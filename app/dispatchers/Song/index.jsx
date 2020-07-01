@@ -56,9 +56,11 @@ const SongDispatcher = forwardRef((props, ref) => {
         )
 
         dispatch(updateWikiIndices())
+
         if (Number.isFinite(earColumnIndex)) {
             dispatch(updateEarColumnIndex(earColumnIndex))
         }
+
         dispatch(updateSelectedStore({
             selectedSongIndex: nextSongIndex,
             selectedVerseIndex,

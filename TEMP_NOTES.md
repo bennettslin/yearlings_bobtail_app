@@ -1,12 +1,11 @@
 # Scroll refactor
 * Eventually pass actions as json.
-* Scene is changing on every verse select.
-    * Acceptance criteria: scrolling on just verse change, with no scene change, should be smooth. Update: It still isn't.
-        * I think the issue is that with functional components, there are more renders for every store update, causing scrolling to be clunky.
 * Scroll first and then pass callback to select verse.
     * For dispatchVerse and dispatchTimeVerse
-    * At point of dispatch, if scene will change, do not select verse, just scroll.
-    * Acceptance criteria: scrolling on scene change should be smooth.
+    * At point of dispatch, do not select verse, just scroll.
+    * Select verse on scroll callback.
+    * Acceptance criteria: scrolling on any verse change should be smooth.
+        * I think the issue is that with functional components, there are more renders for every store update, causing scrolling to be clunky.
 
 # Issues
 * What is mapIsSelectPlayReady?
