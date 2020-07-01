@@ -85,7 +85,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         }
     }
 
-    const dispatchVerseBars = (timeoutDuration = 10) => {
+    const determineVerseBars = (timeoutDuration = 10) => {
         /**
          * It seems to help to both make the call immediately, and then set a
          * timeout for it. For now, I don't think there's any performance hit.
@@ -102,7 +102,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 
     useEffect(() => {
         if (queuedDetermineVerseBars) {
-            dispatchVerseBars(queuedVerseBarsTimeout)
+            determineVerseBars(queuedVerseBarsTimeout)
             dispatch(resetVerseBarsQueue())
         }
     }, [queuedDetermineVerseBars])
@@ -122,7 +122,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         _dispatchVerseBars()
     }, [activatedVerseIndex])
 
-    useImperativeHandle(ref, () => dispatchVerseBars)
+    useImperativeHandle(ref, () => determineVerseBars)
     return null
 }
 )

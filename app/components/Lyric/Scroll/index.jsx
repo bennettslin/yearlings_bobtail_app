@@ -5,7 +5,7 @@ import React, {
     useRef
 } from 'react'
 import cx from 'classnames'
-import WheelDispatcher from '../../../dispatchers/Wheel'
+import AutoScrollDispatcher from '../../../dispatchers/AutoScroll'
 import ScrollLyricListener from '../../../handlers/Scroll/Lyric'
 import ScrollOverlayDispatcher from '../../../dispatchers/ScrollOverlay'
 import VerseBarHandler from '../../../handlers/VerseBar'
@@ -17,17 +17,17 @@ const LyricScroll = forwardRef((props, ref) => {
     const
         lyricScrollElement = useRef(),
         scrollChildren = useRef(),
-        dispatchWheel = useRef(),
-        dispatchScroll = useRef(),
-        dispatchVerseBars = useRef()
+        determineAutoScroll = useRef(),
+        determineScrollOverlay = useRef(),
+        determineVerseBars = useRef()
 
     const onScroll = () => {
-        dispatchScroll.current()
+        determineScrollOverlay.current()
     }
 
     const onWheel = e => {
-        dispatchVerseBars.current()
-        dispatchWheel.current.lyric(
+        determineVerseBars.current()
+        determineAutoScroll.current(
             e, lyricScrollElement.current
         )
     }
@@ -44,10 +44,15 @@ const LyricScroll = forwardRef((props, ref) => {
         scrollChildren.current && scrollChildren.current.verse[index]
     )
 
-    const handleVerseBarWheel = e => {
-        dispatchWheel.current.verseBar(
-            e, lyricScrollElement.current
-        )
+    const onVerseBarWheel = e => {
+        /**
+         * When verse bar is wheeled, offset the lyric scroll element as if it
+         * had been wheeled instead.
+         */
+        const { deltaY } = e.nativeEvent
+        lyricScrollElement.current.scrollTop += deltaY
+
+        onWheel()
     }
 
     useEffect(() => {
@@ -55,7 +60,7 @@ const LyricScroll = forwardRef((props, ref) => {
     }, [])
 
     useImperativeHandle(ref, () => ({
-        handleVerseBarWheel,
+        onVerseBarWheel,
         lyricScrollElement: lyricScrollElement.current
     }))
 
@@ -91,22 +96,17 @@ const LyricScroll = forwardRef((props, ref) => {
             </div>
             <ScrollOverlayDispatcher
                 {...{
-                    ref: dispatchScroll,
+                    ref: determineScrollOverlay,
                     getLyricScrollElement
                 }}
             />
             <VerseBarHandler
                 {...{
-                    ref: dispatchVerseBars,
+                    ref: determineVerseBars,
                     getScrollVerseChild
                 }}
             />
-            <WheelDispatcher
-                {...{
-                    ref: dispatchWheel,
-                    determineVerseBars: onScroll
-                }}
-            />
+            <AutoScrollDispatcher {...{ ref: determineAutoScroll }} />
         </>
     )
 })

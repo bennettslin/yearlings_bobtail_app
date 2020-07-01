@@ -1,16 +1,15 @@
 // Child that knows rules to handle lyric wheel.
 import { forwardRef, useImperativeHandle } from 'react'
-import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAutoScroll } from '../../redux/toggle/action'
 import { mapIsAutoScroll } from '../../redux/toggle/selector'
 
-const WheelDispatcher = forwardRef(({ determineVerseBars }, ref) => {
+const AutoScrollDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         isAutoScroll = useSelector(mapIsAutoScroll)
 
-    const dispatchLyricWheel = (e, lyricElement) => {
+    const determineAutoScroll = (e, lyricElement) => {
         // If autoScroll is already off, don't bother.
         if (!isAutoScroll) {
             return
@@ -59,22 +58,8 @@ const WheelDispatcher = forwardRef(({ determineVerseBars }, ref) => {
         }
     }
 
-    const dispatchVerseBarWheel = (e, lyricElement) => {
-        const { deltaY } = e.nativeEvent
-        lyricElement.scrollTop += deltaY
-
-        determineVerseBars()
-    }
-
-    useImperativeHandle(ref, () => ({
-        lyric: dispatchLyricWheel,
-        verseBar: dispatchVerseBarWheel
-    }))
+    useImperativeHandle(ref, () => determineAutoScroll)
     return null
 })
 
-WheelDispatcher.propTypes = {
-    determineVerseBars: PropTypes.func.isRequired
-}
-
-export default WheelDispatcher
+export default AutoScrollDispatcher

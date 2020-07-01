@@ -13,7 +13,7 @@ import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 
 const Lyric = forwardRef((props, ref) => {
     const
-        handleVerseBarWheel = useRef(),
+        onVerseBarWheel = useRef(),
         isSongChangeDone = useSelector(mapIsSongChangeDone)
 
     useEffect(() => {
@@ -29,12 +29,12 @@ const Lyric = forwardRef((props, ref) => {
     }
 
     const onWheel = e => {
-        handleVerseBarWheel.current(e)
+        onVerseBarWheel.current(e)
     }
 
     const setRef = node => {
         if (node) {
-            handleVerseBarWheel.current = node.handleVerseBarWheel
+            onVerseBarWheel.current = node.onVerseBarWheel
             ref.current = node.lyricScrollElement
         }
     }
