@@ -7,7 +7,7 @@ import {
     updateVerseBarsStore,
     resetVerseBarsQueue
 } from '../../redux/verseBars/action'
-import { getVerseBarStatus } from './helper'
+import { getVerseBarsStatus } from './helper'
 import { getCursorIndex } from '../../helpers/cursor'
 import { mapActivatedVerseIndex } from '../../redux/activated/selector'
 import { mapIsDesktopWidth } from '../../redux/device/selector'
@@ -20,6 +20,7 @@ import {
 } from '../../redux/slider/selector'
 import { mapIsLyricExpanded } from '../../redux/toggle/selector'
 import {
+    mapVerseBarsStatus,
     mapQueuedDetermineVerseBars,
     mapQueuedVerseBarsTimeout
 } from '../../redux/verseBars/selector'
@@ -44,6 +45,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         isSliderMoving = useSelector(mapIsSliderMoving),
         sliderVerseIndex = useSelector(mapSliderVerseIndex),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
+        verseBarsStatus = useSelector(mapVerseBarsStatus),
         queuedDetermineVerseBars = useSelector(mapQueuedDetermineVerseBars),
         queuedVerseBarsTimeout = useSelector(mapQueuedVerseBarsTimeout),
         windowHeight = useSelector(mapWindowHeight),
@@ -63,11 +65,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 
         // Check for verse element in case we are loading from a logue.
         if (verseElement) {
-
-            const {
-                isVerseBarAbove,
-                isVerseBarBelow
-            } = getVerseBarStatus({
+            const nextVerseBarsStatus = getVerseBarsStatus({
                 isLyricExpandable,
                 canSliderMount,
                 isDesktopWidth,
@@ -79,10 +77,12 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
                 verseElement
             })
 
-            dispatch(updateVerseBarsStore({
-                isVerseBarAbove,
-                isVerseBarBelow
-            }))
+            // Prevent too many dispatches during scrolling.
+            if (verseBarsStatus !== nextVerseBarsStatus) {
+                dispatch(updateVerseBarsStore({
+                    verseBarsStatus: nextVerseBarsStatus
+                }))
+            }
         }
     }
 

@@ -1,13 +1,19 @@
 import { createSelector } from 'reselect'
 import { VERSE_BARS_STORE } from '../../constants/store'
 
-export const mapIsVerseBarAbove = (
-    { [VERSE_BARS_STORE]: { isVerseBarAbove } }
-) => isVerseBarAbove
+export const mapVerseBarsStatus = (
+    { [VERSE_BARS_STORE]: { verseBarsStatus } }
+) => verseBarsStatus
 
-export const mapIsVerseBarBelow = (
-    { [VERSE_BARS_STORE]: { isVerseBarBelow } }
-) => isVerseBarBelow
+const mapIsVerseBarAbove = createSelector(
+    mapVerseBarsStatus,
+    verseBarsStatus => verseBarsStatus === 1
+)
+
+const mapIsVerseBarBelow = createSelector(
+    mapVerseBarsStatus,
+    verseBarsStatus => verseBarsStatus === -1
+)
 
 export const getMapIsVerseBarShown = isAbove => createSelector(
     mapIsVerseBarAbove,

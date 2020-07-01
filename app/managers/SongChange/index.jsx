@@ -52,6 +52,12 @@ const SongChangeManager = () => {
     }, [selectedSongIndex])
 
     useEffect(() => {
+        // Scroll upon mount.
+        dispatch(scrollCarouselForSongChange(
+            selectedAnnotationIndex
+        ))
+        dispatch(scrollLyricForSongChange())
+
         if (didMount) {
             if (isSongChangeDone) {
                 dispatch(updateLyricStore({
@@ -59,10 +65,6 @@ const SongChangeManager = () => {
                     lyricVerseIndex: selectedVerseIndex,
                     lyricAnnotationIndex: selectedAnnotationIndex
                 }))
-                dispatch(scrollCarouselForSongChange(
-                    selectedAnnotationIndex
-                ))
-                dispatch(scrollLyricForSongChange())
             }
         } else {
             setDidMount(true)

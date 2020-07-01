@@ -38,7 +38,7 @@ const _getLyricSectionRect = ({
     }
 }
 
-export const getVerseBarStatus = ({
+export const getVerseBarsStatus = ({
     isLyricExpandable,
     canSliderMount,
     isDesktopWidth,
@@ -77,8 +77,11 @@ export const getVerseBarStatus = ({
         isVerseBarAbove = selectedVerseRect.top < lyricSectionRect.top,
         isVerseBarBelow = selectedVerseRect.bottom > lyricSectionRect.bottom
 
-    return {
-        isVerseBarAbove,
-        isVerseBarBelow
+    if (isVerseBarAbove) {
+        return 1
+    } else if (isVerseBarBelow) {
+        return -1
+    } else {
+        return 0
     }
 }
