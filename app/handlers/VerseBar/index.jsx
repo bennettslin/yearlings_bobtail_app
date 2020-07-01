@@ -1,5 +1,5 @@
 import {
-    forwardRef, useImperativeHandle, useEffect, useState
+    forwardRef, useImperativeHandle, useEffect, useRef, useState
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
@@ -33,6 +33,7 @@ import {
 const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     const
         dispatch = useDispatch(),
+        componentDidMount = useRef(),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         isLyricExpandable = useSelector(mapIsLyricExpandable),
         canSliderMount = useSelector(mapCanSliderMount),
@@ -115,11 +116,16 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     }, [sliderVerseIndex])
 
     useEffect(() => {
-        /**
-         * This is needed because a verse might get activated or deactivated,
-         * while the selected verse needs to be shown in a verse bar.
-         */
-        _dispatchVerseBars()
+        if (componentDidMount.current) {
+            /**
+             * This is needed because a verse might get activated or
+             * deactivated, while the selected verse needs to be shown in a
+             * verse bar.
+             */
+            _dispatchVerseBars()
+        } else {
+            componentDidMount.current = true
+        }
     }, [activatedVerseIndex])
 
     useImperativeHandle(ref, () => determineVerseBars)

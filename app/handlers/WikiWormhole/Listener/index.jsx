@@ -9,11 +9,16 @@ import {
 const WikiWormholeListener = () => {
     const
         dispatchWikiWormhole = useRef(),
+        componentDidMount = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex)
 
     useEffect(() => {
-        dispatchWikiWormhole.current({ selectedAnnotationIndex })
+        if (componentDidMount.current) {
+            dispatchWikiWormhole.current({ selectedAnnotationIndex })
+        } else {
+            componentDidMount.current = true
+        }
     }, [selectedSongIndex, selectedAnnotationIndex])
 
     return (

@@ -25,10 +25,10 @@ const WikiWormholeDispatcher = forwardRef((props, ref) => {
         const
             selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
             initialWikiWormholeIndex =
-                    // If no direction is given, reset the index.
-                    !Number.isFinite(direction) ?
-                        1 :
-                        accessedWikiWormholeIndex
+                // If no direction is given, reset the index.
+                !Number.isFinite(direction) ?
+                    1 :
+                    accessedWikiWormholeIndex
 
         dispatch(updateAccessStore({
             accessedWikiWormholeIndex: getWikiWormholeIndexForDirection({
