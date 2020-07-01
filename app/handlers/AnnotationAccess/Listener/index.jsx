@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import AnnotationAccessDispatcher from '../Dispatcher'
 import {
@@ -11,33 +12,46 @@ import { mapEarColumnIndex } from '../../../redux/session/selector'
 const AnnotationAccessListener = () => {
     const
         dispatchAccessedAnnotation = useRef(),
+        [didMount, setDidMount] = useState(false),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         earColumnIndex = useSelector(mapEarColumnIndex)
 
     useEffect(() => {
-        // Access the default annotation.
-        if (!isSelectedLogue) {
-            dispatchAccessedAnnotation.current()
+        if (didMount) {
+            // Access the default annotation.
+            if (!isSelectedLogue) {
+                dispatchAccessedAnnotation.current()
+            }
+        } else {
+            setDidMount(true)
         }
     }, [earColumnIndex])
 
     useEffect(() => {
-        // Access the selected annotation.
-        if (!isSelectedLogue) {
-            dispatchAccessedAnnotation.current({
-                annotationIndex: selectedAnnotationIndex
-            })
+        if (didMount) {
+            // Access the selected annotation.
+            if (!isSelectedLogue) {
+                dispatchAccessedAnnotation.current({
+                    annotationIndex: selectedAnnotationIndex
+                })
+            }
+        } else {
+            setDidMount(true)
         }
     }, [selectedAnnotationIndex])
 
     useEffect(() => {
-        // Access annotation of selected verse.
-        if (!isSelectedLogue) {
-            dispatchAccessedAnnotation.current({
-                verseIndex: selectedVerseIndex
-            })
+        if (didMount) {
+            // Access annotation of selected verse.
+            if (!isSelectedLogue) {
+                dispatchAccessedAnnotation.current({
+                    verseIndex: selectedVerseIndex
+                })
+            }
+        } else {
+            setDidMount(true)
         }
     }, [selectedVerseIndex])
 

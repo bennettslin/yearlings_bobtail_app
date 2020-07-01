@@ -33,7 +33,7 @@ import {
 const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     const
         dispatch = useDispatch(),
-        componentDidMount = useRef(),
+        didMount = useRef(),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         isLyricExpandable = useSelector(mapIsLyricExpandable),
         canSliderMount = useSelector(mapCanSliderMount),
@@ -116,7 +116,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     }, [sliderVerseIndex])
 
     useEffect(() => {
-        if (componentDidMount.current) {
+        if (didMount.current) {
             /**
              * This is needed because a verse might get activated or
              * deactivated, while the selected verse needs to be shown in a
@@ -124,7 +124,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
              */
             _dispatchVerseBars()
         } else {
-            componentDidMount.current = true
+            didMount.current = true
         }
     }, [activatedVerseIndex])
 

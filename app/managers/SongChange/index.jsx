@@ -19,6 +19,7 @@ const SongChangeManager = () => {
     const
         dispatch = useDispatch(),
         timeoutRef = useRef(),
+        [didMount, setDidMount] = useState(false),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
@@ -32,31 +33,39 @@ const SongChangeManager = () => {
     }
 
     useEffect(() => {
-        // Clear previous timeout.
-        clearTimeout(timeoutRef.current.songSelectTimeoutId)
+        if (didMount) {
+            // Clear previous timeout.
+            clearTimeout(timeoutRef.current.songSelectTimeoutId)
 
-        // Wait for song selection to finish.
-        setSongSelectTimeoutId(setTimeout(
-            completeSongSelect, 200
-        ))
+            // Wait for song selection to finish.
+            setSongSelectTimeoutId(setTimeout(
+                completeSongSelect, 200
+            ))
 
-        // Song changed, so begin transition if not already in place.
-        if (isSongChangeDone) {
-            dispatch(resetSongChange())
+            // Song changed, so begin transition if not already in place.
+            if (isSongChangeDone) {
+                dispatch(resetSongChange())
+            }
+        } else {
+            setDidMount(true)
         }
     }, [selectedSongIndex])
 
     useEffect(() => {
-        if (isSongChangeDone) {
-            dispatch(updateLyricStore({
-                lyricSongIndex: selectedSongIndex,
-                lyricVerseIndex: selectedVerseIndex,
-                lyricAnnotationIndex: selectedAnnotationIndex
-            }))
-            dispatch(scrollCarouselForSongChange(
-                selectedAnnotationIndex
-            ))
-            dispatch(scrollLyricForSongChange())
+        if (didMount) {
+            if (isSongChangeDone) {
+                dispatch(updateLyricStore({
+                    lyricSongIndex: selectedSongIndex,
+                    lyricVerseIndex: selectedVerseIndex,
+                    lyricAnnotationIndex: selectedAnnotationIndex
+                }))
+                dispatch(scrollCarouselForSongChange(
+                    selectedAnnotationIndex
+                ))
+                dispatch(scrollLyricForSongChange())
+            }
+        } else {
+            setDidMount(true)
         }
     }, [isSongChangeDone])
 

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetSceneChange } from '../../redux/entrance/action'
 import { updateSceneStore } from '../../redux/scene/action'
@@ -14,6 +14,7 @@ import {
 const SceneChangeManager = () => {
     const
         dispatch = useDispatch(),
+        didMount = useRef(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
         isSceneChangeDone = useSelector(mapIsSceneChangeDone),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
@@ -28,13 +29,16 @@ const SceneChangeManager = () => {
     }, [selectedSongIndex, selectedSceneIndex])
 
     useEffect(() => {
-        if (isSongChangeDone && isSceneChangeDone) {
-            dispatch(updateSceneStore({
-                sceneSongIndex: selectedSongIndex,
-                sceneSceneIndex: selectedSceneIndex
-            }))
+        if (didMount.current) {
+            if (isSongChangeDone && isSceneChangeDone) {
+                dispatch(updateSceneStore({
+                    sceneSongIndex: selectedSongIndex,
+                    sceneSceneIndex: selectedSceneIndex
+                }))
+            }
+        } else {
+            didMount.current = true
         }
-
     }, [isSongChangeDone, isSceneChangeDone])
 
     return null

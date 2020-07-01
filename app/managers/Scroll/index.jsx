@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollLyricForToggle } from '../../redux/scrollLyric/action'
 import {
@@ -10,6 +10,7 @@ import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
 const ScrollManager = () => {
     const
         dispatch = useDispatch(),
+        [didMount, setDidMount] = useState(false),
         isAutoScroll = useSelector(mapIsAutoScroll),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric)
@@ -19,18 +20,30 @@ const ScrollManager = () => {
     }
 
     useEffect(() => {
-        if (isAutoScroll) {
-            scrollLyric('Auto scrolled')
+        if (didMount) {
+            if (isAutoScroll) {
+                scrollLyric('Auto scrolled')
+            }
+        } else {
+            setDidMount(true)
         }
     }, [isAutoScroll])
 
     useEffect(() => {
-        scrollLyric(`Lyric ${isLyricExpanded ? 'expanded' : 'collapsed'}`)
+        if (didMount) {
+            scrollLyric(`Lyric ${isLyricExpanded ? 'expanded' : 'collapsed'}`)
+        } else {
+            setDidMount(true)
+        }
     }, [isLyricExpanded])
 
     useEffect(() => {
-        if (!isHeightlessLyric) {
-            scrollLyric('Lyric heighted')
+        if (didMount) {
+            if (!isHeightlessLyric) {
+                scrollLyric('Lyric heighted')
+            }
+        } else {
+            setDidMount(true)
         }
     }, [isHeightlessLyric])
 
