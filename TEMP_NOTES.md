@@ -1,8 +1,10 @@
 # Scroll refactor
 * Scroll first and then pass callback to select verse.
-    * Do for dispatchTimeVerse.
+    * Do for dispatchTimeVerse as well.
     * Acceptance criteria: scrolling on any verse change should be smooth.
         * I think the issue is that with functional components, there are more renders for every store update, causing scrolling to be clunky.
+    * Cursor should recognise queued scroll lyric verse index.
+    * Selecting verse during play stops player.
 
 # Issues
 * What is mapIsSelectPlayReady?
