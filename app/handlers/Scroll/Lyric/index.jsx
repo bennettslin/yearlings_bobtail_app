@@ -41,6 +41,11 @@ const ScrollLyricListener = ({
             getScrollAnchorChild(index)
     )
 
+    const dispatchVerseCallback = index => {
+        dispatchVerse.current(index)
+        dispatch(resetScrollLyricStore())
+    }
+
     useEffect(() => {
         if (scrollLyricLog) {
             const index = scrollLyricIndex === -1 ?
@@ -59,11 +64,14 @@ const ScrollLyricListener = ({
                 index,
                 noDuration: scrollLyricNoDuration,
                 ...scrollLyricWithVerseCallback && {
-                    callback: () => dispatchVerse.current(index)
+                    callback: () => dispatchVerseCallback(index)
                 }
             })
 
-            dispatch(resetScrollLyricStore())
+            // If there is a callback, reset in the callback.
+            if (!scrollLyricWithVerseCallback) {
+                dispatch(resetScrollLyricStore())
+            }
         }
     }, [scrollLyricLog])
 

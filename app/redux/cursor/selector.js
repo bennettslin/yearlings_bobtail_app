@@ -16,6 +16,11 @@ import {
     mapLyricVerseIndex
 } from '../lyric/selector'
 import {
+    mapScrollLyricVerseIndex,
+    mapScrollLyricSceneIndex,
+    mapScrollLyricTime
+} from '../scrollLyric/selector'
+import {
     mapSelectedTime,
     mapSelectedSceneIndex
 } from '../selected/selector'
@@ -28,18 +33,24 @@ import {
 import { mapIsEitherVerseBarShown } from '../verseBars/selector'
 
 export const mapCursorTime = createSelector(
+    mapScrollLyricTime,
+    mapScrollLyricVerseIndex,
     mapSelectedTime,
     mapIsActivated,
     mapActivatedTime,
     mapIsSliderMoving,
     mapSliderTime,
     (
+        scrollLyricTime,
+        scrollLyricVerseIndex,
         selectedTime,
         isActivated,
         activatedTime,
         isSliderMoving,
         sliderTime
     ) => getCursorTime({
+        scrollLyricTime,
+        scrollLyricVerseIndex,
         selectedTime,
         isActivated,
         activatedTime,
@@ -49,14 +60,17 @@ export const mapCursorTime = createSelector(
 )
 
 export const mapSceneCursorIndex = createSelector(
+    mapScrollLyricSceneIndex,
     mapSliderSceneIndex,
     mapActivatedSceneIndex,
     mapSelectedSceneIndex,
     (
+        scrollLyricSceneIndex,
         sliderSceneIndex,
         activatedSceneIndex,
         selectedSceneIndex
     ) => getCursorIndex(
+        scrollLyricSceneIndex,
         sliderSceneIndex,
         activatedSceneIndex,
         selectedSceneIndex
@@ -76,10 +90,12 @@ export const mapVerseCursorIndex = createSelector(
     mapActivatedVerseIndex,
     mapLyricVerseIndex,
     (
+        scrollLyricVerseIndex,
         sliderVerseIndex,
         activatedVerseIndex,
         lyricVerseIndex
     ) => getCursorIndex(
+        scrollLyricVerseIndex,
         sliderVerseIndex,
         activatedVerseIndex,
         lyricVerseIndex

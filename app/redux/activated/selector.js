@@ -44,5 +44,5 @@ export const mapActivatedTime = createSelector(
     ) => getStartTimeForVerse(
         selectedSongIndex,
         activatedVerseIndex
-    ) || 0
+    )
 )

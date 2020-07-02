@@ -1,3 +1,7 @@
+import { createSelector } from 'reselect'
+import { getStartTimeForVerse } from '../../api/album/time'
+import { getSceneIndexForVerse } from '../../api/album/verses'
+import { mapSelectedSongIndex } from '../selected/selector'
 import { SCROLL_LYRIC_STORE } from '../../constants/store'
 
 export const mapScrollLyricLog = (
@@ -27,3 +31,38 @@ export const mapScrollLyricFromAutoScroll = (
 export const mapScrollLyricWithVerseCallback = (
     { [SCROLL_LYRIC_STORE]: { scrollLyricWithVerseCallback } }
 ) => scrollLyricWithVerseCallback
+
+export const mapScrollLyricVerseIndex = createSelector(
+    mapScrollLyricIndex,
+    mapScrollLyricWithVerseCallback,
+    (
+        scrollLyricIndex,
+        scrollLyricWithVerseCallback
+    ) => (
+        scrollLyricWithVerseCallback ? scrollLyricIndex : -1
+    )
+)
+
+export const mapScrollLyricSceneIndex = createSelector(
+    mapSelectedSongIndex,
+    mapScrollLyricVerseIndex,
+    (
+        selectedSongIndex,
+        scrollLyricVerseIndex
+    ) => getSceneIndexForVerse(
+        selectedSongIndex,
+        scrollLyricVerseIndex
+    )
+)
+
+export const mapScrollLyricTime = createSelector(
+    mapSelectedSongIndex,
+    mapScrollLyricVerseIndex,
+    (
+        selectedSongIndex,
+        scrollLyricVerseIndex
+    ) => getStartTimeForVerse(
+        selectedSongIndex,
+        scrollLyricVerseIndex
+    )
+)

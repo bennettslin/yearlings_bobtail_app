@@ -13,6 +13,7 @@ import { mapActivatedVerseIndex } from '../../redux/activated/selector'
 import { mapIsDesktopWidth } from '../../redux/device/selector'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
 import { mapLyricDynamicHeight } from '../../redux/lyricHeight/selector'
+import { mapScrollLyricVerseIndex } from '../../redux/scrollLyric/selector'
 import { mapSelectedVerseIndex } from '../../redux/selected/selector'
 import {
     mapSliderVerseIndex,
@@ -35,6 +36,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     const
         dispatch = useDispatch(),
         didMount = useRef(),
+        scrollLyricVerseIndex = useSelector(mapScrollLyricVerseIndex),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         isLyricExpandable = useSelector(mapIsLyricExpandable),
         canSliderMount = useSelector(mapCanSliderMount),
@@ -58,6 +60,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
      */
     const _dispatchVerseBars = ({ sliderVerseIndex = -1 } = {}) => {
         const verseElement = getScrollVerseChild(getCursorIndex(
+            scrollLyricVerseIndex,
             sliderVerseIndex,
             activatedVerseIndex,
             selectedVerseIndex
