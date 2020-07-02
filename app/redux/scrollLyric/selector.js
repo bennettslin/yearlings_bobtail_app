@@ -23,3 +23,7 @@ export const mapScrollLyricNoDuration = (
 export const mapScrollLyricFromAutoScroll = (
     { [SCROLL_LYRIC_STORE]: { scrollLyricFromAutoScroll } }
 ) => scrollLyricFromAutoScroll
+
+export const mapScrollLyricWithVerseCallback = (
+    { [SCROLL_LYRIC_STORE]: { scrollLyricWithVerseCallback } }
+) => scrollLyricWithVerseCallback

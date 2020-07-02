@@ -4,5 +4,6 @@ export const SCROLL_LYRIC_DEFAULTS = {
     scrollLyricIndex: -1,
     scrollLyricAlways: false,
     scrollLyricNoDuration: false,
-    scrollLyricFromAutoScroll: false
+    scrollLyricFromAutoScroll: false,
+    scrollLyricWithVerseCallback: false
 }

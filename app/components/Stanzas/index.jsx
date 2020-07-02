@@ -2,30 +2,29 @@
  * A stanza encompasses all the units grouped under a single stanza type and
  * optional index, such as Verse 1 or Bridge.
  */
-// eslint-disable-next-line object-curly-newline
-import React, { forwardRef, useRef, memo } from 'react'
-import { useSelector } from 'react-redux'
-import VerseDispatcher from '../../dispatchers/Verse'
+import React, { forwardRef, memo } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Stanza from './Stanza'
 import Unit from '../Unit'
 import { getStanzaIndices } from '../../api/album/stanzas'
 import { getLastUnitDotCardIndex } from '../../api/album/units'
+import { scrollLyricToVerseInCallback } from '../../redux/scrollLyric/action'
 import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import './style'
 
 const Stanzas = forwardRef((props, ref) => {
     const
-        dispatchVerse = useRef(),
+        dispatch = useDispatch(),
         lyricSongIndex = useSelector(mapLyricSongIndex)
 
     const handleVerseSelect = ({
         selectedVerseIndex,
         scrollLog
     }) => {
-        dispatchVerse.current({
-            selectedVerseIndex,
-            scrollLog
-        })
+        dispatch(scrollLyricToVerseInCallback(
+            scrollLog,
+            selectedVerseIndex
+        ))
     }
 
     const
@@ -62,7 +61,6 @@ const Stanzas = forwardRef((props, ref) => {
                     }}
                 />
             )}
-            <VerseDispatcher {...{ ref: dispatchVerse }} />
         </div>
     )
 })

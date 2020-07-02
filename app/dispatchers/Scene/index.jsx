@@ -1,13 +1,12 @@
-// eslint-disable-next-line object-curly-newline
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
-import { useSelector } from 'react-redux'
-import VerseDispatcher from '../Verse'
+import { forwardRef, useImperativeHandle } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { getVerseIndexForScene } from '../../api/album/scenes'
+import { scrollLyricToVerseInCallback } from '../../redux/scrollLyric/action'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 
 const SceneDispatcher = forwardRef((props, ref) => {
     const
-        dispatchVerse = useRef(),
+        dispatch = useDispatch(),
         selectedSongIndex = useSelector(mapSelectedSongIndex)
 
     const dispatchSceneIndex = (selectedSceneIndex) => {
@@ -15,17 +14,14 @@ const SceneDispatcher = forwardRef((props, ref) => {
             selectedSongIndex,
             selectedSceneIndex
         )
-
-        dispatchVerse.current({
-            selectedVerseIndex,
-            scrollLog: `Filmstrip scene ${selectedSceneIndex} selected`
-        })
+        dispatch(scrollLyricToVerseInCallback(
+            `Filmstrip scene ${selectedSceneIndex} selected`,
+            selectedVerseIndex
+        ))
     }
 
     useImperativeHandle(ref, () => dispatchSceneIndex)
-    return (
-        <VerseDispatcher {...{ ref: dispatchVerse }} />
-    )
+    return null
 })
 
 export default SceneDispatcher

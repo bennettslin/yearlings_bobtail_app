@@ -28,14 +28,14 @@ export const scrollLyricForToggle = log => ({
     }
 })
 
-// TODO: Is a separate action for always scrolling necessary?
-export const scrollLyricToVerseAlways = (log, index) => ({
+export const scrollLyricToVerseInCallback = (log, index) => ({
     type: SCROLL_LYRIC_STORE,
     payload: {
         scrollLyricLog: log,
         scrollLyricIndex: index,
         scrollLyricByVerse: true,
-        scrollLyricAlways: true
+        scrollLyricAlways: true,
+        scrollLyricWithVerseCallback: true
     }
 })
 

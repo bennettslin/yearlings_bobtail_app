@@ -1,9 +1,6 @@
 # Scroll refactor
-* Eventually pass actions as json.
 * Scroll first and then pass callback to select verse.
-    * For dispatchVerse and dispatchTimeVerse
-    * At point of dispatch, do not select verse, just scroll.
-    * Select verse on scroll callback.
+    * Do for dispatchTimeVerse.
     * Acceptance criteria: scrolling on any verse change should be smooth.
         * I think the issue is that with functional components, there are more renders for every store update, causing scrolling to be clunky.
 

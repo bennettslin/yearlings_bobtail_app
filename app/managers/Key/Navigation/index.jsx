@@ -1,7 +1,6 @@
 // eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
-import { useSelector } from 'react-redux'
-import VerseDispatcher from '../../../dispatchers/Verse'
+import { useSelector, useDispatch } from 'react-redux'
 import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
@@ -11,6 +10,7 @@ import {
     mapActivatedVerseIndex,
     mapIsActivated
 } from '../../../redux/activated/selector'
+import { scrollLyricToVerseInCallback } from '../../../redux/scrollLyric/action'
 import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
@@ -26,11 +26,11 @@ import { mapIsWikiShown } from '../../../redux/wiki/selector'
 
 const NavigationManager = forwardRef((props, ref) => {
     const
+        dispatch = useDispatch(),
         navigateAnnotation = useRef(),
         navigateDotsSlide = useRef(),
         navigateLyric = useRef(),
         navigateNav = useRef(),
-        dispatchVerse = useRef(),
         isActivated = useSelector(mapIsActivated),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
@@ -50,11 +50,12 @@ const NavigationManager = forwardRef((props, ref) => {
 
             // We're selecting the activated verse.
             if (isActivated && keyName === ENTER) {
+                keyWasRegistered = true
 
-                keyWasRegistered = dispatchVerse.current({
-                    selectedVerseIndex: activatedVerseIndex,
-                    scrollLog: 'Key selected'
-                })
+                dispatch(scrollLyricToVerseInCallback(
+                    'Key selected',
+                    activatedVerseIndex
+                ))
 
                 annotationIndexWasAccessed = true
 
@@ -103,7 +104,6 @@ const NavigationManager = forwardRef((props, ref) => {
             <DotsSlideNavigation {...{ ref: navigateDotsSlide }} />
             <LyricNavigation {...{ ref: navigateLyric }} />
             <NavNavigation {...{ ref: navigateNav }} />
-            <VerseDispatcher {...{ ref: dispatchVerse }} />
         </>
     )
 })

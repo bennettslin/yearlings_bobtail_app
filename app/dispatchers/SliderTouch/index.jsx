@@ -1,12 +1,12 @@
 // eslint-disable-next-line object-curly-newline
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateSliderStore } from '../../redux/slider/action'
-import VerseDispatcher from '../Verse'
 import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
 import { getVerseIndexforRatio } from '../../helpers/verse'
+import { scrollLyricToVerseInCallback } from '../../redux/scrollLyric/action'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
@@ -23,7 +23,6 @@ import {
 const SliderTouchDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        dispatchVerse = useRef(),
         timeoutRef = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
@@ -149,12 +148,10 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
     const dispatchTouchEnd = () => {
         if (isSliderTouched) {
             if (sliderVerseIndex !== selectedVerseIndex) {
-
-                // Selected verse is wherever touch ended on slider.
-                dispatchVerse.current({
-                    selectedVerseIndex: sliderVerseIndex,
-                    scrollLog: 'Slider selected'
-                })
+                dispatch(scrollLyricToVerseInCallback(
+                    'Slider selected',
+                    sliderVerseIndex
+                ))
             }
 
             // Reset slider state.
@@ -170,9 +167,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
         move: dispatchTouchMove,
         end: dispatchTouchEnd
     }))
-    return (
-        <VerseDispatcher {...{ ref: dispatchVerse }} />
-    )
+    return null
 })
 
 export default SliderTouchDispatcher
