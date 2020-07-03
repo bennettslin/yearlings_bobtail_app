@@ -43,7 +43,7 @@ export const mapQueuedScrollVerseIndex = createSelector(
     )
 )
 
-export const mapScrollLyricSceneIndex = createSelector(
+export const mapQueuedScrollSceneIndex = createSelector(
     mapSelectedSongIndex,
     mapQueuedScrollVerseIndex,
     (
@@ -55,7 +55,7 @@ export const mapScrollLyricSceneIndex = createSelector(
     )
 )
 
-export const mapScrollLyricTime = createSelector(
+export const mapQueuedScrollTime = createSelector(
     mapSelectedSongIndex,
     mapQueuedScrollVerseIndex,
     (

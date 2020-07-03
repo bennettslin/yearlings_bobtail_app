@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import FilmstripCell from './Cell'
 import { getMapSceneDimensionCoordinate } from '../../../../redux/filmstrip/selector'
-import { getMapIsSceneSelected } from '../../../../redux/selected/selector'
+import { getMapIsSceneQueuedOrSelected } from '../../../../redux/scrollQueue/selector'
 import './style'
 
 const FilmstripScene = ({
@@ -18,7 +18,10 @@ const FilmstripScene = ({
             sceneLeft,
             sceneWidth
         } = JSON.parse(useSelector(getMapSceneDimensionCoordinate(sceneIndex))),
-        isSceneSelected = useSelector(getMapIsSceneSelected(sceneIndex))
+
+        isSceneQueuedOrSelected = useSelector(
+            getMapIsSceneQueuedOrSelected(sceneIndex)
+        )
 
     const onClick = e => {
         logEvent({ e, componentName: 'FilmstripScene' })
@@ -31,7 +34,7 @@ const FilmstripScene = ({
             {...{
                 className: cx(
                     'FilmstripScene',
-                    isSceneSelected ?
+                    isSceneQueuedOrSelected ?
                         'FilmstripScene__selected' :
                         'FilmstripScene__interactable',
                     'abF'
@@ -40,7 +43,7 @@ const FilmstripScene = ({
                     left: `${sceneLeft}%`,
                     width: `${sceneWidth}%`
                 },
-                ...!isSceneSelected && { onClick }
+                ...!isSceneQueuedOrSelected && { onClick }
             }}
         >
             <FilmstripCell {...{ sceneIndex }} />

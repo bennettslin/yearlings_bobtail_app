@@ -31,7 +31,7 @@ export const getBeforeOnOrAfter = (
 }
 
 export const getCursorTime = ({
-    scrollLyricTime,
+    queuedScrollTime,
     queuedScrollVerseIndex,
     selectedTime,
     isActivated,
@@ -49,7 +49,7 @@ export const getCursorTime = ({
     }
 
     if (queuedScrollVerseIndex > -1) {
-        return scrollLyricTime
+        return queuedScrollTime
     }
 
     return selectedTime
