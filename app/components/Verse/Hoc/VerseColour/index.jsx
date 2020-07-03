@@ -21,8 +21,7 @@ const VerseColour = ({
             inSlider,
             inVerseBar
         })),
-        verseTrackerLength = useSelector(getMapVerseTrackerLength(verseIndex)),
-        isNotShown = isNaN(verseIndex)
+        verseTrackerLength = useSelector(getMapVerseTrackerLength(verseIndex))
 
     return (
         <div
@@ -33,18 +32,19 @@ const VerseColour = ({
                     'VerseColour__inVerseBar' :
                     'VerseColour__notVerseBar',
                 isVerseCursor && 'VerseColour__cursor',
-                isNotShown && 'VerseColour__cursorNotShown',
                 'ovH',
                 'abF'
             )}
         >
-            <Tracker
-                {...{
-                    trackerLength: verseTrackerLength,
-                    isVertical: inUnit || inVerseBar,
-                    isNotShown
-                }}
-            />
+            {Number.isFinite(verseIndex) && (
+                <Tracker
+                    {...{
+                        trackerLength: verseTrackerLength,
+                        isVertical: inUnit || inVerseBar,
+                        isNotShown: !isVerseCursor
+                    }}
+                />
+            )}
         </div>
     )
 }
