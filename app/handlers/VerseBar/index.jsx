@@ -8,13 +8,10 @@ import {
     resetVerseBarsQueue
 } from '../../redux/verseBars/action'
 import { getVerseBarsStatus } from './helper'
-import { getCursorIndex } from '../../helpers/cursor'
 import { mapActivatedVerseIndex } from '../../redux/activated/selector'
 import { mapIsDesktopWidth } from '../../redux/device/selector'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
 import { mapLyricDynamicHeight } from '../../redux/lyricHeight/selector'
-import { mapQueuedScrollVerseIndex } from '../../redux/scrollLyric/selector'
-import { mapSelectedVerseIndex } from '../../redux/selected/selector'
 import {
     mapSliderVerseIndex,
     mapIsSliderTouched
@@ -31,19 +28,19 @@ import {
     mapMenuHeight,
     mapCanSliderMount
 } from '../../redux/viewport/selector'
+import { mapVerseCursorIndex } from '../../redux/cursor/selector'
 
 const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     const
         dispatch = useDispatch(),
         didMount = useRef(),
-        queuedScrollVerseIndex = useSelector(mapQueuedScrollVerseIndex),
+        verseCursorIndex = useSelector(mapVerseCursorIndex),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         isLyricExpandable = useSelector(mapIsLyricExpandable),
         canSliderMount = useSelector(mapCanSliderMount),
         lyricDynamicHeight = useSelector(mapLyricDynamicHeight),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
         menuHeight = useSelector(mapMenuHeight),
-        selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         isSliderTouched = useSelector(mapIsSliderTouched),
         sliderVerseIndex = useSelector(mapSliderVerseIndex),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
@@ -58,13 +55,8 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
      * This is technically within a timeout closure, but these values shouldn't
      * change from the time the timeout was set.
      */
-    const _dispatchVerseBars = ({ sliderVerseIndex = -1 } = {}) => {
-        const verseElement = getScrollVerseChild(getCursorIndex(
-            queuedScrollVerseIndex,
-            sliderVerseIndex,
-            activatedVerseIndex,
-            selectedVerseIndex
-        ))
+    const _dispatchVerseBars = () => {
+        const verseElement = getScrollVerseChild(verseCursorIndex)
 
         // Check for verse element in case we are loading from a logue.
         if (verseElement) {
@@ -117,7 +109,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
          * touched.
          */
         if (sliderVerseIndex > -1 && isSliderTouched) {
-            _dispatchVerseBars({ sliderVerseIndex })
+            _dispatchVerseBars()
         }
     }, [sliderVerseIndex])
 
