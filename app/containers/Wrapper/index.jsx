@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
+import LogicWrapper from '../../wrappers/LogicWrapper'
 import PlayingWrapper from '../../wrappers/PlayingWrapper'
 import ResponsiveWrapper from '../../wrappers/ResponsiveWrapper'
 import ShownWrapper from '../../wrappers/ShownWrapper'
@@ -14,7 +15,9 @@ const WrapperContainer = ({ children }) => (
                 <ShownWrapper>
                     <TouchWrapper>
                         <TransitionWrapper>
-                            {children}
+                            <LogicWrapper>
+                                {children}
+                            </LogicWrapper>
                         </TransitionWrapper>
                     </TouchWrapper>
                 </ShownWrapper>

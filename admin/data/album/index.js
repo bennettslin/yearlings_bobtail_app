@@ -12,9 +12,10 @@ import {
 } from './helpers/scene'
 import { addAnnotationMetadata } from './helpers/annotation'
 import { addAdminMetadata } from './helpers/admin'
-import { addWormholeMetadata } from './helpers/wormhole'
+import { getMaxVerseCount } from './helpers/count'
 import { addTip } from './helpers/tips'
 import { addVerseMetadata } from './helpers/verse'
+import { addWormholeMetadata } from './helpers/wormhole'
 
 const annotationsList = []
 
@@ -49,7 +50,6 @@ const songs = getSongIndicesArray().map(songIndex => {
             song
         })
 
-        // TODO: Simplify scenes.
         addSceneMetadata({
             songIndex,
             songDuration,
@@ -74,7 +74,8 @@ const songs = getSongIndicesArray().map(songIndex => {
 const album = {
     // Dev sanity check. When compiled, this gets replaced.
     _build: 'runtime',
-    songs
+    songs,
+    maxVerseCount: getMaxVerseCount(songs)
 }
 
 addWormholeMetadata(annotationsList, album)
