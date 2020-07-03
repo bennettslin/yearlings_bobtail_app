@@ -16,17 +16,35 @@ import {
 import { getMapIsVerseBarShown } from '../../../redux/verseBars/selector'
 import './style'
 
-const VerseBar = ({
+const VerseBar = () => {
+    const
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        verseCursorIndex = useSelector(mapVerseCursorIndex)
+
+    return (
+        <VerseHoc
+            inVerseBar
+            {...{
+                verseIndex: verseCursorIndex,
+                verseObject: getVerse(
+                    lyricSongIndex,
+                    verseCursorIndex
+                ),
+                VerseComponent: Verse
+            }}
+        />
+    )
+}
+
+const VerseBarContainer = ({
     isAbove = false,
     onWheel
 
 }) => {
     const
         dispatch = useDispatch(),
-        lyricSongIndex = useSelector(mapLyricSongIndex),
         isLyricLogue = useSelector(mapIsLyricLogue),
-        isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove)),
-        verseCursorIndex = useSelector(mapVerseCursorIndex)
+        isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove))
 
     const onClick = e => {
         logEvent({ e, componentName: 'VerseBar' })
@@ -67,26 +85,16 @@ const VerseBar = ({
                         timeout: 200
                     }}
                 >
-                    <VerseHoc
-                        inVerseBar
-                        {...{
-                            verseIndex: verseCursorIndex,
-                            verseObject: getVerse(
-                                lyricSongIndex,
-                                verseCursorIndex
-                            ),
-                            VerseComponent: Verse
-                        }}
-                    />
+                    <VerseBar />
                 </Transition>
             </div>
         </div>
     )
 }
 
-VerseBar.propTypes = {
+VerseBarContainer.propTypes = {
     isAbove: PropTypes.bool,
     onWheel: PropTypes.func.isRequired
 }
 
-export default memo(VerseBar)
+export default memo(VerseBarContainer)
