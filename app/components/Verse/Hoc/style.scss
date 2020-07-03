@@ -9,7 +9,12 @@
 }
 
 .Verse__notCursor {
-    .TW__lyricsLocked
+    // When lyrics are locked and scrolling, all verses have light text.
+    .TW__lyricsLocked.TW__isScrolling
+    &.Verse,
+
+    // When lyrics are locked and stationary, hovered verse has dark text.
+    .TW__lyricsLocked.TW__isStationary
     &:not(:hover),
 
     .TW__lyricsLocked
