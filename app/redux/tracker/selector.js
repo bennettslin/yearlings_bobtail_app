@@ -4,33 +4,31 @@ import {
     getSceneTrackerWidth,
     getVerseTrackerLength
 } from '../../helpers/tracker'
-import {
-    mapSelectedSongIndex,
-    mapSelectedTime
-} from '../selected/selector'
+import { mapSelectedSongIndex } from '../selected/selector'
 import {
     mapIsBannerHovering,
     mapBannerHoverTime
 } from '../banner/selector'
 import {
     mapSceneCursorIndex,
-    mapVerseCursorIndex
+    mapVerseCursorIndex,
+    mapCursorTime
 } from '../cursor/selector'
 
 export const mapSongTrackerWidth = createSelector(
     mapIsBannerHovering,
     mapBannerHoverTime,
-    mapSelectedTime,
+    mapCursorTime,
     mapSelectedSongIndex,
     (
         isBannerHovering,
         bannerHoverTime,
-        selectedTime,
+        cursorTime,
         selectedSongIndex
     ) => getSongTrackerWidth({
         isBannerHovering,
         bannerHoverTime,
-        selectedTime,
+        cursorTime,
         selectedSongIndex
     })
 )
@@ -38,31 +36,31 @@ export const mapSongTrackerWidth = createSelector(
 export const getMapSceneTrackerWidth = sceneIndex => createSelector(
     mapSceneCursorIndex,
     mapSelectedSongIndex,
-    mapSelectedTime,
+    mapCursorTime,
     (
         sceneCursorIndex,
         selectedSongIndex,
-        selectedTime
+        cursorTime
     ) => getSceneTrackerWidth({
         sceneIndex,
         sceneCursorIndex,
         selectedSongIndex,
-        selectedTime
+        cursorTime
     })
 )
 
 export const getMapVerseTrackerLength = verseIndex => createSelector(
     mapVerseCursorIndex,
     mapSelectedSongIndex,
-    mapSelectedTime,
+    mapCursorTime,
     (
         verseCursorIndex,
         selectedSongIndex,
-        selectedTime
+        cursorTime
     ) => getVerseTrackerLength({
         verseIndex,
         verseCursorIndex,
         selectedSongIndex,
-        selectedTime
+        cursorTime
     })
 )
