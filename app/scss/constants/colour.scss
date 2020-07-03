@@ -23,12 +23,12 @@ $lum__dark: 63%;
 $lum__darker: 59%;
 
 $colour__past__bold: hsl($hue__past, $sat__bold, $lum__medLight);
-$colour__past__lighter: hsl($hue__past, $sat__lighter, $lum__lighter);
-$colour__past__light: hsl($hue__past, $sat__light, $lum__light);
+$COLOUR__PAST__LIGHTER: hsl($hue__past, $sat__lighter, $lum__lighter);
+$COLOUR__PAST__LIGHT: hsl($hue__past, $sat__light, $lum__light);
 $colour__past__medLight: hsl($hue__past, $sat__medLight, $lum__medLight);
 $colour__past__medium: hsl($hue__past, $sat__medium, $lum__medium);
-$colour__past__dark: hsl($hue__past, $sat__dark, $lum__dark);
-$colour__past__darker: hsl($hue__past, $sat__darker, $lum__darker);
+$COLOUR__PAST__DARK: hsl($hue__past, $sat__dark, $lum__dark);
+$COLOUR__PAST__DARKER: hsl($hue__past, $sat__darker, $lum__darker);
 
 $colour__playing__bold: hsl($hue__playing, $sat__bold, $lum__medLight);
 $colour__playing__empty: hsl($hue__playing, $sat__medium, $lum__lighter);
@@ -43,12 +43,12 @@ $colour__interactPause__filled: hsl($hue__interact, $sat__medium, $lum__medium);
 $colour__interactPause__empty: hsl($hue__interact, $sat__dark, $lum__darker);
 
 $colour__future__bold: hsl($hue__future, $sat__bold, $lum__medLight);
-$colour__future__lighter: hsl($hue__future, $sat__lighter, $lum__lighter);
-$colour__future__light: hsl($hue__future, $sat__light, $lum__light);
+$COLOUR__FUTURE__LIGHTER: hsl($hue__future, $sat__lighter, $lum__lighter);
+$COLOUR__FUTURE__LIGHT: hsl($hue__future, $sat__light, $lum__light);
 $colour__future__medLight: hsl($hue__future, $sat__medLight, $lum__medLight);
 $colour__future__medium: hsl($hue__future, $sat__medium, $lum__medium);
-$colour__future__dark: hsl($hue__future, $sat__dark, $lum__dark);
-$colour__future__darker: hsl($hue__future, $sat__darker, $lum__darker);
+$COLOUR__FUTURE__DARK: hsl($hue__future, $sat__dark, $lum__dark);
+$COLOUR__FUTURE__DARKER: hsl($hue__future, $sat__darker, $lum__darker);
 
 $colour__neutral__light: hsl(0, 0%, $lum__light);
 $colour__neutral__medium: hsl(0, 0%, $lum__medium);

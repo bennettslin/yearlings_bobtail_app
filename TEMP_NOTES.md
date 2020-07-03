@@ -1,5 +1,4 @@
 # TODO for scroll refactor
-* Stylesheet logic for verses
 * Rip out logic for queued scroll verse index
 * Have scene index set only after scroll is complete
 * Figure out verse bar determining and reset

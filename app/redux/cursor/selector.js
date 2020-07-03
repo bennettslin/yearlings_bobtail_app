@@ -124,23 +124,6 @@ export const getMapIsVerseCursor = ({
     ) => verseIndex === verseCursorIndex && isVerseCursorShown
 )
 
-export const getMapVerseCursorStatus = ({
-    verseIndex,
-    inSlider,
-    inVerseBar
-}) => createSelector(
-    mapVerseCursorIndex,
-    getMapIsVerseCursorShown(inSlider, inVerseBar),
-    (
-        verseCursorIndex,
-        isVerseCursorShown
-    ) => getBeforeOnOrAfter(
-        verseCursorIndex,
-        verseIndex,
-        isVerseCursorShown
-    )
-)
-
 export const getMapIsStanzaCursor = stanzaIndex => createSelector(
     mapLyricSongIndex,
     mapVerseCursorIndex,

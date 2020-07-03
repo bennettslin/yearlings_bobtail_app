@@ -4,10 +4,19 @@ import { getArrayOfLength } from '../../../helpers/general'
 import { getMaxVerseCountForAlbum } from '../../../api/album/count'
 import {
     VERSE_BEFORE_PREFIX,
-    VERSE_CURSOR_PREFIX,
     VERSE_AFTER_PREFIX,
     VERSE_CURSOR_CHILD_PREFIX
 } from '../../../constants/verseCursor'
+import {
+    COLOUR__PAST__LIGHTER,
+    COLOUR__PAST__LIGHT,
+    COLOUR__PAST__DARK,
+    COLOUR__PAST__DARKER,
+    COLOUR__FUTURE__LIGHTER,
+    COLOUR__FUTURE__LIGHT,
+    COLOUR__FUTURE__DARK,
+    COLOUR__FUTURE__DARKER
+} from '../../../scss/exports/style'
 
 const VerseCursorStylesheets = () => (
     <>
@@ -17,19 +26,10 @@ const VerseCursorStylesheets = () => (
                 indices: getArrayOfLength(getMaxVerseCountForAlbum()),
                 parentPrefix: VERSE_BEFORE_PREFIX,
                 childPrefix: VERSE_CURSOR_CHILD_PREFIX,
-                getStyle: () => ({
-                    'background-color': 'gray'
-                })
-            }}
-        />
-        <Stylesheet
-            {...{
-                className: 'VerseCursorStylesheet__cursor',
-                indices: getArrayOfLength(getMaxVerseCountForAlbum()),
-                parentPrefix: VERSE_CURSOR_PREFIX,
-                childPrefix: VERSE_CURSOR_CHILD_PREFIX,
-                getStyle: () => ({
-                    'background-color': 'gray'
+                getStyle: index => ({
+                    'background-color': index % 2 ?
+                        COLOUR__PAST__LIGHTER :
+                        COLOUR__PAST__LIGHT
                 })
             }}
         />
@@ -39,8 +39,36 @@ const VerseCursorStylesheets = () => (
                 indices: getArrayOfLength(getMaxVerseCountForAlbum()),
                 parentPrefix: VERSE_AFTER_PREFIX,
                 childPrefix: VERSE_CURSOR_CHILD_PREFIX,
-                getStyle: () => ({
-                    'background-color': 'gray'
+                getStyle: index => ({
+                    'background-color': index % 2 ?
+                        COLOUR__FUTURE__LIGHTER :
+                        COLOUR__FUTURE__LIGHT
+                })
+            }}
+        />
+        <Stylesheet
+            {...{
+                className: 'VerseCursorStylesheet__lyricsLockedBefore',
+                indices: getArrayOfLength(getMaxVerseCountForAlbum()),
+                parentPrefix: `TW__lyricsLocked .${VERSE_BEFORE_PREFIX}`,
+                childPrefix: VERSE_CURSOR_CHILD_PREFIX,
+                getStyle: index => ({
+                    'background-color': index % 2 ?
+                        COLOUR__PAST__DARK :
+                        COLOUR__PAST__DARKER
+                })
+            }}
+        />
+        <Stylesheet
+            {...{
+                className: 'VerseCursorStylesheet__lyricsLockedAfter',
+                indices: getArrayOfLength(getMaxVerseCountForAlbum()),
+                parentPrefix: `TW__lyricsLocked .${VERSE_AFTER_PREFIX}`,
+                childPrefix: VERSE_CURSOR_CHILD_PREFIX,
+                getStyle: index => ({
+                    'background-color': index % 2 ?
+                        COLOUR__FUTURE__DARK :
+                        COLOUR__FUTURE__DARKER
                 })
             }}
         />

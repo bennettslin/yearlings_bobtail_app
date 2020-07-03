@@ -52,7 +52,7 @@
 
     .TW__lyricsLocked
     & {
-        background-color: $colour__past__dark;
+        background-color: $COLOUR__PAST__DARK;
     }
 }
 
@@ -66,35 +66,35 @@
 
     .TW__lyricsLocked
     & {
-        background-color: $colour__past__darker;
+        background-color: $COLOUR__PAST__DARKER;
     }
 }
 
 .FilmstripCell__oddAfter {
-    background-color: $colour__future__dark;
+    background-color: $COLOUR__FUTURE__DARK;
 
     .PlW__isPlaying
     & {
-        background-color: $colour__future__lighter;
+        background-color: $COLOUR__FUTURE__LIGHTER;
     }
 
     .TW__lyricsLocked
     & {
-        background-color: $colour__future__dark;
+        background-color: $COLOUR__FUTURE__DARK;
     }
 }
 
 .FilmstripCell__evenAfter {
-    background-color: $colour__future__darker;
+    background-color: $COLOUR__FUTURE__DARKER;
 
     .PlW__isPlaying
     & {
-        background-color: $colour__future__light;
+        background-color: $COLOUR__FUTURE__LIGHT;
     }
 
     .TW__lyricsLocked
     & {
-        background-color: $colour__future__darker;
+        background-color: $COLOUR__FUTURE__DARKER;
     }
 }
 

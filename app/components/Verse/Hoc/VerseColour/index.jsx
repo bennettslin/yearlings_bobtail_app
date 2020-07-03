@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import Tracker from '../../../Tracker'
-import { getMapVerseCursorStatus } from '../../../../redux/cursor/selector'
+import { getMapIsVerseCursor } from '../../../../redux/cursor/selector'
 import { getMapVerseTrackerLength } from '../../../../redux/tracker/selector'
+import { VERSE_CURSOR_CHILD_PREFIX } from '../../../../constants/verseCursor'
 import './style'
 
 const VerseColour = ({
@@ -15,30 +16,24 @@ const VerseColour = ({
 
 }) => {
     const
-        verseCursorStatus = useSelector(getMapVerseCursorStatus({
+        isVerseCursor = useSelector(getMapIsVerseCursor({
             verseIndex,
             inSlider,
             inVerseBar
         })),
         verseTrackerLength = useSelector(getMapVerseTrackerLength(verseIndex)),
-        isNotShown = verseCursorStatus === null,
-        isOdd = Boolean(verseIndex % 2)
+        isNotShown = isNaN(verseIndex)
 
     return (
         <div
             className={cx(
                 'VerseColour',
-                `vc${verseIndex}`,
+                `${VERSE_CURSOR_CHILD_PREFIX}${verseIndex}`,
                 inVerseBar ?
                     'VerseColour__inVerseBar' :
                     'VerseColour__notVerseBar',
-                verseCursorStatus === -1 && 'VerseColour__beforeCursor',
-                verseCursorStatus === 0 && 'VerseColour__cursor',
-                verseCursorStatus === 1 && 'VerseColour__afterCursor',
+                isVerseCursor && 'VerseColour__cursor',
                 isNotShown && 'VerseColour__cursorNotShown',
-                isOdd ?
-                    'VerseColour__odd' :
-                    'VerseColour__even',
                 'ovH',
                 'abF'
             )}

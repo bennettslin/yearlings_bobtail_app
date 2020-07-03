@@ -12,7 +12,7 @@ const PresenceZIndexStylesheet = () => (
             className: 'PresenceZIndexStylesheet',
             indices: CUBE_Y_INDICES,
             childPrefix: 'Presences.y',
-            getStyle: (yIndex) => ({
+            getStyle: yIndex => ({
                 // Render presences above all cubes in the row for this yIndex.
                 'z-index': (yIndex + 1) * CUBE_X_AXIS_LENGTH
             })
