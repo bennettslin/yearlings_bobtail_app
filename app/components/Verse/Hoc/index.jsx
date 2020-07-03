@@ -2,10 +2,12 @@ import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
+import Tracker from '../../Tracker'
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
 import { getMapIsVerseCursor } from '../../../redux/cursor/selector'
 import { getMapIsVerseSelected } from '../../../redux/selected/selector'
+import { getMapVerseTrackerLength } from '../../../redux/tracker/selector'
 import './style'
 
 const VerseHoc = forwardRef(({
@@ -21,7 +23,10 @@ const VerseHoc = forwardRef(({
     if (!hasVerseIndex) {
         return (
             <VerseComponent {...other}
-                {...{ ref, logicSelectors: 'Verse__noIndexColour' }}
+                {...{
+                    ref,
+                    className: 'Verse__noIndexColour'
+                }}
             />
         )
     }
@@ -30,35 +35,43 @@ const VerseHoc = forwardRef(({
             inSlider,
             inVerseBar
         } = other,
-        isCursorVerse = useSelector(getMapIsVerseCursor({
+        isVerseCursor = useSelector(getMapIsVerseCursor({
             verseIndex,
             inSlider,
             inVerseBar
         })),
         isSelectedVerse = useSelector(getMapIsVerseSelected(verseIndex)),
-        inLyric = inUnit || inVerseBar,
-        logicSelectors = cx(
-            inLyric ? 'Verse__text' : 'Verse__slider',
-            isCursorVerse ? 'Verse__cursor' : 'Verse__notCursor',
-            isSelectedVerse ? 'Verse__selected' : 'Verse__notSelected'
-        )
+        verseTrackerLength = useSelector(getMapVerseTrackerLength(verseIndex)),
+        inLyric = inUnit || inVerseBar
 
     return (
         <VerseComponent {...other}
             {...{
                 ref,
                 verseIndex,
-                logicSelectors
+                className: cx(
+                    inLyric ? 'Verse__text' : 'Verse__slider',
+                    isVerseCursor ? 'Verse__cursor' : 'Verse__notCursor',
+                    isSelectedVerse ? 'Verse__selected' : 'Verse__notSelected'
+                )
             }}
         >
             <VerseColour
                 {...{
                     verseIndex,
-                    inUnit,
-                    inSlider,
                     inVerseBar
                 }}
-            />
+            >
+                {Number.isFinite(verseIndex) && (
+                    <Tracker
+                        {...{
+                            trackerLength: verseTrackerLength,
+                            isVertical: inUnit || inVerseBar,
+                            isNotShown: !isVerseCursor
+                        }}
+                    />
+                )}
+            </VerseColour>
             {!inSlider && !inVerseBar && (
                 <VerseNav
                     {...{

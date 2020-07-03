@@ -24,7 +24,9 @@
 * tips hand in garryowen for score
 * Do I really want scene activation to work as it does, where you need to go next, then previous, before hitting selected verse that is not the start of scene?
 
-# Easy reduction tasks
+# Easy tasks
+* Also have filmstrip scene cells use stylesheet?
+* Slider verse select ranges don't really align with hover ranges.
 * Some todos to make a selector.
 * Have verse store for queued verse select, just like annotation store.
 * Make isActivated and isSelected selectors.

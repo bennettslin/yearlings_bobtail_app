@@ -1,59 +1,34 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
-import Tracker from '../../../Tracker'
-import { getMapIsVerseCursor } from '../../../../redux/cursor/selector'
-import { getMapVerseTrackerLength } from '../../../../redux/tracker/selector'
-import { VERSE_CURSOR_CHILD_PREFIX } from '../../../../constants/verseCursor'
+import { VERSE_CURSOR_CHILD_PREFIX } from '../../../../constants/cursor'
 import './style'
 
 const VerseColour = ({
     verseIndex,
-    inUnit,
-    inSlider,
-    inVerseBar
+    inVerseBar,
+    children
 
-}) => {
-    const
-        isVerseCursor = useSelector(getMapIsVerseCursor({
-            verseIndex,
-            inSlider,
-            inVerseBar
-        })),
-        verseTrackerLength = useSelector(getMapVerseTrackerLength(verseIndex))
-
-    return (
-        <div
-            className={cx(
-                'VerseColour',
-                `${VERSE_CURSOR_CHILD_PREFIX}${verseIndex}`,
-                inVerseBar ?
-                    'VerseColour__inVerseBar' :
-                    'VerseColour__notVerseBar',
-                isVerseCursor && 'VerseColour__cursor',
-                'ovH',
-                'abF'
-            )}
-        >
-            {Number.isFinite(verseIndex) && (
-                <Tracker
-                    {...{
-                        trackerLength: verseTrackerLength,
-                        isVertical: inUnit || inVerseBar,
-                        isNotShown: !isVerseCursor
-                    }}
-                />
-            )}
-        </div>
-    )
-}
+}) => (
+    <div
+        className={cx(
+            'VerseColour',
+            `${VERSE_CURSOR_CHILD_PREFIX}${verseIndex}`,
+            inVerseBar ?
+                'VerseColour__inVerseBar' :
+                'VerseColour__notVerseBar',
+            'ovH',
+            'abF'
+        )}
+    >
+        {children}
+    </div>
+)
 
 VerseColour.propTypes = {
     verseIndex: PropTypes.number.isRequired,
-    inUnit: PropTypes.bool,
-    inSlider: PropTypes.bool,
-    inVerseBar: PropTypes.bool
+    inVerseBar: PropTypes.bool,
+    children: PropTypes.node
 }
 
 export default memo(VerseColour)

@@ -5,7 +5,7 @@ import cx from 'classnames'
 import './style'
 
 const SliderVerse = ({
-    logicSelectors,
+    className,
     relativeStartTime,
     verseDuration,
     stanzaDuration,
@@ -50,7 +50,7 @@ const SliderVerse = ({
 
                     'abF',
 
-                    logicSelectors
+                    className
                 ),
                 style: verseStyle
             }}
@@ -61,7 +61,7 @@ const SliderVerse = ({
 }
 
 SliderVerse.propTypes = {
-    logicSelectors: PropTypes.string.isRequired,
+    className: PropTypes.string.isRequired,
     verseIndex: PropTypes.number.isRequired,
     isLastVerseOfStanza: PropTypes.bool.isRequired,
     relativeStartTime: PropTypes.number.isRequired,

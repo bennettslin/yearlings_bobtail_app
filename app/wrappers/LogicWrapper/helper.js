@@ -4,7 +4,7 @@ import {
     VERSE_BEFORE_PREFIX,
     VERSE_CURSOR_PREFIX,
     VERSE_AFTER_PREFIX
-} from '../../constants/verseCursor'
+} from '../../constants/cursor'
 
 export const getPrefixedVerseClassNames = verseCursorIndex => (
     getArrayOfLength(getMaxVerseCountForAlbum()).map(index => {

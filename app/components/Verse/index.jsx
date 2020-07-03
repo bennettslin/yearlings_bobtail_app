@@ -8,7 +8,7 @@ import { VERSE_SCROLL } from '../../constants/scroll'
 import './style'
 
 const Verse = forwardRef(({
-    logicSelectors,
+    className,
     verseClassName,
     children,
     ...other
@@ -67,7 +67,7 @@ const Verse = forwardRef(({
                         verseClassName && `verse__${verseClassName}`,
                         isInteractable && 'Verse__interactable',
 
-                        logicSelectors
+                        className
                     ),
                     onClick
                 }}
@@ -88,7 +88,7 @@ const Verse = forwardRef(({
 })
 
 Verse.propTypes = {
-    logicSelectors: PropTypes.string,
+    className: PropTypes.string,
     verseClassName: PropTypes.string,
     verseObject: PropTypes.object.isRequired,
     verseIndex: PropTypes.number,

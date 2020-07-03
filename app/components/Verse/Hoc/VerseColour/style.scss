@@ -35,37 +35,32 @@
         background-color: $colour__interact__light;
         box-shadow: $boxShadow__activeVerse;
     }
-}
 
-/**
- * Border radius is needed on both parent and child because of box shadow, I
- * think.
- */
-.VerseBar__animatable,
-.VerseColour__inVerseBar {
-    border-radius: $borderRadius__narrow;
-}
-
-.VerseColour__cursor {
-    background-color: $colour__paused__empty;
+    .Verse__cursor
+    & {
+        background-color: $colour__paused__empty;
+    }
 
     .PlW__isPlaying
+    .Verse__cursor
     & {
         background-color: $colour__playing__empty;
     }
 
     .TW__lyricsLocked
+    .Verse__cursor
     & {
         background-color: $colour__access__light;
     }
 
     .TW__verseActive
+    .Verse__cursor
     &.VerseColour__notVerseBar {
         box-shadow: $boxShadow__activeVerse;   
     }
 
     .TW__verseInactive
-    .Verse__slider
+    .Verse__cursor.Verse__slider
     & {
         box-shadow: $boxShadow__cursorVerse__slider;
         border-radius:
@@ -80,7 +75,7 @@
     }
 
     .TW__verseInactive
-    .Verse__text
+    .Verse__cursor.Verse__text
     & {
         box-shadow: $boxShadow__cursorVerse;
         border-radius: $borderRadius__narrow;
@@ -89,4 +84,13 @@
         height: calc(100% + #{$MARGIN_THIN * 2});
         width: calc(100% + #{$MARGIN_THIN * 2});
     }
+}
+
+/**
+ * Border radius is needed on both parent and child because of box shadow, I
+ * think.
+ */
+.VerseBar__animatable,
+.VerseColour__inVerseBar {
+    border-radius: $borderRadius__narrow;
 }
