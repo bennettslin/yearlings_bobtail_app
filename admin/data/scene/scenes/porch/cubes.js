@@ -10,7 +10,6 @@ import {
     UNDERGROUND_WALL_COLOUR as W
 } from '../../../../../app/constants/scene/cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { e, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
 export default {

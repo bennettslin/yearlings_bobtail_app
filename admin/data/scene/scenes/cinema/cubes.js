@@ -9,7 +9,6 @@ import {
     CINEMA_EXTERIOR_COLOUR as X
 } from '../../../../../app/constants/scene/cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { e, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
 export default {

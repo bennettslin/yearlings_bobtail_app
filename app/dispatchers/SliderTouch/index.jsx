@@ -1,4 +1,3 @@
-// eslint-disable-next-line object-curly-newline
 import { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateSliderStore } from '../../redux/slider/action'

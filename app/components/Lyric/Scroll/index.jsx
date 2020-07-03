@@ -1,4 +1,3 @@
-// eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useEffect, useRef } from 'react'
 import cx from 'classnames'
 import VerseBar from '../VerseBar'

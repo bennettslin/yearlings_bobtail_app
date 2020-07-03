@@ -1,4 +1,3 @@
-// eslint-disable-next-line object-curly-newline
 import React, { useEffect, forwardRef, useRef } from 'react'
 import cx from 'classnames'
 import ResizeManager from '../../managers/Resize'

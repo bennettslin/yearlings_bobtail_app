@@ -1,4 +1,3 @@
-// eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { isString } from '../../../../helpers/general'

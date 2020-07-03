@@ -1,4 +1,3 @@
-// eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'

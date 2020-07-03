@@ -1,4 +1,3 @@
-// eslint-disable-next-line object-curly-newline
 import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {

@@ -8,7 +8,6 @@ import {
     CONCRETE_PLATFORM_COLOUR as P
 } from '../../../../../app/constants/scene/cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { a, f, g } from '../../../../../app/constants/scene/cubes/zIndices'
 
 export default {

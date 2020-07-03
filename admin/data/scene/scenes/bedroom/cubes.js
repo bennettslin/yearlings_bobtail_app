@@ -21,7 +21,6 @@ import {
     SEAT_COLOUR as S
 } from '../../../../../app/constants/scene/cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
 /**

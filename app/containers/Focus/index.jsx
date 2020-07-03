@@ -1,5 +1,4 @@
 // Parent component that handles click, touch, and keyDown events.
-// eslint-disable-next-line object-curly-newline
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateFocusStore } from '../../redux/focus/action'

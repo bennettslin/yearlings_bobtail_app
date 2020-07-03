@@ -1,4 +1,3 @@
-// eslint-disable-next-line object-curly-newline
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import AnnotationAccessDispatcher from '../Dispatcher'

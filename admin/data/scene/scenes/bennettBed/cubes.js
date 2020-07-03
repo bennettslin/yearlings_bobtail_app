@@ -13,7 +13,6 @@ import {
     BENNETT_BED_COLOUR as U
 } from '../../../../../app/constants/scene/cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
 const DEFAULT_CEILING = {

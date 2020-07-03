@@ -1,4 +1,3 @@
-// eslint-disable-next-line object-curly-newline
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../../redux/access/action'

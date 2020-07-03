@@ -1,4 +1,3 @@
-// eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useEffect } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'

@@ -1,5 +1,4 @@
 // Component that handles all user events from keyboard.
-// eslint-disable-next-line object-curly-newline
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'

@@ -1,4 +1,3 @@
-// eslint-disable-next-line object-curly-newline
 import { forwardRef, useImperativeHandle, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'

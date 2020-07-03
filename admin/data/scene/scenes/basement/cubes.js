@@ -9,7 +9,6 @@ import {
     SEAT_COLOUR as S
 } from '../../../../../app/constants/scene/cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { a, e, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
 export const DEFAULT_CEILING = {

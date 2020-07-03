@@ -7,7 +7,6 @@ import {
     ROOF_COLOUR as C
 } from '../../../../../app/constants/scene/cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { d, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
 /**

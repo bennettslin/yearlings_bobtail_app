@@ -8,7 +8,6 @@ import {
     WAITING_ARMCHAIR_COLOUR as U
 } from '../../../../../app/constants/scene/cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
 export default {
