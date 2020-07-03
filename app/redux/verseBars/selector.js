@@ -1,51 +1,43 @@
 import { createSelector } from 'reselect'
+import {
+    getFinalVerseBarsStatus,
+    getIsVerseBarShown
+} from '../../helpers/verseBars'
 import { VERSE_BARS_STORE } from '../../constants/store'
-import { mapScrollLyricVerseIndex } from '../scrollLyric/selector'
+import { mapQueuedScrollVerseIndex } from '../scrollLyric/selector'
 
-export const mapVerseBarsStatus = (
-    { [VERSE_BARS_STORE]: { verseBarsStatus } }
-) => verseBarsStatus
+/**
+ * I'm not happy about having a raw and final value, but this allows the UI not
+ * to show the verse bars when there is a queued scroll verse index, without
+ * forcing a store update.
+ */
+const mapRawVerseBarsStatus = (
+    { [VERSE_BARS_STORE]: { verseBarsStatus: rawVerseBarsStatus } }
+) => rawVerseBarsStatus
 
-const mapIsVerseBarAbove = createSelector(
-    mapVerseBarsStatus,
-    mapScrollLyricVerseIndex,
+export const mapVerseBarsStatus = createSelector(
+    mapRawVerseBarsStatus,
+    mapQueuedScrollVerseIndex,
     (
-        verseBarsStatus,
-        scrollLyricVerseIndex
-    ) => scrollLyricVerseIndex === -1 && verseBarsStatus === 1
-)
-
-const mapIsVerseBarBelow = createSelector(
-    mapVerseBarsStatus,
-    mapScrollLyricVerseIndex,
-    (
-        verseBarsStatus,
-        scrollLyricVerseIndex
-    ) => scrollLyricVerseIndex === -1 && verseBarsStatus === -1
+        rawVerseBarsStatus,
+        queuedScrollVerseIndex
+    ) => getFinalVerseBarsStatus({
+        rawVerseBarsStatus,
+        queuedScrollVerseIndex
+    })
 )
 
 export const getMapIsVerseBarShown = isAbove => createSelector(
-    mapIsVerseBarAbove,
-    mapIsVerseBarBelow,
-    (
-        isVerseBarAbove,
-        isVerseBarBelow
-    ) => (
-        isAbove &&
-        isVerseBarAbove
-    ) || (
-        !isAbove &&
-        isVerseBarBelow
-    )
+    mapVerseBarsStatus,
+    verseBarsStatus => getIsVerseBarShown({
+        isAbove,
+        verseBarsStatus
+    })
 )
 
 export const mapIsEitherVerseBarShown = createSelector(
-    mapIsVerseBarAbove,
-    mapIsVerseBarBelow,
-    (
-        isVerseBarAbove,
-        isVerseBarBelow
-    ) => isVerseBarAbove || isVerseBarBelow
+    mapVerseBarsStatus,
+    verseBarsStatus => verseBarsStatus !== 0
 )
 
 export const mapQueuedDetermineVerseBars = (

@@ -32,7 +32,7 @@ export const mapScrollLyricWithVerseCallback = (
     { [SCROLL_LYRIC_STORE]: { scrollLyricWithVerseCallback } }
 ) => scrollLyricWithVerseCallback
 
-export const mapScrollLyricVerseIndex = createSelector(
+export const mapQueuedScrollVerseIndex = createSelector(
     mapScrollLyricIndex,
     mapScrollLyricWithVerseCallback,
     (
@@ -45,24 +45,24 @@ export const mapScrollLyricVerseIndex = createSelector(
 
 export const mapScrollLyricSceneIndex = createSelector(
     mapSelectedSongIndex,
-    mapScrollLyricVerseIndex,
+    mapQueuedScrollVerseIndex,
     (
         selectedSongIndex,
-        scrollLyricVerseIndex
+        queuedScrollVerseIndex
     ) => getSceneIndexForVerse(
         selectedSongIndex,
-        scrollLyricVerseIndex
+        queuedScrollVerseIndex
     )
 )
 
 export const mapScrollLyricTime = createSelector(
     mapSelectedSongIndex,
-    mapScrollLyricVerseIndex,
+    mapQueuedScrollVerseIndex,
     (
         selectedSongIndex,
-        scrollLyricVerseIndex
+        queuedScrollVerseIndex
     ) => getStartTimeForVerse(
         selectedSongIndex,
-        scrollLyricVerseIndex
+        queuedScrollVerseIndex
     )
 )

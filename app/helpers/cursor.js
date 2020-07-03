@@ -1,11 +1,11 @@
 export const getCursorIndex = (
-    scrollLyricVerseIndex,
+    queuedScrollVerseIndex,
     sliderIndex,
     activatedIndex,
     defaultIndex
 ) => {
-    if (scrollLyricVerseIndex >= 0) {
-        return scrollLyricVerseIndex
+    if (queuedScrollVerseIndex >= 0) {
+        return queuedScrollVerseIndex
     } else if (sliderIndex >= 0) {
         return sliderIndex
     } else if (activatedIndex >= 0) {
@@ -32,7 +32,7 @@ export const getBeforeOnOrAfter = (
 
 export const getCursorTime = ({
     scrollLyricTime,
-    scrollLyricVerseIndex,
+    queuedScrollVerseIndex,
     selectedTime,
     isActivated,
     activatedTime,
@@ -48,7 +48,7 @@ export const getCursorTime = ({
         return activatedTime
     }
 
-    if (scrollLyricVerseIndex > -1) {
+    if (queuedScrollVerseIndex > -1) {
         return scrollLyricTime
     }
 

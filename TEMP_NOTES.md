@@ -19,6 +19,7 @@
 * Verse scroll key doesn't always work.
 
 # Post-Gatsby bugs
+* Hover of slider in lyrics locked should have white text.
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 * Failed to decode downloaded font warning?
 
