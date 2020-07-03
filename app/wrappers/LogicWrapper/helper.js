@@ -1,18 +1,20 @@
 import { getArrayOfLength } from '../../helpers/general'
 import { getMaxVerseCountForAlbum } from '../../api/album/count'
+import {
+    VERSE_BEFORE_PREFIX,
+    VERSE_CURSOR_PREFIX,
+    VERSE_AFTER_PREFIX
+} from '../../constants/verseCursor'
 
 export const getPrefixedVerseClassNames = verseCursorIndex => (
     getArrayOfLength(getMaxVerseCountForAlbum()).map(index => {
-        // "Cursor."
-        let prefix = 'c'
+        let prefix = VERSE_CURSOR_PREFIX
 
         if (index < verseCursorIndex) {
-            // "Before."
-            prefix = 'b'
+            prefix = VERSE_BEFORE_PREFIX
 
         } else if (index > verseCursorIndex) {
-            // "After."
-            prefix = 'a'
+            prefix = VERSE_AFTER_PREFIX
         }
 
         return `${prefix}${index}`

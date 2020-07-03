@@ -28,6 +28,7 @@ const VerseColour = ({
         <div
             className={cx(
                 'VerseColour',
+                `vc${verseIndex}`,
                 inVerseBar ?
                     'VerseColour__inVerseBar' :
                     'VerseColour__notVerseBar',
