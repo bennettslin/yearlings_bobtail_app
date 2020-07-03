@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect'
 import { VERSE_BARS_STORE } from '../../constants/store'
+import { mapScrollLyricVerseIndex } from '../scrollLyric/selector'
 
 export const mapVerseBarsStatus = (
     { [VERSE_BARS_STORE]: { verseBarsStatus } }
@@ -7,12 +8,20 @@ export const mapVerseBarsStatus = (
 
 const mapIsVerseBarAbove = createSelector(
     mapVerseBarsStatus,
-    verseBarsStatus => verseBarsStatus === 1
+    mapScrollLyricVerseIndex,
+    (
+        verseBarsStatus,
+        scrollLyricVerseIndex
+    ) => scrollLyricVerseIndex === -1 && verseBarsStatus === 1
 )
 
 const mapIsVerseBarBelow = createSelector(
     mapVerseBarsStatus,
-    verseBarsStatus => verseBarsStatus === -1
+    mapScrollLyricVerseIndex,
+    (
+        verseBarsStatus,
+        scrollLyricVerseIndex
+    ) => scrollLyricVerseIndex === -1 && verseBarsStatus === -1
 )
 
 export const getMapIsVerseBarShown = isAbove => createSelector(

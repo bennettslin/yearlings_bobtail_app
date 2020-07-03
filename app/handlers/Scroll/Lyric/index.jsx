@@ -68,7 +68,11 @@ const ScrollLyricListener = ({
                 }
             })
 
-            // If there is a callback, reset in the callback.
+            /**
+             * If there is a callback to select the verse, don't reset the
+             * scroll lyric store yet. This allows the cursor to stay on the
+             * scroll lyric verse while it has not been selected.
+             */
             if (!scrollLyricWithVerseCallback) {
                 dispatch(resetScrollLyricStore())
             }

@@ -9,7 +9,6 @@ import { getVerseIndexforRatio } from '../../helpers/verse'
 import { scrollLyricToVerseInCallback } from '../../redux/scrollLyric/action'
 import {
     mapSelectedSongIndex,
-    mapSelectedVerseIndex,
     mapIsSelectedLogue
 } from '../../redux/selected/selector'
 import {
@@ -25,7 +24,6 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
         dispatch = useDispatch(),
         timeoutRef = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
-        selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         sliderLeft = useSelector(mapSliderLeft),
         sliderWidth = useSelector(mapSliderWidth),
@@ -147,12 +145,10 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
 
     const dispatchTouchEnd = () => {
         if (isSliderTouched) {
-            if (sliderVerseIndex !== selectedVerseIndex) {
-                dispatch(scrollLyricToVerseInCallback(
-                    'Slider selected',
-                    sliderVerseIndex
-                ))
-            }
+            dispatch(scrollLyricToVerseInCallback(
+                'Slider selected',
+                sliderVerseIndex
+            ))
 
             // Reset slider state.
             dispatch(updateSliderStore())

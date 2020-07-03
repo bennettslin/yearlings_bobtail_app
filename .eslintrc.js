@@ -268,7 +268,7 @@ module.exports = {
         "no-with": 'error',
         "object-curly-newline": [
             'error', {
-                "minProperties": 3,
+                "minProperties": 4,
                 "consistent": true
             }
         ],
