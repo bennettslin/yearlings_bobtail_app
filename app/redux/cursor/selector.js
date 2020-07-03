@@ -86,6 +86,7 @@ export const getMapSceneCursorStatus = sceneIndex => createSelector(
 )
 
 export const mapVerseCursorIndex = createSelector(
+    mapScrollLyricVerseIndex,
     mapSliderVerseIndex,
     mapActivatedVerseIndex,
     mapLyricVerseIndex,
