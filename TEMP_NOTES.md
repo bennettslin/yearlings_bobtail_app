@@ -1,10 +1,10 @@
-# Scroll refactor
-* Scroll first and then pass callback to select verse.
-    * Do for dispatchTimeVerse as well.
-    * Acceptance criteria: scrolling on any verse change should be smooth.
-        * I think the issue is that with functional components, there are more renders for every store update, causing scrolling to be clunky.
-    * Selecting verse during play stops player. (Just needs to check queued as well as selected verse.)
-    * Maybe think about stylesheet logic for verses?
+# TODO for scroll refactor
+* Stylesheet logic for verses
+* Rip out logic for queued scroll verse index
+* Have scene index set only after scroll is complete
+* Figure out verse bar determining and reset
+* Confirm that selecting verse during play works again
+* Think about dispatchTimeVerse
 
 # Issues
 * What is mapIsSelectPlayReady?

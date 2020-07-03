@@ -45,10 +45,10 @@ const ScrollLyricListener = ({
     const dispatchCallback = index => {
         if (scrollLyricWithVerseCallback) {
             dispatchVerse.current(index)
+            dispatch(updateActivatedStore())
+            dispatch(resetVerseBars())
         }
         dispatch(resetScrollLyricStore())
-        // TODO: Investigate why selecting activated verse requires resetting verse bars a second time.
-        dispatch(resetVerseBars())
     }
 
     useEffect(() => {
@@ -70,9 +70,6 @@ const ScrollLyricListener = ({
                 noDuration: scrollLyricNoDuration,
                 callback: () => dispatchCallback(index)
             })
-
-            dispatch(updateActivatedStore())
-            dispatch(resetVerseBars())
         }
     }, [scrollLyricLog])
 
