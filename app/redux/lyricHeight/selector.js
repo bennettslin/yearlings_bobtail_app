@@ -2,7 +2,7 @@ import { createSelector } from 'reselect'
 import {
     getLyricDynamicHeight,
     getLyricOverviewHeightStyle
-} from '../../helpers/resize/mount'
+} from '../../helpers/resize/section'
 import { mapIsLyricLogue } from '../lyric/selector'
 import { mapStageHeight } from '../stage/selector'
 import { mapIsLyricExpanded } from '../toggle/selector'

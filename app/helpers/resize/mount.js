@@ -3,10 +3,7 @@ import {
     getIsMiniWidth,
     getIsDesktopWidth
 } from '../responsive'
-import {
-    MIN_HEIGHT_WINDOW_FOR_CAROUSEL_NAV,
-    HEIGHT_LYRIC_COLLAPSED
-} from '../../constants/responsive'
+import { MIN_HEIGHT_WINDOW_FOR_CAROUSEL_NAV } from '../../constants/responsive'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 
 export const getCanCarouselMount = ({
@@ -41,84 +38,3 @@ export const getCanSliderMount = deviceWidthIndex => (
     // Slider can mount if higher processor and desktop width.
     IS_USER_AGENT_DESKTOP && getIsDesktopWidth(deviceWidthIndex)
 )
-
-export const getLyricDynamicHeight = ({
-    canCarouselMount,
-    deviceWidthIndex,
-    windowHeight,
-    stageHeight,
-    isHeightlessLyric,
-    menuHeight
-
-}) => {
-
-    // Desktop is always 100%.
-    if (getIsDesktopWidth(deviceWidthIndex)) {
-        return 1
-
-    // Heightless lyric is 0%, obviously.
-    } else if (isHeightlessLyric) {
-        return 0
-
-    /**
-     * If carousel is mounted, then stage will sit right above lyric to give it
-     * room. In which case, set the lyric to this constant value.
-     */
-    } else if (canCarouselMount) {
-        return HEIGHT_LYRIC_COLLAPSED
-    }
-
-    const lyricDynamicHeight = (
-        windowHeight
-        - menuHeight
-        - stageHeight
-    ) / windowHeight
-
-    return Number(lyricDynamicHeight.toFixed(2))
-}
-
-export const getLyricOverviewHeightStyle = ({
-    isLyricExpanded,
-    lyricDynamicHeight,
-    isLyricLogue,
-    isHeightlessLyric,
-    menuHeight
-
-}) => (
-    // Set to window height minus menu if...
-    (
-        // It's heightless in logue.
-        (isLyricLogue && isHeightlessLyric) ||
-
-        // It's expanded in song.
-        (!isLyricLogue && isLyricExpanded)
-    ) ?
-        `calc(100% - ${menuHeight}px)` :
-        `${lyricDynamicHeight * 100}%`
-)
-
-export const getMainHeight = ({
-    canCarouselMount,
-    lyricDynamicHeight,
-    isHeightlessLyric,
-    menuHeight,
-    isDesktopWidth
-
-}) => {
-    let basePercentage
-
-    // If desktop or heightless lyric, begin with full window height.
-    if (isDesktopWidth || isHeightlessLyric) {
-        basePercentage = 100
-
-    // Otherwise, if carousel can mount, subtract collapsed lyric height.
-    } else if (canCarouselMount) {
-        basePercentage = 100 * (1 - HEIGHT_LYRIC_COLLAPSED)
-
-    // Otherwise, subtract dynamic lyric height.
-    } else {
-        basePercentage = 100 * (1 - lyricDynamicHeight)
-    }
-
-    return `calc(${basePercentage}% - ${menuHeight}px)`
-}

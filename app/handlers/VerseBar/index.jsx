@@ -9,9 +9,8 @@ import {
 } from '../../redux/verseBars/action'
 import { getVerseBarsStatus } from './helper'
 import { mapActivatedVerseIndex } from '../../redux/activated/selector'
-import { mapIsDesktopWidth } from '../../redux/device/selector'
-import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
-import { mapLyricDynamicHeight } from '../../redux/lyricHeight/selector'
+import { mapVerseCursorIndex } from '../../redux/cursor/selector'
+import { mapLyricSectionRect } from '../../redux/lyricSection/selector'
 import {
     mapSliderVerseIndex,
     mapIsSliderTouched
@@ -22,13 +21,7 @@ import {
     mapQueuedDetermineVerseBars,
     mapQueuedVerseBarsTimeout
 } from '../../redux/verseBars/selector'
-import {
-    mapWindowHeight,
-    mapIsHeightlessLyric,
-    mapMenuHeight,
-    mapCanSliderMount
-} from '../../redux/viewport/selector'
-import { mapVerseCursorIndex } from '../../redux/cursor/selector'
+import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
 
 const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     const
@@ -36,19 +29,14 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         didMount = useRef(),
         verseCursorIndex = useSelector(mapVerseCursorIndex),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
-        isLyricExpandable = useSelector(mapIsLyricExpandable),
-        canSliderMount = useSelector(mapCanSliderMount),
-        lyricDynamicHeight = useSelector(mapLyricDynamicHeight),
+        lyricSectionRect = useSelector(mapLyricSectionRect),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
-        menuHeight = useSelector(mapMenuHeight),
         isSliderTouched = useSelector(mapIsSliderTouched),
         sliderVerseIndex = useSelector(mapSliderVerseIndex),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         verseBarsStatus = useSelector(mapVerseBarsStatus),
         queuedDetermineVerseBars = useSelector(mapQueuedDetermineVerseBars),
         queuedVerseBarsTimeout = useSelector(mapQueuedVerseBarsTimeout),
-        windowHeight = useSelector(mapWindowHeight),
-        isDesktopWidth = useSelector(mapIsDesktopWidth),
         [verseBarsTimeoutId, setVerseBarsTimeoutId] = useState(-1)
 
     /**
@@ -61,14 +49,9 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         // Check for verse element in case we are loading from a logue.
         if (verseElement) {
             const nextVerseBarsStatus = getVerseBarsStatus({
-                isLyricExpandable,
-                canSliderMount,
-                isDesktopWidth,
-                windowHeight,
                 isLyricExpanded,
-                lyricDynamicHeight,
                 isHeightlessLyric,
-                menuHeight,
+                lyricSectionRect,
                 verseElement
             })
 

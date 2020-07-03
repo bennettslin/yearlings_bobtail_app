@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect'
 import { getIsShelfLeftShown } from '../../helpers/main'
-import { getMainHeight } from '../../helpers/resize/mount'
+import { getMainHeight } from '../../helpers/resize/section'
 import { mapIsActivated } from '../activated/selector'
 import {
     mapIsPhoneWidth,
