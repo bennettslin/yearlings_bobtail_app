@@ -4,7 +4,6 @@
     * Acceptance criteria: scrolling on any verse change should be smooth.
         * I think the issue is that with functional components, there are more renders for every store update, causing scrolling to be clunky.
     * Selecting verse during play stops player. (Just needs to check queued as well as selected verse.)
-    * Don't show verse bars during any scroll. Always reset verse bars after any scroll, even if no callback is passed.
     * Maybe think about stylesheet logic for verses?
 
 # Issues

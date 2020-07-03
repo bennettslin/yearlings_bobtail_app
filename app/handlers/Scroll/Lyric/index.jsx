@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import VerseDispatcher from '../../../dispatchers/Verse'
 import ScrollDispatcher from '../Dispatcher'
+import { updateActivatedStore } from '../../../redux/activated/action'
+import { resetVerseBars } from '../../../redux/verseBars/action'
 import { resetScrollLyricStore } from '../../../redux/scrollLyric/action'
 import {
     ANCHOR_SCROLL,
@@ -40,9 +42,13 @@ const ScrollLyricListener = ({
             getScrollAnchorChild(index)
     )
 
-    const dispatchVerseCallback = index => {
-        dispatchVerse.current(index)
+    const dispatchCallback = index => {
+        if (scrollLyricWithVerseCallback) {
+            dispatchVerse.current(index)
+        }
         dispatch(resetScrollLyricStore())
+        // TODO: Investigate why selecting activated verse requires resetting verse bars a second time.
+        dispatch(resetVerseBars())
     }
 
     useEffect(() => {
@@ -62,19 +68,11 @@ const ScrollLyricListener = ({
                  */
                 index,
                 noDuration: scrollLyricNoDuration,
-                ...scrollLyricWithVerseCallback && {
-                    callback: () => dispatchVerseCallback(index)
-                }
+                callback: () => dispatchCallback(index)
             })
 
-            /**
-             * If there is a callback to select the verse, don't reset the
-             * scroll lyric store yet. This allows the cursor to stay on the
-             * scroll lyric verse while it has not been selected.
-             */
-            if (!scrollLyricWithVerseCallback) {
-                dispatch(resetScrollLyricStore())
-            }
+            dispatch(updateActivatedStore())
+            dispatch(resetVerseBars())
         }
     }, [scrollLyricLog])
 
