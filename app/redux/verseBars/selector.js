@@ -1,8 +1,5 @@
 import { createSelector } from 'reselect'
-import {
-    getFinalVerseBarsStatus,
-    getIsVerseBarShown
-} from '../../helpers/verseBars'
+import { getFinalVerseBarsStatus } from '../../helpers/queuedScroll'
 import { VERSE_BARS_STORE } from '../../constants/store'
 import { mapQueuedScrollVerseIndex } from '../scrollLyric/selector'
 
@@ -29,10 +26,7 @@ export const mapVerseBarsStatus = createSelector(
 
 export const getMapIsVerseBarShown = isAbove => createSelector(
     mapVerseBarsStatus,
-    verseBarsStatus => getIsVerseBarShown({
-        isAbove,
-        verseBarsStatus
-    })
+    verseBarsStatus => verseBarsStatus === (isAbove ? 1 : -1)
 )
 
 export const mapIsEitherVerseBarShown = createSelector(

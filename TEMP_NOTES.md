@@ -3,9 +3,9 @@
     * Do for dispatchTimeVerse as well.
     * Acceptance criteria: scrolling on any verse change should be smooth.
         * I think the issue is that with functional components, there are more renders for every store update, causing scrolling to be clunky.
-    * Have activated not show when queued scroll lyric verse.
     * Selected scene neutral colour lingers.
     * Selecting verse during play stops player.
+    * keyboard scrolling doesn't determine verse bars right away.
 
 # Issues
 * What is mapIsSelectPlayReady?
