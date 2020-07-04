@@ -30,11 +30,6 @@ export const mapActivatedSceneIndex = createSelector(
     )
 )
 
-export const getMapIsSceneActivated = sceneIndex => createSelector(
-    mapActivatedSceneIndex,
-    activatedSceneIndex => sceneIndex === activatedSceneIndex
-)
-
 export const mapActivatedTime = createSelector(
     mapSelectedSongIndex,
     mapActivatedVerseIndex,

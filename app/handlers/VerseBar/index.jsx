@@ -1,6 +1,4 @@
-import {
-    forwardRef, useImperativeHandle, useEffect, useState, memo
-} from 'react'
+import { forwardRef, useImperativeHandle, useEffect, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateVerseBarsStatus } from '../../redux/verseBars/action'
@@ -18,14 +16,9 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         lyricSectionRect = useSelector(mapLyricSectionRect),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
-        verseBarsStatus = useSelector(mapVerseBarsStatus),
-        [verseBarsTimeoutId, setVerseBarsTimeoutId] = useState(-1)
+        verseBarsStatus = useSelector(mapVerseBarsStatus)
 
-    /**
-     * This is technically within a timeout closure, but these values shouldn't
-     * change from the time the timeout was set.
-     */
-    const _dispatchVerseBars = () => {
+    const determineVerseBars = () => {
         const verseElement = getScrollVerseChild(verseCursorIndex)
 
         // Check for verse element in case we are loading from a logue.
@@ -44,24 +37,9 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         }
     }
 
-    const determineVerseBars = (timeoutDuration = 10) => {
-        /**
-         * It seems to help to both make the call immediately, and then set a
-         * timeout for it. For now, I don't think there's any performance hit.
-         */
-        _dispatchVerseBars()
-
-        clearTimeout(verseBarsTimeoutId)
-
-        setVerseBarsTimeoutId(setTimeout(
-            _dispatchVerseBars,
-            timeoutDuration
-        ))
-    }
-
     useEffect(() => {
-        // Determine verse bars anytime verse cursor index has changed.
-        _dispatchVerseBars()
+        // Also determine verse bars when verse cursor index has changed.
+        determineVerseBars()
     }, [verseCursorIndex])
 
     useImperativeHandle(ref, () => determineVerseBars)

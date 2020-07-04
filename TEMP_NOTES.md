@@ -3,7 +3,6 @@
 * Verse bar transitions in too slowly, flash of white, what is that?
 * When selecting a new verse, tracker length sometimes starts full, then empties.
 * Experiment with removing from reducers and putting back in listeners?
-* Navigating annotations does not determine verse bars.
 
 # Issues
 * What is mapIsSelectPlayReady?
