@@ -1,5 +1,5 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import VerseDispatcher from '../../../dispatchers/Verse'
 import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
@@ -10,7 +10,6 @@ import {
     mapActivatedVerseIndex,
     mapIsActivated
 } from '../../../redux/activated/selector'
-import { scrollLyricForVerseSelect } from '../../../redux/scrollLyric/action'
 import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
@@ -26,7 +25,6 @@ import { mapIsWikiShown } from '../../../redux/wiki/selector'
 
 const NavigationManager = forwardRef((props, ref) => {
     const
-        dispatch = useDispatch(),
         navigateAnnotation = useRef(),
         navigateDotsSlide = useRef(),
         navigateLyric = useRef(),
@@ -53,11 +51,10 @@ const NavigationManager = forwardRef((props, ref) => {
             if (isActivated && keyName === ENTER) {
                 keyWasRegistered = true
 
-                dispatchVerse.current(activatedVerseIndex)
-                dispatch(scrollLyricForVerseSelect(
+                dispatchVerse.current(
                     'Key selected',
                     activatedVerseIndex
-                ))
+                )
 
                 annotationIndexWasAccessed = true
 

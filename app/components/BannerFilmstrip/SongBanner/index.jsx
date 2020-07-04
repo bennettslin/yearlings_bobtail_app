@@ -26,7 +26,6 @@ import {
 import { mapIsLyricsLocked } from '../../../redux/slider/selector'
 import { mapSongTrackerWidth } from '../../../redux/tracker/selector'
 import './style'
-import { scrollLyricForVerseSelect } from '../../../redux/scrollLyric/action'
 
 const SongBanner = () => {
     const
@@ -124,11 +123,10 @@ const SongBanner = () => {
                 // On mobile, get from click event.
                 getVerseIndexFromEvent(e)
 
-        dispatchVerse.current(verseIndex)
-        dispatch(scrollLyricForVerseSelect(
+        dispatchVerse.current(
             'Banner selected',
             verseIndex
-        ))
+        )
 
         // Once clicked, do not allow another click on the same hover.
         onMouseLeave()

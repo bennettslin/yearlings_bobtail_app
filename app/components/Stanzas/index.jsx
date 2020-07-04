@@ -3,19 +3,17 @@
  * optional index, such as Verse 1 or Bridge.
  */
 import React, { forwardRef, memo, useRef } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import VerseDispatcher from '../../dispatchers/Verse'
 import Stanza from './Stanza'
 import Unit from '../Unit'
 import { getStanzaIndices } from '../../api/album/stanzas'
 import { getLastUnitDotCardIndex } from '../../api/album/units'
-import { scrollLyricForVerseSelect } from '../../redux/scrollLyric/action'
 import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import './style'
 
 const Stanzas = forwardRef((props, ref) => {
     const
-        dispatch = useDispatch(),
         dispatchVerse = useRef(),
         lyricSongIndex = useSelector(mapLyricSongIndex)
 
@@ -23,11 +21,10 @@ const Stanzas = forwardRef((props, ref) => {
         selectedVerseIndex,
         scrollLog
     }) => {
-        dispatchVerse.current(selectedVerseIndex)
-        dispatch(scrollLyricForVerseSelect(
+        dispatchVerse.current(
             scrollLog,
             selectedVerseIndex
-        ))
+        )
     }
 
     const
