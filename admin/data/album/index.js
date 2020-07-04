@@ -12,7 +12,10 @@ import {
 } from './helpers/scene'
 import { addAnnotationMetadata } from './helpers/annotation'
 import { addAdminMetadata } from './helpers/admin'
-import { getMaxVerseCount } from './helpers/count'
+import {
+    getMaxSceneCount,
+    getMaxVerseCount
+} from './helpers/count'
 import { addTip } from './helpers/tips'
 import { addVerseMetadata } from './helpers/verse'
 import { addWormholeMetadata } from './helpers/wormhole'
@@ -75,6 +78,7 @@ const album = {
     // Dev sanity check. When compiled, this gets replaced.
     _build: 'runtime',
     songs,
+    maxSceneCount: getMaxSceneCount(songs),
     maxVerseCount: getMaxVerseCount(songs)
 }
 

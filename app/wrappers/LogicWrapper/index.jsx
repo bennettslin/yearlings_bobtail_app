@@ -2,17 +2,26 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { mapVerseCursorIndex } from '../../redux/cursor/selector'
-import { getPrefixedVerseClassNames } from './helper'
+import {
+    mapSceneCursorIndex,
+    mapVerseCursorIndex
+} from '../../redux/cursor/selector'
+import {
+    getPrefixedSceneClassNames,
+    getPrefixedVerseClassNames
+} from './helper'
 
 const LogicWrapper = ({ children }) => {
-    const verseCursorIndex = useSelector(mapVerseCursorIndex)
+    const
+        sceneCursorIndex = useSelector(mapSceneCursorIndex),
+        verseCursorIndex = useSelector(mapVerseCursorIndex)
 
     return (
         <div
             {...{
                 className: cx(
                     'LogicWrapper',
+                    getPrefixedSceneClassNames(sceneCursorIndex),
                     getPrefixedVerseClassNames(verseCursorIndex)
                 )
             }}

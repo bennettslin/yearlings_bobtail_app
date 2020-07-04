@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import Tracker from '../../../../Tracker'
 import { getMapSceneCursorStatus } from '../../../../../redux/cursor/selector'
 import { getMapSceneTrackerWidth } from '../../../../../redux/tracker/selector'
+import { SCENE_CURSOR_CHILD_PREFIX } from '../../../../../constants/cursor'
 import './style'
 
 const FilmstripCell = ({ sceneIndex }) => {
@@ -22,6 +23,7 @@ const FilmstripCell = ({ sceneIndex }) => {
             {...{
                 className: cx(
                     'FilmstripCell',
+                    `${SCENE_CURSOR_CHILD_PREFIX}${sceneIndex}`,
                     isOdd && isBeforeCursor && 'FilmstripCell__oddBefore',
                     !isOdd && isBeforeCursor && 'FilmstripCell__evenBefore',
                     isOnCursor && 'FilmstripCell__onCursor',
