@@ -1,9 +1,9 @@
 export const SCROLL_LYRIC_DEFAULTS = {
     scrollLyricLog: '',
-    scrollLyricByVerse: false,
+    scrollLyricByAnchor: false,
     scrollLyricIndex: -1,
     scrollLyricAlways: false,
-    scrollLyricNoDuration: false,
+    isScrollLyricForSongSelect: false,
     scrollLyricFromAutoScroll: false,
-    scrollLyricWithVerseCallback: false
+    isScrollLyricForVerseSelect: false
 }

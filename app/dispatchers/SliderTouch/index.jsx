@@ -6,7 +6,7 @@ import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
 import { getVerseIndexforRatio } from '../../helpers/verse'
-import { scrollLyricToVerseInCallback } from '../../redux/scrollLyric/action'
+import { scrollLyricForVerseSelect } from '../../redux/scrollLyric/action'
 import {
     mapSelectedSongIndex,
     mapIsSelectedLogue
@@ -147,7 +147,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
     const dispatchTouchEnd = () => {
         if (isSliderTouched) {
             dispatchVerse.current(sliderVerseIndex)
-            dispatch(scrollLyricToVerseInCallback(
+            dispatch(scrollLyricForVerseSelect(
                 'Slider selected',
                 sliderVerseIndex
             ))

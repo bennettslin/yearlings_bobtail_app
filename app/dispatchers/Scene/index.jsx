@@ -2,7 +2,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import VerseDispatcher from '../Verse'
 import { getVerseIndexForScene } from '../../api/album/scenes'
-import { scrollLyricToVerseInCallback } from '../../redux/scrollLyric/action'
+import { scrollLyricForVerseSelect } from '../../redux/scrollLyric/action'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 
 const SceneDispatcher = forwardRef((props, ref) => {
@@ -17,7 +17,7 @@ const SceneDispatcher = forwardRef((props, ref) => {
             selectedSceneIndex
         )
         dispatchVerse.current(selectedVerseIndex)
-        dispatch(scrollLyricToVerseInCallback(
+        dispatch(scrollLyricForVerseSelect(
             `Filmstrip scene ${selectedSceneIndex} selected`,
             selectedVerseIndex
         ))

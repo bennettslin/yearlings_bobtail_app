@@ -10,7 +10,7 @@ import {
     mapActivatedVerseIndex,
     mapIsActivated
 } from '../../../redux/activated/selector'
-import { scrollLyricToVerseInCallback } from '../../../redux/scrollLyric/action'
+import { scrollLyricForVerseSelect } from '../../../redux/scrollLyric/action'
 import {
     mapSelectedAnnotationIndex,
     mapIsSelectedLogue
@@ -54,7 +54,7 @@ const NavigationManager = forwardRef((props, ref) => {
                 keyWasRegistered = true
 
                 dispatchVerse.current(activatedVerseIndex)
-                dispatch(scrollLyricToVerseInCallback(
+                dispatch(scrollLyricForVerseSelect(
                     'Key selected',
                     activatedVerseIndex
                 ))

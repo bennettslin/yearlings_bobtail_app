@@ -9,7 +9,7 @@ import Stanza from './Stanza'
 import Unit from '../Unit'
 import { getStanzaIndices } from '../../api/album/stanzas'
 import { getLastUnitDotCardIndex } from '../../api/album/units'
-import { scrollLyricToVerseInCallback } from '../../redux/scrollLyric/action'
+import { scrollLyricForVerseSelect } from '../../redux/scrollLyric/action'
 import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import './style'
 
@@ -24,7 +24,7 @@ const Stanzas = forwardRef((props, ref) => {
         scrollLog
     }) => {
         dispatchVerse.current(selectedVerseIndex)
-        dispatch(scrollLyricToVerseInCallback(
+        dispatch(scrollLyricForVerseSelect(
             scrollLog,
             selectedVerseIndex
         ))

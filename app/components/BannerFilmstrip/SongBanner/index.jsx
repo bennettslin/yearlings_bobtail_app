@@ -26,7 +26,7 @@ import {
 import { mapIsLyricsLocked } from '../../../redux/slider/selector'
 import { mapSongTrackerWidth } from '../../../redux/tracker/selector'
 import './style'
-import { scrollLyricToVerseInCallback } from '../../../redux/scrollLyric/action'
+import { scrollLyricForVerseSelect } from '../../../redux/scrollLyric/action'
 
 const SongBanner = () => {
     const
@@ -125,7 +125,7 @@ const SongBanner = () => {
                 getVerseIndexFromEvent(e)
 
         dispatchVerse.current(verseIndex)
-        dispatch(scrollLyricToVerseInCallback(
+        dispatch(scrollLyricForVerseSelect(
             'Banner selected',
             verseIndex
         ))
