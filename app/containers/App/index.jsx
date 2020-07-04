@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 import ListenContainer from '../Listen'
 import FocusContainer from '../Focus'
@@ -12,4 +12,4 @@ const AppContainer = () => (
     </>
 )
 
-export default AppContainer
+export default memo(AppContainer)

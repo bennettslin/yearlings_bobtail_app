@@ -1,5 +1,5 @@
 // Parent component that handles click, touch, and keyDown events.
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateFocusStore } from '../../redux/focus/action'
 import CloseHandler from '../../managers/Close'
@@ -127,4 +127,4 @@ const FocusContainer = () => {
     )
 }
 
-export default FocusContainer
+export default memo(FocusContainer)
