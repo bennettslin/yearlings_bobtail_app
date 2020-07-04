@@ -11,11 +11,11 @@
     .TW__lyricsUnlocked
     & {
         transition:
-            top $transitionDuration__faster,
-            left $transitionDuration__faster,
-            width $transitionDuration__faster,
-            height $transitionDuration__faster,
-            background-color $transitionDuration__faster;
+            top $transitionDuration__default,
+            left $transitionDuration__default,
+            width $transitionDuration__default,
+            height $transitionDuration__default,
+            background-color $transitionDuration__default;
     }
 
     .TW__lyricsLocked

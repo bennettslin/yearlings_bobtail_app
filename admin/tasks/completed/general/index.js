@@ -4834,5 +4834,9 @@ export default [
     {
         taskName: `Post-Gatsby refactoring.`,
         workedHours: 86
+    },
+    {
+        taskName: `Scroll refactor.`,
+        workedHours: 45
     }
 ]
