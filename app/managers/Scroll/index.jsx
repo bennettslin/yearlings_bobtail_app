@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollLyricBackToSelectedVerse } from '../../redux/scrollLyric/action'
+import { mapIsActivated } from '../../redux/activated/selector'
 import {
     mapIsAutoScroll,
     mapIsLyricExpanded
@@ -11,6 +12,7 @@ const ScrollManager = () => {
     const
         dispatch = useDispatch(),
         [didMount, setDidMount] = useState(false),
+        isActivated = useSelector(mapIsActivated),
         isAutoScroll = useSelector(mapIsAutoScroll),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric)
@@ -18,6 +20,16 @@ const ScrollManager = () => {
     const scrollLyric = log => {
         dispatch(scrollLyricBackToSelectedVerse(log))
     }
+
+    useEffect(() => {
+        if (didMount) {
+            if (!isActivated) {
+                scrollLyric('Deactivated')
+            }
+        } else {
+            setDidMount(true)
+        }
+    }, [isActivated])
 
     useEffect(() => {
         if (didMount) {
@@ -50,4 +62,4 @@ const ScrollManager = () => {
     return null
 }
 
-export default ScrollManager
+export default memo(ScrollManager)

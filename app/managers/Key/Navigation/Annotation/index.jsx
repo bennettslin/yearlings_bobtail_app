@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
 import { useSelector } from 'react-redux'
 import { isString } from '../../../../helpers/general'
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
@@ -113,4 +113,4 @@ const AnnotationNavigation = forwardRef((props, ref) => {
     )
 })
 
-export default AnnotationNavigation
+export default memo(AnnotationNavigation)

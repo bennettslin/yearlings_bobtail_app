@@ -42,15 +42,9 @@ const ScrollLyricListener = ({
 
     const dispatchCallback = () => {
         if (isScrollLyricForSongSelect || isScrollLyricForVerseSelect) {
-            console.log('scroll callback song or verse select')
             dispatch(updateEntranceStore({
                 isSceneScrollComplete: true
             }))
-
-            if (isScrollLyricForVerseSelect) {
-                console.log('scroll callback verse select')
-                dispatch(resetVerseBars())
-            }
         }
         dispatch(resetScrollLyricStore())
     }
@@ -74,6 +68,11 @@ const ScrollLyricListener = ({
                 noDuration: isScrollLyricForSongSelect,
                 callback: () => dispatchCallback(index)
             })
+
+            // If not scrolling by anchor, verse bars are always reset.
+            if (!scrollLyricByAnchor) {
+                dispatch(resetVerseBars())
+            }
         }
     }, [scrollLyricLog])
 

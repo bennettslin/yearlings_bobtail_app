@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
 import { useSelector } from 'react-redux'
 import VerseDispatcher from '../../../dispatchers/Verse'
 import AnnotationNavigation from './Annotation'
@@ -109,4 +109,4 @@ const NavigationManager = forwardRef((props, ref) => {
     )
 })
 
-export default NavigationManager
+export default memo(NavigationManager)

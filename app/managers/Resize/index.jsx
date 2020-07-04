@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsWindowResizeDone } from '../../redux/entrance/action'
@@ -81,4 +81,4 @@ ResizeManager.propTypes = {
     getRootContainerElement: PropTypes.func.isRequired
 }
 
-export default ResizeManager
+export default memo(ResizeManager)

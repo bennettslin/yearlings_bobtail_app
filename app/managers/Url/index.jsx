@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useEffect } from 'react'
+import React, { useEffect, memo } from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
@@ -38,4 +38,4 @@ const UrlManager = () => {
     )
 }
 
-export default UrlManager
+export default memo(UrlManager)

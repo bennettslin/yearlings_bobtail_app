@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetSceneChange } from '../../redux/entrance/action'
 import { updateSceneStore } from '../../redux/scene/action'
@@ -47,4 +47,4 @@ const SceneChangeManager = () => {
     return null
 }
 
-export default SceneChangeManager
+export default memo(SceneChangeManager)

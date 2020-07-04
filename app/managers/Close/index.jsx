@@ -2,7 +2,9 @@
  * Handler for closing multiple sections. Because the logic is so similar for
  * each section, it is better for dev clarity to keep them together.
  */
-import { forwardRef, useImperativeHandle, useEffect, useState } from 'react'
+import {
+    forwardRef, useImperativeHandle, useEffect, useState, memo
+} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { updateOptionStore } from '../../redux/option/action'
@@ -232,4 +234,4 @@ const CloseHandler = forwardRef((props, ref) => {
     return null
 })
 
-export default CloseHandler
+export default memo(CloseHandler)

@@ -1,5 +1,5 @@
 // Manager for audio players.
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import { updateSelectedStore } from '../../redux/selected/action'
@@ -114,4 +114,4 @@ const AudioManager = () => {
     )
 }
 
-export default AudioManager
+export default memo(AudioManager)

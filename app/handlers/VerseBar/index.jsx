@@ -1,14 +1,15 @@
 import {
-    forwardRef, useImperativeHandle, useEffect, useRef, useState, memo
+    forwardRef, useImperativeHandle, useEffect, useState, memo
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import {
     updateVerseBarsStore,
-    resetVerseBarsQueue
+    resetVerseBarsQueue,
+    resetVerseBars
 } from '../../redux/verseBars/action'
 import { getVerseBarsStatus } from './helper'
-import { mapActivatedVerseIndex } from '../../redux/activated/selector'
+import { mapIsActivated } from '../../redux/activated/selector'
 import { mapVerseCursorIndex } from '../../redux/cursor/selector'
 import { mapLyricSectionRect } from '../../redux/lyricSection/selector'
 import {
@@ -26,9 +27,8 @@ import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
 const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     const
         dispatch = useDispatch(),
-        didMount = useRef(),
+        isActivated = useSelector(mapIsActivated),
         verseCursorIndex = useSelector(mapVerseCursorIndex),
-        activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         lyricSectionRect = useSelector(mapLyricSectionRect),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
         isSliderTouched = useSelector(mapIsSliderTouched),
@@ -82,6 +82,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 
     useEffect(() => {
         if (queuedDetermineVerseBars) {
+            console.log('queued determine verse bars')
             determineVerseBars(queuedVerseBarsTimeout)
             dispatch(resetVerseBarsQueue())
         }
@@ -98,17 +99,10 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     }, [sliderVerseIndex])
 
     useEffect(() => {
-        if (didMount.current) {
-            /**
-             * This is needed because a verse might get activated or
-             * deactivated, while the selected verse needs to be shown in a
-             * verse bar.
-             */
-            _dispatchVerseBars()
-        } else {
-            didMount.current = true
+        if (isActivated) {
+            dispatch(resetVerseBars())
         }
-    }, [activatedVerseIndex])
+    }, [isActivated])
 
     useImperativeHandle(ref, () => determineVerseBars)
     return null

@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateActivatedStore } from '../../../../redux/activated/action'
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
@@ -100,4 +100,4 @@ const LyricNavigation = forwardRef((props, ref) => {
     )
 })
 
-export default LyricNavigation
+export default memo(LyricNavigation)
