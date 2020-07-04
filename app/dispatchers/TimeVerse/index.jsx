@@ -1,5 +1,5 @@
 // Child that knows rules to dispatch time and verse from player.
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollLyricForPlayAutoScroll } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
@@ -46,4 +46,4 @@ const TimeVerseDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default TimeVerseDispatcher
+export default memo(TimeVerseDispatcher)

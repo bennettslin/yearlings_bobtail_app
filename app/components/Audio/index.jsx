@@ -1,5 +1,5 @@
 // Component to show buttons for audio navigation.
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import PlayDispatcher from '../../dispatchers/Play'
 import SongDispatcher from '../../dispatchers/Song'
@@ -150,4 +150,4 @@ const Audio = () => {
     )
 }
 
-export default Audio
+export default memo(Audio)

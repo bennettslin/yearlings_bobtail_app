@@ -1,5 +1,5 @@
 // Container to show multiple dot toggles in dots section.
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetActivatedDots } from '../../redux/dotsSlide/action'
@@ -113,4 +113,4 @@ const DotsSlide = () => {
     )
 }
 
-export default DotsSlide
+export default memo(DotsSlide)

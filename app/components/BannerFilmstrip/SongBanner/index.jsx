@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import { updateBannerStore } from '../../../redux/banner/action'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
+import VerseDispatcher from '../../../dispatchers/Verse'
 import Tracker from '../../Tracker'
 import SongBannerTimer from './Timer'
 import SongBannerTitle from './Title'
@@ -25,13 +26,13 @@ import {
 import { mapIsLyricsLocked } from '../../../redux/slider/selector'
 import { mapSongTrackerWidth } from '../../../redux/tracker/selector'
 import './style'
-import { scrollLyricToVerseInCallback } from '../../../redux/scrollLyric/action'
 
 const SongBanner = () => {
     const
         dispatch = useDispatch(),
         songBannerElement = useRef(),
         stopPropagation = useRef(),
+        dispatchVerse = useRef(),
         isSmallBannerText = useSelector(mapIsSmallBannerText),
         isPlaying = useSelector(mapIsPlaying),
         isBannerHovering = useSelector(mapIsBannerHovering),
@@ -122,10 +123,10 @@ const SongBanner = () => {
                 // On mobile, get from click event.
                 getVerseIndexFromEvent(e)
 
-        dispatch(scrollLyricToVerseInCallback(
+        dispatchVerse.current(
             'Banner selected',
             verseIndex
-        ))
+        )
 
         // Once clicked, do not allow another click on the same hover.
         onMouseLeave()
@@ -176,8 +177,9 @@ const SongBanner = () => {
             <SongBannerTitle />
             <SongBannerTimer />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
+            <VerseDispatcher {...{ ref: dispatchVerse }} />
         </div>
     )
 }
 
-export default SongBanner
+export default memo(SongBanner)

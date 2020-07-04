@@ -1,5 +1,5 @@
 import {
-    forwardRef, useImperativeHandle, useEffect, useRef, useState
+    forwardRef, useImperativeHandle, useEffect, useRef, useState, memo
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
@@ -118,4 +118,4 @@ VerseBarHandler.propTypes = {
     getScrollVerseChild: PropTypes.func.isRequired
 }
 
-export default VerseBarHandler
+export default memo(VerseBarHandler)

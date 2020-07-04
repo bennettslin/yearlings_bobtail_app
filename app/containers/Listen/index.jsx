@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, memo } from 'react'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
 import WikiWormholeListener from '../../handlers/WikiWormhole/Listener'
@@ -27,4 +27,4 @@ const ListenContainer = () => {
     )
 }
 
-export default ListenContainer
+export default memo(ListenContainer)

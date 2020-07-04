@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Stylesheet from '../../../modules/Stylesheet'
 
 import { STYLE_LOGIC_ACCESS_LETTERS } from '../../../constants/access'
@@ -19,4 +19,4 @@ const AccessStylesheet = () => (
     />
 )
 
-export default AccessStylesheet
+export default memo(AccessStylesheet)

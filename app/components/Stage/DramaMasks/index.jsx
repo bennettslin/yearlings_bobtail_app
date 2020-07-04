@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import InlineSvg from '../../../modules/InlineSvg'
@@ -37,4 +37,4 @@ const DramaMasks = () => {
     )
 }
 
-export default DramaMasks
+export default memo(DramaMasks)

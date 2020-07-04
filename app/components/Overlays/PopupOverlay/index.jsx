@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import { mapIsOverlayShown } from '../../../redux/overlay/selector'
@@ -25,4 +25,4 @@ const PopupOverlay = () => {
     )
 }
 
-export default PopupOverlay
+export default memo(PopupOverlay)

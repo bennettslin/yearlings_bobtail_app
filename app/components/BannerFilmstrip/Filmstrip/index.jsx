@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import FilmstripScene from './Scene'
@@ -61,4 +61,4 @@ const Filmstrip = () => {
     )
 }
 
-export default Filmstrip
+export default memo(Filmstrip)

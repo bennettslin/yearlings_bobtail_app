@@ -1,8 +1,5 @@
 # TODO for scroll refactor
-* Have scene index set only after scroll is complete
 * Figure out verse bar determining and reset
-* Confirm that selecting verse during play works again
-* Think about dispatchTimeVerse
 
 # Issues
 * What is mapIsSelectPlayReady?

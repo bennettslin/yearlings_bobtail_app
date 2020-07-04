@@ -6,7 +6,7 @@ import {
 } from '../../redux/entrance/action'
 import { updateLyricStore } from '../../redux/lyric/action'
 import { scrollCarouselForSongChange } from '../../redux/scrollCarousel/action'
-import { scrollLyricForSongChange } from '../../redux/scrollLyric/action'
+import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import {
     mapSelectedSongIndex,
@@ -55,7 +55,7 @@ const SongChangeManager = () => {
         dispatch(scrollCarouselForSongChange(
             selectedAnnotationIndex
         ))
-        dispatch(scrollLyricForSongChange())
+        dispatch(scrollLyricForSongSelect())
 
         if (didMount) {
             if (isSongChangeDone) {

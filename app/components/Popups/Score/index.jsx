@@ -1,5 +1,5 @@
 // Popup container for score section.
-import React from 'react'
+import React, { memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsScoreShown } from '../../../redux/toggle/action'
 import Score from '../../Score'
@@ -31,4 +31,4 @@ const ScorePopup = () => {
     )
 }
 
-export default ScorePopup
+export default memo(ScorePopup)

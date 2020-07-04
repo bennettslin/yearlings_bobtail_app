@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef } from 'react'
+import React, { forwardRef, useEffect, useRef, memo } from 'react'
 import cx from 'classnames'
 import VerseBar from '../VerseBar'
 import AutoScrollDispatcher from '../../../dispatchers/AutoScroll'
@@ -110,4 +110,4 @@ const LyricScroll = forwardRef((props, ref) => {
     )
 })
 
-export default LyricScroll
+export default memo(LyricScroll)

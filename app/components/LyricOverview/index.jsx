@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { mapLyricOverviewHeightStyle } from '../../redux/lyricHeight/selector'
@@ -31,4 +31,4 @@ const LyricOverview = forwardRef((props, ref) => {
     )
 })
 
-export default LyricOverview
+export default memo(LyricOverview)

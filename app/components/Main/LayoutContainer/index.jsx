@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -43,4 +43,4 @@ LayoutContainer.propTypes = ({
     children: PropTypes.node.isRequired
 })
 
-export default LayoutContainer
+export default memo(LayoutContainer)

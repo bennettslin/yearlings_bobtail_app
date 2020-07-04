@@ -1,5 +1,5 @@
 // Section to show title and all notes and wormholes for each annotation.
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
@@ -90,4 +90,4 @@ Annotation.propTypes = {
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default Annotation
+export default memo(Annotation)

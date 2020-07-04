@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetAnnotationQueue } from '../../../redux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
@@ -85,4 +85,4 @@ const AnnotationListener = () => {
     )
 }
 
-export default AnnotationListener
+export default memo(AnnotationListener)

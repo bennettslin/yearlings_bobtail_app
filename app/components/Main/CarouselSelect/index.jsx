@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import { useSelector } from 'react-redux'
 import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Button from '../../Button'
@@ -49,4 +49,4 @@ const CarouselSelect = () => {
     )
 }
 
-export default CarouselSelect
+export default memo(CarouselSelect)

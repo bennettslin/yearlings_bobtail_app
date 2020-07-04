@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import Anchor from '../../Anchor'
 import { BOBTAIL_YEARLINGS_WEBSITE } from '../../../constants/website'
@@ -47,4 +47,4 @@ const AboutTitle = () => {
     )
 }
 
-export default AboutTitle
+export default memo(AboutTitle)

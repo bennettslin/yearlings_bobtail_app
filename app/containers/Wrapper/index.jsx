@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import LogicWrapper from '../../wrappers/LogicWrapper'
@@ -30,4 +30,4 @@ WrapperContainer.propTypes = {
     children: PropTypes.node.isRequired
 }
 
-export default WrapperContainer
+export default memo(WrapperContainer)

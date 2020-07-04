@@ -1,12 +1,12 @@
-import { forwardRef, useImperativeHandle } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
+import { useSelector } from 'react-redux'
+import VerseDispatcher from '../Verse'
 import { getVerseIndexForScene } from '../../api/album/scenes'
-import { scrollLyricToVerseInCallback } from '../../redux/scrollLyric/action'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 
 const SceneDispatcher = forwardRef((props, ref) => {
     const
-        dispatch = useDispatch(),
+        dispatchVerse = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex)
 
     const dispatchSceneIndex = (selectedSceneIndex) => {
@@ -14,14 +14,16 @@ const SceneDispatcher = forwardRef((props, ref) => {
             selectedSongIndex,
             selectedSceneIndex
         )
-        dispatch(scrollLyricToVerseInCallback(
+        dispatchVerse.current(
             `Filmstrip scene ${selectedSceneIndex} selected`,
             selectedVerseIndex
-        ))
+        )
     }
 
     useImperativeHandle(ref, () => dispatchSceneIndex)
-    return null
+    return (
+        <VerseDispatcher {...{ ref: dispatchVerse }} />
+    )
 })
 
-export default SceneDispatcher
+export default memo(SceneDispatcher)

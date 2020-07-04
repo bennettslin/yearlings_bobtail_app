@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, memo } from 'react'
 import cx from 'classnames'
 import { removeLoadingIndicator } from '../../utils/browser'
 import './style'
@@ -21,4 +21,4 @@ const DeprecatedContainer = () => {
     )
 }
 
-export default DeprecatedContainer
+export default memo(DeprecatedContainer)

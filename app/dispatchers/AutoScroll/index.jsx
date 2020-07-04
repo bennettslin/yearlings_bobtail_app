@@ -1,5 +1,5 @@
 // Child that knows rules to handle lyric wheel.
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAutoScroll } from '../../redux/toggle/action'
 import { mapIsAutoScroll } from '../../redux/toggle/selector'
@@ -62,4 +62,4 @@ const AutoScrollDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default AutoScrollDispatcher
+export default memo(AutoScrollDispatcher)

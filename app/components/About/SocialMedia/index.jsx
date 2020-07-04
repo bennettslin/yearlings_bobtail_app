@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Anchor from '../../Anchor'
 import {
     FACEBOOK_PAGE,
@@ -37,4 +37,4 @@ const SocialMedia = () => {
     )
 }
 
-export default SocialMedia
+export default memo(SocialMedia)

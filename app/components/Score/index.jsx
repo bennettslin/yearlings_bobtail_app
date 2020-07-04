@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, memo } from 'react'
 import { useSelector } from 'react-redux'
 import Iframe from '../../modules/Iframe'
 import { mapLyricSongIndex } from '../../redux/lyric/selector'
@@ -44,4 +44,4 @@ const Score = () => {
     )
 }
 
-export default Score
+export default memo(Score)

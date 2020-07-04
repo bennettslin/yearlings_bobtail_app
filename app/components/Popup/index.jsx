@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -86,4 +86,4 @@ Popup.propTypes = {
     onExited: PropTypes.func
 }
 
-export default Popup
+export default memo(Popup)

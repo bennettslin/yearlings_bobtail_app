@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Stylesheet from '../../../modules/Stylesheet'
 import { getArrayOfLength } from '../../../helpers/general'
 import { getMaxVerseCountForAlbum } from '../../../api/album/count'
@@ -75,4 +75,4 @@ const VerseCursorStylesheets = () => (
     </>
 )
 
-export default VerseCursorStylesheets
+export default memo(VerseCursorStylesheets)

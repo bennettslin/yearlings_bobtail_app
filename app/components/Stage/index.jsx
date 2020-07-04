@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, memo } from 'react'
 import cx from 'classnames'
 import AspectRatio from './AspectRatio'
 import Scene from '../Scene'
@@ -25,4 +25,4 @@ const Stage = () => {
     )
 }
 
-export default Stage
+export default memo(Stage)

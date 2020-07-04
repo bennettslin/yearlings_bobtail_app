@@ -1,5 +1,5 @@
 // Section to show all song annotations in a carousel layout.
-import React, { useEffect } from 'react'
+import React, { useEffect, memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -54,4 +54,4 @@ const CarouselLayoutContainer = () => (
     </ LayoutContainer>
 )
 
-export default CarouselLayoutContainer
+export default memo(CarouselLayoutContainer)

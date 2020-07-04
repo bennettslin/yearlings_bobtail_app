@@ -1,5 +1,5 @@
 // Child that knows rules to toggle score. Not needed if just turning off.
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsScoreShown } from '../../redux/toggle/action'
 import { mapIsSelectedLogue } from '../../redux/selected/selector'
@@ -36,4 +36,4 @@ const ScoreDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default ScoreDispatcher
+export default memo(ScoreDispatcher)

@@ -1,5 +1,4 @@
 // Popup container for individual annotation section.
-// eslint-disable-next-line object-curly-newline
 import React, { useEffect, useRef, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'

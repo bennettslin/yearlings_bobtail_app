@@ -1,4 +1,4 @@
-import React, { useEffect, forwardRef, useRef } from 'react'
+import React, { useEffect, forwardRef, useRef, memo } from 'react'
 import cx from 'classnames'
 import ResizeManager from '../../managers/Resize'
 import Carousel from '../../components/Carousel'
@@ -47,4 +47,4 @@ const RootContainer = forwardRef((props, ref) => {
     )
 })
 
-export default RootContainer
+export default memo(RootContainer)

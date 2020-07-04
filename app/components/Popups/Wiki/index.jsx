@@ -1,5 +1,5 @@
 // Popup container for wiki section.
-import React from 'react'
+import React, { memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
@@ -34,4 +34,4 @@ const WikiPopup = () => {
     )
 }
 
-export default WikiPopup
+export default memo(WikiPopup)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import {
@@ -39,4 +39,4 @@ const MainPopups = () => {
     )
 }
 
-export default MainPopups
+export default memo(MainPopups)

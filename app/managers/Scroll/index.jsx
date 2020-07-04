@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { scrollLyricForToggle } from '../../redux/scrollLyric/action'
+import { scrollLyricBackToSelectedVerse } from '../../redux/scrollLyric/action'
 import {
     mapIsAutoScroll,
     mapIsLyricExpanded
@@ -16,7 +16,7 @@ const ScrollManager = () => {
         isHeightlessLyric = useSelector(mapIsHeightlessLyric)
 
     const scrollLyric = log => {
-        dispatch(scrollLyricForToggle(log))
+        dispatch(scrollLyricBackToSelectedVerse(log))
     }
 
     useEffect(() => {

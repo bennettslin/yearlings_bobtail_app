@@ -2,7 +2,7 @@
  * Field for about toggle, audio section, and scores and tips section. Knows no
  * state, so should not update.
  */
-import React from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import AboutToggle from '../About/Toggle'
@@ -104,4 +104,4 @@ const Menu = () => {
     )
 }
 
-export default Menu
+export default memo(Menu)

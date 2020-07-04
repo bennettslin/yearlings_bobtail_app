@@ -11,7 +11,6 @@ export const getSvgFillForFace = ({
     zIndex,
     face
 }) => {
-    // eslint-disable-next-line object-curly-newline
     const { h, s, l, a } = getBaseColour({
             hslaKey,
             yIndex,

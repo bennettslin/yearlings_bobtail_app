@@ -1,7 +1,6 @@
 import React, { memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import VerseDispatcher from '../../../dispatchers/Verse'
 import ScrollDispatcher from '../Dispatcher'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { resetVerseBars } from '../../../redux/verseBars/action'
@@ -13,11 +12,12 @@ import {
 import { mapLyricVerseIndex } from '../../../redux/lyric/selector'
 import {
     mapScrollLyricLog,
-    mapScrollLyricByVerse,
+    mapScrollLyricByAnchor,
     mapScrollLyricIndex,
-    mapScrollLyricNoDuration,
-    mapScrollLyricWithVerseCallback
+    mapIsScrollLyricForSongSelect,
+    mapIsScrollLyricForVerseSelect
 } from '../../../redux/scrollLyric/selector'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 
 const ScrollLyricListener = ({
     getLyricScrollElement,
@@ -28,13 +28,12 @@ const ScrollLyricListener = ({
     const
         dispatch = useDispatch(),
         scrollElementIntoView = useRef(),
-        dispatchVerse = useRef(),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         scrollLyricLog = useSelector(mapScrollLyricLog),
-        scrollLyricByVerse = useSelector(mapScrollLyricByVerse),
+        scrollLyricByAnchor = useSelector(mapScrollLyricByAnchor),
         scrollLyricIndex = useSelector(mapScrollLyricIndex),
-        scrollLyricNoDuration = useSelector(mapScrollLyricNoDuration),
-        scrollLyricWithVerseCallback = useSelector(mapScrollLyricWithVerseCallback)
+        isScrollLyricForSongSelect = useSelector(mapIsScrollLyricForSongSelect),
+        isScrollLyricForVerseSelect = useSelector(mapIsScrollLyricForVerseSelect)
 
     const getScrollChild = (index, scrollClass) => (
         scrollClass === VERSE_SCROLL ?
@@ -42,11 +41,16 @@ const ScrollLyricListener = ({
             getScrollAnchorChild(index)
     )
 
-    const dispatchCallback = index => {
-        if (scrollLyricWithVerseCallback) {
-            dispatchVerse.current(index)
-            dispatch(updateActivatedStore())
-            dispatch(resetVerseBars())
+    const dispatchCallback = () => {
+        if (isScrollLyricForSongSelect || isScrollLyricForVerseSelect) {
+            dispatch(updateEntranceStore({
+                isSceneScrollComplete: true
+            }))
+
+            if (isScrollLyricForVerseSelect) {
+                dispatch(updateActivatedStore())
+                dispatch(resetVerseBars())
+            }
         }
         dispatch(resetScrollLyricStore())
     }
@@ -59,31 +63,28 @@ const ScrollLyricListener = ({
 
             scrollElementIntoView.current({
                 log: scrollLyricLog,
-                scrollClass: scrollLyricByVerse ?
-                    VERSE_SCROLL :
-                    ANCHOR_SCROLL,
+                scrollClass: scrollLyricByAnchor ?
+                    ANCHOR_SCROLL :
+                    VERSE_SCROLL,
                 /**
                  * If no verse index given, default to selected verse. If
                  * scrolling to annotation, index is always given.
                  */
                 index,
-                noDuration: scrollLyricNoDuration,
+                noDuration: isScrollLyricForSongSelect,
                 callback: () => dispatchCallback(index)
             })
         }
     }, [scrollLyricLog])
 
     return (
-        <>
-            <ScrollDispatcher
-                {...{
-                    ref: scrollElementIntoView,
-                    getScrollParent: getLyricScrollElement,
-                    getScrollChild
-                }}
-            />
-            <VerseDispatcher {...{ ref: dispatchVerse }} />
-        </>
+        <ScrollDispatcher
+            {...{
+                ref: scrollElementIntoView,
+                getScrollParent: getLyricScrollElement,
+                getScrollChild
+            }}
+        />
     )
 }
 

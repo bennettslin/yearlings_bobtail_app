@@ -1,11 +1,11 @@
-import { forwardRef, useImperativeHandle, useRef } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import VerseDispatcher from '../Verse'
 import { updateSliderStore } from '../../redux/slider/action'
 import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
 import { getVerseIndexforRatio } from '../../helpers/verse'
-import { scrollLyricToVerseInCallback } from '../../redux/scrollLyric/action'
 import {
     mapSelectedSongIndex,
     mapIsSelectedLogue
@@ -22,6 +22,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         timeoutRef = useRef(),
+        dispatchVerse = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         sliderLeft = useSelector(mapSliderLeft),
@@ -45,13 +46,11 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
         clientX
     ) => {
         const
-            // TODO: Make this a selector.
             sliderRatio = getElementRatioForClientX({
                 clientX,
                 elementLeft: sliderLeft,
                 elementWidth: sliderWidth
             }),
-
             sliderVerseIndex = getVerseIndexforRatio(
                 selectedSongIndex,
                 sliderRatio
@@ -144,10 +143,10 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
 
     const dispatchTouchEnd = () => {
         if (isSliderTouched) {
-            dispatch(scrollLyricToVerseInCallback(
+            dispatchVerse.current(
                 'Slider selected',
                 sliderVerseIndex
-            ))
+            )
 
             // Reset slider state.
             dispatch(updateSliderStore())
@@ -162,7 +161,9 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
         move: dispatchTouchMove,
         end: dispatchTouchEnd
     }))
-    return null
+    return (
+        <VerseDispatcher {...{ ref: dispatchVerse }} />
+    )
 })
 
-export default SliderTouchDispatcher
+export default memo(SliderTouchDispatcher)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -60,4 +60,4 @@ ResponsiveWrapper.propTypes = {
     children: PropTypes.node.isRequired
 }
 
-export default ResponsiveWrapper
+export default memo(ResponsiveWrapper)

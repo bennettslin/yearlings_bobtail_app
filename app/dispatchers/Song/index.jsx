@@ -3,7 +3,7 @@
  * promised song change event instead. For now, there doesn't seem to be any
  * issues.
  */
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateAudioStore } from '../../redux/audio/action'
@@ -94,4 +94,4 @@ const SongDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default SongDispatcher
+export default memo(SongDispatcher)

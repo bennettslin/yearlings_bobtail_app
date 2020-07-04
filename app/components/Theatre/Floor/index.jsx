@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import FloorSeat from './Seat'
@@ -72,4 +72,4 @@ const Floor = () => {
     )
 }
 
-export default Floor
+export default memo(Floor)
