@@ -38,8 +38,7 @@ const KeyManager = forwardRef((props, ref) => {
          * navigating between annotations.
          */
         dispatch(updateVerseBarsStore({
-            queuedDetermineVerseBars: true,
-            queuedVerseBarsTimeout: 150
+            queuedDetermineVerseBars: true
         }))
         dispatch(updateIsAutoScroll())
     }

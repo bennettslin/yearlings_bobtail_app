@@ -18,7 +18,3 @@ export const mapIsEitherVerseBarShown = createSelector(
 export const mapQueuedDetermineVerseBars = (
     { [VERSE_BARS_STORE]: { queuedDetermineVerseBars } }
 ) => queuedDetermineVerseBars
-
-export const mapQueuedVerseBarsTimeout = (
-    { [VERSE_BARS_STORE]: { queuedVerseBarsTimeout } }
-) => queuedVerseBarsTimeout

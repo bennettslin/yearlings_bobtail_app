@@ -65,7 +65,9 @@ const ScrollLyricListener = ({
              */
             index,
             noDuration: isScrollLyricForSongSelect,
-            callback: () => dispatchCallback(index)
+
+            // Set timeout to ensure that scroll is truly complete.
+            callback: () => setTimeout(() => dispatchCallback(index), 0)
         })
     }
 

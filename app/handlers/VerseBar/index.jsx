@@ -19,8 +19,7 @@ import {
 import { mapIsLyricExpanded } from '../../redux/toggle/selector'
 import {
     mapVerseBarsStatus,
-    mapQueuedDetermineVerseBars,
-    mapQueuedVerseBarsTimeout
+    mapQueuedDetermineVerseBars
 } from '../../redux/verseBars/selector'
 import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
 
@@ -36,7 +35,6 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         verseBarsStatus = useSelector(mapVerseBarsStatus),
         queuedDetermineVerseBars = useSelector(mapQueuedDetermineVerseBars),
-        queuedVerseBarsTimeout = useSelector(mapQueuedVerseBarsTimeout),
         [verseBarsTimeoutId, setVerseBarsTimeoutId] = useState(-1)
 
     /**
@@ -81,7 +79,12 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 
     useEffect(() => {
         if (queuedDetermineVerseBars) {
-            determineVerseBars(queuedVerseBarsTimeout)
+            /**
+             * Make duration long enough for Chrome, Firefox, and Safari. 150
+             * is fine for lyric page up and down, but 300 seems to be needed
+             * for navigating between annotations.
+             */
+            determineVerseBars(150)
             dispatch(resetVerseBarsQueue())
         }
     }, [queuedDetermineVerseBars])

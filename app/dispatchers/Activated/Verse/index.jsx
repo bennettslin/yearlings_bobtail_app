@@ -21,10 +21,12 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
         isSelectedLogue = useSelector(mapIsSelectedLogue)
 
     const _queueScrollToActivatedVerse = nextVerseIndex => {
-        dispatch(scrollLyricToVerse(
-            'Activated',
-            nextVerseIndex
-        ))
+        if (nextVerseIndex !== -1) {
+            dispatch(scrollLyricToVerse(
+                'Activated',
+                nextVerseIndex
+            ))
+        }
     }
 
     const activateVerseIndex = nextVerseIndex => {

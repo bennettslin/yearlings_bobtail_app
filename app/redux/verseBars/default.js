@@ -3,8 +3,7 @@ export const VERSE_BARS_STATUS_DEFAULTS = {
 }
 
 export const VERSE_BARS_QUEUE_DEFAULTS = {
-    queuedDetermineVerseBars: false,
-    queuedVerseBarsTimeout: 0
+    queuedDetermineVerseBars: false
 }
 
 export const VERSE_BARS_DEFAULTS = {
