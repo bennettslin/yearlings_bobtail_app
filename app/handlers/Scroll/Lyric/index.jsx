@@ -49,25 +49,36 @@ const ScrollLyricListener = ({
         dispatch(resetScrollLyricStore())
     }
 
+    const dispatchScroll = () => {
+        const index = scrollLyricIndex === -1 ?
+            lyricVerseIndex :
+            scrollLyricIndex
+
+        scrollElementIntoView.current({
+            log: scrollLyricLog,
+            scrollClass: scrollLyricByAnchor ?
+                ANCHOR_SCROLL :
+                VERSE_SCROLL,
+            /**
+             * If no verse index given, default to selected verse. If
+             * scrolling to annotation, index is always given.
+             */
+            index,
+            noDuration: isScrollLyricForSongSelect,
+            callback: () => dispatchCallback(index)
+        })
+    }
+
     useEffect(() => {
         if (scrollLyricLog) {
-            const index = scrollLyricIndex === -1 ?
-                lyricVerseIndex :
-                scrollLyricIndex
-
-            scrollElementIntoView.current({
-                log: scrollLyricLog,
-                scrollClass: scrollLyricByAnchor ?
-                    ANCHOR_SCROLL :
-                    VERSE_SCROLL,
-                /**
-                 * If no verse index given, default to selected verse. If
-                 * scrolling to annotation, index is always given.
-                 */
-                index,
-                noDuration: isScrollLyricForSongSelect,
-                callback: () => dispatchCallback(index)
-            })
+            /**
+             * This allows some rendering to take place first, that might
+             * otherwise block scroll performance. Value determined by feel.
+             */
+            setTimeout(
+                dispatchScroll,
+                isScrollLyricForVerseSelect ? 200 : 0
+            )
 
             // If not scrolling by anchor, verse bars are always reset.
             if (!scrollLyricByAnchor) {
