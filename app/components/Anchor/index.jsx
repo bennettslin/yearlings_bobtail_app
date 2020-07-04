@@ -15,13 +15,13 @@ const Anchor = forwardRef(({
     isAnnotationTitle,
     isAccessed: isAccessedBeforeDesktop,
     isSelected,
-    isDisabled,
     dotsBit,
     isWikiTextAnchor,
     text,
     textConfig,
     analyticsIdentifier,
-    handleAnchorClick
+    handleAnchorClick,
+    handleAnchorMouse = () => {}
 
 }, ref) => {
     const
@@ -47,15 +47,21 @@ const Anchor = forwardRef(({
         isAccessed = isAccessedBeforeDesktop && IS_USER_AGENT_DESKTOP
 
     const onClick = e => {
-        if (!isDisabled) {
-            logEvent({
-                e,
-                componentName: 'Anchor',
-                analyticsIdentifier
-            })
+        logEvent({
+            e,
+            componentName: 'Anchor',
+            analyticsIdentifier
+        })
 
-            handleAnchorClick(e)
-        }
+        handleAnchorClick(e)
+    }
+
+    const onMouseEnter = () => {
+        handleAnchorMouse(true)
+    }
+
+    const onMouseLeave = () => {
+        handleAnchorMouse(false)
     }
 
     return (
@@ -74,7 +80,9 @@ const Anchor = forwardRef(({
                     href,
                     target: '_blank'
                 },
-                onClick
+                onClick,
+                onMouseEnter,
+                onMouseLeave
             }}
         >
             {showDotSequence && (
@@ -116,13 +124,13 @@ Anchor.propTypes = {
     isAnnotationTitle: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
-    isDisabled: PropTypes.bool,
     isWikiTextAnchor: PropTypes.bool,
     dotsBit: PropTypes.number,
     text: PropTypes.any,
     textConfig: PropTypes.any,
     analyticsIdentifier: PropTypes.string,
-    handleAnchorClick: PropTypes.func.isRequired
+    handleAnchorClick: PropTypes.func.isRequired,
+    handleAnchorMouse: PropTypes.func
 }
 
 export default memo(Anchor)

@@ -5,3 +5,8 @@ export const updateIsScrolling = isScrolling => ({
     type: SCROLL_OVERLAY_STORE,
     payload: { isScrolling }
 })
+
+export const updateIsAnchorMoused = isAnchorMoused => ({
+    type: SCROLL_OVERLAY_STORE,
+    payload: { isAnchorMoused }
+})

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAnnotationStore } from '../../../../redux/annotation/action'
+import { updateIsAnchorMoused } from '../../../../redux/scrollOverlay/action'
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
 import WikiDispatcher from '../../../../dispatchers/Wiki'
 import Anchor from '../../../Anchor'
@@ -13,9 +14,11 @@ import {
     mapAccessedAnnotationIndex,
     mapAccessedWikiWormholeIndex
 } from '../../../../redux/access/selector'
-import { mapIsActivated } from '../../../../redux/activated/selector'
-import { mapLyricAnnotationIndex, getMapIsLyricAnnotation } from '../../../../redux/lyric/selector'
-import { mapIsSliderMoving } from '../../../../redux/slider/selector'
+import {
+    mapLyricAnnotationIndex,
+    getMapIsLyricAnnotation
+} from '../../../../redux/lyric/selector'
+import { mapIsLyricsLocked } from '../../../../redux/slider/selector'
 import './style'
 
 const TextLyricAnchor = forwardRef(({
@@ -38,10 +41,9 @@ const TextLyricAnchor = forwardRef(({
         isAccessedIndexedAnchorShown = useSelector(mapIsAccessedIndexedAnchorShown),
         accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
         accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex),
-        isActivated = useSelector(mapIsActivated),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        isSliderMoving = useSelector(mapIsSliderMoving),
+        isLyricsLocked = useSelector(mapIsLyricsLocked),
         isWikiTextAnchor = Boolean(wikiIndex)
 
     let isAccessed = false
@@ -61,7 +63,7 @@ const TextLyricAnchor = forwardRef(({
     }
 
     const handleAnchorClick = e => {
-        if (isSelected || isSliderMoving || isActivated) {
+        if (isSelected || isLyricsLocked) {
             return false
         }
 
@@ -78,6 +80,16 @@ const TextLyricAnchor = forwardRef(({
                 queuedAnnotationFromLyricVerse: true
             }))
             return true
+        }
+    }
+
+    const handleAnchorMouse = isMoused => {
+        // If selected or lyrics are locked, only dispatch exit, not enter.
+        if (
+            (!isSelected && !isLyricsLocked) ||
+            !isMoused
+        ) {
+            dispatch(updateIsAnchorMoused(isMoused))
         }
     }
 
@@ -113,7 +125,8 @@ const TextLyricAnchor = forwardRef(({
                         endsVerse
                     },
                     dotsBit: isWikiTextAnchor ? REFERENCE_BIT : dotsBit,
-                    handleAnchorClick
+                    handleAnchorClick,
+                    handleAnchorMouse
                 }}
             />
             {isWikiTextAnchor && (
@@ -140,8 +153,7 @@ TextLyricAnchor.propTypes = {
     isEmphasis: PropTypes.bool,
     beginsVerse: PropTypes.bool,
     endsVerse: PropTypes.bool,
-    dotsBit: PropTypes.number,
-    handleAnchorClick: PropTypes.func
+    dotsBit: PropTypes.number
 }
 
 export default memo(TextLyricAnchor)
