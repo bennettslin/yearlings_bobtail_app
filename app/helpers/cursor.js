@@ -54,3 +54,18 @@ export const getCursorTime = ({
 
     return selectedTime
 }
+
+export const getIsVerseCursor = ({
+    verseIndex,
+    verseCursorIndex,
+    inSlider,
+    inVerseBar,
+    isEitherVerseBarShown
+}) => {
+    const isVerseCursorShown = (
+        inSlider ||
+        Boolean(inVerseBar) === isEitherVerseBarShown
+    )
+
+    return verseIndex === verseCursorIndex && isVerseCursorShown
+}
