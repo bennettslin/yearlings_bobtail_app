@@ -19,7 +19,9 @@ const FilmstripCell = ({ sceneIndex }) => {
                 className: cx(
                     'FilmstripCell',
                     `${SCENE_CURSOR_CHILD_PREFIX}${sceneIndex}`,
-                    isSceneCursor && 'FilmstripCell__cursor',
+                    isSceneCursor ?
+                        'FilmstripCell__cursor' :
+                        'FilmstripCell__notCursor',
                     'ovH'
                 )
             }}
