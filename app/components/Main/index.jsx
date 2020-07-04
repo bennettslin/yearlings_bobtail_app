@@ -2,7 +2,7 @@
  * Column to show all sections, excluding lyrics and popups. Knows no state, so
  * should not update.
  */
-import React, { useEffect } from 'react'
+import React, { useEffect, memo } from 'react'
 import cx from 'classnames'
 import MainLayoutContainer from './LayoutContainer'
 import MainFlexContainer from './FlexContainer'
@@ -57,4 +57,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default memo(Main)

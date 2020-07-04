@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Stylesheet from '../../../modules/Stylesheet'
 
 import {
@@ -20,4 +20,4 @@ const PresenceZIndexStylesheet = () => (
     />
 )
 
-export default PresenceZIndexStylesheet
+export default memo(PresenceZIndexStylesheet)

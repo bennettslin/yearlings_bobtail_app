@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
@@ -66,4 +66,4 @@ ScrollDispatcher.propTypes = {
     getScrollChild: PropTypes.func.isRequired
 }
 
-export default ScrollDispatcher
+export default memo(ScrollDispatcher)

@@ -2,7 +2,6 @@
  * Handler for closing multiple sections. Because the logic is so similar for
  * each section, it is better for dev clarity to keep them together.
  */
-// eslint-disable-next-line object-curly-newline
 import { forwardRef, useImperativeHandle, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'

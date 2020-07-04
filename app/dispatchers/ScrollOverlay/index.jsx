@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, useState } from 'react'
+import { forwardRef, useImperativeHandle, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsScrolling } from '../../redux/scrollOverlay/action'
@@ -40,4 +40,4 @@ ScrollOverlayDispatcher.propTypes = {
     getLyricScrollElement: PropTypes.func.isRequired
 }
 
-export default ScrollOverlayDispatcher
+export default memo(ScrollOverlayDispatcher)

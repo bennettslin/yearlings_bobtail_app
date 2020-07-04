@@ -1,5 +1,5 @@
 // Section to show the stage proscenium.
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -94,4 +94,4 @@ const Curtains = () => {
     )
 }
 
-export default Curtains
+export default memo(Curtains)

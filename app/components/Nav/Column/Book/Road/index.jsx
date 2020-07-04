@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import './style'
 
@@ -13,4 +13,4 @@ const NavRoad = () => (
     />
 )
 
-export default NavRoad
+export default memo(NavRoad)

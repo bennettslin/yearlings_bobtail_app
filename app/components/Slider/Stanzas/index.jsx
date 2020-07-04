@@ -1,6 +1,6 @@
 // Static field that shows the song stanzas in the slider.
 
-import React from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import SliderStanza from './Stanza'
@@ -27,4 +27,4 @@ const SliderStanzas = () => {
     )
 }
 
-export default SliderStanzas
+export default memo(SliderStanzas)

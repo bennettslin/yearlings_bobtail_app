@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import { updateBannerStore } from '../../../redux/banner/action'
@@ -182,4 +182,4 @@ const SongBanner = () => {
     )
 }
 
-export default SongBanner
+export default memo(SongBanner)

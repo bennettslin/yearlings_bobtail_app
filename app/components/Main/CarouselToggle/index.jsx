@@ -1,5 +1,5 @@
 // Toggle button to show and hide carousel nav.
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
@@ -50,4 +50,4 @@ const CarouselToggle = () => {
     )
 }
 
-export default CarouselToggle
+export default memo(CarouselToggle)

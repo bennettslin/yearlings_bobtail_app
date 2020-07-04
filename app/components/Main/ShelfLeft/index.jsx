@@ -1,6 +1,6 @@
 // Section for dots and overview toggle buttons.
 
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import ScoreToggle from '../../Score/Toggle'
@@ -36,4 +36,4 @@ const ShelfLeft = () => {
     )
 }
 
-export default ShelfLeft
+export default memo(ShelfLeft)

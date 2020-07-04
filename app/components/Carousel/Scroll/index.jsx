@@ -1,5 +1,5 @@
 // Section to show all song annotations in a carousel layout.
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, memo } from 'react'
 import { useSelector } from 'react-redux'
 import ScrollCarouselListener from '../../../handlers/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
@@ -53,4 +53,4 @@ const CarouselScroll = () => {
     )
 }
 
-export default CarouselScroll
+export default memo(CarouselScroll)

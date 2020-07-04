@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { mapIsWindowResizeDone } from '../../redux/entrance/selector'
@@ -58,4 +58,4 @@ const Theatre = () => {
     )
 }
 
-export default Theatre
+export default memo(Theatre)

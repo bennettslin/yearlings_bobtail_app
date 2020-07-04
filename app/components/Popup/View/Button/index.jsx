@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../../../Button'
@@ -109,4 +109,4 @@ PopupViewButton.propTypes = {
     handlePopupButtonClick: PropTypes.func
 }
 
-export default PopupViewButton
+export default memo(PopupViewButton)

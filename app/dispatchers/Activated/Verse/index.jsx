@@ -1,5 +1,5 @@
 // Child that knows rules to select activated verse.
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollLyricToVerse } from '../../../redux/scrollLyric/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
@@ -65,4 +65,4 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default ActivatedVerseDispatcher
+export default memo(ActivatedVerseDispatcher)

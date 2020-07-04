@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useRef } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import SongDispatcher from '../Song'
 import { updateAudioStore } from '../../redux/audio/action'
@@ -52,4 +52,4 @@ const PlayDispatcher = forwardRef((props, ref) => {
     )
 })
 
-export default PlayDispatcher
+export default memo(PlayDispatcher)

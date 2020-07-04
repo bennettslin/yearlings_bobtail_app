@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -42,4 +42,4 @@ AccessDirectionLetter.propTypes = {
     isNext: PropTypes.bool
 }
 
-export default AccessDirectionLetter
+export default memo(AccessDirectionLetter)

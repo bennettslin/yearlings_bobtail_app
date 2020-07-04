@@ -1,5 +1,5 @@
 // Button to toggle between left and right columns.
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -66,4 +66,4 @@ const LyricToggleEar = () => {
     )
 }
 
-export default LyricToggleEar
+export default memo(LyricToggleEar)

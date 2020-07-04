@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, memo } from 'react'
 import { useSelector } from 'react-redux'
 import WikiWormholeDispatcher from '../Dispatcher'
 import {
@@ -26,4 +26,4 @@ const WikiWormholeListener = () => {
     )
 }
 
-export default WikiWormholeListener
+export default memo(WikiWormholeListener)

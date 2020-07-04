@@ -1,5 +1,5 @@
 // Component to show the song title.
-import React from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import { mapLyricSongIndex } from '../../../redux/lyric/selector'
@@ -27,4 +27,4 @@ const UnitSongTitle = () => {
     )
 }
 
-export default UnitSongTitle
+export default memo(UnitSongTitle)

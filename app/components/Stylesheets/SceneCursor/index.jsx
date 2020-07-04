@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Stylesheet from '../../../modules/Stylesheet'
 import { getArrayOfLength } from '../../../helpers/general'
 import { getMaxSceneCountForAlbum } from '../../../api/album/count'
@@ -102,4 +102,4 @@ const SceneCursorStylesheets = () => (
     </>
 )
 
-export default SceneCursorStylesheets
+export default memo(SceneCursorStylesheets)

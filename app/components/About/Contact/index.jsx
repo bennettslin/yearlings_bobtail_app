@@ -1,4 +1,4 @@
-import React, { Fragment as ___ } from 'react'
+import React, { Fragment as ___, memo } from 'react'
 import cx from 'classnames'
 import { BENNETT_EMAIL } from '../../../constants/website'
 import './style'
@@ -29,4 +29,4 @@ const AboutContact = () => (
     </>
 )
 
-export default AboutContact
+export default memo(AboutContact)

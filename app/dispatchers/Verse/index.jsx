@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAudioStore } from '../../redux/audio/action'
 import { updateSelectedStore } from '../../redux/selected/action'
@@ -12,6 +12,13 @@ const VerseDispatcher = forwardRef((props, ref) => {
         dispatch = useDispatch(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex)
+
+    const _dispatchScrollLyric = (scrollLog, nextVerseIndex) => {
+        dispatch(scrollLyricForVerseSelect(
+            scrollLog,
+            nextVerseIndex
+        ))
+    }
 
     const dispatchVerse = (scrollLog, nextVerseIndex) => {
         // Only dispatch if verse has changed.
@@ -34,10 +41,11 @@ const VerseDispatcher = forwardRef((props, ref) => {
                 verse: nextVerseIndex
             })
 
-            dispatch(scrollLyricForVerseSelect(
-                scrollLog,
-                nextVerseIndex
-            ))
+            // TODO: This timeout might not be all that effective.
+            setTimeout(
+                () => _dispatchScrollLyric(scrollLog, nextVerseIndex),
+                0
+            )
         }
     }
 
@@ -45,4 +53,4 @@ const VerseDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default VerseDispatcher
+export default memo(VerseDispatcher)

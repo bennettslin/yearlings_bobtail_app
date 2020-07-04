@@ -73,7 +73,6 @@ import {
     OCEAN_COLOUR
 } from '../colours'
 
-/* eslint-disable object-curly-newline */
 export default {
     /* D. */
     [DEFAULT_CLEAR_COLOUR]: { h: 0, s: 0, l: 100, a: 0.1 },

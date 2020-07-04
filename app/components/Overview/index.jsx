@@ -1,6 +1,6 @@
 // Section to show song overview.
 
-import React from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../Texts'
@@ -37,4 +37,4 @@ const Overview = () => {
     )
 }
 
-export default Overview
+export default memo(Overview)

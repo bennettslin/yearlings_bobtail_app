@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -66,4 +66,4 @@ UnitTab.propTypes = {
     handleVerseSelect: PropTypes.func.isRequired
 }
 
-export default UnitTab
+export default memo(UnitTab)

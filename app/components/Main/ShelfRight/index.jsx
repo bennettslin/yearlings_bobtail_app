@@ -1,5 +1,5 @@
 // Section for score and tips toggle buttons.
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import ScoreToggle from '../../Score/Toggle'
@@ -23,4 +23,4 @@ const ShelfRight = () => {
     )
 }
 
-export default ShelfRight
+export default memo(ShelfRight)

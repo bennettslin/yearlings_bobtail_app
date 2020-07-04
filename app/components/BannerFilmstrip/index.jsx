@@ -1,5 +1,5 @@
 // Component to show played song title, time played, and slider interface.
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import AlbumBanner from './AlbumBanner'
 import SongBanner from './SongBanner'
@@ -21,4 +21,4 @@ const BannerFilmstrip = () => (
     </div>
 )
 
-export default BannerFilmstrip
+export default memo(BannerFilmstrip)

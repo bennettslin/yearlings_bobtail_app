@@ -1,5 +1,5 @@
 // Button to select book or song in nav section.
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getTitleForSong } from '../../../../../../api/album/songs'
@@ -50,4 +50,4 @@ NavButtonTitle.propTypes = {
     isSelected: PropTypes.bool
 }
 
-export default NavButtonTitle
+export default memo(NavButtonTitle)

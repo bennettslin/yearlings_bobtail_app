@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { getWikiWormholeIndexForDirection } from './helper'
@@ -45,4 +45,4 @@ const WikiWormholeDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default WikiWormholeDispatcher
+export default memo(WikiWormholeDispatcher)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -102,4 +102,4 @@ TipsHand.propTypes = {
     reverse: PropTypes.bool
 }
 
-export default TipsHand
+export default memo(TipsHand)

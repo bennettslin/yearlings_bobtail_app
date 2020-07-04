@@ -1,5 +1,5 @@
 // Section to show the stage illustrations.
-import React from 'react'
+import React, { memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import CeilingRafter from './Rafter'
@@ -59,4 +59,4 @@ const Ceiling = () => {
     )
 }
 
-export default Ceiling
+export default memo(Ceiling)

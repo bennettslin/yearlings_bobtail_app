@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 import cx from 'classnames'
 import * as EmailValidator from 'email-validator'
 import './style'
@@ -105,4 +105,4 @@ const MailingList = () => {
     )
 }
 
-export default MailingList
+export default memo(MailingList)

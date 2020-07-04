@@ -1,5 +1,6 @@
 # TODO for scroll refactor
 * Figure out verse bar determining and reset
+* Rip out queuedScroll stuff
 
 # Issues
 * What is mapIsSelectPlayReady?

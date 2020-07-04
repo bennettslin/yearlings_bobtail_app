@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from 'react'
+import React, { forwardRef, useEffect, memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -58,4 +58,4 @@ const Lyric = forwardRef((props, ref) => {
     )
 })
 
-export default Lyric
+export default memo(Lyric)

@@ -1,5 +1,5 @@
 // Button to toggle dots slide.
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlide'
@@ -50,4 +50,4 @@ DotsSlideToggle.propTypes = {
     className: PropTypes.string
 }
 
-export default DotsSlideToggle
+export default memo(DotsSlideToggle)

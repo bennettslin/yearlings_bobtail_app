@@ -1,5 +1,5 @@
 // Toggle button to show, hide, and disable tips section.
-import React, { useRef } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
@@ -55,4 +55,4 @@ ScoreToggle.propTypes = {
     className: PropTypes.string
 }
 
-export default ScoreToggle
+export default memo(ScoreToggle)
