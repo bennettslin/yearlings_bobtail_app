@@ -1,5 +1,6 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import VerseDispatcher from '../../../dispatchers/Verse'
 import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
@@ -30,6 +31,7 @@ const NavigationManager = forwardRef((props, ref) => {
         navigateDotsSlide = useRef(),
         navigateLyric = useRef(),
         navigateNav = useRef(),
+        dispatchVerse = useRef(),
         isActivated = useSelector(mapIsActivated),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
@@ -51,6 +53,7 @@ const NavigationManager = forwardRef((props, ref) => {
             if (isActivated && keyName === ENTER) {
                 keyWasRegistered = true
 
+                dispatchVerse.current(activatedVerseIndex)
                 dispatch(scrollLyricToVerseInCallback(
                     'Key selected',
                     activatedVerseIndex
@@ -103,6 +106,7 @@ const NavigationManager = forwardRef((props, ref) => {
             <DotsSlideNavigation {...{ ref: navigateDotsSlide }} />
             <LyricNavigation {...{ ref: navigateLyric }} />
             <NavNavigation {...{ ref: navigateNav }} />
+            <VerseDispatcher {...{ ref: dispatchVerse }} />
         </>
     )
 })

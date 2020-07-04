@@ -1,7 +1,6 @@
 import React, { memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import VerseDispatcher from '../../../dispatchers/Verse'
 import ScrollDispatcher from '../Dispatcher'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { resetVerseBars } from '../../../redux/verseBars/action'
@@ -18,6 +17,7 @@ import {
     mapScrollLyricNoDuration,
     mapScrollLyricWithVerseCallback
 } from '../../../redux/scrollLyric/selector'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 
 const ScrollLyricListener = ({
     getLyricScrollElement,
@@ -28,7 +28,6 @@ const ScrollLyricListener = ({
     const
         dispatch = useDispatch(),
         scrollElementIntoView = useRef(),
-        dispatchVerse = useRef(),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         scrollLyricLog = useSelector(mapScrollLyricLog),
         scrollLyricByVerse = useSelector(mapScrollLyricByVerse),
@@ -42,10 +41,13 @@ const ScrollLyricListener = ({
             getScrollAnchorChild(index)
     )
 
-    const dispatchCallback = index => {
+    const dispatchCallback = () => {
         if (scrollLyricWithVerseCallback) {
-            dispatchVerse.current(index)
+            console.log('is scene scroll complete')
             dispatch(updateActivatedStore())
+            dispatch(updateEntranceStore({
+                isSceneScrollComplete: true
+            }))
             dispatch(resetVerseBars())
         }
         dispatch(resetScrollLyricStore())
@@ -74,16 +76,13 @@ const ScrollLyricListener = ({
     }, [scrollLyricLog])
 
     return (
-        <>
-            <ScrollDispatcher
-                {...{
-                    ref: scrollElementIntoView,
-                    getScrollParent: getLyricScrollElement,
-                    getScrollChild
-                }}
-            />
-            <VerseDispatcher {...{ ref: dispatchVerse }} />
-        </>
+        <ScrollDispatcher
+            {...{
+                ref: scrollElementIntoView,
+                getScrollParent: getLyricScrollElement,
+                getScrollChild
+            }}
+        />
     )
 }
 

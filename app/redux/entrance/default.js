@@ -6,6 +6,7 @@ export const getSongChangeDefaults = done => ({
 
 export const getSceneChangeDefaults = done => ({
     didSceneExit: done,
+    isSceneScrollComplete: done,
     isSceneChangeDone: done
 })
 

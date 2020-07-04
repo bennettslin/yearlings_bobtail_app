@@ -15,7 +15,8 @@ export default (
                 {
                     didCurtainsClose,
                     isSongSelectionComplete,
-                    didSceneExit
+                    didSceneExit,
+                    isSceneScrollComplete
                 } = newState
 
             return {
@@ -25,7 +26,7 @@ export default (
                     isSongChangeDone: true
                 },
                 // The conditions by which scene change is done.
-                ...didSceneExit && {
+                ...didSceneExit && isSceneScrollComplete && {
                     isSceneChangeDone: true
                 }
             }

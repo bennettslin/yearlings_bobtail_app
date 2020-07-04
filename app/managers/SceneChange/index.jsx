@@ -24,6 +24,7 @@ const SceneChangeManager = () => {
         if (didMount) {
             // Scene changed, so begin transition if not already in place.
             if (isSongChangeDone && isSceneChangeDone) {
+                console.log('reset scene change')
                 dispatch(resetSceneChange())
             }
         } else {
@@ -34,6 +35,7 @@ const SceneChangeManager = () => {
     useEffect(() => {
         if (didMount) {
             if (isSongChangeDone && isSceneChangeDone) {
+                console.log('update scene indices')
                 dispatch(updateSceneStore({
                     sceneSongIndex: selectedSongIndex,
                     sceneSceneIndex: selectedSceneIndex

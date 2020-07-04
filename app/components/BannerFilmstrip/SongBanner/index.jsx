@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import { updateBannerStore } from '../../../redux/banner/action'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
+import VerseDispatcher from '../../../dispatchers/Verse'
 import Tracker from '../../Tracker'
 import SongBannerTimer from './Timer'
 import SongBannerTitle from './Title'
@@ -32,6 +33,7 @@ const SongBanner = () => {
         dispatch = useDispatch(),
         songBannerElement = useRef(),
         stopPropagation = useRef(),
+        dispatchVerse = useRef(),
         isSmallBannerText = useSelector(mapIsSmallBannerText),
         isPlaying = useSelector(mapIsPlaying),
         isBannerHovering = useSelector(mapIsBannerHovering),
@@ -122,6 +124,7 @@ const SongBanner = () => {
                 // On mobile, get from click event.
                 getVerseIndexFromEvent(e)
 
+        dispatchVerse.current(verseIndex)
         dispatch(scrollLyricToVerseInCallback(
             'Banner selected',
             verseIndex
@@ -176,6 +179,7 @@ const SongBanner = () => {
             <SongBannerTitle />
             <SongBannerTimer />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
+            <VerseDispatcher {...{ ref: dispatchVerse }} />
         </div>
     )
 }

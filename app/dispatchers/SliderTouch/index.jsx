@@ -1,5 +1,6 @@
-import { forwardRef, useImperativeHandle, useRef } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import VerseDispatcher from '../Verse'
 import { updateSliderStore } from '../../redux/slider/action'
 import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
@@ -22,6 +23,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         timeoutRef = useRef(),
+        dispatchVerse = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         sliderLeft = useSelector(mapSliderLeft),
@@ -144,6 +146,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
 
     const dispatchTouchEnd = () => {
         if (isSliderTouched) {
+            dispatchVerse.current(sliderVerseIndex)
             dispatch(scrollLyricToVerseInCallback(
                 'Slider selected',
                 sliderVerseIndex
@@ -162,7 +165,9 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
         move: dispatchTouchMove,
         end: dispatchTouchEnd
     }))
-    return null
+    return (
+        <VerseDispatcher {...{ ref: dispatchVerse }} />
+    )
 })
 
 export default SliderTouchDispatcher
