@@ -18,13 +18,15 @@ const Stanzas = forwardRef((props, ref) => {
         lyricSongIndex = useSelector(mapLyricSongIndex)
 
     const handleVerseSelect = ({
-        selectedVerseIndex,
-        scrollLog
+        scrollLog,
+        verseIndex,
+        fromActivated
     }) => {
-        dispatchVerse.current(
+        dispatchVerse.current({
             scrollLog,
-            selectedVerseIndex
-        )
+            verseIndex,
+            fromActivated
+        })
     }
 
     const

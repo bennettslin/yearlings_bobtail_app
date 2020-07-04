@@ -1,5 +1,6 @@
 # TODO for scroll refactor
 * Figure out verse bar determining and reset
+* Can't scroll through verses in succession, previous cancels next.
 
 # Issues
 * What is mapIsSelectPlayReady?

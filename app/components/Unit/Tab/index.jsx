@@ -23,8 +23,8 @@ const UnitTab = ({
         onClick = e => {
             logEvent({ e, componentName: 'UnitCard' })
             handleVerseSelect({
-                selectedVerseIndex: verseIndex,
-                scrollLog: 'Stanza tab selected'
+                scrollLog: 'Stanza tab selected',
+                verseIndex
             })
         }
 

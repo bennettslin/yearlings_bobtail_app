@@ -49,7 +49,7 @@ export const scrollLyricForSongSelect = () => ({
 export const scrollLyricForPlayAutoScroll = index => ({
     type: SCROLL_LYRIC_STORE,
     payload: {
-        scrollLyricLog: 'Play autoScrolled',
+        scrollLyricLog: 'Play scrolled',
         scrollLyricIndex: index,
         scrollLyricFromAutoScroll: true
     }

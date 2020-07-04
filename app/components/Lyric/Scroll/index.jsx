@@ -18,10 +18,12 @@ const LyricScroll = forwardRef((props, ref) => {
         determineVerseBars = useRef()
 
     const onScroll = () => {
+        console.log('onScroll')
         determineScrollOverlay.current()
     }
 
     const onWheel = e => {
+        console.log('onWheel')
         determineVerseBars.current()
         determineAutoScroll.current(
             e, lyricScrollElement.current

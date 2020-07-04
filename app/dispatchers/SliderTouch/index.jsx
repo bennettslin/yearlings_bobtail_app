@@ -143,10 +143,10 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
 
     const dispatchTouchEnd = () => {
         if (isSliderTouched) {
-            dispatchVerse.current(
-                'Slider selected',
-                sliderVerseIndex
-            )
+            dispatchVerse.current({
+                scrollLog: 'Slider selected',
+                verseIndex: sliderVerseIndex
+            })
 
             // Reset slider state.
             dispatch(updateSliderStore())

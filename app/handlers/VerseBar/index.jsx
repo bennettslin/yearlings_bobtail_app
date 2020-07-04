@@ -65,6 +65,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     }
 
     const determineVerseBars = (timeoutDuration = 10) => {
+        console.log('determine verse bars')
         /**
          * It seems to help to both make the call immediately, and then set a
          * timeout for it. For now, I don't think there's any performance hit.

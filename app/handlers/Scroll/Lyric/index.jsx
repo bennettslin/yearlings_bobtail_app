@@ -2,7 +2,6 @@ import React, { memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import ScrollDispatcher from '../Dispatcher'
-import { updateActivatedStore } from '../../../redux/activated/action'
 import { resetVerseBars } from '../../../redux/verseBars/action'
 import { resetScrollLyricStore } from '../../../redux/scrollLyric/action'
 import {
@@ -43,12 +42,13 @@ const ScrollLyricListener = ({
 
     const dispatchCallback = () => {
         if (isScrollLyricForSongSelect || isScrollLyricForVerseSelect) {
+            console.log('scroll callback song or verse select')
             dispatch(updateEntranceStore({
                 isSceneScrollComplete: true
             }))
 
             if (isScrollLyricForVerseSelect) {
-                dispatch(updateActivatedStore())
+                console.log('scroll callback verse select')
                 dispatch(resetVerseBars())
             }
         }

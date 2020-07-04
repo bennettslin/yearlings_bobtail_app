@@ -123,10 +123,10 @@ const SongBanner = () => {
                 // On mobile, get from click event.
                 getVerseIndexFromEvent(e)
 
-        dispatchVerse.current(
-            'Banner selected',
+        dispatchVerse.current({
+            scrollLog: 'Banner selected',
             verseIndex
-        )
+        })
 
         // Once clicked, do not allow another click on the same hover.
         onMouseLeave()

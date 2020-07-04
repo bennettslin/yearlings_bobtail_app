@@ -10,14 +10,13 @@ const SceneDispatcher = forwardRef((props, ref) => {
         selectedSongIndex = useSelector(mapSelectedSongIndex)
 
     const dispatchSceneIndex = (selectedSceneIndex) => {
-        const selectedVerseIndex = getVerseIndexForScene(
-            selectedSongIndex,
-            selectedSceneIndex
-        )
-        dispatchVerse.current(
-            `Filmstrip scene ${selectedSceneIndex} selected`,
-            selectedVerseIndex
-        )
+        dispatchVerse.current({
+            scrollLog: `Filmstrip scene ${selectedSceneIndex} selected`,
+            verseIndex: getVerseIndexForScene(
+                selectedSongIndex,
+                selectedSceneIndex
+            )
+        })
     }
 
     useImperativeHandle(ref, () => dispatchSceneIndex)
