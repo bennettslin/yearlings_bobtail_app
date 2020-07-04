@@ -1,14 +1,7 @@
 // Actions for determining verse bars.
-import { getDefinedOnlyPayload } from '../../helpers/action'
 import { VERSE_BARS_STORE } from '../../constants/store'
-import { VERSE_BARS_STATUS_DEFAULTS } from './default'
 
-export const updateVerseBarsStore = payload => ({
+export const updateVerseBarsStatus = verseBarsStatus => ({
     type: VERSE_BARS_STORE,
-    payload: getDefinedOnlyPayload(payload)
-})
-
-export const resetVerseBars = () => ({
-    type: VERSE_BARS_STORE,
-    payload: VERSE_BARS_STATUS_DEFAULTS
+    payload: { verseBarsStatus }
 })

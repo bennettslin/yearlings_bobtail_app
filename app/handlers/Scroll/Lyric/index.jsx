@@ -2,7 +2,6 @@ import React, { memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import ScrollDispatcher from '../Dispatcher'
-import { resetVerseBars } from '../../../redux/verseBars/action'
 import { resetScrollLyricStore } from '../../../redux/scrollLyric/action'
 import {
     ANCHOR_SCROLL,
@@ -81,11 +80,6 @@ const ScrollLyricListener = ({
                 dispatchScroll,
                 isScrollLyricForVerseSelect ? 200 : 0
             )
-
-            // If not scrolling by anchor, verse bars are always reset.
-            if (!scrollLyricByAnchor) {
-                dispatch(resetVerseBars())
-            }
         }
     }, [scrollLyricLog])
 

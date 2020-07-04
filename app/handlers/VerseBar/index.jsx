@@ -3,7 +3,7 @@ import {
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateVerseBarsStore } from '../../redux/verseBars/action'
+import { updateVerseBarsStatus } from '../../redux/verseBars/action'
 import { getVerseBarsStatus } from './helper'
 import { mapVerseCursorIndex } from '../../redux/cursor/selector'
 import { mapLyricSectionRect } from '../../redux/lyricSection/selector'
@@ -39,9 +39,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 
             // Prevent unnecessary dispatches.
             if (verseBarsStatus !== nextVerseBarsStatus) {
-                dispatch(updateVerseBarsStore({
-                    verseBarsStatus: nextVerseBarsStatus
-                }))
+                dispatch(updateVerseBarsStatus(nextVerseBarsStatus))
             }
         }
     }
