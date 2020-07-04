@@ -2,8 +2,8 @@ import { createSelector } from 'reselect'
 import { getStanzaIndexForVerse } from '../../api/album/verses'
 import {
     getCursorIndex,
-    getBeforeOnOrAfter,
-    getCursorTime
+    getCursorTime,
+    getIsVerseCursor
 } from '../../helpers/cursor'
 import {
     mapIsActivated,
@@ -77,12 +77,9 @@ export const mapSceneCursorIndex = createSelector(
     )
 )
 
-export const getMapSceneCursorStatus = sceneIndex => createSelector(
+export const getMapIsSceneCursor = sceneIndex => createSelector(
     mapSceneCursorIndex,
-    sceneCursorIndex => getBeforeOnOrAfter(
-        sceneCursorIndex,
-        sceneIndex
-    )
+    sceneCursorIndex => sceneIndex === sceneCursorIndex
 )
 
 export const mapVerseCursorIndex = createSelector(
@@ -103,25 +100,23 @@ export const mapVerseCursorIndex = createSelector(
     )
 )
 
-const getMapIsVerseCursorShown = (inSlider, inVerseBar) => createSelector(
-    mapIsEitherVerseBarShown,
-    isEitherVerseBarShown => (
-        inSlider ||
-        Boolean(inVerseBar) === isEitherVerseBarShown
-    )
-)
-
 export const getMapIsVerseCursor = ({
     verseIndex,
     inSlider,
     inVerseBar
 }) => createSelector(
     mapVerseCursorIndex,
-    getMapIsVerseCursorShown(inSlider, inVerseBar),
+    mapIsEitherVerseBarShown,
     (
         verseCursorIndex,
-        isVerseCursorShown
-    ) => verseIndex === verseCursorIndex && isVerseCursorShown
+        isEitherVerseBarShown
+    ) => getIsVerseCursor({
+        verseIndex,
+        verseCursorIndex,
+        inSlider,
+        inVerseBar,
+        isEitherVerseBarShown
+    })
 )
 
 export const getMapIsStanzaCursor = stanzaIndex => createSelector(

@@ -3,30 +3,23 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import Tracker from '../../../../Tracker'
-import { getMapSceneCursorStatus } from '../../../../../redux/cursor/selector'
+import { getMapIsSceneCursor } from '../../../../../redux/cursor/selector'
 import { getMapSceneTrackerWidth } from '../../../../../redux/tracker/selector'
+import { SCENE_CURSOR_CHILD_PREFIX } from '../../../../../constants/cursor'
 import './style'
 
 const FilmstripCell = ({ sceneIndex }) => {
     const
-        sceneCursorStatus = useSelector(getMapSceneCursorStatus(sceneIndex)),
-        sceneTrackerWidth = useSelector(getMapSceneTrackerWidth(sceneIndex)),
-
-        isOdd = Boolean(sceneIndex % 2),
-        isBeforeCursor = sceneCursorStatus === -1,
-        isOnCursor = sceneCursorStatus === 0,
-        isAfterCursor = sceneCursorStatus === 1
+        isSceneCursor = useSelector(getMapIsSceneCursor(sceneIndex)),
+        sceneTrackerWidth = useSelector(getMapSceneTrackerWidth(sceneIndex))
 
     return (
         <div
             {...{
                 className: cx(
                     'FilmstripCell',
-                    isOdd && isBeforeCursor && 'FilmstripCell__oddBefore',
-                    !isOdd && isBeforeCursor && 'FilmstripCell__evenBefore',
-                    isOnCursor && 'FilmstripCell__onCursor',
-                    isOdd && isAfterCursor && 'FilmstripCell__oddAfter',
-                    !isOdd && isAfterCursor && 'FilmstripCell__evenAfter',
+                    `${SCENE_CURSOR_CHILD_PREFIX}${sceneIndex}`,
+                    isSceneCursor && 'FilmstripCell__cursor',
                     'ovH'
                 )
             }}

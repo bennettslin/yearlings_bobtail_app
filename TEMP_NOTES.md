@@ -1,5 +1,5 @@
 # TODO for scroll refactor
-* Rip out logic for queued scroll verse index
+* Filmstrip cell doesn't show selected when lyrics locked.
 * Have scene index set only after scroll is complete
 * Figure out verse bar determining and reset
 * Confirm that selecting verse during play works again
@@ -25,7 +25,6 @@
 * Do I really want scene activation to work as it does, where you need to go next, then previous, before hitting selected verse that is not the start of scene?
 
 # Easy tasks
-* Also have filmstrip scene cells use stylesheet?
 * Slider verse select ranges don't really align with hover ranges.
 * Some todos to make a selector.
 * Have verse store for queued verse select, just like annotation store.

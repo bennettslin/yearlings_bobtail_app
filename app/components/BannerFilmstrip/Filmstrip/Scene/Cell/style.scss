@@ -41,63 +41,6 @@
     left: -$length__filmPerf / 2;
 }
 
-// Keep redundancy for now, as I'm still playing around with these colours.
-.FilmstripCell__oddBefore {
-    background-color: $colour__past__medLight;
-
-    .PlW__isPlaying
-    & {
-        background-color: $colour__past__medLight;
-    }
-
-    .TW__lyricsLocked
-    & {
-        background-color: $COLOUR__PAST__DARK;
-    }
-}
-
-.FilmstripCell__evenBefore {
-    background-color: $colour__past__medium;
-
-    .PlW__isPlaying
-    & {
-        background-color: $colour__past__medium;
-    }
-
-    .TW__lyricsLocked
-    & {
-        background-color: $COLOUR__PAST__DARKER;
-    }
-}
-
-.FilmstripCell__oddAfter {
-    background-color: $COLOUR__FUTURE__DARK;
-
-    .PlW__isPlaying
-    & {
-        background-color: $COLOUR__FUTURE__LIGHTER;
-    }
-
-    .TW__lyricsLocked
-    & {
-        background-color: $COLOUR__FUTURE__DARK;
-    }
-}
-
-.FilmstripCell__evenAfter {
-    background-color: $COLOUR__FUTURE__DARKER;
-
-    .PlW__isPlaying
-    & {
-        background-color: $COLOUR__FUTURE__LIGHT;
-    }
-
-    .TW__lyricsLocked
-    & {
-        background-color: $COLOUR__FUTURE__DARKER;
-    }
-}
-
 .FilmstripCell {
     .FilmstripScene__selected
     & {
@@ -106,7 +49,7 @@
     }
 }
 
-.FilmstripCell__onCursor {
+.FilmstripCell__cursor {
     .TW__lyricsUnlocked
     & {
         background-color: $colour__paused__empty;
