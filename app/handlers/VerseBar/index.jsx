@@ -3,38 +3,22 @@ import {
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-    updateVerseBarsStore,
-    resetVerseBarsQueue,
-    resetVerseBars
-} from '../../redux/verseBars/action'
+import { updateVerseBarsStore } from '../../redux/verseBars/action'
 import { getVerseBarsStatus } from './helper'
-import { mapIsActivated } from '../../redux/activated/selector'
 import { mapVerseCursorIndex } from '../../redux/cursor/selector'
 import { mapLyricSectionRect } from '../../redux/lyricSection/selector'
-import {
-    mapSliderVerseIndex,
-    mapIsSliderTouched
-} from '../../redux/slider/selector'
 import { mapIsLyricExpanded } from '../../redux/toggle/selector'
-import {
-    mapVerseBarsStatus,
-    mapQueuedDetermineVerseBars
-} from '../../redux/verseBars/selector'
+import { mapVerseBarsStatus } from '../../redux/verseBars/selector'
 import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
 
 const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     const
         dispatch = useDispatch(),
-        isActivated = useSelector(mapIsActivated),
         verseCursorIndex = useSelector(mapVerseCursorIndex),
         lyricSectionRect = useSelector(mapLyricSectionRect),
         isHeightlessLyric = useSelector(mapIsHeightlessLyric),
-        isSliderTouched = useSelector(mapIsSliderTouched),
-        sliderVerseIndex = useSelector(mapSliderVerseIndex),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         verseBarsStatus = useSelector(mapVerseBarsStatus),
-        queuedDetermineVerseBars = useSelector(mapQueuedDetermineVerseBars),
         [verseBarsTimeoutId, setVerseBarsTimeoutId] = useState(-1)
 
     /**
@@ -53,7 +37,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
                 verseElement
             })
 
-            // Prevent too many dispatches during scrolling.
+            // Prevent unnecessary dispatches.
             if (verseBarsStatus !== nextVerseBarsStatus) {
                 dispatch(updateVerseBarsStore({
                     verseBarsStatus: nextVerseBarsStatus
@@ -78,32 +62,9 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
     }
 
     useEffect(() => {
-        if (queuedDetermineVerseBars) {
-            /**
-             * Make duration long enough for Chrome, Firefox, and Safari. 150
-             * is fine for lyric page up and down, but 300 seems to be needed
-             * for navigating between annotations.
-             */
-            determineVerseBars(150)
-            dispatch(resetVerseBarsQueue())
-        }
-    }, [queuedDetermineVerseBars])
-
-    useEffect(() => {
-        /**
-         * Determine verse bars here while we are sliding, as soon as slider is
-         * touched.
-         */
-        if (sliderVerseIndex > -1 && isSliderTouched) {
-            _dispatchVerseBars()
-        }
-    }, [sliderVerseIndex])
-
-    useEffect(() => {
-        if (isActivated) {
-            dispatch(resetVerseBars())
-        }
-    }, [isActivated])
+        // Determine verse bars anytime verse cursor index has changed.
+        _dispatchVerseBars()
+    }, [verseCursorIndex])
 
     useImperativeHandle(ref, () => determineVerseBars)
     return null

@@ -3,7 +3,6 @@ import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateIsAutoScroll } from '../../redux/toggle/action'
-import { updateVerseBarsStore } from '../../redux/verseBars/action'
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
 import { mapIsAccessOn } from '../../redux/access/selector'
@@ -30,18 +29,6 @@ const KeyManager = forwardRef((props, ref) => {
         isAccessOn = useSelector(mapIsAccessOn),
         handleNavigation = useRef(),
         handleLetter = useRef()
-
-    const _determineVerseBarsWithParameters = () => {
-        /**
-         * Make duration long enough for Chrome, Firefox, and Safari. 150 is
-         * fine for lyric page up and down, but 300 seems to be needed for
-         * navigating between annotations.
-         */
-        dispatch(updateVerseBarsStore({
-            queuedDetermineVerseBars: true
-        }))
-        dispatch(updateIsAutoScroll())
-    }
 
     const _handleKeyRegister = ({
         e,
@@ -76,7 +63,7 @@ const KeyManager = forwardRef((props, ref) => {
             keyName === PAGE_UP ||
             keyName === PAGE_DOWN
         ) {
-            _determineVerseBarsWithParameters()
+            dispatch(updateIsAutoScroll())
         }
     }
 
@@ -117,7 +104,7 @@ const KeyManager = forwardRef((props, ref) => {
             keyName === PAGE_UP ||
             keyName === PAGE_DOWN
         ) {
-            _determineVerseBarsWithParameters()
+            dispatch(updateIsAutoScroll())
         }
 
         _handleKeyRegister({

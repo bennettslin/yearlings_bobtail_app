@@ -3,7 +3,6 @@ import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollLyricForPlayAutoScroll } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
-import { updateVerseBarsStore } from '../../redux/verseBars/action'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 import { mapIsAutoScroll } from '../../redux/toggle/selector'
 
@@ -32,13 +31,6 @@ const TimeVerseDispatcher = forwardRef((props, ref) => {
         // If autoScroll is on, scroll to selected verse.
         if (isAutoScroll) {
             dispatch(scrollLyricForPlayAutoScroll(nextVerseIndex))
-
-        } else {
-            /**
-             * If manual scroll is on, selected verse may go from above window,
-             * view, to in it, to below it. So, determine verse bars.
-             */
-            dispatch(updateVerseBarsStore({ queuedDetermineVerseBars: true }))
         }
     }
 

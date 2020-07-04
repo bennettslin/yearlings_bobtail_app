@@ -10,11 +10,11 @@
     .DW__userAgentDesktop
     & {
         transition:
-            top $transitionDuration__fast,
-            left $transitionDuration__fast,
-            width $transitionDuration__fast,
-            height $transitionDuration__fast,
-            background-color $transitionDuration__fast;
+            top $transitionDuration__faster,
+            left $transitionDuration__faster,
+            width $transitionDuration__faster,
+            height $transitionDuration__faster,
+            background-color $transitionDuration__faster;
     }
 
     .TW__lyricsLocked
