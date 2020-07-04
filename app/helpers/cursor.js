@@ -55,7 +55,12 @@ export const getIsVerseCursor = ({
 }) => {
     const isVerseCursorShown = (
         inSlider ||
-        Boolean(inVerseBar) === isEitherVerseBarShown
+
+        // Verse in verse bar is always the cursor verse.
+        inVerseBar ||
+        (
+            !inVerseBar && !isEitherVerseBarShown
+        )
     )
 
     return verseIndex === verseCursorIndex && isVerseCursorShown

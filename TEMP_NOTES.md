@@ -1,6 +1,5 @@
 # TODO for scroll refactor
 * Can't scroll through verses in succession, previous cancels next. This messes up verse bars as well.
-* Verse bar transitions in too slowly, flash of white, what is that?
 * When selecting a new verse, tracker length sometimes starts full, then empties.
 * Experiment with removing from reducers and putting back in listeners?
 

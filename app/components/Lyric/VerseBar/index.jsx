@@ -3,7 +3,6 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
-import Transition from 'react-transition-group/Transition'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../api/album/verses'
@@ -79,14 +78,7 @@ const VerseBarContainer = ({
                         'VerseBar__animatable__below'
                 )}
             >
-                <Transition
-                    {...{
-                        in: isVerseBarShown,
-                        timeout: 200
-                    }}
-                >
-                    <VerseBar />
-                </Transition>
+                <VerseBar />
             </div>
         </div>
     )
