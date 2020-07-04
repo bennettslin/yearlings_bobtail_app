@@ -1,11 +1,12 @@
 // Component that handles all user events from keyboard.
 import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateIsAutoScroll } from '../../redux/toggle/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
+import { mapIsAccessOn } from '../../redux/access/selector'
 import { isEmailFocused } from '../../utils/email'
 import {
     getKeyName,
@@ -26,6 +27,7 @@ import {
 const KeyManager = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
+        isAccessOn = useSelector(mapIsAccessOn),
         handleNavigation = useRef(),
         handleLetter = useRef()
 
@@ -103,7 +105,9 @@ const KeyManager = forwardRef((props, ref) => {
 
         } else {
             // Turn on access.
-            dispatch(updateAccessStore({ isAccessOn: true }))
+            if (!isAccessOn) {
+                dispatch(updateAccessStore({ isAccessOn: true }))
+            }
         }
 
         /**
@@ -152,7 +156,9 @@ const KeyManager = forwardRef((props, ref) => {
 
         // Turn on access.
         } else if (keyName !== ESCAPE) {
-            dispatch(updateAccessStore({ isAccessOn: true }))
+            if (!isAccessOn) {
+                dispatch(updateAccessStore({ isAccessOn: true }))
+            }
         }
 
         // Handle escape key.

@@ -1,6 +1,5 @@
 # TODO for scroll refactor
 * Can't scroll through verses in succession, previous cancels next. This messes up verse bars as well.
-* Activated scene key stops at top. Try when selected verse is Walkyriens.
 * Verse bar transitions in too slowly, flash of white, what is that?
 * Experiment with removing from reducers and putting back in listeners?
 

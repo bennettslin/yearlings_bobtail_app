@@ -27,7 +27,7 @@ export const mapActivatedSceneIndex = createSelector(
     ) => getSceneIndexForVerse(
         selectedSongIndex,
         activatedVerseIndex
-    ) || -1
+    )
 )
 
 export const getMapIsSceneActivated = sceneIndex => createSelector(

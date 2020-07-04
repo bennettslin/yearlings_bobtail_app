@@ -8,7 +8,10 @@ export const getActivatedSceneForDirection = ({
 }) => {
     const songScenesCount = getSceneCountForSong(selectedSongIndex)
 
-    let nextSceneIndex = activatedSceneIndex
+    let nextSceneIndex =
+        Number.isFinite(activatedSceneIndex) ?
+            activatedSceneIndex :
+            selectedSceneIndex
 
     // Ensure modulo.
     if (direction === -1) {

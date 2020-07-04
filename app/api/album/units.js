@@ -3,7 +3,7 @@ import { getFormTypeForStanza } from './stanzas'
 
 export const getLastUnitDotCardIndex = songIndex => {
     const { lastUnitDotIndex } = getSong(songIndex)
-    return lastUnitDotIndex || -1
+    return Number.isFinite(lastUnitDotIndex) ? lastUnitDotIndex : -1
 }
 
 export const getDotForUnit = (songIndex, unitIndex) => {
