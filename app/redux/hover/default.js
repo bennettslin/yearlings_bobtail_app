@@ -1,4 +1,4 @@
-export const SCROLL_OVERLAY_DEFAULTS = {
+export const HOVER_DEFAULTS = {
     isAnchorMoused: false,
     isScrolling: false
 }

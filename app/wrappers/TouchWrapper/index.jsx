@@ -7,7 +7,7 @@ import { mapIsBannerHovering } from '../../redux/banner/selector'
 import {
     mapIsAnchorMoused,
     mapIsScrolling
-} from '../../redux/scrollOverlay/selector'
+} from '../../redux/hover/selector'
 import {
     mapIsSliderTouched,
     mapIsLyricsLocked

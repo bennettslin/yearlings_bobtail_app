@@ -1,12 +1,12 @@
 // Actions for scrolling overlay values.
-import { SCROLL_OVERLAY_STORE } from '../../constants/store'
+import { HOVER_STORE } from '../../constants/store'
 
 export const updateIsScrolling = isScrolling => ({
-    type: SCROLL_OVERLAY_STORE,
+    type: HOVER_STORE,
     payload: { isScrolling }
 })
 
 export const updateIsAnchorMoused = isAnchorMoused => ({
-    type: SCROLL_OVERLAY_STORE,
+    type: HOVER_STORE,
     payload: { isAnchorMoused }
 })

@@ -1,8 +1,8 @@
 import { forwardRef, useImperativeHandle, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateIsScrolling } from '../../redux/scrollOverlay/action'
-import { mapIsScrolling } from '../../redux/scrollOverlay/selector'
+import { updateIsScrolling } from '../../redux/hover/action'
+import { mapIsScrolling } from '../../redux/hover/selector'
 
 const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollElement }, ref) => {
     const

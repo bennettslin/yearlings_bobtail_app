@@ -4,11 +4,6 @@ export default [
         workedHours: 0
     },
     {
-        taskName: `Move to hooks. It feels nice, but I really need to prioritise user-facing tasks.`,
-        workedHours: 0,
-        neededHours: 30
-    },
-    {
         taskName: `Figure out how to let bots access sitemap.xml and robots.txt.`,
         workedHours: 0,
         neededHours: 3
@@ -33,11 +28,6 @@ export default [
         taskName: `Handle slider hover through state?`,
         workedHours: 0,
         neededHours: 10
-    },
-    {
-        taskName: `Don't show verse hover styling when text anchor is the one being hovered? Might not be doable.`,
-        workedHours: 0,
-        neededHours: 5
     },
     {
         taskName: `Figure out best way to deal with sticky hover of tooltips in mobile.`,
