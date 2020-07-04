@@ -1,5 +1,4 @@
 # TODO for scroll refactor
-* Filmstrip cell doesn't show selected when lyrics locked.
 * Have scene index set only after scroll is complete
 * Figure out verse bar determining and reset
 * Confirm that selecting verse during play works again

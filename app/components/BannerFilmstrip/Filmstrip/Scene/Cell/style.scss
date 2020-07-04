@@ -15,8 +15,9 @@
         transition: background-color $transitionDuration__default;
     }
 
+    .TW__lyricsLocked
     .FilmstripScene__selected
-    & {
+    &.FilmstripCell__notCursor {
         background-color: $colour__neutral__dark;
     }
 

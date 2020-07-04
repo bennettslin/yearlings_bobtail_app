@@ -7,11 +7,6 @@
 .VerseColour {
     background-color: $colour__neutral__light;
 
-    .TW__lyricsLocked
-    & {
-        background-color: $colour__neutral__dark;
-    }
-
     .DW__userAgentDesktop
     .TW__lyricsUnlocked
     & {
@@ -23,6 +18,8 @@
             background-color $transitionDuration__faster;
     }
 
+    .TW__lyricsLocked
+    &,
     .TW__lyricsLocked
     .Verse__notCursor.Verse__selected
     & {
