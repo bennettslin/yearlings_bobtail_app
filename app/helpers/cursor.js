@@ -1,3 +1,5 @@
+import { getStartTimeForVerse } from '../api/album/time'
+
 export const getCursorIndex = (
     sliderIndex,
     activatedIndex,
@@ -28,19 +30,15 @@ export const getBeforeOnOrAfter = (
 }
 
 export const getCursorTime = ({
-    selectedTime,
+    lyricSongIndex,
+    verseCursorIndex,
     isActivated,
-    activatedTime,
     isSliderMoving,
-    sliderTime
+    selectedTime
 
 }) => {
-    if (isSliderMoving) {
-        return sliderTime
-    }
-
-    if (isActivated) {
-        return activatedTime
+    if (isActivated || isSliderMoving) {
+        return getStartTimeForVerse(lyricSongIndex, verseCursorIndex)
     }
 
     return selectedTime

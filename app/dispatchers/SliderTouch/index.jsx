@@ -2,7 +2,6 @@ import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import VerseDispatcher from '../Verse'
 import { updateSliderStore } from '../../redux/slider/action'
-import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
 import { getVerseIndexforRatio } from '../../helpers/verse'
@@ -64,10 +63,6 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
             sliderSceneIndex: getSceneIndexForVerse(
                 selectedSongIndex,
                 sliderVerseIndex
-            ),
-            sliderTime: getStartTimeForVerse(
-                selectedSongIndex,
-                sliderVerseIndex
             )
         }))
 
@@ -118,10 +113,6 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
             dispatch(updateSliderStore({
                 sliderVerseIndex: nextVerseIndex,
                 sliderSceneIndex: getSceneIndexForVerse(
-                    selectedSongIndex,
-                    nextVerseIndex
-                ),
-                sliderTime: getStartTimeForVerse(
                     selectedSongIndex,
                     nextVerseIndex
                 )

@@ -1,5 +1,8 @@
 import { createSelector } from 'reselect'
-import { getStanzaIndexForVerse } from '../../api/album/verses'
+import {
+    getStanzaIndexForVerse,
+    getSceneIndexForVerse
+} from '../../api/album/verses'
 import {
     getCursorIndex,
     getCursorTime,
@@ -7,66 +10,18 @@ import {
 } from '../../helpers/cursor'
 import {
     mapIsActivated,
-    mapActivatedTime,
-    mapActivatedSceneIndex,
     mapActivatedVerseIndex
 } from '../activated/selector'
 import {
     mapLyricSongIndex,
     mapLyricVerseIndex
 } from '../lyric/selector'
-import {
-    mapSelectedTime,
-    mapSelectedSceneIndex
-} from '../selected/selector'
+import { mapSelectedTime } from '../selected/selector'
 import {
     mapIsSliderMoving,
-    mapSliderTime,
-    mapSliderSceneIndex,
     mapSliderVerseIndex
 } from '../slider/selector'
 import { mapIsEitherVerseBarShown } from '../verseBars/selector'
-
-export const mapCursorTime = createSelector(
-    mapSelectedTime,
-    mapIsActivated,
-    mapActivatedTime,
-    mapIsSliderMoving,
-    mapSliderTime,
-    (
-        selectedTime,
-        isActivated,
-        activatedTime,
-        isSliderMoving,
-        sliderTime
-    ) => getCursorTime({
-        selectedTime,
-        isActivated,
-        activatedTime,
-        isSliderMoving,
-        sliderTime
-    })
-)
-
-export const mapSceneCursorIndex = createSelector(
-    mapSliderSceneIndex,
-    mapActivatedSceneIndex,
-    mapSelectedSceneIndex,
-    (
-        sliderSceneIndex,
-        activatedSceneIndex,
-        selectedSceneIndex
-    ) => getCursorIndex(
-        sliderSceneIndex,
-        activatedSceneIndex,
-        selectedSceneIndex
-    )
-)
-
-export const getMapIsSceneCursor = sceneIndex => createSelector(
-    mapSceneCursorIndex,
-    sceneCursorIndex => sceneIndex === sceneCursorIndex
-)
 
 export const mapVerseCursorIndex = createSelector(
     mapSliderVerseIndex,
@@ -83,7 +38,7 @@ export const mapVerseCursorIndex = createSelector(
     )
 )
 
-export const getMapIsVerseCursor = ({
+export const getMapIsShownVerseCursor = ({
     verseIndex,
     inSlider,
     inVerseBar
@@ -102,6 +57,23 @@ export const getMapIsVerseCursor = ({
     })
 )
 
+export const mapSceneCursorIndex = createSelector(
+    mapLyricSongIndex,
+    mapVerseCursorIndex,
+    (
+        lyricSongIndex,
+        verseCursorIndex
+    ) => getSceneIndexForVerse(
+        lyricSongIndex,
+        verseCursorIndex
+    )
+)
+
+export const getMapIsSceneCursor = sceneIndex => createSelector(
+    mapSceneCursorIndex,
+    sceneCursorIndex => sceneIndex === sceneCursorIndex
+)
+
 export const getMapIsStanzaCursor = stanzaIndex => createSelector(
     mapLyricSongIndex,
     mapVerseCursorIndex,
@@ -114,4 +86,25 @@ export const getMapIsStanzaCursor = stanzaIndex => createSelector(
             verseCursorIndex
         )
     )
+)
+
+export const mapCursorTime = createSelector(
+    mapLyricSongIndex,
+    mapVerseCursorIndex,
+    mapIsActivated,
+    mapIsSliderMoving,
+    mapSelectedTime,
+    (
+        lyricSongIndex,
+        verseCursorIndex,
+        isActivated,
+        isSliderMoving,
+        selectedTime
+    ) => getCursorTime({
+        lyricSongIndex,
+        verseCursorIndex,
+        isActivated,
+        isSliderMoving,
+        selectedTime
+    })
 )
