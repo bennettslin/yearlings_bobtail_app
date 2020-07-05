@@ -60,7 +60,6 @@ const AudioManager = ({ setPlayerTime }) => {
 
         // If current time is in selected verse, just update time.
         if (isTimeInSelectedVerse) {
-            dispatch(updateSelectedStore({ selectedTime: currentTime }))
             setPlayerTime(currentTime)
 
         // If it's in the next verse, update time and verse.

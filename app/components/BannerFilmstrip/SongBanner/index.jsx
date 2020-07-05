@@ -125,7 +125,7 @@ const SongBanner = ({ playerTime }) => {
         onMouseMove()
     }, [selectedSongIndex])
 
-    console.log('selectedTime', playerTime)
+    console.log('player time', playerTime)
 
     return (
         <div

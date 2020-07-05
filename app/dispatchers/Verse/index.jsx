@@ -2,7 +2,6 @@ import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAudioStore } from '../../redux/audio/action'
 import { updateSelectedStore } from '../../redux/selected/action'
-import { getStartTimeForVerse } from '../../api/album/time'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { mapLyricVerseIndex } from '../../redux/lyric/selector'
 import { scrollLyricForVerseSelect } from '../../redux/scrollLyric/action'
@@ -30,12 +29,9 @@ const VerseDispatcher = forwardRef((props, ref) => {
             }))
 
             dispatch(updateSelectedStore({
-                selectedVerseIndex: verseIndex,
-                selectedTime: getStartTimeForVerse(
-                    selectedSongIndex,
-                    verseIndex
-                )
+                selectedVerseIndex: verseIndex
             }))
+            // TODO: setPlayerTime
 
             logSelect({
                 action: 'verse',

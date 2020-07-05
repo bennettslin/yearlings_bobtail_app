@@ -12,15 +12,12 @@ const TimeVerseDispatcher = forwardRef((props, ref) => {
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isAutoScroll = useSelector(mapIsAutoScroll)
 
-    const dispatchTimeVerse = ({
-        currentTime = 0,
-        nextVerseIndex = 0
-    } = {}) => {
+    const dispatchTimeVerse = ({ nextVerseIndex = 0 } = {}) => {
         // This is only ever called by the player.
         dispatch(updateSelectedStore({
-            selectedVerseIndex: nextVerseIndex,
-            selectedTime: currentTime
+            selectedVerseIndex: nextVerseIndex
         }))
+        // TODO: setPlayerTime
 
         logSelect({
             action: 'playerVerse',
