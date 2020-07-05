@@ -45,7 +45,6 @@ const ScrollLyricListener = ({
                 isSceneScrollComplete: true
             }))
         }
-        dispatch(resetScrollLyricStore())
     }
 
     const dispatchScroll = () => {
@@ -66,7 +65,7 @@ const ScrollLyricListener = ({
             noDuration: isScrollLyricForSongSelect,
 
             // Set timeout to ensure that scroll is truly complete.
-            callback: () => setTimeout(() => dispatchCallback(index), 0)
+            callback: () => setTimeout(() => dispatchCallback(index), 25)
         })
     }
 
@@ -79,8 +78,10 @@ const ScrollLyricListener = ({
              */
             setTimeout(
                 dispatchScroll,
-                0
+                25
             )
+
+            dispatch(resetScrollLyricStore())
         }
     }, [scrollLyricLog])
 

@@ -50,7 +50,7 @@ const ScrollDispatcher = forwardRef(({
             })
             scrollIntoView(element, {
                 align: alignForScroll,
-                time: noDuration ? 0 : 500,
+                time: noDuration ? 0 : 750,
                 validTarget: element => element === getScrollParent(),
                 maxSynchronousAlignments: 1
             }, callback)

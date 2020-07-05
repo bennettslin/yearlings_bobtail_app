@@ -1,5 +1,4 @@
 # TODO for scroll refactor
-* Can't scroll through verses in succession, previous cancels next. This messes up verse bars as well.
 * When selecting a new verse, tracker length sometimes starts full, then empties.
 * Experiment with removing from reducers and putting back in listeners?
 
