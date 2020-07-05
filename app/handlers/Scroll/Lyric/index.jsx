@@ -74,11 +74,12 @@ const ScrollLyricListener = ({
         if (scrollLyricLog) {
             /**
              * This allows some rendering to take place first, that might
-             * otherwise block scroll performance. Value determined by feel.
+             * otherwise block scroll performance. Actual duration doesn't seem
+             * to matter.
              */
             setTimeout(
                 dispatchScroll,
-                isScrollLyricForVerseSelect ? 200 : 0
+                0
             )
         }
     }, [scrollLyricLog])
