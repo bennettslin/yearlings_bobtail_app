@@ -4837,6 +4837,6 @@ export default [
     },
     {
         taskName: `Scroll refactor.`,
-        workedHours: 46
+        workedHours: 58
     }
 ]

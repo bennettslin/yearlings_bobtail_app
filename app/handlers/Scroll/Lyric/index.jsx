@@ -2,11 +2,8 @@ import React, { memo, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import ScrollDispatcher from '../Dispatcher'
+import { updateEntranceStore } from '../../../redux/entrance/action'
 import { resetScrollLyricStore } from '../../../redux/scrollLyric/action'
-import {
-    ANCHOR_SCROLL,
-    VERSE_SCROLL
-} from '../../../constants/scroll'
 import { mapLyricVerseIndex } from '../../../redux/lyric/selector'
 import {
     mapScrollLyricLog,
@@ -15,7 +12,11 @@ import {
     mapIsScrollLyricForSongSelect,
     mapIsScrollLyricForVerseSelect
 } from '../../../redux/scrollLyric/selector'
-import { updateEntranceStore } from '../../../redux/entrance/action'
+import { mapCanLyricScroll } from '../../../redux/scroll/selector'
+import {
+    ANCHOR_SCROLL,
+    VERSE_SCROLL
+} from '../../../constants/scroll'
 
 const ScrollLyricListener = ({
     getLyricScrollElement,
@@ -26,6 +27,7 @@ const ScrollLyricListener = ({
     const
         dispatch = useDispatch(),
         scrollElementIntoView = useRef(),
+        canLyricScroll = useSelector(mapCanLyricScroll),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         scrollLyricLog = useSelector(mapScrollLyricLog),
         scrollLyricByAnchor = useSelector(mapScrollLyricByAnchor),
@@ -68,7 +70,7 @@ const ScrollLyricListener = ({
     }
 
     useEffect(() => {
-        if (scrollLyricLog) {
+        if (scrollLyricLog && canLyricScroll) {
             /**
              * This allows some rendering to take place first, that might
              * otherwise block scroll performance. Actual duration doesn't seem
@@ -78,9 +80,8 @@ const ScrollLyricListener = ({
                 dispatchScroll,
                 25
             )
-
-            dispatch(resetScrollLyricStore())
         }
+        dispatch(resetScrollLyricStore())
     }, [scrollLyricLog])
 
     return (

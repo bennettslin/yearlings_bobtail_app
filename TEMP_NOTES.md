@@ -1,12 +1,7 @@
 # Issues
-* Is song selection still slower through access after refactor?
-
-# Entrance refactor revisit
-* Song change transition is still kind of janky.
+* Should reset selected verse when picking songs in rapid succession.
 * Get selected time from context, to bypass so many Redux cycles?
-
-# Pre-Gatsby bugs
-* Verse scroll key doesn't always work.
+* Is song selection still slower through access after refactor?
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.

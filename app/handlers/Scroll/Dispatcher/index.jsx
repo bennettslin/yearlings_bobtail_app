@@ -4,10 +4,7 @@ import { useSelector } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
 import { ANCHOR_SCROLL } from '../../../constants/scroll'
 import { getSafeScrollChild } from '../../../helpers/scroll'
-import {
-    getMapAlignForScroll,
-    mapCanScroll
-} from '../../../redux/scroll/selector'
+import { getMapAlignForScroll } from '../../../redux/scroll/selector'
 
 const ScrollDispatcher = forwardRef(({
     isCarousel,
@@ -15,9 +12,7 @@ const ScrollDispatcher = forwardRef(({
     getScrollChild
 
 }, ref) => {
-    const
-        alignForScroll = useSelector(getMapAlignForScroll(isCarousel)),
-        canScroll = useSelector(mapCanScroll(isCarousel))
+    const alignForScroll = useSelector(getMapAlignForScroll(isCarousel))
 
     const scrollElementIntoView = ({
         log = '',
@@ -27,10 +22,6 @@ const ScrollDispatcher = forwardRef(({
         callback
 
     }) => {
-        if (!canScroll) {
-            return
-        }
-
         const element =
             getScrollChild(
                 index,

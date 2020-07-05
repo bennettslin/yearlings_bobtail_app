@@ -43,7 +43,7 @@ export const getMapAlignForScroll = isCarousel => createSelector(
     })
 )
 
-const mapCanCarouselScroll = createSelector(
+export const mapCanCarouselScroll = createSelector(
     mapIsCarouselShown,
     mapIsLyricLogue,
     (
@@ -55,7 +55,7 @@ const mapCanCarouselScroll = createSelector(
     })
 )
 
-const mapCanLyricScroll = createSelector(
+export const mapCanLyricScroll = createSelector(
     mapIsPlaying,
     mapIsLyricLogue,
     mapScrollLyricAlways,
@@ -81,15 +81,3 @@ const mapCanLyricScroll = createSelector(
         isHeightlessLyric
     })
 )
-
-export const mapCanScroll = isCarousel => createSelector(
-    mapCanCarouselScroll,
-    mapCanLyricScroll,
-    (
-        canCarouselScroll,
-        canLyricScroll
-    ) => (
-        isCarousel ? canCarouselScroll : canLyricScroll
-    )
-)
-

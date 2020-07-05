@@ -10,17 +10,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Simplify VerseHoc, reconsider logicSelectors.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Put mapWormholeLinkForDispatch in own dispatch called dispatchWormhole.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Don't use cursor width to determine whether to render tracker in Filmstrip Cell?`,
         workedHours: 0,
         neededHours: 1
     },
