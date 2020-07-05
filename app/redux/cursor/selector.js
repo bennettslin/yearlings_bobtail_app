@@ -10,25 +10,25 @@ import {
 } from '../../helpers/cursor'
 import { mapActivatedVerseIndex } from '../activated/selector'
 import {
-    mapLyricSongIndex,
-    mapLyricVerseIndex
-} from '../lyric/selector'
-import { mapSelectedTime } from '../selected/selector'
+    mapSelectedSongIndex,
+    mapSelectedVerseIndex,
+    mapSelectedTime
+} from '../selected/selector'
 import { mapSliderVerseIndex } from '../slider/selector'
 import { mapIsEitherVerseBarShown } from '../verseBars/selector'
 
 export const mapVerseCursorIndex = createSelector(
     mapSliderVerseIndex,
     mapActivatedVerseIndex,
-    mapLyricVerseIndex,
+    mapSelectedVerseIndex,
     (
         sliderVerseIndex,
         activatedVerseIndex,
-        lyricVerseIndex
+        selectedVerseIndex
     ) => getCursorIndex(
         sliderVerseIndex,
         activatedVerseIndex,
-        lyricVerseIndex
+        selectedVerseIndex
     )
 )
 
@@ -52,13 +52,13 @@ export const getMapIsShownVerseCursor = ({
 )
 
 export const mapSceneCursorIndex = createSelector(
-    mapLyricSongIndex,
+    mapSelectedSongIndex,
     mapVerseCursorIndex,
     (
-        lyricSongIndex,
+        selectedSongIndex,
         verseCursorIndex
     ) => getSceneIndexForVerse(
-        lyricSongIndex,
+        selectedSongIndex,
         verseCursorIndex
     )
 )
@@ -69,31 +69,31 @@ export const getMapIsSceneCursor = sceneIndex => createSelector(
 )
 
 export const getMapIsStanzaCursor = stanzaIndex => createSelector(
-    mapLyricSongIndex,
+    mapSelectedSongIndex,
     mapVerseCursorIndex,
     (
-        lyricSongIndex,
+        selectedSongIndex,
         verseCursorIndex
     ) => (
         stanzaIndex === getStanzaIndexForVerse(
-            lyricSongIndex,
+            selectedSongIndex,
             verseCursorIndex
         )
     )
 )
 
 export const mapCursorTime = createSelector(
-    mapLyricSongIndex,
+    mapSelectedSongIndex,
     mapActivatedVerseIndex,
     mapSliderVerseIndex,
     mapSelectedTime,
     (
-        lyricSongIndex,
+        selectedSongIndex,
         activatedVerseIndex,
         sliderVerseIndex,
         selectedTime
     ) => getCursorTime({
-        lyricSongIndex,
+        selectedSongIndex,
         activatedVerseIndex,
         sliderVerseIndex,
         selectedTime

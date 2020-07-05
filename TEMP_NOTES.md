@@ -1,5 +1,4 @@
 # Issues
-* Should reset selected verse when picking songs in rapid succession.
 * Get selected time from context, to bypass so many Redux cycles?
 * Is song selection still slower through access after refactor?
 
