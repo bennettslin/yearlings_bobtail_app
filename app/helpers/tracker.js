@@ -9,13 +9,18 @@ import { getSongIsLogue } from '../api/album/songs'
 
 export const getSongTrackerWidth = ({
     isBannerHovering,
-    bannerHoverTime,
-    cursorTime,
-    selectedSongIndex
-
+    bannerHoverVerseIndex,
+    selectedSongIndex,
+    cursorTime
 }) => {
     const
-        playedTime = isBannerHovering ? bannerHoverTime : cursorTime,
+        playedTime =
+            isBannerHovering ?
+                getStartTimeForVerse(
+                    selectedSongIndex,
+                    bannerHoverVerseIndex
+                ) :
+                cursorTime,
         songDuration = getDurationForSong(selectedSongIndex)
 
     return playedTime / songDuration * 100

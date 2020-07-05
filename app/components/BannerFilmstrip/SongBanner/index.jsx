@@ -10,7 +10,6 @@ import Tracker from '../../Tracker'
 import SongBannerTimer from './Timer'
 import SongBannerTitle from './Title'
 import { getSongIsLogue } from '../../../api/album/songs'
-import { getStartTimeForVerse } from '../../../api/album/time'
 import { getClientX } from '../../../helpers/dom'
 import { getVerseIndexFromClientX } from './helper'
 import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
@@ -22,8 +21,7 @@ import {
 } from '../../../redux/banner/selector'
 import {
     mapSelectedSongIndex,
-    mapIsSelectedLogue,
-    mapSelectedTime
+    mapIsSelectedLogue
 } from '../../../redux/selected/selector'
 import { mapIsLyricsLocked } from '../../../redux/slider/selector'
 import { mapSongTrackerWidth } from '../../../redux/tracker/selector'
@@ -42,7 +40,6 @@ const SongBanner = ({ playerTime }) => {
         songTrackerWidth = useSelector(mapSongTrackerWidth),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
-        selectedTime = useSelector(mapSelectedTime),
         isLyricsLocked = useSelector(mapIsLyricsLocked),
         [clientX, setClientX] = useState(0)
 
@@ -65,39 +62,28 @@ const SongBanner = ({ playerTime }) => {
         dispatch(updateBannerStore())
     }
 
+    const _updateBannerHoverStatus = e => {
+        dispatch(updateBannerStore({
+            bannerHoverVerseIndex: getVerseIndexFromEvent(e)
+        }))
+    }
+
     const onMouseMove = e => {
         if (!isBannerHovering) {
             // Do not proceed if we are not in banner hovering state.
             return
         }
 
-        const bannerHoverVerseIndex = getVerseIndexFromEvent(e)
-
-        dispatch(updateBannerStore({
-            bannerHoverVerseIndex,
-            bannerHoverTime: getStartTimeForVerse(
-                selectedSongIndex,
-                bannerHoverVerseIndex
-            )
-        }))
+        _updateBannerHoverStatus(e)
     }
 
     const onMouseEnter = e => {
-        if (
-            isLyricsLocked ||
-            getSongIsLogue(selectedSongIndex)
-        ) {
+        if (isLyricsLocked || getSongIsLogue(selectedSongIndex)) {
             // Do not toggle banner hovering state.
             return
         }
 
-        dispatch(updateBannerStore({
-            isBannerHovering: true,
-
-            // Begin from selected time to keep tracker animation smooth.
-            bannerHoverTime: selectedTime
-        }))
-        onMouseMove(e)
+        _updateBannerHoverStatus(e)
     }
 
     const onClick = e => {

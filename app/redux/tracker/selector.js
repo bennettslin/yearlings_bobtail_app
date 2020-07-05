@@ -7,7 +7,7 @@ import {
 import { mapSelectedSongIndex } from '../selected/selector'
 import {
     mapIsBannerHovering,
-    mapBannerHoverTime
+    mapBannerHoverVerseIndex
 } from '../banner/selector'
 import {
     mapSceneCursorIndex,
@@ -17,19 +17,19 @@ import {
 
 export const mapSongTrackerWidth = createSelector(
     mapIsBannerHovering,
-    mapBannerHoverTime,
-    mapCursorTime,
+    mapBannerHoverVerseIndex,
     mapSelectedSongIndex,
+    mapCursorTime,
     (
         isBannerHovering,
-        bannerHoverTime,
-        cursorTime,
-        selectedSongIndex
+        bannerHoverVerseIndex,
+        selectedSongIndex,
+        cursorTime
     ) => getSongTrackerWidth({
         isBannerHovering,
-        bannerHoverTime,
-        cursorTime,
-        selectedSongIndex
+        bannerHoverVerseIndex,
+        selectedSongIndex,
+        cursorTime
     })
 )
 

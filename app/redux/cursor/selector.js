@@ -11,8 +11,7 @@ import {
 import { mapActivatedVerseIndex } from '../activated/selector'
 import {
     mapSelectedSongIndex,
-    mapSelectedVerseIndex,
-    mapSelectedTime
+    mapSelectedVerseIndex
 } from '../selected/selector'
 import { mapSliderVerseIndex } from '../slider/selector'
 import { mapIsEitherVerseBarShown } from '../verseBars/selector'
@@ -84,18 +83,12 @@ export const getMapIsStanzaCursor = stanzaIndex => createSelector(
 
 export const mapCursorTime = createSelector(
     mapSelectedSongIndex,
-    mapActivatedVerseIndex,
-    mapSliderVerseIndex,
-    mapSelectedTime,
+    mapVerseCursorIndex,
     (
         selectedSongIndex,
-        activatedVerseIndex,
-        sliderVerseIndex,
-        selectedTime
-    ) => getCursorTime({
+        verseCursorIndex
+    ) => getCursorTime(
         selectedSongIndex,
-        activatedVerseIndex,
-        sliderVerseIndex,
-        selectedTime
-    })
+        verseCursorIndex
+    )
 )
