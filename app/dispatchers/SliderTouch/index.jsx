@@ -2,7 +2,6 @@ import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import VerseDispatcher from '../Verse'
 import { updateSliderStore } from '../../redux/slider/action'
-import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
 import { getVerseIndexforRatio } from '../../helpers/verse'
 import {
@@ -44,25 +43,19 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
         },
         clientX
     ) => {
-        const
-            sliderRatio = getElementRatioForClientX({
-                clientX,
-                elementLeft: sliderLeft,
-                elementWidth: sliderWidth
-            }),
-            sliderVerseIndex = getVerseIndexforRatio(
-                selectedSongIndex,
-                sliderRatio
-            )
+        const sliderRatio = getElementRatioForClientX({
+            clientX,
+            elementLeft: sliderLeft,
+            elementWidth: sliderWidth
+        })
 
         dispatch(updateSliderStore({
             isSliderTouched: true,
             sliderLeft,
             sliderWidth,
-            sliderVerseIndex,
-            sliderSceneIndex: getSceneIndexForVerse(
+            sliderVerseIndex: getVerseIndexforRatio(
                 selectedSongIndex,
-                sliderVerseIndex
+                sliderRatio
             )
         }))
 
@@ -93,7 +86,6 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
 
     const _touchBodyMove = (clientX) => {
         const
-            // TODO: Make this a selector.
             sliderRatio = getElementRatioForClientX({
                 clientX,
                 elementLeft: sliderLeft,
@@ -111,11 +103,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
         }
         if (nextVerseIndex !== sliderVerseIndex) {
             dispatch(updateSliderStore({
-                sliderVerseIndex: nextVerseIndex,
-                sliderSceneIndex: getSceneIndexForVerse(
-                    selectedSongIndex,
-                    nextVerseIndex
-                )
+                sliderVerseIndex: nextVerseIndex
             }))
         }
     }
@@ -123,7 +111,6 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
     // TODO: These can easily just be a single method.
     const dispatchTouchMove = e => {
         if (isSliderTouched) {
-
             const clientX = getClientX(e)
 
             if (Number.isFinite(clientX)) {

@@ -22,15 +22,6 @@ export const mapSliderVerseIndex = (
     { [SLIDER_STORE]: { sliderVerseIndex } }
 ) => sliderVerseIndex
 
-const mapSliderSceneIndex = (
-    { [SLIDER_STORE]: { sliderSceneIndex } }
-) => sliderSceneIndex
-
-export const getMapIsSceneSlid = sceneIndex => createSelector(
-    mapSliderSceneIndex,
-    sliderSceneIndex => sceneIndex === sliderSceneIndex
-)
-
 export const mapIsLyricsLocked = createSelector(
     mapIsActivated,
     mapIsSliderMoving,

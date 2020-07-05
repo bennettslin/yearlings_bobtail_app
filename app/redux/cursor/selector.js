@@ -8,19 +8,13 @@ import {
     getCursorTime,
     getIsVerseCursor
 } from '../../helpers/cursor'
-import {
-    mapIsActivated,
-    mapActivatedVerseIndex
-} from '../activated/selector'
+import { mapActivatedVerseIndex } from '../activated/selector'
 import {
     mapLyricSongIndex,
     mapLyricVerseIndex
 } from '../lyric/selector'
 import { mapSelectedTime } from '../selected/selector'
-import {
-    mapIsSliderMoving,
-    mapSliderVerseIndex
-} from '../slider/selector'
+import { mapSliderVerseIndex } from '../slider/selector'
 import { mapIsEitherVerseBarShown } from '../verseBars/selector'
 
 export const mapVerseCursorIndex = createSelector(
@@ -90,21 +84,18 @@ export const getMapIsStanzaCursor = stanzaIndex => createSelector(
 
 export const mapCursorTime = createSelector(
     mapLyricSongIndex,
-    mapVerseCursorIndex,
-    mapIsActivated,
-    mapIsSliderMoving,
+    mapActivatedVerseIndex,
+    mapSliderVerseIndex,
     mapSelectedTime,
     (
         lyricSongIndex,
-        verseCursorIndex,
-        isActivated,
-        isSliderMoving,
+        activatedVerseIndex,
+        sliderVerseIndex,
         selectedTime
     ) => getCursorTime({
         lyricSongIndex,
-        verseCursorIndex,
-        isActivated,
-        isSliderMoving,
+        activatedVerseIndex,
+        sliderVerseIndex,
         selectedTime
     })
 )

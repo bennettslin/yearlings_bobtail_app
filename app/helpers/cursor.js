@@ -31,14 +31,16 @@ export const getBeforeOnOrAfter = (
 
 export const getCursorTime = ({
     lyricSongIndex,
-    verseCursorIndex,
-    isActivated,
-    isSliderMoving,
+    activatedVerseIndex,
+    sliderVerseIndex,
     selectedTime
 
 }) => {
-    if (isActivated || isSliderMoving) {
-        return getStartTimeForVerse(lyricSongIndex, verseCursorIndex)
+    if (activatedVerseIndex > -1) {
+        return getStartTimeForVerse(lyricSongIndex, activatedVerseIndex)
+
+    } else if (sliderVerseIndex > -1) {
+        return getStartTimeForVerse(lyricSongIndex, sliderVerseIndex)
     }
 
     return selectedTime

@@ -1,5 +1,4 @@
 # TODO for scroll refactor
-* When selecting a new verse, tracker length sometimes starts full, then empties.
 * Experiment with removing from reducers and putting back in listeners?
 
 # Issues
