@@ -18,7 +18,14 @@ const Curtains = () => {
 
     const onExited = () => {
         logTransition('Curtains did close.')
-        dispatch(updateEntranceStore({ didCurtainsClose: true }))
+
+        /**
+         * This timeout allows the curtains to close completely, making the
+         * transition between songs less janky.
+         */
+        setTimeout(() => dispatch(updateEntranceStore({
+            didCurtainsClose: true
+        })), 50)
     }
 
     const onEntered = () => {

@@ -5,7 +5,7 @@ import {
     resetSongChange
 } from '../../redux/entrance/action'
 import { updateLyricStore } from '../../redux/lyric/action'
-import { scrollCarouselForSongChange } from '../../redux/scrollCarousel/action'
+import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import {
@@ -28,7 +28,22 @@ const SongChangeManager = () => {
     timeoutRef.current = { songSelectTimeoutId }
 
     const completeSongSelect = () => {
-        dispatch(updateEntranceStore({ isSongSelectionComplete: true }))
+        dispatch(updateEntranceStore({
+            isSongSelectionComplete: true,
+
+            /**
+             * There is no scene scroll upon song select, so just set this to
+             * true here and now.
+             */
+            isSceneScrollComplete: true
+        }))
+    }
+
+    const scrollForSongSelect = () => {
+        dispatch(scrollCarouselForSongSelect(
+            selectedAnnotationIndex
+        ))
+        dispatch(scrollLyricForSongSelect())
     }
 
     useEffect(() => {
@@ -51,12 +66,6 @@ const SongChangeManager = () => {
     }, [selectedSongIndex])
 
     useEffect(() => {
-        // Scroll upon mount.
-        dispatch(scrollCarouselForSongChange(
-            selectedAnnotationIndex
-        ))
-        dispatch(scrollLyricForSongSelect())
-
         if (didMount) {
             if (isSongChangeDone) {
                 dispatch(updateLyricStore({
@@ -64,9 +73,15 @@ const SongChangeManager = () => {
                     lyricVerseIndex: selectedVerseIndex,
                     lyricAnnotationIndex: selectedAnnotationIndex
                 }))
+
+                // Scroll upon completion of subsequent song changes.
+                scrollForSongSelect()
             }
         } else {
             setDidMount(true)
+
+            // Scroll upon initial mount.
+            scrollForSongSelect()
         }
     }, [isSongChangeDone])
 

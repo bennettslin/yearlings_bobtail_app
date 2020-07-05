@@ -40,10 +40,8 @@ const ScrollLyricListener = ({
     )
 
     const dispatchCallback = () => {
-        if (isScrollLyricForSongSelect || isScrollLyricForVerseSelect) {
-            dispatch(updateEntranceStore({
-                isSceneScrollComplete: true
-            }))
+        if (isScrollLyricForVerseSelect) {
+            dispatch(updateEntranceStore({ isSceneScrollComplete: true }))
         }
     }
 

@@ -10,7 +10,7 @@ export const scrollCarouselToAnnotation = (log, index) => ({
     }
 })
 
-export const scrollCarouselForSongChange = index => ({
+export const scrollCarouselForSongSelect = index => ({
     type: SCROLL_CAROUSEL_STORE,
     payload: {
         scrollCarouselLog: 'Song change scrolled',

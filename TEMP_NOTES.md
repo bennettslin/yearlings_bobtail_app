@@ -3,6 +3,7 @@
 
 # Entrance refactor revisit
 * Song change transition is still kind of janky.
+* Get selected time from context, to bypass so many Redux cycles?
 
 # Pre-Gatsby bugs
 * Verse scroll key doesn't always work.
