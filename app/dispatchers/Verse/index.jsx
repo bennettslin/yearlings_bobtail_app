@@ -1,5 +1,6 @@
 import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { updateAudioStore } from '../../redux/audio/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { getStartTimeForVerse } from '../../api/album/time'
 import { updateActivatedStore } from '../../redux/activated/action'
@@ -24,6 +25,10 @@ const VerseDispatcher = forwardRef((props, ref) => {
 
         // Only dispatch if verse has changed.
         if (lyricVerseIndex !== verseIndex) {
+            dispatch(updateAudioStore({
+                queuedPromisePlay: true
+            }))
+
             dispatch(updateSelectedStore({
                 selectedVerseIndex: verseIndex,
                 selectedTime: getStartTimeForVerse(

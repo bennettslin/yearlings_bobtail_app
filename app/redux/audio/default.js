@@ -1,5 +1,6 @@
 export const QUEUED_AUDIO_DEFAULTS = {
-    queuedPlayFromLogue: false
+    queuedPlayFromLogue: false,
+    queuedPromisePlay: false
 }
 
 export const AUDIO_DEFAULTS = {
