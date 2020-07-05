@@ -17,9 +17,11 @@ import {
     AUDIO_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
 import { toggleAudioOptionIndex } from '../../redux/session/action'
-import { mapIsPlaying } from '../../redux/audio/selector'
+import {
+    mapIsPlaying,
+    mapIsPlayButtonEnabled
+} from '../../redux/audio/selector'
 import { mapIsDesktopWidth } from '../../redux/device/selector'
-import { mapPlayerCanPlayThrough } from '../../redux/players/selector'
 import {
     mapIsSelectedPrologue,
     mapIsSelectedEpilogue
@@ -66,7 +68,7 @@ const Audio = () => {
         dispatchSong = useRef(),
         isPlaying = useSelector(mapIsPlaying),
         isTwoRowMenu = useSelector(mapIsTwoRowMenu),
-        playerCanPlayThrough = useSelector(mapPlayerCanPlayThrough),
+        isPlayButtonEnabled = useSelector(mapIsPlayButtonEnabled),
         isPrologue = useSelector(mapIsSelectedPrologue),
         isEpilogue = useSelector(mapIsSelectedEpilogue),
         audioOptionIndex = useSelector(mapAudioOptionIndex),
@@ -97,7 +99,7 @@ const Audio = () => {
             {
                 isPulsateAnimated: isPrologue,
                 buttonIdentifier: isPlaying,
-                isDisabled: !playerCanPlayThrough,
+                isDisabled: !isPlayButtonEnabled,
                 handleButtonClick: _handlePlayClick
             },
             {

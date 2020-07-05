@@ -2,7 +2,6 @@
 * Experiment with removing from reducers and putting back in listeners?
 
 # Issues
-* What is mapIsSelectPlayReady?
 * Is song selection still slower through access after refactor?
 
 # Entrance refactor revisit
@@ -17,7 +16,6 @@
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * tips hand in garryowen for score
-* Do I really want scene activation to work as it does, where you need to go next, then previous, before hitting selected verse that is not the start of scene?
 
 # Easy tasks
 * Slider verse select ranges don't really align with hover ranges.

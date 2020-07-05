@@ -46,8 +46,7 @@ const SongDispatcher = forwardRef((props, ref) => {
         }
 
         dispatch(updateAudioStore({
-            queuedPlayFromLogue: isPlayFromLogue,
-            queuedPlaySongIndex: nextSongIndex
+            queuedPlayFromLogue: isPlayFromLogue
         }))
 
         const selectedTime = getStartTimeForVerse(
