@@ -3,7 +3,6 @@ import {
     getSongIsPrologue,
     getSongIsEpilogue
 } from '../../api/album/songs'
-import { getStartTimeForVerse } from '../../api/album/time'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getBeforeOnOrAfter } from '../../helpers/cursor'
 import { SELECTED_STORE } from '../../constants/store'
@@ -71,16 +70,4 @@ export const mapIsSelectedPrologue = createSelector(
 export const mapIsSelectedEpilogue = createSelector(
     mapSelectedSongIndex,
     selectedSongIndex => getSongIsEpilogue(selectedSongIndex)
-)
-
-export const mapSelectedTime = createSelector(
-    mapSelectedSongIndex,
-    mapSelectedVerseIndex,
-    (
-        selectedSongIndex,
-        selectedVerseIndex
-    ) => getStartTimeForVerse(
-        selectedSongIndex,
-        selectedVerseIndex
-    )
 )

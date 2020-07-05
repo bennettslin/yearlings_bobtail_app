@@ -1,7 +1,4 @@
 # Issues
-* Get selected time from context, to bypass so many Redux cycles?
-    * Player paused time can just be selected time
-    * Maybe don't need time verse dispatcher
 * Is song selection still slower through access after refactor?
 
 # Post-Gatsby bugs

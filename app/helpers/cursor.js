@@ -35,6 +35,22 @@ export const getCursorTime = (
 
 ) => getStartTimeForVerse(songIndex, verseIndex)
 
+export const getSongCursorTime = ({
+    bannerHoverTime,
+    cursorTime,
+    playerTime,
+    isPlaying
+
+}) => {
+    if (bannerHoverTime > -1) {
+        return bannerHoverTime
+    } else if (isPlaying) {
+        return playerTime
+    } else {
+        return cursorTime
+    }
+}
+
 export const getIsVerseCursor = ({
     verseIndex,
     verseCursorIndex,

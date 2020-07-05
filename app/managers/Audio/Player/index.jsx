@@ -50,8 +50,11 @@ const Player = ({
         isReadyToPromisePlay = useSelector(mapIsReadyToPromisePlay),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
-    const setCurrentTime = (time = playerPausedTime) => {
-        audioPlayerElement.current.currentTime = time
+    const setCurrentTime = (currentTime = playerPausedTime) => {
+        audioPlayerElement.current.currentTime = currentTime
+        if (isSelected) {
+            updateCurrentTime({ currentTime })
+        }
     }
 
     const dispatchIsPlayingIfSelected = isPlaying => {
@@ -126,7 +129,10 @@ const Player = ({
             const {
                 songEnded,
                 doRepeat
-            } = updateCurrentTime(currentTime)
+            } = updateCurrentTime({
+                currentTime,
+                fromListen: true
+            })
 
             if (songEnded) {
                 logEndByFinalVerse(songIndex)

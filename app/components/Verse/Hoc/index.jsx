@@ -2,12 +2,10 @@ import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import Tracker from '../../Tracker'
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
 import { getMapIsShownVerseCursor } from '../../../redux/cursor/selector'
 import { getMapIsVerseSelected } from '../../../redux/selected/selector'
-import { getMapVerseTrackerLength } from '../../../redux/tracker/selector'
 import './style'
 
 const VerseHoc = forwardRef(({
@@ -41,7 +39,6 @@ const VerseHoc = forwardRef(({
             inVerseBar
         })),
         isSelectedVerse = useSelector(getMapIsVerseSelected(verseIndex)),
-        verseTrackerLength = useSelector(getMapVerseTrackerLength(verseIndex)),
         inLyric = inUnit || inVerseBar
 
     return (
@@ -59,19 +56,11 @@ const VerseHoc = forwardRef(({
             <VerseColour
                 {...{
                     verseIndex,
-                    inVerseBar
+                    inVerseBar,
+                    isVertical: inUnit || inVerseBar,
+                    isTrackerShown: isShownVerseCursor
                 }}
-            >
-                {Number.isFinite(verseIndex) && (
-                    <Tracker
-                        {...{
-                            trackerLength: verseTrackerLength,
-                            isVertical: inUnit || inVerseBar,
-                            isNotShown: !isShownVerseCursor
-                        }}
-                    />
-                )}
-            </VerseColour>
+            />
             {!inSlider && !inVerseBar && (
                 <VerseNav
                     {...{

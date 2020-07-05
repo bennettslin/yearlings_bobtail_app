@@ -1,11 +1,10 @@
 // Manager for audio players.
 import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import { updateSelectedStore } from '../../redux/selected/action'
 import SongDispatcher from '../../dispatchers/Song'
-import TimeVerseDispatcher from '../../dispatchers/TimeVerse'
+import VerseDispatcher from '../../dispatchers/Verse'
 import Player from './Player'
 import { getSongNotLogueIndices } from '../../api/album/songs'
 import {
@@ -20,9 +19,8 @@ import { mapAudioOptionIndex } from '../../redux/session/selector'
 
 const AudioManager = ({ setPlayerTime }) => {
     const
-        dispatch = useDispatch(),
         dispatchSong = useRef(),
-        dispatchTimeVerse = useRef(),
+        dispatchVerse = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         audioOptionIndex = useSelector(mapAudioOptionIndex)
@@ -35,7 +33,7 @@ const AudioManager = ({ setPlayerTime }) => {
 
         // If repeating the song, just reset time and verse.
         if (nextSongIndex === selectedSongIndex) {
-            dispatchTimeVerse.current()
+            dispatchVerse.current({ fromPlayer: true })
             return true
 
         } else {
@@ -46,7 +44,17 @@ const AudioManager = ({ setPlayerTime }) => {
         }
     }
 
-    const updateCurrentTime = currentTime => {
+    const updateCurrentTime = ({
+        currentTime,
+        fromListen
+
+    }) => {
+        if (!fromListen) {
+            // If not from listen, just set player time and return.
+            setPlayerTime(currentTime)
+            return
+        }
+
         const {
             isTimeInSelectedVerse,
             isTimeInNextVerse,
@@ -58,16 +66,17 @@ const AudioManager = ({ setPlayerTime }) => {
             selectedVerseIndex
         })
 
-        // If current time is in selected verse, just update time.
-        if (isTimeInSelectedVerse) {
+        if (isTimeInSelectedVerse || isTimeInNextVerse) {
+            // Update time if in selected verse or next verse.
             setPlayerTime(currentTime)
 
-        // If it's in the next verse, update time and verse.
-        } else if (isTimeInNextVerse) {
-            dispatchTimeVerse.current({
-                currentTime,
-                nextVerseIndex
-            })
+            // If in next verse, also select next verse.
+            if (isTimeInNextVerse) {
+                dispatchVerse.current({
+                    verseIndex: nextVerseIndex,
+                    fromPlayer: true
+                })
+            }
 
         } else {
             /**
@@ -110,7 +119,7 @@ const AudioManager = ({ setPlayerTime }) => {
                 />
             ))}
             <SongDispatcher {...{ ref: dispatchSong }} />
-            <TimeVerseDispatcher {...{ ref: dispatchTimeVerse }} />
+            <VerseDispatcher {...{ ref: dispatchVerse }} />
         </div>
     )
 }

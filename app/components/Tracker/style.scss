@@ -9,6 +9,7 @@
     & {
         transition:
             opacity $transitionDuration__instant,
+            height $transitionDuration__slow,
             width $transitionDuration__slow;
     }
 

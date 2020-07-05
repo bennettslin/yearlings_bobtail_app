@@ -1,16 +1,18 @@
 // Component to show the played audio time.
 import React, { memo } from 'react'
+import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
+import PlayerTimeContext from '../../../../contexts/PlayerTime'
 import { getFormattedTime } from '../../../../helpers/format'
-import { mapCursorTime } from '../../../../redux/cursor/selector'
+import { getMapSongCursorTime } from '../../../../redux/cursor/selector'
 import { mapIsSelectedLogue } from '../../../../redux/selected/selector'
 import './style'
 
-const SongBannerTimer = () => {
+const SongBannerTimer = memo(({ playerTime }) => {
     const
         isSelectedLogue = useSelector(mapIsSelectedLogue),
-        cursorTime = useSelector(mapCursorTime)
+        bannerCursorTime = useSelector(getMapSongCursorTime(playerTime))
 
     return !isSelectedLogue && (
         <div className={cx(
@@ -18,9 +20,21 @@ const SongBannerTimer = () => {
             'fCC',
             'abF'
         )}>
-            {getFormattedTime(cursorTime)}
+            {getFormattedTime(bannerCursorTime)}
         </div>
     )
+})
+
+SongBannerTimer.propTypes = {
+    playerTime: PropTypes.number.isRequired
 }
 
-export default memo(SongBannerTimer)
+const SongBannerTimerContainer = () => (
+    <PlayerTimeContext.Consumer>
+        {playerTime => (
+            <SongBannerTimer {...{ playerTime }} />
+        )}
+    </PlayerTimeContext.Consumer>
+)
+
+export default memo(SongBannerTimerContainer)

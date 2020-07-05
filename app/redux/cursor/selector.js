@@ -6,9 +6,12 @@ import {
 import {
     getCursorIndex,
     getCursorTime,
+    getSongCursorTime,
     getIsVerseCursor
 } from '../../helpers/cursor'
 import { mapActivatedVerseIndex } from '../activated/selector'
+import { mapIsPlaying } from '../audio/selector'
+import { mapBannerHoverTime } from '../banner/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex
@@ -91,4 +94,20 @@ export const mapCursorTime = createSelector(
         selectedSongIndex,
         verseCursorIndex
     )
+)
+
+export const getMapSongCursorTime = playerTime => createSelector(
+    mapBannerHoverTime,
+    mapCursorTime,
+    mapIsPlaying,
+    (
+        bannerHoverTime,
+        cursorTime,
+        isPlaying
+    ) => getSongCursorTime({
+        bannerHoverTime,
+        cursorTime,
+        playerTime,
+        isPlaying
+    })
 )

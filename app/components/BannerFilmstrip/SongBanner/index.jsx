@@ -24,10 +24,10 @@ import {
     mapIsSelectedLogue
 } from '../../../redux/selected/selector'
 import { mapIsLyricsLocked } from '../../../redux/slider/selector'
-import { mapSongTrackerWidth } from '../../../redux/tracker/selector'
+import { getMapSongTrackerWidth } from '../../../redux/tracker/selector'
 import './style'
 
-const SongBanner = ({ playerTime }) => {
+const SongBanner = memo(({ playerTime }) => {
     const
         dispatch = useDispatch(),
         songBannerElement = useRef(),
@@ -37,7 +37,7 @@ const SongBanner = ({ playerTime }) => {
         isPlaying = useSelector(mapIsPlaying),
         isBannerHovering = useSelector(mapIsBannerHovering),
         bannerHoverVerseIndex = useSelector(mapBannerHoverVerseIndex),
-        songTrackerWidth = useSelector(mapSongTrackerWidth),
+        songTrackerWidth = useSelector(getMapSongTrackerWidth(playerTime)),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         isLyricsLocked = useSelector(mapIsLyricsLocked),
@@ -63,9 +63,13 @@ const SongBanner = ({ playerTime }) => {
     }
 
     const _updateBannerHoverStatus = e => {
-        dispatch(updateBannerStore({
-            bannerHoverVerseIndex: getVerseIndexFromEvent(e)
-        }))
+        const nextVerseIndex = getVerseIndexFromEvent(e)
+
+        if (bannerHoverVerseIndex !== nextVerseIndex) {
+            dispatch(updateBannerStore({
+                bannerHoverVerseIndex: nextVerseIndex
+            }))
+        }
     }
 
     const onMouseMove = e => {
@@ -125,8 +129,6 @@ const SongBanner = ({ playerTime }) => {
         onMouseMove()
     }, [selectedSongIndex])
 
-    console.log('player time', playerTime)
-
     return (
         <div
             {...{
@@ -170,7 +172,7 @@ const SongBanner = ({ playerTime }) => {
             <VerseDispatcher {...{ ref: dispatchVerse }} />
         </div>
     )
-}
+})
 
 SongBanner.propTypes = {
     playerTime: PropTypes.number.isRequired

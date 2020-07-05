@@ -5,62 +5,75 @@ import {
     getVerseTrackerLength
 } from '../../helpers/tracker'
 import { mapSelectedSongIndex } from '../selected/selector'
-import {
-    mapIsBannerHovering,
-    mapBannerHoverVerseIndex
-} from '../banner/selector'
+import { mapBannerHoverTime } from '../banner/selector'
 import {
     mapSceneCursorIndex,
     mapVerseCursorIndex,
     mapCursorTime
 } from '../cursor/selector'
+import { mapIsPlaying } from '../audio/selector'
 
-export const mapSongTrackerWidth = createSelector(
-    mapIsBannerHovering,
-    mapBannerHoverVerseIndex,
+export const getMapSongTrackerWidth = playerTime => createSelector(
     mapSelectedSongIndex,
+    mapBannerHoverTime,
     mapCursorTime,
+    mapIsPlaying,
     (
-        isBannerHovering,
-        bannerHoverVerseIndex,
         selectedSongIndex,
-        cursorTime
+        bannerHoverTime,
+        cursorTime,
+        isPlaying
     ) => getSongTrackerWidth({
-        isBannerHovering,
-        bannerHoverVerseIndex,
         selectedSongIndex,
-        cursorTime
+        bannerHoverTime,
+        cursorTime,
+        playerTime,
+        isPlaying
     })
 )
 
-export const getMapSceneTrackerWidth = sceneIndex => createSelector(
+export const getMapSceneTrackerWidth = ({
+    sceneIndex,
+    playerTime
+}) => createSelector(
     mapSceneCursorIndex,
     mapSelectedSongIndex,
     mapCursorTime,
+    mapIsPlaying,
     (
         sceneCursorIndex,
         selectedSongIndex,
-        cursorTime
+        cursorTime,
+        isPlaying
     ) => getSceneTrackerWidth({
         sceneIndex,
         sceneCursorIndex,
         selectedSongIndex,
-        cursorTime
+        cursorTime,
+        playerTime,
+        isPlaying
     })
 )
 
-export const getMapVerseTrackerLength = verseIndex => createSelector(
+export const getMapVerseTrackerLength = ({
+    verseIndex,
+    playerTime
+}) => createSelector(
     mapVerseCursorIndex,
     mapSelectedSongIndex,
     mapCursorTime,
+    mapIsPlaying,
     (
         verseCursorIndex,
         selectedSongIndex,
-        cursorTime
+        cursorTime,
+        isPlaying
     ) => getVerseTrackerLength({
         verseIndex,
         verseCursorIndex,
         selectedSongIndex,
-        cursorTime
+        cursorTime,
+        playerTime,
+        isPlaying
     })
 )

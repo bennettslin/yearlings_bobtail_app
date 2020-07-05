@@ -8,29 +8,34 @@ import {
 import { getSongIsLogue } from '../api/album/songs'
 
 export const getSongTrackerWidth = ({
-    isBannerHovering,
-    bannerHoverVerseIndex,
     selectedSongIndex,
-    cursorTime
-}) => {
-    const
-        playedTime =
-            isBannerHovering ?
-                getStartTimeForVerse(
-                    selectedSongIndex,
-                    bannerHoverVerseIndex
-                ) :
-                cursorTime,
-        songDuration = getDurationForSong(selectedSongIndex)
+    bannerHoverTime,
+    cursorTime,
+    playerTime,
+    isPlaying
 
-    return playedTime / songDuration * 100
+}) => {
+    const songDuration = getDurationForSong(selectedSongIndex)
+
+    let trackerTime = cursorTime
+
+    if (bannerHoverTime > -1) {
+        trackerTime = bannerHoverTime
+
+    } else if (isPlaying) {
+        trackerTime = playerTime
+    }
+
+    return trackerTime / songDuration * 100
 }
 
 export const getSceneTrackerWidth = ({
     sceneIndex,
     sceneCursorIndex,
     selectedSongIndex,
-    cursorTime
+    cursorTime,
+    playerTime,
+    isPlaying
 
 }) => {
     if (sceneIndex !== sceneCursorIndex) {
@@ -45,16 +50,19 @@ export const getSceneTrackerWidth = ({
         sceneDuration = getDurationForScene(
             selectedSongIndex,
             sceneIndex
-        )
+        ),
+        trackerTime = isPlaying ? playerTime : cursorTime
 
-    return (cursorTime - sceneStartTime) / sceneDuration * 100
+    return (trackerTime - sceneStartTime) / sceneDuration * 100
 }
 
 export const getVerseTrackerLength = ({
     verseIndex,
     verseCursorIndex,
     selectedSongIndex,
-    cursorTime
+    cursorTime,
+    playerTime,
+    isPlaying
 
 }) => {
     if (
@@ -72,7 +80,8 @@ export const getVerseTrackerLength = ({
         verseDuration = getDurationForVerse(
             selectedSongIndex,
             verseIndex
-        )
+        ),
+        trackerTime = isPlaying ? playerTime : cursorTime
 
-    return (cursorTime - verseStartTime) / verseDuration * 100
+    return (trackerTime - verseStartTime) / verseDuration * 100
 }

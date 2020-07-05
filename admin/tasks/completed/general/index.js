@@ -4802,7 +4802,7 @@ export default [
         workedHours: 4
     },
     {
-        taskName: `VerseTracker refactor. Make VerseTracker based on selectedTime rather than CSS. Use Tracker component.`,
+        taskName: `VerseTracker refactor. Make VerseTracker based on selected time rather than CSS. Use Tracker component.`,
         reference: `https://www.npmjs.com/package/react-audio-player`,
         workedHours: 2
     },
@@ -4838,5 +4838,9 @@ export default [
     {
         taskName: `Scroll refactor.`,
         workedHours: 58
+    },
+    {
+        taskName: `Set player time in context.`,
+        workedHours: 3
     }
 ]
