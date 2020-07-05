@@ -1,5 +1,9 @@
 export default [
     {
+        taskName: `Set player time in context.`,
+        workedHours: 1
+    },
+    {
         taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
         workedHours: 0,
         neededHours: 5

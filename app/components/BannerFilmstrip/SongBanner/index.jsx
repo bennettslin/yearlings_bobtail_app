@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState, memo } from 'react'
+import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
+import PlayerTimeContext from '../../../contexts/PlayerTime'
 import { updateBannerStore } from '../../../redux/banner/action'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import VerseDispatcher from '../../../dispatchers/Verse'
@@ -27,7 +29,7 @@ import { mapIsLyricsLocked } from '../../../redux/slider/selector'
 import { mapSongTrackerWidth } from '../../../redux/tracker/selector'
 import './style'
 
-const SongBanner = () => {
+const SongBanner = ({ playerTime }) => {
     const
         dispatch = useDispatch(),
         songBannerElement = useRef(),
@@ -137,6 +139,8 @@ const SongBanner = () => {
         onMouseMove()
     }, [selectedSongIndex])
 
+    console.log('selectedTime', playerTime)
+
     return (
         <div
             {...{
@@ -182,4 +186,16 @@ const SongBanner = () => {
     )
 }
 
-export default memo(SongBanner)
+SongBanner.propTypes = {
+    playerTime: PropTypes.number.isRequired
+}
+
+const SongBannerContainer = () => (
+    <PlayerTimeContext.Consumer>
+        {playerTime => (
+            <SongBanner {...{ playerTime }} />
+        )}
+    </PlayerTimeContext.Consumer>
+)
+
+export default memo(SongBannerContainer)

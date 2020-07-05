@@ -1,5 +1,6 @@
 // Manager for audio players.
 import React, { useRef, memo } from 'react'
+import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import { updateSelectedStore } from '../../redux/selected/action'
@@ -17,7 +18,7 @@ import {
 } from '../../redux/selected/selector'
 import { mapAudioOptionIndex } from '../../redux/session/selector'
 
-const AudioManager = () => {
+const AudioManager = ({ setPlayerTime }) => {
     const
         dispatch = useDispatch(),
         dispatchSong = useRef(),
@@ -60,6 +61,7 @@ const AudioManager = () => {
         // If current time is in selected verse, just update time.
         if (isTimeInSelectedVerse) {
             dispatch(updateSelectedStore({ selectedTime: currentTime }))
+            setPlayerTime(currentTime)
 
         // If it's in the next verse, update time and verse.
         } else if (isTimeInNextVerse) {
@@ -112,6 +114,10 @@ const AudioManager = () => {
             <TimeVerseDispatcher {...{ ref: dispatchTimeVerse }} />
         </div>
     )
+}
+
+AudioManager.propTypes = {
+    setPlayerTime: PropTypes.func.isRequired
 }
 
 export default memo(AudioManager)

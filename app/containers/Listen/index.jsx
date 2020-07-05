@@ -6,7 +6,6 @@ import SceneChangeManager from '../../managers/SceneChange'
 import SongChangeManager from '../../managers/SongChange'
 import ScrollManager from '../../managers/Scroll'
 import UrlManager from '../../managers/Url'
-import AudioManager from '../../managers/Audio'
 
 const ListenContainer = () => {
     useEffect(() => {
@@ -22,7 +21,6 @@ const ListenContainer = () => {
             <SongChangeManager />
             <ScrollManager />
             <UrlManager />
-            <AudioManager />
         </>
     )
 }
