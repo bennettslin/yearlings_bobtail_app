@@ -9,5 +9,5 @@ export const mapScrollCarouselIndex = (
 ) => scrollCarouselIndex
 
 export const mapScrollCarouselNoDuration = (
-    { [SCROLL_CAROUSEL_STORE]: { scrollCarouselNoDuration } }
-) => scrollCarouselNoDuration
+    { [SCROLL_CAROUSEL_STORE]: { isScrollCarouselForSongSelect } }
+) => isScrollCarouselForSongSelect

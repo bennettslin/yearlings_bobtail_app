@@ -1,16 +1,19 @@
 // Section to show all song annotations in a carousel layout.
 import React, { useEffect, memo } from 'react'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LayoutContainer from '../Main/LayoutContainer'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
+import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import './style'
 
 const Carousel = () => {
-    const isSongChangeDone = useSelector(mapIsSongChangeDone)
+    const
+        dispatch = useDispatch(),
+        isSongChangeDone = useSelector(mapIsSongChangeDone)
 
     const onExit = () => {
         logTransition('Carousel did exit.')
@@ -22,6 +25,7 @@ const Carousel = () => {
 
     useEffect(() => {
         logMount('Carousel')
+        dispatch(scrollCarouselForSongSelect())
     }, [])
 
     return (

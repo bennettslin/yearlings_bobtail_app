@@ -1,21 +1,19 @@
 import React, { forwardRef, useEffect, memo } from 'react'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
 import LyricToggles from './Toggles'
 import CarouselAccess from '../Carousel/Access'
-import './style'
+import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
+import './style'
 
 const Lyric = forwardRef((props, ref) => {
     const
+        dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone)
-
-    useEffect(() => {
-        logMount('Lyric')
-    }, [])
 
     const onExit = () => {
         logTransition('Lyric did exit.')
@@ -24,6 +22,11 @@ const Lyric = forwardRef((props, ref) => {
     const onEntered = () => {
         logTransition('Lyric did enter.')
     }
+
+    useEffect(() => {
+        logMount('Lyric')
+        dispatch(scrollLyricForSongSelect())
+    }, [])
 
     return (
         <>

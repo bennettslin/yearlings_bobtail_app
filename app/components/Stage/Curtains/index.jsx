@@ -25,7 +25,7 @@ const Curtains = () => {
          */
         setTimeout(() => dispatch(updateEntranceStore({
             didCurtainsClose: true
-        })), 50)
+        })), 100)
     }
 
     const onEntered = () => {

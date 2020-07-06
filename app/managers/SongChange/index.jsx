@@ -40,9 +40,7 @@ const SongChangeManager = () => {
     }
 
     const scrollForSongSelect = () => {
-        dispatch(scrollCarouselForSongSelect(
-            selectedAnnotationIndex
-        ))
+        dispatch(scrollCarouselForSongSelect())
         dispatch(scrollLyricForSongSelect())
     }
 
@@ -79,9 +77,6 @@ const SongChangeManager = () => {
             }
         } else {
             setDidMount(true)
-
-            // Scroll upon initial mount.
-            scrollForSongSelect()
         }
     }, [isSongChangeDone])
 

@@ -4842,5 +4842,9 @@ export default [
     {
         taskName: `Set player time in context.`,
         workedHours: 3
+    },
+    {
+        taskName: `Fix carousel and lyric not scrolling upon mount.`,
+        workedHours: 1
     }
 ]

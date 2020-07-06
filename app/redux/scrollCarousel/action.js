@@ -10,12 +10,11 @@ export const scrollCarouselToAnnotation = (log, index) => ({
     }
 })
 
-export const scrollCarouselForSongSelect = index => ({
+export const scrollCarouselForSongSelect = () => ({
     type: SCROLL_CAROUSEL_STORE,
     payload: {
         scrollCarouselLog: 'Song change scrolled',
-        scrollCarouselIndex: index,
-        scrollCarouselNoDuration: true
+        isScrollCarouselForSongSelect: true
     }
 })
 
