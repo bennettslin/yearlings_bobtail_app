@@ -11,8 +11,8 @@ const TipsPopup = () => {
 
     return (
         <Popup
-            doMountonEnter
-            doUnmountOnExit
+            mountOnEnter
+            unmountOnExit
             isCardSize
             bounceAnimate
             hasNarrowPadding

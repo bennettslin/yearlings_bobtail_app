@@ -9,8 +9,9 @@ import './style'
 const Popup = ({
     popupName,
     isVisible,
-    doMountonEnter,
-    doUnmountOnExit,
+    appear,
+    mountOnEnter,
+    unmountOnExit,
     noFlexCentre,
     noAbsoluteFull,
     displaysInOverlay,
@@ -38,8 +39,9 @@ const Popup = ({
                     exitActive: 'Popup__exiting',
                     enterDone: 'Popup__visible'
                 },
-                mountOnEnter: doMountonEnter,
-                unmountOnExit: doUnmountOnExit,
+                appear,
+                mountOnEnter,
+                unmountOnExit,
                 onExited
             }}
         >
@@ -75,8 +77,9 @@ const Popup = ({
 Popup.propTypes = {
     popupName: PropTypes.string.isRequired,
     isVisible: PropTypes.bool.isRequired,
-    doMountonEnter: PropTypes.bool,
-    doUnmountOnExit: PropTypes.bool,
+    appear: PropTypes.bool,
+    mountOnEnter: PropTypes.bool,
+    unmountOnExit: PropTypes.bool,
     isFullHeight: PropTypes.bool,
     noFlexCentre: PropTypes.bool,
     noAbsoluteFull: PropTypes.bool,

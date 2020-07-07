@@ -14,8 +14,8 @@ const OverviewPopup = ({ inMain = false }) => {
 
     return (
         <Popup
-            doMountonEnter
-            doUnmountOnExit
+            mountOnEnter
+            unmountOnExit
             bounceAnimate
             hasNarrowPadding
             noAbsoluteFull

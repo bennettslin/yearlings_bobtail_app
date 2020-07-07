@@ -1,5 +1,4 @@
 # Issues
-* Song does not load with popup annotation selected.
 * Is song selection still slower through access after refactor?
 
 # Post-Gatsby bugs

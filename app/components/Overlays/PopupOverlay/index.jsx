@@ -9,6 +9,7 @@ const PopupOverlay = () => {
 
     return (
         <CSSTransition
+            appear
             mountOnEnter
             unmountOnExit
             {...{

@@ -17,8 +17,8 @@ const WikiPopup = () => {
 
     return (
         <Popup
-            doMountonEnter
-            doUnmountOnExit
+            mountOnEnter
+            unmountOnExit
             shrinkAnimate
             displaysInOverlay
             isFullWidth

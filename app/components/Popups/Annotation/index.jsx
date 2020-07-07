@@ -44,8 +44,9 @@ const AnnotationPopup = ({ inMain }) => {
 
     return (
         <Popup
-            doMountonEnter
-            doUnmountOnExit
+            appear
+            mountOnEnter
+            unmountOnExit
             showArrows
             bounceAnimate
             noBoxShadow
