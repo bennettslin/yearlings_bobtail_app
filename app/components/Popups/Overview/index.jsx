@@ -14,6 +14,7 @@ const OverviewPopup = ({ inMain = false }) => {
 
     return (
         <Popup
+            appear
             mountOnEnter
             unmountOnExit
             bounceAnimate

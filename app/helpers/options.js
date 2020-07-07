@@ -90,3 +90,27 @@ export const getIsTipsShownNext = ({
         isActivated
     })
 )
+
+export const getOverviewTipsForNewSong = ({
+    isSelectedLogue,
+    selectedOverviewOption,
+    selectedTipsOption
+}) => (
+    isSelectedLogue ? {
+        // If shown, hide when now in logue.
+        ...selectedOverviewOption === SHOWN && {
+            selectedOverviewOption: HIDDEN
+        },
+        ...selectedTipsOption === SHOWN && {
+            selectedTipsOption: HIDDEN
+        }
+    } : {
+        // If just hidden, show when now in new song.
+        ...selectedOverviewOption === HIDDEN && {
+            selectedOverviewOption: SHOWN
+        },
+        ...selectedTipsOption === HIDDEN && {
+            selectedTipsOption: SHOWN
+        }
+    }
+)

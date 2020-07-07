@@ -4846,5 +4846,9 @@ export default [
     {
         taskName: `Fix carousel and lyric not scrolling upon mount.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix annotation popup and overview and tips not loading upon mount.`,
+        workedHours: 2
     }
 ]

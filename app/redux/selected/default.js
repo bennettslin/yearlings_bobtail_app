@@ -7,9 +7,11 @@ export const [
     INITIAL_ANNOTATION_INDEX
 ] = getInitialIndicesFromRoutingOrStorage()
 
+export const INITIAL_IS_SELECTED_LOGUE = getSongIsLogue(INITIAL_SONG_INDEX)
+
 export const SELECTED_DEFAULTS = {
     selectedSongIndex: INITIAL_SONG_INDEX,
     selectedVerseIndex: INITIAL_VERSE_INDEX,
     selectedAnnotationIndex: INITIAL_ANNOTATION_INDEX,
-    isSelectedLogue: getSongIsLogue(INITIAL_SONG_INDEX)
+    isSelectedLogue: INITIAL_IS_SELECTED_LOGUE
 }

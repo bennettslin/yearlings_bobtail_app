@@ -11,6 +11,7 @@ const TipsPopup = () => {
 
     return (
         <Popup
+            appear
             mountOnEnter
             unmountOnExit
             isCardSize

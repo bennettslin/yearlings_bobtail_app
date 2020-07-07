@@ -1,9 +1,6 @@
 // Reducers for options state.
 import { hasKey } from '../../helpers/action'
-import {
-    SHOWN,
-    HIDDEN
-} from '../../constants/options'
+import { getOverviewTipsForNewSong } from '../../helpers/options'
 import {
     OPTION_STORE,
     SELECTED_STORE
@@ -39,23 +36,11 @@ export default (
 
                 return {
                     ...state,
-                    ...isSelectedLogue ? {
-                        // If shown, hide when now in logue.
-                        ...selectedOverviewOption === SHOWN && {
-                            selectedOverviewOption: HIDDEN
-                        },
-                        ...selectedTipsOption === SHOWN && {
-                            selectedTipsOption: HIDDEN
-                        }
-                    } : {
-                        // If just hidden, show when now in new song.
-                        ...selectedOverviewOption === HIDDEN && {
-                            selectedOverviewOption: SHOWN
-                        },
-                        ...selectedTipsOption === HIDDEN && {
-                            selectedTipsOption: SHOWN
-                        }
-                    }
+                    ...getOverviewTipsForNewSong({
+                        isSelectedLogue,
+                        selectedOverviewOption,
+                        selectedTipsOption
+                    })
                 }
             } else {
                 return state
