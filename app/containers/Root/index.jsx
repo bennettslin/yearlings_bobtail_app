@@ -1,4 +1,5 @@
-import React, { useEffect, forwardRef, useRef, memo } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { useEffect, forwardRef, useRef, useState, memo } from 'react'
 import cx from 'classnames'
 import ResizeManager from '../../managers/Resize'
 import Carousel from '../../components/Carousel'
@@ -15,13 +16,17 @@ import './style'
 const RootContainer = forwardRef((props, ref) => {
     const
         rootContainerElement = useRef(),
-        getRootContainerElement = () => rootContainerElement.current
+        [didComponentMount, setDidComponentMount] = useState(false)
+
+    const getRootContainerElement = () => rootContainerElement.current
 
     useEffect(() => {
         logMount('RootContainer')
+        setDidComponentMount(true)
     }, [])
 
-    return (
+    // TODO: This should not happen at the root container level.
+    return didComponentMount && (
         <div
             {...{
                 ref: rootContainerElement,

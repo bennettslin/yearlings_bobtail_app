@@ -1,11 +1,15 @@
-# Issues
-* Is song selection still slower through access after refactor?
+# Hydration fix
+* Viewport values default to zero, are set upon mount.
+* Always render Carousel.
+* Carousel, Lyric, and About should render server side for SEO purposes.
+* Everything else only renders client side.
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 * Failed to decode downloaded font warning?
 
 # Minor issues, to be investigated while production is on master before Gatsby.
+* Is song selection still slower through access after refactor?
 * tips hand in garryowen for score
 
 # Easy tasks

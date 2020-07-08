@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `Rehydration fix.`,
+        workedHours: 2,
+        neededHours: 20
+    },
+    {
         taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
         workedHours: 0,
         neededHours: 5
