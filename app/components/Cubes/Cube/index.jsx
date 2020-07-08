@@ -42,13 +42,11 @@ const Cube = ({
                     `x${getCharStringForNumber(xIndex)}`,
                     'abF'
                 ),
-                style: {
-                    zIndex: getCssZIndexForCube({
-                        slantDirection,
-                        yIndex,
-                        xIndex
-                    })
-                }
+                zIndex: getCssZIndexForCube({
+                    slantDirection,
+                    yIndex,
+                    xIndex
+                })
             }}
         >
             {FACES.map(face => (
