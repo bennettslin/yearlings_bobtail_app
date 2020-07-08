@@ -53,7 +53,11 @@ const Carousel = () => {
 }
 
 const CarouselLayoutContainer = () => (
-    <LayoutContainer>
+    <LayoutContainer
+        {...{
+            className: 'CarouselLayoutContainer'
+        }}
+    >
         <Carousel />
     </ LayoutContainer>
 )
