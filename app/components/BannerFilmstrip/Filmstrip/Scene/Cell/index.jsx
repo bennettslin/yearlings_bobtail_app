@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { useContext, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -9,8 +9,9 @@ import { getMapSceneTrackerWidth } from '../../../../../redux/tracker/selector'
 import { SCENE_CURSOR_CHILD_PREFIX } from '../../../../../constants/cursor'
 import './style'
 
-const FilmstripCell = memo(({ playerTime, sceneIndex }) => {
+const FilmstripCell = ({ sceneIndex }) => {
     const
+        playerTime = useContext(PlayerTimeContext),
         isSceneCursor = useSelector(getMapIsSceneCursor(sceneIndex)),
         sceneTrackerWidth = useSelector(getMapSceneTrackerWidth({
             sceneIndex,
@@ -44,19 +45,10 @@ const FilmstripCell = memo(({ playerTime, sceneIndex }) => {
             )}
         </div>
     )
-})
+}
 
 FilmstripCell.propTypes = {
-    playerTime: PropTypes.number.isRequired,
     sceneIndex: PropTypes.number.isRequired
 }
 
-const FilmstripCellContainer = props => (
-    <PlayerTimeContext.Consumer>
-        {playerTime => (
-            <FilmstripCell {...{ playerTime, ...props }} />
-        )}
-    </PlayerTimeContext.Consumer>
-)
-
-export default memo(FilmstripCellContainer)
+export default memo(FilmstripCell)

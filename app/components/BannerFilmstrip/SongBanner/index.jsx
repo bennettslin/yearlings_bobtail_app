@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState, memo } from 'react'
-import PropTypes from 'prop-types'
+// eslint-disable-next-line object-curly-newline
+import React, { useContext, useEffect, useRef, useState, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import PlayerTimeContext from '../../../contexts/PlayerTime'
@@ -27,12 +27,13 @@ import { mapIsLyricsLocked } from '../../../redux/slider/selector'
 import { getMapSongTrackerWidth } from '../../../redux/tracker/selector'
 import './style'
 
-const SongBanner = memo(({ playerTime }) => {
+const SongBanner = () => {
     const
         dispatch = useDispatch(),
         songBannerElement = useRef(),
         stopPropagation = useRef(),
         dispatchVerse = useRef(),
+        playerTime = useContext(PlayerTimeContext),
         isSmallBannerText = useSelector(mapIsSmallBannerText),
         isPlaying = useSelector(mapIsPlaying),
         isBannerHovering = useSelector(mapIsBannerHovering),
@@ -172,18 +173,6 @@ const SongBanner = memo(({ playerTime }) => {
             <VerseDispatcher {...{ ref: dispatchVerse }} />
         </div>
     )
-})
-
-SongBanner.propTypes = {
-    playerTime: PropTypes.number.isRequired
 }
 
-const SongBannerContainer = () => (
-    <PlayerTimeContext.Consumer>
-        {playerTime => (
-            <SongBanner {...{ playerTime }} />
-        )}
-    </PlayerTimeContext.Consumer>
-)
-
-export default memo(SongBannerContainer)
+export default memo(SongBanner)

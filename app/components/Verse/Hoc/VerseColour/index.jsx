@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { useContext, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -8,18 +8,19 @@ import { getMapVerseTrackerLength } from '../../../../redux/tracker/selector'
 import { VERSE_CURSOR_CHILD_PREFIX } from '../../../../constants/cursor'
 import './style'
 
-const VerseColour = memo(({
-    playerTime,
+const VerseColour = ({
     verseIndex,
     inVerseBar,
     isVertical,
     isTrackerShown
 
 }) => {
-    const verseTrackerLength = useSelector(getMapVerseTrackerLength({
-        playerTime,
-        verseIndex
-    }))
+    const
+        playerTime = useContext(PlayerTimeContext),
+        verseTrackerLength = useSelector(getMapVerseTrackerLength({
+            playerTime,
+            verseIndex
+        }))
 
     return (
         <div
@@ -44,22 +45,13 @@ const VerseColour = memo(({
             )}
         </div>
     )
-})
+}
 
 VerseColour.propTypes = {
-    playerTime: PropTypes.number.isRequired,
     verseIndex: PropTypes.number.isRequired,
     inVerseBar: PropTypes.bool,
     isVertical: PropTypes.bool,
     isTrackerShown: PropTypes.bool
 }
 
-const VerseColourContainer = props => (
-    <PlayerTimeContext.Consumer>
-        {playerTime => (
-            <VerseColour {...{ playerTime, ...props }} />
-        )}
-    </PlayerTimeContext.Consumer>
-)
-
-export default memo(VerseColourContainer)
+export default memo(VerseColour)
