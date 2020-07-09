@@ -3,23 +3,18 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { mapMainHeight } from '../../../redux/main/selector'
-import {
-    mapMenuHeight,
-    mapCanCarouselShow
-} from '../../../redux/viewport/selector'
+import { mapMenuHeight } from '../../../redux/viewport/selector'
 
 const LayoutContainer = ({
     className,
-    alwaysRender,
     children
 
 }) => {
     const
-        canCarouselShow = useSelector(mapCanCarouselShow),
         mainHeight = useSelector(mapMainHeight),
         menuHeight = useSelector(mapMenuHeight)
 
-    return (alwaysRender || canCarouselShow) && (
+    return (
         <div
             {...{
                 className: cx(

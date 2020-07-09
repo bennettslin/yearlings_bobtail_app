@@ -9,6 +9,14 @@
  */
 $height__carouselHidden: $height__chivalry;
 
+.CarouselLayoutContainer {
+    display: none;
+}
+
+.CarouselLayoutContainer__shown {
+    display: block;
+}
+
 .Carousel {
     position: absolute;
     left: 0;

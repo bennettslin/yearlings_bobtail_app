@@ -47,6 +47,7 @@ const DeviceWrapper = ({ children }) => {
                         'DW__miniOrTabletWidth': !isPhoneWidth,
                         'DW__phoneOrMiniWidth': !isTabletWidth
                     },
+                    // TODO: Make this a selector. See how CSS uses classes.
                     canCarouselShow ?
                         'DW__canCarouselShow' :
                         'DW__cannotCarouselShow',

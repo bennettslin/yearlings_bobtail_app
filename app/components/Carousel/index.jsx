@@ -8,6 +8,7 @@ import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
+import { mapCanCarouselShow } from '../../redux/viewport/selector'
 import './style'
 
 const Carousel = () => {
@@ -52,14 +53,21 @@ const Carousel = () => {
     )
 }
 
-const CarouselLayoutContainer = () => (
-    <LayoutContainer
-        {...{
-            className: 'CarouselLayoutContainer'
-        }}
-    >
-        <Carousel />
-    </ LayoutContainer>
-)
+const CarouselLayoutContainer = () => {
+    const canCarouselShow = useSelector(mapCanCarouselShow)
+
+    return (
+        <LayoutContainer
+            {...{
+                className: cx(
+                    'CarouselLayoutContainer',
+                    canCarouselShow && 'CarouselLayoutContainer__shown'
+                )
+            }}
+        >
+            <Carousel />
+        </ LayoutContainer>
+    )
+}
 
 export default memo(CarouselLayoutContainer)

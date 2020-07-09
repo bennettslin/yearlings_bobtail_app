@@ -13,7 +13,6 @@ export const getLyricDynamicHeight = ({
     menuHeight
 
 }) => {
-
     // Desktop is always 100%.
     if (getIsDesktopWidth(deviceWidthIndex)) {
         return 1
@@ -93,6 +92,7 @@ export const getLyricSectionRect = ({
     isLyricExpanded,
     lyricDynamicHeight,
     menuHeight
+
 }) => {
     const lyricSectionBottom = windowHeight
     let lyricSectionTop =

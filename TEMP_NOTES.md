@@ -1,5 +1,4 @@
 # Hydration fix
-* Always render Carousel.
 * Carousel, Lyric, and About should render server side for SEO purposes.
 * Everything else only renders client side.
 
