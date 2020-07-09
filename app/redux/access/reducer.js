@@ -48,8 +48,8 @@ export default (
             } : state
         }
         case VIEWPORT_STORE: {
-            const { canCarouselMount } = payload
-            return hasKey(canCarouselMount) && !canCarouselMount ? {
+            const { canCarouselShow } = payload
+            return hasKey(canCarouselShow) && !canCarouselShow ? {
                 ...state,
                 ...ACCESS_NAV_DEFAULTS
             } : state

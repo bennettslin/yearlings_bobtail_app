@@ -7,34 +7,32 @@ const AboutChild = ({
     className,
     header,
     children
-}) => {
 
-    return (
-        <div
-            {...{
-                className: cx(
-                    'AboutChild',
-                    className
-                )
-            }}
-        >
-            {Boolean(header) && (
-                <div
-                    {...{
-                        className: cx(
-                            'AboutChild__header',
-                            'About__colouredText',
-                            'Rancho'
-                        )
-                    }}
-                >
-                    {header}
-                </div>
-            )}
-            {children}
-        </div>
-    )
-}
+}) => (
+    <div
+        {...{
+            className: cx(
+                'AboutChild',
+                className
+            )
+        }}
+    >
+        {Boolean(header) && (
+            <div
+                {...{
+                    className: cx(
+                        'AboutChild__header',
+                        'About__colouredText',
+                        'Rancho'
+                    )
+                }}
+            >
+                {header}
+            </div>
+        )}
+        {children}
+    </div>
+)
 
 AboutChild.propTypes = {
     className: PropTypes.string,

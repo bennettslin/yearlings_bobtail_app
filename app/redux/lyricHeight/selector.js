@@ -11,25 +11,25 @@ import {
     mapWindowHeight,
     mapIsHeightlessLyric,
     mapMenuHeight,
-    mapCanCarouselMount
+    mapCanCarouselShow
 } from '../viewport/selector'
 
 export const mapLyricDynamicHeight = createSelector(
-    mapCanCarouselMount,
+    mapCanCarouselShow,
     mapIsHeightlessLyric,
     mapMenuHeight,
     mapStageHeight,
     mapDeviceWidthIndex,
     mapWindowHeight,
     (
-        canCarouselMount,
+        canCarouselShow,
         isHeightlessLyric,
         menuHeight,
         stageHeight,
         deviceWidthIndex,
         windowHeight
     ) => getLyricDynamicHeight({
-        canCarouselMount,
+        canCarouselShow,
         isHeightlessLyric,
         menuHeight,
         stageHeight,

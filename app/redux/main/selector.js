@@ -22,23 +22,23 @@ import {
 import {
     mapIsHeightlessLyric,
     mapMenuHeight,
-    mapCanCarouselMount
+    mapCanCarouselShow
 } from '../viewport/selector'
 
 export const mapMainHeight = createSelector(
-    mapCanCarouselMount,
+    mapCanCarouselShow,
     mapLyricDynamicHeight,
     mapIsHeightlessLyric,
     mapMenuHeight,
     mapIsDesktopWidth,
     (
-        canCarouselMount,
+        canCarouselShow,
         lyricDynamicHeight,
         isHeightlessLyric,
         menuHeight,
         isDesktopWidth
     ) => getMainHeight({
-        canCarouselMount,
+        canCarouselShow,
         lyricDynamicHeight,
         isHeightlessLyric,
         menuHeight,

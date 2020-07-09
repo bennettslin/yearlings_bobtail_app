@@ -50,7 +50,7 @@ export default (
         }
         case VIEWPORT_STORE: {
             const
-                { canCarouselMount } = payload,
+                { canCarouselShow } = payload,
                 isLyricExpandable = mapIsLyricExpandable({
                     [VIEWPORT_STORE]: payload
                 }),
@@ -59,7 +59,7 @@ export default (
                 })
             return {
                 ...state,
-                ...hasKey(canCarouselMount) && !canCarouselMount && {
+                ...hasKey(canCarouselShow) && !canCarouselShow && {
                     isCarouselShown: false,
                     isNavShown: false
                 },

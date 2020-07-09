@@ -29,9 +29,9 @@ export const mapMenuHeight = (
     { [VIEWPORT_STORE]: { menuHeight } }
 ) => menuHeight
 
-export const mapCanCarouselMount = (
-    { [VIEWPORT_STORE]: { canCarouselMount } }
-) => canCarouselMount
+export const mapCanCarouselShow = (
+    { [VIEWPORT_STORE]: { canCarouselShow } }
+) => canCarouselShow
 
 export const mapCanScoreMount = createSelector(
     mapDeviceWidthIndex,

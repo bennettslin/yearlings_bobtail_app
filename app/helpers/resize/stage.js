@@ -78,7 +78,7 @@ export const getStageDimensionCoordinates = ({
     menuHeight,
     isHeightlessLyric,
     isTwoRowMenu,
-    canCarouselMount
+    canCarouselShow
 }) => {
 
     const isDesktopWidth = getIsDesktopWidth(deviceWidthIndex),
@@ -91,7 +91,7 @@ export const getStageDimensionCoordinates = ({
             windowWidth
         ) - leftShelfOverflow,
 
-        navHeight = canCarouselMount && isDesktopWidth ? CSS_HEIGHT_NAV : 0,
+        navHeight = canCarouselShow && isDesktopWidth ? CSS_HEIGHT_NAV : 0,
 
         centreFieldHeight = getCentreFieldHeight({
             deviceWidthIndex,
@@ -128,7 +128,7 @@ export const getStageDimensionCoordinates = ({
          * If stage height is adjustable, put closer to bottom if carousel can
          * mount.
          */
-        const carouselOffset = canCarouselMount ?
+        const carouselOffset = canCarouselShow ?
             (centreFieldHeight - height) * 0.9 : 0
 
         top = navHeight + carouselOffset

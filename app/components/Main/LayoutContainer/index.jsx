@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import { mapMainHeight } from '../../../redux/main/selector'
 import {
     mapMenuHeight,
-    mapCanCarouselMount
+    mapCanCarouselShow
 } from '../../../redux/viewport/selector'
 
 const LayoutContainer = ({
@@ -15,11 +15,11 @@ const LayoutContainer = ({
 
 }) => {
     const
-        canCarouselMount = useSelector(mapCanCarouselMount),
+        canCarouselShow = useSelector(mapCanCarouselShow),
         mainHeight = useSelector(mapMainHeight),
         menuHeight = useSelector(mapMenuHeight)
 
-    return (alwaysRender || canCarouselMount) && (
+    return (alwaysRender || canCarouselShow) && (
         <div
             {...{
                 className: cx(

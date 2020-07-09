@@ -10,13 +10,13 @@ import {
     CAROUSEL_PREVIOUS_BUTTON_KEY,
     CAROUSEL_NEXT_BUTTON_KEY
 } from '../../../constants/buttons'
-import { mapCanCarouselMount } from '../../../redux/viewport/selector'
+import { mapCanCarouselShow } from '../../../redux/viewport/selector'
 import './style'
 
 const CarouselSelect = () => {
     const
         dispatchAnnotation = useRef(),
-        canCarouselMount = useSelector(mapCanCarouselMount)
+        canCarouselShow = useSelector(mapCanCarouselShow)
 
     const handlePreviousClick = () => {
         dispatchAnnotation.current.direction(-1)
@@ -26,7 +26,7 @@ const CarouselSelect = () => {
         dispatchAnnotation.current.direction(1)
     }
 
-    return canCarouselMount && (
+    return canCarouselShow && (
         <div className="CarouselSelect">
             <Button
                 isLargeSize

@@ -10,7 +10,7 @@ export const VIEWPORT_DEFAULTS = {
     isHeightlessLyric: false,
     isTwoRowMenu: false,
     menuHeight: 0,
-    canCarouselMount: true,
+    canCarouselShow: true,
     stageDimensionCoordinates: JSON.stringify({
         stageTop: 0,
         stageLeft: 0,

@@ -46,9 +46,9 @@
         margin-bottom: $margin__thick * 1.5;
     }
 
-    .DW__desktopWidth.DW__cannotCarouselMount
+    .DW__desktopWidth.DW__cannotCarouselShow
     &,
-    .DW__miniOrTabletWidth.DW__canCarouselMount
+    .DW__miniOrTabletWidth.DW__canCarouselShow
     & {
         flex-direction: column-reverse;
 

@@ -5,7 +5,7 @@ export const getIsPopupAnnotationShown = ({
     isAboutShown,
     isScoreShown,
     isCarouselShown,
-    canCarouselMount,
+    canCarouselShow,
     isOverlayingAnnotation,
     isWikiShown
 
@@ -21,7 +21,7 @@ export const getIsPopupAnnotationShown = ({
          */
         (
             !isCarouselShown ||
-            !canCarouselMount ||
+            !canCarouselShow ||
             isOverlayingAnnotation
         ) &&
 

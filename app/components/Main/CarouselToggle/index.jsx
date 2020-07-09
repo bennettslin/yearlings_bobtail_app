@@ -13,13 +13,13 @@ import {
     mapIsCarouselShown,
     mapIsNavShown
 } from '../../../redux/toggle/selector'
-import { mapCanCarouselMount } from '../../../redux/viewport/selector'
+import { mapCanCarouselShow } from '../../../redux/viewport/selector'
 import './style'
 
 const CarouselToggle = () => {
     const
         dispatchCarouselNav = useRef(),
-        canCarouselMount = useSelector(mapCanCarouselMount),
+        canCarouselShow = useSelector(mapCanCarouselShow),
         isCarouselShown = useSelector(mapIsCarouselShown),
         isNavShown = useSelector(mapIsNavShown)
 
@@ -27,7 +27,7 @@ const CarouselToggle = () => {
         dispatchCarouselNav.current()
     }
 
-    return canCarouselMount && (
+    return canCarouselShow && (
         <div className={cx(
             'CarouselToggle'
         )}>

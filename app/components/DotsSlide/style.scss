@@ -28,9 +28,9 @@ $margin__dotsContainer__phone: 8px;
     box-shadow: $boxShadow__mainCard;
     background-color: $COLOUR__FUTURE__LIGHTER;
 
-    .DW__desktopWidth.DW__cannotCarouselMount
+    .DW__desktopWidth.DW__cannotCarouselShow
     &,
-    .DW__miniOrTabletWidth.DW__canCarouselMount
+    .DW__miniOrTabletWidth.DW__canCarouselShow
     & {
         top: auto;
         bottom: 0;

@@ -5,9 +5,9 @@
     padding-top: $margin__thick;
     display: flex;
 
-    .DW__desktopWidth.DW__cannotCarouselMount
+    .DW__desktopWidth.DW__cannotCarouselShow
     &,
-    .DW__miniOrTabletWidth.DW__canCarouselMount
+    .DW__miniOrTabletWidth.DW__canCarouselShow
     & {
         padding-bottom: $margin__scrollBar;
     }
@@ -21,9 +21,9 @@
 .mainFlexContainer__side {
     align-items: flex-start;
 
-    .DW__desktopWidth.DW__cannotCarouselMount
+    .DW__desktopWidth.DW__cannotCarouselShow
     &,
-    .DW__miniOrTabletWidth.DW__canCarouselMount
+    .DW__miniOrTabletWidth.DW__canCarouselShow
     & {
         align-items: flex-end;
     }
