@@ -15,6 +15,7 @@ import {
     mapIsSliderTouched,
     mapSliderVerseIndex
 } from '../../redux/slider/selector'
+import { mapCanSliderMount } from '../../redux/viewport/selector'
 
 const SliderTouchDispatcher = forwardRef((props, ref) => {
     const
@@ -144,4 +145,12 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
     )
 })
 
-export default memo(SliderTouchDispatcher)
+const SliderTouchDispatcherContainer = forwardRef((props, ref) => {
+    const canSliderMount = useSelector(mapCanSliderMount)
+
+    return canSliderMount && (
+        <SliderTouchDispatcher {...{ ref }} />
+    )
+})
+
+export default memo(SliderTouchDispatcherContainer)

@@ -1,6 +1,4 @@
 # Hydration fix
-* Carousel, Lyric, and About should render server side for SEO purposes.
-* Everything else only renders client side.
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.

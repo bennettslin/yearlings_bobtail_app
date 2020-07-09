@@ -15,6 +15,7 @@ import { mapLyricAnnotationIndex } from '../../../redux/lyric/selector'
 const AnnotationPopup = ({ inMain }) => {
     const
         dispatchAnnotation = useRef(),
+        [didMount, setDidMount] = useState(false),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         isOverlayingAnnotation = useSelector(mapIsOverlayingAnnotation),
         isPopupAnnotationShown = useSelector(
@@ -36,13 +37,17 @@ const AnnotationPopup = ({ inMain }) => {
     }
 
     useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    useEffect(() => {
         if (isPopupAnnotationShown && lyricAnnotationIndex) {
             // This will persist the popup annotation as it animates out.
             setAnnotationIndex(lyricAnnotationIndex)
         }
     }, [isPopupAnnotationShown, lyricAnnotationIndex])
 
-    return (
+    return didMount && (
         <Popup
             appear
             mountOnEnter

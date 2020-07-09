@@ -5,6 +5,7 @@ import { mapSelectedWikiUrl } from '../../redux/wiki/selector'
 
 const Wiki = () => {
     const
+        [didMount, setDidMount] = useState(false),
         selectedWikiUrl = useSelector(mapSelectedWikiUrl),
         [isLoading, setIsLoading] = useState(false),
         wikiElement = useRef()
@@ -12,6 +13,10 @@ const Wiki = () => {
     const onLoad = () => {
         setIsLoading(false)
     }
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
 
     useEffect(() => {
         if (wikiElement.current) {
@@ -24,7 +29,7 @@ const Wiki = () => {
         }
     }, [selectedWikiUrl])
 
-    return (
+    return didMount && (
         <Iframe
             {...{
                 ref: wikiElement,

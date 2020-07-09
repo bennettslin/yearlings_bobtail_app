@@ -2,7 +2,7 @@
  * Field for about toggle, audio section, and scores and tips section. Knows no
  * state, so should not update.
  */
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import AboutToggle from '../About/Toggle'
@@ -21,6 +21,7 @@ import './style'
 
 const Menu = () => {
     const
+        [didMount, setDidMount] = useState(false),
         canSliderMount = useSelector(mapCanSliderMount),
         isTwoRowMenu = useSelector(mapIsTwoRowMenu),
         menuHeight = useSelector(mapMenuHeight),
@@ -33,8 +34,12 @@ const Menu = () => {
             windowWidth
         })
 
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
     // Prevent menu from rendering before windowWidth has been set.
-    return (
+    return didMount && (
         <div
             {...{
                 className: cx(

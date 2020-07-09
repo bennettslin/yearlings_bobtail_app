@@ -1,5 +1,5 @@
 // Popup container for wiki section.
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
@@ -9,13 +9,18 @@ import { mapIsWikiShown } from '../../../redux/wiki/selector'
 const WikiPopup = () => {
     const
         dispatch = useDispatch(),
+        [didMount, setDidMount] = useState(false),
         isWikiShown = useSelector(mapIsWikiShown)
 
     const handleCloseClick = () => {
         dispatch(updateWikiIndices())
     }
 
-    return (
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
         <Popup
             mountOnEnter
             unmountOnExit

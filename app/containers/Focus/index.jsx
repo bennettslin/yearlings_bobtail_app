@@ -118,9 +118,7 @@ const FocusContainer = () => {
         >
             <CloseHandler {...{ ref: closeForBodyClick }} />
             <RootContainer {...{ ref: lyricScrollElement }} />
-            {canSliderMount && (
-                <SliderTouchDispatcher {...{ ref: dispatchSliderTouch }} />
-            )}
+            <SliderTouchDispatcher {...{ ref: dispatchSliderTouch }} />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
             <KeyManager {...{ ref: handleKey }} />
         </div>

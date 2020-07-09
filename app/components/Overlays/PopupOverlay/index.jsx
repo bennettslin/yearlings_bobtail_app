@@ -1,13 +1,19 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import { mapIsOverlayShown } from '../../../redux/overlay/selector'
 import './style'
 
 const PopupOverlay = () => {
-    const isOverlayShown = useSelector(mapIsOverlayShown)
+    const
+        [didMount, setDidMount] = useState(false),
+        isOverlayShown = useSelector(mapIsOverlayShown)
 
-    return (
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
         <CSSTransition
             appear
             mountOnEnter

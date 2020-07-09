@@ -1,4 +1,4 @@
-import React, { useEffect, memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { mapIsWindowResizeDone } from '../../redux/entrance/selector'
@@ -14,7 +14,9 @@ import { removeLoadingIndicator } from '../../utils/browser'
 import './style'
 
 const Theatre = () => {
-    const isWindowResizeDone = useSelector(mapIsWindowResizeDone)
+    const
+        [didMount, setDidMount] = useState(false),
+        isWindowResizeDone = useSelector(mapIsWindowResizeDone)
 
     const onExit = () => {
         logTransition('Theatre did exit.')
@@ -27,9 +29,10 @@ const Theatre = () => {
     useEffect(() => {
         logMount('Theatre')
         removeLoadingIndicator()
+        setDidMount(true)
     }, [])
 
-    return (
+    return didMount && (
         <CSSTransition
             appear
             {...{

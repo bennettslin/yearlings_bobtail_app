@@ -1,10 +1,7 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import {
-    mapMenuHeight,
-    mapCanScoreMount
-} from '../../../redux/viewport/selector'
+import { mapMenuHeight } from '../../../redux/viewport/selector'
 
 import AnnotationPopup from '../Annotation'
 import AboutPopup from '../About'
@@ -12,9 +9,7 @@ import ScorePopup from '../Score'
 import WikiPopup from '../Wiki'
 
 const MainPopups = () => {
-    const
-        canScoreMount = useSelector(mapCanScoreMount),
-        menuHeight = useSelector(mapMenuHeight)
+    const menuHeight = useSelector(mapMenuHeight)
 
     return (
         <div
@@ -31,9 +26,7 @@ const MainPopups = () => {
         >
             <AnnotationPopup />
             <AboutPopup />
-            {canScoreMount && (
-                <ScorePopup />
-            )}
+            <ScorePopup />
             <WikiPopup />
         </div>
     )

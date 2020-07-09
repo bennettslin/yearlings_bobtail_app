@@ -2,7 +2,7 @@
  * Column to show all sections, excluding lyrics and popups. Knows no state, so
  * should not update.
  */
-import React, { useEffect, memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import cx from 'classnames'
 import MainLayoutContainer from './LayoutContainer'
 import MainFlexContainer from './FlexContainer'
@@ -19,13 +19,15 @@ import ShelfRight from './ShelfRight'
 import './style'
 
 const Main = () => {
+    const [didMount, setDidMount] = useState(false)
+
     useEffect(() => {
         logMount('Main')
+        setDidMount(true)
     }, [])
 
-    return (
+    return didMount && (
         <MainLayoutContainer
-            alwaysRender
             {...{
                 className: cx(
                     'Main',

@@ -1,5 +1,5 @@
 // Manager for audio players.
-import React, { useRef, memo } from 'react'
+import React, { memo, useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
@@ -21,6 +21,7 @@ const AudioManager = ({ setPlayerTime }) => {
     const
         dispatchSong = useRef(),
         dispatchVerse = useRef(),
+        [didMount, setDidMount] = useState(false),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         audioOptionIndex = useSelector(mapAudioOptionIndex)
@@ -103,7 +104,11 @@ const AudioManager = ({ setPlayerTime }) => {
         return false
     }
 
-    return (
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
         <div className={cx(
             'AudioManager',
             'dNC'
