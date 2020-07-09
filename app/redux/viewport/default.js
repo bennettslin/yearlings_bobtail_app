@@ -1,74 +1,28 @@
-import {
-    getWindowDimensions,
-    getDeviceWidthIndex
-} from '../../helpers/resize/device'
-import { getIsHeightlessLyric } from '../../helpers/resize/hidden'
-import { getCanCarouselMount } from '../../helpers/resize/mount'
-import {
-    getIsTwoRowMenu,
-    getMenuHeight
-} from '../../helpers/resize/responsive'
-import { getStageDimensionCoordinates } from '../../helpers/resize/stage'
-import { getProsceniumDimensionCoordinates } from '../../helpers/resize/proscenium'
-import { getCeilingFloorHeight } from '../../helpers/resize/theatre'
-
-const
-    {
-        windowWidth,
-        windowHeight
-    } = getWindowDimensions(),
-    deviceWidthIndex = getDeviceWidthIndex(windowWidth),
-    isHeightlessLyric = getIsHeightlessLyric({
-        windowWidth,
-        windowHeight,
-        deviceWidthIndex
-    }),
-    isTwoRowMenu = getIsTwoRowMenu({
-        windowWidth,
-        deviceWidthIndex
-    }),
-    menuHeight = getMenuHeight({
-        isTwoRowMenu
-    }),
-    canCarouselMount = getCanCarouselMount({
-        deviceWidthIndex,
-        windowHeight,
-        isHeightlessLyric
-    }),
-    stageDimensionCoordinates =
-        getStageDimensionCoordinates({
-            deviceWidthIndex,
-            windowWidth,
-            windowHeight,
-            isHeightlessLyric,
-            isTwoRowMenu,
-            menuHeight,
-            canCarouselMount
-        }),
-    prosceniumDimensionCoordinates =
-        getProsceniumDimensionCoordinates(stageDimensionCoordinates),
-    {
-        ceilingHeight,
-        floorHeight
-    } = getCeilingFloorHeight({
-        deviceWidthIndex,
-        windowHeight,
-        isHeightlessLyric,
-        isTwoRowMenu,
-        menuHeight,
-        prosceniumDimensionCoordinates
-    })
-
 export const VIEWPORT_DEFAULTS = {
-    windowWidth,
-    windowHeight,
-    deviceWidthIndex,
-    isHeightlessLyric,
-    isTwoRowMenu,
-    menuHeight,
-    canCarouselMount,
-    stageDimensionCoordinates,
-    prosceniumDimensionCoordinates,
-    ceilingHeight,
-    floorHeight
+    /**
+     * Server side does not have access to the window object when rendering. So
+     * we'll begin with placeholder values, then update with real values based
+     * on the window object once rendering on the client side.
+     */
+    windowWidth: 0,
+    windowHeight: 0,
+    deviceWidthIndex: 0,
+    isHeightlessLyric: false,
+    isTwoRowMenu: false,
+    menuHeight: 0,
+    canCarouselMount: true,
+    stageDimensionCoordinates: JSON.stringify({
+        stageTop: 0,
+        stageLeft: 0,
+        stageWidth: 0,
+        stageHeight: 0
+    }),
+    prosceniumDimensionCoordinates: JSON.stringify({
+        prosceniumTop: 0,
+        prosceniumLeft: 0,
+        prosceniumWidth: 0,
+        prosceniumHeight: 0
+    }),
+    ceilingHeight: 0,
+    floorHeight: 0
 }

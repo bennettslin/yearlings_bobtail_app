@@ -68,6 +68,9 @@ const ResizeManager = ({ getRootContainerElement }) => {
     }
 
     useEffect(() => {
+        // Once we have access to the window object, update the viewport store.
+        beginEnterTransition()
+
         getWindow().onresize = beginExitTransition
         return () => {
             getWindow().onresize = null
