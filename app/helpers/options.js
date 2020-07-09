@@ -95,8 +95,12 @@ export const getOverviewTipsForNewSong = ({
     isSelectedLogue,
     selectedOverviewOption,
     selectedTipsOption
-}) => (
-    isSelectedLogue ? {
+
+}) => ({
+    selectedOverviewOption,
+    selectedTipsOption,
+
+    ...isSelectedLogue ? {
         // If shown, hide when now in logue.
         ...selectedOverviewOption === SHOWN && {
             selectedOverviewOption: HIDDEN
@@ -113,4 +117,4 @@ export const getOverviewTipsForNewSong = ({
             selectedTipsOption: SHOWN
         }
     }
-)
+})
