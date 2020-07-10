@@ -6,20 +6,17 @@ import InlineSvg from '../../../../modules/InlineSvg'
 import accessKey from '../../../../../assets/svgs/app/main/accessKey'
 import './style'
 
-const AccessField = () => {
-
-    return (
-        <InlineSvg
-            {...{
-                svgClassName: cx(
-                    'AccessField',
-                    'dropShadow__small'
-                )
-            }}
-        >
-            {accessKey}
-        </InlineSvg>
-    )
-}
+const AccessField = () => (
+    <InlineSvg
+        {...{
+            svgClassName: cx(
+                'AccessField',
+                'dropShadow__small'
+            )
+        }}
+    >
+        {accessKey}
+    </InlineSvg>
+)
 
 export default memo(AccessField)

@@ -14,11 +14,11 @@ import {
 const SceneChangeManager = () => {
     const
         dispatch = useDispatch(),
-        [didMount, setDidMount] = useState(false),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
         isSceneChangeDone = useSelector(mapIsSceneChangeDone),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
-        selectedSceneIndex = useSelector(mapSelectedSceneIndex)
+        selectedSceneIndex = useSelector(mapSelectedSceneIndex),
+        [didMount, setDidMount] = useState(false)
 
     useEffect(() => {
         if (didMount) {

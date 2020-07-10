@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -15,7 +15,12 @@ const PlayingWrapper = ({ children }) => {
         isAccessOn = useSelector(mapIsAccessOn),
         accessedKey = useSelector(mapAccessedKey),
         isPlaying = useSelector(mapIsPlaying),
-        isLyricLogue = useSelector(mapIsLyricLogue)
+        isLyricLogue = useSelector(mapIsLyricLogue),
+        [didMount, setDidMount] = useState(false)
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
 
     return (
         <div
@@ -23,19 +28,20 @@ const PlayingWrapper = ({ children }) => {
                 className: cx(
                     'PlayingWrapper',
 
-                    isLyricLogue ?
-                        'PlW__logue' :
-                        'PlW__song',
-                    isPlaying ?
-                        'PlW__isPlaying' :
-                        'PlW__isPaused',
-
-                    isAccessOn ?
-                        'PlW__accessOn' :
-                        'PlW__accessOff',
-
-                    accessedKey &&
-                        `${PARENT_ACCESS_PREFIX}${accessedKey}`
+                    didMount && [
+                        isLyricLogue ?
+                            'PlW__logue' :
+                            'PlW__song',
+                        isPlaying ?
+                            'PlW__isPlaying' :
+                            'PlW__isPaused',
+                        isAccessOn ?
+                            'PlW__accessOn' :
+                            'PlW__accessOff',
+                        accessedKey &&
+                            `${PARENT_ACCESS_PREFIX}${accessedKey}`
+                    ],
+                    'abF'
                 )
             }}
         >

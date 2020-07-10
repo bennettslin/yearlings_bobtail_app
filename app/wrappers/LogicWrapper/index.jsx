@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -14,15 +14,24 @@ import {
 const LogicWrapper = ({ children }) => {
     const
         sceneCursorIndex = useSelector(mapSceneCursorIndex),
-        verseCursorIndex = useSelector(mapVerseCursorIndex)
+        verseCursorIndex = useSelector(mapVerseCursorIndex),
+        [didMount, setDidMount] = useState(false)
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
 
     return (
         <div
             {...{
                 className: cx(
                     'LogicWrapper',
-                    getPrefixedSceneClassNames(sceneCursorIndex),
-                    getPrefixedVerseClassNames(verseCursorIndex)
+
+                    didMount && [
+                        getPrefixedSceneClassNames(sceneCursorIndex),
+                        getPrefixedVerseClassNames(verseCursorIndex)
+                    ],
+                    'abF'
                 )
             }}
         >

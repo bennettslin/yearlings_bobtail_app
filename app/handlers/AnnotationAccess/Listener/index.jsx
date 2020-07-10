@@ -11,11 +11,11 @@ import { mapEarColumnIndex } from '../../../redux/session/selector'
 const AnnotationAccessListener = () => {
     const
         dispatchAccessedAnnotation = useRef(),
-        [didMount, setDidMount] = useState(false),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        earColumnIndex = useSelector(mapEarColumnIndex)
+        earColumnIndex = useSelector(mapEarColumnIndex),
+        [didMount, setDidMount] = useState(false)
 
     useEffect(() => {
         if (didMount) {

@@ -15,13 +15,13 @@ import { mapLyricAnnotationIndex } from '../../../redux/lyric/selector'
 const AnnotationPopup = ({ inMain }) => {
     const
         dispatchAnnotation = useRef(),
-        [didMount, setDidMount] = useState(false),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         isOverlayingAnnotation = useSelector(mapIsOverlayingAnnotation),
         isPopupAnnotationShown = useSelector(
             getMapIsPopupAnnotationShown(inMain)
         ),
-        [annotationIndex, setAnnotationIndex] = useState(lyricAnnotationIndex)
+        [annotationIndex, setAnnotationIndex] = useState(lyricAnnotationIndex),
+        [didMount, setDidMount] = useState(false)
 
     const handlePreviousClick = () => {
         dispatchAnnotation.current.direction(-1)

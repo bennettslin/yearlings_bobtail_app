@@ -20,59 +20,55 @@ import {
 } from '../../../../constants/access'
 import './style'
 
-const propTypes = {
-        accessKey: PropTypes.string
-    },
+const AccessIcon = ({
+    accessKey
 
-    AccessIcon = ({
+}) => {
+/**
+ * TODO: This might be temporary. The navigation keys will be replaced by
+ * actual svgs. The letters might be able to remain as text characters.
+ */
+    let shownKey = accessKey
 
-        accessKey
-
-    }) => {
-
-        /**
-     * TODO: This might be temporary. The navigation keys will be replaced by
-     * actual svgs. The letters might be able to remain as text characters.
-     */
-        let shownKey = accessKey
-
-        switch (accessKey) {
-            case ENTER:
-                shownKey = NAVIGATION_ENTER_KEY
-                break
-            case ESCAPE:
-                shownKey = NAVIGATION_ESCAPE_KEY
-                break
-            case ARROW_LEFT:
-                shownKey = NAVIGATION_LEFT_KEY
-                break
-            case ARROW_RIGHT:
-                shownKey = NAVIGATION_RIGHT_KEY
-                break
-            case ARROW_UP:
-                shownKey = NAVIGATION_UP_KEY
-                break
-            case ARROW_DOWN:
-                shownKey = NAVIGATION_DOWN_KEY
-                break
-        }
-
-        /**
-     * Having the field and icon live in separate svgs will make it easier to
-     * centre the icon.
-     */
-        return (
-            <div
-                className={cx(
-                    'AccessIcon',
-                    `AccessIcon__${accessKey}`
-                )}
-            >
-                {shownKey}
-            </div>
-        )
+    switch (accessKey) {
+        case ENTER:
+            shownKey = NAVIGATION_ENTER_KEY
+            break
+        case ESCAPE:
+            shownKey = NAVIGATION_ESCAPE_KEY
+            break
+        case ARROW_LEFT:
+            shownKey = NAVIGATION_LEFT_KEY
+            break
+        case ARROW_RIGHT:
+            shownKey = NAVIGATION_RIGHT_KEY
+            break
+        case ARROW_UP:
+            shownKey = NAVIGATION_UP_KEY
+            break
+        case ARROW_DOWN:
+            shownKey = NAVIGATION_DOWN_KEY
+            break
     }
 
-AccessIcon.propTypes = propTypes
+    /**
+ * Having the field and icon live in separate svgs will make it easier to
+ * centre the icon.
+ */
+    return (
+        <div
+            className={cx(
+                'AccessIcon',
+                `AccessIcon__${accessKey}`
+            )}
+        >
+            {shownKey}
+        </div>
+    )
+}
+
+AccessIcon.propTypes = {
+    accessKey: PropTypes.string
+}
 
 export default memo(AccessIcon)

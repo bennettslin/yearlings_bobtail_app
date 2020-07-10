@@ -35,7 +35,6 @@ import { mapIsWikiShown } from '../../redux/wiki/selector'
 const CloseHandler = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
-        [didMount, setDidMount] = useState(false),
         isActivated = useSelector(mapIsActivated),
         isOverviewShown = useSelector(mapIsOverviewShown),
         isTipsShown = useSelector(mapIsTipsShown),
@@ -46,7 +45,8 @@ const CloseHandler = forwardRef((props, ref) => {
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isScoreShown = useSelector(mapIsScoreShown),
-        isAboutShown = useSelector(mapIsAboutShown)
+        isAboutShown = useSelector(mapIsAboutShown),
+        [didMount, setDidMount] = useState(false)
 
     const closeMainPopups = ({
         exemptScore,

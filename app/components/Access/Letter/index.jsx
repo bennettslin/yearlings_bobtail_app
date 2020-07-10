@@ -31,14 +31,7 @@ const AccessLetter = ({
      * purposes. Keyboard access is technically still available on any device,
      * in any viewport width.
      */
-    if (
-        !isDesktopWidth &&
-        !isTabletWidth
-    ) {
-        return null
-    }
-
-    return (
+    return (isDesktopWidth || isTabletWidth) && (
         <CSSTransition
             appear
             mountOnEnter

@@ -15,8 +15,8 @@ import './style'
 
 const Theatre = () => {
     const
-        [didMount, setDidMount] = useState(false),
-        isWindowResizeDone = useSelector(mapIsWindowResizeDone)
+        isWindowResizeDone = useSelector(mapIsWindowResizeDone),
+        [didMount, setDidMount] = useState(false)
 
     const onExit = () => {
         logTransition('Theatre did exit.')

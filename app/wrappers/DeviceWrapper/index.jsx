@@ -1,5 +1,5 @@
 // Wrapper for device class names.
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -28,31 +28,36 @@ const DeviceWrapper = ({ children }) => {
             DEVICE_WIDTH_CONFIGS[deviceWidthIndex] &&
             DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey,
 
-        isTabletWidth = getIsTabletWidth(deviceWidthIndex)
+        isTabletWidth = getIsTabletWidth(deviceWidthIndex),
+        [didMount, setDidMount] = useState(false)
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
 
     return (
         <div
             {...{
                 className: cx(
                     'DeviceWrapper',
-                    `DW__${deviceWidthKey}Width`,
 
-                    IS_USER_AGENT_DESKTOP && 'DW__userAgentDesktop',
-
-                    isDesktopWidth ?
-                        'DW__desktopWidth' :
-                        'DW__mobileWidth',
-
-                    !isDesktopWidth && {
-                        'DW__miniOrTabletWidth': !isPhoneWidth,
-                        'DW__phoneOrMiniWidth': !isTabletWidth
-                    },
-                    // TODO: Make this a selector. See how CSS uses classes.
-                    canCarouselShow ?
-                        'DW__canCarouselShow' :
-                        'DW__cannotCarouselShow',
-                    canSliderMount &&
-                        'DW__canSliderMount',
+                    didMount && [
+                        `DW__${deviceWidthKey}Width`,
+                        IS_USER_AGENT_DESKTOP && 'DW__userAgentDesktop',
+                        isDesktopWidth ?
+                            'DW__desktopWidth' :
+                            'DW__mobileWidth',
+                        !isDesktopWidth && {
+                            'DW__miniOrTabletWidth': !isPhoneWidth,
+                            'DW__phoneOrMiniWidth': !isTabletWidth
+                        },
+                        // TODO: Make this a selector. See CSS classes.
+                        canCarouselShow ?
+                            'DW__canCarouselShow' :
+                            'DW__cannotCarouselShow',
+                        canSliderMount &&
+                            'DW__canSliderMount'
+                    ],
                     'abF'
                 )
             }}

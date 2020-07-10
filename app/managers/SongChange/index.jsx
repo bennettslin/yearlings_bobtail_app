@@ -18,12 +18,12 @@ const SongChangeManager = () => {
     const
         dispatch = useDispatch(),
         timeoutRef = useRef(),
-        [didMount, setDidMount] = useState(false),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        [songSelectTimeoutId, setSongSelectTimeoutId] = useState(-1)
+        [songSelectTimeoutId, setSongSelectTimeoutId] = useState(-1),
+        [didMount, setDidMount] = useState(false)
 
     timeoutRef.current = { songSelectTimeoutId }
 

@@ -21,10 +21,10 @@ const AudioManager = ({ setPlayerTime }) => {
     const
         dispatchSong = useRef(),
         dispatchVerse = useRef(),
-        [didMount, setDidMount] = useState(false),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
-        audioOptionIndex = useSelector(mapAudioOptionIndex)
+        audioOptionIndex = useSelector(mapAudioOptionIndex),
+        [didMount, setDidMount] = useState(false)
 
     const handleSongEnd = () => {
         const nextSongIndex = getNextSongIndex(

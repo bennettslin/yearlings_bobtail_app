@@ -11,11 +11,11 @@ import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
 const ScrollManager = () => {
     const
         dispatch = useDispatch(),
-        [didMount, setDidMount] = useState(false),
         isActivated = useSelector(mapIsActivated),
         isAutoScroll = useSelector(mapIsAutoScroll),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
-        isHeightlessLyric = useSelector(mapIsHeightlessLyric)
+        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
+        [didMount, setDidMount] = useState(false)
 
     const scrollLyric = log => {
         dispatch(scrollLyricBackToSelectedVerse(log))

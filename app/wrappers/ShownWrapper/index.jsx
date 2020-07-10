@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -39,55 +39,61 @@ const ShownWrapper = ({ children }) => {
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isOverlayShown = useSelector(mapIsOverlayShown),
-
         songOverviewShown =
             !isLyricLogue && isOverviewShown,
-        tipType = getSongTipType(lyricSongIndex)
+        tipType = getSongTipType(lyricSongIndex),
+        [didMount, setDidMount] = useState(false)
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
 
     return (
         <div
             {...{
                 className: cx(
                     'ShownWrapper',
-                    'abF',
 
-                    lyricAnnotationIndex ?
-                        'ShW__annotationShown' :
-                        'ShW__annotationHidden',
+                    didMount && [
+                        lyricAnnotationIndex ?
+                            'ShW__annotationShown' :
+                            'ShW__annotationHidden',
 
-                    songOverviewShown ?
-                        'ShW__songOverviewShown' :
-                        'ShW__songOverviewHidden',
+                        songOverviewShown ?
+                            'ShW__songOverviewShown' :
+                            'ShW__songOverviewHidden',
 
-                    // TODO: Make this a selector.
-                    // Don't show these class names between songs.
-                    isSongChangeDone && isTipsShown && [
-                        'ShW__tipsShown',
-                        `ShW__tips__${tipType}`,
-                        (
-                            /**
-                             * If dot is not selected, render the tips hand
-                             * that is pointed at dots toggle.
-                             */
-                            (tipType === WIKI && !reference) ||
-                            (tipType === WORMHOLES && !wormhole)
-                        ) ?
-                            'ShW__tips__isPointedAtDots' :
-                            'ShW__tips__isPointedAtLyrics'
+                        // TODO: Make this a selector.
+                        // Don't show these class names between songs.
+                        isSongChangeDone && isTipsShown && [
+                            'ShW__tipsShown',
+                            `ShW__tips__${tipType}`,
+                            (
+                                /**
+                                 * If dot is not selected, render the tips hand
+                                 * that is pointed at dots toggle.
+                                 */
+                                (tipType === WIKI && !reference) ||
+                                (tipType === WORMHOLES && !wormhole)
+                            ) ?
+                                'ShW__tips__isPointedAtDots' :
+                                'ShW__tips__isPointedAtLyrics'
+                        ],
+
+                        isCarouselShown && 'ShW__carouselExpanded',
+                        isNavShown && 'ShW__navExpanded',
+
+                        isDotsSlideShown ?
+                            'ShW__dotsShown' :
+                            'ShW__dotsHidden',
+
+                        isLyricExpanded && 'ShW__lyricExpanded',
+
+                        isOverlayShown ?
+                            'ShW__overlayShown' :
+                            'ShW__overlayHidden'
                     ],
-
-                    isCarouselShown && 'ShW__carouselExpanded',
-                    isNavShown && 'ShW__navExpanded',
-
-                    isDotsSlideShown ?
-                        'ShW__dotsShown' :
-                        'ShW__dotsHidden',
-
-                    isLyricExpanded && 'ShW__lyricExpanded',
-
-                    isOverlayShown ?
-                        'ShW__overlayShown' :
-                        'ShW__overlayHidden'
+                    'abF'
                 )
             }}
         >

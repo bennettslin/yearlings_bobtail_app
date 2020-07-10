@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -20,25 +20,33 @@ const TouchWrapper = ({ children }) => {
         isAnchorMoused = useSelector(mapIsAnchorMoused),
         isScrolling = useSelector(mapIsScrolling),
         isSliderTouched = useSelector(mapIsSliderTouched),
-        isLyricsLocked = useSelector(mapIsLyricsLocked)
+        isLyricsLocked = useSelector(mapIsLyricsLocked),
+        [didMount, setDidMount] = useState(false)
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
 
     return (
         <div
             {...{
                 className: cx(
                     'TouchWrapper',
-                    !isAnchorMoused && 'TW__isAnchorUnmoused',
-                    isScrolling ?
-                        'TW__isScrolling' :
-                        'TW__isStationary',
-                    isSliderTouched && 'TW__sliderTouched',
-                    isBannerHovering && 'TW__bannerHovering',
-                    isActivated ?
-                        'TW__verseActive' :
-                        'TW__verseInactive',
-                    isLyricsLocked ?
-                        'TW__lyricsLocked' :
-                        'TW__lyricsUnlocked'
+                    didMount && [
+                        !isAnchorMoused && 'TW__isAnchorUnmoused',
+                        isScrolling ?
+                            'TW__isScrolling' :
+                            'TW__isStationary',
+                        isSliderTouched && 'TW__sliderTouched',
+                        isBannerHovering && 'TW__bannerHovering',
+                        isActivated ?
+                            'TW__verseActive' :
+                            'TW__verseInactive',
+                        isLyricsLocked ?
+                            'TW__lyricsLocked' :
+                            'TW__lyricsUnlocked'
+                    ],
+                    'abF'
                 )
             }}
         >

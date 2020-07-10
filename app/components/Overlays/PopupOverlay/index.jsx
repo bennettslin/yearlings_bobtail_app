@@ -6,8 +6,8 @@ import './style'
 
 const PopupOverlay = () => {
     const
-        [didMount, setDidMount] = useState(false),
-        isOverlayShown = useSelector(mapIsOverlayShown)
+        isOverlayShown = useSelector(mapIsOverlayShown),
+        [didMount, setDidMount] = useState(false)
 
     useEffect(() => {
         setDidMount(true)

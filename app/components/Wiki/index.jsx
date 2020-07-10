@@ -5,10 +5,10 @@ import { mapSelectedWikiUrl } from '../../redux/wiki/selector'
 
 const Wiki = () => {
     const
-        [didMount, setDidMount] = useState(false),
+        wikiElement = useRef(),
         selectedWikiUrl = useSelector(mapSelectedWikiUrl),
         [isLoading, setIsLoading] = useState(false),
-        wikiElement = useRef()
+        [didMount, setDidMount] = useState(false)
 
     const onLoad = () => {
         setIsLoading(false)

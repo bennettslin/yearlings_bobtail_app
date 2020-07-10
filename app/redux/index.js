@@ -10,6 +10,7 @@ import EntranceReducer from './entrance/reducer'
 import FocusReducer from './focus/reducer'
 import HoverReducer from './hover/reducer'
 import LyricReducer from './lyric/reducer'
+import MountReducer from './mount/reducer'
 import OptionReducer from './option/reducer'
 import PlayersReducer from './players/reducer'
 import SceneReducer from './scene/reducer'
@@ -34,6 +35,7 @@ import {
     FOCUS_STORE,
     HOVER_STORE,
     LYRIC_STORE,
+    MOUNT_STORE,
     OPTION_STORE,
     PLAYERS_STORE,
     SCENE_STORE,
@@ -59,6 +61,7 @@ export default combineReducers({
     [FOCUS_STORE]: FocusReducer,
     [HOVER_STORE]: HoverReducer,
     [LYRIC_STORE]: LyricReducer,
+    [MOUNT_STORE]: MountReducer,
     [OPTION_STORE]: OptionReducer,
     [PLAYERS_STORE]: PlayersReducer,
     [SCENE_STORE]: SceneReducer,

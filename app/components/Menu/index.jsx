@@ -21,18 +21,16 @@ import './style'
 
 const Menu = () => {
     const
-        [didMount, setDidMount] = useState(false),
         canSliderMount = useSelector(mapCanSliderMount),
         isTwoRowMenu = useSelector(mapIsTwoRowMenu),
         menuHeight = useSelector(mapMenuHeight),
         windowWidth = useSelector(mapWindowWidth),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
-
-        // This is necessary because transform animation in Safari is janky.
         menuMarginInOverlay = getMenuMarginInOverlay({
             isDesktopWidth,
             windowWidth
-        })
+        }),
+        [didMount, setDidMount] = useState(false)
 
     useEffect(() => {
         setDidMount(true)
@@ -59,6 +57,10 @@ const Menu = () => {
                         'abF'
                     ),
                     style: {
+                        /**
+                         * This is necessary because transform animation in
+                         * Safari is janky.
+                         */
                         marginLeft: menuMarginInOverlay,
                         marginRight: menuMarginInOverlay
                     }

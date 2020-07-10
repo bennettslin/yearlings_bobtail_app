@@ -10,9 +10,9 @@ import { mapCanScoreMount } from '../../../redux/viewport/selector'
 const ScorePopup = () => {
     const
         dispatch = useDispatch(),
-        [didMount, setDidMount] = useState(false),
         canScoreMount = useSelector(mapCanScoreMount),
-        isScoreShown = useSelector(mapIsScoreShown)
+        isScoreShown = useSelector(mapIsScoreShown),
+        [didMount, setDidMount] = useState(false)
 
     const handleCloseClick = () => {
         dispatch(updateIsScoreShown())

@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -23,7 +23,12 @@ const ResponsiveWrapper = ({ children }) => {
         singleShownEarColumnKey = getSingleShownEarColumnKey({
             isEarShown,
             earColumnIndex
-        })
+        }),
+        [didMount, setDidMount] = useState(false)
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
 
     return (
         <div
@@ -31,23 +36,22 @@ const ResponsiveWrapper = ({ children }) => {
                 className: cx(
                     'ResponsiveWrapper',
 
-                    showShrunkNavIcon ?
-                        'RW__navIconShrunk' :
-                        'RW__navIconStatic',
-
-                    isCarouselNavShowable &&
-                        'RW__carouselNavShowable',
-
-                    singleShownEarColumnKey ?
-                        `RW__${singleShownEarColumnKey}EarColumnOnly` :
-                        'RW__bothEarColumnsShown',
-
-                    !isHeightlessLyric &&
-                        'RW__lyricHeighted',
-
-                    isLyricExpandable ?
-                        'RW__lyricExpandable' :
-                        'RW__lyricNotExpandable'
+                    didMount && [
+                        showShrunkNavIcon ?
+                            'RW__navIconShrunk' :
+                            'RW__navIconStatic',
+                        isCarouselNavShowable &&
+                            'RW__carouselNavShowable',
+                        singleShownEarColumnKey ?
+                            `RW__${singleShownEarColumnKey}EarColumnOnly` :
+                            'RW__bothEarColumnsShown',
+                        !isHeightlessLyric &&
+                            'RW__lyricHeighted',
+                        isLyricExpandable ?
+                            'RW__lyricExpandable' :
+                            'RW__lyricNotExpandable'
+                    ],
+                    'abF'
                 )
             }}
         >

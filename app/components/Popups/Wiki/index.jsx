@@ -9,8 +9,8 @@ import { mapIsWikiShown } from '../../../redux/wiki/selector'
 const WikiPopup = () => {
     const
         dispatch = useDispatch(),
-        [didMount, setDidMount] = useState(false),
-        isWikiShown = useSelector(mapIsWikiShown)
+        isWikiShown = useSelector(mapIsWikiShown),
+        [didMount, setDidMount] = useState(false)
 
     const handleCloseClick = () => {
         dispatch(updateWikiIndices())
