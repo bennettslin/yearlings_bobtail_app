@@ -91,9 +91,9 @@ const ShownWrapper = ({ children }) => {
 
                         isOverlayShown ?
                             'ShW__overlayShown' :
-                            'ShW__overlayHidden'
-                    ],
-                    'abF'
+                            'ShW__overlayHidden',
+                        'abF'
+                    ]
                 )
             }}
         >

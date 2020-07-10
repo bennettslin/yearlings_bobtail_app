@@ -1,6 +1,4 @@
-// Section for lyric toggle buttons.
-
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import LyricToggleEar from './Ear'
@@ -8,30 +6,37 @@ import LyricToggleExpand from './Expand'
 import LyricToggleScroll from './Scroll'
 import './style'
 
-const LyricToggles = ({ isBottomRight }) => (
-    <div className={cx(
-        'LyricToggles',
+const LyricToggles = ({ isBottomRight }) => {
+    const [didMount, setDidMount] = useState(false)
 
-        isBottomRight ?
-            'LyricToggles__bottomRight' :
-            [
-                'LyricToggles__leftOrTop',
-                'top__lyricChild'
-            ]
-    )}>
-        {isBottomRight ? (
-            <LyricToggleScroll />
-        ) : (
-            <>
-                <LyricToggleEar />
-                <LyricToggleExpand />
-            </>
-        )}
-    </div>
-)
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
+        <div className={cx(
+            'LyricToggles',
+
+            isBottomRight ?
+                'LyricToggles__bottomRight' :
+                [
+                    'LyricToggles__leftOrTop',
+                    'top__lyricChild'
+                ]
+        )}>
+            {isBottomRight ? (
+                <LyricToggleScroll />
+            ) : (
+                <>
+                    <LyricToggleEar />
+                    <LyricToggleExpand />
+                </>
+            )}
+        </div>
+    )
+}
 
 LyricToggles.propTypes = {
-    // From parent.
     isBottomRight: PropTypes.bool
 }
 

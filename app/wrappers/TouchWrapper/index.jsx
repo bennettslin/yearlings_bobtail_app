@@ -44,9 +44,9 @@ const TouchWrapper = ({ children }) => {
                             'TW__verseInactive',
                         isLyricsLocked ?
                             'TW__lyricsLocked' :
-                            'TW__lyricsUnlocked'
-                    ],
-                    'abF'
+                            'TW__lyricsUnlocked',
+                        'abF'
+                    ]
                 )
             }}
         >

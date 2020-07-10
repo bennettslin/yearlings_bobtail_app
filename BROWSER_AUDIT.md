@@ -4,7 +4,6 @@
 * Weird bright hover for dots slide buttons.
 
 # Edge legacy
-
 * When access on, play button pulsate animation is weird.
 * Curtain top is missing red colour.
 * Curtain sides seem to only have vertical gradient, not horizontal.

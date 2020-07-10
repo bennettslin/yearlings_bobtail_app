@@ -56,9 +56,9 @@ const DeviceWrapper = ({ children }) => {
                             'DW__canCarouselShow' :
                             'DW__cannotCarouselShow',
                         canSliderMount &&
-                            'DW__canSliderMount'
-                    ],
-                    'abF'
+                            'DW__canSliderMount',
+                        'abF'
+                    ]
                 )
             }}
         >

@@ -22,9 +22,9 @@ const TransitionWrapper = ({ children }) => {
                     didMount && [
                         isSongChangeDone ?
                             'TrW__canLyricCarouselEnter' :
-                            'TrW__cannotLyricCarouselEnter'
-                    ],
-                    'abF'
+                            'TrW__cannotLyricCarouselEnter',
+                        'abF'
+                    ]
                 )
             }}
         >

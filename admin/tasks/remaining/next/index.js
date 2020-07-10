@@ -1,7 +1,7 @@
 export default [
     {
         taskName: `Rehydration fix.`,
-        workedHours: 8,
+        workedHours: 9,
         neededHours: 20
     },
     {

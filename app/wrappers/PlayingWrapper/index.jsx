@@ -39,9 +39,9 @@ const PlayingWrapper = ({ children }) => {
                             'PlW__accessOn' :
                             'PlW__accessOff',
                         accessedKey &&
-                            `${PARENT_ACCESS_PREFIX}${accessedKey}`
-                    ],
-                    'abF'
+                            `${PARENT_ACCESS_PREFIX}${accessedKey}`,
+                        'abF'
+                    ]
                 )
             }}
         >

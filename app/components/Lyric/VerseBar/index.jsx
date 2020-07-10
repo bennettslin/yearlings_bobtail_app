@@ -1,5 +1,5 @@
 // Component to show selected verse when scrolled above or below window height.
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
@@ -43,7 +43,8 @@ const VerseBarContainer = ({
     const
         dispatch = useDispatch(),
         isLyricLogue = useSelector(mapIsLyricLogue),
-        isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove))
+        isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove)),
+        [didMount, setDidMount] = useState(false)
 
     const onClick = e => {
         logEvent({ e, componentName: 'VerseBar' })
@@ -52,8 +53,12 @@ const VerseBarContainer = ({
         }
     }
 
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
     // Logue will not have verse object.
-    return !isLyricLogue && (
+    return didMount && !isLyricLogue && (
         <div
             {...{
                 className: cx(

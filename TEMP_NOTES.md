@@ -1,8 +1,18 @@
-# Hydration fix
-* About
-* Overview
-* Carousel
-* Lyric
+# Gatsby fixes
+* Logue is broken
+* Pages for each logue and song
+* Have songIndex known to page for each logue and song
+* Check that Overview, Carousel, and Lyric are good
+* Make efficient, such as removing extra classes, anchor extra text and underlines
+
+* Favicon
+* App loading indicator
+* URL replacement and redirects
+* 404 page
+* Admin routes
+* Deprecated page for Internet Explorer?
+* Why is Gatsby build so much bigger than webpack build?
+* Does Gatsby get a fresh version?
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
@@ -19,18 +29,3 @@
 * Have verse store for queued verse select, just like annotation store.
 * Make isActivated and isSelected selectors.
 * Shorten constants to abbreviations?
-
-# Ongoing Gatsby tasks
-* Add back admin routes
-* Dynamic routes for song indices
-* Pages and routing
-    * 404 page
-* URL replacement
-
-* Favicon
-* Splash page
-* Deprecated page
-* Take care of weirdness that results from client/server discrepancies.
-    * Heightless and zoom show the same thing.
-    * Always render Carousel, even in mobile. Show carousel if heightless.
-    * Only About, Carousel, and Lyric need to render for SEO.

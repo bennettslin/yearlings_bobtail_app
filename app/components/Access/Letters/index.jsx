@@ -1,5 +1,5 @@
 // Container to show multiple access icons in sequence.
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import AccessLetter from '../Letter'
@@ -11,25 +11,33 @@ const AccessLetters = ({
     accessKeys,
     className
 
-}) => (
-    <div className={cx(
-        'AccessLetters',
-        accessIconsName &&
-            `AccessLetters__${accessIconsName}`,
-        className
-    )}>
-        {accessKeys.map(accessKey => (
-            <AccessLetter
-                animateStandaloneOnKeyDown
-                {...{
-                    key: accessKey,
-                    accessKey,
-                    showIfAccessOn
-                }}
-            />
-        ))}
-    </div>
-)
+}) => {
+    const [didMount, setDidMount] = useState(false)
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
+        <div className={cx(
+            'AccessLetters',
+            accessIconsName &&
+                `AccessLetters__${accessIconsName}`,
+            className
+        )}>
+            {accessKeys.map(accessKey => (
+                <AccessLetter
+                    animateStandaloneOnKeyDown
+                    {...{
+                        key: accessKey,
+                        accessKey,
+                        showIfAccessOn
+                    }}
+                />
+            ))}
+        </div>
+    )
+}
 
 AccessLetters.propTypes = {
     accessIconsName: PropTypes.string,

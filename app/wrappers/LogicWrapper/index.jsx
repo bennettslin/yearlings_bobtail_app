@@ -29,9 +29,9 @@ const LogicWrapper = ({ children }) => {
 
                     didMount && [
                         getPrefixedSceneClassNames(sceneCursorIndex),
-                        getPrefixedVerseClassNames(verseCursorIndex)
-                    ],
-                    'abF'
+                        getPrefixedVerseClassNames(verseCursorIndex),
+                        'abF'
+                    ]
                 )
             }}
         >

@@ -49,9 +49,9 @@ const ResponsiveWrapper = ({ children }) => {
                             'RW__lyricHeighted',
                         isLyricExpandable ?
                             'RW__lyricExpandable' :
-                            'RW__lyricNotExpandable'
-                    ],
-                    'abF'
+                            'RW__lyricNotExpandable',
+                        'abF'
+                    ]
                 )
             }}
         >
