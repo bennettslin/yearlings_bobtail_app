@@ -1,5 +1,4 @@
 # Gatsby fixes
-* Logue is broken
 * Pages for each logue and song
 * Have songIndex known to page for each logue and song
 * Check that Overview, Carousel, and Lyric are good

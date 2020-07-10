@@ -24,11 +24,6 @@ const OverviewToggle = ({ className }) => {
         dispatchOverview.current({ isFromToggle: true })
     }
 
-    console.log('overview toggle', getOverviewToggleIdentifier({
-        isLyricLogue,
-        selectedOverviewOption
-    }), isLyricLogue, selectedOverviewOption)
-
     return (
         <div className={cx(
             'OverviewToggle',
