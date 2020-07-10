@@ -1,5 +1,8 @@
 # Hydration fix
-* Just take care of individual issues from here?
+* About
+* Overview
+* Carousel
+* Lyric
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
