@@ -1,4 +1,4 @@
-import React, { useRef, memo } from 'react'
+import React, { memo, useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
@@ -33,26 +33,9 @@ const Button = ({
     children
 
 }) => {
-    const stopPropagation = useRef()
-
-    const onClick = e => {
-
-        if (!isDisabled) {
-            stopPropagation.current(e)
-
-            if (!isClickDisabled) {
-                logEvent({
-                    e,
-                    componentName: `Button`,
-                    analyticsIdentifier: buttonName
-                })
-
-                handleButtonClick(e)
-            }
-        }
-    }
-
     const
+        stopPropagation = useRef(),
+
         isDefaultSize =
             !isLargeSize &&
             !isSmallSize &&
@@ -69,9 +52,31 @@ const Button = ({
             isAccessed
         ),
 
-        showTooltip = getShowTooltip(buttonName) && !isDisabled
+        showTooltip = getShowTooltip(buttonName) && !isDisabled,
 
-    return (
+        [didMount, setDidMount] = useState(false)
+
+    const onClick = e => {
+        if (!isDisabled) {
+            stopPropagation.current(e)
+
+            if (!isClickDisabled) {
+                logEvent({
+                    e,
+                    componentName: `Button`,
+                    analyticsIdentifier: buttonName
+                })
+
+                handleButtonClick(e)
+            }
+        }
+    }
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
         <div
             {...{
                 className: cx(
