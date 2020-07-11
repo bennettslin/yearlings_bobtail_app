@@ -1,4 +1,6 @@
 # Current Gatsby fixes
+* If Carousel can be rendered above Main, then it can be the only thing that page renders. The rest is part of the wrapper of the root element!
+
 * Check that Overview, Carousel, and Lyric are good for all songs
 * Make efficient, such as removing extra classes, anchor extra text and underlines
 * Why does no songIndex page default to Grasshoppers as source HTML?!
