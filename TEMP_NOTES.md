@@ -1,7 +1,7 @@
 # Current plan
 * Page passes page (previously lyric) indices to page container
-    * Pass page indices through context
-    * Change all components to get page indices from context
+    * Change page components to get page indices from context
+    * Pages change by navigating to new path
 
 # Clean up of current plan
 * Consolidate focus container and root container?
@@ -36,8 +36,8 @@
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 * Failed to decode downloaded font warning?
-* Selecting carousel annotation will sometimes flash lyric above carousel. Seems to be a new bug.
-* Song banner styling
+* Selecting carousel annotation will sometimes flash lyric above carousel.
+* Banner filmstrip styling should get constants from constants folder
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Is song selection still slower through access after refactor?
