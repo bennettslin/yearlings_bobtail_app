@@ -8,11 +8,45 @@ import {
     DOTS_STORE,
     SELECTED_DOTS_BIT
 } from '../../constants/store'
-import { DOTS_DEFAULTS } from './default'
+import { DOTS_DEFAULTS, getDotsDefaults } from './default'
 import { setInStorage } from '../../helpers/storage'
 
 export default (
     state = DOTS_DEFAULTS,
+    { type, payload }
+) => {
+    switch (type) {
+        case DOTS_STORE: {
+            const { dotIndex } = payload
+
+            if (hasKey(dotIndex)) {
+                const
+                    { selectedDotsBit: prevDotsBit } = state,
+                    selectedDotsBit = getDotsBitForToggledDotIndex({
+                        dotIndex,
+                        dotsBit: prevDotsBit
+                    })
+                setInStorage(SELECTED_DOTS_BIT, selectedDotsBit)
+
+                return {
+                    ...state,
+                    selectedDotsBit,
+                    ...getDotKeysFromBit(selectedDotsBit)
+                }
+            } else {
+                return {
+                    ...state,
+                    ...payload
+                }
+            }
+        }
+        default:
+            return state
+    }
+}
+
+export const getDotsReducer = songIndex => (
+    state = getDotsDefaults(songIndex),
     { type, payload }
 ) => {
     switch (type) {

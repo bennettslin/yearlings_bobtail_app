@@ -71,12 +71,11 @@ export const getStoredAnnotationIndex = songIndex => (
     )
 )
 
-export const getInitialIndicesFromRoutingOrStorage = () => {
+export const getInitialIndicesFromRoutingOrStorage = songIndex => {
     const
-        routingSongIndex = getRoutingSongIndex(),
+        // routingSongIndex = getRoutingSongIndex(),
+        routingSongIndex = songIndex,
         storedSongIndex = getStoredSongIndex(),
-        isRoutingStoredSameSong = routingSongIndex === storedSongIndex,
-
         isRoutingSongValid = Number.isFinite(routingSongIndex),
 
         // Set valid song. Favour routing over stored. Stored defaults to 0.
@@ -97,6 +96,7 @@ export const getInitialIndicesFromRoutingOrStorage = () => {
 
     // If routing song is valid, favour routing verse and annotation.
     if (isRoutingSongValid) {
+        const isRoutingStoredSameSong = routingSongIndex === storedSongIndex
 
         // Set routing verse if valid.
         if (isRoutingVerseValid) {
@@ -117,11 +117,18 @@ export const getInitialIndicesFromRoutingOrStorage = () => {
         }
     }
 
+    console.log(routingSongIndex, routingVerseIndex, routingAnnotationIndex)
+
     // This only saves upon initial retrieval.
     setInStorage(SELECTED_SONG_INDEX, initialSongIndex)
     setInStorage(SELECTED_VERSE_INDEX, initialVerseIndex)
     setInStorage(SELECTED_ANNOTATION_INDEX, initialAnnotationIndex)
-    return [initialSongIndex, initialVerseIndex, initialAnnotationIndex]
+
+    return {
+        initialSongIndex,
+        initialVerseIndex,
+        initialAnnotationIndex
+    }
 }
 
 export const getAudioOptionFromStorage = () => {

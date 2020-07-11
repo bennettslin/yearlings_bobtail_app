@@ -4,10 +4,11 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 
-import rootReducer from '../../app/redux'
+import rootReducer, { getCombinedReducers } from '../../app/redux'
 
 const store = createStore(
-    rootReducer,
+    // rootReducer,
+    getCombinedReducers(5),
     devToolsEnhancer()
 )
 
