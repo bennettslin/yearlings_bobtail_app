@@ -1,5 +1,7 @@
 # Current Gatsby fixes
 * If Carousel can be rendered above Main, then it can be the only thing that page renders. The rest is part of the wrapper of the root element!
+    * The page elements get songIndex from page. Use lyricSongIndex?
+    * All others get selectedSongIndex from store.
 
 * Check that Overview, Carousel, and Lyric are good for all songs
 * Make efficient, such as removing extra classes, anchor extra text and underlines
@@ -29,6 +31,7 @@
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 * Failed to decode downloaded font warning?
+* Selecting carousel annotation will sometimes flash lyric above carousel. Seems to be a new bug.
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Is song selection still slower through access after refactor?
