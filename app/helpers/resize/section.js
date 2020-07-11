@@ -94,8 +94,8 @@ export const getLyricSectionRect = ({
     menuHeight
 
 }) => {
-    const lyricSectionBottom = windowHeight
-    let lyricSectionTop =
+    const bottom = windowHeight
+    let top =
         isDesktopWidth ?
             CSS_HEIGHT_MENU :
             menuHeight
@@ -106,7 +106,7 @@ export const getLyricSectionRect = ({
          * section is just the entire window height. Otherwise, the top is the
          * menu height to accommodate the slider.
          */
-        lyricSectionTop = 0
+        top = 0
 
     } else if (isLyricExpandable && !isLyricExpanded) {
         /**
@@ -114,11 +114,11 @@ export const getLyricSectionRect = ({
          * dynamic height. Otherwise, it's expanded and so the top is the menu
          * height.
          */
-        lyricSectionTop = windowHeight * (1 - lyricDynamicHeight)
+        top = windowHeight * (1 - lyricDynamicHeight)
     }
 
     return JSON.stringify({
-        lyricSectionTop,
-        lyricSectionBottom
+        lyricSectionTop: Number(top.toFixed(2)),
+        lyricSectionBottom: Number(bottom.toFixed(2))
     })
 }

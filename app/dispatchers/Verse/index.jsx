@@ -29,7 +29,6 @@ const VerseDispatcher = forwardRef((props, ref) => {
             dispatch(updateSelectedStore({
                 selectedVerseIndex: verseIndex
             }))
-            // TODO: setPlayerTime
 
             logSelect({
                 action: fromPlayer ? 'playerVerse' : 'verse',

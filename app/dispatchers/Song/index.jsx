@@ -60,7 +60,6 @@ const SongDispatcher = forwardRef((props, ref) => {
             selectedVerseIndex,
             selectedAnnotationIndex
         }))
-        // TODO: setPlayerTime
 
         logSelect({
             action: 'song',

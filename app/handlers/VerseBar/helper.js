@@ -28,7 +28,11 @@ export const getVerseBarsStatus = ({
         return 1
 
     // Show verse bar below.
-    } else if (bottom > lyricSectionBottom) {
+    } else if (
+        // There won't be a lyric section bottom upon initial mount.
+        lyricSectionBottom &&
+        bottom > lyricSectionBottom
+    ) {
         return -1
 
     } else {
