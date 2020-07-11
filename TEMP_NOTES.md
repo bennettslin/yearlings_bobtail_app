@@ -1,15 +1,22 @@
-# Gatsby fixes
-* Check that Overview, Carousel, and Lyric are good
+# Current Gatsby fixes
+* Check that Overview, Carousel, and Lyric are good for all songs
 * Make efficient, such as removing extra classes, anchor extra text and underlines
+* Why does no songIndex page default to Grasshoppers as source HTML?!
+* If home page and stored song is Cremated, doublespeaker lines are weird.
 
-* Favicon
-* App loading indicator
 * URL replacement and redirects
+    * useHistory doesn't work in Gatsby
 * Make sure routing verse and annotation indices work as well
 * Storage verse and annotation should work, they currently don't
 * Test all routing and storage possibilities
+    * Only accept storage values if no routing given? Would make things a lot easier...
 * 404 page
+    * Just uses home page, but make sure URL is cleared
+
+# Later Gatsby fixes
 * Admin routes
+* Favicon
+* App loading indicator
 * Deprecated page for Internet Explorer?
 * Why is Gatsby build so much bigger than webpack build?
 * Does Gatsby get a fresh version?
