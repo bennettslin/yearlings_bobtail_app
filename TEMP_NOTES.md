@@ -1,13 +1,11 @@
 # Current plan
-* Gatsby browser has wrapRootElement and wrapPageElement
-    * wrapRootElement has Redux store provider, and seeds store with selectedSongIndex from route
-    * wrapPageElement has focus container and root container
-        * Consolidate focus container and root container for now
-        * figure out how to pass ref between wrapPageElement and element
-    * Wrapped element is page container
 * Page passes page (previously lyric) indices to page container
     * Pass page indices through context
     * Change all components to get page indices from context
+
+# Clean up of current plan
+* Consolidate focus container and root container?
+* Why doesn't lyric scroll element have focus function?
 
 # Current Gatsby fixes
 * Check that Overview, Carousel, and Lyric are good for all songs
@@ -39,6 +37,7 @@
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 * Failed to decode downloaded font warning?
 * Selecting carousel annotation will sometimes flash lyric above carousel. Seems to be a new bug.
+* Song banner styling
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Is song selection still slower through access after refactor?

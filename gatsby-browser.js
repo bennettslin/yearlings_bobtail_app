@@ -4,16 +4,17 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 import { getCombinedReducers } from './app/redux'
+import AppContainer from './app/containers/App'
+import { getRoutingSongIndex } from './app/helpers/routing'
 
 // Import these here just to make them available.
 import './app/utils/logger'
 import './app/utils/analytics'
 import './app/scss/app'
 
-// TODO: Seed store with songIndex from window location pathname.
-
 const store = createStore(
-    getCombinedReducers(),
+    // Initialise store with routing song index.
+    getCombinedReducers(getRoutingSongIndex()),
     devToolsEnhancer()
 )
 
@@ -23,11 +24,9 @@ export const wrapRootElement = ({ element }) => (
     </Provider>
 )
 
-// TODO: Put wrapper components that don't get unmounted on page change here.
-
 export const wrapPageElement = ({ element }) => (
-    <div className="test">
+    <AppContainer>
         {element}
-    </div>
+    </AppContainer>
 )
 

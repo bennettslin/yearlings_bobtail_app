@@ -52,7 +52,9 @@ const LyricScroll = forwardRef((props, ref) => {
     )
 
     const setRef = node => {
-        ref.current = node
+        if (ref) {
+            ref.current = node
+        }
         lyricScrollElement.current = node
     }
 

@@ -1,7 +1,6 @@
-import React, { useEffect, forwardRef, useRef, memo } from 'react'
+import React, { cloneElement, useEffect, forwardRef, useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import PageContainer from '../Page'
 import ResizeManager from '../../managers/Resize'
 import Theatre from '../../components/Theatre'
 import Menu from '../../components/Menu'
@@ -14,7 +13,9 @@ import './style'
 const RootContainer = forwardRef(({ children }, ref) => {
     const rootContainerElement = useRef()
 
-    const getRootContainerElement = () => rootContainerElement.current
+    const
+        getRootContainerElement = () => rootContainerElement.current,
+        childrenWithRef = cloneElement(children, { ref })
 
     useEffect(() => {
         logMount('RootContainer')
@@ -34,8 +35,7 @@ const RootContainer = forwardRef(({ children }, ref) => {
             <ResizeManager {...{ getRootContainerElement }} />
             <WrapperContainer>
                 <Theatre />
-                {children}
-                <PageContainer {...{ ref }} />
+                {childrenWithRef}
                 <PopupOverlay />
                 <MainPopups />
                 <Menu />

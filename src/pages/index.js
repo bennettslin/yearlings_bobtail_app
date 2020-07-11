@@ -1,6 +1,6 @@
 import React from 'react'
-import AppContainer from '../../app/containers/App'
+import PageContainer from '../../app/containers/Page'
 
 export default () => (
-    <AppContainer />
+    <PageContainer />
 )

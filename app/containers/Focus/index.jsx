@@ -40,7 +40,8 @@ const FocusContainer = ({ children }) => {
                 focusContainerElement,
             logString = shouldFocusLyric ? 'lyric' : 'focusContainer'
 
-        if (element.current) {
+        // TODO: Figure out why the focus function isn't being passed in ref.
+        if (element.current && element.current.focus) {
             logFocus(`Focus on ${logString}.`)
             element.current.focus()
         }
