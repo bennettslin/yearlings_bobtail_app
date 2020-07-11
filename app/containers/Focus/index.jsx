@@ -1,5 +1,6 @@
 // Parent component that handles click, touch, and keyDown events.
 import React, { useEffect, useRef, useState, memo } from 'react'
+import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateFocusStore } from '../../redux/focus/action'
 import CloseHandler from '../../managers/Close'
@@ -14,7 +15,7 @@ import {
 } from '../../redux/focus/selector'
 import { mapCanSliderMount } from '../../redux/viewport/selector'
 
-const FocusContainer = () => {
+const FocusContainer = ({ children }) => {
     const
         dispatch = useDispatch(),
         focusContainerElement = useRef(),
@@ -117,12 +118,18 @@ const FocusContainer = () => {
             }}
         >
             <CloseHandler {...{ ref: closeForBodyClick }} />
-            <RootContainer {...{ ref: lyricScrollElement }} />
+            <RootContainer {...{ ref: lyricScrollElement }}>
+                {children}
+            </RootContainer>
             <SliderTouchDispatcher {...{ ref: dispatchSliderTouch }} />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
             <KeyManager {...{ ref: handleKey }} />
         </div>
     )
+}
+
+FocusContainer.propTypes = {
+    children: PropTypes.node.isRequired
 }
 
 export default memo(FocusContainer)

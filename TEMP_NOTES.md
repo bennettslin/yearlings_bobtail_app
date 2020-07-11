@@ -1,8 +1,15 @@
-# Current Gatsby fixes
-* If Carousel can be rendered above Main, then it can be the only thing that page renders. The rest is part of the wrapper of the root element!
-    * The page elements get songIndex from page. Use lyricSongIndex?
-    * All others get selectedSongIndex from store.
+# Current plan
+* Gatsby browser has wrapRootElement and wrapPageElement
+    * wrapRootElement has Redux store provider, and seeds store with selectedSongIndex from route
+    * wrapPageElement has focus container and root container
+        * Consolidate focus container and root container for now
+        * figure out how to pass ref between wrapPageElement and element
+    * Wrapped element is page container
+* Page passes page (previously lyric) indices to page container
+    * Pass page indices through context
+    * Change all components to get page indices from context
 
+# Current Gatsby fixes
 * Check that Overview, Carousel, and Lyric are good for all songs
 * Make efficient, such as removing extra classes, anchor extra text and underlines
 * Why does no songIndex page default to Grasshoppers as source HTML?!

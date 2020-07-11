@@ -1,18 +1,17 @@
 import React, { useEffect, forwardRef, useRef, memo } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PageContainer from '../Page'
 import ResizeManager from '../../managers/Resize'
-import Carousel from '../../components/Carousel'
 import Theatre from '../../components/Theatre'
-import Main from '../../components/Main'
 import Menu from '../../components/Menu'
-import LyricOverview from '../../components/LyricOverview'
 import MainPopups from '../../components/Popups/MainPopups'
 import PopupOverlay from '../../components/Overlays/PopupOverlay'
 import TouchOverlay from '../../components/Overlays/TouchOverlay'
 import WrapperContainer from '../Wrapper'
 import './style'
 
-const RootContainer = forwardRef((props, ref) => {
+const RootContainer = forwardRef(({ children }, ref) => {
     const rootContainerElement = useRef()
 
     const getRootContainerElement = () => rootContainerElement.current
@@ -35,9 +34,8 @@ const RootContainer = forwardRef((props, ref) => {
             <ResizeManager {...{ getRootContainerElement }} />
             <WrapperContainer>
                 <Theatre />
-                <Carousel />
-                <Main />
-                <LyricOverview {...{ ref }} />
+                {children}
+                <PageContainer {...{ ref }} />
                 <PopupOverlay />
                 <MainPopups />
                 <Menu />
@@ -46,5 +44,9 @@ const RootContainer = forwardRef((props, ref) => {
         </div>
     )
 })
+
+RootContainer.propTypes = {
+    children: PropTypes.node.isRequired
+}
 
 export default memo(RootContainer)
