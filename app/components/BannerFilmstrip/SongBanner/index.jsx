@@ -33,7 +33,7 @@ const SongBanner = () => {
         songBannerElement = useRef(),
         stopPropagation = useRef(),
         dispatchVerse = useRef(),
-        playerTime = useContext(PlayerTimeContext),
+        { playerTime } = useContext(PlayerTimeContext),
         isSmallBannerText = useSelector(mapIsSmallBannerText),
         isPlaying = useSelector(mapIsPlaying),
         isBannerHovering = useSelector(mapIsBannerHovering),

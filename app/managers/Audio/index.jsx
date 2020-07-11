@@ -1,8 +1,10 @@
 // Manager for audio players.
-import React, { memo, useEffect, useRef, useState } from 'react'
+// eslint-disable-next-line object-curly-newline
+import React, { memo, useContext, useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
+import PlayerTimeContext from '../../contexts/PlayerTime'
 import SongDispatcher from '../../dispatchers/Song'
 import VerseDispatcher from '../../dispatchers/Verse'
 import Player from './Player'
@@ -17,10 +19,11 @@ import {
 } from '../../redux/selected/selector'
 import { mapAudioOptionIndex } from '../../redux/session/selector'
 
-const AudioManager = ({ setPlayerTime }) => {
+const AudioManager = () => {
     const
         dispatchSong = useRef(),
         dispatchVerse = useRef(),
+        { setPlayerTime } = useContext(PlayerTimeContext),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         audioOptionIndex = useSelector(mapAudioOptionIndex),

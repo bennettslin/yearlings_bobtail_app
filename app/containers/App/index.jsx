@@ -9,8 +9,15 @@ const AppContainer = () => {
     const [playerTime, setPlayerTime] = useState(0)
 
     return (
-        <PlayerTimeContext.Provider {...{ value: playerTime }} >
-            <AudioManager {...{ setPlayerTime }} />
+        <PlayerTimeContext.Provider
+            {...{
+                value: {
+                    playerTime,
+                    setPlayerTime
+                }
+            }}
+        >
+            <AudioManager />
             <ListenContainer />
             <FocusContainer />
             <StylesheetContainer />

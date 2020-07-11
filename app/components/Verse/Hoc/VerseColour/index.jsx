@@ -16,7 +16,7 @@ const VerseColour = ({
 
 }) => {
     const
-        playerTime = useContext(PlayerTimeContext),
+        { playerTime } = useContext(PlayerTimeContext),
         verseTrackerLength = useSelector(getMapVerseTrackerLength({
             playerTime,
             verseIndex

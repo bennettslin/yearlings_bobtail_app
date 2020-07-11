@@ -10,7 +10,7 @@ import './style'
 
 const SongBannerTimer = () => {
     const
-        playerTime = useContext(PlayerTimeContext),
+        { playerTime } = useContext(PlayerTimeContext),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         bannerCursorTime = useSelector(getMapSongCursorTime(playerTime))
 

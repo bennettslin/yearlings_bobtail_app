@@ -11,7 +11,7 @@ import './style'
 
 const FilmstripCell = ({ sceneIndex }) => {
     const
-        playerTime = useContext(PlayerTimeContext),
+        { playerTime } = useContext(PlayerTimeContext),
         isSceneCursor = useSelector(getMapIsSceneCursor(sceneIndex)),
         sceneTrackerWidth = useSelector(getMapSceneTrackerWidth({
             sceneIndex,
