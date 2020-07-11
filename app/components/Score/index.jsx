@@ -28,7 +28,6 @@ const Score = () => {
         if (scoreUrl) {
             setIsLoading(true)
         }
-
     }, [lyricSongIndex, isScoreShown])
 
     return (

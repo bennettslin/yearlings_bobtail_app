@@ -7,16 +7,11 @@ const Wiki = () => {
     const
         wikiElement = useRef(),
         selectedWikiUrl = useSelector(mapSelectedWikiUrl),
-        [isLoading, setIsLoading] = useState(false),
-        [didMount, setDidMount] = useState(false)
+        [isLoading, setIsLoading] = useState(false)
 
     const onLoad = () => {
         setIsLoading(false)
     }
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
 
     useEffect(() => {
         if (wikiElement.current) {
@@ -29,7 +24,7 @@ const Wiki = () => {
         }
     }, [selectedWikiUrl])
 
-    return didMount && (
+    return (
         <Iframe
             {...{
                 ref: wikiElement,
