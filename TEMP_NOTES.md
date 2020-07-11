@@ -7,6 +7,7 @@
 * Favicon
 * App loading indicator
 * URL replacement and redirects
+* Make sure routing verse and annotation indices work as well
 * 404 page
 * Admin routes
 * Deprecated page for Internet Explorer?
