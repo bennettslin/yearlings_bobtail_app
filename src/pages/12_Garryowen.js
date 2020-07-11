@@ -7,7 +7,7 @@ import { devToolsEnhancer } from 'redux-devtools-extension'
 import { getCombinedReducers } from '../../app/redux'
 
 const store = createStore(
-    getCombinedReducers(),
+    getCombinedReducers(12),
     devToolsEnhancer()
 )
 

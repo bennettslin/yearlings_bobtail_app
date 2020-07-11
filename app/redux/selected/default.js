@@ -9,15 +9,6 @@ export const {
 
 export const INITIAL_IS_SELECTED_LOGUE = getSongIsLogue(INITIAL_SONG_INDEX)
 
-export const SELECTED_DEFAULTS = {
-    selectedSongIndex: INITIAL_SONG_INDEX,
-    selectedVerseIndex: INITIAL_VERSE_INDEX,
-    selectedAnnotationIndex: INITIAL_ANNOTATION_INDEX,
-    isSelectedLogue: INITIAL_IS_SELECTED_LOGUE
-}
-
-/** */
-
 export const getSelectedDefaults = songIndex => {
     const {
         initialSongIndex,

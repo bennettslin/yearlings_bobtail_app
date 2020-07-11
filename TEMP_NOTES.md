@@ -1,6 +1,4 @@
 # Gatsby fixes
-* Pages for each logue and song
-* Have songIndex known to page for each logue and song
 * Check that Overview, Carousel, and Lyric are good
 * Make efficient, such as removing extra classes, anchor extra text and underlines
 
@@ -8,6 +6,8 @@
 * App loading indicator
 * URL replacement and redirects
 * Make sure routing verse and annotation indices work as well
+* Storage verse and annotation should work, they currently don't
+* Test all routing and storage possibilities
 * 404 page
 * Admin routes
 * Deprecated page for Internet Explorer?

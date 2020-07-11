@@ -5,7 +5,6 @@ import { getValidAnnotationIndex } from '../api/album/annotations'
 
 import { getArrayOfLength } from './general'
 import {
-    getRoutingSongIndex,
     getRoutingVerseIndex,
     getRoutingAnnotationIndex
 } from './routing'
@@ -71,16 +70,14 @@ export const getStoredAnnotationIndex = songIndex => (
     )
 )
 
-export const getInitialIndicesFromRoutingOrStorage = songIndex => {
+export const getInitialIndicesFromRoutingOrStorage = pageSongIndex => {
     const
-        // routingSongIndex = getRoutingSongIndex(),
-        routingSongIndex = songIndex,
         storedSongIndex = getStoredSongIndex(),
-        isRoutingSongValid = Number.isFinite(routingSongIndex),
+        isPageSongValid = Number.isFinite(pageSongIndex),
 
-        // Set valid song. Favour routing over stored. Stored defaults to 0.
-        initialSongIndex = isRoutingSongValid ?
-            routingSongIndex : storedSongIndex,
+        // Set valid song. Favour page over stored. Stored defaults to 0.
+        initialSongIndex = isPageSongValid ?
+            pageSongIndex : storedSongIndex,
 
         routingVerseIndex = getRoutingVerseIndex(initialSongIndex),
         storedVerseIndex = getStoredVerseIndex(initialSongIndex),
@@ -94,9 +91,9 @@ export const getInitialIndicesFromRoutingOrStorage = songIndex => {
     let initialVerseIndex = storedVerseIndex
     let initialAnnotationIndex = storedAnnotationIndex
 
-    // If routing song is valid, favour routing verse and annotation.
-    if (isRoutingSongValid) {
-        const isRoutingStoredSameSong = routingSongIndex === storedSongIndex
+    // If page song is valid, favour routing verse and annotation.
+    if (isPageSongValid) {
+        const isRoutingStoredSameSong = pageSongIndex === storedSongIndex
 
         // Set routing verse if valid.
         if (isRoutingVerseValid) {
@@ -116,8 +113,6 @@ export const getInitialIndicesFromRoutingOrStorage = songIndex => {
             initialAnnotationIndex = 0
         }
     }
-
-    console.log(routingSongIndex, routingVerseIndex, routingAnnotationIndex)
 
     // This only saves upon initial retrieval.
     setInStorage(SELECTED_SONG_INDEX, initialSongIndex)

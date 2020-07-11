@@ -1,16 +1,8 @@
 import qs from 'qs'
 
-import { getIsSongValid } from '../api/album/songs'
 import { getIsVerseValid } from '../api/album/verses'
 import { getIsAnnotationValid } from '../api/album/annotations'
 import { getWindow } from '../utils/browser'
-
-export const getRoutingSongIndex = () => {
-    const { pathname } = getWindow().location,
-        routingSongIndex = parseInt(pathname.replace(/\D/g, ''))
-
-    return getIsSongValid(routingSongIndex) ? routingSongIndex : NaN
-}
 
 const _getQueryStringIndex = key => {
     const { search } = getWindow().location
