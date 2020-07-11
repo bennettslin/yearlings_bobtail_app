@@ -1,7 +1,5 @@
 // Manager for audio players.
-// eslint-disable-next-line object-curly-newline
 import React, { memo, useContext, useEffect, useRef, useState } from 'react'
-import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import PlayerTimeContext from '../../contexts/PlayerTime'
@@ -130,10 +128,6 @@ const AudioManager = () => {
             <VerseDispatcher {...{ ref: dispatchVerse }} />
         </div>
     )
-}
-
-AudioManager.propTypes = {
-    setPlayerTime: PropTypes.func.isRequired
 }
 
 export default memo(AudioManager)

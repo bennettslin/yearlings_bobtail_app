@@ -12,6 +12,7 @@
 * Deprecated page for Internet Explorer?
 * Why is Gatsby build so much bigger than webpack build?
 * Does Gatsby get a fresh version?
+* Remove trailing slash?
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.

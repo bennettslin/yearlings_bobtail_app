@@ -16,7 +16,7 @@ const store = createStore(
 )
 
 export const wrapRootElement = ({ element }) => (
-    <Provider store={store}>
+    <Provider {...{ store }}>
         {element}
     </Provider>
 )

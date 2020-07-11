@@ -1,5 +1,4 @@
-// eslint-disable-next-line object-curly-newline
-import React, { useContext, useEffect, useRef, useState, memo } from 'react'
+import React, { memo, useContext, useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import PlayerTimeContext from '../../../contexts/PlayerTime'
