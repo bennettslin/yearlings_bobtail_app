@@ -7,7 +7,6 @@ import {
     getStartTimeForVerse,
     getDurationForVerse
 } from '../../../../../api/album/time'
-import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'
 import { mapLyricSongIndex } from '../../../../../redux/lyric/selector'
 import './style'
@@ -48,7 +47,7 @@ const SliderVerses = ({
                         index === stanzaVerseIndices.length - 1
 
                 return (
-                    <VerseHoc
+                    <SliderVerse
                         inSlider
                         {...{
                             key: index,
@@ -56,8 +55,7 @@ const SliderVerses = ({
                             isLastVerseOfStanza,
                             relativeStartTime,
                             verseDuration,
-                            stanzaDuration,
-                            VerseComponent: SliderVerse
+                            stanzaDuration
                         }}
                     />
                 )

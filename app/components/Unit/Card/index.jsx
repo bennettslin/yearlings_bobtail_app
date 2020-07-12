@@ -5,7 +5,6 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import UnitTipsHands from '../TipsHands'
 import UnitTab from '../Tab'
-import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import {
     getUnitCardVerses,
@@ -82,14 +81,13 @@ const UnitCard = forwardRef(({
                         verseEntity
 
                     return (
-                        <VerseHoc {...other}
+                        <Verse {...other}
                             inUnit
                             {...{
                                 key: index,
                                 ref,
                                 ...isIndexed && { verseIndex: verseEntity },
                                 verseObject,
-                                VerseComponent: Verse,
                                 isTruncatable
                             }}
                         />

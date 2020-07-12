@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import ActivatedVerseDispatcher from '../../dispatchers/Activated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
+import getVerseHoc from '../VerseHoc'
 import VerseLines from './Lines'
 import { VERSE_SCROLL } from '../../constants/scroll'
 import './style'
@@ -96,4 +97,4 @@ Verse.propTypes = {
     children: PropTypes.node
 }
 
-export default memo(Verse)
+export default memo(getVerseHoc(Verse))

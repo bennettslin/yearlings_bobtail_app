@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
-import Button from '../../../Button'
-import { ENTER } from '../../../../constants/access'
+import Button from '../../Button'
+import { ENTER } from '../../../constants/access'
 import {
     AUDIO_FAST_FORWARD_BUTTON_KEY,
     AUDIO_REWIND_BUTTON_KEY
-} from '../../../../constants/buttons'
-import { getMapIsVerseActivated } from '../../../../redux/activated/selector'
-import { getMapVerseSelectedStatus } from '../../../../redux/selected/selector'
+} from '../../../constants/buttons'
+import { getMapIsVerseActivated } from '../../../redux/activated/selector'
+import { getMapVerseSelectedStatus } from '../../../redux/selected/selector'
 import './style'
 
 const VerseNav = ({

@@ -3,7 +3,6 @@ import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
-import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../api/album/verses'
 import { updateIsAutoScroll } from '../../../redux/toggle/action'
@@ -21,15 +20,14 @@ const VerseBar = () => {
         verseCursorIndex = useSelector(mapVerseCursorIndex)
 
     return (
-        <VerseHoc
+        <Verse
             inVerseBar
             {...{
                 verseIndex: verseCursorIndex,
                 verseObject: getVerse(
                     lyricSongIndex,
                     verseCursorIndex
-                ),
-                VerseComponent: Verse
+                )
             }}
         />
     )

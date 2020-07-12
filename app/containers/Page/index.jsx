@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import CarouselScroll from '../../components/Carousel/Scroll'
 import Lyric from '../../components/Lyric'
@@ -39,7 +39,7 @@ const getPageComponent = pageSongIndex => {
         isOverview: PropTypes.bool
     }
 
-    return PageComponent
+    return memo(PageComponent)
 }
 
 export default getPageComponent

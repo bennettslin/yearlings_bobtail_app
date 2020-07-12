@@ -2,6 +2,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getVerseHoc from '../../../../../VerseHoc'
 import './style'
 
 const SliderVerse = ({
@@ -70,4 +71,4 @@ SliderVerse.propTypes = {
     children: PropTypes.any.isRequired
 }
 
-export default memo(SliderVerse)
+export default memo(getVerseHoc(SliderVerse))
