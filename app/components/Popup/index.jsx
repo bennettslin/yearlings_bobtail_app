@@ -1,4 +1,4 @@
-import React, { useRef, memo } from 'react'
+import React, { useEffect, useRef, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -23,12 +23,17 @@ const Popup = ({
 }) => {
     const
         stopPropagation = useRef(),
-        { isFullHeight } = other
+        { isFullHeight } = other,
+        [didMount, setDidMount] = useState(false)
 
     const handleContainerClick = e => {
         logEvent({ e, componentName: popupName })
         stopPropagation.current(e)
     }
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
 
     return (
         <CSSTransition
@@ -47,16 +52,18 @@ const Popup = ({
         >
             <div
                 className={cx(
-                    popupName,
                     'Popup',
-                    isFullHeight && 'Popup__fullHeight',
+                    popupName,
+                    didMount && [
+                        isFullHeight && 'Popup__fullHeight',
 
-                    // For animation styling.
-                    {
-                        'Popup__notInOverlay': !displaysInOverlay,
-                        'fCC': !noFlexCentre,
-                        'abF': !noAbsoluteFull
-                    }
+                        // For animation styling.
+                        {
+                            'Popup__notInOverlay': !displaysInOverlay,
+                            'fCC': !noFlexCentre,
+                            'abF': !noAbsoluteFull
+                        }
+                    ]
                 )}
             >
                 <PopupView {...other}
