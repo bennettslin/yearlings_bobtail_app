@@ -3,46 +3,42 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
-import Texts from '../Texts'
+import PageSongIndexContext from '../../contexts/PageSongIndex'
 import OverviewToggle from '../Main/OverviewToggle'
-import { getOverviewForSong } from '../../api/album/songs'
-import { mapLyricSongIndex } from '../../redux/lyric/selector'
+import OverviewText from './Text'
 import { mapIsToggleInOverview } from '../../redux/overview/selector'
+import { getFinalSideClass } from '../../utils/server'
 import './style'
-import {
-    getFinalSideClass,
-    getFinalSongIndex
-} from '../../utils/server'
 
 const Overview = ({ pageSongIndex }) => {
-    const
-        lyricSongIndex = useSelector(mapLyricSongIndex),
-        isToggleInOverview = useSelector(mapIsToggleInOverview),
-        finalSideSongIndex = getFinalSongIndex({
-            lyricSongIndex,
-            pageSongIndex
-        })
+    const isToggleInOverview = useSelector(mapIsToggleInOverview)
 
     return (
-        <div
+        <PageSongIndexContext.Provider
             {...{
-                className: cx(
-                    'Overview',
-                    'fontSize__verse',
-                    isToggleInOverview && 'Overview__toggleInOverview',
-                    getFinalSideClass()
-                )
+                value: pageSongIndex
             }}
         >
-            {isToggleInOverview &&
-                <OverviewToggle
-                    {...{
-                        className: 'Overview__toggleFloatContainer'
-                    }}
-                />
-            }
-            <Texts {...{ text: getOverviewForSong(finalSideSongIndex) }} />
-        </div>
+            <div
+                {...{
+                    className: cx(
+                        'Overview',
+                        'fontSize__verse',
+                        isToggleInOverview && 'Overview__toggleInOverview',
+                        getFinalSideClass()
+                    )
+                }}
+            >
+                {isToggleInOverview &&
+                    <OverviewToggle
+                        {...{
+                            className: 'Overview__toggleFloatContainer'
+                        }}
+                    />
+                }
+                <OverviewText />
+            </div>
+        </PageSongIndexContext.Provider>
     )
 }
 
