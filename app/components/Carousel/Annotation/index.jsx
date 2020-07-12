@@ -3,29 +3,29 @@ import React, { forwardRef, memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getFinalSideHoc from '../../FinalSideHoc'
 import Annotation from '../../Annotation'
 import { getDotsBitForAnnotation } from '../../../api/album/annotations'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import { getCarouselAnnotationData } from './helper'
 import { getMapIsAnnotationAccessed } from '../../../redux/access/selector'
 import { getMapHasSelectedDot } from '../../../redux/dots/selector'
-import {
-    mapLyricSongIndex,
-    getMapIsLyricAnnotation
-} from '../../../redux/lyric/selector'
+import { getMapIsLyricAnnotation } from '../../../redux/lyric/selector'
 import './style'
 
-const CarouselAnnotation = forwardRef(({ annotationIndex }, ref) => {
+const CarouselAnnotation = forwardRef(({
+    finalSideSongIndex,
+    annotationIndex
+}, ref) => {
     const
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
-        lyricSongIndex = useSelector(mapLyricSongIndex),
         dotsBit = getDotsBitForAnnotation(
-            lyricSongIndex,
+            finalSideSongIndex,
             annotationIndex
         ),
         columnKey = getCarouselAnnotationData(
-            lyricSongIndex,
+            finalSideSongIndex,
             annotationIndex
         ),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit))
@@ -65,7 +65,8 @@ const CarouselAnnotation = forwardRef(({ annotationIndex }, ref) => {
 })
 
 CarouselAnnotation.propTypes = {
+    finalSideSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default memo(CarouselAnnotation)
+export default memo(getFinalSideHoc(CarouselAnnotation))

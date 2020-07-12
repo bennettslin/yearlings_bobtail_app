@@ -3,27 +3,26 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
+import getFinalSideHoc from '../../../FinalSideHoc'
 import AnnotationWormhole from './Wormhole'
 import { getSourceWormholeIndices } from '../../../../api/album/wormholes'
 import { mapAccessedWikiWormholeIndex } from '../../../../redux/access/selector'
-import { mapLyricSongIndex } from '../../../../redux/lyric/selector'
 import './style'
 
 const AnnotationWormholes = ({
     isSelected,
+    finalSideSongIndex,
     annotationIndex
 
 }) => {
-    const
-        accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex),
-        lyricSongIndex = useSelector(mapLyricSongIndex)
+    const accessedWikiWormholeIndex = useSelector(mapAccessedWikiWormholeIndex)
 
     /**
      * Iterating through multiple source wormhole indices is necessary only
      * because of the "shiv" wormhole.
      */
     return getSourceWormholeIndices(
-        lyricSongIndex,
+        finalSideSongIndex,
         annotationIndex
 
     ).map((sourceWormholeIndex, wormholeLinkIndex) => {
@@ -44,7 +43,8 @@ const AnnotationWormholes = ({
 
 AnnotationWormholes.propTypes = {
     isSelected: PropTypes.bool.isRequired,
+    finalSideSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default memo(AnnotationWormholes)
+export default memo(getFinalSideHoc(AnnotationWormholes))

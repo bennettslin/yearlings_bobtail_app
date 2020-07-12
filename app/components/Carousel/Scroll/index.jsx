@@ -1,17 +1,16 @@
 // Section to show all song annotations in a carousel layout.
 import React, { useEffect, useRef, memo } from 'react'
-import { useSelector } from 'react-redux'
+import PropTypes from 'prop-types'
+import getFinalSideHoc from '../../FinalSideHoc'
 import ScrollCarouselListener from '../../../handlers/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
 import { getAnnotationIndices } from '../../../api/album/annotations'
-import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
-const CarouselScroll = () => {
+const CarouselScroll = ({ finalSideSongIndex }) => {
     const
         carouselScrollElement = useRef(),
-        carouselScrollChildren = useRef(),
-        lyricSongIndex = useSelector(mapLyricSongIndex)
+        carouselScrollChildren = useRef()
 
     const getCarouselScrollElement = () => (
         carouselScrollElement.current
@@ -36,7 +35,7 @@ const CarouselScroll = () => {
                 getCarouselScrollElement,
                 getCarouselScrollChild
             }} />
-            {getAnnotationIndices(lyricSongIndex).map(index => {
+            {getAnnotationIndices(finalSideSongIndex).map(index => {
                 const annotationIndex = index + 1
 
                 return (
@@ -53,4 +52,8 @@ const CarouselScroll = () => {
     )
 }
 
-export default memo(CarouselScroll)
+CarouselScroll.propTypes = {
+    finalSideSongIndex: PropTypes.number.isRequired
+}
+
+export default memo(getFinalSideHoc(CarouselScroll))

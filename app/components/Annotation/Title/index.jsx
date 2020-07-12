@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
+import getFinalSideHoc from '../../FinalSideHoc'
 import Anchor from '../../Anchor'
 import AnnotationAccess from './Access'
 import {
@@ -13,34 +14,33 @@ import { getDotKeysFromBit } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
 import { getAccessibleWikiWormholesCount } from './helper'
 import { mapSelectedDotsBit } from '../../../redux/dots/selector'
-import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
 const AnnotationTitle = ({
     isAccessed,
     isSelected,
+    finalSideSongIndex,
     annotationIndex
 
 }) => {
     const
         dispatch = useDispatch(),
         selectedDotsBit = useSelector(mapSelectedDotsBit),
-        lyricSongIndex = useSelector(mapLyricSongIndex),
         selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
 
         accessibleWikiWormholesLength = getAccessibleWikiWormholesCount({
-            songIndex: lyricSongIndex,
+            songIndex: finalSideSongIndex,
             annotationIndex,
             selectedDotKeys
         }),
 
         dotsBit = getDotsBitForAnnotation(
-            lyricSongIndex,
+            finalSideSongIndex,
             annotationIndex
         ),
 
         annotationTitle = getTitleForAnnotation(
-            lyricSongIndex,
+            finalSideSongIndex,
             annotationIndex
         ),
 
@@ -105,7 +105,8 @@ const AnnotationTitle = ({
 AnnotationTitle.propTypes = {
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
+    finalSideSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default memo(AnnotationTitle)
+export default memo(getFinalSideHoc(AnnotationTitle))

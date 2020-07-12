@@ -1,25 +1,23 @@
 // Section to show title and all notes and wormholes for each annotation.
 import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
 import cx from 'classnames'
+import getFinalSideHoc from '../FinalSideHoc'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 import { getAnnotationCardIndices } from '../../api/album/cards'
-import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import './style'
 
 const Annotation = ({
     inCarousel,
     isAccessed,
     isSelected,
+    finalSideSongIndex,
     annotationIndex
 
 }) => {
-    const
-        stopPropagation = useRef(),
-        lyricSongIndex = useSelector(mapLyricSongIndex)
+    const stopPropagation = useRef()
 
     const onClick = e => {
         logEvent({ e, componentName: `Annotation ${annotationIndex}` })
@@ -63,7 +61,7 @@ const Annotation = ({
                 />
 
                 {getAnnotationCardIndices(
-                    lyricSongIndex,
+                    finalSideSongIndex,
                     annotationIndex
                 ).map(cardIndex => (
                     <AnnotationCard
@@ -87,7 +85,8 @@ Annotation.propTypes = {
     inCarousel: PropTypes.bool,
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
+    finalSideSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default memo(Annotation)
+export default memo(getFinalSideHoc(Annotation))

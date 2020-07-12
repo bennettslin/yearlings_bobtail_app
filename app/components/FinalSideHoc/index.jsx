@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { forwardRef, useContext } from 'react'
 import { useSelector } from 'react-redux'
 import PageSongIndexContext from '../../contexts/PageSongIndex'
 import { mapLyricSongIndex } from '../../redux/lyric/selector'
@@ -10,7 +10,7 @@ const getFinalSideHoc = FinalSideComponent => {
      * is relevant only on the server side, or the lyric song index, which is
      * relevant only on the client side.
      */
-    const FinalSideHoc = props => {
+    const FinalSideHoc = forwardRef((props, ref) => {
         const
             pageSongIndex = useContext(PageSongIndexContext),
             lyricSongIndex = useSelector(mapLyricSongIndex),
@@ -22,12 +22,13 @@ const getFinalSideHoc = FinalSideComponent => {
         return (
             <FinalSideComponent
                 {...{
+                    ref,
                     finalSideSongIndex,
                     ...props
                 }}
             />
         )
-    }
+    })
 
     return FinalSideHoc
 }

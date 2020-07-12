@@ -3,6 +3,7 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getFinalSideHoc from '../../FinalSideHoc'
 import DotSequence from '../../DotSequence'
 import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
@@ -11,10 +12,10 @@ import {
     getDotsBitForAnnotationCard
 } from '../../../api/album/cards'
 import { getMapHasSelectedDot } from '../../../redux/dots/selector'
-import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
 const AnnotationCard = ({
+    finalSideSongIndex,
     annotationIndex,
     inCarousel,
     isSelected,
@@ -22,18 +23,17 @@ const AnnotationCard = ({
 
 }) => {
     const
-        lyricSongIndex = useSelector(mapLyricSongIndex),
+        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
         description = getDescriptionForAnnotationCard(
-            lyricSongIndex,
+            finalSideSongIndex,
             annotationIndex,
             cardIndex
         ),
         dotsBit = getDotsBitForAnnotationCard(
-            lyricSongIndex,
+            finalSideSongIndex,
             annotationIndex,
             cardIndex
-        ),
-        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit))
+        )
 
     return (
         <div className={cx(
@@ -80,8 +80,9 @@ const AnnotationCard = ({
 AnnotationCard.propTypes = {
     inCarousel: PropTypes.bool,
     isSelected: PropTypes.bool.isRequired,
+    finalSideSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired,
     cardIndex: PropTypes.number.isRequired
 }
 
-export default memo(AnnotationCard)
+export default memo(getFinalSideHoc(AnnotationCard))
