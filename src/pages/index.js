@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import PageContainer from '../../app/containers/Page'
+import PropTypes from 'prop-types'
 import PageIndicesContext from '../../app/contexts/PageIndices'
 
-export default () => {
+const HomePage = ({ children }) => {
     const
         [pageSongIndex, setPageSongIndex] = useState(0),
         [pageVerseIndex, setPageVerseIndex] = useState(0),
@@ -24,7 +24,13 @@ export default () => {
                 }
             }}
         >
-            <PageContainer />
+            {children}
         </PageIndicesContext.Provider>
     )
 }
+
+HomePage.propTypes = {
+    children: PropTypes.node.isRequired
+}
+
+export default HomePage

@@ -1,18 +1,36 @@
-import React from 'react'
-import AppContainer from '../../app/containers/App'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-import { devToolsEnhancer } from 'redux-devtools-extension'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import PageIndicesContext from '../../app/contexts/PageIndices'
 
-import { getCombinedReducers } from '../../app/redux'
+const HomePage = ({ children }) => {
+    const
+        [pageSongIndex, setPageSongIndex] = useState(0),
+        [pageVerseIndex, setPageVerseIndex] = useState(0),
+        [pageAnnotationIndex, setPageAnnotationIndex] = useState(0),
+        [isPageLogue, setIsPageLogue] = useState(0)
 
-const store = createStore(
-    getCombinedReducers(10),
-    devToolsEnhancer()
-)
+    return (
+        <PageIndicesContext.Provider
+            {...{
+                value: {
+                    pageSongIndex,
+                    pageVerseIndex,
+                    pageAnnotationIndex,
+                    isPageLogue,
+                    setPageSongIndex,
+                    setPageVerseIndex,
+                    setPageAnnotationIndex,
+                    setIsPageLogue
+                }
+            }}
+        >
+            {children}
+        </PageIndicesContext.Provider>
+    )
+}
 
-export default () => (
-    <Provider {...{ store }}>
-        <AppContainer />
-    </Provider>
-)
+HomePage.propTypes = {
+    children: PropTypes.node.isRequired
+}
+
+export default HomePage

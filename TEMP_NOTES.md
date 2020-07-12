@@ -1,11 +1,10 @@
 # Current plan
 * Page passes page (previously lyric) indices to page container
-    * Change page components to get page indices from context
     * Pages change by navigating to new path
+    * Change page components to get page indices from context
 
 # Clean up of current plan
 * Consolidate focus container and root container?
-* Why doesn't lyric scroll element have focus function?
 
 # Current Gatsby fixes
 * Check that Overview, Carousel, and Lyric are good for all songs

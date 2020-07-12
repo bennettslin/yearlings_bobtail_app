@@ -15,8 +15,9 @@ export const wrapRootElement = ({ element }) => (
     </Provider>
 )
 
-export const wrapPageElement = ({ element }) => (
-    <AppContainer>
-        {element}
-    </AppContainer>
-)
+export const wrapPageElement = ({ props }) => {
+    const Page = props.pageResources.component
+    return (
+        <AppContainer {...{ Page }} />
+    )
+}

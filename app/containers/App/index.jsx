@@ -6,7 +6,7 @@ import ListenContainer from '../Listen'
 import FocusContainer from '../Focus'
 import StylesheetContainer from '../Stylesheet'
 
-const AppContainer = ({ children }) => {
+const AppContainer = ({ Page }) => {
     const [playerTime, setPlayerTime] = useState(0)
 
     return (
@@ -18,18 +18,18 @@ const AppContainer = ({ children }) => {
                 }
             }}
         >
-            <AudioManager />
-            <ListenContainer />
-            <FocusContainer>
-                {children}
-            </FocusContainer>
-            <StylesheetContainer />
+            <Page>
+                <AudioManager />
+                <ListenContainer />
+                <FocusContainer />
+                <StylesheetContainer />
+            </Page>
         </PlayerTimeContext.Provider>
     )
 }
 
 AppContainer.propTypes = {
-    children: PropTypes.node.isRequired
+    Page: PropTypes.func.isRequired
 }
 
 export default memo(AppContainer)
