@@ -1,9 +1,10 @@
 // Section to show the stage proscenium.
 import React, { memo } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
-import AspectRatio from '../AspectRatio'
+import getStageHoc from '../../StageHoc'
 import InlineSvg from '../../../modules/InlineSvg'
 import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
 import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
@@ -11,7 +12,7 @@ import { mapIsSongChangeDone } from '../../../redux/entrance/selector'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import './style'
 
-const Curtains = () => {
+const Curtains = ({ style }) => {
     const
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone)
@@ -33,72 +34,75 @@ const Curtains = () => {
     }
 
     return (
-        <AspectRatio>
-            <CSSTransition
-                appear
+        <CSSTransition
+            appear
+            {...{
+                in: isSongChangeDone,
+                // Allow for CSS transition of 0.25s.
+                timeout: 275,
+                classNames: { enterDone: 'Curtains__parted' },
+                onExited,
+                onEntered
+            }}
+        >
+            <div
                 {...{
-                    in: isSongChangeDone,
-                    // Allow for CSS transition of 0.25s.
-                    timeout: 275,
-                    classNames: { enterDone: 'Curtains__parted' },
-                    onExited,
-                    onEntered
+                    className: cx(
+                        'Curtains',
+                        'abF',
+                        'ovH'
+                    ),
+                    style
                 }}
             >
-                <div
+                <InlineSvg
                     {...{
                         className: cx(
-                            'Curtains',
-                            'abF',
-                            'ovH'
+                            'Curtains__left',
+                            'Curtains__side'
+                        ),
+                        svgClassName: cx(
+                            'curtainSide',
+                            'fillTransition__dimTheatre'
                         )
                     }}
                 >
-                    <InlineSvg
-                        {...{
-                            className: cx(
-                                'Curtains__left',
-                                'Curtains__side'
-                            ),
-                            svgClassName: cx(
-                                'curtainSide',
-                                'fillTransition__dimTheatre'
-                            )
-                        }}
-                    >
-                        {curtainSide}
-                    </InlineSvg>
-                    <InlineSvg
-                        {...{
-                            className: cx(
-                                'Curtains__right',
-                                'Curtains__side'
-                            ),
-                            svgClassName: cx(
-                                'curtainSide',
-                                'fillTransition__dimTheatre'
-                            )
-                        }}
-                    >
-                        {curtainSide}
-                    </InlineSvg>
-                    <InlineSvg
-                        {...{
-                            className: cx(
-                                'Curtains__top'
-                            ),
-                            svgClassName: cx(
-                                'curtainTop',
-                                'fillTransition__dimTheatre'
-                            )
-                        }}
-                    >
-                        {curtainTop}
-                    </InlineSvg>
-                </div>
-            </CSSTransition>
-        </AspectRatio>
+                    {curtainSide}
+                </InlineSvg>
+                <InlineSvg
+                    {...{
+                        className: cx(
+                            'Curtains__right',
+                            'Curtains__side'
+                        ),
+                        svgClassName: cx(
+                            'curtainSide',
+                            'fillTransition__dimTheatre'
+                        )
+                    }}
+                >
+                    {curtainSide}
+                </InlineSvg>
+                <InlineSvg
+                    {...{
+                        className: cx(
+                            'Curtains__top'
+                        ),
+                        svgClassName: cx(
+                            'curtainTop',
+                            'fillTransition__dimTheatre'
+                        )
+                    }}
+                >
+                    {curtainTop}
+                </InlineSvg>
+            </div>
+        </CSSTransition>
     )
 }
 
-export default memo(Curtains)
+Curtains.propTypes = {
+    style: PropTypes.object
+}
+
+export default memo(getStageHoc(Curtains))

@@ -1,28 +1,36 @@
 import React, { useEffect, memo } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
-import AspectRatio from './AspectRatio'
+import getStageHoc from '../StageHoc'
 import Scene from '../Scene'
 import Sky from '../Scene/Sky'
 import Wood from '../Scene/Wood'
 
-const Stage = () => {
+const Stage = ({ style }) => {
     useEffect(() => {
         logMount('Stage')
     }, [])
 
     return (
-        <AspectRatio>
-            <div className={cx(
-                'Stage',
-                'abF',
-                'ovH'
-            )}>
-                <Sky />
-                <Wood />
-                <Scene />
-            </div>
-        </AspectRatio>
+        <div
+            {...{
+                className: cx(
+                    'Stage',
+                    'abF',
+                    'ovH'
+                ),
+                style
+            }}
+        >
+            <Sky />
+            <Wood />
+            <Scene />
+        </div>
     )
 }
 
-export default memo(Stage)
+Stage.propTypes = {
+    style: PropTypes.object
+}
+
+export default memo(getStageHoc(Stage))
