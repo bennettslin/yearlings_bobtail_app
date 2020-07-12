@@ -5,7 +5,10 @@ import Lyric from '../../components/Lyric'
 import Overview from '../../components/Overview'
 
 const getPageComponent = pageSongIndex => {
-
+    /**
+     * This returns the same component for each page, differing only by song
+     * index. Extracting into a getter function to avoid repeating code.
+     */
     const PageComponent = ({
         isCarousel,
         isLyric,

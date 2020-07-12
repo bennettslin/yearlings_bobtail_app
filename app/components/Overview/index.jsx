@@ -18,7 +18,7 @@ const Overview = ({ pageSongIndex }) => {
     const
         lyricSongIndex = useSelector(mapLyricSongIndex),
         isToggleInOverview = useSelector(mapIsToggleInOverview),
-        finalSongIndex = getFinalSongIndex({
+        finalSideSongIndex = getFinalSongIndex({
             lyricSongIndex,
             pageSongIndex
         })
@@ -41,7 +41,7 @@ const Overview = ({ pageSongIndex }) => {
                     }}
                 />
             }
-            <Texts {...{ text: getOverviewForSong(finalSongIndex) }} />
+            <Texts {...{ text: getOverviewForSong(finalSideSongIndex) }} />
         </div>
     )
 }

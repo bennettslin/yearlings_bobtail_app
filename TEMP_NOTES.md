@@ -1,9 +1,6 @@
-# Bug
-* Can't change from song to logue.
-
 # Current plan
-* Page passes page (previously lyric) indices to page container
-    * Carousel, Lyric, and -Overview-
+* Page passes pageSongIndex to page container
+    * Carousel and Lyric
         * Render page component on server side
             * Use pageSongIndex for all values
         * Render regular component on client side
@@ -11,12 +8,15 @@
 
 # Clean up of current plan
 * Consolidate focus container and root container?
+* Confirm that carousel and lyric don't get torn down upon page change.
 
 # Current Gatsby fixes
 * Navigate to Gatsby page from dispatcher
 * Check that Overview, Carousel, and Lyric render well for all songs
 * Make efficient, such as removing extra classes, anchor extra text and underlines
-* If home page and stored song is Cremated, doublespeaker lines are weird.
+* Bugs that might be fixed.
+    * Can't change from song to logue.
+    * If home page and stored song is Cremated, doublespeaker lines are weird.
 
 * URL replacement and redirects
     * useHistory doesn't work in Gatsby

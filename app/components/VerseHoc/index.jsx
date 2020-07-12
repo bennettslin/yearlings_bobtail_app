@@ -9,7 +9,10 @@ import { getMapIsVerseSelected } from '../../redux/selected/selector'
 import './style'
 
 const getVerseHoc = VerseComponent => {
-
+    /**
+     * This hoc extracts the common features and functions of the lyric verse
+     * and slider verse.
+     */
     const VerseHoc = forwardRef(({
         verseIndex,
         handleVerseSelect,
