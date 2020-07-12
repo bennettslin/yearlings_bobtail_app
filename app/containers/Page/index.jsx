@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CarouselScroll from '../../app/components/Carousel/Scroll'
-import Lyric from '../../app/components/Lyric'
-import Overview from '../../app/components/Overview'
+import CarouselScroll from '../../components/Carousel/Scroll'
+import Lyric from '../../components/Lyric'
+import Overview from '../../components/Overview'
 
-export const getPageComponent = pageSongIndex => {
+const getPageComponent = pageSongIndex => {
 
     const PageComponent = ({
         isCarousel,
@@ -41,3 +41,5 @@ export const getPageComponent = pageSongIndex => {
 
     return PageComponent
 }
+
+export default getPageComponent
