@@ -3,9 +3,9 @@ import React from 'react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
-import PageComponentContext from './app/contexts/PageComponent'
 import { getCombinedReducers } from './app/redux'
 import { getRoutingSongIndex } from './app/helpers/routing'
+import PageElementContext from './app/contexts/PageElement'
 
 // Import these here just to make them available.
 import './app/utils/logger'
@@ -27,15 +27,14 @@ export const wrapRootElement = ({ element }) => (
     </Provider>
 )
 
-export const wrapPageElement = ({ props }) => {
-    const PageComponent = props.pageResources.component
+export const wrapPageElement = ({ element }) => {
     return (
-        <PageComponentContext.Provider
+        <PageElementContext.Provider
             {...{
-                value: PageComponent
+                value: element
             }}
         >
             <AppContainer />
-        </PageComponentContext.Provider>
+        </PageElementContext.Provider>
     )
 }

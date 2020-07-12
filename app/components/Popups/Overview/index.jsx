@@ -1,8 +1,8 @@
 // Popup container for overview section.
-import React, { memo, useContext } from 'react'
+import React, { memo, useContext, cloneElement } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import PageComponentContext from '../../../contexts/PageComponent'
+import PageElementContext from '../../../contexts/PageElement'
 import Overview from '../../Overview'
 import Popup from '../../Popup'
 import { getIsServerSide } from '../../../utils/server'
@@ -14,7 +14,7 @@ const OverviewPopup = ({ inMain = false }) => {
         isOverviewPopupVisible = useSelector(
             getMapIsOverviewPopupVisible(inMain)
         ),
-        PageComponent = useContext(PageComponentContext)
+        pageElement = useContext(PageElementContext)
 
     return (
         <Popup
@@ -31,7 +31,7 @@ const OverviewPopup = ({ inMain = false }) => {
             }}
         >
             {getIsServerSide() ? (
-                <PageComponent isOverview />
+                cloneElement(pageElement, { isOverview: true })
             ) : (
                 <Overview />
             )}

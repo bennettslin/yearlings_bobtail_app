@@ -3,6 +3,7 @@ import React from 'react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { getCombinedReducers } from './app/redux'
+import PageElementContext from './app/contexts/PageElement'
 import AppContainer from './app/containers/App'
 
 const store = createStore(
@@ -15,9 +16,14 @@ export const wrapRootElement = ({ element }) => (
     </Provider>
 )
 
-export const wrapPageElement = ({ props }) => {
-    const Page = props.pageResources.component
+export const wrapPageElement = ({ element }) => {
     return (
-        <AppContainer {...{ Page }} />
+        <PageElementContext.Provider
+            {...{
+                value: element
+            }}
+        >
+            <AppContainer />
+        </PageElementContext.Provider>
     )
 }

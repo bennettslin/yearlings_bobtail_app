@@ -1,6 +1,6 @@
 # Current plan
 * Page passes page (previously lyric) indices to page container
-    * Carousel, Lyric, and Overview
+    * Carousel, Lyric, and -Overview-
         * Render page component on server side
             * Use pageSongIndex for all values
         * Render regular component on client side
@@ -10,9 +10,8 @@
 * Consolidate focus container and root container?
 
 # Current Gatsby fixes
-* Check that Overview, Carousel, and Lyric are good for all songs
+* Check that Overview, Carousel, and Lyric render well for all songs
 * Make efficient, such as removing extra classes, anchor extra text and underlines
-* Why does no songIndex page default to Grasshoppers as source HTML?!
 * If home page and stored song is Cremated, doublespeaker lines are weird.
 
 * URL replacement and redirects
