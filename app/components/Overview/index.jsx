@@ -1,6 +1,6 @@
 // Section to show song overview.
-
 import React, { memo } from 'react'
+import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../Texts'
@@ -9,11 +9,19 @@ import { getOverviewForSong } from '../../api/album/songs'
 import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import { mapIsToggleInOverview } from '../../redux/overview/selector'
 import './style'
+import {
+    getFinalSideClass,
+    getFinalSongIndex
+} from '../../utils/server'
 
-const Overview = () => {
+const Overview = ({ pageSongIndex }) => {
     const
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        isToggleInOverview = useSelector(mapIsToggleInOverview)
+        isToggleInOverview = useSelector(mapIsToggleInOverview),
+        finalSongIndex = getFinalSongIndex({
+            lyricSongIndex,
+            pageSongIndex
+        })
 
     return (
         <div
@@ -21,7 +29,8 @@ const Overview = () => {
                 className: cx(
                     'Overview',
                     'fontSize__verse',
-                    isToggleInOverview && 'Overview__toggleInOverview'
+                    isToggleInOverview && 'Overview__toggleInOverview',
+                    getFinalSideClass()
                 )
             }}
         >
@@ -32,9 +41,13 @@ const Overview = () => {
                     }}
                 />
             }
-            <Texts {...{ text: getOverviewForSong(lyricSongIndex) }} />
+            <Texts {...{ text: getOverviewForSong(finalSongIndex) }} />
         </div>
     )
+}
+
+Overview.propTypes = {
+    pageSongIndex: PropTypes.number
 }
 
 export default memo(Overview)

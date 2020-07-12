@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, memo } from 'react'
+import { navigate } from 'gatsby'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
@@ -10,7 +11,7 @@ import {
     mapLyricAnnotationIndex,
     mapIsLyricLogue
 } from '../../redux/lyric/selector'
-import { getPathForIndices } from './helper'
+import { getPathNameForSongIndex, getPathForIndices } from '../../helpers/url'
 
 const UrlManager = () => {
     const
@@ -30,6 +31,11 @@ const UrlManager = () => {
         //     )
         // )
     }, [lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex])
+
+    useEffect(() => {
+        // Navigate to Gatsby page.
+        navigate(`/${getPathNameForSongIndex(lyricSongIndex)}/`)
+    }, [lyricSongIndex])
 
     return (
         <Helmet>

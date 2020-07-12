@@ -3,6 +3,7 @@ import React from 'react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
+import PageComponentContext from './app/contexts/PageComponent'
 import { getCombinedReducers } from './app/redux'
 import { getRoutingSongIndex } from './app/helpers/routing'
 
@@ -27,8 +28,14 @@ export const wrapRootElement = ({ element }) => (
 )
 
 export const wrapPageElement = ({ props }) => {
-    const Page = props.pageResources.component
+    const PageComponent = props.pageResources.component
     return (
-        <AppContainer {...{ Page }} />
+        <PageComponentContext.Provider
+            {...{
+                value: PageComponent
+            }}
+        >
+            <AppContainer />
+        </PageComponentContext.Provider>
     )
 }

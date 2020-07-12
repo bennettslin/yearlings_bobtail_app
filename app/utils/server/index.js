@@ -8,3 +8,18 @@ export const getIsLocalDevelopment = () => (
 export const getIsStagingEnvironment = () => (
     process.env.YB_ENV !== 'production'
 )
+
+export const getIsServerSide = () => (
+    typeof window === 'undefined'
+)
+
+export const getFinalSideClass = () => (
+    getIsServerSide() ? 'isServerSide' : 'isClientSide'
+)
+
+export const getFinalSongIndex = ({
+    lyricSongIndex,
+    pageSongIndex
+}) => (
+    getIsServerSide() ? pageSongIndex : lyricSongIndex
+)

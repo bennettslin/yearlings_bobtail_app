@@ -1,7 +1,10 @@
 # Current plan
 * Page passes page (previously lyric) indices to page container
-    * Pages change by navigating to new path
-    * Change page components to get page indices from context
+    * Carousel, Lyric, and Overview
+        * Render page component on server side
+            * Use pageSongIndex for all values
+        * Render regular component on client side
+            * Use lyricSongIndex for all values
 
 # Clean up of current plan
 * Consolidate focus container and root container?
