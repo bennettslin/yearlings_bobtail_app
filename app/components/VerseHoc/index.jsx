@@ -1,4 +1,4 @@
-import React, { forwardRef, memo } from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -82,7 +82,7 @@ const getVerseHoc = VerseComponent => {
         handleVerseSelect: PropTypes.func
     }
 
-    return memo(VerseHoc)
+    return VerseHoc
 }
 
 export default getVerseHoc
