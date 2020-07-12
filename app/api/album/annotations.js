@@ -5,7 +5,7 @@ import {
 import { getDotKeysFromBit } from '../../helpers/dot'
 import { getArrayOfLength } from '../../helpers/general'
 
-export const getAnnotationIndices = songIndex => (
+export const getAnnotationIndices = (songIndex = 0) => (
     getSongIsLogue(songIndex) ?
         [] :
         getArrayOfLength(

@@ -23,13 +23,13 @@ const AnnotationCard = ({
 
 }) => {
     const
-        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
-        description = getDescriptionForAnnotationCard(
+        dotsBit = getDotsBitForAnnotationCard(
             finalSideSongIndex,
             annotationIndex,
             cardIndex
         ),
-        dotsBit = getDotsBitForAnnotationCard(
+        hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
+        description = getDescriptionForAnnotationCard(
             finalSideSongIndex,
             annotationIndex,
             cardIndex

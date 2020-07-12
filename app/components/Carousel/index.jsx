@@ -4,14 +4,15 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
+import PageSongIndexContext from '../../contexts/PageSongIndex'
 import getMainHoc from '../MainHoc'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { mapCanCarouselShow } from '../../redux/viewport/selector'
+import { getFinalSideClass } from '../../utils/server'
 import './style'
-import PageSongIndexContext from '../../contexts/PageSongIndex'
 
 const Carousel = ({ className, style, pageSongIndex }) => {
     const
@@ -50,6 +51,7 @@ const Carousel = ({ className, style, pageSongIndex }) => {
                             'Carousel',
                             canCarouselShow && 'Carousel__shown',
                             'gradientMask__carousel__desktop',
+                            getFinalSideClass(),
                             className
                         ),
                         style
