@@ -10,7 +10,6 @@ import EntranceReducer from './entrance/reducer'
 import FocusReducer from './focus/reducer'
 import HoverReducer from './hover/reducer'
 import { getLyricReducer } from './lyric/reducer'
-import MountReducer from './mount/reducer'
 import { getOptionReducer } from './option/reducer'
 import PlayersReducer from './players/reducer'
 import { getSceneReducer } from './scene/reducer'
@@ -35,7 +34,6 @@ import {
     FOCUS_STORE,
     HOVER_STORE,
     LYRIC_STORE,
-    MOUNT_STORE,
     OPTION_STORE,
     PLAYERS_STORE,
     SCENE_STORE,
@@ -61,7 +59,6 @@ export const getCombinedReducers = songIndex => combineReducers({
     [FOCUS_STORE]: FocusReducer,
     [HOVER_STORE]: HoverReducer,
     [LYRIC_STORE]: getLyricReducer(songIndex),
-    [MOUNT_STORE]: MountReducer,
     [OPTION_STORE]: getOptionReducer(songIndex),
     [PLAYERS_STORE]: PlayersReducer,
     [SCENE_STORE]: getSceneReducer(songIndex),
