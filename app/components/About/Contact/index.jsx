@@ -1,6 +1,6 @@
 import React, { Fragment as ___, memo, useEffect, useState } from 'react'
 import cx from 'classnames'
-import { BENNETT_EMAIL } from '../../../constants/website'
+import { CONTACT_EMAIL } from '../../../constants/website'
 import './style'
 
 const AboutContact = () => {
@@ -12,7 +12,7 @@ const AboutContact = () => {
 
     return (
         <>
-            {'If you have an offer or opportunity for me to consider, please email '}
+            {'If you have an offer or opportunity for us to consider, please email '}
             {didMount && (
                 <span
                     {...{
@@ -22,7 +22,7 @@ const AboutContact = () => {
                         )
                     }}
                 >
-                    {BENNETT_EMAIL.split('').map((character, index) => (
+                    {CONTACT_EMAIL.split('').map((character, index) => (
                         <___ {...{ key: index }} >
                             <span {...{ className: 'dNC' }}>
                                 {String.fromCharCode(
@@ -34,7 +34,7 @@ const AboutContact = () => {
                     ))}
                 </span>
             )}
-            {`. I'll respond if it matches my interests. Thanks!`}
+            {`. We'll respond if it matches our interests. Thanks!`}
         </>
     )
 }
