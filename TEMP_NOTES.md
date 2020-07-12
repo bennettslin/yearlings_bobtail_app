@@ -1,3 +1,6 @@
+# Bug
+* Can't change from song to logue.
+
 # Current plan
 * Page passes page (previously lyric) indices to page container
     * Carousel, Lyric, and -Overview-
@@ -10,6 +13,7 @@
 * Consolidate focus container and root container?
 
 # Current Gatsby fixes
+* Navigate to Gatsby page from dispatcher
 * Check that Overview, Carousel, and Lyric render well for all songs
 * Make efficient, such as removing extra classes, anchor extra text and underlines
 * If home page and stored song is Cremated, doublespeaker lines are weird.
@@ -32,7 +36,6 @@
 * Deprecated page for Internet Explorer?
 * Why is Gatsby build so much bigger than webpack build?
 * Does Gatsby get a fresh version?
-* Remove trailing slash?
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.

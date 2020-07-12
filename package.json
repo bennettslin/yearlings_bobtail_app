@@ -88,6 +88,7 @@
     "gatsby-env-variables": "^2.0.0",
     "gatsby-plugin-google-analytics": "^2.3.2",
     "gatsby-plugin-postcss": "^2.3.2",
+    "gatsby-plugin-remove-trailing-slashes": "^2.3.11",
     "gatsby-plugin-sass": "^2.3.2",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "html-webpack-plugin": "^3.2.0",

@@ -8,8 +8,9 @@ export default {
     plugins: [
         `gatsby-plugin-postcss`,
         `gatsby-plugin-sass`,
+        `gatsby-plugin-remove-trailing-slashes`,
         {
-            resolve: 'gatsby-plugin-web-font-loader',
+            resolve: `gatsby-plugin-web-font-loader`,
             options: {
                 google: {
                     families: ['PT Sans Narrow', 'Rancho', 'Neuton']

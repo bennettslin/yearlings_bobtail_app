@@ -34,7 +34,7 @@ const UrlManager = () => {
 
     useEffect(() => {
         // Navigate to Gatsby page.
-        navigate(`/${getPathNameForSongIndex(lyricSongIndex)}/`)
+        navigate(`/${getPathNameForSongIndex(lyricSongIndex)}`)
     }, [lyricSongIndex])
 
     return (
