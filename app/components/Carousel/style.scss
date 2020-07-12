@@ -9,15 +9,8 @@
  */
 $height__carouselHidden: $height__chivalry;
 
-.CarouselLayoutContainer {
-    display: none;
-}
-
-.CarouselLayoutContainer__shown {
-    display: block;
-}
-
 .Carousel {
+    display: none;
     position: absolute;
     left: 0;
     width: 100vw;
@@ -75,6 +68,10 @@ $height__carouselHidden: $height__chivalry;
     &.Carousel__visible {
         top: 0;
     }
+}
+
+.Carousel__shown {
+    display: block;
 }
 
 /** Gradient mask does not work in IE or Edge, though. */

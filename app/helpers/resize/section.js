@@ -58,7 +58,7 @@ export const getLyricOverviewHeightStyle = ({
         `${lyricDynamicHeight * 100}%`
 )
 
-export const getMainHeight = ({
+export const getMainHeightStyle = ({
     canCarouselShow,
     lyricDynamicHeight,
     isHeightlessLyric,

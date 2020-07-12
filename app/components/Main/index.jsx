@@ -3,8 +3,9 @@
  * should not update.
  */
 import React, { memo, useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
-import MainLayoutContainer from './LayoutContainer'
+import getMainHoc from '../MainHoc'
 import MainFlexContainer from './FlexContainer'
 import CarouselSelect from './CarouselSelect'
 import CarouselToggle from './CarouselToggle'
@@ -18,7 +19,7 @@ import TipsPopup from '../Popups/Tips'
 import ShelfRight from './ShelfRight'
 import './style'
 
-const Main = () => {
+const Main = ({ className, style }) => {
     const [didMount, setDidMount] = useState(false)
 
     useEffect(() => {
@@ -27,7 +28,7 @@ const Main = () => {
     }, [])
 
     return didMount && (
-        <MainLayoutContainer
+        <div
             {...{
                 className: cx(
                     'Main',
@@ -37,8 +38,10 @@ const Main = () => {
                      * viewport width and then have overflow hidden,
                      * which avoids screen jumpiness when zooming.
                      */
-                    'width__mainColumn'
-                )
+                    'width__mainColumn',
+                    className
+                ),
+                style
             }}
         >
             <Nav />
@@ -55,8 +58,13 @@ const Main = () => {
             <DotsSlide />
             <CarouselToggle />
             <CarouselSelect />
-        </MainLayoutContainer>
+        </div>
     )
 }
 
-export default memo(Main)
+Main.propTypes = {
+    className: PropTypes.string,
+    style: PropTypes.object
+}
+
+export default memo(getMainHoc(Main))

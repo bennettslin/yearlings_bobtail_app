@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect'
 import { getIsShelfLeftShown } from '../../helpers/main'
-import { getMainHeight } from '../../helpers/resize/section'
+import { getMainHeightStyle } from '../../helpers/resize/section'
 import { mapIsActivated } from '../activated/selector'
 import {
     mapIsPhoneWidth,
@@ -25,7 +25,7 @@ import {
     mapCanCarouselShow
 } from '../viewport/selector'
 
-export const mapMainHeight = createSelector(
+export const mapMainHeightStyle = createSelector(
     mapCanCarouselShow,
     mapLyricDynamicHeight,
     mapIsHeightlessLyric,
@@ -37,7 +37,7 @@ export const mapMainHeight = createSelector(
         isHeightlessLyric,
         menuHeight,
         isDesktopWidth
-    ) => getMainHeight({
+    ) => getMainHeightStyle({
         canCarouselShow,
         lyricDynamicHeight,
         isHeightlessLyric,
