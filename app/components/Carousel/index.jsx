@@ -11,8 +11,9 @@ import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { mapCanCarouselShow } from '../../redux/viewport/selector'
 import './style'
+import PageSongIndexContext from '../../contexts/PageSongIndex'
 
-const Carousel = ({ className, style }) => {
+const Carousel = ({ className, style, pageSongIndex }) => {
     const
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
@@ -32,37 +33,40 @@ const Carousel = ({ className, style }) => {
     }, [])
 
     return (
-        <CSSTransition
-            appear
-            {...{
-                in: isSongChangeDone,
-                timeout: 250,
-                classNames: { enterDone: 'Carousel__visible' },
-                onExit,
-                onEntered
-            }}
-        >
-            <div
+        <PageSongIndexContext.Provider {...{ value: pageSongIndex }} >
+            <CSSTransition
+                appear
                 {...{
-                    className: cx(
-                        'Carousel',
-                        canCarouselShow && 'Carousel__shown',
-                        'gradientMask__carousel__desktop',
-                        className
-                    ),
-                    style
+                    in: isSongChangeDone,
+                    timeout: 250,
+                    classNames: { enterDone: 'Carousel__visible' },
+                    onExit,
+                    onEntered
                 }}
             >
-                <CarouselScroll />
-                <CarouselAccess />
-            </div>
-        </CSSTransition>
+                <div
+                    {...{
+                        className: cx(
+                            'Carousel',
+                            canCarouselShow && 'Carousel__shown',
+                            'gradientMask__carousel__desktop',
+                            className
+                        ),
+                        style
+                    }}
+                >
+                    <CarouselScroll />
+                    <CarouselAccess />
+                </div>
+            </CSSTransition>
+        </PageSongIndexContext.Provider>
     )
 }
 
 Carousel.propTypes = {
     className: PropTypes.string,
-    style: PropTypes.object
+    style: PropTypes.object,
+    pageSongIndex: PropTypes.number
 }
 
 export default memo(getMainHoc(Carousel))

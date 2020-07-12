@@ -1,5 +1,8 @@
-import React, { useEffect, forwardRef, useRef, memo } from 'react'
+import React, {
+    cloneElement, useContext, useEffect, forwardRef, useRef, memo
+} from 'react'
 import cx from 'classnames'
+import PageElementContext from '../../contexts/PageElement'
 import ResizeManager from '../../managers/Resize'
 import Theatre from '../../components/Theatre'
 import Carousel from '../../components/Carousel'
@@ -10,10 +13,13 @@ import MainPopups from '../../components/Popups/MainPopups'
 import PopupOverlay from '../../components/Overlays/PopupOverlay'
 import TouchOverlay from '../../components/Overlays/TouchOverlay'
 import WrapperContainer from '../Wrapper'
+import { getIsServerSide } from '../../utils/server'
 import './style'
 
 const RootContainer = forwardRef((props, ref) => {
-    const rootContainerElement = useRef()
+    const
+        rootContainerElement = useRef(),
+        pageElement = useContext(PageElementContext)
 
     const getRootContainerElement = () => rootContainerElement.current
 
@@ -35,7 +41,11 @@ const RootContainer = forwardRef((props, ref) => {
             <ResizeManager {...{ getRootContainerElement }} />
             <WrapperContainer>
                 <Theatre />
-                <Carousel />
+                {getIsServerSide() ? (
+                    cloneElement(pageElement, { isCarousel: true })
+                ) : (
+                    <Carousel />
+                )}
                 <Main />
                 <LyricOverview {...{ ref }} />
                 <PopupOverlay />

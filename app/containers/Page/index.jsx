@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CarouselScroll from '../../components/Carousel/Scroll'
+import Carousel from '../../components/Carousel'
 import Lyric from '../../components/Lyric'
 import Overview from '../../components/Overview'
 
@@ -17,7 +17,7 @@ const getPageComponent = pageSongIndex => {
     }) => {
         if (isCarousel) {
             return (
-                <CarouselScroll {...{ pageSongIndex }} />
+                <Carousel {...{ pageSongIndex }} />
             )
         }
 

@@ -1,5 +1,6 @@
 import React, { forwardRef, useEffect, memo } from 'react'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricAccess from './Access'
@@ -9,8 +10,9 @@ import CarouselAccess from '../Carousel/Access'
 import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import './style'
+import PageSongIndexContext from '../../contexts/PageSongIndex'
 
-const Lyric = forwardRef((props, ref) => {
+const Lyric = forwardRef(({ pageSongIndex }, ref) => {
     const
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone)
@@ -29,7 +31,7 @@ const Lyric = forwardRef((props, ref) => {
     }, [])
 
     return (
-        <>
+        <PageSongIndexContext.Provider {...{ value: pageSongIndex }} >
             <CSSTransition
                 appear
                 {...{
@@ -57,8 +59,12 @@ const Lyric = forwardRef((props, ref) => {
                     <CarouselAccess inLyric />
                 </div>
             </CSSTransition>
-        </>
+        </PageSongIndexContext.Provider>
     )
 })
+
+Lyric.propTypes = {
+    pageSongIndex: PropTypes.number
+}
 
 export default memo(Lyric)

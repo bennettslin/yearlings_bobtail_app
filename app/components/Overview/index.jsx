@@ -14,11 +14,7 @@ const Overview = ({ pageSongIndex }) => {
     const isToggleInOverview = useSelector(mapIsToggleInOverview)
 
     return (
-        <PageSongIndexContext.Provider
-            {...{
-                value: pageSongIndex
-            }}
-        >
+        <PageSongIndexContext.Provider {...{ value: pageSongIndex }} >
             <div
                 {...{
                     className: cx(

@@ -1,14 +1,17 @@
-import React, { forwardRef, memo } from 'react'
+import React, { cloneElement, forwardRef, memo, useContext } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
+import PageElementContext from '../../contexts/PageElement'
 import { mapLyricOverviewHeightStyle } from '../../redux/lyricHeight/selector'
 import Lyric from '../Lyric'
 import OverviewPopup from '../Popups/Overview'
+import { getIsServerSide } from '../../utils/server'
 import './style'
 
 const LyricOverview = forwardRef((props, ref) => {
-    const lyricOverviewHeightStyle =
-        useSelector(mapLyricOverviewHeightStyle)
+    const
+        lyricOverviewHeightStyle = useSelector(mapLyricOverviewHeightStyle),
+        pageElement = useContext(PageElementContext)
 
     return (
         <div
@@ -25,7 +28,11 @@ const LyricOverview = forwardRef((props, ref) => {
                 }
             }}
         >
-            <Lyric {...{ ref }} />
+            {getIsServerSide() ? (
+                cloneElement(pageElement, { isLyric: true })
+            ) : (
+                <Lyric {...{ ref }} />
+            )}
             <OverviewPopup />
         </div>
     )
