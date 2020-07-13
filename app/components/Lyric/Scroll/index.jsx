@@ -1,5 +1,7 @@
 import React, { forwardRef, useEffect, useRef, memo } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../DidMountHoc'
 import VerseBar from '../VerseBar'
 import AutoScrollDispatcher from '../../../dispatchers/AutoScroll'
 import ScrollLyricListener from '../../../handlers/Scroll/Lyric'
@@ -9,7 +11,7 @@ import Stanzas from '../../Stanzas'
 import { IS_TOUCH_SUPPORTED } from '../../../constants/device'
 import './style'
 
-const LyricScroll = forwardRef((props, ref) => {
+const LyricScroll = forwardRef(({ didMount }, ref) => {
     const
         lyricScrollElement = useRef(),
         scrollChildren = useRef(),
@@ -77,13 +79,15 @@ const LyricScroll = forwardRef((props, ref) => {
                     ref: setRef,
                     className: cx(
                         'LyricScroll',
-                        'abF',
+                        didMount && [
+                            'abF',
 
-                        /**
-                         * This gradient does not obscure the lyric
-                         * toggle buttons.
-                         */
-                        'gradientMask__lyricScroll'
+                            /**
+                             * This gradient does not obscure the lyric
+                             * toggle buttons.
+                             */
+                            'gradientMask__lyricScroll'
+                        ]
                     ),
                     tabIndex: -1,
                     onScroll,
@@ -112,4 +116,8 @@ const LyricScroll = forwardRef((props, ref) => {
     )
 })
 
-export default memo(LyricScroll)
+LyricScroll.propTypes = {
+    didMount: PropTypes.bool.isRequired
+}
+
+export default memo(getDidMountHoc(LyricScroll))

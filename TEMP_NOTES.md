@@ -1,10 +1,5 @@
 # Current plan
-* Add back wiki links
-* Make efficient, such as removing extra classes, anchor extra text and underlines
-* Carousel doesn't change server side class name. Figure out better way to show server side class name.
 * Confirm that carousel and lyric don't get torn down upon page change.
-* When verse in middle is selected, selected verse and verse bars are weird.
-* Check that Overview, Carousel, and Lyric render well for all songs
 
 # Next post-Gatsby work
 * URL replacement and redirects

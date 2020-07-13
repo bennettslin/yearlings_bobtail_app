@@ -14,8 +14,7 @@ const About = () => (
     <div
         {...{
             className: cx(
-                'About',
-                'fontSize__verse'
+                'About'
             )
         }}
     >

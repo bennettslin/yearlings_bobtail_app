@@ -3,16 +3,18 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
+import PageSongIndexContext from '../../contexts/PageSongIndex'
+import getDidMountHoc from '../DidMountHoc'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
 import LyricToggles from './Toggles'
 import CarouselAccess from '../Carousel/Access'
 import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
+import { getFinalSideKey } from '../../utils/server'
 import './style'
-import PageSongIndexContext from '../../contexts/PageSongIndex'
 
-const Lyric = forwardRef(({ pageSongIndex }, ref) => {
+const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
     const
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone)
@@ -46,9 +48,12 @@ const Lyric = forwardRef(({ pageSongIndex }, ref) => {
                     {...{
                         className: cx(
                             'Lyric',
-                            'gradientMask__lyricColumn__desktop',
-                            'abF',
-                            'ovH'
+                            didMount && [
+                                'gradientMask__lyricColumn__desktop',
+                                'abF',
+                                'ovH'
+                            ],
+                            getFinalSideKey()
                         )
                     }}
                 >
@@ -64,7 +69,8 @@ const Lyric = forwardRef(({ pageSongIndex }, ref) => {
 })
 
 Lyric.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     pageSongIndex: PropTypes.number
 }
 
-export default memo(Lyric)
+export default memo(getDidMountHoc(Lyric))

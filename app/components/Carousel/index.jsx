@@ -5,6 +5,7 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PageSongIndexContext from '../../contexts/PageSongIndex'
+import getDidMountHoc from '../DidMountHoc'
 import getMainHoc from '../MainHoc'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
@@ -14,7 +15,7 @@ import { mapCanCarouselShow } from '../../redux/viewport/selector'
 import { getFinalSideKey } from '../../utils/server'
 import './style'
 
-const Carousel = ({ style, pageSongIndex }) => {
+const Carousel = ({ didMount, style, pageSongIndex }) => {
     const
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
@@ -49,12 +50,14 @@ const Carousel = ({ style, pageSongIndex }) => {
                     {...{
                         className: cx(
                             'Carousel',
-                            canCarouselShow && 'Carousel__shown',
-                            'gradientMask__carousel__desktop',
-                            'abF',
+                            didMount && [
+                                canCarouselShow && 'Carousel__shown',
+                                'gradientMask__carousel__desktop',
+                                'abF'
+                            ],
                             getFinalSideKey()
                         ),
-                        style
+                        ...didMount && { style }
                     }}
                 >
                     <CarouselScroll />
@@ -66,8 +69,9 @@ const Carousel = ({ style, pageSongIndex }) => {
 }
 
 Carousel.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     style: PropTypes.object,
     pageSongIndex: PropTypes.number
 }
 
-export default memo(getMainHoc(Carousel))
+export default memo(getDidMountHoc(getMainHoc(Carousel)))

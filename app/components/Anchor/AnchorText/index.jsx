@@ -1,6 +1,7 @@
 import React, { memo, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../DidMountHoc'
 import Texts from '../../Texts'
 import Underline from '../Underline'
 import { getSpaceIfNeeded, getWordsForWikiAnchor } from './helper'
@@ -8,6 +9,7 @@ import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import './style'
 
 const AnchorText = ({
+    didMount,
     isAccessed,
     isSelected,
     isWikiTextAnchor,
@@ -22,7 +24,7 @@ const AnchorText = ({
     return (
         words.map((word, index) => {
 
-            const wordComponent = (
+            const wordElement = (
                 <Texts {...textConfig}
                     hasRecursed
                     {...{
@@ -35,27 +37,45 @@ const AnchorText = ({
 
             return (
                 <___ {...{ key: index }}>
-                    <span className="AnchorText">
+                    <span
+                        {...{
+                            ...didMount && {
+                                className: 'AnchorText'
+                            }
+                        }}
+                    >
                         {/* Shown when no dot in dot sequence is selected. */}
-                        <span className={cx(
-                            'TextAnchor__plainText'
-                        )}>
-                            {wordComponent}
+                        <span
+                            {...{
+                                ...didMount && {
+                                    className: cx(
+                                        'TextAnchor__plainText'
+                                    )
+                                }
+                            }}
+                        >
+                            {wordElement}
                         </span>
 
                         {/* Shown once some dot in dot sequence is selected. */}
-                        <span className={cx(
-                            'TextAnchor__linkText',
+                        {didMount && (
+                            <span
+                                {...{
+                                    className: cx(
+                                        'TextAnchor__linkText',
 
-                            isAccessed && !isSelected ?
-                                'TextAnchor__linkText__accessed' :
-                                'TextAnchor__linkText__default',
+                                        isAccessed && !isSelected ?
+                                            'TextAnchor__linkText__accessed' :
+                                            'TextAnchor__linkText__default',
 
-                            isSelected &&
-                                'TextAnchor__linkText__selected'
-                        )}>
-                            {wordComponent}
-                        </span>
+                                        isSelected &&
+                                            'TextAnchor__linkText__selected'
+                                    )
+                                }}
+                            >
+                                {wordElement}
+                            </span>
+                        )}
 
                         {/* See styling comment for why this is last child. */}
                         {IS_USER_AGENT_DESKTOP && (
@@ -101,4 +121,4 @@ AnchorText.propTypes = {
     })
 }
 
-export default memo(AnchorText)
+export default memo(getDidMountHoc(AnchorText))

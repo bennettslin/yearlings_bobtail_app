@@ -1,10 +1,12 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import getDidMountHoc from '../../DidMountHoc'
 import Anchor from '../../Anchor'
 import { BOBTAIL_YEARLINGS_WEBSITE } from '../../../constants/website'
 import './style'
 
-const AboutTitle = () => {
+const AboutTitle = ({ didMount }) => {
     const handleAnchorClick = () => {
         // TODO: Analytics.
     }
@@ -13,24 +15,28 @@ const AboutTitle = () => {
         <>
             <i
                 {...{
-                    className: cx(
-                        'About__albumTitle',
-                        'About__colouredText',
-                        'Rancho'
-                    )
+                    ...didMount && {
+                        className: cx(
+                            'About__albumTitle',
+                            'About__colouredText',
+                            'Rancho'
+                        )
+                    }
                 }}
             >
                 {`Yearling's Bobtail`}
             </i>
-            <div {...{ className: 'About__byLine' }}>
+            <div>
                 {'by '}
                 <span
                     {...{
-                        className: cx(
-                            'About__bandName',
-                            'About__colouredText',
-                            'Rancho'
-                        )
+                        ...didMount && {
+                            className: cx(
+                                'About__bandName',
+                                'About__colouredText',
+                                'Rancho'
+                            )
+                        }
                     }}
                 >
                     <Anchor
@@ -47,4 +53,8 @@ const AboutTitle = () => {
     )
 }
 
-export default memo(AboutTitle)
+AboutTitle.propTypes = {
+    didMount: PropTypes.bool.isRequired
+}
+
+export default memo(getDidMountHoc(AboutTitle))

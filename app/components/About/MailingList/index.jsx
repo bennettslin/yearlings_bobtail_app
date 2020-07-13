@@ -1,16 +1,17 @@
 import React, { useState, memo } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import * as EmailValidator from 'email-validator'
-import './style'
-
+import getDidMountHoc from '../../DidMountHoc'
 import {
     EMAIL_ACTION,
     EMAIL_NAME,
     EMAIL_DUMMY_NAME,
     EMAIL_ID
 } from '../../../constants/website'
+import './style'
 
-const MailingList = () => {
+const MailingList = ({ didMount }) => {
     const
         [isValidEmail, setIsValidEmail] = useState(false),
         [emailValue, setEmailValue] = useState('')
@@ -38,7 +39,7 @@ const MailingList = () => {
         setEmailValue(emailValue)
     }
 
-    return (
+    return didMount && (
         <form
             noValidate
             {...{
@@ -105,4 +106,8 @@ const MailingList = () => {
     )
 }
 
-export default memo(MailingList)
+MailingList.propTypes = {
+    didMount: PropTypes.bool.isRequired
+}
+
+export default memo(getDidMountHoc(MailingList))

@@ -2,6 +2,7 @@ import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
+import getDidMountHoc from '../DidMountHoc'
 import DotSequence from '../DotSequence'
 import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
@@ -10,6 +11,7 @@ import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import './style'
 
 const Anchor = forwardRef(({
+    didMount,
     className,
     href,
     isAnnotationTitle,
@@ -68,14 +70,16 @@ const Anchor = forwardRef(({
         <a
             {...{
                 ref,
-                className: cx(
-                    'Anchor',
-                    isShown && 'Anchor__shown',
-                    isAccessed && !isSelected && 'Anchor__accessed',
-                    !isSelected && 'Anchor__selectable',
-                    !isWikiTextAnchor && 'Anchor__noWrap',
-                    className
-                ),
+                ...didMount && {
+                    className: cx(
+                        'Anchor',
+                        isShown && 'Anchor__shown',
+                        isAccessed && !isSelected && 'Anchor__accessed',
+                        !isSelected && 'Anchor__selectable',
+                        !isWikiTextAnchor && 'Anchor__noWrap',
+                        className
+                    )
+                },
                 ...href && {
                     href,
                     target: '_blank'
@@ -119,6 +123,7 @@ const Anchor = forwardRef(({
 })
 
 Anchor.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     className: PropTypes.string,
     href: PropTypes.string,
     isAnnotationTitle: PropTypes.bool,
@@ -133,4 +138,4 @@ Anchor.propTypes = {
     handleAnchorMouse: PropTypes.func
 }
 
-export default memo(Anchor)
+export default memo(getDidMountHoc(Anchor))

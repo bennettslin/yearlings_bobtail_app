@@ -1,9 +1,11 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import getDidMountHoc from '../../DidMountHoc'
 import './style'
 
 const AboutChild = ({
+    didMount,
     className,
     header,
     children
@@ -11,20 +13,25 @@ const AboutChild = ({
 }) => (
     <div
         {...{
-            className: cx(
-                'AboutChild',
-                className
-            )
+            ...didMount && {
+                className: cx(
+                    'AboutChild',
+                    'fontSize__verse',
+                    className
+                )
+            }
         }}
     >
         {Boolean(header) && (
             <div
                 {...{
-                    className: cx(
-                        'AboutChild__header',
-                        'About__colouredText',
-                        'Rancho'
-                    )
+                    ...didMount && {
+                        className: cx(
+                            'AboutChild__header',
+                            'About__colouredText',
+                            'Rancho'
+                        )
+                    }
                 }}
             >
                 {header}
@@ -35,9 +42,10 @@ const AboutChild = ({
 )
 
 AboutChild.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     className: PropTypes.string,
     header: PropTypes.string,
     children: PropTypes.any.isRequired
 }
 
-export default memo(AboutChild)
+export default memo(getDidMountHoc(AboutChild))

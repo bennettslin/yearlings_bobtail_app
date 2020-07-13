@@ -28,8 +28,8 @@ const PopupView = ({
     <div
         {...{
             className: cx(
-                'PopupView',
                 didMount && [
+                    'PopupView',
                     `${popupName}View`,
                     {
                         'PopupView__bounceAnimate': bounceAnimate,
@@ -78,8 +78,8 @@ const PopupView = ({
         <div
             {...{
                 className: cx(
-                    'PopupViewContent',
                     didMount && [
+                        'PopupViewContent',
                         `${popupName}ViewContent`,
                         {
                             'PopupViewContent__narrowPadding': hasNarrowPadding,

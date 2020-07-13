@@ -2,15 +2,19 @@ import React, { memo } from 'react'
 import './style'
 
 const AboutCredits = () => (
-    <>
-        <span {...{ className: 'AboutCredits__finePrint' }}>
+    <div
+        {...{
+            className: 'AboutCredits'
+        }}
+    >
+        <span>
             {`Album written, composed, and performed by Bennett Lin.`}
         </span>
         <br />
-        <span {...{ className: 'AboutCredits__finePrint' }}>
+        <span>
             {'Website annotated, illustrated, and coded by Bennett Lin.'}
         </span>
-    </>
+    </div>
 )
 
 export default memo(AboutCredits)
