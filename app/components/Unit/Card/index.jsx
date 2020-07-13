@@ -2,6 +2,7 @@
 import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../DidMountHoc'
 import getFinalSideHoc from '../../FinalSideHoc'
 import UnitTipsHands from '../TipsHands'
 import UnitTab from '../Tab'
@@ -16,6 +17,7 @@ import { getVerse } from '../../../api/album/verses'
 import './style'
 
 const UnitCard = forwardRef(({
+    didMount,
     finalSideSongIndex,
     unitIndex,
     isMainVerses,
@@ -60,17 +62,29 @@ const UnitCard = forwardRef(({
         })
 
     return (
-        <div className={cx(
-            'UnitCard',
-            isSubVerse && 'UnitCard__subVerse',
-            isTabbed && 'UnitCard__tabbed'
-        )}>
-            <div className={cx(
-                'UnitCard__sheet',
-                'boxShadow__stanza',
-                'bgColour__unit__pattern',
-                `bgColour__formType__${formType}`
-            )}>
+        <div
+            {...{
+                ...didMount && {
+                    className: cx(
+                        'UnitCard',
+                        isSubVerse && 'UnitCard__subVerse',
+                        isTabbed && 'UnitCard__tabbed'
+                    )
+                }
+            }}
+        >
+            <div
+                {...{
+                    ...didMount && {
+                        className: cx(
+                            'UnitCard__sheet',
+                            'boxShadow__stanza',
+                            'bgColour__unit__pattern',
+                            `bgColour__formType__${formType}`
+                        )
+                    }
+                }}
+            >
                 {versesArray.map((verseEntity, index) => {
                     const verseObject = isIndexed ?
                         // If indexed verse, it's an array of indices.
@@ -110,6 +124,7 @@ const UnitCard = forwardRef(({
 })
 
 UnitCard.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     finalSideSongIndex: PropTypes.number.isRequired,
     unitIndex: PropTypes.number.isRequired,
     isMainVerses: PropTypes.bool,
@@ -118,4 +133,4 @@ UnitCard.propTypes = {
     isSideSubCard: PropTypes.bool
 }
 
-export default memo(getFinalSideHoc(UnitCard))
+export default memo(getDidMountHoc(getFinalSideHoc(UnitCard)))

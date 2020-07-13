@@ -1,6 +1,7 @@
 import React, { forwardRef, useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../DidMountHoc'
 import ActivatedVerseDispatcher from '../../dispatchers/Activated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import getVerseHoc from '../VerseHoc'
@@ -9,6 +10,7 @@ import { VERSE_SCROLL } from '../../constants/scroll'
 import './style'
 
 const Verse = forwardRef(({
+    didMount,
     className,
     verseClassName,
     children,
@@ -59,16 +61,18 @@ const Verse = forwardRef(({
                     className: cx(
                         'Verse',
 
-                        inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
+                        didMount && [
+                            inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
-                        Number.isFinite(verseIndex) &&
-                            `${VERSE_SCROLL}__${verseIndex}`,
+                            Number.isFinite(verseIndex) &&
+                                `${VERSE_SCROLL}__${verseIndex}`,
 
-                        // title, even, odd, inSide.
-                        verseClassName && `verse__${verseClassName}`,
-                        isInteractable && 'Verse__interactable',
+                            // title, even, odd, inSide.
+                            verseClassName && `verse__${verseClassName}`,
+                            isInteractable && 'Verse__interactable',
 
-                        className
+                            className
+                        ]
                     ),
                     onClick
                 }}
@@ -89,6 +93,7 @@ const Verse = forwardRef(({
 })
 
 Verse.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     className: PropTypes.string,
     verseClassName: PropTypes.string,
     verseObject: PropTypes.object.isRequired,
@@ -97,4 +102,4 @@ Verse.propTypes = {
     children: PropTypes.node
 }
 
-export default memo(getVerseHoc(Verse))
+export default memo(getDidMountHoc(getVerseHoc(Verse)))

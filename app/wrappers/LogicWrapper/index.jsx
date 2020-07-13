@@ -20,15 +20,15 @@ const LogicWrapper = ({ didMount, children }) => {
     return (
         <div
             {...{
-                className: cx(
-                    'LogicWrapper',
+                ...didMount && {
+                    className: cx(
+                        'LogicWrapper',
 
-                    didMount && [
                         getPrefixedSceneClassNames(sceneCursorIndex),
                         getPrefixedVerseClassNames(verseCursorIndex),
                         'abF'
-                    ]
-                )
+                    )
+                }
             }}
         >
             {children}

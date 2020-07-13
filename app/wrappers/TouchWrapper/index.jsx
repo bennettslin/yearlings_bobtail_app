@@ -26,9 +26,9 @@ const TouchWrapper = ({ didMount, children }) => {
     return (
         <div
             {...{
-                className: cx(
-                    'TouchWrapper',
-                    didMount && [
+                ...didMount && {
+                    className: cx(
+                        'TouchWrapper',
                         !isAnchorMoused && 'TW__isAnchorUnmoused',
                         isScrolling ?
                             'TW__isScrolling' :
@@ -42,8 +42,8 @@ const TouchWrapper = ({ didMount, children }) => {
                             'TW__lyricsLocked' :
                             'TW__lyricsUnlocked',
                         'abF'
-                    ]
-                )
+                    )
+                }
             }}
         >
             {children}

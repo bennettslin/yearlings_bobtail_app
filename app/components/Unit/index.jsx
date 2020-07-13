@@ -7,6 +7,7 @@ import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
+import getDidMountHoc from '../DidMountHoc'
 import getFinalSideHoc from '../FinalSideHoc'
 import UnitSongTitle from './Title'
 import UnitCard from './Card'
@@ -21,6 +22,7 @@ import { mapIsEarShown } from '../../redux/ear/selector'
 import './style'
 
 const Unit = forwardRef(({
+    didMount,
     finalSideSongIndex,
     unitIndex,
     ...other
@@ -42,28 +44,38 @@ const Unit = forwardRef(({
 
     return (
         <div
-            className={cx(
-                'Unit',
-                `unit__${unitIndex}`,
+            {...{
+                className: cx(
+                    'Unit',
+                    didMount && [
+                        `unit__${unitIndex}`,
 
-                hasSideCards && !isEarShown ?
-                    'fontSize__lyricMultipleColumns' :
-                    'fontSize__verse',
+                        hasSideCards && !isEarShown ?
+                            'fontSize__lyricMultipleColumns' :
+                            'fontSize__verse',
 
-                isSubsequent ?
-                    'Unit__subsequent' :
-                    'Unit__notSubsequent'
-            )}
+                        isSubsequent ?
+                            'Unit__subsequent' :
+                            'Unit__notSubsequent'
+                    ]
+                )
+            }}
         >
             {unitIndex === 0 && (
                 <UnitSongTitle />
             )}
             {hasMainVerses &&
-                <div className={cx(
-                    'Unit__column__text',
-                    'Unit__column',
-                    'Unit__column__main'
-                )}>
+                <div
+                    {...{
+                        ...didMount && {
+                            className: cx(
+                                'Unit__column__text',
+                                'Unit__column',
+                                'Unit__column__main'
+                            )
+                        }
+                    }}
+                >
                     <UnitCard
                         isMainVerses
                         {...{
@@ -84,14 +96,18 @@ const Unit = forwardRef(({
             }
             {hasSideCards &&
                 <div
-                    className={cx(
-                        'Unit__column__text',
-                        'Unit__column',
-                        'Unit__column__side',
+                    {...{
+                        ...didMount && {
+                            className: cx(
+                                'Unit__column__text',
+                                'Unit__column',
+                                'Unit__column__side',
 
-                        // This happens only once, in Golden Cord.
-                        isBottomSideCard && 'Unit__column__hasBottomSideCard'
-                    )}
+                                // This happens only once, in Golden Cord.
+                                isBottomSideCard && 'Unit__column__hasBottomSideCard'
+                            )
+                        }
+                    }}
                 >
                     <UnitCard
                         isSideCard
@@ -122,8 +138,9 @@ const Unit = forwardRef(({
 })
 
 Unit.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     finalSideSongIndex: PropTypes.number.isRequired,
     unitIndex: PropTypes.number.isRequired
 }
 
-export default memo(getFinalSideHoc(Unit))
+export default memo(getDidMountHoc(getFinalSideHoc(Unit)))

@@ -10,16 +10,16 @@ const TransitionWrapper = ({ didMount, children }) => {
     return (
         <div
             {...{
-                className: cx(
-                    'TransitionWrapper',
+                ...didMount && {
+                    className: cx(
+                        'TransitionWrapper',
 
-                    didMount && [
                         isSongChangeDone ?
                             'TrW__canLyricCarouselEnter' :
                             'TrW__cannotLyricCarouselEnter',
                         'abF'
-                    ]
-                )
+                    )
+                }
             }}
         >
             {children}

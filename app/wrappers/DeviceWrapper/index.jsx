@@ -34,10 +34,10 @@ const DeviceWrapper = ({ didMount, children }) => {
     return (
         <div
             {...{
-                className: cx(
-                    'DeviceWrapper',
+                ...didMount && {
+                    className: cx(
+                        'DeviceWrapper',
 
-                    didMount && [
                         `DW__${deviceWidthKey}Width`,
                         IS_USER_AGENT_DESKTOP && 'DW__userAgentDesktop',
                         isDesktopWidth ?
@@ -54,8 +54,8 @@ const DeviceWrapper = ({ didMount, children }) => {
                         canSliderMount &&
                             'DW__canSliderMount',
                         'abF'
-                    ]
-                )
+                    )
+                }
             }}
         >
             {children}

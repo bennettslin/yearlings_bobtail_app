@@ -3,6 +3,7 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../DidMountHoc'
 import getFinalSideHoc from '../../FinalSideHoc'
 import DotSequence from '../../DotSequence'
 import Texts from '../../Texts'
@@ -15,6 +16,7 @@ import { getMapHasSelectedDot } from '../../../redux/dots/selector'
 import './style'
 
 const AnnotationCard = ({
+    didMount,
     finalSideSongIndex,
     annotationIndex,
     inCarousel,
@@ -36,26 +38,44 @@ const AnnotationCard = ({
         )
 
     return (
-        <div className={cx(
-            'AnnotationCardContainer',
-            hasSelectedDot && 'AnnotationCardContainer__shown',
-            inCarousel && 'AnnotationCardContainer__animated',
-            'ovH'
-        )}>
-            <div className={cx(
-                'AnnotationCard',
-                description ?
-                    'AnnotationCard__isText' :
-                    'AnnotationCard__wormhole',
-                'fontSize__verse'
-            )}>
+        <div
+            {...{
+                ...didMount && {
+                    className: cx(
+                        'AnnotationCardContainer',
+                        hasSelectedDot && 'AnnotationCardContainer__shown',
+                        inCarousel && 'AnnotationCardContainer__animated',
+                        'ovH'
+                    )
+                }
+            }}
+        >
+            <div
+                {...{
+                    className: cx(
+                        'AnnotationCard',
+                        didMount && [
+                            description ?
+                                'AnnotationCard__isText' :
+                                'AnnotationCard__wormhole',
+                            'fontSize__verse'
+                        ]
+                    )
+                }}
+            >
                 {description ? (
                     <>
                         <DotSequence
                             inAnnotationCard
                             {...{ dotsBit }}
                         />
-                        <div {...{ className: 'AnnotationCard__text' }}>
+                        <div
+                            {...{
+                                ...didMount && {
+                                    className: 'AnnotationCard__text'
+                                }
+                            }}
+                        >
                             <Texts
                                 {...{
                                     text: description,
@@ -78,6 +98,7 @@ const AnnotationCard = ({
 }
 
 AnnotationCard.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     inCarousel: PropTypes.bool,
     isSelected: PropTypes.bool.isRequired,
     finalSideSongIndex: PropTypes.number.isRequired,
@@ -85,4 +106,4 @@ AnnotationCard.propTypes = {
     cardIndex: PropTypes.number.isRequired
 }
 
-export default memo(getFinalSideHoc(AnnotationCard))
+export default memo(getDidMountHoc(getFinalSideHoc(AnnotationCard)))

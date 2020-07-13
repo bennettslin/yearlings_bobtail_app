@@ -47,10 +47,10 @@ const ShownWrapper = ({ didMount, children }) => {
     return (
         <div
             {...{
-                className: cx(
-                    'ShownWrapper',
+                ...didMount && {
+                    className: cx(
+                        'ShownWrapper',
 
-                    didMount && [
                         lyricAnnotationIndex ?
                             'ShW__annotationShown' :
                             'ShW__annotationHidden',
@@ -89,8 +89,8 @@ const ShownWrapper = ({ didMount, children }) => {
                             'ShW__overlayShown' :
                             'ShW__overlayHidden',
                         'abF'
-                    ]
-                )
+                    )
+                }
             }}
         >
             {children}

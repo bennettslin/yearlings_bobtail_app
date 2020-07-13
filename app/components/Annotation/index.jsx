@@ -2,6 +2,7 @@
 import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../DidMountHoc'
 import getFinalSideHoc from '../FinalSideHoc'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
@@ -10,6 +11,7 @@ import { getAnnotationCardIndices } from '../../api/album/cards'
 import './style'
 
 const Annotation = ({
+    didMount,
     inCarousel,
     isAccessed,
     isSelected,
@@ -40,14 +42,16 @@ const Annotation = ({
             >
                 <div
                     {...{
-                        className: cx(
-                            'Annotation__cardField',
-                            'bgColour__annotation',
-                            'bgColour__annotation__pattern',
-                            isSelected && 'bgColour__annotation__selected',
-                            'boxShadow__annotation',
-                            'abF'
-                        )
+                        ...didMount && {
+                            className: cx(
+                                'Annotation__cardField',
+                                'bgColour__annotation',
+                                'bgColour__annotation__pattern',
+                                isSelected && 'bgColour__annotation__selected',
+                                'boxShadow__annotation',
+                                'abF'
+                            )
+                        }
                     }}
                 />
 
@@ -82,6 +86,7 @@ const Annotation = ({
 }
 
 Annotation.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     inCarousel: PropTypes.bool,
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
@@ -89,4 +94,4 @@ Annotation.propTypes = {
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default memo(getFinalSideHoc(Annotation))
+export default memo(getDidMountHoc(getFinalSideHoc(Annotation)))

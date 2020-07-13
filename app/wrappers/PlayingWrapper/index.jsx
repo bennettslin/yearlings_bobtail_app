@@ -21,10 +21,10 @@ const PlayingWrapper = ({ didMount, children }) => {
     return (
         <div
             {...{
-                className: cx(
-                    'PlayingWrapper',
+                ...didMount && {
+                    className: cx(
+                        'PlayingWrapper',
 
-                    didMount && [
                         isLyricLogue ?
                             'PlW__logue' :
                             'PlW__song',
@@ -37,8 +37,8 @@ const PlayingWrapper = ({ didMount, children }) => {
                         accessedKey &&
                             `${PARENT_ACCESS_PREFIX}${accessedKey}`,
                         'abF'
-                    ]
-                )
+                    )
+                }
             }}
         >
             {children}

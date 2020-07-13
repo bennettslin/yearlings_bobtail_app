@@ -3,10 +3,12 @@
 import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../../DidMountHoc'
 import Texts from '../../../Texts'
 import './style'
 
 const VerseLine = forwardRef(({
+    didMount,
     columnKey,
     isTruncatable,
     ...other
@@ -25,20 +27,24 @@ const VerseLine = forwardRef(({
     return (
         <>
             <div
-                className={cx(
-                    'VerseLine',
+                {...{
+                    ...didMount && {
+                        className: cx(
+                            'VerseLine',
 
-                    /**
-                     * Allow anchor in a verse line to know it's in a
-                     * cursor verse.
-                     */
-                    !inVerseBar && 'sibling__verseCursor',
+                            /**
+                             * Allow anchor in a verse line to know it's in a
+                             * cursor verse.
+                             */
+                            !inVerseBar && 'sibling__verseCursor',
 
-                    // Lyric, left, centre, right.
-                    `VerseLine__${columnKey}`,
+                            // Lyric, left, centre, right.
+                            `VerseLine__${columnKey}`,
 
-                    { 'VerseLine__truncatable': isTruncatable }
-                )}
+                            { 'VerseLine__truncatable': isTruncatable }
+                        )
+                    }
+                }}
             >
                 <Texts
                     isVerseLyric
@@ -50,7 +56,7 @@ const VerseLine = forwardRef(({
             </div>
 
             {/* Only render if this is a truncatable verse. */}
-            {isTruncatable && (
+            {didMount && isTruncatable && (
                 <div
                     className="VerseLine__truncated"
                 >
@@ -62,6 +68,7 @@ const VerseLine = forwardRef(({
 })
 
 VerseLine.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array,
@@ -73,4 +80,4 @@ VerseLine.propTypes = {
     columnKey: PropTypes.string.isRequired
 }
 
-export default memo(VerseLine)
+export default memo(getDidMountHoc(VerseLine))

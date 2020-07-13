@@ -29,10 +29,10 @@ const ResponsiveWrapper = ({ didMount, children }) => {
     return (
         <div
             {...{
-                className: cx(
-                    'ResponsiveWrapper',
+                ...didMount && {
+                    className: cx(
+                        'ResponsiveWrapper',
 
-                    didMount && [
                         showShrunkNavIcon ?
                             'RW__navIconShrunk' :
                             'RW__navIconStatic',
@@ -47,8 +47,8 @@ const ResponsiveWrapper = ({ didMount, children }) => {
                             'RW__lyricExpandable' :
                             'RW__lyricNotExpandable',
                         'abF'
-                    ]
-                )
+                    )
+                }
             }}
         >
             {children}
