@@ -4850,5 +4850,9 @@ export default [
     {
         taskName: `Fix annotation popup and overview and tips not loading upon mount.`,
         workedHours: 2
+    },
+    {
+        taskName: `Rehydration fix.`,
+        workedHours: 17
     }
 ]

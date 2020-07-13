@@ -1,26 +1,24 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import './style'
 
-const propTypes = {
-    // From parent.
-        isAccessed: PropTypes.bool,
-        isSelected: PropTypes.bool,
-        isDotAnchor: PropTypes.bool,
-        isWikiAnchor: PropTypes.bool,
-        isWikiFirstChild: PropTypes.bool,
-        isWikiLastChild: PropTypes.bool
-    },
+const Underline = ({
+    isAccessed,
+    isSelected,
+    isDotAnchor,
+    isWikiAnchor,
+    isWikiFirstChild,
+    isWikiLastChild
 
-    Underline = ({
-        isAccessed,
-        isSelected,
-        isDotAnchor,
-        isWikiAnchor,
-        isWikiFirstChild,
-        isWikiLastChild
-    }) => (
+}) => {
+    const [didMount, setDidMount] = useState(false)
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
         <div
             {...{
                 className: cx(
@@ -50,7 +48,15 @@ const propTypes = {
             }}
         />
     )
+}
 
-Underline.propTypes = propTypes
+Underline.propTypes = {
+    isAccessed: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    isDotAnchor: PropTypes.bool,
+    isWikiAnchor: PropTypes.bool,
+    isWikiFirstChild: PropTypes.bool,
+    isWikiLastChild: PropTypes.bool
+}
 
 export default memo(Underline)

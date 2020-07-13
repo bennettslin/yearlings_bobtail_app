@@ -1,42 +1,31 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from '../../modules/InlineSvg'
 import { getSvgForDot } from '../../api/svg'
 import './style'
 
-const propTypes = {
-    // From parent.
-    className: PropTypes.string,
-    noDropShadow: PropTypes.bool,
-    isAccessed: PropTypes.bool,
-    isSelected: PropTypes.bool,
-    isDeselected: PropTypes.bool,
-    isSequenceDot: PropTypes.bool,
-    dotKey: PropTypes.string.isRequired
-}
-
 const Dot = ({
     className,
-
     noDropShadow,
-
     isAccessed,
-
     // Applies to selectable dots.
     isSelected,
-
     // Applies to slide dots.
     isDeselected,
-
     isSequenceDot,
-
     dotKey
 
 }) => {
-    const dotIconSvg = getSvgForDot(dotKey)
+    const
+        dotIconSvg = getSvgForDot(dotKey),
+        [didMount, setDidMount] = useState(false)
 
-    return (
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
         <InlineSvg
             notAbsoluteFullContainer
             {...{
@@ -66,6 +55,14 @@ const Dot = ({
     )
 }
 
-Dot.propTypes = propTypes
+Dot.propTypes = {
+    className: PropTypes.string,
+    noDropShadow: PropTypes.bool,
+    isAccessed: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    isDeselected: PropTypes.bool,
+    isSequenceDot: PropTypes.bool,
+    dotKey: PropTypes.string.isRequired
+}
 
 export default memo(Dot)

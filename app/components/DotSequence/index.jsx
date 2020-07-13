@@ -1,18 +1,11 @@
 // Container to show multiple dots in sequence.
-
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { ORDERED_DOT_KEYS } from '../../constants/dots'
 import SequenceDot from './SequenceDot'
 import './style'
 import { getDotKeysFromBit } from '../../helpers/dot'
-
-const propTypes = {
-    dotsBit: PropTypes.number.isRequired,
-    inAnnotationCard: PropTypes.bool,
-    inTextAnchor: PropTypes.bool
-}
 
 const DotSequence = ({
     inAnnotationCard,
@@ -21,14 +14,24 @@ const DotSequence = ({
     ...other
 
 }) => {
-    const dotKeys = getDotKeysFromBit(dotsBit)
-    return (
+    const
+        dotKeys = getDotKeysFromBit(dotsBit),
+        [didMount, setDidMount] = useState(false)
 
-        <div className={cx(
-            'DotSequence',
-            !inAnnotationCard && 'gradientMask__dotSequence',
-            inTextAnchor && 'DotSequence__inTextAnchor'
-        )}>
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
+        <div
+            {...{
+                className: cx(
+                    'DotSequence',
+                    !inAnnotationCard && 'gradientMask__dotSequence',
+                    inTextAnchor && 'DotSequence__inTextAnchor'
+                )
+            }}
+        >
             {ORDERED_DOT_KEYS.map(dotKey => (
                 // Go through all dot keys in array to ensure correct order.
                 dotKeys[dotKey] && (
@@ -46,6 +49,10 @@ const DotSequence = ({
     )
 }
 
-DotSequence.propTypes = propTypes
+DotSequence.propTypes = {
+    dotsBit: PropTypes.number.isRequired,
+    inAnnotationCard: PropTypes.bool,
+    inTextAnchor: PropTypes.bool
+}
 
 export default memo(DotSequence)

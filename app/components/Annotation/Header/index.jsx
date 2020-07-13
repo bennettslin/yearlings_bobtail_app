@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import AnnotationTitle from '../Title'
@@ -10,24 +10,34 @@ const AnnotationHeader = ({
     isSelected,
     annotationIndex
 
-}) => (
-    <div className={cx(
-        'AnnotationHeader',
+}) => {
+    const [didMount, setDidMount] = useState(false)
 
-        // Annotation header needs to be hideable in carousel.
-        inCarousel && 'AnnotationHeaderAnimatable',
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
 
-        'abF'
-    )}>
-        <AnnotationTitle
+    return didMount && (
+        <div
             {...{
-                isAccessed,
-                isSelected,
-                annotationIndex
+                className: cx(
+                    'AnnotationHeader',
+                    // Annotation header needs to be hideable in carousel.
+                    inCarousel && 'AnnotationHeaderAnimatable',
+                    'abF'
+                )
             }}
-        />
-    </div>
-)
+        >
+            <AnnotationTitle
+                {...{
+                    isAccessed,
+                    isSelected,
+                    annotationIndex
+                }}
+            />
+        </div>
+    )
+}
 
 AnnotationHeader.propTypes = {
     inCarousel: PropTypes.bool,
