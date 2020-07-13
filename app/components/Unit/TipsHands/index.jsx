@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import TipsHand from '../../Tips/Hand'
@@ -28,9 +28,14 @@ const UnitTipsHands = ({
         showStanzaTabTip = getShowStanzaTabTip(lyricSongIndex, unitIndex),
         showActivatedTip = getShowActivatedTip(lyricSongIndex, unitIndex),
         showWormholesTip = getShowWormholesTip(lyricSongIndex, unitIndex),
-        showWikiTip = getShowWikiTip(lyricSongIndex, unitIndex)
+        showWikiTip = getShowWikiTip(lyricSongIndex, unitIndex),
+        [didMount, setDidMount] = useState(false)
 
-    return (
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
         <>
             {showAnnotationTip && (
                 <TipsHand {...{ tipType: ANNOTATION }} />

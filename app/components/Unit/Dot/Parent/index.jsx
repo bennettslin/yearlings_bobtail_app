@@ -1,5 +1,5 @@
 // Ensure child never mounts if conditional is not met.
-import React, { forwardRef, memo } from 'react'
+import React, { forwardRef, memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import { getDotForUnit } from '../../../../api/album/units'
@@ -9,9 +9,14 @@ import { UnitDot } from '..'
 const UnitDotParent = forwardRef(({ unitIndex }, ref) => {
     const
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        unitDot = getDotForUnit(lyricSongIndex, unitIndex)
+        unitDot = getDotForUnit(lyricSongIndex, unitIndex),
+        [didMount, setDidMount] = useState(false)
 
-    return Boolean(unitDot) && (
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && Boolean(unitDot) && (
         <UnitDot
             {...{
                 ref,

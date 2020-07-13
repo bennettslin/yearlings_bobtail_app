@@ -56,12 +56,12 @@ export const getUnitCardVerses = ({
 }
 
 export const getIsUnitTruncatable = ({
-    lyricSongIndex,
+    songIndex,
     unitIndex,
     isMainVerses,
     isSubVerse
 
 }) => (
-    Boolean(getSideCardForUnit(lyricSongIndex, unitIndex)) &&
+    Boolean(getSideCardForUnit(songIndex, unitIndex)) &&
     (isMainVerses || isSubVerse)
 )

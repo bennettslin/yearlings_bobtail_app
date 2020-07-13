@@ -2,7 +2,7 @@
 import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
+import getFinalSideHoc from '../../FinalSideHoc'
 import UnitTipsHands from '../TipsHands'
 import UnitTab from '../Tab'
 import Verse from '../../Verse'
@@ -13,10 +13,10 @@ import {
 } from './helper'
 import { getSubsequentForUnit } from '../../../api/album/units'
 import { getVerse } from '../../../api/album/verses'
-import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
 const UnitCard = forwardRef(({
+    finalSideSongIndex,
     unitIndex,
     isMainVerses,
     isSubVerse,
@@ -25,15 +25,14 @@ const UnitCard = forwardRef(({
     ...other
 
 }, ref) => {
-    const lyricSongIndex = useSelector(mapLyricSongIndex),
-        versesArray = getUnitCardVerses({
-            songIndex: lyricSongIndex,
-            unitIndex,
-            isMainVerses,
-            isSubVerse,
-            isSideCard,
-            isSideSubCard
-        })
+    const versesArray = getUnitCardVerses({
+        songIndex: finalSideSongIndex,
+        unitIndex,
+        isMainVerses,
+        isSubVerse,
+        isSideCard,
+        isSideSubCard
+    })
 
     // Return if nothing to render.
     if (!versesArray) {
@@ -42,17 +41,17 @@ const UnitCard = forwardRef(({
 
     const
         { handleVerseSelect } = other,
-        isSubsequent = getSubsequentForUnit(lyricSongIndex, unitIndex),
+        isSubsequent = getSubsequentForUnit(finalSideSongIndex, unitIndex),
         isIndexed = isMainVerses || isSubVerse,
         isTabbed = isMainVerses && !isSubsequent,
         isTruncatable = getIsUnitTruncatable({
-            lyricSongIndex,
+            songIndex: finalSideSongIndex,
             unitIndex,
             isMainVerses,
             isSubVerse
         }),
         formType = getUnitFormType({
-            songIndex: lyricSongIndex,
+            songIndex: finalSideSongIndex,
             unitIndex,
             isMainVerses,
             isSubVerse,
@@ -75,7 +74,7 @@ const UnitCard = forwardRef(({
                 {versesArray.map((verseEntity, index) => {
                     const verseObject = isIndexed ?
                         // If indexed verse, it's an array of indices.
-                        getVerse(lyricSongIndex, verseEntity) :
+                        getVerse(finalSideSongIndex, verseEntity) :
 
                         // Otherwise, it's an array of verse objects.
                         verseEntity
@@ -111,6 +110,7 @@ const UnitCard = forwardRef(({
 })
 
 UnitCard.propTypes = {
+    finalSideSongIndex: PropTypes.number.isRequired,
     unitIndex: PropTypes.number.isRequired,
     isMainVerses: PropTypes.bool,
     isSubVerse: PropTypes.bool,
@@ -118,4 +118,4 @@ UnitCard.propTypes = {
     isSideSubCard: PropTypes.bool
 }
 
-export default memo(UnitCard)
+export default memo(getFinalSideHoc(UnitCard))

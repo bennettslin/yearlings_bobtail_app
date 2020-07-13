@@ -5,23 +5,21 @@
 import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
+import getFinalSideHoc from '../../FinalSideHoc'
 import Unit from '../../Unit'
 import { getUnitIndicesForStanza } from '../../../api/album/stanzas'
-import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
 const Stanza = forwardRef(({
+    finalSideSongIndex,
     stanzaIndex,
     ...other
 
 }, ref) => {
-    const
-        lyricSongIndex = useSelector(mapLyricSongIndex),
-        stanzaUnitIndices = getUnitIndicesForStanza(
-            lyricSongIndex,
-            stanzaIndex
-        )
+    const stanzaUnitIndices = getUnitIndicesForStanza(
+        finalSideSongIndex,
+        stanzaIndex
+    )
 
     return (
         <div
@@ -43,7 +41,8 @@ const Stanza = forwardRef(({
 })
 
 Stanza.propTypes = {
+    finalSideSongIndex: PropTypes.number.isRequired,
     stanzaIndex: PropTypes.number.isRequired
 }
 
-export default memo(Stanza)
+export default memo(getFinalSideHoc(Stanza))

@@ -3,19 +3,17 @@
  * optional index, such as Verse 1 or Bridge.
  */
 import React, { forwardRef, memo, useRef } from 'react'
-import { useSelector } from 'react-redux'
+import PropTypes from 'prop-types'
+import getFinalSideHoc from '../FinalSideHoc'
 import VerseDispatcher from '../../dispatchers/Verse'
 import Stanza from './Stanza'
 import Unit from '../Unit'
 import { getStanzaIndices } from '../../api/album/stanzas'
 import { getLastUnitDotCardIndex } from '../../api/album/units'
-import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import './style'
 
-const Stanzas = forwardRef((props, ref) => {
-    const
-        dispatchVerse = useRef(),
-        lyricSongIndex = useSelector(mapLyricSongIndex)
+const Stanzas = forwardRef(({ finalSideSongIndex }, ref) => {
+    const dispatchVerse = useRef()
 
     const handleVerseSelect = ({
         scrollLog,
@@ -30,8 +28,8 @@ const Stanzas = forwardRef((props, ref) => {
     }
 
     const
-        stanzaIndices = getStanzaIndices(lyricSongIndex),
-        lastUnitDotCardIndex = getLastUnitDotCardIndex(lyricSongIndex)
+        stanzaIndices = getStanzaIndices(finalSideSongIndex),
+        lastUnitDotCardIndex = getLastUnitDotCardIndex(finalSideSongIndex)
 
     return stanzaIndices.length && (
         <>
@@ -70,4 +68,8 @@ const Stanzas = forwardRef((props, ref) => {
     )
 })
 
-export default memo(Stanzas)
+Stanzas.propTypes = {
+    finalSideSongIndex: PropTypes.number.isRequired
+}
+
+export default memo(getFinalSideHoc(Stanzas))

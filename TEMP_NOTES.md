@@ -1,15 +1,10 @@
 # Current plan
-* Page passes pageSongIndex to page container
-    * Lyric
-        * Render page component on server side
-            * Use pageSongIndex for all values
-        * Render regular component on client side
-            * Use lyricSongIndex for all values
 
 # Clean up of current plan
 * Carousel doesn't change server side class name. Figure out better way to show server side class name.
 * Consolidate focus container and root container?
 * Confirm that carousel and lyric don't get torn down upon page change.
+* When verse in middle is selected, selected verse and verse bars are weird.
 
 # Current Gatsby fixes
 * Navigate to Gatsby page from dispatcher
@@ -37,6 +32,7 @@
 * Deprecated page for Internet Explorer?
 * Why is Gatsby build so much bigger than webpack build?
 * Does Gatsby get a fresh version?
+* Still need GA in utils?
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.

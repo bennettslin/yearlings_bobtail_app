@@ -7,7 +7,7 @@ export const getLastUnitDotCardIndex = songIndex => {
 }
 
 export const getDotForUnit = (songIndex, unitIndex) => {
-    const { withUnitDots } = getSong(songIndex)
+    const { withUnitDots = {} } = getSong(songIndex)
     return withUnitDots[unitIndex] || null
 }
 
@@ -22,7 +22,7 @@ export const getSideSubCardForUnit = (songIndex, unitIndex) => {
 }
 
 export const getFormTypeForUnit = (songIndex, unitIndex) => {
-    const { unitStanzaIndices } = getSong(songIndex),
+    const { unitStanzaIndices = [] } = getSong(songIndex),
         stanzaIndex = unitStanzaIndices[unitIndex]
 
     return stanzaIndex > -1 ?
@@ -31,7 +31,7 @@ export const getFormTypeForUnit = (songIndex, unitIndex) => {
 }
 
 export const getFormTypeIndexForUnit = (songIndex, unitIndex) => {
-    const { unitFormTypeIndices } = getSong(songIndex)
+    const { unitFormTypeIndices = [] } = getSong(songIndex)
     return unitFormTypeIndices[unitIndex]
 }
 
@@ -56,7 +56,7 @@ export const getSubsequentForUnit = (songIndex, unitIndex) => {
 }
 
 export const getVerseIndicesForUnit = (songIndex, unitIndex) => {
-    const { unitVerseIndicesList } = getSong(songIndex)
+    const { unitVerseIndicesList = [] } = getSong(songIndex)
     return unitVerseIndicesList[unitIndex] || []
 }
 

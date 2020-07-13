@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -20,15 +20,21 @@ const UnitTab = ({
         verseIndex = getVerseIndicesForUnit(lyricSongIndex, unitIndex)[0],
         formType = getFormTypeForUnit(lyricSongIndex, unitIndex),
         formTypeIndex = getFormTypeIndexForUnit(lyricSongIndex, unitIndex),
-        onClick = e => {
-            logEvent({ e, componentName: 'UnitCard' })
-            handleVerseSelect({
-                scrollLog: 'Stanza tab selected',
-                verseIndex
-            })
-        }
+        [didMount, setDidMount] = useState(false)
 
-    return (
+    const onClick = e => {
+        logEvent({ e, componentName: 'UnitCard' })
+        handleVerseSelect({
+            scrollLog: 'Stanza tab selected',
+            verseIndex
+        })
+    }
+
+    useEffect(() => {
+        setDidMount(true)
+    }, [])
+
+    return didMount && (
         <div
             {...{
                 className: cx(

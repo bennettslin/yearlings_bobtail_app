@@ -7,6 +7,7 @@ import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
+import getFinalSideHoc from '../FinalSideHoc'
 import UnitSongTitle from './Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
@@ -17,26 +18,27 @@ import {
     getSideCardForUnit
 } from '../../api/album/units'
 import { mapIsEarShown } from '../../redux/ear/selector'
-import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import './style'
 
 const Unit = forwardRef(({
+    finalSideSongIndex,
     unitIndex,
     ...other
 
 }, ref) => {
     const
         isEarShown = useSelector(mapIsEarShown),
-        lyricSongIndex = useSelector(mapLyricSongIndex),
         unitVerseIndices = getVerseIndicesForUnit(
-            lyricSongIndex, unitIndex
+            finalSideSongIndex, unitIndex
         ),
         isBottomSideCard = getIsSideCardOnBottomForUnit(
-            lyricSongIndex, unitIndex
+            finalSideSongIndex, unitIndex
         ),
         hasMainVerses = Boolean(unitVerseIndices.length),
-        hasSideCards = Boolean(getSideCardForUnit(lyricSongIndex, unitIndex)),
-        isSubsequent = getSubsequentForUnit(lyricSongIndex, unitIndex)
+        hasSideCards = Boolean(getSideCardForUnit(
+            finalSideSongIndex, unitIndex
+        )),
+        isSubsequent = getSubsequentForUnit(finalSideSongIndex, unitIndex)
 
     return (
         <div
@@ -120,7 +122,8 @@ const Unit = forwardRef(({
 })
 
 Unit.propTypes = {
+    finalSideSongIndex: PropTypes.number.isRequired,
     unitIndex: PropTypes.number.isRequired
 }
 
-export default memo(Unit)
+export default memo(getFinalSideHoc(Unit))
