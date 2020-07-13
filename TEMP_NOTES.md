@@ -1,19 +1,11 @@
 # Current plan
-
-# Clean up of current plan
+* Make efficient, such as removing extra classes, anchor extra text and underlines
 * Carousel doesn't change server side class name. Figure out better way to show server side class name.
-* Consolidate focus container and root container?
 * Confirm that carousel and lyric don't get torn down upon page change.
 * When verse in middle is selected, selected verse and verse bars are weird.
-
-# Current Gatsby fixes
-* Navigate to Gatsby page from dispatcher
 * Check that Overview, Carousel, and Lyric render well for all songs
-* Make efficient, such as removing extra classes, anchor extra text and underlines
-* Bugs that might be fixed.
-    * Can't change from song to logue.
-    * If home page and stored song is Cremated, doublespeaker lines are weird.
 
+# Next post-Gatsby work
 * URL replacement and redirects
     * useHistory doesn't work in Gatsby
 * Make sure routing verse and annotation indices work as well
@@ -25,7 +17,7 @@
 * Numbered paths
     * Still redirect a numbered path to song, if valid
 
-# Later Gatsby fixes
+# Later post-Gatsby work
 * Admin routes
 * Favicon
 * App loading indicator
@@ -34,11 +26,14 @@
 * Does Gatsby get a fresh version?
 * Still need GA in utils?
 
+# Next work
+* Scene doesn't reset to default when curtain is closed.
+* Selecting carousel annotation will sometimes flash lyric above carousel.
+* Banner filmstrip styling should get constants from constants folder
+
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 * Failed to decode downloaded font warning?
-* Selecting carousel annotation will sometimes flash lyric above carousel.
-* Banner filmstrip styling should get constants from constants folder
 
 # Minor issues, to be investigated while production is on master before Gatsby.
 * Is song selection still slower through access after refactor?

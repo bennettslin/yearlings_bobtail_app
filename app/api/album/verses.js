@@ -37,7 +37,7 @@ export const getSceneIndexForVerse = (songIndex, verseIndex) => {
 }
 
 export const getStanzaIndexForVerse = (songIndex, verseIndex) => {
-    const { verseStanzaIndices } = getSong(songIndex)
+    const { verseStanzaIndices = [] } = getSong(songIndex)
     return verseStanzaIndices[verseIndex]
 }
 
