@@ -1,12 +1,11 @@
 import React from 'react'
-import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import { mapMainHeightStyle } from '../../redux/main/selector'
 import { mapMenuHeight } from '../../redux/viewport/selector'
 
 const getMainHoc = MainComponent => {
 
-    const MainHoc = () => {
+    const MainHoc = props => {
         const
             mainHeightStyle = useSelector(mapMainHeightStyle),
             menuHeight = useSelector(mapMenuHeight)
@@ -14,13 +13,11 @@ const getMainHoc = MainComponent => {
         return (
             <MainComponent
                 {...{
-                    className: cx(
-                        'abF'
-                    ),
                     style: {
                         top: `${menuHeight}px`,
                         height: mainHeightStyle
-                    }
+                    },
+                    ...props
                 }}
             />
         )

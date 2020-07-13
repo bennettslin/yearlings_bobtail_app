@@ -19,7 +19,7 @@ import TipsPopup from '../Popups/Tips'
 import ShelfRight from './ShelfRight'
 import './style'
 
-const Main = ({ className, style }) => {
+const Main = ({ style }) => {
     const [didMount, setDidMount] = useState(false)
 
     useEffect(() => {
@@ -39,7 +39,7 @@ const Main = ({ className, style }) => {
                      * which avoids screen jumpiness when zooming.
                      */
                     'width__mainColumn',
-                    className
+                    'abF'
                 ),
                 style
             }}
@@ -63,7 +63,6 @@ const Main = ({ className, style }) => {
 }
 
 Main.propTypes = {
-    className: PropTypes.string,
     style: PropTypes.object
 }
 

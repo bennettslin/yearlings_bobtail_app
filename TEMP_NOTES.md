@@ -1,12 +1,13 @@
 # Current plan
 * Page passes pageSongIndex to page container
-    * Carousel and Lyric
+    * Lyric
         * Render page component on server side
             * Use pageSongIndex for all values
         * Render regular component on client side
             * Use lyricSongIndex for all values
 
 # Clean up of current plan
+* Carousel doesn't change server side class name. Figure out better way to show server side class name.
 * Consolidate focus container and root container?
 * Confirm that carousel and lyric don't get torn down upon page change.
 

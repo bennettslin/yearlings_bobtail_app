@@ -14,7 +14,7 @@ import { mapCanCarouselShow } from '../../redux/viewport/selector'
 import { getFinalSideClass } from '../../utils/server'
 import './style'
 
-const Carousel = ({ className, style, pageSongIndex }) => {
+const Carousel = ({ style, pageSongIndex }) => {
     const
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
@@ -51,8 +51,8 @@ const Carousel = ({ className, style, pageSongIndex }) => {
                             'Carousel',
                             canCarouselShow && 'Carousel__shown',
                             'gradientMask__carousel__desktop',
-                            getFinalSideClass(),
-                            className
+                            'abF',
+                            getFinalSideClass()
                         ),
                         style
                     }}
@@ -66,7 +66,6 @@ const Carousel = ({ className, style, pageSongIndex }) => {
 }
 
 Carousel.propTypes = {
-    className: PropTypes.string,
     style: PropTypes.object,
     pageSongIndex: PropTypes.number
 }

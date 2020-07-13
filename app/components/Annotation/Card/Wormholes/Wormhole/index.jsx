@@ -2,7 +2,7 @@
 import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getFinalSideHoc from '../../../../FinalSideHoc'
+import { useSelector } from 'react-redux'
 import SongDispatcher from '../../../../../dispatchers/Song'
 import Texts from '../../../../Texts'
 import Button from '../../../../Button'
@@ -16,18 +16,19 @@ import {
 import { getIndexedTitleForSong } from '../../../../../api/album/songs'
 import { getWormholeLinkForWormhole } from '../../../../../api/album/wormholes'
 import { getVerse } from '../../../../../api/album/verses'
+import { mapLyricSongIndex } from '../../../../../redux/lyric/selector'
 
 const AnnotationWormhole = ({
     isAccessedShown,
-    finalSideSongIndex,
     annotationIndex,
     wormholeLinkIndex
 
 }) => {
     const
         dispatchSong = useRef(),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
         wormholeLink = getWormholeLinkForWormhole(
-            finalSideSongIndex,
+            lyricSongIndex,
             annotationIndex,
             wormholeLinkIndex
         ),
@@ -99,9 +100,8 @@ const AnnotationWormhole = ({
 
 AnnotationWormhole.propTypes = {
     isAccessedShown: PropTypes.bool.isRequired,
-    finalSideSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired,
     wormholeLinkIndex: PropTypes.number.isRequired
 }
 
-export default memo(getFinalSideHoc(AnnotationWormhole))
+export default memo(AnnotationWormhole)
