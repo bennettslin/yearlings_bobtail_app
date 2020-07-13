@@ -1,17 +1,13 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
+import getDidMountHoc from '../../DidMountHoc'
 import { mapIsOverlayShown } from '../../../redux/overlay/selector'
 import './style'
 
-const PopupOverlay = () => {
-    const
-        isOverlayShown = useSelector(mapIsOverlayShown),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+const PopupOverlay = ({ didMount }) => {
+    const isOverlayShown = useSelector(mapIsOverlayShown)
 
     return didMount && (
         <CSSTransition
@@ -32,4 +28,8 @@ const PopupOverlay = () => {
     )
 }
 
-export default memo(PopupOverlay)
+PopupOverlay.propTypes = {
+    didMount: PropTypes.bool.isRequired
+}
+
+export default memo(getDidMountHoc(PopupOverlay))

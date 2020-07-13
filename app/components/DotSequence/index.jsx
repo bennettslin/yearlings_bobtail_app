@@ -1,26 +1,22 @@
 // Container to show multiple dots in sequence.
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { ORDERED_DOT_KEYS } from '../../constants/dots'
+import getDidMountHoc from '../DidMountHoc'
 import SequenceDot from './SequenceDot'
-import './style'
 import { getDotKeysFromBit } from '../../helpers/dot'
+import { ORDERED_DOT_KEYS } from '../../constants/dots'
+import './style'
 
 const DotSequence = ({
+    didMount,
     inAnnotationCard,
     inTextAnchor,
     dotsBit,
     ...other
 
 }) => {
-    const
-        dotKeys = getDotKeysFromBit(dotsBit),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+    const dotKeys = getDotKeysFromBit(dotsBit)
 
     return didMount && (
         <div
@@ -50,9 +46,10 @@ const DotSequence = ({
 }
 
 DotSequence.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     dotsBit: PropTypes.number.isRequired,
     inAnnotationCard: PropTypes.bool,
     inTextAnchor: PropTypes.bool
 }
 
-export default memo(DotSequence)
+export default memo(getDidMountHoc(DotSequence))

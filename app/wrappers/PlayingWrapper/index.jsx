@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
+import getDidMountHoc from '../../components/DidMountHoc'
 import { PARENT_ACCESS_PREFIX } from '../../constants/prefixes'
 import {
     mapIsAccessOn,
@@ -10,17 +11,12 @@ import {
 import { mapIsPlaying } from '../../redux/audio/selector'
 import { mapIsLyricLogue } from '../../redux/lyric/selector'
 
-const PlayingWrapper = ({ children }) => {
+const PlayingWrapper = ({ didMount, children }) => {
     const
         isAccessOn = useSelector(mapIsAccessOn),
         accessedKey = useSelector(mapAccessedKey),
         isPlaying = useSelector(mapIsPlaying),
-        isLyricLogue = useSelector(mapIsLyricLogue),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+        isLyricLogue = useSelector(mapIsLyricLogue)
 
     return (
         <div
@@ -51,7 +47,8 @@ const PlayingWrapper = ({ children }) => {
 }
 
 PlayingWrapper.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     children: PropTypes.any.isRequired
 }
 
-export default PlayingWrapper
+export default memo(getDidMountHoc(PlayingWrapper))

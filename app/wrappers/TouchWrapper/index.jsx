@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../components/DidMountHoc'
 import { mapIsActivated } from '../../redux/activated/selector'
 import { mapIsBannerHovering } from '../../redux/banner/selector'
 import {
@@ -13,19 +14,14 @@ import {
     mapIsLyricsLocked
 } from '../../redux/slider/selector'
 
-const TouchWrapper = ({ children }) => {
+const TouchWrapper = ({ didMount, children }) => {
     const
         isActivated = useSelector(mapIsActivated),
         isBannerHovering = useSelector(mapIsBannerHovering),
         isAnchorMoused = useSelector(mapIsAnchorMoused),
         isScrolling = useSelector(mapIsScrolling),
         isSliderTouched = useSelector(mapIsSliderTouched),
-        isLyricsLocked = useSelector(mapIsLyricsLocked),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+        isLyricsLocked = useSelector(mapIsLyricsLocked)
 
     return (
         <div
@@ -56,7 +52,8 @@ const TouchWrapper = ({ children }) => {
 }
 
 TouchWrapper.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     children: PropTypes.any.isRequired
 }
 
-export default TouchWrapper
+export default memo(getDidMountHoc(TouchWrapper))

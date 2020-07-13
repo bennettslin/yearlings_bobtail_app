@@ -2,9 +2,11 @@
  * Field for about toggle, audio section, and scores and tips section. Knows no
  * state, so should not update.
  */
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
+import getDidMountHoc from '../DidMountHoc'
 import AboutToggle from '../About/Toggle'
 import Audio from '../Audio'
 import BannerFilmstrip from '../BannerFilmstrip'
@@ -19,7 +21,7 @@ import {
 } from '../../redux/viewport/selector'
 import './style'
 
-const Menu = () => {
+const Menu = ({ didMount }) => {
     const
         canSliderMount = useSelector(mapCanSliderMount),
         isTwoRowMenu = useSelector(mapIsTwoRowMenu),
@@ -29,12 +31,7 @@ const Menu = () => {
         menuMarginInOverlay = getMenuMarginInOverlay({
             isDesktopWidth,
             windowWidth
-        }),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+        })
 
     // Prevent menu from rendering before windowWidth has been set.
     return didMount && (
@@ -111,4 +108,8 @@ const Menu = () => {
     )
 }
 
-export default memo(Menu)
+Menu.propTypes = {
+    didMount: PropTypes.bool.isRequired
+}
+
+export default memo(getDidMountHoc(Menu))

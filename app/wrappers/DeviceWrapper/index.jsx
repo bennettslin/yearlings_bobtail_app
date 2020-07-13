@@ -1,8 +1,9 @@
 // Wrapper for device class names.
-import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
+import getDidMountHoc from '../../components/DidMountHoc'
 import { getIsTabletWidth } from '../../helpers/responsive'
 import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
@@ -16,7 +17,7 @@ import {
     mapCanSliderMount
 } from '../../redux/viewport/selector'
 
-const DeviceWrapper = ({ children }) => {
+const DeviceWrapper = ({ didMount, children }) => {
     const
         deviceWidthIndex = useSelector(mapDeviceWidthIndex),
         isPhoneWidth = useSelector(mapIsPhoneWidth),
@@ -28,12 +29,7 @@ const DeviceWrapper = ({ children }) => {
             DEVICE_WIDTH_CONFIGS[deviceWidthIndex] &&
             DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey,
 
-        isTabletWidth = getIsTabletWidth(deviceWidthIndex),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+        isTabletWidth = getIsTabletWidth(deviceWidthIndex)
 
     return (
         <div
@@ -68,7 +64,8 @@ const DeviceWrapper = ({ children }) => {
 }
 
 DeviceWrapper.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     children: PropTypes.any.isRequired
 }
 
-export default DeviceWrapper
+export default memo(getDidMountHoc(DeviceWrapper))

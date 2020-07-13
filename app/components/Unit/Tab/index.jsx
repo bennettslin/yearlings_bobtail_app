@@ -1,7 +1,8 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
+import getDidMountHoc from '../../DidMountHoc'
 import {
     getFormTypeForUnit,
     getFormTypeIndexForUnit,
@@ -11,6 +12,7 @@ import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
 
 const UnitTab = ({
+    didMount,
     unitIndex,
     handleVerseSelect
 
@@ -19,8 +21,7 @@ const UnitTab = ({
         lyricSongIndex = useSelector(mapLyricSongIndex),
         verseIndex = getVerseIndicesForUnit(lyricSongIndex, unitIndex)[0],
         formType = getFormTypeForUnit(lyricSongIndex, unitIndex),
-        formTypeIndex = getFormTypeIndexForUnit(lyricSongIndex, unitIndex),
-        [didMount, setDidMount] = useState(false)
+        formTypeIndex = getFormTypeIndexForUnit(lyricSongIndex, unitIndex)
 
     const onClick = e => {
         logEvent({ e, componentName: 'UnitCard' })
@@ -29,10 +30,6 @@ const UnitTab = ({
             verseIndex
         })
     }
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
 
     return didMount && (
         <div
@@ -68,8 +65,9 @@ const UnitTab = ({
 }
 
 UnitTab.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     unitIndex: PropTypes.number.isRequired,
     handleVerseSelect: PropTypes.func.isRequired
 }
 
-export default memo(UnitTab)
+export default memo(getDidMountHoc(UnitTab))

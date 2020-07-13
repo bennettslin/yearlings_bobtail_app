@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../components/DidMountHoc'
 import { getSongTipType } from '../../api/album/tips'
 import { WIKI, WORMHOLES } from '../../constants/tips'
 import {
@@ -24,7 +25,7 @@ import {
     mapIsDotsSlideShown
 } from '../../redux/toggle/selector'
 
-const ShownWrapper = ({ children }) => {
+const ShownWrapper = ({ didMount, children }) => {
     const
         reference = useSelector(mapReferenceDot),
         wormhole = useSelector(mapWormholeDot),
@@ -41,12 +42,7 @@ const ShownWrapper = ({ children }) => {
         isOverlayShown = useSelector(mapIsOverlayShown),
         songOverviewShown =
             !isLyricLogue && isOverviewShown,
-        tipType = getSongTipType(lyricSongIndex),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+        tipType = getSongTipType(lyricSongIndex)
 
     return (
         <div
@@ -103,7 +99,8 @@ const ShownWrapper = ({ children }) => {
 }
 
 ShownWrapper.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     children: PropTypes.any.isRequired
 }
 
-export default ShownWrapper
+export default memo(getDidMountHoc(ShownWrapper))

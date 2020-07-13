@@ -1,6 +1,7 @@
-import React, { memo, useEffect, useRef, useState } from 'react'
+import React, { memo, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../DidMountHoc'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import ButtonIcon from './ButtonIcon'
 import Tooltip from './Tooltip'
@@ -15,6 +16,7 @@ import {
 import './style'
 
 const Button = ({
+    didMount,
     buttonName,
     className,
     isPulsateAnimated,
@@ -52,9 +54,7 @@ const Button = ({
             isAccessed
         ),
 
-        showTooltip = getShowTooltip(buttonName) && !isDisabled,
-
-        [didMount, setDidMount] = useState(false)
+        showTooltip = getShowTooltip(buttonName) && !isDisabled
 
     const onClick = e => {
         if (!isDisabled) {
@@ -71,10 +71,6 @@ const Button = ({
             }
         }
     }
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
 
     return didMount && (
         <div
@@ -152,6 +148,7 @@ const Button = ({
 }
 
 Button.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     buttonName: PropTypes.string.isRequired,
     className: PropTypes.string,
     isPulsateAnimated: PropTypes.bool,
@@ -170,4 +167,4 @@ Button.propTypes = {
     children: PropTypes.any
 }
 
-export default memo(Button)
+export default memo(getDidMountHoc(Button))

@@ -1,26 +1,23 @@
 // Popup container for score section.
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
+import getDidMountHoc from '../../DidMountHoc'
 import { updateIsScoreShown } from '../../../redux/toggle/action'
 import Score from '../../Score'
 import Popup from '../../Popup'
 import { mapIsScoreShown } from '../../../redux/toggle/selector'
 import { mapCanScoreMount } from '../../../redux/viewport/selector'
 
-const ScorePopup = () => {
+const ScorePopup = ({ didMount }) => {
     const
         dispatch = useDispatch(),
         canScoreMount = useSelector(mapCanScoreMount),
-        isScoreShown = useSelector(mapIsScoreShown),
-        [didMount, setDidMount] = useState(false)
+        isScoreShown = useSelector(mapIsScoreShown)
 
     const handleCloseClick = () => {
         dispatch(updateIsScoreShown())
     }
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
 
     return didMount && canScoreMount && (
         <Popup
@@ -38,4 +35,8 @@ const ScorePopup = () => {
     )
 }
 
-export default memo(ScorePopup)
+ScorePopup.propTypes = {
+    didMount: PropTypes.bool.isRequired
+}
+
+export default memo(getDidMountHoc(ScorePopup))

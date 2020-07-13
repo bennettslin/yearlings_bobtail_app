@@ -1,11 +1,13 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../DidMountHoc'
 import InlineSvg from '../../modules/InlineSvg'
 import { getSvgForDot } from '../../api/svg'
 import './style'
 
 const Dot = ({
+    didMount,
     className,
     noDropShadow,
     isAccessed,
@@ -17,13 +19,7 @@ const Dot = ({
     dotKey
 
 }) => {
-    const
-        dotIconSvg = getSvgForDot(dotKey),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+    const dotIconSvg = getSvgForDot(dotKey)
 
     return didMount && (
         <InlineSvg
@@ -56,6 +52,7 @@ const Dot = ({
 }
 
 Dot.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     className: PropTypes.string,
     noDropShadow: PropTypes.bool,
     isAccessed: PropTypes.bool,
@@ -65,4 +62,4 @@ Dot.propTypes = {
     dotKey: PropTypes.string.isRequired
 }
 
-export default memo(Dot)
+export default memo(getDidMountHoc(Dot))

@@ -1,49 +1,44 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../DidMountHoc'
 import AnnotationTitle from '../Title'
 import './style'
 
 const AnnotationHeader = ({
+    didMount,
     inCarousel,
     isAccessed,
     isSelected,
     annotationIndex
 
-}) => {
-    const [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
-
-    return didMount && (
-        <div
+}) => didMount && (
+    <div
+        {...{
+            className: cx(
+                'AnnotationHeader',
+                // Annotation header needs to be hideable in carousel.
+                inCarousel && 'AnnotationHeaderAnimatable',
+                'abF'
+            )
+        }}
+    >
+        <AnnotationTitle
             {...{
-                className: cx(
-                    'AnnotationHeader',
-                    // Annotation header needs to be hideable in carousel.
-                    inCarousel && 'AnnotationHeaderAnimatable',
-                    'abF'
-                )
+                isAccessed,
+                isSelected,
+                annotationIndex
             }}
-        >
-            <AnnotationTitle
-                {...{
-                    isAccessed,
-                    isSelected,
-                    annotationIndex
-                }}
-            />
-        </div>
-    )
-}
+        />
+    </div>
+)
 
 AnnotationHeader.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     inCarousel: PropTypes.bool,
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default memo(AnnotationHeader)
+export default memo(getDidMountHoc(AnnotationHeader))

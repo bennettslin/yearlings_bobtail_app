@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
+import getDidMountHoc from '../../components/DidMountHoc'
 import {
     mapSceneCursorIndex,
     mapVerseCursorIndex
@@ -11,15 +12,10 @@ import {
     getPrefixedVerseClassNames
 } from './helper'
 
-const LogicWrapper = ({ children }) => {
+const LogicWrapper = ({ didMount, children }) => {
     const
         sceneCursorIndex = useSelector(mapSceneCursorIndex),
-        verseCursorIndex = useSelector(mapVerseCursorIndex),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+        verseCursorIndex = useSelector(mapVerseCursorIndex)
 
     return (
         <div
@@ -41,7 +37,8 @@ const LogicWrapper = ({ children }) => {
 }
 
 LogicWrapper.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     children: PropTypes.any.isRequired
 }
 
-export default LogicWrapper
+export default memo(getDidMountHoc(LogicWrapper))

@@ -1,43 +1,41 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../DidMountHoc'
 import LyricToggleEar from './Ear'
 import LyricToggleExpand from './Expand'
 import LyricToggleScroll from './Scroll'
 import './style'
 
-const LyricToggles = ({ isBottomRight }) => {
-    const [didMount, setDidMount] = useState(false)
+const LyricToggles = ({
+    didMount,
+    isBottomRight
 
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+}) => didMount && (
+    <div className={cx(
+        'LyricToggles',
 
-    return didMount && (
-        <div className={cx(
-            'LyricToggles',
-
-            isBottomRight ?
-                'LyricToggles__bottomRight' :
-                [
-                    'LyricToggles__leftOrTop',
-                    'top__lyricChild'
-                ]
-        )}>
-            {isBottomRight ? (
-                <LyricToggleScroll />
-            ) : (
-                <>
-                    <LyricToggleEar />
-                    <LyricToggleExpand />
-                </>
-            )}
-        </div>
-    )
-}
+        isBottomRight ?
+            'LyricToggles__bottomRight' :
+            [
+                'LyricToggles__leftOrTop',
+                'top__lyricChild'
+            ]
+    )}>
+        {isBottomRight ? (
+            <LyricToggleScroll />
+        ) : (
+            <>
+                <LyricToggleEar />
+                <LyricToggleExpand />
+            </>
+        )}
+    </div>
+)
 
 LyricToggles.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     isBottomRight: PropTypes.bool
 }
 
-export default memo(LyricToggles)
+export default memo(getDidMountHoc(LyricToggles))

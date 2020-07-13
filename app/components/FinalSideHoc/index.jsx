@@ -6,8 +6,8 @@ import { getFinalSongIndex } from '../../utils/server'
 
 const getFinalSideHoc = FinalSideComponent => {
     /**
-     * This hoc passes to its child component either the page song index, which
-     * is relevant only on the server side, or the lyric song index, which is
+     * This hoc passes to its child component either the page song index that
+     * is relevant only on the server side, or the lyric song index that is
      * relevant only on the client side.
      */
     const FinalSideHoc = forwardRef((props, ref) => {

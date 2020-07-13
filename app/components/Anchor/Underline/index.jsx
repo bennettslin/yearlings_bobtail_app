@@ -1,9 +1,11 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../DidMountHoc'
 import './style'
 
 const Underline = ({
+    didMount,
     isAccessed,
     isSelected,
     isDotAnchor,
@@ -11,46 +13,39 @@ const Underline = ({
     isWikiFirstChild,
     isWikiLastChild
 
-}) => {
-    const [didMount, setDidMount] = useState(false)
+}) => didMount && (
+    <div
+        {...{
+            className: cx(
+                'Underline',
 
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+                isDotAnchor && 'Underline__isDot',
+                !isWikiAnchor && 'Underline__isNotWiki',
 
-    return didMount && (
-        <div
-            {...{
-                className: cx(
-                    'Underline',
+                isWikiAnchor && isWikiFirstChild &&
+                    'Underline__isWiki__firstChild',
+                isWikiAnchor && !isWikiFirstChild &&
+                    'Underline__isWiki__notFirstChild',
+                isWikiAnchor && isWikiLastChild &&
+                    'Underline__isWiki__lastChild',
+                isWikiAnchor && !isWikiLastChild &&
+                    'Underline__isWiki__notLastChild',
 
-                    isDotAnchor && 'Underline__isDot',
-                    !isWikiAnchor && 'Underline__isNotWiki',
+                isAccessed && !isSelected ?
+                    'Underline__accessed' :
+                    'Underline__default',
 
-                    isWikiAnchor && isWikiFirstChild &&
-                        'Underline__isWiki__firstChild',
-                    isWikiAnchor && !isWikiFirstChild &&
-                        'Underline__isWiki__notFirstChild',
-                    isWikiAnchor && isWikiLastChild &&
-                        'Underline__isWiki__lastChild',
-                    isWikiAnchor && !isWikiLastChild &&
-                        'Underline__isWiki__notLastChild',
+                isSelected &&
+                    'Underline__selected',
 
-                    isAccessed && !isSelected ?
-                        'Underline__accessed' :
-                        'Underline__default',
-
-                    isSelected &&
-                        'Underline__selected',
-
-                    'ovH'
-                )
-            }}
-        />
-    )
-}
+                'ovH'
+            )
+        }}
+    />
+)
 
 Underline.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isDotAnchor: PropTypes.bool,
@@ -59,4 +54,4 @@ Underline.propTypes = {
     isWikiLastChild: PropTypes.bool
 }
 
-export default memo(Underline)
+export default memo(getDidMountHoc(Underline))

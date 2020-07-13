@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
+import getDidMountHoc from '../../DidMountHoc'
 import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Annotation from '../../Annotation'
 import Popup from '../../Popup'
@@ -12,7 +13,7 @@ import {
 } from '../../../redux/annotationPopup/selector'
 import { mapLyricAnnotationIndex } from '../../../redux/lyric/selector'
 
-const AnnotationPopup = ({ inMain }) => {
+const AnnotationPopup = ({ didMount, inMain }) => {
     const
         dispatchAnnotation = useRef(),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
@@ -20,8 +21,7 @@ const AnnotationPopup = ({ inMain }) => {
         isPopupAnnotationShown = useSelector(
             getMapIsPopupAnnotationShown(inMain)
         ),
-        [annotationIndex, setAnnotationIndex] = useState(lyricAnnotationIndex),
-        [didMount, setDidMount] = useState(false)
+        [annotationIndex, setAnnotationIndex] = useState(lyricAnnotationIndex)
 
     const handlePreviousClick = () => {
         dispatchAnnotation.current.direction(-1)
@@ -35,10 +35,6 @@ const AnnotationPopup = ({ inMain }) => {
         // Only clear annotation index when animation is complete.
         setAnnotationIndex(0)
     }
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
 
     useEffect(() => {
         if (isPopupAnnotationShown && lyricAnnotationIndex) {
@@ -76,7 +72,8 @@ const AnnotationPopup = ({ inMain }) => {
 }
 
 AnnotationPopup.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     inMain: PropTypes.bool
 }
 
-export default memo(AnnotationPopup)
+export default memo(getDidMountHoc(AnnotationPopup))

@@ -1,8 +1,10 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import { mapIsWindowResizeDone } from '../../redux/entrance/selector'
 import CSSTransition from 'react-transition-group/CSSTransition'
+import getDidMountHoc from '../DidMountHoc'
+import { mapIsWindowResizeDone } from '../../redux/entrance/selector'
 import Stage from '../Stage'
 import Curtains from '../Stage/Curtains'
 import DramaMasks from '../Stage/DramaMasks'
@@ -13,10 +15,8 @@ import Floor from './Floor'
 import { removeLoadingIndicator } from '../../utils/browser'
 import './style'
 
-const Theatre = () => {
-    const
-        isWindowResizeDone = useSelector(mapIsWindowResizeDone),
-        [didMount, setDidMount] = useState(false)
+const Theatre = ({ didMount }) => {
+    const isWindowResizeDone = useSelector(mapIsWindowResizeDone)
 
     const onExit = () => {
         logTransition('Theatre did exit.')
@@ -29,7 +29,6 @@ const Theatre = () => {
     useEffect(() => {
         logMount('Theatre')
         removeLoadingIndicator()
-        setDidMount(true)
     }, [])
 
     return didMount && (
@@ -61,4 +60,8 @@ const Theatre = () => {
     )
 }
 
-export default memo(Theatre)
+Theatre.propTypes = {
+    didMount: PropTypes.bool.isRequired
+}
+
+export default memo(getDidMountHoc(Theatre))

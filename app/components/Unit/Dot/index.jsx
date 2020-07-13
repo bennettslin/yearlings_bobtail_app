@@ -1,5 +1,5 @@
 // Component to show single dot anchor as its own stanza.
-import React, { forwardRef, memo, useEffect, useState } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
@@ -30,8 +30,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
         } = getDotForUnit(lyricSongIndex, unitIndex),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
-        isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
-        [didMount, setDidMount] = useState(false)
+        isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex))
 
     const handleAnchorClick = () => {
         if (isSelected || isSliderMoving || isActivated) {
@@ -51,11 +50,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
         }
     }
 
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
-
-    return didMount && (
+    return (
         <div
             {...{
                 className: cx(

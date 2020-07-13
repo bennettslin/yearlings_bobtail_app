@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useSelector } from 'react-redux'
+import getDidMountHoc from '../../components/DidMountHoc'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 
-const TransitionWrapper = ({ children }) => {
-    const
-        isSongChangeDone = useSelector(mapIsSongChangeDone),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
-
+const TransitionWrapper = ({ didMount, children }) => {
+    const isSongChangeDone = useSelector(mapIsSongChangeDone)
     return (
         <div
             {...{
@@ -34,7 +28,8 @@ const TransitionWrapper = ({ children }) => {
 }
 
 TransitionWrapper.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     children: PropTypes.any.isRequired
 }
 
-export default TransitionWrapper
+export default memo(getDidMountHoc(TransitionWrapper))

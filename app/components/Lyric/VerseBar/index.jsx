@@ -1,8 +1,9 @@
 // Component to show selected verse when scrolled above or below window height.
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
+import getDidMountHoc from '../../DidMountHoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../api/album/verses'
 import { updateIsAutoScroll } from '../../../redux/toggle/action'
@@ -34,6 +35,7 @@ const VerseBar = () => {
 }
 
 const VerseBarContainer = ({
+    didMount,
     isAbove = false,
     onWheel
 
@@ -41,8 +43,7 @@ const VerseBarContainer = ({
     const
         dispatch = useDispatch(),
         isLyricLogue = useSelector(mapIsLyricLogue),
-        isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove)),
-        [didMount, setDidMount] = useState(false)
+        isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove))
 
     const onClick = e => {
         logEvent({ e, componentName: 'VerseBar' })
@@ -50,10 +51,6 @@ const VerseBarContainer = ({
             dispatch(updateIsAutoScroll(true))
         }
     }
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
 
     // Logue will not have verse object.
     return didMount && !isLyricLogue && (
@@ -88,8 +85,9 @@ const VerseBarContainer = ({
 }
 
 VerseBarContainer.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     isAbove: PropTypes.bool,
     onWheel: PropTypes.func.isRequired
 }
 
-export default memo(VerseBarContainer)
+export default memo(getDidMountHoc(VerseBarContainer))

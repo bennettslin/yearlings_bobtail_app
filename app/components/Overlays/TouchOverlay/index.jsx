@@ -1,17 +1,15 @@
 // This prevents popup interaction when slider is touched.
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+import getDidMountHoc from '../../DidMountHoc'
 import './style'
 
-const TouchOverlay = () => {
-    const [didMount, setDidMount] = useState(false)
+const TouchOverlay = ({ didMount }) => didMount && (
+    <div className="TouchOverlay" />
+)
 
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
-
-    return didMount && (
-        <div className="TouchOverlay" />
-    )
+TouchOverlay.propTypes = {
+    didMount: PropTypes.bool.isRequired
 }
 
-export default memo(TouchOverlay)
+export default memo(getDidMountHoc(TouchOverlay))

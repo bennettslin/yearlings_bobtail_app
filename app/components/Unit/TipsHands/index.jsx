@@ -1,6 +1,7 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
+import getDidMountHoc from '../../DidMountHoc'
 import TipsHand from '../../Tips/Hand'
 import {
     getShowAnnotationTip,
@@ -19,6 +20,7 @@ import {
 } from '../../../constants/tips'
 
 const UnitTipsHands = ({
+    didMount,
     unitIndex
 
 }) => {
@@ -28,12 +30,7 @@ const UnitTipsHands = ({
         showStanzaTabTip = getShowStanzaTabTip(lyricSongIndex, unitIndex),
         showActivatedTip = getShowActivatedTip(lyricSongIndex, unitIndex),
         showWormholesTip = getShowWormholesTip(lyricSongIndex, unitIndex),
-        showWikiTip = getShowWikiTip(lyricSongIndex, unitIndex),
-        [didMount, setDidMount] = useState(false)
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
+        showWikiTip = getShowWikiTip(lyricSongIndex, unitIndex)
 
     return didMount && (
         <>
@@ -57,7 +54,8 @@ const UnitTipsHands = ({
 }
 
 UnitTipsHands.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     unitIndex: PropTypes.number.isRequired
 }
 
-export default memo(UnitTipsHands)
+export default memo(getDidMountHoc(UnitTipsHands))

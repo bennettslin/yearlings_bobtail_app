@@ -1,12 +1,14 @@
-import React, { useEffect, useRef, useState, memo } from 'react'
+import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
+import getDidMountHoc from '../DidMountHoc'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import PopupView from './View'
 import './style'
 
 const Popup = ({
+    didMount,
     popupName,
     isVisible,
     appear,
@@ -23,17 +25,12 @@ const Popup = ({
 }) => {
     const
         stopPropagation = useRef(),
-        { isFullHeight } = other,
-        [didMount, setDidMount] = useState(false)
+        { isFullHeight } = other
 
     const handleContainerClick = e => {
         logEvent({ e, componentName: popupName })
         stopPropagation.current(e)
     }
-
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
 
     return (
         <CSSTransition
@@ -82,6 +79,7 @@ const Popup = ({
 }
 
 Popup.propTypes = {
+    didMount: PropTypes.bool.isRequired,
     popupName: PropTypes.string.isRequired,
     isVisible: PropTypes.bool.isRequired,
     appear: PropTypes.bool,
@@ -96,4 +94,4 @@ Popup.propTypes = {
     onExited: PropTypes.func
 }
 
-export default memo(Popup)
+export default memo(getDidMountHoc(Popup))

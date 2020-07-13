@@ -1,5 +1,4 @@
 # Current plan
-* Make a didMount hoc
 * Make efficient, such as removing extra classes, anchor extra text and underlines
 * Carousel doesn't change server side class name. Figure out better way to show server side class name.
 * Confirm that carousel and lyric don't get torn down upon page change.
