@@ -13,7 +13,7 @@ export const getIsServerSide = () => (
     typeof window === 'undefined'
 )
 
-export const getFinalSideClass = () => (
+export const getFinalSideKey = () => (
     getIsServerSide() ? 'isServerSide' : 'isClientSide'
 )
 

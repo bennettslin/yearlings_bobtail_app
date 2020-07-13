@@ -11,7 +11,7 @@ import CarouselScroll from './Scroll'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { mapCanCarouselShow } from '../../redux/viewport/selector'
-import { getFinalSideClass } from '../../utils/server'
+import { getFinalSideKey } from '../../utils/server'
 import './style'
 
 const Carousel = ({ style, pageSongIndex }) => {
@@ -52,7 +52,7 @@ const Carousel = ({ style, pageSongIndex }) => {
                             canCarouselShow && 'Carousel__shown',
                             'gradientMask__carousel__desktop',
                             'abF',
-                            getFinalSideClass()
+                            getFinalSideKey()
                         ),
                         style
                     }}

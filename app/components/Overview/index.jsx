@@ -7,7 +7,7 @@ import PageSongIndexContext from '../../contexts/PageSongIndex'
 import OverviewToggle from '../Main/OverviewToggle'
 import OverviewText from './Text'
 import { mapIsToggleInOverview } from '../../redux/overview/selector'
-import { getFinalSideClass } from '../../utils/server'
+import { getFinalSideKey } from '../../utils/server'
 import './style'
 
 const Overview = ({ pageSongIndex }) => {
@@ -21,7 +21,7 @@ const Overview = ({ pageSongIndex }) => {
                         'Overview',
                         'fontSize__verse',
                         isToggleInOverview && 'Overview__toggleInOverview',
-                        getFinalSideClass()
+                        getFinalSideKey()
                     )
                 }}
             >
