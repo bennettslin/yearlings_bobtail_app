@@ -2,22 +2,25 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import getDidMountHoc from '../../DidMountHoc'
 import getFinalSideHoc from '../../FinalSideHoc'
 import { getIndexedTitleForSong } from '../../../api/album/songs'
 import './style'
 
-const UnitSongTitle = ({ finalSideSongIndex }) => {
+const UnitSongTitle = ({ didMount, finalSideSongIndex }) => {
     const songTitle = getIndexedTitleForSong(finalSideSongIndex)
 
     return (
         <div
             {...{
-                className: cx(
-                    'UnitSongTitle',
-                    'fCC',
-                    'textShadow__dark',
-                    'Rancho'
-                )
+                ...didMount && {
+                    className: cx(
+                        'UnitSongTitle',
+                        'fCC',
+                        'textShadow__dark',
+                        'Rancho'
+                    )
+                }
             }}
         >
             {songTitle}
@@ -26,7 +29,8 @@ const UnitSongTitle = ({ finalSideSongIndex }) => {
 }
 
 UnitSongTitle.propTypes = {
+    didMount: PropTypes.number.isRequired,
     finalSideSongIndex: PropTypes.number.isRequired
 }
 
-export default memo(getFinalSideHoc(UnitSongTitle))
+export default memo(getDidMountHoc(getFinalSideHoc(UnitSongTitle)))

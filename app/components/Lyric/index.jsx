@@ -33,7 +33,7 @@ const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
     }, [])
 
     return (
-        <PageSongIndexContext.Provider {...{ value: pageSongIndex }} >
+        <PageSongIndexContext.Provider {...{ value: pageSongIndex }}>
             <CSSTransition
                 appear
                 {...{

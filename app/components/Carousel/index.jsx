@@ -35,7 +35,7 @@ const Carousel = ({ didMount, style, pageSongIndex }) => {
     }, [])
 
     return (
-        <PageSongIndexContext.Provider {...{ value: pageSongIndex }} >
+        <PageSongIndexContext.Provider {...{ value: pageSongIndex }}>
             <CSSTransition
                 appear
                 {...{

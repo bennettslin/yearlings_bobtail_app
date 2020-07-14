@@ -18,11 +18,7 @@ export const wrapRootElement = ({ element }) => (
 
 export const wrapPageElement = ({ element }) => {
     return (
-        <PageElementContext.Provider
-            {...{
-                value: element
-            }}
-        >
+        <PageElementContext.Provider {...{ value: element }}>
             <AppContainer />
         </PageElementContext.Provider>
     )
