@@ -13,7 +13,7 @@ export default [
     /* Next weekend. */
     {
         taskName: `Gatsby fixes.`,
-        workedHours: 16,
+        workedHours: 21,
         neededHours: 20
     },
     {

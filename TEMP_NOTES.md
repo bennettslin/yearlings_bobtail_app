@@ -1,5 +1,4 @@
 # Current plan
-* Confirm that carousel and lyric don't get torn down upon page change.
 
 # Next post-Gatsby work
 * URL replacement and redirects
@@ -8,10 +7,6 @@
 * Storage verse and annotation should work, they currently don't
 * Test all routing and storage possibilities
     * Only accept storage values if no routing given? Would make things a lot easier...
-* 404 page
-    * Just uses home page, but make sure URL is cleared
-* Numbered paths
-    * Still redirect a numbered path to song, if valid
 
 # Later post-Gatsby work
 * Admin routes
@@ -19,7 +14,6 @@
 * App loading indicator
 * Deprecated page for Internet Explorer?
 * Why is Gatsby build so much bigger than webpack build?
-* Does Gatsby get a fresh version?
 * Still need GA in utils?
 
 # Next work
