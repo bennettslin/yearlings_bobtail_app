@@ -1,0 +1,11 @@
+.LoadingContainer {
+    // TODO: With access to Illustrator again.
+    background-color: #fff;
+}
+
+.dramaMasks {
+    .LoadingContainer
+    & {
+        width: 33.3%;
+    }
+}

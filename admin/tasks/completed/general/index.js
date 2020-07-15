@@ -4870,5 +4870,9 @@ export default [
     {
         taskName: `Gatsby favicon.`,
         workedHours: 1
+    },
+    {
+        taskName: `Gatsby loading page.`,
+        workedHours: 1
     }
 ]
