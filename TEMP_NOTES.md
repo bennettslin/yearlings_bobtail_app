@@ -6,7 +6,8 @@
 * App loading indicator
 * Deprecated page for Internet Explorer?
 * Why is Gatsby build so much bigger than webpack build?
-* Still need GA in utils?
+* Tear down webpack code.
+    * Still need GA in utils?
 
 # Next work
 * Scene doesn't reset to default when curtain is closed.

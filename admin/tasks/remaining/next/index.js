@@ -12,11 +12,6 @@ export default [
 
     /* Next weekend. */
     {
-        taskName: `Gatsby fixes.`,
-        workedHours: 21,
-        neededHours: 20
-    },
-    {
         taskName: `Link positioning for Bobtail Yearlings website is wonky in iOS.`,
         workedHours: 0,
         neededHours: 2

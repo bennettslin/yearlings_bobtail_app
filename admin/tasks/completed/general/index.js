@@ -4854,5 +4854,13 @@ export default [
     {
         taskName: `Rehydration fix.`,
         workedHours: 17
+    },
+    {
+        taskName: `Gatsby fixes.`,
+        workedHours: 21
+    },
+    {
+        taskName: `Gatsby routing fix.`,
+        workedHours: 3
     }
 ]
