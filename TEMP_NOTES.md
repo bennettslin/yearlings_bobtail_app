@@ -1,11 +1,10 @@
 # Current plan
 
 # Later post-Gatsby work
-* Admin routes
 * Favicon
 * App loading indicator
-* Deprecated page for Internet Explorer?
 * Why is Gatsby build so much bigger than webpack build?
+* Gatsby for delivery and production scripts
 * Tear down webpack code.
     * Still need GA in utils?
 
@@ -23,6 +22,7 @@
 * tips hand in garryowen for score
 
 # Easy tasks
+* Deprecated page for Internet Explorer?
 * Experiment with removing from reducers and putting back in listeners to improve performance? Is this needed?
 * Slider verse select ranges don't really align with hover ranges.
 * Some todos to make a selector.

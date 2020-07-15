@@ -1,4 +1,4 @@
-import { getIsStagingEnvironment } from './app/utils/server'
+import { getIsStagingEnvironment } from './app/utils/node'
 import {
     GA_ACCOUNT__STAGING,
     GA_ACCOUNT__PRODUCTION

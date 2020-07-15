@@ -7,7 +7,7 @@ import scene from './admin/data/scene'
 import {
     getIsLocalDevelopment,
     getIsStagingEnvironment
-} from './app/utils/server'
+} from './app/utils/node'
 
 export const onCreateWebpackConfig = ({ actions }) => {
     // Dev sanity check.

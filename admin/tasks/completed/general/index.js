@@ -4862,5 +4862,9 @@ export default [
     {
         taskName: `Gatsby routing fix.`,
         workedHours: 3
+    },
+    {
+        taskName: `Gatsby admin routes.`,
+        workedHours: 3
     }
 ]
