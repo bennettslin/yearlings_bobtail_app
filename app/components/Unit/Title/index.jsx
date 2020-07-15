@@ -29,7 +29,7 @@ const UnitSongTitle = ({ didMount, finalSideSongIndex }) => {
 }
 
 UnitSongTitle.propTypes = {
-    didMount: PropTypes.number.isRequired,
+    didMount: PropTypes.bool.isRequired,
     finalSideSongIndex: PropTypes.number.isRequired
 }
 

@@ -1,8 +1,15 @@
 import qs from 'qs'
-import { URL_SONG_NAMES } from '../constants/paths'
+import {
+    ALBUM_TITLE,
+    URL_SONG_NAMES
+} from '../constants/paths'
+import {
+    getSongIsLogue,
+    getTitleForSong
+} from '../api/album/songs'
 
-export const getPathNameForSongIndex = songIndex => (
-    `${songIndex}_${URL_SONG_NAMES[songIndex]}`
+const getPathNameForSongIndex = songIndex => (
+    `/${songIndex}_${URL_SONG_NAMES[songIndex]}`
 )
 
 export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => (
@@ -18,4 +25,10 @@ export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => (
             ...annotationIndex > 0 && { a: annotationIndex }
         }, { addQueryPrefix: true })
     }`
+)
+
+export const getDocumentHead = songIndex => (
+    getSongIsLogue(songIndex) ?
+        ALBUM_TITLE :
+        `${getTitleForSong(songIndex)} | ${ALBUM_TITLE}`
 )

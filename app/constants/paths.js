@@ -1,3 +1,5 @@
+export const ALBUM_TITLE = `Yearling's Bobtail`
+
 export const URL_SONG_NAMES = [
     'Prologue',
     'Didi',

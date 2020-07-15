@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
+import { ALBUM_TITLE } from '../../../constants/paths'
 import './style'
 
 const AlbumBanner = () => (
@@ -14,7 +15,7 @@ const AlbumBanner = () => (
             )
         }}
     >
-        Bobtail Yearlings - <i>{`Yearling's Bobtail`}</i>
+        Bobtail Yearlings - <i>{ALBUM_TITLE}</i>
     </div>
 )
 

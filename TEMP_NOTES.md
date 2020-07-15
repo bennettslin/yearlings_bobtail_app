@@ -1,13 +1,5 @@
 # Current plan
 
-# Next post-Gatsby work
-* URL replacement and redirects
-    * useHistory doesn't work in Gatsby
-* Make sure routing verse and annotation indices work as well
-* Storage verse and annotation should work, they currently don't
-* Test all routing and storage possibilities
-    * Only accept storage values if no routing given? Would make things a lot easier...
-
 # Later post-Gatsby work
 * Admin routes
 * Favicon
