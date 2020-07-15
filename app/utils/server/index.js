@@ -1,3 +1,12 @@
+const VALID_ADMIN_ROUTES = [
+    'Actors',
+    'Annotations',
+    'Previewer',
+    'Things',
+    'Skies',
+    'Progress'
+]
+
 /**
  * The three environments are local, delivery, and production.
  */
@@ -17,9 +26,9 @@ export const getFinalSideKey = () => (
     getIsServerSide() ? 'isServerSide' : 'isClientSide'
 )
 
-export const getFinalSongIndex = ({
-    lyricSongIndex,
-    pageSongIndex
-}) => (
-    getIsServerSide() ? pageSongIndex : lyricSongIndex
+export const getIsValidAdminRoute = pathname => (
+    getIsStagingEnvironment() ?
+        VALID_ADMIN_ROUTES.some(
+            route => route === pathname.replace(/\//g, '')
+        ) : false
 )

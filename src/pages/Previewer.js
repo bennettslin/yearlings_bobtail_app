@@ -1,6 +1,6 @@
-import Progress from '../../admin/containers/Progress'
+import Previewer from '../../admin/containers/LegacyPreviewer'
 import getPageComponent from '../../app/containers/Page'
 
 export default IS_STAGING ?
-    Progress :
+    Previewer :
     getPageComponent(0)

@@ -1,11 +1,7 @@
-/* eslint-disable react/prop-types */
-import React from 'react'
 import { createStore } from 'redux'
-import { Provider } from 'react-redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 import { getCombinedReducers } from './app/redux'
 import { getRoutingSongIndex } from './app/helpers/routing'
-import PageElementContext from './app/contexts/PageElement'
 
 // Import these here just to make them available.
 import './app/utils/logger'
@@ -13,7 +9,10 @@ import './app/utils/analytics'
 import './app/scss/app'
 
 // App styles must be imported after global styles.
-import AppContainer from './app/containers/App'
+import {
+    getWrapRootElement,
+    getWrapPageElement
+} from './app/utils/gatsby'
 
 const store = createStore(
     // Initialise store with routing song index.
@@ -21,16 +20,5 @@ const store = createStore(
     devToolsEnhancer()
 )
 
-export const wrapRootElement = ({ element }) => (
-    <Provider store={store}>
-        {element}
-    </Provider>
-)
-
-export const wrapPageElement = ({ element }) => {
-    return (
-        <PageElementContext.Provider {...{ value: element }}>
-            <AppContainer />
-        </PageElementContext.Provider>
-    )
-}
+export const wrapRootElement = getWrapRootElement(store)
+export const wrapPageElement = getWrapPageElement()

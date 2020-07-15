@@ -2,7 +2,7 @@ import React, { forwardRef, useContext } from 'react'
 import { useSelector } from 'react-redux'
 import PageSongIndexContext from '../../contexts/PageSongIndex'
 import { mapLyricSongIndex } from '../../redux/lyric/selector'
-import { getFinalSongIndex } from '../../utils/server'
+import { getIsServerSide } from '../../utils/server'
 
 const getFinalSideHoc = FinalSideComponent => {
     /**
@@ -14,10 +14,9 @@ const getFinalSideHoc = FinalSideComponent => {
         const
             pageSongIndex = useContext(PageSongIndexContext),
             lyricSongIndex = useSelector(mapLyricSongIndex),
-            finalSideSongIndex = getFinalSongIndex({
-                lyricSongIndex,
-                pageSongIndex
-            })
+            finalSideSongIndex = getIsServerSide() ?
+                pageSongIndex :
+                lyricSongIndex
 
         return (
             <FinalSideComponent

@@ -1,25 +1,13 @@
-/* eslint-disable react/prop-types */
-import React from 'react'
 import { createStore } from 'redux'
-import { Provider } from 'react-redux'
 import { getCombinedReducers } from './app/redux'
-import PageElementContext from './app/contexts/PageElement'
-import AppContainer from './app/containers/App'
+import {
+    getWrapRootElement,
+    getWrapPageElement
+} from './app/utils/gatsby'
 
 const store = createStore(
     getCombinedReducers()
 )
 
-export const wrapRootElement = ({ element }) => (
-    <Provider store={store}>
-        {element}
-    </Provider>
-)
-
-export const wrapPageElement = ({ element }) => {
-    return (
-        <PageElementContext.Provider {...{ value: element }}>
-            <AppContainer />
-        </PageElementContext.Provider>
-    )
-}
+export const wrapRootElement = getWrapRootElement(store)
+export const wrapPageElement = getWrapPageElement()
