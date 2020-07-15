@@ -10,6 +10,20 @@ export default {
         `gatsby-plugin-sass`,
         `gatsby-plugin-remove-trailing-slashes`,
         {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Yearling's Bobtail`,
+                short_name: `Yearling's Bobtail`,
+                description: 'Audio webcomic by Bobtail Yearlings',
+                start_url: '/',
+                // TODO: With access to Illustrator again.
+                background_color: '#fff',
+                theme_color: '#fff',
+                display: 'standalone',
+                icon: 'assets/favicon/yearlingsBobtail.png'
+            }
+        },
+        {
             resolve: `gatsby-plugin-web-font-loader`,
             options: {
                 google: {

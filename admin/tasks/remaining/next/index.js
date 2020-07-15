@@ -4,11 +4,6 @@ export default [
         workedHours: 0,
         neededHours: 5
     },
-    {
-        taskName: `Make sure all presences are properly behind or in front as appropriate.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     /* Next weekend. */
     {

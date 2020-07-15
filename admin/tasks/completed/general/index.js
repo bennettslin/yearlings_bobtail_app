@@ -4866,5 +4866,9 @@ export default [
     {
         taskName: `Gatsby admin routes.`,
         workedHours: 3
+    },
+    {
+        taskName: `Gatsby favicon.`,
+        workedHours: 1
     }
 ]

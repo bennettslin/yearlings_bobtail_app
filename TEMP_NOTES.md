@@ -1,7 +1,6 @@
 # Current plan
 
 # Later post-Gatsby work
-* Favicon
 * App loading indicator
 * Why is Gatsby build so much bigger than webpack build?
 * Gatsby for delivery and production scripts
