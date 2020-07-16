@@ -1,5 +1,5 @@
 import pino from 'pino'
-import sendToGa from '../../analytics'
+import { sendToGa } from '../../analytics'
 import { getSceneIndexForVerse } from '../../../api/album/verses'
 
 import { getTimeDifference } from './time'
@@ -57,7 +57,6 @@ const _logInfo = ({
     }
 
     if (isGaCall) {
-
         const didGaSucceed = sendToGa({
             category,
             action,

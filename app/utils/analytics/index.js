@@ -1,4 +1,3 @@
-import { getWindow } from '../../utils/browser'
 import {
     GA_ACCOUNT__STAGING,
     GA_ACCOUNT__PRODUCTION
@@ -8,29 +7,19 @@ const isGaUndefined = () => (
     typeof ga === 'undefined'
 )
 
-const createGa = () => {
+export const getInitialGaLog = () => {
     const gaAccount = IS_STAGING ?
         GA_ACCOUNT__STAGING :
         GA_ACCOUNT__PRODUCTION
 
-    function gtag() {
-        // eslint-disable-next-line prefer-rest-params
-        getWindow().dataLayer.push(arguments)
-    }
-    gtag('js', new Date())
-    gtag('config', gaAccount)
-
     if (isGaUndefined()) {
-        console.log('GA did not initialise.')
+        return 'GA did not initialise.'
     } else {
-        console.log(`GA initialised with property id ${gaAccount}.`)
-        ga('create', gaAccount, 'auto')
+        return `GA initialised with property id ${gaAccount}.`
     }
 }
 
-createGa()
-
-const sendToGa = ({
+export const sendToGa = ({
     category = 'category',
     action = 'action',
     label,
@@ -51,5 +40,3 @@ const sendToGa = ({
 
     return true
 }
-
-export default sendToGa

@@ -27,8 +27,6 @@ module.exports = {
         "BUILD_DATE_TIME": true,
         "IS_STAGING": true,
         "IS_LOCAL": true,
-        "dataLayer": true,
-        "expect": true,
         "ga": true,
         "logAccess": true,
         "logAdmin": true,
@@ -43,8 +41,7 @@ module.exports = {
         "logSuccess": true,
         "logTransition": true,
         "logError": true,
-        "process": true,
-        "sendToGa": true
+        "process": true
     },
     "parser": 'babel-eslint',
     "parserOptions": {
