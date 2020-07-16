@@ -1,8 +1,6 @@
 # Current plan
 
 # Later post-Gatsby work
-* Why is Gatsby build so much bigger than webpack build?
-* Gatsby for delivery and production scripts
 * Tear down webpack code.
     * Still need GA in utils?
 
