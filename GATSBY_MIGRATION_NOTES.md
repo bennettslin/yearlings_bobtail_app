@@ -1,6 +1,3 @@
-# Code needed only by legacy webpack setup.
-* Font declarations in app/scss/classes/font
-
 # Files needed only by legacy webpack setup.
 * postcss.config.js
 * webpack.config.babel.js
