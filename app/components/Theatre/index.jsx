@@ -12,7 +12,6 @@ import Proscenium from '../Stage/Proscenium'
 import Wall from './Wall'
 import Ceiling from './Ceiling'
 import Floor from './Floor'
-import { removeLoadingIndicator } from '../../utils/browser'
 import './style'
 
 const Theatre = ({ didMount }) => {
@@ -28,7 +27,6 @@ const Theatre = ({ didMount }) => {
 
     useEffect(() => {
         logMount('Theatre')
-        removeLoadingIndicator()
     }, [])
 
     return didMount && (

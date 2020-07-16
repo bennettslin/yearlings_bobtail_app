@@ -8,10 +8,7 @@ import {
     capitaliseForClassName,
     convertPresenceKeyToClassName
 } from '../../../app/helpers/format'
-import {
-    getDocument,
-    removeLoadingIndicator
-} from '../../../app/utils/browser'
+import { getDocument } from '../../../app/utils/browser'
 import { accessPresence } from '../../utils/access'
 import {
     getPresenceFromStorage,
@@ -51,7 +48,6 @@ class Previewer extends PureComponent {
 
     componentDidMount() {
         logMount('Previewer')
-        removeLoadingIndicator()
         this.focusPreviewerElement()
 
         // TODO: Scrolling doesn't always work because svg hasn't rendered yet.

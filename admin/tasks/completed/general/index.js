@@ -4874,5 +4874,9 @@ export default [
     {
         taskName: `Gatsby loading page.`,
         workedHours: 1
+    },
+    {
+        taskName: `Clean up legacy webpack code.`,
+        workedHours: 3
     }
 ]

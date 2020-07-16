@@ -9,7 +9,6 @@ import {
 } from '../../api/album/globalAnnotation'
 import { getTitleForAnnotation } from '../../../app/api/album/annotations'
 import { getArrayOfLength } from '../../../app/helpers/general'
-import { removeLoadingIndicator } from '../../../app/utils/browser'
 import './style'
 
 const INTERVALS_COUNT = 7
@@ -55,7 +54,6 @@ const TempGlobalAnnotation = ({ intervalIndex }) => {
 const TempGlobalAnnotations = () => {
     useEffect(() => {
         logMount('Annotations')
-        removeLoadingIndicator()
     }, [])
 
     return (

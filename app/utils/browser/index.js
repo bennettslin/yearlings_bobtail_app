@@ -39,10 +39,3 @@ export const getWindow = () => {
     safeWindow.dataLayer = safeWindow.dataLayer || []
     return safeWindow
 }
-
-export const removeLoadingIndicator = () => {
-    const loadingIndicator = getDocument().getElementById('DramaMasks__load')
-    if (loadingIndicator) {
-        loadingIndicator.parentNode.removeChild(loadingIndicator)
-    }
-}

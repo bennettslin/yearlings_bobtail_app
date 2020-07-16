@@ -1,9 +1,3 @@
-# Current plan
-
-# Later post-Gatsby work
-* Tear down webpack code.
-    * Still need GA in utils?
-
 # Next work
 * Scene doesn't reset to default when curtain is closed.
 * Selecting carousel annotation will sometimes flash lyric above carousel.
@@ -14,11 +8,9 @@
 * Failed to decode downloaded font warning?
 
 # Minor issues, to be investigated while production is on master before Gatsby.
-* Is song selection still slower through access after refactor?
 * tips hand in garryowen for score
 
 # Easy tasks
-* Deprecated page for Internet Explorer?
 * Experiment with removing from reducers and putting back in listeners to improve performance? Is this needed?
 * Slider verse select ranges don't really align with hover ranges.
 * Some todos to make a selector.

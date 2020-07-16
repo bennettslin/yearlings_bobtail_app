@@ -3,14 +3,12 @@ import cx from 'classnames'
 import Drawing from './Drawing'
 import AdminNav from './AdminNav'
 import { logSvgCount } from '../../utils/log'
-import { removeLoadingIndicator } from '../../../app/utils/browser'
 import './style'
 
 const Progress = () => {
     useEffect(() => {
         logMount('Progress')
         logSvgCount()
-        removeLoadingIndicator()
     }, [])
 
     return (

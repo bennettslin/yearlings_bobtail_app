@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import cx from 'classnames'
 import Sky from './Sky'
 import SkyDay from './SkyDay'
-import { removeLoadingIndicator } from '../../../app/utils/browser'
 import {
     TIME_TWILIGHT_TAIWAN,
     TIME_NIGHT_TAIWAN,
@@ -28,7 +27,6 @@ import './style'
 const Skies = () => {
     useEffect(() => {
         logMount('Skies')
-        removeLoadingIndicator()
     }, [])
 
     return (
