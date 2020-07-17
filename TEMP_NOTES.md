@@ -1,7 +1,6 @@
 # Next work
 * Scene doesn't reset to default when curtain is closed.
 * Selecting carousel annotation will sometimes flash lyric above carousel.
-* Banner filmstrip styling should get constants from constants folder
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.

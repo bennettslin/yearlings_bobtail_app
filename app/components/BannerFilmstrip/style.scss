@@ -1,10 +1,6 @@
 @import '../../scss/constants/icon';
 @import '../../scss/constants/zIndex';
 
-$length__filmPerf: 2px;
-$height__albumBanner: 16px;
-$height__songBanner: 30px;
-
 .BannerFilmstrip {
     display: flex;
     flex-direction: column;
