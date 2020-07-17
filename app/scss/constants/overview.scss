@@ -1,0 +1,32 @@
+@import './icon';
+
+$overviewToggleRatio: 1.5;
+
+$width__overviewToggle: 64px;
+$height__overviewToggle:
+    $width__overviewToggle
+    * $overviewToggleRatio;
+
+$width__overviewToggle__laptop:
+    $LENGTH_ICON_LARGE;
+$height__overviewToggle__laptop:
+    $width__overviewToggle__laptop
+    * $overviewToggleRatio;
+
+$width__overviewToggle__tablet:
+    $LENGTH_ICON_LARGE_TABLET;
+$height__overviewToggle__tablet:
+    $width__overviewToggle__tablet
+    * $overviewToggleRatio;
+
+$width__overviewToggle__mini:
+    $LENGTH_ICON_LARGE_MINI;
+$height__overviewToggle__mini:
+    $width__overviewToggle__mini
+    * $overviewToggleRatio;
+
+$width__overviewToggle__phone:
+    $LENGTH_ICON;
+$height__overviewToggle__phone:
+    $width__overviewToggle__phone
+    * $overviewToggleRatio;
