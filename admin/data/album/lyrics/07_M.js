@@ -448,8 +448,7 @@ export default {
                             anchor: `die pushing forty,`,
                             todo: true,
                             card: {
-                                description: `
-                                Like the Soviet Union, I had to take the failures of my first five-year plan in stride.   I had banked on rapid character growth, and I couldn't cut my losses now. I had nothing to my name other than what another five-year plan might gain for me. Or failing that, another one. Yet five years is such a huge chunk of lifetime to mete out all at once, and I had only so much lifetime remaining. The occasion was inevitable to reflect on my mortality.`,
+                                description: `Like the Soviet Union, I had to take the failures of my first five-year plan in stride. I had banked on rapid character growth, and I couldn't cut my losses now. I had nothing to my name other than what another five-year plan might gain for me. Or failing that, another one. Yet five years is such a huge chunk of lifetime to mete out all at once, and I had only so much lifetime remaining. The occasion was inevitable to reflect on my mortality.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
