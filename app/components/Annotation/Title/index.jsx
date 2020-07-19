@@ -1,9 +1,10 @@
-import React, { memo } from 'react'
+import React, { memo, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
 import getFinalSideHoc from '../../FinalSideHoc'
+import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import Anchor from '../../Anchor'
 import AnnotationAccess from './Access'
 import {
@@ -25,6 +26,7 @@ const AnnotationTitle = ({
 }) => {
     const
         dispatch = useDispatch(),
+        stopPropagation = useRef(),
         selectedDotsBit = useSelector(mapSelectedDotsBit),
         selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
 
@@ -48,10 +50,12 @@ const AnnotationTitle = ({
 
         isDot = annotationTitle === IS_UNIT_DOT
 
-    const handleAnchorClick = () => {
+    const handleAnchorClick = e => {
         if (isSelected) {
             return false
         }
+
+        stopPropagation.current(e)
 
         dispatch(updateAnnotationStore({
             queuedAnnotationIndex: annotationIndex,
@@ -98,6 +102,7 @@ const AnnotationTitle = ({
                 isDot,
                 showUpDown
             }} />
+            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </div>
     )
 }

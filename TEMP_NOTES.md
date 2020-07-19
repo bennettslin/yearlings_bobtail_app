@@ -2,8 +2,6 @@
 * Scene doesn't reset to default when curtain is closed.
 * Should load scrolled to accessed annotation index,
 * When selecting carousel annotation, lyric scroll causes carousel anchor not to have selectable styling.
-* Selecting carousel annotation will sometimes flash lyric above carousel.
-    * Try Maravijaya and one to right of it.
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
