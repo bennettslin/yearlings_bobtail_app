@@ -6,20 +6,17 @@ import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PageSongIndexContext from '../../contexts/PageSongIndex'
 import getDidMountHoc from '../DidMountHoc'
-import getMainHoc from '../MainHoc'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
-import { mapCanCarouselShow } from '../../redux/viewport/selector'
 import { getFinalSideKey } from '../../utils/server'
 import './style'
 
-const Carousel = ({ didMount, style, pageSongIndex }) => {
+const Carousel = ({ didMount, pageSongIndex }) => {
     const
         dispatch = useDispatch(),
-        isSongChangeDone = useSelector(mapIsSongChangeDone),
-        canCarouselShow = useSelector(mapCanCarouselShow)
+        isSongChangeDone = useSelector(mapIsSongChangeDone)
 
     const onExit = () => {
         logTransition('Carousel did exit.')
@@ -51,13 +48,10 @@ const Carousel = ({ didMount, style, pageSongIndex }) => {
                         className: cx(
                             'Carousel',
                             didMount && [
-                                canCarouselShow && 'Carousel__shown',
-                                'gradientMask__carousel__desktop',
-                                'abF'
+                                'gradientMask__carousel__desktop'
                             ],
                             getFinalSideKey()
-                        ),
-                        ...didMount && { style }
+                        )
                     }}
                 >
                     <CarouselScroll />
@@ -70,8 +64,7 @@ const Carousel = ({ didMount, style, pageSongIndex }) => {
 
 Carousel.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    style: PropTypes.object,
     pageSongIndex: PropTypes.number
 }
 
-export default memo(getDidMountHoc(getMainHoc(Carousel)))
+export default memo(getDidMountHoc(Carousel))

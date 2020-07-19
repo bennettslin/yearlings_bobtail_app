@@ -23,7 +23,6 @@ $height__carouselHidden: $height__chivalry;
     .DW__desktopWidth
     & {
         bottom: -$height__carouselHidden;
-
         height: $height__chivalry;
         padding-bottom: $MARGIN_THIN;
     }
@@ -70,8 +69,11 @@ $height__carouselHidden: $height__chivalry;
     }
 }
 
-.Carousel__shown {
-    display: block;
+.Carousel {
+    .DW__canCarouselShow
+    & {
+        display: block;
+    }
 }
 
 /** Gradient mask does not work in IE or Edge, though. */
