@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import ScrollDispatcher from '../Dispatcher'
 import { resetScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
+import { mapAccessedAnnotationIndex } from '../../../redux/access/selector'
 import { mapCanCarouselScroll } from '../../../redux/scroll/selector'
 import {
     mapScrollCarouselLog,
@@ -20,6 +21,7 @@ const ScrollCarouselListener = ({
     const
         dispatch = useDispatch(),
         scrollElementIntoView = useRef(),
+        accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         canCarouselScroll = useSelector(mapCanCarouselScroll),
         scrollCarouselLog = useSelector(mapScrollCarouselLog),
@@ -32,8 +34,10 @@ const ScrollCarouselListener = ({
                 log: scrollCarouselLog,
                 scrollClass: CAROUSEL_SCROLL,
                 index: isScrollCarouselForSongSelect ?
-                    // If no annotation selected, scroll to first one.
-                    (selectedAnnotationIndex || 1) :
+                    (
+                        selectedAnnotationIndex ||
+                        accessedAnnotationIndex
+                    ) :
                     scrollCarouselIndex,
                 noDuration: isScrollCarouselForSongSelect
             })

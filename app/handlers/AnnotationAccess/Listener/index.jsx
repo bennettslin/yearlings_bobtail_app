@@ -18,6 +18,15 @@ const AnnotationAccessListener = () => {
         [didMount, setDidMount] = useState(false)
 
     useEffect(() => {
+        // This is dispatched upon mount.
+        if (!isSelectedLogue) {
+            dispatchAccessedAnnotation.current({
+                annotationIndex: selectedAnnotationIndex
+            })
+        }
+    }, [selectedAnnotationIndex])
+
+    useEffect(() => {
         if (didMount) {
             // Access the default annotation.
             if (!isSelectedLogue) {
@@ -27,19 +36,6 @@ const AnnotationAccessListener = () => {
             setDidMount(true)
         }
     }, [earColumnIndex])
-
-    useEffect(() => {
-        if (didMount) {
-            // Access the selected annotation.
-            if (!isSelectedLogue) {
-                dispatchAccessedAnnotation.current({
-                    annotationIndex: selectedAnnotationIndex
-                })
-            }
-        } else {
-            setDidMount(true)
-        }
-    }, [selectedAnnotationIndex])
 
     useEffect(() => {
         if (didMount) {
