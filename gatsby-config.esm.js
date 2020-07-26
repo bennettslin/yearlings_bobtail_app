@@ -27,7 +27,11 @@ export default {
             resolve: `gatsby-plugin-web-font-loader`,
             options: {
                 google: {
-                    families: ['PT Sans Narrow', 'Rancho', 'Neuton']
+                    families: [
+                        'Rancho',
+                        'PT Sans Narrow',
+                        'Neuton'
+                    ]
                 }
             }
         },

@@ -4878,5 +4878,9 @@ export default [
     {
         taskName: `Clean up legacy webpack code.`,
         workedHours: 3
+    },
+    {
+        taskName: `Some final small tasks.`,
+        workedHours: 3
     }
 ]
