@@ -20,11 +20,12 @@
 }
 
 .DotAnchor__selectable {
-
     .Anchor__accessed
     &,
+    .Anchor__selectableNotLyric:hover
+    &,
     .TW__isStationary
-    .Anchor__selectable:hover
+    .Anchor__selectableLyric:hover
     & {
         animation: bounceHover $transitionDuration__slow;
     }

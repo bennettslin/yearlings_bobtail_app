@@ -115,6 +115,7 @@ const TextLyricAnchor = forwardRef(({
                     ),
                     isAccessed,
                     isSelected,
+                    isLyric: !isWikiTextAnchor,
                     isWikiTextAnchor,
                     text,
                     textConfig: {

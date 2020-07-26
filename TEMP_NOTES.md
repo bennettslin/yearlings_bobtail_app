@@ -1,6 +1,5 @@
 # Next work
 * Scene doesn't reset to default when curtain is closed.
-* When selecting carousel annotation, lyric scroll causes carousel anchor not to have selectable styling.
 
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.

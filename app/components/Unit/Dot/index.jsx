@@ -65,6 +65,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
         >
             {/* Scroll to unit dot at bottom, not unit middle. */}
             <Anchor
+                isLyric
                 {...{
                     ref: setRef,
                     dotsBit,

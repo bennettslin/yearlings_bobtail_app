@@ -50,34 +50,40 @@ $width__underline__bleed: 0.125em;
 .Underline__accessed,
 .Underline__selected,
 
+.Anchor__selectableNotLyric:hover
+.Underline,
 .TW__isStationary
-.Anchor__selectable:hover
+.Anchor__selectableLyric:hover
 .Underline {
     height: 35%;
 }
 
-.Underline__isNotWiki {
+.Underline__isDot {
     &.Underline__accessed,
     &.Underline__selected,
 
+    .Anchor__selectableNotLyric:hover
+    &,
     .TW__isStationary
-    .Anchor__selectable:hover
+    .Anchor__selectableLyric:hover
     & {
-        filter: $dropShadow__small;
+        height: 25%;
     }
-}
-
-.Underline__accessed.Underline__isDot,
-.Underline__selected.Underline__isDot,
-
-.TW__isStationary
-.Anchor__selectable:hover
-.Underline__isDot {
-    height: 25%;
 }
 
 .Underline__isNotWiki {
     border-radius: $borderRadius__narrow;
+
+    &.Underline__accessed,
+    &.Underline__selected,
+
+    .Anchor__selectableNotLyric:hover
+    &,
+    .TW__isStationary
+    .Anchor__selectableLyric:hover
+    & {
+        filter: $dropShadow__small;
+    }
 }
 
 .Underline__isWiki__firstChild {
