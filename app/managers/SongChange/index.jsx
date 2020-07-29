@@ -59,9 +59,9 @@ const SongChangeManager = () => {
     useEffect(() => {
         if (didMount) {
             if (canStageReset) {
-                dispatch(updateEntranceStore({
+                setTimeout(() => dispatch(updateEntranceStore({
                     didStageReset: true
-                }))
+                })), 50)
             }
         } else {
             setDidMount(true)
