@@ -1,6 +1,3 @@
-# Next work
-* Scene doesn't reset to default when curtain is closed.
-
 # Post-Gatsby bugs
 * Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.
 

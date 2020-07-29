@@ -10,6 +10,7 @@ export const getSvgFillForFace = ({
     xIndex,
     zIndex,
     face
+
 }) => {
     const { h, s, l, a } = getBaseColour({
             hslaKey,

@@ -4,6 +4,12 @@ import {
     getSkyTimeForScene,
     getSeasonForScene
 } from '../../api/album/scenes'
+import {
+    mapDidCurtainsClose,
+    mapDidStageReset,
+    mapIsSongSelectComplete
+} from '../entrance/selector'
+import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import { SCENE_STORE } from '../../constants/store'
 
 export const mapSceneSongIndex = (
@@ -14,29 +20,53 @@ export const mapSceneSceneIndex = (
     { [SCENE_STORE]: { sceneSceneIndex } }
 ) => sceneSceneIndex
 
-export const mapSceneSkyTime = createSelector(
-    mapSceneSongIndex,
-    mapSceneSceneIndex,
+export const mapIsStageDefault = createSelector(
+    mapDidCurtainsClose,
+    mapDidStageReset,
     (
-        sceneSongIndex,
-        sceneSceneIndex
-    ) => getSkyTimeForScene(sceneSongIndex, sceneSceneIndex)
-)
-
-export const mapSceneSkySeason = createSelector(
-    mapSceneSongIndex,
-    mapSceneSceneIndex,
-    (
-        sceneSongIndex,
-        sceneSceneIndex
-    ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex)
+        didCurtainsClose,
+        didStageReset
+    ) => didCurtainsClose && !didStageReset
 )
 
 export const mapSceneCubesKey = createSelector(
     mapSceneSongIndex,
     mapSceneSceneIndex,
+    mapIsStageDefault,
     (
         sceneSongIndex,
-        sceneSceneIndex
-    ) => getCubesKeyForScene(sceneSongIndex, sceneSceneIndex)
+        sceneSceneIndex,
+        isStageDefault
+    ) => getCubesKeyForScene(sceneSongIndex, sceneSceneIndex, isStageDefault)
+)
+
+export const mapSceneSkyTime = createSelector(
+    mapSceneSongIndex,
+    mapSceneSceneIndex,
+    mapIsStageDefault,
+    (
+        sceneSongIndex,
+        sceneSceneIndex,
+        isStageDefault
+    ) => getSkyTimeForScene(sceneSongIndex, sceneSceneIndex, isStageDefault)
+)
+
+export const mapSceneSkySeason = createSelector(
+    mapSceneSongIndex,
+    mapSceneSceneIndex,
+    mapIsStageDefault,
+    (
+        sceneSongIndex,
+        sceneSceneIndex,
+        isStageDefault
+    ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex, isStageDefault)
+)
+
+export const mapCanStageReset = createSelector(
+    mapSceneCubesKey,
+    mapIsSongSelectComplete,
+    (
+        sceneCubesKey,
+        isSongSelectComplete
+    ) => sceneCubesKey === DEFAULT_STAGE_KEY && isSongSelectComplete
 )

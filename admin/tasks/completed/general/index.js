@@ -4882,5 +4882,9 @@ export default [
     {
         taskName: `Some final small tasks.`,
         workedHours: 3
+    },
+    {
+        taskName: `Reset stage to default while curtains are closed.`,
+        workedHours: 3
     }
 ]

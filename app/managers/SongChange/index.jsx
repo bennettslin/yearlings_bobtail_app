@@ -8,6 +8,7 @@ import { updateLyricStore } from '../../redux/lyric/action'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
+import { mapCanStageReset } from '../../redux/scene/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
@@ -19,6 +20,7 @@ const SongChangeManager = () => {
         dispatch = useDispatch(),
         timeoutRef = useRef(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
+        canStageReset = useSelector(mapCanStageReset),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
@@ -27,32 +29,23 @@ const SongChangeManager = () => {
 
     timeoutRef.current = { songSelectTimeoutId }
 
-    const completeSongSelect = () => {
-        dispatch(updateEntranceStore({
-            isSongSelectionComplete: true,
-
-            /**
-             * There is no scene scroll upon song select, so just set this to
-             * true here and now.
-             */
-            isSceneScrollComplete: true
-        }))
-    }
-
-    const scrollForSongSelect = () => {
-        dispatch(scrollCarouselForSongSelect())
-        dispatch(scrollLyricForSongSelect())
-    }
-
     useEffect(() => {
         if (didMount) {
             // Clear previous timeout.
             clearTimeout(timeoutRef.current.songSelectTimeoutId)
 
             // Wait for song selection to finish.
-            setSongSelectTimeoutId(setTimeout(
-                completeSongSelect, 200
-            ))
+            setSongSelectTimeoutId(
+                setTimeout(() => dispatch(updateEntranceStore({
+                    isSongSelectComplete: true,
+
+                    /**
+                     * There is no scene scroll upon song select, so just set
+                     * this to true here and now.
+                     */
+                    isSceneScrollComplete: true
+                })), 200)
+            )
 
             // Song changed, so begin transition if not already in place.
             if (isSongChangeDone) {
@@ -65,6 +58,18 @@ const SongChangeManager = () => {
 
     useEffect(() => {
         if (didMount) {
+            if (canStageReset) {
+                dispatch(updateEntranceStore({
+                    didStageReset: true
+                }))
+            }
+        } else {
+            setDidMount(true)
+        }
+    }, [canStageReset])
+
+    useEffect(() => {
+        if (didMount) {
             if (isSongChangeDone) {
                 dispatch(updateLyricStore({
                     lyricSongIndex: selectedSongIndex,
@@ -73,7 +78,8 @@ const SongChangeManager = () => {
                 }))
 
                 // Scroll upon completion of subsequent song changes.
-                scrollForSongSelect()
+                dispatch(scrollCarouselForSongSelect())
+                dispatch(scrollLyricForSongSelect())
             }
         } else {
             setDidMount(true)

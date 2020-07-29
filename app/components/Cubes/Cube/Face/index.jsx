@@ -15,38 +15,36 @@ const Face = ({
     face,
     hslaKey
 
-}) => {
-    return (
-        <path
-            {...{
-                className: cx(
-                    'Face',
-                    level,
-                    face,
-                    `y${yIndex}`,
-                    `x${getCharStringForNumber(xIndex)}`,
-                    `z${zIndex}`
-                ),
-                d: getSvgDataPathForFace({
-                    slantDirection,
-                    level,
-                    yIndex,
-                    xIndex,
-                    zIndex,
-                    face
-                }),
-                fill: getSvgFillForFace({
-                    hslaKey,
-                    level,
-                    yIndex,
-                    xIndex,
-                    zIndex,
-                    face
-                })
-            }}
-        />
-    )
-}
+}) => (
+    <path
+        {...{
+            className: cx(
+                'Face',
+                level,
+                face,
+                `y${yIndex}`,
+                `x${getCharStringForNumber(xIndex)}`,
+                `z${zIndex}`
+            ),
+            d: getSvgDataPathForFace({
+                slantDirection,
+                level,
+                yIndex,
+                xIndex,
+                zIndex,
+                face
+            }),
+            fill: getSvgFillForFace({
+                hslaKey,
+                level,
+                yIndex,
+                xIndex,
+                zIndex,
+                face
+            })
+        }}
+    />
+)
 
 Face.propTypes = {
     slantDirection: PropTypes.string.isRequired,

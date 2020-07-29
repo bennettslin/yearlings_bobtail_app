@@ -1,6 +1,7 @@
 export const getSongChangeDefaults = done => ({
     didCurtainsClose: done,
-    isSongSelectionComplete: done,
+    didStageReset: done,
+    isSongSelectComplete: done,
     isSongChangeDone: done
 })
 

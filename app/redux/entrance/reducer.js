@@ -14,19 +14,27 @@ export default (
                 },
                 {
                     didCurtainsClose,
-                    isSongSelectionComplete,
+                    didStageReset,
+                    isSongSelectComplete,
                     didSceneExit,
                     isSceneScrollComplete
                 } = newState
 
             return {
                 ...newState,
-                // The conditions by which song change is done.
-                ...didCurtainsClose && isSongSelectionComplete && {
+                ...(
+                    // The conditions by which song change is done.
+                    didCurtainsClose &&
+                    didStageReset &&
+                    isSongSelectComplete
+                ) && {
                     isSongChangeDone: true
                 },
-                // The conditions by which scene change is done.
-                ...didSceneExit && isSceneScrollComplete && {
+                ...(
+                    // The conditions by which scene change is done.
+                    didSceneExit &&
+                    isSceneScrollComplete
+                ) && {
                     isSceneChangeDone: true
                 }
             }

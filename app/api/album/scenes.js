@@ -32,9 +32,11 @@ export const getVerseIndexForScene = (songIndex, sceneIndex) => {
     return sceneVerseIndices[sceneIndex]
 }
 
-export const getCubesKeyForScene = (songIndex, sceneIndex) => {
+export const getCubesKeyForScene = (songIndex, sceneIndex, isStageDefault) => {
     const { sceneCubesKeys } = getSong(songIndex)
-    return sceneIndex >= 0 ? sceneCubesKeys[sceneIndex] : DEFAULT_STAGE_KEY
+    return sceneIndex >= 0 && !isStageDefault ?
+        sceneCubesKeys[sceneIndex] :
+        DEFAULT_STAGE_KEY
 }
 
 export const getLayersForScene = (songIndex, sceneIndex) => {
@@ -47,12 +49,16 @@ export const getLayerForScene = (songIndex, sceneIndex, yIndex) => {
     return sceneLayers[`layer_${getCharStringForNumber(yIndex)}`] || {}
 }
 
-export const getSkyTimeForScene = (songIndex, sceneIndex) => {
+export const getSkyTimeForScene = (songIndex, sceneIndex, isStageDefault) => {
     const { sceneSkyTimes } = getSong(songIndex)
-    return sceneIndex >= 0 ? sceneSkyTimes[sceneIndex] : TIME_STAGE
+    return sceneIndex >= 0 && !isStageDefault ?
+        sceneSkyTimes[sceneIndex] :
+        TIME_STAGE
 }
 
-export const getSeasonForScene = (songIndex, sceneIndex) => {
+export const getSeasonForScene = (songIndex, sceneIndex, isStageDefault) => {
     const { sceneSkySeasons } = getSong(songIndex)
-    return sceneIndex >= 0 ? sceneSkySeasons[sceneIndex] : SEASON_STAGE
+    return sceneIndex >= 0 && !isStageDefault ?
+        sceneSkySeasons[sceneIndex] :
+        SEASON_STAGE
 }
