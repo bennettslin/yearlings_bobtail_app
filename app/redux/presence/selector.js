@@ -7,8 +7,7 @@ import { getNearestXIndex } from '../../helpers/cubeIndices'
 import { getMapCubeFloorZIndex } from '../cube/selector'
 import {
     mapSceneSongIndex,
-    mapSceneSceneIndex,
-    mapIsStageDefault
+    mapSceneSceneIndex
 } from '../scene/selector'
 
 const mapIsPresenceShownInScene = ({
@@ -21,11 +20,11 @@ const mapIsPresenceShownInScene = ({
     mapSceneSongIndex,
     mapSceneSceneIndex,
     (
-        songIndex,
-        sceneIndex
+        sceneSongIndex,
+        sceneSceneIndex
     ) => getIsShownInSceneForPresence({
-        songIndex,
-        sceneIndex,
+        songIndex: sceneSongIndex,
+        sceneIndex: sceneSceneIndex,
         yIndex,
         presenceType,
         actorKey,
@@ -63,15 +62,13 @@ export const getMapPresenceFloorZIndex = ({
             arrangedYIndex,
             xIndex
         ),
-        mapIsStageDefault,
         (
             isPresenceShownInScene,
-            cubeFloorZIndex,
-            isStageDefault
+            cubeFloorZIndex
 
         ) => (
             // Return null if presence isn't to be shown.
-            isPresenceShownInScene && !isStageDefault ?
+            isPresenceShownInScene ?
                 cubeFloorZIndex :
                 null
         )

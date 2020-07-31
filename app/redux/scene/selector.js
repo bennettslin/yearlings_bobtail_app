@@ -4,11 +4,7 @@ import {
     getSkyTimeForScene,
     getSeasonForScene
 } from '../../api/album/scenes'
-import {
-    mapDidCurtainsClose,
-    mapDidStageReset,
-    mapIsSongSelectComplete
-} from '../entrance/selector'
+import { mapIsSongSelectComplete } from '../entrance/selector'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import { SCENE_STORE } from '../../constants/store'
 
@@ -20,46 +16,31 @@ export const mapSceneSceneIndex = (
     { [SCENE_STORE]: { sceneSceneIndex } }
 ) => sceneSceneIndex
 
-export const mapIsStageDefault = createSelector(
-    mapDidCurtainsClose,
-    mapDidStageReset,
-    (
-        didCurtainsClose,
-        didStageReset
-    ) => didCurtainsClose && !didStageReset
-)
-
 export const mapSceneCubesKey = createSelector(
     mapSceneSongIndex,
     mapSceneSceneIndex,
-    mapIsStageDefault,
     (
         sceneSongIndex,
-        sceneSceneIndex,
-        isStageDefault
-    ) => getCubesKeyForScene(sceneSongIndex, sceneSceneIndex, isStageDefault)
+        sceneSceneIndex
+    ) => getCubesKeyForScene(sceneSongIndex, sceneSceneIndex)
 )
 
 export const mapSceneSkyTime = createSelector(
     mapSceneSongIndex,
     mapSceneSceneIndex,
-    mapIsStageDefault,
     (
         sceneSongIndex,
-        sceneSceneIndex,
-        isStageDefault
-    ) => getSkyTimeForScene(sceneSongIndex, sceneSceneIndex, isStageDefault)
+        sceneSceneIndex
+    ) => getSkyTimeForScene(sceneSongIndex, sceneSceneIndex)
 )
 
 export const mapSceneSkySeason = createSelector(
     mapSceneSongIndex,
     mapSceneSceneIndex,
-    mapIsStageDefault,
     (
         sceneSongIndex,
-        sceneSceneIndex,
-        isStageDefault
-    ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex, isStageDefault)
+        sceneSceneIndex
+    ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex)
 )
 
 export const mapCanStageReset = createSelector(

@@ -61,7 +61,9 @@ const SongChangeManager = () => {
             if (canStageReset) {
                 setTimeout(() => dispatch(updateEntranceStore({
                     didStageReset: true
-                })), 50)
+
+                // This seems to be the time needed for presences to unmount.
+                })), 150)
             }
         } else {
             setDidMount(true)

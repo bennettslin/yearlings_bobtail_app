@@ -48,7 +48,7 @@ const Presence = ({
             mountOnEnter
             {...{
                 in: isPresenceShown,
-                timeout: 200
+                timeout: 50
             }}
         >
             <PresenceSvg

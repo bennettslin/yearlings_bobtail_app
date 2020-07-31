@@ -19,10 +19,10 @@
 * song change sets all to false
 * didCurtainsClose
     * timeout after curtains exit sets to true
-* isStageDefault scene selector
-    * true while didCurtainsClose is true and didStageReset is false
-    * while true, cubes key and sky season and time are default
-    * while true, presences are all null
+* sceneSceneIndex
+    * timeout after curtains exit sets to -1
+        * cubes and sky are default
+        * no presences are shown
 * canStageReset scene selector
     * true once cubes key is default and isSongSelectComplete is true
 * didStageReset

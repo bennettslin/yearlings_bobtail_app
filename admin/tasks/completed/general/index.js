@@ -4885,6 +4885,6 @@ export default [
     },
     {
         taskName: `Reset stage to default while curtains are closed.`,
-        workedHours: 3
+        workedHours: 5
     }
 ]

@@ -10,6 +10,7 @@ import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
 import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
 import { mapIsSongChangeDone } from '../../../redux/entrance/selector'
 import { updateEntranceStore } from '../../../redux/entrance/action'
+import { updateSceneStore } from '../../../redux/scene/action'
 import './style'
 
 const Curtains = ({ style }) => {
@@ -24,9 +25,10 @@ const Curtains = ({ style }) => {
          * This timeout allows the curtains to close completely, making the
          * transition between songs less janky.
          */
-        setTimeout(() => dispatch(updateEntranceStore({
-            didCurtainsClose: true
-        })), 50)
+        setTimeout(() => {
+            dispatch(updateEntranceStore({ didCurtainsClose: true }))
+            dispatch(updateSceneStore({ sceneSceneIndex: -1 }))
+        }, 50)
     }
 
     const onEntered = () => {
