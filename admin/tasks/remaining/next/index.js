@@ -4,12 +4,10 @@ export default [
         workedHours: 0,
         neededHours: 5
     },
-
-    /* Next weekend. */
     {
-        taskName: `Link positioning for Bobtail Yearlings website is wonky in iOS.`,
+        taskName: `Have Bobtail Yearlings website use Gatsby, do the same as Yearling's Bobtail website.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 5
     },
 
     /* Ongoing. */

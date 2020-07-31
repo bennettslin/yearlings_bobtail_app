@@ -1,7 +1,6 @@
 import bobtailYearlings from './bobtailYearlings'
 import bugs from './bugs'
 import illustration from './illustration'
-import important from './important'
 import layout from './layout'
 import lowPriority from './lowPriority'
 import maintenance from './maintenance'
@@ -13,7 +12,6 @@ export default [
     ...bobtailYearlings,
     ...bugs,
     ...illustration,
-    ...important,
     ...layout,
     ...lowPriority,
     ...maintenance,

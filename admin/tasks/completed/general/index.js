@@ -4886,5 +4886,9 @@ export default [
     {
         taskName: `Reset stage to default while curtains are closed.`,
         workedHours: 5
+    },
+    {
+        taskName: `Link positioning for Bobtail Yearlings website is wonky in Safari.`,
+        workedHours: 1
     }
 ]
