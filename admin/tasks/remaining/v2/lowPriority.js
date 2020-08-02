@@ -73,5 +73,20 @@ export default [
         taskName: `Consolidate more svg shape class names for shared styles. Wood (light and dark, including furniture foot), cool metal (more bluish), warm metal (more bronzish), stage lights.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Slider verse select ranges don't really align with hover ranges.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Song banner animation when repeating song is janky. Not sure if pre or post Gatsby.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Tips hand in Garryowen for score.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]
