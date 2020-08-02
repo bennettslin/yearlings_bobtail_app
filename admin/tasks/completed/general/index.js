@@ -4890,5 +4890,9 @@ export default [
     {
         taskName: `Link positioning for Bobtail Yearlings website is wonky in Safari.`,
         workedHours: 1
+    },
+    {
+        taskName: `Have Bobtail Yearlings website use Gatsby, do the same as Yearling's Bobtail website.`,
+        workedHours: 5
     }
 ]

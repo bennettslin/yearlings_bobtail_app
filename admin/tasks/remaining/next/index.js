@@ -4,11 +4,6 @@ export default [
         workedHours: 0,
         neededHours: 5
     },
-    {
-        taskName: `Have Bobtail Yearlings website use Gatsby, do the same as Yearling's Bobtail website.`,
-        workedHours: 0,
-        neededHours: 5
-    },
 
     /* Ongoing. */
     {

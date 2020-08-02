@@ -11,7 +11,7 @@ import { getTitleForAnnotation } from '../../../app/api/album/annotations'
 import { getArrayOfLength } from '../../../app/helpers/general'
 import './style'
 
-const INTERVALS_COUNT = 7
+const INTERVALS_COUNT = 4
 
 const TempGlobalAnnotationsCounter = () => (
     <div className="TempGlobalAnnotationsCounter">
