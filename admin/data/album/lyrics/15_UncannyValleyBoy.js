@@ -27,39 +27,28 @@ export default {
     overview: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing as I went. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I had a master plan to follow, and I wasn't about to change my ways.`,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `The`,
-                            {
-                                anchor: `uncanny valley`,
-                                wiki: `Uncanny_valley`
-                            },
-                            `is a theory that human replicas become more repulsive to us as they grow further lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando "Valley boy" now elicited a similar revulsion.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [PUN]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `The`,
+                        {
+                            anchor: `uncanny valley`,
+                            wiki: `Uncanny_valley`
+                        },
+                        `is a theory that human replicas become more repulsive to us as they grow further lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando "Valley boy" now elicited a similar revulsion.`
+                    ],
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [PUN]: true
                     }
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `I originally began writing this song after waking from a horrid nightmare, but abandoned it after all my attempts to describe the nightmare to others only elicited laughter. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: INTRO
             },
             mainVerses: [
@@ -70,7 +59,17 @@ export default {
                         lyric: `(intro)`
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `I originally began writing this song after waking from a horrid nightmare, but abandoned it after all my attempts to describe the nightmare to others only elicited laughter. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -383,16 +382,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `As silly as the original lyrics for the chorus were, I liked them enough to keep them, so I just made the former lead melody the new counter melody. The former counter melody, which was written for guitar, then became the new lead melody.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS,
                 subVerseType: RHYME,
                 sideCardType: BACKING
@@ -445,7 +434,17 @@ export default {
                 {
                     lyric: `the houses you've betrayed.`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `As silly as the original lyrics for the chorus were, I liked them enough to keep them, so I just made the former lead melody the new counter melody. The former counter melody, which was written for guitar, then became the new lead melody.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -555,24 +554,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `I wanted to recreate the tremolo effect used by guitarist Jonny Greenwood on the song "Airbag" from Radiohead's`,
-                            {
-                                anchor: `OK Computer.`,
-                                wiki: `OK_Computer`
-                            },
-                            `So I recorded several takes of steady eighth notes on the banjo, with each take offset just a little further, to create the impression of tremolo picking on a single instrument. Only in the last few measures do they separate in the balance, like a rope fraying at its end.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -613,7 +594,25 @@ export default {
                     time: 94,
                     lyric: `This scheming crackpot vowed to clean the jackpot out this time around…`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `I wanted to recreate the tremolo effect used by guitarist Jonny Greenwood on the song "Airbag" from Radiohead's`,
+                        {
+                            anchor: `OK Computer.`,
+                            wiki: `OK_Computer`
+                        },
+                        `So I recorded several takes of steady eighth notes on the banjo, with each take offset just a little further, to create the impression of tremolo picking on a single instrument. Only in the last few measures do they separate in the balance, like a rope fraying at its end.`
+                    ],
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -1220,16 +1219,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `To record the gradual shift from "Rama" to "Mara," I made a click track whose tempo sums up to one fewer eighth note after seven measures. I then overlaid multiple tracks in which I quietly took a breath at different points.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CODA,
                 sideCardType: BACKING,
                 sideSubCardType: RESPONSE
@@ -1347,7 +1336,17 @@ export default {
                         }
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `To record the gradual shift from "Rama" to "Mara," I made a click track whose tempo sums up to one fewer eighth note after seven measures. I then overlaid multiple tracks in which I quietly took a breath at different points.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {

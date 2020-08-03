@@ -21,46 +21,23 @@ export default {
     overview: `In college, I met my first girlfriend. Catherine was a nice Catholic girl and former valedictorian, who didn't think much of my nonexistent reading habit and broke up with me right before Ash Wednesday. So I decided to ash my forehead and bump into her that day, thinking that if she could picture me as a good Catholic boy, I might get another chance. It didn't happen, but I did grow into a faithful reader, and I have Catherine to thank for that.`,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            {
-                                anchor: `Ash Wednesday`,
-                                wiki: `Ash_Wednesday`
-                            },
-                            `is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
-                        ]
-                    }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        {
+                            anchor: `Ash Wednesday`,
+                            wiki: `Ash_Wednesday`
+                        },
+                        `is the first day of Lent, a period of fasting observed by Christians to memorialise the forty days that Jesus spent fasting in the desert.`
+                    ]
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `For a song about two people who couldn't be any more different, I juxtaposed`,
-                            {
-                                anchor: `Arabic maqam`,
-                                wiki: `Arabic_maqam`
-                            },
-                            `in the song's first half with`,
-                            {
-                                anchor: `Renaissance polyphony`,
-                                wiki: `Polyphony`
-                            },
-                            `in the second half.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -162,27 +139,32 @@ export default {
                         `surely buried she'd be!`
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `For a song about two people who couldn't be any more different, I juxtaposed`,
+                        {
+                            anchor: `Arabic maqam`,
+                            wiki: `Arabic_maqam`
+                        },
+                        `in the song's first half with`,
+                        {
+                            anchor: `Renaissance polyphony`,
+                            wiki: `Polyphony`
+                        },
+                        `in the second half.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `The shrieking whistles, which remind me of`,
-                            {
-                                anchor: `BART`,
-                                wiki: `Bay_Area_Rapid_Transit`
-                            },
-                            `trains braking in a subway tunnel underneath the sidewalk, were made by squeaking recorders, one soprano and one tenor.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES,
                 subsequent: true
             },
@@ -249,7 +231,24 @@ export default {
                     time: 23,
                     lyric: `But saving herself strictly for marriage, or really from me?`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `The shrieking whistles, which remind me of`,
+                        {
+                            anchor: `BART`,
+                            wiki: `Bay_Area_Rapid_Transit`
+                        },
+                        `trains braking in a subway tunnel underneath the sidewalk, were made by squeaking recorders, one soprano and one tenor.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -301,22 +300,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the`,
-                            {
-                                anchor: `Dobro.`,
-                                wiki: `Dobro`
-                            }
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -391,7 +374,23 @@ export default {
                         `to the trump she just played.`
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the`,
+                        {
+                            anchor: `Dobro.`,
+                            wiki: `Dobro`
+                        }
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -592,16 +591,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps between the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: BRIDGE
             },
             mainVerses: [
@@ -696,27 +685,20 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps between the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
-                            {
-                                anchor: `Oakland`,
-                                wiki: `Oakland,_California`
-                            },
-                            `night.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS
             },
             mainVerses: [
@@ -775,26 +757,27 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
+                        {
+                            anchor: `Oakland`,
+                            wiki: `Oakland,_California`
+                        },
+                        `night.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza were`,
-                            {
-                                anchor: `homophones`,
-                                wiki: `Homophone`
-                            },
-                            `of their counterparts in the second, so I made a game of matching the two stanzas as closely as possible. This later gave me the idea for doublespeaker rhyme.`],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS,
                 subsequent: true
             },
@@ -841,7 +824,23 @@ export default {
                     time: 151,
                     lyric: `"So where'd you attend Mass?"`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza were`,
+                        {
+                            anchor: `homophones`,
+                            wiki: `Homophone`
+                        },
+                        `of their counterparts in the second, so I made a game of matching the two stanzas as closely as possible. This later gave me the idea for doublespeaker rhyme.`],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         }
     ]
 }

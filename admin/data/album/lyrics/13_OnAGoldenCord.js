@@ -25,39 +25,27 @@ export default {
     isDoublespeaker: true,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `I was trying to follow in the footsteps of other poetic ruminations on still-life objects, like John Keats's`,
-                            {
-                                anchor: `"Ode on a Grecian Urn."`,
-                                wiki: `Ode_on_a_Grecian_Urn`
-                            },
-                            `I was pretentious like that.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `I was trying to follow in the footsteps of other poetic ruminations on still-life objects, like John Keats's`,
+                        {
+                            anchor: `"Ode on a Grecian Urn."`,
+                            wiki: `Ode_on_a_Grecian_Urn`
+                        },
+                        `I was pretentious like that.`
+                    ],
+                    dotKeys: {
+                        [OBSERVATION]: true
                     }
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age.`,
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: INTRO
             },
             mainVerses: [
@@ -68,28 +56,21 @@ export default {
                         lyric: `(white-throated sparrow)`
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age.`,
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `This song evokes the country style of my childhood hero`,
-                            {
-                                anchor: `Johnny Horton.`,
-                                wiki: `Johnny_Horton`
-                            },
-                            `His albums were the first ones I owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my friends had ever heard of him, until one day, I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in a car accident at the peak of his fame.`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -142,27 +123,28 @@ export default {
                     time: 18,
                     lyricCentre: `And so she said, "Now it's yours again…`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `This song evokes the country style of my childhood hero`,
+                        {
+                            anchor: `Johnny Horton.`,
+                            wiki: `Johnny_Horton`
+                        },
+                        `His albums were the first ones I owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my friends had ever heard of him, until one day, I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in a car accident at the peak of his fame.`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `I tuned the lead guitar in a way that allowed each note to be plucked as a`,
-                            {
-                                anchor: `natural harmonic.`,
-                                wiki: `Guitar_harmonics`
-                            },
-                            `I hadn't accounted for the need to move quickly enough from one to the next, however, so I still ended up splicing multiple takes.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES,
                 subsequent: true
             },
@@ -220,35 +202,27 @@ export default {
                         `today…"`
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `I tuned the lead guitar in a way that allowed each note to be plucked as a`,
+                        {
+                            anchor: `natural harmonic.`,
+                            wiki: `Guitar_harmonics`
+                        },
+                        `I hadn't accounted for the need to move quickly enough from one to the next, however, so I still ended up splicing multiple takes.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `Nineteen Eighty-Four.`,
-                                    wiki: `Nineteen_Eighty-Four`
-                                }
-                            },
-                            `So I used doublespeaker rhyme— which I named partly for its`,
-                            {
-                                anchor: `Orwellian undertone—`,
-                                wiki: `Doublethink`
-                            },
-                            `to depict the internal conflict between my sober self and my drunken alter ego.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS
             },
             mainVerses: [
@@ -347,7 +321,32 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Nineteen Eighty-Four.`,
+                                wiki: `Nineteen_Eighty-Four`
+                            }
+                        },
+                        `So I used doublespeaker rhyme— which I named partly for its`,
+                        {
+                            anchor: `Orwellian undertone—`,
+                            wiki: `Doublethink`
+                        },
+                        `to depict the internal conflict between my sober self and my drunken alter ego.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -1076,15 +1075,14 @@ export default {
             ]
         },
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `What surprised me most upon the album's release was that no one who reviewed it was willing to venture an opinion on doublespeaker rhyme. The consensus seemed to be that all new inventions will prove their mettle within the existing paradigm of live performance. But it's not just that doublespeaker rhyme flailed under this constraint— by necessity, openness to invention means allowing it to operate within its own paradigm. And so I came to see that indie rock, despite its reputation, is really a conservative movement at heart.`,
-                        dotKeys: {
-                            [AFTERWORD]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `What surprised me most upon the album's release was that no one who reviewed it was willing to venture an opinion on doublespeaker rhyme. The consensus seemed to be that all new inventions will prove their mettle within the existing paradigm of live performance. But it's not just that doublespeaker rhyme flailed under this constraint— by necessity, openness to invention means allowing it to operate within its own paradigm. And so I came to see that indie rock, despite its reputation, is really a conservative movement at heart.`,
+                    dotKeys: {
+                        [AFTERWORD]: true
                     }
                 }
             }

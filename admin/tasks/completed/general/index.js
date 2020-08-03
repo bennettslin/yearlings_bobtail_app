@@ -4894,5 +4894,9 @@ export default [
     {
         taskName: `Have Bobtail Yearlings website use Gatsby, do the same as Yearling's Bobtail website.`,
         workedHours: 5
+    },
+    {
+        taskName: `Move unit dots below verses in data.`,
+        workedHours: 1
     }
 ]

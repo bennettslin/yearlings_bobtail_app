@@ -22,42 +22,21 @@ export default {
     isDoublespeaker: true,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `A childhood playmate once asked me if I knew what cremation was. I didn't, and assumed it must be fun and tasty. That contrast between expectation and reality neatly sums up the seemingly innocent day trip that ended with Miriam breaking up with me.`,
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [OBSERVATION]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `A childhood playmate once asked me if I knew what cremation was. I didn't, and assumed it must be fun and tasty. That contrast between expectation and reality neatly sums up the seemingly innocent day trip that ended with Miriam breaking up with me.`,
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [OBSERVATION]: true
                     }
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `Abbey Road`,
-                                    wiki: `Abbey_Road`
-                                }
-                            },
-                            `by the Beatles. The resulting sense of urgency provides a nice push towards the album's finish.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: INTRO
             },
             mainVerses: [
@@ -74,28 +53,30 @@ export default {
                         }
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Abbey Road`,
+                                wiki: `Abbey_Road`
+                            }
+                        },
+                        `by the Beatles. The resulting sense of urgency provides a nice push towards the album's finish.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `A`,
-                            {
-                                anchor: `Shepard tone`,
-                                wiki: `Shepard_tone`
-                            },
-                            `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady descent seemed an apt metaphor for my utterly deflated state after the breakup with Miriam, so I included two Shepard tones this song. One is a bass tone that moves downward in discrete half steps, while the other is a treble tone that does so in a perpetual glissando. Both were made by splicing together pure tones produced on an analogue synthesiser.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: REFRAIN
             },
             mainVerses: [
@@ -106,21 +87,28 @@ export default {
                         lyric: `(Miriam's theme)`
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `A`,
+                        {
+                            anchor: `Shepard tone`,
+                            wiki: `Shepard_tone`
+                        },
+                        `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady descent seemed an apt metaphor for my utterly deflated state after the breakup with Miriam, so I included two Shepard tones this song. One is a bass tone that moves downward in discrete half steps, while the other is a treble tone that does so in a perpetual glissando. Both were made by splicing together pure tones produced on an analogue synthesiser.`
+                    ],
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realise that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -327,7 +315,18 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realise that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -631,17 +630,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        // NOTE: Change in recording? Connect to Uncanny Valley?
-                        description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: BRIDGE
             },
             mainVerses: [
@@ -847,7 +835,18 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    // NOTE: Change in recording? Connect to Uncanny Valley?
+                    description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {

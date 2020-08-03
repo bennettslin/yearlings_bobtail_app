@@ -27,31 +27,30 @@ export default {
     overview: `One night I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout history, though in hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `I first tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `The Basketball Diaries,`,
-                                    wiki: `The_Basketball_Diaries_(book)`
-                                }
-                            },
-                            `and was soon hooked. The best part about it is the`,
-                            {
-                                anchor: `closed-eye hallucinations,`,
-                                wiki: `Closed-eye_hallucination`
-                            },
-                            `which are vivid images that seem to be projected onto the backdrop of your eyelids. If they ever get too intense, you simply open your eyes, and they instantly vanish. At the time, I called them "constellations."`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [OBSERVATION]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `I first tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `The Basketball Diaries,`,
+                                wiki: `The_Basketball_Diaries_(book)`
+                            }
+                        },
+                        `and was soon hooked. The best part about it is the`,
+                        {
+                            anchor: `closed-eye hallucinations,`,
+                            wiki: `Closed-eye_hallucination`
+                        },
+                        `which are vivid images that seem to be projected onto the backdrop of your eyelids. If they ever get too intense, you simply open your eyes, and they instantly vanish. At the time, I called them "constellations."`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [OBSERVATION]: true
                     }
                 }
             }
@@ -72,28 +71,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `I never got past the first fifty pages of`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `Finnegans Wake.`,
-                                    wiki: `Finnegans_Wake`
-                                }
-                            },
-                            `Still, I was impressed by Joyce's use of literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal.`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -274,7 +251,29 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `I never got past the first fifty pages of`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Finnegans Wake.`,
+                                wiki: `Finnegans_Wake`
+                            }
+                        },
+                        `Still, I was impressed by Joyce's use of literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal.`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -486,27 +485,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `The Police's`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `Ghost in the Machine`,
-                                    wiki: `Ghost_in_the_Machine_(album)`
-                                }
-                            },
-                            `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums on this song are my amateurish imitation of Stewart Copeland's performance in "Secret Journey," in which the kick is left off the downbeat almost throughout. Such a simple idea, but it does wonders for letting the music here breathe before being submerged again in the chorus.`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: PRECHORUS
             },
             mainVerses: [
@@ -586,7 +564,28 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `The Police's`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Ghost in the Machine`,
+                                wiki: `Ghost_in_the_Machine_(album)`
+                            }
+                        },
+                        `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums on this song are my amateurish imitation of Stewart Copeland's performance in "Secret Journey," in which the kick is left off the downbeat almost throughout. Such a simple idea, but it does wonders for letting the music here breathe before being submerged again in the chorus.`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -762,32 +761,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `Sita introduced me to`,
-                            {
-                                anchor: `Bollywood`,
-                                wiki: `Bollywood`
-                            },
-                            `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of our favourite,`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `Hum Aapke Hain Koun…!`,
-                                    wiki: `Hum_Aapke_Hain_Koun..!`
-                                }
-                            }
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -973,7 +946,33 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `Sita introduced me to`,
+                        {
+                            anchor: `Bollywood`,
+                            wiki: `Bollywood`
+                        },
+                        `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of our favourite,`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Hum Aapke Hain Koun…!`,
+                                wiki: `Hum_Aapke_Hain_Koun..!`
+                            }
+                        }
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -1139,23 +1138,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `On my solo Robitussin trips, I would mentally search for metaphysical truths while playing video games on my old`,
-                            {
-                                anchor: `Super NES console.`,
-                                wiki: `Super_Nintendo_Entertainment_System`
-                            },
-                            `16-bit sounds thus came to take on a spiritual significance for me.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: PRECHORUS,
                 subsequent: true
             },
@@ -1316,7 +1298,24 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `On my solo Robitussin trips, I would mentally search for metaphysical truths while playing video games on my old`,
+                        {
+                            anchor: `Super NES console.`,
+                            wiki: `Super_Nintendo_Entertainment_System`
+                        },
+                        `16-bit sounds thus came to take on a spiritual significance for me.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -1680,26 +1679,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `For a song about recreational drug use, I naturally sought counsel from the Beatles, whose`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `"Tomorrow Never Knows"`,
-                                    wiki: `Tomorrow_Never_Knows`
-                                }
-                            },
-                            `includes a tape loop that imitates a seagull's cry. I tried to recreate this sound by pinching off the air stream coming through a recorder's window, but the result wasn't exactly what I wanted. Kept in the background, however, it contributes nicely to the overall atmosphere.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: PRECHORUS
             },
             mainVerses: [
@@ -1763,7 +1742,27 @@ export default {
                         `snow blitz'd…`
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `For a song about recreational drug use, I naturally sought counsel from the Beatles, whose`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `"Tomorrow Never Knows"`,
+                                wiki: `Tomorrow_Never_Knows`
+                            }
+                        },
+                        `includes a tape loop that imitates a seagull's cry. I tried to recreate this sound by pinching off the air stream coming through a recorder's window, but the result wasn't exactly what I wanted. Kept in the background, however, it contributes nicely to the overall atmosphere.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {

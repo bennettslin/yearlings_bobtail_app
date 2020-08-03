@@ -25,43 +25,20 @@ export default {
     overview: `Willy the Cocoa was a mentally disabled man who wandered the streets collecting recyclables for a living. One day, some delinquents decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `The kids in the neighborhood knew Willy as "The Cocoa," referring both to the Coke bottles he collected and to his seeming a bit cuckoo. There wasn't an official way to spell it.`,
-                        dotKeys: {
-                            [BACKSTORY]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `The kids in the neighborhood knew Willy as "The Cocoa," referring both to the Coke bottles he collected and to his seeming a bit cuckoo. There wasn't an official way to spell it.`,
+                    dotKeys: {
+                        [BACKSTORY]: true
                     }
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `In the past, mentally disabled children were sometimes thought to be trolls in disguise known as`,
-                            {
-                                anchor: `changelings,`,
-                                wiki: `Changeling`
-                            },
-                            `who had been left in place of a stolen human child. So I wanted the music for this song to sound like a band of woodland trolls in secluded revelry after having just pulled off such a heist. I figured their style would be akin to the swamp rock of`,
-                            {
-                                anchor: `Creedence Clearwater Revival,`,
-                                wiki: `Creedence_Clearwater_Revival`
-                            },
-                            `with melodicas to evoke Cajun accordions.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: INTRO
             },
             mainVerses: [
@@ -72,22 +49,32 @@ export default {
                         lyric: `(Willy's theme)`
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `In the past, mentally disabled children were sometimes thought to be trolls in disguise known as`,
+                        {
+                            anchor: `changelings,`,
+                            wiki: `Changeling`
+                        },
+                        `who had been left in place of a stolen human child. So I wanted the music for this song to sound like a band of woodland trolls in secluded revelry after having just pulled off such a heist. I figured their style would be akin to the swamp rock of`,
+                        {
+                            anchor: `Creedence Clearwater Revival,`,
+                            wiki: `Creedence_Clearwater_Revival`
+                        },
+                        `with melodicas to evoke Cajun accordions.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `The root progression here traces a zigzag in which every minor-third drop is followed by a whole-step rise. At the cadence of each line, melodicas hurriedly catch up by condensing a warped version of this descending pattern into a single measure.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -161,7 +148,19 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `The root progression here traces a zigzag in which every minor-third drop is followed by a whole-step rise. At the cadence of each line, melodicas hurriedly catch up by condensing a warped version of this descending pattern into a single measure.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -268,24 +267,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `In some legends, a changeling hints at its true identity by using some tool in a peculiar manner. I figured trolls would have just as peculiar a way of playing instruments, and so I experimented with unconventional techniques, like pairing`,
-                            {
-                                anchor: `palm mutes`,
-                                wiki: `Palm_mute`
-                            },
-                            `with legato slides on the lead guitar and mandolin here.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: PRECHORUS
             },
             mainVerses: [
@@ -343,21 +324,28 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `In some legends, a changeling hints at its true identity by using some tool in a peculiar manner. I figured trolls would have just as peculiar a way of playing instruments, and so I experimented with unconventional techniques, like pairing`,
+                        {
+                            anchor: `palm mutes`,
+                            wiki: `Palm_mute`
+                        },
+                        `with legato slides on the lead guitar and mandolin here.`
+                    ],
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `I first learned of autism after overhearing my parents discuss my brother's condition in their Taiwanese accents. I then spent the next few days telling everyone that my brother was "artistic." And so I wanted the lyrics for this song to explore such ways in which mishearings of adult conversation might lead to roundabout understanding for a child.`,
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS
             },
             mainVerses: [
@@ -484,7 +472,18 @@ export default {
                         `yet I've seen!`
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `I first learned of autism after overhearing my parents discuss my brother's condition in their Taiwanese accents. I then spent the next few days telling everyone that my brother was "artistic." And so I wanted the lyrics for this song to explore such ways in which mishearings of adult conversation might lead to roundabout understanding for a child.`,
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -808,19 +807,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `To play the electric guitar riff here, I used both a glass slide and the whammy bar. Since each of these offers the capability to bend pitch, it doesn't make sense to combine them. But perhaps this is just the kind of nonsensical thing that a troll musician would happily do.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: PRECHORUS
             },
             mainVerses: [
@@ -905,7 +891,20 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `To play the electric guitar riff here, I used both a glass slide and the whammy bar. Since each of these offers the capability to bend pitch, it doesn't make sense to combine them. But perhaps this is just the kind of nonsensical thing that a troll musician would happily do.`
+                    ],
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {

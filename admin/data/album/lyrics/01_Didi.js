@@ -26,50 +26,31 @@ export default {
     overview: `As a child, I depended on my older sister to do most everything for me, like zipping up my jacket. One day when she wasn't around to help, I pooped my pants and had to be sent home from school.`,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    card: {
-                        description: [
-                            `In the Chinese language,`,
-                            {
-                                isItalic: true,
-                                lyric: `didi`
-                            },
-                            `means "little brother." My parents immigrated to the United States from`,
-                            {
-                                anchor: `Taiwan,`,
-                                wiki: `Taiwan`
-                            },
-                            `a Pacific island that was taken over by the Chinese in 1949. The Taiwanese we spoke at home thus included a healthy sprinkle of Chinese words.`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: [
+                        `In the Chinese language,`,
+                        {
+                            isItalic: true,
+                            lyric: `didi`
+                        },
+                        `means "little brother." My parents immigrated to the United States from`,
+                        {
+                            anchor: `Taiwan,`,
+                            wiki: `Taiwan`
+                        },
+                        `a Pacific island that was taken over by the Chinese in 1949. The Taiwanese we spoke at home thus included a healthy sprinkle of Chinese words.`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true
                     }
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    card: {
-                        description: [
-                            `Toy instruments abound in this song sung from the perspective of my sister as a child. Here, autoharp and glockenspiel lead into an intro that recalls the first few measures of "Wouldn't It Be Nice," the opening song of the 1966 Beach Boys album`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `Pet Sounds.`,
-                                    wiki: `Pet_Sounds`
-                                }
-                            }
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: INTRO
             },
             mainVerses: [
@@ -80,7 +61,25 @@ export default {
                         lyric: `(Bennett's theme)`
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: [
+                        `Toy instruments abound in this song sung from the perspective of my sister as a child. Here, autoharp and glockenspiel lead into an intro that recalls the first few measures of "Wouldn't It Be Nice," the opening song of the 1966 Beach Boys album`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Pet Sounds.`,
+                                wiki: `Pet_Sounds`
+                            }
+                        }
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -98,25 +97,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    card: {
-                        description: [
-                            `My ambition for this album was to do for rock music what James Joyce had done for modern literature. Since his semi-autobiographical first novel,`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `A Portrait of the Artist as a Young Man,`,
-                                    wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
-                                }
-                            },
-                            `begins in the simple prose of a child, I decided to do the same with this opening song.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -162,7 +142,26 @@ export default {
                     time: 34,
                     lyric: `had to finish up all his orange juice.`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: [
+                        `My ambition for this album was to do for rock music what James Joyce had done for modern literature. Since his semi-autobiographical first novel,`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `A Portrait of the Artist as a Young Man,`,
+                                wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
+                            }
+                        },
+                        `begins in the simple prose of a child, I decided to do the same with this opening song.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -192,27 +191,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    card: {
-                        description: [
-                            `I wanted the music here to evoke the flurry of activity and transience of emotion that a child experiences from one day to the next. And so the rhythm lurches to and from a`,
-                            {
-                                anchor: `half-time beat,`,
-                                wiki: `Half-time_(music)`
-                            },
-                            `while the harmonic progression tirelessly modulates between the`,
-                            {
-                                anchor: `distantly related keys`,
-                                wiki: `Closely_related_key`
-                            },
-                            `of A, C, and E\u2011flat major.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS
             },
             mainVerses: [
@@ -242,7 +220,28 @@ export default {
                     time: 57,
                     lyric: `And I tire of saying, "My Didi wants to come too."`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: [
+                        `I wanted the music here to evoke the flurry of activity and transience of emotion that a child experiences from one day to the next. And so the rhythm lurches to and from a`,
+                        {
+                            anchor: `half-time beat,`,
+                            wiki: `Half-time_(music)`
+                        },
+                        `while the harmonic progression tirelessly modulates between the`,
+                        {
+                            anchor: `distantly related keys`,
+                            wiki: `Closely_related_key`
+                        },
+                        `of A, C, and E\u2011flat major.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -355,23 +354,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `"Wouldn't It Be Nice" is once again evoked here, this time by modulating down a minor third to segue into the bridge. In its time,`,
-                            {
-                                isItalic: true,
-                                lyric: `Pet Sounds`
-                            },
-                            `was a pioneering work in the field of sound recording, and with the increasing affordability of home studios in the early 2000s, I sensed that the next wave of advancement was afoot. My hope was to be part of this wave by pointing to new artistic directions that were only now made possible with the latest tools, much like Beach Boys leader Brian Wilson had done with his magnum opus. And so I wanted this homage to be anything but subtle.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: BRIDGE
             },
             mainVerses: [
@@ -406,19 +388,27 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `"Wouldn't It Be Nice" is once again evoked here, this time by modulating down a minor third to segue into the bridge. In its time,`,
+                        {
+                            isItalic: true,
+                            lyric: `Pet Sounds`
+                        },
+                        `was a pioneering work in the field of sound recording, and with the increasing affordability of home studios in the early 2000s, I sensed that the next wave of advancement was afoot. My hope was to be part of this wave by pointing to new artistic directions that were only now made possible with the latest tools, much like Beach Boys leader Brian Wilson had done with his magnum opus. And so I wanted this homage to be anything but subtle.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    card: {
-                        description: `To mimic the subdued twangs of music boxes and thumb pianos that characterize children's music, I dampened the lead guitar strings by wrapping strips of tissue around them near the bridge.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: BRIDGE,
                 subsequent: true
             },
@@ -458,7 +448,16 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: `To mimic the subdued twangs of music boxes and thumb pianos that characterize children's music, I dampened the lead guitar strings by wrapping strips of tissue around them near the bridge.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -506,22 +505,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    card: {
-                        description: [
-                            `A, C, and E\u2011flat, the three distantly related major keys heard thus far, also comprise three of the four triads of an`,
-                            {
-                                anchor: `octatonic collection.`,
-                                wiki: `Octatonic_scale`
-                            },
-                            `The song now ends on G\u2011flat, the fourth and final triad of the collection, to suggest the excitement of undiscovered vistas that await a young child.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS,
                 subsequent: true
             },
@@ -534,7 +517,23 @@ export default {
                     time: 158,
                     lyric: `and there are things I hope Didi will never have to know.`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: [
+                        `A, C, and E\u2011flat, the three distantly related major keys heard thus far, also comprise three of the four triads of an`,
+                        {
+                            anchor: `octatonic collection.`,
+                            wiki: `Octatonic_scale`
+                        },
+                        `The song now ends on G\u2011flat, the fourth and final triad of the collection, to suggest the excitement of undiscovered vistas that await a young child.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -551,28 +550,27 @@ export default {
             ]
         },
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `Since`,
-                            {
-                                isItalic: true,
-                                lyric: `Pet Sounds`
-                            },
-                            `was never performed live in its own time, I had faith that feasibility of live performance could once again be an afterthought, as masses of new artists pushed the limits of sound recording to new heights. Instead, indie rock stuck to its guns, insisting as always that new artists could hope to gain exposure only by playing live shows. The excitement lay in seeing how the latest technology might be used to navigate this familiar path. But no new paths were to be forged. And so upon its release,`,
-                            {
-                                isItalic: true,
-                                lyric: `Yearling's Bobtail`
-                            },
-                            `quickly fell by the wayside. There was no part for it to play in the narrative of our times that was being written.`
-                        ],
-                        dotKeys: {
-                            [AFTERWORD]: true,
-                            [OBSERVATION]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `Since`,
+                        {
+                            isItalic: true,
+                            lyric: `Pet Sounds`
+                        },
+                        `was never performed live in its own time, I had faith that feasibility of live performance could once again be an afterthought, as masses of new artists pushed the limits of sound recording to new heights. Instead, indie rock stuck to its guns, insisting as always that new artists could hope to gain exposure only by playing live shows. The excitement lay in seeing how the latest technology might be used to navigate this familiar path. But no new paths were to be forged. And so upon its release,`,
+                        {
+                            isItalic: true,
+                            lyric: `Yearling's Bobtail`
+                        },
+                        `quickly fell by the wayside. There was no part for it to play in the narrative of our times that was being written.`
+                    ],
+                    dotKeys: {
+                        [AFTERWORD]: true,
+                        [OBSERVATION]: true
                     }
                 }
             }

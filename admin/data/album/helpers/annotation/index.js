@@ -137,13 +137,13 @@ export const addAnnotationMetadata = (songIndex, song) => {
     lyricUnits.forEach(unit => {
         const {
                 unitMap: {
-                    sideCardType,
-                    unitDot
+                    sideCardType
                 },
                 mainVerses,
                 subVerse,
                 sideCard,
-                sideSubCard
+                sideSubCard,
+                unitDot
             } = unit,
 
             allVerses = [

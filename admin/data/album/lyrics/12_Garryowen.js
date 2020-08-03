@@ -24,51 +24,28 @@ export default {
     overview: `My mood changed when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I didn't like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `In`,
-                            {
-                                isItalic: true,
-                                lyric: `Ulysses,`
-                            },
-                            `Garryowen is the name of a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [REFERENCE]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `In`,
+                        {
+                            isItalic: true,
+                            lyric: `Ulysses,`
+                        },
+                        `Garryowen is the name of a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
+                    ],
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [REFERENCE]: true
                     }
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `Since I took the name of my drunken personality from James Joyce's`,
-                            {
-                                isItalic: true,
-                                lyric: `Ulysses,`
-                            },
-                            `I went for an`,
-                            {
-                                anchor: `Irish reel`,
-                                wiki: `Reel_(dance)`
-                            },
-                            `here. Of course, I departed from tradition by scoring contrapuntal melodies.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: INTRO
             },
             mainVerses: [
@@ -79,7 +56,29 @@ export default {
                         lyric: `(Garry's theme)`
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `Since I took the name of my drunken personality from James Joyce's`,
+                        {
+                            isItalic: true,
+                            lyric: `Ulysses,`
+                        },
+                        `I went for an`,
+                        {
+                            anchor: `Irish reel`,
+                            wiki: `Reel_(dance)`
+                        },
+                        `here. Of course, I departed from tradition by scoring contrapuntal melodies.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -336,24 +335,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `In traditional`,
-                            {
-                                anchor: `counterpoint,`,
-                                wiki: `Counterpoint`
-                            },
-                            `the harmonic progression is simply a natural byproduct of chords built in sequence from a single melodic line. But since the chords for this song were already in place, I took the reverse approach of taking individual notes from the harmonic progression and linking them to create interweaving melodies.`
-                        ],
-                        dotKeys: {
-                            [REFERENCE]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS
             },
             mainVerses: [
@@ -421,20 +402,28 @@ export default {
                         `cringing in shame.`
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `In traditional`,
+                        {
+                            anchor: `counterpoint,`,
+                            wiki: `Counterpoint`
+                        },
+                        `the harmonic progression is simply a natural byproduct of chords built in sequence from a single melodic line. But since the chords for this song were already in place, I took the reverse approach of taking individual notes from the harmonic progression and linking them to create interweaving melodies.`
+                    ],
+                    dotKeys: {
+                        [REFERENCE]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `Though I'd taken violin lessons as a child, my skills were horribly rusty by the time I made this album. Rather than get up to speed through intensified practice, I just recorded the fiddle track here by playing fragments of two or three notes at a time, then splicing them into a single take. To justify my cop-out, I threw in a complicated glissando whenever the score permitted.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS,
                 subsequent: true
             },
@@ -489,7 +478,17 @@ export default {
                     time: 81,
                     lyric: `a crumpled castaway!`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `Though I'd taken violin lessons as a child, my skills were horribly rusty by the time I made this album. Rather than get up to speed through intensified practice, I just recorded the fiddle track here by playing fragments of two or three notes at a time, then splicing them into a single take. To justify my cop-out, I threw in a complicated glissando whenever the score permitted.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -535,23 +534,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `The bagpipes here evoke a funeral procession. Since I don't own any bagpipes, let alone`,
-                            {
-                                anchor: `Irish ones,`,
-                                wiki: `Uilleann_pipes`
-                            },
-                            `I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter, and the other as the drone.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: BRIDGE
             },
             mainVerses: [
@@ -588,7 +570,24 @@ export default {
                         `someday yet!`
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `The bagpipes here evoke a funeral procession. Since I don't own any bagpipes, let alone`,
+                        {
+                            anchor: `Irish ones,`,
+                            wiki: `Uilleann_pipes`
+                        },
+                        `I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter, and the other as the drone.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -663,16 +662,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `After some trial and error, I decided that the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease them apart due to their different timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS,
                 subsequent: true
             },
@@ -741,7 +730,17 @@ export default {
                     time: 137,
                     lyric: `she would opt just not to hear!`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `After some trial and error, I decided that the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease them apart due to their different timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -810,27 +809,26 @@ export default {
             ]
         },
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `After getting rejected by the last record label that had been vetting us, I was so depressed that I went on the bender to end all benders. I eventually kept a box of wine by my bed to calm my nerves throughout the night. One day, upon skipping my morning beers, I felt like the walls were conspiring to attack me. I soon learned that this was the early stage of`,
-                            {
-                                anchor: `delirium tremens,`,
-                                wiki: `Delirium_tremens`
-                            },
-                            `and began to attend`,
-                            {
-                                anchor: `Alcoholics Anonymous`,
-                                wiki: `Alcoholics_Anonymous`
-                            },
-                            `meetings. I haven't had a drink since.`
-                        ],
-                        dotKeys: {
-                            [AFTERWORD]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `After getting rejected by the last record label that had been vetting us, I was so depressed that I went on the bender to end all benders. I eventually kept a box of wine by my bed to calm my nerves throughout the night. One day, upon skipping my morning beers, I felt like the walls were conspiring to attack me. I soon learned that this was the early stage of`,
+                        {
+                            anchor: `delirium tremens,`,
+                            wiki: `Delirium_tremens`
+                        },
+                        `and began to attend`,
+                        {
+                            anchor: `Alcoholics Anonymous`,
+                            wiki: `Alcoholics_Anonymous`
+                        },
+                        `meetings. I haven't had a drink since.`
+                    ],
+                    dotKeys: {
+                        [AFTERWORD]: true
                     }
                 }
             }

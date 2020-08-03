@@ -24,42 +24,30 @@ export default {
     overview: `With the Yearlings becoming a fixture in the local scene, I started to command more attention than I'd ever known, particularly from women. And yet, my misery didn't abate, but instead simmered into a hard-boiled resentment. I also began to regret my relationship with Sita, which now felt like a decision I'd been coerced to make, under deprived conditions from which I was now freed.`,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `John Osborne's play`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `Look Back in Anger`,
-                                    wiki: `Look_Back_in_Anger`
-                                }
-                            },
-                            `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. It hit unnervingly close to home when I read it.`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `John Osborne's play`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Look Back in Anger`,
+                                wiki: `Look_Back_in_Anger`
+                            }
+                        },
+                        `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. It hit unnervingly close to home when I read it.`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true
                     }
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: INTRO
             },
             mainVerses: [
@@ -70,28 +58,21 @@ export default {
                         lyric: `(intro)`
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `So as not to wake his neighbours, Owen would sing in muffled tones and then double track his vocals. I didn't have a cassette player handy to play his demos, so I took notes from`,
-                            {
-                                anchor: `Elliott Smith,`,
-                                wiki: `Elliott_Smith`
-                            },
-                            `who did the same on his first few albums. I guess it's the go-to approach for late-night recording.`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -197,32 +178,28 @@ export default {
                         `through the noon.`
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `So as not to wake his neighbours, Owen would sing in muffled tones and then double track his vocals. I didn't have a cassette player handy to play his demos, so I took notes from`,
+                        {
+                            anchor: `Elliott Smith,`,
+                            wiki: `Elliott_Smith`
+                        },
+                        `who did the same on his first few albums. I guess it's the go-to approach for late-night recording.`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `When I asked Owen to recommend some great lyricists, he pointed me to Nas. I hadn't given serious thought to hip hop at the time, believing it to be too far removed from my own method of songwriting to offer much useful wisdom. (I've since corrected this heinous oversight.) But even as my lone point of reference for hip hop back then, Nas's debut album`,
-                            {
-                                anchor: `Illmatic`,
-                                wiki: `Illmatic`
-                            },
-                            `offered great pointers on the flexibility of`,
-                            {
-                                anchor: `internal rhyme,`,
-                                wiki: `Internal_rhyme`
-                            },
-                            `which I used in these verses.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES,
                 subsequent: true
             },
@@ -309,7 +286,29 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `When I asked Owen to recommend some great lyricists, he pointed me to Nas. I hadn't given serious thought to hip hop at the time, believing it to be too far removed from my own method of songwriting to offer much useful wisdom. (I've since corrected this heinous oversight.) But even as my lone point of reference for hip hop back then, Nas's debut album`,
+                        {
+                            anchor: `Illmatic`,
+                            wiki: `Illmatic`
+                        },
+                        `offered great pointers on the flexibility of`,
+                        {
+                            anchor: `internal rhyme,`,
+                            wiki: `Internal_rhyme`
+                        },
+                        `which I used in these verses.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -446,16 +445,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `I recorded the cymbals here at an extremely low tape speed, which turned them into pitched percussion upon normal playback.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS
             },
             mainVerses: [
@@ -488,7 +477,17 @@ export default {
                     time: 75,
                     lyric: `you look back in anger that it's done.`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `I recorded the cymbals here at an extremely low tape speed, which turned them into pitched percussion upon normal playback.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {

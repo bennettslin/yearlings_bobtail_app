@@ -29,37 +29,26 @@ export default {
     overview: `At the height of my years of getting bullied, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to a race of interstellar beings, with a mission to shut myself from the world. I did so by being unresponsive like my brother, and felt a psychic bond with him as a result. But as my sanity chipped away, I came to see that I was in a mail-order cult.`,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            {
-                                anchor: `Pchelka and Mushka`,
-                                wiki: `Soviet_space_dogs`
-                            },
-                            `were dogs sent into orbit under the Soviet space program. In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        {
+                            anchor: `Pchelka and Mushka`,
+                            wiki: `Soviet_space_dogs`
+                        },
+                        `were dogs sent into orbit under the Soviet space program. In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`
+                    ],
+                    dotKeys: {
+                        [OBSERVATION]: true
                     }
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `I needed a kid's voice to recite this quote, but no one I knew was popping them out just yet. So I had my sister do it.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: INTRO
             },
             mainVerses: [
@@ -98,33 +87,20 @@ export default {
                         ]
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `I needed a kid's voice to recite this quote, but no one I knew was popping them out just yet. So I had my sister do it.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `In keeping with the Russian theme of space dogs, I tried to evoke the sound of the`,
-                            {
-                                anchor: `balalaika`,
-                                wiki: `Balalaika`
-                            },
-                            `through frenetically plucked mandolins. Since Tuva is a Russian republic, I also added some`,
-                            {
-                                anchor: `Tuvan throat singing,`,
-                                wiki: `Tuvan_throat_singing`
-                            },
-                            `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: REFRAIN
             },
             mainVerses: [
@@ -135,7 +111,30 @@ export default {
                         lyric: `(Christopher's theme)`
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `In keeping with the Russian theme of space dogs, I tried to evoke the sound of the`,
+                        {
+                            anchor: `balalaika`,
+                            wiki: `Balalaika`
+                        },
+                        `through frenetically plucked mandolins. Since Tuva is a Russian republic, I also added some`,
+                        {
+                            anchor: `Tuvan throat singing,`,
+                            wiki: `Tuvan_throat_singing`
+                        },
+                        `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
+                    ],
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -636,18 +635,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `The sound of space transmissions in the background was made by bending the whammy bar of an electric guitar while banging it on the carpet floor. It took almost fifty tries, and I had to retune each time.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: POSTCHORUS
             },
             mainVerses: [
@@ -686,7 +673,19 @@ export default {
                     time: 101,
                     lyric: `you are indeed a seed from that nebular nest.`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `The sound of space transmissions in the background was made by bending the whammy bar of an electric guitar while banging it on the carpet floor. It took almost fifty tries, and I had to retune each time.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -715,27 +714,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `I learned about Tuvan throat singing after my first girlfriend Catherine took me to see a documentary called`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `Genghis Blues.`,
-                                    wiki: `Genghis_Blues`
-                                }
-                            },
-                            `Within a week, I was able to sound out the main partials, which impressed her greatly. I've been trying to recapture that moment ever since.`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: BRIDGE
             },
             mainVerses: [
@@ -779,7 +757,28 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `I learned about Tuvan throat singing after my first girlfriend Catherine took me to see a documentary called`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Genghis Blues.`,
+                                wiki: `Genghis_Blues`
+                            }
+                        },
+                        `Within a week, I was able to sound out the main partials, which impressed her greatly. I've been trying to recapture that moment ever since.`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -1138,23 +1137,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `Taking a cue from David Bowie's`,
-                            {
-                                anchor: `"Space Oddity"`,
-                                wiki: `Space_Oddity`
-                            },
-                            `at its close, I made the sound of failing circuits by scraping the strings of an electric guitar against the pickup, while bouncing a metal rod on a single string near the bridge.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: POSTCHORUS
             },
             mainVerses: [
@@ -1208,7 +1190,24 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `Taking a cue from David Bowie's`,
+                        {
+                            anchor: `"Space Oddity"`,
+                            wiki: `Space_Oddity`
+                        },
+                        `at its close, I made the sound of failing circuits by scraping the strings of an electric guitar against the pickup, while bouncing a metal rod on a single string near the bridge.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -1252,15 +1251,14 @@ export default {
             ]
         },
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `My brother currently lives in his own place and receives round-the-clock care through supported living services. He's doing well.`,
-                        dotKeys: {
-                            [AFTERWORD]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `My brother currently lives in his own place and receives round-the-clock care through supported living services. He's doing well.`,
+                    dotKeys: {
+                        [AFTERWORD]: true
                     }
                 }
             }

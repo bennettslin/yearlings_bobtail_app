@@ -72,7 +72,6 @@ const _addUnitLists = (songIndex, song) => {
 
         const {
             unitMap: {
-                unitDot,
                 isBottomSideCard,
                 subVerseType,
                 sideCardType,
@@ -80,7 +79,8 @@ const _addUnitLists = (songIndex, song) => {
             },
             subVerse,
             sideCard,
-            sideSubCard
+            sideSubCard,
+            unitDot
         } = unit
 
         if (unitDot) {
@@ -155,8 +155,8 @@ const _addLastUnitDotIndex = (songIndex, song) => {
         { lyricUnits } = albumLyrics[songIndex],
         lastUnitIndex = lyricUnits.length - 1,
         {
-            unitMap: { unitDot },
-            mainVerses
+            mainVerses,
+            unitDot
         } = lyricUnits[lastUnitIndex]
 
     let lastUnitDotIndex = -1

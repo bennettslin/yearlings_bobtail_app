@@ -28,22 +28,21 @@ export default {
     isDoublespeaker: true,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `It's likely that Odin's original name meant something in Chinese, which my sister and I later anglicised into the name of the`,
-                            {
-                                anchor: `Norse god`,
-                                wiki: `Odin`
-                            },
-                            `once we were older.`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `It's likely that Odin's original name meant something in Chinese, which my sister and I later anglicised into the name of the`,
+                        {
+                            anchor: `Norse god`,
+                            wiki: `Odin`
+                        },
+                        `once we were older.`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true
                     }
                 }
             }
@@ -61,17 +60,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. So I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's the musical version of a cinematic split screen.`,
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -179,7 +167,18 @@ export default {
                     lyricLeft: `silent poll of colors overused.`,
                     lyricRight: `sigh and pull the covers over you.`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. So I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's the musical version of a cinematic split screen.`,
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -382,17 +381,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `While the two voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES,
                 subsequent: true
             },
@@ -576,7 +564,18 @@ export default {
                         `come racing back.`
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `While the two voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -651,16 +650,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `The drums were the one instrument for which I had to score parts that were far more advanced than my own abilities. So when it came time to record, I tried many workarounds. On this song, I recorded the kick, snare, and toms separately from the cymbals.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS
             },
             mainVerses: [
@@ -701,7 +690,17 @@ export default {
                     lyricLeft: `were just sins simply dreamt,`,
                     lyricRight: `weren't just myths between friends,`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `The drums were the one instrument for which I had to score parts that were far more advanced than my own abilities. So when it came time to record, I tried many workarounds. On this song, I recorded the kick, snare, and toms separately from the cymbals.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -913,22 +912,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `Recording vocals in doublespeaker rhyme proved to be trickier than I had anticipated. I came to discover that, when singing, we tend to delay or shorten certain syllables to adjust for phrasing and consonant clusters. As such, even when each voice in a doublespeaker set sounds fine on its own, they can turn into a jumbled mush once heard together. So to keep the syllabic durations and offsets in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
-                            {
-                                anchor: `ligature.`,
-                                wiki: `Ligature_(music)`
-                            }
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -1071,7 +1054,23 @@ export default {
                         `himself.`
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `Recording vocals in doublespeaker rhyme proved to be trickier than I had anticipated. I came to discover that, when singing, we tend to delay or shorten certain syllables to adjust for phrasing and consonant clusters. As such, even when each voice in a doublespeaker set sounds fine on its own, they can turn into a jumbled mush once heard together. So to keep the syllabic durations and offsets in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
+                        {
+                            anchor: `ligature.`,
+                            wiki: `Ligature_(music)`
+                        }
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -1566,17 +1565,16 @@ export default {
             ]
         },
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I studied Hebrew and undertook a yearlong course required for conversion to Judaism. We didn't last long enough for me to stand before the rabbinical court, however, which would have been the final step. So, I'm still not Jewish.`
-                        ],
-                        dotKeys: {
-                            [AFTERWORD]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I studied Hebrew and undertook a yearlong course required for conversion to Judaism. We didn't last long enough for me to stand before the rabbinical court, however, which would have been the final step. So, I'm still not Jewish.`
+                    ],
+                    dotKeys: {
+                        [AFTERWORD]: true
                     }
                 }
             }

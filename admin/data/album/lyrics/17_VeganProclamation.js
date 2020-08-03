@@ -24,39 +24,28 @@ export default {
     overview: `Having doubled down on writing and recording all the songs for my next album, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left me. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had now was myself, and I really didn't like myself. And I had no idea how to become a good person again.`,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
-                            {
-                                anchor: `vegan.`,
-                                wiki: `Veganism`
-                            },
-                            `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step towards liking myself again.`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [OBSERVATION]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
+                        {
+                            anchor: `vegan.`,
+                            wiki: `Veganism`
+                        },
+                        `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step towards liking myself again.`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [OBSERVATION]: true
                     }
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `As the previous song ends with me fading away while listening to my favourite records, the crackle of a needle on vinyl introduces the third and final song of the medley.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: REFRAIN
             },
             mainVerses: [
@@ -83,22 +72,20 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `As the previous song ends with me fading away while listening to my favourite records, the crackle of a needle on vinyl introduces the third and final song of the medley.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast stuck with me, and I thought it would work well here.`,
-                        dotKeys: {
-                            [BACKSTORY]: true,
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -193,7 +180,19 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast stuck with me, and I thought it would work well here.`,
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -289,16 +288,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `Sasha recited these quotes for me over the phone. We recorded multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't think to write them with that concern in mind. I was so pretentious at the time, I forgot that normal people don't pepper their conversations with pseudo-intellectual drivel.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: REFRAIN
             },
             mainVerses: [
@@ -358,7 +347,17 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `Sasha recited these quotes for me over the phone. We recorded multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't think to write them with that concern in mind. I was so pretentious at the time, I forgot that normal people don't pepper their conversations with pseudo-intellectual drivel.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -574,16 +573,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `When Sita and I first met, she asked to hear some of my music. I had just bought a new multi-effects processor and played around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: SOLO
             },
             mainVerses: [
@@ -594,7 +583,17 @@ export default {
                         lyric: `(solo)`
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `When Sita and I first met, she asked to hear some of my music. I had just bought a new multi-effects processor and played around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -834,27 +833,26 @@ export default {
             ]
         },
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `I was a vegan for the five years that I spent working on`,
-                            {
-                                isItalic: true,
-                                lyric: `Yearling's Bobtail.`
-                            },
-                            `But as it became clear that the album's release would be all but ignored by the indie press, I had to question everything I thought I knew about how the world works. So I jettisoned all my beliefs, including veganism, to try out the conservative values espoused by indie rock. They weren't a good fit for me, and I've since returned to the left, albeit as a realist. So I'm a`,
-                            {
-                                anchor: `flexitarian`,
-                                wiki: `Semi-vegetarianism`
-                            },
-                            `now, in that I'm always happy to avoid eating meat, but I no longer do so completely.`
-                        ],
-                        dotKeys: {
-                            [AFTERWORD]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `I was a vegan for the five years that I spent working on`,
+                        {
+                            isItalic: true,
+                            lyric: `Yearling's Bobtail.`
+                        },
+                        `But as it became clear that the album's release would be all but ignored by the indie press, I had to question everything I thought I knew about how the world works. So I jettisoned all my beliefs, including veganism, to try out the conservative values espoused by indie rock. They weren't a good fit for me, and I've since returned to the left, albeit as a realist. So I'm a`,
+                        {
+                            anchor: `flexitarian`,
+                            wiki: `Semi-vegetarianism`
+                        },
+                        `now, in that I'm always happy to avoid eating meat, but I no longer do so completely.`
+                    ],
+                    dotKeys: {
+                        [AFTERWORD]: true
                     }
                 }
             }

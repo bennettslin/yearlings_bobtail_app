@@ -20,39 +20,20 @@ export default {
     overview: `Sometime after dating Catherine and a while before meeting Mara, I tried to hit on a university student named Sita. Nothing came of the few dates that followed, however, and I quickly scurried away in disappointment.`,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
-                        dotKeys: {
-                            [NARRATIVE]: true
-                        }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
+                    dotKeys: {
+                        [NARRATIVE]: true
                     }
                 }
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `In the final chapter of James Joyce's`,
-                            {
-                                isItalic: true,
-                                lyric: `Ulysses,`
-                            },
-                            `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed this technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`
-                        ],
-                        dotKeys: {
-                            [REFERENCE]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -60,20 +41,28 @@ export default {
                     time: 0,
                     lyric: `"Good night," she says`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `In the final chapter of James Joyce's`,
+                        {
+                            isItalic: true,
+                            lyric: `Ulysses,`
+                        },
+                        `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed this technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`
+                    ],
+                    dotKeys: {
+                        [REFERENCE]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES,
                 subsequent: true
             },
@@ -120,7 +109,17 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -622,23 +621,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `The band Television are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to`,
-                            {
-                                anchor: `Marquee Moon`,
-                                wiki: `Marquee_Moon`
-                            },
-                            `on repeat to gather ideas. The lick of tumbling triplets here was stolen note for note from the song "Friction."`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: POSTCHORUS
             },
             mainVerses: [
@@ -684,7 +666,24 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `The band Television are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to`,
+                        {
+                            anchor: `Marquee Moon`,
+                            wiki: `Marquee_Moon`
+                        },
+                        `on repeat to gather ideas. The lick of tumbling triplets here was stolen note for note from the song "Friction."`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -853,24 +852,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `Children's albums from the 70s are a treasure trove of musical wisdom, including the soundtrack for`,
-                            {
-                                anchor: `The New Mickey Mouse Club,`,
-                                wiki: `The_Mickey_Mouse_Club`
-                            },
-                            `a disco-inflected revival of the original 50s show. The Yearlings covered the song "Let's Go Day," from which I stole the idea of a synth playing portamento quarter notes.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true,
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS
             },
             mainVerses: [
@@ -928,7 +909,25 @@ export default {
                     time: 111,
                     lyric: `and having only tires squeal`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `Children's albums from the 70s are a treasure trove of musical wisdom, including the soundtrack for`,
+                        {
+                            anchor: `The New Mickey Mouse Club,`,
+                            wiki: `The_Mickey_Mouse_Club`
+                        },
+                        `a disco-inflected revival of the original 50s show. The Yearlings covered the song "Let's Go Day," from which I stole the idea of a synth playing portamento quarter notes.`
+                    ],
+                    dotKeys: {
+                        [OBSERVATION]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -977,23 +976,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `Ambrose Bierce also wrote the short story`,
-                            {
-                                anchor: `"An Occurrence at Owl Creek Bridge,"`,
-                                wiki: `An_Occurrence_at_Owl_Creek_Bridge`
-                            },
-                            `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS,
                 subsequent: true
             },
@@ -1019,7 +1001,24 @@ export default {
                         ]
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `Ambrose Bierce also wrote the short story`,
+                        {
+                            anchor: `"An Occurrence at Owl Creek Bridge,"`,
+                            wiki: `An_Occurrence_at_Owl_Creek_Bridge`
+                        },
+                        `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         }
     ]
 }

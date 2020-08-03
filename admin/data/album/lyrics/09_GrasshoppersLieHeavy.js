@@ -25,66 +25,43 @@ export default {
     isDoublespeaker: true,
     lyricUnits: [
         {
-            unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    cards: [
-                        {
-                            description: [
-                                `During this time, I was reading a lot of Philip K. Dick novels such as`,
-                                {
-                                    isItalic: true,
-                                    lyric: {
-                                        anchor: `The Man in the High Castle,`,
-                                        wiki: `The_Man_in_the_High_Castle`
-                                    }
-                                },
-                                `which tells of an alternate history in which the Axis powers had won World War II. Curiously, the characters in this book are engrossed in their own alternate history novel called`,
-                                {
-                                    isItalic: true,
-                                    lyric: `The Grasshopper Lies Heavy,`
-                                },
-                                `in which the Allies had won.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        },
-                        {
-                            description: `I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, with neither wishing to be the first to reveal itself.`,
-                            dotKeys: {
-                                [OBSERVATION]: true
-                            }
+            unitMap: {},
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                cards: [
+                    {
+                        description: [
+                            `During this time, I was reading a lot of Philip K. Dick novels such as`,
+                            {
+                                isItalic: true,
+                                lyric: {
+                                    anchor: `The Man in the High Castle,`,
+                                    wiki: `The_Man_in_the_High_Castle`
+                                }
+                            },
+                            `which tells of an alternate history in which the Axis powers had won World War II. Curiously, the characters in this book are engrossed in their own alternate history novel called`,
+                            {
+                                isItalic: true,
+                                lyric: `The Grasshopper Lies Heavy,`
+                            },
+                            `in which the Allies had won.`
+                        ],
+                        dotKeys: {
+                            [BACKSTORY]: true
                         }
-                    ]
-                }
+                    },
+                    {
+                        description: `I liked the image of two grasshoppers hidden in the tall grass, each sending hesitant signals to the other, with neither wishing to be the first to reveal itself.`,
+                        dotKeys: {
+                            [OBSERVATION]: true
+                        }
+                    }
+                ]
             }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `Just as`,
-                            {
-                                isItalic: true,
-                                lyric: `The Grasshopper Lies Heavy`
-                            },
-                            `offers its fictional readers a reality that's vastly different from the one they know, this song is a self-contained narrative that offers a vastly different ending from the album as a whole. Like Dick, I wanted to explore`,
-                            {
-                                anchor: `meta-referential`,
-                                wiki: `Meta-reference`
-                            },
-                            `possibilities for a story within a story, and did so by dropping lyrical references to all the other songs on the album, which I call wormholes.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: REFRAIN
             },
             mainVerses: [
@@ -113,27 +90,32 @@ export default {
                         ]
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `Just as`,
+                        {
+                            isItalic: true,
+                            lyric: `The Grasshopper Lies Heavy`
+                        },
+                        `offers its fictional readers a reality that's vastly different from the one they know, this song is a self-contained narrative that offers a vastly different ending from the album as a whole. Like Dick, I wanted to explore`,
+                        {
+                            anchor: `meta-referential`,
+                            wiki: `Meta-reference`
+                        },
+                        `possibilities for a story within a story, and did so by dropping lyrical references to all the other songs on the album, which I call wormholes.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `I wanted the music to sound sentimental with a few rough edges, so channelling`,
-                            {
-                                anchor: `Simon and Garfunkel`,
-                                wiki: `Simon_%26_Garfunkel`
-                            },
-                            `throughout seemed like a good choice.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: VERSES
             },
             mainVerses: [
@@ -194,7 +176,24 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `I wanted the music to sound sentimental with a few rough edges, so channelling`,
+                        {
+                            anchor: `Simon and Garfunkel`,
+                            wiki: `Simon_%26_Garfunkel`
+                        },
+                        `throughout seemed like a good choice.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -799,26 +798,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `The highlight of Nirvana's`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `Nevermind`,
-                                    wiki: `Nevermind`
-                                }
-                            },
-                            `for me is when Kurt Cobain jumps up an octave for the third verse of "Lounge Act." My urge to recreate this effect was always at odds with my tendency to write melodies that span my whole vocal range. So when I realised that the chorus melody for this song stays within a single register, I transposed the song accordingly to make it work.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CHORUS
             },
             mainVerses: [
@@ -910,7 +889,27 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `The highlight of Nirvana's`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Nevermind`,
+                                wiki: `Nevermind`
+                            }
+                        },
+                        `for me is when Kurt Cobain jumps up an octave for the third verse of "Lounge Act." My urge to recreate this effect was always at odds with my tendency to write melodies that span my whole vocal range. So when I realised that the chorus melody for this song stays within a single register, I transposed the song accordingly to make it work.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -1113,16 +1112,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: `The ascending chord progression here symbolises falling in love, and eventually, sexual climax. Simple enough.`,
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: CODA
             },
             mainVerses: [
@@ -1207,7 +1196,17 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: `The ascending chord progression here symbolises falling in love, and eventually, sexual climax. Simple enough.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -1326,26 +1325,6 @@ export default {
         },
         {
             unitMap: {
-                unitDot: {
-                    anchor: IS_UNIT_DOT,
-                    todo: true,
-                    card: {
-                        description: [
-                            `The French expression`,
-                            {
-                                isItalic: true,
-                                lyric: {
-                                    anchor: `la petite mort,`,
-                                    wiki: `La_petite_mort`
-                                }
-                            },
-                            `which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. As such, even as the chords continue to rise, the lead guitar plays a falling riff, before everything cuts away to Odin's theme, a reminder of the house cat who died in my youth.`
-                        ],
-                        dotKeys: {
-                            [SONGWRITING]: true
-                        }
-                    }
-                },
                 formType: OUTRO
             },
             mainVerses: [
@@ -1356,7 +1335,27 @@ export default {
                         lyric: `(Odin's theme)`
                     }
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                todo: true,
+                card: {
+                    description: [
+                        `The French expression`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `la petite mort,`,
+                                wiki: `La_petite_mort`
+                            }
+                        },
+                        `which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. As such, even as the chords continue to rise, the lead guitar plays a falling riff, before everything cuts away to Odin's theme, a reminder of the house cat who died in my youth.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         }
     ]
 }
