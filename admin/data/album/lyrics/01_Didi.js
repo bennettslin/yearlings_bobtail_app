@@ -23,26 +23,25 @@ import {
 export default {
     title: 'Didi (弟弟)',
     duration: 177,
-    overview: `As a child, I depended on my older sister to do most everything for me, like zipping my jacket. One day when she wasn't around to help, I pooped my pants and had to be sent home from school.`,
+    overview: `As a child, I depended on my older sister to do most everything for me, like zipping up my jacket. One day when she wasn't around to help, I pooped my pants and had to be sent home from school.`,
     lyricUnits: [
         {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
-                    todo: true,
                     card: {
                         description: [
-                            `In Mandarin Chinese,`,
+                            `In the Chinese language,`,
                             {
                                 isItalic: true,
                                 lyric: `didi`
                             },
-                            `means "little brother." My family hails from`,
+                            `means "little brother." My parents immigrated to the United States from`,
                             {
                                 anchor: `Taiwan,`,
                                 wiki: `Taiwan`
                             },
-                            `an island that was taken over by the Chinese in 1949. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.`
+                            `a Pacific island that was taken over by the Chinese in 1949. The Taiwanese we spoke at home thus included a healthy sprinkle of Chinese words.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true
@@ -55,10 +54,9 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
-                    todo: true,
                     card: {
                         description: [
-                            `Toy instruments abound in this song sung in the character of my sister as a child. Here, autoharp and glockenspiel lead the pack with an intro that recalls the first measures of "Wouldn't It Be Nice," the opening song of the 1966 Beach Boys album`,
+                            `Toy instruments abound in this song sung from the perspective of my sister as a child. Here, autoharp and glockenspiel lead into an intro that recalls the first few measures of "Wouldn't It Be Nice," the opening song of the 1966 Beach Boys album`,
                             {
                                 isItalic: true,
                                 lyric: {
@@ -102,10 +100,9 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
-                    todo: true,
                     card: {
                         description: [
-                            `My ambition for this album was to do for rock music what James Joyce did for modern literature. When faced with a creative decision, I would ask myself what Joyce would do. Since his semi-autobiographical first novel,`,
+                            `My ambition for this album was to do for rock music what James Joyce had done for modern literature. Since his semi-autobiographical first novel,`,
                             {
                                 isItalic: true,
                                 lyric: {
@@ -113,7 +110,7 @@ export default {
                                     wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
                                 }
                             },
-                            `begins in the simple prose of a child, this album does the same with its opening song.`
+                            `begins in the simple prose of a child, I decided to do the same with this opening song.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -133,7 +130,6 @@ export default {
                         `wondering to himself, who would`,
                         {
                             anchor: `tie his shoes?`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -142,7 +138,7 @@ export default {
                                             anchor: `bunny criss-cross the tree.`,
                                             wiki: `Shoelace_knot`
                                         },
-                                        `But being left-handed, I was never clear on which hand should hold the bunny, and my shoelaces always came undone as a result.`
+                                        `Being left-handed, however, I was never clear on which hand should hold the bunny. My shoelaces always came undone as a result.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -179,9 +175,8 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here.`,
-                            todo: true,
                             card: {
-                                description: `I was always tagging along with my sister, who was fiercely protective of me. But there were times when she and her friends preferred to do girl stuff by themselves. This would leave me in a panic, since I had few playmates of my own.`,
+                                description: `I often tagged along with my sister, who was fiercely protective of me. But there were times when she and her friends would go off to do girl stuff by themselves. This always left me in a panic, since I had few playmates of my own.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -199,10 +194,9 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
-                    todo: true,
                     card: {
                         description: [
-                            `I wanted the music here to evoke the flurry of activity and transience of emotion experienced by a child from one day to the next. And so the rhythm lurches to and from a`,
+                            `I wanted the music here to evoke the flurry of activity and transience of emotion that a child experiences from one day to the next. And so the rhythm lurches to and from a`,
                             {
                                 anchor: `half-time beat,`,
                                 wiki: `Half-time_(music)`
@@ -228,7 +222,6 @@ export default {
                         `Cause I get sick of hearing,`,
                         {
                             anchor: `"Zeizei,`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -292,7 +285,7 @@ export default {
                                             anchor: `Safeway`,
                                             wiki: `Safeway_Inc.`
                                         },
-                                        `was the most visible supermarket chain in my area when I was growing up.`
+                                        `was a supermarket chain in my area when I was growing up.`
                                     ]
                                 },
                                 {
@@ -367,7 +360,7 @@ export default {
                     todo: true,
                     card: {
                         description: [
-                            `The song once again evokes "Wouldn't It Be Nice," this time by modulating down a minor third to segue into the bridge. In its time,`,
+                            `"Wouldn't It Be Nice" is once again evoked here, this time by modulating down a minor third to segue into the bridge. In its time,`,
                             {
                                 isItalic: true,
                                 lyric: `Pet Sounds`
@@ -395,7 +388,6 @@ export default {
                     lyric: [
                         {
                             anchor: `crooked thieves`,
-                            todo: true,
                             card: {
                                 description: ``,
                                 wormhole: `crooked_thieves`
@@ -406,7 +398,7 @@ export default {
                             anchor: `sheriff's badge and gun…`,
                             todo: true,
                             card: {
-                                description: `While the Taiwanese teenagers of my mother's generation prized all things that America had to offer, their tastes were shaped by a bootleg industry that largely recycled American popular culture from decades past. Years later, my sister and I would grow up listening to my mother's old country records and sharing her fondness for old Westerns.`,
+                                description: `Though the Taiwanese teenagers of my mother's generation prized all things American, their only exposure to American culture was through a bootleg industry that mostly recycled the relics of its past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for old Westerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -420,9 +412,8 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
-                    todo: true,
                     card: {
-                        description: `To mimic the subdued twangs of music boxes and thumb pianos that characterize children's music, I dampened the lead guitar strings by wrapping tissue around them near the bridge.`,
+                        description: `To mimic the subdued twangs of music boxes and thumb pianos that characterize children's music, I dampened the lead guitar strings by wrapping strips of tissue around them near the bridge.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -442,9 +433,8 @@ export default {
                         `taped to all the`,
                         {
                             anchor: `girls' mirrors.`,
-                            todo: true,
                             card: {
-                                description: `My sister used to cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
+                                description: `My sister used to cut out pictures of pop stars from teenybopper magazines and tape them to our bathroom mirror.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -462,7 +452,6 @@ export default {
                         `you'd`,
                         {
                             anchor: `finally become someone?`,
-                            todo: true,
                             card: {
                                 wormhole: `finally_become_someone`
                             }
@@ -519,15 +508,14 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
-                    todo: true,
                     card: {
                         description: [
-                            `A, C, and E\u2011flat, the three distantly related major keys we have visited thus far, also comprise three of the four triads of an`,
+                            `A, C, and E\u2011flat, the three distantly related major keys heard thus far, also comprise three of the four triads of an`,
                             {
                                 anchor: `octatonic collection.`,
                                 wiki: `Octatonic_scale`
                             },
-                            `The song now ends on the yet unheard major chord of G\u2011flat, the fourth and final triad of the collection, to suggest the excitement of undiscovered vistas that await a young child.`
+                            `The song now ends on G\u2011flat, the fourth and final triad of the collection, to suggest the excitement of undiscovered vistas that await a young child.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
