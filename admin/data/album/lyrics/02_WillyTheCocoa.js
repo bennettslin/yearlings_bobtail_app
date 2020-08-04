@@ -150,10 +150,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `The root progression here traces a zigzag in which every minor-third drop is followed by a whole-step rise. At the cadence of each line, melodicas hurriedly catch up by compressing a warped version of this descending pattern into a single measure.`
+                        `The root progression here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, melodicas hurriedly catch up by compressing a warped version of this descending pattern into a single measure.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -326,10 +325,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `In some legends, a changeling hints at its true identity by using some tool in a peculiar manner. I figured trolls would have just as peculiar a way of playing instruments, and so I experimented with unconventional techniques, like pairing`,
+                        `In some legends, a changeling hints at its true identity by handling common tools in a peculiar way. I figured trolls would be no less peculiar in their manner of playing instruments, and so I experimented with unconventional techniques, like pairing`,
                         {
                             anchor: `palm mutes`,
                             wiki: `Palm_mute`
@@ -474,9 +472,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `I first learned of autism after overhearing my parents discuss my brother's condition in their Taiwanese accents. I then spent the next few days telling everyone that my brother was "artistic." And so I wanted the lyrics for this song to explore such ways in which mishearings of adult conversation might lead to roundabout understanding for a child.`,
+                    description: `I first learned of autism when I overheard my parents talk about my brother's condition in their thick Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics for this song to explore the ways in which a child's mishearings of adult conversations might lead to roundabout understanding.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGWRITING]: true
@@ -893,10 +890,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `To play the electric guitar riff here, I used both a glass slide and the whammy bar. Since each of these offers the capability to bend pitch, it doesn't make sense to combine them. But perhaps this is just the kind of nonsensical thing that a troll musician would happily do.`
+                        `To play the electric guitar riff here, I used both a glass slide and the whammy bar. Since each of these tools can bend pitch on its own, it makes little sense to combine them, which is exactly why a troll musician would do so.`
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

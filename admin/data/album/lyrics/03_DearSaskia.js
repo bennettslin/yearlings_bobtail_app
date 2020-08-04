@@ -51,6 +51,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
+                    // TODO: Make this one more about cloying bits and pieces from studying the Beatles.
                     description: [
                         `In my teenage years, I tried to figure out how`,
                         {
@@ -122,9 +123,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `I wanted the vocals to sound sickly here, which worked out well, since I was guaranteed to catch an awful cold at some point during the five years that I worked on this album.`,
+                    description: `I wanted the vocals to sound sickly here, and so I held off on recording them until I came down with an awful cold, which was guaranteed to happen at some point during the five years that I worked on this album.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -326,7 +326,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: `I matched the passive-aggressiveness of the lyrics with woodwind screeches and scratch tones on bowed guitars.`,
                     dotKeys: {
@@ -604,6 +603,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
+                    // TODO: Make this one more about melody and chords.
                     description: `When I first began to write songs, I noticed that every other aspiring songwriter would figure out their chords upfront, then fit any feasible melody to go on top. But my theory was that the Beatles wrote the melody and chords together, allowing their music to unfold organically. I was always trying to write the next "Martha My Dear," which may be evident here.`,
                     dotKeys: {
                         [SONGWRITING]: true
@@ -690,9 +690,8 @@ export default {
                         `on`,
                         {
                             anchor: `rat turds choked.`,
-                            todo: true,
                             card: {
-                                description: `I wasn't sure how to end a song about a painful stage of my life that seems comical in retrospect. I decided I was happier to err on the side of humor.`,
+                                description: `I wasn't sure how to end a song about a painful stage of my life that now seems comical in retrospect. I decided I was happiest to err on the side of humor.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [SONGWRITING]: true
