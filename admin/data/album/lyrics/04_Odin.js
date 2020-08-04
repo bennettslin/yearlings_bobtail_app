@@ -24,6 +24,7 @@ import {
 export default {
     title: 'Odin',
     duration: 200,
+    // SCRAPS: despair of a binary choice whose differences are illusory, as well as
     overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which terrified me more. Our house cat Odin died of old age later that summer, just as I was working out my spiritual beliefs. And yet, the eternal life promised by faith seemed no less dreadful to me than the finality of death.`,
     isDoublespeaker: true,
     lyricUnits: [
@@ -170,9 +171,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. So I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's the musical version of a cinematic split screen.`,
+                    description: `I wanted this song to capture the disorienting cycle between days amongst the foreign and dreams of the familiar. So I used a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's the musical version of a cinematic split screen.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGWRITING]: true
@@ -318,10 +318,9 @@ export default {
                         `Like a`,
                         {
                             anchor: `salamander`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Since writing doublespeaker rhyme could get daunting, I would challenge myself with fun exercises. One of them was to mention each of the four elementals of`,
+                                    `Writing doublespeaker rhyme was rather daunting, so I would challenge myself with fun exercises. One of these was to mention each of the four elementals of`,
                                     {
                                         anchor: `Paracelsus,`,
                                         wiki: `Paracelsus`
@@ -567,9 +566,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `While the two voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
+                    description: `While the two doublespeaker voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGWRITING]: true
@@ -692,9 +690,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `The drums were the one instrument for which I had to score parts that were far more advanced than my own abilities. So when it came time to record, I tried many workarounds. On this song, I recorded the kick, snare, and toms separately from the cymbals.`,
+                    description: `The drums were the one instrument for which I scored parts that were far more advanced than my own playing ability. So for this song, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -1055,10 +1052,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Recording vocals in doublespeaker rhyme proved to be trickier than I had anticipated. I came to discover that, when singing, we tend to delay or shorten certain syllables to adjust for phrasing and consonant clusters. As such, even when each voice in a doublespeaker set sounds fine on its own, they can turn into a jumbled mush once heard together. So to keep the syllabic durations and offsets in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
+                        `Recording vocals in doublespeaker rhyme proved to be trickier than expected. When singing, we tend to delay or shorten syllables to adjust for phrasing and consonant clusters. So even when each voice in a doublespeaker set sounded fine on its own, the disjointed syllables would meld into a jumbled mush once heard together. To keep them in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
                         {
                             anchor: `ligature.`,
                             wiki: `Ligature_(music)`
