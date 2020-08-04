@@ -90,9 +90,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `I needed a kid's voice to recite this quote, but no one I knew was popping them out just yet. So I had my sister do it.`,
+                    description: `I wanted a kid to recite this line, but no one I knew at the time was having kids just yet. So I had my sister do it.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -114,15 +113,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `In keeping with the Russian theme of space dogs, I tried to evoke the sound of the`,
+                        `In keeping with the Russian theme of dogs in space, I tried to evoke the sound of the`,
                         {
                             anchor: `balalaika`,
                             wiki: `Balalaika`
                         },
-                        `through frenetically plucked mandolins. Since Tuva is a Russian republic, I also added some`,
+                        `through frenetically plucked mandolins. Since Tuva is a Russian republic, I also added`,
                         {
                             anchor: `Tuvan throat singing,`,
                             wiki: `Tuvan_throat_singing`
@@ -676,10 +674,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `The sound of space transmissions in the background was made by bending the whammy bar of an electric guitar while banging it on the carpet floor. It took almost fifty tries, and I had to retune each time.`
+                        `The sound of rocket circuitry in the background was made by banging an electric guitar against the carpet floor while bending its whammy bar. It took countless tries, and I kept having to retune because the tuning would get messed up each time.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -760,10 +757,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `I learned about Tuvan throat singing after my first girlfriend Catherine took me to see a documentary called`,
+                        `I decided to learn Tuvan throat singing after my first girlfriend Catherine took me to see a documentary called`,
                         {
                             isItalic: true,
                             lyric: {
@@ -771,7 +767,7 @@ export default {
                                 wiki: `Genghis_Blues`
                             }
                         },
-                        `Within a week, I was able to sound out the main partials, which impressed her greatly. I've been trying to recapture that moment ever since.`
+                        `Within a week, I was able to sound out the main partials, which impressed her greatly. My life ever since has been all about recapturing the feeling of that moment.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1193,15 +1189,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Taking a cue from David Bowie's`,
+                        `David Bowie's`,
                         {
                             anchor: `"Space Oddity"`,
                             wiki: `Space_Oddity`
                         },
-                        `at its close, I made the sound of failing circuits by scraping the strings of an electric guitar against the pickup, while bouncing a metal rod on a single string near the bridge.`
+                        `closes with a free-form instrumental outro that evokes the sound of failing radio transmissions. I aimed for a similar effect by scraping the strings of an electric guitar against the pickup, and bouncing a metal rod on a single string near the bridge.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
