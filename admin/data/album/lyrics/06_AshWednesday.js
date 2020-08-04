@@ -728,7 +728,6 @@ export default {
                         `a`,
                         {
                             anchor: `spark zips through my head`,
-                            todo: true,
                             card: {
                                 wormhole: `spark_zips`
                             }

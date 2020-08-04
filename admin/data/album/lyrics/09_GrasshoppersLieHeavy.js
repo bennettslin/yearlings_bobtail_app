@@ -565,14 +565,12 @@ export default {
                     lyric: [
                         {
                             anchor: `chimneys weep`,
-                            todo: true,
                             card: {
                                 wormhole: `chimney_sweep`
                             }
                         },
                         {
                             anchor: `sooty dust.`,
-                            todo: true,
                             card: {
                                 wormhole: `suttee_dust`
                             }
@@ -704,7 +702,6 @@ export default {
                         `as your`,
                         {
                             anchor: `heartbeats,`,
-                            todo: true,
                             card: {
                                 wormhole: `harpies`
                             }
@@ -1036,7 +1033,6 @@ export default {
                         `Then you`,
                         {
                             anchor: `wake by a bell`,
-                            todo: true,
                             card: {
                                 wormhole: `belle`
                             }
@@ -1250,7 +1246,7 @@ export default {
                                     }
                                 },
                                 {
-                                    wormhole: `grey_starling`
+                                    wormhole: `gray_starling`
                                 }
                             ]
                         },

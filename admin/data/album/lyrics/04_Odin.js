@@ -611,7 +611,6 @@ export default {
                         `To`,
                         {
                             anchor: `dreams of whom`,
-                            todo: true,
                             card: {
                                 wormhole: {
                                     wormholeKey: `dreams_of_whom`,
@@ -1024,7 +1023,6 @@ export default {
                         `to`,
                         {
                             anchor: `stand onshore`,
-                            todo: true,
                             card: {
                                 wormhole: `stand_onshore`
                             }
@@ -1389,10 +1387,9 @@ export default {
                     lyricRight: [
                         `Though, no`,
                         {
-                            anchor: `grey starling's beak`,
-                            todo: true,
+                            anchor: `gray starling's beak`,
                             card: {
-                                wormhole: `grey_starling`
+                                wormhole: `gray_starling`
                             }
                         }
                     ]

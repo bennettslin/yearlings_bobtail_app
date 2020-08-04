@@ -52,15 +52,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `In the past, mentally disabled children were sometimes thought to be trolls in disguise known as`,
+                        `In the past, a mentally disabled child was sometimes thought to be a troll in disguise known as a`,
                         {
-                            anchor: `changelings,`,
+                            anchor: `changeling,`,
                             wiki: `Changeling`
                         },
-                        `who had been left in place of a stolen human child. So I wanted the music for this song to sound like a band of woodland trolls in secluded revelry after having just pulled off such a heist. I figured their style would be akin to the swamp rock of`,
+                        `who had been left in place of a stolen human child. So I wanted the music for this song to sound like a band of woodland trolls in secluded revelry after having pulled off such a heist. I figured their style would be akin to the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival,`,
                             wiki: `Creedence_Clearwater_Revival`
@@ -154,7 +153,7 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `The root progression here traces a zigzag in which every minor-third drop is followed by a whole-step rise. At the cadence of each line, melodicas hurriedly catch up by condensing a warped version of this descending pattern into a single measure.`
+                        `The root progression here traces a zigzag in which every minor-third drop is followed by a whole-step rise. At the cadence of each line, melodicas hurriedly catch up by compressing a warped version of this descending pattern into a single measure.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -254,7 +253,7 @@ export default {
                             anchor: `he ends his stroll.`,
                             todo: true,
                             card: {
-                                description: `In most legends, the changeling left in place of a stolen human child is a witting participant in the deceit. As such, it takes pains to hide its true form in the company of its human family and neighbors. And so before Willy goes off to cash in his recyclables, he "ends as troll" by putting on his human guise.`,
+                                description: `In most legends, the changeling left in place of a stolen human child is a witting participant in the deceit. As such, it takes pains to hide its true form in the company of its human family and neighbors. And so before Willy goes off to cash in his recyclables, he "ends as troll" by donning his human guise.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true

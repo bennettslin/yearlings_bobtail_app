@@ -248,7 +248,6 @@ export default {
                         `And I'd reflect inside`,
                         {
                             anchor: `withering`,
-                            todo: true,
                             card: {
                                 wormhole: `withering`
                             }

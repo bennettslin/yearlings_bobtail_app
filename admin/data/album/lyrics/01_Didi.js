@@ -288,9 +288,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    wormhole: {
-                                        wormholeKey: `safeway_paper_bag`
-                                    }
+                                    wormhole: `safeway_paper_bag`
                                 }
                             ]
                         }
@@ -391,15 +389,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `"Wouldn't It Be Nice" is once again evoked here, this time by modulating down a minor third to segue into the bridge. In its time,`,
-                        {
-                            isItalic: true,
-                            lyric: `Pet Sounds`
-                        },
-                        `was a pioneering work in the field of sound recording, and with the increasing affordability of home studios in the early 2000s, I sensed that the next wave of advancement was afoot. My hope was to be part of this wave by pointing to new artistic directions that were only now made possible with the latest tools, much like Beach Boys leader Brian Wilson had done with his magnum opus. And so I wanted this homage to be anything but subtle.`
+                        `"Wouldn't It Be Nice" is once again evoked here, this time by modulating down a minor third to segue into the bridge.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -555,6 +547,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
+                    // . In its time,`,
+                    //     {
+                    //         isItalic: true,
+                    //         lyric: `Pet Sounds`
+                    //     },
+                    //     `was a pioneering work in the field of sound recording, and with the increasing affordability of home studios in the early 2000s, I sensed that the next wave of advancement was afoot. My hope was to be part of this wave by pointing to new artistic directions that were only now made possible with the latest tools, much like Beach Boys leader Brian Wilson had done with his magnum opus. And so I wanted this homage to be anything but subtle
                     description: [
                         `Since`,
                         {
