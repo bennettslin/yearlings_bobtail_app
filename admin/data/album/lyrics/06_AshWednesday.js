@@ -142,20 +142,19 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `For a song about two people who couldn't be any more different, I juxtaposed`,
+                        `For a song about two people who couldn't be more different, I juxtaposed`,
                         {
                             anchor: `Arabic maqam`,
                             wiki: `Arabic_maqam`
                         },
-                        `in the song's first half with`,
+                        `in the verses with`,
                         {
                             anchor: `Renaissance polyphony`,
                             wiki: `Polyphony`
                         },
-                        `in the second half.`
+                        `in the final chorus.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -234,15 +233,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `The shrieking whistles, which remind me of`,
+                        `The shrieking recorders mimic the sound of`,
                         {
                             anchor: `BART`,
                             wiki: `Bay_Area_Rapid_Transit`
                         },
-                        `trains braking in a subway tunnel underneath the sidewalk, were made by squeaking recorders, one soprano and one tenor.`
+                        `trains braking in a subway tunnel beneath the sidewalk. They were made by overblowing individual pitches that were then spliced together to form descending arpeggios— triplets for the soprano recorder, quadruplets for the tenor.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -377,14 +375,19 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the`,
+                        `Maqam is distinguished by its use of`,
                         {
-                            anchor: `Dobro.`,
-                            wiki: `Dobro`
-                        }
+                            anchor: `quarter tones,`,
+                            wiki: `Quarter_tone`
+                        },
+                        `which are absent in the Western`,
+                        {
+                            anchor: `chromatic scale.`,
+                            wiki: `Chromatic_scale`
+                        },
+                        `Since I didn't own any Arabic instruments, I sounded the quarter tones by detuning each instrument and then overdubbed them in as a separate take.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -423,7 +426,22 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: [
+                        `In Western music, a minor third can only be divided into unequal steps, whole and half, while a major third can be divided into equal whole steps. But a quarter tone placed exactly halfway across a minor third allows it to be traversed in two equal steps. This creates the confusing sensation of a squished major third, which fascinated my ears. As a result, I possibly went overboard with all the rapid-fire minor third runs that I threw in for the`,
+                        {
+                            anchor: `Dobro.`,
+                            wiki: `Dobro`
+                        }
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -688,9 +706,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps between the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
+                    description: [
+                        `The rainstick, rustling papers, and tambourine create the setting of a wet and windy`,
+                        {
+                            anchor: `Oakland`,
+                            wiki: `Oakland,_California`
+                        },
+                        `street.`
+                    ],
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -759,16 +783,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: [
-                        `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
-                        {
-                            anchor: `Oakland`,
-                            wiki: `Oakland,_California`
-                        },
-                        `night.`
-                    ],
+                    description: `When I wrote this three-part counterpoint for mandolins and banjo, I wasn't aware that they would drown out the vocals by occupying the same register. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that suits the ambience of a rainy evening.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -826,15 +842,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza were`,
+                        `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza are`,
                         {
                             anchor: `homophones`,
                             wiki: `Homophone`
                         },
-                        `of their counterparts in the second, so I made a game of matching the two stanzas as closely as possible. This later gave me the idea for doublespeaker rhyme.`],
+                        `of their counterparts in the second, like "mourn" with "morn," and "born" with "borne." So I challenged myself to make the two stanzas match phonetically wherever possible. This later gave me the idea for doublespeaker rhyme.`
+                    ],
                     dotKeys: {
                         [SONGWRITING]: true
                     }
