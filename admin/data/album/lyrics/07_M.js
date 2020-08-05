@@ -76,9 +76,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `This song is a carryover from back when the band was still just The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
+                    description: `This song is one of two on this album that was an original Yearlings staple. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciations to make the puns obvious.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGWRITING]: true
@@ -250,7 +249,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this manner would be.`
@@ -336,15 +334,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Back when I was learning to play the banjo, I would practice Earl Scruggs's`,
+                        `Back when I first started to play the banjo, I would strum the motions of Earl Scruggs's`,
                         {
                             anchor: `three-finger roll`,
                             wiki: `Scruggs_style`
                         },
-                        `by strumming the motions on my jeans throughout the day. From there, it easily crossed over into my guitar technique, as can be heard on the Spanish guitar here.`
+                        `on my kneecap day and night. From there, it naturally crossed over to my guitar fingerpicking technique, as can be heard on the Spanish guitar here.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -415,9 +412,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `As the Yearlings, we would perform this song at breakneck speed. I moderated the tempo in this recording to make the lyrics intelligible. But even then, my own drumming skills were not up to par. So I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon playback.`,
+                    description: `As the Yearlings, we would perform this song at breakneck speed, but in this recording I moderated the tempo to make the lyrics intelligible. Even so, my drumming skills were still not up to par, so I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -664,7 +660,6 @@ export default {
                         `With her "I do,"`,
                         {
                             anchor: `my life in marriage`,
-                            todo: true,
                             card: {
                                 description: `Or else, my life in "Mara." I thought I had chosen to forego this particular pun, but the exaggerated pronunciation is distinctly there in the recording…`,
                                 dotKeys: {
