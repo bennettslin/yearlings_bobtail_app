@@ -47,12 +47,17 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `In the final chapter of James Joyce's`,
+                        `In the final chapter of`,
                         {
                             isItalic: true,
                             lyric: `Ulysses,`
                         },
-                        `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed this technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`
+                        `the narrator daydreams in an uninterrupted`,
+                        {
+                            anchor: `stream of consciousness.`,
+                            wiki: `Stream_of_consciousness`
+                        },
+                        `I borrowed this technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`
                     ],
                     dotKeys: {
                         [REFERENCE]: true,

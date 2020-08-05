@@ -126,7 +126,10 @@ export default {
                                     `riddle, of course, but also to James Joyce's masterpiece novel`,
                                     {
                                         isItalic: true,
-                                        lyric: `Ulysses,`
+                                        lyric: {
+                                            anchor: `Ulysses,`,
+                                            wiki: `Ulysses_(novel)`
+                                        }
                                     },
                                     `which Catherine was reading at the time. In hindsight, that night was probably the beginning of the end, as Catherine surmised that a boyfriend who didn't read for pleasure would be the death of her.`
                                 ],
@@ -431,7 +434,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `In Western music, a minor third can only be divided into unequal steps, whole and half, while a major third can be divided into equal whole steps. But a quarter tone placed exactly halfway across a minor third allows it to be traversed in two equal steps. This creates the confusing sensation of a squished major third, which fascinated my ears. As a result, I possibly went overboard with all the rapid-fire minor third runs that I threw in for the`,
+                        `In Western music, a minor third can only be divided into unequal steps, whole and half, while a major third can be divided into equal whole steps. But a quarter tone placed exactly halfway across a minor third allows it to be traversed in two equal steps. This creates the confusing sensation of a squished major third, which fascinated my ears. As a result, I possibly went overboard with all the rapid-fire minor third runs played here on the`,
                         {
                             anchor: `Dobro.`,
                             wiki: `Dobro`

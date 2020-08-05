@@ -257,13 +257,10 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `I never got past the first fifty pages of`,
+                        `To be honest, I never got past the first fifty pages of`,
                         {
                             isItalic: true,
-                            lyric: {
-                                anchor: `Finnegans Wake.`,
-                                wiki: `Finnegans_Wake`
-                            }
+                            lyric: `Finnegans Wake.`
                         },
                         `Still, I was impressed by Joyce's use of literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal.`
                     ],

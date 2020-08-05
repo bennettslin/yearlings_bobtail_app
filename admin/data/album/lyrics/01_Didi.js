@@ -66,7 +66,20 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `Toy instruments abound in this song sung from the perspective of my sister as a child. Here, autoharp and glockenspiel lead into an intro that recalls the first few measures of "Wouldn't It Be Nice," the opening song of the 1966 Beach Boys album`,
+                        `Toy instruments abound in this song sung from the perspective of my sister as a child. Here, autoharp and glockenspiel lead into an intro that recalls the first few measures of`,
+                        {
+                            anchor: `"Wouldn't It Be Nice,"`,
+                            wiki: `Wouldn%27t_It_Be_Nice`
+                        },
+                        `the opening song of the 1966`,
+                        {
+                            isItalic: true,
+                            lyric: {
+                                anchor: `Beach Boys`,
+                                wiki: `The_Beach_Boys`
+                            }
+                        },
+                        `album`,
                         {
                             isItalic: true,
                             lyric: {
@@ -147,7 +160,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My ambition for this album was to do for rock music what James Joyce had done for modern literature. Since his semi-autobiographical first novel,`,
+                        `My ambition for this album was to do for rock music what`,
+                        {
+                            anchor: `James Joyce`,
+                            wiki: `James_Joyce`
+                        },
+                        `had done for modern literature. Since his semi-autobiographical first novel,`,
                         {
                             isItalic: true,
                             lyric: {
