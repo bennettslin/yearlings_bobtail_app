@@ -1191,7 +1191,10 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `David Bowie's`,
+                        {
+                            anchor: `David Bowie's`,
+                            wiki: `David_Bowie`
+                        },
                         {
                             anchor: `"Space Oddity"`,
                             wiki: `Space_Oddity`

@@ -44,7 +44,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `In the final chapter of`,
@@ -57,7 +56,7 @@ export default {
                             anchor: `stream of consciousness.`,
                             wiki: `Stream_of_consciousness`
                         },
-                        `I borrowed this technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`
+                        `I borrowed this technique to capture the torrent of unspoken thoughts that rushes through my head as Sita extends her good wishes before I depart.`
                     ],
                     dotKeys: {
                         [REFERENCE]: true,
@@ -677,12 +676,17 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `The band Television are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to`,
+                        `The band`,
+                        {
+                            anchor: `Television`,
+                            wiki: `Television_(band)`
+                        },
+                        `are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to their album`,
                         {
                             anchor: `Marquee Moon`,
                             wiki: `Marquee_Moon`
                         },
-                        `on repeat to gather ideas. The lick of tumbling triplets here was stolen note for note from the song "Friction."`
+                        `on repeat to gather ideas. The lick of tumbling triplets here was stolen note for note from their song "Friction."`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true

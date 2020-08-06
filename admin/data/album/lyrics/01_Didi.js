@@ -41,7 +41,12 @@ export default {
                             anchor: `Taiwan,`,
                             wiki: `Taiwan`
                         },
-                        `a Pacific island that was taken over by the Chinese in 1949. The Taiwanese we spoke at home thus included a healthy sprinkle of Chinese words.`
+                        `a Pacific island that was taken over by the Chinese in 1949. The`,
+                        {
+                            anchor: `Taiwanese`,
+                            wiki: `Taiwanese_Hokkien`
+                        },
+                        `we spoke at home thus included a healthy sprinkle of Chinese words.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true

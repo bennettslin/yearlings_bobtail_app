@@ -64,7 +64,16 @@ export default {
                             anchor: `Creedence Clearwater Revival,`,
                             wiki: `Creedence_Clearwater_Revival`
                         },
-                        `with melodicas to evoke Cajun accordions.`
+                        `with`,
+                        {
+                            anchor: `melodicas`,
+                            wiki: `Melodica`
+                        },
+                        `to evoke`,
+                        {
+                            anchor: `Cajun accordions.`,
+                            wiki: `Cajun_accordion`
+                        }
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
