@@ -186,12 +186,11 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `I wanted the music to sound sentimental with a few rough edges, so channeling`,
                         {
                             anchor: `Simon and Garfunkel`,
                             wiki: `Simon_%26_Garfunkel`
                         },
-                        `seemed like a good choice.`
+                        `always manage to sound sentimental without being sappy, so I tried to channel their spirit here.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -904,7 +903,7 @@ export default {
                                 wiki: `Nevermind`
                             }
                         },
-                        `for me is when Kurt Cobain jumps up an octave for the third verse of "Lounge Act." My urge to recreate this effect was always at odds with my tendency to write melodies that span my whole vocal range. So when I realised that the chorus melody for this song stays within a single register, I transposed the song accordingly to make it work.`
+                        `for me is when Kurt Cobain jumps up an octave for the third verse of "Lounge Act." My desire to recreate this effect was always at odds with my tendency to write melodies that span my whole vocal range. So when I realised that the chorus melody for this song stays within a single register, I transposed the song accordingly to make it work.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
