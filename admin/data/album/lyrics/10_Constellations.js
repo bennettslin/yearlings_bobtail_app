@@ -90,7 +90,7 @@ export default {
                                                 wiki: `Finnegans_Wake`
                                             }
                                         },
-                                        `James Joyce's ambitious final novel, opens with the line "riverrun, past Eve and Adam's," so I figured I would start there as well.`
+                                        `James Joyce's ambitious final novel, opens with the line, "riverrun, past Eve and Adam's." So I figured I would start there as well.`
                                     ],
                                     dotKeys: {
                                         [SONGWRITING]: true,
@@ -954,7 +954,7 @@ export default {
                             anchor: `Bollywood`,
                             wiki: `Bollywood`
                         },
-                        `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of our favourite,`,
+                        `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of our favorite,`,
                         {
                             isItalic: true,
                             lyric: {

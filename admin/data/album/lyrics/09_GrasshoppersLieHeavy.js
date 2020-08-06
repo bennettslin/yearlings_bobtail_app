@@ -32,7 +32,12 @@ export default {
                 cards: [
                     {
                         description: [
-                            `During this time, I was reading a lot of Philip K. Dick novels such as`,
+                            `During this time, I was reading a lot of`,
+                            {
+                                anchor: `Philip K. Dick`,
+                                wiki: `Philip_K._Dick`
+                            },
+                            `novels such as`,
                             {
                                 isItalic: true,
                                 lyric: {
@@ -93,7 +98,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Just as`,
@@ -101,12 +105,12 @@ export default {
                             isItalic: true,
                             lyric: `The Grasshopper Lies Heavy`
                         },
-                        `offers its fictional readers a reality that's vastly different from the one they know, this song is a self-contained narrative that offers a vastly different ending from the album as a whole. Like Dick, I wanted to explore`,
+                        `offers its fictional readers a reality that differs vastly from the one they know, this song is a self-contained narrative that offers a vastly different ending from the album as a whole. Like Dick, I wanted to explore the`,
                         {
                             anchor: `meta-referential`,
                             wiki: `Meta-reference`
                         },
-                        `possibilities for a story within a story, and did so by dropping lyrical references to all the other songs on the album, which I call wormholes.`
+                        `possibilities of a story within a story. And so this song contains subtle lyrical references to all the other songs on the album. I call these wormholes.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -182,12 +186,12 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `I wanted the music to sound sentimental with a few rough edges, so channelling`,
+                        `I wanted the music to sound sentimental with a few rough edges, so channeling`,
                         {
                             anchor: `Simon and Garfunkel`,
                             wiki: `Simon_%26_Garfunkel`
                         },
-                        `throughout seemed like a good choice.`
+                        `seemed like a good choice.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -1197,7 +1201,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `The ascending chord progression here symbolises falling in love, and eventually, sexual climax. Simple enough.`,
+                    description: `The ascending chord progression symbolizes both a blooming relationship and sexual climax.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }

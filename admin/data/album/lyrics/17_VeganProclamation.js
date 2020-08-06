@@ -77,7 +77,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `As the previous song ends with me fading away while listening to my favourite records, the crackle of a needle on vinyl introduces the third and final song of the medley.`,
+                    description: `As the previous song ends with me fading away while listening to my favorite records, the crackle of a needle on vinyl introduces the third and final song of the medley.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -185,7 +185,14 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast stuck with me, and I thought it would work well here.`,
+                    description: [
+                        `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian`,
+                        {
+                            anchor: `parlour song.`,
+                            wiki: `Parlour_music`
+                        },
+                        `The ironic contrast stuck with me, and I thought it would work well here.`
+                    ],
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true,
@@ -721,7 +728,7 @@ export default {
                                         anchor: `"Stardust"`,
                                         wiki: `Stardust_(song)`
                                     },
-                                    `was my favourite song, so "stardust" became my go-to word to use for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children?" and deeply connected with it. He seemed greatly disappointed to find out that the actual words were gibberish.`
+                                    `was my favorite song, so "stardust" became my go-to word to use for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children?" and deeply connected with it. He seemed greatly disappointed to find out that the actual words were gibberish.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true

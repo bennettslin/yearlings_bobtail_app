@@ -1013,7 +1013,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Ambrose Bierce also wrote the short story`,
@@ -1021,7 +1020,7 @@ export default {
                             anchor: `"An Occurrence at Owl Creek Bridge,"`,
                             wiki: `An_Occurrence_at_Owl_Creek_Bridge`
                         },
-                        `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`
+                        `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I have recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true

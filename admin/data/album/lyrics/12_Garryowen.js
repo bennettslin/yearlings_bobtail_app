@@ -483,7 +483,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `Though I'd taken violin lessons as a child, my skills were horribly rusty by the time I made this album. Rather than get up to speed through intensified practice, I just recorded the fiddle track here by playing fragments of two or three notes at a time, then splicing them into a single take. To justify my cop-out, I threw in a complicated glissando whenever the score permitted.`,
+                    description: `Though I'd taken violin lessons as a child, my skills were pretty rusty by the time I made this album. Rather than get up to speed through intensified practice, I just recorded the fiddle track here by playing fragments of two or three notes at a time, then splicing them into a single take. To justify my cop-out, I threw in a complicated glissando whenever the score permitted.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }

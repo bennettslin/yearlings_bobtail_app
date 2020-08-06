@@ -61,9 +61,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
+                    description: [
+                        `A fellow dishroom worker named Owen had a`,
+                        {
+                            anchor: `four-track cassette recorder,`,
+                            wiki: `Portastudio`
+                        },
+                        `and some nights we would go back to his place to twiddle with it. Owen would tap out these intricate yet impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`
+                    ],
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGWRITING]: true
@@ -184,7 +190,7 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `So as not to wake his neighbours, Owen would sing in muffled tones and then double track his vocals. I didn't have a cassette player handy to play his demos, so I took notes from`,
+                        `So as not to wake his neighbors, Owen would sing in muffled tones and then double track his vocals. I didn't have a cassette player handy to play his demos, so I took notes from`,
                         {
                             anchor: `Elliott Smith,`,
                             wiki: `Elliott_Smith`
@@ -223,7 +229,7 @@ export default {
                             anchor: `past ring one,`,
                             todo: true,
                             card: {
-                                description: `A ring also symbolises long-term commitment in a relationship. And of course, after years of constant struggle to win someone over, I am now in my first serious relationship.`,
+                                description: `A ring also symbolizes long-term commitment in a relationship. And of course, after years of constant struggle to win someone over, I am now in my first serious relationship.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [REFERENCE]: true
@@ -292,7 +298,7 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `When I asked Owen to recommend some great lyricists, he pointed me to Nas. I hadn't given serious thought to hip hop at the time, believing it to be too far removed from my own method of songwriting to offer much useful wisdom. (I've since corrected this heinous oversight.) But even as my lone point of reference for hip hop back then, Nas's debut album`,
+                        `When I asked Owen to recommend some great lyricists, he pointed me to Nas. I hadn't given serious thought to hip hop at the time, believing it to be too far removed from my own method of songwriting to offer much useful wisdom. But even as my lone point of reference for hip hop back then, Nas's debut album`,
                         {
                             anchor: `Illmatic`,
                             wiki: `Illmatic`
@@ -482,7 +488,14 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `I recorded the cymbals here at an extremely low tape speed, which turned them into pitched percussion upon normal playback.`,
+                    description: [
+                        `I recorded drum cymbals here at an extremely low tape speed, which turned them into`,
+                        {
+                            anchor: `pitched percussion`,
+                            wiki: `Pitched_percussion_instrument`
+                        },
+                        `upon normal playback.`
+                    ],
                     dotKeys: {
                         [SONGWRITING]: true
                     }
