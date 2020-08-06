@@ -915,7 +915,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `Sita's "well-worn sorries" quickly grew tiresome, precisely because only one of us needed to spend forever begging for forgiveness, and we both knew it wasn't her.`,
+                                    description: `Sita's "well-worn sorries" quickly grew tiresome, precisely because only one of us actually needed to beg the other for forgiveness, and we both knew it wasn't her.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true

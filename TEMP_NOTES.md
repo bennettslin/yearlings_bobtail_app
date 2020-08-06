@@ -4,6 +4,6 @@
 
 * Songwriting annotations
     * 2 Sasha
-    * 3 Good Night
-    * 3 Grasshoppers
+    * 1 Good Night
+    * 4 Grasshoppers
 * Make sure no wikis repeat.

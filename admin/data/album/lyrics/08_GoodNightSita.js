@@ -51,12 +51,12 @@ export default {
                             isItalic: true,
                             lyric: `Ulysses,`
                         },
-                        `the narrator daydreams in an uninterrupted`,
+                        `the character Molly Bloom daydreams in an uninterrupted`,
                         {
                             anchor: `stream of consciousness.`,
                             wiki: `Stream_of_consciousness`
                         },
-                        `I borrowed this technique to capture the torrent of unspoken thoughts that rushes through my head as Sita extends her good wishes before I depart.`
+                        `I borrowed this literary technique to capture the torrent of unspoken thoughts that rushes through my head as Sita extends her good wishes before I depart.`
                     ],
                     dotKeys: {
                         [REFERENCE]: true,
@@ -118,6 +118,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
+                    // herky jerky syncopations false starts.
                     description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
                     dotKeys: {
                         [SONGWRITING]: true
@@ -237,7 +238,7 @@ export default {
                                             anchor: `"Nora Barnacle"`,
                                             wiki: `Nora_Barnacle`
                                         },
-                                        `was the wife of James Joyce and the inspiration for his character Molly Bloom, whose interior monologue in`,
+                                        `was the wife of James Joyce and the inspiration for the Molly Bloom character, whose interior monologue in`,
                                         {
                                             isItalic: true,
                                             lyric: `Ulysses`
@@ -673,20 +674,18 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `The band`,
+                        `To continue with the 70s feel, I gathered ideas from the band`,
                         {
-                            anchor: `Television`,
+                            anchor: `Television,`,
                             wiki: `Television_(band)`
                         },
-                        `are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to their album`,
+                        `who are well known for the complex interplay between their two lead guitars. The lick of tumbling triplets heard here was stolen note for note from the song "Friction" off of their album`,
                         {
-                            anchor: `Marquee Moon`,
+                            anchor: `Marquee Moon.`,
                             wiki: `Marquee_Moon`
-                        },
-                        `on repeat to gather ideas. The lick of tumbling triplets here was stolen note for note from their song "Friction."`
+                        }
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -921,15 +920,18 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Children's albums from the 70s are a treasure trove of musical wisdom, including the soundtrack for`,
+                        {
+                            anchor: `Children's songs`,
+                            wiki: `Children%27s_music`
+                        },
+                        `from the 70s are a treasure trove of musical wisdom. They were composed by professionals, but then arranged for the popular styles of that time. A great example is the soundtrack for`,
                         {
                             anchor: `The New Mickey Mouse Club,`,
                             wiki: `The_Mickey_Mouse_Club`
                         },
-                        `a disco-inflected revival of the original 50s show. The Yearlings covered the song "Let's Go Day," from which I stole the idea of a synth playing portamento quarter notes.`
+                        `a disco-inflected 70s revival of the original 50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on a synth.`
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

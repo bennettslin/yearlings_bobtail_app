@@ -954,7 +954,7 @@ export default {
                             anchor: `Bollywood`,
                             wiki: `Bollywood`
                         },
-                        `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of our favorite,`,
+                        `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of one of our favorites,`,
                         {
                             isItalic: true,
                             lyric: {
