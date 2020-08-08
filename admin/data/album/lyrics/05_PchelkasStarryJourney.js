@@ -968,7 +968,7 @@ export default {
                                 }
                             }
                         },
-                        `we'd realise, blind before the squad.`
+                        `we'd realize, blind before the squad.`
                     ]
                 },
                 {

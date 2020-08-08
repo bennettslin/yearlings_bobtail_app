@@ -473,7 +473,7 @@ export default {
                             anchor: `a focus grown clear`,
                             todo: true,
                             card: {
-                                description: `A few hours into a date, my buzz would wear off, and I would realise that I'd just constructed an elaborate backstory that could only topple under scrutiny, like a totem pole carved from a stack of stumps rather than a single trunk.`,
+                                description: `A few hours into a date, my buzz would wear off, and I would realize that I'd just constructed an elaborate backstory that could only topple under scrutiny, like a totem pole carved from a stack of stumps rather than a single trunk.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true

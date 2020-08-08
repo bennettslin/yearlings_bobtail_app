@@ -80,7 +80,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `In the Book of Genesis, "Lot" fled with his family from the wicked city of Sodom. When`,
+                                        `In Genesis, "Lot" fled with his family from the wicked city of Sodom. When`,
                                         {
                                             anchor: `his wife`,
                                             wiki: `Lot%27s_wife`

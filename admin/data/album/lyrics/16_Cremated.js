@@ -243,7 +243,6 @@ export default {
                         `this`,
                         {
                             anchor: `phoenix risen limp`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In Greek mythology, the`,
@@ -251,7 +250,7 @@ export default {
                                         anchor: `phoenix`,
                                         wiki: `Phoenix_(mythology)`
                                     },
-                                    `is a bird that is reborn from its own ashes. Having broken up with Sita to date Miriam, I also await my triumphant rebirth. But as Miriam climbs on top of me to make out, I am overcome with self-doubt, and my "penis" rises limply, unable to reach a full erection.`
+                                    `is a bird that is reborn from its own ashes. Having broken up with Sita to date Miriam, I also await my triumphant rebirth. But with Miriam seated on my lap as we make out, I am suddenly overcome with self-doubt, and my "penis" rises limply, unable to reach a full erection.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -288,13 +287,18 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `pinkish slip,`,
-                            todo: true,
                             card: {
-                                description: `Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice given to inform an employee that they've been fired…`,
+                                description: [
+                                    `Miriam is wearing a silky pink undergarment under her skirt. Of course, a`,
+                                    {
+                                        anchor: `pink slip`,
+                                        wiki: `Termination_of_employment`
+                                    },
+                                    `is also a notice to inform an employee that they're getting fired…`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true,
-                                    [REFERENCE]: true
+                                    [PUN]: true
                                 }
                             }
                         },
@@ -320,7 +324,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realise that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
+                    description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realize that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGWRITING]: true
@@ -542,7 +546,7 @@ export default {
                             anchor: `worn puppet`,
                             todo: true,
                             card: {
-                                description: `Imagining the discarded condom to be a lifeless puppet, I realise that having a drunken personality is like being a ventriloquist. My dummy can then be used to say and do all the crude and questionable things needed to get what I want, while I just sit by as an innocent onlooker.`,
+                                description: `Imagining the discarded condom to be a lifeless puppet, I realize that having a drunken personality is like being a ventriloquist. My dummy can then be used to say and do all the crude and questionable things needed to get what I want, while I just sit by as an innocent onlooker.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -593,15 +597,19 @@ export default {
                     lyricRight: [
                         {
                             anchor: `twitching sword`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `While dubbing may refer to the replacement of an actor's voice in post-production, it also refers to the ritual of`,
+                                    `While`,
+                                    {
+                                        anchor: `dubbing`,
+                                        wiki: `Dubbing_(filmmaking)`
+                                    },
+                                    `may refer to the replacement of an actor's voice in post-production, it also refers to the ritual of`,
                                     {
                                         anchor: `conferring knighthood.`,
                                         wiki: `Accolade`
                                     },
-                                    `I imagine my drunken personality, confused by the orders he was given, erratically tapping a perilously sharp sword on my sober self's shoulder.`
+                                    `And so I imagine my drunken self, confused by the orders he has been given to confess to the crimes of my sober self, instead erratically patting him on the shoulder with a sharp sword.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -669,7 +677,6 @@ export default {
                         `it`,
                         {
                             anchor: `hums a typo`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Like a typo, Miriam's involvement with me was a simple mistake that she could easily correct. And like a`,
@@ -677,7 +684,7 @@ export default {
                                         anchor: `"Type O,"`,
                                         wiki: `Blood_type`
                                     },
-                                    `the universal blood donor, I was ever eager to give more of myself to her, while she could do nothing to save me in return.`
+                                    `the universal blood donor, I was ever eager to give of myself to her, even as she could do nothing to save me in return.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -687,10 +694,9 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. Of course, she had no choice, since who knows what horrors lurk in my genetic makeup? I might very well be a carrier of`,
+                                    `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. But of course she had no choice, since who knew what horrors lurked in my genetic makeup? Perhaps I was a carrier of`,
                                     {
                                         anchor: `"Fragile X,"`,
                                         wiki: `Fragile_X_syndrome`
@@ -712,7 +718,6 @@ export default {
                         `With his`,
                         {
                             anchor: `vinyl, exit`,
-                            todo: true,
                             card: {
                                 description: [
                                     `After Miriam helps me to my "final exit," a euphemism used by proponents of`,
@@ -720,7 +725,7 @@ export default {
                                         anchor: `assisted suicide,`,
                                         wiki: `Assisted_suicide`
                                     },
-                                    `she helps herself to my record collection, which she'll trade for cash at a music store.`
+                                    `I imagine her helping herself to my record collection, which she'll trade for cash at a record store.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -737,7 +742,6 @@ export default {
                         `Undeluded, she'll bask in`,
                         {
                             anchor: `selfish cut-off jeans,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In`,
@@ -748,7 +752,11 @@ export default {
                                             wiki: `The_Selfish_Gene`
                                         }
                                     },
-                                    `Richard Dawkins explains natural selection from the vantage point of genes themselves, rather than the individuals who carry them. So as Miriam blocks me from getting under her cutoffs ever again, I imagine that it's because her genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine.`
+                                    {
+                                        anchor: `Richard Dawkins`,
+                                        wiki: `Richard_Dawkins`
+                                    },
+                                    `explains natural selection from the vantage point of genes themselves, rather than the individual beings who carry them. So as Miriam blocks me from getting under her cutoffs ever again, I imagine it's because her genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -812,11 +820,10 @@ export default {
                         {
                             anchor: `Godspeed…"`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `My imagined scenario ends with Miriam feeling relieved to know that in her gene pool, "here's not where some lesser god has peed."`
+                                        `My imagined scenario ends with Miriam feeling mightily relieved, knowing that in her gene pool, "here's not where some lesser god has peed."`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -956,9 +963,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Redressed,`,
-                            todo: true,
                             card: {
-                                description: `As I get "redressed" by putting my clothes back on, I'm about to learn that the sex followed by a blowjob was meant to serve as redress for the bad news that is forthcoming.`,
+                                description: `As I get "redressed" by putting my clothes back on, I'm about to learn what Miriam had planned all along. Our latest sexual escapade was only meant to serve as redress for the bad news that she has forthcoming.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -976,7 +982,7 @@ export default {
                             anchor: `pulls the plug.`,
                             todo: true,
                             card: {
-                                description: `Upon hearing the cigarette lighter pop out, Miriam pulls it from the socket to light her cigarette. Having satisfied me with an orgasmic "pop," she now feels less troubled to "pull the plug" on our relationship.`,
+                                description: `Upon hearing the cigarette lighter plug pops out, Miriam pulls it from the socket to light her cigarette. Having satisfied me with an orgasmic "pop," she is now less troubled to "pull the plug" on our relationship.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true

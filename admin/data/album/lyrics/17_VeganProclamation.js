@@ -162,15 +162,14 @@ export default {
                         },
                         {
                             anchor: `from our chest?`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In Genesis, God gave life to`,
+                                    `In the Book of Genesis, God gave life to`,
                                     {
                                         anchor: `Eve`,
                                         wiki: `Eve`
                                     },
-                                    `by taking one of Adam's ribs. By contrast, my own promise to make sacrifices for Sita proved to be a "false rib," trapping her in a helpless state where she could never feel truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
+                                    `by taking one of Adam's ribs. By contrast, my own promise to make sacrifices for Sita proved to be a "false rib." And so she could never be truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -771,7 +770,7 @@ export default {
                                 todo: true,
                                 cards: [
                                     {
-                                        description: `With ignorance being as old as time itself, I'm comforted to know that we'll always correct our past mistakes. And yet, it feels just as dispiriting to know that those coming after us have yet to make theirs. The universe never truly learns, and I was partly to blame. I had this same thought as a child, when I wondered if I was the reason why my brother would never get better. It made me realise that all I could do was love him for who he was, and then do better for him.`,
+                                        description: `With ignorance being as old as time itself, I'm comforted to know that we'll always correct our past mistakes. And yet, it feels just as dispiriting to know that those coming after us have yet to make theirs. The universe never truly learns, and I was partly to blame. I had this same thought as a child, when I wondered if I was the reason why my brother would never get better. It made me realize that all I could do was love him for who he was, and then do better for him.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true

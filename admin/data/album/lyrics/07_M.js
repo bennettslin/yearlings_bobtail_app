@@ -646,7 +646,7 @@ export default {
                             anchor: `solely for a pet.`,
                             todo: true,
                             card: {
-                                description: `After Mara started dating Jacob, she continued to interact with me in the same flirtatious manner, which made me realise that I had misread her intentions all along.`,
+                                description: `After Mara started dating Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I had misread her intentions all along.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }

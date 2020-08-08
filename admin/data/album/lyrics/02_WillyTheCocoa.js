@@ -261,7 +261,7 @@ export default {
                             anchor: `he ends his stroll.`,
                             todo: true,
                             card: {
-                                description: `In most legends, the changeling left in place of a stolen human child is a witting participant in the deceit. As such, it takes pains to hide its true form in the company of its human family and neighbors. And so before Willy goes off to cash in his recyclables, he "ends as troll" by donning his human guise.`,
+                                description: `In most legends, the changeling is a witting participant in the deceit to replace a stolen human child. As such, it takes pains to hide its true form while in the company of human family and neighbors. And so before Willy goes off to cash in his recyclables, he "ends as troll" by donning his human guise.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true

@@ -370,7 +370,7 @@ export default {
                             anchor: `last thought`,
                             todo: true,
                             card: {
-                                description: `As Sita's ominous tone suddenly wrenches me from my bliss, I realise that I'm in a dream, and moreover, that it may be my last.`,
+                                description: `As Sita's ominous tone suddenly wrenches me from my bliss, I realize that I'm in a dream, and moreover, that it may be my last.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }

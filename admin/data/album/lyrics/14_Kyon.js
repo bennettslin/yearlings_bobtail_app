@@ -447,7 +447,7 @@ export default {
                             anchor: `ticklish piglet,`,
                             todo: true,
                             card: {
-                                description: `Perversely, Sita and I were always at our best during the months immediately after getting back together. She got to bask in the knowledge of being the better woman, while I still enjoyed the afterglow of my latest romantic escapade.`,
+                                description: `Perversely, Sita and I were always at our best during the months immediately after getting back together. She got to bask in the knowledge of being the better woman, while I still enjoyed the afterglow of my latest romantic exploit.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

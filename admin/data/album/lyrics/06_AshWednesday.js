@@ -390,7 +390,12 @@ export default {
                             anchor: `chromatic scale.`,
                             wiki: `Chromatic_scale`
                         },
-                        `Since I didn't own any Arabic instruments, I sounded the quarter tones by detuning each instrument and then overdubbed them in as a separate take.`
+                        `Since I didn't own any Arabic instruments, I sounded the quarter tones by detuning each instrument and then`,
+                        {
+                            anchor: `overdubbed`,
+                            wiki: `Overdubbing`
+                        },
+                        `them in as a separate take.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -420,7 +425,7 @@ export default {
                             anchor: `poised with brains?`,
                             todo: true,
                             card: {
-                                description: `Catherine didn't value the artistic strengths that I had always counted on to cover up my other weaknesses. Which made me realise that if I wanted to keep dating those so very unlike me, then I couldn't have any real weaknesses.`,
+                                description: `Catherine didn't value the artistic strengths that I had always counted on to cover up my other weaknesses. Which made me realize that if I wanted to keep dating those so very unlike me, then I couldn't have any real weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

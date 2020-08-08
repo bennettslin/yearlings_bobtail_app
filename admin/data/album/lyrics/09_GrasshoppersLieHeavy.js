@@ -903,7 +903,7 @@ export default {
                                 wiki: `Nevermind`
                             }
                         },
-                        `for me is when Kurt Cobain jumps up an octave for the third verse of "Lounge Act." My desire to recreate this effect was always at odds with my tendency to write melodies that span my whole vocal range. So when I realised that the chorus melody for this song stays within a single register, I transposed the song accordingly to make it work.`
+                        `for me is when Kurt Cobain jumps up an octave for the third verse of "Lounge Act." I always wanted to recreate this effect, but I could never do so because the melodies I write tend to span my whole vocal range. So when I realised that the chorus melody for this song stays within a single register, I transposed the song accordingly to make it work.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -1198,9 +1198,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `The ascending chord progression symbolizes both a blooming relationship and sexual climax.`,
+                    description: `The ascending chord progression initially signifies a blossoming relationship. Towards the end, it symbolizes sexual climax.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
