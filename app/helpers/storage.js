@@ -91,7 +91,7 @@ export const getInitialIndicesFromRoutingOrStorage = pageSongIndex => {
     let initialVerseIndex = storedVerseIndex
     let initialAnnotationIndex = storedAnnotationIndex
 
-    // If page song is valid, favour routing verse and annotation.
+    // If page song is valid, favor routing verse and annotation.
     if (isPageSongValid) {
         const isRoutingStoredSameSong = pageSongIndex === storedSongIndex
 

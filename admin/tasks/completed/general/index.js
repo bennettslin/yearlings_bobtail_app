@@ -2495,7 +2495,7 @@ export default [
         workedHours: 1
     },
     {
-        taskName: `Can svgs be done by percentages? And if not, can scene forego being rerendered after window resize?`,
+        taskName: `Can svgs be done by percentages? And if not, can scene forgo being rerendered after window resize?`,
         workedHours: 2
     },
     {
@@ -2944,7 +2944,7 @@ export default [
         workedHours: 0.5
     },
     {
-        taskName: `General North Hollywood neighbourhood scene.`,
+        taskName: `General North Hollywood neighborhood scene.`,
         workedHours: 0.5
     },
     {

@@ -379,7 +379,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `My family lived in the largely nonwhite neighbourhood of`,
+                                    `My family lived in the largely nonwhite neighborhood of`,
                                     {
                                         anchor: `North Hollywood.`,
                                         wiki: `North_Hollywood,_Los_Angeles`
@@ -451,7 +451,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `Here, I recall an incident in which Sasha came to my defence when a bully proceeded to punch me as if I were the "tetherball," after having wrapped me in its rope.`,
+                                    description: `Here, I recall an incident in which Sasha came to my defense when a bully proceeded to punch me as if I were the "tetherball," after having wrapped me in its rope.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true

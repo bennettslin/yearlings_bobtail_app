@@ -980,9 +980,8 @@ export default {
                         `a pop, and she`,
                         {
                             anchor: `pulls the plug.`,
-                            todo: true,
                             card: {
-                                description: `Upon hearing the cigarette lighter plug pops out, Miriam pulls it from the socket to light her cigarette. Having satisfied me with an orgasmic "pop," she is now less troubled to "pull the plug" on our relationship.`,
+                                description: `The cigarette lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she is now less troubled to "pull the plug" on our relationship.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -1027,9 +1026,8 @@ export default {
                         `puff,`,
                         {
                             anchor: `preparing the scoop,`,
-                            todo: true,
                             card: {
-                                description: `Miriam searches for a way to deliver the bad news in the least messy way possible, as if swooping in with "scoop" in hand after a pet takes its "dump" on her freshly manicured lawn.`,
+                                description: `Miriam searches for a way to deliver the bad news in the least messy way possible. It's as if she stands ready with "scoop" in hand, in case her pet loses control and takes a "dump" on her freshly manicured lawn.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1043,9 +1041,8 @@ export default {
                         `hungry carrying this groovy`,
                         {
                             anchor: `second hump.`,
-                            todo: true,
                             card: {
-                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. And in trading away Sita's love for the ego boost I gained from "humping" other women, I was like a starving camel who sacrificed his only meal just to wear a flashy new adornment on his back.`,
+                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. So in trading away Sita's love for the ego boost I gained from "humping" other women, I was like a senseless camel who forwent a lifetime of satisfying meals just to wear a flashy new adornment on his back.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

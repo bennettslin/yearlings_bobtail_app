@@ -152,7 +152,7 @@ export default {
                                             anchor: `Van Nuys,`,
                                             wiki: `Van_Nuys`
                                         },
-                                        `a neighbourhood smack-dab in the middle of the San Fernando Valley.`
+                                        `a neighborhood smack-dab in the middle of the San Fernando Valley.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -764,7 +764,7 @@ export default {
                             anchor: `unscrew a Bud…`,
                             todo: true,
                             card: {
-                                description: `I forego my chance to get to know the red-haired woman, not just because it's past last call, and another Budweiser would be needed to bring myself to the required level of self-deception. It's also too late for me to present myself as someone who isn't in a sexually intimate relationship with his best friend. I can't just "unscrew a bud" at will.`,
+                                description: `I forgo my chance to get to know the red-haired woman, not just because it's past last call, and another Budweiser would be needed to bring myself to the required level of self-deception. It's also too late for me to present myself as someone who isn't in a sexually intimate relationship with his best friend. I can't just "unscrew a bud" at will.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true

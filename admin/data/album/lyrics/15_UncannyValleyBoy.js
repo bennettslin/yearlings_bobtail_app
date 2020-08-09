@@ -30,21 +30,35 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
-                card: {
-                    description: [
-                        `The`,
-                        {
-                            anchor: `uncanny valley`,
-                            wiki: `Uncanny_valley`
-                        },
-                        `is a theory that human replicas become more repulsive to us as they grow further lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this San Fernando "Valley boy" now elicited a similar revulsion.`
-                    ],
-                    dotKeys: {
-                        [OBSERVATION]: true,
-                        [PUN]: true
+                cards: [
+                    {
+                        description: [
+                            `Growing up in the San Fernando Valley in the 80s meant that you represented the region that popularized the`,
+                            {
+                                anchor: `Valley girl`,
+                                wiki: `Valley_girl`
+                            },
+                            `stereotype, whether or not you embodied it yourself.`
+                        ],
+                        dotKeys: {
+                            [OBSERVATION]: true
+                        }
+                    },
+                    {
+                        description: [
+                            `The`,
+                            {
+                                anchor: `uncanny valley`,
+                                wiki: `Uncanny_valley`
+                            },
+                            `is a theory that human replicas only repulse us further as they grow more lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this "Valley boy" now elicited a similar revulsion from others.`
+                        ],
+                        dotKeys: {
+                            [OBSERVATION]: true,
+                            [PUN]: true
+                        }
                     }
-                }
+                ]
             }
         },
         {
@@ -156,10 +170,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Stumped,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `The tree finally sacrifices herself completely, allowing the boy to chop down her trunk to build a boat. When the boy returns as an old man, the tree is now just a stump, and can only offer a place to sit and rest.`,
+                                    description: `The tree finally sacrifices herself completely, allowing the boy to chop down her trunk to build a boat. When the boy returns as an old man, the tree is now just a stump and can only offer him a place to sit and rest.`,
                                     dotKeys: {
                                         [REFERENCE]: true
                                     }
@@ -225,9 +238,15 @@ export default {
                         `And you, for a future,`,
                         {
                             anchor: `sold your whole fortune`,
-                            todo: true,
                             card: {
-                                description: `My parents lament that the opportunism born from my ego is leading me to become a future "soldier of fortune," as I squander everything I have that is good with Sita in favour of unsavoury and foolhardy pursuits.`,
+                                description: [
+                                    `My parents lament that the opportunism born from my ego has made me a future`,
+                                    {
+                                        anchor: `"soldier of fortune,"`,
+                                        wiki: `Mercenary`
+                                    },
+                                    `as I squander everything good that I have now with Sita to chase unsavory and foolhardy pursuits.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -242,9 +261,15 @@ export default {
                         `to live neutered, blissfully`,
                         {
                             anchor: `and orphaned.`,
-                            todo: true,
                             card: {
-                                description: `Being "endorphined" in my perpetually inebriated state allows me to live like an orphan, in denial of having parents whose high expectations I fail to meet.`,
+                                description: [
+                                    `Being`,
+                                    {
+                                        anchor: `"endorphined"`,
+                                        wiki: `Endorphins`
+                                    },
+                                    `in my perpetually inebriated state allows me to live like an orphan, in denial of having parents whose high expectations I fail to meet.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -260,7 +285,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship,`,
                             todo: true,
                             card: {
-                                description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. My strategy in life thus became to visualise the reward of corrective justice, then patiently work towards it. I was like "a pawn" that "perches over queenship" as it steadily clambers towards the other side of the chessboard.`,
+                                description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. My strategy in life thus became to visualise the reward of corrective justice, then patiently work towards it. I was like "a pawn" that "perches over queenship" as it steadily clambers towards the opposite side of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -272,7 +297,7 @@ export default {
                             anchor: `earth right now your tourist store…`,
                             todo: true,
                             card: {
-                                description: `While my mother filled my head with visions of being a great artist, the mail-order cult instilled a belief that I was merely a visitor to this planet. And so, unaffected by earthly concerns, I was always going to work tirelessly for my "birthright" of artistic renown, which I felt it my duty "to restore."`,
+                                description: `While my mother filled my head with visions of being a great artist, the mail-order cult instilled a belief that I was merely a visitor to this planet. And so, unaffected by earthly concerns, I was always going to work tirelessly for my "birthright" of artistic renown, which I felt it my duty now "to restore."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
@@ -534,7 +559,7 @@ export default {
                         todo: true,
                         card: {
                             description: [
-                                `As I recall, the nightmare began with me scattering magic beans all around my neighbourhood. It was clearly based on the English fairy tale`,
+                                `As I recall, the nightmare began with me scattering magic beans all around my neighborhood. It was clearly based on the English fairy tale`,
                                 {
                                     anchor: `"Jack and the Beanstalk,"`,
                                     wiki: `Jack_and_the_Beanstalk`
@@ -657,7 +682,6 @@ export default {
                         `the`,
                         {
                             anchor: `testifiers' lore?`,
-                            todo: true,
                             card: {
                                 description: `After defeating Ravana, Rama forced Sita to walk through sacrificial flames to prove that she had remained chaste throughout her abduction. Sita complied, and escaped from this "test of fire" unharmed.`,
                                 dotKeys: {
@@ -740,9 +764,8 @@ export default {
                         `your idol who riled you when you saw that you`,
                         {
                             anchor: `two were tied?`,
-                            todo: true,
                             card: {
-                                description: `While Sita hoped for us to be "tied" in a matrimonial sense, I chafed that we were "tied" in the competitive sense.`,
+                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also "tied" in a competitive sense. In terms of who could look back on the most romantic partners, I didn't hold the lead, and this felt like a threat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
@@ -765,9 +788,8 @@ export default {
                         {
                             // NOTE: I changed "duel" to "dual" here.
                             anchor: `dual match,`,
-                            todo: true,
                             card: {
-                                description: `To onlookers, our relationship might have seemed like the ideal union between two people. But for me, it had become a zero-sum "duel match" that only one person could win.`,
+                                description: `To onlookers, Sita and I may have seemed like two people who were the ideal fit for each other. But to me, our relationship had become a zero-sum "duel match" that only one of us could win.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true
@@ -823,10 +845,9 @@ export default {
                         `When`,
                         {
                             anchor: `wakened from the siren,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Having lost sight of the group, I ended up passing out behind a bush, until I was jolted awake by an ambulance siren.`,
+                                    description: `Having lost sight of the group, I ended up passing out on the sidewalk. An ambulance siren jolted me awake.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -838,7 +859,12 @@ export default {
                                             anchor: `"Sirens"`,
                                             wiki: `Siren_(mythology)`
                                         },
-                                        `were beautiful women whose enchanting songs would lull sailors to their deaths against the rocky shores. But like Odysseus, who resisted by having himself tied to the mast, I blocked out the siren call of Sita's love by tying myself to my artistic ambitions.`
+                                        `were beautiful women whose enchanting songs would lull sailors and lead them to crash against the rocky shores. But just as`,
+                                        {
+                                            anchor: `Odysseus`,
+                                            wiki: `Odysseus`
+                                        },
+                                        `resisted by having himself tied to the mast, I blocked out the siren song of Sita's love by tying myself to my artistic ambitions.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -899,7 +925,6 @@ export default {
                         `No`,
                         {
                             anchor: `well worn sari`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -926,11 +951,10 @@ export default {
                         `could sway you from a`,
                         {
                             anchor: `fairer marathon!`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `The constant one-upmanship wasn't just petty. It was exhausting to keep an inner tally of every time I felt slighted. I wanted life to be more like a marathon that rewards patience and resolve. Since I possessed those traits in spades, that seemed most fair to me.`
+                                        `The constant one-upmanship wasn't just petty. It was exhausting to keep an inner tally of every time I felt slighted. I wanted life to feel more like a marathon that rewards patience and resolve. Since I possessed those traits in spades, that seemed most fair to me.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true
@@ -938,7 +962,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `"Marathon" sounds like Mara's full name spoken with a lisp. After all this time, I was still chasing after someone like Mara.`
+                                        `"Marathon" sounds like Mara's full name spoken with a lisp.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -959,12 +983,10 @@ export default {
                             `Your`,
                             {
                                 anchor: `dulling gold`,
-                                todo: true,
                                 card: {
-                                    description: `My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or as people, and most were arguably worse. But rather than work to recover my once treasured bond with Sita, which had lost its lustre only by my neglect, I happily exchanged it for the shiny "bronze" trophies offered by other women.`,
+                                    description: `My once treasured bond with Sita had lost its luster, even if only by my neglect.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [PUN]: true
+                                        [OBSERVATION]: true
                                     }
                                 }
                             },
@@ -996,7 +1018,7 @@ export default {
                                             anchor: `harpies`,
                                             wiki: `Harpy`
                                         },
-                                        `were female monsters with human heads and birdlike bodies. In common parlance, of course, a harpy is a nagging woman.`
+                                        `were female monsters with human heads and birdlike bodies. In common parlance, a harpy is a nagging woman.`
                                     ]
                                 },
                                 {
@@ -1007,7 +1029,6 @@ export default {
                         `can't draw this contest`,
                         {
                             anchor: `to be one!`,
-                            todo: true,
                             card: {
                                 description: `Or else, a contest to be "won."`,
                                 dotKeys: {
@@ -1027,12 +1048,18 @@ export default {
                             `…traded in for the`,
                             {
                                 anchor: `trophy blondes.`,
-                                todo: true,
                                 cards: [
                                     {
-                                        description: `To add insult to injury, the women I left Sita for were mostly white, which bothered her greatly. In my defence, it wasn't at all by design, but seeing her loss as my gain, I let her believe the worst.`,
+                                        description: `To add insult to injury, the women I left Sita for were usually white, which bothered her greatly. In my defense, this wasn't by design, but seeing her loss as my gain, I let her believe the worst.`,
                                         dotKeys: {
                                             [BACKSTORY]: true
+                                        }
+                                    },
+                                    {
+                                        description: `Like shiny new "bronzes" placed next to a gold award from the past, these other women were never more desirable than Sita in hindsight. They thrilled me most only because I had won them more recently.`,
+                                        dotKeys: {
+                                            [OBSERVATION]: true,
+                                            [PUN]: true
                                         }
                                     },
                                     {
@@ -1111,7 +1138,7 @@ export default {
                             anchor: `sun tinkles light`,
                             todo: true,
                             card: {
-                                description: `In the nightmare, I was now ruler of the neighbourhood, showering my subjects in my urine, their sole means of subsistence. In hindsight, my brain was probably telling me to get up and use the bathroom.`,
+                                description: `In the nightmare, I was now ruler of the neighborhood, showering my subjects in my urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -1197,7 +1224,6 @@ export default {
                 {
                     lyric: {
                         anchor: `old and subservient.`,
-                        todo: true,
                         cards: [
                             {
                                 description: `Amongst those I ruled over were my parents, now feeble and senile after a lifetime of following their "son's" bidding.`,
@@ -1207,7 +1233,7 @@ export default {
                                 }
                             },
                             {
-                                description: `It wasn't until college that I was able to appreciate the enormous sacrifices that my parents made for me and my siblings to have a better life than they did. But that this realisation had to come through assigned reading on immigrant history, rather than my own lived experiences, only further added to my guilt.`,
+                                description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But that this awareness had to come about through assigned coursework on the history of immigration, rather than through my own lived experiences, only further added to my guilt.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

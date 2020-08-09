@@ -361,9 +361,19 @@ export default {
                         `As I soak in spirits amidst`,
                         {
                             anchor: `wanted ads—`,
-                            todo: true,
                             card: {
-                                description: `As drunken me wanders the Oakland streets, he pauses to read flyers seeking bandmates that are posted on utility poles, much like a vigilante of the Old West might take interest in a "wanted" poster.`,
+                                description: [
+                                    `As drunken me wanders the Oakland streets, he pauses to read flyers posted on utility poles by those seeking bandmates, much like a vigilante of the`,
+                                    {
+                                        anchor: `Old West`,
+                                        wiki: `American_frontier`
+                                    },
+                                    `might take interest in a`,
+                                    {
+                                        anchor: `wanted poster.`,
+                                        wiki: `Wanted_poster`
+                                    }
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -715,7 +725,7 @@ export default {
                 },
                 {
                     time: 126,
-                    lyricCentre: `this bracelet, its lustre; me, my lust.`
+                    lyricCentre: `this bracelet, its luster; me, my lust.`
                 },
                 {
                     time: 130,
@@ -827,12 +837,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `In antiquity, the`,
+                                        `In antiquity, legend held that whosoever could unravel the tightly entangled`,
                                         {
                                             anchor: `"Gordian Knot"`,
                                             wiki: `Gordian_Knot`
                                         },
-                                        `was a rope so tightly entangled that whosoever could unravel it would rule all of Asia.`,
+                                        `would rule all of Asia.`,
                                         {
                                             anchor: `Alexander the Great`,
                                             wiki: `Alexander_the_Great`
@@ -1045,7 +1055,7 @@ export default {
                     ],
                     lyricRight: [
                         {
-                            anchor: `forego like jewelry`,
+                            anchor: `forgo like jewelry`,
                             todo: true,
                             card: {
                                 description: `As these things go, Sita and I had a turbulent on-again, off-again relationship for a while longer. During one stretch when things were looking rosier than ever, she asked to have the bracelet back to wear again, which I happily obliged. Somehow I had dented it in my pocket that night, however, creating a permanent reminder that certain things can never be undone, only amended.`,

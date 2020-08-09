@@ -3,7 +3,7 @@
 * Turn back on the feature to select all dots when annotation is in URL, in getDotsBitFromStorage.
 
 * Pun annotations (going backwards)
-    * 3 Cremated
+    * 1 Golden Cord
 
 * Songwriting annotations
     * 2 Sasha

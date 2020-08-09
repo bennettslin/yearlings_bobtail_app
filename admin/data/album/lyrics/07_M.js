@@ -661,7 +661,7 @@ export default {
                         {
                             anchor: `my life in marriage`,
                             card: {
-                                description: `Or else, my life in "Mara." I thought I had chosen to forego this particular pun, but the exaggerated pronunciation is distinctly there in the recording…`,
+                                description: `Or else, my life in "Mara." I thought I had chosen to leave out this particular pun, but the exaggerated pronunciation is distinctly there in the recording…`,
                                 dotKeys: {
                                     [SONGWRITING]: true,
                                     [PUN]: true

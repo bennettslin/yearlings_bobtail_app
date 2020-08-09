@@ -1121,7 +1121,7 @@ export default {
                                         anchor: `"scimitar`,
                                         wiki: `Scimitar`
                                     },
-                                    `offence" with a plan to drive through the "cemetery fence."`
+                                    `offense" with a plan to drive through the "cemetery fence."`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

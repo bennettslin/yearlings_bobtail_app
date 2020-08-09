@@ -359,15 +359,14 @@ export default {
                         `as the sole`,
                         {
                             anchor: `keeper of his sheep herd.`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `A "keeper," in both the sense of being the one who tends to the herd, as well as being the only one to keep from`,
+                                    `A "keeper" in the sense of being the one who tends to the herd, as well as the only one to keep from`,
                                     {
                                         isEmphasis: true,
                                         lyric: `amongst`
                                     },
-                                    `the herd. Sita was now resigned to my infidelity, and only held out the hope that her permissiveness might earn her a privileged place amidst all the other women I desired.`
+                                    `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness might earn her a privileged place amidst all the other women I desired.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -396,6 +395,7 @@ export default {
                                     ]
                                 },
                                 {
+                                    // TODO: Used the word infidelity already.
                                     description: `Sita anticipated that my years of infidelity would whiz by in a flash as the pursuit of other women grew repetitive, imprinting few standout memories.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -406,23 +406,22 @@ export default {
                         `to`,
                         {
                             anchor: `spring forward on a fallback…`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `The passage of time is invoked by the classic mnemonic for`,
+                                        `The passage of time is invoked here by a classic mnemonic for`,
                                         {
-                                            anchor: `daylight saving time,`,
+                                            anchor: `daylight saving time.`,
                                             wiki: `Daylight_saving_time`
                                         },
-                                        `"spring forward, fall back," which teaches us to set our clocks one hour forward in the spring, and backward in the fall.`
+                                        `"Spring forward, fall back" reminds us to set our clocks forward every spring and backward every fall.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true
                                     }
                                 },
                                 {
-                                    description: `Sita also hoped that the endless disappointments I was sure to face as an aging playboy would compel me to return to her, my fallback option, with relief rather than reluctance.`,
+                                    description: `Given the heavy disappointment I was bound to face as a womanizer whose later years proved unkind, I would surely return to Sita, my fallback option, with relief rather than reluctance.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -574,9 +573,8 @@ export default {
                         `Besides, a`,
                         {
                             anchor: `you-shaped pussing sore`,
-                            todo: true,
                             card: {
-                                description: `Or else, "U-shaped." Yet another comparison of vaginal penetration to an inflicted lesion. I think I was feeling both guilty and horny when I wrote these lyrics.`,
+                                description: `Or else, "U-shaped." Yet more imagery comparing vaginal penetration to an inflicted lesion. I think I was feeling both guilty and horny when I wrote these lyrics.`,
                                 dotKeys: {
                                     [PUN]: true,
                                     [SONGWRITING]: true
