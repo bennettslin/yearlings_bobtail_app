@@ -79,7 +79,6 @@ export default {
                     lyric: [
                         {
                             anchor: `reverends, paused`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -90,7 +89,7 @@ export default {
                                                 wiki: `Finnegans_Wake`
                                             }
                                         },
-                                        `James Joyce's ambitious final novel, opens with the line, "riverrun, past Eve and Adam's." So I figured I would start there as well.`
+                                        `James Joyce's ambitious final novel, opens with the line, "riverrun, past Eve and Adam's." So I figured this song could start there as well.`
                                     ],
                                     dotKeys: {
                                         [SONGWRITING]: true,
@@ -99,7 +98,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Since I am the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey, and we tread with "reverence" through the UCLA campus.`
+                                        `Since I am the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey. And so we tread with "reverence" through the UCLA campus.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true
@@ -125,9 +124,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Heavin' some, Ana`,
-                            todo: true,
                             card: {
-                                description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll probably want to retch. Within a moment, though, your lungs will shrivel away, and you'll be peacefully breathing through gills underwater.`,
+                                description: `"Heaving some, Ana whispers a low sigh." The others have just learned that when you first down a whole bottle of Robitussin, you'll likely want to retch. Within a moment, though, you'll feel your lungs shrivel away, and it's like you're peacefully breathing through gills underwater.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -137,10 +135,9 @@ export default {
                         },
                         {
                             anchor: `whispures a low sigh, bein'…`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the historical role played by psychedelic drugs that textbooks naturally failed to mention. One theory is that`,
+                                    `"Heaven's manna was pure psilocybin." At the time, I was intrigued by the role played by psychedelic drugs in world history. Though textbooks naturally failed to provide this information, it was readily available in the alternative bookstores around Berkeley. One theory is that`,
                                     {
                                         anchor: `manna`,
                                         wiki: `Manna`
@@ -166,7 +163,6 @@ export default {
                         `of`,
                         {
                             anchor: `de exempt,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -187,7 +183,7 @@ export default {
                                             anchor: `plagues`,
                                             wiki: `Plagues_of_Egypt`
                                         },
-                                        `that God visited upon Egypt, just as we are now immune to flu symptoms.`
+                                        `that God visited upon Egypt. And with stomachs full of Robitussin, we were spared any chance of showing flu symptoms.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
@@ -198,7 +194,6 @@ export default {
                         },
                         {
                             anchor: `exit us`,
-                            todo: true,
                             card: {
                                 description: [
                                     `As the Book of`,
@@ -218,16 +213,20 @@ export default {
                         {
                             anchor: `Viking den…`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `Like the`,
+                                        `The`,
                                         {
-                                            anchor: `Vikings,`,
+                                            anchor: `Vikings`,
                                             wiki: `Vikings`
                                         },
-                                        `Norse seafarers who expanded outward from Scandinavia beginning in the 8th century, we have left the comfort of our dens to explore new vistas.`
+                                        `were Norse seafarers who expanded outward from`,
+                                        {
+                                            anchor: `Scandinavia`,
+                                            wiki: `Scandinavia`
+                                        },
+                                        `beginning in the 8th century. Like them, we have left the comfort of our dens to explore new vistas.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true
@@ -235,12 +234,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Ana's friends Howie and Tomer, being seasoned drug users but having never taken Robitussin before, assume its effects are weaker than those of prescribed painkillers like`,
+                                        `Ana's friends Howie and Tomer were seasoned drug users but had never taken Robitussin before. Given that it is sold over the counter, they had assumed its effects would be weaker than those of prescribed painkillers like`,
                                         {
                                             anchor: `"Vicodin."`,
                                             wiki: `Hydrocodone/paracetamol`
                                         },
-                                        `The night will soon prove them wrong.`
+                                        `That night proved them very wrong.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -284,11 +283,10 @@ export default {
                         {
                             anchor: `Walkyriens:`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `Back to earlier that night. We have arrived at a`,
+                                        `Flashback to earlier that night. We have arrived at a`,
                                         {
                                             anchor: `"Walgreens"`,
                                             wiki: `Walgreens`
@@ -320,11 +318,10 @@ export default {
                             // NOTE: I changed from 'Walhall.'
                             anchor: `Wal-hall o'`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `The Valkyries would bring the dead heroes to`,
+                                        `The Valkyries would bring their dead heroes to`,
                                         {
                                             anchor: `"Valhalla,"`,
                                             wiki: `Valhalla`
@@ -347,7 +344,6 @@ export default {
                         },
                         {
                             anchor: `mead-Tussin!`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -369,9 +365,15 @@ export default {
                     lyric: [
                         {
                             anchor: `Quouffs uppraissed,`,
-                            todo: true,
                             card: {
-                                description: `Not all bottles of Robitussin will get you high. The ones to avoid are those that contain guaifenesin, which just reduces congestion. So we "upraise" our "quaffs" to "appraise" them specifically for the medicinal property that keeps "coughs suppressed."`,
+                                description: [
+                                    `Not all bottles of Robitussin will get you high. The ones to avoid are those that contain`,
+                                    {
+                                        anchor: `guaifenesin,`,
+                                        wiki: `Guaifenesin`
+                                    },
+                                    `which reduces congestion. So we "upraise" our "quaffs" to "appraise" them, looking specifically for the medicinal property of keeping "coughs suppressed."`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true,
@@ -382,7 +384,6 @@ export default {
                         `this`,
                         {
                             anchor: `boundless Kalevalley ends.`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -391,21 +392,18 @@ export default {
                                             anchor: `Kalevala`,
                                             wiki: `Kalevala`
                                         },
-                                        `is the national epic poem of Finland.`
+                                        `is the national epic poem of`,
+                                        {
+                                            anchor: `Finland.`,
+                                            wiki: `Finland`
+                                        }
                                     ],
                                     dotKeys: {
                                         [PUN]: true
                                     }
                                 },
                                 {
-                                    description: [
-                                        `The San Fernando Valley, which I hated in my youth, is`,
-                                        {
-                                            isEmphasis: true,
-                                            lyric: `the`
-                                        },
-                                        `"Cali valley." The days before I could leave were painfully endless. On this summer break back home, however, my newfound independence combines with the magic of Robitussin to render escape instantaneous.`
-                                    ],
+                                    description: `The San Fernando Valley, which I hated in my youth, is the quintessential "Cali valley." The days before I could leave were painfully endless. On this summer break back home, however, my newfound independence combines with the magic of Robitussin to render escape instantaneous.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true
@@ -422,11 +420,15 @@ export default {
                         {
                             anchor: `Finnugreec tongue`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `The Finnish language belongs in the`,
+                                        `The`,
+                                        {
+                                            anchor: `Finnish`,
+                                            wiki: `Finnish_language`
+                                        },
+                                        `language belongs to the`,
                                         {
                                             anchor: `"Finno-Ugric"`,
                                             wiki: `Finno-Ugric_languages`
