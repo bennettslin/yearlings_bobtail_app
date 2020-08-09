@@ -419,9 +419,14 @@ export default {
                         `With hair of`,
                         {
                             anchor: `maraschino red,`,
-                            todo: true,
                             card: {
-                                description: `Having sworn some time ago to be alert and ready when the next Mara shows up in my life, I notice that the latecomer's hair color matches "Mara's sheen of red," which is the bright red of maraschino cherries.`,
+                                description: [
+                                    `Having sworn to be alert and ready when the next Mara shows up in my life, I notice the latecomer's hair color matches "Mara's sheen of red," which is the brightness of`,
+                                    {
+                                        anchor: `maraschino cherries.`,
+                                        wiki: `Maraschino_cherry`
+                                    }
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -762,9 +767,20 @@ export default {
                         `but it's too late to`,
                         {
                             anchor: `unscrew a Bud…`,
-                            todo: true,
                             card: {
-                                description: `I forgo my chance to get to know the red-haired woman, not just because it's past last call, and another Budweiser would be needed to bring myself to the required level of self-deception. It's also too late for me to present myself as someone who isn't in a sexually intimate relationship with his best friend. I can't just "unscrew a bud" at will.`,
+                                description: [
+                                    `I relinquish my chance to get to know the red-haired woman. Not just because another`,
+                                    {
+                                        anchor: `Budweiser`,
+                                        wiki: `Budweiser`
+                                    },
+                                    `would be needed to bring me to the required level of affability, and it's past`,
+                                    {
+                                        anchor: `last call.`,
+                                        wiki: `Last_call_(bar_term)`
+                                    },
+                                    `It's also much too late for me to present myself as someone who isn't in a sexual relationship with his best friend. I can't just "unscrew a bud" at will.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
