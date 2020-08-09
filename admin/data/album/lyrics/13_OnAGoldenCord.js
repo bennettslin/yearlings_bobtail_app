@@ -844,10 +844,10 @@ export default {
                                         },
                                         `would rule all of Asia.`,
                                         {
-                                            anchor: `Alexander the Great`,
+                                            anchor: `Alexander the Great,`,
                                             wiki: `Alexander_the_Great`
                                         },
-                                        `simply cut it in half with his sword. Like Alexander, I severed my own guardian knot, in a bid for artistic greatness.`
+                                        `however, simply chopped it in half with his sword. And in my bid for artistic greatness, I severed my own guardian knot by similarly applying brute force.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,

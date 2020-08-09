@@ -382,7 +382,6 @@ export default {
                         `with`,
                         {
                             anchor: `choler turned up,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `In Hippocratic medicine, choler, or yellow bile, is the humor that induces aggression.`,
@@ -391,7 +390,14 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `Just like I wouldn't have recognised myself with an "upturned collar," the angry drunk returning my gaze didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
+                                    description: [
+                                        `Much like I wouldn't have recognised myself with an`,
+                                        {
+                                            anchor: `"upturned collar,"`,
+                                            wiki: `Upturned_collar`
+                                        },
+                                        `the angry drunk returning my gaze didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true
@@ -434,9 +440,8 @@ export default {
                         `As`,
                         {
                             anchor: `claws you built from scratches,`,
-                            todo: true,
                             card: {
-                                description: `Cats scratch to keep their claws sharp, just like I had learned to sharpen my emotional defenses after a lifetime of getting scratched and clawed.`,
+                                description: `Cats scratch to sharpen their claws, just like I had learned to keep my emotional defenses sharp after a lifetime of getting scratched and clawed as a victim of bullying.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true
@@ -452,15 +457,14 @@ export default {
                         `fill up a package strapped to your`,
                         {
                             anchor: `scapegirl,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In Biblical times, a community would absolve itself by symbolically placing its`,
+                                    `In Biblical times, a community would seek absolution by symbolically placing its`,
                                     {
                                         anchor: `sins on a goat`,
                                         wiki: `Scapegoat`
                                     },
-                                    `that was then cast into the desert. For me, banishing Sita from my life served a similar purpose. Without her around to cast judgment, I would never need to own up to my hypocrisy.`
+                                    `that was then cast into the desert. Banishing Sita from my life served a similar purpose. Without her around to cast judgment, there was no need to absolve myself of any hypocrisy.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -599,7 +603,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Final trip on a tanker,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -612,7 +615,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `As part of my plan to start afresh, I made many attempts to stay sober. Since each time was to be my last, I would indulge myself and drink to oblivion, only to repeat the motions several nights later. But after finally mustering the courage to break up with Sita, I really did go for a long stretch without alcohol. My new reality was jarring enough by itself, after all.`,
+                                    description: `As part of my plan to start afresh with someone new, I wanted to stay sober for a while, but that was unlikely to happen unless my drinking brought me to the point of sickness. I also needed plenty of alcohol to muster the courage to break up with Sita. And so I drank to oblivion each night, hoping to provide the necessary conditions for both purposes.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true
@@ -623,9 +626,8 @@ export default {
                         `you'll`,
                         {
                             anchor: `drop your anchor`,
-                            todo: true,
                             card: {
-                                description: `Having mentally attached Sita to every last one of my grievances for so long, all I could feel after the breakup was an eerie serenity, as I could finally drop my "anger." I was no longer resentful, and that was tantamount to feeling happy.`,
+                                description: `I had ascribed every last one of my grievances to Sita for so long that all I could feel after the breakup was an eerie serenity. I could finally drop my "anger," and that was tantamount to feeling happy.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
@@ -675,14 +677,14 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `I had an intermittent habit of cutting myself to deal with emotional distress. Early in our friendship, Sita took a keen interest in my scars, which I interpreted as morbid fascination with my troubled past. In time, I came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
+                                    description: `I had an intermittent habit of cutting myself to deal with distress. Early in our friendship, Sita took interest in my scars, which I interpreted as a morbid fascination with my troubled past. In time, I came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
                                 }
                                 /**
-                                 * NOTE: This obscures the greater point of self-harm,
-                                 * so I'm leaving it out for now.
+                                 * NOTE: This obscures the greater point of
+                                 * self-harm, so I'm leaving it out for now.
                                  */
                                 /**
                                 {
