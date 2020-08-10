@@ -24,7 +24,7 @@ import {
 export default {
     title: 'Constellations!',
     duration: 180,
-    overview: `One night I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout history, though in hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
+    overview: `One night I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
     lyricUnits: [
         {
             unitMap: {},
@@ -394,7 +394,7 @@ export default {
                                     description: [
                                         `The`,
                                         {
-                                            anchor: `Kalevala`,
+                                            anchor: `"Kalevala"`,
                                             wiki: `Kalevala`
                                         },
                                         `is the national epic poem of`,
@@ -653,24 +653,31 @@ export default {
                         {
                             anchor: `Drinkhis Khan, once Toomujin,`,
                             properNoun: true,
-                            todo: true,
-                            card: {
-                                description: [
-                                    {
-                                        anchor: `"Genghis Khan,"`,
-                                        wiki: `Genghis_Khan`
-                                    },
-                                    `whose birth name was "Temujin," was the founder of the Mongol Empire.`
-                                ],
-                                dotKeys: {
-                                    [PUN]: true
+                            cards: [
+                                {
+                                    description: [
+                                        {
+                                            anchor: `"Genghis Khan,"`,
+                                            wiki: `Genghis_Khan`
+                                        },
+                                        `whose birth name was "Temujin," was the founder of the Mongol Empire.`
+                                    ],
+                                    dotKeys: {
+                                        [PUN]: true
+                                    }
+                                },
+                                {
+                                    description: `I had just taken Robitussion a day or two ago, and each trip really destroys you for a good while, so earlier tonight I was hesitant to take it again so soon. But now the "drink is gone" and I've had "too much in."`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true
+                                    }
                                 }
-                            }
+                            ]
                         },
                         `has`,
                         {
                             anchor: `slain the teeto-Tatars!`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -684,7 +691,17 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `I'd just taken Robitussion a few days ago, so earlier tonight I was wavering back and forth like a playground "teeter-totter" on whether to take it again so soon, since each trip really destroys you for a good while. But once the "drink is gone" and I've had "too much in," the familiar sensation kicks in and kills off any lingering protest from my inner "teetotaler."`
+                                        `With the familiar sensation of Robitussin having kicked in, I am no longer wavering back and forth like a playground`,
+                                        {
+                                            anchor: `"teeter-totter,"`,
+                                            wiki: `Seesaw`
+                                        },
+                                        `and any lingering protest from my inner`,
+                                        {
+                                            anchor: `"teetotaler"`,
+                                            wiki: `Teetotalism`
+                                        },
+                                        `has been killed off.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -706,17 +723,17 @@ export default {
                                 {
                                     description: [
                                         {
-                                            anchor: `Tamerlane,`,
+                                            anchor: `"Tamerlane"`,
                                             wiki: `Timur`
                                         },
-                                        `who descended from the seed of Genghis Khan, continued the Turko-Mongol expansion into Central Asia.`
+                                        `continued the Turko-Mongol expansion into Central Asia. Having not been born from the seed of Genghis Khan, he laid out the case for his legitimacy by tracing lineage to a common ancestor.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true
                                     }
                                 },
                                 {
-                                    description: `As Tomer jokingly drops crumbs of dirt as if to leave a trail, I observe that it's like he's "laying the seeds" that will sprout into nations.`,
+                                    description: `Tomer jokingly drops crumbs of dirt as if planting a trail of seeds. I observe that we are "laying the seeds" that will sprout into nations.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -730,7 +747,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `Oblivious to the lingering stiffness of his limbs, Howie is walking as if his "feet" are made of "lead."`,
+                                    description: `Oblivious to the lingering stiffness of his limbs, Howie is walking as if he has "lead feet."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
