@@ -234,7 +234,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Ana's friends Howie and Tomer were seasoned drug users but had never taken Robitussin before. Given that it is sold over the counter, they had assumed its effects would be weaker than those of prescribed painkillers like`,
+                                        `Ana's friends Howie and Tomer were seasoned drug users but had never taken Robitussin before. Given that it is sold`,
+                                        {
+                                            anchor: `over the counter,`,
+                                            wiki: `Over-the-counter_drug`
+                                        },
+                                        `they had assumed its effects would be weaker than those of prescribed painkillers like`,
                                         {
                                             anchor: `"Vicodin."`,
                                             wiki: `Hydrocodone/paracetamol`
@@ -457,7 +462,6 @@ export default {
                         {
                             anchor: `Lapps are highmen.`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -470,7 +474,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `We are literally "high men," and since the others are trying it for the first time, the Robitussin also "laps our hymen."`,
+                                    description: `We are literally "high men," and since the others are trying Robitussin for the first time, it also "laps our hymen."`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true
@@ -493,10 +497,9 @@ export default {
                         {
                             anchor: `Makeyars mygrate,`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Cut back to the present scene. Howie and Tomer promise to "make yours my grate," as they share their knowledge of the hidden grate that leads down to the steam tunnels.`,
+                                    description: `Cut back to the present scene. Howie and Tomer promise to "make yours my grate," as they share their knowledge of the hidden grates that lead down to the steam tunnels.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -509,7 +512,16 @@ export default {
                                             anchor: `"Magyars"`,
                                             wiki: `Hungarians`
                                         },
-                                        `are a Finno-Ugric people who "migrated" from the Ural Mountains and established the state of Hungary.`
+                                        `are a Finno-Ugric people who "migrated" from the`,
+                                        {
+                                            anchor: `Ural Mountains`,
+                                            wiki: `Ural_Mountains`
+                                        },
+                                        `and established the state of`,
+                                        {
+                                            anchor: `Hungary.`,
+                                            wiki: `Hungary`
+                                        }
                                     ],
                                     dotKeys: {
                                         [PUN]: true
@@ -520,7 +532,6 @@ export default {
                         `from`,
                         {
                             anchor: `among ol'`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The Magyars share genetic ancestry with the`,
@@ -537,7 +548,6 @@ export default {
                         },
                         {
                             anchor: `psealed off drains.`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -546,7 +556,12 @@ export default {
                                             anchor: `"pseudoephedrine,"`,
                                             wiki: `Pseudoephedrine`
                                         },
-                                        `a decongestant. Because of its use in the illicit manufacture of methamphetamine, however, this is no longer the case.`
+                                        `a nasal decongestant. Because it is the main ingredient used to make`,
+                                        {
+                                            anchor: `crystal meth,`,
+                                            wiki: `Methamphetamine`
+                                        },
+                                        `however, pseudoephedrine is no longer available over the counter.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true
@@ -566,10 +581,12 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `The Police's`,
+                        {
+                            anchor: `The Police's`,
+                            wiki: `The_Police`
+                        },
                         {
                             isItalic: true,
                             lyric: {
@@ -577,7 +594,17 @@ export default {
                                 wiki: `Ghost_in_the_Machine_(album)`
                             }
                         },
-                        `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums on this song are my amateurish imitation of Stewart Copeland's performance in "Secret Journey," in which the kick is left off the downbeat almost throughout. Such a simple idea, but it does wonders for letting the music here breathe before being submerged again in the chorus.`
+                        `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums are my amateurish imitation of`,
+                        {
+                            anchor: `Stewart Copeland's`,
+                            wiki: `Stewart_Copeland`
+                        },
+                        `performance in`,
+                        {
+                            anchor: `"Secret Journey,"`,
+                            wiki: `Secret_Journey_(song)`
+                        },
+                        `in which the kick is left off the downbeat almost throughout. Such a simple idea, but it does wonders for letting the music breathe before being submerged again in the chorus.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -597,11 +624,10 @@ export default {
                         `Then`,
                         {
                             anchor: `down the steppes`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `As we rush down the earthen "steps" leading into the steam tunnels, I imagine us as 13th-century Mongol horsemen sweeping down from the Asian`,
+                                        `As we rush down the earthen "steps" leading into the steam tunnels, I imagine us as 13th-century Mongol horsemen sweeping down from the Eurasian`,
                                         {
                                             anchor: `steppes`,
                                             wiki: `Steppe`

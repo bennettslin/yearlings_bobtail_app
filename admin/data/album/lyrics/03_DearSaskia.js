@@ -53,9 +53,9 @@ export default {
                 card: {
                     // TODO: Make this one more about cloying bits and pieces from studying the Beatles.
                     description: [
-                        `In my teenage years, I tried to figure out how`,
+                        `In my teenage years, I tried to figure out how the`,
                         {
-                            anchor: `The Beatles`,
+                            anchor: `Beatles`,
                             wiki: `The_Beatles`
                         },
                         `weaved melodies into chord progressions so seamlessly. The music for this song began as a zealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what this letter to Sasha called for, and trotted it back out.`
