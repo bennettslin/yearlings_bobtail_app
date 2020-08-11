@@ -105,7 +105,12 @@ export default {
                                             anchor: `San Fernando Valley`,
                                             wiki: `San_Fernando_Valley`
                                         },
-                                        `of Los Angeles, where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides.`
+                                        `of`,
+                                        {
+                                            anchor: `Los Angeles,`,
+                                            wiki: `Los_Angeles`
+                                        },
+                                        `where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true

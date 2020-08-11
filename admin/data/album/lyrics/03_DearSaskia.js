@@ -589,7 +589,7 @@ export default {
                             anchor: `hugging hurts…`,
                             todo: true,
                             card: {
-                                description: `To avoid the humiliation of getting beaten up, I would typically downplay my injuries. But here, in explaining to Sasha why I winced as we hugged that last day, I'm more eager to downplay how much it hurt in the metaphorical sense.`,
+                                description: `To avoid the humiliation of getting beaten up, I would typically downplay my injuries. But here, in explaining to Sasha why I had to wince as we hugged that last day, I'm more eager to downplay how much it hurt in the metaphorical sense.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true
