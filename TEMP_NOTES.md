@@ -4,7 +4,6 @@
 
 * Pun annotations (going backwards)
     * 1 Golden Cord
-    * Consider "drink is gone" annotation not being under actual lyric? 
     * Consider "sun tinkles light" annotation not being under the actual lyric?
 
 * Songwriting annotations

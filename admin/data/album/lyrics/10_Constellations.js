@@ -822,7 +822,12 @@ export default {
                                         anchor: `Aryan Invasion`,
                                         wiki: `Indo-Aryan_migration`
                                     },
-                                    `theory. Proposed by 19th-century Western scholars, the theory holds that Indian civilisation was brought by invaders from the north, who were the "Indus trail source."`
+                                    `theory. Proposed by 19th-century Western scholars, the theory holds that`,
+                                    {
+                                        anchor: `Indian`,
+                                        wiki: `India`
+                                    },
+                                    `civilisation was brought by invaders from the north, who were the "Indus trail source."`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -860,10 +865,14 @@ export default {
                         {
                             anchor: `Forsi ahuro`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In the Iranian language of`,
+                                    `In the`,
+                                    {
+                                        anchor: `Iranian`,
+                                        wiki: `Iran`
+                                    },
+                                    `language of`,
                                     {
                                         anchor: `"Farsi,"`,
                                         wiki: `Persian_language`
@@ -871,11 +880,16 @@ export default {
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `ahura`,
+                                            anchor: `"ahura"`,
                                             wiki: `Ahura`
                                         }
                                     },
-                                    `is the word for an Avestan deity. But in the Vedic texts of ancient India,`,
+                                    `is the word for a deity. But in the`,
+                                    {
+                                        anchor: `Vedic`,
+                                        wiki: `Vedas`
+                                    },
+                                    `texts of ancient India,`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -883,22 +897,17 @@ export default {
                                             wiki: `Asura`
                                         }
                                     },
-                                    `refers to a demon. This suggests that a rift occurred amongst the`,
+                                    `refers to a demon, suggesting that a rift occurred amongst the`,
                                     {
-                                        anchor: `Indo-Iranian`,
+                                        anchor: `Indo-Iranians`,
                                         wiki: `Indo-Iranians`
                                     },
-                                    `people based on religious differences, and because the`,
-                                    {
-                                        anchor: `Vedas`,
-                                        wiki: `Vedas`
-                                    },
-                                    `precede the`,
+                                    `based on religious differences. And because the Vedas precede the Persian`,
                                     {
                                         anchor: `Avesta,`,
                                         wiki: `Avesta`
                                     },
-                                    `it's likely that the apostates left the Indian subcontinent and moved westward to the Iranian basin, rather than the other way around.`
+                                    `it's likely that the apostates left the Indian subcontinent and migrated westward to the Iranian basin, rather than the other way around.`
                                 ],
                                 dotKeys: {
                                     [PUN]: true
@@ -909,10 +918,14 @@ export default {
                         {
                             anchor: `Sensegreat devas'dayshone?`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Moreover, in "Sanskrit," the ancient Indian language,`,
+                                    `Moreover, in`,
+                                    {
+                                        anchor: `"Sanskrit,"`,
+                                        wiki: `Sanskrit`
+                                    },
+                                    `the ancient Indian language,`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -928,7 +941,7 @@ export default {
                                             wiki: `Daeva`
                                         }
                                     },
-                                    `in the Avesta refers to a demon. Thus, whether one "foresees a hero" or "senses great devastation" as the "deva's day shone" depends on which side of the rift one is aligned with.`
+                                    `in the Avesta refers to a demon. Thus, whether one "foresees a hero" or "senses great devastation" as the "deva's day shone" depends on which side of the schism one ended up on.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -951,10 +964,10 @@ export default {
                                         isItalic: true,
                                         lyric: {
                                             anchor: `soma`,
-                                            wiki: `Botanical_identity_of_soma–haoma`
+                                            wiki: `Soma_(drink)`
                                         }
                                     },
-                                    `is a ritual drink prepared from an unknown botanical substance believed by scholars to have held psychedelic properties. In the Avesta, it is referred to as`,
+                                    `is a ritual drink prepared from an unknown botanical substance believed by scholars to have had psychedelic properties. In the Avesta, it is referred to as`,
                                     {
                                         isItalic: true,
                                         lyric: `haoma.`
@@ -1743,7 +1756,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Pullar switch,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1758,7 +1770,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `Back at Howie's place, I'm crashed on a couch in his attic. An old black-and-white television sits in front of me, and I "pull the switch" to turn it on.`,
+                                    description: `Back at Howie's place, I'm crashed on a couch in his attic. There is an old black-and-white television in front of me, and I "pull the switch" to turn it on.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -1768,7 +1780,6 @@ export default {
                         },
                         {
                             anchor: `in-som'umiak`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Sensing disaster afoot, our brave tribe flees to safety "in some`,
@@ -1776,7 +1787,7 @@ export default {
                                         anchor: `umiak,"`,
                                         wiki: `Umiak`
                                     },
-                                    `an Inuit boat made from whalebone and sealskin, as we skim through icy channels wreaked by a snowy blitz.`
+                                    `an Inuit boat made from whalebone and sealskin, as we skim through icy channels wreaked by a "snowy blitz."`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1784,9 +1795,9 @@ export default {
                                 }
                             }
                         },
+                        `skims through`,
                         {
-                            anchor: `skims through channels`,
-                            todo: true,
+                            anchor: `channels snow blitz'd…`,
                             card: {
                                 description: `Being an "insomniac," I skim through channels that are "snow-blitzed" due to the television's poor reception.`,
                                 dotKeys: {
@@ -1794,8 +1805,7 @@ export default {
                                     [PUN]: true
                                 }
                             }
-                        },
-                        `snow blitz'd…`
+                        }
                     ]
                 }
             ],
@@ -1831,14 +1841,13 @@ export default {
                         `Then pounds`,
                         {
                             anchor: `arrhythmetic heart,`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Arrhythmia,`,
                                         wiki: `Cardiac_arrhythmia`
                                     },
-                                    `or an inrregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.`
+                                    `or an irregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1854,50 +1863,60 @@ export default {
                         {
                             anchor: `Enguished buzzereds`,
                             properNoun: true,
-                            todo: true,
-                            card: {
-                                description: [
-                                    `In the historical narrative still playing in my head, the`,
-                                    {
-                                        anchor: `"English"`,
-                                        wiki: `English_people`
-                                    },
-                                    `have now arrived to despoil the New World, with the white ruffs around their necks resembling those of "buzzards."`
-                                ],
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [PUN]: true
+                            cards: [
+                                {
+                                    description: [
+                                        `In the historical narrative still playing in my head, the`,
+                                        {
+                                            anchor: `"English"`,
+                                            wiki: `English_people`
+                                        },
+                                        `have now arrived to despoil the New World. The white`,
+                                        {
+                                            anchor: `ruffs`,
+                                            wiki: `Ruff_(clothing)`
+                                        },
+                                        `around their necks resemble the neck fringes seen on`,
+                                        {
+                                            anchor: `vultures,`,
+                                            wiki: `Vulture`
+                                        },
+                                        `or "buzzards," as they are colloquially known. Meanwhile, Howie is downstairs in "anguish" over still being "buzzed," as he guzzles cup after cup of water to quench his parched innards.`
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true
+                                    }
+                                },
+                                {
+                                    description: `Howie had opted for the large bottle of Robitussin, thinking the small one I had recommended wouldn't be enough.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
                                 }
-                            }
+                            ]
                         },
-                        {
-                            anchor: `come unsated`,
-                            todo: true,
-                            card: {
-                                description: `Howie had opted for a large bottle of Robitussin, thinking the small one I had recommended wouldn't be enough. I now hear him downstairs, in "anguish" over still being "buzzed," as he guzzles cup after cup of water to quench his parched innards.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        },
-                        `find`,
+                        `come unsated, find`,
                         {
                             anchor: `Rumspring`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Rumspringa`,
                                         wiki: `Rumspringa`
                                     },
-                                    `is a period of adolescence during which the`,
+                                    `is a period of adolescence during which`,
                                     {
                                         anchor: `Amish`,
                                         wiki: `Amish`
                                     },
-                                    `are permitted to rebel, such that their decision to remain in the community is not rooted in ignorance of the outside world. Though it means "running around" in Pennsylvania Dutch, I like the image of an actual spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
+                                    `teenagers are permitted to explore the outside world, such that their decision to remain in the Amish community is not rooted in ignorance. Though it means "running around" in`,
+                                    {
+                                        anchor: `Pennsylvania Dutch,`,
+                                        wiki: `Pennsylvania_Dutch`
+                                    },
+                                    `I like the image of a natural spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1913,7 +1932,6 @@ export default {
                     lyric: [
                         {
                             anchor: `In mouth Deseret,`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -1922,10 +1940,10 @@ export default {
                                     },
                                     `is an alphabet developed by the early`,
                                     {
-                                        anchor: `Mormons,`,
+                                        anchor: `Mormons.`,
                                         wiki: `Mormons`
                                     },
-                                    `also known as Latter-Day Saints. As it once filled their mouths, a "desert" now fills ours.`
+                                    `As it had once filled their mouths, a "desert" now fills ours.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1935,10 +1953,16 @@ export default {
                         },
                         {
                             anchor: `black Letter-Day`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Holidays on a calendar are marked in red, so by contrast, the "black-letter day" that I sense ahead will be just another ordinary day.`,
+                                    description: [
+                                        `Holidays on a calendar are traditionally`,
+                                        {
+                                            anchor: `marked in red.`,
+                                            wiki: `Red_letter_day`
+                                        },
+                                        `By contrast, the "black-letter day sensed ahead" will be just another ordinary day.`
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true,
@@ -1949,16 +1973,20 @@ export default {
                         },
                         {
                             anchor: `Sensed ahead…`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `"Black Latter-Day Saints to head." While the Mormon Church originally did not allow its`,
+                                        `"Black Latter-Day Saints to head." The Mormon Church, also known as the`,
+                                        {
+                                            anchor: `Latter-Day Saints,`,
+                                            wiki: `The_Church_of_Jesus_Christ_of_Latter-day_Saints`
+                                        },
+                                        `originally did not allow its`,
                                         {
                                             anchor: `black members`,
                                             wiki: `Black_people_and_Mormonism`
                                         },
-                                        `to attain priesthood, this policy was reversed in 1978.`
+                                        `to attain priesthood. This policy was reversed in 1978.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
@@ -1969,10 +1997,16 @@ export default {
                         },
                         {
                             anchor: `"Rejoyce!" bellow the`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `"'Rejoice!' bellow the reverends." Stuck with nothing to watch but early-morning televangelists, I observe that every religion's early spirit eventually degrades into orthodoxy and routine, just like each person's does over a lifetime. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
+                                    description: [
+                                        `"'Rejoice!' bellow the reverends." Stuck with nothing else to watch but early-morning`,
+                                        {
+                                            anchor: `televangelists,`,
+                                            wiki: `Televangelism`
+                                        },
+                                        `I observe that every religion's early spirit eventually degrades into orthodoxy and routine, as does every person's youthful spirit in later years. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true,

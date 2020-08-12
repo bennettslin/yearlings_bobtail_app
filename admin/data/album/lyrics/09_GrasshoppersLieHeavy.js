@@ -784,7 +784,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `It's as if I'm an escaped convict who has just been locked in handcuffs and sent back to the penitentiary, where a prison guard now directs me into a holding cell.`,
+                                    description: `I'm like an escaped convict who has just been locked in handcuffs and sent back to the penitentiary, where a prison guard now directs me into a holding cell.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true

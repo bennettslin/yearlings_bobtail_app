@@ -33,7 +33,12 @@ export default {
                             isItalic: true,
                             lyric: `Kyon`
                         },
-                        `is the Hindi word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language.`
+                        `is the`,
+                        {
+                            anchor: `Hindi`,
+                            wiki: `Hindi`
+                        },
+                        `word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
