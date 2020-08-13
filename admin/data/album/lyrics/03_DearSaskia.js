@@ -224,11 +224,18 @@ export default {
                         `I felt you`,
                         {
                             anchor: `prepped to shed…`,
-                            todo: true,
                             card: {
-                                description: `Sasha is literally "prepped," in that she is to begin enrollment at a preparatory school in Boston.`,
+                                description: [
+                                    `Sasha is literally "prepped," in that she is preparing to begin enrollment at a`,
+                                    {
+                                        anchor: `preparatory school`,
+                                        wiki: `College-preparatory_school`
+                                    },
+                                    `in Boston.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [PUN]: true
                                 }
                             }
@@ -278,7 +285,8 @@ export default {
                             anchor: `your pupil's pupal fly,`,
                             todo: true,
                             card: {
-                                description: `While I reflect on my feelings for Sasha, petrified at the thought of losing her, I recall that last day when I was literally reflected in her eyes, seeing myself as a petrified larva without any chance to moult.`,
+                                // TODO: More references.
+                                description: `While I reflect on my feelings for Sasha, I recall the last day we spoke, when I caught my literal reflection in her eyes. Petrified by the thought of losing her, I saw myself as a petrified larva without any chance to molt.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -295,9 +303,15 @@ export default {
                         `with you raving over how`,
                         {
                             anchor: `he's getting you`,
-                            todo: true,
                             card: {
-                                description: `Everyone I had known Sasha to crush on was Jewish, and these crushes in turn motivated her to be a better Jew. I was frustrated that anyone who was part of this positive feedback loop instantly had the winning advantage over me in "getting her."`,
+                                description: [
+                                    `Every boy that Sasha ever crushed on was`,
+                                    {
+                                        anchor: `Jewish,`,
+                                        wiki: `Jews`
+                                    },
+                                    `which in turn motivated her to be a better Jew. It frustrated me that anyone who could be part of this positive feedback loop instantly had the winning advantage in "getting her."`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -315,7 +329,13 @@ export default {
                             anchor: `I would have too…`,
                             todo: true,
                             card: {
-                                description: `It seemed obvious to me that if Sasha were to want me, then I would certainly convert to Judaism.`,
+                                description: [
+                                    `It seemed obvious to me that if Sasha were to want me, then I would certainly convert to`,
+                                    {
+                                        anchor: `Judaism.`,
+                                        wiki: `Judaism`
+                                    }
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -451,16 +471,33 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `Here, I recall an incident in which Sasha came to my defense when a bully proceeded to punch me as if I were the "tetherball," after having wrapped me in its rope.`,
+                                    description: [
+                                        `Here, I recall an incident in which Sasha came to my rescue after some bullies had tied me to a`,
+                                        {
+                                            anchor: `"tetherball"`,
+                                            wiki: `Tetherball`
+                                        },
+                                        `pole with its rope.`
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
+                                        [BACKSTORY]: true,
                                         [PUN]: true
                                     }
                                 },
                                 {
-                                    description: `There exists a comfortable notion in our society that the children of overprotective parents, who are often said to be kept on a tether, actually benefit from the occasional beatdown, which toughens them up.`,
+                                    description: [
+                                        // TODO: Flesh this out.
+                                        `Some parents protect their toddlers by tethering them to a`,
+                                        {
+                                            anchor: `child harness.`,
+                                            wiki: `Child_harness`
+                                        },
+                                        `As such, older children who are unable to fend for themselves may be mocked as having been kept on a tether by overprotective parents.`
+                                        // SCRAPS: There exists a comfortable notion in our society that such children would benefit from the occasional beatdown to toughen them up.
+                                    ],
                                     dotKeys: {
-                                        [REFERENCE]: true
+                                        [OBSERVATION]: true
                                     }
                                 }
                             ]
@@ -517,11 +554,17 @@ export default {
                         `who shrug when thus annoyed, yawning,`,
                         {
                             anchor: `"Boys will beat boys…"`,
-                            todo: true,
                             card: {
-                                description: `It's more common to say that boys will "be" boys, of course, but the one naturally follows the other. It caught me off guard that the school aides typically declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.`,
+                                description: [
+                                    `It's more common to say that boys will`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `be`
+                                    },
+                                    `boys, of course, but the one naturally follows the other. It always caught me by surprise when school aides would decline to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.`
+                                ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true,
                                     [PUN]: true
                                 }
                             }

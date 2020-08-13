@@ -264,9 +264,8 @@ export default {
                         `licking lips`,
                         {
                             anchor: `he ends his stroll.`,
-                            todo: true,
                             card: {
-                                description: `In most legends, the changeling is a witting participant in the deceit to replace a stolen human child. As such, it takes pains to hide its true form while in the company of human family and neighbors. And so before Willy goes off to cash in his recyclables, he "ends as troll" by donning his human guise.`,
+                                description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, it takes pains to hide its true form while in the company of other humans. And so before Willy goes off to cash in his recyclables, he "ends as troll" by donning his human guise.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -309,9 +308,8 @@ export default {
                         `Saluting Mummy doing some`,
                         {
                             anchor: `haircutting to the sun`,
-                            todo: true,
                             card: {
-                                description: `Or else, to the "son." My mother is cutting my brother's hair on the front porch, where the cleanup afterward will be easier.`,
+                                description: `Or else, to the "son." My mother is cutting my brother's hair outside on the front porch, where the cleanup afterward will be easier.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -366,10 +364,9 @@ export default {
                         `As`,
                         {
                             anchor: `gap-toothed coma`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `With mouth partially open, my brother wears a blank expression. At least, right up until he gets ruffled by my mother's "gap-toothed comb."`,
+                                    description: `With mouth partially open, my brother wears a blank expression, right up until he feels the sensation of my mother's "gap-toothed comb" on his scalp.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -386,9 +383,8 @@ export default {
                         `launching`,
                         {
                             anchor: `pair of seizures`,
-                            todo: true,
                             card: {
-                                description: `My brother's outburst also knocks the "scissors" from my mother's hand and sends it flying into the lawn.`,
+                                description: `My brother's sudden outburst knocks the "scissors" from my mother's hand and sends them flying into the lawn.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -411,7 +407,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `Observing my brother's distaste for haircuts, Willy jokingly predicts that my brother will choose to sport an unshaven look as an adult.`,
+                                    description: `Noting my brother's distaste for haircuts, Willy jokingly predicts that my brother will choose to sport an unshaven look as an adult.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -449,7 +445,6 @@ export default {
                         `And three years howling is the`,
                         {
                             anchor: `longest cowlick`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -458,7 +453,7 @@ export default {
                                             anchor: `cowlick`,
                                             wiki: `Cowlick`
                                         },
-                                        `is a section of hair that sticks out on a person's head. Being acquainted with my family through the years, Willy understands that my brother's tantrums are the reason my mother allows his hair to reach unruly lengths.`
+                                        `is a section of hair that sticks straight up on a person's head. Being acquainted with my family through the years, Willy understands that my brother's tantrums are the reason my mother allows his hair to reach unruly lengths.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true
@@ -471,11 +466,10 @@ export default {
                                             anchor: `"colic,"`,
                                             wiki: `Baby_colic`
                                         },
-                                        `a period of excessive crying in infants. In the past, an inability to explain such lack of development is what gave rise to a belief in changelings.`
+                                        `a period of excessive crying in infants. In the past, such inexplicable delays in child development are what gave rise to a belief in changelings.`
                                     ],
                                     dotKeys: {
-                                        [PUN]: true,
-                                        [REFERENCE]: true
+                                        [PUN]: true
                                     }
                                 }
                             ]
@@ -662,7 +656,6 @@ export default {
                     lyric: [
                         {
                             anchor: `soused loafers`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `In his zeal to reach a discarded beer bottle, Willy steps into a puddle and splashes standing water onto a pair of gangsters idling nearby.`,
@@ -671,7 +664,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `"Soused loafers" can refer to drunken layabouts, as well as to their drenched shoes.`,
+                                    description: `"Soused loafers" can refer to drunken deadbeats, as well as to their drenched shoes.`,
                                     dotKeys: {
                                         [PUN]: true
                                     }
@@ -744,7 +737,7 @@ export default {
                             anchor: `past-noon toll.`,
                             todo: true,
                             card: {
-                                description: `One of the gangsters grabs a bottle and smashes it against Willy's face. The sound reverberates throughout the neighborhood like the peal of a town bell striking once at one o'clock.`,
+                                description: `One of the gangsters grabs a wine bottle and smashes it against Willy's face. The sound reverberates throughout the neighborhood like the peal of a town bell striking once at one o'clock.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -795,15 +788,14 @@ export default {
                         {
                             anchor: `Willy's stalkless bulb.`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Willy's brain is severed from his spine, like a bulb snapped off from its stalk. But a`,
+                                    `The impact of the wine bottle severs Willy's brain from his spine, like a`,
                                     {
                                         anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`
                                     },
-                                    `planted in the earth can grow a new stem and bloom again.`
+                                    `plucked from its stalk. But once planted in the earth, the bulb can grow a new stem and bloom again.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -823,12 +815,22 @@ export default {
                 {
                     time: 131,
                     lyric: [
-                        `Oh, and August was the`,
+                        `Oh, and`,
+                        {
+                            anchor: `August was`,
+                            properNoun: true,
+                            card: {
+                                description: `Understanding the gravity of the present moment, I try to make sense of it by speaking as if I were already looking back on the past.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        },
+                        `the`,
                         {
                             anchor: `sawdust month`,
-                            todo: true,
                             card: {
-                                description: `Later in this "saddest" month of Willy's murder, I helped my mother spread wood shavings from my father's carpentry onto our flower beds.`,
+                                description: `In this "saddest" month of Willy's murder, I help my mother collect wood shavings left over from my father's amateur carpentry. We then spread them onto our flower beds.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -843,15 +845,19 @@ export default {
                         `that saw this`,
                         {
                             anchor: `mulch soften asphodel.`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `We were planting`,
+                                    `We plant`,
                                     {
                                         anchor: `asphodels,`,
                                         wiki: `Asphodelus`
                                     },
-                                    `a popular garden plant named after the immortal flower of the underworld in Greek mythology. By softening the soil, the mulch gave new life to our flower beds. And perhaps Willy's body did the same for our neighborhood by softening the "asphalt" beneath which it had lain.`
+                                    `a popular garden plant named after the immortal flower that populates a`,
+                                    {
+                                        anchor: `section of the underworld`,
+                                        wiki: `Asphodel_Meadows`
+                                    },
+                                    `in Greek mythology. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body had lain.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -866,14 +872,13 @@ export default {
                     lyric: [
                         {
                             anchor: `Baby bluebonnets`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Bluebonnets`,
                                         wiki: 'Bluebonnet_(plant)'
                                     },
-                                    `were another popular flower in our garden, and a blue bonnet is what my mother had tucked my brother's head in to protect him from the sun. But after Willy's murder, I had to wonder how protected my brother was against other things.`
+                                    `are another popular flower in our garden, and a blue bonnet is what my mother has tucked my brother's head in to protect him from the sun. But after Willy's murder, I have to wonder how protected my brother is against other things.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -893,7 +898,7 @@ export default {
                             anchor: `forgotten amongst the mail.`,
                             todo: true,
                             card: {
-                                description: `Having recently assaulted my brother in anger over a shredded comic book, I was now indifferent to the latest issue from my monthly subscription.`,
+                                description: `Having recently assaulted my brother in anger over a shredded comic book, I am now indifferent to the latest issue from my monthly subscription.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -926,9 +931,8 @@ export default {
                         `But`,
                         {
                             anchor: `how marbleless,`,
-                            todo: true,
                             card: {
-                                description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. This person might remark on how "marvelous" it must be to live without one's "marbles," for example. I always had to wonder how gladly they would embrace the greater likelihood of being murdered as well.`,
+                                description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. This person might remark on how "marvelous" it must be to live without one's "marbles," for example. I always had to wonder how gladly they would embrace the greater likelihood of being a victim of crime as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
@@ -944,7 +948,6 @@ export default {
                         `being ever stuck in`,
                         {
                             anchor: `imp-runt age of mind!`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -953,7 +956,7 @@ export default {
                                             anchor: `"imprinting,"`,
                                             wiki: `Imprinting_(psychology)`
                                         },
-                                        `the phase during which a child learns emotional attachment. She would then voice her regret that she began these studies too late to be a better parent to my brother.`
+                                        `the phase during which a child learns emotional attachment. She would then voice regret that she began her studies too late to be a better parent to my brother.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -962,12 +965,16 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Since an imp`,
+                                        `Since an`,
+                                        {
+                                            anchor: `imp`,
+                                            wiki: `Imp`
+                                        },
                                         {
                                             anchor: `runt`,
                                             wiki: `Runt`
                                         },
-                                        `is literally the weakest member in a litter of troll infants, it is surely the one that its parents would most likely replace with a stolen human child.`
+                                        `is literally the weakest member in a litter of troll infants, it is surely the one that its troll parents would try to replace with a stolen human child.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true
@@ -983,7 +990,6 @@ export default {
                         `Are you sick?`,
                         {
                             anchor: `I am seven,`,
-                            todo: true,
                             card: {
                                 description: `My brother learned to answer the question of how old he is when he was six. But even after turning seven, he still insisted on answering "six." Though we finally got him to accept that "seven" was the new correct answer, the cost in sweat and tears was so high that when he turned eight, none of us had the energy to relive the ordeal. He's been answering "seven" ever since. And so here, I imagine him as a grownup testily correcting a stranger who has the nerve to ask if he is "six."`,
                                 dotKeys: {
@@ -1038,7 +1044,6 @@ export default {
                         `for a cub`,
                         {
                             anchor: `cub not yet Webelos!`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1047,15 +1052,13 @@ export default {
                                             anchor: `Cub Scouts,`,
                                             wiki: `Cub_Scouting_(Boy_Scouts_of_America)`
                                         },
-                                        `the eldest rank of Webelos is earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`
-                                    ],
-                                    dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                                        `Webelos is the eldest rank, and is earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`
+                                    ]
                                 },
                                 {
                                     description: `My mother, who was the den mother of my Cub Scout pack, might also be assuring me that I am not yet "way below."`,
                                     dotKeys: {
+                                        [BACKSTORY]: true,
                                         [PUN]: true
                                     }
                                 }

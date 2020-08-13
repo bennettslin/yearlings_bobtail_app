@@ -3,6 +3,8 @@
 * Turn back on the feature to select all dots when annotation is in URL, in getDotsBitFromStorage.
 
 * Pun annotations (going backwards)
+    * 2 Saskia
+    * ...
     * 1 Golden Cord
     * Consider "sun tinkles light" annotation not being under the actual lyric?
 
