@@ -4898,5 +4898,9 @@ export default [
     {
         taskName: `Move unit dots below verses in data.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix access of wiki wormhole indices.`,
+        workedHours: 1
     }
 ]

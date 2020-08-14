@@ -23,7 +23,8 @@ export const getWikiWormholeIndexForDirection = ({
     if (annotationWikiWormholes) {
         const wikiWormholesCount = annotationWikiWormholes.length
 
-        let returnIndex = initialWikiWormholeIndex,
+        // Wiki wormholes are 1-based, so subtract 1 here.
+        let returnIndex = initialWikiWormholeIndex - 1,
             counter = 0
 
         // Consider each anchor index only once.
@@ -46,16 +47,17 @@ export const getWikiWormholeIndexForDirection = ({
              * or it's a wormhole index and wormhole dot is selected. Remember
              * that wiki wormholes are 1-based.
              */
-            const isWiki = isString(annotationWikiWormholes[returnIndex - 1])
+            const
+                wikiWormholeEntity = annotationWikiWormholes[returnIndex],
+                isWiki = isString(wikiWormholeEntity),
+                isWormhole = Number.isFinite(wikiWormholeEntity)
+
             if (
                 (isWiki && selectedDotKeys[REFERENCE]) ||
-                (!isWiki && selectedDotKeys[WORMHOLE])
+                (isWormhole && selectedDotKeys[WORMHOLE])
             ) {
-                /**
-                 * Since wiki wormholes are 1-based, if it's a zero, return the
-                 * last one.
-                 */
-                return returnIndex ? returnIndex : wikiWormholesCount
+                // Wiki wormholes are 1-based, so add 1 here.
+                return returnIndex + 1
             }
 
             counter++

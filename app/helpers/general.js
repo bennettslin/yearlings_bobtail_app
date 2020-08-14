@@ -7,7 +7,7 @@ export const flatten = array => (
 
 // https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_isString
 export const isString = (string) => (
-    string && typeof string.valueOf() === 'string'
+    Boolean(string) && typeof string.valueOf() === 'string'
 )
 
 export const getArrayOfLength = (
