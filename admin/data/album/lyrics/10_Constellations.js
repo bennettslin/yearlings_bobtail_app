@@ -310,7 +310,12 @@ export default {
                                             anchor: `"Valkyries"`,
                                             wiki: `Valkyrie`
                                         },
-                                        `in Norse mythology were noble maidens who escorted fallen warriors from the battlefield.`
+                                        `in`,
+                                        {
+                                            anchor: `Norse mythology`,
+                                            wiki: `Norse_mythology`
+                                        },
+                                        `were noble maidens who escorted fallen warriors from the battlefield.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true

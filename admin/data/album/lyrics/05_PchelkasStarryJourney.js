@@ -35,11 +35,12 @@ export default {
                 todo: true,
                 card: {
                     description: [
+                        `Pchelka and Mushka were dogs sent into orbit under the`,
                         {
-                            anchor: `Pchelka and Mushka`,
+                            anchor: `Soviet space program.`,
                             wiki: `Soviet_space_dogs`
                         },
-                        `were dogs sent into orbit under the Soviet space program. In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`
+                        `In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`
                     ],
                     dotKeys: {
                         [OBSERVATION]: true
@@ -234,7 +235,6 @@ export default {
                         `We`,
                         {
                             anchor: `didn't hear a peep`,
-                            todo: true,
                             card: {
                                 description: `My brother would play alongside me for hours without once speaking or interacting. It was a strange closeness we shared.`,
                                 dotKeys: {
@@ -574,7 +574,14 @@ export default {
                             anchor: `in hunger they were led`,
                             todo: true,
                             card: {
-                                description: `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes Laika, the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I liked the analogy of being thrust helplessly from one desperate circumstance to another.`,
+                                description: [
+                                    `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes`,
+                                    {
+                                        anchor: `Laika,`,
+                                        wiki: `Laika`
+                                    },
+                                    `the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I liked the analogy of being thrust helplessly from one desperate circumstance to another.`
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [REFERENCE]: true

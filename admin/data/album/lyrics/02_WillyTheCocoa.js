@@ -857,7 +857,12 @@ export default {
                                         anchor: `section of the underworld`,
                                         wiki: `Asphodel_Meadows`
                                     },
-                                    `in Greek mythology. By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body had lain.`
+                                    `in`,
+                                    {
+                                        anchor: `Greek mythology.`,
+                                        wiki: `Greek_mythology`
+                                    },
+                                    `By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body had lain.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

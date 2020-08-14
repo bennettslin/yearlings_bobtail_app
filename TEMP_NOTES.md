@@ -4,6 +4,7 @@
 
 * Pun annotations (going backwards)
     * 2 Saskia
+    * 1 Odin
     * ...
     * 1 Golden Cord
     * Consider "sun tinkles light" annotation not being under the actual lyric?

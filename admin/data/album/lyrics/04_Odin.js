@@ -71,7 +71,6 @@ export default {
                     lyricRight: [
                         {
                             anchor: `By lot,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
@@ -81,12 +80,26 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `In Genesis, "Lot" fled with his family from the wicked city of Sodom. When`,
+                                        `In the`,
+                                        {
+                                            anchor: `Book of Genesis,`,
+                                            wiki: `Book_of_Genesis`
+                                        },
+                                        {
+                                            anchor: `"Lot"`,
+                                            wiki: `Lot_(biblical_person)`
+                                        },
+                                        `fled with his family from the wicked city of`,
+                                        {
+                                            anchor: `Sodom.`,
+                                            wiki: `Sodom_and_Gomorrah`
+                                        },
+                                        `When`,
                                         {
                                             anchor: `his wife`,
                                             wiki: `Lot%27s_wife`
                                         },
-                                        `looked back, she was turned into a pillar of salt. This is understood by some to suggest that the fallen shall not cohabit with the faithful.`
+                                        `looked back, she was turned into a pillar of salt. This story is understood by some to suggest that the faithful shall not cohabit with the fallen.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true
@@ -255,13 +268,11 @@ export default {
                         `The`,
                         {
                             anchor: `house settled in sheets,`,
-                            todo: true,
                             card: {
                                 description: `The rest of the house is asleep, snug under their blankets. Of course, sheets are also pulled over the deceased.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
-                                    [PUN]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         }
@@ -476,15 +487,14 @@ export default {
                         `for these`,
                         {
                             anchor: `gentle means!`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Or else`,
+                                    `Referring to myself here as a`,
                                     {
                                         anchor: `"Gentile,"`,
                                         wiki: `Gentile`
                                     },
-                                    `referring to any non-Jew.`
+                                    `or non-Jew.`
                                 ],
                                 dotKeys: {
                                     [PUN]: true
@@ -664,10 +674,21 @@ export default {
                         `And if`,
                         {
                             anchor: `summer trips to Paris`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `In middle school, students who completed two years of French class were eligible to attend a summer program in France. This excited Sasha, and so it excited me as well.`,
+                                    description: [
+                                        `At our middle school, students who completed two years of`,
+                                        {
+                                            anchor: `French`,
+                                            wiki: `French_language`
+                                        },
+                                        `were eligible to attend a summer program in the city of`,
+                                        {
+                                            anchor: `Paris.`,
+                                            wiki: `Paris`
+                                        },
+                                        `This excited Sasha, and so it excited me as well.`
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -679,7 +700,21 @@ export default {
                                             anchor: `Paris`,
                                             wiki: `Paris_(mythology)`
                                         },
-                                        `was the prince of Troy, whose elopement with Helen of Sparta caused the Trojan War.`
+                                        `was the prince of`,
+                                        {
+                                            anchor: `Troy,`,
+                                            wiki: `Troy`
+                                        },
+                                        `whose elopement with`,
+                                        {
+                                            anchor: `Helen of Sparta`,
+                                            wiki: `Helen_of_Troy`
+                                        },
+                                        `began the`,
+                                        {
+                                            anchor: `Trojan War.`,
+                                            wiki: `Trojan_War`
+                                        }
                                     ],
                                     dotKeys: {
                                         [PUN]: true
@@ -1084,7 +1119,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Buoy bobs`,
-                            todo: true,
                             card: {
                                 description: `As buoys bob in the ocean, who's to say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
                                 dotKeys: {
@@ -1449,7 +1483,9 @@ export default {
                             anchor: `his litter`,
                             todo: true,
                             card: {
-                                description: `Referring to the disposal of Odin's cat litter, of course, but also to his lack of progeny. At this time, my own odds of leaving behind a litter don't seem any better.`,
+                                description: `The litter 
+                                
+                                Referring to the disposal of Odin's cat litter, of course, but also to his lack of progeny. At this time, my own odds of leaving behind a litter don't seem any better.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
