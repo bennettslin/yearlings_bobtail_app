@@ -826,10 +826,16 @@ export default {
                         `Then the`,
                         {
                             anchor: `guardian knot`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `While the umbilical cord passes sustenance to the fetus, outside the mother's womb it shrivels to a navel. So Sita became my guardian, and I hers, as we sustained each other through locked navels.`,
+                                    description: [
+                                        `Outside the womb, the`,
+                                        {
+                                            anchor: `umbilical cord`,
+                                            wiki: `Umbilical_cord`
+                                        },
+                                        `that once passed sustenance will shrivel to a navel. So in sustaining each other through locked navels, Sita became my guardian, and I hers.`
+                                    ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [REFERENCE]: true
@@ -847,7 +853,7 @@ export default {
                                             anchor: `Alexander the Great,`,
                                             wiki: `Alexander_the_Great`
                                         },
-                                        `however, simply chopped it in half with his sword. And in my bid for artistic greatness, I severed my own guardian knot by similarly applying brute force.`
+                                        `however, simply chopped it in half with his sword. And in my own bid for greatness, I severed the cord binding me to Sita with similar brute force.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
