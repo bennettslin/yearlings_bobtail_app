@@ -891,7 +891,12 @@ export default {
                                         anchor: `Pandora`,
                                         wiki: `Pandora`
                                     },
-                                    `was the first human woman. Upon opening a box given to her by Zeus as a wedding gift, she unwittingly released all the evils that plague humanity.`
+                                    `was the first human woman. Upon opening a box given to her by`,
+                                    {
+                                        anchor: `Zeus`,
+                                        wiki: `Zeus`
+                                    },
+                                    `as a wedding gift, she unwittingly released all the evils that plague humanity.`
                                 ]
                             }
                         },

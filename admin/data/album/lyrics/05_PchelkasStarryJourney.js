@@ -489,7 +489,6 @@ export default {
                         `But`,
                         {
                             anchor: `waiting for Goddard,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -497,7 +496,17 @@ export default {
                                             anchor: `Robert Goddard`,
                                             wiki: `Robert_H._Goddard`
                                         },
-                                        `ushered in the Space Age by inventing the liquid-fueled rocket. Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then.`
+                                        `ushered in the`,
+                                        {
+                                            anchor: `Space Age`,
+                                            wiki: `Space_Age`
+                                        },
+                                        `by inventing the`,
+                                        {
+                                            anchor: `liquid-fueled rocket.`,
+                                            wiki: `Liquid-propellant_rocket`
+                                        },
+                                        `Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -505,7 +514,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Or else for "Godot."`,
+                                        `Or else, for "Godot."`,
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -513,7 +522,12 @@ export default {
                                                 wiki: `Waiting_for_Godot`
                                             }
                                         },
-                                        `is a play by Samuel Beckett that explores existential themes.`
+                                        `is a play by`,
+                                        {
+                                            anchor: `Samuel Beckett`,
+                                            wiki: `Samuel_Beckett`
+                                        },
+                                        `that explores existential themes.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true
@@ -828,7 +842,6 @@ export default {
                         `twin friars`,
                         {
                             anchor: `cast here in pollens`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In Greek mythology,`,
@@ -836,7 +849,12 @@ export default {
                                         anchor: `"Castor and Pollux"`,
                                         wiki: `Castor_and_Pollux`
                                     },
-                                    `were twin brothers fathered by Zeus. Castor was mortal, so after his death, Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation Gemini. Similarly, it felt as if my brother were sharing his autism with me, along with its spiritual answers.`
+                                    `were twin brothers fathered by Zeus. Castor was mortal, so after his death, Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation`,
+                                    {
+                                        anchor: `Gemini.`,
+                                        wiki: `Gemini_(constellation)`
+                                    },
+                                    `Similarly, it felt as if my brother were sharing his autism with me, along with its spiritual answers.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -981,22 +999,37 @@ export default {
                 {
                     time: 160,
                     lyric: [
-                        `The only spies who get to feel love first`,
+                        `The only`,
+                        {
+                            anchor: `spies who get to feel love`,
+                            card: {
+                                description: [
+                                    `A`,
+                                    {
+                                        anchor: `spy's`,
+                                        wiki: `Espionage`
+                                    },
+                                    `success hinges upon keeping themselves hidden. Their exploits will never be appreciated until they're caught and placed before the`,
+                                    {
+                                        anchor: `firing squad.`,
+                                        wiki: `Execution_by_firing_squad`
+                                    },
+                                    `Similarly, at some point my desire to be part of a friendly squad caused me to open up and thus sabotage my past efforts to be unresponsive. But this only exposed me to greater scrutiny, as I was now forced to explain myself.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        },
+                        `first`,
                         {
                             anchor: `unearth their own plots!`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Figuratively, to reveal one's secret plans, but also literally, to dig one's own grave.`,
+                                    description: `Figuratively, this refers to revealing one's secret plans. Literally, it means digging one's own grave.`,
                                     dotKeys: {
                                         [PUN]: true
-                                    }
-                                },
-                                {
-                                    description: `A spy succeeds by staying hidden. Any appreciation of their exploits will always be belated, after they've fallen before a firing squad. Similarly, at some point my desire for friendship caused me to open up and thus sabotage my past efforts to be unresponsive. But this only exposed me to greater scrutiny, as I was now forced to explain myself.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [OBSERVATION]: true
                                     }
                                 }
                             ]
@@ -1095,7 +1128,6 @@ export default {
                         `this pack honours only the`,
                         {
                             anchor: `idiot's rod.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -1103,7 +1135,12 @@ export default {
                                         anchor: `"Iditarod"`,
                                         wiki: `Iditarod_Trail_Sled_Dog_Race`
                                     },
-                                    `is an annual sled dog race held in Alaska. Some mushers use a whip to keep the pack disciplined.`
+                                    `is an annual sled dog race held in`,
+                                    {
+                                        anchor: `Alaska.`,
+                                        wiki: `Alaska`
+                                    },
+                                    `Some mushers use a whip to keep the pack disciplined.`
                                 ],
                                 dotKeys: {
                                     [PUN]: true
@@ -1161,9 +1198,8 @@ export default {
                         {
                             anchor: `Xiao Xiang,`,
                             properNoun: true,
-                            todo: true,
                             card: {
-                                description: `Mushka means "little fly" in Russian. By coincidence, my brother's Chinese name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`,
+                                description: `Mushka means "little fly" in Russian, and by coincidence, my brother's Chinese name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                     [PUN]: true
@@ -1179,10 +1215,14 @@ export default {
                         `I couldn't ditch my wails, I`,
                         {
                             anchor: `needed the pod.`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `A group of whales is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and thus I sought out a metaphorical escape pod.`
+                                    `A group of`,
+                                    {
+                                        anchor: `whales`,
+                                        wiki: `Whale`
+                                    },
+                                    `is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and thus I sought out a metaphorical escape pod.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
