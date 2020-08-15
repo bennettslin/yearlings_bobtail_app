@@ -47,15 +47,23 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Walt Whitman wrote his elegy`,
+                                    {
+                                        anchor: `Walt Whitman`,
+                                        wiki: `Walt_Whitman`
+                                    },
+                                    `wrote his elegy`,
                                     {
                                         anchor: `"O Captain! My Captain!"`,
                                         wiki: `O_Captain!_My_Captain!`
                                     },
-                                    `upon hearing of Abraham Lincoln's assassination.`
+                                    `upon hearing of`,
+                                    {
+                                        anchor: `Abraham Lincoln's`,
+                                        wiki: `Abraham_Lincoln`
+                                    },
+                                    `assassination.`
                                 ],
                                 dotKeys: {
                                     [PUN]: true
@@ -177,7 +185,6 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -186,7 +193,7 @@ export default {
                                             anchor: `Tourette syndrome`,
                                             wiki: `Tourette_syndrome`
                                         },
-                                        `who suffer from uncontrollable tics, we said some things on impulse during the breakup. Also, Jesus was "laid to rest" on the day of his crucifixion.`
+                                        `who suffer from involuntary tics, Catherine and I might have said some things on impulse during the breakup. Also, Jesus was "laid to rest" on the day of his crucifixion.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -218,9 +225,8 @@ export default {
                         `up and left, hers the`,
                         {
                             anchor: `sole assent…`,
-                            todo: true,
                             card: {
-                                description: `Catherine wanted to break up; I didn't. And as the one believer between us, only she was to feel an "ascent."`,
+                                description: `Catherine wanted to break up; I didn't. But she was leaving me behind in another sense, given that hers was the only soul awaiting "ascent."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
@@ -267,7 +273,6 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -280,7 +285,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It never occurred to me that anyone could listen to music any differently. But Catherine appreciated music for its lyrics, and as such, she wasn't impressed by my songwriting skills.`,
+                                    description: `Up to that point, I had only devoted serious thought to writing melodies and chord progressions. It had never occurred to me that anyone could listen to music differently. But Catherine appreciated music for its lyrics, and because mine were of the nonsensical variety, she wasn't impressed by the kind of songs I wrote.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -310,9 +315,8 @@ export default {
                         `Oh Catherine,`,
                         {
                             anchor: `pressed for an opinion,`,
-                            todo: true,
                             card: {
-                                description: `After committing to be a better lyricist, I would often ask Catherine for an honest critique. In this imagined scenario that's perfectly telling of our relationship, she puts down the James Joyce novel that she's reading to compliment my attempt at writing a clever verse.`,
+                                description: `Wanting to write the kind of song that could tug on Catherine's heartstrings, I would sometimes ask her for honest feedback. And so in this imagined scenario, I picture myself asking for a critique of the lyrics in this very song.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true
@@ -327,9 +331,8 @@ export default {
                     lyric: [
                         {
                             anchor: `"My, what wit, man,"`,
-                            todo: true,
                             card: {
-                                description: `Her compliment is insincere, however, as she secretly amuses herself by drolly observing, "My, Walt Whitman."`,
+                                description: `I imagine Catherine responding, in typical droll fashion, with a pun that both salutes my attempts at being witty and also compliments my effort to channel "Walt Whitman."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -338,12 +341,17 @@ export default {
                         },
                         {
                             anchor: `putting down her Joyce,`,
-                            todo: true,
                             card: {
-                                description: `After all, referencing a poet typically studied by middle schoolers is hardly an artistic feat. And so Catherine is also figuratively "putting me down," for naively daring to become the James Joyce of lyricists.`,
+                                description: [
+                                    `Her compliment is less than sincere, however, since referencing a poet studied by middle schoolers is hardly an artistic feat. And so, having being made to put down the Joyce novel she was reading, Catherine amuses herself by figuratively putting`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `me`
+                                    },
+                                    `down, for naively thinking that I can be the James Joyce of song lyricists.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                     [PUN]: true
                                 }
                             }
@@ -356,15 +364,14 @@ export default {
                         `with`,
                         {
                             anchor: `"Joyce" oblivious`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Of course, not knowing that I couldn't be the next Joyce is precisely why I dared to try. The idea began to congeal in my head that I could do for rock music what`,
+                                    `Of course, not knowing that I couldn't be the next Joyce is precisely why I dared to try. And so the idea began to congeal in my head that I could do for rock music what`,
                                     {
                                         isItalic: true,
                                         lyric: `Ulysses`
                                     },
-                                    `did for English literature.`
+                                    `had done for English literature.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -462,7 +469,6 @@ export default {
                         `And as I pace, stranded here`,
                         {
                             anchor: `outside her Shelta,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -470,7 +476,12 @@ export default {
                                         anchor: `Irish Travellers`,
                                         wiki: `Irish_Travellers`
                                     },
-                                    `are a predominantly Catholic ethnic group. They speak a cryptic language known as`,
+                                    `are a predominantly`,
+                                    {
+                                        anchor: `Catholic`,
+                                        wiki: `Catholic_Church`
+                                    },
+                                    `ethnic group. They speak a cryptic language known as`,
                                     {
                                         anchor: `Shelta`,
                                         wiki: `Shelta`
@@ -491,15 +502,14 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Catherine introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
+                                    `Catherine is the one who introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
                                     {
                                         anchor: `"Famous Blue Raincoat"`,
                                         wiki: `Famous_Blue_Raincoat`
                                     },
-                                    `that helped me to understand the heights that great lyrics can reach.`
+                                    `that helped me understand the heights that great lyrics can reach.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -509,7 +519,6 @@ export default {
                         },
                         {
                             anchor: `unknown to roam,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `If Catherine is a figurative Traveller, then I am unwelcome to follow her itinerant community that is well-known to roam.`,
@@ -518,7 +527,29 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `"Raincoat" is a euphemism for condoms, which are famously unknown to "Rome" due to the Catholic Church's stance against birth control. Catherine and I never went all the way due to her vow not to engage in premarital sex, though I always held out the hope.`,
+                                    description: [
+                                        `"Raincoat" is a euphemism for`,
+                                        {
+                                            anchor: `condoms,`,
+                                            wiki: `Condom`
+                                        },
+                                        `which are famously unknown to`,
+                                        {
+                                            anchor: `"Rome"`,
+                                            wiki: `Rome`
+                                        },
+                                        `due to the Catholic Church's stance against`,
+                                        {
+                                            anchor: `birth control.`,
+                                            wiki: `Birth_control`
+                                        },
+                                        `Catherine and I never went all the way due to her vow not to engage in`,
+                                        {
+                                            anchor: `premarital sex,`,
+                                            wiki: `Premarital_sex`
+                                        },
+                                        `though I always held out the hope.`
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true,
@@ -625,11 +656,10 @@ export default {
                     lyric: [
                         `Well yes, I`,
                         {
-                            anchor: `faked this "X,"`,
-                            todo: true,
+                            anchor: `faked this X,`,
                             cards: [
                                 {
-                                    description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X.`,
+                                    description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. But I had ashed myself without the benefit of a mirror, so my cross was slanted like the letter X.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [REFERENCE]: true
@@ -661,15 +691,14 @@ export default {
                         `Well no, I know it's wrong, but I did`,
                         {
                             anchor: `burn my palms,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `The ash used comes from burning the palm branches that were blessed on the previous year's`,
+                                    `The ash used on Ash Wednesday comes from burning the palm branches that were blessed on the previous year's`,
                                     {
                                         anchor: `Palm Sunday.`,
                                         wiki: `Palm_Sunday`
                                     },
-                                    `Since I got the ash from an outdoor ashtray, the palms I burned were my hands.`
+                                    `But mine had come from a cigarette butt that had been recently put out in an outdoor ashtray, so the palms I speak of here are actually my hands.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

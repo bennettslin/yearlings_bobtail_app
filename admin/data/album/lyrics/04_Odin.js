@@ -272,7 +272,8 @@ export default {
                                 description: `The rest of the house is asleep, snug under their blankets. Of course, sheets are also pulled over the deceased.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
                                 }
                             }
                         }
@@ -1488,9 +1489,14 @@ export default {
                             anchor: `his litter`,
                             todo: true,
                             card: {
-                                description: `The litter 
-                                
-                                Referring to the disposal of Odin's cat litter, of course, but also to his lack of progeny. At this time, my own odds of leaving behind a litter don't seem any better.`,
+                                description: [
+                                    `Referring to the disposal of Odin's`,
+                                    {
+                                        anchor: `cat litter,`,
+                                        wiki: `Litter_box`
+                                    },
+                                    `of course, but perhaps also to his lack of progeny. At this time, my own odds of leaving behind a litter don't seem any better.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
