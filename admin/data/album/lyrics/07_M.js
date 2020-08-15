@@ -235,9 +235,15 @@ export default {
                     lyric: [
                         {
                             anchor: `Once I metamorphose,`,
-                            todo: true,
                             card: {
-                                description: `In other words, upon completion of my metamorphosis, it would then be the case that "once I met a Mara," I was "for certain" to impress her.`,
+                                description: [
+                                    `In other words, upon completion of my`,
+                                    {
+                                        anchor: `metamorphosis,`,
+                                        wiki: `Metamorphosis`
+                                    },
+                                    `it would then be the case that once I "met a Mara, for" certain I was to impress her.`
+                                ],
                                 dotKeys: {
                                     [PUN]: true
                                 }
@@ -362,7 +368,6 @@ export default {
                         `Hopes wrapped in`,
                         {
                             anchor: `marinaded confections,`,
-                            todo: true,
                             card: {
                                 description: `Or they were wrapped in my "Mara-needed confessions."`,
                                 dotKeys: {
@@ -379,7 +384,6 @@ export default {
                         `before`,
                         {
                             anchor: `tomorrow never sent.`,
-                            todo: true,
                             card: {
                                 description: `Or else, these hopes were never before sent "to Mara."`,
                                 dotKeys: {
@@ -430,9 +434,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Morphined,`,
-                            todo: true,
                             card: {
-                                description: `Or I would be a "Mara fiend," a slightly different kind of addict.`,
+                                description: `Or I would be a "Mara fiend," which is a slightly different kind of addict.`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
@@ -489,7 +492,6 @@ export default {
                         `a`,
                         {
                             anchor: `mariner's child`,
-                            todo: true,
                             card: {
                                 description: `Or else, I would die as a "Mara-nursed" child.`,
                                 dotKeys: {
@@ -515,15 +517,29 @@ export default {
                         {
                             anchor: `Moonie wedding,`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
                                     {
-                                        anchor: `Unification Church,`,
+                                        anchor: `Unification Church`,
                                         wiki: `Unification_Church`
                                     },
-                                    `founded by Sun Myung Moon, is widely seen as a cult due to its aggressive proselytism. It is perhaps best known for its mass weddings in which thousands of congregants, informally known as Moonies, are paired off with perfect strangers. I found the thought humorously enticing that if I simply accepted one of their pamphlets, then my long, hard struggle to find a romantic partner would be over in an instant.`
+                                    `founded by`,
+                                    {
+                                        anchor: `Sun Myung Moon`,
+                                        wiki: `Sun_Myung_Moon`
+                                    },
+                                    `is widely seen as a cult due to its aggressive`,
+                                    {
+                                        anchor: `proselytism.`,
+                                        wiki: `Proselytism`
+                                    },
+                                    `It is perhaps best known for its`,
+                                    {
+                                        anchor: `mass weddings`,
+                                        wiki: `Blessing_ceremony_of_the_Unification_Church`
+                                    },
+                                    `in which thousands of congregants, informally known as Moonies, are paired off with perfect strangers. I found the thought humorously enticing that I could simply accept a campus Moonie's pamphlet, and my long, hard struggle to find a romantic partner would be over in an instant.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -539,21 +555,13 @@ export default {
                         {
                             anchor: `"Made in America" signs.`,
                             properNoun: true,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might possibly be a foreigner, one who was foolish enough to choose this venture solely for the chance to raise a family of native-born American children.`,
-                                    dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
-                                },
-                                {
-                                    description: `Of course, I would be just as foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,
-                                    dotKeys: {
-                                        [PUN]: true
-                                    }
+                            card: {
+                                description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might possibly be a foreigner, one who was foolish enough to choose this venture solely for the chance to raise a family of native-born American children. Of course, I would be just as foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
                                 }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -563,7 +571,6 @@ export default {
                         `In a`,
                         {
                             anchor: `time capsule`,
-                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -571,7 +578,7 @@ export default {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`
                                     },
-                                    `is a vessel of contemporary objects that will be treated as historical artifacts once rediscovered in a later era. In a way, it allows a past generation to speak to a future one. Similarly, in my dejected state, I could only envision my next five-year plan as a forum to air my grievances to a captive future audience.`
+                                    `is a vessel of contemporary objects that will be seen as historical artifacts once rediscovered by a later era. In a way, it allows past generations to speak to future ones. Similarly, in my dejected state, I could only envision my next five-year plan as a forum to air my grievances to a captive future audience.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -591,28 +598,20 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `There was a comfort in having all my priorities settled in advance by the five-year plan. Since I always knew with certainty the right course of action, I could undertake it with conviction. I was like a`,
-                                        {
-                                            anchor: `marionette,`,
-                                            wiki: `Marionette`
-                                        },
-                                        `being made to posture by the hidden hand of my naive younger self.`
-                                    ],
-                                    dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
-                                },
-                                {
-                                    description: `But also, I eagerly donned these marionette strings only because I believed the lies that some "Mara you'll net" by doing so.`,
-                                    dotKeys: {
-                                        [PUN]: true
-                                    }
+                            card: {
+                                description: [
+                                    `There was a comfort in having all my priorities settled in advance by the five-year plan. Since I always knew with certainty the right course of action, I could undertake it with conviction. I was like a`,
+                                    {
+                                        anchor: `marionette`,
+                                        wiki: `Marionette`
+                                    },
+                                    `being made to posture by the hidden hand of my naive younger self. Of course, I eagerly donned these strings only because I believed his lies, namely that "Mara you'll net" by doing so.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
                                 }
-                            ]
+                            }
                         },
                         `in this`,
                         {
@@ -719,7 +718,13 @@ export default {
                                             anchor: `chimney sweep`,
                                             wiki: `Chimney_sweep`
                                         },
-                                        `will bring good luck to a bride. But in the Victorian era, the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, for themselves only a lifetime of ill health awaited. Similarly, any kiss blown from Mara on her wedding day would only highlight my misfortune of not being with her.`
+                                        `will bring good luck to a bride. But in the`,
+                                        {
+                                            anchor: `Victorian era,`,
+                                            wiki: `Victorian_era`
+                                        },
+                                        `the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited for themselves. Similarly, any kiss blown from Mara on her wedding day would only highlight my misfortune of not being with her.`
+                                        // TODO: Make this more about me introducing Mara and Jacob, while having no luck myself.
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true
@@ -737,7 +742,6 @@ export default {
                     lyric: [
                         {
                             anchor: `indentures dumbed`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Chimney sweep apprentices were typically employed as`,
@@ -745,7 +749,7 @@ export default {
                                         anchor: `indentured servants`,
                                         wiki: `Indentured_servant`
                                     },
-                                    `at a young age. Similarly, given the years that had to pass in servitude to my five-year plans before I could be my own person again, I was effectively "in dentures" already, and thus unable to speak.`
+                                    `at a young age. But given that I might have to spend countless years in servitude to my five-year plans before I could be my own person again, I was effectively "in dentures" already, and thus unable to speak.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -762,9 +766,8 @@ export default {
                         `Whispered "adieu," I`,
                         {
                             anchor: `bade them to fare well,`,
-                            todo: true,
                             card: {
-                                description: `Jacob was my friend, of course, and I was happy that he had found Mara. But I also wasn't happy about sticking around. So as they exchanged their vows, I silently offered one of my own, and bade them "two farewell."`,
+                                description: `Jacob was my friend, of course, and I was happy that he had found Mara. But I also wasn't eager to stick around. So as I imagined them exchanging their vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -813,9 +816,8 @@ export default {
                     time: 160,
                     lyric: {
                         anchor: `to have a merry ol' laugh.`,
-                        todo: true,
                         card: {
-                            description: `Or else, to "have a Mara you'll laugh."`,
+                            description: `Or to have a "Mara, you'll" laugh.`,
                             dotKeys: {
                                 [PUN]: true
                             }
@@ -871,9 +873,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Moral is`,
-                            todo: true,
                             card: {
-                                description: `Or else, "Mara-less."`,
+                                description: `Or else, while I'm "Mara-less."`,
                                 dotKeys: {
                                     [PUN]: true
                                 }

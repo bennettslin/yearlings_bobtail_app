@@ -1490,6 +1490,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
+                                    // TODO: Biblical progeny.
                                     `Referring to the disposal of Odin's`,
                                     {
                                         anchor: `cat litter,`,

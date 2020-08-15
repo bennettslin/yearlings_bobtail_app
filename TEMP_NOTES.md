@@ -1,5 +1,9 @@
 # TODO:
 * Turn back on the feature to select all dots when annotation is in URL, in getDotsBitFromStorage.
+* Lyric is in front of carousel when wiki selected.
+
+* M annotations
+    * Make sure backstory and narrative tenses are correct.
 
 * Pun annotations (going backwards)
     * 2 Saskia
