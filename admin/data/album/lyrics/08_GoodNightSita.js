@@ -230,7 +230,6 @@ export default {
                     lyric: [
                         {
                             anchor: `nor a barnacle`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -238,7 +237,7 @@ export default {
                                             anchor: `"Nora Barnacle"`,
                                             wiki: `Nora_Barnacle`
                                         },
-                                        `was the wife of James Joyce and the inspiration for the Molly Bloom character, whose interior monologue in`,
+                                        `was the wife of James Joyce and his inspiration for the Molly Bloom character, whose interior monologue in`,
                                         {
                                             isItalic: true,
                                             lyric: `Ulysses`
@@ -344,9 +343,8 @@ export default {
                         `till then`,
                         {
                             anchor: `crack up another doll`,
-                            todo: true,
                             card: {
-                                description: `A friend once advised me that if I can keep a woman "cracking up" at my jokes all night, then I'll always be golden. Not being very funny, I settled on some weird combination of clever quips and goofy postures.`,
+                                description: `A classmate had told me that if I can keep a woman cracking up at my jokes all night, then I'll always be good for another date. Not being very funny, I tried my best with clever quips and goofy mannerisms.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
@@ -428,7 +426,6 @@ export default {
                         `when`,
                         {
                             anchor: `defined by ambrosia beers`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -436,7 +433,7 @@ export default {
                                             anchor: `Ambrosia`,
                                             wiki: `Ambrosia`
                                         },
-                                        `was the food of the Greek gods, just as beer made me feel omnipotent.`
+                                        `was the food of the Greek gods, just as beer temporarily made me feel omnipotent.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true
@@ -444,17 +441,19 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `American author`,
                                         {
                                             anchor: `"Ambrose Bierce"`,
                                             wiki: `Ambrose_Bierce`
                                         },
-                                        `wrote a collection of satirical definitions called`,
+                                        `wrote a collection of cynical definitions called`,
                                         {
                                             isItalic: true,
-                                            lyric: `The Devil's Dictionary.`
+                                            lyric: {
+                                                anchor: `The Devil's Dictionary.`,
+                                                wiki: `The_Devil's_Dictionary`
+                                            }
                                         },
-                                        `My sense of humor at the time was a naive approximation of this brand of cynical wit.`
+                                        `In hindsight, it probably wasn't the wisest idea to base my sense of humor on the work of a 19th-century American satirist.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

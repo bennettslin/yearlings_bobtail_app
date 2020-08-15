@@ -13,13 +13,18 @@ import './style'
 
 const INTERVALS_COUNT = 4
 
-const TempGlobalAnnotationsCounter = () => (
-    <div className="TempGlobalAnnotationsCounter">
-        <div className="TempGlobalAnnotation__header">
-            {getGlobalAnnotationDoneCount()} / {getGlobalAnnotationCount()} done!
+const TempGlobalAnnotationsCounter = () => {
+    const percentageDone = parseInt(
+        getGlobalAnnotationDoneCount() / getGlobalAnnotationCount() * 100
+    )
+    return (
+        <div className="TempGlobalAnnotationsCounter">
+            <div className="TempGlobalAnnotation__header">
+                {getGlobalAnnotationDoneCount()} / {getGlobalAnnotationCount()} ({percentageDone}%) done!
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 const TempGlobalAnnotation = ({ intervalIndex }) => {
     const {
