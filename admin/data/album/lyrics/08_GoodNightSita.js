@@ -116,10 +116,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    // herky jerky syncopations false starts.
-                    description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
+                    description: [
+                        `My inability to process my thoughts into coherent speech is reflected in the herky-jerky,`,
+                        {
+                            anchor: `syncopated`,
+                            wiki: `Syncopation`
+                        },
+                        `rhythm played by the drums.`
+                    ],
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -214,7 +219,27 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: [
+                        `I once had a supervisor who would blast`,
+                        {
+                            anchor: `Michael Jackson's`,
+                            wiki: `Michael_Jackson`
+                        },
+                        {
+                            anchor: `"Don't Stop 'Til You Get Enough"`,
+                            wiki: `Don't_Stop_'Til_You_Get_Enough`
+                        },
+                        `in the home stretch of every dishroom shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun, so I borrowed its sound to convey where my head was at during those first few dates with Sita. Hence the dual palm-muted electric guitars, occasional rubbery bass trills, and ample cowbell.`
+                    ],
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
