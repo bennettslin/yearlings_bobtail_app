@@ -235,7 +235,6 @@ export default {
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [BACKSTORY]: true,
                                     [PUN]: true
                                 }
                             }
@@ -269,7 +268,7 @@ export default {
                                         anchor: `amber`,
                                         wiki: `Amber`
                                     },
-                                    `is fossilised tree resin that sometimes preserves the remains of trapped insects from epochs past.`
+                                    `is fossilized tree resin that sometimes preserves the remains of trapped insects from epochs past.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -283,18 +282,39 @@ export default {
                     lyric: [
                         {
                             anchor: `your pupil's pupal fly,`,
-                            todo: true,
                             card: {
-                                // TODO: More references.
-                                description: `While I reflect on my feelings for Sasha, I recall the last day we spoke, when I caught my literal reflection in her eyes. Petrified by the thought of losing her, I saw myself as a petrified larva without any chance to molt.`,
+                                description: [
+                                    `While I reflect on my feelings for Sasha, I recall our last day together, when I caught my reflection in the`,
+                                    {
+                                        anchor: `pupil`,
+                                        wiki: `Pupil`
+                                    },
+                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I could see that we were no longer on the same footing, if we ever were.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                     [PUN]: true
                                 }
                             }
                         },
-                        `a pet petrified—`
+                        `a`,
+                        {
+                            anchor: `pet petrified—`,
+                            card: {
+                                description: [
+                                    `Petrified by the thought of losing Sasha, I felt like a petrified`,
+                                    {
+                                        anchor: `pupa`,
+                                        wiki: `Pupa`
+                                    },
+                                    `that has no chance to molt.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
+                            }
+                        }
                     ]
                 },
                 {
@@ -468,7 +488,6 @@ export default {
                         `untied this`,
                         {
                             anchor: `"tetherboy,"`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -477,24 +496,21 @@ export default {
                                             anchor: `"tetherball"`,
                                             wiki: `Tetherball`
                                         },
-                                        `pole with its rope.`
+                                        `pole using the rope attached to the ball.`
                                     ],
                                     dotKeys: {
-                                        [NARRATIVE]: true,
                                         [BACKSTORY]: true,
                                         [PUN]: true
                                     }
                                 },
                                 {
                                     description: [
-                                        // TODO: Flesh this out.
-                                        `Some parents protect their toddlers by tethering them to a`,
+                                        `Some overprotective parents tether their toddlers to a`,
                                         {
-                                            anchor: `child harness.`,
+                                            anchor: `child harness`,
                                             wiki: `Child_harness`
                                         },
-                                        `As such, older children who are unable to fend for themselves may be mocked as having been kept on a tether by overprotective parents.`
-                                        // SCRAPS: There exists a comfortable notion in our society that such children would benefit from the occasional beatdown to toughen them up.
+                                        `to keep them close by. As such, older children who are unable to fend for themselves might be mocked by their peers as having been kept on a tether their whole lives.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true
@@ -521,7 +537,7 @@ export default {
                             anchor: `anarchy reigns,`,
                             todo: true,
                             card: {
-                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, and then to walk onto the quad and witness this very principle in action.`,
+                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, and then to walk onto the quad and witness history being repeated.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -590,9 +606,9 @@ export default {
                             anchor: `jaw was stuck,`,
                             todo: true,
                             card: {
-                                description: `Here, I recall another incident in which a bully snuck up from behind and put me in a chokehold while I was waiting for the school bus.`,
+                                description: `Here, I recall another incident in which a bully had snuck up from behind and put me in a chokehold while I was waiting for the school bus.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -602,7 +618,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `The chokehold incident left me with a dislocated jaw that required me to clench it whenever I spoke. This led to a peculiar manner of pronunciation that some to this day mistake for a`,
+                                    `The chokehold incident left me with a dislocated jaw that required me to keep it clenched whenever I spoke. This led to a peculiar manner of pronunciation that some people to this day mistake for a`,
                                     {
                                         anchor: `Canadian accent.`,
                                         wiki: `Canadian_raising`
