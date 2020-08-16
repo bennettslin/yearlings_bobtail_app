@@ -187,15 +187,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `So as not to wake his neighbors, Owen would sing in muffled tones and then double track his vocals. I didn't have a cassette player handy to play his demos, so I took notes from`,
+                        `So as not to wake his neighbors while recording late at night, Owen would sing in muffled tones and then double track his vocals to thicken them. I wanted to recreate this effect, so I took notes from`,
                         {
                             anchor: `Elliott Smith,`,
                             wiki: `Elliott_Smith`
                         },
-                        `who did the same on his first few albums. I guess it's the go-to approach for late-night recording.`
+                        `who did the same on his first few albums.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -295,10 +294,19 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `When I asked Owen to recommend some great lyricists, he pointed me to Nas. I hadn't given serious thought to hip hop at the time, believing it to be too far removed from my own method of songwriting to offer much useful wisdom. But even as my lone point of reference for hip hop back then, Nas's debut album`,
+                        `When I asked Owen to recommend some great lyricists, he pointed me to`,
+                        {
+                            anchor: `Nas.`,
+                            wiki: `Nas`
+                        },
+                        `I hadn't given serious thought to`,
+                        {
+                            anchor: `hip hop`,
+                            wiki: `Hip_hop`
+                        },
+                        `at the time, believing it to be too far removed from my own method of songwriting to offer much wisdom. I've since corrected this oversight, but back when it was my lone point of reference for hip hop, Nas's debut album`,
                         {
                             anchor: `Illmatic`,
                             wiki: `Illmatic`
@@ -311,6 +319,7 @@ export default {
                         `which I used in these verses.`
                     ],
                     dotKeys: {
+                        [BACKSTORY]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -491,7 +500,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `I recorded drum cymbals here at an extremely low tape speed, which turned them into`,
