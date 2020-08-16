@@ -666,7 +666,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `Since Catherine insisted on going no further than heavy petting, I would "fake the sex" for myself by masturbating afterwards.`,
+                                    description: `Since Catherine insisted on going no further than heavy petting, I would "fake the sex" for myself by masturbating afterward.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true

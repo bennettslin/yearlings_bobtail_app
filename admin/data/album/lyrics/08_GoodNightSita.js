@@ -236,6 +236,7 @@ export default {
                         `in the home stretch of every dishroom shift. Ever since, I've associated this song with the idea of psyching myself up to have fun when I'm not really having fun, so I borrowed its sound to convey where my head was at during those first few dates with Sita. Hence the dual palm-muted electric guitars, occasional rubbery bass trills, and ample cowbell.`
                     ],
                     dotKeys: {
+                        [BACKSTORY]: true,
                         [SONGWRITING]: true
                     }
                 }

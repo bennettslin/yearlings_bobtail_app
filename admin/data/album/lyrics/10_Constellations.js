@@ -37,11 +37,11 @@ export default {
                         {
                             isItalic: true,
                             lyric: {
-                                anchor: `The Basketball Diaries,`,
+                                anchor: `The Basketball Diaries.`,
                                 wiki: `The_Basketball_Diaries_(book)`
                             }
                         },
-                        `and was soon hooked. The best part about it is the`,
+                        `It instantly became my drug of choice, since I didn't need to know any dealers. The best thing about a Robitussin trip is the`,
                         {
                             anchor: `closed-eye hallucinations,`,
                             wiki: `Closed-eye_hallucination`
@@ -82,6 +82,15 @@ export default {
                             cards: [
                                 {
                                     description: [
+                                        `We tread with "reverence" through the UCLA campus. Since I am the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey.`
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true
+                                    }
+                                },
+                                {
+                                    description: [
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -92,16 +101,8 @@ export default {
                                         `James Joyce's ambitious final novel, opens with the line, "riverrun, past Eve and Adam's." So I figured this song could start there as well.`
                                     ],
                                     dotKeys: {
-                                        [SONGWRITING]: true,
-                                        [PUN]: true
-                                    }
-                                },
-                                {
-                                    description: [
-                                        `Since I am the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey. And so we tread with "reverence" through the UCLA campus.`
-                                    ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true
+                                        [PUN]: true,
+                                        [SONGWRITING]: true
                                     }
                                 }
                             ]
@@ -258,7 +259,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `To be honest, I never got past the first fifty pages of`,
@@ -266,11 +266,10 @@ export default {
                             isItalic: true,
                             lyric: `Finnegans Wake.`
                         },
-                        `Still, I was impressed by Joyce's use of literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which time seems to stand still, and everything feels at once epic and unreal.`
+                        `Still, I took note of how Joyce used literary puns to create multiple layers of meaning within a dreamlike setting. It seemed like the perfect device for conveying a Robitussin trip, in which worlds of meaning build up and then fade within the briefest of moments, and everything feels at once epic and unreal.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [OBSERVATION]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -599,17 +598,12 @@ export default {
                                 wiki: `Ghost_in_the_Machine_(album)`
                             }
                         },
-                        `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. The drums are my amateurish imitation of`,
-                        {
-                            anchor: `Stewart Copeland's`,
-                            wiki: `Stewart_Copeland`
-                        },
-                        `performance in`,
+                        `was my soundtrack of choice for a Robitussin trip, so I tried to recreate its ambience. Taking a cue from the song`,
                         {
                             anchor: `"Secret Journey,"`,
                             wiki: `Secret_Journey_(song)`
                         },
-                        `in which the kick is left off the downbeat almost throughout. Such a simple idea, but it does wonders for letting the music breathe before being submerged again in the chorus.`
+                        `for example, I left the drum kick off the downbeat in the prechorus, which does wonders for letting the other instruments breathe before they get submerged again in the chorus.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -1012,7 +1006,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Sita introduced me to`,
@@ -1020,7 +1013,7 @@ export default {
                             anchor: `Bollywood`,
                             wiki: `Bollywood`
                         },
-                        `movies, which are a gold mine of musical sounds and ideas. The chords here were shamelessly borrowed from the title track of one of our favorites,`,
+                        `movies, which are a gold mine of musical sounds and ideas. The chords for the refrain and verse in this song were shamelessly borrowed from the title track of one of our favorites,`,
                         {
                             isItalic: true,
                             lyric: {
@@ -1031,7 +1024,6 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [OBSERVATION]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -1370,17 +1362,17 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `On my solo Robitussin trips, I would mentally search for metaphysical truths while playing video games on my old`,
+                        `I treated every one of my Robitussin trips as a time to explore metaphysical truths. But since I usually tripped solo, I would also occupy myself by playing video games on my`,
                         {
-                            anchor: `Super NES console.`,
+                            anchor: `Super Nintendo.`,
                             wiki: `Super_Nintendo_Entertainment_System`
                         },
-                        `16-bit sounds thus came to take on a spiritual significance for me.`
+                        `So for a while, every 16-bit arcade sound that I heard seemed to hide a profound spiritual message that my sober ears just couldn't suss out.`
                     ],
                     dotKeys: {
+                        [BACKSTORY]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -1816,18 +1808,24 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `For a song about recreational drug use, I naturally sought counsel from the Beatles, whose`,
+                        `For a song about recreational drug use, I naturally sought counsel from the Beatles during their`,
                         {
-                            isItalic: true,
-                            lyric: {
-                                anchor: `"Tomorrow Never Knows"`,
-                                wiki: `Tomorrow_Never_Knows`
-                            }
+                            anchor: `psychedelic`,
+                            wiki: `Psychedelic_rock`
                         },
-                        `includes a tape loop that imitates a seagull's cry. I tried to recreate this sound by pinching off the air stream coming through a recorder's window, but the result wasn't exactly what I wanted. Kept in the background, however, it contributes nicely to the overall atmosphere.`
+                        `period.`,
+                        {
+                            anchor: `"Tomorrow Never Knows"`,
+                            wiki: `Tomorrow_Never_Knows`
+                        },
+                        `makes use of a tape loop that imitates a`,
+                        {
+                            anchor: `seagull's`,
+                            wiki: `Gull`
+                        },
+                        `cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I had hoped for, but kept in the background, it contributes nicely to the overall atmosphere.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -2028,8 +2026,8 @@ export default {
                                         `to wrap back onto the first, so I "re-Joyced" by indulging in the same conceit.`
                                     ],
                                     dotKeys: {
-                                        [SONGWRITING]: true,
-                                        [PUN]: true
+                                        [PUN]: true,
+                                        [SONGWRITING]: true
                                     }
                                 }
                             ]
