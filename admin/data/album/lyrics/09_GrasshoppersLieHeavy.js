@@ -271,7 +271,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `As a diabetic, Sita regularly checked her blood sugar level before meals by pricking her finger with a`,
+                                    `As a`,
+                                    {
+                                        anchor: `diabetic,`,
+                                        wiki: `Diabetes`
+                                    },
+                                    `Sita regularly checked her blood sugar level before meals by pricking her finger with a`,
                                     {
                                         anchor: `lancing device.`,
                                         wiki: `Blood_lancet`
@@ -775,7 +780,6 @@ export default {
                         },
                         {
                             anchor: `returned to your guard…`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `And just like that, I am once again on guard, second-guessing everything I say and do.`,
@@ -784,7 +788,9 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `I'm like an escaped convict who has just been locked in handcuffs and sent back to the penitentiary, where a prison guard directs me into a holding cell.`,
+                                    description: [
+                                        `It's like I'm an escaped convict who has just been locked in handcuffs and sent back to jail, where a jail guard now directs me into a holding cell.`
+                                    ],
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [PUN]: true
@@ -878,9 +884,8 @@ export default {
                         `"Shall I leave you," she says,`,
                         {
                             anchor: `"here to Philip Dick?"`,
-                            todo: true,
                             card: {
-                                description: `Or else, "Shall I leave you here to feel up dick?" Sita lightens the awkwardness by taking a gentle jab at the bookish exterior that I've carefully crafted.`,
+                                description: `Or else, "Shall I leave you here to feel up dick?" Sita lightens the awkwardness by gently taking a jab at the bookish exterior I've carefully crafted.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -922,16 +927,22 @@ export default {
                         `Thoughts sift in the`,
                         {
                             anchor: `waiting room:`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `One night, Sita has a severe hypoglycemic episode. I drive her to the hospital and sit in the waiting room while she is being examined.`,
+                                    description: [
+                                        `One night, Sita had a`,
+                                        {
+                                            anchor: `hypoglycemic`,
+                                            wiki: `Hypoglycemia`
+                                        },
+                                        `episode. I drove her to the hospital and sat in the waiting room while she was being examined.`
+                                    ],
                                     dotKeys: {
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 },
                                 {
-                                    description: `Traditionally, the groom's entrance into the "wedding room" begins the ceremony. He then stands and waits for the bride to close the procession.`,
+                                    description: `Traditionally, the groom's entrance into the "wedding" room begins the ceremony. He then stands and waits for the bride to close the procession.`,
                                     dotKeys: {
                                         [PUN]: true,
                                         [REFERENCE]: true
@@ -947,10 +958,9 @@ export default {
                         `Why does she play`,
                         {
                             anchor: `bright to your gloom`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `When we first met, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament and cynical outlook. But as our friendship grew, I came to learn that her cheery exterior masked a severe depression, which gave me an opening to win her over with simple, kind gestures.`,
+                                    description: `When we first met, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But as our friendship grew, I came to see that her cheery outlook actually masked a lingering depression, which gave me an opening to win her over with simple, kind gestures.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -989,19 +999,17 @@ export default {
                         `and the`,
                         {
                             anchor: `organ on which it struck,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `As the minutes tick away, I am more than a little worried, having heard in passing that organ failure is one of the dangers of hypoglycemia.`,
+                                    description: `As the minutes tick away, I become worried that Sita's diagnosis might be as severe as organ failure.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
                                 },
                                 {
-                                    description: `A wedding procession is typically accompanied by music, the "melody" of which might be performed on a chapel "organ."`,
+                                    description: `A wedding procession is typically accompanied by music, the "melody" of which might be performed on a chapel organ.`,
                                     dotKeys: {
-                                        [PUN]: true,
-                                        [REFERENCE]: true
+                                        [PUN]: true
                                     }
                                 }
                             ]
@@ -1042,7 +1050,6 @@ export default {
                         },
                         {
                             anchor: `with a ring.`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `Having dozed off, I am roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting room.`,
@@ -1070,7 +1077,6 @@ export default {
                         `In her`,
                         {
                             anchor: `white gown,`,
-                            todo: true,
                             card: {
                                 description: `White gowns are common attire in both wedding ceremonies and hospitals.`,
                                 dotKeys: {
@@ -1087,17 +1093,16 @@ export default {
                         `and you marvel, glimmer of her`,
                         {
                             anchor: `cheek unveiled.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Glancing up, I'm startled to find Sita flashing a "cheeky" smile as she hovers over me. Having quietly unclasped her purse from my grip, she returns to the emergency room, only to inadvertently flash some "cheek" from beneath her revealing hospital gown.`,
+                                    description: `Glancing up, I'm startled to find Sita hovering over me with a cheeky smile. Having quietly unclasped her purse from my grip, she returns to the emergency room, but not before inadvertently flashing some "cheek" from beneath her revealing hospital gown.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
                                     }
                                 },
                                 {
-                                    description: `In a traditional wedding, the father of the bride lifts her "veil" to kiss her on the cheek.`,
+                                    description: `In a traditional wedding, the father of the bride lifts her veil to kiss her on the cheek.`,
                                     dotKeys: {
                                         [PUN]: true,
                                         [REFERENCE]: true
@@ -1144,7 +1149,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `The night that we decide to have sex, I am suddenly overcome with a weary unease. As Sita lies naked under the covers, I stand forlornly by the bedside for what seems like several minutes.`,
+                                    description: `The night that we decided to have sex, I was suddenly overcome with a weary unease that I couldn't explain. As Sita lay naked under the covers, I stood forlornly by the bedside for what seemed like several minutes.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -1167,9 +1172,8 @@ export default {
                         `you wear your`,
                         {
                             anchor: `hard-on in a sleeve."`,
-                            todo: true,
                             card: {
-                                description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with my self-assessment of being one who wears his "heart on his sleeve."`,
+                                description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with a past self-assessment of mine that I wear my "heart on" my sleeve.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -1227,7 +1231,6 @@ export default {
                         {
                             anchor: `Grace Darling's beacon`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1235,12 +1238,16 @@ export default {
                                             anchor: `Grace Darling`,
                                             wiki: `Grace_Darling`
                                         },
-                                        `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. Though this brave feat won her instant renown in the Victoria era, the consequent public exposure led to her death by tuberculosis at age 26.`
+                                        `was a lighthouse keeper's daughter who rescued the survivors of a shipwreck by paddling out to sea in a rowboat. This brave feat won her renown in the Victoria era, but the consequent public exposure led to her early death by`,
+                                        {
+                                            anchor: `tuberculosis.`,
+                                            wiki: `Tuberculosis`
+                                        }
                                     ]
                                 },
                                 {
                                     description: [
-                                        `But then I'm reminded that Sita is my "grace darling," having rescued me from a sea of loneliness.`
+                                        `I'm reminded that Sita is my "grace darling," having rescued me from a sea of loneliness.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1255,10 +1262,14 @@ export default {
                         `light`,
                         {
                             anchor: `fell an oar.`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Or "fell Lenore." Edgar Allan Poe's wife also died from tuberculosis, at age 24. Her prolonged illness likely inspired his poem`,
+                                    `Or else, "fell Lenore."`,
+                                    {
+                                        anchor: `Edgar Allan Poe's`,
+                                        wiki: `Edgar_Allan_Poe`
+                                    },
+                                    `wife also died from tuberculosis at a young age. Her prolonged illness likely inspired his poem`,
                                     {
                                         anchor: `"The Raven,"`,
                                         wiki: `The_Raven`
@@ -1303,9 +1314,15 @@ export default {
                         `You`,
                         {
                             anchor: `stroke her temples.`,
-                            todo: true,
                             card: {
-                                description: `Referring to her literal temples. And possibly to her figurative ones as well.`,
+                                description: [
+                                    `Referring to her literal`,
+                                    {
+                                        anchor: `temples.`,
+                                        wiki: `Temple_(anatomy)`
+                                    },
+                                    `But possibly her figurative ones as well.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
