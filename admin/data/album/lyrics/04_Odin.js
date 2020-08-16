@@ -651,7 +651,7 @@ export default {
                                         anchor: `Ishmael`,
                                         wiki: `Ishmael`
                                     },
-                                    `a great nation, though he would not inherit Abraham's house. Coming through less favoured lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`
+                                    `a great nation, though he would not inherit Abraham's house. Coming through less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true

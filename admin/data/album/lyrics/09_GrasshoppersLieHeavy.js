@@ -183,14 +183,13 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         {
-                            anchor: `Simon and Garfunkel`,
-                            wiki: `Simon_%26_Garfunkel`
+                            anchor: `Simon & Garfunkel`,
+                            wiki: `Simon_&_Garfunkel`
                         },
-                        `always manage to sound sentimental without being sappy, so I tried to channel their spirit here.`
+                        `always manage to sound sentimental without being sappy, so I thought their style would be a good fit here.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -537,7 +536,16 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: `Since the lyrics in this song are a microcosm of the whole album, I threw in some doublespeaker rhyme here.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -897,10 +905,13 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `The highlight of Nirvana's`,
+                        `For me, the highlight of`,
+                        {
+                            anchor: `Nirvana's`,
+                            wiki: `Nirvana_(band)`
+                        },
                         {
                             isItalic: true,
                             lyric: {
@@ -908,7 +919,12 @@ export default {
                                 wiki: `Nevermind`
                             }
                         },
-                        `for me is when Kurt Cobain jumps up an octave for the third verse of "Lounge Act." I always wanted to recreate this effect, but I could never do so because the melodies I write tend to span my whole vocal range. So when I realised that the chorus melody for this song stays within a single register, I transposed the song accordingly to make it work.`
+                        `is when`,
+                        {
+                            anchor: `Kurt Cobain`,
+                            wiki: `Kurt_Cobain`
+                        },
+                        `kicks the last third of "Lounge Act" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, because the melodies I write tend to span my whole vocal range. So when I realised the chorus melody for this song stays within a single register throughout, I made it work.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -979,7 +995,16 @@ export default {
                     time: 169,
                     lyric: `past a year on a stalled friendship's sails?`
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: `To faithfully represent in miniature the lyrics of the album as a whole, this song also couldn't have gone without an entire section of groan-inducing puns.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -1353,7 +1378,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `The French expression`,

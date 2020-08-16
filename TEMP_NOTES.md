@@ -2,8 +2,8 @@
 * Turn back on the feature to select all dots when annotation is in URL, in getDotsBitFromStorage.
 * Lyric is in front of carousel when wiki selected.
 
-* M annotations
-    * Make sure backstory and narrative tenses are correct.
+* Make sure backstory and narrative tenses are correct.
+* Get rid of % in wikis
 
 * Pun annotations (going backwards)
     * 1 Odin
@@ -13,6 +13,5 @@
 * Songwriting annotations
     * 2 Sasha
     * 1 Good Night
-    * 3 Grasshoppers
-    * Didn't go past that.
+    * Last one is Grasshoppers.
 * Make sure no wikis repeat.

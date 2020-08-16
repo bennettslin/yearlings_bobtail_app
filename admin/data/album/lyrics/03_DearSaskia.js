@@ -289,7 +289,7 @@ export default {
                                         anchor: `pupil`,
                                         wiki: `Pupil`
                                     },
-                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I could see that we were no longer on the same footing, if we ever were.`
+                                    `of her eye. As she looked at me the way a teacher looks upon a pupil, I could see we were no longer on the same footing, if we ever were.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
