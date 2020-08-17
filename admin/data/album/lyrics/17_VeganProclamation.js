@@ -596,6 +596,7 @@ export default {
                 card: {
                     description: `When Sita and I first met, she asked to hear some of my music. I had just bought a new multi-effects processor and played around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                     dotKeys: {
+                        [BACKSTORY]: true,
                         [SONGWRITING]: true
                     }
                 }

@@ -67,9 +67,9 @@ export default {
                             isItalic: true,
                             lyric: `Ulysses,`
                         },
-                        `I went for an`,
+                        `I went for the feel of an`,
                         {
-                            anchor: `Irish reel`,
+                            anchor: `Irish reel.`,
                             wiki: `Reel_(dance)`
                         },
                         `here. Of course, I departed from tradition by scoring contrapuntal melodies.`

@@ -134,7 +134,7 @@ export default {
                             anchor: `Johnny Horton.`,
                             wiki: `Johnny_Horton`
                         },
-                        `His albums were the first ones I owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my friends had ever heard of him, until one day, I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in a car accident at the peak of his fame.`
+                        `His records were the first that I owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day, I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in a car accident at the peak of his fame.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -213,7 +213,7 @@ export default {
                             anchor: `natural harmonic.`,
                             wiki: `Guitar_harmonics`
                         },
-                        `I hadn't accounted for the need to move quickly enough from one to the next, however, so I still ended up splicing multiple takes.`
+                        `I hadn't accounted for the need to move quickly enough from one to the next, however, so I ended up having to splice together multiple takes.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
