@@ -77,7 +77,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `This song is one of two on this album that was an original Yearlings staple. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciations to make the puns obvious.`,
+                    description: `This song is one of two on this album that was originally performed by the Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciations to make the puns obvious.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGWRITING]: true
