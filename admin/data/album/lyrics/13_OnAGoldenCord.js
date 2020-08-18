@@ -585,7 +585,7 @@ export default {
                             anchor: `Odelay!`,
                             todo: true,
                             card: {
-                                description: `The yodelling here reflects the mild euphoria of dehydration that I begin to feel just before daybreak.`,
+                                description: `The yodeling here reflects the mild euphoria of dehydration that I begin to feel just before daybreak.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [SONGWRITING]: true

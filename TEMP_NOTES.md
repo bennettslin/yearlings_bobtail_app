@@ -9,11 +9,8 @@
 
 * Pun annotations (going backwards)
     * 1 Odin
-    * ...
-    * Consider "sun tinkles light" annotation not being under the actual lyric?
 
 * Songwriting annotations
     * 2 Sasha
-    * Last one is Look Back.
-    * Working backward.
+    * Only Garryowen and Golden Cord left.
 * Make sure no wikis repeat.
