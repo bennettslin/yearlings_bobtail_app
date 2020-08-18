@@ -821,7 +821,14 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `When I wrote this three-part counterpoint for mandolins and banjo, I wasn't aware that they would drown out the vocals by occupying the same register. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that suits the ambience of a rainy evening.`,
+                    description: [
+                        `When I wrote this three-part counterpoint for mandolins and banjo, I wasn't aware that they would drown out the vocals by occupying the same register. I solved the problem by`,
+                        {
+                            anchor: `pitch shifting`,
+                            wiki: `Pitch_shift`
+                        },
+                        `some tracks up an octave, giving them a metallic sheen that suits the ambience of a rainy evening.`
+                    ],
                     dotKeys: {
                         [SONGWRITING]: true
                     }

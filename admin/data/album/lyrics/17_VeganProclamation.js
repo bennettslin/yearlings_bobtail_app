@@ -182,19 +182,27 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian`,
+                        `As a child, I sat with my mother as she watched an old movie set in`,
                         {
-                            anchor: `parlour song.`,
+                            anchor: `World War I.`,
+                            wiki: `World_War_I`
+                        },
+                        `After the battle, the camera panned across a motionless scene of dead bodies and devastated houses while a lone`,
+                        {
+                            anchor: `gramophone,`,
+                            wiki: `Phonograph`
+                        },
+                        `preserved amidst the wreckage, played a sappy Italian`,
+                        {
+                            anchor: `parlor song.`,
                             wiki: `Parlour_music`
                         },
-                        `The ironic contrast stuck with me, and I thought it would work well here.`
+                        `Though perhaps a cliché in hindsight, the ironic contrast stuck with me, and I thought it would work well here.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [OBSERVATION]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -356,10 +364,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `Sasha recited these quotes for me over the phone. We recorded multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't think to write them with that concern in mind. I was so pretentious at the time, I forgot that normal people don't pepper their conversations with pseudo-intellectual drivel.`,
+                    description: `Sasha recited these lines for me over the phone. We recorded multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't write them with that concern in mind.`,
                     dotKeys: {
+                        [BACKSTORY]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -592,9 +600,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `When Sita and I first met, she asked to hear some of my music. I had just bought a new multi-effects processor and played around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
+                    description: `When Sita and I first met, she asked to hear some of my music. I had just bought a multi-effects processor and was playing around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGWRITING]: true
@@ -651,7 +658,6 @@ export default {
                         `I still love you for the`,
                         {
                             anchor: `airholes,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In Nirvana's`,
@@ -659,7 +665,7 @@ export default {
                                         anchor: `"Sappy,"`,
                                         wiki: `Sappy`
                                     },
-                                    `Kurt Cobain compares the victim of an emotionally abusive relationship to a small creature kept in a jar with breathing holes punched in its lid. I liked the imagery, so I borrowed it shamelessly here.`
+                                    `Kurt Cobain compares the victim of an emotionally abusive relationship to a small creature kept in a jar with breathing holes punched in the lid. I liked this imagery, so I took it.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

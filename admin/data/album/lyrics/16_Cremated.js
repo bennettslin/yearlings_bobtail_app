@@ -56,10 +56,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
+                        `The first line of this song is obviously a response to the last line of the previous one, which gave me the idea to chain them together as a`,
+                        {
+                            anchor: `medley,`,
+                            wiki: `Medley_(music)`
+                        },
+                        `à la`,
                         {
                             isItalic: true,
                             lyric: {

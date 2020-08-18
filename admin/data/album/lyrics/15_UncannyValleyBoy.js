@@ -76,10 +76,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `I originally began writing this song after waking from a horrid nightmare, but abandoned it after all my attempts to describe the nightmare to others only elicited laughter. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
+                    description: `I first began working on this song after waking from a horrid nightmare that I felt a desperate need to retell. I soon abandoned it after all my attempts to describe it to others only elicited laughter. But I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
                     dotKeys: {
+                        [BACKSTORY]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -224,7 +224,29 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: [
+                        `I never liked being a baritone, as it always seemed weird to hear this deep, sonorous tone coming from my small frame. So in recording this album, I would alter my singing voice by channeling`,
+                        {
+                            anchor: `Ray Davies`,
+                            wiki: `Ray_Davies`
+                        },
+                        `of the`,
+                        {
+                            anchor: `Kinks,`,
+                            wiki: `The_Kinks`
+                        },
+                        `whose nasal vocals conjure the right blend of tenderness and irony. On this song, I changed it up for each section, as I liked the idea of ghosts not having any fixed way of speaking.`
+                    ],
+                    dotKeys: {
+                        [BACKSTORY]: true,
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {
@@ -462,9 +484,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `As silly as the original lyrics for the chorus were, I liked them enough to keep them, so I just made the former lead melody the new counter melody. The former counter melody, which was written for guitar, then became the new lead melody.`,
+                    description: [
+                        `As silly as the original lyrics for the chorus were, I liked them enough to keep them as a vocal`,
+                        {
+                            anchor: `counter-melody.`,
+                            wiki: `Counter-melody`
+                        },
+                        `The original counter-melody, which was to be played on guitar, then became the lead vocal line, for which I wrote new lyrics.`
+                    ],
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -622,18 +650,30 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `I wanted to recreate the tremolo effect used by guitarist Jonny Greenwood on the song "Airbag" from Radiohead's`,
+                        `I wanted to recreate the`,
+                        {
+                            anchor: `tremolo`,
+                            wiki: `Tremolo`
+                        },
+                        `effect used by guitarist`,
+                        {
+                            anchor: `Jonny Greenwood`,
+                            wiki: `Jonny_Greenwood`
+                        },
+                        `on the song "Airbag" from`,
+                        {
+                            anchor: `Radiohead's`,
+                            wiki: `Radiohead`
+                        },
                         {
                             anchor: `OK Computer.`,
                             wiki: `OK_Computer`
                         },
-                        `So I recorded several takes of steady eighth notes on the banjo, with each take offset just a little further, to create the impression of tremolo picking on a single instrument. Only in the last few measures do they separate in the balance, like a rope fraying at its end.`
+                        `So I recorded several takes of steady eighth notes on the banjo, with each take offset a little further by fractions of a beat to create the impression of tremolo picking. In the last few measures they separate in the balance, like a rope fraying at its end.`
                     ],
                     dotKeys: {
-                        [OBSERVATION]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -739,8 +779,7 @@ export default {
                                     `would forever be retold.`
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [SONGWRITING]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         }
@@ -1365,9 +1404,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `To record the gradual shift from "Rama" to "Mara," I made a click track whose tempo sums up to one fewer eighth note after seven measures. I then overlaid multiple tracks in which I quietly took a breath at different points.`,
+                    description: [
+                        `To record the gradual shift from "Rama" to "Mara" in the backing vocals, I made a`,
+                        {
+                            anchor: `click track`,
+                            wiki: `Click_track`
+                        },
+                        `of quarter-note beats that would arrive an eighth note ahead of the mix after seven measures. I then overlaid multiple vocal tracks in which I quietly took a breath at different points to give the impression of an uninterrupted take.`
+                    ],
                     dotKeys: {
                         [SONGWRITING]: true
                     }
