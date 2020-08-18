@@ -519,7 +519,7 @@ export default {
                                         anchor: `couplet`,
                                         wiki: `Couplet`
                                     },
-                                    `is a pair of lines in a poem that typically rhyme and share the same metre. Sasha and I were never a couple, of course. But perhaps we were a couplet?`
+                                    `is a pair of lines in a poem that typically rhyme and share the same meter. Sasha and I were never a couple, of course. But perhaps we were a couplet?`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true

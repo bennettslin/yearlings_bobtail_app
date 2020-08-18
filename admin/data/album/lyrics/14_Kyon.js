@@ -62,9 +62,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. I can see now that she was desperately waiting for me to grow up, because she couldn't do it without me. So the humming here evokes her silent waiting, born of desperation.`,
+                    description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. I can see now that she was waiting for me to grow up, because she couldn't do it without me. So the humming here evokes her quiet waiting, born of resignation.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGWRITING]: true
@@ -127,10 +126,9 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `I tried to write this song from Sita's perspective. In retrospect, my portrayal is rather one-dimensional, and unfairly characterises her as a helpless woman. Truth be told, she was far more resilient than I've let on here. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`
+                        `I tried to write this song from Sita's perspective. In retrospect, my portrayal might be a bit one-dimensional. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -189,15 +187,24 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Our relationship was like a ship swaying perilously in tumultuous waters, a notion captured by the compound meter alternating back and forth between unrelated chords separated by a`,
+                        `Our relationship was like a ship swaying perilously in tumultuous waters, a notion captured by the compound`,
+                        {
+                            anchor: `meter`,
+                            wiki: `Metre_(music)`
+                        },
+                        `alternating back and forth between unrelated chords separated by a`,
                         {
                             anchor: `tritone.`,
                             wiki: `Tritone`
                         },
-                        `The meandering tuplets, which I created by splicing single notes played on a mandolin, represent our inability to find common ground, as one carries eight notes per beat, the other nine.`
+                        `The two strands of meandering`,
+                        {
+                            anchor: `tuplets`,
+                            wiki: `Tuplet`
+                        },
+                        `symbolize our inability to find common ground, with one carrying eight notes per beat, the other nine. I created them by splicing single notes played on a mandolin.`
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -242,7 +249,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends, despite the humiliation of having to face the very gang that had emboldened me to leave her. The circus`,
@@ -250,7 +256,7 @@ export default {
                             anchor: `calliope`,
                             wiki: `Calliope_(music)`
                         },
-                        `heard here, which is actually a tape-saturated melodica track, thus captures the feeling of having to parade around like a sad clown once more.`
+                        `heard here thus captures the feeling of having to parade around like a sad clown once more. I created it using a tape-saturated melodica track.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -553,9 +559,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `The meter switches to common time here, even as the underlying chords remain unchanged, to represent the normalisation of our dysfunctional relationship. The tuplet strands are also more in sync, as one plays two notes for every three played by the other.`,
+                    description: [
+                        `In the second half of the song, the meter switches to`,
+                        {
+                            anchor: `common time`,
+                            wiki: `Time_signature`
+                        },
+                        `even as the underlying chords remain unchanged, to represent how we've normalized our dysfunctional relationship. The two strands of tuplets are also more in sync, as one plays two notes for every three played by the other.`
+                    ],
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -780,14 +792,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `The cry of a peafowl always sounded to me like they're pleading`,
+                        `The cry of a peacock has always sounded to me like it's pleading in Hindi,`,
                         {
                             isItalic: true,
                             lyric: `"kyon?"`
-                        }
+                        },
+                        `My heart still breaks somewhat to hear it, for that reason.`
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

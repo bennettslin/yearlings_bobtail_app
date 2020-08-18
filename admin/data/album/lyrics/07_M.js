@@ -763,9 +763,14 @@ export default {
                 {
                     time: 148,
                     lyric: [
-                        `Whispered "adieu," I`,
+                        `Whispered`,
                         {
-                            anchor: `bade them to fare well,`,
+                            isItalic: true,
+                            lyric: `"adieu,"`
+                        },
+                        `I bade them`,
+                        {
+                            anchor: `to fare well,`,
                             card: {
                                 description: `Jacob was my friend, of course, and I was happy that he had found Mara. But I also wasn't eager to stick around. So as I imagined them exchanging their vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
