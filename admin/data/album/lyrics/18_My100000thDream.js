@@ -246,7 +246,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `We now hear the plucked mandolin and tin whistle from "Garryowen," followed by the high-pitched synths and recorder from "Look Back in Anger."`,
+                    description: `We now hear the plucked mandolin and tin whistle from "Garryowen," followed by the high-pitched synth and recorder from "Look Back in Anger."`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -282,7 +282,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `For the second chorus, we bring back the electric sitar and 8-bit synth from "Constellations," along with the carillon and wah-wah pedal from "Good Night, Sita."`,
+                    description: `For the second chorus, we bring back the electric sitar and 8-bit sound from "Constellations," along with the carillon and wah-wah pedal from "Good Night, Sita."`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }

@@ -956,7 +956,11 @@ export default {
                             anchor: `The New Mickey Mouse Club,`,
                             wiki: `The_Mickey_Mouse_Club`
                         },
-                        `a disco-inflected 70s revival of the original 50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on a synth.`
+                        `a disco-inflected 70s revival of the original 50s show. In particular, the song "Let's Go Day" gave me the idea to play portamento quarter notes on an`,
+                        {
+                            anchor: `analog synthesizer.`,
+                            wiki: `Analog_synthesizer`
+                        }
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,

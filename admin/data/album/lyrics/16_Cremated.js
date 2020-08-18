@@ -94,7 +94,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `A`,
@@ -102,10 +101,9 @@ export default {
                             anchor: `Shepard tone`,
                             wiki: `Shepard_tone`
                         },
-                        `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady descent seemed an apt metaphor for my utterly deflated state after the breakup with Miriam, so I included two Shepard tones this song. One is a bass tone that moves downward in discrete half steps, while the other is a treble tone that does so in a perpetual glissando. Both were made by splicing together pure tones produced on an analogue synthesiser.`
+                        `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady move downward seemed an apt metaphor for my breakup with Miriam, so I included two Shepard tones here. One is a low bass that descends in discrete half steps, while the other is a high treble that does so in a perpetual glissando. Since I didn't know how to code at the time, both were made by splicing together pure tones produced on a synthesizer.`
                     ],
                     dotKeys: {
-                        [OBSERVATION]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -326,9 +324,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realize that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
+                    description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept forgetting which column of lyrics corresponded with which person, making me realize that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. One of us just had a better idea of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGWRITING]: true
@@ -801,7 +798,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `The title of Mark Medoff's play`,
+                                    `The title of the play`,
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -809,7 +806,7 @@ export default {
                                             wiki: `Children_of_a_Lesser_God_(play)`
                                         }
                                     },
-                                    `which centres on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family's genes, combined with our foreign manner of worship, I assumed that the disabled`,
+                                    `which centers on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family's genes, combined with our foreign manner of worship, I assumed that the disabled`,
                                     {
                                         isEmphasis: true,
                                         lyric: `themselves`
@@ -849,11 +846,11 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     // NOTE: Change in recording? Connect to Uncanny Valley?
                     description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,
                     dotKeys: {
+                        [NARRATIVE]: true,
                         [SONGWRITING]: true
                     }
                 }

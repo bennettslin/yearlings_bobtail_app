@@ -15,6 +15,5 @@
 * Songwriting annotations
     * 2 Sasha
     * Last one is Look Back.
-    * 1 Vegan
     * Working backward.
 * Make sure no wikis repeat.

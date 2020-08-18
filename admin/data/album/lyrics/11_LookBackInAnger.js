@@ -38,7 +38,7 @@ export default {
                                 wiki: `Look_Back_in_Anger`
                             }
                         },
-                        `centres on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. It hit unnervingly close to home when I read it.`
+                        `centers on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. It hit unnervingly close to home when I read it.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true
@@ -413,7 +413,7 @@ export default {
                             anchor: `jigsawed life.`,
                             todo: true,
                             card: {
-                                description: `You typically work on a jigsaw puzzle by first connecting the edge pieces, then building inwards. And as this latecomer squeezes her way to the centre of the crowd, I wonder if she is the long-awaited final piece to the overwrought puzzle that is my life.`,
+                                description: `You typically work on a jigsaw puzzle by first connecting the edge pieces, then building inwards. And as this latecomer squeezes her way to the center of the crowd, I wonder if she is the long-awaited final piece to the overwrought puzzle that is my life.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -451,7 +451,7 @@ export default {
                             anchor: `"Great show,"`,
                             todo: true,
                             card: {
-                                description: `The best time to hit on someone is always right after your set, since they've just spent the last half hour of their life making you the centre of their universe. And so, as expected, I find the red-haired woman to be warm and flirtatious when we finally chat.`,
+                                description: `The best time to hit on someone is always right after your set, since they've just spent the last half hour of their life making you the center of their universe. And so, as expected, I find the red-haired woman to be warm and flirtatious when we finally chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
