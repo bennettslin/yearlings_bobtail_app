@@ -651,7 +651,7 @@ export default {
                                         anchor: `Ishmael`,
                                         wiki: `Ishmael`
                                     },
-                                    `a great nation, though he would not inherit Abraham's house. Coming through less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`
+                                    `into a great nation, though he would not inherit Abraham's house. Coming through less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1487,20 +1487,22 @@ export default {
                     lyricRight: [
                         {
                             anchor: `his litter`,
-                            todo: true,
                             card: {
                                 description: [
-                                    // TODO: Biblical progeny.
-                                    `Referring to the disposal of Odin's`,
+                                    `It wasn't just Odin's unused`,
                                     {
-                                        anchor: `cat litter,`,
+                                        anchor: `cat litter`,
                                         wiki: `Litter_box`
                                     },
-                                    `of course, but perhaps also to his lack of progeny. At this time, my own odds of leaving behind a litter don't seem any better.`
+                                    `that was swept aside; gone was any chance for him to sire a`,
+                                    {
+                                        anchor: `litter`,
+                                        wiki: `Litter_(zoology)`
+                                    },
+                                    `that could live on. And so that made two of us, given my own miserable chance of being made into a great nation.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
                                     [PUN]: true
                                 }
                             }

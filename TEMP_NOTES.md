@@ -6,9 +6,6 @@
 
 * Make sure backstory and narrative tenses are correct.
 
-* Pun annotations (going backwards)
-    * 1 Odin
-
 * Songwriting annotations
     * 2 Sasha
     * 4 Garryowen
