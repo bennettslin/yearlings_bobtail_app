@@ -1499,7 +1499,7 @@ export default {
                                         anchor: `litter`,
                                         wiki: `Litter_(zoology)`
                                     },
-                                    `that could live on. And so that made two of us, given my own miserable chance of being made into a great nation.`
+                                    `of his own. And so that made two of us, given how unlikely I was to be made into a great nation any time soon.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

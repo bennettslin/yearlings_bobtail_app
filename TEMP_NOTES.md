@@ -7,7 +7,9 @@
 * Make sure backstory and narrative tenses are correct.
 
 * Songwriting annotations
-    * 2 Sasha
+    * 2 Sasha (one new one about the chorus chord changes)
     * 4 Garryowen
     * 1 Golden Cord
 * Make sure no wikis repeat.
+
+* Remove Britishisms from lyrics.

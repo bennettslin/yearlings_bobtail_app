@@ -51,7 +51,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    // TODO: Make this one more about cloying bits and pieces from studying the Beatles.
+                    // TODO: Make this one more about cloying bits and pieces from studying the Beatles. treacly
                     description: [
                         `In my teenage years, I tried to figure out how the`,
                         {
@@ -476,7 +476,7 @@ export default {
             mainVerses: [
                 {
                     time: 88,
-                    lyric: `Whom I knew I'd lose the day,`
+                    lyric: `Whom I knew I'd lose the day`
                 },
                 {
                     time: 92,
@@ -660,10 +660,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    // TODO: Make this one more about melody and chords.
-                    description: `When I first began to write songs, I noticed that every other aspiring songwriter would figure out their chords upfront, then fit any feasible melody to go on top. But my theory was that the Beatles wrote the melody and chords together, allowing their music to unfold organically. I was always trying to write the next "Martha My Dear," which may be evident here.`,
+                    description: `Back in the day, every other band I knew would write their songs by figuring out all the chords up front, then layering a decent melody on top. But my theory was that the Beatles wrote the melody and chords all together, and so I aimed to do the same. I was always happiest with results like the chorus here, where the music meanders for a long stretch rather than repeating every four bars. Such songs are never fan favorites, yet they're the hardest to write, which I find oddly satisfying.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -721,7 +719,7 @@ export default {
                     lyric: [
                         `is a toss-up. But where some`,
                         {
-                            anchor: `haemophile`,
+                            anchor: `hemophile`,
                             todo: true,
                             card: {
                                 description: [
