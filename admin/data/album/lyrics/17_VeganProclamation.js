@@ -338,7 +338,7 @@ export default {
                                             `In quantum theory, a particle exists as a combination of its possible states. To explain the problem of applying this concept to larger objects, Erwin Schrödinger proposed a famous thought experiment known as`,
                                             {
                                                 anchor: `Schrödinger's cat.`,
-                                                wiki: `Schrödinger%27s_cat`
+                                                wiki: `Schrödinger's_cat`
                                             },
                                             `We imagine a cat sealed inside a steel chamber, where it stands an equal chance of being killed by cyanide or surviving. Since we cannot observe the outcome, we must regard the cat as being simultaneously dead and alive.`
                                         ]

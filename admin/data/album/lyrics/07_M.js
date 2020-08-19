@@ -193,7 +193,7 @@ export default {
                                 `Though the main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like learning to solve the`,
                                 {
                                     anchor: `Rubik's cube.`,
-                                    wiki: `Rubik%27s_Cube`
+                                    wiki: `Rubik's_Cube`
                                 }
                             ],
                             dotKeys: {

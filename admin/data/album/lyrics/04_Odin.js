@@ -97,7 +97,7 @@ export default {
                                         `When`,
                                         {
                                             anchor: `his wife`,
-                                            wiki: `Lot%27s_wife`
+                                            wiki: `Lot's_wife`
                                         },
                                         `looked back, she was turned into a pillar of salt. This story is understood by some to suggest that the faithful shall not cohabit with the fallen.`
                                     ],
@@ -801,7 +801,7 @@ export default {
                                     `Due to another mistranslation, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as`,
                                     {
                                         anchor: `"Adam's apple."`,
-                                        wiki: `Adam%27s_apple`
+                                        wiki: `Adam's_apple`
                                     },
                                     `And so an apocryphal tale was born that when`,
                                     {
@@ -1584,7 +1584,7 @@ export default {
                                 description: [
                                     {
                                         anchor: `"Monday's Child"`,
-                                        wiki: `Monday%27s_Child`
+                                        wiki: `Monday's_Child`
                                     },
                                     `is a nursery rhyme that predicts a child's fortune based on weekday of birth. Thursday's child is promised to have "far to go," and indeed, the distance I have left to cover feels dispiritingly vast. Still, I am now one day closer than when the day began…`
                                 ],

@@ -129,7 +129,7 @@ export default {
                                     `A reference to the classic "Who's buried in`,
                                     {
                                         anchor: `Grant's tomb"`,
-                                        wiki: `Grant%27s_Tomb`
+                                        wiki: `Grant's_Tomb`
                                     },
                                     `riddle, of course, but also to James Joyce's masterpiece novel`,
                                     {

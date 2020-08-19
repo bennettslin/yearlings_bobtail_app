@@ -268,7 +268,7 @@ export default {
                                     `I had spent weeks rehearsing the breakup, which I assumed could be scheduled at my convenience and follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
                                     {
                                         anchor: `paupers' grave.`,
-                                        wiki: `Potter%27s_field`
+                                        wiki: `Potter's_field`
                                     }
                                 ],
                                 dotKeys: {

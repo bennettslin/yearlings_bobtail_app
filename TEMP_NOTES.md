@@ -5,7 +5,6 @@
 * Playing doesn't work from one song to the next?
 
 * Make sure backstory and narrative tenses are correct.
-* Get rid of % in wikis
 
 * Pun annotations (going backwards)
     * 1 Odin

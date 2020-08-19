@@ -74,7 +74,7 @@ export default {
                         `Toy instruments abound in this song sung from the perspective of my sister as a child. Here, autoharp and glockenspiel lead into an intro that recalls the first few measures of`,
                         {
                             anchor: `"Wouldn't It Be Nice,"`,
-                            wiki: `Wouldn%27t_It_Be_Nice`
+                            wiki: `Wouldn't_It_Be_Nice`
                         },
                         `the opening song of the 1966`,
                         {
