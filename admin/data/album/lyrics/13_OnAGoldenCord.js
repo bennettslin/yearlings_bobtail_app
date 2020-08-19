@@ -59,11 +59,10 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age.`,
+                    description: `With the breakup, I was now free to relive my life from scratch. I could reclaim not just my time spent with Sita, but all the years of setbacks that had taken their toll on me even before then. And so we hear the song of the white-throated sparrow here, as I harken back to the happier days of my youth.`,
                     dotKeys: {
-                        [OBSERVATION]: true,
+                        [NARRATIVE]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -126,7 +125,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `This song evokes the country style of my childhood hero`,
@@ -134,7 +132,7 @@ export default {
                             anchor: `Johnny Horton.`,
                             wiki: `Johnny_Horton`
                         },
-                        `His records were the first that I owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day, I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in a car accident at the peak of his fame.`
+                        `His records were the first I ever owned, as they were handed down to me by my mother who adored him in her teenybopper years. None of my classmates had ever heard of him, until one day, I met another Taiwanese-American kid whose mother had the same obsession. So I guess Horton was big in Taiwan, though he probably never knew that, having died in a car accident at the peak of his fame.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -205,15 +203,19 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `I tuned the lead guitar in a way that allowed each note to be plucked as a`,
+                        `I figured out an`,
+                        {
+                            anchor: `alternative tuning`,
+                            wiki: `Guitar_tunings`
+                        },
+                        `on the lead acoustic guitar that would allow every note of its melody to be plucked as a`,
                         {
                             anchor: `natural harmonic.`,
                             wiki: `Guitar_harmonics`
                         },
-                        `I hadn't accounted for the need to move quickly enough from one to the next, however, so I ended up having to splice together multiple takes.`
+                        `I hadn't accounted for the need to move my fingers quickly from one harmonic to the next, however, and it proved impossible to play. I ended up having to splice together multiple takes.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -324,23 +326,31 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
+                        `Just as the citizens of`,
+                        {
+                            anchor: `George Orwell's`,
+                            wiki: `George_Orwell`
+                        },
                         {
                             isItalic: true,
                             lyric: {
-                                anchor: `Nineteen Eighty-Four.`,
+                                anchor: `Nineteen Eighty-Four`,
                                 wiki: `Nineteen_Eighty-Four`
                             }
                         },
-                        `So I used doublespeaker rhyme— which I named partly for its`,
+                        `are required to engage in`,
                         {
-                            anchor: `Orwellian undertone—`,
+                            anchor: `doublethink`,
                             wiki: `Doublethink`
                         },
-                        `to depict the internal conflict between my sober self and my drunken alter ego.`
+                        `to accept the propaganda of`,
+                        {
+                            anchor: `Newspeak,`,
+                            wiki: `Newspeak`
+                        },
+                        `I could only make sense of the breakup by reconciling the contradictions in my head. So I used doublespeaker rhyme— which I had named partly for its Orwellian undertone— to depict the internal conflict between my sober self and my drunken alter ego.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -583,9 +593,8 @@ export default {
                         isItalic: true,
                         lyric: {
                             anchor: `Odelay!`,
-                            todo: true,
                             card: {
-                                description: `The yodeling here reflects the mild euphoria of dehydration that I begin to feel just before daybreak.`,
+                                description: `The attempts at yodeling here reflect the euphoria caused by dehydration that I begin to feel just before daybreak.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [SONGWRITING]: true
@@ -649,7 +658,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Marching onward through the brisk twilight, I think back to simpler days as a child, when I would sing Johnny Horton's`,
+                                    `Marching onward through twilight without sleep, I'm now completely delirious, even as I defiantly regress. I think back to simpler days as a child, when I would sing Johnny Horton's`,
                                     {
                                         anchor: `"North to Alaska,"`,
                                         wiki: `North_to_Alaska_(song)`
@@ -657,8 +666,8 @@ export default {
                                     `and my sister would back me up by heaving "Mush! Mush!"`
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                                    [NARRATIVE]: true,
+                                    [SONGWRITING]: true
                                 }
                             }
                         }

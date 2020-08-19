@@ -11,5 +11,6 @@
 
 * Songwriting annotations
     * 2 Sasha
-    * Only Garryowen and Golden Cord left.
+    * 4 Garryowen
+    * 1 Golden Cord
 * Make sure no wikis repeat.

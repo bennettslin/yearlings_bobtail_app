@@ -646,7 +646,7 @@ export default {
                             anchor: `sprawled where they stood…`,
                             todo: true,
                             card: {
-                                description: `And while I could foresee only a lifetime of humiliating setbacks for myself, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favors its bullies. I just had to accept it.`,
+                                description: `And while I could foresee only a lifetime of humiliating letdowns for myself, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favors its bullies. I just had to accept it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

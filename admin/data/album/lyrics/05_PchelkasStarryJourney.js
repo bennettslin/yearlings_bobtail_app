@@ -262,7 +262,7 @@ export default {
                                         anchor: `white-throated sparrow`,
                                         wiki: `White-throated_sparrow`
                                     },
-                                    `was in breeding season, and its song was heard everywhere. I found it haunting and soothing, and longed to hear it again ever afterward. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic its cadence and pitch.`
+                                    `was in breeding season, and we heard its song everywhere. I found it haunting and soothing, and longed to hear it again ever afterward. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic its cadence and pitch.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true

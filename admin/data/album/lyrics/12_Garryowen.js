@@ -485,9 +485,15 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `Though I'd taken violin lessons as a child, my skills were pretty rusty by the time I made this album. Rather than get up to speed through intensified practice, I just recorded the fiddle track here by playing fragments of two or three notes at a time, then splicing them into a single take. To justify my cop-out, I threw in a complicated glissando whenever the score permitted.`,
+                    description: [
+                        `Though I'd taken violin lessons as a child, my skills were pretty rusty by the time I made this album. But rather than get up to speed through intense practice, I just recorded the fiddle by splicing together fragments of several notes at a time. To justify my cop-out, I threw in a complicated`,
+                        {
+                            anchor: `glissando`,
+                            wiki: `Glissando`
+                        },
+                        `wherever the score permitted.`
+                    ],
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -580,12 +586,12 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `The bagpipes here evoke a funeral procession. Since I don't own any bagpipes, let alone`,
+                        `The`,
                         {
-                            anchor: `Irish ones,`,
-                            wiki: `Uilleann_pipes`
+                            anchor: `bagpipes`,
+                            wiki: `Bagpipes`
                         },
-                        `I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter, and the other as the drone.`
+                        `here evoke a funeral procession, as if . Since I didn't own any bagpipes, let alone Irish ones, I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter, and the other as the drone.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
