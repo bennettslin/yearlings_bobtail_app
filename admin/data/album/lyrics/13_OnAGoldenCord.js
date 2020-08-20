@@ -60,7 +60,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `With the breakup, I was now free to relive my life from scratch. I could reclaim not just my time spent with Sita, but all the years of setbacks that had taken their toll on me even before then. And so we hear the song of the white-throated sparrow here, as I harken back to the happier days of my youth.`,
+                    description: `With the breakup, I was now free to rebuild my life from scratch. I could reclaim not just my time spent with Sita, but the years and years of setbacks that had taken their toll even before then. And so here we hear the song of the white-throated sparrow, as I harken back to the happier days of my youth.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                         [SONGWRITING]: true
@@ -655,15 +655,14 @@ export default {
                         lyric: {
                             anchor: `Mush! Mush!`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Marching onward through twilight without sleep, I'm now completely delirious, even as I defiantly regress. I think back to simpler days as a child, when I would sing Johnny Horton's`,
+                                    `As I march onward through twilight without sleep, I keep shoveling away at my past, hoping to reveal the last time I'd ever known untroubled bliss. And so I arrive at the first song I loved as a child, Johnny Horton's`,
                                     {
                                         anchor: `"North to Alaska,"`,
                                         wiki: `North_to_Alaska_(song)`
                                     },
-                                    `and my sister would back me up by heaving "Mush! Mush!"`
+                                    `in which the backup singers mush on their sled dogs, and wooden bowls evoke the clip-clopping of a horse's gait.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

@@ -914,7 +914,7 @@ export default {
                                         anchor: `Omerta`,
                                         wiki: `Omertà`
                                     },
-                                    `is the Mafia's code of honour that praises silence and refusal to cooperate with authorities. I wasn't the first kid to notice parallels between school life and the criminal world, I'm sure.`
+                                    `is the Mafia's code of honor that praises silence and refusal to cooperate with authorities. I wasn't the first kid to notice parallels between school life and the criminal world, I'm sure.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1125,7 +1125,7 @@ export default {
                 {
                     time: 175,
                     lyric: [
-                        `this pack honours only the`,
+                        `this pack honors only the`,
                         {
                             anchor: `idiot's rod.`,
                             card: {

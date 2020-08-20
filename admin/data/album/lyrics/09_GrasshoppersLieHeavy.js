@@ -81,7 +81,7 @@ export default {
                                 todo: true,
                                 cards: [
                                     {
-                                        description: `In high school, I soldiered on with the same gutless reputation to which I had tied myself in middle school. It just didn't seem possible to remake myself into a whole new person while surrounded by all the same classmates. But in my head, I was busy crafting a future persona as an artist of superior ability and judgment, which was raring to go the minute I could hightail it out of Los Angeles.`,
+                                        description: `In high school, I carried on with the same gutless reputation to which I had tied myself in middle school. It just didn't seem possible to remake myself into a whole new person while surrounded by all the same classmates. But in my head, I was busy crafting a future persona as an artist of superior ability and judgment, which was raring to go the minute I could hightail it out of Los Angeles.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [OBSERVATION]: true

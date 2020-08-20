@@ -757,7 +757,16 @@ export default {
                         }
                     ]
                 }
-            ]
+            ],
+            unitDot: {
+                anchor: IS_UNIT_DOT,
+                card: {
+                    description: `While the first chorus of this song is grounded in the key of C, the second chorus collapses under the weight of my despondence and settles into the key of B\u2011flat, a whole step lower. But with my renewed commitment to power through the coming semester, this third and final chorus now soldiers its way to the key of D\u2011flat, a half step above.`,
+                    dotKeys: {
+                        [SONGWRITING]: true
+                    }
+                }
+            }
         },
         {
             unitMap: {},
