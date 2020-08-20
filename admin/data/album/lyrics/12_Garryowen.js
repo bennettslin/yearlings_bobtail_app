@@ -419,7 +419,7 @@ export default {
                             anchor: `counterpoint,`,
                             wiki: `Counterpoint`
                         },
-                        `the harmonic progression is simply a natural byproduct of chords built in sequence from a single melodic line. But since the chords for this song were already in place, I took the reverse approach of taking individual notes from the harmonic progression and linking them to create interweaving melodies.`
+                        `the harmonic progression is not composed in advance. Instead, it's simply the natural byproduct of chords built in sequence from a single melodic line. But since the chords for this song were already in place, I took the reverse approach of taking individual notes from the harmonic progression and linking them to create interweaving melodies.`
                     ],
                     dotKeys: {
                         [REFERENCE]: true,
@@ -583,7 +583,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `The`,
@@ -591,7 +590,7 @@ export default {
                             anchor: `bagpipes`,
                             wiki: `Bagpipes`
                         },
-                        `here evoke a funeral procession, as if . Since I didn't own any bagpipes, let alone Irish ones, I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter, and the other as the drone.`
+                        `here evoke a funeral procession to mark the death of my relationship with Sita. Since I didn't own any bagpipes, let alone Irish ones, I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter, and the other as the drone.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true

@@ -229,9 +229,10 @@ export default {
                                         isItalic: true,
                                         lyric: `Zeizei`
                                     },
-                                    `means "big sister" in Chinese.`
+                                    `means "big sister" in Chinese. When speaking for me, my mother would address her as I would.`
                                 ],
                                 dotKeys: {
+                                    [BACKSTORY]: true,
                                     [REFERENCE]: true
                                 }
                             }

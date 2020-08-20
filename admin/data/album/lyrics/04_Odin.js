@@ -131,16 +131,21 @@ export default {
                             anchor: `tref must reseed the earth.`,
                             todo: true,
                             card: {
+                                // TODO: Rewrite this description to be more friendly.
                                 description: [
                                     {
                                         isItalic: true,
                                         lyric: `Tref`
                                     },
-                                    `is Yiddish for food that is not kosher. Since it cannot be eaten, its sole purpose is to fertilise other crops that can. Similarly, as I was not a Jew, I could only ever be subsumed into the endless churn of surrounding peoples.`
+                                    `is`,
+                                    {
+                                        anchor: `Yiddish`,
+                                        wiki: `Yiddish`
+                                    },
+                                    `for food that is not kosher. Since it cannot be eaten, its only use is to fertilize other crops that can. Similarly, as I was not a Jew, I could only be subsumed into the endless churn of surrounding peoples.`
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         }

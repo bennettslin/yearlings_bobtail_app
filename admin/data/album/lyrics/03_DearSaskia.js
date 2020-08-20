@@ -3,7 +3,6 @@ import {
     NARRATIVE,
     OBSERVATION,
     PUN,
-    REFERENCE,
     AFTERWORD,
     SONGWRITING
 } from '../../../../app/constants/dots'
@@ -552,14 +551,15 @@ export default {
                         `then no one lives when`,
                         {
                             anchor: `narcing to the aides,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `To narc is to snitch, much like the narcotics officers who bust drug dealers by posing as high school students.`
-                                ],
-                                dotKeys: {
-                                    [REFERENCE]: true
-                                }
+                                    `To narc is to snitch, as an`,
+                                    {
+                                        anchor: `informant`,
+                                        wiki: `Informant`
+                                    },
+                                    `in a narcotics investigation might do.`
+                                ]
                             }
                         }
                     ]
@@ -720,11 +720,10 @@ export default {
                         `is a toss-up. But where some`,
                         {
                             anchor: `hemophile`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
-                                        anchor: `Haemophilia`,
+                                        anchor: `Hemophilia`,
                                         wiki: `Haemophilia`
                                     },
                                     `is a disease in which blood cannot clot properly, leading to continuous bleeding.`

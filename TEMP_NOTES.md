@@ -8,7 +8,12 @@
 
 * Songwriting annotations
     * 1 Sasha
-    * 4 Garryowen
+    * 3 Garryowen
 * Make sure no wikis repeat.
+
+* Begin reference annotations
+    * Search for anchorless references.
+    * Also anchored references if I can find them.
+    * Currently on Odin
 
 * Remove Britishisms from lyrics.

@@ -404,7 +404,6 @@ export default {
                         `Oh ma'am, I`,
                         {
                             anchor: `see your kid with whiskers,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `Noting my brother's distaste for haircuts, Willy jokingly predicts that my brother will choose to sport an unshaven look as an adult.`,
@@ -413,9 +412,9 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `In many legends, the changeling is not a child at all but a fully grown troll, one who is perhaps even centuries old. And so Willy's phrasing leaves open the possibility that my brother, being a changeling, in fact already wears a beard.`,
+                                    description: `In many legends, the changeling is a fully grown troll who is perhaps centuries old. And so Willy's phrasing leaves open the possibility that my brother, being a changeling, in fact already wears a beard.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true,
+                                        [PUN]: true,
                                         [REFERENCE]: true
                                     }
                                 }
@@ -638,7 +637,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Killcrop`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In English folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of past times, when children unable to earn their keep could lead to a peasant family's ruin.`
@@ -694,12 +692,15 @@ export default {
                         },
                         {
                             anchor: `with switch,`,
-                            todo: true,
                             card: {
-                                description: `A switch is a flexible rod used for punishment.`,
-                                dotKeys: {
-                                    [REFERENCE]: true
-                                }
+                                description: [
+                                    `A`,
+                                    {
+                                        anchor: `switch`,
+                                        wiki: `Switch_(corporal_punishment)`
+                                    },
+                                    `is a bundle of rods intended to be used for punishment.`
+                                ]
                             }
                         },
                         `whispers wind, to fix his switcheroo…`
@@ -756,12 +757,10 @@ export default {
                             `Shelled skull has freed`,
                             {
                                 anchor: `unsalvaged soul…`,
-                                todo: true,
                                 cards: [
                                     {
                                         description: `To justify the abuse of sickly children, religious doctrine in the past would often claim that such children were devoid of souls.`,
                                         dotKeys: {
-                                            [OBSERVATION]: true,
                                             [REFERENCE]: true
                                         }
                                     },
