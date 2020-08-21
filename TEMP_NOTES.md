@@ -7,7 +7,6 @@
 * Make sure backstory and narrative tenses are correct.
 
 * Songwriting annotations
-    * 1 Sasha
     * 3 Garryowen
 * Make sure no wikis repeat.
 

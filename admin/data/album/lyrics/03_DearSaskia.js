@@ -48,16 +48,14 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    // TODO: Make this one more about cloying bits and pieces from studying the Beatles. treacly
                     description: [
-                        `In my teenage years, I tried to figure out how the`,
+                        `Many years back, I marveled at how the`,
                         {
                             anchor: `Beatles`,
                             wiki: `The_Beatles`
                         },
-                        `weaved melodies into chord progressions so seamlessly. The music for this song began as a zealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what this letter to Sasha called for, and trotted it back out.`
+                        `weaved melodies into chord progressions so seamlessly, and I vowed to figure out their songwriting method once and for all. The music heard here was the result, but I found it too treacly to develop further and put it away. Some time later as I was planning out this album, I realized treacle was exactly what an overwrought letter to Sasha called for, and I trotted it back out.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true

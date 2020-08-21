@@ -77,7 +77,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `I first began working on this song after waking from a horrid nightmare that I felt a desperate need to retell. I soon abandoned it after all my attempts to describe it to others only elicited laughter. But I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
+                    description: `I first wrote the music heard here a long while back, upon waking from a horrid nightmare that I badly needed to retell. I quickly shelved it after all my attempts to describe the nightmare to others only elicited laughter. But years later, I realized its gloomy chords and disjointed tempo changes could be repurposed into this song, which plays out as a lecture delivered by a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGWRITING]: true
