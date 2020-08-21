@@ -699,7 +699,7 @@ export default {
                                         anchor: `switch`,
                                         wiki: `Switch_(corporal_punishment)`
                                     },
-                                    `is a bundle of rods intended to be used for punishment.`
+                                    `is a bundle of rods used to inflict punishment.`
                                 ]
                             }
                         },

@@ -322,10 +322,9 @@ export default {
                         `By the`,
                         {
                             anchor: `alabaster balustrade,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `At the time, buildings in Taiwan made heavy use of iron grates and stone slabs, such that even ordinary living quarters had the feel of a mausoleum adorned with`,
+                                    `My impression of Taiwanese buildings at the time is that they made heavy use of iron grates and stone slabs. Even ordinary living quarters had the feel of a mausoleum adorned with`,
                                     {
                                         anchor: `alabaster`,
                                         wiki: `Alabaster`
@@ -438,7 +437,6 @@ export default {
                         `through`,
                         {
                             anchor: `sickle-lit`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The crescent moon is shaped like the blade of the scythe wielded by the`,
@@ -448,7 +446,7 @@ export default {
                                     }
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         },
@@ -476,7 +474,6 @@ export default {
                         `proves`,
                         {
                             anchor: `shibboleth`,
-                            todo: true,
                             card: {
                                 description: [
                                     [
@@ -485,9 +482,22 @@ export default {
                                             anchor: `shibboleth`,
                                             wiki: `Shibboleth`
                                         },
-                                        `is any signifier used to differentiate members of an ingroup from outsiders. In the Book of Judges, the Gileadites asked suspected Ephraimites to pronounce the Hebrew word for a freshwater stream. Because the Ephraimites lacked the "sh" sound in their dialect, they pronounced the word as "sibboleth," thus outing themselves as enemy tribespeople.`
+                                        `is any signifier used to differentiate members of an ingroup from outsiders. The`,
+                                        {
+                                            anchor: `Book of Judges,`,
+                                            wiki: `Book_of_Judges`
+                                        },
+                                        `tells of a battle in which the warriors of an`,
+                                        {
+                                            anchor: `Israelite`,
+                                            wiki: `Israelites`
+                                        },
+                                        `tribe asked stragglers to pronounce the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they outed themselves by pronouncing the word as "sibboleth," just as I do in the recording.`
                                     ]
-                                ]
+                                ],
+                                dotKeys: {
+                                    [SONGWRITING]: true
+                                }
                             }
                         },
                         `for these`,
@@ -889,7 +899,6 @@ export default {
                         `by`,
                         {
                             anchor: `opened latches`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In Greek mythology,`,
@@ -909,7 +918,6 @@ export default {
                         `that come undone by`,
                         {
                             anchor: `undine—`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -950,8 +958,8 @@ export default {
                             card: {
                                 description: `Hope was all that remained in Pandora's box. By contrast, upon having the hard truths of the world revealed to me by Sasha, I was left only with my own hopeless state.`,
                                 dotKeys: {
-                                    [REFERENCE]: true,
-                                    [OBSERVATION]: true
+                                    [NARRATIVE]: true,
+                                    [REFERENCE]: true
                                 }
                             }
                         }
@@ -1416,18 +1424,26 @@ export default {
                 {
                     time: 166,
                     lyricLeft: [
-                        `Though`,
+                        `Though no`,
                         {
-                            anchor: `no slave parts these seas,`,
-                            todo: true,
+                            anchor: `slave parts these seas,`,
                             card: {
                                 description: [
-                                    `In the Book of Exodus, Moses led the Israelites out of slavery in Egypt by`,
+                                    `In the`,
+                                    {
+                                        anchor: `Book of Exodus,`,
+                                        wiki: `Book_of_Exodus`
+                                    },
+                                    {
+                                        anchor: `Moses`,
+                                        wiki: `Moses`
+                                    },
+                                    `led the Israelites out of slavery in Egypt by`,
                                     {
                                         anchor: `parting the Red Sea,`,
                                         wiki: `Crossing_the_Red_Sea`
                                     },
-                                    `allowing them to safely cross.`
+                                    `which allowed them to safely cross.`
                                 ]
                             }
                         }
@@ -1448,11 +1464,10 @@ export default {
                         `then returns them as a`,
                         {
                             anchor: `buffer zone…`,
-                            todo: true,
                             card: {
-                                description: `God then brought the waters together behind Moses and the Israelites, drowning the Egyptian army in pursuit. Unfortunately, the certainty of death following me at every turn would not be overcome so easily.`,
+                                description: `The sea then closed behind Moses and the Israelites, drowning the Egyptian army in pursuit. Unfortunately, the certainty of death following me at every turn will not be overcome so easily.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true,
+                                    [NARRATIVE]: true,
                                     [REFERENCE]: true
                                 }
                             }
@@ -1504,7 +1519,7 @@ export default {
                                         anchor: `litter`,
                                         wiki: `Litter_(zoology)`
                                     },
-                                    `of his own. And so that made two of us, given how unlikely I was to be made into a great nation any time soon.`
+                                    `of his own. And so that makes two of us, given how unlikely I am to be made into a great nation any time soon.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

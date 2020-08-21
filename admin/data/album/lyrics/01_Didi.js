@@ -300,7 +300,6 @@ export default {
                         {
                             anchor: `Safeway paper bag,`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -308,7 +307,7 @@ export default {
                                             anchor: `Safeway`,
                                             wiki: `Safeway_Inc.`
                                         },
-                                        `was a supermarket chain in my area when I was growing up.`
+                                        `grocery stores were common in my area when I was growing up.`
                                     ]
                                 },
                                 {

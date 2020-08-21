@@ -16,3 +16,4 @@
     * Currently on Odin
 
 * Remove Britishisms from lyrics.
+* Reassess what is an anchor

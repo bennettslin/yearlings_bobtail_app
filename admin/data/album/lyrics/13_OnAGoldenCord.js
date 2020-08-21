@@ -550,9 +550,8 @@ export default {
                         `Just that those playful`,
                         {
                             anchor: `pups with their hateful fangs`,
-                            todo: true,
                             card: {
-                                description: `Baby predators instinctively understand their claws and fangs to be weapons, and will thus hold them back during rough play. And given how much more vicious the bullies could have been, I realised that they held back their blows in the same way, believing their cruelty to be in good fun.`,
+                                description: `Baby predators instinctively understand their claws and fangs to be weapons, and will thus hold them back during rough play. And given how much more vicious the bullies could have been, I realized that they held back their blows in the same way, believing their cruelty to be in good fun.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [REFERENCE]: true
@@ -571,9 +570,8 @@ export default {
                         `while this supposed`,
                         {
                             anchor: `dove chafing in his cage,`,
-                            todo: true,
                             card: {
-                                description: `A stressed dove, on the other hand, will peck its cagemate to death, oblivious to the deadly nature of its beak. And similarly, seeing myself only as the perennial victim, I inflicted upon Sita far greater emotional trauma than I myself had ever received at the hands of the bullies.`,
+                                description: `A stressed dove, on the other hand, will peck its cagemate to death, oblivious to the deadly potential of its beak. And similarly, seeing myself as the perennial victim, I inflicted far greater emotional trauma upon Sita than I myself had ever received at the hands of the bullies.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [REFERENCE]: true
@@ -685,7 +683,6 @@ export default {
                         `the taunting,`,
                         {
                             anchor: `streetswept dawn.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `As daylight breaks, the mechanical`,
@@ -745,7 +742,6 @@ export default {
                         `Have I just`,
                         {
                             anchor: `killed the thing I love?`,
-                            todo: true,
                             card: {
                                 description: [
                                     `While in prison for homosexuality,`,
@@ -753,7 +749,7 @@ export default {
                                         anchor: `Oscar Wilde`,
                                         wiki: `Oscar_Wilde`
                                     },
-                                    `witnessed the execution of a man convicted of murdering his wife. Sympathising with the man's plight, Wilde wrote his poem`,
+                                    `witnessed the execution of a man convicted of murdering his wife. Sympathizing with the man's plight, Wilde wrote his poem`,
                                     {
                                         anchor: `"The Ballad of Reading Gaol,"`,
                                         wiki: `The_Ballad_of_Reading_Gaol`
@@ -1037,7 +1033,6 @@ export default {
                         `for`,
                         {
                             anchor: `kohl-eyed`,
-                            todo: true,
                             card: {
                                 description: [
                                     {

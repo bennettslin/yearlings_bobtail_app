@@ -196,14 +196,7 @@ export default {
                         {
                             anchor: `exit us`,
                             card: {
-                                description: [
-                                    `As the Book of`,
-                                    {
-                                        anchor: `"Exodus"`,
-                                        wiki: `Book_of_Exodus`
-                                    },
-                                    `recounts how the Israelites found manna during their trek out of Egypt, so too do we leave the drugstore with spiritual sustenance in hand.`
-                                ],
+                                description: `As the Book of "Exodus" recounts how the Israelites found manna during their trek out of Egypt, so too do we leave the drugstore with spiritual sustenance in hand.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
