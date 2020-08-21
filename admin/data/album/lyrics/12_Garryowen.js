@@ -59,7 +59,6 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Since I took the name of my drunken personality from James Joyce's`,
@@ -69,10 +68,10 @@ export default {
                         },
                         `I went for the feel of an`,
                         {
-                            anchor: `Irish reel.`,
+                            anchor: `Irish reel`,
                             wiki: `Reel_(dance)`
                         },
-                        `here. Of course, I departed from tradition by scoring contrapuntal melodies.`
+                        `here.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -414,12 +413,12 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `In traditional`,
+                        `In strict`,
                         {
                             anchor: `counterpoint,`,
                             wiki: `Counterpoint`
                         },
-                        `the harmonic progression is not composed in advance. Instead, it's simply the natural byproduct of chords built in sequence from a single melodic line. But since the chords for this song were already in place, I took the reverse approach of taking individual notes from the harmonic progression and linking them to create interweaving melodies.`
+                        `the harmonic progression is not composed in advance. Instead, each chord is simply the natural byproduct of chords built in sequence from each melodic line melodic line. But since the chords for this song were already in place, I took the reverse approach of taking individual notes from the harmonic progression and linking them to create interweaving melodies.`
                     ],
                     dotKeys: {
                         [REFERENCE]: true,

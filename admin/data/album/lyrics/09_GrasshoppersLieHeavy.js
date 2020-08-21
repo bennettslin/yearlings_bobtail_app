@@ -893,7 +893,7 @@ export default {
                         {
                             anchor: `"here to Philip Dick?"`,
                             card: {
-                                description: `Or else, "Shall I leave you here to feel up dick?" Sita lightens the awkwardness by gently taking a jab at the bookish exterior I've carefully crafted.`,
+                                description: `Or else, to "feel up dick." Sita lightens the awkwardness by joking that I might prefer to continue masturbating alone. At the same time, she takes a gentle jab at the bookish exterior I've carefully crafted.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true

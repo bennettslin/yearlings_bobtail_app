@@ -27,10 +27,13 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `John Osborne's play`,
+                        {
+                            anchor: `John Osborne's`,
+                            wiki: `John_Osborne`
+                        },
+                        `play`,
                         {
                             isItalic: true,
                             lyric: {
@@ -689,7 +692,6 @@ export default {
                         `So if you're weeping for`,
                         {
                             anchor: `poor squirrels,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In the final scene of `,
@@ -697,7 +699,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Look Back in Anger,`
                                     },
-                                    `the main character pictures his wife as a squirrel and sighs "poor squirrels," acknowledging that his emotionally abusive tirades keep her in a helpless state.`
+                                    `the main character pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his emotionally abusive tirades keep her in a submissive state.`
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true
@@ -712,11 +714,9 @@ export default {
                         `also weep for`,
                         {
                             anchor: `poor, poor bears.`,
-                            todo: true,
                             card: {
-                                description: `His wife then sighs "poor, poor bears" in response, recognising that he, a bear in their mutual fantasy, is also a victim, complying helplessly within a power dynamic over which neither possesses much control.`,
+                                description: `His wife then sighs in response, "Poor, poor bears," recognizing that he, a bear in their mutual fantasy, is also a victim, complying helplessly within a power dynamic over which neither possesses control.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true,
                                     [REFERENCE]: true
                                 }
                             }

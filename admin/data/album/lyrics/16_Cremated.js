@@ -664,7 +664,7 @@ export default {
                             anchor: `will not retract,`,
                             todo: true,
                             card: {
-                                description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected.`,
+                                description: `Some record players lack an auto-return function, so the needle will coast without end in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected.`,
                                 dotKeys: {
                                     [REFERENCE]: true
                                 }
