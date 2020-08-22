@@ -951,7 +951,7 @@ export default {
                                             anchor: `hypoglycemic`,
                                             wiki: `Hypoglycemia`
                                         },
-                                        `episode. I drove her to the hospital and sat in the waiting room while she was being examined.`
+                                        `episode. I drove her to the hospital and sat in the waiting area while she was being examined.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -976,7 +976,7 @@ export default {
                             anchor: `bright to your gloom`,
                             cards: [
                                 {
-                                    description: `When we first met, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But as our friendship grew, I came to see that her cheery outlook actually masked a lingering depression, which gave me an opening to win her over with simple, kind gestures.`,
+                                    description: `When we first met, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament. But as our friendship grew, I came to see that her cheery nature actually masked a lingering depression, which gave me an opening to win her over with simple, kind gestures.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -1077,7 +1077,7 @@ export default {
                             anchor: `with a ring.`,
                             cards: [
                                 {
-                                    description: `Having dozed off, I am roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting room.`,
+                                    description: `Having dozed off, I am roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting area.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -1120,7 +1120,7 @@ export default {
                             anchor: `cheek unveiled.`,
                             cards: [
                                 {
-                                    description: `Glancing up, I'm startled to find Sita hovering over me with a cheeky smile. Having quietly unclasped her purse from my grip, she returns to the emergency room, but not before inadvertently flashing some "cheek" from beneath her revealing hospital gown.`,
+                                    description: `Glancing up, I'm startled to find Sita hovering over me with a cheeky smile. Having quietly unclasped her purse from my grip, she returns to the treatment area, but not before inadvertently flashing some "cheek" from beneath her revealing hospital gown.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true

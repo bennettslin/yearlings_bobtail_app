@@ -13,7 +13,10 @@
 * Begin reference annotations
     * Search for anchorless references.
     * Also anchored references if I can find them.
-    * 1 Pchelka
+    * 1 Pchelka ("mushing onward")
+    * Finished Grasshoppers
 
 * Remove Britishisms from lyrics.
-* Reassess what is an anchor
+* Reassess what is an anchor.
+* More casual talk.
+* Make sure narrative and backstory are never together.

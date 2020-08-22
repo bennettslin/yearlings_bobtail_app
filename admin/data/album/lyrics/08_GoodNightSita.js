@@ -3,7 +3,6 @@ import {
     NARRATIVE,
     OBSERVATION,
     PUN,
-    REFERENCE,
     SONGWRITING
 } from '../../../../app/constants/dots'
 
@@ -59,7 +58,6 @@ export default {
                         `I borrowed this literary technique to capture the torrent of unspoken thoughts that rushes through my head as Sita extends her good wishes before I depart.`
                     ],
                     dotKeys: {
-                        [REFERENCE]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -210,6 +208,7 @@ export default {
                                     ]
                                 },
                                 {
+                                    // TODO: Reconsider where to put the sponge annotation.
                                     description: `Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
@@ -286,22 +285,29 @@ export default {
                     time: 22,
                     lyric: {
                         anchor: `swept in unchartable tides`,
-                        todo: true,
-                        cards: [
-                            {
-                                description: `Stencilled above many storm drains in the Bay Area is a sign that reads, "No Dumping, Drains to Ocean."`,
-                                dotKeys: {
-                                    [REFERENCE]: true
-                                }
-                            },
-                            {
-                                description: `The constant peril of being steered in directions for which I'm ill-prepared has kept me on edge throughout this date, as usual. But a nearby storm drain reminds me that many things, including sponge and barnacle larvae, are regularly carried by the current to unknown regions, and they don't sweat it.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
+                        card: {
+                            description: [
+                                `The constant peril of being steered in directions for which I'm ill-prepared has kept me on edge throughout this date. But nearby is a`,
+                                {
+                                    anchor: `storm drain`,
+                                    wiki: `Storm_drain`
+                                },
+                                `that drains to the ocean, and I'm reminded of all the`,
+                                {
+                                    anchor: `sponges,`,
+                                    wiki: `Sponge`
+                                },
+                                {
+                                    anchor: `barnacles,`,
+                                    wiki: `Barnacle`
+                                },
+                                `and other sea creatures that live to be carried by the current to unknown places. And they don't sweat it.`
+                            ],
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
                             }
-                        ]
+                        }
                     }
                 },
                 {

@@ -598,20 +598,23 @@ export default {
                         },
                         {
                             anchor: `my Tekakwitha—`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `The story of`,
                                     {
                                         anchor: `Kateri Tekakwitha,`,
                                         wiki: `Kateri_Tekakwitha`
                                     },
-                                    `the Catholic Church's first Native American saint who was baptized as Saint Catherine, figures prominently in`,
+                                    `baptized as Saint Catherine, was the Catholic Church's first Native American saint. Her story figures prominently in`,
                                     {
                                         isItalic: true,
-                                        lyric: `Beautiful Losers.`
+                                        lyric: `Beautiful Losers,`
                                     },
-                                    `I always assumed that "going clear" was a reference to the legend that her smallpox scars miraculously vanished upon her death.`
+                                    `and so I always assumed that "going clear" was a reference to the legend that her`,
+                                    {
+                                        anchor: `smallpox`,
+                                        wiki: `Smallpox`
+                                    },
+                                    `scars miraculously vanished upon her death.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -629,14 +632,28 @@ export default {
                             anchor: `safe Algonquin abode.`,
                             todo: true,
                             card: {
+                                // TODO: Further develop the idea of me being a brute. Had Catherine and I stayed together, perhaps her friends would assume that...
                                 description: [
-                                    `Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured after a raid upon her village. Dorothy Parker was a member of the`,
+                                    `Kateri Tekakwitha was born to a`,
+                                    {
+                                        anchor: `Mohawk`,
+                                        wiki: `Mohawk_people`
+                                    },
+                                    `chief and an`,
+                                    {
+                                        anchor: `Algonquin`,
+                                        wiki: `Algonquin_people`
+                                    },
+                                    `woman whom he had captured in a raid upon her village. Dorothy Parker belonged to the`,
                                     {
                                         anchor: `Algonquin Round Table,`,
                                         wiki: `Algonquin_Round_Table`
                                     },
                                     `a social circle of New York City writers known for their clever wordplay and wit.`
-                                ]
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
                             }
                         }
                     ]
