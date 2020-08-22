@@ -976,7 +976,7 @@ export default {
                                         anchor: `"Aryans"`,
                                         wiki: `Aryan`
                                     },
-                                    `mentioned "in the Vedas" were a noble class based on religious distinction, 19th-century Western scholars postulated they were a light-skinned race that had conquered and civilised the local populations. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`
+                                    `mentioned "in the Vedas" were a noble class based on religious distinction, 19th-century Western scholars postulated they were a light-skinned race that had conquered and civilized the local populations. While this theory has been debunked, the origin of the Indo-European people is still a matter of wide debate. And so "to sum up," I must put this "unsolved query" to rest, before the others lose their minds.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

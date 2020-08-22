@@ -625,7 +625,7 @@ export default {
                             anchor: `honeybee?`,
                             todo: true,
                             card: {
-                                description: `A honeybee will die after stinging someone, as its stinger is connected to vital organs. Similarly, having given my virginity to Sita in return, I realised too late that there was a vital part of me that could never be recovered apart from her as well.`,
+                                description: `A honeybee will die after stinging someone, as its stinger is connected to vital organs. Similarly, having given my virginity to Sita in return, I realized too late that there was a vital part of me that could never be recovered apart from her as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
@@ -692,7 +692,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Recognising my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. While Hinduism is no different from Buddhism in its end goal of transcendent release from the cycle of rebirth, which I found problematic as a child, I was attracted to its sprawling pantheon of deities and avatars. It just seemed like the more details there are, the more room you have to explore the divine. Anyway, I never self-identified as a Hindu during those years, but I definitely felt like one.`
+                                    `Recognizing my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. While Hinduism is no different from Buddhism in its end goal of transcendent release from the cycle of rebirth, which I found problematic as a child, I was attracted to its sprawling pantheon of deities and avatars. It just seemed like the more details there are, the more room you have to explore the divine. Anyway, I never self-identified as a Hindu during those years, but I definitely felt like one.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -734,7 +734,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail,`
                                     },
-                                    `my night terrors grew less frequent, and my misery subsided. Recognising this boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more indifferent to Sita's needs.`
+                                    `my night terrors grew less frequent, and my misery subsided. Recognizing this boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more indifferent to Sita's needs.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

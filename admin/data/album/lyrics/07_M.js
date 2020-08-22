@@ -800,7 +800,7 @@ export default {
                             anchor: `world's a naked baby,`,
                             todo: true,
                             card: {
-                                description: `At some point, I realised that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can be understood by reading them closely, no differently than bodies of knowledge can be absorbed through study.`,
+                                description: `At some point, I realized that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can be understood by reading them closely, no differently than bodies of knowledge can be absorbed through study.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -963,7 +963,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Recognising that what I wanted was Mara or someone like Mara, and having taken stock of where I needed to be to get what I wanted, I decided to return to what I do best: holing up in emotional seclusion and relying solely on my own resourcefulness. My next five-year plan would see me score all the parts and play all the instruments on`,
+                                    `Recognizing that what I wanted was Mara or someone like Mara, and having taken stock of where I needed to be to get what I wanted, I decided to return to what I do best: holing up in emotional seclusion and relying solely on my own resourcefulness. My next five-year plan would see me score all the parts and play all the instruments on`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail,`

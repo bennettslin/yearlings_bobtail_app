@@ -174,7 +174,7 @@ export default {
                                         anchor: `breech baby,`,
                                         wiki: `Breech_birth`
                                     },
-                                    `having exited the womb bottom first rather than head first, which complicated the delivery. My mother once hypothesised this to be the cause of his autism.`
+                                    `having exited the womb bottom first rather than head first, which complicated the delivery. My mother once hypothesized this to be the cause of his autism.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true

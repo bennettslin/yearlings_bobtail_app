@@ -765,7 +765,7 @@ export default {
                             anchor: `how you're to live…"`,
                             todo: true,
                             card: {
-                                description: `The letters cautioned me to keep myself separate from society. I realised that my brother had been doing this all along, and thus adopted a stoic composure based on his.`,
+                                description: `The letters cautioned me to keep myself separate from society. I realized that my brother had been doing this all along, and thus adopted a stoic composure based on his.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

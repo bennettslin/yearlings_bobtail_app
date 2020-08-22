@@ -924,7 +924,7 @@ export default {
                             anchor: `Kurt Cobain`,
                             wiki: `Kurt_Cobain`
                         },
-                        `kicks the last third of "Lounge Act" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, because the melodies I write tend to span my whole vocal range. So when I realised the chorus melody for this song stays within a single register throughout, I made it work.`
+                        `kicks the last third of "Lounge Act" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, because the melodies I write tend to span my whole vocal range. So when I realized the chorus melody for this song stays within a single register throughout, I made it work.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true

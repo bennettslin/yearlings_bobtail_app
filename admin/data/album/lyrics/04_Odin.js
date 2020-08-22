@@ -36,7 +36,7 @@ export default {
                 card: {
                     description: [
                         // TODO: Have separate Norse and Odin wikis.
-                        `It's likely that Odin's original name meant something in Chinese, which my sister and I later anglicised into the name of the`,
+                        `It's likely that Odin's original name meant something in Chinese, which my sister and I later anglicized into the name of the`,
                         {
                             anchor: `Norse god`,
                             wiki: `Odin`

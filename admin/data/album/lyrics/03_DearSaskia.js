@@ -445,7 +445,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Here, I recall one afternoon, when Sasha's hair blew in my face from the seat ahead of mine, and I realised that she had matured to the next peer group. I felt like a`,
+                                    `Here, I recall one afternoon, when Sasha's hair blew in my face from the seat ahead of mine, and I realized that she had matured to the next peer group. I felt like a`,
                                     {
                                         anchor: `papoose,`,
                                         wiki: `Papoose`

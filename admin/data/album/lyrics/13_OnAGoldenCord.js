@@ -441,7 +441,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `Recognising the trauma that must certainly linger, sober me forgives his drunken accomplice's lack of sympathy for the victim.`,
+                                    description: `Recognizing the trauma that must certainly linger, sober me forgives his drunken accomplice's lack of sympathy for the victim.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }

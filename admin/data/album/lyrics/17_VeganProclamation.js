@@ -252,7 +252,7 @@ export default {
                             anchor: `first pets`,
                             todo: true,
                             card: {
-                                description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, realised that her kitten believed it was dying. She lived with the guilt ever afterward.`,
+                                description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, realized that her kitten believed it was dying. She lived with the guilt ever afterward.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [REFERENCE]: true
@@ -436,7 +436,7 @@ export default {
                             anchor: `burger shrouds,`,
                             todo: true,
                             card: {
-                                description: `As a vegan, I became sensitive to anything even remotely suggestive of meat or animal byproducts, such as a discarded fast food wrapper. I realised that I too had been inured, living in a society built on the commoditisation of animal suffering.`,
+                                description: `As a vegan, I became sensitive to anything even remotely suggestive of meat or animal byproducts, such as a discarded fast food wrapper. I realized that I too had been inured, living in a society built on the commoditisation of animal suffering.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -814,7 +814,7 @@ export default {
                                             anchor: `Siva`,
                                             wiki: `Shiva`
                                         },
-                                        `as a cosmic dancer, who dances to tear down the universe and build it up again in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
+                                        `as a cosmic dancer, who dances to tear down the universe and build it up again in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolizing Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

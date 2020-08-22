@@ -1165,7 +1165,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `My favorite word as a child was "bobtail." I was just so proud of myself the day I realised that the line "bells on bobtail ring," from the song`,
+                                    `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "bells on bobtail ring," from the song`,
                                     {
                                         anchor: `"Jingle Bells,"`,
                                         wiki: `Jingle_Bells`

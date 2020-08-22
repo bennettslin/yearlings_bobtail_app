@@ -24,7 +24,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         {
@@ -582,10 +581,9 @@ export default {
                         },
                         {
                             anchor: `went clear—`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Having decided to win Catherine back by reading more books, I began with those we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's earlier novel`,
+                                    `Having decided to win Catherine back by reading more books, I began with those we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's novel`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers,`
@@ -608,7 +606,7 @@ export default {
                                         anchor: `Kateri Tekakwitha,`,
                                         wiki: `Kateri_Tekakwitha`
                                     },
-                                    `the Catholic Church's first Native American saint who was baptised as Saint Catherine, figures prominently in`,
+                                    `the Catholic Church's first Native American saint who was baptized as Saint Catherine, figures prominently in`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers.`
@@ -850,22 +848,20 @@ export default {
                         `in`,
                         {
                             anchor: `spreading mole`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: `By day's end, the ash was pretty smudged.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
-                                },
-                                {
-                                    description: `A spreading mole is a sign of cancer, which is fitting since I wasn't sure how sick it is to fake being Catholic.`,
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [REFERENCE]: true
-                                    }
+                            card: {
+                                description: [
+                                    `My ash was smudged by day's end, resembling the kind of large, amorphous mole that can develop into`,
+                                    {
+                                        anchor: `melanoma.`,
+                                        wiki: `Melanoma`
+                                    },
+                                    `Which was fitting, since it takes a rather sick person to fake being Catholic.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
                                 }
-                            ]
+                            }
                         },
                         `my sickness borne`
                     ]
