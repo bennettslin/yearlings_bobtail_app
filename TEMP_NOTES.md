@@ -13,7 +13,7 @@
 * Begin reference annotations
     * Search for anchorless references.
     * Also anchored references if I can find them.
-    * Currently on Odin
+    * 1 Pchelka
 
 * Remove Britishisms from lyrics.
 * Reassess what is an anchor

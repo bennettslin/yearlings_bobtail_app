@@ -4,7 +4,8 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGWRITING,
+    NARRATIVE
 } from '../../../../app/constants/dots'
 
 import {
@@ -544,19 +545,18 @@ export default {
                         {
                             anchor: `Gogo and his Didi,`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
                                         `In Chinese,`,
                                         {
                                             isItalic: true,
-                                            lyric: `Gogo`
+                                            lyric: `gogo`
                                         },
                                         `means "big brother." And of course,`,
                                         {
                                             isItalic: true,
-                                            lyric: `Didi`
+                                            lyric: `didi`
                                         },
                                         `in this case now refers to`,
                                         {
@@ -570,7 +570,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `Didi and Gogo are the respective pet names of Vladimir and Estragon, the two tramps who are still waiting for Godot by the end of Beckett's play.`,
+                                    description: `Didi and Gogo are the respective pet names of Vladimir and Estragon, the two tramps who are still waiting for Godot at the end of Beckett's play.`,
                                     dotKeys: {
                                         [REFERENCE]: true
                                     }
@@ -586,7 +586,6 @@ export default {
                         `Till`,
                         {
                             anchor: `in hunger they were led`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes`,
@@ -594,11 +593,10 @@ export default {
                                         anchor: `Laika,`,
                                         wiki: `Laika`
                                     },
-                                    `the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I liked the analogy of being thrust helplessly from one desperate circumstance to another.`
+                                    `the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I could sympathize with Laika's plight of being thrust into one desperate circumstance that only leads to the next.`
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         },
@@ -1050,13 +1048,19 @@ export default {
                             anchor: `Mushing onward,`,
                             todo: true,
                             card: {
+                                // TODO: Mention that I imagine Pchelka and Mushka dogsledding.
                                 description: [
-                                    `Upon their arrival in the New World, the French learned the practise of dog sledding from the natives. They commanded their dog teams to move by shouting`,
+                                    `Upon their arrival in the New World, the French learned the practice of`,
+                                    {
+                                        anchor: `dog sledding`,
+                                        wiki: `Sled_dog`
+                                    },
+                                    `from the natives. They commanded their dog teams to move by shouting`,
                                     {
                                         isItalic: true,
                                         lyric: `"marche,"`
                                     },
-                                    `meaning "go." After the territory was ceded to the British, this term continued in English as`,
+                                    `meaning "go." After their territory was ceded to the British, this term continued in English as`,
                                     {
                                         anchor: `"mush."`,
                                         wiki: `Mushing`
@@ -1067,12 +1071,17 @@ export default {
                         {
                             anchor: `Mushka's`,
                             properNoun: true,
-                            todo: true,
                             card: {
-                                description: `While Pchelka and Mushka successfully spent a day in orbit aboard Sputnik 6, there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets had it self-destruct, killing all aboard. But in my own allegory, I as Pchelka managed to avoid the sad fate that my brother as Mushka could not.`,
+                                description: [
+                                    `While Pchelka and Mushka successfully spent a day in orbit aboard`,
+                                    {
+                                        anchor: `Sputnik 6,`,
+                                        wiki: `Korabl-Sputnik_3`
+                                    },
+                                    `there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets made it self-destruct, killing all aboard. But in my retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`
+                                ],
                                 dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         },
@@ -1096,12 +1105,15 @@ export default {
                         `under`,
                         {
                             anchor: `undying dawn.`,
-                            todo: true,
                             card: {
-                                description: `During summer in the Arctic, the sun remains visible for the full 24 hours of each day.`,
-                                dotKeys: {
-                                    [REFERENCE]: true
-                                }
+                                description: [
+                                    `During summer in the Arctic, the`,
+                                    {
+                                        anchor: `sun never sets.`,
+                                        wiki: `Midnight_sun`
+                                    },
+                                    `Instead, it always remains visible just above the horizon.`
+                                ]
                             }
                         }
                     ]
@@ -1155,15 +1167,19 @@ export default {
                         `Next cabins come equipped with`,
                         {
                             anchor: `pentobarbitone syringe,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `A`,
                                     {
-                                        anchor: `pentobarbitone`,
+                                        anchor: `pentobarbital`,
                                         wiki: `Pentobarbital`
                                     },
-                                    `injection is the most humane means of euthanasia. No such kindness was prepared for Laika, whose death by heat exhaustion was expected from the start.`
+                                    `injection is the most humane means of`,
+                                    {
+                                        anchor: `euthanasia.`,
+                                        wiki: `Euthanasia`
+                                    },
+                                    `No such kindness was prepared for Laika, whose death by heat exhaustion had been expected all along.`
                                 ]
                             }
                         }

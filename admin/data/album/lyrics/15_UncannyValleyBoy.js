@@ -307,7 +307,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship,`,
                             todo: true,
                             card: {
-                                description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. My strategy in life thus became to visualise the reward of corrective justice, then patiently work towards it. I was like "a pawn" that "perches over queenship" as it steadily clambers towards the opposite side of the chessboard.`,
+                                description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. My strategy in life thus became to visualize the reward of corrective justice, then patiently work towards it. I was like "a pawn" that "perches over queenship" as it steadily clambers towards the opposite side of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
@@ -406,7 +406,7 @@ export default {
                                             anchor: `hamartia`,
                                             wiki: `Hamartia`
                                         },
-                                        `is the character flaw that leads to a protagonist's downfall. Here, my parents are asking if I recognise the telltale signs pointing to mine. (I've since learned that the accent is on the third syllable. But my English teacher pronounced it as I have here, so I plead miseducation.)`
+                                        `is the character flaw that leads to a protagonist's downfall. Here, my parents are asking if I recognize the telltale signs pointing to mine. (I've since learned that the accent is on the third syllable. But my English teacher pronounced it as I have here, so I plead miseducation.)`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true
@@ -561,7 +561,7 @@ export default {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`
                                     },
-                                    `is a classic swindle in which a small ball is placed under three shells, which are then shuffled in plain view. Typically, sleight of hand is used to misplace the ball. Having recognised life to be a shell game, I will never be suckered again. And heck, now I can be the one to do some grifting myself.`
+                                    `is a classic swindle in which a small ball is placed under three shells, which are then shuffled in plain view. Typically, sleight of hand is used to misplace the ball. Having recognized life to be a shell game, I will never be suckered again. And heck, now I can be the one to do some grifting myself.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true

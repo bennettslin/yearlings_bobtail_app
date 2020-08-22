@@ -65,7 +65,7 @@ export default {
                                     anchor: `Mara,`,
                                     wiki: `Mara_(demon)`
                                 },
-                                `the demon who personifies fear and death in Buddhism. In the same way, I had to summon otherworldly reserves of self-denial to get through band practise after Jacob and Mara started dating.`
+                                `the demon who personifies fear and death in Buddhism. In the same way, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -128,7 +128,7 @@ export default {
                 },
                 {
                     time: 47,
-                    lyric: `with practise each day, then`
+                    lyric: `with practice each day, then`
                 },
                 {
                     time: 50,

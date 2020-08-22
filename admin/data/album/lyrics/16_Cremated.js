@@ -413,7 +413,7 @@ export default {
                                         anchor: `Martin and Lewis,`,
                                         wiki: `Martin_and_Lewis`
                                     },
-                                    `my two personalities would befuddle each other, much to Miriam's delight. But even so, she recognised the underlying mental dysfunction that surely fueled this spectacle, and wanted no lasting part in it.`
+                                    `my two personalities would befuddle each other, much to Miriam's delight. But even so, she recognized the underlying mental dysfunction that surely fueled this spectacle, and wanted no lasting part in it.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -466,7 +466,7 @@ export default {
                                         anchor: `forced to adopt`,
                                         wiki: `Forced_conversion`
                                     },
-                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit their new faith. Here, Miriam sees through my own attempts at assimilation and recognises them to be no less disingenuous. She thus fears that corrupt traces of my old ways will always remain.`
+                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit their new faith. Here, Miriam sees through my own attempts at assimilation and recognizes them to be no less disingenuous. She thus fears that corrupt traces of my old ways will always remain.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

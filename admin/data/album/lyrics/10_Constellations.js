@@ -1312,12 +1312,7 @@ export default {
                                             anchor: `Inuits`,
                                             wiki: `Inuit`
                                         },
-                                        `of the`,
-                                        {
-                                            anchor: `Arctic`,
-                                            wiki: `Arctic`
-                                        },
-                                        `regions, may have migrated to the Americas by boat. An Inuit storyteller might narrate the journey of one such seafaring ancestor by describing how "he rows" with the "auroras," or`,
+                                        `of the Arctic regions, may have migrated to the Americas by boat. An Inuit storyteller might narrate the journey of one such seafaring ancestor by describing how "he rows" with the "auroras," or`,
                                         {
                                             anchor: `aurora borealis,`,
                                             wiki: `Aurora`

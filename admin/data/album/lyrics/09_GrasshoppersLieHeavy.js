@@ -439,7 +439,7 @@ export default {
                             anchor: `show played in mimes,`,
                             todo: true,
                             card: {
-                                description: `The world of dating was awash in hidden cues and gestures that, as far as I knew, no one could be expected to recognise or understand. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.`,
+                                description: `The world of dating was awash in hidden cues and gestures that, as far as I knew, no one could be expected to recognize or understand. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true

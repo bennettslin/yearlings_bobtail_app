@@ -225,11 +225,12 @@ export default {
                             anchor: `"Zeizei,`,
                             card: {
                                 description: [
+                                    `In Chinese`,
                                     {
                                         isItalic: true,
-                                        lyric: `Zeizei`
+                                        lyric: `zeizei`
                                     },
-                                    `means "big sister" in Chinese. When speaking for me, my mother would address her as I would.`
+                                    `means "big sister." When speaking for me, my mother would address my sister as I would have.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

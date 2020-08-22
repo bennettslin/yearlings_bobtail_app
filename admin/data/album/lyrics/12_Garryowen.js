@@ -390,7 +390,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Much like I wouldn't have recognised myself with an`,
+                                        `Much like I wouldn't have recognized myself with an`,
                                         {
                                             anchor: `"upturned collar,"`,
                                             wiki: `Upturned_collar`

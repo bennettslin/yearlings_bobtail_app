@@ -911,7 +911,7 @@ export default {
                                         anchor: `Zeus`,
                                         wiki: `Zeus`
                                     },
-                                    `as a wedding gift, she unwittingly released all the evils that plague humanity.`
+                                    `as a wedding gift, she unwittingly released all the evils that now plague humanity.`
                                 ]
                             }
                         },
@@ -954,9 +954,8 @@ export default {
                         {
                             // CONSIDER: wormhole: Hope chest in M?
                             anchor: `hopeless rests.`,
-                            todo: true,
                             card: {
-                                description: `Hope was all that remained in Pandora's box. By contrast, upon having the hard truths of the world revealed to me by Sasha, I was left only with my own hopeless state.`,
+                                description: `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I was left feeling as hopeless as ever.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [REFERENCE]: true
@@ -979,19 +978,19 @@ export default {
                         `Your`,
                         {
                             anchor: `seizures of spleen,`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `In`,
-                                        {
-                                            anchor: `Hippocratic medicine,`,
-                                            wiki: `Humorism`
-                                        },
-                                        `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. My expressions of resentment towards the bullies, which I confided to Sasha, were characteristic of both senses.`
-                                    ]
+                            card: {
+                                description: [
+                                    `In`,
+                                    {
+                                        anchor: `Hippocratic medicine,`,
+                                        wiki: `Humorism`
+                                    },
+                                    `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. My expressions of resentment towards the bullies, which I confided to Sasha, contained a bit of both.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
                                 }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -1016,7 +1015,6 @@ export default {
                         `you see the`,
                         {
                             anchor: `jarred sibyl`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -1024,7 +1022,12 @@ export default {
                                         anchor: `Cumaean Sibyl`,
                                         wiki: `Cumaean_Sibyl`
                                     },
-                                    `was a Greek prophetess who was granted immortality but not eternal youth. T.S. Eliot's poem`,
+                                    `was a Greek prophetess who was granted immortality but not eternal youth.`,
+                                    {
+                                        anchor: `T.S. Eliot's`,
+                                        wiki: `T._S._Eliot`
+                                    },
+                                    `poem`,
                                     {
                                         isItalic: true,
                                         lyric: {
