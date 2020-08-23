@@ -117,7 +117,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `Of course, it's more common to "wax poetic," meaning to become eloquent in speech. Here, my parents use this highbrow expression ironically, as commentary on the artificial persona that I've created.`,
+                                    description: `Of course, it's more common to "wax poetic," meaning to become eloquent in speech. But my parents use this highbrow expression ironically, as a commentary on the artificial persona that I've created.`,
                                     dotKeys: {
                                         [REFERENCE]: true
                                     }
@@ -133,7 +133,7 @@ export default {
                                             anchor: `A Christmas Carol,`,
                                             wiki: `A_Christmas_Carol`
                                         },
-                                        `my parents invite me on a night journey to witness all that has led up to where I am now, how these events have shaped my ambitions, and what those ambitions will soon have wrought.`
+                                        `my parents invite me on a night journey to witness all that has led up to where I am now, how these events have shaped my ambitions, and what havoc those ambitions will soon wreak.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true
@@ -636,10 +636,16 @@ export default {
                             anchor: `haze the new latecomers.`,
                             todo: true,
                             card: {
-                                description: `Some secret societies are infamous for their abusive hazing rituals. Having once endured such abuse as my dues for joining society, I was now eager to dole it out to others.`,
+                                description: [
+                                    `Some organizations are infamous for the degrading`,
+                                    {
+                                        anchor: `hazing rituals`,
+                                        wiki: `Hazing`
+                                    },
+                                    `that new recruits are made to go through. Having endured such abuse for so long myself, I finally concluded that it was needed to toughen me up before I could join the rest of society. And I now had no qualms about doling it out to others.`
+                                ],
                                 dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         }
@@ -693,7 +699,6 @@ export default {
                         {
                             anchor: `Rama king,`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -701,7 +706,12 @@ export default {
                                             anchor: `Rama`,
                                             wiki: `Rama`
                                         },
-                                        `is an avatar of the Hindu god Vishnu and the hero of the`,
+                                        `is an avatar of the Hindu god`,
+                                        {
+                                            anchor: `Vishnu`,
+                                            wiki: `Vishnu`
+                                        },
+                                        `and the hero of the`,
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -709,11 +719,20 @@ export default {
                                                 wiki: `Ramayana`
                                             }
                                         },
-                                        `an ancient Indian epic poem. The tale recounts Rama's marriage to Sita, daughter of Mother Earth, and his battle to rescue her after she was kidnapped by the demon king Ravana.`
+                                        `an ancient Indian epic poem. The tale recounts Rama's marriage to`,
+                                        {
+                                            anchor: `Sita,`,
+                                            wiki: `Sita`
+                                        },
+                                        `daughter of the earth, and his battle to rescue her after she was kidnapped by the demon king`,
+                                        {
+                                            anchor: `Ravana.`,
+                                            wiki: `Ravana`
+                                        }
                                     ]
                                 },
                                 {
-                                    description: `My parents take a subtle dig by calling me a "drama king," given that everything I do is an act.`,
+                                    description: `My parents might actually be calling me a "drama king," a subtle dig to imply that everything I do is an act.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -725,10 +744,16 @@ export default {
                         {
                             anchor: `testifiers' lore?`,
                             card: {
-                                description: `After defeating Ravana, Rama forced Sita to walk through sacrificial flames to prove that she had remained chaste throughout her abduction. Sita complied, and escaped from this "test of fire" unharmed.`,
+                                description: [
+                                    `After slaying Ravana, Rama forced Sita to walk through`,
+                                    {
+                                        anchor: `sacrificial flames`,
+                                        wiki: `Trial_by_ordeal`
+                                    },
+                                    `to prove that she had remained chaste throughout her abduction. Sita complied, and escaped from this "test of fire" unharmed.`
+                                ],
                                 dotKeys: {
-                                    [PUN]: true,
-                                    [REFERENCE]: true
+                                    [PUN]: true
                                 }
                             }
                         }
@@ -740,19 +765,20 @@ export default {
                         `A`,
                         {
                             anchor: `nation paused`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In 1987, a television serial based on the`,
+                                    `In 1987, a`,
+                                    {
+                                        anchor: `television serial`,
+                                        wiki: `Ramayan_(1987_TV_series)`
+                                    },
+                                    `based on the`,
                                     {
                                         isItalic: true,
                                         lyric: `Ramayana`
                                     },
-                                    `began broadcasting throughout India. Traffic and train stations would come to a standstill each week as the country sat glued to their television screens.`
-                                ],
-                                dotKeys: {
-                                    [REFERENCE]: true
-                                }
+                                    `began to broadcast throughout India. Traffic and train stations would come to a standstill each week as the country sat glued to their television screens.`
+                                ]
                             }
                         },
                         `to watch you`,
@@ -762,8 +788,7 @@ export default {
                             card: {
                                 description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. The same self-serving chauvinism is what prompted my need to be the more sexually experienced partner, leading me to stray from Sita and shack up with other women.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         },
@@ -857,24 +882,23 @@ export default {
                         {
                             anchor: `Valmiki's chant.`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Valmiki,`,
                                         wiki: `Valmiki`
                                     },
-                                    `the renowned author of the epic`,
+                                    `the renowned author of the`,
                                     {
                                         isItalic: true,
                                         lyric: `Ramayana,`
                                     },
-                                    `began his early life as Ratnakar, a notorious highway robber. Desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar was so sinful, however, that he could only repeat the word`,
+                                    `began his early life as Ratnakar, a highway robber. Desperate to repent, he sought counsel from a passing sage, who told him to recite the holy name of Rama. Ratnakar was so sinful, however, that he could only repeat the word`,
                                     {
                                         isItalic: true,
                                         lyric: `mara,`
                                     },
-                                    `or "death." Still, the grace of Rama caused the syllables to slowly shift, until Ratnakar was finally chanting Rama's name.`
+                                    `or "death." Still, the grace of Rama caused the syllables to gradually shift, until Ratnakar was finally chanting Rama's name.`
                                 ]
                             }
                         }
@@ -917,16 +941,10 @@ export default {
                         `you found spelled out in`,
                         {
                             anchor: `dead ants:`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `As Ratnakar chanted Rama's name, his concentration was so intense that an anthill formed over him and remained undisturbed for years. And so he came to be known as Valmiki, since`,
-                                        {
-                                            isItalic: true,
-                                            lyric: `valmika`
-                                        },
-                                        `means "anthill" in Sanskrit.`
+                                        `As Ratnakar chanted Rama's name, his concentration was so intense that an anthill formed over him and he remained undisturbed for years. And so he came to be known as Valmiki, which means "anthill" in Sanskrit.`
                                     ],
                                     dotKeys: {
                                         [REFERENCE]: true
@@ -1050,7 +1068,6 @@ export default {
                         `Stubborn`,
                         {
                             anchor: `harpies`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1368,12 +1385,10 @@ export default {
                     lyric: {
                         anchor: `Rama, Rama…`,
                         properNoun: true,
-                        todo: true,
                         card: {
                             description: `Like Valmiki as he chanted Rama's name, I desperately wanted to be good again.`,
                             dotKeys: {
-                                [NARRATIVE]: true,
-                                [REFERENCE]: true
+                                [NARRATIVE]: true
                             }
                         }
                     }

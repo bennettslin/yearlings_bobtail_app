@@ -10,11 +10,14 @@
     * 1 Garryowen
 * Make sure no wikis repeat.
 
-* Begin reference annotations
+* Reference annotations
     * Search for anchorless references.
     * Also anchored references if I can find them.
     * 1 Pchelka ("mushing onward")
-    * Finished Grasshoppers
+    * 2 Uncanny
+
+* Pun annotations
+    * 2 Uncanny (I missed these for some reason.)
 
 * Remove Britishisms from lyrics.
 * Reassess what is an anchor.
