@@ -12,12 +12,22 @@
     * Search for anchorless references.
     * Also anchored references if I can find them.
     * 1 Pchelka ("mushing onward")
-    * 2 Uncanny
+    * 1 Uncanny ("wax prophetic")
 
 * Pun annotations
-    * 2 Uncanny (I missed these for some reason.)
+    * 1 Uncanny ("queenship")
 
 * Remove Britishisms from lyrics.
 * Reassess what is an anchor.
 * More casual talk.
 * Make sure narrative and backstory are never together.
+
+# Bobtail Yearlings website
+* Remove problematic posts from Blogspot blog.
+* Add WordPress to website, have blog section.
+* Link to Blogspot from WordPress.
+
+# Acknowledge my ask now that I'm famous
+* Apple monitor rotation warning
+* Spotlight doesn't go to Finder in different window
+* Why do I just need to barely descend into a nap to feel refreshed?

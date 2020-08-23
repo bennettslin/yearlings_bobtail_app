@@ -310,7 +310,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. My strategy in life thus became to visualize the reward of corrective justice, then patiently work toward it. I was like "a pawn" in`,
+                                    `The mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. And so I patiently awaited this corrective justice, like "a pawn" in`,
                                     {
                                         anchor: `chess`,
                                         wiki: `Chess`
@@ -325,9 +325,8 @@ export default {
                         },
                         {
                             anchor: `earth right now your tourist store…`,
-                            todo: true,
                             card: {
-                                description: `While my mother filled my head with visions of being a great artist, the mail-order cult instilled a belief that I was merely a visitor to this planet. And so, unaffected by earthly concerns, I was always going to work tirelessly for my "birthright" of artistic renown, which I felt it my duty now "to restore."`,
+                                description: `My mother once filled my head with visions of being a great artist. The mail-order cult then piled on with the belief that I was merely a visitor to this planet. The net effect on my psyche was that I became unaffected by earthly concerns, spurring me to work ever more tirelessly "to restore" my "birthright" of artistic renown.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
