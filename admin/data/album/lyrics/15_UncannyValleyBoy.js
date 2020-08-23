@@ -212,7 +212,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Like Grover, I was trapped inside a self-referential work, hoping to shape the outcome towards which I was being relentlessly thrust. Unlike Grover, however, I already had an inkling of who the monster at the end of`,
+                                    `Like Grover, I was trapped inside a self-referential work, hoping to shape the outcome toward which I was being relentlessly thrust. Unlike Grover, however, I already had an inkling of who the monster at the end of`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`
@@ -309,11 +309,17 @@ export default {
                             anchor: `Upon purchase of a queen's ship,`,
                             todo: true,
                             card: {
-                                description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. My strategy in life thus became to visualize the reward of corrective justice, then patiently work towards it. I was like "a pawn" in chess that "perches over queenship" as it steadily clambers towards the opposite side of the chessboard.`,
+                                description: [
+                                    `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. My strategy in life thus became to visualize the reward of corrective justice, then patiently work toward it. I was like "a pawn" in`,
+                                    {
+                                        anchor: `chess`,
+                                        wiki: `Chess`
+                                    },
+                                    `that "perches over queenship" as it steadily clambers toward the opposite side of the chessboard.`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [PUN]: true,
-                                    [REFERENCE]: true
+                                    [PUN]: true
                                 }
                             }
                         },

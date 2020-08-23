@@ -71,7 +71,7 @@ export default {
                                 wiki: `Abbey_Road`
                             }
                         },
-                        `by the Beatles. The resulting sense of urgency provides a nice push towards the album's finish.`
+                        `by the Beatles. The resulting sense of urgency provides a nice push toward the album's finish.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true

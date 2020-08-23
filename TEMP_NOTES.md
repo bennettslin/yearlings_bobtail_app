@@ -6,8 +6,6 @@
 
 * Make sure backstory and narrative tenses are correct.
 
-* Songwriting annotations
-    * 1 Garryowen
 * Make sure no wikis repeat.
 
 * Reference annotations

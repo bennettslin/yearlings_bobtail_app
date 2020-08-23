@@ -349,7 +349,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `Mistakes made with one woman still offered lessons to apply towards the next, so each date felt like prying open one nesting doll to get to another, with the ultimate hope of reaching the last one that doesn't turn out hollow.`,
+                                    description: `Mistakes made with one woman still offered lessons to apply toward the next, so each date felt like prying open one nesting doll to get to another, with the ultimate hope of reaching the last one that doesn't turn out hollow.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
@@ -863,7 +863,7 @@ export default {
                             anchor: `endless flowchart`,
                             todo: true,
                             card: {
-                                description: `I often wondered at the time if it was possible to prepare a mental flowchart of all the myriad ways a date might unfold. I could then take one optimal action after another to nudge the events of the evening towards my desired outcome.`,
+                                description: `I often wondered at the time if it was possible to prepare a mental flowchart of all the myriad ways a date might unfold. I could then take one optimal action after another to nudge the events of the evening toward my desired outcome.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }

@@ -371,7 +371,7 @@ export default {
                             anchor: `crevice rays.`,
                             todo: true,
                             card: {
-                                description: `I especially dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. Whenever I woke to use the bathroom, I had to tiptoe towards the door, guided only by a sliver of moonlight peeking in from underneath.`,
+                                description: `I especially dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. Whenever I woke to use the bathroom, I had to tiptoe toward the door, guided only by a sliver of moonlight peeking in from underneath.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -985,7 +985,7 @@ export default {
                                         anchor: `Hippocratic medicine,`,
                                         wiki: `Humorism`
                                     },
-                                    `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. My expressions of resentment towards the bullies, which I confided to Sasha, contained a bit of both.`
+                                    `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. My expressions of resentment toward the bullies, which I confided to Sasha, contained a bit of both.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -1103,7 +1103,7 @@ export default {
                             // CONSIDER: Wormhole Foreshadow M?
                             todo: true,
                             card: {
-                                description: `Like cellophane, Sasha's intentions were fully transparent. I could always count on her as my friend to sympathize during my bouts of frustration. But also like cellophane, she couldn't truly return warmth where none was offered. Once I became more open about my petty and vindictive thoughts towards the bullies, I could feel her keeping her distance. And then I knew that any chance for us to be more than friends was gone forever.`,
+                                description: `Like cellophane, Sasha's intentions were fully transparent. I could always count on her as my friend to sympathize during my bouts of frustration. But also like cellophane, she couldn't truly return warmth where none was offered. Once I became more open about my petty and vindictive thoughts toward the bullies, I could feel her keeping her distance. And then I knew that any chance for us to be more than friends was gone forever.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

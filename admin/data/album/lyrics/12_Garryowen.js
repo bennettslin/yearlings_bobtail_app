@@ -734,9 +734,8 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `After some trial and error, I decided that the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease them apart due to their different timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
+                    description: `After some trial and error, I decided the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease the instruments apart due to their different timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }

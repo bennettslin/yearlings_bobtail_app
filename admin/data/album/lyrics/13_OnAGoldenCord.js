@@ -802,7 +802,7 @@ export default {
                                             wiki: `Übermensch`
                                         }
                                     },
-                                    `or "overhuman", as an ideal of perfection towards which each of us may strive, which I understood to be a precondition for creating great works. But since the underlying motive for bettering myself had always been a desire to attract women, my lifelong ambition to be a great artist meant that I would always have a cheating heart.`
+                                    `or "overhuman", as an ideal of perfection toward which each of us may strive, which I understood to be a precondition for creating great works. But since the underlying motive for bettering myself had always been a desire to attract women, my lifelong ambition to be a great artist meant that I would always have a cheating heart.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

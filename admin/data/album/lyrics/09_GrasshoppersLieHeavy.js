@@ -649,7 +649,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `After a gruelling shift, I would need a few beers in me for the long slog back home, so it was hard to feel gracious towards anyone with enough energy to burn for an evening jog.`,
+                                    description: `After a gruelling shift, I would need a few beers in me for the long slog back home, so it was hard to feel gracious toward anyone with enough energy to burn for an evening jog.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
@@ -1150,7 +1150,7 @@ export default {
                         anchor: `She loves you…`,
                         todo: true,
                         card: {
-                            description: `It took a long, long while for Sita and I to become fully comfortable around each other. During the first year or so of our friendship, we mainly just studied together. Then at some point, those study sessions progressed into long walks, followed by cuddling. It all happened so fast towards the end that I was still processing what exactly had triggered it.`,
+                            description: `It took a long, long while for Sita and I to become fully comfortable around each other. During the first year or so of our friendship, we mainly just studied together. Then at some point, those study sessions progressed into long walks, followed by cuddling. It all happened so fast toward the end that I was still processing what exactly had triggered it.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }

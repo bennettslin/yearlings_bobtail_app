@@ -35,7 +35,7 @@ export default {
                             anchor: `vegan.`,
                             wiki: `Veganism`
                         },
-                        `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step towards liking myself again.`
+                        `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step toward liking myself again.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
