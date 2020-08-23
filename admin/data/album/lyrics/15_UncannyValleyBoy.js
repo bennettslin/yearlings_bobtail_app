@@ -95,7 +95,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Beta,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In Hindi,`,
@@ -125,7 +124,11 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Like the ghosts of Christmas in Charles Dickens's`,
+                                        `Like the ghosts in`,
+                                        {
+                                            anchor: `Charles Dickens's`,
+                                            wiki: `Charles_Dickens`
+                                        },
                                         {
                                             anchor: `A Christmas Carol,`,
                                             wiki: `A_Christmas_Carol`
@@ -133,8 +136,7 @@ export default {
                                         `my parents invite me on a night journey to witness all that has led up to where I am now, how these events have shaped my ambitions, and what those ambitions will soon have wrought.`
                                     ],
                                     dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [REFERENCE]: true
+                                        [NARRATIVE]: true
                                     }
                                 }
                             ]
@@ -307,7 +309,7 @@ export default {
                             anchor: `Upon purchase of a queen's ship,`,
                             todo: true,
                             card: {
-                                description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. My strategy in life thus became to visualize the reward of corrective justice, then patiently work towards it. I was like "a pawn" that "perches over queenship" as it steadily clambers towards the opposite side of the chessboard.`,
+                                description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. My strategy in life thus became to visualize the reward of corrective justice, then patiently work towards it. I was like "a pawn" in chess that "perches over queenship" as it steadily clambers towards the opposite side of the chessboard.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,

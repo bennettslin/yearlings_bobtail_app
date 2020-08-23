@@ -113,12 +113,16 @@ export default {
                         `past the`,
                         {
                             anchor: `rape racks`,
-                            todo: true,
                             card: {
-                                description: `Dairy cows are impregnated every year to keep them at peak lactation. This is done by restraining them in an apparatus commonly referred to as a "rape rack," where they are then forcibly inseminated.`,
+                                description: [
+                                    {
+                                        anchor: `Dairy cows`,
+                                        wiki: `Dairy_cattle`
+                                    },
+                                    `are impregnated every year to keep them at peak lactation. This is done by restraining them in an apparatus commonly referred to as the "rape rack," where they are then forcibly inseminated.`
+                                ],
                                 dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         },
@@ -149,14 +153,15 @@ export default {
                         `to a soiled girl fouled on the`,
                         {
                             anchor: `false rib`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `The lower five rib pairs are known as false ribs, as they do not attach directly to the sternum.`
-                                ],
-                                dotKeys: {
-                                    [REFERENCE]: true
-                                }
+                                    `The lower five`,
+                                    {
+                                        anchor: `rib pairs`,
+                                        wiki: `Rib_cage`
+                                    },
+                                    `are known as false ribs, as they do not attach directly to the sternum.`
+                                ]
                             }
                         },
                         {
@@ -250,9 +255,8 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            todo: true,
                             card: {
-                                description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, realized that her kitten believed it was dying. She lived with the guilt ever afterward.`,
+                                description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized that her kitten had believed it was being crushed to death. She lived in guilt over this ever since.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [REFERENCE]: true
@@ -275,7 +279,8 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `Of course, Sita, in turn, was my first pet. It blew my mind how I was able to live with myself while hurting her for as long as I did. But in hindsight, it's because I accepted at face value the facade of sanity she had constructed as a way to cope. I had allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
+                                    // TODO: Maybe switch this with the above annotation?
+                                    description: `Of course, Sita, in turn, was my first pet. It blows my mind how I was able to live with myself while hurting Sita for as long as I did. But in hindsight, it's because I had accepted at face value the facade of sanity she constructed as a way to cope. I had allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
@@ -283,7 +288,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `Also a reference to the Maya Angelou book,`,
+                                        `Also a reference to the`,
+                                        {
+                                            anchor: `Maya Angelou`,
+                                            wiki: `Maya_Angelou`
+                                        },
+                                        `book`,
                                         {
                                             isItalic: true,
                                             lyric: {
@@ -332,22 +342,30 @@ export default {
                                 `And meanwhile, the universe is a`,
                                 {
                                     anchor: `cyanided box.`,
-                                    todo: true,
                                     card: {
                                         description: [
-                                            `In quantum theory, a particle exists as a combination of its possible states. To explain the problem of applying this concept to larger objects, Erwin Schrödinger proposed a famous thought experiment known as`,
+                                            `In`,
+                                            {
+                                                anchor: `quantum theory,`,
+                                                wiki: `Quantum_mechanics`
+                                            },
+                                            `a particle exists as a combination of its possible states. To explain the problem of applying this concept to larger objects,`,
+                                            {
+                                                anchor: `Erwin Schrödinger`,
+                                                wiki: `Erwin_Schrödinger`
+                                            },
+                                            `proposed a famous thought experiment known as`,
                                             {
                                                 anchor: `Schrödinger's cat.`,
                                                 wiki: `Schrödinger's_cat`
                                             },
-                                            `We imagine a cat sealed inside a steel chamber, where it stands an equal chance of being killed by cyanide or surviving. Since we cannot observe the outcome, we must regard the cat as being simultaneously dead and alive.`
+                                            `We imagine a cat sealed inside a steel chamber, where it stands an equal chance of surviving or getting killed by cyanide. Since we cannot observe the outcome, we must regard the cat as being simultaneously dead and alive.`
                                         ]
                                     }
                                 },
                                 ` Because if we can't ever be`,
                                 {
                                     anchor: `known to be dead,`,
-                                    todo: true,
                                     card: {
                                         description: `I liked the idea that if something greater than ourselves cannot observe us, then much like Schrödinger's battered cat, some part of us must always live on.`,
                                         dotKeys: {
@@ -383,13 +401,23 @@ export default {
                         `Torn straps`,
                         {
                             anchor: `unsalvaged sows have chewed,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `On factory farms, breeding sows are strapped inside metal cages so small that they cannot move. In response to their stressful surroundings, they develop repetitive, self-destructive movements such as chewing on cage bars. The sole purpose of their suffering is to produce piglets for slaughter, and once they grow too sickly or weak, they too are slaughtered.`,
+                                    description: [
+                                        `On`,
+                                        {
+                                            anchor: `factory farms,`,
+                                            wiki: `Intensive_animal_farming`
+                                        },
+                                        `breeding sows are strapped inside`,
+                                        {
+                                            anchor: `metal cages`,
+                                            wiki: `Gestation_crate`
+                                        },
+                                        `too small for them to move. In response to their stressful surroundings, they repeatedly engage in self-destructive movements such as chewing on the cage bars. The sole purpose of their suffering is to produce piglets for slaughter, and once they grow too sickly or weak, they too are slaughtered.`
+                                    ],
                                     dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [REFERENCE]: true
+                                        [OBSERVATION]: true
                                     }
                                 },
                                 {
@@ -405,9 +433,8 @@ export default {
                         `form a trail which leads to a`,
                         {
                             anchor: `bloody broom,`,
-                            todo: true,
                             card: {
-                                description: `Understandably, factory farm workers become inured to the daily violence, which casts a pall over even mundane tasks like sweeping the floor.`,
+                                description: `Understandably, factory farm workers become inured to the daily violence, which would otherwise cast a pall over even mundane tasks like sweeping the floor.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [REFERENCE]: true
@@ -702,14 +729,18 @@ export default {
                         `The stardust marks us, Odin,`,
                         {
                             anchor: `sparks zip through our heads…`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Travelling with Odin beyond the galaxy, I observe that the universe is almost entirely empty space, just like the distance between subatomic particles that make up our bodies. With this thought wandering through my head, I then wonder if we ourselves are nothing more than the wandering thoughts of the universe.`,
+                                    description: [
+                                        `Travelling with Odin beyond the galaxy, I observe that the universe is almost entirely empty space, just like the distance between`,
+                                        {
+                                            anchor: `subatomic particles`,
+                                            wiki: `Subatomic_particle`
+                                        },
+                                        `that make up our bodies. With this thought wandering through my head, I then wonder if we ourselves are nothing more than the wandering thoughts of the universe.`
+                                    ],
                                     dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [OBSERVATION]: true,
-                                        [REFERENCE]: true
+                                        [NARRATIVE]: true
                                     }
                                 },
                                 {

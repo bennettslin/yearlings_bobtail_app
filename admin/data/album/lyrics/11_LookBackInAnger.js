@@ -422,6 +422,7 @@ export default {
                             anchor: `jigsawed life.`,
                             todo: true,
                             card: {
+                                // TODO: Don't repeat overwrought
                                 description: `You typically work on a jigsaw puzzle by first connecting the edge pieces, then building inwards. And as this latecomer squeezes her way to the center of the crowd, I wonder if she is the long-awaited final piece to the overwrought puzzle that is my life.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,

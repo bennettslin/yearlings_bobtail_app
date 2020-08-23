@@ -664,10 +664,14 @@ export default {
                             anchor: `will not retract,`,
                             todo: true,
                             card: {
-                                description: `Some record players lack an auto-return function, so the needle will coast without end in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected.`,
-                                dotKeys: {
-                                    [REFERENCE]: true
-                                }
+                                description: [
+                                    `Some record players lack an auto-return function, so the needle will coast without end in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the`,
+                                    {
+                                        anchor: `barbiturate`,
+                                        wiki: `Barbiturate`
+                                    },
+                                    `is slowly injected.`
+                                ]
                             }
                         }
                     ]
@@ -1007,7 +1011,6 @@ export default {
                         `Life's a dumb`,
                         {
                             anchor: `ex-dromedary,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -1015,7 +1018,12 @@ export default {
                                         anchor: `dromedary,`,
                                         wiki: `Dromedary`
                                     },
-                                    `or Arabian camel, has a single hump on its back. The Bactrian camel has two.`
+                                    `or Arabian camel, has a single hump on its back, while the`,
+                                    {
+                                        anchor: `Bactrian camel`,
+                                        wiki: `Bactrian_camel`
+                                    },
+                                    `has two.`
                                 ]
                             }
                         }
