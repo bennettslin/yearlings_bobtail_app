@@ -218,20 +218,22 @@ export default {
                         `Now your`,
                         {
                             anchor: `sapling cut`,
-                            todo: true,
                             card: {
-                                description: `A sapling that survives its first winter will have earned its first tree ring, as plainly revealed beneath each cut it has endured along the way.`,
-                                dotKeys: {
-                                    [REFERENCE]: true
-                                }
+                                description: [
+                                    `A sapling that survives its first winter will have earned its first`,
+                                    {
+                                        anchor: `tree ring.`,
+                                        wiki: `Dendrochronology`
+                                    },
+                                    `While normally hidden from view, this ring would be plainly revealed by any deep, gaping cuts the sapling has endured along the way.`
+                                ]
                             }
                         },
                         `says you've`,
                         {
                             anchor: `past ring one,`,
-                            todo: true,
                             card: {
-                                description: `A ring also symbolizes long-term commitment in a relationship. And of course, after years of constant struggle to win someone over, I am now in my first serious relationship.`,
+                                description: `A ring also symbolizes long-term commitment to another person. And of course, after years of endless struggle, I'm finally in my first committed relationship.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [REFERENCE]: true
@@ -246,12 +248,10 @@ export default {
                         `yet— if adding up— then`,
                         {
                             anchor: `for more you'd vie.`,
-                            todo: true,
                             card: {
-                                description: `But even if it was a struggle, I made it through, which means I can do it again. And why wouldn't I want to try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
+                                description: `But even if it was a struggle, I made it, didn't I? Which means I can easily do it again. And why wouldn't I want to try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         }
@@ -340,11 +340,17 @@ export default {
                             anchor: `Feeble feeder fish`,
                             todo: true,
                             card: {
-                                description: `The feeder fish sold in pet stores are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit who will live longest. High school seemed to work the same way, as the artistic skills I had slowly cultivated through my pet projects, which left me with no time to defend myself within the social hierarchy, were now the thing keeping me from being eaten alive in the real world.`,
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `feeder fish`,
+                                        wiki: `Feeder_fish`
+                                    },
+                                    `sold in pet stores are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit who will live longest. High school seemed to work the same way, as the artistic skills I had slowly cultivated through my pet projects, which left me with no time to defend myself within the social hierarchy, were now the thing keeping me from being eaten alive in the real world.`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         },

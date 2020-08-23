@@ -235,7 +235,7 @@ export default {
                 },
                 {
                     time: 39,
-                    lyric: `as a tempered hammer cooled by striking the smouldering air…`
+                    lyric: `as a tempered hammer cooled by striking the smoldering air…`
                 }
             ]
         },

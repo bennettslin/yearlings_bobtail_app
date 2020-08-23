@@ -27,7 +27,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `In`,
@@ -35,7 +34,7 @@ export default {
                             isItalic: true,
                             lyric: `Ulysses,`
                         },
-                        `Garryowen is the name of a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
+                        `Garryowen is a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
@@ -169,7 +168,7 @@ export default {
                             anchor: `you're not me, Garryowen.`,
                             todo: true,
                             card: {
-                                description: `A running gag amongst my friends was to address me as Garry when I was drunk, since my disjointed rambling and oafish stunts made me an altogether different person.`,
+                                description: `A running gag among my friends was to address me as Garry when I was drunk, since my disjointed rambling and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -274,28 +273,26 @@ export default {
                         `since`,
                         {
                             anchor: `hummers aren't love,`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: `A hummer is a blowjob.`,
-                                    dotKeys: {
-                                        [REFERENCE]: true
-                                    }
-                                },
-                                {
-                                    description: `Once when Sita protested that we couldn't have sex until after I washed up, I snidely remarked that she could give me a blowjob, since blowjobs didn't count as real sex in her view.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                            card: {
+                                description: [
+                                    `Once when Sita protested that we couldn't have sex until after I washed up, I snidely remarked that she could still give me a hummer, or`,
+                                    {
+                                        anchor: `blowjob,`,
+                                        wiki: `Fellatio`
+                                    },
+                                    `since this didn't count as sex in her view.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
                                 }
-                            ]
+                            }
                         },
                         `or so`,
                         {
                             anchor: `she's claimed…`,
                             todo: true,
                             card: {
-                                description: `Throughout our budding friendship, Sita neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only added to my deepening resentment at the time.`,
+                                description: `Throughout our budding friendship, Sita had neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only added to my deepening resentment at the time.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -410,18 +407,16 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `In strict`,
+                        `In traditional`,
                         {
                             anchor: `counterpoint,`,
                             wiki: `Counterpoint`
                         },
-                        `the harmonic progression is not composed in advance. Instead, each chord is simply the natural byproduct of chords built in sequence from each melodic line melodic line. But since the chords for this song were already in place, I took the reverse approach of taking individual notes from the harmonic progression and linking them to create interweaving melodies.`
+                        `melodies are laid one atop another, and the chord progression is simply the byproduct of the harmonies they form in sequence. But since the chord progression for this song was already written, I took the reverse approach of taking individual notes from each harmony and distributing them among the instrumental parts to create coherent but unassuming melodic lines.`
                     ],
                     dotKeys: {
-                        [REFERENCE]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -757,10 +752,9 @@ export default {
                     time: 139,
                     lyric: [
                         {
-                            anchor: `Toora-loora-li.`,
-                            todo: true,
+                            anchor: `Toora-loora-li,`,
                             card: {
-                                description: `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variations of it are prevalent in Irish drinking songs and lullabies.`,
+                                description: `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variants of it are prevalent in Irish drinking songs and lullabies.`,
                                 dotKeys: {
                                     [REFERENCE]: true
                                 }

@@ -109,7 +109,6 @@ export default {
                         },
                         {
                             anchor: `stiff in tandem.`,
-                            todo: true,
                             card: {
                                 description: `Robitussin in its early stages will make your limbs feel stiff and mechanical. Having taken it an hour prior, we enjoy these effects and deliberately exaggerate them.`,
                                 dotKeys: {
@@ -378,8 +377,7 @@ export default {
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true,
-                                    [REFERENCE]: true
+                                    [PUN]: true
                                 }
                             }
                         },
@@ -755,7 +753,17 @@ export default {
                                             anchor: `Mughals,`,
                                             wiki: `Mughal_Empire`
                                         },
-                                        `Muslim descendants of Tamerlane, regaled themselves with tales of "how he" led the feat that precipitated their conquest of South Asia and its Hindu populations.`
+                                        `Muslim descendants of Tamerlane, must have regaled themselves with tales of "how he" led the feat that precipitated their`,
+                                        {
+                                            anchor: `conquest of South Asia`,
+                                            wiki: `Muslim_conquests_in_the_Indian_subcontinent`
+                                        },
+                                        `and its`,
+                                        {
+                                            anchor: `Hindu`,
+                                            wiki: `Hinduism`
+                                        },
+                                        `populations.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true
@@ -766,7 +774,6 @@ export default {
                         `of`,
                         {
                             anchor: `avatars…`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In Hinduism, an`,
@@ -774,7 +781,7 @@ export default {
                                         anchor: `avatar`,
                                         wiki: `Avatar`
                                     },
-                                    `is the earthbound incarnation of a deity, and some avatars are speculated to be historical figures whose exploits predate written tradition.`
+                                    `is the earthbound incarnation of a deity. Some avatars are speculated to have been historical figures whose exploits predate written tradition.`
                                 ]
                             }
                         }
@@ -889,7 +896,7 @@ export default {
                                             wiki: `Asura`
                                         }
                                     },
-                                    `refers to a demon, suggesting that a rift occurred amongst the`,
+                                    `refers to a demon, suggesting that a rift occurred among the`,
                                     {
                                         anchor: `Indo-Iranians`,
                                         wiki: `Indo-Iranians`
@@ -1338,7 +1345,7 @@ export default {
                             anchor: `Audamn's grave.`,
                             properNoun: true,
                             card: {
-                                description: `We sigh in relief to have quickly spotted "Adam's" grave from amongst a sea of identical headstones, just as the indigenous Americans, upon discovering a more bountiful land, perished their fears of an encroaching "autumn."`,
+                                description: `We sigh in relief to have quickly spotted "Adam's" grave from among a sea of identical headstones, just as the indigenous Americans, upon discovering a more bountiful land, perished their fears of an encroaching "autumn."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -1956,8 +1963,7 @@ export default {
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
-                                        [PUN]: true,
-                                        [REFERENCE]: true
+                                        [PUN]: true
                                     }
                                 }
                             ]
@@ -1980,8 +1986,7 @@ export default {
                                         `to attain priesthood. This policy was reversed in 1978.`
                                     ],
                                     dotKeys: {
-                                        [PUN]: true,
-                                        [REFERENCE]: true
+                                        [PUN]: true
                                     }
                                 }
                             ]

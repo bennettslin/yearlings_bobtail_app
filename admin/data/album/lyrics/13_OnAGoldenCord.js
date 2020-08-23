@@ -401,12 +401,21 @@ export default {
                 {
                     time: 72,
                     lyricLeft: [
-                        `Guilt pardons the`,
+                        {
+                            anchor: `Guilt pardons`,
+                            card: {
+                                description: `Recognizing the trauma that must linger after being made to perform such a vicious act, sober me forgives his drunken accomplice's lack of sympathy for the victim.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        },
+                        `the`,
                         {
                             anchor: `spectre taunting twin streetlamps;`,
                             todo: true,
                             card: {
-                                description: `Sober me observes as his drunken half lashes out in defiance at twin streetlamps, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed his crime.`,
+                                description: `Sober me observes as his drunken half lashes out in defiance at twin streetlamps, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed the crime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -432,21 +441,16 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hatchet man`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: `A hatchet man is an underling who carries out the most disagreeable tasks of an operation.`,
-                                    dotKeys: {
-                                        [REFERENCE]: true
-                                    }
-                                },
-                                {
-                                    description: `Recognizing the trauma that must certainly linger, sober me forgives his drunken accomplice's lack of sympathy for the victim.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                }
-                            ]
+                            card: {
+                                description: [
+                                    `A`,
+                                    {
+                                        anchor: `hatchet man`,
+                                        wiki: `Hatchet_man_(idiom)`
+                                    },
+                                    `is an underling who carries out the most disagreeable tasks of an operation.`
+                                ]
+                            }
                         },
                         `who's burnt enough.`
                     ],
@@ -811,12 +815,17 @@ export default {
                     lyricRight: [
                         {
                             anchor: `digging through her innie`,
-                            todo: true,
                             card: {
-                                description: `Some babies have belly buttons that go in, others have ones that stick out. During sex, Sita and I would engage in baby talk and refer to our respective parts as her "innie" and my "outie."`,
+                                description: [
+                                    `Some babies have`,
+                                    {
+                                        anchor: `belly buttons`,
+                                        wiki: `Navel`
+                                    },
+                                    `that go in, while those of others stick out. During sex, Sita and I would engage in baby talk and refer to our respective parts as her "innie" and my "outie."`
+                                ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [REFERENCE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -830,43 +839,43 @@ export default {
                         `Then the`,
                         {
                             anchor: `guardian knot`,
-                            cards: [
-                                {
-                                    description: [
-                                        `Outside the womb, the`,
-                                        {
-                                            anchor: `umbilical cord`,
-                                            wiki: `Umbilical_cord`
-                                        },
-                                        `that once passed sustenance will shrivel to a navel. So in sustaining each other through locked navels, Sita became my guardian, and I hers.`
-                                    ],
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [REFERENCE]: true
-                                    }
-                                },
-                                {
-                                    description: [
-                                        `In antiquity, legend held that whosoever could unravel the tightly entangled`,
-                                        {
-                                            anchor: `"Gordian Knot"`,
-                                            wiki: `Gordian_Knot`
-                                        },
-                                        `would rule all of Asia.`,
-                                        {
-                                            anchor: `Alexander the Great,`,
-                                            wiki: `Alexander_the_Great`
-                                        },
-                                        `however, simply chopped it in half with his sword. And in my own bid for greatness, I severed the cord binding me to Sita with similar brute force.`
-                                    ],
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [PUN]: true
-                                    }
+                            card: {
+                                description: [
+                                    `Outside the womb, the`,
+                                    {
+                                        anchor: `umbilical cord`,
+                                        wiki: `Umbilical_cord`
+                                    },
+                                    `that once passed sustenance will shrivel to a navel. So in sustaining each other through locked navels, Sita became my guardian, and I hers.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
                                 }
-                            ]
+                            }
                         },
-                        `of this frayed cord detached,`
+                        `of this`,
+                        {
+                            anchor: `frayed cord detached,`,
+                            card: {
+                                description: [
+                                    `In antiquity, legend held that whosoever could unravel the tightly entangled`,
+                                    {
+                                        anchor: `"Gordian Knot"`,
+                                        wiki: `Gordian_Knot`
+                                    },
+                                    `would rule all of Asia.`,
+                                    {
+                                        anchor: `Alexander the Great,`,
+                                        wiki: `Alexander_the_Great`
+                                    },
+                                    `however, simply chopped it in half with his sword. And in my own bid for greatness, I severed the cord binding me to Sita with similar brute force.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
+                                }
+                            }
+                        }
                     ]
                 },
                 {
@@ -875,13 +884,18 @@ export default {
                         `each`,
                         {
                             anchor: `attack with the proper fist.`,
-                            todo: true,
                             card: {
-                                description: `The right hemisphere of the brain controls the left side of the body, and the left hemisphere, the right. So when I start punching myself in the head, in frustration over conflicting desires, it's as if each hemisphere is attacking the other using the one fist under its command.`,
+                                description: [
+                                    `The right hemisphere of the brain`,
+                                    {
+                                        anchor: `controls the left side`,
+                                        wiki: `Contralateral_brain`
+                                    },
+                                    `of the body, and the left hemisphere, the right. So when I start punching myself in the head out of frustration over conflicting desires, it's as if each hemisphere is attacking the other using the one fist under its command.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         }
@@ -1014,8 +1028,7 @@ export default {
                                     `were unaware that it was a suicide mission, having prepared instead to make public statements on their religious motivations. Similarly, in orchestrating my plot to be rid of Sita, I had sold my drunken half on the artistic benefits of breaking up, while neglecting to mention the huge emotional sacrifice it would entail.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [REFERENCE]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         }

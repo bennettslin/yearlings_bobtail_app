@@ -26,7 +26,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         {
@@ -38,11 +37,10 @@ export default {
                             anchor: `Hindi`,
                             wiki: `Hindi`
                         },
-                        `word for "why." After Sita and I started dating, I studied Hindi for several years, which allowed me to converse with her family in their native language.`
+                        `word for "why." After Sita and I started dating, I studied Hindi for several years so that I could converse with her family in their native language.`
                     ],
                     dotKeys: {
-                        [BACKSTORY]: true,
-                        [REFERENCE]: true
+                        [BACKSTORY]: true
                     }
                 }
             }
@@ -84,10 +82,16 @@ export default {
                             anchor: `nest on this stork,`,
                             todo: true,
                             card: {
-                                description: `In European folklore, the stork delivers babies to expecting parents. Each time I broke up with Sita to date another woman, I always reverted to the same naive, wide-eyed persona. I longed to relive the giddiness of puppy love, like an infant experiencing the world for the first time.`,
+                                description: [
+                                    `In European folklore, the`,
+                                    {
+                                        anchor: `stork`,
+                                        wiki: `White_stork`
+                                    },
+                                    `brings babies to expecting parents. Every time I broke up with Sita to date another woman, I would revert to the same naive, wide-eyed persona. I longed to relive the giddiness of puppy love, like an infant experiencing the world for the first time.`
+                                ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [REFERENCE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -355,7 +359,6 @@ export default {
                         `to parent my`,
                         {
                             anchor: `knight-errant`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In medieval romance, a`,
@@ -375,7 +378,7 @@ export default {
                                     `A "keeper" in the sense of being the one who tends to the herd, as well as the only one to keep from`,
                                     {
                                         isEmphasis: true,
-                                        lyric: `amongst`
+                                        lyric: `among`
                                     },
                                     `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness might earn her a privileged place amidst all the other women I desired.`
                                 ],
@@ -496,16 +499,15 @@ export default {
                         `A`,
                         {
                             anchor: `shank's dustless silhouette`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `A shank is a prison inmate's makeshift blade, also called a shiv.`,
+                                    description: `A shank is a prison inmate's makeshift blade.`,
                                     dotKeys: {
                                         [REFERENCE]: true
                                     }
                                 },
                                 {
-                                    description: `During our on-and-off years, I would habitually return to Sita promising to mend my ways. Things would be peachy again for a while, after which I would run off once more with another woman. I was like a reformed convict who leaves his shank to collect dust on the windowsill, then relapses without warning, taking it with him.`,
+                                    description: `During our on-and-off years, I would habitually return to Sita, promising to mend my ways. Things would be peachy again for a while, after which I would run off once more with another woman. I was like a reformed convict who leaves his shank to collect dust on the windowsill, then relapses without warning, taking it with him.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
@@ -522,7 +524,6 @@ export default {
                         `your`,
                         {
                             anchor: `severed stinger`,
-                            todo: true,
                             card: {
                                 description: [
                                     `At the time, I failed to appreciate what it meant for Sita to have given her virginity to me. She had to make things work, because a part of me was now permanently lodged inside of her, like the barbed stinger of a`,
@@ -605,9 +606,8 @@ export default {
                     lyric: [
                         {
                             anchor: `bleeds just once,`,
-                            todo: true,
                             card: {
-                                description: `Much like a vagina only bleeds the first time when the hymen is ruptured, every subsequent breakup felt less like a stabbing and more like an irritant on an open wound.`,
+                                description: `Much like a vagina only bleeds the first time when the hymen is ruptured, every subsequent breakup felt less like a piercing stab and more like another irritant on a festering wound.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [REFERENCE]: true
@@ -623,7 +623,6 @@ export default {
                         `So are we agreed,`,
                         {
                             anchor: `honeybee?`,
-                            todo: true,
                             card: {
                                 description: `A honeybee will die after stinging someone, as its stinger is connected to vital organs. Similarly, having given my virginity to Sita in return, I realized too late that there was a vital part of me that could never be recovered apart from her as well.`,
                                 dotKeys: {
@@ -636,9 +635,8 @@ export default {
                         `Come for me? At`,
                         {
                             anchor: `thirty-three?`,
-                            todo: true,
                             card: {
-                                description: `I hated the idea of getting older and joked that I would kill myself at thirty-three, the age at which Jesus was crucified, since clearly that is all the time one needs to change the world. So when I suggested to Sita that I would come back for her at thirty-three, in accordance with our little pact, the subtext was understood.`,
+                                description: `I hated the idea of getting older and sometimes joked that I would kill myself at thirty-three, the years of age at which Jesus was crucified. Since clearly, that is all the time one needs to change the world. So when Sita asked me to specify when I would come back for her in accordance with our little pact, and I answered age thirty-three, the subtext was understood.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [REFERENCE]: true
