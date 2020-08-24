@@ -22,8 +22,6 @@
 * More casual talk.
 * Make sure narrative and backstory are never together.
 
-* Easter egg mondegreen in Uncanny
-
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.
 * Link to Blogspot from WordPress.
