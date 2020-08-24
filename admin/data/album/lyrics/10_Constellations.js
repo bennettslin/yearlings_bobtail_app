@@ -30,10 +30,13 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `I first tried Robitussin earlier that summer after reading of its narcotic effects in Jim Carroll's`,
+                        `I first tried Robitussin earlier that summer after reading of its narcotic effects in`,
+                        {
+                            anchor: `Jim Carroll's`,
+                            wiki: `Jim_Carroll`
+                        },
                         {
                             isItalic: true,
                             lyric: {
@@ -1914,7 +1917,7 @@ export default {
                                         anchor: `Pennsylvania Dutch,`,
                                         wiki: `Pennsylvania_Dutch`
                                     },
-                                    `I like the image of a natural spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
+                                    `I liked the image of a natural spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

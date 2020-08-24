@@ -91,15 +91,19 @@ export default {
                         `Scrambled past this hell, where`,
                         {
                             anchor: `flagboy last fell,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `During the Civil War, a`,
+                                    `During the`,
                                     {
-                                        anchor: `colorbearer`,
+                                        anchor: `Civil War,`,
+                                        wiki: `American_Civil_War`
+                                    },
+                                    `a`,
+                                    {
+                                        anchor: `color bearer`,
                                         wiki: `Standard-bearer`
                                     },
-                                    `carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth is an apt metaphor for my high school experience.`
+                                    `carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth was an apt metaphor for my high school experience.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -146,7 +150,6 @@ export default {
                         {
                             anchor: `Van Nuys belles`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -155,7 +158,7 @@ export default {
                                             anchor: `Van Nuys,`,
                                             wiki: `Van_Nuys`
                                         },
-                                        `a neighborhood smack-dab in the middle of the San Fernando Valley.`
+                                        `a neighborhood smack dab in the center of the San Fernando Valley.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -264,10 +267,14 @@ export default {
                         {
                             anchor: `Valley of death`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Like the six hundred who rode into the valley of death in Alfred Tennyson's poem`,
+                                    `Like the six hundred who rode into the valley of death in`,
+                                    {
+                                        anchor: `Alfred Tennyson's`,
+                                        wiki: `Alfred,_Lord_Tennyson`
+                                    },
+                                    `poem`,
                                     {
                                         anchor: `"The Charge of the Light Brigade,"`,
                                         wiki: `Charge_of_the_Light_Brigade`
@@ -275,7 +282,6 @@ export default {
                                     `I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own wartime years in the Valley.`
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -283,11 +289,9 @@ export default {
                         `you rode, so on`,
                         {
                             anchor: `spite you thrive.`,
-                            todo: true,
                             card: {
-                                description: `In turn, this casual view of hardship enabled me to justify the pain that I knew my ambitions would eventually bring upon Sita.`,
+                                description: `It was this casual view of hardship that later enabled me to justify the pain my ambitions brought upon Sita.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }

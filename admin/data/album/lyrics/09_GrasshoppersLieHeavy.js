@@ -457,7 +457,7 @@ export default {
                             anchor: `she disappeared…`,
                             todo: true,
                             card: {
-                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wished to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But in truth, I was so dejected and embarrassed that I had no desire to see her again.`,
+                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But in truth, I was so dejected and embarrassed that I had no desire to see her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

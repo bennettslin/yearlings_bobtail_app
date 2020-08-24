@@ -520,10 +520,12 @@ export default {
                         `But then, my`,
                         {
                             anchor: `little prince,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Antoine de Saint-Exupéry's`,
+                                    {
+                                        anchor: `Antoine de Saint-Exupéry's`,
+                                        wiki: `Antoine_de_Saint-Exupéry`
+                                    },
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -545,7 +547,7 @@ export default {
                             anchor: `tiny planet`,
                             todo: true,
                             card: {
-                                description: `Like the prince, I was also a visitor from beyond the stars, seeing the world at large through guileless eyes.`,
+                                description: `Like Saint-Exupéry's prince, I was also a visitor from beyond the stars, who once saw the world at large through guileless eyes.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -791,7 +793,8 @@ export default {
                             anchor: `fail your Sita`,
                             todo: true,
                             card: {
-                                description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. The same self-serving chauvinism is what prompted my need to be the more sexually experienced partner, leading me to stray from Sita and shack up with other women.`,
+                                // TODO: Mention discontent with having Sita.
+                                description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. The same self-serving chauvinism is what prompted my need to be the more sexually experienced partner, which led me to stray from Sita and shack up with other women.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -800,10 +803,9 @@ export default {
                         `on`,
                         {
                             anchor: `repeat forevermore!`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `As I was making this album, it occurred to me that I too was now doomed to endlessly forget and repeat my mistakes, as the story of how I betrayed my own Sita, much like the`,
+                                    `As I was making this album, a thought occurred to me. Like Rama, I too was now doomed to endlessly repeat my failures, as the story of how I betrayed my Sita, much like the`,
                                     {
                                         isItalic: true,
                                         lyric: `Ramayana,`

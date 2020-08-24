@@ -4902,5 +4902,9 @@ export default [
     {
         taskName: `Fix access of wiki wormhole indices.`,
         workedHours: 1
+    },
+    {
+        taskName: `Clean up blogs.`,
+        workedHours: 1
     }
 ]
