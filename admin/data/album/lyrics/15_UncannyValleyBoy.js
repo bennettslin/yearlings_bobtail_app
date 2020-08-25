@@ -315,7 +315,7 @@ export default {
                                         anchor: `chess`,
                                         wiki: `Chess`
                                     },
-                                    `that "perches over queenship" as it steadily clambers toward the opposite side of the chessboard.`
+                                    `that "perches over queenship" as it slowly clambers toward the opposite end of the chessboard.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -340,12 +340,12 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `My original hope for some of these puns was for listeners to initially believe they had created a`,
+                        `My original hope for some of these puns was for listeners to believe they had stumbled upon a`,
                         {
                             anchor: `mondegreen,`,
                             wiki: `Mondegreen`
                         },
-                        `upon reading the lyric and discovering it was not what they thought they had heard. But upon further reflection, they would realize that the mishearing made too much sense and was likely an`,
+                        `after reading the lyric and discovering it was not what they thought they had heard. But upon further reflection, they would realize that the mishearing made too much sense and was likely an`,
                         {
                             anchor: `Easter egg`,
                             wiki: `Easter_egg_(media)`

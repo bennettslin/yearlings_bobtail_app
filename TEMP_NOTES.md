@@ -30,3 +30,5 @@
 * Apple monitor rotation warning
 * Spotlight doesn't go to Finder in different window
 * Why do I just need to barely descend into a nap to feel refreshed?
+
+* corrective justice

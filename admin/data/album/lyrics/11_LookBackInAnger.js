@@ -342,15 +342,14 @@ export default {
                     lyric: [
                         {
                             anchor: `Feeble feeder fish`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `The`,
+                                    `The pecking order inside a tank of`,
                                     {
                                         anchor: `feeder fish`,
                                         wiki: `Feeder_fish`
                                     },
-                                    `sold in pet stores are raised to be fed as live prey. As such, the pecking order within their own tank is deceptive, since it is actually the least fit who will live longest. High school seemed to work the same way, as the artistic skills I had slowly cultivated through my pet projects, which left me with no time to defend myself within the social hierarchy, were now the thing keeping me from being eaten alive in the real world.`
+                                    `is deceptive, since it is those least fit to be sold as live prey that last the longest. High school seemed to work the same way. All my time spent working on pet projects had left me unfit to defend myself within the social hierarchy, but the artistic skills I had developed as a result were what later kept me from being eaten alive in the real world.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -371,9 +370,8 @@ export default {
                         `You wished a`,
                         {
                             anchor: `cancer nibbled off,`,
-                            todo: true,
                             card: {
-                                description: `It was therapeutic enough to examine myself and write songs about my own disappointments and dysfunctions. It seemed crazy that on top of that, others would credit me with giving voice to theirs as well. But I happily took it and ran with it.`,
+                                description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It seemed crazy that others would credit me with giving voice to theirs as well, and that I should be granted a higher status because of it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -400,7 +398,6 @@ export default {
                         `She braves the crowd`,
                         {
                             anchor: `filled first from sides.`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls.`,
@@ -424,10 +421,15 @@ export default {
                         `She might complete your`,
                         {
                             anchor: `jigsawed life.`,
-                            todo: true,
                             card: {
-                                // TODO: Don't repeat overwrought
-                                description: `You typically work on a jigsaw puzzle by first connecting the edge pieces, then building inwards. And as this latecomer squeezes her way to the center of the crowd, I wonder if she is the long-awaited final piece to the overwrought puzzle that is my life.`,
+                                description: [
+                                    `You typically work on a`,
+                                    {
+                                        anchor: `jigsaw puzzle`,
+                                        wiki: `Jigsaw_puzzle`
+                                    },
+                                    `by first connecting the edge pieces, then building inward. So as this latecomer squeezes her way into the center of the crowd, I wonder if she is the long-awaited final piece to the sprawling puzzle of my life.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -463,9 +465,8 @@ export default {
                     lyric: [
                         {
                             anchor: `"Great show,"`,
-                            todo: true,
                             card: {
-                                description: `The best time to hit on someone is always right after your set, since they've just spent the last half hour of their life making you the center of their universe. And so, as expected, I find the red-haired woman to be warm and flirtatious when we finally chat.`,
+                                description: `The best time to hit on someone at a show is always right after your set, since they've just spent the last half hour of their life making you the center of their universe. So as expected, I find the red-haired woman to be warm and flirtatious when we finally chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -492,9 +493,8 @@ export default {
                         `and you were`,
                         {
                             anchor: `fine when you had none.`,
-                            todo: true,
                             card: {
-                                description: `Things were finally looking up, so it baffled me to be as angry as ever. I suspect that I felt indignant for my younger self, who had been kept in the dark for so long about how much better life could be.`,
+                                description: `Things were finally looking up for me, so it baffled me to be as angry as ever. I suspect that I felt indignant for my younger self, who had been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -561,9 +561,8 @@ export default {
                         `reading`,
                         {
                             anchor: `His obit not a bang,`,
-                            todo: true,
                             card: {
-                                description: `But this appraisal was based on reason, not malice. After all, it made no sense for the one true God to entrust the dissemination of his message to the very tormentors of those he hoped to reach.`,
+                                description: `But this appraisal was based on reason, not malice. It just made no sense that the one true God would entrust the dissemination of his message to the very tormentors of those he hoped to reach.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -648,9 +647,8 @@ export default {
                     lyric: [
                         {
                             anchor: `only to crack,`,
-                            todo: true,
                             card: {
-                                description: `Yet if reason discredited the beliefs of my tormentors, then it also had to discredit mine. After all, in a world abounding with rival claims to the truth, who would stay loyal to a belief that promises zero community and only endless grief?`,
+                                description: `Yet, even as reason discredited the faith of my tormentors, it also disproved mine. After all, in a world abounding with rival claims to the truth, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -658,9 +656,8 @@ export default {
                         },
                         {
                             anchor: `sprawled where they stood…`,
-                            todo: true,
                             card: {
-                                description: `And while I could foresee only a lifetime of humiliating letdowns for myself, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favors its bullies. I just had to accept it.`,
+                                description: `And while the natural course for me was a lifetime of humiliating letdowns, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favors its bullies. I just had to accept it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -686,9 +683,8 @@ export default {
                         `weren't they`,
                         {
                             anchor: `right to take what's theirs?`,
-                            todo: true,
                             card: {
-                                description: `As opportunities for social advancement opened up for me, I began to understand why the bullies grabbed onto those that had been handed to them, and I could even sympathise. After all, in a world that simply roots for the strong, it makes no sense to question whatever means you've been afforded to avoid being weak.`,
+                                description: `As opportunities for social advancement opened up for me, I began to understand why the bullies grabbed onto those handed to them, and I could even sympathize. After all, in a world that roots for the strong, it makes no sense for anyone to question whatever means they've been afforded to avoid being weak.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -769,9 +765,8 @@ export default {
                         `Drunk, you'd`,
                         {
                             anchor: `claim you've never loved,`,
-                            todo: true,
                             card: {
-                                description: `My songs projected the image of an inexperienced kid forever unlucky in love. It's how I first learned to draw attention, and so I had refined it to perfection over the years. But as the gap widened between my past mishaps and present fortunes, I needed greater quantities of alcohol to carry on with the lie that my circumstances hadn't substantially changed.`,
+                                description: `My songs projected the image of an inexperienced kid forever unlucky in love. It's how I first learned to attract attention, so I had refined it to perfection over the years. But as the gap widened between my past mishaps and present fortunes, I needed greater quantities of alcohol to carry on with the lie that my life hadn't substantially changed.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -825,7 +820,6 @@ export default {
                         `'cause when you`,
                         {
                             anchor: `beg it never comes.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `There's no excuse for not looking out for yourself. I knew this now. So while I was justifiably angry`,
@@ -838,7 +832,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `at.`
                                     },
-                                    `I could only blame myself for being late to the game. But this just made me angrier…`
+                                    `I could only blame myself for being late to the game. But this only made me angrier…`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
