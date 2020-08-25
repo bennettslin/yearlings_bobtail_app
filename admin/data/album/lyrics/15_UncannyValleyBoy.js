@@ -310,7 +310,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `The mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. And so I patiently awaited this corrective justice, like "a pawn" in`,
+                                    `The mail-order cult had promised that all would be made right once a spaceship could be acquired through my efforts. And so I learned to bide my time patiently awaiting corrective justice. I was like "a pawn" in`,
                                     {
                                         anchor: `chess`,
                                         wiki: `Chess`
@@ -319,6 +319,7 @@ export default {
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
+                                    [OBSERVATION]: true,
                                     [PUN]: true
                                 }
                             }

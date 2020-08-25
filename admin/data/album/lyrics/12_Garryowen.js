@@ -184,10 +184,9 @@ export default {
                             anchor: `I can't speak`,
                             todo: true,
                             card: {
-                                description: `But this also absolved me of personal responsibility, which became problematic as my actions over time spilled into drunken aggression and misdemeanours.`,
+                                description: `But this also absolved me of personal responsibility, which became problematic as my actions over time spilled into drunken aggression and misdemeanors.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [OBSERVATION]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -344,6 +343,7 @@ export default {
                             card: {
                                 description: `I gladly drank to excess, as it made me impotent and thus impervious to Sita's advances. But not having sex was also purifying in its own right, as it lent the familiar comfort of being my old self again. So, win-win all around.`,
                                 dotKeys: {
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
