@@ -28,7 +28,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 cards: [
                     {
                         description: [
@@ -45,12 +44,27 @@ export default {
                                     wiki: `The_Man_in_the_High_Castle`
                                 }
                             },
-                            `which tells of an alternate history in which the Axis powers had won World War II. Curiously, the characters in this book are engrossed in their own alternate history novel called`,
+                            `which tells of an alternate history in which the`,
+                            {
+                                anchor: `Axis powers`,
+                                wiki: `Axis_powers`
+                            },
+                            `had won`,
+                            {
+                                anchor: `World War II.`,
+                                wiki: `World_War_II`
+                            },
+                            `Curiously, the characters in this book are engrossed in their own alternate history novel called`,
                             {
                                 isItalic: true,
                                 lyric: `The Grasshopper Lies Heavy,`
                             },
-                            `in which the Allies had won.`
+                            `in which the`,
+                            {
+                                anchor: `Allies`,
+                                wiki: `Allies_of_World_War_II`
+                            },
+                            `had won.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true
@@ -78,12 +92,11 @@ export default {
                             `L.A. to the Bay,`,
                             {
                                 anchor: `pompous autumn waits.`,
-                                todo: true,
                                 cards: [
                                     {
-                                        description: `In high school, I carried on with the same gutless reputation to which I had tied myself in middle school. It just didn't seem possible to remake myself into a whole new person while surrounded by all the same classmates. But in my head, I was busy crafting a future persona as an artist of superior ability and judgment, which was raring to go the minute I could hightail it out of Los Angeles.`,
+                                        description: `In high school, I continued on as the same unwelcome nobody I had been in middle school. It just didn't seem possible to remake myself into a whole new person while surrounded by all the same classmates. But in my head, I was busy crafting a future persona as an artist of superior ability and judgment, which was raring to go the minute I could hightail it out of Los Angeles.`,
                                         dotKeys: {
-                                            [NARRATIVE]: true,
+                                            [BACKSTORY]: true,
                                             [OBSERVATION]: true
                                         }
                                     },
@@ -437,11 +450,10 @@ export default {
                         `Her`,
                         {
                             anchor: `show played in mimes,`,
-                            todo: true,
                             card: {
-                                description: `The world of dating was awash in hidden cues and gestures that, as far as I knew, no one could be expected to recognize or understand. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.`,
+                                description: `The world of dating was awash in silent cues that, as far as I knew, no one could be expected to deduce or understand. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -487,7 +499,46 @@ export default {
                             }
                         }
                     ],
-                    lyricRight: `With no sister ship slain by his side,`
+                    lyricRight: [
+                        `With no`,
+                        {
+                            anchor: `sister ship`,
+                            card: {
+                                description: [
+                                    `The`,
+                                    {
+                                        isItalic: true,
+                                        lyric: {
+                                            anchor: `Bismarck`,
+                                            wiki: `German_battleship_Bismarck`
+                                        }
+                                    },
+                                    `and the`,
+                                    {
+                                        isItalic: true,
+                                        lyric: {
+                                            anchor: `Tirpitz`,
+                                            wiki: `German_battleship_Tirpitz`
+                                        }
+                                    },
+                                    `were sister battleships of the`,
+                                    {
+                                        anchor: `German navy`,
+                                        wiki: `Kriegsmarine`
+                                    },
+                                    `in World War II. The analogy fits since, after all, the Axis were history's heroes in`,
+                                    {
+                                        isItalic: true,
+                                        lyric: `The Man in the High Castle.`
+                                    }
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        },
+                        `slain by his side,`
+                    ]
                 },
                 {
                     time: 87,
@@ -509,30 +560,17 @@ export default {
                     lyricRight: [
                         `and so off her list,`,
                         {
-                            anchor: `sunken Tirpitz lies.`,
-                            todo: true,
-                            cards: [
+                            anchor: [
+                                `sunken`,
                                 {
-                                    description: [
-                                        `The Bismarck and the Tirpitz were`,
-                                        {
-                                            anchor: `sister battleships`,
-                                            wiki: `Bismarck-class_battleship`
-                                        },
-                                        `of the German navy in World War II. The Axis, after all, were history's heroes in`,
-                                        {
-                                            isItalic: true,
-                                            lyric: `The Man in the High Castle.`
-                                        }
-                                    ],
-                                    dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
+                                    isItalic: true,
+                                    lyric: `Tirpitz`
                                 },
-                                {
-                                    wormhole: `sunken_tirpitz`
-                                }
-                            ]
+                                `lies.`
+                            ],
+                            card: {
+                                wormhole: `sunken_tirpitz`
+                            }
                         }
                     ]
                 }
@@ -606,26 +644,20 @@ export default {
                     lyric: [
                         {
                             anchor: `Phantom limbs`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `A`,
-                                        {
-                                            anchor: `phantom limb`,
-                                            wiki: `Phantom_limb`
-                                        },
-                                        `is the sensation that a missing limb is still attached and responsive.`
-                                    ]
-                                },
-                                {
-                                    description: `After several weeks of giddy hope, the thought of spending my weekends alone again, with no other prospects on the horizon, feels like an amputation.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [OBSERVATION]: true
-                                    }
+                            card: {
+                                description: [
+                                    `A`,
+                                    {
+                                        anchor: `phantom limb`,
+                                        wiki: `Phantom_limb`
+                                    },
+                                    `is the sensation that a missing limb is still attached and responsive. And an amputation is what it feels like to spend my weekends alone, with no prospects on the horizon, after several weeks of giddy hope.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
                                 }
-                            ]
+                            }
                         },
                         `trip left and right`
                     ]
@@ -649,8 +681,9 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `After a gruelling shift, I would need a few beers in me for the long slog back home, so it was hard to feel gracious toward anyone with enough energy to burn for an evening jog.`,
+                                    description: `After a grueling shift, I always needed a few beers in me just for the long slog back home, so it would have been hard to feel gracious toward anyone with enough energy to burn for an evening jog.`,
                                     dotKeys: {
+                                        [BACKSTORY]: true,
                                         [OBSERVATION]: true
                                     }
                                 }
@@ -1159,7 +1192,7 @@ export default {
                 },
                 {
                     time: 196,
-                    lyric: `…and now you're left with no defences.`
+                    lyric: `…and now you're left with no defenses.`
                 },
                 {
                     time: 201,
@@ -1316,7 +1349,7 @@ export default {
                             anchor: `pure lose to pure…`,
                             todo: true,
                             card: {
-                                description: `Sita and I were both virgins, which ultimately made it easier to lower my defences, as it was a reminder that neither of us really knew what we were doing.`,
+                                description: `Sita and I were both virgins, which ultimately made it easier to lower my defenses, as it was a reminder that neither of us really knew what we were doing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

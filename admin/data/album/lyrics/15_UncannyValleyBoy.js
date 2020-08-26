@@ -114,7 +114,6 @@ export default {
                         `come`,
                         {
                             anchor: `wax prophetic`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `Of course, it's more common to "wax poetic," meaning to become eloquent in speech. But my parents use this highbrow expression ironically, as a commentary on the artificial persona that I've created.`,
@@ -133,7 +132,7 @@ export default {
                                             anchor: `A Christmas Carol,`,
                                             wiki: `A_Christmas_Carol`
                                         },
-                                        `my parents invite me on a night journey to witness all that has led up to where I am now, how these events have shaped my ambitions, and what havoc those ambitions will soon wreak.`
+                                        `my parents invite me on a magical night journey to witness the ordeals of my past, my self-serving ways in the present, and the heart-rending wreckage that is yet to come of it all.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true
@@ -1394,7 +1393,7 @@ export default {
                                             isItalic: true,
                                             lyric: `Bildungsroman`
                                         },
-                                        `is the protagonist's moral and psychological growth from youth into adulthood. Without this crucial development in character, there is no story to be told, a point to which my parents slyly allude here.`
+                                        `is the protagonist's moral and psychological growth from youth into adulthood. Without it, there is no story to be told, a point to which my parents slyly allude here.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

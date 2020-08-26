@@ -28,18 +28,21 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `I was trying to follow in the footsteps of other poetic ruminations on still-life objects, like John Keats's`,
+                        `I ran Sita's bracelet through my fingers over and over that night, turning over the thoughts in my head. So in writing these lyrics, I tried to draw inspiration from famous poems that ruminate on a still-life object, like`,
+                        {
+                            anchor: `John Keats's`,
+                            wiki: `John_Keats`
+                        },
                         {
                             anchor: `"Ode on a Grecian Urn."`,
                             wiki: `Ode_on_a_Grecian_Urn`
                         },
-                        `I was pretentious like that.`
+                        `This also gave me an obvious working title for the song, which I ended up keeping for lack of anything better.`
                     ],
                     dotKeys: {
-                        [OBSERVATION]: true
+                        [BACKSTORY]: true
                     }
                 }
             }
@@ -60,7 +63,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `With the breakup, I was now free to rebuild my life from scratch. I could reclaim not just my time spent with Sita, but the years and years of setbacks that had taken their toll even before then. And so here we hear the song of the white-throated sparrow, as I harken back to the happier days of my youth.`,
+                    description: `With the breakup, I was now free to rebuild my life from scratch. I could reclaim not just my time spent with Sita, but the years and years of discontent that had taken their toll long before. And so here we hear the song of the white-throated sparrow, as I harken back to the happier days of my youth.`,
                     dotKeys: {
                         [NARRATIVE]: true,
                         [SONGWRITING]: true
@@ -89,7 +92,7 @@ export default {
                             anchor: `bread and pocket lint.`,
                             todo: true,
                             card: {
-                                description: `After Sita returned the bracelet earlier tonight, I put it in the front pocket of my jacket, which is where I've stashed bread rolls from the cafeteria to munch on later. With my hands tucked in as well to keep warm, I keep stroking the bracelet over and over, just as I turn over the thoughts in my head.`,
+                                description: `After Sita returned the bracelet earlier tonight, I put it in the front pocket of my jacket, which is where I've stashed bread rolls from the cafeteria to munch on later. With my hands tucked in as well to keep warm, I stroke the bracelet again and again.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -267,7 +270,7 @@ export default {
                             card: {
                                 // NOTE: I changed "pauper's" to "paupers'."
                                 description: [
-                                    `I had spent weeks rehearsing the breakup, which I assumed could be scheduled at my convenience and follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
+                                    `I had spent weeks rehearsing the breakup, assuming it could be scheduled at my convenience and follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
                                     {
                                         anchor: `paupers' grave.`,
                                         wiki: `Potter's_field`

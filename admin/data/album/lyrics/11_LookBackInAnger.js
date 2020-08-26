@@ -657,7 +657,7 @@ export default {
                         {
                             anchor: `sprawled where they stood…`,
                             card: {
-                                description: `And while the natural course for me was a lifetime of humiliating letdowns, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favors its bullies. I just had to accept it.`,
+                                description: `And while the natural course for me was a lifetime of setbacks and letdowns, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favors its bullies. I just had to accept it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -766,7 +766,7 @@ export default {
                         {
                             anchor: `claim you've never loved,`,
                             card: {
-                                description: `My songs projected the image of an inexperienced kid forever unlucky in love. It's how I first learned to attract attention, so I had refined it to perfection over the years. But as the gap widened between my past mishaps and present fortunes, I needed greater quantities of alcohol to carry on with the lie that my life hadn't substantially changed.`,
+                                description: `My songs projected the image of an inexperienced kid forever unlucky in love. It's how I first learned to attract attention, so I had refined it to perfection over the years. But as past misfortunes receded further into the distance, I needed greater quantities of alcohol to carry on with the lie that my life hadn't substantially improved.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

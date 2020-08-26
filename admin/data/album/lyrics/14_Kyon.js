@@ -305,7 +305,7 @@ export default {
                                 }
                             }
                         },
-                        `that forced my defence…`
+                        `that forced my defense…`
                     ]
                 },
                 {
