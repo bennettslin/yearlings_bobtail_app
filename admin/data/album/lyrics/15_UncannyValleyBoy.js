@@ -306,19 +306,17 @@ export default {
                     lyric: [
                         {
                             anchor: `Upon purchase of a queen's ship,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `The mail-order cult had promised that all would be made right once a spaceship could be acquired through my efforts. And so I learned to bide my time patiently awaiting corrective justice. I was like "a pawn" in`,
+                                    `The mail-order cult had promised that I could rise above the bullies once a spaceship was acquired through my efforts. And so I learned to bide my time awaiting this corrective justice. I was like "a pawn" in`,
                                     {
                                         anchor: `chess`,
                                         wiki: `Chess`
                                     },
-                                    `that "perches over queenship" as it slowly clambers toward the opposite end of the chessboard.`
+                                    `that "perches over queenship" as it clambers toward the opposite end of the chessboard.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true,
                                     [PUN]: true
                                 }
                             }

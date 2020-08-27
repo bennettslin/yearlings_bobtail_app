@@ -14,9 +14,6 @@
     * Also anchored references if I can find them.
     * 1 Pchelka ("mushing onward")
 
-* Pun annotations
-    * 1 Uncanny ("queenship")
-
 * Remove Britishisms from lyrics.
 * Reassess what is an anchor.
 * More casual talk.
