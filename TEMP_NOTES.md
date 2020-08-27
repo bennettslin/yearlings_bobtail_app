@@ -8,9 +8,6 @@
 * Make sure backstory and narrative tenses are correct.
 * Make sure no wikis repeat.
 
-* Reference annotations
-    * 1 Pchelka ("mushing onward")
-
 * Remove Britishisms from lyrics.
 * Reassess what is an anchor.
 * More casual talk.

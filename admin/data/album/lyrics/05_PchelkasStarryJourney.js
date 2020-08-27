@@ -117,12 +117,22 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `In keeping with the Russian theme of dogs in space, I tried to evoke the sound of the`,
+                        `In keeping with the`,
+                        {
+                            anchor: `Russian`,
+                            wiki: `Russia`
+                        },
+                        `theme of dogs in space, I tried to evoke the feeling of the`,
                         {
                             anchor: `balalaika`,
                             wiki: `Balalaika`
                         },
-                        `through frenetically plucked mandolins. Since Tuva is a Russian republic, I also added`,
+                        `through frenetically plucked mandolins. Since`,
+                        {
+                            anchor: `Tuva`,
+                            wiki: `Tuva`
+                        },
+                        `is a Russian republic, I also added`,
                         {
                             anchor: `Tuvan throat singing,`,
                             wiki: `Tuvan_throat_singing`
@@ -1046,27 +1056,49 @@ export default {
                     lyric: [
                         {
                             anchor: `Mushing onward,`,
-                            todo: true,
-                            card: {
-                                // TODO: Mention that I imagine Pchelka and Mushka dogsledding.
-                                description: [
-                                    `Upon their arrival in the New World, the French learned the practice of`,
-                                    {
-                                        anchor: `dog sledding`,
-                                        wiki: `Sled_dog`
-                                    },
-                                    `from the natives. They commanded their dog teams to move by shouting`,
-                                    {
-                                        isItalic: true,
-                                        lyric: `"marche,"`
-                                    },
-                                    `meaning "go." After their territory was ceded to the British, this term continued in English as`,
-                                    {
-                                        anchor: `"mush."`,
-                                        wiki: `Mushing`
+                            cards: [
+                                {
+                                    description: [
+                                        `Here, I imagine Pchelka and Mushka as`,
+                                        {
+                                            anchor: `sled dogs`,
+                                            wiki: `Sled_dog`
+                                        },
+                                        `in the Russian`,
+                                        {
+                                            anchor: `tundra.`,
+                                            wiki: `Tundra`
+                                        }
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true
                                     }
-                                ]
-                            }
+                                },
+                                {
+                                    description: [
+                                        `Upon their arrival in the`,
+                                        {
+                                            anchor: `New World,`,
+                                            wiki: `New_World`
+                                        },
+                                        `the`,
+                                        {
+                                            anchor: `French`,
+                                            wiki: `France`
+                                        },
+                                        `learned the practice of dog sledding from the natives. They would command their dog teams to move by shouting`,
+                                        {
+                                            isItalic: true,
+                                            lyric: `"marche,"`
+                                        },
+                                        `meaning "go," which continued in English as`,
+                                        {
+                                            anchor: `"mush."`,
+                                            wiki: `Mushing`
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             anchor: `Mushka's`,
@@ -1094,9 +1126,20 @@ export default {
                         `to`,
                         {
                             anchor: `his slaughter`,
-                            todo: true,
                             card: {
-                                description: `I wrote this song during the peak of my activism within the animal rights movement, which takes a dim view of sled dog racing. Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
+                                description: [
+                                    `I wrote this song during the peak of my activism within the`,
+                                    {
+                                        anchor: `animal rights movement,`,
+                                        wiki: `Animal_rights_movement`
+                                    },
+                                    `which takes a dim view of`,
+                                    {
+                                        anchor: `sled dog racing.`,
+                                        wiki: `Sled_dog_racing`
+                                    },
+                                    `Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -1107,7 +1150,12 @@ export default {
                             anchor: `undying dawn.`,
                             card: {
                                 description: [
-                                    `During summer in the Arctic, the`,
+                                    `During summer in the`,
+                                    {
+                                        anchor: `Arctic,`,
+                                        wiki: `Arctic`
+                                    },
+                                    `the`,
                                     {
                                         anchor: `sun never sets.`,
                                         wiki: `Midnight_sun`
@@ -1202,7 +1250,6 @@ export default {
                         `I'm`,
                         {
                             anchor: `sorry I bailed,`,
-                            todo: true,
                             card: {
                                 description: `By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn't a tourist in the land of autism. He wasn't free to come and go as he pleased.`,
                                 dotKeys: {
