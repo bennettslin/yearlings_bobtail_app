@@ -526,11 +526,12 @@ export default {
                                         anchor: `German navy`,
                                         wiki: `Kriegsmarine`
                                     },
-                                    `in World War II. The analogy fits since, after all, the Axis were history's heroes in`,
+                                    `in World War II. Sita and I fight for the Axis in this analogy, since they were history's heroes in`,
                                     {
                                         isItalic: true,
-                                        lyric: `The Man in the High Castle.`
-                                    }
+                                        lyric: `The Man in the High Castle,`
+                                    },
+                                    `after all.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -829,6 +830,7 @@ export default {
                                     }
                                 },
                                 {
+                                    // TODO: Align this more closely with locks your arm.
                                     description: [
                                         `It's like I'm an escaped convict who has just been locked in handcuffs and sent back to jail, where a jail guard now directs me into a holding cell.`
                                     ],
@@ -856,7 +858,7 @@ export default {
                             anchor: `gingerbread prison,`,
                             todo: true,
                             card: {
-                                description: `But even if not totally fulfilling, the prison to which I'm returning is at least sweet to taste. It's also readily escapable, and ultimately of my own making.`,
+                                description: `Even if it can never fulfill me, the jail cell to which I return is at least sweet to nibble on. And ultimately, it's of my own making.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -871,9 +873,8 @@ export default {
                         `Though`,
                         {
                             anchor: `never full, you're fed;`,
-                            todo: true,
                             card: {
-                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I concede that platonic friendship is better than the cold, bleak alternative.`,
+                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I have to concede that a platonic friendship is better than the cold, bleak alternative.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true

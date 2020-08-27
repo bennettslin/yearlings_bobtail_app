@@ -6,12 +6,9 @@
 * Selecting wormhole doesn't scroll to annotation in carousel.
 
 * Make sure backstory and narrative tenses are correct.
-
 * Make sure no wikis repeat.
 
 * Reference annotations
-    * Search for anchorless references.
-    * Also anchored references if I can find them.
     * 1 Pchelka ("mushing onward")
 
 * Remove Britishisms from lyrics.
