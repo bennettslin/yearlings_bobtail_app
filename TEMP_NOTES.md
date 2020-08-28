@@ -13,6 +13,10 @@
 * More casual talk.
 * Make sure narrative and backstory are never together.
 
+* Observation annotations
+    * 1 Grasshoppers (Walkman)
+    * 1 Good Night (pry), 6 unfinished
+
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.
 * Link to Blogspot from WordPress.

@@ -669,26 +669,19 @@ export default {
                         `them`,
                         {
                             anchor: `tripped on runner's high.`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `A`,
-                                        {
-                                            anchor: `runner's high`,
-                                            wiki: `Neurobiological_effects_of_physical_exercise`
-                                        },
-                                        `is a feeling of euphoria experienced through exercise.`
-                                    ]
-                                },
-                                {
-                                    description: `After a grueling shift, I always needed a few beers in me just for the long slog back home, so it would have been hard to feel gracious toward anyone with enough energy to burn for an evening jog.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [OBSERVATION]: true
+                            card: {
+                                description: [
+                                    `After a grueling shift, all I had to look forward to was the long slog back home. So it would have been hard to feel gracious toward any nighttime jogger passing me by and feeling the euphoria of a`,
+                                    {
+                                        anchor: `runner's high.`,
+                                        wiki: `Neurobiological_effects_of_physical_exercise`
                                     }
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
                                 }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -797,20 +790,19 @@ export default {
                         `She`,
                         {
                             anchor: `locks your arm.`,
-                            todo: true,
                             card: {
-                                description: `Shivering from the winter chill, Sita tucks her hand underneath my arm as I invite her into my apartment.`,
+                                description: `Upon my invitation to warm up inside my apartment, Sita shivers and gladly tucks her hand underneath my arm. Of course, it doesn't mean what I so badly want it to mean. And so I feel like an escaped convict who has just been captured and locked in handcuffs.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
                                 }
                             }
                         },
                         {
                             anchor: `Key turned,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `As we catch up on recent happenings, I unlock the door to my apartment.`,
+                                    description: `As we catch up on recent happenings, I unlock the door to my apartment. But with Sita clinging tightly to my arm, it feels more like I'm being directed into a holding cell.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -822,24 +814,13 @@ export default {
                         },
                         {
                             anchor: `returned to your guard…`,
-                            cards: [
-                                {
-                                    description: `And just like that, I am once again on guard, second-guessing everything I say and do.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
-                                    // TODO: Align this more closely with locks your arm.
-                                    description: [
-                                        `It's like I'm an escaped convict who has just been locked in handcuffs and sent back to jail, where a jail guard now directs me into a holding cell.`
-                                    ],
-                                    dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [PUN]: true
-                                    }
+                            card: {
+                                description: `And just like that, I am once again on guard. I have to second-guess everything I say and do around Sita, like a prisoner conversing with a jail guard.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
                                 }
-                            ]
+                            }
                         }
                     ]
                 }
@@ -856,10 +837,10 @@ export default {
                         `In her`,
                         {
                             anchor: `gingerbread prison,`,
-                            todo: true,
                             card: {
-                                description: `Even if it can never fulfill me, the jail cell to which I return is at least sweet to nibble on. And ultimately, it's of my own making.`,
+                                description: `While being stuck in a platonic friendship with Sita will never fulfill me, it might still be sweet to nibble on.`,
                                 dotKeys: {
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -874,7 +855,7 @@ export default {
                         {
                             anchor: `never full, you're fed;`,
                             card: {
-                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I have to concede that a platonic friendship is better than the cold, bleak alternative.`,
+                                description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I have to concede that being just friends with Sita is still better than the cold, bleak alternative.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -1205,12 +1186,11 @@ export default {
                         `You`,
                         {
                             anchor: `stand unsure.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `The night that we decided to have sex, I was suddenly overcome with a weary unease that I couldn't explain. As Sita lay naked under the covers, I stood forlornly by the bedside for what seemed like several minutes.`,
+                                    description: `The night we decided to have sex, I was overcome with a weary unease that I couldn't explain. As Sita lay naked while comforting me with her gaze, I stood forlornly by the bedside for what seemed like several minutes.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 },
                                 {
@@ -1247,11 +1227,10 @@ export default {
                         `So`,
                         {
                             anchor: `how's that compromise?`,
-                            todo: true,
                             card: {
-                                description: `I had spent so long constructing a facade behind which to tuck away my emotions, that I am now hesitant to compromise the safety of this position. I just don't want to be vulnerable again, and I have so little faith that my desires won't be used against me, were I to reveal them to Sita as I had once before.`,
+                                description: `Having taken such pains to tuck away my emotions for so long, I was suddenly hesitant to compromise the safety of this position. I just didn't want to be vulnerable again, and I had so little faith that my desires wouldn't backfire on me as they had the first time I revealed them.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -1348,9 +1327,8 @@ export default {
                         `Let`,
                         {
                             anchor: `pure lose to pure…`,
-                            todo: true,
                             card: {
-                                description: `Sita and I were both virgins, which ultimately made it easier to lower my defenses, as it was a reminder that neither of us really knew what we were doing.`,
+                                description: `Sita and I were both virgins, which ultimately made it easier to lower my defenses. I had to remind myself that neither of us really knew what we were doing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

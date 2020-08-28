@@ -100,11 +100,10 @@ export default {
                         `love first`,
                         {
                             anchor: `without once knowing love`,
-                            todo: true,
                             card: {
-                                description: `The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision to me. If everyone thought this way, then no one could ever be in a relationship, just like no one would ever find a job if every hiring manager insisted on seeing previous work experience.`,
+                                description: `The women I tried to date always preferred someone with past relationship experience, which seemed like a bizarre provision to me. If everyone thought this way, then no one could ever be in a relationship, just like no one could ever get a job if they always needed previous work experience.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -149,7 +148,6 @@ export default {
                         `for this kid wearing no`,
                         {
                             anchor: `decoder ring`,
-                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -157,7 +155,7 @@ export default {
                                         anchor: `secret decoder ring`,
                                         wiki: `Secret_decoder_ring`
                                     },
-                                    `was a toy purchased through mail that allowed children to decipher encrypted messages. It would have been handy to have on a date, since I was constantly trying to tease out hidden meanings in the most basic exchanges.`
+                                    `is a toy purchased through the mail that allows children to decipher encrypted messages. It would have been handy to wear one on a date, since I was constantly teasing out hidden meanings in the most basic exchanges.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -318,7 +316,7 @@ export default {
                             anchor: `always know to pry`,
                             todo: true,
                             card: {
-                                description: `After all, none of my friends sweat the risk of being seen as a "sponge" either. Confident that they're just as much there to be won over, they show curiosity by pressing their date for details, the way a starfish will pry open an oyster resting on the seafloor.`,
+                                description: `And no one else seems to sweat the risk of coming on too strong either. Confident that they're just as much there to be won over, they show curiosity by pressing their date for details, the way a starfish will pry open an oyster resting on the seafloor.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -334,33 +332,33 @@ export default {
                         {
                             anchor: `innermost matryoshka's`,
                             todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `On our first date, I took Sita to a natural history museum with many ethnological exhibits. We spent some time gawking at the wooden dolls from Russia known as`,
-                                        {
-                                            anchor: `matryoshkas,`,
-                                            wiki: `Matryoshka_doll`
-                                        },
-                                        `which nest one inside another.`
-                                    ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
-                                    description: `Mistakes made with one woman still offered lessons to apply toward the next, so each date felt like prying open one nesting doll to get to another, with the ultimate hope of reaching the last one that doesn't turn out hollow.`,
-                                    dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
+                            card: {
+                                description: [
+                                    `On our first date, I took Sita to a natural history museum with many ethnological exhibits. We spent some time gawking at the wooden dolls from Russia known as`,
+                                    {
+                                        anchor: `matryoshkas,`,
+                                        wiki: `Matryoshka_doll`
+                                    },
+                                    `which nest one inside another.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true
                                 }
-                            ]
+                            }
                         }
                     ]
                 },
                 {
                     time: 28,
-                    lyric: `heart of gold inside`
+                    lyric: {
+                        anchor: `heart of gold inside`,
+                        card: {
+                            description: `Mistakes made with one woman still offered lessons that could be applied toward the next. So each date felt like prying open one nesting doll to get to another, with the ultimate goal of reaching the last one whose promise proved not to be hollow.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
+                        }
+                    }
                 }
             ]
         },
@@ -376,7 +374,7 @@ export default {
                         {
                             anchor: `crack up another doll`,
                             card: {
-                                description: `A classmate had told me that if I can keep a woman cracking up at my jokes all night, then I'll always be good for another date. Not being very funny, I tried my best with clever quips and goofy mannerisms.`,
+                                description: `Someone had told me that if I can keep a woman cracking up at my jokes all night, then I'll always be good for another date. Not being very funny, I tried my best with clever quips and goofy mannerisms.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
@@ -391,16 +389,11 @@ export default {
                         `to find the`,
                         {
                             anchor: `chrysalis unchristened`,
-                            todo: true,
+
                             cards: [
                                 {
                                     description: [
-                                        `As we glided past a display on the lifecycle of butterflies, it occurred to me that what I sought was a`,
-                                        {
-                                            anchor: `chrysalis.`,
-                                            wiki: `Pupa`
-                                        },
-                                        `That is, a rare specimen of woman unworldly enough not to be turned off by my own lack of experience. Unfortunately, every other low-status male had the same idea.`
+                                        `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek is a chrysalis. That is, a rare specimen of female so new to this world that my own lack of worldly ways would be rendered moot. But of course, every other low-status male out there has the same idea.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -418,15 +411,19 @@ export default {
                         `who'd buy this`,
                         {
                             anchor: `aping jaw`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `We paused for a minute to learn about`,
+                                    `We pause for a minute to learn about`,
                                     {
                                         anchor: `Piltdown Man,`,
                                         wiki: `Piltdown_Man`
                                     },
-                                    `a paleontological hoax in which the oversized jaw of an orangutan was attached to the cranium of a modern human. I was a comparable fraud, as the things that came out of my mouth were meant to inflate the perceived volume of my head.`
+                                    `a paleontological hoax in which the oversized jaw of an`,
+                                    {
+                                        anchor: `orangutan`,
+                                        wiki: `Orangutan`
+                                    },
+                                    `was attached to the cranium of a modern human. But I'm a comparable fraud, as the things that come out of my mouth inflate the perceived volume of wisdom in my head.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -502,11 +499,17 @@ export default {
                         `in time are seen with`,
                         {
                             anchor: `a focus grown clear`,
-                            todo: true,
                             card: {
-                                description: `A few hours into a date, my buzz would wear off, and I would realize that I'd just constructed an elaborate backstory that could only topple under scrutiny, like a totem pole carved from a stack of stumps rather than a single trunk.`,
+                                description: [
+                                    `After my buzz wore off a few hours into a date, I would realize that I'd just constructed an elaborate backstory that could only topple under scrutiny, like a`,
+                                    {
+                                        anchor: `totem pole`,
+                                        wiki: `Totem_pole`
+                                    },
+                                    `carved from a stack of stumps rather than a single trunk.`
+                                ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -530,16 +533,15 @@ export default {
                     lyric: [
                         {
                             anchor: `pidgin palaver`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `Stopping to rest our feet in a gallery devoted to Native American history, we learned about the development of`,
+                                        `Stopping to rest our feet in a gallery devoted to Native American history, we learn about the development of`,
                                         {
                                             anchor: `pidgins,`,
                                             wiki: `Pidgin`
                                         },
-                                        `or impromptu languages intended solely to facilitate trade between colonists and natives. Such exchanges were necessarily peppered with overt expressions of goodwill to make up for inevitable miscommunication, which also aptly describes my first date conversations with Sita.`
+                                        `or impromptu languages that arose to facilitate trade between colonists and natives. Their exchanges were peppered with expressions of goodwill to make up for inevitable miscommunication, which aptly describes my first conversations with Sita.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -561,11 +563,10 @@ export default {
                         `hyped up like some`,
                         {
                             anchor: `disastrous play`,
-                            todo: true,
                             card: {
-                                description: `On our second date, Sita invited me to see her friend perform in a play, which I ended up hating. In retrospect, it probably wasn't bad. My impression of the night was just colored by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
+                                description: `On our second date, Sita invited me to see her friend perform in a play, which I wound up hating. In all fairness, it probably wasn't bad. My impression of the night was just colored by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -609,9 +610,8 @@ export default {
                         `for if the`,
                         {
                             anchor: `tactic is to stall`,
-                            todo: true,
                             card: {
-                                description: `I was advised by friends to wait three days before calling a woman back. Yet it was always agony when she invariably did the same.`,
+                                description: `I was often advised to wait three days before calling a woman back. Yet it was always agony when she invariably did the same with me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -630,7 +630,6 @@ export default {
                         `what this`,
                         {
                             anchor: `understudy sought`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Dating as a low-status male is like being an`,
@@ -638,10 +637,10 @@ export default {
                                         anchor: `understudy,`,
                                         wiki: `Understudy`
                                     },
-                                    `a performer in theatre who serves as a replacement on short notice. You undertake the exact same preparation, yet was rewarded with almost none of the action. I finally accepted that I had to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`
+                                    `a performer in theatre who serves as a replacement on short notice. You undertake all the same preparation while likely seeing none of the action. And so I finally accepted that I had to be proactive and branch out, like a freelancer without a steady gig advertising on a cork board.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -670,11 +669,10 @@ export default {
                         `then wise up and`,
                         {
                             anchor: `learn to shotgun`,
-                            todo: true,
                             card: {
-                                description: `I had come to adopt the shotgun approach to dating, which involves hitting on anyone at any moment, and works because math works. Though the failure rate remains dismal, the sample size increases dramatically, thus improving one's chances overall.`,
+                                description: `In time I came to adopt the shotgun approach to dating, which involves hitting on anyone at any moment. It works simply because math works. Even if the success rate remains dismal, you're increasing the sample size, which improves your chances overall.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -691,11 +689,10 @@ export default {
                         `so we'll`,
                         {
                             anchor: `breeze through our parts`,
-                            todo: true,
                             card: {
-                                description: `With every witty remark I made that got a good response, I would be sure to use it again on the next woman I dated, much like an actor reprising a role. In turn, the notion that this was all just an act helped lessen the sting of rejection.`,
+                                description: `Any time I made a witty remark that got a good response, I would be sure to use it again on future dates, like an actor reprising a role. This also lessened the sting of rejection, since the less I prepared, the less I felt invested.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -736,11 +733,10 @@ export default {
                         `though each`,
                         {
                             anchor: `kind new ultimatum`,
-                            todo: true,
                             card: {
-                                description: `Like the deals that natives were forced to make with settlers at gunpoint, Sita's proposition for us to see her friend's play offered only an illusion of choice. She was going either way. I could either tag along or stay home alone.`,
+                                description: `Like the deals that natives were forced to make with settlers at gunpoint, Sita's proposition for us to see her friend's play offered only an illusion of choice. She was going either way. I could either tag along or stay home.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
