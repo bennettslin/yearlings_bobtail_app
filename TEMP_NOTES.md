@@ -15,7 +15,7 @@
 
 * Observation annotations
     * 1 Grasshoppers (Walkman)
-    * 1 Good Night (pry), 6 unfinished
+    * 1 Good Night (pry)
 
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.

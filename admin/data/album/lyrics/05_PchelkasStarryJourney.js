@@ -947,7 +947,7 @@ export default {
                             anchor: `muted youths lapsed.`,
                             todo: true,
                             card: {
-                                description: `While I only spent a year feigning autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It's not that I lacked the will to correct their perceptions. I was as baffled as anyone else about what had just happened, and there were no guide books for where to go from there.`,
+                                description: `While I only spent a year faking autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It's not that I lacked the will to correct their perceptions. I was as baffled as anyone else about what had just happened, and there were no guide books for where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

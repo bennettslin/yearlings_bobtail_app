@@ -342,7 +342,7 @@ export default {
                                     `which nest one inside another.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -393,7 +393,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek is a chrysalis. That is, a rare specimen of female so new to this world that my own lack of worldly ways would be rendered moot. But of course, every other low-status male out there has the same idea.`
+                                        `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek is a chrysalis. That is, a rare specimen of female so new to this world that my own lack of worldly ways is rendered moot. Of course, every other low-status male out there has the same idea.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -757,18 +757,17 @@ export default {
                         `brave`,
                         {
                             anchor: `rejection into art`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `I learned to accept rejection by treating it as subject matter for new songs. But it then logically follows that a life filled with rejection can`,
+                                    `I learned to accept and even welcome each latest bout of rejection by turning it into subject matter for new songs. So at some point, I naturally came to see a life of getting rejected as`,
                                     {
-                                        isEmphasis: true,
+                                        isItalic: true,
                                         lyric: `itself`
                                     },
-                                    `be a work of art.`
+                                    `a work of art.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -788,9 +787,8 @@ export default {
                         `but`,
                         {
                             anchor: `died unfinished`,
-                            todo: true,
                             card: {
-                                description: `Of course, there is no guarantee that such a work can ever be seen to completion, since the ready procurement of its raw materials lies beyond the artist's control.`,
+                                description: `Of course, there's no guarantee that such a work can ever be completed in the artist's lifetime, since the guarantee of a satisfactory ending isn't really within their control.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -813,11 +811,10 @@ export default {
                         `hint of`,
                         {
                             anchor: `sampler cologne`,
-                            todo: true,
                             card: {
-                                description: `I kept a pile of scented strips torn from cologne advertisements in old magazines, and would rub several on my wrists right before a date.`,
+                                description: `Whenever I spotted a men's magazine lying in a recycling bin, I would tear out the scent strips from its cologne advertisements and add them to my pile. Then right before a date, I would rub a few strips onto my wrists.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -841,11 +838,17 @@ export default {
                         `always rides in`,
                         {
                             anchor: `single go-karts`,
-                            todo: true,
                             card: {
-                                description: `On this most recent date with Sita, we visited a go-kart raceway. They had twin go-karts available that were intended to seat a parent and child side by side. I asked Sita if she wanted to ride one together. She politely declined.`,
+                                description: [
+                                    `On our third date, we visited a`,
+                                    {
+                                        anchor: `go-kart raceway.`,
+                                        wiki: `Kart_racing`
+                                    },
+                                    `There was a twin go-kart available that presumably seated a parent and child side by side. In jest, I gestured as if inviting Sita to hop in. She laughed and declined.`
+                                ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -857,9 +860,15 @@ export default {
                         `as we wind an`,
                         {
                             anchor: `endless flowchart`,
-                            todo: true,
                             card: {
-                                description: `I often wondered at the time if it was possible to prepare a mental flowchart of all the myriad ways a date might unfold. I could then take one optimal action after another to nudge the events of the evening toward my desired outcome.`,
+                                description: [
+                                    `I often wondered at the time if it was possible to prepare a mental`,
+                                    {
+                                        anchor: `flowchart`,
+                                        wiki: `Flowchart`
+                                    },
+                                    `of all the myriad ways a date might unfold. I could then take one optimal action after another to nudge the events of the evening toward my desired outcome.`
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -873,9 +882,15 @@ export default {
                         `with every given`,
                         {
                             anchor: `answer a no`,
-                            todo: true,
                             card: {
-                                description: `But if I was never given any openings to take action, then each date would end with me going right back to the beginning of the flowchart. And I would be doomed to spend my life cycling through an infinite loop of polite rejection.`,
+                                description: [
+                                    `Of course, if I were never given an opening to take further action, then each date would end with me going right back to the beginning of the flowchart. And I would be doomed to spend my life cycling through an`,
+                                    {
+                                        anchor: `infinite loop`,
+                                        wiki: `Infinite_loop`
+                                    },
+                                    `of polite rejection.`
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -896,12 +911,23 @@ export default {
                         `and her`,
                         {
                             anchor: `veggie wishbone's short end`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Afterwards, Sita took me to a vegetarian restaurant, where I ordered a dish that resembled a portion of chicken, down to its sesame-stick wishbone. When we cracked the wishbone, Sita got the longer end. Needless to say, my wish was not granted.`,
+                                    description: [
+                                        `We started the date at a`,
+                                        {
+                                            anchor: `vegetarian`,
+                                            wiki: `Vegetarianism`
+                                        },
+                                        `restaurant, where I ordered a dish that resembled a breast of chicken. When we cracked the sesame-stick`,
+                                        {
+                                            anchor: `wishbone`,
+                                            wiki: `Furcula`
+                                        },
+                                        `that was inside, Sita got the longer end. Needless to say, my wish wasn't granted.`
+                                    ],
                                     dotKeys: {
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 },
                                 {
@@ -925,11 +951,9 @@ export default {
                         `from a`,
                         {
                             anchor: `dummy steering wheel`,
-                            todo: true,
                             card: {
-                                description: `The twin go-karts had a second steering wheel on the passenger side, which served no purpose other than a child's imagination. Similarly, while I knew that whatever feeling of control I had on a date was an illusion, there was too much at stake for me to let go and embrace spontaneity.`,
+                                description: `A child seated in a twin go-kart might turn the passenger steering wheel this way and that, but they are driving only in their imagination. Similarly, any semblance of control I felt on a date was an illusion. But even so, I had to cling on tightly. There was just too much at stake for me to let go and embrace spontaneity.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -1056,6 +1080,7 @@ export default {
                         `in which a seemingly long span of time is revealed to have passed in an instant. Similarly, the near entirety of this song, during which I have recollected every date with Sita thus far, turns out to have been sandwiched between the briefest exchange of farewells.`
                     ],
                     dotKeys: {
+                        [NARRATIVE]: true,
                         [SONGWRITING]: true
                     }
                 }

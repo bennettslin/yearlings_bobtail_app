@@ -18,7 +18,7 @@ export default {
     [BENNETT]: {
         [BACKSTAGE]: {
             yIndex: 4,
-            xPosition: 4.5
+            xPosition: 4.2
         }
     },
     [LIZ]: {
