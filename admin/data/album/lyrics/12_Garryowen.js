@@ -165,16 +165,15 @@ export default {
                     lyric: [
                         `Well`,
                         {
-                            anchor: `you're not me, Garryowen.`,
-                            todo: true,
+                            anchor: `you're not me,`,
                             card: {
-                                description: `A running gag among my friends was to address me as Garry when I was drunk, since my disjointed rambling and oafish stunts made me an altogether different person.`,
+                                description: `An inside joke among my friends was to address me as Garry when I was drunk, since my uneven rambling and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
                             }
                         },
-                        `Oh no, and`
+                        `Garryowen. Oh no, and`
                     ]
                 },
                 {
@@ -182,11 +181,11 @@ export default {
                     lyric: [
                         {
                             anchor: `I can't speak`,
-                            todo: true,
                             card: {
-                                description: `But this also absolved me of personal responsibility, which became problematic as my actions over time spilled into drunken aggression and misdemeanors.`,
+                                description: `But having an alter ego also absolved me of personal responsibility for my actions, which became problematic as my drunken behavior spilled further into random acts of aggression and misdemeanors.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
                                 }
                             }
                         },
@@ -206,9 +205,8 @@ export default {
                         `Drunk pissed punks tryst,`,
                         {
                             anchor: `bustin' cars with fists,`,
-                            todo: true,
                             card: {
-                                description: `One kid named Tristan was particularly hotheaded. After we all got kicked out of a party one night for a fight that he incited, Tristan started punching car windows, then challenged us to see who could break the glass first. I didn't win.`,
+                                description: `There was this kid named Tristan in our little group who was particularly hotheaded. One night after we got kicked out of a party for a fight he incited, Tristan challenged us to see who could punch a car window and break the glass first. I didn't win.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -225,7 +223,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `After lashing out in a spastic fury until blacking out, Tristan would be perfectly collected by next morning. I came to see that his chaotic outbursts were in fact meticulously controlled, giving him a strange inner peace, and so I sought to indulge my drunken temper in the same manner.`,
+                                    description: `After lashing out in a spastic fury at the peak of a blackout, Tristan would be perfectly collected the next morning. I came to see that his chaotic behavior was in fact meticulously controlled, giving him a strange inner peace. So I sought to indulge my drunken temper in the same manner.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
@@ -716,7 +714,7 @@ export default {
                                 card: {
                                     description: `But my capacity to injure myself also meant that I would have few compunctions about harming anyone close to me. And harm Sita, I did.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true
+                                        [BACKSTORY]: true
                                     }
                                 }
                             }
