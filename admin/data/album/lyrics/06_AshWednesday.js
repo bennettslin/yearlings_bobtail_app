@@ -106,9 +106,8 @@ export default {
                         `in my`,
                         {
                             anchor: `bookless room,`,
-                            todo: true,
                             card: {
-                                description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I said, only partly in jest.`,
+                                description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I explained, only partly in jest.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -122,12 +121,11 @@ export default {
                         {
                             anchor: `Ulysses' tomb,`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `A reference to the classic "Who's buried in`,
+                                    `A reference to the classic`,
                                     {
-                                        anchor: `Grant's tomb"`,
+                                        anchor: `"Who's buried in Grant's tomb?"`,
                                         wiki: `Grant's_Tomb`
                                     },
                                     `riddle, of course, but also to James Joyce's masterpiece novel`,
@@ -428,9 +426,8 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains?`,
-                            todo: true,
                             card: {
-                                description: `Catherine didn't value the artistic strengths that I had always counted on to cover up my other weaknesses. Which made me realize that if I wanted to keep dating those so very unlike me, then I couldn't have any real weaknesses.`,
+                                description: `Catherine didn't value the artistic strengths I had always counted on to cover up my weaknesses. Which made me realize that if I hoped to be good at keeping someone, then I simply couldn't have any weaknesses.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -736,14 +733,23 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe…`,
                                     properNoun: true,
-                                    todo: true,
                                     card: {
                                         description: [
                                             {
                                                 anchor: `Henry IV`,
                                                 wiki: `Henry_IV_of_France`
                                             },
-                                            `was born a Protestant but converted to Catholicism to gain the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be dictated by earthly wants. Similarly, I would have happily become Catholic if that could get Catherine to stay.`
+                                            `of France was born a`,
+                                            {
+                                                anchor: `Protestant`,
+                                                wiki: `Protestantism`
+                                            },
+                                            `but converted to Catholicism to gain the French royal crown. He is reputed to have remarked,`,
+                                            {
+                                                isItalic: true,
+                                                lyric: `"Paris vaut bien une messe,"`
+                                            },
+                                            `or "Paris is well worth a Mass," implying that spiritual allegiances are superseded by earthly ambitions. Similarly, I would have happily turned Catholic if that could get Catherine to stay.`
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true
@@ -787,9 +793,20 @@ export default {
                         `us wretched souls`,
                         {
                             anchor: `cursed to be born,`,
-                            todo: true,
                             card: {
-                                description: `It always confused me why the Catholic Church should extend its pro-life stance to the unborn of other faiths, since this means trading an aborted fetus's certainty of going to heaven for a living child's likelihood of going to hell.`,
+                                description: [
+                                    `It always confused me why the Catholic Church extends its`,
+                                    {
+                                        anchor: `pro-life stance`,
+                                        wiki: `Catholic_Church_and_abortion`
+                                    },
+                                    `to the unborn of other faiths. After all, this just ends up trading the certainty of an`,
+                                    {
+                                        anchor: `aborted fetus`,
+                                        wiki: `Abortion`
+                                    },
+                                    `going to heaven for the living child's likelihood of going to hell.`
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -820,9 +837,20 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask.`,
-                            todo: true,
                             card: {
-                                description: `At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. So I always preferred a negative outcome to no outcome at all, which then made it hard to deny that everything I did was just a stage act.`,
+                                description: [
+                                    `At some point, I learned to see`,
+                                    {
+                                        anchor: `comedy`,
+                                        wiki: `Comedy`
+                                    },
+                                    `and`,
+                                    {
+                                        anchor: `tragedy`,
+                                        wiki: `Tragedy`
+                                    },
+                                    `as two sides of the same coin. After all, any misfortune can be made into song, writing a song calls for taking the broader view, and looking broadly enough will expose the comic underbelly of every misfortune. So I always preferred a negative outcome to none at all, making everything I did feel like a stage act.`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -872,7 +900,7 @@ export default {
                                         anchor: `melanoma.`,
                                         wiki: `Melanoma`
                                     },
-                                    `Which was fitting, since it takes a rather sick person to fake being Catholic.`
+                                    `Which is fitting, since it was probably sick of me to fake being Catholic.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

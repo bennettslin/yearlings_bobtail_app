@@ -18,6 +18,7 @@
     * 1 Good Night (pry)
     * 2 M (last two)
     * 1 Golden Cord (potter's field)
+    * 1 Ash (Algonquin)
 
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.
