@@ -220,10 +220,9 @@ export default {
                         `the`,
                         {
                             anchor: `littlest fuss will incite`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `After lashing out in a spastic fury at the peak of a blackout, Tristan would be perfectly collected the next morning. I came to see that his chaotic behavior was in fact meticulously controlled, giving him a strange inner peace. So I sought to indulge my drunken temper in the same manner.`,
+                                    description: `After lashing out all night in a spastic fury, Tristan would be perfectly collected the next morning. I came to see that his chaotic behavior was in fact meticulously controlled, giving him a strange inner peace. So I sought to indulge my drunken temper in the same manner.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
@@ -337,9 +336,8 @@ export default {
                         `So the`,
                         {
                             anchor: `celibate you'll play,`,
-                            todo: true,
                             card: {
-                                description: `I gladly drank to excess, as it made me impotent and thus impervious to Sita's advances. But not having sex was also purifying in its own right, as it lent the familiar comfort of being my old self again. So, win-win all around.`,
+                                description: `I gladly drank to excess since it made me impotent and thus impervious to Sita's advances. But not having sex was also purifying in its own right, as it lent the familiar comfort of being my old self again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -358,9 +356,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Slammed in the well,`,
-                            todo: true,
                             card: {
-                                description: `Of course, using alcohol as a spiritual cleanser isn't sustainable in the long term. Vomiting into a toilet and staring at my reflection in the water soon became a regular occurrence.`,
+                                description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, especially when it requires you to vomit into a toilet and see your reflection in the water staring back at you on a regular basis.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -691,7 +688,7 @@ export default {
                                             anchor: `self-harm,`,
                                             wiki: `Self-harm`
                                         },
-                                        `it's also used in religious circles to describe masturbation. Towards the end, I masturbated frequently to lower my sex drive, hoping that this would strengthen my resolve to break up with Sita.`
+                                        `it's also used in religious circles to describe masturbation. Toward the end, I masturbated frequently to lower my sex drive, hoping that this would strengthen my resolve to break up with Sita.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -766,9 +763,8 @@ export default {
                         `becomes someone's`,
                         {
                             anchor: `last-ditch alibi.`,
-                            todo: true,
                             card: {
-                                description: `Even as my friends and I were clearly joking to say that it was Garry, and not me, who had committed this or that act of vandalism, on some level I accepted it as the truth. And now, it also wasn't me who had slowly sapped Sita's confidence over the years, leaving her a crumbled wreck. It must have been Garry. I wasn't there.`,
+                                description: `While my friends and I were clearly joking to say that it was Garry, not me, who had committed this or that act of vandalism, I kind of accepted it as the truth. And now it also wasn't me who had sapped Sita of her confidence over the years, finally to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

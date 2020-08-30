@@ -1078,7 +1078,14 @@ export default {
                             anchor: `seventy years`,
                             todo: true,
                             card: {
-                                description: `In keeping with her Buddhist faith, my mother told me not to worry, since I wasn't going to die for a long while. She then assured me that when my time finally did come, perhaps in another seventy years or so, I would have long made peace with death somehow.`,
+                                description: [
+                                    `In keeping with her`,
+                                    {
+                                        anchor: `Buddhist`,
+                                        wiki: `Buddhism`
+                                    },
+                                    `faith, my mother told me not to worry, since I wasn't going to die for a long while. She then assured me that when my time finally did come, perhaps in another seventy years or so, I would have long made peace with death somehow.`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

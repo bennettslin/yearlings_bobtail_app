@@ -922,12 +922,7 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
-                                    `Moreover, in`,
-                                    {
-                                        anchor: `"Sanskrit,"`,
-                                        wiki: `Sanskrit`
-                                    },
-                                    `the ancient Indian language,`,
+                                    `Moreover, in "Sanskrit," the ancient Indian language,`,
                                     {
                                         isItalic: true,
                                         lyric: {

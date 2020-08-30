@@ -1241,7 +1241,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `The ascending chord progression initially signifies a blossoming relationship. Towards the end, it symbolizes sexual climax.`,
+                    description: `The ascending chord progression initially signifies a blossoming relationship. Toward the end, it symbolizes sexual climax.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }

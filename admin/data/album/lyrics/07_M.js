@@ -53,19 +53,31 @@ export default {
                     lyricCentre: {
                         anchor: `Maravijaya…`,
                         properNoun: true,
-                        todo: true,
                         card: {
                             description: [
                                 {
                                     isItalic: true,
-                                    lyric: `Maravijaya,`
+                                    lyric: {
+                                        anchor: `Maravijaya,`,
+                                        wiki: `Maravijaya_attitude`
+                                    }
                                 },
-                                `which translates to "victory over Mara" in Sanskrit, is the seated posture of the Buddha as he fended off temptations from`,
+                                `or "victory over Mara" in`,
+                                {
+                                    anchor: `Sanskrit,`,
+                                    wiki: `Sanskrit`
+                                },
+                                `is the seated posture of the`,
+                                {
+                                    anchor: `Buddha`,
+                                    wiki: `Gautama_Buddha`
+                                },
+                                `as he fended off temptation from the demon`,
                                 {
                                     anchor: `Mara,`,
                                     wiki: `Mara_(demon)`
                                 },
-                                `the demon who personifies fear and death in Buddhism. In the same way, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`
+                                `who personifies fear and death. Like the Buddha, I had to summon otherworldly reserves of self-denial to get through band practice after Jacob and Mara started dating.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -136,7 +148,6 @@ export default {
                         `in`,
                         {
                             anchor: `five years`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -275,7 +286,6 @@ export default {
                     lyric: [
                         {
                             anchor: `Year five,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The Soviet Union's`,
@@ -299,10 +309,9 @@ export default {
                         `spent her`,
                         {
                             anchor: `wishes on a friend,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Towards the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled when I first spotted Mara in the audience, thinking that all my hard work putting this band together was about to pay off. But it was Jacob who caught her eye. I felt like the`,
+                                    `Toward the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled when I first spotted Mara in the audience, thinking that all my hard work putting this band together was about to pay off. But it was Jacob who caught her eye. I felt like the`,
                                     {
                                         anchor: `bottled genie`,
                                         wiki: `Jinn`
@@ -310,7 +319,7 @@ export default {
                                     `of Arabian folklore, with good fortunes to bestow upon others but only freedom from self-imposed isolation to grant myself.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -461,11 +470,10 @@ export default {
                         `to a`,
                         {
                             anchor: `sand castle built by low tide.`,
-                            todo: true,
                             card: {
-                                description: `To compound the failures of my first five-year plan, it was clear that I had missed out in the interim on some crucial maturity that others like Jacob had naturally come by. And there was no guarantee that the next five-year plan would not blindside me in the same manner. I feared a future as a stunted man-child, forever chasing an ambition at once both infantile and futile, like shaping castles out of sand.`,
+                                description: `To compound the failures of my first five-year plan, it was clear that in the interim I had missed out on some crucial personal development that Jacob and others had naturally come by. And there was no guarantee another five-year plan wouldn't blindside me in the same manner. I feared a future as a stunted man-child, forever chasing ambitions at once both infantile and futile, like building castles out of sand.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -581,7 +589,7 @@ export default {
                                     `is a vessel of contemporary objects that will be seen as historical artifacts once rediscovered by a later era. In a way, it allows past generations to speak to future ones. Similarly, in my dejected state, I could only envision my next five-year plan as a forum to air my grievances to a captive future audience.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -605,7 +613,7 @@ export default {
                                         anchor: `marionette`,
                                         wiki: `Marionette`
                                     },
-                                    `being made to posture by the hidden hand of my naive younger self. Of course, I eagerly donned these strings only because I believed his lies, namely that "Mara you'll net" by doing so.`
+                                    `being made to posture by the hidden hand of my naive younger self. Of course, I eagerly donned these strings only because I believed my younger self's lies, namely that "Mara you'll net" by doing so.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -616,9 +624,8 @@ export default {
                         `in this`,
                         {
                             anchor: `heap of twisted twine.`,
-                            todo: true,
                             card: {
-                                description: `With no results to show after five years of diligent effort, I was suddenly paralyzed by uncertainty. I could no longer prescribe any future actions with confidence, and so my future self was left to lie like a motionless puppet in my mind.`,
+                                description: `With no results to show after five years of diligent effort, I was paralyzed by doubt. There were no more actions I could confidently prescribe to better my circumstances. And so the puppet of my future self could only lie there motionless.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -675,7 +682,6 @@ export default {
                         `is choked down my`,
                         {
                             anchor: `no-hope chest.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Traditionally, a`,
@@ -683,10 +689,11 @@ export default {
                                         anchor: `hope chest`,
                                         wiki: `Hope_chest`
                                     },
-                                    `was a piece of furniture that contained the various linens stored by a young woman in preparation for married life. By keeping my feelings of hopelessness close to my literal chest, I was also sealing my figurative hope chest.`
+                                    `was a piece of furniture for storing the assorted dishware and linens gathered by a young woman in preparation for married life. By keeping my feelings of hopelessness close to my literal chest, I was also sealing this figurative chest of mine.`
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
                                 }
                             }
                         }
@@ -709,7 +716,6 @@ export default {
                         `Her lispy kiss unlucky for this`,
                         {
                             anchor: `chimney sweep,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -723,8 +729,7 @@ export default {
                                             anchor: `Victorian era,`,
                                             wiki: `Victorian_era`
                                         },
-                                        `the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited for themselves. Similarly, any kiss blown from Mara on her wedding day would only highlight my misfortune of not being with her.`
-                                        // TODO: Make this more about me introducing Mara and Jacob, while having no luck myself.
+                                        `the children who cleared soot from chimneys were neglected orphans. Whatever fortunes they imparted to others, only a lifetime of ill health awaited for themselves. Likewise, having introduced Mara to Jacob, it was now on me to get on with my lonely life.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true
@@ -774,7 +779,7 @@ export default {
                             card: {
                                 description: `Jacob was my friend, of course, and I was happy that he had found Mara. But I also wasn't eager to stick around. So as I imagined them exchanging their vows of "I do," I silently offered a vow of my own to bid them "two farewell."`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [PUN]: true
                                 }
                             }
@@ -802,7 +807,6 @@ export default {
                             card: {
                                 description: `At some point, I realized that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can be understood by reading them closely, no differently than bodies of knowledge can be absorbed through study.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -853,9 +857,8 @@ export default {
                             anchor: `boy who's to love her baby`,
                             todo: true,
                             card: {
-                                description: `It then occurred to me that if the world is as guileless as a newborn baby, then it makes no more sense to get mad at the world than to be upset with an infant. And if a woman's list of ideal traits in a mate includes what kind of father he'll be to her child, then it makes sense that she'll judge him by how he treats the world.`,
+                                description: `It then occurred to me that if the world is as guileless as a newborn baby, then it makes no more sense to be upset with the world than to be mad at a child. And if a woman's list of ideal traits in a man includes what kind of father he'll be, then it makes sense that she'll judge him by his working relationship with the world.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
