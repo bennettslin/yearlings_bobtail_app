@@ -16,7 +16,8 @@
 * Observation annotations
     * 1 Grasshoppers (Walkman)
     * 1 Good Night (pry)
-    * 2 M
+    * 2 M (last two)
+    * 1 Golden Cord (potter's field)
 
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.

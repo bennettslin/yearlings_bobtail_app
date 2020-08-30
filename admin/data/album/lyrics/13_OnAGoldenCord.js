@@ -235,7 +235,7 @@ export default {
                     time: 54,
                     lyricLeft: [
                         {
-                            anchor: `Immerse the moulted form`,
+                            anchor: `Immerse the molted form`,
                             todo: true,
                             card: {
                                 description: `With our relationship now in irreversible decline, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a scheme to end his relationship.`,
@@ -270,7 +270,7 @@ export default {
                             card: {
                                 // NOTE: I changed "pauper's" to "paupers'."
                                 description: [
-                                    `I had spent weeks rehearsing the breakup, assuming it could be scheduled at my convenience and follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
+                                    `I had spent weeks rehearsing the breakup, assuming it could be scheduled at my convenience and follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was seemingly disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
                                     {
                                         anchor: `paupers' grave.`,
                                         wiki: `Potter's_field`
@@ -353,7 +353,7 @@ export default {
                             anchor: `Newspeak,`,
                             wiki: `Newspeak`
                         },
-                        `I could only make sense of the breakup by reconciling the contradictions in my head. So I used doublespeaker rhyme— which I had named partly for its Orwellian undertone— to depict the internal conflict between my sober self and my drunken alter ego.`
+                        `I could only make sense of the breakup by reconciling the contradictions in my head. So I used doublespeaker rhyme— which I had named partly for its Orwellian undertone— to depict the internal conflict between my sober self and his drunken alter ego.`
                     ],
                     dotKeys: {
                         [SONGWRITING]: true
@@ -507,10 +507,10 @@ export default {
                         `Then if`,
                         {
                             anchor: `life were real,`,
-                            todo: true,
                             card: {
-                                description: `Sita's friends weren't wrong when they described me as fake and pretentious. My emotions just didn't feel legitimate, and so I acted upon them the way an actor takes cues to ad lib an improv scene. At the time, I blamed the lingering effect of Robitussin.`,
+                                description: `Sita's friends weren't wrong to describe me as fake and pretentious. My emotions didn't feel legitimate even to myself, and so I acted upon them like an actor taking a cue to ad lib an improv scene. At the time, I blamed the lingering effect of Robitussin.`,
                                 dotKeys: {
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -636,12 +636,10 @@ export default {
                         `the`,
                         {
                             anchor: `gesture then`,
-                            todo: true,
                             card: {
-                                description: `I had bought Sita the gold bracelet from a jewelry store at the local mall. It was quite expensive relative to my hourly wage at the time, which made its underlying meaning seem all the more potent.`,
+                                description: `I had bought the bracelet from a jewelry store at the local mall. It was rather expensive relative to my hourly wage at the time, which made its underlying meaning all the more potent to Sita at the time.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [OBSERVATION]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -789,10 +787,9 @@ export default {
                                 lyric: `Übermensch`
                             },
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `German philosopher`,
+                                    `The German philosopher`,
                                     {
                                         anchor: `Friedrich Nietzsche`,
                                         wiki: `Friedrich_Nietzsche`
@@ -805,7 +802,7 @@ export default {
                                             wiki: `Übermensch`
                                         }
                                     },
-                                    `or "overhuman", as an ideal of perfection toward which each of us may strive, which I understood to be a precondition for creating great works. But since the underlying motive for bettering myself had always been a desire to attract women, my lifelong ambition to be a great artist meant that I would always have a cheating heart.`
+                                    `or "overhuman," as an ideal of perfection toward which each of us might strive, which I understood to be a precondition for creating great works. But since my underlying motive for being a great artist was to attract women, it then followed that the best version of myself could only be realized by having a cheating heart.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -938,7 +935,7 @@ export default {
                             anchor: `alias drunk, in panic`,
                             todo: true,
                             card: {
-                                description: `Once drunk, I always stay drunk until I crash. As such, while sober me is adept at morphing into his drunken half, the reverse is not true. So as I get progressively more sober, panicked doubt creeps up beside the brashness that usually governs my drunken thought. I question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
+                                description: `Once drunk, I always stay drunk until I crash. As such, while the sober me is used to morphing into his drunken half, the reverse is not true. So with the unfamiliar sensation of progressively getting more sober, panicked doubt creeps up beside the brashness that usually governs my drunken thought. I question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -950,9 +947,8 @@ export default {
                         `by`,
                         {
                             anchor: `trail of crumbs,`,
-                            todo: true,
                             card: {
-                                description: `Suddenly fearing the emotional upheaval ahead, I wonder aloud whether it's too late to walk back the damage I've done. But even if I wanted to, I couldn't find my way back. All night I've been nibbling on the bread in my pocket rather than pinching off crumbs for a trail, trading long-term security to satisfy my short-term hunger.`,
+                                description: `Suddenly fearing the emotional upheaval ahead, I wonder whether it's too late to walk back the damage I've done. But even if I wanted to, I couldn't find my way back. All night I've been nibbling on the bread in my pocket rather than pinching off and dropping crumbs for a trail, trading away long-term security to satisfy my short-term hunger.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -974,9 +970,8 @@ export default {
                         {
                             anchor: `Garry's sole witness`,
                             properNoun: true,
-                            todo: true,
                             card: {
-                                description: `All my promises to Sita have proven to be lies, but of course I didn't intend them to be. Circumstances just forced my hand. Still, while I strongly wish to argue my case, I realize that the breakup would be done with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
+                                description: `All my promises to Sita have proven to be lies, but of course I didn't intend them to be. Still, while I really wish to argue my case, I realize the breakup will be done with sooner if I just accept my role as the villain. And so the sober me, called up to testify for his drunken half, stays silent.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -1002,12 +997,18 @@ export default {
                         `Though, the`,
                         {
                             anchor: `master mind`,
-                            todo: true,
                             card: {
-                                description: `In college, I learned that being drunk made it easy to single-mindedly perform unpleasant tasks such as writing papers, and humored myself by comparing my drunken half to a slave taking orders from his master, my sober half. I am now pursuing this very same strategy to break up with Sita.`,
+                                description: [
+                                    `In college, I discovered that being drunk made it easy to single-mindedly perform arduous tasks such as writing`,
+                                    {
+                                        anchor: `term papers,`,
+                                        wiki: `Term_paper`
+                                    },
+                                    `mainly by allowing me not to care about the results. I would humorously compare my drunken self to a slave taking orders from his sober master. It was this same strategy that I would later use to break up with Sita.`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         },
@@ -1020,7 +1021,6 @@ export default {
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Most of the`,
@@ -1028,10 +1028,11 @@ export default {
                                         anchor: `9/11 hijackers`,
                                         wiki: `September_11_attacks`
                                     },
-                                    `were unaware that it was a suicide mission, having prepared instead to make public statements on their religious motivations. Similarly, in orchestrating my plot to be rid of Sita, I had sold my drunken half on the artistic benefits of breaking up, while neglecting to mention the huge emotional sacrifice it would entail.`
+                                    `were unaware that they were on a suicide mission, having prepared instead to make public statements on their religious motivations. Similarly, in orchestrating my plot to be rid of Sita, I had sold my drunken half on all the benefits of breaking up, while neglecting to mention the tremendous sacrifice it would entail.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
                                 }
                             }
                         }
@@ -1061,15 +1062,19 @@ export default {
                         },
                         {
                             anchor: `houris`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In the Quran, the`,
+                                    `In the`,
+                                    {
+                                        anchor: `Quran,`,
+                                        wiki: `Quran`
+                                    },
+                                    `the`,
                                     {
                                         anchor: `houris`,
                                         wiki: `Houri`
                                     },
-                                    `are maidens who await the faithful in paradise. This concept gained notoriety in the West when it was reported that suicide bombers were being lured with the promise of 72 virgins in heaven. But given my quest to date more women, at great cost to myself and greater suffering to others, perhaps all that distinguished me from these disaffected young men was my nation of birth.`
+                                    `are maidens who await the faithful in paradise. This concept gained notoriety in the West when it was reported that suicide bombers were being recruited with the promise of seventy-two virgins in heaven. But given my own disaffected beginning, as well as my quest to date more women at great cost to myself and others, perhaps it was only my nation of birth that separated my fate from theirs.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1081,9 +1086,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `forgo like jewelry`,
-                            todo: true,
                             card: {
-                                description: `As these things go, Sita and I had a turbulent on-again, off-again relationship for a while longer. During one stretch when things were looking rosier than ever, she asked to have the bracelet back to wear again, which I happily obliged. Somehow I had dented it in my pocket that night, however, creating a permanent reminder that certain things can never be undone, only amended.`,
+                                description: `As these things go, Sita and I had a turbulent on-again, off-again relationship for a good while after. During one stretch when things were looking rosier than ever, she asked to have the bracelet back to wear again, which I happily obliged. Somehow it had dented in my pocket, however, creating a lasting reminder that certain things can never be undone, only amended.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
