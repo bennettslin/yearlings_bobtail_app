@@ -198,7 +198,7 @@ export default {
                             anchor: `gramophone,`,
                             wiki: `Phonograph`
                         },
-                        `preserved amidst the wreckage, played a sappy Italian`,
+                        `preserved amid the wreckage, played a sappy Italian`,
                         {
                             anchor: `parlor song.`,
                             wiki: `Parlour_music`

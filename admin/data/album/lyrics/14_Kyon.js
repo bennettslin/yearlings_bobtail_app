@@ -80,7 +80,6 @@ export default {
                         `So you fled to her`,
                         {
                             anchor: `nest on this stork,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In European folklore, the`,
@@ -103,9 +102,8 @@ export default {
                         `history shed, having`,
                         {
                             anchor: `never grown your horns.`,
-                            todo: true,
                             card: {
-                                description: `Of course, my desire to leave Sita was also driven by shame. Any kindness I showed her now could only be viewed as atonement for past crimes. My role in this relationship was to be forever penitent, whereas I could just start over with someone new, untainted by sin.`,
+                                description: `Of course, my continual desire to leave Sita was also driven by shame. Having left her before, any kindness I showed her now could only be viewed as atonement for past crimes. My role in this relationship was to be forever penitent, whereas I could just start over with someone new, untainted by sin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -155,7 +153,7 @@ export default {
                             anchor: `take in her breasts,`,
                             todo: true,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love on some new and uncertain romantic venture. That fear would then manifest in a hormonal desire for nurture over pleasure, I suspect, because I was always struck by how motherly every woman's naked body initially seemed to me.`,
+                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love on some new and uncertain romantic venture. This fear would then manifest in a hormonal desire for nurture over pleasure, I suspect, because I was always struck by how motherly every new woman's naked body initially seemed to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -341,9 +339,8 @@ export default {
                     lyric: [
                         {
                             anchor: `I'll be stronger—`,
-                            todo: true,
                             card: {
-                                description: `Sita was always promising to "get better." It was a weird trick I had unconsciously played on her, as if all the blame didn't lie squarely with me.`,
+                                description: `Sita was always promising to "get better," in her words. It was a weird trick I had unconsciously played on her, as if all the blame didn't lie squarely with me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -380,7 +377,7 @@ export default {
                                         isEmphasis: true,
                                         lyric: `among`
                                     },
-                                    `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness might earn her a privileged place amidst all the other women I desired.`
+                                    `the herd. Resigned to my infidelity, Sita could only hope that her permissiveness might earn her a privileged place amid all the other women I desired.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -477,7 +474,7 @@ export default {
                             anchor: `extra holes`,
                             todo: true,
                             card: {
-                                description: `More holes in one's belt might be needed to support the wider girth that comes from being overfed. As notches, they can also tally sexual conquests.`,
+                                description: `Additional holes in one's belt might be needed to support the wider girth that comes from being overfed. As notches, they can also tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -703,7 +700,7 @@ export default {
                             anchor: `sadness for what it was.`,
                             todo: true,
                             card: {
-                                description: `As friends, Sita and I got along well because we were both very sad people. But in hindsight, my sadness was mostly a product of circumstance, whether from bullying in my youth, or from loneliness as I got older. Sita, on the other hand, suffered from clinical depression. And as it dawned on me that I could be proactive in dealing with it, I grew impatient with her that she was incapable of doing the same.`,
+                                description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my sadness was a product of circumstance, whether from bullying in my youth, or from loneliness as I grew older. Sita, on the other hand, suffered from clinical depression. And as it dawned on me that I could be proactive in dealing with mine, I grew impatient with her that she was incapable of doing the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -732,7 +729,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail,`
                                     },
-                                    `my night terrors grew less frequent, and my misery subsided. Recognizing this boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more indifferent to Sita's needs.`
+                                    `my night terrors grew less frequent, and my misery subsided. Recognizing this boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more inattentive to Sita's needs.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
