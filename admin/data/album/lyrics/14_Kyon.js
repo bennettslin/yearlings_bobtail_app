@@ -151,9 +151,8 @@ export default {
                         `So baby, tell me then, when you`,
                         {
                             anchor: `take in her breasts,`,
-                            todo: true,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love on some new and uncertain romantic venture. This fear would then manifest in a hormonal desire for nurture over pleasure, I suspect, because I was always struck by how motherly every new woman's naked body initially seemed to me.`,
+                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance at romance with some new woman. I had to wonder if this fear manifested in some hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -174,7 +173,7 @@ export default {
                             anchor: `womb you bed?`,
                             todo: true,
                             card: {
-                                description: `Of course, Sita was under no illusion that what I wanted was anything more than to sleep with other women, to compensate for the inadequacy I felt in being the less sexually experienced one in our relationship.`,
+                                description: `Of course, Sita was under no illusion that what I wanted was something other than to sleep with more women, to compensate for being the less sexually experienced one in our relationship.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -229,9 +228,8 @@ export default {
                     lyric: [
                         {
                             anchor: `spurned at first,`,
-                            todo: true,
                             card: {
-                                description: `Given the seeming ease by which I could now attract other women, I grew increasingly indignant over Sita's initial rejection of me, along with the endless hoops I was made to jump through to finally win her over.`,
+                                description: `Given the seeming ease by which I could now attract other women, I grew increasingly indignant over Sita's initial rejection of me, along with the endless hoops I had been made to jump through to finally win her over.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -278,11 +276,11 @@ export default {
                     lyric: [
                         {
                             anchor: `all the points`,
-                            todo: true,
                             card: {
-                                description: `After Sita rejected me, we spent a year getting to know each other as friends, during which time I still tried to impress her without appearing to do so. One day, for example, I solved her friend's Rubik's Cube, a skill I had picked up during my first five-year plan. While her friend raved, I humbly shrugged, as Sita just sat there and smiled. I had become a puzzle for her to figure out.`,
+                                description: `After Sita rejected me, we spent a year getting to know each other as friends, during which time I still tried to impress her without appearing to do so. One day I solved her friend's Rubik's Cube, a skill I had picked up during my first five-year plan. While her friend raved, I humbly shrugged, as Sita sat there and smiled. I had become a puzzle for her to figure out.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
                                 }
                             }
                         },
@@ -294,9 +292,8 @@ export default {
                     lyric: [
                         {
                             anchor: `plunders past`,
-                            todo: true,
                             card: {
-                                description: `The pain of initial rejection was aggravated by the later revelation of Sita's sexual past, and all the more so because it was precisely the painful lessons learnt from these past encounters that had made her wary of my earlier advances. Of course, I missed the irony in being the one who would surely end up providing the most painful lesson by far.`,
+                                description: `The sting of having been rejected by Sita was aggravated by the later revelation of her sexual past. And all the more so because it was precisely the painful lessons learned from these past encounters that had made her wary of my earlier advances. Of course, I missed the irony in surely being the one who would end up providing the most painful lesson by far.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -457,7 +454,7 @@ export default {
                             anchor: `ticklish piglet,`,
                             todo: true,
                             card: {
-                                description: `Perversely, Sita and I were always at our best during the months immediately after getting back together. She got to bask in the knowledge of being the better woman, while I still enjoyed the afterglow of my latest romantic exploit.`,
+                                description: `Perversely, Sita and I were always at our best during the months immediately after getting back together. She got to enjoy the knowledge of being the better woman, while I could bask in the afterglow of my latest sexual exploit.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -472,9 +469,8 @@ export default {
                         `Bursting belly told by`,
                         {
                             anchor: `extra holes`,
-                            todo: true,
                             card: {
-                                description: `Additional holes in one's belt might be needed to support the wider girth that comes from being overfed. As notches, they can also tally sexual conquests.`,
+                                description: `Additional notches might be carved in someone's belt to support a distended girth after overfeeding. Or perhaps they serve to tally sexual conquests.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -687,7 +683,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Recognizing my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. While Hinduism is no different from Buddhism in its end goal of transcendent release from the cycle of rebirth, which I found problematic as a child, I was attracted to its sprawling pantheon of deities and avatars. It just seemed like the more details there are, the more room you have to explore the divine. Anyway, I never self-identified as a Hindu during those years, but I definitely felt like one.`
+                                    `Recognizing my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. Hinduism is no different from Buddhism in its end goal of transcendent release from the cycle of rebirth, which I found problematic as a child. I was attracted to its sprawling pantheon of deities and avatars. It just seemed like the more details there are, the more room you have to explore the divine.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -721,15 +717,14 @@ export default {
                                 `'s your priority,`
                             ],
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `As I began to work resolutely on`,
+                                    `As I began to work on`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail,`
                                     },
-                                    `my night terrors grew less frequent, and my misery subsided. Recognizing this boon for what it was, I became ever more determined to subsume myself in my ambitions, which made me even more inattentive to Sita's needs.`
+                                    `my night terrors grew less frequent, and my misery subsided. Recognizing this boon for what it was, I became subsumed by my ambitions, which made me even more inattentive to Sita's needs.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -746,7 +741,7 @@ export default {
                             anchor: `I'll gladly wait.`,
                             todo: true,
                             card: {
-                                description: `But Sita happily encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was largely uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
+                                description: `Still, Sita gladly encouraged my artistic pretensions, as she believed them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

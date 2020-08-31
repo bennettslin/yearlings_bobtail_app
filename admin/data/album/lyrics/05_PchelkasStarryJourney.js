@@ -199,7 +199,7 @@ export default {
                             anchor: `buy a fortress`,
                             todo: true,
                             card: {
-                                description: `Once upon visiting our well-to-do cousin, we helped him try out his new lifesize wooden castle. It was so much fun that I asked my parents for one as a combined birthday and Christmas gift, which I always had as an option since my birthday is in November. Unfortunately, I learned that some toys are too expensive to count even for two gifts.`,
+                                description: `Once upon visiting our well-to-do cousin, we helped him try out his new lifesize wooden fort. It was so much fun that I asked my parents for one as a combined birthday and Christmas gift, which I always had as an option since my birthday is in November. Unfortunately, some toys are too expensive to count for even two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -298,7 +298,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `My instinctive response to being bullied was to rationally protest against its injustice. This was as effective as the bleating of a calf being led to slaughter.`,
+                                    description: `My response to being bullied was to rationally protest against its injustice. This was as effective as the bleating of a calf being led to slaughter.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
@@ -922,7 +922,12 @@ export default {
                                         anchor: `Omerta`,
                                         wiki: `Omertà`
                                     },
-                                    `is the Mafia's code of honor that praises silence and refusal to cooperate with authorities. I wasn't the first kid to notice parallels between school life and the criminal world, I'm sure.`
+                                    `is the`,
+                                    {
+                                        anchor: `Mafia's`,
+                                        wiki: `American_Mafia`
+                                    },
+                                    `code of silence that prohibits cooperation with authorities. I wasn't the first kid to notice parallels between the unspoken rules of the schoolyard and those of the criminal world, of course.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -947,7 +952,7 @@ export default {
                             anchor: `muted youths lapsed.`,
                             todo: true,
                             card: {
-                                description: `While I only spent a year faking autism, the social repercussions lasted much longer, as I was now and forever "that kid" to others. It's not that I lacked the will to correct their perceptions. I was as baffled as anyone else about what had just happened, and there were no guide books for where to go from there.`,
+                                description: `While I only spent a year faking autism, the social repercussions lasted much longer, as I was now and forever remembered as the kid who did that. It's not that I lacked the will to repair my standing. I was as baffled as anyone else about what had just happened, and there were no guide books for where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -970,7 +975,7 @@ export default {
                                         anchor: `cryptogram,`,
                                         wiki: `Cryptogram`
                                     },
-                                    `the more hints it drops, and thus the easier it gets to solve. Conversely, the less I said, the fewer openings I gave others to get under my skin.`
+                                    `the more clues it gives away, and thus the easier it is to solve. On the other hand, the less I spoke, the fewer openings I gave to the bullies to get under my skin.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true

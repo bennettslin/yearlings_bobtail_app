@@ -19,6 +19,7 @@
     * 2 M (last two)
     * 1 Golden Cord (potter's field)
     * 1 Ash (Algonquin)
+    * 1 Kyon (Hindu)
 
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.
