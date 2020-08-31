@@ -20,6 +20,7 @@
     * 1 Golden Cord (potter's field)
     * 1 Ash (Algonquin)
     * 1 Kyon (Hindu)
+    * 2 Pchelka (fortress, virtue)
 
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.

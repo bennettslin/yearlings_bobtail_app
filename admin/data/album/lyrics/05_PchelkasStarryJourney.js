@@ -33,7 +33,6 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `Pchelka and Mushka were dogs sent into orbit under the`,
@@ -62,10 +61,9 @@ export default {
                             `But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach.`,
-                                todo: true,
                                 card: {
                                     description: [
-                                        `While being in a mail-order cult was a painful experience, there is a comic absurdity to it as well, which this line from`,
+                                        `Being in a mail-order cult was a traumatic experience, but there was a comic absurdity to it as well. When I read this line from`,
                                         {
                                             anchor: `Leonard Cohen's`,
                                             wiki: `Leonard_Cohen`
@@ -74,11 +72,11 @@ export default {
                                         {
                                             isItalic: true,
                                             lyric: {
-                                                anchor: `Beautiful Losers`,
+                                                anchor: `Beautiful Losers,`,
                                                 wiki: `Beautiful_Losers`
                                             }
                                         },
-                                        `captures beautifully. In one scene, the character F. tires of getting bullied at the beach. He signs up for the Charles Axis bodybuilding course advertised in a comic book, only to discover that Charles Axis is the one who bullies him.`
+                                        `I thought it captured the sentiment perfectly. In one scene, the character F. tires of getting bullied at the beach and signs up for the Charles Axis bodybuilding course advertised in a comic book. Only later does he discover that Charles Axis is the one who bullies him.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -199,7 +197,7 @@ export default {
                             anchor: `buy a fortress`,
                             todo: true,
                             card: {
-                                description: `Once upon visiting our well-to-do cousin, we helped him try out his new lifesize wooden fort. It was so much fun that I asked my parents for one as a combined birthday and Christmas gift, which I always had as an option since my birthday is in November. Unfortunately, some toys are too expensive to count for even two gifts.`,
+                                description: `Once upon visiting a well-to-do cousin, we helped him try out his new lifesize wooden fort. It was so much fun that I asked my parents for one as a combined birthday and Christmas gift, which was always an option for me since my birthday is in November. Unfortunately, some toys are too pricey to count for even two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -295,12 +293,10 @@ export default {
                         `Oh brother, when all you`,
                         {
                             anchor: `know is bleat,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `My response to being bullied was to rationally protest against its injustice. This was as effective as the bleating of a calf being led to slaughter.`,
+                                    description: `Unfortunately, shrill protests against the injustice of being bullied are about as effective as the bleating of a calf being led to slaughter.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true,
                                         [OBSERVATION]: true
                                     }
                                 },
@@ -317,11 +313,11 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
-                            todo: true,
                             card: {
-                                description: `I was well-liked in elementary school for being physically small and ever eager to draw cartoon figures for anyone who asked. But these very traits that once made me a hero suddenly marked me as easy prey in middle school, and I was ill-prepared.`,
+                                description: `I was well-liked in elementary school despite being small in stature and absorbed in my art projects. Besides being cute and harmless, I eagerly made drawings for anyone who asked. But these very traits that had once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
                                 }
                             }
                         },
@@ -635,16 +631,25 @@ export default {
                         `dragged to sled by`,
                         {
                             anchor: `hunter's belt`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `The constellations Canis Major and Canis Minor, or "greater dog" and "lesser dog," are said to follow that of Orion, named after the`,
+                                        `The constellations`,
                                         {
-                                            anchor: `hunter in Greek mythology,`,
-                                            wiki: `Orion_(mythology)`
+                                            anchor: `Canis Major`,
+                                            wiki: `Canis_Major`
                                         },
-                                        `which can be identified by three stars in a row that represent his belt.`
+                                        `and`,
+                                        {
+                                            anchor: `Canis Minor,`,
+                                            wiki: `Canis_Minor`
+                                        },
+                                        `or "greater dog" and "lesser dog," are said to follow that of`,
+                                        {
+                                            anchor: `Orion,`,
+                                            wiki: `Orion_(constellation)`
+                                        },
+                                        `named after the hunter in Greek mythology, which can be identified by three stars in a row that represent his belt.`
                                     ]
                                 },
                                 {
@@ -915,7 +920,6 @@ export default {
                         `as`,
                         {
                             anchor: `omerta`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -927,7 +931,7 @@ export default {
                                         anchor: `Mafia's`,
                                         wiki: `American_Mafia`
                                     },
-                                    `code of silence that prohibits cooperation with authorities. I wasn't the first kid to notice parallels between the unspoken rules of the schoolyard and those of the criminal world, of course.`
+                                    `code of silence that discourages cooperation with authorities. I wasn't the first kid who noticed parallels between the unspoken rules of the schoolyard and those of the criminal world, of course.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -950,9 +954,8 @@ export default {
                         `Stung by venomous vipers, our`,
                         {
                             anchor: `muted youths lapsed.`,
-                            todo: true,
                             card: {
-                                description: `While I only spent a year faking autism, the social repercussions lasted much longer, as I was now and forever remembered as the kid who did that. It's not that I lacked the will to repair my standing. I was as baffled as anyone else about what had just happened, and there were no guide books for where to go from there.`,
+                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who once did that really weird thing. It's not that I lacked the will to repair my standing. But I was as baffled as anyone else about the psychological forces that prompted such behavior in the first place, and there were no guide books telling me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -967,7 +970,6 @@ export default {
                         `We knew the`,
                         {
                             anchor: `shortest cyphers`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The lengthier the`,
@@ -975,7 +977,7 @@ export default {
                                         anchor: `cryptogram,`,
                                         wiki: `Cryptogram`
                                     },
-                                    `the more clues it gives away, and thus the easier it is to solve. On the other hand, the less I spoke, the fewer openings I gave to the bullies to get under my skin.`
+                                    `the more clues it gives away, and thus the easier it is to solve. On the other hand, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me. And the less they then bothered to try.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
