@@ -14,7 +14,6 @@
 * Make sure narrative and backstory are never together.
 
 * Observation annotations
-    * 1 Grasshoppers (Walkman)
     * 1 Good Night (pry)
     * 2 M (last two)
     * 1 Golden Cord (potter's field)

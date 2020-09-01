@@ -247,14 +247,7 @@ export default {
                         {
                             anchor: `Once I metamorphose,`,
                             card: {
-                                description: [
-                                    `In other words, upon completion of my`,
-                                    {
-                                        anchor: `metamorphosis,`,
-                                        wiki: `Metamorphosis`
-                                    },
-                                    `it would then be the case that once I "met a Mara, for" certain I was to impress her.`
-                                ],
+                                description: `In other words, upon completion of my metamorphosis, it would then be the case that once I "met a Mara, for" certain I was to impress her.`,
                                 dotKeys: {
                                     [PUN]: true
                                 }

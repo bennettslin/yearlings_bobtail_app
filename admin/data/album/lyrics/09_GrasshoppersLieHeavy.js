@@ -671,7 +671,7 @@ export default {
                             anchor: `tripped on runner's high.`,
                             card: {
                                 description: [
-                                    `After a grueling shift, all I had to look forward to was the long slog back home. So it would have been hard to feel gracious toward any nighttime jogger passing me by and feeling the euphoria of a`,
+                                    `After a grueling shift, all I could look forward to was the long slog back home. So it would have been hard to feel gracious toward any nighttime jogger passing me by and feeling the euphoria of a`,
                                     {
                                         anchor: `runner's high.`,
                                         wiki: `Neurobiological_effects_of_physical_exercise`
@@ -691,26 +691,20 @@ export default {
                         `Below the`,
                         {
                             anchor: `window of your Walkman`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `The`,
-                                        {
-                                            anchor: `Walkman`,
-                                            wiki: `Walkman`
-                                        },
-                                        `was a portable cassette player.`
-                                    ]
-                                },
-                                {
-                                    description: `I would listen to mixtapes on the walk home, seemingly absorbed in my music as I wished pratfalls upon others, much as a child might duck beneath a window after pulling a prank.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [OBSERVATION]: true
-                                    }
+                            card: {
+                                description: [
+                                    `In those days, I was almost never without my`,
+                                    {
+                                        anchor: `Walkman,`,
+                                        wiki: `Walkman`
+                                    },
+                                    `a portable cassette player. So if I ever wished pratfalls upon others, I could just pretend to be absorbed in my music, much like a child ducking beneath a window after pulling a prank.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
                                 }
-                            ]
+                            }
                         },
                         `you hide.`
                     ]

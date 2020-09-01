@@ -88,7 +88,7 @@ export default {
                             anchor: `record highs.`,
                             todo: true,
                             card: {
-                                description: `It's hard to begin writing a letter. But one can always talk about the weather.`,
+                                description: `It's hard to begin writing a letter. But you can always start by talking about the weather.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }

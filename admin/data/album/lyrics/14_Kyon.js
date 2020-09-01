@@ -683,6 +683,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
+                                    // TODO: Mention never having resolved which is scarier.
                                     `Recognizing my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. Hinduism is no different from Buddhism in its end goal of transcendent release from the cycle of rebirth, which I found problematic as a child. I was attracted to its sprawling pantheon of deities and avatars. It just seemed like the more details there are, the more room you have to explore the divine.`
                                 ],
                                 dotKeys: {

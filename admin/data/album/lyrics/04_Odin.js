@@ -292,7 +292,6 @@ export default {
                         `do`,
                         {
                             anchor: `sweet dream's ichors`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -389,7 +388,12 @@ export default {
                                         anchor: `salamanders`,
                                         wiki: `Salamander`
                                     },
-                                    `begin life underwater, then lose their gills through metamorphosis. So the same conditions needed for them to survive as larvae suddenly become deadly in the adult stage, and vice versa.`
+                                    `begin life underwater, then lose their gills through`,
+                                    {
+                                        anchor: `metamorphosis.`,
+                                        wiki: `Metamorphosis`
+                                    },
+                                    `So the same conditions needed for them to survive as larvae suddenly become deadly in the adult stage, and vice versa.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -452,7 +456,6 @@ export default {
                         },
                         {
                             anchor: `oriental`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The word`,
@@ -460,7 +463,22 @@ export default {
                                         anchor: `"Oriental"`,
                                         wiki: `Orient`
                                     },
-                                    `wasn't a pejorative when I was growing up. It's even printed on my birth certificate, after all. I learned of its incorrectness during the time when "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me.`
+                                    `wasn't considered a pejorative when I was growing up. It's even printed on my birth certificate. I learned of its`,
+                                    {
+                                        anchor: `political incorrectness`,
+                                        wiki: `Political_correctness`
+                                    },
+                                    `during the same time when`,
+                                    {
+                                        anchor: `"queer"`,
+                                        wiki: `Queer`
+                                    },
+                                    `was being reclaimed by the`,
+                                    {
+                                        anchor: `gay community.`,
+                                        wiki: `LGBT_community`
+                                    },
+                                    `The latter approach always made more sense to me.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -526,7 +544,6 @@ export default {
                         `As you plummet down from`,
                         {
                             anchor: `couplets past;`,
-                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -622,7 +639,11 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `The narrator Ishmael in Herman Melville's`,
+                                    `The narrator in`,
+                                    {
+                                        anchor: `Herman Melville's`,
+                                        wiki: `Herman_Melville`
+                                    },
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -630,7 +651,17 @@ export default {
                                             wiki: `Moby-Dick`
                                         }
                                     },
-                                    `is an outcast like his namesake, the first son of Abraham. While one was banished to the desert, the other wanders the wilderness of the ocean. It is to these metaphorical dunes of the ocean that I now flee as well.`
+                                    `is an outcast like his namesake`,
+                                    {
+                                        anchor: `Ishmael,`,
+                                        wiki: `Ishmael`
+                                    },
+                                    `the first son of`,
+                                    {
+                                        anchor: `Abraham.`,
+                                        wiki: `Abraham`
+                                    },
+                                    `While one was banished to the desert, the other wanders the wilderness of the ocean. It is to these metaphorical dunes of the ocean that I now flee as well.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -658,18 +689,11 @@ export default {
                         `that was`,
                         {
                             anchor: `safe for a heathen…`,
-                            todo: true,
                             card: {
-                                description: [
-                                    `In the Book of Genesis, God promised to make`,
-                                    {
-                                        anchor: `Ishmael`,
-                                        wiki: `Ishmael`
-                                    },
-                                    `into a great nation, though he would not inherit Abraham's house. Coming through less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`
-                                ],
+                                description: `Being an illegitimate son, Ishmael could not inherit Abraham's house, but God promised to make him into a great nation. Coming from less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
+                                    [OBSERVATION]: true,
+                                    [REFERENCE]: true
                                 }
                             }
                         }
@@ -770,7 +794,6 @@ export default {
                         `would the`,
                         {
                             anchor: `rondel of her eye`,
-                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -778,7 +801,22 @@ export default {
                                         anchor: `rondel`,
                                         wiki: `Rondel_(poem)`
                                     },
-                                    `is a verse form that originated in French poetry. It can also refer to anything round, like a ball. The "apple of one's eye" is an Old English misreading of a Biblical Hebrew idiom that more accurately translates to "ball of one's eye." My hope that I could be the object of Sasha's affection was based on a similar misreading.`
+                                    `is a verse form that originated in French poetry, but it can also refer to anything round, like a ball. The`,
+                                    {
+                                        anchor: `"apple of one's eye"`,
+                                        wiki: `Apple_of_my_eye`
+                                    },
+                                    `is an`,
+                                    {
+                                        anchor: `Old English`,
+                                        wiki: `Old_English`
+                                    },
+                                    `misreading of a`,
+                                    {
+                                        anchor: `Biblical Hebrew`,
+                                        wiki: `Biblical_Hebrew`
+                                    },
+                                    `idiom that more accurately translates to "ball of one's eye." My hope that I could be the object of Sasha's affection was based on a similar misreading.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -810,7 +848,6 @@ export default {
                         `be`,
                         {
                             anchor: `stored in this neck?`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Due to another mistranslation, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as`,
@@ -823,7 +860,17 @@ export default {
                                         anchor: `Adam`,
                                         wiki: `Adam`
                                     },
-                                    `ate the forbidden fruit of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their original sin. Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`
+                                    `ate the`,
+                                    {
+                                        anchor: `forbidden fruit`,
+                                        wiki: `Forbidden_fruit`
+                                    },
+                                    `of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their`,
+                                    {
+                                        anchor: `original sin.`,
+                                        wiki: `Original_sin`
+                                    },
+                                    `Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1061,7 +1108,6 @@ export default {
                         `as not for wrapping by a`,
                         {
                             anchor: `cellophane sylph,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In the works of Paracelsus, the`,
@@ -1069,7 +1115,12 @@ export default {
                                         anchor: `sylph`,
                                         wiki: `Sylph`
                                     },
-                                    `is the elemental of air, and is depicted as a fairy with wings of gauze. Now, if the wings were made from cellophane, they would hold the additional properties of being transparent and sealing in heat.`
+                                    `is the elemental of air, often depicted as a fairy with wings of gauze. But if the wings were made of`,
+                                    {
+                                        anchor: `cellophane,`,
+                                        wiki: `Cellophane`
+                                    },
+                                    `they would also seal in heat.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1142,7 +1193,7 @@ export default {
                         {
                             anchor: `Buoy bobs`,
                             card: {
-                                description: `As buoys bob in the ocean, who's to say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
+                                description: `As buoys bob in an ocean filled with sea serpents, who's to say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true
@@ -1180,7 +1231,6 @@ export default {
                     },
                     lyricRight: {
                         anchor: `shivaree towards shivah seat`,
-                        todo: true,
                         cards: [
                             {
                                 description: [
@@ -1193,7 +1243,7 @@ export default {
                                         anchor: `shivah`,
                                         wiki: `Shiva_(Judaism)`
                                     },
-                                    `refers to a period of mourning in Judaism after a family member passes away. In other words, my bad luck to not be born Jewish has cost me any hope of spending a lifetime with Sasha, from marriage until death.`
+                                    `refers to a period of mourning in Judaism after a family member passes away. In other words, my bad luck not to be born Jewish has cost me any hope of spending a lifetime with Sasha from marriage until death.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1279,12 +1329,17 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `As a child, I experienced night terrors related to my constant fear of death. Whenever I woke up screaming, my mother would console me with the promise of reincarnation. But this only confused me, since the end goal of Buddhism is`,
+                                    `As a child, I experienced night terrors related to my fear of death. Whenever I woke up screaming, my mother would comfort me with the promise of`,
+                                    {
+                                        anchor: `reincarnation.`,
+                                        wiki: `Reincarnation`
+                                    },
+                                    `But this confused me, since the end goal of Buddhism is`,
                                     {
                                         anchor: `nirvana,`,
                                         wiki: `Nirvana_(Buddhism)`
                                     },
-                                    `a release from the cycle of rebirth through annihilation of the soul. Awaiting my next life, then, knowing that it might be my last, just seemed like getting old and dying on a grander scale.`
+                                    `a release from the cycle of rebirth through annihilation of the soul. So reincarnating right up until my final life just seemed like getting old and dying on a grander scale.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1303,9 +1358,8 @@ export default {
                         `Can a`,
                         {
                             anchor: `holed up hostage`,
-                            todo: true,
                             card: {
-                                description: `And yet, the thought of being stuck with a soul forever, a fate promised by the faiths of my classmates, seemed every bit as dreadful.`,
+                                description: `And yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, seemed every bit as dreadful.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -1385,10 +1439,10 @@ export default {
                                 description: [
                                     `The tortoise defeats the hare in`,
                                     {
-                                        anchor: `Aesop's fable`,
+                                        anchor: `Aesop's fable,`,
                                         wiki: `The_Tortoise_and_the_Hare`
                                     },
-                                    `only because the hare falls asleep. Similarly, while tortoises are known to live over a century, I had them beat in longevity if I could just awaken to the virtues of faith. Given the bleak alternative, that was certainly my wish.`
+                                    `but only because the hare falls asleep. Similarly, while tortoises are known to live over a century, I had them beat in longevity if I could just awaken to the virtues of faith. Given the bleak alternative, that was certainly my wish.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1539,7 +1593,6 @@ export default {
                         `while`,
                         {
                             anchor: `mermaids smile`,
-                            todo: true,
                             card: {
                                 description: [
                                     `T.S. Eliot's`,
@@ -1547,7 +1600,7 @@ export default {
                                         anchor: `"The Love Song of J. Alfred Prufrock"`,
                                         wiki: `The_Love_Song_of_J._Alfred_Prufrock`
                                     },
-                                    `examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they do not sing for him. Similarly, while my resignation has turned the sea serpents into smiling mermaids, they still do not smile for me.`
+                                    `examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they won't sing for him. Similarly, while my resignation has turned the fearsome sea serpents into smiling mermaids, they don't smile for me.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1561,9 +1614,19 @@ export default {
                         {
                             anchor: `Thursday's child`,
                             properNoun: true,
-                            todo: true,
                             card: {
-                                description: `Wednesday is "Odin's day" in Old English, and I was born on a Thursday. So my day literally begins as Odin's day ends.`,
+                                description: [
+                                    {
+                                        anchor: `Wednesday`,
+                                        wiki: `Wednesday`
+                                    },
+                                    `means "Odin's day" in Old English, and I was born on a`,
+                                    {
+                                        anchor: `Thursday.`,
+                                        wiki: `Thursday`
+                                    },
+                                    `So my day literally begins where Odin's day ends.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -1604,14 +1667,13 @@ export default {
                         `has a`,
                         {
                             anchor: `mile less far to go…`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `"Monday's Child"`,
                                         wiki: `Monday's_Child`
                                     },
-                                    `is a nursery rhyme that predicts a child's fortune based on weekday of birth. Thursday's child is promised to have "far to go," and indeed, the distance I have left to cover feels dispiritingly vast. Still, I am now one day closer than when the day began…`
+                                    `is a nursery rhyme that predicts a child's fortune based on their weekday of birth. Thursday's child is promised to have "far to go," and indeed, the distance I have left to cover feels depressingly vast. Still, I'm now one day closer than when the day began…`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
