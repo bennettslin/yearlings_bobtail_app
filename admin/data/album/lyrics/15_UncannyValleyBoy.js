@@ -190,7 +190,6 @@ export default {
                         `I ponder the`,
                         {
                             anchor: `forespoken monster`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In`,
@@ -201,17 +200,24 @@ export default {
                                             wiki: `The_Monster_at_the_End_of_This_Book:_Starring_Lovable,_Furry_Old_Grover`
                                         }
                                     },
-                                    `Sesame Street's Grover tries to prevent the child reader from turning to the last page of the book, fearful of the monster lying in wait. As it turns out, the only monster present at the end is Grover himself, much to his embarrassment.`
+                                    {
+                                        anchor: `Sesame Street's`,
+                                        wiki: `Sesame_Street`
+                                    },
+                                    {
+                                        anchor: `Grover`,
+                                        wiki: `Grover`
+                                    },
+                                    `tries to prevent the child reader from turning to the last page of the book, fearful of the monster lying in wait. As it turns out, the only monster present at the end is Grover himself, much to his embarrassment.`
                                 ]
                             }
                         },
                         `at the end of this`,
                         {
                             anchor: `book of yours…`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Like Grover, I was trapped inside a self-referential work, hoping to shape the outcome toward which I was being relentlessly thrust. Unlike Grover, however, I already had an inkling of who the monster at the end of`,
+                                    `Like Grover, I was trapped inside a self-referential work, hoping to shape in real time the outcome toward which I was being relentlessly thrust. But unlike Grover, I already had an inkling of who the monster at the end of`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`
@@ -564,9 +570,8 @@ export default {
                         `safe on your`,
                         {
                             anchor: `tiny planet`,
-                            todo: true,
                             card: {
-                                description: `Like Saint-Exupéry's prince, I was also a visitor from beyond the stars, who once saw the world at large through guileless eyes.`,
+                                description: `Like the little prince, I was also a visitor from beyond the stars, who once saw the world at large through guileless eyes.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -581,7 +586,6 @@ export default {
                         `you finally granted their`,
                         {
                             anchor: `nutshells are rigged,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -589,9 +593,15 @@ export default {
                                         anchor: `shell game`,
                                         wiki: `Shell_game`
                                     },
-                                    `is a classic swindle in which a small ball is placed under three shells, which are then shuffled in plain view. Typically, sleight of hand is used to misplace the ball. Having recognized life to be a shell game, I will never be suckered again. And heck, now I can be the one to do some grifting myself.`
+                                    `is a classic swindle in which a small ball is placed under three nutshells, which are then shuffled in plain view. Typically,`,
+                                    {
+                                        anchor: `sleight of hand`,
+                                        wiki: `Sleight_of_hand`
+                                    },
+                                    `is used to misplace the ball. Having recognized life to be an endless series of shell games, I vowed never to be suckered again. And now I could be the one to do some grifting myself.`
                                 ],
                                 dotKeys: {
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -660,7 +670,6 @@ export default {
                         `smugly prepped to`,
                         {
                             anchor: `haze the new latecomers.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Some organizations are infamous for the degrading`,
@@ -668,7 +677,7 @@ export default {
                                         anchor: `hazing rituals`,
                                         wiki: `Hazing`
                                     },
-                                    `that new recruits are made to go through. Having endured such abuse for so long myself, I finally concluded that it was needed to toughen me up before I could join the rest of society. And I now had no qualms about doling it out to others.`
+                                    `that new recruits are made to go through. Having endured such abuse for so long myself, I finally concluded that I couldn't have toughened up any other way. And now I had no qualms about doling it out to others.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -771,12 +780,12 @@ export default {
                             anchor: `testifiers' lore?`,
                             card: {
                                 description: [
-                                    `After slaying Ravana, Rama forced Sita to walk through`,
+                                    `After slaying Ravana, Rama made Sita walk through`,
                                     {
                                         anchor: `sacrificial flames`,
                                         wiki: `Trial_by_ordeal`
                                     },
-                                    `to prove that she had remained chaste throughout her abduction. Sita complied, and escaped from this "test of fire" unharmed.`
+                                    `to prove she had remained chaste throughout her abduction. Sita complied and escaped from this "test of fire" unharmed.`
                                 ],
                                 dotKeys: {
                                     [PUN]: true
@@ -803,17 +812,15 @@ export default {
                                         isItalic: true,
                                         lyric: `Ramayana`
                                     },
-                                    `began to broadcast throughout India. Traffic and train stations would come to a standstill each week as the country sat glued to their television screens.`
+                                    `began its broadcast throughout India. Traffic and train stations would come to a standstill each week as the country sat glued to their television screens.`
                                 ]
                             }
                         },
                         `to watch you`,
                         {
                             anchor: `fail your Sita`,
-                            todo: true,
                             card: {
-                                // TODO: Mention discontent with having Sita.
-                                description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. The same self-serving chauvinism is what prompted my need to be the more sexually experienced partner, which led me to stray from Sita and shack up with other women.`,
+                                description: `Contemporary audiences tend to find it problematic that Rama's first act upon reuniting with Sita was to demand proof of her purity. But the same chauvinism is what prompted my need to be the more sexually experienced partner. I couldn't simply hold Sita with gratitude and accept whatever circumstances were needed to lead up to this moment.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -1173,9 +1180,8 @@ export default {
                         `what's left of what these`,
                         {
                             anchor: `faces you flip override,`,
-                            todo: true,
                             card: {
-                                description: `At some point, I noticed that I put on drastically different faces for different people and different situations. This wasn't the case when I was a child, which could only mean that there was once a true me, and now there wasn't.`,
+                                description: `At some point, I noticed I wore drastically different faces for different people in different situations. This wasn't the case when I was a child, which could only mean there was once a true me, and now there wasn't.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -1189,9 +1195,8 @@ export default {
                         `and all these`,
                         {
                             anchor: `pages you've ripped`,
-                            todo: true,
                             card: {
-                                description: `My parents lament my fervent readiness to devalue past sentiments for the sake of present ambitions, as if I were tearing out old pages from a scrapbook to free up space for new inserts.`,
+                                description: `My parents lament my eagerness to ditch past sentiments in favor of present ambitions, as if I were tearing out old pages from a scrapbook to free up space for new inserts.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -1220,11 +1225,10 @@ export default {
                         `their`,
                         {
                             anchor: `sun tinkles light`,
-                            todo: true,
                             card: {
-                                description: `In the nightmare, I was now ruler of the neighborhood, showering my subjects in my urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
+                                description: `In the nightmare, I was now ruler of the neighborhood as I showered my subjects in urine, their sole means of subsistence. In hindsight, my brain was probably telling me to wake up and use the bathroom.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
+                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -1280,9 +1284,8 @@ export default {
                                 },
                                 `'s sake,`
                             ],
-                            todo: true,
                             card: {
-                                description: `My latest five-year plan, like the one before it, was meant to yield dramatic improvements in my life through a major overhaul of the underlying system. As such, it just wasn't possible to question it while the work remained in progress.`,
+                                description: `My latest five-year plan, like the one before it, was meant to yield dramatic improvements in my life through a major overhaul of the underlying system. Since it couldn't be left half completed, there was nothing to question while the work remained in progress.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -1346,7 +1349,6 @@ export default {
                                     lyric: `Bildungsroman,`
                                 }
                             ],
-                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -1382,16 +1384,15 @@ export default {
                         `shouldn't you first be sure you've`,
                         {
                             anchor: `finally become someone?`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `Of course, a key component of the`,
+                                        `But a key component of the`,
                                         {
                                             isItalic: true,
                                             lyric: `Bildungsroman`
                                         },
-                                        `is the protagonist's moral and psychological growth from youth into adulthood. Without it, there is no story to be told, a point to which my parents slyly allude here.`
+                                        `is the main character's moral and psychological growth from youth into adulthood. Without it, there is no story to be told, a point to which my parents slyly allude here.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
@@ -1424,10 +1425,13 @@ export default {
                 {
                     lyric: {
                         anchor: `…Maranatha!`,
-                        todo: true,
                         card: {
                             description: [
-                                `In my case, however, the syllables slowly shifted until I was chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I embraced instead the promise of acceptance by Western society and its women, as represented by an expression of Western faith. In the New Testament,`,
+                                `In my case, however, the syllables slowly shift until I'm chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I find salvation in the embrace of Western women, as represented here by an expression of Western faith. In the`,
+                                {
+                                    anchor: `New Testament,`,
+                                    wiki: `New_Testament`
+                                },
                                 {
                                     isItalic: true,
                                     lyric: {
@@ -1435,7 +1439,12 @@ export default {
                                         wiki: `Maranatha`
                                     }
                                 },
-                                `is Aramaic for "our Lord has come."`
+                                `is`,
+                                {
+                                    anchor: `Aramaic`,
+                                    wiki: `Aramaic`
+                                },
+                                `for "our Lord has come."`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
