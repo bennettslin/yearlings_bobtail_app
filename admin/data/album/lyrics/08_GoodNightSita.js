@@ -314,9 +314,8 @@ export default {
                         `they just`,
                         {
                             anchor: `always know to pry`,
-                            todo: true,
                             card: {
-                                description: `And no one else seems to sweat the risk of coming on too strong either. Confident that they're just as much there to be won over, they show curiosity by pressing their date for details, the way a starfish will pry open an oyster resting on the seafloor.`,
+                                description: `And no one else seems to sweat the risk of coming on too strong either. They just keep the conversation flowing by pressing their date for more and more details, the way a starfish will pry open an oyster resting on the seafloor.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
