@@ -1294,7 +1294,14 @@ export default {
                             anchor: `silhouettes of torn rides`,
                             todo: true,
                             card: {
-                                description: `Watching the ocean waves rise and fall, I am reminded of roller coasters that shaped the skyline of my youth, which were erected and dismantled with a similar transience.`,
+                                description: [
+                                    `Watching the ocean waves rise and fall, I'm reminded of the`,
+                                    {
+                                        anchor: `traveling carnivals`,
+                                        wiki: `Traveling_carnival`
+                                    },
+                                    `that shaped the skyline of my youth. Those past amusement rides are now being erected and dismantled in my memories with the same transience of ocean waves.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -1450,12 +1457,17 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `The tortoise defeats the hare in`,
+                                    `The`,
                                     {
-                                        anchor: `Aesop's fable,`,
+                                        anchor: `tortoise defeats the hare`,
                                         wiki: `The_Tortoise_and_the_Hare`
                                     },
-                                    `but only because the hare falls asleep. Similarly, while tortoises are known to live over a century, I had them beat in longevity if I could just awaken to the virtues of faith. Given the bleak alternative, that was certainly my wish.`
+                                    `in`,
+                                    {
+                                        anchor: `Aesop's fable,`,
+                                        wiki: `Aesop's_Fables`
+                                    },
+                                    `but only because the hare falls asleep. Similarly, while tortoises are known to live over a century, I had them beat in longevity if I could awaken to the calling of faith.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
