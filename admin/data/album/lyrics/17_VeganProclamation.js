@@ -60,7 +60,7 @@ export default {
                                     anchor: `can't have both.`,
                                     todo: true,
                                     card: {
-                                        description: `A friend offered this advice when he gave me his turntable, and as it turns out, what can be said for vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my most thoughtful deeds would always be negated by my most hurtful ones. I couldn't keep two separate selves, with one being praised for my kindness, and the other taking the blame for my selfish desires. I couldn't be both kinds of people.`,
+                                        description: `A friend offered this advice when he gave me his turntable, and as it turns out, what can be said for vinyl records holds as well for life decisions. I learned this the hard way when I saw that my most thoughtful deeds would always be negated by my most hurtful ones. I couldn't keep two separate selves, with one being praised for my kindness, and the other taking the blame for my selfish desires. I couldn't be both kinds of people.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true

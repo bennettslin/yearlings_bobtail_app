@@ -1051,12 +1051,12 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Standing on the ocean beach, I notice a steel whistle buried in the sand. Once blown by a`,
+                                    `Standing on the ocean beach, I notice a steel whistle buried in the sand, perhaps dropped by a `,
                                     {
-                                        anchor: `lifeguard`,
+                                        anchor: `lifeguard.`,
                                         wiki: `Lifeguard`
                                     },
-                                    `to warn of danger, it is now forever lost. Some dangers come with no warning, after all.`
+                                    `Its piercing sound will never again warn of danger. Though perhaps that's just as well for me, since some dangers come with no warning.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1339,7 +1339,6 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
-                            todo: true,
                             card: {
                                 description: [
                                     `As a child, I experienced night terrors related to my fear of death. Whenever I woke up screaming, my mother would comfort me with the promise of`,
@@ -1352,7 +1351,7 @@ export default {
                                         anchor: `nirvana,`,
                                         wiki: `Nirvana_(Buddhism)`
                                     },
-                                    `a release from the cycle of rebirth through annihilation of the soul. So reincarnating right up until my final life just seemed like getting old and dying on a grander scale.`
+                                    `when the soul is annihilated and released from its cycle of rebirth. So being reborn again and again, but only up until my last life, just seemed like aging and dying on a grander scale.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1390,6 +1389,7 @@ export default {
                             // From Willy the Cocoa ("unsalvaged souls")
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
                             todo: true,
+                            // TODO: Make all four, heaven and nirvana.
                             card: {
                                 description: `It seemed bizarre to me that if a true spiritual path did indeed exist, then it wouldn't offer a reward so obviously desirable, for which I could mindlessly strive without being troubled by existential questions on the nature of souls.`,
                                 dotKeys: {
