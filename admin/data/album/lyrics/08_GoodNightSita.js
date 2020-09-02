@@ -318,7 +318,6 @@ export default {
                             card: {
                                 description: `And no one else seems to sweat the risk of coming on too strong either. Confident that they're just as much there to be won over, they show curiosity by pressing their date for details, the way a starfish will pry open an oyster resting on the seafloor.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }

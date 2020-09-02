@@ -170,9 +170,8 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Indifferent galaxies`,
-                            todo: true,
                             card: {
-                                description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as an endless stretch of cold, empty space in which we live and die to no greater concern.`,
+                                description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -230,14 +229,14 @@ export default {
                                             anchor: `soft pastels`,
                                             wiki: `Pastel`
                                         },
-                                        `and thus more powdery than waxy, which meant that they ran out quickly. By the end of our trip, I was left with the least used colors.`
+                                        `and thus more powdery than waxy, which meant they ran out quickly. By the end of our trip, I was left with the least used colors.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
                                 },
                                 {
-                                    description: `My sister and I spoke English at home. Being in Taiwan forced us to depend on our underused Taiwanese, much like being left with the last remaining crayons in a set.`,
+                                    description: `Being in Taiwan forced me to rely on my underused Taiwanese, much like being left with the last remaining crayons in a set.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
@@ -249,9 +248,8 @@ export default {
                         `you`,
                         {
                             anchor: `ruminate on these riddles…`,
-                            todo: true,
                             card: {
-                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. However terrifying, the vastness of the universe does suggest unlimited possibilities. Yet somehow, being with Sasha is not one of them.`,
+                                description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. While terrifying, the vastness of the universe also suggests unlimited possibilities. Yet somehow, being with Sasha is not among them.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -380,20 +378,23 @@ export default {
                     lyricRight: [
                         {
                             anchor: `trading breath's bliss`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Like all amphibians,`,
+                                    `Like most`,
+                                    {
+                                        anchor: `amphibians,`,
+                                        wiki: `Amphibian`
+                                    },
                                     {
                                         anchor: `salamanders`,
                                         wiki: `Salamander`
                                     },
-                                    `begin life underwater, then lose their gills through`,
+                                    `begin life underwater, then lose their gills and develop lungs to live on land. I always wondered if this process of`,
                                     {
-                                        anchor: `metamorphosis.`,
+                                        anchor: `metamorphosis`,
                                         wiki: `Metamorphosis`
                                     },
-                                    `So the same conditions needed for them to survive as larvae suddenly become deadly in the adult stage, and vice versa.`
+                                    `feels as harrowing as it sounds, given how breathing becomes the new drowning and vice versa, with no explanation or warning. Because that's how falling asleep always came across to me.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1049,7 +1050,14 @@ export default {
                             anchor: `guard's whistle`,
                             todo: true,
                             card: {
-                                description: `Standing on the ocean beach, I notice a steel whistle buried in the sand. Having once been blown by a lifeguard to warn of danger, it is now forever lost. Some dangers come with no warning, after all.`,
+                                description: [
+                                    `Standing on the ocean beach, I notice a steel whistle buried in the sand. Once blown by a`,
+                                    {
+                                        anchor: `lifeguard`,
+                                        wiki: `Lifeguard`
+                                    },
+                                    `to warn of danger, it is now forever lost. Some dangers come with no warning, after all.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -1154,7 +1162,7 @@ export default {
                             // CONSIDER: Wormhole Foreshadow M?
                             todo: true,
                             card: {
-                                description: `Like cellophane, Sasha's intentions were fully transparent. I could always count on her as my friend to sympathize during my bouts of frustration. But also like cellophane, she couldn't truly return warmth where none was offered. Once I became more open about my petty and vindictive thoughts toward the bullies, I could feel her keeping her distance. And then I knew that any chance for us to be more than friends was gone forever.`,
+                                description: `Like cellophane, Sasha's intentions were transparent. I could always count on her as my friend to sympathize during my bouts of frustration. But also like cellophane, she couldn't truly return warmth where none was offered. Once I became more open about my petty and vindictive thoughts toward the bullies, I could feel her keeping her distance. And then I knew that any chance for us to be more than friends was gone forever.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -1208,17 +1216,16 @@ export default {
                     time: 107,
                     lyricLeft: {
                         anchor: `shivering for shivs unsheathed.`,
-                        todo: true,
                         cards: [
                             {
                                 // CONSIDER: Wormhole Kyon for shank?
                                 description: [
-                                    `A`,
+                                    `To wander a prison yard is to heed the constant danger of getting`,
                                     {
-                                        anchor: `shiv`,
+                                        anchor: 'shivved,',
                                         wiki: `Shiv_(weapon)`
                                     },
-                                    `is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved, and the schoolyard felt like a training ground for a lifetime of such vigilance.`
+                                    `or stabbed by a makeshift weapon. But I had to wonder how much this applied as a general rule, given that the schoolyard seemed to be preparing me for a lifetime of such vigilance.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1262,9 +1269,15 @@ export default {
                         `has`,
                         {
                             anchor: `pulled your floater away`,
-                            todo: true,
                             card: {
-                                description: `Pining after Sasha was like trying to stare at an off-center floater on the surface of one's eyeball. Despite my frantic efforts to bring myself closer, her inner world always remained a fixed distance apart from me.`,
+                                description: [
+                                    `Pining after Sasha was like trying to stare at an off-center`,
+                                    {
+                                        anchor: `floater`,
+                                        wiki: `Floater`
+                                    },
+                                    `on the surface of my eye. Despite my frantic efforts to bring us closer, her inner world always remained a fixed distance apart from me.`
+                                ],
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -1281,7 +1294,7 @@ export default {
                             anchor: `silhouettes of torn rides`,
                             todo: true,
                             card: {
-                                description: `Watching the ocean waves rise and fall in my dream, I am reminded of roller coasters that shaped the skyline of my youth, which were erected and dismantled with a similar transience.`,
+                                description: `Watching the ocean waves rise and fall, I am reminded of roller coasters that shaped the skyline of my youth, which were erected and dismantled with a similar transience.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true

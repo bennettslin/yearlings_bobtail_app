@@ -494,7 +494,7 @@ export default {
                             anchor: `shank's dustless silhouette`,
                             cards: [
                                 {
-                                    description: `A shank is a prison inmate's makeshift blade.`,
+                                    description: `A shank is a stabbing weapon improvised by prison inmates.`,
                                     dotKeys: {
                                         [REFERENCE]: true
                                     }
