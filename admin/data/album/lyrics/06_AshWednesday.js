@@ -499,7 +499,7 @@ export default {
                             anchor: `famous raincoat`,
                             card: {
                                 description: [
-                                    `Catherine is the one who introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
+                                    `Catherine was the one who introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
                                     {
                                         anchor: `"Famous Blue Raincoat"`,
                                         wiki: `Famous_Blue_Raincoat`
@@ -627,9 +627,7 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode.`,
-                            todo: true,
                             card: {
-                                // TODO: Further develop the idea of me being a brute. Had Catherine and I stayed together, perhaps her friends would assume that...
                                 description: [
                                     `Kateri Tekakwitha was born to a`,
                                     {
@@ -641,12 +639,12 @@ export default {
                                         anchor: `Algonquin`,
                                         wiki: `Algonquin_people`
                                     },
-                                    `woman whom he had captured in a raid upon her village. Dorothy Parker belonged to the`,
+                                    `woman he had captured in a raid upon her village. Dorothy Parker belonged to the`,
                                     {
                                         anchor: `Algonquin Round Table,`,
                                         wiki: `Algonquin_Round_Table`
                                     },
-                                    `a social circle of New York City writers known for their clever wordplay and wit.`
+                                    `a social circle of New York City writers known for their clever wordplay and wit. To answer why Catherine left me, then, this metaphor humorously suggests it was out of fear I would take her away from her friends, being too dim-witted as I am to socialize with them.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true

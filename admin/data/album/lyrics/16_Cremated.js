@@ -499,7 +499,7 @@ export default {
                             card: {
                                 description: `Of course, I was ultimately the one forcing myself. It's as if I had presided over my own conversion ritual, then surgically removed my own foreskin.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }

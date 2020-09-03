@@ -837,7 +837,7 @@ export default {
                             anchor: `act the dunce`,
                             todo: true,
                             card: {
-                                description: `By failing to acknowledge or respond to fellow students, I came across as dimwitted.`,
+                                description: `By failing to acknowledge or respond to fellow students, I came across as dim-witted.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
