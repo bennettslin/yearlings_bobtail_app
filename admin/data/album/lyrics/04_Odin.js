@@ -895,14 +895,18 @@ export default {
                         `But`,
                         {
                             anchor: `cored gifts fall to discord`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Eris`,
                                         wiki: `Eris_(mythology)`
                                     },
-                                    `is the Greek goddess of discord. As revenge for being denied invitation to a feast attended by the other gods, she tossed a golden apple labeled "for the fairest" into their midst. When Paris was asked to judge its rightful owner, he chose Aphrodite, who rewarded him with the hand of Helen.`
+                                    `was the Greek goddess of discord. As revenge for being denied invitation to a feast attended by the other gods, she tossed a golden apple labeled "for the fairest" into their midst. When Paris was asked to judge its rightful owner, he chose`,
+                                    {
+                                        anchor: `Aphrodite,`,
+                                        wiki: `Aphrodite`
+                                    },
+                                    `who rewarded him with the hand of Helen.`
                                 ]
                             }
                         }
@@ -1400,12 +1404,21 @@ export default {
                             card: {
                                 description: `It seemed bizarre to me that if a true spiritual path did indeed exist, then it wouldn't offer a reward so obviously desirable, for which I could mindlessly strive without being troubled by existential questions on the nature of souls.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
                         },
-                        `and just play dumb?`
+                        `and`,
+                        {
+                            anchor: `just play dumb?`,
+                            todo: true,
+                            card: {
+                                description: `It seemed bizarre to me.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        }
                     ]
                 }
             ]

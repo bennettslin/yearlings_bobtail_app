@@ -25,9 +25,15 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `A childhood playmate once asked me if I knew what cremation was. I didn't, and assumed it must be fun and tasty. That contrast between expectation and reality neatly sums up the seemingly innocent day trip that ended with Miriam breaking up with me.`,
+                    description: [
+                        `A childhood playmate once asked me if I knew what`,
+                        {
+                            anchor: `cremation`,
+                            wiki: `Cremation`
+                        },
+                        `was. I didn't but assumed it must be fun and tasty. Of course, my naive expectation was crushed by the horrifying truth just a moment later. Years later, I thought this was a perfect metaphor for the seemingly innocent day trip that ended with Miriam breaking up with me.`
+                    ],
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true
@@ -44,10 +50,10 @@ export default {
                     time: 0,
                     lyricCentre: {
                         anchor: `Or another…`,
-                        todo: true,
                         card: {
-                            description: `Even if I couldn't be with Mara, I could still be with someone like her. Namely, Miriam.`,
+                            description: `If I can't be with Mara, I can still be with someone like her. Namely, Miriam.`,
                             dotKeys: {
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -130,7 +136,6 @@ export default {
                         {
                             // NOTE: There are actually two 'key turned's in this song?
                             anchor: `key turned`,
-                            todo: true,
                             card: {
                                 wormhole: `key_turned`
                             }
@@ -139,29 +144,25 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Atavist`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        {
-                                            anchor: `Atavism`,
-                                            wiki: `Atavism`
-                                        },
-                                        `occurs when genetic traits in a species reappear after having disappeared generations ago.`
-                                    ],
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [OBSERVATION]: true
-                                    }
-                                },
-                                {
-                                    description: `Given my brother's autism and my father's likely Asperger syndrome, my mother always advised me not to have children, as the genes I carried for autism would pass onto them. As a result, I had to wonder if those I dated ever thought the same when judging my viability as a marriageable partner.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [OBSERVATION]: true
-                                    }
+                            card: {
+                                description: [
+                                    `Given my brother's autism and my father's likely`,
+                                    {
+                                        anchor: `Asperger syndrome,`,
+                                        wiki: `Asperger_syndrome`
+                                    },
+                                    `my mother once advised me not to have children. After all, even if I didn't display autistic traits myself, they could reappear a generation or two after me, like an`,
+                                    {
+                                        anchor: `atavism.`,
+                                        wiki: `Atavism`
+                                    },
+                                    `And so I always wondered if those I dated ever had the same thought when judging my desirability as a long-term partner.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
                                 }
-                            ]
+                            }
                         },
                         `stuck`,
                         {
@@ -174,7 +175,7 @@ export default {
                                         anchor: `breech baby,`,
                                         wiki: `Breech_birth`
                                     },
-                                    `having exited the womb bottom first rather than head first, which complicated the delivery. My mother once hypothesized this to be the cause of his autism.`
+                                    `having exited the womb bottom first rather than head first, which complicated the delivery. To this day, my mother hypothesizes this to be the cause of his autism.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -204,15 +205,22 @@ export default {
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
                             anchor: `inner lotus-eater,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In Greek mythology, the`,
+                                    `In the`,
+                                    {
+                                        isItalic: true,
+                                        lyric: {
+                                            anchor: `Odyssey,`,
+                                            wiki: `Odyssey,`
+                                        }
+                                    },
+                                    `the`,
                                     {
                                         anchor: `lotus-eaters`,
                                         wiki: `Lotus-eaters`
                                     },
-                                    `were islanders observed by Odysseus to while away their days eating the narcotic fruit of the lotus. Similarly, Miriam would comment on how much I drank, but made no judgments. In hindsight, it was because she, like Odysseus, was keeping her distance.`
+                                    `were islanders who whiled away their days eating the narcotic fruit of the lotus. Odysseus could only look upon them with curious pity. Similarly, while Miriam would comment on how much I drank, she never made judgments. In hindsight, it was because she, like Odysseus, was keeping her distance.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -312,7 +320,7 @@ export default {
                             anchor: `good for anecdotes.`,
                             todo: true,
                             card: {
-                                description: `Though Miriam was entertained by my character, it wasn't in the way one should hope, which blew apart my theory that being interesting at all costs is the key to dating. I was to be the oddball ex-boyfriend providing grist for a lifetime of amusing tales, not the life companion with whom she would one day share them.`,
+                                description: `Though Miriam was entertained by my character, it wasn't in a way that anyone should hope for, which blew apart my theory that being interesting is the key to dating. My fate was to be the oddball ex-boyfriend providing grist for a lifetime of amusing tales, not the future companion who would one day hear them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -347,29 +355,23 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo blares Lynyrd Skynyrd's`,
+                                    `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo blares`,
+                                    {
+                                        anchor: `Lynyrd Skynyrd's`,
+                                        wiki: `Lynyrd_Skynyrd`
+                                    },
                                     {
                                         anchor: `"Freebird,"`,
                                         wiki: `Free_Bird`
                                     },
-                                    `he strums his ukulele in rhythm to his mountain god, whose rumblings retell the legend of an all-American phoenix.`
+                                    `he strums his ukulele in rhythm to his mountain god, whose rumblings tell the legend of an all-American phoenix.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
                             }
                         },
-                        `the`,
-                        {
-                            anchor: `hula guy`,
-                            todo: true,
-                            card: {
-                                description: `Some may protest that these dashboard ornaments objectify certain ethnic groups. And rightfully so. But I wasn't thinking in those terms at the time. I was just so happy to be wanted.`,
-                                dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
+                        `the hula guy`
                     ],
                     lyricRight: `As comedy teams work, a hoot the times`
                 },
@@ -379,15 +381,9 @@ export default {
                         `nods as`,
                         {
                             anchor: `she drums her toes.`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Of course, he actually sways because Miriam, who happens to be`,
-                                    {
-                                        isEmphasis: true,
-                                        lyric: `my`
-                                    },
-                                    `all-American god, is humming along and tapping the underside of the dashboard with her feet.`
+                                    `Of course, he actually sways because Miriam, who happens to be my all-American goddess, is humming along and tapping the underside of the dashboard with her feet.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -403,17 +399,17 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Some comedy duos famously did not get along, which enlivened their dynamic when the tapes were rolling. Like`,
+                                    `Some`,
                                     {
-                                        anchor: `Abbott and Costello`,
+                                        anchor: `comedy duos`,
+                                        wiki: `Double_act`
+                                    },
+                                    `famously did not get along, which enlivened their dynamic when the tapes were rolling. Like`,
+                                    {
+                                        anchor: `Abbott and Costello,`,
                                         wiki: `Abbott_and_Costello`
                                     },
-                                    `or`,
-                                    {
-                                        anchor: `Martin and Lewis,`,
-                                        wiki: `Martin_and_Lewis`
-                                    },
-                                    `my two personalities would befuddle each other, much to Miriam's delight. But even so, she recognized the underlying mental dysfunction that surely fueled this spectacle, and wanted no lasting part in it.`
+                                    `my two personalities would befuddle and vex each other, much to Miriam's delight. But even so, she surely recognized the mental dysfunction that fueled this spectacle, and wanted no lasting part of it.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -436,10 +432,15 @@ export default {
                     lyricRight: [
                         {
                             anchor: `Trophy bronzed from a Trojan`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob. As she yanks the condom off, I'm reminded of the first time I had sex with a woman other than Sita. I was so amazed that I left the used condom on the nightstand for days, much like proud parents might bronze their baby's first pair of shoes.`,
+                                    description: `Having climaxed first, Miriam wraps up our little tryst by yanking the condom off and giving me a blowjob.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                },
+                                {
+                                    description: `The first time I had sex with a woman other than Sita, I was so amazed that I left the used condom on my nightstand for days, much like a proud parent might bronze their baby's first pair of shoes.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
@@ -458,7 +459,6 @@ export default {
                         `born from a`,
                         {
                             anchor: `forced conversion`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Historically, conquered peoples were`,
@@ -466,7 +466,7 @@ export default {
                                         anchor: `forced to adopt`,
                                         wiki: `Forced_conversion`
                                     },
-                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit their new faith. Here, Miriam sees through my own attempts at assimilation and recognizes them to be no less disingenuous. She thus fears that corrupt traces of my old ways will always remain.`
+                                    `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit their new faith. And so I imagine Miriam skeptically eyeing my own attempts to assimilate, as she recognizes that corrupt traces of my past ways will always remain.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -514,9 +514,8 @@ export default {
                         `to remain`,
                         {
                             anchor: `inherently perfect,`,
-                            todo: true,
                             card: {
-                                description: `I never told Miriam that my real purpose in having a drunken personality was to remain above reproach myself, while blaming it for all the selfish things I desired but was too cowardly to own up to. Which makes sense, since the latest thing that I selfishly desired was her.`,
+                                description: `I never told Miriam that the real purpose for my drunken personality was to blame it for all the selfish things I desired while remaining above reproach myself. Which made sense, since the latest thing I selfishly desired was her.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -533,7 +532,7 @@ export default {
                             anchor: `kissed off, she purges up.`,
                             todo: true,
                             card: {
-                                description: `Bringing me to orgasm, Miriam sucks up the ejaculate, then leans over the car door to spit it out. I imagine this to be her symbolic rejection of the sperm that carries my defective genes, which must never be allowed to mingle with hers.`,
+                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate, then leans over the car door to spit it out. I imagine this to be her symbolic rejection of the sperm that carries my defective genes, which must never be allowed to mingle with hers.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -790,7 +789,7 @@ export default {
                             anchor: `worrisome`,
                             todo: true,
                             card: {
-                                description: `I genuinely wished Miriam the best and continued to care about her well-being after our breakup. This surprised me, given the contrast of how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even if just for a while. As far as I was concerned, then, I got the best end of that deal.`,
+                                description: `After the breakup with Miriam, I wished her the best and would ask about her well-being. This surprised me, given how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave me in return, I still came away knowing that someone like her could want me, even if only for a while. As far as I was concerned, then, I got the best end of that deal.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -840,7 +839,8 @@ export default {
                                         `The insecurities I felt about my family's Buddhism were compounded by its obvious correlation with our having a different complexion from everyone else in Sasha's world. My inferiority complex thus failed to distinguish between having faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true
+                                        [BACKSTORY]: true,
+                                        [OBSERVATION]: true
                                     }
                                 }
                             ]
@@ -919,9 +919,14 @@ export default {
                         `this geezer's`,
                         {
                             anchor: `life support's abortive.`,
-                            todo: true,
                             card: {
-                                description: `Based on the perceived motives of younger women who date much older men, I assume that Miriam would jump at the first excuse to remove me from life support.`,
+                                description: [
+                                    `Based on the perceived motives of younger women who date older men, I imagine that Miriam would jump at the first chance to remove me from`,
+                                    {
+                                        anchor: `life support.`,
+                                        wiki: `Life_support`
+                                    }
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -933,9 +938,8 @@ export default {
                         `the`,
                         {
                             anchor: `cleaved horizon`,
-                            todo: true,
                             card: {
-                                description: `As we make our way downhill, I picture the horizon as a cleaver splitting the sky open. The road we drive on then becomes cement spilling down on me from the rupture.`,
+                                description: `As we make our way downhill, the horizon appears like a cleaver splitting the sky open, as the road spills down on us like wet cement pouring out from the rupture.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true

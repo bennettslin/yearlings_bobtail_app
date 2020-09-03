@@ -480,7 +480,14 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `I first learned of autism when I overheard my parents talk about my brother's condition in their thick Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics for this song to explore the ways in which a child's mishearings of adult conversations might lead to roundabout understanding.`,
+                    description: [
+                        `I first learned of`,
+                        {
+                            anchor: `autism`,
+                            wiki: `Autism`
+                        },
+                        `when I overheard my parents talk about my brother's condition in their thick Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics for this song to explore the ways in which a child's mishearings of adult conversations might lead to roundabout understanding.`
+                    ],
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGWRITING]: true

@@ -197,7 +197,7 @@ export default {
                             anchor: `buy a fortress`,
                             todo: true,
                             card: {
-                                description: `Once upon visiting a well-to-do cousin, we helped him try out his new lifesize wooden fort. It was so much fun that I asked my parents for one as a combined birthday and Christmas gift, which was always an option for me since my birthday is in November. Unfortunately, some toys are too pricey to count for even two gifts.`,
+                                description: `One year, I asked my parents to buy me a lifesize wooden fort as a combined birthday and Christmas gift, which was always an option for me since my birthday is in November. Unfortunately, some toys are too pricey to count for even two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

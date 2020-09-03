@@ -19,6 +19,7 @@
     * 1 Ash (Algonquin)
     * 1 Kyon (Hindu)
     * 2 Pchelka (fortress, virtue)
+    * A lot from Odin
 
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.
