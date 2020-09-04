@@ -167,7 +167,6 @@ export default {
                         `stuck`,
                         {
                             anchor: `feet first,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `My brother was a`,
@@ -175,7 +174,7 @@ export default {
                                         anchor: `breech baby,`,
                                         wiki: `Breech_birth`
                                     },
-                                    `having exited the womb bottom first rather than head first, which complicated the delivery. To this day, my mother hypothesizes this to be the cause of his autism.`
+                                    `having exited the womb bottom first rather than head first. This complicated the delivery, which my mother still hypothesizes to have been the cause of his autism.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -318,9 +317,8 @@ export default {
                         `sinking ship, maybe`,
                         {
                             anchor: `good for anecdotes.`,
-                            todo: true,
                             card: {
-                                description: `Though Miriam was entertained by my character, it wasn't in a way that anyone should hope for, which blew apart my theory that being interesting is the key to dating. My fate was to be the oddball ex-boyfriend providing grist for a lifetime of amusing tales, not the future companion who would one day hear them.`,
+                                description: `Though Miriam was entertained by my character, it wasn't in any way that one should hope for, which blew apart my theory that being interesting is the key to dating. I was to be the oddball ex-boyfriend providing her with a lifetime of amusing tales to share, not the future companion who would someday hear them.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -396,7 +394,6 @@ export default {
                         `not`,
                         {
                             anchor: `at each other's throats.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Some`,
@@ -404,12 +401,12 @@ export default {
                                         anchor: `comedy duos`,
                                         wiki: `Double_act`
                                     },
-                                    `famously did not get along, which enlivened their dynamic when the tapes were rolling. Like`,
+                                    `like`,
                                     {
-                                        anchor: `Abbott and Costello,`,
+                                        anchor: `Abbott and Costello`,
                                         wiki: `Abbott_and_Costello`
                                     },
-                                    `my two personalities would befuddle and vex each other, much to Miriam's delight. But even so, she surely recognized the mental dysfunction that fueled this spectacle, and wanted no lasting part of it.`
+                                    `famously did not get along. This enlivened the dynamic between them onstage, but it also made for tense moments when the tape stopped rolling. Similarly, while Miriam was delighted to hear my two personalities befuddle and vex each other in doublespeaker rhyme, she surely wanted no lasting part of the emotional turmoil underlying this spectacle.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -479,10 +476,10 @@ export default {
                         `for some`,
                         {
                             anchor: `unforeskinned virgin`,
-                            todo: true,
                             card: {
-                                description: `During these years, I avoided having strong personal convictions, as it seemed absurd that something so trivial should limit the size of my dating pool. The ideal was to present myself as the blankest of blank slates for each new woman. So if her faith required me to undergo ritual circumcision, then my foreskin was still intact. And if her moral beliefs required me to be sexually inexperienced, then I was still a virgin.`,
+                                description: `I learned a long time ago not to have personal convictions or identity markers that could only serve to limit the size of my dating pool. It's why I don't have any tattoos, for example. I needed to be able to start my character afresh for the next woman to shape me into whatever she liked. And so I imagine that before dating Miriam, I had reset myself to a default state of being sexually inexperienced with my foreskin intact.`,
                                 dotKeys: {
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -495,9 +492,14 @@ export default {
                         `on a`,
                         {
                             anchor: `self-servicing cleric surgeon`,
-                            todo: true,
                             card: {
-                                description: `Of course, I was ultimately the one forcing myself. It's as if I had presided over my own conversion ritual, then surgically removed my own foreskin.`,
+                                description: [
+                                    `Of course, while my drunken self is being forced to adopt the faith of his sober half, this internal conflict remains hidden from onlookers. All they can see is me presiding over my own conversion ritual and surgically`,
+                                    {
+                                        anchor: `removing my own foreskin.`,
+                                        wiki: `Circumcision`
+                                    }
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -530,9 +532,8 @@ export default {
                         `This swarm pumped and`,
                         {
                             anchor: `kissed off, she purges up.`,
-                            todo: true,
                             card: {
-                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate, then leans over the car door to spit it out. I imagine this to be her symbolic rejection of the sperm that carries my defective genes, which must never be allowed to mingle with hers.`,
+                                description: `Upon bringing me to orgasm, Miriam sucks up the ejaculate before leaning over the car door to spit it out. But this act seems to convey a hidden message, that the sperm carrying my defective genes must never be allowed to mingle with hers.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -544,9 +545,15 @@ export default {
                         `as`,
                         {
                             anchor: `worn puppet`,
-                            todo: true,
                             card: {
-                                description: `Imagining the discarded condom to be a lifeless puppet, I realize that having a drunken personality is like being a ventriloquist. My dummy can then be used to say and do all the crude and questionable things needed to get what I want, while I just sit by as an innocent onlooker.`,
+                                description: [
+                                    `Picturing the discarded condom as a lifeless puppet, I realize that I'm like a`,
+                                    {
+                                        anchor: `ventriloquist.`,
+                                        wiki: `Ventriloquism`
+                                    },
+                                    `The dummy of my drunken self can be made to say all the questionable things needed for me to get what I want, while I just watch aghast as an innocent bystander.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -556,9 +563,8 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs.`,
-                            todo: true,
                             card: {
-                                description: `Of course, during the frequent and lengthy periods when I was drunk, it sure didn't seem obvious that my drunken self was the dummy whose words and actions were being dictated by the sober me, rather than the other way around.`,
+                                description: `Of course, during the lengthy periods when I was drunk, it wasn't at all obvious that my drunken self was the dummy whose words and actions were being dictated by my sober half, rather than the other way around.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -661,10 +667,9 @@ export default {
                         },
                         {
                             anchor: `will not retract,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Some record players lack an auto-return function, so the needle will coast without end in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the`,
+                                    `Some record players lack an auto-return function, so the needle will coast without end in the lead-out groove until it gets lifted. Also, during euthanasia, the needle is left in the vein as the`,
                                     {
                                         anchor: `barbiturate`,
                                         wiki: `Barbiturate`
@@ -789,7 +794,7 @@ export default {
                             anchor: `worrisome`,
                             todo: true,
                             card: {
-                                description: `After the breakup with Miriam, I wished her the best and would ask about her well-being. This surprised me, given how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave me in return, I still came away knowing that someone like her could want me, even if only for a while. As far as I was concerned, then, I got the best end of that deal.`,
+                                description: `After the breakup with Miriam, I wished her the best and continued to ask mutual friends about her well-being. This surprised me, given how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave back, I still came away knowing that someone like her could want me, even if only for a while. As far as I was concerned, then, I got the best end of that deal.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -798,7 +803,6 @@ export default {
                         },
                         {
                             anchor: `"Bless her,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The title of the play`,
@@ -809,12 +813,12 @@ export default {
                                             wiki: `Children_of_a_Lesser_God_(play)`
                                         }
                                     },
-                                    `which centers on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family's genes, combined with our foreign manner of worship, I assumed that the disabled`,
+                                    `which centers on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family's genes, which seemed to correlate with our different manner of worship, I always assumed the disabled`,
                                     {
                                         isEmphasis: true,
                                         lyric: `themselves`
                                     },
-                                    `must be the lesser creations.`
+                                    `must be the inferior creations.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -836,7 +840,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `The insecurities I felt about my family's Buddhism were compounded by its obvious correlation with our having a different complexion from everyone else in Sasha's world. My inferiority complex thus failed to distinguish between having faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`
+                                        `To compound the insecurities I felt about being raised Buddhist, my complexion was also different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

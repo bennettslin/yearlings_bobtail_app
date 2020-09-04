@@ -211,6 +211,7 @@ export default {
                             anchor: `your embrace,`,
                             todo: true,
                             card: {
+                                // TODO: Make explicit shedding skin.
                                 description: `Of course, it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. As we hugged on the last day of school, Sasha fidgeted like a creature ready to slough off her old skin and fly away.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
