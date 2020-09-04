@@ -238,7 +238,7 @@ export default {
                             anchor: `Immerse the molted form`,
                             todo: true,
                             card: {
-                                description: `With our relationship now in irreversible decline, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a scheme to end his relationship.`,
+                                description: `With the relationship now in irreversible decline, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a scheme to end his relationship.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -270,14 +270,14 @@ export default {
                             card: {
                                 // NOTE: I changed "pauper's" to "paupers'."
                                 description: [
-                                    `I had spent weeks rehearsing the breakup, assuming it could be scheduled at my convenience and follow a tight script. Instead, it proved to be unexpected and horribly messy. Similarly, the body of my drunken self was seemingly disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
+                                    `I spent weeks rehearsing the breakup, assuming it could be scheduled at my convenience. Instead, it proved to be unexpected and horribly messy. And so the body of my drunken self had to be disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
                                     {
                                         anchor: `paupers' grave.`,
                                         wiki: `Potter's_field`
                                     }
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -299,6 +299,7 @@ export default {
                             anchor: `bellyaches on suttee.`,
                             todo: true,
                             card: {
+                                // TODO: Say something like she chased after it.
                                 description: [
                                     {
                                         anchor: `Suttee`,
@@ -318,7 +319,7 @@ export default {
                             anchor: `well-behaved on the wing.`,
                             todo: true,
                             card: {
-                                description: `Feeling no malice, drunken me can only surmise that he served out his sentence without complaint, and was granted an early release for good behaviour.`,
+                                description: `Feeling no malice, drunken me can only surmise that he served out his sentence without complaint, and was granted an early release for good behavior.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }

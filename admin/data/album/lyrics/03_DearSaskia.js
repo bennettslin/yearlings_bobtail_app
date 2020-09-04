@@ -86,9 +86,8 @@ export default {
                         `It's nearing autumn here with`,
                         {
                             anchor: `record highs.`,
-                            todo: true,
                             card: {
-                                description: `It's hard to begin writing a letter. But you can always start by talking about the weather.`,
+                                description: `It's hard to begin writing a letter. But one can always start by talking about the weather.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -141,7 +140,7 @@ export default {
                             anchor: `You'd love Taiwan,`,
                             todo: true,
                             card: {
-                                description: `As we toured the countryside with our Taiwanese cousins, I would add to my mental list of all the things I could share with Sasha one day. I think this might get at why I've never felt strongly about being Taiwanese. Until one's heritage can be shared with someone else, there doesn't seem to be any real point.`,
+                                description: `As we toured the countryside with our Taiwanese cousins, I would mentally list all the things I could show to Sasha one day. I suppose this hints at why I've never felt strongly about being Taiwanese. Unless one's heritage can be shared with someone else, there doesn't seem to be any real point.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -211,8 +210,7 @@ export default {
                             anchor: `your embrace,`,
                             todo: true,
                             card: {
-                                // TODO: Make explicit shedding skin.
-                                description: `Of course, it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. As we hugged on the last day of school, Sasha fidgeted like a creature ready to slough off her old skin and fly away.`,
+                                description: `Of course, it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. As we hugged on the last day of school, Sasha fidgeted as if ready to slough off her old skin and scamper away.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

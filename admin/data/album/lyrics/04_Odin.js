@@ -220,28 +220,20 @@ export default {
                         `you drew with`,
                         {
                             anchor: `crayons least whittled…`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `When we landed in Taiwan, my aunt gave me a set of crayons as a gift. They were`,
-                                        {
-                                            anchor: `soft pastels`,
-                                            wiki: `Pastel`
-                                        },
-                                        `and thus more powdery than waxy, which meant they ran out quickly. By the end of our trip, I was left with the least used colors.`
-                                    ],
-                                    dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
-                                },
-                                {
-                                    description: `Being in Taiwan forced me to rely on my underused Taiwanese, much like being left with the last remaining crayons in a set.`,
-                                    dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
+                            card: {
+                                description: [
+                                    `When we landed in Taiwan, my aunt gave me a set of`,
+                                    {
+                                        anchor: `pastels`,
+                                        wiki: `Pastel`
+                                    },
+                                    `as a gift. They were more powdery than crayons, which meant they ran out quickly. By the end of our trip, I was left with the least used colors. Similarly, being in Taiwan forced me to rely on my underused skills, like speaking Taiwanese.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
                                 }
-                            ]
+                            }
                         }
                     ],
                     lyricRight: [
@@ -1060,7 +1052,7 @@ export default {
                                         anchor: `lifeguard.`,
                                         wiki: `Lifeguard`
                                     },
-                                    `Its piercing sound will never again warn of danger. Though perhaps that's just as well for me, since some dangers come with no warning.`
+                                    `Its piercing sound will never again warn of danger. But perhaps that's just as well for me, since some dangers come with no warning.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
