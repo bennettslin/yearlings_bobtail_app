@@ -601,7 +601,12 @@ export default {
                                         anchor: `Kateri Tekakwitha,`,
                                         wiki: `Kateri_Tekakwitha`
                                     },
-                                    `baptized as Saint Catherine, was the Catholic Church's first Native American saint. Her story figures prominently in`,
+                                    `baptized as Saint Catherine, was the Catholic Church's first`,
+                                    {
+                                        anchor: `Native American`,
+                                        wiki: `Native_Americans_in_the_United_States`
+                                    },
+                                    `saint. Her story figures prominently in`,
                                     {
                                         isItalic: true,
                                         lyric: `Beautiful Losers,`

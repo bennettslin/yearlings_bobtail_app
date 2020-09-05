@@ -96,8 +96,13 @@ export default {
                         `the`,
                         {
                             anchor: `valley somersaults`,
-                            todo: true,
                             cards: [
+                                {
+                                    description: `In the mirages created by the summer heat, the reflections of the surrounding mountains naturally point downwards, suggesting that their jagged peaks had caused the cracks in the asphalt.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                },
                                 {
                                     description: [
                                         `I grew up in the`,
@@ -110,16 +115,15 @@ export default {
                                             anchor: `Los Angeles,`,
                                             wiki: `Los_Angeles`
                                         },
-                                        `where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides.`
+                                        `where wide boulevards stretch endlessly along a`,
+                                        {
+                                            anchor: `grid plan,`,
+                                            wiki: `Grid_plan`
+                                        },
+                                        `and mountains block the horizon on all sides.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
-                                    }
-                                },
-                                {
-                                    description: `In the mirages created by the summer heat, the reflections of the surrounding mountains naturally point downwards, suggesting that their jagged peaks had caused the cracks in the asphalt.`,
-                                    dotKeys: {
-                                        [OBSERVATION]: true
                                     }
                                 }
                             ]
@@ -146,15 +150,15 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `Every so often, a coyote would wander down from the hillsides and get hit by traffic. Its body might then lay decomposing for days before being found.`,
+                                    description: `If the surrounding mountains of the Valley are like the lower jaw of a dying coyote, then the bustle of its morning commuters are like tiny scavengers ready to go to town on the carcass.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true
+                                        [NARRATIVE]: true
                                     }
                                 },
                                 {
-                                    description: `If the surrounding mountains of the Valley are like the lower jaw of a dying coyote, then the bustle of its morning commuters are like tiny scavengers ready to go to town on the carcass.`,
+                                    description: `Every so often, a coyote would wander down from the hillsides and get hit by traffic. Its body might then lay decomposing for days before being found.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true
+                                        [BACKSTORY]: true
                                     }
                                 }
                             ]
@@ -404,21 +408,13 @@ export default {
                         `Oh ma'am, I`,
                         {
                             anchor: `see your kid with whiskers,`,
-                            cards: [
-                                {
-                                    description: `Noting my brother's distaste for haircuts, Willy jokingly predicts that my brother will choose to sport an unshaven look as an adult.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
-                                    description: `In many legends, the changeling is a fully grown troll who is perhaps centuries old. And so Willy's phrasing leaves open the possibility that my brother, being a changeling, in fact already wears a beard.`,
-                                    dotKeys: {
-                                        [PUN]: true,
-                                        [REFERENCE]: true
-                                    }
+                            card: {
+                                description: `Noting my brother's distaste for haircuts, Willy jokingly predicts that my brother will choose to sport an unshaven look as an adult. But in many legends, the changeling is a fully grown troll who is perhaps centuries old. So Willy's phrasing leaves open the possibility that my brother, being a changeling, in fact already wears a beard.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
                                 }
-                            ]
+                            }
                         }
                     ]
                 },
@@ -428,10 +424,10 @@ export default {
                         `he croaks, stroking`,
                         {
                             anchor: `creepers on his cheek,`,
-                            todo: true,
                             card: {
-                                description: `Whatever magic spell disguises my brother's true form, it should be no surprise that Willy does not fall under its enchantment. After all, Willy is a changeling himself, as evinced by his own unkempt facial hair.`,
+                                description: `Of course, it's no surprise that Willy is immune to the enchantment that disguises my brother's true form. After all, Willy is a changeling himself, as evinced by his own unkempt facial hair.`,
                                 dotKeys: {
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -553,9 +549,8 @@ export default {
                         `the`,
                         {
                             anchor: `bearded baby`,
-                            todo: true,
                             card: {
-                                description: `It frustrated me to no end that my brother's behavior didn't make any sense. I longed to believe that he was simply displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers in times past who told tales of grown-up trolls disguised as human children.`,
+                                description: `My brother's odd behavior frustrated me to no end, and I longed to believe he was simply displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers in times past who told tales of grown-up trolls disguised as human children.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -571,9 +566,8 @@ export default {
                         `with his tummy clenched, muffling`,
                         {
                             anchor: `baffled sobs.`,
-                            todo: true,
                             card: {
-                                description: `The hardest part about hurting my brother was knowing that he had no way to understand the cause of my anger. The times when I turned on him and caused him physical pain would always remain without explanation. I suppose that for him, it was just another part of what life was.`,
+                                description: `The hardest part about hurting my brother was knowing he had no way to understand the cause of my anger. The times when I turned on him and caused him physical pain would always remain without explanation. For him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -591,10 +585,9 @@ export default {
                         `You'd learn him good, when`,
                         {
                             anchor: `smarts he could've took`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `I grew up puzzling over why my brother had been born with autism and I had not, when our circumstances were no different. It wasn't far-fetched to suppose that every mother's womb begins with a fixed supply of reasoning skills to dole out to each child, and that I had selfishly taken my brother's share.`,
+                                    description: `I grew up puzzling over why my brother was born with autism and I wasn't, when our circumstances were no different. It wasn't far-fetched to suppose that every mother's womb starts out with a fixed supply of mental capacity to dole out to each child, and I had selfishly taken my brother's share.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
@@ -684,11 +677,11 @@ export default {
                     lyric: [
                         {
                             anchor: `Hit this witch`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `In some legends, beating a changeling badly enough will provoke it to tire of its charade and return the stolen child. These legends reflected a historical reality in which sickly children were often abused to death, if not killed outright. So if Willy is a changeling, then it seems predestined that he should meet a violent end.`,
+                                    description: `In some legends, beating a changeling badly enough will cause it to tire of its charade and return the stolen child. These legends reflect the historical reality in which sickly children were often abused to death, if not killed outright. So if Willy is a changeling, then it seems predestined that he should meet a violent end.`,
                                     dotKeys: {
+                                        [NARRATIVE]: true,
                                         [OBSERVATION]: true
                                     }
                                 },
@@ -743,7 +736,6 @@ export default {
                         `swung sounds the`,
                         {
                             anchor: `past-noon toll.`,
-                            todo: true,
                             card: {
                                 description: `One of the gangsters grabs a wine bottle and smashes it against Willy's face. The sound reverberates throughout the neighborhood like the peal of a town bell striking once at one o'clock.`,
                                 dotKeys: {
@@ -826,9 +818,9 @@ export default {
                             anchor: `August was`,
                             properNoun: true,
                             card: {
-                                description: `Understanding the gravity of the present moment, I try to make sense of it by speaking as if I were already looking back on the past.`,
+                                description: `Understanding the gravity of the present moment, I try to make sense of it as if I were already looking back on the past.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         },

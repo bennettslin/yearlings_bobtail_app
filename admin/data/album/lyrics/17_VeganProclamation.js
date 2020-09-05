@@ -137,7 +137,22 @@ export default {
                                         anchor: `"führer,"`,
                                         wiki: `Führer`
                                     },
-                                    `a German title of leadership mainly associated with Adolf Hitler. Amongst animal rights proponents, comparisons between factory farming and the Holocaust are obvious, however impolitic.`
+                                    `a German title of leadership associated with`,
+                                    {
+                                        anchor: `Adolf Hitler.`,
+                                        wiki: `Adolf_Hitler`
+                                    },
+                                    `For animal rights proponents, the parallels between`,
+                                    {
+                                        anchor: `factory farming`,
+                                        wiki: `Intensive_animal_farming`
+                                    },
+                                    `and the`,
+                                    {
+                                        anchor: `Holocaust`,
+                                        wiki: `The_Holocaust`
+                                    },
+                                    `are obvious, however impolitic.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -220,7 +235,7 @@ export default {
             mainVerses: [
                 {
                     time: 30,
-                    lyric: `We baulked at our lives born unfair,`
+                    lyric: `We balked at our lives born unfair,`
                 },
                 {
                     time: 35,
@@ -230,7 +245,7 @@ export default {
                             anchor: `horse to chair,`,
                             todo: true,
                             card: {
-                                description: `That is to say, from rocking horse to rocking chair.`,
+                                description: `That is to say, I couldn't imagine spending the entire span of my life, from rocking horse to rocking chair, not brimming with resentment.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -404,12 +419,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `On`,
-                                        {
-                                            anchor: `factory farms,`,
-                                            wiki: `Intensive_animal_farming`
-                                        },
-                                        `breeding sows are strapped inside`,
+                                        `On factory farms, breeding sows are strapped inside`,
                                         {
                                             anchor: `metal cages`,
                                             wiki: `Gestation_crate`
@@ -463,7 +473,7 @@ export default {
                             anchor: `burger shrouds,`,
                             todo: true,
                             card: {
-                                description: `As a vegan, I became sensitive to anything even remotely suggestive of meat or animal byproducts, such as a discarded fast food wrapper. I realized that I too had been inured, living in a society built on the commoditisation of animal suffering.`,
+                                description: `As a vegan, I became sensitive to anything even remotely suggestive of meat or animal byproducts, such as a discarded fast food wrapper. I realized that I too had been inured, living in a society built on the commoditization of animal suffering.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -796,7 +806,7 @@ export default {
                                     `the dwarf demon of ignorance in Hindu mythology. And so I pause here to mull over the hurt that my own ignorance has caused.`
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -809,7 +819,7 @@ export default {
                                     {
                                         description: `With ignorance being as old as time itself, I'm comforted to know that we'll always correct our past mistakes. And yet, it feels just as dispiriting to know that those coming after us have yet to make theirs. The universe never truly learns, and I was partly to blame. I had this same thought as a child, when I wondered if I was the reason why my brother would never get better. It made me realize that all I could do was love him for who he was, and then do better for him.`,
                                         dotKeys: {
-                                            [BACKSTORY]: true,
+                                            [NARRATIVE]: true,
                                             [OBSERVATION]: true
                                         }
                                     },
@@ -840,12 +850,12 @@ export default {
                                             anchor: `Nataraja,`,
                                             wiki: `Nataraja`
                                         },
-                                        `or "lord of dance," is a revered depiction of the Hindu god`,
+                                        `or "lord of the dance," is a depiction of the Hindu god`,
                                         {
                                             anchor: `Siva`,
                                             wiki: `Shiva`
                                         },
-                                        `as a cosmic dancer, who dances to tear down the universe and build it up again in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolizing Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
+                                        `as a cosmic dancer, who dances to tear down the universe and build it up again in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolizing Siva's victory over ignorance. And having added my share of ignorant destruction to the universe, I now commit to help rebuild it.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

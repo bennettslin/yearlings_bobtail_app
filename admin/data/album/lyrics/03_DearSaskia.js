@@ -208,9 +208,8 @@ export default {
                         `But then in`,
                         {
                             anchor: `your embrace,`,
-                            todo: true,
                             card: {
-                                description: `Of course, it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. As we hugged on the last day of school, Sasha fidgeted as if ready to slough off her old skin and scamper away.`,
+                                description: `Of course, it's no comfort to be cherished as an old friend by someone so visibly eager to dive into the new. As we hugged on the last day of school, Sasha seemed just about ready to slough off her old skin and scamper away.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -441,15 +440,14 @@ export default {
                         `caress, sun-streaked and loose, a`,
                         {
                             anchor: `wet-cheeked papoose`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Here, I recall one afternoon, when Sasha's hair blew in my face from the seat ahead of mine, and I realized that she had matured to the next peer group. I felt like a`,
+                                    `Here, I recall an afternoon bus ride when Sasha sat in front of me. As her hair blew in my face, I realized she had matured into the next peer group. I was like a`,
                                     {
-                                        anchor: `papoose,`,
+                                        anchor: `papoose`,
                                         wiki: `Papoose`
                                     },
-                                    `or Native American child, strapped to his mother's back, in anguish over having to start walking on his own.`
+                                    `strapped to his mother's back, in anguish over having to start walking on his own.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -531,9 +529,8 @@ export default {
                         `Oh but Sasha, if`,
                         {
                             anchor: `anarchy reigns,`,
-                            todo: true,
                             card: {
-                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, and then to walk onto the quad and witness history being repeated.`,
+                                description: `It was weird to be taught in history class that anarchy devolves into tyranny, only to then wander out onto the quad and witness this very history repeating itself.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

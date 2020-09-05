@@ -25,9 +25,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `I once read that we typically dream four times per night. Over a lifetime, that's about 100,000 dreams. This song, then, is about the very last dream I'll ever dream.`,
+                    description: `I read once that we typically have four dreams per night. Over a lifetime, that's about a hundred thousand dreams. This song, then, is about the very last dream I'll ever dream.`,
                     dotKeys: {
                         [OBSERVATION]: true
                     }
@@ -138,9 +137,8 @@ export default {
                         `Did I`,
                         {
                             anchor: `ever live another life?`,
-                            todo: true,
                             card: {
-                                description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. As far as I know, Sita and I have always been together. Of course, according to the Hindu faith, I might also have lived another life quite literally, in a past incarnation.`,
+                                description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. It's obvious we haven't stayed together, yet I don't recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -406,10 +404,9 @@ export default {
                         `She'll always`,
                         {
                             anchor: `come to take me,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `I now understand that Sita, being my most cherished memory, was always going to be the one chosen by my subconscious to help ease my fears as I exit from this world.`,
+                                    description: `I now understand that Sita is my most cherished memory. And as such, she was always going to be the one chosen by my subconscious to ease my fears as I part from this world.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true
@@ -443,9 +440,8 @@ export default {
                     lyric: [
                         {
                             anchor: `When you'll be mine?`,
-                            todo: true,
                             card: {
-                                description: `If this is only a dream, then the person I'm holding onto is not really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. As I exit this world, then, I hold onto the possibility that I may find her again in the next.`,
+                                description: `If this is only a dream, then what I'm holding onto is not really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. As I exit this world, then, I hold onto the possibility that I may find her again in the next.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -494,6 +490,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
+                    // TODO: I already mention in Odin that I moved to New York City.
                     description: `After the album failed in every possible way, I moved to New York City to start a new life. There I met Liz, my next girlfriend, with whom things ended no less painfully. So I was faced with a dilemma when making this website. I wanted to be faithful to how fresh these wounds were for me at the time, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events here as a stage play, and then to draw the Sita character as an Indian version of Liz. The result looks like neither, which hopefully comes as a relief to both.`,
                     dotKeys: {
                         [AFTERWORD]: true
