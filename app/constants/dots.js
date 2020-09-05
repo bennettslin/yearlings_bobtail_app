@@ -34,7 +34,7 @@ export const DOT_DESCRIPTIONS = {
     [REFERENCE]: 'Link to a Wikipedia page.',
     [WORMHOLE]: 'Portal to another song.',
     [SONGWRITING]: 'How the music was made.',
-    [AFTERWORD]: 'What came next.'
+    [AFTERWORD]: 'My life since then.'
 }
 
 // Hard-coded because it fails staging otherwise. Haven't investigated why.

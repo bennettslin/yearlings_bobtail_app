@@ -12,13 +12,15 @@
 * Reassess what is an anchor.
 * More casual talk.
 * Make sure narrative and backstory are never together.
+* Change more similarlys to likewises, and other phrases.
 
-* Observation annotations
+* Observation annotations (these don't include afterwords)
     * 2 M (last two)
     * 1 Golden Cord (potter's field)
     * 1 Kyon (Hindu)
     * 2 Pchelka (fortress, virtue)
     * A lot from Odin
+    * A lot from Vegan
     * 1 Sasha (love Taiwan)
 
 # Bobtail Yearlings website

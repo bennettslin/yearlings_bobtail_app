@@ -742,7 +742,7 @@ export default {
                             anchor: `I'll gladly wait.`,
                             todo: true,
                             card: {
-                                description: `Still, Sita gladly encouraged my artistic pretensions, as she believed them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
+                                description: `Still, Sita gladly encouraged my artistic pretensions, as she believed them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being the one seen to go home with me after a show.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

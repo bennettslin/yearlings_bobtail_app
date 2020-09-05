@@ -60,7 +60,7 @@ export default {
                                     anchor: `can't have both.`,
                                     todo: true,
                                     card: {
-                                        description: `A friend offered this advice when he gave me his turntable, and as it turns out, what can be said for vinyl records holds as well for life decisions. I learned this the hard way when I saw that my most thoughtful deeds would always be negated by my most hurtful ones. I couldn't keep two separate selves, with one being praised for my kindness, and the other taking the blame for my selfish desires. I couldn't be both kinds of people.`,
+                                        description: `A friend offered this advice when he gave me his turntable, and as it turns out, what can be said for vinyl records holds as well for life decisions. I learned this the hard way when I saw that my most thoughtful deeds would always be negated by my most hurtful ones. I couldn't keep two separate selves, with one being praised for my kindness and the other taking the blame for my selfish desires. I couldn't be both kinds of people.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true
@@ -129,15 +129,14 @@ export default {
                         `where our`,
                         {
                             anchor: `furor`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Or else,`,
+                                    `Or else, our`,
                                     {
                                         anchor: `"führer,"`,
                                         wiki: `Führer`
                                     },
-                                    `a German title of leadership associated with`,
+                                    `a German title of leadership strongly associated with`,
                                     {
                                         anchor: `Adolf Hitler.`,
                                         wiki: `Adolf_Hitler`
@@ -152,10 +151,11 @@ export default {
                                         anchor: `Holocaust`,
                                         wiki: `The_Holocaust`
                                     },
-                                    `are obvious, however impolitic.`
+                                    `are obvious, however impolitic the comparison might be.`
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
+                                    [OBSERVATION]: true,
+                                    [PUN]: true
                                 }
                             }
                         },
@@ -245,7 +245,7 @@ export default {
                             anchor: `horse to chair,`,
                             todo: true,
                             card: {
-                                description: `That is to say, I couldn't imagine spending the entire span of my life, from rocking horse to rocking chair, not brimming with resentment.`,
+                                description: `That is to say, I would spend the entire span of my life, from rocking horse to rocking chair, brimming with resentment.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -270,11 +270,12 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
+                            todo: true,
                             card: {
-                                description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized that her kitten had believed it was being crushed to death. She lived in guilt over this ever since.`,
+                                description: `It blew my mind that I could hurt Sita for as long as I did and still live with myself. But in hindsight, it's because I accepted at face value the facade of sanity she had constructed as a way to cope. I allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [REFERENCE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         },
@@ -291,14 +292,12 @@ export default {
                         `and now I know why the`,
                         {
                             anchor: `battered kitten purrs…`,
-                            todo: true,
                             cards: [
                                 {
-                                    // TODO: Maybe switch this with the above annotation?
-                                    description: `Of course, Sita, in turn, was my first pet. It blows my mind how I was able to live with myself while hurting Sita for as long as I did. But in hindsight, it's because I had accepted at face value the facade of sanity she constructed as a way to cope. I had allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
+                                    description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized that her kitten had believed it was being crushed to death. She lived in guilt over this ever since.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
-                                        [OBSERVATION]: true
+                                        [REFERENCE]: true
                                     }
                                 },
                                 {
@@ -339,7 +338,6 @@ export default {
                                 {
                                     anchor: `Big Crunch.`,
                                     properNoun: true,
-                                    todo: true,
                                     card: {
                                         description: [
                                             `The`,
@@ -347,7 +345,12 @@ export default {
                                                 anchor: `Big Crunch`,
                                                 wiki: `Big_Crunch`
                                             },
-                                            `is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another Big Bang. I found the thought comforting as it jibes with the Hindu belief that the universe is a living force, helplessly bound like us to an eternal cycle of death and rebirth.`
+                                            `is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another`,
+                                            {
+                                                anchor: `Big Bang.`,
+                                                wiki: `Big_Bang`
+                                            },
+                                            `I found the thought comforting as it jibes with the Hindu belief that the universe is a living force, helplessly bound like us to an eternal cycle of death and rebirth.`
                                         ],
                                         dotKeys: {
                                             [OBSERVATION]: true
@@ -473,7 +476,7 @@ export default {
                             anchor: `burger shrouds,`,
                             todo: true,
                             card: {
-                                description: `As a vegan, I became sensitive to anything even remotely suggestive of meat or animal byproducts, such as a discarded fast food wrapper. I realized that I too had been inured, living in a society built on the commoditization of animal suffering.`,
+                                description: `As a vegan, I became hypersensitive to anything remotely suggestive of meat or animal byproducts, like a discarded fast food wrapper. I realized that I too had been inured, living in a society built on the commoditization of animal suffering.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -491,12 +494,16 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Having spent the past several years both playing and attending shows, I saw firsthand how easily an audience can get whipped up while being of one mind. And now, as that world drifted away and I was all alone, I wondered what exactly drew me to those crowds, and why I had so longed to be adored by them. I questioned everything I valued up to that day, like a reformed`,
+                                    `Having spent the past few years playing and attending shows, I saw firsthand how easily an audience can get whipped up while being of one mind. And now, as that world drifted away and I was all alone, I wondered what drew me to those crowds, and why I had so longed to be adored by them. I questioned everything I valued up to that day, like a reformed`,
                                     {
                                         anchor: `Hitler Youth`,
                                         wiki: `Hitler_Youth`
                                     },
-                                    `aghast at all the things he cheered for at the Nuremberg Rallies.`
+                                    `aghast at all the things he cheered for at the`,
+                                    {
+                                        anchor: `Nuremberg Rallies.`,
+                                        wiki: `Nuremberg_Rally`
+                                    }
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -602,15 +609,14 @@ export default {
                         `and to be`,
                         {
                             anchor: `good again…`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Upon becoming a vegan, I joined`,
                                     {
-                                        anchor: `People for the Ethical Treatment of Animals.`,
+                                        anchor: `People for the Ethical Treatment of Animals,`,
                                         wiki: `People_for_the_Ethical_Treatment_of_Animals`
                                     },
-                                    `For several years, I took part as a volunteer in their demonstrations for animal rights.`
+                                    `an animal rights organization. For several years, I volunteered my time and took part in their demonstrations.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -855,7 +861,7 @@ export default {
                                             anchor: `Siva`,
                                             wiki: `Shiva`
                                         },
-                                        `as a cosmic dancer, who dances to tear down the universe and build it up again in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolizing Siva's victory over ignorance. And having added my share of ignorant destruction to the universe, I now commit to help rebuild it.`
+                                        `as a cosmic dancer, who dances to tear down the universe and build it up again in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolizing Siva's victory over ignorance. And having caused my share of ignorant destruction to the universe, I now commit to help rebuild it.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
