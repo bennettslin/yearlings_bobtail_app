@@ -49,7 +49,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: `This is the second song on this album that was an original Yearlings staple. It might be telling that when Sita and I were still together, the one song I wrote for her was about the regret I'd feel as an old man at having lost her.`,
+                    description: `This is the second song on this album that was an original Yearlings staple. It might be telling that when Sita and I were still together, the one song I wrote for her was about the regret I'd feel as an old man at having lost her. As with "M," I changed the orchestration but kept the original lyrics.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGWRITING]: true
@@ -186,7 +186,6 @@ export default {
                         {
                             anchor: `Pampas`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -195,7 +194,11 @@ export default {
                                             anchor: `Pampas,`,
                                             wiki: `Pampas`
                                         },
-                                        `the grassy lowlands spanning the southeastern end of South America.`
+                                        `the grassy lowlands spanning the southeastern end of`,
+                                        {
+                                            anchor: `South America.`,
+                                            wiki: `South_America`
+                                        }
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true
@@ -209,7 +212,6 @@ export default {
                         `where the`,
                         {
                             anchor: `gopis`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In Hindu mythology, the`,
@@ -217,11 +219,21 @@ export default {
                                         anchor: `gopis`,
                                         wiki: `Gopi`
                                     },
-                                    `are cow herdesses who are devotees of the god Krishna. I watched a lot of Bollywood movies with Sita, and now my dream is slowly turning into one, as the gopis sing and dance in the background.`
+                                    `are cow herdesses who are devotees of the god`,
+                                    {
+                                        anchor: `Krishna.`,
+                                        wiki: `Krishna`
+                                    },
+                                    `I don't have an explanation for why they're in`,
+                                    {
+                                        anchor: `Argentina.`,
+                                        wiki: `Argentina`
+                                    },
+                                    `When I wrote these lyrics, I didn't think I'd need one.`
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                                    [NARRATIVE]: true,
+                                    [SONGWRITING]: true
                                 }
                             }
                         },
@@ -336,7 +348,6 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The city of`,
@@ -344,7 +355,7 @@ export default {
                                         anchor: `El Cerrito`,
                                         wiki: `El_Cerrito,_California`
                                     },
-                                    `has a sprawling hillside area with hiking trails, secluded groves, and a great view of the San Francisco Bay. In our happier days, it was one of Sita's habitual choices for a weekend outing.`
+                                    `has a sprawling hillside area with hiking trails, secluded groves, and a great view of the San Francisco Bay. In my happier days with Sita, it was one of our prime choices for a weekend outing.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -367,9 +378,8 @@ export default {
                         `Why does my`,
                         {
                             anchor: `last thought`,
-                            todo: true,
                             card: {
-                                description: `As Sita's ominous tone suddenly wrenches me from my bliss, I realize that I'm in a dream, and moreover, that it may be my last.`,
+                                description: `As Sita's ominous tone wrenches me from my bliss, I realize I'm in a dream. And moreover, it may be my last.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }

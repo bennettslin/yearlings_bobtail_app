@@ -578,9 +578,8 @@ export default {
                         `then`,
                         {
                             anchor: `none by us now,`,
-                            todo: true,
                             card: {
-                                description: `And so, wishing no more to be the cause of hurt to anyone or anything, I decide to become a vegan.`,
+                                description: `And so, vowing never again to be the cause of hurt to anyone or anything, I decide to become a vegan.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -654,10 +653,9 @@ export default {
                             anchor: `leads have left`,
                             todo: true,
                             card: {
-                                description: `For the past several years, my modus operandi was simple. I would stay with Sita up until I had another option to pursue. Then, when that prospect failed, as it always did, I would come crawling back, because Sita always let me. But our circumstances were now reversed. There were no more options coming down the pike for me, while Sita had met someone with whom she fully intended to stay.`,
+                                description: `For several years, my modus operandi was simple. I would stay with Sita up until I had another option to pursue. When that prospect failed, I would then come crawling back, because Sita always let me. But now our circumstances were reversed. I had no more options coming down the pike, while Sita had met someone with whom she fully intended to stay.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -672,7 +670,7 @@ export default {
                             anchor: `you have to…`,
                             todo: true,
                             card: {
-                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain, as I had caused Sita this exact same torment countless times. So in our last phone conversation, I just asked her meekly how she had managed it. She replied that she didn't know. There were days when she just didn't want to live. And yet, each day would pass just the same, pushing her into the next, as days added up to weeks, and weeks turned into months, until the excruciating pain quietly dulled into an aching sadness.`,
+                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain, as I had caused Sita this exact same torment countless times. So in our last phone conversation, I just asked her meekly how she had managed it. She replied that she didn't know. There were days when she just didn't want to live. And yet, each day would pass just the same, pushing her into the next. Slowly, days would add up to weeks, and weeks would turn into months, until the excruciating pain quietly dulled into an aching sadness.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -885,6 +883,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
+                    // TODO: Make this about Sasha.
                     description: [
                         `I was a vegan for the five years that I spent working on`,
                         {

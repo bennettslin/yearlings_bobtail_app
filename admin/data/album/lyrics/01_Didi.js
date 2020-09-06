@@ -308,8 +308,11 @@ export default {
                                             anchor: `Safeway`,
                                             wiki: `Safeway_Inc.`
                                         },
-                                        `grocery stores were common in my area when I was growing up.`
-                                    ]
+                                        `supermarkets were common in my area when I was growing up. After helping me dress, the nurse placed my soiled pants in a grocery bag for me to take home.`
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
                                 },
                                 {
                                     wormhole: `safeway_paper_bag`
@@ -323,11 +326,16 @@ export default {
                     lyric: [
                         {
                             anchor: `decked in overalls`,
-                            todo: true,
                             card: {
-                                description: `Since I was the smallest child in my grade, the only item of clothing that fit me was an abandoned pair of girls' overalls. After helping me dress, the nurse placed my soiled pants in a shopping bag for me to take home.`,
+                                description: [
+                                    `Since I was the smallest child in my grade, the only item of clothing that fit me was an abandoned pair of girls'`,
+                                    {
+                                        anchor: `overalls.`,
+                                        wiki: `Overalls`
+                                    }
+                                ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -348,11 +356,10 @@ export default {
                         `Didi, you've`,
                         {
                             anchor: `been in the bath`,
-                            todo: true,
                             card: {
-                                description: `After my mother came to pick me up and drop me off at home, I spent a good long while trying to bathe myself. Since I didn't know how to take showers and was too afraid to try, I had to just keep draining and refilling the bathtub until I was clean.`,
+                                description: `After my mother came to pick me up and dropped me off at home, I spent a long while trying to bathe myself. Since I didn't know how to take showers and was too afraid to try, I had to keep draining and refilling the bathtub until I was clean.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -402,7 +409,7 @@ export default {
                             anchor: `sheriff's badge and gun…`,
                             todo: true,
                             card: {
-                                description: `Though the Taiwanese teenagers of my mother's generation prized all things American, their only exposure to American culture was through a bootleg industry that mostly recycled the relics of its past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for old Westerns.`,
+                                description: `Though my mother and the Taiwanese teenagers of her generation prized all things American, their only exposure to American culture was through a bootleg industry that mostly recycled the relics of its past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for old Westerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

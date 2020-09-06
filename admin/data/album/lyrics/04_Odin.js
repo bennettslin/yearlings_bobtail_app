@@ -1044,15 +1044,14 @@ export default {
                         `to be a`,
                         {
                             anchor: `guard's whistle`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Standing on the ocean beach, I notice a steel whistle buried in the sand, perhaps dropped by a `,
+                                    `Standing on the ocean beach, I notice a steel whistle half buried in the sand, perhaps dropped by a`,
                                     {
-                                        anchor: `lifeguard.`,
+                                        anchor: `lifeguard`,
                                         wiki: `Lifeguard`
                                     },
-                                    `Its piercing sound will never again warn of danger. But perhaps that's just as well for me, since some dangers come with no warning.`
+                                    `earlier in the day. Its shrill cry once warned of danger, but now it lies forever silent. Which may be just as well, since some dangers come with no warning.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1158,7 +1157,7 @@ export default {
                             // CONSIDER: Wormhole Foreshadow M?
                             todo: true,
                             card: {
-                                description: `Like cellophane, Sasha's intentions were transparent. I could always count on her as my friend to sympathize during my bouts of frustration. But also like cellophane, she couldn't truly return warmth where none was offered. Once I became more open about my petty and vindictive thoughts toward the bullies, I could feel her keeping her distance. And then I knew that any chance for us to be more than friends was gone forever.`,
+                                description: `Like cellophane, Sasha's intentions were transparent. I could always count on her as my friend to sympathize during my bouts of frustration. But also like cellophane, she couldn't truly return warmth when none was offered. Once I became more open about my petty and vindictive thoughts toward the bullies, I could feel her keeping her distance. And then I knew that any chance for us to be more than friends was gone forever.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -1288,15 +1287,14 @@ export default {
                         `you frame`,
                         {
                             anchor: `silhouettes of torn rides`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Watching the ocean waves rise and fall, I'm reminded of the`,
+                                    `Watching the waves of the ocean rise and fall, I recall the`,
                                     {
                                         anchor: `traveling carnivals`,
                                         wiki: `Traveling_carnival`
                                     },
-                                    `that shaped the skyline of my youth. Those past amusement rides are now being erected and dismantled in my memories with the same transience of ocean waves.`
+                                    `that came to town in my youth. Every summer, their amusement rides would rise up to reshape the skyline. And yet, they are now being dissembled in my memories with the same transience of ocean waves.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -1391,10 +1389,8 @@ export default {
                             anchor: `soulless solace`,
                             // From Willy the Cocoa ("unsalvaged souls")
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
-                            todo: true,
-                            // TODO: Make all four, heaven and nirvana.
                             card: {
-                                description: `It seemed bizarre to me that if a true spiritual path did indeed exist, then it wouldn't offer a reward so obviously desirable, for which I could mindlessly strive without being troubled by existential questions on the nature of souls.`,
+                                description: `I didn't understand why this business of consciousness was even necessary. Why couldn't living creatures simply fear death in the same way that oil is said to fear water?`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -1405,7 +1401,8 @@ export default {
                             anchor: `just play dumb?`,
                             todo: true,
                             card: {
-                                description: `It seemed bizarre to me.`,
+                                // TODO: Make about heaven and nirvana.
+                                description: `It seemed bizarre to me that if a true spiritual path did indeed exist, then it wouldn't offer a reward so obviously desirable, for which I could mindlessly strive without being troubled by existential questions on the nature of souls.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -1444,11 +1441,9 @@ export default {
                         {
                             // CONSIDER: Wormhole to Ash Wednesday?
                             anchor: `fetus force-fed,`,
-                            todo: true,
                             card: {
-                                description: `Most maddening of all was that one has no say in being brought into this world, given how distressing the knowledge of one's mortality must always be.`,
+                                description: `Most maddening of all was that one has no say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to opt out of life to begin with.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -1459,7 +1454,6 @@ export default {
                         `Yet your`,
                         {
                             anchor: `defeat of tortoise,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -1472,7 +1466,7 @@ export default {
                                         anchor: `Aesop's fable,`,
                                         wiki: `Aesop's_Fables`
                                     },
-                                    `but only because the hare falls asleep. Similarly, while tortoises are known to live over a century, I had them beat in longevity if I could awaken to the calling of faith.`
+                                    `but only because the hare falls asleep. Similarly, while tortoises are known to live over a century, I had them beat in longevity if I could just will myself to believe it.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1671,7 +1665,6 @@ export default {
                         `past a`,
                         {
                             anchor: `guileless garden gnome…`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1684,7 +1677,14 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `Powerless to change my condition, I stand motionless like a lawn ornament before all that remains unknown, filled with faint hope for the future.`,
+                                    description: [
+                                        `Powerless to change my condition, I can only confront all that remains unknown. So like a`,
+                                        {
+                                            anchor: `garden gnome`,
+                                            wiki: `Garden_gnome`
+                                        },
+                                        `with feet firmly planted in the lawn grass, I stand motionless and grin faintly in hope for the future.`
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true

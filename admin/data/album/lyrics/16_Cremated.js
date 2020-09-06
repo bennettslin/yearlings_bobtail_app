@@ -127,7 +127,13 @@ export default {
                             anchor: `At a vista,`,
                             todo: true,
                             card: {
-                                description: `Driving in her car, Miriam and I arrive at a secluded spot on a cliff overlooking the San Francisco Bay.`,
+                                description: [
+                                    `Driving in her car, Miriam and I arrive at a secluded spot on a cliff overlooking the`,
+                                    {
+                                        anchor: `San Francisco Bay.`,
+                                        wiki: `San_Francisco_Bay`
+                                    }
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
