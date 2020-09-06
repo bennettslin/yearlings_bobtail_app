@@ -12,6 +12,7 @@
 * Reassess what is an anchor.
 * More casual talk.
 * Make sure narrative and backstory are never together.
+* Establish what exactly makes for a narrative, backstory, and observation.
 * Change more similarlys to likewises, and other phrases.
 * When to use "that."
 * When to use "you" versus "one."

@@ -28,9 +28,25 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `The kids in the neighborhood knew Willy as "The Cocoa," referring both to the Coke bottles he collected and to his seeming a bit cuckoo. There wasn't an official way to spell it.`,
+                    description: [
+                        `The kids in the neighborhood knew Willy as "the Cocoa," referring both to the`,
+                        {
+                            anchor: `Coke`,
+                            wiki: `Coca-Cola`
+                        },
+                        `bottles he collected and to his seeming a bit cuckoo, or possibly`,
+                        {
+                            isItalic: true,
+                            lyric: `loco,`
+                        },
+                        `which is`,
+                        {
+                            anchor: `Spanish`,
+                            wiki: `Spanish_language`
+                        },
+                        `for "crazy." There wasn't an official way to spell it.`
+                    ],
                     dotKeys: {
                         [BACKSTORY]: true
                     }
@@ -98,12 +114,6 @@ export default {
                             anchor: `valley somersaults`,
                             cards: [
                                 {
-                                    description: `In the mirages created by the summer heat, the reflections of the surrounding mountains naturally point downwards, suggesting that their jagged peaks had caused the cracks in the asphalt.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
                                     description: [
                                         `I grew up in the`,
                                         {
@@ -125,6 +135,12 @@ export default {
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
+                                },
+                                {
+                                    description: `In the mirages created by the summer heat, the reflections of the surrounding mountains naturally point downwards, suggesting that their jagged peaks had caused the cracks in the asphalt.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true
+                                    }
                                 }
                             ]
                         },
@@ -136,9 +152,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Hydrants burst`,
-                            todo: true,
                             card: {
-                                description: `To keep us kids cool during the summer, neighbors would sometimes crack open a fire hydrant. The water often failed to drain and eventually formed stagnant pools, to the dismay of city officials.`,
+                                description: `To keep us kids cool during the summer, neighbors would sometimes crack open a fire hydrant. The water would fail to drain and eventually form stagnant pools, to the dismay of city officials.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -147,18 +162,17 @@ export default {
                         `as early worms work this`,
                         {
                             anchor: `dying coyote's jaw.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `If the surrounding mountains of the Valley are like the lower jaw of a dying coyote, then the bustle of its morning commuters are like tiny scavengers ready to go to town on the carcass.`,
+                                    description: `Every so often, a coyote would wander down from the hillsides and get hit by traffic. Its body might then lie decomposing for days before being found.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 },
                                 {
-                                    description: `Every so often, a coyote would wander down from the hillsides and get hit by traffic. Its body might then lay decomposing for days before being found.`,
+                                    description: `If the surrounding mountains of the Valley are like the lower jaw of a dying coyote, then the bustle of its morning commuters are like tiny scavengers ready to go to town on the carcass.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true
+                                        [OBSERVATION]: true
                                     }
                                 }
                             ]
@@ -191,7 +205,6 @@ export default {
                         `Swill pop poured from`,
                         {
                             anchor: `wayside bottle,`,
-                            todo: true,
                             card: {
                                 description: `Willy begins his daily rounds by filling his shopping cart with discarded bottles and cans found littered along the byways.`,
                                 dotKeys: {
@@ -207,8 +220,13 @@ export default {
                         `his`,
                         {
                             anchor: `pinhead in its shadow`,
-                            todo: true,
                             cards: [
+                                {
+                                    description: `Willy peers through an empty soda bottle, the top of which is tapered like the outline of his skull.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                },
                                 {
                                     description: [
                                         `Willy had`,
@@ -216,16 +234,15 @@ export default {
                                             anchor: `microcephaly,`,
                                             wiki: `Microcephaly`
                                         },
-                                        `a medical condition in which the brain fails to develop properly. And so his head was abnormally small in size, like the "pinheads" of carnival sideshows from bygone days.`
+                                        `a medical condition in which the brain fails to develop properly. And so his head was abnormally small in size, like the "pinheads" of`,
+                                        {
+                                            anchor: `carnival sideshows`,
+                                            wiki: `Sideshow`
+                                        },
+                                        `from bygone days.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
-                                    }
-                                },
-                                {
-                                    description: `Willy peers through an empty soda bottle, the top of which is tapered like the outline of his skull.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
                                     }
                                 }
                             ]
@@ -242,9 +259,8 @@ export default {
                         lyric: [
                             {
                                 anchor: `Chilled cola's free`,
-                                todo: true,
                                 card: {
-                                    description: `Willy eagerly awaits the cold soft drink that comes along with his reimbursement at the recycling center.`,
+                                    description: `Willy eagerly awaits the complementary soft drink that will come with his reimbursement at the recycling center.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -295,9 +311,8 @@ export default {
                         `for`,
                         {
                             anchor: `our tins and our jars`,
-                            todo: true,
                             card: {
-                                description: `Like many other households in the neighborhood, my family would leave our recyclables out on the porch for Willy to come by and collect.`,
+                                description: `Like some other households in the neighborhood, my family would leave our recyclables out on the porch for Willy to come by and collect.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -328,7 +343,6 @@ export default {
                         `when`,
                         {
                             anchor: `suddenly baby shrieks…`,
-                            todo: true,
                             card: {
                                 description: `My brother, the baby of our family, was typically calm and quiet in demeanor. However, when made to do things he didn't enjoy or understand, like sitting through a haircut, he could erupt without warning in a frenzied outburst.`,
                                 dotKeys: {
@@ -503,15 +517,14 @@ export default {
                         {
                             anchor: `X-ray spec'd,`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In those days, the back pages of comic books were filled with ads for novelty items such as`,
+                                    `In those days, the back pages of comic books were filled with ads for novelty items. Having sent away weeks ago for a pair of`,
                                     {
                                         anchor: `X-Ray Specs,`,
                                         wiki: `X-Ray_Specs_(novelty)`
                                     },
-                                    `which purportedly allowed its wearer to see through objects. Having sent away weeks ago for a pair of these novelty glasses, I have just received them in the mail and am now trying them on.`
+                                    `which purportedly allows the wearer to see through objects, I have just received them in the mail and am now trying them on.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -538,9 +551,8 @@ export default {
                         `a`,
                         {
                             anchor: `kick slams`,
-                            todo: true,
                             card: {
-                                description: `Upon catching my brother in the act of cutting up my comic book, I explode and lay down some serious hurt.`,
+                                description: `Upon catching my brother in the act of cutting up my comic book, I explode with anger and lay down some serious hurt.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -725,9 +737,8 @@ export default {
                         `a`,
                         {
                             anchor: `sack-spilled glass`,
-                            todo: true,
                             card: {
-                                description: `Eager for a fight, the gangsters start to push Willy around. His shopping cart gets overturned in the commotion, causing empty bottles and cans to spill onto the ground.`,
+                                description: `Eager for a fight, the gangsters start pushing Willy around. His shopping cart gets overturned in the commotion, causing empty bottles and cans to spill onto the ground.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1061,7 +1072,7 @@ export default {
                                 {
                                     description: `My mother, who was the den mother of my Cub Scout pack, might also be assuring me that I am not yet "way below."`,
                                     dotKeys: {
-                                        [BACKSTORY]: true,
+                                        [NARRATIVE]: true,
                                         [PUN]: true
                                     }
                                 }
@@ -1107,10 +1118,9 @@ export default {
                         `In time, with`,
                         {
                             anchor: `needle done,`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `My mother suggests that my life will be a patchwork onto which I continually sew new experiences. In turn, the insights gained from these experiences may then inform and enrich my art.`,
+                                    description: `My mother suggests that my life will be a patchwork onto which I continually sew new experiences. In turn, the insights gained from these experiences will then inform and enrich my art.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -1123,7 +1133,6 @@ export default {
                         `you'll write this`,
                         {
                             anchor: `book of yours.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
@@ -1131,12 +1140,12 @@ export default {
                                         anchor: `lazy eye,`,
                                         wiki: `Amblyopia`
                                     },
-                                    `which naturally led to an interest in drawing. Since I lacked depth perception,  it was just less of a struggle for me to render the things I saw onto paper. Impressed by my ability, my mother insisted that I was destined to become a great artist. So I always had it in my head that I would one day create a masterpiece, something like the`,
+                                    `which naturally led to an interest in drawing. Since I lacked depth perception,  it was just less of a struggle for me to render anything I saw onto paper. Impressed by my ability, my mother insisted I was destined to become a great artist. So I always had it in my head that I would one day create a masterpiece, perhaps something like the`,
                                     {
-                                        anchor: `Tintin comic books`,
+                                        anchor: `Tintin`,
                                         wiki: `The_Adventures_of_Tintin`
                                     },
-                                    `I adored at the time.`
+                                    `comic books I adored at the time.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -1168,7 +1177,6 @@ export default {
                                 },
                                 `'s cover`
                             ],
-                            todo: true,
                             card: {
                                 description: [
                                     `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "bells on bobtail ring," from the song`,

@@ -125,7 +125,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `At a vista,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Driving in her car, Miriam and I arrive at a secluded spot on a cliff overlooking the`,
