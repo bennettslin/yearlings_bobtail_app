@@ -20,7 +20,6 @@
     * 1 Kyon (Hindu)
     * 2 Pchelka (fortress, virtue)
     * A lot from Odin
-    * A lot from Vegan
     * 1 Sasha (love Taiwan)
 
 # Bobtail Yearlings website

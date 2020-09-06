@@ -21,13 +21,12 @@ import {
 export default {
     title: 'Vegan Proclamation',
     duration: 241,
-    overview: `Having doubled down on writing and recording all the songs for my next album, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left me. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had now was myself, and I really didn't like myself. And I had no idea how to become a good person again.`,
+    overview: `Having doubled down on writing and recording all the songs for my next album, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left me. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had now was myself, but I really didn't like myself. And I had no idea how to become a good person again.`,
     lyricUnits: [
         {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
                         `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
@@ -35,7 +34,7 @@ export default {
                             anchor: `vegan.`,
                             wiki: `Veganism`
                         },
-                        `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step toward liking myself again.`
+                        `I supported her decision by helping her research how to avoid animal products. After we stopped speaking to each other, I became vegan as well, which was my first step toward liking myself again.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
@@ -58,9 +57,8 @@ export default {
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both.`,
-                                    todo: true,
                                     card: {
-                                        description: `A friend offered this advice when he gave me his turntable, and as it turns out, what can be said for vinyl records holds as well for life decisions. I learned this the hard way when I saw that my most thoughtful deeds would always be negated by my most hurtful ones. I couldn't keep two separate selves, with one being praised for my kindness and the other taking the blame for my selfish desires. I couldn't be both kinds of people.`,
+                                        description: `This advice was offered by a friend when I bought a used turntable. And as it turns out, what he had to say about vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my thoughtful deeds were always being negated by my hurtful ones. I couldn't keep two separate selves, where one gets praised for my kindness and the other takes the blame for all my selfish desires. I couldn't be both kinds of people.`,
                                         dotKeys: {
                                             [BACKSTORY]: true,
                                             [OBSERVATION]: true
@@ -95,9 +93,8 @@ export default {
                         {
                             anchor: `Odin,`,
                             properNoun: true,
-                            todo: true,
                             card: {
-                                description: `As a child, I never gave much thought to our house cat Odin. He just seemed like part of the scenery. So after Sita and I adopted a cat who became our pride and joy, I would marvel at why my nurturing instinct, which came so effortlessly now, was so hard to come by then. Years later, as my failure to nurture my relationship with Sita led to its deterioration, I thought of Odin often.`,
+                                description: `As a child, I never paid much thought to our pet cat Odin. It was like he came with the house. So after Sita and I adopted a cat together, I marveled at how this instinct to nurture a pet just seemed to turn on inside me at the flick of a switch. Years later when my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -243,9 +240,8 @@ export default {
                         `set to rock this pout from`,
                         {
                             anchor: `horse to chair,`,
-                            todo: true,
                             card: {
-                                description: `That is to say, I would spend the entire span of my life, from rocking horse to rocking chair, brimming with resentment.`,
+                                description: `That is to say, I was ready to brim with resentment for the entire span of my life, from rocking horse to rocking chair.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -270,9 +266,8 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
-                            todo: true,
                             card: {
-                                description: `It blew my mind that I could hurt Sita for as long as I did and still live with myself. But in hindsight, it's because I accepted at face value the facade of sanity she had constructed as a way to cope. I allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
+                                description: `It blew my mind that I could hurt Sita for as long as I did and still live with myself. But in hindsight, it's because I accepted at face value the facade of sanity she had constructed as a means to cope. I allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly all she ever needed.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -474,9 +469,8 @@ export default {
                         `Through an alley strewn with`,
                         {
                             anchor: `burger shrouds,`,
-                            todo: true,
                             card: {
-                                description: `As a vegan, I became hypersensitive to anything remotely suggestive of meat or animal byproducts, like a discarded fast food wrapper. I realized that I too had been inured, living in a society built on the commoditization of animal suffering.`,
+                                description: `As a vegan, I became hypersensitive to seeing anything that was remotely a byproduct of the meat industry. Even something as commonplace as a crumpled fast food wrapper would serve to remind me of how much our society has commoditized animal suffering.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -491,10 +485,9 @@ export default {
                         `a`,
                         {
                             anchor: `lone rallied youth`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Having spent the past few years playing and attending shows, I saw firsthand how easily an audience can get whipped up while being of one mind. And now, as that world drifted away and I was all alone, I wondered what drew me to those crowds, and why I had so longed to be adored by them. I questioned everything I valued up to that day, like a reformed`,
+                                    `Having spent years playing shows, I saw firsthand how an audience can be whipped into a single-minded frenzy. But as that world now drifts away, I puzzle over what drew me to those crowds, and why I so longed to be adored by them. I question everything I've valued up to this point, like a reformed`,
                                     {
                                         anchor: `Hitler Youth`,
                                         wiki: `Hitler_Youth`
@@ -513,7 +506,6 @@ export default {
                         },
                         {
                             anchor: `strikes himself from his cloud,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The insignia of the`,
@@ -524,10 +516,10 @@ export default {
                                             wiki: `Schutzstaffel`
                                         }
                                     },
-                                    `the paramilitary group responsible for carrying out the Holocaust, consists of two thunderbolts side by side. Wishing no more to strike down anyone with my thunderbolts, I struck myself down, leaving behind my former convictions in the process.`
+                                    `the paramilitary group responsible for carrying out the Holocaust, consisted of two thunderbolts side by side. And so, wishing no more to strike anyone down with my thunder, I strike myself down instead, leaving my complacence and ego behind.`
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
+                                    [NARRATIVE]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -539,9 +531,8 @@ export default {
                     lyric: [
                         {
                             anchor: `reversing his stomach`,
-                            todo: true,
                             card: {
-                                description: `It seemed so vulgar that anything should have to suffer and die just to satisfy my hunger. And once I came to that conclusion, I literally could no longer stomach the taste of meat.`,
+                                description: `It seemed so vulgar that anything should have to suffer and die just to satisfy my hunger. And once I came to that conclusion, I literally couldn't stomach the taste of meat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -551,7 +542,6 @@ export default {
                         `and his`,
                         {
                             anchor: `swastikas`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -560,7 +550,7 @@ export default {
                                             anchor: `swastika`,
                                             wiki: `Swastika`
                                         },
-                                        `is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid association with violence and hatred, today's Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
+                                        `is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid any association with violence and hatred, today's Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
                                     ]
                                 },
                                 {
@@ -590,9 +580,9 @@ export default {
                             anchor: `none by us now,`,
                             todo: true,
                             card: {
-                                description: `And so, wishing no more to be the cause of hurt to anyone or anything, I decided to become a vegan.`,
+                                description: `And so, wishing no more to be the cause of hurt to anyone or anything, I decide to become a vegan.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         },
@@ -774,13 +764,14 @@ export default {
                             anchor: `start as children?`,
                             todo: true,
                             card: {
+                                // TODO: Make just one of many.
                                 description: [
                                     `Hoagy Carmichael's`,
                                     {
                                         anchor: `"Stardust"`,
                                         wiki: `Stardust_(song)`
                                     },
-                                    `was my favorite song, so "stardust" became my go-to word to use for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children?" and deeply connected with it. He seemed greatly disappointed to find out that the actual words were gibberish.`
+                                    `was my favorite song, so "stardust" became my go-to word to use for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children" and deeply connected with it. He seemed greatly disappointed to find out that the actual words were gibberish.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -796,7 +787,6 @@ export default {
                         `The`,
                         {
                             anchor: `diapered white dwarf,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `As we come upon a`,
@@ -804,7 +794,7 @@ export default {
                                         anchor: `white dwarf,`,
                                         wiki: `White_dwarf`
                                     },
-                                    `the dense remnant of an aged star, I am reminded of`,
+                                    `the superdense remnant of an aged star, I am reminded of`,
                                     {
                                         anchor: `Apasmara,`,
                                         wiki: `Apasmara`
@@ -820,10 +810,9 @@ export default {
                         [
                             {
                                 anchor: `gurgling, curls up`,
-                                todo: true,
                                 cards: [
                                     {
-                                        description: `With ignorance being as old as time itself, I'm comforted to know that we'll always correct our past mistakes. And yet, it feels just as dispiriting to know that those coming after us have yet to make theirs. The universe never truly learns, and I was partly to blame. I had this same thought as a child, when I wondered if I was the reason why my brother would never get better. It made me realize that all I could do was love him for who he was, and then do better for him.`,
+                                        description: `With ignorance being as old as time itself, I'm comforted to know we always correct our past mistakes. And yet, it's just as dispiriting that those coming after us have yet to make theirs. The universe never truly learns, and I was partly to blame. I had this same thought as a child, when I wondered if I was the reason my brother would never get better. It made me realize that all I could do was love him and then do better for him.`,
                                         dotKeys: {
                                             [NARRATIVE]: true,
                                             [OBSERVATION]: true
@@ -848,7 +837,6 @@ export default {
                         {
                             anchor: `chivalry to our Siva's feet…`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [

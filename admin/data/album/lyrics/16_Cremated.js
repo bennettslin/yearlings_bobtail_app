@@ -494,7 +494,7 @@ export default {
                             anchor: `self-servicing cleric surgeon`,
                             card: {
                                 description: [
-                                    `Of course, while my drunken self is being forced to adopt the faith of his sober half, this internal conflict remains hidden from onlookers. All they can see is me presiding over my own conversion ritual and surgically`,
+                                    `Of course, while my drunken self is being forced to adopt the faith of his sober half, this internal conflict remains hidden from bystanders. All they can see is me presiding over my own conversion ritual and surgically`,
                                     {
                                         anchor: `removing my own foreskin.`,
                                         wiki: `Circumcision`
@@ -552,7 +552,7 @@ export default {
                                         anchor: `ventriloquist.`,
                                         wiki: `Ventriloquism`
                                     },
-                                    `The dummy of my drunken self can be made to say all the questionable things needed for me to get what I want, while I just watch aghast as an innocent bystander.`
+                                    `The dummy of my drunken self can be made to say all the questionable things needed for me to get what I want, while I just sit there looking appalled as an innocent onlooker.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
