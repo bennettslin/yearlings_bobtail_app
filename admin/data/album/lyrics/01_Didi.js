@@ -31,7 +31,11 @@ export default {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: [
-                        `In the Chinese language,`,
+                        `In the`,
+                        {
+                            anchor: `Chinese language,`,
+                            wiki: `Chinese_language`
+                        },
                         {
                             isItalic: true,
                             lyric: `didi`
@@ -225,7 +229,7 @@ export default {
                             anchor: `"Zeizei,`,
                             card: {
                                 description: [
-                                    `In Chinese`,
+                                    `In Chinese,`,
                                     {
                                         isItalic: true,
                                         lyric: `zeizei`
