@@ -195,9 +195,8 @@ export default {
                         `when you wanted to`,
                         {
                             anchor: `buy a fortress`,
-                            todo: true,
                             card: {
-                                description: `One year, I asked my parents to buy me a lifesize wooden fort as a combined birthday and Christmas gift, which was always an option for me since my birthday is in November. Unfortunately, some toys are too pricey to count for even two gifts.`,
+                                description: `As a child, I always liked to hole up somewhere to work on projects undisturbed. So one year, I asked my parents for a lifesize wooden fort as a combined birthday and Christmas gift, since my birthday is in November. Unfortunately, some toys are too pricey to count for even two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -411,7 +410,7 @@ export default {
                             anchor: `send-away offers`,
                             todo: true,
                             card: {
-                                description: `Since I had few friends, I would amuse myself by sending away for free samples and small mail order purchases. As a result, I got flooded with junk mail advertising even more such offers. It was during this time that I received a letter from RI Research, Special Human Being Laboratory.`,
+                                description: `Since I had no friends, I would amuse myself by sending away for free samples and small mail order purchases. As a result, I got flooded with junk mail, which exposed me to even more advertisements for such offers. It was during this time that I received a letter from RI Research, Special Human Being Laboratory.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -437,7 +436,7 @@ export default {
                                         anchor: `red envelopes.`,
                                         wiki: `Red_envelope`
                                     },
-                                    `My parents insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`
+                                    `My parents always insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -993,7 +992,6 @@ export default {
                         `But`,
                         {
                             anchor: `every hero has a heel,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The Greek hero`,

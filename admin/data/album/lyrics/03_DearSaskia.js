@@ -24,9 +24,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `Sasha's given name was actually Saskia. But because this was difficult for other children to pronounce, she had gone by the nickname of Sasha her entire life.`,
+                    description: `Sasha's given name was actually Saskia. But because this was difficult for other children to pronounce when she was little, she had gone by the nickname of Sasha her entire life.`,
                     dotKeys: {
                         [BACKSTORY]: true
                     }

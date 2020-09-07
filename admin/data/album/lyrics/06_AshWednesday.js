@@ -72,7 +72,6 @@ export default {
                         `our`,
                         {
                             anchor: `futile trip`,
-                            todo: true,
                             card: {
                                 description: [
                                     `I headed for the`,
@@ -80,7 +79,7 @@ export default {
                                         anchor: `San Francisco Bay Area`,
                                         wiki: `San_Francisco_Bay_Area`
                                     },
-                                    `to attend college, where I met Catherine in a class on Western folklore.`
+                                    `to attend college. There I met Catherine, a fellow freshman, in a class on European folklore.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -95,9 +94,8 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced:`,
-                            todo: true,
                             card: {
-                                description: `My relationship with Catherine began much in the same way as my friendship with Sasha had a decade earlier. That is, I latched onto the first cute person to show me any small kindness in a new environment, then tried to make myself indispensable in countless small ways.`,
+                                description: `My relationship with Catherine began the same way my friendship with Sasha had a decade earlier. Which is to say, I latched onto the first cute person to show me any small kindness in a new environment, and then I tried to make myself indispensable in small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -561,7 +559,6 @@ export default {
                         `my`,
                         {
                             anchor: `girl in glasses`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The critic`,
@@ -649,7 +646,7 @@ export default {
                                         anchor: `Algonquin Round Table,`,
                                         wiki: `Algonquin_Round_Table`
                                     },
-                                    `a social circle of New York City writers known for their clever wordplay and wit. To answer why Catherine left me, then, this metaphor humorously suggests it was out of fear I would take her away from her friends, being too dim-witted as I am to socialize with them.`
+                                    `a social circle of New York City writers known for their clever wordplay and wit. To answer why Catherine left me, then, this metaphor humorously suggests it was out of fear I would take her away from her friends, being too dim-witted as I was to socialize with them.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
