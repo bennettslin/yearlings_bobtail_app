@@ -26,7 +26,7 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    description: `Sasha's given name was actually Saskia. But because this was difficult for her earliest playmates to pronounce, she had gone by the nickname of Sasha her entire life.`,
+                    description: `Sasha's given name was actually Saskia. But because this was difficult for other children to pronounce, she had gone by the nickname of Sasha her entire life.`,
                     dotKeys: {
                         [BACKSTORY]: true
                     }
@@ -255,15 +255,14 @@ export default {
                         },
                         {
                             anchor: `amber eyes—`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Sasha's eyes were of an amber color. Also,`,
+                                    `Sasha's eyes were of an amber color.`,
                                     {
-                                        anchor: `amber`,
+                                        anchor: `Amber`,
                                         wiki: `Amber`
                                     },
-                                    `is fossilized tree resin that sometimes preserves the remains of trapped insects from epochs past.`
+                                    `can also refer to fossilized tree resin, which sometimes preserves the remains of trapped insects from epochs past.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
