@@ -899,9 +899,8 @@ export default {
                         `twits daily`,
                         {
                             anchor: `murdered for their virtue.`,
-                            todo: true,
                             card: {
-                                description: `Like all ordeals, mine became more bearable once I could tie it to a greater purpose.`,
+                                description: `Like all ordeals, mine was more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
