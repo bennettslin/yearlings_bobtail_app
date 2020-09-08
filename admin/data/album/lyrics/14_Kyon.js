@@ -152,7 +152,7 @@ export default {
                         {
                             anchor: `take in her breasts,`,
                             card: {
-                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for a mere chance at romance with some new woman. I had to wonder if this fear manifested in some hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
+                                description: `It scared me, far more than I let on, to gamble away the familiar warmth of Sita's love for the mere chance at romance with a new woman. I often wondered if this fear then manifested in some hormonal craving for nurture over pleasure, because I was always struck by how motherly these women's naked bodies initially felt to me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -173,7 +173,7 @@ export default {
                             anchor: `womb you bed?`,
                             todo: true,
                             card: {
-                                description: `Of course, Sita was under no illusion that what I wanted was something other than to sleep with more women, to compensate for being the less sexually experienced one in our relationship.`,
+                                description: `Of course, Sita was under no such illusion herself about my innocence. What I wanted was to sleep with more women, to compensate for being the less sexually experienced one in our relationship.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -309,9 +309,8 @@ export default {
                         `But dear,`,
                         {
                             anchor: `let's make a pact:`,
-                            todo: true,
                             card: {
-                                description: `Sita knew it was only a matter of time before I wanted the mature, slow-burning love that she wanted. And so after each breakup, she would seek my assurance that I would consider rekindling what we once had, whenever that time should come.`,
+                                description: `Sita knew it was just a matter of time before I wanted the same mature, slow-burning love that she did. And so after each breakup, she would seek my assurance that I would consider rekindling what we once had, whenever that time should come.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -403,7 +402,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    // TODO: Used the word infidelity already.
+                                    // TODO: Used the word infidelity already. And combine these.
                                     description: `Sita anticipated that my years of infidelity would whiz by in a flash as the pursuit of other women grew repetitive, imprinting few standout memories.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -448,13 +447,12 @@ export default {
                 {
                     time: 85,
                     lyric: [
+                        // NOTE: I made "My" capitalised.
                         `My`,
                         {
-                            // NOTE: I made "My" capitalised.
                             anchor: `ticklish piglet,`,
-                            todo: true,
                             card: {
-                                description: `Perversely, Sita and I were always at our best during the months immediately after getting back together. She got to enjoy the knowledge of being the better woman, while I could bask in the afterglow of my latest sexual exploit.`,
+                                description: `Perversely, Sita and I were always at our best during the months immediately after getting back together. She could enjoy the knowledge of being the better woman, while I got to bask in the afterglow of my latest sexual exploit.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -684,7 +682,7 @@ export default {
                             card: {
                                 description: [
                                     // TODO: Mention never having resolved which is scarier.
-                                    `Recognizing my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. Hinduism is no different from Buddhism in its end goal of transcendent release from the cycle of rebirth, which I found problematic as a child. I was attracted to its sprawling pantheon of deities and avatars. It just seemed like the more details there are, the more room you have to explore the divine.`
+                                    `Recognizing my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. Hinduism is no different from Buddhism in its end goal of transcendent release from the cycle of rebirth, which I found problematic as a child. I was attracted to its sprawling pantheon of deities and avatars. It just seemed like the more details there are, the more room you have to get lost in the divine.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -695,9 +693,8 @@ export default {
                         `and`,
                         {
                             anchor: `sadness for what it was.`,
-                            todo: true,
                             card: {
-                                description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my sadness was a product of circumstance, whether from bullying in my youth, or from loneliness as I grew older. Sita, on the other hand, suffered from clinical depression. And as it dawned on me that I could be proactive in dealing with mine, I grew impatient with her that she was incapable of doing the same.`,
+                                description: `As friends, Sita and I got along well because we were both sad people. But in hindsight, my sadness was a product of circumstance, whether from bullying in my youth, or from loneliness as I grew older. Sita, on the other hand, suffered from clinical depression. And as I learned to be proactive in dealing with my moods, I grew impatient with her for being incapable of doing the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -740,9 +737,8 @@ export default {
                         },
                         {
                             anchor: `I'll gladly wait.`,
-                            todo: true,
                             card: {
-                                description: `Still, Sita gladly encouraged my artistic pretensions, as she believed them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being the one seen to go home with me after a show.`,
+                                description: `Still, Sita encouraged my artistic pretensions, believing them to reflect positively on her as well. Though she was uninterested in the local scene, she still enjoyed being seen as the one going home with me after a show.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -758,6 +754,7 @@ export default {
                             anchor: `practice cuts…`,
                             todo: true,
                             card: {
+                                // TODO: Change this.
                                 description: `Even in anguish, Sita never lost her sardonic sense of humor. When I expressed concern about her cutting herself, she sweetly assured me that it was only for practice.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
