@@ -24,9 +24,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `To avoid mentioning Mara by name, I entitled this song "M," which I planned to explain by packing the lyrics with words that start with the letter M. Deep down, I probably knew that I wasn't fooling anyone.`,
+                    description: `To avoid mentioning Mara by name, I entitled this song "M," which I planned to explain by packing the lyrics with words that start with the letter M. Deep down, I probably knew I wasn't fooling anyone.`,
                     dotKeys: {
                         [BACKSTORY]: true
                     }
@@ -130,7 +129,7 @@ export default {
                             anchor: `sadness with patience,`,
                             todo: true,
                             card: {
-                                description: `I had spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building yourself up into a desirable person, after all, is really just the ultimate art project.`,
+                                description: `I spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building yourself up into a desirable person, after all, is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

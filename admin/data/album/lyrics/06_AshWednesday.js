@@ -30,7 +30,17 @@ export default {
                             anchor: `Ash Wednesday`,
                             wiki: `Ash_Wednesday`
                         },
-                        `is the first day of Lent, a period of fasting observed by Christians to memorialize the forty days that Jesus spent fasting in the desert.`
+                        `is the first day of`,
+                        {
+                            anchor: `Lent,`,
+                            wiki: `Lent`
+                        },
+                        `a period of fasting observed by Christians to memorialize the forty days that`,
+                        {
+                            anchor: `Jesus`,
+                            wiki: `Jesus`
+                        },
+                        `spent fasting in the desert.`
                     ]
                 }
             }

@@ -172,7 +172,6 @@ export default {
                         {
                             anchor: `lunched soundless`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `In the`,
@@ -180,7 +179,7 @@ export default {
                                         anchor: `First Battle of Bull Run,`,
                                         wiki: `First_Battle_of_Bull_Run`
                                     },
-                                    `spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with bullies were fought and lost in full view of a lunchtime crowd.`
+                                    `spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with the bullies were fought and lost in full view of a lunchtime crowd.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -628,9 +627,8 @@ export default {
                         `and thus secure,`,
                         {
                             anchor: `must turn the cheek.`,
-                            todo: true,
                             card: {
-                                description: `The letters from RI Research instructed me not to confront the bullies. Instead, I was to turn the other cheek, as Jesus had done, and quietly take their abuse in stride, as my exalted place in the universe necessarily asked of me to always be the bigger person.`,
+                                description: `The letters from RI Research instructed me not to confront the bullies. I was instead to turn the other cheek, as Jesus had done, and quietly take their abuse in stride. After all, my exalted place in the universe necessarily asked of me to be the bigger person.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -744,9 +742,8 @@ export default {
                         {
                             anchor: `Red and friends,`,
                             properNoun: true,
-                            todo: true,
                             card: {
-                                description: `The red-haired woman and her friends stick around as my bandmates and I load our gear into the van. During our chat between sets, I had left open the possibility that all of us might hang out after the show.`,
+                                description: `The red-haired woman and her friends stick around as my bandmates and I load our gear into the van. During my chat with her between sets, I left open the possibility that we might all hang out after the show.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
