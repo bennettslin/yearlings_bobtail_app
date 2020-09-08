@@ -236,9 +236,8 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `Immerse the molted form`,
-                            todo: true,
                             card: {
-                                description: `With the relationship now in irreversible decline, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had planned to sacrifice all along as the unwitting accomplice in a scheme to end his relationship.`,
+                                description: `With the scheme to end his relationship having gone according to plan, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had intended to sacrifice as an unwitting accomplice all along.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -250,7 +249,6 @@ export default {
                         `Returned a golden cord, this`,
                         {
                             anchor: `sole belonging signed.`,
-                            todo: true,
                             card: {
                                 description: `Plopped onto moonlit streets from whereabouts unknown, the "drunken" voice in the doublespeaker set can only recollect his past crimes. As such, he believes himself to be newly released from prison, having just now retrieved from property storage the gold bracelet in his hand.`,
                                 dotKeys: {
@@ -270,7 +268,7 @@ export default {
                             card: {
                                 // NOTE: I changed "pauper's" to "paupers'."
                                 description: [
-                                    `I spent weeks rehearsing the breakup, assuming it could be scheduled at my convenience. Instead, it proved to be unexpected and horribly messy. And so the body of my drunken self had to be disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
+                                    `My sober self had spent weeks to rehearse the breakup, assuming it could be scheduled at his convenience. Instead, it proved to be unexpected and horribly messy. And so the body of his drunken half had to be disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
                                     {
                                         anchor: `paupers' grave.`,
                                         wiki: `Potter's_field`

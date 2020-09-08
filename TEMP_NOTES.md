@@ -16,6 +16,7 @@
 * Change more similarlys to likewises, and other phrases.
 * When to use "that."
 * When to use "you" versus "one."
+* When to use "help" without "to."
 
 * Observation annotations (these don't include afterwords)
     * 2 M (last two)

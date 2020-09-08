@@ -194,9 +194,8 @@ export default {
                         `to`,
                         {
                             anchor: `first switch`,
-                            todo: true,
                             card: {
-                                description: `After parking the car, Miriam turns the stereo on by flipping the ignition switch to the accessory position.`,
+                                description: `After parking the car, Miriam flips the ignition switch to the accessory position and turns on the stereo.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -243,7 +242,7 @@ export default {
                             anchor: `doublespeaker,`,
                             todo: true,
                             card: {
-                                description: `The first month with Miriam was one of the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did or could do seemed to amaze her, and the icing on top was doublespeaker rhyme, which I came up with while we were together. So Miriam became my sounding board for all the ways I planned to use it, such as to juxtapose my sober and drunken thoughts.`,
+                                description: `The first month with Miriam was one of the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did seemed to amaze her, and the icing on top was doublespeaker rhyme, which I came up with while we were together. So Miriam became my sounding board for all the ways I planned to use it, such as to juxtapose my sober and drunken thoughts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -355,7 +354,6 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `His god humming "Freebird,"`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo blares`,
@@ -367,7 +365,7 @@ export default {
                                         anchor: `"Freebird,"`,
                                         wiki: `Free_Bird`
                                     },
-                                    `he strums his ukulele in rhythm to his mountain god, whose rumblings tell the legend of an all-American phoenix.`
+                                    `he strums his ukulele in rhythm to the mountain god, whose rumblings tell the legend of an all-American phoenix.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -596,9 +594,8 @@ export default {
                         `which she swore when scarcely`,
                         {
                             anchor: `twenty-one.`,
-                            todo: true,
                             card: {
-                                description: `Miriam was several years younger than me, and thus eager to live it up just as I was ready to settle down.`,
+                                description: `Miriam was several years younger than me. So she was still eager to live it up, just as I was thinking it would be nice to settle down.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -657,10 +654,9 @@ export default {
                     lyricCentre: [
                         {
                             anchor: `Needle done`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Having gone all the way with Miriam, I am at peace with our inevitable breakup. As I bask in my post-coital glow, then, an exaggerated scenario plays out in my mind of how things will end. I picture myself as a terminally ill patient being put to sleep, as my favorite record finishes playing in the background.`,
+                                    description: `Having gone all the way with Miriam, I am at peace with our inevitable breakup. As I bask in my post-coital glow, then, an exaggerated scenario plays out in my mind of how things will end. I picture myself as a terminally ill patient, being put to sleep at the moment a cherished record finishes playing in the background.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -786,9 +782,8 @@ export default {
                         `and`,
                         {
                             anchor: `in her pool,`,
-                            todo: true,
                             card: {
-                                description: `Lying sedated on my deathbed, I see Miriam lounging by a pool, eternally radiant in her youth. I exhaust my last breath to wish her well, but she plunges back into the deep end and doesn't hear me. In every which way, she has already moved on.`,
+                                description: `Lying sedated on my deathbed, I see Miriam lounging by a swimming pool, eternally radiant in her youth. I exhaust my last breath to wish her well, but she doesn't hear me and plunges into the deep end. In every which way, she has moved on.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -799,7 +794,7 @@ export default {
                             anchor: `worrisome`,
                             todo: true,
                             card: {
-                                description: `After the breakup with Miriam, I wished her the best and continued to ask mutual friends about her well-being. This surprised me, given how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave back, I still came away knowing that someone like her could want me, even if only for a while. As far as I was concerned, then, I got the best end of that deal.`,
+                                description: `After the breakup with Miriam, I continued to care about her well-being and would ask mutual friends about her. This surprised me, given how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave back, I still came away knowing that someone like her could want me, even if only for a while. As far as I was concerned, then, I got the best end of that deal.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -880,9 +875,8 @@ export default {
                         `The`,
                         {
                             anchor: `seat hurt`,
-                            todo: true,
                             card: {
-                                description: `I somehow threw out my back while reclining the seat with Miriam on top of me. The pain has now worsened, and I facetiously reason that it's because I'm getting on in my years.`,
+                                description: `I somehow threw out my back while I had my seat reclined with Miriam on top of me. Facetiously, I reason it's because I'm getting on in my years.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -912,9 +906,8 @@ export default {
                         `so`,
                         {
                             anchor: `homeward the sport's escorted,`,
-                            todo: true,
                             card: {
-                                description: `Having plied me with sex to ensure that I'll be a "good sport," Miriam now prepares to drive me home.`,
+                                description: `Having plied me with sex to ensure I'll be a good sport, Miriam now prepares to drive me home.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -964,10 +957,9 @@ export default {
                         `He's`,
                         {
                             anchor: `vegging with his boner shortened;`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Zoned out in my flaccid state, I'm about to be blindsided by Miriam's true intention for today's outing.`,
+                                    description: `Zoned out and flaccid, I'm about to be blindsided by Miriam's true intention for today's outing.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }

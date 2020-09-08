@@ -137,9 +137,8 @@ export default {
                     lyric: [
                         {
                             anchor: `You'd love Taiwan,`,
-                            todo: true,
                             card: {
-                                description: `As we toured the countryside with our Taiwanese cousins, I would mentally list all the things I could show to Sasha one day. I suppose this hints at why I've never felt strongly about being Taiwanese. Unless one's heritage can be shared with someone else, there doesn't seem to be any real point.`,
+                                description: `During a tour of the Taiwanese countryside with our cousins, I mentally listed all the things I could show to Sasha one day. If there was any time I was happiest to be Taiwanese as a child, it was when I thought that having a heritage to share could help me win over a crush. Likely not much has changed since then.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -163,11 +162,10 @@ export default {
                         `of some`,
                         {
                             anchor: `giant's house.`,
-                            todo: true,
                             card: {
-                                description: `Here I describe to Sasha my most vivid memory of Taiwan thus far, in which I'm standing in the middle of a lush valley. The ground is completely level, the surrounding mountains are almost vertical, and a translucent blanket of clouds covers the sky, dipping below the mountain peaks. I feel like a tiny guest in a giant's house.`,
+                                description: `My most vivid memory of that trip is when we stood in the middle of a lush valley. The ground was completely level while the enclosing mountains were nearly vertical, as a translucent blanket of clouds covered the sky, dipping below the mountain peaks. I felt like a tiny guest in a giant's house.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -190,9 +188,8 @@ export default {
                         `I should`,
                         {
                             anchor: `keep your kid name,`,
-                            todo: true,
                             card: {
-                                description: `Sasha decided that, once in Boston, she would start to go by her given name of Saskia. I asked her if I should now call her Saskia as well. She said no, that it would be nice to always be reminded of which friends knew her first.`,
+                                description: `Sasha decided that, once in Boston, she would start to go by her given name of Saskia. I asked her if I should call her Saskia now as well. She said no, that it would be nice to be reminded of which friends knew her first.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -396,8 +393,7 @@ export default {
                             card: {
                                 description: `I panicked when Sasha was allowed to skip the fifth grade, as this opened new vistas for her that necessarily excluded me. With middle school now underway, I am reminded of this panic as Sasha navigates with seeming ease the same social landscape that I find so treacherous.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -409,10 +405,9 @@ export default {
                         `One`,
                         {
                             anchor: `bus seat`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `My family lived in the largely nonwhite neighborhood of`,
+                                    `My family lived in the racially diverse, working-class neighborhood of`,
                                     {
                                         anchor: `North Hollywood.`,
                                         wiki: `North_Hollywood,_Los_Angeles`
@@ -422,7 +417,7 @@ export default {
                                         anchor: `Sherman Oaks,`,
                                         wiki: `Sherman_Oaks,_Los_Angeles`
                                     },
-                                    `a wealthy district with few minorities. I remember feeling out of my element, although at the time I didn't know exactly why.`
+                                    `a wealthy district with fewer minorities. I remember feeling out of my element, although at the time I didn't quite know why.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -483,7 +478,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Here, I recall an incident in which Sasha came to my rescue after some bullies had tied me to a`,
+                                        `Here, I recall an incident in which Sasha came to my rescue after some bullies tied me to a`,
                                         {
                                             anchor: `"tetherball"`,
                                             wiki: `Tetherball`
@@ -491,7 +486,7 @@ export default {
                                         `pole using the rope attached to the ball.`
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true,
+                                        [NARRATIVE]: true,
                                         [PUN]: true
                                     }
                                 },
@@ -596,21 +591,19 @@ export default {
                         `But though my`,
                         {
                             anchor: `jaw was stuck,`,
-                            todo: true,
                             card: {
-                                description: `Here, I recall another incident in which a bully had snuck up from behind and put me in a chokehold while I was waiting for the school bus.`,
+                                description: `Here, I recall another incident in which a bully snuck up from behind and put me in a chokehold while I was waiting for the school bus.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         },
                         `so now I`,
                         {
                             anchor: `talk Canuck,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `The chokehold incident left me with a dislocated jaw that required me to keep it clenched whenever I spoke. This led to a peculiar manner of pronunciation that some people to this day mistake for a`,
+                                    `The chokehold incident left me with a dislocated jaw, which thereafter I had to clench while speaking to avoid pain. This led to my peculiar manner of pronunciation that some to this day mistake for a`,
                                     {
                                         anchor: `Canadian accent.`,
                                         wiki: `Canadian_raising`
@@ -638,11 +631,9 @@ export default {
                         `Anyway, I'm feeling healed. Still,`,
                         {
                             anchor: `hugging hurts…`,
-                            todo: true,
                             card: {
-                                description: `To avoid the humiliation of getting beaten up, I would typically downplay my injuries. But here, in explaining to Sasha why I had to wince as we hugged that last day, I'm more eager to downplay how much it hurt in the metaphorical sense.`,
+                                description: `To spare myself the humiliation of having been beaten up, I might downplay my injuries. But here, in explaining to Sasha why I had to wince when we hugged on that last day, I'm more eager to downplay how much it hurt in an emotional sense.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
                                     [NARRATIVE]: true
                                 }
                             }
@@ -689,15 +680,19 @@ export default {
                         `while if I last the fall`,
                         {
                             anchor: `playing possum`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `To avoid confrontation, an opossum will faint and remain comatose in order to create the impression of being dead, which is known as`,
+                                    `To avoid confrontation, an`,
+                                    {
+                                        anchor: `opossum`,
+                                        wiki: `Opossum`
+                                    },
+                                    `will remain comatose to create the impression of being dead, an act known as`,
                                     {
                                         anchor: `playing possum.`,
                                         wiki: `Apparent_death`
                                     },
-                                    `Similarly, I lament to Sasha here that my only recourse for the next few years is to periodically exit my body and hope for the best.`
+                                    `Similarly, I lament to Sasha that my only recourse for the next few years is to stay unresponsive to threats and hope for the best.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
