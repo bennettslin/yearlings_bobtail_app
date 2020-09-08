@@ -608,7 +608,11 @@ export default {
                                         anchor: `Canadian accent.`,
                                         wiki: `Canadian_raising`
                                     },
-                                    `Canadians, of course, are affectionately known as`,
+                                    {
+                                        anchor: `Canadians,`,
+                                        wiki: `Canada`
+                                    },
+                                    `of course, are affectionately known as`,
                                     {
                                         anchor: `Canucks.`,
                                         wiki: `Canuck`

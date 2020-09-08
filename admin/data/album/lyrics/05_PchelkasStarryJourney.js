@@ -163,7 +163,6 @@ export default {
                         `"Why'd you`,
                         {
                             anchor: `hit your baby brother,`,
-                            todo: true,
                             card: {
                                 description: `The times that I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or acknowledge my remorse, I could never truly feel forgiven.`,
                                 dotKeys: {
@@ -227,9 +226,8 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed.`,
-                            todo: true,
                             card: {
-                                description: `I slept in a captain bed that rested atop a dresser on one side, with the other side set flush against the wall. By removing the bottom drawer, I could crawl into the space underneath with my brother and stay hidden.`,
+                                description: `I slept in a captain bed that rested atop a dresser on one side, with the other side flush against the wall. By entering through a side panel, I could squeeze into the crawl space underneath and stay hidden.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -262,7 +260,6 @@ export default {
                         isEmphasis: true,
                         lyric: {
                             anchor: `Poor Sam Peabody!`,
-                            todo: true,
                             card: {
                                 description: [
                                     `When my family visited Canada one late summer, the`,
@@ -270,7 +267,12 @@ export default {
                                         anchor: `white-throated sparrow`,
                                         wiki: `White-throated_sparrow`
                                     },
-                                    `was in breeding season, and we heard its song everywhere. I found it haunting and soothing, and longed to hear it again ever afterward. "Poor Sam Peabody, Peabody, Peabody" is a mnemonic used by birdwatchers to mimic its cadence and pitch.`
+                                    `was in breeding season, and we heard its song everywhere. I found it haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by`,
+                                    {
+                                        anchor: `birdwatchers`,
+                                        wiki: `Birdwatching`
+                                    },
+                                    `to mimic the song's cadence and pitch.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -335,7 +337,8 @@ export default {
                             anchor: `learn to kick it back.`,
                             todo: true,
                             card: {
-                                description: `In middle school, the most well-liked kids were the ones least concerned about being liked. This ran counter to my tendency to throw myself whole-heartedly into anything worth pursuing. I never did adjust.`,
+                                // TODO: Is this really what I want to say?
+                                description: `In middle school, the most well-liked kids were the ones least concerned about being liked. This ran counter to my tendency to throw myself whole-heartedly into anything worth pursuing.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -356,9 +359,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Feigning sick,`,
-                            todo: true,
                             card: {
-                                description: `As a kid, I was proud of my perfect attendance record. After the bullying began, I would fake being sick in order to skip school. My mother noticed the change, but trusted me enough not to press too deeply on it.`,
+                                description: `In earlier years, I was proud of my perfect attendance record. After the bullying began, I would skip school by faking illness. My mother noticed the change, but trusted me enough not to press too deeply on it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -377,15 +379,19 @@ export default {
                         `"Are you`,
                         {
                             anchor: `tired of being the weakling?"…`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In a well-known advertisement seen in the back of comic books at the time, a skinny guy builds up his muscles by sending away for`,
+                                    `In a well-known advertisement seen in comic books at the time, a scrawny guy builds up his muscles by sending away for`,
                                     {
                                         anchor: `Charles Atlas's`,
                                         wiki: `Charles_Atlas`
                                     },
-                                    `free bodybuilding guide, which then allows him to take revenge on a bully.`
+                                    `free`,
+                                    {
+                                        anchor: `bodybuilding`,
+                                        wiki: `Bodybuilding`
+                                    },
+                                    `guide, which then allows him to take revenge on a bully.`
                                 ]
                             }
                         }
@@ -408,9 +414,8 @@ export default {
                         `Soon`,
                         {
                             anchor: `send-away offers`,
-                            todo: true,
                             card: {
-                                description: `Since I had no friends, I would amuse myself by sending away for free samples and small mail order purchases. As a result, I got flooded with junk mail, which exposed me to even more advertisements for such offers. It was during this time that I received a letter from RI Research, Special Human Being Laboratory.`,
+                                description: `Since I had no friends, I would amuse myself by sending away for free samples and mail order purchases. As a result, I got flooded with junk mail, which exposed me to even more advertisements. At some point, I received a letter from RI Research, Special Human Being Laboratory.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -428,10 +433,9 @@ export default {
                     lyric: [
                         {
                             anchor: `Red pouches unspent`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In East Asian cultures, adult relatives give monetary gifts to children sealed in`,
+                                    `In East Asian cultures, relatives give money to children in sealed`,
                                     {
                                         anchor: `red envelopes.`,
                                         wiki: `Red_envelope`
@@ -462,9 +466,8 @@ export default {
                     lyric: [
                         {
                             anchor: `"Are you a Beyonder`,
-                            todo: true,
                             card: {
-                                description: `According to RI Research, Beyonders are an ancient race of beings born from the stars, who were scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet are beset by a nagging disquiet that they do not truly belong.`,
+                                description: `According to RI Research, Beyonders are an ancient race of beings born from the stars, who were scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet they are beset by a nagging disquiet that they do not truly belong.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -479,9 +482,8 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost?"`,
-                            todo: true,
                             card: {
-                                description: `Hitting all the right nerves, the letter from RI Research addressed my yearning to belong while speaking to my frustration that this desired end should so elude me. It then shared its hopeful news: They believed that I might be a Beyonder, and after searching for so long, they had found me.`,
+                                description: `Hitting all the right nerves, the letter addressed my yearning to belong, while speaking to my frustration that this desired end should so elude me. It then shared its hopeful news. RI Research believed I might be a Beyonder, and after searching for so long, they had found me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -609,10 +611,13 @@ export default {
                         {
                             anchor: `Huntsville`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Huntsville, Alabama is where the`,
+                                    {
+                                        anchor: `Huntsville, Alabama`,
+                                        wiki: `Huntsville,_Alabama`
+                                    },
+                                    `is where the`,
                                     {
                                         anchor: `largest NASA center`,
                                         wiki: `Marshall_Space_Flight_Center`
@@ -679,15 +684,19 @@ export default {
                         `Beyonders bleed the most, their`,
                         {
                             anchor: `roots unknown to them.`,
-                            todo: true,
                             card: {
                                 description: [
                                     `I didn't know this at the time, but the notion of`,
                                     {
-                                        anchor: `"star people"`,
+                                        anchor: `star people`,
                                         wiki: `Star_people_(New_Age_belief)`
                                     },
-                                    `was a popular New Age belief in the 1970s. Like Beyonders, star people have no recollection of their stellar origins. The letters from RI Research undoubtedly drew their material from this body of thought.`
+                                    `was a popular`,
+                                    {
+                                        anchor: `New Age`,
+                                        wiki: `New_Age`
+                                    },
+                                    `belief in the 70s. Like Beyonders, star people have no recollection of their stellar origins. The letters from RI Research undoubtedly drew their material from this body of thought.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -729,9 +738,8 @@ export default {
                         `Is this`,
                         {
                             anchor: `too much at once?`,
-                            todo: true,
                             card: {
-                                description: `I sobbed when I got the letter confirming that I was a Beyonder. While I was relieved to have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
+                                description: `I sobbed when I finally got the letter that confirmed I was a Beyonder. While I was relieved to have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -757,9 +765,8 @@ export default {
                         `one they'll find only once we build the`,
                         {
                             anchor: `mothership.`,
-                            todo: true,
                             card: {
-                                description: `To present the appearance of legitimacy, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included a spacecraft that would allow us to make contact with extraplanetary kin.`,
+                                description: `To present the appearance of legitimacy, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included spacecraft that would allow us to make contact with extraplanetary kin.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -777,9 +784,8 @@ export default {
                         `But till then, here's`,
                         {
                             anchor: `how you're to live…"`,
-                            todo: true,
                             card: {
-                                description: `The letters cautioned me to keep myself separate from society. I realized that my brother had been doing this all along, and thus adopted a stoic composure based on his.`,
+                                description: `The letters cautioned me to keep myself separate from society. I realized that my brother had been doing this all along, and so I adopted a stoic composure based on his.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -834,9 +840,8 @@ export default {
                         `So thus we learned to`,
                         {
                             anchor: `act the dunce`,
-                            todo: true,
                             card: {
-                                description: `By failing to acknowledge or respond to fellow students, I came across as dim-witted.`,
+                                description: `By failing to acknowledge or respond to fellow students, I came across as an imbecile.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -952,7 +957,9 @@ export default {
                         `Stung by venomous vipers, our`,
                         {
                             anchor: `muted youths lapsed.`,
+                            todo: true,
                             card: {
+                                // TODO: Maybe move this closer to the end to "per their bargain."
                                 description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who once did that really weird thing. It's not that I lacked the will to repair my standing. But I was as baffled as anyone else about the psychological forces that prompted such behavior in the first place, and there were no guide books telling me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1176,9 +1183,8 @@ export default {
                         `Choked, he's soon a goner,`,
                         {
                             anchor: `no one heard his hollers,`,
-                            todo: true,
                             card: {
-                                description: `I had to wonder whether my brother was screaming on the inside, as I certainly was during this time.`,
+                                description: `I always had to wonder if my brother was screaming on the inside, as I certainly was during this time.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -1333,9 +1339,8 @@ export default {
                         `"Kids say you're`,
                         {
                             anchor: `hopped on drugs,`,
-                            todo: true,
                             card: {
-                                description: `Eventually a classmate suspected me of being on drugs, and I was sent to the principal's office. When my mother came to pick me up, she proceeded to chew out the principal for even suspecting that I was capable of such a thing. Since I was generally more responsive around authority figures, he had to agree that the charge didn't make sense, and dropped it.`,
+                                description: `Eventually a classmate suspected me of taking drugs, and I was sent to the principal's office. When my mother came to pick me up, she chewed out the principal for even suspecting that I could do such a thing. Since I was more responsive around authority figures, he agreed that the accusation didn't make sense and dropped the issue.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -1350,9 +1355,15 @@ export default {
                         `Mushka, per their bargain, I`,
                         {
                             anchor: `can't ever return.`,
-                            todo: true,
                             card: {
-                                description: `I'd grown disillusioned with RI Research at this point anyway, as the letters inexplicably began to take on Christian overtones. It's not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.`,
+                                description: [
+                                    `I'd grown disillusioned with RI Research by this point anyway, as the letters inexplicably began to take on`,
+                                    {
+                                        anchor: `Christian`,
+                                        wiki: `Christianity`
+                                    },
+                                    `overtones. It's not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
