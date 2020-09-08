@@ -45,7 +45,12 @@ export default {
                             anchor: `Taiwan,`,
                             wiki: `Taiwan`
                         },
-                        `a Pacific island that was taken over by the Chinese in 1949. The`,
+                        `a Pacific island that was taken over by the`,
+                        {
+                            anchor: `Chinese`,
+                            wiki: `China`
+                        },
+                        `in 1949. The`,
                         {
                             anchor: `Taiwanese`,
                             wiki: `Taiwanese_Hokkien`

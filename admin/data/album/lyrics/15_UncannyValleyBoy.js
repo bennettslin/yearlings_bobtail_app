@@ -149,10 +149,12 @@ export default {
                         `Rest your rump, boy, by your old`,
                         {
                             anchor: `giving tree.`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Shel Silverstein's`,
+                                    {
+                                        anchor: `Shel Silverstein's`,
+                                        wiki: `Shel_Silverstein`
+                                    },
                                     {
                                         isItalic: true,
                                         lyric: {
@@ -160,7 +162,7 @@ export default {
                                             wiki: `The_Giving_Tree`
                                         }
                                     },
-                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, her gifts become increasingly self-sacrificing in nature. Many read it as an allegory for unhealthy, codependent parent-child relationships.`
+                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, her gifts to him become increasingly self-sacrificing in nature. Many read it as an allegory for unhealthy, codependent relationships.`
                                 ]
                             }
                         }
@@ -381,15 +383,14 @@ export default {
                         `till they called,`,
                         {
                             anchor: `suspecting you of huffing,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Inhalant abuse, or`,
                                     {
-                                        anchor: `"huffing,"`,
+                                        anchor: `huffing,`,
                                         wiki: `Inhalant`
                                     },
-                                    `was the supposed youth trend du jour of my middle school years. And I suppose I fit the profile of someone who had just sniffed glue, which is why I got called into the principal's office.`
+                                    `was supposedly the scary youth trend of my middle school years. By not responding when threatened, I fit the profile of someone who sniffed glue for fun, which is why I got called into the principal's office.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -404,9 +405,15 @@ export default {
                         `then we caught you`,
                         {
                             anchor: `stuffing twenties`,
-                            todo: true,
                             card: {
-                                description: `I had pen pals as a child, so my parents didn't think anything of the random envelopes I was mailing out. But after speaking to my principal, my mother became suspicious and opened one of them, to find a wad of paper money inside.`,
+                                description: [
+                                    `I had`,
+                                    {
+                                        anchor: `pen pals`,
+                                        wiki: `Pen_pal`
+                                    },
+                                    `when I was younger, so my parents didn't think anything of the random envelopes I was mailing out. But after speaking to the principal, my mother became suspicious and opened one of them to find a wad of cash inside.`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -429,24 +436,28 @@ export default {
                         `So do you believe`,
                         {
                             anchor: `your hamartia`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `In Greek tragedy,`,
+                                        `In`,
+                                        {
+                                            anchor: `Greek drama,`,
+                                            wiki: `Theatre_of_ancient_Greece`
+                                        },
                                         {
                                             anchor: `hamartia`,
                                             wiki: `Hamartia`
                                         },
-                                        `is the character flaw that leads to a protagonist's downfall. Here, my parents are asking if I recognize the telltale signs pointing to mine. (I've since learned that the accent is on the third syllable. But my English teacher pronounced it as I have here, so I plead miseducation.)`
+                                        `is the tragic flaw that leads to a protagonist's downfall. Here, my parents ask if I recognize the telltale signs pointing to mine. (I've since learned the accent is on the third syllable. But my English teacher pronounced it as I have here, so I plead miseducation.)`
                                     ],
                                     dotKeys: {
-                                        [NARRATIVE]: true
+                                        [NARRATIVE]: true,
+                                        [OBSERVATION]: true
                                     }
                                 },
                                 {
                                     description: [
-                                        `My parents are also snidely alluding to my erstwhile belief that I was born from the stars. Or, in their words, "a Martian."`
+                                        `Perhaps my parents also snidely allude to my erstwhile belief that I was born from the stars. Or as they put it, that I'm "a Martian."`
                                     ],
                                     dotKeys: {
                                         [PUN]: true
@@ -480,9 +491,8 @@ export default {
                         `you made a`,
                         {
                             anchor: `bunker that shuts airtight`,
-                            todo: true,
                             card: {
-                                description: `I learned early on to deal with problems by locking myself away. Then, once safely sheltered, I had all the time in the world to calmly study my situation and plot out the best way forward.`,
+                                description: `I learned early on to deal with problems by locking myself away, both physically and mentally. Once sheltered, I could then calmly and patiently study my situation to plot the best way forward.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -654,9 +664,8 @@ export default {
                         `Now suddenly dressed to play, you`,
                         {
                             anchor: `drowned your stutter,`,
-                            todo: true,
                             card: {
-                                description: `Sometime in middle school, I developed a stammer. In college, I found that drinking made it disappear.`,
+                                description: `Sometime in middle school I developed a stammer, perhaps as an unconscious way to buy time for collecting my thoughts. In college, I found that alcohol made it disappear.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -903,7 +912,6 @@ export default {
                         `and so one night you`,
                         {
                             anchor: `chalked the sidewalks`,
-                            todo: true,
                             card: {
                                 description: `One night, my friends and I got drunk and decided to tag the streets with fluorescent sidewalk chalk. Since I didn't want anyone to crowd out my artwork, I ran ahead of the group.`,
                                 dotKeys: {
@@ -993,7 +1001,6 @@ export default {
                         },
                         {
                             anchor: `_____…`,
-                            todo: true,
                             card: {
                                 description: `And what I had scrawled in chalk was… Mara's name. No real cliffhanger here. "M" just set a precedent for me to be gun-shy about mentioning her anywhere in my lyrics.`,
                                 dotKeys: {
@@ -1247,7 +1254,7 @@ export default {
                             card: {
                                 description: `The magic beans had sprouted into thick, twisted vines, blocking out the sky as far and wide as my helpless subjects could see.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }

@@ -32,16 +32,14 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        // TODO: Have separate Norse and Odin wikis.
-                        `It's likely that Odin's original name meant something in Chinese, which my sister and I later anglicized into the name of the`,
+                        `Odin, who was around before I was born, originally had a Taiwanese name. My sister and I anglicized it into the name of the`,
                         {
                             anchor: `Norse god`,
                             wiki: `Odin`
                         },
-                        `once we were older.`
+                        `when we were older.`
                     ],
                     dotKeys: {
                         [BACKSTORY]: true
@@ -117,7 +115,7 @@ export default {
                             anchor: `hiding place of retreat`,
                             todo: true,
                             card: {
-                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins abruptly, as I come out from the dusty crawl space beneath my bed to which I often snuck away as a child.`,
+                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins as I come out from the dusty crawl space beneath my captain bed to which I would sneak away as a child.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -157,9 +155,8 @@ export default {
                         `This`,
                         {
                             anchor: `fridge's gallery in web's wake`,
-                            todo: true,
                             card: {
-                                description: `The cobwebs trailing from my clothes happen to snag some drawings of mine that my mother has attached to the refigerator, scattering them on the floor.`,
+                                description: `The cobwebs trailing from my clothes happen to snag some of my drawings that are attached to the refigerator, scattering them onto the floor.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -358,9 +355,8 @@ export default {
                         `baby steps inch towards`,
                         {
                             anchor: `crevice rays.`,
-                            todo: true,
                             card: {
-                                description: `I especially dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. Whenever I woke to use the bathroom, I had to tiptoe toward the door, guided only by a sliver of moonlight peeking in from underneath.`,
+                                description: `I especially dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. If I woke to use the bathroom, I had to tiptoe toward the door with only a sliver of moonlight peeking in from underneath to guide me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -410,7 +406,6 @@ export default {
                         `Then down`,
                         {
                             anchor: `stygian stairs,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In Greek mythology, the river`,
@@ -559,28 +554,19 @@ export default {
                         `till a`,
                         {
                             anchor: `rickshaw hiccoughs`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: [
-                                        `A`,
-                                        {
-                                            anchor: `rickshaw`,
-                                            wiki: `Rickshaw`
-                                        },
-                                        `is a pedal-driven passenger vehicle. Here, the uneven surface of the road causes one to jounce abruptly.`
-                                    ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
-                                    description: `While rickshaws were no longer in service by the time of our Taiwan trip, their recent prevalence could be inferred from photographs and traffic signs.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                            card: {
+                                description: [
+                                    `A`,
+                                    {
+                                        anchor: `rickshaw`,
+                                        wiki: `Rickshaw`
+                                    },
+                                    `is a pedal-driven passenger vehicle. Here, the uneven surface of the road causes one to jounce abruptly.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true
                                 }
-                            ]
+                            }
                         },
                         `from grating cracks.`
                     ],
@@ -588,7 +574,6 @@ export default {
                         `still, but`,
                         {
                             anchor: `missed bat mitzvahs`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Being in Taiwan at the time, I was unable to attend Sasha's`,
@@ -629,7 +614,6 @@ export default {
                         `You seek the`,
                         {
                             anchor: `dunes once deemed a haven`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The narrator in`,
@@ -654,7 +638,7 @@ export default {
                                         anchor: `Abraham.`,
                                         wiki: `Abraham`
                                     },
-                                    `While one was banished to the desert, the other wanders the wilderness of the ocean. It is to these metaphorical dunes of the ocean that I now flee as well.`
+                                    `While the latter was banished to the desert, the former wanders the wilderness of the ocean. It is to these metaphorical dunes of the ocean that I now flee as well.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -822,15 +806,19 @@ export default {
                     time: 70,
                     lyricLeft: {
                         anchor: `dream your whims instead?`,
-                        todo: true,
                         card: {
                             description: [
-                                `Uncertain of whether I am asleep or awake, I recall the ancient Chinese philosopher`,
+                                `Uncertain of whether I am asleep or awake, I channel the ancient`,
+                                {
+                                    anchor: `Taoist`,
+                                    wiki: `Taoism`
+                                },
+                                `philosopher`,
                                 {
                                     anchor: `Zhuangzi,`,
                                     wiki: `Zhuang_Zhou`
                                 },
-                                `who famously mused that he could not be sure if he was then a man dreaming he was a butterfly, or now a butterfly dreaming he is a man.`
+                                `who mused that he couldn't be sure if he was a man who dreamt he was a butterfly, or a butterfly dreaming he is a man.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true
@@ -923,7 +911,6 @@ export default {
                         `like Odin's ashes back from`,
                         {
                             anchor: `the Society,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `Odin's remains had been taken to the`,
@@ -931,7 +918,12 @@ export default {
                                         anchor: `Humane Society,`,
                                         wiki: `The_Humane_Society_of_the_United_States`
                                     },
-                                    `which offers pet cremation services.`
+                                    `which offers pet`,
+                                    {
+                                        anchor: `cremation`,
+                                        wiki: `Cremation`
+                                    },
+                                    `services.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -1098,9 +1090,19 @@ export default {
                         `and brought your raft behind the`,
                         {
                             anchor: `yellow-taped grills`,
-                            todo: true,
                             card: {
-                                description: `Barricade tape has been tied along the barbecue grills that line the shore, in an effort to prevent beachgoers from wading into the shark-infested waters.`,
+                                description: [
+                                    {
+                                        anchor: `Barricade tape`,
+                                        wiki: `Barricade_tape`
+                                    },
+                                    `has been tied along the`,
+                                    {
+                                        anchor: `barbecue grills`,
+                                        wiki: `Barbecue_grill`
+                                    },
+                                    `that line the shore, in an effort to prevent beachgoers from wading into the shark-infested waters.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1571,9 +1573,8 @@ export default {
                         `The sudsy ocean shapes its`,
                         {
                             anchor: `padded bed,`,
-                            todo: true,
                             card: {
-                                description: `As I slowly make peace with the inevitable, the ocean begins to feel more calm and inviting. But my dream is also ending, and I will soon awake in the comfort of a bed.`,
+                                description: `As I make peace with the inevitable, the ocean begins to feel calm and inviting. But my dream is also ending, and I expect to wake soon in the comfort of my bed.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }

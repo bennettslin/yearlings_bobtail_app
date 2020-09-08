@@ -26,14 +26,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `A childhood playmate once asked me if I knew what`,
-                        {
-                            anchor: `cremation`,
-                            wiki: `Cremation`
-                        },
-                        `was. I didn't but assumed it must be fun and tasty. Of course, my naive expectation was crushed by the horrifying truth just a moment later. Years later, I thought this was a perfect metaphor for the seemingly innocent day trip that ended with Miriam breaking up with me.`
-                    ],
+                    description: `A childhood playmate once asked me if I knew what cremation was. I didn't but assumed it must be fun and tasty. Of course, my naive expectation was crushed by the horrifying truth just a moment later. Years later, I thought this was a perfect metaphor for the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [OBSERVATION]: true

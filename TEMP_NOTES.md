@@ -17,6 +17,8 @@
 * When to use "that."
 * When to use "you" versus "one."
 * When to use "help" without "to."
+* When to use italics and quotes for foreign words.
+* When to use commas.
 
 * Observation annotations (these don't include afterwords)
     * 2 M (last two)
