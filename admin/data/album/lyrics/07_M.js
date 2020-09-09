@@ -107,9 +107,8 @@ export default {
                         `I was a lad bent on`,
                         {
                             anchor: `learning the talents`,
-                            todo: true,
                             card: {
-                                description: `The breakup with Catherine was uneventful. I'd done nothing wrong, per se; I just didn't have much to offer. So it seemed illogical to keep trying the same approach, as if one day would yield a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits, starting with the ones that Catherine valued most.`,
+                                description: `It's not that I'd done anything wrong to cause the breakup with Catherine. I just didn't have all that much to offer. So it seemed illogical to keep trying the same approach, as if one day I should see a dramatically different result. To secure my future chances with women, what I needed was to take time off and build up a surplus of attractive traits. So I started with the ones that Catherine valued most.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -127,9 +126,8 @@ export default {
                         `Bit my`,
                         {
                             anchor: `sadness with patience,`,
-                            todo: true,
                             card: {
-                                description: `I spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building yourself up into a desirable person, after all, is really just the ultimate art project.`,
+                                description: `I'd spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building yourself up into a desirable person, after all, is really just the ultimate art project.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -182,12 +180,10 @@ export default {
                         `to mould me into a`,
                         {
                             anchor: `mystery mensch.`,
-                            todo: true,
                             card: {
-                                description: `There was an obvious lesson to draw from the smattering of women I had somehow managed to attract up to this point in my life. All had been taken in by my standing as a weird, artsy loner, only then to be turned off upon seeing that nothing of greater substance lay beneath. The crux of my mission, then, was to take this mistaken assumption that already existed, and simply turn it into a correct one.`,
+                                description: `There was an obvious lesson to draw from the smattering of women I had somehow managed to attract up to this point in my life. All of them had been taken in by my appearance as an artsy loner, only to be turned off after finding that nothing of greater substance lay beneath. So my mission was to take this mistaken assumption that already existed and simply turn it into a correct one.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -197,7 +193,6 @@ export default {
                     time: 64,
                     lyric: {
                         anchor: `No minutiae left unmastered,`,
-                        todo: true,
                         card: {
                             description: [
                                 `Though the main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like learning to solve the`,
@@ -207,8 +202,7 @@ export default {
                                 }
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
@@ -220,7 +214,7 @@ export default {
                             anchor: `music cred`,
                             todo: true,
                             card: {
-                                description: `I always detected a whiff of disdain from the Berkeley record store clerks who rang up my purchases. This mysterious league of enlightened insiders clearly knew something I didn't. With my quest for self-betterment, I overcame my feelings of intimidation and began to ask them for recommended listening.`,
+                                description: `I always detected a whiff of disdain from the Berkeley record store clerks who rang up my purchases. This mysterious league of insiders possessed hidden knowledge. With my quest for self-betterment, I overcame my feelings of intimidation and began to ask them for recommended listening.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -229,9 +223,8 @@ export default {
                         `with`,
                         {
                             anchor: `mindful manners`,
-                            todo: true,
                             card: {
-                                description: `During this time, I also decided to stop using swear words. I figured it would be a definite win with any woman who didn't curse, while all others would find its quaintness charming.`,
+                                description: `I also decided to stop using swear words. I figured it would be a definite win with any woman who didn't curse, while all others would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -324,11 +317,10 @@ export default {
                         `while forever I'll`,
                         {
                             anchor: `hold in peace`,
-                            todo: true,
                             card: {
-                                description: `While Jacob got together with Mara without any effort, romantic fulfillment for me felt no less elusive than ever. I had to come to terms with the reality that my five-year plan was a total washout.`,
+                                description: `So Jacob got together with Mara without any effort, while romance for me felt no less elusive than ever. I had to come to terms with the reality that my five-year plan was a total washout.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -399,9 +391,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Signed off "love me"`,
-                            todo: true,
                             card: {
-                                description: `Back when emails were still treated like personal letters, I would sign off with "love Bennett," absent a comma out of laziness. Catherine joked that it sounded like a command spoken in desperation.`,
+                                description: `Back when emails were still treated like personal letters, I would sign off with "love Bennett," absent a comma after the valediction out of laziness. Catherine once joked that it sounded like a command spoken in desperation.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -445,11 +436,10 @@ export default {
                         `I'll probably`,
                         {
                             anchor: `die pushing forty,`,
-                            todo: true,
                             card: {
-                                description: `Like the Soviet Union, I had to take the failures of my first five-year plan in stride. I had banked on rapid character growth, and I couldn't cut my losses now. I had nothing to my name other than what another five-year plan might gain for me. Or failing that, another one. Yet five years is such a huge chunk of lifetime to mete out all at once, and I had only so much lifetime remaining. The occasion was inevitable to reflect on my mortality.`,
+                                description: `Like the Soviets, I needed to take in stride the failures of my first five-year plan. Having banked on rapid character growth, I couldn't cut my losses now. I had nothing to my name other than what the next five-year plan might gain for me. Or failing that, the next one after. Yet five years is a huge chunk of lifetime to mete out all at once, and I only had so many decades remaining. The occasion became ripe to reflect on my mortality.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -642,11 +632,10 @@ export default {
                         `keeps me`,
                         {
                             anchor: `solely for a pet.`,
-                            todo: true,
                             card: {
                                 description: `After Mara started dating Jacob, she continued to interact with me in the same flirtatious manner, which made me realize that I had misread her intentions all along.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -919,7 +908,7 @@ export default {
                         anchor: `friends have to lie.`,
                         todo: true,
                         card: {
-                            description: `After middle school, I didn't have close friends again until college, so there were plenty of truths about friendship that I was still learning for the first time.`,
+                            description: `After middle school, I didn't have close friends again until college, so there were plenty of truths about friendship I was still learning for the first time.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }

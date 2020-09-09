@@ -19,6 +19,7 @@
 * When to use "help" without "to."
 * When to use italics and quotes for foreign words.
 * When to use commas.
+* When to use contractions.
 
 * Observation annotations (these don't include afterwords)
     * 2 M (last two)

@@ -22,9 +22,8 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `Having just walked Sita back to her boarding house after a date, I face her awkwardly as we stand before the front gate. It's early in the evening, with the sky beginning to clear from a midday shower.`,
+                    description: `Sita and I have just walked back to her boarding house after a date. We stand in front of her gate, facing each other awkwardly. It's early in the evening, with the sky beginning to clear from a midday shower.`,
                     dotKeys: {
                         [NARRATIVE]: true
                     }
@@ -75,7 +74,6 @@ export default {
                         `or`,
                         {
                             anchor: `should I should you`,
-                            todo: true,
                             card: {
                                 description: `At this point, I'm too flustered to form complete thoughts, let alone complete sentences.`,
                                 dotKeys: {
@@ -170,11 +168,20 @@ export default {
                         {
                             anchor: `Dutch courage`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
-                                        `Due to trade rivalries between the British and Dutch in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
+                                        `Due to trade rivalries between the`,
+                                        {
+                                            anchor: `British`,
+                                            wiki: `United_Kingdom`
+                                        },
+                                        `and`,
+                                        {
+                                            anchor: `Dutch`,
+                                            wiki: `Netherlands`
+                                        },
+                                        `in the 17th century, several idioms in the English language employ the term "Dutch" as a pejorative.`,
                                         {
                                             anchor: `Dutch courage`,
                                             wiki: `Dutch_courage`
@@ -183,9 +190,9 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `Having an older friend who faithfully plied me with cheap twelve-packs, I had earlier downed a couple of cans, as I was wont to do before every date.`,
+                                    description: `I had an older coworker who faithfully plied me with cheap twelve-packs. Before every date, I would down a couple of cans.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 }
                             ]
@@ -193,7 +200,6 @@ export default {
                         `wimped out to`,
                         {
                             anchor: `going Dutch`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -202,14 +208,13 @@ export default {
                                             anchor: `go Dutch`,
                                             wiki: `Going_Dutch`
                                         },
-                                        `means to split the cost of a meal, since stinginess was another intrinsic failing ascribed to the Dutch.`
+                                        `means to split the cost of a meal. After all, stinginess was another intrinsic failing ascribed to the Dutch.`
                                     ]
                                 },
                                 {
-                                    // TODO: Reconsider where to put the sponge annotation.
                                     description: `Sita would insist on separate checks, despite my repeated efforts to pay for the entire date. This made me feel inadequate, and no better than a "sponge" based on my understanding of dating etiquette.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 }
                             ]
@@ -329,10 +334,9 @@ export default {
                         `for the`,
                         {
                             anchor: `innermost matryoshka's`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `On our first date, I took Sita to a natural history museum with many ethnological exhibits. We spent some time gawking at the wooden dolls from Russia known as`,
+                                    `On our first date, I took Sita to a natural history museum with some ethnological exhibits. We spent some time gawking at the wooden dolls from Russia known as`,
                                     {
                                         anchor: `matryoshkas,`,
                                         wiki: `Matryoshka_doll`
@@ -577,9 +581,8 @@ export default {
                         `that starts with a`,
                         {
                             anchor: `lone ringing phone`,
-                            todo: true,
                             card: {
-                                description: `The play began with the theatre going pitch black. As the audience fell to a hush, a phone started ringing, and it wasn't immediately clear that the sound came from the stage.`,
+                                description: `The play begins with the theatre going pitch black. As the audience falls to a hush, a rotary telephone onstage starts to ring.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1013,9 +1016,15 @@ export default {
                         `as the`,
                         {
                             anchor: `chirping crosswalks`,
-                            todo: true,
                             card: {
-                                description: `As we stand on the sidewalk outside Sita's house, a mechanical cuckoo sound is heard in the distance, informing the visually impaired that the street is now safe to cross.`,
+                                description: [
+                                    `Sita and I are still standing on the sidewalk outside her boarding house. In the distance, a mechanical cuckoo call informs the`,
+                                    {
+                                        anchor: `visually impaired`,
+                                        wiki: `Visual_impairment`
+                                    },
+                                    `that the street is now safe to cross.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1048,7 +1057,6 @@ export default {
                     time: 123,
                     lyric: {
                         anchor: `I sigh, "Good night."`,
-                        todo: true,
                         cards: [
                             {
                                 description: `Flustered panic takes over, and once again all my feelings go unmentioned.`,

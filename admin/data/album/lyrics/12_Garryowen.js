@@ -104,7 +104,7 @@ export default {
                     lyric: [
                         `with your`,
                         {
-                            anchor: `crew of cooks and thieves.`,
+                            anchor: `crew of chefs and thieves.`,
                             todo: true,
                             cards: [
                                 {
@@ -518,9 +518,8 @@ export default {
                         `you'd`,
                         {
                             anchor: `make her strip bare`,
-                            todo: true,
                             card: {
-                                description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me and shivering dramatically from the cold. But as our relationship soured, I grew tired of this brazen appeal to my primal and protective instincts, and drew some cruel pleasure in letting her shiver for ever just a bit longer.`,
+                                description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me and shivering dramatically from the cold. But as our relationship soured, I grew tired of this brazen appeal to my primal and protective instincts, and drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -542,9 +541,8 @@ export default {
                         `You won't always`,
                         {
                             anchor: `have her for your pet.`,
-                            todo: true,
                             card: {
-                                description: `Sita's manner of prostrating herself, which forced me to wield an absolute power that I never asked for, was in no small way infuriating. But it was also heartbreakingly endearing, and thus it was guaranteed to make me love her, in the way that one necessarily loves a pet. And love her, I did. So I never doubted that the impending breakup would be equally wrenching for both of us.`,
+                                description: `Sita's manner of prostrating herself, which forced me to wield an absolute power that I never asked for, was in no small way infuriating. But it was also heartbreakingly endearing, and thus it was guaranteed to make me love her, in the way one necessarily loves a pet. So I never doubted that the impending breakup would be equally wrenching for both of us.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -558,9 +556,8 @@ export default {
                         `Someday`,
                         {
                             anchor: `she won't be there;`,
-                            todo: true,
                             card: {
-                                description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters whom I pined for after every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
+                                description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
