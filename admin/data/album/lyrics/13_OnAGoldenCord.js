@@ -110,11 +110,10 @@ export default {
                         `but`,
                         {
                             anchor: `broken`,
-                            todo: true,
                             card: {
-                                description: `When I walked into Sita's living room to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table. I wondered if she had damaged it on purpose, but it turns out I had only ever seen it snugly wrapped around her wrist, where its dozens of tiny links were kept intricately locked in place.`,
+                                description: `When I walked into Sita's living room that night to find her seated on the couch, the bracelet lay in a mangled heap on the coffee table. I wondered if she had damaged it on purpose. Only later did I realize that being snugly wrapped around her wrist is what kept its dozens of tiny links intricately locked in place.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -160,9 +159,8 @@ export default {
                         `So`,
                         {
                             anchor: `polite, yet resigned,`,
-                            todo: true,
                             card: {
-                                description: `Sita had spent the day bottling up her emotions, braced for tonight's confrontation. Meanwhile, I had wandered in just minutes prior, ready to pass out. So even as she exploded in hysterics, I was still struggling to process the situation in my drunken state. As such, all my responses were calm but curt, which only added to her fluster.`,
+                                description: `Sita spent the day bottling up her emotions, braced for tonight's confrontation. Meanwhile, I just wandered in minutes before, drunk and eager to pass out. So even as she explodes in hysterics, I'm still struggling to process the situation. As such, all my responses are calm but curt, which only add to her fluster.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -315,9 +313,8 @@ export default {
                         `for the`,
                         {
                             anchor: `well-behaved on the wing.`,
-                            todo: true,
                             card: {
-                                description: `Feeling no malice, drunken me can only surmise that he served out his sentence without complaint, and was granted an early release for good behavior.`,
+                                description: `Feeling no malice, drunken me can only surmise that he served out his sentence without complaint, and was granted early release for good behavior.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -415,9 +412,8 @@ export default {
                         `the`,
                         {
                             anchor: `spectre taunting twin streetlamps;`,
-                            todo: true,
                             card: {
-                                description: `Sober me observes as his drunken half lashes out in defiance at twin streetlamps, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed the crime.`,
+                                description: `My sober self observes as his drunken half defiantly lashes out at twin streetlamps, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed his crime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -428,7 +424,6 @@ export default {
                         `still hardened against her`,
                         {
                             anchor: `fawning, misty glance,`,
-                            todo: true,
                             card: {
                                 description: `Sensing that Sita gazes downward upon him from the night sky, drunken me still refuses to flinch, as remnants of his past bitterness rumble deep within.`,
                                 dotKeys: {
@@ -523,7 +518,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `When a friend asked what life after Robitussin felt like, I described each passing moment as a layer of`,
+                                    `After my summer of Robitussin, there was never a time when I felt I'd fully recovered. When a friend asked what was going on inside my head, I described each passing moment as a layer of`,
                                     {
                                         anchor: `Colorforms`,
                                         wiki: `Colorforms`
@@ -713,7 +708,6 @@ export default {
                         `of gathering up the`,
                         {
                             anchor: `suttee dust.`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `I imagine Sita by now to be fully immolated on the burnt rubble of our ruined relationship.`,
