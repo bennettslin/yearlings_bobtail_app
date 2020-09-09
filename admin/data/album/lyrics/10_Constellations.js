@@ -953,7 +953,6 @@ export default {
                     lyric: [
                         {
                             anchor: `To soma up,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `In the Vedas,`,
@@ -964,7 +963,7 @@ export default {
                                             wiki: `Soma_(drink)`
                                         }
                                     },
-                                    `is a ritual drink prepared from an unknown botanical substance believed by scholars to have had psychedelic properties. In the Avesta, it is referred to as`,
+                                    `is a ritual drink prepared from an unknown botanical substance believed by scholars to have psychedelic properties. In the Avesta, it is referred to as`,
                                     {
                                         isItalic: true,
                                         lyric: `haoma.`
@@ -1392,7 +1391,7 @@ export default {
                             todo: true,
                             card: {
                                 description: [
-                                    `Standing in front of Adam's headstone under the predawn sky, I'm overcome with a profound sense of clarity and purpose, and I renew my determination to finish`,
+                                    `As I stand before Adam's headstone under the predawn sky, a profound sense of clarity and purpose comes over me. I become newly determined to finish`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`
@@ -1516,7 +1515,6 @@ export default {
                         {
                             anchor: `Hollowscene`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [

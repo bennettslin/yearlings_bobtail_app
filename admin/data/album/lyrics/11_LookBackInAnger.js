@@ -588,7 +588,6 @@ export default {
                     lyric: [
                         {
                             anchor: `peasant discontented`,
-                            todo: true,
                             card: {
                                 description: [
                                     `The better life got, the more unsatisfied I became. I was like the peasants during the`,
@@ -596,7 +595,7 @@ export default {
                                         anchor: `French Revolution,`,
                                         wiki: `French_Revolution`
                                     },
-                                    `who were so downtrodden that every attempt made by the ruling elite to appease them only backfired horribly. Not only did they grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`
+                                    `who were so downtrodden that every attempt made by the ruling elite to appease them only backfired. Not only did the peasants grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true

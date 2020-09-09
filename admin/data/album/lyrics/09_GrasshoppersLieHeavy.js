@@ -157,7 +157,7 @@ export default {
                                         anchor: `Gun molls`,
                                         wiki: `Gun_moll`
                                     },
-                                    `were the female companions of American gangsters in the early 1900s. In the same way that society viewed their exploits, I both desired and feared the girls who went out with the boys who bullied me. Their contempt was certainly harder to stomach.`
+                                    `were the female companions of famous mobsters. In the same way that society viewed their exploits, I both desired and feared the girls who hung out with the boys who bullied me. Their contempt was certainly harder to stomach.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -184,7 +184,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `But I could even the score by showing the same disdain for the tacky books, films, and music that they consumed.`,
+                                    description: `But I could even the score by showing the same disdain for the tacky books they consumed.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -226,11 +226,10 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
-                            todo: true,
                             card: {
-                                description: `I got a job washing dishes at a dorm cafeteria. While the work was uneventful and offered no social interaction, that was actually its appeal. Between meals, I could sit and read while the dishes piled up, then clean them all at once. When it got really busy, I would switch to writing song lyrics in my head.`,
+                                description: `I got a job washing dishes at a dormitory cafeteria. The work was uneventful and offered no social interaction, but that was its appeal to me. I could sit and read while the dishes piled up, then in a mad rush I would clean them all at once. During the busiest times, I would switch to writing song lyrics in my head.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -242,11 +241,10 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays.`,
-                            todo: true,
                             card: {
-                                description: `The students would bus their trays, which were then transported by conveyor belt to the dishroom. Every so often, someone would leave a personal item on the tray by accident. The crew always got a kick when that happened, as it broke up the monotony.`,
+                                description: `The students would bus their trays, which were then transported by conveyor belt to the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come down to retrieve it. I always got a kick when that happened, as it broke up the monotony. Plus, they were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -262,22 +260,7 @@ export default {
                 {
                     time: 29,
                     lyric: [
-                        {
-                            anchor: `Down the steps`,
-                            todo: true,
-                            cards: [
-                                {
-                                    description: `The dishroom was on the floor below the dining area.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
-                                    wormhole: `down_the_steppes`
-                                }
-                            ]
-                        },
-                        `to`,
+                        `Down the steps to`,
                         {
                             anchor: `fetch her lancet pen,`,
                             todo: true,
@@ -310,7 +293,7 @@ export default {
                             anchor: `reflex you asked.`,
                             todo: true,
                             card: {
-                                description: `Blown away by her beauty, I handed Sita back her lancing device and immediately tried to make small talk. By then, I was mostly on autopilot when it came to hitting on random women in random situations.`,
+                                description: `Blown away by her beauty, I hand Sita back her lancing device and immediately try to make small talk. By then, I was mostly on autopilot when it came to hitting on random women in random situations.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -324,13 +307,18 @@ export default {
                         `At first she hedged, but then`,
                         {
                             anchor: `laying qualms to rest:`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `It was well known to the students that the cafeteria hired most of its workers through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and familiarity with underground culture ultimately won her over.`,
+                                    description: [
+                                        `It was well known to the students that the cafeteria hired most of its workers through a`,
+                                        {
+                                            anchor: `vocational rehabilitation`,
+                                            wiki: `Vocational_rehabilitation`
+                                        },
+                                        `program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and knowledge of the alternative culture ultimately won her over.`
+                                    ],
                                     dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 },
                                 {
@@ -346,7 +334,6 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -469,7 +456,7 @@ export default {
                             anchor: `she disappeared…`,
                             todo: true,
                             card: {
-                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But in truth, I was so dejected and embarrassed that I had no desire to see her again.`,
+                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But in truth, I was so dejected and embarrassed that I I couldn't bear to ever face her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -547,12 +534,10 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed,`,
-                            todo: true,
                             card: {
-                                description: `In asking for the largest payments upfront, the mail-order cult correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after she had so profoundly made an impact, seemed like evidence that I was once again the sucker in a similarly perfected scam.`,
+                                description: `In asking for the largest payments upfront, the mail-order cult correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after she had profoundly made an impact, seemed like evidence that I was once again a sucker for the perfect scam.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -601,11 +586,10 @@ export default {
                         `Tonight, just`,
                         {
                             anchor: `sour grapes, bitter sweets`,
-                            todo: true,
                             card: {
-                                description: `At the end of each shift, I would head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, I would be left with only the dried-out scraps that no one else wanted.`,
+                                description: `At the end of each shift, I would head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, I could only pick from the dried-out scraps that no one else wanted.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -758,7 +742,7 @@ export default {
                             anchor: `you're my password?"`,
                             todo: true,
                             card: {
-                                description: `Watching as I enter the passcode to unlock my front gate, Sita breaks the ice by mentioning that a topic we had once discussed is now part of a password that she recently created.`,
+                                description: `Watching as I enter the passcode to unlock my front gate, Sita breaks the ice by mentioning that a topic we once discussed is now part of a password that she recently created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -859,10 +843,9 @@ export default {
                         `so you`,
                         {
                             anchor: `hit the switch.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `As all these thoughts swirl in my head, I turn on the light switch in my apartment.`,
+                                    description: `As these thoughts swirl in my head, I turn on the light switch in my apartment.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }

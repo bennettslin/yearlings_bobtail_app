@@ -90,7 +90,7 @@ export default {
                             anchor: `Brushed her off`,
                             todo: true,
                             card: {
-                                description: `Whenever Sita could sense that I was withdrawing from our relationship, she would reach out by groveling. And stung by my conscience, I would reach back to comfort her. But as my patience grew thinner over time, I would lash out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `Whenever Sita could sense that I was withdrawing from our relationship, she would reach out by groveling. And stung by my conscience, I would reach back to comfort her. But as my patience grew thinner over time, I also lashed out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -105,10 +105,9 @@ export default {
                         `with your`,
                         {
                             anchor: `crew of chefs and thieves.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, while the other half would then prepare whatever was brought back for all to share. I was always in the thieving half.`,
+                                    description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, which the other half would then cook into a meal for all to share. I was always in the thieving group.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -126,7 +125,6 @@ export default {
                         `Tonight the`,
                         {
                             anchor: `rubber off,`,
-                            todo: true,
                             card: {
                                 description: `As our relationship went south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I preferred sex without a condom, she would suggest going without it as a way to coax any small kindness out of me.`,
                                 dotKeys: {
@@ -143,9 +141,8 @@ export default {
                         `if you would`,
                         {
                             anchor: `opt for bed not street.`,
-                            todo: true,
                             card: {
-                                description: `To save money after my lease ended, I put my stuff in storage and alternated between sleeping with Sita and crashing in the basement of the punk house. This gave me the regular comfort of Sita's bed while ensuring that she never held too much leverage over me.`,
+                                description: `To save money after my lease ended, I put my things in storage and alternated between sleeping with Sita and crashing in the basement of the punk house. This gave me the regular comfort of Sita's bed, while ensuring that she never held too much leverage over me.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -286,7 +283,6 @@ export default {
                         `or so`,
                         {
                             anchor: `she's claimed…`,
-                            todo: true,
                             card: {
                                 description: `Throughout our budding friendship, Sita had neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only added to my deepening resentment at the time.`,
                                 dotKeys: {
@@ -314,7 +310,7 @@ export default {
                             anchor: `buys your grief`,
                             todo: true,
                             card: {
-                                description: `My worlds collided when a neighborhood kid who liked my band found out that I had vandalized his friend's bike in a fit of drunken rage. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
+                                description: `My worlds collided when a neighborhood kid who liked my band found out I had vandalized his friend's bike in a fit of drunken rage. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -665,7 +661,6 @@ export default {
                         `They told her, "Never help a`,
                         {
                             anchor: `self-abuser`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `I had an intermittent habit of cutting myself to deal with distress. Early in our friendship, Sita took interest in my scars, which I interpreted as a morbid fascination with my troubled past. In time, I came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
@@ -706,7 +701,7 @@ export default {
                                 anchor: `as well in you."`,
                                 todo: true,
                                 card: {
-                                    description: `But my capacity to injure myself also meant that I would have few compunctions about harming anyone close to me. And harm Sita, I did.`,
+                                    description: `But my capacity to injure myself also meant I wasn't likely to have any compunction about harming anyone close to me.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
