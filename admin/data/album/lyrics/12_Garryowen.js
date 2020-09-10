@@ -90,7 +90,7 @@ export default {
                             anchor: `Brushed her off`,
                             todo: true,
                             card: {
-                                description: `Whenever Sita could sense that I was withdrawing from our relationship, she would reach out by groveling. And stung by my conscience, I would reach back to comfort her. But as my patience grew thinner over time, I also lashed out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `As I began to withdraw from our relationship, Sita would reach out by groveling. And stung by my conscience, I would reach back to comfort her. But as my patience grew thinner over time, I would lash out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -639,7 +639,7 @@ export default {
                             anchor: `faltering dear?`,
                             todo: true,
                             card: {
-                                description: `With my slate wiped clean, I took pains to affect an endearingly awkward persona, right down to the posture and stammer. I'd been switching social identities for so long that I knew the initial feeling of being a phony would be fleeting. There was an extra layer of hypocrisy this time around, however, which did bother me.`,
+                                description: `With my slate wiped clean, I took pains to affect an endearingly awkward persona. I'd been switching social identities for so long that being phony truly felt genuine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -699,11 +699,10 @@ export default {
                             `see himself`,
                             {
                                 anchor: `as well in you."`,
-                                todo: true,
                                 card: {
-                                    description: `But my capacity to injure myself also meant I wasn't likely to have any compunction about harming anyone close to me.`,
+                                    description: `But if I was capable of injuring myself, then I was unlikely to have any compunction about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true
+                                        [OBSERVATION]: true
                                     }
                                 }
                             }

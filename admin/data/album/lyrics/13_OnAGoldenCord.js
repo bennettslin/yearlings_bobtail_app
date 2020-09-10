@@ -65,7 +65,7 @@ export default {
                 card: {
                     description: `With the breakup, I was now free to rebuild my life from scratch. I could reclaim not just my time spent with Sita, but the years and years of discontent that had taken their toll long before. And so here we hear the song of the white-throated sparrow, as I harken back to the happier days of my youth.`,
                     dotKeys: {
-                        [NARRATIVE]: true,
+                        [BACKSTORY]: true,
                         [SONGWRITING]: true
                     }
                 }
@@ -92,7 +92,7 @@ export default {
                             anchor: `bread and pocket lint.`,
                             todo: true,
                             card: {
-                                description: `After Sita returned the bracelet earlier tonight, I put it in the front pocket of my jacket, which is where I've stashed bread rolls from the cafeteria to munch on later. With my hands tucked in as well to keep warm, I stroke the bracelet again and again.`,
+                                description: `Stashed in the front pockets of my jacket are bread rolls from the cafeteria to munch on later. With my hands tucked in as well to keep warm, I stroke the bracelet again and again.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -295,13 +295,12 @@ export default {
                             anchor: `bellyaches on suttee.`,
                             todo: true,
                             card: {
-                                // TODO: Say something like she chased after it.
                                 description: [
                                     {
                                         anchor: `Suttee`,
                                         wiki: `Sati_(practice)`
                                     },
-                                    `is an outlawed Hindu custom in which a widow commits suicide by throwing herself on her husband's funeral pyre. Similarly, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, until no trace remained of whom she once knew.`
+                                    `is an outlawed Hindu custom in which a widow commits suicide by throwing herself on her husband's funeral pyre. Similarly, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, leaving her to chase after the nothingness that remained.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -455,7 +454,6 @@ export default {
                         `past this`,
                         {
                             anchor: `avenue Möbius.`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -468,7 +466,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `As drunken me ambles down twisting sidewalks, mentally digging through the dense layers of half-truths that helped justify his act, it occurs to him that perhaps there really aren't two sides to this story. Or two sides to this mind…`,
+                                    description: `As drunken me ambles down twisting sidewalks, mentally digging through the dense layers of half-truths that justified his act, it occurs to him that perhaps there aren't really two sides to this story. Or two sides to his mind…`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -515,15 +513,19 @@ export default {
                         `And if`,
                         {
                             anchor: `night were peeled`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `After my summer of Robitussin, there was never a time when I felt I'd fully recovered. When a friend asked what was going on inside my head, I described each passing moment as a layer of`,
+                                    `Every now and then, I would have a mild Robitussin`,
+                                    {
+                                        anchor: `flashback,`,
+                                        wiki: `Flashback_(psychology)`
+                                    },
+                                    `compelling me to trail off and stare into the distance. When asked to describe the experience, I said it was like`,
                                     {
                                         anchor: `Colorforms`,
                                         wiki: `Colorforms`
                                     },
-                                    `being peeled away to reveal the next.`
+                                    `were being stuck on and peeled off my eyeballs to present the illusion of a scene unfolding.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -927,12 +929,20 @@ export default {
                         {
                             anchor: `alias drunk, in panic`,
                             todo: true,
-                            card: {
-                                description: `Once drunk, I always stay drunk until I crash. As such, while the sober me is used to morphing into his drunken half, the reverse is not true. So with the unfamiliar sensation of progressively getting more sober, panicked doubt creeps up beside the brashness that usually governs my drunken thought. I question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true
+                            cards: [
+                                {
+                                    description: `As I grapple with the unfamiliar sensation of progressively sobering up, panicked doubt seeps in and supplants my drunken brashness. I begin to question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                },
+                                {
+                                    description: `Once drunk, I always stayed drunk until I crashed. As such, I was quite used to transforming into Garry, but Garry was wholly unfamiliar with reverting back to me.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
                                 }
-                            }
+                            ]
                         },
                         `and starved for leads.`
                     ],

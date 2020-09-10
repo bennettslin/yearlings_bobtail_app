@@ -242,7 +242,7 @@ export default {
                         {
                             anchor: `keys left on dumbwaiter trays.`,
                             card: {
-                                description: `The students would bus their trays, which were then transported by conveyor belt to the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come down to retrieve it. I always got a kick when that happened, as it broke up the monotony. Plus, they were always grateful, and sometimes they were cute.`,
+                                description: `The students would bus their trays, which were then transported by conveyor belt to the dishroom. Every so often, someone would accidentally leave a personal item on their tray and come down to retrieve it. I always got a kick when that happened. They were always grateful, and sometimes they were cute.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -263,7 +263,6 @@ export default {
                         `Down the steps to`,
                         {
                             anchor: `fetch her lancet pen,`,
-                            todo: true,
                             card: {
                                 description: [
                                     `As a`,
@@ -274,9 +273,9 @@ export default {
                                     `Sita regularly checked her blood sugar level before meals by pricking her finger with a`,
                                     {
                                         anchor: `lancing device.`,
-                                        wiki: `Blood_lancet`
+                                        wiki: `Blood_glucose_monitoring`
                                     },
-                                    `That day, she forgot to take it with her after bussing her tray, and came down to the dishroom to retrieve it.`
+                                    `That day, she forgot to take it with her after bussing her tray.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -291,13 +290,20 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked.`,
-                            todo: true,
-                            card: {
-                                description: `Blown away by her beauty, I hand Sita back her lancing device and immediately try to make small talk. By then, I was mostly on autopilot when it came to hitting on random women in random situations.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true
+                            cards: [
+                                {
+                                    description: `Taken aback by her beauty, I hand Sita the lancet pen and begin to engage her in conversation.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                },
+                                {
+                                    description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
                                 }
-                            }
+                            ]
                         }
                     ]
                 },
@@ -355,13 +361,11 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `At the time, I was obsessed with Philip K. Dick's stories of altered states and dystopian worlds, and never left home without one of his novels under my arm. Sita would soon hear all about it on our first date.`,
+                                    description: `At the time, I was obsessed with Philip K. Dick's stories of altered states and dystopian worlds, and I never left home without one of his novels under my arm.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 },
                                 {
@@ -385,12 +389,11 @@ export default {
                         `First date`,
                         {
                             anchor: `nosebleed`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `After I picked Sita up, my nose started to bleed, which prompted me to recount past fights in middle school that ended with me suffering a bloody nose.`,
+                                    description: `As I was picking Sita up on our first date, my nose started to bleed. This prompted me to recount some fights in middle school that ended with me suffering a bloody nose.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 },
                                 {
@@ -401,12 +404,11 @@ export default {
                         `spurs tales of`,
                         {
                             anchor: `bare-knuckle defeats…`,
-                            todo: true,
                             cards: [
                                 {
                                     description: `Sita seemed intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I never threw a single punch.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 },
                                 {
@@ -456,7 +458,7 @@ export default {
                             anchor: `she disappeared…`,
                             todo: true,
                             card: {
-                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But in truth, I was so dejected and embarrassed that I I couldn't bear to ever face her again.`,
+                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But in truth, I was so dejected and embarrassed that I I couldn't bear to face her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -706,11 +708,9 @@ export default {
                         `Your gate code punched, when a`,
                         {
                             anchor: `looming shadow nears,`,
-                            todo: true,
                             card: {
-                                description: `I lived along the path between the campus and Sita's boarding house. By chance, Sita has been walking half a block behind me this evening, debating whether to flag me down. After I turn to open the gate and notice her presence, a few seconds awkwardly pass as neither of us is sure what to do next.`,
+                                description: `My apartment lies along the path between the campus and Sita's boarding house. As it so happens, Sita has also been heading home at this time. Having spotted me from a short distance behind, she debates whether to flag me down. As I turn to unlock the apartment gate, I notice her presence. A few seconds awkwardly pass, as neither of us is sure what to say next.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
                                     [NARRATIVE]: true
                                 }
                             }
@@ -740,9 +740,8 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password?"`,
-                            todo: true,
                             card: {
-                                description: `Watching as I enter the passcode to unlock my front gate, Sita breaks the ice by mentioning that a topic we once discussed is now part of a password that she recently created.`,
+                                description: `Watching as I enter the passcode for the gate, Sita breaks the ice by mentioning that a topic we once discussed became the basis of a password she recently created.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -863,10 +862,16 @@ export default {
                         `On your bed's rumpled linens, a`,
                         {
                             anchor: `lidless Vaseline sits.`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `Sitting on my bed is an open jar of Vaseline, which I clearly used recently to masturbate.`,
+                                    description: [
+                                        `On my bed is an open jar of`,
+                                        {
+                                            anchor: `Vaseline,`,
+                                            wiki: `Vaseline`
+                                        },
+                                        `which I clearly used recently to masturbate.`
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -1142,9 +1147,9 @@ export default {
                         anchor: `She loves you…`,
                         todo: true,
                         card: {
-                            description: `It took a long, long while for Sita and I to become fully comfortable around each other. During the first year or so of our friendship, we mainly just studied together. Then at some point, those study sessions progressed into long walks, followed by cuddling. It all happened so fast toward the end that I was still processing what exactly had triggered it.`,
+                            description: `It took a long, long while for Sita and I to become fully comfortable around each other. During our yearlong friendship, we mostly just studied at the library together. Then at some point, those study sessions progressed into long walks, followed by cuddling. It all happened so fast toward the end that I was still processing what exactly had triggered it.`,
                             dotKeys: {
-                                [NARRATIVE]: true
+                                [BACKSTORY]: true
                             }
                         }
                     }
