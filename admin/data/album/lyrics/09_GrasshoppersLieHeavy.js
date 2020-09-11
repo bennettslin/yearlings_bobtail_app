@@ -150,17 +150,16 @@ export default {
                         `and their`,
                         {
                             anchor: `molls perched on pedestals,`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Gun molls`,
                                         wiki: `Gun_moll`
                                     },
-                                    `were the female companions of famous mobsters. In the same way that society viewed their exploits, I both desired and feared the girls who hung out with the boys who bullied me. Their contempt was certainly harder to stomach.`
+                                    `the female companions of famous mobsters, were both romanticized and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, but this also made their contempt for me harder to stomach.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -172,7 +171,6 @@ export default {
                         `noses in`,
                         {
                             anchor: `penny dreadfuls.`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -184,9 +182,9 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `But I could even the score by showing the same disdain for the tacky books they consumed.`,
+                                    description: `But I could even the score by showing the same disdain for the tacky books and songs they consumed.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
+                                        [BACKSTORY]: true
                                     }
                                 }
                             ]
@@ -456,9 +454,8 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared…`,
-                            todo: true,
                             card: {
-                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But in truth, I was so dejected and embarrassed that I I couldn't bear to face her again.`,
+                                description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wanted to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But I felt so dejected and embarrassed that I gave up altogether on seeing her again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -479,9 +476,20 @@ export default {
                         `Alone his first gig,`,
                         {
                             anchor: `stagefright ignites.`,
-                            todo: true,
                             card: {
-                                description: `Shortly after Sita and I stopped talking, I began to play open mic nights. The first few times were a disaster, but I eventually learned to conquer my stagefright with just the right amount of alcohol.`,
+                                description: [
+                                    `During this time, I began to perform at local`,
+                                    {
+                                        anchor: `coffee shops`,
+                                        wiki: `Coffeehouse`
+                                    },
+                                    `hosting`,
+                                    {
+                                        anchor: `singer-songwriter`,
+                                        wiki: `Singer-songwriter`
+                                    },
+                                    `nights. My first few attempts were a disaster, but I eventually learned to conquer my stagefright with just the right amount of alcohol.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1145,9 +1153,8 @@ export default {
                     time: 193,
                     lyric: {
                         anchor: `She loves you…`,
-                        todo: true,
                         card: {
-                            description: `It took a long, long while for Sita and I to become fully comfortable around each other. During our yearlong friendship, we mostly just studied at the library together. Then at some point, those study sessions progressed into long walks, followed by cuddling. It all happened so fast toward the end that I was still processing what exactly had triggered it.`,
+                            description: `It took a long, long while for Sita and I to become fully comfortable with each other. At the start of our yearlong friendship, we mostly just studied together at the library. Then slowly, short treks through campus progressed into long strolls around the neighborhood, which soon led up to leaning in closer on the couch. It all happened so fast toward the end that I was still processing what exactly had triggered it.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }

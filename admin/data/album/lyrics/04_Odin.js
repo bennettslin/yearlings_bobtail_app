@@ -115,7 +115,7 @@ export default {
                             anchor: `hiding place of retreat`,
                             todo: true,
                             card: {
-                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins as I come out from the dusty crawl space beneath my captain bed to which I would sneak away as a child.`,
+                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. It begins with me coming out from the dusty crawl space beneath my captain bed to which I would sneak away as a child.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -129,7 +129,6 @@ export default {
                             anchor: `tref must reseed the earth.`,
                             todo: true,
                             card: {
-                                // TODO: Rewrite this description to be more friendly.
                                 description: [
                                     {
                                         isItalic: true,
@@ -140,7 +139,12 @@ export default {
                                         anchor: `Yiddish`,
                                         wiki: `Yiddish`
                                     },
-                                    `for food that is not kosher. Since it cannot be eaten, its only use is to fertilize other crops that can. Similarly, as I was not a Jew, I could only be subsumed into the endless churn of surrounding peoples.`
+                                    `for food that isn't`,
+                                    {
+                                        anchor: `kosher,`,
+                                        wiki: `Kashrut`
+                                    },
+                                    `and therefore must not be eaten by Jews. It wasn't just that Sasha lived in a world surrounded by food that wasn't meant to be eaten. In her world, boys like me also weren't meant to be dated.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true

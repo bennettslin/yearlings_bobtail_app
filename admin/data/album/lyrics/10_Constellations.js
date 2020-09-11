@@ -1388,10 +1388,9 @@ export default {
                     lyric: [
                         {
                             anchor: `I'll sail this sea,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `As I stand before Adam's headstone under the predawn sky, a profound sense of clarity and purpose comes over me. I become newly determined to finish`,
+                                    `As I stand before Adam's headstone under the predawn sky, a wave of clarity washes over me. With my sense of purpose renewed, I vow to finish`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail`

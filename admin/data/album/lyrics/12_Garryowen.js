@@ -310,7 +310,7 @@ export default {
                             anchor: `buys your grief`,
                             todo: true,
                             card: {
-                                description: `My worlds collided when a neighborhood kid who liked my band found out I had vandalized his friend's bike in a fit of drunken rage. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
+                                description: `My worlds collided when a neighborhood kid who liked my band found out I had smashed his friend's bike in a fit of drunken rage. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -663,7 +663,14 @@ export default {
                             anchor: `self-abuser`,
                             cards: [
                                 {
-                                    description: `I had an intermittent habit of cutting myself to deal with distress. Early in our friendship, Sita took interest in my scars, which I interpreted as a morbid fascination with my troubled past. In time, I came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
+                                    description: [
+                                        `I had an intermittent habit of`,
+                                        {
+                                            anchor: `cutting myself`,
+                                            wiki: `Self-harm`
+                                        },
+                                        `to deal with distress. Early in our friendship, Sita took interest in my scars, which I interpreted as a morbid fascination with my troubled past. In time, I came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }

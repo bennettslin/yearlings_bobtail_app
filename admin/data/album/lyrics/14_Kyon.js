@@ -171,9 +171,8 @@ export default {
                         `Is it just her`,
                         {
                             anchor: `womb you bed?`,
-                            todo: true,
                             card: {
-                                description: `Of course, Sita was under no such illusion herself about my innocence. What I wanted was to sleep with more women, to compensate for being the less sexually experienced one in our relationship.`,
+                                description: `Of course, Sita herself was under no such illusion about my innocence. She knew full well that what I wanted was to sleep with more women, to compensate for being the less sexually experienced one in our relationship.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -388,8 +387,7 @@ export default {
                     lyric: [
                         `And when sobered by the`,
                         {
-                            anchor: `time-lapse`,
-                            todo: true,
+                            anchor: `time lapse`,
                             cards: [
                                 {
                                     description: [
@@ -398,12 +396,11 @@ export default {
                                             anchor: `time-lapse photography,`,
                                             wiki: `Time-lapse_photography`
                                         },
-                                        `the frame rate at which images are captured is lower than upon playback, causing time to speed up.`
+                                        `images are captured at a lower frame rate, causing time to speed up on normal playback.`
                                     ]
                                 },
                                 {
-                                    // TODO: Used the word infidelity already. And combine these.
-                                    description: `Sita anticipated that my years of infidelity would whiz by in a flash as the pursuit of other women grew repetitive, imprinting few standout memories.`,
+                                    description: `Sita anticipated that my philandering years would whiz by in a flash as the pursuit of other women grew repetitive, imprinting few standout memories.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -416,9 +413,9 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The passage of time is invoked here by a classic mnemonic for`,
+                                        `The passage of time is implied here by a classic mnemonic for`,
                                         {
-                                            anchor: `daylight saving time.`,
+                                            anchor: `daylight saving.`,
                                             wiki: `Daylight_saving_time`
                                         },
                                         `"Spring forward, fall back" reminds us to set our clocks forward every spring and backward every fall.`
@@ -428,7 +425,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `Given the heavy disappointment I was bound to face as a womanizer whose later years proved unkind, I would surely return to Sita, my fallback option, with relief rather than reluctance.`,
+                                    description: `Once my later years as a womanizer proved to be unkind, I would surely return to Sita, my fallback option, with relief rather than reluctance.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -755,7 +752,7 @@ export default {
                             todo: true,
                             card: {
                                 // TODO: Change this.
-                                description: `Even in anguish, Sita never lost her sardonic sense of humor. When I expressed concern about her cutting herself, she sweetly assured me that it was only for practice.`,
+                                description: `When Sita first asked me about the scars on my forearm, I drolly explained that they were for practice. When I later expressed concern after she tried cutting herself, she sweetly gave me the same assurance.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

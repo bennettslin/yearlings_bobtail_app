@@ -90,9 +90,8 @@ export default {
                         `safely kept with`,
                         {
                             anchor: `bread and pocket lint.`,
-                            todo: true,
                             card: {
-                                description: `Stashed in the front pockets of my jacket are bread rolls from the cafeteria to munch on later. With my hands tucked in as well to keep warm, I stroke the bracelet again and again.`,
+                                description: `Stashed in the front pockets of my jacket are bread rolls from the cafeteria, to be munched on while I'm on the go. With my hands now tucked in to keep warm, I stroke the bracelet again and again.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -190,9 +189,8 @@ export default {
                         `I'm sorry, but I`,
                         {
                             anchor: `went through your mail`,
-                            todo: true,
                             card: {
-                                description: `Confused about why I had grown unusually distant, Sita finally caved in that day and snooped around on my computer, which I kept at her place because it was a desktop. She thus discovered that I was flirting online with a woman I had met at one of my shows, to whom I was giving assurances that I would soon be single again.`,
+                                description: `Confused about why I had grown so distant, Sita finally caved in that day and snooped around on my computer, which was a desktop that I kept at her place. In so doing, she stumbled upon some emails in which I was soliciting advice from my friends on how to break up with her.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -898,11 +896,10 @@ export default {
                     lyricRight: [
                         {
                             anchor: `leaked the bandage`,
-                            todo: true,
                             card: {
-                                description: `With our emotional bond now severed, Sita bleeds both metaphorically and literally, as she has begun to experiment with cutting to ease her depression.`,
+                                description: `With our emotional bond now severed, Sita bled both metaphorically and literally. She was beginning to experiment with cutting to ease her depression.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -931,13 +928,13 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `As I grapple with the unfamiliar sensation of progressively sobering up, panicked doubt seeps in and supplants my drunken brashness. I begin to question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
+                                    description: `As I sober up, panicked doubt seeps in and supplants my drunken brashness. I begin to question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
                                 },
                                 {
-                                    description: `Once drunk, I always stayed drunk until I crashed. As such, I was quite used to transforming into Garry, but Garry was wholly unfamiliar with reverting back to me.`,
+                                    description: `Once drunk, I always stayed drunk until I crashed. As such, I was quite used to transforming into Garry, but Garry was wholly unfamiliar with returning back to me.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }

@@ -26,7 +26,6 @@
     * 1 Golden Cord (potter's field)
     * 1 Kyon (Hindu)
     * 3 Odin (tref, cellophane, heaven/nirvana)
-    * 1 Sasha (love Taiwan)
 
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.
