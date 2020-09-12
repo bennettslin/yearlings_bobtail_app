@@ -88,9 +88,8 @@ export default {
                     lyric: [
                         {
                             anchor: `Brushed her off`,
-                            todo: true,
                             card: {
-                                description: `As I began to withdraw from our relationship, Sita would reach out by groveling. And stung by my conscience, I would reach back to comfort her. But as my patience grew thinner over time, I would lash out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
+                                description: `As I began to withdraw from the relationship, Sita would reach out by groveling. And stung by my conscience, I would rush to comfort her. But as my patience wore thin over time, I would lash out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

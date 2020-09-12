@@ -81,7 +81,6 @@ export default {
                         {
                             anchor: `El Torito.`,
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
                                     `Sita worked as a hostess at`,
@@ -89,11 +88,10 @@ export default {
                                         anchor: `El Torito,`,
                                         wiki: `El_Torito`
                                     },
-                                    `a Mexican chain restaurant. I would often pick her up when her shift was over, as I seem to be doing now in my dream.`
+                                    `a Mexican chain restaurant. I would sometimes pick her up when her shift was over.`
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }

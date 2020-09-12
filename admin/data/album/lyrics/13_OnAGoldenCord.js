@@ -298,7 +298,7 @@ export default {
                                         anchor: `Suttee`,
                                         wiki: `Sati_(practice)`
                                     },
-                                    `is an outlawed Hindu custom in which a widow commits suicide by throwing herself on her husband's funeral pyre. Similarly, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, leaving her to chase after the nothingness that remained.`
+                                    `is an outlawed Hindu custom in which a widow commits suicide by throwing herself on her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, leaving her to chase after the nothingness that remained.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true

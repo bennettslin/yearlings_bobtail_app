@@ -115,7 +115,8 @@ export default {
                             anchor: `hiding place of retreat`,
                             todo: true,
                             card: {
-                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. It begins with me coming out from the dusty crawl space beneath my captain bed to which I would sneak away as a child.`,
+                                // TODO: Work on that last sentence.
+                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. It begins with me coming out from the dusty crawl space beneath my bed at home. I was so intensely focused on my project, only to find that it's now nighttime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -139,12 +140,12 @@ export default {
                                         anchor: `Yiddish`,
                                         wiki: `Yiddish`
                                     },
-                                    `for food that isn't`,
+                                    `for anything that isn't`,
                                     {
-                                        anchor: `kosher,`,
+                                        anchor: `kosher.`,
                                         wiki: `Kashrut`
                                     },
-                                    `and therefore must not be eaten by Jews. It wasn't just that Sasha lived in a world surrounded by food that wasn't meant to be eaten. In her world, boys like me also weren't meant to be dated.`
+                                    `It wasn't hard to draw a connection between the foods that Sasha wasn't meant to eat, and the boys she wasn't meant to date.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1419,8 +1420,7 @@ export default {
                             anchor: `just play dumb?`,
                             todo: true,
                             card: {
-                                // TODO: Make about heaven and nirvana.
-                                description: `It seemed bizarre to me that if a true spiritual path did indeed exist, then it wouldn't offer a reward so obviously desirable, for which I could mindlessly strive without being troubled by existential questions on the nature of souls.`,
+                                description: `Neither heaven nor nirvana sounded all that pleasant, and yet they were the best that centuries of humanity could dream up. It just seemed that if a true spiritual reward existed out there, its allure should be so self-evident that wanting to strive for it would be a no-brainer.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }

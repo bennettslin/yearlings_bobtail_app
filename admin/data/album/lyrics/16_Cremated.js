@@ -785,9 +785,8 @@ export default {
                         `hears not a`,
                         {
                             anchor: `worrisome`,
-                            todo: true,
                             card: {
-                                description: `After the breakup with Miriam, I continued to care about her well-being and would ask mutual friends about her. This surprised me, given how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave back, I still came away knowing that someone like her could want me, even if only for a while. As far as I was concerned, then, I got the best end of that deal.`,
+                                description: `After the breakup with Miriam, I continued to care about her well-being and would ask mutual friends about her. This surprised me, given how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave back, I still came away knowing that someone like her could want me, even if just for a while. As far as I was concerned, then, I got a pretty good deal.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

@@ -366,7 +366,7 @@ export default {
                         {
                             anchor: `been in the bath`,
                             card: {
-                                description: `After my mother came to pick me up and dropped me off at home, I spent a long while trying to bathe myself. Since I didn't know how to take showers and was too afraid to try, I had to keep draining and refilling the bathtub until I was clean.`,
+                                description: `My mother came to pick me up and dropped me off at home with my grandparents. I remember taking a long while to bathe myself.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -416,9 +416,8 @@ export default {
                         `with your`,
                         {
                             anchor: `sheriff's badge and gun…`,
-                            todo: true,
                             card: {
-                                description: `Though my mother and the Taiwanese teenagers of her generation prized all things American, their only exposure to American culture was through a bootleg industry that mostly recycled the relics of its past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for old Westerns.`,
+                                description: `Though my mother and other Taiwanese teenagers of her generation prized all things American, they had no way to know what that entailed. Their only exposure to American culture was through a native bootleg industry that mostly recycled the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for old Westerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

@@ -651,9 +651,8 @@ export default {
                         `"So all your`,
                         {
                             anchor: `leads have left`,
-                            todo: true,
                             card: {
-                                description: `For several years, my modus operandi was simple. I would stay with Sita up until I had another option to pursue. When that prospect failed, I would then come crawling back, because Sita always let me. But now our circumstances were reversed. I had no more options coming down the pike, while Sita had met someone with whom she fully intended to stay.`,
+                                description: `For several years, my modus operandi was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before finally summoning the courage to contact me. Then, upon learning that things hadn't worked out with the other woman, she would cajole me back. But now our situations were reversed. I had no more options coming down the pike, while Sita had met someone with whom she fully intended to stay.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -668,9 +667,8 @@ export default {
                         `Someday you'll breathe again; for one,`,
                         {
                             anchor: `you have to…`,
-                            todo: true,
                             card: {
-                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain, as I had caused Sita this exact same torment countless times. So in our last phone conversation, I just asked her meekly how she had managed it. She replied that she didn't know. There were days when she just didn't want to live. And yet, each day would pass just the same, pushing her into the next. Slowly, days would add up to weeks, and weeks would turn into months, until the excruciating pain quietly dulled into an aching sadness.`,
+                                description: `Overcome with jealousy and heartbreak, I had no excuse to complain. I'd caused Sita this exact same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she just didn't want to live. And yet, each day would pass just the same, pushing her into the next. Slowly, days would add up to weeks, then weeks would turn into months, until the excruciating pain dulled into an aching sadness.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -764,12 +762,15 @@ export default {
                             card: {
                                 // TODO: Make just one of many.
                                 description: [
-                                    `Hoagy Carmichael's`,
+                                    {
+                                        anchor: `Hoagy Carmichael's`,
+                                        wiki: `Hoagy_Carmichael`
+                                    },
                                     {
                                         anchor: `"Stardust"`,
                                         wiki: `Stardust_(song)`
                                     },
-                                    `was my favorite song, so "stardust" became my go-to word to use for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children" and deeply connected with it. He seemed greatly disappointed to find out that the actual words were gibberish.`
+                                    `was my favorite song, so "stardust" became my go-to word to use for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children" and really connected with it. He seemed disappointed to find out that the actual words were gibberish.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true

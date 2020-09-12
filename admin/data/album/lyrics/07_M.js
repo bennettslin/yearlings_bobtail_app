@@ -783,9 +783,8 @@ export default {
                         `But then I saw the`,
                         {
                             anchor: `world's a naked baby,`,
-                            todo: true,
                             card: {
-                                description: `At some point, I realized that the world simply does what it does because it is what it is. Nothing is hidden from view, and situations can be understood by reading them closely, no differently than bodies of knowledge can be absorbed through study.`,
+                                description: `At some point, I realized that the world does what it does simply because it is what it is. Nothing is hidden from view, and any situation can be understood by reading it closely, no differently than learning from a textbook.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -827,7 +826,7 @@ export default {
                 },
                 {
                     time: 166,
-                    lyric: `to know: the rule for a girl`
+                    lyric: `to know, the rule for a girl`
                 },
                 {
                     time: 168,
@@ -837,7 +836,7 @@ export default {
                             anchor: `boy who's to love her baby`,
                             todo: true,
                             card: {
-                                description: `It then occurred to me that if the world is as guileless as a newborn baby, then it makes no more sense to be upset with the world than to be mad at a child. And if a woman's list of ideal traits in a man includes what kind of father he'll be, then it makes sense that she'll judge him by his working relationship with the world.`,
+                                description: `It then occurred to me that if the world is as guileless as a newborn, then it makes no more sense to be upset with it than to get mad at a baby. And if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then it makes sense for her to judge him by how he interacts with the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
