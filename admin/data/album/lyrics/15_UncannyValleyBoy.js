@@ -632,10 +632,13 @@ export default {
                 {
                     lyric: {
                         anchor: `Scattered your beans`,
-                        todo: true,
                         card: {
                             description: [
-                                `As I recall, the nightmare began with me scattering magic beans all around my neighborhood. It was clearly based on the English fairy tale`,
+                                `As I recall, the nightmare began with me scattering magic beans all around my neighborhood. It was clearly based on the English`,
+                                {
+                                    anchor: `fairy tale`,
+                                    wiki: `Fairy_tale`
+                                },
                                 {
                                     anchor: `"Jack and the Beanstalk,"`,
                                     wiki: `Jack_and_the_Beanstalk`
@@ -1250,9 +1253,8 @@ export default {
                         `that`,
                         {
                             anchor: `weave through the vines,`,
-                            todo: true,
                             card: {
-                                description: `The magic beans had sprouted into thick, twisted vines, blocking out the sky as far and wide as my helpless subjects could see.`,
+                                description: `The magic beans had sprouted into thick, twisting vines that blocked out the sky as far as my helpless subjects could see.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

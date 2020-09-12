@@ -117,7 +117,6 @@ export default {
                     lyric: [
                         {
                             anchor: `dragging aglets held`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -126,7 +125,7 @@ export default {
                                             anchor: `aglet`,
                                             wiki: `Aglet`
                                         },
-                                        `is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. Anyone bent on seeing me trip and fall thus readily had the means to make it happen.`
+                                        `is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. So if anyone was bent on seeing me trip and fall, they readily had the means to make it happen.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -539,9 +538,8 @@ export default {
                         `When`,
                         {
                             anchor: `religious kids mocked,`,
-                            todo: true,
                             card: {
-                                description: `The kids who bullied me were typically religious, which then served to discredit their religions in my view.`,
+                                description: `The kids who bullied me were typically religious. This had the predictable effect of discrediting their faiths in my view.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -561,7 +559,7 @@ export default {
                         {
                             anchor: `His obit not a bang,`,
                             card: {
-                                description: `But this appraisal was based on reason, not malice. It just made no sense that the one true God would entrust the dissemination of his message to the very tormentors of those he hoped to reach.`,
+                                description: `But my appraisal was based on reason, not malice. It just made no sense that the one true God would entrust the dissemination of his message to the very tormentors of those he hoped to reach.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
