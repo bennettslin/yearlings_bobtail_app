@@ -524,7 +524,7 @@ export default {
                                         anchor: `X-Ray Specs,`,
                                         wiki: `X-Ray_Specs_(novelty)`
                                     },
-                                    `which purportedly allows the wearer to see through objects, I have just received them in the mail and am now trying them on.`
+                                    `which purportedly allows the wearer to see through objects, I've just received them in the mail and am now trying them on.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -534,14 +534,20 @@ export default {
                         `enraged at`,
                         {
                             anchor: `pages clawed,`,
-                            todo: true,
-                            card: {
-                                description: `My brother enjoyed cutting shapes of alphabet letters out of scrap paper. Since this was a creative activity that kept him occupied, my parents happily encouraged it and kept a pile of old magazines freshly stocked for this purpose. Unfortunately, the comic book that I had been reading on the floor just a moment ago has somehow made its way into this scrap pile.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                            cards: [
+                                {
+                                    description: `Unfortunately, the comic book I'd been reading on the floor just a minute ago has somehow made its way into my brother's scrap pile.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                },
+                                {
+                                    description: `My brother enjoyed cutting shapes of alphabet letters out of scrap paper. Since this was a creative activity that kept him occupied, my parents encouraged it and kept a pile of old magazines freshly stocked for him.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
                                 }
-                            }
+                            ]
                         }
                     ]
                 },
@@ -910,9 +916,8 @@ export default {
                         `lay`,
                         {
                             anchor: `forgotten amongst the mail.`,
-                            todo: true,
                             card: {
-                                description: `Having recently assaulted my brother in anger over a shredded comic book, I am now indifferent to the latest issue from my monthly subscription.`,
+                                description: `Having recently assaulted my brother in anger over a shredded comic book, I'm now indifferent to the latest issue from my monthly subscription.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1041,9 +1046,8 @@ export default {
                         `Such`,
                         {
                             anchor: `heavy fears,`,
-                            todo: true,
                             card: {
-                                description: `Back to the night of Willy's murder. After I wake up screaming in fear of my mortality, my mother rushes to my bedside to comfort me.`,
+                                description: `One night soon after Willy's murder, I wake up screaming in fear of my mortality. My mother sits by my bedside to comfort me.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1070,7 +1074,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `My mother, who was the den mother of my Cub Scout pack, might also be assuring me that I am not yet "way below."`,
+                                    description: `My mother, who was the den mother of my Cub Scout pack, might also be assuring me that I'm not yet "way below."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -1086,18 +1090,12 @@ export default {
                         `Son,`,
                         {
                             anchor: `seventy years`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `In keeping with her`,
-                                    {
-                                        anchor: `Buddhist`,
-                                        wiki: `Buddhism`
-                                    },
-                                    `faith, my mother told me not to worry, since I wasn't going to die for a long while. She then assured me that when my time finally did come, perhaps in another seventy years or so, I would have long made peace with death somehow.`
+                                    `My mother tells me not to worry, since I'm not going to die for a long while. She then assures me that when my time finally does come, perhaps in another seventy years or so, I will have long made peace with death somehow.`
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         },

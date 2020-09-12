@@ -172,7 +172,14 @@ export default {
                         {
                             anchor: `Indifferent galaxies`,
                             card: {
-                                description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`,
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `Buddhism`,
+                                        wiki: `Buddhism`
+                                    },
+                                    `of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -1348,7 +1355,12 @@ export default {
                             anchor: `day to die`,
                             card: {
                                 description: [
-                                    `As a child, I experienced night terrors related to my fear of death. Whenever I woke up screaming, my mother would comfort me with the promise of`,
+                                    `As a child, I experienced`,
+                                    {
+                                        anchor: `night terrors`,
+                                        wiki: `Night_terror`
+                                    },
+                                    `related to my fear of death. Whenever I woke up screaming, my mother would comfort me with the promise of`,
                                     {
                                         anchor: `reincarnation.`,
                                         wiki: `Reincarnation`
