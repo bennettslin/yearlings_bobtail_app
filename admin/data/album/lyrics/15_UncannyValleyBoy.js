@@ -832,7 +832,7 @@ export default {
                         {
                             anchor: `fail your Sita`,
                             card: {
-                                description: `Contemporary audiences tend to find it problematic that Rama's first act upon reuniting with Sita was to demand proof of her purity. But the same chauvinism is what prompted my need to be the more sexually experienced partner. I couldn't simply hold Sita with gratitude and accept whatever circumstances were needed to lead up to this moment.`,
+                                description: `Contemporary audiences tend to find it problematic that Rama's first act upon reuniting with Sita was to demand proof of her purity. But the same chauvinism is what prompted my need to be the more sexually experienced partner. I couldn't simply hold Sita with gratitude and accept whatever circumstances led up to such a moment.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }

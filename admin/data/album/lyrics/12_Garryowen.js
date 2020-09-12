@@ -238,7 +238,6 @@ export default {
                         `In you come, piss drunk, smug in`,
                         {
                             anchor: `smegma crust,`,
-                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -250,7 +249,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `My personal hygiene would be put on hold for days while I crashed at the punk house. But once back at Sita's, I would still dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
+                                    description: `My personal hygiene would be put on hold for days while I crashed at the punk house. But even once back at Sita's place, I would dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }

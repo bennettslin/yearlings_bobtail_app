@@ -1627,7 +1627,7 @@ export default {
                                         anchor: `Nunavut,`,
                                         wiki: `Nunavut`
                                     },
-                                    `the northernmost territory of Canada. Yet with the reappearance of the Norse in my thoughts, I realize that our bounds are not so limitless, as even our imaginations must invariably repeat. There is no new ground left to cover, both in our fantasy epics and in our everyday lives. And so, just as the "Norse" are about to encounter the "Nunavutters," we end the night as we had begun it, "no worse and none the better."`
+                                    `the northernmost territory of Canada. Yet with the reappearance of the Norse in my thoughts, I realize that our bounds are not so limitless, as even our imaginations must eventually repeat. There is no new ground left to cover, both in our fantasy epics and in our everyday lives. And so, just as the "Norse" are about to encounter the "Nunavutters," we end the night as we had begun it, "no worse and none the better."`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

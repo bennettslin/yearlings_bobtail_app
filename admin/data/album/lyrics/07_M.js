@@ -805,8 +805,9 @@ export default {
                     lyric: {
                         anchor: `to have a merry ol' laugh.`,
                         card: {
-                            description: `Or to have a "Mara, you'll" laugh.`,
+                            description: `Or to have a "Mara, you'll" laugh. After all, if the world is as guileless as a newborn, then it makes no sense to get upset when it unwittingly makes a mess of things.`,
                             dotKeys: {
+                                [OBSERVATION]: true,
                                 [PUN]: true
                             }
                         }
@@ -834,9 +835,8 @@ export default {
                         `is that the`,
                         {
                             anchor: `boy who's to love her baby`,
-                            todo: true,
                             card: {
-                                description: `It then occurred to me that if the world is as guileless as a newborn, then it makes no more sense to be upset with it than to get mad at a baby. And if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then it makes sense for her to judge him by how he interacts with the world at large.`,
+                                description: `And if a woman's list of ideal traits in a man includes what kind of father he'll be to her child, then she's likely to judge him by how he interacts with the world at large.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -942,15 +942,14 @@ export default {
                                 `'s words—`
                             ],
                             properNoun: true,
-                            todo: true,
                             card: {
                                 description: [
-                                    `Recognizing that what I wanted was Mara or someone like Mara, and having taken stock of where I needed to be to get what I wanted, I decided to return to what I do best: holing up in emotional seclusion and relying solely on my own resourcefulness. My next five-year plan would see me score all the parts and play all the instruments on`,
+                                    `Recognizing that what I wanted was Mara or someone like Mara, and taking stock of where I needed to be to fulfill this wish, I decided to return to what I do best. I would hole up in emotional seclusion, this time to work on an ambitious magnum opus. My next five-year plan would have me score all the parts and play all the instruments on`,
                                     {
                                         isItalic: true,
                                         lyric: `Bobtail,`
                                     },
-                                    `my ambitious magnum opus, now conceived as the`,
+                                    `now conceived as the`,
                                     {
                                         isItalic: true,
                                         lyric: `Ulysses`
@@ -958,7 +957,7 @@ export default {
                                     `of rock albums.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }

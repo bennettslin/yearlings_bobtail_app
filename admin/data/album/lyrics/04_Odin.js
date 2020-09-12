@@ -113,10 +113,8 @@ export default {
                     lyricLeft: [
                         {
                             anchor: `hiding place of retreat`,
-                            todo: true,
                             card: {
-                                // TODO: Work on that last sentence.
-                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. It begins with me coming out from the dusty crawl space beneath my bed at home. I was so intensely focused on my project, only to find that it's now nighttime.`,
+                                description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar settings of Los Angeles with the foreign sights of Taiwan. It begins with me coming out from the dusty crawl space beneath my bed at home. Having been absorbed in my drawings, I didn't realize I'd stayed down there well into nighttime.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -128,7 +126,6 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth.`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -145,7 +142,7 @@ export default {
                                         anchor: `kosher.`,
                                         wiki: `Kashrut`
                                     },
-                                    `It wasn't hard to draw a connection between the foods that Sasha wasn't meant to eat, and the boys she wasn't meant to date.`
+                                    `There were certain everyday foods that Sasha wasn't meant to eat due to her faith, so it could be inferred that certain boys in her everyday life also weren't meant to be dated.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
