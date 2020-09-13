@@ -897,7 +897,7 @@ export default {
                         {
                             anchor: `leaked the bandage`,
                             card: {
-                                description: `With our emotional bond now severed, Sita bled both metaphorically and literally. She was beginning to experiment with cutting to ease her depression.`,
+                                description: `With our emotional bond now severed, Sita bled both metaphorically and literally. She had started to experiment with cutting to ease her depression.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -928,7 +928,7 @@ export default {
                             todo: true,
                             cards: [
                                 {
-                                    description: `As I sober up, panicked doubt seeps in and supplants my drunken brashness. I begin to question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
+                                    description: `As I begin to sober up, panicked doubt seeps in to supplant my drunken brashness. I begin to question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }

@@ -8,6 +8,6 @@ export default [
     /* Ongoing. */
     {
         taskName: `Editing. Include overviews.`,
-        workedHours: 272
+        workedHours: 284
     }
 ]

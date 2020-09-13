@@ -1122,24 +1122,24 @@ export default {
                         `as not for wrapping by a`,
                         {
                             anchor: `cellophane sylph,`,
-                            card: {
-                                description: [
-                                    `In the works of Paracelsus, the`,
-                                    {
-                                        anchor: `sylph`,
-                                        wiki: `Sylph`
-                                    },
-                                    `is the elemental of air, often depicted as a fairy with wings of gauze. But if the wings were made of`,
-                                    {
-                                        anchor: `cellophane,`,
-                                        wiki: `Cellophane`
-                                    },
-                                    `they would also seal in heat.`
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true
+                            cards: [
+                                {
+                                    description: `Like cellophane, Sasha's intentions were transparent. I could always count on her to sympathize during my bouts of frustration.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true
+                                    }
+                                },
+                                {
+                                    description: [
+                                        `In the works of Paracelsus, the`,
+                                        {
+                                            anchor: `sylph`,
+                                            wiki: `Sylph`
+                                        },
+                                        `is the elemental of air, often depicted as a fairy with wings of gauze.`
+                                    ]
                                 }
-                            }
+                            ]
                         }
                     ]
                 },
@@ -1166,11 +1166,9 @@ export default {
                         {
                             anchor: `didn't impart warmth`,
                             // CONSIDER: Wormhole Foreshadow M?
-                            todo: true,
                             card: {
-                                description: `Like cellophane, Sasha's intentions were transparent. I could always count on her as my friend to sympathize during my bouts of frustration. But also like cellophane, she couldn't truly return warmth when none was offered. Once I became more open about my petty and vindictive thoughts toward the bullies, I could feel her keeping her distance. And then I knew that any chance for us to be more than friends was gone forever.`,
+                                description: `But also like cellophane, Sasha couldn't return warmth where none was present. As long as I couldn't be the better person in dealing with the bullies, there was a point where she needed to keep her distance from me as well.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
                                     [OBSERVATION]: true
                                 }
                             }
@@ -1415,9 +1413,8 @@ export default {
                         `and`,
                         {
                             anchor: `just play dumb?`,
-                            todo: true,
                             card: {
-                                description: `Neither heaven nor nirvana sounded all that pleasant, and yet they were the best that centuries of humanity could dream up. It just seemed that if a true spiritual reward existed out there, its allure should be so self-evident that wanting to strive for it would be a no-brainer.`,
+                                description: `Neither heaven nor nirvana sounded all that pleasant, and yet they were the best that centuries of humanity could dream up. It seemed to me that if a true spiritual reward existed out there, its allure should be so self-evident that wanting to strive for it would be a no-brainer.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }

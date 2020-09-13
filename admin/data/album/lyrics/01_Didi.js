@@ -288,9 +288,8 @@ export default {
                         `Didi`,
                         {
                             anchor: `made an "accident"`,
-                            todo: true,
                             card: {
-                                description: `Upon pooping my pants, I kept quiet at my desk. I think someone finally noticed the stink and alerted the teacher, who then brought me to the nurse's office.`,
+                                description: `After I poop my pants while quietly seated at my desk, a classmate politely informs the teacher.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -313,14 +312,15 @@ export default {
                             cards: [
                                 {
                                     description: [
+                                        `After helping me undress, the nurse places my soiled pants in a grocery bag for me to take home. The bag is from`,
                                         {
-                                            anchor: `Safeway`,
+                                            anchor: `Safeway,`,
                                             wiki: `Safeway_Inc.`
                                         },
-                                        `supermarkets were common in my area when I was growing up. After helping me dress, the nurse placed my soiled pants in a grocery bag for me to take home.`
+                                        `the neighborhood supermarket.`
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true
+                                        [NARRATIVE]: true
                                     }
                                 },
                                 {
@@ -337,14 +337,14 @@ export default {
                             anchor: `decked in overalls`,
                             card: {
                                 description: [
-                                    `Since I was the smallest child in my grade, the only item of clothing that fit me was an abandoned pair of girls'`,
+                                    `Since I'm the smallest child in my grade, the only item of clothing that fits me is an abandoned pair of girls'`,
                                     {
                                         anchor: `overalls.`,
                                         wiki: `Overalls`
                                     }
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         },

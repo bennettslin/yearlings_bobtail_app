@@ -21,12 +21,6 @@
 * When to use commas.
 * When to use contractions.
 
-* Observation annotations (these don't include afterwords)
-    * 2 M (last two)
-    * 1 Golden Cord (potter's field)
-    * 1 Kyon (Hindu)
-    * 3 Odin (tref, cellophane, heaven/nirvana)
-
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.
 * Link to Blogspot from WordPress.

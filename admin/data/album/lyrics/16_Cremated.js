@@ -233,9 +233,8 @@ export default {
                         `an everlasting`,
                         {
                             anchor: `doublespeaker,`,
-                            todo: true,
                             card: {
-                                description: `The first month with Miriam was one of the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did seemed to amaze her, and the icing on top was doublespeaker rhyme, which I came up with while we were together. So Miriam became my sounding board for all the ways I planned to use it, such as to juxtapose my sober and drunken thoughts.`,
+                                description: `That first month with Miriam was one of the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did seemed to impress her, including doublespeaker rhyme, which I came up with while we were together. So Miriam became my sounding board for how I would use it in a song to juxtapose my sober and drunken thoughts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -270,20 +269,29 @@ export default {
                         `his`,
                         {
                             anchor: `beaten wit and id`,
-                            todo: true,
-                            card: {
-                                description: [
-                                    `In Freudian psychology, the`,
-                                    {
-                                        anchor: `id`,
-                                        wiki: `Id,_ego_and_super-ego`
-                                    },
-                                    `represents the primal impulses of the psyche. Wishing to play up both sides of my character, I told Miriam that allowing my drunken id to triumph over sober reasoning was the key to both my creative decisions and life choices.`
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true
+                            cards: [
+                                {
+                                    description: `The rational thinking of my sober self didn't always triumph, of course. Sometimes, letting my drunken id get his way was the key to making good creative decisions and life choices.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
+                                },
+                                {
+                                    description: [
+                                        `In`,
+                                        {
+                                            anchor: `Freudian psychology,`,
+                                            wiki: `Freud's_psychoanalytic_theories`
+                                        },
+                                        `the`,
+                                        {
+                                            anchor: `id`,
+                                            wiki: `Id,_ego_and_super-ego`
+                                        },
+                                        `represents the primal impulses of the psyche.`
+                                    ]
                                 }
-                            }
+                            ]
                         },
                         `she's deemed her`
                     ]
@@ -868,7 +876,7 @@ export default {
                         {
                             anchor: `seat hurt`,
                             card: {
-                                description: `I somehow threw out my back while I had my seat reclined with Miriam on top of me. Facetiously, I reason it's because I'm getting on in my years.`,
+                                description: `I somehow threw out my back while my seat was reclined with Miriam on top of me. I fancy that it's because I'm getting on in my years.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -884,11 +892,9 @@ export default {
                         `though no worse but for`,
                         {
                             anchor: `his soreness,`,
-                            todo: true,
                             card: {
-                                description: `Miriam wanted sex far more than Sita did, which ran me ragged as I was always still recovering from the last time. But here once again, I suppose that it's old age doing me in.`,
+                                description: `Miriam's vigorous lovemaking today has left me chafed in certain areas.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
                                     [NARRATIVE]: true
                                 }
                             }

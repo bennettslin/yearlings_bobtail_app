@@ -827,7 +827,7 @@ export default {
                 },
                 {
                     time: 166,
-                    lyric: `to know, the rule for a girl`
+                    lyric: `to know: the rule for a girl`
                 },
                 {
                     time: 168,

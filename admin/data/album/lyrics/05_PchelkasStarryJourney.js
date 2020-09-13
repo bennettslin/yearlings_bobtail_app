@@ -953,21 +953,7 @@ export default {
             mainVerses: [
                 {
                     time: 149,
-                    lyric: [
-                        `Stung by venomous vipers, our`,
-                        {
-                            anchor: `muted youths lapsed.`,
-                            todo: true,
-                            card: {
-                                // TODO: Maybe move this closer to the end to "per their bargain."
-                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who once did that really weird thing. It's not that I lacked the will to repair my standing. But I was as baffled as anyone else about the psychological forces that prompted such behavior in the first place, and there were no guide books telling me where to go from there.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                    lyric: `Stung by venomous vipers, our muted youths lapsed.`
                 },
                 {
                     time: 153,
@@ -1352,7 +1338,18 @@ export default {
                 {
                     time: 200,
                     lyric: [
-                        `Mushka, per their bargain, I`,
+                        `Mushka,`,
+                        {
+                            anchor: `per their bargain,`,
+                            card: {
+                                description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who once did that really weird thing. It's not that I lacked the will to repair my standing. But I was as baffled as anyone else about the psychological forces that prompted such behavior in the first place, and there were no guide books telling me where to go from there.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        },
+                        `I`,
                         {
                             anchor: `can't ever return.`,
                             card: {

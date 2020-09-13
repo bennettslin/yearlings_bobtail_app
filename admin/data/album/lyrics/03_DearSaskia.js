@@ -104,11 +104,10 @@ export default {
                         `your`,
                         {
                             anchor: `first semester`,
-                            todo: true,
                             card: {
-                                description: `My family is spending the summer in Taiwan. By the time we're to get back to the States, Sasha will have already moved to Boston and begun the new school year.`,
+                                description: `My family was spending the entire summer in Taiwan. By the time we were to get back to the States, Sasha would have already moved to Boston and begun the new school year.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -337,14 +336,14 @@ export default {
                         `staying kosher. Though, you know,`,
                         {
                             anchor: `I would have too…`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `It seemed obvious to me that if Sasha were to want me, then I would certainly convert to`,
+                                    `It seemed obvious to me that if Sasha were to want me, then of course I would convert to`,
                                     {
-                                        anchor: `Judaism.`,
+                                        anchor: `Judaism,`,
                                         wiki: `Judaism`
-                                    }
+                                    },
+                                    `just like being good was a precondition for receiving presents.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -389,9 +388,15 @@ export default {
                         `And I sniffled daily when you`,
                         {
                             anchor: `skipped a grade.`,
-                            todo: true,
                             card: {
-                                description: `I panicked when Sasha was allowed to skip the fifth grade, as this opened new vistas for her that necessarily excluded me. With middle school now underway, I am reminded of this panic as Sasha navigates with seeming ease the same social landscape that I find so treacherous.`,
+                                description: [
+                                    `I panicked when Sasha was allowed to`,
+                                    {
+                                        anchor: `skip a grade`,
+                                        wiki: `Grade_skipping`
+                                    },
+                                    `one year, as this opened new vistas for her that necessarily excluded me. I was constantly reminded of this in middle school, as Sasha effortlessly navigated the same social landscape that I found so treacherous.`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

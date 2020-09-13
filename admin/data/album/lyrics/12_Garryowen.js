@@ -635,9 +635,8 @@ export default {
                         `aren't you the`,
                         {
                             anchor: `faltering dear?`,
-                            todo: true,
                             card: {
-                                description: `With my slate wiped clean, I took pains to affect an endearingly awkward persona. I'd been switching social identities for so long that being phony truly felt genuine.`,
+                                description: `With my slate now wiped clean, I took pains to affect an endearingly awkward persona. As phony as it was, I'd been switching social identities for so long that being phony was how I felt genuine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

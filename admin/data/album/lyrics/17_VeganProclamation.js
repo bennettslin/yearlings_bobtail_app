@@ -754,31 +754,7 @@ export default {
                 },
                 {
                     time: 194,
-                    lyric: [
-                        `And can we`,
-                        {
-                            anchor: `start as children?`,
-                            todo: true,
-                            card: {
-                                // TODO: Make just one of many.
-                                description: [
-                                    {
-                                        anchor: `Hoagy Carmichael's`,
-                                        wiki: `Hoagy_Carmichael`
-                                    },
-                                    {
-                                        anchor: `"Stardust"`,
-                                        wiki: `Stardust_(song)`
-                                    },
-                                    `was my favorite song, so "stardust" became my go-to word to use for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children" and really connected with it. He seemed disappointed to find out that the actual words were gibberish.`
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        },
-                        `Would we want to then?`
-                    ]
+                    lyric: `And can we start as children? Would we want to then?`
                 },
                 {
                     time: 201,

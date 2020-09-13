@@ -535,9 +535,8 @@ export default {
                         `But other nights you'd`,
                         {
                             anchor: `lap my wound clean`,
-                            todo: true,
                             card: {
-                                description: `After ejaculating, I would go down on Sita until she reached orgasm. She once listed this as an example of my thoughtfulness when I asked her what she saw in me that was worth holding onto, because I couldn't think of anything myself.`,
+                                description: `After ejaculating, I would go down on Sita until she reached orgasm. She once listed this as an example of my thoughtfulness, when I asked her what she saw in me that made me worth holding onto. I couldn't think of anything myself.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -664,9 +663,8 @@ export default {
                         `your`,
                         {
                             anchor: `fear of death,`,
-                            todo: true,
                             card: {
-                                description: `The night terrors that I experienced as a child continued into adulthood. After we began sleeping together, Sita would soothe me whenever I woke up screaming from visions of my mortality. Or immortality, whichever the case may have been.`,
+                                description: `The night terrors that I experienced as a child continued into adulthood. Sita would soothe me whenever I woke up screaming from visions of my death.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -675,11 +673,9 @@ export default {
                         `your`,
                         {
                             anchor: `fear of never dying,`,
-                            todo: true,
                             card: {
                                 description: [
-                                    // TODO: Mention never having resolved which is scarier.
-                                    `Recognizing my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. Hinduism is no different from Buddhism in its end goal of transcendent release from the cycle of rebirth, which I found problematic as a child. I was attracted to its sprawling pantheon of deities and avatars. It just seemed like the more details there are, the more room you have to get lost in the divine.`
+                                    `Sita could relate to my fear of immortality. Growing up Hindu in America, she had compared nirvana with heaven herself, and found both to be lacking. Though she had no ready answers, she invited me to attend services with her. There, I learned all about Hinduism's sprawling pantheon of deities and avatars, which I found to be comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -749,10 +745,8 @@ export default {
                         `And darling, don't you worry, these were only`,
                         {
                             anchor: `practice cuts…`,
-                            todo: true,
                             card: {
-                                // TODO: Change this.
-                                description: `When Sita first asked me about the scars on my forearm, I drolly explained that they were for practice. When I later expressed concern after she tried cutting herself, she sweetly gave me the same assurance.`,
+                                description: `When Sita first asked me about the scars on my forearm, my droll response was that they were only for practice. When I later expressed concern after she tried cutting for herself, she sweetly replied with the same assurance. The message was clear that I was responsible in more ways than one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
