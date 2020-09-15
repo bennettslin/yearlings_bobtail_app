@@ -870,23 +870,12 @@ export default {
                         `it's up to me to`,
                         {
                             anchor: `be alert;`,
-                            todo: true,
                             card: {
                                 description: [
-                                    `It was no mystery why the situation with Mara transpired as it had. It's never a mystery how`,
-                                    {
-                                        isEmphasis: true,
-                                        lyric: `anything`
-                                    },
-                                    `plays out the way it does. I found this thought empowering, because I didn't need to know everything all at once. I just needed to know that things are knowable when I`,
-                                    {
-                                        isEmphasis: true,
-                                        lyric: `do`
-                                    },
-                                    `want to know them. And with this knowledge, I was now free to choose where to go next.`
+                                    `In short, it was no mystery why the situation with Mara had transpired the way it had. I found this thought to be empowering, because it meant that the Maras of the world might still be attainable. It was just on me to figure out what they wanted. And once I knew, I could build myself up to be exactly that.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         }
@@ -904,11 +893,10 @@ export default {
                     time: 180,
                     lyric: {
                         anchor: `friends have to lie.`,
-                        todo: true,
                         card: {
-                            description: `After middle school, I didn't have close friends again until college, so there were plenty of truths about friendship I was still learning for the first time.`,
+                            description: `But I couldn't rely on my friends for the truth. As dear as they all were to me, they each had their own agenda.`,
                             dotKeys: {
-                                [BACKSTORY]: true
+                                [OBSERVATION]: true
                             }
                         }
                     }

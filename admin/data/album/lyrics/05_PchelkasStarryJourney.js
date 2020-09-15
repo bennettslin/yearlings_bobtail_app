@@ -335,10 +335,8 @@ export default {
                         `till you`,
                         {
                             anchor: `learn to kick it back.`,
-                            todo: true,
                             card: {
-                                // TODO: Is this really what I want to say?
-                                description: `In middle school, the most well-liked kids were the ones least concerned about being liked. This ran counter to my tendency to throw myself whole-heartedly into anything worth pursuing.`,
+                                description: `The most popular kids in middle school were the ones least concerned about being liked. This ran counter to my understanding that anything worth having needs to be pursued wholeheartedly. And yet, trying things their way didn't make me any more likable either.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
