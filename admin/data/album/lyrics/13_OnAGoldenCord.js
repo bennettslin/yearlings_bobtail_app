@@ -233,7 +233,7 @@ export default {
                         {
                             anchor: `Immerse the molted form`,
                             card: {
-                                description: `With the scheme to end his relationship having gone according to plan, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had intended to sacrifice as an unwitting accomplice all along.`,
+                                description: `Having succeeded in his plot to end the relationship, the "sober" voice in the doublespeaker set quietly resurrects the ghost of his drunken half, whom he had intended to sacrifice as an unwitting accomplice all along.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -260,15 +260,15 @@ export default {
                         `emerged beside a`,
                         {
                             anchor: `paupers' grave`,
-                            todo: true,
                             card: {
                                 // NOTE: I changed "pauper's" to "paupers'."
                                 description: [
-                                    `My sober self had spent weeks to rehearse the breakup, assuming it could be scheduled at his convenience. Instead, it proved to be unexpected and horribly messy. And so the body of his drunken half had to be disposed of in careless haste, much like those who cannot afford a proper burial and are tossed into a`,
+                                    `While the breakup was successful, its arrival was also unexpected, forcing my sober self to scrap his plans for a clean getaway. And so he now finds himself beside the`,
                                     {
-                                        anchor: `paupers' grave.`,
+                                        anchor: `paupers' grave`,
                                         wiki: `Potter's_field`
-                                    }
+                                    },
+                                    `where his drunken half's body was earlier tossed in haste, among all the other deceased who died unknown or couldn't afford a proper burial.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -291,14 +291,13 @@ export default {
                         `torched the`,
                         {
                             anchor: `bellyaches on suttee.`,
-                            todo: true,
                             card: {
                                 description: [
                                     {
                                         anchor: `Suttee`,
                                         wiki: `Sati_(practice)`
                                     },
-                                    `is an outlawed Hindu custom in which a widow commits suicide by throwing herself on her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, leaving her to chase after the nothingness that remained.`
+                                    `is an outlawed Hindu custom in which a widow commits suicide by throwing herself on her husband's funeral pyre. Likewise, sober me knew he could be rid of Sita forever if he just killed off bit by bit the one she loved, pushing her to venture further and further into the darkness to chase after the less and less that remained.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -925,10 +924,9 @@ export default {
                         `my`,
                         {
                             anchor: `alias drunk, in panic`,
-                            todo: true,
                             cards: [
                                 {
-                                    description: `As I begin to sober up, panicked doubt seeps in to supplant my drunken brashness. I begin to question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
+                                    description: `As I sober up, panicked doubt creeps in. I begin to question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
@@ -1028,7 +1026,7 @@ export default {
                                         anchor: `9/11 hijackers`,
                                         wiki: `September_11_attacks`
                                     },
-                                    `were unaware that they were on a suicide mission, having prepared instead to make public statements on their religious motivations. Similarly, in orchestrating my plot to be rid of Sita, I had sold my drunken half on all the benefits of breaking up, while neglecting to mention the tremendous sacrifice it would entail.`
+                                    `were unaware that they were on a suicide mission, having prepared instead to make public statements on their religious motivations. Similarly, in orchestrating my scheme to be rid of Sita, I had sold my drunken half on all the benefits of breaking up, while neglecting to mention the tremendous sacrifice it would entail.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
