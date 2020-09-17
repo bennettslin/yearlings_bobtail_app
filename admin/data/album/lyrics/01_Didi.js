@@ -586,24 +586,18 @@ export default {
                 anchor: IS_UNIT_DOT,
                 todo: true,
                 card: {
-                    // . In its time,`,
-                    //     {
-                    //         isItalic: true,
-                    //         lyric: `Pet Sounds`
-                    //     },
-                    //     `was a pioneering work in the field of sound recording, and with the increasing affordability of home studios in the early 2000s, I sensed that the next wave of advancement was afoot. My hope was to be part of this wave by pointing to new artistic directions that were only now made possible with the latest tools, much like Beach Boys leader Brian Wilson had done with his magnum opus. And so I wanted this homage to be anything but subtle
                     description: [
-                        `Since`,
+                        `By demonstrating the possibilities of sound recording,`,
                         {
                             isItalic: true,
                             lyric: `Pet Sounds`
                         },
-                        `was never performed live in its own time, I had faith that feasibility of live performance could once again be an afterthought, as masses of new artists pushed the limits of sound recording to new heights. Instead, indie rock stuck to its guns, insisting as always that new artists could hope to gain exposure only by playing live shows. The excitement lay in seeing how the latest technology might be used to navigate this familiar path. But no new paths were to be forged. And so upon its release,`,
+                        `was never performed live in its own time. As home studios became more affordable in the early 2000s, I sensed that the next wave of artists would once again take the art of recording to new heights, unburdened by concerns for recreating the sound onstage. Instead, indie rock continued to insist that the only real artists were those with careers built on playing live shows. And so upon its release,`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`
                         },
-                        `quickly fell by the wayside. There was no part for it to play in the narrative of our times that was being written.`
+                        `was dismissed as a hobby project and quickly fell by the wayside.`
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

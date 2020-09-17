@@ -1,5 +1,4 @@
 import {
-    AFTERWORD,
     BACKSTORY,
     NARRATIVE,
     OBSERVATION,
@@ -1110,19 +1109,6 @@ export default {
                     }
                 }
             ]
-        },
-        {
-            unitMap: {},
-            unitDot: {
-                anchor: IS_UNIT_DOT,
-                todo: true,
-                card: {
-                    description: `What surprised me most upon the album's release was that no one who reviewed it was willing to venture an opinion on doublespeaker rhyme. The consensus seemed to be that all new inventions will prove their mettle within the existing paradigm of live performance. But it's not just that doublespeaker rhyme flailed under this constraint— by necessity, openness to invention means allowing it to operate within its own paradigm. And so I came to see that indie rock, despite its reputation, is really a conservative movement at heart.`,
-                    dotKeys: {
-                        [AFTERWORD]: true
-                    }
-                }
-            }
         }
     ]
 }
