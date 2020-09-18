@@ -4,6 +4,8 @@
 * Lyric briefly in front of carousel when alternating between unit dots. Try just songwriting, and the two unit dot anchors in first verse in Good Night.
 * Playing doesn't work from one song to the next?
 * Selecting wormhole doesn't scroll to annotation in carousel.
+* Make Catherine Latina. Remove Hapa skin colour.
+* Switch Miriam and Catherine clothes colours. (Switch yellow with pink.)
 
 * Make sure backstory and narrative tenses are correct.
 * Make sure no wikis repeat.
