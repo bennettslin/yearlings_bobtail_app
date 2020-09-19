@@ -5,7 +5,8 @@
 * Playing doesn't work from one song to the next?
 * Selecting wormhole doesn't scroll to annotation in carousel.
 * Make Catherine Latina. Remove Hapa skin colour.
-* Switch Miriam and Catherine clothes colours. (Switch yellow with pink.)
+* Remove animal skin colour. Just make it Nordic or something.
+* Make Amy leggings less orange, they're too close to skin colour.
 
 * Make sure backstory and narrative tenses are correct.
 * Make sure no wikis repeat.
@@ -22,6 +23,7 @@
 * When to use italics and quotes for foreign words.
 * When to use commas.
 * When to use contractions.
+* Pun quotations are correct.
 
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.

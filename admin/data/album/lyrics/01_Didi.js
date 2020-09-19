@@ -587,17 +587,22 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `By demonstrating the possibilities of sound recording,`,
+                        `As home studios became more affordable in the early 2000s, I sensed that the next wave of artists would once again take the field of music production to new heights, as`,
+                        {
+                            anchor: `Brian Wilson`,
+                            wiki: `Brian_Wilson`
+                        },
+                        `had done when he created`,
                         {
                             isItalic: true,
-                            lyric: `Pet Sounds`
+                            lyric: `Pet Sounds.`
                         },
-                        `was never performed live in its own time. As home studios became more affordable in the early 2000s, I sensed that the next wave of artists would once again take the art of recording to new heights, unburdened by concerns for recreating the sound onstage. Instead, indie rock continued to insist that the only real artists were those with careers built on playing live shows. And so upon its release,`,
+                        `I also thought it was understood that, like Wilson, these artists would succeed precisely by holding off concerns for how their sound might be recreated onstage. But indie rock stuck to its guns, continuing to insist that a career built on playing live shows is the true measure of an artist. And so upon its release,`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`
                         },
-                        `was dismissed as a hobby project and quickly fell by the wayside.`
+                        `was dismissed as the work of a hobbyist and quickly fell by the wayside.`
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

@@ -46,7 +46,19 @@
 .OverviewPopupView {
     // Needed to prevent closing upon popup click.
     z-index: $zIndex__centreFieldChild;
+
     max-width: 480px; // Arbitrary.
+
+    .DW__miniWidth
+    & {
+        // This keeps line breaks consistent.
+        max-width: 412.5px;
+    }
+
+    /**
+     * No point in setting a max width for phone, especially since presence of
+     * toggle icon means line breaks can't be consistent.
+     */
 }
 
 .OverviewPopupViewContent {

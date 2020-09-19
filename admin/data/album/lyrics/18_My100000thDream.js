@@ -499,12 +499,7 @@ export default {
                 todo: true,
                 card: {
                     description: [
-                        `After`,
-                        {
-                            isItalic: true,
-                            lyric: `Yearling's Bobtail`
-                        },
-                        `failed to get any attention, I moved to New York City to start a new life. There I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma. I wanted to be faithful to how fresh these wounds were for me when I wrote the songs, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with an Indian version of Liz as the Sita character. The result looks like neither, which hopefully comes as a relief to both.`
+                        `After I moved to New York City to start a new life, I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma. I wanted to be faithful to how fresh these wounds were for me when I wrote the songs, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with an Indian version of Liz as the Sita character. The result looks like neither, which hopefully comes as a relief to both.`
                     ],
                     dotKeys: {
                         [AFTERWORD]: true

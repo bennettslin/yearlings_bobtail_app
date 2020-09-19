@@ -489,7 +489,7 @@ export default {
                                         anchor: `Shelta`,
                                         wiki: `Shelta`
                                     },
-                                    `that is intended to exclude outsiders from comprehension. Catherine was part Irish, but not a Traveller. Either way, I was stuck "outside her shelter."`
+                                    `that is intended to exclude outsiders from comprehension. Catherine wasn't actually a Traveller, but either way, I was stuck outside her "shelter."`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
