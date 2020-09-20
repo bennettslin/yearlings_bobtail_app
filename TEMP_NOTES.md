@@ -3,6 +3,8 @@
 * Lyric briefly in front of carousel when alternating between unit dots. Try just songwriting, and the two unit dot anchors in first verse in Good Night.
 * Playing doesn't work from one song to the next?
 * Selecting wormhole doesn't scroll to annotation in carousel.
+
+# Illustrator TODO:
 * Make Catherine Latina. Remove Hapa skin colour.
 * Remove animal skin colour. Just make it Nordic or something.
 * Make Amy leggings less orange, they're too close to skin colour.
@@ -10,9 +12,8 @@
 * Make sure backstory and narrative tenses are correct.
 * Make sure no wikis repeat.
 
-* Remove Britishisms from lyrics.
 * Reassess what is an anchor.
-* More casual talk.
+* Remove Britishisms from lyrics.
 * Make sure narrative and backstory are never together.
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Change more similarlys to likewises, and other phrases.

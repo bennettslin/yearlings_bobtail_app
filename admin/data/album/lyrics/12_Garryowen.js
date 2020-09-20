@@ -806,12 +806,12 @@ export default {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`
                         },
-                        `was rejected by the last record label that had been vetting us, I got so depressed that I went on a monthlong bender. I eventually kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I could sense my bedroom walls conspiring to attack me. I found out that this was the first stage of`,
+                        `was rejected by the last record label that had been vetting us, I got so depressed that I went on a monthlong bender. I eventually kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I could sense my bedroom walls conspiring to attack me. I found out this was the first stage of`,
                         {
                             anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`
                         },
-                        `and began to attend`,
+                        `and began attending`,
                         {
                             anchor: `Alcoholics Anonymous`,
                             wiki: `Alcoholics_Anonymous`
