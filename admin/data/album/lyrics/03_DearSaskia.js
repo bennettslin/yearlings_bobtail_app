@@ -608,11 +608,12 @@ export default {
                             anchor: `talk Canuck,`,
                             card: {
                                 description: [
-                                    `The chokehold incident left me with a dislocated jaw, which thereafter I had to clench while speaking to avoid pain. This led to my peculiar manner of pronunciation that some to this day mistake for a`,
+                                    `The chokehold incident left me with a dislocated jaw. For a long time afterward, I had to clench it while speaking to avoid pain. This led to my odd manner of pronunciation that often gets mistaken for a`,
                                     {
-                                        anchor: `Canadian accent.`,
+                                        anchor: `Canadian accent`,
                                         wiki: `Canadian_raising`
                                     },
+                                    `to this day.`,
                                     {
                                         anchor: `Canadians,`,
                                         wiki: `Canada`
@@ -767,15 +768,24 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `Confused by the lack of interest in the album's release, I distilled my approach to writing songs into a lesson plan called`,
+                        `After I released`,
                         {
                             isItalic: true,
-                            lyric: `Bobtail Method.`
+                            lyric: `Yearling's Bobtail,`
                         },
-                        `Unfortunately, this generated even less interest and probably only cemented my status as a hobbyist, rather than the kind of serious, career-oriented musician sought after by the indie labels.`
+                        `the lack of interest confused me. So I decided to write a songwriting lesson book called`,
+                        {
+                            isItalic: true,
+                            lyric: `Bobtail Method`
+                        },
+                        `that distilled all the wisdom I'd ever gathered from the Beatles and others about composing melodies. I sent promo copies to the indie labels and press, but unfortunately, none of it was worth anything coming from an unknown artist. And the only way to become known was by playing live shows.`,
+                        {
+                            anchor: `Indie rock`,
+                            wiki: `Indie_rock`
+                        },
+                        `just wasn't going to budge from that mindset.`
                     ],
                     dotKeys: {
                         [AFTERWORD]: true,

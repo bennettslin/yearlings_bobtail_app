@@ -1,6 +1,17 @@
 export default {
     isLogue: true,
     title: 'epilogue',
-    todo: true,
-    overview: `Thanks for listening! It really means a lot. So what do I hope to gain by putting out this audio webcomic, a decade after the album's original release? In short, I'm looking for help. The truth is, I never stopped wanting it, whether in the form of a straightforward record deal, or through some modern arrangement devised by forward-thinking Millennials. In 2006, so many indie labels rejected me, fearing that, while I seemed fully determined to create this century's best rock albums, I wouldn't lift a finger to promote myself if left on my own. Their fears were correct, and now in 2019, I'm doubling down on my convictions. Interdependence was the reason for rock music's great past. Why wouldn't it hold the key to a better future?`
+    overview: [
+        `Thanks for listening! It really means a lot. So what do I hope to gain by creating this audio webcomic, a decade after the album's original release? In short, I'm looking for help, whether in the form of a traditional record deal, or some modern arrangement devised by forward-thinking Zoomers. The notion that an artist can pitch a bold vision, and`,
+        {
+            isEmphasis: true,
+            lyric: `then`
+        },
+        `have others invest in their potential, and`,
+        {
+            isEmphasis: true,
+            lyric: `then`
+        },
+        `prove to have a sustainable career— rather than the reverse, as indie rock has always insisted— is really not that crazy. It's how startups work. It's how so many past artists got their start. The truth is, interdependence was the reason for rock music's great past. Why wouldn't it hold the key to a better future?`
+    ]
 }

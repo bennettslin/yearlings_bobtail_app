@@ -1372,9 +1372,15 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    description: `My brother currently lives in his own place and receives round-the-clock care through supported living services. He's doing well.`,
+                    description: [
+                        `My brother currently lives in his own apartment and gets round-the-clock care through a`,
+                        {
+                            anchor: `supported living`,
+                            wiki: `Supported_living`
+                        },
+                        `service agency.`
+                    ],
                     dotKeys: {
                         [AFTERWORD]: true
                     }

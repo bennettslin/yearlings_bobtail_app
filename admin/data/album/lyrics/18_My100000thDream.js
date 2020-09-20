@@ -496,10 +496,9 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `After I moved to New York City to start a new life, I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma. I wanted to be faithful to how fresh these wounds were for me when I wrote the songs, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with an Indian version of Liz as the Sita character. The result looks like neither, which hopefully comes as a relief to both.`
+                        `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma. I wanted to stay genuine to the album, given how fresh my wounds were when I made it, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`
                     ],
                     dotKeys: {
                         [AFTERWORD]: true

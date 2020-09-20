@@ -584,10 +584,14 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `As home studios became more affordable in the early 2000s, I sensed that the next wave of artists would once again take the field of music production to new heights, as`,
+                        `As home studios became more affordable in the early 2000s, I sensed that a wave of artists would soon take the field of`,
+                        {
+                            anchor: `music recording`,
+                            wiki: `Sound_recording_and_reproduction`
+                        },
+                        `to new heights, as`,
                         {
                             anchor: `Brian Wilson`,
                             wiki: `Brian_Wilson`
@@ -597,7 +601,7 @@ export default {
                             isItalic: true,
                             lyric: `Pet Sounds.`
                         },
-                        `I also thought it was understood that, like Wilson, these artists would succeed precisely by holding off concerns for how their sound might be recreated onstage. But indie rock stuck to its guns, continuing to insist that a career built on playing live shows is the true measure of an artist. And so upon its release,`,
+                        `And, like Wilson, these artists would succeed by holding off concerns about how their sound might be recreated onstage. But the indie labels stuck to their guns, insisting that the true measure of an artist is a career built on playing live shows. And so upon its release,`,
                         {
                             isItalic: true,
                             lyric: `Yearling's Bobtail`

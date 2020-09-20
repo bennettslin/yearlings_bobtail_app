@@ -1744,10 +1744,14 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I studied Hebrew and undertook a yearlong course required for conversion to Judaism. We didn't last long enough for me to stand before the rabbinical court, however, which would have been the final step. So, I'm still not Jewish.`
+                        `As it became clear that`,
+                        {
+                            isItalic: true,
+                            lyric: `Yearling's Bobtail`
+                        },
+                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, I reconnected with Sasha, and we started dating. She put me on the conversion path; I volunteered to study Hebrew. It was exactly the kind of self-reinvention I was hoping for, and for a while things were great. But we didn't last. Though I really wanted to mend my old ways, I guess my behavior lagged behind my intentions.`
                     ],
                     dotKeys: {
                         [AFTERWORD]: true

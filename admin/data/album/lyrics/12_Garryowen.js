@@ -799,12 +799,16 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
                     description: [
-                        `After getting rejected by the last record label that had been vetting us, I was so depressed that I went on the bender to end all benders. I eventually kept a box of wine by my bed to calm my nerves throughout the night. One day, upon skipping my morning beers, I felt like the walls were conspiring to attack me. I soon learned that this was the early stage of`,
+                        `After`,
                         {
-                            anchor: `delirium tremens,`,
+                            isItalic: true,
+                            lyric: `Yearling's Bobtail`
+                        },
+                        `was rejected by the last record label that had been vetting us, I got so depressed that I went on a monthlong bender. I eventually kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I could sense my bedroom walls conspiring to attack me. I found out that this was the first stage of`,
+                        {
+                            anchor: `delirium tremens`,
                             wiki: `Delirium_tremens`
                         },
                         `and began to attend`,

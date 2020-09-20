@@ -858,21 +858,9 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
-                todo: true,
                 card: {
-                    // TODO: Make this about Sasha.
                     description: [
-                        `I was a vegan for the five years that I spent working on`,
-                        {
-                            isItalic: true,
-                            lyric: `Yearling's Bobtail.`
-                        },
-                        `But as it became clear that the album's release would be all but ignored by the indie press, I had to question everything I thought I knew about how the world works. So I jettisoned all my beliefs, including veganism, to try out the conservative values espoused by indie rock. They weren't a good fit for me, and I've since returned to the left, albeit as a realist. So I'm a`,
-                        {
-                            anchor: `flexitarian`,
-                            wiki: `Semi-vegetarianism`
-                        },
-                        `now, in that I'm always happy to avoid eating meat, but I no longer do so completely.`
+                        `I stayed vegan for about five years, but then I quit after moving to New York City, since Sasha ate meat. I guess it's just the nature of who I am that my social identity is the first thing I'll jettison whenever the chance for romance is at stake. Still, these days I mostly eat vegetarian. It's just easier and healthier.`
                     ],
                     dotKeys: {
                         [AFTERWORD]: true
