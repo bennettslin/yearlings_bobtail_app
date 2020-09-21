@@ -10,14 +10,14 @@ export default [
         neededHours: 7
     },
     {
-        taskName: `Theatre binoculars.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Rethink some dot category shapes?`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Theatre binoculars.`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `Ocean waves panel.`,
