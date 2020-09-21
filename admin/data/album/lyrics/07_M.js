@@ -177,7 +177,7 @@ export default {
                 {
                     time: 59,
                     lyric: [
-                        `to mould me into a`,
+                        `to mold me into a`,
                         {
                             anchor: `mystery mensch.`,
                             card: {

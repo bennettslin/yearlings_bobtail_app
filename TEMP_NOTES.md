@@ -13,7 +13,6 @@
 * Make sure no wikis repeat.
 
 * Reassess what is an anchor.
-* Remove Britishisms from lyrics.
 * Make sure narrative and backstory are never together.
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Change more similarlys to likewises, and other phrases.

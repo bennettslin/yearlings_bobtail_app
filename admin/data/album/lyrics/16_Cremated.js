@@ -316,7 +316,7 @@ export default {
                                 }
                             }
                         },
-                        `making scroonched her pantyhose.`
+                        `making scrunched her pantyhose.`
                     ],
                     lyricRight: [
                         `sinking ship, maybe`,

@@ -406,7 +406,7 @@ export default {
                         },
                         `the`,
                         {
-                            anchor: `spectre taunting twin streetlamps;`,
+                            anchor: `specter taunting twin streetlamps;`,
                             card: {
                                 description: `My sober self observes as his drunken half defiantly lashes out at twin streetlamps, whose misty glow has revived the vision of Sita's fearful gaze moments before he committed his crime.`,
                                 dotKeys: {
