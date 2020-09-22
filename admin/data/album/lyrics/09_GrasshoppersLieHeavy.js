@@ -1088,7 +1088,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows and a "belle with a ring."`,
+                                    description: `The momentous occasion of a wedding may leave the groom in a daze, to be roused only by the exchange of vows and a "belle" with a ring.`,
                                     dotKeys: {
                                         [PUN]: true,
                                         [OBSERVATION]: true
@@ -1291,7 +1291,7 @@ export default {
                             anchor: `fell an oar.`,
                             card: {
                                 description: [
-                                    `Or else, "fell Lenore."`,
+                                    `Or else, fell "Lenore."`,
                                     {
                                         anchor: `Edgar Allan Poe's`,
                                         wiki: `Edgar_Allan_Poe`

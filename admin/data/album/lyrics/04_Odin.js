@@ -1601,12 +1601,12 @@ export default {
                             anchor: `his litter`,
                             card: {
                                 description: [
-                                    `It wasn't just Odin's unused`,
+                                    `It isn't just Odin's unused`,
                                     {
                                         anchor: `cat litter`,
                                         wiki: `Litter_box`
                                     },
-                                    `that was swept aside; gone was any chance for him to sire a`,
+                                    `that was swept aside; gone is any chance for him to sire a`,
                                     {
                                         anchor: `litter`,
                                         wiki: `Litter_(zoology)`

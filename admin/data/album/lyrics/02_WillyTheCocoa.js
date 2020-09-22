@@ -384,7 +384,7 @@ export default {
                             anchor: `gap-toothed coma`,
                             cards: [
                                 {
-                                    description: `With mouth partially open, my brother wears a blank expression, right up until he feels the sensation of my mother's "gap-toothed comb" on his scalp.`,
+                                    description: `With mouth partially open, my brother wears a blank expression, right up until he feels the sensation of my mother's gap-toothed "comb" on his scalp.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -814,7 +814,7 @@ export default {
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         }
@@ -898,7 +898,7 @@ export default {
                                         anchor: `Bluebonnets`,
                                         wiki: 'Bluebonnet_(plant)'
                                     },
-                                    `are another popular flower in our garden, and a blue bonnet is what my mother has tucked my brother's head in to protect him from the sun. But after Willy's murder, I have to wonder how protected my brother is against other things.`
+                                    `are another popular flower in our garden, and a "blue bonnet" is what my mother has tucked my brother's head in to protect him from the sun. But after Willy's murder, I have to wonder how protected my brother is against other things.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -951,7 +951,7 @@ export default {
                         {
                             anchor: `how marbleless,`,
                             card: {
-                                description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. This person might remark on how "marvelous" it must be to live without one's "marbles," for example. I always had to wonder how gladly they would embrace the greater likelihood of being a victim of crime as well.`,
+                                description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. This person might remark on how "marvelous" it must be to live without one's "marbles," for example. I always had to wonder how gladly they would embrace the greater likelihood of being a victim of violent crime as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true

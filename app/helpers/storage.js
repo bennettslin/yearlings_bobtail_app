@@ -161,7 +161,8 @@ export const getDotsBitFromStorage = (initialAnnotationIndex) => {
     let savedDotsBit = INITIAL_DOTS_BIT
 
     // If there is an initial annotation index, preemptively select all dots.
-    if (initialAnnotationIndex) {
+    // if (initialAnnotationIndex) {
+    if (initialAnnotationIndex === 'blah') {
         savedDotsBit = FULL_DOTS_BIT
 
     // Ensure stored dots bit number is valid.

@@ -198,7 +198,7 @@ export default {
                                             anchor: `Tourette syndrome`,
                                             wiki: `Tourette_syndrome`
                                         },
-                                        `who suffer from involuntary tics, Catherine and I might have said some things on impulse during the breakup. Also, Jesus was "laid to rest" on the day of his crucifixion.`
+                                        `who suffer from involuntary tics, Catherine and I might have said some things on impulse during the breakup. Also, Jesus was laid "to rest" on the day of his crucifixion.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -230,7 +230,7 @@ export default {
                         {
                             anchor: `sole assent…`,
                             card: {
-                                description: `Catherine wanted to break up; I didn't. But she was leaving me behind in another sense, given that hers was the only soul awaiting "ascent."`,
+                                description: `Catherine wanted to break up; I didn't. But she was leaving me behind in another sense, given that hers was the only "soul" awaiting "ascent."`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
@@ -687,7 +687,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `Since Catherine insisted on going no further than heavy petting, I would "fake the sex" for myself by masturbating afterward.`,
+                                    description: `Since Catherine insisted on going no further than heavy petting, I would fake "the sex" for myself by masturbating afterward.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true

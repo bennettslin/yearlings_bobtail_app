@@ -216,7 +216,7 @@ export default {
                             anchor: `prepped to shed…`,
                             card: {
                                 description: [
-                                    `Sasha is literally "prepped," in that she is preparing to begin enrollment at a`,
+                                    `Sasha is literally prepped, in that she is preparing to begin enrollment at a`,
                                     {
                                         anchor: `preparatory school`,
                                         wiki: `College-preparatory_school`
@@ -567,9 +567,9 @@ export default {
                                     `It's more common to say that boys will`,
                                     {
                                         isItalic: true,
-                                        lyric: `be`
+                                        lyric: `"be"`
                                     },
-                                    `boys, of course, but the one naturally follows the other. It always caught me by surprise when school aides would decline to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.`
+                                    `boys, of course, but the one naturally follows the other. It always surprised me when school aides declined to intervene on behalf of the victims of bullying, as if such predation was natural to the middle school ecosystem.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
