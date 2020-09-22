@@ -24,10 +24,10 @@ export default {
             }
         },
         {
-            // Always include src pages.
+            // Always include app pages.
             resolve: `gatsby-plugin-page-creator`,
             options: {
-                path: `${__dirname}/src/pages`
+                path: `${__dirname}/app/pages`
             }
         },
         ...getIsStagingEnvironment() ? [
