@@ -29,7 +29,7 @@ const _getAnnotationIndexForInterval = ({
     parseInt(getGlobalAnnotationCount() / count * intervalIndex)
 )
 
-export const getMetadataForNextGlobalAnnotation = ({
+export const getNextGlobalAnnotation = ({
     intervalIndex,
     count
 }) => {
@@ -62,7 +62,7 @@ export const getMetadataForNextGlobalAnnotation = ({
 
         // It's the last interval and there are no more annotations.
         if (!globalAnnotationMetadata) {
-            return null
+            return {}
         }
 
         // This is the annotation we want.
@@ -76,5 +76,5 @@ export const getMetadataForNextGlobalAnnotation = ({
         globalIndex += 1
     }
 
-    return null
+    return {}
 }

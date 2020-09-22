@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import cx from 'classnames'
 import AnnotationCards from './AnnotationCards'
 import {
-    getMetadataForNextGlobalAnnotation,
+    getNextGlobalAnnotation,
     getGlobalAnnotationCount,
     getGlobalAnnotationDoneCount
 } from '../../api/album/globalAnnotation'
@@ -32,7 +32,7 @@ const TempGlobalAnnotation = ({ intervalIndex }) => {
         annotationIndex,
         globalIndex
 
-    } = getMetadataForNextGlobalAnnotation({
+    } = getNextGlobalAnnotation({
         intervalIndex,
         count: INTERVALS_COUNT
     })

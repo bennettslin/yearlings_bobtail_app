@@ -30,7 +30,7 @@ Build and deploy delivery release. Reflects production.
 npm run release:delivery
 ```
 
-Build and deploy production release.
+Build and deploy production release. Note that production does not empty the S3 bucket prior to deployment because the previous files are still needed while CloudFront takes its time to propagate.
 
 ```
 npm run release:production

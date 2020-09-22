@@ -24,6 +24,22 @@ export default {
             }
         },
         {
+            // Always include src pages.
+            resolve: `gatsby-plugin-page-creator`,
+            options: {
+                path: `${__dirname}/src/pages`
+            }
+        },
+        ...getIsStagingEnvironment() ? [
+            {
+                // Only include admin pages in staging environment.
+                resolve: `gatsby-plugin-page-creator`,
+                options: {
+                    path: `${__dirname}/admin/pages`
+                }
+            }
+        ] : [],
+        {
             resolve: `gatsby-plugin-web-font-loader`,
             options: {
                 google: {
