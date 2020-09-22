@@ -1,5 +1,4 @@
 # TODO:
-* Fix script that empties AWS container.
 * Lyric is in front of carousel when wiki selected.
 * Lyric briefly in front of carousel when alternating between unit dots. Try just songwriting, and the two unit dot anchors in first verse in Good Night.
 * Playing doesn't work from one song to the next?

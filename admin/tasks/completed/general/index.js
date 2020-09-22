@@ -4906,5 +4906,9 @@ export default [
     {
         taskName: `Clean up blogs.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix cleaning and emptying before deployment.`,
+        workedHours: 2
     }
 ]
