@@ -181,7 +181,7 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `The Israelites, being of "the exempt," were spared the`,
+                                        `The Israelites, being of "the" exempt, were spared the`,
                                         {
                                             anchor: `plagues`,
                                             wiki: `Plagues_of_Egypt`
@@ -676,7 +676,7 @@ export default {
                                     description: [
                                         `Genghis Khan was able to unite the Mongols by defeating the`,
                                         {
-                                            anchor: `"Tatars,"`,
+                                            anchor: `Tatars,`,
                                             wiki: `Tatars`
                                         },
                                         `a rival tribe.`
@@ -918,7 +918,7 @@ export default {
                         },
                         `or`,
                         {
-                            anchor: `Sensegreat devas'dayshone?`,
+                            anchor: `Sensegreat deva's day shone?`,
                             properNoun: true,
                             card: {
                                 description: [
@@ -926,7 +926,7 @@ export default {
                                     {
                                         isItalic: true,
                                         lyric: {
-                                            anchor: `deva`,
+                                            anchor: `"deva"`,
                                             wiki: `Deva_(Hinduism)`
                                         }
                                     },
@@ -938,7 +938,7 @@ export default {
                                             wiki: `Daeva`
                                         }
                                     },
-                                    `in the Avesta refers to a demon. Thus, whether one "foresees a hero" or "senses great devastation" as the "deva's day shone" depends on which side of the schism one ended up on.`
+                                    `in the Avesta refers to a demon. Thus, whether one "foresees a hero" or "senses great devastation" depends on which side of the schism one ended up on.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1040,7 +1040,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Spent from the "Arabian battles" that ended with their`,
+                                        `Spent from the "Arabian" battles that ended with their`,
                                         {
                                             anchor: `conquest by the Arabs,`,
                                             wiki: `Muslim_conquest_of_Persia`
@@ -1289,7 +1289,7 @@ export default {
                             anchor: `past a cross Bearing Straight,`,
                             card: {
                                 description: [
-                                    `We venture "past a cross, bearing straight," just as those before us had "passed across the`,
+                                    `We venture past a cross, "bearing straight," just as those before us had "passed across the`,
                                     {
                                         anchor: `Bering Strait."`,
                                         wiki: `Bering_Strait`
@@ -1485,7 +1485,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `My mastodon lies sunk in a "tar pit," just as I've sunk too far in all my "torpid lies" to Sita explaining why I can't spend more nights with her.`,
+                                    description: `My mastodon lies sunk in a "tar pit," just as I've sunk too far in all my "torpid" lies to Sita explaining why I can't spend more nights with her.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -1519,7 +1519,7 @@ export default {
                                     description: [
                                         `The`,
                                         {
-                                            anchor: `Holocene`,
+                                            anchor: `"Holocene"`,
                                             wiki: `Holocene`
                                         },
                                         `is the current geological epoch, which began with the first human settlements.`
@@ -1750,14 +1750,14 @@ export default {
                                             anchor: `Geomagnetic reversal`,
                                             wiki: `Geomagnetic_reversal`
                                         },
-                                        `occurs when the Earth's magnetic poles are interchanged. Such "polar switches" may cause large-scale geological disturbances, according to some hypotheses.`
+                                        `occurs when the Earth's magnetic poles are interchanged. Such "polar" switches may cause large-scale geological disturbances, according to some hypotheses.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true
                                     }
                                 },
                                 {
-                                    description: `Back at Howie's place, I'm crashed on a couch in his attic. There is an old black-and-white television in front of me, and I "pull the switch" to turn it on.`,
+                                    description: `Back at Howie's place, I'm crashed on a couch in his attic. There is an old black-and-white television in front of me, and I "pull the" switch to turn it on.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -1837,7 +1837,7 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        anchor: `Arrhythmia,`,
+                                        anchor: `"Arrhythmia",`,
                                         wiki: `Cardiac_arrhythmia`
                                     },
                                     `or an irregular heartbeat, is one downside of taking Robitussin. As its psychedelic effects wear off, I grow paranoid and perform "arithmetic" in my head, hoping that my pulse becomes more stable with each passing minute.`
@@ -1896,7 +1896,7 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        anchor: `Rumspringa`,
+                                        anchor: `"Rumspringa"`,
                                         wiki: `Rumspringa`
                                     },
                                     `is a period of adolescence during which`,
@@ -1909,7 +1909,7 @@ export default {
                                         anchor: `Pennsylvania Dutch,`,
                                         wiki: `Pennsylvania_Dutch`
                                     },
-                                    `I liked the image of a natural spring of rum. In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
+                                    `I liked the image of an actual "rum spring." In any case, the spring of our youth, in both the literal and metaphorical sense, is running dry.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -1954,7 +1954,7 @@ export default {
                                             anchor: `marked in red.`,
                                             wiki: `Red_letter_day`
                                         },
-                                        `By contrast, the "black-letter day sensed ahead" will be just another ordinary day.`
+                                        `By contrast, the "black-letter day sensed" ahead will be just another ordinary day.`
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,

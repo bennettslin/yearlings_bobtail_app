@@ -7,7 +7,6 @@
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Make sure backstory and narrative tenses are correct.
-* Pun quotations are correct.
 * Reassess what is a wiki anchor.
 * Make sure no wikis repeat.
 * When to use italics and quotes for foreign words.

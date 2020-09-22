@@ -596,13 +596,15 @@ export default {
                                             wiki: `Tanker_(ship)`
                                         },
                                         `is a marine vessel that transports crude oil. It can also be slang for a drinking spree.`
-                                    ]
+                                    ],
+                                    dotKeys: {
+                                        [PUN]: true
+                                    }
                                 },
                                 {
                                     description: `As part of my plan to start afresh with someone new, I wanted to stay sober for a while, but that was unlikely to happen unless my drinking brought me to the point of sickness. I also needed plenty of alcohol to muster the courage to break up with Sita. And so I drank to oblivion each night, hoping to provide the necessary conditions for both purposes.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true,
-                                        [PUN]: true
+                                        [BACKSTORY]: true
                                     }
                                 }
                             ]

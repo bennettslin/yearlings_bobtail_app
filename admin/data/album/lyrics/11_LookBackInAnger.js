@@ -444,7 +444,7 @@ export default {
                             anchor: `maraschino red,`,
                             card: {
                                 description: [
-                                    `Having sworn to be alert and ready when the next Mara shows up in my life, I notice the latecomer's hair color matches "Mara's sheen of red," which is the brightness of`,
+                                    `Having sworn to be alert and ready when the next Mara shows up in my life, I notice the latecomer's hair color matches "Mara's sheen of" red, which is the brightness of`,
                                     {
                                         anchor: `maraschino cherries.`,
                                         wiki: `Maraschino_cherry`
@@ -787,7 +787,7 @@ export default {
                                         anchor: `last call.`,
                                         wiki: `Last_call_(bar_term)`
                                     },
-                                    `It's also much too late for me to present myself as someone who isn't in a sexual relationship with his best friend. I can't just "unscrew a bud" at will.`
+                                    `It's also much too late for me to present myself as someone who isn't in a sexual relationship with his best friend. I can't just unscrew a "bud" at will.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,

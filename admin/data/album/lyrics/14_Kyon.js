@@ -367,7 +367,7 @@ export default {
                             anchor: `keeper of his sheep herd.`,
                             card: {
                                 description: [
-                                    `A "keeper" in the sense of being the one who tends to the herd, as well as the only one to keep from`,
+                                    `A keeper in the sense of being the one who tends to the herd, as well as the only one to keep from`,
                                     {
                                         isEmphasis: true,
                                         lyric: `among`

@@ -767,7 +767,7 @@ export default {
                                         anchor: `Richard Dawkins`,
                                         wiki: `Richard_Dawkins`
                                     },
-                                    `explains natural selection from the vantage point of genes themselves, rather than the individual beings who carry them. So as Miriam blocks me from getting under her cutoffs ever again, I imagine it's because her genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine.`
+                                    `explains natural selection from the vantage point of genes themselves, rather than the individual beings who carry them. So as Miriam blocks me from getting under her cutoffs ever again, I imagine it's because her "genes," wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -972,7 +972,7 @@ export default {
                         {
                             anchor: `Redressed,`,
                             card: {
-                                description: `As I get "redressed" by putting my clothes back on, I'm about to learn what Miriam had planned all along. Our latest sexual escapade was only meant to serve as redress for the bad news that she has forthcoming.`,
+                                description: `As I get redressed by putting my clothes back on, I'm about to learn what Miriam had planned all along. Our latest sexual escapade was only meant to serve as redress for the bad news that she has forthcoming.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -989,7 +989,7 @@ export default {
                         {
                             anchor: `pulls the plug.`,
                             card: {
-                                description: `The cigarette lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she is now less troubled to "pull the plug" on our relationship.`,
+                                description: `The cigarette lighter plug pops out, and Miriam pulls it from the dashboard socket to light her cigarette. Having satisfied me with an orgasmic "pop," she is now less troubled to pull the plug on our relationship.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -1039,7 +1039,7 @@ export default {
                         {
                             anchor: `preparing the scoop,`,
                             card: {
-                                description: `Miriam searches for a way to deliver the bad news in the least messy way possible. It's as if she stands ready with "scoop" in hand, in case her pet loses control and takes a "dump" on her freshly manicured lawn.`,
+                                description: `Miriam searches for a way to deliver the bad news in the least messy way possible. It's as if she stands ready with scoop in hand, in case her pet loses control and takes a dump on her freshly manicured lawn.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
@@ -1054,7 +1054,7 @@ export default {
                         {
                             anchor: `second hump.`,
                             card: {
-                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. So in trading away Sita's love for the ego boost I gained from "humping" other women, I was like a senseless camel who forwent a lifetime of satisfying meals just to wear a flashy new adornment on his back.`,
+                                description: `A camel stores fat in its hump, allowing it to travel for days without eating. So in trading away Sita's love for the ego boost I gained from humping other women, I was like a senseless camel who forwent a lifetime of satisfying meals just to wear a flashy new adornment on his back.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true,

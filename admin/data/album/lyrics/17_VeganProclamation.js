@@ -185,7 +185,7 @@ export default {
                                         anchor: `Eve`,
                                         wiki: `Eve`
                                     },
-                                    `by taking one of Adam's ribs. By contrast, my own promise to make sacrifices for Sita proved to be a "false rib." And so she could never be truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
+                                    `by taking one of Adam's ribs. By contrast, my own promise to make sacrifices for Sita proved to be a false rib. And so she could never be truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

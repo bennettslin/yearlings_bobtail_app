@@ -4910,5 +4910,9 @@ export default [
     {
         taskName: `Fix cleaning and emptying before deployment.`,
         workedHours: 2
+    },
+    {
+        taskName: `Editing. Include overviews.`,
+        workedHours: 325
     }
 ]

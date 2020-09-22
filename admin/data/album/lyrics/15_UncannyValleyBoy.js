@@ -51,7 +51,7 @@ export default {
                                 anchor: `uncanny valley`,
                                 wiki: `Uncanny_valley`
                             },
-                            `is a theory that human replicas only repulse us further as they grow more lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this "Valley boy" now elicited a similar revulsion from others.`
+                            `is a theory that human replicas only repulse us further as they grow more lifelike, insofar as they remain less than convincingly so. And as I grew older while remaining less than convincing as a grownup, I had to wonder if this Valley boy now elicited a similar revulsion from others.`
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -181,7 +181,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `In their claim to be "stumped," my parents feign to be oblivious to the outcome of my story.`,
+                                    description: `In their claim to be stumped, my parents feign to be oblivious to the outcome of my story.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -273,7 +273,7 @@ export default {
                                 description: [
                                     `My parents lament that the opportunism born from my ego has made me a future`,
                                     {
-                                        anchor: `"soldier of fortune,"`,
+                                        anchor: `"soldier of" fortune,`,
                                         wiki: `Mercenary`
                                     },
                                     `as I squander everything good that I have now with Sita to chase unsavory and foolhardy pursuits.`
@@ -779,7 +779,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `My parents might actually be calling me a "drama king," a subtle dig to imply that everything I do is an act.`,
+                                    description: `My parents might actually be calling me a "drama" king, a subtle dig to imply that everything I do is an act.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -876,7 +876,7 @@ export default {
                         {
                             anchor: `two were tied?`,
                             card: {
-                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also "tied" in a competitive sense. In terms of who could look back on the most romantic partners, I didn't hold the lead, and this felt like a threat.`,
+                                description: `While Sita had hoped for us to be tied in a matrimonial sense, I chafed that we were also tied in a competitive sense. In terms of who could look back on the most romantic partners, I didn't hold the lead, and this felt like a threat.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
@@ -900,7 +900,7 @@ export default {
                             // NOTE: I changed "duel" to "dual" here.
                             anchor: `dual match,`,
                             card: {
-                                description: `To onlookers, Sita and I may have seemed like two people who were the ideal fit for each other. But to me, our relationship had become a zero-sum "duel match" that only one of us could win.`,
+                                description: `To onlookers, Sita and I may have seemed like two people who were the ideal fit for each other. But to me, our relationship had become a zero-sum "duel" match that only one of us could win.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true
