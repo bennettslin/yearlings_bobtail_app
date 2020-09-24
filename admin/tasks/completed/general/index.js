@@ -4914,5 +4914,9 @@ export default [
     {
         taskName: `Editing. Include overviews.`,
         workedHours: 325
+    },
+    {
+        taskName: `Wormhole selection bug fix.`,
+        workedHours: 3
     }
 ]

@@ -1,6 +1,10 @@
 # TODO:
 * Playing doesn't work from one song to the next?
 * Selecting wormhole doesn't scroll to annotation in carousel.
+    * Happens when not all dots are selected.
+    * Check if transitions of hiding annotation cards is happening between songs.
+    * Scroll later in the song change?
+    * It's fine when coming from page load.
 * Follow up to bug fix: Make verse cursor go to 0 during song transitions.
 
 # Annotation edit TODO:
