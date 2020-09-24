@@ -1,6 +1,7 @@
 # TODO:
 * Playing doesn't work from one song to the next?
 * Selecting wormhole doesn't scroll to annotation in carousel.
+* Follow up to bug fix: Make verse cursor go to 0 during song transitions.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
