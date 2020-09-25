@@ -31,3 +31,5 @@
     * timeout after final song selection sets to true
 * isSongChangeDone
     * didCurtainsClose, didStageReset, and isSongChangeDone in entrance reducer sets to true
+* lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex
+    * isSongChangeDone sets to selected indices
