@@ -8,7 +8,7 @@ import { mapSelectedSongIndex } from '../selected/selector'
 import { mapBannerHoverTime } from '../banner/selector'
 import {
     mapSceneCursorIndex,
-    mapVerseCursorIndex,
+    getMapVerseCursorIndex,
     mapCursorTime
 } from '../cursor/selector'
 import { mapIsPlaying } from '../audio/selector'
@@ -59,7 +59,7 @@ export const getMapVerseTrackerLength = ({
     verseIndex,
     playerTime
 }) => createSelector(
-    mapVerseCursorIndex,
+    getMapVerseCursorIndex(),
     mapSelectedSongIndex,
     mapCursorTime,
     mapIsPlaying,

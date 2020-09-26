@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-    updateEntranceStore,
-    resetSongChange
-} from '../../redux/entrance/action'
+import { updateEntranceStore } from '../../redux/entrance/action'
 import { updateLyricStore } from '../../redux/lyric/action'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { scrollLyricForSongSelect } from '../../redux/scrollLyric/action'
@@ -47,10 +44,6 @@ const SongChangeManager = () => {
                 })), 200)
             )
 
-            // Song changed, so begin transition if not already in place.
-            if (isSongChangeDone) {
-                dispatch(resetSongChange())
-            }
         } else {
             setDidMount(true)
         }

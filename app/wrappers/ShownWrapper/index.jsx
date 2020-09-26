@@ -51,6 +51,8 @@ const ShownWrapper = ({ didMount, children }) => {
                     className: cx(
                         'ShownWrapper',
 
+                        isSongChangeDone && 'ShW__songChangeDone',
+
                         lyricAnnotationIndex ?
                             'ShW__annotationShown' :
                             'ShW__annotationHidden',

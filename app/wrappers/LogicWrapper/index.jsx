@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../components/DidMountHoc'
 import {
     mapSceneCursorIndex,
-    mapVerseCursorIndex
+    getMapVerseCursorIndex
 } from '../../redux/cursor/selector'
 import {
     getPrefixedSceneClassNames,
@@ -15,7 +15,7 @@ import {
 const LogicWrapper = ({ didMount, children }) => {
     const
         sceneCursorIndex = useSelector(mapSceneCursorIndex),
-        verseCursorIndex = useSelector(mapVerseCursorIndex)
+        verseCursorIndex = useSelector(getMapVerseCursorIndex())
 
     return (
         <div

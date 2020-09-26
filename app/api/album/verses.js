@@ -32,6 +32,11 @@ export const getVerseCountForSong = songIndex => (
 )
 
 export const getSceneIndexForVerse = (songIndex, verseIndex) => {
+    // During song change, verse cursor index is -1.
+    if (verseIndex === -1) {
+        return -1
+    }
+
     const { verseSceneIndices } = getSong(songIndex)
     return verseSceneIndices ? verseSceneIndices[verseIndex] : 0
 }

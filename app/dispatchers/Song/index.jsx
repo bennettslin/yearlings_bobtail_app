@@ -7,6 +7,7 @@ import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateAudioStore } from '../../redux/audio/action'
+import { resetSongChange } from '../../redux/entrance/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import {
     updateEarColumnIndex,
@@ -14,11 +15,13 @@ import {
 } from '../../redux/session/action'
 import { updateIsNavShown } from '../../redux/toggle/action'
 import { getSongsAndLoguesCount } from '../../api/album/songs'
+import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 
 const SongDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
+        isSongChangeDone = useSelector(mapIsSongChangeDone),
         selectedSongIndex = useSelector(mapSelectedSongIndex)
 
     const dispatchSong = ({
@@ -42,6 +45,18 @@ const SongDispatcher = forwardRef((props, ref) => {
             ) {
                 return false
             }
+        }
+
+        /**
+         * Song changed, so begin transition if not already in place. Doing
+         * this immediately, rather than waiting another lifecycle, for UI
+         * purposes.
+         */
+        if (
+            isSongChangeDone &&
+            nextSongIndex !== selectedSongIndex
+        ) {
+            dispatch(resetSongChange())
         }
 
         dispatch(updateAudioStore({

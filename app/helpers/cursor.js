@@ -1,11 +1,14 @@
 import { getStartTimeForVerse } from '../api/album/time'
 
 export const getCursorIndex = (
+    isSongChangeDone,
     sliderIndex,
     activatedIndex,
     defaultIndex
 ) => {
-    if (sliderIndex >= 0) {
+    if (!isSongChangeDone) {
+        return -1
+    } else if (sliderIndex >= 0) {
         return sliderIndex
     } else if (activatedIndex >= 0) {
         return activatedIndex

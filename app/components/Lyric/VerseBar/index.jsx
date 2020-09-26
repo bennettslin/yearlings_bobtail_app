@@ -7,7 +7,7 @@ import getDidMountHoc from '../../DidMountHoc'
 import Verse from '../../Verse'
 import { getVerse } from '../../../api/album/verses'
 import { updateIsAutoScroll } from '../../../redux/toggle/action'
-import { mapVerseCursorIndex } from '../../../redux/cursor/selector'
+import { getMapVerseCursorIndex } from '../../../redux/cursor/selector'
 import {
     mapLyricSongIndex,
     mapIsLyricLogue
@@ -18,7 +18,7 @@ import './style'
 const VerseBar = () => {
     const
         lyricSongIndex = useSelector(mapLyricSongIndex),
-        verseCursorIndex = useSelector(mapVerseCursorIndex)
+        verseCursorIndex = useSelector(getMapVerseCursorIndex(true))
 
     return (
         <Verse
