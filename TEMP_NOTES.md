@@ -6,7 +6,6 @@
     * Scroll later in the song change? After carousel did enter?
     * It's fine when coming from page load.
 * Make stanza cursor also -1 during song change, just to be consistent?
-* Have a logDebug
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

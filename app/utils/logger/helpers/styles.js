@@ -46,7 +46,7 @@ const LOG_STYLES = {
     },
     [ADMIN]: {
         color: '#2b8',
-        fontSize: '1.2em'
+        fontSize: '2em'
     },
     [ANALYTICS]: {
         color: '#888',

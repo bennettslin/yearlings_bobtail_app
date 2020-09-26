@@ -29,7 +29,6 @@ module.exports = {
         "ga": true,
         "logAccess": true,
         "logAdmin": true,
-        "logAnalytics": true,
         "logEvent": true,
         "logFocus": true,
         "logMount": true,
@@ -37,7 +36,6 @@ module.exports = {
         "logPlayer": true,
         "logScroll": true,
         "logSelect": true,
-        "logSuccess": true,
         "logTransition": true,
         "logError": true,
         "process": true
