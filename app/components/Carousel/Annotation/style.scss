@@ -29,6 +29,7 @@
     }
 
     .DW__userAgentDesktop
+    .ShW__canAnnotationsTransition
     & {
         transition:
             min-width $transitionDuration__default,

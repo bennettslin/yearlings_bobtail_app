@@ -1,11 +1,7 @@
 # TODO:
 * Playing doesn't work from one song to the next?
-* Selecting wormhole doesn't scroll to annotation in carousel.
-    * Happens when not all dots are selected.
-    * Check if transitions of hiding annotation cards is happening between songs.
-    * Scroll later in the song change? After carousel did enter?
-    * It's fine when coming from page load.
 * Make stanza cursor also -1 during song change, just to be consistent?
+* Somehow the wormhole fix doesn't work for Vegan going to Odin in chivalry.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

@@ -8,6 +8,7 @@ import PageSongIndexContext from '../../contexts/PageSongIndex'
 import getDidMountHoc from '../DidMountHoc'
 import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
+import { updateEntranceStore } from '../../redux/entrance/action'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { getFinalSideKey } from '../../utils/server'
@@ -24,6 +25,9 @@ const Carousel = ({ didMount, pageSongIndex }) => {
 
     const onEntered = () => {
         logTransition('Carousel did enter.')
+        dispatch(updateEntranceStore({
+            canAnnotationsTransition: true
+        }))
     }
 
     useEffect(() => {

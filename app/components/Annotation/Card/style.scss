@@ -26,6 +26,7 @@
 .AnnotationCardContainer__animated {
 
     .DW__userAgentDesktop
+    .ShW__canAnnotationsTransition
     & {
         transition:
             max-height $transitionDuration__default,

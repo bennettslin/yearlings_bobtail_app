@@ -9,7 +9,10 @@ import {
     mapReferenceDot,
     mapWormholeDot
 } from '../../redux/dots/selector'
-import { mapIsSongChangeDone } from '../../redux/entrance/selector'
+import {
+    mapIsSongChangeDone,
+    mapCanAnnotationsTransition
+} from '../../redux/entrance/selector'
 import {
     mapIsLyricLogue,
     mapLyricSongIndex,
@@ -30,6 +33,7 @@ const ShownWrapper = ({ didMount, children }) => {
         reference = useSelector(mapReferenceDot),
         wormhole = useSelector(mapWormholeDot),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
+        canAnnotationsTransition = useSelector(mapCanAnnotationsTransition),
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
@@ -52,6 +56,9 @@ const ShownWrapper = ({ didMount, children }) => {
                         'ShownWrapper',
 
                         isSongChangeDone && 'ShW__songChangeDone',
+
+                        canAnnotationsTransition &&
+                            'ShW__canAnnotationsTransition',
 
                         lyricAnnotationIndex ?
                             'ShW__annotationShown' :
