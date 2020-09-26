@@ -96,14 +96,6 @@ export const getSafeScrollChild = ({
     return getDocument().getElementsByClassName(selector)[0]
 }
 
-export const getCanCarouselScroll = ({
-    isCarouselShown,
-    isLyricLogue
-}) => (
-    !isLyricLogue &&
-    isCarouselShown
-)
-
 export const getCanLyricScroll = ({
     isPlaying,
     isLyricLogue,

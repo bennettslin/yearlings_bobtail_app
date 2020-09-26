@@ -1,8 +1,7 @@
 import { createSelector } from 'reselect'
 import {
     getAlignForScroll,
-    getCanLyricScroll,
-    getCanCarouselScroll
+    getCanLyricScroll
 } from '../../helpers/scroll'
 import { mapIsPlaying } from '../audio/selector'
 import {
@@ -49,10 +48,10 @@ export const mapCanCarouselScroll = createSelector(
     (
         isCarouselShown,
         isLyricLogue
-    ) => getCanCarouselScroll({
-        isCarouselShown,
-        isLyricLogue
-    })
+    ) => (
+        !isLyricLogue &&
+        isCarouselShown
+    )
 )
 
 export const mapCanLyricScroll = createSelector(
