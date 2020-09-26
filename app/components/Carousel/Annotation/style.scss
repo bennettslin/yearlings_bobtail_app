@@ -29,7 +29,7 @@
     }
 
     .DW__userAgentDesktop
-    .ShW__canAnnotationsTransition
+    .ShW__canTransitionAfterSongChange
     & {
         transition:
             min-width $transitionDuration__default,

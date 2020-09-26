@@ -3,7 +3,7 @@ export const getSongChangeDefaults = done => ({
     didStageReset: done,
     isSongSelectComplete: done,
     isSongChangeDone: done,
-    canAnnotationsTransition: done
+    canTransitionAfterSongChange: done
 })
 
 export const getSceneChangeDefaults = done => ({

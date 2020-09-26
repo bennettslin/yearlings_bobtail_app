@@ -33,6 +33,7 @@
     * didCurtainsClose, didStageReset, and isSongChangeDone in entrance reducer sets to true
 * lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex
     * isSongChangeDone sets to selected indices
-* canAnnotationsTransition
-    * This prevents annotation card transitions from messing up scroll to carousel annotation when selecting song from wormhole.
+* canTransitionAfterSongChange
+    * This prevents annotation card transitions from messing up scroll to carousel annotation when selecting song from wormhole while some dot keys are deselected.
+    * This is also used to hide other UI transitions in the banner and slider.
     * isSongChangeDone allows Carousel to enter, Carousel onEntered sets to true

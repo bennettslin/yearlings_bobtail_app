@@ -26,7 +26,7 @@ const Carousel = ({ didMount, pageSongIndex }) => {
     const onEntered = () => {
         logTransition('Carousel did enter.')
         dispatch(updateEntranceStore({
-            canAnnotationsTransition: true
+            canTransitionAfterSongChange: true
         }))
     }
 

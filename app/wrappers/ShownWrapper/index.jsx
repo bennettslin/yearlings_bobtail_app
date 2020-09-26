@@ -11,7 +11,7 @@ import {
 } from '../../redux/dots/selector'
 import {
     mapIsSongChangeDone,
-    mapCanAnnotationsTransition
+    mapCanTransitionAfterSongChange
 } from '../../redux/entrance/selector'
 import {
     mapIsLyricLogue,
@@ -33,7 +33,8 @@ const ShownWrapper = ({ didMount, children }) => {
         reference = useSelector(mapReferenceDot),
         wormhole = useSelector(mapWormholeDot),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
-        canAnnotationsTransition = useSelector(mapCanAnnotationsTransition),
+        canTransitionAfterSongChange =
+            useSelector(mapCanTransitionAfterSongChange),
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
@@ -55,10 +56,8 @@ const ShownWrapper = ({ didMount, children }) => {
                     className: cx(
                         'ShownWrapper',
 
-                        isSongChangeDone && 'ShW__songChangeDone',
-
-                        canAnnotationsTransition &&
-                            'ShW__canAnnotationsTransition',
+                        canTransitionAfterSongChange &&
+                            'ShW__canTransitionAfterSongChange',
 
                         lyricAnnotationIndex ?
                             'ShW__annotationShown' :
@@ -68,7 +67,6 @@ const ShownWrapper = ({ didMount, children }) => {
                             'ShW__songOverviewShown' :
                             'ShW__songOverviewHidden',
 
-                        // TODO: Make this a selector.
                         // Don't show these class names between songs.
                         isSongChangeDone && isTipsShown && [
                             'ShW__tipsShown',

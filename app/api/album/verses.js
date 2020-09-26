@@ -42,6 +42,11 @@ export const getSceneIndexForVerse = (songIndex, verseIndex) => {
 }
 
 export const getStanzaIndexForVerse = (songIndex, verseIndex) => {
+    // During song change, verse cursor index is -1.
+    if (verseIndex === -1) {
+        return -1
+    }
+
     const { verseStanzaIndices = [] } = getSong(songIndex)
     return verseStanzaIndices[verseIndex]
 }

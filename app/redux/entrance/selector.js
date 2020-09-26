@@ -20,9 +20,9 @@ export const mapIsSongChangeDone = (
     { [ENTRANCE_STORE]: { isSongChangeDone } }
 ) => isSongChangeDone
 
-export const mapCanAnnotationsTransition = (
-    { [ENTRANCE_STORE]: { canAnnotationsTransition } }
-) => canAnnotationsTransition
+export const mapCanTransitionAfterSongChange = (
+    { [ENTRANCE_STORE]: { canTransitionAfterSongChange } }
+) => canTransitionAfterSongChange
 
 export const mapIsSceneChangeDone = (
     { [ENTRANCE_STORE]: { isSceneChangeDone } }

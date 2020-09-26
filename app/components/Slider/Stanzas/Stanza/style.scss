@@ -17,6 +17,7 @@ $width__sliderStanzaTab: 9px;
     height: $LENGTH_ICON;
 
     .DW__userAgentDesktop
+    .ShW__canTransitionAfterSongChange
     & {
         transition: height $transitionDuration__default;
     }
