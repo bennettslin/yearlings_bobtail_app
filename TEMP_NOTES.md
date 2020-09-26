@@ -1,6 +1,5 @@
 # TODO:
 * Playing doesn't work from one song to the next?
-* Make stanza cursor also -1 during song change, just to be consistent?
 * Somehow the wormhole fix doesn't work for Vegan going to Odin in chivalry.
 
 # Annotation edit TODO:

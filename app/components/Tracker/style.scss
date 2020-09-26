@@ -21,6 +21,8 @@
 }
 
 .Tracker__visible {
+    // Not sure why disabling transition during song change isn't good enough.
+    .ShW__canTransitionAfterSongChange
     .TW__lyricsUnlocked
     & {
         opacity: 1;

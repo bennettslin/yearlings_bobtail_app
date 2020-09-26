@@ -12,7 +12,7 @@ import {
 import { mapActivatedVerseIndex } from '../activated/selector'
 import { mapIsPlaying } from '../audio/selector'
 import { mapBannerHoverTime } from '../banner/selector'
-import { mapIsSongChangeDone } from '../entrance/selector'
+import { mapCanTransitionAfterSongChange } from '../entrance/selector'
 import {
     mapLyricSongIndex,
     mapLyricVerseIndex
@@ -21,18 +21,18 @@ import { mapSliderVerseIndex } from '../slider/selector'
 import { mapIsEitherVerseBarShown } from '../verseBars/selector'
 
 export const getMapVerseCursorIndex = inVerseBar => createSelector(
-    mapIsSongChangeDone,
+    mapCanTransitionAfterSongChange,
     mapSliderVerseIndex,
     mapActivatedVerseIndex,
     mapLyricVerseIndex,
     (
-        isSongChangeDone,
+        canTransitionAfterSongChange,
         sliderVerseIndex,
         activatedVerseIndex,
         lyricVerseIndex
     ) => getCursorIndex(
         // Verse bar always shows indexed verse even if song is changing.
-        inVerseBar || isSongChangeDone,
+        inVerseBar || canTransitionAfterSongChange,
         sliderVerseIndex,
         activatedVerseIndex,
         lyricVerseIndex
@@ -71,12 +71,10 @@ export const mapSceneCursorIndex = createSelector(
 )
 
 export const getMapIsSceneCursor = sceneIndex => createSelector(
-    mapIsSongChangeDone,
     mapSceneCursorIndex,
     (
-        isSongChangeDone,
         sceneCursorIndex
-    ) => isSongChangeDone && sceneIndex === sceneCursorIndex
+    ) => sceneIndex === sceneCursorIndex
 )
 
 export const getMapIsStanzaCursor = stanzaIndex => createSelector(
@@ -106,14 +104,17 @@ export const mapCursorTime = createSelector(
 )
 
 export const getMapSongCursorTime = playerTime => createSelector(
+    mapCanTransitionAfterSongChange,
     mapBannerHoverTime,
     mapCursorTime,
     mapIsPlaying,
     (
+        canTransitionAfterSongChange,
         bannerHoverTime,
         cursorTime,
         isPlaying
     ) => getSongCursorTime({
+        canTransitionAfterSongChange,
         bannerHoverTime,
         cursorTime,
         playerTime,
