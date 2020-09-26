@@ -8,6 +8,7 @@
     background-color: $colour__neutral__light;
 
     .DW__userAgentDesktop
+    .ShW__songChangeDone
     & {
         transition:
             top $transitionDuration__fast,
@@ -52,7 +53,7 @@
     .TW__verseActive
     .Verse__cursor
     &.VerseColour__notVerseBar {
-        box-shadow: $boxShadow__activeVerse;   
+        box-shadow: $boxShadow__activeVerse;
     }
 
     .TW__verseInactive

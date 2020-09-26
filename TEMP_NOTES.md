@@ -5,11 +5,7 @@
     * Check if transitions of hiding annotation cards is happening between songs.
     * Scroll later in the song change? After carousel did enter?
     * It's fine when coming from page load.
-* Follow up to bug fix
-    * Hide cursor UI completely during song change (isSongChangeDone)
-        * Banner, filmstrip, and slider
-    * VerseBar continues to show lyric verse
-    * Decide whether cursor goes to zero during song change. If it does, then there needs to be another parameter for the VerseBar to let it stay on the lyric verse
+* Make stanza cursor also -1 during song change, just to be consistent?
 * Have a logDebug
 
 # Annotation edit TODO:

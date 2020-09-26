@@ -4918,5 +4918,9 @@ export default [
     {
         taskName: `Wormhole selection bug fix.`,
         workedHours: 3
+    },
+    {
+        taskName: `Song change hides verse and scene cursor.`,
+        workedHours: 3
     }
 ]
