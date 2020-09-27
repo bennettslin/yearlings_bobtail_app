@@ -1,5 +1,4 @@
 # TODO:
-* Preemptively add dots only when selected annotation index cannot be selected from present dots.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

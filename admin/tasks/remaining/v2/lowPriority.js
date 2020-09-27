@@ -9,12 +9,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled. (May be irrelevant once moved to Gatsby.)`,
-        resource: `https://www.npmjs.com/package/webpack-pwa-manifest`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `If lyric expandable, always have either expanded lyric or heightless lyric in low processor. Include rotate screen icon in place of lyric expand button. Wait until after dynamic asset loading, to see if still needed. (Maybe not needed.)`,
         workedHours: 0,
         neededHours: 5
@@ -50,16 +44,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Look into s3 versioning.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Make Mara waiting the loading indicator for iframe. Have iframe component.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Put mapWormholeLinkForDispatch in own dispatch called dispatchWormhole.`,
         workedHours: 0,
         neededHours: 1
@@ -86,6 +70,11 @@ export default [
     },
     {
         taskName: `Tips hand in Garryowen for score.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Preemptively add dots only when selected annotation index cannot be selected from present dots.`,
         workedHours: 0,
         neededHours: 3
     }
