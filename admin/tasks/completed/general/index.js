@@ -4922,5 +4922,9 @@ export default [
     {
         taskName: `Song change hides verse and scene cursor.`,
         workedHours: 3
+    },
+    {
+        taskName: `Wormhole carousel scroll, playing next song, and nav button hover fixes.`,
+        workedHours: 8
     }
 ]

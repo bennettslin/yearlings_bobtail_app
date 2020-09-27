@@ -1,4 +1,5 @@
 @import '../../scss/constants/icon';
+@import '../../scss/constants/shadow';
 @import '../../scss/constants/transition';
 
 .Button {
@@ -86,5 +87,12 @@
     .Button__enabled:active
     & {
         transform: scale(0.9);
+    }
+}
+
+.ButtonAnimatable__hoverOnParent {
+    .Button:hover
+    & {
+        filter: $dropShadow__lightHover;
     }
 }

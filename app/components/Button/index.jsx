@@ -28,6 +28,7 @@ const Button = ({
     isPopupButton,
     isAccessed,
     isBrightHover,
+    hoverOnParent,
     buttonIdentifier,
     accessKey,
     handleButtonClick,
@@ -103,21 +104,27 @@ const Button = ({
             }}
         >
             {inanimateChild}
-            <div className={cx(
-                'ButtonAnimatable',
+            <div
+                {...{
+                    className: cx(
+                        'ButtonAnimatable',
+                        'dropShadow',
 
-                'dropShadow',
+                        !hoverOnParent && !isDisabled && (
+                            isBrightHover ?
+                                'dropShadow__brightHover' :
+                                'dropShadow__lightHover'
+                        ),
 
-                !isDisabled && (
-                    isBrightHover ?
-                        'dropShadow__brightHover' :
-                        'dropShadow__lightHover'
-                ),
+                        hoverOnParent && !isClickDisabled &&
+                            'ButtonAnimatable__hoverOnParent',
 
-                isAccessEnter && showIfAccessOn && 'dropShadow__accessed',
-                isPopupButton && 'ButtonAnimatable__popup',
-                'abF'
-            )}>
+                        isAccessEnter && showIfAccessOn && 'dropShadow__accessed',
+                        isPopupButton && 'ButtonAnimatable__popup',
+                        'abF'
+                    )
+                }}
+            >
                 {getShowButtonIcon(buttonName) && (
                     <ButtonIcon
                         {...{
@@ -156,10 +163,11 @@ Button.propTypes = {
     isSmallSize: PropTypes.bool,
     isLargeSize: PropTypes.bool,
     isDisabled: PropTypes.bool,
-    isClickDisabled: PropTypes.bool, // Passed by nav button.
+    isClickDisabled: PropTypes.bool, // Only passed by nav button.
     isPopupButton: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isBrightHover: PropTypes.bool,
+    hoverOnParent: PropTypes.bool, // Only passed by nav button.
     buttonIdentifier: PropTypes.any,
     accessKey: PropTypes.string,
     handleButtonClick: PropTypes.func.isRequired,

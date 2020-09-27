@@ -70,6 +70,7 @@ const NavButton = ({
             )}
         >
             <Button
+                hoverOnParent
                 {...{
                     buttonName: isBook ?
                         NAV_BOOK_BUTTON_KEY :

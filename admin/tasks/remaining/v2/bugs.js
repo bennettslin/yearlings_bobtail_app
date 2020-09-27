@@ -18,5 +18,10 @@ export default [
         taskName: `Small presences are positioned weird on mobile screens.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Selecting chivalry wormhole from Vegan to Odin doesn't centre scroll annotation. Seems to be the only one?`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

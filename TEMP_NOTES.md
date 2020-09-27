@@ -1,7 +1,4 @@
 # TODO:
-* Somehow the wormhole fix doesn't work for Vegan going to Odin in chivalry.
-* Selected nav snowglobe shouldn't hover.
-* Snowglobe should highlight if song title is hovered.
 * Preemptively add dots only when selected annotation index cannot be selected from present dots.
 
 # Annotation edit TODO:
