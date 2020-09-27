@@ -16,35 +16,30 @@ export const mapQueuedTogglePlay = (
     { [AUDIO_STORE]: { queuedTogglePlay } }
 ) => queuedTogglePlay
 
-export const mapQueuedPromisePlay = (
-    { [AUDIO_STORE]: { queuedPromisePlay } }
-) => queuedPromisePlay
+export const mapQueuedSongIndex = (
+    { [AUDIO_STORE]: { queuedSongIndex } }
+) => queuedSongIndex
 
-const mapCanPlayAfterSongTransition = createSelector(
+export const mapCanPromisePlay = createSelector(
+    mapQueuedSongIndex,
     mapLyricSongIndex,
-    mapSelectedSongIndex,
     (
-        lyricSongIndex,
-        selectedSongIndex
-    ) => lyricSongIndex === selectedSongIndex
-)
-
-export const mapIsReadyToPromisePlay = createSelector(
-    mapCanPlayAfterSongTransition,
-    mapQueuedPromisePlay,
-    (
-        canPlayAfterSongTransition,
-        queuedPromisePlay
-    ) => canPlayAfterSongTransition && queuedPromisePlay
+        queuedSongIndex,
+        lyricSongIndex
+    ) => queuedSongIndex === lyricSongIndex
 )
 
 export const mapIsPlayButtonEnabled = createSelector(
     mapPlayerCanPlayThrough,
     mapIsPlaying,
-    mapCanPlayAfterSongTransition,
+    mapSelectedSongIndex,
+    mapLyricSongIndex,
     (
         playerCanPlayThrough,
         isPlaying,
-        canPlayAfterSongTransition
-    ) => playerCanPlayThrough && (canPlayAfterSongTransition || isPlaying)
+        selectedSongIndex,
+        lyricSongIndex
+    ) => playerCanPlayThrough && (
+        selectedSongIndex === lyricSongIndex || isPlaying
+    )
 )

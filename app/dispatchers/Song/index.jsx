@@ -52,16 +52,13 @@ const SongDispatcher = forwardRef((props, ref) => {
          * this immediately, rather than waiting another lifecycle, for UI
          * purposes.
          */
-        if (
-            isSongChangeDone &&
-            nextSongIndex !== selectedSongIndex
-        ) {
+        if (isSongChangeDone) {
             dispatch(resetSongChange())
         }
 
         dispatch(updateAudioStore({
             queuedPlayFromLogue: isPlayFromLogue,
-            queuedPromisePlay: true
+            queuedSongIndex: nextSongIndex
         }))
 
         dispatch(updateWikiIndices())

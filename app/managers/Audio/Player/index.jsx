@@ -25,7 +25,7 @@ import {
     mapIsPlaying,
     mapQueuedTogglePlay,
     mapQueuedPlayFromLogue,
-    mapIsReadyToPromisePlay
+    mapCanPromisePlay
 } from '../../../redux/audio/selector'
 import { getMapPlayerPausedTime } from '../../../redux/players/selector'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
@@ -47,7 +47,7 @@ const Player = ({
         isPlaying = useSelector(mapIsPlaying),
         queuedTogglePlay = useSelector(mapQueuedTogglePlay),
         queuedPlayFromLogue = useSelector(mapQueuedPlayFromLogue),
-        isReadyToPromisePlay = useSelector(mapIsReadyToPromisePlay),
+        canPromisePlay = useSelector(mapCanPromisePlay),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
     const setCurrentTime = (currentTime = playerPausedTime) => {
@@ -178,7 +178,7 @@ const Player = ({
                      * Wait for song select to finalise, in case the user is
                      * cycling through songs in quick succession.
                      */
-                    isReadyToPromisePlay && (
+                    canPromisePlay && (
 
                         /**
                          * Play only if audio is already playing, or if play
@@ -196,7 +196,7 @@ const Player = ({
         } else {
             didMount.current = true
         }
-    }, [isReadyToPromisePlay])
+    }, [canPromisePlay])
 
     useEffect(() => {
         // If no longer selected, pause.
