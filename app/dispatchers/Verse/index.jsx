@@ -1,6 +1,6 @@
 import { forwardRef, useImperativeHandle, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateAudioStore } from '../../redux/audio/action'
+// import { updateAudioStore } from '../../redux/audio/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { mapLyricVerseIndex } from '../../redux/lyric/selector'
@@ -50,8 +50,6 @@ const VerseDispatcher = forwardRef((props, ref) => {
                     scrollLog,
                     verseIndex
                 ))
-
-                dispatch(updateAudioStore({ queuedPromisePlay: true }))
             }
         }
     }
