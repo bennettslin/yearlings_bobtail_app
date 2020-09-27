@@ -28,6 +28,6 @@ export default [
     /* Ongoing. */
     {
         taskName: `Wrap up annotation edits.`,
-        workedHours: 3
+        workedHours: 5
     }
 ]
