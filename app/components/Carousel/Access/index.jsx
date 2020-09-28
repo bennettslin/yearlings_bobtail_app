@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 import AccessLetters from '../../Access/Letters'
 import { mapSelectedDotsBit } from '../../../redux/dots/selector'
 import { mapLyricAnnotationIndex } from '../../../redux/lyric/selector'
+import { mapCanCarouselScroll } from '../../../redux/scroll/selector'
 import {
-    mapIsCarouselShown,
     mapIsNavShown,
     mapIsDotsSlideShown,
     mapIsLyricExpanded
@@ -18,7 +18,7 @@ const CarouselAccess = ({ inLyric }) => {
     const
         selectedDotsBit = useSelector(mapSelectedDotsBit),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        isCarouselShown = useSelector(mapIsCarouselShown),
+        canCarouselScroll = useSelector(mapCanCarouselScroll),
         isNavShown = useSelector(mapIsNavShown),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
@@ -31,8 +31,8 @@ const CarouselAccess = ({ inLyric }) => {
             selectedDotsBit &&
             !lyricAnnotationIndex &&
 
-            // Don't show in carousel if carousel is not shown.
-            (inLyric || isCarouselShown) && (
+            // Don't show in carousel if carousel is not shown or is in logue.
+            (inLyric || canCarouselScroll) && (
                 (
                     // Must not show nav or have dots section open...
                     !isNavShown &&

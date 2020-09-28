@@ -1,4 +1,10 @@
 # TODO:
+* Nav in logue.
+    * Show carousel nav toggle button. [x]
+    * Get rid of carousel arrow access keys in logue. [x]
+    * When in logue, clicking carousel nav button should toggle nav on and off. [x]
+    * If carousel is on in songs, it should stay one when going back to songs. If it is off, it should stay off. [x]
+    * There should be a different icon for carousel nav toggle when carousel cannot be shown, such as when no dots are selected or it's in logue.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

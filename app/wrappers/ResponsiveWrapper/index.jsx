@@ -4,7 +4,10 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../components/DidMountHoc'
 import { getSingleShownEarColumnKey } from './helper'
-import { mapIsCarouselNavShowable } from '../../redux/carousel/selector'
+import {
+    mapIsCarouselNavShowable,
+    mapIsRightShelfShowable
+} from '../../redux/carousel/selector'
 import { mapIsEarShown } from '../../redux/ear/selector'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
 import { mapShowShrunkNavIcon } from '../../redux/nav/selector'
@@ -18,6 +21,7 @@ const ResponsiveWrapper = ({ didMount, children }) => {
         showShrunkNavIcon = useSelector(mapShowShrunkNavIcon),
         earColumnIndex = useSelector(mapEarColumnIndex),
         isCarouselNavShowable = useSelector(mapIsCarouselNavShowable),
+        isRightShelfShowable = useSelector(mapIsRightShelfShowable),
         isEarShown = useSelector(mapIsEarShown),
 
         // TODO: Make this a selector.
@@ -38,6 +42,8 @@ const ResponsiveWrapper = ({ didMount, children }) => {
                             'RW__navIconStatic',
                         isCarouselNavShowable &&
                             'RW__carouselNavShowable',
+                        isRightShelfShowable &&
+                            'RW__rightShelfShowable',
                         singleShownEarColumnKey ?
                             `RW__${singleShownEarColumnKey}EarColumnOnly` :
                             'RW__bothEarColumnsShown',

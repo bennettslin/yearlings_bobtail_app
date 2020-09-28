@@ -66,18 +66,22 @@ export const getIsOverlayShown = ({
     )
 }
 
-export const getIsCarouselNavShowable = ({
+export const getIsCarouselNavOrRightShelfShowable = ({
+    isCarouselNav,
+    isLyricLogue,
     isOverlayShown,
     isOverviewShown,
     isTipsShown,
-    isLyricLogue,
     isLyricExpanded,
     isActivated
 }) => (
+    (
+        // If carousel nav, it's showable in logue.
+        isCarouselNav || !isLyricLogue
+    ) &&
     !isOverlayShown &&
     !isOverviewShown &&
     !isTipsShown &&
-    !isLyricLogue &&
     !isLyricExpanded &&
     !isActivated
 )

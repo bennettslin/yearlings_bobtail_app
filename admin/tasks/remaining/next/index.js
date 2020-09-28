@@ -1,6 +1,6 @@
 export default [
     {
-        taskName: `Look into s3 versioning.`,
+        taskName: `Show nav in logue?`,
         workedHours: 0,
         neededHours: 3
     },

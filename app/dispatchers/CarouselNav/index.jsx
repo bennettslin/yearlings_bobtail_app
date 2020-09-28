@@ -33,15 +33,8 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
     const dispatchCarouselNav = (
         // If no argument passed, then just toggle by default.
         nextIsCarouselShown = !isCarouselShown
-    ) => {
-        // We shouldn't be able to toggle the carousel under these conditions.
-        if (
-            isSelectedLogue ||
-            !canCarouselShow
-        ) {
-            return false
-        }
 
+    ) => {
         /**
          * If this would otherwise show the carousel, but there are no dots
          * selected, don't show the carousel.
@@ -50,14 +43,14 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
             nextIsCarouselShown = false
         }
 
-        dispatch(updateIsCarouselShown(
-            // Do not toggle carousel if no dots are selected.
-            Boolean(selectedDotsBit) && nextIsCarouselShown
-        ))
         dispatch(updateIsNavShown(
             selectedDotsBit ?
                 // If dots are selected, toggle nav under these conditions.
-                !nextIsCarouselShown &&
+                (
+                    isSelectedLogue ?
+                        !isNavShown :
+                        !nextIsCarouselShown
+                ) &&
                 !isDotsSlideShown &&
                 !selectedAnnotationIndex :
 
@@ -65,13 +58,20 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
                 !isNavShown
         ))
 
-        // If showing carousel, scroll to selected or accessed annotation.
-        if (nextIsCarouselShown) {
-            dispatch(scrollCarouselToAnnotation(
-                'Toggle carousel',
-                selectedAnnotationIndex ||
-                accessedAnnotationIndex
+        if (!isSelectedLogue && canCarouselShow) {
+            dispatch(updateIsCarouselShown(
+                // Do not toggle carousel if no dots are selected.
+                Boolean(selectedDotsBit) && nextIsCarouselShown
             ))
+
+            // If showing carousel, scroll to selected or accessed annotation.
+            if (nextIsCarouselShown) {
+                dispatch(scrollCarouselToAnnotation(
+                    'Toggle carousel',
+                    selectedAnnotationIndex ||
+                    accessedAnnotationIndex
+                ))
+            }
         }
 
         return true
