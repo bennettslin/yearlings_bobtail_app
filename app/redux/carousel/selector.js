@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { getIsCarouselNavOrRightShelfShowable } from '../../helpers/main'
+import { getIsCarouselOrNavShowable } from '../../helpers/main'
 import { mapIsActivated } from '../activated/selector'
 import { mapIsLyricLogue } from '../lyric/selector'
 import { mapIsOverlayShown } from '../overlay/selector'
@@ -7,7 +7,7 @@ import { mapIsOverviewShown } from '../overview/selector'
 import { mapIsTipsShown } from '../tips/selector'
 import { mapIsLyricExpanded } from '../toggle/selector'
 
-const getMapIsCarouselNavOrRightShelfShowable = isCarouselNav => createSelector(
+const getMapIsCarouselOrNavShowable = isCarouselNav => createSelector(
     mapIsLyricLogue,
     mapIsOverlayShown,
     mapIsOverviewShown,
@@ -21,7 +21,7 @@ const getMapIsCarouselNavOrRightShelfShowable = isCarouselNav => createSelector(
         isTipsShown,
         isLyricExpanded,
         isActivated
-    ) => getIsCarouselNavOrRightShelfShowable({
+    ) => getIsCarouselOrNavShowable({
         isCarouselNav,
         isLyricLogue,
         isOverlayShown,
@@ -32,8 +32,5 @@ const getMapIsCarouselNavOrRightShelfShowable = isCarouselNav => createSelector(
     })
 )
 
-export const mapIsCarouselNavShowable =
-    getMapIsCarouselNavOrRightShelfShowable(true)
-
-export const mapIsRightShelfShowable =
-    getMapIsCarouselNavOrRightShelfShowable()
+export const mapIsCarouselNavShowable = getMapIsCarouselOrNavShowable()
+export const mapIsNavShowable = getMapIsCarouselOrNavShowable(true)

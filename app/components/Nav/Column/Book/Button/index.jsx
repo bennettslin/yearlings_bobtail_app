@@ -11,7 +11,7 @@ import {
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY
 } from '../../../../../constants/buttons'
-import { mapIsCarouselNavShowable } from '../../../../../redux/carousel/selector'
+import { mapIsNavShowable } from '../../../../../redux/carousel/selector'
 import { mapSelectedAnnotationIndex } from '../../../../../redux/selected/selector'
 import './style'
 
@@ -26,7 +26,7 @@ const NavButton = ({
 
 }) => {
     const
-        isCarouselNavShowable = useSelector(mapIsCarouselNavShowable),
+        isNavShowable = useSelector(mapIsNavShowable),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
 
         isBook = Number.isFinite(bookIndex),
@@ -38,7 +38,7 @@ const NavButton = ({
         isRightmost = bookIndex === 1 || songIndex === 19,
 
         isEnabled =
-            isCarouselNavShowable &&
+            isNavShowable &&
             (
                 isInShownColumn ||
                 isLeftmost ||
@@ -47,11 +47,11 @@ const NavButton = ({
 
         isNavigable =
             !isToggle
-            && isCarouselNavShowable
+            && isNavShowable
             && !selectedAnnotationIndex
 
     const _handleButtonClick = () => {
-        if (isCarouselNavShowable) {
+        if (isNavShowable) {
             // Select song or logue.
             if (Number.isFinite(songIndex)) {
                 handleButtonClick(songIndex)

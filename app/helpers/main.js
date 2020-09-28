@@ -66,7 +66,7 @@ export const getIsOverlayShown = ({
     )
 }
 
-export const getIsCarouselNavOrRightShelfShowable = ({
+export const getIsCarouselOrNavShowable = ({
     isCarouselNav,
     isLyricLogue,
     isOverlayShown,
