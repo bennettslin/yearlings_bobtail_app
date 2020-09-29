@@ -1,8 +1,7 @@
 export default [
     {
         taskName: `Show nav in logue?`,
-        workedHours: 3,
-        neededHours: 4
+        workedHours: 5
     },
     {
         taskName: `Be smarter about what I want analytics to measure. Selected indices. About links. When wiki links are broken? Create notes.`,

@@ -7,7 +7,7 @@
 
     .DW__desktopWidth.DW__cannotCarouselShow
     &,
-    .DW__miniOrTabletWidth.DW__canCarouselShow
+    .DW__miniOrTabletWidth.DW__canCarouselNavMount
     & {
         padding-bottom: $margin__scrollBar;
     }
@@ -23,7 +23,7 @@
 
     .DW__desktopWidth.DW__cannotCarouselShow
     &,
-    .DW__miniOrTabletWidth.DW__canCarouselShow
+    .DW__miniOrTabletWidth.DW__canCarouselNavMount
     & {
         align-items: flex-end;
     }

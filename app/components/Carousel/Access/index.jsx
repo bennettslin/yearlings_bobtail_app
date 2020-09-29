@@ -2,54 +2,21 @@ import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import AccessLetters from '../../Access/Letters'
-import { mapSelectedDotsBit } from '../../../redux/dots/selector'
-import { mapLyricAnnotationIndex } from '../../../redux/lyric/selector'
-import { mapCanCarouselScroll } from '../../../redux/scroll/selector'
-import {
-    mapIsNavShown,
-    mapIsDotsSlideShown,
-    mapIsLyricExpanded
-} from '../../../redux/toggle/selector'
+import { getMapCanCarouselAccessShow } from '../../../redux/scroll/selector'
 import { ARROW_LEFT, ARROW_RIGHT } from '../../../constants/access'
 import './style'
 
 const CarouselAccess = ({ inLyric }) => {
-
-    const
-        selectedDotsBit = useSelector(mapSelectedDotsBit),
-        lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        canCarouselScroll = useSelector(mapCanCarouselScroll),
-        isNavShown = useSelector(mapIsNavShown),
-        isDotsSlideShown = useSelector(mapIsDotsSlideShown),
-        isLyricExpanded = useSelector(mapIsLyricExpanded),
-
-        showIfAccessOn = Boolean(
-            /**
-             * Must have at least one selected dot, and no selected
-             * annotation.
-             */
-            selectedDotsBit &&
-            !lyricAnnotationIndex &&
-
-            // Don't show in carousel if carousel is not shown or is in logue.
-            (inLyric || canCarouselScroll) && (
-                (
-                    // Must not show nav or have dots section open...
-                    !isNavShown &&
-                    !isDotsSlideShown
-                ) || (
-                    // ... or else have lyric expanded.
-                    isLyricExpanded
-                )
-            )
-        )
+    const canCarouselAccessShow = useSelector(
+        getMapCanCarouselAccessShow(inLyric)
+    )
 
     return (
         <AccessLetters
             {...{
-                accessIconsName: inLyric ? 'lyricAnnotation' : 'carousel',
                 ...inLyric && { className: 'top__lyricChild' },
-                showIfAccessOn,
+                accessIconsName: inLyric ? 'lyricAnnotation' : 'carousel',
+                showIfAccessOn: canCarouselAccessShow,
                 accessKeys: [
                     ARROW_LEFT,
                     ARROW_RIGHT

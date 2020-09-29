@@ -16,14 +16,14 @@ import {
     mapIsNavShown,
     mapIsDotsSlideShown
 } from '../../redux/toggle/selector'
-import { mapCanCarouselShow } from '../../redux/viewport/selector'
+import { mapCanCarouselNavMount } from '../../redux/viewport/selector'
 
 const CarouselNavDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
         selectedDotsBit = useSelector(mapSelectedDotsBit),
-        canCarouselShow = useSelector(mapCanCarouselShow),
+        canCarouselNavMount = useSelector(mapCanCarouselNavMount),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         isCarouselShown = useSelector(mapIsCarouselShown),
@@ -58,7 +58,7 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
                 !isNavShown
         ))
 
-        if (!isSelectedLogue && canCarouselShow) {
+        if (!isSelectedLogue && canCarouselNavMount) {
             dispatch(updateIsCarouselShown(
                 // Do not toggle carousel if no dots are selected.
                 Boolean(selectedDotsBit) && nextIsCarouselShown

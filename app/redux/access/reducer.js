@@ -48,8 +48,8 @@ export const getAccessReducer = songIndex => (
             } : state
         }
         case VIEWPORT_STORE: {
-            const { canCarouselShow } = payload
-            return hasKey(canCarouselShow) && !canCarouselShow ? {
+            const { canCarouselNavMount } = payload
+            return hasKey(canCarouselNavMount) && !canCarouselNavMount ? {
                 ...state,
                 ...ACCESS_NAV_DEFAULTS
             } : state

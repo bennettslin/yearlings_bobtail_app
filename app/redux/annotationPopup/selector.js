@@ -10,7 +10,7 @@ import {
     mapIsAboutShown,
     mapIsCarouselShown
 } from '../toggle/selector'
-import { mapCanCarouselShow } from '../viewport/selector'
+import { mapCanCarouselNavMount } from '../viewport/selector'
 import { mapIsWikiShown } from '../wiki/selector'
 
 export const mapIsOverlayingAnnotation = createSelector(
@@ -31,7 +31,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
     mapIsAboutShown,
     mapIsScoreShown,
     mapIsCarouselShown,
-    mapCanCarouselShow,
+    mapCanCarouselNavMount,
     mapIsOverlayingAnnotation,
     mapIsWikiShown,
     (
@@ -40,7 +40,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         isAboutShown,
         isScoreShown,
         isCarouselShown,
-        canCarouselShow,
+        canCarouselNavMount,
         isOverlayingAnnotation,
         isWikiShown
     ) => getIsPopupAnnotationShown({
@@ -50,7 +50,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         isAboutShown,
         isScoreShown,
         isCarouselShown,
-        canCarouselShow,
+        canCarouselNavMount,
         isOverlayingAnnotation,
         isWikiShown
     })

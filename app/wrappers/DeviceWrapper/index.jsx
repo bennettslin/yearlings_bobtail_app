@@ -13,7 +13,7 @@ import {
 } from '../../redux/device/selector'
 import {
     mapDeviceWidthIndex,
-    mapCanCarouselShow,
+    mapCanCarouselNavMount,
     mapCanSliderMount
 } from '../../redux/viewport/selector'
 
@@ -22,7 +22,7 @@ const DeviceWrapper = ({ didMount, children }) => {
         deviceWidthIndex = useSelector(mapDeviceWidthIndex),
         isPhoneWidth = useSelector(mapIsPhoneWidth),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
-        canCarouselShow = useSelector(mapCanCarouselShow),
+        canCarouselNavMount = useSelector(mapCanCarouselNavMount),
         canSliderMount = useSelector(mapCanSliderMount),
 
         deviceWidthKey =
@@ -48,8 +48,8 @@ const DeviceWrapper = ({ didMount, children }) => {
                             'DW__phoneOrMiniWidth': !isTabletWidth
                         },
                         // TODO: Make this a selector. See CSS classes.
-                        canCarouselShow ?
-                            'DW__canCarouselShow' :
+                        canCarouselNavMount ?
+                            'DW__canCarouselNavMount' :
                             'DW__cannotCarouselShow',
                         canSliderMount &&
                             'DW__canSliderMount',

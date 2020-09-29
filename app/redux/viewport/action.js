@@ -10,7 +10,7 @@ import {
     getIsTwoRowMenu,
     getMenuHeight
 } from '../../helpers/resize/responsive'
-import { getCanCarouselShow } from '../../helpers/resize/mount'
+import { getCanCarouselNavMount } from '../../helpers/resize/mount'
 import { getStageDimensionCoordinates } from '../../helpers/resize/stage'
 import { getProsceniumDimensionCoordinates } from '../../helpers/resize/proscenium'
 import { getCeilingFloorHeight } from '../../helpers/resize/theatre'
@@ -31,7 +31,7 @@ export const updateViewportStore = payload => {
                 windowWidth
             }),
             menuHeight = getMenuHeight({ isTwoRowMenu }),
-            canCarouselShow = getCanCarouselShow({
+            canCarouselNavMount = getCanCarouselNavMount({
                 deviceWidthIndex,
                 windowHeight,
                 isHeightlessLyric
@@ -43,7 +43,7 @@ export const updateViewportStore = payload => {
                 menuHeight,
                 isHeightlessLyric,
                 isTwoRowMenu,
-                canCarouselShow
+                canCarouselNavMount
             }),
             prosceniumDimensionCoordinates = getProsceniumDimensionCoordinates(
                 stageDimensionCoordinates
@@ -67,7 +67,7 @@ export const updateViewportStore = payload => {
             isHeightlessLyric,
             isTwoRowMenu,
             menuHeight,
-            canCarouselShow,
+            canCarouselNavMount,
             stageDimensionCoordinates,
             prosceniumDimensionCoordinates,
             ceilingHeight,

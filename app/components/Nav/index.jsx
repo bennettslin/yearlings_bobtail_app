@@ -5,19 +5,19 @@ import { useSelector } from 'react-redux'
 import NavListener from '../../handlers/Nav/Listener'
 import NavColumn from './Column'
 import { mapShowSingleNavBook } from '../../redux/nav/selector'
-import { mapCanCarouselShow } from '../../redux/viewport/selector'
+import { mapCanCarouselNavMount } from '../../redux/viewport/selector'
 import './style'
 
 const Nav = () => {
     const
-        canCarouselShow = useSelector(mapCanCarouselShow),
+        canCarouselNavMount = useSelector(mapCanCarouselNavMount),
         showSingleNavBook = useSelector(mapShowSingleNavBook)
 
     useEffect(() => {
         logMount('Nav')
     }, [])
 
-    return canCarouselShow && (
+    return canCarouselNavMount && (
         <div
             className={cx(
                 'Nav',

@@ -5,7 +5,7 @@ import {
 } from '../../constants/responsive'
 
 export const getLyricDynamicHeight = ({
-    canCarouselShow,
+    canCarouselNavMount,
     deviceWidthIndex,
     windowHeight,
     stageHeight,
@@ -25,7 +25,7 @@ export const getLyricDynamicHeight = ({
      * If carousel is mounted, then stage will sit right above lyric to give it
      * room. In which case, set the lyric to this constant value.
      */
-    } else if (canCarouselShow) {
+    } else if (canCarouselNavMount) {
         return HEIGHT_LYRIC_COLLAPSED
     }
 
@@ -59,7 +59,7 @@ export const getLyricOverviewHeightStyle = ({
 )
 
 export const getMainHeightStyle = ({
-    canCarouselShow,
+    canCarouselNavMount,
     lyricDynamicHeight,
     isHeightlessLyric,
     menuHeight,
@@ -73,7 +73,7 @@ export const getMainHeightStyle = ({
         basePercentage = 100
 
     // Otherwise, if carousel can mount, subtract collapsed lyric height.
-    } else if (canCarouselShow) {
+    } else if (canCarouselNavMount) {
         basePercentage = 100 * (1 - HEIGHT_LYRIC_COLLAPSED)
 
     // Otherwise, subtract dynamic lyric height.

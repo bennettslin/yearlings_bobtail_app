@@ -5,7 +5,7 @@ import ScrollDispatcher from '../Dispatcher'
 import { resetScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 import { mapAccessedAnnotationIndex } from '../../../redux/access/selector'
-import { mapCanCarouselScroll } from '../../../redux/scroll/selector'
+import { mapIsCarouselAndNavShowable } from '../../../redux/carousel/selector'
 import {
     mapScrollCarouselLog,
     mapScrollCarouselIndex,
@@ -23,13 +23,13 @@ const ScrollCarouselListener = ({
         scrollElementIntoView = useRef(),
         accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        canCarouselScroll = useSelector(mapCanCarouselScroll),
+        isCarouselAndNavShowable = useSelector(mapIsCarouselAndNavShowable),
         scrollCarouselLog = useSelector(mapScrollCarouselLog),
         scrollCarouselIndex = useSelector(mapScrollCarouselIndex),
         isScrollCarouselForSongSelect = useSelector(mapScrollCarouselNoDuration)
 
     useEffect(() => {
-        if (scrollCarouselLog && canCarouselScroll) {
+        if (scrollCarouselLog && isCarouselAndNavShowable) {
             scrollElementIntoView.current({
                 log: scrollCarouselLog,
                 scrollClass: CAROUSEL_SCROLL,
