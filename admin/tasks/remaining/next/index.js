@@ -1,13 +1,8 @@
 export default [
     {
         taskName: `Show nav in logue?`,
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
-        taskName: `Make About the document activeElement when opened.`,
-        workedHours: 0,
-        neededHours: 1
+        workedHours: 3,
+        neededHours: 4
     },
     {
         taskName: `Be smarter about what I want analytics to measure. Selected indices. About links. When wiki links are broken? Create notes.`,
