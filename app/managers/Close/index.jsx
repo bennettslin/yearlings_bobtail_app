@@ -14,6 +14,7 @@ import {
     updateIsLyricExpanded,
     updateIsAboutShown,
     updateIsDotsSlideShown,
+    updateIsCarouselExpanded,
     updateIsNavExpanded,
     updateIsScoreShown
 } from '../../redux/toggle/action'
@@ -25,6 +26,7 @@ import { mapIsSliderMoving } from '../../redux/slider/selector'
 import { mapIsTipsShown } from '../../redux/tips/selector'
 import {
     mapIsCarouselExpanded,
+    mapIsNavExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     mapIsScoreShown,
@@ -42,6 +44,7 @@ const CloseHandler = forwardRef((props, ref) => {
         isWikiShown = useSelector(mapIsWikiShown),
         isSliderMoving = useSelector(mapIsSliderMoving),
         isCarouselExpanded = useSelector(mapIsCarouselExpanded),
+        isNavExpanded = useSelector(mapIsNavExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isScoreShown = useSelector(mapIsScoreShown),
@@ -73,6 +76,7 @@ const CloseHandler = forwardRef((props, ref) => {
 
     const closeMainSections = ({
         exemptAnnotation,
+        exemptCarousel = true, // Only body click closes carousel.
         exemptDots,
         exemptLyric,
         exemptNav,
@@ -83,6 +87,10 @@ const CloseHandler = forwardRef((props, ref) => {
     } = {}) => {
         if (!exemptAnnotation) {
             dispatch(updateSelectedStore({ selectedAnnotationIndex: 0 }))
+        }
+
+        if (!exemptCarousel) {
+            dispatch(updateIsCarouselExpanded())
         }
 
         if (!exemptDots) {
@@ -136,12 +144,19 @@ const CloseHandler = forwardRef((props, ref) => {
 
     useEffect(() => {
         if (didMount) {
-            closeMainPopups()
-            closeMainSections({
-                exemptAnnotation: true,
-                exemptDots: true,
-                exemptNav: true
-            })
+            if (isCarouselExpanded) {
+                closeMainPopups()
+                closeMainSections({
+                    exemptAnnotation: true,
+                    exemptDots: true,
+
+                    /**
+                     * Doesn't actually matter, since carousel can only expand
+                     * when nav is collapsed.
+                     */
+                    exemptNav: true
+                })
+            }
         } else {
             setDidMount(true)
         }
@@ -177,6 +192,17 @@ const CloseHandler = forwardRef((props, ref) => {
             })
         }
     }, [isActivated, isSliderMoving])
+
+    useEffect(() => {
+        if (isNavExpanded) {
+            closeMainPopups()
+            closeMainSections({
+                exemptNav: true
+            })
+        } else {
+            setDidMount(true)
+        }
+    }, [isNavExpanded])
 
     useEffect(() => {
         if (isOverviewShown) {
@@ -222,6 +248,8 @@ const CloseHandler = forwardRef((props, ref) => {
     const closeForBodyClick = () => {
         if (!closeMainPopups()) {
             closeMainSections({
+                // When nav is expanded, collapse both carousel and nav.
+                exemptCarousel: !isNavExpanded,
                 exemptLyric: true,
 
                 // If clicking to dismiss tips, leave overview shown.

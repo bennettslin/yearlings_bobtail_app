@@ -15,7 +15,7 @@ export const updateIsAboutShown = (isAboutShown = false) => ({
     payload: { isAboutShown }
 })
 
-export const updateIsCarouselExpanded = isCarouselExpanded => {
+export const updateIsCarouselExpanded = (isCarouselExpanded = false) => {
     setBoolInStorage(IS_CAROUSEL_EXPANDED, isCarouselExpanded)
 
     return ({

@@ -8,17 +8,25 @@ import { mapIsOverviewShown } from '../overview/selector'
 import { mapIsTipsShown } from '../tips/selector'
 import { mapIsLyricExpanded } from '../toggle/selector'
 
-const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
+// It's more semantically clear to say when carousel is *not* showable.
+export const mapIsCarouselNotShowable = createSelector(
     mapIsLyricLogue,
     mapSelectedDotsBit,
+    (
+        isLyricLogue,
+        selectedDotsBit
+    ) => isLyricLogue || selectedDotsBit === 0
+)
+
+const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
+    mapIsCarouselNotShowable,
     mapIsOverlayShown,
     mapIsOverviewShown,
     mapIsTipsShown,
     mapIsLyricExpanded,
     mapIsActivated,
     (
-        isLyricLogue,
-        selectedDotsBit,
+        isCarouselNotShowable,
         isOverlayShown,
         isOverviewShown,
         isTipsShown,
@@ -26,8 +34,7 @@ const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
         isActivated
     ) => getIsCarouselOrNavShowable({
         checkForNav,
-        isLyricLogue,
-        selectedDotsBit,
+        isCarouselNotShowable,
         isOverlayShown,
         isOverviewShown,
         isTipsShown,

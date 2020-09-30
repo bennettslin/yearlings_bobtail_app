@@ -68,23 +68,20 @@ export const getIsOverlayShown = ({
 
 export const getIsCarouselOrNavShowable = ({
     checkForNav,
-    isLyricLogue,
-    selectedDotsBit,
+    isCarouselNotShowable,
     isOverlayShown,
     isOverviewShown,
     isTipsShown,
     isLyricExpanded,
     isActivated
 }) => (
+    (
+        // If checking for carousel, cannot be in logue and must have dots.
+        checkForNav || !isCarouselNotShowable
+    ) &&
     !isOverlayShown &&
     !isOverviewShown &&
     !isTipsShown &&
     !isLyricExpanded &&
-    !isActivated &&
-    (
-        // If checking for carousel, cannot be in logue and must have dots.
-        checkForNav || (
-            !isLyricLogue && selectedDotsBit > 0
-        )
-    )
+    !isActivated
 )

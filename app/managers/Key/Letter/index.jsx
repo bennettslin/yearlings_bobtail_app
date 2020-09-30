@@ -4,6 +4,7 @@ import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import {
+    updateIsCarouselExpanded,
     updateIsNavExpanded,
     toggleIsAboutShown,
     updateIsAboutShown,
@@ -194,6 +195,8 @@ const LetterManager = forwardRef((props, ref) => {
 
         // Hide nav.
         } else if (isNavExpanded) {
+            // When nav is expanded, collapse both carousel and nav.
+            dispatch(updateIsCarouselExpanded())
             dispatch(updateIsNavExpanded())
 
         // Turn access off.

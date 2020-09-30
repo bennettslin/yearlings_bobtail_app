@@ -6,15 +6,11 @@ import {
     updateIsNavExpanded
 } from '../../redux/toggle/action'
 import { mapAccessedAnnotationIndex } from '../../redux/access/selector'
-import { mapSelectedDotsBit } from '../../redux/dots/selector'
-import {
-    mapSelectedAnnotationIndex,
-    mapIsSelectedLogue
-} from '../../redux/selected/selector'
+import { mapIsCarouselNotShowable } from '../../redux/carousel/selector'
+import { mapSelectedAnnotationIndex } from '../../redux/selected/selector'
 import {
     mapIsCarouselExpanded,
-    mapIsNavExpanded,
-    mapIsDotsSlideShown
+    mapIsNavExpanded
 } from '../../redux/toggle/selector'
 import { mapCanCarouselNavMount } from '../../redux/viewport/selector'
 
@@ -22,56 +18,37 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
     const
         dispatch = useDispatch(),
         accessedAnnotationIndex = useSelector(mapAccessedAnnotationIndex),
-        selectedDotsBit = useSelector(mapSelectedDotsBit),
+        isCarouselNotShowable = useSelector(mapIsCarouselNotShowable),
         canCarouselNavMount = useSelector(mapCanCarouselNavMount),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        isSelectedLogue = useSelector(mapIsSelectedLogue),
         isCarouselExpanded = useSelector(mapIsCarouselExpanded),
-        isNavExpanded = useSelector(mapIsNavExpanded),
-        isDotsSlideShown = useSelector(mapIsDotsSlideShown)
+        isNavExpanded = useSelector(mapIsNavExpanded)
 
-    const dispatchCarouselNav = (
-        // If no argument passed, then just toggle by default.
-        nextIsCarouselExpanded = !isCarouselExpanded
-
-    ) => {
-        /**
-         * If this would otherwise show the carousel, but there are no dots
-         * selected, don't show the carousel.
-         */
-        if (nextIsCarouselExpanded && !selectedDotsBit) {
-            nextIsCarouselExpanded = false
+    const dispatchCarouselNav = () => {
+        if (!canCarouselNavMount) {
+            return
         }
 
-        dispatch(updateIsNavExpanded(
-            selectedDotsBit ?
-                // If dots are selected, toggle nav under these conditions.
-                (
-                    isSelectedLogue ?
-                        !isNavExpanded :
-                        !nextIsCarouselExpanded
-                ) &&
-                !isDotsSlideShown &&
-                !selectedAnnotationIndex :
+        /**
+         * If carousel is showable and neither carousel nor nav is expanded,
+         * expand carousel.
+         */
+        if (!isCarouselNotShowable && !isCarouselExpanded && !isNavExpanded) {
+            dispatch(updateIsCarouselExpanded(true))
 
-                // If no dots are selected, just toggle nav.
-                !isNavExpanded
-        ))
-
-        if (!isSelectedLogue && canCarouselNavMount) {
-            dispatch(updateIsCarouselExpanded(
-                // Do not toggle carousel if no dots are selected.
-                Boolean(selectedDotsBit) && nextIsCarouselExpanded
+            // Also scroll to selected or accessed annotation.
+            dispatch(scrollCarouselToAnnotation(
+                'Toggle carousel',
+                selectedAnnotationIndex ||
+                accessedAnnotationIndex
             ))
 
-            // If showing carousel, scroll to selected or accessed annotation.
-            if (nextIsCarouselExpanded) {
-                dispatch(scrollCarouselToAnnotation(
-                    'Toggle carousel',
-                    selectedAnnotationIndex ||
-                    accessedAnnotationIndex
-                ))
-            }
+        /**
+         * Otherwise, just toggle nav. Carousel will not show when nav is
+         * expanded.
+         */
+        } else {
+            dispatch(updateIsNavExpanded(!isNavExpanded))
         }
 
         return true
