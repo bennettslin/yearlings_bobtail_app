@@ -30,7 +30,7 @@ import {
     SHOWN,
     HIDDEN,
     DISABLED,
-    IS_CAROUSEL_EXPANDED,
+    IS_CAROUSEL_SHOWN,
     IS_NAV_EXPANDED,
     IS_CAROUSEL_NAV_COLLAPSED
 } from '../../constants/options'
@@ -56,7 +56,7 @@ const TOOLTIP_TEXT_MAP = {
     [AUDIO_FAST_FORWARD_BUTTON_KEY]: 'fast\u00a0forward',
     get carouselNav() {
         return {
-            [IS_CAROUSEL_EXPANDED]: 'show album navigation',
+            [IS_CAROUSEL_SHOWN]: 'show album navigation',
             [IS_NAV_EXPANDED]: 'show annotation carousel',
             [IS_CAROUSEL_NAV_COLLAPSED]: 'show carousel and navigation'
         }

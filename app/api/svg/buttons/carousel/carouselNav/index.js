@@ -3,13 +3,13 @@ import navShown from '../../../../../../assets/svgs/app/carouselNav/navShown'
 import neitherShown from '../../../../../../assets/svgs/app/carouselNav/neitherShown'
 
 import {
-    IS_CAROUSEL_EXPANDED,
+    IS_CAROUSEL_SHOWN,
     IS_NAV_EXPANDED,
     IS_CAROUSEL_NAV_COLLAPSED
 } from '../../../../../constants/options'
 
 const CAROUSEL_NAV_MAP = {
-    [IS_CAROUSEL_EXPANDED]: carouselShown,
+    [IS_CAROUSEL_SHOWN]: carouselShown,
     [IS_NAV_EXPANDED]: navShown,
     [IS_CAROUSEL_NAV_COLLAPSED]: neitherShown
 }

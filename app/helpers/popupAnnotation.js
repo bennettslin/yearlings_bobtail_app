@@ -4,7 +4,7 @@ export const getIsPopupAnnotationShown = ({
     lyricAnnotationIndex,
     isAboutShown,
     isScoreShown,
-    isCarouselExpanded,
+    isCarouselShown,
     canCarouselNavMount,
     isOverlayingAnnotation,
     isWikiShown
@@ -20,7 +20,7 @@ export const getIsPopupAnnotationShown = ({
          * or lyric is expanded.
          */
         (
-            !isCarouselExpanded ||
+            !isCarouselShown ||
             !canCarouselNavMount ||
             isOverlayingAnnotation
         ) &&

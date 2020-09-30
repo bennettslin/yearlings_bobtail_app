@@ -49,21 +49,21 @@ $height__carouselHidden: $height__chivalry;
     }
 
     .RW__navShowable
-    .ShW__carouselExpanded
+    .ShW__carouselShown
     &.Carousel__visible {
         opacity: 1;
     }
 
     .DW__desktopWidth
     .RW__navShowable
-    .ShW__carouselExpanded
+    .ShW__carouselShown
     &.Carousel__visible {
         bottom: 0;
     }
 
     .DW__mobileWidth
     .RW__navShowable
-    .ShW__carouselExpanded
+    .ShW__carouselShown
     &.Carousel__visible {
         top: 0;
     }
@@ -114,7 +114,7 @@ $height__carouselHidden: $height__chivalry;
     }
 
     .DW__desktopWidth
-    .ShW__annotationShown.ShW__carouselExpanded
+    .ShW__annotationShown.ShW__carouselShown
     & {
         // When carousel annotation is selected, switch z-index with lyric.
         z-index: $zIndex__lyricColumn;

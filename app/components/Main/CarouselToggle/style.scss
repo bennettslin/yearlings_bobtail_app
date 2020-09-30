@@ -42,7 +42,7 @@
 
     .DW__desktopWidth
     .PlW__song
-    .ShW__carouselExpanded:not(.ShW__tipsShown)
+    .ShW__carouselShown:not(.ShW__tipsShown)
     & {
         bottom: $margin__scrollBar;
     }

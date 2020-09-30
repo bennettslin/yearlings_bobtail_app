@@ -20,9 +20,9 @@ const NavListener = () => {
         if (didMount.current) {
             if (isNavExpanded) {
                 /**
-                 * Establish the nav index upon showing the nav. This will continue
-                 * to be the nav index for as long as the nav stays up, even if
-                 * access is turned on and off in between.
+                 * Establish the nav index upon showing the nav. This will
+                 * continue to be the nav index for as long as the nav stays
+                 * up, even if access is turned on and off in between.
                  */
                 dispatch(updateAccessStore({
                     accessedNavIndex: selectedSongIndex
