@@ -4,7 +4,7 @@ import { mapIsActivated } from '../activated/selector'
 import { mapLyricAnnotationIndex } from '../lyric/selector'
 import {
     mapIsDotsSlideShown,
-    mapIsNavShown,
+    mapIsNavExpanded,
     mapIsLyricExpanded
 } from '../toggle/selector'
 import { ACCESS_STORE } from '../../constants/store'
@@ -36,21 +36,21 @@ export const mapAccessedWikiWormholeIndex = (
 export const mapIsAccessedIndexedAnchorShown = createSelector(
     mapIsAccessOn,
     mapIsDotsSlideShown,
-    mapIsNavShown,
+    mapIsNavExpanded,
     mapIsLyricExpanded,
     mapLyricAnnotationIndex,
     mapIsActivated,
     (
         isAccessOn,
         isDotsSlideShown,
-        isNavShown,
+        isNavExpanded,
         isLyricExpanded,
         lyricAnnotationIndex,
         isActivated
     ) => getIsAccessedIndexedAnchorShown({
         isAccessOn,
         isDotsSlideShown,
-        isNavShown,
+        isNavExpanded,
         isLyricExpanded,
         lyricAnnotationIndex,
         isActivated

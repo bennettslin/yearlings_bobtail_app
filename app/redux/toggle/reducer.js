@@ -44,7 +44,7 @@ export default (
                  * only be deselected when carousel is not shown?)
                  */
                 ...hasKey(selectedDotsBit) && !selectedDotsBit && {
-                    isCarouselShown: false
+                    isCarouselExpanded: false
                 }
             }
         }
@@ -60,8 +60,8 @@ export default (
             return {
                 ...state,
                 ...hasKey(canCarouselNavMount) && !canCarouselNavMount && {
-                    isCarouselShown: false,
-                    isNavShown: false
+                    isCarouselExpanded: false,
+                    isNavExpanded: false
                 },
                 ...hasKey(isLyricExpandable) && !isLyricExpandable && {
                     isLyricExpanded: false

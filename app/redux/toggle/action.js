@@ -2,7 +2,7 @@
 import { setBoolInStorage } from '../../helpers/storage'
 import {
     TOGGLE_STORE,
-    IS_CAROUSEL_SHOWN
+    IS_CAROUSEL_EXPANDED
 } from '../../constants/store'
 
 export const toggleIsAboutShown = () => ({
@@ -15,12 +15,12 @@ export const updateIsAboutShown = (isAboutShown = false) => ({
     payload: { isAboutShown }
 })
 
-export const updateIsCarouselShown = isCarouselShown => {
-    setBoolInStorage(IS_CAROUSEL_SHOWN, isCarouselShown)
+export const updateIsCarouselExpanded = isCarouselExpanded => {
+    setBoolInStorage(IS_CAROUSEL_EXPANDED, isCarouselExpanded)
 
     return ({
         type: TOGGLE_STORE,
-        payload: { isCarouselShown }
+        payload: { isCarouselExpanded }
     })
 }
 
@@ -39,9 +39,9 @@ export const updateIsLyricExpanded = (isLyricExpanded = false) => ({
     payload: { isLyricExpanded }
 })
 
-export const updateIsNavShown = (isNavShown = false) => ({
+export const updateIsNavExpanded = (isNavExpanded = false) => ({
     type: TOGGLE_STORE,
-    payload: { isNavShown }
+    payload: { isNavExpanded }
 })
 
 export const updateIsScoreShown = (isScoreShown = false) => ({

@@ -14,7 +14,7 @@ import {
     updateIsLyricExpanded,
     updateIsAboutShown,
     updateIsDotsSlideShown,
-    updateIsNavShown,
+    updateIsNavExpanded,
     updateIsScoreShown
 } from '../../redux/toggle/action'
 import { HIDDEN } from '../../constants/options'
@@ -24,7 +24,7 @@ import { mapIsAnnotationShown } from '../../redux/selected/selector'
 import { mapIsSliderMoving } from '../../redux/slider/selector'
 import { mapIsTipsShown } from '../../redux/tips/selector'
 import {
-    mapIsCarouselShown,
+    mapIsCarouselExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     mapIsScoreShown,
@@ -41,7 +41,7 @@ const CloseHandler = forwardRef((props, ref) => {
         isAnnotationShown = useSelector(mapIsAnnotationShown),
         isWikiShown = useSelector(mapIsWikiShown),
         isSliderMoving = useSelector(mapIsSliderMoving),
-        isCarouselShown = useSelector(mapIsCarouselShown),
+        isCarouselExpanded = useSelector(mapIsCarouselExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isScoreShown = useSelector(mapIsScoreShown),
@@ -94,7 +94,7 @@ const CloseHandler = forwardRef((props, ref) => {
         }
 
         if (!exemptNav) {
-            dispatch(updateIsNavShown())
+            dispatch(updateIsNavExpanded())
         }
 
         if (!exemptOverview) {
@@ -145,7 +145,7 @@ const CloseHandler = forwardRef((props, ref) => {
         } else {
             setDidMount(true)
         }
-    }, [isCarouselShown])
+    }, [isCarouselExpanded])
 
     useEffect(() => {
         if (isDotsSlideShown) {

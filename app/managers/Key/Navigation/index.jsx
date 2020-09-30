@@ -15,7 +15,7 @@ import {
     mapIsSelectedLogue
 } from '../../../redux/selected/selector'
 import {
-    mapIsNavShown,
+    mapIsNavExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     mapIsScoreShown
@@ -36,7 +36,7 @@ const NavigationManager = forwardRef((props, ref) => {
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         isWikiShown = useSelector(mapIsWikiShown),
-        isNavShown = useSelector(mapIsNavShown),
+        isNavExpanded = useSelector(mapIsNavExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isScoreShown = useSelector(mapIsScoreShown)
@@ -72,7 +72,7 @@ const NavigationManager = forwardRef((props, ref) => {
 
             // We're in nav section.
             } else if (
-                isNavShown &&
+                isNavExpanded &&
                 !isLyricExpanded &&
                 !isActivated
             ) {

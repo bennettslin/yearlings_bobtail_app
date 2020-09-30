@@ -21,8 +21,8 @@ import {
 import {
     mapIsAutoScroll,
     mapIsLyricExpanded,
-    mapIsCarouselShown,
-    mapIsNavShown,
+    mapIsCarouselExpanded,
+    mapIsNavExpanded,
     mapIsDotsSlideShown
 } from '../toggle/selector'
 import {
@@ -50,28 +50,28 @@ export const getMapAlignForScroll = isCarousel => createSelector(
 )
 
 export const getMapCanCarouselAccessShow = inLyric => createSelector(
-    mapIsCarouselShown,
+    mapIsCarouselExpanded,
     mapSelectedDotsBit,
     mapIsLyricLogue,
     mapLyricAnnotationIndex,
-    mapIsNavShown,
+    mapIsNavExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     (
-        isCarouselShown,
+        isCarouselExpanded,
         selectedDotsBit,
         isLyricLogue,
         lyricAnnotationIndex,
-        isNavShown,
+        isNavExpanded,
         isDotsSlideShown,
         isLyricExpanded
     ) => getCanCarouselAccessShow({
         inLyric,
-        isCarouselShown,
+        isCarouselExpanded,
         selectedDotsBit,
         isLyricLogue,
         lyricAnnotationIndex,
-        isNavShown,
+        isNavExpanded,
         isDotsSlideShown,
         isLyricExpanded
     })

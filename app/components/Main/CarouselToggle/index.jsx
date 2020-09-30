@@ -10,8 +10,8 @@ import { CAROUSEL_NAV_BUTTON_KEY } from '../../../constants/buttons'
 import { getCarouselNavIdentifier } from '../../../constants/options'
 import { CAROUSEL, NAV } from '../../../constants/tips'
 import {
-    mapIsCarouselShown,
-    mapIsNavShown
+    mapIsCarouselExpanded,
+    mapIsNavExpanded
 } from '../../../redux/toggle/selector'
 import { mapCanCarouselNavMount } from '../../../redux/viewport/selector'
 import './style'
@@ -20,8 +20,8 @@ const CarouselToggle = () => {
     const
         dispatchCarouselNav = useRef(),
         canCarouselNavMount = useSelector(mapCanCarouselNavMount),
-        isCarouselShown = useSelector(mapIsCarouselShown),
-        isNavShown = useSelector(mapIsNavShown)
+        isCarouselExpanded = useSelector(mapIsCarouselExpanded),
+        isNavExpanded = useSelector(mapIsNavExpanded)
 
     const handleButtonClick = () => {
         dispatchCarouselNav.current()
@@ -36,8 +36,8 @@ const CarouselToggle = () => {
                 {...{
                     buttonName: CAROUSEL_NAV_BUTTON_KEY,
                     buttonIdentifier: getCarouselNavIdentifier({
-                        isCarouselShown,
-                        isNavShown
+                        isCarouselExpanded,
+                        isNavExpanded
                     }),
                     accessKey: CAROUSEL_TOGGLE_KEY,
                     handleButtonClick

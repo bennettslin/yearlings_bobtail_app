@@ -13,7 +13,7 @@ import {
     updateEarColumnIndex,
     updateWikiIndices
 } from '../../redux/session/action'
-import { updateIsNavShown } from '../../redux/toggle/action'
+import { updateIsNavExpanded } from '../../redux/toggle/action'
 import { getSongsAndLoguesCount } from '../../api/album/songs'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
@@ -90,7 +90,7 @@ const SongDispatcher = forwardRef((props, ref) => {
             }
         }))
 
-        dispatch(updateIsNavShown())
+        dispatch(updateIsNavExpanded())
 
         return true
     }

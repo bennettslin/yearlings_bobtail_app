@@ -7,18 +7,18 @@ import {
 import { updateShownNavBookIndex } from '../../../redux/session/action'
 import { getBookForSongIndex } from '../../../api/album/songs'
 import { mapSelectedSongIndex } from '../../../redux/selected/selector'
-import { mapIsNavShown } from '../../../redux/toggle/selector'
+import { mapIsNavExpanded } from '../../../redux/toggle/selector'
 
 const NavListener = () => {
     const
         dispatch = useDispatch(),
         didMount = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
-        isNavShown = useSelector(mapIsNavShown)
+        isNavExpanded = useSelector(mapIsNavExpanded)
 
     useEffect(() => {
         if (didMount.current) {
-            if (isNavShown) {
+            if (isNavExpanded) {
                 /**
                  * Establish the nav index upon showing the nav. This will continue
                  * to be the nav index for as long as the nav stays up, even if
@@ -37,7 +37,7 @@ const NavListener = () => {
         } else {
             didMount.current = true
         }
-    }, [isNavShown])
+    }, [isNavExpanded])
 
     return null
 }

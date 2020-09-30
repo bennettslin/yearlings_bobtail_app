@@ -22,8 +22,8 @@ import { mapIsOverlayShown } from '../../redux/overlay/selector'
 import { mapIsOverviewShown } from '../../redux/overview/selector'
 import { mapIsTipsShown } from '../../redux/tips/selector'
 import {
-    mapIsCarouselShown,
-    mapIsNavShown,
+    mapIsCarouselExpanded,
+    mapIsNavExpanded,
     mapIsLyricExpanded,
     mapIsDotsSlideShown
 } from '../../redux/toggle/selector'
@@ -40,8 +40,8 @@ const ShownWrapper = ({ didMount, children }) => {
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         isOverviewShown = useSelector(mapIsOverviewShown),
         isTipsShown = useSelector(mapIsTipsShown),
-        isCarouselShown = useSelector(mapIsCarouselShown),
-        isNavShown = useSelector(mapIsNavShown),
+        isCarouselExpanded = useSelector(mapIsCarouselExpanded),
+        isNavExpanded = useSelector(mapIsNavExpanded),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isOverlayShown = useSelector(mapIsOverlayShown),
@@ -83,8 +83,8 @@ const ShownWrapper = ({ didMount, children }) => {
                                 'ShW__tips__isPointedAtLyrics'
                         ],
 
-                        isCarouselShown && 'ShW__carouselExpanded',
-                        isNavShown && 'ShW__navExpanded',
+                        isCarouselExpanded && 'ShW__carouselExpanded',
+                        isNavExpanded && 'ShW__navExpanded',
 
                         isDotsSlideShown ?
                             'ShW__dotsShown' :

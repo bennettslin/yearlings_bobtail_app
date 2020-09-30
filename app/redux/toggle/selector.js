@@ -4,13 +4,13 @@ export const mapIsAutoScroll = (
     { [TOGGLE_STORE]: { isAutoScroll } }
 ) => isAutoScroll
 
-export const mapIsCarouselShown = (
-    { [TOGGLE_STORE]: { isCarouselShown } }
-) => isCarouselShown
+export const mapIsCarouselExpanded = (
+    { [TOGGLE_STORE]: { isCarouselExpanded } }
+) => isCarouselExpanded
 
-export const mapIsNavShown = (
-    { [TOGGLE_STORE]: { isNavShown } }
-) => isNavShown
+export const mapIsNavExpanded = (
+    { [TOGGLE_STORE]: { isNavExpanded } }
+) => isNavExpanded
 
 export const mapIsDotsSlideShown = (
     { [TOGGLE_STORE]: { isDotsSlideShown } }

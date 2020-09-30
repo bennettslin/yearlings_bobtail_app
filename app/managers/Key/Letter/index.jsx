@@ -4,7 +4,7 @@ import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import {
-    updateIsNavShown,
+    updateIsNavExpanded,
     toggleIsAboutShown,
     updateIsAboutShown,
     updateIsAutoScroll
@@ -48,7 +48,7 @@ import { mapIsOverviewShown } from '../../../redux/overview/selector'
 import { mapIsAnnotationShown } from '../../../redux/selected/selector'
 import { mapIsTipsShown } from '../../../redux/tips/selector'
 import {
-    mapIsNavShown,
+    mapIsNavExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     mapIsScoreShown,
@@ -74,7 +74,7 @@ const LetterManager = forwardRef((props, ref) => {
         isTipsShown = useSelector(mapIsTipsShown),
         isAnnotationShown = useSelector(mapIsAnnotationShown),
         isWikiShown = useSelector(mapIsWikiShown),
-        isNavShown = useSelector(mapIsNavShown),
+        isNavExpanded = useSelector(mapIsNavExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isScoreShown = useSelector(mapIsScoreShown),
@@ -193,8 +193,8 @@ const LetterManager = forwardRef((props, ref) => {
             dispatchLyricExpand.current(false)
 
         // Hide nav.
-        } else if (isNavShown) {
-            dispatch(updateIsNavShown())
+        } else if (isNavExpanded) {
+            dispatch(updateIsNavExpanded())
 
         // Turn access off.
         } else {

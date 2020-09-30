@@ -1,7 +1,7 @@
 export const getIsAccessedIndexedAnchorShown = ({
     isAccessOn,
     isDotsSlideShown,
-    isNavShown,
+    isNavExpanded,
     isLyricExpanded,
     lyricAnnotationIndex,
     isActivated
@@ -12,7 +12,7 @@ export const getIsAccessedIndexedAnchorShown = ({
         !isDotsSlideShown &&
         !isActivated &&
         (
-            !isNavShown ||
+            !isNavExpanded ||
             isLyricExpanded ||
             lyricAnnotationIndex
         )

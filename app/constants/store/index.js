@@ -23,7 +23,7 @@ export const VERSE_BARS_STORE = 'verseBarsStore'
 export const VIEWPORT_STORE = 'viewportStore'
 
 export const IS_ACCESS_ON = 'isAccessOn'
-export const IS_CAROUSEL_SHOWN = 'isCarouselShown'
+export const IS_CAROUSEL_EXPANDED = 'isCarouselExpanded'
 export const SELECTED_DOTS_BIT = 'selectedDotsBit'
 
 export const SELECTED_SONG_INDEX = 'selectedSongIndex'

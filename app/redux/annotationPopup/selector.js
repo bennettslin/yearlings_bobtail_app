@@ -8,7 +8,7 @@ import {
     mapIsLyricExpanded,
     mapIsScoreShown,
     mapIsAboutShown,
-    mapIsCarouselShown
+    mapIsCarouselExpanded
 } from '../toggle/selector'
 import { mapCanCarouselNavMount } from '../viewport/selector'
 import { mapIsWikiShown } from '../wiki/selector'
@@ -30,7 +30,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
     mapLyricAnnotationIndex,
     mapIsAboutShown,
     mapIsScoreShown,
-    mapIsCarouselShown,
+    mapIsCarouselExpanded,
     mapCanCarouselNavMount,
     mapIsOverlayingAnnotation,
     mapIsWikiShown,
@@ -39,7 +39,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         lyricAnnotationIndex,
         isAboutShown,
         isScoreShown,
-        isCarouselShown,
+        isCarouselExpanded,
         canCarouselNavMount,
         isOverlayingAnnotation,
         isWikiShown
@@ -49,7 +49,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         lyricAnnotationIndex,
         isAboutShown,
         isScoreShown,
-        isCarouselShown,
+        isCarouselExpanded,
         canCarouselNavMount,
         isOverlayingAnnotation,
         isWikiShown
