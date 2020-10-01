@@ -15,22 +15,28 @@ export const GENERAL_OPTIONS = [
     DISABLED
 ]
 
-export const IS_CAROUSEL_SHOWN = 'isCarouselShown'
-export const IS_NAV_EXPANDED = 'isNavExpanded'
-export const IS_CAROUSEL_NAV_COLLAPSED = 'isCarouselNavCollapsed'
+export const CLOSE_NAV_NEXT = 'closeNavNext'
+export const SHOW_NAV_NEXT = 'showNavNext'
+export const SHOW_CAROUSEL_FROM_NAV = 'showCarouselFromNav'
+export const SHOW_CAROUSEL_NAV_NEXT = 'showCarouselNavNext'
 
 export const getCarouselNavIdentifier = ({
+    isCarouselNotShowable,
     isCarouselShown,
     isNavExpanded
 
 }) => {
     if (isCarouselShown) {
-        return IS_CAROUSEL_SHOWN
+        return SHOW_NAV_NEXT
 
     } else if (isNavExpanded) {
-        return IS_NAV_EXPANDED
+        return isCarouselNotShowable ?
+            CLOSE_NAV_NEXT :
+            SHOW_CAROUSEL_FROM_NAV
 
     } else {
-        return IS_CAROUSEL_NAV_COLLAPSED
+        return isCarouselNotShowable ?
+            SHOW_NAV_NEXT :
+            SHOW_CAROUSEL_NAV_NEXT
     }
 }

@@ -1,9 +1,5 @@
 export default [
     {
-        taskName: `Show nav in logue?`,
-        workedHours: 8
-    },
-    {
         taskName: `Finalise text styling of different annotation cards.`,
         workedHours: 0,
         neededHours: 5

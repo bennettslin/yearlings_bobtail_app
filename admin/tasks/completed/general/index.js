@@ -4926,5 +4926,9 @@ export default [
     {
         taskName: `Wormhole carousel scroll, playing next song, and nav button hover fixes.`,
         workedHours: 8
+    },
+    {
+        taskName: `Show nav in logue.`,
+        workedHours: 9
     }
 ]

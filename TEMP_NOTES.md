@@ -11,7 +11,7 @@
         * When nav is expanded, clicking out or tapping escape collapses both. [x]
         * Expanding nav collapses dots slide and deselects selected annotation. [x]
     * Figure out isCarouselShowable. Have another selector for logue and selected dots. [x]
-    * There should be a different icon for carousel nav toggle when carousel cannot be shown, such as when no dots are selected or it's in logue.
+    * There should be a different icon for carousel nav toggle when carousel cannot be shown, such as when no dots are selected or it's in logue. [x]
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

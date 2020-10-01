@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect'
+import { getCarouselNavIdentifier } from '../../constants/options'
 import { getIsCarouselOrNavShowable } from '../../helpers/main'
 import { mapIsActivated } from '../activated/selector'
 import { mapSelectedDotsBit } from '../dots/selector'
@@ -6,7 +7,11 @@ import { mapIsLyricLogue } from '../lyric/selector'
 import { mapIsOverlayShown } from '../overlay/selector'
 import { mapIsOverviewShown } from '../overview/selector'
 import { mapIsTipsShown } from '../tips/selector'
-import { mapIsLyricExpanded } from '../toggle/selector'
+import {
+    mapIsCarouselShown,
+    mapIsLyricExpanded,
+    mapIsNavExpanded
+} from '../toggle/selector'
 
 // It's more semantically clear to say when carousel is *not* showable.
 export const mapIsCarouselNotShowable = createSelector(
@@ -56,4 +61,19 @@ export const mapIsOnlyNavShowable = createSelector(
         isCarouselNavShowable,
         isNavShowable
     ) => isNavShowable && !isCarouselNavShowable
+)
+
+export const mapCarouselNavIdentifier = createSelector(
+    mapIsCarouselNotShowable,
+    mapIsCarouselShown,
+    mapIsNavExpanded,
+    (
+        isCarouselNotShowable,
+        isCarouselShown,
+        isNavExpanded
+    ) => getCarouselNavIdentifier({
+        isCarouselNotShowable,
+        isCarouselShown,
+        isNavExpanded
+    })
 )

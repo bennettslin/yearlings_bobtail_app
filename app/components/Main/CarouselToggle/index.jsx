@@ -7,12 +7,8 @@ import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
 import { CAROUSEL_TOGGLE_KEY } from '../../../constants/access'
 import { CAROUSEL_NAV_BUTTON_KEY } from '../../../constants/buttons'
-import { getCarouselNavIdentifier } from '../../../constants/options'
 import { CAROUSEL, NAV } from '../../../constants/tips'
-import {
-    mapIsCarouselShown,
-    mapIsNavExpanded
-} from '../../../redux/toggle/selector'
+import { mapCarouselNavIdentifier } from '../../../redux/carousel/selector'
 import { mapCanCarouselNavMount } from '../../../redux/viewport/selector'
 import './style'
 
@@ -20,8 +16,7 @@ const CarouselToggle = () => {
     const
         dispatchCarouselNav = useRef(),
         canCarouselNavMount = useSelector(mapCanCarouselNavMount),
-        isCarouselShown = useSelector(mapIsCarouselShown),
-        isNavExpanded = useSelector(mapIsNavExpanded)
+        carouselNavIdentifier = useSelector(mapCarouselNavIdentifier)
 
     const handleButtonClick = () => {
         dispatchCarouselNav.current()
@@ -35,10 +30,7 @@ const CarouselToggle = () => {
                 isLargeSize
                 {...{
                     buttonName: CAROUSEL_NAV_BUTTON_KEY,
-                    buttonIdentifier: getCarouselNavIdentifier({
-                        isCarouselShown,
-                        isNavExpanded
-                    }),
+                    buttonIdentifier: carouselNavIdentifier,
                     accessKey: CAROUSEL_TOGGLE_KEY,
                     handleButtonClick
                 }}
