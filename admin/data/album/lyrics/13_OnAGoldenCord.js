@@ -925,15 +925,15 @@ export default {
                             anchor: `alias drunk, in panic`,
                             cards: [
                                 {
-                                    description: `As I sober up, panicked doubt creeps in. I begin to question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
                                     description: `Once drunk, I always stayed drunk until I crashed. As such, I was quite used to transforming into Garry, but Garry was wholly unfamiliar with returning back to me.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
+                                    }
+                                },
+                                {
+                                    description: `As I sober up, panicked doubt creeps in. I begin to question if dating woman after woman will really fulfill me, and whether my newfound ability to attract them isn't a fluke.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
                                     }
                                 }
                             ]

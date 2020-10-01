@@ -1,5 +1,5 @@
-import narrative from '../../../../assets/svgs/app/dots/narrative'
 import backstory from '../../../../assets/svgs/app/dots/backstory'
+import narrative from '../../../../assets/svgs/app/dots/narrative'
 import observation from '../../../../assets/svgs/app/dots/observation'
 import pun from '../../../../assets/svgs/app/dots/pun'
 import reference from '../../../../assets/svgs/app/dots/reference'
@@ -8,8 +8,8 @@ import songwriting from '../../../../assets/svgs/app/dots/songwriting'
 import afterword from '../../../../assets/svgs/app/dots/afterword'
 
 import {
-    NARRATIVE,
     BACKSTORY,
+    NARRATIVE,
     OBSERVATION,
     PUN,
     REFERENCE,
@@ -19,8 +19,8 @@ import {
 } from '../../../constants/dots'
 
 export default {
-    [NARRATIVE]: narrative,
     [BACKSTORY]: backstory,
+    [NARRATIVE]: narrative,
     [OBSERVATION]: observation,
     [PUN]: pun,
     [REFERENCE]: reference,

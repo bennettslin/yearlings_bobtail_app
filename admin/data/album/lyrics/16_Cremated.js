@@ -435,16 +435,16 @@ export default {
                             anchor: `Trophy bronzed from a Trojan`,
                             cards: [
                                 {
-                                    description: `Having climaxed first, Miriam wraps up our little tryst by yanking the condom off and giving me a blowjob.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
                                     description: `The first time I had sex with a woman other than Sita, I was so amazed that I left the used condom on my nightstand for days, much like a proud parent might bronze their baby's first pair of shoes.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
+                                    }
+                                },
+                                {
+                                    description: `Having climaxed first, Miriam wraps up our little tryst by yanking the condom off and giving me a blowjob.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
                                     }
                                 },
                                 {
@@ -830,21 +830,17 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
-                                    description: [
-                                        `My imagined scenario ends with Miriam feeling mightily relieved, knowing that in her gene pool, "here's not where some lesser god has peed."`
-                                    ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true,
-                                        [PUN]: true
-                                    }
-                                },
-                                {
-                                    description: [
-                                        `To compound the insecurities I felt about being raised Buddhist, my complexion was also different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`
-                                    ],
+                                    description: `To compound the insecurities I felt about being raised Buddhist, my complexion was also different from that of everyone else in Sasha's world. And so my inferiority complex failed to distinguish between carrying faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
+                                    }
+                                },
+                                {
+                                    description: `My imagined scenario ends with Miriam feeling mightily relieved, knowing that in her gene pool, "here's not where some lesser god has peed."`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true
                                     }
                                 }
                             ]

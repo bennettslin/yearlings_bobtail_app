@@ -14,8 +14,8 @@ export const SONGWRITING = 'songwriting'
 
 // Order matters!
 export const ORDERED_DOT_KEYS = [
-    NARRATIVE,
     BACKSTORY,
+    NARRATIVE,
     OBSERVATION,
     PUN,
     REFERENCE,
@@ -27,8 +27,8 @@ export const ORDERED_DOT_KEYS = [
 export const DOT_KEYS_COUNT = ORDERED_DOT_KEYS.length
 
 export const DOT_DESCRIPTIONS = {
-    [NARRATIVE]: 'The story as it happens.',
     [BACKSTORY]: 'What took place before.',
+    [NARRATIVE]: 'The story as it happens.',
     [OBSERVATION]: 'Just my two cents.',
     [PUN]: 'Both the "literary" and "bad" variety.',
     [REFERENCE]: 'Link to a Wikipedia page.',

@@ -290,15 +290,15 @@ export default {
                             anchor: `reflex you asked.`,
                             cards: [
                                 {
-                                    description: `Taken aback by her beauty, I hand Sita the lancet pen and begin to engage her in conversation.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
                                     description: `By then, I was mostly on autopilot when it came to hitting on random women in random situations.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
+                                    }
+                                },
+                                {
+                                    description: `Taken aback by her beauty, I hand Sita the lancet pen and begin to engage her in conversation.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
                                     }
                                 }
                             ]

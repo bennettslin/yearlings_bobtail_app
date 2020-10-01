@@ -222,12 +222,6 @@ export default {
                             anchor: `pinhead in its shadow`,
                             cards: [
                                 {
-                                    description: `Willy peers through an empty soda bottle, the top of which is tapered like the outline of his skull.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
                                     description: [
                                         `Willy had`,
                                         {
@@ -243,6 +237,12 @@ export default {
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
+                                    }
+                                },
+                                {
+                                    description: `Willy peers through an empty soda bottle, the top of which is tapered like the outline of his skull.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
                                     }
                                 }
                             ]
@@ -536,15 +536,15 @@ export default {
                             anchor: `pages clawed,`,
                             cards: [
                                 {
-                                    description: `Unfortunately, the comic book I'd been reading on the floor just a minute ago has somehow made its way into my brother's scrap pile.`,
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
                                     description: `My brother enjoyed cutting shapes of alphabet letters out of scrap paper. Since this was a creative activity that kept him occupied, my parents encouraged it and kept a pile of old magazines freshly stocked for him.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
+                                    }
+                                },
+                                {
+                                    description: `Unfortunately, the comic book I'd been reading on the floor just a minute ago has somehow made its way into my brother's scrap pile.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
                                     }
                                 }
                             ]

@@ -1059,15 +1059,15 @@ export default {
                         anchor: `I sigh, "Good night."`,
                         cards: [
                             {
-                                description: `Flustered panic takes over, and once again all my feelings go unmentioned.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            },
-                            {
                                 description: `I walked home that night determined not to let another opportunity pass without confessing my feelings to Sita. I did exactly that in a phone call a few days later. It went horribly, and I didn't hear from her again for months.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                description: `Flustered panic takes over, and once again all my feelings go unmentioned.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
                                 }
                             }
                         ]

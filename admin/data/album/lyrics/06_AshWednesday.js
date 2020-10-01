@@ -319,13 +319,20 @@ export default {
                         `Oh Catherine,`,
                         {
                             anchor: `pressed for an opinion,`,
-                            card: {
-                                description: `Wanting to write the kind of song that could tug on Catherine's heartstrings, I would sometimes ask her for honest feedback. And so in this imagined scenario, I picture myself asking for a critique of the lyrics in this very song.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [NARRATIVE]: true
+                            cards: [
+                                {
+                                    description: `Wanting to write the kind of song that could tug on Catherine's heartstrings, I would sometimes ask her for honest feedback.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
+                                },
+                                {
+                                    description: `In this imagined scenario, I picture myself asking Catherine for a critique of the lyrics in this very song.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
                                 }
-                            }
+                            ]
                         },
                         `sighed,`
                     ]

@@ -1322,16 +1322,16 @@ export default {
                         anchor: `old and subservient.`,
                         cards: [
                             {
+                                description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But that this awareness had to come about through assigned coursework on the history of immigration, rather than through my own lived experiences, only further added to my guilt.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
                                 description: `Amongst those I ruled over were my parents, now feeble and senile after a lifetime of following their "son's" bidding.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
-                                }
-                            },
-                            {
-                                description: `It wasn't until college that I learned to appreciate the sacrifices my parents had made for me and my siblings to lead better lives than their own. But that this awareness had to come about through assigned coursework on the history of immigration, rather than through my own lived experiences, only further added to my guilt.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true
                                 }
                             }
                         ]

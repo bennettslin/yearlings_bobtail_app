@@ -212,24 +212,6 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `The`,
-                                        {
-                                            anchor: `Vikings`,
-                                            wiki: `Vikings`
-                                        },
-                                        `were Norse seafarers who expanded outward from`,
-                                        {
-                                            anchor: `Scandinavia`,
-                                            wiki: `Scandinavia`
-                                        },
-                                        `beginning in the 8th century. Like them, we have left the comfort of our dens to explore new vistas.`
-                                    ],
-                                    dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                },
-                                {
-                                    description: [
                                         `Ana's friends Howie and Tomer were seasoned drug users but had never taken Robitussin before. Given that it is sold`,
                                         {
                                             anchor: `over the counter,`,
@@ -245,6 +227,24 @@ export default {
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true
+                                    }
+                                },
+                                {
+                                    description: [
+                                        `The`,
+                                        {
+                                            anchor: `Vikings`,
+                                            wiki: `Vikings`
+                                        },
+                                        `were Norse seafarers who expanded outward from`,
+                                        {
+                                            anchor: `Scandinavia`,
+                                            wiki: `Scandinavia`
+                                        },
+                                        `beginning in the 8th century. Like them, we have left the comfort of our dens to explore new vistas.`
+                                    ],
+                                    dotKeys: {
+                                        [NARRATIVE]: true
                                     }
                                 }
                             ]
@@ -1858,6 +1858,12 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
+                                    description: `Howie had opted for the large bottle of Robitussin, thinking the small one I had recommended wouldn't be enough.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
+                                },
+                                {
                                     description: [
                                         `In the historical narrative still playing in my head, the`,
                                         {
@@ -1879,12 +1885,6 @@ export default {
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
-                                    }
-                                },
-                                {
-                                    description: `Howie had opted for the large bottle of Robitussin, thinking the small one I had recommended wouldn't be enough.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true
                                     }
                                 }
                             ]
