@@ -1,7 +1,7 @@
 export default [
     {
         taskName: `Finalise text styling of different annotation cards.`,
-        workedHours: 0,
+        workedHours: 2,
         neededHours: 5
     },
     {
