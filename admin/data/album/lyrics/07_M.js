@@ -251,9 +251,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this manner would be.`
-                    ],
+                    description: `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this manner would be.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -871,9 +869,7 @@ export default {
                         {
                             anchor: `be alert;`,
                             card: {
-                                description: [
-                                    `In short, it was no mystery why the situation with Mara had transpired the way it had. I found this thought to be empowering, because it meant that the Maras of the world might still be attainable. It was just on me to figure out what they wanted. And once I knew, I could build myself up to be exactly that.`
-                                ],
+                                description: `In short, it was no mystery why the situation with Mara had transpired the way it had. I found this thought to be empowering, because it meant that the Maras of the world might still be attainable. It was just on me to figure out what they wanted. And once I knew, I could build myself up to be exactly that.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }

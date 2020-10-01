@@ -384,9 +384,7 @@ export default {
                         {
                             anchor: `she drums her toes.`,
                             card: {
-                                description: [
-                                    `Of course, he actually sways because Miriam, who happens to be my all-American goddess, is humming along and tapping the underside of the dashboard with her feet.`
-                                ],
+                                description: `Of course, he actually sways because Miriam, who happens to be my all-American goddess, is humming along and tapping the underside of the dashboard with her feet.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true

@@ -183,9 +183,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `The root progression here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, melodicas hurriedly catch up by compressing a warped version of this descending pattern into a single measure.`
-                    ],
+                    description: `The root progression here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, melodicas hurriedly catch up by compressing a warped version of this descending pattern into a single measure.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }
@@ -656,9 +654,7 @@ export default {
                         {
                             anchor: `Killcrop`,
                             card: {
-                                description: [
-                                    `In English folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of past times, when children unable to earn their keep could lead to a peasant family's ruin.`
-                                ],
+                                description: `In English folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of past times, when children unable to earn their keep could lead to a peasant family's ruin.`,
                                 dotKeys: {
                                     [REFERENCE]: true
                                 }
@@ -929,9 +925,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `To play the electric guitar riff here, I used both a glass slide and the whammy bar. Since each of these tools can bend pitch on its own, it makes little sense to combine them, which is exactly why a troll musician would do so.`
-                    ],
+                    description: `To play the electric guitar riff here, I used both a glass slide and the whammy bar. Since each of these tools can bend pitch on its own, it makes little sense to combine them, which is exactly why a troll musician would do so.`,
                     dotKeys: {
                         [OBSERVATION]: true,
                         [SONGWRITING]: true
@@ -1091,9 +1085,7 @@ export default {
                         {
                             anchor: `seventy years`,
                             card: {
-                                description: [
-                                    `My mother tells me not to worry, since I'm not going to die for a long while. She then assures me that when my time finally does come, perhaps in another seventy years or so, I will have long made peace with death somehow.`
-                                ],
+                                description: `My mother tells me not to worry, since I'm not going to die for a long while. She then assures me that when my time finally does come, perhaps in another seventy years or so, I will have long made peace with death somehow.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }

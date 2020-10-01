@@ -715,9 +715,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `The sound of rocket circuitry in the background was made by banging an electric guitar against the carpet floor while bending its whammy bar. It took countless tries, and I kept having to retune because the tuning would get messed up each time.`
-                    ],
+                    description: `The sound of rocket circuitry in the background was made by banging an electric guitar against the carpet floor while bending its whammy bar. It took countless tries, and I kept having to retune because the tuning would get messed up each time.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }

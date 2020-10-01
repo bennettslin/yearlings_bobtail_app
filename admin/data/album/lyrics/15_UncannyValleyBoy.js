@@ -456,9 +456,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: [
-                                        `Perhaps my parents also snidely allude to my erstwhile belief that I was born from the stars. Or as they put it, that I'm "a Martian."`
-                                    ],
+                                    description: `Perhaps my parents also snidely allude to my erstwhile belief that I was born from the stars. Or as they put it, that I'm "a Martian."`,
                                     dotKeys: {
                                         [PUN]: true
                                     }
@@ -987,9 +985,7 @@ export default {
                             anchor: `dead ants:`,
                             cards: [
                                 {
-                                    description: [
-                                        `As Ratnakar chanted Rama's name, his concentration was so intense that an anthill formed over him and he remained undisturbed for years. And so he came to be known as Valmiki, which means "anthill" in Sanskrit.`
-                                    ],
+                                    description: `As Ratnakar chanted Rama's name, his concentration was so intense that an anthill formed over him and he remained undisturbed for years. And so he came to be known as Valmiki, which means "anthill" in Sanskrit.`,
                                     dotKeys: {
                                         [REFERENCE]: true
                                     }
@@ -1055,17 +1051,13 @@ export default {
                             anchor: `fairer marathon!`,
                             cards: [
                                 {
-                                    description: [
-                                        `The constant one-upmanship wasn't just petty. It was exhausting to keep an inner tally of every time I felt slighted. I wanted life to feel more like a marathon that rewards patience and resolve. Since I possessed those traits in spades, that seemed most fair to me.`
-                                    ],
+                                    description: `The constant one-upmanship wasn't just petty. It was exhausting to keep an inner tally of every time I felt slighted. I wanted life to feel more like a marathon that rewards patience and resolve. Since I possessed those traits in spades, that seemed most fair to me.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
                                 },
                                 {
-                                    description: [
-                                        `"Marathon" sounds like Mara's full name spoken with a lisp.`
-                                    ],
+                                    description: `"Marathon" sounds like Mara's full name spoken with a lisp.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [PUN]: true

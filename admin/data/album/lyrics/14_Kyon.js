@@ -129,9 +129,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `I tried to write this song from Sita's perspective. In retrospect, my portrayal might be a bit one-dimensional. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`
-                    ],
+                    description: `I tried to write this song from Sita's perspective. In retrospect, my portrayal might be a bit one-dimensional. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
                         [SONGWRITING]: true
@@ -674,9 +672,7 @@ export default {
                         {
                             anchor: `fear of never dying,`,
                             card: {
-                                description: [
-                                    `Sita could relate to my fear of immortality. Growing up Hindu in America, she had compared nirvana with heaven herself, and found both to be lacking. Though she had no ready answers, she invited me to attend services with her. There, I learned all about Hinduism's sprawling pantheon of deities and avatars, which I found to be comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`
-                                ],
+                                description: `Sita could relate to my fear of immortality. Growing up Hindu in America, she had compared nirvana with heaven herself, and found both to be lacking. Though she had no ready answers, she invited me to attend services with her. There, I learned all about Hinduism's sprawling pantheon of deities and avatars, which I found to be comforting. It just seemed like the more details there are to learn, the more room there is to get lost in the divine.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true

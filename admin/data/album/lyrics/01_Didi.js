@@ -429,9 +429,7 @@ export default {
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
-                    description: [
-                        `"Wouldn't It Be Nice" is once again evoked here, this time by modulating down a minor third to segue into the bridge.`
-                    ],
+                    description: `"Wouldn't It Be Nice" is once again evoked here, this time by modulating down a minor third to segue into the bridge.`,
                     dotKeys: {
                         [SONGWRITING]: true
                     }

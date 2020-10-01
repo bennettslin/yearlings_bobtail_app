@@ -1273,9 +1273,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: [
-                                        `I'm reminded that Sita is my "grace darling," having rescued me from a sea of loneliness.`
-                                    ],
+                                    description: `I'm reminded that Sita is my "grace darling," having rescued me from a sea of loneliness.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true

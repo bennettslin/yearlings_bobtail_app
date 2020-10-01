@@ -84,9 +84,7 @@ export default {
                             anchor: `reverends, paused`,
                             cards: [
                                 {
-                                    description: [
-                                        `We tread with "reverence" through the UCLA campus. Since I am the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey.`
-                                    ],
+                                    description: `We tread with "reverence" through the UCLA campus. Since I am the experienced Robitussin user of the group, the others follow my lead in treating it as a mystical journey.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -337,9 +335,7 @@ export default {
                                     }
                                 },
                                 {
-                                    description: [
-                                        `The Walgreens aisles might be referred to as "Wal-halls," as they are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… and so forth.`
-                                    ],
+                                    description: `The Walgreens aisles might be referred to as "Wal-halls," as they are stocked with generic versions of brand-name drugs, each with the prefix "Wal" in its name: Wal-Dryl, Wal-Phed… and so forth.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }

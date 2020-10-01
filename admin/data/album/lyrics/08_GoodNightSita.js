@@ -394,9 +394,7 @@ export default {
 
                             cards: [
                                 {
-                                    description: [
-                                        `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek is a chrysalis. That is, a rare specimen of female so new to this world that my own lack of worldly ways is rendered moot. Of course, every other low-status male out there has the same idea.`
-                                    ],
+                                    description: `As we pass a display on the butterfly lifecycle, it occurs to me that what I seek is a chrysalis. That is, a rare specimen of female so new to this world that my own lack of worldly ways is rendered moot. Of course, every other low-status male out there has the same idea.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [OBSERVATION]: true

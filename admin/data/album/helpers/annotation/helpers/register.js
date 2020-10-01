@@ -53,10 +53,6 @@ const _getHasWikiAnchor = (description) => {
 const _addCardDotKeysToAnnotation = (card, dotKeys) => {
     // Add dot keys to both song and annotation card.
     if (card.dotKeys) {
-        if (dotKeys.narrative && card.dotKeys.afterword) {
-            console.log(card)
-        }
-
         Object.keys(card.dotKeys).forEach(dotKey => {
             dotKeys[dotKey] = true
         })
