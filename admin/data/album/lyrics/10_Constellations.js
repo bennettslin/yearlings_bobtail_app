@@ -1595,6 +1595,7 @@ export default {
                                         `the most renowned Norse goddess.`
                                     ],
                                     dotKeys: {
+                                        [NARRATIVE]: true,
                                         [PUN]: true
                                     }
                                 }

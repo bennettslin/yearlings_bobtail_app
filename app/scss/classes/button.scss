@@ -36,14 +36,13 @@
 
 .ButtonIcon__carouselNav {
     fill: hsl(165, 67%, 80%);
-    .cardBack { fill: $bgColour__annotation__dark; }
-    .cardFront { fill: $bgColour__annotation; }
-    .annotation { fill: $bgColour__annotationCard; }
+    .cardBack { fill: $colour__annotation__dark; }
+    .cardFront { fill: $colour__annotation; }
+    .annotation { fill: $colour__annotationCard; }
 }
 
 .ButtonIcon__carouselNext {
     transform: scaleX(-1);
-
     .arrow { fill: hsl(27, 100%, 75%) };
 }
 
@@ -52,7 +51,7 @@
 }
 
 .ButtonIcon__wormhole {
-    fill: hsl(240, 33%, 80%);
+    fill: $colour__wormhole;
 }
 
 .ButtonIcon__lyricEar {
@@ -75,9 +74,9 @@
 }
 
 .ButtonIcon__dotsSlide {
-    .narrative { fill: $bgColour__dot__narrative; }
-    .backstory { fill: $bgColour__dot__backstory; }
-    .observation { fill: $bgColour__dot__observation; }
+    .narrative { fill: $colour__narrative; }
+    .backstory { fill: $colour__backstory; }
+    .observation { fill: $colour__observation; }
 }
 
 .ButtonIcon__overview {

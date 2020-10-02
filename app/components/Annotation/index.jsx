@@ -45,7 +45,7 @@ const Annotation = ({
                         ...didMount && {
                             className: cx(
                                 'Annotation__cardField',
-                                'bgColour__annotation',
+                                'colour__annotation',
                                 'bgColour__annotation__pattern',
                                 isSelected && 'bgColour__annotation__selected',
                                 'boxShadow__annotation',

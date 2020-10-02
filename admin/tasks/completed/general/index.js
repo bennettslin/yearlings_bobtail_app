@@ -4930,5 +4930,9 @@ export default [
     {
         taskName: `Show nav in logue.`,
         workedHours: 9
+    },
+    {
+        taskName: `Finalise text styling of different annotation cards.`,
+        workedHours: 5
     }
 ]

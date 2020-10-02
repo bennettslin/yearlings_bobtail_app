@@ -72,7 +72,7 @@ const AnnotationTitle = ({
 
                     isDot && 'AnnotationTitle__dot',
 
-                    'bgColour__annotation',
+                    'colour__annotation',
                     'bgColour__annotation__pattern',
                     'bgColour__annotation__pattern__reverse',
 

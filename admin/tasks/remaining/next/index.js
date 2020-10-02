@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Finalise text styling of different annotation cards.`,
-        workedHours: 2,
-        neededHours: 5
-    },
-    {
         taskName: `Animate in presences. Plus cube and presence transition order.`,
         workedHours: 0,
         neededHours: 30

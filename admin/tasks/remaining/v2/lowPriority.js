@@ -59,6 +59,11 @@ export default [
         neededHours: 5
     },
     {
+        taskName: `Consolidate button colours.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Slider verse select ranges don't really align with hover ranges.`,
         workedHours: 0,
         neededHours: 3

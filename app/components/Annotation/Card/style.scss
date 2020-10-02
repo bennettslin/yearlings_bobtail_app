@@ -61,17 +61,17 @@
 }
 
 .AnnotationCard {
-    background-color: $bgColour__annotationCard;
+    background-color: $colour__annotationCard;
 }
 
 .AnnotationCard__backstory {
-    background-color: $COLOUR__PAST__LIGHTER;
+    background-color: $colour__annotationCard__past;
 }
 
 .AnnotationCard__narrative {
-    background-color: $colour__present__lighter;
+    background-color: $colour__annotationCard__present;
 }
 
 .AnnotationCard__afterword {
-    background-color: $COLOUR__FUTURE__LIGHTER;
+    background-color: $colour__annotationCard__future;
 }

@@ -18,6 +18,8 @@ $sat__darker: 34%;
 $lum__lightest: 96%;
 $lum__lighter: 94%;
 $lum__light: 90%;
+$lum__medLightest: 87%;
+$lum__medLighter: 83%;
 $lum__medLight: 78%;
 $lum__medium: 73%;
 $lum__dark: 63%;
@@ -91,24 +93,28 @@ $colour__interact__light: hsl($hue__interact, $sat__light, $lum__link__light);
 $colour__interact__medium: hsl($hue__interact, $sat__medium, $lum__medium);
 
 // Annotation and Wormhole colours.
-$bgColour__annotation__dark: hsl($hue__paused, 8%, 62%); // For carousel button.
-$bgColour__annotation: hsl($hue__paused, 8%, 85%);
+$colour__annotation__dark: hsl($hue__paused, 8%, 62%); // For carousel button.
+$colour__annotation: hsl($hue__paused, 8%, 85%);
 $colour__annotation__selected: hsl($hue__select, 100%, 93%);
-$bgColour__annotationCard: hsl(0, 0%, $lum__lightest);
-$bgColour__annotationWormhole: hsl(0, 4%, 85%);
-$colour__annotationWormhole__title: hsl(0, 0%, 70%);
-$colour__present__lighter: hsl($hue__playing, $sat__lighter, $lum__lightest);
+
+$colour__annotationCard: hsl(0, 0%, $lum__lightest);
+$colour__annotationCard__past: hsl($hue__past, $sat__lighter, $lum__lightest);
+$colour__annotationCard__present: hsl($hue__present, $sat__lighter, $lum__lightest);
+$colour__annotationCard__future: hsl($hue__future, $sat__lighter, $lum__lightest);
+
+$colour__annotationWormhole: hsl($hue__wormhole, $sat__lighter, $lum__lightest);
+$colour__annotationWormhole__title: hsl($hue__wormhole, 2%, 60%);
 
 // Dot colours.
-$bgColour__dot__narrative: hsl(315, 87%, 87%);
-$bgColour__dot__backstory: hsl(36, 87%, 83%);
-$bgColour__dot__observation: hsl(90, 87%, 80%);
-$bgColour__dot__pun: hsl(192, 87%, 83%);
-$bgColour__dot__reference: hsl(150, 87%, 80%);
-$bgColour__dot__wormhole: hsl(225, 87%, 87%);
-$bgColour__dot__songwriting: hsl(0, 87%, 87%);
-$bgColour__dot__afterword: hsl(60, 67%, 80%);
-$bgColour__dot__deselected: $colour__neutral__light;
+$colour__backstory: hsl($hue__backstory, $sat__light, $lum__medLight);
+$colour__narrative: hsl($hue__narrative, $sat__lighter, $lum__medLight);
+$colour__observation: hsl($hue__observation, $sat__lighter, $lum__medLightest);
+$colour__pun: hsl($hue__pun, $sat__lighter, $lum__medLight);
+$colour__reference: hsl($hue__reference, $sat__light, $lum__medLight);
+$colour__wormhole: hsl($hue__wormhole, $sat__lighter, $lum__medLighter);
+$colour__songwriting: hsl($hue__songwriting, $sat__lighter, $lum__medLighter);
+$colour__afterword: hsl($hue__afterword, $sat__lighter, $lum__medLightest);
+$colour__deselected: $colour__neutral__light;
 
 // Song stanza colours.
 $bgColour__formType__verse: hsl(210, 35, 40);
