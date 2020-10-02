@@ -60,10 +60,18 @@
     }
 }
 
-.AnnotationCard__isText {
+.AnnotationCard {
     background-color: $bgColour__annotationCard;
 }
 
-.AnnotationCard__wormhole {
-    background-color: $bgColour__annotationCard;
+.AnnotationCard__backstory {
+    background-color: $COLOUR__PAST__LIGHTER;
+}
+
+.AnnotationCard__narrative {
+    background-color: $colour__present__lighter;
+}
+
+.AnnotationCard__afterword {
+    background-color: $COLOUR__FUTURE__LIGHTER;
 }

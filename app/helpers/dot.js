@@ -18,6 +18,10 @@ export const getDotsBitFromKeys = dotKeys => (
     }) : null
 )
 
+export const getDotsBitHasKey = (dotsBit, key) => (
+    Boolean(getDotKeysFromBit(dotsBit)[key])
+)
+
 export const getFirstSelectedDotKey = (dotsBit = 0, selectedDotsBit) => {
     const
         dotKeys = getDotKeysFromBit(dotsBit),

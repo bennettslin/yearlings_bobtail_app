@@ -12,7 +12,9 @@ import {
     getDescriptionForAnnotationCard,
     getDotsBitForAnnotationCard
 } from '../../../api/album/cards'
+import { getDotsBitHasKey } from '../../../helpers/dot'
 import { getMapHasSelectedDot } from '../../../redux/dots/selector'
+import { BACKSTORY, NARRATIVE, AFTERWORD } from '../../../constants/dots'
 import './style'
 
 const AnnotationCard = ({
@@ -56,7 +58,15 @@ const AnnotationCard = ({
                         'AnnotationCard',
                         didMount && [
                             description ?
-                                'AnnotationCard__isText' :
+                                [
+                                    'AnnotationCard__isText',
+                                    getDotsBitHasKey(dotsBit, BACKSTORY) &&
+                                        'AnnotationCard__backstory',
+                                    getDotsBitHasKey(dotsBit, NARRATIVE) &&
+                                        'AnnotationCard__narrative',
+                                    getDotsBitHasKey(dotsBit, AFTERWORD) &&
+                                        'AnnotationCard__afterword'
+                                ] :
                                 'AnnotationCard__wormhole',
                             'fontSize__verse'
                         ]
