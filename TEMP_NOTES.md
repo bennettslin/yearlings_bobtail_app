@@ -1,5 +1,4 @@
 # TODO:
-* Reposition Khari?
 * Reposition lizThoughtReunion, bubbles
 
 # Annotation edit TODO:

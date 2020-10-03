@@ -59,9 +59,9 @@ export default {
             xPosition: 8.875
         },
         [LIZ_GATE_INSIDE]: {
-            yIndex: -1,
+            yIndex: 0,
             xPosition: 6,
-            zOffset: 0.7
+            scaleFactor: 0.78
         }
     },
     [PANEL]: {

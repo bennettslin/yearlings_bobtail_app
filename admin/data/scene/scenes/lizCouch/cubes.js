@@ -44,7 +44,7 @@ const DEFAULT_CEILING = {
 
 const DEFAULT_FLOOR = {
     hslaColours: [
-        [A, A, A, A, A, V, V, V, A],
+        [V],
         [F, F, F, F, W, W, W, W, W, F],
         [F],
         [F, U, U, U, F],
@@ -52,7 +52,7 @@ const DEFAULT_FLOOR = {
         [F]
     ],
     zIndices: [
-        [6, 6, 6, 6, 6, 1, 1, 1, 6],
+        [1],
         [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
         [1],
         [1, 7, 3, 3, 1],
@@ -70,7 +70,7 @@ export default {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [A, A, A, A, A, V, V, V, A],
+                [V],
                 [F, F, F, F, W, W, W, W, W, F],
                 [F],
                 [F, U, U, U, F],
@@ -78,7 +78,7 @@ export default {
                 [F]
             ],
             zIndices: [
-                [6, 6, 6, 6, 6, 1, 1, 1, 6],
+                [1],
                 [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
                 [1],
                 [1, 7, 3, 3, 1],
