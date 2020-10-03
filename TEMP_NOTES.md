@@ -1,5 +1,4 @@
 # TODO:
-* Have extra scene in Look Back for thought
 * Reposition Khari?
 * Reposition lizThoughtReunion, bubbles
 

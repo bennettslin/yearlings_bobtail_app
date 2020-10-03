@@ -252,6 +252,51 @@ export default [
                     }
                 }
             },
+            [FIXTURE]: {
+                [LIZ_PHONE]: true,
+                [LIZ_PHONE_REFLECTION]: true,
+                [BENNETT_SHOE]: true,
+                [BENNETT_SHOE_REFLECTION]: true
+            },
+            [FURNITURE]: {
+                [LIZ_PILLOWS]: true,
+                [LIZ_PILLOWS_REFLECTION]: true
+            },
+            [PANEL]: {
+                [LIZ_BED]: true
+            }
+        },
+        cubes: LIZ_BED_KEY,
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
+    },
+    {
+        unitIndex: 13,
+        description: `Bennett is back home, sitting on the edge of Sita's bed. Sita is half asleep, looking peaceful, and is reaching towards him. He does not respond. In his thought bubble, he is reaching for the redhead, who is in bed in place of Sita.`,
+        presences: {
+            [ACTOR]: {
+                [BENNETT]: {
+                    description: 'side, sitting on edge of bed, discontented',
+                    instance: REMOVING_SHOES
+                },
+                [BENNETT_REFLECTION]: {
+                    reflection: {
+                        description: 'reflection',
+                        instance: SHOES_REFLECTION
+                    }
+                },
+                [LIZ]: {
+                    sita: {
+                        description: 'lying, reaching forward to touch Bennett',
+                        instance: ASLEEP_REACHING
+                    }
+                },
+                [LIZ_REFLECTION]: {
+                    reflection: {
+                        description: 'reflection',
+                        instance: REACHING_REFLECTION
+                    }
+                }
+            },
             [BUBBLE]: {
                 [BUBBLE_SMALL__AMY]: true,
                 [BUBBLE_MEDIUM__AMY]: true,
