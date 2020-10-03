@@ -8,8 +8,8 @@ import {
     PANEL
 } from '../../../../../app/constants/scene/things'
 import {
-    DOGS_SKETCH,
-    SKETCHBOOK__DOGS
+    SKETCH_DOGS_ROCKET,
+    SKETCHBOOK__DOGS_ROCKET
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
     TINTIN_POSTER,
@@ -147,13 +147,13 @@ export const THINGS_BEDROOM_FEARFUL = {
 
 export const THINGS_BEDROOM_GUILTY = {
     [BUBBLE]: {
-        [SKETCHBOOK__DOGS]: {
+        [SKETCHBOOK__DOGS_ROCKET]: {
             yIndex: 5,
             xPosition: 3,
             zOffset: 1.5,
             scaleFactor: 0.25
         },
-        [DOGS_SKETCH]: {
+        [SKETCH_DOGS_ROCKET]: {
             yIndex: 5,
             xPosition: 2.85,
             zOffset: 2.15,

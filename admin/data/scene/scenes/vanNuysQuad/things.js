@@ -4,7 +4,7 @@ import {
     CUTOUT
 } from '../../../../../app/constants/scene/things'
 import {
-    ESCAPE_POD_SKETCH,
+    SKETCH_ESCAPE_POD,
     SKETCHBOOK__ESCAPE_POD
 } from '../../../../../app/constants/scene/things/bubbles'
 import { VAN_NUYS_LOGO } from '../../../../../app/constants/scene/things/cardboards'
@@ -24,7 +24,7 @@ export default {
             scaleFactor: 0.25,
             flipHorizontal: true
         },
-        [ESCAPE_POD_SKETCH]: {
+        [SKETCH_ESCAPE_POD]: {
             yIndex: 5,
             xPosition: 2.75,
             zOffset: 3.5,

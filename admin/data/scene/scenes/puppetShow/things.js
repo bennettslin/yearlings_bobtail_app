@@ -5,9 +5,9 @@ import {
     PUPPET
 } from '../../../../../app/constants/scene/things'
 import {
-    TOGETHER_SKETCH,
+    SKETCH_TOGETHER,
     SKETCHBOOK__TOGETHER,
-    APART_SKETCH,
+    SKETCH_APART,
     SKETCHBOOK__APART
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
@@ -123,7 +123,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             rotate: 270,
             scaleFactor: 0.25
         },
-        [TOGETHER_SKETCH]: {
+        [SKETCH_TOGETHER]: {
             yIndex: 5,
             xPosition: 8.25,
             zOffset: 2.375,
@@ -174,7 +174,7 @@ export const THINGS_PUPPET_SHOW_END = {
             rotate: 270,
             scaleFactor: 0.25
         },
-        [APART_SKETCH]: {
+        [SKETCH_APART]: {
             yIndex: 5,
             xPosition: 2.75,
             zOffset: 2.5,

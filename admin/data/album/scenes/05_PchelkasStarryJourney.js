@@ -65,9 +65,9 @@ import {
     VALLEY_FURTHER_BACKDROP
 } from '../../../../app/constants/scene/things/backdrops'
 import {
-    DOGS_SKETCH,
-    SKETCHBOOK__DOGS,
-    ESCAPE_POD_SKETCH,
+    SKETCH_DOGS_ROCKET,
+    SKETCHBOOK__DOGS_ROCKET,
+    SKETCH_ESCAPE_POD,
     SKETCHBOOK__ESCAPE_POD
 } from '../../../../app/constants/scene/things/bubbles'
 import {
@@ -156,8 +156,8 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true
             },
             [BUBBLE]: {
-                [SKETCHBOOK__DOGS]: true,
-                [DOGS_SKETCH]: true
+                [SKETCHBOOK__DOGS_ROCKET]: true,
+                [SKETCH_DOGS_ROCKET]: true
             },
             [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
@@ -340,7 +340,7 @@ export default [
             },
             [BUBBLE]: {
                 [SKETCHBOOK__ESCAPE_POD]: true,
-                [ESCAPE_POD_SKETCH]: true
+                [SKETCH_ESCAPE_POD]: true
             },
             [CARDBOARD]: {
                 [VAN_NUYS_LOGO]: true

@@ -1,9 +1,9 @@
 import estherSpeech from '../../../../../assets/svgs/bubbles/estherSpeech'
 import sketchbook from '../../../../../assets/svgs/bubbles/sketchbook'
-import togetherSketch from '../../../../../assets/svgs/bubbles/togetherSketch'
-import apartSketch from '../../../../../assets/svgs/bubbles/apartSketch'
-import dogsSketch from '../../../../../assets/svgs/bubbles/dogsSketch'
-import escapePodSketch from '../../../../../assets/svgs/bubbles/escapePodSketch'
+import sketchTogether from '../../../../../assets/svgs/bubbles/togetherSketch'
+import sketchApart from '../../../../../assets/svgs/bubbles/apartSketch'
+import sketchDogsRocket from '../../../../../assets/svgs/bubbles/dogsSketch'
+import sketchEscapePod from '../../../../../assets/svgs/bubbles/escapePodSketch'
 import bubbleSmall from '../../../../../assets/svgs/bubbles/bubbleSmall'
 import bubbleMedium from '../../../../../assets/svgs/bubbles/bubbleMedium'
 import bubbleLarge from '../../../../../assets/svgs/bubbles/bubbleLarge'
@@ -26,7 +26,7 @@ import thoughtSmall from '../../../../../assets/svgs/bubbles/thoughtSmall'
 import {
     ESTHER_SPEECH,
     SKETCHBOOK__TOGETHER,
-    TOGETHER_SKETCH,
+    SKETCH_TOGETHER,
     BUBBLE_SMALL__LEFT,
     BUBBLE_MEDIUM__LEFT,
     BUBBLE_LARGE__LEFT,
@@ -36,11 +36,11 @@ import {
     BUBBLE_LARGE__RIGHT,
     THOUGHT_LARGE__RIGHT,
     SKETCHBOOK__APART,
-    APART_SKETCH,
-    SKETCHBOOK__DOGS,
-    DOGS_SKETCH,
+    SKETCH_APART,
+    SKETCHBOOK__DOGS_ROCKET,
+    SKETCH_DOGS_ROCKET,
     SKETCHBOOK__ESCAPE_POD,
-    ESCAPE_POD_SKETCH,
+    SKETCH_ESCAPE_POD,
     BUBBLE_SMALL__CINEMA,
     BUBBLE_MEDIUM__CINEMA,
     BUBBLE_LARGE__CINEMA,
@@ -85,7 +85,7 @@ import {
 export default {
     [ESTHER_SPEECH]: estherSpeech,
     [SKETCHBOOK__TOGETHER]: sketchbook,
-    [TOGETHER_SKETCH]: togetherSketch,
+    [SKETCH_TOGETHER]: sketchTogether,
     [BUBBLE_SMALL__LEFT]: bubbleSmall,
     [BUBBLE_MEDIUM__LEFT]: bubbleMedium,
     [BUBBLE_LARGE__LEFT]: bubbleLarge,
@@ -95,11 +95,11 @@ export default {
     [BUBBLE_LARGE__RIGHT]: bubbleLarge,
     [THOUGHT_LARGE__RIGHT]: thoughtLarge,
     [SKETCHBOOK__APART]: sketchbook,
-    [APART_SKETCH]: apartSketch,
-    [SKETCHBOOK__DOGS]: sketchbook,
-    [DOGS_SKETCH]: dogsSketch,
+    [SKETCH_APART]: sketchApart,
+    [SKETCHBOOK__DOGS_ROCKET]: sketchbook,
+    [SKETCH_DOGS_ROCKET]: sketchDogsRocket,
     [SKETCHBOOK__ESCAPE_POD]: sketchbook,
-    [ESCAPE_POD_SKETCH]: escapePodSketch,
+    [SKETCH_ESCAPE_POD]: sketchEscapePod,
     [BUBBLE_SMALL__CINEMA]: bubbleSmall,
     [BUBBLE_MEDIUM__CINEMA]: bubbleMedium,
     [BUBBLE_LARGE__CINEMA]: bubbleLarge,

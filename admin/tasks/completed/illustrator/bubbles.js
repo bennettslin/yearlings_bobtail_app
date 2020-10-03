@@ -16,11 +16,11 @@ export default [
         workedHours: 1
     },
     {
-        taskName: 'dogsSketch',
+        taskName: 'sketchDogsRocket',
         workedHours: 2
     },
     {
-        taskName: 'escapePodSketch',
+        taskName: 'sketchEscapePod',
         workedHours: 2
     },
     {
@@ -64,11 +64,11 @@ export default [
         workedHours: 2
     },
     {
-        taskName: 'togetherSketch',
+        taskName: 'sketchTogether',
         workedHours: 2
     },
     {
-        taskName: 'apartSketch',
+        taskName: 'sketchApart',
         workedHours: 2
     }
 ]

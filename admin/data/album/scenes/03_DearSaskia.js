@@ -34,7 +34,7 @@ import {
     TAIWAN_MOUNTAINS_BACKDROP
 } from '../../../../app/constants/scene/things/backdrops'
 import {
-    TOGETHER_SKETCH,
+    SKETCH_TOGETHER,
     SKETCHBOOK__TOGETHER,
     BUBBLE_SMALL__LEFT,
     BUBBLE_MEDIUM__LEFT,
@@ -44,7 +44,7 @@ import {
     BUBBLE_MEDIUM__RIGHT,
     BUBBLE_LARGE__RIGHT,
     THOUGHT_LARGE__RIGHT,
-    APART_SKETCH,
+    SKETCH_APART,
     SKETCHBOOK__APART
 } from '../../../../app/constants/scene/things/bubbles'
 import {
@@ -125,7 +125,7 @@ export default [
             },
             [BUBBLE]: {
                 [SKETCHBOOK__TOGETHER]: true,
-                [TOGETHER_SKETCH]: true
+                [SKETCH_TOGETHER]: true
             },
             [FLAT]: {
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
@@ -232,7 +232,7 @@ export default [
             },
             [BUBBLE]: {
                 [SKETCHBOOK__APART]: true,
-                [APART_SKETCH]: true
+                [SKETCH_APART]: true
             },
             [FLAT]: {
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
