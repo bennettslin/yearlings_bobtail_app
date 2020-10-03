@@ -6,6 +6,15 @@ import {
     PUPPET
 } from '../../../../../app/constants/scene/things'
 import {
+    BUBBLE_SMALL__TCHOTCHKES,
+    BUBBLE_MEDIUM__TCHOTCHKES,
+    BUBBLE_LARGE__TCHOTCHKES,
+    LIZ_THOUGHT_DINING,
+    LIZ_THOUGHT_BUSING,
+    BUBBLE_SMALL__DISHROOM,
+    BUBBLE_MEDIUM__DISHROOM,
+    BUBBLE_LARGE__DISHROOM,
+    LIZ_THOUGHT_DISHROOM,
     KHARI_SPEECH_ATTACK,
     LIZ_SPEECH_DEFENCE,
     BUBBLE_SMALL__REUNION,
@@ -65,6 +74,41 @@ export default {
 }
 
 export const THINGS_LIZ_COUCH_TCHOTCHKES = {
+    [BUBBLE]: {
+        [BUBBLE_LARGE__TCHOTCHKES]: {
+            yIndex: 5,
+            xPosition: 5.1,
+            zOffset: 3.5,
+            scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [BUBBLE_MEDIUM__TCHOTCHKES]: {
+            yIndex: 5,
+            xPosition: 4.9,
+            zOffset: 2.95,
+            scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [BUBBLE_SMALL__TCHOTCHKES]: {
+            yIndex: 5,
+            xPosition: 4.46,
+            zOffset: 3,
+            scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [LIZ_THOUGHT_DINING]: {
+            yIndex: 5,
+            xPosition: 2.8,
+            zOffset: 3.5,
+            layerYIndex: 4
+        },
+        [LIZ_THOUGHT_BUSING]: {
+            yIndex: 5,
+            xPosition: 2.8,
+            zOffset: 3.5,
+            layerYIndex: 4
+        }
+    },
     [FIXTURE]: {
         [TCHOTCHKES]: {
             yIndex: 4,
@@ -78,6 +122,38 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
             yIndex: 3,
             xPosition: 1,
             scaleFactor: 0.2
+        }
+    }
+}
+
+export const THINGS_LIZ_COUCH_OPENING = {
+    [BUBBLE]: {
+        [BUBBLE_LARGE__DISHROOM]: {
+            yIndex: 5,
+            xPosition: 5.1,
+            zOffset: 3.5,
+            scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [BUBBLE_MEDIUM__DISHROOM]: {
+            yIndex: 5,
+            xPosition: 4.9,
+            zOffset: 2.95,
+            scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [BUBBLE_SMALL__DISHROOM]: {
+            yIndex: 5,
+            xPosition: 4.46,
+            zOffset: 3,
+            scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [LIZ_THOUGHT_DISHROOM]: {
+            yIndex: 5,
+            xPosition: 2.8,
+            zOffset: 3.5,
+            layerYIndex: 4
         }
     }
 }

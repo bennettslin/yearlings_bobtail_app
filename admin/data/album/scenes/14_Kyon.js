@@ -46,6 +46,15 @@ import {
     OAKLAND_SIDE
 } from '../../../../app/constants/scene/things/backdrops'
 import {
+    BUBBLE_SMALL__TCHOTCHKES,
+    BUBBLE_MEDIUM__TCHOTCHKES,
+    BUBBLE_LARGE__TCHOTCHKES,
+    LIZ_THOUGHT_DINING,
+    LIZ_THOUGHT_BUSING,
+    BUBBLE_SMALL__DISHROOM,
+    BUBBLE_MEDIUM__DISHROOM,
+    BUBBLE_LARGE__DISHROOM,
+    LIZ_THOUGHT_DISHROOM,
     KHARI_SPEECH_ATTACK,
     LIZ_SPEECH_DEFENCE,
     BUBBLE_SMALL__REUNION,
@@ -141,6 +150,13 @@ export default [
                 [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__TCHOTCHKES]: true,
+                [BUBBLE_MEDIUM__TCHOTCHKES]: true,
+                [BUBBLE_LARGE__TCHOTCHKES]: true,
+                [LIZ_THOUGHT_DINING]: true,
+                [LIZ_THOUGHT_BUSING]: true
+            },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
@@ -178,6 +194,12 @@ export default [
             [BACKDROP]: {
                 [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
+            },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__DISHROOM]: true,
+                [BUBBLE_MEDIUM__DISHROOM]: true,
+                [BUBBLE_LARGE__DISHROOM]: true,
+                [LIZ_THOUGHT_DISHROOM]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,

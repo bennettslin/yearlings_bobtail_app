@@ -1,6 +1,7 @@
 import { ACTOR } from '../../../../app/constants/scene'
 import {
     BACKDROP,
+    BUBBLE,
     CUTOUT,
     DOOR,
     FIXTURE,
@@ -54,6 +55,12 @@ import {
     OAKLAND_SIDE,
     NEAR_BUILDINGS
 } from '../../../../app/constants/scene/things/backdrops'
+import {
+    BUBBLE_SMALL__AMY,
+    BUBBLE_MEDIUM__AMY,
+    BUBBLE_LARGE__AMY,
+    THOUGHT_AMY
+} from '../../../../app/constants/scene/things/bubbles'
 import {
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,
@@ -244,6 +251,12 @@ export default [
                         instance: REACHING_REFLECTION
                     }
                 }
+            },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__AMY]: true,
+                [BUBBLE_MEDIUM__AMY]: true,
+                [BUBBLE_LARGE__AMY]: true,
+                [THOUGHT_AMY]: true
             },
             [FIXTURE]: {
                 [LIZ_PHONE]: true,

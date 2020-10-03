@@ -1,8 +1,7 @@
 # TODO:
-* Have constants and placeholders for lizThoughtDining, lizThoughtBussing, lizThoughtDishroom
+* Have extra scene in Look Back for thought
 * Reposition Khari?
 * Reposition lizThoughtReunion, bubbles
-* Have constants and placeholders for bennettThoughtAmy
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

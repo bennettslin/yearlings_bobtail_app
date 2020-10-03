@@ -17,6 +17,11 @@ import waitingThoughtStudying from '../../../../../assets/svgs/bubbles/waitingTh
 import pharmacyCel from '../../../../../assets/svgs/bubbles/pharmacyCel'
 import constellationTarpit from '../../../../../assets/svgs/bubbles/tarpitConstellation'
 import constellationSibling from '../../../../../assets/svgs/bubbles/siblingConstellation'
+// TODO: After commenting these out, rename svg files.
+// import thoughtAmy from '../../../../../assets/svgs/bubbles/thoughtAmy'
+// import lizThoughtDining from '../../../../../assets/svgs/bubbles/lizThoughtDining'
+// import lizThoughtBusing from '../../../../../assets/svgs/bubbles/lizThoughtBusing'
+// import lizThoughtDishroom from '../../../../../assets/svgs/bubbles/lizThoughtDishroom'
 import khariSpeechAttack from '../../../../../assets/svgs/bubbles/khariAttackSpeech'
 import lizSpeechDefence from '../../../../../assets/svgs/bubbles/lizDefenceSpeech'
 import lizThoughtReunion from '../../../../../assets/svgs/bubbles/lizThought'
@@ -59,9 +64,22 @@ import {
     PHARMACY_CEL,
     CONSTELLATION_TARPIT,
     CONSTELLATION_SIBLING,
+    BUBBLE_SMALL__AMY,
+    BUBBLE_MEDIUM__AMY,
+    BUBBLE_LARGE__AMY,
+    THOUGHT_AMY,
     BUBBLE_SMALL__GOLDEN,
     BUBBLE_MEDIUM__GOLDEN,
     BUBBLE_LARGE__GOLDEN,
+    BUBBLE_SMALL__TCHOTCHKES,
+    BUBBLE_MEDIUM__TCHOTCHKES,
+    BUBBLE_LARGE__TCHOTCHKES,
+    LIZ_THOUGHT_DINING,
+    LIZ_THOUGHT_BUSING,
+    BUBBLE_SMALL__DISHROOM,
+    BUBBLE_MEDIUM__DISHROOM,
+    BUBBLE_LARGE__DISHROOM,
+    LIZ_THOUGHT_DISHROOM,
     KHARI_SPEECH_ATTACK,
     LIZ_SPEECH_DEFENCE,
     BUBBLE_SMALL__REUNION,
@@ -118,9 +136,22 @@ export default {
     [PHARMACY_CEL]: pharmacyCel,
     [CONSTELLATION_TARPIT]: constellationTarpit,
     [CONSTELLATION_SIBLING]: constellationSibling,
+    [BUBBLE_SMALL__AMY]: bubbleSmall,
+    [BUBBLE_MEDIUM__AMY]: bubbleMedium,
+    [BUBBLE_LARGE__AMY]: bubbleLarge,
+    [THOUGHT_AMY]: lizThoughtReunion,
     [BUBBLE_SMALL__GOLDEN]: bubbleSmall,
     [BUBBLE_MEDIUM__GOLDEN]: bubbleMedium,
     [BUBBLE_LARGE__GOLDEN]: bubbleLarge,
+    [BUBBLE_SMALL__TCHOTCHKES]: bubbleSmall,
+    [BUBBLE_MEDIUM__TCHOTCHKES]: bubbleMedium,
+    [BUBBLE_LARGE__TCHOTCHKES]: bubbleLarge,
+    [LIZ_THOUGHT_DINING]: lizThoughtReunion,
+    [LIZ_THOUGHT_BUSING]: lizThoughtReunion,
+    [BUBBLE_SMALL__DISHROOM]: bubbleSmall,
+    [BUBBLE_MEDIUM__DISHROOM]: bubbleMedium,
+    [BUBBLE_LARGE__DISHROOM]: bubbleLarge,
+    [LIZ_THOUGHT_DISHROOM]: lizThoughtReunion,
     [KHARI_SPEECH_ATTACK]: khariSpeechAttack,
     [LIZ_SPEECH_DEFENCE]: lizSpeechDefence,
     [BUBBLE_SMALL__REUNION]: bubbleSmall,

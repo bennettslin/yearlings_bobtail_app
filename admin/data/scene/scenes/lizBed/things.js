@@ -1,8 +1,15 @@
 import {
+    BUBBLE,
     FIXTURE,
     FURNITURE,
     PANEL
 } from '../../../../../app/constants/scene/things'
+import {
+    BUBBLE_SMALL__AMY,
+    BUBBLE_MEDIUM__AMY,
+    BUBBLE_LARGE__AMY,
+    THOUGHT_AMY
+} from '../../../../../app/constants/scene/things/bubbles'
 import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
@@ -88,6 +95,35 @@ export default {
 }
 
 export const THINGS_LIZ_BED_LOOK_BACK = {
+    [BUBBLE]: {
+        [BUBBLE_LARGE__AMY]: {
+            yIndex: 5,
+            xPosition: 5.1,
+            zOffset: 3.5,
+            scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [BUBBLE_MEDIUM__AMY]: {
+            yIndex: 5,
+            xPosition: 4.9,
+            zOffset: 2.95,
+            scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [BUBBLE_SMALL__AMY]: {
+            yIndex: 5,
+            xPosition: 4.46,
+            zOffset: 3,
+            scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [THOUGHT_AMY]: {
+            yIndex: 5,
+            xPosition: 2.8,
+            zOffset: 3.5,
+            layerYIndex: 4
+        }
+    },
     [FIXTURE]: {
         [BENNETT_SHOE]: {
             yIndex: 3,
