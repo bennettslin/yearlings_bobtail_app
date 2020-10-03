@@ -8,7 +8,7 @@ import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
     BUBBLE_LARGE__GO_KART,
-    GO_KART_THOUGHT
+    THOUGHT_GO_KART
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
     CYPRESS_TREE,
@@ -49,7 +49,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             zOffset: 5.4,
             scaleFactor: 0.3
         },
-        [GO_KART_THOUGHT]: {
+        [THOUGHT_GO_KART]: {
             yIndex: 5,
             xPosition: 5,
             zOffset: 4

@@ -404,7 +404,7 @@ export default [
         workedHours: 8
     },
     {
-        taskName: 'goKartThought',
+        taskName: 'thoughtGoKart',
         workedHours: 1
     },
 

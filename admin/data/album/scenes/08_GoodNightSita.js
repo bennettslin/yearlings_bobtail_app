@@ -45,7 +45,7 @@ import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
     BUBBLE_LARGE__GO_KART,
-    GO_KART_THOUGHT
+    THOUGHT_GO_KART
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     CACTUS_SINGLE__LIZ_ENDING,
@@ -232,7 +232,7 @@ export default [
                 [OAKLAND_FRONT__HIGH]: true
             },
             [BUBBLE]: {
-                [GO_KART_THOUGHT]: true,
+                [THOUGHT_GO_KART]: true,
                 [BUBBLE_SMALL__GO_KART]: true,
                 [BUBBLE_MEDIUM__GO_KART]: true,
                 [BUBBLE_LARGE__GO_KART]: true

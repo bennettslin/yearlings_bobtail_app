@@ -10,7 +10,7 @@ import bubbleLarge from '../../../../../assets/svgs/bubbles/bubbleLarge'
 import thoughtLarge from '../../../../../assets/svgs/bubbles/thoughtLarge'
 import cinemaThoughtRecording from '../../../../../assets/svgs/bubbles/cinemaThoughtRecording'
 import cinemaThoughtBuying from '../../../../../assets/svgs/bubbles/cinemaThoughtBuying'
-import goKartThought from '../../../../../assets/svgs/bubbles/goKartThought'
+import thoughtGoKart from '../../../../../assets/svgs/bubbles/goKartThought'
 import waitingThoughtWalking from '../../../../../assets/svgs/bubbles/waitingThoughtWalking'
 import waitingThoughtSinging from '../../../../../assets/svgs/bubbles/waitingThoughtSinging'
 import waitingThoughtStudying from '../../../../../assets/svgs/bubbles/waitingThoughtStudying'
@@ -49,7 +49,7 @@ import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
     BUBBLE_LARGE__GO_KART,
-    GO_KART_THOUGHT,
+    THOUGHT_GO_KART,
     BUBBLE_SMALL__WAITING,
     BUBBLE_MEDIUM__WAITING,
     BUBBLE_LARGE__WAITING,
@@ -108,7 +108,7 @@ export default {
     [BUBBLE_SMALL__GO_KART]: bubbleSmall,
     [BUBBLE_MEDIUM__GO_KART]: bubbleMedium,
     [BUBBLE_LARGE__GO_KART]: bubbleLarge,
-    [GO_KART_THOUGHT]: goKartThought,
+    [THOUGHT_GO_KART]: thoughtGoKart,
     [BUBBLE_SMALL__WAITING]: bubbleSmall,
     [BUBBLE_MEDIUM__WAITING]: bubbleMedium,
     [BUBBLE_LARGE__WAITING]: bubbleLarge,
