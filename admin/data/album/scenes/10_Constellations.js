@@ -48,8 +48,8 @@ import {
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     PHARMACY_CEL,
-    TARPIT_CONSTELLATION,
-    SIBLING_CONSTELLATION
+    CONSTELLATION_TARPIT,
+    CONSTELLATION_SIBLING
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     UCLA_TREE__LEFT,
@@ -244,8 +244,8 @@ export default [
                 [LOS_ANGELES_BACKDROP]: true
             },
             [BUBBLE]: {
-                [TARPIT_CONSTELLATION]: true,
-                [SIBLING_CONSTELLATION]: true
+                [CONSTELLATION_TARPIT]: true,
+                [CONSTELLATION_SIBLING]: true
             },
             [FIXTURE]: {
                 [EVIAN_BOTTLES]: true

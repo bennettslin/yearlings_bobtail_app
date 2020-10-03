@@ -15,8 +15,8 @@ import waitingThoughtWalking from '../../../../../assets/svgs/bubbles/waitingTho
 import waitingThoughtSinging from '../../../../../assets/svgs/bubbles/waitingThoughtSinging'
 import waitingThoughtStudying from '../../../../../assets/svgs/bubbles/waitingThoughtStudying'
 import pharmacyCel from '../../../../../assets/svgs/bubbles/pharmacyCel'
-import tarpitConstellation from '../../../../../assets/svgs/bubbles/tarpitConstellation'
-import siblingConstellation from '../../../../../assets/svgs/bubbles/siblingConstellation'
+import constellationTarpit from '../../../../../assets/svgs/bubbles/tarpitConstellation'
+import constellationSibling from '../../../../../assets/svgs/bubbles/siblingConstellation'
 import khariAttackSpeech from '../../../../../assets/svgs/bubbles/khariAttackSpeech'
 import lizDefenceSpeech from '../../../../../assets/svgs/bubbles/lizDefenceSpeech'
 import lizThought from '../../../../../assets/svgs/bubbles/lizThought'
@@ -57,8 +57,8 @@ import {
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_WALKING,
     PHARMACY_CEL,
-    TARPIT_CONSTELLATION,
-    SIBLING_CONSTELLATION,
+    CONSTELLATION_TARPIT,
+    CONSTELLATION_SIBLING,
     BUBBLE_SMALL__GOLDEN,
     BUBBLE_MEDIUM__GOLDEN,
     BUBBLE_LARGE__GOLDEN,
@@ -116,8 +116,8 @@ export default {
     [WAITING_THOUGHT_SINGING]: waitingThoughtSinging,
     [WAITING_THOUGHT_WALKING]: waitingThoughtWalking,
     [PHARMACY_CEL]: pharmacyCel,
-    [TARPIT_CONSTELLATION]: tarpitConstellation,
-    [SIBLING_CONSTELLATION]: siblingConstellation,
+    [CONSTELLATION_TARPIT]: constellationTarpit,
+    [CONSTELLATION_SIBLING]: constellationSibling,
     [BUBBLE_SMALL__GOLDEN]: bubbleSmall,
     [BUBBLE_MEDIUM__GOLDEN]: bubbleMedium,
     [BUBBLE_LARGE__GOLDEN]: bubbleLarge,

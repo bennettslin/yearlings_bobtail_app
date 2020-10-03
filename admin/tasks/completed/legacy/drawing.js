@@ -798,11 +798,11 @@ export default [
         workedHours: 1
     },
     {
-        taskName: 'tarpitConstellation',
+        taskName: 'constellationTarpit',
         workedHours: 4
     },
     {
-        taskName: 'siblingConstellation',
+        taskName: 'constellationSibling',
         workedHours: 4
     },
     {

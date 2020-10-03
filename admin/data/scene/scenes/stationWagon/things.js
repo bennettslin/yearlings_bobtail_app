@@ -5,8 +5,8 @@ import {
     PANEL
 } from '../../../../../app/constants/scene/things'
 import {
-    TARPIT_CONSTELLATION,
-    SIBLING_CONSTELLATION
+    CONSTELLATION_TARPIT,
+    CONSTELLATION_SIBLING
 } from '../../../../../app/constants/scene/things/bubbles'
 import { EVIAN_BOTTLES } from '../../../../../app/constants/scene/things/fixtures'
 import { DRIVING_HOUSE__SINGLE } from '../../../../../app/constants/scene/things/flats'
@@ -19,13 +19,13 @@ import {
 
 export default {
     [BUBBLE]: {
-        [TARPIT_CONSTELLATION]: {
+        [CONSTELLATION_TARPIT]: {
             yIndex: 5,
             xPosition: 2.7,
             zOffset: 4.5,
             scaleFactor: 0.35
         },
-        [SIBLING_CONSTELLATION]: {
+        [CONSTELLATION_SIBLING]: {
             yIndex: 1,
             xPosition: 9.5,
             zOffset: 4.5

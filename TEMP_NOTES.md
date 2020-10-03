@@ -1,8 +1,5 @@
 # TODO:
-* Have different styling for backstory, narrative, afterword cards. A neutral styling for all other cards. [x]
-* Get this status from dotsBit, and add a class. [x]
-* Fix styling for wormhole card. [x]
-* Reconsider dot colours. Make consistent with past, present, and future colours. [x]
+* 
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

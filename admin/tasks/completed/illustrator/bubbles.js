@@ -24,11 +24,11 @@ export default [
         workedHours: 2
     },
     {
-        taskName: 'siblingConstellation',
+        taskName: 'constellationSibling',
         workedHours: 2
     },
     {
-        taskName: 'tarpitConstellation',
+        taskName: 'constellationTarpit',
         workedHours: 1.5
     },
     {
