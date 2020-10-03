@@ -1,6 +1,3 @@
-# TODO:
-* Reposition lizThoughtReunion, bubbles
-
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Make sure backstory and narrative tenses are correct.

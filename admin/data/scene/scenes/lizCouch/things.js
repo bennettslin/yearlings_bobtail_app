@@ -77,36 +77,31 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
     [BUBBLE]: {
         [BUBBLE_LARGE__TCHOTCHKES]: {
             yIndex: 5,
-            xPosition: 5.1,
-            zOffset: 3.5,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 3.25,
+            zOffset: 2.28,
+            scaleFactor: 0.3
         },
         [BUBBLE_MEDIUM__TCHOTCHKES]: {
             yIndex: 5,
-            xPosition: 4.9,
-            zOffset: 2.95,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 4.03,
+            zOffset: 2.26,
+            scaleFactor: 0.3
         },
         [BUBBLE_SMALL__TCHOTCHKES]: {
             yIndex: 5,
-            xPosition: 4.46,
-            zOffset: 3,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 4.5,
+            zOffset: 2.3,
+            scaleFactor: 0.3
         },
         [LIZ_THOUGHT_DINING]: {
             yIndex: 5,
-            xPosition: 2.8,
-            zOffset: 3.5,
-            layerYIndex: 4
+            xPosition: 3.3,
+            zOffset: 3.25
         },
         [LIZ_THOUGHT_BUSING]: {
             yIndex: 5,
-            xPosition: 2.8,
-            zOffset: 3.5,
-            layerYIndex: 4
+            xPosition: 7.6,
+            zOffset: 2.8
         }
     },
     [FIXTURE]: {
@@ -130,30 +125,26 @@ export const THINGS_LIZ_COUCH_OPENING = {
     [BUBBLE]: {
         [BUBBLE_LARGE__DISHROOM]: {
             yIndex: 5,
-            xPosition: 5.1,
-            zOffset: 3.5,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 5.2,
+            zOffset: 5.5,
+            scaleFactor: 0.3
         },
         [BUBBLE_MEDIUM__DISHROOM]: {
             yIndex: 5,
-            xPosition: 4.9,
-            zOffset: 2.95,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 5.95,
+            zOffset: 5.4,
+            scaleFactor: 0.3
         },
         [BUBBLE_SMALL__DISHROOM]: {
             yIndex: 5,
-            xPosition: 4.46,
-            zOffset: 3,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 6.2,
+            zOffset: 5.1,
+            scaleFactor: 0.3
         },
         [LIZ_THOUGHT_DISHROOM]: {
             yIndex: 5,
             xPosition: 2.8,
-            zOffset: 3.5,
-            layerYIndex: 4
+            zOffset: 3.1
         }
     }
 }
@@ -167,7 +158,7 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
         },
         [LIZ_SPEECH_DEFENCE]: {
             yIndex: 5,
-            xPosition: 6.2,
+            xPosition: 6.1,
             zOffset: 3.4
         }
     }
@@ -178,28 +169,25 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
         [BUBBLE_LARGE__REUNION]: {
             yIndex: 5,
             xPosition: 5.1,
-            zOffset: 3.5,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            zOffset: 2.1,
+            scaleFactor: 0.3
         },
         [BUBBLE_MEDIUM__REUNION]: {
             yIndex: 5,
-            xPosition: 4.9,
-            zOffset: 2.95,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 4.45,
+            zOffset: 1.8,
+            scaleFactor: 0.3
         },
         [BUBBLE_SMALL__REUNION]: {
             yIndex: 5,
-            xPosition: 4.46,
-            zOffset: 3,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 4,
+            zOffset: 1.8,
+            scaleFactor: 0.3
         },
         [LIZ_THOUGHT_REUNION]: {
             yIndex: 5,
-            xPosition: 2.8,
-            zOffset: 3.5,
+            xPosition: 4.5,
+            zOffset: 3,
             layerYIndex: 4
         }
     }

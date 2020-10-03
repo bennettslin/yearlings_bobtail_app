@@ -4934,5 +4934,9 @@ export default [
     {
         taskName: `Finalise text styling of different annotation cards.`,
         workedHours: 5
+    },
+    {
+        taskName: `Prepare for new thoughts and bubbles.`,
+        workedHours: 5
     }
 ]

@@ -98,30 +98,26 @@ export const THINGS_LIZ_BED_LOOK_BACK = {
     [BUBBLE]: {
         [BUBBLE_LARGE__AMY]: {
             yIndex: 5,
-            xPosition: 5.1,
-            zOffset: 3.5,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 5.68,
+            zOffset: 2.75,
+            scaleFactor: 0.3
         },
         [BUBBLE_MEDIUM__AMY]: {
             yIndex: 5,
-            xPosition: 4.9,
-            zOffset: 2.95,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 6.48,
+            zOffset: 3,
+            scaleFactor: 0.3
         },
         [BUBBLE_SMALL__AMY]: {
             yIndex: 5,
-            xPosition: 4.46,
-            zOffset: 3,
-            scaleFactor: 0.3,
-            layerYIndex: 4
+            xPosition: 6.9,
+            zOffset: 3.35,
+            scaleFactor: 0.3
         },
         [THOUGHT_AMY]: {
             yIndex: 5,
-            xPosition: 2.8,
-            zOffset: 3.5,
-            layerYIndex: 4
+            xPosition: 4.2,
+            zOffset: 3.5
         }
     },
     [FIXTURE]: {
