@@ -17,8 +17,8 @@ import waitingThoughtStudying from '../../../../../assets/svgs/bubbles/waitingTh
 import pharmacyCel from '../../../../../assets/svgs/bubbles/pharmacyCel'
 import constellationTarpit from '../../../../../assets/svgs/bubbles/tarpitConstellation'
 import constellationSibling from '../../../../../assets/svgs/bubbles/siblingConstellation'
-import khariAttackSpeech from '../../../../../assets/svgs/bubbles/khariAttackSpeech'
-import lizDefenceSpeech from '../../../../../assets/svgs/bubbles/lizDefenceSpeech'
+import khariSpeechAttack from '../../../../../assets/svgs/bubbles/khariAttackSpeech'
+import lizSpeechDefence from '../../../../../assets/svgs/bubbles/lizDefenceSpeech'
 import lizThought from '../../../../../assets/svgs/bubbles/lizThought'
 import thoughtMedium from '../../../../../assets/svgs/bubbles/thoughtMedium'
 import thoughtSmall from '../../../../../assets/svgs/bubbles/thoughtSmall'
@@ -62,8 +62,8 @@ import {
     BUBBLE_SMALL__GOLDEN,
     BUBBLE_MEDIUM__GOLDEN,
     BUBBLE_LARGE__GOLDEN,
-    KHARI_ATTACK_SPEECH,
-    LIZ_DEFENCE_SPEECH,
+    KHARI_SPEECH_ATTACK,
+    LIZ_SPEECH_DEFENCE,
     BUBBLE_SMALL__LIZ,
     BUBBLE_MEDIUM__LIZ,
     BUBBLE_LARGE__LIZ,
@@ -121,8 +121,8 @@ export default {
     [BUBBLE_SMALL__GOLDEN]: bubbleSmall,
     [BUBBLE_MEDIUM__GOLDEN]: bubbleMedium,
     [BUBBLE_LARGE__GOLDEN]: bubbleLarge,
-    [KHARI_ATTACK_SPEECH]: khariAttackSpeech,
-    [LIZ_DEFENCE_SPEECH]: lizDefenceSpeech,
+    [KHARI_SPEECH_ATTACK]: khariSpeechAttack,
+    [LIZ_SPEECH_DEFENCE]: lizSpeechDefence,
     [BUBBLE_SMALL__LIZ]: bubbleSmall,
     [BUBBLE_MEDIUM__LIZ]: bubbleMedium,
     [BUBBLE_LARGE__LIZ]: bubbleLarge,

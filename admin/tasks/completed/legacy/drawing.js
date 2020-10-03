@@ -806,11 +806,11 @@ export default [
         workedHours: 4
     },
     {
-        taskName: 'khariAttackSpeech',
+        taskName: 'khariSpeechAttack',
         workedHours: 4
     },
     {
-        taskName: 'lizDefenceSpeech',
+        taskName: 'lizSpeechDefence',
         workedHours: 4
     },
     {

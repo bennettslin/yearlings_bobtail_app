@@ -52,11 +52,11 @@ export default [
         workedHours: 1.5
     },
     {
-        taskName: 'khariAttackSpeech',
+        taskName: 'khariSpeechAttack',
         workedHours: 2
     },
     {
-        taskName: 'lizDefenceSpeech',
+        taskName: 'lizSpeechDefence',
         workedHours: 2
     },
     {

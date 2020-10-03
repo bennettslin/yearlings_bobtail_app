@@ -46,8 +46,8 @@ import {
     OAKLAND_SIDE
 } from '../../../../app/constants/scene/things/backdrops'
 import {
-    KHARI_ATTACK_SPEECH,
-    LIZ_DEFENCE_SPEECH,
+    KHARI_SPEECH_ATTACK,
+    LIZ_SPEECH_DEFENCE,
     BUBBLE_SMALL__LIZ,
     BUBBLE_MEDIUM__LIZ,
     BUBBLE_LARGE__LIZ,
@@ -212,7 +212,7 @@ export default [
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
-                [KHARI_ATTACK_SPEECH]: true
+                [KHARI_SPEECH_ATTACK]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -247,7 +247,7 @@ export default [
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
-                [LIZ_DEFENCE_SPEECH]: true
+                [LIZ_SPEECH_DEFENCE]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,

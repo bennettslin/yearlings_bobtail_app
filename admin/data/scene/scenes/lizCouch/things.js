@@ -6,8 +6,8 @@ import {
     PUPPET
 } from '../../../../../app/constants/scene/things'
 import {
-    KHARI_ATTACK_SPEECH,
-    LIZ_DEFENCE_SPEECH,
+    KHARI_SPEECH_ATTACK,
+    LIZ_SPEECH_DEFENCE,
     BUBBLE_SMALL__LIZ,
     BUBBLE_MEDIUM__LIZ,
     BUBBLE_LARGE__LIZ,
@@ -84,12 +84,12 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
 
 export const THINGS_LIZ_COUCH_DEFENDING = {
     [BUBBLE]: {
-        [KHARI_ATTACK_SPEECH]: {
+        [KHARI_SPEECH_ATTACK]: {
             yIndex: 5,
             xPosition: 5.6,
             zOffset: 3.25
         },
-        [LIZ_DEFENCE_SPEECH]: {
+        [LIZ_SPEECH_DEFENCE]: {
             yIndex: 5,
             xPosition: 6.2,
             zOffset: 3.4
