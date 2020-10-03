@@ -19,7 +19,7 @@ import constellationTarpit from '../../../../../assets/svgs/bubbles/tarpitConste
 import constellationSibling from '../../../../../assets/svgs/bubbles/siblingConstellation'
 import khariSpeechAttack from '../../../../../assets/svgs/bubbles/khariAttackSpeech'
 import lizSpeechDefence from '../../../../../assets/svgs/bubbles/lizDefenceSpeech'
-import lizThought from '../../../../../assets/svgs/bubbles/lizThought'
+import lizThoughtReunion from '../../../../../assets/svgs/bubbles/lizThought'
 import thoughtMedium from '../../../../../assets/svgs/bubbles/thoughtMedium'
 import thoughtSmall from '../../../../../assets/svgs/bubbles/thoughtSmall'
 
@@ -67,7 +67,7 @@ import {
     BUBBLE_SMALL__LIZ,
     BUBBLE_MEDIUM__LIZ,
     BUBBLE_LARGE__LIZ,
-    LIZ_THOUGHT,
+    LIZ_THOUGHT_REUNION,
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
@@ -126,7 +126,7 @@ export default {
     [BUBBLE_SMALL__LIZ]: bubbleSmall,
     [BUBBLE_MEDIUM__LIZ]: bubbleMedium,
     [BUBBLE_LARGE__LIZ]: bubbleLarge,
-    [LIZ_THOUGHT]: lizThought,
+    [LIZ_THOUGHT_REUNION]: lizThoughtReunion,
     [BUBBLE_SMALL__DEATHBED]: bubbleSmall,
     [BUBBLE_MEDIUM__DEATHBED]: bubbleMedium,
     [BUBBLE_LARGE__DEATHBED]: bubbleLarge,

@@ -814,7 +814,7 @@ export default [
         workedHours: 4
     },
     {
-        taskName: 'lizThought',
+        taskName: 'lizThoughtReunion',
         workedHours: 4
     },
     {

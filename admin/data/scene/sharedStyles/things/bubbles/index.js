@@ -13,7 +13,7 @@ import {
     GO_KART_THOUGHT,
     KHARI_SPEECH_ATTACK,
     LIZ_SPEECH_DEFENCE,
-    LIZ_THOUGHT,
+    LIZ_THOUGHT_REUNION,
     PHARMACY_CEL,
     SKETCHBOOK,
     THOUGHT_LARGE,
@@ -106,7 +106,7 @@ export default {
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED
     ],
-    [LIZ_THOUGHT]: [
+    [LIZ_THOUGHT_REUNION]: [
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,

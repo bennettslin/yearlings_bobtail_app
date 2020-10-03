@@ -51,7 +51,7 @@ import {
     BUBBLE_SMALL__LIZ,
     BUBBLE_MEDIUM__LIZ,
     BUBBLE_LARGE__LIZ,
-    LIZ_THOUGHT
+    LIZ_THOUGHT_REUNION
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     LIZ_BLINDS_INSIDE_OPEN,
@@ -281,12 +281,6 @@ export default [
                 [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
-            [BUBBLE]: {
-                [BUBBLE_SMALL__LIZ]: true,
-                [BUBBLE_MEDIUM__LIZ]: true,
-                [BUBBLE_LARGE__LIZ]: true,
-                [LIZ_THOUGHT]: true
-            },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
@@ -314,6 +308,12 @@ export default [
             [BACKDROP]: {
                 [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
+            },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__LIZ]: true,
+                [BUBBLE_MEDIUM__LIZ]: true,
+                [BUBBLE_LARGE__LIZ]: true,
+                [LIZ_THOUGHT_REUNION]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,

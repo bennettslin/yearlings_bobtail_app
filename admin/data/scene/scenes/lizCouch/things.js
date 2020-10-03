@@ -11,7 +11,7 @@ import {
     BUBBLE_SMALL__LIZ,
     BUBBLE_MEDIUM__LIZ,
     BUBBLE_LARGE__LIZ,
-    LIZ_THOUGHT
+    LIZ_THOUGHT_REUNION
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
     LIZ_BLINDS_INSIDE,
@@ -120,7 +120,7 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
             scaleFactor: 0.3,
             layerYIndex: 4
         },
-        [LIZ_THOUGHT]: {
+        [LIZ_THOUGHT_REUNION]: {
             yIndex: 5,
             xPosition: 2.8,
             zOffset: 3.5,
