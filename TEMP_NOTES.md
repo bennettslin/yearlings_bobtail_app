@@ -1,7 +1,7 @@
 # TODO:
 * Have constants and placeholders for lizThoughtDining, lizThoughtBussing, lizThoughtDishroom
 * Reposition Khari?
-* Reposition lizThoughtReunion, bubbles, and opal
+* Reposition lizThoughtReunion, bubbles
 * Have constants and placeholders for bennettThoughtAmy
 
 # Annotation edit TODO:

@@ -133,9 +133,10 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
     [PUPPET]: {
         [OPAL_GAZING]: {
             yIndex: 2,
-            xPosition: 7,
+            xPosition: 7.85,
             zOffset: 2.5,
-            scaleFactor: 0.2
+            scaleFactor: 0.2,
+            flipHorizontal: true
         }
     }
 }

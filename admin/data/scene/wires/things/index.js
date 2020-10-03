@@ -115,8 +115,8 @@ export default {
         [OPAL_COUCH]: OPAL_COUCH_CONFIG,
         [OPAL_GAZING]: {
             wires: [
-                { x: 0.27, y: 0.47 },
-                { x: 0.65, y: 0.1 }
+                { x: 0.35, y: 0.1 },
+                { x: 0.73, y: 0.47 }
             ],
             placedFront: true
         },
