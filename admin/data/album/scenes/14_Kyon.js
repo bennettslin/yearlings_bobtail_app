@@ -48,9 +48,9 @@ import {
 import {
     KHARI_SPEECH_ATTACK,
     LIZ_SPEECH_DEFENCE,
-    BUBBLE_SMALL__LIZ,
-    BUBBLE_MEDIUM__LIZ,
-    BUBBLE_LARGE__LIZ,
+    BUBBLE_SMALL__REUNION,
+    BUBBLE_MEDIUM__REUNION,
+    BUBBLE_LARGE__REUNION,
     LIZ_THOUGHT_REUNION
 } from '../../../../app/constants/scene/things/bubbles'
 import {
@@ -310,9 +310,9 @@ export default [
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
-                [BUBBLE_SMALL__LIZ]: true,
-                [BUBBLE_MEDIUM__LIZ]: true,
-                [BUBBLE_LARGE__LIZ]: true,
+                [BUBBLE_SMALL__REUNION]: true,
+                [BUBBLE_MEDIUM__REUNION]: true,
+                [BUBBLE_LARGE__REUNION]: true,
                 [LIZ_THOUGHT_REUNION]: true
             },
             [DOOR]: {

@@ -8,9 +8,9 @@ import {
 import {
     KHARI_SPEECH_ATTACK,
     LIZ_SPEECH_DEFENCE,
-    BUBBLE_SMALL__LIZ,
-    BUBBLE_MEDIUM__LIZ,
-    BUBBLE_LARGE__LIZ,
+    BUBBLE_SMALL__REUNION,
+    BUBBLE_MEDIUM__REUNION,
+    BUBBLE_LARGE__REUNION,
     LIZ_THOUGHT_REUNION
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
@@ -99,21 +99,21 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
 
 export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
     [BUBBLE]: {
-        [BUBBLE_LARGE__LIZ]: {
+        [BUBBLE_LARGE__REUNION]: {
             yIndex: 5,
             xPosition: 5.1,
             zOffset: 3.5,
             scaleFactor: 0.3,
             layerYIndex: 4
         },
-        [BUBBLE_MEDIUM__LIZ]: {
+        [BUBBLE_MEDIUM__REUNION]: {
             yIndex: 5,
             xPosition: 4.9,
             zOffset: 2.95,
             scaleFactor: 0.3,
             layerYIndex: 4
         },
-        [BUBBLE_SMALL__LIZ]: {
+        [BUBBLE_SMALL__REUNION]: {
             yIndex: 5,
             xPosition: 4.46,
             zOffset: 3,
