@@ -10,9 +10,9 @@ export default [
         neededHours: 7
     },
     {
-        taskName: `Rethink some dot category shapes?`,
-        workedHours: 0,
-        neededHours: 5
+        taskName: `Redo dot category shapes.`,
+        workedHours: 5,
+        neededHours: 10
     },
     {
         taskName: `Close nav icon.`,
