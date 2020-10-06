@@ -1,13 +1,8 @@
 export default [
     {
-        taskName: `Thought bubbles with Liz original breakup.`,
-        workedHours: 6,
-        neededHours: 20
-    },
-    {
-        taskName: `Thought bubble with Amy.`,
-        workedHours: 0,
-        neededHours: 7
+        taskName: `New Liz and Amy thought bubbles.`,
+        workedHours: 14,
+        neededHours: 25
     },
     {
         taskName: `Redo dot category shapes.`,
