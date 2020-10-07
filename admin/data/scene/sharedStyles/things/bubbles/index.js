@@ -86,10 +86,30 @@ export default {
     ],
     [SKETCH_DOGS_ROCKET]: DRAWING__SHARED,
     [SKETCH_ESCAPE_POD]: DRAWING__SHARED,
-    [THOUGHT_AMY]: null,
-    [LIZ_THOUGHT_DINING]: null,
-    [LIZ_THOUGHT_BUSING]: null,
-    [LIZ_THOUGHT_DISHROOM]: null,
+    [THOUGHT_AMY]: [
+        BENNETT,
+        AMY,
+        ALL_CLOTHING__SHARED,
+        ALL_PEOPLE__SHARED
+    ],
+    [LIZ_THOUGHT_DINING]: [
+        BENNETT,
+        LIZ,
+        ALL_CLOTHING__SHARED,
+        ALL_PEOPLE__SHARED
+    ],
+    [LIZ_THOUGHT_BUSING]: [
+        BENNETT,
+        LIZ,
+        ALL_CLOTHING__SHARED,
+        ALL_PEOPLE__SHARED
+    ],
+    [LIZ_THOUGHT_DISHROOM]: [
+        BENNETT,
+        LIZ,
+        ALL_CLOTHING__SHARED,
+        ALL_PEOPLE__SHARED
+    ],
     [ESTHER_SPEECH]: BUBBLE__SHARED,
     [THOUGHT_GO_KART]: [
         BUBBLE__SHARED,
