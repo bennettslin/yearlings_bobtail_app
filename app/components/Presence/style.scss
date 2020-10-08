@@ -14,5 +14,8 @@
 }
 
 .Presence__loaded {
-    opacity: 1;
+    .TrW__isSceneChangeDone
+    & {
+        opacity: 1;
+    }
 }

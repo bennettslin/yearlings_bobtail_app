@@ -14,6 +14,8 @@
     * for song change, timeout after final song selection sets to true
 * isSceneChangeDone
     * didSceneExit and isSceneScrollComplete in entrance reducer sets to true
+* sceneSongIndex, sceneSceneIndex
+    * isSongChangeDone and isSceneChangeDone set to selected indices
 
 ## Song change
 * song change sets all to false
