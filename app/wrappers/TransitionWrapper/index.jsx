@@ -3,12 +3,10 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../components/DidMountHoc'
-import { mapIsSceneChangeDone, mapIsSongChangeDone } from '../../redux/entrance/selector'
+import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 
 const TransitionWrapper = ({ didMount, children }) => {
-    const
-        isSceneChangeDone = useSelector(mapIsSceneChangeDone),
-        isSongChangeDone = useSelector(mapIsSongChangeDone)
+    const isSongChangeDone = useSelector(mapIsSongChangeDone)
 
     return (
         <div
@@ -16,8 +14,6 @@ const TransitionWrapper = ({ didMount, children }) => {
                 ...didMount && {
                     className: cx(
                         'TransitionWrapper',
-
-                        isSceneChangeDone && 'TrW__isSceneChangeDone',
 
                         isSongChangeDone ?
                             'TrW__canLyricCarouselEnter' :

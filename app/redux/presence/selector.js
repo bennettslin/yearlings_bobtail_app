@@ -10,7 +10,7 @@ import {
     mapSceneSceneIndex
 } from '../scene/selector'
 
-const mapIsPresenceShownInScene = ({
+export const getMapIsPresenceShownInScene = ({
     yIndex,
     presenceType,
     actorKey,
@@ -33,8 +33,6 @@ const mapIsPresenceShownInScene = ({
 )
 
 export const getMapPresenceFloorZIndex = ({
-    // This yIndex determines whether to render in a given layer.
-    yIndex,
     presenceType,
     actorKey,
     presenceKey
@@ -51,26 +49,8 @@ export const getMapPresenceFloorZIndex = ({
         }),
         xIndex = getNearestXIndex(xPosition)
 
-    return createSelector(
-        mapIsPresenceShownInScene({
-            yIndex,
-            presenceType,
-            actorKey,
-            presenceKey
-        }),
-        getMapCubeFloorZIndex(
-            arrangedYIndex,
-            xIndex
-        ),
-        (
-            isPresenceShownInScene,
-            cubeFloorZIndex
-
-        ) => (
-            // Return null if presence isn't to be shown.
-            isPresenceShownInScene ?
-                cubeFloorZIndex :
-                null
-        )
+    return getMapCubeFloorZIndex(
+        arrangedYIndex,
+        xIndex
     )
 }

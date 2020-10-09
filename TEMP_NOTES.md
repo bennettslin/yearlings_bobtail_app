@@ -1,10 +1,17 @@
 # Animation desired behaviour
+* Have isPresenceShownInScene be the arbiter of truth for when a presence is shown
+    * When isSceneChangeDone is false, no presence is shown.
+    * Unless it is shown for both selected and scene indices.
+* Pass isLoaded in callback, and don't show until is loaded.
+* Bug? Why does Bennett move up in zIndex between last Look Back scene and first? (No longer seems to repro?)
+
 * Presences animate out
 * Cubes shift
 * Presences animate back in
 * Need to accommodate presences that don't change from one scene to the next.
 
 * Already be thinking about delaying closer yIndices and actors
+    * Have all entrance store transition durations be constants in a single file.
 
 # Animation TODO:
 * Initial stage

@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from './Svg'
-import { getMapPresenceFloorZIndex } from '../../redux/presence/selector'
+import {
+    getMapIsPresenceShownInScene,
+    getMapPresenceFloorZIndex
+} from '../../redux/presence/selector'
 import './style'
 
 const Presence = ({
@@ -14,30 +17,32 @@ const Presence = ({
 
 }) => {
     const
-        floorZIndex = useSelector(getMapPresenceFloorZIndex({
+        isPresenceShownInScene = useSelector(getMapIsPresenceShownInScene({
             yIndex,
+            presenceType,
+            actorKey,
+            presenceKey
+        })),
+        floorZIndex = useSelector(getMapPresenceFloorZIndex({
             presenceType,
             actorKey,
             presenceKey
         })),
         [zIndex, setZIndex] = useState(floorZIndex),
 
-        // Floor zIndex is null when presence is not in the current scene.
-        isPresenceShown = Number.isFinite(floorZIndex),
-
         /**
          * Instantly pass Redux zIndex to presence, rather than wait one
          * lifecycle for state to catch up. This avoids presence starting
          * without zIndex as it transitions in.
          */
-        presenceZIndex = isPresenceShown ? floorZIndex : zIndex
+        presenceZIndex = isPresenceShownInScene ? floorZIndex : zIndex
 
     useEffect(() => {
         /**
          * Only change zIndex to another number, never back to null. This
          * avoids presence losing zIndex as it transitions out.
          */
-        if (isPresenceShown) {
+        if (isPresenceShownInScene) {
             setZIndex(floorZIndex)
         }
     }, [floorZIndex])
@@ -47,7 +52,7 @@ const Presence = ({
             unmountOnExit
             mountOnEnter
             {...{
-                in: isPresenceShown,
+                in: isPresenceShownInScene,
                 timeout: 50
             }}
         >
