@@ -1,5 +1,4 @@
 # Animation desired behaviour
-* Fix isLoaded and CSS transition trying to change class names at same time.
 * Stagger presence transitions in
     * enterDone class
 * Stagger presence transitions out

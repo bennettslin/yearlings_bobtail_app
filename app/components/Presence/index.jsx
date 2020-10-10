@@ -59,18 +59,25 @@ const Presence = ({
                     enter: 500
                 },
                 classNames: {
-                    enterDone: 'Presence__shown'
+                    enterDone: 'PresenceContainer__shown'
                 }
             }}
         >
-            <PresenceSvg
-                {...{
-                    presenceType,
-                    actorKey,
-                    presenceKey,
-                    zIndex: presenceZIndex
-                }}
-            />
+            {/*
+              * This parent container exists solely to take the CSS transition
+              * class names. This prevents conflict when the child tries to add
+              * its own class names after svgs have loaded.
+              */}
+            <div {...{ className: 'PresenceContainer' }}>
+                <PresenceSvg
+                    {...{
+                        presenceType,
+                        actorKey,
+                        presenceKey,
+                        zIndex: presenceZIndex
+                    }}
+                />
+            </div>
         </CSSTransition>
     )
 }

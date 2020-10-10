@@ -13,6 +13,9 @@
     }
 }
 
-.Presence__shown.Presence__loaded {
-    opacity: 1;
+.Presence__loaded {
+    .PresenceContainer__shown
+    & {
+        opacity: 1;
+    }
 }
