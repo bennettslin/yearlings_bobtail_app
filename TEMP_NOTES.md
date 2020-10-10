@@ -1,9 +1,4 @@
 # Animation desired behaviour
-* Stagger presence transitions in
-    * enterDone class
-* Stagger presence transitions out
-    * exitActive class
-
 * Have all entrance store transition durations be constants in a single file?
 
 # Animation TODO:

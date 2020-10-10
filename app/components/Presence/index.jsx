@@ -8,6 +8,7 @@ import {
     getMapPresenceFloorZIndex
 } from '../../redux/presence/selector'
 import './style'
+import { getTimeoutEnterForPresence, getTimeoutExitForPresence } from './helper'
 
 const Presence = ({
     yIndex,
@@ -55,10 +56,20 @@ const Presence = ({
             {...{
                 in: isPresenceShownInScene,
                 timeout: {
-                    exit: 0,
-                    enter: 500
+                    exit: getTimeoutExitForPresence({
+                        yIndex,
+                        presenceType,
+                        actorKey
+                    }),
+                    enter: getTimeoutEnterForPresence({
+                        yIndex,
+                        presenceType,
+                        actorKey
+                    })
                 },
                 classNames: {
+                    exit: 'PresenceContainer__shown',
+                    exitActive: 'PresenceContainer__shown',
                     enterDone: 'PresenceContainer__shown'
                 }
             }}
