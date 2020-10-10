@@ -1,12 +1,14 @@
 # Animation desired behaviour
-* Have all entrance store transition durations be constants in a single file?
+* Demonstrate that presences can animate from sliding in.
+* Make sure animations and lyric scroll don't block each other.
+* Wire animations
 
 # Animation TODO:
-* Initial stage
-    * Temporarily hide curtain.
-
 * Cleanup
     * Reshow curtain.
+
+# Nice TODO:
+* Have all entrance store transition durations be constants in a single file?
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

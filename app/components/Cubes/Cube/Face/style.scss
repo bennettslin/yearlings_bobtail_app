@@ -2,7 +2,7 @@
 
 .Face {
     .DW__userAgentDesktop
-    .TrW__canTransitionAfterSceneChange
+    .TrW__isSongChangeDone.TrW__canTransitionAfterSceneChange
     & {
         transition:
             stroke $transitionDuration__cubes,

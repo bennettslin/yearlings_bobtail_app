@@ -25,8 +25,8 @@ const TransitionWrapper = ({ didMount, children }) => {
                             'TrW__canTransitionAfterSceneChange',
 
                         isSongChangeDone ?
-                            'TrW__canLyricCarouselEnter' :
-                            'TrW__cannotLyricCarouselEnter',
+                            'TrW__isSongChangeDone' :
+                            'TrW__isSongChangeNotDone',
                         'abF'
                     )
                 }

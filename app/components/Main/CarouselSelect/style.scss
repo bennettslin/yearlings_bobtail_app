@@ -49,7 +49,7 @@
 
     .PlW__song
     .ShW__annotationShown.ShW__carouselShown
-    .TrW__canLyricCarouselEnter
+    .TrW__isSongChangeDone
     & {
         opacity: 1;
     }
@@ -57,7 +57,7 @@
     .DW__desktopWidth
     .PlW__song
     .ShW__annotationShown.ShW__carouselShown
-    .TrW__canLyricCarouselEnter
+    .TrW__isSongChangeDone
     & {
         bottom: 0;
     }
@@ -65,7 +65,7 @@
     .DW__miniOrTabletWidth
     .PlW__song
     .ShW__annotationShown.ShW__carouselShown
-    .TrW__canLyricCarouselEnter
+    .TrW__isSongChangeDone
     & {
         top: 0;
     }
