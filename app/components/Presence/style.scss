@@ -9,10 +9,10 @@
 
     .DW__userAgentDesktop
     & {
-        transition: opacity $transitionDuration__fast;
+        transition: opacity $transitionDuration__cubes;
     }
 }
 
-.Presence__loaded {
+.Presence__shown.Presence__loaded {
     opacity: 1;
 }

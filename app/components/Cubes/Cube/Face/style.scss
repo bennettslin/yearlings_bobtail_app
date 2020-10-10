@@ -2,12 +2,12 @@
 
 .Face {
     .DW__userAgentDesktop
-    .TrW__canLyricCarouselEnter
+    .TrW__canTransitionAfterSceneChange
     & {
         transition:
-            stroke $transitionDuration__scene,
-            fill $transitionDuration__scene,
-            d $transitionDuration__scene;
+            stroke $transitionDuration__cubes,
+            fill $transitionDuration__cubes,
+            d $transitionDuration__cubes;
     }
 
     stroke: hsla(60, 45%, 78%, 0.05);

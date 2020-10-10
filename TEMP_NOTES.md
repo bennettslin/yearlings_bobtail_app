@@ -1,4 +1,7 @@
 # Animation desired behaviour
+* Bug: Why does CSSTransition appear not work for actors and certain things?
+* Delay presence transitions in after cubes
+
 * Use isLoaded for all classes for presence transitions.
 
 * Presences animate out

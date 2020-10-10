@@ -49,11 +49,18 @@ const Presence = ({
 
     return (
         <CSSTransition
+            appear
             unmountOnExit
             mountOnEnter
             {...{
                 in: isPresenceShownInScene,
-                timeout: 50
+                timeout: {
+                    exit: 0,
+                    enter: 500
+                },
+                classNames: {
+                    enterDone: 'Presence__shown'
+                }
             }}
         >
             <PresenceSvg
