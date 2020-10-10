@@ -27,3 +27,7 @@ export const mapCanTransitionAfterSongChange = (
 export const mapIsSceneChangeDone = (
     { [ENTRANCE_STORE]: { isSceneChangeDone } }
 ) => isSceneChangeDone
+
+export const mapCanTransitionAfterSceneChange = (
+    { [ENTRANCE_STORE]: { canTransitionAfterSceneChange } }
+) => canTransitionAfterSceneChange

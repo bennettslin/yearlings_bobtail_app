@@ -1,9 +1,5 @@
 # Animation desired behaviour
-* Have isPresenceShownInScene be the arbiter of truth for when a presence is shown
-    * When isSceneChangeDone is false, no presence is shown.
-    * Unless it is shown for both selected and scene indices.
-* Pass isLoaded in callback, and don't show until is loaded.
-* Bug? Why does Bennett move up in zIndex between last Look Back scene and first? (No longer seems to repro?)
+* Use isLoaded for all classes for presence transitions.
 
 * Presences animate out
 * Cubes shift

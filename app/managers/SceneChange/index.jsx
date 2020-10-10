@@ -1,11 +1,18 @@
 import { useEffect, useState, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { resetSceneChange } from '../../redux/entrance/action'
+import {
+    resetSceneChange,
+    updateEntranceStore
+} from '../../redux/entrance/action'
 import { updateSceneStore } from '../../redux/scene/action'
 import {
     mapIsSongChangeDone,
     mapIsSceneChangeDone
 } from '../../redux/entrance/selector'
+import {
+    mapSceneSongIndex,
+    mapSceneSceneIndex
+} from '../../redux/scene/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedSceneIndex
@@ -16,6 +23,8 @@ const SceneChangeManager = () => {
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
         isSceneChangeDone = useSelector(mapIsSceneChangeDone),
+        sceneSongIndex = useSelector(mapSceneSongIndex),
+        sceneSceneIndex = useSelector(mapSceneSceneIndex),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedSceneIndex = useSelector(mapSelectedSceneIndex),
         [didMount, setDidMount] = useState(false)
@@ -43,6 +52,16 @@ const SceneChangeManager = () => {
             setDidMount(true)
         }
     }, [isSongChangeDone, isSceneChangeDone])
+
+    useEffect(() => {
+        if (didMount) {
+            if (sceneSceneIndex > 0) {
+                dispatch(updateEntranceStore({
+                    canTransitionAfterSceneChange: true
+                }))
+            }
+        }
+    }, [sceneSongIndex, sceneSceneIndex])
 
     return null
 }

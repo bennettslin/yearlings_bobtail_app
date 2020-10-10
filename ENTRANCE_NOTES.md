@@ -16,6 +16,8 @@
     * didSceneExit and isSceneScrollComplete in entrance reducer sets to true
 * sceneSongIndex, sceneSceneIndex
     * isSongChangeDone and isSceneChangeDone set to selected indices
+* canTransitionAfterSceneChange
+    * scene indices set to true
 
 ## Song change
 * song change sets all to false
