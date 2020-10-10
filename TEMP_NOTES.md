@@ -1,27 +1,18 @@
 # Animation desired behaviour
-* Bug: Why does CSSTransition appear not work for actors and certain things?
-* Delay presence transitions in after cubes
+* Fix isLoaded and CSS transition trying to change class names at same time.
+* Stagger presence transitions in
+    * enterDone class
+* Stagger presence transitions out
+    * exitActive class
 
-* Use isLoaded for all classes for presence transitions.
-
-* Presences animate out
-* Cubes shift
-* Presences animate back in
-* Need to accommodate presences that don't change from one scene to the next.
-
-* Already be thinking about delaying closer yIndices and actors
-    * Have all entrance store transition durations be constants in a single file.
+* Have all entrance store transition durations be constants in a single file?
 
 # Animation TODO:
 * Initial stage
     * Temporarily hide curtain.
-    * Make presences opacity none while scene change is not done.
-        * Make sure transition out is smooth.
-        * Make sure transition in is smooth.
-            * Also reset scene index during scene changes.
 
 * Cleanup
-* Reshow curtain.
+    * Reshow curtain.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
