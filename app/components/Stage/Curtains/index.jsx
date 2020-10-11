@@ -57,7 +57,7 @@ const Curtains = ({ style }) => {
                     style
                 }}
             >
-                {/* <InlineSvg
+                <InlineSvg
                     {...{
                         className: cx(
                             'Curtains__left',
@@ -97,7 +97,7 @@ const Curtains = ({ style }) => {
                     }}
                 >
                     {curtainTop}
-                </InlineSvg> */}
+                </InlineSvg>
             </div>
         </CSSTransition>
     )

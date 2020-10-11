@@ -1,7 +1,7 @@
 export default [
     {
         taskName: `Animate in presences. Plus cube and presence transition order.`,
-        workedHours: 10,
+        workedHours: 20,
         neededHours: 30
     },
 

@@ -1,11 +1,15 @@
 # Animation desired behaviour
-* Demonstrate that presences can animate from sliding in.
+* Change from presenceType to transition type.
+* Map entrance and exit stylesheets.
+* Allow multiple transitions per stylesheet. (Opacity and top)
+    * Have opacity on all but actors.
+* All presences slide in left or right by default.
+* Have actors transition duration be longer upon entrance.
 * Make sure animations and lyric scroll don't block each other.
 * Wire animations
-
-# Animation TODO:
-* Cleanup
-    * Reshow curtain.
+* Check if it's by yIndex or layerYIndex (Should be by regular yIndex).
+* Bug: Presences sometimes lose their floor zIndex?
+* Add overflow: hidden to presences that have trimBottom.
 
 # Nice TODO:
 * Have all entrance store transition durations be constants in a single file?

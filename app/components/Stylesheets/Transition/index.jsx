@@ -6,7 +6,8 @@ import { PRESENCE_TRANSITION_CONFIGS } from './constants'
 const
     TRANSITION_DURATION = 0.2,
     TRANSITION_DELAY_INCREMENT = 0.1,
-    CUBES_TRANSITION_DURATION = 0.5
+    LYRIC_SCROLL_DURATION = 0.8,
+    CUBES_TRANSITION_DURATION = 0.55
 
 const TransitionStylesheets = () => (
     <>
@@ -22,7 +23,7 @@ const TransitionStylesheets = () => (
                         indices,
                         childPrefix: `TrW__canPresenceTransitionExit .${presenceType}__transitionIndex__`,
                         getStyle: yIndex => ({
-                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ease-in ${((CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
+                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ease-out ${(LYRIC_SCROLL_DURATION + (CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
                         })
                     }}
                 />
@@ -33,7 +34,7 @@ const TransitionStylesheets = () => (
                         childPrefix: `TrW__canPresenceTransitionEnter .${presenceType}__transitionIndex__`,
                         getStyle: yIndex => ({
                             // Entrance waits for initial cubes transition.
-                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ease-in ${(CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
+                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ease-out ${(CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
                         })
                     }}
                 />

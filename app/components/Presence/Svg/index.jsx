@@ -153,8 +153,7 @@ const PresenceSvg = ({
                     capitaliseForClassName(presenceType),
                     getTransitionDelayClass({
                         yIndex,
-                        presenceType,
-                        actorKey
+                        presenceType
                     }),
                     'presence__position',
                     noShadow && 'Presence__noShadow'
