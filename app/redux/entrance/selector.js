@@ -1,3 +1,5 @@
+import { createSelector } from 'reselect'
+import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import { ENTRANCE_STORE } from '../../constants/store'
 
 export const mapIsWindowResizeDone = (
@@ -31,3 +33,29 @@ export const mapIsSceneChangeDone = (
 export const mapCanTransitionAfterSceneChange = (
     { [ENTRANCE_STORE]: { canTransitionAfterSceneChange } }
 ) => canTransitionAfterSceneChange
+
+export const mapCanPresenceTransitionExit = createSelector(
+    mapIsSongChangeDone,
+    mapCanTransitionAfterSceneChange,
+    (
+        isSongChangeDone,
+        canTransitionAfterSceneChange
+    ) => (
+        IS_USER_AGENT_DESKTOP &&
+        isSongChangeDone &&
+        !canTransitionAfterSceneChange
+    )
+)
+
+export const mapCanPresenceTransitionEnter = createSelector(
+    mapIsSongChangeDone,
+    mapCanTransitionAfterSceneChange,
+    (
+        isSongChangeDone,
+        canTransitionAfterSceneChange
+    ) => (
+        IS_USER_AGENT_DESKTOP &&
+        isSongChangeDone &&
+        canTransitionAfterSceneChange
+    )
+)

@@ -5,14 +5,18 @@ import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../components/DidMountHoc'
 import {
     mapIsSongChangeDone,
-    mapCanTransitionAfterSceneChange
+    mapCanTransitionAfterSceneChange,
+    mapCanPresenceTransitionExit,
+    mapCanPresenceTransitionEnter
 } from '../../redux/entrance/selector'
 
 const TransitionWrapper = ({ didMount, children }) => {
     const
         isSongChangeDone = useSelector(mapIsSongChangeDone),
         canTransitionAfterSceneChange =
-            useSelector(mapCanTransitionAfterSceneChange)
+            useSelector(mapCanTransitionAfterSceneChange),
+        canPresenceTransitionExit = useSelector(mapCanPresenceTransitionExit),
+        canPresenceTransitionEnter = useSelector(mapCanPresenceTransitionEnter)
 
     return (
         <div
@@ -23,6 +27,12 @@ const TransitionWrapper = ({ didMount, children }) => {
 
                         canTransitionAfterSceneChange &&
                             'TrW__canTransitionAfterSceneChange',
+
+                        canPresenceTransitionExit &&
+                            'TrW__canPresenceTransitionExit',
+
+                        canPresenceTransitionEnter &&
+                            'TrW__canPresenceTransitionEnter',
 
                         isSongChangeDone ?
                             'TrW__isSongChangeDone' :

@@ -1,4 +1,5 @@
 import { CUBE_Y_AXIS_LENGTH } from '../../../../../constants/cubeIndex'
+import { ACTOR } from '../../../../../constants/scene'
 import { BACKDROP, FIXTURE } from '../../../../../constants/scene/things'
 import { capitaliseForClassName } from '../../../../../helpers/format'
 
@@ -19,7 +20,10 @@ const getTransitionDelayIndex = ({
 
 // TODO: Eventually this will just be all of them.
 const getTransitionDelayPrefix = presenceType => {
-    if (presenceType === BACKDROP) {
+    if (
+        presenceType === ACTOR ||
+        presenceType === BACKDROP
+    ) {
         return capitaliseForClassName(presenceType)
     }
 
