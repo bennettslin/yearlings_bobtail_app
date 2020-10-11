@@ -32,3 +32,5 @@ export const DEFAULT_X_AXIS_Z_INDICES = CUBE_X_INDICES.map(xIndex => {
         xIndex * 2 :
         (CUBE_X_AXIS_LENGTH - xIndex) * 2 - 1
 })
+
+export const PRESENCE_Y_INDICES = getArrayOfLength(CUBE_Y_AXIS_LENGTH + 1)

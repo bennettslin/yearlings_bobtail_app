@@ -149,13 +149,13 @@ const PresenceSvg = ({
                 className: cx(
                     'Presence',
                     isLoaded && 'Presence__loaded',
+                    capitaliseForClassName(presenceType),
+                    `${capitaliseForClassName(presenceType)}__loaded`,
                     getTransitionDelayClass({
                         yIndex,
                         presenceType,
                         actorKey
                     }),
-                    capitaliseForClassName(presenceType),
-                    `${capitaliseForClassName(presenceType)}__loaded`,
                     'presence__position',
                     noShadow && 'Presence__noShadow'
                 ),
