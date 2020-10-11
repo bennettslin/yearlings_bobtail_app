@@ -1,11 +1,9 @@
 # Animation desired behaviour
-* Have actors transition duration be longer upon entrance.
-* Make sure animations and lyric scroll don't block each other.
-* Wire animations
-* Check if it's by yIndex or layerYIndex (Should be by regular yIndex).
-* Bug: Presences sometimes lose their floor zIndex?
-* Bug: Exit isn't working properly.
 * Add overflow: hidden to presences that have trimBottom.
+* Bug: Presences sometimes lose their floor zIndex?
+* Wire animations
+* Bounce animations
+* Sky animations
 
 # Nice TODO:
 * Have all entrance store transition durations be constants in a single file?

@@ -57,7 +57,7 @@ const Presence = ({
                 in: isPresenceShownInScene,
                 timeout: {
                     // Timeout allows presences to transition before unmount.
-                    exit: 1000,
+                    exit: 5000,
 
                     // No timeout since all delays are handled in stylesheets.
                     enter: 0

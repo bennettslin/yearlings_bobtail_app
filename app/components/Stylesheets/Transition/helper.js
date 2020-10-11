@@ -22,9 +22,10 @@ export const TRANSITION_STYLESHEET_CONFIGS = [
 
 export const PRESENCE_TRANSITION_CONFIGS = [
     {
-        transitionKey: 'vivus',
+        transitionKey: 'path',
         indices: [CUBE_Y_AXIS_LENGTH],
-        transitionStyle: 'opacity'
+        transitionStyle: 'opacity',
+        transitionDuration: 0.5
     },
     {
         transitionKey: 'top',
@@ -44,11 +45,12 @@ export const PRESENCE_TRANSITION_CONFIGS = [
 ]
 
 export const getTransitionStyles = ({
+    yIndex,
     transitionStyles,
-    getTransitionDelay,
-    yIndex
+    transitionDuration = TRANSITION_DURATION,
+    getTransitionDelay
 }) => (
     transitionStyles.map(transitionStyle => (
-        `${transitionStyle} ${TRANSITION_DURATION}s ease-out ${getTransitionDelay(yIndex)}s`
+        `${transitionStyle} ${transitionDuration}s ease-out ${getTransitionDelay(yIndex)}s`
     )).join(',')
 )

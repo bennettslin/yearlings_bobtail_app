@@ -11,7 +11,8 @@ const TransitionStylesheets = () => (
         {PRESENCE_TRANSITION_CONFIGS.map(({
             transitionKey,
             indices,
-            transitionStyle
+            transitionStyle,
+            transitionDuration
         }) => (
             <Fragment {...{ key: transitionKey }}>
                 {TRANSITION_STYLESHEET_CONFIGS.map(({
@@ -29,12 +30,13 @@ const TransitionStylesheets = () => (
                                     yIndex,
                                     transitionStyles:
                                         /**
-                                         * Add opacity to all but vivus
+                                         * Add opacity to all but path
                                          * transitions.
                                          */
-                                        transitionKey === 'vivus' ?
+                                        transitionKey === 'path' ?
                                             [transitionStyle] :
                                             ['opacity', transitionStyle],
+                                    transitionDuration,
                                     getTransitionDelay
                                 })
                             })

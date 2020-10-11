@@ -1,6 +1,5 @@
 import { CUBE_Y_AXIS_LENGTH } from '../../../../../constants/cubeIndex'
 import { ACTOR } from '../../../../../constants/scene'
-import { BACKDROP } from '../../../../../constants/scene/things'
 
 const getTransitionDelayIndex = ({
     yIndex,
@@ -22,9 +21,7 @@ const getTransitionDelayPrefix = ({
 }) => {
     switch (presenceType) {
         case ACTOR:
-            return 'vivus'
-        case BACKDROP:
-            return 'top'
+            return 'path'
     }
 
     // By default, slide from left or right, or from top if perfectly centred.
