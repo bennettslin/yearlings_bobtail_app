@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment as ___, memo } from 'react'
+import React, { useEffect, Fragment, memo } from 'react'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
@@ -48,10 +48,10 @@ const Scene = () => {
             >
                 <Presences {...{ yIndex: -1 }} />
                 {CUBE_Y_INDICES.map(yIndex => (
-                    <___ {...{ key: yIndex }}>
+                    <Fragment {...{ key: yIndex }}>
                         <Cubes {...{ yIndex }} />
                         <Presences {...{ yIndex }} />
-                    </___>
+                    </Fragment>
                 ))}
             </div>
         </Transition>

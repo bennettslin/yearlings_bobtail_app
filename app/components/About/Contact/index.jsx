@@ -1,4 +1,4 @@
-import React, { Fragment as ___, memo } from 'react'
+import React, { Fragment, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../DidMountHoc'
@@ -18,14 +18,14 @@ const AboutContact = ({ didMount }) => didMount && (
                 }}
             >
                 {CONTACT_EMAIL.split('').map((character, index) => (
-                    <___ {...{ key: index }} >
+                    <Fragment {...{ key: index }} >
                         <span {...{ className: 'dNC' }}>
                             {String.fromCharCode(
                                 character.charCodeAt(0) + 1
                             )}
                         </span>
                         <span>{character}</span>
-                    </___>
+                    </Fragment>
                 ))}
             </span>
         )}

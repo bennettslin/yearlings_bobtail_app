@@ -1,4 +1,4 @@
-import React, { memo, Fragment as ___ } from 'react'
+import React, { memo, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../DidMountHoc'
@@ -36,7 +36,7 @@ const AnchorText = ({
             )
 
             return (
-                <___ {...{ key: index }}>
+                <Fragment {...{ key: index }}>
                     <span
                         {...{
                             ...didMount && {
@@ -97,7 +97,7 @@ const AnchorText = ({
                         word,
                         index
                     })}
-                </___>
+                </Fragment>
             )
         })
     )
