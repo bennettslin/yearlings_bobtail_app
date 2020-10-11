@@ -20,10 +20,10 @@ import {
 export default {
     [BUBBLE]: {
         [CONSTELLATION_TARPIT]: {
-            yIndex: 5,
-            xPosition: 2.7,
-            zOffset: 4.5,
-            scaleFactor: 0.35
+            yIndex: 1,
+            xPosition: 2.2,
+            zOffset: 4.6,
+            scaleFactor: 0.46
         },
         [CONSTELLATION_SIBLING]: {
             yIndex: 1,
