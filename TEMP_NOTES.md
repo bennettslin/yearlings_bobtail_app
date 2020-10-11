@@ -1,5 +1,4 @@
 # Animation desired behaviour
-* Map entrance and exit stylesheets.
 * Allow multiple transitions per stylesheet. (Opacity and top)
     * Have opacity on all but actors.
 * All presences slide in left or right by default.

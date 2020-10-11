@@ -9,6 +9,17 @@ const
     LYRIC_SCROLL_DURATION = 0.8,
     CUBES_TRANSITION_DURATION = 0.55
 
+const TRANSITION_STYLESHEET_CONFIGS = [
+    {
+        stylesheetKey: 'Exit',
+        getTransitionDelay: yIndex => (LYRIC_SCROLL_DURATION + (CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1)
+    },
+    {
+        stylesheetKey: 'Enter',
+        getTransitionDelay: yIndex => (CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1)
+    }
+]
+
 const TransitionStylesheets = () => (
     <>
         {PRESENCE_TRANSITION_CONFIGS.map(({
@@ -17,27 +28,21 @@ const TransitionStylesheets = () => (
             transitionStyle
         }) => (
             <Fragment {...{ key: transitionKey }}>
-                <Stylesheet
-                    {...{
-                        className: `TransitionStylesheet__${transitionKey}Exit`,
-                        indices,
-                        childPrefix: `TrW__canPresenceTransitionExit .${transitionKey}__transitionIndex__`,
-                        getStyle: yIndex => ({
-                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ease-out ${(LYRIC_SCROLL_DURATION + (CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
-                        })
-                    }}
-                />
-                <Stylesheet
-                    {...{
-                        className: `TransitionStylesheet__${transitionKey}Enter`,
-                        indices,
-                        childPrefix: `TrW__canPresenceTransitionEnter .${transitionKey}__transitionIndex__`,
-                        getStyle: yIndex => ({
-                            // Entrance waits for initial cubes transition.
-                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ease-out ${(CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
-                        })
-                    }}
-                />
+                {TRANSITION_STYLESHEET_CONFIGS.map(({
+                    stylesheetKey,
+                    getTransitionDelay
+                }) => (
+                    <Stylesheet
+                        {...{
+                            className: `TransitionStylesheet__${transitionKey}${stylesheetKey}`,
+                            indices,
+                            childPrefix: `TrW__canPresenceTransition${stylesheetKey} .${transitionKey}__transitionIndex__`,
+                            getStyle: yIndex => ({
+                                transition: `${transitionStyle} ${TRANSITION_DURATION}s ease-out ${getTransitionDelay(yIndex)}s`
+                            })
+                        }}
+                    />
+                ))}
             </Fragment>
         ))}
     </>

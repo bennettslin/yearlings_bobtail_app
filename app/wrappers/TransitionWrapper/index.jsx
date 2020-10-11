@@ -28,9 +28,9 @@ const TransitionWrapper = ({ didMount, children }) => {
                         canTransitionAfterSceneChange &&
                             'TrW__canTransitionAfterSceneChange',
 
+                        // These are used in transition stylesheets.
                         canPresenceTransitionExit &&
                             'TrW__canPresenceTransitionExit',
-
                         canPresenceTransitionEnter &&
                             'TrW__canPresenceTransitionEnter',
 
