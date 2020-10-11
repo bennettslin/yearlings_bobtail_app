@@ -39,7 +39,8 @@ export default {
     [FIXTURE]: {
         [THROWN_FRUIT]: {
             yIndex: 4,
-            xPosition: 5.8
+            xPosition: 5.8,
+            zOffset: -0.04
         },
         [BALLED_FOIL__LOCKERS]: {
             yIndex: 4,

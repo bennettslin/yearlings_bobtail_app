@@ -1,15 +1,13 @@
 import { CUBE_Y_AXIS_LENGTH } from '../../../../../constants/cubeIndex'
 import { ACTOR } from '../../../../../constants/scene'
-import { BACKDROP, FIXTURE } from '../../../../../constants/scene/things'
+import { BACKDROP } from '../../../../../constants/scene/things'
 
 const getTransitionDelayIndex = ({
     yIndex,
-    presenceType,
-    actorKey
+    presenceType
 }) => {
     if (
-        presenceType === FIXTURE ||
-        actorKey
+        presenceType === ACTOR
     ) {
         return CUBE_Y_AXIS_LENGTH
     }
@@ -17,7 +15,6 @@ const getTransitionDelayIndex = ({
     return yIndex > -1 ? yIndex : 0
 }
 
-// TODO: Eventually this will just be all of them.
 const getTransitionDelayPrefix = presenceType => {
     if (
         presenceType === ACTOR ||
@@ -31,8 +28,7 @@ const getTransitionDelayPrefix = presenceType => {
 
 export const getTransitionDelayClass = ({
     yIndex,
-    presenceType,
-    actorKey
+    presenceType
 
 }) => (
     `${
@@ -40,8 +36,7 @@ export const getTransitionDelayClass = ({
     }__transitionIndex__${
         getTransitionDelayIndex({
             yIndex,
-            presenceType,
-            actorKey
+            presenceType
         })
     }`
 )

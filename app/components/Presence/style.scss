@@ -1,9 +1,9 @@
 @import '../../scss/constants/transition';
 
-.Presence:not(.Backdrop) {
+.Presence:not(.Actor) {
     :not(.PresenceContainer__shown)
     > & {
-        opacity: 0;
+        top: 0 !important;
     }
 }
 
