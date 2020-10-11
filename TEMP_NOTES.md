@@ -2,6 +2,7 @@
 * Bug: Presences sometimes lose their floor zIndex?
 * Bounce animations
 * Sky animations
+* Constellation yIndices are inconsistent
 
 # Nice TODO:
 * Have all entrance store transition durations be constants in a single file?
