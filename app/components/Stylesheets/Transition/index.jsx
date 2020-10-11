@@ -22,7 +22,7 @@ const TransitionStylesheets = () => (
                         indices,
                         childPrefix: `TrW__canPresenceTransitionExit .${presenceType}__transitionIndex__`,
                         getStyle: yIndex => ({
-                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ${((CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
+                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ease-in ${((CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
                         })
                     }}
                 />
@@ -33,7 +33,7 @@ const TransitionStylesheets = () => (
                         childPrefix: `TrW__canPresenceTransitionEnter .${presenceType}__transitionIndex__`,
                         getStyle: yIndex => ({
                             // Entrance waits for initial cubes transition.
-                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ${(CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
+                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ease-in ${(CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
                         })
                     }}
                 />

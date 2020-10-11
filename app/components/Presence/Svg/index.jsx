@@ -148,6 +148,7 @@ const PresenceSvg = ({
             {...{
                 className: cx(
                     'Presence',
+                    // TODO: No longer used.
                     isLoaded && 'Presence__loaded',
                     capitaliseForClassName(presenceType),
                     getTransitionDelayClass({
