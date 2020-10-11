@@ -154,10 +154,14 @@ const PresenceSvg = ({
                     // TODO: No longer used.
                     isLoaded && 'Presence__loaded',
                     capitaliseForClassName(presenceType),
-                    getTransitionDelayClass(presenceType),
+                    getTransitionDelayClass({
+                        presenceType,
+                        xPosition
+                    }),
                     getTransitionDelayIndexClass({
                         yIndex,
-                        presenceType
+                        presenceType,
+                        xPosition
                     }),
                     'presence__position',
                     noShadow && 'Presence__noShadow'

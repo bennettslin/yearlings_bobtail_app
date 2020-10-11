@@ -15,28 +15,50 @@ const getTransitionDelayIndex = ({
     return yIndex > -1 ? yIndex : 0
 }
 
-const getTransitionDelayPrefix = presenceType => {
+const getTransitionDelayPrefix = ({
+    presenceType,
+    xPosition
+
+}) => {
     switch (presenceType) {
         case ACTOR:
             return 'vivus'
         case BACKDROP:
             return 'top'
-        default:
-            return 'leftRight'
+    }
+
+    // By default, slide from left or right, or from top if perfectly centred.
+    if (xPosition < 5.5) {
+        return 'left'
+    } else if (xPosition > 5.5) {
+        return 'right'
+    } else {
+        return 'top'
     }
 }
 
-export const getTransitionDelayClass = presenceType => (
-    `${getTransitionDelayPrefix(presenceType)}__transition`
+export const getTransitionDelayClass = ({
+    presenceType,
+    xPosition
+
+}) => (
+    `${getTransitionDelayPrefix(({
+        presenceType,
+        xPosition
+    }))}__transition`
 )
 
 export const getTransitionDelayIndexClass = ({
     yIndex,
-    presenceType
+    presenceType,
+    xPosition
 
 }) => (
     `${
-        getTransitionDelayPrefix(presenceType)
+        getTransitionDelayPrefix({
+            presenceType,
+            xPosition
+        })
     }__transitionIndex__${
         getTransitionDelayIndex({
             yIndex,

@@ -1,5 +1,14 @@
 @import '../../scss/constants/transition';
 
+.Presence {
+    opacity: 0;
+
+    .PresenceContainer__shown
+    & {
+        opacity: 1;
+    }
+}
+
 .vivus__transition {
     :not(.PresenceContainer__shown)
     > & {
@@ -14,9 +23,16 @@
     }
 }
 
-.leftRight__transition {
+.left__transition {
     :not(.PresenceContainer__shown)
     > & {
         left: 0 !important;
+    }
+}
+
+.right__transition {
+    :not(.PresenceContainer__shown)
+    > & {
+        left: 100% !important;
     }
 }

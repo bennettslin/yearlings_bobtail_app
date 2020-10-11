@@ -1,0 +1,54 @@
+import {
+    CUBE_Y_AXIS_LENGTH,
+    CUBE_Y_INDICES
+} from '../../../constants/cubeIndex'
+
+const
+    TRANSITION_DURATION = 0.25,
+    TRANSITION_DELAY_INCREMENT = 0.1,
+    LYRIC_SCROLL_DURATION = 0.8,
+    CUBES_TRANSITION_DURATION = 0.55
+
+export const TRANSITION_STYLESHEET_CONFIGS = [
+    {
+        stylesheetKey: 'Exit',
+        getTransitionDelay: yIndex => (LYRIC_SCROLL_DURATION + (CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1)
+    },
+    {
+        stylesheetKey: 'Enter',
+        getTransitionDelay: yIndex => (CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1)
+    }
+]
+
+export const PRESENCE_TRANSITION_CONFIGS = [
+    {
+        transitionKey: 'vivus',
+        indices: [CUBE_Y_AXIS_LENGTH],
+        transitionStyle: 'opacity'
+    },
+    {
+        transitionKey: 'top',
+        indices: CUBE_Y_INDICES,
+        transitionStyle: 'top'
+    },
+    {
+        transitionKey: 'left',
+        indices: CUBE_Y_INDICES,
+        transitionStyle: 'left'
+    },
+    {
+        transitionKey: 'right',
+        indices: CUBE_Y_INDICES,
+        transitionStyle: 'left'
+    }
+]
+
+export const getTransitionStyles = ({
+    transitionStyles,
+    getTransitionDelay,
+    yIndex
+}) => (
+    transitionStyles.map(transitionStyle => (
+        `${transitionStyle} ${TRANSITION_DURATION}s ease-out ${getTransitionDelay(yIndex)}s`
+    )).join(',')
+)
