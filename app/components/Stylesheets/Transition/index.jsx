@@ -4,7 +4,7 @@ import { CUBE_Y_AXIS_LENGTH } from '../../../constants/cubeIndex'
 import { PRESENCE_TRANSITION_CONFIGS } from './constants'
 
 const
-    TRANSITION_DURATION = 0.5,
+    TRANSITION_DURATION = 0.2,
     TRANSITION_DELAY_INCREMENT = 0.1,
     CUBES_TRANSITION_DURATION = 0.5
 

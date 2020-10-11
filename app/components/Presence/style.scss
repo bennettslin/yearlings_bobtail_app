@@ -1,11 +1,6 @@
 @import '../../scss/constants/transition';
 
-// .Presence {
-//     // TODO: Eventually don't have any transitions based on opacity.
-//     opacity: 1;
-// }
-
-.Presence {
+.Presence:not(.Backdrop) {
     :not(.PresenceContainer__shown)
     > & {
         opacity: 0;
