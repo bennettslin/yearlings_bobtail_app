@@ -150,7 +150,6 @@ const PresenceSvg = ({
                     'Presence',
                     isLoaded && 'Presence__loaded',
                     capitaliseForClassName(presenceType),
-                    `${capitaliseForClassName(presenceType)}__loaded`,
                     getTransitionDelayClass({
                         yIndex,
                         presenceType,

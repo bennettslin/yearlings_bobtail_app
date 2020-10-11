@@ -1,13 +1,20 @@
 @import '../../scss/constants/transition';
 
+// .Presence {
+//     // TODO: Eventually don't have any transitions based on opacity.
+//     opacity: 1;
+// }
+
 .Presence {
-    // TODO: Eventually don't have any transitions based on opacity.
-    opacity: 0;
+    :not(.PresenceContainer__shown)
+    > & {
+        opacity: 0;
+    }
 }
 
-.Presence__loaded {
-    .PresenceContainer__shown
-    & {
-        opacity: 1;
+.Backdrop {
+    :not(.PresenceContainer__shown)
+    > & {
+        top: 0 !important;
     }
 }

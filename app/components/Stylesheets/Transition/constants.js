@@ -14,7 +14,7 @@ export const PRESENCE_TRANSITION_CONFIGS = [
     {
         presenceType: BACKDROP,
         indices: CUBE_Y_INDICES,
-        transitionStyle: 'opacity'
+        transitionStyle: 'top'
     },
     {
         presenceType: 'presence',
