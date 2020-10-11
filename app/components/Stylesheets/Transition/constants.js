@@ -2,23 +2,21 @@ import {
     CUBE_Y_AXIS_LENGTH,
     CUBE_Y_INDICES
 } from '../../../constants/cubeIndex'
-import { ACTOR } from '../../../constants/scene'
-import { BACKDROP } from '../../../constants/scene/things'
 
 export const PRESENCE_TRANSITION_CONFIGS = [
     {
-        presenceType: ACTOR,
+        transitionKey: 'vivus',
         indices: [CUBE_Y_AXIS_LENGTH],
         transitionStyle: 'opacity'
     },
     {
-        presenceType: BACKDROP,
+        transitionKey: 'top',
         indices: CUBE_Y_INDICES,
         transitionStyle: 'top'
     },
     {
-        presenceType: 'presence',
+        transitionKey: 'leftRight',
         indices: CUBE_Y_INDICES,
-        transitionStyle: 'top'
+        transitionStyle: 'left'
     }
 ]

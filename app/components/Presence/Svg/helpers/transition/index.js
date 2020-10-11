@@ -16,17 +16,21 @@ const getTransitionDelayIndex = ({
 }
 
 const getTransitionDelayPrefix = presenceType => {
-    if (
-        presenceType === ACTOR ||
-        presenceType === BACKDROP
-    ) {
-        return presenceType
+    switch (presenceType) {
+        case ACTOR:
+            return 'vivus'
+        case BACKDROP:
+            return 'top'
+        default:
+            return 'leftRight'
     }
-
-    return 'presence'
 }
 
-export const getTransitionDelayClass = ({
+export const getTransitionDelayClass = presenceType => (
+    `${getTransitionDelayPrefix(presenceType)}__transition`
+)
+
+export const getTransitionDelayIndexClass = ({
     yIndex,
     presenceType
 

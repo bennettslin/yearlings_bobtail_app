@@ -1,5 +1,4 @@
 # Animation desired behaviour
-* Change from presenceType to transition type.
 * Map entrance and exit stylesheets.
 * Allow multiple transitions per stylesheet. (Opacity and top)
     * Have opacity on all but actors.

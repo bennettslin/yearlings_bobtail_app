@@ -1,22 +1,22 @@
 @import '../../scss/constants/transition';
 
-.Presence:not(.Actor) {
-    :not(.PresenceContainer__shown)
-    > & {
-        top: 0 !important;
-    }
-}
-
-.Actor {
+.vivus__transition {
     :not(.PresenceContainer__shown)
     > & {
         opacity: 0;
     }
 }
 
-.Backdrop {
+.top__transition {
     :not(.PresenceContainer__shown)
     > & {
         top: 0 !important;
+    }
+}
+
+.leftRight__transition {
+    :not(.PresenceContainer__shown)
+    > & {
+        left: 0 !important;
     }
 }
