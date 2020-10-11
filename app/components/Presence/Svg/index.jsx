@@ -23,6 +23,7 @@ import {
     getViewBoxSize
 } from './helpers/size'
 import { setSvgTransform } from './helpers/transform'
+import { getTransitionDelayClass } from './helpers/transition'
 import { DEV_RENDER_ONLY_PRESENCES } from '../../../constants/dev'
 import './style'
 
@@ -148,7 +149,13 @@ const PresenceSvg = ({
                 className: cx(
                     'Presence',
                     isLoaded && 'Presence__loaded',
+                    getTransitionDelayClass({
+                        yIndex,
+                        presenceType,
+                        actorKey
+                    }),
                     capitaliseForClassName(presenceType),
+                    `${capitaliseForClassName(presenceType)}__loaded`,
                     'presence__position',
                     noShadow && 'Presence__noShadow'
                 ),

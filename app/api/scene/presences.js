@@ -60,5 +60,5 @@ export const getIsShownInSceneForPresence = ({
 
     return actorKey ?
         layerEntity[actorKey] === presenceKey :
-        layerEntity[presenceKey]
+        Boolean(layerEntity[presenceKey])
 }
