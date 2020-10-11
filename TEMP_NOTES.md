@@ -1,6 +1,5 @@
 # Animation desired behaviour
 * Bug: Presences sometimes lose their floor zIndex?
-* Wire animations
 * Bounce animations
 * Sky animations
 

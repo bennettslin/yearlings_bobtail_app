@@ -9,7 +9,7 @@
     }
 }
 
-.vivus__transition {
+.opacity__transition {
     :not(.PresenceContainer__shown)
     > & {
         opacity: 0;
@@ -34,5 +34,12 @@
     :not(.PresenceContainer__shown)
     > & {
         left: 100% !important;
+    }
+}
+
+.path__transition {
+    :not(.PresenceContainer__shown)
+    > & {
+        opacity: 0;
     }
 }

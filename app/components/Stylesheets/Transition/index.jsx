@@ -12,7 +12,8 @@ const TransitionStylesheets = () => (
             transitionKey,
             indices,
             transitionStyle,
-            transitionDuration
+            transitionDuration,
+            noAdditionalOpacity = false
         }) => (
             <Fragment {...{ key: transitionKey }}>
                 {TRANSITION_STYLESHEET_CONFIGS.map(({
@@ -29,11 +30,7 @@ const TransitionStylesheets = () => (
                                 transition: getTransitionStyles({
                                     yIndex,
                                     transitionStyles:
-                                        /**
-                                         * Add opacity to all but path
-                                         * transitions.
-                                         */
-                                        transitionKey === 'path' ?
+                                        noAdditionalOpacity ?
                                             [transitionStyle] :
                                             ['opacity', transitionStyle],
                                     transitionDuration,

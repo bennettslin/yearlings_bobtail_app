@@ -15,9 +15,13 @@ const getIsPathTransition = presenceType => {
 
 const getTransitionDelayIndex = ({
     yIndex,
-    presenceType
+    presenceType,
+    isWire
 }) => {
-    if (getIsPathTransition(presenceType)) {
+    if (
+        getIsPathTransition(presenceType) ||
+        isWire
+    ) {
         return CUBE_Y_AXIS_LENGTH
     }
 
@@ -27,9 +31,14 @@ const getTransitionDelayIndex = ({
 const getTransitionDelayPrefix = ({
     presenceType,
     xPosition,
-    hasWires
+    hasWires,
+    isWire
 
 }) => {
+    if (isWire) {
+        return 'opacity'
+    }
+
     if (getIsPathTransition(presenceType)) {
         return 'path'
     }
@@ -52,13 +61,15 @@ const getTransitionDelayPrefix = ({
 export const getTransitionDelayClass = ({
     presenceType,
     xPosition,
-    hasWires
+    hasWires,
+    isWire
 
 }) => (
     `${getTransitionDelayPrefix(({
         presenceType,
         xPosition,
-        hasWires
+        hasWires,
+        isWire
     }))}__transition`
 )
 
@@ -66,19 +77,22 @@ export const getTransitionDelayIndexClass = ({
     yIndex,
     presenceType,
     xPosition,
-    hasWires
+    hasWires,
+    isWire
 
 }) => (
     `${
         getTransitionDelayPrefix({
             presenceType,
             xPosition,
-            hasWires
+            hasWires,
+            isWire
         })
     }__transitionIndex__${
         getTransitionDelayIndex({
             yIndex,
-            presenceType
+            presenceType,
+            isWire
         })
     }`
 )

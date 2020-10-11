@@ -148,71 +148,94 @@ const PresenceSvg = ({
         setIsLoaded(true)
     }
 
-    return (Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && !hide && (
-        <InlineSvg
+    /**
+     * This parent container exists solely to take the CSS transition
+     * class names. This prevents conflict when the child tries to add
+     * its own class names after svgs have loaded.
+     */
+    return (
+        <div
             {...{
                 className: cx(
-                    'Presence',
-                    // TODO: No longer used.
-                    isLoaded && 'Presence__loaded',
-                    capitaliseForClassName(presenceType),
-                    getTransitionDelayClass({
-                        presenceType,
-                        xPosition,
-                        hasWires
-                    }),
-                    getTransitionDelayIndexClass({
-                        yIndex,
-                        presenceType,
-                        xPosition,
-                        hasWires
-                    }),
-                    'presence__position',
-                    !noShadow && 'presence__shadow',
-                    trimBottom && 'presence__trimBottom'
-                ),
-                style: {
-                    left: `${adjustedLeft.toFixed(2)}%`,
-                    top: `${adjustedTop.toFixed(2)}%`,
-                    width: `${adjustedWidth.toFixed(2)}%`,
-                    height: `${adjustedHeight.toFixed(2)}%`,
-                    ...perspective && {
-                        perspective: `${perspective}em`
-                    }
-                },
-                svgClassName: cx(
-                    presenceKeyClassName,
-                    duplicateKeyClassName,
-                    getSharedClassNames(sharedStyle)
-                ),
-                title: convertPresenceKeyToTitle(presenceKey),
-                preProcessor: preProcessSvg,
-                onLoad,
-
-                ...hasWires && {
-                    siblingPlacedFront: placedFront,
-                    siblingComponent: (
-                        <Wires
-                            {...{
-                                actorKey,
-                                presenceType,
-                                presenceKey,
-                                adjustedTop,
-                                adjustedLeft,
-                                adjustedWidth,
-                                adjustedHeight
-                            }}
-                        />
-                    )
-                }
+                    'PresenceContainer'
+                )
             }}
         >
-            {getSvgForPresence({
-                actorKey,
-                presenceType,
-                presenceKey
-            })}
-        </InlineSvg>
+            {(Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && !hide && (
+                <InlineSvg
+                    {...{
+                        className: cx(
+                            'Presence',
+                            // TODO: No longer used.
+                            isLoaded && 'Presence__loaded',
+                            capitaliseForClassName(presenceType),
+                            getTransitionDelayClass({
+                                presenceType,
+                                xPosition,
+                                hasWires
+                            }),
+                            getTransitionDelayIndexClass({
+                                yIndex,
+                                presenceType,
+                                xPosition,
+                                hasWires
+                            }),
+                            'presence__position',
+                            !noShadow && 'presence__shadow',
+                            trimBottom && 'presence__trimBottom'
+                        ),
+                        style: {
+                            left: `${adjustedLeft.toFixed(2)}%`,
+                            top: `${adjustedTop.toFixed(2)}%`,
+                            width: `${adjustedWidth.toFixed(2)}%`,
+                            height: `${adjustedHeight.toFixed(2)}%`,
+                            ...perspective && {
+                                perspective: `${perspective}em`
+                            }
+                        },
+                        svgClassName: cx(
+                            presenceKeyClassName,
+                            duplicateKeyClassName,
+                            getSharedClassNames(sharedStyle)
+                        ),
+                        title: convertPresenceKeyToTitle(presenceKey),
+                        preProcessor: preProcessSvg,
+                        onLoad,
+
+                        ...hasWires && {
+                            siblingPlacedFront: placedFront,
+                            siblingComponent: (
+                                <Wires
+                                    {...{
+                                        className: cx(
+                                            getTransitionDelayClass({
+                                                isWire: true
+                                            }),
+                                            getTransitionDelayIndexClass({
+                                                isWire: true
+                                            })
+                                        ),
+                                        actorKey,
+                                        presenceType,
+                                        presenceKey,
+                                        adjustedTop,
+                                        adjustedLeft,
+                                        adjustedWidth,
+                                        adjustedHeight
+                                    }}
+                                />
+                            )
+                        }
+                    }}
+                >
+                    {getSvgForPresence({
+                        actorKey,
+                        presenceType,
+                        presenceKey
+                    })}
+                </InlineSvg>
+            )}
+        </div>
     )
 }
 

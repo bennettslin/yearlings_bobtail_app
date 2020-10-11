@@ -11,6 +11,7 @@ const defaultProps = {
 }
 
 const propTypes = {
+    className: PropTypes.string,
     actorKey: PropTypes.string,
     presenceType: PropTypes.string,
     presenceKey: PropTypes.string.isRequired,
@@ -21,6 +22,7 @@ const propTypes = {
 }
 
 const Wires = ({
+    className,
     actorKey,
     presenceType,
     presenceKey,
@@ -56,7 +58,8 @@ const Wires = ({
                             key: index,
                             className: cx(
                                 'Wire',
-                                'presence__position'
+                                'presence__position',
+                                className
                             ),
                             style: {
                                 left: `${left.toFixed(2)}%`,

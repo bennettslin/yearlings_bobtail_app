@@ -22,10 +22,10 @@ export const TRANSITION_STYLESHEET_CONFIGS = [
 
 export const PRESENCE_TRANSITION_CONFIGS = [
     {
-        transitionKey: 'path',
+        transitionKey: 'opacity',
         indices: [CUBE_Y_AXIS_LENGTH],
         transitionStyle: 'opacity',
-        transitionDuration: 0.5
+        noAdditionalOpacity: true
     },
     {
         transitionKey: 'top',
@@ -41,6 +41,13 @@ export const PRESENCE_TRANSITION_CONFIGS = [
         transitionKey: 'right',
         indices: CUBE_Y_INDICES,
         transitionStyle: 'left'
+    },
+    {
+        transitionKey: 'path',
+        indices: [CUBE_Y_AXIS_LENGTH],
+        transitionStyle: 'opacity',
+        transitionDuration: 0.5,
+        noAdditionalOpacity: true
     }
 ]
 
