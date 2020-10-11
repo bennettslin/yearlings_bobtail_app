@@ -164,7 +164,8 @@ const PresenceSvg = ({
                         xPosition
                     }),
                     'presence__position',
-                    noShadow && 'Presence__noShadow'
+                    !noShadow && 'presence__shadow',
+                    trimBottom && 'presence__trimBottom'
                 ),
                 style: {
                     left: `${adjustedLeft.toFixed(2)}%`,

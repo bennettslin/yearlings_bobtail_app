@@ -2,3 +2,11 @@
     position: absolute;
     transform: translate(-50%, -100%);
 }
+
+.presence__shadow {
+    filter: drop-shadow( 0 0 1.5px hsla(0, 0, 0, 0.5));
+}
+
+.presence__trimBottom {
+    overflow: hidden;
+}

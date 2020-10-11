@@ -1,5 +1,4 @@
 # Animation desired behaviour
-* Add overflow: hidden to presences that have trimBottom.
 * Bug: Presences sometimes lose their floor zIndex?
 * Wire animations
 * Bounce animations
@@ -7,6 +6,10 @@
 
 # Nice TODO:
 * Have all entrance store transition durations be constants in a single file?
+    * Presence exit timeout
+    * Stylesheet durations
+    * Curtain
+    * Cubes
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
