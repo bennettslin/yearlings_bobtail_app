@@ -91,7 +91,9 @@ const PresenceSvg = ({
             actorKey,
             presenceType,
             presenceKey
-        })
+        }),
+        // If it's null, then there is no wire.
+        hasWires = typeof placedFront === 'boolean'
 
     const setAdjustedSize = svgString => {
         try {
@@ -156,12 +158,14 @@ const PresenceSvg = ({
                     capitaliseForClassName(presenceType),
                     getTransitionDelayClass({
                         presenceType,
-                        xPosition
+                        xPosition,
+                        hasWires
                     }),
                     getTransitionDelayIndexClass({
                         yIndex,
                         presenceType,
-                        xPosition
+                        xPosition,
+                        hasWires
                     }),
                     'presence__position',
                     !noShadow && 'presence__shadow',
@@ -185,8 +189,7 @@ const PresenceSvg = ({
                 preProcessor: preProcessSvg,
                 onLoad,
 
-                // If it's null, then there is no wire.
-                ...typeof placedFront === 'boolean' && {
+                ...hasWires && {
                     siblingPlacedFront: placedFront,
                     siblingComponent: (
                         <Wires

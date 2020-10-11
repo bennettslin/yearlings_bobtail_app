@@ -1,13 +1,23 @@
 import { CUBE_Y_AXIS_LENGTH } from '../../../../../constants/cubeIndex'
 import { ACTOR } from '../../../../../constants/scene'
+import { FIXTURE, FURNITURE } from '../../../../../constants/scene/things'
+
+const getIsPathTransition = presenceType => {
+    switch (presenceType) {
+        case ACTOR:
+        case FIXTURE:
+        case FURNITURE:
+            return true
+        default:
+            return false
+    }
+}
 
 const getTransitionDelayIndex = ({
     yIndex,
     presenceType
 }) => {
-    if (
-        presenceType === ACTOR
-    ) {
+    if (getIsPathTransition(presenceType)) {
         return CUBE_Y_AXIS_LENGTH
     }
 
@@ -16,12 +26,17 @@ const getTransitionDelayIndex = ({
 
 const getTransitionDelayPrefix = ({
     presenceType,
-    xPosition
+    xPosition,
+    hasWires
 
 }) => {
-    switch (presenceType) {
-        case ACTOR:
-            return 'path'
+    if (getIsPathTransition(presenceType)) {
+        return 'path'
+    }
+
+    // If it has wires, it should come from the top.
+    if (hasWires) {
+        return 'top'
     }
 
     // By default, slide from left or right, or from top if perfectly centred.
@@ -36,25 +51,29 @@ const getTransitionDelayPrefix = ({
 
 export const getTransitionDelayClass = ({
     presenceType,
-    xPosition
+    xPosition,
+    hasWires
 
 }) => (
     `${getTransitionDelayPrefix(({
         presenceType,
-        xPosition
+        xPosition,
+        hasWires
     }))}__transition`
 )
 
 export const getTransitionDelayIndexClass = ({
     yIndex,
     presenceType,
-    xPosition
+    xPosition,
+    hasWires
 
 }) => (
     `${
         getTransitionDelayPrefix({
             presenceType,
-            xPosition
+            xPosition,
+            hasWires
         })
     }__transitionIndex__${
         getTransitionDelayIndex({
