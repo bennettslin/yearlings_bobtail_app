@@ -1,6 +1,5 @@
 import React, { Fragment, memo } from 'react'
 import Stylesheet from '../../../modules/Stylesheet'
-import { capitaliseForClassName } from '../../../helpers/format'
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/cubeIndex'
 import { PRESENCE_TRANSITION_CONFIGS } from './constants'
 
@@ -21,9 +20,9 @@ const TransitionStylesheets = () => (
                     {...{
                         className: `TransitionStylesheet__${presenceType}Exit`,
                         indices,
-                        childPrefix: `TrW__canPresenceTransitionExit .${capitaliseForClassName(presenceType)}__transitionIndex__`,
+                        childPrefix: `TrW__canPresenceTransitionExit .${presenceType}__transitionIndex__`,
                         getStyle: yIndex => ({
-                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ${(CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT}s`
+                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ${((CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
                         })
                     }}
                 />
@@ -31,10 +30,10 @@ const TransitionStylesheets = () => (
                     {...{
                         className: `TransitionStylesheet__${presenceType}Enter`,
                         indices,
-                        childPrefix: `TrW__canPresenceTransitionEnter .${capitaliseForClassName(presenceType)}__transitionIndex__`,
+                        childPrefix: `TrW__canPresenceTransitionEnter .${presenceType}__transitionIndex__`,
                         getStyle: yIndex => ({
                             // Entrance waits for initial cubes transition.
-                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ${CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT}s`
+                            transition: `${transitionStyle} ${TRANSITION_DURATION}s ${(CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1)}s`
                         })
                     }}
                 />
