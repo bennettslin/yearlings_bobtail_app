@@ -38,7 +38,7 @@ export const getTransitionDelayClass = ({
 }) => (
     `${
         getTransitionDelayPrefix(presenceType)
-    }__transitionDelay__${
+    }__transitionIndex__${
         getTransitionDelayIndex({
             yIndex,
             presenceType,
