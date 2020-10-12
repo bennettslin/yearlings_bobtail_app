@@ -12,6 +12,7 @@ const TransitionStylesheets = () => (
             transitionKey,
             indices,
             transitionStyle,
+            transitionEaseEnter,
             transitionDuration,
             noAdditionalOpacity = false
         }) => (
@@ -33,6 +34,9 @@ const TransitionStylesheets = () => (
                                         noAdditionalOpacity ?
                                             [transitionStyle] :
                                             ['opacity', transitionStyle],
+                                    ...stylesheetKey === 'Enter' && {
+                                        transitionEase: transitionEaseEnter
+                                    },
                                     transitionDuration,
                                     getTransitionDelay
                                 })

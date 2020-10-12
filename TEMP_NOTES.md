@@ -1,6 +1,5 @@
 # Animation desired behaviour
 * Bug: Presences sometimes lose their floor zIndex?
-* Bounce animations
 * Sky animations
 
 # Nice TODO:
@@ -9,6 +8,7 @@
     * Stylesheet durations
     * Curtain
     * Cubes
+* Consolidate transition constants as well. (left, right, and so forth.)
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

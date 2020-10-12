@@ -4,8 +4,9 @@ import {
 } from '../../../constants/cubeIndex'
 
 const
-    TRANSITION_DURATION = 0.25,
-    TRANSITION_DELAY_INCREMENT = 0.1,
+    TRANSITION_DURATION = 0.275,
+    TRANSITION_DELAY_INCREMENT = 0.075,
+    TRANSITION_BOUNCE_ENTER = 'cubic-bezier(0.2, 0.9, 0.3, 1.1)',
     LYRIC_SCROLL_DURATION = 0.8,
     CUBES_TRANSITION_DURATION = 0.55
 
@@ -22,6 +23,7 @@ export const TRANSITION_STYLESHEET_CONFIGS = [
 
 export const PRESENCE_TRANSITION_CONFIGS = [
     {
+        // For wires.
         transitionKey: 'opacity',
         indices: [CUBE_Y_AXIS_LENGTH],
         transitionStyle: 'opacity',
@@ -30,17 +32,20 @@ export const PRESENCE_TRANSITION_CONFIGS = [
     {
         transitionKey: 'top',
         indices: CUBE_Y_INDICES,
-        transitionStyle: 'top'
+        transitionStyle: 'top',
+        transitionEaseEnter: TRANSITION_BOUNCE_ENTER
     },
     {
         transitionKey: 'left',
         indices: CUBE_Y_INDICES,
-        transitionStyle: 'left'
+        transitionStyle: 'left',
+        transitionEaseEnter: TRANSITION_BOUNCE_ENTER
     },
     {
         transitionKey: 'right',
         indices: CUBE_Y_INDICES,
-        transitionStyle: 'left'
+        transitionStyle: 'left',
+        transitionEaseEnter: TRANSITION_BOUNCE_ENTER
     },
     {
         transitionKey: 'path',
@@ -54,10 +59,11 @@ export const PRESENCE_TRANSITION_CONFIGS = [
 export const getTransitionStyles = ({
     yIndex,
     transitionStyles,
+    transitionEase = 'ease-out',
     transitionDuration = TRANSITION_DURATION,
     getTransitionDelay
 }) => (
     transitionStyles.map(transitionStyle => (
-        `${transitionStyle} ${transitionDuration}s ease-out ${getTransitionDelay(yIndex)}s`
+        `${transitionStyle} ${transitionDuration}s ${transitionEase} ${getTransitionDelay(yIndex)}s`
     )).join(',')
 )
