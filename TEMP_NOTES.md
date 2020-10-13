@@ -1,4 +1,5 @@
 # Animation desired behaviour
+* Make durations kind of random as well.
 * Bug: Presences sometimes lose their floor zIndex?
 * Sky animations
 

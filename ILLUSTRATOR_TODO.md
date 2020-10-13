@@ -7,6 +7,5 @@
 
 * Figure out background and maybe mask colours for loading page.
 
-* Make Catherine Latina. Remove Hapa skin colour.
 * Remove animal skin colour. Just make it Nordic or something.
 * Make Amy leggings less orange, they're too close to skin colour.
