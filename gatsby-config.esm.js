@@ -19,9 +19,8 @@ export default {
                 short_name: `Yearling's Bobtail`,
                 description: 'Audio webcomic by Bobtail Yearlings',
                 start_url: '/',
-                // TODO: With access to Illustrator again.
-                background_color: '#fff',
-                theme_color: '#fff',
+                background_color: '#8c4848',
+                theme_color: '#c9c2a5',
                 display: 'standalone',
                 icon: `assets/favicon/${getFaviconFileName()}.png`
             }
