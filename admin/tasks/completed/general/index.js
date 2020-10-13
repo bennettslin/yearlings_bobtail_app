@@ -4938,5 +4938,9 @@ export default [
     {
         taskName: `Prepare for new thoughts and bubbles.`,
         workedHours: 5
+    },
+    {
+        taskName: `Illustrator todos.`,
+        workedHours: 5
     }
 ]

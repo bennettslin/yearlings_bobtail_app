@@ -1,11 +1,13 @@
 .LoadingContainer {
-    // TODO: With access to Illustrator again.
-    background-color: #fff;
+    background-color: hsl(47, 21%, 61%);
 }
 
 .dramaMasks {
     .LoadingContainer
     & {
         width: 33.3%;
+        .mask {
+            fill: hsl(48, 25%, 72%);
+        }
     }
 }
