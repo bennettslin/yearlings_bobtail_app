@@ -289,6 +289,7 @@ export default {
         WINDOW__SHARED
     ],
     [RICKSHAW_TOWN]: [
+        DOOR__SHARED,
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_HOUSE__SHARED
     ],

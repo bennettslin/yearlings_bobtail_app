@@ -29,6 +29,7 @@ import {
     HOUSE__SHARED,
     TAIWAN_HOUSE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/buildings'
+import { DOOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
     FOLIAGE__SHARED,
@@ -103,6 +104,7 @@ export default {
     ],
     [TAIWAN_MOUNTAINS_BACKDROP]: TAIWAN_MOUNTAIN__SHARED,
     [TAIWAN_STAIRS_BACKDROP]: [
+        DOOR__SHARED,
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,
         TAIWAN_HOUSE__SHARED
