@@ -216,7 +216,8 @@ class PreviewerSvg extends PureComponent {
             <div
                 {...{
                     className: cx(
-                        'Previewer__scrollChild'
+                        'Previewer__scrollChild',
+                        'PresenceContainer__shown'
                     )
                 }}
             >
