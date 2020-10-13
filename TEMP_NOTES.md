@@ -3,6 +3,12 @@
 * Bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
 * Sky animations
 
+# Nice UI TODO:
+* Make club walls striped?
+* Remove GA account from production logs.
+* Load banner text later so that font has time to load.
+* Remove depth shading from slant direction cubes?
+
 # Nice TODO:
 * Have all entrance store transition durations be constants in a single file?
     * Presence exit timeout
@@ -10,6 +16,7 @@
     * Curtain
     * Cubes
 * Consolidate transition constants as well. (left, right, and so forth.)
+* Get staging and such purely from single environment variable.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
