@@ -10,8 +10,3 @@
     * PNG options:
         * Anti-aliasing: Art optimized (Supersampling)
         * Background Color: Transparent
-
-## Generate favicon
-
-* Use favicon.io for Yearling's Bobtail. Manually add to assets.
-* Just add png to assets for Bobtail Yearlings. Build generates the favicons.

@@ -1,4 +1,7 @@
-import { getIsStagingEnvironment } from './app/utils/node'
+import {
+    getFaviconFileName,
+    getIsStagingEnvironment
+} from './app/utils/node'
 import {
     GA_ACCOUNT__STAGING,
     GA_ACCOUNT__PRODUCTION
@@ -20,7 +23,7 @@ export default {
                 background_color: '#fff',
                 theme_color: '#fff',
                 display: 'standalone',
-                icon: 'assets/favicon/yearlingsBobtail.png'
+                icon: `assets/favicon/${getFaviconFileName()}.png`
             }
         },
         {

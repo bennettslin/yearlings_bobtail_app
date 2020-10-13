@@ -26,8 +26,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
                 ),
-                IS_STAGING: getIsStagingEnvironment(),
-                IS_LOCAL: getIsLocalDevelopment()
+                IS_STAGING: getIsStagingEnvironment()
             })
         ],
         resolve: {
