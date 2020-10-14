@@ -98,14 +98,14 @@ export const THINGS_LIZ_BED_LOOK_BACK = {
     [BUBBLE]: {
         [BUBBLE_LARGE__AMY]: {
             yIndex: 5,
-            xPosition: 5.68,
-            zOffset: 2.75,
+            xPosition: 5.7,
+            zOffset: 3.19,
             scaleFactor: 0.3
         },
         [BUBBLE_MEDIUM__AMY]: {
             yIndex: 5,
-            xPosition: 6.48,
-            zOffset: 3,
+            xPosition: 6.45,
+            zOffset: 3.1,
             scaleFactor: 0.3
         },
         [BUBBLE_SMALL__AMY]: {
@@ -116,8 +116,8 @@ export const THINGS_LIZ_BED_LOOK_BACK = {
         },
         [THOUGHT_AMY]: {
             yIndex: 5,
-            xPosition: 4.2,
-            zOffset: 3.5
+            xPosition: 5,
+            zOffset: 4
         }
     },
     [FIXTURE]: {

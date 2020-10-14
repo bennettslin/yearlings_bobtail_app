@@ -58,6 +58,7 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/dishroom'
 import {
     ATTIC_LINENS__SHARED,
+    BENNETT_BED__SHARED,
     BENNETT_LINENS__SHARED,
     LIZ_LINENS__SHARED,
     MIRIAM_LINENS__SHARED,
@@ -100,7 +101,10 @@ export default {
         MOUNTAIN__SHARED,
         WALL__SHARED
     ],
-    [BENNETT_BED]: SHADOW__SHARED,
+    [BENNETT_BED]: [
+        BENNETT_BED__SHARED,
+        SHADOW__SHARED
+    ],
     [CAPTAIN_BED]: PRETEEN_FURNITURE__SHARED,
     [CAVE_SHADOWS]: ROCK__SHARED,
     [CONVEYOR_BELT]: [

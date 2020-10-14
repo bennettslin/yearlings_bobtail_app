@@ -38,7 +38,10 @@ import {
     ALL_PEOPLE__SHARED,
     ALL_CLOTHING__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/actors'
-import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
+import {
+    BENNETT_BED__SHARED,
+    BENNETT_LINENS__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/furniture'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BANJO__SHARED,
@@ -58,6 +61,7 @@ import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/paper'
+import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 import {
     CONSTELLATION__SHARED,
     DRAWING__SHARED
@@ -89,8 +93,9 @@ export default {
     [THOUGHT_AMY]: [
         BENNETT,
         AMY,
-        ALL_CLOTHING__SHARED,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        BENNETT_BED__SHARED,
+        BENNETT_LINENS__SHARED
     ],
     [LIZ_THOUGHT_DINING]: [
         BENNETT,

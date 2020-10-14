@@ -18,7 +18,7 @@ import pharmacyCel from '../../../../../assets/svgs/bubbles/pharmacyCel'
 import constellationTarpit from '../../../../../assets/svgs/bubbles/tarpitConstellation'
 import constellationSibling from '../../../../../assets/svgs/bubbles/siblingConstellation'
 // TODO: After commenting these out, rename svg files.
-// import thoughtAmy from '../../../../../assets/svgs/bubbles/thoughtAmy'
+import thoughtAmy from '../../../../../assets/svgs/bubbles/thoughtAmy'
 // import lizThoughtDining from '../../../../../assets/svgs/bubbles/lizThoughtDining'
 // import lizThoughtBusing from '../../../../../assets/svgs/bubbles/lizThoughtBusing'
 // import lizThoughtDishroom from '../../../../../assets/svgs/bubbles/lizThoughtDishroom'
@@ -139,7 +139,7 @@ export default {
     [BUBBLE_SMALL__AMY]: bubbleSmall,
     [BUBBLE_MEDIUM__AMY]: bubbleMedium,
     [BUBBLE_LARGE__AMY]: bubbleLarge,
-    [THOUGHT_AMY]: lizThoughtReunion,
+    [THOUGHT_AMY]: thoughtAmy,
     [BUBBLE_SMALL__GOLDEN]: bubbleSmall,
     [BUBBLE_MEDIUM__GOLDEN]: bubbleMedium,
     [BUBBLE_LARGE__GOLDEN]: bubbleLarge,

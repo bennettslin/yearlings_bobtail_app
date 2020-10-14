@@ -1,4 +1,5 @@
 export const ATTIC_LINENS__SHARED = 'atticLinens'
+export const BENNETT_BED__SHARED = 'bennettBed'
 export const BENNETT_LINENS__SHARED = 'bennettLinens'
 export const HOSPITAL_LINENS__SHARED = 'hospitalLinens'
 export const LIZ_LINENS__SHARED = 'lizLinens'

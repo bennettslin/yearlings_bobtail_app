@@ -1,7 +1,7 @@
 export default [
     {
         taskName: `New Liz and Amy thought bubbles.`,
-        workedHours: 14,
+        workedHours: 17,
         neededHours: 25
     },
     {
