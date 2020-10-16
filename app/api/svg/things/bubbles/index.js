@@ -18,9 +18,9 @@ import pharmacyCel from '../../../../../assets/svgs/bubbles/pharmacyCel'
 import constellationTarpit from '../../../../../assets/svgs/bubbles/constellationTarpit'
 import constellationSibling from '../../../../../assets/svgs/bubbles/constellationSibling'
 import thoughtAmy from '../../../../../assets/svgs/bubbles/thoughtAmy'
-// import lizThoughtDining from '../../../../../assets/svgs/bubbles/lizThoughtDining'
-// import lizThoughtBusing from '../../../../../assets/svgs/bubbles/lizThoughtBusing'
-// import lizThoughtDishroom from '../../../../../assets/svgs/bubbles/lizThoughtDishroom'
+import lizThoughtDining from '../../../../../assets/svgs/bubbles/lizThoughtDining'
+import lizThoughtBusing from '../../../../../assets/svgs/bubbles/lizThoughtBusing'
+import lizThoughtDishroom from '../../../../../assets/svgs/bubbles/lizThoughtDishroom'
 import khariSpeechAttack from '../../../../../assets/svgs/bubbles/khariSpeechAttack'
 import lizSpeechDefence from '../../../../../assets/svgs/bubbles/lizSpeechDefence'
 import lizThoughtReunion from '../../../../../assets/svgs/bubbles/lizThoughtReunion'
@@ -145,12 +145,12 @@ export default {
     [BUBBLE_SMALL__TCHOTCHKES]: bubbleSmall,
     [BUBBLE_MEDIUM__TCHOTCHKES]: bubbleMedium,
     [BUBBLE_LARGE__TCHOTCHKES]: bubbleLarge,
-    [LIZ_THOUGHT_DINING]: lizThoughtReunion,
-    [LIZ_THOUGHT_BUSING]: lizThoughtReunion,
+    [LIZ_THOUGHT_DINING]: lizThoughtDining,
+    [LIZ_THOUGHT_BUSING]: lizThoughtBusing,
     [BUBBLE_SMALL__DISHROOM]: bubbleSmall,
     [BUBBLE_MEDIUM__DISHROOM]: bubbleMedium,
     [BUBBLE_LARGE__DISHROOM]: bubbleLarge,
-    [LIZ_THOUGHT_DISHROOM]: lizThoughtReunion,
+    [LIZ_THOUGHT_DISHROOM]: lizThoughtDishroom,
     [KHARI_SPEECH_ATTACK]: khariSpeechAttack,
     [LIZ_SPEECH_DEFENCE]: lizSpeechDefence,
     [BUBBLE_SMALL__REUNION]: bubbleSmall,

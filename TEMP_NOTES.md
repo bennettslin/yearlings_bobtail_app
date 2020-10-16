@@ -8,6 +8,7 @@
 * Remove GA account from production logs.
 * Load banner text later so that font has time to load.
 * Remove depth shading from slant direction cubes?
+* Make small bubbles come down from top as well.
 
 # Nice TODO:
 * Have all entrance store transition durations be constants in a single file?

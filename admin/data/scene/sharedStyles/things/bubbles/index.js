@@ -38,10 +38,19 @@ import {
     ALL_PEOPLE__SHARED,
     ALL_CLOTHING__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/actors'
+import { LANCET_PEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
+import {
+    CUP__SHARED,
+    TRAY__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/dishroom'
 import {
     BENNETT_BED__SHARED,
     BENNETT_LINENS__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/furniture'
+import {
+    DOOR__SHARED,
+    WINDOW__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BANJO__SHARED,
@@ -70,6 +79,7 @@ import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
+import { CAFETERIA__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [SKETCH_APART]: DRAWING__SHARED,
@@ -101,19 +111,32 @@ export default {
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        BOOK__SHARED,
+        CAFETERIA__SHARED,
+        CUP__SHARED,
+        TRAY__SHARED
     ],
     [LIZ_THOUGHT_BUSING]: [
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        BOOK__SHARED,
+        CAFETERIA__SHARED,
+        CUP__SHARED,
+        TRAY__SHARED
     ],
     [LIZ_THOUGHT_DISHROOM]: [
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        BOOK__SHARED,
+        CAFETERIA__SHARED,
+        LANCET_PEN__SHARED,
+        DOOR__SHARED,
+        WINDOW__SHARED
     ],
     [ESTHER_SPEECH]: BUBBLE__SHARED,
     [THOUGHT_GO_KART]: [

@@ -77,31 +77,31 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
     [BUBBLE]: {
         [BUBBLE_LARGE__TCHOTCHKES]: {
             yIndex: 5,
-            xPosition: 3.25,
-            zOffset: 2.28,
+            xPosition: 3.45,
+            zOffset: 2.53,
             scaleFactor: 0.3
         },
         [BUBBLE_MEDIUM__TCHOTCHKES]: {
             yIndex: 5,
-            xPosition: 4.03,
+            xPosition: 4.1,
             zOffset: 2.26,
             scaleFactor: 0.3
         },
         [BUBBLE_SMALL__TCHOTCHKES]: {
             yIndex: 5,
-            xPosition: 4.5,
+            xPosition: 4.55,
             zOffset: 2.3,
             scaleFactor: 0.3
         },
         [LIZ_THOUGHT_DINING]: {
             yIndex: 5,
             xPosition: 3.3,
-            zOffset: 3.25
+            zOffset: 3.5
         },
         [LIZ_THOUGHT_BUSING]: {
             yIndex: 5,
-            xPosition: 7.6,
-            zOffset: 2.8
+            xPosition: 7.7,
+            zOffset: 2.7
         }
     },
     [FIXTURE]: {
@@ -125,20 +125,20 @@ export const THINGS_LIZ_COUCH_OPENING = {
     [BUBBLE]: {
         [BUBBLE_LARGE__DISHROOM]: {
             yIndex: 5,
-            xPosition: 5.2,
-            zOffset: 5.5,
+            xPosition: 4.95,
+            zOffset: 5.55,
             scaleFactor: 0.3
         },
         [BUBBLE_MEDIUM__DISHROOM]: {
             yIndex: 5,
-            xPosition: 5.95,
-            zOffset: 5.4,
+            xPosition: 5.62,
+            zOffset: 5.3,
             scaleFactor: 0.3
         },
         [BUBBLE_SMALL__DISHROOM]: {
             yIndex: 5,
-            xPosition: 6.2,
-            zOffset: 5.1,
+            xPosition: 5.75,
+            zOffset: 5,
             scaleFactor: 0.3
         },
         [LIZ_THOUGHT_DISHROOM]: {
