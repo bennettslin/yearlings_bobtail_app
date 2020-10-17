@@ -1,4 +1,3 @@
-* Class names for bubbles.
 * Try to remove as many styles as possible from new thought bubbles.
 
 * Choose Alex style.

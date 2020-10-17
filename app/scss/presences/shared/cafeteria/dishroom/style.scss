@@ -1,4 +1,5 @@
 .dishroom#{$suffix} {
-    .dishroomFloor { fill: hsl(180, 23%, 67%); }
-    .dishroomWall { fill: hsl(180, 23%, 67%); }
+    // Matches cubes hsla.
+    .dishroomFloor { fill: hsl(74, 14%, 67%); } // Linoleum floor.
+    .dishroomWall { fill: hsl(96, 13%, 77%); } // Industrial wall.
 }
