@@ -62,6 +62,7 @@ import {
     MICROPHONE__SHARED,
     MONITOR__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
+import { WOOD__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
@@ -126,7 +127,8 @@ export default {
         CAFETERIA__SHARED,
         DINING_SHARED,
         CUP__SHARED,
-        TRAY__SHARED
+        TRAY__SHARED,
+        WOOD__SHARED
     ],
     [LIZ_THOUGHT_BUSING]: [
         BENNETT,

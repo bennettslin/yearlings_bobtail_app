@@ -74,6 +74,7 @@ import {
     FRIDGE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/household'
 import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
+import { WOOD__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     LAMPPOST__SHARED,
     FOLIAGE__SHARED,
@@ -139,7 +140,7 @@ export default {
     [SANDBAGS]: null,
     [SHOPPING_CART]: GARBAGE_BAG__SHARED,
     [SIGNPOST]: POLE__SHARED,
-    [STAGE_LIGHTS]: null,
+    [STAGE_LIGHTS]: WOOD__SHARED,
     [STEAM_PIPES]: null,
     [STORAGE_BOXES]: null,
     [STORAGE_CHEST]: null,

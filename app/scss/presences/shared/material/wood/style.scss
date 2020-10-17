@@ -1,3 +1,7 @@
 .wood#{$suffix} {
-
+    .woodDark { fill: hsl(35, 20%, 47%); }
+    .woodMediumDark { fill: hsl(35, 22%, 52%); }
+    .woodMedium { fill: hsl(35, 22%, 57%); }
+    .woodMediumLight { fill: hsl(35, 22%, 62%); }
+    .woodLight { fill: hsl(35, 24%, 67%); }
 }

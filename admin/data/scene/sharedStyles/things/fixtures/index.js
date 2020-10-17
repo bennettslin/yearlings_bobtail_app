@@ -90,6 +90,7 @@ import {
     GUITAR_CASE__SHARED,
     MICROPHONE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
+import { WOOD__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     FREEWAY_SIGN__SHARED,
     POLE__SHARED,
@@ -191,7 +192,10 @@ export default {
     [LIZ_PHONE_BASE]: LIZ_PHONE__SHARED,
     [LIZ_PHONE_BASE_REFLECTION]: LIZ_PHONE__SHARED,
     [LIZ_PHONE_REFLECTION]: LIZ_PHONE__SHARED,
-    [MANNEQUIN]: POLE__SHARED,
+    [MANNEQUIN]: [
+        POLE__SHARED,
+        WOOD__SHARED
+    ],
     [PLAYGROUND_BALL]: null,
     [PUSH_BROOM]: null,
     [RECORDING_BEERS]: HEINEKEN__SHARED,
