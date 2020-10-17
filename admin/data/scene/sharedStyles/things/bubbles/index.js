@@ -43,7 +43,7 @@ import { LANCET_PEN__SHARED } from '../../../../../../app/constants/scene/shared
 import {
     CUP__SHARED,
     TRAY__SHARED
-} from '../../../../../../app/constants/scene/sharedStyles/dishroom'
+} from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
     BENNETT_BED__SHARED,
     BENNETT_LINENS__SHARED

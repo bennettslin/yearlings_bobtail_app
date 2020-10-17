@@ -52,7 +52,7 @@ import {
     FUTURE,
     EL_TORITO
 } from '../../../../../../app/constants/scene/actors/songs'
-import { TRAY__SHARED } from '../../../../../../app/constants/scene/sharedStyles/dishroom'
+import { TRAY__SHARED } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
     BASEMENT_TAKEOUT__SHARED,
     FROZEN_MEATS__SHARED,

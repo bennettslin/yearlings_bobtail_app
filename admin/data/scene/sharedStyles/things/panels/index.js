@@ -55,7 +55,7 @@ import {
     CUP__SHARED,
     DISH__SHARED,
     TRAY__SHARED
-} from '../../../../../../app/constants/scene/sharedStyles/dishroom'
+} from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
     ATTIC_LINENS__SHARED,
     BENNETT_BED__SHARED,

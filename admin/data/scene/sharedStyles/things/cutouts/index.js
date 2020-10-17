@@ -62,7 +62,7 @@ import {
     CUP__SHARED,
     DISH__SHARED,
     TRAY__SHARED
-} from '../../../../../../app/constants/scene/sharedStyles/dishroom'
+} from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
     BANANA__SHARED,
     CIGARETTE__SHARED,
