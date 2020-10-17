@@ -1,7 +1,8 @@
 * Try to remove as many styles as possible from new thought bubbles.
 
 * Choose cafeteria area styles.
-* Have, wood, metal, and brass.
+    * Reconsider busing area colours.
+* Have wood, metal, and brass.
 
 * Note in comments which cube hslas and scss styles match.
 

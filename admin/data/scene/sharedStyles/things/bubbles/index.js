@@ -39,7 +39,10 @@ import {
     ALL_PEOPLE__SHARED,
     ALL_CLOTHING__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/actors'
-import { LANCET_PEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
+import {
+    BASEMENT_TAKEOUT__SHARED,
+    LANCET_PEN__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/food'
 import {
     CUP__SHARED,
     TRAY__SHARED,
@@ -63,6 +66,7 @@ import {
     MONITOR__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
+    IRON__SHARED,
     METAL__SHARED,
     WOOD__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
@@ -126,6 +130,7 @@ export default {
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         THOUGHT__SHARED,
+        BASEMENT_TAKEOUT__SHARED,
         BOOK__SHARED,
         CAFETERIA__SHARED,
         DINING_SHARED,
@@ -144,7 +149,8 @@ export default {
         BUSING_SHARED,
         DISHROOM_SHARED,
         CUP__SHARED,
-        TRAY__SHARED
+        TRAY__SHARED,
+        METAL__SHARED
     ],
     [LIZ_THOUGHT_DISHROOM]: [
         BENNETT,
@@ -158,7 +164,9 @@ export default {
         DISHROOM_SHARED,
         LANCET_PEN__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
+        IRON__SHARED,
+        METAL__SHARED
     ],
     [ESTHER_SPEECH]: BUBBLE__SHARED,
     [THOUGHT_GO_KART]: [

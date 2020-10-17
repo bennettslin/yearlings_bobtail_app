@@ -1,9 +1,10 @@
 .reatta#{$suffix} {
-        .wheelHandle { fill: hsl(69, 26%, 61%); }
-        .wheelHubLight { fill: hsl(0, 20%, 55%); }
-        .wheelHubMedium { fill: hsl(0, 17%, 51%); }
-        .wheelHubDark { fill: hsl(0, 16%, 46%); }
-        .wheelSpoke { fill: hsl(183, 11%, 64%); }
+    // Steering wheel.
+    .wheelHandle { fill: hsl(69, 26%, 61%); }
+    .wheelHubLight { fill: hsl(0, 20%, 55%); }
+    .wheelHubMedium { fill: hsl(0, 17%, 51%); }
+    .wheelHubDark { fill: hsl(0, 16%, 46%); }
+    .wheelSpoke { fill: hsl(183, 11%, 64%); }
 
     .floodLight { fill: hsl(54, 61%, 74%); }
     .hoodFront { fill: hsl(12, 26%, 54%); }
