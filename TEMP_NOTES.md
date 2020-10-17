@@ -1,4 +1,3 @@
-* Fix bubble book covers being different.
 * Fix mouth blobs looking weird with display lines.
 
 # Animation desired behaviour
