@@ -51,6 +51,9 @@ export const BENNETT_LIZ_REFLECTION = 'bennettLizReflection'
 export const LIZ_REFLECTION = 'lizReflection'
 export const KHARI_LIZ_REFLECTION = 'khariLizReflection'
 
+// Only used by lizThoughtDining shared styles.
+export const ALEX = 'alex'
+
 export const ORDERED_ACTORS = [
     FATHER,
     MOTHER,

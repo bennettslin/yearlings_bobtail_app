@@ -1,4 +1,3 @@
-* Have Alex style.
 * Rename dishroom shared style to cafeteria shared style.
     * Have dining, busing, and dishroom area styles.
 * Start material shared styles.
