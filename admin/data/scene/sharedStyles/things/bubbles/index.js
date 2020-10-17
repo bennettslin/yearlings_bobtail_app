@@ -74,8 +74,9 @@ import {
 import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 import {
     CONSTELLATION__SHARED,
-    DRAWING__SHARED
-} from '../../../../../../app/constants/scene/sharedStyles/sketch'
+    DRAWING__SHARED,
+    THOUGHT__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED
@@ -89,7 +90,8 @@ export default {
     [BUBBLE_SMALL]: BUBBLE__SHARED,
     [CINEMA_THOUGHT_BUYING]: [
         MARA,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED
     ],
     [CINEMA_THOUGHT_RECORDING]: [
         ACOUSTIC_GUITAR__SHARED,
@@ -97,7 +99,8 @@ export default {
         MICROPHONE__SHARED,
         BENNETT,
         ALL_CLOTHING__SHARED,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED
     ],
     [SKETCH_DOGS_ROCKET]: DRAWING__SHARED,
     [SKETCH_ESCAPE_POD]: DRAWING__SHARED,
@@ -105,6 +108,7 @@ export default {
         BENNETT,
         AMY,
         ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED,
         BENNETT_BED__SHARED,
         BENNETT_LINENS__SHARED
     ],
@@ -114,6 +118,7 @@ export default {
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED,
         BOOK__SHARED,
         CAFETERIA__SHARED,
         CUP__SHARED,
@@ -134,6 +139,7 @@ export default {
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED,
         BOOK__SHARED,
         CAFETERIA__SHARED,
         LANCET_PEN__SHARED,
@@ -151,7 +157,8 @@ export default {
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED
     ],
     [LIZ_SPEECH_DEFENCE]: [
         BANJO__SHARED,
@@ -162,13 +169,15 @@ export default {
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED
     ],
     [LIZ_THOUGHT_REUNION]: [
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED,
         ALL_VEHICLES__SHARED,
         BUBBLE__SHARED,
         FOLIAGE__SHARED,
@@ -191,18 +200,21 @@ export default {
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED
     ],
     [WAITING_THOUGHT_STUDYING]: [
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED
     ],
     [WAITING_THOUGHT_WALKING]: [
         BENNETT,
         LIZ,
         ALL_PEOPLE__SHARED,
+        THOUGHT__SHARED,
         BUBBLE__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,

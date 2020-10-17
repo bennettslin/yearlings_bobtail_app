@@ -1,7 +1,5 @@
 * Start material shared styles.
     * Have, wood, metal, and brass.
-* Rename sketch to comic.
-    * Have eyeBlob, mouthBlob and tear under cartoon bubble.
 * Note which cube hslas and scss styles match.
 
 # Animation desired behaviour
