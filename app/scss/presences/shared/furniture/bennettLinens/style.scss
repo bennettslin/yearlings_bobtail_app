@@ -1,5 +1,6 @@
 .bennettLinens#{$suffix} {
     .cushion { fill: hsl($HUE_BENNETT_LINENS, 25%, 45%); }
+    .cushionLight { fill: hsl($HUE_BENNETT_LINENS, 25%, 52%); }
     .bennettPillow { fill: hsl($HUE_BENNETT_LINENS - 20, 35%, 58%); }
     .girlfriendPillow { fill: hsl($HUE_BENNETT_LINENS + 30, 35%, 58%); }
     .bennettBlanket { fill: hsl($HUE_BENNETT_LINENS + 20, 35%, 62%); }

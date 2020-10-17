@@ -1,0 +1,8 @@
+.bennettRoom#{$suffix} {
+    // ~ Bennett bed hsla.
+    .mattress { fill: hsl($HUE_BENNETT_LINENS, 35%, 60%); }
+    // ~ Bennett floor hsla.
+    .bennettFloor { fill:hsl($HUE_BENNETT_ROOM, 13%, 41%); }
+    // ~ Bennett wall hsla.
+    .bennettWall { fill:hsl($HUE_BENNETT_ROOM, 17%, 61%); }
+}

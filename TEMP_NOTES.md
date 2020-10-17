@@ -1,7 +1,4 @@
 * Rename metal to steel, wood to oak.
-* Make waitingThoughtSinging bennettCouch room.
-    * Have single shared style for thoughtAmy as well.
-
 * Note in comments which cube hslas and scss styles match.
 
 # Animation desired behaviour
