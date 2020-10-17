@@ -1,6 +1,6 @@
 .dining#{$suffix} {
-    .floor { fill: #4e5a7a; }
-    .wall { fill: #ccc1a3; }
-    .cushion { fill: #727880; }
-    .tableTop { fill: #727880; }
+    .floor { fill: hsl(206, 13%, 41%); }
+    .wall { fill: hsl(206, 19%, 61%); }
+    .cushion { fill: hsl(236, 20%, 53%); }
+    .tableTop { fill: hsl(36, 20%, 67%); }
 }

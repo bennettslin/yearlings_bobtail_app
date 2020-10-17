@@ -10,8 +10,8 @@
     .bayWallFront { fill: hsl(60, 10%, 61%); }
     .bayWallMiddle { fill: hsl(60, 10%, 58%); }
     .bayWallSide { fill: hsl(60, 10%, 55%); }
+    .stepSide { fill: hsl(220, 16%, 59%); }
 
-    // Matches cubes hsla.
-    .stepSide { fill: hsl(220, 14%, 59%); }
-    .stepFront { fill: hsl(220, 14%, 69%); } // Concrete platform.
+    // ~ concrete platform hsla.
+    .stepFront { fill: hsl(220, 16%, 69%); }
 }

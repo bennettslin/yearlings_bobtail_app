@@ -1,5 +1,6 @@
 .busing#{$suffix} {
-    // Matches cubes hsla.
-    .busingFloor { fill: hsl(346, 13%, 72%); } // School floor.
-    .busingWall { fill: hsl(334, 17%, 78%); } // School wall.
+    // ~ school floor hsla.
+    .busingFloor { fill: hsl(26, 13%, 41%); }
+    // ~ school wall hsla.
+    .busingWall { fill: hsl(26, 17%, 61%); }
 }
