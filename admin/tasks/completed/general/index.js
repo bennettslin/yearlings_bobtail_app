@@ -4942,5 +4942,9 @@ export default [
     {
         taskName: `Illustrator todos.`,
         workedHours: 5
+    },
+    {
+        taskName: `New Liz and Amy thought bubbles.`,
+        workedHours: 34
     }
 ]

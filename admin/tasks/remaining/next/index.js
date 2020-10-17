@@ -1,9 +1,5 @@
 export default [
     {
-        taskName: `New Liz and Amy thought bubbles.`,
-        workedHours: 26
-    },
-    {
         taskName: `Animate in presences. Plus cube and presence transition order.`,
         workedHours: 24,
         neededHours: 30
