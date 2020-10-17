@@ -1,3 +1,12 @@
+* Have Alex style.
+* Rename dishroom shared style to cafeteria shared style.
+    * Have dining, busing, and dishroom area styles.
+* Start material shared styles.
+    * Have, wood, metal, and brass.
+* Rename sketch to comic.
+    * Have eyeBlob, mouthBlob and tear under cartoon bubble.
+* Note which cube hslas and scss styles match.
+
 # Animation desired behaviour
 * Make durations kind of random as well.
 * Bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
