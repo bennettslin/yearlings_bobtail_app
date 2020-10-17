@@ -62,7 +62,10 @@ import {
     MICROPHONE__SHARED,
     MONITOR__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
-import { WOOD__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
+import {
+    METAL__SHARED,
+    WOOD__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
@@ -128,6 +131,7 @@ export default {
         DINING_SHARED,
         CUP__SHARED,
         TRAY__SHARED,
+        METAL__SHARED,
         WOOD__SHARED
     ],
     [LIZ_THOUGHT_BUSING]: [

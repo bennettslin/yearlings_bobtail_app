@@ -74,15 +74,17 @@ import {
     FRIDGE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/household'
 import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
-import { WOOD__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
+import {
+    IRON__SHARED,
+    WOOD__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     LAMPPOST__SHARED,
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
     POLE__SHARED,
     ROCK__SHARED,
-    TAIWAN_FOLIAGE__SHARED,
-    TRASH_CAN__SHARED
+    TAIWAN_FOLIAGE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import { NEWSPAPER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import { BUDDHA_SHRINE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/taiwan'
@@ -153,7 +155,7 @@ export default {
         BANANA__SHARED,
         GARBAGE_BAG__SHARED,
         PAPER_BAG__SHARED,
-        TRASH_CAN__SHARED
+        IRON__SHARED
     ],
     [TRAY_PILE]: TRAY__SHARED,
     [TWIN_STREETLAMP]: [

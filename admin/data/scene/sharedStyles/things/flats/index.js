@@ -70,6 +70,7 @@ import {
     WINDOW__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
+import { IRON__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
@@ -81,8 +82,7 @@ import {
     ROAD__SHARED,
     ROCK__SHARED,
     TAIWAN_FOLIAGE__SHARED,
-    TAIWAN_MOUNTAIN__SHARED,
-    TRASH_CAN__SHARED
+    TAIWAN_MOUNTAIN__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
     ALL_VEHICLES__SHARED,
@@ -198,8 +198,8 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        TRASH_CAN__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
+        IRON__SHARED
     ],
     [NOHO_HOUSE_RIGHT]: [
         DOOR__SHARED,
