@@ -29,8 +29,8 @@ import {
     WAITING_THOUGHT_WALKING
 } from '../../../../../../app/constants/scene/things/bubbles'
 import {
-    ALEX,
     AMY,
+    ANDREW,
     BENNETT,
     LIZ,
     MARA
@@ -116,7 +116,7 @@ export default {
         BENNETT_LINENS__SHARED
     ],
     [LIZ_THOUGHT_DINING]: [
-        ALEX,
+        ANDREW,
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
