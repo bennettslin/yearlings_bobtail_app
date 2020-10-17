@@ -1,5 +1,3 @@
-* Rename dishroom shared style to cafeteria shared style.
-    * Have dining, busing, and dishroom area styles.
 * Start material shared styles.
     * Have, wood, metal, and brass.
 * Rename sketch to comic.
