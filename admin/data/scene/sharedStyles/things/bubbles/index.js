@@ -42,10 +42,7 @@ import {
 import { HOUSE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/buildings'
 import {
     CUP__SHARED,
-    TRAY__SHARED,
-    DINING_SHARED,
-    BUSING_SHARED,
-    DISHROOM_SHARED
+    TRAY__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
     CONSTELLATION__SHARED,
@@ -88,6 +85,11 @@ import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/paper'
+import {
+    DINING_SHARED,
+    BUSING_SHARED,
+    DISHROOM_SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/room'
 import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 import {
     ALL_VEHICLES__SHARED,
