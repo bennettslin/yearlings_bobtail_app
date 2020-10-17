@@ -1,6 +1,8 @@
-* Start material shared styles.
-    * Have, wood, metal, and brass.
 * Note which cube hslas and scss styles match.
+
+* Choose Alex style.
+* Choose cafeteria area styles.
+* Have, wood, metal, and brass.
 
 # Animation desired behaviour
 * Make durations kind of random as well.
