@@ -232,7 +232,10 @@ export default {
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED
+        THOUGHT__SHARED,
+        BOOK__SHARED,
+        METAL__SHARED,
+        WOOD__SHARED
     ],
     [WAITING_THOUGHT_WALKING]: [
         BENNETT,

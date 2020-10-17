@@ -12,6 +12,7 @@
 * Choose cafeteria area styles.
     * Reconsider busing area colours.
 * Have wood, metal, and brass.
+* Make waitingThoughtSinging bennettCouch room.
 
 * Note in comments which cube hslas and scss styles match.
 
