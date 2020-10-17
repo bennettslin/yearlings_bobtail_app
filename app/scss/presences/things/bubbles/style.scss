@@ -32,15 +32,36 @@
 .cinemaThoughtRecording {
     .wall { fill: hsl(193, 19%, 61%); }
     .floor { fill: hsl(190, 13%, 36%); }
-    .paper { fill: hsl(0, 0%, 90%); }
     .melodicaBody { fill: hsl(17, 29%, 58%); }
     .melodicaKey { fill: hsl(60, 7%, 80%); }
     .popScreen { fill: hsla(240, 20%, 49%, 0.5); }
     .popScreenHolder { fill: hsl(245, 11%, 41%); }
     .fader { fill: hsl(161, 16%, 69%); }
     .consoleScreen { fill: hsl(161, 12%, 58%); }
-    .console { fill: hsl(162, 10%, 54%); }
+    .consoleBody { fill: hsl(162, 10%, 54%); }
     .consolePanel { fill: hsl(161, 9%, 53%); }
+}
+
+.khariSpeechAttack {
+    .ground { fill: hsl(44, 23%, 41%); }
+    .wall { fill: hsl(43, 29%, 61%); }
+    .cutout { fill: hsl(60, 11%, 69%); }
+    .supportFront { fill: hsl(62, 19%, 69%); }
+    .supportSide { fill: hsl(63, 11%, 56%); }
+    .mount { fill: hsl(216, 6%, 53%); }
+    .shutter { fill: hsl(216, 6%, 34%); }
+    .stageLightSide { fill: hsl(215, 5%, 44%); }
+    .stageLightTop { fill: hsl(214, 6%, 47%); }
+    .stephanieShoe { fill: hsl(40, 12%, 46%); }
+    .stephanieDress { fill: hsl(305, 35%, 62%); }
+    .khariPants { fill: hsl(120, 30%, 60%); }
+    .khariShoe { fill: hsl(43, 13%, 31%); }
+    .khariVest { fill: hsl(72, 37%, 57%); }
+}
+
+.lizSpeechDefence {
+    .ground { fill: hsl(207, 17%, 35%); }
+    .wall { fill: hsl(209, 24%, 59%); }
 }
 
 .lizThoughtReunion {

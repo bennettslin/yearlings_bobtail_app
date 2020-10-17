@@ -108,6 +108,7 @@ export default {
         THOUGHT__SHARED
     ],
     [CINEMA_THOUGHT_RECORDING]: [
+        BOOK__SHARED,
         ACOUSTIC_GUITAR__SHARED,
         HEADPHONE__SHARED,
         MICROPHONE__SHARED,
