@@ -76,7 +76,8 @@ import {
 import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     IRON__SHARED,
-    WOOD__SHARED
+    OAK__SHARED,
+    STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     LAMPPOST__SHARED,
@@ -142,7 +143,10 @@ export default {
     [SANDBAGS]: null,
     [SHOPPING_CART]: GARBAGE_BAG__SHARED,
     [SIGNPOST]: POLE__SHARED,
-    [STAGE_LIGHTS]: WOOD__SHARED,
+    [STAGE_LIGHTS]: [
+        OAK__SHARED,
+        STEEL__SHARED
+    ],
     [STEAM_PIPES]: null,
     [STORAGE_BOXES]: null,
     [STORAGE_CHEST]: null,

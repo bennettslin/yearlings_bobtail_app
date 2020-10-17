@@ -71,7 +71,7 @@ import {
 import {
     IRON__SHARED,
     STEEL__SHARED,
-    WOOD__SHARED
+    OAK__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     CHECKER_FLAG__SHARED,
@@ -150,7 +150,7 @@ export default {
         CUP__SHARED,
         TRAY__SHARED,
         STEEL__SHARED,
-        WOOD__SHARED
+        OAK__SHARED
     ],
     [LIZ_THOUGHT_BUSING]: [
         BENNETT,
@@ -241,7 +241,7 @@ export default {
         THOUGHT__SHARED,
         BOOK__SHARED,
         STEEL__SHARED,
-        WOOD__SHARED
+        OAK__SHARED
     ],
     [WAITING_THOUGHT_WALKING]: [
         BENNETT,
