@@ -1,8 +1,11 @@
-* Note which cube hslas and scss styles match.
+* Class names for bubbles.
+* Try to remove as many styles as possible from new thought bubbles.
 
 * Choose Alex style.
 * Choose cafeteria area styles.
 * Have, wood, metal, and brass.
+
+* Note in comments which cube hslas and scss styles match.
 
 # Animation desired behaviour
 * Make durations kind of random as well.

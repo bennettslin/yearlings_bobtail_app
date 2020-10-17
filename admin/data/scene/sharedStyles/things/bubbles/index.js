@@ -42,7 +42,10 @@ import {
 import { LANCET_PEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
 import {
     CUP__SHARED,
-    TRAY__SHARED
+    TRAY__SHARED,
+    DINING_SHARED,
+    BUSING_SHARED,
+    DISHROOM_SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
     BENNETT_BED__SHARED,
@@ -121,6 +124,7 @@ export default {
         THOUGHT__SHARED,
         BOOK__SHARED,
         CAFETERIA__SHARED,
+        DINING_SHARED,
         CUP__SHARED,
         TRAY__SHARED
     ],
@@ -131,6 +135,8 @@ export default {
         ALL_PEOPLE__SHARED,
         BOOK__SHARED,
         CAFETERIA__SHARED,
+        BUSING_SHARED,
+        DISHROOM_SHARED,
         CUP__SHARED,
         TRAY__SHARED
     ],
@@ -142,6 +148,8 @@ export default {
         THOUGHT__SHARED,
         BOOK__SHARED,
         CAFETERIA__SHARED,
+        BUSING_SHARED,
+        DISHROOM_SHARED,
         LANCET_PEN__SHARED,
         DOOR__SHARED,
         WINDOW__SHARED
