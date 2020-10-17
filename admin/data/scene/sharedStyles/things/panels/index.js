@@ -68,7 +68,7 @@ import {
 import { WINDOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     IRON__SHARED,
-    METAL__SHARED
+    STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     FOLIAGE__SHARED,
@@ -120,7 +120,7 @@ export default {
     [CROWD_SIDE]: SHADOW__SHARED,
     [DISHROOM_SINK]: [
         IRON__SHARED,
-        METAL__SHARED
+        STEEL__SHARED
     ],
     [GO_KART_EXTERIOR]: [
         ALL_VEHICLES__SHARED,

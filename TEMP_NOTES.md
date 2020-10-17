@@ -1,4 +1,4 @@
-* Rename metal to steel, wood to oak.
+* Rename wood to oak.
 * Fix bubble book covers being different.
 * Fix mouth blobs looking weird with display lines.
 

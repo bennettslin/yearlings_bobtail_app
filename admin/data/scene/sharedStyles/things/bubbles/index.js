@@ -70,7 +70,7 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     IRON__SHARED,
-    METAL__SHARED,
+    STEEL__SHARED,
     WOOD__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
@@ -149,7 +149,7 @@ export default {
         DINING_SHARED,
         CUP__SHARED,
         TRAY__SHARED,
-        METAL__SHARED,
+        STEEL__SHARED,
         WOOD__SHARED
     ],
     [LIZ_THOUGHT_BUSING]: [
@@ -163,7 +163,7 @@ export default {
         DISHROOM_SHARED,
         CUP__SHARED,
         TRAY__SHARED,
-        METAL__SHARED
+        STEEL__SHARED
     ],
     [LIZ_THOUGHT_DISHROOM]: [
         BENNETT,
@@ -180,7 +180,7 @@ export default {
         WINDOW__SHARED,
         HOUSE__SHARED,
         IRON__SHARED,
-        METAL__SHARED
+        STEEL__SHARED
     ],
     [LIZ_THOUGHT_REUNION]: [
         BENNETT,
@@ -240,7 +240,7 @@ export default {
         ALL_PEOPLE__SHARED,
         THOUGHT__SHARED,
         BOOK__SHARED,
-        METAL__SHARED,
+        STEEL__SHARED,
         WOOD__SHARED
     ],
     [WAITING_THOUGHT_WALKING]: [
