@@ -133,7 +133,7 @@ export default {
     [LIZ_GATE_COLOUR]: { h: 46, s: 12, l: 63 },
     [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },
     /* P. */
-    [CONCRETE_PLATFORM_COLOUR]: { h: 0, s: 0, l: 65 },
+    [CONCRETE_PLATFORM_COLOUR]: { h: 220, s: 14, l: 69 },
     [PLATFORM_COLOUR]: { h: 13, s: 16, l: 33 },
     [SNOWGLOBE_PLATFORM_COLOUR]: { h: parseInt(HUE_SNOWGLOBE), s: 42, l: 55 },
     /* R. */

@@ -1,4 +1,13 @@
-* Try to remove as many styles as possible from new thought bubbles.
+* dining
+    * cushion
+    * floor
+    * wall
+* busing
+    * floor
+    * wall
+* dishroom
+    * floor
+    * wall
 
 * Choose cafeteria area styles.
     * Reconsider busing area colours.

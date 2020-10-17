@@ -1,6 +1,4 @@
 .house#{$suffix} {
-    .stepFront { fill: hsl(230, 16%, 68%); }
-    .stepSide { fill: hsl(228, 16%, 59%); }
     .roofBelow { fill: hsl($HUE_ROOF, 20%, 43%); }
     .roofSide { fill: hsl($HUE_ROOF, 20%, 50%); }
     .roofTop { fill: hsl($HUE_ROOF, 20%, 56%); }
@@ -12,4 +10,8 @@
     .bayWallFront { fill: hsl(60, 10%, 61%); }
     .bayWallMiddle { fill: hsl(60, 10%, 58%); }
     .bayWallSide { fill: hsl(60, 10%, 55%); }
+
+    // Matches cubes hsla.
+    .stepSide { fill: hsl(220, 14%, 59%); }
+    .stepFront { fill: hsl(220, 14%, 69%); } // Concrete platform.
 }

@@ -39,10 +39,7 @@ import {
     ALL_PEOPLE__SHARED,
     ALL_CLOTHING__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/actors'
-import {
-    BASEMENT_TAKEOUT__SHARED,
-    LANCET_PEN__SHARED
-} from '../../../../../../app/constants/scene/sharedStyles/food'
+import { HOUSE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/buildings'
 import {
     CUP__SHARED,
     TRAY__SHARED,
@@ -50,6 +47,15 @@ import {
     BUSING_SHARED,
     DISHROOM_SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
+import {
+    CONSTELLATION__SHARED,
+    DRAWING__SHARED,
+    THOUGHT__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/comic'
+import {
+    BASEMENT_TAKEOUT__SHARED,
+    LANCET_PEN__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/food'
 import {
     BENNETT_BED__SHARED,
     BENNETT_LINENS__SHARED
@@ -83,11 +89,6 @@ import {
     SKETCHBOOK__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
-import {
-    CONSTELLATION__SHARED,
-    DRAWING__SHARED,
-    THOUGHT__SHARED
-} from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED
@@ -165,6 +166,7 @@ export default {
         LANCET_PEN__SHARED,
         DOOR__SHARED,
         WINDOW__SHARED,
+        HOUSE__SHARED,
         IRON__SHARED,
         METAL__SHARED
     ],
