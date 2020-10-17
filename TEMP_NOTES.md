@@ -1,5 +1,6 @@
 * Rename metal to steel, wood to oak.
-* Note in comments which cube hslas and scss styles match.
+* Fix bubble book covers being different.
+* Fix mouth blobs looking weird with display lines.
 
 # Animation desired behaviour
 * Make durations kind of random as well.
