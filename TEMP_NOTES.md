@@ -1,5 +1,3 @@
-* Fix mouth blobs looking weird with display lines.
-
 # Animation desired behaviour
 * Make durations kind of random as well.
 * Bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
