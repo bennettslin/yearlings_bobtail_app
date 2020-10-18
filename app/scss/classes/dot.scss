@@ -1,27 +1,43 @@
-.Dot__wormhole {
-    fill: $colour__wormhole;
+.backstory {
+    .dark { fill: hsl($hue__backstory, 49%, 50%); }
+    .medium { fill: hsl($hue__backstory, 49%, 60%); }
+    .light { fill: hsl($hue__backstory, 49%, 70%); }
 }
-.Dot__observation {
-    fill: $colour__observation;
+.narrative {
+    .medium { fill: hsl($hue__narrative, 49%, 60%); }
+    .light { fill: hsl($hue__narrative, 49%, 70%); }
 }
-.Dot__backstory {
-    fill: $colour__backstory;
+.observation {
+    .dark { fill: hsl($hue__observation, 49%, 50%); }
+    .medium { fill: hsl($hue__observation, 49%, 60%); }
+    .light { fill: hsl($hue__observation, 49%, 70%); }
 }
-.Dot__reference {
-    fill: $colour__reference;
+.pun {
+    .dark { fill: hsl($hue__pun, 49%, 50%); }
+    .medium { fill: hsl($hue__pun, 49%, 60%); }
+    .light { fill: hsl($hue__pun, 49%, 70%); }
 }
-.Dot__pun {
-    fill: $colour__pun;
+.reference {
+    .dark { fill: hsl($hue__reference, 49%, 50%); }
+    .medium { fill: hsl($hue__reference, 49%, 60%); }
+    .light { fill: hsl($hue__reference, 49%, 70%); }
 }
-.Dot__narrative {
-    fill: $colour__narrative;
+.wormhole {
+    .dark { fill: hsl($hue__wormhole, 49%, 50%); }
+    .medium { fill: hsl($hue__wormhole, 49%, 60%); }
+    .light { fill: hsl($hue__wormhole, 49%, 70%); }
 }
-.Dot__songwriting {
-    fill: $colour__songwriting;
+.songwriting {
+    .dark { fill: hsl($hue__songwriting, 49%, 50%); }
+    .medium { fill: hsl($hue__songwriting, 49%, 60%); }
+    .light { fill: hsl($hue__songwriting, 49%, 70%); }
 }
-.Dot__afterword {
-    fill: $colour__afterword;
+.afterword {
+    .medium { fill: hsl($hue__afterword, 49%, 60%); }
+    .light { fill: hsl($hue__afterword, 49%, 70%); }
 }
 .Dot__deselected {
-    fill: $colour__deselected;
+    .dark { fill: hsl(0, 0, 60%); }
+    .medium { fill: hsl(0, 0, 70%); }
+    .light { fill: hsl(0, 0, 80%); }
 }

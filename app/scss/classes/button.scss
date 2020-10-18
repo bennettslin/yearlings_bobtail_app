@@ -73,12 +73,6 @@
     .sclera { fill: hsl(225, 20%, 90%); }
 }
 
-.ButtonIcon__dotsSlide {
-    .narrative { fill: $colour__narrative; }
-    .backstory { fill: $colour__backstory; }
-    .observation { fill: $colour__observation; }
-}
-
 .ButtonIcon__overview {
     stroke-width: 0.5px;
     stroke: rgba(50, 50, 50, 0.5);

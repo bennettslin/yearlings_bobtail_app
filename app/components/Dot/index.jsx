@@ -27,8 +27,7 @@ const Dot = ({
             {...{
                 className: cx(
                     'Dot',
-                    `Dot__${dotKey}`,
-
+                    dotKey,
                     isSequenceDot && 'strokeShadow',
 
                     // Only used by DotsSlideSelect.

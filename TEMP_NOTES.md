@@ -1,14 +1,28 @@
+# Dot colouring
+* Fine tune colours
+* Ensure wormhole button has proper colouring
+* Ensure dots slide button has proper colouring
+* Ensure deselected dots have proper colouring
+* Delete dot colours in colours files
+* Change songwriting to songcraft
+* Raise dot sequences in lyrics
+* Raise dot sequences in annotations as well
+* Make observation eye bigger and handle smaller
+* Make wormhole side lines light colour
+* Make wormhole colour light green
+
 # Animation desired behaviour
-* Make durations kind of random as well.
-* Bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
 * Sky animations
+* Blocker bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
+* Minor bug: Why do Sasha first scene puppets not bounce?
+* Make small bubbles and sketches come down from top as well.
+    * Stagger small bubbles.
 
 # Nice UI TODO:
-* Make club walls striped?
-* Remove GA account from production logs.
+* Make club walls striped.
+    * Then make consistent with thought bubble.
 * Load banner text later so that font has time to load.
 * Remove depth shading from slant direction cubes?
-* Make small bubbles come down from top as well.
 
 # Nice TODO:
 * Have all entrance store transition durations be constants in a single file?

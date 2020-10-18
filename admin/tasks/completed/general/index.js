@@ -4946,5 +4946,13 @@ export default [
     {
         taskName: `New Liz and Amy thought bubbles.`,
         workedHours: 34
+    },
+    {
+        taskName: `Make thought bubble characters more consistent.`,
+        workedHours: 6
+    },
+    {
+        taskName: `Redo dot category shapes.`,
+        workedHours: 10
     }
 ]
