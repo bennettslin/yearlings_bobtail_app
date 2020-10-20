@@ -1,8 +1,8 @@
 # Dot colouring
 * Fine tune colours
-* Get rid of strokes in dots.
-* Space apart dots in dots slide button more.
 * Delete dot colours in colours files
+* Space apart dots in dots slide button more.
+* Space dots apart in dot sequences
 * Raise dot sequences in lyrics
 * Raise dot sequences in annotations as well
 * Make observation eye bigger and handle smaller

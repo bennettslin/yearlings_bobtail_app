@@ -66,8 +66,3 @@
     // Selected should override hover.
     filter: $dropShadow__select !important;
 }
-
-.strokeShadow {
-    stroke-width: 0.5px;
-    stroke: hsla(0, 0%, 0%, 0.25);
-}
