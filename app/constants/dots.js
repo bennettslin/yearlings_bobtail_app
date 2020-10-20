@@ -19,8 +19,8 @@ export const ORDERED_DOT_KEYS = [
     OBSERVATION,
     PUN,
     REFERENCE,
-    WORMHOLE,
     SONGCRAFT,
+    WORMHOLE,
     AFTERWORD
 ]
 

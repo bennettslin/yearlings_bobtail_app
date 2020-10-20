@@ -7,7 +7,6 @@
 * Raise dot sequences in annotations as well
 * Make observation eye bigger and handle smaller
 * Make wormhole side lines light colour
-* Make wormhole colour light green
 
 # Animation desired behaviour
 * Sky animations
