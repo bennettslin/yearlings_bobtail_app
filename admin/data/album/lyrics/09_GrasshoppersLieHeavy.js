@@ -153,7 +153,7 @@ export default {
                             card: {
                                 description: [
                                     {
-                                        anchor: `Gun molls`,
+                                        anchor: `Gun molls,`,
                                         wiki: `Gun_moll`
                                     },
                                     `the female companions of famous mobsters, were both romanticized and feared for their exploits. Likewise, I desired the girls who hung out with the boys who bullied me, but this also made their contempt for me harder to stomach.`

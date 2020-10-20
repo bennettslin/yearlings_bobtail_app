@@ -4,6 +4,10 @@ export default [
         workedHours: 24,
         neededHours: 30
     },
+    {
+        taskName: `Finalise dots work..`,
+        workedHours: 3
+    },
 
     /* Ongoing. */
     {
