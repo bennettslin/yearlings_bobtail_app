@@ -3,7 +3,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -64,7 +64,7 @@ export default {
                     description: `Having settled into an unhealthy power dynamic early on, Sita and I failed to grow as individuals. I can see now that she was waiting for me to grow up, because she couldn't do it without me. So the humming here evokes her quiet waiting, born of resignation.`,
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -132,7 +132,7 @@ export default {
                     description: `I tried to write this song from Sita's perspective. In retrospect, my portrayal might be a bit one-dimensional. But I was self-absorbed in my guilt when I wrote this, and my primary purpose was to beat myself up over what my stupidity had cost me.`,
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -206,7 +206,7 @@ export default {
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -257,7 +257,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -555,7 +555,7 @@ export default {
                         `even as the underlying chords remain unchanged, to represent how we've normalized our dysfunctional relationship. The two strands of tuplets are also more in sync, as one plays two notes for every three played by the other.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -580,7 +580,7 @@ export default {
                                 description: `Or else, "U-shaped." Yet more imagery comparing vaginal penetration to an inflicted lesion. I think I was feeling both guilty and horny when I wrote these lyrics.`,
                                 dotKeys: {
                                     [PUN]: true,
-                                    [SONGWRITING]: true
+                                    [SONGCRAFT]: true
                                 }
                             }
                         }
@@ -778,7 +778,7 @@ export default {
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }

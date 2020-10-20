@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -73,7 +73,7 @@ export default {
                         `by the Beatles. The resulting sense of urgency provides a nice push toward the album's finish.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -103,7 +103,7 @@ export default {
                         `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady move downward seemed an apt metaphor for my breakup with Miriam, so I included two Shepard tones here. One is a low bass that descends in discrete half steps, while the other is a high treble that does so in a perpetual glissando. Since I didn't know how to code at the time, both were made by splicing together pure tones produced on a synthesizer.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -339,7 +339,7 @@ export default {
                     description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept forgetting which column of lyrics corresponded with which person, making me realize that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. One of us just had a better idea of when.`,
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -853,7 +853,7 @@ export default {
                     description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,
                     dotKeys: {
                         [NARRATIVE]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }

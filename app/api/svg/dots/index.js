@@ -4,7 +4,7 @@ import observation from '../../../../assets/svgs/app/dots/observation'
 import pun from '../../../../assets/svgs/app/dots/pun'
 import reference from '../../../../assets/svgs/app/dots/reference'
 import wormhole from '../../../../assets/svgs/app/dots/wormhole'
-import songwriting from '../../../../assets/svgs/app/dots/songwriting'
+import songcraft from '../../../../assets/svgs/app/dots/songcraft'
 import afterword from '../../../../assets/svgs/app/dots/afterword'
 
 import {
@@ -14,7 +14,7 @@ import {
     PUN,
     REFERENCE,
     WORMHOLE,
-    SONGWRITING,
+    SONGCRAFT,
     AFTERWORD
 } from '../../../constants/dots'
 
@@ -25,6 +25,6 @@ export default {
     [PUN]: pun,
     [REFERENCE]: reference,
     [WORMHOLE]: wormhole,
-    [SONGWRITING]: songwriting,
+    [SONGCRAFT]: songcraft,
     [AFTERWORD]: afterword
 }

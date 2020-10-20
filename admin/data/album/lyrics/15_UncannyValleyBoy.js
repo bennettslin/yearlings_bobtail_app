@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -80,7 +80,7 @@ export default {
                     description: `I first wrote the music heard here a long while back, upon waking from a horrid nightmare that I badly needed to retell. I quickly shelved it after all my attempts to describe the nightmare to others only elicited laughter. But years later, I realized its gloomy chords and disjointed tempo changes could be repurposed into this song, which plays out as a lecture delivered by a nightmarish version of my parents.`,
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -252,7 +252,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -359,7 +359,7 @@ export default {
                         `instead.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -534,7 +534,7 @@ export default {
                         `The original counter-melody, which was to be played on guitar, then became the lead vocal line, for which I wrote new lyrics.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -727,7 +727,7 @@ export default {
                         `So I recorded several takes of steady eighth notes on the banjo, with each take offset a little further by fractions of a beat to create the impression of tremolo picking. In the last few measures they separate in the balance, like a rope fraying at its end.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -1467,7 +1467,7 @@ export default {
                         `of quarter-note beats that would arrive an eighth note ahead of the mix after seven measures. I then overlaid multiple vocal tracks in which I quietly took a breath at different points to give the impression of an uninterrupted take.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }

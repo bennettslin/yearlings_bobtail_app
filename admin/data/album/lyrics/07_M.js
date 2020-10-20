@@ -3,7 +3,7 @@ import {
     NARRATIVE,
     OBSERVATION,
     PUN,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -91,7 +91,7 @@ export default {
                     description: `This song is one of two on this album that was originally performed by the Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciations to make the puns obvious.`,
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -253,7 +253,7 @@ export default {
                 card: {
                     description: `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this manner would be.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -341,7 +341,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -408,7 +408,7 @@ export default {
                 card: {
                     description: `As the Yearlings, we would perform this song at breakneck speed, but in this recording I moderated the tempo to make the lyrics intelligible. Even so, my drumming skills were still not up to par, so I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon normal playback.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -647,7 +647,7 @@ export default {
                             card: {
                                 description: `Or else, my life in "Mara." I thought I had chosen to leave out this particular pun, but the exaggerated pronunciation is distinctly there in the recording…`,
                                 dotKeys: {
-                                    [SONGWRITING]: true,
+                                    [SONGCRAFT]: true,
                                     [PUN]: true
                                 }
                             }

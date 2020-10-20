@@ -3,7 +3,7 @@ import {
     BACKSTORY,
     NARRATIVE,
     OBSERVATION,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -52,7 +52,7 @@ export default {
                     description: `This is the second song on this album that was an original Yearlings staple. It might be telling that when Sita and I were still together, the one song I wrote for her was about the regret I'd feel as an old man at having lost her. As with "M," I changed the orchestration but kept the original lyrics.`,
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -115,7 +115,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -163,7 +163,7 @@ export default {
                 card: {
                     description: `The pulsating organ and slide mandolin from "Kyon?" make a reappearance here, along with the tremolo banjo and rubato recorders from "Uncanny Valley Boy."`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -231,7 +231,7 @@ export default {
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [SONGWRITING]: true
+                                    [SONGCRAFT]: true
                                 }
                             }
                         },
@@ -256,7 +256,7 @@ export default {
                 card: {
                     description: `We now hear the plucked mandolin and tin whistle from "Garryowen," followed by the high-pitched synth and recorder from "Look Back in Anger."`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -292,7 +292,7 @@ export default {
                 card: {
                     description: `For the second chorus, we bring back the electric sitar and 8-bit sound from "Constellations," along with the carillon and wah-wah pedal from "Good Night, Sita."`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -315,7 +315,7 @@ export default {
                 card: {
                     description: `The chord progression here, which I call Sita's theme, first appeared during the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas evoking brass fanfare heard in "Pchelka's Starry Journey."`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -396,7 +396,7 @@ export default {
                 card: {
                     description: `The third verse revisits the bowed guitars ending on scratch tones first heard in "Dear Saskia," along with the four-note motif that I call Sasha's theme. These are then followed by the shrieking whistles and pitch-shifted instruments from "Ash Wednesday."`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -464,7 +464,7 @@ export default {
                 card: {
                     description: `The electric mandolin and saturated tape effect from "Odin" return in the third and final chorus, as well as the legato slides on muted instruments from "Willy the Cocoa."`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -487,7 +487,7 @@ export default {
                 card: {
                     description: `And so this final song of the album ends, with the same autoharp and glockenspiel that opened "Didi."`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }

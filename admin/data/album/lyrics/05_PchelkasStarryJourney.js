@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING,
+    SONGCRAFT,
     NARRATIVE
 } from '../../../../app/constants/dots'
 
@@ -93,7 +93,7 @@ export default {
                 card: {
                     description: `I wanted a kid to recite this line, but no one I knew at the time was having kids just yet. So I had my sister do it.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -139,7 +139,7 @@ export default {
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -717,7 +717,7 @@ export default {
                 card: {
                     description: `The sound of rocket circuitry in the background was made by banging an electric guitar against the carpet floor while bending its whammy bar. It took countless tries, and I kept having to retune because the tuning would get messed up each time.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -806,7 +806,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -1304,7 +1304,7 @@ export default {
                         `closes with a free-form instrumental outro that evokes the sound of failing radio transmissions. I aimed for a similar effect by scraping the strings of an electric guitar against the pickup, and bouncing a metal rod on a single string near the bridge.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }

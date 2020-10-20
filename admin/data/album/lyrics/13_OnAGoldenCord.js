@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -65,7 +65,7 @@ export default {
                     description: `With the breakup, I was now free to rebuild my life from scratch. I could reclaim not just my time spent with Sita, but the years and years of discontent that had taken their toll long before. And so here we hear the song of the white-throated sparrow, as I harken back to the happier days of my youth.`,
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -136,7 +136,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -216,7 +216,7 @@ export default {
                         `I hadn't accounted for the need to move my fingers quickly from one harmonic to the next, however, and it proved impossible to play. I ended up having to splice together multiple takes.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -347,7 +347,7 @@ export default {
                         `I could only make sense of the breakup by reconciling the contradictions in my head. So I used doublespeaker rhyme— which I had named partly for its Orwellian undertone— to depict the internal conflict between my sober self and his drunken alter ego.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -594,7 +594,7 @@ export default {
                                 description: `The attempts at yodeling here reflect the euphoria caused by dehydration that I begin to feel just before daybreak.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [SONGWRITING]: true
+                                    [SONGCRAFT]: true
                                 }
                             }
                         }
@@ -661,7 +661,7 @@ export default {
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [SONGWRITING]: true
+                                    [SONGCRAFT]: true
                                 }
                             }
                         }

@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     AFTERWORD,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -57,7 +57,7 @@ export default {
                         `weaved melodies into chord progressions so seamlessly, and I vowed to figure out their songwriting method once and for all. The music heard here was the result, but I found it too treacly to develop further and put it away. Some time later as I was planning out this album, I realized treacle was exactly what an overwrought letter to Sasha called for, and I trotted it back out.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -120,7 +120,7 @@ export default {
                 card: {
                     description: `I wanted the vocals to sound sickly here, and so I held off on recording them until I came down with an awful cold, which was guaranteed to happen at some point during the five years that I worked on this album.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -358,7 +358,7 @@ export default {
                 card: {
                     description: `I matched the passive-aggressiveness of the lyrics with woodwind screeches and scratch tones on bowed guitars.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -656,7 +656,7 @@ export default {
                 card: {
                     description: `Back in the day, every other band I knew would write their songs by figuring out all the chords up front, then layering a decent melody on top. But my theory was that the Beatles wrote the melody and chords all together, and so I aimed to do the same. I was always happiest with results like the chorus here, where the music meanders for a long stretch rather than repeating every four bars. Such songs are never fan favorites, yet they're the hardest to write, which I find oddly satisfying.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -747,7 +747,7 @@ export default {
                                 description: `I wasn't sure how to end a song about a painful stage of my life that now seems comical in retrospect. I decided I was happiest to err on the side of humor.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [SONGWRITING]: true
+                                    [SONGCRAFT]: true
                                 }
                             }
                         }
@@ -759,7 +759,7 @@ export default {
                 card: {
                     description: `While the first chorus of this song is grounded in the key of C, the second chorus collapses under the weight of my despondence and settles into the key of B\u2011flat, a whole step lower. But with my renewed commitment to power through the coming semester, this third and final chorus now soldiers its way to the key of D\u2011flat, a half step above.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }

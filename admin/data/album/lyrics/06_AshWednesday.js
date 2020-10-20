@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -173,7 +173,7 @@ export default {
                         `in the final chorus.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -256,7 +256,7 @@ export default {
                         `trains braking in a subway tunnel beneath the sidewalk. They were made by overblowing individual pitches that were then spliced together to form descending arpeggios— triplets for the soprano recorder, quadruplets for the tenor.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -416,7 +416,7 @@ export default {
                         `them in as a separate take.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -463,7 +463,7 @@ export default {
                         }
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -790,7 +790,7 @@ export default {
                         `street.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -889,7 +889,7 @@ export default {
                         `some tracks up an octave, giving them a metallic sheen that suits the ambience of a rainy evening.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -953,7 +953,7 @@ export default {
                         `of their counterparts in the second, like "mourn" with "morn," and "born" with "borne." So I challenged myself to make the two stanzas match phonetically wherever possible. This later gave me the idea for doublespeaker rhyme.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }

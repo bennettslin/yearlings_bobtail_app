@@ -8,7 +8,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -103,7 +103,7 @@ export default {
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
-                                        [SONGWRITING]: true
+                                        [SONGCRAFT]: true
                                     }
                                 }
                             ]
@@ -263,7 +263,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -597,7 +597,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -1017,7 +1017,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -1361,7 +1361,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -1815,7 +1815,7 @@ export default {
                         `cry, which I tried to recreate by pinching off the airstream blown through the window of a recorder. The result wasn't what I had hoped for, but kept in the background, it contributes nicely to the overall atmosphere.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -2012,7 +2012,7 @@ export default {
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
-                                        [SONGWRITING]: true
+                                        [SONGCRAFT]: true
                                     }
                                 }
                             ]

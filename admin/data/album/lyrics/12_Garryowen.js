@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -73,7 +73,7 @@ export default {
                         `here.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -405,7 +405,7 @@ export default {
                         `melodies are laid one atop another, and the chord progression is simply the byproduct of the harmonies they form in sequence. But since the chord progression for this song was already written, I took the reverse approach of taking individual notes from each harmony and distributing them among the instrumental parts to create coherent but unassuming melodic lines.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -477,7 +477,7 @@ export default {
                         `wherever the score permitted.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -572,7 +572,7 @@ export default {
                         `here evoke a funeral procession to mark the death of my relationship with Sita. Since I didn't own any bagpipes, let alone Irish ones, I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter, and the other as the drone.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -728,7 +728,7 @@ export default {
                 card: {
                     description: `After some trial and error, I decided the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease the instruments apart due to their different timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }

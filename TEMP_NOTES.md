@@ -4,7 +4,6 @@
 * Space apart dots in dots slide button more.
 * Ensure deselected dots have proper colouring
 * Delete dot colours in colours files
-* Change songwriting to songcraft
 * Raise dot sequences in lyrics
 * Raise dot sequences in annotations as well
 * Make observation eye bigger and handle smaller

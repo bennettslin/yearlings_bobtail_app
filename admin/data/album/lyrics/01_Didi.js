@@ -4,7 +4,7 @@ import {
     NARRATIVE,
     OBSERVATION,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -103,7 +103,7 @@ export default {
                         }
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -190,7 +190,7 @@ export default {
                         `begins in the simple prose of a child, I decided to do the same with this opening song.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -272,7 +272,7 @@ export default {
                         `of A, C, and E\u2011flat major.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -431,7 +431,7 @@ export default {
                 card: {
                     description: `"Wouldn't It Be Nice" is once again evoked here, this time by modulating down a minor third to segue into the bridge.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -483,7 +483,7 @@ export default {
                 card: {
                     description: `To mimic the subdued twangs of music boxes and thumb pianos that characterize children's music, I dampened the lead guitar strings by wrapping strips of tissue around them near the bridge.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -559,7 +559,7 @@ export default {
                         `The song now ends on G\u2011flat, the fourth and final triad of the collection, to suggest the excitement of undiscovered vistas that await a young child.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }

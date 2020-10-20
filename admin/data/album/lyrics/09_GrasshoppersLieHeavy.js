@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -126,7 +126,7 @@ export default {
                         `possibilities of a story within a story. And so this song contains subtle lyrical references to all the other songs on the album. I call these wormholes.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -203,7 +203,7 @@ export default {
                         `always manage to sound sentimental without being sappy, so I thought their style would be a good fit here.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -576,7 +576,7 @@ export default {
                 card: {
                     description: `Since the lyrics in this song are a microcosm of the whole album, I threw in some doublespeaker rhyme here.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -932,7 +932,7 @@ export default {
                         `kicks the last third of "Lounge Act" into high gear by singing the same melody an octave higher. I'd always wanted to recreate this effect but could never do so, because the melodies I write tend to span my whole vocal range. So when I realized the chorus melody for this song stays within a single register throughout, I made it work.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -1006,7 +1006,7 @@ export default {
                 card: {
                     description: `To faithfully represent in miniature the lyrics of the album as a whole, this song also couldn't have gone without an entire section of groan-inducing puns.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -1232,7 +1232,7 @@ export default {
                 card: {
                     description: `The ascending chord progression initially signifies a blossoming relationship. Toward the end, it symbolizes sexual climax.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -1390,7 +1390,7 @@ export default {
                         `which translates to "the little death," refers to a feeling of melancholic transcendence after orgasm. As such, even as the chords continue to rise, the lead guitar plays a falling riff, before everything cuts away to Odin's theme, a reminder of the house cat who died in my youth.`
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }

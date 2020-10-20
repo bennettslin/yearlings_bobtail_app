@@ -10,7 +10,7 @@ export const OBSERVATION = 'observation'
 export const WORMHOLE = 'wormhole'
 export const PUN = 'pun'
 export const REFERENCE = 'reference'
-export const SONGWRITING = 'songwriting'
+export const SONGCRAFT = 'songcraft'
 
 // Order matters!
 export const ORDERED_DOT_KEYS = [
@@ -20,7 +20,7 @@ export const ORDERED_DOT_KEYS = [
     PUN,
     REFERENCE,
     WORMHOLE,
-    SONGWRITING,
+    SONGCRAFT,
     AFTERWORD
 ]
 
@@ -33,7 +33,7 @@ export const DOT_DESCRIPTIONS = {
     [PUN]: 'Both the "literary" and "bad" variety.',
     [REFERENCE]: 'Link to a Wikipedia page.',
     [WORMHOLE]: 'Portal to another song.',
-    [SONGWRITING]: 'How the music was made.',
+    [SONGCRAFT]: 'How the music was made.',
     [AFTERWORD]: 'My life since then.'
 }
 

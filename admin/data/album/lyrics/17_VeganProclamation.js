@@ -5,7 +5,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -76,7 +76,7 @@ export default {
                 card: {
                     description: `With the previous song having provided a glimpse of me fading away while listening to old records, the crackle of a needle on vinyl now introduces the third and final song of the medley.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -219,7 +219,7 @@ export default {
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -398,7 +398,7 @@ export default {
                     description: `Sasha recited these lines for me over the phone. We recorded multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't write them with that concern in mind.`,
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -635,7 +635,7 @@ export default {
                     description: `When Sita and I first met, she asked to hear some of my music. I had just bought a multi-effects processor and was playing around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -697,7 +697,7 @@ export default {
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [SONGWRITING]: true
+                                    [SONGCRAFT]: true
                                 }
                             }
                         },

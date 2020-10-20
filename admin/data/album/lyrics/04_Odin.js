@@ -5,7 +5,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGWRITING
+    SONGCRAFT
 } from '../../../../app/constants/dots'
 
 import {
@@ -205,7 +205,7 @@ export default {
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -351,7 +351,7 @@ export default {
                                     `is the elemental of fire.`
                                 ],
                                 dotKeys: {
-                                    [SONGWRITING]: true
+                                    [SONGCRAFT]: true
                                 }
                             }
                         },
@@ -511,7 +511,7 @@ export default {
                                     ]
                                 ],
                                 dotKeys: {
-                                    [SONGWRITING]: true
+                                    [SONGCRAFT]: true
                                 }
                             }
                         },
@@ -607,7 +607,7 @@ export default {
                     description: `While the two doublespeaker voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -761,7 +761,7 @@ export default {
                 card: {
                     description: `The drums were the one instrument for which I scored parts that were far more advanced than my own playing ability. So for this song, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
@@ -1188,7 +1188,7 @@ export default {
                         }
                     ],
                     dotKeys: {
-                        [SONGWRITING]: true
+                        [SONGCRAFT]: true
                     }
                 }
             }
