@@ -8,6 +8,7 @@ import Texts from '../../../../Texts'
 import Button from '../../../../Button'
 import { ENTER } from '../../../../../constants/access'
 import { WORMHOLE_BUTTON_KEY } from '../../../../../constants/buttons'
+import { WORMHOLE } from '../../../../../constants/dots'
 import {
     EAR_COLUMN_KEYS,
     LYRIC,
@@ -68,6 +69,8 @@ const AnnotationWormhole = ({
                 <Button
                     isBrightHover
                     {...{
+                        // This gives it the wormhole colour styling.
+                        className: WORMHOLE,
                         accessKey: ENTER,
                         isAccessed: isAccessedShown,
                         buttonName: WORMHOLE_BUTTON_KEY,

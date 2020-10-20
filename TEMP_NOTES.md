@@ -1,8 +1,7 @@
 # Dot colouring
 * Fine tune colours
-* Ensure wormhole button has proper colouring
+* Get rid of strokes in dots.
 * Space apart dots in dots slide button more.
-* Ensure deselected dots have proper colouring
 * Delete dot colours in colours files
 * Raise dot sequences in lyrics
 * Raise dot sequences in annotations as well
