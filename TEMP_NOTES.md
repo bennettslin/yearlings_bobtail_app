@@ -1,7 +1,7 @@
 # Dot colouring
 * Fine tune colours
 * Ensure wormhole button has proper colouring
-* Ensure dots slide button has proper colouring
+* Space apart dots in dots slide button more.
 * Ensure deselected dots have proper colouring
 * Delete dot colours in colours files
 * Change songwriting to songcraft
