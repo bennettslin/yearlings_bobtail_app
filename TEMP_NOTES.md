@@ -1,11 +1,9 @@
 # Dot colouring
 * Fine tune colours
 * Delete dot colours in colours files
-* Space apart dots in dots slide button more.
 * Space dots apart in dot sequences
 * Raise dot sequences in lyrics
 * Raise dot sequences in annotations as well, make them a tab
-* Make observation eye bigger and handle smaller
 
 # Animation desired behaviour
 * Sky animations
