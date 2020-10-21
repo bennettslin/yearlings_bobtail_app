@@ -2,6 +2,7 @@
 @import '../../../scss/constants/transition';
 
 .SequenceDot {
+    position: relative;
     width: 0;
     height: 0;
     opacity: 0;
@@ -20,9 +21,17 @@
 
     &.SequenceDot__annotationCard {
         width: $length__annotationDot;
+
+        &:not(:last-child) {
+            margin-right: $length__annotationDot * 0.1;
+        }
     }
     &.SequenceDot__textAnchor {
         width: $length__lyricSequenceDot;
+
+        &:not(:last-child) {
+            margin-right: $length__lyricSequenceDot * 0.1;
+        }
     }
 }
 

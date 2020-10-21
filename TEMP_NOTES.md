@@ -1,7 +1,7 @@
 # Dot colouring
 * Fine tune colours
 * Delete dot colours in colours files
-* Space dots apart in dot sequences
+* Make hovered dots lighter in colour
 * Raise dot sequences in lyrics
 * Raise dot sequences in annotations as well, make them a tab
 
