@@ -7,7 +7,15 @@
 
 .DotSequence__inTextAnchor {
     left: -$length__lyricSequenceDot * 0.2;
-    top: -$length__lyricSequenceDot * 0.2;
+
+    // Expose more when in lyric.
+    top: -45%;
+
+    .AnnotationTitle
+    & {
+        // Expose less when in annotation title.
+        top: -30%;
+    }
 
     .VerseLine__lyricRight
     & {
@@ -24,7 +32,8 @@
 .gradientMask__dotSequence {
     $gradient__dotSequence: linear-gradient(
         hsl(0, 0%, 0%),
-        hsla(0, 0%, 0%, 0.1)
+        hsl(0, 0%, 0%) 45%,
+        hsla(0, 0%, 0%, 0) 85%
     );
 
     mask-image: $gradient__dotSequence;

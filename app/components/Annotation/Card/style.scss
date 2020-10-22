@@ -20,6 +20,7 @@
     }
 
     opacity: 1;
+    border-radius: $borderRadius__narrow;
     box-shadow: $boxShadow__annotationCard;
 }
 
@@ -42,8 +43,6 @@
 
     width: $width__annotation - $PADDING_POPUP_CONTENT_WIDE;
     max-width: $width__annotation - $PADDING_POPUP_CONTENT_WIDE;
-
-    border-radius: $borderRadius__narrow;
 
     .DW__miniWidth
     & {

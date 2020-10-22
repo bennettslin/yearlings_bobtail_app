@@ -2,8 +2,11 @@
 * Fine tune colours
 * Delete dot colours in colours files
 * Make hovered dots lighter in colour
-* Raise dot sequences in lyrics
-* Raise dot sequences in annotations as well, make them a tab
+* Raise dot sequences in annotations as well, make them a tab?
+    * Box shadow on annotation cards doesn't include corners
+
+* Where did "down the steps" go in Grasshoppers?
+    * Confirm that no other wormholes are missing.
 
 # Animation desired behaviour
 * Sky animations
