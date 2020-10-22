@@ -1,39 +1,52 @@
+// Dot colours. (No longer used.)
+// $colour__backstory: hsl($hue__backstory, $sat__light, $lum__medLight);
+// $colour__narrative: hsl($hue__narrative, $sat__lighter, $lum__medLight);
+// $colour__observation: hsl($hue__observation, $sat__lighter, $lum__medLightest);
+// $colour__pun: hsl($hue__pun, $sat__lighter, $lum__medLight);
+// $colour__reference: hsl($hue__reference, $sat__light, $lum__medLight);
+// $colour__wormhole: hsl($hue__wormhole, $sat__lighter, $lum__medLighter);
+// $colour__songcraft: hsl($hue__songcraft, $sat__lighter, $lum__medLighter);
+// $colour__afterword: hsl($hue__afterword, $sat__lighter, $lum__medLightest);
+// $colour__deselected: $colour__neutral__light;
+
 .backstory {
-    .dark { fill: hsl($hue__backstory, 49%, 50%); }
-    .medium { fill: hsl($hue__backstory, 49%, 60%); }
+    .dark { fill: hsl($hue__backstory, 29%, 60%); }
+    .medium { fill: hsl($hue__backstory, 39%, 65%); }
     .light { fill: hsl($hue__backstory, 49%, 70%); }
 }
 .narrative {
-    .medium { fill: hsl($hue__narrative, 49%, 60%); }
+    .dark { fill: hsl($hue__narrative, 29%, 60%); }
+    .medium { fill: hsl($hue__narrative, 39%, 65%); }
     .light { fill: hsl($hue__narrative, 49%, 70%); }
 }
 .observation {
-    .dark { fill: hsl($hue__observation, 49%, 50%); }
-    .medium { fill: hsl($hue__observation, 49%, 60%); }
+    .dark { fill: hsl($hue__observation, 29%, 60%); }
+    .medium { fill: hsl($hue__observation, 39%, 65%); }
     .light { fill: hsl($hue__observation, 49%, 70%); }
 }
 .pun {
-    .dark { fill: hsl($hue__pun, 49%, 50%); }
-    .medium { fill: hsl($hue__pun, 49%, 60%); }
+    .dark { fill: hsl($hue__pun, 29%, 60%); }
+    .medium { fill: hsl($hue__pun, 39%, 65%); }
     .light { fill: hsl($hue__pun, 49%, 70%); }
 }
 .reference {
-    .dark { fill: hsl($hue__reference, 49%, 50%); }
-    .medium { fill: hsl($hue__reference, 49%, 60%); }
+    .dark { fill: hsl($hue__reference, 29%, 60%); }
+    .medium { fill: hsl($hue__reference, 39%, 65%); }
     .light { fill: hsl($hue__reference, 49%, 70%); }
 }
 .wormhole {
-    .dark { fill: hsl($hue__wormhole, 49%, 50%); }
-    .medium { fill: hsl($hue__wormhole, 49%, 60%); }
+    .dark { fill: hsl($hue__wormhole, 29%, 60%); }
+    .medium { fill: hsl($hue__wormhole, 39%, 65%); }
     .light { fill: hsl($hue__wormhole, 49%, 70%); }
 }
 .songcraft {
-    .dark { fill: hsl($hue__songcraft, 49%, 50%); }
-    .medium { fill: hsl($hue__songcraft, 49%, 60%); }
+    .dark { fill: hsl($hue__songcraft, 29%, 60%); }
+    .medium { fill: hsl($hue__songcraft, 39%, 65%); }
     .light { fill: hsl($hue__songcraft, 49%, 70%); }
 }
 .afterword {
-    .medium { fill: hsl($hue__afterword, 49%, 60%); }
+    .dark { fill: hsl($hue__afterword, 29%, 60%); }
+    .medium { fill: hsl($hue__afterword, 39%, 65%); }
     .light { fill: hsl($hue__afterword, 49%, 70%); }
 }
 .Dot__deselected {
@@ -41,3 +54,16 @@
     .medium { fill: hsl(0, 0, 70%); }
     .light { fill: hsl(0, 0, 80%); }
 }
+// Maybe don't do...
+// .Anchor__selectableNotLyric:hover
+// .Dot,
+// .TW__isStationary
+// .Anchor__selectableLyric:hover
+// .Dot,
+// .DotsSlide__canHover
+// .DotsSlideSelect:hover
+// .Dot {
+//     .dark { fill: hsl($hue__select, 40%, 60%); }
+//     .medium { fill: hsl($hue__select, 40%, 70%); }
+//     .light { fill: hsl($hue__select, 40%, 80%); }
+// }

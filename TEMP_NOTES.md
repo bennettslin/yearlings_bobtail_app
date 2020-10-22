@@ -1,19 +1,17 @@
 # Dot colouring
 * Fine tune colours
-* Delete dot colours in colours files
-* Make hovered dots lighter in colour
-* Raise dot sequences in annotations as well, make them a tab?
-    * Box shadow on annotation cards doesn't include corners
-
-* Where did "down the steps" go in Grasshoppers?
-    * Confirm that no other wormholes are missing.
+* Raise dot sequences in annotations as well.
 
 # Animation desired behaviour
 * Sky animations
-* Blocker bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
-* Minor bug: Why do Sasha first scene puppets not bounce?
 * Make small bubbles and sketches come down from top as well.
     * Stagger small bubbles.
+
+# Bugs
+* Where did "down the steps" go in Grasshoppers?
+    * Confirm that no other wormholes are missing.
+* Blocker bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
+* Minor bug: Why do Sasha first scene puppets not bounce?
 
 # Nice UI TODO:
 * Make club walls striped.

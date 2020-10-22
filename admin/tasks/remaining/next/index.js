@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Finalise dots work.`,
-        workedHours: 5
+        workedHours: 7
     },
 
     /* Ongoing. */
