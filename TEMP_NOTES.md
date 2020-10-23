@@ -1,5 +1,4 @@
 # TODO Friday
-* Fine tune colours
 * Sky animations
 
 # TODO Saturday
