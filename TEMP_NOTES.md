@@ -1,6 +1,3 @@
-# TODO Thursday
-* Stagger small bubbles.
-
 # TODO Friday
 * Fine tune colours
 * Raise dot sequences in annotations as well.

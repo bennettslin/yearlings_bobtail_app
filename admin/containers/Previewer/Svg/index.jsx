@@ -191,8 +191,6 @@ class PreviewerSvg extends PureComponent {
                     {...{
                         className: cx(
                             'Presence',
-                            // TODO: No longer used.
-                            'Presence__loaded',
                             showKilobytes && 'Presence__kilobytes',
                             isActor && capitaliseForClassName(ACTOR),
                             capitaliseForClassName(presenceType)

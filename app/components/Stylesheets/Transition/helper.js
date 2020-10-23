@@ -13,7 +13,7 @@ import {
 } from '../../../constants/transition'
 
 const
-    TRANSITION_DURATION = 1.275,
+    TRANSITION_DURATION = 0.275,
     TRANSITION_DELAY_INCREMENT = 0.075,
     TRANSITION_BOUNCE_ENTER = 'cubic-bezier(0.2, 0.9, 0.3, 1.1)',
     LYRIC_SCROLL_DURATION = 0.8,

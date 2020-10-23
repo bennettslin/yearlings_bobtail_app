@@ -14,6 +14,7 @@ const getIsPathTransition = presenceType => {
 }
 
 const getTransitionDelayIndex = ({
+    transitionIndex,
     yIndex,
     presenceType,
     isWire
@@ -25,7 +26,9 @@ const getTransitionDelayIndex = ({
         return CUBE_Y_AXIS_LENGTH
     }
 
-    return yIndex > -1 ? yIndex : 0
+    const index = Number.isFinite(transitionIndex) ? transitionIndex : yIndex
+
+    return index > -1 ? index : 0
 }
 
 const getTransitionDelayPrefix = ({
@@ -82,6 +85,7 @@ export const getTransitionDelayClass = ({
 
 export const getTransitionDelayIndexClass = ({
     transitionKey,
+    transitionIndex,
     yIndex,
     presenceType,
     xPosition,
@@ -99,6 +103,7 @@ export const getTransitionDelayIndexClass = ({
         })
     }__transitionIndex__${
         getTransitionDelayIndex({
+            transitionIndex,
             yIndex,
             presenceType,
             isWire

@@ -38,7 +38,6 @@ const PresenceSvg = ({
 
 }) => {
     const
-        [isLoaded, setIsLoaded] = useState(false),
         [adjustedWidth, setAdjustedWidth] = useState(0),
         [adjustedHeight, setAdjustedHeight] = useState(0),
         {
@@ -56,6 +55,7 @@ const PresenceSvg = ({
             noShadow,
             perspective,
             transitionKey,
+            transitionIndex,
             hide,
             onlyOne
         } = getArrangementForPresence({
@@ -145,10 +145,6 @@ const PresenceSvg = ({
         })
     }
 
-    const onLoad = () => {
-        setIsLoaded(true)
-    }
-
     /**
      * This parent container exists solely to take the CSS transition
      * class names. This prevents conflict when the child tries to add
@@ -167,8 +163,6 @@ const PresenceSvg = ({
                     {...{
                         className: cx(
                             'Presence',
-                            // TODO: No longer used.
-                            isLoaded && 'Presence__loaded',
                             capitaliseForClassName(presenceType),
                             getTransitionDelayClass({
                                 transitionKey,
@@ -178,6 +172,7 @@ const PresenceSvg = ({
                             }),
                             getTransitionDelayIndexClass({
                                 transitionKey,
+                                transitionIndex,
                                 yIndex,
                                 presenceType,
                                 xPosition,
@@ -203,7 +198,7 @@ const PresenceSvg = ({
                         ),
                         title: convertPresenceKeyToTitle(presenceKey),
                         preProcessor: preProcessSvg,
-                        onLoad,
+                        // onLoad,
 
                         ...hasWires && {
                             siblingPlacedFront: placedFront,
