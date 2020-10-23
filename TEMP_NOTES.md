@@ -1,19 +1,17 @@
-# Dot colouring
-* Fine tune colours
-* Raise dot sequences in annotations as well.
-
-# Animation desired behaviour
-* Sky animations
+# TODO Thursday
 * Make small bubbles and sketches come down from top as well.
     * Stagger small bubbles.
 
-# Bugs
-* Where did "down the steps" go in Grasshoppers?
-    * Confirm that no other wormholes are missing.
+# TODO Friday
+* Fine tune colours
+* Raise dot sequences in annotations as well.
+
+# TODO Saturday
 * Blocker bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
 * Minor bug: Why do Sasha first scene puppets not bounce?
 
 # Nice UI TODO:
+* Sky animations
 * Make club walls striped.
     * Then make consistent with thought bubble.
 * Load banner text later so that font has time to load.

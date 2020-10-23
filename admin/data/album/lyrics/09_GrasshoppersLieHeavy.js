@@ -258,7 +258,13 @@ export default {
                 {
                     time: 29,
                     lyric: [
-                        `Down the steps to`,
+                        {
+                            anchor: `Down the steps`,
+                            card: {
+                                wormhole: `down_the_steppes`
+                            }
+                        },
+                        `to`,
                         {
                             anchor: `fetch her lancet pen,`,
                             card: {
