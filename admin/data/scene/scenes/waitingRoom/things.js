@@ -30,6 +30,21 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../../../app/constants/scene/things/panels'
+import {
+    BUBBLE_LARGE_CONFIG,
+    BUBBLE_MEDIUM_CONFIG,
+    BUBBLE_SMALL_CONFIG
+} from '../../sharedConfigs'
+
+const
+    WAITING_ARMCHAIR_CONFIG = {
+        yIndex: 2,
+        scaleFactor: 0.3
+    },
+    WAITING_ARMREST_CONFIG = {
+        yIndex: 4,
+        scaleFactor: 0.23
+    }
 
 export default {
     [CARDBOARD]: {
@@ -65,37 +80,31 @@ export default {
     },
     [PANEL]: {
         [WAITING_ARMCHAIR__BENNETT]: {
-            yIndex: 2,
-            xPosition: 2.5,
-            scaleFactor: 0.3
+            ...WAITING_ARMCHAIR_CONFIG,
+            xPosition: 2.5
         },
         [WAITING_ARMCHAIR__LIZ]: {
-            yIndex: 2,
+            ...WAITING_ARMCHAIR_CONFIG,
             xPosition: 5.5,
-            scaleFactor: 0.3,
             flipHorizontal: true
         },
         [WAITING_ARMREST__BENNETT_LEFT]: {
-            yIndex: 4,
-            xPosition: 1.3,
-            scaleFactor: 0.23
+            ...WAITING_ARMREST_CONFIG,
+            xPosition: 1.3
         },
         [WAITING_ARMREST__BENNETT_RIGHT]: {
-            yIndex: 4,
+            ...WAITING_ARMREST_CONFIG,
             xPosition: 3.7,
-            scaleFactor: 0.23,
             flipHorizontal: true,
             layerYIndex: 5
         },
         [WAITING_ARMREST__LIZ_LEFT]: {
-            yIndex: 4,
-            xPosition: 4.3,
-            scaleFactor: 0.23
+            ...WAITING_ARMREST_CONFIG,
+            xPosition: 4.3
         },
         [WAITING_ARMREST__LIZ_RIGHT]: {
-            yIndex: 4,
+            ...WAITING_ARMREST_CONFIG,
             xPosition: 6.7,
-            scaleFactor: 0.23,
             flipHorizontal: true
         }
     }
@@ -103,23 +112,20 @@ export default {
 
 export const THINGS_WAITING_ROOM_ASLEEP = {
     [BUBBLE]: {
-        [BUBBLE_SMALL__WAITING]: {
-            yIndex: 5,
-            xPosition: 1.55,
-            zOffset: 3.25,
-            scaleFactor: 0.3
+        [BUBBLE_LARGE__WAITING]: {
+            ...BUBBLE_LARGE_CONFIG,
+            xPosition: 1.05,
+            zOffset: 3.9
         },
         [BUBBLE_MEDIUM__WAITING]: {
-            yIndex: 5,
+            ...BUBBLE_MEDIUM_CONFIG,
             xPosition: 1.15,
-            zOffset: 3.37,
-            scaleFactor: 0.3
+            zOffset: 3.37
         },
-        [BUBBLE_LARGE__WAITING]: {
-            yIndex: 5,
-            xPosition: 1.05,
-            zOffset: 3.9,
-            scaleFactor: 0.3
+        [BUBBLE_SMALL__WAITING]: {
+            ...BUBBLE_SMALL_CONFIG,
+            xPosition: 1.55,
+            zOffset: 3.25
         },
         [WAITING_THOUGHT_STUDYING]: {
             yIndex: 5,

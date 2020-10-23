@@ -13,26 +13,28 @@ import {
     GLADIATOR_POSTER,
     MARQUEE_FRAME__GLADIATOR
 } from '../../../../../app/constants/scene/things/cardboards'
+import {
+    BUBBLE_LARGE_CONFIG,
+    BUBBLE_MEDIUM_CONFIG,
+    BUBBLE_SMALL_CONFIG
+} from '../../sharedConfigs'
 
 export default {
     [BUBBLE]: {
-        [BUBBLE_SMALL__CINEMA]: {
-            yIndex: 5,
-            xPosition: 4.7,
-            zOffset: 5.15,
-            scaleFactor: 0.3
+        [BUBBLE_LARGE__CINEMA]: {
+            ...BUBBLE_LARGE_CONFIG,
+            xPosition: 5.35,
+            zOffset: 5.6
         },
         [BUBBLE_MEDIUM__CINEMA]: {
-            yIndex: 5,
+            ...BUBBLE_MEDIUM_CONFIG,
             xPosition: 4.67,
-            zOffset: 5.42,
-            scaleFactor: 0.3
+            zOffset: 5.42
         },
-        [BUBBLE_LARGE__CINEMA]: {
-            yIndex: 5,
-            xPosition: 5.35,
-            zOffset: 5.6,
-            scaleFactor: 0.3
+        [BUBBLE_SMALL__CINEMA]: {
+            ...BUBBLE_SMALL_CONFIG,
+            xPosition: 4.7,
+            zOffset: 5.15
         },
         [CINEMA_THOUGHT_BUYING]: {
             yIndex: 5,

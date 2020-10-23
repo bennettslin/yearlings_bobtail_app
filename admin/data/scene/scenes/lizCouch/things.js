@@ -37,6 +37,11 @@ import {
     PEACOCK,
     PEAHEN
 } from '../../../../../app/constants/scene/things/puppets'
+import {
+    BUBBLE_LARGE_CONFIG,
+    BUBBLE_MEDIUM_CONFIG,
+    BUBBLE_SMALL_CONFIG
+} from '../../sharedConfigs'
 
 export default {
     [DOOR]: {
@@ -76,22 +81,19 @@ export default {
 export const THINGS_LIZ_COUCH_TCHOTCHKES = {
     [BUBBLE]: {
         [BUBBLE_LARGE__TCHOTCHKES]: {
-            yIndex: 5,
+            ...BUBBLE_LARGE_CONFIG,
             xPosition: 3.45,
-            zOffset: 2.53,
-            scaleFactor: 0.3
+            zOffset: 2.53
         },
         [BUBBLE_MEDIUM__TCHOTCHKES]: {
-            yIndex: 5,
+            ...BUBBLE_MEDIUM_CONFIG,
             xPosition: 4.1,
-            zOffset: 2.26,
-            scaleFactor: 0.3
+            zOffset: 2.26
         },
         [BUBBLE_SMALL__TCHOTCHKES]: {
-            yIndex: 5,
+            ...BUBBLE_SMALL_CONFIG,
             xPosition: 4.55,
-            zOffset: 2.3,
-            scaleFactor: 0.3
+            zOffset: 2.3
         },
         [LIZ_THOUGHT_DINING]: {
             yIndex: 5,
@@ -124,22 +126,19 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
 export const THINGS_LIZ_COUCH_OPENING = {
     [BUBBLE]: {
         [BUBBLE_LARGE__DISHROOM]: {
-            yIndex: 5,
+            ...BUBBLE_LARGE_CONFIG,
             xPosition: 4.95,
-            zOffset: 5.55,
-            scaleFactor: 0.3
+            zOffset: 5.55
         },
         [BUBBLE_MEDIUM__DISHROOM]: {
-            yIndex: 5,
+            ...BUBBLE_MEDIUM_CONFIG,
             xPosition: 5.62,
-            zOffset: 5.3,
-            scaleFactor: 0.3
+            zOffset: 5.3
         },
         [BUBBLE_SMALL__DISHROOM]: {
-            yIndex: 5,
+            ...BUBBLE_SMALL_CONFIG,
             xPosition: 5.75,
-            zOffset: 5,
-            scaleFactor: 0.3
+            zOffset: 5
         },
         [LIZ_THOUGHT_DISHROOM]: {
             yIndex: 5,
@@ -167,22 +166,19 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
 export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
     [BUBBLE]: {
         [BUBBLE_LARGE__REUNION]: {
-            yIndex: 5,
+            ...BUBBLE_LARGE_CONFIG,
             xPosition: 5.1,
-            zOffset: 2.1,
-            scaleFactor: 0.3
+            zOffset: 2.1
         },
         [BUBBLE_MEDIUM__REUNION]: {
-            yIndex: 5,
+            ...BUBBLE_MEDIUM_CONFIG,
             xPosition: 4.45,
-            zOffset: 1.8,
-            scaleFactor: 0.3
+            zOffset: 1.8
         },
         [BUBBLE_SMALL__REUNION]: {
-            yIndex: 5,
+            ...BUBBLE_SMALL_CONFIG,
             xPosition: 4,
-            zOffset: 1.8,
-            scaleFactor: 0.3
+            zOffset: 1.8
         },
         [LIZ_THOUGHT_REUNION]: {
             yIndex: 5,

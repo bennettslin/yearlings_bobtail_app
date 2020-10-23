@@ -32,6 +32,11 @@ import {
     PHONE_CALL_PANEL,
     LIZ_BED
 } from '../../../../../app/constants/scene/things/panels'
+import {
+    BUBBLE_LARGE_CONFIG,
+    BUBBLE_MEDIUM_CONFIG,
+    BUBBLE_SMALL_CONFIG
+} from '../../sharedConfigs'
 
 export default {
     [FIXTURE]: {
@@ -97,22 +102,19 @@ export default {
 export const THINGS_LIZ_BED_LOOK_BACK = {
     [BUBBLE]: {
         [BUBBLE_LARGE__AMY]: {
-            yIndex: 5,
+            ...BUBBLE_LARGE_CONFIG,
             xPosition: 5.7,
-            zOffset: 3.19,
-            scaleFactor: 0.3
+            zOffset: 3.19
         },
         [BUBBLE_MEDIUM__AMY]: {
-            yIndex: 5,
+            ...BUBBLE_MEDIUM_CONFIG,
             xPosition: 6.45,
-            zOffset: 3.1,
-            scaleFactor: 0.3
+            zOffset: 3.1
         },
         [BUBBLE_SMALL__AMY]: {
-            yIndex: 5,
+            ...BUBBLE_SMALL_CONFIG,
             xPosition: 6.9,
-            zOffset: 3.35,
-            scaleFactor: 0.3
+            zOffset: 3.35
         },
         [THOUGHT_AMY]: {
             yIndex: 5,
