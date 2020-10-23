@@ -1,6 +1,5 @@
 # TODO Thursday
-* Make small bubbles and sketches come down from top as well.
-    * Stagger small bubbles.
+* Stagger small bubbles.
 
 # TODO Friday
 * Fine tune colours
@@ -8,7 +7,6 @@
 
 # TODO Saturday
 * Blocker bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
-* Minor bug: Why do Sasha first scene puppets not bounce?
 
 # Nice UI TODO:
 * Sky animations

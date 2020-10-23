@@ -55,7 +55,7 @@ const SceneChangeManager = () => {
 
     useEffect(() => {
         if (didMount) {
-            if (sceneSceneIndex > 0) {
+            if (sceneSceneIndex > -1) {
                 dispatch(updateEntranceStore({
                     canTransitionAfterSceneChange: true
                 }))
