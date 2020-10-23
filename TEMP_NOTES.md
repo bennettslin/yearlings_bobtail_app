@@ -17,8 +17,6 @@
     * Stylesheet durations
     * Curtain
     * Cubes
-* Consolidate transition constants as well. (left, right, and so forth.)
-* Get staging and such purely from single environment variable.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

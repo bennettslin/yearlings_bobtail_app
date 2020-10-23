@@ -24,3 +24,8 @@ export const SKETCH_CONFIG = {
     noShadow: true,
     transitionKey: TOP
 }
+
+export const PUPPET_FAMILY_CONFIG = {
+    yIndex: 3,
+    scaleFactor: 0.25
+}
