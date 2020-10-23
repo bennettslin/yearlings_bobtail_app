@@ -44,6 +44,8 @@
     width: $width__annotation - $PADDING_POPUP_CONTENT_WIDE;
     max-width: $width__annotation - $PADDING_POPUP_CONTENT_WIDE;
 
+    background-color: $colour__annotationCard;
+
     .DW__miniWidth
     & {
         // Multiplier is .9, just like for lyric text in mini.
@@ -59,10 +61,6 @@
     }
 }
 
-.AnnotationCard {
-    background-color: $colour__annotationCard;
-}
-
 .AnnotationCard__backstory {
     background-color: $colour__annotationCard__past;
 }
@@ -73,4 +71,9 @@
 
 .AnnotationCard__afterword {
     background-color: $colour__annotationCard__future;
+}
+
+.AnnotationCard__isText {
+    display: flex;
+    flex-direction: column;
 }

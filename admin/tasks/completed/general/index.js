@@ -4954,5 +4954,9 @@ export default [
     {
         taskName: `Redo dot category shapes.`,
         workedHours: 10
+    },
+    {
+        taskName: `Some presence transition work.`,
+        workedHours: 3
     }
 ]

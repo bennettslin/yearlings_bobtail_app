@@ -1,12 +1,11 @@
 # TODO Friday
 * Fine tune colours
-* Raise dot sequences in annotations as well.
+* Sky animations
 
 # TODO Saturday
 * Blocker bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
 
 # Nice UI TODO:
-* Sky animations
 * Make club walls striped.
     * Then make consistent with thought bubble.
 * Load banner text later so that font has time to load.

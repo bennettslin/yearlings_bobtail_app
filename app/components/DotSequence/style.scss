@@ -1,8 +1,11 @@
 @import '../../scss/constants/icon';
 
 .DotSequence {
-    position: absolute;
     display: flex;
+}
+
+.DotSequence__absolute {
+    position: absolute;
 }
 
 .DotSequence__inTextAnchor {

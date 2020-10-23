@@ -23,7 +23,10 @@ const DotSequence = ({
             {...{
                 className: cx(
                     'DotSequence',
-                    !inAnnotationCard && 'gradientMask__dotSequence',
+                    !inAnnotationCard && [
+                        'DotSequence__absolute',
+                        'gradientMask__dotSequence'
+                    ],
                     inTextAnchor && 'DotSequence__inTextAnchor'
                 )
             }}
