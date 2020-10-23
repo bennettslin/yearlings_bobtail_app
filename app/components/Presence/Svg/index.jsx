@@ -55,6 +55,7 @@ const PresenceSvg = ({
             rotateY,
             noShadow,
             perspective,
+            transitionKey,
             hide,
             onlyOne
         } = getArrangementForPresence({
@@ -170,11 +171,13 @@ const PresenceSvg = ({
                             isLoaded && 'Presence__loaded',
                             capitaliseForClassName(presenceType),
                             getTransitionDelayClass({
+                                transitionKey,
                                 presenceType,
                                 xPosition,
                                 hasWires
                             }),
                             getTransitionDelayIndexClass({
+                                transitionKey,
                                 yIndex,
                                 presenceType,
                                 xPosition,

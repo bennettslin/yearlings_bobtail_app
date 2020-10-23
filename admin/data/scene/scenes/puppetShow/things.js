@@ -128,7 +128,8 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             xPosition: 8.25,
             zOffset: 2.375,
             noShadow: true,
-            scaleFactor: 0.35
+            scaleFactor: 0.35,
+            transitionKey: 'top'
         }
     },
     [PUPPET]: {
@@ -179,7 +180,8 @@ export const THINGS_PUPPET_SHOW_END = {
             xPosition: 2.75,
             zOffset: 2.5,
             noShadow: true,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
+            transitionKey: 'top'
         }
     },
     [PUPPET]: {

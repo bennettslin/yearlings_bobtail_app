@@ -5,6 +5,10 @@ import {
     PRESENCE_TRANSITION_CONFIGS,
     getTransitionStyles
 } from './helper'
+import {
+    OPACITY,
+    ENTER
+} from '../../../constants/transition'
 
 const TransitionStylesheets = () => (
     <>
@@ -33,8 +37,8 @@ const TransitionStylesheets = () => (
                                     transitionStyles:
                                         noAdditionalOpacity ?
                                             [transitionStyle] :
-                                            ['opacity', transitionStyle],
-                                    ...stylesheetKey === 'Enter' && {
+                                            [OPACITY, transitionStyle],
+                                    ...stylesheetKey === ENTER && {
                                         transitionEase: transitionEaseEnter
                                     },
                                     transitionDuration,

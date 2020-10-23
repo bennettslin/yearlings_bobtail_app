@@ -29,12 +29,17 @@ const getTransitionDelayIndex = ({
 }
 
 const getTransitionDelayPrefix = ({
+    transitionKey,
     presenceType,
     xPosition,
     hasWires,
     isWire
 
 }) => {
+    if (transitionKey) {
+        return transitionKey
+    }
+
     if (isWire) {
         return 'opacity'
     }
@@ -59,6 +64,7 @@ const getTransitionDelayPrefix = ({
 }
 
 export const getTransitionDelayClass = ({
+    transitionKey,
     presenceType,
     xPosition,
     hasWires,
@@ -66,6 +72,7 @@ export const getTransitionDelayClass = ({
 
 }) => (
     `${getTransitionDelayPrefix(({
+        transitionKey,
         presenceType,
         xPosition,
         hasWires,
@@ -74,6 +81,7 @@ export const getTransitionDelayClass = ({
 )
 
 export const getTransitionDelayIndexClass = ({
+    transitionKey,
     yIndex,
     presenceType,
     xPosition,
@@ -83,6 +91,7 @@ export const getTransitionDelayIndexClass = ({
 }) => (
     `${
         getTransitionDelayPrefix({
+            transitionKey,
             presenceType,
             xPosition,
             hasWires,

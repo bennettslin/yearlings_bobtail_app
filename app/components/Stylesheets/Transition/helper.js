@@ -2,9 +2,18 @@ import {
     CUBE_Y_AXIS_LENGTH,
     CUBE_Y_INDICES
 } from '../../../constants/cubeIndex'
+import {
+    OPACITY,
+    LEFT,
+    RIGHT,
+    PATH,
+    TOP,
+    EXIT,
+    ENTER
+} from '../../../constants/transition'
 
 const
-    TRANSITION_DURATION = 0.275,
+    TRANSITION_DURATION = 1.275,
     TRANSITION_DELAY_INCREMENT = 0.075,
     TRANSITION_BOUNCE_ENTER = 'cubic-bezier(0.2, 0.9, 0.3, 1.1)',
     LYRIC_SCROLL_DURATION = 0.8,
@@ -12,11 +21,11 @@ const
 
 export const TRANSITION_STYLESHEET_CONFIGS = [
     {
-        stylesheetKey: 'Exit',
+        stylesheetKey: EXIT,
         getTransitionDelay: yIndex => (LYRIC_SCROLL_DURATION + (CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1)
     },
     {
-        stylesheetKey: 'Enter',
+        stylesheetKey: ENTER,
         getTransitionDelay: yIndex => (CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1)
     }
 ]
@@ -24,33 +33,33 @@ export const TRANSITION_STYLESHEET_CONFIGS = [
 export const PRESENCE_TRANSITION_CONFIGS = [
     {
         // For wires.
-        transitionKey: 'opacity',
+        transitionKey: OPACITY,
         indices: [CUBE_Y_AXIS_LENGTH],
-        transitionStyle: 'opacity',
+        transitionStyle: OPACITY,
         noAdditionalOpacity: true
     },
     {
-        transitionKey: 'top',
+        transitionKey: TOP,
         indices: CUBE_Y_INDICES,
-        transitionStyle: 'top',
+        transitionStyle: TOP,
         transitionEaseEnter: TRANSITION_BOUNCE_ENTER
     },
     {
-        transitionKey: 'left',
+        transitionKey: LEFT,
         indices: CUBE_Y_INDICES,
-        transitionStyle: 'left',
+        transitionStyle: LEFT,
         transitionEaseEnter: TRANSITION_BOUNCE_ENTER
     },
     {
-        transitionKey: 'right',
+        transitionKey: RIGHT,
         indices: CUBE_Y_INDICES,
-        transitionStyle: 'left',
+        transitionStyle: LEFT,
         transitionEaseEnter: TRANSITION_BOUNCE_ENTER
     },
     {
-        transitionKey: 'path',
+        transitionKey: PATH,
         indices: [CUBE_Y_AXIS_LENGTH],
-        transitionStyle: 'opacity',
+        transitionStyle: OPACITY,
         transitionDuration: 0.5,
         noAdditionalOpacity: true
     }
