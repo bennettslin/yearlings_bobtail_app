@@ -13,6 +13,7 @@ import {
     BUSH_SINGLE__QUAD,
     BUSH_DOUBLE__QUAD
 } from '../../../../../app/constants/scene/things/cutouts'
+import { SKETCH_CONFIG } from '../../sharedConfigs'
 
 export default {
     [BUBBLE]: {
@@ -25,10 +26,9 @@ export default {
             flipHorizontal: true
         },
         [SKETCH_ESCAPE_POD]: {
-            yIndex: 5,
+            ...SKETCH_CONFIG,
             xPosition: 2.75,
             zOffset: 3.5,
-            noShadow: true,
             scaleFactor: 0.3
         }
     },

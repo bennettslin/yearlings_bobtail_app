@@ -15,3 +15,9 @@ export const BUBBLE_MEDIUM_CONFIG = {
 export const BUBBLE_LARGE_CONFIG = {
     ...BUBBLE_CONFIG
 }
+
+export const SKETCH_CONFIG = {
+    yIndex: 5,
+    noShadow: true,
+    transitionKey: TOP
+}

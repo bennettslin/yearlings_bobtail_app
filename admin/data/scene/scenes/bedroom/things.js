@@ -45,6 +45,7 @@ import {
     CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../../../../app/constants/scene/things/panels'
+import { SKETCH_CONFIG } from '../../sharedConfigs'
 
 export default {
     [CARDBOARD]: {
@@ -154,10 +155,9 @@ export const THINGS_BEDROOM_GUILTY = {
             scaleFactor: 0.25
         },
         [SKETCH_DOGS_ROCKET]: {
-            yIndex: 5,
+            ...SKETCH_CONFIG,
             xPosition: 2.85,
-            zOffset: 2.15,
-            noShadow: true
+            zOffset: 2.15
         }
     },
     [FIXTURE]: {

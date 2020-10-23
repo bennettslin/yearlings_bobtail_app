@@ -37,6 +37,7 @@ import {
     PUPPET_FATHER_END,
     PUPPET_MOTHER_END
 } from '../../../../../app/constants/scene/things/puppets'
+import { SKETCH_CONFIG } from '../../sharedConfigs'
 
 export default {
     [FLAT]: {
@@ -124,12 +125,10 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             scaleFactor: 0.25
         },
         [SKETCH_TOGETHER]: {
-            yIndex: 5,
+            ...SKETCH_CONFIG,
             xPosition: 8.25,
             zOffset: 2.375,
-            noShadow: true,
-            scaleFactor: 0.35,
-            transitionKey: 'top'
+            scaleFactor: 0.35
         }
     },
     [PUPPET]: {
@@ -176,12 +175,10 @@ export const THINGS_PUPPET_SHOW_END = {
             scaleFactor: 0.25
         },
         [SKETCH_APART]: {
-            yIndex: 5,
+            ...SKETCH_CONFIG,
             xPosition: 2.75,
             zOffset: 2.5,
-            noShadow: true,
-            scaleFactor: 0.4,
-            transitionKey: 'top'
+            scaleFactor: 0.4
         }
     },
     [PUPPET]: {
