@@ -85,6 +85,11 @@ import {
     OCEAN_BOTTOM_NEAR
 } from '../../../../app/constants/scene/things/flats'
 import {
+    OCEAN_WAVES__REAR,
+    OCEAN_WAVES__MIDDLE_REAR,
+    OCEAN_WAVES__MIDDLE,
+    OCEAN_WAVES__MIDDLE_FRONT,
+    OCEAN_WAVES__FRONT,
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
 } from '../../../../app/constants/scene/things/panels'
@@ -235,6 +240,13 @@ export default [
                 [BENNETT_ODIN_DEPTHS]: true,
                 [SEA_SERPENT_LEFT]: true,
                 [SEA_SERPENT_RIGHT]: true
+            },
+            [PANEL]: {
+                [OCEAN_WAVES__REAR]: true,
+                [OCEAN_WAVES__MIDDLE_REAR]: true,
+                [OCEAN_WAVES__MIDDLE]: true,
+                [OCEAN_WAVES__MIDDLE_FRONT]: true,
+                [OCEAN_WAVES__FRONT]: true
             }
         },
         cubes: BUOY_KEY,

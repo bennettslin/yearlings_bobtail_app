@@ -19,6 +19,7 @@ import {
     LIZ_COUCH,
     OCEAN_CAVE_EXTERIOR,
     OCEAN_CAVE_INTERIOR,
+    OCEAN_WAVES,
     PHONE_CALL_PANEL,
     REATTA_EXTERIOR_FRONT,
     REATTA_EXTERIOR_REAR,
@@ -139,6 +140,7 @@ export default {
         OCEAN_LIFE__SHARED,
         ROCK__SHARED
     ],
+    [OCEAN_WAVES]: null,
     [PHONE_CALL_PANEL]: null,
     [REATTA_EXTERIOR_FRONT]: [
         ALL_VEHICLES__SHARED,

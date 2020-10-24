@@ -77,6 +77,29 @@
     .foot { fill: hsl(37, 17%, 37%); }
 }
 
+.oceanWaves {
+    stroke: none;
+    .ocean { fill: hsla(195, 83%, 45%, 0.04); }
+    .wave { fill: hsla(195, 83%, 65%, 0.16); }
+}
+
+// TODO: Keep for now, if I want to improve this.
+// .oceanWaves__front {
+//     .wave { fill: hsla(200, 83%, 78%, 0.4); }
+// }
+// .oceanWaves__middleFront {
+//     .wave { fill: hsla(50, 83%, 78%, 0.4); }
+// }
+// .oceanWaves__middle {
+//     .wave { fill: hsla(120, 83%, 78%, 0.4); }
+// }
+// .oceanWaves__middleRear {
+//     .wave { fill: hsla(250, 83%, 78%, 0.4); }
+// }
+// .oceanWaves__rear {
+//     .wave { fill: hsla(0, 83%, 78%, 0.4); }
+// }
+
 .phoneCallPanel {
     .panel { fill: hsl(60, 70%, 80%); }
 }

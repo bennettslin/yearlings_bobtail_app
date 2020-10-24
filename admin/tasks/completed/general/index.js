@@ -4958,5 +4958,13 @@ export default [
     {
         taskName: `Some presence transition work.`,
         workedHours: 3
+    },
+    {
+        taskName: `Dot, cube, and actor work.`,
+        workedHours: 3
+    },
+    {
+        taskName: `Ocean waves panel.`,
+        workedHours: 3
     }
 ]

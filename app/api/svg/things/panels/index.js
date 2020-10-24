@@ -12,6 +12,7 @@ import taiwanHaze from '../../../../../assets/svgs/panels/taiwanHaze'
 import schoolbusInterior from '../../../../../assets/svgs/panels/schoolbusInterior'
 import schoolbusSeat from '../../../../../assets/svgs/panels/schoolbusSeat'
 import schoolbusExterior from '../../../../../assets/svgs/panels/schoolbusExterior'
+import oceanWaves from '../../../../../assets/svgs/panels/oceanWaves'
 import oceanCaveInterior from '../../../../../assets/svgs/panels/oceanCaveInterior'
 import oceanCaveExterior from '../../../../../assets/svgs/panels/oceanCaveExterior'
 import wideCouch from '../../../../../assets/svgs/panels/wideCouch'
@@ -63,6 +64,11 @@ import {
     SCHOOLBUS_SEAT__LEFT,
     SCHOOLBUS_SEAT__RIGHT,
     SCHOOLBUS_EXTERIOR,
+    OCEAN_WAVES__REAR,
+    OCEAN_WAVES__MIDDLE_REAR,
+    OCEAN_WAVES__MIDDLE,
+    OCEAN_WAVES__MIDDLE_FRONT,
+    OCEAN_WAVES__FRONT,
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR,
     WIDE_COUCH_BENNETT,
@@ -133,6 +139,11 @@ export default {
     [SCHOOLBUS_SEAT__LEFT]: schoolbusSeat,
     [SCHOOLBUS_SEAT__RIGHT]: schoolbusSeat,
     [SCHOOLBUS_EXTERIOR]: schoolbusExterior,
+    [OCEAN_WAVES__REAR]: oceanWaves,
+    [OCEAN_WAVES__MIDDLE_REAR]: oceanWaves,
+    [OCEAN_WAVES__MIDDLE]: oceanWaves,
+    [OCEAN_WAVES__MIDDLE_FRONT]: oceanWaves,
+    [OCEAN_WAVES__FRONT]: oceanWaves,
     [OCEAN_CAVE_INTERIOR]: oceanCaveInterior,
     [OCEAN_CAVE_EXTERIOR]: oceanCaveExterior,
     [WIDE_COUCH_BENNETT]: wideCouch,
