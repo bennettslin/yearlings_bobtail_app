@@ -2,7 +2,8 @@ import { CLUB_SIDE_CROWD_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
     OLD_FLOOR_COLOUR as F,
-    CLUB_WALL_COLOUR as W,
+    CLUB_SIDE_1_COLOUR as B,
+    CLUB_SIDE_2_COLOUR as E,
     PLATFORM_COLOUR as P
 } from '../../../../../app/constants/scene/cubes/colours'
 
@@ -12,20 +13,25 @@ export default {
     [CLUB_SIDE_CROWD_KEY]: {
         ceiling: {
             hslaColours: [
-                [W]
+                [B, E, B, E, B, E, B, E, B, E, B, B],
+                [B, B, B, B, B, B, B, B, B, B, B, E],
+                [B, B, B, B, B, B, B, B, B, B, B, B],
+                [B, B, B, B, B, B, B, B, B, B, B, E],
+                [B, B, B, B, B, B, B, B, B, B, B, B],
+                [B, B, B, B, B, B, B, B, B, B, B, E]
             ],
             zIndices: [
                 [1],
                 [g, g, g, g, g, g, g, g, g, g, g, 1],
+                [g, g, g, g, g, g, g, g, g, g, g, d],
+                [g, g, g, g, g, g, g, g, g, g, g, d],
                 [g, g, g, g, g, g, g, g, g, g, g, 1],
-                [g, g, g, g, g, g, g, g, g, g, g, d],
-                [g, g, g, g, g, g, g, g, g, g, g, d],
                 [g, g, g, g, g, g, g, g, g, g, g, 1]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
+                [F],
                 [P, P, P, P, F],
                 [P, P, P, P, F],
                 [P, P, P, P, F],
