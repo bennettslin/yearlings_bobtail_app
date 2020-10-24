@@ -9,19 +9,19 @@ export default {
     [CARDBOARD]: {
         [SEA_SERPENT_LEFT]: {
             yIndex: 0,
-            xPosition: 1.5,
+            xPosition: 0.5,
             zOffset: 0.5,
             scaleFactor: 0.2
         },
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 0,
-            xPosition: 3,
+            xPosition: 2,
             scaleFactor: 0.175,
             zOffset: 2.5
         },
         [SEA_SERPENT_RIGHT]: {
             yIndex: 0,
-            xPosition: 4.5,
+            xPosition: 3.5,
             zOffset: 1,
             scaleFactor: 0.2
         }
