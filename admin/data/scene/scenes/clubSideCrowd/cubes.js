@@ -2,8 +2,8 @@ import { CLUB_SIDE_CROWD_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
     OLD_FLOOR_COLOUR as F,
-    CLUB_SIDE_1_COLOUR as B,
-    CLUB_SIDE_2_COLOUR as E,
+    CLUB_SIDE_PRIMARY_COLOUR as B,
+    CLUB_SIDE_SECONDARY_COLOUR as E,
     PLATFORM_COLOUR as P
 } from '../../../../../app/constants/scene/cubes/colours'
 

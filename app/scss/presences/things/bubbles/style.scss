@@ -44,7 +44,7 @@
 
 .khariSpeechAttack {
     .ground { fill: hsl(44, 23%, 41%); }
-    .wall { fill: hsl(43, 29%, 61%); }
+    .wall { fill: hsl(198, 38%, 62%); }
     .cutout { fill: hsl(60, 11%, 69%); }
     .supportFront { fill: hsl(62, 19%, 69%); }
     .supportSide { fill: hsl(63, 11%, 56%); }
@@ -60,8 +60,9 @@
 }
 
 .lizSpeechDefence {
-    .ground { fill: hsl(207, 17%, 35%); }
-    .wall { fill: hsl(209, 24%, 59%); }
+    .ground { fill: hsl(36, 13%, 46%); } // ~ old floor hsla.
+    .stripePrimary { fill: hsl(355, 23%, 65%); } // ~ club side primary hsla.
+    .stripeSecondary { fill: hsl(55, 21%, 58%); } // ~ club side secondary hsla.
 }
 
 .lizThoughtReunion {

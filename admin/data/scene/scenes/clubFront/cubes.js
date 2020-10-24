@@ -2,7 +2,8 @@ import { CLUB_FRONT_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
     OLD_FLOOR_COLOUR as F,
-    CLUB_WALL_COLOUR as W,
+    CLUB_FRONT_PRIMARY_COLOUR as B,
+    CLUB_FRONT_SECONDARY_COLOUR as E,
     PLATFORM_COLOUR as P
 } from '../../../../../app/constants/scene/cubes/colours'
 
@@ -12,7 +13,12 @@ export default {
     [CLUB_FRONT_KEY]: {
         ceiling: {
             hslaColours: [
-                [W]
+                [B, E, B, E, B, E, B, E, B, E, B, B],
+                [B, B, B, B, B, B, B, B, B, B, B, E],
+                [E, B, B, B, B, B, B, B, B, B, B, B],
+                [B, B, B, B, B, B, B, B, B, B, B, E],
+                [E, B, B, B, B, B, B, B, B, B, B, B],
+                [B, B, B, B, B, B, B, B, B, B, B, E]
             ],
             zIndices: [
                 [1],

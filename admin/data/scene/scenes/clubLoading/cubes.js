@@ -5,8 +5,8 @@ import {
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
     OLD_FLOOR_COLOUR as F,
-    CLUB_SIDE_1_COLOUR as B,
-    CLUB_SIDE_2_COLOUR as E,
+    CLUB_SIDE_PRIMARY_COLOUR as B,
+    CLUB_SIDE_SECONDARY_COLOUR as E,
     GENERIC_EXTERIOR_COLOUR as X
 } from '../../../../../app/constants/scene/cubes/colours'
 
@@ -16,7 +16,7 @@ export default {
     [CLUB_LOADING]: {
         ceiling: {
             hslaColours: [
-                [C, E, B, E, B, E, B, E, B, E, B, E],
+                [C, B, E, B, E, B, E, B, E, B, E, B],
                 [C, X],
                 [C],
                 [D]
