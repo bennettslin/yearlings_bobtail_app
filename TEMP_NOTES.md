@@ -5,8 +5,6 @@
 * Blocker bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
 
 # Nice UI TODO:
-* Make club walls striped.
-    * Then make consistent with thought bubble.
 * Load banner text later so that font has time to load.
 * Remove depth shading from slant direction cubes?
 
