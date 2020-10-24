@@ -8,7 +8,6 @@ import {
     getMapPresenceFloorZIndex
 } from '../../redux/presence/selector'
 import './style'
-// import { getTimeoutEnterForPresence, getTimeoutExitForPresence } from './helper'
 
 const Presence = ({
     yIndex,
@@ -44,9 +43,15 @@ const Presence = ({
          * avoids presence losing zIndex as it transitions out.
          */
         if (isPresenceShownInScene) {
+            // console.log('this gets called for', presenceType, actorKey, presenceKey, presenceZIndex, floorZIndex, zIndex)
             setZIndex(floorZIndex)
         }
     }, [floorZIndex])
+
+    // useEffect(() => {
+    //     console.log('presenceType', presenceType, actorKey, presenceKey, presenceZIndex, floorZIndex, zIndex)
+
+    // }, [isPresenceShownInScene])
 
     return (
         <CSSTransition

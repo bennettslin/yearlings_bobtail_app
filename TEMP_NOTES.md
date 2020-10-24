@@ -1,5 +1,3 @@
-* Masks need eyeblobs
-
 # TODO Saturday
 * Blocker bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
 * Sky animations
