@@ -1,11 +1,14 @@
-# TODO Friday
-* Sky animations
+* Masks need eyeblobs
 
 # TODO Saturday
 * Blocker bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
+* Sky animations
+* Load banner text later so that font has time to load.
+
+# TODO Monday
+* Actor animations
 
 # Nice UI TODO:
-* Load banner text later so that font has time to load.
 * Remove depth shading from slant direction cubes?
 
 # Nice TODO:
@@ -33,8 +36,3 @@
 # Bobtail Yearlings website
 * Add WordPress to website, have blog section.
 * Link to Blogspot from WordPress.
-
-# Acknowledge my ask now that I'm famous
-* Apple monitor rotation warning
-* Spotlight doesn't go to Finder in different window
-* Duverger's Law
