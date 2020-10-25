@@ -12,7 +12,31 @@ const _recurseForCleanup = object => {
     Object.keys(object).forEach(key => {
         if (key === 'layerYIndex') {
             delete object[key]
-        } else if (typeof object[key] === 'object') {
+        }
+
+        /**
+         * Keep zIndices array only if there are multiple zIndices. Otherwise,
+         * replace with a single zIndex value.
+         */
+        if (key === 'zIndices') {
+            const cubesKeys = Object.keys(object[key])
+            if (
+                /**
+                 * If zIndex for every scene is the same, we don't need an
+                 * array. Obviously, this is trivially true if there is only
+                 * one entry in the array.
+                 */
+                cubesKeys.every(cubesKey => (
+                    object.zIndices[cubesKey] ===
+                        object.zIndices[cubesKeys[0]]
+                ))
+            ) {
+                object.zIndex = object.zIndices[cubesKeys[0]]
+                delete object.zIndices
+            }
+        }
+
+        if (typeof object[key] === 'object') {
             _recurseForCleanup(object[key])
         }
     })
@@ -48,12 +72,11 @@ const _addPresenceToSceneLayer = ({
             getNearestXIndex(xPosition)
         )
 
-    if (Number.isFinite(arrangementObject.zIndex) && arrangementObject.zIndex !== zIndex) {
-        console.log(presenceType, presenceName, arrangementObject.zIndex, zIndex)
+    // Allow presence to have different zIndices for different scenes.
+    if (!arrangementObject.zIndices) {
+        arrangementObject.zIndices = {}
     }
-
-    // This adds the floor zIndex to the arrangement.
-    arrangementObject.zIndex = zIndex
+    arrangementObject.zIndices[cubesKey] = zIndex
 
     // Initialise this layer if necessary.
     if (!layers[layerKey]) {
@@ -200,7 +223,7 @@ export const getSceneData = rawScenes => {
         })
     })
 
-    // Remove unneeded keys from arrangements.
+    // Final cleanup.
     _recurseForCleanup(ACTOR_ARRANGEMENTS)
     _recurseForCleanup(THING_ARRANGEMENTS)
 

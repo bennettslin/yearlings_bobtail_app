@@ -3,7 +3,8 @@ import { getIsShownInSceneForPresence } from '../../api/scene/presences'
 import { mapCanTransitionAfterSceneChange } from '../entrance/selector'
 import {
     mapSceneSongIndex,
-    mapSceneSceneIndex
+    mapSceneSceneIndex,
+    mapSceneCubesKey
 } from '../scene/selector'
 import {
     mapSelectedSceneIndex,
@@ -59,4 +60,13 @@ export const getMapIsPresenceShownInScene = ({
             )
         )
     }
+)
+
+export const getMapZIndexForPresence = (zIndex, zIndices) => createSelector(
+    mapSceneCubesKey,
+    sceneCubesKey => (
+        Number.isFinite(zIndex) ?
+            zIndex :
+            zIndices[sceneCubesKey]
+    )
 )

@@ -1,5 +1,6 @@
 import React, { useState, memo } from 'react'
 import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import InlineSvg from '../../../modules/InlineSvg'
 import Wires from '../Wires'
@@ -16,6 +17,7 @@ import {
 } from '../../../api/scene/sharedStyles'
 import { getWirePlacedFront } from '../../../api/scene/wires'
 import { getSvgForPresence } from '../../../api/svg'
+import { getMapZIndexForPresence } from '../../../redux/presence/selector'
 import { getXYForPresence } from './helpers/position'
 import { getCompoundActorStyleIfNeeded } from './helpers/sharedStyle'
 import {
@@ -43,6 +45,7 @@ const PresenceSvg = ({
             yIndex,
             xPosition,
             zIndex,
+            zIndices,
             zOffset,
             scaleFactor,
             trimBottom,
@@ -63,11 +66,12 @@ const PresenceSvg = ({
             presenceKey,
             actorKey
         }),
+        finalZIndex = useSelector(getMapZIndexForPresence(zIndex, zIndices)),
         {
             x: adjustedLeft,
             y: adjustedTop
         } = getXYForPresence({
-            zIndex,
+            zIndex: finalZIndex,
             yIndex,
             xPosition,
             zOffset
