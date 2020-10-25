@@ -33,8 +33,7 @@ import './style'
 const PresenceSvg = ({
     presenceType,
     actorKey,
-    presenceKey,
-    zIndex
+    presenceKey
 
 }) => {
     const
@@ -43,6 +42,7 @@ const PresenceSvg = ({
         {
             yIndex,
             xPosition,
+            zIndex,
             zOffset,
             scaleFactor,
             trimBottom,
@@ -240,8 +240,7 @@ const PresenceSvg = ({
 PresenceSvg.propTypes = {
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
-    presenceKey: PropTypes.string.isRequired,
-    zIndex: PropTypes.number.isRequired
+    presenceKey: PropTypes.string.isRequired
 }
 
 export default memo(PresenceSvg)

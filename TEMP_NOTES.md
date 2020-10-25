@@ -1,5 +1,6 @@
 # TODO Saturday
-* Blocker bug: Presences sometimes lose their floor zIndex? (This does happen in production as well.)
+* Ensure that this zIndex is never different for each presence.
+
 * Sky animations
 * Load banner text later so that font has time to load.
 

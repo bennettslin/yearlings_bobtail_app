@@ -1,7 +1,12 @@
 import ACTOR_ARRANGEMENTS from '../../../scene/scenes/actors'
 import THING_ARRANGEMENTS from '../../../scene/scenes/things'
+import {
+    getNearestXIndex,
+    getValueInAbridgedMatrix
+} from '../../../../../app/helpers/cubeIndices'
 import { getCharStringForNumber } from '../../../../../app/helpers/format'
 import { ACTOR } from '../../../../../app/constants/scene'
+import cubes from '../../../scene/scenes/cubes'
 
 const _addPresenceToSceneLayer = ({
     arrangementObject,
@@ -9,13 +14,15 @@ const _addPresenceToSceneLayer = ({
     presenceType,
     presenceName,
     value,
-    layerPresencesList
+    layerPresencesList,
+    cubesKey
 
 }) => {
     const
         {
             yIndex: arrangedYIndex = -1,
-            layerYIndex
+            layerYIndex,
+            xPosition
         } = arrangementObject,
 
         /**
@@ -25,6 +32,13 @@ const _addPresenceToSceneLayer = ({
          */
         yIndex = Number.isFinite(layerYIndex) ? layerYIndex : arrangedYIndex,
         layerKey = `layer_${getCharStringForNumber(yIndex)}`
+
+    // This adds the floor zIndex to the arrangement.
+    arrangementObject.zIndex = getValueInAbridgedMatrix(
+        cubes[cubesKey].floor.zIndices,
+        yIndex,
+        getNearestXIndex(xPosition)
+    )
 
     // Initialise this layer if necessary.
     if (!layers[layerKey]) {
@@ -64,7 +78,8 @@ const _addPresenceToSceneLayerByType = ({
     presenceType,
     presenceName,
     layers,
-    layerPresencesList
+    layerPresencesList,
+    cubesKey
 
 }) => {
     const dynamicValue = presences[presenceType][presenceName]
@@ -101,7 +116,8 @@ const _addPresenceToSceneLayerByType = ({
         presenceType,
         presenceName,
         value,
-        layerPresencesList
+        layerPresencesList,
+        cubesKey
     })
 }
 
@@ -113,7 +129,10 @@ const _getLayeredScenes = (
     albumScenes.forEach(songScenes => {
         songScenes.forEach(scene => {
             const
-                { presences } = scene,
+                {
+                    presences,
+                    cubes: cubesKey
+                } = scene,
                 layers = {}
 
             // Iterate through actors, cutouts, fixtures.
@@ -127,7 +146,8 @@ const _getLayeredScenes = (
                         presenceType,
                         presenceName,
                         layers,
-                        layerPresencesList
+                        layerPresencesList,
+                        cubesKey
                     })
                 })
             })

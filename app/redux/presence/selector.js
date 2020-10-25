@@ -1,10 +1,5 @@
 import { createSelector } from 'reselect'
-import {
-    getIsShownInSceneForPresence,
-    getArrangementForPresence
-} from '../../api/scene/presences'
-import { getNearestXIndex } from '../../helpers/cubeIndices'
-import { getMapCubeFloorZIndex } from '../cube/selector'
+import { getIsShownInSceneForPresence } from '../../api/scene/presences'
 import { mapCanTransitionAfterSceneChange } from '../entrance/selector'
 import {
     mapSceneSongIndex,
@@ -65,26 +60,3 @@ export const getMapIsPresenceShownInScene = ({
         )
     }
 )
-
-export const getMapPresenceFloorZIndex = ({
-    presenceType,
-    actorKey,
-    presenceKey
-
-}) => {
-    const {
-            // This yIndex is for scale and position.
-            yIndex: arrangedYIndex,
-            xPosition
-        } = getArrangementForPresence({
-            presenceType,
-            actorKey,
-            presenceKey
-        }),
-        xIndex = getNearestXIndex(xPosition)
-
-    return getMapCubeFloorZIndex(
-        arrangedYIndex,
-        xIndex
-    )
-}

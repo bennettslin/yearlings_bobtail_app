@@ -20,8 +20,8 @@ export const onCreateWebpackConfig = ({ actions }) => {
             new webpack.DefinePlugin({
                 // Grab album from global env in staging and production.
                 ...!getIsLocalDevelopment() && {
-                    ALBUM: JSON.stringify(album),
-                    SCENE: JSON.stringify(scene)
+                    SCENE: JSON.stringify(scene),
+                    ALBUM: JSON.stringify(album)
                 },
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
