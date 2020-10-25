@@ -64,9 +64,16 @@ export const getMapIsPresenceShownInScene = ({
 
 export const getMapZIndexForPresence = (zIndex, zIndices) => createSelector(
     mapSceneCubesKey,
-    sceneCubesKey => (
-        Number.isFinite(zIndex) ?
-            zIndex :
-            zIndices[sceneCubesKey]
-    )
+    sceneCubesKey => {
+        if (zIndex) {
+            return zIndex
+
+        } else if (zIndices && zIndices[sceneCubesKey]) {
+            return zIndices[sceneCubesKey]
+
+        // Zero is the default.
+        } else {
+            return 0
+        }
+    }
 )

@@ -19,20 +19,36 @@ const _recurseForCleanup = object => {
          * replace with a single zIndex value.
          */
         if (key === 'zIndices') {
-            const cubesKeys = Object.keys(object[key])
+            const
+                cubesKeys = Object.keys(object[key]),
+                firstZIndex = object.zIndices[cubesKeys[0]]
+
+            /**
+             * If zIndex for every scene is the same, then we don't need a
+             * zIndices array. Obviously, this is trivially true if there is
+             * only one entry in the array.
+             */
             if (
-                /**
-                 * If zIndex for every scene is the same, we don't need an
-                 * array. Obviously, this is trivially true if there is only
-                 * one entry in the array.
-                 */
                 cubesKeys.every(cubesKey => (
-                    object.zIndices[cubesKey] ===
-                        object.zIndices[cubesKeys[0]]
+                    object.zIndices[cubesKey] === firstZIndex
                 ))
             ) {
-                object.zIndex = object.zIndices[cubesKeys[0]]
+                /**
+                 * If it's zero, then don't bother, since presence recognises
+                 * zero as the default.
+                 */
+                if (firstZIndex > 0) {
+                    object.zIndex = firstZIndex
+                }
                 delete object.zIndices
+
+            // Otherwise, delete any zeroes in the zIndices array.
+            } else {
+                cubesKeys.forEach(cubesKey => {
+                    if (!object.zIndices[cubesKey]) {
+                        delete object.zIndices[cubesKey]
+                    }
+                })
             }
         }
 
