@@ -4966,5 +4966,9 @@ export default [
     {
         taskName: `Ocean waves panel.`,
         workedHours: 3
+    },
+    {
+        taskName: `Fix race condition bug where presences would switch zIndex during transition.`,
+        workedHours: 10
     }
 ]
