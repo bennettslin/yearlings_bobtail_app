@@ -8,6 +8,16 @@ import { getCharStringForNumber } from '../../../../../app/helpers/format'
 import { ACTOR } from '../../../../../app/constants/scene'
 import cubes from '../../../scene/scenes/cubes'
 
+const _recurseForCleanup = object => {
+    Object.keys(object).forEach(key => {
+        if (key === 'layerYIndex') {
+            delete object[key]
+        } else if (typeof object[key] === 'object') {
+            _recurseForCleanup(object[key])
+        }
+    })
+}
+
 const _addPresenceToSceneLayer = ({
     arrangementObject,
     layers,
@@ -31,14 +41,19 @@ const _addPresenceToSceneLayer = ({
          * scaling.
          */
         yIndex = Number.isFinite(layerYIndex) ? layerYIndex : arrangedYIndex,
-        layerKey = `layer_${getCharStringForNumber(yIndex)}`
+        layerKey = `layer_${getCharStringForNumber(yIndex)}`,
+        zIndex = getValueInAbridgedMatrix(
+            cubes[cubesKey].floor.zIndices,
+            arrangedYIndex,
+            getNearestXIndex(xPosition)
+        )
+
+    if (Number.isFinite(arrangementObject.zIndex) && arrangementObject.zIndex !== zIndex) {
+        console.log(presenceType, presenceName, arrangementObject.zIndex, zIndex)
+    }
 
     // This adds the floor zIndex to the arrangement.
-    arrangementObject.zIndex = getValueInAbridgedMatrix(
-        cubes[cubesKey].floor.zIndices,
-        yIndex,
-        getNearestXIndex(xPosition)
-    )
+    arrangementObject.zIndex = zIndex
 
     // Initialise this layer if necessary.
     if (!layers[layerKey]) {
@@ -184,6 +199,10 @@ export const getSceneData = rawScenes => {
             }
         })
     })
+
+    // Remove unneeded keys from arrangements.
+    _recurseForCleanup(ACTOR_ARRANGEMENTS)
+    _recurseForCleanup(THING_ARRANGEMENTS)
 
     return {
         albumScenes,

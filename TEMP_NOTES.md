@@ -1,5 +1,7 @@
 # TODO Saturday
-* Ensure that this zIndex is never different for each presence.
+* Handle when a presence's zIndex is different for different scenes.
+* Make sure that if presence's zIndex changes between scenes, then it also transitions between scenes. (shopping cart)
+* Audit all scenes.
 
 * Sky animations
 * Load banner text later so that font has time to load.
