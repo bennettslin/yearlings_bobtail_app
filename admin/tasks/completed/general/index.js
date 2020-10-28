@@ -4970,5 +4970,9 @@ export default [
     {
         taskName: `Fix race condition bug where presences would switch zIndex during transition.`,
         workedHours: 10
+    },
+    {
+        taskName: `Close nav icon.`,
+        workedHours: 1
     }
 ]

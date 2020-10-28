@@ -8,11 +8,6 @@ export default [
         taskName: `Finalise dots work.`,
         workedHours: 7
     },
-    {
-        taskName: `Close nav icon.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     /* Ongoing. */
     {

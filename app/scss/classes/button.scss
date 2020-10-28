@@ -35,7 +35,7 @@
 }
 
 .ButtonIcon__carouselNav {
-    fill: hsl(165, 67%, 80%);
+    fill: $colour__close;
     .cardBack { fill: $colour__annotation__dark; }
     .cardFront { fill: $colour__annotation; }
     .annotation { fill: $colour__annotationCard; }
@@ -43,11 +43,11 @@
 
 .ButtonIcon__carouselNext {
     transform: scaleX(-1);
-    .arrow { fill: hsl(27, 100%, 75%) };
+    .arrow { fill: $colour__navigation };
 }
 
 .ButtonIcon__carouselPrevious {
-    .arrow { fill: hsl(27, 100%, 75%); };
+    .arrow { fill: $colour__navigation; };
 }
 
 .ButtonIcon__lyricEar {
@@ -55,7 +55,7 @@
 }
 
 .ButtonIcon__lyricExpand {
-    .arrow { fill: hsl(27, 100%, 75%) };
+    .arrow { fill: $colour__navigation };
     .line { fill: $COLOUR__PAST__LIGHTER };
     .stanzaVerse { fill: $bgColour__formType__verse };
     .stanzaPrechorus { fill: $bgColour__formType__prechorus };
@@ -94,14 +94,14 @@
 }
 
 .ButtonIcon__popupClose {
-    fill: hsl(320, 43%, 77%);
+    fill: $colour__close;
 }
 
 .ButtonIcon__popupNext {
-    fill: hsl(80, 43%, 77%);
+    fill:$colour__navigation;
     transform: scaleX(-1);
 }
 
 .ButtonIcon__popupPrevious {
-    fill: hsl(160, 43%, 77%);
+    fill:$colour__navigation;
 }

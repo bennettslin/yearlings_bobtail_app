@@ -86,6 +86,9 @@ $colour__underline: hsl($hue__link, $sat__darker, $lum__medium);
 $colour__underlineAccess: hsl($hue__access, $sat__darker, $lum__medium);
 $colour__underlineSelect: hsl($hue__select, $sat__darker, $lum__medium);
 
+$colour__navigation: hsl($hue__wormhole, $sat__light, $lum__medium);
+$colour__close: hsl($hue__songcraft, $sat__light, $lum__medium);
+
 // Interactable hover colours.
 $colour__interact__bold: hsl($hue__interact, $sat__lighter, $lum__medium);
 $colour__interact__lighter: hsl($hue__interact, $sat__light, $lum__link__light);
