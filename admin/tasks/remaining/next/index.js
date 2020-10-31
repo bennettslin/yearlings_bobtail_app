@@ -1,18 +1,5 @@
 export default [
     {
-        taskName: `Animate in presences. Plus cube and presence transition order.`,
-        workedHours: 24,
-        neededHours: 30
-    },
-    {
-        taskName: `Finalise dots work.`,
-        workedHours: 7
-    },
-    {
-        taskName: `Make Christopher colours consistent with album cover.`,
-        workedHours: 0
-    },
-    {
         taskName: `Shirt images.`,
         workedHours: 0
     },

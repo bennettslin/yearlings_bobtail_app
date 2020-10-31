@@ -4982,5 +4982,13 @@ export default [
     {
         taskName: `Some presence fixes.`,
         workedHours: 3
+    },
+    {
+        taskName: `Animate in presences, with cube and presence transition order.`,
+        workedHours: 28
+    },
+    {
+        taskName: `Finalise dots work.`,
+        workedHours: 7
     }
 ]
