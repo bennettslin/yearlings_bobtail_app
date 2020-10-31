@@ -4978,5 +4978,9 @@ export default [
     {
         taskName: `Sky gradient transitions.`,
         workedHours: 2
+    },
+    {
+        taskName: `Some presence fixes.`,
+        workedHours: 3
     }
 ]
