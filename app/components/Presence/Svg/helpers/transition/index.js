@@ -1,6 +1,13 @@
 import { CUBE_Y_AXIS_LENGTH } from '../../../../../constants/cubeIndex'
 import { ACTOR } from '../../../../../constants/scene'
 import { FIXTURE, FURNITURE } from '../../../../../constants/scene/things'
+import {
+    OPACITY,
+    LEFT,
+    RIGHT,
+    PATH,
+    TOP
+} from '../../../../../constants/transition'
 
 const getIsPathTransition = presenceType => {
     switch (presenceType) {
@@ -44,25 +51,25 @@ const getTransitionDelayPrefix = ({
     }
 
     if (isWire) {
-        return 'opacity'
+        return OPACITY
     }
 
     if (getIsPathTransition(presenceType)) {
-        return 'path'
+        return PATH
     }
 
     // If it has wires, it should come from the top.
     if (hasWires) {
-        return 'top'
+        return TOP
     }
 
     // By default, slide from left or right, or from top if perfectly centred.
     if (xPosition < 5.5) {
-        return 'left'
+        return LEFT
     } else if (xPosition > 5.5) {
-        return 'right'
+        return RIGHT
     } else {
-        return 'top'
+        return TOP
     }
 }
 
