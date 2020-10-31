@@ -1,3 +1,4 @@
+@import '../../../scss/constants/hue';
 @import '../../../scss/constants/stage';
 @import '../../../scss/constants/transition';
 
@@ -6,9 +7,88 @@
 }
 
 .Sky__filter {
+    background-color: none;
+
     .DW__userAgentDesktop
     & {
         transition:
-            background $transitionDuration__slow;
+            background-color $transitionDuration__slower;
     }
 }
+
+.Season__horizon,
+.TimeOfDay__horizon {
+    $gradient__sky: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    );
+
+    mask-image: $gradient__sky;
+}
+
+.TimeOfDay__space.twilight { background-color: hsl(232, 40%, 22%); }
+.TimeOfDay__horizon.twilight { background-color: hsl(18, 40%, 46%); }
+
+.TimeOfDay__space.dawn { background-color: hsl(215, 50%, 61%); }
+.TimeOfDay__horizon.dawn { background-color: hsl(36, 40%, 86%),; }
+
+.TimeOfDay__space.morning { background-color: hsl(200, 65%, 67%); }
+.TimeOfDay__horizon.morning { background-color: hsl(190, 40%, 87%); }
+
+.TimeOfDay__space.noon { background-color: hsl(192, 75%, 70%); }
+.TimeOfDay__horizon.noon { background-color: hsl(182, 55%, 90%); }
+
+.TimeOfDay__space.afternoon { background-color: hsl(203, 75%, 67%); }
+.TimeOfDay__horizon.afternoon { background-color: hsl(155, 55%, 87%),; }
+
+.TimeOfDay__space.evening { background-color: hsl(213, 55%, 50%); }
+.TimeOfDay__horizon.evening { background-color: hsl(5, 50%, 65%); }
+
+.TimeOfDay__space.night { background-color: hsl(223, 35%, 7%); }
+.TimeOfDay__horizon.night { background-color: hsl(203, 35%, 12%); }
+
+.TimeOfDay__space.twilightTaiwan { background-color: hsl(176, 40%, 22%); }
+.TimeOfDay__horizon.twilightTaiwan { background-color: hsl(336, 40%, 46%); }
+
+.TimeOfDay__space.nightTaiwan { background-color: hsl(170, 35%, 10%); }
+.TimeOfDay__horizon.nightTaiwan { background-color: hsl(136, 38%, 17%); }
+
+.Season__space.spring { background-color: hsla(225, 65%, 60%, 0.2); }
+.Season__space.summer { background-color: hsla(215, 70%, 70%, 0.2); }
+.Season__space.autumn { background-color: hsla(225, 50%, 65%, 0.2); }
+.Season__space.winter { background-color: hsla(235, 25%, 35%, 0.2); }
+
+// Prologue, Epilogue
+.Season__space.stage { background-color: hsl(12, 24%, 43%); }
+.Season__horizon.stage { background-color: hsl(50, 56%, 73%); }
+
+// Didi, Uncanny
+.Season__space.past { background-color: hsl($hue__past, 56%, 65%); }
+.Season__horizon.past { background-color: hsl(50, 56%, 85%); }
+
+// Uncanny
+.Season__space.present { background-color: hsl($hue__present, 56%, 65%); }
+.Season__horizon.present { background-color: hsl(50, 56%, 85%); }
+
+// Pchelka, Uncanny
+.Season__space.future { background-color: hsl($hue__future, 46%, 65%); }
+.Season__horizon.future { background-color: hsl(50, 56%, 85%); }
+
+// Grasshoppers, Vegan
+.Season__space.love { background-color: hsl(334, 56%, 60%); }
+.Season__horizon.love { background-color: hsl(50, 56%, 90%); }
+
+// Pchelka
+.Season__space.nightMagic { background-color: hsl(125, 35%, 7%); }
+.Season__horizon.nightMagic { background-color: hsl(125, 35%, 25%); }
+
+// Odin
+.Season__space.oceanTop { background-color: hsl($HUE_OCEAN, 70%, 40%); }
+
+.Season__space.oceanSide { background-color: hsl($HUE_OCEAN, 70%, 50%); }
+.Season__horizon.oceanSide { background-color: hsl($HUE_OCEAN, 70%, 30%); }
+
+// Sasha, Ash, Constellations, Golden, Cremated, Dream
+.Season__space.thought { background-color: hsl(0, 24%, 23%); }
+.Season__horizon.thought { background-color: hsl(330, 14%, 45%); }

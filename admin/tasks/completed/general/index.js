@@ -4974,5 +4974,9 @@ export default [
     {
         taskName: `Close nav icon.`,
         workedHours: 1
+    },
+    {
+        taskName: `Sky gradient transitions.`,
+        workedHours: 2
     }
 ]

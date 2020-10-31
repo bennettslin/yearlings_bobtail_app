@@ -1,6 +1,5 @@
 # TODO Monday
 * Actor animations
-* Sky animations
 * Load banner text later so that font has time to load.
 * Audit all scenes
 
