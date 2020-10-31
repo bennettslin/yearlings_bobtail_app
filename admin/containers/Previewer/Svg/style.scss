@@ -16,7 +16,6 @@
 .Presence {
     .Previewer__mainFullHeight
     & {
-        width: auto;
         height: 100%;
     }
 }
@@ -26,6 +25,10 @@
     & {
         height: calc(100% - #{$height__input});
     }
+}
+
+.Presence__loaded {
+    width: 100%;
 }
 
 svg {

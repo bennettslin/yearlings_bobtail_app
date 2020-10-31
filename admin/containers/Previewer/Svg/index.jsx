@@ -51,8 +51,14 @@ class PreviewerSvg extends PureComponent {
 
         this.state = {
             adjustedHeight: 0,
-            kilobytes: 0
+            kilobytes: 0,
+            didLoad: false
         }
+    }
+
+    setDidLoad = () => {
+        // Hacky way to show full width of presence.
+        setTimeout(() => this.setState({ didLoad: true }), 250)
     }
 
     processSvg = (svgString) => {
@@ -169,7 +175,8 @@ class PreviewerSvg extends PureComponent {
             } = this.props,
             {
                 adjustedHeight,
-                kilobytes
+                kilobytes,
+                didLoad
             } = this.state,
 
             presenceDisplayName = convertPresenceKeyToClassName(presenceKey),
@@ -191,6 +198,7 @@ class PreviewerSvg extends PureComponent {
                     {...{
                         className: cx(
                             'Presence',
+                            didLoad && 'Presence__loaded',
                             showKilobytes && 'Presence__kilobytes',
                             isActor && capitaliseForClassName(ACTOR),
                             capitaliseForClassName(presenceType)
@@ -203,7 +211,8 @@ class PreviewerSvg extends PureComponent {
                             getSharedClassNames(sharedStyle)
                         ),
                         title: convertPresenceKeyToTitle(presenceKey),
-                        preProcessor: this.processSvg
+                        preProcessor: this.processSvg,
+                        onLoad: this.setDidLoad
                     }}
                 >
                     {svgContent}
