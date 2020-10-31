@@ -5,7 +5,6 @@
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
-* Make lines in thought bubble mouths more clear.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
