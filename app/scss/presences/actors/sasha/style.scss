@@ -1,8 +1,8 @@
 .sasha#{$suffix} {
-    .sashaHairTie { fill: hsl(201, 38%, 61%); }
-    .sashaShirt { fill: hsl(95, 42%, 69%); }
-    .sashaPants { fill: hsl(186, 24%, 61%); }
-    .sashaSock { fill: hsl(102, 36%, 57%); }
+    .sashaHairTie { fill: hsl(82, 43%, 62%); }
+    .sashaShirt { fill: hsl(187, 42%, 69%); }
+    .sashaPants { fill: hsl(44, 27%, 59%); }
+    .sashaSock { fill: hsl(82, 32%, 48%); }
     .sashaShoe { fill: hsl(184, 7%, 48%); }
 
     &.mermaid {
@@ -13,7 +13,7 @@
     }
 
     &.popularGirl {
-        .sweater { fill: hsl(186, 29%, 56%); }
+        .sweater { fill: hsl(32, 56%, 58%); }
         .shorts { fill: hsl(207, 27%, 56%); }
         .shortsInner { fill: hsl(207, 37%, 63%); }
         .shoe { fill: hsl(208, 27%, 60%); }

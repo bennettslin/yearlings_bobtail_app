@@ -1,6 +1,5 @@
 # TODO Monday
 * Actor animations
-* Load banner text later so that font has time to load.
 * Audit all scenes
 
 # Nice UI TODO:
