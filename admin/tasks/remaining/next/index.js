@@ -1,5 +1,9 @@
 export default [
     {
+        taskName: `Begin pitch work.`,
+        workedHours: 2
+    },
+    {
         taskName: `Shirt images.`,
         workedHours: 0
     },
