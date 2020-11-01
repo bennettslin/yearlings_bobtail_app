@@ -9,11 +9,11 @@ const Pitch = () => {
 
     return (
         <div {...{ className: 'Pitch' }} >
-            {'Take a look at our '}
+            {`If you're interested in working with us, check out `}
             <Anchor
                 {...{
                     to: '/Pitch',
-                    text: 'startup pitch!',
+                    text: 'our pitch!',
                     analyticsIdentifier: 'pitch',
                     handleAnchorClick: handlePitchClick
                 }}

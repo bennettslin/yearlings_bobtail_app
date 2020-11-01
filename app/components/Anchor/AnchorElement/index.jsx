@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-const AnchorElement = props => {
+const AnchorElement = forwardRef((props, ref) => {
     return props.to ? (
-        <Link {...props} />
+        <Link
+            {...props}
+            {...{ ref }}
+        />
     ) : (
-        <a {...props} />
+        <a
+            {...props}
+            {...{ ref }}
+        />
     )
-}
+})
 
 AnchorElement.propTypes = {
     to: PropTypes.string,
