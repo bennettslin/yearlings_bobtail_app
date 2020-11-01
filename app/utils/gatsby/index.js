@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import PageElementContext from '../../contexts/PageElement'
 import AppContainer from '../../containers/App'
 import LoadingContainer from '../../containers/Loading'
-import { getIsValidAdminRoute } from '../../utils/admin'
+import { getIsNonAppRoute } from './helper'
 
 export const getWrapRootElement = store => ({ element }) => (
     <Provider {...{ store }}>
@@ -22,7 +22,7 @@ export const getWrapPageElement = () => ({ element }) => {
         }
     } = element
 
-    return getIsValidAdminRoute(pathname) ? (
+    return getIsNonAppRoute(pathname) ? (
         element
     ) : (
         <PageElementContext.Provider {...{ value: element }}>

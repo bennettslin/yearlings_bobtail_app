@@ -25,6 +25,15 @@ export default {
                 icon: `assets/favicon/${getFaviconFileName()}.png`
             }
         },
+        ...getIsStagingEnvironment() ? [
+            {
+                // Include admin pages only in staging environment.
+                resolve: `gatsby-plugin-page-creator`,
+                options: {
+                    path: `${__dirname}/admin/pages`
+                }
+            }
+        ] : [],
         {
             // Always include app pages.
             resolve: `gatsby-plugin-page-creator`,
@@ -32,15 +41,6 @@ export default {
                 path: `${__dirname}/app/pages`
             }
         },
-        ...getIsStagingEnvironment() ? [
-            {
-                // Only include admin pages in staging environment.
-                resolve: `gatsby-plugin-page-creator`,
-                options: {
-                    path: `${__dirname}/admin/pages`
-                }
-            }
-        ] : [],
         {
             resolve: `gatsby-plugin-web-font-loader`,
             options: {

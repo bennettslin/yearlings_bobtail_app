@@ -33,10 +33,6 @@ export const onCreateWebpackConfig = ({ actions }) => {
             // Import from files without specifying extensions.
             extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
             alias: {
-                // Allow admin routes only in local and staging.
-                routes: getIsStagingEnvironment() ?
-                    path.resolve(__dirname, './admin/routes') :
-                    path.resolve(__dirname, './app/routes'),
                 // Grab data from admin folder in local development.
                 data: getIsLocalDevelopment() ?
                     path.resolve(__dirname, './admin/data') :

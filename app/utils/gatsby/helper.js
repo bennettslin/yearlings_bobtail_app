@@ -1,15 +1,19 @@
-const VALID_ADMIN_ROUTES = [
+const VALID_ROUTES = [
+    // Admin.
     'Actors',
     'Annotations',
     'Previewer',
     'Things',
     'Skies',
-    'Progress'
+    'Progress',
+
+    // Production.
+    'Pitch'
 ]
 
-export const getIsValidAdminRoute = pathname => (
+export const getIsNonAppRoute = pathname => (
     IS_STAGING ?
-        VALID_ADMIN_ROUTES.some(
+        VALID_ROUTES.some(
             route => route === pathname.replace(/\//g, '')
         ) : false
 )

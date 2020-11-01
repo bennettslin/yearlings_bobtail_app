@@ -1,6 +1,6 @@
 # TODO Monday
-* Load banner text later so that font has time to load.
 * Audit all scenes
+* Still need react-router-dom?
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
