@@ -1,6 +1,5 @@
 # TODO Monday
 * Audit all scenes
-* Still need react-router-dom?
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?

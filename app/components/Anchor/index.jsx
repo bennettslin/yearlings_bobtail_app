@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import getDidMountHoc from '../DidMountHoc'
 import DotSequence from '../DotSequence'
 import AnchorDot from './AnchorDot'
+import AnchorElement from './AnchorElement'
 import AnchorText from './AnchorText'
 import { getMapHasSelectedDot } from '../../redux/dots/selector'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
@@ -14,6 +15,7 @@ const Anchor = forwardRef(({
     didMount,
     className,
     href,
+    to,
     isAnnotationTitle,
     isAccessed: isAccessedBeforeDesktop,
     isSelected,
@@ -68,7 +70,7 @@ const Anchor = forwardRef(({
     }
 
     return (
-        <a
+        <AnchorElement
             {...{
                 ref,
                 ...didMount && {
@@ -89,6 +91,7 @@ const Anchor = forwardRef(({
                     href,
                     target: '_blank'
                 },
+                to,
                 onClick,
                 onMouseEnter,
                 onMouseLeave
@@ -123,7 +126,7 @@ const Anchor = forwardRef(({
                     }}
                 />
             )}
-        </a>
+        </AnchorElement>
     )
 })
 
@@ -131,6 +134,7 @@ Anchor.propTypes = {
     didMount: PropTypes.bool.isRequired,
     className: PropTypes.string,
     href: PropTypes.string,
+    to: PropTypes.string,
     isAnnotationTitle: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
