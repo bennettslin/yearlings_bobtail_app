@@ -9,15 +9,24 @@ import {
     DRUMSTICK__SHARED,
     DRUM_STAND__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
+import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
+import { RAINBOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [FLIRTING]: [
         CYMBAL__SHARED,
-        DRUMSTICK__SHARED
+        DRUMSTICK__SHARED,
+        BOOK__SHARED,
+        RAINBOW__SHARED
     ],
     [CARRYING]: [
         DRUMS__SHARED,
-        DRUM_STAND__SHARED
+        DRUM_STAND__SHARED,
+        BOOK__SHARED,
+        RAINBOW__SHARED
     ],
-    [EPILOGUE]: null
+    [EPILOGUE]: [
+        BOOK__SHARED,
+        RAINBOW__SHARED
+    ]
 }
