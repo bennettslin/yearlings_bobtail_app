@@ -2,6 +2,7 @@
 * Make logos have no stroke
     * Display lines are exception. But currently this doesn't work
     * Confirm with everything that ends in logo, including shoes
+* Adjust shirt colours
 * Audit all scenes
 
 # Nice UI TODO:
