@@ -5,7 +5,7 @@ export default [
     },
     {
         taskName: `Shirt images.`,
-        workedHours: 10
+        workedHours: 13
     },
 
     /* Ongoing. */
