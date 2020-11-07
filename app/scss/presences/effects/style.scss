@@ -5,7 +5,7 @@
 [class^=iris],
 [class^=nipple],
 [class$=Blob],
-[class$=Logo] :not([class$=DisplayLine]),
+[class$=Logo] [d*=Z],
 [class$=noStroke] {
     stroke: none;
 }
