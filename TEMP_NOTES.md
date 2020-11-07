@@ -1,19 +1,4 @@
 # TODO
-* Make logos have no stroke
-    * Confirm with everything that ends in logo, including shoes
-* Audit logos
-    * Amy nirvanaLogo (/)
-    * Andrew poloLogo (/)
-    * Bennett converseLogo (/)
-    * Brad quiksilverLogo (/)
-    * Catherine calLogo (/)
-    * Christopher triceratopsLogo (/)
-    * esther adidasLogo, lacosteLogo (/)
-    * Jacob readingRainbowLogo, shoeLogo (/)
-    * Tristan blackFlagLogo (/)
-    * Sasha birthrightLogo (/)
-    * Shane lookoutLogo, shoeLogo (/)
-    * Tomer escherLogo, shoeLogo
 * Adjust shirt colours
 * Audit all scenes
 
