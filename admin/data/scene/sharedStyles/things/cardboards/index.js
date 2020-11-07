@@ -40,7 +40,7 @@ import {
     SPACE_STATION,
     TELEVISION_ALBUM,
     TINTIN_POSTER,
-    VAN_NUYS_LOGO
+    VAN_NUYS_PAINTING
 } from '../../../../../../app/constants/scene/things/cardboards'
 import {
     BENNETT,
@@ -203,6 +203,6 @@ export default {
     [SPACE_STATION]: null,
     [TELEVISION_ALBUM]: ALL_PEOPLE__SHARED,
     [TINTIN_POSTER]: ALL_PEOPLE__SHARED,
-    [VAN_NUYS_LOGO]: null
+    [VAN_NUYS_PAINTING]: null
 }
 

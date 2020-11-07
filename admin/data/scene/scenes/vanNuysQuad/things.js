@@ -7,7 +7,7 @@ import {
     SKETCH_ESCAPE_POD,
     SKETCHBOOK__ESCAPE_POD
 } from '../../../../../app/constants/scene/things/bubbles'
-import { VAN_NUYS_LOGO } from '../../../../../app/constants/scene/things/cardboards'
+import { VAN_NUYS_PAINTING } from '../../../../../app/constants/scene/things/cardboards'
 import {
     TRASH_CAN__QUAD,
     BUSH_SINGLE__QUAD,
@@ -33,7 +33,7 @@ export default {
         }
     },
     [CARDBOARD]: {
-        [VAN_NUYS_LOGO]: {
+        [VAN_NUYS_PAINTING]: {
             yIndex: 3,
             xPosition: 7.5,
             zOffset: 3,

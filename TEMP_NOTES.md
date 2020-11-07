@@ -1,20 +1,19 @@
 # TODO
 * Make logos have no stroke
-    * Display lines are exception. But currently this doesn't work
     * Confirm with everything that ends in logo, including shoes
 * Audit logos
     * Amy nirvanaLogo (/)
     * Andrew poloLogo (/)
-    * Bennett converseLogo
+    * Bennett converseLogo (/)
     * Brad quiksilverLogo (/)
     * Catherine calLogo (/)
     * Christopher triceratopsLogo (/)
     * esther adidasLogo, lacosteLogo (/)
     * Jacob readingRainbowLogo, shoeLogo (/)
-    * Tristan blackFlagLogo
+    * Tristan blackFlagLogo (/)
     * Sasha birthrightLogo (/)
+    * Shane lookoutLogo, shoeLogo (/)
     * Tomer escherLogo, shoeLogo
-    * Shane lookoutLogo, shoeLogo
 * Adjust shirt colours
 * Audit all scenes
 

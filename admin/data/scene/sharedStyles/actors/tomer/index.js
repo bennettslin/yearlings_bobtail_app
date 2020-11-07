@@ -12,7 +12,6 @@ import {
     EPILOGUE
 } from '../../../../../../app/constants/scene/actors/songs'
 import { SHANE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
-import { THOUGHT__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
     EVIAN__SHARED,
     GARBAGE_BAG__SHARED,
@@ -31,13 +30,9 @@ export default {
         GARBAGE_BAG__SHARED,
         WINE__SHARED
     ],
-    [SHANE_BUYING]: [
-        SHANE__SHARED,
-        THOUGHT__SHARED
-    ],
+    [SHANE_BUYING]: SHANE__SHARED,
     [SHANE_SPILLING]: [
         SHANE__SHARED,
-        HEINEKEN__SHARED,
-        THOUGHT__SHARED
+        HEINEKEN__SHARED
     ]
 }

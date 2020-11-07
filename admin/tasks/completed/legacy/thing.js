@@ -328,7 +328,7 @@ export default [
         workedHours: 2
     },
     {
-        taskName: 'vanNuysLogo',
+        taskName: 'vanNuysPainting',
         workedHours: 1
     },
     {

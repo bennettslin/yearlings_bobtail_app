@@ -76,7 +76,7 @@ import {
     EARTH__ROCKET,
     EARTH__STATION,
     SPACE_STATION,
-    VAN_NUYS_LOGO,
+    VAN_NUYS_PAINTING,
     CORKBOARD
 } from '../../../../app/constants/scene/things/cardboards'
 import {
@@ -343,7 +343,7 @@ export default [
                 [SKETCH_ESCAPE_POD]: true
             },
             [CARDBOARD]: {
-                [VAN_NUYS_LOGO]: true
+                [VAN_NUYS_PAINTING]: true
             },
             [CUTOUT]: {
                 [TRASH_CAN__QUAD]: true,

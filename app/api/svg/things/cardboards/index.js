@@ -18,7 +18,7 @@ import bloomCountyPoster from '../../../../../assets/svgs/cardboards/bloomCounty
 import dogsRocket from '../../../../../assets/svgs/cardboards/dogsRocket'
 import earth from '../../../../../assets/svgs/cardboards/earth'
 import spaceStation from '../../../../../assets/svgs/cardboards/spaceStation'
-import vanNuysLogo from '../../../../../assets/svgs/cardboards/vanNuysLogo'
+import vanNuysPainting from '../../../../../assets/svgs/cardboards/vanNuysPainting'
 import corkboard from '../../../../../assets/svgs/cardboards/corkboard'
 import policeAlbum from '../../../../../assets/svgs/cardboards/policeAlbum'
 import nirvanaPoster from '../../../../../assets/svgs/cardboards/nirvanaPoster'
@@ -63,7 +63,7 @@ import {
     EARTH__ROCKET,
     EARTH__STATION,
     SPACE_STATION,
-    VAN_NUYS_LOGO,
+    VAN_NUYS_PAINTING,
     CORKBOARD,
     POLICE_ALBUM,
     NIRVANA_POSTER,
@@ -113,7 +113,7 @@ export default {
     [DOGS_ROCKET]: dogsRocket,
     [EARTH__STATION]: earth,
     [SPACE_STATION]: spaceStation,
-    [VAN_NUYS_LOGO]: vanNuysLogo,
+    [VAN_NUYS_PAINTING]: vanNuysPainting,
     [CORKBOARD]: corkboard,
     [POLICE_ALBUM]: policeAlbum,
     [NIRVANA_POSTER]: nirvanaPoster,

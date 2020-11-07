@@ -15,13 +15,11 @@
     
     .shirtWhite { fill: hsl(0, 0%, 90%); }
     .shirtWhiteDark { fill: hsl(0, 0%, 80%); }
-    .shirtLogo { fill: hsl(0, 0%, 80%); }
     
     .sockWhite { fill: hsl(0, 0%, 90%); }
     .sockWhiteDark { fill: hsl(0, 0%, 80%); }
     
     .shoelace { fill: hsl(0, 0%, 85%); }
-    .shoeLogo { fill: hsl(0, 0%, 82.5%); }
     
     .soleWhite { fill: hsl(0, 0%, 80%); }
     .soleWhiteDark { fill: hsl(0, 0%, 70%); }
@@ -30,9 +28,15 @@
      * TODO: Ideally, have these single white styles, rather than separate ones
      * for shirts, socks, and shoes.
      */
-    // .clothWhiteLight { fill: hsl(0, 0%, 90%); }
+    .clothWhiteLight { fill: hsl(0, 0%, 90%); }
     .clothWhiteMedium { fill: hsl(0, 0%, 80%); }
     // .clothWhiteDark { fill: hsl(0, 0%, 70%); }
+    // .clothGrayLight { fill: hsl(0, 0%, 60%); }
+    // .clothGrayMedium { fill: hsl(0, 0%, 50%); }
+    // .clothGrayDark { fill: hsl(0, 0%, 40%); }
+    .clothBlackLight { fill: hsl(0, 0%, 30%); }
+    // .clothBlackMedium { fill: hsl(0, 0%, 20%); }
+    // .clothBlackDark { fill: hsl(0, 0%, 10%); }
 
     .soleLightTan { fill: hsl(60, 13%, 60%); }
     .soleLightTanDark { fill: hsl(60, 13%, 50%); }
