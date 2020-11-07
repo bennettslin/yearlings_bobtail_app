@@ -1,7 +1,10 @@
 .sashaPast#{$suffix} {
-    .sashaHairTie { fill: hsl($hue__past, 28%, 51%); }
-    .sashaShirt { fill: hsl($hue__past, 45%, 72%); }
-    .sashaPants { fill: hsl($hue__past, 29%, 56%); }
-    .sashaSock { fill: hsl($hue__past, 36%, 61%); }
-    .sashaShoe { fill: hsl($hue__past, 20%, 42%); }
+    .sashaHairTie { fill: hsl($hue__past, 41%, 57%); }
+    .sashaShirt { fill: hsl($hue__past, 40%, 78%); }
+    .birthrightLight { fill: hsl($hue__past, 32%, 55%); }
+    .birthrightDark { fill: hsl($hue__past, 32%, 38%); }
+
+    .sashaPants { fill: hsl($hue__past, 27%, 59%); }
+    .sashaSock { fill: hsl($hue__past, 27%, 65%); }
+    .sashaShoe { fill: hsl($hue__past, 7%, 48%); }
 }
