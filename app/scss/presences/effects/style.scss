@@ -5,7 +5,7 @@
 [class^=iris],
 [class^=nipple],
 [class$=Blob],
-[class$=Logo] [d*=Z],
+[class$=Logo],
 [class$=noStroke] {
     stroke: none;
 }
@@ -54,6 +54,11 @@
 
 [class$=DisplayLine] {
     stroke-width: 1px;
+}
+
+[class$=Logo]
+[class$=Line] {
+    stroke: hsla(0, 5%, 20%, 0.4);
 }
 
 [class$=LightLine] {
