@@ -1,7 +1,3 @@
-# TODO
-* Adjust shirt colours
-* Audit all scenes
-
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
 

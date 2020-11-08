@@ -4990,5 +4990,9 @@ export default [
     {
         taskName: `Finalise dots work.`,
         workedHours: 7
+    },
+    {
+        taskName: `Shirt images.`,
+        workedHours: 20
     }
 ]
