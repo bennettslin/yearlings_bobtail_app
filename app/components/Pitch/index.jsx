@@ -9,7 +9,7 @@ const Pitch = () => {
 
     return (
         <div {...{ className: 'Pitch' }} >
-            {`If you're interested in working with us, check out `}
+            {`Interested in working with us? Check out `}
             <Anchor
                 {...{
                     to: '/Pitch',
