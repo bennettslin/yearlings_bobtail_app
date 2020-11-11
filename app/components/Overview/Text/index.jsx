@@ -1,7 +1,7 @@
 // Section to show song overview.
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import Pitch from '../../Pitch'
+import PitchAnchor from '../../PitchAnchor'
 import Texts from '../../Texts'
 import {
     getOverviewForSong,
@@ -17,7 +17,7 @@ const OverviewText = ({ finalSideSongIndex }) => (
             }}
         />
         {getSongIsLogue(finalSideSongIndex) && (
-            <Pitch />
+            <PitchAnchor />
         )}
     </>
 )

@@ -2,13 +2,13 @@ import React from 'react'
 import Anchor from '../Anchor'
 import './style'
 
-const Pitch = () => {
+const PitchAnchor = () => {
     const handlePitchClick = () => {
         // TODO: Analytics.
     }
 
     return (
-        <div {...{ className: 'Pitch' }} >
+        <div {...{ className: 'PitchAnchor' }} >
             {`Interested in working with us? Check out `}
             <Anchor
                 {...{
@@ -22,4 +22,4 @@ const Pitch = () => {
     )
 }
 
-export default Pitch
+export default PitchAnchor

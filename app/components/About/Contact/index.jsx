@@ -2,7 +2,7 @@ import React, { Fragment, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../DidMountHoc'
-import Pitch from '../../Pitch'
+import PitchAnchor from '../../PitchAnchor'
 import { CONTACT_EMAIL } from '../../../constants/website'
 import './style'
 
@@ -31,7 +31,7 @@ const AboutContact = ({ didMount }) => didMount && (
             </span>
         )}
         {`. We'll respond if it matches our interests.`}
-        <Pitch />
+        <PitchAnchor />
     </>
 )
 
