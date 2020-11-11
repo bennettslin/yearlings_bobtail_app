@@ -1,3 +1,6 @@
+# Technical TODO:
+* Close or hide things when pitch is open.
+
 # Pitch TODO:
 * When clicking Pitch from website:
     * Show Pitch component in modal

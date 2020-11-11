@@ -8,6 +8,7 @@ import { mapMenuHeight } from '../../../redux/viewport/selector'
 import AnnotationPopup from '../Annotation'
 import AboutPopup from '../About'
 import ScorePopup from '../Score'
+import PitchPopup from '../Pitch'
 import WikiPopup from '../Wiki'
 
 const MainPopups = ({ didMount }) => {
@@ -31,6 +32,7 @@ const MainPopups = ({ didMount }) => {
             <AnnotationPopup />
             <AboutPopup />
             <ScorePopup />
+            <PitchPopup />
             <WikiPopup />
         </div>
     )

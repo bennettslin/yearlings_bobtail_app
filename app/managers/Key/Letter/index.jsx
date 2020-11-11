@@ -8,7 +8,9 @@ import {
     updateIsNavExpanded,
     toggleIsAboutShown,
     updateIsAboutShown,
-    updateIsAutoScroll
+    updateIsAutoScroll,
+    toggleIsPitchShown,
+    updateIsPitchShown
 } from '../../../redux/toggle/action'
 import {
     updateWikiIndices,
@@ -42,7 +44,8 @@ import {
     PREVIOUS_SCENE_KEY,
     NEXT_SCENE_KEY,
     TIPS_TOGGLE_KEY,
-    ABOUT_TOGGLE_KEY
+    ABOUT_TOGGLE_KEY,
+    PITCH_TOGGLE_KEY
 } from '../../../constants/access'
 import { HIDDEN } from '../../../constants/options'
 import { mapIsOverviewShown } from '../../../redux/overview/selector'
@@ -53,7 +56,8 @@ import {
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     mapIsScoreShown,
-    mapIsAboutShown
+    mapIsAboutShown,
+    mapIsPitchShown
 } from '../../../redux/toggle/selector'
 import { mapIsWikiShown } from '../../../redux/wiki/selector'
 
@@ -79,7 +83,8 @@ const LetterManager = forwardRef((props, ref) => {
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isScoreShown = useSelector(mapIsScoreShown),
-        isAboutShown = useSelector(mapIsAboutShown)
+        isAboutShown = useSelector(mapIsAboutShown),
+        isPitchShown = useSelector(mapIsPitchShown)
 
     const handleLetter = keyName => {
         let annotationIndexWasAccessed = false,
@@ -143,6 +148,10 @@ const LetterManager = forwardRef((props, ref) => {
                 dispatch(toggleIsAboutShown())
                 keyWasRegistered = true
                 break
+            case PITCH_TOGGLE_KEY:
+                dispatch(toggleIsPitchShown())
+                keyWasRegistered = true
+                break
             default:
                 keyWasRegistered = false
                 break
@@ -168,6 +177,10 @@ const LetterManager = forwardRef((props, ref) => {
         // Close about popup.
         } else if (isAboutShown) {
             dispatch(updateIsAboutShown())
+
+        // Close pitch popup.
+        } else if (isPitchShown) {
+            dispatch(updateIsPitchShown())
 
         // Close wiki popup.
         } else if (isWikiShown) {

@@ -16,13 +16,22 @@ export default (
     switch (type) {
         case TOGGLE_STORE: {
             const
-                { toggledIsAboutShown } = payload,
-                { isAboutShown: prevAboutShown } = state
+                {
+                    toggledIsAboutShown,
+                    toggledIsPitchShown
+                } = payload,
+                {
+                    isAboutShown: prevAboutShown,
+                    isPitchShown: prevIsPitchShown
+                } = state
             return {
                 ...state,
                 ...payload,
                 ...hasKey(toggledIsAboutShown) && {
                     isAboutShown: !prevAboutShown
+                },
+                ...hasKey(toggledIsPitchShown) && {
+                    isPitchShown: !prevIsPitchShown
                 }
             }
         }

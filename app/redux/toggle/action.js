@@ -15,6 +15,16 @@ export const updateIsAboutShown = (isAboutShown = false) => ({
     payload: { isAboutShown }
 })
 
+export const toggleIsPitchShown = () => ({
+    type: TOGGLE_STORE,
+    payload: { toggledIsPitchShown: true }
+})
+
+export const updateIsPitchShown = (isPitchShown = false) => ({
+    type: TOGGLE_STORE,
+    payload: { isPitchShown }
+})
+
 export const updateIsCarouselExpanded = (isCarouselExpanded = false) => {
     setBoolInStorage(IS_CAROUSEL_EXPANDED, isCarouselExpanded)
 

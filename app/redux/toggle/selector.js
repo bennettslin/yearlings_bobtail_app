@@ -34,6 +34,10 @@ export const mapIsScoreShown = (
     { [TOGGLE_STORE]: { isScoreShown } }
 ) => isScoreShown
 
+export const mapIsPitchShown = (
+    { [TOGGLE_STORE]: { isPitchShown } }
+) => isPitchShown
+
 export const mapIsAboutShown = (
     { [TOGGLE_STORE]: { isAboutShown } }
 ) => isAboutShown
