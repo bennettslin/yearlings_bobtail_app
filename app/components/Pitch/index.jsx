@@ -10,7 +10,7 @@ const Pitch = () => (
             )
         }}
     >
-        Pitch!
+        Pitch component!
     </div>
 )
 

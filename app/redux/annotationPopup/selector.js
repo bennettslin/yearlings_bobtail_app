@@ -8,6 +8,7 @@ import {
     mapIsLyricExpanded,
     mapIsScoreShown,
     mapIsAboutShown,
+    mapIsPitchShown,
     mapIsCarouselShown
 } from '../toggle/selector'
 import { mapCanCarouselNavMount } from '../viewport/selector'
@@ -30,6 +31,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
     mapLyricAnnotationIndex,
     mapIsAboutShown,
     mapIsScoreShown,
+    mapIsPitchShown,
     mapIsCarouselShown,
     mapCanCarouselNavMount,
     mapIsOverlayingAnnotation,
@@ -38,6 +40,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         isSongChangeDone,
         lyricAnnotationIndex,
         isAboutShown,
+        isPitchShown,
         isScoreShown,
         isCarouselShown,
         canCarouselNavMount,
@@ -48,6 +51,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         isSongChangeDone,
         lyricAnnotationIndex,
         isAboutShown,
+        isPitchShown,
         isScoreShown,
         isCarouselShown,
         canCarouselNavMount,

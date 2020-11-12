@@ -1,22 +1,19 @@
-# Technical TODO:
-* Close or hide things when pitch is open.
-
 # Pitch TODO:
 * When clicking Pitch from website:
     * Show Pitch component in modal
         * Modal has navigation buttons
         * Navigate through keys
     * Replace path while modal is open, return back once closed
-    * Pitch toggles open from key for admin (Also check other keys)
-    * Rules for closing other modals, and being closed by other modals
 * When hitting Pitch path directly:
     * Show Pitch in page wrapper
         * Page wrapper has its own navigation
         * Page wrapper has link to go to album
         * Can navigate through keys
+* Show in helmet
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
+* Filmstrip temporarily offsets when turning off access?
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

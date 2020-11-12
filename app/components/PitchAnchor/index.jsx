@@ -1,10 +1,14 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import Anchor from '../Anchor'
+import { toggleIsPitchShown } from '../../redux/toggle/action'
 import './style'
 
 const PitchAnchor = () => {
-    const handlePitchClick = () => {
-        // TODO: Analytics.
+    const dispatch = useDispatch()
+
+    const handleAnchorClick = () => {
+        dispatch(toggleIsPitchShown())
     }
 
     return (
@@ -12,10 +16,9 @@ const PitchAnchor = () => {
             {`Interested in working with us? Check out `}
             <Anchor
                 {...{
-                    to: '/Pitch',
                     text: 'our pitch!',
                     analyticsIdentifier: 'pitch',
-                    handleAnchorClick: handlePitchClick
+                    handleAnchorClick
                 }}
             />
         </div>

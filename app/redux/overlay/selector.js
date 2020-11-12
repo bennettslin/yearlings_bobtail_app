@@ -3,7 +3,8 @@ import { getIsOverlayShown } from '../../helpers/main'
 import { mapLyricAnnotationIndex } from '../lyric/selector'
 import {
     mapIsScoreShown,
-    mapIsAboutShown
+    mapIsAboutShown,
+    mapIsPitchShown
 } from '../toggle/selector'
 import { mapIsOverlayingAnnotation } from '../annotationPopup/selector'
 import { mapIsWikiShown } from '../wiki/selector'
@@ -13,18 +14,21 @@ export const mapIsOverlayShown = createSelector(
     mapLyricAnnotationIndex,
     mapIsScoreShown,
     mapIsAboutShown,
+    mapIsPitchShown,
     mapIsWikiShown,
     (
         isOverlayingAnnotation,
         lyricAnnotationIndex,
         isScoreShown,
         isAboutShown,
+        isPitchShown,
         isWikiShown
     ) => getIsOverlayShown({
         isOverlayingAnnotation,
         lyricAnnotationIndex,
         isScoreShown,
         isAboutShown,
+        isPitchShown,
         isWikiShown
     })
 )

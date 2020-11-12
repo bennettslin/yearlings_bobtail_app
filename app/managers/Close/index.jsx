@@ -16,7 +16,8 @@ import {
     updateIsDotsSlideShown,
     updateIsCarouselExpanded,
     updateIsNavExpanded,
-    updateIsScoreShown
+    updateIsScoreShown,
+    updateIsPitchShown
 } from '../../redux/toggle/action'
 import { HIDDEN } from '../../constants/options'
 import { mapIsActivated } from '../../redux/activated/selector'
@@ -30,7 +31,8 @@ import {
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
     mapIsScoreShown,
-    mapIsAboutShown
+    mapIsAboutShown,
+    mapIsPitchShown
 } from '../../redux/toggle/selector'
 import { mapIsWikiShown } from '../../redux/wiki/selector'
 
@@ -49,11 +51,13 @@ const CloseHandler = forwardRef((props, ref) => {
         isLyricExpanded = useSelector(mapIsLyricExpanded),
         isScoreShown = useSelector(mapIsScoreShown),
         isAboutShown = useSelector(mapIsAboutShown),
+        isPitchShown = useSelector(mapIsPitchShown),
         [didMount, setDidMount] = useState(false)
 
     const closeMainPopups = ({
         exemptScore,
         exemptAbout,
+        exemptPitch,
         exemptWiki
 
     } = {}) => {
@@ -66,6 +70,9 @@ const CloseHandler = forwardRef((props, ref) => {
 
         } else if (isAboutShown && !exemptAbout) {
             dispatch(updateIsAboutShown())
+
+        } else if (isPitchShown && !exemptPitch) {
+            dispatch(updateIsPitchShown())
 
         } else {
             return false
@@ -237,6 +244,13 @@ const CloseHandler = forwardRef((props, ref) => {
             closeMainSections({ exemptAnnotation: true })
         }
     }, [isAboutShown])
+
+    useEffect(() => {
+        if (isPitchShown) {
+            closeMainPopups({ exemptPitch: true })
+            closeMainSections({ exemptAnnotation: true })
+        }
+    }, [isPitchShown])
 
     useEffect(() => {
         if (isWikiShown) {
