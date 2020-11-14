@@ -10,11 +10,9 @@
         * Can navigate through keys
 
 # Technical TODO:
+* Redux store retrieve from storage.
 * Have mock data set to render.
 * Navigation for popup.
-    * Disable navigation by anchor.
-    * Navigate by arrow keys.
-        * Have up key return home.
     * Have buttons.
 * Navigation for page.
     * Navigate by arrow keys.

@@ -5,6 +5,7 @@ import AnnotationNavigation from './Annotation'
 import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
 import NavNavigation from './Nav'
+import PitchNavigation from './Pitch'
 import { ENTER } from '../../../constants/access'
 import {
     mapActivatedVerseIndex,
@@ -18,7 +19,8 @@ import {
     mapIsNavExpanded,
     mapIsDotsSlideShown,
     mapIsLyricExpanded,
-    mapIsScoreShown
+    mapIsScoreShown,
+    mapIsPitchShown
 } from '../../../redux/toggle/selector'
 import { mapIsHeightlessLyric } from '../../../redux/viewport/selector'
 import { mapIsWikiShown } from '../../../redux/wiki/selector'
@@ -29,6 +31,7 @@ const NavigationManager = forwardRef((props, ref) => {
         navigateDotsSlide = useRef(),
         navigateLyric = useRef(),
         navigateNav = useRef(),
+        navigatePitch = useRef(),
         dispatchVerse = useRef(),
         isActivated = useSelector(mapIsActivated),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
@@ -39,7 +42,8 @@ const NavigationManager = forwardRef((props, ref) => {
         isNavExpanded = useSelector(mapIsNavExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
         isLyricExpanded = useSelector(mapIsLyricExpanded),
-        isScoreShown = useSelector(mapIsScoreShown)
+        isScoreShown = useSelector(mapIsScoreShown),
+        isPitchShown = useSelector(mapIsPitchShown)
 
     const handleNavigation = keyName => {
         let annotationIndexWasAccessed = false,
@@ -47,8 +51,12 @@ const NavigationManager = forwardRef((props, ref) => {
 
         if (!isSelectedLogue && !isScoreShown && !isWikiShown) {
 
+            // We're in pitch.
+            if (isPitchShown) {
+                keyWasRegistered = navigatePitch.current(keyName)
+
             // We're selecting the activated verse.
-            if (isActivated && keyName === ENTER) {
+            } else if (isActivated && keyName === ENTER) {
                 keyWasRegistered = true
 
                 dispatchVerse.current({
@@ -104,6 +112,7 @@ const NavigationManager = forwardRef((props, ref) => {
             <DotsSlideNavigation {...{ ref: navigateDotsSlide }} />
             <LyricNavigation {...{ ref: navigateLyric }} />
             <NavNavigation {...{ ref: navigateNav }} />
+            <PitchNavigation {...{ ref: navigatePitch }} />
             <VerseDispatcher {...{ ref: dispatchVerse }} />
         </>
     )
