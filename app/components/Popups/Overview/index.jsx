@@ -2,7 +2,7 @@
 import React, { memo, useContext, cloneElement } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
-import PageElementContext from '../../../contexts/PageElement'
+import AlbumPageElementContext from '../../../contexts/AlbumPageElement'
 import Overview from '../../Overview'
 import Popup from '../../Popup'
 import { getIsServerSide } from '../../../utils/server'
@@ -14,7 +14,7 @@ const OverviewPopup = ({ inMain = false }) => {
         isOverviewPopupVisible = useSelector(
             getMapIsOverviewPopupVisible(inMain)
         ),
-        pageElement = useContext(PageElementContext)
+        albumPageElement = useContext(AlbumPageElementContext)
 
     return (
         <Popup
@@ -31,7 +31,7 @@ const OverviewPopup = ({ inMain = false }) => {
             }}
         >
             {getIsServerSide() ? (
-                cloneElement(pageElement, { isOverview: true })
+                cloneElement(albumPageElement, { isOverview: true })
             ) : (
                 <Overview />
             )}

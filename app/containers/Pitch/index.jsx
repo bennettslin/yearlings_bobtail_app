@@ -1,5 +1,4 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
 import Pitch from '../../components/Pitch'
 
 const PitchContainer = () => {
@@ -7,7 +6,5 @@ const PitchContainer = () => {
         <Pitch />
     )
 }
-
-PitchContainer.propTypes = {}
 
 export default PitchContainer

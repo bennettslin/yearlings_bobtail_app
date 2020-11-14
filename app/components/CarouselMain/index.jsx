@@ -1,14 +1,14 @@
 import React, { cloneElement, useContext, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import PageElementContext from '../../contexts/PageElement'
+import AlbumPageElementContext from '../../contexts/AlbumPageElement'
 import getDidMountHoc from '../DidMountHoc'
 import getMainHoc from '../MainHoc'
 import Carousel from '../Carousel'
 import { getIsServerSide } from '../../utils/server'
 
 const CarouselMain = ({ didMount, style }) => {
-    const pageElement = useContext(PageElementContext)
+    const albumPageElement = useContext(AlbumPageElementContext)
 
     return (
         <div
@@ -23,7 +23,7 @@ const CarouselMain = ({ didMount, style }) => {
             }}
         >
             {getIsServerSide() ? (
-                cloneElement(pageElement, { isCarousel: true })
+                cloneElement(albumPageElement, { isCarousel: true })
             ) : (
                 <Carousel />
             )}

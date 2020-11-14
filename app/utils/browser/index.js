@@ -40,19 +40,19 @@ export const getWindow = () => {
     return safeWindow
 }
 
-export const setIsAppSession = () => {
+export const setIsAlbumSession = () => {
     /**
-     * Called by app container to register that the session started from the
-     * app, not the pitch page. Obviously, it persists only for the length of
+     * Called by album container to register that the session started from the
+     * album, not the pitch page. Obviously, it persists only for the length of
      * the session.
      */
-    getWindow().isAppSession = true
+    getWindow().isAlbumSession = true
 }
 
-export const getIsAppSession = () => (
+export const getIsAlbumSession = () => (
     /**
      * This gets called to determine whether navigation to the pitch path
-     * started from the app or the pitch page.
+     * started from the album or the pitch page.
      */
-    Boolean(getWindow().isAppSession)
+    Boolean(getWindow().isAlbumSession)
 )

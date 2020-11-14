@@ -2,7 +2,7 @@ import React, { cloneElement, forwardRef, memo, useContext } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import PageElementContext from '../../contexts/PageElement'
+import AlbumPageElementContext from '../../contexts/AlbumPageElement'
 import getDidMountHoc from '../DidMountHoc'
 import { mapLyricOverviewHeightStyle } from '../../redux/lyricHeight/selector'
 import Lyric from '../Lyric'
@@ -13,7 +13,7 @@ import './style'
 const LyricOverview = forwardRef(({ didMount }, ref) => {
     const
         lyricOverviewHeightStyle = useSelector(mapLyricOverviewHeightStyle),
-        pageElement = useContext(PageElementContext)
+        albumPageElement = useContext(AlbumPageElementContext)
 
     return (
         <div
@@ -33,7 +33,7 @@ const LyricOverview = forwardRef(({ didMount }, ref) => {
             }}
         >
             {getIsServerSide() ? (
-                cloneElement(pageElement, { isLyric: true })
+                cloneElement(albumPageElement, { isLyric: true })
             ) : (
                 <Lyric {...{ ref }} />
             )}

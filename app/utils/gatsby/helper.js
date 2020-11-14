@@ -1,4 +1,4 @@
-import { getIsAppSession } from '../browser'
+import { getIsAlbumSession } from '../browser'
 
 const VALID_ADMIN_PATHS = [
     'Actors',
@@ -11,18 +11,18 @@ const VALID_ADMIN_PATHS = [
 
 const getRawPathname = pathname => pathname.replace(/\//g, '')
 
-export const getNeedsPageElementWrapper = pathname => {
+export const getNeedsAlbumPageWrapper = pathname => {
     /**
-     * If session started from the app rather than the pitch page, this means
+     * If session started from the album rather than the pitch page, this means
      * that we navigated to the pitch path from the pitch popup. In which case,
-     * we need the page element wrapper.
+     * we need the album page wrapper.
      */
     if (getRawPathname(pathname) === 'Pitch') {
-        return getIsAppSession()
+        return getIsAlbumSession()
 
     } else {
         /**
-         * If in staging, wrap in the page element wrapper only if it isn't one
+         * If in staging, wrap in the album page wrapper only if it isn't one
          * of the valid admin paths.
          */
         return IS_STAGING ? (
@@ -31,7 +31,7 @@ export const getNeedsPageElementWrapper = pathname => {
             )
         /**
          * If we're not in staging, then no admin paths are valid, so always
-         * wrap in the page element wrapper.
+         * wrap in the album page wrapper.
          */
         ) : true
     }

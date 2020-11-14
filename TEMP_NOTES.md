@@ -10,7 +10,6 @@
         * Can navigate through keys
 
 # Technical TODO:
-* Rename to album container, album session.
 * Have mock data set to render.
 * Navigation for popup.
     * Disable navigation by anchor.

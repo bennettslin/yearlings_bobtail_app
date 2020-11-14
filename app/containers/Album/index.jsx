@@ -4,13 +4,13 @@ import AudioManager from '../../managers/Audio'
 import ListenContainer from '../Listen'
 import FocusContainer from '../Focus'
 import StylesheetContainer from '../Stylesheet'
-import { setIsAppSession } from '../../utils/browser'
+import { setIsAlbumSession } from '../../utils/browser'
 
-const AppContainer = () => {
+const AlbumContainer = () => {
     const [playerTime, setPlayerTime] = useState(0)
 
-    // Establish that session started from app, not pitch page.
-    setIsAppSession()
+    // Establish that session started from album, not pitch page.
+    setIsAlbumSession()
 
     return (
         <PlayerTimeContext.Provider
@@ -29,4 +29,4 @@ const AppContainer = () => {
     )
 }
 
-export default memo(AppContainer)
+export default memo(AlbumContainer)
