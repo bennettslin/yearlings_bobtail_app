@@ -24,11 +24,11 @@ const About = () => (
         <AboutChild {...{ header: 'Mailing List' }}>
             <MailingList />
         </AboutChild>
-        <AboutChild {...{ header: 'Social Media' }}>
-            <SocialMedia />
-        </AboutChild>
         <AboutChild {...{ header: 'Contact Us' }}>
             <AboutContact />
+        </AboutChild>
+        <AboutChild {...{ header: 'Social Media' }}>
+            <SocialMedia />
         </AboutChild>
         <AboutChild {...{ header: 'Credits' }}>
             <AboutCredits />

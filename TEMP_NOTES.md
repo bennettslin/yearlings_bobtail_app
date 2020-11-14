@@ -9,6 +9,19 @@
         * Page wrapper has link to go to album
         * Can navigate through keys
 
+# Technical TODO:
+* Rename to album container, album session.
+* Have mock data set to render.
+* Navigation for popup.
+    * Disable navigation by anchor.
+    * Navigate by arrow keys.
+        * Have up key return home.
+    * Have buttons.
+* Navigation for page.
+    * Navigate by arrow keys.
+    * Have buttons.
+* Button on page to return to album.
+
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
 * Filmstrip and dots slide temporarily offsets when access on or off. (Chrome Canary issue.)

@@ -19,8 +19,11 @@ const PitchPopup = ({ didMount }) => {
 
     return didMount && (
         <Popup
+            mountOnEnter
+            unmountOnExit
             isFullWidth
             isFullHeight
+            shrinkAnimate
             displaysInOverlay
             {...{
                 popupName: 'PitchPopup',

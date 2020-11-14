@@ -21,10 +21,10 @@ const WikiPopup = ({ didMount }) => {
         <Popup
             mountOnEnter
             unmountOnExit
-            shrinkAnimate
-            displaysInOverlay
             isFullWidth
             isFullHeight
+            shrinkAnimate
+            displaysInOverlay
             {...{
                 isVisible: isWikiShown,
                 popupName: 'WikiPopup',
