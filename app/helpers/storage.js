@@ -19,6 +19,7 @@ import {
     GENERAL_OPTIONS
 } from '../constants/options'
 import {
+    PITCH_INDEX,
     SELECTED_DOTS_BIT,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
@@ -177,3 +178,8 @@ export const getDotsBitFromStorage = (initialAnnotationIndex) => {
     setInStorage(SELECTED_DOTS_BIT, savedDotsBit)
     return savedDotsBit
 }
+
+export const getPitchFromStorage = () => (
+    // TODO: Helper for valid pitch index.
+    _getParsedStoredInteger(PITCH_INDEX)
+)

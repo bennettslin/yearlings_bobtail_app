@@ -1,7 +1,7 @@
 // Reducers for pitch.
-import { hasKey } from '../../helpers/action'
-import { PITCH_STORE } from '../../constants/store'
+import { PITCH_INDEX, PITCH_STORE } from '../../constants/store'
 import { PITCH_DEFAULTS } from './default'
+import { setInStorage } from '../../helpers/storage'
 
 export default (
     state = PITCH_DEFAULTS,
@@ -15,17 +15,22 @@ export default (
                     incrementedPitchIndex,
                     resetPitchIndex
                 } = payload,
-                { pitchIndex } = state
+                { pitchIndex: prevPitchIndex } = state
+
+            let pitchIndex = 0
+
+            if (decrementedPitchIndex) {
+                pitchIndex = prevPitchIndex - 1
+            } else if (incrementedPitchIndex) {
+                pitchIndex = prevPitchIndex + 1
+            } else if (resetPitchIndex) {
+                pitchIndex = 0
+            }
+
+            setInStorage(PITCH_INDEX, pitchIndex)
+
             return {
-                ...hasKey(decrementedPitchIndex) && {
-                    pitchIndex: pitchIndex - 1
-                },
-                ...hasKey(incrementedPitchIndex) && {
-                    pitchIndex: pitchIndex + 1
-                },
-                ...hasKey(resetPitchIndex) && {
-                    pitchIndex: 0
-                }
+                pitchIndex
             }
         }
         default:

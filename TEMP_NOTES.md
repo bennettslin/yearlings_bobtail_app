@@ -10,8 +10,9 @@
         * Can navigate through keys
 
 # Technical TODO:
-* Redux store retrieve from storage.
 * Have mock data set to render.
+* Helper for valid pitch index.
+* Don't have store wrap non album pages.
 * Navigation for popup.
     * Have buttons.
 * Navigation for page.
