@@ -34,8 +34,6 @@ const AccessLetter = ({
     return (isDesktopWidth || isTabletWidth) && (
         <CSSTransition
             appear
-            mountOnEnter
-            unmountOnExit
             {...{
                 in: isAccessOn && showIfAccessOn,
                 timeout: 200,

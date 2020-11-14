@@ -3,18 +3,15 @@
     * Show Pitch component in modal
         * Modal has navigation buttons
         * Navigate through keys
-    * Replace path while modal is open, return back once closed
 * When hitting Pitch path directly:
     * Show Pitch in page wrapper
-        * Page wrapper has its own navigation
+        * Page wrapper has its own navigation buttons
         * Page wrapper has link to go to album
         * Can navigate through keys
-* Show in helmet
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
-* Filmstrip and dots slide temporarily offsets when access on or off.
-* Rendering all access letters at once lags
+* Filmstrip and dots slide temporarily offsets when access on or off. (Chrome Canary issue.)
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

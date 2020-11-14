@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import PageElementContext from '../../contexts/PageElement'
 import AppContainer from '../../containers/App'
 import LoadingContainer from '../../containers/Loading'
-import { getIsNonAppRoute } from './helper'
+import { getNeedsPageElementWrapper } from './helper'
 
 export const getWrapRootElement = store => ({ element }) => (
     <Provider {...{ store }}>
@@ -22,11 +22,9 @@ export const getWrapPageElement = () => ({ element }) => {
         }
     } = element
 
-    return getIsNonAppRoute(pathname) ? (
-        element
-    ) : (
+    return getNeedsPageElementWrapper(pathname) ? (
         <PageElementContext.Provider {...{ value: element }}>
             <AppContainer />
         </PageElementContext.Provider>
-    )
+    ) : element
 }

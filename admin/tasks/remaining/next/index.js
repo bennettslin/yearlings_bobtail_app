@@ -1,7 +1,7 @@
 export default [
     {
-        taskName: `Begin pitch work.`,
-        workedHours: 7
+        taskName: `Pitch functionality.`,
+        workedHours: 9
     },
 
     /* Ongoing. */
