@@ -1,9 +1,11 @@
 import qs from 'qs'
-
 import { getIsSongValid } from '../api/album/songs'
 import { getIsVerseValid } from '../api/album/verses'
 import { getIsAnnotationValid } from '../api/album/annotations'
 import { getWindow } from '../utils/browser'
+
+export const VERSE_QUERY_FIELD = 'verse'
+export const ANNOTATION_QUERY_FIELD = 'annotation'
 
 export const getRoutingSongIndex = () => {
     const { pathname } = getWindow().location,
@@ -21,7 +23,7 @@ const _getQueryStringIndex = key => {
 }
 
 export const getRoutingVerseIndex = songIndex => {
-    const routingVerseIndex = _getQueryStringIndex('v')
+    const routingVerseIndex = _getQueryStringIndex(VERSE_QUERY_FIELD)
     return getIsVerseValid(
         songIndex,
         routingVerseIndex
@@ -29,7 +31,7 @@ export const getRoutingVerseIndex = songIndex => {
 }
 
 export const getRoutingAnnotationIndex = songIndex => {
-    const routingAnnotationIndex = _getQueryStringIndex('a')
+    const routingAnnotationIndex = _getQueryStringIndex(ANNOTATION_QUERY_FIELD)
     return getIsAnnotationValid(
         songIndex,
         routingAnnotationIndex
