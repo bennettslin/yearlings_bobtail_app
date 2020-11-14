@@ -13,7 +13,8 @@
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
-* Filmstrip temporarily offsets when turning off access?
+* Filmstrip and dots slide temporarily offsets when access on or off.
+* Rendering all access letters at once lags
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

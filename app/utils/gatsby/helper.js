@@ -5,10 +5,10 @@ const VALID_ROUTES = [
     'Previewer',
     'Things',
     'Skies',
-    'Progress',
+    'Progress'
 
     // Production.
-    'Pitch'
+    // 'Pitch'
 ]
 
 export const getIsNonAppRoute = pathname => (
