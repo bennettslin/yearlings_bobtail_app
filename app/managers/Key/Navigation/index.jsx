@@ -12,18 +12,15 @@ import {
     mapIsActivated
 } from '../../../redux/activated/selector'
 import {
-    mapSelectedAnnotationIndex,
-    mapIsSelectedLogue
-} from '../../../redux/selected/selector'
+    mapCanNavigateByKey,
+    mapShouldNavigateLyric,
+    mapShouldNavigateNav
+} from '../../../redux/focus/selector'
+import { mapSelectedAnnotationIndex } from '../../../redux/selected/selector'
 import {
-    mapIsNavExpanded,
     mapIsDotsSlideShown,
-    mapIsLyricExpanded,
-    mapIsScoreShown,
     mapIsPitchShown
 } from '../../../redux/toggle/selector'
-import { mapIsHeightlessLyric } from '../../../redux/viewport/selector'
-import { mapIsWikiShown } from '../../../redux/wiki/selector'
 
 const NavigationManager = forwardRef((props, ref) => {
     const
@@ -35,22 +32,18 @@ const NavigationManager = forwardRef((props, ref) => {
         dispatchVerse = useRef(),
         isActivated = useSelector(mapIsActivated),
         activatedVerseIndex = useSelector(mapActivatedVerseIndex),
-        isHeightlessLyric = useSelector(mapIsHeightlessLyric),
         selectedAnnotationIndex = useSelector(mapSelectedAnnotationIndex),
-        isSelectedLogue = useSelector(mapIsSelectedLogue),
-        isWikiShown = useSelector(mapIsWikiShown),
-        isNavExpanded = useSelector(mapIsNavExpanded),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown),
-        isLyricExpanded = useSelector(mapIsLyricExpanded),
-        isScoreShown = useSelector(mapIsScoreShown),
-        isPitchShown = useSelector(mapIsPitchShown)
+        isPitchShown = useSelector(mapIsPitchShown),
+        canNavigateByKey = useSelector(mapCanNavigateByKey),
+        shouldNavigateLyric = useSelector(mapShouldNavigateLyric),
+        shouldNavigateNav = useSelector(mapShouldNavigateNav)
 
     const handleNavigation = keyName => {
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
-        if (!isSelectedLogue && !isScoreShown && !isWikiShown) {
-
+        if (canNavigateByKey) {
             // We're in pitch.
             if (isPitchShown) {
                 keyWasRegistered = navigatePitch.current(keyName)
@@ -79,11 +72,7 @@ const NavigationManager = forwardRef((props, ref) => {
                 keyWasRegistered = navigateDotsSlide.current(keyName)
 
             // We're in nav section.
-            } else if (
-                isNavExpanded &&
-                !isLyricExpanded &&
-                !isActivated
-            ) {
+            } else if (shouldNavigateNav) {
 
                 ({
                     annotationIndexWasAccessed,
@@ -91,7 +80,7 @@ const NavigationManager = forwardRef((props, ref) => {
                 } = navigateNav.current(keyName))
 
             // We're in lyrics section.
-            } else if (!isHeightlessLyric || isLyricExpanded) {
+            } else if (shouldNavigateLyric) {
                 keyWasRegistered = navigateLyric.current(keyName)
 
                 // If key was registered, then annotation index was accessed.

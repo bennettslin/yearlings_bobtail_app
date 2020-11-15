@@ -10,13 +10,15 @@ import KeyManager from '../../managers/Key'
 import { isEmailFocused } from '../../utils/email'
 import {
     mapQueuedFocus,
-    mapShouldFocusLyric
+    mapShouldNavigateLyric
 } from '../../redux/focus/selector'
+import { mapIsAboutShown } from '../../redux/toggle/selector'
 import { mapCanSliderMount } from '../../redux/viewport/selector'
 
 const FocusContainer = () => {
     const
         dispatch = useDispatch(),
+        // aboutElement = useRef(),
         focusContainerElement = useRef(),
         lyricScrollElement = useRef(),
         dispatchSliderTouch = useRef(),
@@ -24,7 +26,8 @@ const FocusContainer = () => {
         closeForBodyClick = useRef(),
         handleKey = useRef(),
         queuedFocus = useSelector(mapQueuedFocus),
-        shouldFocusLyric = useSelector(mapShouldFocusLyric),
+        shouldNavigateLyric = useSelector(mapShouldNavigateLyric),
+        isAboutShown = useSelector(mapIsAboutShown),
         canSliderMount = useSelector(mapCanSliderMount),
         [isSliderTouchEnding, setIsSliderTouchEnding] = useState(false)
 
@@ -33,11 +36,18 @@ const FocusContainer = () => {
             return false
         }
 
-        const
-            element = shouldFocusLyric ?
-                lyricScrollElement :
-                focusContainerElement,
-            logString = shouldFocusLyric ? 'lyric' : 'focusContainer'
+        let element = focusContainerElement,
+            logString = 'focusContainer'
+
+        if (isAboutShown) {
+            // TODO: Put focus on aboutElement.
+            element = focusContainerElement
+            logString = 'about'
+
+        } else if (shouldNavigateLyric) {
+            element = lyricScrollElement
+            logString = 'lyric'
+        }
 
         // TODO: Figure out why the focus function isn't being passed in ref.
         if (element.current && element.current.focus) {
@@ -93,7 +103,7 @@ const FocusContainer = () => {
 
     useEffect(() => {
         _focusElementForAccess()
-    }, [shouldFocusLyric])
+    }, [isAboutShown, shouldNavigateLyric])
 
     return (
         <div
