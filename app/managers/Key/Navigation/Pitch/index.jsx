@@ -6,9 +6,9 @@ import {
     ARROW_UP
 } from '../../../../constants/access'
 import {
-    decrementPitchIndex,
-    incrementPitchIndex,
-    resetPitchIndex
+    decrementPitchSegmentIndex,
+    incrementPitchSegmentIndex,
+    resetPitchSegmentIndex
 } from '../../../../redux/pitch/action'
 
 const PitchNavigation = forwardRef((props, ref) => {
@@ -18,13 +18,13 @@ const PitchNavigation = forwardRef((props, ref) => {
     const navigatePitch = keyName => {
         switch (keyName) {
             case ARROW_LEFT:
-                dispatch(decrementPitchIndex())
+                dispatch(decrementPitchSegmentIndex())
                 break
             case ARROW_RIGHT:
-                dispatch(incrementPitchIndex())
+                dispatch(incrementPitchSegmentIndex())
                 break
             case ARROW_UP:
-                dispatch(resetPitchIndex())
+                dispatch(resetPitchSegmentIndex())
                 break
             default:
                 return false

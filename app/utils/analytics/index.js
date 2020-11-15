@@ -1,21 +1,18 @@
-import {
-    GA_ACCOUNT__STAGING,
-    GA_ACCOUNT__PRODUCTION
-} from '../../constants/analytics'
+import { GA_ACCOUNT__STAGING } from '../../constants/analytics'
 
 const isGaUndefined = () => (
     typeof ga === 'undefined'
 )
 
 export const getInitialGaLog = () => {
-    const gaAccount = IS_STAGING ?
-        GA_ACCOUNT__STAGING :
-        GA_ACCOUNT__PRODUCTION
-
     if (isGaUndefined()) {
         return 'GA did not initialise.'
     } else {
-        return `GA initialised with property id ${gaAccount}.`
+        if (IS_STAGING) {
+            return `GA initialised with staging id ${GA_ACCOUNT__STAGING}.`
+        } else {
+            return 'GA initialised with production id.'
+        }
     }
 }
 

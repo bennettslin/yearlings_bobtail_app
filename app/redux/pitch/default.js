@@ -1,5 +1,5 @@
-import { getPitchFromStorage } from '../../helpers/storage'
+import { getPitchSegmentIndexFromStorage } from '../../helpers/storage'
 
 export const PITCH_DEFAULTS = {
-    pitchIndex: getPitchFromStorage()
+    pitchSegmentIndex: getPitchSegmentIndexFromStorage()
 }

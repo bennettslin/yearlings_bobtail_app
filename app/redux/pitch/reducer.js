@@ -11,26 +11,26 @@ export default (
         case PITCH_STORE: {
             const
                 {
-                    decrementedPitchIndex,
-                    incrementedPitchIndex,
-                    resetPitchIndex
+                    decrementedPitchSegmentIndex,
+                    incrementedPitchSegmentIndex,
+                    resetPitchSegmentIndex
                 } = payload,
-                { pitchIndex: prevPitchIndex } = state
+                { pitchSegmentIndex: prevPitchSegmentIndex } = state
 
-            let pitchIndex = 0
+            let pitchSegmentIndex = 0
 
-            if (decrementedPitchIndex) {
-                pitchIndex = prevPitchIndex - 1
-            } else if (incrementedPitchIndex) {
-                pitchIndex = prevPitchIndex + 1
-            } else if (resetPitchIndex) {
-                pitchIndex = 0
+            if (decrementedPitchSegmentIndex) {
+                pitchSegmentIndex = prevPitchSegmentIndex - 1
+            } else if (incrementedPitchSegmentIndex) {
+                pitchSegmentIndex = prevPitchSegmentIndex + 1
+            } else if (resetPitchSegmentIndex) {
+                pitchSegmentIndex = 0
             }
 
-            setInStorage(PITCH_INDEX, pitchIndex)
+            setInStorage(PITCH_INDEX, pitchSegmentIndex)
 
             return {
-                pitchIndex
+                pitchSegmentIndex
             }
         }
         default:

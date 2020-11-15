@@ -10,7 +10,6 @@
         * Can navigate through keys
 
 # Technical TODO:
-* Have mock data set to render.
 * Helper for valid pitch index.
 * Don't have store wrap non album pages.
 * Navigation for popup.

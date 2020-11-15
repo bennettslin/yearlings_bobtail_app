@@ -1,17 +1,17 @@
 // Actions for pitch.
 import { PITCH_STORE } from '../../constants/store'
 
-export const decrementPitchIndex = () => ({
+export const decrementPitchSegmentIndex = () => ({
     type: PITCH_STORE,
-    payload: { decrementedPitchIndex: true }
+    payload: { decrementedPitchSegmentIndex: true }
 })
 
-export const incrementPitchIndex = () => ({
+export const incrementPitchSegmentIndex = () => ({
     type: PITCH_STORE,
-    payload: { incrementedPitchIndex: true }
+    payload: { incrementedPitchSegmentIndex: true }
 })
 
-export const resetPitchIndex = () => ({
+export const resetPitchSegmentIndex = () => ({
     type: PITCH_STORE,
-    payload: { resetPitchIndex: true }
+    payload: { resetPitchSegmentIndex: true }
 })

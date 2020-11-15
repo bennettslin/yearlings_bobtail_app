@@ -1,5 +1,6 @@
 import {
     getAlbum,
+    getPitch,
     getScene
 } from '../../api/builds'
 import { getSong } from '../../api/album/songs'
@@ -29,8 +30,17 @@ import {
 if (IS_STAGING) {
     global.album = getAlbum()
     global.scene = getScene()
+    global.pitch = getPitch()
     global.s = () => getSong(getStoredSongIndex())
-    global.z = () => getLayersForScene(getStoredSongIndex(), getSceneIndexForVerse(getStoredSongIndex(), getStoredVerseIndex(getStoredSongIndex())))
+    global.z = () => getLayersForScene(
+        getStoredSongIndex(),
+        getSceneIndexForVerse(
+            getStoredSongIndex(),
+            getStoredVerseIndex(
+                getStoredSongIndex()
+            )
+        )
+    )
 }
 
 logServe({

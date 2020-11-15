@@ -1,8 +1,9 @@
 import webpack from 'webpack'
 import path from 'path'
 import format from 'date-fns/format'
-import album from './admin/data/album'
 import scene from './admin/data/scene'
+import album from './admin/data/album'
+import pitch from './admin/data/pitch'
 
 import {
     getIsLocalDevelopment,
@@ -21,7 +22,8 @@ export const onCreateWebpackConfig = ({ actions }) => {
                 // Grab album from global env in staging and production.
                 ...!getIsLocalDevelopment() && {
                     SCENE: JSON.stringify(scene),
-                    ALBUM: JSON.stringify(album)
+                    ALBUM: JSON.stringify(album),
+                    PITCH: JSON.stringify(pitch)
                 },
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
