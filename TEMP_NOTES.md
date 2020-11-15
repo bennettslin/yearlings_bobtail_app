@@ -1,7 +1,7 @@
 # Pitch TODO:
 * When clicking Pitch from website:
-    * Show Pitch component in modal
-        * Modal has navigation buttons
+    * Show Pitch component in popup
+        * Popup has navigation buttons
         * Navigate through keys
 * When hitting Pitch path directly:
     * Show Pitch in page wrapper
@@ -10,19 +10,24 @@
         * Can navigate through keys
 
 # Technical TODO:
-* Navigation for popup.
-    * Have buttons.
+* Popup
+    * Have navigation buttons.
+        * Buttons navigate.
+        * Buttons are responsive.
 * Navigation for page.
-    * Have buttons.
-* Button on page to return to album.
+    * Have navigation buttons.
+        * Buttons navigate.
+        * Buttons are responsive. 
+    * Have button to return to album.
 * Make focus on pitch page more robust.
 
+* Add pitch segment pages to URL.
 * Why do styles show for admin pages on server side?
 * Why does Pitch show About component on server side?
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
-* Filmstrip and dots slide temporarily offsets when access on or off. (Chrome Canary issue.)
+* Filmstrip and dots slide temporarily offsets when access on or off. (Chrome Canary issue. It's because of opacity transition.)
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
