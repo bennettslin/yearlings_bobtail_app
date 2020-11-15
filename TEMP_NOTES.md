@@ -10,13 +10,14 @@
         * Can navigate through keys
 
 # Technical TODO:
-* Don't have store wrap non album pages.
 * Navigation for popup.
     * Have buttons.
 * Navigation for page.
     * Navigate by arrow keys.
     * Have buttons.
 * Button on page to return to album.
+* Why do styles show for admin pages on server side?
+* Why does Pitch show About component on server side?
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?

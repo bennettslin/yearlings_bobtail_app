@@ -1,3 +1,5 @@
+import { getIsServerSide } from '../server'
+
 const SAFE_DOCUMENT = {
     activeElement: {},
     getElementById() {},
@@ -32,7 +34,7 @@ export const getDocument = () => (
 
 export const getWindow = () => {
     const safeWindow = (
-        typeof window === 'undefined' ?
+        getIsServerSide() ?
             SAFE_WINDOW :
             window
     )

@@ -1,4 +1,13 @@
-import { getIsAlbumSession } from '../browser'
+import {
+    getAlbumReducers,
+    getPitchReducers
+} from '../../redux'
+import { getRoutingSongIndex } from '../../helpers/routing'
+import {
+    getWindow,
+    getIsAlbumSession
+} from '../browser'
+import { getIsServerSide } from '../server'
 
 const VALID_ADMIN_PATHS = [
     'Actors',
@@ -9,30 +18,55 @@ const VALID_ADMIN_PATHS = [
     'Progress'
 ]
 
-const getRawPathname = pathname => pathname.replace(/\//g, '')
+const getPathname = element => {
+    const {
+        location: {
+            pathname
+        }
+    } = element.props.location ?
+        element.props :
+        getWindow()
 
-export const getNeedsAlbumPageWrapper = pathname => {
-    /**
-     * If session started from the album rather than the pitch page, this means
-     * that we navigated to the pitch path from the pitch popup. In which case,
-     * we need the album page wrapper.
-     */
-    if (getRawPathname(pathname) === 'Pitch') {
-        return getIsAlbumSession()
-
-    } else {
-        /**
-         * If in staging, wrap in the album page wrapper only if it isn't one
-         * of the valid admin paths.
-         */
-        return IS_STAGING ? (
-            !VALID_ADMIN_PATHS.some(
-                route => route === getRawPathname(pathname)
-            )
-        /**
-         * If we're not in staging, then no admin paths are valid, so always
-         * wrap in the album page wrapper.
-         */
-        ) : true
-    }
+    return pathname.replace(/\//g, '')
 }
+
+const getIsPitchPage = element => (
+    getPathname(element) === 'Pitch' &&
+
+    /**
+     * Ensure that we are not in the pitch popup, since it will also show the
+     * Pitch pathname while it is open.
+     */
+    !getIsAlbumSession()
+)
+
+const getIsValidAdminPath = element => (
+    // Admin paths are only valid in staging.
+    IS_STAGING && VALID_ADMIN_PATHS.some(
+        route => route === getPathname(element)
+    )
+)
+
+export const getNeedsStoreProvider = element => {
+    /**
+     * If we're on the server side, then we don't have access to the pathname,
+     * so just always wrap it in the store provider.
+     */
+    if (getIsServerSide()) {
+        return true
+    }
+
+    // If it's not a valid admin path, then it needs the store provider.
+    return !getIsValidAdminPath(element)
+}
+
+export const getReducers = element => (
+    getIsPitchPage(element) ?
+        getPitchReducers() :
+        getAlbumReducers(getRoutingSongIndex())
+)
+
+export const getNeedsAlbumContext = element => (
+    !getIsPitchPage(element) &&
+    !getIsValidAdminPath(element)
+)

@@ -49,7 +49,7 @@ import {
     VIEWPORT_STORE
 } from '../constants/store'
 
-export const getCombinedReducers = songIndex => combineReducers({
+export const getAlbumReducers = songIndex => combineReducers({
     [ACCESS_STORE]: getAccessReducer(songIndex),
     [ACTIVATED_STORE]: ActivatedReducer,
     [ANNOTATION_STORE]: AnnotationReducer,
@@ -73,4 +73,8 @@ export const getCombinedReducers = songIndex => combineReducers({
     [TOGGLE_STORE]: ToggleReducer,
     [VERSE_BARS_STORE]: VerseBarsReducer,
     [VIEWPORT_STORE]: ViewportReducer
+})
+
+export const getPitchReducers = () => combineReducers({
+    [PITCH_STORE]: PitchReducer
 })
