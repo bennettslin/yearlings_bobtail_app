@@ -1,5 +1,8 @@
 export default [
     {
+        test: 'blah0'
+    },
+    {
         test: 'blah1'
     },
     {
@@ -7,5 +10,11 @@ export default [
     },
     {
         test: 'blah3'
+    },
+    {
+        test: 'blah4'
+    },
+    {
+        test: 'blah5'
     }
 ]

@@ -19,13 +19,14 @@ import {
     GENERAL_OPTIONS
 } from '../constants/options'
 import {
-    PITCH_INDEX,
+    PITCH_SEGMENT_INDEX,
     SELECTED_DOTS_BIT,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
     AUDIO_OPTION_INDEX
 } from '../constants/store'
+import { getValidPitchSegmentIndex } from '../api/pitch/segments'
 
 export const getWindowStorage = () => {
     return getWindow().localStorage
@@ -179,7 +180,12 @@ export const getDotsBitFromStorage = (initialAnnotationIndex) => {
     return savedDotsBit
 }
 
-export const getPitchSegmentIndexFromStorage = () => (
-    // TODO: Helper for valid pitch segment index.
-    _getParsedStoredInteger(PITCH_INDEX)
-)
+export const getPitchSegmentIndexFromStorage = () => {
+    const storedPitchSegmentIndex = getValidPitchSegmentIndex(
+        _getParsedStoredInteger(PITCH_SEGMENT_INDEX)
+    )
+
+    // This only saves upon initial retrieval.
+    setInStorage(PITCH_SEGMENT_INDEX, storedPitchSegmentIndex)
+    return storedPitchSegmentIndex
+}

@@ -10,7 +10,6 @@
         * Can navigate through keys
 
 # Technical TODO:
-* Helper for valid pitch index.
 * Don't have store wrap non album pages.
 * Navigation for popup.
     * Have buttons.

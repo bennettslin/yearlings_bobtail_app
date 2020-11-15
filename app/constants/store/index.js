@@ -27,7 +27,7 @@ export const IS_ACCESS_ON = 'isAccessOn'
 export const IS_CAROUSEL_EXPANDED = 'isCarouselExpanded'
 export const SELECTED_DOTS_BIT = 'selectedDotsBit'
 
-export const PITCH_INDEX = 'pitchSegmentIndex'
+export const PITCH_SEGMENT_INDEX = 'pitchSegmentIndex'
 
 export const SELECTED_SONG_INDEX = 'selectedSongIndex'
 export const SELECTED_VERSE_INDEX = 'selectedVerseIndex'

@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `Make About the document activeElement when opened.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Pitch functionality.`,
         workedHours: 9
     },
@@ -12,7 +17,7 @@ export default [
 
     // Do at same time as Zillow analytics work.
     {
-        taskName: `Be smarter about what I want analytics to measure. Selected indices. About links. When wiki links are broken? Create notes. Remove GA account from production logs.`,
+        taskName: `Be smarter about what I want analytics to measure. Selected indices. About links. When wiki links are broken? Create notes.`,
         workedHours: 0,
         neededHours: 5
     }
