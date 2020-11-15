@@ -13,9 +13,10 @@
 * Navigation for popup.
     * Have buttons.
 * Navigation for page.
-    * Navigate by arrow keys.
     * Have buttons.
 * Button on page to return to album.
+* Make focus on pitch page more robust.
+
 * Why do styles show for admin pages on server side?
 * Why does Pitch show About component on server side?
 
