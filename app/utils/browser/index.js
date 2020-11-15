@@ -48,7 +48,9 @@ export const setIsAlbumSession = () => {
      * album, not the pitch page. Obviously, it persists only for the length of
      * the session.
      */
-    getWindow().isAlbumSession = true
+    if (!getIsServerSide()) {
+        getWindow().isAlbumSession = true
+    }
 }
 
 export const getIsAlbumSession = () => (
@@ -56,5 +58,6 @@ export const getIsAlbumSession = () => (
      * This gets called to determine whether navigation to the pitch path
      * started from the album or the pitch page.
      */
+    !getIsServerSide() &&
     Boolean(getWindow().isAlbumSession)
 )

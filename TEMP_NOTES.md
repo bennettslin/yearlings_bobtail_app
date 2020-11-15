@@ -22,8 +22,7 @@
 * Make focus on pitch page more robust.
 
 * Add pitch segment pages to URL.
-* Why do styles show for admin pages on server side?
-* Why does Pitch show About component on server side?
+* Why do styles show for admin pages in build?
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?

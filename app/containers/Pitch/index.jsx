@@ -47,11 +47,7 @@ const PitchContainer = () => {
                 onKeyUp
             }}
         >
-            <Pitch
-                {...{
-                    onKeyUp
-                }}
-            />
+            <Pitch />
             <PitchNavigation {...{ ref: navigatePitch }} />
         </div>
     )

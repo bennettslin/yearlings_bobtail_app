@@ -9,7 +9,7 @@
     "build:staging": "YB_ENV=staging gatsby build",
     "build:production": "YB_ENV=production gatsby build",
     "serve": "gatsby serve --port 1113",
-    "stage": "npm run build:staging && npm run serve",
+    "stage": "YB_HOST=local YB_ENV=local npm run build:staging && npm run serve",
     "empty:candidate": "aws s3 rm s3://yearlingsbobtail--candidate --recursive",
     "deploy:candidate": "aws s3 sync public/ s3://yearlingsbobtail--candidate",
     "release:candidate": "npm run clean && YB_HOST=candidate npm run build:staging && npm run empty:candidate && npm run deploy:candidate",

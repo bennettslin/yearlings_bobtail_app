@@ -12,8 +12,9 @@ import {
 
 export const onCreateWebpackConfig = ({ actions }) => {
     // Dev sanity check.
-    album._build = 'compiled'
     scene._build = 'compiled'
+    album._build = 'compiled'
+    pitch._build = 'compiled'
 
     actions.setWebpackConfig({
         plugins: [
