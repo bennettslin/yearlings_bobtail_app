@@ -23,6 +23,9 @@
 
 * Add pitch segment pages to URL.
 * Why do styles show for admin pages in build?
+    * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
+    * https://github.com/gatsbyjs/gatsby/issues/3446
+    * https://github.com/gatsbyjs/gatsby/issues/14333
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
