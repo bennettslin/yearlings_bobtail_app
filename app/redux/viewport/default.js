@@ -26,3 +26,7 @@ export const VIEWPORT_DEFAULTS = {
     ceilingHeight: 0,
     floorHeight: 0
 }
+
+export const VIEWPORT_PITCH_PAGE_DEFAULTS = {
+    deviceWidthIndex: 0
+}

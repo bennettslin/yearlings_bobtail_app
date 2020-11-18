@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { getAccessReducer } from './access/reducer'
+import { getAccessReducer, AccessPitchPageReducer } from './access/reducer'
 import ActivatedReducer from './activated/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AudioReducer from './audio/reducer'
@@ -21,7 +21,7 @@ import { getSessionReducer } from './session/reducer'
 import SliderReducer from './slider/reducer'
 import ToggleReducer from './toggle/reducer'
 import VerseBarsReducer from './verseBars/reducer'
-import ViewportReducer from './viewport/reducer'
+import ViewportReducer, { ViewportPitchPageReducer } from './viewport/reducer'
 
 import {
     ACCESS_STORE,
@@ -76,5 +76,7 @@ export const getAlbumReducers = songIndex => combineReducers({
 })
 
 export const getPitchReducers = () => combineReducers({
-    [PITCH_STORE]: PitchReducer
+    [ACCESS_STORE]: AccessPitchPageReducer,
+    [PITCH_STORE]: PitchReducer,
+    [VIEWPORT_STORE]: ViewportPitchPageReducer
 })

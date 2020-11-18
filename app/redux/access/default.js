@@ -28,3 +28,7 @@ export const getAccessDefaults = songIndex => {
         accessedWikiWormholeIndex: 0
     }
 }
+
+export const ACCESS_PITCH_PAGE_DEFAULTS = {
+    isAccessOn: IS_STORED_ACCESS_ON
+}

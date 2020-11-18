@@ -17,6 +17,7 @@ const Popup = ({
     noFlexCentre,
     noAbsoluteFull,
     displaysInOverlay,
+    handleHomeClick,
     handlePreviousClick,
     handleNextClick,
     onExited,
@@ -67,6 +68,7 @@ const Popup = ({
                     {...{
                         popupName,
                         displaysInOverlay,
+                        handleHomeClick,
                         handlePreviousClick,
                         handleNextClick,
                         handleContainerClick
@@ -89,6 +91,7 @@ Popup.propTypes = {
     noFlexCentre: PropTypes.bool,
     noAbsoluteFull: PropTypes.bool,
     displaysInOverlay: PropTypes.bool,
+    handleHomeClick: PropTypes.func,
     handlePreviousClick: PropTypes.func,
     handleNextClick: PropTypes.func,
     onExited: PropTypes.func

@@ -11,10 +11,6 @@
     // Make scrolling smooth in iOS.
     -webkit-overflow-scrolling: touch;
 
-    &:focus {
-        outline: none;
-    }
-
     .DW__canSliderMount
     & {
         height: calc(100% - #{$HEIGHT_MENU});

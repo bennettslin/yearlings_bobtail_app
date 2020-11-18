@@ -81,6 +81,7 @@ const LyricScroll = forwardRef(({ didMount }, ref) => {
                         'LyricScroll',
                         didMount && [
                             'abF',
+                            'foN',
 
                             /**
                              * This gradient does not obscure the lyric

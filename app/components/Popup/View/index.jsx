@@ -19,6 +19,7 @@ const PopupView = ({
     hasWidePadding,
     noBoxShadow,
     handleCloseClick,
+    handleHomeClick,
     handlePreviousClick,
     handleNextClick,
     handleContainerClick,
@@ -52,6 +53,17 @@ const PopupView = ({
                     inCardSize: isCardSize,
                     displaysInOverlay,
                     handlePopupButtonClick: handleCloseClick
+                }}
+            />
+        )}
+        {didMount && Boolean(handleHomeClick) && (
+            <PopupViewButton
+                isHomeButton
+                {...{
+                    isFullWidth,
+                    inCardSize: isCardSize,
+                    displaysInOverlay,
+                    handlePopupButtonClick: handleHomeClick
                 }}
             />
         )}
@@ -110,6 +122,7 @@ PopupView.propTypes = {
     hasWidePadding: PropTypes.bool,
     noBoxShadow: PropTypes.bool,
     handleCloseClick: PropTypes.func,
+    handleHomeClick: PropTypes.func,
     handlePreviousClick: PropTypes.func,
     handleNextClick: PropTypes.func,
     handleContainerClick: PropTypes.func.isRequired,

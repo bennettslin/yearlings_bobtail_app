@@ -10,6 +10,7 @@ import {
 import {
     ACCESS_NAV_DEFAULTS,
     ACCESS_DOT_DEFAULTS,
+    ACCESS_PITCH_PAGE_DEFAULTS,
     getAccessDefaults
 } from './default'
 
@@ -54,6 +55,21 @@ export const getAccessReducer = songIndex => (
                 ...ACCESS_NAV_DEFAULTS
             } : state
         }
+        default:
+            return state
+    }
+}
+
+export const AccessPitchPageReducer = (
+    state = ACCESS_PITCH_PAGE_DEFAULTS,
+    { type, payload }
+) => {
+    switch (type) {
+        case ACCESS_STORE:
+            return {
+                ...state,
+                ...payload
+            }
         default:
             return state
     }

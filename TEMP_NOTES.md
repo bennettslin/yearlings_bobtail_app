@@ -12,14 +12,20 @@
 # Technical TODO:
 * Popup
     * Have navigation buttons.
-        * Buttons navigate.
-        * Buttons are responsive.
+        * Button positioning.
+        * Home button has correct svg.
 * Navigation for page.
     * Have navigation buttons.
-        * Buttons navigate.
-        * Buttons are responsive. 
+        * Button positioning. 
     * Have button to return to album.
-* Make focus on pitch page more robust.
+* Buttons have correct tooltip text.
+* Ensure that focus is always on pitch page.
+* Same behaviour as album page.
+    * Turn on access if key pressed.
+    * Turn off access if esc pressed or anywhere clicked.
+    * Access letter shows if access on.
+    * Access letter and tooltips show based on same device width rules.
+* Have PitchNav component
 
 * Add pitch segment pages to URL.
 * Why do styles show for admin pages in build?

@@ -14,6 +14,7 @@ import {
     LYRIC_SCROLL_BUTTON_KEY,
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY,
+    POPUP_HOME_BUTTON_KEY,
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
@@ -88,6 +89,7 @@ const TOOLTIP_TEXT_MAP = {
         }
     },
     [POPUP_CLOSE_BUTTON_KEY]: 'close popup',
+    [POPUP_HOME_BUTTON_KEY]: 'home popup',
     [POPUP_NEXT_BUTTON_KEY]: 'next annotation',
     [POPUP_PREVIOUS_BUTTON_KEY]: 'previous annotation',
     [SCORES_BUTTON_KEY]: 'score',

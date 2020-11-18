@@ -3,6 +3,11 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import getDidMountHoc from '../../DidMountHoc'
+import {
+    resetPitchSegmentIndex,
+    decrementPitchSegmentIndex,
+    incrementPitchSegmentIndex
+} from '../../../redux/pitch/action'
 import { updateIsPitchShown } from '../../../redux/toggle/action'
 import Pitch from '../../Pitch'
 import Popup from '../../Popup'
@@ -16,6 +21,15 @@ const PitchPopup = ({ didMount }) => {
     const handleCloseClick = () => {
         dispatch(updateIsPitchShown())
     }
+    const handleHomeClick = () => {
+        dispatch(resetPitchSegmentIndex())
+    }
+    const handlePreviousClick = () => {
+        dispatch(decrementPitchSegmentIndex())
+    }
+    const handleNextClick = () => {
+        dispatch(incrementPitchSegmentIndex())
+    }
 
     return didMount && (
         <Popup
@@ -28,7 +42,10 @@ const PitchPopup = ({ didMount }) => {
             {...{
                 popupName: 'PitchPopup',
                 isVisible: isPitchShown,
-                handleCloseClick
+                handleCloseClick,
+                handleHomeClick,
+                handlePreviousClick,
+                handleNextClick
             }}
         >
             <Pitch />

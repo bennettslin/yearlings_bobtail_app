@@ -12,6 +12,12 @@
     height: 100%;
 }
 
+.foN {
+    &:focus {
+        outline: none;
+    }
+}
+
 // Overflow hidden container.
 .ovH {
     overflow: hidden;
