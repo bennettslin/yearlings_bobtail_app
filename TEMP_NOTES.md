@@ -11,6 +11,8 @@
 
 # Technical TODO:
 * Have PitchNav own pitch navigation completely.
+    * Show individual page buttons.
+    * Disable pitch buttons when needed.
     * Bonus: Give button active UI on keyDown.
     * Bonus: Turn access on with keyDown, off with escape or click.
         * Access letters show with access on
@@ -19,6 +21,11 @@
     * Have button to return to album.
         * Button has own name.
         * Button has drama mask icon.
+* Routing
+    * When in popup, replace URL with page path.
+    * When on page, page path should reflect page index.
+    * When URL loads with page path, go to that page.
+    * When URL loads without page path, go to stored page.
 * Illustrator
     * Home button
 

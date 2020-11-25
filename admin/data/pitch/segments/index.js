@@ -1,20 +1,39 @@
+import React from 'react'
+
 export default [
-    {
-        test: 'blah0'
-    },
-    {
-        test: 'blah1'
-    },
-    {
-        test: 'blah2'
-    },
-    {
-        test: 'blah3'
-    },
-    {
-        test: 'blah4'
-    },
-    {
-        test: 'blah5'
-    }
+    (
+        <div>
+            Pitch page 1
+        </div>
+    ),
+    (
+        <div>
+            Pitch page 2
+        </div>
+    ),
+    (
+        <div>
+            Pitch page 3
+        </div>
+    ),
+    (
+        <div>
+            Pitch page 4
+        </div>
+    ),
+    (
+        <div>
+            Pitch page 5
+        </div>
+    ),
+    (
+        <div>
+            Pitch page 6
+        </div>
+    ),
+    (
+        <div>
+            Pitch page 7
+        </div>
+    )
 ]
