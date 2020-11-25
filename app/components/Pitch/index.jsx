@@ -2,6 +2,7 @@
 import React from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
+import PitchNav from './Nav'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { getPitchSegmentForIndex } from '../../api/pitch/segments'
 
@@ -17,6 +18,7 @@ const Pitch = () => {
             }}
         >
             Pitch component: {getPitchSegmentForIndex(pitchSegmentIndex).test}
+            <PitchNav />
         </div>
     )
 }

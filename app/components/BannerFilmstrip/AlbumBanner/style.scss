@@ -1,6 +1,7 @@
 @import '../../../scss/constants/bannerFilmstrip';
 
 .AlbumBanner {
+    user-select: none;
     height: $height__albumBanner;
     font-size: 0.7em;
 }

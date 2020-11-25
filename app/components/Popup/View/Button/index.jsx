@@ -4,21 +4,18 @@ import cx from 'classnames'
 import Button from '../../../Button'
 import './style'
 import {
-    ARROW_UP,
     ARROW_LEFT,
     ARROW_RIGHT,
     ESCAPE
 } from '../../../../constants/access'
 import {
     POPUP_CLOSE_BUTTON_KEY,
-    POPUP_HOME_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY
 } from '../../../../constants/buttons'
 
 const PopupViewButton = ({
     isCloseButton,
-    isHomeButton,
     isPreviousButton,
     isNextButton,
     isFullWidth,
@@ -49,10 +46,6 @@ const PopupViewButton = ({
         buttonName = POPUP_CLOSE_BUTTON_KEY
         accessKey = ESCAPE
 
-    } else if (isHomeButton) {
-        buttonName = POPUP_HOME_BUTTON_KEY
-        accessKey = ARROW_UP
-
     } else if (isPreviousButton) {
         buttonName = POPUP_PREVIOUS_BUTTON_KEY
         accessKey = ARROW_LEFT
@@ -71,7 +64,6 @@ const PopupViewButton = ({
                         'PopupViewButton__close': isCloseButton,
                         'PopupViewButton__closeFullWidth':
                             isCloseButton && isFullWidth,
-                        'PopupViewButton__home': isHomeButton,
                         'PopupViewButton__previous': isPreviousButton,
                         'PopupViewButton__next': isNextButton,
                         'PopupViewButton__side':
@@ -109,7 +101,6 @@ const PopupViewButton = ({
 
 PopupViewButton.propTypes = {
     isCloseButton: PropTypes.bool,
-    isHomeButton: PropTypes.bool,
     isPreviousButton: PropTypes.bool,
     isNextButton: PropTypes.bool,
     isFullWidth: PropTypes.bool,

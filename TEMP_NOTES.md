@@ -10,22 +10,17 @@
         * Can navigate through keys
 
 # Technical TODO:
-* Popup
-    * Have navigation buttons.
-        * Button positioning.
-        * Home button has correct svg.
-* Navigation for page.
-    * Have navigation buttons.
-        * Button positioning. 
+* Have PitchNav own pitch navigation completely.
+    * Bonus: Give button active UI on keyDown.
+    * Bonus: Turn access on with keyDown, off with escape or click.
+        * Access letters show with access on
+        * Access letter and tooltips show based on same device width rules.
+* Pages
     * Have button to return to album.
-* Buttons have correct tooltip text.
-* Ensure that focus is always on pitch page.
-* Same behaviour as album page.
-    * Turn on access if key pressed.
-    * Turn off access if esc pressed or anywhere clicked.
-    * Access letter shows if access on.
-    * Access letter and tooltips show based on same device width rules.
-* Have PitchNav component
+        * Button has own name.
+        * Button has drama mask icon.
+* Illustrator
+    * Home button
 
 * Add pitch segment pages to URL.
 * Why do styles show for admin pages in build?
@@ -35,7 +30,6 @@
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
-* Filmstrip and dots slide temporarily offsets when access on or off. (Chrome Canary issue. It's because of opacity transition.)
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

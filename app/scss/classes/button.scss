@@ -93,6 +93,19 @@
     transform: scaleX(-1);
 }
 
+.ButtonIcon__pitchHome {
+    fill: $colour__navigation;
+}
+
+.ButtonIcon__pitchNext {
+    fill:$colour__navigation;
+    transform: scaleX(-1);
+}
+
+.ButtonIcon__pitchPrevious {
+    fill:$colour__navigation;
+}
+
 .ButtonIcon__popupClose {
     fill: $colour__close;
 }

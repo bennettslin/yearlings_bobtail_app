@@ -14,10 +14,12 @@ import {
     LYRIC_SCROLL_BUTTON_KEY,
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY,
-    POPUP_HOME_BUTTON_KEY,
+    PITCH_HOME_BUTTON_KEY,
+    PITCH_PREVIOUS_BUTTON_KEY,
+    PITCH_NEXT_BUTTON_KEY,
     POPUP_CLOSE_BUTTON_KEY,
-    POPUP_NEXT_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
+    POPUP_NEXT_BUTTON_KEY,
     WORMHOLE_BUTTON_KEY,
     SCORES_BUTTON_KEY
 } from '../../constants/buttons'
@@ -88,10 +90,12 @@ const TOOLTIP_TEXT_MAP = {
             [DISABLED]: 'song overviews disabled'
         }
     },
+    [PITCH_HOME_BUTTON_KEY]: 'reset pitch page',
+    [PITCH_PREVIOUS_BUTTON_KEY]: 'previous pitch page',
+    [PITCH_NEXT_BUTTON_KEY]: 'next pitch page',
     [POPUP_CLOSE_BUTTON_KEY]: 'close popup',
-    [POPUP_HOME_BUTTON_KEY]: 'home popup',
-    [POPUP_NEXT_BUTTON_KEY]: 'next annotation',
     [POPUP_PREVIOUS_BUTTON_KEY]: 'previous annotation',
+    [POPUP_NEXT_BUTTON_KEY]: 'next annotation',
     [SCORES_BUTTON_KEY]: 'score',
     get tips() {
         return {
