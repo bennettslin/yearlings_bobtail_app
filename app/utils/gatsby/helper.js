@@ -52,7 +52,7 @@ const getIsValidPitchPage = pathname => {
     return false
 }
 
-const getIsPitchPage = element => (
+export const getIsPitchPage = element => (
     getIsValidPitchPage(getPathname(element)) &&
 
     /**

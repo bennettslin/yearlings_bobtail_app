@@ -4,8 +4,9 @@ import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import getDidMountHoc from '../../DidMountHoc'
 import { updateIsPitchShown } from '../../../redux/toggle/action'
-import Pitch from '../../Pitch'
 import Popup from '../../Popup'
+import Pitch from '../../Pitch'
+import PitchNav from '../../PitchNav'
 import { mapIsPitchShown } from '../../../redux/toggle/selector'
 
 const PitchPopup = ({ didMount }) => {
@@ -32,6 +33,7 @@ const PitchPopup = ({ didMount }) => {
             }}
         >
             <Pitch />
+            <PitchNav />
         </Popup>
     )
 }

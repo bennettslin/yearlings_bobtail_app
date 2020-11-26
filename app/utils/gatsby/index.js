@@ -6,8 +6,10 @@ import { devToolsEnhancer } from 'redux-devtools-extension'
 import AlbumPageElementContext from '../../contexts/AlbumPageElement'
 import AlbumContainer from '../../containers/Album'
 import LoadingContainer from '../../containers/Loading'
+import PitchNav from '../../components/PitchNav'
 import {
     getReducers,
+    getIsPitchPage,
     getNeedsAlbumContext,
     getNeedsStoreProvider
 } from './helper'
@@ -35,9 +37,20 @@ export const wrapRootElement = ({ element }) => {
 }
 
 export const wrapPageElement = ({ element }) => {
-    return getNeedsAlbumContext(element) ? (
-        <AlbumPageElementContext.Provider {...{ value: element }}>
-            <AlbumContainer />
-        </AlbumPageElementContext.Provider>
-    ) : element
+    if (getNeedsAlbumContext(element)) {
+        return (
+            <AlbumPageElementContext.Provider {...{ value: element }}>
+                <AlbumContainer />
+            </AlbumPageElementContext.Provider>
+        )
+    } else if (getIsPitchPage(element)) {
+        return (
+            <>
+                {element}
+                <PitchNav />
+            </>
+        )
+    }
+
+    return element
 }

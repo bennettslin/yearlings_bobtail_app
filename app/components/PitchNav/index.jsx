@@ -2,20 +2,20 @@
 import React, { useRef } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import Button from '../../Button'
-import PitchDispatcher from '../../../dispatchers/Pitch'
-import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
-import { getPitchSegmentsCount } from '../../../api/pitch/segments'
+import Button from '../Button'
+import PitchDispatcher from '../../dispatchers/Pitch'
+import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
+import { getPitchSegmentsCount } from '../../api/pitch/segments'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
     ARROW_UP
-} from '../../../constants/access'
+} from '../../constants/access'
 import {
     PITCH_HOME_BUTTON_KEY,
     PITCH_NEXT_BUTTON_KEY,
     PITCH_PREVIOUS_BUTTON_KEY
-} from '../../../constants/buttons'
+} from '../../constants/buttons'
 
 const PitchNav = () => {
     const

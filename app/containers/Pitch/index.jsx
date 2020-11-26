@@ -2,15 +2,15 @@ import React, { useEffect, useRef } from 'react'
 import cx from 'classnames'
 import { navigate } from 'gatsby'
 import { useSelector } from 'react-redux'
+import PagePitchIndexContext from '../../contexts/PagePitchIndex'
 import Pitch from '../../components/Pitch'
-import { getKeyName } from '../../managers/Key/helper'
 import PitchNavigation from '../../managers/Key/Navigation/Pitch'
+import { getKeyName } from '../../managers/Key/helper'
 import { getPathForPitchPage } from '../../managers/Url/helper'
 import { mapIsAccessOn } from '../../redux/access/selector'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { getWindow } from '../../utils/browser'
 import { PITCH_TOGGLE_KEY } from '../../constants/access'
-import PagePitchIndexContext from '../../contexts/PagePitchIndex'
 
 const getPitchContainer = (pagePitchIndex = 0) => {
 
@@ -64,7 +64,7 @@ const getPitchContainer = (pagePitchIndex = 0) => {
                         onKeyUp
                     }}
                 >
-                    <Pitch {...{ pagePitchIndex }} />
+                    <Pitch />
                     <PitchNavigation {...{ ref: navigatePitch }} />
                 </div>
             </PagePitchIndexContext.Provider>
