@@ -11,13 +11,11 @@
 
 # Technical TODO:
 * Routing
-    * When on page, page path should reflect page index.
-        * Do navigation through Gatsby.
     * When URL loads with page path, go to that page.
-    * When URL loads without page path, go to stored page.
+        * Will need to set Redux store with page index.
 * Have PitchNav own pitch navigation completely.
+    * PitchNav should be outside of Pitch.
     * Show individual page buttons.
-    * Disable pitch buttons when needed.
     * Bonus: Give button active UI on keyDown.
     * Bonus: Turn access on with keyDown, off with escape or click.
         * Access letters show with access on
@@ -28,8 +26,6 @@
         * Button has drama mask icon.
 * Illustrator
     * Home button
-
-* Add pitch segment pages to URL.
 * Why do styles show for admin pages in build?
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
     * https://github.com/gatsbyjs/gatsby/issues/3446

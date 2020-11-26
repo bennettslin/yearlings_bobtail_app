@@ -8,8 +8,7 @@ import {
     getIsAlbumSession
 } from '../browser'
 import { getIsServerSide } from '../server'
-import { getPitchSegmentsCount } from '../../api/pitch/segments'
-import { getCharStringForNumber } from '../../helpers/format'
+import { getIsPitchSegmentValid } from '../../api/pitch/segments'
 
 const VALID_ADMIN_PATHS = [
     'Actors',
@@ -42,20 +41,12 @@ const getIsValidPitchPage = pathname => {
 
     // If it's a pitch page path...
     } else if (pathname.includes('Pitch/page_')) {
-        const char = pathname
-            // Isolate index.
-            .replace('Pitch/page_', '')
 
-            // Ensure index is alphanumeric.
-            .replace(/[^a-z0-9]/g, '')
+        // Ensure index is numeric.
+        const pitchPageIndex = parseInt(pathname.replace(/[^0-9]/g, ''))
 
         // Ensure index exists.
-        return Boolean(char) && (
-
-            // Ensure index is within the pitch segments count.
-            char >= '0' &&
-            char <= getCharStringForNumber(getPitchSegmentsCount() - 1)
-        )
+        return getIsPitchSegmentValid(pitchPageIndex)
     }
 
     return false

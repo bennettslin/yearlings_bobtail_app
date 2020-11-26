@@ -1,3 +1,2 @@
-import PitchContainer from '../../containers/Pitch'
-
-export default PitchContainer
+import getPitchContainer from '../../containers/Pitch'
+export default getPitchContainer(0)

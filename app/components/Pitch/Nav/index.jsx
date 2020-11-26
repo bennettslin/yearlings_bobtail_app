@@ -1,14 +1,11 @@
 // Section for pitch navigation buttons.
-import React from 'react'
+import React, { useRef } from 'react'
 import cx from 'classnames'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import Button from '../../Button'
+import PitchDispatcher from '../../../dispatchers/Pitch'
 import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
-import {
-    decrementPitchSegmentIndex,
-    incrementPitchSegmentIndex,
-    resetPitchSegmentIndex
-} from '../../../redux/pitch/action'
+import { getPitchSegmentsCount } from '../../../api/pitch/segments'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -22,17 +19,17 @@ import {
 
 const PitchNav = () => {
     const
-        dispatch = useDispatch(),
+        dispatchPitch = useRef(),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
     const handleHomeClick = () => {
-        dispatch(resetPitchSegmentIndex())
+        dispatchPitch.current({ pitchSegmentIndex: 0 })
     }
     const handlePreviousClick = () => {
-        dispatch(decrementPitchSegmentIndex())
+        dispatchPitch.current({ direction: -1 })
     }
     const handleNextClick = () => {
-        dispatch(incrementPitchSegmentIndex())
+        dispatchPitch.current({ direction: 1 })
     }
 
     return (
@@ -48,6 +45,7 @@ const PitchNav = () => {
                 {...{
                     buttonName: PITCH_HOME_BUTTON_KEY,
                     accessKey: ARROW_UP,
+                    isDisabled: pitchSegmentIndex === 0,
                     handleButtonClick: handleHomeClick
                 }}
             />
@@ -56,6 +54,7 @@ const PitchNav = () => {
                 {...{
                     buttonName: PITCH_PREVIOUS_BUTTON_KEY,
                     accessKey: ARROW_LEFT,
+                    isDisabled: pitchSegmentIndex === 0,
                     handleButtonClick: handlePreviousClick
                 }}
             />
@@ -64,9 +63,12 @@ const PitchNav = () => {
                 {...{
                     buttonName: PITCH_NEXT_BUTTON_KEY,
                     accessKey: ARROW_RIGHT,
+                    isDisabled:
+                        pitchSegmentIndex === getPitchSegmentsCount() - 1,
                     handleButtonClick: handleNextClick
                 }}
             />
+            <PitchDispatcher {...{ ref: dispatchPitch }} />
         </div>
     )
 }

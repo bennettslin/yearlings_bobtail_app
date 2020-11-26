@@ -1,30 +1,24 @@
-import { forwardRef, useImperativeHandle, memo } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
+import PitchDispatcher from '../../../../dispatchers/Pitch'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
     ARROW_UP
 } from '../../../../constants/access'
-import {
-    decrementPitchSegmentIndex,
-    incrementPitchSegmentIndex,
-    resetPitchSegmentIndex
-} from '../../../../redux/pitch/action'
 
 const PitchNavigation = forwardRef((props, ref) => {
-    const
-        dispatch = useDispatch()
+    const dispatchPitch = useRef()
 
     const navigatePitch = keyName => {
         switch (keyName) {
             case ARROW_LEFT:
-                dispatch(decrementPitchSegmentIndex())
+                dispatchPitch.current({ direction: -1 })
                 break
             case ARROW_RIGHT:
-                dispatch(incrementPitchSegmentIndex())
+                dispatchPitch.current({ direction: 1 })
                 break
             case ARROW_UP:
-                dispatch(resetPitchSegmentIndex())
+                dispatchPitch.current({ pitchSegmentIndex: 0 })
                 break
             default:
                 return false
@@ -34,7 +28,9 @@ const PitchNavigation = forwardRef((props, ref) => {
     }
 
     useImperativeHandle(ref, () => navigatePitch)
-    return null
+    return (
+        <PitchDispatcher {...{ ref: dispatchPitch }} />
+    )
 })
 
 export default memo(PitchNavigation)

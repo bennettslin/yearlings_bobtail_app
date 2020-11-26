@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { navigate } from 'gatsby'
 import { useSelector } from 'react-redux'
@@ -11,7 +12,7 @@ import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { getWindow } from '../../utils/browser'
 import { PITCH_TOGGLE_KEY } from '../../constants/access'
 
-const PitchPageComponent = () => {
+const PitchContainer = ({ pitchPageIndex }) => {
     const
         pitchContainerElement = useRef(),
         navigatePitch = useRef(),
@@ -66,4 +67,12 @@ const PitchPageComponent = () => {
     )
 }
 
-export default PitchPageComponent
+PitchContainer.propTypes = {
+    pitchPageIndex: PropTypes.number
+}
+
+const getPitchContainer = pitchPageIndex => () => (
+    <PitchContainer {...{ pitchPageIndex }} />
+)
+
+export default getPitchContainer

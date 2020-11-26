@@ -4,45 +4,47 @@ import Carousel from '../../components/Carousel'
 import Lyric from '../../components/Lyric'
 import Overview from '../../components/Overview'
 
-const getAlbumPageComponent = pageSongIndex => {
-    /**
-     * This returns the same component for each page, differing only by song
-     * index. Extracting into a getter function to avoid repeating code.
-     */
-    const AlbumPageComponent = ({
-        isCarousel,
-        isLyric,
-        isOverview
+/**
+ * This returns the same component for each page, differing only by song
+ * index. Extracting into a getter function to avoid repeating code.
+ */
+const AlbumPageComponent = ({
+    pageSongIndex,
+    isCarousel,
+    isLyric,
+    isOverview
 
-    }) => {
-        if (isCarousel) {
-            return (
-                <Carousel {...{ pageSongIndex }} />
-            )
-        }
-
-        if (isLyric) {
-            return (
-                <Lyric {...{ pageSongIndex }} />
-            )
-        }
-
-        if (isOverview) {
-            return (
-                <Overview {...{ pageSongIndex }} />
-            )
-        }
-
-        return null
+}) => {
+    if (isCarousel) {
+        return (
+            <Carousel {...{ pageSongIndex }} />
+        )
     }
 
-    AlbumPageComponent.propTypes = {
-        isCarousel: PropTypes.bool,
-        isLyric: PropTypes.bool,
-        isOverview: PropTypes.bool
+    if (isLyric) {
+        return (
+            <Lyric {...{ pageSongIndex }} />
+        )
     }
 
-    return AlbumPageComponent
+    if (isOverview) {
+        return (
+            <Overview {...{ pageSongIndex }} />
+        )
+    }
+
+    return null
 }
+
+AlbumPageComponent.propTypes = {
+    pageSongIndex: PropTypes.number.isRequired,
+    isCarousel: PropTypes.bool,
+    isLyric: PropTypes.bool,
+    isOverview: PropTypes.bool
+}
+
+const getAlbumPageComponent = pageSongIndex => () => (
+    <AlbumPageComponent {...{ pageSongIndex }} />
+)
 
 export default getAlbumPageComponent

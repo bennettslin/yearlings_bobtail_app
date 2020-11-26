@@ -1,17 +1,16 @@
 // Actions for pitch.
-import { PITCH_STORE } from '../../constants/store'
+import { setInStorage } from '../../helpers/storage'
+import {
+    PITCH_SEGMENT_INDEX,
+    PITCH_STORE
+} from '../../constants/store'
 
-export const resetPitchSegmentIndex = () => ({
-    type: PITCH_STORE,
-    payload: { resetPitchSegmentIndex: true }
-})
+export const setPitchSegmentIndex = (pitchSegmentIndex = 0) => {
 
-export const decrementPitchSegmentIndex = () => ({
-    type: PITCH_STORE,
-    payload: { decrementedPitchSegmentIndex: true }
-})
+    setInStorage(PITCH_SEGMENT_INDEX, pitchSegmentIndex)
 
-export const incrementPitchSegmentIndex = () => ({
-    type: PITCH_STORE,
-    payload: { incrementedPitchSegmentIndex: true }
-})
+    return {
+        type: PITCH_STORE,
+        payload: { pitchSegmentIndex }
+    }
+}
