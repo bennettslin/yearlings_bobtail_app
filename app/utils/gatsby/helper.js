@@ -8,6 +8,8 @@ import {
     getIsAlbumSession
 } from '../browser'
 import { getIsServerSide } from '../server'
+import { getPitchSegmentsCount } from '../../api/pitch/segments'
+import { getCharStringForNumber } from '../../helpers/format'
 
 const VALID_ADMIN_PATHS = [
     'Actors',
@@ -20,18 +22,47 @@ const VALID_ADMIN_PATHS = [
 
 const getPathname = element => {
     const {
-        location: {
-            pathname
-        }
-    } = element.props.location ?
-        element.props :
-        getWindow()
+            location: {
+                pathname
+            }
+        } = element.props.location ?
+            element.props :
+            getWindow(),
 
-    return pathname.replace(/\//g, '')
+        pathnames = pathname.split('/').filter(name => Boolean(name))
+
+    // Only get rid of initial forward slash.
+    return pathnames.join('/')
+}
+
+const getIsValidPitchPage = pathname => {
+    // If it's the pitch root path, it's valid.
+    if (pathname === 'Pitch') {
+        return true
+
+    // If it's a pitch page path...
+    } else if (pathname.includes('Pitch/page_')) {
+        const char = pathname
+            // Isolate index.
+            .replace('Pitch/page_', '')
+
+            // Ensure index is alphanumeric.
+            .replace(/[^a-z0-9]/g, '')
+
+        // Ensure index exists.
+        return Boolean(char) && (
+
+            // Ensure index is within the pitch segments count.
+            char >= '0' &&
+            char <= getCharStringForNumber(getPitchSegmentsCount() - 1)
+        )
+    }
+
+    return false
 }
 
 const getIsPitchPage = element => (
-    getPathname(element) === 'Pitch' &&
+    getIsValidPitchPage(getPathname(element)) &&
 
     /**
      * Ensure that we are not in the pitch popup, since it will also show the

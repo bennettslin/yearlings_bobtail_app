@@ -17,7 +17,7 @@ const Pitch = () => {
                 )
             }}
         >
-            {getPitchSegmentForIndex(pitchSegmentIndex)}
+            {getPitchSegmentForIndex(pitchSegmentIndex).test}
             <PitchNav />
         </div>
     )

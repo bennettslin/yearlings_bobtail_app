@@ -7,18 +7,21 @@ import {
     mapLyricVerseIndex,
     mapLyricAnnotationIndex
 } from '../../redux/lyric/selector'
+import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { mapIsPitchShown } from '../../redux/toggle/selector'
 import {
     getPathForIndices,
     getDocumentHead
 } from '../../helpers/url'
+import { getPathForPitchPage } from './helper'
 
 const UrlManager = () => {
     const
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
-        isPitchShown = useSelector(mapIsPitchShown)
+        isPitchShown = useSelector(mapIsPitchShown),
+        pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
     useEffect(() => {
         if (!isPitchShown) {
@@ -37,11 +40,11 @@ const UrlManager = () => {
     useEffect(() => {
         if (isPitchShown) {
             navigate(
-                '/Pitch',
+                getPathForPitchPage(pitchSegmentIndex),
                 { replace: true }
             )
         }
-    }, [isPitchShown])
+    }, [isPitchShown, pitchSegmentIndex])
 
     return (
         <Helmet>

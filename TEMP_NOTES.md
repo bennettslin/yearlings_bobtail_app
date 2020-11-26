@@ -10,6 +10,11 @@
         * Can navigate through keys
 
 # Technical TODO:
+* Routing
+    * When on page, page path should reflect page index.
+        * Do navigation through Gatsby.
+    * When URL loads with page path, go to that page.
+    * When URL loads without page path, go to stored page.
 * Have PitchNav own pitch navigation completely.
     * Show individual page buttons.
     * Disable pitch buttons when needed.
@@ -21,11 +26,6 @@
     * Have button to return to album.
         * Button has own name.
         * Button has drama mask icon.
-* Routing
-    * When in popup, replace URL with page path.
-    * When on page, page path should reflect page index.
-    * When URL loads with page path, go to that page.
-    * When URL loads without page path, go to stored page.
 * Illustrator
     * Home button
 
