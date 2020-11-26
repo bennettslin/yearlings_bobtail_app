@@ -3,10 +3,9 @@ import React from 'react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
-import AlbumPageElementContext from '../../contexts/AlbumPageElement'
 import AlbumContainer from '../../containers/Album'
 import LoadingContainer from '../../containers/Loading'
-import PitchNav from '../../components/PitchNav'
+import PitchContainer from '../../containers/Pitch'
 import {
     getReducers,
     getIsPitchPage,
@@ -39,16 +38,15 @@ export const wrapRootElement = ({ element }) => {
 export const wrapPageElement = ({ element }) => {
     if (getNeedsAlbumContext(element)) {
         return (
-            <AlbumPageElementContext.Provider {...{ value: element }}>
-                <AlbumContainer />
-            </AlbumPageElementContext.Provider>
+            <AlbumContainer>
+                {element}
+            </AlbumContainer>
         )
     } else if (getIsPitchPage(element)) {
         return (
-            <>
+            <PitchContainer>
                 {element}
-                <PitchNav />
-            </>
+            </PitchContainer>
         )
     }
 

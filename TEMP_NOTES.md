@@ -11,9 +11,6 @@
 
 # Technical TODO:
 * Have PitchNav own pitch navigation completely.
-    * PitchNav should be outside of Pitch.
-        * Put Pitch container in wrapPageElement.
-        * PitchNav goes in Pitch container.
     * Show individual page buttons.
     * Bonus: Give button active UI on keyDown.
         * Isolate the wrapper needed for this.

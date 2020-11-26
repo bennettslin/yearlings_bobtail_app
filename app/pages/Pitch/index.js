@@ -1,2 +1,2 @@
-import getPitchContainer from '../../containers/Pitch'
-export default getPitchContainer()
+import getPitchPageComponent from '../../containers/Page/Pitch'
+export default getPitchPageComponent()
