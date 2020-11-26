@@ -3,7 +3,7 @@ import React, { useRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../DidMountHoc'
-import getFinalSideHoc from '../FinalSideHoc'
+import getSongServerClientHoc from '../SongHoc'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
@@ -15,7 +15,7 @@ const Annotation = ({
     inCarousel,
     isAccessed,
     isSelected,
-    finalSideSongIndex,
+    serverClientSongIndex,
     annotationIndex
 
 }) => {
@@ -65,7 +65,7 @@ const Annotation = ({
                 />
 
                 {getAnnotationCardIndices(
-                    finalSideSongIndex,
+                    serverClientSongIndex,
                     annotationIndex
                 ).map(cardIndex => (
                     <AnnotationCard
@@ -90,8 +90,8 @@ Annotation.propTypes = {
     inCarousel: PropTypes.bool,
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    finalSideSongIndex: PropTypes.number.isRequired,
+    serverClientSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default memo(getDidMountHoc(getFinalSideHoc(Annotation)))
+export default memo(getDidMountHoc(getSongServerClientHoc(Annotation)))

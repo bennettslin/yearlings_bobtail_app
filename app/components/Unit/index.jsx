@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import getDidMountHoc from '../DidMountHoc'
-import getFinalSideHoc from '../FinalSideHoc'
+import getSongServerClientHoc from '../SongHoc'
 import UnitSongTitle from './Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
@@ -23,7 +23,7 @@ import './style'
 
 const Unit = forwardRef(({
     didMount,
-    finalSideSongIndex,
+    serverClientSongIndex,
     unitIndex,
     ...other
 
@@ -31,16 +31,16 @@ const Unit = forwardRef(({
     const
         isEarShown = useSelector(mapIsEarShown),
         unitVerseIndices = getVerseIndicesForUnit(
-            finalSideSongIndex, unitIndex
+            serverClientSongIndex, unitIndex
         ),
         isBottomSideCard = getIsSideCardOnBottomForUnit(
-            finalSideSongIndex, unitIndex
+            serverClientSongIndex, unitIndex
         ),
         hasMainVerses = Boolean(unitVerseIndices.length),
         hasSideCards = Boolean(getSideCardForUnit(
-            finalSideSongIndex, unitIndex
+            serverClientSongIndex, unitIndex
         )),
-        isSubsequent = getSubsequentForUnit(finalSideSongIndex, unitIndex)
+        isSubsequent = getSubsequentForUnit(serverClientSongIndex, unitIndex)
 
     return (
         <div
@@ -139,8 +139,8 @@ const Unit = forwardRef(({
 
 Unit.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    finalSideSongIndex: PropTypes.number.isRequired,
+    serverClientSongIndex: PropTypes.number.isRequired,
     unitIndex: PropTypes.number.isRequired
 }
 
-export default memo(getDidMountHoc(getFinalSideHoc(Unit)))
+export default memo(getDidMountHoc(getSongServerClientHoc(Unit)))

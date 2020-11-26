@@ -1,3 +1,2 @@
 import getAlbumPageComponent from '../containers/Page'
-
-export default getAlbumPageComponent(0)
+export default getAlbumPageComponent()

@@ -1,13 +1,13 @@
 // Section to show all song annotations in a carousel layout.
 import React, { useEffect, useRef, memo } from 'react'
 import PropTypes from 'prop-types'
-import getFinalSideHoc from '../../FinalSideHoc'
+import getSongServerClientHoc from '../../SongHoc'
 import ScrollCarouselListener from '../../../handlers/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
 import { getAnnotationIndices } from '../../../api/album/annotations'
 import './style'
 
-const CarouselScroll = ({ finalSideSongIndex }) => {
+const CarouselScroll = ({ serverClientSongIndex }) => {
     const
         carouselScrollElement = useRef(),
         carouselScrollChildren = useRef()
@@ -35,7 +35,7 @@ const CarouselScroll = ({ finalSideSongIndex }) => {
                 getCarouselScrollElement,
                 getCarouselScrollChild
             }} />
-            {getAnnotationIndices(finalSideSongIndex).map(index => {
+            {getAnnotationIndices(serverClientSongIndex).map(index => {
                 const annotationIndex = index + 1
 
                 return (
@@ -53,7 +53,7 @@ const CarouselScroll = ({ finalSideSongIndex }) => {
 }
 
 CarouselScroll.propTypes = {
-    finalSideSongIndex: PropTypes.number.isRequired
+    serverClientSongIndex: PropTypes.number.isRequired
 }
 
-export default memo(getFinalSideHoc(CarouselScroll))
+export default memo(getSongServerClientHoc(CarouselScroll))

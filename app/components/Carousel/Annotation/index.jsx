@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../DidMountHoc'
-import getFinalSideHoc from '../../FinalSideHoc'
+import getSongServerClientHoc from '../../SongHoc'
 import Annotation from '../../Annotation'
 import { getDotsBitForAnnotation } from '../../../api/album/annotations'
 import { CAROUSEL_SCROLL } from '../../../constants/scroll'
@@ -16,18 +16,18 @@ import './style'
 
 const CarouselAnnotation = forwardRef(({
     didMount,
-    finalSideSongIndex,
+    serverClientSongIndex,
     annotationIndex
 }, ref) => {
     const
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
         dotsBit = getDotsBitForAnnotation(
-            finalSideSongIndex,
+            serverClientSongIndex,
             annotationIndex
         ),
         columnKey = getCarouselAnnotationData(
-            finalSideSongIndex,
+            serverClientSongIndex,
             annotationIndex
         ),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit))
@@ -70,8 +70,8 @@ const CarouselAnnotation = forwardRef(({
 
 CarouselAnnotation.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    finalSideSongIndex: PropTypes.number.isRequired,
+    serverClientSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default memo(getDidMountHoc(getFinalSideHoc(CarouselAnnotation)))
+export default memo(getDidMountHoc(getSongServerClientHoc(CarouselAnnotation)))

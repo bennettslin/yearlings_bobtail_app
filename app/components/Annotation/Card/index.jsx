@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../DidMountHoc'
-import getFinalSideHoc from '../../FinalSideHoc'
+import getSongServerClientHoc from '../../SongHoc'
 import DotSequence from '../../DotSequence'
 import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
@@ -19,7 +19,7 @@ import './style'
 
 const AnnotationCard = ({
     didMount,
-    finalSideSongIndex,
+    serverClientSongIndex,
     annotationIndex,
     inCarousel,
     isSelected,
@@ -28,13 +28,13 @@ const AnnotationCard = ({
 }) => {
     const
         dotsBit = getDotsBitForAnnotationCard(
-            finalSideSongIndex,
+            serverClientSongIndex,
             annotationIndex,
             cardIndex
         ),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
         description = getDescriptionForAnnotationCard(
-            finalSideSongIndex,
+            serverClientSongIndex,
             annotationIndex,
             cardIndex
         )
@@ -111,9 +111,9 @@ AnnotationCard.propTypes = {
     didMount: PropTypes.bool.isRequired,
     inCarousel: PropTypes.bool,
     isSelected: PropTypes.bool.isRequired,
-    finalSideSongIndex: PropTypes.number.isRequired,
+    serverClientSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired,
     cardIndex: PropTypes.number.isRequired
 }
 
-export default memo(getDidMountHoc(getFinalSideHoc(AnnotationCard)))
+export default memo(getDidMountHoc(getSongServerClientHoc(AnnotationCard)))

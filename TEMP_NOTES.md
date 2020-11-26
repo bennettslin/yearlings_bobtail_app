@@ -10,9 +10,6 @@
         * Can navigate through keys
 
 # Technical TODO:
-* Routing
-    * When URL loads with page path, go to that page.
-        * Will need to set Redux store with page index.
 * Have PitchNav own pitch navigation completely.
     * PitchNav should be outside of Pitch.
     * Show individual page buttons.
@@ -30,6 +27,7 @@
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
     * https://github.com/gatsbyjs/gatsby/issues/3446
     * https://github.com/gatsbyjs/gatsby/issues/14333
+* At the very least, get rid of Admin styles
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?

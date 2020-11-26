@@ -4,7 +4,7 @@
  */
 import React, { forwardRef, memo, useRef } from 'react'
 import PropTypes from 'prop-types'
-import getFinalSideHoc from '../FinalSideHoc'
+import getSongServerClientHoc from '../SongHoc'
 import VerseDispatcher from '../../dispatchers/Verse'
 import Stanza from './Stanza'
 import Unit from '../Unit'
@@ -12,7 +12,7 @@ import { getStanzaIndices } from '../../api/album/stanzas'
 import { getLastUnitDotCardIndex } from '../../api/album/units'
 import './style'
 
-const Stanzas = forwardRef(({ finalSideSongIndex }, ref) => {
+const Stanzas = forwardRef(({ serverClientSongIndex }, ref) => {
     const dispatchVerse = useRef()
 
     const handleVerseSelect = ({
@@ -28,8 +28,8 @@ const Stanzas = forwardRef(({ finalSideSongIndex }, ref) => {
     }
 
     const
-        stanzaIndices = getStanzaIndices(finalSideSongIndex),
-        lastUnitDotCardIndex = getLastUnitDotCardIndex(finalSideSongIndex)
+        stanzaIndices = getStanzaIndices(serverClientSongIndex),
+        lastUnitDotCardIndex = getLastUnitDotCardIndex(serverClientSongIndex)
 
     return stanzaIndices.length && (
         <>
@@ -69,7 +69,7 @@ const Stanzas = forwardRef(({ finalSideSongIndex }, ref) => {
 })
 
 Stanzas.propTypes = {
-    finalSideSongIndex: PropTypes.number.isRequired
+    serverClientSongIndex: PropTypes.number.isRequired
 }
 
-export default memo(getFinalSideHoc(Stanzas))
+export default memo(getSongServerClientHoc(Stanzas))

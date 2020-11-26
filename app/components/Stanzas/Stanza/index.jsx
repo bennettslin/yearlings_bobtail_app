@@ -5,19 +5,19 @@
 import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getFinalSideHoc from '../../FinalSideHoc'
+import getSongServerClientHoc from '../../SongHoc'
 import Unit from '../../Unit'
 import { getUnitIndicesForStanza } from '../../../api/album/stanzas'
 import './style'
 
 const Stanza = forwardRef(({
-    finalSideSongIndex,
+    serverClientSongIndex,
     stanzaIndex,
     ...other
 
 }, ref) => {
     const stanzaUnitIndices = getUnitIndicesForStanza(
-        finalSideSongIndex,
+        serverClientSongIndex,
         stanzaIndex
     )
 
@@ -41,8 +41,8 @@ const Stanza = forwardRef(({
 })
 
 Stanza.propTypes = {
-    finalSideSongIndex: PropTypes.number.isRequired,
+    serverClientSongIndex: PropTypes.number.isRequired,
     stanzaIndex: PropTypes.number.isRequired
 }
 
-export default memo(getFinalSideHoc(Stanza))
+export default memo(getSongServerClientHoc(Stanza))

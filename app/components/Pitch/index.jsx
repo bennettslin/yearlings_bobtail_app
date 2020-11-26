@@ -1,26 +1,26 @@
 // Section to show pitch to labels and press.
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { useSelector } from 'react-redux'
 import PitchNav from './Nav'
-import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
+import getPitchServerClientHoc from '../PitchHoc'
 import { getPitchSegmentForIndex } from '../../api/pitch/segments'
 
-const Pitch = () => {
-    const pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
+const Pitch = ({ serverClientPitchIndex }) => (
+    <div
+        {...{
+            className: cx(
+                'Pitch'
+            )
+        }}
+    >
+        {getPitchSegmentForIndex(serverClientPitchIndex).test}
+        <PitchNav />
+    </div>
+)
 
-    return (
-        <div
-            {...{
-                className: cx(
-                    'Pitch'
-                )
-            }}
-        >
-            {getPitchSegmentForIndex(pitchSegmentIndex).test}
-            <PitchNav />
-        </div>
-    )
+Pitch.propTypes = {
+    serverClientPitchIndex: PropTypes.number.isRequired
 }
 
-export default Pitch
+export default getPitchServerClientHoc(Pitch)

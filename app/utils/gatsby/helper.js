@@ -43,10 +43,10 @@ const getIsValidPitchPage = pathname => {
     } else if (pathname.includes('Pitch/page_')) {
 
         // Ensure index is numeric.
-        const pitchPageIndex = parseInt(pathname.replace(/[^0-9]/g, ''))
+        const pagePitchIndex = parseInt(pathname.replace(/\D/g, ''))
 
         // Ensure index exists.
-        return getIsPitchSegmentValid(pitchPageIndex)
+        return getIsPitchSegmentValid(pagePitchIndex)
     }
 
     return false

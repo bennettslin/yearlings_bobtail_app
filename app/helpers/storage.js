@@ -6,7 +6,8 @@ import { getValidAnnotationIndex } from '../api/album/annotations'
 import { getArrayOfLength } from './general'
 import {
     getRoutingVerseIndex,
-    getRoutingAnnotationIndex
+    getRoutingAnnotationIndex,
+    getRoutingPitchIndex
 } from './routing'
 import { getWindow } from '../utils/browser'
 import {
@@ -185,7 +186,17 @@ export const getPitchSegmentIndexFromStorage = () => {
         _getParsedStoredInteger(PITCH_SEGMENT_INDEX)
     )
 
-    // This only saves upon initial retrieval.
-    setInStorage(PITCH_SEGMENT_INDEX, storedPitchSegmentIndex)
     return storedPitchSegmentIndex
+}
+
+export const getInitialPitchIndexFromRoutingOrStorage = () => {
+    const initialPitchIndex =
+        Number.isFinite(getRoutingPitchIndex()) ?
+            getRoutingPitchIndex() :
+            getPitchSegmentIndexFromStorage()
+
+    // This only saves upon initial retrieval.
+    setInStorage(PITCH_SEGMENT_INDEX, initialPitchIndex)
+
+    return initialPitchIndex
 }

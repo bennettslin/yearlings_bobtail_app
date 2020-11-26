@@ -3,7 +3,7 @@ import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../DidMountHoc'
-import getFinalSideHoc from '../../FinalSideHoc'
+import getSongServerClientHoc from '../../SongHoc'
 import UnitTipsHands from '../TipsHands'
 import UnitTab from '../Tab'
 import Verse from '../../Verse'
@@ -18,7 +18,7 @@ import './style'
 
 const UnitCard = forwardRef(({
     didMount,
-    finalSideSongIndex,
+    serverClientSongIndex,
     unitIndex,
     isMainVerses,
     isSubVerse,
@@ -28,7 +28,7 @@ const UnitCard = forwardRef(({
 
 }, ref) => {
     const versesArray = getUnitCardVerses({
-        songIndex: finalSideSongIndex,
+        songIndex: serverClientSongIndex,
         unitIndex,
         isMainVerses,
         isSubVerse,
@@ -43,17 +43,17 @@ const UnitCard = forwardRef(({
 
     const
         { handleVerseSelect } = other,
-        isSubsequent = getSubsequentForUnit(finalSideSongIndex, unitIndex),
+        isSubsequent = getSubsequentForUnit(serverClientSongIndex, unitIndex),
         isIndexed = isMainVerses || isSubVerse,
         isTabbed = isMainVerses && !isSubsequent,
         isTruncatable = getIsUnitTruncatable({
-            songIndex: finalSideSongIndex,
+            songIndex: serverClientSongIndex,
             unitIndex,
             isMainVerses,
             isSubVerse
         }),
         formType = getUnitFormType({
-            songIndex: finalSideSongIndex,
+            songIndex: serverClientSongIndex,
             unitIndex,
             isMainVerses,
             isSubVerse,
@@ -88,7 +88,7 @@ const UnitCard = forwardRef(({
                 {versesArray.map((verseEntity, index) => {
                     const verseObject = isIndexed ?
                         // If indexed verse, it's an array of indices.
-                        getVerse(finalSideSongIndex, verseEntity) :
+                        getVerse(serverClientSongIndex, verseEntity) :
 
                         // Otherwise, it's an array of verse objects.
                         verseEntity
@@ -125,7 +125,7 @@ const UnitCard = forwardRef(({
 
 UnitCard.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    finalSideSongIndex: PropTypes.number.isRequired,
+    serverClientSongIndex: PropTypes.number.isRequired,
     unitIndex: PropTypes.number.isRequired,
     isMainVerses: PropTypes.bool,
     isSubVerse: PropTypes.bool,
@@ -133,4 +133,4 @@ UnitCard.propTypes = {
     isSideSubCard: PropTypes.bool
 }
 
-export default memo(getDidMountHoc(getFinalSideHoc(UnitCard)))
+export default memo(getDidMountHoc(getSongServerClientHoc(UnitCard)))

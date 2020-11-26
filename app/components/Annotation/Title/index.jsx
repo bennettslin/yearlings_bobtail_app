@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAnnotationStore } from '../../../redux/annotation/action'
-import getFinalSideHoc from '../../FinalSideHoc'
+import getSongServerClientHoc from '../../SongHoc'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import Anchor from '../../Anchor'
 import AnnotationAccess from './Access'
@@ -20,7 +20,7 @@ import './style'
 const AnnotationTitle = ({
     isAccessed,
     isSelected,
-    finalSideSongIndex,
+    serverClientSongIndex,
     annotationIndex
 
 }) => {
@@ -31,18 +31,18 @@ const AnnotationTitle = ({
         selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
 
         accessibleWikiWormholesLength = getAccessibleWikiWormholesCount({
-            songIndex: finalSideSongIndex,
+            songIndex: serverClientSongIndex,
             annotationIndex,
             selectedDotKeys
         }),
 
         dotsBit = getDotsBitForAnnotation(
-            finalSideSongIndex,
+            serverClientSongIndex,
             annotationIndex
         ),
 
         annotationTitle = getTitleForAnnotation(
-            finalSideSongIndex,
+            serverClientSongIndex,
             annotationIndex
         ),
 
@@ -110,8 +110,8 @@ const AnnotationTitle = ({
 AnnotationTitle.propTypes = {
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    finalSideSongIndex: PropTypes.number.isRequired,
+    serverClientSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default memo(getFinalSideHoc(AnnotationTitle))
+export default memo(getSongServerClientHoc(AnnotationTitle))

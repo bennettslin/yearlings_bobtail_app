@@ -1,5 +1,5 @@
-import { getPitchSegmentIndexFromStorage } from '../../helpers/storage'
+import { getInitialPitchIndexFromRoutingOrStorage } from '../../helpers/storage'
 
 export const PITCH_DEFAULTS = {
-    pitchSegmentIndex: getPitchSegmentIndexFromStorage()
+    pitchSegmentIndex: getInitialPitchIndexFromRoutingOrStorage()
 }

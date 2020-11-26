@@ -7,23 +7,23 @@ import {
     getOverviewForSong,
     getSongIsLogue
 } from '../../../api/album/songs'
-import getFinalSideHoc from '../../FinalSideHoc'
+import getSongServerClientHoc from '../../SongHoc'
 
-const OverviewText = ({ finalSideSongIndex }) => (
+const OverviewText = ({ serverClientSongIndex }) => (
     <>
         <Texts
             {...{
-                text: getOverviewForSong(finalSideSongIndex)
+                text: getOverviewForSong(serverClientSongIndex)
             }}
         />
-        {getSongIsLogue(finalSideSongIndex) && (
+        {getSongIsLogue(serverClientSongIndex) && (
             <PitchAnchor />
         )}
     </>
 )
 
 OverviewText.propTypes = {
-    finalSideSongIndex: PropTypes.number.isRequired
+    serverClientSongIndex: PropTypes.number.isRequired
 }
 
-export default memo(getFinalSideHoc(OverviewText))
+export default memo(getSongServerClientHoc(OverviewText))

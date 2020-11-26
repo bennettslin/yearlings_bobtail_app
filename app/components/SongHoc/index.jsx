@@ -4,32 +4,30 @@ import PageSongIndexContext from '../../contexts/PageSongIndex'
 import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import { getIsServerSide } from '../../utils/server'
 
-const getFinalSideHoc = FinalSideComponent => {
+const getSongServerClientHoc = ServerClientComponent => {
     /**
      * This hoc passes to its child component either the page song index that
      * is relevant only on the server side, or the lyric song index that is
      * relevant only on the client side.
      */
-    const FinalSideHoc = forwardRef((props, ref) => {
+    return forwardRef((props, ref) => {
         const
             pageSongIndex = useContext(PageSongIndexContext),
             lyricSongIndex = useSelector(mapLyricSongIndex),
-            finalSideSongIndex = getIsServerSide() ?
+            serverClientSongIndex = getIsServerSide() ?
                 pageSongIndex :
                 lyricSongIndex
 
         return (
-            <FinalSideComponent
+            <ServerClientComponent
                 {...{
                     ref,
-                    finalSideSongIndex,
+                    serverClientSongIndex,
                     ...props
                 }}
             />
         )
     })
-
-    return FinalSideHoc
 }
 
-export default getFinalSideHoc
+export default getSongServerClientHoc

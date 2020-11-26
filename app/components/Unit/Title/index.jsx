@@ -3,12 +3,12 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getDidMountHoc from '../../DidMountHoc'
-import getFinalSideHoc from '../../FinalSideHoc'
+import getSongServerClientHoc from '../../SongHoc'
 import { getIndexedTitleForSong } from '../../../api/album/songs'
 import './style'
 
-const UnitSongTitle = ({ didMount, finalSideSongIndex }) => {
-    const songTitle = getIndexedTitleForSong(finalSideSongIndex)
+const UnitSongTitle = ({ didMount, serverClientSongIndex }) => {
+    const songTitle = getIndexedTitleForSong(serverClientSongIndex)
 
     return (
         <div
@@ -30,7 +30,7 @@ const UnitSongTitle = ({ didMount, finalSideSongIndex }) => {
 
 UnitSongTitle.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    finalSideSongIndex: PropTypes.number.isRequired
+    serverClientSongIndex: PropTypes.number.isRequired
 }
 
-export default memo(getDidMountHoc(getFinalSideHoc(UnitSongTitle)))
+export default memo(getDidMountHoc(getSongServerClientHoc(UnitSongTitle)))
