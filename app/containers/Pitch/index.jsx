@@ -5,15 +5,18 @@ import { useSelector } from 'react-redux'
 import Pitch from '../../components/Pitch'
 import { getKeyName } from '../../managers/Key/helper'
 import PitchNavigation from '../../managers/Key/Navigation/Pitch'
+import { getPathForPitchPage } from '../../managers/Url/helper'
 import { mapIsAccessOn } from '../../redux/access/selector'
+import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { getWindow } from '../../utils/browser'
 import { PITCH_TOGGLE_KEY } from '../../constants/access'
 
-const PitchContainer = () => {
+const PitchPageComponent = () => {
     const
         pitchContainerElement = useRef(),
         navigatePitch = useRef(),
-        isAccessOn = useSelector(mapIsAccessOn)
+        isAccessOn = useSelector(mapIsAccessOn),
+        pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
     const onKeyUp = e => {
         const keyName = getKeyName(e)
@@ -32,22 +35,20 @@ const PitchContainer = () => {
     }
 
     useEffect(() => {
-        // Remove the trailing backslash.
         navigate(
-            '/Pitch',
+            getPathForPitchPage(pitchSegmentIndex),
             { replace: true }
         )
 
-        // TODO: Make focusing more robust.
         pitchContainerElement.current.focus()
-    }, [])
+    }, [pitchSegmentIndex])
 
     return (
         <div
             {...{
                 ref: pitchContainerElement,
                 className: cx(
-                    'PitchContainer',
+                    'PitchPageComponent',
 
                     // Recreate wrapper behaviour.
                     isAccessOn && 'PlW__accessOn',
@@ -65,4 +66,4 @@ const PitchContainer = () => {
     )
 }
 
-export default PitchContainer
+export default PitchPageComponent

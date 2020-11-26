@@ -4,12 +4,12 @@ import Carousel from '../../components/Carousel'
 import Lyric from '../../components/Lyric'
 import Overview from '../../components/Overview'
 
-const getPageComponent = pageSongIndex => {
+const getAlbumPageComponent = pageSongIndex => {
     /**
      * This returns the same component for each page, differing only by song
      * index. Extracting into a getter function to avoid repeating code.
      */
-    const PageComponent = ({
+    const AlbumPageComponent = ({
         isCarousel,
         isLyric,
         isOverview
@@ -36,13 +36,13 @@ const getPageComponent = pageSongIndex => {
         return null
     }
 
-    PageComponent.propTypes = {
+    AlbumPageComponent.propTypes = {
         isCarousel: PropTypes.bool,
         isLyric: PropTypes.bool,
         isOverview: PropTypes.bool
     }
 
-    return PageComponent
+    return AlbumPageComponent
 }
 
-export default getPageComponent
+export default getAlbumPageComponent
