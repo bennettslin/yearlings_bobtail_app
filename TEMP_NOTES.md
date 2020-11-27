@@ -1,6 +1,4 @@
 # Pitch TODO:
-* Have PitchNav own pitch navigation completely.
-    * Show individual page buttons.
 * Pages
     * Have button to return to album.
         * Button has own name.

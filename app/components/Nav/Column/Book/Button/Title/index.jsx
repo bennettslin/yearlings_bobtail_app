@@ -30,8 +30,8 @@ const NavButtonTitle = ({
                     className: cx(
                         'NavButtonTitle__text',
                         isSelected ?
-                            'Nav__text__selected' :
-                            'Nav__text__interactable',
+                            'button__text__selected' :
+                            'button__text__interactable',
                         'Rancho',
                         'textShadow__dark',
                         'fCC'

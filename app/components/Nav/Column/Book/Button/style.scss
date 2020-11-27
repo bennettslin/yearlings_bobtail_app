@@ -1,4 +1,3 @@
-@import '../../../../../scss/constants/colour';
 @import '../../../../../scss/constants/icon';
 @import '../../../../../scss/constants/transition';
 
@@ -51,43 +50,5 @@
     & {
         width: 100%;
         height: 100%;
-    }
-}
-
-.Nav__text__selected {
-    color: $colour__select__medium;
-}
-
-.Nav__text__interactable {
-
-    .Button__enabled:hover
-    & {
-        color: $colour__linkHover__light;
-    }
-
-    .Button__enabled:active
-    & {
-        color: $colour__linkActive;
-    }
-
-    .Button__accessed
-    & {
-        color: $colour__accessHover__light;
-    }
-
-    .Button__accessed:hover
-    & {
-        color: $colour__accessActive;
-    }
-
-    .Button__accessed:active
-    & {
-        color: $colour__accessHover__dark;
-    }
-
-    .DW__userAgentDesktop
-    & {
-        transition:
-            color $transitionDuration__default;
     }
 }

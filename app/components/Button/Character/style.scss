@@ -1,4 +1,45 @@
+@import '../../../scss/constants/colour';
+@import '../../../scss/constants/transition';
+
 .ButtonCharacter {
     padding-bottom: 15%;
     font-size: 1.5em;
+}
+
+.button__text__selected {
+    color: $colour__select__medium;
+}
+
+.button__text__interactable {
+
+    .Button__enabled:hover
+    & {
+        color: $colour__linkHover__light;
+    }
+
+    .Button__enabled:active
+    & {
+        color: $colour__linkActive;
+    }
+
+    .Button__accessed
+    & {
+        color: $colour__accessHover__light;
+    }
+
+    .Button__accessed:hover
+    & {
+        color: $colour__accessActive;
+    }
+
+    .Button__accessed:active
+    & {
+        color: $colour__accessHover__dark;
+    }
+
+    .DW__userAgentDesktop
+    & {
+        transition:
+            color $transitionDuration__default;
+    }
 }

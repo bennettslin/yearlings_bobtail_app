@@ -80,7 +80,8 @@ const PitchContainer = ({ children }) => {
                 className: cx(
                     'PitchContainer',
                     'abF',
-                    'foN'
+                    'foN',
+                    'PtSansNarrow'
                 ),
                 tabIndex: -1,
                 onClick,

@@ -17,8 +17,8 @@ const ButtonCharacter = ({
                 className: cx(
                     'ButtonCharacter',
                     isSelected ?
-                        'Nav__text__selected' :
-                        'Nav__text__interactable',
+                        'button__text__selected' :
+                        'button__text__interactable',
                     'Rancho',
                     'abF',
                     'fCC',
