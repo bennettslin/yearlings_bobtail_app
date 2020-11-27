@@ -15,15 +15,18 @@
     * Bonus: Give button active UI on keyDown.
         * Isolate the wrapper needed for this.
         * Wrap pitch in this wrapper.
-    * Bonus: Turn access off with click.
+    * Bonus
         * Access letters show with access on
         * Access letter and tooltips show based on same device width rules.
 * Pages
     * Have button to return to album.
         * Button has own name.
         * Button has drama mask icon.
+
+* Prevent user select of tooltip text.
 * Illustrator
     * Home button
+
 * Why do styles show for admin pages in build?
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
     * https://github.com/gatsbyjs/gatsby/issues/3446

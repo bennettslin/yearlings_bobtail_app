@@ -42,6 +42,10 @@ const PitchContainer = ({ children }) => {
         dispatch(updateAccessStore({ isAccessOn: keyName !== ESCAPE }))
     }
 
+    const onClick = () => {
+        dispatch(updateAccessStore({ isAccessOn: false }))
+    }
+
     useEffect(() => {
         navigate(
             getPathForPitchPage(pitchSegmentIndex),
@@ -65,6 +69,7 @@ const PitchContainer = ({ children }) => {
                     'foN'
                 ),
                 tabIndex: -1,
+                onClick,
                 onKeyUp
             }}
         >
