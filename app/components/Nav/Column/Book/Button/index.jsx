@@ -4,15 +4,17 @@ import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../../../../Button'
-import NavCharacter from './Character'
+import ButtonCharacter from '../../../../Button/Character'
 import NavButtonTitle from './Title'
+import { getSongIsLogue } from '../../../../../api/album/songs'
+import { mapIsNavShowable } from '../../../../../redux/carousel/selector'
+import { getIndexCharacter } from './helper'
+import { mapSelectedAnnotationIndex } from '../../../../../redux/selected/selector'
 import { ENTER } from '../../../../../constants/access'
 import {
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY
 } from '../../../../../constants/buttons'
-import { mapIsNavShowable } from '../../../../../redux/carousel/selector'
-import { mapSelectedAnnotationIndex } from '../../../../../redux/selected/selector'
 import './style'
 
 const NavButton = ({
@@ -92,11 +94,14 @@ const NavButton = ({
                     )
                 }}
             >
-                <NavCharacter
+                <ButtonCharacter
                     {...{
-                        bookIndex,
-                        songIndex,
-                        isSelected
+                        isSelected,
+                        character: getIndexCharacter({
+                            bookIndex,
+                            songIndex
+                        }),
+                        hasTextShadowLight: getSongIsLogue(songIndex)
                     }}
                 />
             </Button>

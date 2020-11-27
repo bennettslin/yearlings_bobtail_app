@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Button from '../../Button'
-import PitchCharacter from './Character'
+import ButtonCharacter from '../../Button/Character'
 import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
 import { PITCH_SEGMENT_BUTTON_KEY } from '../../../constants/buttons'
 
@@ -29,10 +29,10 @@ const PitchNavButton = ({
                 handleButtonClick: _handleButtonClick
             }}
         >
-            <PitchCharacter
+            <ButtonCharacter
                 {...{
-                    pitchIndex,
-                    isSelected
+                    isSelected,
+                    character: pitchIndex
                 }}
             />
         </Button>

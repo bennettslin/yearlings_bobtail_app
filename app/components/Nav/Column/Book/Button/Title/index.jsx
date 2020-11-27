@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { getTitleForSong } from '../../../../../../api/album/songs'
-import { getIndexCharacter } from '../Character/helper'
+import { getIndexCharacter } from '../helper'
 import './style'
 
 const NavButtonTitle = ({

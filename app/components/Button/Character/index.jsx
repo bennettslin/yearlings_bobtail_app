@@ -4,9 +4,10 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import './style'
 
-const PitchCharacter = ({
-    pitchIndex,
-    isSelected
+const ButtonCharacter = ({
+    isSelected,
+    character,
+    hasTextShadowLight
 
 }) => {
 
@@ -14,25 +15,30 @@ const PitchCharacter = ({
         <div
             {...{
                 className: cx(
-                    'PitchCharacter',
+                    'ButtonCharacter',
                     isSelected ?
                         'Nav__text__selected' :
                         'Nav__text__interactable',
                     'Rancho',
                     'abF',
                     'fCC',
-                    'textShadow__dark'
+                    'textShadow__dark',
+                    hasTextShadowLight && 'textShadow__light'
                 )
             }}
         >
-            {pitchIndex}
+            {character}
         </div>
     )
 }
 
-PitchCharacter.propTypes = {
-    pitchIndex: PropTypes.number,
-    isSelected: PropTypes.bool
+ButtonCharacter.propTypes = {
+    isSelected: PropTypes.bool,
+    character: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
+    ]),
+    hasTextShadowLight: PropTypes.bool
 }
 
-export default memo(PitchCharacter)
+export default memo(ButtonCharacter)
