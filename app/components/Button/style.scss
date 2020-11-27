@@ -38,21 +38,21 @@
     width: $LENGTH_ICON_LARGE;
     height: $LENGTH_ICON_LARGE;
 
-    .VW__tabletWidth
+    .DW__tabletWidth
     & {
         min-width: $LENGTH_ICON_LARGE_TABLET;
         width: $LENGTH_ICON_LARGE_TABLET;
         height: $LENGTH_ICON_LARGE_TABLET;
     }
 
-    .VW__miniWidth
+    .DW__miniWidth
     & {
         min-width: $LENGTH_ICON_LARGE_MINI;
         width: $LENGTH_ICON_LARGE_MINI;
         height: $LENGTH_ICON_LARGE_MINI;
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     & {
         min-width: $LENGTH_ICON;
         width: $LENGTH_ICON;

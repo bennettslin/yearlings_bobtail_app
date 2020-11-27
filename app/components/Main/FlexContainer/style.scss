@@ -5,14 +5,16 @@
     padding-top: $margin__thick;
     display: flex;
 
-    .VW__desktopWidth.VW__cannotCarouselShow
+    .DW__desktopWidth
+    .MW__cannotCarouselShow
     &,
-    .VW__miniOrTabletWidth.VW__canCarouselNavMount
+    .DW__miniOrTabletWidth
+    .MW__canCarouselNavMount
     & {
         padding-bottom: $margin__scrollBar;
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     & {
         padding-top: $MARGIN_THIN;
     }
@@ -21,9 +23,11 @@
 .mainFlexContainer__side {
     align-items: flex-start;
 
-    .VW__desktopWidth.VW__cannotCarouselShow
+    .DW__desktopWidth
+    .MW__cannotCarouselShow
     &,
-    .VW__miniOrTabletWidth.VW__canCarouselNavMount
+    .DW__miniOrTabletWidth
+    .MW__canCarouselNavMount
     & {
         align-items: flex-end;
     }

@@ -4,12 +4,12 @@
     width: 100%;
     max-width: 100%;
 
-    .VW__monitorWidth
+    .DW__monitorWidth
     & {
         max-width: calc(100% - #{$WIDTH_GOLDEN_CORD});
     }
 
-    .VW__laptopWidth
+    .DW__laptopWidth
     & {
         max-width: calc(100% - #{$WIDTH_UNCANNY_VALLEY});
     }

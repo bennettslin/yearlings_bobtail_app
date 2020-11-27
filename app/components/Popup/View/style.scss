@@ -14,12 +14,12 @@
         - #{$LENGTH_ICON_LARGE * 1.25}
     );
 
-    .VW__miniWidth
+    .DW__miniWidth
     & {
         max-height: calc(100% - #{$LENGTH_ICON_LARGE_MINI});
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     & {
         max-height: calc(100% - #{$LENGTH_ICON});
     }
@@ -37,7 +37,7 @@
         - #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
     );
 
-    .VW__phoneOrMiniWidth
+    .DW__phoneOrMiniWidth
     & {
         width: 100%;
     }
@@ -46,13 +46,13 @@
 .PopupView__cardSize {
     max-width: $width__popupCard;
 
-    .VW__miniWidth
+    .DW__miniWidth
     & {
         // Multiplier is .9, just like for lyric text in mini.
         max-width: $width__popupCard__mini;
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     & {
         // Multiplier is .98, just like for lyric text in phone.
         max-width: $width__popupCard__phone;

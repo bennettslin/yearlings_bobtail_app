@@ -8,7 +8,7 @@
         position: absolute;
         right: 0;
 
-        .VW__desktopWidth
+        .DW__desktopWidth
         & {
             top: 0;
 
@@ -16,7 +16,7 @@
             margin-top: $LENGTH_ICON;
         }
 
-        .VW__mobileWidth
+        .DW__mobileWidth
         & {
             bottom: 0;
             margin-right: $margin__thick;

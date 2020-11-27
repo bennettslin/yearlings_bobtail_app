@@ -12,20 +12,20 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__close {
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     & {
         // Top left corner.
         top: -$LENGTH_ICON_LARGE * $offset__popupButton;
         left: -$LENGTH_ICON_LARGE * $offset__popupButton;
     }
-    .VW__tabletWidth
+    .DW__tabletWidth
     & {
         // Top left corner.
         top: -$LENGTH_ICON_LARGE_TABLET * $offset__popupButton;
         left: -$LENGTH_ICON_LARGE_TABLET * $offset__popupButton;
     }
 
-    .VW__miniWidth
+    .DW__miniWidth
     & {
 
         // Top left corner.
@@ -33,7 +33,7 @@ $offset__popupButton: 0.75;
         left: -$LENGTH_ICON_LARGE_MINI * $offset__popupButton;
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     & {
 
         &.PopupViewButton__inCardSize {
@@ -46,19 +46,19 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__closeFullWidth {
 
-    .VW__miniWidth
+    .DW__miniWidth
     & {
         top: -$LENGTH_ICON_LARGE_MINI + $margin__thick;
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     & {
         top: -$LENGTH_ICON + $margin__thick;
     }
 
-    .VW__miniWidth
+    .DW__miniWidth
     &,
-    .VW__phoneWidth
+    .DW__phoneWidth
     & {
         left: 10%;
     }
@@ -66,39 +66,39 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__side {
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     & {
         // Buttons on top so they don't shift regardless of content height.
         top: -$LENGTH_ICON_LARGE * $offset__popupButton;
     }
 
-    .VW__tabletWidth
+    .DW__tabletWidth
     &.PopupViewButton__notInOverlay {
         // Buttons on bottom so they don't shift regardless of content height.
         bottom: -$LENGTH_ICON_LARGE_TABLET * $offset__popupButton;
     }
 
-    .VW__miniWidth
+    .DW__miniWidth
     &.PopupViewButton__notInOverlay {
         bottom: -$LENGTH_ICON_LARGE_MINI * $offset__popupButton;
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     & {
         bottom: -$LENGTH_ICON * $offset__popupButton;
     }
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     & {
         top: $PADDING_POPUP_CONTENT_WIDE;
     }
 
-    .VW__tabletWidth
+    .DW__tabletWidth
     &.PopupViewButton__displaysInOverlay {
         top: calc(50% - #{$LENGTH_ICON_LARGE_TABLET} * 0.5);
     }
 
-    .VW__miniWidth
+    .DW__miniWidth
     &.PopupViewButton__displaysInOverlay {
         top: calc(50% - #{$LENGTH_ICON_LARGE_MINI} * 0.5);
     }
@@ -106,24 +106,24 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__previous {
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     & {
         left: -$LENGTH_ICON_LARGE * $offset__popupButton;
     }
 
-    .VW__tabletWidth
+    .DW__tabletWidth
     & {
         left: -$LENGTH_ICON_LARGE_TABLET * $offset__popupButton;
     }
 
-    .VW__miniWidth
+    .DW__miniWidth
     & {
         left: -$LENGTH_ICON_LARGE_MINI * $offset__popupButton;
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     &,
-    .VW__mobileWidth
+    .DW__mobileWidth
     &.PopupViewButton__notInOverlay {
         left: 10%;
     }
@@ -131,24 +131,24 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__next {
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     & {
         right: -$LENGTH_ICON_LARGE * $offset__popupButton;
     }
 
-    .VW__tabletWidth
+    .DW__tabletWidth
     & {
         right: -$LENGTH_ICON_LARGE_TABLET * $offset__popupButton;
     }
 
-    .VW__miniWidth
+    .DW__miniWidth
     & {
         right: -$LENGTH_ICON_LARGE_MINI * $offset__popupButton;
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     &,
-    .VW__mobileWidth
+    .DW__mobileWidth
     &.PopupViewButton__notInOverlay {
         right: 10%;
     }

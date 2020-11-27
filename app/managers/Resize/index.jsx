@@ -2,7 +2,10 @@ import { useEffect, useRef, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsWindowResizeDone } from '../../redux/entrance/action'
-import { updateViewportStore } from '../../redux/viewport/action'
+import {
+    updateViewportStore,
+    updateViewportPitchStore
+} from '../../redux/viewport/action'
 import { getWindowDimensions } from '../../helpers/resize/device'
 import { getWindow } from '../../utils/browser'
 import {
@@ -10,7 +13,10 @@ import {
     mapWindowHeight
 } from '../../redux/viewport/selector'
 
-const ResizeManager = ({ getRootContainerElement }) => {
+const ResizeManager = ({
+    isInPitch,
+    getRootContainerElement
+}) => {
     const
         dispatch = useDispatch(),
         timeoutRef = useRef(),
@@ -30,10 +36,17 @@ const ResizeManager = ({ getRootContainerElement }) => {
             windowWidth
         } = getWindowDimensions(getRootContainerElement())
 
-        dispatch(updateViewportStore({
-            windowWidth,
-            windowHeight
-        }))
+        if (isInPitch) {
+            dispatch(updateViewportPitchStore({
+                windowWidth,
+                windowHeight
+            }))
+        } else {
+            dispatch(updateViewportStore({
+                windowWidth,
+                windowHeight
+            }))
+        }
 
         dispatch(updateIsWindowResizeDone(true))
     }
@@ -81,6 +94,7 @@ const ResizeManager = ({ getRootContainerElement }) => {
 }
 
 ResizeManager.propTypes = {
+    isInPitch: PropTypes.bool,
     getRootContainerElement: PropTypes.func.isRequired
 }
 

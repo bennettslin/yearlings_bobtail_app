@@ -13,7 +13,7 @@
 
     opacity: 0;
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     & {
         position: fixed;
         bottom:
@@ -24,8 +24,7 @@
         margin-bottom: $margin__scrollBar;
     }
 
-    .DW__userAgentDesktop
-    .VW__desktopWidth
+    .DW__userAgentDesktop.DW__desktopWidth
     & {
         transition:
             bottom $transitionDuration__default,
@@ -33,7 +32,7 @@
     }
 
 
-    .VW__miniOrTabletWidth
+    .DW__miniOrTabletWidth
     & {
         position: absolute;
         top:
@@ -41,8 +40,7 @@
             - $MARGIN_THIN * 2;
     }
 
-    .DW__userAgentDesktop
-    .VW__miniOrTabletWidth
+    .DW__userAgentDesktop.DW__miniOrTabletWidth
     & {
         transition:
             top $transitionDuration__default,
@@ -56,7 +54,7 @@
         opacity: 1;
     }
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     .PlW__song
     .ShW__annotationShown.ShW__carouselShown
     .TrW__isSongChangeDone
@@ -64,7 +62,7 @@
         bottom: 0;
     }
 
-    .VW__miniOrTabletWidth
+    .DW__miniOrTabletWidth
     .PlW__song
     .ShW__annotationShown.ShW__carouselShown
     .TrW__isSongChangeDone

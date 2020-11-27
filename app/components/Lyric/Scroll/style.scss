@@ -11,7 +11,7 @@
     // Make scrolling smooth in iOS.
     -webkit-overflow-scrolling: touch;
 
-    .VW__canSliderMount
+    .MW__canSliderMount
     & {
         height: calc(100% - #{$HEIGHT_MENU});
     }

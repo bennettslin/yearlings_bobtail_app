@@ -88,7 +88,10 @@ const PitchContainer = ({ children }) => {
                 onKeyUp
             }}
         >
-            <ResizeManager {...{ getRootContainerElement }} />
+            <ResizeManager
+                isInPitch
+                {...{ getRootContainerElement }}
+            />
             {getIsServerSide() ? (
                 children
             ) : (

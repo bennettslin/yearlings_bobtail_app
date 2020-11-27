@@ -20,15 +20,14 @@ $height__carouselHidden: $height__chivalry;
     // Carousel just needs to be above nav.
     z-index: $zIndex__theatre;
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     & {
         bottom: -$height__carouselHidden;
         height: $height__chivalry;
         padding-bottom: $MARGIN_THIN;
     }
 
-    .DW__userAgentDesktop
-    .VW__desktopWidth
+    .DW__userAgentDesktop.DW__desktopWidth
     & {
         transition:
             opacity $transitionDuration__slow,
@@ -36,14 +35,13 @@ $height__carouselHidden: $height__chivalry;
     }
 
 
-    .VW__mobileWidth
+    .DW__mobileWidth
     & {
         top: -$height__carouselHidden;
         height: 100%;
     }
 
-    .DW__userAgentDesktop
-    .VW__mobileWidth
+    .DW__userAgentDesktop.DW__mobileWidth
     & {
         transition:
             opacity $transitionDuration__slow,
@@ -56,14 +54,14 @@ $height__carouselHidden: $height__chivalry;
         opacity: 1;
     }
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     .RW__navShowable
     .ShW__carouselShown
     &.Carousel__visible {
         bottom: 0;
     }
 
-    .VW__mobileWidth
+    .DW__mobileWidth
     .RW__navShowable
     .ShW__carouselShown
     &.Carousel__visible {
@@ -72,7 +70,7 @@ $height__carouselHidden: $height__chivalry;
 }
 
 .Carousel {
-    .VW__canCarouselNavMount
+    .MW__canCarouselNavMount
     & {
         display: block;
     }
@@ -92,7 +90,7 @@ $height__carouselHidden: $height__chivalry;
             black $WIDTH_GOLDEN_CORD * 1.1,
             black
         );
-    .VW__monitorWidth
+    .DW__monitorWidth
     .ShW__annotationHidden
     & {
         mask-image: $gradient__carousel__monitor;
@@ -109,13 +107,13 @@ $height__carouselHidden: $height__chivalry;
             black $WIDTH_UNCANNY_VALLEY * 1.1,
             black
         );
-    .VW__laptopWidth
+    .DW__laptopWidth
     .ShW__annotationHidden
     & {
         mask-image: $gradient__carousel__laptop;
     }
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     .ShW__annotationShown.ShW__carouselShown
     & {
         // When carousel annotation is selected, switch z-index with lyric.

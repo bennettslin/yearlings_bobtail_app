@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
-import ViewportWrapper from '../../wrappers/ViewportWrapper'
+import MountWrapper from '../../wrappers/MountWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import PlayingWrapper from '../../wrappers/PlayingWrapper'
 import ResponsiveWrapper from '../../wrappers/ResponsiveWrapper'
@@ -12,7 +12,7 @@ import LogicWrapper from '../../wrappers/LogicWrapper'
 
 const WrapperContainer = ({ children }) => (
     <DeviceWrapper>
-        <ViewportWrapper>
+        <MountWrapper>
             <AccessWrapper>
                 <PlayingWrapper>
                     <ResponsiveWrapper>
@@ -28,7 +28,7 @@ const WrapperContainer = ({ children }) => (
                     </ResponsiveWrapper>
                 </PlayingWrapper>
             </AccessWrapper>
-        </ViewportWrapper>
+        </MountWrapper>
     </DeviceWrapper>
 )
 

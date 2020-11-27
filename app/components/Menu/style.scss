@@ -24,7 +24,7 @@ $padding__menuChild__desktop: $margin__thick * 2;
      * centred. Override them when it's not. Not happy about doing it this way,
      * but I wasn't able to keep the animation smooth in Safari otherwise.
      */
-    .VW__desktopWidth
+    .DW__desktopWidth
     .PlW__song
     .ShW__overlayHidden
     & {
@@ -34,12 +34,12 @@ $padding__menuChild__desktop: $margin__thick * 2;
     }
 
     // In desktop, when in logue, centre menu main.
-    .VW__desktopWidth
+    .DW__desktopWidth
     .PlW__logue
     &,
 
     // In desktop, also centre menu main in overlay.
-    .VW__desktopWidth
+    .DW__desktopWidth
     .ShW__overlayShown
     & {
         max-width: $WIDTH_MENU_BREAKPOINT;
@@ -59,9 +59,9 @@ $padding__menuChild__desktop: $margin__thick * 2;
         order: 1;
         margin-right: $padding__menuChild__mobile;
 
-        .VW__desktopWidth
+        .DW__desktopWidth
         &,
-        .VW__tabletWidth
+        .DW__tabletWidth
         & {
             margin-right: $padding__menuChild__desktop;
         }
@@ -71,9 +71,9 @@ $padding__menuChild__desktop: $margin__thick * 2;
         order: 3;
         margin-left: $padding__menuChild__mobile;
 
-        .VW__desktopWidth
+        .DW__desktopWidth
         &,
-        .VW__tabletWidth
+        .DW__tabletWidth
         & {
             margin-left: $padding__menuChild__desktop;
         }

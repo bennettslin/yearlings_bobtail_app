@@ -5,8 +5,6 @@
     * Have button to return to album.
         * Button has own name.
         * Button has drama mask icon.
-* Remove extraneous stuff from resize manager.
-* Pitch only needs user agent from device wrapper.
 
 * Prevent user select of tooltip text.
 * Illustrator

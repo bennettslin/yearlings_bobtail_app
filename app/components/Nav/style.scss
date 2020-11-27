@@ -9,12 +9,12 @@
 
     z-index: $zIndex__theatre;
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     & {
         bottom: 0;
     }
 
-    .VW__miniOrTabletWidth
+    .DW__miniOrTabletWidth
     & {
         top: 0;
     }
@@ -29,7 +29,7 @@
         margin-right: 3px;
     }
 
-    .VW__miniOrTabletWidth
+    .DW__miniOrTabletWidth
     .RW__navIconShrunk
     & {
         margin-left: 3px;

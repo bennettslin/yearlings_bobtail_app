@@ -80,3 +80,20 @@ export const updateViewportStore = payload => {
         payload: getDefinedOnlyPayload(payload)
     })
 }
+
+export const updateViewportPitchStore = payload => {
+    const { windowWidth, windowHeight } = payload
+
+    if (hasKey(windowWidth) && hasKey(windowHeight)) {
+        const deviceWidthIndex = getDeviceWidthIndex(windowWidth)
+
+        payload = {
+            deviceWidthIndex
+        }
+    }
+
+    return ({
+        type: VIEWPORT_STORE,
+        payload: getDefinedOnlyPayload(payload)
+    })
+}

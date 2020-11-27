@@ -10,12 +10,12 @@
     max-width: 0;
     min-width: 0;
 
-    .VW__desktopWidth
+    .DW__desktopWidth
     & {
         padding-bottom: $margin__thick;
     }
 
-    .VW__mobileWidth
+    .DW__mobileWidth
     & {
         flex-direction: column;
 

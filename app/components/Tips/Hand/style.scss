@@ -29,10 +29,10 @@
 
     .ShW__tips__lyricExpand
     &,
-    .VW__desktopWidth
+    .DW__desktopWidth
     .ShW__tips__carousel
     &,
-    .VW__desktopWidth
+    .DW__desktopWidth
     .ShW__tips__nav
     & {
         transform: translate(5%, -50%);
@@ -47,13 +47,13 @@
         transition: opacity $transitionDuration__default;
     }
 
-    .VW__tabletWidth
+    .DW__tabletWidth
     & {
         width: $LENGTH_ICON_LARGE_TABLET;
         height: $LENGTH_ICON_LARGE_TABLET;
     }
 
-    .VW__miniWidth
+    .DW__miniWidth
     & {
         width: $LENGTH_ICON_LARGE_MINI;
         height: $LENGTH_ICON_LARGE_MINI;

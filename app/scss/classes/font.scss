@@ -13,12 +13,12 @@
 .fontSize__title {
     font-size: $fontSize__title;
 
-    .VW__miniWidth
+    .DW__miniWidth
     & {
         font-size: $fontSize__title__mini;
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     & {
         font-size: $fontSize__title__phone;
     }
@@ -27,12 +27,12 @@
 .fontSize__verse {
     font-size: $fontSize__verse;
 
-    .VW__miniWidth
+    .DW__miniWidth
     & {
         font-size: $fontSize__verse__mini;
     }
 
-    .VW__phoneWidth
+    .DW__phoneWidth
     & {
         font-size: $fontSize__verse__phone;
     }
@@ -43,16 +43,16 @@
     $fontSize__bothColumnsShown: 0.95em;
 
     // Make font sizes smaller when showing both columns.
-    .VW__desktopWidth
+    .DW__desktopWidth
     .RW__bothEarColumnsShown
     &,
-    .VW__tabletWidth
+    .DW__tabletWidth
     .RW__bothEarColumnsShown
     & {
         font-size: $fontSize__bothColumnsShown;
     }
 
-    .VW__miniWidth
+    .DW__miniWidth
     .RW__bothEarColumnsShown
     & {
         font-size:
