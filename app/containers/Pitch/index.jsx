@@ -7,6 +7,7 @@ import AccessStylesheet from '../../components/Stylesheets/Access'
 import Pitch from '../../components/Pitch'
 import PitchNav from '../../components/PitchNav'
 import PitchNavigation from '../../managers/Key/Navigation/Pitch'
+import PitchReturnButton from './ReturnButton'
 import { getKeyName } from '../../managers/Key/helper'
 import { getPathForPitchPage } from '../../managers/Url/helper'
 import { updateAccessStore } from '../../redux/access/action'
@@ -27,6 +28,14 @@ const PitchContainer = ({ children }) => {
 
     const getRootContainerElement = () => pitchContainerElement.current
 
+    const returnToAlbum = () => {
+        /**
+         * Navigation cannot be done through gatsby, since it does not
+         * change store provider. Push, not replace, in history.
+         */
+        getWindow().location.href = '/'
+    }
+
     const onKeyDown = e => {
         const keyName = getKeyName(e)
 
@@ -44,11 +53,7 @@ const PitchContainer = ({ children }) => {
 
         // Handle return home to album.
         if (keyName === PITCH_TOGGLE_KEY) {
-            /**
-             * Navigation cannot be done through gatsby, since it does not
-             * change store provider. Push, not replace, in history.
-             */
-            getWindow().location.href = '/'
+            returnToAlbum()
         }
 
         dispatch(updateAccessStore({
@@ -98,6 +103,7 @@ const PitchContainer = ({ children }) => {
             ) : (
                 <Pitch />
             )}
+            <PitchReturnButton {...{ returnToAlbum }} />
             <PitchNav />
             <PitchNavigation {...{ ref: navigatePitch }} />
         </div>

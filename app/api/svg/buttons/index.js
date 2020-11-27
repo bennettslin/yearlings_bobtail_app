@@ -18,6 +18,7 @@ import overview from './main/overview'
 import pitchHome from './pitch/pitchHome'
 import pitchPrevious from './pitch/pitchPrevious'
 import pitchNext from './pitch/pitchNext'
+import pitchReturn from './pitch/pitchReturn'
 import pitchSegment from './pitch/pitchSegment'
 import popupClose from './popup/popupClose'
 import popupPrevious from './popup/popupPrevious'
@@ -47,6 +48,7 @@ import {
     PITCH_HOME_BUTTON_KEY,
     PITCH_PREVIOUS_BUTTON_KEY,
     PITCH_NEXT_BUTTON_KEY,
+    PITCH_RETURN_BUTTON_KEY,
     PITCH_SEGMENT_BUTTON_KEY,
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
@@ -77,6 +79,7 @@ export default {
     [PITCH_HOME_BUTTON_KEY]: pitchHome,
     [PITCH_PREVIOUS_BUTTON_KEY]: pitchPrevious,
     [PITCH_NEXT_BUTTON_KEY]: pitchNext,
+    [PITCH_RETURN_BUTTON_KEY]: pitchReturn,
     [PITCH_SEGMENT_BUTTON_KEY]: pitchSegment,
     [POPUP_CLOSE_BUTTON_KEY]: popupClose,
     [POPUP_PREVIOUS_BUTTON_KEY]: popupPrevious,
