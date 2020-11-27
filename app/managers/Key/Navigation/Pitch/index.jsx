@@ -10,21 +10,20 @@ const PitchNavigation = forwardRef((props, ref) => {
     const dispatchPitch = useRef()
 
     const navigatePitch = keyName => {
+        let keyWasRegistered = false
         switch (keyName) {
             case ARROW_LEFT:
-                dispatchPitch.current({ direction: -1 })
+                keyWasRegistered = dispatchPitch.current({ direction: -1 })
                 break
             case ARROW_RIGHT:
-                dispatchPitch.current({ direction: 1 })
+                keyWasRegistered = dispatchPitch.current({ direction: 1 })
                 break
             case ARROW_UP:
-                dispatchPitch.current({ pitchSegmentIndex: 0 })
+                keyWasRegistered = dispatchPitch.current({ pitchSegmentIndex: 0 })
                 break
-            default:
-                return false
         }
 
-        return true
+        return keyWasRegistered
     }
 
     useImperativeHandle(ref, () => navigatePitch)

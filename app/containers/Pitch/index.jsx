@@ -3,25 +3,34 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { navigate } from 'gatsby'
 import { useDispatch, useSelector } from 'react-redux'
+import AccessStylesheet from '../../components/Stylesheets/Access'
 import Pitch from '../../components/Pitch'
 import PitchNav from '../../components/PitchNav'
 import PitchNavigation from '../../managers/Key/Navigation/Pitch'
 import { getKeyName } from '../../managers/Key/helper'
 import { getPathForPitchPage } from '../../managers/Url/helper'
 import { updateAccessStore } from '../../redux/access/action'
-import { mapIsAccessOn } from '../../redux/access/selector'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { getWindow } from '../../utils/browser'
 import { getIsServerSide } from '../../utils/server'
 import { ESCAPE, PITCH_TOGGLE_KEY } from '../../constants/access'
+import AccessWrapper from '../../wrappers/AccessWrapper'
 
 const PitchContainer = ({ children }) => {
     const
         dispatch = useDispatch(),
         pitchContainerElement = useRef(),
         navigatePitch = useRef(),
-        isAccessOn = useSelector(mapIsAccessOn),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
+
+    const onKeyDown = e => {
+        const keyName = getKeyName(e)
+
+        if (keyName) {
+            // Show key as registered in the UI.
+            dispatch(updateAccessStore({ accessedKey: keyName }))
+        }
+    }
 
     const onKeyUp = e => {
         const keyName = getKeyName(e)
@@ -38,8 +47,13 @@ const PitchContainer = ({ children }) => {
             getWindow().location.href = '/'
         }
 
-        // Handle access.
-        dispatch(updateAccessStore({ isAccessOn: keyName !== ESCAPE }))
+        dispatch(updateAccessStore({
+            // Turn off or on access.
+            isAccessOn: keyName !== ESCAPE,
+
+            // Stop showing key as registered in the UI.
+            accessedKey: ''
+        }))
     }
 
     const onClick = () => {
@@ -60,16 +74,13 @@ const PitchContainer = ({ children }) => {
             {...{
                 ref: pitchContainerElement,
                 className: cx(
-                    'PitchPageComponent',
-
-                    // Recreate wrapper behaviour.
-                    isAccessOn && 'PlW__accessOn',
-
+                    'PitchContainer',
                     'abF',
                     'foN'
                 ),
                 tabIndex: -1,
                 onClick,
+                onKeyDown,
                 onKeyUp
             }}
         >
@@ -88,4 +99,17 @@ PitchContainer.propTypes = {
     children: PropTypes.node.isRequired
 }
 
-export default PitchContainer
+const ParentPitchContainer = ({ children }) => (
+    <AccessWrapper>
+        <PitchContainer>
+            {children}
+        </PitchContainer>
+        <AccessStylesheet />
+    </AccessWrapper>
+)
+
+ParentPitchContainer.propTypes = {
+    children: PropTypes.node.isRequired
+}
+
+export default ParentPitchContainer

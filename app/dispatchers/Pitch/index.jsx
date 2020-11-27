@@ -17,22 +17,22 @@ const PitchDispatcher = forwardRef((props, ref) => {
     }) => {
         if (Number.isFinite(nextPitchSegmentIndex)) {
             dispatch(setPitchSegmentIndex(nextPitchSegmentIndex))
+            return true
 
         } else if (direction === -1) {
             if (pitchSegmentIndex > 0) {
                 dispatch(setPitchSegmentIndex(pitchSegmentIndex - 1))
+                return true
             }
 
         } else if (direction === 1) {
             if (pitchSegmentIndex < getPitchSegmentsCount() - 1) {
                 dispatch(setPitchSegmentIndex(pitchSegmentIndex + 1))
+                return true
             }
-
-        } else {
-            return false
         }
 
-        return true
+        return false
     }
 
     useImperativeHandle(ref, () => dispatchPitch)

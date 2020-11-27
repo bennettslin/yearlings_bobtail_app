@@ -1,20 +1,6 @@
 # Pitch TODO:
-* When clicking Pitch from website:
-    * Show Pitch component in popup
-        * Popup has navigation buttons
-        * Navigate through keys
-* When hitting Pitch path directly:
-    * Show Pitch in page wrapper
-        * Page wrapper has its own navigation buttons
-        * Page wrapper has link to go to album
-        * Can navigate through keys
-
-# Technical TODO:
 * Have PitchNav own pitch navigation completely.
     * Show individual page buttons.
-    * Bonus: Give button active UI on keyDown.
-        * Isolate the wrapper needed for this.
-        * Wrap pitch in this wrapper.
     * Bonus
         * Access letters show with access on
         * Access letter and tooltips show based on same device width rules.
