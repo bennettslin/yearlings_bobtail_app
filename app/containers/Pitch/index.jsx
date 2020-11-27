@@ -2,20 +2,22 @@ import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { navigate } from 'gatsby'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Pitch from '../../components/Pitch'
 import PitchNav from '../../components/PitchNav'
 import PitchNavigation from '../../managers/Key/Navigation/Pitch'
 import { getKeyName } from '../../managers/Key/helper'
 import { getPathForPitchPage } from '../../managers/Url/helper'
+import { updateAccessStore } from '../../redux/access/action'
 import { mapIsAccessOn } from '../../redux/access/selector'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { getWindow } from '../../utils/browser'
-import { PITCH_TOGGLE_KEY } from '../../constants/access'
 import { getIsServerSide } from '../../utils/server'
+import { ESCAPE, PITCH_TOGGLE_KEY } from '../../constants/access'
 
 const PitchContainer = ({ children }) => {
     const
+        dispatch = useDispatch(),
         pitchContainerElement = useRef(),
         navigatePitch = useRef(),
         isAccessOn = useSelector(mapIsAccessOn),
@@ -35,6 +37,9 @@ const PitchContainer = ({ children }) => {
              */
             getWindow().location.href = '/'
         }
+
+        // Handle access.
+        dispatch(updateAccessStore({ isAccessOn: keyName !== ESCAPE }))
     }
 
     useEffect(() => {

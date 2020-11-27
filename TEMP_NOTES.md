@@ -15,7 +15,7 @@
     * Bonus: Give button active UI on keyDown.
         * Isolate the wrapper needed for this.
         * Wrap pitch in this wrapper.
-    * Bonus: Turn access on with keyDown, off with escape or click.
+    * Bonus: Turn access off with click.
         * Access letters show with access on
         * Access letter and tooltips show based on same device width rules.
 * Pages
@@ -33,6 +33,7 @@
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
 * Cremated tree does jumpy thing.
+* When changing song through just index number, UI seems to reload? But not when full path is given.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
