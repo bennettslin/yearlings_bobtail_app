@@ -10,17 +10,17 @@
 
     height: 100%;
 
-    .DW__desktopWidth
+    .VW__desktopWidth
     & {
         padding-left: $width__overviewToggle__laptop;
     }
 
-    .DW__tabletWidth
+    .VW__tabletWidth
     & {
         padding-left: $width__overviewToggle__tablet;
     }
 
-    // .DW__miniWidth
+    // .VW__miniWidth
     // & {
     //     padding-left: $width__overviewToggle__mini;
     // }
@@ -33,13 +33,13 @@
         content: '';
     }
 
-    .DW__monitorWidth
+    .VW__monitorWidth
     &:after {
         padding-right:
             $WIDTH_GOLDEN_CORD;
     }
 
-    .DW__laptopWidth
+    .VW__laptopWidth
     &:after {
         padding-right:
             $WIDTH_UNCANNY_VALLEY;
@@ -57,12 +57,12 @@
         $LENGTH_ICON_LARGE_MINI * 2
         + $MARGIN_THIN * 3;
 
-    .DW__tabletWidth
+    .VW__tabletWidth
     &:after {
         padding-right: $width__carouselSelect__tablet;
     }
 
-    // .DW__miniWidth
+    // .VW__miniWidth
     // &:after {
     //     padding-right: $width__carouselSelect__mini;
     // }

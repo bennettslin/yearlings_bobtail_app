@@ -46,9 +46,9 @@
         margin-bottom: $margin__thick * 1.5;
     }
 
-    .DW__desktopWidth.DW__cannotCarouselShow
+    .VW__desktopWidth.VW__cannotCarouselShow
     &,
-    .DW__miniOrTabletWidth.DW__canCarouselNavMount
+    .VW__miniOrTabletWidth.VW__canCarouselNavMount
     & {
         flex-direction: column-reverse;
 
@@ -58,7 +58,7 @@
         }
     }
 
-    .DW__phoneWidth
+    .VW__phoneWidth
     & {
         & > :not(:last-child) {
             margin-bottom: $MARGIN_THIN * 2;

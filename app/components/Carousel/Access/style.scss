@@ -4,7 +4,7 @@
 .AccessLetters__carousel {
     left: $MARGIN_THIN;
 
-    .DW__desktopWidth
+    .VW__desktopWidth
     & {
         bottom:
             $margin__scrollBar
@@ -12,7 +12,7 @@
             + $MARGIN_THIN * 2;
     }
 
-    .DW__mobileWidth
+    .VW__mobileWidth
     & {
         top:
             $LENGTH_ICON_LARGE

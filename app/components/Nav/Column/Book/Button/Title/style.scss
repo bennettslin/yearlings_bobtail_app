@@ -14,7 +14,7 @@
             opacity $transitionDuration__default;
     }
 
-    .DW__mobileWidth
+    .VW__mobileWidth
     & {
         top: -$height__chivalry;
     }
@@ -37,7 +37,7 @@
     transform-origin: left top 0;
     float: left;
 
-    .DW__mobileWidth
+    .VW__mobileWidth
     & {
         transform: rotate(90deg);
         transform-origin: left bottom 0;

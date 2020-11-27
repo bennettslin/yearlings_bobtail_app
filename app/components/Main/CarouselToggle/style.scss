@@ -40,14 +40,14 @@
             box-shadow $transitionDuration__fast;
     }
 
-    .DW__desktopWidth
+    .VW__desktopWidth
     .PlW__song
     .ShW__carouselShown:not(.ShW__tipsShown)
     & {
         bottom: $margin__scrollBar;
     }
 
-    .DW__mobileWidth
+    .VW__mobileWidth
     & {
         top: 0;
         bottom: auto;

@@ -5,11 +5,13 @@
     * Have button to return to album.
         * Button has own name.
         * Button has drama mask icon.
-* Remove extraneous stuff from resize manager and device wrapper.
+* Remove extraneous stuff from resize manager.
+* Pitch only needs user agent from device wrapper.
 
 * Prevent user select of tooltip text.
 * Illustrator
     * Home button
+* Layout!
 
 * Why do styles show for admin pages in build?
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
@@ -17,10 +19,13 @@
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
 
+# Bugs
+* Cremated tree does jumpy thing.
+* Weird tooltip issue on pitch page. Tooltip changes position when hover and key at same time.
+* When changing song through just index number, UI seems to reload? But only when full path is not given.
+
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
-* Cremated tree does jumpy thing.
-* When changing song through just index number, UI seems to reload? But not when full path is given.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

@@ -5,19 +5,19 @@
     margin-right: 10px;
     float: left;
 
-    .DW__tabletWidth
+    .VW__tabletWidth
     & {
         width: $width__overviewToggle__tablet;
         height: $height__overviewToggle__tablet;
     }
 
-    .DW__miniWidth
+    .VW__miniWidth
     & {
         width: $width__overviewToggle__mini;
         height: $height__overviewToggle__mini;
     }
 
-    .DW__phoneWidth
+    .VW__phoneWidth
     & {
         width: $width__overviewToggle__phone;
         height: $height__overviewToggle__phone;
@@ -29,17 +29,17 @@
 
     min-height: $height__overviewToggle;
 
-    .DW__tabletWidth
+    .VW__tabletWidth
     & {
         min-height: $height__overviewToggle__tablet;
     }
 
-    .DW__miniWidth
+    .VW__miniWidth
     & {
         min-height: $height__overviewToggle__mini;
     }
 
-    .DW__phoneWidth
+    .VW__phoneWidth
     & {
         min-height: $height__overviewToggle__phone;
     }

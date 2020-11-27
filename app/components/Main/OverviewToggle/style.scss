@@ -22,25 +22,25 @@
     height: $height__overviewToggle;
     width: $width__overviewToggle;
 
-    .DW__laptopWidth
+    .VW__laptopWidth
     & {
         height: $height__overviewToggle__laptop;
         width: $width__overviewToggle__laptop;
     }
 
-    .DW__tabletWidth
+    .VW__tabletWidth
     & {
         height: $height__overviewToggle__tablet;
         width: $width__overviewToggle__tablet;
     }
 
-    .DW__miniWidth
+    .VW__miniWidth
     & {
         height: $height__overviewToggle__mini;
         width: $width__overviewToggle__mini;
     }
 
-    .DW__phoneWidth
+    .VW__phoneWidth
     & {
         height: $height__overviewToggle__phone;
         width: $width__overviewToggle__phone;

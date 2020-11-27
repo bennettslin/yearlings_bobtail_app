@@ -3,7 +3,7 @@
 
 .OverviewPopup {
 
-    .DW__mobileWidth
+    .VW__mobileWidth
     .LyricOverview
     & {
         margin-left: $MARGIN_THIN;
@@ -17,11 +17,11 @@
          * These are eyeballed numbers. They ensure that the overview stays
          * above the bottom in logues on mobile.
          */
-        .DW__miniOrTabletWidth
+        .VW__miniOrTabletWidth
         & {
             margin-bottom: 40px;
         }
-        .DW__phoneWidth
+        .VW__phoneWidth
         & {
             margin-bottom: 80px;
         }
@@ -31,12 +31,12 @@
     & {
         margin-left: $margin__thick;
 
-        .DW__mobileWidth
+        .VW__mobileWidth
         & {
             margin-right: $MARGIN_THIN;
         }
 
-        .DW__phoneWidth
+        .VW__phoneWidth
         & {
             margin-left: $MARGIN_THIN;
         }
@@ -49,7 +49,7 @@
 
     max-width: 480px; // Arbitrary.
 
-    .DW__miniWidth
+    .VW__miniWidth
     & {
         // This keeps line breaks consistent.
         max-width: 412.5px;

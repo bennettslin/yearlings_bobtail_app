@@ -13,12 +13,12 @@ $length__dotsSlideSelect__tablet:
 
     padding: 10px;
 
-    .DW__miniWidth
+    .VW__miniWidth
     & {
         padding: $margin__thick * 0.75;
     }
 
-    .DW__phoneWidth
+    .VW__phoneWidth
     & {
         padding: $margin__thick * 0.5;
     }
@@ -30,7 +30,7 @@ $length__dotsSlideSelect__tablet:
         padding-top: 5px;
         font-size: 0.75em;
 
-        .DW__phoneWidth
+        .VW__phoneWidth
         & {
             padding-top: 0;
         }
@@ -42,7 +42,7 @@ $length__dotsSlideSelect__tablet:
     width: $length__dotsSlideSelect;
     height: $length__dotsSlideSelect;
 
-    .DW__phoneWidth
+    .VW__phoneWidth
     & {
         width: $length__dotsSlideSelect__tablet;
         height: $length__dotsSlideSelect__tablet;

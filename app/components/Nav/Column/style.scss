@@ -8,24 +8,26 @@
 
     opacity: 0;
 
-    .DW__desktopWidth
+    .VW__desktopWidth
     & {
         bottom: -$HEIGHT_NAV;
     }
 
-    .DW__userAgentDesktop.DW__desktopWidth
+    .DW__userAgentDesktop
+    .VW__desktopWidth
     & {
         transition:
             bottom $transitionDuration__default,
             opacity $transitionDuration__default;
     }
 
-    .DW__miniOrTabletWidth
+    .VW__miniOrTabletWidth
     & {
         top: -$HEIGHT_NAV;
     }
 
-    .DW__userAgentDesktop.DW__miniOrTabletWidth
+    .DW__userAgentDesktop
+    .VW__miniOrTabletWidth
     & {
         transition:
             top $transitionDuration__default,
@@ -37,7 +39,7 @@
     right: 0;
     margin-right: 0;
 
-    .DW__miniOrTabletWidth
+    .VW__miniOrTabletWidth
     & {
         margin-right: 0;
     }
@@ -47,7 +49,7 @@
 .ShW__navExpanded
 .TrW__isSongChangeDone {
 
-    .DW__miniOrTabletWidth
+    .VW__miniOrTabletWidth
     & {
         .NavColumn {
             opacity: 1;
@@ -55,7 +57,7 @@
         }
     }
 
-    .DW__desktopWidth
+    .VW__desktopWidth
     & {
         .NavColumn {
             bottom: 0;

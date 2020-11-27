@@ -12,14 +12,14 @@
 }
 
 .width__lyricColumn__desktop {
-    .DW__desktopWidth
+    .VW__desktopWidth
     & {
         width: $WIDTH_GOLDEN_CORD;
         left: auto;
         right: 0;
     }
 
-    .DW__laptopWidth
+    .VW__laptopWidth
     & {
         width: $WIDTH_UNCANNY_VALLEY;
     }

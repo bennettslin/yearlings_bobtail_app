@@ -28,9 +28,9 @@ $margin__dotsContainer__phone: 8px;
     box-shadow: $boxShadow__mainCard;
     background-color: $COLOUR__FUTURE__LIGHTER;
 
-    .DW__desktopWidth.DW__cannotCarouselShow
+    .VW__desktopWidth.VW__cannotCarouselShow
     &,
-    .DW__miniOrTabletWidth.DW__canCarouselNavMount
+    .VW__miniOrTabletWidth.VW__canCarouselNavMount
     & {
         top: auto;
         bottom: 0;
@@ -38,7 +38,7 @@ $margin__dotsContainer__phone: 8px;
         margin-bottom: $margin__dotsContainer;
     }
 
-    .DW__phoneWidth
+    .VW__phoneWidth
     & {
         margin-left: $MARGIN_THIN;
         margin-top: $MARGIN_THIN;
@@ -64,7 +64,7 @@ $margin__dotsContainer__phone: 8px;
 
     background-color: $COLOUR__FUTURE__LIGHTER;
 
-    .DW__phoneOrMiniWidth
+    .VW__phoneOrMiniWidth
     & {
         padding: $margin__thick * 0.75;
     }

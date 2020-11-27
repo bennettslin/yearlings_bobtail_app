@@ -8,7 +8,7 @@
     min-width: $width__navToggle;
 }
 
-.DW__monitorWidth {
+.VW__monitorWidth {
     .RW__navIconStatic {
         .Nav__showDoubleBook {
             .CarouselNavToggle__placeholder {
@@ -99,7 +99,7 @@
  * LAPTOP STYLES *
  *****************/
 
-.DW__laptopWidth {
+.VW__laptopWidth {
     .RW__navIconStatic {
         .Nav__showSingleBook {
             .CarouselNavToggle__placeholder {
@@ -173,7 +173,7 @@
  * TABLET STYLES *
  *****************/
 
-.DW__tabletWidth {
+.VW__tabletWidth {
     .CarouselNavToggle__placeholder {
         min-width: $width__navToggle__tablet;
     }
