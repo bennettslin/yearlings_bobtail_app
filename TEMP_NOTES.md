@@ -1,13 +1,11 @@
 # Pitch TODO:
 * Have PitchNav own pitch navigation completely.
     * Show individual page buttons.
-    * Bonus
-        * Access letters show with access on
-        * Access letter and tooltips show based on same device width rules.
 * Pages
     * Have button to return to album.
         * Button has own name.
         * Button has drama mask icon.
+* Remove extraneous stuff from resize manager and device wrapper.
 
 * Prevent user select of tooltip text.
 * Illustrator

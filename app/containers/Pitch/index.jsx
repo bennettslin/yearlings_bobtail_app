@@ -14,7 +14,9 @@ import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { getWindow } from '../../utils/browser'
 import { getIsServerSide } from '../../utils/server'
 import { ESCAPE, PITCH_TOGGLE_KEY } from '../../constants/access'
+import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
+import ResizeManager from '../../managers/Resize'
 
 const PitchContainer = ({ children }) => {
     const
@@ -22,6 +24,8 @@ const PitchContainer = ({ children }) => {
         pitchContainerElement = useRef(),
         navigatePitch = useRef(),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
+
+    const getRootContainerElement = () => pitchContainerElement.current
 
     const onKeyDown = e => {
         const keyName = getKeyName(e)
@@ -84,6 +88,7 @@ const PitchContainer = ({ children }) => {
                 onKeyUp
             }}
         >
+            <ResizeManager {...{ getRootContainerElement }} />
             {getIsServerSide() ? (
                 children
             ) : (
@@ -100,12 +105,14 @@ PitchContainer.propTypes = {
 }
 
 const ParentPitchContainer = ({ children }) => (
-    <AccessWrapper>
-        <PitchContainer>
-            {children}
-        </PitchContainer>
-        <AccessStylesheet />
-    </AccessWrapper>
+    <DeviceWrapper>
+        <AccessWrapper>
+            <PitchContainer>
+                {children}
+            </PitchContainer>
+            <AccessStylesheet />
+        </AccessWrapper>
+    </DeviceWrapper>
 )
 
 ParentPitchContainer.propTypes = {
