@@ -2,7 +2,6 @@
 * Weird tooltip issue. Tooltip changes position when hover and key at same time. Issue is on all tooltips.
 
 # Pitch TODO:
-* Grab svg for button from data.
 * Layout and styling!
 * Illustrator
     * Home button

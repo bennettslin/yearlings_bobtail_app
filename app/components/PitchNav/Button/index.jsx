@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Button from '../../Button'
 import ButtonCharacter from '../../Button/Character'
+import { getPitchIconForIndex } from '../../../api/pitch/segments'
 import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
 import { PITCH_SEGMENT_BUTTON_KEY } from '../../../constants/buttons'
 
@@ -25,6 +26,7 @@ const PitchNavButton = ({
             hoverOnParent
             {...{
                 buttonName: PITCH_SEGMENT_BUTTON_KEY,
+                buttonIdentifier: getPitchIconForIndex(pitchIndex),
                 isClickDisabled: isSelected,
                 handleButtonClick: _handleButtonClick
             }}

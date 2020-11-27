@@ -13,7 +13,7 @@ const PitchBody = ({ serverClientPitchIndex }) => (
             )
         }}
     >
-        {getPitchSegmentForIndex(serverClientPitchIndex).test}
+        {getPitchSegmentForIndex(serverClientPitchIndex)}
     </div>
 )
 

@@ -7,10 +7,6 @@ const {
 
 export const getPitchSegmentsCount = () => SEGMENTS.length
 
-export const getPitchSegmentForIndex = pitchSegmentIndex => (
-    SEGMENTS[pitchSegmentIndex]
-)
-
 export const getPitchSegmentIndices = () => (
     getArrayOfLength(getPitchSegmentsCount())
 )
@@ -28,3 +24,11 @@ export const getValidPitchSegmentIndex = pitchSegmentIndex => (
 export const getNextPitchSegmentIndex = pitchSegmentIndex => (
     getPitchSegmentsCount() + pitchSegmentIndex
 ) % getPitchSegmentsCount()
+
+export const getPitchIconForIndex = pitchSegmentIndex => (
+    SEGMENTS[pitchSegmentIndex].icon
+)
+
+export const getPitchSegmentForIndex = pitchSegmentIndex => (
+    SEGMENTS[pitchSegmentIndex].segment
+)
