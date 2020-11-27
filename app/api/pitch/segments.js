@@ -11,8 +11,12 @@ export const getPitchSegmentForIndex = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex]
 )
 
+export const getPitchSegmentIndices = () => (
+    getArrayOfLength(getPitchSegmentsCount())
+)
+
 export const getIsPitchSegmentValid = pitchSegmentIndex => (
-    getArrayOfLength(getPitchSegmentsCount()).some(
+    getPitchSegmentIndices().some(
         index => index === pitchSegmentIndex
     )
 )

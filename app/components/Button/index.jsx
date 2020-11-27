@@ -163,11 +163,11 @@ Button.propTypes = {
     isSmallSize: PropTypes.bool,
     isLargeSize: PropTypes.bool,
     isDisabled: PropTypes.bool,
-    isClickDisabled: PropTypes.bool, // Only passed by nav button.
+    isClickDisabled: PropTypes.bool,
     isPopupButton: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isBrightHover: PropTypes.bool,
-    hoverOnParent: PropTypes.bool, // Only passed by nav button.
+    hoverOnParent: PropTypes.bool,
     buttonIdentifier: PropTypes.any,
     accessKey: PropTypes.string,
     handleButtonClick: PropTypes.func.isRequired,

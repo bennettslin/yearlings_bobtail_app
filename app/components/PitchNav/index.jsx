@@ -4,8 +4,9 @@ import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import Button from '../Button'
 import PitchDispatcher from '../../dispatchers/Pitch'
+import PitchNavButton from './Button'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
-import { getPitchSegmentsCount } from '../../api/pitch/segments'
+import { getPitchSegmentIndices, getPitchSegmentsCount } from '../../api/pitch/segments'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -31,12 +32,16 @@ const PitchNav = () => {
     const handleNextClick = () => {
         dispatchPitch.current({ direction: 1 })
     }
+    const handleButtonClick = pitchIndex => {
+        dispatchPitch.current({ pitchSegmentIndex: pitchIndex })
+    }
 
     return (
         <div
             {...{
                 className: cx(
-                    'PitchNav'
+                    'PitchNav',
+                    'fCC'
                 )
             }}
         >
@@ -58,6 +63,17 @@ const PitchNav = () => {
                     handleButtonClick: handlePreviousClick
                 }}
             />
+            {getPitchSegmentIndices().map(pitchIndex => {
+                return (
+                    <PitchNavButton
+                        {...{
+                            key: pitchIndex,
+                            pitchIndex,
+                            handleButtonClick
+                        }}
+                    />
+                )
+            })}
             <Button
                 isLargeSize
                 {...{
