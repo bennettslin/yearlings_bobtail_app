@@ -4994,5 +4994,9 @@ export default [
     {
         taskName: `Shirt images.`,
         workedHours: 20
+    },
+    {
+        taskName: `Fix bug with elCerritoTree zIndex.`,
+        workedHours: 1
     }
 ]

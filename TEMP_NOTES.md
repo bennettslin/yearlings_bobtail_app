@@ -1,7 +1,5 @@
 # Bugs
-* Cremated tree does jumpy thing.
-* Weird tooltip issue on pitch page. Tooltip changes position when hover and key at same time.
-* When changing song through just index number, UI seems to reload? But only when full path is not given.
+* Weird tooltip issue. Tooltip changes position when hover and key at same time. Issue is on all tooltips.
 
 # Pitch TODO:
 * Grab svg for button from data.
