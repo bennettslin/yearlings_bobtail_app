@@ -1,16 +1,20 @@
 import qs from 'qs'
+import {
+    getPathname,
+    getIndexFromPath,
+    getValidPitchIndex
+} from './pathname'
 import { getIsSongValid } from '../api/album/songs'
 import { getIsVerseValid } from '../api/album/verses'
 import { getIsAnnotationValid } from '../api/album/annotations'
-import { getIsPitchSegmentValid } from '../api/pitch/segments'
 import { getWindow } from '../utils/browser'
 
 export const VERSE_QUERY_FIELD = 'verse'
 export const ANNOTATION_QUERY_FIELD = 'annotation'
 
 export const getRoutingSongIndex = () => {
-    const { pathname } = getWindow().location,
-        routingSongIndex = parseInt(pathname.replace(/\D/g, ''))
+    const pathname = getPathname(),
+        routingSongIndex = getIndexFromPath(pathname)
 
     return getIsSongValid(routingSongIndex) ? routingSongIndex : NaN
 }
@@ -39,9 +43,6 @@ export const getRoutingAnnotationIndex = songIndex => {
     ) ? routingAnnotationIndex : NaN
 }
 
-export const getRoutingPitchIndex = () => {
-    const { pathname } = getWindow().location,
-        routingPitchIndex = parseInt(pathname.replace(/\D/g, ''))
-
-    return getIsPitchSegmentValid(routingPitchIndex) ? routingPitchIndex : NaN
-}
+export const getRoutingPitchIndex = () => (
+    getValidPitchIndex(getPathname())
+)

@@ -2,71 +2,23 @@ import {
     getAlbumReducers,
     getPitchReducers
 } from '../../redux'
-import { getRoutingSongIndex } from '../../helpers/routing'
 import {
-    getWindow,
-    getIsAlbumSession
-} from '../browser'
+    getPathname,
+    getIsValidAdminPath,
+    getIsValidPitchPagePath
+} from '../../helpers/pathname'
+import { getRoutingSongIndex } from '../../helpers/routing'
+import { getIsAlbumSession } from '../browser'
 import { getIsServerSide } from '../server'
-import { getIsPitchSegmentValid } from '../../api/pitch/segments'
-
-const VALID_ADMIN_PATHS = [
-    'Actors',
-    'Annotations',
-    'Previewer',
-    'Things',
-    'Skies',
-    'Progress'
-]
-
-const getPathname = element => {
-    const {
-            location: {
-                pathname
-            }
-        } = element.props.location ?
-            element.props :
-            getWindow(),
-
-        pathnames = pathname.split('/').filter(name => Boolean(name))
-
-    // Only get rid of initial forward slash.
-    return pathnames.join('/')
-}
-
-const getIsValidPitchPage = pathname => {
-    // If it's the pitch root path, it's valid.
-    if (pathname === 'Pitch') {
-        return true
-
-    // If it's a pitch page path...
-    } else if (pathname.includes('Pitch/page_')) {
-
-        // Ensure index is numeric.
-        const pagePitchIndex = parseInt(pathname.replace(/\D/g, ''))
-
-        // Ensure index exists.
-        return getIsPitchSegmentValid(pagePitchIndex)
-    }
-
-    return false
-}
 
 export const getIsPitchPage = element => (
-    getIsValidPitchPage(getPathname(element)) &&
+    getIsValidPitchPagePath(getPathname(element)) &&
 
     /**
      * Ensure that we are not in the pitch popup, since it will also show the
      * Pitch pathname while it is open.
      */
     !getIsAlbumSession()
-)
-
-const getIsValidAdminPath = element => (
-    // Admin paths are only valid in staging.
-    IS_STAGING && VALID_ADMIN_PATHS.some(
-        route => route === getPathname(element)
-    )
 )
 
 export const getNeedsStoreProvider = element => {

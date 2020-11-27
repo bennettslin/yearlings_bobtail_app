@@ -32,6 +32,7 @@
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
+* Cremated tree does jumpy thing.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
