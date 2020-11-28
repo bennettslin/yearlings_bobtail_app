@@ -21,8 +21,7 @@ const ScorePopup = ({ didMount }) => {
 
     return didMount && canScoreMount && (
         <Popup
-            isFullWidth
-            isFullHeight
+            isFullPopup
             displaysInOverlay
             {...{
                 popupName: 'ScorePopup',

@@ -12,8 +12,7 @@ const PopupView = ({
     bounceAnimate,
     shrinkAnimate,
     isCardSize,
-    isFullWidth,
-    isFullHeight,
+    isFullPopup,
     canBeFullHeight,
     hasNarrowPadding,
     hasWidePadding,
@@ -35,10 +34,10 @@ const PopupView = ({
                         'PopupView__bounceAnimate': bounceAnimate,
                         'PopupView__shrinkAnimate': shrinkAnimate,
                         'PopupView__cardSize': isCardSize,
-                        'PopupView__fullWidth': isFullWidth,
-                        'PopupView__fullHeight': isFullHeight,
+                        'popupView__fullWidth': isFullPopup,
+                        'popupView__fullHeight': isFullPopup,
                         'PopupView__canBeFullHeight':
-                            canBeFullHeight || isFullHeight
+                            canBeFullHeight || isFullPopup
                     }
                 ]
             )
@@ -48,7 +47,7 @@ const PopupView = ({
             <PopupViewButton
                 isCloseButton
                 {...{
-                    isFullWidth,
+                    isFullPopup,
                     inCardSize: isCardSize,
                     displaysInOverlay,
                     handlePopupButtonClick: handleCloseClick
@@ -104,8 +103,7 @@ PopupView.propTypes = {
     bounceAnimate: PropTypes.bool,
     shrinkAnimate: PropTypes.bool,
     isCardSize: PropTypes.bool,
-    isFullWidth: PropTypes.bool,
-    isFullHeight: PropTypes.bool,
+    isFullPopup: PropTypes.bool,
     canBeFullHeight: PropTypes.bool,
     hasNarrowPadding: PropTypes.bool,
     hasWidePadding: PropTypes.bool,

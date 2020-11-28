@@ -1,4 +1,26 @@
+@import '../../../scss/constants/icon';
+@import '../../../scss/constants/popup';
+@import '../../../scss/constants/responsive';
+
 .PitchScroll {
     background-color: #dfd;
+    width: 100%;
     height: 100%;
+
+    .PitchContainer
+    & {
+        // When in pitch container, width is the same as full popup.
+
+        max-width: $WIDTH_LAPTOP;
+
+        width: calc(
+            100%
+            - #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
+        );
+
+        .DW__phoneOrMiniWidth
+        & {
+            width: 100%;
+        }
+    }
 }

@@ -25,7 +25,7 @@ const Popup = ({
 }) => {
     const
         stopPropagation = useRef(),
-        { isFullHeight } = other
+        { isFullPopup } = other
 
     const handleContainerClick = e => {
         logEvent({ e, componentName: popupName })
@@ -52,7 +52,7 @@ const Popup = ({
                     'Popup',
                     popupName,
                     didMount && [
-                        isFullHeight && 'Popup__fullHeight',
+                        isFullPopup && 'Popup__fullHeight',
 
                         // For animation styling.
                         {
@@ -85,7 +85,7 @@ Popup.propTypes = {
     appear: PropTypes.bool,
     mountOnEnter: PropTypes.bool,
     unmountOnExit: PropTypes.bool,
-    isFullHeight: PropTypes.bool,
+    isFullPopup: PropTypes.bool,
     noFlexCentre: PropTypes.bool,
     noAbsoluteFull: PropTypes.bool,
     displaysInOverlay: PropTypes.bool,

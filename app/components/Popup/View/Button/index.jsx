@@ -18,7 +18,7 @@ const PopupViewButton = ({
     isCloseButton,
     isPreviousButton,
     isNextButton,
-    isFullWidth,
+    isFullPopup,
     inCardSize,
     displaysInOverlay,
     handlePopupButtonClick
@@ -63,7 +63,7 @@ const PopupViewButton = ({
                     {
                         'PopupViewButton__close': isCloseButton,
                         'PopupViewButton__closeFullWidth':
-                            isCloseButton && isFullWidth,
+                            isCloseButton && isFullPopup,
                         'PopupViewButton__previous': isPreviousButton,
                         'PopupViewButton__next': isNextButton,
                         'PopupViewButton__side':
@@ -103,7 +103,7 @@ PopupViewButton.propTypes = {
     isCloseButton: PropTypes.bool,
     isPreviousButton: PropTypes.bool,
     isNextButton: PropTypes.bool,
-    isFullWidth: PropTypes.bool,
+    isFullPopup: PropTypes.bool,
     inCardSize: PropTypes.bool,
     displaysInOverlay: PropTypes.bool,
     handlePopupButtonClick: PropTypes.func

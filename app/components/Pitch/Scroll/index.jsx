@@ -10,8 +10,7 @@ const PitchScroll = ({ serverClientPitchIndex }) => (
     <div
         {...{
             className: cx(
-                'PitchScroll',
-                'abF'
+                'PitchScroll'
             )
         }}
     >

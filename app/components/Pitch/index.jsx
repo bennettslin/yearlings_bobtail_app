@@ -12,7 +12,7 @@ const Pitch = ({ pagePitchIndex }) => (
             {...{
                 className: cx(
                     'Pitch',
-                    'abF'
+                    'fCC'
                 )
             }}
         >

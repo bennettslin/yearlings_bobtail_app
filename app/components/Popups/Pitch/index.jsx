@@ -8,6 +8,7 @@ import Popup from '../../Popup'
 import Pitch from '../../Pitch'
 import PitchNav from '../../PitchNav'
 import { mapIsPitchShown } from '../../../redux/toggle/selector'
+import './style'
 
 const PitchPopup = ({ didMount }) => {
     const
@@ -22,8 +23,7 @@ const PitchPopup = ({ didMount }) => {
         <Popup
             mountOnEnter
             unmountOnExit
-            isFullWidth
-            isFullHeight
+            isFullPopup
             shrinkAnimate
             displaysInOverlay
             {...{

@@ -21,8 +21,7 @@ const WikiPopup = ({ didMount }) => {
         <Popup
             mountOnEnter
             unmountOnExit
-            isFullWidth
-            isFullHeight
+            isFullPopup
             shrinkAnimate
             displaysInOverlay
             {...{

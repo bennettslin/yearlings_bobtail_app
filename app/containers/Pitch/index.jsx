@@ -7,7 +7,7 @@ import AccessStylesheet from '../../components/Stylesheets/Access'
 import Pitch from '../../components/Pitch'
 import PitchNav from '../../components/PitchNav'
 import PitchNavigation from '../../managers/Key/Navigation/Pitch'
-import PitchReturnButton from './ReturnButton'
+import PitchHeader from './Header'
 import { getKeyName } from '../../managers/Key/helper'
 import { getPathForPitchPage } from '../../managers/Url/helper'
 import { updateAccessStore } from '../../redux/access/action'
@@ -18,6 +18,7 @@ import { ESCAPE, PITCH_TOGGLE_KEY } from '../../constants/access'
 import DeviceWrapper from '../../wrappers/DeviceWrapper'
 import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
+import './style'
 
 const PitchContainer = ({ children }) => {
     const
@@ -86,6 +87,7 @@ const PitchContainer = ({ children }) => {
                     'PitchContainer',
                     'abF',
                     'foN',
+                    'fCC',
                     'PtSansNarrow'
                 ),
                 tabIndex: -1,
@@ -98,12 +100,12 @@ const PitchContainer = ({ children }) => {
                 isInPitch
                 {...{ getRootContainerElement }}
             />
+            <PitchHeader {...{ returnToAlbum }} />
             {getIsServerSide() ? (
                 children
             ) : (
                 <Pitch />
             )}
-            <PitchReturnButton {...{ returnToAlbum }} />
             <PitchNav />
             <PitchNavigation {...{ ref: navigatePitch }} />
         </div>
