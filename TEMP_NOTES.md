@@ -1,9 +1,8 @@
 # Pitch TODO:
-* Layout and styling!
-    * Return button has text
-    * Image responsive size
-    * Image responsive layout
-    * Scroll has overflow scroll
+* Layout and styling.
+    * Return button has text.
+    * Pitch container header has text.
+    * Focus on pitch scroll to allow for up down navigation.
 * Illustrator
     * Home button
 

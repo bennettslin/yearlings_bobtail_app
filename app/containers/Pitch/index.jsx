@@ -88,7 +88,6 @@ const PitchContainer = ({ children }) => {
                     'PitchContainer',
                     'abF',
                     'foN',
-                    'fCC',
                     'PtSansNarrow'
                 ),
                 tabIndex: -1,

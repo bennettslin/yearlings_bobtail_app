@@ -8,12 +8,12 @@ import PitchNavButton from './Button'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { getPitchSegmentIndices, getPitchSegmentsCount } from '../../api/pitch/segments'
 import {
+    // ARROW_UP,
     ARROW_LEFT,
-    ARROW_RIGHT,
-    ARROW_UP
+    ARROW_RIGHT
 } from '../../constants/access'
 import {
-    PITCH_HOME_BUTTON_KEY,
+    // PITCH_HOME_BUTTON_KEY,
     PITCH_NEXT_BUTTON_KEY,
     PITCH_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
@@ -24,9 +24,9 @@ const PitchNav = () => {
         dispatchPitch = useRef(),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
-    const handleHomeClick = () => {
-        dispatchPitch.current({ pitchSegmentIndex: 0 })
-    }
+    // const handleHomeClick = () => {
+    //     dispatchPitch.current({ pitchSegmentIndex: 0 })
+    // }
     const handlePreviousClick = () => {
         dispatchPitch.current({ direction: -1 })
     }
@@ -46,7 +46,7 @@ const PitchNav = () => {
                 )
             }}
         >
-            <Button
+            {/* <Button
                 isLargeSize
                 {...{
                     buttonName: PITCH_HOME_BUTTON_KEY,
@@ -54,7 +54,7 @@ const PitchNav = () => {
                     isDisabled: pitchSegmentIndex === 0,
                     handleButtonClick: handleHomeClick
                 }}
-            />
+            /> */}
             <Button
                 isLargeSize
                 {...{
