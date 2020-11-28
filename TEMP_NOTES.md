@@ -12,9 +12,6 @@
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
 
-# Bugs
-* Annotation popup card title tab is gone
-
 # Nice UI TODO:
 * Copyright in About.
 * Remove depth shading from slant direction cubes?

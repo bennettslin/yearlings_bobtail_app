@@ -44,7 +44,7 @@
     $degrees: 60deg;
     $lightShade: rgba(255, 255, 255, 0.125);
     $darkShade: rgba(0, 0, 0, 0.033);
-    $height: $height__annotationTitle * 3.4;
+    $height: 40px;
     $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
 
     background-image:

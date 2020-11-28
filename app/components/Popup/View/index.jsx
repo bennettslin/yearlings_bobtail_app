@@ -84,8 +84,7 @@ const PopupView = ({
                             'PopupViewContent__narrowPadding': hasNarrowPadding,
                             'PopupViewContent__widePadding': hasWidePadding
                         },
-                        !noBoxShadow && 'boxShadow__popupView',
-                        'ovH'
+                        !noBoxShadow && 'boxShadow__popupView'
                     ]
                 ),
                 onClick: handleContainerClick
