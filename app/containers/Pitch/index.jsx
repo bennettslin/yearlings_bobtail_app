@@ -25,6 +25,7 @@ const PitchContainer = ({ children }) => {
     const
         dispatch = useDispatch(),
         pitchContainerElement = useRef(),
+        pitchScrollElement = useRef(),
         navigatePitch = useRef(),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
@@ -36,6 +37,10 @@ const PitchContainer = ({ children }) => {
          * change store provider. Push, not replace, in history.
          */
         getWindow().location.href = '/'
+    }
+
+    const focusElement = () => {
+        pitchScrollElement.current.focus()
     }
 
     const onKeyDown = e => {
@@ -69,6 +74,7 @@ const PitchContainer = ({ children }) => {
 
     const onClick = () => {
         dispatch(updateAccessStore({ isAccessOn: false }))
+        focusElement()
     }
 
     useEffect(() => {
@@ -77,7 +83,7 @@ const PitchContainer = ({ children }) => {
             { replace: true }
         )
 
-        pitchContainerElement.current.focus()
+        focusElement()
     }, [pitchSegmentIndex])
 
     return (
@@ -90,7 +96,6 @@ const PitchContainer = ({ children }) => {
                     'foN',
                     'PtSansNarrow'
                 ),
-                tabIndex: -1,
                 onClick,
                 onKeyDown,
                 onKeyUp
@@ -107,7 +112,7 @@ const PitchContainer = ({ children }) => {
             {getIsServerSide() ? (
                 children
             ) : (
-                <Pitch />
+                <Pitch {...{ ref: pitchScrollElement }} />
             )}
             <PitchNav />
             <PitchNavigation {...{ ref: navigatePitch }} />

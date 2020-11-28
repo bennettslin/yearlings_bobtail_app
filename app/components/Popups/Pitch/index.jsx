@@ -1,5 +1,5 @@
 // Popup container for pitch section.
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import getDidMountHoc from '../../DidMountHoc'
@@ -10,7 +10,7 @@ import PitchNav from '../../PitchNav'
 import { mapIsPitchShown } from '../../../redux/toggle/selector'
 import './style'
 
-const PitchPopup = ({ didMount }) => {
+const PitchPopup = forwardRef(({ didMount }, ref) => {
     const
         dispatch = useDispatch(),
         isPitchShown = useSelector(mapIsPitchShown)
@@ -32,11 +32,11 @@ const PitchPopup = ({ didMount }) => {
                 handleCloseClick
             }}
         >
-            <Pitch />
+            <Pitch {...{ ref }} />
             <PitchNav />
         </Popup>
     )
-}
+})
 
 PitchPopup.propTypes = {
     didMount: PropTypes.bool.isRequired

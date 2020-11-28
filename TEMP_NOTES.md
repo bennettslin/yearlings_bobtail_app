@@ -2,7 +2,7 @@
 * Layout and styling.
     * Return button has text.
     * Pitch container header has text.
-    * Focus on pitch scroll to allow for up down navigation.
+    * Focus on pitch scroll to allow for up down navigation. For both page and popup.
     * Final colours.
 * Illustrator
     * Home button

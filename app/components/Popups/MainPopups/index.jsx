@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -11,7 +11,7 @@ import ScorePopup from '../Score'
 import PitchPopup from '../Pitch'
 import WikiPopup from '../Wiki'
 
-const MainPopups = ({ didMount }) => {
+const MainPopups = forwardRef(({ didMount }, ref) => {
     const menuHeight = useSelector(mapMenuHeight)
 
     return (
@@ -32,11 +32,11 @@ const MainPopups = ({ didMount }) => {
             <AnnotationPopup />
             <AboutPopup />
             <ScorePopup />
-            <PitchPopup />
+            <PitchPopup {...{ ref }} />
             <WikiPopup />
         </div>
     )
-}
+})
 
 MainPopups.propTypes = {
     didMount: PropTypes.bool.isRequired

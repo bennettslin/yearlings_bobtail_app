@@ -127,8 +127,8 @@ const FocusContainer = () => {
                 }
             }}
         >
-            <CloseHandler {...{ ref: closeForBodyClick }} />
             <RootContainer {...{ ref: lyricScrollElement }} />
+            <CloseHandler {...{ ref: closeForBodyClick }} />
             <SliderTouchDispatcher {...{ ref: dispatchSliderTouch }} />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
             <KeyManager {...{ ref: handleKey }} />
