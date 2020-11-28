@@ -3,6 +3,7 @@
     * Return button has text.
     * Pitch container header has text.
     * Focus on pitch scroll to allow for up down navigation.
+    * Final colours.
 * Illustrator
     * Home button
 
