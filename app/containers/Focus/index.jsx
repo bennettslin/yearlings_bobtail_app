@@ -1,10 +1,8 @@
 // Parent component that handles click, touch, and keyDown events.
-import React, { useEffect, useRef, useState, memo } from 'react'
+import React, { useEffect, useRef, memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateFocusStore } from '../../redux/focus/action'
-import CloseHandler from '../../managers/Close'
-import SliderTouchDispatcher from '../../dispatchers/SliderTouch'
-import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
+import RootTouchDispatcher from '../../dispatchers/RootTouch'
 import RootContainer from '../Root'
 import KeyManager from '../../managers/Key'
 import { isEmailFocused } from '../../utils/email'
@@ -21,15 +19,12 @@ const FocusContainer = () => {
         // aboutElement = useRef(),
         focusContainerElement = useRef(),
         lyricScrollElement = useRef(),
-        dispatchSliderTouch = useRef(),
-        stopPropagation = useRef(),
-        closeForBodyClick = useRef(),
+        dispatchRootTouch = useRef(),
         handleKey = useRef(),
         queuedFocus = useSelector(mapQueuedFocus),
         shouldNavigateLyric = useSelector(mapShouldNavigateLyric),
         isAboutShown = useSelector(mapIsAboutShown),
-        canSliderMount = useSelector(mapCanSliderMount),
-        [isSliderTouchEnding, setIsSliderTouchEnding] = useState(false)
+        canSliderMount = useSelector(mapCanSliderMount)
 
     const _focusElementForAccess = () => {
         if (isEmailFocused()) {
@@ -56,37 +51,9 @@ const FocusContainer = () => {
         }
     }
 
-    const onTouchMove = e => {
-        dispatchSliderTouch.current.move(e)
-    }
-
-    const onTouchEnd = e => {
-        // If this returns true, then slider touch is ending.
-        if (dispatchSliderTouch.current.end()) {
-            logEvent({ e, componentName: 'FocusContainer' })
-            /**
-             * Ignore body click event that gets triggered after touch end on
-             * slider, to prevent it from closing out of overlay.
-             */
-            setTimeout(() => setIsSliderTouchEnding(false), 200)
-            setIsSliderTouchEnding(true)
-        }
-    }
-
-    const onClick = e => {
-        if (isEmailFocused()) {
-            return false
-        }
-
-        logEvent({ e, componentName: 'FocusContainer' })
-
-        stopPropagation.current(e)
-
-        if (!isSliderTouchEnding) {
-            closeForBodyClick.current()
-        }
-    }
-
+    const onTouchMove = e => dispatchRootTouch.current.move(e)
+    const onTouchEnd = e => dispatchRootTouch.current.end(e)
+    const onClick = e => dispatchRootTouch.current.click(e)
     const onKeyDown = e => handleKey.current.down(e)
     const onKeyUp = e => handleKey.current.up(e)
 
@@ -128,9 +95,7 @@ const FocusContainer = () => {
             }}
         >
             <RootContainer {...{ ref: lyricScrollElement }} />
-            <CloseHandler {...{ ref: closeForBodyClick }} />
-            <SliderTouchDispatcher {...{ ref: dispatchSliderTouch }} />
-            <StopPropagationDispatcher {...{ ref: stopPropagation }} />
+            <RootTouchDispatcher {...{ ref: dispatchRootTouch }} />
             <KeyManager {...{ ref: handleKey }} />
         </div>
     )

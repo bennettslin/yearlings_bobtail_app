@@ -29,7 +29,7 @@ const PitchContainer = ({ children }) => {
         navigatePitch = useRef(),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
-    const getRootContainerElement = () => pitchContainerElement.current
+    const getResizeContainerElement = () => pitchContainerElement.current
 
     const returnToAlbum = () => {
         /**
@@ -106,7 +106,7 @@ const PitchContainer = ({ children }) => {
             </Helmet>
             <ResizeManager
                 isInPitch
-                {...{ getRootContainerElement }}
+                {...{ getResizeContainerElement }}
             />
             <PitchHeader {...{ returnToAlbum }} />
             {getIsServerSide() ? (

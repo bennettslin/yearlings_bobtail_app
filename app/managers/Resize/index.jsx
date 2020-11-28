@@ -15,7 +15,7 @@ import {
 
 const ResizeManager = ({
     isInPitch,
-    getRootContainerElement
+    getResizeContainerElement
 }) => {
     const
         dispatch = useDispatch(),
@@ -34,7 +34,7 @@ const ResizeManager = ({
         const {
             windowHeight,
             windowWidth
-        } = getWindowDimensions(getRootContainerElement())
+        } = getWindowDimensions(getResizeContainerElement())
 
         if (isInPitch) {
             dispatch(updateViewportPitchStore({
@@ -62,7 +62,7 @@ const ResizeManager = ({
             {
                 windowHeight: nextHeight,
                 windowWidth: nextWidth
-            } = getWindowDimensions(getRootContainerElement())
+            } = getWindowDimensions(getResizeContainerElement())
 
         if (
             nextHeight !== timeoutRef.current.windowHeight ||
@@ -95,7 +95,7 @@ const ResizeManager = ({
 
 ResizeManager.propTypes = {
     isInPitch: PropTypes.bool,
-    getRootContainerElement: PropTypes.func.isRequired
+    getResizeContainerElement: PropTypes.func.isRequired
 }
 
 export default memo(ResizeManager)

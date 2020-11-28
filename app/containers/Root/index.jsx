@@ -15,7 +15,7 @@ import './style'
 const RootContainer = forwardRef((props, ref) => {
     const rootContainerElement = useRef()
 
-    const getRootContainerElement = () => rootContainerElement.current
+    const getResizeContainerElement = () => rootContainerElement.current
 
     useEffect(() => {
         logMount('RootContainer')
@@ -32,7 +32,7 @@ const RootContainer = forwardRef((props, ref) => {
                 )
             }}
         >
-            <ResizeManager {...{ getRootContainerElement }} />
+            <ResizeManager {...{ getResizeContainerElement }} />
             <WrapperContainer>
                 <Theatre />
                 <CarouselMain />
