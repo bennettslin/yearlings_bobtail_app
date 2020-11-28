@@ -22,7 +22,6 @@ const PitchNavButton = ({
 
     return (
         <Button
-            isLargeSize
             hoverOnParent
             {...{
                 buttonName: PITCH_SEGMENT_BUTTON_KEY,

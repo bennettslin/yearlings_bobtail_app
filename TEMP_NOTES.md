@@ -1,6 +1,3 @@
-# Bugs
-* Weird tooltip issue. Tooltip changes position when hover and key at same time. Issue is on all tooltips.
-
 # Pitch TODO:
 * Layout and styling!
 * Illustrator

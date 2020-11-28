@@ -58,7 +58,6 @@ $margin__dotsContainer__phone: 8px;
 }
 
 .DotsSlideSelects {
-
     display: flex;
     flex-direction: column;
 
@@ -70,6 +69,8 @@ $margin__dotsContainer__phone: 8px;
     & {
         padding: $margin__thick * 0.75;
     }
+
+    border-radius: $borderRadius__wide;
 }
 
 .DotsSlideSelects__row {

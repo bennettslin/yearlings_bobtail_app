@@ -28,5 +28,10 @@ export default [
         taskName: `Small presences are positioned weird on mobile screens.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Weird tooltip issue. Tooltip changes position when hovered and keyed at the same time. Issue is on all tooltips.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

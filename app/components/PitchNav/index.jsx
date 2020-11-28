@@ -17,6 +17,7 @@ import {
     PITCH_NEXT_BUTTON_KEY,
     PITCH_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
+import './style'
 
 const PitchNav = () => {
     const
@@ -41,6 +42,7 @@ const PitchNav = () => {
             {...{
                 className: cx(
                     'PitchNav',
+                    'abF',
                     'fCC'
                 )
             }}

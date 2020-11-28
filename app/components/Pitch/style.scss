@@ -1,0 +1,6 @@
+@import '../../scss/constants/pitch';
+
+.Pitch {
+    background-color: #fdd;
+    height: calc(100% - #{$height__pitchNav});
+}

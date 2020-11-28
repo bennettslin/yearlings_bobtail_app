@@ -1,3 +1,4 @@
+@import '../../../scss/constants/border';
 @import '../../../scss/constants/icon';
 @import '../../../scss/constants/zIndex';
 
@@ -62,5 +63,5 @@
 }
 
 .OverviewPopupViewContent {
-    border-radius: 30px;
+    border-radius: $borderRadius__wider;
 }

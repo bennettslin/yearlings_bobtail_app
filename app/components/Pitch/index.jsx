@@ -3,18 +3,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import PagePitchIndexContext from '../../contexts/PagePitchIndex'
-import PitchBody from './Body'
+import PitchScroll from './Scroll'
+import './style'
 
 const Pitch = ({ pagePitchIndex }) => (
     <PagePitchIndexContext.Provider {...{ value: pagePitchIndex }}>
         <div
             {...{
                 className: cx(
-                    'Pitch'
+                    'Pitch',
+                    'abF'
                 )
             }}
         >
-            <PitchBody />
+            <PitchScroll />
         </div>
     </PagePitchIndexContext.Provider>
 )

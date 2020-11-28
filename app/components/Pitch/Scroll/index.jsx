@@ -4,12 +4,14 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getPitchServerClientHoc from '../../PitchHoc'
 import { getPitchSegmentForIndex } from '../../../api/pitch/segments'
+import './style'
 
-const PitchBody = ({ serverClientPitchIndex }) => (
+const PitchScroll = ({ serverClientPitchIndex }) => (
     <div
         {...{
             className: cx(
-                'PitchBody'
+                'PitchScroll',
+                'abF'
             )
         }}
     >
@@ -17,8 +19,8 @@ const PitchBody = ({ serverClientPitchIndex }) => (
     </div>
 )
 
-PitchBody.propTypes = {
+PitchScroll.propTypes = {
     serverClientPitchIndex: PropTypes.number.isRequired
 }
 
-export default getPitchServerClientHoc(PitchBody)
+export default getPitchServerClientHoc(PitchScroll)
