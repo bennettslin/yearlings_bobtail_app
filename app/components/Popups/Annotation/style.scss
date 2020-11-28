@@ -26,3 +26,8 @@
         }
     }
 }
+
+.AnnotationPopupViewContent {
+    // Override default to allow title to protrude.
+    overflow: visible;
+}

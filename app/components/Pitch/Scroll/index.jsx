@@ -21,7 +21,8 @@ const PitchScroll = forwardRef((props, ref) => {
             {...{
                 ref: setRef,
                 className: cx(
-                    'PitchScroll'
+                    'PitchScroll',
+                    'foN'
                 ),
                 tabIndex: -1
             }}
