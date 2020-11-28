@@ -41,7 +41,7 @@ const Player = ({
     const
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
-        didMount = useRef(),
+        didMountRef = useRef(),
         isSelected = useSelector(getMapIsSongSelected(songIndex)),
         playerPausedTime = useSelector(getMapPlayerPausedTime(songIndex)),
         isPlaying = useSelector(mapIsPlaying),
@@ -171,7 +171,7 @@ const Player = ({
     }, [queuedTogglePlay])
 
     useEffect(() => {
-        if (didMount.current) {
+        if (didMountRef.current) {
             if (isSelected) {
                 if (
                     /**
@@ -194,7 +194,7 @@ const Player = ({
                 dispatch(resetAudioQueue())
             }
         } else {
-            didMount.current = true
+            didMountRef.current = true
         }
     }, [canPromisePlay])
 

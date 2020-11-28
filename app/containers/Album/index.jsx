@@ -4,7 +4,7 @@ import AlbumPageElementContext from '../../contexts/AlbumPageElement'
 import PlayerTimeContext from '../../contexts/PlayerTime'
 import AudioManager from '../../managers/Audio'
 import ListenContainer from '../Listen'
-import FocusContainer from '../Focus'
+import RootContainer from '../Root'
 import StylesheetContainer from '../Stylesheet'
 import { setIsAlbumSession } from '../../utils/browser'
 
@@ -26,7 +26,7 @@ const AlbumContainer = ({ children }) => {
             >
                 <AudioManager />
                 <ListenContainer />
-                <FocusContainer />
+                <RootContainer />
                 <StylesheetContainer />
             </PlayerTimeContext.Provider>
         </AlbumPageElementContext.Provider>

@@ -12,12 +12,12 @@ import { mapIsNavExpanded } from '../../../redux/toggle/selector'
 const NavListener = () => {
     const
         dispatch = useDispatch(),
-        didMount = useRef(),
+        didMountRef = useRef(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isNavExpanded = useSelector(mapIsNavExpanded)
 
     useEffect(() => {
-        if (didMount.current) {
+        if (didMountRef.current) {
             if (isNavExpanded) {
                 /**
                  * Establish the nav index upon showing the nav. This will
@@ -35,7 +35,7 @@ const NavListener = () => {
                 dispatch(resetAccessedNav())
             }
         } else {
-            didMount.current = true
+            didMountRef.current = true
         }
     }, [isNavExpanded])
 
