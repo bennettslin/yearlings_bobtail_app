@@ -20,6 +20,7 @@ const AboutTitle = ({ didMount }) => {
                         className: cx(
                             'About__albumTitle',
                             'About__colouredText',
+                            'fontSize__largeTitle',
                             'Rancho'
                         )
                     }

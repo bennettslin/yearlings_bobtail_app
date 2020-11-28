@@ -10,6 +10,20 @@
     font-family: Rancho, Georgia;
 }
 
+.fontSize__largeTitle {
+    font-size: 3em;
+
+    .DW__miniWidth
+    & {
+        font-size: 2.5em;
+    }
+
+    .DW__phoneWidth
+    & {
+        font-size: 2em;
+    }
+}
+
 .fontSize__title {
     font-size: $fontSize__title;
 

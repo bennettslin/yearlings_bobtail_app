@@ -21,6 +21,7 @@ const PitchHeader = ({
         <Button
             isLargeSize
             {...{
+                className: 'dramaMasks',
                 buttonName: PITCH_RETURN_BUTTON_KEY,
                 accessKey: PITCH_TOGGLE_KEY,
                 handleButtonClick: returnToAlbum

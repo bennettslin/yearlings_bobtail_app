@@ -4,8 +4,17 @@
 
 .PitchScroll {
     background-color: #dfd;
+    position: relative;
     width: 100%;
     height: 100%;
+    padding: $margin__thick;
+
+    display: flex;
+    flex-direction: column;
+
+    & > :not(:last-child) {
+        margin-bottom: $margin__thick;
+    }
 
     .PitchContainer
     & {
@@ -22,5 +31,12 @@
         & {
             width: 100%;
         }
+    }
+}
+
+.PitchScroll__content {
+    display: flex;
+    & > :not(:last-child) {
+        margin-right: $margin__thick;
     }
 }

@@ -1,5 +1,10 @@
 # Pitch TODO:
 * Layout and styling!
+    * Return button has colouring and text
+    * Scroll border
+    * Scroll body image responsive size
+    * Scroll text size
+* Helmet text
 * Illustrator
     * Home button
 
@@ -10,6 +15,7 @@
 * At the very least, get rid of Admin styles
 
 # Nice UI TODO:
+* Copyright in About.
 * Remove depth shading from slant direction cubes?
 
 # Annotation edit TODO:

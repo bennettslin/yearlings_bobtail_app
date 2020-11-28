@@ -16,7 +16,7 @@ import {
     TEMP_PITCH_ICON_8
 } from '../../../../../constants/pitch'
 
-const PITCH_SEGMENTS = {
+const PITCH_ICONS = {
     [TEMP_PITCH_ICON_0]: popupClose,
     [TEMP_PITCH_ICON_1]: carouselShown,
     [TEMP_PITCH_ICON_2]: navShown,
@@ -29,5 +29,5 @@ const PITCH_SEGMENTS = {
 }
 
 export default ({ buttonIdentifier }) => {
-    return PITCH_SEGMENTS[buttonIdentifier]
+    return PITCH_ICONS[buttonIdentifier]
 }

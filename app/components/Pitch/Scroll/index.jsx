@@ -1,12 +1,12 @@
 // Section to show pitch to labels and press.
 import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-import getPitchServerClientHoc from '../../PitchHoc'
-import { getPitchSegmentForIndex } from '../../../api/pitch/segments'
+import PitchTitle from './Title'
+import PitchImage from './Image'
+import PitchText from './Text'
 import './style'
 
-const PitchScroll = ({ serverClientPitchIndex }) => (
+const PitchScroll = () => (
     <div
         {...{
             className: cx(
@@ -14,12 +14,18 @@ const PitchScroll = ({ serverClientPitchIndex }) => (
             )
         }}
     >
-        {getPitchSegmentForIndex(serverClientPitchIndex)}
+        <PitchTitle />
+        <div
+            {...{
+                className: cx(
+                    'PitchScroll__content'
+                )
+            }}
+        >
+            <PitchImage />
+            <PitchText />
+        </div>
     </div>
 )
 
-PitchScroll.propTypes = {
-    serverClientPitchIndex: PropTypes.number.isRequired
-}
-
-export default getPitchServerClientHoc(PitchScroll)
+export default PitchScroll
