@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { navigate } from 'gatsby'
 import { useDispatch, useSelector } from 'react-redux'
+import { Helmet } from 'react-helmet'
+import { navigate } from 'gatsby'
 import AccessStylesheet from '../../components/Stylesheets/Access'
 import Pitch from '../../components/Pitch'
 import PitchNav from '../../components/PitchNav'
@@ -96,6 +97,9 @@ const PitchContainer = ({ children }) => {
                 onKeyUp
             }}
         >
+            <Helmet>
+                <title>{`Pitch | Yearling's Bobtail`}</title>
+            </Helmet>
             <ResizeManager
                 isInPitch
                 {...{ getRootContainerElement }}

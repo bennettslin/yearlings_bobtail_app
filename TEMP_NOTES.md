@@ -1,10 +1,9 @@
 # Pitch TODO:
 * Layout and styling!
-    * Return button has colouring and text
-    * Scroll border
-    * Scroll body image responsive size
-    * Scroll text size
-* Helmet text
+    * Return button has text
+    * Image responsive size
+    * Image responsive layout
+    * Scroll has overflow scroll
 * Illustrator
     * Home button
 
@@ -13,6 +12,9 @@
     * https://github.com/gatsbyjs/gatsby/issues/3446
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
+
+# Bugs
+* Annotation popup card title tab is gone
 
 # Nice UI TODO:
 * Copyright in About.

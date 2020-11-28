@@ -81,7 +81,7 @@ const AnnotationTitle = ({
                         'boxShadow__annotationTab__selected' :
                         'boxShadow__annotationTab',
 
-                    'fontSize__title'
+                    'fontSize__smallTitle'
                 )
             }}
         >

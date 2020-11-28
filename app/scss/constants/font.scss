@@ -1,14 +1,26 @@
-$fontSize__verse: 1em;
-$fontSize__title: 1.5em;
-
 $multiplier__fontSize__mini: 0.85;
-$fontSize__verse__mini:
-    $fontSize__verse
-    * $multiplier__fontSize__mini;
-$fontSize__title__mini: 1.2em;
-
 $multiplier__fontSize__phone: 0.75;
+
+$fontSize__largeTitle: 2.5em;
+$fontSize__largeTitle__mini:
+    $fontSize__largeTitle * $multiplier__fontSize__mini;
+$fontSize__largeTitle__phone:
+    $fontSize__largeTitle * $multiplier__fontSize__phone;
+
+$fontSize__mediumTitle: 2em;
+$fontSize__mediumTitle__mini:
+    $fontSize__mediumTitle * $multiplier__fontSize__mini;
+$fontSize__mediumTitle__phone:
+    $fontSize__mediumTitle * $multiplier__fontSize__phone;
+
+$fontSize__smallTitle: 1.5em;
+$fontSize__smallTitle__mini:
+    $fontSize__smallTitle * $multiplier__fontSize__mini;
+$fontSize__smallTitle__phone:
+    $fontSize__smallTitle * $multiplier__fontSize__phone;
+
+$fontSize__verse: 1em;
+$fontSize__verse__mini:
+    $fontSize__verse * $multiplier__fontSize__mini;
 $fontSize__verse__phone:
-    $fontSize__verse
-    * $multiplier__fontSize__phone;
-$fontSize__title__phone: 1em;
+    $fontSize__verse * $multiplier__fontSize__phone;

@@ -10,11 +10,6 @@
     display: flex;
     align-items: flex-start;
 
-    // Unlike lyric title, annotation title maxes out at mini font size.
-    &.fontSize__title {
-        font-size: $fontSize__title__mini;
-    }
-
     padding:
         $margin__thick
         $PADDING_POPUP_CONTENT_WIDE

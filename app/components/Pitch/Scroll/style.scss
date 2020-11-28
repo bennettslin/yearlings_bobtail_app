@@ -1,6 +1,8 @@
+@import '../../../scss/constants/border';
 @import '../../../scss/constants/icon';
 @import '../../../scss/constants/popup';
 @import '../../../scss/constants/responsive';
+@import '../../../scss/constants/shadow';
 
 .PitchScroll {
     background-color: #dfd;
@@ -31,6 +33,9 @@
         & {
             width: 100%;
         }
+
+        border-radius: $borderRadius__wider;
+        box-shadow: $boxShadow__popupView;
     }
 }
 
