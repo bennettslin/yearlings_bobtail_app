@@ -3,25 +3,15 @@
 @import '../../../scss/constants/shadow';
 
 .PitchScroll__container {
-    background-color: #dfd;
+    background-color: hsl(47, 21%, 91%);
 
     .PitchContainer
     & {
-        // When in pitch container, width is the same as full popup.
-        
-        // max-width: $WIDTH_LAPTOP;
-        
-        // width: calc(
-        //         100%
-        //         - #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
-        //     );
-            
         box-shadow: $boxShadow__popupView;
         border-radius: $borderRadius__wide;
 
         .DW__phoneOrMiniWidth
         & {
-            // width: 100%;
             border-radius: 0;
         }
     }
@@ -64,7 +54,7 @@
     $gradient__pitch: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 1) 95%,
+        rgba(0, 0, 0, 1) 92%,
         rgba(0, 0, 0, 0)
     );
 

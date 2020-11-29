@@ -5,6 +5,7 @@
 .Button {
     position: relative;
     opacity: 0.25;
+    user-select: none;
 
     .DW__userAgentDesktop
     & {

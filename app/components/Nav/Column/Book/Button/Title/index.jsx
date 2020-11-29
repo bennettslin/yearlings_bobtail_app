@@ -1,7 +1,7 @@
 // Button to select book or song in nav section.
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
+import ButtonTitle from '../../../../../Button/Title'
 import { getTitleForSong } from '../../../../../../api/album/songs'
 import { getIndexCharacter } from '../helper'
 import './style'
@@ -17,30 +17,12 @@ const NavButtonTitle = ({
         getTitleForSong(songIndex)
 
     return Boolean(title) && (
-        <div
+        <ButtonTitle
             {...{
-                className: cx(
-                    'NavButtonTitle',
-                    'abF'
-                )
+                title,
+                isSelected
             }}
-        >
-            <div
-                {...{
-                    className: cx(
-                        'NavButtonTitle__text',
-                        isSelected ?
-                            'button__text__selected' :
-                            'button__text__interactable',
-                        'Rancho',
-                        'textShadow__dark',
-                        'fCC'
-                    )
-                }}
-            >
-                {title}
-            </div>
-        </div>
+        />
     )
 }
 

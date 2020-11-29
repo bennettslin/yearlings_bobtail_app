@@ -1,6 +1,25 @@
+@import '../../../scss/constants/icon';
 @import '../../../scss/constants/pitch';
 
 .PitchHeader {
     width: 100%;
     height: $height__pitchHeader;
+
+    display: flex;
+    align-items: center;
+}
+
+.ButtonTitle {
+    .Button__pitchReturn
+    & {
+        left: 100%;
+        display: flex;
+        margin-left: $MARGIN_THIN;
+    }
+}
+
+.Button__pitchReturnSize {
+    height: $LENGTH_ICON_LARGE;
+    width: $LENGTH_ICON_LARGE * 1.77;
+    min-width: $LENGTH_ICON_LARGE * 1.77;
 }

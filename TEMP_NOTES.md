@@ -1,8 +1,7 @@
 # Pitch TODO:
-* Layout and styling.
-    * Return button has text.
-    * Pitch container header has text.
-    * Final colours.
+* Consolidate colours
+* Make colour contrast work in popup.
+* Scroll to top of page when changing pages.
 * Illustrator
     * Home button
 
