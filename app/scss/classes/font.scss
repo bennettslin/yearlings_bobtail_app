@@ -1,3 +1,5 @@
+@import '../constants/colour';
+
 .Neuton {
     font-family: Neuton, Times;
 }
@@ -8,6 +10,10 @@
 
 .Rancho {
     font-family: Rancho, Georgia;
+}
+
+.fontColour__title {
+    color: $colour__paused__empty;
 }
 
 .fontSize__largeTitle {

@@ -32,15 +32,15 @@
 
 .popupView__fullWidth {
     max-width: $WIDTH_LAPTOP;
+    width: 100%;
 
-    width: calc(
-        100%
-        - #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
-    );
-
-    .DW__phoneOrMiniWidth
+    
+    .DW__tabletOrDesktopWidth
     & {
-        width: 100%;
+        width: calc(
+            100% -
+            #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
+        );
     }
 }
 
@@ -99,11 +99,10 @@
     height: 100%;
     overflow: hidden;
     background-color: $COLOUR__FUTURE__LIGHTER;
-    border-radius: $borderRadius__wide;
-
-    .DW__phoneOrMiniWidth
+    
+    .DW__tabletOrDesktopWidth
     & {
-        border-radius: 0;
+        border-radius: $borderRadius__wide;
     }
 }
 

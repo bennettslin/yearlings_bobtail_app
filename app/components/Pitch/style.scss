@@ -14,14 +14,13 @@
         max-width: $WIDTH_LAPTOP;
         height: calc(100% - #{$height__pitchHeader + $height__pitchNav});
         
-        width: calc(
-                100%
-                - #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
-            );
-            
-        .DW__phoneOrMiniWidth
+        .DW__tabletOrDesktopWidth
         & {
-            width: 100%;
+            width: calc(
+                100% -
+                #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
+            );
         }
     }
+
 }

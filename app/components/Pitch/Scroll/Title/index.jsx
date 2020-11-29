@@ -11,7 +11,9 @@ const PitchTitle = ({ serverClientPitchIndex }) => (
         {...{
             className: cx(
                 'PitchTitle',
-                'fontSize__largeTitle'
+                'fontColour__title',
+                'fontSize__largeTitle',
+                'Rancho'
             )
         }}
     >

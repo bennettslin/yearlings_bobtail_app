@@ -1,5 +1,9 @@
+@import '../../../scss/constants/icon';
+
 .PitchPopupViewContent {
     background-color: hsl(47, 21%, 61%);
+    padding: $margin__thick $margin__thick 0;
+
     display: flex;
     flex-direction: column;
 }

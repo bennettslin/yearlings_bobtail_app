@@ -5,15 +5,11 @@
 .PitchScroll__container {
     background-color: hsl(47, 21%, 91%);
 
-    .PitchContainer
+    box-shadow: $boxShadow__popupView;
+    
+    .DW__tabletOrDesktopWidth
     & {
-        box-shadow: $boxShadow__popupView;
         border-radius: $borderRadius__wide;
-
-        .DW__phoneOrMiniWidth
-        & {
-            border-radius: 0;
-        }
     }
 }
 

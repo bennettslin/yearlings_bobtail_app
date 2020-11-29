@@ -28,7 +28,7 @@ const AboutChild = ({
                     ...didMount && {
                         className: cx(
                             'AboutChild__header',
-                            'About__colouredText',
+                            'fontColour__title',
                             'Rancho'
                         )
                     }

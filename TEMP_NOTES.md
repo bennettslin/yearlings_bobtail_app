@@ -1,6 +1,7 @@
 # Pitch TODO:
 * Consolidate colours
-* Make colour contrast work in popup.
+    * With proscenium
+    * Make all popup views brown
 * Scroll to top of page when changing pages.
 * Illustrator
     * Home button
@@ -10,7 +11,6 @@
     * https://github.com/gatsbyjs/gatsby/issues/3446
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
-* In pitch, why does disabled button flash when up or down is pressed?
 
 # Nice UI TODO:
 * Copyright in About.

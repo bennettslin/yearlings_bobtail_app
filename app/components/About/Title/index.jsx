@@ -19,7 +19,7 @@ const AboutTitle = ({ didMount }) => {
                     ...didMount && {
                         className: cx(
                             'About__albumTitle',
-                            'About__colouredText',
+                            'fontColour__title',
                             'fontSize__largeTitle',
                             'Rancho'
                         )
@@ -35,7 +35,7 @@ const AboutTitle = ({ didMount }) => {
                         ...didMount && {
                             className: cx(
                                 'About__bandName',
-                                'About__colouredText',
+                                'fontColour__title',
                                 'Rancho'
                             )
                         }
