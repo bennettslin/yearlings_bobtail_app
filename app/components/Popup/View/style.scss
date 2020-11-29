@@ -100,6 +100,11 @@
     overflow: hidden;
     background-color: $COLOUR__FUTURE__LIGHTER;
     border-radius: $borderRadius__wide;
+
+    .DW__phoneOrMiniWidth
+    & {
+        border-radius: 0;
+    }
 }
 
 .PopupViewContent__narrowPadding {

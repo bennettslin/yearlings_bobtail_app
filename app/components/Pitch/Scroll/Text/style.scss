@@ -2,7 +2,6 @@
 
 .PitchText {
     width: 100%;
-    border: 1px solid blue;
 
     & > :not(:last-child) {
         margin-bottom: $margin__thick;

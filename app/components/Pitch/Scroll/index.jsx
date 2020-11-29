@@ -1,28 +1,28 @@
 // Section to show pitch to labels and press.
-import React, { forwardRef, useRef } from 'react'
+import React, { forwardRef } from 'react'
 import cx from 'classnames'
 import PitchTitle from './Title'
 import PitchImage from './Image'
 import PitchText from './Text'
 import './style'
 
-const PitchScroll = forwardRef((props, ref) => {
-    const pitchScrollElement = useRef()
-
-    const setRef = node => {
-        if (ref) {
-            ref.current = node
-        }
-        pitchScrollElement.current = node
-    }
-
-    return (
+const PitchScroll = forwardRef((props, ref) => (
+    <div
+        {...{
+            className: cx(
+                // Box shadow and gradient mask cannot be on same element.
+                'PitchScroll__container',
+                'abF'
+            )
+        }}
+    >
         <div
             {...{
-                ref: setRef,
+                ref,
                 className: cx(
                     'PitchScroll',
-                    'foN'
+                    'foN',
+                    'gradientMask__pitch'
                 ),
                 tabIndex: -1
             }}
@@ -39,7 +39,7 @@ const PitchScroll = forwardRef((props, ref) => {
                 <PitchText />
             </div>
         </div>
-    )
-})
+    </div>
+))
 
 export default PitchScroll

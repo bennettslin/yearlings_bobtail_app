@@ -1,11 +1,33 @@
 @import '../../../scss/constants/border';
 @import '../../../scss/constants/icon';
-@import '../../../scss/constants/popup';
-@import '../../../scss/constants/responsive';
 @import '../../../scss/constants/shadow';
 
-.PitchScroll {
+.PitchScroll__container {
     background-color: #dfd;
+
+    .PitchContainer
+    & {
+        // When in pitch container, width is the same as full popup.
+        
+        // max-width: $WIDTH_LAPTOP;
+        
+        // width: calc(
+        //         100%
+        //         - #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
+        //     );
+            
+        box-shadow: $boxShadow__popupView;
+        border-radius: $borderRadius__wide;
+
+        .DW__phoneOrMiniWidth
+        & {
+            // width: 100%;
+            border-radius: 0;
+        }
+    }
+}
+
+.PitchScroll {
     position: relative;
     width: 100%;
     height: 100%;
@@ -17,26 +39,6 @@
 
     & > :not(:last-child) {
         margin-bottom: $margin__thick;
-    }
-
-    .PitchContainer
-    & {
-        // When in pitch container, width is the same as full popup.
-
-        max-width: $WIDTH_LAPTOP;
-
-        width: calc(
-            100%
-            - #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
-        );
-
-        .DW__phoneOrMiniWidth
-        & {
-            width: 100%;
-        }
-
-        border-radius: $borderRadius__wider;
-        box-shadow: $boxShadow__popupView;
     }
 }
 
@@ -56,4 +58,15 @@
             margin-bottom: $margin__thick;
         }
     }
+}
+
+.gradientMask__pitch {
+    $gradient__pitch: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 1) 95%,
+        rgba(0, 0, 0, 0)
+    );
+
+    mask-image: $gradient__pitch;
 }

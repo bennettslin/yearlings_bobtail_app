@@ -93,6 +93,7 @@ const PitchContainer = ({ children }) => {
                 className: cx(
                     'PitchContainer',
                     'abF',
+                    'fCC',
                     'PtSansNarrow'
                 ),
                 onClick,

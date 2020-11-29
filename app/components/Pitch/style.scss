@@ -1,12 +1,27 @@
+@import '../../scss/constants/icon';
 @import '../../scss/constants/pitch';
+@import '../../scss/constants/popup';
+@import '../../scss/constants/responsive';
 
 .Pitch {
-    background-color: #fdd;
+    position: relative;
     width: 100%;
     height: calc(100% - #{$height__pitchNav});
 
     .PitchContainer
     & {
+        // When in pitch container, width is the same as full popup.
+        max-width: $WIDTH_LAPTOP;
         height: calc(100% - #{$height__pitchHeader + $height__pitchNav});
+        
+        width: calc(
+                100%
+                - #{$LENGTH_ICON_LARGE * 2 + $PADDING_POPUP_CONTENT_WIDE * 2}
+            );
+            
+        .DW__phoneOrMiniWidth
+        & {
+            width: 100%;
+        }
     }
 }
