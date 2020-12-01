@@ -2,7 +2,6 @@
 * Consolidate colours
     * With proscenium
     * Make all popup views brown
-* Scroll to top of page when changing pages.
 * Illustrator
     * Home button
 

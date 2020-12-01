@@ -1,45 +1,56 @@
 // Section to show pitch to labels and press.
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import PitchTitle from './Title'
 import PitchImage from './Image'
 import PitchText from './Text'
+import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
 import './style'
 
-const PitchScroll = forwardRef((props, ref) => (
-    <div
-        {...{
-            className: cx(
-                // Box shadow and gradient mask cannot be on same element.
-                'PitchScroll__container',
-                'abF'
-            )
-        }}
-    >
+const PitchScroll = forwardRef((props, ref) => {
+    const pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
+
+    useEffect(() => {
+        // Scroll back to top upon page change.
+        ref.current.scrollTop = 0
+    }, [pitchSegmentIndex])
+
+    return (
         <div
             {...{
-                ref,
                 className: cx(
-                    'PitchScroll',
-                    'foN',
-                    'gradientMask__pitch'
-                ),
-                tabIndex: -1
+                    // Box shadow and gradient mask cannot be on same element.
+                    'PitchScroll__container',
+                    'abF'
+                )
             }}
         >
-            <PitchTitle />
             <div
                 {...{
+                    ref,
                     className: cx(
-                        'PitchScroll__content'
-                    )
+                        'PitchScroll',
+                        'foN',
+                        'gradientMask__pitch'
+                    ),
+                    tabIndex: -1
                 }}
             >
-                <PitchImage />
-                <PitchText />
+                <PitchTitle />
+                <div
+                    {...{
+                        className: cx(
+                            'PitchScroll__content'
+                        )
+                    }}
+                >
+                    <PitchImage />
+                    <PitchText />
+                </div>
             </div>
         </div>
-    </div>
-))
+    )
+})
 
 export default PitchScroll
