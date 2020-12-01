@@ -25,6 +25,9 @@ $lum__medium: 73%;
 $lum__dark: 63%;
 $lum__darker: 59%;
 
+$colour__foreground: hsl(47, 21%, $lum__lighter);
+$colour__background: hsl(47, 21%, $lum__darker);
+
 $colour__past__bold: hsl($hue__past, $sat__bold, $lum__medLight);
 $COLOUR__PAST__LIGHTER: hsl($hue__past, $sat__lighter, $lum__lighter);
 $COLOUR__PAST__LIGHT: hsl($hue__past, $sat__light, $lum__light);

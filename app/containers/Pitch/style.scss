@@ -1,4 +1,6 @@
+@import '../../scss/constants/colour';
+
 .PitchContainer {
-    background-color: hsl(47, 21%, 61%);
+    background-color: $colour__background;
     flex-direction: column;
 }

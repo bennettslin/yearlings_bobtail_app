@@ -26,7 +26,7 @@ $margin__dotsContainer__phone: 8px;
     }
 
     box-shadow: $boxShadow__mainCard;
-    background-color: $COLOUR__FUTURE__LIGHTER;
+    background-color: $colour__foreground;
 
     .DW__desktopWidth
     .MW__cannotCarouselShow
@@ -62,8 +62,6 @@ $margin__dotsContainer__phone: 8px;
     flex-direction: column;
 
     padding: $margin__thick;
-
-    background-color: $COLOUR__FUTURE__LIGHTER;
 
     .DW__phoneOrMiniWidth
     & {

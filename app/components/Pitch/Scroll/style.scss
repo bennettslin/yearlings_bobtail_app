@@ -1,9 +1,10 @@
 @import '../../../scss/constants/border';
+@import '../../../scss/constants/colour';
 @import '../../../scss/constants/icon';
 @import '../../../scss/constants/shadow';
 
 .PitchScroll__container {
-    background-color: hsl(47, 21%, 91%);
+    background-color: $colour__foreground;
 
     box-shadow: $boxShadow__popupView;
     

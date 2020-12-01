@@ -1,7 +1,4 @@
 # Pitch TODO:
-* Consolidate colours
-    * With proscenium
-    * Make all popup views brown
 * Illustrator
     * Home button
 
