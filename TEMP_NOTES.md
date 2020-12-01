@@ -1,4 +1,6 @@
 # Pitch TODO:
+* In small screens:
+    * Replace page buttons with home and end buttons.
 * Illustrator
     * Home button
 
