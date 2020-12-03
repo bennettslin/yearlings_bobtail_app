@@ -20,7 +20,7 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Darken presences in one-time dark scenes.`,
+        taskName: `Darken presences in one-time dark scenes. Both night and night magic.`,
         workedHours: 0,
         neededHours: 5
     },

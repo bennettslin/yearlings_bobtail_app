@@ -11,6 +11,7 @@
 * At the very least, get rid of Admin styles
 
 # Nice UI TODO:
+* Performance. (Redux.)
 * Copyright in About.
 * Remove depth shading from slant direction cubes?
 

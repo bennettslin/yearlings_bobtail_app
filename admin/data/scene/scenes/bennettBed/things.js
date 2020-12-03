@@ -77,11 +77,13 @@ export default {
         },
         [LINGERIE_DRAWING]: {
             yIndex: 4,
-            xPosition: 5.9
+            xPosition: 5.9,
+            zOffset: -0.03
         },
         [VASELINE]: {
             yIndex: 4,
-            xPosition: 7.5
+            xPosition: 7.5,
+            zOffset: -0.03
         }
     },
     [FURNITURE]: {
