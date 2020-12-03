@@ -4998,5 +4998,9 @@ export default [
     {
         taskName: `Fix bug with elCerritoTree zIndex.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix some presences.`,
+        workedHours: 2
     }
 ]
