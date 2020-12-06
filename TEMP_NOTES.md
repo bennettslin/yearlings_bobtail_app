@@ -13,6 +13,7 @@
 # Nice UI TODO:
 * Performance. (Redux.)
 * Copyright in About.
+* Add part about fellow artists and talented musicians in About.
 * Remove depth shading from slant direction cubes?
 
 # Annotation edit TODO:

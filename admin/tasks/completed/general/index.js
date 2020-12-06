@@ -5002,5 +5002,9 @@ export default [
     {
         taskName: `Fix some presences.`,
         workedHours: 2
+    },
+    {
+        taskName: `Pitch functionality.`,
+        workedHours: 63
     }
 ]

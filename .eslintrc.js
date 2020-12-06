@@ -40,7 +40,7 @@ module.exports = {
         'logError': true,
         'process': true
     },
-    'parser': 'babel-eslint',
+    'parser': '@babel/eslint-parser',
     'parserOptions': {
         'ecmaFeatures': {
             'experimentalObjectRestSpread': true,
