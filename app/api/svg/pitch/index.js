@@ -13,7 +13,13 @@ import {
     TEMP_PITCH_ICON_5,
     TEMP_PITCH_ICON_6,
     TEMP_PITCH_ICON_7,
-    TEMP_PITCH_ICON_8
+    TEMP_PITCH_ICON_8,
+    TEMP_PITCH_ICON_9,
+    TEMP_PITCH_ICON_10,
+    TEMP_PITCH_ICON_11,
+    TEMP_PITCH_ICON_12,
+    TEMP_PITCH_ICON_13,
+    TEMP_PITCH_ICON_14
 } from '../../../constants/pitch'
 
 const PITCH_IMAGES = {
@@ -25,7 +31,13 @@ const PITCH_IMAGES = {
     [TEMP_PITCH_ICON_5]: carouselShown,
     [TEMP_PITCH_ICON_6]: navShown,
     [TEMP_PITCH_ICON_7]: neitherShown,
-    [TEMP_PITCH_ICON_8]: popupClose
+    [TEMP_PITCH_ICON_8]: popupClose,
+    [TEMP_PITCH_ICON_9]: popupClose,
+    [TEMP_PITCH_ICON_10]: carouselShown,
+    [TEMP_PITCH_ICON_11]: navShown,
+    [TEMP_PITCH_ICON_12]: neitherShown,
+    [TEMP_PITCH_ICON_13]: popupClose,
+    [TEMP_PITCH_ICON_14]: carouselShown
 }
 
 const getPitchImageForIndex = pitchIndex => {
