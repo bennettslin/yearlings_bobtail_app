@@ -6,7 +6,7 @@
 
 * Startups, like Google, need to scale first, then think about profits. They may not see a profit until they reach millions of users. Superlinear growth.
 
-* If a startup makes no profit when it has thousands of users, why would it suddenly profit with a million users? One reason is the network effect, Facebook.
+* If a startup makes no profit when it has thousands of users, why would anyone expect it can suddenly profit with a million users? One reason is the network effect, Facebook.
 
 * Another reason is economies of scale, Amazon.
 
@@ -26,4 +26,4 @@
 
 * Yearling's Bobtail is both a difficult and a complex work, so it's an artup.
 
-* Of course, betting on the Bobtail Yearlings comes with a risk, just as betting on any other startup or artup does. This is just to say it wouldn't be unreasonably risky. Good conclusion.
+* Of course, betting on the Bobtail Yearlings comes with a risk, just as betting on any other startup or artup does. This is just to say it wouldn't be unreasonably risky. Good conclusion. Happy to work with you.
