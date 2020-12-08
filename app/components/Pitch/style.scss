@@ -5,6 +5,7 @@
 
 .Pitch {
     position: relative;
+    // width: calc(100% - #{$margin__thick * 2});
     width: 100%;
     height: calc(100% - #{$height__pitchNav});
 
@@ -14,6 +15,12 @@
         max-width: $WIDTH_LAPTOP;
         height: calc(100% - #{$height__pitchHeader + $height__pitchNav});
         
+        // .DW__phoneOrMiniWidth
+        // & {
+        //     padding-left: $margin__thick;
+        //     padding-right: $margin__thick;
+        // }
+
         .DW__tabletOrDesktopWidth
         & {
             width: calc(

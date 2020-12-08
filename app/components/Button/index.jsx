@@ -84,7 +84,7 @@ const Button = ({
 
                     isAccessEnter && showIfAccessOn && 'Button__accessed',
 
-                    `${CHILD_ACCESS_PREFIX}${accessKey}`,
+                    accessKey && `${CHILD_ACCESS_PREFIX}${accessKey}`,
 
                     {
                         'Button__enabled': !isDisabled && !isClickDisabled,

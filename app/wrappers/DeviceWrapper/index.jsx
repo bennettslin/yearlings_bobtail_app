@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../components/DidMountHoc'
-import { getIsTabletWidth } from '../../helpers/responsive'
 import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 import {
-    mapIsPhoneWidth,
-    mapIsDesktopWidth
+    mapIsDesktopWidth,
+    mapIsTabletWidth,
+    mapIsPhoneWidth
 } from '../../redux/device/selector'
 import { mapDeviceWidthIndex } from '../../redux/viewport/selector'
 
@@ -17,14 +17,13 @@ import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 const DeviceWrapper = ({ didMount, children }) => {
     const
         deviceWidthIndex = useSelector(mapDeviceWidthIndex),
-        isPhoneWidth = useSelector(mapIsPhoneWidth),
         isDesktopWidth = useSelector(mapIsDesktopWidth),
+        isTabletWidth = useSelector(mapIsTabletWidth),
+        isPhoneWidth = useSelector(mapIsPhoneWidth),
 
         deviceWidthKey =
             DEVICE_WIDTH_CONFIGS[deviceWidthIndex] &&
-            DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey,
-
-        isTabletWidth = getIsTabletWidth(deviceWidthIndex)
+            DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey
 
     return (
         <div
