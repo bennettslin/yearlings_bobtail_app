@@ -7,8 +7,13 @@ import { CONTACT_EMAIL } from '../../../constants/website'
 import './style'
 
 const AboutContact = ({ didMount }) => didMount && (
-    <>
-        {'If you have an offer or opportunity for us to consider, please email '}
+    <span
+        {...{
+            className: 'AboutContact'
+        }}
+    >
+        {/* {'If you have an offer or opportunity for us to consider, please email '} */}
+        {`I'd love to hear from ambitious musicians, record labels and the music press, and anyone with an offer or opportunity for me to consider. Please email `}
         {didMount && (
             <span
                 {...{
@@ -30,9 +35,10 @@ const AboutContact = ({ didMount }) => didMount && (
                 ))}
             </span>
         )}
-        {`. We'll respond if it matches our interests.`}
+        {/* {`. We'll respond if it matches our interests.`} */}
+        {`. Thanks!`}
         <PitchAnchor />
-    </>
+    </span>
 )
 
 AboutContact.propTypes = {

@@ -5006,5 +5006,9 @@ export default [
     {
         taskName: `Pitch functionality.`,
         workedHours: 65
+    },
+    {
+        taskName: `About contact update.`,
+        workedHours: 1
     }
 ]

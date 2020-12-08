@@ -13,7 +13,7 @@ const PitchAnchor = () => {
 
     return (
         <div {...{ className: 'PitchAnchor' }} >
-            {`Want to work with us? Read `}
+            {`Want to learn more? Please read `}
             <Anchor
                 {...{
                     text: 'our pitch!',
