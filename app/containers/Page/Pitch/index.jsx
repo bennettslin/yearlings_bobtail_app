@@ -1,7 +1,7 @@
 import React from 'react'
 import Pitch from '../../../components/Pitch'
 
-const getPitchPageComponent = (pagePitchIndex = 0) => {
+const getPitchPageComponent = (pagePitchIndex = 1) => {
     /**
      * This returns the same component for each page, differing only by pitch
      * index. Extracting into a getter function to avoid repeating code.

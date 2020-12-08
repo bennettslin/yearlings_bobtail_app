@@ -1,4 +1,3 @@
-export const TEMP_PITCH_ICON_0 = 'tempPitchIcon0'
 export const TEMP_PITCH_ICON_1 = 'tempPitchIcon1'
 export const TEMP_PITCH_ICON_2 = 'tempPitchIcon2'
 export const TEMP_PITCH_ICON_3 = 'tempPitchIcon3'
@@ -13,9 +12,9 @@ export const TEMP_PITCH_ICON_11 = 'tempPitchIcon11'
 export const TEMP_PITCH_ICON_12 = 'tempPitchIcon12'
 export const TEMP_PITCH_ICON_13 = 'tempPitchIcon13'
 export const TEMP_PITCH_ICON_14 = 'tempPitchIcon14'
+export const TEMP_PITCH_ICON_15 = 'tempPitchIcon15'
 
 export const PITCH_ICONS = [
-    TEMP_PITCH_ICON_0,
     TEMP_PITCH_ICON_1,
     TEMP_PITCH_ICON_2,
     TEMP_PITCH_ICON_3,
@@ -29,5 +28,6 @@ export const PITCH_ICONS = [
     TEMP_PITCH_ICON_11,
     TEMP_PITCH_ICON_12,
     TEMP_PITCH_ICON_13,
-    TEMP_PITCH_ICON_14
+    TEMP_PITCH_ICON_14,
+    TEMP_PITCH_ICON_15
 ]

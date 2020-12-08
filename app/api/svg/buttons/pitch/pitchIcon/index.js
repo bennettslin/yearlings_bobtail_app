@@ -5,7 +5,6 @@ import navShown from '../../../../../../assets/svgs/app/carouselNav/navShown'
 import neitherShown from '../../../../../../assets/svgs/app/carouselNav/neitherShown'
 
 import {
-    TEMP_PITCH_ICON_0,
     TEMP_PITCH_ICON_1,
     TEMP_PITCH_ICON_2,
     TEMP_PITCH_ICON_3,
@@ -19,11 +18,11 @@ import {
     TEMP_PITCH_ICON_11,
     TEMP_PITCH_ICON_12,
     TEMP_PITCH_ICON_13,
-    TEMP_PITCH_ICON_14
+    TEMP_PITCH_ICON_14,
+    TEMP_PITCH_ICON_15
 } from '../../../../../constants/pitch'
 
 const PITCH_ICONS = {
-    [TEMP_PITCH_ICON_0]: popupClose,
     [TEMP_PITCH_ICON_1]: carouselShown,
     [TEMP_PITCH_ICON_2]: navShown,
     [TEMP_PITCH_ICON_3]: neitherShown,
@@ -37,7 +36,8 @@ const PITCH_ICONS = {
     [TEMP_PITCH_ICON_11]: neitherShown,
     [TEMP_PITCH_ICON_12]: popupClose,
     [TEMP_PITCH_ICON_13]: carouselShown,
-    [TEMP_PITCH_ICON_14]: navShown
+    [TEMP_PITCH_ICON_14]: navShown,
+    [TEMP_PITCH_ICON_15]: neitherShown
 }
 
 export default ({ buttonIdentifier }) => {

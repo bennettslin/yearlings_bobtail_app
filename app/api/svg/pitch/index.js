@@ -5,7 +5,6 @@ import navShown from '../../../../assets/svgs/app/carouselNav/navShown'
 import neitherShown from '../../../../assets/svgs/app/carouselNav/neitherShown'
 
 import {
-    TEMP_PITCH_ICON_0,
     TEMP_PITCH_ICON_1,
     TEMP_PITCH_ICON_2,
     TEMP_PITCH_ICON_3,
@@ -19,11 +18,11 @@ import {
     TEMP_PITCH_ICON_11,
     TEMP_PITCH_ICON_12,
     TEMP_PITCH_ICON_13,
-    TEMP_PITCH_ICON_14
+    TEMP_PITCH_ICON_14,
+    TEMP_PITCH_ICON_15
 } from '../../../constants/pitch'
 
 const PITCH_IMAGES = {
-    [TEMP_PITCH_ICON_0]: popupClose,
     [TEMP_PITCH_ICON_1]: carouselShown,
     [TEMP_PITCH_ICON_2]: navShown,
     [TEMP_PITCH_ICON_3]: neitherShown,
@@ -37,7 +36,8 @@ const PITCH_IMAGES = {
     [TEMP_PITCH_ICON_11]: navShown,
     [TEMP_PITCH_ICON_12]: neitherShown,
     [TEMP_PITCH_ICON_13]: popupClose,
-    [TEMP_PITCH_ICON_14]: carouselShown
+    [TEMP_PITCH_ICON_14]: carouselShown,
+    [TEMP_PITCH_ICON_15]: navShown
 }
 
 const getPitchImageForIndex = pitchIndex => {

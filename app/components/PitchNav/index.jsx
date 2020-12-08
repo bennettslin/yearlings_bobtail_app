@@ -49,7 +49,7 @@ const PitchNav = () => {
                     isLargeSize: isDesktopWidth,
                     buttonName: PITCH_PREVIOUS_BUTTON_KEY,
                     accessKey: ARROW_LEFT,
-                    isDisabled: pitchSegmentIndex === 0,
+                    isDisabled: pitchSegmentIndex === 1,
                     handleButtonClick: handlePreviousClick
                 }}
             />
@@ -72,7 +72,7 @@ const PitchNav = () => {
                     buttonName: PITCH_NEXT_BUTTON_KEY,
                     accessKey: ARROW_RIGHT,
                     isDisabled:
-                        pitchSegmentIndex === getPitchSegmentsCount() - 1,
+                        pitchSegmentIndex === getPitchSegmentsCount(),
                     handleButtonClick: handleNextClick
                 }}
             />

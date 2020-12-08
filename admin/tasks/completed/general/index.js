@@ -5005,6 +5005,6 @@ export default [
     },
     {
         taskName: `Pitch functionality.`,
-        workedHours: 63
+        workedHours: 65
     }
 ]
