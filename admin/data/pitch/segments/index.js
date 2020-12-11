@@ -19,13 +19,13 @@ export default [
         title: `Introduction`,
         text: [
             `Hi there! Are you interested in working with the Bobtail Yearlings, but our untested way of doing things is making you nervous?`,
-            `Read on, and I'll try to convince you that the Bobtail Yearlings are no more of a risky bet than any other artist you've worked with in the past.`
+            `Read on, and I'll convince you that the Bobtail Yearlings are no more of a risky bet than any other artist you've worked with in the past.`
         ],
         tempImageDescription: `Old Bennett`,
         imageKey: TEMP_PITCH_ICON_1
     },
     {
-        title: `Startups and stores`,
+        title: `Stores and startups`,
         text: [
             `Let's start by thinking about the world of business. It's easy to paint all big companies with the same brush, but when they're just starting out, they can be very different. Some begin as startups, and others as stores. (Mention that this is simplistic.)`
         ],
@@ -71,7 +71,7 @@ export default [
         title: `Greater risk, greater reward`,
         text: [
             `It's understandable why investors often dismissed the earliest startups. While stores are the oldest form of business, startups are a recent phenomenon, and they behave so differently.`,
-            `That's why the word "startup" is needed, because they are their own thing. Startups are not just stores that are more risky because they're run less competently. A startup comes with more risk because it aims to fulfill an unknown need. And if it succeeds, then it creates a new market which it naturally dominates. For the investor, this means a much greater reward.`
+            `That's why the word "startup" is needed, because startups are their own thing. They're not just stores that are more risky because they're run less competently. A startup comes with more risk because it aims to fulfill an unknown need. If it succeeds, then it creates a new market which it naturally dominates. And for investors, this means a greater reward.`
         ],
         tempImageDescription: `Comparison of linear and superlinear graphs`,
         imageKey: TEMP_PITCH_ICON_7
@@ -79,23 +79,25 @@ export default [
     {
         title: `Indies are like stores`,
         text: [
-            `Let's go back now to thinking about the world of music. Record labels want to invest in indie artists, because indie artists promise linear growth, just like stores. Traditionally, indie artists show they can sustain themselves with a regional following. Linear growth.`
+            `Let's now go back to the world of music. For the past few decades, record labels have preferred to sign indie artists, who pose fewer risks. But it's no wonder why indie artists are less risky; they're like stores.`,
+            `Traditionally, indie artists win over their fans through live performances, where audiences have clear expectations. In other words, they fulfill a known need. And once an indie artist has grown a regional fanbase of a thousand, then they can repeat the same strategy to win over the next thousand in a neighboring region, and then the next.`
         ],
-        tempImageDescription: ``,
+        tempImageDescription: `Indie artist playing to audiences in different cities.`,
         imageKey: TEMP_PITCH_ICON_8
     },
     {
         title: `Artups are like startups`,
         text: [
-            `But what if some artists are more like startups, in that they need to scale before they prove sustainable? And what if certain kinds of artistic innovation are only possible from such artists? There's one quick fix. We don't have a word for these artists. I propose artups.`
+            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If their artistic hunches are correct and they're given the right support, then their path to scale and success is likely assured. They'll be the only one of their kind to reach the audiences that they themselves created.`,
+            `Yet unless we recognise these artists as being their own thing, they'll always be at a disadvantage. We'll only see them as less competent indie artists and nothing more. So let's create a new word. I propose calling them "artups."`
         ],
-        tempImageDescription: ``,
+        tempImageDescription: `Artup is `,
         imageKey: TEMP_PITCH_ICON_9
     },
     {
         title: `Artups and network effects`,
         text: [
-            `How could an artup that isn't sustainable with only thousands of fans, be able to attract millions of them? Like startups, network effect. Difficult works, like Ulysses.`
+            `How could an artup that isn't sustainable with only thousands of fans, be able to attract millions of them? Like startups, an artup might benefit from the network effect. Difficult works, like Ulysses.`
         ],
         tempImageDescription: ``,
         imageKey: TEMP_PITCH_ICON_10
