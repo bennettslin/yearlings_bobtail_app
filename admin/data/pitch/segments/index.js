@@ -19,7 +19,7 @@ export default [
         title: `Introduction`,
         text: [
             `Hi there! Are you interested in working with the Bobtail Yearlings, but our untested way of doing things is making you nervous?`,
-            `Read on, and I'll convince you that the Bobtail Yearlings are no more of a risky bet than any other artist you've worked with in the past.`
+            `Read on, and I'll convince you that the Bobtail Yearlings are no more of a risky bet than other artists you've worked with in the past.`
         ],
         tempImageDescription: `Old Bennett`,
         imageKey: TEMP_PITCH_ICON_1
@@ -88,7 +88,7 @@ export default [
     {
         title: `Artups are like startups`,
         text: [
-            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If their artistic hunches are correct and they're given the right support, then their path to scale and success is likely assured. They'll be the only one of their kind to reach the audiences that they themselves created.`,
+            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If their artistic hunches are correct and they're given support, then their path to scale and success is likely assured. They'll be the only one of their kind to reach an audience that previously didn't exist.`,
             `Yet unless we recognise these artists as being their own thing, they'll always be at a disadvantage. We'll only see them as less competent indie artists and nothing more. So let's create a new word. I propose calling them "artups."`
         ],
         tempImageDescription: `Artup is `,
@@ -97,7 +97,7 @@ export default [
     {
         title: `Artups and network effects`,
         text: [
-            `How could an artup that isn't sustainable with only thousands of fans, be able to attract millions of them? Like startups, an artup might benefit from the network effect. Difficult works, like Ulysses.`
+            `If an artup isn't capable of winning over a thousand fans on its own, why would it be able to attract a million with external support? Like startups, an artup might benefit from the network effect. Difficult works, like Ulysses.`
         ],
         tempImageDescription: ``,
         imageKey: TEMP_PITCH_ICON_10

@@ -3,6 +3,7 @@
     * Give pages title names
     * Change URLs to use hyphens instead of underscores
     * Allow for italics
+    * Allow footnotes
     * Home button
 
 * Why do styles show for admin pages in build?
