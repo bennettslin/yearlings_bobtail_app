@@ -1,5 +1,4 @@
-// export const CONTACT_EMAIL = 'info@bobtailyearlings.com'
-export const CONTACT_EMAIL = 'bennett@bobtailyearlings.com'
+export const CONTACT_EMAIL = 'info@bobtailyearlings.com'
 export const BOBTAIL_YEARLINGS_WEBSITE = 'http://www.bobtailyearlings.com'
 
 export const FACEBOOK_PAGE = 'https://www.facebook.com/BobtailYearlings'

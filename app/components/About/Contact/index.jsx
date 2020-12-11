@@ -13,7 +13,7 @@ const AboutContact = ({ didMount }) => didMount && (
         }}
     >
         {/* {'If you have an offer or opportunity for us to consider, please email '} */}
-        {`I'd love to hear from ambitious musicians, record labels and the music press, and anyone with an offer or opportunity for me to consider. Please email `}
+        {`We'd love to hear from ambitious musicians, record labels and the music press, and anyone with an offer or opportunity for us to consider. Please email `}
         {didMount && (
             <span
                 {...{
