@@ -20,7 +20,7 @@ export default [
     {
         title: `Introduction`,
         text: [
-            `Hi there! Are you curious to work with the Bobtail Yearlings, but our untested way of doing things is making you nervous?`,
+            `Hi there! Are you interested in working with the Bobtail Yearlings, but our untested way of doing things is making you nervous?`,
             `Read on, and I'll convince you that the Bobtail Yearlings are no more of a risky bet than any other artist you've worked with in the past.`
         ],
         tempImageDescription: `Old Bennett`,
@@ -29,7 +29,7 @@ export default [
     {
         title: `Startups and stores`,
         text: [
-            `Let's start by talking about the world of business. It's easy to describe all big companies using the same terms, but when they're just starting out, they can be very different. Some companies begin as startups, and others as stores.`
+            `Let's start by examining the world of business. It's easy to paint all big companies with the same brush, but when they're just starting out, companies can be very different. Some begin as startups, and others as stores.`
         ],
         tempImageDescription: `Google and Walmart`,
         imageKey: TEMP_PITCH_ICON_2
