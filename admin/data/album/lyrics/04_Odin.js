@@ -22,6 +22,7 @@ import {
 } from '../../../../app/constants/lyrics'
 
 export default {
+    path: 'odin',
     title: 'Odin',
     duration: 200,
     // SCRAPS: despair of a binary choice whose differences are illusory, as well as

@@ -18,6 +18,7 @@ import {
 } from '../../../../app/constants/lyrics'
 
 export default {
+    path: 'on-a-golden-cord',
     title: 'On a Golden Cord',
     duration: 201,
     overview: `After a long night out with friends, I might shuffle on to Sita's place, slip into bed with her, and quickly doze off. But one night, Sita was waiting to confront me, having discovered my plans to break up with her. In tears, she returned the gold bracelet I had given her at the start of our relationship, and then she kicked me out. With nowhere to go, I wandered the streets until sunrise. And so began the first of our many breakups…`,

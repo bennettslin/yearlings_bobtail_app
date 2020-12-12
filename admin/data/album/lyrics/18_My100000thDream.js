@@ -17,6 +17,7 @@ import {
 } from '../../../../app/constants/lyrics'
 
 export default {
+    path: 'my-100000th-dream',
     title: 'My 100,000th Dream',
     duration: 244,
     overview: `Every night I dreamt of reuniting with Sita, only to wake up in a panicked sweat as the reality came roaring back that I'd lost her forever. I would slog through the day under a crushing blanket of despair, then crawl back into bed with dread, awaiting the cruel tricks soon to be played by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,

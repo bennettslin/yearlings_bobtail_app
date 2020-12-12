@@ -21,6 +21,7 @@ import {
 } from '../../../../app/constants/lyrics'
 
 export default {
+    path: 'didi',
     title: 'Didi (弟弟)',
     duration: 177,
     overview: `As a child, I depended on my older sister to do most everything for me, like zipping up my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`,

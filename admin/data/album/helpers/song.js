@@ -15,8 +15,9 @@ const _addOverview = (songIndex, song) => {
     song.overview = overview
 }
 
-const _addTitle = (songIndex, song) => {
-    const { title } = albumLyrics[songIndex]
+const _addPathAndTitle = (songIndex, song) => {
+    const { path, title } = albumLyrics[songIndex]
+    song.path = path
     song.title = title
 }
 
@@ -38,7 +39,7 @@ const _addIsDoublespeaker = (songIndex, song) => {
 export const addSongAndLogueMetadata = (songIndex, song) => {
     const isLogue = _addIsLogue(songIndex, song)
     _addOverview(songIndex, song)
-    _addTitle(songIndex, song)
+    _addPathAndTitle(songIndex, song)
 
     return isLogue
 }

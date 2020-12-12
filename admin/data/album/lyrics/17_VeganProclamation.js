@@ -19,6 +19,7 @@ import {
 } from '../../../../app/constants/lyrics'
 
 export default {
+    path: 'vegan-proclamation',
     title: 'Vegan Proclamation',
     duration: 241,
     overview: `Having doubled down on writing and recording all the songs for my next album, I'd been burning bridges with my bandmates for some time. Since we'd stopped playing shows as a result, I had no new opportunities to meet women after Miriam left me. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had now was myself, but I really didn't like myself. And I had no idea how to be a good person again.`,

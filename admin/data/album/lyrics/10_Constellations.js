@@ -22,6 +22,7 @@ import {
 } from '../../../../app/constants/lyrics'
 
 export default {
+    path: 'constellations',
     title: 'Constellations!',
     duration: 180,
     overview: `One night I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout world history. In hindsight, they were probably just humoring me. I wound up doing a lot of Robitussin that summer. It took a while for me to regain my grip on reality.`,
