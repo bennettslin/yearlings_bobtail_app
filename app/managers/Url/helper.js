@@ -1,3 +1,5 @@
+import { getPitchPathForIndex } from '../../api/pitch/segments'
+
 export const getPathForPitchPage = pitchSegmentIndex => (
-    `/Pitch/page_${pitchSegmentIndex}`
+    `/Pitch/${pitchSegmentIndex}-${getPitchPathForIndex(pitchSegmentIndex)}`
 )

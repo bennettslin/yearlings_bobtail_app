@@ -1,6 +1,5 @@
 # Pitch TODO:
 * Illustrator
-    * Give pages title names
     * Change URLs to use hyphens instead of underscores
     * Allow for italics
     * Allow footnotes

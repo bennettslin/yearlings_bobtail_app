@@ -41,7 +41,7 @@ export const getIsValidAdminPath = element => (
 )
 
 export const getValidPitchIndex = pathname => {
-    if (pathname.includes('Pitch/page_')) {
+    if (pathname.includes('Pitch/')) {
 
         // Ensure index is numeric.
         const pagePitchIndex = getIndexFromPath(pathname)

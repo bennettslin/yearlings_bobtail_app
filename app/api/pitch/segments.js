@@ -25,6 +25,10 @@ export const getNextPitchSegmentIndex = pitchSegmentIndex => (
     getPitchSegmentsCount() + pitchSegmentIndex
 ) % getPitchSegmentsCount()
 
+export const getPitchPathForIndex = pitchSegmentIndex => (
+    SEGMENTS[pitchSegmentIndex - 1].path
+)
+
 export const getPitchImageKeyForIndex = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex - 1].imageKey
 )
