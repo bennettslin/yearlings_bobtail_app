@@ -11,8 +11,6 @@ export const TEMP_PITCH_ICON_10 = 'tempPitchIcon10'
 export const TEMP_PITCH_ICON_11 = 'tempPitchIcon11'
 export const TEMP_PITCH_ICON_12 = 'tempPitchIcon12'
 export const TEMP_PITCH_ICON_13 = 'tempPitchIcon13'
-export const TEMP_PITCH_ICON_14 = 'tempPitchIcon14'
-export const TEMP_PITCH_ICON_15 = 'tempPitchIcon15'
 
 export const PITCH_ICONS = [
     TEMP_PITCH_ICON_1,
@@ -27,7 +25,9 @@ export const PITCH_ICONS = [
     TEMP_PITCH_ICON_10,
     TEMP_PITCH_ICON_11,
     TEMP_PITCH_ICON_12,
-    TEMP_PITCH_ICON_13,
-    TEMP_PITCH_ICON_14,
-    TEMP_PITCH_ICON_15
+    TEMP_PITCH_ICON_13
+]
+
+export const PITCH_PAGE_PATHS = [
+    ''
 ]
