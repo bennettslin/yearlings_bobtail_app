@@ -1,22 +1,28 @@
 import qs from 'qs'
 import {
-    ALBUM_TITLE,
-    URL_SONG_NAMES
-} from '../constants/paths'
-import {
     getSongIsLogue,
+    getPathForSong,
     getTitleForSong
 } from '../api/album/songs'
-import { VERSE_QUERY_FIELD, ANNOTATION_QUERY_FIELD } from './routing'
+import { getPathForPitchSegment } from '../api/pitch/segments'
+import { ALBUM_TITLE } from '../constants/paths'
+import {
+    VERSE_QUERY_FIELD,
+    ANNOTATION_QUERY_FIELD
+} from './routing'
 
-const getPathNameForSongIndex = songIndex => (
-    `/${songIndex}_${URL_SONG_NAMES[songIndex]}`
+const getPathForSongPage = songIndex => (
+    `/${songIndex}-${getPathForSong(songIndex)}`
+)
+
+export const getPathForPitchPage = pitchSegmentIndex => (
+    `/Pitch/${pitchSegmentIndex}-${getPathForPitchSegment(pitchSegmentIndex)}`
 )
 
 export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => (
-    // Path is something like "9_GrasshoppersLieHeavy?verse=20&annotation=22."
+    // Path is something like "9-grasshoppers-lie-heavy?verse=20&annotation=22."
     `${
-        getPathNameForSongIndex(songIndex)
+        getPathForSongPage(songIndex)
     }${
         qs.stringify({
             // Default verse is 0.

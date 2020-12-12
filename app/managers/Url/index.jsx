@@ -11,9 +11,9 @@ import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { mapIsPitchShown } from '../../redux/toggle/selector'
 import {
     getPathForIndices,
+    getPathForPitchPage,
     getDocumentHead
 } from '../../helpers/url'
-import { getPathForPitchPage } from './helper'
 
 const UrlManager = () => {
     const

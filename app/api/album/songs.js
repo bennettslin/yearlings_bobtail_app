@@ -51,6 +51,10 @@ export const getSongIsLogue = songIndex => (
     getSongIsPrologue(songIndex) || getSongIsEpilogue(songIndex)
 )
 
+export const getPathForSong = songIndex => (
+    getSong(songIndex).path
+)
+
 export const getTitleForSong = songIndex => (
     getSong(songIndex).title
 )
