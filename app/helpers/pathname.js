@@ -5,12 +5,12 @@ export const VERSE_QUERY_FIELD = 'verse'
 export const ANNOTATION_QUERY_FIELD = 'annotation'
 
 const VALID_ADMIN_PATHS = [
-    'Actors',
-    'Annotations',
-    'Previewer',
-    'Things',
-    'Skies',
-    'Progress'
+    'actors',
+    'annotations',
+    'previewer',
+    'progress',
+    'skies',
+    'things'
 ]
 
 const PITCH_PATH = 'pitch'
