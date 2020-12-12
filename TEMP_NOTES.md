@@ -1,6 +1,5 @@
 # Pitch TODO:
 * Illustrator
-    * Change URLs to use hyphens instead of underscores
     * Allow for italics
     * Allow footnotes
     * Home button

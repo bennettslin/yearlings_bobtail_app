@@ -16,7 +16,7 @@ const getPathForSongPage = songIndex => (
 )
 
 export const getPathForPitchPage = pitchSegmentIndex => (
-    `/Pitch/${pitchSegmentIndex}-${getPathForPitchSegment(pitchSegmentIndex)}`
+    `/pitch/${pitchSegmentIndex}-${getPathForPitchSegment(pitchSegmentIndex)}`
 )
 
 export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => (

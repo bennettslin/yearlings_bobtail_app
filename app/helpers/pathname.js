@@ -13,6 +13,8 @@ const VALID_ADMIN_PATHS = [
     'Progress'
 ]
 
+const PITCH_PATH = 'pitch'
+
 export const getPathname = (element = {}) => {
     const pathname =
         // If called from Gatsby, element is passed.
@@ -41,7 +43,7 @@ export const getIsValidAdminPath = element => (
 )
 
 export const getValidPitchIndex = pathname => {
-    if (pathname.includes('Pitch/')) {
+    if (pathname.includes(`${PITCH_PATH}/`)) {
 
         // Ensure index is numeric.
         const pagePitchIndex = getIndexFromPath(pathname)
@@ -56,7 +58,7 @@ export const getValidPitchIndex = pathname => {
 
 export const getIsValidPitchPagePath = pathname => (
     // It's valid if it's the pitch root path...
-    pathname === 'Pitch' ||
+    pathname === PITCH_PATH ||
 
     // Or if it's a valid pitch index path.
     Number.isFinite(getValidPitchIndex(pathname))
