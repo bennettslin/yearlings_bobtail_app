@@ -27,7 +27,8 @@ export default [
     {
         title: `Stores and startups`,
         text: [
-            `Let's start by thinking about the world of business. It's easy to paint all big companies with the same brush, but when they're just starting out, they can be very different. Some begin as startups, and others as stores. (Mention that this is simplistic.)`
+            `Let's start by talking about the world of business. It's easy to paint all big companies with the same brush, but when they're starting out, they can be very different. Some begin as startups, and others as stores.`,
+            `(For the sake of this pitch, a store is any business selling products or services that involve in-person transactions.)`
         ],
         tempImageDescription: `Google and Walmart`,
         imageKey: TEMP_PITCH_ICON_2
@@ -35,10 +36,10 @@ export default [
     {
         title: `Stores profit, then scale`,
         text: [
-            `A store seeks first to profit, then scale. For example, Walmart began as a neighborhood store. Once that became profitable, Sam Walton opened another store in the next town over, and then another.`,
+            `So what's the difference? A store seeks to profit first, then scale. For example, Walmart began as a neighborhood store. Once that became profitable, Sam Walton opened another store in the next town over, and then another.`,
             `There's little risk in trying to scale a store, since each new store can repeat the same proven strategy. The downside is that scaling might not be possible. Since stores fulfill a known need, one isn't much different from the next. So wherever one competitor has opened a store, there's now less room for others.`
         ],
-        tempImageDescription: `Walmart stores`,
+        tempImageDescription: `Walmart stores, linear graph`,
         imageKey: TEMP_PITCH_ICON_3
     },
     {
@@ -47,7 +48,7 @@ export default [
             `Unlike stores, a startup needs to scale first, even if this means going without profit in the short term. A good example is Google, which stayed unprofitable in its first few years until it reached millions of users.`,
             `In other words, founding a startup is a risky venture at every step along the way. The upside is that the need to self-differentiate is baked into a startup's business model. So if its founders have correctly identified an unknown need that they can fulfill, then the path to scale and success is probably assured.`
         ],
-        tempImageDescription: `Google suite`,
+        tempImageDescription: `Google suite, superlinear graph`,
         imageKey: TEMP_PITCH_ICON_4
     },
     {
@@ -70,8 +71,8 @@ export default [
     {
         title: `Greater risk, greater reward`,
         text: [
-            `It's understandable why investors often dismissed the earliest startups. While stores are the oldest form of business, startups are a recent phenomenon, and they behave so differently.`,
-            `That's why the word "startup" is needed, because startups are their own thing. They're not just stores that are more risky because they're run less competently. A startup comes with more risk because it aims to fulfill an unknown need. If it succeeds, then it creates a new market which it naturally dominates. And for investors, this means a greater reward.`
+            `While stores are the oldest form of business, startups are more recent and behave differently. So in the early days, investors would often dismiss a startup as a bad deal, which was unfortunate. Since startups need to scale first before making a profit, they absolutely depend on investors for initial support.`,
+            `This is why we now have the word "startup," to remind us that startups are their own thing. They're not simply stores that are more risky because they're less competent. A startup comes with more risk because it aims to fulfill an unknown need. If it succeeds, then it becomes the leader of a new market. And for investors, this yields a greater reward.`
         ],
         tempImageDescription: `Comparison of linear and superlinear graphs`,
         imageKey: TEMP_PITCH_ICON_7
@@ -79,19 +80,19 @@ export default [
     {
         title: `Indies are like stores`,
         text: [
-            `Let's now go back to the world of music. For the past few decades, record labels have preferred to sign indie artists, who pose fewer risks. But it's no wonder why indie artists are less risky; they're like stores.`,
-            `Traditionally, indie artists win over their fans through live performances, where audiences have clear expectations. In other words, they fulfill a known need. And once an indie artist has grown a regional fanbase of a thousand, then they can repeat the same strategy to win over the next thousand in a neighboring region, and then the next.`
+            `Let's go back now to the world of music. For the past few decades, record labels have preferred to sign indie artists, who pose fewer risks. But it's no wonder why indie artists are less risky; they're like stores.`,
+            `Indie artists typically gain fans by playing live shows. This is possible because audiences for shows already exist, and they arrive with certain expectations. In other words, indie artists fulfill a known need. And once an indie artist has grown a regional fanbase of a thousand, they can then repeat their strategy to win over the next thousand in a neighboring region, and then the next.`
         ],
-        tempImageDescription: `Indie artist playing to audiences in different cities.`,
+        tempImageDescription: `Indie artist playing to audiences in different cities, linear graph.`,
         imageKey: TEMP_PITCH_ICON_8
     },
     {
         title: `Artups are like startups`,
         text: [
-            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If their artistic hunches are correct and they're given support, then their path to scale and success is likely assured. They'll be the only one of their kind to reach an audience that previously didn't exist.`,
-            `Yet unless we recognise these artists as being their own thing, they'll always be at a disadvantage. We'll only see them as less competent indie artists and nothing more. So let's create a new word. I propose calling them "artups."`
+            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If their artistic hunches are correct, then their path to scale and success might be assured. They'll be the only one of their kind to reach an audience that previously didn't exist.`,
+            `Yet unless we recognise these artists as being their own thing, we'll only ever see them as less competent indie artists. Which is unfortunate, because like startups, these artists absolutely need initial support from others. So let's create a new word for them. I'll call them "artups."`
         ],
-        tempImageDescription: `Artup is `,
+        tempImageDescription: `Artist creating works, superlinear graph.`,
         imageKey: TEMP_PITCH_ICON_9
     },
     {
