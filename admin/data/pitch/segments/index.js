@@ -110,7 +110,7 @@ export default [
             `Yet unless we recognise these artists as being their own thing, we'll only ever see them as less competent indie artists. So let's create a new word for them. I propose we call them "artups."`
         ],
         footnote: [
-            `See the`,
+            `Here's the`,
             {
                 anchor: `full quote`,
                 href: `https://www.goodreads.com/quotes/988332-some-people-say-give-the-customers-what-they-want-but`
