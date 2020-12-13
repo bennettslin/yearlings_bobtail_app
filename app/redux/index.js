@@ -76,6 +76,7 @@ export const getAlbumReducers = songIndex => combineReducers({
 })
 
 export const getPitchReducers = () => combineReducers({
+    [DOTS_STORE]: getDotsReducer(0),
     [ACCESS_STORE]: AccessPitchPageReducer,
     [PITCH_STORE]: PitchReducer,
     [VIEWPORT_STORE]: ViewportPitchPageReducer

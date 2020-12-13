@@ -41,7 +41,7 @@ const PitchDescription = ({ serverClientPitchIndex }) => {
                         className: 'PitchText__footnote'
                     }}
                 >
-                    {footnote}
+                    <Texts {...{ text: footnote }} />
                 </div>
             )}
         </div>

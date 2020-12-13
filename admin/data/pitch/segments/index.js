@@ -82,6 +82,13 @@ export default [
             `While stores are the oldest form of business, startups are more recent, and they behave much differently. So in the early days, investors would often dismiss a startup as a bad deal. This was unfortunate, since startups truly depend on investors. Without their initial support, it isn't possible to scale first without making a profit.`,
             `This is why we have the word "startup," to remind us that startups are their own thing. They're not simply stores that are more risky because they're incompetent. A startup comes with more risk precisely because it aims to fulfill an unknown need. But if it succeeds, then it becomes the leader of a new market. And for investors, this means a greater reward.`
         ],
+        footnote: [
+            `Read Paul Graham's essay`,
+            {
+                anchor: `"Startup = Growth."`,
+                href: `http://www.paulgraham.com/growth.html`
+            }
+        ],
         tempImageDescription: `Comparison of linear and superlinear graphs`,
         imageKey: TEMP_PITCH_ICON_7
     },
@@ -102,7 +109,14 @@ export default [
             `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If their artistic hunches are correct, then their path to scale and success might be assured. After all, they'll be the only one of their kind to reach an audience that previously didn't exist.`,
             `Yet unless we recognise these artists as being their own thing, we'll only ever see them as less competent indie artists. Which is unfortunate, because like startups, these artists absolutely need others to provide initial support. So let's create a new word for them. I'll call them "artups."`
         ],
-        footnote: `Test footnote`,
+        footnote: [
+            `See the`,
+            {
+                anchor: `full quote`,
+                href: `https://www.goodreads.com/quotes/988332-some-people-say-give-the-customers-what-they-want-but`
+            },
+            `from Steve Jobs.`
+        ],
         tempImageDescription: `Artist creating works, superlinear graph.`,
         imageKey: TEMP_PITCH_ICON_9
     },

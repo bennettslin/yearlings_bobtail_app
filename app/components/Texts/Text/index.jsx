@@ -3,9 +3,10 @@ import React, { forwardRef, memo } from 'react'
 import PropTypes from 'prop-types'
 import { isString } from '../../../helpers/general'
 
-import TextLyricAnchor from './LyricAnchor'
+import Anchor from '../../Anchor'
 import Texts from '..'
 import TextSpan from './Span'
+import TextLyricAnchor from './LyricAnchor'
 
 const Text = forwardRef(({
     text: textEntity,
@@ -48,38 +49,42 @@ const Text = forwardRef(({
         // It's an anchor.
         } else {
             const {
-                    anchor,
+                    anchor: text,
+                    href,
                     annotationIndex
                 } = textEntity,
-                { wormholeAnnotationIndex } = props,
+                { wormholeAnnotationIndex } = props
 
-                /**
-                 * If recursing, keep knowledge of text being in wormhole
-                 * or verse bar, which is needed by anchor.
-                 */
-                showAsPlainText =
-                    Boolean(wormholeAnnotationIndex) ||
-                    inVerseBar,
+            // It's an external anchor.
+            if (href) {
+                return (
+                    <Anchor
+                        {...{
+                            href,
+                            text
+                        }}
+                    />
+                )
 
-                text = anchor
-
-            if (showAsPlainText) {
-
-                /**
-                 * A verse line with a wormhole anchor may contain other
-                 * anchors. Make sure that we know this is the wormhole
-                 * anchor.
-                 */
-                const isWormholeDestinationAnchor =
-                        annotationIndex === wormholeAnnotationIndex
-
+            /**
+             * If recursing, keep knowledge of text being in wormhole or verse
+             * bar, which is needed by anchor.
+             */
+            } else if (Boolean(wormholeAnnotationIndex) || inVerseBar) {
                 return (
                     <Texts {...other}
                         hasRecursed
                         {...{
                             ref,
                             text,
-                            isWormholeDestinationAnchor
+
+                            /**
+                             * A verse line with a wormhole anchor may contain
+                             * other anchors. Make sure that we know this is
+                             * the wormhole anchor.
+                             */
+                            isWormholeDestinationAnchor:
+                                annotationIndex === wormholeAnnotationIndex
                         }}
                     />
                 )
