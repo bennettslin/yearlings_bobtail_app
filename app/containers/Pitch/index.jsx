@@ -95,6 +95,7 @@ const PitchContainer = ({ children }) => {
 
                     // Inherit root container styling.
                     'RootContainer',
+                    'abF',
                     'fCC',
                     'PtSansNarrow'
                 ),

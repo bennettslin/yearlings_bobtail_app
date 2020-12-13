@@ -9,7 +9,6 @@
 * At the very least, get rid of Admin styles
 
 # TODO:
-* Bug: When verse is 0 or 1, page loads with VerseBar selected.
 * Pitch shouldn't need dots reducer, except for Anchor.
 * Remove font-size in root container and adjust all others accordingly.
 

@@ -2,8 +2,10 @@
 @import '../../scss/constants/icon';
 
 .PitchContainer {
-    background-color: $colour__background;
     flex-direction: column;
+
     padding-left: $margin__thick;
     padding-right: $margin__thick;
+
+    background-color: $colour__background;
 }
