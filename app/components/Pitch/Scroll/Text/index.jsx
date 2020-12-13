@@ -3,29 +3,51 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getPitchServerClientHoc from '../../../PitchHoc'
-import { getPitchTextForIndex } from '../../../../api/pitch/segments'
+import {
+    getPitchTextForIndex,
+    getPitchFootnoteForIndex
+} from '../../../../api/pitch/segments'
 import './style'
 
-const PitchText = ({ serverClientPitchIndex }) => (
-    <div
-        {...{
-            className: cx(
-                'PitchText',
-                'fontSize__mediumTitle'
-            )
-        }}
-    >
-        {getPitchTextForIndex(serverClientPitchIndex).map((segment, index) => (
-            <p
+const PitchText = ({ serverClientPitchIndex }) => {
+    const footnote = getPitchFootnoteForIndex(serverClientPitchIndex)
+
+    return (
+        <div
+            {...{
+                className: cx(
+                    'PitchText',
+                    'fontSize__mediumTitle'
+                )
+            }}
+        >
+            <div
                 {...{
-                    key: index
+                    className: 'PitchText__segment'
                 }}
             >
-                {segment}
-            </p>
-        ))}
-    </div>
-)
+                {getPitchTextForIndex(serverClientPitchIndex).map((segment, index) => (
+                    <p
+                        {...{
+                            key: index
+                        }}
+                    >
+                        {segment}
+                    </p>
+                ))}
+            </div>
+            {Boolean(footnote) && (
+                <div
+                    {...{
+                        className: 'PitchText__footnote'
+                    }}
+                >
+                    {footnote}
+                </div>
+            )}
+        </div>
+    )
+}
 
 PitchText.propTypes = {
     serverClientPitchIndex: PropTypes.number.isRequired

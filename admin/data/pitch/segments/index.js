@@ -102,6 +102,7 @@ export default [
             `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If their artistic hunches are correct, then their path to scale and success might be assured. After all, they'll be the only one of their kind to reach an audience that previously didn't exist.`,
             `Yet unless we recognise these artists as being their own thing, we'll only ever see them as less competent indie artists. Which is unfortunate, because like startups, these artists absolutely need others to provide initial support. So let's create a new word for them. I'll call them "artups."`
         ],
+        footnote: `Test footnote`,
         tempImageDescription: `Artist creating works, superlinear graph.`,
         imageKey: TEMP_PITCH_ICON_9
     },

@@ -8,7 +8,6 @@ import AboutContact from './Contact'
 import AboutCredits from './Credits'
 import MailingList from './MailingList'
 import SocialMedia from './SocialMedia'
-import './style'
 
 const About = () => (
     <div

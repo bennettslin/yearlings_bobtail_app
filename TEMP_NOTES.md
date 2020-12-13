@@ -1,7 +1,6 @@
 # Pitch TODO:
 * Illustrator
     * Allow for italics
-    * Allow footnotes
     * Home button
 
 * Why do styles show for admin pages in build?

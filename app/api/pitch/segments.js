@@ -37,6 +37,10 @@ export const getPitchTextForIndex = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex - 1].text
 )
 
+export const getPitchFootnoteForIndex = pitchSegmentIndex => (
+    SEGMENTS[pitchSegmentIndex - 1].footnote
+)
+
 export const getPitchTitleForIndex = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex - 1].title
 )
