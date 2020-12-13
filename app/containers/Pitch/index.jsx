@@ -92,7 +92,9 @@ const PitchContainer = ({ children }) => {
                 ref: pitchContainerElement,
                 className: cx(
                     'PitchContainer',
-                    'abF',
+
+                    // Inherit root container styling.
+                    'RootContainer',
                     'fCC',
                     'PtSansNarrow'
                 ),

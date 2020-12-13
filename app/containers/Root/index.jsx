@@ -90,6 +90,7 @@ const RootContainer = () => {
                 ref: rootContainerElement,
                 className: cx(
                     'RootContainer',
+                    'fCC',
                     'ovH',
                     'PtSansNarrow'
                 ),

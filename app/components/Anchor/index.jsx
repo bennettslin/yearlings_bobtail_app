@@ -25,7 +25,7 @@ const Anchor = forwardRef(({
     text,
     textConfig,
     analyticsIdentifier,
-    handleAnchorClick,
+    handleAnchorClick = () => {},
     handleAnchorMouse = () => {}
 
 }, ref) => {
@@ -144,7 +144,7 @@ Anchor.propTypes = {
     text: PropTypes.any,
     textConfig: PropTypes.any,
     analyticsIdentifier: PropTypes.string,
-    handleAnchorClick: PropTypes.func.isRequired,
+    handleAnchorClick: PropTypes.func,
     handleAnchorMouse: PropTypes.func
 }
 
