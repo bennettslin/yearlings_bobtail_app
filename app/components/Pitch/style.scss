@@ -9,6 +9,8 @@
     width: 100%;
     height: calc(100% - #{$height__pitchNav});
 
+    font-size: 0.9em;
+
     .PitchContainer
     & {
         // When in pitch container, width is the same as full popup.

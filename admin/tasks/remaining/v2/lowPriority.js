@@ -82,5 +82,10 @@ export default [
         taskName: `Preemptively add dots only when selected annotation index cannot be selected from present dots.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Pitch shouldn't need dots reducer, except for Anchor.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

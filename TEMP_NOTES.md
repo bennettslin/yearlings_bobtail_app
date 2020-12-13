@@ -8,10 +8,6 @@
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
 
-# TODO:
-* Pitch shouldn't need dots reducer, except for Anchor.
-* Remove font-size in root container and adjust all others accordingly.
-
 # Nice UI TODO:
 * Performance. (Redux.)
 * Remove depth shading from slant direction cubes?
