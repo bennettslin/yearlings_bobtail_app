@@ -29,7 +29,7 @@ export default [
         path: `stores-versus-startups`,
         title: `Stores versus startups`,
         description: [
-            `Let's start by talking about the world of business. It's easy to paint all big companies with the same brush, but when they're starting out, they can be very different. Some begin as startups, and others as stores.`,
+            `Let's start by talking about the world of business. It's easy to paint all big companies with the same brush, but in their early days, they can be very different. Some begin as startups, and others as stores.`,
             `(For the sake of this pitch, we'll call any company a store if it sells products or services that involve in-person transactions.)`
         ],
         tempImageDescription: `Google and Walmart`,
@@ -50,7 +50,7 @@ export default [
         title: `Startups scale, then profit`,
         description: [
             `Unlike stores, a startup seeks to scale first, even if this means going without profit in the short term. A good example is Google, which stayed unprofitable in its first few years until it reached millions of users.`,
-            `In other words, founding a startup is a risky venture at every step along the way. The upside is that the need to self-differentiate is baked into a startup's business model. So if its founders have correctly identified an unknown need that they can fulfill, then the path to scale and success is probably assured.`
+            `This means that founding a startup is a risky venture at every step along the way. The upside is that the need to self-differentiate is baked into a startup's business model. So if its founders have correctly identified an unknown need that they can fulfill, then the path to scale and success is probably assured.`
         ],
         tempImageDescription: `Google suite, superlinear graph`,
         imageKey: TEMP_PITCH_ICON_4
@@ -60,7 +60,7 @@ export default [
         title: `Startups and network effects`,
         description: [
             `If a startup makes no profit when it only has thousands of users, how can it suddenly turn profitable with a million users? One reason is the network effect, where a product becomes more valuable to each user as more users use the product.`,
-            `For example, back when Facebook launched, its thousandth user was only able to connect with fellow classmates at Harvard. By the time it had millions of users, however, each user could now connect with old friends, distant family members, and more.`
+            `For example, back when Facebook launched, its thousandth user was only able to connect with fellow classmates at Harvard. By the time it had millions of users, however, they could now connect with childhood friends, distant family members, and more.`
         ],
         tempImageDescription: `Facebook nodes`,
         imageKey: TEMP_PITCH_ICON_5
@@ -69,7 +69,7 @@ export default [
         path: `startups-and-economies-of-scale`,
         title: `Startups and economies of scale`,
         description: [
-            `Another reason a startup might only later become profitable is something called economies of scale. These are when fixed costs, spread over greater numbers of users, level out to lower costs per user.`,
+            `Another reason a startup might only later become profitable is something called economies of scale. These are when fixed costs, spread over a greater number of users, level out to lower costs per user.`,
             `This neatly sums up Amazon's advantage. In its first five years, Amazon lost money because the upfront costs of packaging and shipping physical books are so high. Once the infrastructure was in place to handle this, however, any additional costs of taking on more users and offering more products became negligible.`
         ],
         tempImageDescription: `Amazon delivery cycle`,
@@ -79,11 +79,11 @@ export default [
         path: `greater-risks-greater-rewards`,
         title: `Greater risks, greater rewards`,
         description: [
-            `While stores are the oldest form of business, startups are more recent, and they behave much differently. So in the early days, investors would often dismiss a startup as a bad deal. This was unfortunate, since startups truly depend on investors. Without their initial support, it isn't possible to scale first without making a profit.`,
-            `This is why we have the word "startup," to remind us that startups are their own thing. They're not simply stores that are more risky because they're incompetent. A startup comes with more risk precisely because it aims to fulfill an unknown need. But if it succeeds, then it becomes the leader of a new market. And for investors, this means a greater reward.`
+            `While stores are the oldest form of business, startups are more recent, and they behave much differently. So in the early days, investors would often dismiss a startup as a bad deal. This was unfortunate, since startups absolutely need investors. Without their initial support, it isn't possible to scale first without making a profit.`,
+            `This is why we have the word "startup," to remind us that startups are their own thing. They're not simply stores that are riskier for being less competent. A startup comes with more risk precisely because it aims to fulfill an unknown need. But if it succeeds, then it becomes the leader of a new market. And for investors, this means a greater reward.`
         ],
         footnote: [
-            `Read Paul Graham's essay`,
+            `See Paul Graham's essay`,
             {
                 anchor: `"Startup = Growth."`,
                 href: `http://www.paulgraham.com/growth.html`
@@ -106,8 +106,8 @@ export default [
         path: `artups-are-like-startups`,
         title: `Artups are like startups`,
         description: [
-            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If their artistic hunches are correct, then their path to scale and success might be assured. After all, they'll be the only one of their kind to reach an audience that previously didn't exist.`,
-            `Yet unless we recognise these artists as being their own thing, we'll only ever see them as less competent indie artists. Which is unfortunate, because like startups, these artists absolutely need others to provide initial support. So let's create a new word for them. I'll call them "artups."`
+            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If these artists are correct in their hunches, then their chances for scale and success might be assured. After all, they'll be the only one of their kind to reach an audience that previously didn't exist.`,
+            `Yet unless we recognise these artists as being their own thing, we'll only ever see them as less competent indie artists. So let's create a new word for them. I propose we call them "artups."`
         ],
         footnote: [
             `See the`,
@@ -124,7 +124,7 @@ export default [
         path: `artups-and-network-effects`,
         title: `Artups and network effects`,
         description: [
-            `If an artup isn't capable of winning over a thousand fans on their own, how could support from others help them gain a million? One reason is that artups can benefit from the network effect.`,
+            `Since artups are like startups, they also depend on initial support from others. But if an artup struggles to gain a thousand fans on their own, how could label support help them win over a million? Again, one reason is the network effect.`,
             [
                 `For example, James Joyce's`,
                 {
