@@ -59,9 +59,13 @@ const TextSpan = ({
     }
 
     return Tag ? (
-        <Tag className={cx(
-            isWormholeDestinationAnchor && 'text__wormholeDestinationAnchor'
-        )}>
+        <Tag
+            {...{
+                className: cx(
+                    isWormholeDestinationAnchor && 'text__wormholeDestinationAnchor'
+                )
+            }}
+        >
             {formattedText}
         </Tag>
     ) : formattedText
@@ -73,7 +77,7 @@ TextSpan.propTypes = {
     isVerseLyric: PropTypes.bool,
     isEmphasis: PropTypes.bool,
     isItalic: PropTypes.bool,
-    beginsVerse: PropTypes.bool.isRequired,
+    beginsVerse: PropTypes.bool,
     endsVerse: PropTypes.bool,
     isWormholeDestinationVerse: PropTypes.bool,
     isWormholeDestinationAnchor: PropTypes.bool,

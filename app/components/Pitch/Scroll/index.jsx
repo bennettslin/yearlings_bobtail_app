@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import PitchTitle from './Title'
 import PitchImage from './Image'
-import PitchText from './Text'
+import PitchDescription from './Description'
 import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
 import './style'
 
@@ -46,7 +46,7 @@ const PitchScroll = forwardRef((props, ref) => {
                     }}
                 >
                     <PitchImage />
-                    <PitchText />
+                    <PitchDescription />
                 </div>
             </div>
         </div>

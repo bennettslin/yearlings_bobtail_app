@@ -100,10 +100,10 @@ const Text = forwardRef(({
                             wikiIndex,
 
                             /**
-                         * There is only ever an annotation index passed
-                         * from the verse, or a wiki annotation index
-                         * passed from the annotation.
-                         */
+                             * There is only ever an annotation index passed
+                             * from the verse, or a wiki annotation index
+                             * passed from the annotation.
+                             */
                             annotationIndex,
                             wikiAnnotationIndex
                         }}

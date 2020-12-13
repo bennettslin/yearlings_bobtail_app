@@ -33,8 +33,8 @@ export const getPitchImageKeyForIndex = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex - 1].imageKey
 )
 
-export const getPitchTextForIndex = pitchSegmentIndex => (
-    SEGMENTS[pitchSegmentIndex - 1].text
+export const getPitchDescriptionForIndex = pitchSegmentIndex => (
+    SEGMENTS[pitchSegmentIndex - 1].description
 )
 
 export const getPitchFootnoteForIndex = pitchSegmentIndex => (

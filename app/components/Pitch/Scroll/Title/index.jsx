@@ -2,6 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import Texts from '../../../Texts'
 import getPitchServerClientHoc from '../../../PitchHoc'
 import { getPitchTitleForIndex } from '../../../../api/pitch/segments'
 import './style'
@@ -17,7 +18,7 @@ const PitchTitle = ({ serverClientPitchIndex }) => (
             )
         }}
     >
-        {getPitchTitleForIndex(serverClientPitchIndex)}
+        <Texts {...{ text: getPitchTitleForIndex(serverClientPitchIndex) }} />
     </div>
 )
 

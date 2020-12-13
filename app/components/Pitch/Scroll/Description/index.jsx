@@ -3,20 +3,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getPitchServerClientHoc from '../../../PitchHoc'
+import Texts from '../../../Texts'
 import {
-    getPitchTextForIndex,
+    getPitchDescriptionForIndex,
     getPitchFootnoteForIndex
 } from '../../../../api/pitch/segments'
 import './style'
 
-const PitchText = ({ serverClientPitchIndex }) => {
-    const footnote = getPitchFootnoteForIndex(serverClientPitchIndex)
+const PitchDescription = ({ serverClientPitchIndex }) => {
+    const
+        description = getPitchDescriptionForIndex(serverClientPitchIndex),
+        footnote = getPitchFootnoteForIndex(serverClientPitchIndex)
 
     return (
         <div
             {...{
                 className: cx(
-                    'PitchText',
+                    'PitchDescription',
                     'fontSize__mediumTitle'
                 )
             }}
@@ -26,13 +29,9 @@ const PitchText = ({ serverClientPitchIndex }) => {
                     className: 'PitchText__segment'
                 }}
             >
-                {getPitchTextForIndex(serverClientPitchIndex).map((segment, index) => (
-                    <p
-                        {...{
-                            key: index
-                        }}
-                    >
-                        {segment}
+                {description.map((text, index) => (
+                    <p {...{ key: index }} >
+                        <Texts {...{ text }} />
                     </p>
                 ))}
             </div>
@@ -49,8 +48,8 @@ const PitchText = ({ serverClientPitchIndex }) => {
     )
 }
 
-PitchText.propTypes = {
+PitchDescription.propTypes = {
     serverClientPitchIndex: PropTypes.number.isRequired
 }
 
-export default getPitchServerClientHoc(PitchText)
+export default getPitchServerClientHoc(PitchDescription)
