@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Pitch content.`,
-        workedHours: 33
+        workedHours: 35
     },
 
     /* Ongoing. */

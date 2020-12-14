@@ -124,14 +124,19 @@ export default [
         path: `artups-and-network-effects`,
         title: `Artups and network effects`,
         description: [
-            `Since artups are like startups, they also depend on initial support from others. But if an artup struggles to gain a thousand fans on their own, how could label support help them win over a million? Again, one reason is the network effect.`,
+            `Since artups are like startups, they also depend on initial support from others. But if an artup struggles to gain a thousand fans on their own, why would they hope that anyone's support can help them win over a million? Again, one reason is the network effect.`,
             [
                 `For example, James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`
                 },
-                `is a dense and difficult work that requires a huge commitment in time and effort on the part of the reader. Daunting to even try. Community of fans already in place who can vouch that it's rewarding, and who've written books and offered classes to explain it.`
+                `is such a dense and complex work that most of us wouldn't ever bother if it didn't already have a critical mass of seasoned readers. We need them to vouch for it as a rewarding experience, as well as to explain its many difficult passages. By contrast, a child can enjoy Dr. Seuss's`,
+                {
+                    isItalic: true,
+                    lyric: `Oh, the Places You'll Go!`
+                },
+                `while knowing nothing of its popularity.`
             ]
         ],
         tempImageDescription: `Ulysses nodes`,
@@ -141,7 +146,7 @@ export default [
         path: `artups-and-economies-of-scale`,
         title: `Artups and economies of scale`,
         description: [
-            `Similarly, economies of scale might also help an artup. Complex works that require collaboration and coordination. Pet Sounds or Illinois?`
+            `And as with startups, economies of scale is another reason why an artup might become viable only after reaching a critical mass of fans. Highly orchestrated works such as Pet Sounds or Sgt Pepper's?`
         ],
         tempImageDescription: `Pet Sounds, `,
         imageKey: TEMP_PITCH_ICON_11
@@ -157,7 +162,7 @@ export default [
         ],
         description: [
             [
-                `If you've already checked out our audio webcomic, then maybe you know where this is going.`,
+                `If you've already checked out our audio webcomic, then you probably know where this is going.`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`
