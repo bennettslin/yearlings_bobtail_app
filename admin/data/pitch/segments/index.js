@@ -126,12 +126,12 @@ export default [
         description: [
             `Since artups are like startups, they also depend on initial support from others. But if an artup struggles to gain a thousand fans on their own, why would they hope that anyone's support can help them win over a million? One reason is that the network effect can make a difficult work more worthwhile as more people come to understand it.`,
             [
-                `For example, James Joyce's`,
+                `James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`
                 },
-                `is so complex and dense that if there weren't already a community of readers who'd taken the leap before us, most of us wouldn't ever bother with it. We need their reassurance that its many difficult passages aren't gibberish but instead hide layers of deeper meaning, and that our patience and effort will be rewarded.`
+                `is so complex and dense, for example, that if there weren't already a community of readers who'd taken the leap before us, most of us wouldn't ever bother with it. We need their reassurance that its many difficult passages aren't gibberish but instead hide layers of deeper meaning, and that our patience and effort will be rewarded.`
             ]
         ],
         tempImageDescription: `Ulysses nodes`,
@@ -141,10 +141,8 @@ export default [
         path: `artups-and-economies-of-scale`,
         title: `Artups and economies of scale`,
         description: [
-            `As with startups, economies of scale are another reason why an artup might become viable only after reaching a critical mass of fans. If a work involves many performers, the greater upfront costs in preparation and coordination can only be recovered by playing to a large audience.`,
-            `For example, 
-            
-            , such as the Beach Boys' Pet Sounds.`
+            `As with startups, economies of scale are another reason why an artup might become viable only after reaching a critical mass of fans. When a work involves many performers, the upfront costs in preparation and coordination can only be recovered by playing to a large audience.`,
+            `For example, while recording Pet Sounds, Brian Wilson didn't hold back on the variety of instruments and orchestration used. After it sold poorly, it just wasn't feasible to support the album by going on tour and recreating it onstage.`
         ],
         tempImageDescription: `Pet Sounds, `,
         imageKey: TEMP_PITCH_ICON_11
