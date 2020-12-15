@@ -124,19 +124,14 @@ export default [
         path: `artups-and-network-effects`,
         title: `Artups and network effects`,
         description: [
-            `Since artups are like startups, they also depend on initial support from others. But if an artup struggles to gain a thousand fans on their own, why would they hope that anyone's support can help them win over a million? Again, one reason is the network effect.`,
+            `Since artups are like startups, they also depend on initial support from others. But if an artup struggles to gain a thousand fans on their own, why would they hope that anyone's support can help them win over a million? One reason is that the network effect can make a difficult work more worthwhile as more people come to understand it.`,
             [
                 `For example, James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`
                 },
-                `is such a dense and complex work that most of us wouldn't ever bother if it didn't already have a critical mass of seasoned readers. We need them to vouch for it as a rewarding experience, as well as to explain its many difficult passages. By contrast, a child can enjoy Dr. Seuss's`,
-                {
-                    isItalic: true,
-                    lyric: `Oh, the Places You'll Go!`
-                },
-                `while knowing nothing of its popularity.`
+                `is so complex and dense that if there weren't already a community of readers who'd taken the leap before us, most of us wouldn't ever bother with it. We need their reassurance that its many difficult passages aren't gibberish but instead hide layers of deeper meaning, and that our patience and effort will be rewarded.`
             ]
         ],
         tempImageDescription: `Ulysses nodes`,
@@ -146,7 +141,10 @@ export default [
         path: `artups-and-economies-of-scale`,
         title: `Artups and economies of scale`,
         description: [
-            `And as with startups, economies of scale is another reason why an artup might become viable only after reaching a critical mass of fans. Highly orchestrated works such as Pet Sounds or Sgt Pepper's?`
+            `As with startups, economies of scale are another reason why an artup might become viable only after reaching a critical mass of fans. If a work involves many performers, the greater upfront costs in preparation and coordination can only be recovered by playing to a large audience.`,
+            `For example, 
+            
+            , such as the Beach Boys' Pet Sounds.`
         ],
         tempImageDescription: `Pet Sounds, `,
         imageKey: TEMP_PITCH_ICON_11
