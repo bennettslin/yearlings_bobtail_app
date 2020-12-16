@@ -165,12 +165,13 @@ export default [
         ],
         description: [
             [
-                `If you've checked out our audio webcomic, then you already know that`,
+                `If you've checked out our audio webcomic already, then you know I was trying to create the`,
                 {
                     isItalic: true,
-                    lyric: `Yearling's Bobtail`
+                    lyric: `Ulysses`
                 },
-                `is both a difficult and a complex work, so it's an artup.`
+                `of rock albums. But as a complete unknown, I hadn't earned the right to ask anyone to spend the kind of time and effort needed to understand it, and so no one did. One of the few reviews we received at the time even compared my lyrics to Engrish!`,
+                ``
             ]
         ],
         tempImageDescription: ``,
