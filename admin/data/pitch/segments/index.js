@@ -50,7 +50,7 @@ export default [
         title: `Startups scale, then profit`,
         description: [
             `Unlike stores, a startup seeks to scale first, even if this means going without profit in the short term. A good example is Google, which stayed unprofitable in its first few years until it reached millions of users.`,
-            `This means that founding a startup is a risky venture at every step along the way. The upside is that the need to self-differentiate is baked into a startup's business model. So if its founders have correctly identified an unknown need that they can fulfill, then the path to scale and success is probably assured.`
+            `This means that founding a startup is a risky venture at every step along the way. The upside is that the need to self-differentiate is baked into a startup's business model. So if its founders have correctly identified an unknown need that they can fulfill, then their path to scale and success is probably assured.`
         ],
         tempImageDescription: `Google suite, superlinear graph`,
         imageKey: TEMP_PITCH_ICON_4
@@ -59,8 +59,8 @@ export default [
         path: `startups-and-network-effects`,
         title: `Startups and network effects`,
         description: [
-            `If a startup makes no profit when it only has thousands of users, how can it suddenly turn profitable with a million users? One reason is the network effect, where a product becomes more valuable to each user as more users use the product.`,
-            `For example, back when Facebook launched, its thousandth user was only able to connect with fellow classmates at Harvard. By the time it had millions of users, however, they could now connect with childhood friends, distant family members, and more.`
+            `If a startup makes no profit when it only has thousands of users, how can it suddenly turn profitable with a million users? One reason is the network effect, where a product becomes more valuable to every user as more users use the product.`,
+            `For example, back when Facebook launched, its thousandth user was only able to connect with fellow classmates at Harvard. By the time it had millions of users, however, each user could now connect with childhood friends, distant family members, and more.`
         ],
         tempImageDescription: `Facebook nodes`,
         imageKey: TEMP_PITCH_ICON_5
@@ -70,7 +70,7 @@ export default [
         title: `Startups and economies of scale`,
         description: [
             `Another reason a startup might only later become profitable is something called economies of scale. These are when fixed costs, spread over a greater number of users, level out to lower costs per user.`,
-            `This neatly sums up Amazon's advantage. In its first five years, Amazon lost money because the upfront costs of packaging and shipping physical books are so high. Once the infrastructure was in place to handle this, however, any additional costs of taking on more users and offering more products became negligible.`
+            `This neatly sums up Amazon's advantage. In its first five years, Amazon lost money because the upfront costs of packaging and shipping physical books were so high. Once their infrastructure was in place to handle this, however, any additional costs of taking on more users and offering more products became negligible.`
         ],
         tempImageDescription: `Amazon delivery cycle`,
         imageKey: TEMP_PITCH_ICON_6
@@ -79,7 +79,7 @@ export default [
         path: `greater-risks-greater-rewards`,
         title: `Greater risks, greater rewards`,
         description: [
-            `While stores are the oldest form of business, startups are more recent, and they behave much differently. So in the early days, investors would often dismiss a startup as a bad deal. This was unfortunate, since startups absolutely need investors. Without their initial support, it isn't possible to scale first without making a profit.`,
+            `While stores are the oldest form of business, startups are more recent, and they behave very differently. So in the early days, investors would often dismiss a startup as a bad deal. This was unfortunate, since startups absolutely need investors. Without their initial support, it isn't possible to scale first without making a profit.`,
             `This is why we have the word "startup," to remind us that startups are their own thing. They're not simply stores that are riskier for being less competent. A startup comes with more risk precisely because it aims to fulfill an unknown need. But if it succeeds, then it becomes the leader of a new market. And for investors, this means a greater reward.`
         ],
         footnote: [
@@ -124,14 +124,14 @@ export default [
         path: `artups-and-network-effects`,
         title: `Artups and network effects`,
         description: [
-            `Since artups are like startups, they also depend on initial support from others. But if an artup struggles to gain a thousand fans on their own, why would they hope that anyone's support can help them win over a million? One reason is that the network effect can make a difficult work more worthwhile as more people come to understand it.`,
+            `Since artups are like startups, they also depend on initial support from others. But if an artup struggles to gain a thousand fans on their own, how could anyone's support help them win over a million? One reason is the network effect. A work may be seen as worthwhile only when more people come to appreciate it.`,
             [
                 `James Joyce's`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`
                 },
-                `is so complex and dense, for example, that if there weren't already a community of readers who'd taken the leap before us, most of us wouldn't ever bother with it. We need their reassurance that its many difficult passages aren't gibberish but instead hide layers of deeper meaning, and that our patience and effort will be rewarded.`
+                `is so complex and dense, for example, that if a community of readers hadn't already taken the leap, most of us wouldn't bother with it. We need their reassurance that its many difficult passages aren't gibberish but instead hide layers of deeper meaning, and that our patience will be rewarded.`
             ]
         ],
         tempImageDescription: `Ulysses nodes`,
@@ -141,8 +141,15 @@ export default [
         path: `artups-and-economies-of-scale`,
         title: `Artups and economies of scale`,
         description: [
-            `As with startups, economies of scale are another reason why an artup might become viable only after reaching a critical mass of fans. When a work involves many performers, the upfront costs in preparation and coordination can only be recovered by playing to a large audience.`,
-            `For example, while recording Pet Sounds, Brian Wilson didn't hold back on the variety of instruments and orchestration used. After it sold poorly, it just wasn't feasible to support the album by going on tour and recreating it onstage.`
+            `Economies of scale are another reason why an artup might become viable only after reaching a critical mass of fans. If a work involves many performers, then the upfront costs in preparation and coordination can only be recovered by playing to a large audience.`,
+            [
+                `For example, during the`,
+                {
+                    isItalic: true,
+                    lyric: `Pet Sounds`
+                },
+                `recording sessions, Brian Wilson didn't hold back on the range of instruments or level of arrangements that he used. This would have made it very difficult to recreate onstage. So once the album sold poorly, the Beach Boys decided not to go on tour to support it at all.`
+            ]
         ],
         tempImageDescription: `Pet Sounds, `,
         imageKey: TEMP_PITCH_ICON_11
@@ -158,7 +165,7 @@ export default [
         ],
         description: [
             [
-                `If you've already checked out our audio webcomic, then you probably know where this is going.`,
+                `If you've checked out our audio webcomic, then you already know that`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`
