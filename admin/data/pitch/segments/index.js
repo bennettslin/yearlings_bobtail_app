@@ -192,6 +192,8 @@ export default [
         path: `bet-on-the-bobtail-yearlings`,
         title: `Bet on the Bobtail Yearlings`,
         description: [
+            `As an indie artist, the Bobtail Yearlings were rightfully judged to be less competent. But `,
+            `Digital Revolution`,
             `Of course, betting on the Bobtail Yearlings comes with a risk, just as betting on any other startup or artup does. This is just to say it wouldn't be unreasonably risky. Good conclusion. Happy to work with you.`
         ],
         tempImageDescription: `Old Bennett again`,
