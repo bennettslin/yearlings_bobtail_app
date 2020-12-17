@@ -29,7 +29,7 @@ export default [
         path: `stores-versus-startups`,
         title: `Stores versus startups`,
         description: [
-            `Let's start by talking about the world of business. It's easy to paint all big companies with the same brush, but in their early days, they can be very different. Some begin as startups, and others as stores.`,
+            `Let's start by talking about the world of business. It's easy to paint all big companies with the same brush, but in their early days, each company can be very different. Some begin as startups, and others as stores.`,
             `(For the sake of this pitch, we'll call any company a store if it sells products or services that involve in-person transactions.)`
         ],
         tempImageDescription: `Google and Walmart`,
@@ -56,8 +56,8 @@ export default [
         imageKey: TEMP_PITCH_ICON_4
     },
     {
-        path: `startups-and-network-effects`,
-        title: `Startups and network effects`,
+        path: `startups-and-the-network-effect`,
+        title: `Startups and the network effect`,
         description: [
             `If a startup makes no profit when it only has thousands of users, how can it suddenly turn profitable with a million users? One reason is the network effect, where a product becomes more valuable to every user as more users use the product.`,
             `For example, back when Facebook launched, its thousandth user was only able to connect with fellow classmates at Harvard. By the time it had millions of users, however, each user could now connect with childhood friends, distant family members, and more.`
@@ -93,8 +93,8 @@ export default [
         imageKey: TEMP_PITCH_ICON_7
     },
     {
-        path: `indies-are-like-stores`,
-        title: `Indies are like stores`,
+        path: `indie-artists-are-like-stores`,
+        title: `Indie artists are like stores`,
         description: [
             `Let's get back now to music. For the past couple decades, record labels have preferred to sign indie artists, since they pose fewer risks. But it's no wonder why indie artists are less risky; they're the stores of the music world.`,
             `Indie artists typically gain fans by playing live shows. This is possible because audiences for shows already exist, and they arrive with certain expectations. In other words, indie artists fulfill a known need. And once an indie artist has grown a regional fanbase of a thousand, they can repeat the same strategy to win over the next thousand fans in a neighboring region, and then the next.`
@@ -121,8 +121,8 @@ export default [
         imageKey: TEMP_PITCH_ICON_9
     },
     {
-        path: `artups-and-network-effects`,
-        title: `Artups and network effects`,
+        path: `artups-and-the-network-effect`,
+        title: `Artups and the network effect`,
         description: [
             `Since artups are like startups, they also depend on initial support from others. But if an artup struggles to gain a thousand fans on their own, how could anyone's support help them win over a million? One reason is the network effect. A work may be seen as worthwhile only when more people come to appreciate it.`,
             [
@@ -192,9 +192,16 @@ export default [
         path: `bet-on-the-bobtail-yearlings`,
         title: `Bet on the Bobtail Yearlings`,
         description: [
-            `As an indie artist, the Bobtail Yearlings were rightfully judged to be less competent. But `,
-            `Digital Revolution`,
-            `Of course, betting on the Bobtail Yearlings comes with a risk, just as betting on any other startup or artup does. This is just to say it wouldn't be unreasonably risky. Good conclusion. Happy to work with you.`
+            `Let's wrap up this pitch. The Digital Revolution began once investors came to understand that startups are not stores. What if, to kickstart the next musical revolution, all we need is to realize that artups are not indie artists?`,
+            [
+                `The Bobtail Yearlings were rightfully seen as incompetent when judged as an indie band. But how does`,
+                {
+                    isItalic: true,
+                    lyric: `Yearling's Bobtail`
+                },
+                `measure up once understood as the work of an artup?`
+            ],
+            `If you're convinced to bet on us, you can email.... We're extremely adaptable and open-minded, and we've got many creative ideas to lessen the risk for you even further.`
         ],
         tempImageDescription: `Old Bennett again`,
         imageKey: TEMP_PITCH_ICON_13
