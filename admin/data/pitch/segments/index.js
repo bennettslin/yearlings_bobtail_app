@@ -131,7 +131,7 @@ export default [
                     isItalic: true,
                     lyric: `Ulysses`
                 },
-                `is so complex and dense, for example, that if a community of readers hadn't already taken the leap, most of us wouldn't bother with it. We need their reassurance that its many difficult passages aren't gibberish but instead hide layers of deeper meaning, and that our patience will be rewarded.`
+                `is so dense and complex, for example, that if a community of readers hadn't already taken the leap, most of us wouldn't bother with it. We need their reassurance that its many difficult passages aren't gibberish but instead hide layers of deeper meaning, and that our patience will be rewarded.`
             ]
         ],
         tempImageDescription: `Ulysses nodes`,
@@ -148,30 +148,41 @@ export default [
                     isItalic: true,
                     lyric: `Pet Sounds`
                 },
-                `recording sessions, Brian Wilson didn't hold back on the range of instruments or level of arrangements that he used. This would have made it very difficult to recreate onstage. So once the album sold poorly, the Beach Boys decided not to go on tour to support it at all.`
+                `recording sessions, Brian Wilson didn't hold back on the range of instruments or depth of arrangements that he used. This would have made it very difficult to recreate onstage. So once the album sold poorly, the Beach Boys decided not to go on tour to support it at all.`
             ]
         ],
         tempImageDescription: `Pet Sounds, `,
         imageKey: TEMP_PITCH_ICON_11
     },
     {
-        path: `artup-of-yearlings-bobtail`,
-        title: [
-            `Artup of`,
-            {
-                isItalic: true,
-                lyric: `Yearling's Bobtail`
-            }
-        ],
+        path: `our-initial-reception`,
+        title: `Our initial reception`,
         description: [
             [
-                `If you've checked out our audio webcomic already, then you know I was trying to create the`,
+                `If you've checked out our audio webcomic, then you know that`,
+                {
+                    isItalic: true,
+                    lyric: `Yearling's Bobtail`
+                },
+                `was my attempt to create the`,
                 {
                     isItalic: true,
                     lyric: `Ulysses`
                 },
-                `of rock albums. But as a complete unknown, I hadn't earned the right to ask anyone to spend the kind of time and effort needed to understand it, and so no one did. One of the few reviews we received at the time even compared my lyrics to Engrish!`,
-                ``
+                `of rock albums. Unfortunately, its complex lyrics could only be understood after careful study, which we as an unknown band had no right to ask of anyone. So upon its initial release, no one bothered. One reviewer even mistook the lyrics for Engrish!`
+            ],
+            [
+                `And with the depth of arrangements on`,
+                {
+                    isItalic: true,
+                    lyric: `Yearling's Bobtail,`
+                },
+                `I was also hoping to create the next`,
+                {
+                    isItalic: true,
+                    lyric: `Pet Sounds.`
+                },
+                `But without an existing fanbase, I struggled to find bandmates willing to tour in support of an album with so many intricate parts to learn. The stripped-down sets we ended up playing just didn't convey what it was meant to be.`
             ]
         ],
         tempImageDescription: ``,
