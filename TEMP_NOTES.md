@@ -1,6 +1,7 @@
 # Pitch TODO:
 * Wikipedia links?
 * Contact email in pitch
+* Remove second page.
 * Illustrator
     * Home button
 

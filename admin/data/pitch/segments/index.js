@@ -19,8 +19,7 @@ export default [
         path: `introduction`,
         title: `Introduction`,
         description: [
-            `Hi there! Are you otherwise interested in working with the Bobtail Yearlings, but our untested way of doing things is making you nervous?`,
-            `Read on, and I'll convince you that the Bobtail Yearlings are as reasonable to bet on as any other artist you've worked with in the past.`
+            `Hi there! Are you otherwise interested in working with the Bobtail Yearlings, but our untested way of doing things is making you nervous? Read on, and I'll convince you that we're as reasonable to bet on as any other artist you've worked with in the past.`
         ],
         tempImageDescription: `Old Bennett`,
         imageKey: TEMP_PITCH_ICON_1
@@ -29,9 +28,9 @@ export default [
         path: `stores-versus-startups`,
         title: `Stores versus startups`,
         description: [
-            `Let's start by talking about the world of business. It's easy to paint all big companies with the same brush, but in their early days, each company can be very different. Some begin as startups, and others as stores.`,
-            `(For the sake of this pitch, we'll call any company a store if it sells products or services that involve in-person transactions.)`
+            `Let's start by talking about the world of business. It's easy to paint all big companies with the same brush, but they can be very different in their early days. Some companies begin as startups, and others as stores. What's the difference?`
         ],
+        footnote: `In this pitch, a company is a store if it sells products or services involving in-person transactions.`,
         tempImageDescription: `Google and Walmart`,
         imageKey: TEMP_PITCH_ICON_2
     },
@@ -39,7 +38,7 @@ export default [
         path: `stores-profit-then-scale`,
         title: `Stores profit, then scale`,
         description: [
-            `What's the difference between startups and stores? A store seeks first to profit, then scale. For example, Walmart began as a neighborhood store. Once it became profitable, Sam Walton opened another store in the next town over, and then another.`,
+            `A store seeks first to profit, then scale. For example, Walmart began as a neighborhood store. Once it became profitable, Sam Walton opened another store in the next town over, and then another.`,
             `There's little risk in trying to scale a store, since each new store can repeat the same proven strategy. The downside is that scaling might not be possible. Since stores fulfill a known need, one isn't much different from the next. So wherever one competitor has opened a store, there's now less room for others.`
         ],
         tempImageDescription: `Walmart stores, linear graph`,
@@ -107,7 +106,7 @@ export default [
         title: `Artups are like startups`,
         description: [
             `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If these artists are correct in their hunches, then their chances for scale and success might be assured. After all, they'll be the only one of their kind to reach an audience that previously didn't exist.`,
-            `Yet unless we recognise these artists as being their own thing, we'll only ever see them as less competent indie artists. So let's create a new word for them. I propose we call them "artups."`
+            `Yet unless we recognize these artists as their own thing, we'll only ever see them as less competent indie artists. So let's create a new word for them, one that acknowledges their need for mutual reliance, unlike an indie artist's desire for self-reliance. Since "interdependent" doesn't shorten into anything sweet, let's call them "artups." The rhyme will remind us that artups, like startups, depend on initial support from others.`
         ],
         footnote: [
             `Here's the`,
@@ -124,7 +123,7 @@ export default [
         path: `artups-and-the-network-effect`,
         title: `Artups and the network effect`,
         description: [
-            `Since artups are like startups, they also depend on initial support from others. But if an artup struggles to gain a thousand fans on their own, how could anyone's support help them win over a million? One reason is the network effect. A work may be seen as worthwhile only when more people come to appreciate it.`,
+            `But if an artup struggles to gain a thousand fans on their own, how can anyone's support help them win over a million? One reason is the network effect. A work may be seen as worthwhile only when more people come to appreciate it.`,
             [
                 `James Joyce's`,
                 {
@@ -159,7 +158,7 @@ export default [
         title: `Our initial reception`,
         description: [
             [
-                `If you've checked out our audio webcomic, then you know that`,
+                `If you've checked out our audio webcomic, then you might know where this is going.`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`
@@ -169,7 +168,7 @@ export default [
                     isItalic: true,
                     lyric: `Ulysses`
                 },
-                `of rock albums. Unfortunately, its complex lyrics could only be understood after careful study, which we as an unknown band had no right to ask of anyone. So upon its initial release, no one bothered. One reviewer even mistook the lyrics for Engrish!`
+                `of rock albums. Unfortunately, its complex lyrics made sense only after careful study, which we as an unknown band had no right to ask of anyone. So upon its initial release, no one bothered. One reviewer even mistook the lyrics for Engrish!`
             ],
             [
                 `And with the depth of arrangements on`,
@@ -192,16 +191,16 @@ export default [
         path: `bet-on-the-bobtail-yearlings`,
         title: `Bet on the Bobtail Yearlings`,
         description: [
-            `Let's wrap up this pitch. The Digital Revolution began once investors came to understand that startups are not stores. What if, to kickstart the next musical revolution, all we need is to realize that artups are not indie artists?`,
+            `So we've seen that the Digital Revolution began once investors came to understand that startups aren't stores. What if, to kickstart the next musical revolution, all we need is to realize that artups aren't like indie artists?`,
             [
-                `The Bobtail Yearlings were rightfully seen as incompetent when judged as an indie band. But how does`,
+                `And yes, the Bobtail Yearlings were rightfully seen as incompetent when judged as an indie band. But how does`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`
                 },
                 `measure up once understood as the work of an artup?`
             ],
-            `If you're convinced to bet on us, you can email.... We're extremely adaptable and open-minded, and we've got many creative ideas to lessen the risk for you even further.`
+            `If you've been convinced to bet on the Bobtail Yearlings, let's talk! We're adaptable and open-minded, and we have some creative ideas to lessen the risk for you even further.`
         ],
         tempImageDescription: `Old Bennett again`,
         imageKey: TEMP_PITCH_ICON_13
