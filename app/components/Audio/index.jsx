@@ -121,7 +121,7 @@ const Audio = () => {
     }
 
     return (
-        <div {...{ className: 'Audio' }} >
+        <div {...{ className: 'Audio' }}>
             {/* Placeholder to create space. */}
             {isTwoRowMenu && (
                 <div {...{ className: 'Audio__flexPlaceholder' }} />

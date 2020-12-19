@@ -18,7 +18,7 @@ export default [
         path: `introduction`,
         title: `Introduction`,
         description: [
-            `Hi there! Are you otherwise interested in working with the Bobtail Yearlings, but you're feeling nervous about our untested way of doing things? Read on, and I'll convince you that we're as reasonable to bet on as any other artist you've worked with in the past.`
+            `Hi there! Are you otherwise interested in working with the Bobtail Yearlings, but you're feeling nervous about our untested way of doing things? Read on, and I'll convince you that we're as reasonable to bet on as any artist you've worked with in the past.`
         ],
         tempImageDescription: `Old Bennett`,
         imageKey: TEMP_PITCH_ICON_1
@@ -209,6 +209,7 @@ export default [
             ],
             `If you're convinced to bet on us, let's talk! We're adaptable and open-minded, and we've got some creative ideas to lessen the risk for you even further.`
         ],
+        contactEmail: true,
         tempImageDescription: `Old Bennett again`,
         imageKey: TEMP_PITCH_ICON_12
     }

@@ -29,6 +29,10 @@ export const getPathForPitchSegment = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex - 1].path
 )
 
+export const getShowContactEmailForPitch = pitchSegmentIndex => (
+    Boolean(SEGMENTS[pitchSegmentIndex - 1].contactEmail)
+)
+
 export const getPitchImageKeyForIndex = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex - 1].imageKey
 )

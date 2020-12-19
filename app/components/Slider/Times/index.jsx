@@ -1,6 +1,5 @@
 // Text displays to indicate time spent and remaining.
-
-import React, { memo } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import SliderTime from './Time'
@@ -35,4 +34,4 @@ const SliderTimes = () => {
     )
 }
 
-export default memo(SliderTimes)
+export default SliderTimes

@@ -1,16 +1,14 @@
-# Pitch TODO:
-* Contact email in pitch
-* Illustrator
-    * Home button
-
+# TODO:
 * Why do styles show for admin pages in build?
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
     * https://github.com/gatsbyjs/gatsby/issues/3446
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
 
-# Nice UI TODO:
+# Performance TODO:
 * Performance. (Redux.)
+* Remove memos.
+# Nice UI TODO:
 * Remove depth shading from slant direction cubes?
 
 # Annotation edit TODO:

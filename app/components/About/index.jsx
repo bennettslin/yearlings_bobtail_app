@@ -1,6 +1,5 @@
 // Section to show credits and anchor for band website.
-
-import React, { memo } from 'react'
+import React from 'react'
 import cx from 'classnames'
 import AboutChild from './Child'
 import AboutTitle from './Title'
@@ -35,4 +34,4 @@ const About = () => (
     </div>
 )
 
-export default memo(About)
+export default About

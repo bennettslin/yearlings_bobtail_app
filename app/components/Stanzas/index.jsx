@@ -33,7 +33,7 @@ const Stanzas = forwardRef(({ serverClientSongIndex }, ref) => {
 
     return stanzaIndices.length && (
         <>
-            <div {...{ className: 'Stanzas' }} >
+            <div {...{ className: 'Stanzas' }}>
                 {/* This is the unit title with first unit dot. */}
                 <Unit
                     {...{

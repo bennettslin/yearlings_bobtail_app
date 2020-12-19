@@ -3,10 +3,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import getPitchServerClientHoc from '../../../PitchHoc'
+import Contact from '../../../Contact'
 import Texts from '../../../Texts'
 import {
     getPitchDescriptionForIndex,
-    getPitchFootnoteForIndex
+    getPitchFootnoteForIndex,
+    getShowContactEmailForPitch
 } from '../../../../api/pitch/segments'
 import './style'
 
@@ -30,10 +32,13 @@ const PitchDescription = ({ serverClientPitchIndex }) => {
                 }}
             >
                 {description.map((text, index) => (
-                    <p {...{ key: index }} >
+                    <p {...{ key: index }}>
                         <Texts {...{ text }} />
                     </p>
                 ))}
+                {getShowContactEmailForPitch(serverClientPitchIndex) && (
+                    <Contact />
+                )}
             </div>
             {Boolean(footnote) && (
                 <div
