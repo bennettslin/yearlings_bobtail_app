@@ -1,5 +1,4 @@
 # Pitch TODO:
-* Wikipedia links?
 * Contact email in pitch
 * Illustrator
     * Home button

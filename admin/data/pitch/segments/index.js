@@ -18,7 +18,7 @@ export default [
         path: `introduction`,
         title: `Introduction`,
         description: [
-            `Hi there! Are you otherwise interested in working with the Bobtail Yearlings, but our untested way of doing things is making you nervous? Read on, and I'll convince you that we're as reasonable to bet on as any other artist you've worked with in the past.`
+            `Hi there! Are you otherwise interested in working with the Bobtail Yearlings, but you're feeling nervous about our untested way of doing things? Read on, and I'll convince you that we're as reasonable to bet on as any other artist you've worked with in the past.`
         ],
         tempImageDescription: `Old Bennett`,
         imageKey: TEMP_PITCH_ICON_1
@@ -29,7 +29,7 @@ export default [
         description: [
             `Let's start in the world of business. It's easy to think all big companies are the same, but some begin as startups, others as stores. What's the difference?`,
             `Stores seek first to profit, then scale. For example, Walmart began as a neighborhood store. Once it became profitable, Sam Walton opened another store in the next town over, and then another.`,
-            `There's little risk in trying to scale a store, since each new store can repeat the same proven strategy. The downside is that scaling might not be possible. Since stores fulfill a known need, one isn't much different from the next. So wherever one competitor opens a store, there's now less room for others.`
+            `There's little risk in trying to scale a store, since each new store can repeat the same proven strategy. The downside is that scaling might not be possible. Since stores fulfill a known need, one isn't much different from the next. So wherever one competitor opens a store, there's less room for others.`
         ],
         footnote: `In this pitch, let's call any company a store if it sells products or services involving in-person transactions.`,
         tempImageDescription: `Walmart stores, linear graph`,
@@ -50,7 +50,15 @@ export default [
         title: `Startups and the network effect`,
         description: [
             `If a startup makes no profit when it only has thousands of users, how can it suddenly turn profitable with a million users? One reason is the network effect, where a product becomes more valuable to every user as more users use the product.`,
-            `For example, back when Facebook launched, its thousandth user was only able to connect with fellow classmates at Harvard. By the time it had millions of users, however, each user could now connect with childhood friends, distant family members, and more.`
+            `For example, back when Facebook launched, its thousands of users were only able to connect with their fellow classmates at Harvard. By the time it had millions of users, however, each one could now connect with childhood friends, distant family members, and more.`
+        ],
+        footnote: [
+            `More about the`,
+            {
+                anchor: `network effect`,
+                href: `https://en.wikipedia.org/wiki/Network_effect`
+            },
+            `on Wikipedia.`
         ],
         tempImageDescription: `Facebook nodes`,
         imageKey: TEMP_PITCH_ICON_4
@@ -60,7 +68,15 @@ export default [
         title: `Startups and economies of scale`,
         description: [
             `Another reason a startup might only later become profitable is something called economies of scale. These are when fixed costs, spread over a greater number of users, level out to lower costs per user.`,
-            `This neatly sums up Amazon's advantage. In its first five years, Amazon lost money because the upfront costs of packaging and shipping physical books were so high. Once their infrastructure was in place to handle this, however, any additional costs of taking on more users and offering more products became negligible.`
+            `This neatly sums up Amazon's advantage. In its first five years, Amazon lost money because the upfront costs of packaging and shipping physical books are necessarily high. Once their infrastructure was in place to handle this, however, any additional costs of taking on more users and offering more products became negligible.`
+        ],
+        footnote: [
+            `More about`,
+            {
+                anchor: `economies of scale`,
+                href: `https://en.wikipedia.org/wiki/Economies_of_scale`
+            },
+            `on Wikipedia.`
         ],
         tempImageDescription: `Amazon delivery cycle`,
         imageKey: TEMP_PITCH_ICON_5
@@ -69,7 +85,7 @@ export default [
         path: `greater-risks-greater-rewards`,
         title: `Greater risks, greater rewards`,
         description: [
-            `While stores are the oldest form of business, startups are more recent, and they behave very differently. So in the early days, investors would often dismiss a startup as a bad deal. This was unfortunate, since startups absolutely need investors. Without their initial support, it isn't possible to scale first without making a profit.`,
+            `While stores are the oldest form of business, startups are more recent, and they behave very differently. So in the early days, investors tended to dismiss them as a bad deal. This was unfortunate, since startups absolutely need investors. Without their initial support, it isn't possible to scale first without making a profit.`,
             `This is why we have the word "startup," to remind us that startups are their own thing. They're not simply stores that are riskier for being less competent. A startup comes with more risk precisely because it aims to fulfill an unknown need. But if it succeeds, then it becomes the leader of a new market. And for investors, this means a greater reward.`
         ],
         footnote: [
@@ -96,7 +112,7 @@ export default [
         path: `artups-are-like-startups`,
         title: `Artups are like startups`,
         description: [
-            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If these artists are correct in their hunches, then their chances for scale and success might be assured. After all, they'll be the only one of their kind to reach an audience that previously didn't exist.`,
+            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If such an artist is correct in their hunches, then their chances for scale and success might be assured. After all, they'll be the only one of their kind to reach an audience that previously didn't exist.`,
             `Yet unless we recognize these artists as their own thing, we'll only ever see them as less competent indie artists. So let's create a new word for them, one that acknowledges their need for mutual reliance. Since "interdependent" doesn't shorten into anything sweet, let's call them "artups." The rhyme will remind us that artups, like startups, depend on initial support from others.`
         ],
         footnote: [
@@ -114,7 +130,7 @@ export default [
         path: `artups-and-the-network-effect`,
         title: `Artups and the network effect`,
         description: [
-            `But if an artup struggles to gain a thousand fans on their own, how can anyone's support help them win over a million? One reason is the network effect. A work may be seen as worthwhile only when more people come to appreciate it.`,
+            `If an artup struggles to gain a thousand fans on their own, how can anyone's support help them win over a million? One reason is the network effect. A work may be seen as worthwhile only when more people appreciate it.`,
             [
                 `James Joyce's`,
                 {
@@ -182,16 +198,16 @@ export default [
         path: `bet-on-the-bobtail-yearlings`,
         title: `Bet on the Bobtail Yearlings`,
         description: [
-            `So we've seen that the Digital Revolution began once investors came to understand that startups aren't stores. What if, to kickstart the next musical revolution, all we need is to realize that artups aren't like indie artists?`,
+            `Let's wrap this up! We've seen that the Digital Revolution began as investors came to learn that startups aren't stores. What if, to kickstart the next musical revolution, all we need is to realize that artups aren't like indie artists?`,
             [
                 `And yes, the Bobtail Yearlings were rightfully seen as incompetent when judged as an indie band. But how does`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`
                 },
-                `measure up once understood as the work of an artup?`
+                `measure up once understood to be the work of an artup?`
             ],
-            `If you've been convinced to bet on the Bobtail Yearlings, let's talk! We're adaptable and open-minded, and we have some creative ideas to lessen the risk for you even further.`
+            `If you're convinced to bet on the Bobtail Yearlings, let's talk! We're adaptable and open-minded, and we have some creative ideas to lessen the risk for you even further.`
         ],
         tempImageDescription: `Old Bennett again`,
         imageKey: TEMP_PITCH_ICON_12
