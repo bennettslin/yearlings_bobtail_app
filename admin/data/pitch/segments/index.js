@@ -10,8 +10,7 @@ import {
     TEMP_PITCH_ICON_9,
     TEMP_PITCH_ICON_10,
     TEMP_PITCH_ICON_11,
-    TEMP_PITCH_ICON_12,
-    TEMP_PITCH_ICON_13
+    TEMP_PITCH_ICON_12
 } from '../../../../app/constants/pitch'
 
 export default [
@@ -25,24 +24,16 @@ export default [
         imageKey: TEMP_PITCH_ICON_1
     },
     {
-        path: `stores-versus-startups`,
-        title: `Stores versus startups`,
-        description: [
-            `Let's start by talking about the world of business. It's easy to paint all big companies with the same brush, but they can be very different in their early days. Some companies begin as startups, and others as stores. What's the difference?`
-        ],
-        footnote: `In this pitch, a company is a store if it sells products or services involving in-person transactions.`,
-        tempImageDescription: `Google and Walmart`,
-        imageKey: TEMP_PITCH_ICON_2
-    },
-    {
         path: `stores-profit-then-scale`,
         title: `Stores profit, then scale`,
         description: [
-            `A store seeks first to profit, then scale. For example, Walmart began as a neighborhood store. Once it became profitable, Sam Walton opened another store in the next town over, and then another.`,
-            `There's little risk in trying to scale a store, since each new store can repeat the same proven strategy. The downside is that scaling might not be possible. Since stores fulfill a known need, one isn't much different from the next. So wherever one competitor has opened a store, there's now less room for others.`
+            `Let's start in the world of business. It's easy to think all big companies are the same, but some begin as startups, others as stores. What's the difference?`,
+            `Stores seek first to profit, then scale. For example, Walmart began as a neighborhood store. Once it became profitable, Sam Walton opened another store in the next town over, and then another.`,
+            `There's little risk in trying to scale a store, since each new store can repeat the same proven strategy. The downside is that scaling might not be possible. Since stores fulfill a known need, one isn't much different from the next. So wherever one competitor opens a store, there's now less room for others.`
         ],
+        footnote: `In this pitch, let's call any company a store if it sells products or services involving in-person transactions.`,
         tempImageDescription: `Walmart stores, linear graph`,
-        imageKey: TEMP_PITCH_ICON_3
+        imageKey: TEMP_PITCH_ICON_2
     },
     {
         path: `startups-scale-then-profit`,
@@ -52,7 +43,7 @@ export default [
             `This means that founding a startup is a risky venture at every step along the way. The upside is that the need to self-differentiate is baked into a startup's business model. So if its founders have correctly identified an unknown need that they can fulfill, then their path to scale and success is probably assured.`
         ],
         tempImageDescription: `Google suite, superlinear graph`,
-        imageKey: TEMP_PITCH_ICON_4
+        imageKey: TEMP_PITCH_ICON_3
     },
     {
         path: `startups-and-the-network-effect`,
@@ -62,7 +53,7 @@ export default [
             `For example, back when Facebook launched, its thousandth user was only able to connect with fellow classmates at Harvard. By the time it had millions of users, however, each user could now connect with childhood friends, distant family members, and more.`
         ],
         tempImageDescription: `Facebook nodes`,
-        imageKey: TEMP_PITCH_ICON_5
+        imageKey: TEMP_PITCH_ICON_4
     },
     {
         path: `startups-and-economies-of-scale`,
@@ -72,7 +63,7 @@ export default [
             `This neatly sums up Amazon's advantage. In its first five years, Amazon lost money because the upfront costs of packaging and shipping physical books were so high. Once their infrastructure was in place to handle this, however, any additional costs of taking on more users and offering more products became negligible.`
         ],
         tempImageDescription: `Amazon delivery cycle`,
-        imageKey: TEMP_PITCH_ICON_6
+        imageKey: TEMP_PITCH_ICON_5
     },
     {
         path: `greater-risks-greater-rewards`,
@@ -89,7 +80,7 @@ export default [
             }
         ],
         tempImageDescription: `Comparison of linear and superlinear graphs`,
-        imageKey: TEMP_PITCH_ICON_7
+        imageKey: TEMP_PITCH_ICON_6
     },
     {
         path: `indie-artists-are-like-stores`,
@@ -99,7 +90,7 @@ export default [
             `Indie artists typically gain fans by playing live shows. This is possible because audiences for shows already exist, and they arrive with certain expectations. In other words, indie artists fulfill a known need. And once an indie artist has grown a regional fanbase of a thousand, they can repeat the same strategy to win over the next thousand fans in a neighboring region, and then the next.`
         ],
         tempImageDescription: `Indie artist playing to audiences in different cities, linear graph.`,
-        imageKey: TEMP_PITCH_ICON_8
+        imageKey: TEMP_PITCH_ICON_7
     },
     {
         path: `artups-are-like-startups`,
@@ -117,7 +108,7 @@ export default [
             `from Steve Jobs.`
         ],
         tempImageDescription: `Artist creating works, superlinear graph.`,
-        imageKey: TEMP_PITCH_ICON_9
+        imageKey: TEMP_PITCH_ICON_8
     },
     {
         path: `artups-and-the-network-effect`,
@@ -134,7 +125,7 @@ export default [
             ]
         ],
         tempImageDescription: `Ulysses nodes`,
-        imageKey: TEMP_PITCH_ICON_10
+        imageKey: TEMP_PITCH_ICON_9
     },
     {
         path: `artups-and-economies-of-scale`,
@@ -151,7 +142,7 @@ export default [
             ]
         ],
         tempImageDescription: `Pet Sounds, `,
-        imageKey: TEMP_PITCH_ICON_11
+        imageKey: TEMP_PITCH_ICON_10
     },
     {
         path: `our-initial-reception`,
@@ -185,7 +176,7 @@ export default [
             ]
         ],
         tempImageDescription: ``,
-        imageKey: TEMP_PITCH_ICON_12
+        imageKey: TEMP_PITCH_ICON_11
     },
     {
         path: `bet-on-the-bobtail-yearlings`,
@@ -203,6 +194,6 @@ export default [
             `If you've been convinced to bet on the Bobtail Yearlings, let's talk! We're adaptable and open-minded, and we have some creative ideas to lessen the risk for you even further.`
         ],
         tempImageDescription: `Old Bennett again`,
-        imageKey: TEMP_PITCH_ICON_13
+        imageKey: TEMP_PITCH_ICON_12
     }
 ]
