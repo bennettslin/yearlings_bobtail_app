@@ -24,7 +24,7 @@ const AboutContact = ({ didMount }) => didMount && (
                 }}
             >
                 {CONTACT_EMAIL.split('').map((character, index) => (
-                    <Fragment {...{ key: index }} >
+                    <Fragment {...{ key: index }}>
                         <span {...{ className: 'dNC' }}>
                             {String.fromCharCode(
                                 character.charCodeAt(0) + 1

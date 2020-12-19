@@ -89,7 +89,7 @@ export default [
             `This is why we have the word "startup," to remind us that startups are their own thing. They're not simply stores that are riskier for being less competent. A startup comes with more risk precisely because it aims to fulfill an unknown need. But if it succeeds, then it becomes the leader of a new market. And for investors, this means a greater reward.`
         ],
         footnote: [
-            `See Paul Graham's essay`,
+            `This point is taken from Paul Graham's essay`,
             {
                 anchor: `"Startup = Growth."`,
                 href: `http://www.paulgraham.com/growth.html`
@@ -198,16 +198,16 @@ export default [
         path: `bet-on-the-bobtail-yearlings`,
         title: `Bet on the Bobtail Yearlings`,
         description: [
-            `Let's wrap this up! We've seen that the Digital Revolution began as investors came to learn that startups aren't stores. What if, to kickstart the next musical revolution, all we need is to realize that artups aren't like indie artists?`,
+            `Let's wrap this up! We've seen that as the Digital Revolution got underway, investors came to learn that startups aren't stores. What if we can kickstart the next musical revolution just by learning that artups aren't like indie artists?`,
             [
-                `And yes, the Bobtail Yearlings were rightfully seen as incompetent when judged as an indie band. But how does`,
+                `And yes, the Bobtail Yearlings were rightfully judged to be incompetent when seen as an indie band. But how does`,
                 {
                     isItalic: true,
                     lyric: `Yearling's Bobtail`
                 },
-                `measure up once understood to be the work of an artup?`
+                `measure up when seen as the work of an artup?`
             ],
-            `If you're convinced to bet on the Bobtail Yearlings, let's talk! We're adaptable and open-minded, and we have some creative ideas to lessen the risk for you even further.`
+            `If you're convinced to bet on us, let's talk! We're adaptable and open-minded, and we've got some creative ideas to lessen the risk for you even further.`
         ],
         tempImageDescription: `Old Bennett again`,
         imageKey: TEMP_PITCH_ICON_12
