@@ -30,6 +30,7 @@ const Stage = ({ style }) => {
 }
 
 Stage.propTypes = {
+    // Passed by stage HOC.
     style: PropTypes.object
 }
 

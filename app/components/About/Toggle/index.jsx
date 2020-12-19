@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import cx from 'classnames'
 import { useDispatch } from 'react-redux'
 import Button from '../../Button'
@@ -33,4 +33,4 @@ const AboutToggle = () => {
     )
 }
 
-export default memo(AboutToggle)
+export default AboutToggle

@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import './style'
 
 const AboutCredits = () => (
@@ -17,4 +17,4 @@ const AboutCredits = () => (
     </div>
 )
 
-export default memo(AboutCredits)
+export default AboutCredits

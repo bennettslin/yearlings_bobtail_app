@@ -1,5 +1,5 @@
 // Popup container for tips section.
-import React, { memo } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import Tips from '../../Tips'
 import Popup from '../../Popup'
@@ -28,4 +28,4 @@ const TipsPopup = () => {
     )
 }
 
-export default memo(TipsPopup)
+export default TipsPopup

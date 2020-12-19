@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment, memo } from 'react'
+import React, { useEffect, Fragment } from 'react'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
@@ -58,4 +58,4 @@ const Scene = () => {
     )
 }
 
-export default memo(Scene)
+export default Scene

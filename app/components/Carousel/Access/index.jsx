@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import AccessLetters from '../../Access/Letters'
@@ -30,4 +30,4 @@ CarouselAccess.propTypes = {
     inLyric: PropTypes.bool
 }
 
-export default memo(CarouselAccess)
+export default CarouselAccess

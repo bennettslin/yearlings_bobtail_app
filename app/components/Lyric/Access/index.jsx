@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import AccessLetters from '../../Access/Letters'
 import { ARROW_UP, ARROW_DOWN } from '../../../constants/access'
@@ -31,4 +31,4 @@ const LyricAccess = () => {
     )
 }
 
-export default memo(LyricAccess)
+export default LyricAccess

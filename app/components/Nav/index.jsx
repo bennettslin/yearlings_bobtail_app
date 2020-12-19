@@ -1,5 +1,5 @@
 // Section for user to navigate between songs.
-import React, { useEffect, memo } from 'react'
+import React, { useEffect } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import NavListener from '../../handlers/Nav/Listener'
@@ -44,4 +44,4 @@ const Nav = () => {
     )
 }
 
-export default memo(Nav)
+export default Nav

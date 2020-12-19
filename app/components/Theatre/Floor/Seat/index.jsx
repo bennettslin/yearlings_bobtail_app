@@ -4,19 +4,6 @@ import cx from 'classnames'
 import SeatShade from './SeatShade'
 import './style'
 
-const propTypes = {
-    /**
-     * How close the seat is to the centre. Centre seat index is 0. Left seats
-     * have negative indices, right seats have positive indices.
-     */
-    chairIndex: PropTypes.number.isRequired,
-    rowIndex: PropTypes.number.isRequired,
-    top: PropTypes.number.isRequired,
-    left: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired
-}
-
 const SEAT_THICKNESS = 2.5
 
 const FloorSeat = ({
@@ -80,6 +67,17 @@ const FloorSeat = ({
     )
 }
 
-FloorSeat.propTypes = propTypes
+FloorSeat.propTypes = {
+    /**
+     * How close the seat is to the centre. Centre seat index is 0. Left seats
+     * have negative indices, right seats have positive indices.
+     */
+    chairIndex: PropTypes.number.isRequired,
+    rowIndex: PropTypes.number.isRequired,
+    top: PropTypes.number.isRequired,
+    left: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired
+}
 
 export default memo(FloorSeat)

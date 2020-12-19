@@ -1,5 +1,5 @@
 // The scene sky.
-import React, { memo } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import {
@@ -66,5 +66,5 @@ const Sky = () => {
     )
 }
 
-export default memo(Sky)
+export default Sky
 

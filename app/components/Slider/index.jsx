@@ -1,5 +1,5 @@
 // Component to touch change played time and verse.
-import React, { useRef, memo } from 'react'
+import React, { useRef } from 'react'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouch'
@@ -56,4 +56,4 @@ const Slider = () => {
     )
 }
 
-export default memo(Slider)
+export default Slider

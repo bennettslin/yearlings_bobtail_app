@@ -104,6 +104,7 @@ const Curtains = ({ style }) => {
 }
 
 Curtains.propTypes = {
+    // Passed by stage HOC.
     style: PropTypes.object
 }
 

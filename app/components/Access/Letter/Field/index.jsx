@@ -1,6 +1,5 @@
 // Container to outline of a key on a keyboard, shared by all access icons.
-
-import React, { memo } from 'react'
+import React from 'react'
 import cx from 'classnames'
 import InlineSvg from '../../../../modules/InlineSvg'
 import accessKey from '../../../../../assets/svgs/app/main/accessKey'
@@ -19,4 +18,4 @@ const AccessField = () => (
     </InlineSvg>
 )
 
-export default memo(AccessField)
+export default AccessField

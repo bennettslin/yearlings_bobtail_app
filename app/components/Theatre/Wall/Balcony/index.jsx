@@ -5,14 +5,6 @@ import InlineSvg from '../../../../modules/InlineSvg'
 import wallBalcony from '../../../../../assets/svgs/theatre/wallBalcony'
 import './style'
 
-const propTypes = {
-    top: PropTypes.number.isRequired,
-    left: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-    isLeft: PropTypes.bool.isRequired
-}
-
 const WallBalcony = ({
     top,
     left,
@@ -43,6 +35,12 @@ const WallBalcony = ({
     </InlineSvg>
 )
 
-WallBalcony.propTypes = propTypes
+WallBalcony.propTypes = {
+    top: PropTypes.number.isRequired,
+    left: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    isLeft: PropTypes.bool.isRequired
+}
 
 export default memo(WallBalcony)

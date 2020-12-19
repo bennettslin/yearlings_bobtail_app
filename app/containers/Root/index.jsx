@@ -1,5 +1,5 @@
 // Parent component that handles focus events.
-import React, { useEffect, useRef, memo } from 'react'
+import React, { useEffect, useRef } from 'react'
 import cx from 'classnames'
 import ResizeManager from '../../managers/Resize'
 import Theatre from '../../components/Theatre'
@@ -128,4 +128,4 @@ const RootContainer = () => {
     )
 }
 
-export default memo(RootContainer)
+export default RootContainer

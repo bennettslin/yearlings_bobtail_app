@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import cx from 'classnames'
 import './style'
 
@@ -11,4 +11,4 @@ const Wood = () => (
     />
 )
 
-export default memo(Wood)
+export default Wood

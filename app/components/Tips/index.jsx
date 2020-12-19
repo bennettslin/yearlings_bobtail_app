@@ -1,5 +1,5 @@
 // Section to show song tip.
-import React, { memo } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import TipsToggle from './Toggle'
@@ -23,4 +23,4 @@ const Tips = () => {
     )
 }
 
-export default memo(Tips)
+export default Tips

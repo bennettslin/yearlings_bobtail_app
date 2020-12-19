@@ -4,14 +4,6 @@ import cx from 'classnames'
 import InlineSvg from '../../../../../modules/InlineSvg'
 import floorSeat from '../../../../../../assets/svgs/theatre/floorSeat'
 
-const propTypes = {
-    className: PropTypes.string.isRequired,
-    top: PropTypes.number.isRequired,
-    left: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired
-}
-
 const SeatShade = ({
     className,
     top,
@@ -38,6 +30,12 @@ const SeatShade = ({
     </InlineSvg>
 )
 
-SeatShade.propTypes = propTypes
+SeatShade.propTypes = {
+    className: PropTypes.string.isRequired,
+    top: PropTypes.number.isRequired,
+    left: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired
+}
 
 export default memo(SeatShade)

@@ -1,5 +1,5 @@
 // Popup container for about section.
-import React, { memo } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAboutShown } from '../../../redux/toggle/action'
 import About from '../../About'
@@ -34,4 +34,4 @@ const AboutPopup = () => {
     )
 }
 
-export default memo(AboutPopup)
+export default AboutPopup

@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import cx from 'classnames'
 import { ALBUM_TITLE } from '../../../constants/paths'
 import './style'
@@ -19,4 +19,4 @@ const AlbumBanner = () => (
     </div>
 )
 
-export default memo(AlbumBanner)
+export default AlbumBanner

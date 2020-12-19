@@ -1,5 +1,5 @@
 // Popup container for overview section.
-import React, { memo, useContext, cloneElement } from 'react'
+import React, { useContext, cloneElement } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import AlbumPageElementContext from '../../../contexts/AlbumPageElement'
@@ -43,4 +43,4 @@ OverviewPopup.propTypes = {
     inMain: PropTypes.bool
 }
 
-export default memo(OverviewPopup)
+export default OverviewPopup
