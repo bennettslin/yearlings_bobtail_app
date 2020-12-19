@@ -16,12 +16,6 @@
         // When in pitch container, width is the same as full popup.
         max-width: $WIDTH_LAPTOP;
         height: calc(100% - #{$height__pitchHeader + $height__pitchNav});
-        
-        // .DW__phoneOrMiniWidth
-        // & {
-        //     padding-left: $margin__thick;
-        //     padding-right: $margin__thick;
-        // }
 
         .DW__tabletOrDesktopWidth
         & {
