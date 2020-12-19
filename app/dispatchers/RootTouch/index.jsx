@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useRef, useState, memo } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 import CloseHandler from '../../managers/Close'
 import SliderTouchDispatcher from '../SliderTouch'
 import StopPropagationDispatcher from '../StopPropagation'
@@ -56,4 +56,4 @@ const RootTouchManager = forwardRef((props, ref) => {
     )
 })
 
-export default memo(RootTouchManager)
+export default RootTouchManager

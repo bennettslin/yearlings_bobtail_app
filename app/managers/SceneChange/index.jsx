@@ -1,4 +1,4 @@
-import { useEffect, useState, memo } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
     resetSceneChange,
@@ -66,4 +66,4 @@ const SceneChangeManager = () => {
     return null
 }
 
-export default memo(SceneChangeManager)
+export default SceneChangeManager

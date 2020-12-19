@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, memo } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateWikiIndices } from '../../redux/session/action'
 import { mapReferenceDot } from '../../redux/dots/selector'
@@ -28,4 +28,4 @@ const WikiDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default memo(WikiDispatcher)
+export default WikiDispatcher

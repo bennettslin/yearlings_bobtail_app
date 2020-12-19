@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useSelector } from 'react-redux'
 import VerseDispatcher from '../Verse'
 import { getVerseIndexForScene } from '../../api/album/scenes'
@@ -25,4 +25,4 @@ const SceneDispatcher = forwardRef((props, ref) => {
     )
 })
 
-export default memo(SceneDispatcher)
+export default SceneDispatcher

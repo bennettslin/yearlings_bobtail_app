@@ -1,5 +1,5 @@
 // Child that knows rules to stop propagation.
-import { forwardRef, useImperativeHandle, memo } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch } from 'react-redux'
 import { updateFocusStore } from '../../redux/focus/action'
 import { updateAccessStore } from '../../redux/access/action'
@@ -28,4 +28,4 @@ const StopPropagationDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default memo(StopPropagationDispatcher)
+export default StopPropagationDispatcher

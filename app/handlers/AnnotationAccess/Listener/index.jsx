@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, memo } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import AnnotationAccessDispatcher from '../Dispatcher'
 import {
@@ -55,4 +55,4 @@ const AnnotationAccessListener = () => {
     )
 }
 
-export default memo(AnnotationAccessListener)
+export default AnnotationAccessListener

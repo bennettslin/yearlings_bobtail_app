@@ -1,5 +1,5 @@
 // Singleton to watch for non-toggle events that require collapsing lyric.
-import { forwardRef, useImperativeHandle, memo } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEarColumnIndex } from '../../redux/session/action'
 import { mapIsEarShown } from '../../redux/ear/selector'
@@ -30,4 +30,4 @@ const EarColumnDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default memo(EarColumnDispatcher)
+export default EarColumnDispatcher

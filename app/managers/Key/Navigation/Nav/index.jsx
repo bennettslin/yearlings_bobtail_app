@@ -1,4 +1,4 @@
-import React, { useRef, forwardRef, useImperativeHandle, memo } from 'react'
+import React, { useRef, forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../../redux/access/action'
 import NavDispatcher from '../../../../handlers/Nav/Dispatcher'
@@ -90,4 +90,4 @@ const NavNavigation = forwardRef((props, ref) => {
     )
 })
 
-export default memo(NavNavigation)
+export default NavNavigation

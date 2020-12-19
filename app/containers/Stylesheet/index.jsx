@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import getDidMountHoc from '../../components/DidMountHoc'
 import AccessStylesheet from '../../components/Stylesheets/Access'
@@ -21,4 +21,4 @@ StylesheetContainer.propTypes = {
     didMount: PropTypes.bool.isRequired
 }
 
-export default memo(getDidMountHoc(StylesheetContainer))
+export default getDidMountHoc(StylesheetContainer)

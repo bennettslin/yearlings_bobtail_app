@@ -1,5 +1,5 @@
 // Component that handles all user events from keyboard.
-import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../redux/access/action'
 import { updateIsAutoScroll } from '../../redux/toggle/action'
@@ -173,4 +173,4 @@ const KeyManager = forwardRef((props, ref) => {
     )
 })
 
-export default memo(KeyManager)
+export default KeyManager

@@ -8,6 +8,7 @@
 # Performance TODO:
 * Performance. (Redux.)
 * Remove memos.
+    * Not working for text, probably useless.
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
 

@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, memo } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateShownNavBookIndex } from '../../../redux/session/action'
 import { mapShowSingleNavBook } from '../../../redux/nav/selector'
@@ -30,4 +30,4 @@ const NavDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default memo(NavDispatcher)
+export default NavDispatcher

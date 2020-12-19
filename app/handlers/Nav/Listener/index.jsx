@@ -1,4 +1,4 @@
-import { useEffect, useRef, memo } from 'react'
+import { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
     updateAccessStore,
@@ -42,4 +42,4 @@ const NavListener = () => {
     return null
 }
 
-export default memo(NavListener)
+export default NavListener

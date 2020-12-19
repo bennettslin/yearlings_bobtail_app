@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, memo } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollCarouselToAnnotation } from '../../../redux/scrollCarousel/action'
 import { scrollLyricToAnchor } from '../../../redux/scrollLyric/action'
@@ -109,4 +109,4 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default memo(AnnotationDispatcher)
+export default AnnotationDispatcher

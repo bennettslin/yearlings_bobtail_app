@@ -1,5 +1,4 @@
-// Child that knows rules to toggle lyric. Not needed if just collapsing.
-import { forwardRef, useImperativeHandle, memo } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getPitchSegmentsCount } from '../../api/pitch/segments'
 import { setPitchSegmentIndex } from '../../redux/pitch/action'
@@ -39,4 +38,4 @@ const PitchDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default memo(PitchDispatcher)
+export default PitchDispatcher

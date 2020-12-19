@@ -1,4 +1,4 @@
-import React, { useEffect, memo } from 'react'
+import React, { useEffect } from 'react'
 import { navigate } from 'gatsby'
 import { useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet'
@@ -53,4 +53,4 @@ const UrlManager = () => {
     )
 }
 
-export default memo(UrlManager)
+export default UrlManager

@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
@@ -241,4 +241,4 @@ const LetterManager = forwardRef((props, ref) => {
 
 })
 
-export default memo(LetterManager)
+export default LetterManager

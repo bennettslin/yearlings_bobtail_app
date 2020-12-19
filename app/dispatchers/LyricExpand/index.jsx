@@ -1,5 +1,5 @@
 // Child that knows rules to toggle lyric. Not needed if just collapsing.
-import { forwardRef, useImperativeHandle, memo } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsLyricExpanded } from '../../redux/toggle/action'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
@@ -36,4 +36,4 @@ const LyricExpandDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default memo(LyricExpandDispatcher)
+export default LyricExpandDispatcher

@@ -1,4 +1,4 @@
-import React, { forwardRef, useImperativeHandle, useRef, memo } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import VerseDispatcher from '../Verse'
 import { updateSliderStore } from '../../redux/slider/action'
@@ -153,4 +153,4 @@ const SliderTouchDispatcherContainer = forwardRef((props, ref) => {
     )
 })
 
-export default memo(SliderTouchDispatcherContainer)
+export default SliderTouchDispatcherContainer

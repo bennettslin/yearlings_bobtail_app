@@ -1,4 +1,4 @@
-import { useEffect, useState, memo } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollLyricBackToSelectedVerse } from '../../redux/scrollLyric/action'
 import { mapIsActivated } from '../../redux/activated/selector'
@@ -62,4 +62,4 @@ const ScrollManager = () => {
     return null
 }
 
-export default memo(ScrollManager)
+export default ScrollManager

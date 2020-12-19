@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import * as EmailValidator from 'email-validator'
@@ -112,4 +112,4 @@ MailingList.propTypes = {
     didMount: PropTypes.bool.isRequired
 }
 
-export default memo(getDidMountHoc(MailingList))
+export default getDidMountHoc(MailingList)

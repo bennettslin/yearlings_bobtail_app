@@ -1,5 +1,5 @@
 // Manager for audio players.
-import React, { memo, useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import PlayerTimeContext from '../../contexts/PlayerTime'
@@ -130,4 +130,4 @@ const AudioManager = () => {
     )
 }
 
-export default memo(AudioManager)
+export default AudioManager

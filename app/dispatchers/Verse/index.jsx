@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, memo } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 // import { updateAudioStore } from '../../redux/audio/action'
 import { updateSelectedStore } from '../../redux/selected/action'
@@ -58,4 +58,4 @@ const VerseDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default memo(VerseDispatcher)
+export default VerseDispatcher

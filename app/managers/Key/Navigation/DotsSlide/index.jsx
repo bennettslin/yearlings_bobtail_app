@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, memo } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../../redux/access/action'
 import {
@@ -68,4 +68,4 @@ const DotsSlideNavigation = forwardRef((props, ref) => {
     return null
 })
 
-export default memo(DotsSlideNavigation)
+export default DotsSlideNavigation

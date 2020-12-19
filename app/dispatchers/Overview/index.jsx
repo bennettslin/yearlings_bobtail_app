@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, memo } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateOptionStore } from '../../redux/option/action'
 import { getNextOption } from '../../helpers/options'
@@ -47,4 +47,4 @@ const OverviewDispatcher = forwardRef((props, ref) => {
     return null
 })
 
-export default memo(OverviewDispatcher)
+export default OverviewDispatcher

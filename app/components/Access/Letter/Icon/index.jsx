@@ -1,6 +1,5 @@
 // Container to show a single character representing an access key.
-
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import {
@@ -20,14 +19,7 @@ import {
 } from '../../../../constants/access'
 import './style'
 
-const AccessIcon = ({
-    accessKey
-
-}) => {
-/**
- * TODO: This might be temporary. The navigation keys will be replaced by
- * actual svgs. The letters might be able to remain as text characters.
- */
+const AccessIcon = ({ accessKey }) => {
     let shownKey = accessKey
 
     switch (accessKey) {
@@ -71,4 +63,4 @@ AccessIcon.propTypes = {
     accessKey: PropTypes.string
 }
 
-export default memo(AccessIcon)
+export default AccessIcon

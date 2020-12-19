@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, memo } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import { updateLyricStore } from '../../redux/lyric/action'
@@ -84,4 +84,4 @@ const SongChangeManager = () => {
     return null
 }
 
-export default memo(SongChangeManager)
+export default SongChangeManager
