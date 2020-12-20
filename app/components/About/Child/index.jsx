@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import getDidMountHoc from '../../DidMountHoc'
@@ -48,4 +48,4 @@ AboutChild.propTypes = {
     children: PropTypes.any.isRequired
 }
 
-export default memo(getDidMountHoc(AboutChild))
+export default getDidMountHoc(AboutChild)
