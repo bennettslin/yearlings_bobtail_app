@@ -112,7 +112,7 @@ export default [
         path: `artups-are-like-startups`,
         title: `Artups are like startups`,
         description: [
-            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If such an artist is correct in their hunches, then their chances for scale and success might be assured. After all, they'll be the only one of their kind to reach an audience that previously didn't exist.`,
+            `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If such an artist's hunches are correct, then their chances for scale and success might be assured. After all, they'll be the only one of their kind to reach an audience that previously didn't exist.`,
             `Yet unless we recognize these artists as their own thing, we'll only ever see them as less competent indie artists. So let's create a new word for them, one that acknowledges their need for mutual reliance. Since "interdependent" doesn't shorten into anything sweet, let's call them "artups." The rhyme will remind us that artups, like startups, depend on initial support from others.`
         ],
         footnote: [
