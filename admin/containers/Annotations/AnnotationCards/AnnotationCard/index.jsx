@@ -1,5 +1,5 @@
 // Component to show individual annotation note or all wormholes.
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Texts from '../../../../../app/components/Texts'
 import { ORDERED_DOT_KEYS } from '../../../../../app/constants/dots'
@@ -46,4 +46,4 @@ AnnotationCard.propTypes = {
     cardIndex: PropTypes.number.isRequired
 }
 
-export default memo(AnnotationCard)
+export default AnnotationCard

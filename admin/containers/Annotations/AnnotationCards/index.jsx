@@ -1,5 +1,5 @@
 // Component to show all notes and wormholes for each annotation.
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import AnnotationCard from './AnnotationCard'
 import { getAnnotationCardIndices } from '../../../../app/api/album/cards'
@@ -28,4 +28,4 @@ AnnotationCards.propTypes = {
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default memo(AnnotationCards)
+export default AnnotationCards
