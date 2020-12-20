@@ -1,6 +1,3 @@
-# BUG:
-* Arrow navigation in pitch popup is broken.
-
 # TODO:
 * Why do styles show for admin pages in build?
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?

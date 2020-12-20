@@ -95,7 +95,7 @@ export default [
                 href: `http://www.paulgraham.com/growth.html`
             }
         ],
-        tempImageDescription: `Comparison of linear and superlinear graphs`,
+        tempImageDescription: `Investor seeing linear and superlinear graphs`,
         imageKey: TEMP_PITCH_ICON_6
     },
     {
@@ -210,7 +210,7 @@ export default [
             `If you're convinced to bet on us, let's talk! We're adaptable and open-minded, and we've got some creative ideas to lessen the risk for you even further.`
         ],
         contactEmail: true,
-        tempImageDescription: `Old Bennett again`,
+        tempImageDescription: `Old Bennett with arm raised`,
         imageKey: TEMP_PITCH_ICON_12
     }
 ]
