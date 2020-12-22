@@ -8,6 +8,10 @@ export default [
         taskName: `Pitch content.`,
         workedHours: 53
     },
+    {
+        taskName: `Night colour work.`,
+        workedHours: 1
+    },
 
     /* Ongoing. */
     {

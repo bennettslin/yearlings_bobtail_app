@@ -4,8 +4,8 @@ import { REASSURING_ENCHANTED } from '../../../../../app/constants/scene/actors/
 export default {
     [CHRISTOPHER_BENNETT_WILLY]: {
         [REASSURING_ENCHANTED]: {
-            yIndex: 3,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 5.6
         }
     }
 }

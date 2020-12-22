@@ -107,9 +107,9 @@ export default {
     [VELVET_FLOOR_COLOUR]: { h: 357, s: 44, l: 36 },
     [SNOW_FLOOR_COLOUR]: { h: parseInt(HUE_SNOW), s: 30, l: 87 },
     /* Y. */
-    [NIGHT_COLOUR]: { h: 221, s: 17, l: 45 },
+    [NIGHT_COLOUR]: { h: 221, s: 17, l: 35 },
     /* Z. */
-    [NIGHT_MAGIC_COLOUR]: { h: 125, s: 30, l: 15 },
+    [NIGHT_MAGIC_COLOUR]: { h: 125, s: 17, l: 25 },
     /* L, M, N. */
     [SPOTLIGHT_LIGHT_COLOUR]: { h: 60, s: 46, l: 35 },
     [SPOTLIGHT_LIGHTER_COLOUR]: { h: 60, s: 46, l: 45 },

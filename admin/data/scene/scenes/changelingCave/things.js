@@ -17,7 +17,7 @@ export default {
     [CUTOUT]: {
         [CAMPFIRE]: {
             yIndex: 5,
-            xPosition: 2.5,
+            xPosition: 2.3,
             scaleFactor: 0.25
         }
     },
@@ -30,13 +30,13 @@ export default {
     },
     [PANEL]: {
         [CAVE_SHADOWS]: {
-            yIndex: 1,
-            xPosition: 6,
-            scaleFactor: 0.7
+            yIndex: 2,
+            xPosition: 5.9,
+            scaleFactor: 0.69
         },
         [STALACTITES]: {
             yIndex: 5,
-            xPosition: 2,
+            xPosition: 2.1,
             zOffset: 6,
             scaleFactor: 0.35
         },
@@ -47,12 +47,12 @@ export default {
         },
         [TROLL_SHADOW_RIGHT]: {
             yIndex: 5,
-            xPosition: 9.3,
+            xPosition: 9.9,
             scaleFactor: 0.35
         },
         [TROLL_SHADOW_FAR]: {
             yIndex: 4,
-            xPosition: 10,
+            xPosition: 9.9,
             scaleFactor: 0.35
         }
     }
