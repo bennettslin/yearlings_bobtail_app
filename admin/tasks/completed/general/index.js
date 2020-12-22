@@ -5010,5 +5010,9 @@ export default [
     {
         taskName: `About contact update.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix key navigation not working for pitch in logue.`,
+        workedHours: 1
     }
 ]
