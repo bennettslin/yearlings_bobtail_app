@@ -5014,5 +5014,9 @@ export default [
     {
         taskName: `Fix key navigation not working for pitch in logue.`,
         workedHours: 1
+    },
+    {
+        taskName: `Wires on dogs.`,
+        workedHours: 1
     }
 ]

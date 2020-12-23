@@ -45,4 +45,6 @@
 # Seasons
 * Past (Didi)
 * Present (Saskia)
+    * Make like day
 * Future (Pchelka)
+    * Make like night
