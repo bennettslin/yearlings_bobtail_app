@@ -22,7 +22,10 @@ import {
 import {
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
-    BENNETT_ODIN_DEPTHS
+    BENNETT_ODIN_DEPTHS,
+    EARTH,
+    DOGS_ROCKET,
+    SPACE_STATION
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
     GHOST_ODIN_ALLEY,
@@ -91,6 +94,12 @@ export default {
                 { x: 0.7 }
             ]
         },
+        [SEA_SERPENT_RIGHT]: {
+            wires: [
+                { x: 0.32, y: 0.9 },
+                { x: 0.69, y: 0.6 }
+            ]
+        },
         [SEA_SERPENT_LEFT]: {
             wires: [
                 { x: 0.29, y: 0.5 },
@@ -102,6 +111,21 @@ export default {
                 { x: 0.32, y: 0.9 },
                 { x: 0.69, y: 0.6 }
             ]
+        },
+        [EARTH]: {},
+        [DOGS_ROCKET]: {
+            wires: [
+                { x: 0.2 },
+                { x: 0.42, y: 0.5 },
+                { x: 0.69 }
+            ]
+        },
+        [SPACE_STATION]: {
+            wires: [
+                { x: 0.275, y: 0.28 },
+                { x: 0.85, y: 0.28 }
+            ],
+            placedFront: true
         }
     },
     [PUPPET]: {

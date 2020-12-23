@@ -206,15 +206,15 @@ export const THINGS_BEDROOM_ASLEEP = {
     [CARDBOARD]: {
         [EARTH__ROCKET]: {
             yIndex: 4,
-            xPosition: 2.75,
-            zOffset: 0.75,
-            scaleFactor: 0.3,
+            xPosition: 3,
+            zOffset: 0.7,
+            scaleFactor: 0.6,
             rotate: 180
         },
         [DOGS_ROCKET]: {
             yIndex: 4,
             xPosition: 2.5,
-            zOffset: 1.5,
+            zOffset: 1.7,
             scaleFactor: 0.3
         }
     }
@@ -233,7 +233,7 @@ export const THINGS_BEDROOM_SHAKEN = {
             yIndex: 4,
             xPosition: 7.5,
             zOffset: 5,
-            scaleFactor: 0.3
+            scaleFactor: 0.2
         },
         [SPACE_STATION]: {
             yIndex: 4,

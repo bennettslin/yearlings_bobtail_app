@@ -12,7 +12,6 @@
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
 
-* Dogs need wires.
 * Move left stalactites closer to right.
 * Remove left straight line of troll shadow far.
 * Young children heads.
