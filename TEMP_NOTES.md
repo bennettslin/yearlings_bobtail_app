@@ -17,26 +17,6 @@
 * Remove left straight line of troll shadow far.
 * Young children heads.
 
-# Night colours
-* Attic (Constellations)
-* Basement bed (Uncanny)
-* Bennett bed (Grasshoppers)
-* Liz bed (Grasshoppers)
-* Liz couch (Kyon)
-* Taiwan room (Odin)
-* Taiwan stairs (Odin)
-
-# Night magic colours
-* Basement bed (Uncanny)
-* Bedroom (Pchelka, dogs, space)
-* Changeling cave (Willy)
-* Liz couch (Kyon, peafowl)
-
-# Seasons
-* Past (Didi)
-* Present (Saskia)
-* Future (Pchelka)
-
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Make sure backstory and narrative tenses are correct.
