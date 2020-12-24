@@ -87,11 +87,11 @@ export default {
     /* T. */
     [STREET_COLOUR]: { h: 0, s: 0, l: 39 },
     /* V. */
-    [OCEAN_COLOUR]: { h: parseInt(HUE_OCEAN), s: 51, l: 43 },
+    [OCEAN_COLOUR]: { h: parseInt(HUE_OCEAN), s: 46, l: 38 },
     [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 61 },
     [TENNIS_COLOUR]: { h: parseInt(HUE_TENNIS), s: 51, l: 55 },
     /* K. */
-    [SAND_COLOUR]: { h: parseInt(HUE_SAND), s: 30, l: 64 },
+    [SAND_COLOUR]: { h: parseInt(HUE_SAND), s: 22, l: 52 },
     [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },
     /* C. */
     [ROOF_COLOUR]: { h: parseInt(HUE_ROOF), s: 24, l: 51 },

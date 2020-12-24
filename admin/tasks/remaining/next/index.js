@@ -10,7 +10,7 @@ export default [
     },
     {
         taskName: `Night colour work.`,
-        workedHours: 1
+        workedHours: 5
     },
 
     /* Ongoing. */

@@ -1,4 +1,5 @@
 # TODO
+* Make parent class for dark scenes
 
 # Night colours
 * Attic (Constellations)
