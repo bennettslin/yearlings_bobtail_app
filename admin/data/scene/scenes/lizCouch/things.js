@@ -205,12 +205,12 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
 export const THINGS_LIZ_COUCH_PEAFOWL = {
     [PUPPET]: {
         [PEACOCK]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 8,
             scaleFactor: 0.25
         },
         [PEAHEN]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 6,
             scaleFactor: 0.25
         }

@@ -108,15 +108,15 @@ export default {
         floor: {
             hslaColours: [
                 [G],
+                [G],
                 [G, Z, Z, Z, Z, L, M, N, N, M, L, G],
                 [G, Z, Z, Z, Z, M, N, O, O, N, M, G],
                 [G, Z, Z, Z, Z, M, N, O, O, N, M, G],
-                [G, Z, Z, Z, Z, L, M, N, N, M, L, G],
-                [G, Z, Z, Z, Z, Z, L, M, M, L, Z, G]
+                [G, Z, Z, Z, Z, L, M, N, N, M, L, G]
             ],
             zIndices: [
                 [0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
