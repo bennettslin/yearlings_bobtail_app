@@ -31,7 +31,7 @@
 .TimeOfDay__horizon.twilight { background-color: hsl(18, 40%, 46%); }
 
 .TimeOfDay__space.dawn { background-color: hsl(215, 50%, 61%); }
-.TimeOfDay__horizon.dawn { background-color: hsl(36, 40%, 86%),; }
+.TimeOfDay__horizon.dawn { background-color: hsl(36, 40%, 86%); }
 
 .TimeOfDay__space.morning { background-color: hsl(200, 65%, 67%); }
 .TimeOfDay__horizon.morning { background-color: hsl(190, 40%, 87%); }
@@ -40,7 +40,7 @@
 .TimeOfDay__horizon.noon { background-color: hsl(182, 55%, 90%); }
 
 .TimeOfDay__space.afternoon { background-color: hsl(203, 75%, 67%); }
-.TimeOfDay__horizon.afternoon { background-color: hsl(155, 55%, 87%),; }
+.TimeOfDay__horizon.afternoon { background-color: hsl(155, 55%, 87%); }
 
 .TimeOfDay__space.evening { background-color: hsl(213, 55%, 50%); }
 .TimeOfDay__horizon.evening { background-color: hsl(5, 50%, 65%); }
@@ -61,19 +61,19 @@
 
 // Prologue, Epilogue
 .Season__space.stage { background-color: hsl(12, 24%, 43%); }
-.Season__horizon.stage { background-color: hsl(50, 56%, 73%); }
+.Season__horizon.stage { background-color: hsl(36, 40%, 86%); }
 
 // Didi, Uncanny
-.Season__space.past { background-color: hsl($hue__past, 56%, 65%); }
-.Season__horizon.past { background-color: hsl(50, 56%, 85%); }
+.Season__space.past { background-color: hsl($hue__past, 50%, 61%); }
+.Season__horizon.past { background-color: hsl(125, 40%, 86%); }
 
 // Uncanny
-.Season__space.present { background-color: hsl($hue__present, 56%, 65%); }
-.Season__horizon.present { background-color: hsl(50, 56%, 85%); }
+.Season__space.present { background-color: hsl($hue__present, 65%, 70%); }
+.Season__horizon.present { background-color: hsl(245, 45%, 90%); }
 
 // Pchelka, Uncanny
-.Season__space.future { background-color: hsl($hue__future, 46%, 65%); }
-.Season__horizon.future { background-color: hsl(50, 56%, 85%); }
+.Season__space.future { background-color: hsl($hue__future, 45%, 30%); }
+.Season__horizon.future { background-color: hsl(5, 40%, 45%); }
 
 // Grasshoppers, Vegan
 .Season__space.love { background-color: hsl(334, 56%, 60%); }

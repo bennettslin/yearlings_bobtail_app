@@ -66,6 +66,7 @@ export default {
         [LIZ_GATE_INSIDE]: {
             yIndex: 0,
             xPosition: 6,
+            zOffset: 0.5,
             scaleFactor: 0.78
         }
     },

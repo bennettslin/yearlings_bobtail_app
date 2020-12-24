@@ -1,3 +1,6 @@
+# TODO
+* Make spotlight wider, with dimmer cubes.
+
 # Night colours
 * Attic (Constellations)
     * Television
@@ -30,7 +33,7 @@
     * Buddha
     * Refrigerator
     * Pictures
-* Taiwan stairs (Odin)
+* Taiwan stairs (Odin) (/)
 
 # Night magic colours
 * Basement bed (Uncanny)
@@ -43,8 +46,13 @@
     * Liz couch (transition)
 
 # Seasons
-* Past (Didi)
-* Present (Saskia)
-    * Make like day
-* Future (Pchelka)
-    * Make like night
+* Past
+    * Bathroom (Didi) (/)
+    * Past road
+* Present
+    * Puppet show (Saskia) (/)
+    * Present road
+* Future
+    * Bedroom (Pchelka)
+    * Future road
+        * Road
