@@ -6,7 +6,6 @@
     * Basement bed
 * Add gate and wall to Liz couch
     * Remove fence
-* Make ground level for basement, make the zIndex 3 instead of 2.
 * Make peacocks future instead of night magic.
 * Have dark and spotlight cubes for future.
 

@@ -12,9 +12,10 @@
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
 
+* Young children heads.
 * Move left stalactites closer to right.
 * Remove left straight line of troll shadow far.
-* Young children heads.
+* Basement door side.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
