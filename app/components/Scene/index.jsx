@@ -41,10 +41,12 @@ const Scene = () => {
             }}
         >
             <div
-                className={cx(
-                    'Scene',
-                    'abF'
-                )}
+                {...{
+                    className: cx(
+                        'Scene',
+                        'abF'
+                    )
+                }}
             >
                 <Presences {...{ yIndex: -1 }} />
                 {CUBE_Y_INDICES.map(yIndex => (

@@ -5,7 +5,7 @@ export default {
     [CHRISTOPHER_BENNETT_WILLY]: {
         [REASSURING_ENCHANTED]: {
             yIndex: 4,
-            xPosition: 5.6
+            xPosition: 5.7
         }
     }
 }

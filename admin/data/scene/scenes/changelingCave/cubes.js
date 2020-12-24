@@ -4,9 +4,10 @@ import {
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     NIGHT_MAGIC_COLOUR as Z,
-    SPOTLIGHT_LIGHT_COLOUR as L,
-    SPOTLIGHT_LIGHTER_COLOUR as M,
-    SPOTLIGHT_LIGHTEST_COLOUR as N
+    SPOTLIGHT_MEDIUM_COLOUR as L,
+    SPOTLIGHT_LIGHT_COLOUR as M,
+    SPOTLIGHT_LIGHTER_COLOUR as N,
+    SPOTLIGHT_LIGHTEST_COLOUR as O
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -15,10 +16,10 @@ export default {
             hslaColours: [
                 [G],
                 [V],
-                [L, M, M, M, L, Z],
-                [M, N, N, N, M, L, Z],
-                [M, N, N, N, M, L, Z],
-                [M, N, N, N, M, L, Z]
+                [Z, L, M, M, L, Z],
+                [L, M, N, N, M, L, Z],
+                [M, N, O, O, N, M, Z],
+                [M, N, O, O, N, M, Z]
             ],
             zIndices: [
                 [0],

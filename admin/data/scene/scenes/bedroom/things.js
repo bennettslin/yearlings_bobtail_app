@@ -231,13 +231,13 @@ export const THINGS_BEDROOM_SHAKEN = {
     [CARDBOARD]: {
         [EARTH__STATION]: {
             yIndex: 4,
-            xPosition: 7.5,
+            xPosition: 7.3,
             zOffset: 5,
             scaleFactor: 0.2
         },
         [SPACE_STATION]: {
             yIndex: 4,
-            xPosition: 8.5,
+            xPosition: 8.3,
             zOffset: 1.5,
             scaleFactor: 0.3
         }

@@ -14,9 +14,10 @@ import {
     LIZ_WALL_COLOUR as W,
     NIGHT_COLOUR as Y,
     NIGHT_MAGIC_COLOUR as Z,
-    SPOTLIGHT_LIGHT_COLOUR as L,
-    SPOTLIGHT_LIGHTER_COLOUR as M,
-    SPOTLIGHT_LIGHTEST_COLOUR as N,
+    SPOTLIGHT_MEDIUM_COLOUR as L,
+    SPOTLIGHT_LIGHT_COLOUR as M,
+    SPOTLIGHT_LIGHTER_COLOUR as N,
+    SPOTLIGHT_LIGHTEST_COLOUR as O,
     LIZ_COUCH_COLOUR as U,
     SEAT_COLOUR as S
 } from '../../../../../app/constants/scene/cubes/colours'
@@ -107,11 +108,11 @@ export default {
         floor: {
             hslaColours: [
                 [G],
-                [G, Z, Z, Z, Z, Z, L, M, M, L, Z, G],
                 [G, Z, Z, Z, Z, L, M, N, N, M, L, G],
+                [G, Z, Z, Z, Z, M, N, O, O, N, M, G],
+                [G, Z, Z, Z, Z, M, N, O, O, N, M, G],
                 [G, Z, Z, Z, Z, L, M, N, N, M, L, G],
-                [G, Z, Z, Z, Z, Z, L, M, M, L, Z, G],
-                [G, Z, Z, Z, Z, Z, Z, L, L, Z, Z, G]
+                [G, Z, Z, Z, Z, Z, L, M, M, L, Z, G]
             ],
             zIndices: [
                 [0],

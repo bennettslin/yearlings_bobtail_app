@@ -37,6 +37,7 @@ import {
     SNOW_FLOOR_COLOUR,
     NIGHT_COLOUR,
     NIGHT_MAGIC_COLOUR,
+    SPOTLIGHT_MEDIUM_COLOUR,
     SPOTLIGHT_LIGHT_COLOUR,
     SPOTLIGHT_LIGHTER_COLOUR,
     SPOTLIGHT_LIGHTEST_COLOUR,
@@ -110,10 +111,11 @@ export default {
     [NIGHT_COLOUR]: { h: 221, s: 17, l: 35 },
     /* Z. */
     [NIGHT_MAGIC_COLOUR]: { h: 125, s: 17, l: 25 },
-    /* L, M, N. */
-    [SPOTLIGHT_LIGHT_COLOUR]: { h: 60, s: 46, l: 35 },
-    [SPOTLIGHT_LIGHTER_COLOUR]: { h: 60, s: 46, l: 45 },
-    [SPOTLIGHT_LIGHTEST_COLOUR]: { h: 60, s: 46, l: 55 },
+    /* L, M, N, O. */
+    [SPOTLIGHT_MEDIUM_COLOUR]: { h: 110, s: 27, l: 35 },
+    [SPOTLIGHT_LIGHT_COLOUR]: { h: 95, s: 37, l: 45 },
+    [SPOTLIGHT_LIGHTER_COLOUR]: { h: 80, s: 47, l: 55 },
+    [SPOTLIGHT_LIGHTEST_COLOUR]: { h: 65, s: 57, l: 65 },
     /* W, B, E */
     [BENNETT_WALL_COLOUR]: { h: parseInt(HUE_BENNETT_ROOM), s: 15, l: 81 },
     [LIZ_WALL_COLOUR]: { h: parseInt(HUE_LIZ_ROOM), s: 15, l: 81 },

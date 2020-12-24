@@ -13,9 +13,10 @@ import {
     BENNETT_CARPET_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
     NIGHT_MAGIC_COLOUR as Z,
-    SPOTLIGHT_LIGHT_COLOUR as L,
-    SPOTLIGHT_LIGHTER_COLOUR as M,
-    SPOTLIGHT_LIGHTEST_COLOUR as N,
+    SPOTLIGHT_MEDIUM_COLOUR as L,
+    SPOTLIGHT_LIGHT_COLOUR as M,
+    SPOTLIGHT_LIGHTER_COLOUR as N,
+    SPOTLIGHT_LIGHTEST_COLOUR as O,
     FURNITURE_COLOUR as R,
     BENNETT_BED_COLOUR as U,
     SEAT_COLOUR as S
@@ -130,10 +131,10 @@ export default {
             hslaColours: [
                 [G],
                 [G, G, G, G, G, Z, Z, Z, Z, G],
-                [G, G, G, G, Z, Z, Z, Z, Z, Z, G],
-                [G, G, M, L, L, Z, Z, Z, Z, Z, G],
-                [L, M, N, M, L, Z, Z, Z, Z, Z, G],
-                [G, M, N, N, M, Z, Z, Z, Z, Z, Z, G]
+                [G, G, G, G, L, Z, Z, Z, Z, Z, G],
+                [G, G, N, M, M, Z, Z, Z, Z, Z, G],
+                [M, N, O, N, M, Z, Z, Z, Z, Z, G],
+                [G, N, O, O, N, L, Z, Z, Z, Z, Z, G]
             ],
             zIndices: [
                 [0],
@@ -150,11 +151,11 @@ export default {
         floor: {
             hslaColours: [
                 [G],
-                [G, G, G, G, G, Z, Z, L, L, G],
-                [G, G, G, G, Z, Z, Z, Z, M, M, G],
-                [G, G, Z, Z, Z, Z, Z, L, N, N, G],
-                [Z, Z, Z, Z, Z, Z, L, M, N, N, G],
-                [G, Z, Z, Z, Z, Z, Z, L, M, M, M, G]
+                [G, G, G, G, G, Z, Z, M, M, G],
+                [G, G, G, G, Z, Z, Z, L, N, N, G],
+                [G, G, Z, Z, Z, Z, L, M, O, O, G],
+                [Z, Z, Z, Z, Z, Z, M, N, O, O, G],
+                [G, Z, Z, Z, Z, Z, Z, M, N, N, N, G]
             ],
             zIndices: [
                 [0],
@@ -167,3 +168,8 @@ export default {
         }
     }
 }
+
+// [Z, L, M, M, L, Z],
+// [L, M, N, N, M, L, Z],
+// [M, N, O, O, N, M, Z],
+// [M, N, O, O, N, M, Z]

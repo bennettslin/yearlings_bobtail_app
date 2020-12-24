@@ -1,5 +1,4 @@
 # TODO
-* Make spotlight wider, with dimmer cubes.
 
 # Night colours
 * Attic (Constellations)

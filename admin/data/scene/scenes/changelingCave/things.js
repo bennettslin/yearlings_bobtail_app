@@ -17,7 +17,7 @@ export default {
     [CUTOUT]: {
         [CAMPFIRE]: {
             yIndex: 5,
-            xPosition: 2.3,
+            xPosition: 2.5,
             scaleFactor: 0.25
         }
     },
