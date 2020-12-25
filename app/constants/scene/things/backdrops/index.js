@@ -1,5 +1,7 @@
 export const DISTANT_BUILDINGS_BACKDROP = 'distantBuilding'
 export const DISTANT_HOUSES_BACKDROP = 'distantHouses'
+export const DISTANT_HOUSES_BACKDROP__LEVEL = 'distantHouses__level'
+export const DISTANT_HOUSES_BACKDROP__GATE = 'distantHouses__gate'
 export const DRIVING_BACKDROP = 'drivingBackdrop'
 export const GOLDEN_GATE_BACKDROP = 'goldenGateBackdrop'
 export const LOS_ANGELES_BACKDROP = 'losAngelesBackdrop'

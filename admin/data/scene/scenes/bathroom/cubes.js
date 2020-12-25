@@ -12,6 +12,24 @@ import {
 
 import { f, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
+const DEFAULT_FLOOR = {
+    hslaColours: [
+        [G],
+        [F],
+        [F],
+        [F, F, F, D, D, D, D, F],
+        [F],
+        [F]
+    ],
+    zIndices: [
+        [0],
+        [1],
+        [1],
+        [1, 1, 1, 2, 2, 2, 2, 1],
+        [1]
+    ]
+}
+
 export default {
     [BATHROOM_KEY]: {
         ceiling: {
@@ -25,40 +43,9 @@ export default {
                 [1, f, f, f, f, f, f, f, f, f, f, 1]
             ]
         },
-        floor: {
-            hslaColours: [
-                [G],
-                [F],
-                [F],
-                [F, F, F, D, D, D, D, F],
-                [F],
-                [F]
-            ],
-            zIndices: [
-                [0],
-                [1],
-                [1],
-                [1, 1, 1, 2, 2, 2, 2, 1],
-                [1]
-            ]
-        }
+        floor: DEFAULT_FLOOR
     },
     [BATHROOM_OPEN_KEY]: {
-        floor: {
-            hslaColours: [
-                [G],
-                [G],
-                [G, F, F, F, F, F, F, F, F, F, F, G],
-                [G, F, F, D, D, D, D, F, F, F, F, G],
-                [G, F, F, F, F, F, F, F, F, F, F, G]
-            ],
-            zIndices: [
-                [0],
-                [0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
-            ]
-        }
+        floor: DEFAULT_FLOOR
     }
 }

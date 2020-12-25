@@ -42,7 +42,7 @@ import {
     ASLEEP_COUCH
 } from '../../../../app/constants/scene/actors/liz'
 import {
-    DISTANT_HOUSES_BACKDROP,
+    DISTANT_HOUSES_BACKDROP__GATE,
     OAKLAND_SIDE
 } from '../../../../app/constants/scene/things/backdrops'
 import {
@@ -91,7 +91,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__GATE]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -119,7 +119,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__GATE]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -147,7 +147,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__GATE]: true,
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
@@ -192,7 +192,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__GATE]: true,
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
@@ -230,7 +230,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__GATE]: true,
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
@@ -265,7 +265,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__GATE]: true,
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
@@ -300,7 +300,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__GATE]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -328,7 +328,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__GATE]: true,
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
@@ -365,7 +365,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__GATE]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {

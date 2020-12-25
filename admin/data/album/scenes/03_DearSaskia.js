@@ -30,7 +30,7 @@ import { CHARMED_SCHOOLBUS } from '../../../../app/constants/scene/actors/bradSa
 import { PANICKED } from '../../../../app/constants/scene/actors/preteenBennett'
 import { INDIGNANT } from '../../../../app/constants/scene/actors/sasha'
 import {
-    DISTANT_HOUSES_BACKDROP,
+    DISTANT_HOUSES_BACKDROP__LEVEL,
     TAIWAN_MOUNTAINS_BACKDROP
 } from '../../../../app/constants/scene/things/backdrops'
 import {
@@ -163,7 +163,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true
+                [DISTANT_HOUSES_BACKDROP__LEVEL]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__LEFT]: true,

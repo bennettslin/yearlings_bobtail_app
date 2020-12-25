@@ -1,7 +1,8 @@
 import { BACKDROP } from '../../../../../app/constants/scene/things'
 import {
     DISTANT_BUILDINGS_BACKDROP,
-    DISTANT_HOUSES_BACKDROP,
+    DISTANT_HOUSES_BACKDROP__LEVEL,
+    DISTANT_HOUSES_BACKDROP__GATE,
     DRIVING_BACKDROP,
     GOLDEN_GATE_BACKDROP,
     LOS_ANGELES_BACKDROP,
@@ -32,7 +33,11 @@ export default {
         [DISTANT_BUILDINGS_BACKDROP]: {
             scaleFactor: 0.45
         },
-        [DISTANT_HOUSES_BACKDROP]: {
+        [DISTANT_HOUSES_BACKDROP__LEVEL]: {
+            yIndex: 0,
+            scaleFactor: 0.45
+        },
+        [DISTANT_HOUSES_BACKDROP__GATE]: {
             yIndex: 0,
             scaleFactor: 0.45
         },

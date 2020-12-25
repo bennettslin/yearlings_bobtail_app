@@ -45,7 +45,7 @@ import { CROSSING_GUARD } from '../../../../app/constants/scene/actors/willy'
 import { YOUNG_CHILD } from '../../../../app/constants/scene/actors/songs'
 import {
     DISTANT_BUILDINGS_BACKDROP,
-    DISTANT_HOUSES_BACKDROP,
+    DISTANT_HOUSES_BACKDROP__LEVEL,
     OAKLAND_SIDE,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW
@@ -96,7 +96,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__LEVEL]: true,
                 [OAKLAND_SIDE]: true
             },
             [FLAT]: {
@@ -118,7 +118,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__LEVEL]: true,
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
@@ -155,7 +155,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__LEVEL]: true,
                 [OAKLAND_FRONT__HIGH]: true
             },
             [CUTOUT]: {

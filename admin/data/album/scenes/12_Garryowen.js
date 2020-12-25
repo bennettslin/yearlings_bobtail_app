@@ -45,7 +45,7 @@ import {
 } from '../../../../app/constants/scene/actors/songs'
 import {
     OAKLAND_SIDE,
-    DISTANT_HOUSES_BACKDROP
+    DISTANT_HOUSES_BACKDROP__LEVEL
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     NAS_ALBUM,
@@ -94,7 +94,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__LEVEL]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -132,7 +132,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__LEVEL]: true,
                 [OAKLAND_SIDE]: true
             },
             [FLAT]: {
@@ -225,7 +225,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
+                [DISTANT_HOUSES_BACKDROP__LEVEL]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {

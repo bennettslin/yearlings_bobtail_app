@@ -46,7 +46,8 @@ import {
     NEAR_HOUSES,
     NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
-    DISTANT_HOUSES_BACKDROP,
+    DISTANT_HOUSES_BACKDROP__LEVEL,
+    DISTANT_HOUSES_BACKDROP__GATE,
     DRIVING_BACKDROP
 } from '../../../../constants/scene/things/backdrops'
 
@@ -74,6 +75,7 @@ export default {
     [NEAR_HOUSES]: nearHouses,
     [NEAR_BUILDINGS]: nearBuildings,
     [DISTANT_BUILDINGS_BACKDROP]: distantBuildings,
-    [DISTANT_HOUSES_BACKDROP]: distantHouses,
+    [DISTANT_HOUSES_BACKDROP__LEVEL]: distantHouses,
+    [DISTANT_HOUSES_BACKDROP__GATE]: distantHouses,
     [DRIVING_BACKDROP]: drivingBackdrop
 }
