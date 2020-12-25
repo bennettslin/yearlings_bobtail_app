@@ -368,6 +368,9 @@ export default [
                 [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
+            [DOOR]: {
+                [LIZ_GATE_INSIDE]: true
+            },
             [PANEL]: {
                 [LIZ_COUCH__ROOM]: true
             },

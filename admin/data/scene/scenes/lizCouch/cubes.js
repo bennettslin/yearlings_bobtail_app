@@ -45,7 +45,7 @@ const DEFAULT_CEILING = {
 
 const DEFAULT_FLOOR = {
     hslaColours: [
-        [V],
+        [A, A, A, A, A, V, V, V, A],
         [F, F, F, F, W, W, W, W, W, F],
         [F],
         [F, U, U, U, F],
@@ -53,7 +53,7 @@ const DEFAULT_FLOOR = {
         [F]
     ],
     zIndices: [
-        [0],
+        [6, 6, 6, 6, 6, 1, 1, 1, 6],
         [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
         [1],
         [1, 7, 3, 3, 1],
@@ -71,7 +71,7 @@ export default {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [V],
+                [A, A, A, A, A, V, V, V, A],
                 [F, F, F, F, W, W, W, W, W, F],
                 [F],
                 [F, U, U, U, F],
@@ -79,7 +79,7 @@ export default {
                 [F]
             ],
             zIndices: [
-                [0],
+                [6, 6, 6, 6, 6, 1, 1, 1, 6],
                 [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
                 [1],
                 [1, 7, 3, 3, 1],
@@ -107,20 +107,20 @@ export default {
     [LIZ_COUCH_PEAFOWL_KEY]: {
         floor: {
             hslaColours: [
-                [G],
-                [G],
-                [G, Z, Z, Z, Z, L, M, N, N, M, L, G],
-                [G, Z, Z, Z, Z, M, N, O, O, N, M, G],
-                [G, Z, Z, Z, Z, M, N, O, O, N, M, G],
-                [G, Z, Z, Z, Z, L, M, N, N, M, L, G]
+                [A, A, A, A, A, V, V, V, A],
+                [Z, Z, Z, Z, Z, Z, L, M, M, L, Z],
+                [Z, Z, Z, Z, Z, L, M, N, N, M, L, Z],
+                [Z, Z, Z, Z, Z, M, N, O, O, N, M, Z],
+                [Z, Z, Z, Z, Z, M, N, O, O, N, M, Z],
+                [Z, Z, Z, Z, Z, L, M, N, N, M, L, Z]
             ],
             zIndices: [
-                [0],
-                [0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+                [6, 6, 6, 6, 6, 1, 1, 1, 6],
+                [1],
+                [1],
+                [1, 7, 3, 3, 1],
+                [1, 7, 3, 3, 1],
+                [1]
             ]
         }
     }

@@ -66,7 +66,7 @@ export default {
         [LIZ_GATE_INSIDE]: {
             yIndex: 0,
             xPosition: 6,
-            zOffset: 0.5,
+            zOffset: -0.06,
             scaleFactor: 0.78
         }
     },
@@ -207,12 +207,14 @@ export const THINGS_LIZ_COUCH_PEAFOWL = {
         [PEACOCK]: {
             yIndex: 4,
             xPosition: 8,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
+            hide: true
         },
         [PEAHEN]: {
             yIndex: 4,
             xPosition: 6,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
+            hide: true
         }
     }
 }
