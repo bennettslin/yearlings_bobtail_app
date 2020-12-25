@@ -114,14 +114,14 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         [LIZ_GATE_OUTSIDE]: {
             yIndex: 3,
             xPosition: 6,
-            zOffset: -0.06,
+            zOffset: -0.08,
             scaleFactor: 0.78,
             layerYIndex: 4
         },
         [LIZ_GATE_OUTSIDE_OPEN]: {
             yIndex: 3,
             xPosition: 3.3,
-            zOffset: -0.13,
+            zOffset: -0.15,
             scaleFactor: 0.78,
             layerYIndex: 4
         }

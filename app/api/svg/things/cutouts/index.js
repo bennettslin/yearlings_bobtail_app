@@ -31,6 +31,7 @@ import cavemanBones from '../../../../../assets/svgs/cutouts/cavemanBones'
 import sandbags from '../../../../../assets/svgs/cutouts/sandbags'
 import stageLights from '../../../../../assets/svgs/cutouts/stageLights'
 import trafficLightFront from '../../../../../assets/svgs/cutouts/trafficLightFront'
+import trafficLightRear from '../../../../../assets/svgs/cutouts/trafficLightRear'
 import dishPile from '../../../../../assets/svgs/cutouts/dishPile'
 import trayPile from '../../../../../assets/svgs/cutouts/trayPile'
 import glassRack from '../../../../../assets/svgs/cutouts/glassRack'
@@ -197,7 +198,7 @@ export default {
     [SANDBAGS]: sandbags,
     [STAGE_LIGHTS]: stageLights,
     [TRAFFIC_LIGHT_FRONT]: trafficLightFront,
-    [TRAFFIC_LIGHT_REAR]: trafficLightFront,
+    [TRAFFIC_LIGHT_REAR]: trafficLightRear,
     [DISH_PILE]: dishPile,
     [TRAY_PILE]: trayPile,
     [GLASS_RACK__SINK]: glassRack,

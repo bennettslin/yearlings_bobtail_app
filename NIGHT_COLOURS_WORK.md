@@ -13,9 +13,6 @@
         * adjust bushes
     * Liz couch (Kyon)
         * Switch cactus double and single
-        * new illustrations
-            * traffic light rear
-                * shared traffic styles
         * Liz gate door same size and position for both gate and couch
     * Basement bed (Uncanny)
         * new illustrations
