@@ -7,7 +7,6 @@ import {
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
-    GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     LIZ_GATE_COLOUR as A,
     LIZ_FLOOR_COLOUR as F,

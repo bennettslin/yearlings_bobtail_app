@@ -4,8 +4,6 @@
     * Bedroom
     * Liz couch
     * Basement bed
-* Add gate and wall to Liz couch
-    * Remove fence
 * Make peacocks future instead of night magic.
 * Have dark and spotlight cubes for future.
 * Audit for correct ground height
@@ -14,7 +12,6 @@
     * Liz couch (Kyon)
         * Liz gate door same size and position for both indoor and outdoor
         * Plants on both sides for both indoor and outdoor
-        * Separate backdrop
     * Basement bed (Uncanny) (/)
 
 # Night colours outdoors
