@@ -53,7 +53,7 @@ import {
 import {
     NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
-    OAKLAND_SIDE
+    OAKLAND_SIDE__LEVEL
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     SIGNPOST,
@@ -114,7 +114,7 @@ export default [
             },
             [BACKDROP]: {
                 [DISTANT_BUILDINGS_BACKDROP]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [ASH_CAN]: true,
@@ -176,7 +176,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true,
+                [OAKLAND_SIDE__LEVEL]: true,
                 [NEAR_BUILDINGS]: true
             },
             [CUTOUT]: {
@@ -261,7 +261,7 @@ export default [
             },
             [BACKDROP]: {
                 [DISTANT_BUILDINGS_BACKDROP]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [BANCROFT_SHRUB]: true,

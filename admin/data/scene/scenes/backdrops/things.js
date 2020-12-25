@@ -1,8 +1,7 @@
 import { BACKDROP } from '../../../../../app/constants/scene/things'
 import {
     DISTANT_BUILDINGS_BACKDROP,
-    DISTANT_HOUSES_BACKDROP__LEVEL,
-    DISTANT_HOUSES_BACKDROP__GATE,
+    DISTANT_HOUSES_BACKDROP,
     DRIVING_BACKDROP,
     GOLDEN_GATE_BACKDROP,
     LOS_ANGELES_BACKDROP,
@@ -12,7 +11,8 @@ import {
     NEAR_HOUSES,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW,
-    OAKLAND_SIDE,
+    OAKLAND_SIDE__LEVEL,
+    OAKLAND_SIDE__GATE,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
     ROAD_FUTURE,
@@ -33,11 +33,7 @@ export default {
         [DISTANT_BUILDINGS_BACKDROP]: {
             scaleFactor: 0.45
         },
-        [DISTANT_HOUSES_BACKDROP__LEVEL]: {
-            yIndex: 0,
-            scaleFactor: 0.45
-        },
-        [DISTANT_HOUSES_BACKDROP__GATE]: {
+        [DISTANT_HOUSES_BACKDROP]: {
             yIndex: 0,
             scaleFactor: 0.45
         },
@@ -75,8 +71,13 @@ export default {
         [OAKLAND_FRONT__HIGH]: {
             scaleFactor: 0.7
         },
-        [OAKLAND_SIDE]: {
+        [OAKLAND_SIDE__LEVEL]: {
             scaleFactor: 0.7,
+            trimBottom: 0.2
+        },
+        [OAKLAND_SIDE__GATE]: {
+            scaleFactor: 0.7,
+            zOffset: -3,
             trimBottom: 0.2
         },
         [OCEAN_BOTTOM_FAR]: {

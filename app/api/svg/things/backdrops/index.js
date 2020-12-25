@@ -34,7 +34,8 @@ import {
     SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
-    OAKLAND_SIDE,
+    OAKLAND_SIDE__LEVEL,
+    OAKLAND_SIDE__GATE,
     LOS_ANGELES_BACKDROP,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW,
@@ -46,8 +47,7 @@ import {
     NEAR_HOUSES,
     NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
-    DISTANT_HOUSES_BACKDROP__LEVEL,
-    DISTANT_HOUSES_BACKDROP__GATE,
+    DISTANT_HOUSES_BACKDROP,
     DRIVING_BACKDROP
 } from '../../../../constants/scene/things/backdrops'
 
@@ -64,7 +64,8 @@ export default {
     [OCEAN_BOTTOM_FAR]: oceanBottomFar,
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
     [LOS_ANGELES_BACKDROP]: losAngelesBackdrop,
-    [OAKLAND_SIDE]: oaklandSide,
+    [OAKLAND_SIDE__LEVEL]: oaklandSide,
+    [OAKLAND_SIDE__GATE]: oaklandSide,
     [OAKLAND_FRONT__HIGH]: oaklandFront,
     [OAKLAND_FRONT__LOW]: oaklandFront,
     [ROAD_PAST]: roadPast,
@@ -75,7 +76,6 @@ export default {
     [NEAR_HOUSES]: nearHouses,
     [NEAR_BUILDINGS]: nearBuildings,
     [DISTANT_BUILDINGS_BACKDROP]: distantBuildings,
-    [DISTANT_HOUSES_BACKDROP__LEVEL]: distantHouses,
-    [DISTANT_HOUSES_BACKDROP__GATE]: distantHouses,
+    [DISTANT_HOUSES_BACKDROP]: distantHouses,
     [DRIVING_BACKDROP]: drivingBackdrop
 }

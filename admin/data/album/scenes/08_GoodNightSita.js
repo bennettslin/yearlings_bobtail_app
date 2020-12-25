@@ -39,7 +39,7 @@ import {
     DISTANT_BUILDINGS_BACKDROP,
     DRIVING_BACKDROP,
     OAKLAND_FRONT__HIGH,
-    OAKLAND_SIDE
+    OAKLAND_SIDE__LEVEL
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GO_KART,
@@ -100,7 +100,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [CYPRESS_TREE]: true,
@@ -197,7 +197,7 @@ export default [
             [BACKDROP]: {
                 [DISTANT_BUILDINGS_BACKDROP]: true,
                 [DRIVING_BACKDROP]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [FLAT]: {
                 [GO_KART_TRACK]: true

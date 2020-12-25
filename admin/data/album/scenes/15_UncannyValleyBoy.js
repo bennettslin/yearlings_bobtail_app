@@ -60,7 +60,7 @@ import {
     FUTURE
 } from '../../../../app/constants/scene/actors/songs'
 import {
-    OAKLAND_SIDE,
+    OAKLAND_SIDE__LEVEL,
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE
@@ -110,7 +110,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [DOOR]: {
                 [BASEMENT_DOOR]: true
@@ -147,7 +147,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [FURNITURE]: {
                 [BENNETT_PILLOW__BED]: true
@@ -311,7 +311,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [FIXTURE]: {
                 [CRACKED_PICTURE]: true

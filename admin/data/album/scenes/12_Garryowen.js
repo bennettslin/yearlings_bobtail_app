@@ -44,8 +44,8 @@ import {
     LEAVING_CRUMBLED
 } from '../../../../app/constants/scene/actors/songs'
 import {
-    OAKLAND_SIDE,
-    DISTANT_HOUSES_BACKDROP__LEVEL
+    OAKLAND_SIDE__LEVEL,
+    DISTANT_HOUSES_BACKDROP
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     NAS_ALBUM,
@@ -94,8 +94,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__LEVEL]: true,
-                [OAKLAND_SIDE]: true
+                [DISTANT_HOUSES_BACKDROP]: true,
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,
@@ -132,8 +132,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__LEVEL]: true,
-                [OAKLAND_SIDE]: true
+                [DISTANT_HOUSES_BACKDROP]: true,
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [FLAT]: {
                 [OAKLAND_HOUSE_LEFT]: true,
@@ -225,8 +225,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__LEVEL]: true,
-                [OAKLAND_SIDE]: true
+                [DISTANT_HOUSES_BACKDROP]: true,
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,

@@ -62,7 +62,7 @@ import {
 } from '../../../../app/constants/scene/actors/songs'
 import {
     OAKLAND_FRONT__HIGH,
-    OAKLAND_SIDE
+    OAKLAND_SIDE__LEVEL
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__CINEMA,
@@ -275,7 +275,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [DOOR]: {
                 [BASEMENT_DOOR_OPEN]: true

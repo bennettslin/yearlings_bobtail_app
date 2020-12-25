@@ -46,8 +46,8 @@ import { CATHOLIC_GUY } from '../../../../app/constants/scene/actors/wade'
 import {
     NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
-    DISTANT_HOUSES_BACKDROP__LEVEL,
-    OAKLAND_SIDE
+    DISTANT_HOUSES_BACKDROP,
+    OAKLAND_SIDE__LEVEL
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__RIGHT,
@@ -112,7 +112,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true,
+                [OAKLAND_SIDE__LEVEL]: true,
                 [NEAR_BUILDINGS]: true
             },
             [CUTOUT]: {
@@ -178,8 +178,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__LEVEL]: true,
-                [OAKLAND_SIDE]: true
+                [DISTANT_HOUSES_BACKDROP]: true,
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [LAMPPOST__CHURCH]: true
@@ -216,7 +216,7 @@ export default [
             },
             [BACKDROP]: {
                 [DISTANT_BUILDINGS_BACKDROP]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [ASH_CAN]: true,
@@ -248,7 +248,7 @@ export default [
             },
             [BACKDROP]: {
                 [DISTANT_BUILDINGS_BACKDROP]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [BANCROFT_SHRUB]: true,

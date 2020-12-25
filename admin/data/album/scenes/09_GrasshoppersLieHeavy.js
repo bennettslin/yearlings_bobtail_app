@@ -53,7 +53,7 @@ import {
 import {
     NEAR_BUILDINGS,
     OAKLAND_FRONT__HIGH,
-    OAKLAND_SIDE
+    OAKLAND_SIDE__LEVEL
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     GINGERBREAD_PRISON,
@@ -234,7 +234,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [CYPRESS_TREE]: true,
@@ -302,7 +302,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true,
+                [OAKLAND_SIDE__LEVEL]: true,
                 [NEAR_BUILDINGS]: true
             },
             [CARDBOARD]: {
@@ -337,7 +337,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true,
+                [OAKLAND_SIDE__LEVEL]: true,
                 [NEAR_BUILDINGS]: true
             },
             [CARDBOARD]: {

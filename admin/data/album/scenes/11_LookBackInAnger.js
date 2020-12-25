@@ -52,7 +52,7 @@ import {
     WAITING
 } from '../../../../app/constants/scene/actors/songs'
 import {
-    OAKLAND_SIDE,
+    OAKLAND_SIDE__LEVEL,
     NEAR_BUILDINGS
 } from '../../../../app/constants/scene/things/backdrops'
 import {
@@ -211,7 +211,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true,
+                [OAKLAND_SIDE__LEVEL]: true,
                 [NEAR_BUILDINGS]: true
             },
             [DOOR]: {

@@ -41,10 +41,7 @@ import {
     NOT_HUNGRY,
     ASLEEP_COUCH
 } from '../../../../app/constants/scene/actors/liz'
-import {
-    DISTANT_HOUSES_BACKDROP__GATE,
-    OAKLAND_SIDE
-} from '../../../../app/constants/scene/things/backdrops'
+import { OAKLAND_SIDE__GATE } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__TCHOTCHKES,
     BUBBLE_MEDIUM__TCHOTCHKES,
@@ -91,8 +88,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__GATE]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__GATE]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -119,8 +115,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__GATE]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__GATE]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -147,8 +142,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__GATE]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__GATE]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__TCHOTCHKES]: true,
@@ -192,8 +186,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__GATE]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__GATE]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__DISHROOM]: true,
@@ -230,8 +223,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__GATE]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__GATE]: true
             },
             [BUBBLE]: {
                 [KHARI_SPEECH_ATTACK]: true
@@ -265,8 +257,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__GATE]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__GATE]: true
             },
             [BUBBLE]: {
                 [LIZ_SPEECH_DEFENCE]: true
@@ -300,8 +291,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__GATE]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__GATE]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -328,8 +318,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__GATE]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__GATE]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__REUNION]: true,
@@ -365,8 +354,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP__GATE]: true,
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE__GATE]: true
             },
             [DOOR]: {
                 [LIZ_GATE_INSIDE]: true

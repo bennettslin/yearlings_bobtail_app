@@ -49,7 +49,7 @@ import {
     FINAL_DREAM
 } from '../../../../app/constants/scene/actors/bennettLiz'
 import {
-    OAKLAND_SIDE,
+    OAKLAND_SIDE__LEVEL,
     NEAR_BUILDINGS,
     MOUNTAIN_PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
@@ -106,7 +106,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true,
+                [OAKLAND_SIDE__LEVEL]: true,
                 [NEAR_BUILDINGS]: true
             },
             [CUTOUT]: {
