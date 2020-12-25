@@ -1,11 +1,6 @@
 # TODO
-* Keep dark indoors, take out dark outdoors.
-* Add plants
-    * Bedroom
-    * Liz couch
-    * Basement bed
-* Make peacocks future instead of night magic.
-* Have dark and spotlight cubes for future.
+* Make past, future, and present have green horizon? Experiment.
+    * Does future need its own dark floor and spotlight cubes?
 * Audit for correct ground height
     * Bathroom (Didi) (/)
         * new illustrations
@@ -21,15 +16,13 @@
             * fix double cypress bottoms
             * single cypress
             * traffic light rear
+                * shared traffic styles
         * Adjust cypresses for both gate and couch
         * Liz gate door same size and position for both gate and couch
     * Basement bed (Uncanny) (/)
         * new illustrations
             * bushes
         * adjust bushes
-
-# Night colours outdoors
-* Willy freeway
 
 # Night colours indoors
 * Attic (Constellations)

@@ -24,7 +24,7 @@ export default {
     [FLAT]: {
         [FAMILY_HOUSE]: {
             yIndex: 1,
-            xPosition: 1.5,
+            xPosition: 2,
             scaleFactor: 0.6
         }
     },

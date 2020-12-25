@@ -22,7 +22,7 @@ import {
     TIME_EVENING,
     TIME_NIGHT,
     SEASON_AUTUMN,
-    SEASON_NIGHT_MAGIC
+    SEASON_FUTURE
 } from '../../../../app/constants/scene/sky'
 import {
     LIZ,
@@ -379,6 +379,6 @@ export default [
             }
         },
         cubes: LIZ_COUCH_PEAFOWL_KEY,
-        sky: { season: SEASON_NIGHT_MAGIC }
+        sky: { season: SEASON_FUTURE }
     }
 ]

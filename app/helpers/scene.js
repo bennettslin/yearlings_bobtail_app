@@ -11,11 +11,6 @@ import {
     TAIWAN_ROOM_KEY,
     TAIWAN_STAIRS_KEY
 } from '../constants/scene/scenes'
-import {
-    SEASON_NIGHT_MAGIC,
-    TIME_NIGHT,
-    TIME_NIGHT_TAIWAN
-} from '../constants/scene/sky'
 
 export const getIsDarkIndoorScene = sceneCubesKey => {
     switch (sceneCubesKey) {
@@ -33,22 +28,6 @@ export const getIsDarkIndoorScene = sceneCubesKey => {
         case BEDROOM_DOGS_KEY:
         case LIZ_COUCH_PEAFOWL_KEY:
         case BASEMENT_BED_MAGIC_KEY:
-            return true
-    }
-    return false
-}
-
-export const getIsDarkOutdoorScene = ({
-    sceneSkyTime,
-    sceneSkySeason
-}) => {
-    switch (sceneSkySeason) {
-        case SEASON_NIGHT_MAGIC:
-            return true
-    }
-    switch (sceneSkyTime) {
-        case TIME_NIGHT:
-        case TIME_NIGHT_TAIWAN:
             return true
     }
     return false
