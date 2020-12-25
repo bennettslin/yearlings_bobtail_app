@@ -14,11 +14,8 @@
     * Liz couch (Kyon)
         * Switch cactus double and single
         * new illustrations
-            * fix double cypress bottoms
-            * single cypress
             * traffic light rear
                 * shared traffic styles
-        * Adjust cypresses for both gate and couch
         * Liz gate door same size and position for both gate and couch
     * Basement bed (Uncanny)
         * new illustrations

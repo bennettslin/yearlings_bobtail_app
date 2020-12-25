@@ -77,6 +77,7 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/household'
 import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
+    BRASS__SHARED,
     IRON__SHARED,
     OAK__SHARED,
     STEEL__SHARED
@@ -87,7 +88,8 @@ import {
     FREEWAY_SIGN__SHARED,
     POLE__SHARED,
     ROCK__SHARED,
-    TAIWAN_FOLIAGE__SHARED
+    TAIWAN_FOLIAGE__SHARED,
+    TRAFFIC_LIGHT__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import { NEWSPAPER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import { BUDDHA_SHRINE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/taiwan'
@@ -157,8 +159,16 @@ export default {
     [TAIWAN_TREE]: TAIWAN_FOLIAGE__SHARED,
     [TELEVISION]: null,
     [TOWEL_RACK]: null,
-    [TRAFFIC_LIGHT_FRONT]: POLE__SHARED,
-    [TRAFFIC_LIGHT_REAR]: POLE__SHARED,
+    [TRAFFIC_LIGHT_FRONT]: [
+        TRAFFIC_LIGHT__SHARED,
+        BRASS__SHARED,
+        POLE__SHARED
+    ],
+    [TRAFFIC_LIGHT_REAR]: [
+        TRAFFIC_LIGHT__SHARED,
+        BRASS__SHARED,
+        POLE__SHARED
+    ],
     [TRASH_CAN]: [
         BANANA__SHARED,
         GARBAGE_BAG__SHARED,

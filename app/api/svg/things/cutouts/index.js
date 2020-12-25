@@ -25,6 +25,7 @@ import campusTreeDouble from '../../../../../assets/svgs/cutouts/campusTreeDoubl
 import monitorFront from '../../../../../assets/svgs/cutouts/monitorFront'
 import wallSpeakerFront from '../../../../../assets/svgs/cutouts/wallSpeakerFront'
 import cypressDouble from '../../../../../assets/svgs/cutouts/cypressDouble'
+import cypressSingle from '../../../../../assets/svgs/cutouts/cypressSingle'
 import museumDisplay from '../../../../../assets/svgs/cutouts/museumDisplay'
 import cavemanBones from '../../../../../assets/svgs/cutouts/cavemanBones'
 import sandbags from '../../../../../assets/svgs/cutouts/sandbags'
@@ -188,9 +189,9 @@ export default {
     [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
     [CYPRESS_DOUBLE__LIZ_GATE]: cypressDouble,
     [CYPRESS_DOUBLE__LIZ_COUCH]: cypressDouble,
-    [CYPRESS_SINGLE__LIZ_ENDED]: cypressDouble,
-    [CYPRESS_SINGLE__LIZ_ENDING]: cypressDouble,
-    [CYPRESS_SINGLE__LIZ_COUCH]: cypressDouble,
+    [CYPRESS_SINGLE__LIZ_ENDED]: cypressSingle,
+    [CYPRESS_SINGLE__LIZ_ENDING]: cypressSingle,
+    [CYPRESS_SINGLE__LIZ_COUCH]: cypressSingle,
     [MUSEUM_DISPLAY]: museumDisplay,
     [CAVEMAN_BONES]: cavemanBones,
     [SANDBAGS]: sandbags,

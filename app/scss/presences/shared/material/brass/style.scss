@@ -1,3 +1,9 @@
 .brass#{$suffix} {
-
+    .brassDarkest { fill: hsl(60, 12%, 37%); }
+    .brassDarker { fill: hsl(60, 12%, 42%); }
+    .brassDark { fill: hsl(60, 12%, 47%); }
+    .brassMediumDark { fill: hsl(60, 12%, 52%); }
+    .brassMedium { fill: hsl(60, 12%, 57%); }
+    .brassMediumLight { fill: hsl(60, 12%, 62%); }
+    .brassLight { fill: hsl(60, 12%, 67%); }
 }
