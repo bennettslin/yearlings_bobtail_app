@@ -27,13 +27,13 @@ export default {
     [MOTHER]: {
         [ARGUING]: {
             yIndex: 2,
-            xPosition: 2
+            xPosition: 1.9
         }
     },
     [TRISTAN]: {
         [PRINCIPAL]: {
             yIndex: 2,
-            xPosition: 3.5
+            xPosition: 3.7
         }
     }
 }

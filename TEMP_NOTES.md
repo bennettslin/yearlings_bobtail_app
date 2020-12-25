@@ -11,10 +11,7 @@
 
 # Nice UI TODO:
 * Remove depth shading from slant direction cubes?
-
 * Young children heads.
-* Bennett sheepish head too big?
-    * Lift up mother's arm
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
