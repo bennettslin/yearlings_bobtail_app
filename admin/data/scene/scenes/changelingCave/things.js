@@ -52,7 +52,7 @@ export default {
         },
         [TROLL_SHADOW_FAR]: {
             yIndex: 4,
-            xPosition: 9.9,
+            xPosition: 10,
             scaleFactor: 0.35
         }
     }

@@ -168,8 +168,3 @@ export default {
         }
     }
 }
-
-// [Z, L, M, M, L, Z],
-// [L, M, N, N, M, L, Z],
-// [M, N, O, O, N, M, Z],
-// [M, N, O, O, N, M, Z]

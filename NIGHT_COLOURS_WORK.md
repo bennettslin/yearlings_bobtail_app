@@ -1,12 +1,13 @@
 # TODO
 * Make past, future, and present have green horizon? Experiment.
     * Does future need its own dark floor and spotlight cubes?
-* Audit for correct ground height
-    * Bathroom (Didi) (/)
+* Audit
+    * Bathroom (Didi)
         * new illustrations
             * bushes
         * adjust bushes
     * Bedroom (Pchelka)
+        * outside floor cube zIndex
         * new illustrations
             * bushes
         * adjust bushes
@@ -19,7 +20,7 @@
                 * shared traffic styles
         * Adjust cypresses for both gate and couch
         * Liz gate door same size and position for both gate and couch
-    * Basement bed (Uncanny) (/)
+    * Basement bed (Uncanny)
         * new illustrations
             * bushes
         * adjust bushes

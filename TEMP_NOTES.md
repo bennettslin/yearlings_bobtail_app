@@ -13,9 +13,11 @@
 * Remove depth shading from slant direction cubes?
 
 * Young children heads.
-* Move left stalactites closer to right.
+* Move left cave wall closer right.
 * Remove left straight line of troll shadow far.
 * Basement door side.
+* Bennett sheepish head too big?
+    * Lift up mother's arm
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
