@@ -15,7 +15,6 @@
 * Young children heads.
 * Move left cave wall closer right.
 * Remove left straight line of troll shadow far.
-* Basement door side.
 * Bennett sheepish head too big?
     * Lift up mother's arm
 
