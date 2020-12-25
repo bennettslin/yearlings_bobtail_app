@@ -12,7 +12,7 @@ import {
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW,
     OAKLAND_SIDE__LEVEL,
-    OAKLAND_SIDE__GATE,
+    OAKLAND_SIDE__LIZ_COUCH,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
     ROAD_FUTURE,
@@ -75,7 +75,7 @@ export default {
             scaleFactor: 0.7,
             trimBottom: 0.2
         },
-        [OAKLAND_SIDE__GATE]: {
+        [OAKLAND_SIDE__LIZ_COUCH]: {
             scaleFactor: 0.7,
             zOffset: -3,
             trimBottom: 0.2

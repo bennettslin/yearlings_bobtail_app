@@ -24,12 +24,12 @@ import campusTreeSingle from '../../../../../assets/svgs/cutouts/campusTreeSingl
 import campusTreeDouble from '../../../../../assets/svgs/cutouts/campusTreeDouble'
 import monitorFront from '../../../../../assets/svgs/cutouts/monitorFront'
 import wallSpeakerFront from '../../../../../assets/svgs/cutouts/wallSpeakerFront'
-import cypressTree from '../../../../../assets/svgs/cutouts/cypressTree'
+import cypressDouble from '../../../../../assets/svgs/cutouts/cypressDouble'
 import museumDisplay from '../../../../../assets/svgs/cutouts/museumDisplay'
 import cavemanBones from '../../../../../assets/svgs/cutouts/cavemanBones'
 import sandbags from '../../../../../assets/svgs/cutouts/sandbags'
 import stageLights from '../../../../../assets/svgs/cutouts/stageLights'
-import trafficLight from '../../../../../assets/svgs/cutouts/trafficLight'
+import trafficLightFront from '../../../../../assets/svgs/cutouts/trafficLightFront'
 import dishPile from '../../../../../assets/svgs/cutouts/dishPile'
 import trayPile from '../../../../../assets/svgs/cutouts/trayPile'
 import glassRack from '../../../../../assets/svgs/cutouts/glassRack'
@@ -99,12 +99,17 @@ import {
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
-    CYPRESS_TREE,
+    CYPRESS_DOUBLE__LIZ_GATE,
+    CYPRESS_DOUBLE__LIZ_COUCH,
+    CYPRESS_SINGLE__LIZ_ENDED,
+    CYPRESS_SINGLE__LIZ_ENDING,
+    CYPRESS_SINGLE__LIZ_COUCH,
     MUSEUM_DISPLAY,
     CAVEMAN_BONES,
     SANDBAGS,
     STAGE_LIGHTS,
-    TRAFFIC_LIGHT,
+    TRAFFIC_LIGHT_FRONT,
+    TRAFFIC_LIGHT_REAR,
     DISH_PILE,
     TRAY_PILE,
     GLASS_RACK__SINK,
@@ -181,12 +186,17 @@ export default {
     [MONITOR_FRONT__RIGHT]: monitorFront,
     [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,
     [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
-    [CYPRESS_TREE]: cypressTree,
+    [CYPRESS_DOUBLE__LIZ_GATE]: cypressDouble,
+    [CYPRESS_DOUBLE__LIZ_COUCH]: cypressDouble,
+    [CYPRESS_SINGLE__LIZ_ENDED]: cypressDouble,
+    [CYPRESS_SINGLE__LIZ_ENDING]: cypressDouble,
+    [CYPRESS_SINGLE__LIZ_COUCH]: cypressDouble,
     [MUSEUM_DISPLAY]: museumDisplay,
     [CAVEMAN_BONES]: cavemanBones,
     [SANDBAGS]: sandbags,
     [STAGE_LIGHTS]: stageLights,
-    [TRAFFIC_LIGHT]: trafficLight,
+    [TRAFFIC_LIGHT_FRONT]: trafficLightFront,
+    [TRAFFIC_LIGHT_REAR]: trafficLightFront,
     [DISH_PILE]: dishPile,
     [TRAY_PILE]: trayPile,
     [GLASS_RACK__SINK]: glassRack,

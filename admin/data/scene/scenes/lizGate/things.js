@@ -11,12 +11,14 @@ import {
     THOUGHT_GO_KART
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
-    CYPRESS_TREE,
     CACTUS_SINGLE__LIZ_ENDING,
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
     LAMPPOST__LIZ_GATE,
-    TRAFFIC_LIGHT
+    TRAFFIC_LIGHT_FRONT,
+    CYPRESS_DOUBLE__LIZ_GATE,
+    CYPRESS_SINGLE__LIZ_ENDED,
+    CYPRESS_SINGLE__LIZ_ENDING
 } from '../../../../../app/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_OUTSIDE__ENDING,
@@ -56,9 +58,19 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         }
     },
     [CUTOUT]: {
-        [CYPRESS_TREE]: {
+        [CYPRESS_DOUBLE__LIZ_GATE]: {
             yIndex: 2,
             xPosition: 0.5,
+            scaleFactor: 0.6
+        },
+        [CYPRESS_SINGLE__LIZ_ENDED]: {
+            yIndex: 2,
+            xPosition: 7.5,
+            scaleFactor: 0.6
+        },
+        [CYPRESS_SINGLE__LIZ_ENDING]: {
+            yIndex: 2,
+            xPosition: 10.5,
             scaleFactor: 0.6
         },
         [CACTUS_SINGLE__LIZ_ENDING]: {
@@ -82,7 +94,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             xPosition: 11,
             scaleFactor: 0.15
         },
-        [TRAFFIC_LIGHT]: {
+        [TRAFFIC_LIGHT_FRONT]: {
             yIndex: 5,
             xPosition: 8.5,
             scaleFactor: 0.3

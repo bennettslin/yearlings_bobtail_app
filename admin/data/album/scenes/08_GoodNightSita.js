@@ -51,13 +51,15 @@ import {
     CACTUS_SINGLE__LIZ_ENDING,
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
-    CYPRESS_TREE,
+    CYPRESS_DOUBLE__LIZ_GATE,
+    CYPRESS_SINGLE__LIZ_ENDED,
+    CYPRESS_SINGLE__LIZ_ENDING,
     LAMPPOST__LIZ_GATE,
     MUSEUM_DISPLAY,
     CAVEMAN_BONES,
     SANDBAGS,
     STAGE_LIGHTS,
-    TRAFFIC_LIGHT
+    TRAFFIC_LIGHT_FRONT
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_OUTSIDE__ENDING,
@@ -103,7 +105,8 @@ export default [
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
-                [CYPRESS_TREE]: true,
+                [CYPRESS_DOUBLE__LIZ_GATE]: true,
+                [CYPRESS_SINGLE__LIZ_ENDING]: true,
                 [CACTUS_SINGLE__LIZ_ENDING]: true,
                 [CACTUS_DOUBLE__LIZ_GATE]: true
             },
@@ -238,9 +241,10 @@ export default [
                 [BUBBLE_LARGE__GO_KART]: true
             },
             [CUTOUT]: {
+                [CYPRESS_SINGLE__LIZ_ENDED]: true,
                 [CACTUS_SINGLE__LIZ_ENDED]: true,
                 [LAMPPOST__LIZ_GATE]: true,
-                [TRAFFIC_LIGHT]: true
+                [TRAFFIC_LIGHT_FRONT]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDED]: true,

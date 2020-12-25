@@ -85,12 +85,14 @@ import {
     GLASS_RACK__DOLLY,
     DISHROOM_DOLLY__TRAY,
     DISHROOM_DOLLY__GLASS,
-    CYPRESS_TREE,
+    CYPRESS_DOUBLE__LIZ_GATE,
+    CYPRESS_SINGLE__LIZ_ENDED,
+    CYPRESS_SINGLE__LIZ_ENDING,
     CACTUS_SINGLE__LIZ_ENDING,
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
     LAMPPOST__LIZ_GATE,
-    TRAFFIC_LIGHT,
+    TRAFFIC_LIGHT_FRONT,
     APARTMENT_PLANT,
     BUSH_SINGLE__BENNETT_GATE,
     BUSH_DOUBLE__BENNETT_GATE,
@@ -237,7 +239,8 @@ export default [
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
-                [CYPRESS_TREE]: true,
+                [CYPRESS_DOUBLE__LIZ_GATE]: true,
+                [CYPRESS_SINGLE__LIZ_ENDING]: true,
                 [CACTUS_SINGLE__LIZ_ENDING]: true,
                 [CACTUS_DOUBLE__LIZ_GATE]: true
             },
@@ -270,9 +273,10 @@ export default [
                 [OAKLAND_FRONT__HIGH]: true
             },
             [CUTOUT]: {
+                [CYPRESS_SINGLE__LIZ_ENDED]: true,
                 [CACTUS_SINGLE__LIZ_ENDED]: true,
                 [LAMPPOST__LIZ_GATE]: true,
-                [TRAFFIC_LIGHT]: true
+                [TRAFFIC_LIGHT_FRONT]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDED]: true,

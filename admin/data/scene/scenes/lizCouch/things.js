@@ -1,5 +1,6 @@
 import {
     BUBBLE,
+    CUTOUT,
     DOOR,
     FIXTURE,
     PANEL,
@@ -23,6 +24,11 @@ import {
     LIZ_THOUGHT_REUNION
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
+    CYPRESS_DOUBLE__LIZ_COUCH,
+    CYPRESS_SINGLE__LIZ_COUCH,
+    TRAFFIC_LIGHT_REAR
+} from '../../../../../app/constants/scene/things/cutouts'
+import {
     LIZ_BLINDS_INSIDE,
     LIZ_BLINDS_INSIDE_OPEN,
     LIZ_DOOR,
@@ -44,6 +50,27 @@ import {
 } from '../../sharedConfigs'
 
 export default {
+    [CUTOUT]: {
+        [CYPRESS_DOUBLE__LIZ_COUCH]: {
+            yIndex: 1,
+            xPosition: 10.5,
+            scaleFactor: 0.6,
+            flipHorizontal: true
+        },
+        [CYPRESS_SINGLE__LIZ_COUCH]: {
+            yIndex: 1,
+            xPosition: 0.5,
+            scaleFactor: 0.6,
+            flipHorizontal: true
+        },
+        [TRAFFIC_LIGHT_REAR]: {
+            yIndex: -1,
+            xPosition: 1.5,
+            zOffset: -3,
+            scaleFactor: 0.3,
+            flipHorizontal: true
+        }
+    },
     [DOOR]: {
         [LIZ_BLINDS_INSIDE]: {
             yIndex: 2,
@@ -207,14 +234,12 @@ export const THINGS_LIZ_COUCH_PEAFOWL = {
         [PEACOCK]: {
             yIndex: 4,
             xPosition: 8,
-            scaleFactor: 0.25,
-            hide: true
+            scaleFactor: 0.25
         },
         [PEAHEN]: {
             yIndex: 4,
             xPosition: 6,
-            scaleFactor: 0.25,
-            hide: true
+            scaleFactor: 0.25
         }
     }
 }
