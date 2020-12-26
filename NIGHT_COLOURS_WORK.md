@@ -16,6 +16,7 @@
     * Basement bed (Uncanny)
         * new illustrations
             * bushes
+            * don't use stink plant
         * adjust bushes and stink plant
 
 # Night colours indoors

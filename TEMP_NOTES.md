@@ -12,7 +12,9 @@
 # UI TODO:
 * Young children heads.
 * Remove depth shading from slant direction cubes?
-* Wedding platform kind of empty...
+* El Torito logo.
+* Wedding platform chair and tables.
+* Final gravestone. (Move Bennett and Liz to left.)
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
