@@ -3,21 +3,17 @@
     * Does future need its own dark floor and spotlight cubes?
 * Audit
     * Bathroom (Didi)
-        * new illustrations
-            * rose bushes
-            * lemon tree
-        * adjust bushes and lemon tree
+        * adjust rosebushes and lemon tree
     * Bedroom (Pchelka)
         * outside floor cube zIndex
         * new illustrations
             * rose bushes
-        * adjust bushes and lemon tree
+        * adjust rosebushes and lemon tree
     * Liz couch (Kyon)
     * Basement bed (Uncanny)
         * new illustrations
-            * bushes
             * don't use stink plant
-        * adjust bushes and stink plant
+        * adjust rosebushes and stink plant
 
 # Night colours indoors
 * Attic (Constellations)

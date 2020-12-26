@@ -2,6 +2,9 @@ import fireHydrant from '../../../../../assets/svgs/cutouts/fireHydrant'
 import playgroundSlide from '../../../../../assets/svgs/cutouts/playgroundSlide'
 import mirroredSink from '../../../../../assets/svgs/cutouts/mirroredSink'
 import towelRack from '../../../../../assets/svgs/cutouts/towelRack'
+import lemonTree from '../../../../../assets/svgs/cutouts/lemonTree'
+import rosebushDouble from '../../../../../assets/svgs/cutouts/rosebushDouble'
+import rosebushSingle from '../../../../../assets/svgs/cutouts/rosebushSingle'
 import shoppingCart from '../../../../../assets/svgs/cutouts/shoppingCart'
 import overpassSignBack from '../../../../../assets/svgs/cutouts/overpassSignBack'
 import campfire from '../../../../../assets/svgs/cutouts/campfire'
@@ -159,9 +162,9 @@ export default {
     [PLAYGROUND_SLIDE]: playgroundSlide,
     [MIRRORED_SINK]: mirroredSink,
     [TOWEL_RACK]: towelRack,
-    [LEMON_TREE__BATHROOM]: rosebushSlantedDouble,
-    [ROSEBUSH_DOUBLE_BATHROOM]: rosebushSlantedDouble,
-    [ROSEBUSH_SINGLE_BATHROOM]: rosebushSlantedDouble,
+    [LEMON_TREE__BATHROOM]: lemonTree,
+    [ROSEBUSH_DOUBLE_BATHROOM]: rosebushDouble,
+    [ROSEBUSH_SINGLE_BATHROOM]: rosebushSingle,
     [SHOPPING_CART]: shoppingCart,
     [OVERPASS_SIGN_BACK]: overpassSignBack,
     [CAMPFIRE]: campfire,
@@ -169,7 +172,7 @@ export default {
     [TAIWAN_FRIDGE]: taiwanFridge,
     [TAIWAN_TREE]: taiwanTree,
     [YELLOW_TAPED_GRILL]: yellowTapedGrill,
-    [LEMON_TREE__BEDROOM]: rosebushSlantedDouble,
+    [LEMON_TREE__BEDROOM]: lemonTree,
     [ROSEBUSH_SLANTED_DOUBLE]: rosebushSlantedDouble,
     [ROSEBUSH_SLANTED_SINGLE]: rosebushSlantedDouble,
     [LOCKER_BANK]: lockerBank,
@@ -239,8 +242,8 @@ export default {
     [TWIN_STREETLAMP__MIDDLE]: twinStreetlamp,
     [TWIN_STREETLAMP__NEAR]: twinStreetlamp,
     [STINK_PLANT__BASEMENT]: stinkPlant,
-    [ROSEBUSH_DOUBLE_BASEMENT]: rosebushSlantedDouble,
-    [ROSEBUSH_SINGLE_BASEMENT]: rosebushSlantedDouble,
+    [ROSEBUSH_DOUBLE_BASEMENT]: rosebushDouble,
+    [ROSEBUSH_SINGLE_BASEMENT]: rosebushSingle,
     [EL_CERRITO_TREE]: elCerritoTree,
     [DUMPSTER]: dumpster,
     [DISPENSER_LEFT]: dispenserLeft,

@@ -78,6 +78,7 @@ import {
     GARBAGE_BAG__SHARED,
     PAPER_BAG__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/food'
+import { FAMILY_HOUSE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     BULB__SHARED,
     FRIDGE__SHARED
@@ -96,7 +97,8 @@ import {
     POLE__SHARED,
     ROCK__SHARED,
     TAIWAN_FOLIAGE__SHARED,
-    TRAFFIC_LIGHT__SHARED
+    TRAFFIC_LIGHT__SHARED,
+    WALL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import { NEWSPAPER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import { BUDDHA_SHRINE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/taiwan'
@@ -153,12 +155,30 @@ export default {
     [PHARMACY_AISLE]: null,
     [PLAYGROUND_SLIDE]: null,
     [RECYCLABLES]: null,
-    [ROSEBUSH_DOUBLE_BATHROOM]: FOLIAGE__SHARED,
-    [ROSEBUSH_DOUBLE_BASEMENT]: FOLIAGE__SHARED,
-    [ROSEBUSH_SINGLE_BATHROOM]: FOLIAGE__SHARED,
-    [ROSEBUSH_SINGLE_BASEMENT]: FOLIAGE__SHARED,
-    [ROSEBUSH_SLANTED_DOUBLE]: FOLIAGE__SHARED,
-    [ROSEBUSH_SLANTED_SINGLE]: FOLIAGE__SHARED,
+    [ROSEBUSH_DOUBLE_BATHROOM]: [
+        FAMILY_HOUSE__SHARED,
+        FOLIAGE__SHARED
+    ],
+    [ROSEBUSH_DOUBLE_BASEMENT]: [
+        WALL__SHARED,
+        FOLIAGE__SHARED
+    ],
+    [ROSEBUSH_SINGLE_BATHROOM]: [
+        FAMILY_HOUSE__SHARED,
+        FOLIAGE__SHARED
+    ],
+    [ROSEBUSH_SINGLE_BASEMENT]: [
+        WALL__SHARED,
+        FOLIAGE__SHARED
+    ],
+    [ROSEBUSH_SLANTED_DOUBLE]: [
+        FAMILY_HOUSE__SHARED,
+        FOLIAGE__SHARED
+    ],
+    [ROSEBUSH_SLANTED_SINGLE]: [
+        FAMILY_HOUSE__SHARED,
+        FOLIAGE__SHARED
+    ],
     [SANDBAGS]: null,
     [SHOPPING_CART]: GARBAGE_BAG__SHARED,
     [SIGNPOST]: POLE__SHARED,

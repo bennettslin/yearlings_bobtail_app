@@ -82,7 +82,7 @@ export default {
         [LEMON_TREE__BEDROOM]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.3
+            scaleFactor: 0.6
         },
         [ROSEBUSH_SLANTED_DOUBLE]: {
             yIndex: 1,
