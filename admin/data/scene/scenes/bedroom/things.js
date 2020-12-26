@@ -21,7 +21,8 @@ import {
     SPACE_STATION
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
-    ROSE_BUSH_LEFT
+    ROSEBUSH_SLANTED_DOUBLE,
+    ROSEBUSH_SLANTED_SINGLE
 } from '../../../../../app/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS,
@@ -77,9 +78,14 @@ export default {
         }
     },
     [CUTOUT]: {
-        [ROSE_BUSH_LEFT]: {
+        [ROSEBUSH_SLANTED_DOUBLE]: {
             yIndex: 1,
             xPosition: 0.5,
+            scaleFactor: 0.3
+        },
+        [ROSEBUSH_SLANTED_SINGLE]: {
+            yIndex: 1,
+            xPosition: 10.5,
             scaleFactor: 0.3
         }
     },

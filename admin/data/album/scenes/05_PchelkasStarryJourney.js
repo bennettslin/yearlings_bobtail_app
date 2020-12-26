@@ -87,7 +87,8 @@ import {
     BUSH_SINGLE__QUAD,
     BUSH_DOUBLE__LOCKERS,
     BUSH_DOUBLE__QUAD,
-    ROSE_BUSH_LEFT
+    ROSEBUSH_SLANTED_DOUBLE,
+    ROSEBUSH_SLANTED_SINGLE
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS,
@@ -236,7 +237,8 @@ export default [
                 [DOGS_ROCKET]: true
             },
             [CUTOUT]: {
-                [ROSE_BUSH_LEFT]: true
+                [ROSEBUSH_SLANTED_DOUBLE]: true,
+                [ROSEBUSH_SLANTED_SINGLE]: true
             },
             [FURNITURE]: {
                 [CAPTAIN_BED_PILLOW]: true
@@ -267,7 +269,8 @@ export default [
                 [SPACE_STATION]: true
             },
             [CUTOUT]: {
-                [ROSE_BUSH_LEFT]: true
+                [ROSEBUSH_SLANTED_DOUBLE]: true,
+                [ROSEBUSH_SLANTED_SINGLE]: true
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
