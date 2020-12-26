@@ -5,7 +5,6 @@
     * Bathroom (Didi)
         * new illustrations
             * rose bushes
-            * bathroom fence
         * adjust bushes
     * Bedroom (Pchelka)
         * outside floor cube zIndex

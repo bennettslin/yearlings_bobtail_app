@@ -12,7 +12,7 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../../../../app/constants/scene/things/fixtures'
-import { BASEMENT_FENCE } from '../../../../../app/constants/scene/things/panels'
+import { DEFAULT_FENCE_BASEMENT } from '../../../../../app/constants/scene/things/panels'
 import { ACTOR_DEFAULT_SCALE_FACTOR } from '../../../../../app/constants/scene'
 
 export default {
@@ -55,7 +55,7 @@ export default {
         }
     },
     [PANEL]: {
-        [BASEMENT_FENCE]: {
+        [DEFAULT_FENCE_BASEMENT]: {
             yIndex: 0,
             scaleFactor: 0.5
         }

@@ -1,7 +1,6 @@
 import {
     ATTIC_ARMREST,
     ATTIC_COUCH,
-    BASEMENT_FENCE,
     BATHTUB,
     BEDROOM_DESK,
     BEDROOM_FENCE,
@@ -11,6 +10,8 @@ import {
     CONVEYOR_BELT,
     CROWD_BACK,
     CROWD_SIDE,
+    DEFAULT_FENCE_BASEMENT,
+    DEFAULT_FENCE_BATHROOM,
     DISHROOM_SINK,
     GO_KART_EXTERIOR,
     GO_KART_SEAT,
@@ -66,14 +67,16 @@ import {
     PRETEEN_FURNITURE__SHARED,
     WAITING_ARMCHAIR__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/furniture'
-import { WINDOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
+import {
+    FAMILY_HOUSE__SHARED,
+    WINDOW__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     IRON__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     FOLIAGE__SHARED,
-    MOUNTAIN__SHARED,
     OCEAN_CAVE__SHARED,
     ROCK__SHARED,
     WALL__SHARED
@@ -95,16 +98,11 @@ import {
 export default {
     [ATTIC_ARMREST]: ATTIC_LINENS__SHARED,
     [ATTIC_COUCH]: ATTIC_LINENS__SHARED,
-    [BASEMENT_FENCE]: [
-        FOLIAGE__SHARED,
-        WALL__SHARED
-    ],
     [BATHTUB]: null,
     [BEDROOM_DESK]: PRETEEN_FURNITURE__SHARED,
     [BEDROOM_FENCE]: [
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED,
-        WALL__SHARED
+        FAMILY_HOUSE__SHARED
     ],
     [BENNETT_BED]: [
         BENNETT_BED__SHARED,
@@ -119,6 +117,14 @@ export default {
     ],
     [CROWD_BACK]: SHADOW__SHARED,
     [CROWD_SIDE]: SHADOW__SHARED,
+    [DEFAULT_FENCE_BASEMENT]: [
+        FOLIAGE__SHARED,
+        WALL__SHARED
+    ],
+    [DEFAULT_FENCE_BATHROOM]: [
+        FOLIAGE__SHARED,
+        FAMILY_HOUSE__SHARED
+    ],
     [DISHROOM_SINK]: [
         IRON__SHARED,
         STEEL__SHARED

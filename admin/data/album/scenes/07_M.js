@@ -115,7 +115,7 @@ import {
 } from '../../../../app/constants/scene/things/flats'
 import { BENNETT_PILLOW__COUCH } from '../../../../app/constants/scene/things/furnitures'
 import {
-    BASEMENT_FENCE,
+    DEFAULT_FENCE_BASEMENT,
     WIDE_COUCH_BENNETT,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT
@@ -289,7 +289,7 @@ export default [
                 [BASEMENT_BEER_BENNETT]: true
             },
             [PANEL]: {
-                [BASEMENT_FENCE]: true
+                [DEFAULT_FENCE_BASEMENT]: true
             }
         },
         cubes: BASEMENT_KEY,

@@ -67,7 +67,10 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT
 } from '../../../../app/constants/scene/things/flats'
-import { BATHTUB } from '../../../../app/constants/scene/things/panels'
+import {
+    BATHTUB,
+    DEFAULT_FENCE_BATHROOM
+} from '../../../../app/constants/scene/things/panels'
 
 export default [
     {
@@ -172,15 +175,15 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true,
-                [NEAR_HOUSES]: true
+                [VALLEY_FURTHER_BACKDROP]: true
             },
             [CUTOUT]: {
                 [MIRRORED_SINK]: true,
                 [TOWEL_RACK]: true
             },
             [PANEL]: {
-                [BATHTUB]: true
+                [BATHTUB]: true,
+                [DEFAULT_FENCE_BATHROOM]: true
             }
         },
         cubes: BATHROOM_KEY,
@@ -201,8 +204,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true,
-                [NEAR_HOUSES]: true
+                [VALLEY_FURTHER_BACKDROP]: true
             },
             [CARDBOARD]: {
                 [JOHNNY_HORTON_ALBUM]: true
@@ -211,7 +213,8 @@ export default [
                 [RECORD_PLAYER_STOOL]: true
             },
             [PANEL]: {
-                [BATHTUB]: true
+                [BATHTUB]: true,
+                [DEFAULT_FENCE_BATHROOM]: true
             }
         },
         cubes: BATHROOM_OPEN_KEY,

@@ -67,6 +67,7 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/buildings'
 import {
     DOOR__SHARED,
+    FAMILY_HOUSE__SHARED,
     WINDOW__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
@@ -182,6 +183,7 @@ export default {
         WINDOW__SHARED
     ],
     [FAMILY_HOUSE]: [
+        FAMILY_HOUSE__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,

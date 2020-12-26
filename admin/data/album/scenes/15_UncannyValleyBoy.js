@@ -83,7 +83,7 @@ import {
 } from '../../../../app/constants/scene/things/fixtures'
 import { BENNETT_PILLOW__BED } from '../../../../app/constants/scene/things/furnitures'
 import {
-    BASEMENT_FENCE,
+    DEFAULT_FENCE_BASEMENT,
     SNOWGLOBE__TETHERBALL,
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
@@ -119,7 +119,7 @@ export default [
                 [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
-                [BASEMENT_FENCE]: true,
+                [DEFAULT_FENCE_BASEMENT]: true,
                 [BENNETT_BED]: true
             }
         },
@@ -153,7 +153,7 @@ export default [
                 [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
-                [BASEMENT_FENCE]: true,
+                [DEFAULT_FENCE_BASEMENT]: true,
                 [BENNETT_BED]: true
             }
         },
@@ -320,7 +320,7 @@ export default [
                 [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
-                [BASEMENT_FENCE]: true,
+                [DEFAULT_FENCE_BASEMENT]: true,
                 [BENNETT_BED]: true
             }
         },

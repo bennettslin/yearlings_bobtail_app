@@ -17,7 +17,7 @@ import oceanCaveInterior from '../../../../../assets/svgs/panels/oceanCaveInteri
 import oceanCaveExterior from '../../../../../assets/svgs/panels/oceanCaveExterior'
 import wideCouch from '../../../../../assets/svgs/panels/wideCouch'
 import wideArmrest from '../../../../../assets/svgs/panels/wideArmrest'
-import basementFence from '../../../../../assets/svgs/panels/basementFence'
+import defaultFence from '../../../../../assets/svgs/panels/defaultFence'
 import goKartSeat from '../../../../../assets/svgs/panels/goKartSeat'
 import goKartExterior from '../../../../../assets/svgs/panels/goKartExterior'
 import conveyorBelt from '../../../../../assets/svgs/panels/conveyorBelt'
@@ -49,6 +49,7 @@ import weddingPlatform from '../../../../../assets/svgs/panels/weddingPlatform'
 
 import {
     BATHTUB,
+    DEFAULT_FENCE_BATHROOM,
     BEDROOM_DESK,
     CAPTAIN_BED,
     BEDROOM_FENCE,
@@ -74,7 +75,7 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
-    BASEMENT_FENCE,
+    DEFAULT_FENCE_BASEMENT,
     GO_KART_SEAT__LEFT,
     GO_KART_SEAT__RIGHT,
     GO_KART_EXTERIOR__LEFT,
@@ -124,6 +125,7 @@ import {
 
 export default {
     [BATHTUB]: bathtub,
+    [DEFAULT_FENCE_BATHROOM]: defaultFence,
     [BEDROOM_DESK]: bedroomDesk,
     [CAPTAIN_BED]: captainBed,
     [BEDROOM_FENCE]: bedroomFence,
@@ -149,7 +151,7 @@ export default {
     [WIDE_COUCH_BENNETT]: wideCouch,
     [WIDE_ARMREST_BENNETT__LEFT]: wideArmrest,
     [WIDE_ARMREST_BENNETT__RIGHT]: wideArmrest,
-    [BASEMENT_FENCE]: basementFence,
+    [DEFAULT_FENCE_BASEMENT]: defaultFence,
     [GO_KART_SEAT__LEFT]: goKartSeat,
     [GO_KART_SEAT__RIGHT]: goKartSeat,
     [GO_KART_EXTERIOR__LEFT]: goKartExterior,

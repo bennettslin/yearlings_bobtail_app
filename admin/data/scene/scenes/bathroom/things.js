@@ -10,7 +10,10 @@ import {
     TOWEL_RACK
 } from '../../../../../app/constants/scene/things/cutouts'
 import { RECORD_PLAYER_STOOL } from '../../../../../app/constants/scene/things/fixtures'
-import { BATHTUB } from '../../../../../app/constants/scene/things/panels'
+import {
+    BATHTUB,
+    DEFAULT_FENCE_BATHROOM
+} from '../../../../../app/constants/scene/things/panels'
 
 export default {
     [PANEL]: {
@@ -18,6 +21,10 @@ export default {
             yIndex: 4,
             xPosition: 4.5,
             scaleFactor: 0.3
+        },
+        [DEFAULT_FENCE_BATHROOM]: {
+            yIndex: 0,
+            scaleFactor: 0.5
         }
     }
 }
