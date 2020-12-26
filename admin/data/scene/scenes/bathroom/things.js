@@ -23,7 +23,7 @@ export default {
         [LEMON_TREE__BATHROOM]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.6
+            scaleFactor: 0.7
         },
         [ROSEBUSH_DOUBLE_BATHROOM]: {
             yIndex: 1,

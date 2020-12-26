@@ -11,8 +11,6 @@
         * adjust rosebushes and lemon tree
     * Liz couch (Kyon)
     * Basement bed (Uncanny)
-        * new illustrations
-            * don't use stink plant
         * adjust rosebushes and stink plant
 
 # Night colours indoors

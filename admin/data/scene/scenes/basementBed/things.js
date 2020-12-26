@@ -4,7 +4,7 @@ import {
     FIXTURE
 } from '../../../../../app/constants/scene/things'
 import {
-    STINK_PLANT__BASEMENT,
+    PEACH_TREE,
     ROSEBUSH_DOUBLE_BASEMENT,
     ROSEBUSH_SINGLE_BASEMENT
 } from '../../../../../app/constants/scene/things/cutouts'
@@ -13,10 +13,10 @@ import { CRACKED_PICTURE } from '../../../../../app/constants/scene/things/fixtu
 
 export default {
     [CUTOUT]: {
-        [STINK_PLANT__BASEMENT]: {
+        [PEACH_TREE]: {
             yIndex: 1,
             xPosition: 5,
-            scaleFactor: 0.5
+            scaleFactor: 0.7
         },
         [ROSEBUSH_DOUBLE_BASEMENT]: {
             yIndex: 1,
