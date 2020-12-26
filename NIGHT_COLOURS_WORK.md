@@ -6,12 +6,16 @@
         * adjust rosebushes and lemon tree
     * Bedroom (Pchelka)
         * outside floor cube zIndex
+        * cubes for magic and future
+            * Use same letter for all night cubs, and also spotlight
         * new illustrations
             * rose bushes
         * adjust rosebushes and lemon tree
     * Liz couch (Kyon)
     * Basement bed (Uncanny)
-        * adjust rosebushes and stink plant
+        * new illustrations
+            * peach tree
+        * adjust rosebushes and peach tree
 
 # Night colours indoors
 * Attic (Constellations)
