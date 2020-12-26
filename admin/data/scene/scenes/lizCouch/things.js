@@ -94,7 +94,7 @@ export default {
             yIndex: 0,
             xPosition: 6,
             zOffset: -0.08,
-            scaleFactor: 0.78
+            scaleFactor: 0.8
         }
     },
     [PANEL]: {
@@ -234,14 +234,12 @@ export const THINGS_LIZ_COUCH_PEAFOWL = {
         [PEACOCK]: {
             yIndex: 4,
             xPosition: 8,
-            scaleFactor: 0.25,
-            hide: true
+            scaleFactor: 0.25
         },
         [PEAHEN]: {
             yIndex: 4,
             xPosition: 6,
-            scaleFactor: 0.25,
-            hide: true
+            scaleFactor: 0.25
         }
     }
 }

@@ -12,8 +12,6 @@
             * bushes
         * adjust bushes
     * Liz couch (Kyon)
-        * Switch cactus double and single
-        * Liz gate door same size and position for both gate and couch
     * Basement bed (Uncanny)
         * new illustrations
             * bushes
