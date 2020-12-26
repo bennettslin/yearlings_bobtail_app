@@ -7,7 +7,9 @@ import {
 import { JOHNNY_HORTON_ALBUM } from '../../../../../app/constants/scene/things/cardboards'
 import {
     MIRRORED_SINK,
-    TOWEL_RACK
+    TOWEL_RACK,
+    ROSEBUSH_DOUBLE_BATHROOM,
+    ROSEBUSH_SINGLE_BATHROOM
 } from '../../../../../app/constants/scene/things/cutouts'
 import { RECORD_PLAYER_STOOL } from '../../../../../app/constants/scene/things/fixtures'
 import {
@@ -16,6 +18,18 @@ import {
 } from '../../../../../app/constants/scene/things/panels'
 
 export default {
+    [CUTOUT]: {
+        [ROSEBUSH_DOUBLE_BATHROOM]: {
+            yIndex: 1,
+            xPosition: 0.5,
+            scaleFactor: 0.3
+        },
+        [ROSEBUSH_SINGLE_BATHROOM]: {
+            yIndex: 1,
+            xPosition: 10.5,
+            scaleFactor: 0.3
+        }
+    },
     [PANEL]: {
         [BATHTUB]: {
             yIndex: 4,

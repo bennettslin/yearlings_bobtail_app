@@ -2,6 +2,7 @@ import { ACTOR } from '../../../../app/constants/scene'
 import {
     BACKDROP,
     CARDBOARD,
+    CUTOUT,
     DOOR,
     FIXTURE,
     FURNITURE,
@@ -74,6 +75,10 @@ import {
     SNOWGLOBE_FUTURE_CORD,
     SNOWGLOBE_FUTURE_REATTA
 } from '../../../../app/constants/scene/things/cardboards'
+import {
+    ROSEBUSH_DOUBLE_BASEMENT,
+    ROSEBUSH_SINGLE_BASEMENT
+} from '../../../../app/constants/scene/things/cutouts'
 import { BASEMENT_DOOR } from '../../../../app/constants/scene/things/doors'
 import {
     TETHERBALL_POLE,
@@ -148,6 +153,10 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE__LEVEL]: true
+            },
+            [CUTOUT]: {
+                [ROSEBUSH_DOUBLE_BASEMENT]: true,
+                [ROSEBUSH_SINGLE_BASEMENT]: true
             },
             [FURNITURE]: {
                 [BENNETT_PILLOW__BED]: true
@@ -309,6 +318,10 @@ export default [
                         instance: SOBBING_SHIELDING
                     }
                 }
+            },
+            [CUTOUT]: {
+                [ROSEBUSH_DOUBLE_BASEMENT]: true,
+                [ROSEBUSH_SINGLE_BASEMENT]: true
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE__LEVEL]: true

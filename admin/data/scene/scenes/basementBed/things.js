@@ -1,11 +1,28 @@
 import {
+    CUTOUT,
     DOOR,
     FIXTURE
 } from '../../../../../app/constants/scene/things'
+import {
+    ROSEBUSH_DOUBLE_BASEMENT,
+    ROSEBUSH_SINGLE_BASEMENT
+} from '../../../../../app/constants/scene/things/cutouts'
 import { BASEMENT_DOOR } from '../../../../../app/constants/scene/things/doors'
 import { CRACKED_PICTURE } from '../../../../../app/constants/scene/things/fixtures'
 
 export default {
+    [CUTOUT]: {
+        [ROSEBUSH_DOUBLE_BASEMENT]: {
+            yIndex: 1,
+            xPosition: 0.5,
+            scaleFactor: 0.3
+        },
+        [ROSEBUSH_SINGLE_BASEMENT]: {
+            yIndex: 1,
+            xPosition: 10.5,
+            scaleFactor: 0.3
+        }
+    },
     [DOOR]: {
         [BASEMENT_DOOR]: {
             yIndex: 2,

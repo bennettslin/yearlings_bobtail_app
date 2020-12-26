@@ -55,7 +55,9 @@ import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
     MIRRORED_SINK,
-    TOWEL_RACK
+    TOWEL_RACK,
+    ROSEBUSH_DOUBLE_BATHROOM,
+    ROSEBUSH_SINGLE_BATHROOM
 } from '../../../../app/constants/scene/things/cutouts'
 import { NURSE_DOOR } from '../../../../app/constants/scene/things/doors'
 import {
@@ -208,6 +210,10 @@ export default [
             },
             [CARDBOARD]: {
                 [JOHNNY_HORTON_ALBUM]: true
+            },
+            [CUTOUT]: {
+                [ROSEBUSH_DOUBLE_BATHROOM]: true,
+                [ROSEBUSH_SINGLE_BATHROOM]: true
             },
             [FIXTURE]: {
                 [RECORD_PLAYER_STOOL]: true
