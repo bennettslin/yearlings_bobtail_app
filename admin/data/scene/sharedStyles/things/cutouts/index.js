@@ -38,6 +38,7 @@ import {
     SANDBAGS,
     SHOPPING_CART,
     SIGNPOST,
+    ROSE_BUSH_LEFT,
     STAGE_LIGHTS,
     STEAM_PIPES,
     STORAGE_BOXES,
@@ -148,6 +149,7 @@ export default {
     [SANDBAGS]: null,
     [SHOPPING_CART]: GARBAGE_BAG__SHARED,
     [SIGNPOST]: POLE__SHARED,
+    [ROSE_BUSH_LEFT]: FOLIAGE__SHARED,
     [STAGE_LIGHTS]: [
         OAK__SHARED,
         STEEL__SHARED

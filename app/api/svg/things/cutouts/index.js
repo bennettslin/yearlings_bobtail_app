@@ -9,6 +9,7 @@ import buddhaShrine from '../../../../../assets/svgs/cutouts/buddhaShrine'
 import taiwanFridge from '../../../../../assets/svgs/cutouts/taiwanFridge'
 import taiwanTree from '../../../../../assets/svgs/cutouts/taiwanTree'
 import yellowTapedGrill from '../../../../../assets/svgs/cutouts/yellowTapedGrill'
+import squareBushLeft from '../../../../../assets/svgs/cutouts/squareBushLeft'
 import lockerBank from '../../../../../assets/svgs/cutouts/lockerBank'
 import trashCan from '../../../../../assets/svgs/cutouts/trashCan'
 import cactusSingle from '../../../../../assets/svgs/cutouts/cactusSingle'
@@ -69,6 +70,7 @@ import {
     TAIWAN_FRIDGE,
     TAIWAN_TREE,
     YELLOW_TAPED_GRILL,
+    ROSE_BUSH_LEFT,
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
@@ -156,6 +158,7 @@ export default {
     [TAIWAN_FRIDGE]: taiwanFridge,
     [TAIWAN_TREE]: taiwanTree,
     [YELLOW_TAPED_GRILL]: yellowTapedGrill,
+    [ROSE_BUSH_LEFT]: squareBushLeft,
     [LOCKER_BANK]: lockerBank,
     [TRASH_CAN__LOCKERS]: trashCan,
     [TRASH_CAN__QUAD]: trashCan,

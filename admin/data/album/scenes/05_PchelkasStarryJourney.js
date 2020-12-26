@@ -86,7 +86,8 @@ import {
     BUSH_SINGLE__LOCKERS,
     BUSH_SINGLE__QUAD,
     BUSH_DOUBLE__LOCKERS,
-    BUSH_DOUBLE__QUAD
+    BUSH_DOUBLE__QUAD,
+    ROSE_BUSH_LEFT
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS,
@@ -234,6 +235,9 @@ export default [
                 [EARTH__ROCKET]: true,
                 [DOGS_ROCKET]: true
             },
+            [CUTOUT]: {
+                [ROSE_BUSH_LEFT]: true
+            },
             [FURNITURE]: {
                 [CAPTAIN_BED_PILLOW]: true
             },
@@ -261,6 +265,9 @@ export default [
             [CARDBOARD]: {
                 [EARTH__STATION]: true,
                 [SPACE_STATION]: true
+            },
+            [CUTOUT]: {
+                [ROSE_BUSH_LEFT]: true
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,

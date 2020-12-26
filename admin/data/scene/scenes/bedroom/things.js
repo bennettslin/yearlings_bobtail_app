@@ -1,6 +1,7 @@
 import {
     BUBBLE,
     CARDBOARD,
+    CUTOUT,
     DOOR,
     FIXTURE,
     FLAT,
@@ -19,6 +20,9 @@ import {
     EARTH__STATION,
     SPACE_STATION
 } from '../../../../../app/constants/scene/things/cardboards'
+import {
+    ROSE_BUSH_LEFT
+} from '../../../../../app/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS,
     BEDROOM_BLINDS_OPEN
@@ -70,6 +74,13 @@ export default {
             rotateY: 300,
             skewX: -15,
             skewY: 9
+        }
+    },
+    [CUTOUT]: {
+        [ROSE_BUSH_LEFT]: {
+            yIndex: 1,
+            xPosition: 0.5,
+            scaleFactor: 0.3
         }
     },
     [DOOR]: {
