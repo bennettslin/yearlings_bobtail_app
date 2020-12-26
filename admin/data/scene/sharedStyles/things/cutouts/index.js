@@ -26,6 +26,7 @@ import {
     HOWIE_FRIDGE,
     IV_DRIP,
     LAMPPOST,
+    LEMON_TREE,
     LOCKER_BANK,
     MIRRORED_SINK,
     MONITOR_FRONT,
@@ -142,6 +143,7 @@ export default {
         LAMPPOST__SHARED,
         POLE__SHARED
     ],
+    [LEMON_TREE]: FOLIAGE__SHARED,
     [LOCKER_BANK]: null,
     [MIRRORED_SINK]: ALL_PEOPLE__SHARED,
     [MONITOR_FRONT]: MONITOR__SHARED,

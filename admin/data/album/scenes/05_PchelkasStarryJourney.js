@@ -87,6 +87,7 @@ import {
     BUSH_SINGLE__QUAD,
     BUSH_DOUBLE__LOCKERS,
     BUSH_DOUBLE__QUAD,
+    LEMON_TREE__BEDROOM,
     ROSEBUSH_SLANTED_DOUBLE,
     ROSEBUSH_SLANTED_SINGLE
 } from '../../../../app/constants/scene/things/cutouts'
@@ -237,6 +238,7 @@ export default [
                 [DOGS_ROCKET]: true
             },
             [CUTOUT]: {
+                [LEMON_TREE__BEDROOM]: true,
                 [ROSEBUSH_SLANTED_DOUBLE]: true,
                 [ROSEBUSH_SLANTED_SINGLE]: true
             },
@@ -269,6 +271,7 @@ export default [
                 [SPACE_STATION]: true
             },
             [CUTOUT]: {
+                [LEMON_TREE__BEDROOM]: true,
                 [ROSEBUSH_SLANTED_DOUBLE]: true,
                 [ROSEBUSH_SLANTED_SINGLE]: true
             },

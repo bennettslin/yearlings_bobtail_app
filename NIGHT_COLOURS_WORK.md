@@ -5,17 +5,18 @@
     * Bathroom (Didi)
         * new illustrations
             * rose bushes
-        * adjust bushes
+            * lemon tree
+        * adjust bushes and lemon tree
     * Bedroom (Pchelka)
         * outside floor cube zIndex
         * new illustrations
             * rose bushes
-        * adjust bushes
+        * adjust bushes and lemon tree
     * Liz couch (Kyon)
     * Basement bed (Uncanny)
         * new illustrations
             * bushes
-        * adjust bushes
+        * adjust bushes and Bancroft shrub
 
 # Night colours indoors
 * Attic (Constellations)

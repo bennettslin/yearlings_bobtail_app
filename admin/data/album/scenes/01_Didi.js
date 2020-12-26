@@ -56,6 +56,7 @@ import {
     PLAYGROUND_SLIDE,
     MIRRORED_SINK,
     TOWEL_RACK,
+    LEMON_TREE__BATHROOM,
     ROSEBUSH_DOUBLE_BATHROOM,
     ROSEBUSH_SINGLE_BATHROOM
 } from '../../../../app/constants/scene/things/cutouts'
@@ -212,6 +213,7 @@ export default [
                 [JOHNNY_HORTON_ALBUM]: true
             },
             [CUTOUT]: {
+                [LEMON_TREE__BATHROOM]: true,
                 [ROSEBUSH_DOUBLE_BATHROOM]: true,
                 [ROSEBUSH_SINGLE_BATHROOM]: true
             },

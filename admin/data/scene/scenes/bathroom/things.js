@@ -8,6 +8,7 @@ import { JOHNNY_HORTON_ALBUM } from '../../../../../app/constants/scene/things/c
 import {
     MIRRORED_SINK,
     TOWEL_RACK,
+    LEMON_TREE__BATHROOM,
     ROSEBUSH_DOUBLE_BATHROOM,
     ROSEBUSH_SINGLE_BATHROOM
 } from '../../../../../app/constants/scene/things/cutouts'
@@ -19,6 +20,11 @@ import {
 
 export default {
     [CUTOUT]: {
+        [LEMON_TREE__BATHROOM]: {
+            yIndex: 1,
+            xPosition: 5.5,
+            scaleFactor: 0.3
+        },
         [ROSEBUSH_DOUBLE_BATHROOM]: {
             yIndex: 1,
             xPosition: 0.5,
