@@ -16,10 +16,11 @@
     .treeCloser { fill: hsl(121, 24%, 41%); }
     .treeClosest { fill: hsl(121, 24%, 40%); }
 
-    .treeTrunkCloser { fill: hsl(35, 22%, 40%); }
-    .treeTrunk { fill: hsl(35, 22%, 36%); }
     .treeTrunkFurther { fill: hsl(35, 22%, 32%); }
+    .treeTrunk { fill: hsl(35, 22%, 36%); }
+    .treeTrunkCloser { fill: hsl(35, 22%, 40%); }
 
+    .bushFurthest { fill: hsl(139, 24%, 44%); }
     .bushFurther { fill: hsl(139, 24%, 48%); }
     .bushCloser { fill: hsl(139, 24%, 52%); }
 
@@ -29,8 +30,5 @@
     .shrubFurther { fill: hsl(165, 25%, 41%); }
     .shrubCloser { fill: hsl(165, 25%, 46%); }
 
-    .plantFurther { fill: hsl(149, 28%, 46%); }
-    .plantMiddle { fill: hsl(151, 28%, 49%); }
-    .plantCloser { fill: hsl(153, 28%, 52%); }
-    .plantTrunk { fill: hsl(23, 22%, 36%); }
+    .yellowRose { fill: hsl(60, 42%, 62%); }
 }

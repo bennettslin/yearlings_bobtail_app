@@ -9,9 +9,10 @@
 * Performance. (Redux.)
 * Be smarter about memo.
 
-# Nice UI TODO:
-* Remove depth shading from slant direction cubes?
+# UI TODO:
 * Young children heads.
+* Remove depth shading from slant direction cubes?
+* Wedding platform kind of empty...
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

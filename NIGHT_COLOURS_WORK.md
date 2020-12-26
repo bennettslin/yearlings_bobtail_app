@@ -4,12 +4,13 @@
 * Audit
     * Bathroom (Didi)
         * new illustrations
-            * bushes
+            * rose bushes
+            * bathroom fence
         * adjust bushes
     * Bedroom (Pchelka)
         * outside floor cube zIndex
         * new illustrations
-            * bushes
+            * rose bushes
         * adjust bushes
     * Liz couch (Kyon)
     * Basement bed (Uncanny)
