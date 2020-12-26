@@ -5,7 +5,7 @@ import {
 } from '../../../../../app/constants/scene/things'
 import {
     SIGNPOST,
-    BANCROFT_SHRUB,
+    STINK_PLANT__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_DOUBLE__CAMPANILE
 } from '../../../../../app/constants/scene/things/cutouts'
@@ -23,7 +23,7 @@ export default {
             xPosition: 10.5,
             scaleFactor: 0.35
         },
-        [BANCROFT_SHRUB]: {
+        [STINK_PLANT__BANCROFT]: {
             yIndex: 4,
             xPosition: 1,
             scaleFactor: 0.5

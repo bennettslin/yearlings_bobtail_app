@@ -19,7 +19,7 @@ import bushDouble from '../../../../../assets/svgs/cutouts/bushDouble'
 import recyclables from '../../../../../assets/svgs/cutouts/recyclables'
 import lamppost from '../../../../../assets/svgs/cutouts/lamppost'
 import signpost from '../../../../../assets/svgs/cutouts/signpost'
-import bancroftShrub from '../../../../../assets/svgs/cutouts/bancroftShrub'
+import stinkPlant from '../../../../../assets/svgs/cutouts/stinkPlant'
 import ashCan from '../../../../../assets/svgs/cutouts/ashCan'
 import campusTreeSingle from '../../../../../assets/svgs/cutouts/campusTreeSingle'
 import campusTreeDouble from '../../../../../assets/svgs/cutouts/campusTreeDouble'
@@ -97,7 +97,7 @@ import {
     LAMPPOST__CHURCH,
     LAMPPOST__LIZ_GATE,
     SIGNPOST,
-    BANCROFT_SHRUB,
+    STINK_PLANT__BANCROFT,
     ASH_CAN,
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
@@ -142,6 +142,7 @@ import {
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
     TWIN_STREETLAMP__NEAR,
+    STINK_PLANT__BASEMENT,
     ROSEBUSH_DOUBLE_BASEMENT,
     ROSEBUSH_SINGLE_BASEMENT,
     EL_CERRITO_TREE,
@@ -192,7 +193,7 @@ export default {
     [LAMPPOST__CHURCH]: lamppost,
     [LAMPPOST__LIZ_GATE]: lamppost,
     [SIGNPOST]: signpost,
-    [BANCROFT_SHRUB]: bancroftShrub,
+    [STINK_PLANT__BANCROFT]: stinkPlant,
     [ASH_CAN]: ashCan,
     [CAMPUS_TREE_SINGLE__BANCROFT]: campusTreeSingle,
     [CAMPUS_TREE_SINGLE__CAMPANILE]: campusTreeSingle,
@@ -237,6 +238,7 @@ export default {
     [TWIN_STREETLAMP__FAR]: twinStreetlamp,
     [TWIN_STREETLAMP__MIDDLE]: twinStreetlamp,
     [TWIN_STREETLAMP__NEAR]: twinStreetlamp,
+    [STINK_PLANT__BASEMENT]: stinkPlant,
     [ROSEBUSH_DOUBLE_BASEMENT]: rosebushSlantedDouble,
     [ROSEBUSH_SINGLE_BASEMENT]: rosebushSlantedDouble,
     [EL_CERRITO_TREE]: elCerritoTree,

@@ -16,7 +16,7 @@
     * Basement bed (Uncanny)
         * new illustrations
             * bushes
-        * adjust bushes and Bancroft shrub
+        * adjust bushes and stink plant
 
 # Night colours indoors
 * Attic (Constellations)

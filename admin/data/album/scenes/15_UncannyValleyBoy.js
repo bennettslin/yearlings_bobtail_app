@@ -77,7 +77,8 @@ import {
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     ROSEBUSH_DOUBLE_BASEMENT,
-    ROSEBUSH_SINGLE_BASEMENT
+    ROSEBUSH_SINGLE_BASEMENT,
+    STINK_PLANT__BASEMENT
 } from '../../../../app/constants/scene/things/cutouts'
 import { BASEMENT_DOOR } from '../../../../app/constants/scene/things/doors'
 import {
@@ -155,6 +156,7 @@ export default [
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
+                [STINK_PLANT__BASEMENT]: true,
                 [ROSEBUSH_DOUBLE_BASEMENT]: true,
                 [ROSEBUSH_SINGLE_BASEMENT]: true
             },
@@ -320,6 +322,7 @@ export default [
                 }
             },
             [CUTOUT]: {
+                [STINK_PLANT__BASEMENT]: true,
                 [ROSEBUSH_DOUBLE_BASEMENT]: true,
                 [ROSEBUSH_SINGLE_BASEMENT]: true
             },

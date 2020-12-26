@@ -65,7 +65,7 @@ import {
     BUSH_DOUBLE__COURTYARD,
     LAMPPOST__CHURCH,
     SIGNPOST,
-    BANCROFT_SHRUB,
+    STINK_PLANT__BANCROFT,
     ASH_CAN,
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
@@ -251,7 +251,7 @@ export default [
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
-                [BANCROFT_SHRUB]: true,
+                [STINK_PLANT__BANCROFT]: true,
                 [SIGNPOST]: true,
                 [CAMPUS_TREE_SINGLE__CAMPANILE]: true,
                 [CAMPUS_TREE_DOUBLE__CAMPANILE]: true
