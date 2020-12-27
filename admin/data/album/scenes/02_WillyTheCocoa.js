@@ -93,6 +93,7 @@ import {
 import { CAPTAIN_BED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
+    DEFAULT_FENCE_BATHROOM,
     CAPTAIN_BED,
     BEDROOM_FENCE,
     CAVE_SHADOWS,
@@ -167,8 +168,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true,
-                [NEAR_HOUSES]: true
+                [VALLEY_FURTHER_BACKDROP]: true
             },
             [CUTOUT]: {
                 [CACTUS_DOUBLE__PORCH]: true,
@@ -179,6 +179,9 @@ export default [
             },
             [FIXTURE]: {
                 [HAIRCUT_SCISSORS]: true
+            },
+            [PANEL]: {
+                [DEFAULT_FENCE_BATHROOM]: true
             }
         },
         cubes: PORCH_KEY,
