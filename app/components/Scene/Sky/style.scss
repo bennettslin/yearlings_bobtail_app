@@ -65,15 +65,15 @@
 
 // Didi, Uncanny
 .Season__space.past { background-color: hsl($hue__past, 50%, 61%); }
-.Season__horizon.past { background-color: hsl($hue__present, 40%, 76%); }
+.Season__horizon.past { background-color: hsl($hue__present, 50%, 71%); }
 
 // Uncanny
 .Season__space.present { background-color: hsl($hue__present, 65%, 70%); }
-.Season__horizon.present { background-color: hsl($hue__future, 45%, 85%); }
+.Season__horizon.present { background-color: hsl($hue__future, 65%, 80%); }
 
 // Pchelka, Uncanny
 .Season__space.future { background-color: hsl($hue__future, 45%, 25%); }
-.Season__horizon.future { background-color: hsl($hue__past, 40%, 40%); }
+.Season__horizon.future { background-color: hsl($hue__past, 45%, 35%); }
 
 // Grasshoppers, Vegan
 .Season__space.love { background-color: hsl(334, 56%, 60%); }

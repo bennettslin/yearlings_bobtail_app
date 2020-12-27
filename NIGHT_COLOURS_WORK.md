@@ -5,11 +5,6 @@
         * new illustrations
             * rose bushes
         * adjust rosebushes and lemon tree
-    * Liz couch (Kyon)
-    * Basement bed (Uncanny)
-        * new illustrations
-            * peach tree
-        * adjust rosebushes and peach tree
 
 # Night colours indoors
 * Attic (Constellations)

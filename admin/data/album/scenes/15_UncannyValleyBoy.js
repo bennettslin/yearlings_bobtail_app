@@ -76,9 +76,9 @@ import {
     SNOWGLOBE_FUTURE_REATTA
 } from '../../../../app/constants/scene/things/cardboards'
 import {
+    PEACH_TREE,
     ROSEBUSH_DOUBLE_BASEMENT,
-    ROSEBUSH_SINGLE_BASEMENT,
-    PEACH_TREE
+    ROSEBUSH_SINGLE_BASEMENT
 } from '../../../../app/constants/scene/things/cutouts'
 import { BASEMENT_DOOR } from '../../../../app/constants/scene/things/doors'
 import {

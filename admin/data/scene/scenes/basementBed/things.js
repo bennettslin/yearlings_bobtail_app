@@ -15,17 +15,17 @@ export default {
     [CUTOUT]: {
         [PEACH_TREE]: {
             yIndex: 0,
-            xPosition: 6.5,
+            xPosition: 4.5,
             scaleFactor: 0.7
         },
         [ROSEBUSH_DOUBLE_BASEMENT]: {
             yIndex: 0,
-            xPosition: 1.5,
+            xPosition: 9.5,
             scaleFactor: 0.3
         },
         [ROSEBUSH_SINGLE_BASEMENT]: {
             yIndex: 0,
-            xPosition: 10.5,
+            xPosition: 0.5,
             scaleFactor: 0.3
         }
     },

@@ -53,6 +53,7 @@ import television from '../../../../../assets/svgs/cutouts/television'
 import monitorSide from '../../../../../assets/svgs/cutouts/monitorSide'
 import wallSpeakerSide from '../../../../../assets/svgs/cutouts/wallSpeakerSide'
 import twinStreetlamp from '../../../../../assets/svgs/cutouts/twinStreetlamp'
+import peachTree from '../../../../../assets/svgs/cutouts/peachTree'
 import elCerritoTree from '../../../../../assets/svgs/cutouts/elCerritoTree'
 import dumpster from '../../../../../assets/svgs/cutouts/dumpster'
 import dispenserLeft from '../../../../../assets/svgs/cutouts/dispenserLeft'
@@ -241,7 +242,7 @@ export default {
     [TWIN_STREETLAMP__FAR]: twinStreetlamp,
     [TWIN_STREETLAMP__MIDDLE]: twinStreetlamp,
     [TWIN_STREETLAMP__NEAR]: twinStreetlamp,
-    [PEACH_TREE]: lemonTree,
+    [PEACH_TREE]: peachTree,
     [ROSEBUSH_DOUBLE_BASEMENT]: rosebushDouble,
     [ROSEBUSH_SINGLE_BASEMENT]: rosebushSingle,
     [EL_CERRITO_TREE]: elCerritoTree,

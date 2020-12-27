@@ -87,7 +87,10 @@ import {
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
-    WALL_SPEAKER_FRONT__RIGHT
+    WALL_SPEAKER_FRONT__RIGHT,
+    PEACH_TREE,
+    ROSEBUSH_DOUBLE_BASEMENT,
+    ROSEBUSH_SINGLE_BASEMENT
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BASEMENT_DOOR_OPEN,
@@ -276,6 +279,11 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE__LEVEL]: true
+            },
+            [CUTOUT]: {
+                [PEACH_TREE]: true,
+                [ROSEBUSH_DOUBLE_BASEMENT]: true,
+                [ROSEBUSH_SINGLE_BASEMENT]: true
             },
             [DOOR]: {
                 [BASEMENT_DOOR_OPEN]: true
