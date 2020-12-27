@@ -1,27 +1,25 @@
 import { LEFT } from '../../../../../app/constants/scene/cubes'
+import { BEDROOM_SPACE_CUBES } from './shaken/cubes'
 import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,
     BEDROOM_OPEN_KEY,
-    BEDROOM_DOGS_KEY,
-    BEDROOM_SPACE_KEY
+    BEDROOM_DOGS_KEY
 } from '../../../../../app/constants/scene/scenes'
-
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     BENNETT_CARPET_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
-    NIGHT_FUTURE_COLOUR as Z,
-    FUTURE_SPOTLIGHT_MEDIUM_COLOUR as L,
-    FUTURE_SPOTLIGHT_LIGHT_COLOUR as M,
-    FUTURE_SPOTLIGHT_LIGHTER_COLOUR as N,
-    FUTURE_SPOTLIGHT_LIGHTEST_COLOUR as O,
+    NIGHT_MAGIC_COLOUR as Z,
+    SPOTLIGHT_MEDIUM_COLOUR as L,
+    SPOTLIGHT_LIGHT_COLOUR as M,
+    SPOTLIGHT_LIGHTER_COLOUR as N,
+    SPOTLIGHT_LIGHTEST_COLOUR as O,
     FURNITURE_COLOUR as R,
     BENNETT_BED_COLOUR as U,
     SEAT_COLOUR as S
 } from '../../../../../app/constants/scene/cubes/colours'
-
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
 /**
@@ -146,25 +144,5 @@ export default {
             ]
         }
     },
-    [BEDROOM_SPACE_KEY]: {
-        slantDirection: LEFT,
-        floor: {
-            hslaColours: [
-                [G],
-                [G, G, G, G, G, Z, Z, M, M, G],
-                [G, G, G, G, Z, Z, Z, L, N, N, G],
-                [G, G, Z, Z, Z, Z, L, M, O, O, G],
-                [Z, Z, Z, Z, Z, Z, M, N, O, O, G],
-                [G, Z, Z, Z, Z, Z, Z, M, N, N, N, G]
-            ],
-            zIndices: [
-                [0],
-                [0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 5, 1, 1, 1, 1, 1, 0],
-                [0, 0, 5, 5, 1, 1, 1, 1, 1, 1, 0],
-                [1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
-            ]
-        }
-    }
+    ...BEDROOM_SPACE_CUBES
 }

@@ -1,13 +1,9 @@
 # TODO
-* Make past, future, and present have green horizon? Experiment.
-    * Does future need its own dark floor and spotlight cubes?
 * Audit
     * Bathroom (Didi)
         * adjust rosebushes and lemon tree
     * Bedroom (Pchelka)
         * outside floor cube zIndex
-        * cubes for magic and future
-            * Use same letter for all night cubs, and also spotlight
         * new illustrations
             * rose bushes
         * adjust rosebushes and lemon tree
