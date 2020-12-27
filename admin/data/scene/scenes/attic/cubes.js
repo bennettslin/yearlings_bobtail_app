@@ -1,6 +1,6 @@
 import { ATTIC_KEY } from '../../../../../app/constants/scene/scenes'
 
-import { NIGHT_COLOUR as Y } from '../../../../../app/constants/scene/cubes/colours'
+import { NIGHT_COLOUR as Z } from '../../../../../app/constants/scene/cubes/colours'
 
 import { b, g } from '../../../../../app/constants/scene/cubes/zIndices'
 
@@ -8,7 +8,7 @@ export default {
     [ATTIC_KEY]: {
         ceiling: {
             hslaColours: [
-                [Y]
+                [Z]
             ],
             zIndices: [
                 [0],
@@ -17,7 +17,7 @@ export default {
         },
         floor: {
             hslaColours: [
-                [Y]
+                [Z]
             ],
             zIndices: [
                 [0],

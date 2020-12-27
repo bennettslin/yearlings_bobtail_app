@@ -112,9 +112,8 @@ export default {
     [SCHOOL_FLOOR_COLOUR]: { h: 346, s: 13, l: 72 },
     [VELVET_FLOOR_COLOUR]: { h: 357, s: 44, l: 36 },
     [SNOW_FLOOR_COLOUR]: { h: parseInt(HUE_SNOW), s: 30, l: 87 },
-    /* Y. */
-    [NIGHT_COLOUR]: { h: 221, s: 17, l: 35 },
     /* Z. */
+    [NIGHT_COLOUR]: { h: 221, s: 17, l: 35 },
     [NIGHT_MAGIC_COLOUR]: { h: 125, s: 17, l: 25 },
     [NIGHT_FUTURE_COLOUR]: { h: 276, s: 17, l: 25 },
     /* L, M, N, O. */

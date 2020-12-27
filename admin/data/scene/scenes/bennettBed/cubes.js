@@ -8,7 +8,7 @@ import {
     PAVEMENT_COLOUR as V,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
-    NIGHT_COLOUR as Y,
+    NIGHT_COLOUR as Z,
     APARTMENT_EXTERIOR_COLOUR as X,
     BENNETT_BED_COLOUR as U
 } from '../../../../../app/constants/scene/cubes/colours'
@@ -62,7 +62,7 @@ export default {
             hslaColours: [
                 [X],
                 [D, D, D, D, D, D, D, D, D, X],
-                [Y]
+                [Z]
             ],
             zIndices: DEFAULT_CEILING.zIndices
         },
@@ -70,8 +70,8 @@ export default {
             hslaColours: [
                 [V],
                 [V],
-                [V, V, Y, Y, Y, Y, Y, Y, Y, Y, V],
-                [Y]
+                [V, V, Z, Z, Z, Z, Z, Z, Z, Z, V],
+                [Z]
             ],
             zIndices: DEFAULT_FLOOR.zIndices
         }

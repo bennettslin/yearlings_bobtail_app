@@ -10,7 +10,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
-    NIGHT_COLOUR as Y,
+    NIGHT_COLOUR as Z,
     FURNITURE_COLOUR as R,
     LIZ_BED_COLOUR as U,
     SEAT_COLOUR as S
@@ -113,13 +113,13 @@ export default {
     [LIZ_BED_DARK_KEY]: {
         ceiling: {
             hslaColours: [
-                [Y]
+                [Z]
             ],
             zIndices: DEFAULT_CEILING.zIndices
         },
         floor: {
             hslaColours: [
-                [Y]
+                [Z]
             ],
             zIndices: DEFAULT_FLOOR.zIndices
         }

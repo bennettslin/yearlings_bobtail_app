@@ -1,26 +1,19 @@
 import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
-    LIZ_COUCH_DARK_KEY,
-    LIZ_COUCH_PEAFOWL_KEY
+    LIZ_COUCH_DARK_KEY
 } from '../../../../../app/constants/scene/scenes'
-
+import { LIZ_COUCH_PEAFOWL_CUBES } from './asleep/cubes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     LIZ_GATE_COLOUR as A,
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
-    NIGHT_COLOUR as Y,
-    NIGHT_FUTURE_COLOUR as Z,
-    FUTURE_SPOTLIGHT_MEDIUM_COLOUR as L,
-    FUTURE_SPOTLIGHT_LIGHT_COLOUR as M,
-    FUTURE_SPOTLIGHT_LIGHTER_COLOUR as N,
-    FUTURE_SPOTLIGHT_LIGHTEST_COLOUR as O,
+    NIGHT_COLOUR as Z,
     LIZ_COUCH_COLOUR as U,
     SEAT_COLOUR as S
 } from '../../../../../app/constants/scene/cubes/colours'
-
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
 /**
@@ -91,36 +84,17 @@ export default {
         ceiling: {
             hslaColours: [
                 [D],
-                [Y]
+                [Z]
             ],
             zIndices: DEFAULT_CEILING.zIndices
         },
         floor: {
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
-                [Y]
+                [Z]
             ],
             zIndices: DEFAULT_FLOOR.zIndices
         }
     },
-    [LIZ_COUCH_PEAFOWL_KEY]: {
-        floor: {
-            hslaColours: [
-                [A, A, A, A, A, V, V, V, A],
-                [Z, Z, Z, Z, Z, Z, L, M, M, L, Z],
-                [Z, Z, Z, Z, Z, L, M, N, N, M, L, Z],
-                [Z, Z, Z, Z, Z, M, N, O, O, N, M, Z],
-                [Z, Z, Z, Z, Z, M, N, O, O, N, M, Z],
-                [Z, Z, Z, Z, Z, L, M, N, N, M, L, Z]
-            ],
-            zIndices: [
-                [6, 6, 6, 6, 6, 1, 1, 1, 6],
-                [1],
-                [1],
-                [1, 7, 3, 3, 1],
-                [1, 7, 3, 3, 1],
-                [1]
-            ]
-        }
-    }
+    ...LIZ_COUCH_PEAFOWL_CUBES
 }

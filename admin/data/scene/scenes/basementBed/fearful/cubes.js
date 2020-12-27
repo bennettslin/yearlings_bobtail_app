@@ -1,6 +1,4 @@
-import {
-    BASEMENT_BED_MAGIC_KEY
-} from '../../../../../../app/constants/scene/scenes'
+import { BASEMENT_BED_MAGIC_KEY } from '../../../../../../app/constants/scene/scenes'
 import {
     GRASS_COLOUR as H,
     NIGHT_MAGIC_COLOUR as Z
