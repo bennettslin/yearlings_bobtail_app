@@ -77,6 +77,7 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     FOLIAGE__SHARED,
+    MOUNTAIN__SHARED,
     OCEAN_CAVE__SHARED,
     ROCK__SHARED,
     WALL__SHARED
@@ -102,7 +103,8 @@ export default {
     [BEDROOM_DESK]: PRETEEN_FURNITURE__SHARED,
     [BEDROOM_FENCE]: [
         FOLIAGE__SHARED,
-        FAMILY_HOUSE__SHARED
+        FAMILY_HOUSE__SHARED,
+        MOUNTAIN__SHARED
     ],
     [BENNETT_BED]: [
         BENNETT_BED__SHARED,

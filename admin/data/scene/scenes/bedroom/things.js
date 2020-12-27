@@ -80,18 +80,18 @@ export default {
     },
     [CUTOUT]: {
         [LEMON_TREE__BEDROOM]: {
-            yIndex: 1,
-            xPosition: 5.5,
+            yIndex: 0,
+            xPosition: 6.9,
             scaleFactor: 0.7
         },
         [ROSEBUSH_SLANTED_DOUBLE]: {
-            yIndex: 1,
-            xPosition: 0.5,
+            yIndex: 0,
+            xPosition: 1.75,
             scaleFactor: 0.3
         },
         [ROSEBUSH_SLANTED_SINGLE]: {
-            yIndex: 1,
-            xPosition: 10.5,
+            yIndex: 0,
+            xPosition: 10.75,
             scaleFactor: 0.3
         }
     },

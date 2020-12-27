@@ -2,9 +2,6 @@
 * Audit
     * Bedroom (Pchelka)
         * outside floor cube zIndex
-        * new illustrations
-            * rose bushes
-        * adjust rosebushes and lemon tree
 
 # Night colours indoors
 * Attic (Constellations)

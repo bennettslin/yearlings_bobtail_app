@@ -15,6 +15,7 @@
 * El Torito logo.
 * Wedding platform chair and tables.
 * Final gravestone. (Move Bennett and Liz to left.)
+* Chairs.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
