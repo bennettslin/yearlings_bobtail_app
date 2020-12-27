@@ -14,17 +14,17 @@ import { CRACKED_PICTURE } from '../../../../../app/constants/scene/things/fixtu
 export default {
     [CUTOUT]: {
         [PEACH_TREE]: {
-            yIndex: 1,
-            xPosition: 5,
+            yIndex: 0,
+            xPosition: 6.5,
             scaleFactor: 0.7
         },
         [ROSEBUSH_DOUBLE_BASEMENT]: {
-            yIndex: 1,
-            xPosition: 0.5,
+            yIndex: 0,
+            xPosition: 1.5,
             scaleFactor: 0.3
         },
         [ROSEBUSH_SINGLE_BASEMENT]: {
-            yIndex: 1,
+            yIndex: 0,
             xPosition: 10.5,
             scaleFactor: 0.3
         }

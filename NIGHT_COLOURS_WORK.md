@@ -1,7 +1,5 @@
 # TODO
 * Audit
-    * Bathroom (Didi)
-        * adjust rosebushes and lemon tree
     * Bedroom (Pchelka)
         * outside floor cube zIndex
         * new illustrations

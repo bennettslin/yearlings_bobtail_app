@@ -64,7 +64,6 @@ export default {
             flipHorizontal: true
         },
         [TRAFFIC_LIGHT_REAR]: {
-            yIndex: -1,
             xPosition: 1.5,
             zOffset: -3,
             scaleFactor: 0.3,

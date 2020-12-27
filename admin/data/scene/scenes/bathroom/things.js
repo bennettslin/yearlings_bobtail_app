@@ -21,17 +21,17 @@ import {
 export default {
     [CUTOUT]: {
         [LEMON_TREE__BATHROOM]: {
-            yIndex: 1,
-            xPosition: 5.5,
+            yIndex: 0,
+            xPosition: 6.5,
             scaleFactor: 0.7
         },
         [ROSEBUSH_DOUBLE_BATHROOM]: {
-            yIndex: 1,
-            xPosition: 0.5,
+            yIndex: 0,
+            xPosition: 1.5,
             scaleFactor: 0.3
         },
         [ROSEBUSH_SINGLE_BATHROOM]: {
-            yIndex: 1,
+            yIndex: 0,
             xPosition: 10.5,
             scaleFactor: 0.3
         }
@@ -43,7 +43,6 @@ export default {
             scaleFactor: 0.3
         },
         [DEFAULT_FENCE_BATHROOM]: {
-            yIndex: 0,
             scaleFactor: 0.5
         }
     }
