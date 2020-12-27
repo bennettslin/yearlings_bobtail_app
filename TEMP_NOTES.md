@@ -11,22 +11,16 @@
 
 # UI TODO:
 * Should tetherball scene have background?
-* Make Bennett and Sasha mermaid higher.
 * Steps in Campanile scene?
 * Young children heads
 * Remove depth shading from slant direction cubes?
 * El Torito logo
-* El Toritl podium
+* El Torito podium
 * Wedding platform chair and tables
-* Back panel for wedding platform
-* Make wedding crowd tents more rounded
 * Final gravestone. (Move Bennett and Liz to left.)
 * Trash chute to dumpster
 * Roads magical background.
     * Make roads fork?
-* Lower cracked picture.
-* Make peach tree hide pine tree in background.
-* Make Berkeley campanile trees look better.
 * More panels
     * Nurse bench
     * Bedroom stool

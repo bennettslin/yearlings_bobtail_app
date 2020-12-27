@@ -41,7 +41,7 @@ export default {
         [CRACKED_PICTURE]: {
             yIndex: 4,
             xPosition: 0.2,
-            zOffset: 3.7
+            zOffset: 2.7
         }
     }
 }

@@ -83,7 +83,8 @@ import {
     DEATHBED_PILLOW
 } from '../../../../app/constants/scene/things/furnitures'
 import {
-    WEDDING_PLATFORM,
+    WEDDING_PLATFORM_FRONT,
+    WEDDING_PLATFORM_REAR,
     HOSPITAL_BED
 } from '../../../../app/constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../../app/constants/scene/things/puppets'
@@ -180,7 +181,8 @@ export default [
                 [FOREBODING_TREES__FAR]: true
             },
             [PANEL]: {
-                [WEDDING_PLATFORM]: true
+                [WEDDING_PLATFORM_FRONT]: true,
+                [WEDDING_PLATFORM_REAR]: true
             },
             [PUPPET]: {
                 [PUPPET_KHARI_LIZ]: true

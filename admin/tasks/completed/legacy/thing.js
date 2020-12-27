@@ -582,7 +582,7 @@ export default [
         workedHours: 1
     },
     {
-        taskName: 'weddingPlatform panel, crowd, foreboding trees',
+        taskName: 'weddingPlatformFront panel, crowd, foreboding trees',
         workedHours: 2
     }
 ]

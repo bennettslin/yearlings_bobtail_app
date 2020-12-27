@@ -10,7 +10,10 @@ import {
     FOREBODING_TREES__MIDDLE,
     FOREBODING_TREES__FAR
 } from '../../../../../app/constants/scene/things/flats'
-import { WEDDING_PLATFORM } from '../../../../../app/constants/scene/things/panels'
+import {
+    WEDDING_PLATFORM_FRONT,
+    WEDDING_PLATFORM_REAR
+} from '../../../../../app/constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../../../app/constants/scene/things/puppets'
 
 export default {
@@ -18,7 +21,9 @@ export default {
         [WEDDING_CROWD]: {
             yIndex: 3,
             xPosition: 4.5,
-            scaleFactor: 0.25
+            zOffset: -0.1,
+            scaleFactor: 0.25,
+            layerYIndex: 5
         }
     },
     [FLAT]: {
@@ -40,12 +45,18 @@ export default {
         }
     },
     [PANEL]: {
-        [WEDDING_PLATFORM]: {
+        [WEDDING_PLATFORM_FRONT]: {
             yIndex: 3,
-            xPosition: 1.3,
-            zOffset: -0.09,
-            scaleFactor: 0.5,
+            xPosition: 1.4,
+            zOffset: -0.12,
+            scaleFactor: 0.55,
             layerYIndex: 4
+        },
+        [WEDDING_PLATFORM_REAR]: {
+            yIndex: 2,
+            xPosition: 1.6,
+            zOffset: 0.05,
+            scaleFactor: 0.55
         }
     },
     [PUPPET]: {

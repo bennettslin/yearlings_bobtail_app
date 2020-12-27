@@ -16,7 +16,7 @@ export default {
     [CUTOUT]: {
         [CAMPUS_TREE_SINGLE__BANCROFT]: {
             yIndex: 1,
-            xPosition: 1,
+            xPosition: 1.1,
             scaleFactor: 0.5
         },
         [ASH_CAN]: {

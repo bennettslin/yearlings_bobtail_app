@@ -128,7 +128,7 @@ export default [
         workedHours: 1.5
     },
     {
-        taskName: 'weddingPlatform',
+        taskName: 'weddingPlatformFront',
         workedHours: 1
     },
     {

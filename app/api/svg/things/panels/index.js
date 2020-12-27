@@ -45,7 +45,8 @@ import reattaExteriorRear from '../../../../../assets/svgs/panels/reattaExterior
 import hospitalBed from '../../../../../assets/svgs/panels/hospitalBed'
 import phoneCallPanel from '../../../../../assets/svgs/panels/phoneCallPanel'
 import crowdBack from '../../../../../assets/svgs/panels/crowdBack'
-import weddingPlatform from '../../../../../assets/svgs/panels/weddingPlatform'
+import weddingPlatformFront from '../../../../../assets/svgs/panels/weddingPlatformFront'
+import weddingPlatformRear from '../../../../../assets/svgs/panels/weddingPlatformRear'
 
 import {
     BATHTUB,
@@ -120,7 +121,8 @@ import {
     HOSPITAL_BED,
     PHONE_CALL_PANEL,
     CROWD_BACK,
-    WEDDING_PLATFORM
+    WEDDING_PLATFORM_FRONT,
+    WEDDING_PLATFORM_REAR
 } from '../../../../constants/scene/things/panels'
 
 export default {
@@ -196,5 +198,6 @@ export default {
     [HOSPITAL_BED]: hospitalBed,
     [PHONE_CALL_PANEL]: phoneCallPanel,
     [CROWD_BACK]: crowdBack,
-    [WEDDING_PLATFORM]: weddingPlatform
+    [WEDDING_PLATFORM_FRONT]: weddingPlatformFront,
+    [WEDDING_PLATFORM_REAR]: weddingPlatformRear
 }
