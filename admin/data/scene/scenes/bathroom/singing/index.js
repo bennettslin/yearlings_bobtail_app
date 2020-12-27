@@ -15,7 +15,7 @@ export default {
     [ANITA]: {
         [CHEERING]: {
             yIndex: 4,
-            xPosition: 4.2,
+            xPosition: 4.3,
             zOffset: -0.1,
             layerYIndex: 5
         }
