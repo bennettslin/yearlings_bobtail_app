@@ -12,6 +12,10 @@ export default [
         taskName: `Night colour work.`,
         workedHours: 36
     },
+    {
+        taskName: `Audit scenes.`,
+        workedHours: 1
+    },
 
     /* Ongoing. */
     {
