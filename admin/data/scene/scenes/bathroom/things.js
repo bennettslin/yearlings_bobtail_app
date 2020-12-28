@@ -1,6 +1,7 @@
 import {
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     PANEL
 } from '../../../../../app/constants/scene/things'
@@ -12,11 +13,9 @@ import {
     ROSEBUSH_DOUBLE_BATHROOM,
     ROSEBUSH_SINGLE_BATHROOM
 } from '../../../../../app/constants/scene/things/cutouts'
+import { DEFAULT_FENCE_BATHROOM } from '../../../../../app/constants/scene/things/doors'
 import { RECORD_PLAYER_STOOL } from '../../../../../app/constants/scene/things/fixtures'
-import {
-    BATHTUB,
-    DEFAULT_FENCE_BATHROOM
-} from '../../../../../app/constants/scene/things/panels'
+import { BATHTUB } from '../../../../../app/constants/scene/things/panels'
 
 export default {
     [CUTOUT]: {
@@ -36,14 +35,16 @@ export default {
             scaleFactor: 0.3
         }
     },
+    [DOOR]: {
+        [DEFAULT_FENCE_BATHROOM]: {
+            scaleFactor: 0.5
+        }
+    },
     [PANEL]: {
         [BATHTUB]: {
             yIndex: 4,
             xPosition: 4.5,
             scaleFactor: 0.3
-        },
-        [DEFAULT_FENCE_BATHROOM]: {
-            scaleFactor: 0.5
         }
     }
 }

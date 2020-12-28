@@ -5,6 +5,7 @@ import {
     BASEMENT_DOOR_SIDE,
     BEDROOM_BLINDS,
     BEDROOM_BLINDS_OPEN,
+    BEDROOM_FENCE,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
     BENNETT_DOOR_OUTSIDE,
@@ -15,6 +16,8 @@ import {
     BLINDS_OUTSIDE,
     CINEMA_DOORS,
     CLUB_DOOR_OPEN,
+    DEFAULT_FENCE_BASEMENT,
+    DEFAULT_FENCE_BATHROOM,
     DISHROOM_DOOR,
     EL_TORITO_DOORS,
     IRON_GATE,
@@ -40,11 +43,17 @@ import {
     BENNETT_GATE__SHARED,
     BENNETT_INSIDE__SHARED,
     DOOR__SHARED,
+    FAMILY_HOUSE__SHARED,
     LIZ_APARTMENT__SHARED,
     LIZ_GATE__SHARED,
     TAIWAN_GATE__SHARED,
     WINDOW__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/home'
+import {
+    FOLIAGE__SHARED,
+    MOUNTAIN__SHARED,
+    WALL__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 
 export default {
     [BANCROFT_DOOR]: [
@@ -61,6 +70,11 @@ export default {
     [BEDROOM_BLINDS_OPEN]: [
         BENNETT_INSIDE__SHARED,
         WINDOW__SHARED
+    ],
+    [BEDROOM_FENCE]: [
+        FOLIAGE__SHARED,
+        FAMILY_HOUSE__SHARED,
+        MOUNTAIN__SHARED
     ],
     [BENNETT_DOOR_INSIDE]: [
         BENNETT_INSIDE__SHARED,
@@ -100,6 +114,14 @@ export default {
         WINDOW__SHARED
     ],
     [CLUB_DOOR_OPEN]: DOOR__SHARED,
+    [DEFAULT_FENCE_BASEMENT]: [
+        FOLIAGE__SHARED,
+        WALL__SHARED
+    ],
+    [DEFAULT_FENCE_BATHROOM]: [
+        FOLIAGE__SHARED,
+        FAMILY_HOUSE__SHARED
+    ],
     [DISHROOM_DOOR]: [
         DOOR__SHARED,
         WINDOW__SHARED

@@ -72,8 +72,10 @@ import {
     CAMPFIRE
 } from '../../../../app/constants/scene/things/cutouts'
 import {
-    PORCH_DOOR,
-    BEDROOM_BLINDS_OPEN
+    BEDROOM_BLINDS_OPEN,
+    BEDROOM_FENCE,
+    DEFAULT_FENCE_BATHROOM,
+    PORCH_DOOR
 } from '../../../../app/constants/scene/things/doors'
 import {
     BEDROOM_LAMP__DESK,
@@ -93,9 +95,7 @@ import {
 import { CAPTAIN_BED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
-    DEFAULT_FENCE_BATHROOM,
     CAPTAIN_BED,
-    BEDROOM_FENCE,
     CAVE_SHADOWS,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
@@ -175,13 +175,11 @@ export default [
                 [CACTUS_SINGLE__PORCH]: true
             },
             [DOOR]: {
+                [DEFAULT_FENCE_BATHROOM]: true,
                 [PORCH_DOOR]: true
             },
             [FIXTURE]: {
                 [HAIRCUT_SCISSORS]: true
-            },
-            [PANEL]: {
-                [DEFAULT_FENCE_BATHROOM]: true
             }
         },
         cubes: PORCH_KEY,
@@ -212,6 +210,7 @@ export default [
                 [TINTIN_POSTER]: true
             },
             [DOOR]: {
+                [BEDROOM_FENCE]: true,
                 [BEDROOM_BLINDS_OPEN]: true
             },
             [FIXTURE]: {
@@ -225,8 +224,7 @@ export default [
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED]: true,
-                [BEDROOM_FENCE]: true
+                [CAPTAIN_BED]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -285,6 +283,7 @@ export default [
                 [TINTIN_POSTER]: true
             },
             [DOOR]: {
+                [BEDROOM_FENCE]: true,
                 [BEDROOM_BLINDS_OPEN]: true
             },
             [FIXTURE]: {
@@ -298,8 +297,7 @@ export default [
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED]: true,
-                [BEDROOM_FENCE]: true
+                [CAPTAIN_BED]: true
             }
         },
         cubes: BEDROOM_STOOL_KEY,

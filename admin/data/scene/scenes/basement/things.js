@@ -1,9 +1,11 @@
 import {
     DOOR,
-    FIXTURE,
-    PANEL
+    FIXTURE
 } from '../../../../../app/constants/scene/things'
-import { BASEMENT_DOOR_OPEN } from '../../../../../app/constants/scene/things/doors'
+import {
+    BASEMENT_DOOR_OPEN,
+    DEFAULT_FENCE_BASEMENT
+} from '../../../../../app/constants/scene/things/doors'
 import {
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
@@ -12,7 +14,6 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../../../../app/constants/scene/things/fixtures'
-import { DEFAULT_FENCE_BASEMENT } from '../../../../../app/constants/scene/things/panels'
 import { ACTOR_DEFAULT_SCALE_FACTOR } from '../../../../../app/constants/scene'
 
 export default {
@@ -22,6 +23,9 @@ export default {
             xPosition: 2.275,
             scaleFactor: 0.6,
             zOffset: 0.45
+        },
+        [DEFAULT_FENCE_BASEMENT]: {
+            scaleFactor: 0.5
         }
     },
     [FIXTURE]: {
@@ -52,11 +56,6 @@ export default {
             yIndex: 5,
             xPosition: 7.1,
             scaleFactor: ACTOR_DEFAULT_SCALE_FACTOR
-        }
-    },
-    [PANEL]: {
-        [DEFAULT_FENCE_BASEMENT]: {
-            scaleFactor: 0.5
         }
     }
 }

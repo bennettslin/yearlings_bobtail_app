@@ -58,7 +58,10 @@ import {
     ROSEBUSH_DOUBLE_BATHROOM,
     ROSEBUSH_SINGLE_BATHROOM
 } from '../../../../app/constants/scene/things/cutouts'
-import { NURSE_DOOR } from '../../../../app/constants/scene/things/doors'
+import {
+    DEFAULT_FENCE_BATHROOM,
+    NURSE_DOOR
+} from '../../../../app/constants/scene/things/doors'
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
@@ -70,10 +73,7 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT
 } from '../../../../app/constants/scene/things/flats'
-import {
-    BATHTUB,
-    DEFAULT_FENCE_BATHROOM
-} from '../../../../app/constants/scene/things/panels'
+import { BATHTUB } from '../../../../app/constants/scene/things/panels'
 
 export default [
     {
@@ -186,9 +186,11 @@ export default [
                 [MIRRORED_SINK]: true,
                 [TOWEL_RACK]: true
             },
-            [PANEL]: {
-                [BATHTUB]: true,
+            [DOOR]: {
                 [DEFAULT_FENCE_BATHROOM]: true
+            },
+            [PANEL]: {
+                [BATHTUB]: true
             }
         },
         cubes: BATHROOM_KEY,
@@ -219,12 +221,14 @@ export default [
                 [ROSEBUSH_DOUBLE_BATHROOM]: true,
                 [ROSEBUSH_SINGLE_BATHROOM]: true
             },
+            [DOOR]: {
+                [DEFAULT_FENCE_BATHROOM]: true
+            },
             [FIXTURE]: {
                 [RECORD_PLAYER_STOOL]: true
             },
             [PANEL]: {
-                [BATHTUB]: true,
-                [DEFAULT_FENCE_BATHROOM]: true
+                [BATHTUB]: true
             }
         },
         cubes: BATHROOM_OPEN_KEY,

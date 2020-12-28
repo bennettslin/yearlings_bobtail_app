@@ -86,29 +86,30 @@ import {
 import {
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
-    WALL_SPEAKER_FRONT__LEFT,
-    WALL_SPEAKER_FRONT__RIGHT,
     PEACH_TREE,
     ROSEBUSH_DOUBLE_BASEMENT,
-    ROSEBUSH_SINGLE_BASEMENT
+    ROSEBUSH_SINGLE_BASEMENT,
+    WALL_SPEAKER_FRONT__LEFT,
+    WALL_SPEAKER_FRONT__RIGHT
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BASEMENT_DOOR_OPEN,
-    CINEMA_DOORS
+    CINEMA_DOORS,
+    DEFAULT_FENCE_BASEMENT
 } from '../../../../app/constants/scene/things/doors'
 import {
-    BENNETT_RECORD_PLAYER,
-    BENNETT_COUCH_LAMP,
-    KEYBOARD,
-    CASH_BOX,
-    ELECTRIC_GUITAR,
-    DRUMKIT,
-    DRUMS_STACKED__BASEMENT,
-    BASS_CASE_UPRIGHT,
-    GUITAR_CASE_UPRIGHT,
+    BASEMENT_BEER_BENNETT,
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
-    BASEMENT_BEER_BENNETT
+    BASS_CASE_UPRIGHT,
+    BENNETT_COUCH_LAMP,
+    BENNETT_RECORD_PLAYER,
+    CASH_BOX,
+    DRUMKIT,
+    DRUMS_STACKED__BASEMENT,
+    ELECTRIC_GUITAR,
+    GUITAR_CASE_UPRIGHT,
+    KEYBOARD
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     COMMERCIAL_CENTRE,
@@ -118,7 +119,6 @@ import {
 } from '../../../../app/constants/scene/things/flats'
 import { BENNETT_PILLOW__COUCH } from '../../../../app/constants/scene/things/furnitures'
 import {
-    DEFAULT_FENCE_BASEMENT,
     WIDE_COUCH_BENNETT,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT
@@ -286,6 +286,7 @@ export default [
                 [ROSEBUSH_SINGLE_BASEMENT]: true
             },
             [DOOR]: {
+                [DEFAULT_FENCE_BASEMENT]: true,
                 [BASEMENT_DOOR_OPEN]: true
             },
             [FIXTURE]: {
@@ -295,9 +296,6 @@ export default [
                 [BASEMENT_BEER_CASE]: true,
                 [BASEMENT_BEER_MARA]: true,
                 [BASEMENT_BEER_BENNETT]: true
-            },
-            [PANEL]: {
-                [DEFAULT_FENCE_BASEMENT]: true
             }
         },
         cubes: BASEMENT_KEY,

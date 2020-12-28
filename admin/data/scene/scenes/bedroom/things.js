@@ -27,7 +27,8 @@ import {
 } from '../../../../../app/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS,
-    BEDROOM_BLINDS_OPEN
+    BEDROOM_BLINDS_OPEN,
+    BEDROOM_FENCE
 } from '../../../../../app/constants/scene/things/doors'
 import {
     LETTER_SCRAPS__CHRISTOPHER,
@@ -48,8 +49,7 @@ import {
 import { CAPTAIN_BED_PILLOW } from '../../../../../app/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
-    CAPTAIN_BED,
-    BEDROOM_FENCE
+    CAPTAIN_BED
 } from '../../../../../app/constants/scene/things/panels'
 import { SKETCH_CONFIG } from '../../sharedConfigs'
 
@@ -96,6 +96,10 @@ export default {
         }
     },
     [DOOR]: {
+        [BEDROOM_FENCE]: {
+            zOffset: -0.5,
+            scaleFactor: 0.5
+        },
         [BEDROOM_BLINDS]: {
             yIndex: 3,
             xPosition: 2.8,
@@ -134,10 +138,6 @@ export default {
             yIndex: 5,
             xPosition: 7.5,
             scaleFactor: 0.2
-        },
-        [BEDROOM_FENCE]: {
-            zOffset: -0.5,
-            scaleFactor: 0.5
         }
     }
 }

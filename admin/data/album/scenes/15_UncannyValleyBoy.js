@@ -80,7 +80,10 @@ import {
     ROSEBUSH_DOUBLE_BASEMENT,
     ROSEBUSH_SINGLE_BASEMENT
 } from '../../../../app/constants/scene/things/cutouts'
-import { BASEMENT_DOOR } from '../../../../app/constants/scene/things/doors'
+import {
+    BASEMENT_DOOR,
+    DEFAULT_FENCE_BASEMENT
+} from '../../../../app/constants/scene/things/doors'
 import {
     TETHERBALL_POLE,
     RECORDING_MIC,
@@ -89,7 +92,6 @@ import {
 } from '../../../../app/constants/scene/things/fixtures'
 import { BENNETT_PILLOW__BED } from '../../../../app/constants/scene/things/furnitures'
 import {
-    DEFAULT_FENCE_BASEMENT,
     SNOWGLOBE__TETHERBALL,
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
@@ -119,13 +121,13 @@ export default [
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [DOOR]: {
+                [DEFAULT_FENCE_BASEMENT]: true,
                 [BASEMENT_DOOR]: true
             },
             [FURNITURE]: {
                 [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
-                [DEFAULT_FENCE_BASEMENT]: true,
                 [BENNETT_BED]: true
             }
         },
@@ -160,11 +162,13 @@ export default [
                 [ROSEBUSH_DOUBLE_BASEMENT]: true,
                 [ROSEBUSH_SINGLE_BASEMENT]: true
             },
+            [DOOR]: {
+                [DEFAULT_FENCE_BASEMENT]: true
+            },
             [FURNITURE]: {
                 [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
-                [DEFAULT_FENCE_BASEMENT]: true,
                 [BENNETT_BED]: true
             }
         },
@@ -329,6 +333,9 @@ export default [
             [BACKDROP]: {
                 [OAKLAND_SIDE__LEVEL]: true
             },
+            [DOOR]: {
+                [DEFAULT_FENCE_BASEMENT]: true
+            },
             [FIXTURE]: {
                 [CRACKED_PICTURE]: true
             },
@@ -336,7 +343,6 @@ export default [
                 [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
-                [DEFAULT_FENCE_BASEMENT]: true,
                 [BENNETT_BED]: true
             }
         },

@@ -93,6 +93,7 @@ import {
 import {
     BEDROOM_BLINDS,
     BEDROOM_BLINDS_OPEN,
+    BEDROOM_FENCE,
     PRINCIPAL_DOOR
 } from '../../../../app/constants/scene/things/doors'
 import {
@@ -113,8 +114,7 @@ import {
 import { CAPTAIN_BED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
-    CAPTAIN_BED,
-    BEDROOM_FENCE
+    CAPTAIN_BED
 } from '../../../../app/constants/scene/things/panels'
 
 /**
@@ -136,12 +136,12 @@ export default [
                 [CAPTAIN_BED_PILLOW]: true
             },
             [DOOR]: {
-                [BEDROOM_BLINDS]: true
+                [BEDROOM_BLINDS]: true,
+                [BEDROOM_FENCE]: true
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED]: true,
-                [BEDROOM_FENCE]: true
+                [CAPTAIN_BED]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -168,7 +168,8 @@ export default [
                 [BLOOM_COUNTY_POSTER]: true
             },
             [DOOR]: {
-                [BEDROOM_BLINDS]: true
+                [BEDROOM_BLINDS]: true,
+                [BEDROOM_FENCE]: true
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__BED]: true,
@@ -177,8 +178,7 @@ export default [
                 [BENNETT_LETTERS]: true
             },
             [PANEL]: {
-                [BEDROOM_DESK]: true,
-                [BEDROOM_FENCE]: true
+                [BEDROOM_DESK]: true
             }
         },
         cubes: BEDROOM_OPEN_KEY,
@@ -201,7 +201,8 @@ export default [
                 [BLOOM_COUNTY_POSTER]: true
             },
             [DOOR]: {
-                [BEDROOM_BLINDS_OPEN]: true
+                [BEDROOM_BLINDS_OPEN]: true,
+                [BEDROOM_FENCE]: true
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
@@ -215,8 +216,7 @@ export default [
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED]: true,
-                [BEDROOM_FENCE]: true
+                [CAPTAIN_BED]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -244,11 +244,13 @@ export default [
                 [ROSEBUSH_SLANTED_DOUBLE]: true,
                 [ROSEBUSH_SLANTED_SINGLE]: true
             },
+            [DOOR]: {
+                [BEDROOM_FENCE]: true
+            },
             [FURNITURE]: {
                 [CAPTAIN_BED_PILLOW]: true
             },
             [PANEL]: {
-                [BEDROOM_FENCE]: true,
                 [CAPTAIN_BED]: true
             }
         },
@@ -277,12 +279,14 @@ export default [
                 [ROSEBUSH_SLANTED_DOUBLE]: true,
                 [ROSEBUSH_SLANTED_SINGLE]: true
             },
+            [DOOR]: {
+                [BEDROOM_FENCE]: true
+            },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
                 [BEYONDER_ENVELOPE]: true
             },
             [PANEL]: {
-                [BEDROOM_FENCE]: true,
                 [BEDROOM_DESK]: true
             }
         },

@@ -1,7 +1,6 @@
 import bathtub from '../../../../../assets/svgs/panels/bathtub'
 import bedroomDesk from '../../../../../assets/svgs/panels/bedroomDesk'
 import captainBed from '../../../../../assets/svgs/panels/captainBed'
-import bedroomFence from '../../../../../assets/svgs/panels/bedroomFence'
 import caveShadows from '../../../../../assets/svgs/panels/caveShadows'
 import stalactites from '../../../../../assets/svgs/panels/stalactites'
 import trollShadowLeft from '../../../../../assets/svgs/panels/trollShadowLeft'
@@ -17,7 +16,6 @@ import oceanCaveInterior from '../../../../../assets/svgs/panels/oceanCaveInteri
 import oceanCaveExterior from '../../../../../assets/svgs/panels/oceanCaveExterior'
 import wideCouch from '../../../../../assets/svgs/panels/wideCouch'
 import wideArmrest from '../../../../../assets/svgs/panels/wideArmrest'
-import defaultFence from '../../../../../assets/svgs/panels/defaultFence'
 import goKartSeat from '../../../../../assets/svgs/panels/goKartSeat'
 import goKartExterior from '../../../../../assets/svgs/panels/goKartExterior'
 import conveyorBelt from '../../../../../assets/svgs/panels/conveyorBelt'
@@ -50,10 +48,8 @@ import weddingPlatformRear from '../../../../../assets/svgs/panels/weddingPlatfo
 
 import {
     BATHTUB,
-    DEFAULT_FENCE_BATHROOM,
     BEDROOM_DESK,
     CAPTAIN_BED,
-    BEDROOM_FENCE,
     CAVE_SHADOWS,
     STALACTITES,
     TROLL_SHADOW_LEFT,
@@ -76,7 +72,6 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
-    DEFAULT_FENCE_BASEMENT,
     GO_KART_SEAT__LEFT,
     GO_KART_SEAT__RIGHT,
     GO_KART_EXTERIOR__LEFT,
@@ -127,10 +122,8 @@ import {
 
 export default {
     [BATHTUB]: bathtub,
-    [DEFAULT_FENCE_BATHROOM]: defaultFence,
     [BEDROOM_DESK]: bedroomDesk,
     [CAPTAIN_BED]: captainBed,
-    [BEDROOM_FENCE]: bedroomFence,
     [CAVE_SHADOWS]: caveShadows,
     [STALACTITES]: stalactites,
     [TROLL_SHADOW_LEFT]: trollShadowLeft,
@@ -153,7 +146,6 @@ export default {
     [WIDE_COUCH_BENNETT]: wideCouch,
     [WIDE_ARMREST_BENNETT__LEFT]: wideArmrest,
     [WIDE_ARMREST_BENNETT__RIGHT]: wideArmrest,
-    [DEFAULT_FENCE_BASEMENT]: defaultFence,
     [GO_KART_SEAT__LEFT]: goKartSeat,
     [GO_KART_SEAT__RIGHT]: goKartSeat,
     [GO_KART_EXTERIOR__LEFT]: goKartExterior,
