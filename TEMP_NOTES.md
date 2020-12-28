@@ -1,4 +1,6 @@
 # TODO:
+* Thoughts large should be backdrops.
+* near buildings should be in front of Oakland side.
 * Why do styles show for admin pages in build?
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
     * https://github.com/gatsbyjs/gatsby/issues/3446

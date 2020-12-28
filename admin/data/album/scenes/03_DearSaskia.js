@@ -31,7 +31,8 @@ import { PANICKED } from '../../../../app/constants/scene/actors/preteenBennett'
 import { INDIGNANT } from '../../../../app/constants/scene/actors/sasha'
 import {
     DISTANT_HOUSES_BACKDROP,
-    TAIWAN_MOUNTAINS_BACKDROP
+    TAIWAN_MOUNTAINS_BACKDROP,
+    NEAR_BUILDINGS
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     SKETCH_TOGETHER,
@@ -205,6 +206,9 @@ export default [
                     description: 'laughing, feigning fear of Sasha',
                     instance: FEIGNING_FEAR
                 }
+            },
+            [BACKDROP]: {
+                [NEAR_BUILDINGS]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__RIGHT]: true,

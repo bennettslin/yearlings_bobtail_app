@@ -40,7 +40,6 @@ export default {
             zOffset: 8
         },
         [THOUGHT_LARGE__LEFT]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6
         }

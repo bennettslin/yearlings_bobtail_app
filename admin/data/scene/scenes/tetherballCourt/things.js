@@ -33,7 +33,6 @@ export default {
             zOffset: 6.45
         },
         [THOUGHT_LARGE__RIGHT]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6,
             flipHorizontal: true
