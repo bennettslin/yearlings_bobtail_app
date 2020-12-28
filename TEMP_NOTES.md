@@ -10,17 +10,20 @@
 * Be smarter about memo.
 
 # UI TODO:
-* Young children heads
-* Remove depth shading from slant direction cubes?
+* Have single dark cube and spotlight colour?
+* Move ghost dad's hat.
+* Bennett has ghost tail in Uncanny Valley.
+* Make road floors have path colour?
 * El Torito logo
 * El Torito podium
+* Remove depth shading from slant direction cubes?
 * Wedding platform chair and tables
 * Final gravestone. (Move Bennett and Liz to left.)
 * Trash chute to dumpster
 * Roads magical background.
-    * Make roads fork?
-* Bennett has ghost tail in Uncanny Valley
-* Constellations shadows
+* Make roads fork.
+* Constellations shadows.
+* Young children heads.
 * More panels
     * Nurse bench
     * Bedroom stool

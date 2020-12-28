@@ -58,3 +58,6 @@
     * Bedroom (Pchelka)
     * Future road
         * Road
+
+# Other
+* Make rickshaw and buoy also past colours?
