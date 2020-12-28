@@ -10,7 +10,7 @@ import { INDIGNANT } from '../../../../../app/constants/scene/actors/sasha'
 export default {
     [BRAD_BENNETT]: {
         [TYING_TETHER]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: 8
         }
     },

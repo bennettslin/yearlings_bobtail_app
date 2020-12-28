@@ -33,22 +33,23 @@ export default {
         }
     },
     [CUTOUT]: {
-        [CAMPUS_TREE_SINGLE__TETHERBALL]: {
-            yIndex: 1,
-            xPosition: 3,
-            scaleFactor: 0.5
-        },
         [CAMPUS_TREE_DOUBLE__TETHERBALL]: {
             yIndex: 1,
-            xPosition: 8,
-            scaleFactor: 0.5
+            xPosition: 1.75,
+            scaleFactor: 0.7,
+            flipHorizontal: true
+        },
+        [CAMPUS_TREE_SINGLE__TETHERBALL]: {
+            yIndex: 1,
+            xPosition: 9,
+            scaleFactor: 0.7
         }
     },
     [FLAT]: {
         [SCHOOL_BUNGALOW]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.5
+            scaleFactor: 0.7
         }
     }
 }
