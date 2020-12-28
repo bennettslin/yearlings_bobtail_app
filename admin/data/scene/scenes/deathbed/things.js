@@ -1,20 +1,23 @@
 import {
-    CUTOUT,
+    BACKDROP,
     BUBBLE,
+    CUTOUT,
     FIXTURE,
     FLAT,
     FURNITURE,
     PANEL
 } from '../../../../../app/constants/scene/things'
 import {
+    THOUGHT_MEDIUM__DEATHBED,
+    THOUGHT_SMALL
+} from '../../../../../app/constants/scene/things/backdrops'
+import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
-    THOUGHT_MEDIUM__DEATHBED,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
     BUBBLE_LARGE__TENNIS,
-    THOUGHT_SMALL,
     BUBBLE_SMALL__INVERSE,
     BUBBLE_MEDIUM__INVERSE,
     BUBBLE_LARGE__INVERSE
@@ -29,6 +32,13 @@ import {
 import { HOSPITAL_BED } from '../../../../../app/constants/scene/things/panels'
 
 export default {
+    [BACKDROP]: {
+        [THOUGHT_MEDIUM__DEATHBED]: {
+            yIndex: 0,
+            xPosition: 3.25,
+            scaleFactor: 0.55
+        }
+    },
     [BUBBLE]: {
         [BUBBLE_SMALL__DEATHBED]: {
             yIndex: 0,
@@ -44,11 +54,6 @@ export default {
             yIndex: 0,
             xPosition: 1.1,
             zOffset: 6.42
-        },
-        [THOUGHT_MEDIUM__DEATHBED]: {
-            yIndex: 0,
-            xPosition: 3.25,
-            scaleFactor: 0.55
         }
     },
     [CUTOUT]: {
@@ -88,6 +93,13 @@ export default {
 }
 
 export const THINGS_DEATHBED_CREMATED = {
+    [BACKDROP]: {
+        [THOUGHT_SMALL]: {
+            yIndex: 0,
+            xPosition: 9.5,
+            scaleFactor: 0.5
+        }
+    },
     [BUBBLE]: {
         [BUBBLE_SMALL__TENNIS]: {
             yIndex: 0,
@@ -103,11 +115,6 @@ export const THINGS_DEATHBED_CREMATED = {
             yIndex: 0,
             xPosition: 8.2,
             zOffset: 3.35
-        },
-        [THOUGHT_SMALL]: {
-            yIndex: 0,
-            xPosition: 9.5,
-            scaleFactor: 0.5
         }
     },
     [FLAT]: {

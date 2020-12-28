@@ -52,13 +52,13 @@ import {
     OAKLAND_SIDE__LEVEL,
     MOUNTAIN_PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
-    GOLDEN_GATE_BACKDROP
+    GOLDEN_GATE_BACKDROP,
+    THOUGHT_MEDIUM__DEATHBED
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__INVERSE,
     BUBBLE_MEDIUM__INVERSE,
-    BUBBLE_LARGE__INVERSE,
-    THOUGHT_MEDIUM__DEATHBED
+    BUBBLE_LARGE__INVERSE
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     DISPENSER_LEFT,
@@ -233,11 +233,13 @@ export default [
                     }
                 }
             },
+            [BACKDROP]: {
+                [THOUGHT_MEDIUM__DEATHBED]: true
+            },
             [BUBBLE]: {
                 [BUBBLE_SMALL__INVERSE]: true,
                 [BUBBLE_MEDIUM__INVERSE]: true,
-                [BUBBLE_LARGE__INVERSE]: true,
-                [THOUGHT_MEDIUM__DEATHBED]: true
+                [BUBBLE_LARGE__INVERSE]: true
             },
             [CUTOUT]: {
                 [IV_DRIP]: true

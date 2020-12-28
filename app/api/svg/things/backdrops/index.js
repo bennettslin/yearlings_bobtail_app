@@ -4,6 +4,7 @@ import valleyPanoramaBackdrop from '../../../../../assets/svgs/backdrops/valleyP
 import taiwanMountainsBackdrop from '../../../../../assets/svgs/backdrops/taiwanMountainsBackdrop'
 import thoughtLarge from '../../../../../assets/svgs/backdrops/thoughtLarge'
 import taiwanStairsBackdrop from '../../../../../assets/svgs/backdrops/taiwanStairsBackdrop'
+import mountainBackdrop from '../../../../../assets/svgs/backdrops/mountainBackdrop'
 import shoreRickshawBackdrop from '../../../../../assets/svgs/backdrops/shoreRickshawBackdrop'
 import shoreBuoyBackdrop from '../../../../../assets/svgs/backdrops/shoreBuoyBackdrop'
 import oceanBottomFar from '../../../../../assets/svgs/backdrops/oceanBottomFar'
@@ -16,7 +17,8 @@ import roadPast from '../../../../../assets/svgs/backdrops/roadPast'
 import roadPresent from '../../../../../assets/svgs/backdrops/roadPresent'
 import roadFuture from '../../../../../assets/svgs/backdrops/roadFuture'
 import goldenGateBackdrop from '../../../../../assets/svgs/backdrops/goldenGateBackdrop'
-import mountainBackdrop from '../../../../../assets/svgs/backdrops/mountainBackdrop'
+import thoughtMedium from '../../../../../assets/svgs/backdrops/thoughtMedium'
+import thoughtSmall from '../../../../../assets/svgs/backdrops/thoughtSmall'
 import weddingBackdrop from '../../../../../assets/svgs/backdrops/weddingBackdrop'
 import distantBuildings from '../../../../../assets/svgs/backdrops/distantBuildings'
 import distantHouses from '../../../../../assets/svgs/backdrops/distantHouses'
@@ -46,6 +48,9 @@ import {
     ROAD_PRESENT,
     ROAD_FUTURE,
     GOLDEN_GATE_BACKDROP,
+    THOUGHT_MEDIUM__DEATHBED,
+    THOUGHT_MEDIUM__GOLDEN,
+    THOUGHT_SMALL,
     WEDDING_BACKDROP,
     DISTANT_BUILDINGS_BACKDROP,
     DISTANT_HOUSES_BACKDROP,
@@ -76,6 +81,9 @@ export default {
     [ROAD_PRESENT]: roadPresent,
     [ROAD_FUTURE]: roadFuture,
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
+    [THOUGHT_MEDIUM__DEATHBED]: thoughtMedium,
+    [THOUGHT_MEDIUM__GOLDEN]: thoughtMedium,
+    [THOUGHT_SMALL]: thoughtSmall,
     [WEDDING_BACKDROP]: weddingBackdrop,
     [DISTANT_BUILDINGS_BACKDROP]: distantBuildings,
     [DISTANT_HOUSES_BACKDROP]: distantHouses,

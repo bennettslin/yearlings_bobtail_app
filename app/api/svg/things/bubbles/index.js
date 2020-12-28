@@ -22,8 +22,6 @@ import lizThoughtDishroom from '../../../../../assets/svgs/bubbles/lizThoughtDis
 import khariSpeechAttack from '../../../../../assets/svgs/bubbles/khariSpeechAttack'
 import lizSpeechDefence from '../../../../../assets/svgs/bubbles/lizSpeechDefence'
 import lizThoughtReunion from '../../../../../assets/svgs/bubbles/lizThoughtReunion'
-import thoughtMedium from '../../../../../assets/svgs/bubbles/thoughtMedium'
-import thoughtSmall from '../../../../../assets/svgs/bubbles/thoughtSmall'
 
 import {
     ESTHER_SPEECH,
@@ -86,12 +84,9 @@ import {
     BUBBLE_SMALL__INVERSE,
     BUBBLE_MEDIUM__INVERSE,
     BUBBLE_LARGE__INVERSE,
-    THOUGHT_MEDIUM__DEATHBED,
-    THOUGHT_MEDIUM__GOLDEN,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
-    BUBBLE_LARGE__TENNIS,
-    THOUGHT_SMALL
+    BUBBLE_LARGE__TENNIS
 } from '../../../../constants/scene/things/bubbles'
 
 export default {
@@ -155,10 +150,7 @@ export default {
     [BUBBLE_SMALL__INVERSE]: bubbleSmall,
     [BUBBLE_MEDIUM__INVERSE]: bubbleMedium,
     [BUBBLE_LARGE__INVERSE]: bubbleLarge,
-    [THOUGHT_MEDIUM__DEATHBED]: thoughtMedium,
-    [THOUGHT_MEDIUM__GOLDEN]: thoughtMedium,
     [BUBBLE_SMALL__TENNIS]: bubbleSmall,
     [BUBBLE_MEDIUM__TENNIS]: bubbleMedium,
-    [BUBBLE_LARGE__TENNIS]: bubbleLarge,
-    [THOUGHT_SMALL]: thoughtSmall
+    [BUBBLE_LARGE__TENNIS]: bubbleLarge
 }

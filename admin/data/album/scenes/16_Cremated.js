@@ -40,16 +40,18 @@ import {
     COWGIRL,
     BLOWJOB
 } from '../../../../app/constants/scene/actors/miriamBennett'
-import { GOLDEN_GATE_BACKDROP } from '../../../../app/constants/scene/things/backdrops'
+import {
+    GOLDEN_GATE_BACKDROP,
+    THOUGHT_MEDIUM__DEATHBED,
+    THOUGHT_SMALL
+} from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
-    THOUGHT_MEDIUM__DEATHBED,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
-    BUBBLE_LARGE__TENNIS,
-    THOUGHT_SMALL
+    BUBBLE_LARGE__TENNIS
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     EL_CERRITO_TREE,
@@ -201,11 +203,11 @@ export default [
             [BUBBLE]: {
                 [BUBBLE_SMALL__DEATHBED]: true,
                 [BUBBLE_MEDIUM__DEATHBED]: true,
-                [BUBBLE_LARGE__DEATHBED]: true,
-                [THOUGHT_MEDIUM__DEATHBED]: true
+                [BUBBLE_LARGE__DEATHBED]: true
             },
             [BACKDROP]: {
-                [GOLDEN_GATE_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true,
+                [THOUGHT_MEDIUM__DEATHBED]: true
             },
             [CUTOUT]: {
                 [IV_DRIP]: true
@@ -242,15 +244,17 @@ export default [
                     instance: TENNIS
                 }
             },
+            [BACKDROP]: {
+                [THOUGHT_MEDIUM__DEATHBED]: true,
+                [THOUGHT_SMALL]: true
+            },
             [BUBBLE]: {
                 [BUBBLE_SMALL__DEATHBED]: true,
                 [BUBBLE_MEDIUM__DEATHBED]: true,
                 [BUBBLE_LARGE__DEATHBED]: true,
-                [THOUGHT_MEDIUM__DEATHBED]: true,
                 [BUBBLE_SMALL__TENNIS]: true,
                 [BUBBLE_MEDIUM__TENNIS]: true,
-                [BUBBLE_LARGE__TENNIS]: true,
-                [THOUGHT_SMALL]: true
+                [BUBBLE_LARGE__TENNIS]: true
             },
             [CUTOUT]: {
                 [IV_DRIP]: true

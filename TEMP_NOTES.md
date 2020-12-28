@@ -1,5 +1,4 @@
 # TODO:
-* Make thought bubbles backdrops for consistency?
 * Make distant buildings and houses flats for consistency?
 * Add curb to schoolbus
 * Why do styles show for admin pages in build?
