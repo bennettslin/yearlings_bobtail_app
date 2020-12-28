@@ -8,7 +8,7 @@ import {
 } from '../../../../../app/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
-    GROUND_CLEAR_COLOUR as G,
+    GRASS_COLOUR as H,
     BENNETT_CARPET_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
     NIGHT_MAGIC_COLOUR as Z,
@@ -56,19 +56,19 @@ const DEFAULT_CEILING = {
 
 const DEFAULT_FLOOR = {
     hslaColours: [
-        [G, G, G, G, G, F, G, F, F, F, G],
-        [G, G, G, W, W, F, F, U, U, F, G],
-        [G, G, W, W, R, F, F, U, U, U, F, G],
-        [F, W, R, R, F, F, F, U, U, U, F, G],
-        [F, F, F, F, F, F, F, U, F, F, F, G],
+        [H, H, H, H, H, F, H, F, F, F, H],
+        [H, H, H, W, W, F, F, U, U, F, H],
+        [H, H, W, W, R, F, F, U, U, U, F, H],
+        [F, W, R, R, F, F, F, U, U, U, F, H],
+        [F, F, F, F, F, F, F, U, F, F, F, H],
         [F]
     ],
     zIndices: [
-        [0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0],
-        [0, 0, 0, 6, 6, 1, 1, 7, 7, 1, 0],
-        [0, 0, 6, 6, 5, 1, 1, 7, 7, 7, 1, 0],
-        [1, 6, 5, 5, 1, 1, 1, 7, 7, 7, 1, 0],
-        [1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 1, 0],
+        [1],
+        [1, 1, 1, 6, 6, 1, 1, 7, 7, 1],
+        [1, 1, 6, 6, 5, 1, 1, 7, 7, 7, 1],
+        [1, 6, 5, 5, 1, 1, 1, 7, 7, 7, 1],
+        [1, 1, 1, 1, 1, 1, 1, 7, 1],
         [1]
     ]
 }
@@ -84,19 +84,19 @@ export default {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [G, G, G, G, G, F, G, F, F, F, G],
-                [G, G, G, W, W, F, F, U, U, F, G],
-                [G, G, W, W, R, F, F, U, U, U, F, G],
-                [F, W, R, R, F, F, F, U, U, U, F, G],
-                [F, F, F, F, S, F, F, U, F, F, F, G],
+                [H, H, H, H, H, F, H, F, F, F, H],
+                [H, H, H, W, W, F, F, U, U, F, H],
+                [H, H, W, W, R, F, F, U, U, U, F, H],
+                [F, W, R, R, F, F, F, U, U, U, F, H],
+                [F, F, F, F, S, F, F, U, F, F, F, H],
                 [F]
             ],
             zIndices: [
-                [0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0],
-                [0, 0, 0, 6, 6, 1, 1, 7, 7, 1, 0],
-                [0, 0, 6, 6, 5, 1, 1, 7, 7, 7, 1, 0],
-                [1, 6, 5, 5, 1, 1, 1, 7, 7, 7, 1, 0],
-                [1, 1, 1, 1, 3, 1, 1, 7, 1, 1, 1, 0],
+                [1],
+                [1, 1, 1, 6, 6, 1, 1, 7, 7, 1],
+                [1, 1, 6, 6, 5, 1, 1, 7, 7, 7, 1],
+                [1, 6, 5, 5, 1, 1, 1, 7, 7, 7, 1],
+                [1, 1, 1, 1, 3, 1, 1, 7, 1],
                 [1]
             ]
         }
@@ -106,19 +106,19 @@ export default {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [G, G, G, G, G, F, G, F, F, F, G],
-                [G, G, G, W, W, F, F, F, F, F, G],
-                [G, G, W, W, R, F, F, F, F, F, F, G],
-                [F, W, R, R, F, F, F, F, F, F, F, G],
-                [F, F, F, F, F, F, F, F, F, F, F, G],
+                [H, H, H, H, H, F, H, F, F, F, H],
+                [H, H, H, W, W, F, F, F, F, F, H],
+                [H, H, W, W, R, F, F, F, F, F, F, H],
+                [F, W, R, R, F, F, F, F, F, F, F, H],
+                [F, F, F, F, F, F, F, F, F, F, F, H],
                 [F]
             ],
             zIndices: [
-                [0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0],
-                [0, 0, 0, 6, 6, 1, 1, 1, 1, 1, 0],
-                [0, 0, 6, 6, 5, 1, 1, 1, 1, 1, 1, 0],
-                [1, 6, 5, 5, 1, 1, 1, 1, 1, 1, 1, 0],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [1],
+                [1, 1, 1, 6, 6, 1],
+                [1, 1, 6, 6, 5, 1],
+                [1, 6, 5, 5, 1],
+                [1],
                 [1]
             ]
         }
@@ -127,20 +127,20 @@ export default {
         slantDirection: LEFT,
         floor: {
             hslaColours: [
-                [G],
-                [G, G, G, G, G, Z, Z, Z, Z, G],
-                [G, G, G, G, L, Z, Z, Z, Z, Z, G],
-                [G, G, N, M, M, Z, Z, Z, Z, Z, G],
-                [M, N, O, N, M, Z, Z, Z, Z, Z, G],
-                [G, N, O, O, N, L, Z, Z, Z, Z, Z, G]
+                [H, H, H, H, H, Z, Z, Z, Z, Z, H],
+                [H, H, H, Z, Z, Z, Z, Z, Z, Z, H],
+                [H, H, Z, Z, L, Z, Z, Z, Z, Z, Z, H],
+                [Z, Z, N, M, M, Z, Z, Z, Z, Z, Z, H],
+                [M, N, O, N, M, Z, Z, Z, Z, Z, Z, H],
+                [Z, N, O, O, N, L, Z, Z, Z, Z, Z, Z]
             ],
             zIndices: [
-                [0],
-                [0, 0, 0, 0, 0, 1, 1, 7, 7, 0],
-                [0, 0, 0, 0, 1, 1, 1, 7, 7, 7, 0],
-                [0, 0, 1, 1, 1, 1, 1, 7, 7, 7, 0],
-                [1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+                [1],
+                [1, 1, 1, 1, 1, 1, 1, 7, 7, 1],
+                [1, 1, 1, 1, 1, 1, 1, 7, 7, 7, 1],
+                [1, 1, 1, 1, 1, 1, 1, 7, 7, 7, 1],
+                [1, 1, 1, 1, 1, 1, 1, 7, 1],
+                [1]
             ]
         }
     },

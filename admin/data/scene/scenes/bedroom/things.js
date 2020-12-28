@@ -80,18 +80,18 @@ export default {
     },
     [CUTOUT]: {
         [LEMON_TREE__BEDROOM]: {
-            yIndex: 0,
             xPosition: 6.9,
+            zOffset: -0.5,
             scaleFactor: 0.7
         },
         [ROSEBUSH_SLANTED_DOUBLE]: {
-            yIndex: 0,
             xPosition: 1.75,
+            zOffset: -0.5,
             scaleFactor: 0.3
         },
         [ROSEBUSH_SLANTED_SINGLE]: {
-            yIndex: 0,
             xPosition: 10.75,
+            zOffset: -0.5,
             scaleFactor: 0.3
         }
     },
@@ -136,6 +136,7 @@ export default {
             scaleFactor: 0.2
         },
         [BEDROOM_FENCE]: {
+            zOffset: -0.5,
             scaleFactor: 0.5
         }
     }

@@ -2,7 +2,7 @@ import { LEFT } from '../../../../../../app/constants/scene/cubes'
 import { BEDROOM_SPACE_KEY } from '../../../../../../app/constants/scene/scenes'
 
 import {
-    GROUND_CLEAR_COLOUR as G,
+    GRASS_COLOUR as H,
     NIGHT_FUTURE_COLOUR as Z,
     FUTURE_SPOTLIGHT_MEDIUM_COLOUR as L,
     FUTURE_SPOTLIGHT_LIGHT_COLOUR as M,
@@ -14,20 +14,20 @@ export const BEDROOM_SPACE_CUBES = {
         slantDirection: LEFT,
         floor: {
             hslaColours: [
-                [G],
-                [G, G, G, G, G, Z, Z, M, M, G],
-                [G, G, G, G, Z, Z, Z, L, N, N, G],
-                [G, G, Z, Z, Z, Z, L, M, O, O, G],
-                [Z, Z, Z, Z, Z, Z, M, N, O, O, G],
-                [G, Z, Z, Z, Z, Z, Z, M, N, N, N, G]
+                [H, H, H, H, H, Z, Z, Z, Z, Z, H],
+                [H, H, H, Z, Z, Z, Z, M, M, Z, H],
+                [H, H, Z, Z, Z, Z, Z, L, N, N, Z, H],
+                [Z, Z, Z, Z, Z, Z, L, M, O, O, Z, H],
+                [Z, Z, Z, Z, Z, Z, M, N, O, O, Z, H],
+                [Z, Z, Z, Z, Z, Z, Z, M, N, N, N, Z]
             ],
             zIndices: [
-                [0],
-                [0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 5, 1, 1, 1, 1, 1, 0],
-                [0, 0, 5, 5, 1, 1, 1, 1, 1, 1, 0],
-                [1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+                [1],
+                [1],
+                [1, 1, 1, 1, 5, 1],
+                [1, 1, 5, 5, 1],
+                [1, 1, 1, 1, 3, 1],
+                [1]
             ]
         }
     }
