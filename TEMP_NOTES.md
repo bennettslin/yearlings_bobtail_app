@@ -29,7 +29,6 @@
     * Bennett record player stand
     * Keyboard support (books?)
     * Basement beer scene (milk crates?)
-    * Caveman stand
     * Liz nightstand
     * Liz stool
     * El Cerrito freeway

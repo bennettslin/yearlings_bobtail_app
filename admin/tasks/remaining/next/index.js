@@ -10,7 +10,7 @@ export default [
     },
     {
         taskName: `Night colour work.`,
-        workedHours: 37
+        workedHours: 42
     },
     {
         taskName: `Audit scenes.`,
