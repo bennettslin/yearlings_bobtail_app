@@ -1,6 +1,4 @@
 # TODO:
-* Should tetherball scene have background?
-* near buildings should be in front of Oakland side.
 * Make pharmacy cel and other thought bubbles backdrops for consistency?
 * Why do styles show for admin pages in build?
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?

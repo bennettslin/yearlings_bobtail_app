@@ -2,6 +2,7 @@ import { COURTYARD_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
@@ -27,7 +28,7 @@ export default {
                 [X, C, D]
             ],
             zIndices: [
-                [1],
+                [0],
                 [1, 1, d, d, d, d, 1, d, d, d, 1],
                 [1, f, f],
                 [d, f, k],
@@ -37,7 +38,7 @@ export default {
         },
         floor: {
             hslaColours: [
-                [V],
+                [G],
                 [V, F, X, X, X, X, F],
                 [V],
                 [V],
@@ -45,7 +46,7 @@ export default {
                 [V]
             ],
             zIndices: [
-                [1],
+                [0],
                 [1, 1, 6, 6, 6, 6, 1],
                 [1],
                 [1],

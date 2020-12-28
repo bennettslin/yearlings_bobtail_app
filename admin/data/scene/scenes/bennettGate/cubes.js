@@ -2,6 +2,7 @@ import { BENNETT_GATE_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     APARTMENT_EXTERIOR_COLOUR as X,
     ROOF_COLOUR as C
@@ -24,7 +25,7 @@ export default {
                 [D]
             ],
             zIndices: [
-                [1],
+                [0],
                 [1, 1, 1, 1, 1, 1, d, d, d, 1, 1],
                 [1, 1, 1, f, f, f, f, f, f, f, 1],
                 [f],
@@ -34,9 +35,11 @@ export default {
         },
         floor: {
             hslaColours: [
+                [G],
                 [V]
             ],
             zIndices: [
+                [0],
                 [1]
             ]
         }

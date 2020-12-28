@@ -2,6 +2,7 @@ import { CLUB_LOADING } from '../../../../../app/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
     OLD_FLOOR_COLOUR as F,
@@ -30,11 +31,13 @@ export default {
         },
         floor: {
             hslaColours: [
+                [G],
                 [V, F],
                 [V, F],
                 [V]
             ],
             zIndices: [
+                [0],
                 [1]
             ]
         }
