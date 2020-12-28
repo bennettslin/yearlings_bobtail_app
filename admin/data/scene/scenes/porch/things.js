@@ -14,13 +14,11 @@ export default {
     [CUTOUT]: {
         [CACTUS_DOUBLE__PORCH]: {
             yIndex: 2,
-            xPosition: 1.25,
-            scaleFactor: 0.3
+            xPosition: 1.25
         },
         [CACTUS_SINGLE__PORCH]: {
             yIndex: 2,
-            xPosition: 10.5,
-            scaleFactor: 0.3
+            xPosition: 10.5
         }
     },
     [DOOR]: {

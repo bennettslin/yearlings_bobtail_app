@@ -4,7 +4,8 @@ import {
 } from '../../../../../app/constants/scene/things'
 import {
     DISPENSER_LEFT,
-    DISPENSER_RIGHT
+    DISPENSER_RIGHT,
+    HOSTESS_STAND
 } from '../../../../../app/constants/scene/things/cutouts'
 import { EL_TORITO_DOORS } from '../../../../../app/constants/scene/things/doors'
 
@@ -19,6 +20,10 @@ export default {
             yIndex: 5,
             xPosition: 10,
             scaleFactor: 0.3
+        },
+        [HOSTESS_STAND]: {
+            yIndex: 1,
+            xPosition: 5.3
         }
     },
     [DOOR]: {

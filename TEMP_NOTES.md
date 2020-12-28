@@ -15,7 +15,6 @@
 * Bennett has ghost tail in Uncanny Valley.
 * Make road floors have path colour?
 * El Torito logo
-* El Torito podium
 * Remove depth shading from slant direction cubes?
 * Wedding platform chair and tables
 * Final gravestone. (Move Bennett and Liz to left.)

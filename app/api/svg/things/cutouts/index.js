@@ -59,6 +59,7 @@ import elCerritoTree from '../../../../../assets/svgs/cutouts/elCerritoTree'
 import dumpster from '../../../../../assets/svgs/cutouts/dumpster'
 import dispenserLeft from '../../../../../assets/svgs/cutouts/dispenserLeft'
 import dispenserRight from '../../../../../assets/svgs/cutouts/dispenserRight'
+import hostessStand from '../../../../../assets/svgs/cutouts/hostessStand'
 import weddingCrowd from '../../../../../assets/svgs/cutouts/weddingCrowd'
 import cliffTree from '../../../../../assets/svgs/cutouts/cliffTree'
 import ivDrip from '../../../../../assets/svgs/cutouts/ivDrip'
@@ -154,6 +155,7 @@ import {
     DUMPSTER,
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
+    HOSTESS_STAND,
     WEDDING_CROWD,
     CLIFF_TREE,
     IV_DRIP
@@ -250,6 +252,7 @@ export default {
     [DUMPSTER]: dumpster,
     [DISPENSER_LEFT]: dispenserLeft,
     [DISPENSER_RIGHT]: dispenserRight,
+    [HOSTESS_STAND]: hostessStand,
     [WEDDING_CROWD]: weddingCrowd,
     [CLIFF_TREE]: cliffTree,
     [IV_DRIP]: ivDrip

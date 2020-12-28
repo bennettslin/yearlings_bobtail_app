@@ -135,7 +135,7 @@ export default {
     [CLUB_FRONT_SECONDARY_COLOUR]: { h: 141, s: 21, l: 58 },
     [CLUB_SIDE_PRIMARY_COLOUR]: { h: 355, s: 23, l: 65 },
     [CLUB_SIDE_SECONDARY_COLOUR]: { h: 55, s: 21, l: 58 },
-    [FANCY_WALL_COLOUR]: { h: 278, s: 18, l: 81 },
+    [FANCY_WALL_COLOUR]: { h: 278, s: 13, l: 76 },
     [SCHOOL_WALL_COLOUR]: { h: 334, s: 17, l: 78 },
     /* X. */
     [APARTMENT_EXTERIOR_COLOUR]: { h: parseInt(HUE_APARTMENT), s: 11, l: 58 },

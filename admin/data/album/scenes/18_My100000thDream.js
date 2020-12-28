@@ -61,11 +61,12 @@ import {
     BUBBLE_LARGE__INVERSE
 } from '../../../../app/constants/scene/things/bubbles'
 import {
+    CLIFF_TREE,
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
-    WEDDING_CROWD,
+    HOSTESS_STAND,
     IV_DRIP,
-    CLIFF_TREE
+    WEDDING_CROWD
 } from '../../../../app/constants/scene/things/cutouts'
 import { EL_TORITO_DOORS } from '../../../../app/constants/scene/things/doors'
 import { HOSPITAL_RECORD_PLAYER } from '../../../../app/constants/scene/things/fixtures'
@@ -111,7 +112,8 @@ export default [
             },
             [CUTOUT]: {
                 [DISPENSER_LEFT]: true,
-                [DISPENSER_RIGHT]: true
+                [DISPENSER_RIGHT]: true,
+                [HOSTESS_STAND]: true
             },
             [DOOR]: {
                 [EL_TORITO_DOORS]: true

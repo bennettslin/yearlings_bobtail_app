@@ -23,6 +23,7 @@ import {
     FIRE_HYDRANT,
     GLASS_RACK,
     GRAVESTONE,
+    HOSTESS_STAND,
     HOWIE_FRIDGE,
     IV_DRIP,
     LAMPPOST,
@@ -101,7 +102,7 @@ import {
     TRAFFIC_LIGHT__SHARED,
     WALL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
-import { NEWSPAPER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
+import { BOOK__SHARED, NEWSPAPER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import { BUDDHA_SHRINE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/taiwan'
 import { ALL_VEHICLES__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
 
@@ -139,6 +140,10 @@ export default {
     [FIRE_HYDRANT]: null,
     [GLASS_RACK]: CUP__SHARED,
     [GRAVESTONE]: null,
+    [HOSTESS_STAND]: [
+        OAK__SHARED,
+        BOOK__SHARED
+    ],
     [HOWIE_FRIDGE]: FRIDGE__SHARED,
     [IV_DRIP]: POLE__SHARED,
     [LAMPPOST]: [
