@@ -44,8 +44,6 @@ import { BENNETT_DEFIANT } from '../../../../app/constants/scene/actors/stephani
 import { CROSSING_GUARD } from '../../../../app/constants/scene/actors/willy'
 import { YOUNG_CHILD } from '../../../../app/constants/scene/actors/songs'
 import {
-    DISTANT_BUILDINGS_BACKDROP,
-    DISTANT_HOUSES_BACKDROP,
     OAKLAND_SIDE__LEVEL,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW,
@@ -80,7 +78,9 @@ import {
     PUBLIC_FAR__GOLDEN_CORD,
     PUBLIC_NEAR__GOLDEN_CORD,
     OAKLAND_SCHOOL,
-    OAKLAND_FLAG
+    OAKLAND_FLAG,
+    DISTANT_BUILDINGS,
+    DISTANT_HOUSES
 } from '../../../../app/constants/scene/things/flats'
 import { LIZ_COUCH__ROOM } from '../../../../app/constants/scene/things/panels'
 
@@ -96,10 +96,10 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [FLAT]: {
+                [DISTANT_HOUSES]: true,
                 [OAKLAND_HOUSE_LEFT]: true,
                 [OAKLAND_HOUSE_RIGHT]: true
             }
@@ -118,7 +118,6 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE__LEVEL]: true,
                 [THOUGHT_MEDIUM__GOLDEN]: true
             },
@@ -128,6 +127,7 @@ export default [
                 [BUBBLE_LARGE__GOLDEN]: true
             },
             [FLAT]: {
+                [DISTANT_HOUSES]: true,
                 [OAKLAND_HOUSE_LEFT]: true,
                 [OAKLAND_HOUSE_RIGHT]: true
             },
@@ -155,7 +155,6 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_FRONT__HIGH]: true
             },
             [CUTOUT]: {
@@ -164,6 +163,7 @@ export default [
                 [TWIN_STREETLAMP__NEAR]: true
             },
             [FLAT]: {
+                [DISTANT_HOUSES]: true,
                 [RESIDENTIAL_FAR_LEFT]: true,
                 [RESIDENTIAL_FAR_RIGHT]: true,
                 [RESIDENTIAL_MIDDLE_LEFT]: true,
@@ -192,10 +192,10 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [OAKLAND_FRONT__HIGH]: true
             },
             [FLAT]: {
+                [DISTANT_BUILDINGS]: true,
                 [COMMERCIAL_CENTRE]: true,
                 [COMMERCIAL_FAR_LEFT]: true,
                 [COMMERCIAL_FAR_RIGHT]: true,

@@ -45,8 +45,7 @@ import {
 } from '../../../../app/constants/scene/actors/songs'
 import {
     OAKLAND_SIDE__LEVEL,
-    OAKLAND_SIDE__LIZ_COUCH,
-    DISTANT_HOUSES_BACKDROP
+    OAKLAND_SIDE__LIZ_COUCH
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     NAS_ALBUM,
@@ -72,6 +71,7 @@ import {
     BENNETT_RECORD_PLAYER
 } from '../../../../app/constants/scene/things/fixtures'
 import {
+    DISTANT_HOUSES,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
 } from '../../../../app/constants/scene/things/flats'
@@ -132,10 +132,10 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [FLAT]: {
+                [DISTANT_HOUSES]: true,
                 [OAKLAND_HOUSE_LEFT]: true,
                 [OAKLAND_HOUSE_RIGHT]: true
             },

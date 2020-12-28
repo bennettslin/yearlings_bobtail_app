@@ -36,7 +36,6 @@ import {
     DATE_ENDED
 } from '../../../../app/constants/scene/actors/songs'
 import {
-    DISTANT_BUILDINGS_BACKDROP,
     DRIVING_BACKDROP,
     OAKLAND_FRONT__HIGH,
     OAKLAND_SIDE__LEVEL
@@ -73,6 +72,7 @@ import {
     MANNEQUIN
 } from '../../../../app/constants/scene/things/fixtures'
 import {
+    DISTANT_BUILDINGS,
     GO_KART_TRACK,
     PUBLIC_FAR__LIZ_GATE,
     PUBLIC_NEAR__LIZ_GATE
@@ -198,11 +198,11 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [DRIVING_BACKDROP]: true,
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [FLAT]: {
+                [DISTANT_BUILDINGS]: true,
                 [GO_KART_TRACK]: true
             },
             [PANEL]: {

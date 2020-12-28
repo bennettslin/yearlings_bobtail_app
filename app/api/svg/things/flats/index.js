@@ -24,6 +24,8 @@ import oceanBottomMiddle from '../../../../../assets/svgs/flats/oceanBottomMiddl
 import oceanBottomNear from '../../../../../assets/svgs/flats/oceanBottomNear'
 import stJosephsAnnex from '../../../../../assets/svgs/flats/stJosephsAnnex'
 import stJosephsChurch from '../../../../../assets/svgs/flats/stJosephsChurch'
+import distantBuildings from '../../../../../assets/svgs/flats/distantBuildings'
+import distantHouses from '../../../../../assets/svgs/flats/distantHouses'
 import campanile from '../../../../../assets/svgs/flats/campanile'
 import goKartTrack from '../../../../../assets/svgs/flats/goKartTrack'
 import royceHall from '../../../../../assets/svgs/flats/royceHall'
@@ -82,6 +84,8 @@ import {
     OCEAN_BOTTOM_NEAR,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
+    DISTANT_BUILDINGS,
+    DISTANT_HOUSES,
     CAMPANILE,
     BERKELEY_BUILDING_TALL,
     BERKELEY_BUILDING_WIDE__BANCROFT,
@@ -148,6 +152,8 @@ export default {
     [OCEAN_BOTTOM_NEAR]: oceanBottomNear,
     [ST_JOSEPHS_ANNEX]: stJosephsAnnex,
     [ST_JOSEPHS_CHURCH]: stJosephsChurch,
+    [DISTANT_BUILDINGS]: distantBuildings,
+    [DISTANT_HOUSES]: distantHouses,
     [CAMPANILE]: campanile,
     [BERKELEY_BUILDING_TALL]: berkeleyBuildingTall,
     [BERKELEY_BUILDING_WIDE__BANCROFT]: berkeleyBuildingWide,

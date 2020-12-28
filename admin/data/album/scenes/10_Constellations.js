@@ -43,7 +43,6 @@ import {
     ATTIC
 } from '../../../../app/constants/scene/actors/songs'
 import {
-    DISTANT_BUILDINGS_BACKDROP,
     LOS_ANGELES_BACKDROP,
     PHARMACY_CEL
 } from '../../../../app/constants/scene/things/backdrops'
@@ -70,7 +69,8 @@ import {
     ROYCE_HALL,
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT,
-    DRIVING_HOUSE__SINGLE
+    DRIVING_HOUSE__SINGLE,
+    DISTANT_BUILDINGS
 } from '../../../../app/constants/scene/things/flats'
 import {
     SATURN_EXTERIOR,
@@ -107,7 +107,6 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [LOS_ANGELES_BACKDROP]: true
             },
             [CUTOUT]: {
@@ -115,6 +114,7 @@ export default [
                 [UCLA_TREE__RIGHT]: true
             },
             [FLAT]: {
+                [DISTANT_BUILDINGS]: true,
                 [ROYCE_HALL]: true
             }
         },
@@ -240,7 +240,6 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [LOS_ANGELES_BACKDROP]: true
             },
             [BUBBLE]: {
@@ -251,6 +250,7 @@ export default [
                 [EVIAN_BOTTLES]: true
             },
             [FLAT]: {
+                [DISTANT_BUILDINGS]: true,
                 [DRIVING_HOUSE__SINGLE]: true
             },
             [PANEL]: {

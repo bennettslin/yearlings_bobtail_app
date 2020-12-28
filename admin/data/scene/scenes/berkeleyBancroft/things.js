@@ -9,7 +9,10 @@ import {
     ASH_CAN
 } from '../../../../../app/constants/scene/things/cutouts'
 import { BANCROFT_DOOR } from '../../../../../app/constants/scene/things/doors'
-import { BERKELEY_BUILDING_WIDE__BANCROFT } from '../../../../../app/constants/scene/things/flats'
+import {
+    DISTANT_BUILDINGS,
+    BERKELEY_BUILDING_WIDE__BANCROFT
+} from '../../../../../app/constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from '../../../../../app/constants/scene/things/puppets'
 
 export default {
@@ -32,6 +35,9 @@ export default {
         }
     },
     [FLAT]: {
+        [DISTANT_BUILDINGS]: {
+            scaleFactor: 0.45
+        },
         [BERKELEY_BUILDING_WIDE__BANCROFT]: {
             yIndex: 2,
             xPosition: 2.5,

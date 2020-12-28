@@ -20,8 +20,6 @@ import goldenGateBackdrop from '../../../../../assets/svgs/backdrops/goldenGateB
 import thoughtMedium from '../../../../../assets/svgs/backdrops/thoughtMedium'
 import thoughtSmall from '../../../../../assets/svgs/backdrops/thoughtSmall'
 import weddingBackdrop from '../../../../../assets/svgs/backdrops/weddingBackdrop'
-import distantBuildings from '../../../../../assets/svgs/backdrops/distantBuildings'
-import distantHouses from '../../../../../assets/svgs/backdrops/distantHouses'
 import drivingBackdrop from '../../../../../assets/svgs/backdrops/drivingBackdrop'
 
 import {
@@ -52,8 +50,6 @@ import {
     THOUGHT_MEDIUM__GOLDEN,
     THOUGHT_SMALL,
     WEDDING_BACKDROP,
-    DISTANT_BUILDINGS_BACKDROP,
-    DISTANT_HOUSES_BACKDROP,
     DRIVING_BACKDROP
 } from '../../../../constants/scene/things/backdrops'
 
@@ -85,7 +81,5 @@ export default {
     [THOUGHT_MEDIUM__GOLDEN]: thoughtMedium,
     [THOUGHT_SMALL]: thoughtSmall,
     [WEDDING_BACKDROP]: weddingBackdrop,
-    [DISTANT_BUILDINGS_BACKDROP]: distantBuildings,
-    [DISTANT_HOUSES_BACKDROP]: distantHouses,
     [DRIVING_BACKDROP]: drivingBackdrop
 }

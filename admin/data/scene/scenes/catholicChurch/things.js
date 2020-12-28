@@ -4,6 +4,7 @@ import {
 } from '../../../../../app/constants/scene/things'
 import { LAMPPOST__CHURCH } from '../../../../../app/constants/scene/things/cutouts'
 import {
+    DISTANT_HOUSES,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH
 } from '../../../../../app/constants/scene/things/flats'
@@ -17,6 +18,10 @@ export default {
         }
     },
     [FLAT]: {
+        [DISTANT_HOUSES]: {
+            yIndex: 0,
+            scaleFactor: 0.45
+        },
         [ST_JOSEPHS_ANNEX]: {
             yIndex: 1,
             xPosition: 1.5,

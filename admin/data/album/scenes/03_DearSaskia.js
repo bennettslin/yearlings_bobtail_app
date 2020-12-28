@@ -32,7 +32,6 @@ import { INDIGNANT } from '../../../../app/constants/scene/actors/sasha'
 import {
     THOUGHT_LARGE__LEFT,
     THOUGHT_LARGE__RIGHT,
-    DISTANT_HOUSES_BACKDROP,
     TAIWAN_MOUNTAINS_BACKDROP
 } from '../../../../app/constants/scene/things/backdrops'
 import {
@@ -59,7 +58,8 @@ import {
     DRIVING_HOUSE_LEFT,
     DRIVING_HOUSE__RIGHT,
     SCHOOL_BUNGALOW,
-    NEAR_BUILDINGS
+    NEAR_BUILDINGS,
+    DISTANT_HOUSES
 } from '../../../../app/constants/scene/things/flats'
 import {
     TAIWAN_BRIDGE,
@@ -164,8 +164,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [THOUGHT_LARGE__LEFT]: true,
-                [DISTANT_HOUSES_BACKDROP]: true
+                [THOUGHT_LARGE__LEFT]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__LEFT]: true,
@@ -176,6 +175,7 @@ export default [
                 [BACKPACK_BENNETT]: true
             },
             [FLAT]: {
+                [DISTANT_HOUSES]: true,
                 [DRIVING_HOUSE_LEFT]: true,
                 [DRIVING_HOUSE__RIGHT]: true
             },

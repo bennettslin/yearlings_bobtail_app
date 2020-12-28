@@ -15,6 +15,8 @@ import {
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_LEFT,
     COMMERCIAL_NEAR_RIGHT,
+    DISTANT_BUILDINGS,
+    DISTANT_HOUSES,
     DRIVING_HOUSE,
     DRIVING_HOUSE_LEFT,
     EL_CERRITO_FAR,
@@ -162,6 +164,16 @@ export default {
         BUILDING__SHARED,
         DOOR__SHARED,
         WINDOW__SHARED
+    ],
+    [DISTANT_BUILDINGS]: [
+        BUILDINGS__SHARED,
+        FOLIAGE__SHARED,
+        WALL__SHARED
+    ],
+    [DISTANT_HOUSES]: [
+        FOLIAGE__SHARED,
+        HOUSE__SHARED,
+        WALL__SHARED
     ],
     [DRIVING_HOUSE]: [
         DOOR__SHARED,

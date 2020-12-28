@@ -45,8 +45,6 @@ import {
 import { CATHOLIC_GUY } from '../../../../app/constants/scene/actors/wade'
 import {
     THOUGHT_LARGE__RIGHT,
-    DISTANT_BUILDINGS_BACKDROP,
-    DISTANT_HOUSES_BACKDROP,
     OAKLAND_SIDE__LEVEL
 } from '../../../../app/constants/scene/things/backdrops'
 import {
@@ -88,7 +86,9 @@ import {
     BERKELEY_BUILDING_TALL,
     BERKELEY_BUILDING_WIDE__BANCROFT,
     BERKELEY_BUILDING_WIDE__CAMPANILE,
-    NEAR_BUILDINGS
+    NEAR_BUILDINGS,
+    DISTANT_BUILDINGS,
+    DISTANT_HOUSES
 } from '../../../../app/constants/scene/things/flats'
 import {
     WIDE_COUCH_BENNETT,
@@ -182,13 +182,13 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [LAMPPOST__CHURCH]: true
             },
             [FLAT]: {
+                [DISTANT_HOUSES]: true,
                 [ST_JOSEPHS_ANNEX]: true,
                 [ST_JOSEPHS_CHURCH]: true
             }
@@ -219,7 +219,6 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
@@ -230,6 +229,7 @@ export default [
                 [BANCROFT_DOOR]: true
             },
             [FLAT]: {
+                [DISTANT_BUILDINGS]: true,
                 [BERKELEY_BUILDING_WIDE__BANCROFT]: true
             }
         },
@@ -251,7 +251,6 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
@@ -261,6 +260,7 @@ export default [
                 [CAMPUS_TREE_DOUBLE__CAMPANILE]: true
             },
             [FLAT]: {
+                [DISTANT_BUILDINGS]: true,
                 [CAMPANILE]: true,
                 [BERKELEY_BUILDING_TALL]: true,
                 [BERKELEY_BUILDING_WIDE__CAMPANILE]: true

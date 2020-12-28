@@ -50,10 +50,7 @@ import {
     GREETING,
     PROTESTER
 } from '../../../../app/constants/scene/actors/songs'
-import {
-    DISTANT_BUILDINGS_BACKDROP,
-    OAKLAND_SIDE__LEVEL
-} from '../../../../app/constants/scene/things/backdrops'
+import { OAKLAND_SIDE__LEVEL } from '../../../../app/constants/scene/things/backdrops'
 import {
     SIGNPOST,
     STINK_PLANT,
@@ -79,7 +76,8 @@ import {
     BERKELEY_BUILDING_TALL,
     BERKELEY_BUILDING_WIDE__BANCROFT,
     BERKELEY_BUILDING_WIDE__CAMPANILE,
-    NEAR_BUILDINGS
+    NEAR_BUILDINGS,
+    DISTANT_BUILDINGS
 } from '../../../../app/constants/scene/things/flats'
 import {
     LIZ_PILLOWS,
@@ -113,7 +111,6 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
@@ -124,6 +121,7 @@ export default [
                 [BANCROFT_DOOR]: true
             },
             [FLAT]: {
+                [DISTANT_BUILDINGS]: true,
                 [BERKELEY_BUILDING_WIDE__BANCROFT]: true
             },
             [PUPPET]: {
@@ -262,7 +260,6 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
@@ -272,6 +269,7 @@ export default [
                 [CAMPUS_TREE_DOUBLE__CAMPANILE]: true
             },
             [FLAT]: {
+                [DISTANT_BUILDINGS]: true,
                 [CAMPANILE]: true,
                 [BERKELEY_BUILDING_TALL]: true,
                 [BERKELEY_BUILDING_WIDE__CAMPANILE]: true

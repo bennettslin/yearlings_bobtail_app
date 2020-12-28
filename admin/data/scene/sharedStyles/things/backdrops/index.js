@@ -1,6 +1,4 @@
 import {
-    DISTANT_BUILDINGS_BACKDROP,
-    DISTANT_HOUSES_BACKDROP,
     DRIVING_BACKDROP,
     GOLDEN_GATE_BACKDROP,
     LOS_ANGELES_BACKDROP,
@@ -28,7 +26,6 @@ import {
 } from '../../../../../../app/constants/scene/things/backdrops'
 import {
     BUILDINGS__SHARED,
-    HOUSE__SHARED,
     TAIWAN_HOUSE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/buildings'
 import { DOOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
@@ -40,22 +37,11 @@ import {
     SHORE__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
-    VOLCANO__SHARED,
-    WALL__SHARED
+    VOLCANO__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 
 export default {
-    [DISTANT_BUILDINGS_BACKDROP]: [
-        BUILDINGS__SHARED,
-        FOLIAGE__SHARED,
-        WALL__SHARED
-    ],
-    [DISTANT_HOUSES_BACKDROP]: [
-        FOLIAGE__SHARED,
-        HOUSE__SHARED,
-        WALL__SHARED
-    ],
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
     [GOLDEN_GATE_BACKDROP]: [
         BUILDINGS__SHARED,
