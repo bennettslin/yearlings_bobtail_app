@@ -10,7 +10,6 @@
 * Be smarter about memo.
 
 # UI TODO:
-* Have single dark cube and spotlight colour?
 * Bedroom open cubes.
 * Night colours.
 * Move ghost dad's hat.
