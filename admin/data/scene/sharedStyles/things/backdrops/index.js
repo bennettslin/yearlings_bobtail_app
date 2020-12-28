@@ -19,6 +19,7 @@ import {
     SHORE_RICKSHAW_BACKDROP,
     TAIWAN_MOUNTAINS_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
+    THOUGHT_LARGE,
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
@@ -41,6 +42,7 @@ import {
     VOLCANO__SHARED,
     WALL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
+import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 
 export default {
     [DISTANT_BUILDINGS_BACKDROP]: [
@@ -109,6 +111,7 @@ export default {
         TAIWAN_MOUNTAIN__SHARED,
         TAIWAN_HOUSE__SHARED
     ],
+    [THOUGHT_LARGE]: BUBBLE__SHARED,
     [VALLEY_CLOSER_BACKDROP]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED

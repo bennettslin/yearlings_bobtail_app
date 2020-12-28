@@ -44,6 +44,7 @@ import {
 } from '../../../../app/constants/scene/actors/catherine'
 import { CATHOLIC_GUY } from '../../../../app/constants/scene/actors/wade'
 import {
+    THOUGHT_LARGE__RIGHT,
     NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
     DISTANT_HOUSES_BACKDROP,
@@ -52,8 +53,7 @@ import {
 import {
     BUBBLE_SMALL__RIGHT,
     BUBBLE_MEDIUM__RIGHT,
-    BUBBLE_LARGE__RIGHT,
-    THOUGHT_LARGE__RIGHT
+    BUBBLE_LARGE__RIGHT
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     POLICE_ALBUM,
@@ -143,11 +143,13 @@ export default [
                     instance: QUIPPING
                 }
             },
+            [BACKDROP]: {
+                [THOUGHT_LARGE__RIGHT]: true
+            },
             [BUBBLE]: {
                 [BUBBLE_SMALL__RIGHT]: true,
                 [BUBBLE_MEDIUM__RIGHT]: true,
-                [BUBBLE_LARGE__RIGHT]: true,
-                [THOUGHT_LARGE__RIGHT]: true
+                [BUBBLE_LARGE__RIGHT]: true
             },
             [CARDBOARD]: {
                 [POLICE_ALBUM]: true,

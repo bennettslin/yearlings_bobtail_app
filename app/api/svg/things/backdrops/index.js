@@ -2,6 +2,7 @@ import valleyCloserBackdrop from '../../../../../assets/svgs/backdrops/valleyClo
 import valleyFurtherBackdrop from '../../../../../assets/svgs/backdrops/valleyFurtherBackdrop'
 import valleyPanoramaBackdrop from '../../../../../assets/svgs/backdrops/valleyPanoramaBackdrop'
 import taiwanMountainsBackdrop from '../../../../../assets/svgs/backdrops/taiwanMountainsBackdrop'
+import thoughtLarge from '../../../../../assets/svgs/backdrops/thoughtLarge'
 import taiwanStairsBackdrop from '../../../../../assets/svgs/backdrops/taiwanStairsBackdrop'
 import shoreRickshawBackdrop from '../../../../../assets/svgs/backdrops/shoreRickshawBackdrop'
 import shoreBuoyBackdrop from '../../../../../assets/svgs/backdrops/shoreBuoyBackdrop'
@@ -27,6 +28,8 @@ import {
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
     TAIWAN_MOUNTAINS_BACKDROP,
+    THOUGHT_LARGE__LEFT,
+    THOUGHT_LARGE__RIGHT,
     TAIWAN_STAIRS_BACKDROP,
     MOUNTAIN_TAIWAN_BACKDROP,
     MOUNTAIN_PAMPAS_BACKDROP,
@@ -56,6 +59,8 @@ export default {
     [VALLEY_FURTHER_BACKDROP]: valleyFurtherBackdrop,
     [VALLEY_PANORAMA_BACKDROP]: valleyPanoramaBackdrop,
     [TAIWAN_MOUNTAINS_BACKDROP]: taiwanMountainsBackdrop,
+    [THOUGHT_LARGE__LEFT]: thoughtLarge,
+    [THOUGHT_LARGE__RIGHT]: thoughtLarge,
     [TAIWAN_STAIRS_BACKDROP]: taiwanStairsBackdrop,
     [MOUNTAIN_TAIWAN_BACKDROP]: mountainBackdrop,
     [MOUNTAIN_PAMPAS_BACKDROP]: mountainBackdrop,

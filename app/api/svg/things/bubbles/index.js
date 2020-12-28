@@ -7,7 +7,6 @@ import sketchEscapePod from '../../../../../assets/svgs/bubbles/sketchEscapePod'
 import bubbleSmall from '../../../../../assets/svgs/bubbles/bubbleSmall'
 import bubbleMedium from '../../../../../assets/svgs/bubbles/bubbleMedium'
 import bubbleLarge from '../../../../../assets/svgs/bubbles/bubbleLarge'
-import thoughtLarge from '../../../../../assets/svgs/bubbles/thoughtLarge'
 import cinemaThoughtRecording from '../../../../../assets/svgs/bubbles/cinemaThoughtRecording'
 import cinemaThoughtBuying from '../../../../../assets/svgs/bubbles/cinemaThoughtBuying'
 import thoughtGoKart from '../../../../../assets/svgs/bubbles/thoughtGoKart'
@@ -34,11 +33,9 @@ import {
     BUBBLE_SMALL__LEFT,
     BUBBLE_MEDIUM__LEFT,
     BUBBLE_LARGE__LEFT,
-    THOUGHT_LARGE__LEFT,
     BUBBLE_SMALL__RIGHT,
     BUBBLE_MEDIUM__RIGHT,
     BUBBLE_LARGE__RIGHT,
-    THOUGHT_LARGE__RIGHT,
     SKETCHBOOK__APART,
     SKETCH_APART,
     SKETCHBOOK__DOGS_ROCKET,
@@ -106,11 +103,9 @@ export default {
     [BUBBLE_SMALL__LEFT]: bubbleSmall,
     [BUBBLE_MEDIUM__LEFT]: bubbleMedium,
     [BUBBLE_LARGE__LEFT]: bubbleLarge,
-    [THOUGHT_LARGE__LEFT]: thoughtLarge,
     [BUBBLE_SMALL__RIGHT]: bubbleSmall,
     [BUBBLE_MEDIUM__RIGHT]: bubbleMedium,
     [BUBBLE_LARGE__RIGHT]: bubbleLarge,
-    [THOUGHT_LARGE__RIGHT]: thoughtLarge,
     [SKETCHBOOK__APART]: sketchbook,
     [SKETCH_APART]: sketchApart,
     [SKETCHBOOK__DOGS_ROCKET]: sketchbook,

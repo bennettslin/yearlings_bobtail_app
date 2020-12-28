@@ -30,6 +30,8 @@ import { CHARMED_SCHOOLBUS } from '../../../../app/constants/scene/actors/bradSa
 import { PANICKED } from '../../../../app/constants/scene/actors/preteenBennett'
 import { INDIGNANT } from '../../../../app/constants/scene/actors/sasha'
 import {
+    THOUGHT_LARGE__LEFT,
+    THOUGHT_LARGE__RIGHT,
     DISTANT_HOUSES_BACKDROP,
     TAIWAN_MOUNTAINS_BACKDROP,
     NEAR_BUILDINGS
@@ -40,11 +42,9 @@ import {
     BUBBLE_SMALL__LEFT,
     BUBBLE_MEDIUM__LEFT,
     BUBBLE_LARGE__LEFT,
-    THOUGHT_LARGE__LEFT,
     BUBBLE_SMALL__RIGHT,
     BUBBLE_MEDIUM__RIGHT,
     BUBBLE_LARGE__RIGHT,
-    THOUGHT_LARGE__RIGHT,
     SKETCH_APART,
     SKETCHBOOK__APART
 } from '../../../../app/constants/scene/things/bubbles'
@@ -164,13 +164,13 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [THOUGHT_LARGE__LEFT]: true,
                 [DISTANT_HOUSES_BACKDROP]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__LEFT]: true,
                 [BUBBLE_MEDIUM__LEFT]: true,
-                [BUBBLE_LARGE__LEFT]: true,
-                [THOUGHT_LARGE__LEFT]: true
+                [BUBBLE_LARGE__LEFT]: true
             },
             [FIXTURE]: {
                 [BACKPACK_BENNETT]: true
@@ -208,13 +208,13 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [THOUGHT_LARGE__RIGHT]: true,
                 [NEAR_BUILDINGS]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__RIGHT]: true,
                 [BUBBLE_MEDIUM__RIGHT]: true,
-                [BUBBLE_LARGE__RIGHT]: true,
-                [THOUGHT_LARGE__RIGHT]: true
+                [BUBBLE_LARGE__RIGHT]: true
             },
             [CUTOUT]: {
                 [CAMPUS_TREE_SINGLE__TETHERBALL]: true,

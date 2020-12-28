@@ -7,8 +7,7 @@ import {
 import {
     BUBBLE_SMALL__LEFT,
     BUBBLE_MEDIUM__LEFT,
-    BUBBLE_LARGE__LEFT,
-    THOUGHT_LARGE__LEFT
+    BUBBLE_LARGE__LEFT
 } from '../../../../../app/constants/scene/things/bubbles'
 import { BACKPACK_BENNETT } from '../../../../../app/constants/scene/things/fixtures'
 import {
@@ -38,10 +37,6 @@ export default {
             yIndex: 0,
             xPosition: 0.8,
             zOffset: 8
-        },
-        [THOUGHT_LARGE__LEFT]: {
-            xPosition: 5.5,
-            scaleFactor: 0.6
         }
     },
     [FIXTURE]: {

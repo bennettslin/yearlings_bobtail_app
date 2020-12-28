@@ -22,6 +22,8 @@ import {
     SHORE_RICKSHAW_BACKDROP,
     TAIWAN_MOUNTAINS_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
+    THOUGHT_LARGE__LEFT,
+    THOUGHT_LARGE__RIGHT,
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
@@ -109,6 +111,15 @@ export default {
             xPosition: 4.5,
             zOffset: 3,
             scaleFactor: 0.45
+        },
+        [THOUGHT_LARGE__LEFT]: {
+            xPosition: 5.5,
+            scaleFactor: 0.6
+        },
+        [THOUGHT_LARGE__RIGHT]: {
+            xPosition: 5.5,
+            scaleFactor: 0.6,
+            flipHorizontal: true
         },
         [VALLEY_CLOSER_BACKDROP]: {
             scaleFactor: 0.7

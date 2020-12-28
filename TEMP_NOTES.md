@@ -1,5 +1,4 @@
 # TODO:
-* Thoughts large should be backdrops.
 * near buildings should be in front of Oakland side.
 * Why do styles show for admin pages in build?
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
@@ -22,6 +21,8 @@
 * Trash chute to dumpster
 * Roads magical background.
     * Make roads fork?
+* Bennett has ghost tail in Uncanny Valley
+* Constellations shadows
 * More panels
     * Nurse bench
     * Bedroom stool
