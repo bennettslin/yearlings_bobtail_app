@@ -44,10 +44,10 @@ import {
 } from '../../../../app/constants/scene/actors/songs'
 import {
     DISTANT_BUILDINGS_BACKDROP,
-    LOS_ANGELES_BACKDROP
+    LOS_ANGELES_BACKDROP,
+    PHARMACY_CEL
 } from '../../../../app/constants/scene/things/backdrops'
 import {
-    PHARMACY_CEL,
     CONSTELLATION_TARPIT,
     CONSTELLATION_SIBLING
 } from '../../../../app/constants/scene/things/bubbles'
@@ -143,7 +143,7 @@ export default [
                     instance: WALGREENS
                 }
             },
-            [BUBBLE]: {
+            [BACKDROP]: {
                 [PHARMACY_CEL]: true
             },
             [CUTOUT]: {

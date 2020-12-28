@@ -13,7 +13,6 @@ import thoughtGoKart from '../../../../../assets/svgs/bubbles/thoughtGoKart'
 import waitingThoughtWalking from '../../../../../assets/svgs/bubbles/waitingThoughtWalking'
 import waitingThoughtSinging from '../../../../../assets/svgs/bubbles/waitingThoughtSinging'
 import waitingThoughtStudying from '../../../../../assets/svgs/bubbles/waitingThoughtStudying'
-import pharmacyCel from '../../../../../assets/svgs/bubbles/pharmacyCel'
 import constellationTarpit from '../../../../../assets/svgs/bubbles/constellationTarpit'
 import constellationSibling from '../../../../../assets/svgs/bubbles/constellationSibling'
 import thoughtAmy from '../../../../../assets/svgs/bubbles/thoughtAmy'
@@ -57,7 +56,6 @@ import {
     WAITING_THOUGHT_STUDYING,
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_WALKING,
-    PHARMACY_CEL,
     CONSTELLATION_TARPIT,
     CONSTELLATION_SIBLING,
     BUBBLE_SMALL__AMY,
@@ -127,7 +125,6 @@ export default {
     [WAITING_THOUGHT_STUDYING]: waitingThoughtStudying,
     [WAITING_THOUGHT_SINGING]: waitingThoughtSinging,
     [WAITING_THOUGHT_WALKING]: waitingThoughtWalking,
-    [PHARMACY_CEL]: pharmacyCel,
     [CONSTELLATION_TARPIT]: constellationTarpit,
     [CONSTELLATION_SIBLING]: constellationSibling,
     [BUBBLE_SMALL__AMY]: bubbleSmall,

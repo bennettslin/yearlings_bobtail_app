@@ -10,6 +10,7 @@ import {
     OAKLAND_SIDE,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
+    PHARMACY_CEL,
     ROAD_FUTURE,
     ROAD_PAST,
     ROAD_PRESENT,
@@ -76,6 +77,7 @@ export default {
     ],
     [OCEAN_BOTTOM_FAR]: VOLCANO__SHARED,
     [OCEAN_FLOOR_FAR]: VOLCANO__SHARED,
+    [PHARMACY_CEL]: null,
     [ROAD_FUTURE]: ROAD__SHARED,
     [ROAD_PAST]: [
         BOOK__SHARED,
