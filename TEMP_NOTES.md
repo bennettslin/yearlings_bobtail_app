@@ -10,7 +10,6 @@
 * Be smarter about memo.
 
 # UI TODO:
-* Bedroom and default fences should be flats.
 * Night colours.
 * Move ghost dad's hat.
 * Bennett has ghost tail in Uncanny Valley.

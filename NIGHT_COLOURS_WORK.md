@@ -1,8 +1,3 @@
-# TODO
-* Audit
-    * Bedroom (Pchelka)
-        * outside floor cube zIndex
-
 # Night colours indoors
 * Attic (Constellations)
     * Television

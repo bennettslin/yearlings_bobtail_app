@@ -129,10 +129,10 @@ export default {
             hslaColours: [
                 [H, H, H, H, H, Z, Z, Z, Z, Z, H],
                 [H, H, H, Z, Z, Z, Z, Z, Z, Z, H],
-                [H, H, Z, Z, L, Z, Z, Z, Z, Z, Z, H],
-                [Z, Z, N, M, M, Z, Z, Z, Z, Z, Z, H],
+                [H, H, M, L, L, Z, Z, Z, Z, Z, Z, H],
+                [L, M, N, M, M, Z, Z, Z, Z, Z, Z, H],
                 [M, N, O, N, M, Z, Z, Z, Z, Z, Z, H],
-                [Z, N, O, O, N, L, Z, Z, Z, Z, Z, Z]
+                [L, N, O, O, N, L, Z, Z, Z, Z, Z, Z]
             ],
             zIndices: [
                 [1],

@@ -88,7 +88,7 @@ export default {
     /* G. */
     [GROUND_CLEAR_COLOUR]: { h: 0, s: 0, l: 0, a: 0.2 },
     /* H. */
-    [GRASS_COLOUR]: { h: 100, s: 36, l: 42 },
+    [GRASS_COLOUR]: { h: 100, s: 33, l: 39 },
     /* T. */
     [STREET_COLOUR]: { h: 0, s: 0, l: 39 },
     /* V. */

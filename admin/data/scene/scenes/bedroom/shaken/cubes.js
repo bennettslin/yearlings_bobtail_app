@@ -14,12 +14,12 @@ export const BEDROOM_SPACE_CUBES = {
         slantDirection: LEFT,
         floor: {
             hslaColours: [
-                [H, H, H, H, H, Z, Z, Z, Z, Z, H],
-                [H, H, H, Z, Z, Z, Z, M, M, Z, H],
-                [H, H, Z, Z, Z, Z, Z, L, N, N, Z, H],
-                [Z, Z, Z, Z, Z, Z, L, M, O, O, Z, H],
-                [Z, Z, Z, Z, Z, Z, M, N, O, O, Z, H],
-                [Z, Z, Z, Z, Z, Z, Z, M, N, N, N, Z]
+                [H, H, H, H, H, Z, Z, Z, Z, L, H],
+                [H, H, H, Z, Z, Z, Z, M, M, M, H],
+                [H, H, Z, Z, Z, Z, Z, L, N, N, N, H],
+                [Z, Z, Z, Z, Z, Z, L, M, O, O, N, H],
+                [Z, Z, Z, Z, Z, Z, M, N, O, O, M, H],
+                [Z, Z, Z, Z, Z, Z, Z, M, N, N, N, L]
             ],
             zIndices: [
                 [1],
