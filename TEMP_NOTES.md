@@ -11,7 +11,6 @@
 
 # UI TODO:
 * Should tetherball scene have background?
-* Steps in Campanile scene?
 * Young children heads
 * Remove depth shading from slant direction cubes?
 * El Torito logo

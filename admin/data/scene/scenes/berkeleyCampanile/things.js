@@ -25,7 +25,7 @@ export default {
         },
         [STINK_PLANT]: {
             yIndex: 4,
-            xPosition: 1,
+            xPosition: 1.5,
             scaleFactor: 0.5
         },
         [CAMPUS_TREE_SINGLE__CAMPANILE]: {

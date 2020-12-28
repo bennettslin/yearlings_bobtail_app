@@ -10,27 +10,27 @@ import { DEMONSTRATION } from '../../../../../../app/constants/scene/actors/benn
 export default {
     [STEPHANIE]: {
         [PROTESTER]: {
-            yIndex: 4,
-            xPosition: 2.8
+            yIndex: 5,
+            xPosition: 2.9
         }
     },
     [WADE]: {
         [PROTESTER]: {
-            yIndex: 4,
-            xPosition: 4.5,
+            yIndex: 5,
+            xPosition: 4.6,
             layerYIndex: 5
         }
     },
     [BENNETT]: {
         [DEMONSTRATION]: {
             yIndex: 5,
-            xPosition: 6.9
+            xPosition: 7
         }
     },
     [AMY]: {
         [PROTESTER]: {
             yIndex: 5,
-            xPosition: 8.7
+            xPosition: 8.8
         }
     }
 }
