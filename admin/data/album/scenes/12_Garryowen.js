@@ -45,6 +45,7 @@ import {
 } from '../../../../app/constants/scene/actors/songs'
 import {
     OAKLAND_SIDE__LEVEL,
+    OAKLAND_SIDE__LIZ_COUCH,
     DISTANT_HOUSES_BACKDROP
 } from '../../../../app/constants/scene/things/backdrops'
 import {
@@ -94,8 +95,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,
@@ -225,8 +225,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DISTANT_HOUSES_BACKDROP]: true,
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,

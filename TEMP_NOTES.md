@@ -1,5 +1,7 @@
 # TODO:
 * Make pharmacy cel and other thought bubbles backdrops for consistency?
+* Make distant buildings and houses flats for consistency?
+* Add curb to schoolbus
 * Why do styles show for admin pages in build?
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
     * https://github.com/gatsbyjs/gatsby/issues/3446
