@@ -2,7 +2,8 @@ import {
     BUBBLE,
     CUTOUT,
     DOOR,
-    FIXTURE
+    FIXTURE,
+    FLAT
 } from '../../../../../app/constants/scene/things'
 import { ESTHER_SPEECH } from '../../../../../app/constants/scene/things/bubbles'
 import { PLAYGROUND_SLIDE } from '../../../../../app/constants/scene/things/cutouts'
@@ -11,6 +12,7 @@ import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
 } from '../../../../../app/constants/scene/things/fixtures'
+import { NEAR_BUILDINGS } from '../../../../../app/constants/scene/things/flats'
 
 export default {
     [BUBBLE]: {
@@ -46,6 +48,12 @@ export default {
             yIndex: 5,
             xPosition: 10,
             scaleFactor: 0.25
+        }
+    },
+    [FLAT]: {
+        [NEAR_BUILDINGS]: {
+            scaleFactor: 0.66,
+            trimBottom: 0.05
         }
     }
 }

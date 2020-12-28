@@ -1,5 +1,7 @@
 # TODO:
+* Should tetherball scene have background?
 * near buildings should be in front of Oakland side.
+* Make pharmacy cel and other thought bubbles backdrops for consistency?
 * Why do styles show for admin pages in build?
     * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
     * https://github.com/gatsbyjs/gatsby/issues/3446
@@ -11,7 +13,6 @@
 * Be smarter about memo.
 
 # UI TODO:
-* Should tetherball scene have background?
 * Young children heads
 * Remove depth shading from slant direction cubes?
 * El Torito logo

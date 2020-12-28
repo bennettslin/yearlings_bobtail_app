@@ -45,7 +45,6 @@ import {
 import { CATHOLIC_GUY } from '../../../../app/constants/scene/actors/wade'
 import {
     THOUGHT_LARGE__RIGHT,
-    NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
     DISTANT_HOUSES_BACKDROP,
     OAKLAND_SIDE__LEVEL
@@ -88,7 +87,8 @@ import {
     CAMPANILE,
     BERKELEY_BUILDING_TALL,
     BERKELEY_BUILDING_WIDE__BANCROFT,
-    BERKELEY_BUILDING_WIDE__CAMPANILE
+    BERKELEY_BUILDING_WIDE__CAMPANILE,
+    NEAR_BUILDINGS
 } from '../../../../app/constants/scene/things/flats'
 import {
     WIDE_COUCH_BENNETT,
@@ -112,8 +112,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true,
-                [NEAR_BUILDINGS]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [RECYCLABLES__BENNETT]: true,
@@ -124,6 +123,9 @@ export default [
                 [BLINDS_OUTSIDE__BENNETT]: true,
                 [BENNETT_DOOR_OUTSIDE]: true,
                 [BENNETT_GATE_SIDE]: true
+            },
+            [FLAT]: {
+                [NEAR_BUILDINGS]: true
             }
         },
         cubes: COURTYARD_KEY,

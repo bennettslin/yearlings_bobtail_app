@@ -60,7 +60,6 @@ import { POPULAR_GIRL } from '../../../../app/constants/scene/actors/sasha'
 import { ASLEEP } from '../../../../app/constants/scene/actors/songs'
 import { PRINCIPAL } from '../../../../app/constants/scene/actors/tristan'
 import {
-    NEAR_BUILDINGS,
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP
 } from '../../../../app/constants/scene/things/backdrops'
@@ -107,7 +106,10 @@ import {
     THROWN_FRUIT,
     BALLED_FOIL__LOCKERS
 } from '../../../../app/constants/scene/things/fixtures'
-import { BEDROOM_BUS } from '../../../../app/constants/scene/things/flats'
+import {
+    BEDROOM_BUS,
+    NEAR_BUILDINGS
+} from '../../../../app/constants/scene/things/flats'
 import { CAPTAIN_BED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
@@ -306,8 +308,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true,
-                [NEAR_BUILDINGS]: true
+                [VALLEY_CLOSER_BACKDROP]: true
             },
             [CUTOUT]: {
                 [LOCKER_BANK]: true,
@@ -318,6 +319,9 @@ export default [
             [FIXTURE]: {
                 [THROWN_FRUIT]: true,
                 [BALLED_FOIL__LOCKERS]: true
+            },
+            [FLAT]: {
+                [NEAR_BUILDINGS]: true
             }
         },
         cubes: VAN_NUYS_LOCKERS_KEY,
@@ -348,8 +352,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true,
-                [NEAR_BUILDINGS]: true
+                [VALLEY_FURTHER_BACKDROP]: true
             },
             [BUBBLE]: {
                 [SKETCHBOOK__ESCAPE_POD]: true,
@@ -362,6 +365,9 @@ export default [
                 [TRASH_CAN__QUAD]: true,
                 [BUSH_SINGLE__QUAD]: true,
                 [BUSH_DOUBLE__QUAD]: true
+            },
+            [FLAT]: {
+                [NEAR_BUILDINGS]: true
             }
         },
         cubes: VAN_NUYS_QUAD_KEY,

@@ -33,8 +33,7 @@ import {
     THOUGHT_LARGE__LEFT,
     THOUGHT_LARGE__RIGHT,
     DISTANT_HOUSES_BACKDROP,
-    TAIWAN_MOUNTAINS_BACKDROP,
-    NEAR_BUILDINGS
+    TAIWAN_MOUNTAINS_BACKDROP
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     SKETCH_TOGETHER,
@@ -59,7 +58,8 @@ import {
     TAIWAN_MOUNTAIN_RIGHT,
     DRIVING_HOUSE_LEFT,
     DRIVING_HOUSE__RIGHT,
-    SCHOOL_BUNGALOW
+    SCHOOL_BUNGALOW,
+    NEAR_BUILDINGS
 } from '../../../../app/constants/scene/things/flats'
 import {
     TAIWAN_BRIDGE,
@@ -208,8 +208,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [THOUGHT_LARGE__RIGHT]: true,
-                [NEAR_BUILDINGS]: true
+                [THOUGHT_LARGE__RIGHT]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__RIGHT]: true,
@@ -221,6 +220,7 @@ export default [
                 [CAMPUS_TREE_DOUBLE__TETHERBALL]: true
             },
             [FLAT]: {
+                [NEAR_BUILDINGS]: true,
                 [SCHOOL_BUNGALOW]: true
             }
         },

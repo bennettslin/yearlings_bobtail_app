@@ -51,7 +51,6 @@ import {
     PROTESTER
 } from '../../../../app/constants/scene/actors/songs'
 import {
-    NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
     OAKLAND_SIDE__LEVEL
 } from '../../../../app/constants/scene/things/backdrops'
@@ -79,7 +78,8 @@ import {
     CAMPANILE,
     BERKELEY_BUILDING_TALL,
     BERKELEY_BUILDING_WIDE__BANCROFT,
-    BERKELEY_BUILDING_WIDE__CAMPANILE
+    BERKELEY_BUILDING_WIDE__CAMPANILE,
+    NEAR_BUILDINGS
 } from '../../../../app/constants/scene/things/flats'
 import {
     LIZ_PILLOWS,
@@ -176,8 +176,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true,
-                [NEAR_BUILDINGS]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [DUMPSTER]: true
@@ -187,6 +186,9 @@ export default [
             },
             [FIXTURE]: {
                 [BALLED_FOIL__ALLEY]: true
+            },
+            [FLAT]: {
+                [NEAR_BUILDINGS]: true
             },
             [PUPPET]: {
                 [GHOST_ODIN_ALLEY]: true

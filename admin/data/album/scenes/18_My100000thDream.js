@@ -50,7 +50,6 @@ import {
 } from '../../../../app/constants/scene/actors/bennettLiz'
 import {
     OAKLAND_SIDE__LEVEL,
-    NEAR_BUILDINGS,
     MOUNTAIN_PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP
@@ -71,6 +70,7 @@ import {
 import { EL_TORITO_DOORS } from '../../../../app/constants/scene/things/doors'
 import { HOSPITAL_RECORD_PLAYER } from '../../../../app/constants/scene/things/fixtures'
 import {
+    NEAR_BUILDINGS,
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR,
@@ -107,8 +107,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true,
-                [NEAR_BUILDINGS]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CUTOUT]: {
                 [DISPENSER_LEFT]: true,
@@ -116,6 +115,9 @@ export default [
             },
             [DOOR]: {
                 [EL_TORITO_DOORS]: true
+            },
+            [FLAT]: {
+                [NEAR_BUILDINGS]: true
             }
         },
         cubes: EL_TORITO_KEY,

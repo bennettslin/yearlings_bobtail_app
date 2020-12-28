@@ -1,5 +1,7 @@
 import nohoHouseLeft from '../../../../../assets/svgs/flats/nohoHouseLeft'
 import nohoHouseRight from '../../../../../assets/svgs/flats/nohoHouseRight'
+import nearHouses from '../../../../../assets/svgs/flats/nearHouses'
+import nearBuildings from '../../../../../assets/svgs/flats/nearBuildings'
 import schoolBungalow from '../../../../../assets/svgs/flats/schoolBungalow'
 import valleyFreeway from '../../../../../assets/svgs/flats/valleyFreeway'
 import bedroomBus from '../../../../../assets/svgs/flats/bedroomBus'
@@ -57,6 +59,8 @@ import pampasFar from '../../../../../assets/svgs/flats/pampasFar'
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
+    NEAR_HOUSES,
+    NEAR_BUILDINGS,
     SCHOOL_BUNGALOW,
     VALLEY_FREEWAY,
     BEDROOM_BUS,
@@ -121,6 +125,8 @@ import {
 export default {
     [NOHO_HOUSE_LEFT]: nohoHouseLeft,
     [NOHO_HOUSE_RIGHT]: nohoHouseRight,
+    [NEAR_HOUSES]: nearHouses,
+    [NEAR_BUILDINGS]: nearBuildings,
     [SCHOOL_BUNGALOW]: schoolBungalow,
     [VALLEY_FREEWAY]: valleyFreeway,
     [BEDROOM_BUS]: bedroomBus,

@@ -5,6 +5,7 @@ import {
     CUTOUT,
     DOOR,
     FIXTURE,
+    FLAT,
     FURNITURE,
     PANEL
 } from '../../../../app/constants/scene/things'
@@ -51,10 +52,7 @@ import {
     MINGLING,
     WAITING
 } from '../../../../app/constants/scene/actors/songs'
-import {
-    OAKLAND_SIDE__LEVEL,
-    NEAR_BUILDINGS
-} from '../../../../app/constants/scene/things/backdrops'
+import { OAKLAND_SIDE__LEVEL } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__AMY,
     BUBBLE_MEDIUM__AMY,
@@ -79,6 +77,7 @@ import {
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION
 } from '../../../../app/constants/scene/things/fixtures'
+import { NEAR_BUILDINGS } from '../../../../app/constants/scene/things/flats'
 import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION
@@ -211,14 +210,16 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true,
-                [NEAR_BUILDINGS]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [DOOR]: {
                 [CLUB_DOOR_OPEN]: true
             },
             [FIXTURE]: {
                 [DRUMS_STACKED__CLUB]: true
+            },
+            [FLAT]: {
+                [NEAR_BUILDINGS]: true
             }
         },
         cubes: CLUB_LOADING,

@@ -7,8 +7,6 @@ import {
     LOS_ANGELES_BACKDROP,
     MOUNTAIN_TAIWAN_BACKDROP,
     MOUNTAIN_PAMPAS_BACKDROP,
-    NEAR_BUILDINGS,
-    NEAR_HOUSES,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW,
     OAKLAND_SIDE__LEVEL,
@@ -56,14 +54,6 @@ export default {
         },
         [MOUNTAIN_PAMPAS_BACKDROP]: {
             scaleFactor: 0.66
-        },
-        [NEAR_BUILDINGS]: {
-            scaleFactor: 0.66,
-            trimBottom: 0.05
-        },
-        [NEAR_HOUSES]: {
-            scaleFactor: 0.7,
-            trimBottom: 0.05
         },
         [OAKLAND_FRONT__LOW]: {
             yIndex: 0,

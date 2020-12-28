@@ -58,7 +58,6 @@ import {
 import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
 import { GANGBANGER } from '../../../../app/constants/scene/actors/songs'
 import {
-    NEAR_HOUSES,
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP
@@ -85,6 +84,7 @@ import {
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     VALLEY_FREEWAY,
+    NEAR_HOUSES,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     FAMILY_HOUSE,
@@ -249,14 +249,14 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true,
-                [NEAR_HOUSES]: true
+                [VALLEY_CLOSER_BACKDROP]: true
             },
             [CUTOUT]: {
                 [SHOPPING_CART]: true,
                 [FIRE_HYDRANT]: true
             },
             [FLAT]: {
+                [NEAR_HOUSES]: true,
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
             }
@@ -316,13 +316,13 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NEAR_HOUSES]: true,
                 [VALLEY_CLOSER_BACKDROP]: true
             },
             [CUTOUT]: {
                 [CAMPFIRE]: true
             },
             [FLAT]: {
+                [NEAR_HOUSES]: true,
                 [FAMILY_HOUSE]: true
             },
             [PANEL]: {

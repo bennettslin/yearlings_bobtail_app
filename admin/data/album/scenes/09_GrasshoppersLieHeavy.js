@@ -51,7 +51,6 @@ import {
     RUMPLED_LINENS
 } from '../../../../app/constants/scene/actors/songs'
 import {
-    NEAR_BUILDINGS,
     OAKLAND_FRONT__HIGH,
     OAKLAND_SIDE__LEVEL
 } from '../../../../app/constants/scene/things/backdrops'
@@ -128,6 +127,7 @@ import {
     USED_CONDOM_REFLECTION
 } from '../../../../app/constants/scene/things/fixtures'
 import {
+    NEAR_BUILDINGS,
     PUBLIC_FAR__LIZ_GATE,
     PUBLIC_NEAR__LIZ_GATE
 } from '../../../../app/constants/scene/things/flats'
@@ -306,8 +306,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true,
-                [NEAR_BUILDINGS]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CARDBOARD]: {
                 [CODE_BOX]: true
@@ -319,6 +318,9 @@ export default [
             },
             [DOOR]: {
                 [BENNETT_GATE_FRONT]: true
+            },
+            [FLAT]: {
+                [NEAR_BUILDINGS]: true
             }
         },
         cubes: BENNETT_GATE_KEY,
@@ -341,8 +343,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true,
-                [NEAR_BUILDINGS]: true
+                [OAKLAND_SIDE__LEVEL]: true
             },
             [CARDBOARD]: {
                 [CODE_BOX]: true
@@ -354,6 +355,9 @@ export default [
             },
             [DOOR]: {
                 [BENNETT_GATE_FRONT]: true
+            },
+            [FLAT]: {
+                [NEAR_BUILDINGS]: true
             }
         },
         cubes: BENNETT_GATE_KEY,

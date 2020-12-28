@@ -4,6 +4,7 @@ import {
 } from '../../../../../app/constants/scene/things'
 import { FIRE_HYDRANT } from '../../../../../app/constants/scene/things/cutouts'
 import {
+    NEAR_HOUSES,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT
 } from '../../../../../app/constants/scene/things/flats'
@@ -16,6 +17,10 @@ export default {
         }
     },
     [FLAT]: {
+        [NEAR_HOUSES]: {
+            scaleFactor: 0.7,
+            trimBottom: 0.05
+        },
         [NOHO_HOUSE_LEFT]: {
             yIndex: 1,
             xPosition: 2.5,

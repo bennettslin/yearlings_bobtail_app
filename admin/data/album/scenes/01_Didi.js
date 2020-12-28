@@ -45,9 +45,7 @@ import {
 } from '../../../../app/constants/scene/actors/esther'
 import {
     VALLEY_CLOSER_BACKDROP,
-    NEAR_HOUSES,
-    VALLEY_FURTHER_BACKDROP,
-    NEAR_BUILDINGS
+    VALLEY_FURTHER_BACKDROP
 } from '../../../../app/constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../../../app/constants/scene/things/bubbles'
 import { JOHNNY_HORTON_ALBUM } from '../../../../app/constants/scene/things/cardboards'
@@ -67,6 +65,8 @@ import {
     RECORD_PLAYER_STOOL
 } from '../../../../app/constants/scene/things/fixtures'
 import {
+    NEAR_BUILDINGS,
+    NEAR_HOUSES,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT
 } from '../../../../app/constants/scene/things/flats'
@@ -81,13 +81,13 @@ export default [
         description: `North Hollywood houses.`,
         presences: {
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true,
-                [NEAR_HOUSES]: true
+                [VALLEY_CLOSER_BACKDROP]: true
             },
             [CUTOUT]: {
                 [FIRE_HYDRANT]: true
             },
             [FLAT]: {
+                [NEAR_HOUSES]: true,
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
             }
@@ -114,13 +114,13 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true,
-                [NEAR_HOUSES]: true
+                [VALLEY_CLOSER_BACKDROP]: true
             },
             [CUTOUT]: {
                 [FIRE_HYDRANT]: true
             },
             [FLAT]: {
+                [NEAR_HOUSES]: true,
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
             }
@@ -147,8 +147,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true,
-                [NEAR_BUILDINGS]: true
+                [VALLEY_FURTHER_BACKDROP]: true
             },
             [BUBBLE]: {
                 [ESTHER_SPEECH]: true
@@ -162,6 +161,9 @@ export default [
             [FIXTURE]: {
                 [PLAYGROUND_BALL]: true,
                 [SAFEWAY_BAG]: true
+            },
+            [FLAT]: {
+                [NEAR_BUILDINGS]: true
             }
         },
         cubes: NOHO_SCHOOL_KEY,

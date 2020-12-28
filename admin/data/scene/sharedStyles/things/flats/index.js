@@ -23,6 +23,8 @@ import {
     FERRIS_WHEEL,
     FOREBODING_TREES,
     GO_KART_TRACK,
+    NEAR_BUILDINGS,
+    NEAR_HOUSES,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     OAKLAND_FLAG,
@@ -83,7 +85,8 @@ import {
     ROAD__SHARED,
     ROCK__SHARED,
     TAIWAN_FOLIAGE__SHARED,
-    TAIWAN_MOUNTAIN__SHARED
+    TAIWAN_MOUNTAIN__SHARED,
+    WALL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
     ALL_VEHICLES__SHARED,
@@ -195,6 +198,16 @@ export default {
         ALL_VEHICLES__SHARED,
         CHECKER_FLAG__SHARED,
         POLE__SHARED
+    ],
+    [NEAR_BUILDINGS]: [
+        BUILDINGS__SHARED,
+        FOLIAGE__SHARED,
+        WALL__SHARED
+    ],
+    [NEAR_HOUSES]: [
+        FOLIAGE__SHARED,
+        HOUSE__SHARED,
+        WALL__SHARED
     ],
     [NOHO_HOUSE_LEFT]: [
         DOOR__SHARED,
