@@ -11,18 +11,20 @@
 
 # UI TODO:
 * Have single dark cube and spotlight colour?
+* Bedroom open cubes.
+* Night colours.
 * Move ghost dad's hat.
 * Bennett has ghost tail in Uncanny Valley.
 * Make road floors have path colour?
 * El Torito logo
-* Remove depth shading from slant direction cubes?
 * Wedding platform chair and tables
-* Final gravestone. (Move Bennett and Liz to left.)
 * Trash chute to dumpster
 * Roads magical background.
 * Make roads fork.
 * Constellations shadows.
+* Final gravestone. (Move Bennett and Liz to left.)
 * Young children heads.
+* Remove depth shading from slant direction cubes?
 * More panels
     * Nurse bench
     * Bedroom stool
