@@ -12,7 +12,6 @@
 # UI TODO:
 * Night colours.
 * Make mermaid and serpent colours the same.
-* Move ghost dad's hat.
 * Bennett has ghost tail in Uncanny Valley.
 * Make road floors have path colour?
 * El Torito logo
@@ -37,6 +36,7 @@
     * El Cerrito freeway
     * Victrola stand
 
+* Consolidate door styles
 * Shared record style
 * Porcelain for bathtub, mirrored sink, and dishroom sink
 * Flag colours
