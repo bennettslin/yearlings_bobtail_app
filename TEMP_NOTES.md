@@ -36,6 +36,7 @@
     * El Cerrito freeway
     * Victrola stand
 
+* Shared record style
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Make sure backstory and narrative tenses are correct.

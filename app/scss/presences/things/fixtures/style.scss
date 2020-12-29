@@ -65,10 +65,6 @@
     .boxInset { fill: hsl(293, 22%, 70%); }
 }
 
-.crackedPicture {
-    .crack { fill: hsl(61, 23%, 62%); }
-}
-
 .fridgeDrawings {
     .trollShoes { fill: hsl(44, 16%, 28%); }
     .trollPants { fill: hsl(45, 16%, 39%); }
@@ -83,20 +79,10 @@
 }
 
 .hospitalRecordPlayer {
-    .baseSide { fill: hsl(37, 19%, 38%); }
-    .baseFront { fill: hsl(38, 19%, 45%); }
-    .trimSide { fill: hsl(48, 32%, 62%); }
-    .trimFront { fill: hsl(48, 25%, 56%); }
-    .trimTop { fill: hsl(48, 37%, 65%); }
-    .silverDark { fill: hsl(175, 11%, 55%); }
     .hornOuter { fill: hsl(49, 39%, 53%); }
     .hornInner { fill: hsl(48, 40%, 57%); }
-    .silverMedium { fill: hsl(178, 14%, 60%); }
     .record { fill: hsl(156, 6%, 31%); }
     .label { fill: hsl(68, 27%, 59%); }
-    .stylusSide { fill: hsl(68, 34%, 55%); }
-    .stylusFront { fill: hsl(67, 28%, 48%); }
-    .silverLight { fill: hsl(178, 17%, 65%); }
 }
 
 .keyboard {

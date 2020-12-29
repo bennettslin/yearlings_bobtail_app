@@ -93,6 +93,7 @@ import {
     BRASS__SHARED,
     CHROME__SHARED,
     IRON__SHARED,
+    MAPLE__SHARED,
     OAK__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
@@ -186,7 +187,12 @@ export default {
     [GUITAR_CASE_OPEN]: GUITAR_CASE__SHARED,
     [GUITAR_CASE_UPRIGHT]: GUITAR_CASE__SHARED,
     [HAIRCUT_SCISSORS]: SCISSORS__SHARED,
-    [HOSPITAL_RECORD_PLAYER]: null,
+    [HOSPITAL_RECORD_PLAYER]: [
+        BRASS__SHARED,
+        MAPLE__SHARED,
+        OAK__SHARED,
+        STEEL__SHARED
+    ],
     [KEYBOARD]: null,
     [KICK_DRUM]: [
         CHROME__SHARED,
