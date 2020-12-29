@@ -92,14 +92,15 @@ import {
     IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
+    ROCK__SHARED,
     RUBBER__SHARED,
-    STEEL__SHARED
+    STEEL__SHARED,
+    STONE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     LAMPPOST__SHARED,
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
-    ROCK__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TRAFFIC_LIGHT__SHARED,
     WALL__SHARED
@@ -148,7 +149,10 @@ export default {
     [EL_CERRITO_TREE]: FOLIAGE__SHARED,
     [FIRE_HYDRANT]: null,
     [GLASS_RACK]: CUP__SHARED,
-    [GRAVESTONE]: null,
+    [GRAVESTONE]: [
+        ROCK__SHARED,
+        STONE__SHARED
+    ],
     [HOSTESS_STAND]: [
         OAK__SHARED,
         BOOK__SHARED

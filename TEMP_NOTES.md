@@ -11,6 +11,7 @@
 
 # UI TODO:
 * Night colours.
+* Make mermaid and serpent colours the same.
 * Move ghost dad's hat.
 * Bennett has ghost tail in Uncanny Valley.
 * Make road floors have path colour?
@@ -48,6 +49,7 @@
 * consolidate coloured paper
 * burlap
 * Arrange cemetery graves better.
+* Previewer groups by shared style.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

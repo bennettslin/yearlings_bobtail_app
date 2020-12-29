@@ -56,6 +56,7 @@ import {
     DISH__SHARED,
     TRAY__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
+import { DRAWING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
     ATTIC_LINENS__SHARED,
     BENNETT_LINENS__SHARED,
@@ -68,13 +69,13 @@ import {
     IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
+    ROCK__SHARED,
     RUBBER__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     FOLIAGE__SHARED,
-    OCEAN_CAVE__SHARED,
-    ROCK__SHARED
+    OCEAN_CAVE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
     SHADOW__SHARED,
@@ -109,7 +110,10 @@ export default {
     [CAPTAIN_BED]: [
         OAK__SHARED
     ],
-    [CAVE_SHADOWS]: ROCK__SHARED,
+    [CAVE_SHADOWS]: [
+        DRAWING__SHARED,
+        ROCK__SHARED
+    ],
     [CONVEYOR_BELT]: [
         CUP__SHARED,
         DISH__SHARED,

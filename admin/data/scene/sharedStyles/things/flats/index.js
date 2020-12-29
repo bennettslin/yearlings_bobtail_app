@@ -78,6 +78,7 @@ import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles
 import {
     IRON__SHARED,
     OAK__SHARED,
+    ROCK__SHARED,
     RUBBER__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
@@ -89,7 +90,6 @@ import {
     MOUNTAIN__SHARED,
     OCEAN_CAVE__SHARED,
     ROAD__SHARED,
-    ROCK__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
     WALL__SHARED
