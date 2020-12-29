@@ -58,7 +58,6 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
     ATTIC_LINENS__SHARED,
-    BENNETT_BED__SHARED,
     BENNETT_LINENS__SHARED,
     LIZ_LINENS__SHARED,
     MIRIAM_LINENS__SHARED,
@@ -68,6 +67,8 @@ import {
 import { WINDOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     IRON__SHARED,
+    MAPLE__SHARED,
+    OAK__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
@@ -95,7 +96,8 @@ export default {
     [BATHTUB]: null,
     [BEDROOM_DESK]: PRETEEN_FURNITURE__SHARED,
     [BENNETT_BED]: [
-        BENNETT_BED__SHARED,
+        MAPLE__SHARED,
+        OAK__SHARED,
         SHADOW__SHARED
     ],
     [CAPTAIN_BED]: PRETEEN_FURNITURE__SHARED,

@@ -49,10 +49,7 @@ import {
     BASEMENT_TAKEOUT__SHARED,
     LANCET_PEN__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/food'
-import {
-    BENNETT_BED__SHARED,
-    BENNETT_LINENS__SHARED
-} from '../../../../../../app/constants/scene/sharedStyles/furniture'
+import { BENNETT_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
 import {
     DOOR__SHARED,
     WINDOW__SHARED
@@ -66,8 +63,9 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     IRON__SHARED,
-    STEEL__SHARED,
-    OAK__SHARED
+    MAPLE__SHARED,
+    OAK__SHARED,
+    STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     CHECKER_FLAG__SHARED,
@@ -201,13 +199,14 @@ export default {
     [SKETCH_ESCAPE_POD]: DRAWING__SHARED,
     [SKETCH_TOGETHER]: DRAWING__SHARED,
     [THOUGHT_AMY]: [
-        BENNETT,
         AMY,
+        BENNETT,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED,
-        BENNETT_BED__SHARED,
         BENNETT_LINENS__SHARED,
-        BENNETT_ROOM_SHARED
+        BENNETT_ROOM_SHARED,
+        MAPLE__SHARED,
+        OAK__SHARED,
+        THOUGHT__SHARED
     ],
     [THOUGHT_GO_KART]: [
         BUBBLE__SHARED,
