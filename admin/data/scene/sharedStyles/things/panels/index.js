@@ -61,7 +61,6 @@ import {
     BENNETT_LINENS__SHARED,
     LIZ_LINENS__SHARED,
     MIRIAM_LINENS__SHARED,
-    PRETEEN_FURNITURE__SHARED,
     WAITING_ARMCHAIR__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/furniture'
 import { WINDOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
@@ -94,13 +93,17 @@ export default {
     [ATTIC_ARMREST]: ATTIC_LINENS__SHARED,
     [ATTIC_COUCH]: ATTIC_LINENS__SHARED,
     [BATHTUB]: null,
-    [BEDROOM_DESK]: PRETEEN_FURNITURE__SHARED,
+    [BEDROOM_DESK]: [
+        OAK__SHARED
+    ],
     [BENNETT_BED]: [
         MAPLE__SHARED,
         OAK__SHARED,
         SHADOW__SHARED
     ],
-    [CAPTAIN_BED]: PRETEEN_FURNITURE__SHARED,
+    [CAPTAIN_BED]: [
+        OAK__SHARED
+    ],
     [CAVE_SHADOWS]: ROCK__SHARED,
     [CONVEYOR_BELT]: [
         CUP__SHARED,
