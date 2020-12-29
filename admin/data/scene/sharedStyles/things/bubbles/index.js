@@ -73,7 +73,6 @@ import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
-    POLE__SHARED,
     ROAD__SHARED,
     SHORE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
@@ -214,7 +213,7 @@ export default {
         BUBBLE__SHARED,
         CHECKER_FLAG__SHARED,
         FOLIAGE__SHARED,
-        POLE__SHARED
+        STEEL__SHARED
     ],
     [WAITING_THOUGHT_SINGING]: [
         BANJO__SHARED,

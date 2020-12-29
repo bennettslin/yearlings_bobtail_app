@@ -96,7 +96,6 @@ import {
     LAMPPOST__SHARED,
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
-    POLE__SHARED,
     ROCK__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TRAFFIC_LIGHT__SHARED,
@@ -145,11 +144,11 @@ export default {
         BOOK__SHARED
     ],
     [HOWIE_FRIDGE]: FRIDGE__SHARED,
-    [IV_DRIP]: POLE__SHARED,
+    [IV_DRIP]: STEEL__SHARED,
     [LAMPPOST]: [
         BULB__SHARED,
         LAMPPOST__SHARED,
-        POLE__SHARED
+        STEEL__SHARED
     ],
     [LEMON_TREE]: FOLIAGE__SHARED,
     [LOCKER_BANK]: null,
@@ -191,7 +190,7 @@ export default {
     ],
     [SANDBAGS]: null,
     [SHOPPING_CART]: GARBAGE_BAG__SHARED,
-    [SIGNPOST]: POLE__SHARED,
+    [SIGNPOST]: STEEL__SHARED,
     [STAGE_LIGHTS]: [
         OAK__SHARED,
         STEEL__SHARED
@@ -223,7 +222,7 @@ export default {
     [TWIN_STREETLAMP]: [
         BULB__SHARED,
         LAMPPOST__SHARED,
-        POLE__SHARED
+        STEEL__SHARED
     ],
     [UCLA_TREE]: FOLIAGE__SHARED,
     [WAITING_ROOM_PLANT]: FOLIAGE__SHARED,
@@ -233,6 +232,6 @@ export default {
         FOLIAGE__SHARED,
         WEDDING__SHARED
     ],
-    [YELLOW_TAPED_GRILL]: POLE__SHARED
+    [YELLOW_TAPED_GRILL]: STEEL__SHARED
 }
 

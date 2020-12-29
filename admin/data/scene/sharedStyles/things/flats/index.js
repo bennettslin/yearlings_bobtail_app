@@ -75,7 +75,7 @@ import {
     WINDOW__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
-import { IRON__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
+import { IRON__SHARED, STEEL__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
@@ -83,7 +83,6 @@ import {
     GRAVE__SHARED,
     MOUNTAIN__SHARED,
     OCEAN_CAVE__SHARED,
-    POLE__SHARED,
     ROAD__SHARED,
     ROCK__SHARED,
     TAIWAN_FOLIAGE__SHARED,
@@ -209,7 +208,7 @@ export default {
     [GO_KART_TRACK]: [
         ALL_VEHICLES__SHARED,
         CHECKER_FLAG__SHARED,
-        POLE__SHARED
+        STEEL__SHARED
     ],
     [NEAR_BUILDINGS]: [
         BUILDINGS__SHARED,
@@ -234,7 +233,7 @@ export default {
         HOUSE__SHARED,
         WINDOW__SHARED
     ],
-    [OAKLAND_FLAG]: POLE__SHARED,
+    [OAKLAND_FLAG]: STEEL__SHARED,
     [OAKLAND_HOUSE_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
@@ -371,7 +370,7 @@ export default {
     ],
     [TENNIS_COURT]: [
         FOLIAGE__SHARED,
-        POLE__SHARED
+        STEEL__SHARED
     ],
     [VALLEY_FREEWAY]: [
         BUILDINGS__SHARED,
