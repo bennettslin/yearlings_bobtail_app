@@ -73,6 +73,7 @@ import {
     BUBBLE__SHARED,
     SNOWGLOBE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/props'
+import { RUBBER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     TAIWAN_BUOY__SHARED,
     TAIWAN_RICKSHAW__SHARED
@@ -115,6 +116,7 @@ export default {
         ALL_VEHICLES__SHARED,
         BENNETT_PAST__SHARED,
         ODIN_PAST__SHARED,
+        RUBBER__SHARED,
         TAIWAN_RICKSHAW__SHARED
     ],
     [BENNETT_SHORE]: [
@@ -180,12 +182,13 @@ export default {
         ALL_PEOPLE__SHARED
     ],
     [SNOWGLOBE_FUTURE_REATTA]: [
-        REATTA__SHARED,
-        SNOWGLOBE__SHARED,
+        ALL_PEOPLE__SHARED,
+        ALL_VEHICLES__SHARED,
         BENNETT_FUTURE__SHARED,
         MIRIAM_FUTURE__SHARED,
-        ALL_PEOPLE__SHARED,
-        ALL_VEHICLES__SHARED
+        REATTA__SHARED,
+        RUBBER__SHARED,
+        SNOWGLOBE__SHARED
     ],
     [SNOWGLOBE_PAST]: [
         SNOWGLOBE__SHARED,

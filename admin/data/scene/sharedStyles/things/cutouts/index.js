@@ -92,6 +92,7 @@ import {
     IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
+    RUBBER__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
@@ -126,7 +127,10 @@ export default {
     [CLIFF_TREE]: FOLIAGE__SHARED,
     [CYPRESS_DOUBLE]: FOLIAGE__SHARED,
     [CYPRESS_SINGLE]: FOLIAGE__SHARED,
-    [DISHROOM_DOLLY]: ALL_VEHICLES__SHARED,
+    [DISHROOM_DOLLY]: [
+        ALL_VEHICLES__SHARED,
+        RUBBER__SHARED
+    ],
     [DISH_PILE]: DISH__SHARED,
     [DISPENSER_LEFT]: NEWSPAPER__SHARED,
     [DISPENSER_RIGHT]: [
@@ -135,7 +139,8 @@ export default {
     ],
     [DUMPSTER]: [
         ALL_VEHICLES__SHARED,
-        GARBAGE_BAG__SHARED
+        GARBAGE_BAG__SHARED,
+        RUBBER__SHARED
     ],
     [EL_CERRITO_TREE]: FOLIAGE__SHARED,
     [FIRE_HYDRANT]: null,

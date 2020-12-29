@@ -65,6 +65,7 @@ import {
     IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
+    RUBBER__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
@@ -186,7 +187,8 @@ export default {
         BUBBLE__SHARED,
         FOLIAGE__SHARED,
         REATTA__SHARED,
-        ROAD__SHARED
+        ROAD__SHARED,
+        RUBBER__SHARED
     ],
     [CONSTELLATION_SIBLING]: CONSTELLATION__SHARED,
     [CONSTELLATION_TARPIT]: CONSTELLATION__SHARED,

@@ -42,6 +42,7 @@ import {
     OPAL__SHARED,
     PEAFOWL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/animals'
+import { RUBBER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
 import { SKETCHBOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
     ALL_VEHICLES__SHARED,
@@ -125,10 +126,11 @@ export default {
         MOTHER
     ],
     [PUPPET_REATTA]: [
-        REATTA__SHARED,
+        BENNETT,
+        MIRIAM,
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED,
-        BENNETT,
-        MIRIAM
+        REATTA__SHARED,
+        RUBBER__SHARED
     ]
 }

@@ -1,10 +1,10 @@
 <svg viewBox="0 0 2774.48 1234.01">
   <rect class="chassis" x="194.83" y="648.01" width="2313" height="387"/>
-  <g class="tire">
+  <g class="rubberDark">
     <circle cx="498.83" cy="969.01" r="264"/>
     <circle cx="2182.83" cy="969.01" r="264"/>
   </g>
-  <g class="tireDark">
+  <g class="rubberDarker">
     <circle cx="498.83" cy="969.01" r="190"/>
     <circle cx="2182.83" cy="969.01" r="190"/>
   </g>

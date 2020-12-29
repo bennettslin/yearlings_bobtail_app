@@ -68,6 +68,7 @@ import {
     IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
+    RUBBER__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
@@ -122,7 +123,8 @@ export default {
     ],
     [GO_KART_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
-        GO_KART__SHARED
+        GO_KART__SHARED,
+        RUBBER__SHARED
     ],
     [GO_KART_SEAT]: GO_KART__SHARED,
     [HOSPITAL_BED]: null,
@@ -145,11 +147,13 @@ export default {
     [PHONE_CALL_PANEL]: null,
     [REATTA_EXTERIOR_FRONT]: [
         ALL_VEHICLES__SHARED,
-        REATTA__SHARED
+        REATTA__SHARED,
+        RUBBER__SHARED
     ],
     [REATTA_EXTERIOR_REAR]: [
         ALL_VEHICLES__SHARED,
         REATTA__SHARED,
+        RUBBER__SHARED,
         WINDOW__SHARED
     ],
     [REATTA_INTERIOR]: INTERIOR__SHARED,
@@ -158,6 +162,7 @@ export default {
     [REATTA_SEAT_BACK_DOWN]: REATTA__SHARED,
     [SATURN_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
+        RUBBER__SHARED,
         SATURN__SHARED
     ],
     [SATURN_INTERIOR]: INTERIOR__SHARED,
@@ -165,6 +170,7 @@ export default {
     [SATURN_SEAT_DOWN]: SATURN__SHARED,
     [SCHOOLBUS_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
+        RUBBER__SHARED,
         SCHOOLBUS__SHARED
     ],
     [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
@@ -176,7 +182,10 @@ export default {
     [TROLL_SHADOW_FAR]: SHADOW__SHARED,
     [TROLL_SHADOW_LEFT]: SHADOW__SHARED,
     [TROLL_SHADOW_RIGHT]: SHADOW__SHARED,
-    [VOLKSWAGEN]: ALL_VEHICLES__SHARED,
+    [VOLKSWAGEN]: [
+        ALL_VEHICLES__SHARED,
+        RUBBER__SHARED
+    ],
     [WAITING_ARMCHAIR]: WAITING_ARMCHAIR__SHARED,
     [WAITING_ARMREST]: WAITING_ARMCHAIR__SHARED,
     [WEDDING_PLATFORM_FRONT]: [

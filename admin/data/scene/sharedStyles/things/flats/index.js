@@ -78,6 +78,7 @@ import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles
 import {
     IRON__SHARED,
     OAK__SHARED,
+    RUBBER__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
@@ -213,6 +214,7 @@ export default {
     [GO_KART_TRACK]: [
         ALL_VEHICLES__SHARED,
         CHECKER_FLAG__SHARED,
+        RUBBER__SHARED,
         STEEL__SHARED
     ],
     [NEAR_BUILDINGS]: [
