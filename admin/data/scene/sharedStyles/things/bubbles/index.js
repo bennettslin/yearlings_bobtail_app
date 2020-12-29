@@ -215,14 +215,15 @@ export default {
         STEEL__SHARED
     ],
     [WAITING_THOUGHT_SINGING]: [
-        BANJO__SHARED,
         BENNETT,
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED,
+        BANJO__SHARED,
         BENNETT_LINENS__SHARED,
-        BENNETT_ROOM_SHARED
+        BENNETT_ROOM_SHARED,
+        STEEL__SHARED,
+        THOUGHT__SHARED
     ],
     [WAITING_THOUGHT_STUDYING]: [
         BENNETT,
@@ -241,6 +242,7 @@ export default {
         THOUGHT__SHARED,
         BUBBLE__SHARED,
         FOLIAGE__SHARED,
+        MAPLE__SHARED,
         MOUNTAIN__SHARED,
         ROAD__SHARED,
         SHORE__SHARED

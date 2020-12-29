@@ -37,6 +37,16 @@
     * Victrola stand
 
 * Shared record style
+* Porcelain for bathtub, mirrored sink, and dishroom sink
+* Flag colours
+* Mirrored sink can just use regular people clothes
+* khari speech attack can use regular people clothes.
+* water for golden gate bridge and earth
+* ground
+* consolidate rock and grave into iron material
+* consolidate coloured paper
+* rubber material, consolidate tires
+
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Make sure backstory and narrative tenses are correct.

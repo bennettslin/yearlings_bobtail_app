@@ -65,7 +65,7 @@ export default {
     ],
     [OCEAN_BOTTOM_FAR]: VOLCANO__SHARED,
     [OCEAN_FLOOR_FAR]: VOLCANO__SHARED,
-    [PHARMACY_CEL]: null,
+    [PHARMACY_CEL]: BOOK__SHARED,
     [ROAD_FUTURE]: ROAD__SHARED,
     [ROAD_PAST]: [
         BOOK__SHARED,
