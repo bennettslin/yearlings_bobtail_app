@@ -9,6 +9,7 @@ import {
     DRUMSTICK__SHARED,
     DRUM_STAND__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
+import { STEEL__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
 import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import { RAINBOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
 
@@ -23,7 +24,8 @@ export default {
         DRUMS__SHARED,
         DRUM_STAND__SHARED,
         BOOK__SHARED,
-        RAINBOW__SHARED
+        RAINBOW__SHARED,
+        STEEL__SHARED
     ],
     [EPILOGUE]: [
         BOOK__SHARED,

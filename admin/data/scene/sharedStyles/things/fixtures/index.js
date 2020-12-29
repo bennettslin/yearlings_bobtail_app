@@ -91,7 +91,12 @@ import {
     GUITAR_CASE__SHARED,
     MICROPHONE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
-import { IRON__SHARED, OAK__SHARED, STEEL__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
+import {
+    BRASS__SHARED,
+    IRON__SHARED,
+    OAK__SHARED,
+    STEEL__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     FREEWAY_SIGN__SHARED,
     TETHERBALL_POLE__SHARED
@@ -150,19 +155,23 @@ export default {
         LIZ
     ],
     [DRUMKIT]: [
+        BRASS__SHARED,
         CYMBAL__SHARED,
         DRUMS__SHARED,
-        DRUM_STAND__SHARED
+        DRUM_STAND__SHARED,
+        STEEL__SHARED
     ],
     [DRUMS_STACKED]: [
         DRUMS__SHARED,
         DRUM_STAND__SHARED,
-        DRUM_THRONE__SHARED
+        DRUM_THRONE__SHARED,
+        STEEL__SHARED
     ],
     [DRUM_THRONE]: [
         DRUMS__SHARED,
         DRUM_STAND__SHARED,
-        DRUM_THRONE__SHARED
+        DRUM_THRONE__SHARED,
+        STEEL__SHARED
     ],
     [ELECTRIC_GUITAR]: ELECTRIC_GUITAR__SHARED,
     [EVIAN_BOTTLES]: EVIAN__SHARED,
@@ -183,7 +192,8 @@ export default {
     [KEYBOARD]: null,
     [KICK_DRUM]: [
         DRUMS__SHARED,
-        DRUM_STAND__SHARED
+        DRUM_STAND__SHARED,
+        STEEL__SHARED
     ],
     [LETTER_SCRAPS]: MAGAZINE__SHARED,
     [LIGHT_SWITCH]: null,
