@@ -85,14 +85,13 @@ import {
     BASS_CASE__SHARED,
     CYMBAL__SHARED,
     DRUMS__SHARED,
-    DRUM_STAND__SHARED,
-    DRUM_THRONE__SHARED,
     ELECTRIC_GUITAR__SHARED,
     GUITAR_CASE__SHARED,
     MICROPHONE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     BRASS__SHARED,
+    CHROME__SHARED,
     IRON__SHARED,
     OAK__SHARED,
     STEEL__SHARED
@@ -156,21 +155,20 @@ export default {
     ],
     [DRUMKIT]: [
         BRASS__SHARED,
+        CHROME__SHARED,
         CYMBAL__SHARED,
         DRUMS__SHARED,
-        DRUM_STAND__SHARED,
         STEEL__SHARED
     ],
     [DRUMS_STACKED]: [
+        BRASS__SHARED,
+        CHROME__SHARED,
         DRUMS__SHARED,
-        DRUM_STAND__SHARED,
-        DRUM_THRONE__SHARED,
         STEEL__SHARED
     ],
     [DRUM_THRONE]: [
+        BRASS__SHARED,
         DRUMS__SHARED,
-        DRUM_STAND__SHARED,
-        DRUM_THRONE__SHARED,
         STEEL__SHARED
     ],
     [ELECTRIC_GUITAR]: ELECTRIC_GUITAR__SHARED,
@@ -191,8 +189,8 @@ export default {
     [HOSPITAL_RECORD_PLAYER]: null,
     [KEYBOARD]: null,
     [KICK_DRUM]: [
+        CHROME__SHARED,
         DRUMS__SHARED,
-        DRUM_STAND__SHARED,
         STEEL__SHARED
     ],
     [LETTER_SCRAPS]: MAGAZINE__SHARED,
