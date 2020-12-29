@@ -66,9 +66,10 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/furniture'
 import { WINDOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
-    IRON__SHARED,
+    BRASS__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
+    PORCELAIN__SHARED,
     ROCK__SHARED,
     RUBBER__SHARED,
     STEEL__SHARED
@@ -97,6 +98,7 @@ export default {
     [BATHTUB]: [
         MAPLE__SHARED,
         OAK__SHARED,
+        PORCELAIN__SHARED,
         STEEL__SHARED
     ],
     [BEDROOM_DESK]: [
@@ -122,7 +124,9 @@ export default {
     [CROWD_BACK]: SHADOW__SHARED,
     [CROWD_SIDE]: SHADOW__SHARED,
     [DISHROOM_SINK]: [
-        IRON__SHARED,
+        BRASS__SHARED,
+        PORCELAIN__SHARED,
+        RUBBER__SHARED,
         STEEL__SHARED
     ],
     [GO_KART_EXTERIOR]: [

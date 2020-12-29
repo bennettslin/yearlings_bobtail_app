@@ -1,11 +1,12 @@
+// Skews light.
 .porcelain#{$suffix} {
-    // .porcelainDarkest { fill: hsl(35, 18%, 37%); }
-    // .porcelainDarker { fill: hsl(35, 19%, 42%); }
-    // .porcelainDark { fill: hsl(35, 20%, 47%); }
-    // .porcelainMediumDark { fill: hsl(35, 22%, 52%); }
-    // .porcelainMedium { fill: hsl(35, 22%, 57%); }
-    // .porcelainMediumLight { fill: hsl(35, 22%, 62%); }
-    // .porcelainLight { fill: hsl(35, 24%, 67%); }
-    // .porcelainLighter { fill: hsl(35, 25%, 72%); }
-    // .porcelainLightest { fill: hsl(35, 26%, 77%); }
+    .porcelainDarkest { fill: hsl(180, 28%, 57%); }
+    // .porcelainDarker { fill: hsl(180, 28%, 62%); }
+    .porcelainDark { fill: hsl(180, 28%, 67%); }
+    // .porcelainMediumDark { fill: hsl(180, 28%, 72%); }
+    .porcelainMedium { fill: hsl(180, 28%, 77%); }
+    // .porcelainMediumLight { fill: hsl(180, 28%, 82%); }
+    .porcelainLight { fill: hsl(180, 28%, 87%); }
+    // .porcelainLighter { fill: hsl(180, 28%, 92%); }
+    // .porcelainLightest { fill: hsl(180, 28%, 97%); }
 }

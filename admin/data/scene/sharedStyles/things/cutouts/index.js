@@ -92,6 +92,7 @@ import {
     IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
+    PORCELAIN__SHARED,
     ROCK__SHARED,
     RUBBER__SHARED,
     STEEL__SHARED,
@@ -170,6 +171,7 @@ export default {
         ALL_PEOPLE__SHARED,
         MAPLE__SHARED,
         OAK__SHARED,
+        PORCELAIN__SHARED,
         STEEL__SHARED
     ],
     [MONITOR_FRONT]: MONITOR__SHARED,

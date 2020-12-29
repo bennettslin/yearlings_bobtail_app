@@ -9,9 +9,6 @@
 
 .bathtub {
     .suds { fill: hsl(0, 0%, 100%); }
-    .basin { fill: hsl(180, 33%, 75%); }
-    .rim { fill: hsl(180, 33%, 85%); }
-    .claw { fill: hsl(180, 20%, 50%); }
 }
 
 .conveyorBelt {
@@ -27,12 +24,8 @@
 }
 
 .dishroomSink {
-    .leg { fill: hsl(0, 0%, 40%); }
-    .foot { fill: hsl(0, 0%, 60%); }
-    .tube { fill: hsl(0, 0%, 20%); }
     .disposalInner { fill: hsl(180, 33%, 30%); }
     .disposalOuter { fill: hsl(150, 33%, 40%); }
-    .pipe { fill: hsl(180, 20%, 50%); }
     .panelOuter { fill: hsl(200, 30%, 50%); }
     .panelInner { fill: hsl(200, 30%, 70%); }
     .buttonStop { fill: hsl(0, 40%, 50%); }

@@ -38,7 +38,6 @@
 
 * Consolidate door styles
 * Shared record style
-* Porcelain for bathtub, mirrored sink, and dishroom sink
 * Flag colours
 * Mirrored sink can just use regular people clothes
 * khari speech attack can use regular people clothes
