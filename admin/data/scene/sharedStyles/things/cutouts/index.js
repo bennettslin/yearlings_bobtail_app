@@ -129,7 +129,9 @@ export default {
     [CYPRESS_SINGLE]: FOLIAGE__SHARED,
     [DISHROOM_DOLLY]: [
         ALL_VEHICLES__SHARED,
-        RUBBER__SHARED
+        BRASS__SHARED,
+        RUBBER__SHARED,
+        STEEL__SHARED
     ],
     [DISH_PILE]: DISH__SHARED,
     [DISPENSER_LEFT]: NEWSPAPER__SHARED,
@@ -140,7 +142,8 @@ export default {
     [DUMPSTER]: [
         ALL_VEHICLES__SHARED,
         GARBAGE_BAG__SHARED,
-        RUBBER__SHARED
+        RUBBER__SHARED,
+        STEEL__SHARED
     ],
     [EL_CERRITO_TREE]: FOLIAGE__SHARED,
     [FIRE_HYDRANT]: null,

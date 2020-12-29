@@ -124,7 +124,8 @@ export default {
     [GO_KART_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
         GO_KART__SHARED,
-        RUBBER__SHARED
+        RUBBER__SHARED,
+        STEEL__SHARED
     ],
     [GO_KART_SEAT]: GO_KART__SHARED,
     [HOSPITAL_BED]: null,
@@ -148,12 +149,14 @@ export default {
     [REATTA_EXTERIOR_FRONT]: [
         ALL_VEHICLES__SHARED,
         REATTA__SHARED,
-        RUBBER__SHARED
+        RUBBER__SHARED,
+        STEEL__SHARED
     ],
     [REATTA_EXTERIOR_REAR]: [
         ALL_VEHICLES__SHARED,
         REATTA__SHARED,
         RUBBER__SHARED,
+        STEEL__SHARED,
         WINDOW__SHARED
     ],
     [REATTA_INTERIOR]: INTERIOR__SHARED,
@@ -163,7 +166,8 @@ export default {
     [SATURN_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
         RUBBER__SHARED,
-        SATURN__SHARED
+        SATURN__SHARED,
+        STEEL__SHARED
     ],
     [SATURN_INTERIOR]: INTERIOR__SHARED,
     [SATURN_SEAT]: SATURN__SHARED,
@@ -171,7 +175,8 @@ export default {
     [SCHOOLBUS_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
         RUBBER__SHARED,
-        SCHOOLBUS__SHARED
+        SCHOOLBUS__SHARED,
+        STEEL__SHARED
     ],
     [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
     [SCHOOLBUS_SEAT]: null,
@@ -184,7 +189,8 @@ export default {
     [TROLL_SHADOW_RIGHT]: SHADOW__SHARED,
     [VOLKSWAGEN]: [
         ALL_VEHICLES__SHARED,
-        RUBBER__SHARED
+        RUBBER__SHARED,
+        STEEL__SHARED
     ],
     [WAITING_ARMCHAIR]: WAITING_ARMCHAIR__SHARED,
     [WAITING_ARMREST]: WAITING_ARMCHAIR__SHARED,

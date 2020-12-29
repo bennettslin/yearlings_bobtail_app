@@ -20,7 +20,7 @@
     <ellipse cx="242.33" cy="124.8" rx="26.42" ry="29.64" transform="translate(-25.69 75.15) rotate(-16.75)"/>
     <ellipse cx="52.16" cy="111.51" rx="26.42" ry="29.64" transform="matrix(0.96, -0.29, 0.29, 0.96, -29.93, 19.77)"/>
   </g>
-  <g class="hubcap">
+  <g class="steelMedium">
     <ellipse cx="242.33" cy="124.8" rx="12.24" ry="13.73" transform="translate(-25.69 75.15) rotate(-16.75)"/>
     <ellipse cx="52.16" cy="111.51" rx="12.24" ry="13.73" transform="translate(-29.93 19.77) rotate(-16.75)"/>
   </g>
