@@ -200,7 +200,7 @@ export default {
         STEEL__SHARED
     ],
     [LETTER_SCRAPS]: MAGAZINE__SHARED,
-    [LIGHT_SWITCH]: null,
+    [LIGHT_SWITCH]: OAK__SHARED,
     [LINGERIE_DRAWING]: [
         BOOK__SHARED,
         DRAWING__SHARED,

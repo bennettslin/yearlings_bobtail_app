@@ -100,21 +100,6 @@
     .wheel { fill: hsl(163, 9%, 52%); }
 }
 
-.lightSwitch {
-    .switchPanel { fill: hsl(50, 28%, 75%); }
-    .switchInner { fill: hsl(60, 11%, 64%); }
-    .switchDark { fill: hsl(63, 17%, 72%); }
-    .switchLight { fill: hsl(62, 29%, 82%); }
-
-    .dark__indoor
-    & {
-        .switchPanel { fill: hsl(50, 28%, 5%); }
-        .switchInner { fill: hsl(60, 11%, 5%); }
-        .switchDark { fill: hsl(63, 17%, 5%); }
-        .switchLight { fill: hsl(62, 29%, 5%); }
-    }
-}
-
 .mannequin {
     .body { fill: hsl(66, 8%, 75%); }
 }
