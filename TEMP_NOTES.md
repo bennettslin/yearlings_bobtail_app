@@ -44,11 +44,8 @@
 * khari speech attack can use regular people clothes
 * water for earth
 * ground
-* rock into material
-* make grave just stone, put into material
 * consolidate coloured paper
 * burlap
-* Arrange cemetery graves better.
 * Previewer groups by shared style.
 
 # Annotation edit TODO:

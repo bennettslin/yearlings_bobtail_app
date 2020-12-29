@@ -80,13 +80,13 @@ import {
     OAK__SHARED,
     ROCK__SHARED,
     RUBBER__SHARED,
-    STEEL__SHARED
+    STEEL__SHARED,
+    STONE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
-    GRAVE__SHARED,
     MOUNTAIN__SHARED,
     OCEAN_CAVE__SHARED,
     ROAD__SHARED,
@@ -118,22 +118,22 @@ export default {
     [CAMPANILE]: FOLIAGE__SHARED,
     [CEMETERY_HILLS_LEFT]: [
         FOLIAGE__SHARED,
-        GRAVE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
+        STONE__SHARED
     ],
     [CEMETERY_HILLS_RIGHT]: [
         FOLIAGE__SHARED,
-        GRAVE__SHARED,
         MOUNTAIN__SHARED,
-        OAK__SHARED
+        OAK__SHARED,
+        STONE__SHARED
     ],
     [CLIFF_GRAVES_FAR]: [
-        GRAVE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
+        STONE__SHARED
     ],
     [CLIFF_GRAVES_NEAR]: [
-        GRAVE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
+        STONE__SHARED
     ],
     [COMMERCIAL_CENTRE]: [
         BUILDING__SHARED,

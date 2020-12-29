@@ -1,7 +1,6 @@
 export const CHECKER_FLAG__SHARED = 'checkerFlag'
 export const FOLIAGE__SHARED = 'foliage'
 export const FREEWAY_SIGN__SHARED = 'freewaySign'
-export const GRAVE__SHARED = 'grave'
 export const LAMPPOST__SHARED = 'lamppost'
 export const MOUNTAIN__SHARED = 'mountain'
 export const OCEAN_CAVE__SHARED = 'oceanCave'
