@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from '../../../../app/modules/InlineSvg'
 
-import PreviewerKilobytes from '../Kilobytes'
+import PreviewerDescription from '../Description'
 
 import {
     capitaliseForClassName,
@@ -228,10 +228,11 @@ class PreviewerSvg extends PureComponent {
                     )
                 }}
             >
-                <PreviewerKilobytes
+                <PreviewerDescription
                     {...{
                         kilobytes,
-                        presenceDisplayName
+                        presenceDisplayName,
+                        sharedStyle
                     }}
                 />
                 {svgChild}

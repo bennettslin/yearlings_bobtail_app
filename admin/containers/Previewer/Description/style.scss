@@ -1,0 +1,30 @@
+.PreviewerDescription {
+    flex-direction: column;
+}
+
+.PreviewerDescription__hideInMobile {
+    // Hide kilobytes in mobile.
+    display: none;
+
+    @media (min-width: 1000px) {
+        display: flex;
+    }
+}
+
+.PreviewerDescription__child {
+    &:not(:last-child) {
+        margin-bottom: 4px;
+    }
+}
+
+.PreviewerDescription__name {
+    font-size: 1.25em;
+}
+
+.PreviewerDescription__sharedStyles {
+    font-size: 1em;
+}
+
+.PreviewerDescription__data {
+    font-size: 1.25em;
+}

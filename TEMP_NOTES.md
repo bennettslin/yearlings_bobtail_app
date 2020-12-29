@@ -40,13 +40,12 @@
 * Porcelain for bathtub, mirrored sink, and dishroom sink
 * Flag colours
 * Mirrored sink can just use regular people clothes
-* khari speech attack can use regular people clothes.
-* water for golden gate bridge and earth
+* khari speech attack can use regular people clothes
+* water for earth
 * ground
 * rock into material
 * make grave just stone, put into material
 * consolidate coloured paper
-* rubber material, consolidate tires
 * burlap
 * Arrange cemetery graves better.
 

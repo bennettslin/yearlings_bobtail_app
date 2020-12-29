@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import PreviewerKilobytes from '../Kilobytes'
+import PreviewerDescription from '../Kilobytes'
 import { convertPresenceKeyToClassName } from '../../../../app/helpers/format'
 import {
     getPreviewerSvgMapForActor,
@@ -81,7 +81,7 @@ const PreviewerDashboard = ({
                         </option>
                     ))}
             </select>
-            <PreviewerKilobytes
+            <PreviewerDescription
                 {...{
                     className: cx(
                         'PreviewerDashboard__child',

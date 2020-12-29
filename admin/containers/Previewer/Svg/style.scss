@@ -20,12 +20,12 @@
     }
 }
 
-.Presence__kilobytes {
-    .Previewer__mainFullHeight
-    & {
-        height: calc(100% - #{$height__input});
-    }
-}
+// .Presence__kilobytes {
+//     .Previewer__mainFullHeight
+//     & {
+//         height: calc(100% - #{$height__input});
+//     }
+// }
 
 .Presence__loaded {
     width: 100%;
