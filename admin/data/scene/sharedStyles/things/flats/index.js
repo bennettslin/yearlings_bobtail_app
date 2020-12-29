@@ -376,6 +376,7 @@ export default {
     [VALLEY_FREEWAY]: [
         BUILDINGS__SHARED,
         FREEWAY_SIGN__SHARED,
-        FOLIAGE__SHARED
+        FOLIAGE__SHARED,
+        IRON__SHARED
     ]
 }

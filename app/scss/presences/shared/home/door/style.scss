@@ -39,9 +39,11 @@
 
     .dark__indoor
     & {
+        .frameDarkFront { fill: hsl(33, 15%, 5%); }
+        .doorDarkFront { fill: hsl(33, 23%, 5%); }
         .knob { fill: hsl(47, 40%, 5%); }
         .knobMount { fill: hsl(47, 41%, 5%); }
-        .faceplate { fill: hsl(47, 40%, 25%); }
+        .faceplate { fill: hsl(47, 40%, 5%); }
         .bolt { fill: hsl(47, 40%, 21%); }
         .escutcheon { fill: hsl(46, 40%, 5%); }
         .lockSide { fill: hsl(47, 40%, 5%); }

@@ -6,11 +6,15 @@
     * Attic couch parts
     * Refrigerator
     * Blanket and pillows
+* Taiwan room (Odin)
+    * Buddha
+    * Refrigerator
+    * Pictures
 * Basement bed (Uncanny)
     * Basement door (transition)
     * Bennett bed (transition)
     * Blanket and pillows (transition)
-* Bennett bed (Grasshoppers)
+* Bennett bed (Grasshoppers) (/) (except for pillow)
     * Bennett door (transition)
     * Bennett window (transition)
     * Bennett bed (transition)
@@ -26,33 +30,10 @@
     * Liz couch (transition)
     * Liz window (transition)
     * Liz door (transition)
-* Taiwan room (Odin)
-    * Buddha
-    * Refrigerator
-    * Pictures
 * Taiwan stairs (Odin) (/)
-
-# Night magic colours indoors
-* Changeling cave (Willy)
-* Bedroom (Pchelka, dogs, space)
+* Bedroom (Pchelka, dogs, space) (except for bedroom lamp)
     * Bed (transition)
     * Desk (transition)
-* Liz couch (Kyon, peafowl)
-    * Liz couch (transition)
-* Basement bed (Uncanny)
-    * Bennett bed (transition)
-
-# Seasons
-* Past
-    * Bathroom (Didi) (/)
-    * Past road
-* Present
-    * Puppet show (Saskia) (/)
-    * Present road
-* Future
-    * Bedroom (Pchelka)
-    * Future road
-        * Road
 
 # Other
 * Make rickshaw and buoy also past colours?
