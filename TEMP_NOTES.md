@@ -43,9 +43,12 @@
 * khari speech attack can use regular people clothes.
 * water for golden gate bridge and earth
 * ground
-* consolidate rock and grave into iron material
+* rock into material
+* make grave just stone, put into material
 * consolidate coloured paper
 * rubber material, consolidate tires
+* burlap
+* Arrange cemetery graves better.
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.

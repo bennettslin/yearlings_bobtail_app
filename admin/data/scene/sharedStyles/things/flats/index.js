@@ -61,9 +61,9 @@ import {
 } from '../../../../../../app/constants/scene/things/flats'
 import { OCEAN_LIFE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/animals'
 import {
-    CAMPUS__SHARED,
     BUILDINGS__SHARED,
     BUILDING__SHARED,
+    CAMPUS__SHARED,
     HOUSE__SHARED,
     OAKLAND_HOUSE_LEFT__SHARED,
     OAKLAND_HOUSE_RIGHT__SHARED,
@@ -75,7 +75,11 @@ import {
     WINDOW__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
-import { IRON__SHARED, STEEL__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
+import {
+    IRON__SHARED,
+    OAK__SHARED,
+    STEEL__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
@@ -119,7 +123,8 @@ export default {
     [CEMETERY_HILLS_RIGHT]: [
         FOLIAGE__SHARED,
         GRAVE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
+        OAK__SHARED
     ],
     [CLIFF_GRAVES_FAR]: [
         GRAVE__SHARED,
