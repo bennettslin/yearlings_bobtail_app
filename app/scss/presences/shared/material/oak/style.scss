@@ -1,4 +1,6 @@
 .oak#{$suffix} {
+    .oakDarkest { fill: hsl(35, 18%, 37%); }
+    .oakDarker { fill: hsl(35, 19%, 42%); }
     .oakDark { fill: hsl(35, 20%, 47%); }
     .oakMediumDark { fill: hsl(35, 22%, 52%); }
     .oakMedium { fill: hsl(35, 22%, 57%); }
@@ -9,6 +11,9 @@
 
     .dark__indoor
     & {
+        .oakDarkest { fill: hsl(35, 18%, 5%); }
+        .oakDarker { fill: hsl(35, 19%, 5%); }
+        .oakDark { fill: hsl(35, 20%, 5%); }
         .oakMediumLight { fill: hsl(35, 22%, 5%); }
         .oakMedium { fill: hsl(35, 22%, 5%); }
         .oakLight { fill: hsl(35, 24%, 5%); }

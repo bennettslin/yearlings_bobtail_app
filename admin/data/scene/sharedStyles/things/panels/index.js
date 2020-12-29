@@ -119,9 +119,13 @@ export default {
     ],
     [GO_KART_SEAT]: GO_KART__SHARED,
     [HOSPITAL_BED]: null,
-    [LIZ_BED]: SHADOW__SHARED,
+    [LIZ_BED]: [
+        OAK__SHARED,
+        SHADOW__SHARED
+    ],
     [LIZ_COUCH]: [
         LIZ_LINENS__SHARED,
+        OAK__SHARED,
         SHADOW__SHARED
     ],
     [OCEAN_CAVE_EXTERIOR]: OCEAN_CAVE__SHARED,
