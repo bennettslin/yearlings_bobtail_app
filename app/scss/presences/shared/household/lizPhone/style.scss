@@ -6,4 +6,15 @@
     .phoneDark { fill: hsl(188, 41%, 66%); }
     .buttonLarge { fill: hsl(210, 42%, 59%); }
     .buttonSmall { fill: hsl(126, 40%, 58%); }
+
+    .dark__indoor
+    & {
+        .antennaMedium { fill: hsl(210, 25%, 5%); }
+        .antennaLight { fill: hsl(210, 32%, 5%); }
+        .phoneLight { fill: hsl(188, 63%, 5%); }
+        .phoneMedium { fill: hsl(188, 49%, 5%); }
+        .phoneDark { fill: hsl(188, 41%, 5%); }
+        .buttonLarge { fill: hsl(210, 42%, 5%); }
+        .buttonSmall { fill: hsl(126, 40%, 5%); }
+    }
 }

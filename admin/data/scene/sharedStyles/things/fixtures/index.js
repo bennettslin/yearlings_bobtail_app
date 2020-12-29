@@ -66,6 +66,7 @@ import {
     LIZ,
     SASHA
 } from '../../../../../../app/constants/scene/actors'
+import { DRAWING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
     BANANA__SHARED,
     BUDWEISER__SHARED,
@@ -186,6 +187,7 @@ export default {
     [LIGHT_SWITCH]: null,
     [LINGERIE_DRAWING]: [
         BOOK__SHARED,
+        DRAWING__SHARED,
         SKETCHBOOK__SHARED
     ],
     [LIZ_PHONE]: LIZ_PHONE__SHARED,

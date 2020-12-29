@@ -119,12 +119,14 @@
     .switchInner { fill: hsl(60, 11%, 64%); }
     .switchDark { fill: hsl(63, 17%, 72%); }
     .switchLight { fill: hsl(62, 29%, 82%); }
-}
 
-.lingerieDrawing {
-    .skinIndian { fill: hsl(0, 0%, 75%); }
-    .lingerie { fill: hsl(0, 0%, 55%); }
-    .hairBlack { fill: hsl(0, 0%, 21%); }
+    .dark__indoor
+    & {
+        .switchPanel { fill: hsl(50, 28%, 5%); }
+        .switchInner { fill: hsl(60, 11%, 5%); }
+        .switchDark { fill: hsl(63, 17%, 5%); }
+        .switchLight { fill: hsl(62, 29%, 5%); }
+    }
 }
 
 .mannequin {
@@ -214,4 +216,19 @@
     .vaselineLabel { fill: hsl(197, 66%, 64%); }
     .capRear { fill: hsl(219, 38%, 52%); }
     .capFront { fill: hsl(219, 34%, 49%); }
+
+    .dark__indoor
+    & {
+        .rollTop { fill: hsl(304, 16%, 5%); }
+        .rollCentre { fill: hsl(34, 15%, 5%); }
+        .sheetDark { fill: hsl(305, 29%, 5%); }
+        .sheetMedium { fill: hsl(305, 33%, 5%); }
+        .sheetLight { fill: hsl(305, 33%, 5%); }
+        .vaselineDark { fill: hsl(46, 43%, 5%); }
+        .vaselineMedium { fill: hsl(46, 52%, 5%); }
+        .vaselineLight { fill: hsl(43, 48%, 5%); }
+        .vaselineLabel { fill: hsl(197, 66%, 5%); }
+        .capRear { fill: hsl(219, 38%, 5%); }
+        .capFront { fill: hsl(219, 34%, 5%); }
+    }
 }

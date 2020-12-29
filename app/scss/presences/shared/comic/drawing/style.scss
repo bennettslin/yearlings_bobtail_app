@@ -6,4 +6,11 @@
     .sketchMiddle { fill: hsla(45, 5%, 50%, 0.75); }
     .sketchLighter { fill: hsla(45, 5%, 65%, 0.75); }
     .sketchLightest { fill: hsla(45, 5%, 80%, 0.75); }
+
+    .dark__indoor
+    & {
+        .sketchDarkest { fill: hsla(45, 5%, 5%, 0.75); }
+        .sketchDarker { fill: hsla(45, 5%, 5%, 0.75); }
+        .sketchMiddle { fill: hsla(45, 5%, 5%, 0.75); }
+    }
 }

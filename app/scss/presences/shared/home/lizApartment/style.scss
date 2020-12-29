@@ -11,4 +11,19 @@
     .paneSliding { fill: hsl($HUE_LIZ_ROOM, 9%, 52%); }
     .blinds { fill: hsl($HUE_LIZ_ROOM, 5%, 74%); }
     .rail { fill: hsl($HUE_LIZ_ROOM, 17%, 66%); }
+
+    .dark__indoor
+    & {
+        .frameSide { fill: hsl($HUE_LIZ_ROOM, 17%, 5%); }
+        .frameFront { fill: hsl($HUE_LIZ_ROOM, 17%, 5%); }
+        .doorSide { fill: hsl($HUE_LIZ_ROOM + 20, 22%, 5%); }
+    
+        .sill { fill: hsl($HUE_LIZ_ROOM, 13%, 5%); }
+        .sillDark { fill: hsl($HUE_LIZ_ROOM, 10%, 58%); }
+    
+        .paneStill { fill: hsl($HUE_LIZ_ROOM, 12%, 5%); }
+        .paneSliding { fill: hsl($HUE_LIZ_ROOM, 9%, 5%); }
+        .blinds { fill: hsl($HUE_LIZ_ROOM, 5%, 5%); }
+        .rail { fill: hsl($HUE_LIZ_ROOM, 17%, 5%); }
+    }
 }

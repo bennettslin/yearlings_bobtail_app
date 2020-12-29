@@ -36,4 +36,17 @@
     .pushBarLight { fill: hsl(196, 9%, 59%); }
     .ball { fill: hsl(47, 40%, 50%); }
     .handle { fill: hsl(46, 40%, 43%); }
+
+    .dark__indoor
+    & {
+        .knob { fill: hsl(47, 40%, 5%); }
+        .knobMount { fill: hsl(47, 41%, 5%); }
+        .faceplate { fill: hsl(47, 40%, 25%); }
+        .bolt { fill: hsl(47, 40%, 21%); }
+        .escutcheon { fill: hsl(46, 40%, 5%); }
+        .lockSide { fill: hsl(47, 40%, 5%); }
+        .lockFront { fill: hsl(47, 40%, 5%); }
+        .peepholeFrame { fill: hsl(47, 40%, 5%); }
+        .peepholeGlass { fill: hsl(198, 16%, 5%); }
+    }
 }
