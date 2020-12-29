@@ -103,21 +103,11 @@
 }
 
 .mirroredSink {
-    .back { fill: hsl(30, 100%, 80%); }
-    .cabinet { fill: hsl(60, 33%, 70%); }
-    .doorFront { fill: hsl(60, 100%, 80%); }
-    .frame { fill: hsl(60, 33%, 70%); }
-    .doorTop { fill: hsl(60, 50%, 60%); }
-    .knob { fill: hsl(60, 100%, 80%); }
-    .doorHandle { fill: hsl(60, 20%, 50%); }
     .mirror { fill: hsl(180, 100%, 80%); }
     .reflection { fill: hsl(180, 100%, 90%); }
-    .counterTop { fill: hsl(120, 20%, 50%); }
-    .counterFront { fill: hsl(120, 33%, 70%); }
-    .stem { fill: hsl(0, 0%, 60%); }
-    .faucet { fill: hsl(0, 0%, 60%); }
-    .aerator { fill: hsl(0, 0%, 80%); }
-    .sink { fill: hsl(60, 33%, 30%); }
+    .sink { fill: hsl(60, 15%, 30%); }
+    .counterTop { fill: hsl(60, 20%, 70%); }
+    .counterFront { fill: hsl(60, 33%, 80%); }
     .debbieShirt { fill: hsl(204, 100%, 37%); }
     .debbieHat { fill: hsl(270, 50%, 60%); }
     .photoBackground { fill: hsl(0, 0%, 40%); }
@@ -287,13 +277,6 @@
     .antennaBase { fill: hsl(174, 10%, 40%); }
     .antennaRing { fill: hsl(173, 10%, 47%); }
     .antennae { fill: hsl(173, 18%, 53%); }
-}
-
-.towelRack {
-    .ball { fill: hsl(103, 23%, 61%); }
-    .rack { fill: hsl(106, 19%, 78%); }
-    .band { fill: hsl(60, 31%, 77%); }
-    .towel { fill: hsl(60, 37%, 68%); }
 }
 
 .trashCan {

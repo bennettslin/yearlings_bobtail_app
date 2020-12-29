@@ -92,7 +92,11 @@ import {
 export default {
     [ATTIC_ARMREST]: ATTIC_LINENS__SHARED,
     [ATTIC_COUCH]: ATTIC_LINENS__SHARED,
-    [BATHTUB]: null,
+    [BATHTUB]: [
+        MAPLE__SHARED,
+        OAK__SHARED,
+        STEEL__SHARED
+    ],
     [BEDROOM_DESK]: [
         OAK__SHARED
     ],

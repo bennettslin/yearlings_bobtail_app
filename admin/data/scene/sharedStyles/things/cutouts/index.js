@@ -80,6 +80,7 @@ import {
     GARBAGE_BAG__SHARED,
     PAPER_BAG__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/food'
+import { BENNETT_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
 import { FAMILY_HOUSE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     BULB__SHARED,
@@ -89,6 +90,7 @@ import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedSty
 import {
     BRASS__SHARED,
     IRON__SHARED,
+    MAPLE__SHARED,
     OAK__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
@@ -152,7 +154,12 @@ export default {
     ],
     [LEMON_TREE]: FOLIAGE__SHARED,
     [LOCKER_BANK]: null,
-    [MIRRORED_SINK]: ALL_PEOPLE__SHARED,
+    [MIRRORED_SINK]: [
+        ALL_PEOPLE__SHARED,
+        MAPLE__SHARED,
+        OAK__SHARED,
+        STEEL__SHARED
+    ],
     [MONITOR_FRONT]: MONITOR__SHARED,
     [MONITOR_SIDE]: MONITOR__SHARED,
     [MUSEUM_DISPLAY]: null,
@@ -201,7 +208,11 @@ export default {
     [TAIWAN_FRIDGE]: FRIDGE__SHARED,
     [TAIWAN_TREE]: TAIWAN_FOLIAGE__SHARED,
     [TELEVISION]: null,
-    [TOWEL_RACK]: null,
+    [TOWEL_RACK]: [
+        BENNETT_LINENS__SHARED,
+        MAPLE__SHARED,
+        STEEL__SHARED
+    ],
     [TRAFFIC_LIGHT_FRONT]: [
         TRAFFIC_LIGHT__SHARED,
         BRASS__SHARED,
