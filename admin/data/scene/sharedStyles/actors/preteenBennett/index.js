@@ -22,6 +22,7 @@ import {
     BENNETT_LINENS__SHARED,
     TAIWAN_LINENS__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/furniture'
+import { RUBBER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     BOOK__SHARED,
     LETTER__SHARED,
@@ -45,6 +46,7 @@ export default {
     [GATE]: null,
     [RICKSHAW]: [
         ALL_VEHICLES__SHARED,
+        RUBBER__SHARED,
         TAIWAN_RICKSHAW__SHARED
     ],
     [SHORE]: null,
