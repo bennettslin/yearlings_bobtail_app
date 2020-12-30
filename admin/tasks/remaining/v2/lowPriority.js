@@ -87,5 +87,10 @@ export default [
         taskName: `Pitch shouldn't need dots reducer, except for Anchor.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Let Previewer group by shared styles.`,
+        workedHours: 0,
+        neededHours: 10
     }
 ]

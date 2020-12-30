@@ -141,7 +141,7 @@ export default {
     [CLIPBOARD]: null,
     [CODE_BOX]: null,
     [CORKBOARD]: null,
-    [EARTH]: null,
+    [EARTH]: SHORE__SHARED,
     [ELLIOTT_SMITH_POSTER]: ALL_PEOPLE__SHARED,
     [GLADIATOR_POSTER]: [
         POSTER_GLADIATOR__SHARED,

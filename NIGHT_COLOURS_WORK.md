@@ -31,9 +31,10 @@
     * Liz window (transition)
     * Liz door (transition)
 * Taiwan stairs (Odin) (/)
-* Bedroom (Pchelka, dogs, space) (except for bedroom lamp)
+* Bedroom (Pchelka, dogs, space) (/) (except for bedroom lamp)
     * Bed (transition)
     * Desk (transition)
 
 # Other
 * Make rickshaw and buoy also past colours?
+    * If so, consolidate shared styles.

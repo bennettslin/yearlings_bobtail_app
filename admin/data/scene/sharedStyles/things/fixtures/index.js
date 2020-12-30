@@ -95,6 +95,7 @@ import {
     IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
+    RUBBER__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
@@ -130,7 +131,7 @@ export default {
     ],
     [BENNETT_COUCH_LAMP]: STEEL__SHARED,
     [BENNETT_LETTERS]: MAGAZINE__SHARED,
-    [BENNETT_RECORD_PLAYER]: null,
+    [BENNETT_RECORD_PLAYER]: RUBBER__SHARED,
     [BENNETT_SHOE]: [
         ALL_CLOTHING__SHARED,
         BENNETT
@@ -191,6 +192,7 @@ export default {
         BRASS__SHARED,
         MAPLE__SHARED,
         OAK__SHARED,
+        RUBBER__SHARED,
         STEEL__SHARED
     ],
     [KEYBOARD]: null,
@@ -218,7 +220,7 @@ export default {
     [PUSH_BROOM]: OAK__SHARED,
     [RECORDING_BEERS]: HEINEKEN__SHARED,
     [RECORDING_MIC]: MICROPHONE__SHARED,
-    [RECORD_PLAYER_STOOL]: null,
+    [RECORD_PLAYER_STOOL]: RUBBER__SHARED,
     [RED_ENVELOPE_MONEY]: [
         DOLLAR__SHARED,
         LETTER__SHARED

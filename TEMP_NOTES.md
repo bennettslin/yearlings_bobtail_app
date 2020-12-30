@@ -9,44 +9,6 @@
 * Performance. (Redux.)
 * Be smarter about memo.
 
-# UI TODO:
-* Night colours.
-* Make mermaid and serpent colours the same.
-* Bennett has ghost tail in Uncanny Valley.
-* Make road floors have path colour?
-* El Torito logo
-* Wedding platform chair and tables
-* Trash chute to dumpster
-* Roads magical background.
-* Make roads fork.
-* Constellations shadows.
-* Final gravestone. (Move Bennett and Liz to left.)
-* Young children heads.
-* Remove depth shading from slant direction cubes?
-* More panels
-    * Nurse bench
-    * Bedroom stool
-    * Buddha stand
-    * Principal bench
-    * Bennett record player stand
-    * Keyboard support (books?)
-    * Basement beer scene (milk crates?)
-    * Liz nightstand
-    * Liz stool
-    * El Cerrito freeway
-    * Victrola stand
-
-* Previewer groups by shared style.
-* Shared style for records
-* Mirrored sink can just use regular people clothes
-* khari speech attack can use regular people clothes
-* water for earth
-* ground
-* burlap
-* Consolidate matte colours
-    * flag colours
-    * coloured paper
-
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
 * Make sure backstory and narrative tenses are correct.
