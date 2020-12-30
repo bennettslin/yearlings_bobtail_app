@@ -17,7 +17,6 @@ import {
     SPOTLIGHT_LIGHT_COLOUR as M,
     SPOTLIGHT_LIGHTER_COLOUR as N,
     SPOTLIGHT_LIGHTEST_COLOUR as O,
-    FURNITURE_COLOUR as R,
     BENNETT_BED_COLOUR as U
 } from '../../../../../app/constants/scene/cubes/colours'
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -58,8 +57,8 @@ const DEFAULT_FLOOR = {
     hslaColours: [
         [H, H, H, H, H, F, H, F, F, F, H],
         [H, H, H, W, W, F, F, U, U, F, H],
-        [H, H, W, W, R, F, F, U, U, U, F, H],
-        [F, W, R, R, F, F, F, U, U, U, F, H],
+        [H, H, W, W, G, F, F, U, U, U, F, H],
+        [F, W, G, G, F, F, F, U, U, U, F, H],
         [F, F, F, F, F, F, F, U, F, F, F, H],
         [F]
     ],
@@ -86,8 +85,8 @@ export default {
             hslaColours: [
                 [H, H, H, H, H, F, H, F, F, F, H],
                 [H, H, H, W, W, F, F, U, U, F, H],
-                [H, H, W, W, R, F, F, U, U, U, F, H],
-                [F, W, R, R, F, F, F, U, U, U, F, H],
+                [H, H, W, W, G, F, F, U, U, U, F, H],
+                [F, W, G, G, F, F, F, U, U, U, F, H],
                 [F, F, F, F, G, F, F, U, F, F, F, H],
                 [F]
             ],
@@ -108,8 +107,8 @@ export default {
             hslaColours: [
                 [H, H, H, H, H, F, H, F, F, F, H],
                 [H, H, H, W, W, F, F, F, F, F, H],
-                [H, H, W, W, R, F, F, F, F, F, F, H],
-                [F, W, R, R, F, F, F, F, F, F, F, H],
+                [H, H, W, W, G, F, F, F, F, F, F, H],
+                [F, W, G, G, F, F, F, F, F, F, F, H],
                 [F, F, F, F, F, F, F, F, F, F, F, H],
                 [F]
             ],

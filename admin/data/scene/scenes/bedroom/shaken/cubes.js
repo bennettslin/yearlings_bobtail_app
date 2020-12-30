@@ -17,8 +17,8 @@ export const BEDROOM_SPACE_CUBES = {
             hslaColours: [
                 [H, H, H, H, H, Z, Z, Z, Z, L, H],
                 [H, H, H, Z, Z, Z, Z, M, M, M, H],
-                [H, H, Z, Z, Z, Z, Z, L, N, N, N, H],
-                [Z, Z, Z, Z, Z, Z, L, M, O, O, N, H],
+                [H, H, Z, Z, G, Z, Z, L, N, N, N, H],
+                [Z, Z, G, G, Z, Z, L, M, O, O, N, H],
                 [Z, Z, Z, Z, G, Z, M, N, O, O, M, H],
                 [Z, Z, Z, Z, Z, Z, Z, M, N, N, N, L]
             ],
