@@ -76,8 +76,10 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 import {
+    BRONZE__SHARED,
     IRON__SHARED,
     OAK__SHARED,
+    PATINA__SHARED,
     ROCK__SHARED,
     RUBBER__SHARED,
     STEEL__SHARED,
@@ -115,7 +117,10 @@ export default {
         BUILDING__SHARED,
         WINDOW__SHARED
     ],
-    [CAMPANILE]: FOLIAGE__SHARED,
+    [CAMPANILE]: [
+        FOLIAGE__SHARED,
+        PATINA__SHARED
+    ],
     [CEMETERY_HILLS_LEFT]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
@@ -240,7 +245,10 @@ export default {
         HOUSE__SHARED,
         WINDOW__SHARED
     ],
-    [OAKLAND_FLAG]: STEEL__SHARED,
+    [OAKLAND_FLAG]: [
+        BRONZE__SHARED,
+        STEEL__SHARED
+    ],
     [OAKLAND_HOUSE_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,

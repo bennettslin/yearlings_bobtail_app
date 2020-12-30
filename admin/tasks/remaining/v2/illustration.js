@@ -106,6 +106,16 @@ export default [
     },
     {
         taskName: `Patina colours. (Conveyor belt, lamppost, twin streetlamp.)`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Marble colours. Campanile, mirrored sink.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Fruit colours. Painting, trees, garbage can.`,
         workedHours: 0,
         neededHours: 2
     },

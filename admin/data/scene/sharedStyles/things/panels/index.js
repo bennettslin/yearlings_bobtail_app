@@ -68,6 +68,7 @@ import { WINDOW__SHARED } from '../../../../../../app/constants/scene/sharedStyl
 import {
     BRASS__SHARED,
     COPPER__SHARED,
+    IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
     PORCELAIN__SHARED,
@@ -93,7 +94,10 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
 
 export default {
-    [ATTIC_ARMREST]: ATTIC_LINENS__SHARED,
+    [ATTIC_ARMREST]: [
+        ATTIC_LINENS__SHARED,
+        OAK__SHARED
+    ],
     [ATTIC_COUCH]: ATTIC_LINENS__SHARED,
     [BATHTUB]: [
         MAPLE__SHARED,
@@ -187,10 +191,13 @@ export default {
         STEEL__SHARED
     ],
     [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
-    [SCHOOLBUS_SEAT]: null,
+    [SCHOOLBUS_SEAT]: IRON__SHARED,
     [SNOWGLOBE]: SNOWGLOBE__SHARED,
     [STALACTITES]: SHADOW__SHARED,
-    [TAIWAN_BRIDGE]: null,
+    [TAIWAN_BRIDGE]: [
+        MAPLE__SHARED,
+        OAK__SHARED
+    ],
     [TAIWAN_HAZE]: null,
     [TROLL_SHADOW_FAR]: SHADOW__SHARED,
     [TROLL_SHADOW_LEFT]: SHADOW__SHARED,
@@ -200,8 +207,14 @@ export default {
         RUBBER__SHARED,
         STEEL__SHARED
     ],
-    [WAITING_ARMCHAIR]: WAITING_ARMCHAIR__SHARED,
-    [WAITING_ARMREST]: WAITING_ARMCHAIR__SHARED,
+    [WAITING_ARMCHAIR]: [
+        MAPLE__SHARED,
+        WAITING_ARMCHAIR__SHARED
+    ],
+    [WAITING_ARMREST]: [
+        IRON__SHARED,
+        WAITING_ARMCHAIR__SHARED
+    ],
     [WEDDING_PLATFORM_FRONT]: [
         FOLIAGE__SHARED,
         WEDDING__SHARED
