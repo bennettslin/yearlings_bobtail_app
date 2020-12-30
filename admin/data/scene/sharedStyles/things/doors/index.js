@@ -46,12 +46,12 @@ import {
     FAMILY_HOUSE__SHARED,
     LIZ_APARTMENT__SHARED,
     LIZ_GATE__SHARED,
-    TAIWAN_GATE__SHARED,
     WINDOW__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     BRASS__SHARED,
     BRONZE__SHARED,
+    IRON__SHARED,
     STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
@@ -159,8 +159,8 @@ export default {
         STEEL__SHARED,
         WINDOW__SHARED
     ],
-    [IRON_GATE]: TAIWAN_GATE__SHARED,
-    [IRON_GATE_LOW]: TAIWAN_GATE__SHARED,
+    [IRON_GATE]: IRON__SHARED,
+    [IRON_GATE_LOW]: IRON__SHARED,
     [LIZ_BLINDS_INSIDE]: [
         LIZ_APARTMENT__SHARED,
         WINDOW__SHARED

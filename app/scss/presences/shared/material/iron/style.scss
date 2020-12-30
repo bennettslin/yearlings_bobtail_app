@@ -1,4 +1,6 @@
 .iron#{$suffix} {
+    .ironDarkest { fill: hsl(35, 5%, 37%); }
+    .ironDarker { fill: hsl(35, 5%, 42%); }
     .ironDark { fill: hsl(35, 5%, 47%); }
     .ironMediumDark { fill: hsl(35, 5%, 52%); }
     .ironMedium { fill: hsl(35, 5%, 57%); }
