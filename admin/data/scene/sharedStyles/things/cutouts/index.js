@@ -93,6 +93,7 @@ import {
     IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
+    PATINA__SHARED,
     PORCELAIN__SHARED,
     ROCK__SHARED,
     RUBBER__SHARED,
@@ -100,7 +101,6 @@ import {
     STONE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
-    LAMPPOST__SHARED,
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
     TAIWAN_FOLIAGE__SHARED,
@@ -164,8 +164,9 @@ export default {
     [HOWIE_FRIDGE]: FRIDGE__SHARED,
     [IV_DRIP]: STEEL__SHARED,
     [LAMPPOST]: [
+        BRASS__SHARED,
         BULB__SHARED,
-        LAMPPOST__SHARED,
+        PATINA__SHARED,
         STEEL__SHARED
     ],
     [LEMON_TREE]: FOLIAGE__SHARED,
@@ -248,8 +249,9 @@ export default {
     ],
     [TRAY_PILE]: TRAY__SHARED,
     [TWIN_STREETLAMP]: [
+        BRASS__SHARED,
         BULB__SHARED,
-        LAMPPOST__SHARED,
+        PATINA__SHARED,
         STEEL__SHARED
     ],
     [UCLA_TREE]: FOLIAGE__SHARED,
