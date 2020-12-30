@@ -6,8 +6,8 @@
     * Attic couch parts
     * Refrigerator
     * Blanket and pillows
-* Taiwan room (Odin)
-    * Buddha
+* Taiwan room (Odin) (/) (except for fridge drawings)
+    * Buddha (needs both styles)
     * Refrigerator
     * Pictures
 * Basement bed (Uncanny)

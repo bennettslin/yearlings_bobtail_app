@@ -89,6 +89,7 @@ import {
 import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     BRASS__SHARED,
+    COPPER__SHARED,
     IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
@@ -106,15 +107,17 @@ import {
     TRAFFIC_LIGHT__SHARED,
     WALL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
-import { BOOK__SHARED, NEWSPAPER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
-import { BUDDHA_SHRINE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/taiwan'
+import {
+    BOOK__SHARED,
+    NEWSPAPER__SHARED
+} from '../../../../../../app/constants/scene/sharedStyles/paper'
 import { ALL_VEHICLES__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
 
 export default {
     [APARTMENT_PLANT]: FOLIAGE__SHARED,
     [ASH_CAN]: CIGARETTE__SHARED,
     [STINK_PLANT]: FOLIAGE__SHARED,
-    [BUDDHA_SHRINE]: BUDDHA_SHRINE__SHARED,
+    [BUDDHA_SHRINE]: COPPER__SHARED,
     [BUSH_DOUBLE]: FOLIAGE__SHARED,
     [BUSH_SINGLE]: FOLIAGE__SHARED,
     [CACTUS_DOUBLE]: FOLIAGE__SHARED,

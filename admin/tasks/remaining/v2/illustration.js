@@ -65,7 +65,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `El Cerrito freeway fence.`,
+        taskName: `Freeway fence.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -100,7 +100,12 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Cork/rope/linen colours. (Lampshade, sandbags, cork.)`,
+        taskName: `Cork/rope/linen colours. (Lampshade, sandbags, cork, mannequin, push broom.)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Patina colours. (Conveyor belt, lamppost, twin streetlamp.)`,
         workedHours: 0,
         neededHours: 2
     },
@@ -113,15 +118,40 @@ export default [
         taskName: `Mirrored sink and Khari speech attach use existing shirt colours.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Make road floors have path colour?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Remove depth shading from slant direction cubes?`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Nurse bench.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Bedroom stool.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Principal bench.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Basement milk crates.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Liz stool.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]
-
-// * Night colours.
-// * Make road floors have path colour?
-// * Remove depth shading from slant direction cubes?
-// * More panels
-//     * Nurse bench
-//     * Bedroom stool
-//     * Principal bench
-//     * Basement beer scene (milk crates?)
-//     * Liz stool

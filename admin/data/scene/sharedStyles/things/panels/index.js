@@ -67,6 +67,7 @@ import {
 import { WINDOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     BRASS__SHARED,
+    COPPER__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
     PORCELAIN__SHARED,
@@ -82,7 +83,6 @@ import {
     SHADOW__SHARED,
     SNOWGLOBE__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/props'
-import { BUDDHA_SHRINE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/taiwan'
 import {
     ALL_VEHICLES__SHARED,
     GO_KART__SHARED,
@@ -148,7 +148,7 @@ export default {
     ],
     [OCEAN_CAVE_EXTERIOR]: OCEAN_CAVE__SHARED,
     [OCEAN_CAVE_INTERIOR]: [
-        BUDDHA_SHRINE__SHARED,
+        COPPER__SHARED,
         OCEAN_LIFE__SHARED,
         ROCK__SHARED
     ],

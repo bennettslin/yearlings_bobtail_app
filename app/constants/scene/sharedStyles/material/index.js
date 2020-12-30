@@ -1,6 +1,7 @@
 export const BRASS__SHARED = 'brass'
 export const BRONZE__SHARED = 'bronze'
 export const CHROME__SHARED = 'chrome'
+export const COPPER__SHARED = 'copper'
 export const IRON__SHARED = 'iron'
 export const MAPLE__SHARED = 'maple'
 export const OAK__SHARED = 'oak'
