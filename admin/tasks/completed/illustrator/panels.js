@@ -154,5 +154,10 @@ export default [
     {
         taskName: 'fix conveyorBelt',
         workedHours: 3
+    },
+    {
+        taskName: `Freeway fence.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

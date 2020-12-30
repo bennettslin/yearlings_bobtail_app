@@ -10,6 +10,7 @@ import {
     CROWD_BACK,
     CROWD_SIDE,
     DISHROOM_SINK,
+    FREEWAY_FENCE,
     GO_KART_EXTERIOR,
     GO_KART_SEAT,
     HOSPITAL_BED,
@@ -133,6 +134,7 @@ export default {
         RUBBER__SHARED,
         STEEL__SHARED
     ],
+    [FREEWAY_FENCE]: STEEL__SHARED,
     [GO_KART_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
         GO_KART__SHARED,

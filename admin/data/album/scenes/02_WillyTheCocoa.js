@@ -97,6 +97,7 @@ import {
     BEDROOM_DESK,
     CAPTAIN_BED,
     CAVE_SHADOWS,
+    FREEWAY_FENCE,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR,
@@ -117,6 +118,9 @@ export default [
             },
             [FLAT]: {
                 [VALLEY_FREEWAY]: true
+            },
+            [PANEL]: {
+                [FREEWAY_FENCE]: true
             }
         },
         sky: { time: TIME_TWILIGHT, season: SEASON_SUMMER }
@@ -140,6 +144,9 @@ export default [
             },
             [FLAT]: {
                 [VALLEY_FREEWAY]: true
+            },
+            [PANEL]: {
+                [FREEWAY_FENCE]: true
             }
         },
         cubes: FREEWAY_KEY,

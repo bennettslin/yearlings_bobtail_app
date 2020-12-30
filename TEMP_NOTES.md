@@ -5,6 +5,9 @@
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
 
+# UI TODO:
+* Remove transparent backing from shopping cart.
+
 # Performance TODO:
 * Performance. (Redux.)
 * Be smarter about memo.

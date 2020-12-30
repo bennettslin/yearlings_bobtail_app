@@ -1,4 +1,5 @@
 import bathtub from '../../../../../assets/svgs/panels/bathtub'
+import freewayFence from '../../../../../assets/svgs/panels/freewayFence'
 import bedroomDesk from '../../../../../assets/svgs/panels/bedroomDesk'
 import captainBed from '../../../../../assets/svgs/panels/captainBed'
 import caveShadows from '../../../../../assets/svgs/panels/caveShadows'
@@ -48,6 +49,7 @@ import weddingPlatformRear from '../../../../../assets/svgs/panels/weddingPlatfo
 
 import {
     BATHTUB,
+    FREEWAY_FENCE,
     BEDROOM_DESK,
     CAPTAIN_BED,
     CAVE_SHADOWS,
@@ -122,6 +124,7 @@ import {
 
 export default {
     [BATHTUB]: bathtub,
+    [FREEWAY_FENCE]: freewayFence,
     [BEDROOM_DESK]: bedroomDesk,
     [CAPTAIN_BED]: captainBed,
     [CAVE_SHADOWS]: caveShadows,

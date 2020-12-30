@@ -1,12 +1,14 @@
 import {
     CUTOUT,
-    FLAT
+    FLAT,
+    PANEL
 } from '../../../../../app/constants/scene/things'
 import {
     SHOPPING_CART,
     OVERPASS_SIGN_BACK
 } from '../../../../../app/constants/scene/things/cutouts'
 import { VALLEY_FREEWAY } from '../../../../../app/constants/scene/things/flats'
+import { FREEWAY_FENCE } from '../../../../../app/constants/scene/things/panels'
 
 export default {
     [CUTOUT]: {
@@ -27,6 +29,13 @@ export default {
             yIndex: 1,
             xPosition: 5.5,
             scaleFactor: 0.625
+        }
+    },
+    [PANEL]: {
+        [FREEWAY_FENCE]: {
+            yIndex: 3,
+            xPosition: 5.5,
+            scaleFactor: 0.76
         }
     }
 }

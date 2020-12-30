@@ -65,11 +65,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Freeway fence.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Bennett record stand.`,
         workedHours: 0,
         neededHours: 1
@@ -105,7 +100,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Patina colours. (Conveyor belt, lamppost, twin streetlamp.)`,
+        taskName: `Patina colours. (Conveyor belt.)`,
         workedHours: 1,
         neededHours: 2
     },
