@@ -187,7 +187,11 @@ export default {
     ],
     [PEACH_TREE]: FOLIAGE__SHARED,
     [PHARMACY_AISLE]: null,
-    [PLAYGROUND_SLIDE]: null,
+    [PLAYGROUND_SLIDE]: [
+        IRON__SHARED,
+        PATINA__SHARED,
+        STEEL__SHARED
+    ],
     [RECYCLABLES]: null,
     [ROSEBUSH_DOUBLE_BATHROOM]: [
         FAMILY_HOUSE__SHARED,
