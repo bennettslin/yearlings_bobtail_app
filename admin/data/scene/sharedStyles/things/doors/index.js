@@ -51,7 +51,8 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     BRASS__SHARED,
-    BRONZE__SHARED
+    BRONZE__SHARED,
+    STEEL__SHARED
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     FOLIAGE__SHARED,
@@ -148,12 +149,14 @@ export default {
     ],
     [DISHROOM_DOOR]: [
         DOOR__SHARED,
+        STEEL__SHARED,
         WINDOW__SHARED
     ],
     [EL_TORITO_DOORS]: [
         BRASS__SHARED,
         BRONZE__SHARED,
         DOOR__SHARED,
+        STEEL__SHARED,
         WINDOW__SHARED
     ],
     [IRON_GATE]: TAIWAN_GATE__SHARED,
@@ -181,10 +184,16 @@ export default {
         DOOR__SHARED,
         LIZ_APARTMENT__SHARED
     ],
-    [LIZ_GATE_INSIDE]: LIZ_GATE__SHARED,
+    [LIZ_GATE_INSIDE]: [
+        LIZ_GATE__SHARED,
+        STEEL__SHARED
+    ],
     [LIZ_GATE_OUTSIDE]: LIZ_GATE__SHARED,
     [LIZ_GATE_OUTSIDE_OPEN]: LIZ_GATE__SHARED,
-    [LOADING_DOCK_DOOR]: DOOR__SHARED,
+    [LOADING_DOCK_DOOR]: [
+        DOOR__SHARED,
+        STEEL__SHARED
+    ],
     [NEIGHBOUR_DOOR]: [
         BENNETT_APARTMENT__SHARED,
         BRONZE__SHARED,

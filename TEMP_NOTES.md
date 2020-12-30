@@ -10,7 +10,6 @@
 * Be smarter about memo.
 
 # UI TODO:
-* Consolidate door styles
 * Night colours.
 * Make mermaid and serpent colours the same.
 * Bennett has ghost tail in Uncanny Valley.
@@ -39,13 +38,14 @@
 
 * Previewer groups by shared style.
 * Shared style for records
-* Flag colours
 * Mirrored sink can just use regular people clothes
 * khari speech attack can use regular people clothes
 * water for earth
 * ground
 * burlap
-* consolidate coloured paper
+* Consolidate matte colours
+    * flag colours
+    * coloured paper
 
 # Annotation edit TODO:
 * Establish what exactly makes for a narrative, backstory, and observation.
