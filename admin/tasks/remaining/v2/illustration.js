@@ -140,11 +140,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Bedroom stool.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Principal bench.`,
         workedHours: 0,
         neededHours: 1

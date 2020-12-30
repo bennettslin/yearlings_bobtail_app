@@ -49,6 +49,7 @@ import {
 import { CAPTAIN_BED_PILLOW } from '../../../../../app/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
+    BEDROOM_STOOL,
     CAPTAIN_BED
 } from '../../../../../app/constants/scene/things/panels'
 import { SKETCH_CONFIG } from '../../sharedConfigs'
@@ -131,8 +132,14 @@ export default {
         [BEDROOM_DESK]: {
             yIndex: 4,
             xPosition: 3.15,
+            zOffset: 0.01,
             scaleFactor: 0.225,
             layerYIndex: 3
+        },
+        [BEDROOM_STOOL]: {
+            yIndex: 5,
+            xPosition: 4.6,
+            scaleFactor: 0.4
         },
         [CAPTAIN_BED]: {
             yIndex: 5,

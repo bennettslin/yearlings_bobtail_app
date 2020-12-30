@@ -157,7 +157,10 @@ export default [
     },
     {
         taskName: `Freeway fence.`,
-        workedHours: 2,
-        neededHours: 2
+        workedHours: 2
+    },
+    {
+        taskName: `Bedroom stool.`,
+        workedHours: 2
     }
 ]

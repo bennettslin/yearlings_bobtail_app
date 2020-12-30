@@ -101,7 +101,8 @@ import {
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR,
-    STALACTITES
+    STALACTITES,
+    BEDROOM_STOOL
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -304,6 +305,7 @@ export default [
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
+                [BEDROOM_STOOL]: true,
                 [CAPTAIN_BED]: true
             }
         },

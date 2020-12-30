@@ -114,6 +114,7 @@ import {
 import { CAPTAIN_BED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
+    BEDROOM_STOOL,
     CAPTAIN_BED
 } from '../../../../app/constants/scene/things/panels'
 
@@ -287,7 +288,8 @@ export default [
                 [BEYONDER_ENVELOPE]: true
             },
             [PANEL]: {
-                [BEDROOM_DESK]: true
+                [BEDROOM_DESK]: true,
+                [BEDROOM_STOOL]: true
             }
         },
         cubes: BEDROOM_SPACE_KEY,

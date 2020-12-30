@@ -7,6 +7,7 @@ import {
     BEDROOM_DOGS_KEY
 } from '../../../../../app/constants/scene/scenes'
 import {
+    GROUND_CLEAR_COLOUR as G,
     DEFAULT_CLEAR_COLOUR as D,
     GRASS_COLOUR as H,
     BENNETT_CARPET_COLOUR as F,
@@ -17,8 +18,7 @@ import {
     SPOTLIGHT_LIGHTER_COLOUR as N,
     SPOTLIGHT_LIGHTEST_COLOUR as O,
     FURNITURE_COLOUR as R,
-    BENNETT_BED_COLOUR as U,
-    SEAT_COLOUR as S
+    BENNETT_BED_COLOUR as U
 } from '../../../../../app/constants/scene/cubes/colours'
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
@@ -88,7 +88,7 @@ export default {
                 [H, H, H, W, W, F, F, U, U, F, H],
                 [H, H, W, W, R, F, F, U, U, U, F, H],
                 [F, W, R, R, F, F, F, U, U, U, F, H],
-                [F, F, F, F, S, F, F, U, F, F, F, H],
+                [F, F, F, F, G, F, F, U, F, F, F, H],
                 [F]
             ],
             zIndices: [

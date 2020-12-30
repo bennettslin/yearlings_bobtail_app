@@ -3,6 +3,7 @@ import {
     ATTIC_COUCH,
     BATHTUB,
     BEDROOM_DESK,
+    BEDROOM_STOOL,
     BENNETT_BED,
     CAPTAIN_BED,
     CAVE_SHADOWS,
@@ -107,6 +108,10 @@ export default {
         STEEL__SHARED
     ],
     [BEDROOM_DESK]: [
+        OAK__SHARED
+    ],
+    [BEDROOM_STOOL]: [
+        BENNETT_LINENS__SHARED,
         OAK__SHARED
     ],
     [BENNETT_BED]: [

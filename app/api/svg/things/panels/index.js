@@ -1,6 +1,7 @@
 import bathtub from '../../../../../assets/svgs/panels/bathtub'
 import freewayFence from '../../../../../assets/svgs/panels/freewayFence'
 import bedroomDesk from '../../../../../assets/svgs/panels/bedroomDesk'
+import bedroomStool from '../../../../../assets/svgs/panels/bedroomStool'
 import captainBed from '../../../../../assets/svgs/panels/captainBed'
 import caveShadows from '../../../../../assets/svgs/panels/caveShadows'
 import stalactites from '../../../../../assets/svgs/panels/stalactites'
@@ -51,6 +52,7 @@ import {
     BATHTUB,
     FREEWAY_FENCE,
     BEDROOM_DESK,
+    BEDROOM_STOOL,
     CAPTAIN_BED,
     CAVE_SHADOWS,
     STALACTITES,
@@ -126,6 +128,7 @@ export default {
     [BATHTUB]: bathtub,
     [FREEWAY_FENCE]: freewayFence,
     [BEDROOM_DESK]: bedroomDesk,
+    [BEDROOM_STOOL]: bedroomStool,
     [CAPTAIN_BED]: captainBed,
     [CAVE_SHADOWS]: caveShadows,
     [STALACTITES]: stalactites,

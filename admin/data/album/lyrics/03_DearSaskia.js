@@ -418,12 +418,12 @@ export default {
                                         anchor: `North Hollywood.`,
                                         wiki: `North_Hollywood,_Los_Angeles`
                                     },
-                                    `Halfway through elementary school, however, my mother devised a ruse that allowed my sister and I to bus into`,
+                                    `Halfway through elementary school, my mother devised a ruse that allowed my sister and I to bus into`,
                                     {
                                         anchor: `Sherman Oaks,`,
                                         wiki: `Sherman_Oaks,_Los_Angeles`
                                     },
-                                    `a wealthy district with few minorities. I remember feeling out of my element, although at the time I didn't quite know why.`
+                                    `a wealthy district with few minorities. I remember feeling out of my element, but at the time I didn't quite know why.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
