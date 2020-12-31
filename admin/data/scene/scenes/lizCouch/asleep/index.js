@@ -6,7 +6,7 @@ export default {
         [ASLEEP_COUCH]: {
             yIndex: 4,
             xPosition: 2.65,
-            zOffset: -0.6
-        }
-    }
+            zOffset: -0.6,
+        },
+    },
 }

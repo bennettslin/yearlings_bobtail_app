@@ -4,13 +4,13 @@ import { getWikiWormholesForAnnotation } from '../../../api/album/annotations'
 
 import {
     WORMHOLE,
-    REFERENCE
+    REFERENCE,
 } from '../../../constants/dots'
 
 export const getAccessibleWikiWormholesCount = ({
     songIndex,
     annotationIndex,
-    selectedDotKeys
+    selectedDotKeys,
 }) => {
 
     const annotationWikiWormholes = getWikiWormholesForAnnotation(

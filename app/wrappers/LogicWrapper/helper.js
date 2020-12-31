@@ -1,7 +1,7 @@
 import { getArrayOfLength } from '../../helpers/general'
 import {
     getMaxSceneCountForAlbum,
-    getMaxVerseCountForAlbum
+    getMaxVerseCountForAlbum,
 } from '../../api/album/count'
 import {
     SCENE_BEFORE_PREFIX,
@@ -9,7 +9,7 @@ import {
     SCENE_AFTER_PREFIX,
     VERSE_BEFORE_PREFIX,
     VERSE_CURSOR_PREFIX,
-    VERSE_AFTER_PREFIX
+    VERSE_AFTER_PREFIX,
 } from '../../constants/cursor'
 
 export const getPrefixedSceneClassNames = sceneCursorIndex => (

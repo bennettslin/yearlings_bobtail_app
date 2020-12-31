@@ -8,13 +8,13 @@ import epilogue from '../../../../../assets/svgs/actors/father/epilogue'
 import {
     ROARING,
     ACCUSATORY,
-    REELING
+    REELING,
 } from '../../../../constants/scene/actors/father'
 
 import {
     PAST,
     FUTURE,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -23,5 +23,5 @@ export default {
     [PAST]: past,
     [FUTURE]: future,
     [REELING]: reeling,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

@@ -4,12 +4,12 @@ import { getIsShown } from '../../helpers/options'
 import {
     mapIsPhoneWidth,
     mapIsTabletWidth,
-    mapIsDesktopWidth
+    mapIsDesktopWidth,
 } from '../device/selector'
 import { mapIsSongChangeDone } from '../entrance/selector'
 import {
     mapLyricSongIndex,
-    mapIsLyricLogue
+    mapIsLyricLogue,
 } from '../lyric/selector'
 import { mapSelectedTipsOption } from '../option/selector'
 
@@ -27,7 +27,7 @@ export const mapCanTipsShowForDevice = createSelector(
         songIndex: lyricSongIndex,
         isPhoneWidth,
         isTabletWidth,
-        isDesktopWidth
+        isDesktopWidth,
     })
 )
 

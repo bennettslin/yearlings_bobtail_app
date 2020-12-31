@@ -23,7 +23,7 @@ import {
     PUPPET_MOTHER_BEGIN,
     PUPPET_MOTHER_END,
     PUPPET_MOTHER_MIDDLE,
-    PUPPET_REATTA
+    PUPPET_REATTA,
 } from '../../../../../../app/constants/scene/things/puppets'
 import {
     ANITA,
@@ -31,25 +31,25 @@ import {
     CHRISTOPHER,
     FATHER,
     MIRIAM,
-    MOTHER
+    MOTHER,
 } from '../../../../../../app/constants/scene/actors'
 import {
     ALL_CLOTHING__SHARED,
-    ALL_PEOPLE__SHARED
+    ALL_PEOPLE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/actors'
 import {
     ODIN_GHOST__SHARED,
     OPAL__SHARED,
-    PEAFOWL__SHARED
+    PEAFOWL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/animals'
 import {
     RUBBER__SHARED,
-    STEEL__SHARED
+    STEEL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import { SKETCHBOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
     ALL_VEHICLES__SHARED,
-    REATTA__SHARED
+    REATTA__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
 
 export default {
@@ -63,70 +63,70 @@ export default {
     [PEAHEN]: PEAFOWL__SHARED,
     [PUPPET_ANITA_BEGIN]: [
         ALL_PEOPLE__SHARED,
-        ANITA
+        ANITA,
     ],
     [PUPPET_ANITA_END]: [
         ALL_PEOPLE__SHARED,
-        ANITA
+        ANITA,
     ],
     [PUPPET_ANITA_MIDDLE]: [
         ALL_PEOPLE__SHARED,
-        ANITA
+        ANITA,
     ],
     [PUPPET_BENNETT_BEGIN]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
-        SKETCHBOOK__SHARED
+        SKETCHBOOK__SHARED,
     ],
     [PUPPET_BENNETT_END]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
-        SKETCHBOOK__SHARED
+        SKETCHBOOK__SHARED,
     ],
     [PUPPET_BENNETT_MIDDLE]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
-        SKETCHBOOK__SHARED
+        SKETCHBOOK__SHARED,
     ],
     [PUPPET_CHRISTOPHER_BEGIN]: [
         ALL_PEOPLE__SHARED,
-        CHRISTOPHER
+        CHRISTOPHER,
     ],
     [PUPPET_CHRISTOPHER_END]: [
         ALL_PEOPLE__SHARED,
-        CHRISTOPHER
+        CHRISTOPHER,
     ],
     [PUPPET_CHRISTOPHER_MIDDLE]: [
         ALL_PEOPLE__SHARED,
-        CHRISTOPHER
+        CHRISTOPHER,
     ],
     [PUPPET_FATHER_BEGIN]: [
         ALL_PEOPLE__SHARED,
-        FATHER
+        FATHER,
     ],
     [PUPPET_FATHER_END]: [
         ALL_PEOPLE__SHARED,
-        FATHER
+        FATHER,
     ],
     [PUPPET_FATHER_MIDDLE]: [
         ALL_PEOPLE__SHARED,
-        FATHER
+        FATHER,
     ],
     [PUPPET_KHARI_LIZ]: ALL_PEOPLE__SHARED,
     [PUPPET_MOTHER_BEGIN]: [
         ALL_PEOPLE__SHARED,
-        MOTHER
+        MOTHER,
     ],
     [PUPPET_MOTHER_END]: [
         ALL_PEOPLE__SHARED,
-        MOTHER
+        MOTHER,
     ],
     [PUPPET_MOTHER_MIDDLE]: [
         ALL_PEOPLE__SHARED,
-        MOTHER
+        MOTHER,
     ],
     [PUPPET_REATTA]: [
         BENNETT,
@@ -135,6 +135,6 @@ export default {
         ALL_VEHICLES__SHARED,
         REATTA__SHARED,
         RUBBER__SHARED,
-        STEEL__SHARED
-    ]
+        STEEL__SHARED,
+    ],
 }

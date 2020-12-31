@@ -1,12 +1,12 @@
 import {
     STOOPING,
     COMFORTING,
-    ARGUING
+    ARGUING,
 } from '../../../../../../app/constants/scene/actors/mother'
 import {
     PRESENT,
     FUTURE,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../../../app/constants/scene/actors/songs'
 import { GHOST__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
 
@@ -16,5 +16,5 @@ export default {
     [ARGUING]: null,
     [PRESENT]: GHOST__SHARED,
     [FUTURE]: GHOST__SHARED,
-    [EPILOGUE]: null
+    [EPILOGUE]: null,
 }

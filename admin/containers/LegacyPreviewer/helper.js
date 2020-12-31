@@ -6,7 +6,7 @@ const
 
 export const getHeightAspectRatio = ({
     viewBoxWidth,
-    viewBoxHeight
+    viewBoxHeight,
 }) => {
     const windowWidth = getWindow().innerWidth,
         windowHeight =

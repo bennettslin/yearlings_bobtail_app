@@ -6,17 +6,17 @@ import {
     DOOR,
     FIXTURE,
     FLAT,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     LIZ_COUCH_KEY,
     BASEMENT_COUCH_KEY,
     CLUB_FRONT_KEY,
-    OAKLAND_VOLKSWAGEN_KEY
+    OAKLAND_VOLKSWAGEN_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_NIGHT,
-    SEASON_AUTUMN
+    SEASON_AUTUMN,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
@@ -25,62 +25,62 @@ import {
     LIZ,
     MIRIAM_TRISTAN,
     TRISTAN,
-    NESTOR
+    NESTOR,
 } from '../../../../app/constants/scene/actors'
 import {
     CHUCKLING,
-    SMIRKING
+    SMIRKING,
 } from '../../../../app/constants/scene/actors/ana'
 import { DROPPING_MEATS } from '../../../../app/constants/scene/actors/bennett'
 import {
     BRUSH_OFF,
-    CELIBATE_FREEZING
+    CELIBATE_FREEZING,
 } from '../../../../app/constants/scene/actors/bennettLiz'
 import { NOOGIE } from '../../../../app/constants/scene/actors/miriamTristan'
 import { INJURED } from '../../../../app/constants/scene/actors/nestor'
 import { PUNCHING } from '../../../../app/constants/scene/actors/tristan'
 import {
     GREETING,
-    LEAVING_CRUMBLED
+    LEAVING_CRUMBLED,
 } from '../../../../app/constants/scene/actors/songs'
 import {
     OAKLAND_SIDE__LEVEL,
-    OAKLAND_SIDE__LIZ_COUCH
+    OAKLAND_SIDE__LIZ_COUCH,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     NAS_ALBUM,
-    ELLIOTT_SMITH_POSTER
+    ELLIOTT_SMITH_POSTER,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
-    WALL_SPEAKER_FRONT__RIGHT
+    WALL_SPEAKER_FRONT__RIGHT,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_INSIDE,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
     BASEMENT_DOOR_SIDE,
-    LIZ_GATE_INSIDE
+    LIZ_GATE_INSIDE,
 } from '../../../../app/constants/scene/things/doors'
 import {
     ELECTRIC_GUITAR,
     DRUMKIT,
     BENNETT_COUCH_LAMP,
-    BENNETT_RECORD_PLAYER
+    BENNETT_RECORD_PLAYER,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     DISTANT_HOUSES,
     OAKLAND_HOUSE_LEFT,
-    OAKLAND_HOUSE_RIGHT
+    OAKLAND_HOUSE_RIGHT,
 } from '../../../../app/constants/scene/things/flats'
 import {
     VOLKSWAGEN,
     WIDE_COUCH_BENNETT,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
-    LIZ_COUCH__ROOM
+    LIZ_COUCH__ROOM,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -91,23 +91,23 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'front, putting on jacket, cold, distant',
-                    instance: BRUSH_OFF
-                }
+                    instance: BRUSH_OFF,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,
                 [LIZ_DOOR]: true,
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
-            }
+                [LIZ_COUCH__ROOM]: true,
+            },
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 3,
@@ -116,35 +116,35 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'front, tripping as meats fall out of pockets',
-                    instance: DROPPING_MEATS
+                    instance: DROPPING_MEATS,
                 },
                 [TRISTAN]: {
                     description: 'side angle, eagerly aggressive, about to punch car',
-                    instance: PUNCHING
+                    instance: PUNCHING,
                 },
                 [ANA]: {
                     description: 'side, holding paper bottle, laughing',
-                    instance: CHUCKLING
+                    instance: CHUCKLING,
                 },
                 [NESTOR]: {
                     description: 'front, clutching at fist, laughing through pain',
-                    instance: INJURED
-                }
+                    instance: INJURED,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [FLAT]: {
                 [DISTANT_HOUSES]: true,
                 [OAKLAND_HOUSE_LEFT]: true,
-                [OAKLAND_HOUSE_RIGHT]: true
+                [OAKLAND_HOUSE_RIGHT]: true,
             },
             [PANEL]: {
-                [VOLKSWAGEN]: true
-            }
+                [VOLKSWAGEN]: true,
+            },
         },
         cubes: OAKLAND_VOLKSWAGEN_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 6,
@@ -153,29 +153,29 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'on couch, ignoring Sita, drunk',
-                    instance: CELIBATE_FREEZING
-                }
+                    instance: CELIBATE_FREEZING,
+                },
             },
             [CARDBOARD]: {
                 [NAS_ALBUM]: true,
-                [ELLIOTT_SMITH_POSTER]: true
+                [ELLIOTT_SMITH_POSTER]: true,
             },
             [DOOR]: {
-                [BASEMENT_DOOR_SIDE]: true
+                [BASEMENT_DOOR_SIDE]: true,
             },
             [FIXTURE]: {
                 [BENNETT_COUCH_LAMP]: true,
                 [BENNETT_RECORD_PLAYER]: true,
-                [ELECTRIC_GUITAR]: true
+                [ELECTRIC_GUITAR]: true,
             },
             [PANEL]: {
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
-                [WIDE_ARMREST_BENNETT__RIGHT]: true
-            }
+                [WIDE_ARMREST_BENNETT__RIGHT]: true,
+            },
         },
         cubes: BASEMENT_COUCH_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 10,
@@ -184,29 +184,29 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side angle, sweaty, giddy',
-                    instance: GREETING
+                    instance: GREETING,
                 },
                 [MIRIAM_TRISTAN]: {
                     description: 'side, greeting Bennett',
-                    instance: NOOGIE
+                    instance: NOOGIE,
                 },
                 [ANA]: {
                     description: 'front, removing bass, rolling eyes',
-                    instance: SMIRKING
-                }
+                    instance: SMIRKING,
+                },
             },
             [CUTOUT]: {
                 [MONITOR_FRONT__LEFT]: true,
                 [MONITOR_FRONT__RIGHT]: true,
                 [WALL_SPEAKER_FRONT__LEFT]: true,
-                [WALL_SPEAKER_FRONT__RIGHT]: true
+                [WALL_SPEAKER_FRONT__RIGHT]: true,
             },
             [FIXTURE]: {
-                [DRUMKIT]: true
-            }
+                [DRUMKIT]: true,
+            },
         },
         cubes: CLUB_FRONT_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 13,
@@ -215,28 +215,28 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'standing, cold, looking away',
-                    instance: LEAVING_CRUMBLED
+                    instance: LEAVING_CRUMBLED,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'crumbled on floor, begging, sobbing',
-                        instance: LEAVING_CRUMBLED
-                    }
-                }
+                        instance: LEAVING_CRUMBLED,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,
                 [LIZ_DOOR_OPEN]: true,
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
-            }
+                [LIZ_COUCH__ROOM]: true,
+            },
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
-    }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
+    },
 ]

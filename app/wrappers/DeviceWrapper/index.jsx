@@ -8,7 +8,7 @@ import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 import {
     mapIsDesktopWidth,
     mapIsTabletWidth,
-    mapIsPhoneWidth
+    mapIsPhoneWidth,
 } from '../../redux/device/selector'
 import { mapDeviceWidthIndex } from '../../redux/viewport/selector'
 
@@ -42,8 +42,8 @@ const DeviceWrapper = ({ didMount, children }) => {
                         !isDesktopWidth && !isPhoneWidth &&
                             'DW__miniOrTabletWidth',
                         'abF'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {children}
@@ -53,7 +53,7 @@ const DeviceWrapper = ({ didMount, children }) => {
 
 DeviceWrapper.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default memo(getDidMountHoc(DeviceWrapper))

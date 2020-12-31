@@ -23,7 +23,7 @@ const getPageServerClientHoc = ServerClientComponent => {
                 {...{
                     ref,
                     serverClientPitchIndex,
-                    ...props
+                    ...props,
                 }}
             />
         )

@@ -19,7 +19,7 @@ const AutoScrollDispatcher = forwardRef((props, ref) => {
 
         const {
                 deltaY = 0,
-                type
+                type,
             } = e,
             isTouchMoveEvent = type !== 'wheel',
             { scrollTop } = lyricElement
@@ -28,7 +28,7 @@ const AutoScrollDispatcher = forwardRef((props, ref) => {
         if (deltaY > 0 || isTouchMoveEvent) {
             const {
                 scrollHeight,
-                clientHeight
+                clientHeight,
             } = lyricElement
 
             if (scrollTop < scrollHeight - clientHeight) {

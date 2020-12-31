@@ -6,7 +6,7 @@ export default {
         [ASLEEP]: {
             yIndex: 3,
             xPosition: 7.7,
-            xOffset: -0.02
-        }
-    }
+            xOffset: -0.02,
+        },
+    },
 }

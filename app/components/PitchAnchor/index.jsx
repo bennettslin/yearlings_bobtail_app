@@ -18,7 +18,7 @@ const PitchAnchor = () => {
                 {...{
                     text: 'our pitch!',
                     analyticsIdentifier: 'pitch',
-                    handleAnchorClick
+                    handleAnchorClick,
                 }}
             />
         </div>

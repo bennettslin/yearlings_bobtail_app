@@ -9,14 +9,14 @@ const propTypes = {
     top: PropTypes.number.isRequired,
     left: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired
+    height: PropTypes.number.isRequired,
 }
 
 const CeilingRafter = ({
     top,
     left,
     width,
-    height
+    height,
 
 }) => (
     <InlineSvg
@@ -28,12 +28,12 @@ const CeilingRafter = ({
                 top: `${top}px`,
                 left: `${left}px`,
                 width: `${width}px`,
-                height: `${height}px`
+                height: `${height}px`,
             },
             svgClassName: cx(
                 'ceilingRafter',
                 'fillTransition__dimTheatre'
-            )
+            ),
         }}
     >
         {ceilingRafter}

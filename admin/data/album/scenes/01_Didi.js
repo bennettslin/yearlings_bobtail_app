@@ -7,13 +7,13 @@ import {
     DOOR,
     FIXTURE,
     FLAT,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,
     BATHROOM_KEY,
-    BATHROOM_OPEN_KEY
+    BATHROOM_OPEN_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_DAWN,
@@ -21,31 +21,31 @@ import {
     TIME_NOON,
     TIME_AFTERNOON,
     SEASON_SPRING,
-    SEASON_PAST
+    SEASON_PAST,
 } from '../../../../app/constants/scene/sky'
 import {
     YOUNG_BENNETT,
     ANITA,
-    ESTHER
+    ESTHER,
 } from '../../../../app/constants/scene/actors'
 import {
     PANICKED,
     FLUSTERED,
     BATHING,
-    SINGING
+    SINGING,
 } from '../../../../app/constants/scene/actors/youngBennett'
 import {
     EXASPERATED,
     CONCERNED,
-    CHEERING
+    CHEERING,
 } from '../../../../app/constants/scene/actors/anita'
 import {
     CURIOUS,
-    SNICKERING
+    SNICKERING,
 } from '../../../../app/constants/scene/actors/esther'
 import {
     VALLEY_CLOSER_BACKDROP,
-    VALLEY_FURTHER_BACKDROP
+    VALLEY_FURTHER_BACKDROP,
 } from '../../../../app/constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../../../app/constants/scene/things/bubbles'
 import { JOHNNY_HORTON_ALBUM } from '../../../../app/constants/scene/things/cardboards'
@@ -56,22 +56,22 @@ import {
     TOWEL_RACK,
     LEMON_TREE__BATHROOM,
     ROSEBUSH_DOUBLE_BATHROOM,
-    ROSEBUSH_SINGLE_BATHROOM
+    ROSEBUSH_SINGLE_BATHROOM,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     DEFAULT_FENCE_BATHROOM,
-    NURSE_DOOR
+    NURSE_DOOR,
 } from '../../../../app/constants/scene/things/doors'
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
-    RECORD_PLAYER_STOOL
+    RECORD_PLAYER_STOOL,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     NEAR_BUILDINGS,
     NEAR_HOUSES,
     NOHO_HOUSE_LEFT,
-    NOHO_HOUSE_RIGHT
+    NOHO_HOUSE_RIGHT,
 } from '../../../../app/constants/scene/things/flats'
 import { BATHTUB } from '../../../../app/constants/scene/things/panels'
 
@@ -81,19 +81,19 @@ export default [
         description: `North Hollywood houses.`,
         presences: {
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true
+                [VALLEY_CLOSER_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [FIRE_HYDRANT]: true
+                [FIRE_HYDRANT]: true,
             },
             [FLAT]: {
                 [NEAR_HOUSES]: true,
                 [NOHO_HOUSE_LEFT]: true,
-                [NOHO_HOUSE_RIGHT]: true
-            }
+                [NOHO_HOUSE_RIGHT]: true,
+            },
         },
         cubes: NOHO_HOUSES_KEY,
-        sky: { time: TIME_DAWN, season: SEASON_SPRING }
+        sky: { time: TIME_DAWN, season: SEASON_SPRING },
     },
     {
         unitIndex: 3,
@@ -102,31 +102,31 @@ export default [
             [ACTOR]: {
                 [ESTHER]: {
                     description: 'side, looking at Anita',
-                    instance: CURIOUS
+                    instance: CURIOUS,
                 },
                 [ANITA]: {
                     description: 'side, rushing, exasperated',
-                    instance: EXASPERATED
+                    instance: EXASPERATED,
                 },
                 [YOUNG_BENNETT]: {
                     description: 'side, running, panicked',
-                    instance: PANICKED
-                }
+                    instance: PANICKED,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true
+                [VALLEY_CLOSER_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [FIRE_HYDRANT]: true
+                [FIRE_HYDRANT]: true,
             },
             [FLAT]: {
                 [NEAR_HOUSES]: true,
                 [NOHO_HOUSE_LEFT]: true,
-                [NOHO_HOUSE_RIGHT]: true
-            }
+                [NOHO_HOUSE_RIGHT]: true,
+            },
         },
         cubes: NOHO_HOUSES_KEY,
-        sky: { time: TIME_MORNING, season: SEASON_SPRING }
+        sky: { time: TIME_MORNING, season: SEASON_SPRING },
     },
     {
         unitIndex: 6,
@@ -135,39 +135,39 @@ export default [
             [ACTOR]: {
                 [ANITA]: {
                     description: 'front, playing ball, offended',
-                    instance: CONCERNED
+                    instance: CONCERNED,
                 },
                 [ESTHER]: {
                     description: 'side, running, pointing back',
-                    instance: SNICKERING
+                    instance: SNICKERING,
                 },
                 [YOUNG_BENNETT]: {
                     description: 'sitting, flustered',
-                    instance: FLUSTERED
-                }
+                    instance: FLUSTERED,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [BUBBLE]: {
-                [ESTHER_SPEECH]: true
+                [ESTHER_SPEECH]: true,
             },
             [CUTOUT]: {
-                [PLAYGROUND_SLIDE]: true
+                [PLAYGROUND_SLIDE]: true,
             },
             [DOOR]: {
-                [NURSE_DOOR]: true
+                [NURSE_DOOR]: true,
             },
             [FIXTURE]: {
                 [PLAYGROUND_BALL]: true,
-                [SAFEWAY_BAG]: true
+                [SAFEWAY_BAG]: true,
             },
             [FLAT]: {
-                [NEAR_BUILDINGS]: true
-            }
+                [NEAR_BUILDINGS]: true,
+            },
         },
         cubes: NOHO_SCHOOL_KEY,
-        sky: { time: TIME_NOON, season: SEASON_SPRING }
+        sky: { time: TIME_NOON, season: SEASON_SPRING },
     },
     {
         unitIndex: 8,
@@ -176,25 +176,25 @@ export default [
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
                     description: 'side, in bathtub, downcast',
-                    instance: BATHING
-                }
+                    instance: BATHING,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CUTOUT]: {
                 [MIRRORED_SINK]: true,
-                [TOWEL_RACK]: true
+                [TOWEL_RACK]: true,
             },
             [DOOR]: {
-                [DEFAULT_FENCE_BATHROOM]: true
+                [DEFAULT_FENCE_BATHROOM]: true,
             },
             [PANEL]: {
-                [BATHTUB]: true
-            }
+                [BATHTUB]: true,
+            },
         },
         cubes: BATHROOM_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_SPRING }
+        sky: { time: TIME_AFTERNOON, season: SEASON_SPRING },
     },
     {
         unitIndex: 12,
@@ -203,35 +203,35 @@ export default [
             [ACTOR]: {
                 [ANITA]: {
                     description: 'back, squatting, smiling',
-                    instance: CHEERING
+                    instance: CHEERING,
                 },
                 [YOUNG_BENNETT]: {
                     description: 'side, facing front, singing, smiling',
-                    instance: SINGING
-                }
+                    instance: SINGING,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [JOHNNY_HORTON_ALBUM]: true
+                [JOHNNY_HORTON_ALBUM]: true,
             },
             [CUTOUT]: {
                 [LEMON_TREE__BATHROOM]: true,
                 [ROSEBUSH_DOUBLE_BATHROOM]: true,
-                [ROSEBUSH_SINGLE_BATHROOM]: true
+                [ROSEBUSH_SINGLE_BATHROOM]: true,
             },
             [DOOR]: {
-                [DEFAULT_FENCE_BATHROOM]: true
+                [DEFAULT_FENCE_BATHROOM]: true,
             },
             [FIXTURE]: {
-                [RECORD_PLAYER_STOOL]: true
+                [RECORD_PLAYER_STOOL]: true,
             },
             [PANEL]: {
-                [BATHTUB]: true
-            }
+                [BATHTUB]: true,
+            },
         },
         cubes: BATHROOM_OPEN_KEY,
-        sky: { season: SEASON_PAST }
-    }
+        sky: { season: SEASON_PAST },
+    },
 ]

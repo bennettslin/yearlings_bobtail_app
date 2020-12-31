@@ -26,7 +26,7 @@ import {
     NESTOR,
     AMY,
     STEPHANIE,
-    WADE
+    WADE,
 } from '../../../../../../../app/constants/scene/actors'
 import { EPILOGUE } from '../../../../../../../app/constants/scene/actors/songs'
 
@@ -36,115 +36,115 @@ export default [
             [ACTOR]: {
                 [OLD_BENNETT]: {
                     realHeight: `5'4"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [BENNETT]: {
                     realHeight: `5'4"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [LIZ]: {
                     sita: {
                         realHeight: `4'9"`,
-                        instance: EPILOGUE
-                    }
+                        instance: EPILOGUE,
+                    },
                 },
                 [CHRISTOPHER]: {
                     realHeight: `3'5"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [ANITA]: {
                     realHeight: `3'9"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [YOUNG_BENNETT]: {
                     realHeight: `3'6"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [ESTHER]: {
                     realHeight: `3'10"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [WILLY]: {
                     realHeight: `5'3"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [MOTHER]: {
                     realHeight: `5'0"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [FATHER]: {
                     realHeight: `5'4"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [HOWIE]: {
                     realHeight: `6'0"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [TOMER]: {
                     realHeight: `5'6"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [SASHA]: {
                     realHeight: `4'1"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [PRETEEN_BENNETT]: {
                     realHeight: `4'1"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [BRAD]: {
                     realHeight: `4'6"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [ANDREW]: {
                     realHeight: `4'7"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [TRISTAN]: {
                     realHeight: `5'8"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [CATHERINE]: {
                     realHeight: `4'11"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [WADE]: {
                     realHeight: `5'10"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [AMY]: {
                     realHeight: `5'6"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [STEPHANIE]: {
                     realHeight: `5'4"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [JACOB]: {
                     realHeight: `5'11"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [MARA]: {
                     realHeight: `5'0"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [ANA]: {
                     realHeight: `5'8"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [MIRIAM]: {
                     realHeight: `5'1"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [KHARI]: {
                     realHeight: `5'9"`,
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [NESTOR]: {
                     realHeight: `5'7"`,
-                    instance: EPILOGUE
-                }
-            }
-        }
-    }
+                    instance: EPILOGUE,
+                },
+            },
+        },
+    },
 ]

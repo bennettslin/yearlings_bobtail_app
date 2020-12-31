@@ -29,7 +29,7 @@ const PitchPopup = forwardRef(({ didMount }, ref) => {
             {...{
                 popupName: 'PitchPopup',
                 isVisible: isPitchShown,
-                handleCloseClick
+                handleCloseClick,
             }}
         >
             <Pitch {...{ ref }} />
@@ -39,7 +39,7 @@ const PitchPopup = forwardRef(({ didMount }, ref) => {
 })
 
 PitchPopup.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default memo(getDidMountHoc(PitchPopup))

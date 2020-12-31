@@ -5,7 +5,7 @@ import AnnotationCards from './AnnotationCards'
 import {
     getNextGlobalAnnotation,
     getGlobalAnnotationCount,
-    getGlobalAnnotationDoneCount
+    getGlobalAnnotationDoneCount,
 } from '../../api/album/globalAnnotation'
 import { getTitleForAnnotation } from '../../../app/api/album/annotations'
 import { getArrayOfLength } from '../../../app/helpers/general'
@@ -30,11 +30,11 @@ const TempGlobalAnnotation = ({ intervalIndex }) => {
     const {
         songIndex,
         annotationIndex,
-        globalIndex
+        globalIndex,
 
     } = getNextGlobalAnnotation({
         intervalIndex,
-        count: INTERVALS_COUNT
+        count: INTERVALS_COUNT,
     })
 
     if (!songIndex || !annotationIndex) {
@@ -67,7 +67,7 @@ const TempGlobalAnnotations = () => {
                 className: cx(
                     'TempGlobalAnnotations',
                     'PtSansNarrow'
-                )
+                ),
             }}
         >
             <TempGlobalAnnotationsCounter />
@@ -75,7 +75,7 @@ const TempGlobalAnnotations = () => {
                 <TempGlobalAnnotation
                     {...{
                         key: intervalIndex,
-                        intervalIndex
+                        intervalIndex,
                     }}
                 />
             ))}

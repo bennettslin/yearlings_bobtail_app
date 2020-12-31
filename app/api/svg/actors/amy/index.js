@@ -7,14 +7,14 @@ import epilogue from '../../../../../assets/svgs/actors/amy/epilogue'
 
 import {
     SMOKER,
-    DOCTOR
+    DOCTOR,
 } from '../../../../constants/scene/actors/amy'
 
 import {
     FLIRTING,
     MINGLING,
     PROTESTER,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -23,5 +23,5 @@ export default {
     [MINGLING]: mingling,
     [PROTESTER]: protester,
     [DOCTOR]: doctor,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

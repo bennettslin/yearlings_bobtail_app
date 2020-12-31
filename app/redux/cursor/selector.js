@@ -1,13 +1,13 @@
 import { createSelector } from 'reselect'
 import {
     getStanzaIndexForVerse,
-    getSceneIndexForVerse
+    getSceneIndexForVerse,
 } from '../../api/album/verses'
 import {
     getCursorIndex,
     getCursorTime,
     getSongCursorTime,
-    getIsVerseCursor
+    getIsVerseCursor,
 } from '../../helpers/cursor'
 import { mapActivatedVerseIndex } from '../activated/selector'
 import { mapIsPlaying } from '../audio/selector'
@@ -15,7 +15,7 @@ import { mapBannerHoverTime } from '../banner/selector'
 import { mapCanTransitionAfterSongChange } from '../entrance/selector'
 import {
     mapLyricSongIndex,
-    mapLyricVerseIndex
+    mapLyricVerseIndex,
 } from '../lyric/selector'
 import { mapSliderVerseIndex } from '../slider/selector'
 import { mapIsEitherVerseBarShown } from '../verseBars/selector'
@@ -42,7 +42,7 @@ export const getMapVerseCursorIndex = inVerseBar => createSelector(
 export const getMapIsShownVerseCursor = ({
     verseIndex,
     inSlider,
-    inVerseBar
+    inVerseBar,
 }) => createSelector(
     getMapVerseCursorIndex(),
     mapIsEitherVerseBarShown,
@@ -54,7 +54,7 @@ export const getMapIsShownVerseCursor = ({
         verseCursorIndex,
         inSlider,
         inVerseBar,
-        isEitherVerseBarShown
+        isEitherVerseBarShown,
     })
 )
 
@@ -118,6 +118,6 @@ export const getMapSongCursorTime = playerTime => createSelector(
         bannerHoverTime,
         cursorTime,
         playerTime,
-        isPlaying
+        isPlaying,
     })
 )

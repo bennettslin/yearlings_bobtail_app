@@ -12,7 +12,7 @@ const SliderVerse = ({
     stanzaDuration,
     verseIndex,
     isLastVerseOfStanza,
-    children
+    children,
 
 }) => {
     const
@@ -36,7 +36,7 @@ const SliderVerse = ({
 
         verseStyle = {
             left: `${verseLeft}%`,
-            width: `${verseWidth + bleedMargin}%`
+            width: `${verseWidth + bleedMargin}%`,
         }
 
     return (
@@ -53,7 +53,7 @@ const SliderVerse = ({
 
                     className
                 ),
-                style: verseStyle
+                style: verseStyle,
             }}
         >
             {children}
@@ -68,7 +68,7 @@ SliderVerse.propTypes = {
     relativeStartTime: PropTypes.number.isRequired,
     verseDuration: PropTypes.number.isRequired,
     stanzaDuration: PropTypes.number.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default memo(getVerseHoc(SliderVerse))

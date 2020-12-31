@@ -10,11 +10,11 @@ import {
     updateIsAboutShown,
     updateIsAutoScroll,
     toggleIsPitchShown,
-    updateIsPitchShown
+    updateIsPitchShown,
 } from '../../../redux/toggle/action'
 import {
     updateWikiIndices,
-    toggleAudioOptionIndex
+    toggleAudioOptionIndex,
 } from '../../../redux/session/action'
 import CarouselNavDispatcher from '../../../dispatchers/CarouselNav'
 import DotsSlideDispatcher from '../../../dispatchers/DotsSlide'
@@ -45,7 +45,7 @@ import {
     NEXT_SCENE_KEY,
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY,
-    PITCH_TOGGLE_KEY
+    PITCH_TOGGLE_KEY,
 } from '../../../constants/access'
 import { HIDDEN } from '../../../constants/options'
 import { mapIsOverviewShown } from '../../../redux/overview/selector'
@@ -57,7 +57,7 @@ import {
     mapIsLyricExpanded,
     mapIsScoreShown,
     mapIsAboutShown,
-    mapIsPitchShown
+    mapIsPitchShown,
 } from '../../../redux/toggle/selector'
 import { mapIsWikiShown } from '../../../redux/wiki/selector'
 
@@ -159,12 +159,12 @@ const LetterManager = forwardRef((props, ref) => {
 
         logAccess({
             log: `Key "${keyName}" was ${keyWasRegistered ? '' : 'NOT '}registered.`,
-            ...keyWasRegistered && { label: keyName }
+            ...keyWasRegistered && { label: keyName },
         })
 
         return {
             annotationIndexWasAccessed,
-            keyWasRegistered
+            keyWasRegistered,
         }
     }
 
@@ -221,7 +221,7 @@ const LetterManager = forwardRef((props, ref) => {
 
     useImperativeHandle(ref, () => ({
         escape: handleEscape,
-        letter: handleLetter
+        letter: handleLetter,
     }))
     return (
         <>

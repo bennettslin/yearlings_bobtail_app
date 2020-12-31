@@ -2,7 +2,7 @@ import { initialiseTempWormholeLinks } from './helpers/initialise'
 import { registerWikiWormholeLinks } from './helpers/register'
 import {
     tellEachSourceLinkItsDestination,
-    addWormholeLinksToCard
+    addWormholeLinksToCard,
 } from './helpers/source'
 
 const wormholeLinks = {}

@@ -9,7 +9,7 @@ import Anchor from '../../Anchor'
 import AnnotationAccess from './Access'
 import {
     getDotsBitForAnnotation,
-    getTitleForAnnotation
+    getTitleForAnnotation,
 } from '../../../api/album/annotations'
 import { getDotKeysFromBit } from '../../../helpers/dot'
 import { IS_UNIT_DOT } from '../../../constants/lyrics'
@@ -21,7 +21,7 @@ const AnnotationTitle = ({
     isAccessed,
     isSelected,
     serverClientSongIndex,
-    annotationIndex
+    annotationIndex,
 
 }) => {
     const
@@ -33,7 +33,7 @@ const AnnotationTitle = ({
         accessibleWikiWormholesLength = getAccessibleWikiWormholesCount({
             songIndex: serverClientSongIndex,
             annotationIndex,
-            selectedDotKeys
+            selectedDotKeys,
         }),
 
         dotsBit = getDotsBitForAnnotation(
@@ -59,7 +59,7 @@ const AnnotationTitle = ({
 
         dispatch(updateAnnotationStore({
             queuedAnnotationIndex: annotationIndex,
-            queuedAnnotationFromCarousel: true
+            queuedAnnotationFromCarousel: true,
         }))
         return true
     }
@@ -82,7 +82,7 @@ const AnnotationTitle = ({
                         'boxShadow__annotationTab',
 
                     'fontSize__smallTitle'
-                )
+                ),
             }}
         >
             <Anchor
@@ -90,17 +90,17 @@ const AnnotationTitle = ({
                     ...isDot ? {
                     } : {
                         isAnnotationTitle: true,
-                        text: `\u201c${annotationTitle}\u201d`
+                        text: `\u201c${annotationTitle}\u201d`,
                     },
                     dotsBit,
                     isAccessed,
                     isSelected,
-                    handleAnchorClick
+                    handleAnchorClick,
                 }}
             />
             <AnnotationAccess {...{
                 isDot,
-                showUpDown
+                showUpDown,
             }} />
             <StopPropagationDispatcher {...{ ref: stopPropagation }} />
         </div>
@@ -111,7 +111,7 @@ AnnotationTitle.propTypes = {
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     serverClientSongIndex: PropTypes.number.isRequired,
-    annotationIndex: PropTypes.number.isRequired
+    annotationIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getSongServerClientHoc(AnnotationTitle))

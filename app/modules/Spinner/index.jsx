@@ -8,7 +8,7 @@ const Spinner = () => (
         notAbsoluteFullContainer
         {...{
             className: 'Spinner',
-            svgClassName: 'dramaMasks'
+            svgClassName: 'dramaMasks',
         }}
     >
         {dramaMasks}

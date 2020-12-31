@@ -1,11 +1,11 @@
 import { getVerseCountForSong } from '../../api/album/verses'
 import {
     getStartTimeForVerse,
-    getEndTimeForVerse
+    getEndTimeForVerse,
 } from '../../api/album/time'
 import {
     CONTINUE,
-    AUDIO_OPTIONS
+    AUDIO_OPTIONS,
 } from '../../constants/options'
 
 export const getNextSongIndex = (songIndex, audioOptionIndex) => {
@@ -64,7 +64,7 @@ const getTimeRelativeToVerseIndex = (
 export const getTimeInVerseStatus = ({
     currentTime,
     selectedSongIndex,
-    selectedVerseIndex
+    selectedVerseIndex,
 
 }) => {
     const
@@ -101,6 +101,6 @@ export const getTimeInVerseStatus = ({
         isTimeInSelectedVerse,
         isTimeInNextVerse,
         nextVerseIndex,
-        isEndOfSong: timeRelativeToSelectedVerse === 1 && !nextVerseIndex
+        isEndOfSong: timeRelativeToSelectedVerse === 1 && !nextVerseIndex,
     }
 }

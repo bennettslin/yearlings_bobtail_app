@@ -19,7 +19,7 @@ const SliderStanzas = () => {
                 <SliderStanza
                     {...{
                         key: stanzaIndex,
-                        stanzaIndex
+                        stanzaIndex,
                     }}
                 />
             ))}

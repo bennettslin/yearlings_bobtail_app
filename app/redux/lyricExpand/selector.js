@@ -3,7 +3,7 @@ import { getIsLyricExpandable } from '../../helpers/resize/responsive'
 import { mapIsLyricExpanded } from '../toggle/selector'
 import {
     mapDeviceWidthIndex,
-    mapIsHeightlessLyric
+    mapIsHeightlessLyric,
 } from '../viewport/selector'
 
 export const mapIsLyricExpandable = createSelector(

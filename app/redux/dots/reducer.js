@@ -2,11 +2,11 @@
 import { hasKey } from '../../helpers/action'
 import {
     getDotsBitForToggledDotIndex,
-    getDotKeysFromBit
+    getDotKeysFromBit,
 } from '../../helpers/dot'
 import {
     DOTS_STORE,
-    SELECTED_DOTS_BIT
+    SELECTED_DOTS_BIT,
 } from '../../constants/store'
 import { getDotsDefaults } from './default'
 import { setInStorage } from '../../helpers/storage'
@@ -24,19 +24,19 @@ export const getDotsReducer = songIndex => (
                     { selectedDotsBit: prevDotsBit } = state,
                     selectedDotsBit = getDotsBitForToggledDotIndex({
                         dotIndex,
-                        dotsBit: prevDotsBit
+                        dotsBit: prevDotsBit,
                     })
                 setInStorage(SELECTED_DOTS_BIT, selectedDotsBit)
 
                 return {
                     ...state,
                     selectedDotsBit,
-                    ...getDotKeysFromBit(selectedDotsBit)
+                    ...getDotKeysFromBit(selectedDotsBit),
                 }
             } else {
                 return {
                     ...state,
-                    ...payload
+                    ...payload,
                 }
             }
         }

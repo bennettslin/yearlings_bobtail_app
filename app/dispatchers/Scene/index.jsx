@@ -15,7 +15,7 @@ const SceneDispatcher = forwardRef((props, ref) => {
             verseIndex: getVerseIndexForScene(
                 selectedSongIndex,
                 selectedSceneIndex
-            )
+            ),
         })
     }
 

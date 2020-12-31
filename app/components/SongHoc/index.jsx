@@ -23,7 +23,7 @@ const getSongServerClientHoc = ServerClientComponent => {
                 {...{
                     ref,
                     serverClientSongIndex,
-                    ...props
+                    ...props,
                 }}
             />
         )

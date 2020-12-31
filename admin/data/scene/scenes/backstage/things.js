@@ -1,15 +1,15 @@
 import {
     CUTOUT,
-    FIXTURE
+    FIXTURE,
 } from '../../../../../app/constants/scene/things'
 import {
     SANDBAGS,
-    STAGE_LIGHTS
+    STAGE_LIGHTS,
 } from '../../../../../app/constants/scene/things/cutouts'
 import {
     PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
-    MANNEQUIN
+    MANNEQUIN,
 } from '../../../../../app/constants/scene/things/fixtures'
 
 export default {
@@ -17,29 +17,29 @@ export default {
         [SANDBAGS]: {
             yIndex: 1,
             xPosition: 2.8,
-            scaleFactor: 0.37
+            scaleFactor: 0.37,
         },
         [STAGE_LIGHTS]: {
             yIndex: 1,
             xPosition: 3,
             scaleFactor: 0.28,
-            zOffset: 4
-        }
+            zOffset: 4,
+        },
     },
     [FIXTURE]: {
         [STEPLADDER]: {
             yIndex: 1,
             xPosition: 5.8,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
         },
         [MANNEQUIN]: {
             yIndex: 1,
             xPosition: 7.5,
-            scaleFactor: 0.35
+            scaleFactor: 0.35,
         },
         [PUSH_BROOM__BACKSTAGE]: {
             yIndex: 1,
-            xPosition: 9.3
-        }
-    }
+            xPosition: 9.3,
+        },
+    },
 }

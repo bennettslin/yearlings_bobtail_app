@@ -2,7 +2,7 @@ import {
     CARDBOARD,
     FIXTURE,
     FURNITURE,
-    PANEL
+    PANEL,
 } from '../../../../../app/constants/scene/things'
 import {
     POLICE_ALBUM,
@@ -10,62 +10,62 @@ import {
     LEONARD_COHEN_POSTER,
     TELEVISION_ALBUM,
     PROGRESS_CHART_EARLY,
-    PROGRESS_CHART_LATE
+    PROGRESS_CHART_LATE,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ELECTRIC_GUITAR,
-    KEYBOARD
+    KEYBOARD,
 } from '../../../../../app/constants/scene/things/fixtures'
 import { BENNETT_PILLOW__COUCH } from '../../../../../app/constants/scene/things/furnitures'
 import {
     WIDE_COUCH_BENNETT,
     WIDE_ARMREST_BENNETT__LEFT,
-    WIDE_ARMREST_BENNETT__RIGHT
+    WIDE_ARMREST_BENNETT__RIGHT,
 } from '../../../../../app/constants/scene/things/panels'
 
 export default {
     [FIXTURE]: {
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,
-            xPosition: 8.5
+            xPosition: 8.5,
         },
         [BENNETT_COUCH_LAMP]: {
             yIndex: 2,
             xPosition: 1,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
         },
         [ELECTRIC_GUITAR]: {
             yIndex: 2,
             xPosition: 9.6,
-            zOffset: -0.07
-        }
+            zOffset: -0.07,
+        },
     },
     [FURNITURE]: {
         [BENNETT_PILLOW__COUCH]: {
             yIndex: 3,
-            xPosition: 6
-        }
+            xPosition: 6,
+        },
     },
     [PANEL]: {
         [WIDE_COUCH_BENNETT]: {
             yIndex: 2,
             xPosition: 4,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
         },
         [WIDE_ARMREST_BENNETT__LEFT]: {
             yIndex: 4,
             xPosition: 1.1,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
         },
         [WIDE_ARMREST_BENNETT__RIGHT]: {
             yIndex: 4,
             xPosition: 6.9,
             scaleFactor: 0.3,
-            flipHorizontal: true
-        }
-    }
+            flipHorizontal: true,
+        },
+    },
 }
 
 export const THINGS_BENNETT_COUCH_OPINION = {
@@ -76,15 +76,15 @@ export const THINGS_BENNETT_COUCH_OPINION = {
             scaleFactor: 0.15,
             perspective: 50,
             rotateX: 10,
-            skewX: 4
+            skewX: 4,
         },
         [NIRVANA_POSTER]: {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
-            scaleFactor: 0.25
-        }
-    }
+            scaleFactor: 0.25,
+        },
+    },
 }
 
 export const THINGS_BENNETT_COUCH_PONDERING = {
@@ -93,9 +93,9 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
-            scaleFactor: 0.25
-        }
-    }
+            scaleFactor: 0.25,
+        },
+    },
 }
 
 export const THINGS_BENNETT_COUCH_RUBIKS = {
@@ -106,15 +106,15 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
             scaleFactor: 0.15,
             perspective: 50,
             rotateX: 10,
-            skewX: 4
+            skewX: 4,
         },
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
-            scaleFactor: 0.25
-        }
-    }
+            scaleFactor: 0.25,
+        },
+    },
 }
 
 export const THINGS_BENNETT_COUCH_READING = {
@@ -123,14 +123,14 @@ export const THINGS_BENNETT_COUCH_READING = {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
-            scaleFactor: 0.25
-        }
+            scaleFactor: 0.25,
+        },
     },
     [FIXTURE]: {
         [KEYBOARD]: {
             yIndex: 4,
             xPosition: 6.5,
-            zOffset: 0.5
-        }
-    }
+            zOffset: 0.5,
+        },
+    },
 }

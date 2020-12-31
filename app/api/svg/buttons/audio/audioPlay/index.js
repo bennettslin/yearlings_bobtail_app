@@ -3,7 +3,7 @@ import audioPlay from '../../../../../../assets/svgs/app/audio/audioPlay'
 
 const AUDIO_PLAY_MAP = {
     [true]: audioPause,
-    [false]: audioPlay
+    [false]: audioPlay,
 }
 
 export default ({ buttonIdentifier: isPlaying }) => {

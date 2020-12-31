@@ -14,7 +14,7 @@ const _getRemainingTimeFromHours = (hours = 0) => {
     return {
         months: totalMonths,
         weeks: remainingWeeks,
-        days: remainingDays
+        days: remainingDays,
     }
 }
 
@@ -31,7 +31,7 @@ export const getRemainingTimeStringFromHours = (hours = 0) => {
         {
             months,
             weeks,
-            days
+            days,
         } = remainingTimeObject
 
     if (!months && !weeks && !days) {

@@ -9,7 +9,7 @@ import {
     LIZ_COUCH_DARK_KEY,
     LIZ_COUCH_PEAFOWL_KEY,
     TAIWAN_ROOM_KEY,
-    TAIWAN_STAIRS_KEY
+    TAIWAN_STAIRS_KEY,
 } from '../constants/scene/scenes'
 
 export const getIsDarkIndoorScene = sceneCubesKey => {

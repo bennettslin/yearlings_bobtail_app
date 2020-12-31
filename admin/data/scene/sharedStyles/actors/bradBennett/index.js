@@ -5,6 +5,6 @@ import { TETHERBALL_POLE__SHARED } from '../../../../../../app/constants/scene/s
 export default {
     [TYING_TETHER]: [
         STEEL__SHARED,
-        TETHERBALL_POLE__SHARED
-    ]
+        TETHERBALL_POLE__SHARED,
+    ],
 }

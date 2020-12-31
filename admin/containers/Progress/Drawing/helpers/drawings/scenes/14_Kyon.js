@@ -1,12 +1,12 @@
 import { ACTOR } from '../../../../../../../app/constants/scene'
 import {
     LIZ,
-    KHARI
+    KHARI,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     ARRIVED,
     JUDGMENTAL,
-    CONCERNED
+    CONCERNED,
 } from '../../../../../../../app/constants/scene/actors/khari'
 import {
     PETTING_SEATED,
@@ -15,7 +15,7 @@ import {
     OPENING_DOOR,
     DEFENDING,
     NOT_HUNGRY,
-    ASLEEP_COUCH
+    ASLEEP_COUCH,
 } from '../../../../../../../app/constants/scene/actors/liz'
 
 export default [
@@ -24,85 +24,85 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        instance: PETTING_SEATED
-                    }
-                }
-            }
-        }
+                        instance: PETTING_SEATED,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        instance: PETTING_STANDING
-                    }
-                }
-            }
-        }
+                        instance: PETTING_STANDING,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        instance: SIFTING_TCHOTCHKES
-                    }
-                }
-            }
-        }
+                        instance: SIFTING_TCHOTCHKES,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        instance: OPENING_DOOR
-                    }
+                        instance: OPENING_DOOR,
+                    },
                 },
                 [KHARI]: {
-                    instance: ARRIVED
-                }
-            }
-        }
+                    instance: ARRIVED,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        instance: DEFENDING
-                    }
+                        instance: DEFENDING,
+                    },
                 },
                 [KHARI]: {
-                    instance: JUDGMENTAL
-                }
-            }
-        }
+                    instance: JUDGMENTAL,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        instance: NOT_HUNGRY
-                    }
+                        instance: NOT_HUNGRY,
+                    },
                 },
                 [KHARI]: {
-                    instance: CONCERNED
-                }
-            }
-        }
+                    instance: CONCERNED,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        instance: ASLEEP_COUCH
-                    }
-                }
-            }
-        }
-    }
+                        instance: ASLEEP_COUCH,
+                    },
+                },
+            },
+        },
+    },
 ]

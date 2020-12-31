@@ -7,43 +7,43 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-    PUPPET
+    PUPPET,
 } from '../../../../app/constants/scene/things'
 import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY,
     EL_CERRITO_DEATHBED_KEY,
-    EL_CERRITO_TENNIS_KEY
+    EL_CERRITO_TENNIS_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_AFTERNOON,
     TIME_EVENING,
     SEASON_AUTUMN,
-    SEASON_THOUGHT
+    SEASON_THOUGHT,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     MIRIAM,
-    MIRIAM_BENNETT
+    MIRIAM_BENNETT,
 } from '../../../../app/constants/scene/actors'
 import {
     REMOVING_PANTS,
     INFIRM,
-    DISPOSING_CONDOM
+    DISPOSING_CONDOM,
 } from '../../../../app/constants/scene/actors/bennett'
 import {
     PERFUMING,
     TENNIS,
-    REVERSING
+    REVERSING,
 } from '../../../../app/constants/scene/actors/miriam'
 import {
     COWGIRL,
-    BLOWJOB
+    BLOWJOB,
 } from '../../../../app/constants/scene/actors/miriamBennett'
 import {
     GOLDEN_GATE_BACKDROP,
     THOUGHT_MEDIUM__DEATHBED,
-    THOUGHT_SMALL
+    THOUGHT_SMALL,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__DEATHBED,
@@ -51,22 +51,22 @@ import {
     BUBBLE_LARGE__DEATHBED,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
-    BUBBLE_LARGE__TENNIS
+    BUBBLE_LARGE__TENNIS,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     EL_CERRITO_TREE,
-    IV_DRIP
+    IV_DRIP,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     HOSPITAL_RECORD_PLAYER,
     FREEWAY_SIGN,
     CONDOM_WRAPPER_MIRIAM,
-    USED_CONDOM_MIRIAM
+    USED_CONDOM_MIRIAM,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
-    TENNIS_COURT
+    TENNIS_COURT,
 } from '../../../../app/constants/scene/things/flats'
 import { DEATHBED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
@@ -77,7 +77,7 @@ import {
     REATTA_SEAT_BACK_DOWN,
     REATTA_EXTERIOR_FRONT,
     REATTA_EXTERIOR_REAR,
-    HOSPITAL_BED
+    HOSPITAL_BED,
 } from '../../../../app/constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../../app/constants/scene/things/puppets'
 
@@ -89,36 +89,36 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'sitting in car, taking off pants',
-                    instance: REMOVING_PANTS
+                    instance: REMOVING_PANTS,
                 },
                 [MIRIAM]: {
                     description: 'sitting in car, putting on perfume',
-                    instance: PERFUMING
-                }
+                    instance: PERFUMING,
+                },
             },
             [BACKDROP]: {
-                [GOLDEN_GATE_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [EL_CERRITO_TREE]: true
+                [EL_CERRITO_TREE]: true,
             },
             [FIXTURE]: {
-                [FREEWAY_SIGN]: true
+                [FREEWAY_SIGN]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
-                [EL_CERRITO_NEAR]: true
+                [EL_CERRITO_NEAR]: true,
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
                 [REATTA_SEAT_BOTTOM__FRONT]: true,
                 [REATTA_SEAT_BACK]: true,
                 [REATTA_EXTERIOR_FRONT]: true,
-                [REATTA_EXTERIOR_REAR]: true
-            }
+                [REATTA_EXTERIOR_REAR]: true,
+            },
         },
         cubes: EL_CERRITO_CAR_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 3,
@@ -127,33 +127,33 @@ export default [
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     description: 'back angle, eyes closed, trying to get off',
-                    instance: COWGIRL
-                }
+                    instance: COWGIRL,
+                },
             },
             [BACKDROP]: {
-                [GOLDEN_GATE_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [EL_CERRITO_TREE]: true
+                [EL_CERRITO_TREE]: true,
             },
             [FIXTURE]: {
                 [CONDOM_WRAPPER_MIRIAM]: true,
-                [FREEWAY_SIGN]: true
+                [FREEWAY_SIGN]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
-                [EL_CERRITO_NEAR]: true
+                [EL_CERRITO_NEAR]: true,
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
                 [REATTA_SEAT_BOTTOM__REAR]: true,
                 [REATTA_SEAT_BACK_DOWN]: true,
                 [REATTA_EXTERIOR_FRONT]: true,
-                [REATTA_EXTERIOR_REAR]: true
-            }
+                [REATTA_EXTERIOR_REAR]: true,
+            },
         },
         cubes: EL_CERRITO_CAR_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 5,
@@ -162,33 +162,33 @@ export default [
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     description: 'back angle, giving blowjob',
-                    instance: BLOWJOB
-                }
+                    instance: BLOWJOB,
+                },
             },
             [BACKDROP]: {
-                [GOLDEN_GATE_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [EL_CERRITO_TREE]: true
+                [EL_CERRITO_TREE]: true,
             },
             [FIXTURE]: {
                 [CONDOM_WRAPPER_MIRIAM]: true,
-                [FREEWAY_SIGN]: true
+                [FREEWAY_SIGN]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
-                [EL_CERRITO_NEAR]: true
+                [EL_CERRITO_NEAR]: true,
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
                 [REATTA_SEAT_BOTTOM__FRONT]: true,
                 [REATTA_SEAT_BACK_DOWN]: true,
                 [REATTA_EXTERIOR_FRONT]: true,
-                [REATTA_EXTERIOR_REAR]: true
-            }
+                [REATTA_EXTERIOR_REAR]: true,
+            },
         },
         cubes: EL_CERRITO_CAR_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 7,
@@ -197,38 +197,38 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'front angle, dying, infirm',
-                    instance: INFIRM
-                }
+                    instance: INFIRM,
+                },
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__DEATHBED]: true,
                 [BUBBLE_MEDIUM__DEATHBED]: true,
-                [BUBBLE_LARGE__DEATHBED]: true
+                [BUBBLE_LARGE__DEATHBED]: true,
             },
             [BACKDROP]: {
                 [GOLDEN_GATE_BACKDROP]: true,
-                [THOUGHT_MEDIUM__DEATHBED]: true
+                [THOUGHT_MEDIUM__DEATHBED]: true,
             },
             [CUTOUT]: {
-                [IV_DRIP]: true
+                [IV_DRIP]: true,
             },
             [FIXTURE]: {
                 [HOSPITAL_RECORD_PLAYER]: true,
-                [FREEWAY_SIGN]: true
+                [FREEWAY_SIGN]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
-                [EL_CERRITO_NEAR]: true
+                [EL_CERRITO_NEAR]: true,
             },
             [FURNITURE]: {
-                [DEATHBED_PILLOW]: true
+                [DEATHBED_PILLOW]: true,
             },
             [PANEL]: {
-                [HOSPITAL_BED]: true
-            }
+                [HOSPITAL_BED]: true,
+            },
         },
         cubes: EL_CERRITO_DEATHBED_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 8,
@@ -237,16 +237,16 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'front angle, dying, infirm',
-                    instance: INFIRM
+                    instance: INFIRM,
                 },
                 [MIRIAM]: {
                     description: 'serving in tennis',
-                    instance: TENNIS
-                }
+                    instance: TENNIS,
+                },
             },
             [BACKDROP]: {
                 [THOUGHT_MEDIUM__DEATHBED]: true,
-                [THOUGHT_SMALL]: true
+                [THOUGHT_SMALL]: true,
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__DEATHBED]: true,
@@ -254,26 +254,26 @@ export default [
                 [BUBBLE_LARGE__DEATHBED]: true,
                 [BUBBLE_SMALL__TENNIS]: true,
                 [BUBBLE_MEDIUM__TENNIS]: true,
-                [BUBBLE_LARGE__TENNIS]: true
+                [BUBBLE_LARGE__TENNIS]: true,
             },
             [CUTOUT]: {
-                [IV_DRIP]: true
+                [IV_DRIP]: true,
             },
             [FIXTURE]: {
-                [HOSPITAL_RECORD_PLAYER]: true
+                [HOSPITAL_RECORD_PLAYER]: true,
             },
             [FLAT]: {
-                [TENNIS_COURT]: true
+                [TENNIS_COURT]: true,
             },
             [FURNITURE]: {
-                [DEATHBED_PILLOW]: true
+                [DEATHBED_PILLOW]: true,
             },
             [PANEL]: {
-                [HOSPITAL_BED]: true
-            }
+                [HOSPITAL_BED]: true,
+            },
         },
         cubes: EL_CERRITO_TENNIS_KEY,
-        sky: { season: SEASON_THOUGHT }
+        sky: { season: SEASON_THOUGHT },
     },
     {
         unitIndex: 9,
@@ -282,62 +282,62 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'pensive, laying condom on ground',
-                    instance: DISPOSING_CONDOM
+                    instance: DISPOSING_CONDOM,
                 },
                 [MIRIAM]: {
                     description: 'side, looking back, reversing car',
-                    instance: REVERSING
-                }
+                    instance: REVERSING,
+                },
             },
             [BACKDROP]: {
-                [GOLDEN_GATE_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [EL_CERRITO_TREE]: true
+                [EL_CERRITO_TREE]: true,
             },
             [FIXTURE]: {
                 [CONDOM_WRAPPER_MIRIAM]: true,
-                [FREEWAY_SIGN]: true
+                [FREEWAY_SIGN]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
-                [EL_CERRITO_NEAR]: true
+                [EL_CERRITO_NEAR]: true,
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
                 [REATTA_SEAT_BOTTOM__REAR]: true,
                 [REATTA_SEAT_BACK]: true,
                 [REATTA_EXTERIOR_FRONT]: true,
-                [REATTA_EXTERIOR_REAR]: true
-            }
+                [REATTA_EXTERIOR_REAR]: true,
+            },
         },
         cubes: EL_CERRITO_CAR_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 11,
         description: `The car is in the background.`,
         presences: {
             [BACKDROP]: {
-                [GOLDEN_GATE_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [EL_CERRITO_TREE]: true
+                [EL_CERRITO_TREE]: true,
             },
             [FIXTURE]: {
                 [FREEWAY_SIGN]: true,
                 [CONDOM_WRAPPER_MIRIAM]: true,
-                [USED_CONDOM_MIRIAM]: true
+                [USED_CONDOM_MIRIAM]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
-                [EL_CERRITO_NEAR]: true
+                [EL_CERRITO_NEAR]: true,
             },
             [PUPPET]: {
-                [PUPPET_REATTA]: true
-            }
+                [PUPPET_REATTA]: true,
+            },
         },
         cubes: EL_CERRITO_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN }
-    }
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
+    },
 ]

@@ -1,6 +1,6 @@
 import {
     getSong,
-    getSongIsLogue
+    getSongIsLogue,
 } from './songs'
 import { getDotKeysFromBit } from '../../helpers/dot'
 import { getArrayOfLength } from '../../helpers/general'

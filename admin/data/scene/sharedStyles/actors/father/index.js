@@ -1,12 +1,12 @@
 import {
     ROARING,
     ACCUSATORY,
-    REELING
+    REELING,
 } from '../../../../../../app/constants/scene/actors/father'
 import {
     PAST,
     FUTURE,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../../../app/constants/scene/actors/songs'
 import { GHOST__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
 
@@ -16,5 +16,5 @@ export default {
     [PAST]: GHOST__SHARED,
     [FUTURE]: GHOST__SHARED,
     [REELING]: GHOST__SHARED,
-    [EPILOGUE]: null
+    [EPILOGUE]: null,
 }

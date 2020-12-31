@@ -10,7 +10,7 @@ import { DOTS_SLIDE_BUTTON_KEY } from '../../../constants/buttons'
 import {
     DOTS,
     WORMHOLES,
-    WIKI
+    WIKI,
 } from '../../../constants/tips'
 import './style'
 
@@ -27,7 +27,7 @@ const DotsSlideToggle = ({ className }) => {
                 className: cx(
                     'DotsSlideToggle',
                     className
-                )
+                ),
             }}
         >
             <Button
@@ -35,7 +35,7 @@ const DotsSlideToggle = ({ className }) => {
                 {...{
                     buttonName: DOTS_SLIDE_BUTTON_KEY,
                     accessKey: DOTS_SLIDE_TOGGLE_KEY,
-                    handleButtonClick
+                    handleButtonClick,
                 }}
             />
             <TipsHand {...{ tipType: DOTS }} />
@@ -47,7 +47,7 @@ const DotsSlideToggle = ({ className }) => {
 }
 
 DotsSlideToggle.propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
 }
 
 export default memo(DotsSlideToggle)

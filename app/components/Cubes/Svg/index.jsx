@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const defaultProps = {
     viewBoxWidth: 100,
-    viewBoxHeight: 100
+    viewBoxHeight: 100,
 }
 
 const propTypes = {
@@ -11,7 +11,7 @@ const propTypes = {
     zIndex: PropTypes.number,
     viewBoxWidth: PropTypes.number,
     viewBoxHeight: PropTypes.number,
-    children: PropTypes.node
+    children: PropTypes.node,
 }
 
 const CubeSvg = ({
@@ -19,7 +19,7 @@ const CubeSvg = ({
     zIndex,
     viewBoxWidth,
     viewBoxHeight,
-    children
+    children,
 
 }) => {
 
@@ -38,11 +38,11 @@ const CubeSvg = ({
             {...{
                 className,
                 ...safeViewBoxWidth && safeViewBoxHeight && {
-                    viewBox: `0 0 ${safeViewBoxWidth} ${safeViewBoxHeight}`
+                    viewBox: `0 0 ${safeViewBoxWidth} ${safeViewBoxHeight}`,
                 },
                 xmlns: 'http://www.w3.org/2000/svg',
                 preserveAspectRatio: 'none',
-                style: { zIndex }
+                style: { zIndex },
             }}
         >
             {children}

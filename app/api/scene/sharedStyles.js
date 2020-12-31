@@ -6,13 +6,13 @@ import { ALL_ACTOR_SHARED_STYLES } from '../../constants/scene/sharedStyles/acto
 const {
     sharedStyles: {
         actors: ACTOR_SHARED_STYLES,
-        things: THING_SHARED_STYLES
-    }
+        things: THING_SHARED_STYLES,
+    },
 } = getScene()
 
 export const getSharedStyleForActor = ({
     actorKey,
-    presenceKey
+    presenceKey,
 
 }) => {
     const
@@ -21,13 +21,13 @@ export const getSharedStyleForActor = ({
 
     return [
         ...ALL_ACTOR_SHARED_STYLES,
-        ...isString(sharedStyle) ? [sharedStyle] : sharedStyle
+        ...isString(sharedStyle) ? [sharedStyle] : sharedStyle,
     ]
 }
 
 export const getSharedStyleForThing = ({
     presenceType,
-    presenceKey
+    presenceKey,
 
 }) => {
     const thingSharedStyles = THING_SHARED_STYLES[presenceType]

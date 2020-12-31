@@ -4,18 +4,18 @@ import { mapCanTransitionAfterSceneChange } from '../entrance/selector'
 import {
     mapSceneSongIndex,
     mapSceneSceneIndex,
-    mapSceneCubesKey
+    mapSceneCubesKey,
 } from '../scene/selector'
 import {
     mapSelectedSceneIndex,
-    mapSelectedSongIndex
+    mapSelectedSongIndex,
 } from '../selected/selector'
 
 export const getMapIsPresenceShownInScene = ({
     yIndex,
     presenceType,
     actorKey,
-    presenceKey
+    presenceKey,
 
 }) => createSelector(
     mapCanTransitionAfterSceneChange,
@@ -37,7 +37,7 @@ export const getMapIsPresenceShownInScene = ({
                 yIndex,
                 presenceType,
                 actorKey,
-                presenceKey
+                presenceKey,
             }),
             isShownInNextScene = getIsShownInSceneForPresence({
                 songIndex: selectedSongIndex,
@@ -45,7 +45,7 @@ export const getMapIsPresenceShownInScene = ({
                 yIndex,
                 presenceType,
                 actorKey,
-                presenceKey
+                presenceKey,
             })
 
         return (

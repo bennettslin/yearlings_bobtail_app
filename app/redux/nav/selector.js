@@ -1,12 +1,12 @@
 import { createSelector } from 'reselect'
 import {
     getShowShrunkNavIcon,
-    getShowSingleNavBook
+    getShowSingleNavBook,
 } from '../../helpers/resize/nav'
 import { mapShownNavBookIndex } from '../session/selector'
 import {
     mapDeviceWidthIndex,
-    mapWindowWidth
+    mapWindowWidth,
 } from '../viewport/selector'
 
 export const mapShowShrunkNavIcon = createSelector(
@@ -17,7 +17,7 @@ export const mapShowShrunkNavIcon = createSelector(
         windowWidth
     ) => getShowShrunkNavIcon({
         deviceWidthIndex,
-        windowWidth
+        windowWidth,
     })
 )
 
@@ -29,7 +29,7 @@ export const mapShowSingleNavBook = createSelector(
         windowWidth
     ) => getShowSingleNavBook({
         deviceWidthIndex,
-        windowWidth
+        windowWidth,
     })
 )
 

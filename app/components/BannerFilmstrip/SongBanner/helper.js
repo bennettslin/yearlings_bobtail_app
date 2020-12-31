@@ -4,18 +4,18 @@ import { getVerseIndexforRatio } from '../../../helpers/verse'
 export const getVerseIndexFromClientX = ({
     clientX,
     songBannerElement,
-    selectedSongIndex
+    selectedSongIndex,
 }) => {
     if (Number.isFinite(clientX)) {
         const
             {
                 left,
-                width
+                width,
             } = songBannerElement.current.getBoundingClientRect(),
             bannerRatio = getElementRatioForClientX({
                 clientX,
                 elementLeft: left,
-                elementWidth: width
+                elementWidth: width,
             })
 
         return getVerseIndexforRatio(

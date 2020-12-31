@@ -6,7 +6,7 @@ export default {
         [SHAKEN]: {
             yIndex: 4,
             xPosition: 3.4,
-            zOffset: 0.02
-        }
-    }
+            zOffset: 0.02,
+        },
+    },
 }

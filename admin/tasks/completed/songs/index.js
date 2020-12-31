@@ -41,7 +41,7 @@ const songTasks = [
     tasks_16,
     tasks_17,
     tasks_18,
-    tasks_19
+    tasks_19,
 ]
 
 addDrawingTasksToSongTasks(songTasks)

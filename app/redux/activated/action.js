@@ -5,5 +5,5 @@ import { ACTIVATED_DEFAULTS } from './default'
 
 export const updateActivatedStore = (payload = ACTIVATED_DEFAULTS) => ({
     type: ACTIVATED_STORE,
-    payload: getDefinedOnlyPayload(payload)
+    payload: getDefinedOnlyPayload(payload),
 })

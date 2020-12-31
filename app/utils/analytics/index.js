@@ -20,7 +20,7 @@ export const sendToGa = ({
     category = 'category',
     action = 'action',
     label,
-    value
+    value,
 
 }) => {
     if (isGaUndefined()) {
@@ -32,7 +32,7 @@ export const sendToGa = ({
         eventCategory: category,
         eventAction: action,
         ...label && { eventLabel: label },
-        ...value && { eventValue: value }
+        ...value && { eventValue: value },
     })
 
     return true

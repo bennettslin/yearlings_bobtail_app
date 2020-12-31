@@ -6,7 +6,7 @@ export default {
         [COWGIRL]: {
             yIndex: 3,
             xPosition: 1.9,
-            zOffset: -1.1
-        }
-    }
+            zOffset: -1.1,
+        },
+    },
 }

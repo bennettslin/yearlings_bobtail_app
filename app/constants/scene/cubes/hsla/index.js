@@ -12,7 +12,7 @@ import {
     HUE_SAND,
     HUE_SNOW,
     HUE_SNOWGLOBE,
-    HUE_TENNIS
+    HUE_TENNIS,
 } from '../../../../scss/exports/style'
 
 import {
@@ -77,7 +77,7 @@ import {
     WAITING_ARMCHAIR_COLOUR,
     BENNETT_BED_COLOUR,
     LIZ_BED_COLOUR,
-    OCEAN_COLOUR
+    OCEAN_COLOUR,
 } from '../colours'
 
 export default {
@@ -157,5 +157,5 @@ export default {
     [LIZ_COUCH_COLOUR]: { h: parseInt(HUE_LIZ_LINENS), s: 15, l: 50 },
     [LIZ_BED_COLOUR]: { h: parseInt(HUE_LIZ_LINENS), s: 25, l: 65 },
     [WAITING_ARMCHAIR_COLOUR]: { h: parseInt(HUE_WAITING), s: 34, l: 44 },
-    [MIRIAM_COUCH_COLOUR]: { h: parseInt(HUE_MIRIAM_LINENS), s: 25, l: 45 }
+    [MIRIAM_COUCH_COLOUR]: { h: parseInt(HUE_MIRIAM_LINENS), s: 25, l: 45 },
 }

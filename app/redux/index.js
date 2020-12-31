@@ -46,7 +46,7 @@ import {
     SLIDER_STORE,
     TOGGLE_STORE,
     VERSE_BARS_STORE,
-    VIEWPORT_STORE
+    VIEWPORT_STORE,
 } from '../constants/store'
 
 export const getAlbumReducers = songIndex => combineReducers({
@@ -72,12 +72,12 @@ export const getAlbumReducers = songIndex => combineReducers({
     [SLIDER_STORE]: SliderReducer,
     [TOGGLE_STORE]: ToggleReducer,
     [VERSE_BARS_STORE]: VerseBarsReducer,
-    [VIEWPORT_STORE]: ViewportReducer
+    [VIEWPORT_STORE]: ViewportReducer,
 })
 
 export const getPitchReducers = () => combineReducers({
     [DOTS_STORE]: getDotsReducer(0),
     [ACCESS_STORE]: AccessPitchPageReducer,
     [PITCH_STORE]: PitchReducer,
-    [VIEWPORT_STORE]: ViewportPitchPageReducer
+    [VIEWPORT_STORE]: ViewportPitchPageReducer,
 })

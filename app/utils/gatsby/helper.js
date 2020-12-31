@@ -1,11 +1,11 @@
 import {
     getAlbumReducers,
-    getPitchReducers
+    getPitchReducers,
 } from '../../redux'
 import {
     getPathname,
     getIsValidAdminPath,
-    getIsValidPitchPagePath
+    getIsValidPitchPagePath,
 } from '../../helpers/pathname'
 import { getRoutingSongIndex } from '../../helpers/routing'
 import { getIsAlbumSession } from '../browser'

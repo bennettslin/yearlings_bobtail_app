@@ -6,7 +6,7 @@ import epilogue from '../../../../../assets/svgs/actors/andrew/epilogue'
 import {
     FEIGNING_FEAR,
     THROWING,
-    NOODLING
+    NOODLING,
 } from '../../../../constants/scene/actors/andrew'
 
 import { EPILOGUE } from '../../../../constants/scene/actors/songs'
@@ -15,5 +15,5 @@ export default {
     [FEIGNING_FEAR]: feigningFear,
     [THROWING]: throwing,
     [NOODLING]: noodling,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

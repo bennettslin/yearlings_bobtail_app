@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import WikiWormholeDispatcher from '../Dispatcher'
 import {
     mapSelectedSongIndex,
-    mapSelectedAnnotationIndex
+    mapSelectedAnnotationIndex,
 } from '../../../redux/selected/selector'
 
 const WikiWormholeListener = () => {

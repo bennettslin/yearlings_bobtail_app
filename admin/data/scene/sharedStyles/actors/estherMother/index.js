@@ -1,10 +1,10 @@
 import {
     HURT_CONSOLING,
-    SOBBING_SHIELDING
+    SOBBING_SHIELDING,
 } from '../../../../../../app/constants/scene/actors/estherMother'
 import {
     BENNETT,
-    LIZ
+    LIZ,
 } from '../../../../../../app/constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
 import { PROMISE_PHOTO__SHARED } from '../../../../../../app/constants/scene/sharedStyles/print'
@@ -16,7 +16,7 @@ export default {
         ALL_PEOPLE__SHARED,
         BENNETT,
         LIZ,
-        GHOST__SHARED
+        GHOST__SHARED,
     ],
-    [SOBBING_SHIELDING]: GHOST__SHARED
+    [SOBBING_SHIELDING]: GHOST__SHARED,
 }

@@ -8,16 +8,16 @@ import {
     LIZ,
     AMY,
     STEPHANIE,
-    WADE
+    WADE,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
-    SHOES_REFLECTION
+    SHOES_REFLECTION,
 } from '../../../../../../../app/constants/scene/actors/bennett'
 import {
     ASLEEP_REACHING,
-    REACHING_REFLECTION
+    REACHING_REFLECTION,
 } from '../../../../../../../app/constants/scene/actors/liz'
 import { SHANE_SPILLING } from '../../../../../../../app/constants/scene/actors/tomer'
 import { WATCHING } from '../../../../../../../app/constants/scene/actors/wade'
@@ -27,7 +27,7 @@ import {
     FLIRTING,
     CARRYING,
     MINGLING,
-    WAITING
+    WAITING,
 } from '../../../../../../../app/constants/scene/actors/songs'
 
 export default [
@@ -35,98 +35,98 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: PERFORMING
+                    instance: PERFORMING,
                 },
                 [ANA]: {
-                    instance: PERFORMING
+                    instance: PERFORMING,
                 },
                 [TOMER]: {
                     shane: {
-                        instance: SHANE_SPILLING
-                    }
+                        instance: SHANE_SPILLING,
+                    },
                 },
                 [WADE]: {
-                    instance: WATCHING
+                    instance: WATCHING,
                 },
                 [AMY]: {
-                    instance: SQUEEZING
+                    instance: SQUEEZING,
                 },
                 [STEPHANIE]: {
-                    instance: SQUEEZING
-                }
-            }
-        }
+                    instance: SQUEEZING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: FLIRTING
+                    instance: FLIRTING,
                 },
                 [AMY]: {
-                    instance: FLIRTING
+                    instance: FLIRTING,
                 },
                 [JACOB]: {
-                    instance: CARRYING
+                    instance: CARRYING,
                 },
                 [MARA]: {
-                    instance: CARRYING
-                }
-            }
-        }
+                    instance: CARRYING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: SIDELONG_HESITANCE
+                    instance: SIDELONG_HESITANCE,
                 },
                 [ANA]: {
-                    instance: WAITING
+                    instance: WAITING,
                 },
                 [MARA]: {
-                    instance: WAITING
+                    instance: WAITING,
                 },
                 [AMY]: {
-                    instance: MINGLING
+                    instance: MINGLING,
                 },
                 [STEPHANIE]: {
-                    instance: MINGLING
+                    instance: MINGLING,
                 },
                 [WADE]: {
-                    instance: MINGLING
-                }
-            }
-        }
+                    instance: MINGLING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: REMOVING_SHOES
+                    instance: REMOVING_SHOES,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: ASLEEP_REACHING
-                    }
-                }
-            }
-        }
+                        instance: ASLEEP_REACHING,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        instance: SHOES_REFLECTION
-                    }
+                        instance: SHOES_REFLECTION,
+                    },
                 },
                 [LIZ]: {
                     reflection: {
-                        instance: REACHING_REFLECTION
-                    }
-                }
-            }
-        }
-    }
+                        instance: REACHING_REFLECTION,
+                    },
+                },
+            },
+        },
+    },
 ]

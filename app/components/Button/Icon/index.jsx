@@ -9,12 +9,12 @@ import './style'
 
 const ButtonIcon = ({
     buttonName,
-    buttonIdentifier
+    buttonIdentifier,
 
 }) => {
     const buttonIconSvg = getSvgForButton({
         buttonName,
-        buttonIdentifier
+        buttonIdentifier,
     })
 
     return Boolean(buttonIconSvg) && (
@@ -32,9 +32,9 @@ const ButtonIcon = ({
 
                     getButtonIconClassNames({
                         buttonName,
-                        buttonIdentifier
+                        buttonIdentifier,
                     })
-                )
+                ),
             }}
         >
             {buttonIconSvg}
@@ -44,7 +44,7 @@ const ButtonIcon = ({
 
 ButtonIcon.propTypes = {
     buttonName: PropTypes.string.isRequired,
-    buttonIdentifier: PropTypes.any
+    buttonIdentifier: PropTypes.any,
 }
 
 export default memo(ButtonIcon)

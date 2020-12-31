@@ -8,13 +8,13 @@ import epilogue from '../../../../../assets/svgs/actors/mother/epilogue'
 import {
     STOOPING,
     COMFORTING,
-    ARGUING
+    ARGUING,
 } from '../../../../constants/scene/actors/mother'
 
 import {
     PRESENT,
     FUTURE,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -23,5 +23,5 @@ export default {
     [ARGUING]: arguing,
     [PRESENT]: present,
     [FUTURE]: future,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

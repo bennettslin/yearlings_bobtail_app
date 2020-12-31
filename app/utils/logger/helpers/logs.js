@@ -18,7 +18,7 @@ import {
     TRANSITION,
     SUCCESS,
     ERROR,
-    getStyleForCategory
+    getStyleForCategory,
 } from './styles'
 
 export const logger = pino()
@@ -32,7 +32,7 @@ const _logInfo = ({
     action,
     label,
     value,
-    useTimeForValue
+    useTimeForValue,
 
 }) => {
     const
@@ -50,7 +50,7 @@ const _logInfo = ({
             `%c${log}`,
             styles || getStyleForCategory({
                 category: styleCategory || category,
-                isGaCall
+                isGaCall,
             }),
             timeDifference
         )
@@ -61,7 +61,7 @@ const _logInfo = ({
             category,
             action,
             label,
-            value: finalValue
+            value: finalValue,
         })
 
         if (IS_STAGING && didGaSucceed) {
@@ -75,7 +75,7 @@ const _logInfo = ({
 /** Analytics events */
 export const logAccess = ({
     log,
-    label
+    label,
 }) => {
     _logInfo({
         log,
@@ -85,22 +85,22 @@ export const logAccess = ({
             // Send to GA as an event category.
             category: EVENT,
             action: 'key',
-            label
-        }
+            label,
+        },
     })
 }
 export const logEvent = ({
     componentName,
     e: { type },
-    analyticsIdentifier
+    analyticsIdentifier,
 }) => {
     _logInfo({
         log: `Event "${type}" from ${componentName}.`,
         category: EVENT,
         ...Boolean(analyticsIdentifier) && {
             action: type,
-            label: `${componentName} ${analyticsIdentifier}`
-        }
+            label: `${componentName} ${analyticsIdentifier}`,
+        },
     })
 }
 export const logMount = (componentName) => {
@@ -110,7 +110,7 @@ export const logMount = (componentName) => {
         category: 'lifecycle',
         action: MOUNT,
         label: componentName,
-        useTimeForValue: true
+        useTimeForValue: true,
     })
 }
 export const logPlayer = ({
@@ -122,14 +122,14 @@ export const logPlayer = ({
         log,
         styleCategory: success ? SUCCESS : PLAYER,
         category: PLAYER,
-        ...props
+        ...props,
     })
 }
 export const logSelect = ({
     action,
     song,
     verse,
-    annotation
+    annotation,
 }) => {
     if (verse !== undefined) {
         const
@@ -139,7 +139,7 @@ export const logSelect = ({
             log: message,
             category: SELECT,
             action,
-            label: message
+            label: message,
         })
     }
     if (annotation) {
@@ -148,7 +148,7 @@ export const logSelect = ({
             log: message,
             category: SELECT,
             action,
-            label: message
+            label: message,
         })
     }
 }
@@ -160,7 +160,7 @@ export const logServe = ({
         log,
         category: SERVE,
         useTimeForValue: true,
-        ...props
+        ...props,
     })
 }
 export const logError = ({
@@ -170,7 +170,7 @@ export const logError = ({
     _logInfo({
         log,
         category: ERROR,
-        ...props
+        ...props,
     })
 }
 
@@ -179,19 +179,19 @@ export const logError = ({
 export const logAdmin = log => {
     _logInfo({
         log,
-        category: ADMIN
+        category: ADMIN,
     })
 }
 export const logFocus = log => {
     _logInfo({
         log,
-        category: FOCUS
+        category: FOCUS,
     })
 }
 export const logScroll = ({
     isCarousel,
     isAnchor,
-    log
+    log,
 }) => {
     let scrollType = 'verse'
     if (isCarousel) {
@@ -201,12 +201,12 @@ export const logScroll = ({
     }
     _logInfo({
         log: `Scroll ${scrollType}: ${log}`,
-        category: SCROLL
+        category: SCROLL,
     })
 }
 export const logTransition = log => {
     _logInfo({
         log,
-        category: TRANSITION
+        category: TRANSITION,
     })
 }

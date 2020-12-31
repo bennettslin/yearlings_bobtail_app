@@ -13,5 +13,5 @@ export const USHER__SHARED = 'usher'
 
 export const ALL_ACTOR_SHARED_STYLES = [
     ALL_CLOTHING__SHARED,
-    ALL_PEOPLE__SHARED
+    ALL_PEOPLE__SHARED,
 ]

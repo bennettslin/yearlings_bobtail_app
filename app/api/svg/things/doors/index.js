@@ -76,7 +76,7 @@ import {
     PORCH_DOOR,
     PRINCIPAL_DOOR,
     WAITING_ROOM_DOOR,
-    WAITING_ROOM_DOOR_OPEN
+    WAITING_ROOM_DOOR_OPEN,
 } from '../../../../constants/scene/things/doors'
 
 export default {
@@ -119,5 +119,5 @@ export default {
     [LIZ_DOOR_OPEN]: lizDoorOpen,
     [LIZ_GATE_INSIDE]: lizGateInside,
     [LOADING_DOCK_DOOR]: loadingDockDoor,
-    [EL_TORITO_DOORS]: elToritoDoors
+    [EL_TORITO_DOORS]: elToritoDoors,
 }

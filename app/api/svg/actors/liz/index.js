@@ -26,7 +26,7 @@ import {
     OPENING_DOOR,
     DEFENDING,
     NOT_HUNGRY,
-    ASLEEP_COUCH
+    ASLEEP_COUCH,
 } from '../../../../constants/scene/actors/liz'
 
 import {
@@ -39,7 +39,7 @@ import {
     GATE_CODE,
     RUMPLED_LINENS,
     LEAVING_CRUMBLED,
-    EL_TORITO
+    EL_TORITO,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -61,5 +61,5 @@ export default {
     [DEFENDING]: defending,
     [NOT_HUNGRY]: notHungry,
     [ASLEEP_COUCH]: asleepCouch,
-    [EL_TORITO]: elTorito
+    [EL_TORITO]: elTorito,
 }

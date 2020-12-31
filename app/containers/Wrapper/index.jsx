@@ -33,7 +33,7 @@ const WrapperContainer = ({ children }) => (
 )
 
 WrapperContainer.propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
 }
 
 export default memo(WrapperContainer)

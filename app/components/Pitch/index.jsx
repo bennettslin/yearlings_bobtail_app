@@ -13,7 +13,7 @@ const Pitch = forwardRef(({ pagePitchIndex }, ref) => (
                 className: cx(
                     'Pitch',
                     'fCC'
-                )
+                ),
             }}
         >
             <PitchScroll {...{ ref }} />
@@ -22,7 +22,7 @@ const Pitch = forwardRef(({ pagePitchIndex }, ref) => (
 ))
 
 Pitch.propTypes = {
-    pagePitchIndex: PropTypes.number
+    pagePitchIndex: PropTypes.number,
 }
 
 export default Pitch

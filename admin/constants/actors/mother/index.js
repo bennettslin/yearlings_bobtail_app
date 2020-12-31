@@ -1,53 +1,53 @@
 import {
     MOTHER,
-    ESTHER_MOTHER
+    ESTHER_MOTHER,
 } from '../../../../app/constants/scene/actors'
 import {
     STOOPING,
     COMFORTING,
-    ARGUING
+    ARGUING,
 } from '../../../../app/constants/scene/actors/mother'
 import {
     HURT_CONSOLING,
-    SOBBING_SHIELDING
+    SOBBING_SHIELDING,
 } from '../../../../app/constants/scene/actors/estherMother'
 import {
     PRESENT,
     FUTURE,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: MOTHER,
-        instance: STOOPING
+        instance: STOOPING,
     },
     {
         type: MOTHER,
-        instance: COMFORTING
+        instance: COMFORTING,
     },
     {
         type: MOTHER,
-        instance: ARGUING
+        instance: ARGUING,
     },
     {
         type: ESTHER_MOTHER,
-        instance: HURT_CONSOLING
+        instance: HURT_CONSOLING,
     },
     {
         type: MOTHER,
-        instance: PRESENT
+        instance: PRESENT,
     },
     {
         type: MOTHER,
-        instance: FUTURE
+        instance: FUTURE,
     },
     {
         type: ESTHER_MOTHER,
-        instance: SOBBING_SHIELDING
+        instance: SOBBING_SHIELDING,
     },
     {
         type: MOTHER,
-        instance: EPILOGUE
-    }
+        instance: EPILOGUE,
+    },
 ]

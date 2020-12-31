@@ -11,7 +11,7 @@ const LoadingContainer = ({ didMount }) => !didMount && (
                 'LoadingContainer',
                 'abF',
                 'fCC'
-            )
+            ),
         }}
     >
         {/* Don't wait for asset to fetch. */}
@@ -19,7 +19,7 @@ const LoadingContainer = ({ didMount }) => !didMount && (
             {...{
                 className: 'dramaMasks',
                 viewBox: '0 0 469.74 265.56',
-                xmlns: 'http://www.w3.org/2000/svg'
+                xmlns: 'http://www.w3.org/2000/svg',
             }}
         >
             <g className="mask">
@@ -33,7 +33,7 @@ const LoadingContainer = ({ didMount }) => !didMount && (
 )
 
 LoadingContainer.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default getDidMountHoc(LoadingContainer)

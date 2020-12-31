@@ -7,17 +7,17 @@ import { getArrayOfLength } from './general'
 import {
     getRoutingVerseIndex,
     getRoutingAnnotationIndex,
-    getRoutingPitchIndex
+    getRoutingPitchIndex,
 } from './routing'
 import { getWindow } from '../utils/browser'
 import {
     INITIAL_DOTS_BIT,
-    FULL_DOTS_BIT
+    FULL_DOTS_BIT,
 } from '../constants/dots'
 import {
     SHOWN,
     AUDIO_OPTIONS,
-    GENERAL_OPTIONS
+    GENERAL_OPTIONS,
 } from '../constants/options'
 import {
     PITCH_SEGMENT_INDEX,
@@ -25,7 +25,7 @@ import {
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
     SELECTED_ANNOTATION_INDEX,
-    AUDIO_OPTION_INDEX
+    AUDIO_OPTION_INDEX,
 } from '../constants/store'
 import { getValidPitchSegmentIndex } from '../api/pitch/segments'
 
@@ -125,7 +125,7 @@ export const getInitialIndicesFromRoutingOrStorage = pageSongIndex => {
     return {
         initialSongIndex,
         initialVerseIndex,
-        initialAnnotationIndex
+        initialAnnotationIndex,
     }
 }
 

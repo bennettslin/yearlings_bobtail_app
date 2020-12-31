@@ -5,7 +5,7 @@ export const mapWormholeLinkForDispatch = (wormholeLink) => {
         verseIndex: selectedVerseIndex,
         columnIndex: earColumnIndex,
         destinationWormholeIndex,
-        wormholePrefix
+        wormholePrefix,
     } = wormholeLink
 
     return {
@@ -14,6 +14,6 @@ export const mapWormholeLinkForDispatch = (wormholeLink) => {
         selectedVerseIndex,
         earColumnIndex,
         destinationWormholeIndex,
-        wormholePrefix
+        wormholePrefix,
     }
 }

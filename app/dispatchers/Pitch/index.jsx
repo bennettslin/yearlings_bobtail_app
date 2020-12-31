@@ -11,7 +11,7 @@ const PitchDispatcher = forwardRef((props, ref) => {
 
     const dispatchPitch = ({
         pitchSegmentIndex: nextPitchSegmentIndex,
-        direction
+        direction,
 
     }) => {
         if (Number.isFinite(nextPitchSegmentIndex)) {

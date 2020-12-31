@@ -20,7 +20,7 @@ const TipsPopup = () => {
             noAbsoluteFull
             {...{
                 popupName: 'TipsPopup',
-                isVisible: isTipsPopupVisible
+                isVisible: isTipsPopupVisible,
             }}
         >
             <Tips />

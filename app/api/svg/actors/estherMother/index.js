@@ -3,10 +3,10 @@ import sobbingShielding from '../../../../../assets/svgs/actors/estherMother/sob
 
 import {
     HURT_CONSOLING,
-    SOBBING_SHIELDING
+    SOBBING_SHIELDING,
 } from '../../../../constants/scene/actors/estherMother'
 
 export default {
     [HURT_CONSOLING]: hurtConsoling,
-    [SOBBING_SHIELDING]: sobbingShielding
+    [SOBBING_SHIELDING]: sobbingShielding,
 }

@@ -8,7 +8,7 @@ import {
     FIXTURE,
     FLAT,
     FURNITURE,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     DISHROOM_KEY,
@@ -20,7 +20,7 @@ import {
     LIZ_BED_DARK_KEY,
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
-    BENNETT_GATE_KEY
+    BENNETT_GATE_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_EVENING,
@@ -28,19 +28,19 @@ import {
     TIME_NIGHT,
     SEASON_AUTUMN,
     SEASON_WINTER,
-    SEASON_LOVE
+    SEASON_LOVE,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     BENNETT_LIZ,
     LIZ,
     NESTOR,
-    BENNETT_LIZ_REFLECTION
+    BENNETT_LIZ_REFLECTION,
 } from '../../../../app/constants/scene/actors'
 import {
     DISHROOM_READING,
     MOP_SOPPED,
-    WAITING_ROOM_ASLEEP
+    WAITING_ROOM_ASLEEP,
 } from '../../../../app/constants/scene/actors/bennett'
 import { JOGGER } from '../../../../app/constants/scene/actors/nestor'
 import {
@@ -48,11 +48,11 @@ import {
     DATE_ENDING,
     DATE_ENDED,
     GATE_CODE,
-    RUMPLED_LINENS
+    RUMPLED_LINENS,
 } from '../../../../app/constants/scene/actors/songs'
 import {
     OAKLAND_FRONT__HIGH,
-    OAKLAND_SIDE__LEVEL
+    OAKLAND_SIDE__LEVEL,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     GINGERBREAD_PRISON,
@@ -62,7 +62,7 @@ import {
     AFTERGLOW,
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
-    AFTERGLOW_REFLECTION
+    AFTERGLOW_REFLECTION,
 } from '../../../../app/constants/scene/actors/bennettLiz'
 import {
     BUBBLE_SMALL__WAITING,
@@ -70,12 +70,12 @@ import {
     BUBBLE_LARGE__WAITING,
     WAITING_THOUGHT_WALKING,
     WAITING_THOUGHT_SINGING,
-    WAITING_THOUGHT_STUDYING
+    WAITING_THOUGHT_STUDYING,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     CODE_BOX,
     CLIPBOARD,
-    PAINTING
+    PAINTING,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     DISH_PILE,
@@ -96,7 +96,7 @@ import {
     BUSH_SINGLE__BENNETT_GATE,
     BUSH_DOUBLE__BENNETT_GATE,
     RECYCLABLES__NEIGHBOUR,
-    WAITING_ROOM_PLANT
+    WAITING_ROOM_PLANT,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     DISHROOM_DOOR,
@@ -112,7 +112,7 @@ import {
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN,
     BENNETT_GATE_FRONT,
-    BENNETT_GATE_SIDE_OPEN
+    BENNETT_GATE_SIDE_OPEN,
 } from '../../../../app/constants/scene/things/doors'
 import {
     LIGHT_SWITCH__OFF,
@@ -124,19 +124,19 @@ import {
     CONDOM_WRAPPER_LIZ,
     CONDOM_WRAPPER_REFLECTION,
     USED_CONDOM_LIZ,
-    USED_CONDOM_REFLECTION
+    USED_CONDOM_REFLECTION,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     NEAR_BUILDINGS,
     PUBLIC_FAR__LIZ_GATE,
-    PUBLIC_NEAR__LIZ_GATE
+    PUBLIC_NEAR__LIZ_GATE,
 } from '../../../../app/constants/scene/things/flats'
 import {
     BENNETT_PILLOW__BED,
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION,
     LIZ_PILLOWS_PILE,
-    LIZ_PILLOWS_PILE_REFLECTION
+    LIZ_PILLOWS_PILE_REFLECTION,
 } from '../../../../app/constants/scene/things/furnitures'
 import {
     CONVEYOR_BELT,
@@ -148,7 +148,7 @@ import {
     WAITING_ARMREST__BENNETT_RIGHT,
     WAITING_ARMCHAIR__LIZ,
     WAITING_ARMREST__LIZ_LEFT,
-    WAITING_ARMREST__LIZ_RIGHT
+    WAITING_ARMREST__LIZ_RIGHT,
 } from '../../../../app/constants/scene/things/panels'
 
 /**
@@ -162,8 +162,8 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'back, reading book, pulling tray from belt.',
-                    instance: DISHROOM_READING
-                }
+                    instance: DISHROOM_READING,
+                },
             },
             [CUTOUT]: {
                 [DISH_PILE]: true,
@@ -171,18 +171,18 @@ export default [
                 [GLASS_RACK__SINK]: true,
                 [GLASS_RACK__DOLLY]: true,
                 [DISHROOM_DOLLY__TRAY]: true,
-                [DISHROOM_DOLLY__GLASS]: true
+                [DISHROOM_DOLLY__GLASS]: true,
             },
             [DOOR]: {
-                [DISHROOM_DOOR]: true
+                [DISHROOM_DOOR]: true,
             },
             [PANEL]: {
                 [CONVEYOR_BELT]: true,
-                [DISHROOM_SINK]: true
-            }
+                [DISHROOM_SINK]: true,
+            },
         },
         cubes: DISHROOM_KEY,
-        sky: { time: TIME_NOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_NOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 4,
@@ -191,14 +191,14 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, handing lancet pen, exuberant',
-                    instance: DISHROOM_LANCET
+                    instance: DISHROOM_LANCET,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'side, taken aback, politely friendly',
-                        instance: DISHROOM_LANCET
-                    }
-                }
+                        instance: DISHROOM_LANCET,
+                    },
+                },
             },
             [CUTOUT]: {
                 [DISH_PILE]: true,
@@ -206,18 +206,18 @@ export default [
                 [GLASS_RACK__SINK]: true,
                 [GLASS_RACK__DOLLY]: true,
                 [DISHROOM_DOLLY__TRAY]: true,
-                [DISHROOM_DOLLY__GLASS]: true
+                [DISHROOM_DOLLY__GLASS]: true,
             },
             [DOOR]: {
-                [DISHROOM_DOOR]: true
+                [DISHROOM_DOOR]: true,
             },
             [PANEL]: {
                 [CONVEYOR_BELT]: true,
-                [DISHROOM_SINK]: true
-            }
+                [DISHROOM_SINK]: true,
+            },
         },
         cubes: DISHROOM_KEY,
-        sky: { time: TIME_NOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_NOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 6,
@@ -226,31 +226,31 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, awkward, wanting to make a move',
-                    instance: DATE_ENDING
+                    instance: DATE_ENDING,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'side, friendly, guarded',
-                        instance: DATE_ENDING
-                    }
-                }
+                        instance: DATE_ENDING,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
                 [CYPRESS_DOUBLE__LIZ_GATE]: true,
                 [CYPRESS_SINGLE__LIZ_ENDING]: true,
                 [CACTUS_SINGLE__LIZ_ENDING]: true,
-                [CACTUS_DOUBLE__LIZ_GATE]: true
+                [CACTUS_DOUBLE__LIZ_GATE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDING]: true,
-                [LIZ_GATE_OUTSIDE]: true
-            }
+                [LIZ_GATE_OUTSIDE]: true,
+            },
         },
         cubes: LIZ_GATE_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN }
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 7,
@@ -260,34 +260,34 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, walking away dejected, slumped over',
-                    instance: DATE_ENDED
+                    instance: DATE_ENDED,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'front, closing gate, looking concerned',
-                        instance: DATE_ENDED
-                    }
-                }
+                        instance: DATE_ENDED,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_FRONT__HIGH]: true
+                [OAKLAND_FRONT__HIGH]: true,
             },
             [CUTOUT]: {
                 [CYPRESS_SINGLE__LIZ_ENDED]: true,
                 [CACTUS_SINGLE__LIZ_ENDED]: true,
                 [LAMPPOST__LIZ_GATE]: true,
-                [TRAFFIC_LIGHT_FRONT]: true
+                [TRAFFIC_LIGHT_FRONT]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDED]: true,
-                [LIZ_GATE_OUTSIDE_OPEN]: true
+                [LIZ_GATE_OUTSIDE_OPEN]: true,
             },
             [FLAT]: {
                 [PUBLIC_FAR__LIZ_GATE]: true,
-                [PUBLIC_NEAR__LIZ_GATE]: true
-            }
+                [PUBLIC_NEAR__LIZ_GATE]: true,
+            },
         },
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN }
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 8,
@@ -296,35 +296,35 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, walking, mopey',
-                    instance: MOP_SOPPED
+                    instance: MOP_SOPPED,
                 },
                 [NESTOR]: {
                     jogger: {
                         description: 'side, jogging, spry',
-                        instance: JOGGER
-                    }
-                }
+                        instance: JOGGER,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CARDBOARD]: {
-                [CODE_BOX]: true
+                [CODE_BOX]: true,
             },
             [CUTOUT]: {
                 [APARTMENT_PLANT]: true,
                 [BUSH_SINGLE__BENNETT_GATE]: true,
-                [BUSH_DOUBLE__BENNETT_GATE]: true
+                [BUSH_DOUBLE__BENNETT_GATE]: true,
             },
             [DOOR]: {
-                [BENNETT_GATE_FRONT]: true
+                [BENNETT_GATE_FRONT]: true,
             },
             [FLAT]: {
-                [NEAR_BUILDINGS]: true
-            }
+                [NEAR_BUILDINGS]: true,
+            },
         },
         cubes: BENNETT_GATE_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER }
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
     },
     {
         unitIndex: 10,
@@ -333,35 +333,35 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'back, punching code, surprised',
-                    instance: GATE_CODE
+                    instance: GATE_CODE,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'side, hesitantly greeting',
-                        instance: GATE_CODE
-                    }
-                }
+                        instance: GATE_CODE,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CARDBOARD]: {
-                [CODE_BOX]: true
+                [CODE_BOX]: true,
             },
             [CUTOUT]: {
                 [APARTMENT_PLANT]: true,
                 [BUSH_SINGLE__BENNETT_GATE]: true,
-                [BUSH_DOUBLE__BENNETT_GATE]: true
+                [BUSH_DOUBLE__BENNETT_GATE]: true,
             },
             [DOOR]: {
-                [BENNETT_GATE_FRONT]: true
+                [BENNETT_GATE_FRONT]: true,
             },
             [FLAT]: {
-                [NEAR_BUILDINGS]: true
-            }
+                [NEAR_BUILDINGS]: true,
+            },
         },
         cubes: BENNETT_GATE_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER }
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
     },
     {
         unitIndex: 11,
@@ -370,33 +370,33 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'front, opening gate, silent, attentive',
-                    instance: GINGERBREAD_PRISON
-                }
+                    instance: GINGERBREAD_PRISON,
+                },
             },
             [CUTOUT]: {
-                [RECYCLABLES__NEIGHBOUR]: true
+                [RECYCLABLES__NEIGHBOUR]: true,
             },
             [DOOR]: {
                 [NEIGHBOUR_DOOR]: true,
                 [BLINDS_OUTSIDE__NEIGHBOUR]: true,
                 [BLINDS_INSIDE_OPEN]: true,
                 [BENNETT_DOOR_INSIDE]: true,
-                [BENNETT_GATE_SIDE_OPEN]: true
+                [BENNETT_GATE_SIDE_OPEN]: true,
             },
             [FIXTURE]: {
                 [LIGHT_SWITCH__OFF]: true,
                 [LINGERIE_DRAWING]: true,
-                [VASELINE]: true
+                [VASELINE]: true,
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW__BED]: true
+                [BENNETT_PILLOW__BED]: true,
             },
             [PANEL]: {
-                [BENNETT_BED]: true
-            }
+                [BENNETT_BED]: true,
+            },
         },
         cubes: BENNETT_BED_DARK_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER }
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
     },
     {
         unitIndex: 12,
@@ -405,38 +405,38 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'front, turning on light, smiling',
-                    instance: RUMPLED_LINENS
+                    instance: RUMPLED_LINENS,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'side, wincing, embarrassed smile',
-                        instance: RUMPLED_LINENS
-                    }
-                }
+                        instance: RUMPLED_LINENS,
+                    },
+                },
             },
             [CUTOUT]: {
-                [RECYCLABLES__NEIGHBOUR]: true
+                [RECYCLABLES__NEIGHBOUR]: true,
             },
             [DOOR]: {
                 [NEIGHBOUR_DOOR]: true,
                 [BLINDS_OUTSIDE__NEIGHBOUR]: true,
                 [BLINDS_INSIDE_OPEN]: true,
-                [BENNETT_DOOR_INSIDE_OPEN]: true
+                [BENNETT_DOOR_INSIDE_OPEN]: true,
             },
             [FIXTURE]: {
                 [LIGHT_SWITCH__ON]: true,
                 [LINGERIE_DRAWING]: true,
-                [VASELINE]: true
+                [VASELINE]: true,
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW__BED]: true
+                [BENNETT_PILLOW__BED]: true,
             },
             [PANEL]: {
-                [BENNETT_BED]: true
-            }
+                [BENNETT_BED]: true,
+            },
         },
         cubes: BENNETT_BED_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER }
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
     },
     {
         unitIndex: 13,
@@ -445,8 +445,8 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'sitting, eyes closed, falling asleep',
-                    instance: WAITING_ROOM_ASLEEP
-                }
+                    instance: WAITING_ROOM_ASLEEP,
+                },
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__WAITING]: true,
@@ -454,17 +454,17 @@ export default [
                 [BUBBLE_LARGE__WAITING]: true,
                 [WAITING_THOUGHT_STUDYING]: true,
                 [WAITING_THOUGHT_SINGING]: true,
-                [WAITING_THOUGHT_WALKING]: true
+                [WAITING_THOUGHT_WALKING]: true,
             },
             [CARDBOARD]: {
                 [CLIPBOARD]: true,
-                [PAINTING]: true
+                [PAINTING]: true,
             },
             [CUTOUT]: {
-                [WAITING_ROOM_PLANT]: true
+                [WAITING_ROOM_PLANT]: true,
             },
             [DOOR]: {
-                [WAITING_ROOM_DOOR]: true
+                [WAITING_ROOM_DOOR]: true,
             },
             [PANEL]: {
                 [WAITING_ARMCHAIR__BENNETT]: true,
@@ -472,11 +472,11 @@ export default [
                 [WAITING_ARMREST__BENNETT_RIGHT]: true,
                 [WAITING_ARMCHAIR__LIZ]: true,
                 [WAITING_ARMREST__LIZ_LEFT]: true,
-                [WAITING_ARMREST__LIZ_RIGHT]: true
-            }
+                [WAITING_ARMREST__LIZ_RIGHT]: true,
+            },
         },
         cubes: WAITING_ROOM_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER }
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
     },
     {
         unitIndex: 15,
@@ -485,18 +485,18 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'sitting, abruptly woken',
-                    instance: CHEEK_UNVEILED
-                }
+                    instance: CHEEK_UNVEILED,
+                },
             },
             [CARDBOARD]: {
                 [CLIPBOARD]: true,
-                [PAINTING]: true
+                [PAINTING]: true,
             },
             [CUTOUT]: {
-                [WAITING_ROOM_PLANT]: true
+                [WAITING_ROOM_PLANT]: true,
             },
             [DOOR]: {
-                [WAITING_ROOM_DOOR_OPEN]: true
+                [WAITING_ROOM_DOOR_OPEN]: true,
             },
             [PANEL]: {
                 [WAITING_ARMCHAIR__BENNETT]: true,
@@ -504,11 +504,11 @@ export default [
                 [WAITING_ARMREST__BENNETT_RIGHT]: true,
                 [WAITING_ARMCHAIR__LIZ]: true,
                 [WAITING_ARMREST__LIZ_LEFT]: true,
-                [WAITING_ARMREST__LIZ_RIGHT]: true
-            }
+                [WAITING_ARMREST__LIZ_RIGHT]: true,
+            },
         },
         cubes: WAITING_ROOM_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER }
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
     },
     {
         unitIndex: 16,
@@ -517,31 +517,31 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'side, standing beside bed, unsure',
-                    instance: HARD_ON
+                    instance: HARD_ON,
                 },
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         description: 'reflection',
-                        instance: HARD_ON_REFLECTION
-                    }
-                }
+                        instance: HARD_ON_REFLECTION,
+                    },
+                },
             },
             [FIXTURE]: {
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true,
                 [CONDOM_WRAPPER_LIZ]: true,
-                [CONDOM_WRAPPER_REFLECTION]: true
+                [CONDOM_WRAPPER_REFLECTION]: true,
             },
             [FURNITURE]: {
                 [LIZ_PILLOWS]: true,
-                [LIZ_PILLOWS_REFLECTION]: true
+                [LIZ_PILLOWS_REFLECTION]: true,
             },
             [PANEL]: {
-                [LIZ_BED]: true
-            }
+                [LIZ_BED]: true,
+            },
         },
         cubes: LIZ_BED_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER }
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
     },
     {
         unitIndex: 17,
@@ -550,31 +550,31 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'side, about to stick it in',
-                    instance: MISSIONARY
+                    instance: MISSIONARY,
                 },
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         description: 'reflection',
-                        instance: MISSIONARY_REFLECTION
-                    }
-                }
+                        instance: MISSIONARY_REFLECTION,
+                    },
+                },
             },
             [FIXTURE]: {
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true,
                 [CONDOM_WRAPPER_LIZ]: true,
-                [CONDOM_WRAPPER_REFLECTION]: true
+                [CONDOM_WRAPPER_REFLECTION]: true,
             },
             [FURNITURE]: {
                 [LIZ_PILLOWS_PILE]: true,
-                [LIZ_PILLOWS_PILE_REFLECTION]: true
+                [LIZ_PILLOWS_PILE_REFLECTION]: true,
             },
             [PANEL]: {
-                [LIZ_BED]: true
-            }
+                [LIZ_BED]: true,
+            },
         },
         cubes: LIZ_BED_OPEN_KEY,
-        sky: { season: SEASON_LOVE }
+        sky: { season: SEASON_LOVE },
     },
     {
         unitIndex: 19,
@@ -583,14 +583,14 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'lying down, warm, content, slightly worried',
-                    instance: AFTERGLOW
+                    instance: AFTERGLOW,
                 },
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         description: 'reflection',
-                        instance: AFTERGLOW_REFLECTION
-                    }
-                }
+                        instance: AFTERGLOW_REFLECTION,
+                    },
+                },
             },
             [FIXTURE]: {
                 [LIZ_PHONE]: true,
@@ -598,17 +598,17 @@ export default [
                 [CONDOM_WRAPPER_LIZ]: true,
                 [CONDOM_WRAPPER_REFLECTION]: true,
                 [USED_CONDOM_LIZ]: true,
-                [USED_CONDOM_REFLECTION]: true
+                [USED_CONDOM_REFLECTION]: true,
             },
             [FURNITURE]: {
                 [LIZ_PILLOWS]: true,
-                [LIZ_PILLOWS_REFLECTION]: true
+                [LIZ_PILLOWS_REFLECTION]: true,
             },
             [PANEL]: {
-                [LIZ_BED]: true
-            }
+                [LIZ_BED]: true,
+            },
         },
         cubes: LIZ_BED_DARK_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_WINTER }
-    }
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER },
+    },
 ]

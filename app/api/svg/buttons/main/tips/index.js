@@ -5,13 +5,13 @@ import tipsDisabled from '../../../../../../assets/svgs/app/tips/tipsDisabled'
 import {
     SHOWN,
     HIDDEN,
-    DISABLED
+    DISABLED,
 } from '../../../../../constants/options'
 
 const TIPS_MAP = {
     [SHOWN]: tipsShown,
     [HIDDEN]: tipsHidden,
-    [DISABLED]: tipsDisabled
+    [DISABLED]: tipsDisabled,
 }
 
 export default ({ buttonIdentifier }) => {

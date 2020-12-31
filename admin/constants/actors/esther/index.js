@@ -1,43 +1,43 @@
 import {
     ESTHER,
-    ESTHER_MOTHER
+    ESTHER_MOTHER,
 } from '../../../../app/constants/scene/actors'
 import {
     CURIOUS,
-    SNICKERING
+    SNICKERING,
 } from '../../../../app/constants/scene/actors/esther'
 import {
     HURT_CONSOLING,
-    SOBBING_SHIELDING
+    SOBBING_SHIELDING,
 } from '../../../../app/constants/scene/actors/estherMother'
 import {
     YOUNG_CHILD,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: ESTHER,
-        instance: CURIOUS
+        instance: CURIOUS,
     },
     {
         type: ESTHER,
-        instance: SNICKERING
+        instance: SNICKERING,
     },
     {
         type: ESTHER,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: ESTHER,
-        instance: YOUNG_CHILD
+        instance: YOUNG_CHILD,
     },
     {
         type: ESTHER_MOTHER,
-        instance: HURT_CONSOLING
+        instance: HURT_CONSOLING,
     },
     {
         type: ESTHER_MOTHER,
-        instance: SOBBING_SHIELDING
-    }
+        instance: SOBBING_SHIELDING,
+    },
 ]

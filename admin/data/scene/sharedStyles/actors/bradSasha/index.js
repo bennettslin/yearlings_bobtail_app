@@ -2,5 +2,5 @@ import { CHARMED_SCHOOLBUS } from '../../../../../../app/constants/scene/actors/
 import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 
 export default {
-    [CHARMED_SCHOOLBUS]: BOOK__SHARED
+    [CHARMED_SCHOOLBUS]: BOOK__SHARED,
 }

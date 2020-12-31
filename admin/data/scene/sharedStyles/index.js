@@ -22,5 +22,5 @@ _recurseForCleanup(things)
 
 export default {
     actors,
-    things
+    things,
 }

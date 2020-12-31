@@ -36,8 +36,8 @@ const LyricToggleEar = () => {
                 timeout: 200,
                 classNames: {
                     enterActive: 'LyricToggle__shown',
-                    enterDone: 'LyricToggle__shown'
-                }
+                    enterDone: 'LyricToggle__shown',
+                },
             }}
         >
             <div className={cx(
@@ -51,13 +51,13 @@ const LyricToggleEar = () => {
                         buttonName: LYRIC_EAR_BUTTON_KEY,
                         buttonIdentifier: EAR_COLUMN_KEYS[earColumnIndex],
                         accessKey: LYRIC_COLUMN_TOGGLE_KEY,
-                        handleButtonClick
+                        handleButtonClick,
                     }}
                 />
                 <TipsHand
                     {...{
                         tipType: DOUBLESPEAKER,
-                        reverse: isDesktopWidth
+                        reverse: isDesktopWidth,
                     }}
                 />
                 <EarColumnDispatcher {...{ ref: dispatchEarColumn }} />

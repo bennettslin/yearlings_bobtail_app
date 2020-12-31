@@ -24,8 +24,8 @@ const LyricAccess = () => {
                 showIfAccessOn,
                 accessKeys: [
                     ARROW_UP,
-                    ARROW_DOWN
-                ]
+                    ARROW_DOWN,
+                ],
             }}
         />
     )

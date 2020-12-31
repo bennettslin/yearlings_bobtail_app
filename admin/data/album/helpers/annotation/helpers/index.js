@@ -3,7 +3,7 @@ import { getDotsBitFromKeys } from '../../../../../../app/helpers/dot'
 import { getFormattedAnnotationTitle } from '../../../../../../app/helpers/format'
 import {
     LYRIC_LEFT,
-    LYRIC_RIGHT
+    LYRIC_RIGHT,
 } from '../../../../../../app/constants/lyrics'
 
 export const registerAnnotation = ({
@@ -12,7 +12,7 @@ export const registerAnnotation = ({
     rootVerseIndex = -1,
     anchoredLyric,
     textKey,
-    annotations
+    annotations,
 
 }) => {
 
@@ -67,7 +67,7 @@ export const registerAnnotation = ({
 
     registerCardsDotKeys({
         cards,
-        dotKeys
+        dotKeys,
     })
 
     // Let annotation object know its cards.

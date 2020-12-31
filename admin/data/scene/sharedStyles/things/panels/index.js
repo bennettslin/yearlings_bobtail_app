@@ -51,14 +51,14 @@ import {
     WIDE_ARMREST_BENNETT,
     WIDE_ARMREST_MIRIAM,
     WIDE_COUCH_BENNETT,
-    WIDE_COUCH_MIRIAM
+    WIDE_COUCH_MIRIAM,
 } from '../../../../../../app/constants/scene/things/panels'
 import { OCEAN_LIFE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/animals'
 import { WEDDING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/buildings'
 import {
     CUP__SHARED,
     DISH__SHARED,
-    TRAY__SHARED
+    TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import { DRAWING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
@@ -66,7 +66,7 @@ import {
     BENNETT_LINENS__SHARED,
     LIZ_LINENS__SHARED,
     MIRIAM_LINENS__SHARED,
-    WAITING_ARMCHAIR__SHARED
+    WAITING_ARMCHAIR__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/furniture'
 import { WINDOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
@@ -78,15 +78,15 @@ import {
     PORCELAIN__SHARED,
     ROCK__SHARED,
     RUBBER__SHARED,
-    STEEL__SHARED
+    STEEL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     FOLIAGE__SHARED,
-    OCEAN_CAVE__SHARED
+    OCEAN_CAVE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
     SHADOW__SHARED,
-    SNOWGLOBE__SHARED
+    SNOWGLOBE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/props'
 import {
     ALL_VEHICLES__SHARED,
@@ -94,44 +94,44 @@ import {
     INTERIOR__SHARED,
     REATTA__SHARED,
     SATURN__SHARED,
-    SCHOOLBUS__SHARED
+    SCHOOLBUS__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
 
 export default {
     [ATTIC_ARMREST]: [
         ATTIC_LINENS__SHARED,
-        OAK__SHARED
+        OAK__SHARED,
     ],
     [ATTIC_COUCH]: ATTIC_LINENS__SHARED,
     [BATHTUB]: [
         MAPLE__SHARED,
         OAK__SHARED,
         PORCELAIN__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [BEDROOM_DESK]: [
-        OAK__SHARED
+        OAK__SHARED,
     ],
     [BEDROOM_STOOL]: [
         BENNETT_LINENS__SHARED,
-        OAK__SHARED
+        OAK__SHARED,
     ],
     [BENNETT_BED]: [
         MAPLE__SHARED,
         OAK__SHARED,
-        SHADOW__SHARED
+        SHADOW__SHARED,
     ],
     [CAPTAIN_BED]: [
-        OAK__SHARED
+        OAK__SHARED,
     ],
     [CAVE_SHADOWS]: [
         DRAWING__SHARED,
-        ROCK__SHARED
+        ROCK__SHARED,
     ],
     [CONVEYOR_BELT]: [
         CUP__SHARED,
         DISH__SHARED,
-        TRAY__SHARED
+        TRAY__SHARED,
     ],
     [CROWD_BACK]: SHADOW__SHARED,
     [CROWD_SIDE]: SHADOW__SHARED,
@@ -139,37 +139,37 @@ export default {
         BRASS__SHARED,
         PORCELAIN__SHARED,
         RUBBER__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [FREEWAY_FENCE]: STEEL__SHARED,
     [GO_KART_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
         GO_KART__SHARED,
         RUBBER__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [GO_KART_SEAT]: GO_KART__SHARED,
     [HOSPITAL_BED]: null,
     [LIZ_BED]: [
         OAK__SHARED,
-        SHADOW__SHARED
+        SHADOW__SHARED,
     ],
     [LIZ_COUCH]: [
         LIZ_LINENS__SHARED,
         OAK__SHARED,
-        SHADOW__SHARED
+        SHADOW__SHARED,
     ],
     [LIZ_OTTOMAN]: [
         LIZ_LINENS__SHARED,
         OAK__SHARED,
-        SHADOW__SHARED
+        SHADOW__SHARED,
     ],
     [MILK_CRATE]: null,
     [OCEAN_CAVE_EXTERIOR]: OCEAN_CAVE__SHARED,
     [OCEAN_CAVE_INTERIOR]: [
         COPPER__SHARED,
         OCEAN_LIFE__SHARED,
-        ROCK__SHARED
+        ROCK__SHARED,
     ],
     [OCEAN_WAVES]: null,
     [PHONE_CALL_PANEL]: null,
@@ -177,14 +177,14 @@ export default {
         ALL_VEHICLES__SHARED,
         REATTA__SHARED,
         RUBBER__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [REATTA_EXTERIOR_REAR]: [
         ALL_VEHICLES__SHARED,
         REATTA__SHARED,
         RUBBER__SHARED,
         STEEL__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [REATTA_INTERIOR]: INTERIOR__SHARED,
     [REATTA_SEAT_BOTTOM]: REATTA__SHARED,
@@ -194,7 +194,7 @@ export default {
         ALL_VEHICLES__SHARED,
         RUBBER__SHARED,
         SATURN__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [SATURN_INTERIOR]: INTERIOR__SHARED,
     [SATURN_SEAT]: SATURN__SHARED,
@@ -203,7 +203,7 @@ export default {
         ALL_VEHICLES__SHARED,
         RUBBER__SHARED,
         SCHOOLBUS__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
     [SCHOOLBUS_SEAT]: IRON__SHARED,
@@ -211,7 +211,7 @@ export default {
     [STALACTITES]: SHADOW__SHARED,
     [TAIWAN_BRIDGE]: [
         MAPLE__SHARED,
-        OAK__SHARED
+        OAK__SHARED,
     ],
     [TAIWAN_HAZE]: null,
     [TROLL_SHADOW_FAR]: SHADOW__SHARED,
@@ -220,26 +220,26 @@ export default {
     [VOLKSWAGEN]: [
         ALL_VEHICLES__SHARED,
         RUBBER__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [WAITING_ARMCHAIR]: [
         MAPLE__SHARED,
-        WAITING_ARMCHAIR__SHARED
+        WAITING_ARMCHAIR__SHARED,
     ],
     [WAITING_ARMREST]: [
         IRON__SHARED,
-        WAITING_ARMCHAIR__SHARED
+        WAITING_ARMCHAIR__SHARED,
     ],
     [WEDDING_PLATFORM_FRONT]: [
         FOLIAGE__SHARED,
-        WEDDING__SHARED
+        WEDDING__SHARED,
     ],
     [WEDDING_PLATFORM_REAR]: [
         FOLIAGE__SHARED,
-        WEDDING__SHARED
+        WEDDING__SHARED,
     ],
     [WIDE_ARMREST_BENNETT]: BENNETT_LINENS__SHARED,
     [WIDE_ARMREST_MIRIAM]: MIRIAM_LINENS__SHARED,
     [WIDE_COUCH_BENNETT]: BENNETT_LINENS__SHARED,
-    [WIDE_COUCH_MIRIAM]: MIRIAM_LINENS__SHARED
+    [WIDE_COUCH_MIRIAM]: MIRIAM_LINENS__SHARED,
 }

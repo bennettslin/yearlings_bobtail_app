@@ -2,7 +2,7 @@
 import { VIEWPORT_STORE } from '../../constants/store'
 import {
     VIEWPORT_DEFAULTS,
-    VIEWPORT_PITCH_PAGE_DEFAULTS
+    VIEWPORT_PITCH_PAGE_DEFAULTS,
 } from './default'
 
 export default (
@@ -13,7 +13,7 @@ export default (
         case VIEWPORT_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...action.payload,
             }
         default:
             return state
@@ -28,7 +28,7 @@ export const ViewportPitchPageReducer = (
         case VIEWPORT_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         default:
             return state

@@ -10,7 +10,7 @@ export default (
         case BANNER_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         default:
             return state

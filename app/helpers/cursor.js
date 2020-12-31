@@ -43,7 +43,7 @@ export const getSongCursorTime = ({
     bannerHoverTime,
     cursorTime,
     playerTime,
-    isPlaying
+    isPlaying,
 
 }) => {
     if (canTransitionAfterSongChange) {
@@ -61,7 +61,7 @@ export const getIsVerseCursor = ({
     verseCursorIndex,
     inSlider,
     inVerseBar,
-    isEitherVerseBarShown
+    isEitherVerseBarShown,
 }) => {
     const isVerseCursorShown = (
         inSlider ||

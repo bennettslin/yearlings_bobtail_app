@@ -6,16 +6,16 @@
  */
 import {
     ACTORS_LOGUE_PROLOGUE,
-    ACTORS_LOGUE_EPILOGUE
+    ACTORS_LOGUE_EPILOGUE,
 } from './logue'
 import {
     ACTORS_NOHO_HOUSES_DIDI,
-    ACTORS_NOHO_HOUSES_WILLY
+    ACTORS_NOHO_HOUSES_WILLY,
 } from './nohoHouses'
 import ACTORS_NOHO_SCHOOL from './nohoSchool'
 import {
     ACTORS_BATHROOM_BATHING,
-    ACTORS_BATHROOM_SINGING
+    ACTORS_BATHROOM_SINGING,
 } from './bathroom'
 import ACTORS_FREEWAY from './freeway'
 import ACTORS_PORCH from './porch'
@@ -36,7 +36,7 @@ import {
     ACTORS_BEDROOM_GUILTY,
     ACTORS_BEDROOM_FEIGNING,
     ACTORS_BEDROOM_ASLEEP,
-    ACTORS_BEDROOM_SHAKEN
+    ACTORS_BEDROOM_SHAKEN,
 } from './bedroom'
 import ACTORS_VAN_NUYS_LOCKERS from './vanNuysLockers'
 import ACTORS_VAN_NUYS_QUAD from './vanNuysQuad'
@@ -44,15 +44,15 @@ import ACTORS_VAN_NUYS_HALLWAY from './vanNuysHallway'
 import ACTORS_CATHOLIC_CHURCH from './catholicChurch'
 import {
     ACTORS_BERKELEY_BANCROFT_ASH,
-    ACTORS_BERKELEY_BANCROFT_VEGAN
+    ACTORS_BERKELEY_BANCROFT_VEGAN,
 } from './berkeleyBancroft'
 import {
     ACTORS_BERKELEY_CAMPANILE_ASH,
-    ACTORS_BERKELEY_CAMPANILE_VEGAN
+    ACTORS_BERKELEY_CAMPANILE_VEGAN,
 } from './berkeleyCampanile'
 import {
     ACTORS_CINEMA_CRUSHED,
-    ACTORS_CINEMA_WONDERING
+    ACTORS_CINEMA_WONDERING,
 } from './cinema'
 import ACTORS_CINEMA_STREET from './cinemaStreet'
 import ACTORS_BASEMENT from './basement'
@@ -61,15 +61,15 @@ import ACTORS_BACKSTAGE from './backstage'
 import ACTORS_GO_KARTS from './goKarts'
 import {
     ACTORS_DISHROOM_READING,
-    ACTORS_DISHROOM_LANCET
+    ACTORS_DISHROOM_LANCET,
 } from './dishroom'
 import {
     ACTORS_WAITING_ROOM_ASLEEP,
-    ACTORS_WAITING_ROOM_CHEEK
+    ACTORS_WAITING_ROOM_CHEEK,
 } from './waitingRoom'
 import {
     ACTORS_CLUB_FRONT_M,
-    ACTORS_CLUB_FRONT_GARRYOWEN
+    ACTORS_CLUB_FRONT_GARRYOWEN,
 } from './clubFront'
 import ACTORS_CLUB_SIDE_CROWD from './clubSideCrowd'
 import ACTORS_CLUB_SIDE_STAGE from './clubSideStage'
@@ -77,25 +77,25 @@ import ACTORS_CLUB_FAR from './clubFar'
 import ACTORS_CLUB_LOADING from './clubLoading'
 import {
     ACTORS_BENNETT_BED_GINGERBREAD,
-    ACTORS_BENNETT_BED_LINENS
+    ACTORS_BENNETT_BED_LINENS,
 } from './bennettBed'
 import {
     ACTORS_BENNETT_COUCH_OPINION,
     ACTORS_BENNETT_COUCH_PONDERING,
     ACTORS_BENNETT_COUCH_RUBIKS,
-    ACTORS_BENNETT_COUCH_READING
+    ACTORS_BENNETT_COUCH_READING,
 } from './bennettCouch'
 import ACTORS_COURTYARD from './courtyard'
 import {
     ACTORS_BENNETT_GATE_MOP_SOPPED,
-    ACTORS_BENNETT_GATE_GATE_CODE
+    ACTORS_BENNETT_GATE_GATE_CODE,
 } from './bennettGate'
 import {
     ACTORS_LIZ_BED_HARD_ON,
     ACTORS_LIZ_BED_MISSIONARY,
     ACTORS_LIZ_BED_AFTERGLOW,
     ACTORS_LIZ_BED_LOOK_BACK,
-    ACTORS_LIZ_BED_VEGAN
+    ACTORS_LIZ_BED_VEGAN,
 } from './lizBed'
 import {
     ACTORS_LIZ_COUCH_ASLEEP,
@@ -107,11 +107,11 @@ import {
     ACTORS_LIZ_COUCH_OPENING,
     ACTORS_LIZ_COUCH_SEATED,
     ACTORS_LIZ_COUCH_SIFTING,
-    ACTORS_LIZ_COUCH_STANDING
+    ACTORS_LIZ_COUCH_STANDING,
 } from './lizCouch'
 import {
     ACTORS_LIZ_GATE_DATE_ENDING,
-    ACTORS_LIZ_GATE_DATE_ENDED
+    ACTORS_LIZ_GATE_DATE_ENDED,
 } from './lizGate'
 import ACTORS_ROYCE_HALL from './royceHall'
 import ACTORS_WALGREENS from './walgreens'
@@ -121,7 +121,7 @@ import ACTORS_STATION_WAGON from './stationWagon'
 import ACTORS_ATTIC from './attic'
 import {
     ACTORS_OAKLAND_HOUSES_GARRYOWEN,
-    ACTORS_OAKLAND_HOUSES_GOLDEN
+    ACTORS_OAKLAND_HOUSES_GOLDEN,
 } from './oaklandHouses'
 import ACTORS_BASEMENT_SOFA from './basementCouch'
 import ACTORS_OAKLAND_RESIDENTIAL from './oaklandResidential'
@@ -129,7 +129,7 @@ import ACTORS_OAKLAND_COMMERCIAL from './oaklandCommercial'
 import ACTORS_OAKLAND_PUBLIC from './oaklandPublic'
 import {
     ACTORS_BASEMENT_BED_FEARFUL,
-    ACTORS_BASEMENT_BED_FENDING
+    ACTORS_BASEMENT_BED_FENDING,
 } from './basementBed'
 import ACTORS_SNOWGLOBES_PAST from './snowglobesPast'
 import ACTORS_SNOWGLOBES_PRESENT from './snowglobesPresent'
@@ -138,7 +138,7 @@ import {
     ACTORS_EL_CERRITO_REMOVING,
     ACTORS_EL_CERRITO_COWGIRL,
     ACTORS_EL_CERRITO_BLOWJOB,
-    ACTORS_EL_CERRITO_DISPOSING
+    ACTORS_EL_CERRITO_DISPOSING,
 } from './elCerrito'
 import ACTORS_ALLEY from './alley'
 import ACTORS_EL_TORITO from './elTorito'
@@ -147,7 +147,7 @@ import ACTORS_WEDDING from './wedding'
 import ACTORS_CLIFF from './cliff'
 import {
     ACTORS_DEATHBED_CREMATED,
-    ACTORS_DEATHBED_DREAM
+    ACTORS_DEATHBED_DREAM,
 } from './deathbed'
 
 export default [
@@ -255,7 +255,7 @@ export default [
     ACTORS_WEDDING,
     ACTORS_CLIFF,
     ACTORS_DEATHBED_CREMATED,
-    ACTORS_DEATHBED_DREAM
+    ACTORS_DEATHBED_DREAM,
 
 ].reduce((allArrangements, arrangements) => {
     const actorKeys = Object.keys(arrangements)
@@ -263,7 +263,7 @@ export default [
     actorKeys.forEach(actorKey => {
         allArrangements[actorKey] = {
             ...allArrangements[actorKey],
-            ...arrangements[actorKey]
+            ...arrangements[actorKey],
         }
     })
 

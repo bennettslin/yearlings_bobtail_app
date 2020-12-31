@@ -8,7 +8,7 @@ import {
     FIXTURE,
     FLAT,
     FURNITURE,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     BEDROOM_KEY,
@@ -17,7 +17,7 @@ import {
     BEDROOM_SPACE_KEY,
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
-    VAN_NUYS_QUAD_KEY
+    VAN_NUYS_QUAD_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_MORNING,
@@ -26,7 +26,7 @@ import {
     TIME_EVENING,
     SEASON_WINTER,
     SEASON_FUTURE,
-    SEASON_NIGHT_MAGIC
+    SEASON_NIGHT_MAGIC,
 } from '../../../../app/constants/scene/sky'
 import {
     PRETEEN_BENNETT,
@@ -36,15 +36,15 @@ import {
     BRAD,
     ANDREW,
     TRISTAN,
-    CHRISTOPHER_BENNETT
+    CHRISTOPHER_BENNETT,
 } from '../../../../app/constants/scene/actors'
 import {
     THROWING,
-    NOODLING
+    NOODLING,
 } from '../../../../app/constants/scene/actors/andrew'
 import {
     GESTURING,
-    SNACKING
+    SNACKING,
 } from '../../../../app/constants/scene/actors/brad'
 import { STARING } from '../../../../app/constants/scene/actors/christopher'
 import { BLISSFUL_GUILTY } from '../../../../app/constants/scene/actors/christopherBennett'
@@ -54,20 +54,20 @@ import {
     SHAKEN,
     STOIC,
     WISTFUL,
-    SHEEPISH
+    SHEEPISH,
 } from '../../../../app/constants/scene/actors/preteenBennett'
 import { POPULAR_GIRL } from '../../../../app/constants/scene/actors/sasha'
 import { ASLEEP } from '../../../../app/constants/scene/actors/songs'
 import { PRINCIPAL } from '../../../../app/constants/scene/actors/tristan'
 import {
     VALLEY_CLOSER_BACKDROP,
-    VALLEY_FURTHER_BACKDROP
+    VALLEY_FURTHER_BACKDROP,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     SKETCH_DOGS_ROCKET,
     SKETCHBOOK__DOGS_ROCKET,
     SKETCH_ESCAPE_POD,
-    SKETCHBOOK__ESCAPE_POD
+    SKETCHBOOK__ESCAPE_POD,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     BLOOM_COUNTY_POSTER,
@@ -76,7 +76,7 @@ import {
     EARTH__STATION,
     SPACE_STATION,
     VAN_NUYS_PAINTING,
-    CORKBOARD
+    CORKBOARD,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     LOCKER_BANK,
@@ -88,13 +88,13 @@ import {
     BUSH_DOUBLE__QUAD,
     LEMON_TREE__BEDROOM,
     ROSEBUSH_SLANTED_DOUBLE,
-    ROSEBUSH_SLANTED_SINGLE
+    ROSEBUSH_SLANTED_SINGLE,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS,
     BEDROOM_BLINDS_OPEN,
     BEDROOM_FENCE,
-    PRINCIPAL_DOOR
+    PRINCIPAL_DOOR,
 } from '../../../../app/constants/scene/things/doors'
 import {
     BEDROOM_LAMP__BED,
@@ -105,17 +105,17 @@ import {
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
     THROWN_FRUIT,
-    BALLED_FOIL__LOCKERS
+    BALLED_FOIL__LOCKERS,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     BEDROOM_BUS,
-    NEAR_BUILDINGS
+    NEAR_BUILDINGS,
 } from '../../../../app/constants/scene/things/flats'
 import { CAPTAIN_BED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
-    CAPTAIN_BED
+    CAPTAIN_BED,
 } from '../../../../app/constants/scene/things/panels'
 
 /**
@@ -128,25 +128,25 @@ export default [
         description: `Bennett's room, but seemingly no one is there.`,
         presences: {
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [BLOOM_COUNTY_POSTER]: true
+                [BLOOM_COUNTY_POSTER]: true,
             },
             [FURNITURE]: {
-                [CAPTAIN_BED_PILLOW]: true
+                [CAPTAIN_BED_PILLOW]: true,
             },
             [DOOR]: {
                 [BEDROOM_BLINDS]: true,
-                [BEDROOM_FENCE]: true
+                [BEDROOM_FENCE]: true,
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED]: true
-            }
+                [CAPTAIN_BED]: true,
+            },
         },
         cubes: BEDROOM_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_WINTER }
+        sky: { time: TIME_EVENING, season: SEASON_WINTER },
     },
     {
         unitIndex: 2,
@@ -155,35 +155,35 @@ export default [
             [ACTOR]: {
                 [CHRISTOPHER_BENNETT]: {
                     description: 'w-sitting, blissful',
-                    instance: BLISSFUL_GUILTY
-                }
+                    instance: BLISSFUL_GUILTY,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [BUBBLE]: {
                 [SKETCHBOOK__DOGS_ROCKET]: true,
-                [SKETCH_DOGS_ROCKET]: true
+                [SKETCH_DOGS_ROCKET]: true,
             },
             [CARDBOARD]: {
-                [BLOOM_COUNTY_POSTER]: true
+                [BLOOM_COUNTY_POSTER]: true,
             },
             [DOOR]: {
                 [BEDROOM_BLINDS]: true,
-                [BEDROOM_FENCE]: true
+                [BEDROOM_FENCE]: true,
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__BED]: true,
                 [LETTER_SCRAPS__BENNETT]: true,
                 [TORN_MAGAZINES__BENNETT]: true,
-                [BENNETT_LETTERS]: true
+                [BENNETT_LETTERS]: true,
             },
             [PANEL]: {
-                [BEDROOM_DESK]: true
-            }
+                [BEDROOM_DESK]: true,
+            },
         },
         cubes: BEDROOM_OPEN_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_WINTER }
+        sky: { time: TIME_EVENING, season: SEASON_WINTER },
     },
     {
         unitIndex: 6,
@@ -192,36 +192,36 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'side, sitting up in bed, feigning sick',
-                    instance: FEIGNING_SICK
-                }
+                    instance: FEIGNING_SICK,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [BLOOM_COUNTY_POSTER]: true
+                [BLOOM_COUNTY_POSTER]: true,
             },
             [DOOR]: {
                 [BEDROOM_BLINDS_OPEN]: true,
-                [BEDROOM_FENCE]: true
+                [BEDROOM_FENCE]: true,
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
-                [RED_ENVELOPE_MONEY]: true
+                [RED_ENVELOPE_MONEY]: true,
             },
             [FLAT]: {
-                [BEDROOM_BUS]: true
+                [BEDROOM_BUS]: true,
             },
             [FURNITURE]: {
-                [CAPTAIN_BED_PILLOW]: true
+                [CAPTAIN_BED_PILLOW]: true,
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED]: true
-            }
+                [CAPTAIN_BED]: true,
+            },
         },
         cubes: BEDROOM_KEY,
-        sky: { time: TIME_MORNING, season: SEASON_WINTER }
+        sky: { time: TIME_MORNING, season: SEASON_WINTER },
     },
     {
         unitIndex: 9,
@@ -230,33 +230,33 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'in bed, asleep, turned away',
-                    instance: ASLEEP
-                }
+                    instance: ASLEEP,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
                 [EARTH__ROCKET]: true,
-                [DOGS_ROCKET]: true
+                [DOGS_ROCKET]: true,
             },
             [CUTOUT]: {
                 [LEMON_TREE__BEDROOM]: true,
                 [ROSEBUSH_SLANTED_DOUBLE]: true,
-                [ROSEBUSH_SLANTED_SINGLE]: true
+                [ROSEBUSH_SLANTED_SINGLE]: true,
             },
             [DOOR]: {
-                [BEDROOM_FENCE]: true
+                [BEDROOM_FENCE]: true,
             },
             [FURNITURE]: {
-                [CAPTAIN_BED_PILLOW]: true
+                [CAPTAIN_BED_PILLOW]: true,
             },
             [PANEL]: {
-                [CAPTAIN_BED]: true
-            }
+                [CAPTAIN_BED]: true,
+            },
         },
         cubes: BEDROOM_DOGS_KEY,
-        sky: { season: SEASON_NIGHT_MAGIC }
+        sky: { season: SEASON_NIGHT_MAGIC },
     },
     {
         unitIndex: 10,
@@ -265,35 +265,35 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'side, sitting, shaken, scared',
-                    instance: SHAKEN
-                }
+                    instance: SHAKEN,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
                 [EARTH__STATION]: true,
-                [SPACE_STATION]: true
+                [SPACE_STATION]: true,
             },
             [CUTOUT]: {
                 [LEMON_TREE__BEDROOM]: true,
                 [ROSEBUSH_SLANTED_DOUBLE]: true,
-                [ROSEBUSH_SLANTED_SINGLE]: true
+                [ROSEBUSH_SLANTED_SINGLE]: true,
             },
             [DOOR]: {
-                [BEDROOM_FENCE]: true
+                [BEDROOM_FENCE]: true,
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
-                [BEYONDER_ENVELOPE]: true
+                [BEYONDER_ENVELOPE]: true,
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [BEDROOM_STOOL]: true
-            }
+                [BEDROOM_STOOL]: true,
+            },
         },
         cubes: BEDROOM_SPACE_KEY,
-        sky: { season: SEASON_FUTURE }
+        sky: { season: SEASON_FUTURE },
     },
     {
         unitIndex: 13,
@@ -302,36 +302,36 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'side, stoic',
-                    instance: STOIC
+                    instance: STOIC,
                 },
                 [BRAD]: {
                     description: 'front angle, gesturing at Andrew to leave',
-                    instance: GESTURING
+                    instance: GESTURING,
                 },
                 [ANDREW]: {
                     description: 'side angle, throwing rocks, angry',
-                    instance: THROWING
-                }
+                    instance: THROWING,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true
+                [VALLEY_CLOSER_BACKDROP]: true,
             },
             [CUTOUT]: {
                 [LOCKER_BANK]: true,
                 [TRASH_CAN__LOCKERS]: true,
                 [BUSH_SINGLE__LOCKERS]: true,
-                [BUSH_DOUBLE__LOCKERS]: true
+                [BUSH_DOUBLE__LOCKERS]: true,
             },
             [FIXTURE]: {
                 [THROWN_FRUIT]: true,
-                [BALLED_FOIL__LOCKERS]: true
+                [BALLED_FOIL__LOCKERS]: true,
             },
             [FLAT]: {
-                [NEAR_BUILDINGS]: true
-            }
+                [NEAR_BUILDINGS]: true,
+            },
         },
         cubes: VAN_NUYS_LOCKERS_KEY,
-        sky: { time: TIME_NOON, season: SEASON_WINTER }
+        sky: { time: TIME_NOON, season: SEASON_WINTER },
     },
     {
         unitIndex: 17,
@@ -340,44 +340,44 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'side, wistful',
-                    instance: WISTFUL
+                    instance: WISTFUL,
                 },
                 [BRAD]: {
                     description: 'eating chips',
-                    instance: SNACKING
+                    instance: SNACKING,
                 },
                 [ANDREW]: {
                     description: 'playing guitar like an amateur',
-                    instance: NOODLING
+                    instance: NOODLING,
                 },
                 [SASHA]: {
                     popularGirl: {
                         description: 'back',
-                        instance: POPULAR_GIRL
-                    }
-                }
+                        instance: POPULAR_GIRL,
+                    },
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [BUBBLE]: {
                 [SKETCHBOOK__ESCAPE_POD]: true,
-                [SKETCH_ESCAPE_POD]: true
+                [SKETCH_ESCAPE_POD]: true,
             },
             [CARDBOARD]: {
-                [VAN_NUYS_PAINTING]: true
+                [VAN_NUYS_PAINTING]: true,
             },
             [CUTOUT]: {
                 [TRASH_CAN__QUAD]: true,
                 [BUSH_SINGLE__QUAD]: true,
-                [BUSH_DOUBLE__QUAD]: true
+                [BUSH_DOUBLE__QUAD]: true,
             },
             [FLAT]: {
-                [NEAR_BUILDINGS]: true
-            }
+                [NEAR_BUILDINGS]: true,
+            },
         },
         cubes: VAN_NUYS_QUAD_KEY,
-        sky: { time: TIME_NOON, season: SEASON_WINTER }
+        sky: { time: TIME_NOON, season: SEASON_WINTER },
     },
     {
         unitIndex: 18,
@@ -386,31 +386,31 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'front, sitting, sheepish',
-                    instance: SHEEPISH
+                    instance: SHEEPISH,
                 },
                 [CHRISTOPHER]: {
                     description: 'front, sitting, staring',
-                    instance: STARING
+                    instance: STARING,
                 },
                 [MOTHER]: {
                     description: 'side, angry, accusatory',
-                    instance: ARGUING
+                    instance: ARGUING,
                 },
                 [TRISTAN]: {
                     principal: {
                         description: 'side, confused, defensive, apologetic',
-                        instance: PRINCIPAL
-                    }
-                }
+                        instance: PRINCIPAL,
+                    },
+                },
             },
             [CARDBOARD]: {
-                [CORKBOARD]: true
+                [CORKBOARD]: true,
             },
             [DOOR]: {
-                [PRINCIPAL_DOOR]: true
-            }
+                [PRINCIPAL_DOOR]: true,
+            },
         },
         cubes: VAN_NUYS_HALLWAY_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_WINTER }
-    }
+        sky: { time: TIME_AFTERNOON, season: SEASON_WINTER },
+    },
 ]

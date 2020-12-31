@@ -10,7 +10,7 @@ import {
     getReducers,
     getIsPitchPage,
     getNeedsAlbumContext,
-    getNeedsStoreProvider
+    getNeedsStoreProvider,
 } from './helper'
 import { getIsServerSide } from '../server'
 

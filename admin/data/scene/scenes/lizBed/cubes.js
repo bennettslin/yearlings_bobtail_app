@@ -2,7 +2,7 @@ import {
     LIZ_BED_KEY,
     LIZ_BED_OPEN_KEY,
     LIZ_BED_PHONE_KEY,
-    LIZ_BED_DARK_KEY
+    LIZ_BED_DARK_KEY,
 } from '../../../../../app/constants/scene/scenes'
 
 import {
@@ -11,7 +11,7 @@ import {
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
     NIGHT_COLOUR as Z,
-    LIZ_BED_COLOUR as U
+    LIZ_BED_COLOUR as U,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { e, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -20,13 +20,13 @@ const DEFAULT_CEILING = {
     hslaColours: [
         [W, F, F, F, F, F, F, F, F, F, F, W],
         [W, W, D, U, U, U, U, U, W],
-        [W]
+        [W],
     ],
     zIndices: [
         [1],
         [1, g, e, 4, 4, 4, 4, 4, g, g, g, 1],
-        [1, g, g, g, g, g, g, g, g, g, g, 1]
-    ]
+        [1, g, g, g, g, g, g, g, g, g, g, 1],
+    ],
 }
 
 const DEFAULT_FLOOR = {
@@ -36,7 +36,7 @@ const DEFAULT_FLOOR = {
         [F, F, F, U, U, U, U, U, F],
         [F, F, F, U, U, U, U, U, F],
         [F, F, D, U, U, U, U, U, F],
-        [F]
+        [F],
     ],
     zIndices: [
         [1],
@@ -44,27 +44,27 @@ const DEFAULT_FLOOR = {
         [1, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, 1],
         [1, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, 1],
         [1, 1, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1],
-        [1]
-    ]
+        [1],
+    ],
 }
 
 const OPEN_CEILING = {
     hslaColours: [
         [D, F, F, F, F, F, F, F, F, F, F, D],
         [D, D, D, U, U, U, U, U, D],
-        [D]
+        [D],
     ],
     zIndices: [
         [k, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, k],
         [k, k, e, 4, 4, 4, 4, 4, k],
-        [k]
-    ]
+        [k],
+    ],
 }
 
 export default {
     [LIZ_BED_KEY]: {
         ceiling: DEFAULT_CEILING,
-        floor: DEFAULT_FLOOR
+        floor: DEFAULT_FLOOR,
     },
     [LIZ_BED_OPEN_KEY]: {
         ceiling: OPEN_CEILING,
@@ -75,7 +75,7 @@ export default {
                 [G, F, F, U, U, U, U, U, F, F, F, G],
                 [G, F, F, U, U, U, U, U, F, F, F, G],
                 [G, F, D, U, U, U, U, U, F, F, F, G],
-                [G, F, F, F, F, F, F, F, F, F, F, G]
+                [G, F, F, F, F, F, F, F, F, F, F, G],
             ],
             zIndices: [
                 [0],
@@ -83,9 +83,9 @@ export default {
                 [0, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, 0],
                 [0, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, 0],
                 [0, 1, 4, 4, 4, 4, 4, 4, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
-            ]
-        }
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            ],
+        },
     },
     [LIZ_BED_PHONE_KEY]: {
         ceiling: OPEN_CEILING,
@@ -96,7 +96,7 @@ export default {
                 [G, F, F, U, U, U, U, U, F, F, F, G],
                 [G, F, F, U, U, U, U, U, F, F, F, G],
                 [G, F, D, U, U, U, U, U, F, F, D, G],
-                [G, F, F, F, F, F, F, F, F, F, F, G]
+                [G, F, F, F, F, F, F, F, F, F, F, G],
             ],
             zIndices: [
                 [0],
@@ -104,18 +104,18 @@ export default {
                 [0, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, 0],
                 [0, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, 0],
                 [0, 1, 4, 4, 4, 4, 4, 4, 1, 1, 3, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
-            ]
-        }
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            ],
+        },
     },
     [LIZ_BED_DARK_KEY]: {
         ceiling: {
             hslaColours: [
                 [Z],
                 [Z, Z, D, Z],
-                [Z]
+                [Z],
             ],
-            zIndices: DEFAULT_CEILING.zIndices
+            zIndices: DEFAULT_CEILING.zIndices,
         },
         floor: {
             hslaColours: [
@@ -124,9 +124,9 @@ export default {
                 [Z],
                 [Z],
                 [Z, Z, D, Z],
-                [Z]
+                [Z],
             ],
-            zIndices: DEFAULT_FLOOR.zIndices
-        }
-    }
+            zIndices: DEFAULT_FLOOR.zIndices,
+        },
+    },
 }

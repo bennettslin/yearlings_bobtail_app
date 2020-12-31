@@ -86,7 +86,7 @@ import {
     BUBBLE_LARGE__INVERSE,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
-    BUBBLE_LARGE__TENNIS
+    BUBBLE_LARGE__TENNIS,
 } from '../../../../constants/scene/things/bubbles'
 
 export default {
@@ -152,5 +152,5 @@ export default {
     [BUBBLE_LARGE__INVERSE]: bubbleLarge,
     [BUBBLE_SMALL__TENNIS]: bubbleSmall,
     [BUBBLE_MEDIUM__TENNIS]: bubbleMedium,
-    [BUBBLE_LARGE__TENNIS]: bubbleLarge
+    [BUBBLE_LARGE__TENNIS]: bubbleLarge,
 }

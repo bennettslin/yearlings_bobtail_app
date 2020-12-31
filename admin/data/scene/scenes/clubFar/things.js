@@ -1,6 +1,6 @@
 import {
     PANEL,
-    PUPPET
+    PUPPET,
 } from '../../../../../app/constants/scene/things'
 import { CROWD_BACK } from '../../../../../app/constants/scene/things/panels'
 import { GHOST_ODIN_CLUB } from '../../../../../app/constants/scene/things/puppets'
@@ -10,14 +10,14 @@ export default {
         [CROWD_BACK]: {
             yIndex: 3,
             xPosition: 5.5,
-            scaleFactor: 0.325
-        }
+            scaleFactor: 0.325,
+        },
     },
     [PUPPET]: {
         [GHOST_ODIN_CLUB]: {
             yIndex: 5,
             xPosition: 3.3,
-            scaleFactor: 0.2
-        }
-    }
+            scaleFactor: 0.2,
+        },
+    },
 }

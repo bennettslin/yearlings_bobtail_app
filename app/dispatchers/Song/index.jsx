@@ -11,7 +11,7 @@ import { resetSongChange } from '../../redux/entrance/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import {
     updateEarColumnIndex,
-    updateWikiIndices
+    updateWikiIndices,
 } from '../../redux/session/action'
 import { updateIsNavExpanded } from '../../redux/toggle/action'
 import { getSongsAndLoguesCount } from '../../api/album/songs'
@@ -31,7 +31,7 @@ const SongDispatcher = forwardRef((props, ref) => {
         selectedAnnotationIndex = 0,
         earColumnIndex,
         destinationWormholeIndex,
-        direction
+        direction,
     }) => {
         const isWormholeSelected = Boolean(destinationWormholeIndex)
 
@@ -58,7 +58,7 @@ const SongDispatcher = forwardRef((props, ref) => {
 
         dispatch(updateAudioStore({
             queuedPlayFromLogue: isPlayFromLogue,
-            queuedSongIndex: nextSongIndex
+            queuedSongIndex: nextSongIndex,
         }))
 
         dispatch(updateWikiIndices())
@@ -70,14 +70,14 @@ const SongDispatcher = forwardRef((props, ref) => {
         dispatch(updateSelectedStore({
             selectedSongIndex: nextSongIndex,
             selectedVerseIndex,
-            selectedAnnotationIndex
+            selectedAnnotationIndex,
         }))
 
         logSelect({
             action: 'song',
             song: nextSongIndex,
             verse: selectedVerseIndex,
-            annotation: selectedAnnotationIndex
+            annotation: selectedAnnotationIndex,
         })
 
         dispatch(updateAccessStore({
@@ -86,8 +86,8 @@ const SongDispatcher = forwardRef((props, ref) => {
                 isWormholeSelected ?
                     selectedAnnotationIndex : 1,
             ...isWormholeSelected && {
-                accessedWikiWormholeIndex: destinationWormholeIndex
-            }
+                accessedWikiWormholeIndex: destinationWormholeIndex,
+            },
         }))
 
         dispatch(updateIsNavExpanded())

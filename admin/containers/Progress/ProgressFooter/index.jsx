@@ -3,19 +3,19 @@ import React from 'react'
 import cx from 'classnames'
 import {
     getRemainingTimeStringFromHours,
-    getNextCheckInDateFromHours
+    getNextCheckInDateFromHours,
 } from './helper'
 
 const ProgressFooter = ({
     isV2,
     thing,
-    sumTask
+    sumTask,
 
 }) => {
     const
         {
             workedHours,
-            neededHours
+            neededHours,
         } = sumTask,
         remainingHours = neededHours - workedHours,
         neededTime = getRemainingTimeStringFromHours(neededHours),

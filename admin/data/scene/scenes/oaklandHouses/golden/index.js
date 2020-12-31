@@ -5,7 +5,7 @@ export default {
     [BENNETT]: {
         [CORD_SIDE]: {
             yIndex: 3,
-            xPosition: 5
-        }
-    }
+            xPosition: 5,
+        },
+    },
 }

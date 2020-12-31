@@ -24,26 +24,26 @@ const _getTodoForGlobalAnnotation = globalIndex => {
 
 const _getAnnotationIndexForInterval = ({
     intervalIndex,
-    count
+    count,
 }) => (
     parseInt(getGlobalAnnotationCount() / count * intervalIndex)
 )
 
 export const getNextGlobalAnnotation = ({
     intervalIndex,
-    count
+    count,
 }) => {
     const
         // Start at the initial global index.
         initialGlobalIndex = _getAnnotationIndexForInterval({
             intervalIndex,
-            count
+            count,
         }),
 
         // Do not go past the initial global index of the next interval.
         nextGlobalIndex = _getAnnotationIndexForInterval({
             intervalIndex: (intervalIndex + 1) % count,
-            count
+            count,
         }),
 
         /**
@@ -69,7 +69,7 @@ export const getNextGlobalAnnotation = ({
         if (_getTodoForGlobalAnnotation(globalIndex)) {
             return {
                 ...globalAnnotationMetadata,
-                globalIndex
+                globalIndex,
             }
         }
 

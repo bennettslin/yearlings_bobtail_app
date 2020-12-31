@@ -10,7 +10,7 @@ import { mapSelectedDotsBit } from '../../../redux/dots/selector'
 import { mapIsEarShown } from '../../../redux/ear/selector'
 import {
     mapSelectedSongIndex,
-    mapSelectedAnnotationIndex
+    mapSelectedAnnotationIndex,
 } from '../../../redux/selected/selector'
 import { mapEarColumnIndex } from '../../../redux/session/selector'
 
@@ -25,19 +25,19 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
 
     const _dispatchAndLog = annotationIndex => {
         dispatch(updateSelectedStore({
-            selectedAnnotationIndex: annotationIndex
+            selectedAnnotationIndex: annotationIndex,
         }))
 
         logSelect({
             action: 'annotation',
             song: selectedSongIndex,
-            annotation: annotationIndex
+            annotation: annotationIndex,
         })
     }
 
     const dispatchAnnotationIndex = ({
         annotationIndex = 0,
-        fromCarousel
+        fromCarousel,
 
     } = {}) => {
         if (annotationIndex) {
@@ -83,7 +83,7 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
             selectedDotsBit,
             currentAnnotationIndex: selectedAnnotationIndex,
             earColumnIndex,
-            direction
+            direction,
         })
 
         _dispatchAndLog(nextAnnotationIndex)
@@ -104,7 +104,7 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
 
     useImperativeHandle(ref, () => ({
         index: dispatchAnnotationIndex,
-        direction: dispatchAnnotationDirection
+        direction: dispatchAnnotationDirection,
     }))
     return null
 })

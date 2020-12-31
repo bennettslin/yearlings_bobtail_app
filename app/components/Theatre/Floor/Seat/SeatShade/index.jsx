@@ -9,7 +9,7 @@ const SeatShade = ({
     top,
     left,
     width,
-    height
+    height,
 
 }) => (
     <InlineSvg
@@ -18,12 +18,12 @@ const SeatShade = ({
                 top: `${top}px`,
                 left: `${left}px`,
                 width: `${width}px`,
-                height: `${height}px`
+                height: `${height}px`,
             },
             svgClassName: cx(
                 'fillTransition__dimTheatre',
                 className
-            )
+            ),
         }}
     >
         {floorSeat}
@@ -35,7 +35,7 @@ SeatShade.propTypes = {
     top: PropTypes.number.isRequired,
     left: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired
+    height: PropTypes.number.isRequired,
 }
 
 export default memo(SeatShade)

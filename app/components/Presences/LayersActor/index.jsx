@@ -9,14 +9,14 @@ const LayersActor = ({ yIndex }) => (
             {...{
                 key: actorKey,
                 actorKey,
-                yIndex
+                yIndex,
             }}
         />
     ))
 )
 
 LayersActor.propTypes = {
-    yIndex: PropTypes.number.isRequired
+    yIndex: PropTypes.number.isRequired,
 }
 
 export default memo(LayersActor)

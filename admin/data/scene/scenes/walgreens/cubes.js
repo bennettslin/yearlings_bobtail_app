@@ -2,7 +2,7 @@ import { WALGREENS_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    WOOD_FLOOR_COLOUR as F
+    WOOD_FLOOR_COLOUR as F,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -14,7 +14,7 @@ export default {
                 [G, F, F, F, F, F, F, F, F, F, F, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G],
-                [G, F, F, F, F, F, F, F, F, F, F, G]
+                [G, F, F, F, F, F, F, F, F, F, F, G],
             ],
             zIndices: [
                 [0],
@@ -22,8 +22,8 @@ export default {
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
-            ]
-        }
-    }
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            ],
+        },
+    },
 }

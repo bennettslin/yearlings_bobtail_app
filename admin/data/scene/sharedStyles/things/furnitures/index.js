@@ -7,13 +7,13 @@ import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION,
-    LIZ_PILLOWS_REFLECTION
+    LIZ_PILLOWS_REFLECTION,
 } from '../../../../../../app/constants/scene/things/furnitures'
 import {
     ATTIC_LINENS__SHARED,
     BENNETT_LINENS__SHARED,
     HOSPITAL_LINENS__SHARED,
-    LIZ_LINENS__SHARED
+    LIZ_LINENS__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/furniture'
 
 export default {
@@ -25,5 +25,5 @@ export default {
     [LIZ_PILLOWS]: LIZ_LINENS__SHARED,
     [LIZ_PILLOWS_REFLECTION]: LIZ_LINENS__SHARED,
     [LIZ_PILLOWS_PILE]: LIZ_LINENS__SHARED,
-    [LIZ_PILLOWS_PILE_REFLECTION]: LIZ_LINENS__SHARED
+    [LIZ_PILLOWS_PILE_REFLECTION]: LIZ_LINENS__SHARED,
 }

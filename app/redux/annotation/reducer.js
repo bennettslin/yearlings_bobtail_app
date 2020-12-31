@@ -10,7 +10,7 @@ export default (
         case ANNOTATION_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         default:
             return state

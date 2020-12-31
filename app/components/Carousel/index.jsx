@@ -26,7 +26,7 @@ const Carousel = ({ didMount, pageSongIndex }) => {
     const onEntered = () => {
         logTransition('Carousel did enter.')
         dispatch(updateEntranceStore({
-            canTransitionAfterSongChange: true
+            canTransitionAfterSongChange: true,
         }))
     }
 
@@ -44,7 +44,7 @@ const Carousel = ({ didMount, pageSongIndex }) => {
                     timeout: 250,
                     classNames: { enterDone: 'Carousel__visible' },
                     onExit,
-                    onEntered
+                    onEntered,
                 }}
             >
                 <div
@@ -52,10 +52,10 @@ const Carousel = ({ didMount, pageSongIndex }) => {
                         className: cx(
                             'Carousel',
                             didMount && [
-                                'gradientMask__carousel__desktop'
+                                'gradientMask__carousel__desktop',
                             ],
                             getFinalSideKey()
-                        )
+                        ),
                     }}
                 >
                     <CarouselScroll />
@@ -68,7 +68,7 @@ const Carousel = ({ didMount, pageSongIndex }) => {
 
 Carousel.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    pageSongIndex: PropTypes.number
+    pageSongIndex: PropTypes.number,
 }
 
 export default memo(getDidMountHoc(Carousel))

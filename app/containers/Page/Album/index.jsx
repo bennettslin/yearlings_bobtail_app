@@ -12,7 +12,7 @@ const getAlbumPageComponent = (pageSongIndex = 0) => {
     const AlbumPageComponent = ({
         isCarousel,
         isLyric,
-        isOverview
+        isOverview,
 
     }) => {
         if (isCarousel) {
@@ -39,7 +39,7 @@ const getAlbumPageComponent = (pageSongIndex = 0) => {
     AlbumPageComponent.propTypes = {
         isCarousel: PropTypes.bool,
         isLyric: PropTypes.bool,
-        isOverview: PropTypes.bool
+        isOverview: PropTypes.bool,
     }
 
     return AlbumPageComponent

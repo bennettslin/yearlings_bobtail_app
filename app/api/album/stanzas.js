@@ -1,6 +1,6 @@
 import {
     getSong,
-    getSongIsLogue
+    getSongIsLogue,
 } from './songs'
 import { getArrayOfLength } from '../../helpers/general'
 

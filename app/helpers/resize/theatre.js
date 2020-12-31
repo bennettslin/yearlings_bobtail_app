@@ -1,7 +1,7 @@
 import {
     CSS_HEIGHT_MENU,
     HEIGHT_TWO_ROW_MENU,
-    HEIGHT_LYRIC_COLLAPSED
+    HEIGHT_LYRIC_COLLAPSED,
 } from '../../constants/responsive'
 import { getIsDesktopWidth } from '../responsive'
 
@@ -23,7 +23,7 @@ export const getCentreFieldHeight = ({
     deviceWidthIndex,
     windowHeight,
     isHeightlessLyric,
-    isTwoRowMenu
+    isTwoRowMenu,
 }) => {
     const
         lyricColumnHeight = _getLyricColumnHeight(
@@ -46,13 +46,13 @@ export const getCeilingFloorHeight = ({
     menuHeight,
     prosceniumDimensionCoordinates,
     isHeightlessLyric,
-    isTwoRowMenu
+    isTwoRowMenu,
 
 }) => {
     const
         {
             prosceniumTop,
-            prosceniumHeight
+            prosceniumHeight,
         } = JSON.parse(prosceniumDimensionCoordinates),
 
         lyricColumnHeight = _getLyricColumnHeight(
@@ -65,7 +65,7 @@ export const getCeilingFloorHeight = ({
             deviceWidthIndex,
             windowHeight,
             isHeightlessLyric,
-            isTwoRowMenu
+            isTwoRowMenu,
         }),
 
         ceilingHeight =
@@ -84,6 +84,6 @@ export const getCeilingFloorHeight = ({
 
     return {
         ceilingHeight: Number(ceilingHeight.toFixed(2)),
-        floorHeight: Number(floorHeight.toFixed(2))
+        floorHeight: Number(floorHeight.toFixed(2)),
     }
 }

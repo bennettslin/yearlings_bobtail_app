@@ -3,10 +3,10 @@ import popularGirl from '../../../../../assets/svgs/actors/sasha/popularGirl'
 
 import {
     INDIGNANT,
-    POPULAR_GIRL
+    POPULAR_GIRL,
 } from '../../../../constants/scene/actors/sasha'
 
 export default {
     [INDIGNANT]: indignant,
-    [POPULAR_GIRL]: popularGirl
+    [POPULAR_GIRL]: popularGirl,
 }

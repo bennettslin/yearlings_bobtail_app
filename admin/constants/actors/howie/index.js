@@ -1,11 +1,11 @@
 import {
     HOWIE,
     HOWIE_WILLY,
-    ANA_HOWIE
+    ANA_HOWIE,
 } from '../../../../app/constants/scene/actors'
 import {
     USHER_WAITING,
-    USHER_LOOKING
+    USHER_LOOKING,
 } from '../../../../app/constants/scene/actors/howie'
 import {
     GANGBANGER,
@@ -15,48 +15,48 @@ import {
     CEMETERY,
     STATION_WAGON,
     ATTIC,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: HOWIE,
-        instance: ABBEY_ROAD
+        instance: ABBEY_ROAD,
     },
     {
         type: HOWIE,
-        instance: WALGREENS
+        instance: WALGREENS,
     },
     {
         type: HOWIE,
-        instance: STEAM_TUNNEL
+        instance: STEAM_TUNNEL,
     },
     {
         type: ANA_HOWIE,
-        instance: CEMETERY
+        instance: CEMETERY,
     },
     {
         type: HOWIE,
-        instance: STATION_WAGON
+        instance: STATION_WAGON,
     },
     {
         type: HOWIE,
-        instance: ATTIC
+        instance: ATTIC,
     },
     {
         type: HOWIE,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: HOWIE_WILLY,
-        instance: GANGBANGER
+        instance: GANGBANGER,
     },
     {
         type: HOWIE,
-        instance: USHER_WAITING
+        instance: USHER_WAITING,
     },
     {
         type: HOWIE,
-        instance: USHER_LOOKING
-    }
+        instance: USHER_LOOKING,
+    },
 ]

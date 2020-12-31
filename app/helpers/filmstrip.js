@@ -1,7 +1,7 @@
 import {
     getDurationForSong,
     getStartTimeForScene,
-    getDurationForScene
+    getDurationForScene,
 } from '../api/album/time'
 
 export const getSceneDimensionCoordinate = (
@@ -24,6 +24,6 @@ export const getSceneDimensionCoordinate = (
 
     return JSON.stringify({
         sceneLeft: Number(left.toFixed(2)),
-        sceneWidth: Number(width.toFixed(2))
+        sceneWidth: Number(width.toFixed(2)),
     })
 }

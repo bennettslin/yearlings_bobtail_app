@@ -2,7 +2,7 @@ const getStyleStringForIndex = ({
     index,
     parentPrefix,
     childPrefix,
-    style
+    style,
 
 }) => {
     const
@@ -21,7 +21,7 @@ export const getStyleString = ({
     indices,
     parentPrefix,
     childPrefix,
-    getStyle
+    getStyle,
 
 }) => (
     indices.map(index => (
@@ -29,7 +29,7 @@ export const getStyleString = ({
             index,
             parentPrefix,
             childPrefix,
-            style: getStyle(index)
+            style: getStyle(index),
         })
     )).join('')
 )

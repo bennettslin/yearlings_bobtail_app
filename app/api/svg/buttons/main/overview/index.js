@@ -5,13 +5,13 @@ import overviewDisabled from '../../../../../../assets/svgs/app/overview/overvie
 import {
     SHOWN,
     HIDDEN,
-    DISABLED
+    DISABLED,
 } from '../../../../../constants/options'
 
 const OVERVIEW_MAP = {
     [SHOWN]: overviewShown,
     [HIDDEN]: overviewHidden,
-    [DISABLED]: overviewDisabled
+    [DISABLED]: overviewDisabled,
 }
 
 export default ({ buttonIdentifier }) => {

@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 import {
     getCanScoreMount,
-    getCanSliderMount
+    getCanSliderMount,
 } from '../../helpers/resize/mount'
 import { VIEWPORT_STORE } from '../../constants/store'
 

@@ -10,7 +10,7 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-    PUPPET
+    PUPPET,
 } from '../../../app/constants/scene/things'
 
 const POSTER = 'poster'
@@ -28,9 +28,9 @@ export default [
     FLAT,
     FURNITURE,
     PANEL,
-    PUPPET
+    PUPPET,
 ]
 
 export const CUSTOM_THING_INSTANCES = {
-    [POSTER]: poster
+    [POSTER]: poster,
 }

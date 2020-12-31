@@ -18,7 +18,7 @@ const mapWormholeLinkForDispatch = wormholeLink => {
         verseIndex: selectedVerseIndex,
         columnIndex: earColumnIndex,
         destinationWormholeIndex,
-        wormholePrefix
+        wormholePrefix,
     } = wormholeLink
 
     return {
@@ -27,7 +27,7 @@ const mapWormholeLinkForDispatch = wormholeLink => {
         selectedVerseIndex,
         destinationWormholeIndex,
         ...Number.isFinite(earColumnIndex) && { earColumnIndex },
-        ...wormholePrefix && { wormholePrefix }
+        ...wormholePrefix && { wormholePrefix },
     }
 }
 

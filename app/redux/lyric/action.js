@@ -2,7 +2,7 @@
 import { getSongIsLogue } from '../../api/album/songs'
 import {
     hasKey,
-    getDefinedOnlyPayload
+    getDefinedOnlyPayload,
 } from '../../helpers/action'
 import { LYRIC_STORE } from '../../constants/store'
 
@@ -15,6 +15,6 @@ export const updateLyricStore = payload => {
 
     return ({
         type: LYRIC_STORE,
-        payload: getDefinedOnlyPayload(payload)
+        payload: getDefinedOnlyPayload(payload),
     })
 }

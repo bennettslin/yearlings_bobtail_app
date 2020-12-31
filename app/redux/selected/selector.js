@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 import {
     getSongIsPrologue,
-    getSongIsEpilogue
+    getSongIsEpilogue,
 } from '../../api/album/songs'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getBeforeOnOrAfter } from '../../helpers/cursor'

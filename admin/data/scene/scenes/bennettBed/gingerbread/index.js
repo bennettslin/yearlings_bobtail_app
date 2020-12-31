@@ -5,7 +5,7 @@ export default {
     [BENNETT_LIZ]: {
         [GINGERBREAD_PRISON]: {
             yIndex: 1,
-            xPosition: 7.9
-        }
-    }
+            xPosition: 7.9,
+        },
+    },
 }

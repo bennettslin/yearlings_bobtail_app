@@ -18,7 +18,7 @@ const getDidMountHoc = DidMountComponent => {
                 {...{
                     ref,
                     didMount,
-                    ...props
+                    ...props,
                 }}
             />
         )

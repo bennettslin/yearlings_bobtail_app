@@ -10,14 +10,14 @@ const Presence = ({
     yIndex,
     presenceType,
     actorKey,
-    presenceKey
+    presenceKey,
 
 }) => {
     const isPresenceShownInScene = useSelector(getMapIsPresenceShownInScene({
         yIndex,
         presenceType,
         actorKey,
-        presenceKey
+        presenceKey,
     }))
 
     return (
@@ -32,18 +32,18 @@ const Presence = ({
                     exit: 5000,
 
                     // No timeout since all delays are handled in stylesheets.
-                    enter: 0
+                    enter: 0,
                 },
                 classNames: {
-                    enterDone: 'PresenceContainer__shown'
-                }
+                    enterDone: 'PresenceContainer__shown',
+                },
             }}
         >
             <PresenceSvg
                 {...{
                     presenceType,
                     actorKey,
-                    presenceKey
+                    presenceKey,
                 }}
             />
         </CSSTransition>
@@ -54,7 +54,7 @@ Presence.propTypes = {
     yIndex: PropTypes.number.isRequired,
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
-    presenceKey: PropTypes.string.isRequired
+    presenceKey: PropTypes.string.isRequired,
 }
 
 export default memo(Presence)

@@ -3,7 +3,7 @@ import {
     CARDBOARD,
     CUTOUT,
     DOOR,
-    PANEL
+    PANEL,
 } from '../../../../../app/constants/scene/things'
 import {
     BUBBLE_SMALL__WAITING,
@@ -11,16 +11,16 @@ import {
     BUBBLE_LARGE__WAITING,
     WAITING_THOUGHT_WALKING,
     WAITING_THOUGHT_SINGING,
-    WAITING_THOUGHT_STUDYING
+    WAITING_THOUGHT_STUDYING,
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
     CLIPBOARD,
-    PAINTING
+    PAINTING,
 } from '../../../../../app/constants/scene/things/cardboards'
 import { WAITING_ROOM_PLANT } from '../../../../../app/constants/scene/things/cutouts'
 import {
     WAITING_ROOM_DOOR,
-    WAITING_ROOM_DOOR_OPEN
+    WAITING_ROOM_DOOR_OPEN,
 } from '../../../../../app/constants/scene/things/doors'
 import {
     WAITING_ARMCHAIR__BENNETT,
@@ -28,22 +28,22 @@ import {
     WAITING_ARMREST__BENNETT_RIGHT,
     WAITING_ARMCHAIR__LIZ,
     WAITING_ARMREST__LIZ_LEFT,
-    WAITING_ARMREST__LIZ_RIGHT
+    WAITING_ARMREST__LIZ_RIGHT,
 } from '../../../../../app/constants/scene/things/panels'
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,
-    BUBBLE_SMALL_CONFIG
+    BUBBLE_SMALL_CONFIG,
 } from '../../sharedConfigs'
 
 const
     WAITING_ARMCHAIR_CONFIG = {
         yIndex: 2,
-        scaleFactor: 0.3
+        scaleFactor: 0.3,
     },
     WAITING_ARMREST_CONFIG = {
         yIndex: 4,
-        scaleFactor: 0.23
+        scaleFactor: 0.23,
     }
 
 export default {
@@ -52,62 +52,62 @@ export default {
             yIndex: 2,
             xPosition: 9.5,
             zOffset: 2,
-            scaleFactor: 0.45
+            scaleFactor: 0.45,
         },
         [PAINTING]: {
             yIndex: 2,
             xPosition: 4,
             scaleFactor: 0.5,
-            zOffset: 4
-        }
+            zOffset: 4,
+        },
     },
     [CUTOUT]: {
         [WAITING_ROOM_PLANT]: {
             yIndex: 2,
             xPosition: 7.5,
-            scaleFactor: 0.45
-        }
+            scaleFactor: 0.45,
+        },
     },
     [DOOR]: {
         [WAITING_ROOM_DOOR]: {
             yIndex: 5,
-            xPosition: 10.16
+            xPosition: 10.16,
         },
         [WAITING_ROOM_DOOR_OPEN]: {
             yIndex: 5,
-            xPosition: 8.81
-        }
+            xPosition: 8.81,
+        },
     },
     [PANEL]: {
         [WAITING_ARMCHAIR__BENNETT]: {
             ...WAITING_ARMCHAIR_CONFIG,
-            xPosition: 2.5
+            xPosition: 2.5,
         },
         [WAITING_ARMCHAIR__LIZ]: {
             ...WAITING_ARMCHAIR_CONFIG,
             xPosition: 5.5,
-            flipHorizontal: true
+            flipHorizontal: true,
         },
         [WAITING_ARMREST__BENNETT_LEFT]: {
             ...WAITING_ARMREST_CONFIG,
-            xPosition: 1.3
+            xPosition: 1.3,
         },
         [WAITING_ARMREST__BENNETT_RIGHT]: {
             ...WAITING_ARMREST_CONFIG,
             xPosition: 3.7,
             flipHorizontal: true,
-            layerYIndex: 5
+            layerYIndex: 5,
         },
         [WAITING_ARMREST__LIZ_LEFT]: {
             ...WAITING_ARMREST_CONFIG,
-            xPosition: 4.3
+            xPosition: 4.3,
         },
         [WAITING_ARMREST__LIZ_RIGHT]: {
             ...WAITING_ARMREST_CONFIG,
             xPosition: 6.7,
-            flipHorizontal: true
-        }
-    }
+            flipHorizontal: true,
+        },
+    },
 }
 
 export const THINGS_WAITING_ROOM_ASLEEP = {
@@ -115,32 +115,32 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
         [BUBBLE_LARGE__WAITING]: {
             ...BUBBLE_LARGE_CONFIG,
             xPosition: 1.05,
-            zOffset: 3.9
+            zOffset: 3.9,
         },
         [BUBBLE_MEDIUM__WAITING]: {
             ...BUBBLE_MEDIUM_CONFIG,
             xPosition: 1.15,
-            zOffset: 3.37
+            zOffset: 3.37,
         },
         [BUBBLE_SMALL__WAITING]: {
             ...BUBBLE_SMALL_CONFIG,
             xPosition: 1.55,
-            zOffset: 3.25
+            zOffset: 3.25,
         },
         [WAITING_THOUGHT_STUDYING]: {
             yIndex: 5,
             xPosition: 7.35,
-            zOffset: 0.77
+            zOffset: 0.77,
         },
         [WAITING_THOUGHT_SINGING]: {
             yIndex: 5,
             xPosition: 7.23,
-            zOffset: 3.8
+            zOffset: 3.8,
         },
         [WAITING_THOUGHT_WALKING]: {
             yIndex: 5,
             xPosition: 3.37,
-            zOffset: 3.4
-        }
-    }
+            zOffset: 3.4,
+        },
+    },
 }

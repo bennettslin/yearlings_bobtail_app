@@ -3,7 +3,7 @@ import audioRepeat from '../../../../../../assets/svgs/app/audio/audioRepeat'
 
 const AUDIO_OPTIONS_MAP = {
     0: audioContinue,
-    1: audioRepeat
+    1: audioRepeat,
 }
 
 export default ({ buttonIdentifier: audioOptionIndex }) => {

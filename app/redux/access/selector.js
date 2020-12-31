@@ -5,7 +5,7 @@ import { mapLyricAnnotationIndex } from '../lyric/selector'
 import {
     mapIsDotsSlideShown,
     mapIsNavExpanded,
-    mapIsLyricExpanded
+    mapIsLyricExpanded,
 } from '../toggle/selector'
 import { ACCESS_STORE } from '../../constants/store'
 
@@ -53,7 +53,7 @@ export const mapIsAccessedIndexedAnchorShown = createSelector(
         isNavExpanded,
         isLyricExpanded,
         lyricAnnotationIndex,
-        isActivated
+        isActivated,
     })
 )
 

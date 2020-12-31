@@ -101,7 +101,7 @@ import {
     BENNETT_REFLECTION,
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
-    KHARI_LIZ_REFLECTION
+    KHARI_LIZ_REFLECTION,
 } from '../../../constants/scene/actors'
 
 export default {
@@ -155,5 +155,5 @@ export default {
     [BENNETT_REFLECTION]: bennettReflection,
     [BENNETT_LIZ_REFLECTION]: bennettLizReflection,
     [LIZ_REFLECTION]: lizReflection,
-    [KHARI_LIZ_REFLECTION]: khariLizReflection
+    [KHARI_LIZ_REFLECTION]: khariLizReflection,
 }

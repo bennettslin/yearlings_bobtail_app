@@ -19,7 +19,7 @@ const WikiDispatcher = forwardRef((props, ref) => {
 
         dispatch(updateWikiIndices({
             selectedWikiIndex,
-            wikiAnnotationIndex
+            wikiAnnotationIndex,
         }))
         return true
     }

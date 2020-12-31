@@ -4,7 +4,7 @@ import {
     TABLET_WIDTH_KEY,
     LAPTOP_WIDTH_KEY,
     MONITOR_WIDTH_KEY,
-    DEVICE_WIDTH_CONFIGS
+    DEVICE_WIDTH_CONFIGS,
 } from '../constants/responsive/deviceWidth'
 
 export const getIsPhoneWidth = deviceWidthIndex => {

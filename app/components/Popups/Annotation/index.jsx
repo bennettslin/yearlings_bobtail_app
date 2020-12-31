@@ -9,7 +9,7 @@ import Popup from '../../Popup'
 import './style'
 import {
     mapIsOverlayingAnnotation,
-    getMapIsPopupAnnotationShown
+    getMapIsPopupAnnotationShown,
 } from '../../../redux/annotationPopup/selector'
 import { mapLyricAnnotationIndex } from '../../../redux/lyric/selector'
 
@@ -58,7 +58,7 @@ const AnnotationPopup = ({ didMount, inMain }) => {
                 displaysInOverlay: isOverlayingAnnotation,
                 handlePreviousClick,
                 handleNextClick,
-                onExited
+                onExited,
             }}
         >
             <Annotation
@@ -73,7 +73,7 @@ const AnnotationPopup = ({ didMount, inMain }) => {
 
 AnnotationPopup.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    inMain: PropTypes.bool
+    inMain: PropTypes.bool,
 }
 
 export default memo(getDidMountHoc(AnnotationPopup))

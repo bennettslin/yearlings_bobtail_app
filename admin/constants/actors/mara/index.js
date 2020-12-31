@@ -1,6 +1,6 @@
 import {
     MARA,
-    JACOB_MARA
+    JACOB_MARA,
 } from '../../../../app/constants/scene/actors'
 import {
     FLIRTING,
@@ -8,32 +8,32 @@ import {
     CARRYING,
     WAITING,
     GOPI,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: MARA,
-        instance: FLIRTING
+        instance: FLIRTING,
     },
     {
         type: JACOB_MARA,
-        instance: EATING
+        instance: EATING,
     },
     {
         type: MARA,
-        instance: CARRYING
+        instance: CARRYING,
     },
     {
         type: MARA,
-        instance: WAITING
+        instance: WAITING,
     },
     {
         type: MARA,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: MARA,
-        instance: GOPI
-    }
+        instance: GOPI,
+    },
 ]

@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGCRAFT,
-    NARRATIVE
+    NARRATIVE,
 } from '../../../../app/constants/dots'
 
 import {
@@ -17,7 +17,7 @@ import {
     RESPONSE,
     INTRO,
     REFRAIN,
-    IS_UNIT_DOT
+    IS_UNIT_DOT,
 } from '../../../../app/constants/lyrics'
 
 /**
@@ -39,19 +39,19 @@ export default {
                         `Pchelka and Mushka were dogs sent into orbit under the`,
                         {
                             anchor: `Soviet space program.`,
-                            wiki: `Soviet_space_dogs`
+                            wiki: `Soviet_space_dogs`,
                         },
-                        `In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`
+                        `In this allegorical retelling, I imagine myself as Pchelka and my brother as Mushka.`,
                     ],
                     dotKeys: {
-                        [OBSERVATION]: true
-                    }
-                }
-            }
+                        [OBSERVATION]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: INTRO
+                formType: INTRO,
             },
             mainVerses: [
                 {
@@ -67,50 +67,50 @@ export default {
                                         `Being in a mail-order cult was a traumatic experience, but there was a comic absurdity to it as well. When I read this line from`,
                                         {
                                             anchor: `Leonard Cohen's`,
-                                            wiki: `Leonard_Cohen`
+                                            wiki: `Leonard_Cohen`,
                                         },
                                         `otherwise tragic`,
                                         {
                                             isItalic: true,
                                             lyric: {
                                                 anchor: `Beautiful Losers,`,
-                                                wiki: `Beautiful_Losers`
-                                            }
+                                                wiki: `Beautiful_Losers`,
+                                            },
                                         },
-                                        `I thought it captured the sentiment perfectly. In one scene, the character F. tires of getting bullied at the beach and signs up for the Charles Axis bodybuilding course advertised in a comic book. Only later does he discover that Charles Axis is the one who bullies him.`
+                                        `I thought it captured the sentiment perfectly. In one scene, the character F. tires of getting bullied at the beach and signs up for the Charles Axis bodybuilding course advertised in a comic book. Only later does he discover that Charles Axis is the one who bullies him.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            }
-                        ]
-                    }
-                }
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            },
+                        ],
+                    },
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: `I wanted a kid to recite this line, but no one I knew at the time was having kids just yet. So I had my sister do it.`,
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: REFRAIN
+                formType: REFRAIN,
             },
             mainVerses: [
                 {
                     time: 5,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Christopher's theme)`
-                    }
-                }
+                        lyric: `(Christopher's theme)`,
+                    },
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -119,44 +119,44 @@ export default {
                         `In keeping with the`,
                         {
                             anchor: `Russian`,
-                            wiki: `Russia`
+                            wiki: `Russia`,
                         },
                         `theme of dogs in space, I tried to evoke the feeling of the`,
                         {
                             anchor: `balalaika`,
-                            wiki: `Balalaika`
+                            wiki: `Balalaika`,
                         },
                         `through frenetically plucked mandolins. Since`,
                         {
                             anchor: `Tuva`,
-                            wiki: `Tuva`
+                            wiki: `Tuva`,
                         },
                         `is a Russian republic, I also added`,
                         {
                             anchor: `Tuvan throat singing,`,
-                            wiki: `Tuvan_throat_singing`
+                            wiki: `Tuvan_throat_singing`,
                         },
-                        `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`
+                        `where overtones in a lone voice sound like accompaniment by a second voice. I liked the implied notion that my brother sings along with me in spirit.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
                     time: 11,
-                    lyric: `Mother, woken from her nap,`
+                    lyric: `Mother, woken from her nap,`,
                 },
                 {
                     time: 13,
-                    lyric: `hears a piercing scream and thunders,`
+                    lyric: `hears a piercing scream and thunders,`,
                 },
                 {
                     time: 15,
@@ -167,27 +167,27 @@ export default {
                             card: {
                                 description: `The times that I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or acknowledge my remorse, I could never truly feel forgiven.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 17,
-                    lyric: `when he so looks up to you!`
-                }
-            ]
+                    lyric: `when he so looks up to you!`,
+                },
+            ],
         },
         {
             unitMap: {
                 formType: VERSES,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
                     time: 19,
-                    lyric: `Don't you remember days past,`
+                    lyric: `Don't you remember days past,`,
                 },
                 {
                     time: 21,
@@ -199,26 +199,26 @@ export default {
                                 description: `As a child, I always liked to hole up somewhere to work on projects undisturbed. So one year, I asked my parents for a lifesize wooden fort as a combined birthday and Christmas gift, since my birthday is in November. Unfortunately, some toys are too pricey to count for even two gifts.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 23,
-                    lyric: `but your daddy couldn't afford it,`
+                    lyric: `but your daddy couldn't afford it,`,
                 },
                 {
                     time: 25,
-                    lyric: `so you brought him into your room?`
-                }
-            ]
+                    lyric: `so you brought him into your room?`,
+                },
+            ],
         },
         {
             unitMap: {
                 formType: PRECHORUS,
-                subVerseType: RESPONSE
+                subVerseType: RESPONSE,
             },
             mainVerses: [
                 {
@@ -230,11 +230,11 @@ export default {
                             card: {
                                 description: `I slept in a captain bed that rested atop a dresser on one side, with the other side flush against the wall. By entering through a side panel, I could squeeze into the crawl space underneath and stay hidden.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 30,
@@ -246,13 +246,13 @@ export default {
                                 description: `My brother would play alongside me for hours without once speaking or interacting. It was a strange closeness we shared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `throughout the entire weekend!"`
-                    ]
-                }
+                        `throughout the entire weekend!"`,
+                    ],
+                },
             ],
             subVerse: [
                 {
@@ -266,27 +266,27 @@ export default {
                                     `When my family visited Canada one late summer, the`,
                                     {
                                         anchor: `white-throated sparrow`,
-                                        wiki: `White-throated_sparrow`
+                                        wiki: `White-throated_sparrow`,
                                     },
                                     `was in breeding season, and we heard its song everywhere. I found it haunting and longed to hear it again ever afterward. "Poor Sam Peabody" is a mnemonic used by`,
                                     {
                                         anchor: `birdwatchers`,
-                                        wiki: `Birdwatching`
+                                        wiki: `Birdwatching`,
                                     },
-                                    `to mimic the song's cadence and pitch.`
+                                    `to mimic the song's cadence and pitch.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    }
-                }
-            ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    },
+                },
+            ],
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
@@ -299,15 +299,15 @@ export default {
                                 {
                                     description: `Unfortunately, shrill protests against the injustice of being bullied are about as effective as the bleating of a calf being led to slaughter.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
+                                        [OBSERVATION]: true,
+                                    },
                                 },
                                 {
-                                    wormhole: `know_is_bleat`
-                                }
-                            ]
-                        }
-                    ]
+                                    wormhole: `know_is_bleat`,
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 40,
@@ -319,16 +319,16 @@ export default {
                                 description: `I was well-liked in elementary school despite being small in stature and absorbed in my art projects. Besides being cute and harmless, I eagerly made drawings for anyone who asked. But these very traits that had once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `and beat you,`
-                    ]
+                        `and beat you,`,
+                    ],
                 },
                 {
                     time: 42,
-                    lyric: `threatening never to release you`
+                    lyric: `threatening never to release you`,
                 },
                 {
                     time: 44,
@@ -339,18 +339,18 @@ export default {
                             card: {
                                 description: `The most popular kids in middle school were the ones least concerned about being liked. This ran counter to my understanding that anything worth having needs to be pursued wholeheartedly. And yet, trying things their way didn't make me any more likable either.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
                 formType: VERSES,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -361,16 +361,16 @@ export default {
                             card: {
                                 description: `In earlier years, I was proud of my perfect attendance record. After the bullying began, I would skip school by faking illness. My mother noticed the change, but trusted me enough not to press too deeply on it.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `I chanced to read`
-                    ]
+                        `I chanced to read`,
+                    ],
                 },
                 {
                     time: 48,
-                    lyric: `these words in a comic to me speaking:`
+                    lyric: `these words in a comic to me speaking:`,
                 },
                 {
                     time: 50,
@@ -383,28 +383,28 @@ export default {
                                     `In a well-known advertisement seen in comic books at the time, a scrawny guy builds up his muscles by sending away for`,
                                     {
                                         anchor: `Charles Atlas's`,
-                                        wiki: `Charles_Atlas`
+                                        wiki: `Charles_Atlas`,
                                     },
                                     `free`,
                                     {
                                         anchor: `bodybuilding`,
-                                        wiki: `Bodybuilding`
+                                        wiki: `Bodybuilding`,
                                     },
-                                    `guide, which then allows him to take revenge on a bully.`
-                                ]
-                            }
-                        }
-                    ]
+                                    `guide, which then allows him to take revenge on a bully.`,
+                                ],
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 52,
-                    lyric: `I clipped and mailed the ad.`
-                }
-            ]
+                    lyric: `I clipped and mailed the ad.`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: PRECHORUS
+                formType: PRECHORUS,
             },
             mainVerses: [
                 {
@@ -416,16 +416,16 @@ export default {
                             card: {
                                 description: `Since I had no friends, I would amuse myself by sending away for free samples and mail order purchases. As a result, I got flooded with junk mail, which exposed me to even more advertisements. At some point, I received a letter from RI Research, Special Human Being Laboratory.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `were piling up high,`
-                    ]
+                        `were piling up high,`,
+                    ],
                 },
                 {
                     time: 57,
-                    lyric: `and then one day one came and made me cry and cry.`
+                    lyric: `and then one day one came and made me cry and cry.`,
                 },
                 {
                     time: 61,
@@ -437,27 +437,27 @@ export default {
                                     `In East Asian cultures, relatives give money to children in sealed`,
                                     {
                                         anchor: `red envelopes.`,
-                                        wiki: `Red_envelope`
+                                        wiki: `Red_envelope`,
                                     },
-                                    `My parents always insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`
+                                    `My parents always insisted that we save this money for college. But desperate for answers, I blew my entire savings on my correspondence with RI Research.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `for years, at once counted and sent,`
-                    ]
+                        `for years, at once counted and sent,`,
+                    ],
                 },
                 {
                     time: 64,
-                    lyric: `while all the weeks I waited, weighing those words in bold text:`
-                }
-            ]
+                    lyric: `while all the weeks I waited, weighing those words in bold text:`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: CHORUS
+                formType: CHORUS,
             },
             mainVerses: [
                 {
@@ -468,12 +468,12 @@ export default {
                             card: {
                                 description: `According to RI Research, Beyonders are an ancient race of beings born from the stars, who were scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet they are beset by a nagging disquiet that they do not truly belong.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `sent down to be Earth-fostered?`
-                    ]
+                        `sent down to be Earth-fostered?`,
+                    ],
                 },
                 {
                     time: 71,
@@ -484,11 +484,11 @@ export default {
                             card: {
                                 description: `Hitting all the right nerves, the letter addressed my yearning to belong, while speaking to my frustration that this desired end should so elude me. It then shared its hopeful news. RI Research believed I might be a Beyonder, and after searching for so long, they had found me.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 76,
@@ -501,23 +501,23 @@ export default {
                                     description: [
                                         {
                                             anchor: `Robert Goddard`,
-                                            wiki: `Robert_H._Goddard`
+                                            wiki: `Robert_H._Goddard`,
                                         },
                                         `ushered in the`,
                                         {
                                             anchor: `Space Age`,
-                                            wiki: `Space_Age`
+                                            wiki: `Space_Age`,
                                         },
                                         `by inventing the`,
                                         {
                                             anchor: `liquid-fueled rocket.`,
-                                            wiki: `Liquid-propellant_rocket`
+                                            wiki: `Liquid-propellant_rocket`,
                                         },
-                                        `Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then.`
+                                        `Unfortunately in my case, I couldn't wait for a more promising age to arrive on its own. Middle school was brutal and felt endless, and I needed answers right then.`,
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                                        [BACKSTORY]: true,
+                                    },
                                 },
                                 {
                                     description: [
@@ -526,24 +526,24 @@ export default {
                                             isItalic: true,
                                             lyric: {
                                                 anchor: `Waiting for Godot`,
-                                                wiki: `Waiting_for_Godot`
-                                            }
+                                                wiki: `Waiting_for_Godot`,
+                                            },
                                         },
                                         `is a play by`,
                                         {
                                             anchor: `Samuel Beckett`,
-                                            wiki: `Samuel_Beckett`
+                                            wiki: `Samuel_Beckett`,
                                         },
-                                        `that explores existential themes.`
+                                        `that explores existential themes.`,
                                     ],
                                     dotKeys: {
-                                        [PUN]: true
-                                    }
-                                }
-                            ]
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `our two impatient paupers,`
-                    ]
+                        `our two impatient paupers,`,
+                    ],
                 },
                 {
                     time: 79,
@@ -557,34 +557,34 @@ export default {
                                         `In Chinese,`,
                                         {
                                             isItalic: true,
-                                            lyric: `gogo`
+                                            lyric: `gogo`,
                                         },
                                         `means "big brother." And of course,`,
                                         {
                                             isItalic: true,
-                                            lyric: `didi`
+                                            lyric: `didi`,
                                         },
                                         `in this case now refers to`,
                                         {
                                             isEmphasis: true,
-                                            lyric: `my`
+                                            lyric: `my`,
                                         },
-                                        `little brother.`
+                                        `little brother.`,
                                     ],
                                     dotKeys: {
-                                        [REFERENCE]: true
-                                    }
+                                        [REFERENCE]: true,
+                                    },
                                 },
                                 {
                                     description: `Didi and Gogo are the respective pet names of Vladimir and Estragon, the two tramps who are still waiting for Godot at the end of Beckett's play.`,
                                     dotKeys: {
-                                        [REFERENCE]: true
-                                    }
-                                }
-                            ]
+                                        [REFERENCE]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `sauntered off…`
-                    ]
+                        `sauntered off…`,
+                    ],
                 },
                 {
                     time: 83,
@@ -597,14 +597,14 @@ export default {
                                     `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes`,
                                     {
                                         anchor: `Laika,`,
-                                        wiki: `Laika`
+                                        wiki: `Laika`,
                                     },
-                                    `the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I could sympathize with Laika's plight of being thrust into one desperate circumstance that only leads to the next.`
+                                    `the first dog in orbit, whose death was intentional as her spacecraft was not designed to return. I could sympathize with Laika's plight of being thrust into one desperate circumstance that only leads to the next.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
                         `into`,
                         {
@@ -614,19 +614,19 @@ export default {
                                 description: [
                                     {
                                         anchor: `Huntsville, Alabama`,
-                                        wiki: `Huntsville,_Alabama`
+                                        wiki: `Huntsville,_Alabama`,
                                     },
                                     `is where the`,
                                     {
                                         anchor: `largest NASA center`,
-                                        wiki: `Marshall_Space_Flight_Center`
+                                        wiki: `Marshall_Space_Flight_Center`,
                                     },
-                                    `is located.`
-                                ]
-                            }
+                                    `is located.`,
+                                ],
+                            },
                         },
-                        `and fed,`
-                    ]
+                        `and fed,`,
+                    ],
                 },
                 {
                     time: 86,
@@ -640,42 +640,42 @@ export default {
                                         `The constellations`,
                                         {
                                             anchor: `Canis Major`,
-                                            wiki: `Canis_Major`
+                                            wiki: `Canis_Major`,
                                         },
                                         `and`,
                                         {
                                             anchor: `Canis Minor,`,
-                                            wiki: `Canis_Minor`
+                                            wiki: `Canis_Minor`,
                                         },
                                         `or "greater dog" and "lesser dog," are said to follow that of`,
                                         {
                                             anchor: `Orion,`,
-                                            wiki: `Orion_(constellation)`
+                                            wiki: `Orion_(constellation)`,
                                         },
-                                        `named after the hunter in Greek mythology, which can be identified by three stars in a row that represent his belt.`
-                                    ]
+                                        `named after the hunter in Greek mythology, which can be identified by three stars in a row that represent his belt.`,
+                                    ],
                                 },
                                 {
                                     description: `Sadly, a belt can be used to instill obedience in wayward animals.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            ]
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `and launched!`
-                    ]
-                }
-            ]
+                        `and launched!`,
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: POSTCHORUS
+                formType: POSTCHORUS,
             },
             mainVerses: [
                 {
                     time: 90,
-                    lyric: `"Far from home and shaped like common men,`
+                    lyric: `"Far from home and shaped like common men,`,
                 },
                 {
                     time: 93,
@@ -688,45 +688,45 @@ export default {
                                     `I didn't know this at the time, but the notion of`,
                                     {
                                         anchor: `star people`,
-                                        wiki: `Star_people_(New_Age_belief)`
+                                        wiki: `Star_people_(New_Age_belief)`,
                                     },
                                     `was a popular`,
                                     {
                                         anchor: `New Age`,
-                                        wiki: `New_Age`
+                                        wiki: `New_Age`,
                                     },
-                                    `belief in the 70s. Like Beyonders, star people have no recollection of their stellar origins. The letters from RI Research undoubtedly drew their material from this body of thought.`
+                                    `belief in the 70s. Like Beyonders, star people have no recollection of their stellar origins. The letters from RI Research undoubtedly drew their material from this body of thought.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 98,
-                    lyric: `We've received your fee, and per the tests,`
+                    lyric: `We've received your fee, and per the tests,`,
                 },
                 {
                     time: 101,
-                    lyric: `you are indeed a seed from that nebular nest.`
-                }
+                    lyric: `you are indeed a seed from that nebular nest.`,
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: `The sound of rocket circuitry in the background was made by banging an electric guitar against the carpet floor while bending its whammy bar. It took countless tries, and I kept having to retune because the tuning would get messed up each time.`,
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
                 formType: POSTCHORUS,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -738,23 +738,23 @@ export default {
                             card: {
                                 description: `I sobbed when I finally got the letter that confirmed I was a Beyonder. While I was relieved to have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `We're trusting mum's to be the word.`
-                    ]
-                }
-            ]
+                        `We're trusting mum's to be the word.`,
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: BRIDGE
+                formType: BRIDGE,
             },
             mainVerses: [
                 {
                     time: 112,
-                    lyric: `Beyonders pine for a love no mortals give,`
+                    lyric: `Beyonders pine for a love no mortals give,`,
                 },
                 {
                     time: 116,
@@ -765,15 +765,15 @@ export default {
                             card: {
                                 description: `To present the appearance of legitimacy, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included spacecraft that would allow us to make contact with extraplanetary kin.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 119,
-                    lyric: `Your monthly tithe shall fund good tidings soon to come.`
+                    lyric: `Your monthly tithe shall fund good tidings soon to come.`,
                 },
                 {
                     time: 123,
@@ -784,12 +784,12 @@ export default {
                             card: {
                                 description: `The letters cautioned me to keep myself separate from society. I realized that my brother had been doing this all along, and so I adopted a stoic composure based on his.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
-                }
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -800,35 +800,35 @@ export default {
                             isItalic: true,
                             lyric: {
                                 anchor: `Genghis Blues.`,
-                                wiki: `Genghis_Blues`
-                            }
+                                wiki: `Genghis_Blues`,
+                            },
                         },
-                        `Within a week, I was able to sound out the main partials, which impressed her greatly. My life ever since has been all about recapturing the feeling of that moment.`
+                        `Within a week, I was able to sound out the main partials, which impressed her greatly. My life ever since has been all about recapturing the feeling of that moment.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: REFRAIN
+                formType: REFRAIN,
             },
             mainVerses: [
                 {
                     time: 128,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Christopher's theme)`
-                    }
-                }
-            ]
+                        lyric: `(Christopher's theme)`,
+                    },
+                },
+            ],
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
@@ -840,15 +840,15 @@ export default {
                             card: {
                                 description: `By failing to acknowledge or respond to fellow students, I came across as an imbecile.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 136,
-                    lyric: `as spies among the carnal fallen,`
+                    lyric: `as spies among the carnal fallen,`,
                 },
                 {
                     time: 138,
@@ -861,39 +861,39 @@ export default {
                                     `In Greek mythology,`,
                                     {
                                         anchor: `"Castor and Pollux"`,
-                                        wiki: `Castor_and_Pollux`
+                                        wiki: `Castor_and_Pollux`,
                                     },
                                     `were twin brothers fathered by Zeus. Castor was mortal, so after his death, Pollux pleaded with Zeus to let him share his immortality with his twin. Thus they were transformed into the constellation`,
                                     {
                                         anchor: `Gemini.`,
-                                        wiki: `Gemini_(constellation)`
+                                        wiki: `Gemini_(constellation)`,
                                     },
-                                    `Similarly, it felt as if my brother were sharing his autism with me, along with its spiritual answers.`
+                                    `Similarly, it felt as if my brother were sharing his autism with me, along with its spiritual answers.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 140,
-                    lyric: `from a star's placenta sac.`
-                }
-            ]
+                    lyric: `from a star's placenta sac.`,
+                },
+            ],
         },
         {
             unitMap: {
                 formType: VERSES,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
                     time: 141,
-                    lyric: `Braced for an earth stay unloved,`
+                    lyric: `Braced for an earth stay unloved,`,
                 },
                 {
                     time: 143,
@@ -904,15 +904,15 @@ export default {
                             card: {
                                 description: `Like all ordeals, mine was more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 145,
-                    lyric: `Mirthful, the merciless would hurt you,`
+                    lyric: `Mirthful, the merciless would hurt you,`,
                 },
                 {
                     time: 147,
@@ -924,33 +924,33 @@ export default {
                                 description: [
                                     {
                                         anchor: `Omerta`,
-                                        wiki: `Omertà`
+                                        wiki: `Omertà`,
                                     },
                                     `is the`,
                                     {
                                         anchor: `Mafia's`,
-                                        wiki: `American_Mafia`
+                                        wiki: `American_Mafia`,
                                     },
-                                    `code of silence that discourages cooperation with authorities. I wasn't the first kid who noticed parallels between the unspoken rules of the schoolyard and those of the criminal world, of course.`
+                                    `code of silence that discourages cooperation with authorities. I wasn't the first kid who noticed parallels between the unspoken rules of the schoolyard and those of the criminal world, of course.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `turned their backs.`
-                    ]
-                }
-            ]
+                        `turned their backs.`,
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: PRECHORUS
+                formType: PRECHORUS,
             },
             mainVerses: [
                 {
                     time: 149,
-                    lyric: `Stung by venomous vipers, our muted youths lapsed.`
+                    lyric: `Stung by venomous vipers, our muted youths lapsed.`,
                 },
                 {
                     time: 153,
@@ -963,17 +963,17 @@ export default {
                                     `The lengthier the`,
                                     {
                                         anchor: `cryptogram,`,
-                                        wiki: `Cryptogram`
+                                        wiki: `Cryptogram`,
                                     },
-                                    `the more clues it gives away, and thus the easier it is to solve. On the other hand, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me. And the less they then bothered to try.`
+                                    `the more clues it gives away, and thus the easier it is to solve. On the other hand, by not speaking or expressing emotion, I gave the bullies fewer openings to provoke a response from me. And the less they then bothered to try.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `are the toughest ones to crack.`
-                    ]
+                        `are the toughest ones to crack.`,
+                    ],
                 },
                 {
                     time: 156,
@@ -986,17 +986,17 @@ export default {
                                     `The Greek hero`,
                                     {
                                         anchor: `Achilles`,
-                                        wiki: `Achilles`
+                                        wiki: `Achilles`,
                                     },
-                                    `was invulnerable everywhere on his body except for his heel. Meanwhile, my weakness was that I genuinely craved acceptance from others.`
+                                    `was invulnerable everywhere on his body except for his heel. Meanwhile, my weakness was that I genuinely craved acceptance from others.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `we'd realize, blind before the squad.`
-                    ]
+                        `we'd realize, blind before the squad.`,
+                    ],
                 },
                 {
                     time: 160,
@@ -1009,20 +1009,20 @@ export default {
                                     `A`,
                                     {
                                         anchor: `spy's`,
-                                        wiki: `Espionage`
+                                        wiki: `Espionage`,
                                     },
                                     `success hinges upon keeping themselves hidden. Their exploits will never be appreciated until they're caught and placed before the`,
                                     {
                                         anchor: `firing squad.`,
-                                        wiki: `Execution_by_firing_squad`
+                                        wiki: `Execution_by_firing_squad`,
                                     },
-                                    `Similarly, at some point my desire to be part of a friendly squad caused me to open up and thus sabotage my past efforts to be unresponsive. But this only exposed me to greater scrutiny, as I was now forced to explain myself.`
+                                    `Similarly, at some point my desire to be part of a friendly squad caused me to open up and thus sabotage my past efforts to be unresponsive. But this only exposed me to greater scrutiny, as I was now forced to explain myself.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
                         `first`,
                         {
@@ -1031,18 +1031,18 @@ export default {
                                 {
                                     description: `Figuratively, this refers to revealing one's secret plans. Literally, it means digging one's own grave.`,
                                     dotKeys: {
-                                        [PUN]: true
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: CHORUS
+                formType: CHORUS,
             },
             mainVerses: [
                 {
@@ -1056,43 +1056,43 @@ export default {
                                         `Here, I imagine Pchelka and Mushka as`,
                                         {
                                             anchor: `sled dogs`,
-                                            wiki: `Sled_dog`
+                                            wiki: `Sled_dog`,
                                         },
                                         `in the Russian`,
                                         {
                                             anchor: `tundra.`,
-                                            wiki: `Tundra`
-                                        }
+                                            wiki: `Tundra`,
+                                        },
                                     ],
                                     dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
+                                        [NARRATIVE]: true,
+                                    },
                                 },
                                 {
                                     description: [
                                         `Upon their arrival in the`,
                                         {
                                             anchor: `New World,`,
-                                            wiki: `New_World`
+                                            wiki: `New_World`,
                                         },
                                         `the`,
                                         {
                                             anchor: `French`,
-                                            wiki: `France`
+                                            wiki: `France`,
                                         },
                                         `learned the practice of dog sledding from the natives. They would command their dog teams to move by shouting`,
                                         {
                                             isItalic: true,
-                                            lyric: `"marche,"`
+                                            lyric: `"marche,"`,
                                         },
                                         `meaning "go," which continued in English as`,
                                         {
                                             anchor: `"mush."`,
-                                            wiki: `Mushing`
-                                        }
-                                    ]
-                                }
-                            ]
+                                            wiki: `Mushing`,
+                                        },
+                                    ],
+                                },
+                            ],
                         },
                         {
                             anchor: `Mushka's`,
@@ -1102,17 +1102,17 @@ export default {
                                     `While Pchelka and Mushka successfully spent a day in orbit aboard`,
                                     {
                                         anchor: `Sputnik 6,`,
-                                        wiki: `Korabl-Sputnik_3`
+                                        wiki: `Korabl-Sputnik_3`,
                                     },
-                                    `there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets made it self-destruct, killing all aboard. But in my retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`
+                                    `there was an error upon reentry. To prevent the spacecraft from landing in hostile territory, the Soviets made it self-destruct, killing all aboard. But in my retelling, I as Pchelka somehow manage to avoid the sad fate that my brother as Mushka could not.`,
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
-                        `dragged by collar`
-                    ]
+                        `dragged by collar`,
+                    ],
                 },
                 {
                     time: 167,
@@ -1125,19 +1125,19 @@ export default {
                                     `I wrote this song during the peak of my activism within the`,
                                     {
                                         anchor: `animal rights movement,`,
-                                        wiki: `Animal_rights_movement`
+                                        wiki: `Animal_rights_movement`,
                                     },
                                     `which takes a dim view of`,
                                     {
                                         anchor: `sled dog racing.`,
-                                        wiki: `Sled_dog_racing`
+                                        wiki: `Sled_dog_racing`,
                                     },
-                                    `Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`
+                                    `Not only are dogs routinely abandoned or killed when they outlive their usefulness, but the race itself is grueling enough to cause death by overexertion.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
                         `under`,
                         {
@@ -1147,18 +1147,18 @@ export default {
                                     `During summer in the`,
                                     {
                                         anchor: `Arctic,`,
-                                        wiki: `Arctic`
+                                        wiki: `Arctic`,
                                     },
                                     `the`,
                                     {
                                         anchor: `sun never sets.`,
-                                        wiki: `Midnight_sun`
+                                        wiki: `Midnight_sun`,
                                     },
-                                    `Instead, it always remains visible just above the horizon.`
-                                ]
-                            }
-                        }
-                    ]
+                                    `Instead, it always remains visible just above the horizon.`,
+                                ],
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 171,
@@ -1169,11 +1169,11 @@ export default {
                             card: {
                                 description: `I always had to wonder if my brother was screaming on the inside, as I certainly was during this time.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 175,
@@ -1186,21 +1186,21 @@ export default {
                                     `The`,
                                     {
                                         anchor: `"Iditarod"`,
-                                        wiki: `Iditarod_Trail_Sled_Dog_Race`
+                                        wiki: `Iditarod_Trail_Sled_Dog_Race`,
                                     },
                                     `is an annual sled dog race held in`,
                                     {
                                         anchor: `Alaska.`,
-                                        wiki: `Alaska`
+                                        wiki: `Alaska`,
                                     },
-                                    `Some mushers use a whip to keep the pack disciplined.`
+                                    `Some mushers use a whip to keep the pack disciplined.`,
                                 ],
                                 dotKeys: {
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 178,
@@ -1213,28 +1213,28 @@ export default {
                                     `A`,
                                     {
                                         anchor: `pentobarbital`,
-                                        wiki: `Pentobarbital`
+                                        wiki: `Pentobarbital`,
                                     },
                                     `injection is the most humane means of`,
                                     {
                                         anchor: `euthanasia.`,
-                                        wiki: `Euthanasia`
+                                        wiki: `Euthanasia`,
                                     },
-                                    `No such kindness was prepared for Laika, whose death by heat exhaustion had been expected all along.`
-                                ]
-                            }
-                        }
-                    ]
+                                    `No such kindness was prepared for Laika, whose death by heat exhaustion had been expected all along.`,
+                                ],
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 182,
-                    lyric: `nothing too rich for glorious cosmonauts!`
-                }
-            ]
+                    lyric: `nothing too rich for glorious cosmonauts!`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: POSTCHORUS
+                formType: POSTCHORUS,
             },
             mainVerses: [
                 {
@@ -1247,9 +1247,9 @@ export default {
                                 description: `By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn't a tourist in the land of autism. He wasn't free to come and go as he pleased.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
                         {
                             anchor: `Xiao Xiang,`,
@@ -1258,12 +1258,12 @@ export default {
                                 description: `Mushka means "little fly" in Russian, and by coincidence, my brother's Chinese name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`,
                                 dotKeys: {
                                     [REFERENCE]: true,
-                                    [PUN]: true
-                                }
-                            }
+                                    [PUN]: true,
+                                },
+                            },
                         },
-                        `mush on…`
-                    ]
+                        `mush on…`,
+                    ],
                 },
                 {
                     time: 189,
@@ -1276,19 +1276,19 @@ export default {
                                     `A group of`,
                                     {
                                         anchor: `whales`,
-                                        wiki: `Whale`
+                                        wiki: `Whale`,
                                     },
-                                    `is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and thus I sought out a metaphorical escape pod.`
+                                    `is called a pod. Because I wanted to belong to a social group, I couldn't ditch my "whales," and thus I sought out a metaphorical escape pod.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true,
-                                    [REFERENCE]: true
-                                }
-                            }
-                        }
-                    ]
-                }
+                                    [REFERENCE]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -1296,24 +1296,24 @@ export default {
                     description: [
                         {
                             anchor: `David Bowie's`,
-                            wiki: `David_Bowie`
+                            wiki: `David_Bowie`,
                         },
                         {
                             anchor: `"Space Oddity"`,
-                            wiki: `Space_Oddity`
+                            wiki: `Space_Oddity`,
                         },
-                        `closes with a free-form instrumental outro that evokes the sound of failing radio transmissions. I aimed for a similar effect by scraping the strings of an electric guitar against the pickup, and bouncing a metal rod on a single string near the bridge.`
+                        `closes with a free-form instrumental outro that evokes the sound of failing radio transmissions. I aimed for a similar effect by scraping the strings of an electric guitar against the pickup, and bouncing a metal rod on a single string near the bridge.`,
                     ],
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
                 formType: POSTCHORUS,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -1325,12 +1325,12 @@ export default {
                             card: {
                                 description: `Eventually a classmate suspected me of taking drugs, and I was sent to the principal's office. When my mother came to pick me up, she chewed out the principal for even suspecting that I could do such a thing. Since I was more responsive around authority figures, he agreed that the accusation didn't make sense and dropped the issue.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `son, with Mum we'll need a word."`
-                    ]
+                        `son, with Mum we'll need a word."`,
+                    ],
                 },
                 {
                     time: 200,
@@ -1342,9 +1342,9 @@ export default {
                                 description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who once did that really weird thing. It's not that I lacked the will to repair my standing. But I was as baffled as anyone else about the psychological forces that prompted such behavior in the first place, and there were no guide books telling me where to go from there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
                         `I`,
                         {
@@ -1354,18 +1354,18 @@ export default {
                                     `I'd grown disillusioned with RI Research by this point anyway, as the letters inexplicably began to take on`,
                                     {
                                         anchor: `Christian`,
-                                        wiki: `Christianity`
+                                        wiki: `Christianity`,
                                     },
-                                    `overtones. It's not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.`
+                                    `overtones. It's not that I held Christianity to be conclusively false. It was just incongruous with all the previous talk of extraterrestrial origins.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {},
@@ -1376,15 +1376,15 @@ export default {
                         `My brother currently lives in his own apartment and gets round-the-clock care through a`,
                         {
                             anchor: `supported living`,
-                            wiki: `Supported_living`
+                            wiki: `Supported_living`,
                         },
-                        `service agency.`
+                        `service agency.`,
                     ],
                     dotKeys: {
-                        [AFTERWORD]: true
-                    }
-                }
-            }
-        }
-    ]
+                        [AFTERWORD]: true,
+                    },
+                },
+            },
+        },
+    ],
 }

@@ -19,8 +19,8 @@ const PopupOverlay = ({ didMount }) => {
                 timeout: 200,
                 classNames: {
                     enterActive: 'PopupOverlay__shown',
-                    enterDone: 'PopupOverlay__shown'
-                }
+                    enterDone: 'PopupOverlay__shown',
+                },
             }}
         >
             <div className="PopupOverlay" />
@@ -29,7 +29,7 @@ const PopupOverlay = ({ didMount }) => {
 }
 
 PopupOverlay.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default memo(getDidMountHoc(PopupOverlay))

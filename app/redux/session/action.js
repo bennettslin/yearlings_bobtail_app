@@ -4,26 +4,26 @@ import { SESSION_WIKI_DEFAULTS } from './default'
 
 export const toggleAudioOptionIndex = () => ({
     type: SESSION_STORE,
-    payload: { toggledAudioOptionIndex: true }
+    payload: { toggledAudioOptionIndex: true },
 })
 
 export const updateShownNavBookIndex = shownNavBookIndex => ({
     type: SESSION_STORE,
-    payload: { shownNavBookIndex }
+    payload: { shownNavBookIndex },
 })
 
 export const updateWikiIndices = ({
     selectedWikiIndex,
-    wikiAnnotationIndex
+    wikiAnnotationIndex,
 } = SESSION_WIKI_DEFAULTS) => ({
     type: SESSION_STORE,
     payload: {
         selectedWikiIndex,
-        wikiAnnotationIndex
-    }
+        wikiAnnotationIndex,
+    },
 })
 
 export const updateEarColumnIndex = earColumnIndex => ({
     type: SESSION_STORE,
-    payload: { earColumnIndex }
+    payload: { earColumnIndex },
 })

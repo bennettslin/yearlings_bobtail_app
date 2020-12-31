@@ -12,7 +12,7 @@ import './style'
 const AnnotationWormholes = ({
     didMount,
     isSelected,
-    annotationIndex
+    annotationIndex,
 
 }) => {
     const
@@ -36,7 +36,7 @@ const AnnotationWormholes = ({
                     key: wormholeLinkIndex,
                     annotationIndex,
                     wormholeLinkIndex,
-                    isAccessedShown: isAccessed && isSelected
+                    isAccessedShown: isAccessed && isSelected,
                 }}
             />
         )
@@ -46,7 +46,7 @@ const AnnotationWormholes = ({
 AnnotationWormholes.propTypes = {
     didMount: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    annotationIndex: PropTypes.number.isRequired
+    annotationIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getDidMountHoc(AnnotationWormholes))

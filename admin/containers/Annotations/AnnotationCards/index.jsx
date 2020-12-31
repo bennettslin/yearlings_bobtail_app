@@ -16,7 +16,7 @@ const AnnotationCards = ({ songIndex, annotationIndex }) => (
                     key: cardIndex,
                     songIndex,
                     annotationIndex,
-                    cardIndex
+                    cardIndex,
                 }}
             />
         ))}
@@ -25,7 +25,7 @@ const AnnotationCards = ({ songIndex, annotationIndex }) => (
 
 AnnotationCards.propTypes = {
     songIndex: PropTypes.number.isRequired,
-    annotationIndex: PropTypes.number.isRequired
+    annotationIndex: PropTypes.number.isRequired,
 }
 
 export default AnnotationCards

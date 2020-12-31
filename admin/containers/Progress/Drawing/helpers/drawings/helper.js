@@ -48,14 +48,14 @@ export const initialiseDrawings = (drawings, songIndex) => {
                         characterObject,
 
                 {
-                    instance
+                    instance,
                 } = instanceName
 
             drawings[ACTOR][actor].push({
                 songIndex,
                 sceneIndex,
                 character,
-                instance
+                instance,
             })
         }
 
@@ -86,7 +86,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 songIndex,
                 sceneIndex,
                 instance,
-                character
+                character,
             } = role
 
             /**
@@ -116,7 +116,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 workedHours,
                 instance,
                 doneForNow,
-                halfDoneForNow
+                halfDoneForNow,
             })
 
             if (!drawings.songTasks) {
@@ -157,7 +157,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             characters,
             rolesTodoCount,
             halfRolesTodoCount,
-            rolesTotalCount
+            rolesTotalCount,
         })
     })
 

@@ -5,18 +5,18 @@ import {
     MARA,
     LIZ,
     MIRIAM,
-    AMY
+    AMY,
 } from '../../../../../../../app/constants/scene/actors'
 import { DOCTOR } from '../../../../../../../app/constants/scene/actors/amy'
 import {
     EL_TORITO,
-    GOPI
+    GOPI,
 } from '../../../../../../../app/constants/scene/actors/songs'
 import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
-    FINAL_DREAM
+    FINAL_DREAM,
 } from '../../../../../../../app/constants/scene/actors/bennettLiz'
 
 export default [
@@ -24,90 +24,90 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: EL_TORITO
+                    instance: EL_TORITO,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: EL_TORITO
-                    }
-                }
-            }
-        }
+                        instance: EL_TORITO,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: PAMPAS
+                    instance: PAMPAS,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: PAMPAS
-                    }
+                        instance: PAMPAS,
+                    },
                 },
                 [CATHERINE]: {
                     gopi: {
-                        instance: GOPI
-                    }
+                        instance: GOPI,
+                    },
                 },
                 [MARA]: {
                     gopi: {
-                        instance: GOPI
-                    }
+                        instance: GOPI,
+                    },
                 },
                 [MIRIAM]: {
                     gopi: {
-                        instance: GOPI
-                    }
-                }
-            }
-        }
+                        instance: GOPI,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: GETTING_DARK
+                    instance: GETTING_DARK,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: GETTING_DARK
-                    }
-                }
-            }
-        }
+                        instance: GETTING_DARK,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: CLIFF
+                    instance: CLIFF,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: CLIFF
-                    }
-                }
-            }
-        }
+                        instance: CLIFF,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: FINAL_DREAM
+                    instance: FINAL_DREAM,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: FINAL_DREAM
-                    }
+                        instance: FINAL_DREAM,
+                    },
                 },
                 [AMY]: {
                     doctor: {
-                        instance: DOCTOR
-                    }
-                }
-            }
-        }
-    }
+                        instance: DOCTOR,
+                    },
+                },
+            },
+        },
+    },
 ]

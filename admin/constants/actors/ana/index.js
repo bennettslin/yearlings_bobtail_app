@@ -1,11 +1,11 @@
 import {
     ANA,
-    ANA_HOWIE
+    ANA_HOWIE,
 } from '../../../../app/constants/scene/actors'
 import {
     SQUATTING,
     CHUCKLING,
-    SMIRKING
+    SMIRKING,
 } from '../../../../app/constants/scene/actors/ana'
 import {
     EATING,
@@ -16,56 +16,56 @@ import {
     STATION_WAGON,
     PERFORMING,
     WAITING,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: ANA,
-        instance: SQUATTING
+        instance: SQUATTING,
     },
     {
         type: ANA,
-        instance: EATING
+        instance: EATING,
     },
     {
         type: ANA,
-        instance: ABBEY_ROAD
+        instance: ABBEY_ROAD,
     },
     {
         type: ANA,
-        instance: WALGREENS
+        instance: WALGREENS,
     },
     {
         type: ANA,
-        instance: STEAM_TUNNEL
+        instance: STEAM_TUNNEL,
     },
     {
         type: ANA_HOWIE,
-        instance: CEMETERY
+        instance: CEMETERY,
     },
     {
         type: ANA,
-        instance: STATION_WAGON
+        instance: STATION_WAGON,
     },
     {
         type: ANA,
-        instance: PERFORMING
+        instance: PERFORMING,
     },
     {
         type: ANA,
-        instance: WAITING
+        instance: WAITING,
     },
     {
         type: ANA,
-        instance: CHUCKLING
+        instance: CHUCKLING,
     },
     {
         type: ANA,
-        instance: SMIRKING
+        instance: SMIRKING,
     },
     {
         type: ANA,
-        instance: EPILOGUE
-    }
+        instance: EPILOGUE,
+    },
 ]

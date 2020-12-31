@@ -10,7 +10,7 @@ import TipsHand from '../Tips/Hand'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import {
     PREVIOUS_VERSE_KEY,
-    NEXT_VERSE_KEY
+    NEXT_VERSE_KEY,
 } from '../../constants/access'
 import { SLIDER } from '../../constants/tips'
 import './style'
@@ -36,7 +36,7 @@ const Slider = () => {
                     'Rancho'
                 ),
                 onMouseDown: onTouchStart,
-                onTouchStart
+                onTouchStart,
             }}
         >
             <SliderTimes />

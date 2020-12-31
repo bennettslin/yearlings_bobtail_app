@@ -3,7 +3,7 @@ import {
     CSS_LENGTH_ICON_LARGE,
     CSS_LENGTH_ICON_LARGE_TABLET,
     CSS_LENGTH_ICON_LARGE_MINI,
-    CSS_MARGIN_THIN
+    CSS_MARGIN_THIN,
 } from '..'
 import {
     COUNT_GAPS_SINGLE,
@@ -12,7 +12,7 @@ import {
     WIDTH_LAPTOP,
     WIDTH_MENU_BREAKPOINT,
     WIDTH_GOLDEN_CORD,
-    WIDTH_UNCANNY_VALLEY
+    WIDTH_UNCANNY_VALLEY,
 } from '../../../scss/exports/style'
 
 import { getJsFromSass } from '../../../helpers/format'
@@ -56,14 +56,14 @@ export const MONITOR_WIDTH_KEY = 'monitor'
 
 const PHONE_WIDTH_CONFIG = {
     deviceWidthKey: PHONE_WIDTH_KEY,
-    maxWidth: 475
+    maxWidth: 475,
 }
 export const MINI_WIDTH_CONFIG = {
     deviceWidthKey: MINI_WIDTH_KEY,
     maxWidth: CSS_WIDTH_MENU_BREAKPOINT,
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
-        + CSS_LENGTH_ICON_LARGE_MINI
+        + CSS_LENGTH_ICON_LARGE_MINI,
 }
 const TABLET_WIDTH_CONFIG = {
     deviceWidthKey: TABLET_WIDTH_KEY,
@@ -76,7 +76,7 @@ const TABLET_WIDTH_CONFIG = {
         + CSS_LENGTH_ICON_LARGE_TABLET,
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
-        + CSS_LENGTH_ICON_LARGE_TABLET
+        + CSS_LENGTH_ICON_LARGE_TABLET,
 }
 const LAPTOP_WIDTH_CONFIG = {
     deviceWidthKey: LAPTOP_WIDTH_KEY,
@@ -84,7 +84,7 @@ const LAPTOP_WIDTH_CONFIG = {
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + CSS_WIDTH_UNCANNY_VALLEY
-        + CSS_LENGTH_ICON_LARGE
+        + CSS_LENGTH_ICON_LARGE,
 }
 const MONITOR_WIDTH_CONFIG = {
     deviceWidthKey: MONITOR_WIDTH_KEY,
@@ -99,7 +99,7 @@ const MONITOR_WIDTH_CONFIG = {
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + CSS_WIDTH_GOLDEN_CORD
-        + CSS_LENGTH_ICON_LARGE
+        + CSS_LENGTH_ICON_LARGE,
 }
 
 export const DEVICE_WIDTH_CONFIGS = [
@@ -108,5 +108,5 @@ export const DEVICE_WIDTH_CONFIGS = [
     TABLET_WIDTH_CONFIG,
     LAPTOP_WIDTH_CONFIG,
     MONITOR_WIDTH_CONFIG,
-    {} // Default when app mounts.
+    {}, // Default when app mounts.
 ]

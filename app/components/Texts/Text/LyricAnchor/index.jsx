@@ -12,11 +12,11 @@ import { ANCHOR_SCROLL } from '../../../../constants/scroll'
 import {
     mapIsAccessedIndexedAnchorShown,
     mapAccessedAnnotationIndex,
-    mapAccessedWikiWormholeIndex
+    mapAccessedWikiWormholeIndex,
 } from '../../../../redux/access/selector'
 import {
     mapLyricAnnotationIndex,
-    getMapIsLyricAnnotation
+    getMapIsLyricAnnotation,
 } from '../../../../redux/lyric/selector'
 import { mapIsLyricsLocked } from '../../../../redux/slider/selector'
 import './style'
@@ -31,7 +31,7 @@ const TextLyricAnchor = forwardRef(({
     isItalic,
     isEmphasis,
     beginsVerse,
-    endsVerse
+    endsVerse,
 
 }, ref) => {
     const
@@ -77,7 +77,7 @@ const TextLyricAnchor = forwardRef(({
         if (annotationIndex) {
             dispatch(updateAnnotationStore({
                 queuedAnnotationIndex: annotationIndex,
-                queuedAnnotationFromLyricVerse: true
+                queuedAnnotationFromLyricVerse: true,
             }))
             return true
         }
@@ -123,11 +123,11 @@ const TextLyricAnchor = forwardRef(({
                         isItalic,
                         isEmphasis,
                         beginsVerse,
-                        endsVerse
+                        endsVerse,
                     },
                     dotsBit: isWikiTextAnchor ? REFERENCE_BIT : dotsBit,
                     handleAnchorClick,
-                    handleAnchorMouse
+                    handleAnchorMouse,
                 }}
             />
             {isWikiTextAnchor && (
@@ -147,14 +147,14 @@ TextLyricAnchor.propTypes = {
         // "Bobtail's words" in M is an array.
         PropTypes.array,
         // "Ubermensch" in Golden Cord is an object.
-        PropTypes.object
+        PropTypes.object,
     ]).isRequired,
     isVerseLyric: PropTypes.bool,
     isItalic: PropTypes.bool,
     isEmphasis: PropTypes.bool,
     beginsVerse: PropTypes.bool,
     endsVerse: PropTypes.bool,
-    dotsBit: PropTypes.number
+    dotsBit: PropTypes.number,
 }
 
 export default memo(TextLyricAnchor)

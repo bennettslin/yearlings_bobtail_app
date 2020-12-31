@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import NavButton from '../Button'
 import {
     mapIsAccessOn,
-    mapAccessedNavIndex
+    mapAccessedNavIndex,
 } from '../../../../../redux/access/selector'
 import { mapSelectedSongIndex } from '../../../../../redux/selected/selector'
 import { mapIsDotsSlideShown } from '../../../../../redux/toggle/selector'
@@ -32,14 +32,14 @@ const NavButtonIndexed = ({ songIndex, ...other }) => {
             {...{
                 songIndex,
                 isSelected,
-                isAccessed
+                isAccessed,
             }}
         />
     )
 }
 
 NavButtonIndexed.propTypes = {
-    songIndex: PropTypes.number.isRequired
+    songIndex: PropTypes.number.isRequired,
 }
 
 export default memo(NavButtonIndexed)

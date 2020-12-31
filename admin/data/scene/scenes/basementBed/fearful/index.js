@@ -1,7 +1,7 @@
 import {
     ESTHER_MOTHER,
     FATHER,
-    MIRIAM_BENNETT
+    MIRIAM_BENNETT,
 } from '../../../../../../app/constants/scene/actors'
 import { ASLEEP } from '../../../../../../app/constants/scene/actors/songs'
 import { ASLEEP_FEARFUL } from '../../../../../../app/constants/scene/actors/miriamBennett'
@@ -13,26 +13,26 @@ export default {
         [HURT_CONSOLING]: {
             yIndex: 4,
             xPosition: 2.2,
-            zOffset: 2
-        }
+            zOffset: 2,
+        },
     },
     [FATHER]: {
         [ACCUSATORY]: {
             yIndex: 4,
             xPosition: 5.5,
-            zOffset: 0.5
-        }
+            zOffset: 0.5,
+        },
     },
     [MIRIAM_BENNETT]: {
         [ASLEEP]: {
             yIndex: 4,
             xPosition: 7.4,
-            zOffset: -0.2
+            zOffset: -0.2,
         },
         [ASLEEP_FEARFUL]: {
             yIndex: 4,
             xPosition: 7.4,
-            zOffset: -0.2
-        }
-    }
+            zOffset: -0.2,
+        },
+    },
 }

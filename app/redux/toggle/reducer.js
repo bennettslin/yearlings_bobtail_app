@@ -4,7 +4,7 @@ import { mapIsLyricExpandable } from '../lyricExpand/selector'
 import {
     TOGGLE_STORE,
     SELECTED_STORE,
-    VIEWPORT_STORE
+    VIEWPORT_STORE,
 } from '../../constants/store'
 import { TOGGLE_DEFAULTS } from './default'
 import { mapCanScoreMount } from '../viewport/selector'
@@ -18,34 +18,34 @@ export default (
             const
                 {
                     toggledIsAboutShown,
-                    toggledIsPitchShown
+                    toggledIsPitchShown,
                 } = payload,
                 {
                     isAboutShown: prevAboutShown,
-                    isPitchShown: prevIsPitchShown
+                    isPitchShown: prevIsPitchShown,
                 } = state
             return {
                 ...state,
                 ...payload,
                 ...hasKey(toggledIsAboutShown) && {
-                    isAboutShown: !prevAboutShown
+                    isAboutShown: !prevAboutShown,
                 },
                 ...hasKey(toggledIsPitchShown) && {
-                    isPitchShown: !prevIsPitchShown
-                }
+                    isPitchShown: !prevIsPitchShown,
+                },
             }
         }
         case SELECTED_STORE: {
             const {
                 isSelectedLogue,
-                selectedDotsBit
+                selectedDotsBit,
             } = payload
             return {
                 ...state,
                 ...hasKey(isSelectedLogue) && isSelectedLogue && {
                     isDotsSlideShown: false,
                     isLyricExpanded: false,
-                    isScoreShown: false
+                    isScoreShown: false,
                 },
                 /**
                  * If there are no selected dots, there are no carousel
@@ -53,31 +53,31 @@ export default (
                  * only be deselected when carousel is not shown?)
                  */
                 ...hasKey(selectedDotsBit) && !selectedDotsBit && {
-                    isCarouselExpanded: false
-                }
+                    isCarouselExpanded: false,
+                },
             }
         }
         case VIEWPORT_STORE: {
             const
                 { canCarouselNavMount } = payload,
                 isLyricExpandable = mapIsLyricExpandable({
-                    [VIEWPORT_STORE]: payload
+                    [VIEWPORT_STORE]: payload,
                 }),
                 canScoreMount = mapCanScoreMount({
-                    [VIEWPORT_STORE]: payload
+                    [VIEWPORT_STORE]: payload,
                 })
             return {
                 ...state,
                 ...hasKey(canCarouselNavMount) && !canCarouselNavMount && {
                     isCarouselExpanded: false,
-                    isNavExpanded: false
+                    isNavExpanded: false,
                 },
                 ...hasKey(isLyricExpandable) && !isLyricExpandable && {
-                    isLyricExpanded: false
+                    isLyricExpanded: false,
                 },
                 ...hasKey(canScoreMount) && !canScoreMount && {
-                    isScoreShown: false
-                }
+                    isScoreShown: false,
+                },
             }
         }
         default:

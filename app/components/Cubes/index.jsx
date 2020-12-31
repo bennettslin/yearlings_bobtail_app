@@ -19,7 +19,7 @@ const Cubes = ({ yIndex }) => yIndex <= DEV_MAXIMUM_Y_INDEX_CUBES && (
                 {...{
                     key: `${yIndex}_${xIndex}`,
                     yIndex,
-                    xIndex
+                    xIndex,
                 }}
             />
         ))}
@@ -27,7 +27,7 @@ const Cubes = ({ yIndex }) => yIndex <= DEV_MAXIMUM_Y_INDEX_CUBES && (
 )
 
 Cubes.propTypes = {
-    yIndex: PropTypes.number.isRequired
+    yIndex: PropTypes.number.isRequired,
 }
 
 export default memo(Cubes)

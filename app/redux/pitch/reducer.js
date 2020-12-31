@@ -10,7 +10,7 @@ export default (
         case PITCH_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         default:
             return state

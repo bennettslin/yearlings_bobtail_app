@@ -10,18 +10,18 @@ import {
     mapScrollLyricByAnchor,
     mapScrollLyricIndex,
     mapIsScrollLyricForSongSelect,
-    mapIsScrollLyricForVerseSelect
+    mapIsScrollLyricForVerseSelect,
 } from '../../../redux/scrollLyric/selector'
 import { mapCanLyricScroll } from '../../../redux/scroll/selector'
 import {
     ANCHOR_SCROLL,
-    VERSE_SCROLL
+    VERSE_SCROLL,
 } from '../../../constants/scroll'
 
 const ScrollLyricListener = ({
     getLyricScrollElement,
     getScrollAnchorChild,
-    getScrollVerseChild
+    getScrollVerseChild,
 
 }) => {
     const
@@ -65,7 +65,7 @@ const ScrollLyricListener = ({
             noDuration: isScrollLyricForSongSelect,
 
             // Set timeout to ensure that scroll is truly complete.
-            callback: () => setTimeout(() => dispatchCallback(index), 25)
+            callback: () => setTimeout(() => dispatchCallback(index), 25),
         })
     }
 
@@ -89,7 +89,7 @@ const ScrollLyricListener = ({
             {...{
                 ref: scrollElementIntoView,
                 getScrollParent: getLyricScrollElement,
-                getScrollChild
+                getScrollChild,
             }}
         />
     )
@@ -98,7 +98,7 @@ const ScrollLyricListener = ({
 ScrollLyricListener.propTypes = {
     getLyricScrollElement: PropTypes.func.isRequired,
     getScrollAnchorChild: PropTypes.func.isRequired,
-    getScrollVerseChild: PropTypes.func.isRequired
+    getScrollVerseChild: PropTypes.func.isRequired,
 }
 
 export default memo(ScrollLyricListener)

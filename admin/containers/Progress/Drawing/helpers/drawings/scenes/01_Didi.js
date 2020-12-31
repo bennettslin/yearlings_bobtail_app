@@ -2,22 +2,22 @@ import { ACTOR } from '../../../../../../../app/constants/scene'
 import {
     YOUNG_BENNETT,
     ANITA,
-    ESTHER
+    ESTHER,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     PANICKED,
     FLUSTERED,
     BATHING,
-    SINGING
+    SINGING,
 } from '../../../../../../../app/constants/scene/actors/youngBennett'
 import {
     EXASPERATED,
     CONCERNED,
-    CHEERING
+    CHEERING,
 } from '../../../../../../../app/constants/scene/actors/anita'
 import {
     CURIOUS,
-    SNICKERING
+    SNICKERING,
 } from '../../../../../../../app/constants/scene/actors/esther'
 
 export default [
@@ -25,51 +25,51 @@ export default [
         presences: {
             [ACTOR]: {
                 [ESTHER]: {
-                    instance: CURIOUS
+                    instance: CURIOUS,
                 },
                 [ANITA]: {
-                    instance: EXASPERATED
+                    instance: EXASPERATED,
                 },
                 [YOUNG_BENNETT]: {
-                    instance: PANICKED
-                }
-            }
-        }
+                    instance: PANICKED,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    instance: CONCERNED
+                    instance: CONCERNED,
                 },
                 [ESTHER]: {
-                    instance: SNICKERING
+                    instance: SNICKERING,
                 },
                 [YOUNG_BENNETT]: {
-                    instance: FLUSTERED
-                }
-            }
-        }
+                    instance: FLUSTERED,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
-                    instance: BATHING
-                }
-            }
-        }
+                    instance: BATHING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    instance: CHEERING
+                    instance: CHEERING,
                 },
                 [YOUNG_BENNETT]: {
-                    instance: SINGING
-                }
-            }
-        }
-    }
+                    instance: SINGING,
+                },
+            },
+        },
+    },
 ]

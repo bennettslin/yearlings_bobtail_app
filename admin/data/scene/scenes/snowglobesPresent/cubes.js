@@ -5,7 +5,7 @@ import {
     SNOW_FLOOR_COLOUR as F,
     SNOWGLOBE_PLATFORM_COLOUR as P,
     LIZ_COUCH_COLOUR as U,
-    MIRIAM_COUCH_COLOUR as Z
+    MIRIAM_COUCH_COLOUR as Z,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -17,7 +17,7 @@ export default {
                 [G, F, F, F, F, G, Z, Z, Z, Z, Z, G],
                 [G, P, P, P, P, G, F, F, F, F, F, G],
                 [G, G, G, G, G, G, P, P, P, P, P, G],
-                [G]
+                [G],
             ],
             zIndices: [
                 [0, 9, 5, 5, 3, 0, 8, 8, 8, 8, 8, 0],
@@ -25,8 +25,8 @@ export default {
                 [0, 3, 3, 3, 3, 0, 5, 5, 5, 5, 5, 0],
                 [0, 2, 2, 2, 2, 0, 3, 3, 3, 3, 3, 0],
                 [0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 0],
-                [0]
-            ]
-        }
-    }
+                [0],
+            ],
+        },
+    },
 }

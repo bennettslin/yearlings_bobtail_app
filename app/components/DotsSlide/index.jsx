@@ -11,7 +11,7 @@ import { IS_TOUCH_SUPPORTED } from '../../constants/device'
 import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
 import {
     mapIsAccessOn,
-    mapAccessedDotIndex
+    mapAccessedDotIndex,
 } from '../../redux/access/selector'
 import { mapSelectedDotsBit } from '../../redux/dots/selector'
 import { mapDotsSlideBit } from '../../redux/dotsSlide/selector'
@@ -46,8 +46,8 @@ const DotsSlide = () => {
                 timeout: 200,
                 classNames: {
                     enterActive: 'DotsSlide__shown',
-                    enterDone: 'DotsSlide__shown'
-                }
+                    enterDone: 'DotsSlide__shown',
+                },
             }}
         >
             <div className="DotsSlide">
@@ -64,20 +64,20 @@ const DotsSlide = () => {
                              */
                             !IS_TOUCH_SUPPORTED && 'DotsSlide__canHover'
                         ),
-                        onClick
+                        onClick,
                     }}
                 >
                     {DOT_KEYS_ARRAY_CONFIGS.map((arrayConfig, arrayIndex) => {
                         const {
                             dotKeysArray,
-                            startingIndex
+                            startingIndex,
                         } = arrayConfig
 
                         return (
                             <div
                                 {...{
                                     key: arrayIndex,
-                                    className: 'DotsSlideSelects__row'
+                                    className: 'DotsSlideSelects__row',
                                 }}
                             >
                                 {dotKeysArray.map((dotKey, index) => {
@@ -98,7 +98,7 @@ const DotsSlide = () => {
                                                 dotKey,
                                                 isAccessed,
                                                 isSelected,
-                                                isActivated
+                                                isActivated,
                                             }}
                                         />
                                     )

@@ -6,7 +6,7 @@ import {
     BENNETT_FATHER,
     BENNETTS_CHRISTOPHER_LIZ,
     BENNETT_LIZ_REFLECTION,
-    BENNETT_REFLECTION
+    BENNETT_REFLECTION,
 } from '../../../../app/constants/scene/actors'
 import {
     BREAKUP_DEJECTED,
@@ -37,7 +37,7 @@ import {
     SHOW_ANNOYED,
     ALLEY,
     BROKEN_HEARTED,
-    DEMONSTRATION
+    DEMONSTRATION,
 } from '../../../../app/constants/scene/actors/bennett'
 import {
     GINGERBREAD_PRISON,
@@ -54,17 +54,17 @@ import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
-    FINAL_DREAM
+    FINAL_DREAM,
 } from '../../../../app/constants/scene/actors/bennettLiz'
 import {
     HORSING,
-    DRYING_TEARS
+    DRYING_TEARS,
 } from '../../../../app/constants/scene/actors/bennettStephanie'
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF,
     COWGIRL,
-    BLOWJOB
+    BLOWJOB,
 } from '../../../../app/constants/scene/actors/miriamBennett'
 import {
     EATING,
@@ -90,304 +90,304 @@ import {
     PRESENT,
     FUTURE,
     EL_TORITO,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: BENNETT,
-        instance: BREAKUP_DEJECTED
+        instance: BREAKUP_DEJECTED,
     },
     {
         type: BENNETT,
-        instance: SOLICITING_OPINION
+        instance: SOLICITING_OPINION,
     },
     {
         type: BENNETT,
-        instance: CATHOLIC_PENSIVE
+        instance: CATHOLIC_PENSIVE,
     },
     {
         type: BENNETT,
-        instance: CATHOLIC_IDEA
+        instance: CATHOLIC_IDEA,
     },
     {
         type: BENNETT,
-        instance: PIOUS
+        instance: PIOUS,
     },
     {
         type: BENNETT,
-        instance: PONDERING
+        instance: PONDERING,
     },
     {
         type: BENNETT,
-        instance: RUBIKS_CUBE
+        instance: RUBIKS_CUBE,
     },
     {
         type: BENNETT,
-        instance: COUCH_READING
+        instance: COUCH_READING,
     },
     {
         type: BENNETT,
-        instance: DISTRACTED
+        instance: DISTRACTED,
     },
     {
         type: BENNETT,
-        instance: EATING
+        instance: EATING,
     },
     {
         type: BENNETT,
-        instance: HOPELESSLY_CRUSHED
+        instance: HOPELESSLY_CRUSHED,
     },
     {
         type: BENNETT,
-        instance: WONDERING_BABY
+        instance: WONDERING_BABY,
     },
     {
         type: BENNETT,
-        instance: MERRILY_DERANGED
+        instance: MERRILY_DERANGED,
     },
     {
         type: BENNETT,
-        instance: DATE_ENDING
+        instance: DATE_ENDING,
     },
     {
         type: BENNETT,
-        instance: MUSEUM
+        instance: MUSEUM,
     },
     {
         type: BENNETT,
-        instance: BACKSTAGE
+        instance: BACKSTAGE,
     },
     {
         type: BENNETT,
-        instance: GO_KARTS
+        instance: GO_KARTS,
     },
     {
         type: BENNETT,
-        instance: DATE_ENDED
+        instance: DATE_ENDED,
     },
     {
         type: BENNETT,
-        instance: DISHROOM_READING
+        instance: DISHROOM_READING,
     },
     {
         type: BENNETT,
-        instance: DISHROOM_LANCET
+        instance: DISHROOM_LANCET,
     },
     {
         type: BENNETT,
-        instance: MOP_SOPPED
+        instance: MOP_SOPPED,
     },
     {
         type: BENNETT,
-        instance: GATE_CODE
+        instance: GATE_CODE,
     },
     {
         type: BENNETT_LIZ,
-        instance: GINGERBREAD_PRISON
+        instance: GINGERBREAD_PRISON,
     },
     {
         type: BENNETT,
-        instance: RUMPLED_LINENS
+        instance: RUMPLED_LINENS,
     },
     {
         type: BENNETT,
-        instance: WAITING_ROOM_ASLEEP
+        instance: WAITING_ROOM_ASLEEP,
     },
     {
         type: BENNETT_LIZ,
-        instance: CHEEK_UNVEILED
+        instance: CHEEK_UNVEILED,
     },
     {
         type: BENNETT_LIZ,
-        instance: HARD_ON
+        instance: HARD_ON,
     },
     {
         type: BENNETT_LIZ_REFLECTION,
-        instance: HARD_ON_REFLECTION
+        instance: HARD_ON_REFLECTION,
     },
     {
         type: BENNETT_LIZ,
-        instance: MISSIONARY
+        instance: MISSIONARY,
     },
     {
         type: BENNETT_LIZ_REFLECTION,
-        instance: MISSIONARY_REFLECTION
+        instance: MISSIONARY_REFLECTION,
     },
     {
         type: BENNETT_LIZ,
-        instance: AFTERGLOW
+        instance: AFTERGLOW,
     },
     {
         type: BENNETT_LIZ_REFLECTION,
-        instance: AFTERGLOW_REFLECTION
+        instance: AFTERGLOW_REFLECTION,
     },
     {
         type: BENNETT,
-        instance: ABBEY_ROAD
+        instance: ABBEY_ROAD,
     },
     {
         type: BENNETT,
-        instance: WALGREENS
+        instance: WALGREENS,
     },
     {
         type: BENNETT,
-        instance: STEAM_TUNNEL
+        instance: STEAM_TUNNEL,
     },
     {
         type: BENNETT,
-        instance: CEMETERY
+        instance: CEMETERY,
     },
     {
         type: BENNETT,
-        instance: STATION_WAGON
+        instance: STATION_WAGON,
     },
     {
         type: BENNETT,
-        instance: ATTIC
+        instance: ATTIC,
     },
     {
         type: BENNETT,
-        instance: PERFORMING
+        instance: PERFORMING,
     },
     {
         type: BENNETT,
-        instance: FLIRTING
+        instance: FLIRTING,
     },
     {
         type: BENNETT,
-        instance: SIDELONG_HESITANCE
+        instance: SIDELONG_HESITANCE,
     },
     {
         type: BENNETT,
-        instance: REMOVING_SHOES
+        instance: REMOVING_SHOES,
     },
     {
         type: BENNETT_REFLECTION,
-        instance: SHOES_REFLECTION
+        instance: SHOES_REFLECTION,
     },
     {
         type: BENNETT_LIZ,
-        instance: BRUSH_OFF
+        instance: BRUSH_OFF,
     },
     {
         type: BENNETT,
-        instance: DROPPING_MEATS
+        instance: DROPPING_MEATS,
     },
     {
         type: BENNETT_LIZ,
-        instance: CELIBATE_FREEZING
+        instance: CELIBATE_FREEZING,
     },
     {
         type: BENNETT,
-        instance: GREETING
+        instance: GREETING,
     },
     {
         type: BENNETT,
-        instance: LEAVING_CRUMBLED
+        instance: LEAVING_CRUMBLED,
     },
     {
         type: BENNETT,
-        instance: CORD_SIDE
+        instance: CORD_SIDE,
     },
     {
         type: BENNETT_LIZ,
-        instance: AWKWARD_CONSOLATION
+        instance: AWKWARD_CONSOLATION,
     },
     {
         type: BENNETT,
-        instance: CORD_REAR
+        instance: CORD_REAR,
     },
     {
         type: BENNETT_STEPHANIE,
-        instance: HORSING
+        instance: HORSING,
     },
     {
         type: BENNETT_STEPHANIE,
-        instance: DRYING_TEARS
+        instance: DRYING_TEARS,
     },
     {
         type: MIRIAM_BENNETT,
-        instance: ASLEEP_FEARFUL
+        instance: ASLEEP_FEARFUL,
     },
     {
         type: BENNETT,
-        instance: PAST
+        instance: PAST,
     },
     {
         type: BENNETT_FATHER,
-        instance: PRESENT
+        instance: PRESENT,
     },
     {
         type: BENNETT,
-        instance: FUTURE
+        instance: FUTURE,
     },
     {
         type: MIRIAM_BENNETT,
-        instance: FENDING_OFF
+        instance: FENDING_OFF,
     },
     {
         type: BENNETT,
-        instance: REMOVING_PANTS
+        instance: REMOVING_PANTS,
     },
     {
         type: MIRIAM_BENNETT,
-        instance: COWGIRL
+        instance: COWGIRL,
     },
     {
         type: MIRIAM_BENNETT,
-        instance: BLOWJOB
+        instance: BLOWJOB,
     },
     {
         type: BENNETT,
-        instance: INFIRM
+        instance: INFIRM,
     },
     {
         type: BENNETT,
-        instance: DISPOSING_CONDOM
+        instance: DISPOSING_CONDOM,
     },
     {
         type: BENNETT,
-        instance: CAMPUS_ASHAMED
+        instance: CAMPUS_ASHAMED,
     },
     {
         type: BENNETT,
-        instance: SHOW_ANNOYED
+        instance: SHOW_ANNOYED,
     },
     {
         type: BENNETT,
-        instance: ALLEY
+        instance: ALLEY,
     },
     {
         type: BENNETT,
-        instance: BROKEN_HEARTED
+        instance: BROKEN_HEARTED,
     },
     {
         type: BENNETT,
-        instance: DEMONSTRATION
+        instance: DEMONSTRATION,
     },
     {
         type: BENNETT,
-        instance: EL_TORITO
+        instance: EL_TORITO,
     },
     {
         type: BENNETT_LIZ,
-        instance: PAMPAS
+        instance: PAMPAS,
     },
     {
         type: BENNETT_LIZ,
-        instance: GETTING_DARK
+        instance: GETTING_DARK,
     },
     {
         type: BENNETT_LIZ,
-        instance: CLIFF
+        instance: CLIFF,
     },
     {
         type: BENNETT_LIZ,
-        instance: FINAL_DREAM
+        instance: FINAL_DREAM,
     },
     {
         type: BENNETTS_CHRISTOPHER_LIZ,
-        instance: EPILOGUE
-    }
+        instance: EPILOGUE,
+    },
 ]

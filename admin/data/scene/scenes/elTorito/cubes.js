@@ -5,7 +5,7 @@ import {
     ROOF_COLOUR as C,
     VELVET_FLOOR_COLOUR as F,
     FANCY_WALL_COLOUR as W,
-    GENERIC_EXTERIOR_COLOUR as X
+    GENERIC_EXTERIOR_COLOUR as X,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { e, f } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -19,7 +19,7 @@ export default {
                 [X],
                 [C],
                 [C, X, C, C, C, C, C, C, C, C, X, C],
-                [C]
+                [C],
             ],
             zIndices: [
                 [0],
@@ -27,22 +27,22 @@ export default {
                 [1, 1, 1, e, e, e, e, e, e, 1, 1, 1],
                 [f],
                 [f, 1, f, f, f, f, f, f, f, f, 1, f],
-                [f]
-            ]
+                [f],
+            ],
         },
         floor: {
             hslaColours: [
                 [F],
                 [F],
-                [V]
+                [V],
             ],
             zIndices: [
                 [0],
                 [2],
                 [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
                 [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

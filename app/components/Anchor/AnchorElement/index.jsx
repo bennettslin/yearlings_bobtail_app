@@ -18,7 +18,7 @@ const AnchorElement = forwardRef((props, ref) => {
 
 AnchorElement.propTypes = {
     to: PropTypes.string,
-    href: PropTypes.string
+    href: PropTypes.string,
 }
 
 export default AnchorElement

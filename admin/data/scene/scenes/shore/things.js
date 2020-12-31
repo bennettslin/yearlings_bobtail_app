@@ -1,13 +1,13 @@
 import {
     CARDBOARD,
     CUTOUT,
-    FLAT
+    FLAT,
 } from '../../../../../app/constants/scene/things'
 import { BENNETT_ODIN_BUOY } from '../../../../../app/constants/scene/things/cardboards'
 import { YELLOW_TAPED_GRILL } from '../../../../../app/constants/scene/things/cutouts'
 import {
     FERRIS_WHEEL,
-    ROLLER_COASTER
+    ROLLER_COASTER,
 } from '../../../../../app/constants/scene/things/flats'
 
 export default {
@@ -15,26 +15,26 @@ export default {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,
             xPosition: 8,
-            scaleFactor: 0.15
-        }
+            scaleFactor: 0.15,
+        },
     },
     [CUTOUT]: {
         [YELLOW_TAPED_GRILL]: {
             yIndex: 5,
             xPosition: 9.5,
-            scaleFactor: 0.3
-        }
+            scaleFactor: 0.3,
+        },
     },
     [FLAT]: {
         [FERRIS_WHEEL]: {
             yIndex: 2,
             xPosition: 2,
-            scaleFactor: 0.5
+            scaleFactor: 0.5,
         },
         [ROLLER_COASTER]: {
             yIndex: 1,
             xPosition: 1.1,
-            scaleFactor: 0.5
-        }
-    }
+            scaleFactor: 0.5,
+        },
+    },
 }

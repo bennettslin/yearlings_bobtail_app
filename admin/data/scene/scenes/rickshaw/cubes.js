@@ -3,7 +3,7 @@ import { RICKSHAW_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
     SAND_COLOUR as K,
-    STREET_COLOUR as T
+    STREET_COLOUR as T,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -16,11 +16,11 @@ export default {
                 [K, K, K, K, K, K, T],
                 [K, K, K, K, T],
                 [K, K, T],
-                [K, T]
+                [K, T],
             ],
             zIndices: [
-                [0]
-            ]
-        }
-    }
+                [0],
+            ],
+        },
+    },
 }

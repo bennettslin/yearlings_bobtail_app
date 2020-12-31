@@ -10,7 +10,7 @@ import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
 import {
     getDescriptionForAnnotationCard,
-    getDotsBitForAnnotationCard
+    getDotsBitForAnnotationCard,
 } from '../../../api/album/cards'
 import { getDotsBitHasKey } from '../../../helpers/dot'
 import { getMapHasSelectedDot } from '../../../redux/dots/selector'
@@ -23,7 +23,7 @@ const AnnotationCard = ({
     annotationIndex,
     inCarousel,
     isSelected,
-    cardIndex
+    cardIndex,
 
 }) => {
     const
@@ -48,8 +48,8 @@ const AnnotationCard = ({
                         hasSelectedDot && 'AnnotationCardContainer__shown',
                         inCarousel && 'AnnotationCardContainer__animated',
                         'ovH'
-                    )
-                }
+                    ),
+                },
             }}
         >
             <div
@@ -65,12 +65,12 @@ const AnnotationCard = ({
                                     getDotsBitHasKey(dotsBit, NARRATIVE) &&
                                         'AnnotationCard__narrative',
                                     getDotsBitHasKey(dotsBit, AFTERWORD) &&
-                                        'AnnotationCard__afterword'
+                                        'AnnotationCard__afterword',
                                 ] :
                                 'AnnotationCard__wormhole',
-                            'fontSize__verse'
+                            'fontSize__verse',
                         ]
-                    )
+                    ),
                 }}
             >
                 {description ? (
@@ -82,14 +82,14 @@ const AnnotationCard = ({
                         <div
                             {...{
                                 ...didMount && {
-                                    className: 'AnnotationCard__text'
-                                }
+                                    className: 'AnnotationCard__text',
+                                },
                             }}
                         >
                             <Texts
                                 {...{
                                     text: description,
-                                    annotationIndex
+                                    annotationIndex,
                                 }}
                             />
                         </div>
@@ -98,7 +98,7 @@ const AnnotationCard = ({
                     <AnnotationWormholes
                         {...{
                             isSelected,
-                            annotationIndex
+                            annotationIndex,
                         }}
                     />
                 )}
@@ -113,7 +113,7 @@ AnnotationCard.propTypes = {
     isSelected: PropTypes.bool.isRequired,
     serverClientSongIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired,
-    cardIndex: PropTypes.number.isRequired
+    cardIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getDidMountHoc(getSongServerClientHoc(AnnotationCard)))

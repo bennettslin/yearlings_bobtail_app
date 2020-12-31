@@ -2,21 +2,21 @@
 import { setInStorage } from '../../helpers/storage'
 import {
     hasKey,
-    getDefinedOnlyPayload
+    getDefinedOnlyPayload,
 } from '../../helpers/action'
 import { getSongIsLogue } from '../../api/album/songs'
 import {
     SELECTED_STORE,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX,
-    SELECTED_ANNOTATION_INDEX
+    SELECTED_ANNOTATION_INDEX,
 } from '../../constants/store'
 
 export const updateSelectedStore = payload => {
     const {
         selectedSongIndex,
         selectedAnnotationIndex,
-        selectedVerseIndex
+        selectedVerseIndex,
     } = payload
 
     if (hasKey(selectedSongIndex)) {
@@ -32,6 +32,6 @@ export const updateSelectedStore = payload => {
 
     return {
         type: SELECTED_STORE,
-        payload: getDefinedOnlyPayload(payload)
+        payload: getDefinedOnlyPayload(payload),
     }
 }

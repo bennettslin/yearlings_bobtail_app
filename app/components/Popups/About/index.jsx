@@ -26,7 +26,7 @@ const AboutPopup = () => {
             {...{
                 popupName: 'AboutPopup',
                 isVisible: isAboutShown,
-                handleCloseClick
+                handleCloseClick,
             }}
         >
             <About />

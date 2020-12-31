@@ -2,18 +2,18 @@ import { ACTOR } from '../../../../../../../app/constants/scene'
 import {
     BENNETT,
     LIZ,
-    NESTOR
+    NESTOR,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     DISHROOM_READING,
     MOP_SOPPED,
-    WAITING_ROOM_ASLEEP
+    WAITING_ROOM_ASLEEP,
 } from '../../../../../../../app/constants/scene/actors/bennett'
 import { JOGGER } from '../../../../../../../app/constants/scene/actors/nestor'
 import {
     DISHROOM_LANCET,
     GATE_CODE,
-    RUMPLED_LINENS
+    RUMPLED_LINENS,
 } from '../../../../../../../app/constants/scene/actors/songs'
 import {
     GINGERBREAD_PRISON,
@@ -23,7 +23,7 @@ import {
     AFTERGLOW,
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
-    AFTERGLOW_REFLECTION
+    AFTERGLOW_REFLECTION,
 } from '../../../../../../../app/constants/scene/actors/bennettLiz'
 
 export default [
@@ -31,192 +31,192 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: DISHROOM_READING
-                }
-            }
-        }
+                    instance: DISHROOM_READING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: DISHROOM_LANCET
+                    instance: DISHROOM_LANCET,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: DISHROOM_LANCET
-                    }
-                }
-            }
-        }
+                        instance: DISHROOM_LANCET,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: MOP_SOPPED
+                    instance: MOP_SOPPED,
                 },
                 [NESTOR]: {
                     jogger: {
-                        instance: JOGGER
-                    }
-                }
-            }
-        }
+                        instance: JOGGER,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: GATE_CODE
+                    instance: GATE_CODE,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: GATE_CODE
-                    }
-                }
-            }
-        }
+                        instance: GATE_CODE,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: GINGERBREAD_PRISON
+                    instance: GINGERBREAD_PRISON,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: GINGERBREAD_PRISON
-                    }
-                }
-            }
-        }
+                        instance: GINGERBREAD_PRISON,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: RUMPLED_LINENS
+                    instance: RUMPLED_LINENS,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: RUMPLED_LINENS
-                    }
-                }
-            }
-        }
+                        instance: RUMPLED_LINENS,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: WAITING_ROOM_ASLEEP
-                }
-            }
-        }
+                    instance: WAITING_ROOM_ASLEEP,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: CHEEK_UNVEILED
+                    instance: CHEEK_UNVEILED,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: CHEEK_UNVEILED
-                    }
-                }
-            }
-        }
+                        instance: CHEEK_UNVEILED,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: HARD_ON
+                    instance: HARD_ON,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: HARD_ON
-                    }
-                }
-            }
-        }
+                        instance: HARD_ON,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        instance: HARD_ON_REFLECTION
-                    }
+                        instance: HARD_ON_REFLECTION,
+                    },
                 },
                 [LIZ]: {
                     reflection: {
-                        instance: HARD_ON_REFLECTION
-                    }
-                }
-            }
-        }
+                        instance: HARD_ON_REFLECTION,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: MISSIONARY
+                    instance: MISSIONARY,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: MISSIONARY
-                    }
-                }
-            }
-        }
+                        instance: MISSIONARY,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        instance: MISSIONARY_REFLECTION
-                    }
+                        instance: MISSIONARY_REFLECTION,
+                    },
                 },
                 [LIZ]: {
                     reflection: {
-                        instance: MISSIONARY_REFLECTION
-                    }
-                }
-            }
-        }
+                        instance: MISSIONARY_REFLECTION,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: AFTERGLOW
+                    instance: AFTERGLOW,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: AFTERGLOW
-                    }
-                }
-            }
-        }
+                        instance: AFTERGLOW,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        instance: AFTERGLOW_REFLECTION
-                    }
+                        instance: AFTERGLOW_REFLECTION,
+                    },
                 },
                 [LIZ]: {
                     reflection: {
-                        instance: AFTERGLOW_REFLECTION
-                    }
-                }
-            }
-        }
-    }
+                        instance: AFTERGLOW_REFLECTION,
+                    },
+                },
+            },
+        },
+    },
 ]

@@ -1,7 +1,7 @@
 import {
     getIsPhoneWidth,
     getIsMiniWidth,
-    getIsDesktopWidth
+    getIsDesktopWidth,
 } from '../responsive'
 import { MIN_HEIGHT_WINDOW_FOR_CAROUSEL_NAV } from '../../constants/responsive'
 import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
@@ -9,7 +9,7 @@ import { IS_USER_AGENT_DESKTOP } from '../../constants/device'
 export const getCanCarouselNavMount = ({
     deviceWidthIndex,
     windowHeight,
-    isHeightlessLyric
+    isHeightlessLyric,
 
 }) => {
 

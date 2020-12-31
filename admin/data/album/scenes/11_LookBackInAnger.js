@@ -7,17 +7,17 @@ import {
     FIXTURE,
     FLAT,
     FURNITURE,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY,
     LIZ_BED_KEY,
-    CLUB_LOADING
+    CLUB_LOADING,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_NIGHT,
-    SEASON_SUMMER
+    SEASON_SUMMER,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
@@ -31,16 +31,16 @@ import {
     STEPHANIE,
     WADE,
     BENNETT_REFLECTION,
-    LIZ_REFLECTION
+    LIZ_REFLECTION,
 } from '../../../../app/constants/scene/actors'
 import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
-    SHOES_REFLECTION
+    SHOES_REFLECTION,
 } from '../../../../app/constants/scene/actors/bennett'
 import {
     ASLEEP_REACHING,
-    REACHING_REFLECTION
+    REACHING_REFLECTION,
 } from '../../../../app/constants/scene/actors/liz'
 import { SHANE_SPILLING } from '../../../../app/constants/scene/actors/tomer'
 import { WATCHING } from '../../../../app/constants/scene/actors/wade'
@@ -50,19 +50,19 @@ import {
     FLIRTING,
     CARRYING,
     MINGLING,
-    WAITING
+    WAITING,
 } from '../../../../app/constants/scene/actors/songs'
 import { OAKLAND_SIDE__LEVEL } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__AMY,
     BUBBLE_MEDIUM__AMY,
     BUBBLE_LARGE__AMY,
-    THOUGHT_AMY
+    THOUGHT_AMY,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,
-    WALL_SPEAKER_SIDE
+    WALL_SPEAKER_SIDE,
 } from '../../../../app/constants/scene/things/cutouts'
 import { CLUB_DOOR_OPEN } from '../../../../app/constants/scene/things/doors'
 import {
@@ -75,16 +75,16 @@ import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
     BENNETT_SHOE,
-    BENNETT_SHOE_REFLECTION
+    BENNETT_SHOE_REFLECTION,
 } from '../../../../app/constants/scene/things/fixtures'
 import { NEAR_BUILDINGS } from '../../../../app/constants/scene/things/flats'
 import {
     LIZ_PILLOWS,
-    LIZ_PILLOWS_REFLECTION
+    LIZ_PILLOWS_REFLECTION,
 } from '../../../../app/constants/scene/things/furnitures'
 import {
     CROWD_SIDE,
-    LIZ_BED
+    LIZ_BED,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -93,14 +93,14 @@ export default [
         description: `Empty club.`,
         presences: {
             [CUTOUT]: {
-                [MONITOR_SIDE__CROWD]: true
+                [MONITOR_SIDE__CROWD]: true,
             },
             [FIXTURE]: {
-                [STAGE_MIC__CROWD]: true
-            }
+                [STAGE_MIC__CROWD]: true,
+            },
         },
         cubes: CLUB_SIDE_CROWD_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 2,
@@ -109,39 +109,39 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side angle, playing guitar, singing',
-                    instance: PERFORMING
+                    instance: PERFORMING,
                 },
                 [ANA]: {
                     description: 'side angle, playing bass, looking cool',
-                    instance: PERFORMING
+                    instance: PERFORMING,
                 },
                 [TOMER]: {
                     shane: {
                         description: 'side angle, holding beer, turning to make room',
-                        instance: SHANE_SPILLING
-                    }
+                        instance: SHANE_SPILLING,
+                    },
                 },
                 [WADE]: {
                     description: 'side, drinking beer',
-                    instance: WATCHING
+                    instance: WATCHING,
                 },
                 [AMY_STEPHANIE]: {
                     description: 'side, squeezing through, apologetic',
-                    instance: SQUEEZING
-                }
+                    instance: SQUEEZING,
+                },
             },
             [CUTOUT]: {
-                [MONITOR_SIDE__CROWD]: true
+                [MONITOR_SIDE__CROWD]: true,
             },
             [FIXTURE]: {
-                [STAGE_MIC__CROWD]: true
+                [STAGE_MIC__CROWD]: true,
             },
             [PANEL]: {
-                [CROWD_SIDE]: true
-            }
+                [CROWD_SIDE]: true,
+            },
         },
         cubes: CLUB_SIDE_CROWD_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 6,
@@ -150,34 +150,34 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side angle, charmed',
-                    instance: FLIRTING
+                    instance: FLIRTING,
                 },
                 [AMY]: {
                     description: 'side angle, same Mara pose',
-                    instance: FLIRTING
+                    instance: FLIRTING,
                 },
                 [JACOB]: {
                     description: 'side, walking, carrying drums, smiling at Mara',
-                    instance: CARRYING
+                    instance: CARRYING,
                 },
                 [MARA]: {
                     description: 'side, walking, carrying cymbal, talking',
-                    instance: CARRYING
-                }
+                    instance: CARRYING,
+                },
             },
             [CUTOUT]: {
                 [MONITOR_SIDE__STAGE]: true,
-                [WALL_SPEAKER_SIDE]: true
+                [WALL_SPEAKER_SIDE]: true,
             },
             [FIXTURE]: {
                 [STAGE_MIC__STAGE]: true,
                 [KICK_DRUM]: true,
                 [DRUM_THRONE]: true,
-                [GUITAR_CASE_OPEN]: true
-            }
+                [GUITAR_CASE_OPEN]: true,
+            },
         },
         cubes: CLUB_SIDE_STAGE_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 9,
@@ -186,44 +186,44 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, carrying gear, looking back, hesitant',
-                    instance: SIDELONG_HESITANCE
+                    instance: SIDELONG_HESITANCE,
                 },
                 [ANA]: {
                     description: 'front, leaning against wall, waiting for Jacob',
-                    instance: WAITING
+                    instance: WAITING,
                 },
                 [MARA]: {
                     description: 'side angle, looking at watch',
-                    instance: WAITING
+                    instance: WAITING,
                 },
                 [AMY]: {
                     description: 'side, looking back, uncertain',
-                    instance: MINGLING
+                    instance: MINGLING,
                 },
                 [STEPHANIE]: {
                     description: 'side angle, talking to Wade',
-                    instance: MINGLING
+                    instance: MINGLING,
                 },
                 [WADE]: {
                     description: 'front, talking to Stephanie',
-                    instance: MINGLING
-                }
+                    instance: MINGLING,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [DOOR]: {
-                [CLUB_DOOR_OPEN]: true
+                [CLUB_DOOR_OPEN]: true,
             },
             [FIXTURE]: {
-                [DRUMS_STACKED__CLUB]: true
+                [DRUMS_STACKED__CLUB]: true,
             },
             [FLAT]: {
-                [NEAR_BUILDINGS]: true
-            }
+                [NEAR_BUILDINGS]: true,
+            },
         },
         cubes: CLUB_LOADING,
-        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 12,
@@ -232,43 +232,43 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, sitting on edge of bed, discontented',
-                    instance: REMOVING_SHOES
+                    instance: REMOVING_SHOES,
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
                         description: 'reflection',
-                        instance: SHOES_REFLECTION
-                    }
+                        instance: SHOES_REFLECTION,
+                    },
                 },
                 [LIZ]: {
                     sita: {
                         description: 'lying, reaching forward to touch Bennett',
-                        instance: ASLEEP_REACHING
-                    }
+                        instance: ASLEEP_REACHING,
+                    },
                 },
                 [LIZ_REFLECTION]: {
                     reflection: {
                         description: 'reflection',
-                        instance: REACHING_REFLECTION
-                    }
-                }
+                        instance: REACHING_REFLECTION,
+                    },
+                },
             },
             [FIXTURE]: {
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true,
                 [BENNETT_SHOE]: true,
-                [BENNETT_SHOE_REFLECTION]: true
+                [BENNETT_SHOE_REFLECTION]: true,
             },
             [FURNITURE]: {
                 [LIZ_PILLOWS]: true,
-                [LIZ_PILLOWS_REFLECTION]: true
+                [LIZ_PILLOWS_REFLECTION]: true,
             },
             [PANEL]: {
-                [LIZ_BED]: true
-            }
+                [LIZ_BED]: true,
+            },
         },
         cubes: LIZ_BED_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 13,
@@ -277,48 +277,48 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, sitting on edge of bed, discontented',
-                    instance: REMOVING_SHOES
+                    instance: REMOVING_SHOES,
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
                         description: 'reflection',
-                        instance: SHOES_REFLECTION
-                    }
+                        instance: SHOES_REFLECTION,
+                    },
                 },
                 [LIZ]: {
                     sita: {
                         description: 'lying, reaching forward to touch Bennett',
-                        instance: ASLEEP_REACHING
-                    }
+                        instance: ASLEEP_REACHING,
+                    },
                 },
                 [LIZ_REFLECTION]: {
                     reflection: {
                         description: 'reflection',
-                        instance: REACHING_REFLECTION
-                    }
-                }
+                        instance: REACHING_REFLECTION,
+                    },
+                },
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__AMY]: true,
                 [BUBBLE_MEDIUM__AMY]: true,
                 [BUBBLE_LARGE__AMY]: true,
-                [THOUGHT_AMY]: true
+                [THOUGHT_AMY]: true,
             },
             [FIXTURE]: {
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true,
                 [BENNETT_SHOE]: true,
-                [BENNETT_SHOE_REFLECTION]: true
+                [BENNETT_SHOE_REFLECTION]: true,
             },
             [FURNITURE]: {
                 [LIZ_PILLOWS]: true,
-                [LIZ_PILLOWS_REFLECTION]: true
+                [LIZ_PILLOWS_REFLECTION]: true,
             },
             [PANEL]: {
-                [LIZ_BED]: true
-            }
+                [LIZ_BED]: true,
+            },
         },
         cubes: LIZ_BED_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
-    }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
+    },
 ]

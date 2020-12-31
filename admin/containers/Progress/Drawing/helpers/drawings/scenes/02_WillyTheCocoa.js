@@ -6,25 +6,25 @@ import {
     FATHER,
     CHRISTOPHER,
     HOWIE,
-    TOMER
+    TOMER,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     CAUTIOUS,
     ENRAGED,
-    FEARFUL
+    FEARFUL,
 } from '../../../../../../../app/constants/scene/actors/preteenBennett'
 import {
     COLLECTING,
-    DUCKING
+    DUCKING,
 } from '../../../../../../../app/constants/scene/actors/willy'
 import {
     STOOPING,
-    COMFORTING
+    COMFORTING,
 } from '../../../../../../../app/constants/scene/actors/mother'
 import { ROARING } from '../../../../../../../app/constants/scene/actors/father'
 import {
     TANTRUM,
-    SOBBING
+    SOBBING,
 } from '../../../../../../../app/constants/scene/actors/christopher'
 import { REASSURING_ENCHANTED } from '../../../../../../../app/constants/scene/actors/christopherBennettWilly'
 import { GANGBANGER } from '../../../../../../../app/constants/scene/actors/songs'
@@ -34,88 +34,88 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    instance: COLLECTING
-                }
-            }
-        }
+                    instance: COLLECTING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    instance: DUCKING
+                    instance: DUCKING,
                 },
                 [MOTHER]: {
-                    instance: STOOPING
+                    instance: STOOPING,
                 },
                 [CHRISTOPHER]: {
-                    instance: TANTRUM
+                    instance: TANTRUM,
                 },
                 [PRETEEN_BENNETT]: {
-                    instance: CAUTIOUS
-                }
-            }
-        }
+                    instance: CAUTIOUS,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    instance: ROARING
+                    instance: ROARING,
                 },
                 [CHRISTOPHER]: {
-                    instance: SOBBING
+                    instance: SOBBING,
                 },
                 [PRETEEN_BENNETT]: {
-                    instance: ENRAGED
-                }
-            }
-        }
+                    instance: ENRAGED,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        instance: GANGBANGER
-                    }
+                        instance: GANGBANGER,
+                    },
                 },
                 [WILLY]: {
-                    instance: GANGBANGER
+                    instance: GANGBANGER,
                 },
                 [TOMER]: {
                     gangbanger: {
-                        instance: GANGBANGER
-                    }
-                }
-            }
-        }
+                        instance: GANGBANGER,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    instance: COMFORTING
+                    instance: COMFORTING,
                 },
                 [PRETEEN_BENNETT]: {
-                    instance: FEARFUL
-                }
-            }
-        }
+                    instance: FEARFUL,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    instance: REASSURING_ENCHANTED
+                    instance: REASSURING_ENCHANTED,
                 },
                 [PRETEEN_BENNETT]: {
-                    instance: REASSURING_ENCHANTED
+                    instance: REASSURING_ENCHANTED,
                 },
                 [WILLY]: {
-                    instance: REASSURING_ENCHANTED
-                }
-            }
-        }
-    }
+                    instance: REASSURING_ENCHANTED,
+                },
+            },
+        },
+    },
 ]

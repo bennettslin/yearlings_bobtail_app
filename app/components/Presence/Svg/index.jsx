@@ -8,12 +8,12 @@ import {
     convertPresenceKeyToTitle,
     convertPresenceKeyToClassName,
     getSharedClassNames,
-    capitaliseForClassName
+    capitaliseForClassName,
 } from '../../../helpers/format'
 import { getArrangementForPresence } from '../../../api/scene/presences'
 import {
     getSharedStyleForActor,
-    getSharedStyleForThing
+    getSharedStyleForThing,
 } from '../../../api/scene/sharedStyles'
 import { getWirePlacedFront } from '../../../api/scene/wires'
 import { getSvgForPresence } from '../../../api/svg'
@@ -22,12 +22,12 @@ import { getXYForPresence } from './helpers/position'
 import { getCompoundActorStyleIfNeeded } from './helpers/sharedStyle'
 import {
     getSizeForPresence,
-    getViewBoxSize
+    getViewBoxSize,
 } from './helpers/size'
 import { setSvgTransform } from './helpers/transform'
 import {
     getTransitionDelayClass,
-    getTransitionDelayIndexClass
+    getTransitionDelayIndexClass,
 } from './helpers/transition'
 import { DEV_RENDER_ONLY_PRESENCES } from '../../../constants/dev'
 import './style'
@@ -35,7 +35,7 @@ import './style'
 const PresenceSvg = ({
     presenceType,
     actorKey,
-    presenceKey
+    presenceKey,
 
 }) => {
     const
@@ -60,21 +60,21 @@ const PresenceSvg = ({
             transitionKey,
             transitionIndex,
             hide,
-            onlyOne
+            onlyOne,
         } = getArrangementForPresence({
             presenceType,
             presenceKey,
-            actorKey
+            actorKey,
         }),
         finalZIndex = useSelector(getMapZIndexForPresence(zIndex, zIndices)),
         {
             x: adjustedLeft,
-            y: adjustedTop
+            y: adjustedTop,
         } = getXYForPresence({
             zIndex: finalZIndex,
             yIndex,
             xPosition,
-            zOffset
+            zOffset,
         }),
         presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
         duplicateKeyClassName =
@@ -85,17 +85,17 @@ const PresenceSvg = ({
                 actorKey,
                 getSharedStyleForActor({
                     actorKey,
-                    presenceKey
+                    presenceKey,
                 })
             ) :
             getSharedStyleForThing({
                 presenceType,
-                presenceKey
+                presenceKey,
             }),
         placedFront = getWirePlacedFront({
             actorKey,
             presenceType,
-            presenceKey
+            presenceKey,
         }),
         // If it's null, then there is no wire.
         hasWires = typeof placedFront === 'boolean'
@@ -105,18 +105,18 @@ const PresenceSvg = ({
             const
                 {
                     viewBoxWidth,
-                    viewBoxHeight
+                    viewBoxHeight,
                 } = getViewBoxSize(svgString),
                 {
                     adjustedWidth,
-                    adjustedHeight
+                    adjustedHeight,
                 } = getSizeForPresence({
                     presenceType,
                     viewBoxWidth,
                     viewBoxHeight,
                     yIndex,
                     scaleFactor,
-                    trimBottom
+                    trimBottom,
                 })
 
             setAdjustedWidth(adjustedWidth)
@@ -128,7 +128,7 @@ const PresenceSvg = ({
                 action: 'parseSvg',
                 label: actorKey ?
                     `actor: ${actorKey}, instance: ${presenceKey}` :
-                    `thing: ${presenceType}, instance: ${presenceKey}`
+                    `thing: ${presenceType}, instance: ${presenceKey}`,
             })
         }
     }
@@ -145,7 +145,7 @@ const PresenceSvg = ({
             skewX,
             skewY,
             rotateX,
-            rotateY
+            rotateY,
         })
     }
 
@@ -159,7 +159,7 @@ const PresenceSvg = ({
             {...{
                 className: cx(
                     'PresenceContainer'
-                )
+                ),
             }}
         >
             {(Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && !hide && (
@@ -172,7 +172,7 @@ const PresenceSvg = ({
                                 transitionKey,
                                 presenceType,
                                 xPosition,
-                                hasWires
+                                hasWires,
                             }),
                             getTransitionDelayIndexClass({
                                 transitionKey,
@@ -180,7 +180,7 @@ const PresenceSvg = ({
                                 yIndex,
                                 presenceType,
                                 xPosition,
-                                hasWires
+                                hasWires,
                             }),
                             'presence__position',
                             !noShadow && 'presence__shadow',
@@ -192,8 +192,8 @@ const PresenceSvg = ({
                             width: `${adjustedWidth.toFixed(2)}%`,
                             height: `${adjustedHeight.toFixed(2)}%`,
                             ...perspective && {
-                                perspective: `${perspective}em`
-                            }
+                                perspective: `${perspective}em`,
+                            },
                         },
                         svgClassName: cx(
                             presenceKeyClassName,
@@ -211,10 +211,10 @@ const PresenceSvg = ({
                                     {...{
                                         className: cx(
                                             getTransitionDelayClass({
-                                                isWire: true
+                                                isWire: true,
                                             }),
                                             getTransitionDelayIndexClass({
-                                                isWire: true
+                                                isWire: true,
                                             })
                                         ),
                                         actorKey,
@@ -223,17 +223,17 @@ const PresenceSvg = ({
                                         adjustedTop,
                                         adjustedLeft,
                                         adjustedWidth,
-                                        adjustedHeight
+                                        adjustedHeight,
                                     }}
                                 />
-                            )
-                        }
+                            ),
+                        },
                     }}
                 >
                     {getSvgForPresence({
                         actorKey,
                         presenceType,
-                        presenceKey
+                        presenceKey,
                     })}
                 </InlineSvg>
             )}
@@ -244,7 +244,7 @@ const PresenceSvg = ({
 PresenceSvg.propTypes = {
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
-    presenceKey: PropTypes.string.isRequired
+    presenceKey: PropTypes.string.isRequired,
 }
 
 export default memo(PresenceSvg)

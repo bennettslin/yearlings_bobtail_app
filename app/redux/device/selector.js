@@ -3,7 +3,7 @@ import {
     getIsPhoneWidth,
     getIsTabletWidth,
     getIsMonitorWidth,
-    getIsDesktopWidth
+    getIsDesktopWidth,
 } from '../../helpers/responsive'
 import { mapDeviceWidthIndex } from '../viewport/selector'
 

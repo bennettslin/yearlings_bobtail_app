@@ -4,13 +4,13 @@ import { getIsLyricExpandable } from './responsive'
 import {
     HEIGHTLESS_LYRIC_MIN,
     HEIGHTLESS_LYRIC_PHONE_MIN,
-    HEIGHTLESS_LYRIC_MAX
+    HEIGHTLESS_LYRIC_MAX,
 } from '../../constants/responsive'
 
 export const getIsHeightlessLyric = ({
     deviceWidthIndex,
     windowHeight,
-    windowWidth
+    windowWidth,
 }) => {
     // Can't be heightless if it isn't expandable.
     if (!getIsLyricExpandable(deviceWidthIndex)) {

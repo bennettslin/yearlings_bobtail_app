@@ -15,7 +15,7 @@ import {
     updateIsCarouselExpanded,
     updateIsNavExpanded,
     updateIsScoreShown,
-    updateIsPitchShown
+    updateIsPitchShown,
 } from '../../redux/toggle/action'
 import { HIDDEN } from '../../constants/options'
 import { mapIsActivated } from '../../redux/activated/selector'
@@ -30,7 +30,7 @@ import {
     mapIsLyricExpanded,
     mapIsScoreShown,
     mapIsAboutShown,
-    mapIsPitchShown
+    mapIsPitchShown,
 } from '../../redux/toggle/selector'
 import { mapIsWikiShown } from '../../redux/wiki/selector'
 
@@ -56,7 +56,7 @@ const CloseHandler = forwardRef((props, ref) => {
         exemptScore,
         exemptAbout,
         exemptPitch,
-        exemptWiki
+        exemptWiki,
 
     } = {}) => {
         // If popup is open, close it and do nothing else.
@@ -87,7 +87,7 @@ const CloseHandler = forwardRef((props, ref) => {
         exemptNav,
         exemptOverview,
         exemptTips,
-        exemptActivatedVerse
+        exemptActivatedVerse,
 
     } = {}) => {
         if (!exemptAnnotation) {
@@ -114,7 +114,7 @@ const CloseHandler = forwardRef((props, ref) => {
             // Just hide overview when opening other sections.
             if (isOverviewShown) {
                 dispatch(updateOptionStore({
-                    selectedOverviewOption: HIDDEN
+                    selectedOverviewOption: HIDDEN,
                 }))
             }
         }
@@ -123,7 +123,7 @@ const CloseHandler = forwardRef((props, ref) => {
             // Just hide tips when opening other sections.
             if (isTipsShown) {
                 dispatch(updateOptionStore({
-                    selectedTipsOption: HIDDEN
+                    selectedTipsOption: HIDDEN,
                 }))
             }
         }
@@ -139,7 +139,7 @@ const CloseHandler = forwardRef((props, ref) => {
                 closeMainPopups()
                 closeMainSections({
                     exemptAnnotation: true,
-                    exemptLyric: true
+                    exemptLyric: true,
                 })
             }
         } else {
@@ -159,7 +159,7 @@ const CloseHandler = forwardRef((props, ref) => {
                      * Doesn't actually matter, since carousel can only expand
                      * when nav is collapsed.
                      */
-                    exemptNav: true
+                    exemptNav: true,
                 })
             }
         } else {
@@ -171,7 +171,7 @@ const CloseHandler = forwardRef((props, ref) => {
         if (isDotsSlideShown) {
             closeMainPopups()
             closeMainSections({
-                exemptDots: true
+                exemptDots: true,
             })
         }
     }, [isDotsSlideShown])
@@ -183,7 +183,7 @@ const CloseHandler = forwardRef((props, ref) => {
                 // Continue to show selected annotation in overlay.
                 exemptAnnotation: true,
                 exemptLyric: true,
-                exemptActivatedVerse: true
+                exemptActivatedVerse: true,
             })
         }
     }, [isLyricExpanded])
@@ -193,7 +193,7 @@ const CloseHandler = forwardRef((props, ref) => {
             closeMainPopups()
             closeMainSections({
                 exemptActivatedVerse: true,
-                exemptLyric: true
+                exemptLyric: true,
             })
         }
     }, [isActivated, isSliderMoving])
@@ -202,7 +202,7 @@ const CloseHandler = forwardRef((props, ref) => {
         if (isNavExpanded) {
             closeMainPopups()
             closeMainSections({
-                exemptNav: true
+                exemptNav: true,
             })
         } else {
             setDidMount(true)
@@ -214,7 +214,7 @@ const CloseHandler = forwardRef((props, ref) => {
             closeMainPopups()
             closeMainSections({
                 exemptOverview: true,
-                exemptTips: true
+                exemptTips: true,
             })
         }
     }, [isOverviewShown])
@@ -224,7 +224,7 @@ const CloseHandler = forwardRef((props, ref) => {
             closeMainPopups()
             closeMainSections({
                 exemptTips: true,
-                exemptOverview: true
+                exemptOverview: true,
             })
         }
     }, [isTipsShown])
@@ -265,7 +265,7 @@ const CloseHandler = forwardRef((props, ref) => {
                 exemptLyric: true,
 
                 // If clicking to dismiss tips, leave overview shown.
-                exemptOverview: isTipsShown
+                exemptOverview: isTipsShown,
             })
         }
     }

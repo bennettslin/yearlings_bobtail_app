@@ -18,9 +18,9 @@ export default (
                 ...hasKey(songIndex) ? {
                     playersBit: getBitFromPlayerCanPlayThrough({
                         bit: playersBit,
-                        key: songIndex
-                    })
-                } : payload
+                        key: songIndex,
+                    }),
+                } : payload,
             }
         }
         default:

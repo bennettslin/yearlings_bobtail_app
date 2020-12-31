@@ -32,7 +32,7 @@ const PlayDispatcher = forwardRef((props, ref) => {
         if (isPlayFromLogue) {
             dispatchSong.current({
                 isPlayFromLogue: true,
-                selectedSongIndex: 1
+                selectedSongIndex: 1,
             })
 
         } else {

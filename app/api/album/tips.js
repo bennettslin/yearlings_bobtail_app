@@ -4,7 +4,7 @@ import {
     CAROUSEL,
     ACCESS,
     SLIDER,
-    NAV
+    NAV,
 } from '../../constants/tips'
 
 const getSongTip = songIndex => {
@@ -25,7 +25,7 @@ export const getShowTipForDevice = ({
     songIndex,
     isPhoneWidth,
     isTabletWidth,
-    isDesktopWidth
+    isDesktopWidth,
 
 }) => {
     if (isPhoneWidth) {

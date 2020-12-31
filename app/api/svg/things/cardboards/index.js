@@ -88,7 +88,7 @@ import {
     SNOWGLOBE_PRESENT,
     SNOWGLOBE_SMALL__FUTURE,
     SNOWGLOBE_FUTURE_CORD,
-    SNOWGLOBE_FUTURE_REATTA
+    SNOWGLOBE_FUTURE_REATTA,
 } from '../../../../constants/scene/things/cardboards'
 
 export default {
@@ -138,6 +138,6 @@ export default {
     [SNOWGLOBE_PRESENT]: snowglobePresent,
     [SNOWGLOBE_SMALL__FUTURE]: snowglobeSmall,
     [SNOWGLOBE_FUTURE_CORD]: snowglobeFutureCord,
-    [SNOWGLOBE_FUTURE_REATTA]: snowglobeFutureReatta
+    [SNOWGLOBE_FUTURE_REATTA]: snowglobeFutureReatta,
 }
 

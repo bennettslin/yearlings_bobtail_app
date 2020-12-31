@@ -6,12 +6,12 @@ export default {
     [ROYCE_HALL_KEY]: {
         floor: {
             hslaColours: [
-                [V]
+                [V],
             ],
             zIndices: [
                 [0],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

@@ -27,7 +27,7 @@ const WikiPopup = ({ didMount }) => {
             {...{
                 isVisible: isWikiShown,
                 popupName: 'WikiPopup',
-                handleCloseClick
+                handleCloseClick,
             }}
         >
             <Wiki />
@@ -36,7 +36,7 @@ const WikiPopup = ({ didMount }) => {
 }
 
 WikiPopup.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default memo(getDidMountHoc(WikiPopup))

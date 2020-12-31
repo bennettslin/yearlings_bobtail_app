@@ -15,7 +15,7 @@ import {
     NAVIGATION_UP_KEY,
     NAVIGATION_RIGHT_KEY,
     NAVIGATION_DOWN_KEY,
-    NAVIGATION_ESCAPE_KEY
+    NAVIGATION_ESCAPE_KEY,
 } from '../../../../constants/access'
 import './style'
 
@@ -60,7 +60,7 @@ const AccessIcon = ({ accessKey }) => {
 }
 
 AccessIcon.propTypes = {
-    accessKey: PropTypes.string
+    accessKey: PropTypes.string,
 }
 
 export default AccessIcon

@@ -8,7 +8,7 @@ import {
     OLD_FLOOR_COLOUR as F,
     CLUB_SIDE_PRIMARY_COLOUR as B,
     CLUB_SIDE_SECONDARY_COLOUR as E,
-    GENERIC_EXTERIOR_COLOUR as X
+    GENERIC_EXTERIOR_COLOUR as X,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { d, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -20,26 +20,26 @@ export default {
                 [C, B, E, B, E, B, E, B, E, B, E, B],
                 [C, X],
                 [C],
-                [D]
+                [D],
             ],
             zIndices: [
                 [f, 1],
                 [f, 1, 1, 1, d, d, d, 1],
                 [f],
-                [k]
-            ]
+                [k],
+            ],
         },
         floor: {
             hslaColours: [
                 [G],
                 [V, F],
                 [V, F],
-                [V]
+                [V],
             ],
             zIndices: [
                 [0],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

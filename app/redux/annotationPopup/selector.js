@@ -9,7 +9,7 @@ import {
     mapIsScoreShown,
     mapIsAboutShown,
     mapIsPitchShown,
-    mapIsCarouselShown
+    mapIsCarouselShown,
 } from '../toggle/selector'
 import { mapCanCarouselNavMount } from '../viewport/selector'
 import { mapIsWikiShown } from '../wiki/selector'
@@ -22,7 +22,7 @@ export const mapIsOverlayingAnnotation = createSelector(
         isLyricExpanded
     ) => getIsOverlayingAnnotation({
         isPhoneWidth,
-        isLyricExpanded
+        isLyricExpanded,
     })
 )
 
@@ -56,6 +56,6 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         isCarouselShown,
         canCarouselNavMount,
         isOverlayingAnnotation,
-        isWikiShown
+        isWikiShown,
     })
 )

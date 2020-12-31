@@ -4,10 +4,10 @@ import { DOTS_SLIDE_DEFAULTS } from './default'
 
 export const updateSlideDotIndex = dotIndex => ({
     type: DOTS_SLIDE_STORE,
-    payload: { dotIndex }
+    payload: { dotIndex },
 })
 
 export const resetActivatedDots = () => ({
     type: DOTS_SLIDE_STORE,
-    payload: DOTS_SLIDE_DEFAULTS
+    payload: DOTS_SLIDE_DEFAULTS,
 })

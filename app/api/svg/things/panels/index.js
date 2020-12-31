@@ -129,7 +129,7 @@ import {
     WIDE_ARMREST_MIRIAM__LEFT,
     WIDE_ARMREST_MIRIAM__RIGHT,
     WIDE_COUCH_BENNETT,
-    WIDE_COUCH_MIRIAM
+    WIDE_COUCH_MIRIAM,
 } from '../../../../constants/scene/things/panels'
 
 export default {
@@ -211,5 +211,5 @@ export default {
     [WIDE_ARMREST_MIRIAM__LEFT]: wideArmrest,
     [WIDE_ARMREST_MIRIAM__RIGHT]: wideArmrest,
     [WIDE_COUCH_BENNETT]: wideCouch,
-    [WIDE_COUCH_MIRIAM]: wideCouch
+    [WIDE_COUCH_MIRIAM]: wideCouch,
 }

@@ -8,11 +8,11 @@ export default {
         slantDirection: RIGHT,
         floor: {
             hslaColours: [
-                [K]
+                [K],
             ],
             zIndices: [
-                [0]
-            ]
-        }
-    }
+                [0],
+            ],
+        },
+    },
 }

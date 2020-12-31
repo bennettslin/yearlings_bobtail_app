@@ -6,12 +6,12 @@ import './style'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
-    ESCAPE
+    ESCAPE,
 } from '../../../../constants/access'
 import {
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
-    POPUP_PREVIOUS_BUTTON_KEY
+    POPUP_PREVIOUS_BUTTON_KEY,
 } from '../../../../constants/buttons'
 
 const PopupViewButton = ({
@@ -21,7 +21,7 @@ const PopupViewButton = ({
     isFullPopup,
     inCardSize,
     displaysInOverlay,
-    handlePopupButtonClick
+    handlePopupButtonClick,
 
 }) => {
     const handleButtonClick = e => {
@@ -68,7 +68,7 @@ const PopupViewButton = ({
                         'PopupViewButton__next': isNextButton,
                         'PopupViewButton__side':
                             isPreviousButton || isNextButton,
-                        'PopupViewButton__inCardSize': inCardSize
+                        'PopupViewButton__inCardSize': inCardSize,
                     },
 
                     displaysInOverlay ?
@@ -80,7 +80,7 @@ const PopupViewButton = ({
                      * a width and height as well.
                      */
                     'Button__largeSize'
-                )
+                ),
             }}
         >
             <Button
@@ -92,7 +92,7 @@ const PopupViewButton = ({
                     ),
                     buttonName,
                     accessKey,
-                    handleButtonClick
+                    handleButtonClick,
                 }}
             />
         </div>
@@ -106,7 +106,7 @@ PopupViewButton.propTypes = {
     isFullPopup: PropTypes.bool,
     inCardSize: PropTypes.bool,
     displaysInOverlay: PropTypes.bool,
-    handlePopupButtonClick: PropTypes.func
+    handlePopupButtonClick: PropTypes.func,
 }
 
 export default memo(PopupViewButton)

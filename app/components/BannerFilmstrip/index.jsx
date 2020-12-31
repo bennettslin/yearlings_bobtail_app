@@ -12,7 +12,7 @@ const BannerFilmstrip = () => (
             className: cx(
                 'BannerFilmstrip',
                 'flexAlignContainer'
-            )
+            ),
         }}
     >
         <AlbumBanner />

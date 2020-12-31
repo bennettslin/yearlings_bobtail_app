@@ -26,7 +26,7 @@ import {
     SHOW_ANNOYED,
     ALLEY,
     BROKEN_HEARTED,
-    DEMONSTRATION
+    DEMONSTRATION,
 } from '../../../../../../app/constants/scene/actors/bennett'
 import {
     EATING,
@@ -50,18 +50,18 @@ import {
     LEAVING_CRUMBLED,
     PAST,
     FUTURE,
-    EL_TORITO
+    EL_TORITO,
 } from '../../../../../../app/constants/scene/actors/songs'
 import { TRAY__SHARED } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
     BASEMENT_TAKEOUT__SHARED,
     FROZEN_MEATS__SHARED,
     LANCET_PEN__SHARED,
-    ROBITUSSIN__SHARED
+    ROBITUSSIN__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/food'
 import {
     ATTIC_LINENS__SHARED,
-    HOSPITAL_LINENS__SHARED
+    HOSPITAL_LINENS__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/furniture'
 import { RUBIKS_CUBE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 import {
@@ -70,11 +70,11 @@ import {
     CABLE__SHARED,
     ELECTRIC_GUITAR__SHARED,
     GUITAR_CASE__SHARED,
-    MANDOLIN__SHARED
+    MANDOLIN__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     BOOK__SHARED,
-    SKETCHBOOK__SHARED
+    SKETCHBOOK__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import { DOLLAR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/print'
 import { GO_KART__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
@@ -84,14 +84,14 @@ import {
     LIZ_PURSE__SHARED,
     MESSENGER_BAG__SHARED,
     MIRIAM_CONDOM__SHARED,
-    WALKMAN__SHARED
+    WALKMAN__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [BREAKUP_DEJECTED]: null,
     [SOLICITING_OPINION]: [
         ACOUSTIC_GUITAR__SHARED,
-        SKETCHBOOK__SHARED
+        SKETCHBOOK__SHARED,
     ],
     [CATHOLIC_PENSIVE]: null,
     [CATHOLIC_IDEA]: MESSENGER_BAG__SHARED,
@@ -113,20 +113,20 @@ export default {
         BOOK__SHARED,
         CAFETERIA__SHARED,
         LANCET_PEN__SHARED,
-        TRAY__SHARED
+        TRAY__SHARED,
     ],
     [DISHROOM_LANCET]: [
         BOOK__SHARED,
         CAFETERIA__SHARED,
-        LANCET_PEN__SHARED
+        LANCET_PEN__SHARED,
     ],
     [MOP_SOPPED]: [
         MESSENGER_BAG__SHARED,
-        WALKMAN__SHARED
+        WALKMAN__SHARED,
     ],
     [GATE_CODE]: [
         MESSENGER_BAG__SHARED,
-        WALKMAN__SHARED
+        WALKMAN__SHARED,
     ],
     [RUMPLED_LINENS]: MESSENGER_BAG__SHARED,
     [WAITING_ROOM_ASLEEP]: LIZ_PURSE__SHARED,
@@ -140,7 +140,7 @@ export default {
     [FLIRTING]: CABLE__SHARED,
     [SIDELONG_HESITANCE]: [
         BASS_CASE__SHARED,
-        GUITAR_CASE__SHARED
+        GUITAR_CASE__SHARED,
     ],
     [REMOVING_SHOES]: null,
     [DROPPING_MEATS]: FROZEN_MEATS__SHARED,
@@ -158,5 +158,5 @@ export default {
     [ALLEY]: null,
     [BROKEN_HEARTED]: null,
     [DEMONSTRATION]: null,
-    [EL_TORITO]: null
+    [EL_TORITO]: null,
 }

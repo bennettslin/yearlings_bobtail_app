@@ -3,5 +3,5 @@ import epilogue from '../../../../../assets/svgs/actors/bennettsChristopherLiz/e
 import { EPILOGUE } from '../../../../constants/scene/actors/songs'
 
 export default {
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

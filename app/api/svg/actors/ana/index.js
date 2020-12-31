@@ -13,7 +13,7 @@ import epilogue from '../../../../../assets/svgs/actors/ana/epilogue'
 import {
     SQUATTING,
     CHUCKLING,
-    SMIRKING
+    SMIRKING,
 } from '../../../../constants/scene/actors/ana'
 
 import {
@@ -24,7 +24,7 @@ import {
     STATION_WAGON,
     PERFORMING,
     WAITING,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -38,5 +38,5 @@ export default {
     [WAITING]: waiting,
     [CHUCKLING]: chuckling,
     [SMIRKING]: smirking,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

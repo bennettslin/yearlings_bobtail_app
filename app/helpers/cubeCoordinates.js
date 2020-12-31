@@ -1,16 +1,16 @@
 import {
     CUBE_X_AXIS_LENGTH,
-    CUBE_Z_AXIS_LENGTH
+    CUBE_Z_AXIS_LENGTH,
 } from '../constants/cubeIndex'
 import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
     SLANTED_TILE_Y_PERCENTAGES,
-    SLANTED_TILE_X_UNITS_LENGTH
+    SLANTED_TILE_X_UNITS_LENGTH,
 } from '../constants/cubeRender'
 import {
     LEFT,
-    RIGHT
+    RIGHT,
 } from '../constants/scene/cubes'
 
 /***************
@@ -134,6 +134,6 @@ export const getXYPercentages = (
             yCornerIndex,
             zIndex,
             slantDirection
-        )
+        ),
     }
 }

@@ -5,7 +5,7 @@ const _getTileCentreForPresence = ({
     zIndex,
     xPosition,
     yIndex,
-    zOffset = 0
+    zOffset = 0,
 
 }) => {
     const
@@ -17,12 +17,12 @@ const _getTileCentreForPresence = ({
             yIndex,
             zIndex,
             xOffset,
-            zOffset
+            zOffset,
         }),
 
         {
             left,
-            right
+            right,
         } = tilePercentages,
 
         // Get centre percentage by finding midpoint of one of the diagonals.
@@ -31,7 +31,7 @@ const _getTileCentreForPresence = ({
 
     return {
         xPercentage: centreXPercentage,
-        yPercentage: centreYPercentage
+        yPercentage: centreYPercentage,
     }
 }
 
@@ -45,18 +45,18 @@ export const getXYForPresence = ({
     yIndex,
 
     // Where to position above the given zIndex. Default is the zIndex.
-    zOffset
+    zOffset,
 }) => {
 
     const {
             xPercentage,
-            yPercentage
+            yPercentage,
 
         } = _getTileCentreForPresence({
             zIndex,
             xPosition,
             yIndex,
-            zOffset
+            zOffset,
         }),
 
         x = xPercentage,
@@ -64,6 +64,6 @@ export const getXYForPresence = ({
 
     return {
         x,
-        y
+        y,
     }
 }

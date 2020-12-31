@@ -10,7 +10,7 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-    PUPPET
+    PUPPET,
 } from '../../app/constants/scene/things'
 
 const _getSvgCount = (presenceType) => {
@@ -21,7 +21,7 @@ const _getSvgCount = (presenceType) => {
             neededIncrement = 1
         return {
             workedCount: count.workedCount + workedIncrement,
-            neededCount: count.neededCount + neededIncrement
+            neededCount: count.neededCount + neededIncrement,
         }
     }, { workedCount: 0, neededCount: 0 })
 }

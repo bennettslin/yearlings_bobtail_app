@@ -22,7 +22,7 @@ export const tellEachSourceLinkItsDestination = (
             const {
                     songIndex,
                     annotationIndex,
-                    cardIndex
+                    cardIndex,
                 } = tempLink,
 
                 // Find the card for this link.
@@ -63,11 +63,11 @@ export const addWormholeLinksToCard = (annotationsList, tempWormholeLinks) => {
                     songIndex,
                     annotationIndex,
                     cardIndex,
-                    tempSourceWormholeLinks
+                    tempSourceWormholeLinks,
                 } = destinationLink,
                 {
                     cards,
-                    tempSourceWormholeIndices
+                    tempSourceWormholeIndices,
                 } = _getAnnotation(
                     annotationsList,
                     songIndex,
@@ -94,7 +94,7 @@ export const addWormholeLinksToCard = (annotationsList, tempWormholeLinks) => {
                     verseIndex,
                     annotationIndex,
                     columnIndex,
-                    wormholePrefix
+                    wormholePrefix,
                 } = sourceLink
                 let sourceWormholeIndex,
                     destinationWormholeIndex
@@ -108,7 +108,7 @@ export const addWormholeLinksToCard = (annotationsList, tempWormholeLinks) => {
                     const {
                         tempSourceSongIndex,
                         tempSourceAnnotationIndex,
-                        tempSourceWormholeIndex
+                        tempSourceWormholeIndex,
                     } = tempSourceLink
 
                     if (
@@ -132,7 +132,7 @@ export const addWormholeLinksToCard = (annotationsList, tempWormholeLinks) => {
                     destinationWormholeIndex,
                     sourceWormholeIndex,
                     ...Number.isFinite(columnIndex) && { columnIndex },
-                    ...wormholePrefix && { wormholePrefix }
+                    ...wormholePrefix && { wormholePrefix },
                 }
             })
         })

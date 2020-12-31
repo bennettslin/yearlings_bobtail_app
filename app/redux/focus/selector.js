@@ -8,7 +8,7 @@ import {
     mapIsLyricExpanded,
     mapIsNavExpanded,
     mapIsPitchShown,
-    mapIsScoreShown
+    mapIsScoreShown,
 } from '../toggle/selector'
 import { mapIsWikiShown } from '../wiki/selector'
 import { getCanNavigateByKey } from '../../helpers/key'
@@ -34,7 +34,7 @@ export const mapCanNavigateByKey = createSelector(
         isAboutShown,
         isPitchShown,
         isScoreShown,
-        isWikiShown
+        isWikiShown,
     })
 )
 

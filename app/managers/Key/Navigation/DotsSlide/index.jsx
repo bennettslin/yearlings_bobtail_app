@@ -6,12 +6,12 @@ import {
     ARROW_RIGHT,
     ARROW_UP,
     ARROW_DOWN,
-    ENTER
+    ENTER,
 } from '../../../../constants/access'
 import { DOT_KEYS_COUNT } from '../../../../constants/dots'
 import {
     mapIsAccessOn,
-    mapAccessedDotIndex
+    mapAccessedDotIndex,
 } from '../../../../redux/access/selector'
 import { updateDotIndex } from '../../../../redux/dots/action'
 
@@ -58,7 +58,7 @@ const DotsSlideNavigation = forwardRef((props, ref) => {
             }
 
             dispatch(updateAccessStore({
-                accessedDotIndex: nextAccessedDotIndex
+                accessedDotIndex: nextAccessedDotIndex,
             }))
         }
         return true

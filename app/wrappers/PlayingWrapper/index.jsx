@@ -24,8 +24,8 @@ const PlayingWrapper = ({ didMount, children }) => {
                             'PlW__isPlaying' :
                             'PlW__isPaused',
                         'abF'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {children}
@@ -35,7 +35,7 @@ const PlayingWrapper = ({ didMount, children }) => {
 
 PlayingWrapper.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default memo(getDidMountHoc(PlayingWrapper))

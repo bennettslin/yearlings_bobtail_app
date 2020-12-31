@@ -4,12 +4,12 @@ import { getBarWidthStyle } from './helper'
 
 const ProgressBar = ({
     sumTask,
-    maxTotalNeededHours
+    maxTotalNeededHours,
 
 }) => {
     const {
         workedHours,
-        neededHours
+        neededHours,
     } = sumTask
 
     return (
@@ -17,16 +17,16 @@ const ProgressBar = ({
             {...{
                 className: 'ProgressBar',
                 style: {
-                    width: getBarWidthStyle(neededHours, maxTotalNeededHours)
-                }
+                    width: getBarWidthStyle(neededHours, maxTotalNeededHours),
+                },
             }}
         >
             <div
                 {...{
                     className: 'ProgressBar__filled',
                     style: {
-                        width: getBarWidthStyle(workedHours, neededHours)
-                    }
+                        width: getBarWidthStyle(workedHours, neededHours),
+                    },
                 }}
             />
         </div>
@@ -36,9 +36,9 @@ const ProgressBar = ({
 ProgressBar.propTypes = {
     sumTask: PropTypes.shape({
         workedHours: PropTypes.number.isRequired,
-        neededHours: PropTypes.number.isRequired
+        neededHours: PropTypes.number.isRequired,
     }),
-    maxTotalNeededHours: PropTypes.number.isRequired
+    maxTotalNeededHours: PropTypes.number.isRequired,
 }
 
 export default ProgressBar

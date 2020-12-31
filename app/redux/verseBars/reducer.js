@@ -10,7 +10,7 @@ export default (
         case VERSE_BARS_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         default:
             return state

@@ -1,7 +1,7 @@
 import {
     SLANT_DIRECTIONS,
     LEFT,
-    RIGHT
+    RIGHT,
 } from '../../../../constants/scene/cubes'
 
 import {
@@ -10,7 +10,7 @@ import {
     CUBE_X_AXIS_LENGTH,
     DEFAULT_X_AXIS_Z_INDICES,
     SLANTED_LEFT_X_AXIS_Z_INDICES,
-    SLANTED_RIGHT_X_AXIS_Z_INDICES
+    SLANTED_RIGHT_X_AXIS_Z_INDICES,
 } from '../../../../constants/cubeIndex'
 
 const CUBE_Z_INDEX_STYLES = {}
@@ -46,7 +46,7 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
 export const getCssZIndexForCube = ({
     slantDirection,
     yIndex,
-    xIndex
+    xIndex,
 }) => (
     CUBE_Z_INDEX_STYLES[slantDirection][yIndex][xIndex]
 )

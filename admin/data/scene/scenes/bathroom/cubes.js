@@ -1,13 +1,13 @@
 import {
     BATHROOM_KEY,
-    BATHROOM_OPEN_KEY
+    BATHROOM_OPEN_KEY,
 } from '../../../../../app/constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     LINOLEUM_FLOOR_COLOUR as F,
-    SOFT_WALL_COLOUR as W
+    SOFT_WALL_COLOUR as W,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { f, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -19,15 +19,15 @@ const DEFAULT_FLOOR = {
         [F],
         [F, F, F, D, D, D, D, F],
         [F],
-        [F]
+        [F],
     ],
     zIndices: [
         [0],
         [1],
         [1],
         [1, 1, 1, 2, 2, 2, 2, 1],
-        [1]
-    ]
+        [1],
+    ],
 }
 
 export default {
@@ -35,17 +35,17 @@ export default {
         ceiling: {
             hslaColours: [
                 [D],
-                [W]
+                [W],
             ],
             zIndices: [
                 [k],
                 [1],
-                [1, f, f, f, f, f, f, f, f, f, f, 1]
-            ]
+                [1, f, f, f, f, f, f, f, f, f, f, 1],
+            ],
         },
-        floor: DEFAULT_FLOOR
+        floor: DEFAULT_FLOOR,
     },
     [BATHROOM_OPEN_KEY]: {
-        floor: DEFAULT_FLOOR
-    }
+        floor: DEFAULT_FLOOR,
+    },
 }

@@ -15,7 +15,7 @@ import {
     REFERENCE,
     WORMHOLE,
     SONGCRAFT,
-    AFTERWORD
+    AFTERWORD,
 } from '../../../constants/dots'
 
 export default {
@@ -26,5 +26,5 @@ export default {
     [REFERENCE]: reference,
     [WORMHOLE]: wormhole,
     [SONGCRAFT]: songcraft,
-    [AFTERWORD]: afterword
+    [AFTERWORD]: afterword,
 }

@@ -30,8 +30,8 @@ const VerseLines = forwardRef(({
                         !inVerseBar && 'sibling__verseCursor',
 
                         'fontSize__lyricMultipleColumns'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {EAR_COLUMN_KEYS.map(doublespeakerKey => (
@@ -40,7 +40,7 @@ const VerseLines = forwardRef(({
                         key: doublespeakerKey,
                         ref,
                         doublespeakerKey,
-                        ...other
+                        ...other,
                     }}
                 />
             ))}
@@ -50,7 +50,7 @@ const VerseLines = forwardRef(({
         <VerseColumnLine
             {...{
                 ref,
-                ...other
+                ...other,
             }}
         />
     )
@@ -59,7 +59,7 @@ const VerseLines = forwardRef(({
 VerseLines.propTypes = {
     didMount: PropTypes.bool.isRequired,
     isDoublespeakerLine: PropTypes.bool,
-    inVerseBar: PropTypes.bool
+    inVerseBar: PropTypes.bool,
 }
 
 export default memo(getDidMountHoc(VerseLines))

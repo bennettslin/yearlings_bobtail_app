@@ -22,12 +22,12 @@ import {
     POPUP_PREVIOUS_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
     WORMHOLE_BUTTON_KEY,
-    SCORES_BUTTON_KEY
+    SCORES_BUTTON_KEY,
 } from '../../constants/buttons'
 
 import {
     LYRIC_LEFT,
-    RIGHT
+    RIGHT,
 } from '../../constants/lyrics'
 
 import {
@@ -37,7 +37,7 @@ import {
     CLOSE_NAV_NEXT,
     SHOW_NAV_NEXT,
     SHOW_CAROUSEL_FROM_NAV,
-    SHOW_CAROUSEL_NAV_NEXT
+    SHOW_CAROUSEL_NAV_NEXT,
 } from '../../constants/options'
 
 const TOOLTIP_TEXT_MAP = {
@@ -45,13 +45,13 @@ const TOOLTIP_TEXT_MAP = {
     get audioOptions() {
         return {
             0: 'continued play',
-            1: 'repeated play'
+            1: 'repeated play',
         }
     },
     get audioPlay() {
         return {
             [false]: 'play',
-            [true]: 'pause'
+            [true]: 'pause',
         }
     },
     [AUDIO_PREVIOUS_BUTTON_KEY]: 'previous track',
@@ -64,7 +64,7 @@ const TOOLTIP_TEXT_MAP = {
             [CLOSE_NAV_NEXT]: 'close album navigation',
             [SHOW_NAV_NEXT]: 'show album navigation',
             [SHOW_CAROUSEL_FROM_NAV]: 'show annotation carousel',
-            [SHOW_CAROUSEL_NAV_NEXT]: 'show carousel and navigation'
+            [SHOW_CAROUSEL_NAV_NEXT]: 'show carousel and navigation',
         }
     },
     [CAROUSEL_PREVIOUS_BUTTON_KEY]: 'previous annotation',
@@ -73,14 +73,14 @@ const TOOLTIP_TEXT_MAP = {
     get lyricEar() {
         return {
             [LYRIC_LEFT]: 'left speaker',
-            [RIGHT]: 'right speaker'
+            [RIGHT]: 'right speaker',
         }
     },
     [LYRIC_EXPAND_BUTTON_KEY]: 'expand/collapse lyric',
     get lyricExpand() {
         return {
             [false]: 'expand lyrics',
-            [true]: 'collapse lyrics'
+            [true]: 'collapse lyrics',
         }
     },
     [LYRIC_SCROLL_BUTTON_KEY]: 'auto scroll lyrics',
@@ -88,7 +88,7 @@ const TOOLTIP_TEXT_MAP = {
         return {
             [SHOWN]: 'song overview shown',
             [HIDDEN]: 'song overview hidden',
-            [DISABLED]: 'song overviews disabled'
+            [DISABLED]: 'song overviews disabled',
         }
     },
     [PITCH_HOME_BUTTON_KEY]: 'reset pitch page',
@@ -102,9 +102,9 @@ const TOOLTIP_TEXT_MAP = {
         return {
             [SHOWN]: 'tip shown',
             [HIDDEN]: 'tip hidden',
-            [DISABLED]: 'tips disabled'
+            [DISABLED]: 'tips disabled',
         }
-    }
+    },
 }
 
 export const getShowTooltip = buttonName => {

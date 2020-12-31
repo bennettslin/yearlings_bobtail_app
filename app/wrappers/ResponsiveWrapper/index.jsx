@@ -6,7 +6,7 @@ import getDidMountHoc from '../../components/DidMountHoc'
 import { getSingleShownEarColumnKey } from './helper'
 import {
     mapIsNavShowable,
-    mapIsCarouselAndNavShowable
+    mapIsCarouselAndNavShowable,
 } from '../../redux/carousel/selector'
 import { mapIsEarShown } from '../../redux/ear/selector'
 import { mapIsLyricExpandable } from '../../redux/lyricExpand/selector'
@@ -27,7 +27,7 @@ const ResponsiveWrapper = ({ didMount, children }) => {
         // TODO: Make this a selector.
         singleShownEarColumnKey = getSingleShownEarColumnKey({
             isEarShown,
-            earColumnIndex
+            earColumnIndex,
         })
 
     return (
@@ -53,8 +53,8 @@ const ResponsiveWrapper = ({ didMount, children }) => {
                             'RW__lyricExpandable' :
                             'RW__lyricNotExpandable',
                         'abF'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {children}
@@ -64,7 +64,7 @@ const ResponsiveWrapper = ({ didMount, children }) => {
 
 ResponsiveWrapper.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
 }
 
 export default memo(getDidMountHoc(ResponsiveWrapper))

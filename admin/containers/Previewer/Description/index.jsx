@@ -7,7 +7,7 @@ const PreviewerDescription = ({
     presenceDisplayName,
     sharedStyle,
     hideInMobile,
-    className
+    className,
 
 }) => {
     if (!kilobytes) {
@@ -22,7 +22,7 @@ const PreviewerDescription = ({
                     hideInMobile && 'PreviewerDescription__hideInMobile',
                     'fCC',
                     className
-                )
+                ),
             }}
         >
             <div
@@ -30,7 +30,7 @@ const PreviewerDescription = ({
                     className: cx(
                         'PreviewerDescription__name',
                         'PreviewerDescription__child'
-                    )
+                    ),
                 }}
             >
                 {presenceDisplayName}
@@ -40,7 +40,7 @@ const PreviewerDescription = ({
                     className: cx(
                         'PreviewerDescription__sharedStyles',
                         'PreviewerDescription__child'
-                    )
+                    ),
                 }}
             >
                 {!sharedStyle || typeof sharedStyle === 'string' ? (
@@ -58,7 +58,7 @@ const PreviewerDescription = ({
                     className: cx(
                         'PreviewerDescription__data',
                         'PreviewerDescription__child'
-                    )
+                    ),
                 }}
             >
                 {kilobytes.toFixed(2)} kB
@@ -72,10 +72,10 @@ PreviewerDescription.propTypes = {
     presenceDisplayName: PropTypes.string,
     sharedStyle: PropTypes.oneOfType([
         PropTypes.array,
-        PropTypes.string
+        PropTypes.string,
     ]),
     hideInMobile: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
 }
 
 export default PreviewerDescription

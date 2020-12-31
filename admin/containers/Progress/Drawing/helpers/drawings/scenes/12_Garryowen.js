@@ -5,23 +5,23 @@ import {
     LIZ,
     MIRIAM,
     TRISTAN,
-    NESTOR
+    NESTOR,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     CHUCKLING,
-    SMIRKING
+    SMIRKING,
 } from '../../../../../../../app/constants/scene/actors/ana'
 import { DROPPING_MEATS } from '../../../../../../../app/constants/scene/actors/bennett'
 import {
     BRUSH_OFF,
-    CELIBATE_FREEZING
+    CELIBATE_FREEZING,
 } from '../../../../../../../app/constants/scene/actors/bennettLiz'
 import { NOOGIE } from '../../../../../../../app/constants/scene/actors/miriamTristan'
 import { INJURED } from '../../../../../../../app/constants/scene/actors/nestor'
 import { PUNCHING } from '../../../../../../../app/constants/scene/actors/tristan'
 import {
     GREETING,
-    LEAVING_CRUMBLED
+    LEAVING_CRUMBLED,
 } from '../../../../../../../app/constants/scene/actors/songs'
 
 export default [
@@ -29,78 +29,78 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: BRUSH_OFF
+                    instance: BRUSH_OFF,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: BRUSH_OFF
-                    }
-                }
-            }
-        }
+                        instance: BRUSH_OFF,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: DROPPING_MEATS
+                    instance: DROPPING_MEATS,
                 },
                 [TRISTAN]: {
-                    instance: PUNCHING
+                    instance: PUNCHING,
                 },
                 [ANA]: {
-                    instance: CHUCKLING
+                    instance: CHUCKLING,
                 },
                 [NESTOR]: {
-                    instance: INJURED
-                }
-            }
-        }
+                    instance: INJURED,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: CELIBATE_FREEZING
+                    instance: CELIBATE_FREEZING,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: CELIBATE_FREEZING
-                    }
-                }
-            }
-        }
+                        instance: CELIBATE_FREEZING,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: GREETING
+                    instance: GREETING,
                 },
                 [MIRIAM]: {
-                    instance: NOOGIE
+                    instance: NOOGIE,
                 },
                 [TRISTAN]: {
-                    instance: NOOGIE
+                    instance: NOOGIE,
                 },
                 [ANA]: {
-                    instance: SMIRKING
-                }
-            }
-        }
+                    instance: SMIRKING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: LEAVING_CRUMBLED
+                    instance: LEAVING_CRUMBLED,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: LEAVING_CRUMBLED
-                    }
-                }
-            }
-        }
-    }
+                        instance: LEAVING_CRUMBLED,
+                    },
+                },
+            },
+        },
+    },
 ]

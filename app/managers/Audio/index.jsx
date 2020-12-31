@@ -9,11 +9,11 @@ import Player from './Player'
 import { getSongNotLogueIndices } from '../../api/album/songs'
 import {
     getNextSongIndex,
-    getTimeInVerseStatus
+    getTimeInVerseStatus,
 } from './helper'
 import {
     mapSelectedSongIndex,
-    mapSelectedVerseIndex
+    mapSelectedVerseIndex,
 } from '../../redux/selected/selector'
 import { mapAudioOptionIndex } from '../../redux/session/selector'
 
@@ -40,7 +40,7 @@ const AudioManager = () => {
 
         } else {
             dispatchSong.current({
-                selectedSongIndex: nextSongIndex
+                selectedSongIndex: nextSongIndex,
             })
             return false
         }
@@ -48,7 +48,7 @@ const AudioManager = () => {
 
     const updateCurrentTime = ({
         currentTime,
-        fromListen
+        fromListen,
 
     }) => {
         if (!fromListen) {
@@ -61,11 +61,11 @@ const AudioManager = () => {
             isTimeInSelectedVerse,
             isTimeInNextVerse,
             nextVerseIndex,
-            isEndOfSong
+            isEndOfSong,
         } = getTimeInVerseStatus({
             currentTime,
             selectedSongIndex,
-            selectedVerseIndex
+            selectedVerseIndex,
         })
 
         if (isTimeInSelectedVerse || isTimeInNextVerse) {
@@ -76,7 +76,7 @@ const AudioManager = () => {
             if (isTimeInNextVerse) {
                 dispatchVerse.current({
                     verseIndex: nextVerseIndex,
-                    fromPlayer: true
+                    fromPlayer: true,
                 })
             }
 
@@ -92,13 +92,13 @@ const AudioManager = () => {
                 logError({
                     log: `Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`,
                     action: 'syncTimeAndVerse',
-                    label: `song: ${selectedSongIndex}, verse: ${selectedVerseIndex}, time: ${currentTime}`
+                    label: `song: ${selectedSongIndex}, verse: ${selectedVerseIndex}, time: ${currentTime}`,
                 })
             }
 
             return {
                 songEnded: true,
-                doRepeat: handleSongEnd()
+                doRepeat: handleSongEnd(),
             }
         }
 
@@ -120,7 +120,7 @@ const AudioManager = () => {
                         key: songIndex,
                         songIndex,
                         handleSongEnd,
-                        updateCurrentTime
+                        updateCurrentTime,
                     }}
                 />
             ))}

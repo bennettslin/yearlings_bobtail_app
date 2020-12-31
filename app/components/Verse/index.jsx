@@ -23,11 +23,11 @@ const Verse = forwardRef(({
         {
             inVerseBar,
             verseIndex,
-            verseObject
+            verseObject,
         } = other,
         {
             lyric,
-            lyricCentre
+            lyricCentre,
         } = verseObject,
         isInteractable = Number.isFinite(verseIndex) && !inVerseBar
 
@@ -71,17 +71,17 @@ const Verse = forwardRef(({
                             verseClassName && `verse__${verseClassName}`,
                             isInteractable && 'Verse__interactable',
 
-                            className
+                            className,
                         ]
                     ),
-                    onClick
+                    onClick,
                 }}
             >
                 <VerseLines
                     {...{
                         ref,
                         isDoublespeakerLine: !lyric && !lyricCentre,
-                        ...other
+                        ...other,
                     }}
                 />
                 {children}
@@ -99,7 +99,7 @@ Verse.propTypes = {
     verseObject: PropTypes.object.isRequired,
     verseIndex: PropTypes.number,
     inVerseBar: PropTypes.bool,
-    children: PropTypes.node
+    children: PropTypes.node,
 }
 
 export default memo(getDidMountHoc(getVerseHoc(Verse)))

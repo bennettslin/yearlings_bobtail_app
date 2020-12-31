@@ -7,7 +7,7 @@ const Iframe = forwardRef(({
     className,
     isShown,
     isLoading,
-    onLoad
+    onLoad,
 
 }, ref) => (
     <div
@@ -15,7 +15,7 @@ const Iframe = forwardRef(({
             className: cx(
                 className,
                 'iframeContainer'
-            )
+            ),
         }}
     >
         {isLoading &&
@@ -25,7 +25,7 @@ const Iframe = forwardRef(({
                         'iframeContainer__spinner',
                         'abF',
                         'fCC'
-                    )
+                    ),
                 }}
             >
                 <Spinner />
@@ -40,7 +40,7 @@ const Iframe = forwardRef(({
                         !isLoading && 'iframeContainer__iframe__loaded'
                     ),
                     tabIndex: -1,
-                    onLoad
+                    onLoad,
                 }}
             />
         )}
@@ -51,7 +51,7 @@ Iframe.propTypes = {
     className: PropTypes.string.isRequired,
     isShown: PropTypes.bool.isRequired,
     isLoading: PropTypes.bool.isRequired,
-    onLoad: PropTypes.func.isRequired
+    onLoad: PropTypes.func.isRequired,
 }
 
 export default Iframe

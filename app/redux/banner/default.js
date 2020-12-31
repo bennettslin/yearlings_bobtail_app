@@ -1,3 +1,3 @@
 export const BANNER_DEFAULTS = {
-    bannerHoverVerseIndex: -1
+    bannerHoverVerseIndex: -1,
 }

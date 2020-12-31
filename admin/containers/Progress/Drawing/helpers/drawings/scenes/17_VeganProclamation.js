@@ -8,23 +8,23 @@ import {
     NESTOR,
     AMY,
     STEPHANIE,
-    WADE
+    WADE,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     CAMPUS_ASHAMED,
     SHOW_ANNOYED,
     ALLEY,
     BROKEN_HEARTED,
-    DEMONSTRATION
+    DEMONSTRATION,
 } from '../../../../../../../app/constants/scene/actors/bennett'
 import {
     PROTECTIVE_CONCERNED,
     CARESS,
-    CARESS_REFLECTION
+    CARESS_REFLECTION,
 } from '../../../../../../../app/constants/scene/actors/khariLiz'
 import {
     GREETING,
-    PROTESTER
+    PROTESTER,
 } from '../../../../../../../app/constants/scene/actors/songs'
 
 export default [
@@ -32,101 +32,101 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: CAMPUS_ASHAMED
+                    instance: CAMPUS_ASHAMED,
                 },
                 [KHARI]: {
-                    instance: PROTECTIVE_CONCERNED
+                    instance: PROTECTIVE_CONCERNED,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: PROTECTIVE_CONCERNED
-                    }
-                }
-            }
-        }
+                        instance: PROTECTIVE_CONCERNED,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: SHOW_ANNOYED
+                    instance: SHOW_ANNOYED,
                 },
                 [MIRIAM]: {
-                    instance: GREETING
+                    instance: GREETING,
                 },
                 [TRISTAN]: {
-                    instance: GREETING
+                    instance: GREETING,
                 },
                 [NESTOR]: {
-                    instance: GREETING
-                }
-            }
-        }
+                    instance: GREETING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: ALLEY
-                }
-            }
-        }
+                    instance: ALLEY,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: BROKEN_HEARTED
+                    instance: BROKEN_HEARTED,
                 },
                 [KHARI]: {
-                    instance: CARESS
+                    instance: CARESS,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: CARESS
-                    }
-                }
-            }
-        }
+                        instance: CARESS,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [KHARI]: {
                     reflection: {
-                        instance: CARESS_REFLECTION
-                    }
+                        instance: CARESS_REFLECTION,
+                    },
                 },
                 [LIZ]: {
                     reflection: {
-                        instance: CARESS_REFLECTION
-                    }
-                }
-            }
-        }
+                        instance: CARESS_REFLECTION,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: DEMONSTRATION
+                    instance: DEMONSTRATION,
                 },
                 [AMY]: {
                     protester: {
-                        instance: PROTESTER
-                    }
+                        instance: PROTESTER,
+                    },
                 },
                 [STEPHANIE]: {
                     protester: {
-                        instance: PROTESTER
-                    }
+                        instance: PROTESTER,
+                    },
                 },
                 [WADE]: {
                     protester: {
-                        instance: PROTESTER
-                    }
-                }
-            }
-        }
-    }
+                        instance: PROTESTER,
+                    },
+                },
+            },
+        },
+    },
 ]

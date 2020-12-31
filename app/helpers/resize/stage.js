@@ -1,12 +1,12 @@
 import {
     getIsDesktopWidth,
-    getIsMonitorWidth
+    getIsMonitorWidth,
 } from '../responsive'
 import { getCentreFieldHeight } from './theatre'
 
 import {
     STAGE_ASPECT_RATIO,
-    STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
+    STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE,
 } from '../../constants/stage'
 
 import {
@@ -14,7 +14,7 @@ import {
     CSS_LENGTH_ICON_LARGE_MINI,
     CSS_LENGTH_ICON_LARGE_TABLET,
     CSS_LENGTH_ICON_LARGE,
-    CSS_MARGIN_THIN
+    CSS_MARGIN_THIN,
 } from '../../constants/responsive'
 
 import {
@@ -26,7 +26,7 @@ import {
     TABLET_WIDTH_KEY,
     LAPTOP_WIDTH_KEY,
     MONITOR_WIDTH_KEY,
-    DEVICE_WIDTH_CONFIGS
+    DEVICE_WIDTH_CONFIGS,
 } from '../../constants/responsive/deviceWidth'
 
 const _getLeftShelfOverflow = (deviceWidthIndex) => {
@@ -78,7 +78,7 @@ export const getStageDimensionCoordinates = ({
     menuHeight,
     isHeightlessLyric,
     isTwoRowMenu,
-    canCarouselNavMount
+    canCarouselNavMount,
 }) => {
 
     const isDesktopWidth = getIsDesktopWidth(deviceWidthIndex),
@@ -97,7 +97,7 @@ export const getStageDimensionCoordinates = ({
             deviceWidthIndex,
             windowHeight,
             isHeightlessLyric,
-            isTwoRowMenu
+            isTwoRowMenu,
         }) - navHeight,
 
         centreFieldRatio = centreFieldWidth / centreFieldHeight
@@ -141,6 +141,6 @@ export const getStageDimensionCoordinates = ({
         stageTop: Number((top + menuHeight).toFixed(2)),
         stageLeft: Number(left.toFixed(2)),
         stageWidth: Number(width.toFixed(2)),
-        stageHeight: Number(height.toFixed(2))
+        stageHeight: Number(height.toFixed(2)),
     })
 }

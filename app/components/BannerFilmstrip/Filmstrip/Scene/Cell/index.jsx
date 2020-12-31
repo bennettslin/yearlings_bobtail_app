@@ -15,7 +15,7 @@ const FilmstripCell = ({ sceneIndex }) => {
         isSceneCursor = useSelector(getMapIsSceneCursor(sceneIndex)),
         sceneTrackerWidth = useSelector(getMapSceneTrackerWidth({
             sceneIndex,
-            playerTime
+            playerTime,
         }))
 
     return (
@@ -28,7 +28,7 @@ const FilmstripCell = ({ sceneIndex }) => {
                         'FilmstripCell__cursor' :
                         'FilmstripCell__notCursor',
                     'ovH'
-                )
+                ),
             }}
         >
             {Number.isFinite(sceneTrackerWidth) && (
@@ -37,7 +37,7 @@ const FilmstripCell = ({ sceneIndex }) => {
                         className: cx(
                             'FilmstripCell__trackerContainer',
                             'abF'
-                        )
+                        ),
                     }}
                 >
                     <Tracker {...{ trackerLength: sceneTrackerWidth }} />
@@ -48,7 +48,7 @@ const FilmstripCell = ({ sceneIndex }) => {
 }
 
 FilmstripCell.propTypes = {
-    sceneIndex: PropTypes.number.isRequired
+    sceneIndex: PropTypes.number.isRequired,
 }
 
 export default memo(FilmstripCell)

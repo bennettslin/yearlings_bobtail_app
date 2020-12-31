@@ -7,7 +7,7 @@ const DrawingSection = ({
     [ACTOR]: actors,
     actorsTodoCount,
     actorsHalfTodoCount,
-    actorsTotalCount
+    actorsTotalCount,
 
 }) => (
     <div className="drawings-section">

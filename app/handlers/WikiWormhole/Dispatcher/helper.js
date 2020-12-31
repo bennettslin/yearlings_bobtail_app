@@ -4,7 +4,7 @@ import { getWikiWormholesForAnnotation } from '../../../api/album/annotations'
 
 import {
     WORMHOLE,
-    REFERENCE
+    REFERENCE,
 } from '../../../constants/dots'
 
 export const getWikiWormholeIndexForDirection = ({
@@ -12,7 +12,7 @@ export const getWikiWormholeIndexForDirection = ({
     selectedAnnotationIndex,
     selectedDotKeys,
     initialWikiWormholeIndex = 1,
-    direction
+    direction,
 
 }) => {
     const annotationWikiWormholes = getWikiWormholesForAnnotation(

@@ -11,7 +11,7 @@ const AccessLetters = ({
     accessIconsName,
     showIfAccessOn,
     accessKeys,
-    className
+    className,
 
 }) => didMount && (
     <div className={cx(
@@ -26,7 +26,7 @@ const AccessLetters = ({
                 {...{
                     key: accessKey,
                     accessKey,
-                    showIfAccessOn
+                    showIfAccessOn,
                 }}
             />
         ))}
@@ -40,7 +40,7 @@ AccessLetters.propTypes = {
     accessKeys: PropTypes.arrayOf(
         PropTypes.string.isRequired
     ).isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
 }
 
 export default memo(getDidMountHoc(AccessLetters))

@@ -5,5 +5,5 @@ import thing from './thing'
 export default [
     ...drawing,
     ...scene,
-    ...thing
+    ...thing,
 ]

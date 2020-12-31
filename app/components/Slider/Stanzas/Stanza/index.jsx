@@ -7,7 +7,7 @@ import { getFormTypeForStanza } from '../../../../api/album/stanzas'
 import {
     getDurationForSong,
     getStartTimeForStanza,
-    getEndTimeForStanza
+    getEndTimeForStanza,
 } from '../../../../api/album/time'
 import { CSS_OVERLAP_MARGIN_X_SLIDER } from '../../../../constants/responsive'
 import { getMapIsStanzaCursor } from '../../../../redux/cursor/selector'
@@ -56,7 +56,7 @@ const SliderStanza = ({ stanzaIndex }) => {
 
         stanzaStyle = {
             right: formattedStanzaRight,
-            width: formattedStanzaWidth
+            width: formattedStanzaWidth,
         }
 
     return (
@@ -67,7 +67,7 @@ const SliderStanza = ({ stanzaIndex }) => {
                     `SliderStanza__${stanzaFormType}`,
                     isCursorStanza && 'SliderStanza__cursor'
                 ),
-                style: stanzaStyle
+                style: stanzaStyle,
             }}
         >
             <div className={cx(
@@ -79,7 +79,7 @@ const SliderStanza = ({ stanzaIndex }) => {
                 <SliderVerses
                     {...{
                         stanzaIndex,
-                        stanzaDuration: stanzaEndTime - stanzaStartTime
+                        stanzaDuration: stanzaEndTime - stanzaStartTime,
                     }}
                 />
             </div>
@@ -96,7 +96,7 @@ const SliderStanza = ({ stanzaIndex }) => {
 }
 
 SliderStanza.propTypes = {
-    stanzaIndex: PropTypes.number.isRequired
+    stanzaIndex: PropTypes.number.isRequired,
 }
 
 export default memo(SliderStanza)

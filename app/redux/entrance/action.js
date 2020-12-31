@@ -4,20 +4,20 @@ import { getSongChangeDefaults, getSceneChangeDefaults } from './default'
 
 export const updateEntranceStore = payload => ({
     type: ENTRANCE_STORE,
-    payload: getDefinedOnlyPayload(payload)
+    payload: getDefinedOnlyPayload(payload),
 })
 
 export const updateIsWindowResizeDone = (isWindowResizeDone = false) => ({
     type: ENTRANCE_STORE,
-    payload: { isWindowResizeDone }
+    payload: { isWindowResizeDone },
 })
 
 export const resetSongChange = () => ({
     type: ENTRANCE_STORE,
-    payload: getSongChangeDefaults(false)
+    payload: getSongChangeDefaults(false),
 })
 
 export const resetSceneChange = () => ({
     type: ENTRANCE_STORE,
-    payload: getSceneChangeDefaults(false)
+    payload: getSceneChangeDefaults(false),
 })

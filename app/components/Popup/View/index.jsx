@@ -21,7 +21,7 @@ const PopupView = ({
     handlePreviousClick,
     handleNextClick,
     handleContainerClick,
-    children
+    children,
 
 }) => (
     <div
@@ -37,10 +37,10 @@ const PopupView = ({
                         'popupView__fullWidth': isFullPopup,
                         'popupView__fullHeight': isFullPopup,
                         'PopupView__canBeFullHeight':
-                            canBeFullHeight || isFullPopup
-                    }
+                            canBeFullHeight || isFullPopup,
+                    },
                 ]
-            )
+            ),
         }}
     >
         {didMount && Boolean(handleCloseClick) && (
@@ -50,7 +50,7 @@ const PopupView = ({
                     isFullPopup,
                     inCardSize: isCardSize,
                     displaysInOverlay,
-                    handlePopupButtonClick: handleCloseClick
+                    handlePopupButtonClick: handleCloseClick,
                 }}
             />
         )}
@@ -60,7 +60,7 @@ const PopupView = ({
                 {...{
                     inCardSize: isCardSize,
                     displaysInOverlay,
-                    handlePopupButtonClick: handlePreviousClick
+                    handlePopupButtonClick: handlePreviousClick,
                 }}
             />
         )}
@@ -70,7 +70,7 @@ const PopupView = ({
                 {...{
                     inCardSize: isCardSize,
                     displaysInOverlay,
-                    handlePopupButtonClick: handleNextClick
+                    handlePopupButtonClick: handleNextClick,
                 }}
             />
         )}
@@ -82,12 +82,12 @@ const PopupView = ({
                         `${popupName}ViewContent`,
                         {
                             'PopupViewContent__narrowPadding': hasNarrowPadding,
-                            'PopupViewContent__widePadding': hasWidePadding
+                            'PopupViewContent__widePadding': hasWidePadding,
                         },
-                        !noBoxShadow && 'boxShadow__popupView'
+                        !noBoxShadow && 'boxShadow__popupView',
                     ]
                 ),
-                onClick: handleContainerClick
+                onClick: handleContainerClick,
             }}
         >
             {children}
@@ -111,7 +111,7 @@ PopupView.propTypes = {
     handlePreviousClick: PropTypes.func,
     handleNextClick: PropTypes.func,
     handleContainerClick: PropTypes.func.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default memo(getDidMountHoc(PopupView))

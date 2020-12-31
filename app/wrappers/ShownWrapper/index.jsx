@@ -7,16 +7,16 @@ import { getSongTipType } from '../../api/album/tips'
 import { WIKI, WORMHOLES } from '../../constants/tips'
 import {
     mapReferenceDot,
-    mapWormholeDot
+    mapWormholeDot,
 } from '../../redux/dots/selector'
 import {
     mapIsSongChangeDone,
-    mapCanTransitionAfterSongChange
+    mapCanTransitionAfterSongChange,
 } from '../../redux/entrance/selector'
 import {
     mapIsLyricLogue,
     mapLyricSongIndex,
-    mapLyricAnnotationIndex
+    mapLyricAnnotationIndex,
 } from '../../redux/lyric/selector'
 import { mapIsOverlayShown } from '../../redux/overlay/selector'
 import { mapIsOverviewShown } from '../../redux/overview/selector'
@@ -25,7 +25,7 @@ import {
     mapIsCarouselShown,
     mapIsNavExpanded,
     mapIsLyricExpanded,
-    mapIsDotsSlideShown
+    mapIsDotsSlideShown,
 } from '../../redux/toggle/selector'
 
 const ShownWrapper = ({ didMount, children }) => {
@@ -80,7 +80,7 @@ const ShownWrapper = ({ didMount, children }) => {
                                 (tipType === WORMHOLES && !wormhole)
                             ) ?
                                 'ShW__tips__isPointedAtDots' :
-                                'ShW__tips__isPointedAtLyrics'
+                                'ShW__tips__isPointedAtLyrics',
                         ],
 
                         isCarouselShown && 'ShW__carouselShown',
@@ -96,8 +96,8 @@ const ShownWrapper = ({ didMount, children }) => {
                             'ShW__overlayShown' :
                             'ShW__overlayHidden',
                         'abF'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {children}
@@ -107,7 +107,7 @@ const ShownWrapper = ({ didMount, children }) => {
 
 ShownWrapper.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default memo(getDidMountHoc(ShownWrapper))

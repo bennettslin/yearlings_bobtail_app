@@ -10,7 +10,7 @@ export const getSelectedReducer = songIndex => (
         case SELECTED_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         default:
             return state

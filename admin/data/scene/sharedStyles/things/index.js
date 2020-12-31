@@ -19,7 +19,7 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-    PUPPET
+    PUPPET,
 } from '../../../../../app/constants/scene/things'
 
 export default {
@@ -32,5 +32,5 @@ export default {
     [FLAT]: flats,
     [FURNITURE]: furnitures,
     [PANEL]: panels,
-    [PUPPET]: puppets
+    [PUPPET]: puppets,
 }

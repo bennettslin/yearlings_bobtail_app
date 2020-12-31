@@ -9,13 +9,13 @@ import { mapIsCarouselAndNavShowable } from '../../../redux/carousel/selector'
 import {
     mapScrollCarouselLog,
     mapScrollCarouselIndex,
-    mapScrollCarouselNoDuration
+    mapScrollCarouselNoDuration,
 } from '../../../redux/scrollCarousel/selector'
 import { mapSelectedAnnotationIndex } from '../../../redux/selected/selector'
 
 const ScrollCarouselListener = ({
     getCarouselScrollChild,
-    getCarouselScrollElement
+    getCarouselScrollElement,
 
 }) => {
     const
@@ -39,7 +39,7 @@ const ScrollCarouselListener = ({
                         accessedAnnotationIndex
                     ) :
                     scrollCarouselIndex,
-                noDuration: isScrollCarouselForSongSelect
+                noDuration: isScrollCarouselForSongSelect,
             })
         }
         dispatch(resetScrollCarouselStore())
@@ -51,7 +51,7 @@ const ScrollCarouselListener = ({
             {...{
                 ref: scrollElementIntoView,
                 getScrollParent: getCarouselScrollElement,
-                getScrollChild: getCarouselScrollChild
+                getScrollChild: getCarouselScrollChild,
             }}
         />
     )
@@ -59,7 +59,7 @@ const ScrollCarouselListener = ({
 
 ScrollCarouselListener.propTypes = {
     getCarouselScrollChild: PropTypes.func.isRequired,
-    getCarouselScrollElement: PropTypes.func.isRequired
+    getCarouselScrollElement: PropTypes.func.isRequired,
 }
 
 export default memo(ScrollCarouselListener)

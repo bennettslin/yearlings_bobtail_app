@@ -10,7 +10,7 @@ import Verse from '../../Verse'
 import {
     getUnitCardVerses,
     getIsUnitTruncatable,
-    getUnitFormType
+    getUnitFormType,
 } from './helper'
 import { getSubsequentForUnit } from '../../../api/album/units'
 import { getVerse } from '../../../api/album/verses'
@@ -33,7 +33,7 @@ const UnitCard = forwardRef(({
         isMainVerses,
         isSubVerse,
         isSideCard,
-        isSideSubCard
+        isSideSubCard,
     })
 
     // Return if nothing to render.
@@ -50,7 +50,7 @@ const UnitCard = forwardRef(({
             songIndex: serverClientSongIndex,
             unitIndex,
             isMainVerses,
-            isSubVerse
+            isSubVerse,
         }),
         formType = getUnitFormType({
             songIndex: serverClientSongIndex,
@@ -58,7 +58,7 @@ const UnitCard = forwardRef(({
             isMainVerses,
             isSubVerse,
             isSideCard,
-            isSideSubCard
+            isSideSubCard,
         })
 
     return (
@@ -69,8 +69,8 @@ const UnitCard = forwardRef(({
                         'UnitCard',
                         isSubVerse && 'UnitCard__subVerse',
                         isTabbed && 'UnitCard__tabbed'
-                    )
-                }
+                    ),
+                },
             }}
         >
             <div
@@ -81,8 +81,8 @@ const UnitCard = forwardRef(({
                             'boxShadow__stanza',
                             'bgColour__unit__pattern',
                             `bgColour__formType__${formType}`
-                        )
-                    }
+                        ),
+                    },
                 }}
             >
                 {versesArray.map((verseEntity, index) => {
@@ -101,7 +101,7 @@ const UnitCard = forwardRef(({
                                 ref,
                                 ...isIndexed && { verseIndex: verseEntity },
                                 verseObject,
-                                isTruncatable
+                                isTruncatable,
                             }}
                         />
                     )
@@ -114,7 +114,7 @@ const UnitCard = forwardRef(({
                 <UnitTab
                     {...{
                         unitIndex,
-                        handleVerseSelect
+                        handleVerseSelect,
                     }}
                 />
             )}
@@ -130,7 +130,7 @@ UnitCard.propTypes = {
     isMainVerses: PropTypes.bool,
     isSubVerse: PropTypes.bool,
     isSideCard: PropTypes.bool,
-    isSideSubCard: PropTypes.bool
+    isSideSubCard: PropTypes.bool,
 }
 
 export default memo(getDidMountHoc(getSongServerClientHoc(UnitCard)))

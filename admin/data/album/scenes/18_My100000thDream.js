@@ -8,14 +8,14 @@ import {
     FLAT,
     FURNITURE,
     PANEL,
-    PUPPET
+    PUPPET,
 } from '../../../../app/constants/scene/things'
 import {
     EL_TORITO_KEY,
     PAMPAS_KEY,
     WEDDING_KEY,
     CLIFF_KEY,
-    CLIFF_DEATHBED_KEY
+    CLIFF_DEATHBED_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_MORNING,
@@ -26,7 +26,7 @@ import {
     SEASON_SUMMER,
     SEASON_AUTUMN,
     SEASON_WINTER,
-    SEASON_THOUGHT
+    SEASON_THOUGHT,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
@@ -35,30 +35,30 @@ import {
     MARA,
     LIZ,
     MIRIAM,
-    AMY
+    AMY,
 } from '../../../../app/constants/scene/actors'
 import { DOCTOR } from '../../../../app/constants/scene/actors/amy'
 import {
     EL_TORITO,
-    GOPI
+    GOPI,
 } from '../../../../app/constants/scene/actors/songs'
 import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
-    FINAL_DREAM
+    FINAL_DREAM,
 } from '../../../../app/constants/scene/actors/bennettLiz'
 import {
     OAKLAND_SIDE__LEVEL,
     MOUNTAIN_PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP,
-    THOUGHT_MEDIUM__DEATHBED
+    THOUGHT_MEDIUM__DEATHBED,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__INVERSE,
     BUBBLE_MEDIUM__INVERSE,
-    BUBBLE_LARGE__INVERSE
+    BUBBLE_LARGE__INVERSE,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     CLIFF_TREE,
@@ -66,7 +66,7 @@ import {
     DISPENSER_RIGHT,
     HOSTESS_STAND,
     IV_DRIP,
-    WEDDING_CROWD
+    WEDDING_CROWD,
 } from '../../../../app/constants/scene/things/cutouts'
 import { EL_TORITO_DOORS } from '../../../../app/constants/scene/things/doors'
 import { HOSPITAL_RECORD_PLAYER } from '../../../../app/constants/scene/things/fixtures'
@@ -77,16 +77,16 @@ import {
     PAMPAS_FAR,
     FOREBODING_TREES__NEAR,
     FOREBODING_TREES__MIDDLE,
-    FOREBODING_TREES__FAR
+    FOREBODING_TREES__FAR,
 } from '../../../../app/constants/scene/things/flats'
 import {
     DEATHBED_BLANKET,
-    DEATHBED_PILLOW
+    DEATHBED_PILLOW,
 } from '../../../../app/constants/scene/things/furnitures'
 import {
     WEDDING_PLATFORM_FRONT,
     WEDDING_PLATFORM_REAR,
-    HOSPITAL_BED
+    HOSPITAL_BED,
 } from '../../../../app/constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../../app/constants/scene/things/puppets'
 
@@ -98,32 +98,32 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, walking, pleasantly confused',
-                    instance: EL_TORITO
+                    instance: EL_TORITO,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'side angle, opening a door, pleasantly surprised',
-                        instance: EL_TORITO
-                    }
-                }
+                        instance: EL_TORITO,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
                 [DISPENSER_LEFT]: true,
                 [DISPENSER_RIGHT]: true,
-                [HOSTESS_STAND]: true
+                [HOSTESS_STAND]: true,
             },
             [DOOR]: {
-                [EL_TORITO_DOORS]: true
+                [EL_TORITO_DOORS]: true,
             },
             [FLAT]: {
-                [NEAR_BUILDINGS]: true
-            }
+                [NEAR_BUILDINGS]: true,
+            },
         },
         cubes: EL_TORITO_KEY,
-        sky: { time: TIME_MORNING, season: SEASON_SPRING }
+        sky: { time: TIME_MORNING, season: SEASON_SPRING },
     },
     {
         unitIndex: 3,
@@ -132,36 +132,36 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'sitting cross-legged, playing recorder, content',
-                    instance: PAMPAS
+                    instance: PAMPAS,
                 },
                 [CATHERINE]: {
                     gopi: {
                         description: 'dancing',
-                        instance: GOPI
-                    }
+                        instance: GOPI,
+                    },
                 },
                 [MARA]: {
                     gopi: {
                         description: 'dancing',
-                        instance: GOPI
-                    }
+                        instance: GOPI,
+                    },
                 },
                 [MIRIAM]: {
                     gopi: {
                         description: 'dancing',
-                        instance: GOPI
-                    }
-                }
+                        instance: GOPI,
+                    },
+                },
             },
             [BACKDROP]: {
-                [MOUNTAIN_PAMPAS_BACKDROP]: true
+                [MOUNTAIN_PAMPAS_BACKDROP]: true,
             },
             [FLAT]: {
-                [PAMPAS_FAR]: true
-            }
+                [PAMPAS_FAR]: true,
+            },
         },
         cubes: PAMPAS_KEY,
-        sky: { time: TIME_NOON, season: SEASON_SUMMER }
+        sky: { time: TIME_NOON, season: SEASON_SUMMER },
     },
     {
         unitIndex: 5,
@@ -170,30 +170,30 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'back angle, confusedly being rushed',
-                    instance: GETTING_DARK
-                }
+                    instance: GETTING_DARK,
+                },
             },
             [CUTOUT]: {
-                [WEDDING_CROWD]: true
+                [WEDDING_CROWD]: true,
             },
             [BACKDROP]: {
-                [WEDDING_BACKDROP]: true
+                [WEDDING_BACKDROP]: true,
             },
             [FLAT]: {
                 [FOREBODING_TREES__NEAR]: true,
                 [FOREBODING_TREES__MIDDLE]: true,
-                [FOREBODING_TREES__FAR]: true
+                [FOREBODING_TREES__FAR]: true,
             },
             [PANEL]: {
                 [WEDDING_PLATFORM_FRONT]: true,
-                [WEDDING_PLATFORM_REAR]: true
+                [WEDDING_PLATFORM_REAR]: true,
             },
             [PUPPET]: {
-                [PUPPET_KHARI_LIZ]: true
-            }
+                [PUPPET_KHARI_LIZ]: true,
+            },
         },
         cubes: WEDDING_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 7,
@@ -202,22 +202,22 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'front angle, reacting to threat',
-                    instance: CLIFF
-                }
+                    instance: CLIFF,
+                },
             },
             [BACKDROP]: {
-                [GOLDEN_GATE_BACKDROP]: true
+                [GOLDEN_GATE_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [CLIFF_TREE]: true
+                [CLIFF_TREE]: true,
             },
             [FLAT]: {
                 [CLIFF_GRAVES_FAR]: true,
-                [CLIFF_GRAVES_NEAR]: true
-            }
+                [CLIFF_GRAVES_NEAR]: true,
+            },
         },
         cubes: CLIFF_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_WINTER }
+        sky: { time: TIME_EVENING, season: SEASON_WINTER },
     },
     {
         unitIndex: 9,
@@ -226,41 +226,41 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'calm, accepting of impending doom',
-                    instance: FINAL_DREAM
+                    instance: FINAL_DREAM,
                 },
                 [AMY]: {
                     doctor: {
                         description: 'pulling sheet over Bennett',
-                        instance: DOCTOR
-                    }
-                }
+                        instance: DOCTOR,
+                    },
+                },
             },
             [BACKDROP]: {
-                [THOUGHT_MEDIUM__DEATHBED]: true
+                [THOUGHT_MEDIUM__DEATHBED]: true,
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__INVERSE]: true,
                 [BUBBLE_MEDIUM__INVERSE]: true,
-                [BUBBLE_LARGE__INVERSE]: true
+                [BUBBLE_LARGE__INVERSE]: true,
             },
             [CUTOUT]: {
-                [IV_DRIP]: true
+                [IV_DRIP]: true,
             },
             [FIXTURE]: {
-                [HOSPITAL_RECORD_PLAYER]: true
+                [HOSPITAL_RECORD_PLAYER]: true,
             },
             [FLAT]: {
-                [CLIFF_GRAVES_FAR]: true
+                [CLIFF_GRAVES_FAR]: true,
             },
             [FURNITURE]: {
                 [DEATHBED_BLANKET]: true,
-                [DEATHBED_PILLOW]: true
+                [DEATHBED_PILLOW]: true,
             },
             [PANEL]: {
-                [HOSPITAL_BED]: true
-            }
+                [HOSPITAL_BED]: true,
+            },
         },
         cubes: CLIFF_DEATHBED_KEY,
-        sky: { season: SEASON_THOUGHT }
-    }
+        sky: { season: SEASON_THOUGHT },
+    },
 ]

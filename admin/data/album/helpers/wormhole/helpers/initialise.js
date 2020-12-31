@@ -3,7 +3,7 @@ const _addCardWormholeLinksToTempAlbumLinks = ({
     annotation,
     wormhole,
     cardIndex,
-    tempWormholeLinks
+    tempWormholeLinks,
 
 }) => {
     const {
@@ -12,7 +12,7 @@ const _addCardWormholeLinksToTempAlbumLinks = ({
              * string we want is the wormholeKey.
              */
             wormholeKey = wormhole,
-            wormholePrefix
+            wormholePrefix,
         } = wormhole,
 
         /**
@@ -23,7 +23,7 @@ const _addCardWormholeLinksToTempAlbumLinks = ({
         {
             verseIndex,
             annotationIndex,
-            columnIndex
+            columnIndex,
         } = annotation,
 
         tempLink = {
@@ -32,7 +32,7 @@ const _addCardWormholeLinksToTempAlbumLinks = ({
             annotationIndex,
             columnIndex,
             cardIndex,
-            wormholePrefix
+            wormholePrefix,
         }
 
     // If it's the first link for this wormhole key, initialise array.
@@ -61,7 +61,7 @@ export const initialiseTempWormholeLinks = (
                             annotation,
                             wormhole,
                             cardIndex,
-                            tempWormholeLinks
+                            tempWormholeLinks,
                         })
                     }
                     delete card.wormhole

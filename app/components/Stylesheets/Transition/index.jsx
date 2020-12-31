@@ -3,11 +3,11 @@ import Stylesheet from '../../../modules/Stylesheet'
 import {
     TRANSITION_STYLESHEET_CONFIGS,
     PRESENCE_TRANSITION_CONFIGS,
-    getTransitionStyles
+    getTransitionStyles,
 } from './helper'
 import {
     OPACITY,
-    ENTER
+    ENTER,
 } from '../../../constants/transition'
 
 const TransitionStylesheets = () => (
@@ -18,12 +18,12 @@ const TransitionStylesheets = () => (
             transitionStyle,
             transitionEaseEnter,
             transitionDuration,
-            noAdditionalOpacity = false
+            noAdditionalOpacity = false,
         }) => (
             <Fragment {...{ key: transitionKey }}>
                 {TRANSITION_STYLESHEET_CONFIGS.map(({
                     stylesheetKey,
-                    getTransitionDelay
+                    getTransitionDelay,
                 }) => (
                     <Stylesheet
                         {...{
@@ -39,12 +39,12 @@ const TransitionStylesheets = () => (
                                             [transitionStyle] :
                                             [OPACITY, transitionStyle],
                                     ...stylesheetKey === ENTER && {
-                                        transitionEase: transitionEaseEnter
+                                        transitionEase: transitionEaseEnter,
                                     },
                                     transitionDuration,
-                                    getTransitionDelay
-                                })
-                            })
+                                    getTransitionDelay,
+                                }),
+                            }),
                         }}
                     />
                 ))}

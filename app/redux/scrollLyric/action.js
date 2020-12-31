@@ -7,24 +7,24 @@ export const scrollLyricToAnchor = (log, index) => ({
     payload: {
         scrollLyricLog: log,
         scrollLyricIndex: index,
-        scrollLyricByAnchor: true
-    }
+        scrollLyricByAnchor: true,
+    },
 })
 
 export const scrollLyricToVerse = (log, index) => ({
     type: SCROLL_LYRIC_STORE,
     payload: {
         scrollLyricLog: log,
-        scrollLyricIndex: index
-    }
+        scrollLyricIndex: index,
+    },
 })
 
 export const scrollLyricBackToSelectedVerse = log => ({
     type: SCROLL_LYRIC_STORE,
     payload: {
         scrollLyricLog: log,
-        scrollLyricAlways: true
-    }
+        scrollLyricAlways: true,
+    },
 })
 
 export const scrollLyricForVerseSelect = (log, index) => ({
@@ -33,8 +33,8 @@ export const scrollLyricForVerseSelect = (log, index) => ({
         scrollLyricLog: log,
         scrollLyricIndex: index,
         scrollLyricAlways: true,
-        isScrollLyricForVerseSelect: true
-    }
+        isScrollLyricForVerseSelect: true,
+    },
 })
 
 export const scrollLyricForSongSelect = () => ({
@@ -42,8 +42,8 @@ export const scrollLyricForSongSelect = () => ({
     payload: {
         scrollLyricLog: 'Song change scrolled',
         isScrollLyricForSongSelect: true,
-        scrollLyricAlways: true
-    }
+        scrollLyricAlways: true,
+    },
 })
 
 export const scrollLyricForPlayAutoScroll = index => ({
@@ -51,11 +51,11 @@ export const scrollLyricForPlayAutoScroll = index => ({
     payload: {
         scrollLyricLog: 'Play scrolled',
         scrollLyricIndex: index,
-        scrollLyricFromAutoScroll: true
-    }
+        scrollLyricFromAutoScroll: true,
+    },
 })
 
 export const resetScrollLyricStore = () => ({
     type: SCROLL_LYRIC_STORE,
-    payload: SCROLL_LYRIC_DEFAULTS
+    payload: SCROLL_LYRIC_DEFAULTS,
 })

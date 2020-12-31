@@ -9,7 +9,7 @@ import { mapCanStageReset } from '../../redux/scene/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
-    mapSelectedAnnotationIndex
+    mapSelectedAnnotationIndex,
 } from '../../redux/selected/selector'
 
 const SongChangeManager = () => {
@@ -40,7 +40,7 @@ const SongChangeManager = () => {
                      * There is no scene scroll upon song select, so just set
                      * this to true here and now.
                      */
-                    isSceneScrollComplete: true
+                    isSceneScrollComplete: true,
                 })), 200)
             )
 
@@ -53,7 +53,7 @@ const SongChangeManager = () => {
         if (didMount) {
             if (canStageReset) {
                 setTimeout(() => dispatch(updateEntranceStore({
-                    didStageReset: true
+                    didStageReset: true,
 
                 // This seems to be the time needed for presences to unmount.
                 })), 150)
@@ -69,7 +69,7 @@ const SongChangeManager = () => {
                 dispatch(updateLyricStore({
                     lyricSongIndex: selectedSongIndex,
                     lyricVerseIndex: selectedVerseIndex,
-                    lyricAnnotationIndex: selectedAnnotationIndex
+                    lyricAnnotationIndex: selectedAnnotationIndex,
                 }))
 
                 // Scroll upon completion of subsequent song changes.

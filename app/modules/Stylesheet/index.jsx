@@ -9,7 +9,7 @@ const Stylesheet = ({
     indices,
     parentPrefix,
     childPrefix,
-    getStyle
+    getStyle,
 
 }) => (
     <style
@@ -22,7 +22,7 @@ const Stylesheet = ({
             indices,
             parentPrefix,
             childPrefix,
-            getStyle
+            getStyle,
         })}
     </style>
 )
@@ -32,7 +32,7 @@ Stylesheet.propTypes = {
     indices: PropTypes.array.isRequired,
     parentPrefix: PropTypes.string,
     childPrefix: PropTypes.string.isRequired,
-    getStyle: PropTypes.func.isRequired
+    getStyle: PropTypes.func.isRequired,
 }
 
 export default Stylesheet

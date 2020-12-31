@@ -27,7 +27,7 @@ const OverviewPopup = ({ inMain = false }) => {
             {...{
                 popupName: 'OverviewPopup',
                 isVisible: isOverviewPopupVisible,
-                noFlexCentre: inMain
+                noFlexCentre: inMain,
             }}
         >
             {getIsServerSide() ? (
@@ -40,7 +40,7 @@ const OverviewPopup = ({ inMain = false }) => {
 }
 
 OverviewPopup.propTypes = {
-    inMain: PropTypes.bool
+    inMain: PropTypes.bool,
 }
 
 export default OverviewPopup

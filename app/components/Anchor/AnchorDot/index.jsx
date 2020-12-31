@@ -11,7 +11,7 @@ import './style'
 const AnchorDot = ({
     isAccessed,
     isSelected,
-    dotsBit
+    dotsBit,
 
 }) => {
     const selectedDotKey = useSelector(getMapFirstSelectedDotKey(dotsBit))
@@ -23,7 +23,7 @@ const AnchorDot = ({
                     isDotAnchor
                     {...{
                         isAccessed,
-                        isSelected
+                        isSelected,
                     }}
                 />
             )}
@@ -37,7 +37,7 @@ const AnchorDot = ({
                         ),
                         dotKey: selectedDotKey,
                         isAccessed,
-                        isSelected
+                        isSelected,
                     }}
                 />
             )}
@@ -48,7 +48,7 @@ const AnchorDot = ({
 AnchorDot.propTypes = {
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
-    dotsBit: PropTypes.number.isRequired
+    dotsBit: PropTypes.number.isRequired,
 }
 
 export default memo(AnchorDot)

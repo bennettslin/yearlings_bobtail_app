@@ -3,5 +3,5 @@ import remainingV2 from './remaining/v2'
 
 export default [
     ...completedV2,
-    ...remainingV2
+    ...remainingV2,
 ]

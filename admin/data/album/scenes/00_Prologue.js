@@ -11,11 +11,11 @@ export default [
             [ACTOR]: {
                 [OLD_BENNETT]: {
                     description: 'standing, facing forward, welcoming',
-                    instance: PROLOGUE
-                }
-            }
+                    instance: PROLOGUE,
+                },
+            },
         },
         cubes: LOGUE_KEY,
-        sky: { season: SEASON_STAGE }
-    }
+        sky: { season: SEASON_STAGE },
+    },
 ]

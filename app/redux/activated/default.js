@@ -1,3 +1,3 @@
 export const ACTIVATED_DEFAULTS = {
-    activatedVerseIndex: -1
+    activatedVerseIndex: -1,
 }

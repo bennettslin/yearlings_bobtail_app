@@ -6,15 +6,15 @@ import {
     SASHA,
     BRAD,
     ANDREW,
-    TRISTAN
+    TRISTAN,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     THROWING,
-    NOODLING
+    NOODLING,
 } from '../../../../../../../app/constants/scene/actors/andrew'
 import {
     GESTURING,
-    SNACKING
+    SNACKING,
 } from '../../../../../../../app/constants/scene/actors/brad'
 import { STARING } from '../../../../../../../app/constants/scene/actors/christopher'
 import { BLISSFUL_GUILTY } from '../../../../../../../app/constants/scene/actors/christopherBennett'
@@ -24,7 +24,7 @@ import {
     SHAKEN,
     STOIC,
     WISTFUL,
-    SHEEPISH
+    SHEEPISH,
 } from '../../../../../../../app/constants/scene/actors/preteenBennett'
 import { POPULAR_GIRL } from '../../../../../../../app/constants/scene/actors/sasha'
 import { ASLEEP } from '../../../../../../../app/constants/scene/actors/songs'
@@ -35,94 +35,94 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    instance: BLISSFUL_GUILTY
+                    instance: BLISSFUL_GUILTY,
                 },
                 [CHRISTOPHER]: {
-                    instance: BLISSFUL_GUILTY
-                }
-            }
-        }
+                    instance: BLISSFUL_GUILTY,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    instance: FEIGNING_SICK
-                }
-            }
-        }
+                    instance: FEIGNING_SICK,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    instance: ASLEEP
-                }
-            }
-        }
+                    instance: ASLEEP,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    instance: SHAKEN
-                }
-            }
-        }
+                    instance: SHAKEN,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    instance: STOIC
+                    instance: STOIC,
                 },
                 [BRAD]: {
-                    instance: GESTURING
+                    instance: GESTURING,
                 },
                 [ANDREW]: {
-                    instance: THROWING
-                }
-            }
-        }
+                    instance: THROWING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    instance: WISTFUL
+                    instance: WISTFUL,
                 },
                 [BRAD]: {
-                    instance: SNACKING
+                    instance: SNACKING,
                 },
                 [ANDREW]: {
-                    instance: NOODLING
+                    instance: NOODLING,
                 },
                 [SASHA]: {
                     popularGirl: {
-                        instance: POPULAR_GIRL
-                    }
-                }
-            }
-        }
+                        instance: POPULAR_GIRL,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    instance: SHEEPISH
+                    instance: SHEEPISH,
                 },
                 [CHRISTOPHER]: {
-                    instance: STARING
+                    instance: STARING,
                 },
                 [MOTHER]: {
-                    instance: ARGUING
+                    instance: ARGUING,
                 },
                 [TRISTAN]: {
                     principal: {
-                        instance: PRINCIPAL
-                    }
-                }
-            }
-        }
-    }
+                        instance: PRINCIPAL,
+                    },
+                },
+            },
+        },
+    },
 ]

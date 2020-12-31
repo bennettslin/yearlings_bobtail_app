@@ -6,13 +6,13 @@ import {
     DOOR,
     FIXTURE,
     PANEL,
-    PUPPET
+    PUPPET,
 } from '../../../../app/constants/scene/things'
 import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_DARK_KEY,
-    LIZ_COUCH_PEAFOWL_KEY
+    LIZ_COUCH_PEAFOWL_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_DAWN,
@@ -22,16 +22,16 @@ import {
     TIME_EVENING,
     TIME_NIGHT,
     SEASON_AUTUMN,
-    SEASON_FUTURE
+    SEASON_FUTURE,
 } from '../../../../app/constants/scene/sky'
 import {
     LIZ,
-    KHARI
+    KHARI,
 } from '../../../../app/constants/scene/actors'
 import {
     ARRIVED,
     JUDGMENTAL,
-    CONCERNED
+    CONCERNED,
 } from '../../../../app/constants/scene/actors/khari'
 import {
     PETTING_SEATED,
@@ -40,7 +40,7 @@ import {
     OPENING_DOOR,
     DEFENDING,
     NOT_HUNGRY,
-    ASLEEP_COUCH
+    ASLEEP_COUCH,
 } from '../../../../app/constants/scene/actors/liz'
 import { OAKLAND_SIDE__LIZ_COUCH } from '../../../../app/constants/scene/things/backdrops'
 import {
@@ -58,18 +58,18 @@ import {
     BUBBLE_SMALL__REUNION,
     BUBBLE_MEDIUM__REUNION,
     BUBBLE_LARGE__REUNION,
-    LIZ_THOUGHT_REUNION
+    LIZ_THOUGHT_REUNION,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     CYPRESS_DOUBLE__LIZ_COUCH,
     CYPRESS_SINGLE__LIZ_COUCH,
-    TRAFFIC_LIGHT_REAR
+    TRAFFIC_LIGHT_REAR,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_INSIDE_OPEN,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
-    LIZ_GATE_INSIDE
+    LIZ_GATE_INSIDE,
 } from '../../../../app/constants/scene/things/doors'
 import { TCHOTCHKES } from '../../../../app/constants/scene/things/fixtures'
 import { LIZ_COUCH__ROOM, LIZ_OTTOMAN } from '../../../../app/constants/scene/things/panels'
@@ -77,7 +77,7 @@ import {
     OPAL_COUCH__ROOM,
     OPAL_GAZING,
     PEACOCK,
-    PEAHEN
+    PEAHEN,
 } from '../../../../app/constants/scene/things/puppets'
 
 export default [
@@ -89,24 +89,24 @@ export default [
                 [LIZ]: {
                     sita: {
                         description: 'side, seated, petting cat, sad',
-                        instance: PETTING_SEATED
-                    }
-                }
+                        instance: PETTING_SEATED,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
-            }
+                [LIZ_COUCH__ROOM]: true,
+            },
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_DAWN, season: SEASON_AUTUMN }
+        sky: { time: TIME_DAWN, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 2,
@@ -116,24 +116,24 @@ export default [
                 [LIZ]: {
                     sita: {
                         description: 'side, standing, petting cat, exhausted',
-                        instance: PETTING_STANDING
-                    }
-                }
+                        instance: PETTING_STANDING,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
-            }
+                [LIZ_COUCH__ROOM]: true,
+            },
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_MORNING, season: SEASON_AUTUMN }
+        sky: { time: TIME_MORNING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 4,
@@ -143,37 +143,37 @@ export default [
                 [LIZ]: {
                     sita: {
                         description: 'side, seated, pensive',
-                        instance: SIFTING_TCHOTCHKES
-                    }
-                }
+                        instance: SIFTING_TCHOTCHKES,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__TCHOTCHKES]: true,
                 [BUBBLE_MEDIUM__TCHOTCHKES]: true,
                 [BUBBLE_LARGE__TCHOTCHKES]: true,
                 [LIZ_THOUGHT_DINING]: true,
-                [LIZ_THOUGHT_BUSING]: true
+                [LIZ_THOUGHT_BUSING]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [FIXTURE]: {
-                [TCHOTCHKES]: true
+                [TCHOTCHKES]: true,
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
+                [LIZ_COUCH__ROOM]: true,
             },
             [PUPPET]: {
-                [OPAL_COUCH__ROOM]: true
-            }
+                [OPAL_COUCH__ROOM]: true,
+            },
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_NOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_NOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 6,
@@ -183,34 +183,34 @@ export default [
                 [LIZ]: {
                     sita: {
                         description: 'side angle, glumly welcoming',
-                        instance: OPENING_DOOR
-                    }
+                        instance: OPENING_DOOR,
+                    },
                 },
                 [KHARI]: {
                     description: 'side, cheery in a low-key way',
-                    instance: ARRIVED
-                }
+                    instance: ARRIVED,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__DISHROOM]: true,
                 [BUBBLE_MEDIUM__DISHROOM]: true,
                 [BUBBLE_LARGE__DISHROOM]: true,
-                [LIZ_THOUGHT_DISHROOM]: true
+                [LIZ_THOUGHT_DISHROOM]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR_OPEN]: true,
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
-            }
+                [LIZ_COUCH__ROOM]: true,
+            },
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 8,
@@ -220,32 +220,32 @@ export default [
                 [LIZ]: {
                     sita: {
                         description: 'side, seated, defensive',
-                        instance: DEFENDING
-                    }
+                        instance: DEFENDING,
+                    },
                 },
                 [KHARI]: {
                     description: 'side, seated, eating, judgmental',
-                    instance: JUDGMENTAL
-                }
+                    instance: JUDGMENTAL,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [BUBBLE]: {
-                [KHARI_SPEECH_ATTACK]: true
+                [KHARI_SPEECH_ATTACK]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [PANEL]: {
                 [LIZ_COUCH__ROOM]: true,
-                [LIZ_OTTOMAN]: true
-            }
+                [LIZ_OTTOMAN]: true,
+            },
         },
         cubes: LIZ_COUCH_SEAT_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 9,
@@ -255,32 +255,32 @@ export default [
                 [LIZ]: {
                     sita: {
                         description: 'side, seated, defensive',
-                        instance: DEFENDING
-                    }
+                        instance: DEFENDING,
+                    },
                 },
                 [KHARI]: {
                     description: 'side, seated, eating, judgmental',
-                    instance: JUDGMENTAL
-                }
+                    instance: JUDGMENTAL,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [BUBBLE]: {
-                [LIZ_SPEECH_DEFENCE]: true
+                [LIZ_SPEECH_DEFENCE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [PANEL]: {
                 [LIZ_COUCH__ROOM]: true,
-                [LIZ_OTTOMAN]: true
-            }
+                [LIZ_OTTOMAN]: true,
+            },
         },
         cubes: LIZ_COUCH_SEAT_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 10,
@@ -290,28 +290,28 @@ export default [
                 [LIZ]: {
                     sita: {
                         description: 'side, seated, exhausted',
-                        instance: NOT_HUNGRY
-                    }
+                        instance: NOT_HUNGRY,
+                    },
                 },
                 [KHARI]: {
                     description: 'back angle, concerned',
-                    instance: CONCERNED
-                }
+                    instance: CONCERNED,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
-            }
+                [LIZ_COUCH__ROOM]: true,
+            },
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN }
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 11,
@@ -321,33 +321,33 @@ export default [
                 [LIZ]: {
                     sita: {
                         description: 'side, seated, asleep',
-                        instance: ASLEEP_COUCH
-                    }
-                }
+                        instance: ASLEEP_COUCH,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__REUNION]: true,
                 [BUBBLE_MEDIUM__REUNION]: true,
                 [BUBBLE_LARGE__REUNION]: true,
-                [LIZ_THOUGHT_REUNION]: true
+                [LIZ_THOUGHT_REUNION]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
+                [LIZ_COUCH__ROOM]: true,
             },
             [PUPPET]: {
-                [OPAL_GAZING]: true
-            }
+                [OPAL_GAZING]: true,
+            },
         },
         cubes: LIZ_COUCH_DARK_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 12,
@@ -357,30 +357,30 @@ export default [
                 [LIZ]: {
                     sita: {
                         description: 'side, seated, asleep',
-                        instance: ASLEEP_COUCH
-                    }
-                }
+                        instance: ASLEEP_COUCH,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LIZ_COUCH]: true
+                [OAKLAND_SIDE__LIZ_COUCH]: true,
             },
             [CUTOUT]: {
                 [CYPRESS_DOUBLE__LIZ_COUCH]: true,
                 [CYPRESS_SINGLE__LIZ_COUCH]: true,
-                [TRAFFIC_LIGHT_REAR]: true
+                [TRAFFIC_LIGHT_REAR]: true,
             },
             [DOOR]: {
-                [LIZ_GATE_INSIDE]: true
+                [LIZ_GATE_INSIDE]: true,
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
+                [LIZ_COUCH__ROOM]: true,
             },
             [PUPPET]: {
                 [PEACOCK]: true,
-                [PEAHEN]: true
-            }
+                [PEAHEN]: true,
+            },
         },
         cubes: LIZ_COUCH_PEAFOWL_KEY,
-        sky: { season: SEASON_FUTURE }
-    }
+        sky: { season: SEASON_FUTURE },
+    },
 ]

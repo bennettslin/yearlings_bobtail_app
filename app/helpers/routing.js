@@ -2,7 +2,7 @@ import qs from 'qs'
 import {
     getPathname,
     getIndexFromPath,
-    getValidPitchIndex
+    getValidPitchIndex,
 } from './pathname'
 import { getIsSongValid } from '../api/album/songs'
 import { getIsVerseValid } from '../api/album/verses'

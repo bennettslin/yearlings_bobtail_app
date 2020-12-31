@@ -8,7 +8,7 @@ import {
     PANICKED,
     FLUSTERED,
     BATHING,
-    SINGING
+    SINGING,
 } from '../../../../constants/scene/actors/youngBennett'
 
 import { YOUNG_CHILD } from '../../../../constants/scene/actors/songs'
@@ -18,5 +18,5 @@ export default {
     [FLUSTERED]: flustered,
     [BATHING]: bathing,
     [SINGING]: singing,
-    [YOUNG_CHILD]: youngChild
+    [YOUNG_CHILD]: youngChild,
 }

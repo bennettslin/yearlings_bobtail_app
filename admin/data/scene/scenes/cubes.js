@@ -135,5 +135,5 @@ export default {
     ...CUBES_PAMPAS,
     ...CUBES_WEDDING,
     ...CUBES_CLIFF,
-    ...CUBES_DEATHBED
+    ...CUBES_DEATHBED,
 }

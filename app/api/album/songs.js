@@ -76,11 +76,11 @@ export const getOverviewForSong = songIndex => (
 export const getEarStatusForSong = songIndex => {
     const {
         hasSideCards,
-        isDoublespeaker
+        isDoublespeaker,
     } = getSong(songIndex)
 
     return {
         hasSideCards,
-        isDoublespeaker
+        isDoublespeaker,
     }
 }

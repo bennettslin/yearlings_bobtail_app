@@ -1,7 +1,7 @@
 import {
     SHOWN,
     HIDDEN,
-    DISABLED
+    DISABLED,
 } from '../constants/options'
 
 export const getIsShown = option => option === SHOWN
@@ -10,7 +10,7 @@ export const getNextOption = ({
     isFromToggle,
     isShownNext,
     prevOption,
-    nextOption
+    nextOption,
 
 }) => {
     // Obviously, if next option is shown, return shown.
@@ -43,7 +43,7 @@ const _getHasInitialToggleConditions = ({
     isDotsSlideShown,
     isOverlayShown,
     isLyricExpanded,
-    isActivated
+    isActivated,
 }) => (
     Boolean(lyricAnnotationIndex) ||
         isDotsSlideShown ||
@@ -58,7 +58,7 @@ export const getIsOverviewShownNext = ({
     isDotsSlideShown,
     isOverlayShown,
     isLyricExpanded,
-    isActivated
+    isActivated,
 
 }) => (
     // Show overview immediately under these conditions.
@@ -67,7 +67,7 @@ export const getIsOverviewShownNext = ({
         isDotsSlideShown,
         isOverlayShown,
         isLyricExpanded,
-        isActivated
+        isActivated,
     })
 )
 
@@ -78,7 +78,7 @@ export const getIsTipsShownNext = ({
     isDotsSlideShown,
     isOverlayShown,
     isLyricExpanded,
-    isActivated
+    isActivated,
 
 }) => (
     // Show tips immediately under these conditions.
@@ -87,14 +87,14 @@ export const getIsTipsShownNext = ({
         isDotsSlideShown,
         isOverlayShown,
         isLyricExpanded,
-        isActivated
+        isActivated,
     })
 )
 
 export const getOverviewTipsForNewSong = ({
     isSelectedLogue,
     selectedOverviewOption,
-    selectedTipsOption
+    selectedTipsOption,
 
 }) => ({
     selectedOverviewOption,
@@ -103,18 +103,18 @@ export const getOverviewTipsForNewSong = ({
     ...isSelectedLogue ? {
         // If shown, hide when now in logue.
         ...selectedOverviewOption === SHOWN && {
-            selectedOverviewOption: HIDDEN
+            selectedOverviewOption: HIDDEN,
         },
         ...selectedTipsOption === SHOWN && {
-            selectedTipsOption: HIDDEN
-        }
+            selectedTipsOption: HIDDEN,
+        },
     } : {
         // If just hidden, show when now in new song.
         ...selectedOverviewOption === HIDDEN && {
-            selectedOverviewOption: SHOWN
+            selectedOverviewOption: SHOWN,
         },
         ...selectedTipsOption === HIDDEN && {
-            selectedTipsOption: SHOWN
-        }
-    }
+            selectedTipsOption: SHOWN,
+        },
+    },
 })

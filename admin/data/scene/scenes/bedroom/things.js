@@ -6,11 +6,11 @@ import {
     FIXTURE,
     FLAT,
     FURNITURE,
-    PANEL
+    PANEL,
 } from '../../../../../app/constants/scene/things'
 import {
     SKETCH_DOGS_ROCKET,
-    SKETCHBOOK__DOGS_ROCKET
+    SKETCHBOOK__DOGS_ROCKET,
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
     TINTIN_POSTER,
@@ -18,17 +18,17 @@ import {
     EARTH__ROCKET,
     DOGS_ROCKET,
     EARTH__STATION,
-    SPACE_STATION
+    SPACE_STATION,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
     LEMON_TREE__BEDROOM,
     ROSEBUSH_SLANTED_DOUBLE,
-    ROSEBUSH_SLANTED_SINGLE
+    ROSEBUSH_SLANTED_SINGLE,
 } from '../../../../../app/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS,
     BEDROOM_BLINDS_OPEN,
-    BEDROOM_FENCE
+    BEDROOM_FENCE,
 } from '../../../../../app/constants/scene/things/doors'
 import {
     LETTER_SCRAPS__CHRISTOPHER,
@@ -40,17 +40,17 @@ import {
     TORN_MAGAZINES__BENNETT,
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
-    BEYONDER_ENVELOPE
+    BEYONDER_ENVELOPE,
 } from '../../../../../app/constants/scene/things/fixtures'
 import {
     BEDROOM_SIREN,
-    BEDROOM_BUS
+    BEDROOM_BUS,
 } from '../../../../../app/constants/scene/things/flats'
 import { CAPTAIN_BED_PILLOW } from '../../../../../app/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
-    CAPTAIN_BED
+    CAPTAIN_BED,
 } from '../../../../../app/constants/scene/things/panels'
 import { SKETCH_CONFIG } from '../../sharedConfigs'
 
@@ -65,7 +65,7 @@ export default {
             rotate: -15,
             rotateY: 300,
             skewX: -15,
-            skewY: 9
+            skewY: 9,
         },
         [BLOOM_COUNTY_POSTER]: {
             yIndex: 5,
@@ -76,57 +76,57 @@ export default {
             rotate: -15,
             rotateY: 300,
             skewX: -15,
-            skewY: 9
-        }
+            skewY: 9,
+        },
     },
     [CUTOUT]: {
         [LEMON_TREE__BEDROOM]: {
             xPosition: 6.9,
             zOffset: -0.5,
-            scaleFactor: 0.7
+            scaleFactor: 0.7,
         },
         [ROSEBUSH_SLANTED_DOUBLE]: {
             xPosition: 1.75,
             zOffset: -0.5,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
         },
         [ROSEBUSH_SLANTED_SINGLE]: {
             xPosition: 10.75,
             zOffset: -0.5,
-            scaleFactor: 0.3
-        }
+            scaleFactor: 0.3,
+        },
     },
     [DOOR]: {
         [BEDROOM_FENCE]: {
             zOffset: -0.5,
-            scaleFactor: 0.5
+            scaleFactor: 0.5,
         },
         [BEDROOM_BLINDS]: {
             yIndex: 3,
             xPosition: 2.8,
             zOffset: 0.125,
-            scaleFactor: 0.65
+            scaleFactor: 0.65,
         },
         [BEDROOM_BLINDS_OPEN]: {
             yIndex: 3,
             xPosition: 2.8,
             zOffset: 0.125,
-            scaleFactor: 0.65
-        }
+            scaleFactor: 0.65,
+        },
     },
     [FIXTURE]: {
         [BEDROOM_LAMP__DESK]: {
             yIndex: 2,
             xPosition: 3.6,
             zOffset: -0.04,
-            layerYIndex: 3
-        }
+            layerYIndex: 3,
+        },
     },
     [FURNITURE]: {
         [CAPTAIN_BED_PILLOW]: {
             yIndex: 2,
-            xPosition: 7
-        }
+            xPosition: 7,
+        },
     },
     [PANEL]: {
         [BEDROOM_DESK]: {
@@ -134,37 +134,37 @@ export default {
             xPosition: 3.15,
             zOffset: 0.01,
             scaleFactor: 0.225,
-            layerYIndex: 3
+            layerYIndex: 3,
         },
         [BEDROOM_STOOL]: {
             yIndex: 5,
             xPosition: 4.6,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
         },
         [CAPTAIN_BED]: {
             yIndex: 5,
             xPosition: 7.5,
-            scaleFactor: 0.2
-        }
-    }
+            scaleFactor: 0.2,
+        },
+    },
 }
 
 export const THINGS_BEDROOM_ENRAGED = {
     [FIXTURE]: {
         [LETTER_SCRAPS__CHRISTOPHER]: {
             yIndex: 4,
-            xPosition: 5.3
+            xPosition: 5.3,
         },
         [TORN_MAGAZINES__CHRISTOPHER]: {
             yIndex: 5,
             xPosition: 3,
-            zOffset: -0.1
+            zOffset: -0.1,
         },
         [CHRISTOPHER_LETTERS]: {
             yIndex: 5,
-            xPosition: 5.1
-        }
-    }
+            xPosition: 5.1,
+        },
+    },
 }
 
 export const THINGS_BEDROOM_FEARFUL = {
@@ -172,9 +172,9 @@ export const THINGS_BEDROOM_FEARFUL = {
         [BEDROOM_SIREN]: {
             xPosition: 2,
             zOffset: 2.25,
-            scaleFactor: 0.425
-        }
-    }
+            scaleFactor: 0.425,
+        },
+    },
 }
 
 export const THINGS_BEDROOM_GUILTY = {
@@ -183,54 +183,54 @@ export const THINGS_BEDROOM_GUILTY = {
             yIndex: 5,
             xPosition: 3,
             zOffset: 1.5,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
         },
         [SKETCH_DOGS_ROCKET]: {
             ...SKETCH_CONFIG,
             xPosition: 2.85,
-            zOffset: 2.15
-        }
+            zOffset: 2.15,
+        },
     },
     [FIXTURE]: {
         [BEDROOM_LAMP__BED]: {
             yIndex: 4,
             xPosition: 9.3,
             zOffset: -0.05,
-            layerYIndex: 5
+            layerYIndex: 5,
         },
         [LETTER_SCRAPS__BENNETT]: {
             yIndex: 4,
             xPosition: 6,
             zOffset: -0.07,
-            layerYIndex: 5
+            layerYIndex: 5,
         },
         [TORN_MAGAZINES__BENNETT]: {
             yIndex: 4,
             xPosition: 5.8,
-            layerYIndex: 5
+            layerYIndex: 5,
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,
             xPosition: 7.2,
-            zOffset: -0.05
-        }
-    }
+            zOffset: -0.05,
+        },
+    },
 }
 
 export const THINGS_BEDROOM_FEIGNING = {
     [FIXTURE]: {
         [RED_ENVELOPE_MONEY]: {
             yIndex: 5,
-            xPosition: 5.4
-        }
+            xPosition: 5.4,
+        },
     },
     [FLAT]: {
         [BEDROOM_BUS]: {
             xPosition: 2,
             zOffset: 2.25,
-            scaleFactor: 0.5
-        }
-    }
+            scaleFactor: 0.5,
+        },
+    },
 }
 
 export const THINGS_BEDROOM_ASLEEP = {
@@ -240,15 +240,15 @@ export const THINGS_BEDROOM_ASLEEP = {
             xPosition: 1.9,
             zOffset: 1.7,
             scaleFactor: 0.6,
-            rotate: 180
+            rotate: 180,
         },
         [DOGS_ROCKET]: {
             yIndex: 4,
             xPosition: 2.5,
             zOffset: 2.9,
-            scaleFactor: 0.25
-        }
-    }
+            scaleFactor: 0.25,
+        },
+    },
 }
 
 export const THINGS_BEDROOM_SHAKEN = {
@@ -256,21 +256,21 @@ export const THINGS_BEDROOM_SHAKEN = {
         [BEYONDER_ENVELOPE]: {
             yIndex: 3,
             xPosition: 2,
-            zOffset: -0.1
-        }
+            zOffset: -0.1,
+        },
     },
     [CARDBOARD]: {
         [EARTH__STATION]: {
             yIndex: 4,
             xPosition: 6.7,
             zOffset: 5.5,
-            scaleFactor: 0.2
+            scaleFactor: 0.2,
         },
         [SPACE_STATION]: {
             yIndex: 4,
             xPosition: 8,
             zOffset: 1.5,
-            scaleFactor: 0.35
-        }
-    }
+            scaleFactor: 0.35,
+        },
+    },
 }

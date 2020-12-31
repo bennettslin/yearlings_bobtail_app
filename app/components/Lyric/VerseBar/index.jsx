@@ -10,7 +10,7 @@ import { updateIsAutoScroll } from '../../../redux/toggle/action'
 import { getMapVerseCursorIndex } from '../../../redux/cursor/selector'
 import {
     mapLyricSongIndex,
-    mapIsLyricLogue
+    mapIsLyricLogue,
 } from '../../../redux/lyric/selector'
 import { getMapIsVerseBarShown } from '../../../redux/verseBars/selector'
 import './style'
@@ -28,7 +28,7 @@ const VerseBar = () => {
                 verseObject: getVerse(
                     lyricSongIndex,
                     verseCursorIndex
-                )
+                ),
             }}
         />
     )
@@ -37,7 +37,7 @@ const VerseBar = () => {
 const VerseBarContainer = ({
     didMount,
     isAbove = false,
-    onWheel
+    onWheel,
 
 }) => {
     const
@@ -67,7 +67,7 @@ const VerseBarContainer = ({
                     isVerseBarShown && 'VerseBar__shown'
                 ),
                 onWheel,
-                onClick
+                onClick,
             }}
         >
             <div
@@ -87,7 +87,7 @@ const VerseBarContainer = ({
 VerseBarContainer.propTypes = {
     didMount: PropTypes.bool.isRequired,
     isAbove: PropTypes.bool,
-    onWheel: PropTypes.func.isRequired
+    onWheel: PropTypes.func.isRequired,
 }
 
 export default memo(getDidMountHoc(VerseBarContainer))

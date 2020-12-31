@@ -4,18 +4,18 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateIsWindowResizeDone } from '../../redux/entrance/action'
 import {
     updateViewportStore,
-    updateViewportPitchStore
+    updateViewportPitchStore,
 } from '../../redux/viewport/action'
 import { getWindowDimensions } from '../../helpers/resize/device'
 import { getWindow } from '../../utils/browser'
 import {
     mapWindowWidth,
-    mapWindowHeight
+    mapWindowHeight,
 } from '../../redux/viewport/selector'
 
 const ResizeManager = ({
     isInPitch,
-    getResizeContainerElement
+    getResizeContainerElement,
 }) => {
     const
         dispatch = useDispatch(),
@@ -27,24 +27,24 @@ const ResizeManager = ({
     timeoutRef.current = {
         windowWidth,
         windowHeight,
-        windowResizeTimeoutId
+        windowResizeTimeoutId,
     }
 
     const beginEnterTransition = () => {
         const {
             windowHeight,
-            windowWidth
+            windowWidth,
         } = getWindowDimensions(getResizeContainerElement())
 
         if (isInPitch) {
             dispatch(updateViewportPitchStore({
                 windowWidth,
-                windowHeight
+                windowHeight,
             }))
         } else {
             dispatch(updateViewportStore({
                 windowWidth,
-                windowHeight
+                windowHeight,
             }))
         }
 
@@ -61,7 +61,7 @@ const ResizeManager = ({
         const
             {
                 windowHeight: nextHeight,
-                windowWidth: nextWidth
+                windowWidth: nextWidth,
             } = getWindowDimensions(getResizeContainerElement())
 
         if (
@@ -95,7 +95,7 @@ const ResizeManager = ({
 
 ResizeManager.propTypes = {
     isInPitch: PropTypes.bool,
-    getResizeContainerElement: PropTypes.func.isRequired
+    getResizeContainerElement: PropTypes.func.isRequired,
 }
 
 export default memo(ResizeManager)

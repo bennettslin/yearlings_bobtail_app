@@ -16,7 +16,7 @@ import {
     getSubsequentForUnit,
     getVerseIndicesForUnit,
     getIsSideCardOnBottomForUnit,
-    getSideCardForUnit
+    getSideCardForUnit,
 } from '../../api/album/units'
 import { mapIsEarShown } from '../../redux/ear/selector'
 import './style'
@@ -56,9 +56,9 @@ const Unit = forwardRef(({
 
                         isSubsequent ?
                             'Unit__subsequent' :
-                            'Unit__notSubsequent'
+                            'Unit__notSubsequent',
                     ]
-                )
+                ),
             }}
         >
             {unitIndex === 0 && (
@@ -72,8 +72,8 @@ const Unit = forwardRef(({
                                 'Unit__column__text',
                                 'Unit__column',
                                 'Unit__column__main'
-                            )
-                        }
+                            ),
+                        },
                     }}
                 >
                     <UnitCard
@@ -81,7 +81,7 @@ const Unit = forwardRef(({
                         {...{
                             ref,
                             unitIndex,
-                            ...other
+                            ...other,
                         }}
                     />
                     <UnitCard
@@ -89,7 +89,7 @@ const Unit = forwardRef(({
                         {...{
                             ref,
                             unitIndex,
-                            ...other
+                            ...other,
                         }}
                     />
                 </div>
@@ -105,8 +105,8 @@ const Unit = forwardRef(({
 
                                 // This happens only once, in Golden Cord.
                                 isBottomSideCard && 'Unit__column__hasBottomSideCard'
-                            )
-                        }
+                            ),
+                        },
                     }}
                 >
                     <UnitCard
@@ -114,7 +114,7 @@ const Unit = forwardRef(({
                         {...{
                             ref,
                             unitIndex,
-                            ...other
+                            ...other,
                         }}
                     />
                     <UnitCard
@@ -122,7 +122,7 @@ const Unit = forwardRef(({
                         {...{
                             ref,
                             unitIndex,
-                            ...other
+                            ...other,
                         }}
                     />
                 </div>
@@ -130,7 +130,7 @@ const Unit = forwardRef(({
             <UnitDot
                 {...{
                     ref,
-                    unitIndex
+                    unitIndex,
                 }}
             />
         </div>
@@ -140,7 +140,7 @@ const Unit = forwardRef(({
 Unit.propTypes = {
     didMount: PropTypes.bool.isRequired,
     serverClientSongIndex: PropTypes.number.isRequired,
-    unitIndex: PropTypes.number.isRequired
+    unitIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getDidMountHoc(getSongServerClientHoc(Unit)))

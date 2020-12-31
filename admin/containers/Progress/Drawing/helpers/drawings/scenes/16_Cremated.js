@@ -1,21 +1,21 @@
 import { ACTOR } from '../../../../../../../app/constants/scene'
 import {
     BENNETT,
-    MIRIAM
+    MIRIAM,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     REMOVING_PANTS,
     INFIRM,
-    DISPOSING_CONDOM
+    DISPOSING_CONDOM,
 } from '../../../../../../../app/constants/scene/actors/bennett'
 import {
     PERFUMING,
     TENNIS,
-    REVERSING
+    REVERSING,
 } from '../../../../../../../app/constants/scene/actors/miriam'
 import {
     COWGIRL,
-    BLOWJOB
+    BLOWJOB,
 } from '../../../../../../../app/constants/scene/actors/miriamBennett'
 
 export default [
@@ -23,66 +23,66 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: REMOVING_PANTS
+                    instance: REMOVING_PANTS,
                 },
                 [MIRIAM]: {
-                    instance: PERFUMING
-                }
-            }
-        }
+                    instance: PERFUMING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    instance: COWGIRL
+                    instance: COWGIRL,
                 },
                 [BENNETT]: {
-                    instance: COWGIRL
-                }
-            }
-        }
+                    instance: COWGIRL,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    instance: BLOWJOB
+                    instance: BLOWJOB,
                 },
                 [BENNETT]: {
-                    instance: BLOWJOB
-                }
-            }
-        }
-    },
-    {
-        presences: {
-            [ACTOR]: {
-                [BENNETT]: {
-                    instance: INFIRM
-                }
-            }
-        }
-    },
-    {
-        presences: {
-            [ACTOR]: {
-                [MIRIAM]: {
-                    instance: TENNIS
-                }
-            }
-        }
+                    instance: BLOWJOB,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: DISPOSING_CONDOM
+                    instance: INFIRM,
+                },
+            },
+        },
+    },
+    {
+        presences: {
+            [ACTOR]: {
+                [MIRIAM]: {
+                    instance: TENNIS,
+                },
+            },
+        },
+    },
+    {
+        presences: {
+            [ACTOR]: {
+                [BENNETT]: {
+                    instance: DISPOSING_CONDOM,
                 },
                 [MIRIAM]: {
-                    instance: REVERSING
-                }
-            }
-        }
-    }
+                    instance: REVERSING,
+                },
+            },
+        },
+    },
 ]

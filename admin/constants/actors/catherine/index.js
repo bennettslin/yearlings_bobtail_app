@@ -1,35 +1,35 @@
 import {
-    CATHERINE
+    CATHERINE,
 } from '../../../../app/constants/scene/actors'
 import {
     WEEPING,
     QUIPPING,
-    PUZZLED
+    PUZZLED,
 } from '../../../../app/constants/scene/actors/catherine'
 import {
     EPILOGUE,
-    GOPI
+    GOPI,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: CATHERINE,
-        instance: WEEPING
+        instance: WEEPING,
     },
     {
         type: CATHERINE,
-        instance: QUIPPING
+        instance: QUIPPING,
     },
     {
         type: CATHERINE,
-        instance: PUZZLED
+        instance: PUZZLED,
     },
     {
         type: CATHERINE,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: CATHERINE,
-        instance: GOPI
-    }
+        instance: GOPI,
+    },
 ]

@@ -5,7 +5,7 @@ import {
     LINOLEUM_FLOOR_COLOUR as F,
     INDUSTRIAL_WALL_COLOUR as W,
     SCHOOL_WALL_COLOUR as Z,
-    CONCRETE_PLATFORM_COLOUR as P
+    CONCRETE_PLATFORM_COLOUR as P,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { a, f, g } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -15,13 +15,13 @@ export default {
         ceiling: {
             hslaColours: [
                 [Z],
-                [W]
+                [W],
             ],
             zIndices: [
                 [0],
                 [0, 0, f, f, f, f, f, 0],
-                [0, g, g, g, g, g, g, g, g, g, g, 0]
-            ]
+                [0, g, g, g, g, g, g, g, g, g, g, 0],
+            ],
         },
         floor: {
             hslaColours: [
@@ -30,7 +30,7 @@ export default {
                 [F, F, D, D, D, D, D, F, P, P, P, F],
                 [F, F, F, F, F, F, F, F, P, P, P, F],
                 [F, F, F, F, F, F, F, F, P, P, P, F],
-                [F, F, F, F, F, F, F, F, P, P, P, F]
+                [F, F, F, F, F, F, F, F, P, P, P, F],
             ],
             zIndices: [
                 [0],
@@ -38,8 +38,8 @@ export default {
                 [0, 0, 6, 6, 6, 6, 6, 0, 4, 4, 4, 0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 0],
                 [0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0],
-                [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0]
-            ]
-        }
-    }
+                [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0],
+            ],
+        },
+    },
 }

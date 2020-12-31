@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGCRAFT
+    SONGCRAFT,
 } from '../../../../app/constants/dots'
 
 import {
@@ -15,7 +15,7 @@ import {
     INTRO,
     OUTRO,
     FORESHADOW_OF_WORMHOLE_PREFIX,
-    IS_UNIT_DOT
+    IS_UNIT_DOT,
 } from '../../../../app/constants/lyrics'
 
 export default {
@@ -32,36 +32,36 @@ export default {
                     description: [
                         {
                             anchor: `John Osborne's`,
-                            wiki: `John_Osborne`
+                            wiki: `John_Osborne`,
                         },
                         `play`,
                         {
                             isItalic: true,
                             lyric: {
                                 anchor: `Look Back in Anger`,
-                                wiki: `Look_Back_in_Anger`
-                            }
+                                wiki: `Look_Back_in_Anger`,
+                            },
                         },
-                        `centers on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. It hit unnervingly close to home when I read it.`
+                        `centers on a young working-class man in postwar England whose disgruntled rage manifests in abusive tirades hurled at his long-suffering wife. It hit unnervingly close to home when I read it.`,
                     ],
                     dotKeys: {
-                        [BACKSTORY]: true
-                    }
-                }
-            }
+                        [BACKSTORY]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: INTRO
+                formType: INTRO,
             },
             mainVerses: [
                 {
                     time: 0,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(intro)`
-                    }
-                }
+                        lyric: `(intro)`,
+                    },
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -70,20 +70,20 @@ export default {
                         `A fellow dishroom worker named Owen had a`,
                         {
                             anchor: `four-track cassette recorder,`,
-                            wiki: `Portastudio`
+                            wiki: `Portastudio`,
                         },
-                        `and some nights we would go back to his place to twiddle with it. Owen would tap out these intricate yet impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`
+                        `and some nights we would go back to his place to twiddle with it. Owen would tap out these intricate yet impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
@@ -97,21 +97,21 @@ export default {
                                     `During the`,
                                     {
                                         anchor: `Civil War,`,
-                                        wiki: `American_Civil_War`
+                                        wiki: `American_Civil_War`,
                                     },
                                     `a`,
                                     {
                                         anchor: `color bearer`,
-                                        wiki: `Standard-bearer`
+                                        wiki: `Standard-bearer`,
                                     },
-                                    `carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth was an apt metaphor for my high school experience.`
+                                    `carried the flag of his respective side onto the battlefield. Charging headlong into a volley of musket fire while twirling a piece of cloth was an apt metaphor for my high school experience.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 13,
@@ -124,24 +124,24 @@ export default {
                                         `An`,
                                         {
                                             anchor: `aglet`,
-                                            wiki: `Aglet`
+                                            wiki: `Aglet`,
                                         },
-                                        `is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. So if anyone was bent on seeing me trip and fall, they readily had the means to make it happen.`
+                                        `is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. So if anyone was bent on seeing me trip and fall, they readily had the means to make it happen.`,
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                                        [BACKSTORY]: true,
+                                    },
                                 },
                                 {
                                     wormhole: {
                                         wormholeKey: `shoelaces`,
-                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX
-                                    }
-                                }
-                            ]
+                                        wormholePrefix: FORESHADOW_OF_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
                         },
-                        `by the bastard's boot,`
-                    ]
+                        `by the bastard's boot,`,
+                    ],
                 },
                 {
                     time: 16,
@@ -156,18 +156,18 @@ export default {
                                         `I went to high school in`,
                                         {
                                             anchor: `Van Nuys,`,
-                                            wiki: `Van_Nuys`
+                                            wiki: `Van_Nuys`,
                                         },
-                                        `a neighborhood smack dab in the center of the San Fernando Valley.`
+                                        `a neighborhood smack dab in the center of the San Fernando Valley.`,
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                                        [BACKSTORY]: true,
+                                    },
                                 },
                                 {
-                                    wormhole: `belle`
-                                }
-                            ]
+                                    wormhole: `belle`,
+                                },
+                            ],
                         },
                         {
                             anchor: `lunched soundless`,
@@ -177,18 +177,18 @@ export default {
                                     `In the`,
                                     {
                                         anchor: `First Battle of Bull Run,`,
-                                        wiki: `First_Battle_of_Bull_Run`
+                                        wiki: `First_Battle_of_Bull_Run`,
                                     },
-                                    `spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with the bullies were fought and lost in full view of a lunchtime crowd.`
+                                    `spectators picnicked on the hillside to witness what they assumed would be a quick victory. Similarly, my battles with the bullies were fought and lost in full view of a lunchtime crowd.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `through the noon.`
-                    ]
-                }
+                        `through the noon.`,
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -197,21 +197,21 @@ export default {
                         `So as not to wake his neighbors while recording late at night, Owen would sing in muffled tones and then double track his vocals to thicken them. I wanted to recreate this effect, so I took notes from`,
                         {
                             anchor: `Elliott Smith,`,
-                            wiki: `Elliott_Smith`
+                            wiki: `Elliott_Smith`,
                         },
-                        `who did the same on his first few albums.`
+                        `who did the same on his first few albums.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
                 formType: VERSES,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -225,11 +225,11 @@ export default {
                                     `A sapling that survives its first winter will have earned its first`,
                                     {
                                         anchor: `tree ring.`,
-                                        wiki: `Dendrochronology`
+                                        wiki: `Dendrochronology`,
                                     },
-                                    `While normally hidden from view, this ring would be plainly revealed by any deep, gaping cuts the sapling has endured along the way.`
-                                ]
-                            }
+                                    `While normally hidden from view, this ring would be plainly revealed by any deep, gaping cuts the sapling has endured along the way.`,
+                                ],
+                            },
                         },
                         `says you've`,
                         {
@@ -238,11 +238,11 @@ export default {
                                 description: `A ring also symbolizes long-term commitment to another person. And of course, after years of endless struggle, I'm finally in my first committed relationship.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [REFERENCE]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [REFERENCE]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 25,
@@ -253,11 +253,11 @@ export default {
                             card: {
                                 description: `But even if it was a struggle, I made it, didn't I? Which means I can easily do it again. And why wouldn't I want to try? After all, each new relationship is like another tree ring, a testament to one's resilience and continued growth.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [NARRATIVE]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 28,
@@ -271,19 +271,19 @@ export default {
                                     `Like the six hundred who rode into the valley of death in`,
                                     {
                                         anchor: `Alfred Tennyson's`,
-                                        wiki: `Alfred,_Lord_Tennyson`
+                                        wiki: `Alfred,_Lord_Tennyson`,
                                     },
                                     `poem`,
                                     {
                                         anchor: `"The Charge of the Light Brigade,"`,
-                                        wiki: `Charge_of_the_Light_Brigade`
+                                        wiki: `Charge_of_the_Light_Brigade`,
                                     },
-                                    `I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own wartime years in the Valley.`
+                                    `I had quietly accepted that mine was "not to reason why" but simply "to do and die" during my own wartime years in the Valley.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
                         `you rode, so on`,
                         {
@@ -291,12 +291,12 @@ export default {
                             card: {
                                 description: `It was this casual view of hardship that later enabled me to justify the pain my ambitions brought upon Sita.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
-                }
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -305,35 +305,35 @@ export default {
                         `When I asked Owen to recommend some great lyricists, he pointed me to`,
                         {
                             anchor: `Nas.`,
-                            wiki: `Nas`
+                            wiki: `Nas`,
                         },
                         `I hadn't given serious thought to`,
                         {
                             anchor: `hip hop`,
-                            wiki: `Hip_hop`
+                            wiki: `Hip_hop`,
                         },
                         `at the time, believing it to be too far removed from my own method of songwriting to offer much wisdom. I've since corrected this oversight, but back when it was my lone point of reference for hip hop, Nas's debut album`,
                         {
                             anchor: `Illmatic`,
-                            wiki: `Illmatic`
+                            wiki: `Illmatic`,
                         },
                         `offered great pointers on the flexibility of`,
                         {
                             anchor: `internal rhyme,`,
-                            wiki: `Internal_rhyme`
+                            wiki: `Internal_rhyme`,
                         },
-                        `which I used in these verses.`
+                        `which I used in these verses.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: PRECHORUS
+                formType: PRECHORUS,
             },
             mainVerses: [
                 {
@@ -346,22 +346,22 @@ export default {
                                     `The pecking order inside a tank of`,
                                     {
                                         anchor: `feeder fish`,
-                                        wiki: `Feeder_fish`
+                                        wiki: `Feeder_fish`,
                                     },
-                                    `is deceptive, since it is those least fit to be sold as live prey that last the longest. High school seemed to work the same way. All my time spent working on pet projects had left me unfit to defend myself within the social hierarchy, but the artistic skills I had developed as a result were what later kept me from being eaten alive in the real world.`
+                                    `is deceptive, since it is those least fit to be sold as live prey that last the longest. High school seemed to work the same way. All my time spent working on pet projects had left me unfit to defend myself within the social hierarchy, but the artistic skills I had developed as a result were what later kept me from being eaten alive in the real world.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `allowed to grow;`
-                    ]
+                        `allowed to grow;`,
+                    ],
                 },
                 {
                     time: 36,
-                    lyric: `these spluttered fits found fit for show.`
+                    lyric: `these spluttered fits found fit for show.`,
                 },
                 {
                     time: 39,
@@ -373,22 +373,22 @@ export default {
                                 description: `It was therapeutic enough to write songs about my own disappointments and dysfunctions. It seemed crazy that others would credit me with giving voice to theirs as well, and that I should be granted a higher status because of it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 42,
-                    lyric: `and laid down on the public trough.`
-                }
-            ]
+                    lyric: `and laid down on the public trough.`,
+                },
+            ],
         },
         {
             unitMap: {
                 formType: PRECHORUS,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -401,18 +401,18 @@ export default {
                                 {
                                     description: `At small venues with minimal seating, the first audience members to arrive typically congregate alongside the walls.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
+                                        [OBSERVATION]: true,
+                                    },
                                 },
                                 {
                                     description: `A few songs into my band's set, I watch from onstage as an attractive latecomer and her friends make their way through an unusually packed room.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                                        [NARRATIVE]: true,
+                                    },
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 48,
@@ -425,17 +425,17 @@ export default {
                                     `You typically work on a`,
                                     {
                                         anchor: `jigsaw puzzle`,
-                                        wiki: `Jigsaw_puzzle`
+                                        wiki: `Jigsaw_puzzle`,
                                     },
-                                    `by first connecting the edge pieces, then building inward. So as this latecomer squeezes her way into the center of the crowd, I wonder if she is the long-awaited final piece to the sprawling puzzle of my life.`
+                                    `by first connecting the edge pieces, then building inward. So as this latecomer squeezes her way into the center of the crowd, I wonder if she is the long-awaited final piece to the sprawling puzzle of my life.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 51,
@@ -448,16 +448,16 @@ export default {
                                     `Having sworn to be alert and ready when the next Mara shows up in my life, I notice the latecomer's hair color matches "Mara's sheen of" red, which is the brightness of`,
                                     {
                                         anchor: `maraschino cherries.`,
-                                        wiki: `Maraschino_cherry`
-                                    }
+                                        wiki: `Maraschino_cherry`,
+                                    },
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 54,
@@ -468,23 +468,23 @@ export default {
                                 description: `The best time to hit on someone at a show is always right after your set, since they've just spent the last half hour of their life making you the center of their universe. So as expected, I find the red-haired woman to be warm and flirtatious when we finally chat.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `she later said.`
-                    ]
-                }
-            ]
+                        `she later said.`,
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: CHORUS
+                formType: CHORUS,
             },
             mainVerses: [
                 {
                     time: 56,
-                    lyric: `Well there are ways to make a treat of life,`
+                    lyric: `Well there are ways to make a treat of life,`,
                 },
                 {
                     time: 63,
@@ -496,20 +496,20 @@ export default {
                                 description: `Things were finally looking up for me, so it baffled me to be as angry as ever. I suspect that I felt indignant for my younger self, who had been kept in the dark for so long about how much better life could be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 69,
-                    lyric: `But knowing now what you'd missed out on, you find,`
+                    lyric: `But knowing now what you'd missed out on, you find,`,
                 },
                 {
                     time: 75,
-                    lyric: `you look back in anger that it's done.`
-                }
+                    lyric: `you look back in anger that it's done.`,
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -518,19 +518,19 @@ export default {
                         `I recorded drum cymbals here at an extremely low tape speed, which turned them into`,
                         {
                             anchor: `pitched percussion`,
-                            wiki: `Pitched_percussion_instrument`
+                            wiki: `Pitched_percussion_instrument`,
                         },
-                        `upon normal playback.`
+                        `upon normal playback.`,
                     ],
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
@@ -542,16 +542,16 @@ export default {
                             card: {
                                 description: `The kids who bullied me were typically religious. This had the predictable effect of discrediting their faiths in my view.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `each hypocrite's taunts`
-                    ]
+                        `each hypocrite's taunts`,
+                    ],
                 },
                 {
                     time: 84,
-                    lyric: `would just acquit God of further need;`
+                    lyric: `would just acquit God of further need;`,
                 },
                 {
                     time: 87,
@@ -563,24 +563,24 @@ export default {
                                 description: `But my appraisal was based on reason, not malice. It just made no sense that the one true God would entrust the dissemination of his message to the very tormentors of those he hoped to reach.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `just a murmuring.`
-                    ]
-                }
-            ]
+                        `just a murmuring.`,
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
                 formType: VERSES,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
                     time: 91,
-                    lyric: `Now each new concession sees this`
+                    lyric: `Now each new concession sees this`,
                 },
                 {
                     time: 94,
@@ -592,32 +592,32 @@ export default {
                                     `The better life got, the more unsatisfied I became. I was like the peasants during the`,
                                     {
                                         anchor: `French Revolution,`,
-                                        wiki: `French_Revolution`
+                                        wiki: `French_Revolution`,
                                     },
-                                    `who were so downtrodden that every attempt made by the ruling elite to appease them only backfired. Not only did the peasants grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`
+                                    `who were so downtrodden that every attempt made by the ruling elite to appease them only backfired. Not only did the peasants grumble at such paltry improvements to their lives, but they were then emboldened to make further demands.`,
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
-                        `all the more,`
-                    ]
+                        `all the more,`,
+                    ],
                 },
                 {
                     time: 97,
-                    lyric: `with his ignorance lessened of his plight before…`
-                }
-            ]
+                    lyric: `with his ignorance lessened of his plight before…`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: PRECHORUS
+                formType: PRECHORUS,
             },
             mainVerses: [
                 {
                     time: 103,
-                    lyric: `Beyonders prevail, the letters preached,`
+                    lyric: `Beyonders prevail, the letters preached,`,
                 },
                 {
                     time: 106,
@@ -628,15 +628,15 @@ export default {
                             card: {
                                 description: `The letters from RI Research instructed me not to confront the bullies. I was instead to turn the other cheek, as Jesus had done, and quietly take their abuse in stride. After all, my exalted place in the universe necessarily asked of me to be the bigger person.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 109,
-                    lyric: `You waved your pledge to this godly good,`
+                    lyric: `You waved your pledge to this godly good,`,
                 },
                 {
                     time: 112,
@@ -646,9 +646,9 @@ export default {
                             card: {
                                 description: `Yet, even as reason discredited the faith of my tormentors, it also disproved mine. After all, in a world abounding with rival claims to the truth, what sane person would stay loyal to a belief that promises zero community and only endless grief?`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
                         {
                             anchor: `sprawled where they stood…`,
@@ -656,22 +656,22 @@ export default {
                                 description: `And while the natural course for me was a lifetime of setbacks and letdowns, the bullies would continue to enjoy greater happiness and social standing. I had no belief left to counter the harsh reality that nature favors its bullies. I just had to accept it.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: BRIDGE
+                formType: BRIDGE,
             },
             mainVerses: [
                 {
                     time: 115,
-                    lyric: `Though, if you're right to want what's yours,`
+                    lyric: `Though, if you're right to want what's yours,`,
                 },
                 {
                     time: 118,
@@ -683,11 +683,11 @@ export default {
                                 description: `As opportunities for social advancement opened up for me, I began to understand why the bullies grabbed onto those handed to them, and I could even sympathize. After all, in a world that roots for the strong, it makes no sense for anyone to question whatever means they've been afforded to avoid being weak.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 121,
@@ -700,16 +700,16 @@ export default {
                                     `In the final scene of `,
                                     {
                                         isItalic: true,
-                                        lyric: `Look Back in Anger,`
+                                        lyric: `Look Back in Anger,`,
                                     },
-                                    `the main character pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his emotionally abusive tirades keep her in a submissive state.`
+                                    `the main character pictures his wife as a squirrel and sighs, "Poor squirrels," acknowledging that his emotionally abusive tirades keep her in a submissive state.`,
                                 ],
                                 dotKeys: {
-                                    [REFERENCE]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [REFERENCE]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 124,
@@ -720,18 +720,18 @@ export default {
                             card: {
                                 description: `His wife then sighs in response, "Poor, poor bears," recognizing that he, a bear in their mutual fantasy, is also a victim, complying helplessly within a power dynamic over which neither possesses control.`,
                                 dotKeys: {
-                                    [REFERENCE]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [REFERENCE]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
                 formType: BRIDGE,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -743,16 +743,16 @@ export default {
                             card: {
                                 description: `The red-haired woman and her friends stick around as my bandmates and I load our gear into the van. During my chat with her between sets, I left open the possibility that we might all hang out after the show.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
-                        `lagging by the back door,`
-                    ]
+                        `lagging by the back door,`,
+                    ],
                 },
                 {
                     time: 130,
-                    lyric: `lift you on angel stares.`
+                    lyric: `lift you on angel stares.`,
                 },
                 {
                     time: 133,
@@ -764,11 +764,11 @@ export default {
                                 description: `My songs projected the image of an inexperienced kid forever unlucky in love. It's how I first learned to attract attention, so I had refined it to perfection over the years. But as past misfortunes receded further into the distance, I needed greater quantities of alcohol to carry on with the lie that my life hadn't substantially improved.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 136,
@@ -781,33 +781,33 @@ export default {
                                     `I relinquish my chance to get to know the red-haired woman. Not just because another`,
                                     {
                                         anchor: `Budweiser`,
-                                        wiki: `Budweiser`
+                                        wiki: `Budweiser`,
                                     },
                                     `would be needed to bring me to the required level of affability, and it's past`,
                                     {
                                         anchor: `last call.`,
-                                        wiki: `Last_call_(bar_term)`
+                                        wiki: `Last_call_(bar_term)`,
                                     },
-                                    `It's also much too late for me to present myself as someone who isn't in a sexual relationship with his best friend. I can't just unscrew a "bud" at will.`
+                                    `It's also much too late for me to present myself as someone who isn't in a sexual relationship with his best friend. I can't just unscrew a "bud" at will.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: CHORUS
+                formType: CHORUS,
             },
             mainVerses: [
                 {
                     time: 139,
-                    lyric: `Yes, you were wrong to make demands on life,`
+                    lyric: `Yes, you were wrong to make demands on life,`,
                 },
                 {
                     time: 145,
@@ -820,46 +820,46 @@ export default {
                                     `There's no excuse for not looking out for yourself. I knew this now. So while I was justifiably angry`,
                                     {
                                         isEmphasis: true,
-                                        lyric: `for`
+                                        lyric: `for`,
                                     },
                                     `the younger me, there was also no one more worthy to be angry`,
                                     {
                                         isEmphasis: true,
-                                        lyric: `at.`
+                                        lyric: `at.`,
                                     },
-                                    `I could only blame myself for being late to the game. But this only made me angrier…`
+                                    `I could only blame myself for being late to the game. But this only made me angrier…`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 151,
-                    lyric: `And we all find this out on our own time…`
+                    lyric: `And we all find this out on our own time…`,
                 },
                 {
                     time: 157,
-                    lyric: `Look back in anger to have won.`
-                }
-            ]
+                    lyric: `Look back in anger to have won.`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: OUTRO
+                formType: OUTRO,
             },
             mainVerses: [
                 {
                     time: 161,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(outro)`
-                    }
-                }
-            ]
-        }
-    ]
+                        lyric: `(outro)`,
+                    },
+                },
+            ],
+        },
+    ],
 }

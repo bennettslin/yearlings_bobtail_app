@@ -3,7 +3,7 @@ import { NOHO_HOUSES_KEY } from '../../../../../app/constants/scene/scenes'
 import {
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
-    PAVEMENT_COLOUR as V
+    PAVEMENT_COLOUR as V,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -14,12 +14,12 @@ export default {
                 [H],
                 [H],
                 [H],
-                [V]
+                [V],
             ],
             zIndices: [
                 [0],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

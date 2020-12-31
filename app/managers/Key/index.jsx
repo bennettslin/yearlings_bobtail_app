@@ -10,7 +10,7 @@ import { isEmailFocused } from '../../utils/email'
 import {
     getKeyName,
     getIsNavKeyOrEnter,
-    getShouldHandleOnKeyDown
+    getShouldHandleOnKeyDown,
 } from './helper'
 import {
     ARROW_UP,
@@ -20,7 +20,7 @@ import {
     CAPS_LOCK,
     ESCAPE,
     SPACE,
-    TAB
+    TAB,
 } from '../../constants/access'
 
 const KeyManager = forwardRef((props, ref) => {
@@ -33,7 +33,7 @@ const KeyManager = forwardRef((props, ref) => {
     const _handleKeyRegister = ({
         e,
         keyName,
-        isKeyDown
+        isKeyDown,
     }) => {
         const shouldHandleOnKeyDown = getShouldHandleOnKeyDown(keyName),
             shouldHandle = isKeyDown === shouldHandleOnKeyDown
@@ -110,7 +110,7 @@ const KeyManager = forwardRef((props, ref) => {
         _handleKeyRegister({
             e,
             keyName,
-            isKeyDown: true
+            isKeyDown: true,
         })
     }
 
@@ -156,14 +156,14 @@ const KeyManager = forwardRef((props, ref) => {
             _handleKeyRegister({
                 e,
                 keyName,
-                isKeyDown: false
+                isKeyDown: false,
             })
         }
     }
 
     useImperativeHandle(ref, () => ({
         down: handleKeyDown,
-        up: handleKeyUp
+        up: handleKeyUp,
     }))
     return (
         <>

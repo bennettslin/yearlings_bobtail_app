@@ -9,14 +9,14 @@ import { PITCH_RETURN_BUTTON_KEY } from '../../../constants/buttons'
 import './style'
 
 const PitchHeader = ({
-    returnToAlbum
+    returnToAlbum,
 
 }) => (
     <div
         {...{
             className: cx(
                 'PitchHeader'
-            )
+            ),
         }}
     >
         <Button
@@ -31,17 +31,17 @@ const PitchHeader = ({
                 inanimateChild: (
                     <ButtonTitle
                         {...{
-                            title: 'back to album'
+                            title: 'back to album',
                         }}
                     />
-                )
+                ),
             }}
         />
     </div>
 )
 
 PitchHeader.propTypes = {
-    returnToAlbum: PropTypes.func.isRequired
+    returnToAlbum: PropTypes.func.isRequired,
 }
 
 export default PitchHeader

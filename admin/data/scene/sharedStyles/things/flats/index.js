@@ -57,7 +57,7 @@ import {
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
     TENNIS_COURT,
-    VALLEY_FREEWAY
+    VALLEY_FREEWAY,
 } from '../../../../../../app/constants/scene/things/flats'
 import { OCEAN_LIFE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/animals'
 import {
@@ -67,12 +67,12 @@ import {
     HOUSE__SHARED,
     OAKLAND_HOUSE_LEFT__SHARED,
     OAKLAND_HOUSE_RIGHT__SHARED,
-    TAIWAN_HOUSE__SHARED
+    TAIWAN_HOUSE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/buildings'
 import {
     DOOR__SHARED,
     FAMILY_HOUSE__SHARED,
-    WINDOW__SHARED
+    WINDOW__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 import {
@@ -83,7 +83,7 @@ import {
     ROCK__SHARED,
     RUBBER__SHARED,
     STEEL__SHARED,
-    STONE__SHARED
+    STONE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     CHECKER_FLAG__SHARED,
@@ -94,125 +94,125 @@ import {
     ROAD__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
-    WALL__SHARED
+    WALL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
     ALL_VEHICLES__SHARED,
-    SCHOOLBUS__SHARED
+    SCHOOLBUS__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
 
 export default {
     [BEDROOM_BUS]: [
         ALL_VEHICLES__SHARED,
-        SCHOOLBUS__SHARED
+        SCHOOLBUS__SHARED,
     ],
     [BEDROOM_SIREN]: null,
     [BERKELEY_BUILDING_TALL]: [
         CAMPUS__SHARED,
         BUILDING__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [BERKELEY_BUILDING_WIDE]: [
         CAMPUS__SHARED,
         BUILDING__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [CAMPANILE]: [
         FOLIAGE__SHARED,
-        PATINA__SHARED
+        PATINA__SHARED,
     ],
     [CEMETERY_HILLS_LEFT]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
-        STONE__SHARED
+        STONE__SHARED,
     ],
     [CEMETERY_HILLS_RIGHT]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
         OAK__SHARED,
-        STONE__SHARED
+        STONE__SHARED,
     ],
     [CLIFF_GRAVES_FAR]: [
         MOUNTAIN__SHARED,
-        STONE__SHARED
+        STONE__SHARED,
     ],
     [CLIFF_GRAVES_NEAR]: [
         MOUNTAIN__SHARED,
-        STONE__SHARED
+        STONE__SHARED,
     ],
     [COMMERCIAL_CENTRE]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [COMMERCIAL_FAR_LEFT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [COMMERCIAL_FAR_RIGHT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [COMMERCIAL_MIDDLE_LEFT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [COMMERCIAL_MIDDLE_RIGHT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [COMMERCIAL_NEAR_LEFT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [COMMERCIAL_NEAR_RIGHT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [DISTANT_BUILDINGS]: [
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
-        WALL__SHARED
+        WALL__SHARED,
     ],
     [DISTANT_HOUSES]: [
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WALL__SHARED
+        WALL__SHARED,
     ],
     [DRIVING_HOUSE]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         BUILDING__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [DRIVING_HOUSE_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         BUILDING__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [EL_CERRITO_FAR]: [
         BUILDINGS__SHARED,
-        FOLIAGE__SHARED
+        FOLIAGE__SHARED,
     ],
     [EL_CERRITO_NEAR]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [FAMILY_HOUSE]: [
         FAMILY_HOUSE__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [FERRIS_WHEEL]: null,
     [FOREBODING_TREES]: FOLIAGE__SHARED,
@@ -220,177 +220,177 @@ export default {
         ALL_VEHICLES__SHARED,
         CHECKER_FLAG__SHARED,
         RUBBER__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [NEAR_BUILDINGS]: [
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
-        WALL__SHARED
+        WALL__SHARED,
     ],
     [NEAR_HOUSES]: [
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WALL__SHARED
+        WALL__SHARED,
     ],
     [NOHO_HOUSE_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         WINDOW__SHARED,
-        IRON__SHARED
+        IRON__SHARED,
     ],
     [NOHO_HOUSE_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [OAKLAND_FLAG]: [
         BRONZE__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [OAKLAND_HOUSE_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_LEFT__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [OAKLAND_HOUSE_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_RIGHT__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [OAKLAND_SCHOOL]: [
         BUILDING__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [OCEAN_BOTTOM_MIDDLE]: OCEAN_CAVE__SHARED,
     [OCEAN_BOTTOM_NEAR]: [
         OCEAN_LIFE__SHARED,
-        ROCK__SHARED
+        ROCK__SHARED,
     ],
     [PAMPAS_FAR]: [
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
     ],
     [PUBLIC_FAR]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [PUBLIC_NEAR]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [RESIDENTIAL_FAR_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [RESIDENTIAL_FAR_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [RESIDENTIAL_MIDDLE_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_RIGHT__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [RESIDENTIAL_MIDDLE_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [RESIDENTIAL_NEAR_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_LEFT__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [RESIDENTIAL_NEAR_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [RICKSHAW_TOWN]: [
         DOOR__SHARED,
         TAIWAN_FOLIAGE__SHARED,
-        TAIWAN_HOUSE__SHARED
+        TAIWAN_HOUSE__SHARED,
     ],
     [ROLLER_COASTER]: null,
     [ROYCE_HALL]: [
         DOOR__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [SCHOOL_BUNGALOW]: [
         BUILDING__SHARED,
         DOOR__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [ST_JOSEPHS_ANNEX]: [
         DOOR__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [ST_JOSEPHS_CHURCH]: [
         BULB__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
-        WINDOW__SHARED
+        WINDOW__SHARED,
     ],
     [TAIWAN_HOUSES_CENTRE]: [
         DOOR__SHARED,
-        TAIWAN_HOUSE__SHARED
+        TAIWAN_HOUSE__SHARED,
     ],
     [TAIWAN_HOUSE_FAR]: [
         DOOR__SHARED,
-        TAIWAN_HOUSE__SHARED
+        TAIWAN_HOUSE__SHARED,
     ],
     [TAIWAN_HOUSE_NEAR]: [
         DOOR__SHARED,
-        TAIWAN_HOUSE__SHARED
+        TAIWAN_HOUSE__SHARED,
     ],
     [TAIWAN_MOUNTAINS_BRIDGED]: [
         DOOR__SHARED,
         ROAD__SHARED,
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_HOUSE__SHARED,
-        TAIWAN_MOUNTAIN__SHARED
+        TAIWAN_MOUNTAIN__SHARED,
     ],
     [TAIWAN_MOUNTAIN_LEFT]: [
         TAIWAN_FOLIAGE__SHARED,
-        TAIWAN_MOUNTAIN__SHARED
+        TAIWAN_MOUNTAIN__SHARED,
     ],
     [TAIWAN_MOUNTAIN_RIGHT]: [
         TAIWAN_FOLIAGE__SHARED,
-        TAIWAN_MOUNTAIN__SHARED
+        TAIWAN_MOUNTAIN__SHARED,
     ],
     [TENNIS_COURT]: [
         FOLIAGE__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [VALLEY_FREEWAY]: [
         BUILDINGS__SHARED,
         FREEWAY_SIGN__SHARED,
         FOLIAGE__SHARED,
-        IRON__SHARED
-    ]
+        IRON__SHARED,
+    ],
 }

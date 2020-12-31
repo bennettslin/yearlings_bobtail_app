@@ -1,36 +1,36 @@
 import {
     ANITA,
-    ANITA_BENNETT
+    ANITA_BENNETT,
 } from '../../../../app/constants/scene/actors'
 import {
     EXASPERATED,
     CONCERNED,
-    CHEERING
+    CHEERING,
 } from '../../../../app/constants/scene/actors/anita'
 import {
     YOUNG_CHILD,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: ANITA,
-        instance: EXASPERATED
+        instance: EXASPERATED,
     },
     {
         type: ANITA,
-        instance: CONCERNED
+        instance: CONCERNED,
     },
     {
         type: ANITA,
-        instance: CHEERING
+        instance: CHEERING,
     },
     {
         type: ANITA_BENNETT,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: ANITA,
-        instance: YOUNG_CHILD
-    }
+        instance: YOUNG_CHILD,
+    },
 ]

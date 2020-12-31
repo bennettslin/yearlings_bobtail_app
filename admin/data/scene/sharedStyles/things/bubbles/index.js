@@ -22,73 +22,73 @@ import {
     THOUGHT_GO_KART,
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_STUDYING,
-    WAITING_THOUGHT_WALKING
+    WAITING_THOUGHT_WALKING,
 } from '../../../../../../app/constants/scene/things/bubbles'
 import {
     AMY,
     ANDREW,
     BENNETT,
     LIZ,
-    MARA
+    MARA,
 } from '../../../../../../app/constants/scene/actors'
 import {
     ALL_PEOPLE__SHARED,
-    ALL_CLOTHING__SHARED
+    ALL_CLOTHING__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/actors'
 import { HOUSE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/buildings'
 import {
     CUP__SHARED,
-    TRAY__SHARED
+    TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
     CONSTELLATION__SHARED,
     DRAWING__SHARED,
-    THOUGHT__SHARED
+    THOUGHT__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
     BASEMENT_TAKEOUT__SHARED,
-    LANCET_PEN__SHARED
+    LANCET_PEN__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/food'
 import { BENNETT_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
 import {
     DOOR__SHARED,
-    WINDOW__SHARED
+    WINDOW__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BANJO__SHARED,
     HEADPHONE__SHARED,
     MICROPHONE__SHARED,
-    MONITOR__SHARED
+    MONITOR__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     IRON__SHARED,
     MAPLE__SHARED,
     OAK__SHARED,
     RUBBER__SHARED,
-    STEEL__SHARED
+    STEEL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
     ROAD__SHARED,
-    SHORE__SHARED
+    SHORE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
-    SKETCHBOOK__SHARED
+    SKETCHBOOK__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
     BENNETT_ROOM_SHARED,
     DINING_SHARED,
     BUSING_SHARED,
-    DISHROOM_SHARED
+    DISHROOM_SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/room'
 import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 import {
     ALL_VEHICLES__SHARED,
-    REATTA__SHARED
+    REATTA__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
 import { CAFETERIA__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
 
@@ -99,7 +99,7 @@ export default {
     [CINEMA_THOUGHT_BUYING]: [
         MARA,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED
+        THOUGHT__SHARED,
     ],
     [CINEMA_THOUGHT_RECORDING]: [
         BOOK__SHARED,
@@ -109,7 +109,7 @@ export default {
         BENNETT,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED
+        THOUGHT__SHARED,
     ],
     [ESTHER_SPEECH]: BUBBLE__SHARED,
     [KHARI_SPEECH_ATTACK]: [
@@ -117,7 +117,7 @@ export default {
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED
+        THOUGHT__SHARED,
     ],
     [LIZ_SPEECH_DEFENCE]: [
         BANJO__SHARED,
@@ -129,7 +129,7 @@ export default {
         LIZ,
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
-        THOUGHT__SHARED
+        THOUGHT__SHARED,
     ],
     [LIZ_THOUGHT_DINING]: [
         ANDREW,
@@ -145,7 +145,7 @@ export default {
         CUP__SHARED,
         TRAY__SHARED,
         STEEL__SHARED,
-        OAK__SHARED
+        OAK__SHARED,
     ],
     [LIZ_THOUGHT_BUSING]: [
         BENNETT,
@@ -158,7 +158,7 @@ export default {
         DISHROOM_SHARED,
         CUP__SHARED,
         TRAY__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [LIZ_THOUGHT_DISHROOM]: [
         BENNETT,
@@ -175,7 +175,7 @@ export default {
         WINDOW__SHARED,
         HOUSE__SHARED,
         IRON__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [LIZ_THOUGHT_REUNION]: [
         BENNETT,
@@ -189,13 +189,13 @@ export default {
         REATTA__SHARED,
         ROAD__SHARED,
         RUBBER__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [CONSTELLATION_SIBLING]: CONSTELLATION__SHARED,
     [CONSTELLATION_TARPIT]: CONSTELLATION__SHARED,
     [SKETCHBOOK]: [
         BOOK__SHARED,
-        SKETCHBOOK__SHARED
+        SKETCHBOOK__SHARED,
     ],
     [SKETCH_APART]: DRAWING__SHARED,
     [SKETCH_DOGS_ROCKET]: DRAWING__SHARED,
@@ -209,13 +209,13 @@ export default {
         BENNETT_ROOM_SHARED,
         MAPLE__SHARED,
         OAK__SHARED,
-        THOUGHT__SHARED
+        THOUGHT__SHARED,
     ],
     [THOUGHT_GO_KART]: [
         BUBBLE__SHARED,
         CHECKER_FLAG__SHARED,
         FOLIAGE__SHARED,
-        STEEL__SHARED
+        STEEL__SHARED,
     ],
     [WAITING_THOUGHT_SINGING]: [
         BENNETT,
@@ -226,7 +226,7 @@ export default {
         BENNETT_LINENS__SHARED,
         BENNETT_ROOM_SHARED,
         STEEL__SHARED,
-        THOUGHT__SHARED
+        THOUGHT__SHARED,
     ],
     [WAITING_THOUGHT_STUDYING]: [
         BENNETT,
@@ -236,7 +236,7 @@ export default {
         THOUGHT__SHARED,
         BOOK__SHARED,
         STEEL__SHARED,
-        OAK__SHARED
+        OAK__SHARED,
     ],
     [WAITING_THOUGHT_WALKING]: [
         BENNETT,
@@ -248,7 +248,7 @@ export default {
         MAPLE__SHARED,
         MOUNTAIN__SHARED,
         ROAD__SHARED,
-        SHORE__SHARED
-    ]
+        SHORE__SHARED,
+    ],
 }
 

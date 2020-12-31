@@ -4,7 +4,7 @@ export const getActivatedVerseForDirection = ({
     selectedSongIndex,
     selectedVerseIndex,
     activatedVerseIndex,
-    direction
+    direction,
 }) => {
     const songVersesCount = getVerseCountForSong(selectedSongIndex)
 

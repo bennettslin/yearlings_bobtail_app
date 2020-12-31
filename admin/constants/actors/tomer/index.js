@@ -1,10 +1,10 @@
 import {
     TOMER,
-    AMY_NESTOR_TOMER
+    AMY_NESTOR_TOMER,
 } from '../../../../app/constants/scene/actors'
 import {
     SHANE_BUYING,
-    SHANE_SPILLING
+    SHANE_SPILLING,
 } from '../../../../app/constants/scene/actors/tomer'
 import { OFFICER } from '../../../../app/constants/scene/actors/amyNestorTomer'
 import {
@@ -14,48 +14,48 @@ import {
     STEAM_TUNNEL,
     CEMETERY,
     STATION_WAGON,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: TOMER,
-        instance: ABBEY_ROAD
+        instance: ABBEY_ROAD,
     },
     {
         type: TOMER,
-        instance: WALGREENS
+        instance: WALGREENS,
     },
     {
         type: TOMER,
-        instance: STEAM_TUNNEL
+        instance: STEAM_TUNNEL,
     },
     {
         type: TOMER,
-        instance: CEMETERY
+        instance: CEMETERY,
     },
     {
         type: TOMER,
-        instance: STATION_WAGON
+        instance: STATION_WAGON,
     },
     {
         type: TOMER,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: TOMER,
-        instance: GANGBANGER
+        instance: GANGBANGER,
     },
     {
         type: TOMER,
-        instance: SHANE_BUYING
+        instance: SHANE_BUYING,
     },
     {
         type: TOMER,
-        instance: SHANE_SPILLING
+        instance: SHANE_SPILLING,
     },
     {
         type: AMY_NESTOR_TOMER,
-        instance: OFFICER
-    }
+        instance: OFFICER,
+    },
 ]

@@ -39,7 +39,7 @@ const albumScenes = [
     Scene_16,
     Scene_17,
     Scene_18,
-    Scene_19
+    Scene_19,
 ]
 
 export default albumScenes

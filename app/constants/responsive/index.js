@@ -7,7 +7,7 @@ import {
     LENGTH_ICON_LARGE_MINI,
     MARGIN_THIN,
     OVERLAP_MARGIN_X_SLIDER,
-    PADDING_POPUP_CONTENT_WIDE
+    PADDING_POPUP_CONTENT_WIDE,
 } from '../../scss/exports/style'
 import { getJsFromSass } from '../../helpers/format'
 

@@ -1,6 +1,6 @@
 import {
     BENNETT_BED_KEY,
-    BENNETT_BED_DARK_KEY
+    BENNETT_BED_DARK_KEY,
 } from '../../../../../app/constants/scene/scenes'
 
 import {
@@ -10,7 +10,7 @@ import {
     BENNETT_WALL_COLOUR as W,
     NIGHT_COLOUR as Z,
     APARTMENT_EXTERIOR_COLOUR as X,
-    BENNETT_BED_COLOUR as U
+    BENNETT_BED_COLOUR as U,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -19,14 +19,14 @@ const DEFAULT_CEILING = {
     hslaColours: [
         [X],
         [D, D, D, D, D, D, D, D, D, X],
-        [W]
+        [W],
     ],
     zIndices: [
         [1],
         [k, k, k, k, k, k, k, k, k, k, 1],
         [1, 1, d, d, d, 1, d, d, d, d, 1],
-        [1, g, g, g, g, g, g, g, g, g, g, 1]
-    ]
+        [1, g, g, g, g, g, g, g, g, g, g, 1],
+    ],
 }
 
 const DEFAULT_FLOOR = {
@@ -36,7 +36,7 @@ const DEFAULT_FLOOR = {
         [V, V, F, F, F, V, W, W, W, W, V],
         [F],
         [F, F, F, F, F, U, U, U, U, U, U, F],
-        [F]
+        [F],
     ],
     zIndices: [
         [1],
@@ -44,8 +44,8 @@ const DEFAULT_FLOOR = {
         [1, 1, 1, 1, 1, 1, 6, 6, 6, 6, 1],
         [1],
         [1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 1],
-        [1]
-    ]
+        [1],
+    ],
 }
 
 /**
@@ -55,25 +55,25 @@ const DEFAULT_FLOOR = {
 export default {
     [BENNETT_BED_KEY]: {
         ceiling: DEFAULT_CEILING,
-        floor: DEFAULT_FLOOR
+        floor: DEFAULT_FLOOR,
     },
     [BENNETT_BED_DARK_KEY]: {
         ceiling: {
             hslaColours: [
                 [X],
                 [D, D, D, D, D, D, D, D, D, X],
-                [Z]
+                [Z],
             ],
-            zIndices: DEFAULT_CEILING.zIndices
+            zIndices: DEFAULT_CEILING.zIndices,
         },
         floor: {
             hslaColours: [
                 [V],
                 [V],
                 [V, V, Z, Z, Z, Z, Z, Z, Z, Z, V],
-                [Z]
+                [Z],
             ],
-            zIndices: DEFAULT_FLOOR.zIndices
-        }
-    }
+            zIndices: DEFAULT_FLOOR.zIndices,
+        },
+    },
 }

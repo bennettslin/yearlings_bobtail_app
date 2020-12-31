@@ -9,17 +9,17 @@ import PitchNavigation from './Pitch'
 import { ENTER } from '../../../constants/access'
 import {
     mapActivatedVerseIndex,
-    mapIsActivated
+    mapIsActivated,
 } from '../../../redux/activated/selector'
 import {
     mapCanNavigateByKey,
     mapShouldNavigateLyric,
-    mapShouldNavigateNav
+    mapShouldNavigateNav,
 } from '../../../redux/focus/selector'
 import { mapSelectedAnnotationIndex } from '../../../redux/selected/selector'
 import {
     mapIsDotsSlideShown,
-    mapIsPitchShown
+    mapIsPitchShown,
 } from '../../../redux/toggle/selector'
 
 const NavigationManager = forwardRef((props, ref) => {
@@ -55,7 +55,7 @@ const NavigationManager = forwardRef((props, ref) => {
                 dispatchVerse.current({
                     scrollLog: 'Key selected',
                     verseIndex: activatedVerseIndex,
-                    fromActivated: true
+                    fromActivated: true,
                 })
 
                 annotationIndexWasAccessed = true
@@ -64,7 +64,7 @@ const NavigationManager = forwardRef((props, ref) => {
             } else if (selectedAnnotationIndex) {
                 ({
                     annotationIndexWasAccessed,
-                    keyWasRegistered
+                    keyWasRegistered,
                 } = navigateAnnotation.current(keyName))
 
             // We're in dots section.
@@ -76,7 +76,7 @@ const NavigationManager = forwardRef((props, ref) => {
 
                 ({
                     annotationIndexWasAccessed,
-                    keyWasRegistered
+                    keyWasRegistered,
                 } = navigateNav.current(keyName))
 
             // We're in lyrics section.
@@ -90,7 +90,7 @@ const NavigationManager = forwardRef((props, ref) => {
 
         return {
             annotationIndexWasAccessed,
-            keyWasRegistered
+            keyWasRegistered,
         }
     }
 

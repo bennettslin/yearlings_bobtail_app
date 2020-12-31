@@ -5,7 +5,7 @@ import './style'
 
 const SliderTime = ({
     isSpent,
-    time
+    time,
 
 }) => (
     <div className={cx(
@@ -21,7 +21,7 @@ const SliderTime = ({
 
 SliderTime.propTypes = {
     isSpent: PropTypes.bool,
-    time: PropTypes.string.isRequired
+    time: PropTypes.string.isRequired,
 }
 
 export default memo(SliderTime)

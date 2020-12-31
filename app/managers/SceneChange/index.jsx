@@ -2,20 +2,20 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
     resetSceneChange,
-    updateEntranceStore
+    updateEntranceStore,
 } from '../../redux/entrance/action'
 import { updateSceneStore } from '../../redux/scene/action'
 import {
     mapIsSongChangeDone,
-    mapIsSceneChangeDone
+    mapIsSceneChangeDone,
 } from '../../redux/entrance/selector'
 import {
     mapSceneSongIndex,
-    mapSceneSceneIndex
+    mapSceneSceneIndex,
 } from '../../redux/scene/selector'
 import {
     mapSelectedSongIndex,
-    mapSelectedSceneIndex
+    mapSelectedSceneIndex,
 } from '../../redux/selected/selector'
 
 const SceneChangeManager = () => {
@@ -45,7 +45,7 @@ const SceneChangeManager = () => {
             if (isSongChangeDone && isSceneChangeDone) {
                 dispatch(updateSceneStore({
                     sceneSongIndex: selectedSongIndex,
-                    sceneSceneIndex: selectedSceneIndex
+                    sceneSceneIndex: selectedSceneIndex,
                 }))
             }
         } else {
@@ -57,7 +57,7 @@ const SceneChangeManager = () => {
         if (didMount) {
             if (sceneSceneIndex > -1) {
                 dispatch(updateEntranceStore({
-                    canTransitionAfterSceneChange: true
+                    canTransitionAfterSceneChange: true,
                 }))
             }
         }

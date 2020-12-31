@@ -6,7 +6,7 @@ import {
     DOOR,
     FIXTURE,
     FLAT,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     TAIWAN_ROOM_KEY,
@@ -16,18 +16,18 @@ import {
     SHORE_KEY,
     BUOY_KEY,
     OCEAN_DEPTHS_KEY,
-    OCEAN_FLOOR_KEY
+    OCEAN_FLOOR_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_NIGHT_TAIWAN,
     TIME_TWILIGHT_TAIWAN,
     SEASON_AUTUMN,
     SEASON_OCEAN_TOP,
-    SEASON_OCEAN_SIDE
+    SEASON_OCEAN_SIDE,
 } from '../../../../app/constants/scene/sky'
 import {
     PRETEEN_BENNETT,
-    SASHA_BENNETT
+    SASHA_BENNETT,
 } from '../../../../app/constants/scene/actors'
 import {
     MAT,
@@ -36,7 +36,7 @@ import {
     RICKSHAW,
     SHORE,
     BUOY,
-    OCEAN_FLOOR
+    OCEAN_FLOOR,
 } from '../../../../app/constants/scene/actors/preteenBennett'
 import { MERMAID } from '../../../../app/constants/scene/actors/sashaBennett'
 import {
@@ -45,7 +45,7 @@ import {
     SHORE_RICKSHAW_BACKDROP,
     SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
-    OCEAN_FLOOR_FAR
+    OCEAN_FLOOR_FAR,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BENNETT_TAIWAN_STAIRS,
@@ -61,17 +61,17 @@ import {
     SEA_SERPENT_RIGHT,
     BENNETT_ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
-    ODIN_MAT
+    ODIN_MAT,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
     TAIWAN_TREE,
-    YELLOW_TAPED_GRILL
+    YELLOW_TAPED_GRILL,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     IRON_GATE,
-    IRON_GATE_LOW
+    IRON_GATE_LOW,
 } from '../../../../app/constants/scene/things/doors'
 import { FRIDGE_DRAWINGS } from '../../../../app/constants/scene/things/fixtures'
 import {
@@ -82,7 +82,7 @@ import {
     FERRIS_WHEEL,
     ROLLER_COASTER,
     OCEAN_BOTTOM_MIDDLE,
-    OCEAN_BOTTOM_NEAR
+    OCEAN_BOTTOM_NEAR,
 } from '../../../../app/constants/scene/things/flats'
 import {
     OCEAN_WAVES__REAR,
@@ -91,7 +91,7 @@ import {
     OCEAN_WAVES__MIDDLE_FRONT,
     OCEAN_WAVES__FRONT,
     OCEAN_CAVE_INTERIOR,
-    OCEAN_CAVE_EXTERIOR
+    OCEAN_CAVE_EXTERIOR,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -102,23 +102,23 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'side, lying on floor, propped up',
-                    instance: MAT
-                }
+                    instance: MAT,
+                },
             },
             [CARDBOARD]: {
                 [BENNETT_TAIWAN_STAIRS]: true,
-                [ODIN_TAIWAN_STAIRS]: true
+                [ODIN_TAIWAN_STAIRS]: true,
             },
             [CUTOUT]: {
                 [BUDDHA_SHRINE]: true,
-                [TAIWAN_FRIDGE]: true
+                [TAIWAN_FRIDGE]: true,
             },
             [FIXTURE]: {
-                [FRIDGE_DRAWINGS]: true
-            }
+                [FRIDGE_DRAWINGS]: true,
+            },
         },
         cubes: TAIWAN_ROOM_KEY,
-        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 4,
@@ -127,22 +127,22 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'side angle, looking down stairs',
-                    instance: STAIRS
-                }
+                    instance: STAIRS,
+                },
             },
             [BACKDROP]: {
-                [TAIWAN_STAIRS_BACKDROP]: true
+                [TAIWAN_STAIRS_BACKDROP]: true,
             },
             [CARDBOARD]: {
                 [BENNETT_TAIWAN_GATE]: true,
-                [ODIN_TAIWAN_GATE]: true
+                [ODIN_TAIWAN_GATE]: true,
             },
             [DOOR]: {
-                [IRON_GATE_LOW]: true
-            }
+                [IRON_GATE_LOW]: true,
+            },
         },
         cubes: TAIWAN_STAIRS_KEY,
-        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 6,
@@ -151,29 +151,29 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'side angle, peeking out from gate',
-                    instance: GATE
-                }
+                    instance: GATE,
+                },
             },
             [BACKDROP]: {
-                [MOUNTAIN_TAIWAN_BACKDROP]: true
+                [MOUNTAIN_TAIWAN_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_ODIN_RICKSHAW]: true
+                [BENNETT_ODIN_RICKSHAW]: true,
             },
             [CUTOUT]: {
-                [TAIWAN_TREE]: true
+                [TAIWAN_TREE]: true,
             },
             [DOOR]: {
-                [IRON_GATE]: true
+                [IRON_GATE]: true,
             },
             [FLAT]: {
                 [TAIWAN_HOUSES_CENTRE]: true,
                 [TAIWAN_HOUSE_FAR]: true,
-                [TAIWAN_HOUSE_NEAR]: true
-            }
+                [TAIWAN_HOUSE_NEAR]: true,
+            },
         },
         cubes: TAIWAN_GATE_KEY,
-        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 9,
@@ -182,22 +182,22 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'getting off rickshaw bike',
-                    instance: RICKSHAW
-                }
+                    instance: RICKSHAW,
+                },
             },
             [BACKDROP]: {
-                [SHORE_RICKSHAW_BACKDROP]: true
+                [SHORE_RICKSHAW_BACKDROP]: true,
             },
             [CARDBOARD]: {
                 [BENNETT_SHORE]: true,
-                [ODIN_SHORE]: true
+                [ODIN_SHORE]: true,
             },
             [FLAT]: {
-                [RICKSHAW_TOWN]: true
-            }
+                [RICKSHAW_TOWN]: true,
+            },
         },
         cubes: RICKSHAW_KEY,
-        sky: { time: TIME_TWILIGHT_TAIWAN, season: SEASON_AUTUMN }
+        sky: { time: TIME_TWILIGHT_TAIWAN, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 11,
@@ -206,25 +206,25 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'side back, looking out to ocean',
-                    instance: SHORE
-                }
+                    instance: SHORE,
+                },
             },
             [BACKDROP]: {
-                [SHORE_BUOY_BACKDROP]: true
+                [SHORE_BUOY_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_ODIN_BUOY]: true
+                [BENNETT_ODIN_BUOY]: true,
             },
             [CUTOUT]: {
-                [YELLOW_TAPED_GRILL]: true
+                [YELLOW_TAPED_GRILL]: true,
             },
             [FLAT]: {
                 [FERRIS_WHEEL]: true,
-                [ROLLER_COASTER]: true
-            }
+                [ROLLER_COASTER]: true,
+            },
         },
         cubes: SHORE_KEY,
-        sky: { time: TIME_TWILIGHT_TAIWAN, season: SEASON_AUTUMN }
+        sky: { time: TIME_TWILIGHT_TAIWAN, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 14,
@@ -233,24 +233,24 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'peering down from buoy',
-                    instance: BUOY
-                }
+                    instance: BUOY,
+                },
             },
             [CARDBOARD]: {
                 [BENNETT_ODIN_DEPTHS]: true,
                 [SEA_SERPENT_LEFT]: true,
-                [SEA_SERPENT_RIGHT]: true
+                [SEA_SERPENT_RIGHT]: true,
             },
             [PANEL]: {
                 [OCEAN_WAVES__REAR]: true,
                 [OCEAN_WAVES__MIDDLE_REAR]: true,
                 [OCEAN_WAVES__MIDDLE]: true,
                 [OCEAN_WAVES__MIDDLE_FRONT]: true,
-                [OCEAN_WAVES__FRONT]: true
-            }
+                [OCEAN_WAVES__FRONT]: true,
+            },
         },
         cubes: BUOY_KEY,
-        sky: { season: SEASON_OCEAN_TOP }
+        sky: { season: SEASON_OCEAN_TOP },
     },
     {
         unitIndex: 18,
@@ -259,22 +259,22 @@ export default [
             [ACTOR]: {
                 [SASHA_BENNETT]: {
                     description: 'mermaid',
-                    instance: MERMAID
-                }
+                    instance: MERMAID,
+                },
             },
             [BACKDROP]: {
-                [OCEAN_BOTTOM_FAR]: true
+                [OCEAN_BOTTOM_FAR]: true,
             },
             [CARDBOARD]: {
-                [BENNETT_ODIN_OCEAN_FLOOR]: true
+                [BENNETT_ODIN_OCEAN_FLOOR]: true,
             },
             [FLAT]: {
                 [OCEAN_BOTTOM_MIDDLE]: true,
-                [OCEAN_BOTTOM_NEAR]: true
-            }
+                [OCEAN_BOTTOM_NEAR]: true,
+            },
         },
         cubes: OCEAN_DEPTHS_KEY,
-        sky: { season: SEASON_OCEAN_SIDE }
+        sky: { season: SEASON_OCEAN_SIDE },
     },
     {
         unitIndex: 20,
@@ -283,22 +283,22 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     description: 'side angle, crouched in sand, looking back',
-                    instance: OCEAN_FLOOR
-                }
+                    instance: OCEAN_FLOOR,
+                },
             },
             [BACKDROP]: {
-                [OCEAN_FLOOR_FAR]: true
+                [OCEAN_FLOOR_FAR]: true,
             },
             [CARDBOARD]: {
                 [BENNETT_MAT]: true,
-                [ODIN_MAT]: true
+                [ODIN_MAT]: true,
             },
             [PANEL]: {
                 [OCEAN_CAVE_INTERIOR]: true,
-                [OCEAN_CAVE_EXTERIOR]: true
-            }
+                [OCEAN_CAVE_EXTERIOR]: true,
+            },
         },
         cubes: OCEAN_FLOOR_KEY,
-        sky: { season: SEASON_OCEAN_SIDE }
-    }
+        sky: { season: SEASON_OCEAN_SIDE },
+    },
 ]

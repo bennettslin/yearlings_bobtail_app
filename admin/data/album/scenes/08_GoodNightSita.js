@@ -6,25 +6,25 @@ import {
     DOOR,
     FIXTURE,
     FLAT,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     MUSEUM_KEY,
     BACKSTAGE_KEY,
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
-    GO_KARTS_KEY
+    GO_KARTS_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_EVENING,
     TIME_AFTERNOON,
-    SEASON_AUTUMN
+    SEASON_AUTUMN,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     LIZ,
     KHARI,
-    STEPHANIE
+    STEPHANIE,
 } from '../../../../app/constants/scene/actors'
 import { DOUBLE_ALBERT } from '../../../../app/constants/scene/actors/khari'
 import { FLAPPER } from '../../../../app/constants/scene/actors/stephanie'
@@ -33,18 +33,18 @@ import {
     MUSEUM,
     BACKSTAGE,
     GO_KARTS,
-    DATE_ENDED
+    DATE_ENDED,
 } from '../../../../app/constants/scene/actors/songs'
 import {
     DRIVING_BACKDROP,
     OAKLAND_FRONT__HIGH,
-    OAKLAND_SIDE__LEVEL
+    OAKLAND_SIDE__LEVEL,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
     BUBBLE_LARGE__GO_KART,
-    THOUGHT_GO_KART
+    THOUGHT_GO_KART,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     CACTUS_SINGLE__LIZ_ENDING,
@@ -58,30 +58,30 @@ import {
     CAVEMAN_BONES,
     SANDBAGS,
     STAGE_LIGHTS,
-    TRAFFIC_LIGHT_FRONT
+    TRAFFIC_LIGHT_FRONT,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_OUTSIDE__ENDING,
     LIZ_BLINDS_OUTSIDE__ENDED,
     LIZ_GATE_OUTSIDE,
-    LIZ_GATE_OUTSIDE_OPEN
+    LIZ_GATE_OUTSIDE_OPEN,
 } from '../../../../app/constants/scene/things/doors'
 import {
     PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
-    MANNEQUIN
+    MANNEQUIN,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     DISTANT_BUILDINGS,
     GO_KART_TRACK,
     PUBLIC_FAR__LIZ_GATE,
-    PUBLIC_NEAR__LIZ_GATE
+    PUBLIC_NEAR__LIZ_GATE,
 } from '../../../../app/constants/scene/things/flats'
 import {
     GO_KART_SEAT__LEFT,
     GO_KART_SEAT__RIGHT,
     GO_KART_EXTERIOR__LEFT,
-    GO_KART_EXTERIOR__RIGHT
+    GO_KART_EXTERIOR__RIGHT,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -92,31 +92,31 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, awkward, wanting to make a move',
-                    instance: DATE_ENDING
+                    instance: DATE_ENDING,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'side, friendly, guarded',
-                        instance: DATE_ENDING
-                    }
-                }
+                        instance: DATE_ENDING,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
                 [CYPRESS_DOUBLE__LIZ_GATE]: true,
                 [CYPRESS_SINGLE__LIZ_ENDING]: true,
                 [CACTUS_SINGLE__LIZ_ENDING]: true,
-                [CACTUS_DOUBLE__LIZ_GATE]: true
+                [CACTUS_DOUBLE__LIZ_GATE]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDING]: true,
-                [LIZ_GATE_OUTSIDE]: true
-            }
+                [LIZ_GATE_OUTSIDE]: true,
+            },
         },
         cubes: LIZ_GATE_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN }
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 4,
@@ -125,22 +125,22 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'front, leaning towards Sita',
-                    instance: MUSEUM
+                    instance: MUSEUM,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'side, hands behind back, guarded',
-                        instance: MUSEUM
-                    }
-                }
+                        instance: MUSEUM,
+                    },
+                },
             },
             [CUTOUT]: {
                 [MUSEUM_DISPLAY]: true,
-                [CAVEMAN_BONES]: true
-            }
+                [CAVEMAN_BONES]: true,
+            },
         },
         cubes: MUSEUM_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 7,
@@ -149,37 +149,37 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side angle, jealous',
-                    instance: BACKSTAGE
+                    instance: BACKSTAGE,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'side, warm, guard down',
-                        instance: BACKSTAGE
-                    }
+                        instance: BACKSTAGE,
+                    },
                 },
                 [KHARI]: {
                     description: 'side angle, friendly',
-                    instance: DOUBLE_ALBERT
+                    instance: DOUBLE_ALBERT,
                 },
                 [STEPHANIE]: {
                     actor: {
                         description: 'side, rushing',
-                        instance: FLAPPER
-                    }
-                }
+                        instance: FLAPPER,
+                    },
+                },
             },
             [CUTOUT]: {
                 [SANDBAGS]: true,
-                [STAGE_LIGHTS]: true
+                [STAGE_LIGHTS]: true,
             },
             [FIXTURE]: {
                 [PUSH_BROOM__BACKSTAGE]: true,
                 [STEPLADDER]: true,
-                [MANNEQUIN]: true
-            }
+                [MANNEQUIN]: true,
+            },
         },
         cubes: BACKSTAGE_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 11,
@@ -188,32 +188,32 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, in go-kart, leaning forward',
-                    instance: GO_KARTS
+                    instance: GO_KARTS,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'side, in go-kart, relaxed',
-                        instance: GO_KARTS
-                    }
-                }
+                        instance: GO_KARTS,
+                    },
+                },
             },
             [BACKDROP]: {
                 [DRIVING_BACKDROP]: true,
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [FLAT]: {
                 [DISTANT_BUILDINGS]: true,
-                [GO_KART_TRACK]: true
+                [GO_KART_TRACK]: true,
             },
             [PANEL]: {
                 [GO_KART_SEAT__LEFT]: true,
                 [GO_KART_SEAT__RIGHT]: true,
                 [GO_KART_EXTERIOR__LEFT]: true,
-                [GO_KART_EXTERIOR__RIGHT]: true
-            }
+                [GO_KART_EXTERIOR__RIGHT]: true,
+            },
         },
         cubes: GO_KARTS_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 14,
@@ -222,40 +222,40 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, walking away dejected, slumped over',
-                    instance: DATE_ENDED
+                    instance: DATE_ENDED,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'front, closing gate, looking concerned',
-                        instance: DATE_ENDED
-                    }
-                }
+                        instance: DATE_ENDED,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_FRONT__HIGH]: true
+                [OAKLAND_FRONT__HIGH]: true,
             },
             [BUBBLE]: {
                 [THOUGHT_GO_KART]: true,
                 [BUBBLE_SMALL__GO_KART]: true,
                 [BUBBLE_MEDIUM__GO_KART]: true,
-                [BUBBLE_LARGE__GO_KART]: true
+                [BUBBLE_LARGE__GO_KART]: true,
             },
             [CUTOUT]: {
                 [CYPRESS_SINGLE__LIZ_ENDED]: true,
                 [CACTUS_SINGLE__LIZ_ENDED]: true,
                 [LAMPPOST__LIZ_GATE]: true,
-                [TRAFFIC_LIGHT_FRONT]: true
+                [TRAFFIC_LIGHT_FRONT]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDED]: true,
-                [LIZ_GATE_OUTSIDE_OPEN]: true
+                [LIZ_GATE_OUTSIDE_OPEN]: true,
             },
             [FLAT]: {
                 [PUBLIC_FAR__LIZ_GATE]: true,
-                [PUBLIC_NEAR__LIZ_GATE]: true
-            }
+                [PUBLIC_NEAR__LIZ_GATE]: true,
+            },
         },
         cubes: LIZ_GATE_STREET_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_AUTUMN }
-    }
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN },
+    },
 ]

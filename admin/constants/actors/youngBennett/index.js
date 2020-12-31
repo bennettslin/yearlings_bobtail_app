@@ -1,41 +1,41 @@
 import {
     YOUNG_BENNETT,
-    ANITA_BENNETT
+    ANITA_BENNETT,
 } from '../../../../app/constants/scene/actors'
 import {
     PANICKED,
     FLUSTERED,
     BATHING,
-    SINGING
+    SINGING,
 } from '../../../../app/constants/scene/actors/youngBennett'
 import {
     YOUNG_CHILD,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: YOUNG_BENNETT,
-        instance: PANICKED
+        instance: PANICKED,
     },
     {
         type: YOUNG_BENNETT,
-        instance: FLUSTERED
+        instance: FLUSTERED,
     },
     {
         type: YOUNG_BENNETT,
-        instance: BATHING
+        instance: BATHING,
     },
     {
         type: YOUNG_BENNETT,
-        instance: SINGING
+        instance: SINGING,
     },
     {
         type: ANITA_BENNETT,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: YOUNG_BENNETT,
-        instance: YOUNG_CHILD
-    }
+        instance: YOUNG_CHILD,
+    },
 ]

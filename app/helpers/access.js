@@ -4,7 +4,7 @@ export const getIsAccessedIndexedAnchorShown = ({
     isNavExpanded,
     isLyricExpanded,
     lyricAnnotationIndex,
-    isActivated
+    isActivated,
 
 }) => (
     Boolean(

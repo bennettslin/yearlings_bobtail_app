@@ -3,10 +3,10 @@ import dryingTears from '../../../../../assets/svgs/actors/bennettStephanie/dryi
 
 import {
     HORSING,
-    DRYING_TEARS
+    DRYING_TEARS,
 } from '../../../../constants/scene/actors/bennettStephanie'
 
 export default {
     [HORSING]: horsing,
-    [DRYING_TEARS]: dryingTears
+    [DRYING_TEARS]: dryingTears,
 }

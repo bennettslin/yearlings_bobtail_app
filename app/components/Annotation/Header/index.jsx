@@ -10,7 +10,7 @@ const AnnotationHeader = ({
     inCarousel,
     isAccessed,
     isSelected,
-    annotationIndex
+    annotationIndex,
 
 }) => didMount && (
     <div
@@ -20,14 +20,14 @@ const AnnotationHeader = ({
                 // Annotation header needs to be hideable in carousel.
                 inCarousel && 'AnnotationHeaderAnimatable',
                 'abF'
-            )
+            ),
         }}
     >
         <AnnotationTitle
             {...{
                 isAccessed,
                 isSelected,
-                annotationIndex
+                annotationIndex,
             }}
         />
     </div>
@@ -38,7 +38,7 @@ AnnotationHeader.propTypes = {
     inCarousel: PropTypes.bool,
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    annotationIndex: PropTypes.number.isRequired
+    annotationIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getDidMountHoc(AnnotationHeader))

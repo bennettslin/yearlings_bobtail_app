@@ -7,7 +7,7 @@ import {
     EMAIL_ACTION,
     EMAIL_NAME,
     EMAIL_DUMMY_NAME,
-    EMAIL_ID
+    EMAIL_ID,
 } from '../../../constants/website'
 import './style'
 
@@ -20,7 +20,7 @@ const MailingList = ({ didMount }) => {
         logEvent({
             e,
             componentName: 'MailingList',
-            analyticsIdentifier: 'email'
+            analyticsIdentifier: 'email',
         })
     }
 
@@ -28,7 +28,7 @@ const MailingList = ({ didMount }) => {
         logEvent({
             e,
             componentName: 'MailingList',
-            analyticsIdentifier: 'submit'
+            analyticsIdentifier: 'submit',
         })
     }
 
@@ -48,7 +48,7 @@ const MailingList = ({ didMount }) => {
                 ),
                 action: EMAIL_ACTION,
                 method: 'post',
-                target: '_blank'
+                target: '_blank',
             }}
         >
             <input
@@ -68,7 +68,7 @@ const MailingList = ({ didMount }) => {
                     autoComplete: 'off',
                     maxLength: 254,
                     onFocus,
-                    onChange
+                    onChange,
                 }}
             />
             {/* Honeypot field to prevent bot signups. */}
@@ -76,9 +76,9 @@ const MailingList = ({ didMount }) => {
                 {...{
                     style: {
                         position: 'absolute',
-                        left: '-5000px'
+                        left: '-5000px',
                     },
-                    'aria-hidden': true
+                    'aria-hidden': true,
                 }}
             >
                 <input
@@ -86,7 +86,7 @@ const MailingList = ({ didMount }) => {
                         name: EMAIL_DUMMY_NAME,
                         type: 'text',
                         defaultValue: '',
-                        tabIndex: -1
+                        tabIndex: -1,
                     }}
                 />
             </div>
@@ -101,7 +101,7 @@ const MailingList = ({ didMount }) => {
                     type: 'submit',
                     value: 'Sign up!',
                     disabled: !isValidEmail,
-                    onClick
+                    onClick,
                 }}
             />
         </form>
@@ -109,7 +109,7 @@ const MailingList = ({ didMount }) => {
 }
 
 MailingList.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default getDidMountHoc(MailingList)

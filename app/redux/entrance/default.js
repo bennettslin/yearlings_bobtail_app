@@ -3,14 +3,14 @@ export const getSongChangeDefaults = done => ({
     didStageReset: done,
     isSongSelectComplete: done,
     isSongChangeDone: done,
-    canTransitionAfterSongChange: done
+    canTransitionAfterSongChange: done,
 })
 
 export const getSceneChangeDefaults = done => ({
     didSceneExit: done,
     isSceneScrollComplete: done,
     isSceneChangeDone: done,
-    canTransitionAfterSceneChange: done
+    canTransitionAfterSceneChange: done,
 })
 
 export const ENTRANCE_DEFAULTS = {
@@ -20,5 +20,5 @@ export const ENTRANCE_DEFAULTS = {
      */
     isWindowResizeDone: false,
     ...getSongChangeDefaults(true),
-    ...getSceneChangeDefaults(true)
+    ...getSceneChangeDefaults(true),
 }

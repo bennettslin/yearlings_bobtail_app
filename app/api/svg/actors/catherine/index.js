@@ -7,12 +7,12 @@ import epilogue from '../../../../../assets/svgs/actors/catherine/epilogue'
 import {
     WEEPING,
     QUIPPING,
-    PUZZLED
+    PUZZLED,
 } from '../../../../constants/scene/actors/catherine'
 
 import {
     GOPI,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -20,5 +20,5 @@ export default {
     [QUIPPING]: quipping,
     [PUZZLED]: puzzled,
     [GOPI]: gopi,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

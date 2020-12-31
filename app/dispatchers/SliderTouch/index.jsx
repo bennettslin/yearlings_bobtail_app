@@ -6,14 +6,14 @@ import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
 import { getVerseIndexforRatio } from '../../helpers/verse'
 import {
     mapSelectedSongIndex,
-    mapIsSelectedLogue
+    mapIsSelectedLogue,
 } from '../../redux/selected/selector'
 import {
     mapSliderLeft,
     mapSliderWidth,
     mapIsSliderMoving,
     mapIsSliderTouched,
-    mapSliderVerseIndex
+    mapSliderVerseIndex,
 } from '../../redux/slider/selector'
 import { mapCanSliderMount } from '../../redux/viewport/selector'
 
@@ -40,14 +40,14 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
     const _touchSliderBegin = (
         {
             left: sliderLeft,
-            width: sliderWidth
+            width: sliderWidth,
         },
         clientX
     ) => {
         const sliderRatio = getElementRatioForClientX({
             clientX,
             elementLeft: sliderLeft,
-            elementWidth: sliderWidth
+            elementWidth: sliderWidth,
         })
 
         dispatch(updateSliderStore({
@@ -57,7 +57,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
             sliderVerseIndex: getVerseIndexforRatio(
                 selectedSongIndex,
                 sliderRatio
-            )
+            ),
         }))
 
         /**
@@ -90,7 +90,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
             sliderRatio = getElementRatioForClientX({
                 clientX,
                 elementLeft: sliderLeft,
-                elementWidth: sliderWidth
+                elementWidth: sliderWidth,
             }),
 
             nextVerseIndex = getVerseIndexforRatio(
@@ -104,7 +104,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
         }
         if (nextVerseIndex !== sliderVerseIndex) {
             dispatch(updateSliderStore({
-                sliderVerseIndex: nextVerseIndex
+                sliderVerseIndex: nextVerseIndex,
             }))
         }
     }
@@ -124,7 +124,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
         if (isSliderTouched) {
             dispatchVerse.current({
                 scrollLog: 'Slider selected',
-                verseIndex: sliderVerseIndex
+                verseIndex: sliderVerseIndex,
             })
 
             // Reset slider state.
@@ -138,7 +138,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
     useImperativeHandle(ref, () => ({
         begin: dispatchTouchBegin,
         move: dispatchTouchMove,
-        end: dispatchTouchEnd
+        end: dispatchTouchEnd,
     }))
     return (
         <VerseDispatcher {...{ ref: dispatchVerse }} />

@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import PreviewerDescription from '../Kilobytes'
+import PreviewerDescription from '../Description'
 import { convertPresenceKeyToClassName } from '../../../../app/helpers/format'
 import {
     getPreviewerSvgMapForActor,
-    getPreviewerSvgMapForThing
+    getPreviewerSvgMapForThing,
 } from '../../../utils/svg'
 import WHOLE_ACTORS_LIST from '../../../constants/actors'
 import THINGS_LIST from '../../../constants/things'
@@ -16,7 +16,7 @@ const PreviewerDashboard = ({
     presenceKey,
     kilobytes,
     hideKilobytesInMobile,
-    selectPresence
+    selectPresence,
 
 }) => {
     const
@@ -41,21 +41,21 @@ const PreviewerDashboard = ({
             {...{
                 className: cx(
                     'PreviewerDashboard'
-                )
+                ),
             }}
         >
             <select
                 {...{
                     className: 'PreviewerDashboard__child',
                     value: presenceType,
-                    onChange: selectPresenceType
+                    onChange: selectPresenceType,
                 }}
             >
                 {typesList.map(presenceType => (
                     <option
                         {...{
                             key: presenceType,
-                            value: presenceType
+                            value: presenceType,
                         }}
                     >
                         {presenceType}
@@ -66,7 +66,7 @@ const PreviewerDashboard = ({
                 {...{
                     className: 'PreviewerDashboard__child',
                     value: presenceKey,
-                    onChange: selectPresenceKey
+                    onChange: selectPresenceKey,
                 }}
             >
                 {Object.keys(svgMap)
@@ -74,7 +74,7 @@ const PreviewerDashboard = ({
                         <option
                             {...{
                                 key: presenceKey,
-                                value: presenceKey
+                                value: presenceKey,
                             }}
                         >
                             {convertPresenceKeyToClassName(presenceKey)}
@@ -88,7 +88,7 @@ const PreviewerDashboard = ({
                         'fCC'
                     ),
                     kilobytes,
-                    hideInMobile: hideKilobytesInMobile
+                    hideInMobile: hideKilobytesInMobile,
                 }}
             />
         </div>
@@ -101,7 +101,7 @@ PreviewerDashboard.propTypes = {
     presenceKey: PropTypes.string,
     kilobytes: PropTypes.number,
     hideKilobytesInMobile: PropTypes.bool,
-    selectPresence: PropTypes.func.isRequired
+    selectPresence: PropTypes.func.isRequired,
 }
 
 export default PreviewerDashboard

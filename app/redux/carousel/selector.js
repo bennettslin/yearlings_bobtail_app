@@ -10,7 +10,7 @@ import { mapIsTipsShown } from '../tips/selector'
 import {
     mapIsCarouselShown,
     mapIsLyricExpanded,
-    mapIsNavExpanded
+    mapIsNavExpanded,
 } from '../toggle/selector'
 
 // It's more semantically clear to say when carousel is *not* showable.
@@ -44,7 +44,7 @@ const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
         isOverviewShown,
         isTipsShown,
         isLyricExpanded,
-        isActivated
+        isActivated,
     })
 )
 
@@ -74,6 +74,6 @@ export const mapCarouselNavIdentifier = createSelector(
     ) => getCarouselNavIdentifier({
         isCarouselNotShowable,
         isCarouselShown,
-        isNavExpanded
+        isNavExpanded,
     })
 )

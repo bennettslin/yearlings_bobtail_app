@@ -55,7 +55,7 @@ import {
     POPUP_NEXT_BUTTON_KEY,
     WORMHOLE_BUTTON_KEY,
     SCORES_BUTTON_KEY,
-    TIPS_BUTTON_KEY
+    TIPS_BUTTON_KEY,
 } from '../../../constants/buttons'
 
 export default {
@@ -86,5 +86,5 @@ export default {
     [POPUP_NEXT_BUTTON_KEY]: popupNext,
     [WORMHOLE_BUTTON_KEY]: wormhole,
     [SCORES_BUTTON_KEY]: scores,
-    [TIPS_BUTTON_KEY]: tips
+    [TIPS_BUTTON_KEY]: tips,
 }

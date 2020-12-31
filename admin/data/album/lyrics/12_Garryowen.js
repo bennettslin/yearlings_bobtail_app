@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGCRAFT
+    SONGCRAFT,
 } from '../../../../app/constants/dots'
 
 import {
@@ -15,7 +15,7 @@ import {
     INTRO,
     SOLO,
     OUTRO,
-    IS_UNIT_DOT
+    IS_UNIT_DOT,
 } from '../../../../app/constants/lyrics'
 
 export default {
@@ -33,29 +33,29 @@ export default {
                         `In`,
                         {
                             isItalic: true,
-                            lyric: `Ulysses,`
+                            lyric: `Ulysses,`,
                         },
-                        `Garryowen is a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`
+                        `Garryowen is a menacing dog owned by a vulgar Irish nationalist. It seemed like a fitting eponym for my drunken self at the time.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [REFERENCE]: true
-                    }
-                }
-            }
+                        [REFERENCE]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: INTRO
+                formType: INTRO,
             },
             mainVerses: [
                 {
                     time: 0,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Garry's theme)`
-                    }
-                }
+                        lyric: `(Garry's theme)`,
+                    },
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -64,24 +64,24 @@ export default {
                         `Since I took the name of my drunken personality from James Joyce's`,
                         {
                             isItalic: true,
-                            lyric: `Ulysses,`
+                            lyric: `Ulysses,`,
                         },
                         `I went for the feel of an`,
                         {
                             anchor: `Irish reel`,
-                            wiki: `Reel_(dance)`
+                            wiki: `Reel_(dance)`,
                         },
-                        `here.`
+                        `here.`,
                     ],
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
@@ -92,12 +92,12 @@ export default {
                             card: {
                                 description: `As I began to withdraw from the relationship, Sita would reach out by groveling. And stung by my conscience, I would rush to comfort her. But as my patience wore thin over time, I would lash out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `tonight, to swipe meats and wine`
-                    ]
+                        `tonight, to swipe meats and wine`,
+                    ],
                 },
                 {
                     time: 20,
@@ -109,15 +109,15 @@ export default {
                                 {
                                     description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, which the other half would then cook into a meal for all to share. I was always in the thieving group.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                                        [BACKSTORY]: true,
+                                    },
                                 },
                                 {
-                                    wormhole: `crooked_thieves`
-                                }
-                            ]
-                        }
-                    ]
+                                    wormhole: `crooked_thieves`,
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 22,
@@ -128,12 +128,12 @@ export default {
                             card: {
                                 description: `As our relationship went south, sex became the last bargaining chip that Sita held in the power struggle between us. Since I preferred sex without a condom, she would suggest going without it as a way to coax any small kindness out of me.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `she offered as a thought,`
-                    ]
+                        `she offered as a thought,`,
+                    ],
                 },
                 {
                     time: 25,
@@ -144,17 +144,17 @@ export default {
                             card: {
                                 description: `To save money after my lease ended, I put my things in storage and alternated between sleeping with Sita and crashing in the basement of the punk house. This gave me the regular comfort of Sita's bed, while ensuring that she never held too much leverage over me.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: REFRAIN
+                formType: REFRAIN,
             },
             mainVerses: [
                 {
@@ -166,12 +166,12 @@ export default {
                             card: {
                                 description: `An inside joke among my friends was to address me as Garry when I was drunk, since my uneven rambling and oafish stunts made me an altogether different person.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `Garryowen. Oh no, and`
-                    ]
+                        `Garryowen. Oh no, and`,
+                    ],
                 },
                 {
                     time: 33,
@@ -182,18 +182,18 @@ export default {
                                 description: `But having an alter ego also absolved me of personal responsibility for my actions, which became problematic as my drunken behavior spilled further into random acts of aggression and misdemeanors.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `for this life you've chosen.`
-                    ]
-                }
-            ]
+                        `for this life you've chosen.`,
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
@@ -205,11 +205,11 @@ export default {
                             card: {
                                 description: `There was this kid named Tristan in our little group who was particularly hotheaded. One night after we got kicked out of a party for a fight he incited, Tristan challenged us to see who could punch a car window and break the glass first. I didn't win.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 42,
@@ -222,16 +222,16 @@ export default {
                                     description: `After lashing out all night in a spastic fury, Tristan would be perfectly collected the next morning. I came to see that his chaotic behavior was in fact meticulously controlled, giving him a strange inner peace. So I sought to indulge my drunken temper in the same manner.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
-                                        [OBSERVATION]: true
-                                    }
+                                        [OBSERVATION]: true,
+                                    },
                                 },
                                 {
-                                    wormhole: `lidless_vaseline_sits`
-                                }
-                            ]
+                                    wormhole: `lidless_vaseline_sits`,
+                                },
+                            ],
                         },
-                        `your rage.`
-                    ]
+                        `your rage.`,
+                    ],
                 },
                 {
                     time: 44,
@@ -244,20 +244,20 @@ export default {
                                     description: [
                                         {
                                             anchor: `Smegma`,
-                                            wiki: `Smegma`
+                                            wiki: `Smegma`,
                                         },
-                                        `is the smelly gunk that builds up on unwashed genitals.`
-                                    ]
+                                        `is the smelly gunk that builds up on unwashed genitals.`,
+                                    ],
                                 },
                                 {
                                     description: `My personal hygiene would be put on hold for days while I crashed at the punk house. But even once back at Sita's place, I would dawdle a bit before showering, since she was powerless to entice me with sex until I did.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                                        [BACKSTORY]: true,
+                                    },
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 47,
@@ -270,14 +270,14 @@ export default {
                                     `Once when Sita protested that we couldn't have sex until after I washed up, I snidely remarked that she could still give me a hummer, or`,
                                     {
                                         anchor: `blowjob,`,
-                                        wiki: `Fellatio`
+                                        wiki: `Fellatio`,
                                     },
-                                    `since this didn't count as sex in her view.`
+                                    `since this didn't count as sex in her view.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
                         `or so`,
                         {
@@ -285,22 +285,22 @@ export default {
                             card: {
                                 description: `Throughout our budding friendship, Sita had neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only added to my deepening resentment at the time.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: REFRAIN
+                formType: REFRAIN,
             },
             mainVerses: [
                 {
                     time: 50,
-                    lyric: `Well see, Garryowen, now no one,`
+                    lyric: `Well see, Garryowen, now no one,`,
                 },
                 {
                     time: 56,
@@ -310,18 +310,18 @@ export default {
                             card: {
                                 description: `My worlds collided one night when I smashed a random bike in a fit of drunken rage. As it turned out, the bike belonged to the friend of a neighborhood kid who liked my music from my earliest days of playing out. He had related so strongly to my songs about unfulfilled hopes. I was kind of disgusted with myself for disappointing him.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `as the boy unchosen.`
-                    ]
-                }
-            ]
+                        `as the boy unchosen.`,
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: CHORUS
+                formType: CHORUS,
             },
             mainVerses: [
                 {
@@ -334,16 +334,16 @@ export default {
                                 description: `I gladly drank to excess since it made me impotent and thus impervious to Sita's advances. But not having sex was also purifying in its own right, as it lent the familiar comfort of being my old self again.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `self-medicated,`
-                    ]
+                        `self-medicated,`,
+                    ],
                 },
                 {
                     time: 64,
-                    lyric: `stewing in hatred for the world.`
+                    lyric: `stewing in hatred for the world.`,
                 },
                 {
                     time: 67,
@@ -354,12 +354,12 @@ export default {
                                 description: `Of course, using alcohol as a spiritual cleanser isn't really sustainable, especially when it requires you to vomit into a toilet and see your reflection in the water staring back at you on a regular basis.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `you'll glimpse yourself`
-                    ]
+                        `you'll glimpse yourself`,
+                    ],
                 },
                 {
                     time: 70,
@@ -371,28 +371,28 @@ export default {
                                 {
                                     description: `In Hippocratic medicine, choler, or yellow bile, is the humor that induces aggression.`,
                                     dotKeys: {
-                                        [REFERENCE]: true
-                                    }
+                                        [REFERENCE]: true,
+                                    },
                                 },
                                 {
                                     description: [
                                         `Much like I wouldn't have recognized myself with an`,
                                         {
                                             anchor: `"upturned collar,"`,
-                                            wiki: `Upturned_collar`
+                                            wiki: `Upturned_collar`,
                                         },
-                                        `the angry drunk returning my gaze didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`
+                                        `the angry drunk returning my gaze didn't mesh with my self-image as a wide-eyed kid who meant well. At some point, I vowed to make a clean break and start over.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
-                                        [PUN]: true
-                                    }
-                                }
-                            ]
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `cringing in shame.`
-                    ]
-                }
+                        `cringing in shame.`,
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -401,20 +401,20 @@ export default {
                         `In traditional`,
                         {
                             anchor: `counterpoint,`,
-                            wiki: `Counterpoint`
+                            wiki: `Counterpoint`,
                         },
-                        `melodies are laid one atop another, and the chord progression is simply the byproduct of the harmonies they form in sequence. But since the chord progression for this song was already written, I took the reverse approach of taking individual notes from each harmony and distributing them among the instrumental parts to create coherent but unassuming melodic lines.`
+                        `melodies are laid one atop another, and the chord progression is simply the byproduct of the harmonies they form in sequence. But since the chord progression for this song was already written, I took the reverse approach of taking individual notes from each harmony and distributing them among the instrumental parts to create coherent but unassuming melodic lines.`,
                     ],
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
                 formType: CHORUS,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -427,12 +427,12 @@ export default {
                                 description: `Cats scratch to sharpen their claws, just like I had learned to keep my emotional defenses sharp after a lifetime of getting scratched and clawed as a victim of bullying.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [PUN]: true
-                                }
-                            }
+                                    [PUN]: true,
+                                },
+                            },
                         },
-                        `with your bilious malice,`
-                    ]
+                        `with your bilious malice,`,
+                    ],
                 },
                 {
                     time: 75,
@@ -445,26 +445,26 @@ export default {
                                     `In Biblical times, a community would seek absolution by symbolically placing its`,
                                     {
                                         anchor: `sins on a goat`,
-                                        wiki: `Scapegoat`
+                                        wiki: `Scapegoat`,
                                     },
-                                    `that was then cast into the desert. Banishing Sita from my life served a similar purpose. Without her around to cast judgment, there was no need to absolve myself of any hypocrisy.`
+                                    `that was then cast into the desert. Banishing Sita from my life served a similar purpose. Without her around to cast judgment, there was no need to absolve myself of any hypocrisy.`,
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 78,
-                    lyric: `You'll slap her down, and push her out,`
+                    lyric: `You'll slap her down, and push her out,`,
                 },
                 {
                     time: 81,
-                    lyric: `a crumpled castaway!`
-                }
+                    lyric: `a crumpled castaway!`,
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -473,38 +473,38 @@ export default {
                         `Though I'd taken violin lessons as a child, my skills were pretty rusty by the time I made this album. But rather than get up to speed through intense practice, I just recorded the fiddle by splicing together fragments of several notes at a time. To justify my cop-out, I threw in a complicated`,
                         {
                             anchor: `glissando`,
-                            wiki: `Glissando`
+                            wiki: `Glissando`,
                         },
-                        `wherever the score permitted.`
+                        `wherever the score permitted.`,
                     ],
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: SOLO
+                formType: SOLO,
             },
             mainVerses: [
                 {
                     time: 84,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(bagpipes)`
-                    }
-                }
-            ]
+                        lyric: `(bagpipes)`,
+                    },
+                },
+            ],
         },
         {
             unitMap: {
-                formType: REFRAIN
+                formType: REFRAIN,
             },
             mainVerses: [
                 {
                     time: 93,
-                    lyric: `Your rabid wit unleashed, Garryowen, to no end,`
+                    lyric: `Your rabid wit unleashed, Garryowen, to no end,`,
                 },
                 {
                     time: 100,
@@ -515,18 +515,18 @@ export default {
                             card: {
                                 description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me and shivering dramatically from the cold. But as our relationship soured, I grew tired of this brazen appeal to my primal and protective instincts, and drew some cruel pleasure in letting her shiver for just a bit longer.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `just to watch her freeze.`
-                    ]
-                }
-            ]
+                        `just to watch her freeze.`,
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: BRIDGE
+                formType: BRIDGE,
             },
             mainVerses: [
                 {
@@ -538,11 +538,11 @@ export default {
                             card: {
                                 description: `Sita's manner of prostrating herself, which forced me to wield an absolute power that I never asked for, was in no small way infuriating. But it was also heartbreakingly endearing, and thus it was guaranteed to make me love her, in the way one necessarily loves a pet. So I never doubted that the impending breakup would be equally wrenching for both of us.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 111,
@@ -553,13 +553,13 @@ export default {
                             card: {
                                 description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters I ogled at every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `someday yet!`
-                    ]
-                }
+                        `someday yet!`,
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -568,19 +568,19 @@ export default {
                         `The`,
                         {
                             anchor: `bagpipes`,
-                            wiki: `Bagpipes`
+                            wiki: `Bagpipes`,
                         },
-                        `here evoke a funeral procession to mark the death of my relationship with Sita. Since I didn't own any bagpipes, let alone Irish ones, I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter, and the other as the drone.`
+                        `here evoke a funeral procession to mark the death of my relationship with Sita. Since I didn't own any bagpipes, let alone Irish ones, I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter, and the other as the drone.`,
                     ],
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: CHORUS
+                formType: CHORUS,
             },
             mainVerses: [
                 {
@@ -594,21 +594,21 @@ export default {
                                         `A`,
                                         {
                                             anchor: `tanker`,
-                                            wiki: `Tanker_(ship)`
+                                            wiki: `Tanker_(ship)`,
                                         },
-                                        `is a marine vessel that transports crude oil. It can also be slang for a drinking spree.`
+                                        `is a marine vessel that transports crude oil. It can also be slang for a drinking spree.`,
                                     ],
                                     dotKeys: {
-                                        [PUN]: true
-                                    }
+                                        [PUN]: true,
+                                    },
                                 },
                                 {
                                     description: `As part of my plan to start afresh with someone new, I wanted to stay sober for a while, but that was unlikely to happen unless my drinking brought me to the point of sickness. I also needed plenty of alcohol to muster the courage to break up with Sita. And so I drank to oblivion each night, hoping to provide the necessary conditions for both purposes.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
-                                }
-                            ]
+                                        [BACKSTORY]: true,
+                                    },
+                                },
+                            ],
                         },
                         `you'll`,
                         {
@@ -617,19 +617,19 @@ export default {
                                 description: `I had ascribed every last one of my grievances to Sita for so long that all I could feel after the breakup was an eerie serenity. I could finally drop my "anger," and that was tantamount to feeling happy.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 120,
-                    lyric: `to which you've chained her; she'll sink into`
+                    lyric: `to which you've chained her; she'll sink into`,
                 },
                 {
                     time: 123,
-                    lyric: `the briny end. Now that you're cleansed,`
+                    lyric: `the briny end. Now that you're cleansed,`,
                 },
                 {
                     time: 126,
@@ -640,18 +640,18 @@ export default {
                             card: {
                                 description: `With my slate now wiped clean, I took pains to affect an endearingly awkward persona. As phony as it was, I'd been switching social identities for so long that being phony was how I felt genuine.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
                 formType: CHORUS,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -666,14 +666,14 @@ export default {
                                         `I had an intermittent habit of`,
                                         {
                                             anchor: `cutting myself`,
-                                            wiki: `Self-harm`
+                                            wiki: `Self-harm`,
                                         },
-                                        `to deal with distress. Early in our friendship, Sita took interest in my scars, which I interpreted as a morbid fascination with my troubled past. In time, I came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`
+                                        `to deal with distress. Early in our friendship, Sita took interest in my scars, which I interpreted as a morbid fascination with my troubled past. In time, I came to see that she was just sympathizing with a fellow depressive, one whose coping mechanisms were curiously different from her own.`,
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
-                                }
+                                        [BACKSTORY]: true,
+                                    },
+                                },
                                 /**
                                  * NOTE: This obscures the greater point of
                                  * self-harm, so I'm leaving it out for now.
@@ -694,9 +694,9 @@ export default {
                                     }
                                 }
                                 **/
-                            ]
-                        }
-                    ]
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 131,
@@ -708,35 +708,35 @@ export default {
                                 card: {
                                     description: `But if I was capable of injuring myself, then I was unlikely to have any compunction about hurting anyone close to me, who now knew the worst side of me as only I once did.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            }
-                        ]
-                    ]
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            },
+                        ],
+                    ],
                 },
                 {
                     time: 134,
-                    lyric: `You'd smite your kitten good, galled that smitten`
+                    lyric: `You'd smite your kitten good, galled that smitten`,
                 },
                 {
                     time: 137,
-                    lyric: `she would opt just not to hear!`
-                }
+                    lyric: `she would opt just not to hear!`,
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: `After some trial and error, I decided the counterpoint sounds best when the melodies occupy the same register, allowing them to blend together as a single harmonic layer. At the same time, the ear can still tease the instruments apart due to their different timbres, as is the case with the banjo, fiddle, and tin whistle heard here.`,
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: REFRAIN
+                formType: REFRAIN,
             },
             mainVerses: [
                 {
@@ -747,12 +747,12 @@ export default {
                             card: {
                                 description: `Related to the English "toodle-oo," the Irish "tooraloo" carries the same meaning of "goodbye." Nonsensical variants of it are prevalent in Irish drinking songs and lullabies.`,
                                 dotKeys: {
-                                    [REFERENCE]: true
-                                }
-                            }
+                                    [REFERENCE]: true,
+                                },
+                            },
                         },
-                        `Garryowen, who owes no one,`
-                    ]
+                        `Garryowen, who owes no one,`,
+                    ],
                 },
                 {
                     time: 145,
@@ -764,39 +764,39 @@ export default {
                                 description: `While my friends and I were clearly joking to say that it was Garry, not me, who had committed this or that act of vandalism, I kind of accepted it as the truth. And now it also wasn't me who had sapped Sita of her confidence over the years, finally to leave her a crumbled wreck. It must have been Garry. I wasn't there.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
                 formType: REFRAIN,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
                     time: 150,
-                    lyric: `You're a purer lie…`
-                }
-            ]
+                    lyric: `You're a purer lie…`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: OUTRO
+                formType: OUTRO,
             },
             mainVerses: [
                 {
                     time: 162,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Garry's theme)`
-                    }
-                }
-            ]
+                        lyric: `(Garry's theme)`,
+                    },
+                },
+            ],
         },
         {
             unitMap: {},
@@ -807,25 +807,25 @@ export default {
                         `After`,
                         {
                             isItalic: true,
-                            lyric: `Yearling's Bobtail`
+                            lyric: `Yearling's Bobtail`,
                         },
                         `was rejected by the last record label that had been vetting us, I got so depressed that I went on a monthlong bender. I eventually kept a box of wine by my bed to calm my nerves in the middle of the night. One day upon skipping my morning beers, I could sense my bedroom walls conspiring to attack me. I found out this was the first stage of`,
                         {
                             anchor: `delirium tremens`,
-                            wiki: `Delirium_tremens`
+                            wiki: `Delirium_tremens`,
                         },
                         `and began attending`,
                         {
                             anchor: `Alcoholics Anonymous`,
-                            wiki: `Alcoholics_Anonymous`
+                            wiki: `Alcoholics_Anonymous`,
                         },
-                        `meetings. I haven't had a drink since.`
+                        `meetings. I haven't had a drink since.`,
                     ],
                     dotKeys: {
-                        [AFTERWORD]: true
-                    }
-                }
-            }
-        }
-    ]
+                        [AFTERWORD]: true,
+                    },
+                },
+            },
+        },
+    ],
 }

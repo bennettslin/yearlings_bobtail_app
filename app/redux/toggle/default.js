@@ -11,5 +11,5 @@ export const TOGGLE_DEFAULTS = {
     isDotsSlideShown: false,
     isLyricExpanded: false,
     isScoreShown: false,
-    isPitchShown: false
+    isPitchShown: false,
 }

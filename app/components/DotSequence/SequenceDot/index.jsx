@@ -30,7 +30,7 @@ const SequenceDot = ({
                     inAnnotationCard && 'SequenceDot__annotationCard'
                 ),
                 dotKey,
-                ...other
+                ...other,
             }}
         />
     )
@@ -39,7 +39,7 @@ const SequenceDot = ({
 SequenceDot.propTypes = {
     dotKey: PropTypes.string.isRequired,
     inAnnotationCard: PropTypes.bool,
-    inTextAnchor: PropTypes.bool
+    inTextAnchor: PropTypes.bool,
 }
 
 export default memo(SequenceDot)

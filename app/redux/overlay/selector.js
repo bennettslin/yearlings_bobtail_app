@@ -4,7 +4,7 @@ import { mapLyricAnnotationIndex } from '../lyric/selector'
 import {
     mapIsScoreShown,
     mapIsAboutShown,
-    mapIsPitchShown
+    mapIsPitchShown,
 } from '../toggle/selector'
 import { mapIsOverlayingAnnotation } from '../annotationPopup/selector'
 import { mapIsWikiShown } from '../wiki/selector'
@@ -29,6 +29,6 @@ export const mapIsOverlayShown = createSelector(
         isScoreShown,
         isAboutShown,
         isPitchShown,
-        isWikiShown
+        isWikiShown,
     })
 )

@@ -3,7 +3,7 @@ import { hasKey } from '../../helpers/action'
 import { getOverviewTipsForNewSong } from '../../helpers/options'
 import {
     OPTION_STORE,
-    SELECTED_STORE
+    SELECTED_STORE,
 } from '../../constants/store'
 import { getOptionDefaults } from './default'
 
@@ -15,13 +15,13 @@ export const getOptionReducer = songIndex => (
         case OPTION_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         case SELECTED_STORE: {
             const {
                 isSelectedLogue,
                 selectedSongIndex,
-                selectedAnnotationIndex
+                selectedAnnotationIndex,
             } = payload
 
             /**
@@ -31,7 +31,7 @@ export const getOptionReducer = songIndex => (
             if (hasKey(selectedSongIndex) && !selectedAnnotationIndex) {
                 const {
                     selectedOverviewOption,
-                    selectedTipsOption
+                    selectedTipsOption,
                 } = state
 
                 return {
@@ -39,8 +39,8 @@ export const getOptionReducer = songIndex => (
                     ...getOverviewTipsForNewSong({
                         isSelectedLogue,
                         selectedOverviewOption,
-                        selectedTipsOption
-                    })
+                        selectedTipsOption,
+                    }),
                 }
             } else {
                 return state

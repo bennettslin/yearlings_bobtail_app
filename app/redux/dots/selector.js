@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 import {
     getFirstSelectedDotKey,
-    getHasSelectedDot
+    getHasSelectedDot,
 } from '../../helpers/dot'
 import { DOTS_STORE } from '../../constants/store'
 

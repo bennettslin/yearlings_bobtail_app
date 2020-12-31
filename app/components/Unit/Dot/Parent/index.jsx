@@ -16,7 +16,7 @@ const UnitDotParent = forwardRef(({ didMount, unitIndex }, ref) => {
         <UnitDot
             {...{
                 ref,
-                unitIndex
+                unitIndex,
             }}
         />
     )
@@ -24,7 +24,7 @@ const UnitDotParent = forwardRef(({ didMount, unitIndex }, ref) => {
 
 UnitDotParent.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    unitIndex: PropTypes.number.isRequired
+    unitIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getDidMountHoc(UnitDotParent))

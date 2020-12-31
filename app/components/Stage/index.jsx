@@ -19,7 +19,7 @@ const Stage = ({ style }) => {
                     'abF',
                     'ovH'
                 ),
-                style
+                style,
             }}
         >
             <Sky />
@@ -31,7 +31,7 @@ const Stage = ({ style }) => {
 
 Stage.propTypes = {
     // Passed by stage HOC.
-    style: PropTypes.object
+    style: PropTypes.object,
 }
 
 export default memo(getStageHoc(Stage))

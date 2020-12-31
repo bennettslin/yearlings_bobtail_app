@@ -25,10 +25,10 @@ const DotSequence = ({
                     'DotSequence',
                     !inAnnotationCard && [
                         'DotSequence__absolute',
-                        'gradientMask__dotSequence'
+                        'gradientMask__dotSequence',
                     ],
                     inTextAnchor && 'DotSequence__inTextAnchor'
-                )
+                ),
             }}
         >
             {ORDERED_DOT_KEYS.map(dotKey => (
@@ -39,7 +39,7 @@ const DotSequence = ({
                             key: dotKey,
                             dotKey,
                             inTextAnchor,
-                            inAnnotationCard
+                            inAnnotationCard,
                         }}
                     />
                 )
@@ -52,7 +52,7 @@ DotSequence.propTypes = {
     didMount: PropTypes.bool.isRequired,
     dotsBit: PropTypes.number.isRequired,
     inAnnotationCard: PropTypes.bool,
-    inTextAnchor: PropTypes.bool
+    inTextAnchor: PropTypes.bool,
 }
 
 export default memo(getDidMountHoc(DotSequence))

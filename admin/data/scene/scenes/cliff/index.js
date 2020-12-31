@@ -5,7 +5,7 @@ export default {
     [BENNETT_LIZ]: {
         [CLIFF]: {
             yIndex: 4,
-            xPosition: 6
-        }
-    }
+            xPosition: 6,
+        },
+    },
 }

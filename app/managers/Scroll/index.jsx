@@ -4,7 +4,7 @@ import { scrollLyricBackToSelectedVerse } from '../../redux/scrollLyric/action'
 import { mapIsActivated } from '../../redux/activated/selector'
 import {
     mapIsAutoScroll,
-    mapIsLyricExpanded
+    mapIsLyricExpanded,
 } from '../../redux/toggle/selector'
 import { mapIsHeightlessLyric } from '../../redux/viewport/selector'
 

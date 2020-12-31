@@ -18,12 +18,12 @@ const Stanzas = forwardRef(({ serverClientSongIndex }, ref) => {
     const handleVerseSelect = ({
         scrollLog,
         verseIndex,
-        fromActivated
+        fromActivated,
     }) => {
         dispatchVerse.current({
             scrollLog,
             verseIndex,
-            fromActivated
+            fromActivated,
         })
     }
 
@@ -38,7 +38,7 @@ const Stanzas = forwardRef(({ serverClientSongIndex }, ref) => {
                 <Unit
                     {...{
                         ref,
-                        unitIndex: 0
+                        unitIndex: 0,
                     }}
                 />
 
@@ -48,7 +48,7 @@ const Stanzas = forwardRef(({ serverClientSongIndex }, ref) => {
                             key: stanzaIndex,
                             ref,
                             stanzaIndex,
-                            handleVerseSelect
+                            handleVerseSelect,
                         }}
                     />
                 ))}
@@ -58,7 +58,7 @@ const Stanzas = forwardRef(({ serverClientSongIndex }, ref) => {
                     <Unit
                         {...{
                             ref,
-                            unitIndex: lastUnitDotCardIndex
+                            unitIndex: lastUnitDotCardIndex,
                         }}
                     />
                 )}
@@ -69,7 +69,7 @@ const Stanzas = forwardRef(({ serverClientSongIndex }, ref) => {
 })
 
 Stanzas.propTypes = {
-    serverClientSongIndex: PropTypes.number.isRequired
+    serverClientSongIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getSongServerClientHoc(Stanzas))

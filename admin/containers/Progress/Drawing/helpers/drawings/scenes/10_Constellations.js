@@ -3,7 +3,7 @@ import {
     BENNETT,
     ANA,
     HOWIE,
-    TOMER
+    TOMER,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     ABBEY_ROAD,
@@ -11,7 +11,7 @@ import {
     STEAM_TUNNEL,
     CEMETERY,
     STATION_WAGON,
-    ATTIC
+    ATTIC,
 } from '../../../../../../../app/constants/scene/actors/songs'
 
 export default [
@@ -19,102 +19,102 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: ABBEY_ROAD
+                    instance: ABBEY_ROAD,
                 },
                 [ANA]: {
-                    instance: ABBEY_ROAD
+                    instance: ABBEY_ROAD,
                 },
                 [HOWIE]: {
-                    instance: ABBEY_ROAD
+                    instance: ABBEY_ROAD,
                 },
                 [TOMER]: {
-                    instance: ABBEY_ROAD
-                }
-            }
-        }
+                    instance: ABBEY_ROAD,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: WALGREENS
+                    instance: WALGREENS,
                 },
                 [ANA]: {
-                    instance: WALGREENS
+                    instance: WALGREENS,
                 },
                 [HOWIE]: {
-                    instance: WALGREENS
+                    instance: WALGREENS,
                 },
                 [TOMER]: {
-                    instance: WALGREENS
-                }
-            }
-        }
+                    instance: WALGREENS,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: STEAM_TUNNEL
+                    instance: STEAM_TUNNEL,
                 },
                 [ANA]: {
-                    instance: STEAM_TUNNEL
+                    instance: STEAM_TUNNEL,
                 },
                 [HOWIE]: {
-                    instance: STEAM_TUNNEL
+                    instance: STEAM_TUNNEL,
                 },
                 [TOMER]: {
-                    instance: STEAM_TUNNEL
-                }
-            }
-        }
+                    instance: STEAM_TUNNEL,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: CEMETERY
+                    instance: CEMETERY,
                 },
                 [ANA]: {
-                    instance: CEMETERY
+                    instance: CEMETERY,
                 },
                 [HOWIE]: {
-                    instance: CEMETERY
+                    instance: CEMETERY,
                 },
                 [TOMER]: {
-                    instance: CEMETERY
-                }
-            }
-        }
+                    instance: CEMETERY,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: STATION_WAGON
+                    instance: STATION_WAGON,
                 },
                 [ANA]: {
-                    instance: STATION_WAGON
+                    instance: STATION_WAGON,
                 },
                 [HOWIE]: {
-                    instance: STATION_WAGON
+                    instance: STATION_WAGON,
                 },
                 [TOMER]: {
-                    instance: STATION_WAGON
-                }
-            }
-        }
+                    instance: STATION_WAGON,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: ATTIC
+                    instance: ATTIC,
                 },
                 [HOWIE]: {
-                    instance: ATTIC
-                }
-            }
-        }
-    }
+                    instance: ATTIC,
+                },
+            },
+        },
+    },
 ]

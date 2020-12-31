@@ -4,26 +4,26 @@ const SAFE_DOCUMENT = {
     activeElement: {},
     getElementById() {},
     getElementsByClassName: () => [],
-    querySelector() {}
+    querySelector() {},
 }
 
 const SAFE_WINDOW = {
     history: {
-        replaceState() {}
+        replaceState() {},
     },
     innerWidth: 0,
     innerHeight: 0,
     localStorage: {},
     location: {
         pathname: '',
-        search: ''
+        search: '',
     },
     navigator: {
         maxTouchPoints: '',
         msMaxTouchPoints: '',
-        userAgent: ''
+        userAgent: '',
     },
-    onresize() {}
+    onresize() {},
 }
 
 export const getDocument = () => (

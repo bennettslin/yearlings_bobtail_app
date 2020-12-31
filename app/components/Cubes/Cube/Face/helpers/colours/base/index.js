@@ -5,7 +5,7 @@ import {
     SAND_COLOUR,
     WOOD_FLOOR_COLOUR,
     BENNETT_FLOOR_COLOUR,
-    LINOLEUM_FLOOR_COLOUR
+    LINOLEUM_FLOOR_COLOUR,
 } from '../../../../../../../constants/scene/cubes/colours'
 import HSLA_MAP from '../../../../../../../constants/scene/cubes/hsla'
 
@@ -18,7 +18,7 @@ const _getRandomValue = ({
     hslaKey,
     yIndex,
     xIndex,
-    hueIncrement = 1
+    hueIncrement = 1,
 }) => {
     // Magic numbers are just for the sake of being random.
     const { h, s, l, a } = HSLA_MAP[hslaKey],
@@ -45,7 +45,7 @@ const _getNarrowRandomValue = (props) => (
 const _getRandomBrickPatternValue = ({
     hslaKey,
     yIndex,
-    xIndex
+    xIndex,
 }) => {
     const
         yOffset = yIndex % 2,
@@ -54,14 +54,14 @@ const _getRandomBrickPatternValue = ({
     return _getRandomValue({
         hslaKey,
         yIndex,
-        xIndex: xMultiplier
+        xIndex: xMultiplier,
     })
 }
 
 const _getCheckerboardValue = ({
     hslaKey,
     yIndex,
-    xIndex
+    xIndex,
 }) => {
     const { h, s, l, a } = HSLA_MAP[hslaKey],
 
@@ -75,7 +75,7 @@ const _getCheckerboardValue = ({
 const _getDiagonalValue = ({
     hslaKey,
     yIndex,
-    xIndex
+    xIndex,
 }) => {
     const { h, s, l, a } = HSLA_MAP[hslaKey],
 
@@ -97,20 +97,20 @@ const COLOUR_GETTER_MAP = {
     [OCEAN_COLOUR]: _getNarrowRandomValue,
     [WOOD_FLOOR_COLOUR]: _getRandomBrickPatternValue,
     [BENNETT_FLOOR_COLOUR]: _getDiagonalValue,
-    [LINOLEUM_FLOOR_COLOUR]: _getCheckerboardValue
+    [LINOLEUM_FLOOR_COLOUR]: _getCheckerboardValue,
 }
 
 export const getBaseColour = ({
     hslaKey,
     yIndex,
-    xIndex
+    xIndex,
 }) => {
     const customColourGetter = COLOUR_GETTER_MAP[hslaKey],
         { h, s, l, a = BASE_ALPHA } = customColourGetter ?
             customColourGetter({
                 hslaKey,
                 yIndex,
-                xIndex
+                xIndex,
             }) : HSLA_MAP[hslaKey]
 
     return { h, s, l, a }

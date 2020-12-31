@@ -37,7 +37,7 @@ const Score = () => {
                 className: 'Score',
                 isShown: isScoreShown,
                 isLoading,
-                onLoad
+                onLoad,
             }}
         />
     )

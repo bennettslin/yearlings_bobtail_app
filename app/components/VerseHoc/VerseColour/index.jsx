@@ -14,14 +14,14 @@ const VerseColour = ({
     verseIndex,
     inVerseBar,
     isVertical,
-    isTrackerShown
+    isTrackerShown,
 
 }) => {
     const
         { playerTime } = useContext(PlayerTimeContext),
         verseTrackerLength = useSelector(getMapVerseTrackerLength({
             playerTime,
-            verseIndex
+            verseIndex,
         }))
 
     return didMount && (
@@ -35,7 +35,7 @@ const VerseColour = ({
                         'VerseColour__notVerseBar',
                     'ovH',
                     'abF'
-                )
+                ),
             }}
         >
             {Number.isFinite(verseIndex) && (
@@ -43,7 +43,7 @@ const VerseColour = ({
                     {...{
                         trackerLength: verseTrackerLength,
                         isVertical,
-                        isNotShown: !isTrackerShown
+                        isNotShown: !isTrackerShown,
                     }}
                 />
             )}
@@ -56,7 +56,7 @@ VerseColour.propTypes = {
     verseIndex: PropTypes.number.isRequired,
     inVerseBar: PropTypes.bool,
     isVertical: PropTypes.bool,
-    isTrackerShown: PropTypes.bool
+    isTrackerShown: PropTypes.bool,
 }
 
 export default memo(getDidMountHoc(VerseColour))

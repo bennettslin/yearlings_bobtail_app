@@ -30,7 +30,7 @@ const Text = forwardRef(({
         const {
             lyric,
             isItalic,
-            isEmphasis
+            isEmphasis,
         } = textEntity
 
         if (isItalic || isEmphasis) {
@@ -41,7 +41,7 @@ const Text = forwardRef(({
                         ref,
                         isItalic,
                         isEmphasis,
-                        text: lyric
+                        text: lyric,
                     }}
                 />
             )
@@ -51,7 +51,7 @@ const Text = forwardRef(({
             const {
                     anchor: text,
                     href,
-                    annotationIndex
+                    annotationIndex,
                 } = textEntity,
                 { wormholeAnnotationIndex } = props
 
@@ -63,7 +63,7 @@ const Text = forwardRef(({
                         <Anchor
                             {...{
                                 href,
-                                text
+                                text,
                             }}
                         />
                     </>
@@ -87,7 +87,7 @@ const Text = forwardRef(({
                              * the wormhole anchor.
                              */
                             isWormholeDestinationAnchor:
-                                annotationIndex === wormholeAnnotationIndex
+                                annotationIndex === wormholeAnnotationIndex,
                         }}
                     />
                 )
@@ -96,7 +96,7 @@ const Text = forwardRef(({
                 const {
                     dotsBit,
                     wikiIndex,
-                    wikiAnnotationIndex
+                    wikiAnnotationIndex,
                 } = textEntity
 
                 return (
@@ -113,7 +113,7 @@ const Text = forwardRef(({
                              * passed from the annotation.
                              */
                             annotationIndex,
-                            wikiAnnotationIndex
+                            wikiAnnotationIndex,
                         }}
                     />
                 )
@@ -130,9 +130,9 @@ Text.propTypes = {
     inVerseBar: PropTypes.bool,
     text: PropTypes.oneOfType([
         PropTypes.string,
-        PropTypes.object
+        PropTypes.object,
     ]),
-    wormholeAnnotationIndex: PropTypes.number
+    wormholeAnnotationIndex: PropTypes.number,
 }
 
 export default memo(Text)

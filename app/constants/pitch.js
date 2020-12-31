@@ -25,9 +25,9 @@ export const PITCH_ICONS = [
     TEMP_PITCH_ICON_10,
     TEMP_PITCH_ICON_11,
     TEMP_PITCH_ICON_12,
-    TEMP_PITCH_ICON_13
+    TEMP_PITCH_ICON_13,
 ]
 
 export const PITCH_PAGE_PATHS = [
-    ''
+    '',
 ]

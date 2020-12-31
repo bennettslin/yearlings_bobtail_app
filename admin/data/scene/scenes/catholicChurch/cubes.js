@@ -3,7 +3,7 @@ import { CATHOLIC_CHURCH_KEY } from '../../../../../app/constants/scene/scenes'
 import {
     GROUND_CLEAR_COLOUR as G,
     STREET_COLOUR as T,
-    PAVEMENT_COLOUR as V
+    PAVEMENT_COLOUR as V,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -14,15 +14,15 @@ export default {
                 [V],
                 [T],
                 [T],
-                [V]
+                [V],
             ],
             zIndices: [
                 [0],
                 [1],
                 [0],
                 [0],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

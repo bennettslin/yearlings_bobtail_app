@@ -9,7 +9,7 @@ const getStageHoc = StageComponent => {
             stageTop,
             stageLeft,
             stageWidth,
-            stageHeight
+            stageHeight,
         } = JSON.parse(useSelector(mapStageDimensionCoordinates))
 
         return (
@@ -19,8 +19,8 @@ const getStageHoc = StageComponent => {
                         top: `${stageTop}px`,
                         left: `${stageLeft}px`,
                         width: `${stageWidth}px`,
-                        height: `${stageHeight}px`
-                    }
+                        height: `${stageHeight}px`,
+                    },
                 }}
             />
         )

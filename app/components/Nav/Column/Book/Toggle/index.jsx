@@ -7,7 +7,7 @@ import './style'
 
 const NavBookToggle = ({
     bookIndex,
-    handleButtonClick
+    handleButtonClick,
 
 }) => (
     <div className={cx(
@@ -18,7 +18,7 @@ const NavBookToggle = ({
             isToggle
             {...{
                 bookIndex,
-                handleButtonClick
+                handleButtonClick,
             }}
         />
     </div>
@@ -26,7 +26,7 @@ const NavBookToggle = ({
 
 NavBookToggle.propTypes = {
     bookIndex: PropTypes.number.isRequired,
-    handleButtonClick: PropTypes.func.isRequired
+    handleButtonClick: PropTypes.func.isRequired,
 }
 
 export default memo(NavBookToggle)

@@ -8,7 +8,7 @@ import Texts from '../../../Texts'
 import {
     getPitchDescriptionForIndex,
     getPitchFootnoteForIndex,
-    getShowContactEmailForPitch
+    getShowContactEmailForPitch,
 } from '../../../../api/pitch/segments'
 import './style'
 
@@ -23,12 +23,12 @@ const PitchDescription = ({ serverClientPitchIndex }) => {
                 className: cx(
                     'PitchDescription',
                     'fontSize__mediumTitle'
-                )
+                ),
             }}
         >
             <div
                 {...{
-                    className: 'PitchText__segment'
+                    className: 'PitchText__segment',
                 }}
             >
                 {description.map((text, index) => (
@@ -43,7 +43,7 @@ const PitchDescription = ({ serverClientPitchIndex }) => {
             {Boolean(footnote) && (
                 <div
                     {...{
-                        className: 'PitchText__footnote'
+                        className: 'PitchText__footnote',
                     }}
                 >
                     <Texts {...{ text: footnote }} />
@@ -54,7 +54,7 @@ const PitchDescription = ({ serverClientPitchIndex }) => {
 }
 
 PitchDescription.propTypes = {
-    serverClientPitchIndex: PropTypes.number.isRequired
+    serverClientPitchIndex: PropTypes.number.isRequired,
 }
 
 export default getPitchServerClientHoc(PitchDescription)

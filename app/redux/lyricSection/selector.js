@@ -7,7 +7,7 @@ import { mapIsLyricExpanded } from '../toggle/selector'
 import {
     mapWindowHeight,
     mapMenuHeight,
-    mapCanSliderMount
+    mapCanSliderMount,
 } from '../viewport/selector'
 
 export const mapLyricSectionRect = createSelector(
@@ -33,6 +33,6 @@ export const mapLyricSectionRect = createSelector(
         windowHeight,
         isLyricExpanded,
         lyricDynamicHeight,
-        menuHeight
+        menuHeight,
     })
 )

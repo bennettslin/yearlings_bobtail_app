@@ -8,7 +8,7 @@ import Button from '../../Button'
 import { ENTER } from '../../../constants/access'
 import {
     AUDIO_FAST_FORWARD_BUTTON_KEY,
-    AUDIO_REWIND_BUTTON_KEY
+    AUDIO_REWIND_BUTTON_KEY,
 } from '../../../constants/buttons'
 import { getMapIsVerseActivated } from '../../../redux/activated/selector'
 import { getMapVerseSelectedStatus } from '../../../redux/selected/selector'
@@ -16,7 +16,7 @@ import './style'
 
 const VerseNav = ({
     verseIndex,
-    handleVerseSelect
+    handleVerseSelect,
 
 }) => {
     const verseSelectedStatus = useSelector(
@@ -27,7 +27,7 @@ const VerseNav = ({
         handleVerseSelect({
             scrollLog: 'Verse nav selected',
             verseIndex,
-            fromActivated: true
+            fromActivated: true,
         })
     }
 
@@ -49,7 +49,7 @@ const VerseNav = ({
                             AUDIO_REWIND_BUTTON_KEY :
                             AUDIO_FAST_FORWARD_BUTTON_KEY,
                     accessKey: ENTER,
-                    handleButtonClick
+                    handleButtonClick,
                 }}
             />
         </div>
@@ -58,7 +58,7 @@ const VerseNav = ({
 
 const VerseNavContainer = ({
     verseIndex,
-    handleVerseSelect
+    handleVerseSelect,
 
 }) => {
     const isVerseActivated = useSelector(getMapIsVerseActivated(verseIndex))
@@ -76,14 +76,14 @@ const VerseNavContainer = ({
                 timeout: 200,
                 classNames: {
                     enterActive: 'VerseNav__shown',
-                    enterDone: 'VerseNav__shown'
-                }
+                    enterDone: 'VerseNav__shown',
+                },
             }}
         >
             <VerseNav
                 {...{
                     verseIndex,
-                    handleVerseSelect
+                    handleVerseSelect,
                 }}
             />
         </CSSTransition>
@@ -92,7 +92,7 @@ const VerseNavContainer = ({
 
 VerseNav.propTypes = {
     verseIndex: PropTypes.number.isRequired,
-    handleVerseSelect: PropTypes.func.isRequired
+    handleVerseSelect: PropTypes.func.isRequired,
 }
 
 VerseNavContainer.propTypes = VerseNav.propTypes

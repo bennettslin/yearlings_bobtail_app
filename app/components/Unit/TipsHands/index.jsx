@@ -8,7 +8,7 @@ import {
     getShowActivatedTip,
     getShowStanzaTabTip,
     getShowWormholesTip,
-    getShowWikiTip
+    getShowWikiTip,
 } from '../../../api/album/tips'
 import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import {
@@ -16,12 +16,12 @@ import {
     ACTIVATED_VERSE,
     STANZA_TAB,
     WORMHOLES,
-    WIKI
+    WIKI,
 } from '../../../constants/tips'
 
 const UnitTipsHands = ({
     didMount,
-    unitIndex
+    unitIndex,
 
 }) => {
     const
@@ -55,7 +55,7 @@ const UnitTipsHands = ({
 
 UnitTipsHands.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    unitIndex: PropTypes.number.isRequired
+    unitIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getDidMountHoc(UnitTipsHands))

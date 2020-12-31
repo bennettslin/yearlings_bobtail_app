@@ -17,5 +17,5 @@ export default [
     ...maintenance,
     ...presence,
     ...styling,
-    ...wow
+    ...wow,
 ]

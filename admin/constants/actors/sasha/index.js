@@ -1,42 +1,42 @@
 import {
     SASHA,
     BRAD_SASHA,
-    SASHA_BENNETT
+    SASHA_BENNETT,
 } from '../../../../app/constants/scene/actors'
 import {
     INDIGNANT,
-    POPULAR_GIRL
+    POPULAR_GIRL,
 } from '../../../../app/constants/scene/actors/sasha'
 import { CHARMED_SCHOOLBUS } from '../../../../app/constants/scene/actors/bradSasha'
 import {
     MERMAID,
-    COMFORTING_HUMILIATED
+    COMFORTING_HUMILIATED,
 } from '../../../../app/constants/scene/actors/sashaBennett'
 import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: BRAD_SASHA,
-        instance: CHARMED_SCHOOLBUS
+        instance: CHARMED_SCHOOLBUS,
     },
     {
         type: SASHA,
-        instance: INDIGNANT
+        instance: INDIGNANT,
     },
     {
         type: SASHA_BENNETT,
-        instance: COMFORTING_HUMILIATED
+        instance: COMFORTING_HUMILIATED,
     },
     {
         type: SASHA_BENNETT,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: SASHA_BENNETT,
-        instance: MERMAID
+        instance: MERMAID,
     },
     {
         type: SASHA,
-        instance: POPULAR_GIRL
-    }
+        instance: POPULAR_GIRL,
+    },
 ]

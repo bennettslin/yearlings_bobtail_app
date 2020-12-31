@@ -13,7 +13,7 @@ import {
     LYRIC_SCROLL_BUTTON_KEY,
     OVERVIEW_BUTTON_KEY,
     SCORES_BUTTON_KEY,
-    TIPS_BUTTON_KEY
+    TIPS_BUTTON_KEY,
 } from '../../../constants/buttons'
 
 const TOOLTIP_LEFT = 'left'
@@ -21,7 +21,7 @@ const TOOLTIP_RIGHT = 'right'
 
 export const getTooltipPlacement = ({
     buttonName,
-    isDesktopWidth
+    isDesktopWidth,
 }) => {
 
     if (isDesktopWidth) {

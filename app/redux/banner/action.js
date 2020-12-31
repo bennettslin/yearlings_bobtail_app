@@ -5,5 +5,5 @@ import { BANNER_DEFAULTS } from './default'
 
 export const updateBannerStore = (payload = BANNER_DEFAULTS) => ({
     type: BANNER_STORE,
-    payload: getDefinedOnlyPayload(payload)
+    payload: getDefinedOnlyPayload(payload),
 })

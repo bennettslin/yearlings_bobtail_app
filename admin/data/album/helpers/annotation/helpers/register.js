@@ -4,7 +4,7 @@ import { WIKI } from '../../../../../../app/constants/lyrics'
 const _addWikiWormholeDotKeyToCard = (card) => {
     const {
         description,
-        wormhole
+        wormhole,
     } = card
 
     if (description) {
@@ -61,7 +61,7 @@ const _addCardDotKeysToAnnotation = (card, dotKeys) => {
 
 export const registerCardsDotKeys = ({
     cards,
-    dotKeys
+    dotKeys,
 
 }) => {
     cards.forEach((card) => {

@@ -1,19 +1,19 @@
 import {
     OLD_BENNETT,
-    BENNETTS_CHRISTOPHER_LIZ
+    BENNETTS_CHRISTOPHER_LIZ,
 } from '../../../../app/constants/scene/actors'
 import {
     PROLOGUE,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: OLD_BENNETT,
-        instance: PROLOGUE
+        instance: PROLOGUE,
     },
     {
         type: BENNETTS_CHRISTOPHER_LIZ,
-        instance: EPILOGUE
-    }
+        instance: EPILOGUE,
+    },
 ]

@@ -7,7 +7,7 @@ import './style'
 const ButtonCharacter = ({
     isSelected,
     character,
-    hasTextShadowLight
+    hasTextShadowLight,
 
 }) => {
 
@@ -24,7 +24,7 @@ const ButtonCharacter = ({
                     'fCC',
                     'textShadow__dark',
                     hasTextShadowLight && 'textShadow__light'
-                )
+                ),
             }}
         >
             {character}
@@ -36,9 +36,9 @@ ButtonCharacter.propTypes = {
     isSelected: PropTypes.bool,
     character: PropTypes.oneOfType([
         PropTypes.number,
-        PropTypes.string
+        PropTypes.string,
     ]),
-    hasTextShadowLight: PropTypes.bool
+    hasTextShadowLight: PropTypes.bool,
 }
 
 export default memo(ButtonCharacter)

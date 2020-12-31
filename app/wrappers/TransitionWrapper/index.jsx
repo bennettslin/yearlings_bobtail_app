@@ -7,7 +7,7 @@ import {
     mapIsSongChangeDone,
     mapCanTransitionAfterSceneChange,
     mapCanPresenceTransitionExit,
-    mapCanPresenceTransitionEnter
+    mapCanPresenceTransitionEnter,
 } from '../../redux/entrance/selector'
 
 const TransitionWrapper = ({ didMount, children }) => {
@@ -38,8 +38,8 @@ const TransitionWrapper = ({ didMount, children }) => {
                             'TrW__isSongChangeDone' :
                             'TrW__isSongChangeNotDone',
                         'abF'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {children}
@@ -49,7 +49,7 @@ const TransitionWrapper = ({ didMount, children }) => {
 
 TransitionWrapper.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default memo(getDidMountHoc(TransitionWrapper))

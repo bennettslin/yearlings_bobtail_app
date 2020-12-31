@@ -9,7 +9,7 @@ import './style'
 const AccessDirectionLetter = ({
     accessKey,
     alignTop,
-    isNext
+    isNext,
 
 }) => {
     const isLyricLogue = useSelector(mapIsLyricLogue)
@@ -22,14 +22,14 @@ const AccessDirectionLetter = ({
                     'AccessDirectionLetter',
                     alignTop && 'AccessDirectionLetter__alignTop',
                     `AccessDirectionLetter__${isNext ? 'next' : 'previous'}`
-                )
+                ),
             }}
         >
             <AccessLetter
                 animateStandaloneOnKeyDown
                 {...{
                     showIfAccessOn: !isLyricLogue,
-                    accessKey
+                    accessKey,
                 }}
             />
         </div>
@@ -39,7 +39,7 @@ const AccessDirectionLetter = ({
 AccessDirectionLetter.propTypes = {
     accessKey: PropTypes.string.isRequired,
     alignTop: PropTypes.bool,
-    isNext: PropTypes.bool
+    isNext: PropTypes.bool,
 }
 
 export default memo(AccessDirectionLetter)

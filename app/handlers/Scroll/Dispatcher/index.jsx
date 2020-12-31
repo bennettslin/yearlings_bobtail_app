@@ -9,7 +9,7 @@ import { getMapAlignForScroll } from '../../../redux/scroll/selector'
 const ScrollDispatcher = forwardRef(({
     isCarousel,
     getScrollParent,
-    getScrollChild
+    getScrollChild,
 
 }, ref) => {
     const alignForScroll = useSelector(getMapAlignForScroll(isCarousel))
@@ -19,7 +19,7 @@ const ScrollDispatcher = forwardRef(({
         scrollClass,
         index,
         noDuration,
-        callback
+        callback,
 
     }) => {
         const element =
@@ -30,20 +30,20 @@ const ScrollDispatcher = forwardRef(({
             getSafeScrollChild({
                 log,
                 scrollClass,
-                index
+                index,
             })
 
         if (element) {
             logScroll({
                 isCarousel,
                 isAnchor: scrollClass === ANCHOR_SCROLL,
-                log: `${log} ${index}.`
+                log: `${log} ${index}.`,
             })
             scrollIntoView(element, {
                 align: alignForScroll,
                 time: noDuration ? 0 : 750,
                 validTarget: element => element === getScrollParent(),
-                maxSynchronousAlignments: 1
+                maxSynchronousAlignments: 1,
             }, callback)
         }
     }
@@ -55,7 +55,7 @@ const ScrollDispatcher = forwardRef(({
 ScrollDispatcher.propTypes = {
     isCarousel: PropTypes.bool,
     getScrollParent: PropTypes.func.isRequired,
-    getScrollChild: PropTypes.func.isRequired
+    getScrollChild: PropTypes.func.isRequired,
 }
 
 export default memo(ScrollDispatcher)

@@ -2,12 +2,12 @@ import {
     BENNETT_KEYBOARD,
     FLAPPER,
     BENNETT_DEFIANT,
-    BENNETT_RECORDING
+    BENNETT_RECORDING,
 } from '../../../../../../app/constants/scene/actors/stephanie'
 import {
     MINGLING,
     PROTESTER,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../../../app/constants/scene/actors/songs'
 import { BENNETT } from '../../../../../../app/constants/scene/actors'
 import { BENNETT_FUTURE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
@@ -21,8 +21,8 @@ export default {
     [BENNETT_DEFIANT]: BENNETT,
     [BENNETT_RECORDING]: [
         BENNETT_FUTURE__SHARED,
-        VIOLIN__SHARED
+        VIOLIN__SHARED,
     ],
     [PROTESTER]: null,
-    [EPILOGUE]: null
+    [EPILOGUE]: null,
 }

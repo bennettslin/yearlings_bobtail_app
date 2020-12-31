@@ -20,7 +20,7 @@ import {
     SEASON_NIGHT_MAGIC,
     SEASON_OCEAN_TOP,
     SEASON_OCEAN_SIDE,
-    SEASON_THOUGHT
+    SEASON_THOUGHT,
 } from '../../../app/constants/scene/sky'
 import './style'
 
@@ -36,7 +36,7 @@ const Skies = () => {
                     'Skies',
                     'abF',
                     'fCC'
-                )
+                ),
             }}
         >
             <SkyDay {...{ sceneSeason: SEASON_SPRING }} />

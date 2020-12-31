@@ -3,7 +3,7 @@ import lyricExpand from '../../../../../../assets/svgs/app/lyric/lyricExpand'
 
 const LYRIC_EXPAND_MAP = {
     [true]: lyricCollapse,
-    [false]: lyricExpand
+    [false]: lyricExpand,
 }
 
 export default ({ buttonIdentifier: isLyricExpanded }) => {

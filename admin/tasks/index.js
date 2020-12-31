@@ -5,5 +5,5 @@ import songTasks from './completed/songs'
 export default [
     ...completed,
     ...remaining,
-    ...[].concat(...songTasks)
+    ...[].concat(...songTasks),
 ]

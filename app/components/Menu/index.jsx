@@ -17,7 +17,7 @@ import {
     mapWindowWidth,
     mapIsTwoRowMenu,
     mapMenuHeight,
-    mapCanSliderMount
+    mapCanSliderMount,
 } from '../../redux/viewport/selector'
 import './style'
 
@@ -30,7 +30,7 @@ const Menu = ({ didMount }) => {
         isDesktopWidth = useSelector(mapIsDesktopWidth),
         menuMarginInOverlay = getMenuMarginInOverlay({
             isDesktopWidth,
-            windowWidth
+            windowWidth,
         })
 
     // Prevent menu from rendering before windowWidth has been set.
@@ -42,8 +42,8 @@ const Menu = ({ didMount }) => {
                     'abF'
                 ),
                 style: {
-                    height: `${menuHeight}px`
-                }
+                    height: `${menuHeight}px`,
+                },
             }}
         >
             <div
@@ -59,8 +59,8 @@ const Menu = ({ didMount }) => {
                          * Safari is janky.
                          */
                         marginLeft: menuMarginInOverlay,
-                        marginRight: menuMarginInOverlay
-                    }
+                        marginRight: menuMarginInOverlay,
+                    },
                 }}
             >
                 <div
@@ -69,7 +69,7 @@ const Menu = ({ didMount }) => {
                             'Menu__mainTop',
                             'Menu__topField',
                             'abF'
-                        )
+                        ),
                     }}
                 >
                     <BannerFilmstrip />
@@ -85,7 +85,7 @@ const Menu = ({ didMount }) => {
                             className: cx(
                                 'Menu__mainBottom',
                                 'abF'
-                            )
+                            ),
                         }}
                     >
                         <Audio />
@@ -109,7 +109,7 @@ const Menu = ({ didMount }) => {
 }
 
 Menu.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default memo(getDidMountHoc(Menu))

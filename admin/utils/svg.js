@@ -1,6 +1,6 @@
 import {
     getSvgMapForActor,
-    getSvgMapForThing
+    getSvgMapForThing,
 } from '../../app/api/svg'
 
 import { WHOLE_ACTOR_INSTANCES } from '../constants/actors'
@@ -34,7 +34,7 @@ export const getPreviewerSvgMapForActor = (presenceType) => {
 
     return getSvgMapForMultipleTypes({
         isActor: true,
-        presenceType
+        presenceType,
     })
 }
 

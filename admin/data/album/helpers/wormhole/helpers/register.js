@@ -2,12 +2,12 @@ import { isString } from '../../../../../../app/helpers/general'
 
 import {
     WIKI,
-    WIKI_INDEX
+    WIKI_INDEX,
 } from '../../../../../../app/constants/lyrics'
 
 const _registerWikiLinksForCard = ({
     annotation,
-    entity
+    entity,
 }) => {
 
     // If it's not an array or an object, just exit now.
@@ -21,7 +21,7 @@ const _registerWikiLinksForCard = ({
             // Reversing order so that index gets added if needed.
             return _registerWikiLinksForCard({
                 annotation,
-                entity: element
+                entity: element,
             }) || keyFound
 
         }, false)
@@ -35,7 +35,7 @@ const _registerWikiLinksForCard = ({
         if (entity.lyric) {
             return _registerWikiLinksForCard({
                 annotation,
-                entity: entity.lyric
+                entity: entity.lyric,
             })
         }
 
@@ -67,7 +67,7 @@ const _registerWikiLinksForCard = ({
 const _registerWormholeLinksForCard = ({
     songIndex,
     annotation,
-    wormholeLinks
+    wormholeLinks,
 }) => {
     wormholeLinks.forEach(keyLink => {
 
@@ -93,7 +93,7 @@ const _registerWormholeLinksForCard = ({
         keyLink.tempSourceWormholeLinks.push({
             tempSourceSongIndex: songIndex,
             tempSourceAnnotationIndex: annotation.annotationIndex,
-            tempSourceWormholeIndex: wikiWormholeIndex
+            tempSourceWormholeIndex: wikiWormholeIndex,
         })
     })
 }
@@ -103,20 +103,20 @@ const _registerWikiWormholeLinksForCard = ({
     annotation,
     card: {
         description,
-        wormholeLinks
-    }
+        wormholeLinks,
+    },
 }) => {
     if (description) {
         _registerWikiLinksForCard({
             annotation,
-            entity: description
+            entity: description,
         })
 
     } else if (wormholeLinks) {
         _registerWormholeLinksForCard({
             songIndex,
             annotation,
-            wormholeLinks
+            wormholeLinks,
         })
     }
 }
@@ -135,7 +135,7 @@ export const registerWikiWormholeLinks = (annotationsList) => {
                     _registerWikiWormholeLinksForCard({
                         songIndex,
                         annotation,
-                        card
+                        card,
                     })
                 })
             })

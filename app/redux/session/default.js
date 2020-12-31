@@ -2,20 +2,20 @@ import { getColumnIndexForAnnotation } from '../../api/album/annotations'
 import { getBookForSongIndex } from '../../api/album/songs'
 import {
     getAudioOptionFromStorage,
-    getInitialIndicesFromRoutingOrStorage
+    getInitialIndicesFromRoutingOrStorage,
 } from '../../helpers/storage'
 
 const STORED_AUDIO_OPTION_INDEX = getAudioOptionFromStorage()
 
 export const SESSION_WIKI_DEFAULTS = {
     selectedWikiIndex: 0,
-    wikiAnnotationIndex: 0
+    wikiAnnotationIndex: 0,
 }
 
 export const getSessionDefaults = songIndex => {
     const {
         initialSongIndex,
-        initialAnnotationIndex
+        initialAnnotationIndex,
     } = getInitialIndicesFromRoutingOrStorage(songIndex)
 
     return {
@@ -25,6 +25,6 @@ export const getSessionDefaults = songIndex => {
         earColumnIndex: getColumnIndexForAnnotation(
             initialSongIndex,
             initialAnnotationIndex
-        ) || 0
+        ) || 0,
     }
 }

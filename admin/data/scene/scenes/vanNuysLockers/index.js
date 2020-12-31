@@ -1,7 +1,7 @@
 import {
     PRETEEN_BENNETT,
     BRAD,
-    ANDREW
+    ANDREW,
 } from '../../../../../app/constants/scene/actors'
 import { THROWING } from '../../../../../app/constants/scene/actors/andrew'
 import { GESTURING } from '../../../../../app/constants/scene/actors/brad'
@@ -11,19 +11,19 @@ export default {
     [BRAD]: {
         [GESTURING]: {
             yIndex: 4,
-            xPosition: 1.2
-        }
+            xPosition: 1.2,
+        },
     },
     [ANDREW]: {
         [THROWING]: {
             yIndex: 4,
-            xPosition: 3.8
-        }
+            xPosition: 3.8,
+        },
     },
     [PRETEEN_BENNETT]: {
         [STOIC]: {
             yIndex: 4,
-            xPosition: 7.3
-        }
-    }
+            xPosition: 7.3,
+        },
+    },
 }

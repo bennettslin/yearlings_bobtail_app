@@ -2,7 +2,7 @@ import { getPitch } from '../builds'
 import { getArrayOfLength } from '../../helpers/general'
 
 const {
-    segments: SEGMENTS
+    segments: SEGMENTS,
 } = getPitch()
 
 export const getPitchSegmentsCount = () => SEGMENTS.length

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import VerseLine from '../Line'
 import {
     LYRIC_CENTRE,
-    LYRIC
+    LYRIC,
 } from '../../../../constants/lyrics'
 
 const VerseColumnLine = forwardRef(({
@@ -31,7 +31,7 @@ const VerseColumnLine = forwardRef(({
                     verseObject[LYRIC]
                 ),
                 columnKey,
-                ...other
+                ...other,
             }}
         />
     )
@@ -39,7 +39,7 @@ const VerseColumnLine = forwardRef(({
 
 VerseColumnLine.propTypes = {
     verseObject: PropTypes.object.isRequired,
-    doublespeakerKey: PropTypes.string
+    doublespeakerKey: PropTypes.string,
 }
 
 export default memo(VerseColumnLine)

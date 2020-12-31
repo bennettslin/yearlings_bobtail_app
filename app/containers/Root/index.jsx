@@ -18,7 +18,7 @@ import KeyManager from '../../managers/Key'
 import { isEmailFocused } from '../../utils/email'
 import {
     mapQueuedFocus,
-    mapShouldNavigateLyric
+    mapShouldNavigateLyric,
 } from '../../redux/focus/selector'
 import { mapIsAboutShown, mapIsPitchShown } from '../../redux/toggle/selector'
 import { mapCanSliderMount } from '../../redux/viewport/selector'
@@ -107,8 +107,8 @@ const RootContainer = () => {
                     onTouchEnd,
                     onTouchCancel: onTouchEnd,
                     onMouseUp: onTouchEnd,
-                    onMouseLeave: onTouchEnd
-                }
+                    onMouseLeave: onTouchEnd,
+                },
             }}
         >
             <ResizeManager {...{ getResizeContainerElement }} />

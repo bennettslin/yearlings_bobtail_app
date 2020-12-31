@@ -3,7 +3,7 @@ import THINGS_NOHO_HOUSES from './nohoHouses/things'
 import THINGS_NOHO_SCHOOL from './nohoSchool/things'
 import THINGS_BATHROOM, {
     THINGS_BATHROOM_BATHING,
-    THINGS_BATHROOM_SINGING
+    THINGS_BATHROOM_SINGING,
 } from './bathroom/things'
 import THINGS_FREEWAY from './freeway/things'
 import THINGS_PORCH from './porch/things'
@@ -11,7 +11,7 @@ import THINGS_CHANGELING_CAVE from './changelingCave/things'
 import THINGS_PUPPET_SHOW, {
     THINGS_PUPPET_SHOW_BEGIN,
     THINGS_PUPPET_SHOW_MIDDLE,
-    THINGS_PUPPET_SHOW_END
+    THINGS_PUPPET_SHOW_END,
 } from './puppetShow/things'
 import THINGS_SCHOOLBUS from './schoolbus/things'
 import THINGS_TETHERBALL_COURT from './tetherballCourt/things'
@@ -29,17 +29,17 @@ import THINGS_BEDROOM, {
     THINGS_BEDROOM_GUILTY,
     THINGS_BEDROOM_FEIGNING,
     THINGS_BEDROOM_ASLEEP,
-    THINGS_BEDROOM_SHAKEN
+    THINGS_BEDROOM_SHAKEN,
 } from './bedroom/things'
 import THINGS_VAN_NUYS_LOCKERS from './vanNuysLockers/things'
 import THINGS_VAN_NUYS_QUAD from './vanNuysQuad/things'
 import THINGS_VAN_NUYS_HALLWAY from './vanNuysHallway/things'
 import THINGS_CATHOLIC_CHURCH from './catholicChurch/things'
 import THINGS_BERKELEY_BANCROFT, {
-    THINGS_BERKELEY_BANCROFT_VEGAN
+    THINGS_BERKELEY_BANCROFT_VEGAN,
 } from './berkeleyBancroft/things'
 import THINGS_BERKELEY_CAMPANILE, {
-    THINGS_BERKELEY_CAMPANILE_VEGAN
+    THINGS_BERKELEY_CAMPANILE_VEGAN,
 } from './berkeleyCampanile/things'
 import THINGS_CINEMA from './cinema/things'
 import THINGS_CINEMA_STREET from './cinemaStreet/things'
@@ -49,10 +49,10 @@ import THINGS_BACKSTAGE from './backstage/things'
 import THINGS_GO_KARTS from './goKarts/things'
 import THINGS_DISHROOM from './dishroom/things'
 import THINGS_WAITING_ROOM, {
-    THINGS_WAITING_ROOM_ASLEEP
+    THINGS_WAITING_ROOM_ASLEEP,
 } from './waitingRoom/things'
 import THINGS_CLUB_FRONT, {
-    THINGS_CLUB_FRONT_M
+    THINGS_CLUB_FRONT_M,
 } from './clubFront/things'
 import THINGS_CLUB_SIDE_CROWD from './clubSideCrowd/things'
 import THINGS_CLUB_SIDE_STAGE from './clubSideStage/things'
@@ -63,13 +63,13 @@ import THINGS_BENNETT_COUCH, {
     THINGS_BENNETT_COUCH_OPINION,
     THINGS_BENNETT_COUCH_PONDERING,
     THINGS_BENNETT_COUCH_RUBIKS,
-    THINGS_BENNETT_COUCH_READING
+    THINGS_BENNETT_COUCH_READING,
 } from './bennettCouch/things'
 import THINGS_COURTYARD from './courtyard/things'
 import THINGS_BENNETT_GATE from './bennettGate/things'
 import THINGS_LIZ_BED, {
     THINGS_LIZ_BED_LOOK_BACK,
-    THINGS_LIZ_BED_VEGAN
+    THINGS_LIZ_BED_VEGAN,
 } from './lizBed/things'
 import THINGS_LIZ_COUCH, {
     THINGS_LIZ_COUCH_TCHOTCHKES,
@@ -77,10 +77,10 @@ import THINGS_LIZ_COUCH, {
     THINGS_LIZ_COUCH_DEFENDING,
     THINGS_LIZ_COUCH_NOT_HUNGRY,
     THINGS_LIZ_COUCH_ASLEEP,
-    THINGS_LIZ_COUCH_PEAFOWL
+    THINGS_LIZ_COUCH_PEAFOWL,
 } from './lizCouch/things'
 import {
-    THINGS_LIZ_GATE_DATE_ENDED
+    THINGS_LIZ_GATE_DATE_ENDED,
 } from './lizGate/things'
 import THINGS_ROYCE_HALL from './royceHall/things'
 import THINGS_WALGREENS from './walgreens/things'
@@ -90,7 +90,7 @@ import THINGS_STATION_WAGON from './stationWagon/things'
 import THINGS_ATTIC from './attic/things'
 import THINGS_OAKLAND_HOUSES, {
     THINGS_OAKLAND_HOUSES_GARRYOWEN,
-    THINGS_OAKLAND_HOUSES_GOLDEN
+    THINGS_OAKLAND_HOUSES_GOLDEN,
 } from './oaklandHouses/things'
 import THINGS_OAKLAND_RESIDENTIAL from './oaklandResidential/things'
 import THINGS_OAKLAND_COMMERCIAL from './oaklandCommercial/things'
@@ -101,7 +101,7 @@ import THINGS_SNOWGLOBES_PAST from './snowglobesPast/things'
 import THINGS_SNOWGLOBES_PRESENT from './snowglobesPresent/things'
 import THINGS_SNOWGLOBES_FUTURE from './snowglobesFuture/things'
 import THINGS_EL_CERRITO, {
-    THINGS_EL_CERRITO_REATTA
+    THINGS_EL_CERRITO_REATTA,
 } from './elCerrito/things'
 import THINGS_ALLEY from './alley/things'
 import THINGS_EL_TORITO from './elTorito/things'
@@ -110,7 +110,7 @@ import THINGS_WEDDING from './wedding/things'
 import THINGS_CLIFF from './cliff/things'
 import THINGS_DEATHBED, {
     THINGS_DEATHBED_CREMATED,
-    THINGS_DEATHBED_DREAM
+    THINGS_DEATHBED_DREAM,
 } from './deathbed/things'
 
 export default [
@@ -213,7 +213,7 @@ export default [
     THINGS_CLIFF,
     THINGS_DEATHBED,
     THINGS_DEATHBED_CREMATED,
-    THINGS_DEATHBED_DREAM
+    THINGS_DEATHBED_DREAM,
 
 ].reduce((allArrangements, arrangements) => {
     const thingKeys = Object.keys(arrangements)
@@ -221,7 +221,7 @@ export default [
     thingKeys.forEach(thingKey => {
         allArrangements[thingKey] = {
             ...allArrangements[thingKey],
-            ...arrangements[thingKey]
+            ...arrangements[thingKey],
         }
     })
 

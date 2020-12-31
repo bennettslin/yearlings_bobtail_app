@@ -5,7 +5,7 @@ import {
     LYRIC_SCROLL_BUTTON_KEY,
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY,
-    OVERVIEW_BUTTON_KEY
+    OVERVIEW_BUTTON_KEY,
 } from '../../../constants/buttons'
 
 import { OLD_BENNETT } from '../../../constants/scene/actors'
@@ -44,7 +44,7 @@ export const getButtonIconClassNames = ({ buttonName, buttonIdentifier }) => {
         className = [
             HEADPHONE__SHARED,
             ALL_PEOPLE__SHARED,
-            OLD_BENNETT
+            OLD_BENNETT,
         ]
     }
 

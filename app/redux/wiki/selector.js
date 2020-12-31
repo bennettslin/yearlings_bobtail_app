@@ -3,15 +3,15 @@ import { getIsMobileWiki } from '../../helpers/resize/wiki'
 import { getWikiUrl } from '../../helpers/wiki'
 import {
     mapDeviceWidthIndex,
-    mapWindowWidth
+    mapWindowWidth,
 } from '../viewport/selector'
 import {
     mapSelectedWikiIndex,
-    mapWikiAnnotationIndex
+    mapWikiAnnotationIndex,
 } from '../session/selector'
 import {
     mapSelectedSongIndex,
-    mapSelectedAnnotationIndex
+    mapSelectedAnnotationIndex,
 } from '../selected/selector'
 
 export const mapIsWikiShown = createSelector(
@@ -27,7 +27,7 @@ const mapIsMobileWiki = createSelector(
         windowWidth
     ) => getIsMobileWiki({
         deviceWidthIndex,
-        windowWidth
+        windowWidth,
     })
 )
 
@@ -48,6 +48,6 @@ export const mapSelectedWikiUrl = createSelector(
         wikiAnnotationIndex,
         selectedSongIndex,
         selectedAnnotationIndex,
-        isMobileWiki
+        isMobileWiki,
     })
 )

@@ -17,7 +17,7 @@ import './style'
 const CarouselAnnotation = forwardRef(({
     didMount,
     serverClientSongIndex,
-    annotationIndex
+    annotationIndex,
 }, ref) => {
     const
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
@@ -52,8 +52,8 @@ const CarouselAnnotation = forwardRef(({
                         columnKey &&
                             `CarouselAnnotation__inEarColumn__${columnKey}`,
                         'ovH'
-                    )
-                }
+                    ),
+                },
             }}
         >
             <Annotation
@@ -61,7 +61,7 @@ const CarouselAnnotation = forwardRef(({
                 {...{
                     isAccessed,
                     isSelected,
-                    annotationIndex
+                    annotationIndex,
                 }}
             />
         </div>
@@ -71,7 +71,7 @@ const CarouselAnnotation = forwardRef(({
 CarouselAnnotation.propTypes = {
     didMount: PropTypes.bool.isRequired,
     serverClientSongIndex: PropTypes.number.isRequired,
-    annotationIndex: PropTypes.number.isRequired
+    annotationIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getDidMountHoc(getSongServerClientHoc(CarouselAnnotation)))

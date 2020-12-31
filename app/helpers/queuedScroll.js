@@ -1,6 +1,6 @@
 export const getFinalVerseBarsStatus = ({
     rawVerseBarsStatus,
-    queuedScrollVerseIndex
+    queuedScrollVerseIndex,
 }) => {
     // If there is a queued scroll verse index, never show the verse bars.
     if (queuedScrollVerseIndex > -1) {
@@ -12,7 +12,7 @@ export const getFinalVerseBarsStatus = ({
 
 export const getFinalActivatedVerseIndex = ({
     rawActivatedVerseIndex,
-    queuedScrollVerseIndex
+    queuedScrollVerseIndex,
 }) => {
     // If there is a queued scroll verse index, never show the activated verse.
     if (queuedScrollVerseIndex > -1) {

@@ -6,14 +6,14 @@ import { getRaftersRowCoordinates } from './helper'
 import {
     mapWindowWidth,
     mapProsceniumDimensionCoordinates,
-    mapCeilingHeight
+    mapCeilingHeight,
 } from '../../../redux/viewport/selector'
 import './style'
 
 const Ceiling = () => {
     const {
             prosceniumLeft,
-            prosceniumWidth
+            prosceniumWidth,
         } = JSON.parse(useSelector(mapProsceniumDimensionCoordinates)),
 
         ceilingHeight = useSelector(mapCeilingHeight),
@@ -22,7 +22,7 @@ const Ceiling = () => {
         raftersRowCoordinates = getRaftersRowCoordinates({
             prosceniumLeft,
             prosceniumWidth,
-            ceilingHeight
+            ceilingHeight,
         })
 
     return (
@@ -34,15 +34,15 @@ const Ceiling = () => {
                 ),
                 style: {
                     width: `${windowWidth}px`,
-                    height: `${ceilingHeight}px`
-                }
+                    height: `${ceilingHeight}px`,
+                },
             }}
         >
             {raftersRowCoordinates.map(({
                 top,
                 left,
                 width,
-                height
+                height,
             }, index) => (
                 <CeilingRafter
                     {...{
@@ -50,7 +50,7 @@ const Ceiling = () => {
                         top,
                         left,
                         width,
-                        height
+                        height,
                     }}
                 />
             ))}

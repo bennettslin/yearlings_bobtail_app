@@ -5,12 +5,12 @@ import NavDispatcher from '../../../../handlers/Nav/Dispatcher'
 import SongDispatcher from '../../../../dispatchers/Song'
 import {
     getSongsAndLoguesCount,
-    getBookForSongIndex
+    getBookForSongIndex,
 } from '../../../../api/album/songs'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
-    ENTER
+    ENTER,
 } from '../../../../constants/access'
 import { mapAccessedNavIndex } from '../../../../redux/access/selector'
 import { mapSelectedSongIndex } from '../../../../redux/selected/selector'
@@ -44,7 +44,7 @@ const NavNavigation = forwardRef((props, ref) => {
                 // Do not allow currently selected song to be selected.
                 if (selectedSongIndex !== nextNavIndex) {
                     keyWasRegistered = dispatchSong.current({
-                        selectedSongIndex: nextNavIndex
+                        selectedSongIndex: nextNavIndex,
                     })
                     /**
                      * If song was successfully selected, then annotation index
@@ -77,7 +77,7 @@ const NavNavigation = forwardRef((props, ref) => {
 
         return {
             annotationIndexWasAccessed,
-            keyWasRegistered
+            keyWasRegistered,
         }
     }
 

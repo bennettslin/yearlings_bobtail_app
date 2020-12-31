@@ -2,13 +2,13 @@ import qs from 'qs'
 import {
     getSongIsLogue,
     getPathForSong,
-    getTitleForSong
+    getTitleForSong,
 } from '../api/album/songs'
 import { getPathForPitchSegment } from '../api/pitch/segments'
 import { ALBUM_TITLE } from '../constants/paths'
 import {
     VERSE_QUERY_FIELD,
-    ANNOTATION_QUERY_FIELD
+    ANNOTATION_QUERY_FIELD,
 } from './routing'
 
 const getPathForSongPage = songIndex => (
@@ -27,13 +27,13 @@ export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => (
         qs.stringify({
             // Default verse is 0.
             ...verseIndex > 0 && {
-                [VERSE_QUERY_FIELD]: verseIndex
+                [VERSE_QUERY_FIELD]: verseIndex,
             },
 
             // Only show if annotation is selected.
             ...annotationIndex > 0 && {
-                [ANNOTATION_QUERY_FIELD]: annotationIndex
-            }
+                [ANNOTATION_QUERY_FIELD]: annotationIndex,
+            },
         }, { addQueryPrefix: true })
     }`
 )

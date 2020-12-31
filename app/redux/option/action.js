@@ -1,17 +1,17 @@
 // Actions for options state.
 import {
     hasKey,
-    getDefinedOnlyPayload
+    getDefinedOnlyPayload,
 } from '../../helpers/action'
 import { setInStorage } from '../../helpers/storage'
 import {
     SHOWN,
-    HIDDEN
+    HIDDEN,
 } from '../../constants/options'
 import {
     OPTION_STORE,
     SELECTED_OVERVIEW_OPTION,
-    SELECTED_TIPS_OPTION
+    SELECTED_TIPS_OPTION,
 } from '../../constants/store'
 
 export const _setOptionInStorage = (key, value) => {
@@ -25,7 +25,7 @@ export const _setOptionInStorage = (key, value) => {
 export const updateOptionStore = payload => {
     const {
         selectedOverviewOption,
-        selectedTipsOption
+        selectedTipsOption,
     } = payload
 
     if (hasKey(selectedOverviewOption)) {
@@ -37,6 +37,6 @@ export const updateOptionStore = payload => {
 
     return {
         type: OPTION_STORE,
-        payload: getDefinedOnlyPayload(payload)
+        payload: getDefinedOnlyPayload(payload),
     }
 }

@@ -2,7 +2,7 @@ import { LOGUE_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    PLATFORM_COLOUR as P
+    PLATFORM_COLOUR as P,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -14,7 +14,7 @@ export default {
                 [P],
                 [P],
                 [P],
-                [G]
+                [G],
             ],
             zIndices: [
                 [0],
@@ -22,8 +22,8 @@ export default {
                 [3],
                 [2],
                 [1],
-                [0]
-            ]
-        }
-    }
+                [0],
+            ],
+        },
+    },
 }

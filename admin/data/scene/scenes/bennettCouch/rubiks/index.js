@@ -6,7 +6,7 @@ export default {
         [RUBIKS_CUBE]: {
             yIndex: 3,
             xPosition: 4,
-            zOffset: -0.08
-        }
-    }
+            zOffset: -0.08,
+        },
+    },
 }

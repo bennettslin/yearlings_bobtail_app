@@ -25,7 +25,7 @@ const AboutToggle = () => {
                 {...{
                     buttonName: ABOUT_BUTTON_KEY,
                     accessKey: ABOUT_TOGGLE_KEY,
-                    handleButtonClick
+                    handleButtonClick,
                 }}
             />
             <TipsHand {...{ tipType: ABOUT }} />

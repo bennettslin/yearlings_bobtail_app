@@ -5,13 +5,13 @@ import { useSelector } from 'react-redux'
 import WallBalcony from './Balcony'
 import {
     getBalconyColumnCoordinates,
-    getWallWidth
+    getWallWidth,
 } from './helper'
 import {
     mapWindowWidth,
     mapWindowHeight,
     mapProsceniumDimensionCoordinates,
-    mapCeilingHeight
+    mapCeilingHeight,
 } from '../../../redux/viewport/selector'
 import './style'
 
@@ -19,7 +19,7 @@ const Wall = ({ isRight }) => {
     const {
             prosceniumLeft,
             prosceniumWidth,
-            prosceniumHeight
+            prosceniumHeight,
         } = JSON.parse(useSelector(mapProsceniumDimensionCoordinates)),
 
         ceilingHeight = useSelector(mapCeilingHeight),
@@ -30,7 +30,7 @@ const Wall = ({ isRight }) => {
             isRight,
             prosceniumLeft,
             prosceniumWidth,
-            windowWidth
+            windowWidth,
         }),
 
         balconyColumnCoordinates = getBalconyColumnCoordinates({
@@ -39,7 +39,7 @@ const Wall = ({ isRight }) => {
             prosceniumLeft,
             prosceniumWidth,
             prosceniumHeight,
-            ceilingHeight
+            ceilingHeight,
         })
 
     return (
@@ -55,16 +55,16 @@ const Wall = ({ isRight }) => {
 
                     ...isRight && {
                         left: 'auto',
-                        right: 0
-                    }
-                }
+                        right: 0,
+                    },
+                },
             }}
         >
             {balconyColumnCoordinates.map(({
                 top,
                 left,
                 width,
-                height
+                height,
             }, index) => (
                 <WallBalcony
                     {...{
@@ -73,7 +73,7 @@ const Wall = ({ isRight }) => {
                         left,
                         width,
                         height,
-                        isLeft: !isRight
+                        isLeft: !isRight,
                     }}
                 />
             ))}
@@ -82,7 +82,7 @@ const Wall = ({ isRight }) => {
 }
 
 Wall.propTypes = {
-    isRight: PropTypes.bool
+    isRight: PropTypes.bool,
 }
 
 export default memo(Wall)

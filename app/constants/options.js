@@ -6,13 +6,13 @@ export const DISABLED = 'disabled'
 
 export const AUDIO_OPTIONS = [
     CONTINUE,
-    REPEAT
+    REPEAT,
 ]
 
 export const GENERAL_OPTIONS = [
     SHOWN,
     HIDDEN,
-    DISABLED
+    DISABLED,
 ]
 
 export const CLOSE_NAV_NEXT = 'closeNavNext'
@@ -23,7 +23,7 @@ export const SHOW_CAROUSEL_NAV_NEXT = 'showCarouselNavNext'
 export const getCarouselNavIdentifier = ({
     isCarouselNotShowable,
     isCarouselShown,
-    isNavExpanded
+    isNavExpanded,
 
 }) => {
     if (isCarouselShown) {

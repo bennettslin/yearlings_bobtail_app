@@ -50,7 +50,7 @@ import {
     GHOST_ODIN_CLUB,
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_DEMONSTRATION,
-    PUPPET_KHARI_LIZ
+    PUPPET_KHARI_LIZ,
 } from '../../../../constants/scene/things/puppets'
 
 export default {
@@ -79,5 +79,5 @@ export default {
     [GHOST_ODIN_CLUB]: ghostOdinClub,
     [GHOST_ODIN_ALLEY]: ghostOdinAlley,
     [GHOST_ODIN_DEMONSTRATION]: ghostOdinDemonstration,
-    [PUPPET_KHARI_LIZ]: puppetKhariLiz
+    [PUPPET_KHARI_LIZ]: puppetKhariLiz,
 }

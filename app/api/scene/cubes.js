@@ -4,7 +4,7 @@ import { DEFAULT } from '../../constants/scene/cubes'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 
 const {
-    cubes: CUBES
+    cubes: CUBES,
 } = getScene()
 
 export const getCubesForKey = cubesKey => {
@@ -14,13 +14,13 @@ export const getCubesForKey = cubesKey => {
     return {
         ceiling: {
             ...defaultStageCubes.ceiling,
-            ...keyCubes.ceiling
+            ...keyCubes.ceiling,
         },
         floor: {
             ...defaultStageCubes.floor,
-            ...keyCubes.floor
+            ...keyCubes.floor,
         },
-        slantDirection: keyCubes.slantDirection
+        slantDirection: keyCubes.slantDirection,
     }
 }
 

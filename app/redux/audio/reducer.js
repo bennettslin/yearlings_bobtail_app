@@ -2,7 +2,7 @@
 import { hasKey } from '../../helpers/action'
 import {
     AUDIO_STORE,
-    SELECTED_STORE
+    SELECTED_STORE,
 } from '../../constants/store'
 import { AUDIO_DEFAULTS } from './default'
 
@@ -14,13 +14,13 @@ export default (
         case AUDIO_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         case SELECTED_STORE: {
             const { isSelectedLogue } = payload
             return hasKey(isSelectedLogue) && isSelectedLogue ? {
                 ...state,
-                isPlaying: false
+                isPlaying: false,
             } : state
         }
         default:

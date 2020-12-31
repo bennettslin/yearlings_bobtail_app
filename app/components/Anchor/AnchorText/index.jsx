@@ -14,7 +14,7 @@ const AnchorText = ({
     isSelected,
     isWikiTextAnchor,
     text,
-    textConfig
+    textConfig,
 
 }) => {
     // Only split wiki anchor text, and only in higher processor.
@@ -30,7 +30,7 @@ const AnchorText = ({
                     {...{
                         key: index,
                         text: word,
-                        isWikiTextAnchor
+                        isWikiTextAnchor,
                     }}
                 />
             )
@@ -40,8 +40,8 @@ const AnchorText = ({
                     <span
                         {...{
                             ...didMount && {
-                                className: 'AnchorText'
-                            }
+                                className: 'AnchorText',
+                            },
                         }}
                     >
                         {/* Shown when no dot in dot sequence is selected. */}
@@ -50,8 +50,8 @@ const AnchorText = ({
                                 ...didMount && {
                                     className: cx(
                                         'TextAnchor__plainText'
-                                    )
-                                }
+                                    ),
+                                },
                             }}
                         >
                             {wordElement}
@@ -70,7 +70,7 @@ const AnchorText = ({
 
                                         isSelected &&
                                             'TextAnchor__linkText__selected'
-                                    )
+                                    ),
                                 }}
                             >
                                 {wordElement}
@@ -82,12 +82,12 @@ const AnchorText = ({
                             <Underline
                                 {...{
                                     isAccessed,
-                                    isSelected
+                                    isSelected,
                                 }}
                                 {...isWikiTextAnchor && {
                                     isWikiAnchor: true,
                                     isWikiFirstChild: index === 0,
-                                    isWikiLastChild: index === words.length - 1
+                                    isWikiLastChild: index === words.length - 1,
                                 }}
                             />
                         )}
@@ -95,7 +95,7 @@ const AnchorText = ({
                     {Boolean(isWikiTextAnchor) && getSpaceIfNeeded({
                         words,
                         word,
-                        index
+                        index,
                     })}
                 </Fragment>
             )
@@ -110,15 +110,15 @@ AnchorText.propTypes = {
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array,
-        PropTypes.object
+        PropTypes.object,
     ]).isRequired,
     textConfig: PropTypes.shape({
         isVerseLyric: PropTypes.bool,
         isItalic: PropTypes.bool,
         isEmphasis: PropTypes.bool,
         beginsVerse: PropTypes.bool,
-        endsVerse: PropTypes.bool
-    })
+        endsVerse: PropTypes.bool,
+    }),
 }
 
 export default memo(getDidMountHoc(AnchorText))

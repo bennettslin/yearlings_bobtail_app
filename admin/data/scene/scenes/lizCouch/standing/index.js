@@ -5,7 +5,7 @@ export default {
     [LIZ]: {
         [PETTING_STANDING]: {
             yIndex: 2,
-            xPosition: 5
-        }
-    }
+            xPosition: 5,
+        },
+    },
 }

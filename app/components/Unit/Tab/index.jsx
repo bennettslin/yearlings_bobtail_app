@@ -6,7 +6,7 @@ import getDidMountHoc from '../../DidMountHoc'
 import {
     getFormTypeForUnit,
     getFormTypeIndexForUnit,
-    getVerseIndicesForUnit
+    getVerseIndicesForUnit,
 } from '../../../api/album/units'
 import { mapLyricSongIndex } from '../../../redux/lyric/selector'
 import './style'
@@ -14,7 +14,7 @@ import './style'
 const UnitTab = ({
     didMount,
     unitIndex,
-    handleVerseSelect
+    handleVerseSelect,
 
 }) => {
     const
@@ -27,7 +27,7 @@ const UnitTab = ({
         logEvent({ e, componentName: 'UnitCard' })
         handleVerseSelect({
             scrollLog: 'Stanza tab selected',
-            verseIndex
+            verseIndex,
         })
     }
 
@@ -43,7 +43,7 @@ const UnitTab = ({
                     'bgColour__unit__pattern__reverse',
                     `bgColour__formType__${formType}`
                 ),
-                onClick
+                onClick,
             }}
         >
             <div
@@ -51,7 +51,7 @@ const UnitTab = ({
                     className: cx(
                         'UnitTab__text',
                         'Neuton'
-                    )
+                    ),
                 }}
             >
                 {`${
@@ -67,7 +67,7 @@ const UnitTab = ({
 UnitTab.propTypes = {
     didMount: PropTypes.bool.isRequired,
     unitIndex: PropTypes.number.isRequired,
-    handleVerseSelect: PropTypes.func.isRequired
+    handleVerseSelect: PropTypes.func.isRequired,
 }
 
 export default memo(getDidMountHoc(UnitTab))

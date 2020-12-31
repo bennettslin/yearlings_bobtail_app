@@ -19,15 +19,15 @@ const CarouselAccess = ({ inLyric }) => {
                 showIfAccessOn: canCarouselAccessShow,
                 accessKeys: [
                     ARROW_LEFT,
-                    ARROW_RIGHT
-                ]
+                    ARROW_RIGHT,
+                ],
             }}
         />
     )
 }
 
 CarouselAccess.propTypes = {
-    inLyric: PropTypes.bool
+    inLyric: PropTypes.bool,
 }
 
 export default CarouselAccess

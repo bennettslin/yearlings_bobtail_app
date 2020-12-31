@@ -36,9 +36,9 @@ const OverviewToggle = ({ className }) => {
                     accessKey: OVERVIEW_TOGGLE_KEY,
                     buttonIdentifier: getOverviewToggleIdentifier({
                         isLyricLogue,
-                        selectedOverviewOption
+                        selectedOverviewOption,
                     }),
-                    handleButtonClick
+                    handleButtonClick,
                 }}
             />
             <TipsHand {...{ tipType: OVERVIEW }} />
@@ -49,7 +49,7 @@ const OverviewToggle = ({ className }) => {
 
 OverviewToggle.propTypes = {
     isToggleInOverview: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
 }
 
 export default memo(OverviewToggle)

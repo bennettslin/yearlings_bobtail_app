@@ -6,7 +6,7 @@ import {
     ANNOTATION_SEARCH_KEYS,
     ANCHOR,
     LYRIC_LEFT,
-    LYRIC_RIGHT
+    LYRIC_RIGHT,
 } from '../../../../../app/constants/lyrics'
 
 const _recurseThroughVerse = ({
@@ -15,7 +15,7 @@ const _recurseThroughVerse = ({
     rootVerseIndex = -1,
     lyricEntity = verse,
     textKey,
-    annotations
+    annotations,
 }) => {
     const { verseIndex } = lyricEntity
 
@@ -39,7 +39,7 @@ const _recurseThroughVerse = ({
                 rootVerseIndex,
                 lyricEntity: childEntity,
                 textKey,
-                annotations
+                annotations,
             })
         })
 
@@ -55,7 +55,7 @@ const _recurseThroughVerse = ({
                 rootVerseIndex,
                 anchoredLyric,
                 textKey,
-                annotations
+                annotations,
             })
 
         } else {
@@ -67,7 +67,7 @@ const _recurseThroughVerse = ({
                         rootVerseIndex,
                         lyricEntity: lyricEntity[childKey],
                         textKey: (textKey || childKey),
-                        annotations
+                        annotations,
                     })
                 }
             })
@@ -137,13 +137,13 @@ export const addAnnotationMetadata = (songIndex, song) => {
     lyricUnits.forEach(unit => {
         const {
                 unitMap: {
-                    sideCardType
+                    sideCardType,
                 },
                 mainVerses,
                 subVerse,
                 sideCard,
                 sideSubCard,
-                unitDot
+                unitDot,
             } = unit,
 
             allVerses = [
@@ -151,9 +151,9 @@ export const addAnnotationMetadata = (songIndex, song) => {
                 {
                     subVerse,
                     sideCard,
-                    sideSubCard
+                    sideSubCard,
                 },
-                { unitDot }
+                { unitDot },
             ]
 
         // Go through each indexed verse and then the unit map.
@@ -182,7 +182,7 @@ export const addAnnotationMetadata = (songIndex, song) => {
             _recurseThroughVerse({
                 verse,
                 columnKey,
-                annotations
+                annotations,
             })
         })
     })

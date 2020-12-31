@@ -4,7 +4,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     TAIWAN_GATE_COLOUR as A,
-    NIGHT_COLOUR as Z
+    NIGHT_COLOUR as Z,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { e, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -16,7 +16,7 @@ export default {
                 [D],
                 [D],
                 [D],
-                [Z]
+                [Z],
             ],
             zIndices: [
                 [k],
@@ -24,15 +24,15 @@ export default {
                 [k],
                 [0, 0, 0, e, e, e, e, 0],
                 [0, 0, g, g, g, g, g, g, g, g, 5],
-                [0, 0, g, g, g, g, g, g, g, g, 5]
-            ]
+                [0, 0, g, g, g, g, g, g, g, g, 5],
+            ],
         },
         floor: {
             hslaColours: [
                 [A],
                 [A, A, A, V, V, V, A],
                 [A, V, V, V, V, V, V, V, V, V, A],
-                [Z]
+                [Z],
             ],
             zIndices: [
                 [0],
@@ -40,8 +40,8 @@ export default {
                 [1],
                 [0, 0, 0, 5, 5, 5, 5, 0],
                 [0, 0, 0, 0, 1, 2, 3, 4, 5],
-                [0, 0, 0, 0, 1, 2, 3, 4, 5]
-            ]
-        }
-    }
+                [0, 0, 0, 0, 1, 2, 3, 4, 5],
+            ],
+        },
+    },
 }

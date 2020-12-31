@@ -4,20 +4,20 @@ import {
     BUBBLE,
     CUTOUT,
     FLAT,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     OAKLAND_COUCH_THOUGHT_KEY,
     OAKLAND_HOUSES_KEY,
     OAKLAND_RESIDENTIAL_KEY,
     OAKLAND_COMMERCIAL_KEY,
-    OAKLAND_PUBLIC_KEY
+    OAKLAND_PUBLIC_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_NIGHT,
     TIME_TWILIGHT,
     TIME_DAWN,
-    SEASON_AUTUMN
+    SEASON_AUTUMN,
 } from '../../../../app/constants/scene/sky'
 import {
     YOUNG_BENNETT,
@@ -28,17 +28,17 @@ import {
     ESTHER,
     WILLY,
     AMY_NESTOR_TOMER,
-    STEPHANIE
+    STEPHANIE,
 } from '../../../../app/constants/scene/actors'
 import { OFFICER } from '../../../../app/constants/scene/actors/amyNestorTomer'
 import {
     CORD_SIDE,
-    CORD_REAR
+    CORD_REAR,
 } from '../../../../app/constants/scene/actors/bennett'
 import { AWKWARD_CONSOLATION } from '../../../../app/constants/scene/actors/bennettLiz'
 import {
     HORSING,
-    DRYING_TEARS
+    DRYING_TEARS,
 } from '../../../../app/constants/scene/actors/bennettStephanie'
 import { BENNETT_DEFIANT } from '../../../../app/constants/scene/actors/stephanie'
 import { CROSSING_GUARD } from '../../../../app/constants/scene/actors/willy'
@@ -47,17 +47,17 @@ import {
     OAKLAND_SIDE__LEVEL,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW,
-    THOUGHT_MEDIUM__GOLDEN
+    THOUGHT_MEDIUM__GOLDEN,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GOLDEN,
     BUBBLE_MEDIUM__GOLDEN,
-    BUBBLE_LARGE__GOLDEN
+    BUBBLE_LARGE__GOLDEN,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
-    TWIN_STREETLAMP__NEAR
+    TWIN_STREETLAMP__NEAR,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     OAKLAND_HOUSE_LEFT,
@@ -80,7 +80,7 @@ import {
     OAKLAND_SCHOOL,
     OAKLAND_FLAG,
     DISTANT_BUILDINGS,
-    DISTANT_HOUSES
+    DISTANT_HOUSES,
 } from '../../../../app/constants/scene/things/flats'
 import { LIZ_COUCH__ROOM } from '../../../../app/constants/scene/things/panels'
 
@@ -92,20 +92,20 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side angle, cradling bracelet, blank',
-                    instance: CORD_SIDE
-                }
+                    instance: CORD_SIDE,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [FLAT]: {
                 [DISTANT_HOUSES]: true,
                 [OAKLAND_HOUSE_LEFT]: true,
-                [OAKLAND_HOUSE_RIGHT]: true
-            }
+                [OAKLAND_HOUSE_RIGHT]: true,
+            },
         },
         cubes: OAKLAND_HOUSES_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 3,
@@ -114,29 +114,29 @@ export default [
             [ACTOR]: {
                 [BENNETT_LIZ]: {
                     description: 'side angle, disingenuously consoling',
-                    instance: AWKWARD_CONSOLATION
-                }
+                    instance: AWKWARD_CONSOLATION,
+                },
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE__LEVEL]: true,
-                [THOUGHT_MEDIUM__GOLDEN]: true
+                [THOUGHT_MEDIUM__GOLDEN]: true,
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__GOLDEN]: true,
                 [BUBBLE_MEDIUM__GOLDEN]: true,
-                [BUBBLE_LARGE__GOLDEN]: true
+                [BUBBLE_LARGE__GOLDEN]: true,
             },
             [FLAT]: {
                 [DISTANT_HOUSES]: true,
                 [OAKLAND_HOUSE_LEFT]: true,
-                [OAKLAND_HOUSE_RIGHT]: true
+                [OAKLAND_HOUSE_RIGHT]: true,
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
-            }
+                [LIZ_COUCH__ROOM]: true,
+            },
         },
         cubes: OAKLAND_COUCH_THOUGHT_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 4,
@@ -145,22 +145,22 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'back, cradling bracelet, blank',
-                    instance: CORD_REAR
+                    instance: CORD_REAR,
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         description: 'back, shaking fist at sky',
-                        instance: BENNETT_DEFIANT
-                    }
-                }
+                        instance: BENNETT_DEFIANT,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_FRONT__HIGH]: true
+                [OAKLAND_FRONT__HIGH]: true,
             },
             [CUTOUT]: {
                 [TWIN_STREETLAMP__FAR]: true,
                 [TWIN_STREETLAMP__MIDDLE]: true,
-                [TWIN_STREETLAMP__NEAR]: true
+                [TWIN_STREETLAMP__NEAR]: true,
             },
             [FLAT]: {
                 [DISTANT_HOUSES]: true,
@@ -169,11 +169,11 @@ export default [
                 [RESIDENTIAL_MIDDLE_LEFT]: true,
                 [RESIDENTIAL_MIDDLE_RIGHT]: true,
                 [RESIDENTIAL_NEAR_LEFT]: true,
-                [RESIDENTIAL_NEAR_RIGHT]: true
-            }
+                [RESIDENTIAL_NEAR_RIGHT]: true,
+            },
         },
         cubes: OAKLAND_RESIDENTIAL_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 7,
@@ -182,17 +182,17 @@ export default [
             [ACTOR]: {
                 [BENNETT_STEPHANIE]: {
                     description: 'side angle, playful, waving',
-                    instance: HORSING
+                    instance: HORSING,
                 },
                 [AMY_NESTOR_TOMER]: {
                     officer: {
                         description: 'back, facing back, waving',
-                        instance: OFFICER
-                    }
-                }
+                        instance: OFFICER,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_FRONT__HIGH]: true
+                [OAKLAND_FRONT__HIGH]: true,
             },
             [FLAT]: {
                 [DISTANT_BUILDINGS]: true,
@@ -202,11 +202,11 @@ export default [
                 [COMMERCIAL_MIDDLE_LEFT]: true,
                 [COMMERCIAL_MIDDLE_RIGHT]: true,
                 [COMMERCIAL_NEAR_LEFT]: true,
-                [COMMERCIAL_NEAR_RIGHT]: true
-            }
+                [COMMERCIAL_NEAR_RIGHT]: true,
+            },
         },
         cubes: OAKLAND_COMMERCIAL_KEY,
-        sky: { time: TIME_TWILIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_TWILIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 10,
@@ -215,44 +215,44 @@ export default [
             [ACTOR]: {
                 [BENNETT_STEPHANIE]: {
                     description: 'back, consoling',
-                    instance: DRYING_TEARS
+                    instance: DRYING_TEARS,
                 },
                 [ESTHER]: {
                     youngGirl: {
                         description: 'side, walking',
-                        instance: YOUNG_CHILD
-                    }
+                        instance: YOUNG_CHILD,
+                    },
                 },
                 [ANITA]: {
                     youngGirl: {
                         description: 'side, walking',
-                        instance: YOUNG_CHILD
-                    }
+                        instance: YOUNG_CHILD,
+                    },
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
                         description: 'side, turned, looking at Bennetts',
-                        instance: YOUNG_CHILD
-                    }
+                        instance: YOUNG_CHILD,
+                    },
                 },
                 [WILLY]: {
                     crossingGuard: {
                         description: 'front, holding up stop sign',
-                        instance: CROSSING_GUARD
-                    }
-                }
+                        instance: CROSSING_GUARD,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_FRONT__LOW]: true
+                [OAKLAND_FRONT__LOW]: true,
             },
             [FLAT]: {
                 [PUBLIC_FAR__GOLDEN_CORD]: true,
                 [OAKLAND_SCHOOL]: true,
                 [PUBLIC_NEAR__GOLDEN_CORD]: true,
-                [OAKLAND_FLAG]: true
-            }
+                [OAKLAND_FLAG]: true,
+            },
         },
         cubes: OAKLAND_PUBLIC_KEY,
-        sky: { time: TIME_DAWN, season: SEASON_AUTUMN }
-    }
+        sky: { time: TIME_DAWN, season: SEASON_AUTUMN },
+    },
 ]

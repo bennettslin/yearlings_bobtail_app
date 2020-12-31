@@ -2,7 +2,7 @@ import { SHOWN } from '../../../constants/options'
 
 export const getOverviewToggleIdentifier = ({
     isLyricLogue,
-    selectedOverviewOption
+    selectedOverviewOption,
 
 }) => (
     isLyricLogue ? SHOWN : selectedOverviewOption

@@ -1,11 +1,11 @@
 import {
     ALL_PAST__SHARED,
     BENNETT_PAST__SHARED,
-    SASHA_PAST__SHARED
+    SASHA_PAST__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/actors'
 import {
     MERMAID,
-    COMFORTING_HUMILIATED
+    COMFORTING_HUMILIATED,
 } from '../../../../../../app/constants/scene/actors/sashaBennett'
 import { EPILOGUE } from '../../../../../../app/constants/scene/actors/songs'
 
@@ -14,7 +14,7 @@ export default {
     [COMFORTING_HUMILIATED]: [
         ALL_PAST__SHARED,
         BENNETT_PAST__SHARED,
-        SASHA_PAST__SHARED
+        SASHA_PAST__SHARED,
     ],
-    [EPILOGUE]: null
+    [EPILOGUE]: null,
 }

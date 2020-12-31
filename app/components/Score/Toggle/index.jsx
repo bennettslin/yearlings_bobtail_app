@@ -29,7 +29,7 @@ const ScoreToggle = ({ className }) => {
                 className: cx(
                     'ScoreToggle',
                     className
-                )
+                ),
             }}
         >
             <Button
@@ -37,13 +37,13 @@ const ScoreToggle = ({ className }) => {
                 {...{
                     buttonName: SCORES_BUTTON_KEY,
                     accessKey: SCORE_TOGGLE_KEY,
-                    handleButtonClick
+                    handleButtonClick,
                 }}
             />
             <TipsHand
                 {...{
                     tipType: SCORE,
-                    reverse: !isDesktopWidth
+                    reverse: !isDesktopWidth,
                 }}
             />
             <ScoreDispatcher {...{ ref: dispatchScore }} />
@@ -52,7 +52,7 @@ const ScoreToggle = ({ className }) => {
 }
 
 ScoreToggle.propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
 }
 
 export default memo(ScoreToggle)

@@ -2,7 +2,7 @@ import ACTOR_ARRANGEMENTS from '../../../scene/scenes/actors'
 import THING_ARRANGEMENTS from '../../../scene/scenes/things'
 import {
     getNearestXIndex,
-    getValueInAbridgedMatrix
+    getValueInAbridgedMatrix,
 } from '../../../../../app/helpers/cubeIndices'
 import { getCharStringForNumber } from '../../../../../app/helpers/format'
 import { ACTOR } from '../../../../../app/constants/scene'
@@ -65,14 +65,14 @@ const _addPresenceToSceneLayer = ({
     presenceName,
     value,
     layerPresencesList,
-    cubesKey
+    cubesKey,
 
 }) => {
     const
         {
             yIndex: arrangedYIndex = -1,
             layerYIndex,
-            xPosition
+            xPosition,
         } = arrangementObject,
 
         /**
@@ -133,7 +133,7 @@ const _addPresenceToSceneLayerByType = ({
     presenceName,
     layers,
     layerPresencesList,
-    cubesKey
+    cubesKey,
 
 }) => {
     const dynamicValue = presences[presenceType][presenceName]
@@ -171,7 +171,7 @@ const _addPresenceToSceneLayerByType = ({
         presenceName,
         value,
         layerPresencesList,
-        cubesKey
+        cubesKey,
     })
 }
 
@@ -185,7 +185,7 @@ const _getLayeredScenes = (
             const
                 {
                     presences,
-                    cubes: cubesKey
+                    cubes: cubesKey,
                 } = scene,
                 layers = {}
 
@@ -201,7 +201,7 @@ const _getLayeredScenes = (
                         presenceName,
                         layers,
                         layerPresencesList,
-                        cubesKey
+                        cubesKey,
                     })
                 })
             })
@@ -245,6 +245,6 @@ export const getSceneData = rawScenes => {
 
     return {
         albumScenes,
-        layerPresencesList
+        layerPresencesList,
     }
 }

@@ -9,7 +9,7 @@ import {
     TIME_NOON,
     TIME_AFTERNOON,
     TIME_EVENING,
-    TIME_NIGHT
+    TIME_NIGHT,
 } from '../../../../app/constants/scene/sky'
 
 const SkyDay = ({ sceneSeason }) => (
@@ -28,7 +28,7 @@ const SkyDay = ({ sceneSeason }) => (
 )
 
 SkyDay.propTypes = {
-    sceneSeason: PropTypes.string.isRequired
+    sceneSeason: PropTypes.string.isRequired,
 }
 
 export default SkyDay

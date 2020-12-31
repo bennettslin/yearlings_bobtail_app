@@ -1,6 +1,6 @@
 import {
     USHER_WAITING,
-    USHER_LOOKING
+    USHER_LOOKING,
 } from '../../../../../../app/constants/scene/actors/howie'
 import {
     ABBEY_ROAD,
@@ -8,7 +8,7 @@ import {
     STEAM_TUNNEL,
     STATION_WAGON,
     ATTIC,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../../../app/constants/scene/actors/songs'
 import { MARA } from '../../../../../../app/constants/scene/actors'
 import { USHER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
@@ -27,7 +27,7 @@ export default {
     [USHER_WAITING]: [
         MARA,
         USHER__SHARED,
-        THOUGHT__SHARED
+        THOUGHT__SHARED,
     ],
-    [USHER_LOOKING]: USHER__SHARED
+    [USHER_LOOKING]: USHER__SHARED,
 }

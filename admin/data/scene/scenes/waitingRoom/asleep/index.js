@@ -7,7 +7,7 @@ export default {
             yIndex: 3,
             xPosition: 2,
             zOffset: -1.3,
-            layerYIndex: 5
-        }
-    }
+            layerYIndex: 5,
+        },
+    },
 }

@@ -24,9 +24,9 @@ const MainPopups = forwardRef(({ didMount }, ref) => {
                     ),
                     style: {
                         top: `${menuHeight}px`,
-                        height: `calc(100% - ${menuHeight}px)`
-                    }
-                }
+                        height: `calc(100% - ${menuHeight}px)`,
+                    },
+                },
             }}
         >
             <AnnotationPopup />
@@ -39,7 +39,7 @@ const MainPopups = forwardRef(({ didMount }, ref) => {
 })
 
 MainPopups.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default memo(getDidMountHoc(MainPopups))

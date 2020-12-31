@@ -1,20 +1,20 @@
 import { getSongIndicesArray } from './lyrics'
 import {
     addSongAndLogueMetadata,
-    addSongMetadata
+    addSongMetadata,
 } from './helpers/song'
 import { addLyricMetadata } from './helpers/lyric'
 import { addUnitAndVerseMetadata } from './helpers/unit'
 import { addStanzaMetadata } from './helpers/stanza'
 import {
     addScenes,
-    addSceneMetadata
+    addSceneMetadata,
 } from './helpers/scene'
 import { addAnnotationMetadata } from './helpers/annotation'
 import { addAdminMetadata } from './helpers/admin'
 import {
     getMaxSceneCount,
-    getMaxVerseCount
+    getMaxVerseCount,
 } from './helpers/count'
 import { addTip } from './helpers/tips'
 import { addVerseMetadata } from './helpers/verse'
@@ -38,11 +38,11 @@ const songs = getSongIndicesArray().map(songIndex => {
         const {
             unitVerseIndicesList,
             verseStartTimes,
-            verses
+            verses,
         } = addUnitAndVerseMetadata({
             songIndex,
             songDuration,
-            song
+            song,
         })
 
         addStanzaMetadata({
@@ -50,7 +50,7 @@ const songs = getSongIndicesArray().map(songIndex => {
             songDuration,
             unitVerseIndicesList,
             verseStartTimes,
-            song
+            song,
         })
 
         addSceneMetadata({
@@ -58,7 +58,7 @@ const songs = getSongIndicesArray().map(songIndex => {
             songDuration,
             unitVerseIndicesList,
             verseStartTimes,
-            song
+            song,
         })
 
         annotations =
@@ -79,7 +79,7 @@ const album = {
     _build: 'runtime',
     songs,
     maxSceneCount: getMaxSceneCount(songs),
-    maxVerseCount: getMaxVerseCount(songs)
+    maxVerseCount: getMaxVerseCount(songs),
 }
 
 addWormholeMetadata(annotationsList, album)

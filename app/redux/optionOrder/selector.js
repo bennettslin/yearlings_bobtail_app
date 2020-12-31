@@ -2,7 +2,7 @@
 import { createSelector } from 'reselect'
 import {
     getIsOverviewShownNext,
-    getIsTipsShownNext
+    getIsTipsShownNext,
 } from '../../helpers/options'
 import { mapIsActivated } from '../activated/selector'
 import { mapLyricAnnotationIndex } from '../lyric/selector'
@@ -11,7 +11,7 @@ import { mapIsOverviewShown } from '../overview/selector'
 import { mapIsTipsShown } from '../tips/selector'
 import {
     mapIsDotsSlideShown,
-    mapIsLyricExpanded
+    mapIsLyricExpanded,
 } from '../toggle/selector'
 
 export const mapIsOverviewShownNext = createSelector(
@@ -34,7 +34,7 @@ export const mapIsOverviewShownNext = createSelector(
         isDotsSlideShown,
         isOverlayShown,
         isLyricExpanded,
-        isActivated
+        isActivated,
     })
 )
 
@@ -61,6 +61,6 @@ export const mapIsTipsShownNext = createSelector(
         isDotsSlideShown,
         isOverlayShown,
         isLyricExpanded,
-        isActivated
+        isActivated,
     })
 )

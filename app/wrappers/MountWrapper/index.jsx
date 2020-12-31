@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../components/DidMountHoc'
 import {
     mapCanCarouselNavMount,
-    mapCanSliderMount
+    mapCanSliderMount,
 } from '../../redux/viewport/selector'
 
 const MountWrapper = ({ didMount, children }) => {
@@ -26,8 +26,8 @@ const MountWrapper = ({ didMount, children }) => {
                         canSliderMount &&
                             'MW__canSliderMount',
                         'abF'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {children}
@@ -37,7 +37,7 @@ const MountWrapper = ({ didMount, children }) => {
 
 MountWrapper.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default memo(getDidMountHoc(MountWrapper))

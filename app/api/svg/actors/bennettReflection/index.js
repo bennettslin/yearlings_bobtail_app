@@ -3,5 +3,5 @@ import shoesReflection from '../../../../../assets/svgs/actors/bennettReflection
 import { SHOES_REFLECTION } from '../../../../constants/scene/actors/bennett'
 
 export default {
-    [SHOES_REFLECTION]: shoesReflection
+    [SHOES_REFLECTION]: shoesReflection,
 }

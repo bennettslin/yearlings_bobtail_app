@@ -7,14 +7,14 @@ import {
     FIXTURE,
     FURNITURE,
     PANEL,
-    PUPPET
+    PUPPET,
 } from '../../../../app/constants/scene/things'
 import {
     BASEMENT_BED_DARK_KEY,
     BASEMENT_BED_MAGIC_KEY,
     SNOWGLOBES_PAST_KEY,
     SNOWGLOBES_PRESENT_KEY,
-    SNOWGLOBES_FUTURE_KEY
+    SNOWGLOBES_FUTURE_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_NIGHT,
@@ -22,7 +22,7 @@ import {
     SEASON_NIGHT_MAGIC,
     SEASON_PAST,
     SEASON_PRESENT,
-    SEASON_FUTURE
+    SEASON_FUTURE,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
@@ -35,21 +35,21 @@ import {
     KHARI_LIZ,
     MIRIAM_BENNETT,
     MIRIAM_STEPHANIE,
-    STEPHANIE
+    STEPHANIE,
 } from '../../../../app/constants/scene/actors'
 import {
     HURT_CONSOLING,
-    SOBBING_SHIELDING
+    SOBBING_SHIELDING,
 } from '../../../../app/constants/scene/actors/estherMother'
 import {
     ACCUSATORY,
-    REELING
+    REELING,
 } from '../../../../app/constants/scene/actors/father'
 import { JOKING_LAUGHING } from '../../../../app/constants/scene/actors/khariLiz'
 import { PETTING_SEATED_PRESENT } from '../../../../app/constants/scene/actors/liz'
 import {
     ASLEEP_FEARFUL,
-    FENDING_OFF
+    FENDING_OFF,
 } from '../../../../app/constants/scene/actors/miriamBennett'
 import { MISCHIEVOUS_BANJO } from '../../../../app/constants/scene/actors/miriamStephanie'
 import { COMFORTING_HUMILIATED } from '../../../../app/constants/scene/actors/sashaBennett'
@@ -58,13 +58,13 @@ import {
     ASLEEP,
     PAST,
     PRESENT,
-    FUTURE
+    FUTURE,
 } from '../../../../app/constants/scene/actors/songs'
 import {
     OAKLAND_SIDE__LEVEL,
     ROAD_PAST,
     ROAD_PRESENT,
-    ROAD_FUTURE
+    ROAD_FUTURE,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__PAST,
@@ -73,22 +73,22 @@ import {
     SNOWGLOBE_PRESENT,
     SNOWGLOBE_SMALL__FUTURE,
     SNOWGLOBE_FUTURE_CORD,
-    SNOWGLOBE_FUTURE_REATTA
+    SNOWGLOBE_FUTURE_REATTA,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     PEACH_TREE,
     ROSEBUSH_DOUBLE_BASEMENT,
-    ROSEBUSH_SINGLE_BASEMENT
+    ROSEBUSH_SINGLE_BASEMENT,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BASEMENT_DOOR,
-    DEFAULT_FENCE_BASEMENT
+    DEFAULT_FENCE_BASEMENT,
 } from '../../../../app/constants/scene/things/doors'
 import {
     TETHERBALL_POLE,
     RECORDING_MIC,
     RECORDING_BEERS,
-    CRACKED_PICTURE
+    CRACKED_PICTURE,
 } from '../../../../app/constants/scene/things/fixtures'
 import { BENNETT_PILLOW__BED } from '../../../../app/constants/scene/things/furnitures'
 import {
@@ -102,7 +102,7 @@ import {
     LIZ_COUCH__FUTURE,
     WIDE_COUCH_MIRIAM,
     WIDE_ARMREST_MIRIAM__LEFT,
-    WIDE_ARMREST_MIRIAM__RIGHT
+    WIDE_ARMREST_MIRIAM__RIGHT,
 } from '../../../../app/constants/scene/things/panels'
 import { OPAL_COUCH__FUTURE } from '../../../../app/constants/scene/things/puppets'
 
@@ -114,25 +114,25 @@ export default [
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     description: 'side, asleep',
-                    instance: ASLEEP
-                }
+                    instance: ASLEEP,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [DOOR]: {
                 [DEFAULT_FENCE_BASEMENT]: true,
-                [BASEMENT_DOOR]: true
+                [BASEMENT_DOOR]: true,
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW__BED]: true
+                [BENNETT_PILLOW__BED]: true,
             },
             [PANEL]: {
-                [BENNETT_BED]: true
-            }
+                [BENNETT_BED]: true,
+            },
         },
         cubes: BASEMENT_BED_DARK_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN },
     },
     {
         unitIndex: 2,
@@ -141,39 +141,39 @@ export default [
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     description: 'side, asleep',
-                    instance: ASLEEP_FEARFUL
+                    instance: ASLEEP_FEARFUL,
                 },
                 [FATHER]: {
                     description: 'side, accusatory',
-                    instance: ACCUSATORY
+                    instance: ACCUSATORY,
                 },
                 [ESTHER_MOTHER]: {
                     youngSita: {
                         description: 'side angle, sobbing',
-                        instance: HURT_CONSOLING
-                    }
-                }
+                        instance: HURT_CONSOLING,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
                 [PEACH_TREE]: true,
                 [ROSEBUSH_DOUBLE_BASEMENT]: true,
-                [ROSEBUSH_SINGLE_BASEMENT]: true
+                [ROSEBUSH_SINGLE_BASEMENT]: true,
             },
             [DOOR]: {
-                [DEFAULT_FENCE_BASEMENT]: true
+                [DEFAULT_FENCE_BASEMENT]: true,
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW__BED]: true
+                [BENNETT_PILLOW__BED]: true,
             },
             [PANEL]: {
-                [BENNETT_BED]: true
-            }
+                [BENNETT_BED]: true,
+            },
         },
         cubes: BASEMENT_BED_MAGIC_KEY,
-        sky: { season: SEASON_NIGHT_MAGIC }
+        sky: { season: SEASON_NIGHT_MAGIC },
     },
     {
         unitIndex: 5,
@@ -182,33 +182,33 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'front angle, wincing',
-                    instance: PAST
+                    instance: PAST,
                 },
                 [FATHER]: {
                     description: 'side angle, gesturing to scene below',
-                    instance: PAST
+                    instance: PAST,
                 },
                 [SASHA_BENNETT]: {
                     description: 'sitting, hurt, lashing out in anger',
-                    instance: COMFORTING_HUMILIATED
-                }
+                    instance: COMFORTING_HUMILIATED,
+                },
             },
             [BACKDROP]: {
-                [ROAD_PAST]: true
+                [ROAD_PAST]: true,
             },
             [CARDBOARD]: {
                 [SNOWGLOBE_SMALL__PAST]: true,
-                [SNOWGLOBE_PAST]: true
+                [SNOWGLOBE_PAST]: true,
             },
             [FIXTURE]: {
-                [TETHERBALL_POLE]: true
+                [TETHERBALL_POLE]: true,
             },
             [PANEL]: {
-                [SNOWGLOBE__TETHERBALL]: true
-            }
+                [SNOWGLOBE__TETHERBALL]: true,
+            },
         },
         cubes: SNOWGLOBES_PAST_KEY,
-        sky: { season: SEASON_PAST }
+        sky: { season: SEASON_PAST },
     },
     {
         unitIndex: 8,
@@ -217,29 +217,29 @@ export default [
             [ACTOR]: {
                 [BENNETT_FATHER]: {
                     description: 'front, dismissive, not feeling bad',
-                    instance: PRESENT
+                    instance: PRESENT,
                 },
                 [MOTHER]: {
                     description: 'side angle, gesturing with empathy',
-                    instance: PRESENT
+                    instance: PRESENT,
                 },
                 [LIZ]: {
                     sita: {
                         description: 'side, seated, pensive',
-                        instance: PETTING_SEATED_PRESENT
-                    }
+                        instance: PETTING_SEATED_PRESENT,
+                    },
                 },
                 [MIRIAM_STEPHANIE]: {
                     description: 'side, jumping on Bennett, grabbing his banjo',
-                    instance: MISCHIEVOUS_BANJO
-                }
+                    instance: MISCHIEVOUS_BANJO,
+                },
             },
             [BACKDROP]: {
-                [ROAD_PRESENT]: true
+                [ROAD_PRESENT]: true,
             },
             [CARDBOARD]: {
                 [SNOWGLOBE_SMALL__PRESENT]: true,
-                [SNOWGLOBE_PRESENT]: true
+                [SNOWGLOBE_PRESENT]: true,
             },
             [PANEL]: {
                 [SNOWGLOBE__LIZ_ALONE]: true,
@@ -247,11 +247,11 @@ export default [
                 [LIZ_COUCH__PRESENT]: true,
                 [WIDE_COUCH_MIRIAM]: true,
                 [WIDE_ARMREST_MIRIAM__LEFT]: true,
-                [WIDE_ARMREST_MIRIAM__RIGHT]: true
-            }
+                [WIDE_ARMREST_MIRIAM__RIGHT]: true,
+            },
         },
         cubes: SNOWGLOBES_PRESENT_KEY,
-        sky: { season: SEASON_PRESENT }
+        sky: { season: SEASON_PRESENT },
     },
     {
         unitIndex: 11,
@@ -260,50 +260,50 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'concerned',
-                    instance: FUTURE
+                    instance: FUTURE,
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         description: 'back, squatting, recording, dejected',
-                        instance: BENNETT_RECORDING
-                    }
+                        instance: BENNETT_RECORDING,
+                    },
                 },
                 [MOTHER]: {
                     description: 'front angle, wanting to console Bennett',
-                    instance: FUTURE
+                    instance: FUTURE,
                 },
                 [FATHER]: {
                     description: 'front angle, arms crossed, righteous',
-                    instance: FUTURE
+                    instance: FUTURE,
                 },
                 [KHARI_LIZ]: {
                     description: 'side angle, cheerful, making a point',
-                    instance: JOKING_LAUGHING
-                }
+                    instance: JOKING_LAUGHING,
+                },
             },
             [BACKDROP]: {
-                [ROAD_FUTURE]: true
+                [ROAD_FUTURE]: true,
             },
             [CARDBOARD]: {
                 [SNOWGLOBE_SMALL__FUTURE]: true,
                 [SNOWGLOBE_FUTURE_CORD]: true,
-                [SNOWGLOBE_FUTURE_REATTA]: true
+                [SNOWGLOBE_FUTURE_REATTA]: true,
             },
             [FIXTURE]: {
                 [RECORDING_MIC]: true,
-                [RECORDING_BEERS]: true
+                [RECORDING_BEERS]: true,
             },
             [PANEL]: {
                 [SNOWGLOBE__LIZ_KHARI]: true,
                 [SNOWGLOBE__BENNETT_ALONE]: true,
-                [LIZ_COUCH__FUTURE]: true
+                [LIZ_COUCH__FUTURE]: true,
             },
             [PUPPET]: {
-                [OPAL_COUCH__FUTURE]: true
-            }
+                [OPAL_COUCH__FUTURE]: true,
+            },
         },
         cubes: SNOWGLOBES_FUTURE_KEY,
-        sky: { season: SEASON_FUTURE }
+        sky: { season: SEASON_FUTURE },
     },
     {
         unitIndex: 15,
@@ -312,41 +312,41 @@ export default [
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     description: 'side sitting, vindictive, magical gesture',
-                    instance: FENDING_OFF
+                    instance: FENDING_OFF,
                 },
                 [FATHER]: {
                     description: 'side angle, knocked over',
-                    instance: REELING
+                    instance: REELING,
                 },
                 [ESTHER_MOTHER]: {
                     youngSita: {
                         description: 'side angle, sobbing uncontrollably',
-                        instance: SOBBING_SHIELDING
-                    }
-                }
+                        instance: SOBBING_SHIELDING,
+                    },
+                },
             },
             [CUTOUT]: {
                 [PEACH_TREE]: true,
                 [ROSEBUSH_DOUBLE_BASEMENT]: true,
-                [ROSEBUSH_SINGLE_BASEMENT]: true
+                [ROSEBUSH_SINGLE_BASEMENT]: true,
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [DOOR]: {
-                [DEFAULT_FENCE_BASEMENT]: true
+                [DEFAULT_FENCE_BASEMENT]: true,
             },
             [FIXTURE]: {
-                [CRACKED_PICTURE]: true
+                [CRACKED_PICTURE]: true,
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW__BED]: true
+                [BENNETT_PILLOW__BED]: true,
             },
             [PANEL]: {
-                [BENNETT_BED]: true
-            }
+                [BENNETT_BED]: true,
+            },
         },
         cubes: BASEMENT_BED_MAGIC_KEY,
-        sky: { season: SEASON_NIGHT_MAGIC }
-    }
+        sky: { season: SEASON_NIGHT_MAGIC },
+    },
 ]

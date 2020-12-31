@@ -15,7 +15,7 @@ import './style'
 
 const TipsToggle = ({
     inPopup,
-    className
+    className,
 
 }) => {
     const
@@ -33,7 +33,7 @@ const TipsToggle = ({
                 className: cx(
                     'TipsToggle',
                     className
-                )
+                ),
             }}
         >
             <Button
@@ -44,7 +44,7 @@ const TipsToggle = ({
                     buttonIdentifier: selectedTipsOption,
                     accessKey: TIPS_TOGGLE_KEY,
                     isDisabled: !canTipsShowForDevice,
-                    handleButtonClick
+                    handleButtonClick,
                 }}
             />
             {inPopup && (
@@ -57,7 +57,7 @@ const TipsToggle = ({
 
 TipsToggle.propTypes = {
     inPopup: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
 }
 
 export default memo(TipsToggle)

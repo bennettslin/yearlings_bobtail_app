@@ -11,7 +11,7 @@ export const getSvgMapForThing = presenceType => THING_SVG_MAPS[presenceType]
 export const getSvgForPresence = ({
     actorKey,
     presenceType,
-    presenceKey
+    presenceKey,
 
 }) => {
     const presencesMap = presenceType === ACTOR ?
@@ -23,7 +23,7 @@ export const getSvgForPresence = ({
 
 export const getSvgForButton = ({
     buttonName,
-    buttonIdentifier
+    buttonIdentifier,
 }) => (
     BUTTON_ICONS_MAP[buttonName]({ buttonIdentifier })
 )

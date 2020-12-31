@@ -10,7 +10,7 @@ export default (
         case SLIDER_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         default:
             return state

@@ -5,7 +5,7 @@ import { getSongIsLogue } from '../../../../album/songs'
 
 const NAV_SONG_MAP = {
     [true]: navLogue,
-    [false]: navSong
+    [false]: navSong,
 }
 
 export default ({ buttonIdentifier: songIndex }) => {

@@ -8,12 +8,12 @@ import tipsHand from '../../../../assets/svgs/app/tips/tipsHand'
 import { getSongTipType } from '../../../api/album/tips'
 import {
     WORMHOLES,
-    WIKI
+    WIKI,
 } from '../../../constants/tips'
 import { mapIsPhoneWidth } from '../../../redux/device/selector'
 import {
     mapReferenceDot,
-    mapWormholeDot
+    mapWormholeDot,
 } from '../../../redux/dots/selector'
 import { mapIsSongChangeDone } from '../../../redux/entrance/selector'
 import { mapLyricSongIndex } from '../../../redux/lyric/selector'
@@ -23,7 +23,7 @@ import './style'
 const TipsHand = ({
     tipType,
     isPointedAtDots = false,
-    reverse
+    reverse,
 
 }) => {
     const
@@ -63,8 +63,8 @@ const TipsHand = ({
                 timeout: 200,
                 classNames: {
                     enterActive: 'TipsHand__shown',
-                    enterDone: 'TipsHand__shown'
-                }
+                    enterDone: 'TipsHand__shown',
+                },
             }}
         >
             <div
@@ -75,7 +75,7 @@ const TipsHand = ({
                         isPointedAtDots && 'TipsHand__pointedAtDots',
                         reverse && 'TipsHand__reverse',
                         'abF'
-                    )
+                    ),
                 }}
             >
                 <InlineSvg
@@ -86,7 +86,7 @@ const TipsHand = ({
                         ),
                         svgClassName: cx(
                             'tipsHand'
-                        )
+                        ),
                     }}
                 >
                     {tipsHand}
@@ -99,7 +99,7 @@ const TipsHand = ({
 TipsHand.propTypes = {
     tipType: PropTypes.string.isRequired,
     isPointedAtDots: PropTypes.bool,
-    reverse: PropTypes.bool
+    reverse: PropTypes.bool,
 }
 
 export default memo(TipsHand)

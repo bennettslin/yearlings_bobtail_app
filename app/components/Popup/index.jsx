@@ -39,12 +39,12 @@ const Popup = ({
                 timeout: 200,
                 classNames: {
                     exitActive: 'Popup__exiting',
-                    enterDone: 'Popup__visible'
+                    enterDone: 'Popup__visible',
                 },
                 appear,
                 mountOnEnter,
                 unmountOnExit,
-                onExited
+                onExited,
             }}
         >
             <div
@@ -58,8 +58,8 @@ const Popup = ({
                         {
                             'Popup__notInOverlay': !displaysInOverlay,
                             'fCC': !noFlexCentre,
-                            'abF': !noAbsoluteFull
-                        }
+                            'abF': !noAbsoluteFull,
+                        },
                     ]
                 )}
             >
@@ -69,7 +69,7 @@ const Popup = ({
                         displaysInOverlay,
                         handlePreviousClick,
                         handleNextClick,
-                        handleContainerClick
+                        handleContainerClick,
                     }}
                 />
                 <StopPropagationDispatcher {...{ ref: stopPropagation }} />
@@ -91,7 +91,7 @@ Popup.propTypes = {
     displaysInOverlay: PropTypes.bool,
     handlePreviousClick: PropTypes.func,
     handleNextClick: PropTypes.func,
-    onExited: PropTypes.func
+    onExited: PropTypes.func,
 }
 
 export default memo(getDidMountHoc(Popup))

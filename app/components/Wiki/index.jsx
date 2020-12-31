@@ -31,7 +31,7 @@ const Wiki = () => {
                 className: 'Wiki',
                 isShown: Boolean(selectedWikiUrl),
                 isLoading,
-                onLoad
+                onLoad,
             }}
         />
     )

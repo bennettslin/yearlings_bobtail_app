@@ -27,7 +27,7 @@ export const getWordsForWikiAnchor = text => {
 export const getSpaceIfNeeded = ({
     words,
     word,
-    index
+    index,
 }) => {
     return (
         // Return a space if it's not the last word and...

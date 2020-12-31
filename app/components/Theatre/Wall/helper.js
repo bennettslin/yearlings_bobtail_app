@@ -6,7 +6,7 @@ export const getWallWidth = ({
     isRight,
     prosceniumLeft,
     prosceniumWidth,
-    windowWidth
+    windowWidth,
 
 }) => {
     return isRight ? (
@@ -24,7 +24,7 @@ export const getBalconyColumnCoordinates = ({
     prosceniumLeft,
     prosceniumWidth,
     prosceniumHeight,
-    ceilingHeight
+    ceilingHeight,
 
 }) => {
     const
@@ -52,14 +52,14 @@ export const getBalconyColumnCoordinates = ({
             minLength: wallWidth,
             firstLength: firstColumnBalconyWidth,
             multiplyFactor: 1.075, // Gets taller faster with larger value.
-            overlapRatio: 0.05 // Less bunched up when closer to 0.
+            overlapRatio: 0.05, // Less bunched up when closer to 0.
         })
 
     return rawCoordinatesArray.map(rawCoordinates => {
 
         const {
                 length: balconyWidth,
-                position: xPosition
+                position: xPosition,
             } = rawCoordinates,
 
             balconyHeight =
@@ -80,7 +80,7 @@ export const getBalconyColumnCoordinates = ({
             top: balconyTop,
             left: balconyLeft,
             width: balconyWidth,
-            height: balconyHeight
+            height: balconyHeight,
         }
     })
 }

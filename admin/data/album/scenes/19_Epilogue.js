@@ -23,7 +23,7 @@ import {
     NESTOR,
     AMY,
     STEPHANIE,
-    WADE
+    WADE,
 } from '../../../../app/constants/scene/actors'
 import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
@@ -34,95 +34,95 @@ export default [
             [ACTOR]: {
                 [BENNETTS_CHRISTOPHER_LIZ]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [ANITA_BENNETT]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [ESTHER]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [WILLY]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [MOTHER]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [FATHER]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [HOWIE]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [TOMER]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [SASHA_BENNETT]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [BRAD]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [ANDREW]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [TRISTAN]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [CATHERINE]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [WADE]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [AMY]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [STEPHANIE]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [JACOB]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [MARA]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [ANA]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [MIRIAM]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [KHARI]: {
                     description: 'standing',
-                    instance: EPILOGUE
+                    instance: EPILOGUE,
                 },
                 [NESTOR]: {
                     description: 'standing',
-                    instance: EPILOGUE
-                }
-            }
+                    instance: EPILOGUE,
+                },
+            },
         },
         cubes: LOGUE_KEY,
-        sky: { season: SEASON_STAGE }
-    }
+        sky: { season: SEASON_STAGE },
+    },
 ]

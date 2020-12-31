@@ -6,22 +6,22 @@ import { GREETING, EPILOGUE } from '../../../../app/constants/scene/actors/songs
 export default [
     {
         type: NESTOR,
-        instance: INJURED
+        instance: INJURED,
     },
     {
         type: NESTOR,
-        instance: GREETING
+        instance: GREETING,
     },
     {
         type: NESTOR,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: NESTOR,
-        instance: JOGGER
+        instance: JOGGER,
     },
     {
         type: AMY_NESTOR_TOMER,
-        instance: OFFICER
-    }
+        instance: OFFICER,
+    },
 ]

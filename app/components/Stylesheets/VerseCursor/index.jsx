@@ -5,7 +5,7 @@ import { getMaxVerseCountForAlbum } from '../../../api/album/count'
 import {
     VERSE_BEFORE_PREFIX,
     VERSE_AFTER_PREFIX,
-    VERSE_CURSOR_CHILD_PREFIX
+    VERSE_CURSOR_CHILD_PREFIX,
 } from '../../../constants/cursor'
 import {
     COLOUR__PAST__LIGHTER,
@@ -15,7 +15,7 @@ import {
     COLOUR__FUTURE__LIGHTER,
     COLOUR__FUTURE__LIGHT,
     COLOUR__FUTURE__DARK,
-    COLOUR__FUTURE__DARKER
+    COLOUR__FUTURE__DARKER,
 } from '../../../scss/exports/style'
 
 const VerseCursorStylesheets = () => (
@@ -29,8 +29,8 @@ const VerseCursorStylesheets = () => (
                 getStyle: index => ({
                     'background-color': index % 2 ?
                         COLOUR__PAST__LIGHTER :
-                        COLOUR__PAST__LIGHT
-                })
+                        COLOUR__PAST__LIGHT,
+                }),
             }}
         />
         <Stylesheet
@@ -42,8 +42,8 @@ const VerseCursorStylesheets = () => (
                 getStyle: index => ({
                     'background-color': index % 2 ?
                         COLOUR__FUTURE__LIGHTER :
-                        COLOUR__FUTURE__LIGHT
-                })
+                        COLOUR__FUTURE__LIGHT,
+                }),
             }}
         />
         <Stylesheet
@@ -55,8 +55,8 @@ const VerseCursorStylesheets = () => (
                 getStyle: index => ({
                     'background-color': index % 2 ?
                         COLOUR__PAST__DARK :
-                        COLOUR__PAST__DARKER
-                })
+                        COLOUR__PAST__DARKER,
+                }),
             }}
         />
         <Stylesheet
@@ -68,8 +68,8 @@ const VerseCursorStylesheets = () => (
                 getStyle: index => ({
                     'background-color': index % 2 ?
                         COLOUR__FUTURE__DARK :
-                        COLOUR__FUTURE__DARKER
-                })
+                        COLOUR__FUTURE__DARKER,
+                }),
             }}
         />
     </>

@@ -3,7 +3,7 @@ export const getCanNavigateByKey = ({
     isAboutShown,
     isPitchShown,
     isScoreShown,
-    isWikiShown
+    isWikiShown,
 }) => {
     if (isPitchShown) {
         return true

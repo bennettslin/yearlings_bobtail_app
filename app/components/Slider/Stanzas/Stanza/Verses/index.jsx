@@ -5,7 +5,7 @@ import { getVerseIndicesForStanza } from '../../../../../api/album/stanzas'
 import {
     getStartTimeForStanza,
     getStartTimeForVerse,
-    getDurationForVerse
+    getDurationForVerse,
 } from '../../../../../api/album/time'
 import SliderVerse from './Verse'
 import { mapLyricSongIndex } from '../../../../../redux/lyric/selector'
@@ -13,7 +13,7 @@ import './style'
 
 const SliderVerses = ({
     stanzaIndex,
-    stanzaDuration
+    stanzaDuration,
 
 }) => {
     const
@@ -55,7 +55,7 @@ const SliderVerses = ({
                             isLastVerseOfStanza,
                             relativeStartTime,
                             verseDuration,
-                            stanzaDuration
+                            stanzaDuration,
                         }}
                     />
                 )
@@ -66,7 +66,7 @@ const SliderVerses = ({
 
 SliderVerses.propTypes = {
     stanzaIndex: PropTypes.number.isRequired,
-    stanzaDuration: PropTypes.number.isRequired
+    stanzaDuration: PropTypes.number.isRequired,
 }
 
 export default memo(SliderVerses)

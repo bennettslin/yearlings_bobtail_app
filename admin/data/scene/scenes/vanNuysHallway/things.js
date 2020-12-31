@@ -1,6 +1,6 @@
 import {
     CARDBOARD,
-    DOOR
+    DOOR,
 } from '../../../../../app/constants/scene/things'
 import { CORKBOARD } from '../../../../../app/constants/scene/things/cardboards'
 import { PRINCIPAL_DOOR } from '../../../../../app/constants/scene/things/doors'
@@ -11,13 +11,13 @@ export default {
             yIndex: 4,
             xPosition: 7.5,
             zOffset: 1.5,
-            scaleFactor: 0.35
-        }
+            scaleFactor: 0.35,
+        },
     },
     [DOOR]: {
         [PRINCIPAL_DOOR]: {
             yIndex: 4,
-            xPosition: 3
-        }
-    }
+            xPosition: 3,
+        },
+    },
 }

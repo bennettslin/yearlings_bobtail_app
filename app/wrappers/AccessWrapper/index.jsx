@@ -6,7 +6,7 @@ import getDidMountHoc from '../../components/DidMountHoc'
 import { PARENT_ACCESS_PREFIX } from '../../constants/prefixes'
 import {
     mapIsAccessOn,
-    mapAccessedKey
+    mapAccessedKey,
 } from '../../redux/access/selector'
 
 const AccessWrapper = ({ didMount, children }) => {
@@ -26,8 +26,8 @@ const AccessWrapper = ({ didMount, children }) => {
                         accessedKey &&
                             `${PARENT_ACCESS_PREFIX}${accessedKey}`,
                         'abF'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {children}
@@ -37,7 +37,7 @@ const AccessWrapper = ({ didMount, children }) => {
 
 AccessWrapper.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default memo(getDidMountHoc(AccessWrapper))

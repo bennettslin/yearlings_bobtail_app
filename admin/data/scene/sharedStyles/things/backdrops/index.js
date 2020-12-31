@@ -22,17 +22,17 @@ import {
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
-    WEDDING_BACKDROP
+    WEDDING_BACKDROP,
 } from '../../../../../../app/constants/scene/things/backdrops'
 import {
     BUILDINGS__SHARED,
-    TAIWAN_HOUSE__SHARED
+    TAIWAN_HOUSE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/buildings'
 import { DOOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
     RUBBER__SHARED,
-    RUST__SHARED
+    RUST__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     FOLIAGE__SHARED,
@@ -41,7 +41,7 @@ import {
     SHORE__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
-    VOLCANO__SHARED
+    VOLCANO__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 
@@ -52,22 +52,22 @@ export default {
         MOUNTAIN__SHARED,
         RUBBER__SHARED,
         RUST__SHARED,
-        SHORE__SHARED
+        SHORE__SHARED,
     ],
     [LOS_ANGELES_BACKDROP]: [
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
     ],
     [MOUNTAIN_TAIWAN_BACKDROP]: TAIWAN_MOUNTAIN__SHARED,
     [MOUNTAIN_PAMPAS_BACKDROP]: MOUNTAIN__SHARED,
     [OAKLAND_FRONT]: [
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
     ],
     [OAKLAND_SIDE]: [
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
     ],
     [OCEAN_BOTTOM_FAR]: VOLCANO__SHARED,
     [OCEAN_FLOOR_FAR]: VOLCANO__SHARED,
@@ -75,41 +75,41 @@ export default {
     [ROAD_FUTURE]: ROAD__SHARED,
     [ROAD_PAST]: [
         BOOK__SHARED,
-        ROAD__SHARED
+        ROAD__SHARED,
     ],
     [ROAD_PRESENT]: ROAD__SHARED,
     [SHORE_BUOY_BACKDROP]: [
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,
-        SHORE__SHARED
+        SHORE__SHARED,
     ],
     [SHORE_RICKSHAW_BACKDROP]: [
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,
-        SHORE__SHARED
+        SHORE__SHARED,
     ],
     [TAIWAN_MOUNTAINS_BACKDROP]: TAIWAN_MOUNTAIN__SHARED,
     [TAIWAN_STAIRS_BACKDROP]: [
         DOOR__SHARED,
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,
-        TAIWAN_HOUSE__SHARED
+        TAIWAN_HOUSE__SHARED,
     ],
     [THOUGHT_LARGE]: BUBBLE__SHARED,
     [THOUGHT_MEDIUM]: BUBBLE__SHARED,
     [THOUGHT_SMALL]: BUBBLE__SHARED,
     [VALLEY_CLOSER_BACKDROP]: [
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
     ],
     [VALLEY_FURTHER_BACKDROP]: [
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
     ],
     [VALLEY_PANORAMA_BACKDROP]: [
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
     ],
-    [WEDDING_BACKDROP]: MOUNTAIN__SHARED
+    [WEDDING_BACKDROP]: MOUNTAIN__SHARED,
 }

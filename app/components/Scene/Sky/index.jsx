@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import {
     mapSceneSkyTime,
-    mapSceneSkySeason
+    mapSceneSkySeason,
 } from '../../../redux/scene/selector'
 import './style'
 
@@ -26,7 +26,7 @@ const Sky = () => {
                         'Sky__filter',
                         'abF',
                         sceneSkyTime
-                    )
+                    ),
                 }}
             />
             <div
@@ -37,7 +37,7 @@ const Sky = () => {
                         'Sky__filter',
                         'abF',
                         sceneSkyTime
-                    )
+                    ),
                 }}
             />
             <div
@@ -48,7 +48,7 @@ const Sky = () => {
                         'Sky__filter',
                         'abF',
                         sceneSeason
-                    )
+                    ),
                 }}
             />
             <div
@@ -59,7 +59,7 @@ const Sky = () => {
                         'Sky__filter',
                         'abF',
                         sceneSeason
-                    )
+                    ),
                 }}
             />
         </div>

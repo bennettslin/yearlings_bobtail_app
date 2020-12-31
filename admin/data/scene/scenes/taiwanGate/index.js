@@ -5,7 +5,7 @@ export default {
     [PRETEEN_BENNETT]: {
         [GATE]: {
             yIndex: 5,
-            xPosition: 0.75
-        }
-    }
+            xPosition: 0.75,
+        },
+    },
 }

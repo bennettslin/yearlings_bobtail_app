@@ -16,7 +16,7 @@ const Dot = ({
     // Applies to slide dots.
     isDeselected,
     isSequenceDot,
-    dotKey
+    dotKey,
 
 }) => {
     const dotIconSvg = getSvgForDot(dotKey)
@@ -37,11 +37,11 @@ const Dot = ({
                         'dropShadow__anchorHover',
 
                         isAccessed && `dropShadow__accessed`,
-                        isSelected && `dropShadow__selected`
+                        isSelected && `dropShadow__selected`,
                     ],
 
                     className
-                )
+                ),
             }}
         >
             {dotIconSvg}
@@ -57,7 +57,7 @@ Dot.propTypes = {
     isSelected: PropTypes.bool,
     isDeselected: PropTypes.bool,
     isSequenceDot: PropTypes.bool,
-    dotKey: PropTypes.string.isRequired
+    dotKey: PropTypes.string.isRequired,
 }
 
 export default memo(getDidMountHoc(Dot))

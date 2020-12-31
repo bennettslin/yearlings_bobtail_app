@@ -68,7 +68,7 @@ const PitchContainer = ({ children }) => {
             isAccessOn: keyName !== ESCAPE,
 
             // Stop showing key as registered in the UI.
-            accessedKey: ''
+            accessedKey: '',
         }))
     }
 
@@ -101,7 +101,7 @@ const PitchContainer = ({ children }) => {
                 ),
                 onClick,
                 onKeyDown,
-                onKeyUp
+                onKeyUp,
             }}
         >
             <Helmet>
@@ -124,7 +124,7 @@ const PitchContainer = ({ children }) => {
 }
 
 PitchContainer.propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
 }
 
 const ParentPitchContainer = ({ children }) => (
@@ -139,7 +139,7 @@ const ParentPitchContainer = ({ children }) => (
 )
 
 ParentPitchContainer.propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
 }
 
 export default ParentPitchContainer

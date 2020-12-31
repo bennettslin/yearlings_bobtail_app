@@ -2,5 +2,5 @@ import { CARESS_REFLECTION } from '../../../../../../app/constants/scene/actors/
 import { LIZ_PHONE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 
 export default {
-    [CARESS_REFLECTION]: LIZ_PHONE__SHARED
+    [CARESS_REFLECTION]: LIZ_PHONE__SHARED,
 }

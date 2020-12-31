@@ -5,7 +5,7 @@ import { getSessionDefaults } from './default'
 import { AUDIO_OPTIONS } from '../../constants/options'
 import {
     SESSION_STORE,
-    AUDIO_OPTION_INDEX
+    AUDIO_OPTION_INDEX,
 } from '../../constants/store'
 
 export const getSessionReducer = songIndex => (
@@ -27,12 +27,12 @@ export const getSessionReducer = songIndex => (
                 return {
                     ...state,
                     ...payload,
-                    audioOptionIndex
+                    audioOptionIndex,
                 }
             } else {
                 return {
                     ...state,
-                    ...payload
+                    ...payload,
                 }
             }
         }

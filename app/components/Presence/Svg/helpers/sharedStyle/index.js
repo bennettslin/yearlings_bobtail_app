@@ -47,7 +47,7 @@ import {
     BENNETT_REFLECTION,
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
-    KHARI_LIZ_REFLECTION
+    KHARI_LIZ_REFLECTION,
 } from '../../../../../constants/scene/actors'
 
 const STYLED_ACTOR_MAP = {
@@ -76,7 +76,7 @@ const STYLED_ACTOR_MAP = {
     [BENNETT_REFLECTION]: BENNETT,
     [BENNETT_LIZ_REFLECTION]: [BENNETT, LIZ],
     [LIZ_REFLECTION]: LIZ,
-    [KHARI_LIZ_REFLECTION]: [KHARI, LIZ]
+    [KHARI_LIZ_REFLECTION]: [KHARI, LIZ],
 }
 
 const addStyleToSharedStyle = (sharedStyle, addedStyle) => {

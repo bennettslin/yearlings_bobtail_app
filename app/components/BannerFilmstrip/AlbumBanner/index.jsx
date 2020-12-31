@@ -12,7 +12,7 @@ const AlbumBanner = () => (
                 'textShadow__dark',
                 'ovH',
                 'Rancho'
-            )
+            ),
         }}
     >
         Bobtail Yearlings - <i>{ALBUM_TITLE}</i>

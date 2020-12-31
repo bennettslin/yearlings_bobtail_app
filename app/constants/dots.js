@@ -1,6 +1,6 @@
 import {
     getObjectFromBit,
-    getTwoToThePowerOfN
+    getTwoToThePowerOfN,
 } from '../helpers/bit'
 
 export const AFTERWORD = 'afterword'
@@ -21,7 +21,7 @@ export const ORDERED_DOT_KEYS = [
     REFERENCE,
     SONGCRAFT,
     WORMHOLE,
-    AFTERWORD
+    AFTERWORD,
 ]
 
 export const DOT_KEYS_COUNT = ORDERED_DOT_KEYS.length
@@ -34,7 +34,7 @@ export const DOT_DESCRIPTIONS = {
     [REFERENCE]: 'Link to a Wikipedia page.',
     [WORMHOLE]: 'Portal to another song.',
     [SONGCRAFT]: 'How the music was made.',
-    [AFTERWORD]: 'My life since then.'
+    [AFTERWORD]: 'My life since then.',
 }
 
 // Hard-coded because it fails staging otherwise. Haven't investigated why.
@@ -44,7 +44,7 @@ export const WORMHOLE_BIT = 32
 
 export const EMPTY_DOT_KEYS = getObjectFromBit({
     keysList: ORDERED_DOT_KEYS,
-    bit: 0
+    bit: 0,
 })
 
 export const FULL_DOTS_BIT = getTwoToThePowerOfN(

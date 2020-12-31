@@ -8,7 +8,7 @@ export const getIsShelfLeftShown = ({
     lyricAnnotationIndex,
     isLyricLogue,
     isOverviewShown,
-    isTipsShown
+    isTipsShown,
 }) => {
 
     // If toggle is in overview, hide when...
@@ -36,7 +36,7 @@ export const getIsShelfLeftShown = ({
 
 export const getIsOverlayingAnnotation = ({
     isPhoneWidth,
-    isLyricExpanded
+    isLyricExpanded,
 }) => {
     return (
         // Annotation is always in overlay if lyric is expanded...
@@ -53,7 +53,7 @@ export const getIsOverlayShown = ({
     isScoreShown,
     isAboutShown,
     isPitchShown,
-    isWikiShown
+    isWikiShown,
 
 }) => {
     return (
@@ -75,7 +75,7 @@ export const getIsCarouselOrNavShowable = ({
     isOverviewShown,
     isTipsShown,
     isLyricExpanded,
-    isActivated
+    isActivated,
 }) => (
     (
         // If checking for carousel, cannot be in logue and must have dots.

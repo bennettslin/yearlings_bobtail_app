@@ -5,11 +5,11 @@ import {
     FRONT,
     SIDE,
     TILE,
-    BASE
+    BASE,
 } from '../../../../../../../constants/scene/cubes'
 import {
     CUBE_X_AXIS_LENGTH,
-    CUBE_Z_AXIS_LENGTH
+    CUBE_Z_AXIS_LENGTH,
 } from '../../../../../../../constants/cubeIndex'
 
 import { getHorizontalPlaneFractions } from '../../../../../../../helpers/cubePlanes'
@@ -21,7 +21,7 @@ const HORIZONTAL_FACES = [
     BASE,
 
     // This is the top face if floor, bottom face if ceiling.
-    TILE
+    TILE,
 ]
 
 export const getCubeCornerPoints = ({
@@ -29,7 +29,7 @@ export const getCubeCornerPoints = ({
     yIndex,
     zIndex,
     isFloor,
-    slantDirection
+    slantDirection,
 
 }) => {
     /**
@@ -44,7 +44,7 @@ export const getCubeCornerPoints = ({
             xIndex,
             yIndex,
             zIndex: face === TILE ? zIndex : baseZIndex,
-            slantDirection
+            slantDirection,
         })
 
         return cubeCornerPercentages
@@ -54,9 +54,9 @@ export const getCubeCornerPoints = ({
 const _getOrderedPointsForFrontFace = ({
     cubeCorners: {
         tile: tl,
-        base: bs
+        base: bs,
     },
-    isFloor
+    isFloor,
 }) => (
     isFloor ?
         [tl.left.front, tl.right.front, bs.right.front, bs.left.front] :
@@ -65,7 +65,7 @@ const _getOrderedPointsForFrontFace = ({
 
 const _getOrderedPointsForTileFace = ({
     cubeCorners: { tile: tl },
-    isFloor
+    isFloor,
 }) => (
     isFloor ?
         [tl.left.back, tl.right.back, tl.right.front, tl.left.front] :
@@ -77,9 +77,9 @@ const _getOrderedPointsForSideFace = ({
     slantDirection,
     cubeCorners: {
         tile: tl,
-        base: bs
+        base: bs,
     },
-    isFloor
+    isFloor,
 }) => {
     // If slanted, rendered side is just the slant direction.
     let renderedSide = slantDirection
@@ -105,7 +105,7 @@ const _getOrderedPointsForSideFace = ({
 const ORDERED_POINTS_GETTER_MAP = {
     [TILE]: _getOrderedPointsForTileFace,
     [FRONT]: _getOrderedPointsForFrontFace,
-    [SIDE]: _getOrderedPointsForSideFace
+    [SIDE]: _getOrderedPointsForSideFace,
 }
 
 const _getOrderedPoints = ({ face, ...props }) => (
@@ -118,7 +118,7 @@ const _getOrderedPoints = ({ face, ...props }) => (
 
 export const setSvgDataPathForFace = (props) => (
     _getOrderedPoints(props).map(({
-        x, y
+        x, y,
     }, index) => {
 
         // First "M"oveTo, then "L"ine.

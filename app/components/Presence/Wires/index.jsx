@@ -7,7 +7,7 @@ import './style'
 const defaultProps = {
     adjustedTop: 0,
     adjustedLeft: 0,
-    adjustedWidth: 0
+    adjustedWidth: 0,
 }
 
 const propTypes = {
@@ -18,7 +18,7 @@ const propTypes = {
     adjustedTop: PropTypes.number.isRequired,
     adjustedLeft: PropTypes.number.isRequired,
     adjustedWidth: PropTypes.number.isRequired,
-    adjustedHeight: PropTypes.number.isRequired
+    adjustedHeight: PropTypes.number.isRequired,
 }
 
 const Wires = ({
@@ -30,13 +30,13 @@ const Wires = ({
     adjustedTop,
     adjustedLeft,
     adjustedWidth,
-    adjustedHeight
+    adjustedHeight,
 
 }) => {
     const wires = getWires({
         actorKey,
         presenceType,
-        presenceKey
+        presenceKey,
     })
 
     return Boolean(wires) && (
@@ -63,8 +63,8 @@ const Wires = ({
                             ),
                             style: {
                                 left: `${left.toFixed(2)}%`,
-                                top: `${top.toFixed(2)}%`
-                            }
+                                top: `${top.toFixed(2)}%`,
+                            },
                         }}
                     />
                 )

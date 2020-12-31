@@ -62,7 +62,7 @@ export const getFormattedTime = time => {
 export const getFormattedAnnotationTitle = ({
     anchor,
     properNoun,
-    keepEndCharacter
+    keepEndCharacter,
 
 }) => {
     /**

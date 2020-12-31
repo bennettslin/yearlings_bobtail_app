@@ -2,11 +2,11 @@ import {
     getDurationForSong,
     getStartTimeForVerse,
     getStartTimeForStanza,
-    getEndTimeForStanza
+    getEndTimeForStanza,
 } from '../api/album/time'
 import {
     getStanzaIndices,
-    getVerseIndicesForStanza
+    getVerseIndicesForStanza,
 } from '../api/album/stanzas'
 
 export const getVerseIndexforRatio = (

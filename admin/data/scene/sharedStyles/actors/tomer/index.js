@@ -1,6 +1,6 @@
 import {
     SHANE_BUYING,
-    SHANE_SPILLING
+    SHANE_SPILLING,
 } from '../../../../../../app/constants/scene/actors/tomer'
 import {
     GANGBANGER,
@@ -9,7 +9,7 @@ import {
     STEAM_TUNNEL,
     CEMETERY,
     STATION_WAGON,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../../../app/constants/scene/actors/songs'
 import { SHANE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
 import {
@@ -17,7 +17,7 @@ import {
     GARBAGE_BAG__SHARED,
     HEINEKEN__SHARED,
     ROBITUSSIN__SHARED,
-    WINE__SHARED
+    WINE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/food'
 export default {
     [ABBEY_ROAD]: null,
@@ -28,11 +28,11 @@ export default {
     [EPILOGUE]: null,
     [GANGBANGER]: [
         GARBAGE_BAG__SHARED,
-        WINE__SHARED
+        WINE__SHARED,
     ],
     [SHANE_BUYING]: SHANE__SHARED,
     [SHANE_SPILLING]: [
         SHANE__SHARED,
-        HEINEKEN__SHARED
-    ]
+        HEINEKEN__SHARED,
+    ],
 }

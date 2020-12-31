@@ -2,7 +2,7 @@ import { CSS_WIDTH_MENU_BREAKPOINT } from '../../constants/responsive/deviceWidt
 
 export const getMenuMarginInOverlay = ({
     isDesktopWidth,
-    windowWidth
+    windowWidth,
 }) => {
 
     // Don't bother if we're not in desktop.

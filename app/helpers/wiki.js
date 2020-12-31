@@ -5,7 +5,7 @@ export const getWikiUrl = ({
     selectedWikiIndex,
     selectedAnnotationIndex,
     wikiAnnotationIndex,
-    isMobileWiki
+    isMobileWiki,
 
 }) => {
     if (selectedWikiIndex) {

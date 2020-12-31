@@ -11,7 +11,7 @@ export const getWindowDimensions = rootElement => {
 
     return {
         windowHeight,
-        windowWidth
+        windowWidth,
     }
 }
 

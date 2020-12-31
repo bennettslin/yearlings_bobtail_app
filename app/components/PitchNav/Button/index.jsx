@@ -11,7 +11,7 @@ import { mapIsDesktopWidth, mapIsMonitorWidth } from '../../../redux/device/sele
 
 const PitchNavButton = ({
     pitchIndex,
-    handleButtonClick
+    handleButtonClick,
 }) => {
     const
         isDesktopWidth = useSelector(mapIsDesktopWidth),
@@ -32,13 +32,13 @@ const PitchNavButton = ({
                 buttonName: PITCH_SEGMENT_BUTTON_KEY,
                 buttonIdentifier: getPitchImageKeyForIndex(pitchIndex),
                 isClickDisabled: isSelected,
-                handleButtonClick: _handleButtonClick
+                handleButtonClick: _handleButtonClick,
             }}
         >
             <ButtonCharacter
                 {...{
                     isSelected,
-                    character: pitchIndex
+                    character: pitchIndex,
                 }}
             />
         </Button>
@@ -47,7 +47,7 @@ const PitchNavButton = ({
 
 PitchNavButton.propTypes = {
     pitchIndex: PropTypes.number.isRequired,
-    handleButtonClick: PropTypes.func.isRequired
+    handleButtonClick: PropTypes.func.isRequired,
 }
 
 export default PitchNavButton

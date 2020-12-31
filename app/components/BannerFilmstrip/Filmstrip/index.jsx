@@ -9,12 +9,12 @@ import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import { getSceneIndices } from '../../../api/album/scenes'
 import {
     PREVIOUS_SCENE_KEY,
-    NEXT_SCENE_KEY
+    NEXT_SCENE_KEY,
 } from '../../../constants/access'
 import { FILMSTRIP } from '../../../constants/tips'
 import {
     mapSelectedSongIndex,
-    mapIsSelectedLogue
+    mapIsSelectedLogue,
 } from '../../../redux/selected/selector'
 import './style'
 
@@ -34,7 +34,7 @@ const Filmstrip = () => {
 
                     'dropShadow',
                     !isSelectedLogue && 'dropShadow__lightHover'
-                )
+                ),
             }}
         >
             {getSceneIndices(selectedSongIndex).map(sceneIndex => {
@@ -44,7 +44,7 @@ const Filmstrip = () => {
                             key: sceneIndex,
                             sceneIndex,
                             dispatchSceneIndex,
-                            stopPropagation
+                            stopPropagation,
                         }}
                     />
                 )

@@ -7,13 +7,13 @@ export const addDrawingTasksToSongTasks = (songTasksArray) => {
             songDrawingTasks = drawings.songTasks[songIndex],
             {
                 actorsWorkedHours,
-                actorsNeededHours
+                actorsNeededHours,
             } = songDrawingTasks,
 
             drawingActorsTask = {
                 taskName: 'Drawings of actors',
                 workedHours: actorsWorkedHours,
-                neededHours: actorsNeededHours
+                neededHours: actorsNeededHours,
             }
 
         if (actorsNeededHours) {

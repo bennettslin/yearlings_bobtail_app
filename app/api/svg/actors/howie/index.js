@@ -9,7 +9,7 @@ import epilogue from '../../../../../assets/svgs/actors/howie/epilogue'
 
 import {
     USHER_WAITING,
-    USHER_LOOKING
+    USHER_LOOKING,
 } from '../../../../constants/scene/actors/howie'
 
 import {
@@ -18,7 +18,7 @@ import {
     STEAM_TUNNEL,
     STATION_WAGON,
     ATTIC,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -29,5 +29,5 @@ export default {
     [ATTIC]: attic,
     [EPILOGUE]: epilogue,
     [USHER_WAITING]: usherWaiting,
-    [USHER_LOOKING]: usherLooking
+    [USHER_LOOKING]: usherLooking,
 }

@@ -11,7 +11,7 @@ import { CHILD_ACCESS_PREFIX } from '../../constants/prefixes'
 import {
     getShowButtonIcon,
     getShowTooltip,
-    getTooltipText
+    getTooltipText,
 } from './helper'
 import './style'
 
@@ -33,7 +33,7 @@ const Button = ({
     accessKey,
     handleButtonClick,
     inanimateChild,
-    children
+    children,
 
 }) => {
     const
@@ -65,7 +65,7 @@ const Button = ({
                 logEvent({
                     e,
                     componentName: `Button`,
-                    analyticsIdentifier: buttonName
+                    analyticsIdentifier: buttonName,
                 })
 
                 handleButtonClick(e)
@@ -91,16 +91,16 @@ const Button = ({
                         'Button__clickDisabled': isClickDisabled,
                         'Button__defaultSize': isDefaultSize,
                         'Button__smallSize': isSmallSize,
-                        'Button__largeSize': isLargeSize
+                        'Button__largeSize': isLargeSize,
                     },
                     isPulsateAnimated && 'pulsateAnimated',
                     className
                 ),
                 ...showTooltip && {
                     'data-for': buttonName,
-                    'data-tip': getTooltipText({ buttonName, buttonIdentifier })
+                    'data-tip': getTooltipText({ buttonName, buttonIdentifier }),
                 },
-                onClick
+                onClick,
             }}
         >
             {inanimateChild}
@@ -122,14 +122,14 @@ const Button = ({
                         isAccessEnter && showIfAccessOn && 'dropShadow__accessed',
                         isPopupButton && 'ButtonAnimatable__popup',
                         'abF'
-                    )
+                    ),
                 }}
             >
                 {getShowButtonIcon(buttonName) && (
                     <ButtonIcon
                         {...{
                             buttonName,
-                            buttonIdentifier
+                            buttonIdentifier,
                         }}
                     />
                 )}
@@ -141,7 +141,7 @@ const Button = ({
                         inButtonOrDotAnchor
                         {...{
                             showIfAccessOn,
-                            accessKey
+                            accessKey,
                         }}
                     />
                 )}
@@ -172,7 +172,7 @@ Button.propTypes = {
     accessKey: PropTypes.string,
     handleButtonClick: PropTypes.func.isRequired,
     inanimateChild: PropTypes.any,
-    children: PropTypes.any
+    children: PropTypes.any,
 }
 
 export default memo(getDidMountHoc(Button))

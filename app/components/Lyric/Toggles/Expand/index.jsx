@@ -34,8 +34,8 @@ const LyricToggleExpand = ({ inMain }) => {
                 timeout: 200,
                 classNames: {
                     enterActive: 'LyricToggle__shown',
-                    enterDone: 'LyricToggle__shown'
-                }
+                    enterDone: 'LyricToggle__shown',
+                },
             }}
         >
             <div className={cx(
@@ -52,7 +52,7 @@ const LyricToggleExpand = ({ inMain }) => {
                         buttonName: LYRIC_EXPAND_BUTTON_KEY,
                         buttonIdentifier: isLyricExpanded,
                         accessKey: LYRIC_EXPAND_KEY,
-                        handleButtonClick
+                        handleButtonClick,
                     }}
                 />
                 <TipsHand {...{ tipType: LYRIC_EXPAND }} />
@@ -63,7 +63,7 @@ const LyricToggleExpand = ({ inMain }) => {
 }
 
 LyricToggleExpand.propTypes = {
-    inMain: PropTypes.bool
+    inMain: PropTypes.bool,
 }
 
 export default memo(LyricToggleExpand)

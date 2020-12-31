@@ -1,6 +1,6 @@
 import {
     CUBE_Y_AXIS_LENGTH,
-    CUBE_Y_INDICES
+    CUBE_Y_INDICES,
 } from '../../../constants/cubeIndex'
 import {
     OPACITY,
@@ -9,7 +9,7 @@ import {
     PATH,
     TOP,
     EXIT,
-    ENTER
+    ENTER,
 } from '../../../constants/transition'
 
 const
@@ -22,12 +22,12 @@ const
 export const TRANSITION_STYLESHEET_CONFIGS = [
     {
         stylesheetKey: EXIT,
-        getTransitionDelay: yIndex => (LYRIC_SCROLL_DURATION + (CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1)
+        getTransitionDelay: yIndex => (LYRIC_SCROLL_DURATION + (CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1),
     },
     {
         stylesheetKey: ENTER,
-        getTransitionDelay: yIndex => (CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1)
-    }
+        getTransitionDelay: yIndex => (CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1),
+    },
 ]
 
 export const PRESENCE_TRANSITION_CONFIGS = [
@@ -36,33 +36,33 @@ export const PRESENCE_TRANSITION_CONFIGS = [
         transitionKey: OPACITY,
         indices: [CUBE_Y_AXIS_LENGTH],
         transitionStyle: OPACITY,
-        noAdditionalOpacity: true
+        noAdditionalOpacity: true,
     },
     {
         transitionKey: TOP,
         indices: CUBE_Y_INDICES,
         transitionStyle: TOP,
-        transitionEaseEnter: TRANSITION_BOUNCE_ENTER
+        transitionEaseEnter: TRANSITION_BOUNCE_ENTER,
     },
     {
         transitionKey: LEFT,
         indices: CUBE_Y_INDICES,
         transitionStyle: LEFT,
-        transitionEaseEnter: TRANSITION_BOUNCE_ENTER
+        transitionEaseEnter: TRANSITION_BOUNCE_ENTER,
     },
     {
         transitionKey: RIGHT,
         indices: CUBE_Y_INDICES,
         transitionStyle: LEFT,
-        transitionEaseEnter: TRANSITION_BOUNCE_ENTER
+        transitionEaseEnter: TRANSITION_BOUNCE_ENTER,
     },
     {
         transitionKey: PATH,
         indices: [CUBE_Y_AXIS_LENGTH],
         transitionStyle: OPACITY,
         transitionDuration: 0.5,
-        noAdditionalOpacity: true
-    }
+        noAdditionalOpacity: true,
+    },
 ]
 
 export const getTransitionStyles = ({
@@ -70,7 +70,7 @@ export const getTransitionStyles = ({
     transitionStyles,
     transitionEase = 'ease-out',
     transitionDuration = TRANSITION_DURATION,
-    getTransitionDelay
+    getTransitionDelay,
 }) => (
     transitionStyles.map(transitionStyle => (
         `${transitionStyle} ${transitionDuration}s ${transitionEase} ${getTransitionDelay(yIndex)}s`

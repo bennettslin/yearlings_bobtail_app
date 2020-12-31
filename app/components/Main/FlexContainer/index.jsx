@@ -7,7 +7,7 @@ import './style'
 
 const MainFlexContainer = ({
     isRight,
-    children
+    children,
 
 }) => {
     const isDesktopWidth = useSelector(mapIsDesktopWidth)
@@ -35,7 +35,7 @@ const MainFlexContainer = ({
                     isRight && isDesktopWidth && 'fCC',
                     isRight && !isDesktopWidth && 'mainFlexContainer__right',
                     'abF'
-                )
+                ),
             }}
         >
             {children}
@@ -45,7 +45,7 @@ const MainFlexContainer = ({
 
 MainFlexContainer.propTypes = {
     isRight: PropTypes.bool,
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
 }
 
 export default memo(MainFlexContainer)

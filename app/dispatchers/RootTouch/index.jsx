@@ -45,7 +45,7 @@ const RootTouchManager = forwardRef((props, ref) => {
     useImperativeHandle(ref, () => ({
         move: dispatchTouchMove,
         end: dispatchTouchEnd,
-        click: dispatchRootClick
+        click: dispatchRootClick,
     }))
     return (
         <>

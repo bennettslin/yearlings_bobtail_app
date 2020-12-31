@@ -1,7 +1,7 @@
 import { getIsDesktopWidth } from '../responsive'
 import {
     HEIGHT_LYRIC_COLLAPSED,
-    CSS_HEIGHT_MENU
+    CSS_HEIGHT_MENU,
 } from '../../constants/responsive'
 
 export const getLyricDynamicHeight = ({
@@ -10,7 +10,7 @@ export const getLyricDynamicHeight = ({
     windowHeight,
     stageHeight,
     isHeightlessLyric,
-    menuHeight
+    menuHeight,
 
 }) => {
     // Desktop is always 100%.
@@ -43,7 +43,7 @@ export const getLyricOverviewHeightStyle = ({
     lyricDynamicHeight,
     isLyricLogue,
     isHeightlessLyric,
-    menuHeight
+    menuHeight,
 
 }) => (
     // Set to window height minus menu if...
@@ -63,7 +63,7 @@ export const getMainHeightStyle = ({
     lyricDynamicHeight,
     isHeightlessLyric,
     menuHeight,
-    isDesktopWidth
+    isDesktopWidth,
 
 }) => {
     let basePercentage
@@ -91,7 +91,7 @@ export const getLyricSectionRect = ({
     windowHeight,
     isLyricExpanded,
     lyricDynamicHeight,
-    menuHeight
+    menuHeight,
 
 }) => {
     const bottom = windowHeight
@@ -119,6 +119,6 @@ export const getLyricSectionRect = ({
 
     return JSON.stringify({
         lyricSectionTop: Number(top.toFixed(2)),
-        lyricSectionBottom: Number(bottom.toFixed(2))
+        lyricSectionBottom: Number(bottom.toFixed(2)),
     })
 }

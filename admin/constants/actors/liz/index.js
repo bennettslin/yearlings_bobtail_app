@@ -5,7 +5,7 @@ import {
     BENNETTS_CHRISTOPHER_LIZ,
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
-    KHARI_LIZ_REFLECTION
+    KHARI_LIZ_REFLECTION,
 } from '../../../../app/constants/scene/actors'
 import {
     ASLEEP_REACHING,
@@ -17,7 +17,7 @@ import {
     OPENING_DOOR,
     DEFENDING,
     NOT_HUNGRY,
-    ASLEEP_COUCH
+    ASLEEP_COUCH,
 } from '../../../../app/constants/scene/actors/liz'
 import {
     GINGERBREAD_PRISON,
@@ -34,13 +34,13 @@ import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
-    FINAL_DREAM
+    FINAL_DREAM,
 } from '../../../../app/constants/scene/actors/bennettLiz'
 import {
     JOKING_LAUGHING,
     PROTECTIVE_CONCERNED,
     CARESS,
-    CARESS_REFLECTION
+    CARESS_REFLECTION,
 } from '../../../../app/constants/scene/actors/khariLiz'
 import {
     DATE_ENDING,
@@ -53,168 +53,168 @@ import {
     RUMPLED_LINENS,
     LEAVING_CRUMBLED,
     EL_TORITO,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: LIZ,
-        instance: DATE_ENDING
+        instance: DATE_ENDING,
     },
     {
         type: LIZ,
-        instance: MUSEUM
+        instance: MUSEUM,
     },
     {
         type: LIZ,
-        instance: BACKSTAGE
+        instance: BACKSTAGE,
     },
     {
         type: LIZ,
-        instance: GO_KARTS
+        instance: GO_KARTS,
     },
     {
         type: LIZ,
-        instance: DATE_ENDED
+        instance: DATE_ENDED,
     },
     {
         type: LIZ,
-        instance: DISHROOM_LANCET
+        instance: DISHROOM_LANCET,
     },
     {
         type: LIZ,
-        instance: GATE_CODE
+        instance: GATE_CODE,
     },
     {
         type: BENNETT_LIZ,
-        instance: GINGERBREAD_PRISON
+        instance: GINGERBREAD_PRISON,
     },
     {
         type: LIZ,
-        instance: RUMPLED_LINENS
+        instance: RUMPLED_LINENS,
     },
     {
         type: BENNETT_LIZ,
-        instance: CHEEK_UNVEILED
+        instance: CHEEK_UNVEILED,
     },
     {
         type: BENNETT_LIZ,
-        instance: HARD_ON
+        instance: HARD_ON,
     },
     {
         type: BENNETT_LIZ_REFLECTION,
-        instance: HARD_ON_REFLECTION
+        instance: HARD_ON_REFLECTION,
     },
     {
         type: BENNETT_LIZ,
-        instance: MISSIONARY
+        instance: MISSIONARY,
     },
     {
         type: BENNETT_LIZ_REFLECTION,
-        instance: MISSIONARY_REFLECTION
+        instance: MISSIONARY_REFLECTION,
     },
     {
         type: BENNETT_LIZ,
-        instance: AFTERGLOW
+        instance: AFTERGLOW,
     },
     {
         type: BENNETT_LIZ_REFLECTION,
-        instance: AFTERGLOW_REFLECTION
+        instance: AFTERGLOW_REFLECTION,
     },
     {
         type: LIZ,
-        instance: ASLEEP_REACHING
+        instance: ASLEEP_REACHING,
     },
     {
         type: LIZ_REFLECTION,
-        instance: REACHING_REFLECTION
+        instance: REACHING_REFLECTION,
     },
     {
         type: BENNETT_LIZ,
-        instance: BRUSH_OFF
+        instance: BRUSH_OFF,
     },
     {
         type: BENNETT_LIZ,
-        instance: CELIBATE_FREEZING
+        instance: CELIBATE_FREEZING,
     },
     {
         type: LIZ,
-        instance: LEAVING_CRUMBLED
+        instance: LEAVING_CRUMBLED,
     },
     {
         type: BENNETT_LIZ,
-        instance: AWKWARD_CONSOLATION
+        instance: AWKWARD_CONSOLATION,
     },
     {
         type: LIZ,
-        instance: PETTING_SEATED
+        instance: PETTING_SEATED,
     },
     {
         type: LIZ,
-        instance: PETTING_STANDING
+        instance: PETTING_STANDING,
     },
     {
         type: LIZ,
-        instance: SIFTING_TCHOTCHKES
+        instance: SIFTING_TCHOTCHKES,
     },
     {
         type: LIZ,
-        instance: OPENING_DOOR
+        instance: OPENING_DOOR,
     },
     {
         type: LIZ,
-        instance: DEFENDING
+        instance: DEFENDING,
     },
     {
         type: LIZ,
-        instance: NOT_HUNGRY
+        instance: NOT_HUNGRY,
     },
     {
         type: LIZ,
-        instance: ASLEEP_COUCH
+        instance: ASLEEP_COUCH,
     },
     {
         type: LIZ,
-        instance: PETTING_SEATED_PRESENT
+        instance: PETTING_SEATED_PRESENT,
     },
     {
         type: KHARI_LIZ,
-        instance: JOKING_LAUGHING
+        instance: JOKING_LAUGHING,
     },
     {
         type: KHARI_LIZ,
-        instance: PROTECTIVE_CONCERNED
+        instance: PROTECTIVE_CONCERNED,
     },
     {
         type: KHARI_LIZ,
-        instance: CARESS
+        instance: CARESS,
     },
     {
         type: KHARI_LIZ_REFLECTION,
-        instance: CARESS_REFLECTION
+        instance: CARESS_REFLECTION,
     },
     {
         type: LIZ,
-        instance: EL_TORITO
+        instance: EL_TORITO,
     },
     {
         type: BENNETT_LIZ,
-        instance: PAMPAS
+        instance: PAMPAS,
     },
     {
         type: BENNETT_LIZ,
-        instance: GETTING_DARK
+        instance: GETTING_DARK,
     },
     {
         type: BENNETT_LIZ,
-        instance: CLIFF
+        instance: CLIFF,
     },
     {
         type: BENNETT_LIZ,
-        instance: FINAL_DREAM
+        instance: FINAL_DREAM,
     },
     {
         type: BENNETTS_CHRISTOPHER_LIZ,
-        instance: EPILOGUE
-    }
+        instance: EPILOGUE,
+    },
 ]

@@ -2,7 +2,7 @@ import { getValidYIndex } from './cubeIndices'
 import { getXYPercentages } from './cubeCoordinates'
 import {
     LEFT,
-    RIGHT
+    RIGHT,
 } from '../constants/scene/cubes'
 
 const _getHorizontalPlaneFractionsForDefault = (
@@ -21,12 +21,12 @@ const _getHorizontalPlaneFractionsForDefault = (
     return {
         left: {
             back: getXYPercentages(refXIndex, yIndex, refZIndex),
-            front: getXYPercentages(refXIndex, yIndex + 1, refZIndex)
+            front: getXYPercentages(refXIndex, yIndex + 1, refZIndex),
         },
         right: {
             back: getXYPercentages(refXIndex + 1, yIndex, refZIndex),
-            front: getXYPercentages(refXIndex + 1, yIndex + 1, refZIndex)
-        }
+            front: getXYPercentages(refXIndex + 1, yIndex + 1, refZIndex),
+        },
     }
 }
 
@@ -95,7 +95,7 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
             ),
             front: getXYPercentages(
                 refXIndex + 1, refYIndex + 3, refZIndex, LEFT
-            )
+            ),
         },
         right: {
             back: getXYPercentages(
@@ -103,8 +103,8 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
             ),
             front: getXYPercentages(
                 refXIndex + 3, refYIndex + 2, refZIndex, LEFT
-            )
-        }
+            ),
+        },
     }
 }
 
@@ -150,7 +150,7 @@ const _getHorizontalPlaneFractionsForSlantedRight = (
             ),
             front: getXYPercentages(
                 refXIndex, refYIndex + 2, refZIndex, RIGHT
-            )
+            ),
         },
         right: {
             back: getXYPercentages(
@@ -158,8 +158,8 @@ const _getHorizontalPlaneFractionsForSlantedRight = (
             ),
             front: getXYPercentages(
                 refXIndex + 2, refYIndex + 3, refZIndex, RIGHT
-            )
-        }
+            ),
+        },
     }
 }
 
@@ -169,7 +169,7 @@ export const getHorizontalPlaneFractions = ({
     zIndex,
     xOffset = 0,
     zOffset = 0,
-    slantDirection
+    slantDirection,
 
 }) => {
     /**

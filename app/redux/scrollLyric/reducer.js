@@ -10,7 +10,7 @@ export default (
         case SCROLL_LYRIC_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         default:
             return state

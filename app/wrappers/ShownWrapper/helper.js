@@ -2,7 +2,7 @@ import { EAR_COLUMN_KEYS } from '../../constants/lyrics'
 
 export const getSingleShownEarColumnKey = ({
     isEarShown,
-    earColumnIndex
+    earColumnIndex,
 }) => {
     return isEarShown
         && earColumnIndex >= 0 ?

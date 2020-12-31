@@ -1,11 +1,11 @@
 import {
     BRAD,
     BRAD_BENNETT,
-    BRAD_SASHA
+    BRAD_SASHA,
 } from '../../../../app/constants/scene/actors'
 import {
     GESTURING,
-    SNACKING
+    SNACKING,
 } from '../../../../app/constants/scene/actors/brad'
 import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett'
 import { CHARMED_SCHOOLBUS } from '../../../../app/constants/scene/actors/bradSasha'
@@ -14,22 +14,22 @@ import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 export default [
     {
         type: BRAD_BENNETT,
-        instance: TYING_TETHER
+        instance: TYING_TETHER,
     },
     {
         type: BRAD,
-        instance: GESTURING
+        instance: GESTURING,
     },
     {
         type: BRAD,
-        instance: SNACKING
+        instance: SNACKING,
     },
     {
         type: BRAD,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: BRAD_SASHA,
-        instance: CHARMED_SCHOOLBUS
-    }
+        instance: CHARMED_SCHOOLBUS,
+    },
 ]

@@ -9,7 +9,7 @@ import './style'
 const NavButtonTitle = ({
     bookIndex,
     songIndex,
-    isSelected
+    isSelected,
 }) => {
 
     const title = Number.isFinite(bookIndex) ?
@@ -20,7 +20,7 @@ const NavButtonTitle = ({
         <ButtonTitle
             {...{
                 title,
-                isSelected
+                isSelected,
             }}
         />
     )
@@ -29,7 +29,7 @@ const NavButtonTitle = ({
 NavButtonTitle.propTypes = {
     bookIndex: PropTypes.number,
     songIndex: PropTypes.number,
-    isSelected: PropTypes.bool
+    isSelected: PropTypes.bool,
 }
 
 export default memo(NavButtonTitle)

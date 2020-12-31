@@ -1,35 +1,35 @@
 import {
-    WADE
+    WADE,
 } from '../../../../app/constants/scene/actors'
 import {
     CATHOLIC_GUY,
-    WATCHING
+    WATCHING,
 } from '../../../../app/constants/scene/actors/wade'
 import {
     MINGLING,
     EPILOGUE,
-    PROTESTER
+    PROTESTER,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: WADE,
-        instance: WATCHING
+        instance: WATCHING,
     },
     {
         type: WADE,
-        instance: MINGLING
+        instance: MINGLING,
     },
     {
         type: WADE,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: WADE,
-        instance: CATHOLIC_GUY
+        instance: CATHOLIC_GUY,
     },
     {
         type: WADE,
-        instance: PROTESTER
-    }
+        instance: PROTESTER,
+    },
 ]

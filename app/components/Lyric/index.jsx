@@ -41,7 +41,7 @@ const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
                     timeout: 250,
                     classNames: { enterDone: 'Lyric__visible' },
                     onExit,
-                    onEntered
+                    onEntered,
                 }}
             >
                 <div
@@ -51,10 +51,10 @@ const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
                             didMount && [
                                 'gradientMask__lyricColumn__desktop',
                                 'abF',
-                                'ovH'
+                                'ovH',
                             ],
                             getFinalSideKey()
-                        )
+                        ),
                     }}
                 >
                     <LyricScroll {...{ ref }} />
@@ -70,7 +70,7 @@ const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
 
 Lyric.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    pageSongIndex: PropTypes.number
+    pageSongIndex: PropTypes.number,
 }
 
 export default memo(getDidMountHoc(Lyric))

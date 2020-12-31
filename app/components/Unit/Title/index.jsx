@@ -19,8 +19,8 @@ const UnitSongTitle = ({ didMount, serverClientSongIndex }) => {
                         'fCC',
                         'textShadow__dark',
                         'Rancho'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {songTitle}
@@ -30,7 +30,7 @@ const UnitSongTitle = ({ didMount, serverClientSongIndex }) => {
 
 UnitSongTitle.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    serverClientSongIndex: PropTypes.number.isRequired
+    serverClientSongIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getDidMountHoc(getSongServerClientHoc(UnitSongTitle)))

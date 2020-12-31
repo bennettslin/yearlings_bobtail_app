@@ -3,5 +3,5 @@ export const SLIDER_DEFAULTS = {
     sliderWidth: 0,
     isSliderMoving: false,
     isSliderTouched: false,
-    sliderVerseIndex: -1
+    sliderVerseIndex: -1,
 }

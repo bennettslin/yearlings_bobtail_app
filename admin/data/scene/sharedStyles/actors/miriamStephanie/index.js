@@ -5,6 +5,6 @@ import { BANJO__SHARED } from '../../../../../../app/constants/scene/sharedStyle
 export default {
     [MISCHIEVOUS_BANJO]: [
         BENNETT,
-        BANJO__SHARED
-    ]
+        BANJO__SHARED,
+    ],
 }

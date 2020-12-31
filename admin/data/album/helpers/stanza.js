@@ -3,7 +3,7 @@ import albumLyrics from '../lyrics'
 const _addInitialStanzaMetadata = ({
     songIndex,
     unitVerseIndicesList,
-    song
+    song,
 
 }) => {
     const { lyricUnits } = albumLyrics[songIndex],
@@ -17,8 +17,8 @@ const _addInitialStanzaMetadata = ({
     lyricUnits.forEach(({
         unitMap: {
             formType,
-            subsequent
-        }
+            subsequent,
+        },
     }, unitIndex) => {
 
         if (formType) {
@@ -75,7 +75,7 @@ const _addStanzaEndTimes = ({
     songDuration,
     stanzaVerseIndicesList,
     verseStartTimes,
-    song
+    song,
 
 }) => {
     const endTimes = []
@@ -109,7 +109,7 @@ export const addStanzaMetadata = ({
     songDuration,
     unitVerseIndicesList,
     verseStartTimes,
-    song
+    song,
 
 }) => {
     /**
@@ -120,7 +120,7 @@ export const addStanzaMetadata = ({
         _addInitialStanzaMetadata({
             songIndex,
             unitVerseIndicesList,
-            song
+            song,
         })
 
     _addStanzaEndTimes({
@@ -128,6 +128,6 @@ export const addStanzaMetadata = ({
         songDuration,
         stanzaVerseIndicesList,
         verseStartTimes,
-        song
+        song,
     })
 }

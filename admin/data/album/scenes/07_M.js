@@ -8,7 +8,7 @@ import {
     FIXTURE,
     FLAT,
     FURNITURE,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     BENNETT_COUCH_KEY,
@@ -16,14 +16,14 @@ import {
     CLUB_FRONT_KEY,
     BASEMENT_KEY,
     CINEMA_KEY,
-    CINEMA_STREET_KEY
+    CINEMA_STREET_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_NOON,
     TIME_AFTERNOON,
     TIME_EVENING,
     TIME_NIGHT,
-    SEASON_SUMMER
+    SEASON_SUMMER,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
@@ -34,7 +34,7 @@ import {
     HOWIE,
     TOMER,
     MIRIAM,
-    STEPHANIE
+    STEPHANIE,
 } from '../../../../app/constants/scene/actors'
 import { SQUATTING } from '../../../../app/constants/scene/actors/ana'
 import {
@@ -44,32 +44,32 @@ import {
     DISTRACTED,
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
-    MERRILY_DERANGED
+    MERRILY_DERANGED,
 } from '../../../../app/constants/scene/actors/bennett'
 import {
     USHER_WAITING,
-    USHER_LOOKING
+    USHER_LOOKING,
 } from '../../../../app/constants/scene/actors/howie'
 import {
     INFANT_CURIOUS,
-    INFANT_NURSING
+    INFANT_NURSING,
 } from '../../../../app/constants/scene/actors/miriam'
 import { BENNETT_KEYBOARD } from '../../../../app/constants/scene/actors/stephanie'
 import { SHANE_BUYING } from '../../../../app/constants/scene/actors/tomer'
 import {
     FLIRTING,
-    EATING
+    EATING,
 } from '../../../../app/constants/scene/actors/songs'
 import {
     OAKLAND_FRONT__HIGH,
-    OAKLAND_SIDE__LEVEL
+    OAKLAND_SIDE__LEVEL,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__CINEMA,
     BUBBLE_MEDIUM__CINEMA,
     BUBBLE_LARGE__CINEMA,
     CINEMA_THOUGHT_RECORDING,
-    CINEMA_THOUGHT_BUYING
+    CINEMA_THOUGHT_BUYING,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     TELEVISION_ALBUM,
@@ -81,7 +81,7 @@ import {
     MARA_GLADIATOR_POSTER,
     MARQUEE_FRAME__MARA_GLADIATOR,
     GLADIATOR_POSTER,
-    MARQUEE_FRAME__GLADIATOR
+    MARQUEE_FRAME__GLADIATOR,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     MONITOR_FRONT__LEFT,
@@ -90,12 +90,12 @@ import {
     ROSEBUSH_DOUBLE_BASEMENT,
     ROSEBUSH_SINGLE_BASEMENT,
     WALL_SPEAKER_FRONT__LEFT,
-    WALL_SPEAKER_FRONT__RIGHT
+    WALL_SPEAKER_FRONT__RIGHT,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BASEMENT_DOOR_OPEN,
     CINEMA_DOORS,
-    DEFAULT_FENCE_BASEMENT
+    DEFAULT_FENCE_BASEMENT,
 } from '../../../../app/constants/scene/things/doors'
 import {
     BASEMENT_BEER_BENNETT,
@@ -109,13 +109,13 @@ import {
     DRUMS_STACKED__BASEMENT,
     ELECTRIC_GUITAR,
     GUITAR_CASE_UPRIGHT,
-    KEYBOARD
+    KEYBOARD,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
-    COMMERCIAL_NEAR_RIGHT
+    COMMERCIAL_NEAR_RIGHT,
 } from '../../../../app/constants/scene/things/flats'
 import { BENNETT_PILLOW__COUCH } from '../../../../app/constants/scene/things/furnitures'
 import {
@@ -125,7 +125,7 @@ import {
     MILK_CRATE__MARA,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
-    WIDE_COUCH_BENNETT
+    WIDE_COUCH_BENNETT,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -136,25 +136,25 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'looking at Leonard Cohen poster',
-                    instance: PONDERING
-                }
+                    instance: PONDERING,
+                },
             },
             [CARDBOARD]: {
-                [LEONARD_COHEN_POSTER]: true
+                [LEONARD_COHEN_POSTER]: true,
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
-                [ELECTRIC_GUITAR]: true
+                [ELECTRIC_GUITAR]: true,
             },
             [PANEL]: {
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
-                [WIDE_ARMREST_BENNETT__RIGHT]: true
-            }
+                [WIDE_ARMREST_BENNETT__RIGHT]: true,
+            },
         },
         cubes: BENNETT_COUCH_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_SUMMER }
+        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
     },
     {
         unitIndex: 2,
@@ -163,29 +163,29 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'sitting on couch, figuring out Rubiks Cube',
-                    instance: RUBIKS_CUBE
-                }
+                    instance: RUBIKS_CUBE,
+                },
             },
             [CARDBOARD]: {
                 [TELEVISION_ALBUM]: true,
-                [PROGRESS_CHART_EARLY]: true
+                [PROGRESS_CHART_EARLY]: true,
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
-                [ELECTRIC_GUITAR]: true
+                [ELECTRIC_GUITAR]: true,
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW__COUCH]: true
+                [BENNETT_PILLOW__COUCH]: true,
             },
             [PANEL]: {
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
-                [WIDE_ARMREST_BENNETT__RIGHT]: true
-            }
+                [WIDE_ARMREST_BENNETT__RIGHT]: true,
+            },
         },
         cubes: BENNETT_COUCH_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_SUMMER }
+        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
     },
     {
         unitIndex: 3,
@@ -194,32 +194,32 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'sitting on couch, reading a book',
-                    instance: COUCH_READING
+                    instance: COUCH_READING,
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         description: 'sitting on floor, back turned, playing keyboard',
-                        instance: BENNETT_KEYBOARD
-                    }
-                }
+                        instance: BENNETT_KEYBOARD,
+                    },
+                },
             },
             [CARDBOARD]: {
-                [PROGRESS_CHART_LATE]: true
+                [PROGRESS_CHART_LATE]: true,
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [ELECTRIC_GUITAR]: true,
-                [KEYBOARD]: true
+                [KEYBOARD]: true,
             },
             [PANEL]: {
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
-                [WIDE_ARMREST_BENNETT__RIGHT]: true
-            }
+                [WIDE_ARMREST_BENNETT__RIGHT]: true,
+            },
         },
         cubes: BENNETT_COUCH_KEYBOARD_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_SUMMER }
+        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
     },
     {
         unitIndex: 4,
@@ -228,40 +228,40 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'chatting with hipster, paying attention to Mara',
-                    instance: DISTRACTED
+                    instance: DISTRACTED,
                 },
                 [JACOB]: {
                     description: 'wiping sweat, chatting with Mara, laughing',
-                    instance: FLIRTING
+                    instance: FLIRTING,
                 },
                 [MARA]: {
                     description: 'flirting with Jacob',
-                    instance: FLIRTING
+                    instance: FLIRTING,
                 },
                 [ANA]: {
                     description: 'squatting, back turned, putting bass back in case',
-                    instance: SQUATTING
+                    instance: SQUATTING,
                 },
                 [TOMER]: {
                     shane: {
                         description: 'chatting with Bennett, gushing about music',
-                        instance: SHANE_BUYING
-                    }
-                }
+                        instance: SHANE_BUYING,
+                    },
+                },
             },
             [CUTOUT]: {
                 [MONITOR_FRONT__LEFT]: true,
                 [MONITOR_FRONT__RIGHT]: true,
                 [WALL_SPEAKER_FRONT__LEFT]: true,
-                [WALL_SPEAKER_FRONT__RIGHT]: true
+                [WALL_SPEAKER_FRONT__RIGHT]: true,
             },
             [FIXTURE]: {
                 [CASH_BOX]: true,
-                [DRUMKIT]: true
-            }
+                [DRUMKIT]: true,
+            },
         },
         cubes: CLUB_FRONT_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 6,
@@ -270,28 +270,28 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'sitting, silently eating burger, uncomfortable',
-                    instance: EATING
+                    instance: EATING,
                 },
                 [JACOB_MARA]: {
                     description: 'sitting, eating burger, holding Mara\'s hand',
-                    instance: EATING
+                    instance: EATING,
                 },
                 [ANA]: {
                     description: 'sitting, eating fries, laughing',
-                    instance: EATING
-                }
+                    instance: EATING,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
                 [PEACH_TREE]: true,
                 [ROSEBUSH_DOUBLE_BASEMENT]: true,
-                [ROSEBUSH_SINGLE_BASEMENT]: true
+                [ROSEBUSH_SINGLE_BASEMENT]: true,
             },
             [DOOR]: {
                 [DEFAULT_FENCE_BASEMENT]: true,
-                [BASEMENT_DOOR_OPEN]: true
+                [BASEMENT_DOOR_OPEN]: true,
             },
             [FIXTURE]: {
                 [BASS_CASE_UPRIGHT]: true,
@@ -299,17 +299,17 @@ export default [
                 [DRUMS_STACKED__BASEMENT]: true,
                 [BASEMENT_BEER_CASE]: true,
                 [BASEMENT_BEER_MARA]: true,
-                [BASEMENT_BEER_BENNETT]: true
+                [BASEMENT_BEER_BENNETT]: true,
             },
             [PANEL]: {
                 [MILK_CRATE__ANA]: true,
                 [MILK_CRATE__BENNETT]: true,
                 [MILK_CRATE__JACOB]: true,
-                [MILK_CRATE__MARA]: true
-            }
+                [MILK_CRATE__MARA]: true,
+            },
         },
         cubes: BASEMENT_KEY,
-        sky: { time: TIME_NOON, season: SEASON_SUMMER }
+        sky: { time: TIME_NOON, season: SEASON_SUMMER },
     },
     {
         unitIndex: 8,
@@ -318,27 +318,27 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, walking, sulking with head down',
-                    instance: HOPELESSLY_CRUSHED
+                    instance: HOPELESSLY_CRUSHED,
                 },
                 [MIRIAM]: {
                     maskedWoman: {
                         description: 'side, holding baby, looking back at Bennett',
-                        instance: INFANT_CURIOUS
-                    }
-                }
+                        instance: INFANT_CURIOUS,
+                    },
+                },
             },
             [CARDBOARD]: {
                 [MARA_MEMENTO_POSTER]: true,
                 [MARQUEE_FRAME__MARA_MEMENTO]: true,
                 [MARA_GLADIATOR_POSTER]: true,
-                [MARQUEE_FRAME__MARA_GLADIATOR]: true
+                [MARQUEE_FRAME__MARA_GLADIATOR]: true,
             },
             [DOOR]: {
-                [CINEMA_DOORS]: true
-            }
+                [CINEMA_DOORS]: true,
+            },
         },
         cubes: CINEMA_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER }
+        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER },
     },
     {
         unitIndex: 10,
@@ -347,33 +347,33 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, looking back at baby',
-                    instance: WONDERING_BABY
+                    instance: WONDERING_BABY,
                 },
                 [MIRIAM]: {
                     maskedWoman: {
                         description: 'side, walking away',
-                        instance: INFANT_NURSING
-                    }
+                        instance: INFANT_NURSING,
+                    },
                 },
                 [HOWIE]: {
                     maskedUsher: {
                         description: 'checking watch',
-                        instance: USHER_WAITING
-                    }
-                }
+                        instance: USHER_WAITING,
+                    },
+                },
             },
             [CARDBOARD]: {
                 [MARA_MEMENTO_POSTER]: true,
                 [MARQUEE_FRAME__MARA_MEMENTO]: true,
                 [MARA_GLADIATOR_POSTER]: true,
-                [MARQUEE_FRAME__MARA_GLADIATOR]: true
+                [MARQUEE_FRAME__MARA_GLADIATOR]: true,
             },
             [DOOR]: {
-                [CINEMA_DOORS]: true
-            }
+                [CINEMA_DOORS]: true,
+            },
         },
         cubes: CINEMA_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER }
+        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER },
     },
     {
         unitIndex: 12,
@@ -382,37 +382,37 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, inspired by sudden thought',
-                    instance: MERRILY_DERANGED
+                    instance: MERRILY_DERANGED,
                 },
                 [HOWIE]: {
                     maskedUsher: {
                         description: 'looking at Bennett',
-                        instance: USHER_LOOKING
-                    }
-                }
+                        instance: USHER_LOOKING,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_FRONT__HIGH]: true
+                [OAKLAND_FRONT__HIGH]: true,
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__CINEMA]: true,
                 [BUBBLE_MEDIUM__CINEMA]: true,
                 [BUBBLE_LARGE__CINEMA]: true,
                 [CINEMA_THOUGHT_BUYING]: true,
-                [CINEMA_THOUGHT_RECORDING]: true
+                [CINEMA_THOUGHT_RECORDING]: true,
             },
             [CARDBOARD]: {
                 [GLADIATOR_POSTER]: true,
-                [MARQUEE_FRAME__GLADIATOR]: true
+                [MARQUEE_FRAME__GLADIATOR]: true,
             },
             [FLAT]: {
                 [COMMERCIAL_CENTRE]: true,
                 [COMMERCIAL_FAR_RIGHT]: true,
                 [COMMERCIAL_MIDDLE_RIGHT]: true,
-                [COMMERCIAL_NEAR_RIGHT]: true
-            }
+                [COMMERCIAL_NEAR_RIGHT]: true,
+            },
         },
         cubes: CINEMA_STREET_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER }
-    }
+        sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER },
+    },
 ]

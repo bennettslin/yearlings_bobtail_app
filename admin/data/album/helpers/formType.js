@@ -16,7 +16,7 @@ export const addFormTypeIndices = (songIndex, song) => {
             const { unitMap } = unit,
                 {
                     formType,
-                    subsequent
+                    subsequent,
                 } = unitMap
 
             // Unless it's a dot card, it has a stanza type.

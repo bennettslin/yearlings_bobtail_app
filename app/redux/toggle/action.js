@@ -2,27 +2,27 @@
 import { setBoolInStorage } from '../../helpers/storage'
 import {
     TOGGLE_STORE,
-    IS_CAROUSEL_EXPANDED
+    IS_CAROUSEL_EXPANDED,
 } from '../../constants/store'
 
 export const toggleIsAboutShown = () => ({
     type: TOGGLE_STORE,
-    payload: { toggledIsAboutShown: true }
+    payload: { toggledIsAboutShown: true },
 })
 
 export const updateIsAboutShown = (isAboutShown = false) => ({
     type: TOGGLE_STORE,
-    payload: { isAboutShown }
+    payload: { isAboutShown },
 })
 
 export const toggleIsPitchShown = () => ({
     type: TOGGLE_STORE,
-    payload: { toggledIsPitchShown: true }
+    payload: { toggledIsPitchShown: true },
 })
 
 export const updateIsPitchShown = (isPitchShown = false) => ({
     type: TOGGLE_STORE,
-    payload: { isPitchShown }
+    payload: { isPitchShown },
 })
 
 export const updateIsCarouselExpanded = (isCarouselExpanded = false) => {
@@ -30,31 +30,31 @@ export const updateIsCarouselExpanded = (isCarouselExpanded = false) => {
 
     return ({
         type: TOGGLE_STORE,
-        payload: { isCarouselExpanded }
+        payload: { isCarouselExpanded },
     })
 }
 
 export const updateIsAutoScroll = (isAutoScroll = false) => ({
     type: TOGGLE_STORE,
-    payload: { isAutoScroll }
+    payload: { isAutoScroll },
 })
 
 export const updateIsDotsSlideShown = (isDotsSlideShown = false) => ({
     type: TOGGLE_STORE,
-    payload: { isDotsSlideShown }
+    payload: { isDotsSlideShown },
 })
 
 export const updateIsLyricExpanded = (isLyricExpanded = false) => ({
     type: TOGGLE_STORE,
-    payload: { isLyricExpanded }
+    payload: { isLyricExpanded },
 })
 
 export const updateIsNavExpanded = (isNavExpanded = false) => ({
     type: TOGGLE_STORE,
-    payload: { isNavExpanded }
+    payload: { isNavExpanded },
 })
 
 export const updateIsScoreShown = (isScoreShown = false) => ({
     type: TOGGLE_STORE,
-    payload: { isScoreShown }
+    payload: { isScoreShown },
 })

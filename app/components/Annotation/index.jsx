@@ -16,7 +16,7 @@ const Annotation = ({
     isAccessed,
     isSelected,
     serverClientSongIndex,
-    annotationIndex
+    annotationIndex,
 
 }) => {
     const stopPropagation = useRef()
@@ -37,7 +37,7 @@ const Annotation = ({
                     className: cx(
                         'Annotation'
                     ),
-                    onClick
+                    onClick,
                 }}
             >
                 <div
@@ -50,8 +50,8 @@ const Annotation = ({
                                 isSelected && 'bgColour__annotation__selected',
                                 'boxShadow__annotation',
                                 'abF'
-                            )
-                        }
+                            ),
+                        },
                     }}
                 />
 
@@ -60,7 +60,7 @@ const Annotation = ({
                         inCarousel,
                         isAccessed,
                         isSelected,
-                        annotationIndex
+                        annotationIndex,
                     }}
                 />
 
@@ -74,7 +74,7 @@ const Annotation = ({
                             inCarousel,
                             isSelected,
                             annotationIndex,
-                            cardIndex
+                            cardIndex,
                         }}
                     />
                 ))}
@@ -91,7 +91,7 @@ Annotation.propTypes = {
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     serverClientSongIndex: PropTypes.number.isRequired,
-    annotationIndex: PropTypes.number.isRequired
+    annotationIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getDidMountHoc(getSongServerClientHoc(Annotation)))

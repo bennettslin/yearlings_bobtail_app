@@ -27,9 +27,9 @@ const LyricOverview = forwardRef(({ didMount }, ref) => {
                         'fCC'
                     ),
                     style: {
-                        height: lyricOverviewHeightStyle
-                    }
-                }
+                        height: lyricOverviewHeightStyle,
+                    },
+                },
             }}
         >
             {getIsServerSide() ? (
@@ -43,7 +43,7 @@ const LyricOverview = forwardRef(({ didMount }, ref) => {
 })
 
 LyricOverview.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default memo(getDidMountHoc(LyricOverview))

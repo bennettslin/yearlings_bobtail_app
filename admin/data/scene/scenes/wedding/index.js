@@ -5,7 +5,7 @@ export default {
     [BENNETT_LIZ]: {
         [GETTING_DARK]: {
             yIndex: 5,
-            xPosition: 7
-        }
-    }
+            xPosition: 7,
+        },
+    },
 }

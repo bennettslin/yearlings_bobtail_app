@@ -1,3 +1,3 @@
 export const PLAYERS_DEFAULTS = {
-    playersBit: 0
+    playersBit: 0,
 }

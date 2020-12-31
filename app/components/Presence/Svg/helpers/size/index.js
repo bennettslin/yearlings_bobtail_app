@@ -6,13 +6,13 @@ import {
     BUBBLE_DEFAULT_SCALE_FACTOR,
     DOOR_DEFAULT_SCALE_FACTOR,
     FIXTURE_DEFAULT_SCALE_FACTOR,
-    FURNITURE_DEFAULT_SCALE_FACTOR
+    FURNITURE_DEFAULT_SCALE_FACTOR,
 } from '../../../../../constants/scene'
 import {
     BUBBLE,
     DOOR,
     FIXTURE,
-    FURNITURE
+    FURNITURE,
 } from '../../../../../constants/scene/things'
 
 // Illustrator artboards are 1623 by 1082.
@@ -55,14 +55,14 @@ export const getSizeForPresence = ({
     viewBoxHeight,
     yIndex,
     scaleFactor,
-    trimBottom = 0
+    trimBottom = 0,
 
 }) => {
     const
         validYIndex = getValidYIndex(yIndex),
         presenceScaleFactor = getPresenceScaleFactor({
             presenceType,
-            scaleFactor
+            scaleFactor,
         }),
         finalScaleFactor = presenceScaleFactor * Y_INDEX_SCALE_FACTORS[validYIndex],
         adjustedWidth = viewBoxWidth * finalScaleFactor / ARTBOARD_WIDTH,
@@ -75,7 +75,7 @@ export const getSizeForPresence = ({
 
     return {
         adjustedWidth,
-        adjustedHeight
+        adjustedHeight,
     }
 }
 
@@ -90,7 +90,7 @@ export const getViewBoxSize = (svgString) => {
     return Number.isFinite(viewBoxWidth) && Number.isFinite(viewBoxHeight) ? (
         {
             viewBoxWidth,
-            viewBoxHeight
+            viewBoxHeight,
         }
     ) : null
 }

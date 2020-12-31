@@ -10,19 +10,19 @@ import { getCssZIndexForCube } from './helpers/zIndices'
 import {
     FACES,
     CEILING,
-    FLOOR
+    FLOOR,
 } from '../../../constants/scene/cubes'
 import {
     getMapCubeCeilingHsla,
     getMapCubeCeilingZIndex,
     getMapCubeFloorHsla,
     getMapCubeFloorZIndex,
-    mapCubeSlantDirection
+    mapCubeSlantDirection,
 } from '../../../redux/cube/selector'
 
 const Cube = ({
     yIndex,
-    xIndex
+    xIndex,
 
 }) => {
     const
@@ -45,8 +45,8 @@ const Cube = ({
                 zIndex: getCssZIndexForCube({
                     slantDirection,
                     yIndex,
-                    xIndex
-                })
+                    xIndex,
+                }),
             }}
         >
             {FACES.map(face => (
@@ -59,7 +59,7 @@ const Cube = ({
                         xIndex,
                         hslaKey: floorHsla,
                         zIndex: floorZIndex,
-                        face
+                        face,
                     }}
                 />
             ))}
@@ -73,7 +73,7 @@ const Cube = ({
                         xIndex,
                         hslaKey: ceilingHsla,
                         zIndex: ceilingZIndex,
-                        face
+                        face,
                     }}
                 />
             ))}
@@ -83,7 +83,7 @@ const Cube = ({
 
 Cube.propTypes = {
     yIndex: PropTypes.number.isRequired,
-    xIndex: PropTypes.number.isRequired
+    xIndex: PropTypes.number.isRequired,
 }
 
 export default memo(Cube)

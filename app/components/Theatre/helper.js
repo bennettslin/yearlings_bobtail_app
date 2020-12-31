@@ -15,7 +15,7 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
     reversePosition = false,
 
     // Array count should not exceed this value.
-    maxCount = Number.MAX_SAFE_INTEGER
+    maxCount = Number.MAX_SAFE_INTEGER,
 }) => {
     /**
      * Get an array of lengths where each subsequent length is a multiple of the
@@ -70,7 +70,7 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
                 reversePosition ?
                     // If reverse position, begin from -1 and decrement.
                     arrayOfLengths.length * -1 - 1 :
-                    arrayOfLengths.length
+                    arrayOfLengths.length,
         })
     }
 

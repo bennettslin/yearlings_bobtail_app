@@ -2,7 +2,7 @@ import { createSelector } from 'reselect'
 import {
     getCubesKeyForScene,
     getSkyTimeForScene,
-    getSeasonForScene
+    getSeasonForScene,
 } from '../../api/album/scenes'
 import { getIsDarkIndoorScene } from '../../helpers/scene'
 import { mapIsSongSelectComplete } from '../entrance/selector'

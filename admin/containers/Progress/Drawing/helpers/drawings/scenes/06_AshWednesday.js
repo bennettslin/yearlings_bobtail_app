@@ -3,7 +3,7 @@ import {
     BENNETT,
     CATHERINE,
     AMY,
-    WADE
+    WADE,
 } from '../../../../../../../app/constants/scene/actors'
 import { SMOKER } from '../../../../../../../app/constants/scene/actors/amy'
 import {
@@ -11,12 +11,12 @@ import {
     SOLICITING_OPINION,
     CATHOLIC_PENSIVE,
     CATHOLIC_IDEA,
-    PIOUS
+    PIOUS,
 } from '../../../../../../../app/constants/scene/actors/bennett'
 import {
     WEEPING,
     QUIPPING,
-    PUZZLED
+    PUZZLED,
 } from '../../../../../../../app/constants/scene/actors/catherine'
 import { CATHOLIC_GUY } from '../../../../../../../app/constants/scene/actors/wade'
 
@@ -25,64 +25,64 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: BREAKUP_DEJECTED
+                    instance: BREAKUP_DEJECTED,
                 },
                 [CATHERINE]: {
-                    instance: WEEPING
-                }
-            }
-        }
+                    instance: WEEPING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: SOLICITING_OPINION
+                    instance: SOLICITING_OPINION,
                 },
                 [CATHERINE]: {
-                    instance: QUIPPING
-                }
-            }
-        }
+                    instance: QUIPPING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: CATHOLIC_PENSIVE
-                }
-            }
-        }
+                    instance: CATHOLIC_PENSIVE,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: CATHOLIC_IDEA
+                    instance: CATHOLIC_IDEA,
                 },
                 [WADE]: {
                     catholic: {
-                        instance: CATHOLIC_GUY
-                    }
+                        instance: CATHOLIC_GUY,
+                    },
                 },
                 [AMY]: {
                     smoker: {
-                        instance: SMOKER
-                    }
-                }
-            }
-        }
+                        instance: SMOKER,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: PIOUS
+                    instance: PIOUS,
                 },
                 [CATHERINE]: {
-                    instance: PUZZLED
-                }
-            }
-        }
-    }
+                    instance: PUZZLED,
+                },
+            },
+        },
+    },
 ]

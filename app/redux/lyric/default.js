@@ -5,13 +5,13 @@ export const getLyricDefaults = songIndex => {
     const {
         initialSongIndex,
         initialVerseIndex,
-        initialAnnotationIndex
+        initialAnnotationIndex,
     } = getInitialIndicesFromRoutingOrStorage(songIndex)
 
     return {
         lyricSongIndex: initialSongIndex,
         lyricVerseIndex: initialVerseIndex,
         lyricAnnotationIndex: initialAnnotationIndex,
-        isLyricLogue: getSongIsLogue(initialSongIndex)
+        isLyricLogue: getSongIsLogue(initialSongIndex),
     }
 }

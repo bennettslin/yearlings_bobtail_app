@@ -12,7 +12,7 @@ import {
     getPresenceFromStorage,
     getPresenceFromQueryStrings,
     setPresenceInStorage,
-    setPresenceInQueryStrings
+    setPresenceInQueryStrings,
 } from '../../utils/storage'
 import { logSvgCount } from '../../utils/log'
 import { getPreviewerSvgMapForThing } from '../../utils/svg'
@@ -34,7 +34,7 @@ class LegacyPreviewer extends PureComponent {
             viewBoxWidth: 0,
             viewBoxHeight: 0,
             kilobytes: 0,
-            heightAspectRatio: false
+            heightAspectRatio: false,
         }
     }
 
@@ -60,7 +60,7 @@ class LegacyPreviewer extends PureComponent {
 
         this.setState({
             presenceType,
-            presenceKey
+            presenceKey,
         })
         setPresenceInStorage({ presenceType, presenceKey })
         setPresenceInQueryStrings({ presenceType, presenceKey })
@@ -68,31 +68,31 @@ class LegacyPreviewer extends PureComponent {
 
     setHeightAspectRatio = ({
         viewBoxWidth = this.state.viewBoxWidth,
-        viewBoxHeight = this.state.viewBoxHeight
+        viewBoxHeight = this.state.viewBoxHeight,
     }) => {
         this.setState({
             heightAspectRatio: getHeightAspectRatio({
                 viewBoxWidth,
-                viewBoxHeight
-            })
+                viewBoxHeight,
+            }),
         })
     }
 
     handleProcessSvg = ({ svgString, kilobytes }) => {
         const {
             viewBoxWidth,
-            viewBoxHeight
+            viewBoxHeight,
         } = getViewBoxSize(svgString)
 
         this.setHeightAspectRatio({
             viewBoxWidth,
-            viewBoxHeight
+            viewBoxHeight,
         })
 
         this.setState({
             viewBoxWidth,
             viewBoxHeight,
-            kilobytes
+            kilobytes,
         })
     }
 
@@ -103,7 +103,7 @@ class LegacyPreviewer extends PureComponent {
             e,
             presenceType,
             presenceKey,
-            selectPresence: this.selectPresence
+            selectPresence: this.selectPresence,
         })
     }
 
@@ -114,7 +114,7 @@ class LegacyPreviewer extends PureComponent {
             {
                 presenceType,
                 presenceKey,
-                kilobytes
+                kilobytes,
             } = this.state,
             { heightAspectRatio } = this.state
 
@@ -128,7 +128,7 @@ class LegacyPreviewer extends PureComponent {
                         'PtSansNarrow'
                     ),
                     tabIndex: -1,
-                    onKeyDown: this.handleKeyDown
+                    onKeyDown: this.handleKeyDown,
                 }}
             >
                 <PreviewerDashboard
@@ -137,7 +137,7 @@ class LegacyPreviewer extends PureComponent {
                         presenceType,
                         presenceKey,
                         kilobytes,
-                        selectPresence: this.selectPresence
+                        selectPresence: this.selectPresence,
                     }}
                 />
                 <div
@@ -145,14 +145,14 @@ class LegacyPreviewer extends PureComponent {
                         className: cx(
                             'Previewer__main',
                             heightAspectRatio && 'Previewer__mainFullHeight'
-                        )
+                        ),
                     }}
                 >
                     <PreviewerSvg
                         {...{
                             presenceType,
                             presenceKey,
-                            handleProcessSvg: this.handleProcessSvg
+                            handleProcessSvg: this.handleProcessSvg,
                         }}
                     />
                 </div>

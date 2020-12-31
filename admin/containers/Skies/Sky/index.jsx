@@ -5,7 +5,7 @@ import { TIME_STAGE } from '../../../../app/constants/scene/sky'
 
 const AdminSky = ({
     sceneSkyTime = TIME_STAGE,
-    sceneSeason
+    sceneSeason,
 
 }) => (
     <div {...{ className: 'AdminSky' }}>
@@ -17,7 +17,7 @@ const AdminSky = ({
                     'Sky__filter',
                     'abF',
                     sceneSkyTime
-                )
+                ),
             }}
         />
         <div
@@ -28,7 +28,7 @@ const AdminSky = ({
                     'Sky__filter',
                     'abF',
                     sceneSkyTime
-                )
+                ),
             }}
         />
         <div
@@ -39,7 +39,7 @@ const AdminSky = ({
                     'Sky__filter',
                     'abF',
                     sceneSeason
-                )
+                ),
             }}
         />
         <div
@@ -50,7 +50,7 @@ const AdminSky = ({
                     'Sky__filter',
                     'abF',
                     sceneSeason
-                )
+                ),
             }}
         />
         <div
@@ -59,7 +59,7 @@ const AdminSky = ({
                     'AdminSky__text',
                     'PtSansNarrow',
                     'textShadow__light'
-                )
+                ),
             }}
         >
             <div>{`${sceneSkyTime} | ${sceneSeason}`}</div>
@@ -69,7 +69,7 @@ const AdminSky = ({
 
 AdminSky.propTypes = {
     sceneSkyTime: PropTypes.string,
-    sceneSeason: PropTypes.string.isRequired
+    sceneSeason: PropTypes.string.isRequired,
 }
 
 export default AdminSky

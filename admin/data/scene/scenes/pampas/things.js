@@ -6,7 +6,7 @@ export default {
         [PAMPAS_FAR]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.6
-        }
-    }
+            scaleFactor: 0.6,
+        },
+    },
 }

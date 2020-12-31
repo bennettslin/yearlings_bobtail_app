@@ -10,7 +10,7 @@ import {
     FIXTURE,
     FLAT,
     FURNITURE,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     WALGREENS_KEY,
@@ -18,21 +18,21 @@ import {
     ATTIC_KEY,
     ROYCE_HALL_KEY,
     CEMETERY_KEY,
-    STATION_WAGON_KEY
+    STATION_WAGON_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_NIGHT,
     TIME_TWILIGHT,
     TIME_DAWN,
     SEASON_SPRING,
-    SEASON_THOUGHT
+    SEASON_THOUGHT,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     ANA,
     ANA_HOWIE,
     HOWIE,
-    TOMER
+    TOMER,
 } from '../../../../app/constants/scene/actors'
 import {
     ABBEY_ROAD,
@@ -40,15 +40,15 @@ import {
     STEAM_TUNNEL,
     CEMETERY,
     STATION_WAGON,
-    ATTIC
+    ATTIC,
 } from '../../../../app/constants/scene/actors/songs'
 import {
     LOS_ANGELES_BACKDROP,
-    PHARMACY_CEL
+    PHARMACY_CEL,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     CONSTELLATION_TARPIT,
-    CONSTELLATION_SIBLING
+    CONSTELLATION_SIBLING,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     UCLA_TREE__LEFT,
@@ -59,18 +59,18 @@ import {
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
-    TELEVISION
+    TELEVISION,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     PUSH_BROOM__TUNNEL,
-    EVIAN_BOTTLES
+    EVIAN_BOTTLES,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     ROYCE_HALL,
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT,
     DRIVING_HOUSE__SINGLE,
-    DISTANT_BUILDINGS
+    DISTANT_BUILDINGS,
 } from '../../../../app/constants/scene/things/flats'
 import {
     SATURN_EXTERIOR,
@@ -79,7 +79,7 @@ import {
     SATURN_SEAT_DOWN,
     ATTIC_COUCH,
     ATTIC_ARMREST__LEFT,
-    ATTIC_ARMREST__RIGHT
+    ATTIC_ARMREST__RIGHT,
 } from '../../../../app/constants/scene/things/panels'
 import { ATTIC_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 
@@ -91,35 +91,35 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, walking',
-                    instance: ABBEY_ROAD
+                    instance: ABBEY_ROAD,
                 },
                 [ANA]: {
                     description: 'side, walking',
-                    instance: ABBEY_ROAD
+                    instance: ABBEY_ROAD,
                 },
                 [HOWIE]: {
                     description: 'side, walking',
-                    instance: ABBEY_ROAD
+                    instance: ABBEY_ROAD,
                 },
                 [TOMER]: {
                     description: 'side, walking',
-                    instance: ABBEY_ROAD
-                }
+                    instance: ABBEY_ROAD,
+                },
             },
             [BACKDROP]: {
-                [LOS_ANGELES_BACKDROP]: true
+                [LOS_ANGELES_BACKDROP]: true,
             },
             [CUTOUT]: {
                 [UCLA_TREE__LEFT]: true,
-                [UCLA_TREE__RIGHT]: true
+                [UCLA_TREE__RIGHT]: true,
             },
             [FLAT]: {
                 [DISTANT_BUILDINGS]: true,
-                [ROYCE_HALL]: true
-            }
+                [ROYCE_HALL]: true,
+            },
         },
         cubes: ROYCE_HALL_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SPRING }
+        sky: { time: TIME_NIGHT, season: SEASON_SPRING },
     },
     {
         unitIndex: 3,
@@ -128,30 +128,30 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, holding body and gesturing its smallness',
-                    instance: WALGREENS
+                    instance: WALGREENS,
                 },
                 [ANA]: {
                     description: 'side angle, reading bottle intently',
-                    instance: WALGREENS
+                    instance: WALGREENS,
                 },
                 [HOWIE]: {
                     description: 'side angle, holding large bottle',
-                    instance: WALGREENS
+                    instance: WALGREENS,
                 },
                 [TOMER]: {
                     description: 'side angle, feigning superiority',
-                    instance: WALGREENS
-                }
+                    instance: WALGREENS,
+                },
             },
             [BACKDROP]: {
-                [PHARMACY_CEL]: true
+                [PHARMACY_CEL]: true,
             },
             [CUTOUT]: {
-                [PHARMACY_AISLE]: true
-            }
+                [PHARMACY_AISLE]: true,
+            },
         },
         cubes: WALGREENS_KEY,
-        sky: { season: SEASON_THOUGHT }
+        sky: { season: SEASON_THOUGHT },
     },
     {
         unitIndex: 6,
@@ -160,30 +160,30 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, blathering',
-                    instance: STEAM_TUNNEL
+                    instance: STEAM_TUNNEL,
                 },
                 [ANA]: {
                     description: 'side angle, play fighting',
-                    instance: STEAM_TUNNEL
+                    instance: STEAM_TUNNEL,
                 },
                 [HOWIE]: {
                     description: 'side angle, bored by conversation',
-                    instance: STEAM_TUNNEL
+                    instance: STEAM_TUNNEL,
                 },
                 [TOMER]: {
                     description: 'side angle, play fighting',
-                    instance: STEAM_TUNNEL
-                }
+                    instance: STEAM_TUNNEL,
+                },
             },
             [CUTOUT]: {
-                [STEAM_PIPES]: true
+                [STEAM_PIPES]: true,
             },
             [FIXTURE]: {
-                [PUSH_BROOM__TUNNEL]: true
-            }
+                [PUSH_BROOM__TUNNEL]: true,
+            },
         },
         cubes: STEAM_TUNNEL_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SPRING }
+        sky: { time: TIME_NIGHT, season: SEASON_SPRING },
     },
     {
         unitIndex: 9,
@@ -192,30 +192,30 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'front, looking upwards, inspired',
-                    instance: CEMETERY
+                    instance: CEMETERY,
                 },
                 [ANA_HOWIE]: {
                     description: 'side angle, shivering, feeling comforted',
-                    instance: CEMETERY
+                    instance: CEMETERY,
                 },
                 [TOMER]: {
                     description: 'side angle, squatting, pouring water on grave',
-                    instance: CEMETERY
-                }
+                    instance: CEMETERY,
+                },
             },
             [BACKDROP]: {
-                [LOS_ANGELES_BACKDROP]: true
+                [LOS_ANGELES_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [GRAVESTONE]: true
+                [GRAVESTONE]: true,
             },
             [FLAT]: {
                 [CEMETERY_HILLS_LEFT]: true,
-                [CEMETERY_HILLS_RIGHT]: true
-            }
+                [CEMETERY_HILLS_RIGHT]: true,
+            },
         },
         cubes: CEMETERY_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SPRING }
+        sky: { time: TIME_NIGHT, season: SEASON_SPRING },
     },
     {
         unitIndex: 11,
@@ -224,44 +224,44 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side angle, sleeping in car',
-                    instance: STATION_WAGON
+                    instance: STATION_WAGON,
                 },
                 [ANA]: {
                     description: 'side, sleeping in car',
-                    instance: STATION_WAGON
+                    instance: STATION_WAGON,
                 },
                 [HOWIE]: {
                     description: 'driving car, alert, wigging out',
-                    instance: STATION_WAGON
+                    instance: STATION_WAGON,
                 },
                 [TOMER]: {
                     description: 'back angle, sleeping in car',
-                    instance: STATION_WAGON
-                }
+                    instance: STATION_WAGON,
+                },
             },
             [BACKDROP]: {
-                [LOS_ANGELES_BACKDROP]: true
+                [LOS_ANGELES_BACKDROP]: true,
             },
             [BUBBLE]: {
                 [CONSTELLATION_TARPIT]: true,
-                [CONSTELLATION_SIBLING]: true
+                [CONSTELLATION_SIBLING]: true,
             },
             [FIXTURE]: {
-                [EVIAN_BOTTLES]: true
+                [EVIAN_BOTTLES]: true,
             },
             [FLAT]: {
                 [DISTANT_BUILDINGS]: true,
-                [DRIVING_HOUSE__SINGLE]: true
+                [DRIVING_HOUSE__SINGLE]: true,
             },
             [PANEL]: {
                 [SATURN_EXTERIOR]: true,
                 [SATURN_INTERIOR]: true,
                 [SATURN_SEAT]: true,
-                [SATURN_SEAT_DOWN]: true
-            }
+                [SATURN_SEAT_DOWN]: true,
+            },
         },
         cubes: STATION_WAGON_KEY,
-        sky: { time: TIME_TWILIGHT, season: SEASON_SPRING }
+        sky: { time: TIME_TWILIGHT, season: SEASON_SPRING },
     },
     {
         unitIndex: 15,
@@ -270,29 +270,29 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'lying on couch, watching TV, alert',
-                    instance: ATTIC
+                    instance: ATTIC,
                 },
                 [HOWIE]: {
                     description: 'downstairs, in agony',
-                    instance: ATTIC
-                }
+                    instance: ATTIC,
+                },
             },
             [CUTOUT]: {
                 [STORAGE_BOXES]: true,
                 [STORAGE_CHEST]: true,
                 [HOWIE_FRIDGE]: true,
-                [TELEVISION]: true
+                [TELEVISION]: true,
             },
             [FURNITURE]: {
-                [ATTIC_PILLOW]: true
+                [ATTIC_PILLOW]: true,
             },
             [PANEL]: {
                 [ATTIC_COUCH]: true,
                 [ATTIC_ARMREST__LEFT]: true,
-                [ATTIC_ARMREST__RIGHT]: true
-            }
+                [ATTIC_ARMREST__RIGHT]: true,
+            },
         },
         cubes: ATTIC_KEY,
-        sky: { time: TIME_DAWN, season: SEASON_SPRING }
-    }
+        sky: { time: TIME_DAWN, season: SEASON_SPRING },
+    },
 ]

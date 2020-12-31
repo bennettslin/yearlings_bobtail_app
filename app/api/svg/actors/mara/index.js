@@ -9,7 +9,7 @@ import {
     CARRYING,
     WAITING,
     GOPI,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -17,5 +17,5 @@ export default {
     [CARRYING]: carrying,
     [WAITING]: waiting,
     [GOPI]: gopi,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

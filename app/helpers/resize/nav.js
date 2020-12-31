@@ -2,11 +2,11 @@ import {
     getIsPhoneWidth,
     getIsMiniWidth,
     getIsTabletWidth,
-    getIsMonitorWidth
+    getIsMonitorWidth,
 } from '../responsive'
 import {
     DEVICE_WIDTH_CONFIGS,
-    MINI_WIDTH_CONFIG
+    MINI_WIDTH_CONFIG,
 } from '../../constants/responsive/deviceWidth'
 
 const _getShowShrunkNavIconForDeviceObject = (
@@ -16,7 +16,7 @@ const _getShowShrunkNavIconForDeviceObject = (
     const {
         doubleColumnStaticBreakpoint,
         doubleColumnShrinkBreakpoint,
-        singleColumnStaticBreakpoint
+        singleColumnStaticBreakpoint,
     } = deviceWidthConfig
 
     return windowWidth < singleColumnStaticBreakpoint ||
@@ -33,7 +33,7 @@ const _getShowShrunkNavIconForDeviceObject = (
 
 export const getShowShrunkNavIcon = ({
     deviceWidthIndex,
-    windowWidth
+    windowWidth,
 }) => {
     const
         isPhoneOrMini =
@@ -50,7 +50,7 @@ export const getShowShrunkNavIcon = ({
 
 export const getShowSingleNavBook = ({
     deviceWidthIndex,
-    windowWidth
+    windowWidth,
 }) => {
     const deviceWidthConfig = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
 

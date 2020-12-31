@@ -5,14 +5,14 @@ export const RIGHT = 'right'
 export const SLANT_DIRECTIONS = [
     DEFAULT,
     LEFT,
-    RIGHT
+    RIGHT,
 ]
 
 export const CEILING = 'ceiling'
 export const FLOOR = 'floor'
 export const LEVELS = [
     CEILING,
-    FLOOR
+    FLOOR,
 ]
 
 export const TILE = 'tile'
@@ -21,7 +21,7 @@ export const FRONT = 'front'
 export const FACES = [
     TILE,
     SIDE,
-    FRONT
+    FRONT,
 ]
 
 export const BASE = 'base'

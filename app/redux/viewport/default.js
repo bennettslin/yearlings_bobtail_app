@@ -15,18 +15,18 @@ export const VIEWPORT_DEFAULTS = {
         stageTop: 0,
         stageLeft: 0,
         stageWidth: 0,
-        stageHeight: 0
+        stageHeight: 0,
     }),
     prosceniumDimensionCoordinates: JSON.stringify({
         prosceniumTop: 0,
         prosceniumLeft: 0,
         prosceniumWidth: 0,
-        prosceniumHeight: 0
+        prosceniumHeight: 0,
     }),
     ceilingHeight: 0,
-    floorHeight: 0
+    floorHeight: 0,
 }
 
 export const VIEWPORT_PITCH_PAGE_DEFAULTS = {
-    deviceWidthIndex: 0
+    deviceWidthIndex: 0,
 }

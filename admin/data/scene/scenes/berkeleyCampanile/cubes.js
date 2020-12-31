@@ -7,7 +7,7 @@ import {
     PAVEMENT_COLOUR as V,
     BANCROFT_GATE_COLOUR as A,
     BANCROFT_EXTERIOR_COLOUR as X,
-    CONCRETE_PLATFORM_COLOUR as P
+    CONCRETE_PLATFORM_COLOUR as P,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { g, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -20,15 +20,15 @@ export default {
                 [X, X, C, D],
                 [X, X, C, D],
                 [C, C, C, D],
-                [D]
+                [D],
             ],
             zIndices: [
                 [g, g, g, k],
                 [3, 3, g, k],
                 [3, 3, g, k],
                 [g, g, g, k],
-                [k]
-            ]
+                [k],
+            ],
         },
         floor: {
             hslaColours: [
@@ -37,7 +37,7 @@ export default {
                 [P, P, A, V],
                 [P, A, A, V],
                 [P, V],
-                [V]
+                [V],
             ],
             zIndices: [
                 [0],
@@ -45,8 +45,8 @@ export default {
                 [3, 3, 9, 1],
                 [3, 9, 9, 1],
                 [2, 1],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

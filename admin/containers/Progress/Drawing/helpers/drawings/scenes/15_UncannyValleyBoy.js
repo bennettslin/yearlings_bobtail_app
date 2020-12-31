@@ -9,20 +9,20 @@ import {
     KHARI,
     LIZ,
     MIRIAM,
-    STEPHANIE
+    STEPHANIE,
 } from '../../../../../../../app/constants/scene/actors'
 import {
     HURT_CONSOLING,
-    SOBBING_SHIELDING
+    SOBBING_SHIELDING,
 } from '../../../../../../../app/constants/scene/actors/estherMother'
 import {
     ACCUSATORY,
-    REELING
+    REELING,
 } from '../../../../../../../app/constants/scene/actors/father'
 import { JOKING_LAUGHING } from '../../../../../../../app/constants/scene/actors/khariLiz'
 import {
     ASLEEP_FEARFUL,
-    FENDING_OFF
+    FENDING_OFF,
 } from '../../../../../../../app/constants/scene/actors/miriamBennett'
 import { MISCHIEVOUS_BANJO } from '../../../../../../../app/constants/scene/actors/miriamStephanie'
 import { COMFORTING_HUMILIATED } from '../../../../../../../app/constants/scene/actors/sashaBennett'
@@ -30,7 +30,7 @@ import { BENNETT_RECORDING } from '../../../../../../../app/constants/scene/acto
 import {
     PAST,
     PRESENT,
-    FUTURE
+    FUTURE,
 } from '../../../../../../../app/constants/scene/actors/songs'
 
 export default [
@@ -38,115 +38,115 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    instance: ASLEEP_FEARFUL
+                    instance: ASLEEP_FEARFUL,
                 },
                 [BENNETT]: {
-                    instance: ASLEEP_FEARFUL
+                    instance: ASLEEP_FEARFUL,
                 },
                 [FATHER]: {
-                    instance: ACCUSATORY
+                    instance: ACCUSATORY,
                 },
                 [ESTHER]: {
                     youngSita: {
-                        instance: HURT_CONSOLING
-                    }
+                        instance: HURT_CONSOLING,
+                    },
                 },
                 [MOTHER]: {
-                    instance: HURT_CONSOLING
-                }
-            }
-        }
+                    instance: HURT_CONSOLING,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: PAST
+                    instance: PAST,
                 },
                 [FATHER]: {
-                    instance: PAST
+                    instance: PAST,
                 },
                 [SASHA]: {
-                    instance: COMFORTING_HUMILIATED
+                    instance: COMFORTING_HUMILIATED,
                 },
                 [PRETEEN_BENNETT]: {
-                    instance: COMFORTING_HUMILIATED
-                }
-            }
-        }
+                    instance: COMFORTING_HUMILIATED,
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: PRESENT
+                    instance: PRESENT,
                 },
                 [FATHER]: {
-                    instance: PRESENT
+                    instance: PRESENT,
                 },
                 [MOTHER]: {
-                    instance: PRESENT
+                    instance: PRESENT,
                 },
                 [MIRIAM]: {
-                    instance: MISCHIEVOUS_BANJO
+                    instance: MISCHIEVOUS_BANJO,
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        instance: MISCHIEVOUS_BANJO
-                    }
-                }
-            }
-        }
+                        instance: MISCHIEVOUS_BANJO,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    instance: FUTURE
+                    instance: FUTURE,
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        instance: BENNETT_RECORDING
-                    }
+                        instance: BENNETT_RECORDING,
+                    },
                 },
                 [MOTHER]: {
-                    instance: FUTURE
+                    instance: FUTURE,
                 },
                 [FATHER]: {
-                    instance: FUTURE
+                    instance: FUTURE,
                 },
                 [KHARI]: {
-                    instance: JOKING_LAUGHING
+                    instance: JOKING_LAUGHING,
                 },
                 [LIZ]: {
                     sita: {
-                        instance: JOKING_LAUGHING
-                    }
-                }
-            }
-        }
+                        instance: JOKING_LAUGHING,
+                    },
+                },
+            },
+        },
     },
     {
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    instance: FENDING_OFF
+                    instance: FENDING_OFF,
                 },
                 [BENNETT]: {
-                    instance: FENDING_OFF
+                    instance: FENDING_OFF,
                 },
                 [FATHER]: {
-                    instance: REELING
+                    instance: REELING,
                 },
                 [ESTHER]: {
                     youngSita: {
-                        instance: SOBBING_SHIELDING
-                    }
+                        instance: SOBBING_SHIELDING,
+                    },
                 },
                 [MOTHER]: {
-                    instance: SOBBING_SHIELDING
-                }
-            }
-        }
-    }
+                    instance: SOBBING_SHIELDING,
+                },
+            },
+        },
+    },
 ]

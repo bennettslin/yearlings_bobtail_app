@@ -7,7 +7,7 @@ import {
     FIXTURE,
     FLAT,
     FURNITURE,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     BEDROOM_KEY,
@@ -15,7 +15,7 @@ import {
     FREEWAY_KEY,
     PORCH_KEY,
     NOHO_HOUSES_KEY,
-    CHANGELING_CAVE_KEY
+    CHANGELING_CAVE_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_TWILIGHT,
@@ -25,7 +25,7 @@ import {
     TIME_EVENING,
     TIME_NIGHT,
     SEASON_SUMMER,
-    SEASON_NIGHT_MAGIC
+    SEASON_NIGHT_MAGIC,
 } from '../../../../app/constants/scene/sky'
 import {
     PRETEEN_BENNETT,
@@ -35,32 +35,32 @@ import {
     CHRISTOPHER,
     CHRISTOPHER_BENNETT_WILLY,
     HOWIE_WILLY,
-    TOMER
+    TOMER,
 } from '../../../../app/constants/scene/actors'
 import {
     CAUTIOUS,
     ENRAGED,
-    FEARFUL
+    FEARFUL,
 } from '../../../../app/constants/scene/actors/preteenBennett'
 import {
     COLLECTING,
-    DUCKING
+    DUCKING,
 } from '../../../../app/constants/scene/actors/willy'
 import {
     STOOPING,
-    COMFORTING
+    COMFORTING,
 } from '../../../../app/constants/scene/actors/mother'
 import { ROARING } from '../../../../app/constants/scene/actors/father'
 import {
     TANTRUM,
-    SOBBING
+    SOBBING,
 } from '../../../../app/constants/scene/actors/christopher'
 import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
 import { GANGBANGER } from '../../../../app/constants/scene/actors/songs'
 import {
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
-    VALLEY_PANORAMA_BACKDROP
+    VALLEY_PANORAMA_BACKDROP,
 } from '../../../../app/constants/scene/things/backdrops'
 import { TINTIN_POSTER } from '../../../../app/constants/scene/things/cardboards'
 import {
@@ -69,20 +69,20 @@ import {
     CACTUS_DOUBLE__PORCH,
     CACTUS_SINGLE__PORCH,
     FIRE_HYDRANT,
-    CAMPFIRE
+    CAMPFIRE,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS_OPEN,
     BEDROOM_FENCE,
     DEFAULT_FENCE_BATHROOM,
-    PORCH_DOOR
+    PORCH_DOOR,
 } from '../../../../app/constants/scene/things/doors'
 import {
     BEDROOM_LAMP__DESK,
     LETTER_SCRAPS__CHRISTOPHER,
     TORN_MAGAZINES__CHRISTOPHER,
     CHRISTOPHER_LETTERS,
-    HAIRCUT_SCISSORS
+    HAIRCUT_SCISSORS,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     VALLEY_FREEWAY,
@@ -90,7 +90,7 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     FAMILY_HOUSE,
-    BEDROOM_SIREN
+    BEDROOM_SIREN,
 } from '../../../../app/constants/scene/things/flats'
 import { CAPTAIN_BED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
@@ -102,7 +102,7 @@ import {
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR,
     STALACTITES,
-    BEDROOM_STOOL
+    BEDROOM_STOOL,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -112,19 +112,19 @@ export default [
         cubes: FREEWAY_KEY,
         presences: {
             [BACKDROP]: {
-                [VALLEY_PANORAMA_BACKDROP]: true
+                [VALLEY_PANORAMA_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [OVERPASS_SIGN_BACK]: true
+                [OVERPASS_SIGN_BACK]: true,
             },
             [FLAT]: {
-                [VALLEY_FREEWAY]: true
+                [VALLEY_FREEWAY]: true,
             },
             [PANEL]: {
-                [FREEWAY_FENCE]: true
-            }
+                [FREEWAY_FENCE]: true,
+            },
         },
-        sky: { time: TIME_TWILIGHT, season: SEASON_SUMMER }
+        sky: { time: TIME_TWILIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 2,
@@ -133,25 +133,25 @@ export default [
             [ACTOR]: {
                 [WILLY]: {
                     description: 'side angle, holding up a bottle, squinting',
-                    instance: COLLECTING
-                }
+                    instance: COLLECTING,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_PANORAMA_BACKDROP]: true
+                [VALLEY_PANORAMA_BACKDROP]: true,
             },
             [CUTOUT]: {
                 [SHOPPING_CART]: true,
-                [OVERPASS_SIGN_BACK]: true
+                [OVERPASS_SIGN_BACK]: true,
             },
             [FLAT]: {
-                [VALLEY_FREEWAY]: true
+                [VALLEY_FREEWAY]: true,
             },
             [PANEL]: {
-                [FREEWAY_FENCE]: true
-            }
+                [FREEWAY_FENCE]: true,
+            },
         },
         cubes: FREEWAY_KEY,
-        sky: { time: TIME_DAWN, season: SEASON_SUMMER }
+        sky: { time: TIME_DAWN, season: SEASON_SUMMER },
     },
     {
         unitIndex: 5,
@@ -160,38 +160,38 @@ export default [
             [ACTOR]: {
                 [WILLY]: {
                     description: 'side, ducking behind post, chuckling',
-                    instance: DUCKING
+                    instance: DUCKING,
                 },
                 [MOTHER]: {
                     description: 'squatting, righting chair, exasperated, concerned',
-                    instance: STOOPING
+                    instance: STOOPING,
                 },
                 [CHRISTOPHER]: {
                     description: 'off balance, having a tantrum',
-                    instance: TANTRUM
+                    instance: TANTRUM,
                 },
                 [PRETEEN_BENNETT]: {
                     description: 'stepping off porch, cautious, trying to calm Christopher',
-                    instance: CAUTIOUS
-                }
+                    instance: CAUTIOUS,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CUTOUT]: {
                 [CACTUS_DOUBLE__PORCH]: true,
-                [CACTUS_SINGLE__PORCH]: true
+                [CACTUS_SINGLE__PORCH]: true,
             },
             [DOOR]: {
                 [DEFAULT_FENCE_BATHROOM]: true,
-                [PORCH_DOOR]: true
+                [PORCH_DOOR]: true,
             },
             [FIXTURE]: {
-                [HAIRCUT_SCISSORS]: true
-            }
+                [HAIRCUT_SCISSORS]: true,
+            },
         },
         cubes: PORCH_KEY,
-        sky: { time: TIME_MORNING, season: SEASON_SUMMER }
+        sky: { time: TIME_MORNING, season: SEASON_SUMMER },
     },
     {
         unitIndex: 7,
@@ -200,43 +200,43 @@ export default [
             [ACTOR]: {
                 [FATHER]: {
                     description: 'side, running, angry',
-                    instance: ROARING
+                    instance: ROARING,
                 },
                 [CHRISTOPHER]: {
                     description: 'lying on side, in pain, clenching stomach',
-                    instance: SOBBING
+                    instance: SOBBING,
                 },
                 [PRETEEN_BENNETT]: {
                     description: 'side angle, aggressive stance, angry',
-                    instance: ENRAGED
-                }
+                    instance: ENRAGED,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [TINTIN_POSTER]: true
+                [TINTIN_POSTER]: true,
             },
             [DOOR]: {
                 [BEDROOM_FENCE]: true,
-                [BEDROOM_BLINDS_OPEN]: true
+                [BEDROOM_BLINDS_OPEN]: true,
             },
             [FIXTURE]: {
                 [BEDROOM_LAMP__DESK]: true,
                 [LETTER_SCRAPS__CHRISTOPHER]: true,
                 [TORN_MAGAZINES__CHRISTOPHER]: true,
-                [CHRISTOPHER_LETTERS]: true
+                [CHRISTOPHER_LETTERS]: true,
             },
             [FURNITURE]: {
-                [CAPTAIN_BED_PILLOW]: true
+                [CAPTAIN_BED_PILLOW]: true,
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED]: true
-            }
+                [CAPTAIN_BED]: true,
+            },
         },
         cubes: BEDROOM_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_SUMMER }
+        sky: { time: TIME_EVENING, season: SEASON_SUMMER },
     },
     {
         unitIndex: 9,
@@ -245,30 +245,30 @@ export default [
             [ACTOR]: {
                 [HOWIE_WILLY]: {
                     description: 'side angle, pointing at shoe, pushing Willy',
-                    instance: GANGBANGER
+                    instance: GANGBANGER,
                 },
                 [TOMER]: {
                     gangbanger: {
                         description: 'pulling bottle from cart, about to strike, threatening',
-                        instance: GANGBANGER
-                    }
-                }
+                        instance: GANGBANGER,
+                    },
+                },
             },
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true
+                [VALLEY_CLOSER_BACKDROP]: true,
             },
             [CUTOUT]: {
                 [SHOPPING_CART]: true,
-                [FIRE_HYDRANT]: true
+                [FIRE_HYDRANT]: true,
             },
             [FLAT]: {
                 [NEAR_HOUSES]: true,
                 [NOHO_HOUSE_LEFT]: true,
-                [NOHO_HOUSE_RIGHT]: true
-            }
+                [NOHO_HOUSE_RIGHT]: true,
+            },
         },
         cubes: NOHO_HOUSES_KEY,
-        sky: { time: TIME_NOON, season: SEASON_SUMMER }
+        sky: { time: TIME_NOON, season: SEASON_SUMMER },
     },
     {
         unitIndex: 12,
@@ -277,40 +277,40 @@ export default [
             [ACTOR]: {
                 [MOTHER]: {
                     description: 'getting up to close curtain, trying to be reassuring',
-                    instance: COMFORTING
+                    instance: COMFORTING,
                 },
                 [PRETEEN_BENNETT]: {
                     description: 'lying in bed, worried, scared',
-                    instance: FEARFUL
-                }
+                    instance: FEARFUL,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_FURTHER_BACKDROP]: true
+                [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [TINTIN_POSTER]: true
+                [TINTIN_POSTER]: true,
             },
             [DOOR]: {
                 [BEDROOM_FENCE]: true,
-                [BEDROOM_BLINDS_OPEN]: true
+                [BEDROOM_BLINDS_OPEN]: true,
             },
             [FIXTURE]: {
-                [BEDROOM_LAMP__DESK]: true
+                [BEDROOM_LAMP__DESK]: true,
             },
             [FLAT]: {
-                [BEDROOM_SIREN]: true
+                [BEDROOM_SIREN]: true,
             },
             [FURNITURE]: {
-                [CAPTAIN_BED_PILLOW]: true
+                [CAPTAIN_BED_PILLOW]: true,
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
                 [BEDROOM_STOOL]: true,
-                [CAPTAIN_BED]: true
-            }
+                [CAPTAIN_BED]: true,
+            },
         },
         cubes: BEDROOM_STOOL_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER },
     },
     {
         unitIndex: 14,
@@ -319,29 +319,29 @@ export default [
             [ACTOR]: {
                 [CHRISTOPHER_BENNETT_WILLY]: {
                     description: 'side angle, looking up at Bennett, reassuring',
-                    instance: REASSURING_ENCHANTED
-                }
+                    instance: REASSURING_ENCHANTED,
+                },
             },
             [BACKDROP]: {
-                [VALLEY_CLOSER_BACKDROP]: true
+                [VALLEY_CLOSER_BACKDROP]: true,
             },
             [CUTOUT]: {
-                [CAMPFIRE]: true
+                [CAMPFIRE]: true,
             },
             [FLAT]: {
                 [NEAR_HOUSES]: true,
-                [FAMILY_HOUSE]: true
+                [FAMILY_HOUSE]: true,
             },
             [PANEL]: {
                 [CAVE_SHADOWS]: true,
                 [TROLL_SHADOW_LEFT]: true,
                 [TROLL_SHADOW_RIGHT]: true,
                 [TROLL_SHADOW_FAR]: true,
-                [STALACTITES]: true
-            }
+                [STALACTITES]: true,
+            },
         },
         cubes: CHANGELING_CAVE_KEY,
-        sky: { season: SEASON_NIGHT_MAGIC }
+        sky: { season: SEASON_NIGHT_MAGIC },
 
-    }
+    },
 ]

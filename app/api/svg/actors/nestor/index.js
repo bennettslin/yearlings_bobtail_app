@@ -5,17 +5,17 @@ import epilogue from '../../../../../assets/svgs/actors/nestor/epilogue'
 
 import {
     JOGGER,
-    INJURED
+    INJURED,
 } from '../../../../constants/scene/actors/nestor'
 
 import {
     GREETING,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
     [INJURED]: injured,
     [GREETING]: greeting,
     [EPILOGUE]: epilogue,
-    [JOGGER]: jogger
+    [JOGGER]: jogger,
 }

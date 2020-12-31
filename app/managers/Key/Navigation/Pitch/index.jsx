@@ -2,7 +2,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import PitchDispatcher from '../../../../dispatchers/Pitch'
 import {
     ARROW_LEFT,
-    ARROW_RIGHT
+    ARROW_RIGHT,
 } from '../../../../constants/access'
 
 const PitchNavigation = forwardRef((props, ref) => {

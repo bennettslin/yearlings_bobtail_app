@@ -32,7 +32,7 @@ const Stanza = forwardRef(({
                     {...{
                         key: unitIndex,
                         ref,
-                        unitIndex
+                        unitIndex,
                     }}
                 />
             ))}
@@ -42,7 +42,7 @@ const Stanza = forwardRef(({
 
 Stanza.propTypes = {
     serverClientSongIndex: PropTypes.number.isRequired,
-    stanzaIndex: PropTypes.number.isRequired
+    stanzaIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getSongServerClientHoc(Stanza))

@@ -6,19 +6,19 @@ export const scrollCarouselToAnnotation = (log, index) => ({
     type: SCROLL_CAROUSEL_STORE,
     payload: {
         scrollCarouselLog: log,
-        scrollCarouselIndex: index
-    }
+        scrollCarouselIndex: index,
+    },
 })
 
 export const scrollCarouselForSongSelect = () => ({
     type: SCROLL_CAROUSEL_STORE,
     payload: {
         scrollCarouselLog: 'Song change scrolled',
-        isScrollCarouselForSongSelect: true
-    }
+        isScrollCarouselForSongSelect: true,
+    },
 })
 
 export const resetScrollCarouselStore = () => ({
     type: SCROLL_CAROUSEL_STORE,
-    payload: SCROLL_CAROUSEL_DEFAULTS
+    payload: SCROLL_CAROUSEL_DEFAULTS,
 })

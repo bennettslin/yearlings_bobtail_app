@@ -69,7 +69,7 @@ const LyricScroll = forwardRef(({ didMount }, ref) => {
             <ScrollLyricListener {...{
                 getLyricScrollElement,
                 getScrollAnchorChild,
-                getScrollVerseChild
+                getScrollVerseChild,
             }} />
             {/* These are the lyric element's only two flex children. */}
             <VerseBar isAbove {...{ onWheel: onVerseBarWheel }} />
@@ -87,15 +87,15 @@ const LyricScroll = forwardRef(({ didMount }, ref) => {
                              * This gradient does not obscure the lyric
                              * toggle buttons.
                              */
-                            'gradientMask__lyricScroll'
+                            'gradientMask__lyricScroll',
                         ]
                     ),
                     tabIndex: -1,
                     onScroll,
                     onWheel,
                     ...IS_TOUCH_SUPPORTED && {
-                        onTouchMove: onWheel
-                    }
+                        onTouchMove: onWheel,
+                    },
                 }}
             >
                 <Stanzas {...{ ref: scrollChildren }} />
@@ -103,13 +103,13 @@ const LyricScroll = forwardRef(({ didMount }, ref) => {
             <ScrollOverlayDispatcher
                 {...{
                     ref: determineScrollOverlay,
-                    getLyricScrollElement
+                    getLyricScrollElement,
                 }}
             />
             <VerseBarHandler
                 {...{
                     ref: determineVerseBars,
-                    getScrollVerseChild
+                    getScrollVerseChild,
                 }}
             />
             <AutoScrollDispatcher {...{ ref: determineAutoScroll }} />
@@ -118,7 +118,7 @@ const LyricScroll = forwardRef(({ didMount }, ref) => {
 })
 
 LyricScroll.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default memo(getDidMountHoc(LyricScroll))

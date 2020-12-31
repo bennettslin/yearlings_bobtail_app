@@ -1,11 +1,11 @@
 import {
     AMY,
     AMY_NESTOR_TOMER,
-    AMY_STEPHANIE
+    AMY_STEPHANIE,
 } from '../../../../app/constants/scene/actors'
 import {
     SMOKER,
-    DOCTOR
+    DOCTOR,
 } from '../../../../app/constants/scene/actors/amy'
 import { OFFICER } from '../../../../app/constants/scene/actors/amyNestorTomer'
 import { SQUEEZING } from '../../../../app/constants/scene/actors/amyStephanie'
@@ -13,40 +13,40 @@ import {
     FLIRTING,
     MINGLING,
     EPILOGUE,
-    PROTESTER
+    PROTESTER,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: AMY_STEPHANIE,
-        instance: SQUEEZING
+        instance: SQUEEZING,
     },
     {
         type: AMY,
-        instance: FLIRTING
+        instance: FLIRTING,
     },
     {
         type: AMY,
-        instance: MINGLING
+        instance: MINGLING,
     },
     {
         type: AMY,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: AMY,
-        instance: SMOKER
+        instance: SMOKER,
     },
     {
         type: AMY_NESTOR_TOMER,
-        instance: OFFICER
+        instance: OFFICER,
     },
     {
         type: AMY,
-        instance: PROTESTER
+        instance: PROTESTER,
     },
     {
         type: AMY,
-        instance: DOCTOR
-    }
+        instance: DOCTOR,
+    },
 ]

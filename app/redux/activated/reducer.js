@@ -3,7 +3,7 @@ import { hasKey } from '../../helpers/action'
 import {
     ACTIVATED_STORE,
     SELECTED_STORE,
-    SLIDER_STORE
+    SLIDER_STORE,
 } from '../../constants/store'
 import { ACTIVATED_DEFAULTS } from './default'
 
@@ -15,7 +15,7 @@ export default (
         case ACTIVATED_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         case SELECTED_STORE: {
             const { selectedSongIndex } = payload

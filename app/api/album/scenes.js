@@ -1,13 +1,13 @@
 import {
     getSong,
-    getSongIsLogue
+    getSongIsLogue,
 } from './songs'
 import { getCharStringForNumber } from '../../helpers/format'
 import { getArrayOfLength } from '../../helpers/general'
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import {
     TIME_STAGE,
-    SEASON_STAGE
+    SEASON_STAGE,
 } from '../../constants/scene/sky'
 
 export const getSceneIndices = songIndex => (

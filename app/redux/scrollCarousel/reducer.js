@@ -15,8 +15,8 @@ export default (
                 ...payload,
                 // If index is 0, scroll to 1.
                 ...hasKey(scrollCarouselIndex) && !scrollCarouselIndex && {
-                    scrollCarouselIndex: 1
-                }
+                    scrollCarouselIndex: 1,
+                },
             }
         }
         default:

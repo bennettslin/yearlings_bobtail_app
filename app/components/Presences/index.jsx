@@ -12,7 +12,7 @@ const Presences = ({ yIndex }) => {
                     'Presences',
                     `y${yIndex}`,
                     'abF'
-                )
+                ),
             }}
         >
             <LayersThing {...{ yIndex }} />
@@ -22,7 +22,7 @@ const Presences = ({ yIndex }) => {
 }
 
 Presences.propTypes = {
-    yIndex: PropTypes.number.isRequired
+    yIndex: PropTypes.number.isRequired,
 }
 
 export default memo(Presences)

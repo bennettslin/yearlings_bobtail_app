@@ -6,14 +6,14 @@ import { getSeatingRowCoordinates } from './helper'
 import {
     mapWindowWidth,
     mapProsceniumDimensionCoordinates,
-    mapFloorHeight
+    mapFloorHeight,
 } from '../../../redux/viewport/selector'
 import './style'
 
 const Floor = () => {
     const {
             prosceniumLeft,
-            prosceniumWidth
+            prosceniumWidth,
         } = JSON.parse(useSelector(mapProsceniumDimensionCoordinates)),
 
         floorHeight = useSelector(mapFloorHeight),
@@ -23,7 +23,7 @@ const Floor = () => {
             windowWidth,
             prosceniumLeft,
             prosceniumWidth,
-            floorHeight
+            floorHeight,
         })
 
     return (
@@ -35,15 +35,15 @@ const Floor = () => {
                 ),
                 style: {
                     width: `${windowWidth}px`,
-                    height: `${floorHeight}px`
-                }
+                    height: `${floorHeight}px`,
+                },
             }}
         >
             {seatingRowCoordinates.map((seatsArray, rowIndex) => (
                 <div
                     {...{
                         key: rowIndex,
-                        className: `FloorSeats__${rowIndex}`
+                        className: `FloorSeats__${rowIndex}`,
                     }}
                 >
                     {seatsArray.map(({
@@ -52,7 +52,7 @@ const Floor = () => {
                         top,
                         left,
                         width,
-                        height
+                        height,
                     }) => (
                         <FloorSeat
                             {...{
@@ -62,7 +62,7 @@ const Floor = () => {
                                 top,
                                 left,
                                 width,
-                                height
+                                height,
                             }}
                         />
                     ))}

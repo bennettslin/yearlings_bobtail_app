@@ -13,7 +13,7 @@ const About = () => (
         {...{
             className: cx(
                 'About'
-            )
+            ),
         }}
     >
         <AboutChild>

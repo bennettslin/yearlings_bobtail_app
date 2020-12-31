@@ -9,7 +9,7 @@ import './style'
 
 const LyricToggles = ({
     didMount,
-    isBottomRight
+    isBottomRight,
 
 }) => didMount && (
     <div className={cx(
@@ -19,7 +19,7 @@ const LyricToggles = ({
             'LyricToggles__bottomRight' :
             [
                 'LyricToggles__leftOrTop',
-                'top__lyricChild'
+                'top__lyricChild',
             ]
     )}>
         {isBottomRight ? (
@@ -35,7 +35,7 @@ const LyricToggles = ({
 
 LyricToggles.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    isBottomRight: PropTypes.bool
+    isBottomRight: PropTypes.bool,
 }
 
 export default memo(getDidMountHoc(LyricToggles))

@@ -5,7 +5,7 @@ import { TIME_STAGE } from '../../../../app/constants/scene/sky'
 const _addDurationsToSceneConfigs = ({
     songDuration,
     sceneStartTimes,
-    song
+    song,
 
 }) => {
     const sceneDurations = []
@@ -31,7 +31,7 @@ const _addDurationsToSceneConfigs = ({
 export const _addVerseSceneIndices = ({
     sceneVerseIndices,
     verseStartTimes,
-    song
+    song,
 
 }) => {
     const verseSceneIndices = []
@@ -95,7 +95,7 @@ export const addSceneMetadata = ({
     songDuration,
     unitVerseIndicesList,
     verseStartTimes,
-    song
+    song,
 
 }) => {
     const
@@ -119,12 +119,12 @@ export const addSceneMetadata = ({
     _addDurationsToSceneConfigs({
         songDuration,
         sceneStartTimes,
-        song
+        song,
     })
 
     _addVerseSceneIndices({
         sceneVerseIndices,
         verseStartTimes,
-        song
+        song,
     })
 }

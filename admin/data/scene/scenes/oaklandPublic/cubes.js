@@ -4,7 +4,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as K,
-    PAVEMENT_COLOUR as V
+    PAVEMENT_COLOUR as V,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -16,7 +16,7 @@ export default {
                 [V, V, V, K, T, K, T, K, T, K, V],
                 [V, V, T, K, T, K, T, K, T, K, T, V],
                 [V, V, T, K, T, K, T, K, T, K, T, V],
-                [T]
+                [T],
             ],
             zIndices: [
                 [0],
@@ -24,8 +24,8 @@ export default {
                 [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-                [0]
-            ]
-        }
-    }
+                [0],
+            ],
+        },
+    },
 }

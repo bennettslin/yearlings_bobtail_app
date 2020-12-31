@@ -4,7 +4,7 @@ import epilogue from '../../../../../assets/svgs/actors/brad/epilogue'
 
 import {
     GESTURING,
-    SNACKING
+    SNACKING,
 } from '../../../../constants/scene/actors/brad'
 
 import { EPILOGUE } from '../../../../constants/scene/actors/songs'
@@ -12,5 +12,5 @@ import { EPILOGUE } from '../../../../constants/scene/actors/songs'
 export default {
     [GESTURING]: gesturing,
     [SNACKING]: snacking,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

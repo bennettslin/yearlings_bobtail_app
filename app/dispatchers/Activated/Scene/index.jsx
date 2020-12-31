@@ -10,7 +10,7 @@ import { mapActivatedSceneIndex } from '../../../redux/activated/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedSceneIndex,
-    mapIsSelectedLogue
+    mapIsSelectedLogue,
 } from '../../../redux/selected/selector'
 
 const ActivatedSceneDispatcher = forwardRef((props, ref) => {
@@ -57,7 +57,7 @@ const ActivatedSceneDispatcher = forwardRef((props, ref) => {
             selectedSongIndex,
             selectedSceneIndex,
             activatedSceneIndex,
-            direction
+            direction,
         }))
         return true
     }

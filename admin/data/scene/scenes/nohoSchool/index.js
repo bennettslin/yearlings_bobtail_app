@@ -1,7 +1,7 @@
 import {
     YOUNG_BENNETT,
     ANITA,
-    ESTHER
+    ESTHER,
 } from '../../../../../app/constants/scene/actors'
 import { CONCERNED } from '../../../../../app/constants/scene/actors/anita'
 import { SNICKERING } from '../../../../../app/constants/scene/actors/esther'
@@ -12,19 +12,19 @@ export default {
         [FLUSTERED]: {
             yIndex: 4,
             xPosition: 9.6,
-            zOffset: -1.02
-        }
+            zOffset: -1.02,
+        },
     },
     [ANITA]: {
         [CONCERNED]: {
             yIndex: 4,
-            xPosition: 2.5
-        }
+            xPosition: 2.5,
+        },
     },
     [ESTHER]: {
         [SNICKERING]: {
             yIndex: 4,
-            xPosition: 4.7
-        }
-    }
+            xPosition: 4.7,
+        },
+    },
 }

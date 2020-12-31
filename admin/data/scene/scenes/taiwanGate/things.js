@@ -2,7 +2,7 @@ import {
     CARDBOARD,
     CUTOUT,
     DOOR,
-    FLAT
+    FLAT,
 } from '../../../../../app/constants/scene/things'
 import { BENNETT_ODIN_RICKSHAW } from '../../../../../app/constants/scene/things/cardboards'
 import { TAIWAN_TREE } from '../../../../../app/constants/scene/things/cutouts'
@@ -10,7 +10,7 @@ import { IRON_GATE } from '../../../../../app/constants/scene/things/doors'
 import {
     TAIWAN_HOUSES_CENTRE,
     TAIWAN_HOUSE_FAR,
-    TAIWAN_HOUSE_NEAR
+    TAIWAN_HOUSE_NEAR,
 } from '../../../../../app/constants/scene/things/flats'
 
 export default {
@@ -18,37 +18,37 @@ export default {
         [BENNETT_ODIN_RICKSHAW]: {
             yIndex: 2,
             xPosition: 6.75,
-            scaleFactor: 0.225
-        }
+            scaleFactor: 0.225,
+        },
     },
     [CUTOUT]: {
         [TAIWAN_TREE]: {
             yIndex: 1,
             xPosition: 4,
-            scaleFactor: 0.6
-        }
+            scaleFactor: 0.6,
+        },
     },
     [DOOR]: {
         [IRON_GATE]: {
             yIndex: 5,
-            xPosition: 1.9
-        }
+            xPosition: 1.9,
+        },
     },
     [FLAT]: {
         [TAIWAN_HOUSES_CENTRE]: {
             yIndex: 1,
             xPosition: 7,
-            scaleFactor: 0.45
+            scaleFactor: 0.45,
         },
         [TAIWAN_HOUSE_FAR]: {
             yIndex: 1,
             xPosition: 10.25,
-            scaleFactor: 0.45
+            scaleFactor: 0.45,
         },
         [TAIWAN_HOUSE_NEAR]: {
             yIndex: 2,
             xPosition: 11.25,
-            scaleFactor: 0.5
-        }
-    }
+            scaleFactor: 0.5,
+        },
+    },
 }

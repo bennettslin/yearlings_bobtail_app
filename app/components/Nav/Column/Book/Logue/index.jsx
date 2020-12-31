@@ -28,7 +28,7 @@ const NavBookLogue = ({
 }
 
 NavBookLogue.propTypes = {
-    bookIndex: PropTypes.number.isRequired
+    bookIndex: PropTypes.number.isRequired,
 }
 
 export default memo(NavBookLogue)

@@ -7,14 +7,14 @@ import {
     CLOSE_NAV_NEXT,
     SHOW_NAV_NEXT,
     SHOW_CAROUSEL_FROM_NAV,
-    SHOW_CAROUSEL_NAV_NEXT
+    SHOW_CAROUSEL_NAV_NEXT,
 } from '../../../../../constants/options'
 
 const CAROUSEL_NAV_MAP = {
     [CLOSE_NAV_NEXT]: popupClose,
     [SHOW_NAV_NEXT]: carouselShown,
     [SHOW_CAROUSEL_FROM_NAV]: navShown,
-    [SHOW_CAROUSEL_NAV_NEXT]: neitherShown
+    [SHOW_CAROUSEL_NAV_NEXT]: neitherShown,
 }
 
 export default ({ buttonIdentifier }) => {

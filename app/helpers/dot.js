@@ -1,20 +1,20 @@
 // Check if at least one present key is selected.
 import {
     getObjectFromBit,
-    getBitFromObject
+    getBitFromObject,
 } from './bit'
 import { ORDERED_DOT_KEYS } from '../constants/dots'
 
 export const getDotKeysFromBit = bit => (
     getObjectFromBit({
         keysList: ORDERED_DOT_KEYS,
-        bit
+        bit,
     })
 )
 export const getDotsBitFromKeys = dotKeys => (
     dotKeys ? getBitFromObject({
         keysList: ORDERED_DOT_KEYS,
-        trueFalseObject: dotKeys
+        trueFalseObject: dotKeys,
     }) : null
 )
 
@@ -39,7 +39,7 @@ export const getHasSelectedDot = (dotsBit, selectedDotsBit) => (
 
 export const getDotsBitForToggledDotIndex = ({
     dotIndex,
-    dotsBit
+    dotsBit,
 
 }) => {
     const

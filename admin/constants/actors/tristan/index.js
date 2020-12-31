@@ -1,36 +1,36 @@
 import {
     TRISTAN,
-    MIRIAM_TRISTAN
+    MIRIAM_TRISTAN,
 } from '../../../../app/constants/scene/actors'
 import {
     PRINCIPAL,
-    PUNCHING
+    PUNCHING,
 } from '../../../../app/constants/scene/actors/tristan'
 import { NOOGIE } from '../../../../app/constants/scene/actors/miriamTristan'
 import {
     GREETING,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: TRISTAN,
-        instance: PUNCHING
+        instance: PUNCHING,
     },
     {
         type: MIRIAM_TRISTAN,
-        instance: NOOGIE
+        instance: NOOGIE,
     },
     {
         type: MIRIAM_TRISTAN,
-        instance: GREETING
+        instance: GREETING,
     },
     {
         type: TRISTAN,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: TRISTAN,
-        instance: PRINCIPAL
-    }
+        instance: PRINCIPAL,
+    },
 ]

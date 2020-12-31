@@ -34,7 +34,7 @@ const Main = ({ didMount, style }) => didMount && (
                 'width__mainColumn',
                 'abF'
             ),
-            style
+            style,
         }}
     >
         <Nav />
@@ -56,7 +56,7 @@ const Main = ({ didMount, style }) => didMount && (
 
 Main.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    style: PropTypes.object
+    style: PropTypes.object,
 }
 
 export default memo(getDidMountHoc(getMainHoc(Main)))

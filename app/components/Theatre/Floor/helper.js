@@ -29,7 +29,7 @@ export const getSeatingRowCoordinates = ({
     windowWidth,
     prosceniumLeft,
     prosceniumWidth,
-    floorHeight
+    floorHeight,
 
 }) => {
     const
@@ -50,13 +50,13 @@ export const getSeatingRowCoordinates = ({
             bunchFactor: 2.2,
 
             // Values are closer together in general when closer to 1.
-            overlapRatio: 0.99
+            overlapRatio: 0.99,
         })
 
     return rowCoordinatesArray.map((rowCoordinates, rowIndex) => {
         const {
                 length: rowHeight,
-                position: rowTop
+                position: rowTop,
             } = rowCoordinates,
 
             seatWidth = rowHeight / SEAT_HEIGHT_TO_WIDTH_RATIO,
@@ -79,7 +79,7 @@ export const getSeatingRowCoordinates = ({
                     maxCount: maxSeats,
 
                     // Start from centre, and go towards left.
-                    reversePosition: true
+                    reversePosition: true,
                 }),
 
             rightSeatsArray =
@@ -92,7 +92,7 @@ export const getSeatingRowCoordinates = ({
                     maxCount: maxSeats + (isEven ? 1 : 0),
                     positionOffset:
                         stageCentreFromLeft
-                        - seatWidthOffset
+                        - seatWidthOffset,
                 }),
 
             seatsArray = _zipTwoArrays(
@@ -106,7 +106,7 @@ export const getSeatingRowCoordinates = ({
             const {
                     length: seatWidth,
                     position: seatLeft,
-                    index
+                    index,
                 } = seat,
 
                 chairIndex =
@@ -120,7 +120,7 @@ export const getSeatingRowCoordinates = ({
                 top: rowTop,
                 left: seatLeft,
                 width: seatWidth,
-                height: rowHeight
+                height: rowHeight,
             }
         })
     })

@@ -12,7 +12,7 @@ const FloorSeat = ({
     top,
     left,
     width,
-    height
+    height,
 
 }) => {
 
@@ -39,7 +39,7 @@ const FloorSeat = ({
                 className: cx(
                     'FloorSeat',
                     chairIndexString
-                )
+                ),
             }}
         >
             <SeatShade
@@ -48,7 +48,7 @@ const FloorSeat = ({
                     top: topFinal,
                     left,
                     width,
-                    height
+                    height,
                 }}
             />
             <SeatShade
@@ -60,7 +60,7 @@ const FloorSeat = ({
                         * Math.pow(1.25, Math.abs(rowIndex)) * 0.0075,
                     left: left + width * chairIndex * 0.01,
                     width,
-                    height
+                    height,
                 }}
             />
         </div>
@@ -77,7 +77,7 @@ FloorSeat.propTypes = {
     top: PropTypes.number.isRequired,
     left: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired
+    height: PropTypes.number.isRequired,
 }
 
 export default memo(FloorSeat)

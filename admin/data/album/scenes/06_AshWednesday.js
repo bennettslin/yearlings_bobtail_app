@@ -7,27 +7,27 @@ import {
     DOOR,
     FIXTURE,
     FLAT,
-    PANEL
+    PANEL,
 } from '../../../../app/constants/scene/things'
 import {
     BENNETT_COUCH_THOUGHT_KEY,
     COURTYARD_KEY,
     CATHOLIC_CHURCH_KEY,
     BERKELEY_BANCROFT_KEY,
-    BERKELEY_CAMPANILE_KEY
+    BERKELEY_CAMPANILE_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
     TIME_MORNING,
     TIME_EVENING,
     TIME_NIGHT,
     SEASON_SPRING,
-    SEASON_THOUGHT
+    SEASON_THOUGHT,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
     CATHERINE,
     AMY,
-    WADE
+    WADE,
 } from '../../../../app/constants/scene/actors'
 import { SMOKER } from '../../../../app/constants/scene/actors/amy'
 import {
@@ -35,26 +35,26 @@ import {
     SOLICITING_OPINION,
     CATHOLIC_PENSIVE,
     CATHOLIC_IDEA,
-    PIOUS
+    PIOUS,
 } from '../../../../app/constants/scene/actors/bennett'
 import {
     WEEPING,
     QUIPPING,
-    PUZZLED
+    PUZZLED,
 } from '../../../../app/constants/scene/actors/catherine'
 import { CATHOLIC_GUY } from '../../../../app/constants/scene/actors/wade'
 import {
     THOUGHT_LARGE__RIGHT,
-    OAKLAND_SIDE__LEVEL
+    OAKLAND_SIDE__LEVEL,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__RIGHT,
     BUBBLE_MEDIUM__RIGHT,
-    BUBBLE_LARGE__RIGHT
+    BUBBLE_LARGE__RIGHT,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     POLICE_ALBUM,
-    NIRVANA_POSTER
+    NIRVANA_POSTER,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     RECYCLABLES__BENNETT,
@@ -66,18 +66,18 @@ import {
     ASH_CAN,
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
-    CAMPUS_TREE_DOUBLE__CAMPANILE
+    CAMPUS_TREE_DOUBLE__CAMPANILE,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BLINDS_OUTSIDE__BENNETT,
     BENNETT_DOOR_OUTSIDE,
     BENNETT_GATE_SIDE,
-    BANCROFT_DOOR
+    BANCROFT_DOOR,
 } from '../../../../app/constants/scene/things/doors'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
-    ELECTRIC_GUITAR
+    ELECTRIC_GUITAR,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     ST_JOSEPHS_CHURCH,
@@ -88,12 +88,12 @@ import {
     BERKELEY_BUILDING_WIDE__CAMPANILE,
     NEAR_BUILDINGS,
     DISTANT_BUILDINGS,
-    DISTANT_HOUSES
+    DISTANT_HOUSES,
 } from '../../../../app/constants/scene/things/flats'
 import {
     WIDE_COUCH_BENNETT,
     WIDE_ARMREST_BENNETT__LEFT,
-    WIDE_ARMREST_BENNETT__RIGHT
+    WIDE_ARMREST_BENNETT__RIGHT,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -104,32 +104,32 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'standing forward, disappointed, defeated',
-                    instance: BREAKUP_DEJECTED
+                    instance: BREAKUP_DEJECTED,
                 },
                 [CATHERINE]: {
                     description: 'walking away, in a bad mood',
-                    instance: WEEPING
-                }
+                    instance: WEEPING,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
                 [RECYCLABLES__BENNETT]: true,
                 [BUSH_SINGLE__COURTYARD]: true,
-                [BUSH_DOUBLE__COURTYARD]: true
+                [BUSH_DOUBLE__COURTYARD]: true,
             },
             [DOOR]: {
                 [BLINDS_OUTSIDE__BENNETT]: true,
                 [BENNETT_DOOR_OUTSIDE]: true,
-                [BENNETT_GATE_SIDE]: true
+                [BENNETT_GATE_SIDE]: true,
             },
             [FLAT]: {
-                [NEAR_BUILDINGS]: true
-            }
+                [NEAR_BUILDINGS]: true,
+            },
         },
         cubes: COURTYARD_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_SPRING }
+        sky: { time: TIME_EVENING, season: SEASON_SPRING },
     },
     {
         unitIndex: 3,
@@ -138,38 +138,38 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'sitting slouched, showing lyrics to Catherine',
-                    instance: SOLICITING_OPINION
+                    instance: SOLICITING_OPINION,
                 },
                 [CATHERINE]: {
                     description: 'sitting upright, droll smile',
-                    instance: QUIPPING
-                }
+                    instance: QUIPPING,
+                },
             },
             [BACKDROP]: {
-                [THOUGHT_LARGE__RIGHT]: true
+                [THOUGHT_LARGE__RIGHT]: true,
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__RIGHT]: true,
                 [BUBBLE_MEDIUM__RIGHT]: true,
-                [BUBBLE_LARGE__RIGHT]: true
+                [BUBBLE_LARGE__RIGHT]: true,
             },
             [CARDBOARD]: {
                 [POLICE_ALBUM]: true,
-                [NIRVANA_POSTER]: true
+                [NIRVANA_POSTER]: true,
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
-                [ELECTRIC_GUITAR]: true
+                [ELECTRIC_GUITAR]: true,
             },
             [PANEL]: {
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
-                [WIDE_ARMREST_BENNETT__RIGHT]: true
-            }
+                [WIDE_ARMREST_BENNETT__RIGHT]: true,
+            },
         },
         cubes: BENNETT_COUCH_THOUGHT_KEY,
-        sky: { season: SEASON_THOUGHT }
+        sky: { season: SEASON_THOUGHT },
     },
     {
         unitIndex: 5,
@@ -178,23 +178,23 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'standing, back forward, hands in pocket',
-                    instance: CATHOLIC_PENSIVE
-                }
+                    instance: CATHOLIC_PENSIVE,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
-                [LAMPPOST__CHURCH]: true
+                [LAMPPOST__CHURCH]: true,
             },
             [FLAT]: {
                 [DISTANT_HOUSES]: true,
                 [ST_JOSEPHS_ANNEX]: true,
-                [ST_JOSEPHS_CHURCH]: true
-            }
+                [ST_JOSEPHS_CHURCH]: true,
+            },
         },
         cubes: CATHOLIC_CHURCH_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_SPRING }
+        sky: { time: TIME_NIGHT, season: SEASON_SPRING },
     },
     {
         unitIndex: 7,
@@ -203,38 +203,38 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side angle, noticing Catholic',
-                    instance: CATHOLIC_IDEA
+                    instance: CATHOLIC_IDEA,
                 },
                 [WADE]: {
                     catholic: {
                         description: 'side angle, walking, looking pious',
-                        instance: CATHOLIC_GUY
-                    }
+                        instance: CATHOLIC_GUY,
+                    },
                 },
                 [AMY]: {
                     smoker: {
                         description: 'walking up stairs, back forward, exhaling smoke',
-                        instance: SMOKER
-                    }
-                }
+                        instance: SMOKER,
+                    },
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
                 [ASH_CAN]: true,
-                [CAMPUS_TREE_SINGLE__BANCROFT]: true
+                [CAMPUS_TREE_SINGLE__BANCROFT]: true,
             },
             [DOOR]: {
-                [BANCROFT_DOOR]: true
+                [BANCROFT_DOOR]: true,
             },
             [FLAT]: {
                 [DISTANT_BUILDINGS]: true,
-                [BERKELEY_BUILDING_WIDE__BANCROFT]: true
-            }
+                [BERKELEY_BUILDING_WIDE__BANCROFT]: true,
+            },
         },
         cubes: BERKELEY_BANCROFT_KEY,
-        sky: { time: TIME_MORNING, season: SEASON_SPRING }
+        sky: { time: TIME_MORNING, season: SEASON_SPRING },
     },
     {
         unitIndex: 8,
@@ -243,30 +243,30 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     description: 'side, walking, looking pious',
-                    instance: PIOUS
+                    instance: PIOUS,
                 },
                 [CATHERINE]: {
                     description: 'walking forward, confused and curious at Bennett',
-                    instance: PUZZLED
-                }
+                    instance: PUZZLED,
+                },
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__LEVEL]: true
+                [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
                 [STINK_PLANT]: true,
                 [SIGNPOST]: true,
                 [CAMPUS_TREE_SINGLE__CAMPANILE]: true,
-                [CAMPUS_TREE_DOUBLE__CAMPANILE]: true
+                [CAMPUS_TREE_DOUBLE__CAMPANILE]: true,
             },
             [FLAT]: {
                 [DISTANT_BUILDINGS]: true,
                 [CAMPANILE]: true,
                 [BERKELEY_BUILDING_TALL]: true,
-                [BERKELEY_BUILDING_WIDE__CAMPANILE]: true
-            }
+                [BERKELEY_BUILDING_WIDE__CAMPANILE]: true,
+            },
         },
         cubes: BERKELEY_CAMPANILE_KEY,
-        sky: { time: TIME_MORNING, season: SEASON_SPRING }
-    }
+        sky: { time: TIME_MORNING, season: SEASON_SPRING },
+    },
 ]

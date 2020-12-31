@@ -3,7 +3,7 @@ import {
     getStartTimeForScene,
     getDurationForScene,
     getStartTimeForVerse,
-    getDurationForVerse
+    getDurationForVerse,
 } from '../api/album/time'
 import { getSongIsLogue } from '../api/album/songs'
 
@@ -12,7 +12,7 @@ export const getSongTrackerWidth = ({
     bannerHoverTime,
     cursorTime,
     playerTime,
-    isPlaying
+    isPlaying,
 
 }) => {
     const songDuration = getDurationForSong(selectedSongIndex)
@@ -35,7 +35,7 @@ export const getSceneTrackerWidth = ({
     selectedSongIndex,
     cursorTime,
     playerTime,
-    isPlaying
+    isPlaying,
 
 }) => {
     if (sceneIndex !== sceneCursorIndex) {
@@ -62,7 +62,7 @@ export const getVerseTrackerLength = ({
     selectedSongIndex,
     cursorTime,
     playerTime,
-    isPlaying
+    isPlaying,
 
 }) => {
     if (

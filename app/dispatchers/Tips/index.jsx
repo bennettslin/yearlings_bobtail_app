@@ -17,7 +17,7 @@ const TipsDispatcher = forwardRef((props, ref) => {
 
     const dispatchTips = ({
         isFromToggle,
-        tipsOption
+        tipsOption,
 
     } = {}) => {
         /**
@@ -33,8 +33,8 @@ const TipsDispatcher = forwardRef((props, ref) => {
                 isFromToggle,
                 isShownNext: isTipsShownNext,
                 prevOption: selectedTipsOption,
-                nextOption: tipsOption
-            })
+                nextOption: tipsOption,
+            }),
         }))
         return true
     }

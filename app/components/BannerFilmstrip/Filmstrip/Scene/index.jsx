@@ -10,13 +10,13 @@ import './style'
 const FilmstripScene = ({
     sceneIndex,
     dispatchSceneIndex,
-    stopPropagation
+    stopPropagation,
 
 }) => {
     const
         {
             sceneLeft,
-            sceneWidth
+            sceneWidth,
         } = JSON.parse(useSelector(getMapSceneDimensionCoordinate(sceneIndex))),
 
         isSceneQueuedOrSelected = useSelector(
@@ -41,9 +41,9 @@ const FilmstripScene = ({
                 ),
                 style: {
                     left: `${sceneLeft}%`,
-                    width: `${sceneWidth}%`
+                    width: `${sceneWidth}%`,
                 },
-                ...!isSceneQueuedOrSelected && { onClick }
+                ...!isSceneQueuedOrSelected && { onClick },
             }}
         >
             <FilmstripCell {...{ sceneIndex }} />
@@ -54,11 +54,11 @@ const FilmstripScene = ({
 FilmstripScene.propTypes = {
     sceneIndex: PropTypes.number.isRequired,
     dispatchSceneIndex: PropTypes.shape({
-        current: PropTypes.func
+        current: PropTypes.func,
     }).isRequired,
     stopPropagation: PropTypes.shape({
-        current: PropTypes.func
-    }).isRequired
+        current: PropTypes.func,
+    }).isRequired,
 }
 
 export default memo(FilmstripScene)

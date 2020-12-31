@@ -34,7 +34,7 @@ const Nav = () => {
                 {...{
                     className: cx(
                         'NavColumnContainer'
-                    )
+                    ),
                 }}
             >
                 <NavColumn {...{ bookIndex: 0 }} />

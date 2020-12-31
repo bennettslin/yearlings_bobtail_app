@@ -15,7 +15,7 @@ const PitchTitle = ({ serverClientPitchIndex }) => (
                 'fontColour__title',
                 'fontSize__largeTitle',
                 'Rancho'
-            )
+            ),
         }}
     >
         <Texts {...{ text: getPitchTitleForIndex(serverClientPitchIndex) }} />
@@ -23,7 +23,7 @@ const PitchTitle = ({ serverClientPitchIndex }) => (
 )
 
 PitchTitle.propTypes = {
-    serverClientPitchIndex: PropTypes.number.isRequired
+    serverClientPitchIndex: PropTypes.number.isRequired,
 }
 
 export default getPitchServerClientHoc(PitchTitle)

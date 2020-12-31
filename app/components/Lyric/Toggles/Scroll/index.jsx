@@ -31,8 +31,8 @@ const LyricToggleScroll = () => {
                 timeout: 200,
                 classNames: {
                     enterActive: 'LyricToggle__shown',
-                    enterDone: 'LyricToggle__shown'
-                }
+                    enterDone: 'LyricToggle__shown',
+                },
             }}
         >
             <div className={cx(
@@ -45,7 +45,7 @@ const LyricToggleScroll = () => {
                     {...{
                         buttonName: LYRIC_SCROLL_BUTTON_KEY,
                         accessKey: LYRIC_SCROLL_TOGGLE_KEY,
-                        handleButtonClick
+                        handleButtonClick,
                     }}
                 />
                 <TipsHand reverse {...{ tipType: AUTOSCROLL }} />

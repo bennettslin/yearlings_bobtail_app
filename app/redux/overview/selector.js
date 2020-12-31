@@ -2,7 +2,7 @@ import { createSelector } from 'reselect'
 import { getIsShown } from '../../helpers/options'
 import {
     getIsToggleInOverview,
-    getIsOverviewPopupVisible
+    getIsOverviewPopupVisible,
 } from '../../helpers/overview'
 import { mapIsPhoneWidth } from '../device/selector'
 import { mapIsSongChangeDone } from '../entrance/selector'
@@ -35,7 +35,7 @@ export const mapIsToggleInOverview = createSelector(
     ) => getIsToggleInOverview({
         isPhoneWidth,
         isHeightlessLyric,
-        isLyricLogue
+        isLyricLogue,
     })
 )
 
@@ -54,6 +54,6 @@ export const getMapIsOverviewPopupVisible = inMain => createSelector(
         isSongChangeDone,
         isLyricLogue,
         isOverlayShown,
-        isOverviewShown
+        isOverviewShown,
     })
 )

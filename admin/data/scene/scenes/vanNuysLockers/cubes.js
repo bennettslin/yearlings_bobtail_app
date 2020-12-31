@@ -6,7 +6,7 @@ import {
     GRASS_COLOUR as H,
     ROOF_COLOUR as C,
     VAN_NUYS_EXTERIOR_COLOUR as X,
-    CONCRETE_PLATFORM_COLOUR as P
+    CONCRETE_PLATFORM_COLOUR as P,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { f, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -20,7 +20,7 @@ export default {
                 [C, X, X, X, X, X, X, C, C, C, D],
                 [C, C, C, C, C, C, C, C, C, C, D],
                 [C, C, C, C, C, C, C, C, C, C, D],
-                [D]
+                [D],
             ],
             zIndices: [
                 [k],
@@ -28,8 +28,8 @@ export default {
                 [f, 2, 2, 2, 2, 2, 2, f, f, f, k],
                 [f, f, f, f, f, f, f, f, f, f, k],
                 [f, f, f, f, f, f, f, f, f, f, k],
-                [k]
-            ]
+                [k],
+            ],
         },
         floor: {
             hslaColours: [
@@ -38,7 +38,7 @@ export default {
                 [P, P, P, P, P, P, P, P, P, P, H],
                 [P, P, P, P, P, P, P, P, P, P, H],
                 [P, P, P, P, P, P, P, P, P, P, H],
-                [H]
+                [H],
             ],
             zIndices: [
                 [0],
@@ -46,8 +46,8 @@ export default {
                 [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
                 [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
                 [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

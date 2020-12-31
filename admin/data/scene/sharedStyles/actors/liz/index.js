@@ -7,7 +7,7 @@ import {
     OPENING_DOOR,
     DEFENDING,
     NOT_HUNGRY,
-    ASLEEP_COUCH
+    ASLEEP_COUCH,
 } from '../../../../../../app/constants/scene/actors/liz'
 import {
     DATE_ENDING,
@@ -19,7 +19,7 @@ import {
     GATE_CODE,
     RUMPLED_LINENS,
     LEAVING_CRUMBLED,
-    EL_TORITO
+    EL_TORITO,
 } from '../../../../../../app/constants/scene/actors/songs'
 import { BENNETT } from '../../../../../../app/constants/scene/actors'
 import { OPAL__SHARED } from '../../../../../../app/constants/scene/sharedStyles/animals'
@@ -41,7 +41,7 @@ export default {
     [LEAVING_CRUMBLED]: null,
     [PETTING_SEATED]: OPAL__SHARED,
     [PETTING_SEATED_PRESENT]: [
-        OPAL__SHARED
+        OPAL__SHARED,
     ],
     [PETTING_STANDING]: OPAL__SHARED,
     [SIFTING_TCHOTCHKES]: BENNETT,
@@ -49,5 +49,5 @@ export default {
     [DEFENDING]: CHINESE_TAKEOUT__SHARED,
     [NOT_HUNGRY]: CHINESE_TAKEOUT__SHARED,
     [ASLEEP_COUCH]: LIZ_LINENS__SHARED,
-    [EL_TORITO]: null
+    [EL_TORITO]: null,
 }

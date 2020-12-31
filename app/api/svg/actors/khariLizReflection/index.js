@@ -3,5 +3,5 @@ import caressReflection from '../../../../../assets/svgs/actors/khariLizReflecti
 import { CARESS_REFLECTION } from '../../../../constants/scene/actors/khariLiz'
 
 export default {
-    [CARESS_REFLECTION]: caressReflection
+    [CARESS_REFLECTION]: caressReflection,
 }

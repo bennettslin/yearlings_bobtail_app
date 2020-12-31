@@ -5,14 +5,14 @@ import { Helmet } from 'react-helmet'
 import {
     mapLyricSongIndex,
     mapLyricVerseIndex,
-    mapLyricAnnotationIndex
+    mapLyricAnnotationIndex,
 } from '../../redux/lyric/selector'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { mapIsPitchShown } from '../../redux/toggle/selector'
 import {
     getPathForIndices,
     getPathForPitchPage,
-    getDocumentHead
+    getDocumentHead,
 } from '../../helpers/url'
 
 const UrlManager = () => {

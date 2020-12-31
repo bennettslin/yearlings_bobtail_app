@@ -1,13 +1,13 @@
 import { getDocument } from '../utils/browser'
 import {
     CSS_WIDTH_GOLDEN_CORD,
-    CSS_WIDTH_UNCANNY_VALLEY
+    CSS_WIDTH_UNCANNY_VALLEY,
 } from '../constants/responsive/deviceWidth'
 
 const _getCarouselLeftAlign = ({
     windowWidth,
     isDesktopWidth,
-    isMonitorWidth
+    isMonitorWidth,
 }) => {
 
     // If mobile, then set halfway, which is the default.
@@ -36,7 +36,7 @@ const _getCarouselLeftAlign = ({
 
 const _getLyricTopAlign = ({
     isDesktopWidth,
-    isLyricExpanded
+    isLyricExpanded,
 }) => {
 
     // If in desktop or lyric column is expanded, set closer to top.
@@ -59,30 +59,30 @@ export const getAlignForScroll = ({
     windowWidth,
     isDesktopWidth,
     isMonitorWidth,
-    isLyricExpanded
+    isLyricExpanded,
 }) => (
     isCarousel ?
         _getCarouselLeftAlign({
             windowWidth,
             isDesktopWidth,
-            isMonitorWidth
+            isMonitorWidth,
         }) :
         _getLyricTopAlign({
             isDesktopWidth,
-            isLyricExpanded
+            isLyricExpanded,
         })
 )
 
 export const getSafeScrollChild = ({
     log,
     scrollClass,
-    index
+    index,
 
 }) => {
     logError({
         log: `${log}\nNo ref found, scrolled by selector: ${selector}`,
         action: 'scroll',
-        label: `class: ${scrollClass}, index: ${index}`
+        label: `class: ${scrollClass}, index: ${index}`,
     })
 
     /**
@@ -103,7 +103,7 @@ export const getCanCarouselAccessShow = ({
     isLyricLogue,
     lyricAnnotationIndex,
     isDotsSlideShown,
-    isLyricExpanded
+    isLyricExpanded,
 
 }) => Boolean(
     /**
@@ -133,7 +133,7 @@ export const getCanLyricScroll = ({
     scrollLyricFromAutoScroll,
     isAutoScroll,
     isLyricExpanded,
-    isHeightlessLyric
+    isHeightlessLyric,
 
 }) => (
     !isLyricLogue && (

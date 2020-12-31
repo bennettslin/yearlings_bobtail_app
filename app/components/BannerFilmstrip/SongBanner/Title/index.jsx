@@ -22,7 +22,7 @@ const SongBannerTitle = () => {
                      * affect song banner width.
                      */
                     'abF'
-                )
+                ),
             }}
         >
             {songTitle}

@@ -2,7 +2,7 @@ import React from 'react'
 import Anchor from '../../Anchor'
 import {
     FACEBOOK_PAGE,
-    INSTAGRAM_PAGE
+    INSTAGRAM_PAGE,
 } from '../../../constants/website'
 import './style'
 
@@ -22,7 +22,7 @@ const SocialMedia = () => {
                     href: FACEBOOK_PAGE,
                     text: 'Facebook',
                     analyticsIdentifier: 'facebook',
-                    handleAnchorClick: handleFacebookClick
+                    handleAnchorClick: handleFacebookClick,
                 }}
             />
             <Anchor
@@ -30,7 +30,7 @@ const SocialMedia = () => {
                     href: INSTAGRAM_PAGE,
                     text: 'Instagram',
                     analyticsIdentifier: 'Instagram',
-                    handleAnchorClick: handleInstagramClick
+                    handleAnchorClick: handleInstagramClick,
                 }}
             />
         </div>

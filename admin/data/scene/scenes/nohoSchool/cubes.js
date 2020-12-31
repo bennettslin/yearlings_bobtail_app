@@ -4,7 +4,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
-    SCHOOL_FLOOR_COLOUR as F
+    SCHOOL_FLOOR_COLOUR as F,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -16,7 +16,7 @@ export default {
                 [V],
                 [V, V, V, V, V, V, V, F, F, F, F, V],
                 [V, V, V, V, V, V, V, F, F, F, D, V],
-                [V, V, V, V, V, V, V, F, F, F, F, V]
+                [V, V, V, V, V, V, V, F, F, F, F, V],
             ],
             zIndices: [
                 [0],
@@ -24,8 +24,8 @@ export default {
                 [1],
                 [1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

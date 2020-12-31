@@ -9,12 +9,12 @@ const _getIndexedVersesForUnit = (unit) => {
      */
     const {
         mainVerses = [],
-        subVerse = []
+        subVerse = [],
     } = unit
 
     return [
         ...mainVerses,
-        ...subVerse
+        ...subVerse,
     ]
 }
 
@@ -49,7 +49,7 @@ const _addUnitVerseLists = (songIndex, song) => {
     return {
         unitVerseIndicesList,
         verseStartTimes,
-        verses
+        verses,
     }
 }
 
@@ -75,12 +75,12 @@ const _addUnitLists = (songIndex, song) => {
                 isBottomSideCard,
                 subVerseType,
                 sideCardType,
-                sideSubCardType
+                sideSubCardType,
             },
             subVerse,
             sideCard,
             sideSubCard,
-            unitDot
+            unitDot,
         } = unit
 
         if (unitDot) {
@@ -156,7 +156,7 @@ const _addLastUnitDotIndex = (songIndex, song) => {
         lastUnitIndex = lyricUnits.length - 1,
         {
             mainVerses,
-            unitDot
+            unitDot,
         } = lyricUnits[lastUnitIndex]
 
     let lastUnitDotIndex = -1
@@ -171,18 +171,18 @@ const _addLastUnitDotIndex = (songIndex, song) => {
 export const addUnitAndVerseMetadata = ({
     songIndex,
     songDuration,
-    song
+    song,
 }) => {
     const {
         unitVerseIndicesList,
         verseStartTimes,
-        verses
+        verses,
     } = _addUnitVerseLists(songIndex, song)
 
     addVerseDurations({
         songDuration,
         verseStartTimes,
-        song
+        song,
     })
 
     _addUnitLists(songIndex, song)
@@ -191,6 +191,6 @@ export const addUnitAndVerseMetadata = ({
     return {
         unitVerseIndicesList,
         verseStartTimes,
-        verses
+        verses,
     }
 }

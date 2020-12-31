@@ -2,31 +2,31 @@ import { createSelector } from 'reselect'
 import {
     getAlignForScroll,
     getCanCarouselAccessShow,
-    getCanLyricScroll
+    getCanLyricScroll,
 } from '../../helpers/scroll'
 import { mapIsPlaying } from '../audio/selector'
 import {
     mapIsMonitorWidth,
-    mapIsDesktopWidth
+    mapIsDesktopWidth,
 } from '../device/selector'
 import { mapSelectedDotsBit } from '../dots/selector'
 import {
     mapIsLyricLogue,
-    mapLyricAnnotationIndex
+    mapLyricAnnotationIndex,
 } from '../lyric/selector'
 import {
     mapScrollLyricAlways,
-    mapScrollLyricFromAutoScroll
+    mapScrollLyricFromAutoScroll,
 } from '../scrollLyric/selector'
 import {
     mapIsAutoScroll,
     mapIsLyricExpanded,
     mapIsCarouselShown,
-    mapIsDotsSlideShown
+    mapIsDotsSlideShown,
 } from '../toggle/selector'
 import {
     mapWindowWidth,
-    mapIsHeightlessLyric
+    mapIsHeightlessLyric,
 } from '../viewport/selector'
 
 export const getMapAlignForScroll = isCarousel => createSelector(
@@ -44,7 +44,7 @@ export const getMapAlignForScroll = isCarousel => createSelector(
         windowWidth,
         isDesktopWidth,
         isMonitorWidth,
-        isLyricExpanded
+        isLyricExpanded,
     })
 )
 
@@ -69,7 +69,7 @@ export const getMapCanCarouselAccessShow = inLyric => createSelector(
         isLyricLogue,
         lyricAnnotationIndex,
         isDotsSlideShown,
-        isLyricExpanded
+        isLyricExpanded,
     })
 )
 
@@ -96,6 +96,6 @@ export const mapCanLyricScroll = createSelector(
         scrollLyricFromAutoScroll,
         isAutoScroll,
         isLyricExpanded,
-        isHeightlessLyric
+        isHeightlessLyric,
     })
 )

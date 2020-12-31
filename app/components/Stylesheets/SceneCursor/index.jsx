@@ -5,7 +5,7 @@ import { getMaxSceneCountForAlbum } from '../../../api/album/count'
 import {
     SCENE_BEFORE_PREFIX,
     SCENE_AFTER_PREFIX,
-    SCENE_CURSOR_CHILD_PREFIX
+    SCENE_CURSOR_CHILD_PREFIX,
 } from '../../../constants/cursor'
 import {
     COLOUR__PAST__MEDLIGHT,
@@ -15,7 +15,7 @@ import {
     COLOUR__FUTURE__LIGHTER,
     COLOUR__FUTURE__LIGHT,
     COLOUR__FUTURE__DARK,
-    COLOUR__FUTURE__DARKER
+    COLOUR__FUTURE__DARKER,
 } from '../../../scss/exports/style'
 
 const SceneCursorStylesheets = () => (
@@ -29,8 +29,8 @@ const SceneCursorStylesheets = () => (
                 getStyle: index => ({
                     'background-color': index % 2 ?
                         COLOUR__PAST__MEDLIGHT :
-                        COLOUR__PAST__MEDIUM
-                })
+                        COLOUR__PAST__MEDIUM,
+                }),
             }}
         />
         <Stylesheet
@@ -42,8 +42,8 @@ const SceneCursorStylesheets = () => (
                 getStyle: index => ({
                     'background-color': index % 2 ?
                         COLOUR__FUTURE__DARK :
-                        COLOUR__FUTURE__DARKER
-                })
+                        COLOUR__FUTURE__DARKER,
+                }),
             }}
         />
         {/* This is redundant for now. I might change the colours later. */}
@@ -69,8 +69,8 @@ const SceneCursorStylesheets = () => (
                 getStyle: index => ({
                     'background-color': index % 2 ?
                         COLOUR__FUTURE__LIGHTER :
-                        COLOUR__FUTURE__LIGHT
-                })
+                        COLOUR__FUTURE__LIGHT,
+                }),
             }}
         />
         <Stylesheet
@@ -82,8 +82,8 @@ const SceneCursorStylesheets = () => (
                 getStyle: index => ({
                     'background-color': index % 2 ?
                         COLOUR__PAST__DARK :
-                        COLOUR__PAST__DARKER
-                })
+                        COLOUR__PAST__DARKER,
+                }),
             }}
         />
         <Stylesheet
@@ -95,8 +95,8 @@ const SceneCursorStylesheets = () => (
                 getStyle: index => ({
                     'background-color': index % 2 ?
                         COLOUR__FUTURE__DARK :
-                        COLOUR__FUTURE__DARKER
-                })
+                        COLOUR__FUTURE__DARKER,
+                }),
             }}
         />
     </>

@@ -7,11 +7,11 @@ import { mapIsActivated } from '../../redux/activated/selector'
 import { mapIsBannerHovering } from '../../redux/banner/selector'
 import {
     mapIsAnchorMoused,
-    mapIsScrolling
+    mapIsScrolling,
 } from '../../redux/hover/selector'
 import {
     mapIsSliderTouched,
-    mapIsLyricsLocked
+    mapIsLyricsLocked,
 } from '../../redux/slider/selector'
 
 const TouchWrapper = ({ didMount, children }) => {
@@ -42,8 +42,8 @@ const TouchWrapper = ({ didMount, children }) => {
                             'TW__lyricsLocked' :
                             'TW__lyricsUnlocked',
                         'abF'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {children}
@@ -53,7 +53,7 @@ const TouchWrapper = ({ didMount, children }) => {
 
 TouchWrapper.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default memo(getDidMountHoc(TouchWrapper))

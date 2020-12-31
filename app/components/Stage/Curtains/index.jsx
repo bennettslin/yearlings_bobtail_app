@@ -44,7 +44,7 @@ const Curtains = ({ style }) => {
                 timeout: 275,
                 classNames: { enterDone: 'Curtains__parted' },
                 onExited,
-                onEntered
+                onEntered,
             }}
         >
             <div
@@ -54,7 +54,7 @@ const Curtains = ({ style }) => {
                         'abF',
                         'ovH'
                     ),
-                    style
+                    style,
                 }}
             >
                 <InlineSvg
@@ -66,7 +66,7 @@ const Curtains = ({ style }) => {
                         svgClassName: cx(
                             'curtainSide',
                             'fillTransition__dimTheatre'
-                        )
+                        ),
                     }}
                 >
                     {curtainSide}
@@ -80,7 +80,7 @@ const Curtains = ({ style }) => {
                         svgClassName: cx(
                             'curtainSide',
                             'fillTransition__dimTheatre'
-                        )
+                        ),
                     }}
                 >
                     {curtainSide}
@@ -93,7 +93,7 @@ const Curtains = ({ style }) => {
                         svgClassName: cx(
                             'curtainTop',
                             'fillTransition__dimTheatre'
-                        )
+                        ),
                     }}
                 >
                     {curtainTop}
@@ -105,7 +105,7 @@ const Curtains = ({ style }) => {
 
 Curtains.propTypes = {
     // Passed by stage HOC.
-    style: PropTypes.object
+    style: PropTypes.object,
 }
 
 export default memo(getStageHoc(Curtains))

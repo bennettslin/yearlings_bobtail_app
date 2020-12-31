@@ -11,5 +11,5 @@ export default {
     cubes,
     things,
     sharedStyles,
-    wires
+    wires,
 }

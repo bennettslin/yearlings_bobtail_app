@@ -20,8 +20,8 @@ const AlbumContainer = ({ children }) => {
                 {...{
                     value: {
                         playerTime,
-                        setPlayerTime
-                    }
+                        setPlayerTime,
+                    },
                 }}
             >
                 <AudioManager />
@@ -34,7 +34,7 @@ const AlbumContainer = ({ children }) => {
 }
 
 AlbumContainer.propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
 }
 
 export default memo(AlbumContainer)

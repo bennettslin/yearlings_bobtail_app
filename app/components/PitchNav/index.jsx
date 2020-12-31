@@ -10,11 +10,11 @@ import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
 import { getPitchSegmentIndices, getPitchSegmentsCount } from '../../api/pitch/segments'
 import {
     ARROW_LEFT,
-    ARROW_RIGHT
+    ARROW_RIGHT,
 } from '../../constants/access'
 import {
     PITCH_NEXT_BUTTON_KEY,
-    PITCH_PREVIOUS_BUTTON_KEY
+    PITCH_PREVIOUS_BUTTON_KEY,
 } from '../../constants/buttons'
 import './style'
 
@@ -41,7 +41,7 @@ const PitchNav = () => {
                 className: cx(
                     'PitchNav',
                     'fCC'
-                )
+                ),
             }}
         >
             <Button
@@ -50,7 +50,7 @@ const PitchNav = () => {
                     buttonName: PITCH_PREVIOUS_BUTTON_KEY,
                     accessKey: ARROW_LEFT,
                     isDisabled: pitchSegmentIndex === 1,
-                    handleButtonClick: handlePreviousClick
+                    handleButtonClick: handlePreviousClick,
                 }}
             />
             {(isDesktopWidth || isTabletWidth) && (
@@ -60,7 +60,7 @@ const PitchNav = () => {
                             {...{
                                 key: pitchIndex,
                                 pitchIndex,
-                                handleButtonClick
+                                handleButtonClick,
                             }}
                         />
                     )
@@ -73,7 +73,7 @@ const PitchNav = () => {
                     accessKey: ARROW_RIGHT,
                     isDisabled:
                         pitchSegmentIndex === getPitchSegmentsCount(),
-                    handleButtonClick: handleNextClick
+                    handleButtonClick: handleNextClick,
                 }}
             />
             <PitchDispatcher {...{ ref: dispatchPitch }} />

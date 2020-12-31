@@ -1,11 +1,11 @@
 import {
     CUTOUT,
-    FLAT
+    FLAT,
 } from '../../../../../app/constants/scene/things'
 import { CLIFF_TREE } from '../../../../../app/constants/scene/things/cutouts'
 import {
     CLIFF_GRAVES_FAR,
-    CLIFF_GRAVES_NEAR
+    CLIFF_GRAVES_NEAR,
 } from '../../../../../app/constants/scene/things/flats'
 
 export default {
@@ -13,18 +13,18 @@ export default {
         [CLIFF_TREE]: {
             yIndex: 1,
             xPosition: 1,
-            scaleFactor: 0.5
-        }
+            scaleFactor: 0.5,
+        },
     },
     [FLAT]: {
         [CLIFF_GRAVES_FAR]: {
             xPosition: 9.8,
-            scaleFactor: 0.48
+            scaleFactor: 0.48,
         },
         [CLIFF_GRAVES_NEAR]: {
             yIndex: 5,
             xPosition: 8.6,
-            scaleFactor: 0.4
-        }
-    }
+            scaleFactor: 0.4,
+        },
+    },
 }

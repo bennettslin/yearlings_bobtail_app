@@ -119,7 +119,7 @@ import {
     BALLED_FOIL__ALLEY,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
-    HOSPITAL_RECORD_PLAYER
+    HOSPITAL_RECORD_PLAYER,
 } from '../../../../constants/scene/things/fixtures'
 
 export default {
@@ -187,5 +187,5 @@ export default {
     [BALLED_FOIL__ALLEY]: balledFoil,
     [LIZ_PHONE_BASE]: lizPhoneBase,
     [LIZ_PHONE_BASE_REFLECTION]: lizPhoneBaseReflection,
-    [HOSPITAL_RECORD_PLAYER]: hospitalRecordPlayer
+    [HOSPITAL_RECORD_PLAYER]: hospitalRecordPlayer,
 }

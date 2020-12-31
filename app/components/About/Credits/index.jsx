@@ -4,7 +4,7 @@ import './style'
 const AboutCredits = () => (
     <div
         {...{
-            className: 'AboutCredits'
+            className: 'AboutCredits',
         }}
     >
         <span>

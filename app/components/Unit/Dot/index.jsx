@@ -13,7 +13,7 @@ import { mapIsActivated } from '../../../redux/activated/selector'
 import { getMapHasSelectedDot } from '../../../redux/dots/selector'
 import {
     mapLyricSongIndex,
-    getMapIsLyricAnnotation
+    getMapIsLyricAnnotation,
 } from '../../../redux/lyric/selector'
 import { mapIsSliderMoving } from '../../../redux/slider/selector'
 import './style'
@@ -26,7 +26,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
         isSliderMoving = useSelector(mapIsSliderMoving),
         {
             annotationIndex,
-            dotsBit
+            dotsBit,
         } = getDotForUnit(lyricSongIndex, unitIndex),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
         isAccessed = useSelector(getMapIsAnnotationAccessed(annotationIndex)),
@@ -38,7 +38,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
         }
 
         dispatch(updateAnnotationStore({
-            queuedAnnotationIndex: annotationIndex
+            queuedAnnotationIndex: annotationIndex,
         }))
         return true
     }
@@ -60,7 +60,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
 
                     // Scroll to dot stanza block upon annotation selection.
                     `${ANCHOR_SCROLL}__${annotationIndex}`
-                )
+                ),
             }}
         >
             {/* Scroll to unit dot at bottom, not unit middle. */}
@@ -72,7 +72,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
                     isSelected,
                     isAccessed,
                     annotationIndex,
-                    handleAnchorClick
+                    handleAnchorClick,
                 }}
             />
         </div>
@@ -80,7 +80,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
 })
 
 UnitDot.propTypes = {
-    unitIndex: PropTypes.number.isRequired
+    unitIndex: PropTypes.number.isRequired,
 }
 
 export default memo(UnitDotParent)

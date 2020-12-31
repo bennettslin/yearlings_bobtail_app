@@ -4,7 +4,7 @@ import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY,
     PREVIOUS_SCENE_KEY,
-    NEXT_SCENE_KEY
+    NEXT_SCENE_KEY,
 } from '../../constants/access'
 
 export const getKeyName = e => {

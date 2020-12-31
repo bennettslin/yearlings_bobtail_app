@@ -10,7 +10,7 @@ const VALID_ADMIN_PATHS = [
     'previewer',
     'progress',
     'skies',
-    'things'
+    'things',
 ]
 
 const PITCH_PATH = 'pitch'

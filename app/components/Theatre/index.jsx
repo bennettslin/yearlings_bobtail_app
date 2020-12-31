@@ -37,7 +37,7 @@ const Theatre = ({ didMount }) => {
                 timeout: 275,
                 classNames: { enterDone: 'Theatre__visible' },
                 onExit,
-                onEntered
+                onEntered,
             }}
         >
             <div className={cx(
@@ -59,7 +59,7 @@ const Theatre = ({ didMount }) => {
 }
 
 Theatre.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default memo(getDidMountHoc(Theatre))

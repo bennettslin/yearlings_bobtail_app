@@ -3,7 +3,7 @@ import { BASEMENT_BED_MAGIC_CUBES } from './fearful/cubes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GRASS_COLOUR as H,
-    NIGHT_COLOUR as Z
+    NIGHT_COLOUR as Z,
 } from '../../../../../app/constants/scene/cubes/colours'
 import { DEFAULT_CEILING } from '../basement/cubes'
 
@@ -14,8 +14,8 @@ const DEFAULT_FLOOR = {
         [3, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 3],
         [3, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 3],
         [3, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3],
-        [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]
-    ]
+        [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3],
+    ],
 }
 
 export default {
@@ -23,17 +23,17 @@ export default {
         ceiling: {
             hslaColours: [
                 [D],
-                [Z]
+                [Z],
             ],
-            zIndices: DEFAULT_CEILING.zIndices
+            zIndices: DEFAULT_CEILING.zIndices,
         },
         floor: {
             hslaColours: [
                 [H],
-                [Z]
+                [Z],
             ],
-            zIndices: DEFAULT_FLOOR.zIndices
-        }
+            zIndices: DEFAULT_FLOOR.zIndices,
+        },
     },
-    ...BASEMENT_BED_MAGIC_CUBES
+    ...BASEMENT_BED_MAGIC_CUBES,
 }

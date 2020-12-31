@@ -20,7 +20,7 @@ export const getTwoToThePowerOfN = (exponent, number = 2) => {
 
 export const getBitFromObject = ({
     keysList,
-    trueFalseObject
+    trueFalseObject,
 }) => {
 
     // If no keys array is given, assume 1-based indices.
@@ -44,7 +44,7 @@ export const getBitFromObject = ({
 export const getObjectFromBit = ({
     keysList,
     keysCount = 0,
-    bit
+    bit,
 }) => {
 
     /**

@@ -4,7 +4,7 @@ import { WEDDING_KEY } from '../../../../../app/constants/scene/scenes'
 import {
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
-    PLATFORM_COLOUR as P
+    PLATFORM_COLOUR as P,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 /**
@@ -30,7 +30,7 @@ export default {
                 [P, P, P, H],
                 [P, P, P, H],
                 [H, P, H],
-                [H]
+                [H],
             ],
             zIndices: [
                 [0],
@@ -38,8 +38,8 @@ export default {
                 [4, 4, 4, 3],
                 [4, 4, 4, 3],
                 [3, 4, 3],
-                [3]
-            ]
-        }
-    }
+                [3],
+            ],
+        },
+    },
 }

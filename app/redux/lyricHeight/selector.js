@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 import {
     getLyricDynamicHeight,
-    getLyricOverviewHeightStyle
+    getLyricOverviewHeightStyle,
 } from '../../helpers/resize/section'
 import { mapIsLyricLogue } from '../lyric/selector'
 import { mapStageHeight } from '../stage/selector'
@@ -11,7 +11,7 @@ import {
     mapWindowHeight,
     mapIsHeightlessLyric,
     mapMenuHeight,
-    mapCanCarouselNavMount
+    mapCanCarouselNavMount,
 } from '../viewport/selector'
 
 export const mapLyricDynamicHeight = createSelector(
@@ -34,7 +34,7 @@ export const mapLyricDynamicHeight = createSelector(
         menuHeight,
         stageHeight,
         deviceWidthIndex,
-        windowHeight
+        windowHeight,
     })
 )
 
@@ -55,6 +55,6 @@ export const mapLyricOverviewHeightStyle = createSelector(
         isLyricLogue,
         isHeightlessLyric,
         menuHeight,
-        isLyricExpanded
+        isLyricExpanded,
     })
 )

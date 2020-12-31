@@ -15,9 +15,9 @@ const getMainHoc = MainComponent => {
                 {...{
                     style: {
                         top: `${menuHeight}px`,
-                        height: mainHeightStyle
+                        height: mainHeightStyle,
                     },
-                    ...props
+                    ...props,
                 }}
             />
         )

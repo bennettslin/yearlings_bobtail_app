@@ -6,7 +6,7 @@ import './style'
 
 const ButtonTitle = ({
     title,
-    isSelected
+    isSelected,
 
 }) => {
     return Boolean(title) && (
@@ -15,7 +15,7 @@ const ButtonTitle = ({
                 className: cx(
                     'ButtonTitle',
                     'abF'
-                )
+                ),
             }}
         >
             <div
@@ -28,7 +28,7 @@ const ButtonTitle = ({
                         'Rancho',
                         'textShadow__dark',
                         'fCC'
-                    )
+                    ),
                 }}
             >
                 {title}
@@ -39,7 +39,7 @@ const ButtonTitle = ({
 
 ButtonTitle.propTypes = {
     title: PropTypes.string,
-    isSelected: PropTypes.bool
+    isSelected: PropTypes.bool,
 }
 
 export default memo(ButtonTitle)

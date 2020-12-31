@@ -3,7 +3,7 @@ import { OAKLAND_COMMERCIAL_KEY } from '../../../../../app/constants/scene/scene
 import {
     DEFAULT_CLEAR_COLOUR as D,
     STREET_COLOUR as T,
-    PAVEMENT_COLOUR as V
+    PAVEMENT_COLOUR as V,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -15,7 +15,7 @@ export default {
                 [V, V, V, V, T, T, T, T, V],
                 [V, V, V, T, T, T, T, T, T, V],
                 [V, V, T, T, T, T, T, T, T, T, V],
-                [T]
+                [T],
             ],
             zIndices: [
                 [0],
@@ -23,8 +23,8 @@ export default {
                 [1, 1, 1, 1, 0, 0, 0, 0, 1],
                 [1, 1, 1, 0, 0, 0, 0, 0, 0, 1],
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-                [0]
-            ]
-        }
-    }
+                [0],
+            ],
+        },
+    },
 }

@@ -8,7 +8,7 @@ import { IS_USER_AGENT_DESKTOP } from '../../../constants/device'
 import { mapIsAccessOn } from '../../../redux/access/selector'
 import {
     mapIsDesktopWidth,
-    mapIsPhoneOrMiniWidth
+    mapIsPhoneOrMiniWidth,
 } from '../../../redux/device/selector'
 import './style'
 
@@ -35,15 +35,15 @@ const Tooltip = ({ buttonName }) => {
                 type: 'light',
                 place: getTooltipPlacement({
                     buttonName,
-                    isDesktopWidth
-                })
+                    isDesktopWidth,
+                }),
             }}
         />
     )
 }
 
 Tooltip.propTypes = {
-    buttonName: PropTypes.string.isRequired
+    buttonName: PropTypes.string.isRequired,
 }
 
 export default memo(Tooltip)

@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
 import {
     mapSelectedSongIndex,
-    mapSelectedVerseIndex
+    mapSelectedVerseIndex,
 } from '../selected/selector'
 import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { PLAYERS_STORE } from '../../constants/store'

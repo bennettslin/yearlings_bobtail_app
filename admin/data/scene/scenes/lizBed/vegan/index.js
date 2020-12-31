@@ -1,12 +1,12 @@
 import {
     BENNETT,
     KHARI_LIZ,
-    KHARI_LIZ_REFLECTION
+    KHARI_LIZ_REFLECTION,
 } from '../../../../../../app/constants/scene/actors'
 import { BROKEN_HEARTED } from '../../../../../../app/constants/scene/actors/bennett'
 import {
     CARESS,
-    CARESS_REFLECTION
+    CARESS_REFLECTION,
 } from '../../../../../../app/constants/scene/actors/khariLiz'
 
 export default {
@@ -15,19 +15,19 @@ export default {
             yIndex: 4,
             xPosition: 9,
             zOffset: -0.09,
-            layerYIndex: 5
-        }
+            layerYIndex: 5,
+        },
     },
     [KHARI_LIZ]: {
         [CARESS]: {
             yIndex: 4,
-            xPosition: 5
-        }
+            xPosition: 5,
+        },
     },
     [KHARI_LIZ_REFLECTION]: {
         [CARESS_REFLECTION]: {
             yIndex: 2,
-            xPosition: 5
-        }
-    }
+            xPosition: 5,
+        },
+    },
 }

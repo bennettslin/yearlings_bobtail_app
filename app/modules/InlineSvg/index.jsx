@@ -11,7 +11,7 @@ const propTypes = {
     svgClassName: PropTypes.string,
     siblingPlacedFront: PropTypes.bool,
     siblingComponent: PropTypes.node,
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
 }
 
 const InlineSvg = ({
@@ -34,7 +34,7 @@ const InlineSvg = ({
                     // When not in previewer, make position absolute.
                     !notAbsoluteFullContainer && 'abF'
                 ),
-                style
+                style,
             }}
         >
             <ReactInlineSvg
@@ -42,7 +42,7 @@ const InlineSvg = ({
                     className: svgClassName,
                     xmlns: 'http://www.w3.org/2000/svg',
                     src: children,
-                    ...rest
+                    ...rest,
                 }}
             />
         </div>

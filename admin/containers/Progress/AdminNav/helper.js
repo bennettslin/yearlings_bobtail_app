@@ -9,7 +9,7 @@ export const getSongTasks = songIndex => (
 export const getSumOfTasks = (tasks = []) => {
     const sumTasks = {
         workedHours: 0,
-        neededHours: 0
+        neededHours: 0,
     }
 
     tasks.forEach(task => {

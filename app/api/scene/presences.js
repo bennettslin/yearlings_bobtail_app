@@ -5,13 +5,13 @@ import { ACTOR } from '../../../app/constants/scene'
 const {
     actors: ACTOR_ARRANGEMENTS,
     things: THING_ARRANGEMENTS,
-    layerPresencesList
+    layerPresencesList,
 } = getScene()
 
 export const getPresencesForLayer = ({
     presenceType,
     actorKey,
-    yIndex
+    yIndex,
 
 }) => {
     const presencesEntity = layerPresencesList[yIndex][presenceType]
@@ -30,7 +30,7 @@ export const getPresencesForLayer = ({
 export const getArrangementForPresence = ({
     presenceType,
     actorKey,
-    presenceKey
+    presenceKey,
 
 }) => {
     const arrangement = presenceType === ACTOR ?
@@ -51,7 +51,7 @@ export const getIsShownInSceneForPresence = ({
     yIndex,
     presenceType,
     actorKey,
-    presenceKey
+    presenceKey,
 
 }) => {
     const

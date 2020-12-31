@@ -10,14 +10,14 @@ export default (
             const
                 newState = {
                     ...state,
-                    ...payload
+                    ...payload,
                 },
                 {
                     didCurtainsClose,
                     didStageReset,
                     isSongSelectComplete,
                     didSceneExit,
-                    isSceneScrollComplete
+                    isSceneScrollComplete,
                 } = newState
 
             return {
@@ -28,15 +28,15 @@ export default (
                     didStageReset &&
                     isSongSelectComplete
                 ) && {
-                    isSongChangeDone: true
+                    isSongChangeDone: true,
                 },
                 ...(
                     // The conditions by which scene change is done.
                     didSceneExit &&
                     isSceneScrollComplete
                 ) && {
-                    isSceneChangeDone: true
-                }
+                    isSceneChangeDone: true,
+                },
             }
         }
         default:

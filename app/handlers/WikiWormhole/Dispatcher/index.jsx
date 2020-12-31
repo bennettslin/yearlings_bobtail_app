@@ -7,7 +7,7 @@ import { mapAccessedWikiWormholeIndex } from '../../../redux/access/selector'
 import { mapSelectedDotsBit } from '../../../redux/dots/selector'
 import {
     mapSelectedSongIndex,
-    mapSelectedAnnotationIndex
+    mapSelectedAnnotationIndex,
 } from '../../../redux/selected/selector'
 
 const WikiWormholeDispatcher = forwardRef((props, ref) => {
@@ -20,7 +20,7 @@ const WikiWormholeDispatcher = forwardRef((props, ref) => {
 
     const dispatchWikiWormhole = ({
         annotationIndex = selectedAnnotationIndex,
-        direction
+        direction,
     } = {}) => {
         const
             selectedDotKeys = getDotKeysFromBit(selectedDotsBit),
@@ -36,8 +36,8 @@ const WikiWormholeDispatcher = forwardRef((props, ref) => {
                 selectedAnnotationIndex: annotationIndex,
                 selectedDotKeys,
                 initialWikiWormholeIndex,
-                direction
-            })
+                direction,
+            }),
         }))
     }
 

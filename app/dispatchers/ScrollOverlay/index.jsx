@@ -37,7 +37,7 @@ const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollElement }, ref) => {
 })
 
 ScrollOverlayDispatcher.propTypes = {
-    getLyricScrollElement: PropTypes.func.isRequired
+    getLyricScrollElement: PropTypes.func.isRequired,
 }
 
 export default memo(ScrollOverlayDispatcher)

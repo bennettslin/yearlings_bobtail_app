@@ -5,11 +5,11 @@ import afterglowReflection from '../../../../../assets/svgs/actors/bennettLizRef
 import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
-    AFTERGLOW_REFLECTION
+    AFTERGLOW_REFLECTION,
 } from '../../../../constants/scene/actors/bennettLiz'
 
 export default {
     [HARD_ON_REFLECTION]: hardOnReflection,
     [MISSIONARY_REFLECTION]: missionaryReflection,
-    [AFTERGLOW_REFLECTION]: afterglowReflection
+    [AFTERGLOW_REFLECTION]: afterglowReflection,
 }

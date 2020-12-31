@@ -26,7 +26,7 @@ const ScorePopup = ({ didMount }) => {
             {...{
                 popupName: 'ScorePopup',
                 isVisible: isScoreShown,
-                handleCloseClick
+                handleCloseClick,
             }}
         >
             <Score />
@@ -35,7 +35,7 @@ const ScorePopup = ({ didMount }) => {
 }
 
 ScorePopup.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default memo(getDidMountHoc(ScorePopup))

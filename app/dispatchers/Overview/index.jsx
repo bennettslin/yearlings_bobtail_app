@@ -18,7 +18,7 @@ const OverviewDispatcher = forwardRef((props, ref) => {
 
     const dispatchOverview = ({
         isFromToggle,
-        overviewOption
+        overviewOption,
 
     } = {}) => {
         if (isSelectedLogue) {
@@ -30,15 +30,15 @@ const OverviewDispatcher = forwardRef((props, ref) => {
                 isFromToggle,
                 isShownNext: isOverviewShownNext,
                 prevOption: selectedOverviewOption,
-                nextOption: overviewOption
+                nextOption: overviewOption,
             }),
             /**
              * If tips is shown, it overrides overview. So manually hide tips
              * to allow overview to be shown.
              */
             ...isTipsShown && {
-                selectedTipsOption: HIDDEN
-            }
+                selectedTipsOption: HIDDEN,
+            },
         }))
         return true
     }

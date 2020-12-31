@@ -1,7 +1,7 @@
 import {
     ANDREW,
     BRAD_BENNETT,
-    SASHA
+    SASHA,
 } from '../../../../app/constants/scene/actors'
 import { FEIGNING_FEAR } from '../../../../app/constants/scene/actors/andrew'
 import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett'
@@ -10,14 +10,14 @@ import { INDIGNANT } from '../../../../app/constants/scene/actors/sasha'
 export default [
     {
         type: SASHA,
-        instance: INDIGNANT
+        instance: INDIGNANT,
     },
     {
         type: ANDREW,
-        instance: FEIGNING_FEAR
+        instance: FEIGNING_FEAR,
     },
     {
         type: BRAD_BENNETT,
-        instance: TYING_TETHER
-    }
+        instance: TYING_TETHER,
+    },
 ]

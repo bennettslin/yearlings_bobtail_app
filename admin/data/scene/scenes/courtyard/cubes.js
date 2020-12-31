@@ -7,7 +7,7 @@ import {
     ROOF_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
-    APARTMENT_EXTERIOR_COLOUR as X
+    APARTMENT_EXTERIOR_COLOUR as X,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { d, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -25,7 +25,7 @@ export default {
                 [X, C],
                 [X, C, D],
                 [X, C, D],
-                [X, C, D]
+                [X, C, D],
             ],
             zIndices: [
                 [0],
@@ -33,8 +33,8 @@ export default {
                 [1, f, f],
                 [d, f, k],
                 [d, f, k],
-                [1, f, k]
-            ]
+                [1, f, k],
+            ],
         },
         floor: {
             hslaColours: [
@@ -43,7 +43,7 @@ export default {
                 [V],
                 [V],
                 [V],
-                [V]
+                [V],
             ],
             zIndices: [
                 [0],
@@ -51,8 +51,8 @@ export default {
                 [1],
                 [1],
                 [1],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

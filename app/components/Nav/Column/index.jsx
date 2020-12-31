@@ -41,7 +41,7 @@ const NavColumn = ({ bookIndex }) => {
                 {...{
                     bookIndex,
                     isInShownColumn: isNavColumnShown,
-                    handleButtonClick: handleNavSongSelect
+                    handleButtonClick: handleNavSongSelect,
                 }}
             />
 
@@ -50,13 +50,13 @@ const NavColumn = ({ bookIndex }) => {
                 <NavBookLogue
                     {...{
                         bookIndex,
-                        handleButtonClick: handleNavSongSelect
+                        handleButtonClick: handleNavSongSelect,
                     }}
                 /> :
                 <NavBookToggle
                     {...{
                         bookIndex,
-                        handleButtonClick: handleNavBookClick
+                        handleButtonClick: handleNavBookClick,
                     }}
                 />
             }
@@ -67,7 +67,7 @@ const NavColumn = ({ bookIndex }) => {
 }
 
 NavColumn.propTypes = {
-    bookIndex: PropTypes.number.isRequired
+    bookIndex: PropTypes.number.isRequired,
 }
 
 export default memo(NavColumn)

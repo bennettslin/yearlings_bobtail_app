@@ -22,7 +22,7 @@ import { getSceneData } from './helpers'
 
 export const {
     albumScenes,
-    layerPresencesList
+    layerPresencesList,
 
 } = getSceneData([
     _00_Prologue,
@@ -44,5 +44,5 @@ export const {
     _16_Cremated,
     _17_VeganProclamation,
     _18_My100000thDream,
-    _19_Epilogue
+    _19_Epilogue,
 ])

@@ -3,5 +3,5 @@ import blissfulGuilty from '../../../../../assets/svgs/actors/christopherBennett
 import { BLISSFUL_GUILTY } from '../../../../constants/scene/actors/christopherBennett'
 
 export default {
-    [BLISSFUL_GUILTY]: blissfulGuilty
+    [BLISSFUL_GUILTY]: blissfulGuilty,
 }

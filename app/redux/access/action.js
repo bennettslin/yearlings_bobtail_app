@@ -2,15 +2,15 @@
 import { setBoolInStorage } from '../../helpers/storage'
 import {
     hasKey,
-    getDefinedOnlyPayload
+    getDefinedOnlyPayload,
 } from '../../helpers/action'
 import {
     IS_ACCESS_ON,
-    ACCESS_STORE
+    ACCESS_STORE,
 } from '../../constants/store'
 import {
     ACCESS_DOT_DEFAULTS,
-    ACCESS_NAV_DEFAULTS
+    ACCESS_NAV_DEFAULTS,
 } from './default'
 
 export const updateAccessStore = payload => {
@@ -23,16 +23,16 @@ export const updateAccessStore = payload => {
 
     return {
         type: ACCESS_STORE,
-        payload: getDefinedOnlyPayload(payload)
+        payload: getDefinedOnlyPayload(payload),
     }
 }
 
 export const resetAccessedDot = () => ({
     type: ACCESS_STORE,
-    payload: ACCESS_DOT_DEFAULTS
+    payload: ACCESS_DOT_DEFAULTS,
 })
 
 export const resetAccessedNav = () => ({
     type: ACCESS_STORE,
-    payload: ACCESS_NAV_DEFAULTS
+    payload: ACCESS_NAV_DEFAULTS,
 })

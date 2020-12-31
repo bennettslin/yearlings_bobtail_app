@@ -4,20 +4,20 @@ import { convertPresenceKeyToClassName } from '../../helpers/format'
 const {
     wires: {
         actors: ACTOR_WIRES,
-        things: THING_WIRES
-    }
+        things: THING_WIRES,
+    },
 } = getScene()
 
 const getWireForActor = ({
     actorKey,
-    presenceKey
+    presenceKey,
 }) => (
     ACTOR_WIRES[actorKey] || {}
 )[presenceKey]
 
 const getWireForThing = ({
     presenceType,
-    presenceKey
+    presenceKey,
 }) => (
     THING_WIRES[presenceType] || {}
 )[convertPresenceKeyToClassName(presenceKey)]
@@ -25,7 +25,7 @@ const getWireForThing = ({
 const getWireConfig = ({
     actorKey,
     presenceType,
-    presenceKey
+    presenceKey,
 
 }) => (
     actorKey ?
@@ -36,13 +36,13 @@ const getWireConfig = ({
 export const getWires = ({
     actorKey,
     presenceType,
-    presenceKey
+    presenceKey,
 
 }) => {
     const wire = getWireConfig({
         actorKey,
         presenceType,
-        presenceKey
+        presenceKey,
     })
 
     if (wire) {
@@ -64,13 +64,13 @@ export const getWires = ({
 export const getWirePlacedFront = ({
     actorKey,
     presenceType,
-    presenceKey
+    presenceKey,
 
 }) => {
     const wire = getWireConfig({
         actorKey,
         presenceType,
-        presenceKey
+        presenceKey,
     })
 
     // If there is no wire, return null.

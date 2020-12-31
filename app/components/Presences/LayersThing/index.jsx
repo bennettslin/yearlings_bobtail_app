@@ -9,14 +9,14 @@ const LayersThing = ({ yIndex }) => (
             {...{
                 key: presenceType,
                 presenceType,
-                yIndex
+                yIndex,
             }}
         />
     ))
 )
 
 LayersThing.propTypes = {
-    yIndex: PropTypes.number.isRequired
+    yIndex: PropTypes.number.isRequired,
 }
 
 export default memo(LayersThing)

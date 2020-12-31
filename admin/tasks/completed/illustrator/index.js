@@ -21,7 +21,7 @@ export const illustrator = {
     flats,
     furnitures,
     panels,
-    puppets
+    puppets,
 }
 
 export default [
@@ -35,5 +35,5 @@ export default [
     ...flats,
     ...furnitures,
     ...panels,
-    ...puppets
+    ...puppets,
 ]

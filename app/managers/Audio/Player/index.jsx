@@ -3,7 +3,7 @@ import React, {
     useEffect,
     useRef,
     useState,
-    memo
+    memo,
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
@@ -15,17 +15,17 @@ import {
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
     logEndByPlayer,
-    logEndByFinalVerse
+    logEndByFinalVerse,
 } from './helper'
 import {
     updateAudioStore,
-    resetAudioQueue
+    resetAudioQueue,
 } from '../../../redux/audio/action'
 import {
     mapIsPlaying,
     mapQueuedTogglePlay,
     mapQueuedPlayFromLogue,
-    mapCanPromisePlay
+    mapCanPromisePlay,
 } from '../../../redux/audio/selector'
 import { getMapPlayerPausedTime } from '../../../redux/players/selector'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
@@ -35,7 +35,7 @@ import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 const Player = ({
     songIndex,
     handleSongEnd,
-    updateCurrentTime
+    updateCurrentTime,
 
 }) => {
     const
@@ -128,10 +128,10 @@ const Player = ({
             // If this returns true, repeat song.
             const {
                 songEnded,
-                doRepeat
+                doRepeat,
             } = updateCurrentTime({
                 currentTime,
-                fromListen: true
+                fromListen: true,
             })
 
             if (songEnded) {
@@ -213,7 +213,7 @@ const Player = ({
                 onCanPlayThrough,
                 onListen,
                 onEnded,
-                src: getMp3ForSong(songIndex)
+                src: getMp3ForSong(songIndex),
             }}
         />
     )
@@ -222,7 +222,7 @@ const Player = ({
 Player.propTypes = {
     songIndex: PropTypes.number.isRequired,
     handleSongEnd: PropTypes.func.isRequired,
-    updateCurrentTime: PropTypes.func.isRequired
+    updateCurrentTime: PropTypes.func.isRequired,
 }
 
 export default memo(Player)

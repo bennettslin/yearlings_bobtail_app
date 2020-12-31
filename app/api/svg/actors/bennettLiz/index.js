@@ -23,7 +23,7 @@ import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
-    FINAL_DREAM
+    FINAL_DREAM,
 } from '../../../../constants/scene/actors/bennettLiz'
 
 export default {
@@ -38,5 +38,5 @@ export default {
     [PAMPAS]: pampas,
     [GETTING_DARK]: gettingDark,
     [CLIFF]: cliff,
-    [FINAL_DREAM]: finalDream
+    [FINAL_DREAM]: finalDream,
 }

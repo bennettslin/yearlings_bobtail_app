@@ -38,7 +38,7 @@ const Texts = forwardRef(({
                         ref,
                         text: textEntry,
                         beginsVerse,
-                        endsVerse
+                        endsVerse,
                     }}
                 />
             )
@@ -57,7 +57,7 @@ const Texts = forwardRef(({
                  * in the previous value.
                  */
                 beginsVerse: prevBeginsVerse || !hasRecursed,
-                endsVerse: prevEndsVerse || !hasRecursed
+                endsVerse: prevEndsVerse || !hasRecursed,
             }}
         />
     )
@@ -69,10 +69,10 @@ Texts.propTypes = {
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array,
-        PropTypes.object
+        PropTypes.object,
     ]),
     beginsVerse: PropTypes.bool,
-    endsVerse: PropTypes.bool
+    endsVerse: PropTypes.bool,
 }
 
 export default memo(Texts)

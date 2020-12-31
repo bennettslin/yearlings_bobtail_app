@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import {
     mapIsSongChangeDone,
-    mapIsSceneChangeDone
+    mapIsSceneChangeDone,
 } from '../../redux/entrance/selector'
 import { mapIsDarkIndoorScene } from '../../redux/scene/selector'
 import Transition from 'react-transition-group/Transition'
@@ -39,7 +39,7 @@ const Scene = () => {
                 // Allow for CSS transition of 0.25s.
                 timeout: 275,
                 onExited,
-                onEntered
+                onEntered,
             }}
         >
             <div
@@ -48,7 +48,7 @@ const Scene = () => {
                         'Scene',
                         isDarkIndoorScene && 'dark__indoor',
                         'abF'
-                    )
+                    ),
                 }}
             >
                 <Presences {...{ yIndex: -1 }} />

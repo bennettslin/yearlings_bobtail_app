@@ -2,13 +2,13 @@ import {
     BUBBLE,
     CUTOUT,
     DOOR,
-    FLAT
+    FLAT,
 } from '../../../../../app/constants/scene/things'
 import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
     BUBBLE_LARGE__GO_KART,
-    THOUGHT_GO_KART
+    THOUGHT_GO_KART,
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
     CACTUS_SINGLE__LIZ_ENDING,
@@ -18,17 +18,17 @@ import {
     TRAFFIC_LIGHT_FRONT,
     CYPRESS_DOUBLE__LIZ_GATE,
     CYPRESS_SINGLE__LIZ_ENDED,
-    CYPRESS_SINGLE__LIZ_ENDING
+    CYPRESS_SINGLE__LIZ_ENDING,
 } from '../../../../../app/constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_OUTSIDE__ENDING,
     LIZ_BLINDS_OUTSIDE__ENDED,
     LIZ_GATE_OUTSIDE,
-    LIZ_GATE_OUTSIDE_OPEN
+    LIZ_GATE_OUTSIDE_OPEN,
 } from '../../../../../app/constants/scene/things/doors'
 import {
     PUBLIC_FAR__LIZ_GATE,
-    PUBLIC_NEAR__LIZ_GATE
+    PUBLIC_NEAR__LIZ_GATE,
 } from '../../../../../app/constants/scene/things/flats'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
@@ -37,102 +37,102 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             yIndex: 5,
             xPosition: 6.72,
             zOffset: 5.7,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
         },
         [BUBBLE_MEDIUM__GO_KART]: {
             yIndex: 5,
             xPosition: 7.44,
             zOffset: 5.5,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
         },
         [BUBBLE_SMALL__GO_KART]: {
             yIndex: 5,
             xPosition: 7.4,
             zOffset: 5.2,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
         },
         [THOUGHT_GO_KART]: {
             yIndex: 5,
             xPosition: 4.8,
-            zOffset: 4.3
-        }
+            zOffset: 4.3,
+        },
     },
     [CUTOUT]: {
         [CYPRESS_DOUBLE__LIZ_GATE]: {
             yIndex: 2,
             xPosition: 0.5,
-            scaleFactor: 0.6
+            scaleFactor: 0.6,
         },
         [CYPRESS_SINGLE__LIZ_ENDED]: {
             yIndex: 2,
             xPosition: 7.5,
-            scaleFactor: 0.6
+            scaleFactor: 0.6,
         },
         [CYPRESS_SINGLE__LIZ_ENDING]: {
             yIndex: 2,
             xPosition: 10.5,
-            scaleFactor: 0.6
+            scaleFactor: 0.6,
         },
         [CACTUS_SINGLE__LIZ_ENDING]: {
             yIndex: 4,
-            xPosition: 10
+            xPosition: 10,
         },
         [CACTUS_DOUBLE__LIZ_GATE]: {
             yIndex: 4,
             xPosition: 1.5,
-            flipHorizontal: true
+            flipHorizontal: true,
         },
         [CACTUS_SINGLE__LIZ_ENDED]: {
             yIndex: 4,
-            xPosition: 7
+            xPosition: 7,
         },
         [LAMPPOST__LIZ_GATE]: {
             yIndex: 3,
             xPosition: 11,
-            scaleFactor: 0.15
+            scaleFactor: 0.15,
         },
         [TRAFFIC_LIGHT_FRONT]: {
             yIndex: 5,
             xPosition: 8.5,
-            scaleFactor: 0.3
-        }
+            scaleFactor: 0.3,
+        },
     },
     [DOOR]: {
         [LIZ_BLINDS_OUTSIDE__ENDING]: {
             yIndex: 2,
             xPosition: 6,
-            zOffset: 2.25
+            zOffset: 2.25,
         },
         [LIZ_BLINDS_OUTSIDE__ENDED]: {
             yIndex: 2,
             xPosition: 3,
-            zOffset: 2.25
+            zOffset: 2.25,
         },
         [LIZ_GATE_OUTSIDE]: {
             yIndex: 4,
             xPosition: 6,
             zOffset: 0.09,
-            scaleFactor: 0.69
+            scaleFactor: 0.69,
         },
         [LIZ_GATE_OUTSIDE_OPEN]: {
             yIndex: 4,
             xPosition: 3.3,
             zOffset: -0.07,
-            scaleFactor: 0.69
-        }
+            scaleFactor: 0.69,
+        },
     },
     [FLAT]: {
         [PUBLIC_FAR__LIZ_GATE]: {
             yIndex: 1,
             xPosition: 10.95,
             scaleFactor: 0.4,
-            flipHorizontal: true
+            flipHorizontal: true,
         },
         [PUBLIC_NEAR__LIZ_GATE]: {
             yIndex: 2,
             xPosition: 12,
             scaleFactor: 0.5,
-            flipHorizontal: true
-        }
-    }
+            flipHorizontal: true,
+        },
+    },
 }

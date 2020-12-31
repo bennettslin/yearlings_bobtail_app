@@ -9,7 +9,7 @@ export const getClientX = ({ nativeEvent: { touches, clientX } }) => {
 export const getElementRatioForClientX = ({
     clientX,
     elementLeft,
-    elementWidth
+    elementWidth,
 
 }) => {
     const elementX = clientX - elementLeft,

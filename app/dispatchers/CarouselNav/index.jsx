@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import { scrollCarouselToAnnotation } from '../../redux/scrollCarousel/action'
 import {
     updateIsCarouselExpanded,
-    updateIsNavExpanded
+    updateIsNavExpanded,
 } from '../../redux/toggle/action'
 import { mapAccessedAnnotationIndex } from '../../redux/access/selector'
 import { mapIsCarouselNotShowable } from '../../redux/carousel/selector'
 import { mapSelectedAnnotationIndex } from '../../redux/selected/selector'
 import {
     mapIsCarouselExpanded,
-    mapIsNavExpanded
+    mapIsNavExpanded,
 } from '../../redux/toggle/selector'
 import { mapCanCarouselNavMount } from '../../redux/viewport/selector'
 

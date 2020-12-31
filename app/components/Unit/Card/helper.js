@@ -6,7 +6,7 @@ import {
     getFormTypeForUnit,
     getSubVerseTypeForUnit,
     getSideCardTypeForUnit,
-    getSideSubCardTypeForUnit
+    getSideSubCardTypeForUnit,
 } from '../../../api/album/units'
 
 export const getUnitFormType = ({
@@ -15,7 +15,7 @@ export const getUnitFormType = ({
     isMainVerses,
     isSubVerse,
     isSideCard,
-    isSideSubCard
+    isSideSubCard,
 
 }) => {
     if (isMainVerses) {
@@ -35,7 +35,7 @@ export const getUnitCardVerses = ({
     isMainVerses,
     isSubVerse,
     isSideCard,
-    isSideSubCard
+    isSideSubCard,
 
 }) => {
     let unitCardVerses
@@ -59,7 +59,7 @@ export const getIsUnitTruncatable = ({
     songIndex,
     unitIndex,
     isMainVerses,
-    isSubVerse
+    isSubVerse,
 
 }) => (
     Boolean(getSideCardForUnit(songIndex, unitIndex)) &&

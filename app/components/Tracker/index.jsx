@@ -7,7 +7,7 @@ import './style'
 const Tracker = ({
     isNotShown,
     isVertical,
-    trackerLength
+    trackerLength,
 
 }) => (
     <CSSTransition
@@ -17,7 +17,7 @@ const Tracker = ({
         {...{
             in: Number.isFinite(trackerLength),
             timeout: 200,
-            classNames: { enterDone: 'Tracker__visible' }
+            classNames: { enterDone: 'Tracker__visible' },
         }}
     >
         <div
@@ -33,9 +33,9 @@ const Tracker = ({
                      * verse bar is shown.
                      */
                     ...isNotShown && {
-                        visibility: 'hidden'
-                    }
-                }
+                        visibility: 'hidden',
+                    },
+                },
             }}
         />
     </CSSTransition>
@@ -44,7 +44,7 @@ const Tracker = ({
 Tracker.propTypes = {
     isNotShown: PropTypes.bool,
     isVertical: PropTypes.bool,
-    trackerLength: PropTypes.number
+    trackerLength: PropTypes.number,
 }
 
 export default memo(Tracker)

@@ -2,7 +2,7 @@
 import { setInStorage } from '../../helpers/storage'
 import {
     PITCH_SEGMENT_INDEX,
-    PITCH_STORE
+    PITCH_STORE,
 } from '../../constants/store'
 
 export const setPitchSegmentIndex = (pitchSegmentIndex = 0) => {
@@ -11,6 +11,6 @@ export const setPitchSegmentIndex = (pitchSegmentIndex = 0) => {
 
     return {
         type: PITCH_STORE,
-        payload: { pitchSegmentIndex }
+        payload: { pitchSegmentIndex },
     }
 }

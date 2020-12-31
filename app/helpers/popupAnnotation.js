@@ -8,7 +8,7 @@ export const getIsPopupAnnotationShown = ({
     isCarouselShown,
     canCarouselNavMount,
     isOverlayingAnnotation,
-    isWikiShown
+    isWikiShown,
 
 }) => {
     // First determine if *any* popup annotation is shown.

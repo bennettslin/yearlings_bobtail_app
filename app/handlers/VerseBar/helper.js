@@ -2,7 +2,7 @@ export const getVerseBarsStatus = ({
     isLyricExpanded,
     isHeightlessLyric,
     lyricSectionRect,
-    verseElement
+    verseElement,
 }) => {
 
     if (!verseElement) {
@@ -16,11 +16,11 @@ export const getVerseBarsStatus = ({
 
     const {
             lyricSectionTop,
-            lyricSectionBottom
+            lyricSectionBottom,
         } = JSON.parse(lyricSectionRect),
         {
             top,
-            bottom
+            bottom,
         } = verseElement.getBoundingClientRect()
 
     // Show verse bar above.

@@ -1,14 +1,14 @@
 // Actions for viewport size.
 import {
     hasKey,
-    getDefinedOnlyPayload
+    getDefinedOnlyPayload,
 } from '../../helpers/action'
 import { VIEWPORT_STORE } from '../../constants/store'
 import { getDeviceWidthIndex } from '../../helpers/resize/device'
 import { getIsHeightlessLyric } from '../../helpers/resize/hidden'
 import {
     getIsTwoRowMenu,
-    getMenuHeight
+    getMenuHeight,
 } from '../../helpers/resize/responsive'
 import { getCanCarouselNavMount } from '../../helpers/resize/mount'
 import { getStageDimensionCoordinates } from '../../helpers/resize/stage'
@@ -24,17 +24,17 @@ export const updateViewportStore = payload => {
             isHeightlessLyric = getIsHeightlessLyric({
                 deviceWidthIndex,
                 windowHeight,
-                windowWidth
+                windowWidth,
             }),
             isTwoRowMenu = getIsTwoRowMenu({
                 deviceWidthIndex,
-                windowWidth
+                windowWidth,
             }),
             menuHeight = getMenuHeight({ isTwoRowMenu }),
             canCarouselNavMount = getCanCarouselNavMount({
                 deviceWidthIndex,
                 windowHeight,
-                isHeightlessLyric
+                isHeightlessLyric,
             }),
             stageDimensionCoordinates = getStageDimensionCoordinates({
                 deviceWidthIndex,
@@ -43,21 +43,21 @@ export const updateViewportStore = payload => {
                 menuHeight,
                 isHeightlessLyric,
                 isTwoRowMenu,
-                canCarouselNavMount
+                canCarouselNavMount,
             }),
             prosceniumDimensionCoordinates = getProsceniumDimensionCoordinates(
                 stageDimensionCoordinates
             ),
             {
                 ceilingHeight,
-                floorHeight
+                floorHeight,
             } = getCeilingFloorHeight({
                 deviceWidthIndex,
                 windowHeight,
                 menuHeight,
                 prosceniumDimensionCoordinates,
                 isHeightlessLyric,
-                isTwoRowMenu
+                isTwoRowMenu,
             })
 
         payload = {
@@ -71,13 +71,13 @@ export const updateViewportStore = payload => {
             stageDimensionCoordinates,
             prosceniumDimensionCoordinates,
             ceilingHeight,
-            floorHeight
+            floorHeight,
         }
     }
 
     return ({
         type: VIEWPORT_STORE,
-        payload: getDefinedOnlyPayload(payload)
+        payload: getDefinedOnlyPayload(payload),
     })
 }
 
@@ -88,12 +88,12 @@ export const updateViewportPitchStore = payload => {
         const deviceWidthIndex = getDeviceWidthIndex(windowWidth)
 
         payload = {
-            deviceWidthIndex
+            deviceWidthIndex,
         }
     }
 
     return ({
         type: VIEWPORT_STORE,
-        payload: getDefinedOnlyPayload(payload)
+        payload: getDefinedOnlyPayload(payload),
     })
 }

@@ -8,12 +8,12 @@ import { getVerseIndexForAnnotation } from '../../../api/album/annotations'
 import {
     mapQueuedAnnotationIndex,
     mapQueuedAnnotationFromCarousel,
-    mapQueuedAnnotationFromLyricVerse
+    mapQueuedAnnotationFromLyricVerse,
 } from '../../../redux/annotation/selector'
 import { mapIsEarShown } from '../../../redux/ear/selector'
 import {
     mapSelectedSongIndex,
-    mapSelectedAnnotationIndex
+    mapSelectedAnnotationIndex,
 } from '../../../redux/selected/selector'
 import { mapEarColumnIndex } from '../../../redux/session/selector'
 
@@ -36,7 +36,7 @@ const AnnotationListener = () => {
 
             const canDispatchAnnotation = dispatchAnnotation.current.index({
                 annotationIndex: queuedAnnotationIndex,
-                fromCarousel: queuedAnnotationFromCarousel
+                fromCarousel: queuedAnnotationFromCarousel,
             })
 
             /**
@@ -66,7 +66,7 @@ const AnnotationListener = () => {
                 selectedSongIndex,
                 selectedAnnotationIndex,
                 earColumnIndex,
-                isEarShown
+                isEarShown,
             })
 
             if (!showAnnotationForColumn) {

@@ -9,7 +9,7 @@ import { mapActivatedVerseIndex } from '../../../redux/activated/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
-    mapIsSelectedLogue
+    mapIsSelectedLogue,
 } from '../../../redux/selected/selector'
 
 const ActivatedVerseDispatcher = forwardRef((props, ref) => {
@@ -36,7 +36,7 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
         }
 
         dispatch(updateActivatedStore({
-            activatedVerseIndex: nextVerseIndex
+            activatedVerseIndex: nextVerseIndex,
         }))
 
         // Turn off auto scroll once verse or scene is activated.
@@ -52,7 +52,7 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
             selectedSongIndex,
             selectedVerseIndex,
             activatedVerseIndex,
-            direction
+            direction,
         })
 
         activateVerseIndex(nextVerseIndex)
@@ -62,7 +62,7 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
 
     useImperativeHandle(ref, () => ({
         index: activateVerseIndex,
-        direction: activateVerseDirection
+        direction: activateVerseDirection,
     }))
     return null
 })

@@ -22,8 +22,8 @@ const AboutTitle = ({ didMount }) => {
                             'fontColour__title',
                             'fontSize__largeTitle',
                             'Rancho'
-                        )
-                    }
+                        ),
+                    },
                 }}
             >
                 {ALBUM_TITLE}
@@ -37,8 +37,8 @@ const AboutTitle = ({ didMount }) => {
                                 'About__bandName',
                                 'fontColour__title',
                                 'Rancho'
-                            )
-                        }
+                            ),
+                        },
                     }}
                 >
                     <Anchor
@@ -46,7 +46,7 @@ const AboutTitle = ({ didMount }) => {
                             href: BOBTAIL_YEARLINGS_WEBSITE,
                             text: 'Bobtail Yearlings',
                             analyticsIdentifier: 'BobtailYearlings',
-                            handleAnchorClick
+                            handleAnchorClick,
                         }}
                     />
                 </span>
@@ -56,7 +56,7 @@ const AboutTitle = ({ didMount }) => {
 }
 
 AboutTitle.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default getDidMountHoc(AboutTitle)

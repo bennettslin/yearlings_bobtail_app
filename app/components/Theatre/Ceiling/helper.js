@@ -5,7 +5,7 @@ const RAFTER_HEIGHT_TO_WIDTH_RATIO = 0.1 // How tall is the rafter.
 export const getRaftersRowCoordinates = ({
     prosceniumLeft,
     prosceniumWidth,
-    ceilingHeight
+    ceilingHeight,
 
 }) => {
     const stageCentreFromLeft = prosceniumLeft + (prosceniumWidth / 2),
@@ -18,13 +18,13 @@ export const getRaftersRowCoordinates = ({
             minLength: ceilingHeight,
             firstLength: firstRowRafterHeight,
             multiplyFactor: 1.5, // Gets wider faster with larger value.
-            overlapRatio: 0.75 // Less bunched up when closer to 0.
+            overlapRatio: 0.75, // Less bunched up when closer to 0.
         })
 
     return rawCoordinatesArray.map(rawCoordinates => {
         const {
                 length: rafterHeight,
-                position: rafterBottom
+                position: rafterBottom,
             } = rawCoordinates,
 
             rafterWidth = rafterHeight /
@@ -42,7 +42,7 @@ export const getRaftersRowCoordinates = ({
             top: rafterTop,
             left: rafterLeft,
             width: rafterWidth,
-            height: rafterHeight
+            height: rafterHeight,
         }
     })
 }

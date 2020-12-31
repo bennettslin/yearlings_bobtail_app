@@ -158,7 +158,7 @@ import {
     HOSTESS_STAND,
     WEDDING_CROWD,
     CLIFF_TREE,
-    IV_DRIP
+    IV_DRIP,
 } from '../../../../constants/scene/things/cutouts'
 
 export default {
@@ -255,6 +255,6 @@ export default {
     [HOSTESS_STAND]: hostessStand,
     [WEDDING_CROWD]: weddingCrowd,
     [CLIFF_TREE]: cliffTree,
-    [IV_DRIP]: ivDrip
+    [IV_DRIP]: ivDrip,
 }
 

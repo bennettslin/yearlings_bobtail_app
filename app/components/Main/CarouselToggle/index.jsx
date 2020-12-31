@@ -32,7 +32,7 @@ const CarouselToggle = () => {
                     buttonName: CAROUSEL_NAV_BUTTON_KEY,
                     buttonIdentifier: carouselNavIdentifier,
                     accessKey: CAROUSEL_TOGGLE_KEY,
-                    handleButtonClick
+                    handleButtonClick,
                 }}
             />
             <TipsHand {...{ tipType: CAROUSEL }} />

@@ -4,7 +4,7 @@ import ProgressFooter from '../ProgressFooter'
 import {
     getSumOfTasks,
     getAllTasks,
-    getAllTasksV2
+    getAllTasksV2,
 } from './helper'
 
 /*************

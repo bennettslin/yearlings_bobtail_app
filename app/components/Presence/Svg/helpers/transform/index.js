@@ -6,7 +6,7 @@ const _getSvgTransformForPresence = ({
     skewX,
     skewY,
     rotateX,
-    rotateY
+    rotateY,
 }) => {
     /**
      * Operation order is right to left. Translate should be last.
@@ -52,7 +52,7 @@ export const setSvgTransform = ({
     skewX,
     skewY,
     rotateX,
-    rotateY
+    rotateY,
 
 }) => {
     const transformStyle = _getSvgTransformForPresence({
@@ -61,7 +61,7 @@ export const setSvgTransform = ({
         skewX,
         skewY,
         rotateX,
-        rotateY
+        rotateY,
     })
 
     if (!transformStyle) {
@@ -74,6 +74,6 @@ export const setSvgTransform = ({
     return [
         svgString.slice(0, startIndex),
         transformAttribute,
-        svgString.slice(startIndex)
+        svgString.slice(startIndex),
     ].join('')
 }

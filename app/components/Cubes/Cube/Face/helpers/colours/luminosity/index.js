@@ -2,12 +2,12 @@ import {
     CEILING,
     TILE,
     SIDE,
-    FRONT
+    FRONT,
 } from '../../../../../../../constants/scene/cubes'
 
 import {
     CUBE_X_AXIS_LENGTH,
-    CUBE_Z_AXIS_LENGTH
+    CUBE_Z_AXIS_LENGTH,
 } from '../../../../../../../constants/cubeIndex'
 
 const
@@ -22,7 +22,7 @@ const
 const _getReducedLuminosityForTileFace = ({
     l,
     level,
-    zIndex
+    zIndex,
 }) => {
     // All ceiling tiles share the same reduced luminosity.
     if (level === CEILING) {
@@ -64,7 +64,7 @@ const _getReducedLuminosityForFrontFace = ({ l, yIndex }) => {
 const REDUCED_LUMINOSITY_GETTER_MAP = {
     [TILE]: _getReducedLuminosityForTileFace,
     [SIDE]: _getReducedLuminosityForSideFace,
-    [FRONT]: _getReducedLuminosityForFrontFace
+    [FRONT]: _getReducedLuminosityForFrontFace,
 }
 
 export const getReducedLuminosity = ({ face, ...props }) => (

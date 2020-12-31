@@ -1,11 +1,11 @@
 import {
     CATHOLIC_GUY,
-    WATCHING
+    WATCHING,
 } from '../../../../../../app/constants/scene/actors/wade'
 import {
     MINGLING,
     PROTESTER,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../../../app/constants/scene/actors/songs'
 import { BUDWEISER__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
 import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
@@ -16,5 +16,5 @@ export default {
     [MINGLING]: BUDWEISER__SHARED,
     [EPILOGUE]: null,
     [CATHOLIC_GUY]: BACKPACK__SHARED,
-    [PROTESTER]: BOOK__SHARED
+    [PROTESTER]: BOOK__SHARED,
 }

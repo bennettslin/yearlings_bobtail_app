@@ -1,6 +1,6 @@
 import {
     BENNETT,
-    HOWIE
+    HOWIE,
 } from '../../../../../app/constants/scene/actors'
 import { ATTIC } from '../../../../../app/constants/scene/actors/songs'
 
@@ -10,13 +10,13 @@ export default {
             yIndex: 2,
             xPosition: 3.5,
             zOffset: -0.11,
-            layerYIndex: 3
-        }
+            layerYIndex: 3,
+        },
     },
     [HOWIE]: {
         [ATTIC]: {
             yIndex: 3,
-            xPosition: 9
-        }
-    }
+            xPosition: 9,
+        },
+    },
 }

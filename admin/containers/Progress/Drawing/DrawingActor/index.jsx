@@ -7,7 +7,7 @@ const DrawingActor = ({
     characters,
     rolesTodoCount,
     halfRolesTodoCount,
-    rolesTotalCount
+    rolesTotalCount,
 
 }) => (
     <div
@@ -34,7 +34,7 @@ const DrawingActor = ({
                                     workedHours,
                                     instance,
                                     doneForNow,
-                                    halfDoneForNow
+                                    halfDoneForNow,
                                 } = character
 
                                 return (
@@ -46,7 +46,7 @@ const DrawingActor = ({
                                                 'flex-row',
                                                 doneForNow && 'done',
                                                 halfDoneForNow && 'halfDone'
-                                            )
+                                            ),
                                         }}
                                     >
                                         <div
@@ -54,7 +54,7 @@ const DrawingActor = ({
                                                 className: cx(
                                                     'role-info',
                                                     'song-index-column'
-                                                )
+                                                ),
                                             }}
                                         >
                                             {songIndex}
@@ -64,7 +64,7 @@ const DrawingActor = ({
                                                 className: cx(
                                                     'role-info',
                                                     'scene-index-column'
-                                                )
+                                                ),
                                             }}
                                         >
                                             {sceneIndex}
@@ -74,7 +74,7 @@ const DrawingActor = ({
                                                 className: cx(
                                                     'role-info',
                                                     'worked-hours-column'
-                                                )
+                                                ),
                                             }}
                                         >
                                             {workedHours.toFixed(1) || 0}
@@ -84,7 +84,7 @@ const DrawingActor = ({
                                                 className: cx(
                                                     'role-info',
                                                     'instance-column'
-                                                )
+                                                ),
                                             }}
                                         >
                                             {instance}

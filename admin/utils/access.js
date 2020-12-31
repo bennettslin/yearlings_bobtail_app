@@ -1,6 +1,6 @@
 import {
     getPreviewerSvgMapForActor,
-    getPreviewerSvgMapForThing
+    getPreviewerSvgMapForThing,
 } from './svg'
 
 import WHOLE_ACTORS_LIST from '../constants/actors'
@@ -10,7 +10,7 @@ import {
     ARROW_UP,
     ARROW_DOWN,
     ARROW_LEFT,
-    ARROW_RIGHT
+    ARROW_RIGHT,
 } from '../../app/constants/access'
 
 import { getKeyName } from '../../app/managers/Key/helper'
@@ -19,7 +19,7 @@ const accessPresenceType = ({
     isActor,
     keyName,
     presenceType,
-    selectPresence
+    selectPresence,
 }) => {
     const typesList = isActor ? WHOLE_ACTORS_LIST : THINGS_LIST
 
@@ -49,7 +49,7 @@ const accessPresenceKey = ({
     keyName,
     presenceType,
     presenceKey,
-    selectPresence
+    selectPresence,
 }) => {
     const
         mapGetter = isActor ? getPreviewerSvgMapForActor : getPreviewerSvgMapForThing,
@@ -80,7 +80,7 @@ export const accessPresence = ({
     isActor,
     presenceType,
     presenceKey,
-    selectPresence
+    selectPresence,
 }) => {
     const keyName = getKeyName(e)
 
@@ -101,7 +101,7 @@ export const accessPresence = ({
             keyName,
             selectPresence,
             presenceType,
-            presenceKey
+            presenceKey,
         })
     }
 }

@@ -3,5 +3,5 @@ import things from './things'
 
 export default {
     actors,
-    things
+    things,
 }

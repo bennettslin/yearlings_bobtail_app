@@ -6,11 +6,11 @@ export default {
     [PUPPET_SHOW_KEY]: {
         floor: {
             hslaColours: [
-                [G]
+                [G],
             ],
             zIndices: [
-                [0]
-            ]
-        }
-    }
+                [0],
+            ],
+        },
+    },
 }

@@ -2,17 +2,17 @@ import { getEarStatusForSong } from '../api/album/songs'
 import {
     getIsPhoneWidth,
     getIsTabletWidth,
-    getIsMonitorWidth
+    getIsMonitorWidth,
 } from './responsive'
 
 // FIXME: This can just get individual device widths directly.
 export const getIsDoublespeakerShown = ({
     deviceWidthIndex,
-    songIndex
+    songIndex,
 }) => {
     const {
         hasSideCards,
-        isDoublespeaker
+        isDoublespeaker,
     } = getEarStatusForSong(songIndex)
 
     // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.

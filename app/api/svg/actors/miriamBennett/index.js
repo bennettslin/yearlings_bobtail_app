@@ -8,7 +8,7 @@ import {
     ASLEEP_FEARFUL,
     FENDING_OFF,
     COWGIRL,
-    BLOWJOB
+    BLOWJOB,
 } from '../../../../constants/scene/actors/miriamBennett'
 
 import { ASLEEP } from '../../../../constants/scene/actors/songs'
@@ -18,5 +18,5 @@ export default {
     [ASLEEP_FEARFUL]: asleepFearful,
     [FENDING_OFF]: fendingOff,
     [COWGIRL]: cowgirl,
-    [BLOWJOB]: blowjob
+    [BLOWJOB]: blowjob,
 }

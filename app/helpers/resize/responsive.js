@@ -1,17 +1,17 @@
 import {
     CSS_HEIGHT_MENU,
-    HEIGHT_TWO_ROW_MENU
+    HEIGHT_TWO_ROW_MENU,
 } from '../../constants/responsive'
 import {
     BANNER_SMALL_TEXT_WIDTH,
     CSS_WIDTH_MENU_BREAKPOINT,
     CSS_WIDTH_UNCANNY_VALLEY,
-    CSS_WIDTH_GOLDEN_CORD
+    CSS_WIDTH_GOLDEN_CORD,
 } from '../../constants/responsive/deviceWidth'
 import {
     getIsDesktopWidth,
     getIsMonitorWidth,
-    getIsLaptopWidth
+    getIsLaptopWidth,
 } from '../responsive'
 
 export const getIsLyricExpandable = (deviceWidthIndex) => {
@@ -20,7 +20,7 @@ export const getIsLyricExpandable = (deviceWidthIndex) => {
 
 export const getIsTwoRowMenu = ({
     deviceWidthIndex,
-    windowWidth
+    windowWidth,
 
 }) => {
     let lyricColumnExtraWidth = 0
@@ -38,7 +38,7 @@ export const getIsTwoRowMenu = ({
 }
 
 export const getMenuHeight = ({
-    isTwoRowMenu
+    isTwoRowMenu,
 
 }) => {
     const menuHeight =

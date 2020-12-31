@@ -27,7 +27,7 @@ const getVerseHoc = VerseComponent => {
                 <VerseComponent {...other}
                     {...{
                         ref,
-                        className: 'Verse__noIndexColour'
+                        className: 'Verse__noIndexColour',
                     }}
                 />
             )
@@ -35,12 +35,12 @@ const getVerseHoc = VerseComponent => {
 
         const {
                 inSlider,
-                inVerseBar
+                inVerseBar,
             } = other,
             isShownVerseCursor = useSelector(getMapIsShownVerseCursor({
                 verseIndex,
                 inSlider,
-                inVerseBar
+                inVerseBar,
             })),
             isSelectedVerse = useSelector(getMapIsVerseSelected(verseIndex)),
             inLyric = inUnit || inVerseBar
@@ -54,7 +54,7 @@ const getVerseHoc = VerseComponent => {
                         isShownVerseCursor ? 'Verse__cursor' : 'Verse__notCursor',
                         isSelectedVerse ? 'Verse__selected' : 'Verse__notSelected',
                         inLyric ? 'Verse__text' : 'Verse__slider'
-                    )
+                    ),
                 }}
             >
                 <VerseColour
@@ -62,14 +62,14 @@ const getVerseHoc = VerseComponent => {
                         verseIndex,
                         inVerseBar,
                         isVertical: inUnit || inVerseBar,
-                        isTrackerShown: isShownVerseCursor
+                        isTrackerShown: isShownVerseCursor,
                     }}
                 />
                 {!inSlider && !inVerseBar && (
                     <VerseNav
                         {...{
                             verseIndex,
-                            handleVerseSelect
+                            handleVerseSelect,
                         }}
                     />
                 )}
@@ -82,7 +82,7 @@ const getVerseHoc = VerseComponent => {
         inSlider: PropTypes.bool,
         inUnit: PropTypes.bool,
         inVerseBar: PropTypes.bool,
-        handleVerseSelect: PropTypes.func
+        handleVerseSelect: PropTypes.func,
     }
 
     return VerseHoc

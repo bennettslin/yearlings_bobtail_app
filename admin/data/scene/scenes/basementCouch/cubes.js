@@ -5,7 +5,7 @@ import {
     PAVEMENT_COLOUR as V,
     DIRT_FLOOR_COLOUR as F,
     UNDERGROUND_WALL_COLOUR as W,
-    BENNETT_COUCH_COLOUR as U
+    BENNETT_COUCH_COLOUR as U,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { a, e } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -14,7 +14,7 @@ export default {
     [BASEMENT_COUCH_KEY]: {
         ceiling: {
             hslaColours: [
-                [W]
+                [W],
             ],
             zIndices: [
                 [3],
@@ -22,8 +22,8 @@ export default {
                 [3, e, e, e, e, e, e, e, e, e, e, 3],
                 [3, e, e, e, e, e, e, e, e, e, e, a],
                 [3, e, e, e, e, e, e, e, e, e, e, a],
-                [3, e, e, e, e, e, e, e, e, e, e, 3]
-            ]
+                [3, e, e, e, e, e, e, e, e, e, e, 3],
+            ],
         },
         floor: {
             hslaColours: [
@@ -32,7 +32,7 @@ export default {
                 [V, D, U, U, U, U, U, F, F, F, F, V],
                 [V, F, U, U, U, U, U, F, F, V],
                 [V, F, F, F, F, F, F, F, F, V],
-                [V, F, F, F, F, F, F, F, F, F, F, V]
+                [V, F, F, F, F, F, F, F, F, F, F, V],
             ],
             zIndices: [
                 [3],
@@ -40,8 +40,8 @@ export default {
                 [3, 4, 2, 2, 2, 2, 2, 0, 0, 0, 0, 3],
                 [3, 0, 2, 2, 2, 2, 2, 0, 0, 1, 2, 3],
                 [3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3],
-                [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]
-            ]
-        }
-    }
+                [3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3],
+            ],
+        },
+    },
 }

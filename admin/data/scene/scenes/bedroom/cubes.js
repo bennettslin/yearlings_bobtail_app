@@ -4,7 +4,7 @@ import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,
     BEDROOM_OPEN_KEY,
-    BEDROOM_DOGS_KEY
+    BEDROOM_DOGS_KEY,
 } from '../../../../../app/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
@@ -16,7 +16,7 @@ import {
     SPOTLIGHT_LIGHT_COLOUR as M,
     SPOTLIGHT_LIGHTER_COLOUR as N,
     SPOTLIGHT_LIGHTEST_COLOUR as O,
-    BENNETT_BED_COLOUR as U
+    BENNETT_BED_COLOUR as U,
 } from '../../../../../app/constants/scene/cubes/colours'
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
@@ -40,7 +40,7 @@ const DEFAULT_CEILING = {
         [D, D, W, W, W, W, W, W, W, W, W, D],
         [W, W, W, W, W, W, W, W, W, W, W, D],
         [W, W, W, W, W, W, W, W, W, W, W, D],
-        [W, W, W, W, W, W, W, W, W, W, W, W]
+        [W, W, W, W, W, W, W, W, W, W, W, W],
     ],
     zIndices: [
         [k, k, k, k, k, 1, k, 1, 1, 1, k],
@@ -48,8 +48,8 @@ const DEFAULT_CEILING = {
         [k, k, d, d, g, g, g, g, g, g, 1, k],
         [1, d, g, g, g, g, g, g, g, g, 1, k],
         [g, g, g, g, g, g, g, g, g, g, 1, k],
-        [1, g, g, g, g, g, g, g, g, g, g, 1]
-    ]
+        [1, g, g, g, g, g, g, g, g, g, g, 1],
+    ],
 }
 
 const DEFAULT_FLOOR = {
@@ -59,7 +59,7 @@ const DEFAULT_FLOOR = {
         [H, H, W, W, D, F, F, U, U, U, F, H],
         [F, W, D, D, F, F, F, U, U, U, F, H],
         [F, F, F, F, F, F, F, U, F, F, F, H],
-        [F]
+        [F],
     ],
     zIndices: [
         [1],
@@ -67,15 +67,15 @@ const DEFAULT_FLOOR = {
         [1, 1, 6, 6, 5, 1, 1, 7, 7, 7, 1],
         [1, 6, 5, 5, 1, 1, 1, 7, 7, 7, 1],
         [1, 1, 1, 1, 1, 1, 1, 7, 1],
-        [1]
-    ]
+        [1],
+    ],
 }
 
 export default {
     [BEDROOM_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,
-        floor: DEFAULT_FLOOR
+        floor: DEFAULT_FLOOR,
     },
     [BEDROOM_STOOL_KEY]: {
         slantDirection: LEFT,
@@ -87,7 +87,7 @@ export default {
                 [H, H, W, W, D, F, F, U, U, U, F, H],
                 [F, W, D, D, F, F, F, U, U, U, F, H],
                 [F, F, F, F, D, F, F, U, F, F, F, H],
-                [F]
+                [F],
             ],
             zIndices: [
                 [1],
@@ -95,9 +95,9 @@ export default {
                 [1, 1, 6, 6, 5, 1, 1, 7, 7, 7, 1],
                 [1, 6, 5, 5, 1, 1, 1, 7, 7, 7, 1],
                 [1, 1, 1, 1, 3, 1, 1, 7, 1],
-                [1]
-            ]
-        }
+                [1],
+            ],
+        },
     },
     [BEDROOM_OPEN_KEY]: {
         slantDirection: LEFT,
@@ -109,7 +109,7 @@ export default {
                 [H, H, W, W, D, F, F, F, F, F, F, H],
                 [F, W, D, D, F, F, F, F, F, F, F, H],
                 [F, F, F, F, F, F, F, F, F, F, F, H],
-                [F]
+                [F],
             ],
             zIndices: [
                 [1],
@@ -117,9 +117,9 @@ export default {
                 [1, 1, 6, 6, 5, 1],
                 [1, 6, 5, 5, 1],
                 [1],
-                [1]
-            ]
-        }
+                [1],
+            ],
+        },
     },
     [BEDROOM_DOGS_KEY]: {
         slantDirection: LEFT,
@@ -130,7 +130,7 @@ export default {
                 [H, H, M, L, L, Z, Z, Z, Z, Z, Z, H],
                 [L, M, N, M, M, Z, Z, Z, Z, Z, Z, H],
                 [M, N, O, N, M, Z, Z, Z, Z, Z, Z, H],
-                [L, N, O, O, N, L, Z, Z, Z, Z, Z, Z]
+                [L, N, O, O, N, L, Z, Z, Z, Z, Z, Z],
             ],
             zIndices: [
                 [1],
@@ -138,9 +138,9 @@ export default {
                 [1, 1, 1, 1, 1, 1, 1, 7, 7, 7, 1],
                 [1, 1, 1, 1, 1, 1, 1, 7, 7, 7, 1],
                 [1, 1, 1, 1, 1, 1, 1, 7, 1],
-                [1]
-            ]
-        }
+                [1],
+            ],
+        },
     },
-    ...BEDROOM_SPACE_CUBES
+    ...BEDROOM_SPACE_CUBES,
 }

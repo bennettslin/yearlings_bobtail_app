@@ -17,7 +17,7 @@ import {
     TEMP_PITCH_ICON_10,
     TEMP_PITCH_ICON_11,
     TEMP_PITCH_ICON_12,
-    TEMP_PITCH_ICON_13
+    TEMP_PITCH_ICON_13,
 } from '../../../constants/pitch'
 
 const PITCH_IMAGES = {
@@ -33,7 +33,7 @@ const PITCH_IMAGES = {
     [TEMP_PITCH_ICON_10]: carouselShown,
     [TEMP_PITCH_ICON_11]: navShown,
     [TEMP_PITCH_ICON_12]: neitherShown,
-    [TEMP_PITCH_ICON_13]: popupClose
+    [TEMP_PITCH_ICON_13]: popupClose,
 }
 
 const getPitchImageForIndex = pitchIndex => {

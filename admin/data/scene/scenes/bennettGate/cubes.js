@@ -5,7 +5,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     APARTMENT_EXTERIOR_COLOUR as X,
-    ROOF_COLOUR as C
+    ROOF_COLOUR as C,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { d, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -22,7 +22,7 @@ export default {
                 [X, X, X, C, C, C, C, C, C, C, X],
                 [C],
                 [C],
-                [D]
+                [D],
             ],
             zIndices: [
                 [0],
@@ -30,18 +30,18 @@ export default {
                 [1, 1, 1, f, f, f, f, f, f, f, 1],
                 [f],
                 [f],
-                [k]
-            ]
+                [k],
+            ],
         },
         floor: {
             hslaColours: [
                 [G],
-                [V]
+                [V],
             ],
             zIndices: [
                 [0],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

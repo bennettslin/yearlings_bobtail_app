@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../components/DidMountHoc'
 import {
     mapSceneCursorIndex,
-    getMapVerseCursorIndex
+    getMapVerseCursorIndex,
 } from '../../redux/cursor/selector'
 import {
     getPrefixedSceneClassNames,
-    getPrefixedVerseClassNames
+    getPrefixedVerseClassNames,
 } from './helper'
 
 const LogicWrapper = ({ didMount, children }) => {
@@ -27,8 +27,8 @@ const LogicWrapper = ({ didMount, children }) => {
                         getPrefixedSceneClassNames(sceneCursorIndex),
                         getPrefixedVerseClassNames(verseCursorIndex),
                         'abF'
-                    )
-                }
+                    ),
+                },
             }}
         >
             {children}
@@ -38,7 +38,7 @@ const LogicWrapper = ({ didMount, children }) => {
 
 LogicWrapper.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default memo(getDidMountHoc(LogicWrapper))

@@ -7,9 +7,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    instance: PROLOGUE
-                }
-            }
-        }
-    }
+                    instance: PROLOGUE,
+                },
+            },
+        },
+    },
 ]

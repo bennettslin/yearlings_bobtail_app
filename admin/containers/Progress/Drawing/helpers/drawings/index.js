@@ -3,7 +3,7 @@ import { getArrayOfLength } from '../../../../../../app/helpers/general'
 
 import {
     initialiseDrawings,
-    addActorTasksToSongDrawingTasks
+    addActorTasksToSongDrawingTasks,
 } from './helper'
 
 const drawings = {}

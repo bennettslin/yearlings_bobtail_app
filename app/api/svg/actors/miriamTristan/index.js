@@ -7,5 +7,5 @@ import { GREETING } from '../../../../constants/scene/actors/songs'
 
 export default {
     [NOOGIE]: noogie,
-    [GREETING]: greeting
+    [GREETING]: greeting,
 }

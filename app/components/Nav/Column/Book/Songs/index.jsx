@@ -7,7 +7,7 @@ import NavButtonIndexed from '../ButtonIndexed'
 import NavRoad from '../Road'
 import {
     getSongsAndLoguesCount,
-    getStartingIndexForBook
+    getStartingIndexForBook,
 } from '../../../../../api/album/songs'
 import { getArrayOfLength } from '../../../../../helpers/general'
 import './style'
@@ -37,7 +37,7 @@ const NavBookSongs = ({
                     <NavButtonIndexed {...other}
                         {...{
                             key: currentIndex,
-                            songIndex
+                            songIndex,
                         }}
                     />
                 )
@@ -47,7 +47,7 @@ const NavBookSongs = ({
 }
 
 NavBookSongs.propTypes = {
-    bookIndex: PropTypes.number.isRequired
+    bookIndex: PropTypes.number.isRequired,
 }
 
 export default memo(NavBookSongs)

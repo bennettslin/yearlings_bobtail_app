@@ -1,42 +1,42 @@
 import {
     WILLY,
     CHRISTOPHER_BENNETT_WILLY,
-    HOWIE_WILLY
+    HOWIE_WILLY,
 } from '../../../../app/constants/scene/actors'
 import {
     COLLECTING,
     DUCKING,
-    CROSSING_GUARD
+    CROSSING_GUARD,
 } from '../../../../app/constants/scene/actors/willy'
 import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
 import {
     GANGBANGER,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: WILLY,
-        instance: COLLECTING
+        instance: COLLECTING,
     },
     {
         type: WILLY,
-        instance: DUCKING
+        instance: DUCKING,
     },
     {
         type: HOWIE_WILLY,
-        instance: GANGBANGER
+        instance: GANGBANGER,
     },
     {
         type: CHRISTOPHER_BENNETT_WILLY,
-        instance: REASSURING_ENCHANTED
+        instance: REASSURING_ENCHANTED,
     },
     {
         type: WILLY,
-        instance: EPILOGUE
+        instance: EPILOGUE,
     },
     {
         type: WILLY,
-        instance: CROSSING_GUARD
-    }
+        instance: CROSSING_GUARD,
+    },
 ]

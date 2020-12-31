@@ -19,7 +19,7 @@ const DotsSlideSelect = ({
     dotKey,
     isAccessed,
     isSelected,
-    isActivated
+    isActivated,
 }) => {
     const
         dispatch = useDispatch(),
@@ -44,7 +44,7 @@ const DotsSlideSelect = ({
                 {...{
                     className: cx(
                         'DotsSlideSelect'
-                    )
+                    ),
                 }}
             >
                 <Button
@@ -58,12 +58,12 @@ const DotsSlideSelect = ({
                              * ideal, but it will do for now.
                              */
                             isSelected,
-                            isActivated
+                            isActivated,
                         }),
                         buttonName: DOTS_SLIDE_SELECT_BUTTON_KEY,
                         accessKey: ENTER,
                         isAccessed,
-                        handleButtonClick
+                        handleButtonClick,
                     }}
                 >
                     {/* Button handles all drop shadow styling. */}
@@ -71,7 +71,7 @@ const DotsSlideSelect = ({
                         noDropShadow
                         {...{
                             dotKey,
-                            isDeselected: !isSelected
+                            isDeselected: !isSelected,
                         }}
                     />
 
@@ -96,7 +96,7 @@ const DotsSlideSelect = ({
                         isAccessed,
                         isSelected: isActivated,
                         text: dotKey,
-                        handleAnchorClick
+                        handleAnchorClick,
                     }}
                 />
             </div>
@@ -110,7 +110,7 @@ DotsSlideSelect.propTypes = {
     dotKey: PropTypes.string.isRequired,
     isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    isActivated: PropTypes.bool.isRequired
+    isActivated: PropTypes.bool.isRequired,
 }
 
 export default memo(DotsSlideSelect)

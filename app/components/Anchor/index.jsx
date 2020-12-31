@@ -26,7 +26,7 @@ const Anchor = forwardRef(({
     textConfig,
     analyticsIdentifier,
     handleAnchorClick = () => {},
-    handleAnchorMouse = () => {}
+    handleAnchorMouse = () => {},
 
 }, ref) => {
     const
@@ -55,7 +55,7 @@ const Anchor = forwardRef(({
         logEvent({
             e,
             componentName: 'Anchor',
-            analyticsIdentifier
+            analyticsIdentifier,
         })
 
         handleAnchorClick(e)
@@ -81,20 +81,20 @@ const Anchor = forwardRef(({
                         !isSelected && [
                             'Anchor__selectable',
                             isLyric && 'Anchor__selectableLyric',
-                            !isLyric && 'Anchor__selectableNotLyric'
+                            !isLyric && 'Anchor__selectableNotLyric',
                         ],
                         !isWikiTextAnchor && 'Anchor__noWrap',
                         className
-                    )
+                    ),
                 },
                 ...href && {
                     href,
-                    target: '_blank'
+                    target: '_blank',
                 },
                 to,
                 onClick,
                 onMouseEnter,
-                onMouseLeave
+                onMouseLeave,
             }}
         >
             {showDotSequence && (
@@ -103,7 +103,7 @@ const Anchor = forwardRef(({
                     {...{
                         isAccessed,
                         isSelected,
-                        dotsBit
+                        dotsBit,
                     }}
                 />
             )}
@@ -114,7 +114,7 @@ const Anchor = forwardRef(({
                         isSelected,
                         isWikiTextAnchor,
                         text,
-                        textConfig
+                        textConfig,
                     }}
                 />
             ) : (
@@ -122,7 +122,7 @@ const Anchor = forwardRef(({
                     {...{
                         isAccessed,
                         isSelected,
-                        dotsBit
+                        dotsBit,
                     }}
                 />
             )}
@@ -145,7 +145,7 @@ Anchor.propTypes = {
     textConfig: PropTypes.any,
     analyticsIdentifier: PropTypes.string,
     handleAnchorClick: PropTypes.func,
-    handleAnchorMouse: PropTypes.func
+    handleAnchorMouse: PropTypes.func,
 }
 
 export default memo(getDidMountHoc(Anchor))

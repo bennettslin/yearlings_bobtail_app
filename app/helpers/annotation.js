@@ -1,7 +1,7 @@
 import {
     getColumnIndexForAnnotation,
     getAnnotationCountForSong,
-    getDotsBitForAnnotation
+    getDotsBitForAnnotation,
 } from '../api/album/annotations'
 import { getHasSelectedDot } from '../helpers/dot'
 
@@ -9,7 +9,7 @@ export const getShowAnnotationForColumn = ({
     selectedSongIndex,
     selectedAnnotationIndex,
     earColumnIndex,
-    isEarShown
+    isEarShown,
 }) => {
 
     const columnIndex = getColumnIndexForAnnotation(
@@ -39,7 +39,7 @@ export const getAnnotationIndexForDirection = ({
     direction,
 
     // Called from getAnnotationIndexForVerseIndex.
-    specifiedDirection
+    specifiedDirection,
 }) => {
 
     const annotationsCount = getAnnotationCountForSong(selectedSongIndex),
@@ -126,7 +126,7 @@ export const getAnnotationIndexForDirection = ({
                     selectedSongIndex,
                     selectedAnnotationIndex: returnIndex,
                     earColumnIndex,
-                    isEarShown
+                    isEarShown,
                 })) &&
 
                 // And if modulo...

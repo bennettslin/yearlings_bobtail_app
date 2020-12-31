@@ -11,13 +11,13 @@ export const getLyricReducer = songIndex => (
         case LYRIC_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         case SELECTED_STORE: {
             const {
                 selectedSongIndex,
                 selectedVerseIndex,
-                selectedAnnotationIndex
+                selectedAnnotationIndex,
             } = payload
 
             return {
@@ -28,12 +28,12 @@ export const getLyricReducer = songIndex => (
                  */
                 ...!hasKey(selectedSongIndex) && {
                     ...hasKey(selectedVerseIndex) && {
-                        lyricVerseIndex: selectedVerseIndex
+                        lyricVerseIndex: selectedVerseIndex,
                     },
                     ...hasKey(selectedAnnotationIndex) && {
-                        lyricAnnotationIndex: selectedAnnotationIndex
-                    }
-                }
+                        lyricAnnotationIndex: selectedAnnotationIndex,
+                    },
+                },
             }
         }
         default:

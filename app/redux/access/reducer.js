@@ -5,13 +5,13 @@ import {
     DOTS_STORE,
     SLIDER_STORE,
     VIEWPORT_STORE,
-    TOGGLE_STORE
+    TOGGLE_STORE,
 } from '../../constants/store'
 import {
     ACCESS_NAV_DEFAULTS,
     ACCESS_DOT_DEFAULTS,
     ACCESS_PITCH_PAGE_DEFAULTS,
-    getAccessDefaults
+    getAccessDefaults,
 } from './default'
 
 export const getAccessReducer = songIndex => (
@@ -22,21 +22,21 @@ export const getAccessReducer = songIndex => (
         case ACCESS_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         case DOTS_STORE: {
             const { dotIndex } = payload
             return hasKey(dotIndex) ? {
                 ...state,
                 // Make most recently toggled dot the accessed dot.
-                accessedDotIndex: dotIndex
+                accessedDotIndex: dotIndex,
             } : state
         }
         case SLIDER_STORE: {
             const { isSliderTouched } = payload
             return hasKey(isSliderTouched) && isSliderTouched ? {
                 ...state,
-                isAccessOn: false
+                isAccessOn: false,
             } : state
         }
         case TOGGLE_STORE: {
@@ -44,15 +44,15 @@ export const getAccessReducer = songIndex => (
             return hasKey(isDotsSlideShown) ? {
                 ...state,
                 ...isDotsSlideShown ? {
-                    accessedDotIndex: 0
-                } : ACCESS_DOT_DEFAULTS
+                    accessedDotIndex: 0,
+                } : ACCESS_DOT_DEFAULTS,
             } : state
         }
         case VIEWPORT_STORE: {
             const { canCarouselNavMount } = payload
             return hasKey(canCarouselNavMount) && !canCarouselNavMount ? {
                 ...state,
-                ...ACCESS_NAV_DEFAULTS
+                ...ACCESS_NAV_DEFAULTS,
             } : state
         }
         default:
@@ -68,7 +68,7 @@ export const AccessPitchPageReducer = (
         case ACCESS_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         default:
             return state

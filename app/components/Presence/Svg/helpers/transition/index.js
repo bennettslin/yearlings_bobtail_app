@@ -6,7 +6,7 @@ import {
     LEFT,
     RIGHT,
     PATH,
-    TOP
+    TOP,
 } from '../../../../../constants/transition'
 
 const getIsPathTransition = presenceType => {
@@ -24,7 +24,7 @@ const getTransitionDelayIndex = ({
     transitionIndex,
     yIndex,
     presenceType,
-    isWire
+    isWire,
 }) => {
     if (
         getIsPathTransition(presenceType) ||
@@ -43,7 +43,7 @@ const getTransitionDelayPrefix = ({
     presenceType,
     xPosition,
     hasWires,
-    isWire
+    isWire,
 
 }) => {
     if (transitionKey) {
@@ -78,7 +78,7 @@ export const getTransitionDelayClass = ({
     presenceType,
     xPosition,
     hasWires,
-    isWire
+    isWire,
 
 }) => (
     `${getTransitionDelayPrefix(({
@@ -86,7 +86,7 @@ export const getTransitionDelayClass = ({
         presenceType,
         xPosition,
         hasWires,
-        isWire
+        isWire,
     }))}__transition`
 )
 
@@ -97,7 +97,7 @@ export const getTransitionDelayIndexClass = ({
     presenceType,
     xPosition,
     hasWires,
-    isWire
+    isWire,
 
 }) => (
     `${
@@ -106,14 +106,14 @@ export const getTransitionDelayIndexClass = ({
             presenceType,
             xPosition,
             hasWires,
-            isWire
+            isWire,
         })
     }__transitionIndex__${
         getTransitionDelayIndex({
             transitionIndex,
             yIndex,
             presenceType,
-            isWire
+            isWire,
         })
     }`
 )

@@ -10,7 +10,7 @@ import epilogue from '../../../../../assets/svgs/actors/tomer/epilogue'
 
 import {
     SHANE_BUYING,
-    SHANE_SPILLING
+    SHANE_SPILLING,
 } from '../../../../constants/scene/actors/tomer'
 
 import {
@@ -20,7 +20,7 @@ import {
     STEAM_TUNNEL,
     CEMETERY,
     STATION_WAGON,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -32,5 +32,5 @@ export default {
     [EPILOGUE]: epilogue,
     [GANGBANGER]: gangbanger,
     [SHANE_BUYING]: shaneBuying,
-    [SHANE_SPILLING]: shaneSpilling
+    [SHANE_SPILLING]: shaneSpilling,
 }

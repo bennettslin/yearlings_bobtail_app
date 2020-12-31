@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import {
     getFormattedLyricSpanText,
-    getFormattedEndingVerseSpanText
+    getFormattedEndingVerseSpanText,
 } from '../../../../helpers/format'
 import './style'
 
@@ -18,7 +18,7 @@ const TextSpan = ({
     endsVerse,
     isWormholeDestinationVerse,
     isWormholeDestinationAnchor,
-    isWikiTextAnchor
+    isWikiTextAnchor,
 
 }) => {
 
@@ -63,7 +63,7 @@ const TextSpan = ({
             {...{
                 className: cx(
                     isWormholeDestinationAnchor && 'text__wormholeDestinationAnchor'
-                )
+                ),
             }}
         >
             {formattedText}
@@ -81,7 +81,7 @@ TextSpan.propTypes = {
     endsVerse: PropTypes.bool,
     isWormholeDestinationVerse: PropTypes.bool,
     isWormholeDestinationAnchor: PropTypes.bool,
-    isWikiTextAnchor: PropTypes.bool
+    isWikiTextAnchor: PropTypes.bool,
 }
 
 export default memo(TextSpan)

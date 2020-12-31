@@ -22,13 +22,13 @@ const Overview = ({ pageSongIndex }) => {
                         'fontSize__verse',
                         isToggleInOverview && 'Overview__toggleInOverview',
                         getFinalSideKey()
-                    )
+                    ),
                 }}
             >
                 {isToggleInOverview &&
                     <OverviewToggle
                         {...{
-                            className: 'Overview__toggleFloatContainer'
+                            className: 'Overview__toggleFloatContainer',
                         }}
                     />
                 }
@@ -39,7 +39,7 @@ const Overview = ({ pageSongIndex }) => {
 }
 
 Overview.propTypes = {
-    pageSongIndex: PropTypes.number
+    pageSongIndex: PropTypes.number,
 }
 
 export default memo(Overview)

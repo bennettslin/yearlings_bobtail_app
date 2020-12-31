@@ -18,7 +18,7 @@ import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION,
     LIZ_PILLOWS_PILE,
-    LIZ_PILLOWS_PILE_REFLECTION
+    LIZ_PILLOWS_PILE_REFLECTION,
 } from '../../../../constants/scene/things/furnitures'
 
 export default {
@@ -31,5 +31,5 @@ export default {
     [LIZ_PILLOWS]: lizPillows,
     [LIZ_PILLOWS_REFLECTION]: lizPillowsReflection,
     [LIZ_PILLOWS_PILE]: lizPillowsPile,
-    [LIZ_PILLOWS_PILE_REFLECTION]: lizPillowsPileReflection
+    [LIZ_PILLOWS_PILE_REFLECTION]: lizPillowsPileReflection,
 }

@@ -5,11 +5,11 @@ import caress from '../../../../../assets/svgs/actors/khariLiz/caress'
 import {
     JOKING_LAUGHING,
     PROTECTIVE_CONCERNED,
-    CARESS
+    CARESS,
 } from '../../../../constants/scene/actors/khariLiz'
 
 export default {
     [JOKING_LAUGHING]: joking,
     [PROTECTIVE_CONCERNED]: protectiveConcerned,
-    [CARESS]: caress
+    [CARESS]: caress,
 }

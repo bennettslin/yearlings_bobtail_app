@@ -48,7 +48,7 @@ module.exports = {
         'subVerse',
         'sideCard',
         'sideSubCard',
-        'unitDot'
+        'unitDot',
     ],
 
     /**
@@ -60,21 +60,21 @@ module.exports = {
         LYRIC_CENTRE,
         LYRIC_LEFT,
         LYRIC_RIGHT,
-        ANCHOR
+        ANCHOR,
     ],
 
     WORMHOLE_SEARCH_KEYS: [
         LYRIC,
         LYRIC_CENTRE,
         LYRIC_LEFT,
-        LYRIC_RIGHT
+        LYRIC_RIGHT,
     ],
 
     EAR_COLUMN_KEYS: [
         LYRIC_LEFT,
-        LYRIC_RIGHT
+        LYRIC_RIGHT,
     ],
 
     FLASHBACK_TO_WORMHOLE_PREFIX: 'flashback to',
-    FORESHADOW_OF_WORMHOLE_PREFIX: 'foreshadow of'
+    FORESHADOW_OF_WORMHOLE_PREFIX: 'foreshadow of',
 }

@@ -12,7 +12,7 @@ const Contact = ({ didMount }) => (
                 className: cx(
                     'Contact',
                     'Rancho'
-                )
+                ),
             }}
         >
             {CONTACT_EMAIL.split('').map((character, index) => (
@@ -30,7 +30,7 @@ const Contact = ({ didMount }) => (
 )
 
 Contact.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default getDidMountHoc(Contact)

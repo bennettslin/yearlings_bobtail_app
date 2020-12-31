@@ -9,7 +9,7 @@ const TouchOverlay = ({ didMount }) => didMount && (
 )
 
 TouchOverlay.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default memo(getDidMountHoc(TouchOverlay))

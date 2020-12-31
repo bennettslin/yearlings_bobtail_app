@@ -5,5 +5,5 @@ export const SCROLL_LYRIC_DEFAULTS = {
     scrollLyricAlways: false,
     isScrollLyricForSongSelect: false,
     scrollLyricFromAutoScroll: false,
-    isScrollLyricForVerseSelect: false
+    isScrollLyricForVerseSelect: false,
 }

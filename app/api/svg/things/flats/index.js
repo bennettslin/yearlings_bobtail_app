@@ -123,7 +123,7 @@ import {
     FOREBODING_TREES__FAR,
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
-    PAMPAS_FAR
+    PAMPAS_FAR,
 } from '../../../../constants/scene/things/flats'
 
 export default {
@@ -191,5 +191,5 @@ export default {
     [FOREBODING_TREES__FAR]: forebodingTrees,
     [CLIFF_GRAVES_FAR]: cliffGravesFar,
     [CLIFF_GRAVES_NEAR]: cliffGravesNear,
-    [PAMPAS_FAR]: pampasFar
+    [PAMPAS_FAR]: pampasFar,
 }

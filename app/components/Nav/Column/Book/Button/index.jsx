@@ -13,7 +13,7 @@ import { mapSelectedAnnotationIndex } from '../../../../../redux/selected/select
 import { ENTER } from '../../../../../constants/access'
 import {
     NAV_BOOK_BUTTON_KEY,
-    NAV_SONG_BUTTON_KEY
+    NAV_SONG_BUTTON_KEY,
 } from '../../../../../constants/buttons'
 import './style'
 
@@ -24,7 +24,7 @@ const NavButton = ({
     isToggle,
     bookIndex,
     songIndex,
-    handleButtonClick
+    handleButtonClick,
 
 }) => {
     const
@@ -89,9 +89,9 @@ const NavButton = ({
                         <NavButtonTitle {...{
                             bookIndex,
                             songIndex,
-                            isSelected
+                            isSelected,
                         }} />
-                    )
+                    ),
                 }}
             >
                 <ButtonCharacter
@@ -99,9 +99,9 @@ const NavButton = ({
                         isSelected,
                         character: getIndexCharacter({
                             bookIndex,
-                            songIndex
+                            songIndex,
                         }),
-                        hasTextShadowLight: getSongIsLogue(songIndex)
+                        hasTextShadowLight: getSongIsLogue(songIndex),
                     }}
                 />
             </Button>
@@ -117,7 +117,7 @@ NavButton.propTypes = {
 
     bookIndex: PropTypes.number,
     songIndex: PropTypes.number,
-    handleButtonClick: PropTypes.func.isRequired
+    handleButtonClick: PropTypes.func.isRequired,
 }
 
 export default memo(NavButton)

@@ -42,15 +42,15 @@ const VerseLine = forwardRef(({
                             `VerseLine__${columnKey}`,
 
                             { 'VerseLine__truncatable': isTruncatable }
-                        )
-                    }
+                        ),
+                    },
                 }}
             >
                 <Texts
                     isVerseLyric
                     {...{
                         ref,
-                        ...other
+                        ...other,
                     }}
                 />
             </div>
@@ -72,12 +72,12 @@ VerseLine.propTypes = {
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array,
-        PropTypes.object
+        PropTypes.object,
     ]).isRequired,
 
     isTruncatable: PropTypes.bool,
     inVerseBar: PropTypes.bool,
-    columnKey: PropTypes.string.isRequired
+    columnKey: PropTypes.string.isRequired,
 }
 
 export default memo(getDidMountHoc(VerseLine))

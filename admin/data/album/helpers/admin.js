@@ -18,7 +18,7 @@ export const addAdminMetadata = (annotationsList, album) => {
 
                 globalAnnotationIndicesList.push({
                     songIndex,
-                    annotationIndex
+                    annotationIndex,
                 })
             })
         }

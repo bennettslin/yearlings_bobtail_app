@@ -4,7 +4,7 @@ export const getActivatedSceneForDirection = ({
     selectedSongIndex,
     selectedSceneIndex,
     activatedSceneIndex,
-    direction
+    direction,
 }) => {
     const songScenesCount = getSceneCountForSong(selectedSongIndex)
 

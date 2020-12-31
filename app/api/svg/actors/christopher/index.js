@@ -5,11 +5,11 @@ import staring from '../../../../../assets/svgs/actors/christopher/staring'
 import {
     TANTRUM,
     SOBBING,
-    STARING
+    STARING,
 } from '../../../../constants/scene/actors/christopher'
 
 export default {
     [TANTRUM]: tantrum,
     [SOBBING]: sobbing,
-    [STARING]: staring
+    [STARING]: staring,
 }

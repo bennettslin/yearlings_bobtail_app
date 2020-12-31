@@ -11,7 +11,7 @@ const DramaMasks = () => {
         prosceniumTop,
         prosceniumLeft,
         prosceniumWidth,
-        prosceniumHeight
+        prosceniumHeight,
     } = JSON.parse(useSelector(mapProsceniumDimensionCoordinates))
 
     return (
@@ -24,12 +24,12 @@ const DramaMasks = () => {
                     top: `${prosceniumTop + prosceniumHeight * 0.0025}px`,
                     left: `${prosceniumLeft + prosceniumWidth * 0.5}px`,
                     width: `${prosceniumWidth * 0.125}px`,
-                    height: `${prosceniumHeight * 0.1}px`
+                    height: `${prosceniumHeight * 0.1}px`,
                 },
                 svgClassName: cx(
                     'dramaMasks',
                     'fillTransition__dimTheatre'
-                )
+                ),
             }}
         >
             {dramaMasks}

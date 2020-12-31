@@ -3,7 +3,7 @@ import {
     MARA,
     JACOB,
     ANA,
-    TOMER
+    TOMER,
 } from '../../../../../../app/constants/scene/actors'
 import { FLIRTING } from '../../../../../../app/constants/scene/actors/songs'
 import { SQUATTING } from '../../../../../../app/constants/scene/actors/ana'
@@ -15,36 +15,36 @@ export default {
         [SHANE_BUYING]: {
             yIndex: 5,
             xPosition: 1.3,
-            zOffset: -0.07
-        }
+            zOffset: -0.07,
+        },
     },
     [BENNETT]: {
         [DISTRACTED]: {
             yIndex: 5,
             xPosition: 4.5,
-            zOffset: -0.06
-        }
+            zOffset: -0.06,
+        },
     },
     [ANA]: {
         [SQUATTING]: {
             yIndex: 2,
             xPosition: 5.9,
             zOffset: -0.25,
-            layerYIndex: 4
-        }
+            layerYIndex: 4,
+        },
     },
     [MARA]: {
         [FLIRTING]: {
             yIndex: 5,
             xPosition: 7.5,
-            zOffset: -0.06
-        }
+            zOffset: -0.06,
+        },
     },
     [JACOB]: {
         [FLIRTING]: {
             yIndex: 5,
             xPosition: 9,
-            zOffset: -0.07
-        }
-    }
+            zOffset: -0.07,
+        },
+    },
 }

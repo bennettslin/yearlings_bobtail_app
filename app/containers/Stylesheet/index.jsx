@@ -18,7 +18,7 @@ const StylesheetContainer = ({ didMount }) => didMount && (
 )
 
 StylesheetContainer.propTypes = {
-    didMount: PropTypes.bool.isRequired
+    didMount: PropTypes.bool.isRequired,
 }
 
 export default getDidMountHoc(StylesheetContainer)

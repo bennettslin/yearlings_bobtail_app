@@ -10,13 +10,13 @@ import {
     BENNETT_KEYBOARD,
     FLAPPER,
     BENNETT_DEFIANT,
-    BENNETT_RECORDING
+    BENNETT_RECORDING,
 } from '../../../../constants/scene/actors/stephanie'
 
 import {
     MINGLING,
     PROTESTER,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -26,5 +26,5 @@ export default {
     [BENNETT_DEFIANT]: bennettDefiant,
     [BENNETT_RECORDING]: bennettRecording,
     [PROTESTER]: protester,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

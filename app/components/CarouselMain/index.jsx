@@ -18,8 +18,8 @@ const CarouselMain = ({ didMount, style }) => {
                         'CarouselMain',
                         'abF'
                     ),
-                    style
-                }
+                    style,
+                },
             }}
         >
             {getIsServerSide() ? (
@@ -33,7 +33,7 @@ const CarouselMain = ({ didMount, style }) => {
 
 CarouselMain.propTypes = {
     didMount: PropTypes.bool.isRequired,
-    style: PropTypes.object
+    style: PropTypes.object,
 }
 
 export default memo(getDidMountHoc(getMainHoc(CarouselMain)))

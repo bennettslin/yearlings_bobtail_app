@@ -4,7 +4,7 @@ import epilogue from '../../../../../assets/svgs/actors/tristan/epilogue'
 
 import {
     PRINCIPAL,
-    PUNCHING
+    PUNCHING,
 } from '../../../../constants/scene/actors/tristan'
 
 import { EPILOGUE } from '../../../../constants/scene/actors/songs'
@@ -12,5 +12,5 @@ import { EPILOGUE } from '../../../../constants/scene/actors/songs'
 export default {
     [PUNCHING]: punching,
     [EPILOGUE]: epilogue,
-    [PRINCIPAL]: principal
+    [PRINCIPAL]: principal,
 }

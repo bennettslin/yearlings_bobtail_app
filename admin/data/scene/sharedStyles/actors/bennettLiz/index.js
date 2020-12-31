@@ -10,13 +10,13 @@ import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
-    FINAL_DREAM
+    FINAL_DREAM,
 } from '../../../../../../app/constants/scene/actors/bennettLiz'
 import { HEINEKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles/food'
 import {
     CYMBAL__SHARED,
     DOBRO__SHARED,
-    RECORDER__SHARED
+    RECORDER__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     BACKPACK__SHARED,
@@ -24,13 +24,13 @@ import {
     LIZ_CONDOM__SHARED,
     LIZ_PURSE__SHARED,
     MESSENGER_BAG__SHARED,
-    SARI__SHARED
+    SARI__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
 
 export default {
     [GINGERBREAD_PRISON]: [
         BACKPACK__SHARED,
-        MESSENGER_BAG__SHARED
+        MESSENGER_BAG__SHARED,
     ],
     [CHEEK_UNVEILED]: LIZ_PURSE__SHARED,
     [HARD_ON]: LIZ_CONDOM__SHARED,
@@ -39,15 +39,15 @@ export default {
     [BRUSH_OFF]: BRACELET__SHARED,
     [CELIBATE_FREEZING]: [
         HEINEKEN__SHARED,
-        DOBRO__SHARED
+        DOBRO__SHARED,
     ],
     [AWKWARD_CONSOLATION]: BRACELET__SHARED,
     [PAMPAS]: [
         CYMBAL__SHARED,
         RECORDER__SHARED,
-        SARI__SHARED
+        SARI__SHARED,
     ],
     [GETTING_DARK]: null,
     [CLIFF]: null,
-    [FINAL_DREAM]: null
+    [FINAL_DREAM]: null,
 }

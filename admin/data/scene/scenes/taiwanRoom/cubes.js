@@ -1,7 +1,7 @@
 import { TAIWAN_ROOM_KEY } from '../../../../../app/constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
-    NIGHT_COLOUR as Z
+    NIGHT_COLOUR as Z,
 } from '../../../../../app/constants/scene/cubes/colours'
 import { e, g } from '../../../../../app/constants/scene/cubes/zIndices'
 
@@ -9,7 +9,7 @@ export default {
     [TAIWAN_ROOM_KEY]: {
         ceiling: {
             hslaColours: [
-                [Z]
+                [Z],
             ],
             zIndices: [
                 [0],
@@ -17,8 +17,8 @@ export default {
                 [0, g, g, g, g, g, g, g, g, g, g, 5],
                 [e, g, g, 5, 5, 5, 5, 5, e, e, 5, 5],
                 [e, g, g, g, g, g, g, g, g, g, g, 5],
-                [0, g, g, g, g, g, g, g, g, g, g, 5]
-            ]
+                [0, g, g, g, g, g, g, g, g, g, g, 5],
+            ],
         },
         floor: {
             hslaColours: [
@@ -27,7 +27,7 @@ export default {
                 [Z],
                 [Z],
                 [Z, Z, Z, Z, Z, D, D, Z],
-                [Z]
+                [Z],
             ],
             zIndices: [
                 [g],
@@ -35,8 +35,8 @@ export default {
                 [g, 4, 4, 5],
                 [5, 3, 3, 5],
                 [5, 2, 2, 5, 5, 8, 8, 5],
-                [g, 1, 1, 5]
-            ]
-        }
-    }
+                [g, 1, 1, 5],
+            ],
+        },
+    },
 }

@@ -1,29 +1,29 @@
 import {
     JACOB,
-    JACOB_MARA
+    JACOB_MARA,
 } from '../../../../app/constants/scene/actors'
 import {
     FLIRTING,
     EATING,
     CARRYING,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: JACOB,
-        instance: FLIRTING
+        instance: FLIRTING,
     },
     {
         type: JACOB_MARA,
-        instance: EATING
+        instance: EATING,
     },
     {
         type: JACOB,
-        instance: CARRYING
+        instance: CARRYING,
     },
     {
         type: JACOB,
-        instance: EPILOGUE
-    }
+        instance: EPILOGUE,
+    },
 ]

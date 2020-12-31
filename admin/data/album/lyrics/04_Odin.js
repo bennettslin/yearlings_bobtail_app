@@ -5,7 +5,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGCRAFT
+    SONGCRAFT,
 } from '../../../../app/constants/dots'
 
 import {
@@ -18,7 +18,7 @@ import {
     OUTRO,
     FLASHBACK_TO_WORMHOLE_PREFIX,
     IS_UNIT_DOT,
-    RESPONSE
+    RESPONSE,
 } from '../../../../app/constants/lyrics'
 
 export default {
@@ -38,30 +38,30 @@ export default {
                         `Odin, who was around before I was born, originally had a Taiwanese name. My sister and I anglicized it into the name of the`,
                         {
                             anchor: `Norse god`,
-                            wiki: `Odin`
+                            wiki: `Odin`,
                         },
-                        `when we were older.`
+                        `when we were older.`,
                     ],
                     dotKeys: {
-                        [BACKSTORY]: true
-                    }
-                }
-            }
+                        [BACKSTORY]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: INTRO
+                formType: INTRO,
             },
             mainVerses: [
                 {
                     time: 0,
-                    lyricCentre: `Mr. Odin died today.`
-                }
-            ]
+                    lyricCentre: `Mr. Odin died today.`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
@@ -74,40 +74,40 @@ export default {
                                 {
                                     description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
+                                        [OBSERVATION]: true,
+                                    },
                                 },
                                 {
                                     description: [
                                         `In the`,
                                         {
                                             anchor: `Book of Genesis,`,
-                                            wiki: `Book_of_Genesis`
+                                            wiki: `Book_of_Genesis`,
                                         },
                                         {
                                             anchor: `"Lot"`,
-                                            wiki: `Lot_(biblical_person)`
+                                            wiki: `Lot_(biblical_person)`,
                                         },
                                         `fled with his family from the wicked city of`,
                                         {
                                             anchor: `Sodom.`,
-                                            wiki: `Sodom_and_Gomorrah`
+                                            wiki: `Sodom_and_Gomorrah`,
                                         },
                                         `When`,
                                         {
                                             anchor: `his wife`,
-                                            wiki: `Lot's_wife`
+                                            wiki: `Lot's_wife`,
                                         },
-                                        `looked back, she was turned into a pillar of salt. This story is understood by some to suggest that the faithful shall not cohabit with the fallen.`
+                                        `looked back, she was turned into a pillar of salt. This story is understood by some to suggest that the faithful shall not cohabit with the fallen.`,
                                     ],
                                     dotKeys: {
-                                        [PUN]: true
-                                    }
-                                }
-                            ]
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `once more`
-                    ]
+                        `once more`,
+                    ],
                 },
                 {
                     time: 10,
@@ -117,11 +117,11 @@ export default {
                             card: {
                                 description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar settings of Los Angeles with the foreign sights of Taiwan. It begins with me coming out from the dusty crawl space beneath my bed at home. Having been absorbed in my drawings, I didn't realize I'd stayed down there well into nighttime.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
-                        `emerged.`
+                        `emerged.`,
                     ],
                     lyricRight: [
                         `trifling`,
@@ -131,26 +131,26 @@ export default {
                                 description: [
                                     {
                                         isItalic: true,
-                                        lyric: `Tref`
+                                        lyric: `Tref`,
                                     },
                                     `is`,
                                     {
                                         anchor: `Yiddish`,
-                                        wiki: `Yiddish`
+                                        wiki: `Yiddish`,
                                     },
                                     `for anything that isn't`,
                                     {
                                         anchor: `kosher.`,
-                                        wiki: `Kashrut`
+                                        wiki: `Kashrut`,
                                     },
-                                    `There were certain everyday foods that Sasha wasn't meant to eat due to her faith, so it could be inferred that certain boys in her everyday life also weren't meant to be dated.`
+                                    `There were certain everyday foods that Sasha wasn't meant to eat due to her faith, so it could be inferred that certain boys in her everyday life also weren't meant to be dated.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 14,
@@ -161,11 +161,11 @@ export default {
                             card: {
                                 description: `The cobwebs trailing from my clothes happen to snag some of my drawings that are attached to the refigerator, scattering them onto the floor.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
-                        `was strewn,`
+                        `was strewn,`,
                     ],
                     lyricRight: [
                         {
@@ -175,24 +175,24 @@ export default {
                                     `The`,
                                     {
                                         anchor: `Buddhism`,
-                                        wiki: `Buddhism`
+                                        wiki: `Buddhism`,
                                     },
-                                    `of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`
+                                    `of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as a limitless stretch of cold, empty space, in which we live and die to no greater concern.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `instead stay unmoved;`
-                    ]
+                        `instead stay unmoved;`,
+                    ],
                 },
                 {
                     time: 17,
                     lyricLeft: `silent poll of colors overused.`,
-                    lyricRight: `sigh and pull the covers over you.`
-                }
+                    lyricRight: `sigh and pull the covers over you.`,
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -201,25 +201,25 @@ export default {
                         `I wanted this song to capture the disorienting cycle between days among the foreign and dreams of the familiar. So I used a literary technique I invented called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's the musical version of a cinematic`,
                         {
                             anchor: `split screen.`,
-                            wiki: `Split_screen_(video_production)`
-                        }
+                            wiki: `Split_screen_(video_production)`,
+                        },
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: PRECHORUS
+                formType: PRECHORUS,
             },
             mainVerses: [
                 {
                     time: 20,
                     lyricLeft: `This latest piece`,
-                    lyricRight: `In safest sleep,`
+                    lyricRight: `In safest sleep,`,
                 },
                 {
                     time: 23,
@@ -232,16 +232,16 @@ export default {
                                     `When we landed in Taiwan, my aunt gave me a set of`,
                                     {
                                         anchor: `pastels`,
-                                        wiki: `Pastel`
+                                        wiki: `Pastel`,
                                     },
-                                    `as a gift. They were more powdery than crayons, which meant they ran out quickly. By the end of our trip, I was left with the least used colors. Similarly, being in Taiwan forced me to rely on my underused skills, like speaking Taiwanese.`
+                                    `as a gift. They were more powdery than crayons, which meant they ran out quickly. By the end of our trip, I was left with the least used colors. Similarly, being in Taiwan forced me to rely on my underused skills, like speaking Taiwanese.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
                     ],
                     lyricRight: [
                         `you`,
@@ -251,17 +251,17 @@ export default {
                                 description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. While terrifying, the vastness of the universe also suggests unlimited possibilities. Yet somehow, being with Sasha is not among them.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
@@ -275,12 +275,12 @@ export default {
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        }
+                                    [PUN]: true,
+                                },
+                            },
+                        },
                     ],
-                    lyricRight: `But how dreadful indeed,`
+                    lyricRight: `But how dreadful indeed,`,
                 },
                 {
                     time: 28,
@@ -295,22 +295,22 @@ export default {
                                         `In Greek mythology,`,
                                         {
                                             anchor: `ichor`,
-                                            wiki: `Ichor`
+                                            wiki: `Ichor`,
                                         },
-                                        `is the golden blood of the gods.`
-                                    ]
+                                        `is the golden blood of the gods.`,
+                                    ],
                                 },
                                 {
                                     description: `I dreaded sleep as a child. The nightly ordeal of swapping out my reasoned thoughts for irrational dreams felt as burdensome and frightening as a blood transfusion. And yet, things always seemed better in the morning because of it.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            ]
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `seem!`
-                    ]
+                        `seem!`,
+                    ],
                 },
                 {
                     time: 32,
@@ -323,15 +323,15 @@ export default {
                                     `My impression of Taiwanese buildings at the time is that they made heavy use of iron grates and stone slabs. Even ordinary living quarters had the feel of a mausoleum adorned with`,
                                     {
                                         anchor: `alabaster`,
-                                        wiki: `Alabaster`
+                                        wiki: `Alabaster`,
                                     },
-                                    `carvings.`
+                                    `carvings.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
                     ],
                     lyricRight: [
                         `Like a`,
@@ -342,22 +342,22 @@ export default {
                                     `Writing doublespeaker rhyme was rather daunting, so I would challenge myself with fun exercises. One of these was to mention each of the four elementals of`,
                                     {
                                         anchor: `Paracelsus,`,
-                                        wiki: `Paracelsus`
+                                        wiki: `Paracelsus`,
                                     },
                                     `the 16th-century alchemist who believed that nature is made up of four elements, each personified by a mythical creature. The`,
                                     {
                                         anchor: `salamander`,
-                                        wiki: `Salamanders_in_folklore_and_legend`
+                                        wiki: `Salamanders_in_folklore_and_legend`,
                                     },
-                                    `is the elemental of fire.`
+                                    `is the elemental of fire.`,
                                 ],
                                 dotKeys: {
-                                    [SONGCRAFT]: true
-                                }
-                            }
+                                    [SONGCRAFT]: true,
+                                },
+                            },
                         },
-                        `shall await`
-                    ]
+                        `shall await`,
+                    ],
                 },
                 {
                     time: 35,
@@ -368,10 +368,10 @@ export default {
                             card: {
                                 description: `I especially dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. If I woke to use the bathroom, I had to tiptoe toward the door with only a sliver of moonlight peeking in from underneath to guide me.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
                     ],
                     lyricRight: [
                         {
@@ -381,33 +381,33 @@ export default {
                                     `Like most`,
                                     {
                                         anchor: `amphibians,`,
-                                        wiki: `Amphibian`
+                                        wiki: `Amphibian`,
                                     },
                                     {
                                         anchor: `salamanders`,
-                                        wiki: `Salamander`
+                                        wiki: `Salamander`,
                                     },
                                     `begin life underwater, then lose their gills and develop lungs to live on land. I always wondered if this process of`,
                                     {
                                         anchor: `metamorphosis`,
-                                        wiki: `Metamorphosis`
+                                        wiki: `Metamorphosis`,
                                     },
-                                    `feels as harrowing as it sounds, given how breathing becomes the new drowning and vice versa, with no explanation or warning. Because that's how falling asleep always came across to me.`
+                                    `feels as harrowing as it sounds, given how breathing becomes the new drowning and vice versa, with no explanation or warning. Because that's how falling asleep always came across to me.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `for present bane.`
-                    ]
-                }
-            ]
+                        `for present bane.`,
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
                 formType: VERSES,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -421,17 +421,17 @@ export default {
                                     `In Greek mythology, the river`,
                                     {
                                         anchor: `Styx`,
-                                        wiki: `Styx`
+                                        wiki: `Styx`,
                                     },
-                                    `separates the realm of the living from the underworld. In my grandmother's house at night, the stairs leading down to the kitchen felt similarly foreboding.`
+                                    `separates the realm of the living from the underworld. In my grandmother's house at night, the stairs leading down to the kitchen felt similarly foreboding.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
                     ],
-                    lyricRight: `And how stingy and scarce`
+                    lyricRight: `And how stingy and scarce`,
                 },
                 {
                     time: 40,
@@ -444,13 +444,13 @@ export default {
                                     `The crescent moon is shaped like the blade of the scythe wielded by the`,
                                     {
                                         anchor: `Grim Reaper.`,
-                                        wiki: `Death_(personification)`
-                                    }
+                                        wiki: `Death_(personification)`,
+                                    },
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
                         {
                             anchor: `oriental`,
@@ -459,32 +459,32 @@ export default {
                                     `The word`,
                                     {
                                         anchor: `"Oriental"`,
-                                        wiki: `Orient`
+                                        wiki: `Orient`,
                                     },
                                     `wasn't considered a pejorative when I was growing up. It's even printed on my birth certificate. I learned of its`,
                                     {
                                         anchor: `political incorrectness`,
-                                        wiki: `Political_correctness`
+                                        wiki: `Political_correctness`,
                                     },
                                     `during the same time when`,
                                     {
                                         anchor: `"queer"`,
-                                        wiki: `Queer`
+                                        wiki: `Queer`,
                                     },
                                     `was being reclaimed by the`,
                                     {
                                         anchor: `gay community.`,
-                                        wiki: `LGBT_community`
+                                        wiki: `LGBT_community`,
                                     },
-                                    `The latter approach always made more sense to me.`
+                                    `The latter approach always made more sense to me.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `streets.`
+                        `streets.`,
                     ],
                     lyricRight: [
                         `proves`,
@@ -496,25 +496,25 @@ export default {
                                         `A`,
                                         {
                                             anchor: `shibboleth`,
-                                            wiki: `Shibboleth`
+                                            wiki: `Shibboleth`,
                                         },
                                         `is any signifier used to differentiate members of an ingroup from outsiders. The`,
                                         {
                                             anchor: `Book of Judges,`,
-                                            wiki: `Book_of_Judges`
+                                            wiki: `Book_of_Judges`,
                                         },
                                         `tells of a battle in which the warriors of an`,
                                         {
                                             anchor: `Israelite`,
-                                            wiki: `Israelites`
+                                            wiki: `Israelites`,
                                         },
-                                        `tribe asked stragglers to pronounce the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they outed themselves by pronouncing the word as "sibboleth," just as I do in the recording.`
-                                    ]
+                                        `tribe asked stragglers to pronounce the Hebrew word for a stream. Because the enemy tribe lacked the "sh" sound in their dialect, they outed themselves by pronouncing the word as "sibboleth," just as I do in the recording.`,
+                                    ],
                                 ],
                                 dotKeys: {
-                                    [SONGCRAFT]: true
-                                }
-                            }
+                                    [SONGCRAFT]: true,
+                                },
+                            },
                         },
                         `for these`,
                         {
@@ -524,16 +524,16 @@ export default {
                                     `Referring to myself here as a`,
                                     {
                                         anchor: `"Gentile,"`,
-                                        wiki: `Gentile`
+                                        wiki: `Gentile`,
                                     },
-                                    `or non-Jew.`
+                                    `or non-Jew.`,
                                 ],
                                 dotKeys: {
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 44,
@@ -547,16 +547,16 @@ export default {
                                     `A`,
                                     {
                                         anchor: `couplet`,
-                                        wiki: `Couplet`
+                                        wiki: `Couplet`,
                                     },
-                                    `is a pair of lines in a poem that typically rhyme and share the same meter. Sasha and I were never a couple, of course. But perhaps we were a couplet?`
+                                    `is a pair of lines in a poem that typically rhyme and share the same meter. Sasha and I were never a couple, of course. But perhaps we were a couplet?`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 47,
@@ -569,16 +569,16 @@ export default {
                                     `A`,
                                     {
                                         anchor: `rickshaw`,
-                                        wiki: `Rickshaw`
+                                        wiki: `Rickshaw`,
                                     },
-                                    `is a pedal-driven passenger vehicle. Here, the uneven surface of the road causes one to jounce abruptly.`
+                                    `is a pedal-driven passenger vehicle. Here, the uneven surface of the road causes one to jounce abruptly.`,
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
-                        `from grating cracks.`
+                        `from grating cracks.`,
                     ],
                     lyricRight: [
                         `still, but`,
@@ -589,18 +589,18 @@ export default {
                                     `Being in Taiwan at the time, I was unable to attend Sasha's`,
                                     {
                                         anchor: `bat mitzvah,`,
-                                        wiki: `Bar_and_Bat_Mitzvah`
+                                        wiki: `Bar_and_Bat_Mitzvah`,
                                     },
-                                    `a coming-of-age ritual undertaken by Jewish girls upon reaching twelve years of age.`
+                                    `a coming-of-age ritual undertaken by Jewish girls upon reaching twelve years of age.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `come racing back.`
-                    ]
-                }
+                        `come racing back.`,
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -608,14 +608,14 @@ export default {
                     description: `While the two doublespeaker voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: PRECHORUS
+                formType: PRECHORUS,
             },
             mainVerses: [
                 {
@@ -629,32 +629,32 @@ export default {
                                     `The narrator in`,
                                     {
                                         anchor: `Herman Melville's`,
-                                        wiki: `Herman_Melville`
+                                        wiki: `Herman_Melville`,
                                     },
                                     {
                                         isItalic: true,
                                         lyric: {
                                             anchor: `Moby-Dick`,
-                                            wiki: `Moby-Dick`
-                                        }
+                                            wiki: `Moby-Dick`,
+                                        },
                                     },
                                     `is an outcast like his namesake`,
                                     {
                                         anchor: `Ishmael,`,
-                                        wiki: `Ishmael`
+                                        wiki: `Ishmael`,
                                     },
                                     `the first son of`,
                                     {
                                         anchor: `Abraham.`,
-                                        wiki: `Abraham`
+                                        wiki: `Abraham`,
                                     },
-                                    `While the latter was banished to the desert, the former wanders the wilderness of the ocean. It is to these metaphorical dunes of the ocean that I now flee as well.`
+                                    `While the latter was banished to the desert, the former wanders the wilderness of the ocean. It is to these metaphorical dunes of the ocean that I now flee as well.`,
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
-                        }
+                                    [NARRATIVE]: true,
+                                },
+                            },
+                        },
                     ],
                     lyricRight: [
                         `To`,
@@ -663,12 +663,12 @@ export default {
                             card: {
                                 wormhole: {
                                     wormholeKey: `dreams_of_whom`,
-                                    wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX
-                                }
-                            }
+                                    wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX,
+                                },
+                            },
                         },
-                        `does each one cave in`
-                    ]
+                        `does each one cave in`,
+                    ],
                 },
                 {
                     time: 53,
@@ -680,18 +680,18 @@ export default {
                                 description: `Being an illegitimate son, Ishmael could not inherit Abraham's house, but God promised to make him into a great nation. Coming from less favored lineage myself, I could only hope for similar recompense, as I was not to marry into Sasha's house.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [REFERENCE]: true
-                                }
-                            }
-                        }
+                                    [REFERENCE]: true,
+                                },
+                            },
+                        },
                     ],
-                    lyricRight: `as a slave for the seasons?`
-                }
-            ]
+                    lyricRight: `as a slave for the seasons?`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: CHORUS
+                formType: CHORUS,
             },
             mainVerses: [
                 {
@@ -707,70 +707,70 @@ export default {
                                         `At our middle school, students who completed two years of`,
                                         {
                                             anchor: `French`,
-                                            wiki: `French_language`
+                                            wiki: `French_language`,
                                         },
                                         `were eligible to attend a summer program in the city of`,
                                         {
                                             anchor: `Paris.`,
-                                            wiki: `Paris`
+                                            wiki: `Paris`,
                                         },
-                                        `This excited Sasha, and so it excited me as well.`
+                                        `This excited Sasha, and so it excited me as well.`,
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                                        [BACKSTORY]: true,
+                                    },
                                 },
                                 {
                                     description: [
                                         `In Greek mythology,`,
                                         {
                                             anchor: `Paris`,
-                                            wiki: `Paris_(mythology)`
+                                            wiki: `Paris_(mythology)`,
                                         },
                                         `was the prince of`,
                                         {
                                             anchor: `Troy,`,
-                                            wiki: `Troy`
+                                            wiki: `Troy`,
                                         },
                                         `whose elopement with`,
                                         {
                                             anchor: `Helen of Sparta`,
-                                            wiki: `Helen_of_Troy`
+                                            wiki: `Helen_of_Troy`,
                                         },
                                         `began the`,
                                         {
                                             anchor: `Trojan War.`,
-                                            wiki: `Trojan_War`
-                                        }
+                                            wiki: `Trojan_War`,
+                                        },
                                     ],
                                     dotKeys: {
-                                        [PUN]: true
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 63,
                     lyricLeft: `were just sins simply dreamt,`,
-                    lyricRight: `weren't just myths between friends,`
-                }
+                    lyricRight: `weren't just myths between friends,`,
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: `The drums were the one instrument for which I scored parts that were far more advanced than my own playing ability. So for this song, I had to try several workarounds. I ended up recording the kick, snare, and toms in separate takes from the cymbals.`,
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
                 formType: CHORUS,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -786,31 +786,31 @@ export default {
                                     `A`,
                                     {
                                         anchor: `rondel`,
-                                        wiki: `Rondel_(poem)`
+                                        wiki: `Rondel_(poem)`,
                                     },
                                     `is a verse form that originated in French poetry, but it can also refer to anything round, like a ball. The`,
                                     {
                                         anchor: `"apple of one's eye"`,
-                                        wiki: `Apple_of_my_eye`
+                                        wiki: `Apple_of_my_eye`,
                                     },
                                     `is an`,
                                     {
                                         anchor: `Old English`,
-                                        wiki: `Old_English`
+                                        wiki: `Old_English`,
                                     },
                                     `misreading of a`,
                                     {
                                         anchor: `Biblical Hebrew`,
-                                        wiki: `Biblical_Hebrew`
+                                        wiki: `Biblical_Hebrew`,
                                     },
-                                    `idiom that more accurately translates to "ball of one's eye." My hope that I could be the object of Sasha's affection was based on a similar misreading.`
+                                    `idiom that more accurately translates to "ball of one's eye." My hope that I could be the object of Sasha's affection was based on a similar misreading.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 70,
@@ -821,19 +821,19 @@ export default {
                                 `Uncertain of whether I am asleep or awake, I channel the ancient`,
                                 {
                                     anchor: `Taoist`,
-                                    wiki: `Taoism`
+                                    wiki: `Taoism`,
                                 },
                                 `philosopher`,
                                 {
                                     anchor: `Zhuangzi,`,
-                                    wiki: `Zhuang_Zhou`
+                                    wiki: `Zhuang_Zhou`,
                                 },
-                                `who mused that he couldn't be sure if he was a man who dreamt he was a butterfly, or a butterfly dreaming he is a man.`
+                                `who mused that he couldn't be sure if he was a man who dreamt he was a butterfly, or a butterfly dreaming he is a man.`,
                             ],
                             dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        }
+                                [NARRATIVE]: true,
+                            },
+                        },
                     },
                     lyricRight: [
                         `be`,
@@ -844,38 +844,38 @@ export default {
                                     `Due to another mistranslation, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as`,
                                     {
                                         anchor: `"Adam's apple."`,
-                                        wiki: `Adam's_apple`
+                                        wiki: `Adam's_apple`,
                                     },
                                     `And so an apocryphal tale was born that when`,
                                     {
                                         anchor: `Adam`,
-                                        wiki: `Adam`
+                                        wiki: `Adam`,
                                     },
                                     `ate the`,
                                     {
                                         anchor: `forbidden fruit`,
-                                        wiki: `Forbidden_fruit`
+                                        wiki: `Forbidden_fruit`,
                                     },
                                     `of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their`,
                                     {
                                         anchor: `original sin.`,
-                                        wiki: `Original_sin`
+                                        wiki: `Original_sin`,
                                     },
-                                    `Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`
+                                    `Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
                 formType: CHORUS,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -889,30 +889,30 @@ export default {
                                 description: [
                                     {
                                         anchor: `Eris`,
-                                        wiki: `Eris_(mythology)`
+                                        wiki: `Eris_(mythology)`,
                                     },
                                     `was the Greek goddess of discord. As revenge for being denied invitation to a feast attended by the other gods, she tossed a golden apple labeled "for the fairest" into their midst. When Paris was asked to judge its rightful owner, he chose`,
                                     {
                                         anchor: `Aphrodite,`,
-                                        wiki: `Aphrodite`
+                                        wiki: `Aphrodite`,
                                     },
-                                    `who rewarded him with the hand of Helen.`
-                                ]
-                            }
-                        }
-                    ]
+                                    `who rewarded him with the hand of Helen.`,
+                                ],
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 76,
                     lyricLeft: `still die at the end—`,
-                    lyricRight: `till lives acquiesce,`
-                }
-            ]
+                    lyricRight: `till lives acquiesce,`,
+                },
+            ],
         },
         {
             unitMap: {
                 formType: CHORUS,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -926,20 +926,20 @@ export default {
                                     `Odin's remains had been taken to the`,
                                     {
                                         anchor: `Humane Society,`,
-                                        wiki: `The_Humane_Society_of_the_United_States`
+                                        wiki: `The_Humane_Society_of_the_United_States`,
                                     },
                                     `which offers pet`,
                                     {
                                         anchor: `cremation`,
-                                        wiki: `Cremation`
+                                        wiki: `Cremation`,
                                     },
-                                    `services.`
+                                    `services.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
                     ],
                     lyricRight: [
                         `by`,
@@ -950,16 +950,16 @@ export default {
                                     `In Greek mythology,`,
                                     {
                                         anchor: `Pandora`,
-                                        wiki: `Pandora`
+                                        wiki: `Pandora`,
                                     },
                                     `was the first human woman. Upon opening a box given to her by`,
                                     {
                                         anchor: `Zeus`,
-                                        wiki: `Zeus`
+                                        wiki: `Zeus`,
                                     },
-                                    `as a wedding gift, she unwittingly released all the evils that now plague humanity.`
-                                ]
-                            }
+                                    `as a wedding gift, she unwittingly released all the evils that now plague humanity.`,
+                                ],
+                            },
                         },
                         `that come undone by`,
                         {
@@ -969,28 +969,28 @@ export default {
                                     `The`,
                                     {
                                         anchor: `undine`,
-                                        wiki: `Undine`
+                                        wiki: `Undine`,
                                     },
                                     `is a female nymph and the elemental of water. The term was coined by Paracelsus and is derived from the Latin word`,
                                     {
                                         isItalic: true,
-                                        lyric: `unda,`
+                                        lyric: `unda,`,
                                     },
-                                    `meaning "wave."`
-                                ]
-                            }
-                        }
-                    ]
+                                    `meaning "wave."`,
+                                ],
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 84,
                     lyricLeft: `which filled a chasm dug up underneath—`,
-                    lyricRight: `which spilled a basket among other things—`
+                    lyricRight: `which spilled a basket among other things—`,
                 },
                 {
                     time: 87,
                     lyricLeft: `can that which kills a cat`,
-                    lyricRight: `a casket tilted back`
+                    lyricRight: `a casket tilted back`,
                 },
                 {
                     time: 90,
@@ -1004,17 +1004,17 @@ export default {
                                 description: `Hope was all that remained in Pandora's box. But upon having the hard truths of the world revealed to me by Sasha, I was left feeling as hopeless as ever.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [REFERENCE]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [REFERENCE]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
@@ -1029,16 +1029,16 @@ export default {
                                     `In`,
                                     {
                                         anchor: `Hippocratic medicine,`,
-                                        wiki: `Humorism`
+                                        wiki: `Humorism`,
                                     },
-                                    `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. My expressions of resentment toward the bullies, which I confided to Sasha, contained a bit of both.`
+                                    `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. My expressions of resentment toward the bullies, which I confided to Sasha, contained a bit of both.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 95,
@@ -1051,17 +1051,17 @@ export default {
                                     `Standing on the ocean beach, I notice a steel whistle half buried in the sand, perhaps dropped by a`,
                                     {
                                         anchor: `lifeguard`,
-                                        wiki: `Lifeguard`
+                                        wiki: `Lifeguard`,
                                     },
-                                    `earlier in the day. Its shrill cry once warned of danger, but now it lies forever silent. Which may be just as well, since some dangers come with no warning.`
+                                    `earlier in the day. Its shrill cry once warned of danger, but now it lies forever silent. Which may be just as well, since some dangers come with no warning.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `at your feet,`
+                        `at your feet,`,
                     ],
                     lyricRight: [
                         `you see the`,
@@ -1072,27 +1072,27 @@ export default {
                                     `The`,
                                     {
                                         anchor: `Cumaean Sibyl`,
-                                        wiki: `Cumaean_Sibyl`
+                                        wiki: `Cumaean_Sibyl`,
                                     },
                                     `was a Greek prophetess who was granted immortality but not eternal youth.`,
                                     {
                                         anchor: `T.S. Eliot's`,
-                                        wiki: `T._S._Eliot`
+                                        wiki: `T._S._Eliot`,
                                     },
                                     `poem`,
                                     {
                                         isItalic: true,
                                         lyric: {
                                             anchor: `The Waste Land`,
-                                            wiki: `The_Waste_Land`
-                                        }
+                                            wiki: `The_Waste_Land`,
+                                        },
                                     },
-                                    `begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants most. She replies that what she wants most is to die.`
-                                ]
-                            }
+                                    `begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants most. She replies that what she wants most is to die.`,
+                                ],
+                            },
                         },
-                        `had foreseen`
-                    ]
+                        `had foreseen`,
+                    ],
                 },
                 {
                     time: 99,
@@ -1104,20 +1104,20 @@ export default {
                                 description: [
                                     {
                                         anchor: `Barricade tape`,
-                                        wiki: `Barricade_tape`
+                                        wiki: `Barricade_tape`,
                                     },
                                     `has been tied along the`,
                                     {
                                         anchor: `barbecue grills`,
-                                        wiki: `Barbecue_grill`
+                                        wiki: `Barbecue_grill`,
                                     },
-                                    `that line the shore, in an effort to prevent beachgoers from wading into the shark-infested waters.`
+                                    `that line the shore, in an effort to prevent beachgoers from wading into the shark-infested waters.`,
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
-                        }
+                                    [NARRATIVE]: true,
+                                },
+                            },
+                        },
                     ],
                     lyricRight: [
                         `as not for wrapping by a`,
@@ -1127,22 +1127,22 @@ export default {
                                 {
                                     description: `Like cellophane, Sasha's intentions were transparent. I could always count on her to sympathize during my bouts of frustration.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
+                                        [OBSERVATION]: true,
+                                    },
                                 },
                                 {
                                     description: [
                                         `In the works of Paracelsus, the`,
                                         {
                                             anchor: `sylph`,
-                                            wiki: `Sylph`
+                                            wiki: `Sylph`,
                                         },
-                                        `is the elemental of air, often depicted as a fairy with wings of gauze.`
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
+                                        `is the elemental of air, often depicted as a fairy with wings of gauze.`,
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 102,
@@ -1151,17 +1151,17 @@ export default {
                         {
                             anchor: `stand onshore`,
                             card: {
-                                wormhole: `stand_onshore`
-                            }
+                                wormhole: `stand_onshore`,
+                            },
                         },
-                        `keen to drift`
+                        `keen to drift`,
                     ],
-                    lyricRight: `who cannot warm he who`
+                    lyricRight: `who cannot warm he who`,
                 },
                 {
                     time: 103,
                     lyricLeft: [
-                        `if shark swarms withheld.`
+                        `if shark swarms withheld.`,
                     ],
                     lyricRight: [
                         {
@@ -1170,13 +1170,13 @@ export default {
                             card: {
                                 description: `But also like cellophane, Sasha couldn't return warmth where none was present. As long as I couldn't be the better person in dealing with the bullies, there was a point where she needed to keep her distance from me as well.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `himself.`
-                    ]
-                }
+                        `himself.`,
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -1185,19 +1185,19 @@ export default {
                         `Recording vocals in doublespeaker rhyme proved to be trickier than expected. When singing, we tend to delay or shorten syllables to adjust for phrasing and consonant clusters. So even when each voice in a doublespeaker set sounded fine on its own, the disjointed syllables would meld into a jumbled mush once heard together. To keep them in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
                         {
                             anchor: `ligature.`,
-                            wiki: `Ligature_(music)`
-                        }
+                            wiki: `Ligature_(music)`,
+                        },
                     ],
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
                 formType: VERSES,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -1209,13 +1209,13 @@ export default {
                                 description: `As buoys bob in an ocean filled with sea serpents, who's to say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [PUN]: true
-                                }
-                            }
+                                    [PUN]: true,
+                                },
+                            },
                         },
-                        `through sea serpents,`
+                        `through sea serpents,`,
                     ],
-                    lyricRight: `Coin toss to be hers from`
+                    lyricRight: `Coin toss to be hers from`,
                 },
                 {
                     time: 107,
@@ -1228,18 +1228,18 @@ export default {
                                     `To wander a prison yard is to heed the constant danger of getting`,
                                     {
                                         anchor: 'shivved,',
-                                        wiki: `Shiv_(weapon)`
+                                        wiki: `Shiv_(weapon)`,
                                     },
-                                    `or stabbed by a makeshift weapon. But I had to wonder how much this applied as a general rule, given that the schoolyard seemed to be preparing me for a lifetime of such vigilance.`
+                                    `or stabbed by a makeshift weapon. But I had to wonder how much this applied as a general rule, given that the schoolyard seemed to be preparing me for a lifetime of such vigilance.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
+                                    [OBSERVATION]: true,
+                                },
                             },
                             {
-                                wormhole: `chivalry`
-                            }
-                        ]
+                                wormhole: `chivalry`,
+                            },
+                        ],
                     },
                     lyricRight: {
                         anchor: `shivaree towards shivah seat`,
@@ -1248,24 +1248,24 @@ export default {
                                 description: [
                                     {
                                         anchor: `Shivaree`,
-                                        wiki: `Charivari`
+                                        wiki: `Charivari`,
                                     },
                                     `is a European folk custom in which a raucous crowd serenades a newlywed couple. Meanwhile, sitting`,
                                     {
                                         anchor: `shivah`,
-                                        wiki: `Shiva_(Judaism)`
+                                        wiki: `Shiva_(Judaism)`,
                                     },
-                                    `refers to a period of mourning in Judaism after a family member passes away. In other words, my bad luck not to be born Jewish has cost me any hope of spending a lifetime with Sasha from marriage until death.`
+                                    `refers to a period of mourning in Judaism after a family member passes away. In other words, my bad luck not to be born Jewish has cost me any hope of spending a lifetime with Sasha from marriage until death.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
+                                    [OBSERVATION]: true,
+                                },
                             },
                             {
-                                wormhole: `chivalry`
-                            }
-                        ]
-                    }
+                                wormhole: `chivalry`,
+                            },
+                        ],
+                    },
                 },
                 {
                     time: 111,
@@ -1279,17 +1279,17 @@ export default {
                                     `Pining after Sasha was like trying to stare at an off-center`,
                                     {
                                         anchor: `floater`,
-                                        wiki: `Floater`
+                                        wiki: `Floater`,
                                     },
-                                    `on the surface of my eye. Despite my frantic efforts to bring us closer, her inner world always remained a fixed distance apart from me.`
+                                    `on the surface of my eye. Despite my frantic efforts to bring us closer, her inner world always remained a fixed distance apart from me.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `from your sight.`
-                    ]
+                        `from your sight.`,
+                    ],
                 },
                 {
                     time: 114,
@@ -1302,47 +1302,47 @@ export default {
                                     `Watching the waves of the ocean rise and fall, I recall the`,
                                     {
                                         anchor: `traveling carnivals`,
-                                        wiki: `Traveling_carnival`
+                                        wiki: `Traveling_carnival`,
                                     },
-                                    `that came to town in my youth. Every summer, their amusement rides would rise up to reshape the skyline. And yet, they are now being dissembled in my memories with the same transience of ocean waves.`
+                                    `that came to town in my youth. Every summer, their amusement rides would rise up to reshape the skyline. And yet, they are now being dissembled in my memories with the same transience of ocean waves.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
                     ],
-                    lyricRight: `You chase till dew sheds from your eyes`
-                }
-            ]
+                    lyricRight: `You chase till dew sheds from your eyes`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: PRECHORUS
+                formType: PRECHORUS,
             },
             mainVerses: [
                 {
                     time: 117,
                     lyricLeft: `in your dim, lingering gaze,`,
-                    lyricRight: `with your beleaguered remains,`
+                    lyricRight: `with your beleaguered remains,`,
                 },
                 {
                     time: 120,
                     lyricLeft: `a victim of erosion.`,
-                    lyricRight: `amidst dustbunnies frozen.`
-                }
-            ]
+                    lyricRight: `amidst dustbunnies frozen.`,
+                },
+            ],
         },
         {
             unitMap: {
                 formType: BRIDGE,
-                subVerseType: RESPONSE
+                subVerseType: RESPONSE,
             },
             mainVerses: [
                 {
                     time: 123,
-                    lyric: `Should you hide, or could you fight,`
+                    lyric: `Should you hide, or could you fight,`,
                 },
                 {
                     time: 132,
@@ -1355,29 +1355,29 @@ export default {
                                     `As a child, I experienced`,
                                     {
                                         anchor: `night terrors`,
-                                        wiki: `Night_terror`
+                                        wiki: `Night_terror`,
                                     },
                                     `related to my fear of death. Whenever I woke up screaming, my mother would comfort me with the promise of`,
                                     {
                                         anchor: `reincarnation.`,
-                                        wiki: `Reincarnation`
+                                        wiki: `Reincarnation`,
                                     },
                                     `But this confused me, since the end goal of Buddhism is`,
                                     {
                                         anchor: `nirvana,`,
-                                        wiki: `Nirvana_(Buddhism)`
+                                        wiki: `Nirvana_(Buddhism)`,
                                     },
-                                    `when the soul is annihilated and released from its cycle of rebirth. So being reborn again and again, but only up until my last life, just seemed like aging and dying on a grander scale.`
+                                    `when the soul is annihilated and released from its cycle of rebirth. So being reborn again and again, but only up until my last life, just seemed like aging and dying on a grander scale.`,
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `has come?`
-                    ]
-                }
+                        `has come?`,
+                    ],
+                },
             ],
             subVerse: [
                 {
@@ -1390,11 +1390,11 @@ export default {
                                 description: `And yet the thought of being stuck with a soul forever, an inescapable fate promised by the faiths of my classmates, seemed every bit as dreadful.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 137,
@@ -1407,9 +1407,9 @@ export default {
                             card: {
                                 description: `I didn't understand why this business of consciousness was even necessary. Why couldn't living creatures simply fear death in the same way that oil is said to fear water?`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
                         `and`,
                         {
@@ -1417,34 +1417,34 @@ export default {
                             card: {
                                 description: `Neither heaven nor nirvana sounded all that pleasant, and yet they were the best that centuries of humanity could dream up. It seemed to me that if a true spiritual reward existed out there, its allure should be so self-evident that wanting to strive for it would be a no-brainer.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
                 formType: BRIDGE,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
                     time: 141,
-                    lyric: `But in time, wouldn't you find`
+                    lyric: `But in time, wouldn't you find`,
                 },
                 {
                     time: 144,
-                    lyric: `life is simply much too long?`
-                }
-            ]
+                    lyric: `life is simply much too long?`,
+                },
+            ],
         },
         {
             unitMap: {
                 formType: BRIDGE,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -1457,11 +1457,11 @@ export default {
                             card: {
                                 description: `Most maddening of all was that one has no say in being brought into this world. Given how distressing the certainty of death must always be, it seemed like there should be an option to opt out of life to begin with.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `born preaborted,`
+                        `born preaborted,`,
                     ],
                     lyricRight: [
                         `Yet your`,
@@ -1472,47 +1472,47 @@ export default {
                                     `The`,
                                     {
                                         anchor: `tortoise defeats the hare`,
-                                        wiki: `The_Tortoise_and_the_Hare`
+                                        wiki: `The_Tortoise_and_the_Hare`,
                                     },
                                     `in`,
                                     {
                                         anchor: `Aesop's fable,`,
-                                        wiki: `Aesop's_Fables`
+                                        wiki: `Aesop's_Fables`,
                                     },
-                                    `but only because the hare falls asleep. Similarly, while tortoises are known to live over a century, I had them beat in longevity if I could just will myself to believe it.`
+                                    `but only because the hare falls asleep. Similarly, while tortoises are known to live over a century, I had them beat in longevity if I could just will myself to believe it.`,
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `forced lead unthwarted,`
-                    ]
+                        `forced lead unthwarted,`,
+                    ],
                 },
                 {
                     time: 150,
                     lyricLeft: `your ouija board said, "Son, just hum along."`,
-                    lyricRight: `sworn feat aforesaid, doesn't come anon.`
-                }
-            ]
+                    lyricRight: `sworn feat aforesaid, doesn't come anon.`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: SOLO
+                formType: SOLO,
             },
             mainVerses: [
                 {
                     time: 153,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(electric mandolin)`
-                    }
-                }
-            ]
+                        lyric: `(electric mandolin)`,
+                    },
+                },
+            ],
         },
         {
             unitMap: {
-                formType: CHORUS
+                formType: CHORUS,
             },
             mainVerses: [
                 {
@@ -1526,31 +1526,31 @@ export default {
                                     `In the`,
                                     {
                                         anchor: `Book of Exodus,`,
-                                        wiki: `Book_of_Exodus`
+                                        wiki: `Book_of_Exodus`,
                                     },
                                     {
                                         anchor: `Moses`,
-                                        wiki: `Moses`
+                                        wiki: `Moses`,
                                     },
                                     `led the Israelites out of slavery in Egypt by`,
                                     {
                                         anchor: `parting the Red Sea,`,
-                                        wiki: `Crossing_the_Red_Sea`
+                                        wiki: `Crossing_the_Red_Sea`,
                                     },
-                                    `which allowed them to safely cross.`
-                                ]
-                            }
-                        }
+                                    `which allowed them to safely cross.`,
+                                ],
+                            },
+                        },
                     ],
                     lyricRight: [
                         `Though, no`,
                         {
                             anchor: `gray starling's beak`,
                             card: {
-                                wormhole: `gray_starling`
-                            }
-                        }
-                    ]
+                                wormhole: `gray_starling`,
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 168,
@@ -1562,20 +1562,20 @@ export default {
                                 description: `The sea then closed behind Moses and the Israelites, drowning the Egyptian army in pursuit. Unfortunately, the certainty of death following me at every turn will not be overcome so easily.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [REFERENCE]: true
-                                }
-                            }
-                        }
+                                    [REFERENCE]: true,
+                                },
+                            },
+                        },
                     ],
                     // CONSIDER: Wormhole: Nora Barnacle in Good Night, Sita?
-                    lyricRight: `can reach urchins smashed from undertows…`
-                }
-            ]
+                    lyricRight: `can reach urchins smashed from undertows…`,
+                },
+            ],
         },
         {
             unitMap: {
                 formType: CHORUS,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -1587,12 +1587,12 @@ export default {
                             card: {
                                 description: `As I make peace with the inevitable, the ocean begins to feel calm and inviting. But my dream is also ending, and I expect to wake soon in the comfort of my bed.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
-                        }
+                                    [NARRATIVE]: true,
+                                },
+                            },
+                        },
                     ],
-                    lyricRight: `But suddenly Odin's day is at its end;`
+                    lyricRight: `But suddenly Odin's day is at its end;`,
                 },
                 {
                     time: 177,
@@ -1605,23 +1605,23 @@ export default {
                                     `It isn't just Odin's unused`,
                                     {
                                         anchor: `cat litter`,
-                                        wiki: `Litter_box`
+                                        wiki: `Litter_box`,
                                     },
                                     `that was swept aside; gone is any chance for him to sire a`,
                                     {
                                         anchor: `litter`,
-                                        wiki: `Litter_(zoology)`
+                                        wiki: `Litter_(zoology)`,
                                     },
-                                    `of his own. And so that makes two of us, given how unlikely I am to be made into a great nation any time soon.`
+                                    `of his own. And so that makes two of us, given how unlikely I am to be made into a great nation any time soon.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true
-                                }
-                            }
+                                    [PUN]: true,
+                                },
+                            },
                         },
-                        `to dust and earth was swept,`
-                    ]
+                        `to dust and earth was swept,`,
+                    ],
                 },
                 {
                     time: 180,
@@ -1634,16 +1634,16 @@ export default {
                                     `T.S. Eliot's`,
                                     {
                                         anchor: `"The Love Song of J. Alfred Prufrock"`,
-                                        wiki: `The_Love_Song_of_J._Alfred_Prufrock`
+                                        wiki: `The_Love_Song_of_J._Alfred_Prufrock`,
                                     },
-                                    `examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they won't sing for him. Similarly, while my resignation has turned the fearsome sea serpents into smiling mermaids, they don't smile for me.`
+                                    `examines themes of stunted growth and missed opportunities. The poem ends with the narrator bemoaning that while the mermaids may sing, they won't sing for him. Similarly, while my resignation has turned the fearsome sea serpents into smiling mermaids, they don't smile for me.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
                     ],
                     lyricRight: [
                         `while`,
@@ -1654,22 +1654,22 @@ export default {
                                 description: [
                                     {
                                         anchor: `Wednesday`,
-                                        wiki: `Wednesday`
+                                        wiki: `Wednesday`,
                                     },
                                     `means "Odin's day" in Old English, and I was born on a`,
                                     {
                                         anchor: `Thursday.`,
-                                        wiki: `Thursday`
+                                        wiki: `Thursday`,
                                     },
-                                    `So my day literally begins where Odin's day ends.`
+                                    `So my day literally begins where Odin's day ends.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 183,
@@ -1683,27 +1683,27 @@ export default {
                                         `The`,
                                         {
                                             anchor: `gnome,`,
-                                            wiki: `Gnome`
+                                            wiki: `Gnome`,
                                         },
-                                        `a small humanoid who lives underground, is the elemental of earth in Paracelsus's writings.`
-                                    ]
+                                        `a small humanoid who lives underground, is the elemental of earth in Paracelsus's writings.`,
+                                    ],
                                 },
                                 {
                                     description: [
                                         `Powerless to change my condition, I can only confront all that remains unknown. So like a`,
                                         {
                                             anchor: `garden gnome`,
-                                            wiki: `Garden_gnome`
+                                            wiki: `Garden_gnome`,
                                         },
-                                        `with feet firmly planted in the lawn grass, I stand motionless and grin faintly in hope for the future.`
+                                        `with feet firmly planted in the lawn grass, I stand motionless and grin faintly in hope for the future.`,
                                     ],
                                     dotKeys: {
                                         [NARRATIVE]: true,
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            ]
-                        }
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            ],
+                        },
                     ],
                     lyricRight: [
                         `has a`,
@@ -1713,33 +1713,33 @@ export default {
                                 description: [
                                     {
                                         anchor: `"Monday's Child"`,
-                                        wiki: `Monday's_Child`
+                                        wiki: `Monday's_Child`,
                                     },
-                                    `is a nursery rhyme that predicts a child's fortune based on their weekday of birth. Thursday's child is promised to have "far to go," and indeed, the distance I have left to cover feels depressingly vast. Still, I'm now one day closer than when the day began…`
+                                    `is a nursery rhyme that predicts a child's fortune based on their weekday of birth. Thursday's child is promised to have "far to go," and indeed, the distance I have left to cover feels depressingly vast. Still, I'm now one day closer than when the day began…`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: OUTRO
+                formType: OUTRO,
             },
             mainVerses: [
                 {
                     time: 186,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Odin's theme)`
-                    }
-                }
-            ]
+                        lyric: `(Odin's theme)`,
+                    },
+                },
+            ],
         },
         {
             unitMap: {},
@@ -1750,15 +1750,15 @@ export default {
                         `As it became clear that`,
                         {
                             isItalic: true,
-                            lyric: `Yearling's Bobtail`
+                            lyric: `Yearling's Bobtail`,
                         },
-                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, I reconnected with Sasha, and we started dating. She put me on the conversion path; I volunteered to study Hebrew. It was exactly the kind of self-reinvention I was hoping for, and for a while things were great. But we didn't last. Though I really wanted to mend my old ways, I guess my behavior lagged behind my intentions.`
+                        `wouldn't get any attention from the indie press, I moved to New York City to regain my bearings. There, I reconnected with Sasha, and we started dating. She put me on the conversion path; I volunteered to study Hebrew. It was exactly the kind of self-reinvention I was hoping for, and for a while things were great. But we didn't last. Though I really wanted to mend my old ways, I guess my behavior lagged behind my intentions.`,
                     ],
                     dotKeys: {
-                        [AFTERWORD]: true
-                    }
-                }
-            }
-        }
-    ]
+                        [AFTERWORD]: true,
+                    },
+                },
+            },
+        },
+    ],
 }

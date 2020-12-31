@@ -1,7 +1,7 @@
 export const addVerseDurations = ({
     songDuration,
     verseStartTimes,
-    song
+    song,
 
 }) => {
     const verseDurations = []
@@ -37,14 +37,14 @@ const _addVerseLists = (verses, song) => {
             lyricLeft,
             lyricRight,
             lastAnnotationIndex,
-            verseAnnotationIndices
+            verseAnnotationIndices,
         } = verse
 
         verseLyrics.push({
             ...lyric && { lyric },
             ...lyricCentre && { lyricCentre },
             ...lyricLeft && { lyricLeft },
-            ...lyricRight && { lyricRight }
+            ...lyricRight && { lyricRight },
         })
         verseLastAnnotationIndices.push(lastAnnotationIndex)
         verseAnnotationIndicesList.push(verseAnnotationIndices)

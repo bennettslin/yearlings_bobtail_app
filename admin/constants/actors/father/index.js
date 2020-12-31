@@ -1,46 +1,46 @@
 import {
     FATHER,
-    BENNETT_FATHER
+    BENNETT_FATHER,
 } from '../../../../app/constants/scene/actors'
 import {
     ROARING,
     ACCUSATORY,
-    REELING
+    REELING,
 } from '../../../../app/constants/scene/actors/father'
 import {
     PAST,
     PRESENT,
     FUTURE,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: FATHER,
-        instance: ROARING
+        instance: ROARING,
     },
     {
         type: FATHER,
-        instance: ACCUSATORY
+        instance: ACCUSATORY,
     },
     {
         type: FATHER,
-        instance: PAST
+        instance: PAST,
     },
     {
         type: BENNETT_FATHER,
-        instance: PRESENT
+        instance: PRESENT,
     },
     {
         type: FATHER,
-        instance: FUTURE
+        instance: FUTURE,
     },
     {
         type: FATHER,
-        instance: REELING
+        instance: REELING,
     },
     {
         type: FATHER,
-        instance: EPILOGUE
-    }
+        instance: EPILOGUE,
+    },
 ]

@@ -1,7 +1,7 @@
 import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
-    LIZ_COUCH_DARK_KEY
+    LIZ_COUCH_DARK_KEY,
 } from '../../../../../app/constants/scene/scenes'
 import { LIZ_COUCH_PEAFOWL_CUBES } from './asleep/cubes'
 import {
@@ -11,7 +11,7 @@ import {
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
     NIGHT_COLOUR as Z,
-    LIZ_COUCH_COLOUR as U
+    LIZ_COUCH_COLOUR as U,
 } from '../../../../../app/constants/scene/cubes/colours'
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
@@ -22,7 +22,7 @@ import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 const DEFAULT_CEILING = {
     hslaColours: [
         [D],
-        [W]
+        [W],
     ],
     zIndices: [
         [k],
@@ -30,8 +30,8 @@ const DEFAULT_CEILING = {
         [1, g, g, g, g, g, g, g, g, g, g, 1],
         [1, g, g, g, g, g, g, g, g, g, g, d],
         [1, g, g, g, g, g, g, g, g, g, g, d],
-        [1, g, g, g, g, g, g, g, g, g, g, 1]
-    ]
+        [1, g, g, g, g, g, g, g, g, g, g, 1],
+    ],
 }
 
 const DEFAULT_FLOOR = {
@@ -41,7 +41,7 @@ const DEFAULT_FLOOR = {
         [F],
         [F, U, U, U, F],
         [F, U, U, U, F],
-        [F]
+        [F],
     ],
     zIndices: [
         [6, 6, 6, 6, 6, 1, 1, 1, 6],
@@ -49,14 +49,14 @@ const DEFAULT_FLOOR = {
         [1],
         [1, 7, 3, 3, 1],
         [1, 7, 3, 3, 1],
-        [1]
-    ]
+        [1],
+    ],
 }
 
 export default {
     [LIZ_COUCH_KEY]: {
         ceiling: DEFAULT_CEILING,
-        floor: DEFAULT_FLOOR
+        floor: DEFAULT_FLOOR,
     },
     [LIZ_COUCH_SEAT_KEY]: {
         ceiling: DEFAULT_CEILING,
@@ -67,7 +67,7 @@ export default {
                 [F],
                 [F, U, U, U, F],
                 [F, U, U, U, F, F, F, F, U, U, F],
-                [F]
+                [F],
             ],
             zIndices: [
                 [6, 6, 6, 6, 6, 1, 1, 1, 6],
@@ -75,25 +75,25 @@ export default {
                 [1],
                 [1, 7, 3, 3, 1],
                 [1, 7, 3, 3, 1, 1, 1, 1, 3, 3, 1],
-                [1]
-            ]
-        }
+                [1],
+            ],
+        },
     },
     [LIZ_COUCH_DARK_KEY]: {
         ceiling: {
             hslaColours: [
                 [D],
-                [Z]
+                [Z],
             ],
-            zIndices: DEFAULT_CEILING.zIndices
+            zIndices: DEFAULT_CEILING.zIndices,
         },
         floor: {
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
-                [Z]
+                [Z],
             ],
-            zIndices: DEFAULT_FLOOR.zIndices
-        }
+            zIndices: DEFAULT_FLOOR.zIndices,
+        },
     },
-    ...LIZ_COUCH_PEAFOWL_CUBES
+    ...LIZ_COUCH_PEAFOWL_CUBES,
 }

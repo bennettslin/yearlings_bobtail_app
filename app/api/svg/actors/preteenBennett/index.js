@@ -32,7 +32,7 @@ import {
     SHAKEN,
     STOIC,
     WISTFUL,
-    SHEEPISH
+    SHEEPISH,
 } from '../../../../constants/scene/actors/preteenBennett'
 
 import { ASLEEP } from '../../../../constants/scene/actors/songs'
@@ -54,5 +54,5 @@ export default {
     [SHAKEN]: shaken,
     [STOIC]: stoic,
     [WISTFUL]: wistful,
-    [SHEEPISH]: sheepish
+    [SHEEPISH]: sheepish,
 }

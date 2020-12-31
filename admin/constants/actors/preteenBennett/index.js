@@ -3,7 +3,7 @@ import {
     BRAD_BENNETT,
     CHRISTOPHER_BENNETT,
     CHRISTOPHER_BENNETT_WILLY,
-    SASHA_BENNETT
+    SASHA_BENNETT,
 } from '../../../../app/constants/scene/actors'
 import {
     CAUTIOUS,
@@ -21,111 +21,111 @@ import {
     SHAKEN,
     STOIC,
     WISTFUL,
-    SHEEPISH
+    SHEEPISH,
 } from '../../../../app/constants/scene/actors/preteenBennett'
 import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett'
 import { BLISSFUL_GUILTY } from '../../../../app/constants/scene/actors/christopherBennett'
 import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
 import {
     MERMAID,
-    COMFORTING_HUMILIATED
+    COMFORTING_HUMILIATED,
 } from '../../../../app/constants/scene/actors/sashaBennett'
 import {
     ASLEEP,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../app/constants/scene/actors/songs'
 
 export default [
     {
         type: PRETEEN_BENNETT,
-        instance: CAUTIOUS
+        instance: CAUTIOUS,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: ENRAGED
+        instance: ENRAGED,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: FEARFUL
+        instance: FEARFUL,
     },
     {
         type: CHRISTOPHER_BENNETT_WILLY,
-        instance: REASSURING_ENCHANTED
+        instance: REASSURING_ENCHANTED,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: PANICKED
+        instance: PANICKED,
     },
     {
         type: BRAD_BENNETT,
-        instance: TYING_TETHER
+        instance: TYING_TETHER,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: MAT
+        instance: MAT,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: STAIRS
+        instance: STAIRS,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: GATE
+        instance: GATE,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: RICKSHAW
+        instance: RICKSHAW,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: SHORE
+        instance: SHORE,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: BUOY
+        instance: BUOY,
     },
     {
         type: SASHA_BENNETT,
-        instance: MERMAID
+        instance: MERMAID,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: OCEAN_FLOOR
+        instance: OCEAN_FLOOR,
     },
     {
         type: CHRISTOPHER_BENNETT,
-        instance: BLISSFUL_GUILTY
+        instance: BLISSFUL_GUILTY,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: FEIGNING_SICK
+        instance: FEIGNING_SICK,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: ASLEEP
+        instance: ASLEEP,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: SHAKEN
+        instance: SHAKEN,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: STOIC
+        instance: STOIC,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: WISTFUL
+        instance: WISTFUL,
     },
     {
         type: PRETEEN_BENNETT,
-        instance: SHEEPISH
+        instance: SHEEPISH,
     },
     {
         type: SASHA_BENNETT,
-        instance: COMFORTING_HUMILIATED
+        instance: COMFORTING_HUMILIATED,
     },
     {
         type: SASHA_BENNETT,
-        instance: EPILOGUE
-    }
+        instance: EPILOGUE,
+    },
 ]

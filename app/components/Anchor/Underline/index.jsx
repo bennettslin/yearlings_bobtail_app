@@ -11,7 +11,7 @@ const Underline = ({
     isDotAnchor,
     isWikiAnchor,
     isWikiFirstChild,
-    isWikiLastChild
+    isWikiLastChild,
 
 }) => didMount && (
     <div
@@ -39,7 +39,7 @@ const Underline = ({
                     'Underline__selected',
 
                 'ovH'
-            )
+            ),
         }}
     />
 )
@@ -51,7 +51,7 @@ Underline.propTypes = {
     isDotAnchor: PropTypes.bool,
     isWikiAnchor: PropTypes.bool,
     isWikiFirstChild: PropTypes.bool,
-    isWikiLastChild: PropTypes.bool
+    isWikiLastChild: PropTypes.bool,
 }
 
 export default memo(getDidMountHoc(Underline))

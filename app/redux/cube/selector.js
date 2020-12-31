@@ -4,7 +4,7 @@ import {
     getCeilingZIndexForCube,
     getFloorHslaForCube,
     getFloorZIndexForCube,
-    getSlantDirectionForCube
+    getSlantDirectionForCube,
 } from '../../api/scene/cubes'
 import { mapSceneCubesKey } from '../scene/selector'
 

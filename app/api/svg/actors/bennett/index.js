@@ -77,7 +77,7 @@ import {
     SHOW_ANNOYED,
     ALLEY,
     BROKEN_HEARTED,
-    DEMONSTRATION
+    DEMONSTRATION,
 } from '../../../../constants/scene/actors/bennett'
 
 import {
@@ -102,7 +102,7 @@ import {
     LEAVING_CRUMBLED,
     PAST,
     FUTURE,
-    EL_TORITO
+    EL_TORITO,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -155,5 +155,5 @@ export default {
     [ALLEY]: alley,
     [BROKEN_HEARTED]: brokenHearted,
     [DEMONSTRATION]: demonstration,
-    [EL_TORITO]: elTorito
+    [EL_TORITO]: elTorito,
 }

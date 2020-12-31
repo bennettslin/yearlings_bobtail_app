@@ -19,5 +19,5 @@ export const ORDERED_THINGS = [
     FIXTURE,
     PUPPET,
     BUBBLE,
-    CARDBOARD
+    CARDBOARD,
 ]

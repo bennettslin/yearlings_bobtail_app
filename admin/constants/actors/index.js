@@ -56,7 +56,7 @@ import {
     NESTOR,
     AMY,
     STEPHANIE,
-    WADE
+    WADE,
 } from '../../../app/constants/scene/actors'
 
 const ASH_SCENES = 'ashScenes'
@@ -93,7 +93,7 @@ export default [
     NESTOR,
     AMY,
     STEPHANIE,
-    WADE
+    WADE,
 ]
 
 export const WHOLE_ACTOR_INSTANCES = {
@@ -126,5 +126,5 @@ export const WHOLE_ACTOR_INSTANCES = {
     [NESTOR]: nestor,
     [AMY]: amy,
     [STEPHANIE]: stephanie,
-    [WADE]: wade
+    [WADE]: wade,
 }

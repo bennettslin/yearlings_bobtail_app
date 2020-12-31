@@ -6,7 +6,7 @@ import PreviewerSvg from './Svg'
 import PreviewerDashboard from './Dashboard'
 import {
     capitaliseForClassName,
-    convertPresenceKeyToClassName
+    convertPresenceKeyToClassName,
 } from '../../../app/helpers/format'
 import { getDocument } from '../../../app/utils/browser'
 import { accessPresence } from '../../utils/access'
@@ -14,18 +14,18 @@ import {
     getPresenceFromStorage,
     getPresenceFromQueryStrings,
     setPresenceInStorage,
-    setPresenceInQueryStrings
+    setPresenceInQueryStrings,
 } from '../../utils/storage'
 import {
     getPreviewerSvgMapForActor,
-    getPreviewerSvgMapForThing
+    getPreviewerSvgMapForThing,
 } from '../../utils/svg'
 import { BACKDROP } from '../../../app/constants/scene/things'
 import './style'
 
 class Previewer extends PureComponent {
     static propTypes = {
-        isActor: PropTypes.bool
+        isActor: PropTypes.bool,
     }
 
     constructor(props) {
@@ -40,7 +40,7 @@ class Previewer extends PureComponent {
         // Set presence from query strings in storage. Default is first index.
         setPresenceInStorage({
             isActor,
-            ...getPresenceFromQueryStrings(isActor)
+            ...getPresenceFromQueryStrings(isActor),
         })
 
         this.state = presenceFromStorage
@@ -58,11 +58,11 @@ class Previewer extends PureComponent {
         const
             {
                 presenceType: prevType,
-                presenceKey: prevKey
+                presenceKey: prevKey,
             } = prevState,
             {
                 presenceType,
-                presenceKey
+                presenceKey,
             } = this.state
 
         if (prevType !== presenceType || prevKey !== presenceKey) {
@@ -95,12 +95,12 @@ class Previewer extends PureComponent {
 
         this.setState({
             presenceType,
-            presenceKey
+            presenceKey,
         })
         setPresenceInStorage({
             isActor,
             presenceType,
-            presenceKey
+            presenceKey,
         })
 
         setPresenceInQueryStrings({ presenceType, presenceKey })
@@ -116,13 +116,13 @@ class Previewer extends PureComponent {
             isActor,
             presenceType,
             presenceKey,
-            selectPresence: this.selectPresence
+            selectPresence: this.selectPresence,
         })
     }
 
     scrollPresenceIntoView = ({
         presenceType = this.state.presenceType,
-        presenceKey = this.state.presenceKey
+        presenceKey = this.state.presenceKey,
     } = {}) => {
         const element = getDocument().querySelector(
             `.${capitaliseForClassName(presenceType)} .${convertPresenceKeyToClassName(presenceKey)}`
@@ -143,7 +143,7 @@ class Previewer extends PureComponent {
             { isActor } = this.props,
             {
                 presenceType,
-                presenceKey
+                presenceKey,
             } = this.state,
 
             svgMap = this.getPreviewerMapGetter()(presenceType)
@@ -162,7 +162,7 @@ class Previewer extends PureComponent {
                         'PtSansNarrow'
                     ),
                     tabIndex: -1,
-                    onKeyDown: this.handleKeyDown
+                    onKeyDown: this.handleKeyDown,
                 }}
             >
                 <PreviewerDashboard
@@ -170,7 +170,7 @@ class Previewer extends PureComponent {
                         isActor,
                         presenceType,
                         presenceKey,
-                        selectPresence: this.selectPresence
+                        selectPresence: this.selectPresence,
                     }}
                 />
                 <div
@@ -181,7 +181,7 @@ class Previewer extends PureComponent {
                             this.getScrollVertical() ?
                                 'Previewer__mainScrollVertical' :
                                 'Previewer__mainScrollHorizontal'
-                        )
+                        ),
                     }}
                 >
                     {/* Render all instances. */}
@@ -192,7 +192,7 @@ class Previewer extends PureComponent {
                                 key: `${presenceType}_${presenceKey}`,
                                 isActor,
                                 presenceType,
-                                presenceKey
+                                presenceKey,
                             }}
                         />
                     ))}

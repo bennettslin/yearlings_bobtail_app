@@ -3,5 +3,5 @@ import tyingTether from '../../../../../assets/svgs/actors/bradBennett/tyingTeth
 import { TYING_TETHER } from '../../../../constants/scene/actors/bradBennett'
 
 export default {
-    [TYING_TETHER]: tyingTether
+    [TYING_TETHER]: tyingTether,
 }

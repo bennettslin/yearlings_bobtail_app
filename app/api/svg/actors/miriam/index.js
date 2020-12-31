@@ -11,12 +11,12 @@ import {
     INFANT_NURSING,
     PERFUMING,
     TENNIS,
-    REVERSING
+    REVERSING,
 } from '../../../../constants/scene/actors/miriam'
 
 import {
     GOPI,
-    EPILOGUE
+    EPILOGUE,
 } from '../../../../constants/scene/actors/songs'
 
 export default {
@@ -26,5 +26,5 @@ export default {
     [TENNIS]: tennis,
     [REVERSING]: reversing,
     [GOPI]: gopi,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

@@ -1,7 +1,7 @@
 export const getIsToggleInOverview = ({
     isPhoneWidth,
     isHeightlessLyric,
-    isLyricLogue
+    isLyricLogue,
 
 }) => {
     // If in logue, show toggle in overview if heightless.
@@ -19,7 +19,7 @@ export const getIsOverviewPopupVisible = ({
     isSongChangeDone,
     isLyricLogue,
     isOverlayShown,
-    isOverviewShown
+    isOverviewShown,
 
 }) => (
     isSongChangeDone &&

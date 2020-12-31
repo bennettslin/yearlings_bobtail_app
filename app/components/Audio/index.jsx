@@ -8,23 +8,23 @@ import {
     AUDIO_PLAY_KEY,
     AUDIO_OPTIONS_TOGGLE_KEY,
     PREVIOUS_SONG_KEY,
-    NEXT_SONG_KEY
+    NEXT_SONG_KEY,
 } from '../../constants/access'
 import {
     AUDIO_NEXT_BUTTON_KEY,
     AUDIO_OPTIONS_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
-    AUDIO_PREVIOUS_BUTTON_KEY
+    AUDIO_PREVIOUS_BUTTON_KEY,
 } from '../../constants/buttons'
 import { toggleAudioOptionIndex } from '../../redux/session/action'
 import {
     mapIsPlaying,
-    mapIsPlayButtonEnabled
+    mapIsPlayButtonEnabled,
 } from '../../redux/audio/selector'
 import { mapIsDesktopWidth } from '../../redux/device/selector'
 import {
     mapIsSelectedPrologue,
-    mapIsSelectedEpilogue
+    mapIsSelectedEpilogue,
 } from '../../redux/selected/selector'
 import { mapAudioOptionIndex } from '../../redux/session/selector'
 import { mapIsTwoRowMenu } from '../../redux/viewport/selector'
@@ -38,27 +38,27 @@ const STATIC_BUTTON_CONFIGS = [
         key: AUDIO_PREVIOUS_BUTTON_KEY,
         buttonName: AUDIO_PREVIOUS_BUTTON_KEY,
         className: BUTTON_CLASS_NAME,
-        accessKey: PREVIOUS_SONG_KEY
+        accessKey: PREVIOUS_SONG_KEY,
     },
     {
         key: AUDIO_PLAY_BUTTON_KEY,
         isLargeSize: true,
         buttonName: AUDIO_PLAY_BUTTON_KEY,
         className: BUTTON_CLASS_NAME,
-        accessKey: AUDIO_PLAY_KEY
+        accessKey: AUDIO_PLAY_KEY,
     },
     {
         key: AUDIO_NEXT_BUTTON_KEY,
         buttonName: AUDIO_NEXT_BUTTON_KEY,
         className: BUTTON_CLASS_NAME,
-        accessKey: NEXT_SONG_KEY
+        accessKey: NEXT_SONG_KEY,
     },
     {
         key: AUDIO_OPTIONS_BUTTON_KEY,
         buttonName: AUDIO_OPTIONS_BUTTON_KEY,
         className: BUTTON_CLASS_NAME,
-        accessKey: AUDIO_OPTIONS_TOGGLE_KEY
-    }
+        accessKey: AUDIO_OPTIONS_TOGGLE_KEY,
+    },
 ]
 
 const Audio = () => {
@@ -94,22 +94,22 @@ const Audio = () => {
         const dynamicButtonConfigs = [
             {
                 isDisabled: isPrologue,
-                handleButtonClick: _handlePreviousClick
+                handleButtonClick: _handlePreviousClick,
             },
             {
                 isPulsateAnimated: isPrologue,
                 buttonIdentifier: isPlaying,
                 isDisabled: !isPlayButtonEnabled,
-                handleButtonClick: _handlePlayClick
+                handleButtonClick: _handlePlayClick,
             },
             {
                 isDisabled: isEpilogue,
-                handleButtonClick: _handleNextClick
+                handleButtonClick: _handleNextClick,
             },
             {
                 buttonIdentifier: audioOptionIndex,
-                handleButtonClick: _handleAudioOptionClick
-            }
+                handleButtonClick: _handleAudioOptionClick,
+            },
         ]
 
         // If desktop width, reverse order to keep tooltips on top.

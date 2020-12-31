@@ -6,7 +6,7 @@ export default {
         [MERMAID]: {
             yIndex: 5,
             xPosition: 3,
-            zOffset: 3.5
-        }
-    }
+            zOffset: 3.5,
+        },
+    },
 }

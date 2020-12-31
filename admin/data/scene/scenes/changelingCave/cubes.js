@@ -7,7 +7,7 @@ import {
     SPOTLIGHT_MEDIUM_COLOUR as L,
     SPOTLIGHT_LIGHT_COLOUR as M,
     SPOTLIGHT_LIGHTER_COLOUR as N,
-    SPOTLIGHT_LIGHTEST_COLOUR as O
+    SPOTLIGHT_LIGHTEST_COLOUR as O,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -19,13 +19,13 @@ export default {
                 [Z, L, M, M, L, Z],
                 [L, M, N, N, M, L, Z],
                 [M, N, O, O, N, M, Z],
-                [M, N, O, O, N, M, Z]
+                [M, N, O, O, N, M, Z],
             ],
             zIndices: [
                 [0],
                 [1],
-                [0]
-            ]
-        }
-    }
+                [0],
+            ],
+        },
+    },
 }

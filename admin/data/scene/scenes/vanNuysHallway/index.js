@@ -2,7 +2,7 @@ import {
     PRETEEN_BENNETT,
     MOTHER,
     CHRISTOPHER,
-    TRISTAN
+    TRISTAN,
 } from '../../../../../app/constants/scene/actors'
 import { STARING } from '../../../../../app/constants/scene/actors/christopher'
 import { ARGUING } from '../../../../../app/constants/scene/actors/mother'
@@ -14,26 +14,26 @@ export default {
         [SHEEPISH]: {
             yIndex: 4,
             xPosition: 8.25,
-            zOffset: -1.25
-        }
+            zOffset: -1.25,
+        },
     },
     [CHRISTOPHER]: {
         [STARING]: {
             yIndex: 4,
             xPosition: 6.75,
-            zOffset: -0.95
-        }
+            zOffset: -0.95,
+        },
     },
     [MOTHER]: {
         [ARGUING]: {
             yIndex: 2,
-            xPosition: 1.9
-        }
+            xPosition: 1.9,
+        },
     },
     [TRISTAN]: {
         [PRINCIPAL]: {
             yIndex: 2,
-            xPosition: 3.7
-        }
-    }
+            xPosition: 3.7,
+        },
+    },
 }

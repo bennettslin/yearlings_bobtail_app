@@ -4,7 +4,7 @@ import { getInitialIndicesFromRoutingOrStorage } from '../../helpers/storage'
 export const getSceneDefaults = songIndex => {
     const {
         initialSongIndex,
-        initialVerseIndex
+        initialVerseIndex,
     } = getInitialIndicesFromRoutingOrStorage(songIndex)
 
     return {
@@ -12,6 +12,6 @@ export const getSceneDefaults = songIndex => {
         sceneSceneIndex: getSceneIndexForVerse(
             initialSongIndex,
             initialVerseIndex
-        )
+        ),
     }
 }

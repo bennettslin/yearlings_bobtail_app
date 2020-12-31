@@ -17,7 +17,7 @@ import {
     TEMP_PITCH_ICON_10,
     TEMP_PITCH_ICON_11,
     TEMP_PITCH_ICON_12,
-    TEMP_PITCH_ICON_13
+    TEMP_PITCH_ICON_13,
 } from '../../../../../constants/pitch'
 
 const PITCH_ICONS = {
@@ -33,7 +33,7 @@ const PITCH_ICONS = {
     [TEMP_PITCH_ICON_10]: navShown,
     [TEMP_PITCH_ICON_11]: neitherShown,
     [TEMP_PITCH_ICON_12]: popupClose,
-    [TEMP_PITCH_ICON_13]: carouselShown
+    [TEMP_PITCH_ICON_13]: carouselShown,
 }
 
 export default ({ buttonIdentifier }) => {

@@ -12,15 +12,15 @@ import {
     ARROW_RIGHT,
     ARROW_UP,
     ARROW_DOWN,
-    ENTER
+    ENTER,
 } from '../../../../constants/access'
 import {
     mapIsAccessOn,
-    mapAccessedWikiWormholeIndex
+    mapAccessedWikiWormholeIndex,
 } from '../../../../redux/access/selector'
 import {
     mapSelectedSongIndex,
-    mapSelectedAnnotationIndex
+    mapSelectedAnnotationIndex,
 } from '../../../../redux/selected/selector'
 
 const AnnotationNavigation = forwardRef((props, ref) => {
@@ -98,7 +98,7 @@ const AnnotationNavigation = forwardRef((props, ref) => {
 
         return {
             annotationIndexWasAccessed,
-            keyWasRegistered
+            keyWasRegistered,
         }
     }
 

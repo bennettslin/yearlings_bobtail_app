@@ -12,7 +12,7 @@ import { WORMHOLE } from '../../../../../constants/dots'
 import {
     EAR_COLUMN_KEYS,
     LYRIC,
-    LYRIC_CENTRE
+    LYRIC_CENTRE,
 } from '../../../../../constants/lyrics'
 import { getIndexedTitleForSong } from '../../../../../api/album/songs'
 import { getWormholeLinkForWormhole } from '../../../../../api/album/wormholes'
@@ -22,7 +22,7 @@ import { mapLyricSongIndex } from '../../../../../redux/lyric/selector'
 const AnnotationWormhole = ({
     isAccessedShown,
     annotationIndex,
-    wormholeLinkIndex
+    wormholeLinkIndex,
 
 }) => {
     const
@@ -40,7 +40,7 @@ const AnnotationWormhole = ({
             earColumnIndex: wormholeColumnIndex,
 
             // Default if no wormhole prefix.
-            wormholePrefix = 'wormhole to'
+            wormholePrefix = 'wormhole to',
         } = wormholeLink,
 
         songTitle = getIndexedTitleForSong(wormholeSongIndex),
@@ -63,7 +63,7 @@ const AnnotationWormhole = ({
                 {...{
                     className: cx(
                         'AnnotationWormhole__button'
-                    )
+                    ),
                 }}
             >
                 <Button
@@ -74,7 +74,7 @@ const AnnotationWormhole = ({
                         accessKey: ENTER,
                         isAccessed: isAccessedShown,
                         buttonName: WORMHOLE_BUTTON_KEY,
-                        handleButtonClick
+                        handleButtonClick,
                     }}
                 />
             </div>
@@ -90,7 +90,7 @@ const AnnotationWormhole = ({
                         isWormholeDestinationVerse
                         {...{
                             text,
-                            wormholeAnnotationIndex
+                            wormholeAnnotationIndex,
                         }}
                     />
                     <span>{'\u201d'}</span>
@@ -104,7 +104,7 @@ const AnnotationWormhole = ({
 AnnotationWormhole.propTypes = {
     isAccessedShown: PropTypes.bool.isRequired,
     annotationIndex: PropTypes.number.isRequired,
-    wormholeLinkIndex: PropTypes.number.isRequired
+    wormholeLinkIndex: PropTypes.number.isRequired,
 }
 
 export default memo(AnnotationWormhole)

@@ -9,23 +9,23 @@ import {
     capitaliseForClassName,
     convertPresenceKeyToTitle,
     convertPresenceKeyToClassName,
-    getSharedClassNames
+    getSharedClassNames,
 } from '../../../../app/helpers/format'
 import { getDocument } from '../../../../app/utils/browser'
 import { getArrangementForPresence } from '../../../../app/api/scene/presences'
 import {
     getSharedStyleForActor,
-    getSharedStyleForThing
+    getSharedStyleForThing,
 } from '../../../../app/api/scene/sharedStyles'
 
 import {
     getPreviewerSvgMapForActor,
-    getPreviewerSvgMapForThing
+    getPreviewerSvgMapForThing,
 } from '../../../utils/svg'
 
 import {
     getViewBoxSize,
-    getSizeForPresence
+    getSizeForPresence,
 } from '../../../../app/components/Presence/Svg/helpers/size'
 import { getCompoundActorStyleIfNeeded } from '../../../../app/components/Presence/Svg/helpers/sharedStyle'
 
@@ -35,7 +35,7 @@ import { CUSTOM_THING_INSTANCES } from '../../../constants/things'
 
 class PreviewerSvg extends PureComponent {
     static defaultProps = {
-        handleProcessSvg() {}
+        handleProcessSvg() {},
     }
 
     static propTypes = {
@@ -43,7 +43,7 @@ class PreviewerSvg extends PureComponent {
         showKilobytes: PropTypes.bool,
         presenceType: PropTypes.string,
         presenceKey: PropTypes.string,
-        handleProcessSvg: PropTypes.func.isRequired
+        handleProcessSvg: PropTypes.func.isRequired,
     }
 
     constructor(props) {
@@ -52,7 +52,7 @@ class PreviewerSvg extends PureComponent {
         this.state = {
             adjustedHeight: 0,
             kilobytes: 0,
-            didLoad: false
+            didLoad: false,
         }
     }
 
@@ -79,11 +79,11 @@ class PreviewerSvg extends PureComponent {
 
             const {
                     viewBoxWidth,
-                    viewBoxHeight
+                    viewBoxHeight,
                 } = getViewBoxSize(svgString),
                 {
                     scaleFactor,
-                    trimBottom
+                    trimBottom,
                 } = this.getArrangement(),
                 { adjustedHeight } = getSizeForPresence({
                     presenceType: ACTOR,
@@ -91,12 +91,12 @@ class PreviewerSvg extends PureComponent {
                     viewBoxHeight,
                     yIndex: 5,
                     scaleFactor,
-                    trimBottom
+                    trimBottom,
                 })
 
             this.setState({
                 adjustedHeight,
-                kilobytes
+                kilobytes,
             })
 
             this.props.handleProcessSvg({ svgString, kilobytes })
@@ -109,7 +109,7 @@ class PreviewerSvg extends PureComponent {
         const {
                 isActor,
                 presenceType,
-                presenceKey
+                presenceKey,
             } = this.props,
             instanceList =
                 isActor ? WHOLE_ACTOR_INSTANCES : CUSTOM_THING_INSTANCES
@@ -132,13 +132,13 @@ class PreviewerSvg extends PureComponent {
             {
                 isActor,
                 presenceType,
-                presenceKey
+                presenceKey,
             } = this.props
 
         return getArrangementForPresence({
             presenceType: isActor ? ACTOR : (customType || presenceType),
             presenceKey,
-            ...isActor && { actorKey: customType }
+            ...isActor && { actorKey: customType },
         })
     }
 
@@ -146,7 +146,7 @@ class PreviewerSvg extends PureComponent {
         const {
             isActor,
             presenceType,
-            presenceKey
+            presenceKey,
         } = this.props
 
         if (isActor) {
@@ -154,14 +154,14 @@ class PreviewerSvg extends PureComponent {
                 this.getCustomType(),
                 getSharedStyleForActor({
                     actorKey: this.getCustomType(),
-                    presenceKey
+                    presenceKey,
                 })
             )
 
         } else {
             return getSharedStyleForThing({
                 presenceType: this.getCustomType() || presenceType,
-                presenceKey
+                presenceKey,
             })
         }
     }
@@ -171,12 +171,12 @@ class PreviewerSvg extends PureComponent {
                 isActor,
                 showKilobytes,
                 presenceType,
-                presenceKey
+                presenceKey,
             } = this.props,
             {
                 adjustedHeight,
                 kilobytes,
-                didLoad
+                didLoad,
             } = this.state,
 
             presenceDisplayName = convertPresenceKeyToClassName(presenceKey),
@@ -204,7 +204,7 @@ class PreviewerSvg extends PureComponent {
                             capitaliseForClassName(presenceType)
                         ),
                         style: {
-                            height: `${adjustedHeight.toFixed(2)}%`
+                            height: `${adjustedHeight.toFixed(2)}%`,
                         },
                         svgClassName: cx(
                             presenceDisplayName,
@@ -212,7 +212,7 @@ class PreviewerSvg extends PureComponent {
                         ),
                         title: convertPresenceKeyToTitle(presenceKey),
                         preProcessor: this.processSvg,
-                        onLoad: this.setDidLoad
+                        onLoad: this.setDidLoad,
                     }}
                 >
                     {svgContent}
@@ -225,14 +225,14 @@ class PreviewerSvg extends PureComponent {
                     className: cx(
                         'Previewer__scrollChild',
                         'PresenceContainer__shown'
-                    )
+                    ),
                 }}
             >
                 <PreviewerDescription
                     {...{
                         kilobytes,
                         presenceDisplayName,
-                        sharedStyle
+                        sharedStyle,
                     }}
                 />
                 {svgChild}

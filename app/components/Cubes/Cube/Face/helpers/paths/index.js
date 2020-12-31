@@ -1,19 +1,19 @@
 import {
     getCubeCornerPoints,
-    setSvgDataPathForFace
+    setSvgDataPathForFace,
 } from './points'
 
 import {
     SLANT_DIRECTIONS,
     LEVELS,
     FLOOR,
-    FACES
+    FACES,
 } from '../../../../../../constants/scene/cubes'
 
 import {
     CUBE_X_INDICES,
     CUBE_Y_INDICES,
-    CUBE_Z_INDICES
+    CUBE_Z_INDICES,
 } from '../../../../../../constants/cubeIndex'
 
 const FACE_PATHS = {}
@@ -45,7 +45,7 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
                             yIndex,
                             zIndex,
                             isFloor,
-                            slantDirection
+                            slantDirection,
                         })
 
                     FACES.forEach(face => {
@@ -54,7 +54,7 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
                             isFloor,
                             xIndex,
                             slantDirection,
-                            cubeCorners
+                            cubeCorners,
                         })
                     })
                 })
@@ -69,7 +69,7 @@ export const getSvgDataPathForFace = ({
     yIndex,
     xIndex,
     zIndex,
-    face
+    face,
 }) => (
     FACE_PATHS[slantDirection][level][yIndex][xIndex][zIndex][face]
 )

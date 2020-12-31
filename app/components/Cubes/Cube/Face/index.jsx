@@ -13,7 +13,7 @@ const Face = ({
     xIndex,
     zIndex,
     face,
-    hslaKey
+    hslaKey,
 
 }) => (
     <path
@@ -32,7 +32,7 @@ const Face = ({
                 yIndex,
                 xIndex,
                 zIndex,
-                face
+                face,
             }),
             fill: getSvgFillForFace({
                 hslaKey,
@@ -40,8 +40,8 @@ const Face = ({
                 yIndex,
                 xIndex,
                 zIndex,
-                face
-            })
+                face,
+            }),
         }}
     />
 )
@@ -53,7 +53,7 @@ Face.propTypes = {
     xIndex: PropTypes.number.isRequired,
     zIndex: PropTypes.number.isRequired,
     face: PropTypes.string.isRequired,
-    hslaKey: PropTypes.string.isRequired
+    hslaKey: PropTypes.string.isRequired,
 }
 
 export default memo(Face)

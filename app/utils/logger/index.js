@@ -1,7 +1,7 @@
 import {
     getAlbum,
     getPitch,
-    getScene
+    getScene,
 } from '../../api/builds'
 import { getSong } from '../../api/album/songs'
 import { getLayersForScene } from '../../api/album/scenes'
@@ -9,7 +9,7 @@ import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getInitialGaLog } from '../analytics'
 import {
     getStoredSongIndex,
-    getStoredVerseIndex
+    getStoredVerseIndex,
 } from '../../helpers/storage'
 import {
     logAccess,
@@ -23,7 +23,7 @@ import {
     logSelect,
     logTransition,
     logError,
-    logger
+    logger,
 } from './helpers/logs'
 
 // Allow access to album in local delivery.
@@ -46,12 +46,12 @@ if (IS_STAGING) {
 logServe({
     log: `Built ${BUILD_DATE_TIME}.`,
     action: 'load',
-    label: BUILD_DATE_TIME
+    label: BUILD_DATE_TIME,
 })
 
 logServe({
     log: getInitialGaLog(),
-    action: 'ga'
+    action: 'ga',
 })
 
 global.logAccess = logAccess

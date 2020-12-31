@@ -1,10 +1,10 @@
 import {
     getWindowStorage,
-    setInStorage
+    setInStorage,
 } from '../../app/helpers/storage'
 import {
     getPreviewerSvgMapForActor,
-    getPreviewerSvgMapForThing
+    getPreviewerSvgMapForThing,
 } from './svg'
 import { getWindow } from '../../app/utils/browser'
 import { convertPresenceKeyToClassName } from '../../app/helpers/format'
@@ -22,7 +22,7 @@ const getFromStorage = (key) => {
 const getPresenceOrDefaultPresence = ({
     isActor,
     presenceType,
-    presenceKey
+    presenceKey,
 }) => {
     const
         typesList = isActor ? WHOLE_ACTORS_LIST : THINGS_LIST,
@@ -45,7 +45,7 @@ const getPresenceOrDefaultPresence = ({
         presenceType: typesList[0],
         presenceKey: Object.keys(
             mapGetter(typesList[0])
-        )[0]
+        )[0],
     }
 }
 
@@ -58,7 +58,7 @@ export const getPresenceFromStorage = (isActor) => {
     return getPresenceOrDefaultPresence({
         isActor,
         presenceType,
-        presenceKey
+        presenceKey,
     })
 }
 
@@ -72,14 +72,14 @@ export const getPresenceFromQueryStrings = (isActor) => {
     return getPresenceOrDefaultPresence({
         isActor,
         presenceType,
-        presenceKey
+        presenceKey,
     })
 }
 
 export const setPresenceInStorage = ({
     isActor,
     presenceType,
-    presenceKey
+    presenceKey,
 }) => {
     const prefix = getPresencePrefix(isActor)
 

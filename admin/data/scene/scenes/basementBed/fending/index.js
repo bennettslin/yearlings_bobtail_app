@@ -1,7 +1,7 @@
 import {
     ESTHER_MOTHER,
     FATHER,
-    MIRIAM_BENNETT
+    MIRIAM_BENNETT,
 } from '../../../../../../app/constants/scene/actors'
 import { SOBBING_SHIELDING } from '../../../../../../app/constants/scene/actors/estherMother'
 import { REELING } from '../../../../../../app/constants/scene/actors/father'
@@ -12,21 +12,21 @@ export default {
         [SOBBING_SHIELDING]: {
             yIndex: 4,
             xPosition: 2.4,
-            zOffset: 2.6
-        }
+            zOffset: 2.6,
+        },
     },
     [FATHER]: {
         [REELING]: {
             yIndex: 4,
             xPosition: 4.5,
-            zOffset: 0.7
-        }
+            zOffset: 0.7,
+        },
     },
     [MIRIAM_BENNETT]: {
         [FENDING_OFF]: {
             yIndex: 4,
             xPosition: 7.25,
-            zOffset: -0.03
-        }
-    }
+            zOffset: -0.03,
+        },
+    },
 }

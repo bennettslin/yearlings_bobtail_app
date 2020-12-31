@@ -8,7 +8,7 @@ import {
     FUTURE_SPOTLIGHT_MEDIUM_COLOUR as L,
     FUTURE_SPOTLIGHT_LIGHT_COLOUR as M,
     FUTURE_SPOTLIGHT_LIGHTER_COLOUR as N,
-    FUTURE_SPOTLIGHT_LIGHTEST_COLOUR as O
+    FUTURE_SPOTLIGHT_LIGHTEST_COLOUR as O,
 } from '../../../../../../app/constants/scene/cubes/colours'
 export const BEDROOM_SPACE_CUBES = {
     [BEDROOM_SPACE_KEY]: {
@@ -20,7 +20,7 @@ export const BEDROOM_SPACE_CUBES = {
                 [H, H, Z, Z, D, Z, Z, L, N, N, N, H],
                 [Z, Z, D, D, Z, Z, L, M, O, O, N, H],
                 [Z, Z, Z, Z, D, Z, M, N, O, O, M, H],
-                [Z, Z, Z, Z, Z, Z, Z, M, N, N, N, L]
+                [Z, Z, Z, Z, Z, Z, Z, M, N, N, N, L],
             ],
             zIndices: [
                 [1],
@@ -28,8 +28,8 @@ export const BEDROOM_SPACE_CUBES = {
                 [1, 1, 1, 1, 5, 1],
                 [1, 1, 5, 5, 1],
                 [1, 1, 1, 1, 3, 1],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

@@ -9,13 +9,13 @@ export const getSvgFillForFace = ({
     yIndex,
     xIndex,
     zIndex,
-    face
+    face,
 
 }) => {
     const { h, s, l, a } = getBaseColour({
             hslaKey,
             yIndex,
-            xIndex
+            xIndex,
         }),
 
         // Don't show colour if empty ceiling.
@@ -27,7 +27,7 @@ export const getSvgFillForFace = ({
             level,
             xIndex,
             yIndex,
-            zIndex
+            zIndex,
         }).toFixed(2)
 
     return `hsla(${h}, ${s}%, ${luminosity}%, ${alpha})`

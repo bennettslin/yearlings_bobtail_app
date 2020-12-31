@@ -10,7 +10,7 @@ export const getSceneReducer = songIndex => (
         case SCENE_STORE:
             return {
                 ...state,
-                ...payload
+                ...payload,
             }
         default:
             return state

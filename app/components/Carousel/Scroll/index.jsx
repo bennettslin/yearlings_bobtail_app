@@ -28,12 +28,12 @@ const CarouselScroll = ({ serverClientSongIndex }) => {
         <div
             {...{
                 ref: carouselScrollElement,
-                className: 'CarouselScroll'
+                className: 'CarouselScroll',
             }}
         >
             <ScrollCarouselListener {...{
                 getCarouselScrollElement,
-                getCarouselScrollChild
+                getCarouselScrollChild,
             }} />
             {getAnnotationIndices(serverClientSongIndex).map(index => {
                 const annotationIndex = index + 1
@@ -43,7 +43,7 @@ const CarouselScroll = ({ serverClientSongIndex }) => {
                         {...{
                             key: index,
                             ref: carouselScrollChildren,
-                            annotationIndex
+                            annotationIndex,
                         }}
                     />
                 )
@@ -53,7 +53,7 @@ const CarouselScroll = ({ serverClientSongIndex }) => {
 }
 
 CarouselScroll.propTypes = {
-    serverClientSongIndex: PropTypes.number.isRequired
+    serverClientSongIndex: PropTypes.number.isRequired,
 }
 
 export default memo(getSongServerClientHoc(CarouselScroll))

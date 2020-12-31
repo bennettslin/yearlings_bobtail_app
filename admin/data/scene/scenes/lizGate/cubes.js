@@ -1,6 +1,6 @@
 import {
     LIZ_GATE_KEY,
-    LIZ_GATE_STREET_KEY
+    LIZ_GATE_STREET_KEY,
 } from '../../../../../app/constants/scene/scenes'
 
 import {
@@ -11,7 +11,7 @@ import {
     LIZ_GATE_COLOUR as A,
     ROOF_COLOUR as C,
     LIZ_WALL_COLOUR as W,
-    LIZ_EXTERIOR_COLOUR as X
+    LIZ_EXTERIOR_COLOUR as X,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { d, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -26,14 +26,14 @@ export default {
                 [W],
                 [X],
                 [C],
-                [D]
+                [D],
             ],
             zIndices: [
                 [1],
                 [1, 1, 1, 1, d, d, d, d, d, 1],
                 [f],
-                [k]
-            ]
+                [k],
+            ],
         },
         floor: {
             hslaColours: [
@@ -41,16 +41,16 @@ export default {
                 [V, V, V, X, X, X, X, X, V],
                 [H],
                 [A, A, A, A, A, V, V, V, A],
-                [V]
+                [V],
             ],
             zIndices: [
                 [1],
                 [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
                 [1],
                 [6, 6, 6, 6, 6, 1, 1, 1, 6],
-                [1]
-            ]
-        }
+                [1],
+            ],
+        },
     },
     [LIZ_GATE_STREET_KEY]: {
         ceiling: {
@@ -58,14 +58,14 @@ export default {
                 [W, W, W, W, W, W, W, W, W, C, D],
                 [X, X, X, X, X, X, X, X, X, C, D],
                 [C, C, C, C, C, C, C, C, C, C, D],
-                [D]
+                [D],
             ],
             zIndices: [
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, f, k],
                 [1, d, d, d, d, d, 1, 1, 1, f, k],
                 [f, f, f, f, f, f, f, f, f, f, k],
-                [k]
-            ]
+                [k],
+            ],
         },
         floor: {
             hslaColours: [
@@ -73,15 +73,15 @@ export default {
                 [V, X, X, X, X, X, V],
                 [H, H, H, H, H, H, H, H, H, H, T, V],
                 [A, A, V, V, V, A, A, A, A, A, T, V],
-                [V, V, V, V, V, V, V, V, V, V, T]
+                [V, V, V, V, V, V, V, V, V, V, T],
             ],
             zIndices: [
                 [1],
                 [1, 6, 6, 6, 6, 6, 1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1],
                 [6, 6, 1, 1, 1, 6, 6, 6, 6, 6, 0, 1],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
-            ]
-        }
-    }
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            ],
+        },
+    },
 }

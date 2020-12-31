@@ -6,15 +6,15 @@ import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Di
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
-    ENTER
+    ENTER,
 } from '../../../../constants/access'
 import {
     mapIsAccessOn,
-    mapAccessedAnnotationIndex
+    mapAccessedAnnotationIndex,
 } from '../../../../redux/access/selector'
 import {
     mapIsActivated,
-    mapActivatedVerseIndex
+    mapActivatedVerseIndex,
 } from '../../../../redux/activated/selector'
 import { mapSelectedVerseIndex } from '../../../../redux/selected/selector'
 
@@ -61,7 +61,7 @@ const LyricNavigation = forwardRef((props, ref) => {
 
             dispatchAccessedAnnotation.current({
                 verseIndex,
-                direction
+                direction,
             })
 
             if (isActivated) {
@@ -75,13 +75,13 @@ const LyricNavigation = forwardRef((props, ref) => {
         } else {
             if (keyName === ENTER) {
                 return dispatchAnnotation.current.index({
-                    annotationIndex: accessedAnnotationIndex
+                    annotationIndex: accessedAnnotationIndex,
                 })
 
             } else if (Number.isFinite(direction)) {
                 dispatchAccessedAnnotation.current({
                     annotationIndex: accessedAnnotationIndex,
-                    direction
+                    direction,
                 })
             }
         }
@@ -94,7 +94,7 @@ const LyricNavigation = forwardRef((props, ref) => {
         <>
             <AnnotationDispatcher {...{ ref: dispatchAnnotation }} />
             <AnnotationAccessDispatcher {...{
-                ref: dispatchAccessedAnnotation
+                ref: dispatchAccessedAnnotation,
             }} />
         </>
     )

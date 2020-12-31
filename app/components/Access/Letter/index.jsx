@@ -10,7 +10,7 @@ import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 import { mapIsAccessOn } from '../../../redux/access/selector'
 import {
     mapIsTabletWidth,
-    mapIsDesktopWidth
+    mapIsDesktopWidth,
 } from '../../../redux/device/selector'
 import './style'
 
@@ -18,7 +18,7 @@ const AccessLetter = ({
     inButtonOrDotAnchor,
     showIfAccessOn,
     animateStandaloneOnKeyDown,
-    accessKey
+    accessKey,
 
 }) => {
     const
@@ -39,8 +39,8 @@ const AccessLetter = ({
                 timeout: 200,
                 classNames: {
                     enterActive: 'AccessLetter__shown',
-                    enterDone: 'AccessLetter__shown'
-                }
+                    enterDone: 'AccessLetter__shown',
+                },
             }}
         >
             <div
@@ -60,7 +60,7 @@ const AccessLetter = ({
                 <AccessField />
                 <AccessIcon
                     {...{
-                        accessKey
+                        accessKey,
                     }}
                 />
             </div>
@@ -72,7 +72,7 @@ AccessLetter.propTypes = {
     inButtonOrDotAnchor: PropTypes.bool,
     showIfAccessOn: PropTypes.bool,
     animateStandaloneOnKeyDown: PropTypes.bool,
-    accessKey: PropTypes.string.isRequired
+    accessKey: PropTypes.string.isRequired,
 }
 
 export default memo(AccessLetter)

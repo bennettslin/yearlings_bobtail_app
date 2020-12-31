@@ -4,7 +4,7 @@ import AnnotationAccessDispatcher from '../Dispatcher'
 import {
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex,
-    mapIsSelectedLogue
+    mapIsSelectedLogue,
 } from '../../../redux/selected/selector'
 import { mapEarColumnIndex } from '../../../redux/session/selector'
 
@@ -21,7 +21,7 @@ const AnnotationAccessListener = () => {
         // This is dispatched upon mount.
         if (!isSelectedLogue) {
             dispatchAccessedAnnotation.current({
-                annotationIndex: selectedAnnotationIndex
+                annotationIndex: selectedAnnotationIndex,
             })
         }
     }, [selectedAnnotationIndex])
@@ -42,7 +42,7 @@ const AnnotationAccessListener = () => {
             // Access annotation of selected verse.
             if (!isSelectedLogue) {
                 dispatchAccessedAnnotation.current({
-                    verseIndex: selectedVerseIndex
+                    verseIndex: selectedVerseIndex,
                 })
             }
         } else {

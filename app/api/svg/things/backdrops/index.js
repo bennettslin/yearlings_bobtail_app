@@ -50,7 +50,7 @@ import {
     THOUGHT_MEDIUM__GOLDEN,
     THOUGHT_SMALL,
     WEDDING_BACKDROP,
-    DRIVING_BACKDROP
+    DRIVING_BACKDROP,
 } from '../../../../constants/scene/things/backdrops'
 
 export default {
@@ -81,5 +81,5 @@ export default {
     [THOUGHT_MEDIUM__GOLDEN]: thoughtMedium,
     [THOUGHT_SMALL]: thoughtSmall,
     [WEDDING_BACKDROP]: weddingBackdrop,
-    [DRIVING_BACKDROP]: drivingBackdrop
+    [DRIVING_BACKDROP]: drivingBackdrop,
 }

@@ -7,13 +7,13 @@ import { ACTOR } from '../../../constants/scene'
 const Layer = ({
     presenceType = ACTOR,
     actorKey,
-    yIndex
+    yIndex,
 
 }) => (
     getPresencesForLayer({
         actorKey,
         presenceType,
-        yIndex
+        yIndex,
 
     }).map(presenceKey => (
         <Presence
@@ -22,7 +22,7 @@ const Layer = ({
                 presenceType,
                 actorKey,
                 presenceKey,
-                yIndex
+                yIndex,
             }}
         />
     ))
@@ -31,7 +31,7 @@ const Layer = ({
 Layer.propTypes = {
     presenceType: PropTypes.string,
     actorKey: PropTypes.string,
-    yIndex: PropTypes.number
+    yIndex: PropTypes.number,
 }
 
 export default memo(Layer)

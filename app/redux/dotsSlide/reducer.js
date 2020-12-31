@@ -3,7 +3,7 @@ import { hasKey } from '../../helpers/action'
 import { getDotsBitForToggledDotIndex, getDotKeysFromBit } from '../../helpers/dot'
 import {
     DOTS_SLIDE_STORE,
-    TOGGLE_STORE
+    TOGGLE_STORE,
 } from '../../constants/store'
 import { DOTS_SLIDE_DEFAULTS } from './default'
 
@@ -20,18 +20,18 @@ export default (
                     { dotsSlideBit: prevDotsBit } = state,
                     dotsSlideBit = getDotsBitForToggledDotIndex({
                         dotIndex,
-                        dotsBit: prevDotsBit
+                        dotsBit: prevDotsBit,
                     })
 
                 return {
                     ...state,
                     dotsSlideBit,
-                    ...getDotKeysFromBit(dotsSlideBit)
+                    ...getDotKeysFromBit(dotsSlideBit),
                 }
             } else {
                 return {
                     ...state,
-                    ...payload
+                    ...payload,
                 }
             }
         }
@@ -39,7 +39,7 @@ export default (
             const { isDotsSlideShown } = payload
             return hasKey(isDotsSlideShown) && !isDotsSlideShown ? {
                 ...state,
-                ...DOTS_SLIDE_DEFAULTS
+                ...DOTS_SLIDE_DEFAULTS,
             } : state
         }
         default:

@@ -4,7 +4,7 @@ import {
     OBSERVATION,
     PUN,
     REFERENCE,
-    SONGCRAFT
+    SONGCRAFT,
 } from '../../../../app/constants/dots'
 
 import {
@@ -16,7 +16,7 @@ import {
     INTRO,
     SOLO,
     FLASHBACK_TO_WORMHOLE_PREFIX,
-    IS_UNIT_DOT
+    IS_UNIT_DOT,
 } from '../../../../app/constants/lyrics'
 
 export default {
@@ -34,38 +34,38 @@ export default {
                         `The kids in the neighborhood knew Willy as "the Cocoa," referring both to the`,
                         {
                             anchor: `Coke`,
-                            wiki: `Coca-Cola`
+                            wiki: `Coca-Cola`,
                         },
                         `bottles he collected and to his seeming a bit cuckoo, or possibly`,
                         {
                             isItalic: true,
-                            lyric: `loco,`
+                            lyric: `loco,`,
                         },
                         `which is`,
                         {
                             anchor: `Spanish`,
-                            wiki: `Spanish_language`
+                            wiki: `Spanish_language`,
                         },
-                        `for "crazy." There wasn't an official way to spell it.`
+                        `for "crazy." There wasn't an official way to spell it.`,
                     ],
                     dotKeys: {
-                        [BACKSTORY]: true
-                    }
-                }
-            }
+                        [BACKSTORY]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: INTRO
+                formType: INTRO,
             },
             mainVerses: [
                 {
                     time: 0,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Willy's theme)`
-                    }
-                }
+                        lyric: `(Willy's theme)`,
+                    },
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -74,38 +74,38 @@ export default {
                         `In the past, a mentally disabled child was sometimes thought to be a troll in disguise known as a`,
                         {
                             anchor: `changeling,`,
-                            wiki: `Changeling`
+                            wiki: `Changeling`,
                         },
                         `who had been left in place of a stolen human child. So I wanted the music for this song to sound like a band of woodland trolls in secluded revelry after having pulled off such a heist. I figured their style would be akin to the swamp rock of`,
                         {
                             anchor: `Creedence Clearwater Revival,`,
-                            wiki: `Creedence_Clearwater_Revival`
+                            wiki: `Creedence_Clearwater_Revival`,
                         },
                         `with`,
                         {
                             anchor: `melodicas`,
-                            wiki: `Melodica`
+                            wiki: `Melodica`,
                         },
                         `to evoke`,
                         {
                             anchor: `Cajun accordions.`,
-                            wiki: `Cajun_accordion`
-                        }
+                            wiki: `Cajun_accordion`,
+                        },
                     ],
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
                     time: 11,
-                    lyric: `Hilltops gnashing dig out potholes,`
+                    lyric: `Hilltops gnashing dig out potholes,`,
                 },
                 {
                     time: 14,
@@ -119,34 +119,34 @@ export default {
                                         `I grew up in the`,
                                         {
                                             anchor: `San Fernando Valley`,
-                                            wiki: `San_Fernando_Valley`
+                                            wiki: `San_Fernando_Valley`,
                                         },
                                         `of`,
                                         {
                                             anchor: `Los Angeles,`,
-                                            wiki: `Los_Angeles`
+                                            wiki: `Los_Angeles`,
                                         },
                                         `where wide boulevards stretch endlessly along a`,
                                         {
                                             anchor: `grid plan,`,
-                                            wiki: `Grid_plan`
+                                            wiki: `Grid_plan`,
                                         },
-                                        `and mountains block the horizon on all sides.`
+                                        `and mountains block the horizon on all sides.`,
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                                        [BACKSTORY]: true,
+                                    },
                                 },
                                 {
                                     description: `In the mirages created by the summer heat, the reflections of the surrounding mountains naturally point downwards, suggesting that their jagged peaks had caused the cracks in the asphalt.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            ]
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `in tarred pavement mirage.`
-                    ]
+                        `in tarred pavement mirage.`,
+                    ],
                 },
                 {
                     time: 17,
@@ -156,9 +156,9 @@ export default {
                             card: {
                                 description: `To keep us kids cool during the summer, neighbors would sometimes crack open a fire hydrant. The water would fail to drain and eventually form stagnant pools, to the dismay of city officials.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
                         `as early worms work this`,
                         {
@@ -167,35 +167,35 @@ export default {
                                 {
                                     description: `Every so often, a coyote would wander down from the hillsides and get hit by traffic. Its body might then lie decomposing for days before being found.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                                        [BACKSTORY]: true,
+                                    },
                                 },
                                 {
                                     description: `If the surrounding mountains of the Valley are like the lower jaw of a dying coyote, then the bustle of its morning commuters are like tiny scavengers ready to go to town on the carcass.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                }
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            ],
+                        },
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
                 card: {
                     description: `The root progression here traces a zigzag in which a minor-third drop from one measure is followed by a whole-step rise to the next. At the cadence of each line, melodicas hurriedly catch up by compressing a warped version of this descending pattern into a single measure.`,
                     dotKeys: {
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
                 formType: VERSES,
                 subVerseType: RHYME,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -207,11 +207,11 @@ export default {
                             card: {
                                 description: `Willy begins his daily rounds by filling his shopping cart with discarded bottles and cans found littered along the byways.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [NARRATIVE]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 26,
@@ -225,30 +225,30 @@ export default {
                                         `Willy had`,
                                         {
                                             anchor: `microcephaly,`,
-                                            wiki: `Microcephaly`
+                                            wiki: `Microcephaly`,
                                         },
                                         `a medical condition in which the brain fails to develop properly. And so his head was abnormally small in size, like the "pinheads" of`,
                                         {
                                             anchor: `carnival sideshows`,
-                                            wiki: `Sideshow`
+                                            wiki: `Sideshow`,
                                         },
-                                        `from bygone days.`
+                                        `from bygone days.`,
                                     ],
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                                        [BACKSTORY]: true,
+                                    },
                                 },
                                 {
                                     description: `Willy peers through an empty soda bottle, the top of which is tapered like the outline of his skull.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                }
-                            ]
+                                        [NARRATIVE]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `eclipsed in full.`
-                    ]
-                }
+                        `eclipsed in full.`,
+                    ],
+                },
             ],
             subVerse: [
                 {
@@ -261,20 +261,20 @@ export default {
                                 card: {
                                     description: `Willy eagerly awaits the complementary soft drink that will come with his reimbursement at the recycling center.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                }
+                                        [NARRATIVE]: true,
+                                    },
+                                },
                             },
-                            `with salvage sold…`
-                        ]
-                    }
-                }
-            ]
+                            `with salvage sold…`,
+                        ],
+                    },
+                },
+            ],
         },
         {
             unitMap: {
                 formType: VERSES,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -287,22 +287,22 @@ export default {
                                 description: `In most legends, the changeling is a witting participant in the deceitful replacement of a human child. As such, it takes pains to hide its true form while in the company of other humans. And so before Willy goes off to cash in his recyclables, he ends "as troll" by donning his human guise.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: PRECHORUS
+                formType: PRECHORUS,
             },
             mainVerses: [
                 {
                     time: 35,
-                    lyric: `Oh, has Willy the Cocoa come`
+                    lyric: `Oh, has Willy the Cocoa come`,
                 },
                 {
                     time: 38,
@@ -313,12 +313,12 @@ export default {
                             card: {
                                 description: `Like some other households in the neighborhood, my family would leave our recyclables out on the porch for Willy to come by and collect.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `this week?`
-                    ]
+                        `this week?`,
+                    ],
                 },
                 {
                     time: 41,
@@ -330,11 +330,11 @@ export default {
                                 description: `Or else, to the "son." My mother is cutting my brother's hair outside on the front porch, where the cleanup afterward will be easier.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 45,
@@ -345,12 +345,12 @@ export default {
                             card: {
                                 description: `My brother, the baby of our family, was typically calm and quiet in demeanor. However, when made to do things he didn't enjoy or understand, like sitting through a haircut, he could erupt without warning in a frenzied outburst.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
-                }
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -359,20 +359,20 @@ export default {
                         `In some legends, a changeling hints at its true identity by handling common tools in a peculiar way. I figured trolls would be no less peculiar in their manner of playing instruments, and so I experimented with unconventional techniques, like pairing`,
                         {
                             anchor: `palm mutes`,
-                            wiki: `Palm_mute`
+                            wiki: `Palm_mute`,
                         },
-                        `with legato slides on the lead guitar and mandolin here.`
+                        `with legato slides on the lead guitar and mandolin here.`,
                     ],
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: CHORUS
+                formType: CHORUS,
             },
             mainVerses: [
                 {
@@ -386,13 +386,13 @@ export default {
                                     description: `With mouth partially open, my brother wears a blank expression, right up until he feels the sensation of my mother's gap-toothed "comb" on his scalp.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
-                                        [PUN]: true
-                                    }
-                                }
-                            ]
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `parts his forehead,`
-                    ]
+                        `parts his forehead,`,
+                    ],
                 },
                 {
                     time: 50,
@@ -404,16 +404,16 @@ export default {
                                 description: `My brother's sudden outburst knocks the "scissors" from my mother's hand and sends them flying into the lawn.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true
-                                }
-                            }
+                                    [PUN]: true,
+                                },
+                            },
                         },
-                        `to the patch.`
-                    ]
+                        `to the patch.`,
+                    ],
                 },
                 {
                     time: 53,
-                    lyric: `Willy ducks behind the porch steps and laughs.`
+                    lyric: `Willy ducks behind the porch steps and laughs.`,
                 },
                 {
                     time: 59,
@@ -425,11 +425,11 @@ export default {
                                 description: `Noting my brother's distaste for haircuts, Willy jokingly predicts that my brother will choose to sport an unshaven look as an adult. But in many legends, the changeling is a fully grown troll who is perhaps centuries old. So Willy's phrasing leaves open the possibility that my brother, being a changeling, in fact already wears a beard.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 62,
@@ -441,11 +441,11 @@ export default {
                                 description: `Of course, it's no surprise that Willy is immune to the enchantment that disguises my brother's true form. After all, Willy is a changeling himself, as evinced by his own unkempt facial hair.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 65,
@@ -459,32 +459,32 @@ export default {
                                         `A`,
                                         {
                                             anchor: `cowlick`,
-                                            wiki: `Cowlick`
+                                            wiki: `Cowlick`,
                                         },
-                                        `is a section of hair that sticks straight up on a person's head. Being acquainted with my family through the years, Willy understands that my brother's tantrums are the reason my mother allows his hair to reach unruly lengths.`
+                                        `is a section of hair that sticks straight up on a person's head. Being acquainted with my family through the years, Willy understands that my brother's tantrums are the reason my mother allows his hair to reach unruly lengths.`,
                                     ],
                                     dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
+                                        [NARRATIVE]: true,
+                                    },
                                 },
                                 {
                                     description: [
                                         `Willy might in fact be observing that my brother has yet to outgrow his`,
                                         {
                                             anchor: `"colic,"`,
-                                            wiki: `Baby_colic`
+                                            wiki: `Baby_colic`,
                                         },
-                                        `a period of excessive crying in infants. In the past, such inexplicable delays in child development are what gave rise to a belief in changelings.`
+                                        `a period of excessive crying in infants. In the past, such inexplicable delays in child development are what gave rise to a belief in changelings.`,
                                     ],
                                     dotKeys: {
-                                        [PUN]: true
-                                    }
-                                }
-                            ]
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `yet I've seen!`
-                    ]
-                }
+                        `yet I've seen!`,
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -493,20 +493,20 @@ export default {
                         `I first learned of`,
                         {
                             anchor: `autism`,
-                            wiki: `Autism`
+                            wiki: `Autism`,
                         },
-                        `when I overheard my parents talk about my brother's condition in their thick Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics for this song to explore the ways in which a child's mishearings of adult conversations might lead to roundabout understanding.`
+                        `when I overheard my parents talk about my brother's condition in their thick Taiwanese accents. The next day, I explained to classmates that my brother was "artistic." So I wanted the lyrics for this song to explore the ways in which a child's mishearings of adult conversations might lead to roundabout understanding.`,
                     ],
                     dotKeys: {
                         [BACKSTORY]: true,
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: POSTCHORUS
+                formType: POSTCHORUS,
             },
             mainVerses: [
                 {
@@ -521,14 +521,14 @@ export default {
                                     `In those days, the back pages of comic books were filled with ads for novelty items. Having sent away weeks ago for a pair of`,
                                     {
                                         anchor: `X-Ray Specs,`,
-                                        wiki: `X-Ray_Specs_(novelty)`
+                                        wiki: `X-Ray_Specs_(novelty)`,
                                     },
-                                    `which purportedly allows the wearer to see through objects, I've just received them in the mail and am now trying them on.`
+                                    `which purportedly allows the wearer to see through objects, I've just received them in the mail and am now trying them on.`,
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
                         `enraged at`,
                         {
@@ -537,18 +537,18 @@ export default {
                                 {
                                     description: `My brother enjoyed cutting shapes of alphabet letters out of scrap paper. Since this was a creative activity that kept him occupied, my parents encouraged it and kept a pile of old magazines freshly stocked for him.`,
                                     dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
+                                        [BACKSTORY]: true,
+                                    },
                                 },
                                 {
                                     description: `Unfortunately, the comic book I'd been reading on the floor just a minute ago has somehow made its way into my brother's scrap pile.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                                        [NARRATIVE]: true,
+                                    },
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 74,
@@ -559,9 +559,9 @@ export default {
                             card: {
                                 description: `Upon catching my brother in the act of cutting up my comic book, I explode with anger and lay down some serious hurt.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
                         `the`,
                         {
@@ -570,12 +570,12 @@ export default {
                                 description: `My brother's odd behavior frustrated me to no end, and I longed to believe he was simply displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers in times past who told tales of grown-up trolls disguised as human children.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
+                                    [OBSERVATION]: true,
+                                },
+                            },
                         },
-                        `to the ground`
-                    ]
+                        `to the ground`,
+                    ],
                 },
                 {
                     time: 77,
@@ -586,15 +586,15 @@ export default {
                             card: {
                                 description: `The hardest part about hurting my brother was knowing he had no way to understand the cause of my anger. The times when I turned on him and caused him physical pain would always remain without explanation. For him, it was just another part of what life was.`,
                                 dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 80,
-                    lyric: `Papa storms in roaring, Boy, are you proud?`
+                    lyric: `Papa storms in roaring, Boy, are you proud?`,
                 },
                 {
                     time: 83,
@@ -607,46 +607,46 @@ export default {
                                     description: `I grew up puzzling over why my brother was born with autism and I wasn't, when our circumstances were no different. It wasn't far-fetched to suppose that every mother's womb starts out with a fixed supply of mental capacity to dole out to each child, and I had selfishly taken my brother's share.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
-                                        [OBSERVATION]: true
-                                    }
+                                        [OBSERVATION]: true,
+                                    },
                                 },
                                 {
                                     wormhole: {
                                         wormholeKey: `learn_him_good`,
-                                        wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                                        wormholePrefix: FLASHBACK_TO_WORMHOLE_PREFIX,
+                                    },
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 86,
-                    lyric: `all went instead to this clever head of yours.`
+                    lyric: `all went instead to this clever head of yours.`,
                 },
                 {
                     time: 89,
-                    lyric: `So to baby— to your brother— you'll say sorry for the world!`
-                }
-            ]
+                    lyric: `So to baby— to your brother— you'll say sorry for the world!`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: SOLO
+                formType: SOLO,
             },
             mainVerses: [
                 {
                     time: 96,
                     lyricCentre: {
                         isItalic: true,
-                        lyric: `(Willy's theme)`
-                    }
-                }
-            ]
+                        lyric: `(Willy's theme)`,
+                    },
+                },
+            ],
         },
         {
             unitMap: {
-                formType: VERSES
+                formType: VERSES,
             },
             mainVerses: [
                 {
@@ -657,12 +657,12 @@ export default {
                             card: {
                                 description: `In English folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of past times, when children unable to earn their keep could lead to a peasant family's ruin.`,
                                 dotKeys: {
-                                    [REFERENCE]: true
-                                }
-                            }
+                                    [REFERENCE]: true,
+                                },
+                            },
                         },
-                        `dashing kicks up puddle,`
-                    ]
+                        `dashing kicks up puddle,`,
+                    ],
                 },
                 {
                     time: 110,
@@ -673,19 +673,19 @@ export default {
                                 {
                                     description: `In his zeal to reach a discarded beer bottle, Willy steps into a puddle and splashes standing water onto a pair of gangsters idling nearby.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
+                                        [NARRATIVE]: true,
+                                    },
                                 },
                                 {
                                     description: `"Soused loafers" can refer to drunken deadbeats, as well as to their drenched shoes.`,
                                     dotKeys: {
-                                        [PUN]: true
-                                    }
-                                }
-                            ]
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
                         },
-                        `shouting 'tard payment is due.`
-                    ]
+                        `shouting 'tard payment is due.`,
+                    ],
                 },
                 {
                     time: 113,
@@ -697,13 +697,13 @@ export default {
                                     description: `In some legends, beating a changeling badly enough will cause it to tire of its charade and return the stolen child. These legends reflect the historical reality in which sickly children were often abused to death, if not killed outright. So if Willy is a changeling, then it seems predestined that he should meet a violent end.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
-                                        [OBSERVATION]: true
-                                    }
+                                        [OBSERVATION]: true,
+                                    },
                                 },
                                 {
-                                    wormhole: `hit_the_switch`
-                                }
-                            ]
+                                    wormhole: `hit_the_switch`,
+                                },
+                            ],
                         },
                         {
                             anchor: `with switch,`,
@@ -712,27 +712,27 @@ export default {
                                     `A`,
                                     {
                                         anchor: `switch`,
-                                        wiki: `Switch_(corporal_punishment)`
+                                        wiki: `Switch_(corporal_punishment)`,
                                     },
-                                    `is a bundle of rods used to inflict punishment.`
-                                ]
-                            }
+                                    `is a bundle of rods used to inflict punishment.`,
+                                ],
+                            },
                         },
-                        `whispers wind, to fix his switcheroo…`
-                    ]
-                }
-            ]
+                        `whispers wind, to fix his switcheroo…`,
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
                 formType: VERSES,
                 subVerseType: RHYME,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
                     time: 119,
-                    lyric: `Milksop cornered into scuffle,`
+                    lyric: `Milksop cornered into scuffle,`,
                 },
                 {
                     time: 122,
@@ -743,9 +743,9 @@ export default {
                             card: {
                                 description: `Eager for a fight, the gangsters start pushing Willy around. His shopping cart gets overturned in the commotion, causing empty bottles and cans to spill onto the ground.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
                         `swung sounds the`,
                         {
@@ -754,12 +754,12 @@ export default {
                                 description: `One of the gangsters grabs a wine bottle and smashes it against Willy's face. The sound reverberates throughout the neighborhood like the peal of a town bell striking once at one o'clock.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
-                }
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
             ],
             subVerse: [
                 {
@@ -774,23 +774,23 @@ export default {
                                     {
                                         description: `To justify the abuse of sickly children, religious doctrine in the past would often claim that such children were devoid of souls.`,
                                         dotKeys: {
-                                            [REFERENCE]: true
-                                        }
+                                            [REFERENCE]: true,
+                                        },
                                     },
                                     {
-                                        wormhole: `unsalvaged_sows`
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                }
-            ]
+                                        wormhole: `unsalvaged_sows`,
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                },
+            ],
         },
         {
             unitMap: {
                 formType: VERSES,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -805,23 +805,23 @@ export default {
                                     `The impact of the wine bottle severs Willy's brain from his spine, like a`,
                                     {
                                         anchor: `flower bulb`,
-                                        wiki: `Ornamental_bulbous_plant`
+                                        wiki: `Ornamental_bulbous_plant`,
                                     },
-                                    `plucked from its stalk. But once planted in the earth, the bulb can grow a new stem and bloom again.`
+                                    `plucked from its stalk. But once planted in the earth, the bulb can grow a new stem and bloom again.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        }
-                    ]
-                }
-            ]
+                                    [OBSERVATION]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
+            ],
         },
         {
             unitMap: {
-                formType: PRECHORUS
+                formType: PRECHORUS,
             },
             mainVerses: [
                 {
@@ -834,9 +834,9 @@ export default {
                             card: {
                                 description: `Understanding the gravity of the present moment, I try to make sense of it as if I were already looking back on the past.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
                         `the`,
                         {
@@ -845,11 +845,11 @@ export default {
                                 description: `In this "saddest" month of Willy's murder, I help my mother collect wood shavings left over from my father's amateur carpentry. We then spread them onto our flower beds.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 134,
@@ -862,27 +862,27 @@ export default {
                                     `We plant`,
                                     {
                                         anchor: `asphodels,`,
-                                        wiki: `Asphodelus`
+                                        wiki: `Asphodelus`,
                                     },
                                     `a popular garden plant named after the immortal flower that populates a`,
                                     {
                                         anchor: `section of the underworld`,
-                                        wiki: `Asphodel_Meadows`
+                                        wiki: `Asphodel_Meadows`,
                                     },
                                     `in`,
                                     {
                                         anchor: `Greek mythology.`,
-                                        wiki: `Greek_mythology`
+                                        wiki: `Greek_mythology`,
                                     },
-                                    `By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body had lain.`
+                                    `By softening the soil, the mulch gives new life to our flower beds. And perhaps Willy will do the same for our neighborhood, by softening the "asphalt" beneath which his body had lain.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [PUN]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 137,
@@ -893,19 +893,19 @@ export default {
                                 description: [
                                     {
                                         anchor: `Bluebonnets`,
-                                        wiki: 'Bluebonnet_(plant)'
+                                        wiki: 'Bluebonnet_(plant)',
                                     },
-                                    `are another popular flower in our garden, and a "blue bonnet" is what my mother has tucked my brother's head in to protect him from the sun. But after Willy's murder, I have to wonder how protected my brother is against other things.`
+                                    `are another popular flower in our garden, and a "blue bonnet" is what my mother has tucked my brother's head in to protect him from the sun. But after Willy's murder, I have to wonder how protected my brother is against other things.`,
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true
-                                }
-                            }
+                                    [PUN]: true,
+                                },
+                            },
 
                         },
-                        `bloomed as new comics soon`
-                    ]
+                        `bloomed as new comics soon`,
+                    ],
                 },
                 {
                     time: 140,
@@ -916,12 +916,12 @@ export default {
                             card: {
                                 description: `Having recently assaulted my brother in anger over a shredded comic book, I'm now indifferent to the latest issue from my monthly subscription.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
-                        }
-                    ]
-                }
+                                    [NARRATIVE]: true,
+                                },
+                            },
+                        },
+                    ],
+                },
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
@@ -929,14 +929,14 @@ export default {
                     description: `To play the electric guitar riff here, I used both a glass slide and the whammy bar. Since each of these tools can bend pitch on its own, it makes little sense to combine them, which is exactly why a troll musician would do so.`,
                     dotKeys: {
                         [OBSERVATION]: true,
-                        [SONGCRAFT]: true
-                    }
-                }
-            }
+                        [SONGCRAFT]: true,
+                    },
+                },
+            },
         },
         {
             unitMap: {
-                formType: CHORUS
+                formType: CHORUS,
             },
             mainVerses: [
                 {
@@ -949,12 +949,12 @@ export default {
                                 description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. This person might remark on how "marvelous" it must be to live without one's "marbles," for example. I always had to wonder how gladly they would embrace the greater likelihood of being a victim of violent crime as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [PUN]: true
-                                }
-                            }
+                                    [PUN]: true,
+                                },
+                            },
                         },
-                        `some reckoned,`
-                    ]
+                        `some reckoned,`,
+                    ],
                 },
                 {
                     time: 146,
@@ -968,35 +968,35 @@ export default {
                                         `After my brother was diagnosed with autism, my mother went back to school to learn child development. At the dinner table, she would explain to us such concepts as`,
                                         {
                                             anchor: `"imprinting,"`,
-                                            wiki: `Imprinting_(psychology)`
+                                            wiki: `Imprinting_(psychology)`,
                                         },
-                                        `the phase during which a child learns emotional attachment. She would then voice regret that she began her studies too late to be a better parent to my brother.`
+                                        `the phase during which a child learns emotional attachment. She would then voice regret that she began her studies too late to be a better parent to my brother.`,
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
-                                        [PUN]: true
-                                    }
+                                        [PUN]: true,
+                                    },
                                 },
                                 {
                                     description: [
                                         `Since an`,
                                         {
                                             anchor: `imp`,
-                                            wiki: `Imp`
+                                            wiki: `Imp`,
                                         },
                                         {
                                             anchor: `runt`,
-                                            wiki: `Runt`
+                                            wiki: `Runt`,
                                         },
-                                        `is literally the weakest member in a litter of troll infants, it is surely the one that its troll parents would try to replace with a stolen human child.`
+                                        `is literally the weakest member in a litter of troll infants, it is surely the one that its troll parents would try to replace with a stolen human child.`,
                                     ],
                                     dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                                        [OBSERVATION]: true,
+                                    },
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 149,
@@ -1009,30 +1009,30 @@ export default {
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true,
-                                    [PUN]: true
-                                }
-                            }
+                                    [PUN]: true,
+                                },
+                            },
                         },
-                        `he'd reply…`
-                    ]
+                        `he'd reply…`,
+                    ],
                 },
                 {
                     time: 155,
-                    lyric: `And do we speak in winded whimpers`
+                    lyric: `And do we speak in winded whimpers`,
                 },
                 {
                     time: 158,
-                    lyric: `or squelch shreds of a summer gone,`
+                    lyric: `or squelch shreds of a summer gone,`,
                 },
                 {
                     time: 161,
-                    lyric: `ever conscious of days past forever wrong?`
-                }
-            ]
+                    lyric: `ever conscious of days past forever wrong?`,
+                },
+            ],
         },
         {
             unitMap: {
-                formType: POSTCHORUS
+                formType: POSTCHORUS,
             },
             mainVerses: [
                 {
@@ -1044,12 +1044,12 @@ export default {
                             card: {
                                 description: `One night soon after Willy's murder, I wake up screaming in fear of my mortality. My mother sits by my bedside to comfort me.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
-                        `Mummy laughs,`
-                    ]
+                        `Mummy laughs,`,
+                    ],
                 },
                 {
                     time: 171,
@@ -1063,21 +1063,21 @@ export default {
                                         `In the`,
                                         {
                                             anchor: `Cub Scouts,`,
-                                            wiki: `Cub_Scouting_(Boy_Scouts_of_America)`
+                                            wiki: `Cub_Scouting_(Boy_Scouts_of_America)`,
                                         },
-                                        `Webelos is the eldest rank, and is earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`
-                                    ]
+                                        `Webelos is the eldest rank, and is earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`,
+                                    ],
                                 },
                                 {
                                     description: `My mother, who was the den mother of my Cub Scout pack, might also be assuring me that I'm not yet "way below."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
-                                        [PUN]: true
-                                    }
-                                }
-                            ]
-                        }
-                    ]
+                                        [PUN]: true,
+                                    },
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     time: 173,
@@ -1088,20 +1088,20 @@ export default {
                             card: {
                                 description: `My mother tells me not to worry, since I'm not going to die for a long while. She then assures me that when my time finally does come, perhaps in another seventy years or so, I will have long made peace with death somehow.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            }
+                                    [NARRATIVE]: true,
+                                },
+                            },
                         },
-                        `and you'll be glad`
-                    ]
+                        `and you'll be glad`,
+                    ],
                 },
                 {
                     time: 177,
-                    lyric: `to finally rest those creaking bones!`
+                    lyric: `to finally rest those creaking bones!`,
                 },
                 {
                     time: 179,
-                    lyric: `Life's like this quilt: patchy, then it fills…`
+                    lyric: `Life's like this quilt: patchy, then it fills…`,
                 },
                 {
                     time: 183,
@@ -1113,13 +1113,13 @@ export default {
                                 {
                                     description: `My mother suggests that my life will be a patchwork onto which I continually sew new experiences. In turn, the insights gained from these experiences will then inform and enrich my art.`,
                                     dotKeys: {
-                                        [NARRATIVE]: true
-                                    }
+                                        [NARRATIVE]: true,
+                                    },
                                 },
                                 {
-                                    wormhole: `needle_done`
-                                }
-                            ]
+                                    wormhole: `needle_done`,
+                                },
+                            ],
                         },
                         `you'll write this`,
                         {
@@ -1129,32 +1129,32 @@ export default {
                                     `I wore an eyepatch as a child to correct my`,
                                     {
                                         anchor: `lazy eye,`,
-                                        wiki: `Amblyopia`
+                                        wiki: `Amblyopia`,
                                     },
                                     `which naturally led to an interest in drawing. Since I lacked depth perception,  it was just less of a struggle for me to render anything I saw onto paper. Impressed by my ability, my mother insisted I was destined to become a great artist. So I always had it in my head that I would one day create a masterpiece, perhaps something like the`,
                                     {
                                         anchor: `Tintin`,
-                                        wiki: `The_Adventures_of_Tintin`
+                                        wiki: `The_Adventures_of_Tintin`,
                                     },
-                                    `comic books I adored at the time.`
+                                    `comic books I adored at the time.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
-                        }
-                    ]
+                                    [BACKSTORY]: true,
+                                },
+                            },
+                        },
+                    ],
                 },
                 {
                     time: 185,
-                    lyric: `Then to Willy, in the cover could say sorry for the world!`
-                }
-            ]
+                    lyric: `Then to Willy, in the cover could say sorry for the world!`,
+                },
+            ],
         },
         {
             unitMap: {
                 formType: POSTCHORUS,
-                subsequent: true
+                subsequent: true,
             },
             mainVerses: [
                 {
@@ -1164,31 +1164,31 @@ export default {
                             anchor: [
                                 {
                                     isItalic: true,
-                                    lyric: `Bobtail`
+                                    lyric: `Bobtail`,
                                 },
-                                `'s cover`
+                                `'s cover`,
                             ],
                             card: {
                                 description: [
                                     `My favorite word as a child was "bobtail." I was just so proud of myself the day I realized that the line "bells on bobtail ring," from the song`,
                                     {
                                         anchor: `"Jingle Bells,"`,
-                                        wiki: `Jingle_Bells`
+                                        wiki: `Jingle_Bells`,
                                     },
                                     `isn't actually a nonsensical phrase. In any case,`,
                                     {
                                         isItalic: true,
-                                        lyric: `Bobtail`
+                                        lyric: `Bobtail`,
                                     },
-                                    `became my catchall title for the great artistic work I would one day create.`
+                                    `became my catchall title for the great artistic work I would one day create.`,
                                 ],
                                 dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            }
+                                    [BACKSTORY]: true,
+                                },
+                            },
                         },
-                        `could say sorry for the world!`
-                    ]
+                        `could say sorry for the world!`,
+                    ],
                 },
                 {
                     time: 197,
@@ -1196,12 +1196,12 @@ export default {
                         `Oh,`,
                         {
                             isItalic: true,
-                            lyric: `Bobtail`
+                            lyric: `Bobtail`,
                         },
-                        `'s cover could say sorry…!`
-                    ]
-                }
-            ]
-        }
-    ]
+                        `'s cover could say sorry…!`,
+                    ],
+                },
+            ],
+        },
+    ],
 }

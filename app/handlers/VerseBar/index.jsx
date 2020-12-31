@@ -27,7 +27,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
                 isLyricExpanded,
                 isHeightlessLyric,
                 lyricSectionRect,
-                verseElement
+                verseElement,
             })
 
             // Prevent unnecessary dispatches.
@@ -48,7 +48,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 )
 
 VerseBarHandler.propTypes = {
-    getScrollVerseChild: PropTypes.func.isRequired
+    getScrollVerseChild: PropTypes.func.isRequired,
 }
 
 export default memo(VerseBarHandler)

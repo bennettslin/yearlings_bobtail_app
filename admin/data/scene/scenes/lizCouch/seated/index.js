@@ -6,7 +6,7 @@ export default {
         [PETTING_SEATED]: {
             yIndex: 4,
             xPosition: 3.35,
-            zOffset: -0.95
-        }
-    }
+            zOffset: -0.95,
+        },
+    },
 }

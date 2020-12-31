@@ -3,5 +3,5 @@ import reassuringEnchanted from '../../../../../assets/svgs/actors/christopherBe
 import { REASSURING_ENCHANTED } from '../../../../constants/scene/actors/christopherBennettWilly'
 
 export default {
-    [REASSURING_ENCHANTED]: reassuringEnchanted
+    [REASSURING_ENCHANTED]: reassuringEnchanted,
 }

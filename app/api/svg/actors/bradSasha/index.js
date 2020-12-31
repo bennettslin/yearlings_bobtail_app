@@ -3,5 +3,5 @@ import charmedSchoolbus from '../../../../../assets/svgs/actors/bradSasha/charme
 import { CHARMED_SCHOOLBUS } from '../../../../constants/scene/actors/bradSasha'
 
 export default {
-    [CHARMED_SCHOOLBUS]: charmedSchoolbus
+    [CHARMED_SCHOOLBUS]: charmedSchoolbus,
 }

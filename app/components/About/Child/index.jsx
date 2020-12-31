@@ -8,7 +8,7 @@ const AboutChild = ({
     didMount,
     className,
     header,
-    children
+    children,
 
 }) => (
     <div
@@ -18,8 +18,8 @@ const AboutChild = ({
                     'AboutChild',
                     'fontSize__verse',
                     className
-                )
-            }
+                ),
+            },
         }}
     >
         {Boolean(header) && (
@@ -30,8 +30,8 @@ const AboutChild = ({
                             'AboutChild__header',
                             'fontColour__title',
                             'Rancho'
-                        )
-                    }
+                        ),
+                    },
                 }}
             >
                 {header}
@@ -45,7 +45,7 @@ AboutChild.propTypes = {
     didMount: PropTypes.bool.isRequired,
     className: PropTypes.string,
     header: PropTypes.string,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
 }
 
 export default getDidMountHoc(AboutChild)

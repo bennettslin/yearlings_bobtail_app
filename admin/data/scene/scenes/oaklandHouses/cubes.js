@@ -1,7 +1,7 @@
 import {
     OAKLAND_HOUSES_KEY,
     OAKLAND_COUCH_THOUGHT_KEY,
-    OAKLAND_VOLKSWAGEN_KEY
+    OAKLAND_VOLKSWAGEN_KEY,
 } from '../../../../../app/constants/scene/scenes'
 
 import {
@@ -9,7 +9,7 @@ import {
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
     LIZ_FLOOR_COLOUR as F,
-    LIZ_COUCH_COLOUR as U
+    LIZ_COUCH_COLOUR as U,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -18,14 +18,14 @@ export default {
             hslaColours: [
                 [G],
                 [V],
-                [T]
+                [T],
             ],
             zIndices: [
                 [0],
                 [1],
-                [0]
-            ]
-        }
+                [0],
+            ],
+        },
     },
     [OAKLAND_COUCH_THOUGHT_KEY]: {
         floor: {
@@ -35,7 +35,7 @@ export default {
                 [T],
                 [T, U, U, U, F, F, F, T],
                 [T, U, U, U, F, F, F, T],
-                [T, F, F, F, F, F, F, T]
+                [T, F, F, F, F, F, F, T],
             ],
             zIndices: [
                 [0],
@@ -43,9 +43,9 @@ export default {
                 [0],
                 [0, 7, 3, 3, 1, 1, 1, 0],
                 [0, 7, 3, 3, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 0]
-            ]
-        }
+                [0, 1, 1, 1, 1, 1, 1, 0],
+            ],
+        },
     },
     [OAKLAND_VOLKSWAGEN_KEY]: {
         floor: {
@@ -54,15 +54,15 @@ export default {
                 [V],
                 [T],
                 [T],
-                [V]
+                [V],
             ],
             zIndices: [
                 [0],
                 [1],
                 [0],
                 [0],
-                [1]
-            ]
-        }
-    }
+                [1],
+            ],
+        },
+    },
 }

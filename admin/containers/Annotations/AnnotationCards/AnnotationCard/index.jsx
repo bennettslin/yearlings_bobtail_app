@@ -5,13 +5,13 @@ import Texts from '../../../../../app/components/Texts'
 import { ORDERED_DOT_KEYS } from '../../../../../app/constants/dots'
 import {
     getDescriptionForAnnotationCard,
-    getDotKeysForAnnotationCard
+    getDotKeysForAnnotationCard,
 } from '../../../../../app/api/album/cards'
 
 const AnnotationCard = ({
     songIndex,
     annotationIndex,
-    cardIndex
+    cardIndex,
 
 }) => {
     const
@@ -43,7 +43,7 @@ const AnnotationCard = ({
 AnnotationCard.propTypes = {
     songIndex: PropTypes.number.isRequired,
     annotationIndex: PropTypes.number.isRequired,
-    cardIndex: PropTypes.number.isRequired
+    cardIndex: PropTypes.number.isRequired,
 }
 
 export default AnnotationCard

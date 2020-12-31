@@ -15,7 +15,7 @@ const PitchImage = ({ serverClientPitchIndex }) => (
             ),
             svgClassName: cx(
                 'dramaMasks'
-            )
+            ),
         }}
     >
         {getPitchImageForIndex(
@@ -25,7 +25,7 @@ const PitchImage = ({ serverClientPitchIndex }) => (
 )
 
 PitchImage.propTypes = {
-    serverClientPitchIndex: PropTypes.number.isRequired
+    serverClientPitchIndex: PropTypes.number.isRequired,
 }
 
 export default getPitchServerClientHoc(PitchImage)

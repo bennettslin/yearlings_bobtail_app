@@ -16,11 +16,11 @@ import { mapIsPlaying } from '../../../redux/audio/selector'
 import {
     mapIsBannerHovering,
     mapBannerHoverVerseIndex,
-    mapIsSmallBannerText
+    mapIsSmallBannerText,
 } from '../../../redux/banner/selector'
 import {
     mapSelectedSongIndex,
-    mapIsSelectedLogue
+    mapIsSelectedLogue,
 } from '../../../redux/selected/selector'
 import { mapIsLyricsLocked } from '../../../redux/slider/selector'
 import { getMapSongTrackerWidth } from '../../../redux/tracker/selector'
@@ -51,7 +51,7 @@ const SongBanner = () => {
             return getVerseIndexFromClientX({
                 clientX,
                 songBannerElement,
-                selectedSongIndex
+                selectedSongIndex,
             })
         }
 
@@ -67,7 +67,7 @@ const SongBanner = () => {
 
         if (bannerHoverVerseIndex !== nextVerseIndex) {
             dispatch(updateBannerStore({
-                bannerHoverVerseIndex: nextVerseIndex
+                bannerHoverVerseIndex: nextVerseIndex,
             }))
         }
     }
@@ -117,7 +117,7 @@ const SongBanner = () => {
 
         dispatchVerse.current({
             scrollLog: 'Banner selected',
-            verseIndex
+            verseIndex,
         })
 
         // Once clicked, do not allow another click on the same hover.
@@ -161,8 +161,8 @@ const SongBanner = () => {
                 ...IS_USER_AGENT_DESKTOP && {
                     onMouseEnter,
                     onMouseMove,
-                    onMouseLeave
-                }
+                    onMouseLeave,
+                },
             }}
         >
             <Tracker {...{ trackerLength: songTrackerWidth }} />

@@ -8,7 +8,7 @@ import {
     DOUBLE_ALBERT,
     ARRIVED,
     JUDGMENTAL,
-    CONCERNED
+    CONCERNED,
 } from '../../../../constants/scene/actors/khari'
 
 import { EPILOGUE } from '../../../../constants/scene/actors/songs'
@@ -18,5 +18,5 @@ export default {
     [ARRIVED]: arrived,
     [JUDGMENTAL]: judgmental,
     [CONCERNED]: concerned,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
 }

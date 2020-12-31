@@ -5,5 +5,5 @@ import legacy from './legacy'
 export default [
     ...general,
     ...illustrator,
-    ...legacy
+    ...legacy,
 ]

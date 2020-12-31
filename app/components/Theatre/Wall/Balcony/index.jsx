@@ -10,7 +10,7 @@ const WallBalcony = ({
     left,
     width,
     height,
-    isLeft
+    isLeft,
 
 }) => (
     <InlineSvg
@@ -22,13 +22,13 @@ const WallBalcony = ({
                 top: `${top}px`,
                 left: `${left}px`,
                 width: `${width}px`,
-                height: `${height}px`
+                height: `${height}px`,
             },
             svgClassName: cx(
                 'wallBalcony',
                 isLeft && 'wallBalcony__left',
                 'fillTransition__dimTheatre'
-            )
+            ),
         }}
     >
         {wallBalcony}
@@ -40,7 +40,7 @@ WallBalcony.propTypes = {
     left: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
-    isLeft: PropTypes.bool.isRequired
+    isLeft: PropTypes.bool.isRequired,
 }
 
 export default memo(WallBalcony)

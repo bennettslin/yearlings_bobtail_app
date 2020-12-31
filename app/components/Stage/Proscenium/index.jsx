@@ -11,7 +11,7 @@ const Proscenium = () => {
         prosceniumTop,
         prosceniumLeft,
         prosceniumWidth,
-        prosceniumHeight
+        prosceniumHeight,
     } = JSON.parse(useSelector(mapProsceniumDimensionCoordinates))
 
     return (
@@ -24,12 +24,12 @@ const Proscenium = () => {
                     top: `${prosceniumTop}px`,
                     left: `${prosceniumLeft}px`,
                     width: `${prosceniumWidth}px`,
-                    height: `${prosceniumHeight}px`
+                    height: `${prosceniumHeight}px`,
                 },
                 svgClassName: cx(
                     'proscenium',
                     'fillTransition__dimTheatre'
-                )
+                ),
             }}
         >
             {proscenium}

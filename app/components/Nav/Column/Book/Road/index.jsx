@@ -8,7 +8,7 @@ const NavRoad = () => (
             className: cx(
                 'NavRoad',
                 'abF'
-            )
+            ),
         }}
     />
 )
