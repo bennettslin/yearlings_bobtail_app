@@ -187,7 +187,7 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
     [BUBBLE]: {
         [KHARI_SPEECH_ATTACK]: {
             yIndex: 5,
-            xPosition: 5.6,
+            xPosition: 5.9,
             zOffset: 3.05,
             layerYIndex: 4
         },

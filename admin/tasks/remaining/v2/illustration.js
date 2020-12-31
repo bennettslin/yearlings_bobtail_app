@@ -1,23 +1,8 @@
 export default [
     {
-        taskName: `Theatre binoculars.`,
+        taskName: `Ghost tail for Bennett.`,
         workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Blood on demonstrators.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `El Torito logo.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Wedding platform and chairs.`,
-        workedHours: 0,
-        neededHours: 2
+        neededHours: 5
     },
     {
         taskName: `Make mermaid and serpent colours the same.`,
@@ -33,21 +18,6 @@ export default [
         taskName: `Backdrops for Uncanny road scenes.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Ghost tail for Bennett.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Trash chute to dumpster.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Final gravestone. (Move Bennett and Liz to left.)`,
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: `Buddha stand`,
@@ -78,6 +48,56 @@ export default [
         taskName: `Young children head edits.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Nurse bench.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Principal bench.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Basement milk crates.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Mirrored sink and Khari speech attach use existing shirt colours.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Make road floors have path colour?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Blood on demonstrators.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `El Torito logo.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Wedding platform and chairs.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Trash chute to dumpster.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Final gravestone. (Move Bennett and Liz to left.)`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Constellation shadows.`,
@@ -120,33 +140,18 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Mirrored sink and Khari speech attach use existing shirt colours.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Make road floors have path colour?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Remove depth shading from slant direction cubes?`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Nurse bench.`,
+        taskName: `Liz couch scene space fillers?`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
     {
-        taskName: `Principal bench.`,
+        taskName: `Theatre binoculars.`,
         workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Basement milk crates.`,
-        workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     }
 ]
