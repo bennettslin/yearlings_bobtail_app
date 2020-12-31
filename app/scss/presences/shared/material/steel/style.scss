@@ -4,4 +4,11 @@
     .steelMedium { fill: hsl(190, 8%, 57%); }
     .steelMediumLight { fill: hsl(190, 8%, 62%); }
     .steelLight { fill: hsl(190, 8%, 67%); }
+
+    .dark__indoor
+    & {
+        .steelDark { fill: hsl(190, 8%, 5%); }
+        .steelMedium { fill: hsl(190, 8%, 5%); }
+        .steelLight { fill: hsl(190, 8%, 5%); }
+    }
 }

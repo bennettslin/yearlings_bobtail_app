@@ -225,11 +225,20 @@ export default {
         STEEL__SHARED,
     ],
     [STEAM_PIPES]: null,
-    [STORAGE_BOXES]: null,
-    [STORAGE_CHEST]: null,
+    [STORAGE_BOXES]: OAK__SHARED,
+    [STORAGE_CHEST]: [
+        BRASS__SHARED,
+        IRON__SHARED,
+        MAPLE__SHARED,
+        RUBBER__SHARED,
+    ],
     [TAIWAN_FRIDGE]: FRIDGE__SHARED,
     [TAIWAN_TREE]: TAIWAN_FOLIAGE__SHARED,
-    [TELEVISION]: null,
+    [TELEVISION]: [
+        OAK__SHARED,
+        RUBBER__SHARED,
+        STEEL__SHARED,
+    ],
     [TOWEL_RACK]: [
         BENNETT_LINENS__SHARED,
         MAPLE__SHARED,

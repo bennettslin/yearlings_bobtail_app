@@ -6,4 +6,10 @@
     .ironMedium { fill: hsl(35, 5%, 57%); }
     .ironMediumLight { fill: hsl(35, 5%, 62%); }
     // .ironLight { fill: hsl(35, 5%, 67%); }
+
+    .dark__indoor
+    & {
+        .ironDarker { fill: hsl(35, 5%, 5%); }
+        .ironMediumDark { fill: hsl(35, 5%, 5%); }
+    }
 }

@@ -21,12 +21,10 @@ export default {
         [STORAGE_BOXES]: {
             yIndex: 1,
             xPosition: 6.5,
-            scaleFactor: 0.2,
         },
         [STORAGE_CHEST]: {
             yIndex: 1,
             xPosition: 6.5,
-            scaleFactor: 0.18,
         },
         [HOWIE_FRIDGE]: {
             yIndex: 1,
@@ -36,7 +34,6 @@ export default {
         [TELEVISION]: {
             yIndex: 4,
             xPosition: 2,
-            scaleFactor: 0.3,
             layerYIndex: 5,
         },
     },

@@ -11,6 +11,7 @@
 
     .dark__indoor
     & {
+        .mapleMedium { fill: hsl(23, 22%, 5%); }
         .mapleDarkest { fill: hsl(23, 18%, 5%); }
         .mapleDark { fill: hsl(23, 20%, 5%); }
     }

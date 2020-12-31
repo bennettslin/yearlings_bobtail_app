@@ -2,8 +2,15 @@
     .brassDarkest { fill: hsl(61, 19%, 37%); }
     .brassDarker { fill: hsl(61, 19%, 42%); }
     .brassDark { fill: hsl(61, 19%, 47%); }
-    .brassMediumDark { fill: hsl(61, 19%, 52%); }
+    // .brassMediumDark { fill: hsl(61, 19%, 52%); }
     .brassMedium { fill: hsl(61, 19%, 57%); }
     // .brassMediumLight { fill: hsl(61, 19%, 62%); }
     .brassLight { fill: hsl(61, 19%, 67%); }
+
+    .dark__indoor
+    & {
+        .brassDarkest { fill: hsl(61, 19%, 5%); }
+        .brassDark { fill: hsl(61, 19%, 5%); }
+        .brassMedium { fill: hsl(61, 19%, 5%); }
+    }
 }
