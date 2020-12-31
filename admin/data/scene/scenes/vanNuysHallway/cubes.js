@@ -1,9 +1,9 @@
 import { VAN_NUYS_HALLWAY_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
+    DEFAULT_CLEAR_COLOUR as D,
     SCHOOL_FLOOR_COLOUR as F,
-    SCHOOL_WALL_COLOUR as W,
-    SEAT_COLOUR as S
+    SCHOOL_WALL_COLOUR as W
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { d, g } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -28,7 +28,7 @@ export default {
                 [F],
                 [F],
                 [F],
-                [F, F, F, F, F, F, S, S, S, S, F],
+                [F, F, F, F, F, F, D, D, D, D, F],
                 [F]
             ],
             zIndices: [

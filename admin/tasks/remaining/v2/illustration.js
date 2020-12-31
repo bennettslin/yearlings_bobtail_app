@@ -21,6 +21,7 @@ export default [
     },
     {
         taskName: `Buddha stand`,
+        reference: `https://www.harpgallery.com/shop/item33895.html`,
         workedHours: 0,
         neededHours: 2
     },
@@ -40,14 +41,14 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Victrola stand.`,
+        taskName: `Bennett couch lamp stand.`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Young children head edits.`,
+        taskName: `Victrola stand.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 1
     },
     {
         taskName: `Nurse bench.`,
@@ -60,14 +61,24 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Basement milk crates.`,
+        taskName: `Basement milk crates, also for Vegan phone scene.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Couch fronts and mattresses.`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `Mirrored sink and Khari speech attach use existing shirt colours.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Young children head edits.`,
+        workedHours: 0,
+        neededHours: 5
     },
     {
         taskName: `Make road floors have path colour?`,

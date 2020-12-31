@@ -77,7 +77,6 @@ import {
     WAITING_ARMCHAIR_COLOUR,
     BENNETT_BED_COLOUR,
     LIZ_BED_COLOUR,
-    SEAT_COLOUR,
     OCEAN_COLOUR
 } from '../colours'
 
@@ -158,7 +157,5 @@ export default {
     [LIZ_COUCH_COLOUR]: { h: parseInt(HUE_LIZ_LINENS), s: 15, l: 50 },
     [LIZ_BED_COLOUR]: { h: parseInt(HUE_LIZ_LINENS), s: 25, l: 65 },
     [WAITING_ARMCHAIR_COLOUR]: { h: parseInt(HUE_WAITING), s: 34, l: 44 },
-    [MIRIAM_COUCH_COLOUR]: { h: parseInt(HUE_MIRIAM_LINENS), s: 25, l: 45 },
-    /* S. */
-    [SEAT_COLOUR]: { h: 25, s: 27, l: 47 }
+    [MIRIAM_COUCH_COLOUR]: { h: parseInt(HUE_MIRIAM_LINENS), s: 25, l: 45 }
 }

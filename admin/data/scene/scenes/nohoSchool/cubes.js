@@ -1,10 +1,10 @@
 import { NOHO_SCHOOL_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
+    DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
-    SCHOOL_FLOOR_COLOUR as F,
-    SEAT_COLOUR as S
+    SCHOOL_FLOOR_COLOUR as F
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {
@@ -15,7 +15,7 @@ export default {
                 [V],
                 [V],
                 [V, V, V, V, V, V, V, F, F, F, F, V],
-                [V, V, V, V, V, V, V, F, F, F, S, V],
+                [V, V, V, V, V, V, V, F, F, F, D, V],
                 [V, V, V, V, V, V, V, F, F, F, F, V]
             ],
             zIndices: [

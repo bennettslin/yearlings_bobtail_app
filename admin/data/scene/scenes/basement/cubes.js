@@ -5,8 +5,7 @@ import {
     GRASS_COLOUR as H,
     PAVEMENT_COLOUR as V,
     DIRT_FLOOR_COLOUR as F,
-    UNDERGROUND_WALL_COLOUR as W,
-    SEAT_COLOUR as S
+    UNDERGROUND_WALL_COLOUR as W
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { b, e, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -33,8 +32,8 @@ export default {
                 [V],
                 [V, F, V, V, F, F, F, F, F, F, F, V],
                 [V, F, V, V, F, F, F, F, F, F, F, V],
-                [V, F, F, F, S, F, F, S, F, F, F, V],
-                [V, F, F, S, F, F, F, F, F, S, F, V]
+                [V, F, F, F, D, F, F, D, F, F, F, V],
+                [V, F, F, D, F, F, F, F, F, D, F, V]
             ],
             zIndices: [
                 [3],
