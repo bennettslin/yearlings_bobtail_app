@@ -1,5 +1,5 @@
 # Night colours indoors
-* Attic (Constellations)
+* Attic (Constellations) (/)
     * Television
     * Storage boxes
     * Storage chest

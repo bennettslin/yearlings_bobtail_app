@@ -10,7 +10,7 @@ export default [
     },
     {
         taskName: `Night colour work.`,
-        workedHours: 42,
+        workedHours: 43,
     },
     {
         taskName: `Shared styles work.`,

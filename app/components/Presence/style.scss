@@ -2,6 +2,11 @@
 
 .Presence {
     opacity: 0;
+    & * {
+        transition:
+            fill $transitionDuration__default,
+            stroke $transitionDuration__default;
+    }
 
     .PresenceContainer__shown
     & {
