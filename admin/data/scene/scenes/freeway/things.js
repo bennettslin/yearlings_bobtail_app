@@ -15,13 +15,11 @@ export default {
         [SHOPPING_CART]: {
             yIndex: 4,
             xPosition: 8,
-            scaleFactor: 0.2,
         },
         [OVERPASS_SIGN_BACK]: {
             yIndex: 2,
-            xPosition: 2.5,
-            scaleFactor: 0.3,
-            zOffset: 1,
+            xPosition: 2.3,
+            scaleFactor: 0.45,
         },
     },
     [FLAT]: {

@@ -66,26 +66,6 @@ export default [
         neededHours: 3,
     },
     {
-        taskName: `Mirrored sink and Khari speech attach use existing shirt colours.`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
-        taskName: `Young children head edits.`,
-        workedHours: 0,
-        neededHours: 5,
-    },
-    {
-        taskName: `Make road floors have path colour?`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
-        taskName: `Blood on demonstrators.`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
         taskName: `El Torito logo.`,
         workedHours: 0,
         neededHours: 1,
@@ -109,6 +89,26 @@ export default [
         taskName: `Constellation shadows.`,
         workedHours: 0,
         neededHours: 10,
+    },
+    {
+        taskName: `Blood on demonstrators.`,
+        workedHours: 0,
+        neededHours: 1,
+    },
+    {
+        taskName: `Mirrored sink and Khari speech attach use existing shirt colours.`,
+        workedHours: 0,
+        neededHours: 1,
+    },
+    {
+        taskName: `Young children head edits.`,
+        workedHours: 0,
+        neededHours: 5,
+    },
+    {
+        taskName: `Make road floors have path colour?`,
+        workedHours: 0,
+        neededHours: 1,
     },
     {
         taskName: `Consolidate matte colours, both bright and dark. (Flag, magazines, loading dock door, nurse door, various cardboards, trash can, pharmacy aisle.)`,
