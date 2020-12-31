@@ -163,13 +163,11 @@ export default {
         STEEL__SHARED,
     ],
     [DRUMS_STACKED]: [
-        BRASS__SHARED,
         CHROME__SHARED,
         DRUMS__SHARED,
         STEEL__SHARED,
     ],
     [DRUM_THRONE]: [
-        BRASS__SHARED,
         DRUMS__SHARED,
         STEEL__SHARED,
     ],
