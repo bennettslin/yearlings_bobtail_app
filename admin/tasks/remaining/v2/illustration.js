@@ -36,6 +36,16 @@ export default [
         neededHours: 3
     },
     {
+        taskName: `Nurse bench.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Principal bench.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Bennett record stand.`,
         workedHours: 0,
         neededHours: 1
@@ -47,21 +57,6 @@ export default [
     },
     {
         taskName: `Victrola stand.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Nurse bench.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Principal bench.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Basement milk crates, also for Vegan phone scene.`,
         workedHours: 0,
         neededHours: 1
     },

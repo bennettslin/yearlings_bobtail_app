@@ -18,6 +18,7 @@ import {
     LIZ_BED,
     LIZ_COUCH,
     LIZ_OTTOMAN,
+    MILK_CRATE,
     OCEAN_CAVE_EXTERIOR,
     OCEAN_CAVE_INTERIOR,
     OCEAN_WAVES,
@@ -163,6 +164,7 @@ export default {
         OAK__SHARED,
         SHADOW__SHARED
     ],
+    [MILK_CRATE]: null,
     [OCEAN_CAVE_EXTERIOR]: OCEAN_CAVE__SHARED,
     [OCEAN_CAVE_INTERIOR]: [
         COPPER__SHARED,

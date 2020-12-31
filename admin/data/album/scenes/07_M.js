@@ -119,9 +119,13 @@ import {
 } from '../../../../app/constants/scene/things/flats'
 import { BENNETT_PILLOW__COUCH } from '../../../../app/constants/scene/things/furnitures'
 import {
-    WIDE_COUCH_BENNETT,
+    MILK_CRATE__ANA,
+    MILK_CRATE__BENNETT,
+    MILK_CRATE__JACOB,
+    MILK_CRATE__MARA,
     WIDE_ARMREST_BENNETT__LEFT,
-    WIDE_ARMREST_BENNETT__RIGHT
+    WIDE_ARMREST_BENNETT__RIGHT,
+    WIDE_COUCH_BENNETT
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -296,6 +300,12 @@ export default [
                 [BASEMENT_BEER_CASE]: true,
                 [BASEMENT_BEER_MARA]: true,
                 [BASEMENT_BEER_BENNETT]: true
+            },
+            [PANEL]: {
+                [MILK_CRATE__ANA]: true,
+                [MILK_CRATE__BENNETT]: true,
+                [MILK_CRATE__JACOB]: true,
+                [MILK_CRATE__MARA]: true
             }
         },
         cubes: BASEMENT_KEY,

@@ -1,20 +1,27 @@
 import {
     DOOR,
-    FIXTURE
+    FIXTURE,
+    PANEL
 } from '../../../../../app/constants/scene/things'
 import {
     BASEMENT_DOOR_OPEN,
     DEFAULT_FENCE_BASEMENT
 } from '../../../../../app/constants/scene/things/doors'
 import {
-    BASS_CASE_UPRIGHT,
-    GUITAR_CASE_UPRIGHT,
-    DRUMS_STACKED__BASEMENT,
+    BASEMENT_BEER_BENNETT,
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
-    BASEMENT_BEER_BENNETT
+    BASS_CASE_UPRIGHT,
+    DRUMS_STACKED__BASEMENT,
+    GUITAR_CASE_UPRIGHT
 } from '../../../../../app/constants/scene/things/fixtures'
 import { ACTOR_DEFAULT_SCALE_FACTOR } from '../../../../../app/constants/scene'
+import {
+    MILK_CRATE__ANA,
+    MILK_CRATE__BENNETT,
+    MILK_CRATE__JACOB,
+    MILK_CRATE__MARA
+} from '../../../../../app/constants/scene/things/panels'
 
 export default {
     [DOOR]: {
@@ -56,6 +63,28 @@ export default {
             yIndex: 5,
             xPosition: 7.1,
             scaleFactor: ACTOR_DEFAULT_SCALE_FACTOR
+        }
+    },
+    [PANEL]: {
+        [MILK_CRATE__ANA]: {
+            yIndex: 4,
+            xPosition: 7,
+            zOffset: -1.07
+        },
+        [MILK_CRATE__BENNETT]: {
+            yIndex: 5,
+            xPosition: 9,
+            zOffset: -1.07
+        },
+        [MILK_CRATE__JACOB]: {
+            yIndex: 4,
+            xPosition: 4,
+            zOffset: -1.07
+        },
+        [MILK_CRATE__MARA]: {
+            yIndex: 5,
+            xPosition: 3,
+            zOffset: -1.07
         }
     }
 }

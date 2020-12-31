@@ -11,26 +11,27 @@ import {
     THOUGHT_AMY
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
-    LIZ_PHONE,
-    LIZ_PHONE_REFLECTION,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
-    LIZ_PHONE_BASE,
-    LIZ_PHONE_BASE_REFLECTION,
     CONDOM_WRAPPER_LIZ,
     CONDOM_WRAPPER_REFLECTION,
+    LIZ_PHONE,
+    LIZ_PHONE_BASE,
+    LIZ_PHONE_BASE_REFLECTION,
+    LIZ_PHONE_REFLECTION,
     USED_CONDOM_LIZ,
     USED_CONDOM_REFLECTION
 } from '../../../../../app/constants/scene/things/fixtures'
 import {
     LIZ_PILLOWS,
-    LIZ_PILLOWS_REFLECTION,
     LIZ_PILLOWS_PILE,
-    LIZ_PILLOWS_PILE_REFLECTION
+    LIZ_PILLOWS_PILE_REFLECTION,
+    LIZ_PILLOWS_REFLECTION
 } from '../../../../../app/constants/scene/things/furnitures'
 import {
-    PHONE_CALL_PANEL,
-    LIZ_BED
+    LIZ_BED,
+    MILK_CRATE__VEGAN,
+    PHONE_CALL_PANEL
 } from '../../../../../app/constants/scene/things/panels'
 import {
     BUBBLE_LARGE_CONFIG,
@@ -153,6 +154,11 @@ export const THINGS_LIZ_BED_VEGAN = {
             yIndex: 3,
             xPosition: 9.5,
             scaleFactor: 0.325
+        },
+        [MILK_CRATE__VEGAN]: {
+            yIndex: 4,
+            xPosition: 10,
+            zOffset: -1.08
         }
     }
 }

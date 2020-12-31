@@ -86,6 +86,7 @@ import {
 import {
     CROWD_BACK,
     LIZ_BED,
+    MILK_CRATE__VEGAN,
     PHONE_CALL_PANEL
 } from '../../../../app/constants/scene/things/panels'
 import {
@@ -225,6 +226,7 @@ export default [
             },
             [PANEL]: {
                 [LIZ_BED]: true,
+                [MILK_CRATE__VEGAN]: true,
                 [PHONE_CALL_PANEL]: true
             }
         },

@@ -166,5 +166,9 @@ export default [
     {
         taskName: `Liz ottoman.`,
         workedHours: 1
+    },
+    {
+        taskName: `Basement milk crates, also for Vegan phone scene.`,
+        workedHours: 2
     }
 ]
