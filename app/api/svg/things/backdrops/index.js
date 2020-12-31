@@ -1,85 +1,85 @@
+import drivingBackdrop from '../../../../../assets/svgs/backdrops/drivingBackdrop'
+import goldenGateBackdrop from '../../../../../assets/svgs/backdrops/goldenGateBackdrop'
+import losAngelesBackdrop from '../../../../../assets/svgs/backdrops/losAngelesBackdrop'
+import mountainBackdrop from '../../../../../assets/svgs/backdrops/mountainBackdrop'
+import oaklandFront from '../../../../../assets/svgs/backdrops/oaklandFront'
+import oaklandSide from '../../../../../assets/svgs/backdrops/oaklandSide'
+import oceanBottomFar from '../../../../../assets/svgs/backdrops/oceanBottomFar'
+import oceanFloorFar from '../../../../../assets/svgs/backdrops/oceanFloorFar'
+import pharmacyCel from '../../../../../assets/svgs/backdrops/pharmacyCel'
+import roadFuture from '../../../../../assets/svgs/backdrops/roadFuture'
+import roadPast from '../../../../../assets/svgs/backdrops/roadPast'
+import roadPresent from '../../../../../assets/svgs/backdrops/roadPresent'
+import shoreBuoyBackdrop from '../../../../../assets/svgs/backdrops/shoreBuoyBackdrop'
+import shoreRickshawBackdrop from '../../../../../assets/svgs/backdrops/shoreRickshawBackdrop'
+import taiwanMountainsBackdrop from '../../../../../assets/svgs/backdrops/taiwanMountainsBackdrop'
+import taiwanStairsBackdrop from '../../../../../assets/svgs/backdrops/taiwanStairsBackdrop'
+import thoughtLarge from '../../../../../assets/svgs/backdrops/thoughtLarge'
+import thoughtMedium from '../../../../../assets/svgs/backdrops/thoughtMedium'
+import thoughtSmall from '../../../../../assets/svgs/backdrops/thoughtSmall'
 import valleyCloserBackdrop from '../../../../../assets/svgs/backdrops/valleyCloserBackdrop'
 import valleyFurtherBackdrop from '../../../../../assets/svgs/backdrops/valleyFurtherBackdrop'
 import valleyPanoramaBackdrop from '../../../../../assets/svgs/backdrops/valleyPanoramaBackdrop'
-import taiwanMountainsBackdrop from '../../../../../assets/svgs/backdrops/taiwanMountainsBackdrop'
-import thoughtLarge from '../../../../../assets/svgs/backdrops/thoughtLarge'
-import taiwanStairsBackdrop from '../../../../../assets/svgs/backdrops/taiwanStairsBackdrop'
-import mountainBackdrop from '../../../../../assets/svgs/backdrops/mountainBackdrop'
-import shoreRickshawBackdrop from '../../../../../assets/svgs/backdrops/shoreRickshawBackdrop'
-import shoreBuoyBackdrop from '../../../../../assets/svgs/backdrops/shoreBuoyBackdrop'
-import oceanBottomFar from '../../../../../assets/svgs/backdrops/oceanBottomFar'
-import oceanFloorFar from '../../../../../assets/svgs/backdrops/oceanFloorFar'
-import losAngelesBackdrop from '../../../../../assets/svgs/backdrops/losAngelesBackdrop'
-import pharmacyCel from '../../../../../assets/svgs/backdrops/pharmacyCel'
-import oaklandSide from '../../../../../assets/svgs/backdrops/oaklandSide'
-import oaklandFront from '../../../../../assets/svgs/backdrops/oaklandFront'
-import roadPast from '../../../../../assets/svgs/backdrops/roadPast'
-import roadPresent from '../../../../../assets/svgs/backdrops/roadPresent'
-import roadFuture from '../../../../../assets/svgs/backdrops/roadFuture'
-import goldenGateBackdrop from '../../../../../assets/svgs/backdrops/goldenGateBackdrop'
-import thoughtMedium from '../../../../../assets/svgs/backdrops/thoughtMedium'
-import thoughtSmall from '../../../../../assets/svgs/backdrops/thoughtSmall'
 import weddingBackdrop from '../../../../../assets/svgs/backdrops/weddingBackdrop'
-import drivingBackdrop from '../../../../../assets/svgs/backdrops/drivingBackdrop'
 
 import {
-    VALLEY_CLOSER_BACKDROP,
-    VALLEY_FURTHER_BACKDROP,
-    VALLEY_PANORAMA_BACKDROP,
-    TAIWAN_MOUNTAINS_BACKDROP,
-    THOUGHT_LARGE__LEFT,
-    THOUGHT_LARGE__RIGHT,
-    TAIWAN_STAIRS_BACKDROP,
-    MOUNTAIN_TAIWAN_BACKDROP,
-    MOUNTAIN_PAMPAS_BACKDROP,
-    SHORE_RICKSHAW_BACKDROP,
-    SHORE_BUOY_BACKDROP,
-    OCEAN_BOTTOM_FAR,
-    OCEAN_FLOOR_FAR,
-    OAKLAND_SIDE__LEVEL,
-    OAKLAND_SIDE__LIZ_COUCH,
+    DRIVING_BACKDROP,
+    GOLDEN_GATE_BACKDROP,
     LOS_ANGELES_BACKDROP,
-    PHARMACY_CEL,
+    MOUNTAIN_PAMPAS_BACKDROP,
+    MOUNTAIN_TAIWAN_BACKDROP,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW,
+    OAKLAND_SIDE__LEVEL,
+    OAKLAND_SIDE__LIZ_COUCH,
+    OCEAN_BOTTOM_FAR,
+    OCEAN_FLOOR_FAR,
+    PHARMACY_CEL,
+    ROAD_FUTURE,
     ROAD_PAST,
     ROAD_PRESENT,
-    ROAD_FUTURE,
-    GOLDEN_GATE_BACKDROP,
+    SHORE_BUOY_BACKDROP,
+    SHORE_RICKSHAW_BACKDROP,
+    TAIWAN_MOUNTAINS_BACKDROP,
+    TAIWAN_STAIRS_BACKDROP,
+    THOUGHT_LARGE__LEFT,
+    THOUGHT_LARGE__RIGHT,
     THOUGHT_MEDIUM__DEATHBED,
     THOUGHT_MEDIUM__GOLDEN,
     THOUGHT_SMALL,
+    VALLEY_CLOSER_BACKDROP,
+    VALLEY_FURTHER_BACKDROP,
+    VALLEY_PANORAMA_BACKDROP,
     WEDDING_BACKDROP,
-    DRIVING_BACKDROP,
 } from '../../../../constants/scene/things/backdrops'
 
 export default {
-    [VALLEY_CLOSER_BACKDROP]: valleyCloserBackdrop,
-    [VALLEY_FURTHER_BACKDROP]: valleyFurtherBackdrop,
-    [VALLEY_PANORAMA_BACKDROP]: valleyPanoramaBackdrop,
-    [TAIWAN_MOUNTAINS_BACKDROP]: taiwanMountainsBackdrop,
-    [THOUGHT_LARGE__LEFT]: thoughtLarge,
-    [THOUGHT_LARGE__RIGHT]: thoughtLarge,
-    [TAIWAN_STAIRS_BACKDROP]: taiwanStairsBackdrop,
-    [MOUNTAIN_TAIWAN_BACKDROP]: mountainBackdrop,
-    [MOUNTAIN_PAMPAS_BACKDROP]: mountainBackdrop,
-    [SHORE_RICKSHAW_BACKDROP]: shoreRickshawBackdrop,
-    [SHORE_BUOY_BACKDROP]: shoreBuoyBackdrop,
-    [OCEAN_BOTTOM_FAR]: oceanBottomFar,
-    [OCEAN_FLOOR_FAR]: oceanFloorFar,
+    [DRIVING_BACKDROP]: drivingBackdrop,
+    [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
     [LOS_ANGELES_BACKDROP]: losAngelesBackdrop,
-    [PHARMACY_CEL]: pharmacyCel,
-    [OAKLAND_SIDE__LEVEL]: oaklandSide,
-    [OAKLAND_SIDE__LIZ_COUCH]: oaklandSide,
+    [MOUNTAIN_PAMPAS_BACKDROP]: mountainBackdrop,
+    [MOUNTAIN_TAIWAN_BACKDROP]: mountainBackdrop,
     [OAKLAND_FRONT__HIGH]: oaklandFront,
     [OAKLAND_FRONT__LOW]: oaklandFront,
+    [OAKLAND_SIDE__LEVEL]: oaklandSide,
+    [OAKLAND_SIDE__LIZ_COUCH]: oaklandSide,
+    [OCEAN_BOTTOM_FAR]: oceanBottomFar,
+    [OCEAN_FLOOR_FAR]: oceanFloorFar,
+    [PHARMACY_CEL]: pharmacyCel,
+    [ROAD_FUTURE]: roadFuture,
     [ROAD_PAST]: roadPast,
     [ROAD_PRESENT]: roadPresent,
-    [ROAD_FUTURE]: roadFuture,
-    [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
+    [SHORE_BUOY_BACKDROP]: shoreBuoyBackdrop,
+    [SHORE_RICKSHAW_BACKDROP]: shoreRickshawBackdrop,
+    [TAIWAN_MOUNTAINS_BACKDROP]: taiwanMountainsBackdrop,
+    [TAIWAN_STAIRS_BACKDROP]: taiwanStairsBackdrop,
+    [THOUGHT_LARGE__LEFT]: thoughtLarge,
+    [THOUGHT_LARGE__RIGHT]: thoughtLarge,
     [THOUGHT_MEDIUM__DEATHBED]: thoughtMedium,
     [THOUGHT_MEDIUM__GOLDEN]: thoughtMedium,
     [THOUGHT_SMALL]: thoughtSmall,
+    [VALLEY_CLOSER_BACKDROP]: valleyCloserBackdrop,
+    [VALLEY_FURTHER_BACKDROP]: valleyFurtherBackdrop,
+    [VALLEY_PANORAMA_BACKDROP]: valleyPanoramaBackdrop,
     [WEDDING_BACKDROP]: weddingBackdrop,
-    [DRIVING_BACKDROP]: drivingBackdrop,
 }
