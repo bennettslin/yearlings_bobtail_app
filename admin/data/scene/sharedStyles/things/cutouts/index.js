@@ -82,10 +82,7 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/food'
 import { BENNETT_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
 import { FAMILY_HOUSE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
-import {
-    BULB__SHARED,
-    FRIDGE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/household'
+import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     BRASS__SHARED,
@@ -161,7 +158,12 @@ export default {
         OAK__SHARED,
         BOOK__SHARED,
     ],
-    [HOWIE_FRIDGE]: FRIDGE__SHARED,
+    [HOWIE_FRIDGE]: [
+        BRASS__SHARED,
+        MAPLE__SHARED,
+        PORCELAIN__SHARED,
+        STEEL__SHARED,
+    ],
     [IV_DRIP]: STEEL__SHARED,
     [LAMPPOST]: [
         BRASS__SHARED,
@@ -232,7 +234,11 @@ export default {
         MAPLE__SHARED,
         RUBBER__SHARED,
     ],
-    [TAIWAN_FRIDGE]: FRIDGE__SHARED,
+    [TAIWAN_FRIDGE]: [
+        BRASS__SHARED,
+        PORCELAIN__SHARED,
+        STEEL__SHARED,
+    ],
     [TAIWAN_TREE]: TAIWAN_FOLIAGE__SHARED,
     [TELEVISION]: [
         OAK__SHARED,

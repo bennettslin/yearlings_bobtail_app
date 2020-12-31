@@ -35,7 +35,6 @@ export default {
         [TAIWAN_FRIDGE]: {
             yIndex: 1,
             xPosition: 9.5,
-            scaleFactor: 0.4,
         },
     },
     [FIXTURE]: {
