@@ -18,7 +18,8 @@ export default [
         path: `introduction`,
         title: `Introduction`,
         description: [
-            `Hi there! Are you otherwise interested in working with the Bobtail Yearlings, but you're feeling nervous about our untested way of doing things? Read on, and I'll convince you that we're as reasonable to bet on as any artist you've worked with in the past.`,
+            `Hi, we're the Bobtail Yearlings! We'd love to hear from ambitious musicians, record labels and the music press, and anyone else interested in working with us.`,
+            `Are you thinking to get in touch, but feeling hesitant given our unorthodox way of doing things? Read on, and I'll convince you that we're as reasonable to bet on as any artist you've worked with before.`,
         ],
         tempImageDescription: `Old Bennett`,
         imageKey: TEMP_PITCH_ICON_1,
@@ -53,12 +54,11 @@ export default [
             `For example, back when Facebook launched, its thousands of users were only able to connect with their fellow classmates at Harvard. By the time it had millions of users, however, each one could now connect with childhood friends, distant family members, and more.`,
         ],
         footnote: [
-            `More about the`,
+            `More on the`,
             {
-                anchor: `network effect`,
+                anchor: `network effect.`,
                 href: `https://en.wikipedia.org/wiki/Network_effect`,
             },
-            `on Wikipedia.`,
         ],
         tempImageDescription: `Facebook nodes`,
         imageKey: TEMP_PITCH_ICON_4,
@@ -68,15 +68,14 @@ export default [
         title: `Startups and economies of scale`,
         description: [
             `Another reason a startup might only later become profitable is something called economies of scale. These are when fixed costs, spread over a greater number of users, level out to lower costs per user.`,
-            `This neatly sums up Amazon's advantage. In its first five years, Amazon lost money because the upfront costs of packaging and shipping physical books are necessarily high. Once their infrastructure was in place to handle this, however, any additional costs of taking on more users and offering more products became negligible.`,
+            `This neatly sums up Amazon's advantage. In its first five years, Amazon lost money because the upfront costs of packaging and shipping physical books are necessarily high. But once their infrastructure was in place to handle this, any additional costs of taking on more users and offering more products became negligible.`,
         ],
         footnote: [
-            `More about`,
+            `More on`,
             {
-                anchor: `economies of scale`,
+                anchor: `economies of scale.`,
                 href: `https://en.wikipedia.org/wiki/Economies_of_scale`,
             },
-            `on Wikipedia.`,
         ],
         tempImageDescription: `Amazon delivery cycle`,
         imageKey: TEMP_PITCH_ICON_5,
@@ -85,7 +84,7 @@ export default [
         path: `greater-risks-greater-rewards`,
         title: `Greater risks, greater rewards`,
         description: [
-            `While stores are the oldest form of business, startups are more recent, and they behave very differently. So in the early days, investors tended to dismiss them as a bad deal. This was unfortunate, since startups absolutely need investors. Without their initial support, it isn't possible to scale first without making a profit.`,
+            `While stores are the oldest form of business, startups are more recent, and they behave very differently. So in the early days, investors tended to dismiss them as a bad deal. This was unfortunate, since startups absolutely depend on investors. Without their initial support, it isn't possible to scale first without making a profit.`,
             `This is why we have the word "startup," to remind us that startups are their own thing. They're not simply stores that are riskier for being less competent. A startup comes with more risk precisely because it aims to fulfill an unknown need. But if it succeeds, then it becomes the leader of a new market. And for investors, this means a greater reward.`,
         ],
         footnote: [
@@ -103,7 +102,7 @@ export default [
         title: `Indie artists are like stores`,
         description: [
             `Let's get back now to music. For the past couple decades, record labels have preferred to sign indie artists, since they pose fewer risks. But it's no wonder why indie artists are less risky; they're the stores of the music world.`,
-            `Indie artists typically gain fans by playing live shows. This is possible because audiences for shows already exist, and they arrive with certain expectations. In other words, indie artists fulfill a known need. And once an indie artist has grown a regional fanbase of a thousand, they can repeat the same strategy to win over the next thousand fans in a neighboring region, and then the next.`,
+            `Indie artists typically gain fans by playing live shows. This is possible because audiences for shows already exist, and they arrive with certain expectations. In other words, indie artists fulfill a known need. And once an indie artist has built up a regional fanbase of a thousand, they can repeat their strategy to win over the next thousand fans in another region, and then the next.`,
         ],
         tempImageDescription: `Indie artist playing to audiences in different cities, linear graph.`,
         imageKey: TEMP_PITCH_ICON_7,
@@ -113,7 +112,7 @@ export default [
         title: `Artups are like startups`,
         description: [
             `But what if other artists are like startups, trying to fulfill an unknown need? Artists who believe, as Steve Jobs did, that people don't know what they want until you show them? If such an artist's hunches are correct, then their chances for scale and success might be assured. After all, they'll be the only one of their kind to reach an audience that previously didn't exist.`,
-            `Yet unless we recognize these artists as their own thing, we'll only ever see them as less competent indie artists. So let's create a new word for them, one that acknowledges their need for mutual reliance. Since "interdependent" doesn't shorten into anything sweet, let's call them "artups." The rhyme will remind us that artups, like startups, depend on initial support from others.`,
+            `Yet unless we recognize these artists as their own thing, we'll only ever see them as incompetent indie artists. So let's create a new word for them, one that acknowledges their need for mutual reliance. Since "interdependent" doesn't shorten into anything sweet, let's call them "artups." The rhyme will remind us that artups, like startups, also need initial support from others.`,
         ],
         footnote: [
             `Here's the`,
@@ -175,7 +174,7 @@ export default [
                     isItalic: true,
                     lyric: `Ulysses`,
                 },
-                `of rock albums. Unfortunately, its complex lyrics made sense only after careful study, which we as an unknown band had no right to ask of anyone. So upon its initial release, no one bothered. One reviewer even mistook the lyrics for Engrish!`,
+                `of rock albums. Unfortunately, its complex lyrics only make sense after careful study, which we as an unknown band had no right to ask of anyone. So upon its initial release, no one bothered. One reviewer even mistook the lyrics for Engrish!`,
             ],
             [
                 `And with the depth of arrangements on`,
@@ -205,9 +204,9 @@ export default [
                     isItalic: true,
                     lyric: `Yearling's Bobtail`,
                 },
-                `measure up when seen as the work of an artup?`,
+                `do when measured as the work of an artup?`,
             ],
-            `If you're convinced to bet on us, let's talk! We're adaptable and open-minded, and we've got some creative ideas to lessen the risk for you even further.`,
+            `If you're convinced to bet on us, let's talk! We're flexible and open-minded, and we've got a few creative ideas to discuss.`,
         ],
         contactEmail: true,
         tempImageDescription: `Old Bennett with arm raised`,
