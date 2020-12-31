@@ -171,8 +171,8 @@
     .vaselineMedium { fill: hsl(46, 52%, 75%); }
     .vaselineLight { fill: hsl(43, 48%, 81%); }
     .vaselineLabel { fill: hsl(197, 66%, 64%); }
-    .capRear { fill: hsl(219, 38%, 52%); }
-    .capFront { fill: hsl(219, 34%, 49%); }
+    .plasticBlueDark { fill: hsl(219, 42%, 47%); }
+    .plasticBlueMedium { fill: hsl(219, 42%, 57%); }
 
     .dark__indoor
     & {
@@ -185,7 +185,7 @@
         .vaselineMedium { fill: hsl(46, 52%, 5%); }
         .vaselineLight { fill: hsl(43, 48%, 5%); }
         .vaselineLabel { fill: hsl(197, 66%, 5%); }
-        .capRear { fill: hsl(219, 38%, 5%); }
-        .capFront { fill: hsl(219, 34%, 5%); }
+        .plasticBlueDark { fill: hsl(219, 42%, 5%); }
+        .plasticBlueMedium { fill: hsl(219, 38%, 5%); }
     }
 }
