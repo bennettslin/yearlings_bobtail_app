@@ -5,10 +5,10 @@ import {
 } from '../../../../../app/constants/scene/scenes'
 
 import {
+    DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
-    FURNITURE_COLOUR as R,
     BENNETT_COUCH_COLOUR as U
 } from '../../../../../app/constants/scene/cubes/colours'
 
@@ -30,8 +30,8 @@ export default {
         floor: {
             hslaColours: [
                 [F],
-                [F, R, U, U, U, U, U, F, R, R, F],
-                [F, R, U, U, U, U, U, F],
+                [F, D, U, U, U, U, U, F, D, D, F],
+                [F, D, U, U, U, U, U, F],
                 [F, F, U, U, U, U, U, F],
                 [F]
             ],
@@ -49,10 +49,10 @@ export default {
         floor: {
             hslaColours: [
                 [F],
-                [F, R, U, U, U, U, U, F, R, R, F],
-                [F, R, U, U, U, U, U, F],
+                [F, D, U, U, U, U, U, F, D, D, F],
+                [F, D, U, U, U, U, U, F],
                 [F, F, U, U, U, U, U, F],
-                [F, F, F, F, F, R, F, F, R, F],
+                [F, F, F, F, F, D, F, F, D, F],
                 [F]
             ],
             zIndices: [
@@ -69,8 +69,8 @@ export default {
         floor: {
             hslaColours: [
                 [G],
-                [G, R, U, U, U, U, U, F, R, R, F, G],
-                [G, R, U, U, U, U, U, F, F, F, F, G],
+                [G, D, U, U, U, U, U, F, D, D, F, G],
+                [G, D, U, U, U, U, U, F, F, F, F, G],
                 [G, F, U, U, U, U, U, F, F, F, F, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G]
             ],

@@ -7,7 +7,6 @@ import {
     BEDROOM_DOGS_KEY
 } from '../../../../../app/constants/scene/scenes'
 import {
-    GROUND_CLEAR_COLOUR as G,
     DEFAULT_CLEAR_COLOUR as D,
     GRASS_COLOUR as H,
     BENNETT_CARPET_COLOUR as F,
@@ -57,8 +56,8 @@ const DEFAULT_FLOOR = {
     hslaColours: [
         [H, H, H, H, H, F, H, F, F, F, H],
         [H, H, H, W, W, F, F, U, U, F, H],
-        [H, H, W, W, G, F, F, U, U, U, F, H],
-        [F, W, G, G, F, F, F, U, U, U, F, H],
+        [H, H, W, W, D, F, F, U, U, U, F, H],
+        [F, W, D, D, F, F, F, U, U, U, F, H],
         [F, F, F, F, F, F, F, U, F, F, F, H],
         [F]
     ],
@@ -85,9 +84,9 @@ export default {
             hslaColours: [
                 [H, H, H, H, H, F, H, F, F, F, H],
                 [H, H, H, W, W, F, F, U, U, F, H],
-                [H, H, W, W, G, F, F, U, U, U, F, H],
-                [F, W, G, G, F, F, F, U, U, U, F, H],
-                [F, F, F, F, G, F, F, U, F, F, F, H],
+                [H, H, W, W, D, F, F, U, U, U, F, H],
+                [F, W, D, D, F, F, F, U, U, U, F, H],
+                [F, F, F, F, D, F, F, U, F, F, F, H],
                 [F]
             ],
             zIndices: [
@@ -107,8 +106,8 @@ export default {
             hslaColours: [
                 [H, H, H, H, H, F, H, F, F, F, H],
                 [H, H, H, W, W, F, F, F, F, F, H],
-                [H, H, W, W, G, F, F, F, F, F, F, H],
-                [F, W, G, G, F, F, F, F, F, F, F, H],
+                [H, H, W, W, D, F, F, F, F, F, F, H],
+                [F, W, D, D, F, F, F, F, F, F, F, H],
                 [F, F, F, F, F, F, F, F, F, F, F, H],
                 [F]
             ],

@@ -12,8 +12,7 @@ import {
     CROSSWALK_COLOUR as K,
     GRASS_COLOUR as H,
     STREET_COLOUR as T,
-    DEATHBED_FLOOR_COLOUR as F,
-    FURNITURE_COLOUR as R
+    DEATHBED_FLOOR_COLOUR as F
 } from '../../../../../app/constants/scene/cubes/colours'
 
 /**
@@ -36,7 +35,7 @@ export default {
             hslaColours: [
                 [G],
                 [F, D, F, F, F, F, T, T, G],
-                [F, D, D, D, F, F, R, F, T, T, G],
+                [F, D, D, D, F, F, D, F, T, T, G],
                 [F, F, D, D, D, D, F, F, G, G, T],
                 [F, F, F, D, D, F, F, G, G, G, G, T],
                 [F, F, F, F, F, F, G]
@@ -57,7 +56,7 @@ export default {
             hslaColours: [
                 [G],
                 [F, D, F, F, F, F, F, G],
-                [F, D, D, D, F, F, R, F, G, K, G],
+                [F, D, D, D, F, F, D, F, G, K, G],
                 [F, F, D, D, D, D, F, F, G, K],
                 [F, F, F, D, D, F, F, G, K, V, V, K],
                 [F, F, F, F, F, F, G, G, K, V]
@@ -78,7 +77,7 @@ export default {
             hslaColours: [
                 [G],
                 [F, D, F, F, F, F, F, G],
-                [F, D, D, D, F, F, R, F, G, H],
+                [F, D, D, D, F, F, D, F, G, H],
                 [F, F, D, D, D, D, F, F, G, H],
                 [F, F, F, D, D, F, F, G, G, H, G],
                 [F, F, F, F, F, F, G]

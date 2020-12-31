@@ -71,7 +71,6 @@ import {
     PLATFORM_COLOUR,
     SNOWGLOBE_PLATFORM_COLOUR,
     CONCRETE_PLATFORM_COLOUR,
-    FURNITURE_COLOUR,
     BENNETT_COUCH_COLOUR,
     LIZ_COUCH_COLOUR,
     MIRIAM_COUCH_COLOUR,
@@ -153,8 +152,6 @@ export default {
     [CONCRETE_PLATFORM_COLOUR]: { h: 220, s: 14, l: 69 },
     [PLATFORM_COLOUR]: { h: 13, s: 16, l: 33 },
     [SNOWGLOBE_PLATFORM_COLOUR]: { h: parseInt(HUE_SNOWGLOBE), s: 42, l: 55 },
-    /* R. */
-    [FURNITURE_COLOUR]: { h: 25, s: 44, l: 53 },
     /* U. */
     [BENNETT_COUCH_COLOUR]: { h: parseInt(HUE_BENNETT_LINENS), s: 25, l: 45 },
     [BENNETT_BED_COLOUR]: { h: parseInt(HUE_BENNETT_LINENS), s: 35, l: 60 },

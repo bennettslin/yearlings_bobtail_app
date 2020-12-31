@@ -1,10 +1,10 @@
 import { BASEMENT_COUCH_KEY } from '../../../../../app/constants/scene/scenes'
 
 import {
+    DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     DIRT_FLOOR_COLOUR as F,
     UNDERGROUND_WALL_COLOUR as W,
-    FURNITURE_COLOUR as R,
     BENNETT_COUCH_COLOUR as U
 } from '../../../../../app/constants/scene/cubes/colours'
 
@@ -28,8 +28,8 @@ export default {
         floor: {
             hslaColours: [
                 [V],
-                [V, R, U, U, U, U, U, F, R, R, F, V],
-                [V, R, U, U, U, U, U, F, F, F, F, V],
+                [V, D, U, U, U, U, U, F, D, D, F, V],
+                [V, D, U, U, U, U, U, F, F, F, F, V],
                 [V, F, U, U, U, U, U, F, F, V],
                 [V, F, F, F, F, F, F, F, F, V],
                 [V, F, F, F, F, F, F, F, F, F, F, V]

@@ -3,7 +3,7 @@ import { MUSEUM_KEY } from '../../../../../app/constants/scene/scenes'
 import {
     WOOD_FLOOR_COLOUR as F,
     FANCY_WALL_COLOUR as W,
-    FURNITURE_COLOUR as R
+    PLATFORM_COLOUR as P
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { d, g } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -28,8 +28,8 @@ export default {
                 [W],
                 [F],
                 [F],
-                [F, F, F, F, F, F, F, F, R, R, F],
-                [F, F, F, F, F, F, F, F, R, R, F],
+                [F, F, F, F, F, F, F, F, P, P, F],
+                [F, F, F, F, F, F, F, F, P, P, F],
                 [F]
             ],
             zIndices: [
