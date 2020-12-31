@@ -17,6 +17,7 @@ import {
     HOSPITAL_BED,
     LIZ_BED,
     LIZ_COUCH,
+    LIZ_OTTOMAN,
     OCEAN_CAVE_EXTERIOR,
     OCEAN_CAVE_INTERIOR,
     OCEAN_WAVES,
@@ -153,6 +154,11 @@ export default {
         SHADOW__SHARED
     ],
     [LIZ_COUCH]: [
+        LIZ_LINENS__SHARED,
+        OAK__SHARED,
+        SHADOW__SHARED
+    ],
+    [LIZ_OTTOMAN]: [
         LIZ_LINENS__SHARED,
         OAK__SHARED,
         SHADOW__SHARED

@@ -162,5 +162,9 @@ export default [
     {
         taskName: `Bedroom stool.`,
         workedHours: 2
+    },
+    {
+        taskName: `Liz ottoman.`,
+        workedHours: 1
     }
 ]

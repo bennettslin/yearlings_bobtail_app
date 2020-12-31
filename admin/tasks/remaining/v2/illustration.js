@@ -60,9 +60,9 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Liz nightstand.`,
+        taskName: `Liz nightstand and reflection.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
     {
         taskName: `Bennett record stand.`,
@@ -146,11 +146,6 @@ export default [
     },
     {
         taskName: `Basement milk crates.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Liz stool.`,
         workedHours: 0,
         neededHours: 1
     }

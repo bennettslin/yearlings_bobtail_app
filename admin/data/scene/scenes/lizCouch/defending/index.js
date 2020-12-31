@@ -15,7 +15,7 @@ export default {
     [KHARI]: {
         [JUDGMENTAL]: {
             yIndex: 4,
-            xPosition: 8.2,
+            xPosition: 7.2,
             zOffset: -0.06
         }
     }

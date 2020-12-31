@@ -36,7 +36,10 @@ import {
     LIZ_GATE_INSIDE
 } from '../../../../../app/constants/scene/things/doors'
 import { TCHOTCHKES } from '../../../../../app/constants/scene/things/fixtures'
-import { LIZ_COUCH__ROOM } from '../../../../../app/constants/scene/things/panels'
+import {
+    LIZ_COUCH__ROOM,
+    LIZ_OTTOMAN
+} from '../../../../../app/constants/scene/things/panels'
 import {
     OPAL_COUCH__ROOM,
     OPAL_GAZING,
@@ -100,6 +103,11 @@ export default {
         [LIZ_COUCH__ROOM]: {
             yIndex: 5,
             xPosition: 2.075,
+            scaleFactor: 0.23
+        },
+        [LIZ_OTTOMAN]: {
+            yIndex: 5,
+            xPosition: 8.5,
             scaleFactor: 0.23
         }
     }
@@ -180,12 +188,14 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
         [KHARI_SPEECH_ATTACK]: {
             yIndex: 5,
             xPosition: 5.6,
-            zOffset: 3.25
+            zOffset: 3.05,
+            layerYIndex: 4
         },
         [LIZ_SPEECH_DEFENCE]: {
             yIndex: 5,
-            xPosition: 6.1,
-            zOffset: 3.4
+            xPosition: 5,
+            zOffset: 2.9,
+            layerYIndex: 4
         }
     }
 }

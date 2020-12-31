@@ -11,8 +11,7 @@ import {
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
     NIGHT_COLOUR as Z,
-    LIZ_COUCH_COLOUR as U,
-    SEAT_COLOUR as S
+    LIZ_COUCH_COLOUR as U
 } from '../../../../../app/constants/scene/cubes/colours'
 import { d, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
@@ -67,7 +66,7 @@ export default {
                 [F, F, F, F, W, W, W, W, W, F],
                 [F],
                 [F, U, U, U, F],
-                [F, U, U, U, F, F, F, F, F, S, F],
+                [F, U, U, U, F, F, F, F, U, U, F],
                 [F]
             ],
             zIndices: [
@@ -75,7 +74,7 @@ export default {
                 [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
                 [1],
                 [1, 7, 3, 3, 1],
-                [1, 7, 3, 3, 1, 1, 1, 1, 1, 3, 1],
+                [1, 7, 3, 3, 1, 1, 1, 1, 3, 3, 1],
                 [1]
             ]
         }

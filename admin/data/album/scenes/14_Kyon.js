@@ -72,7 +72,7 @@ import {
     LIZ_GATE_INSIDE
 } from '../../../../app/constants/scene/things/doors'
 import { TCHOTCHKES } from '../../../../app/constants/scene/things/fixtures'
-import { LIZ_COUCH__ROOM } from '../../../../app/constants/scene/things/panels'
+import { LIZ_COUCH__ROOM, LIZ_OTTOMAN } from '../../../../app/constants/scene/things/panels'
 import {
     OPAL_COUCH__ROOM,
     OPAL_GAZING,
@@ -240,7 +240,8 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
+                [LIZ_COUCH__ROOM]: true,
+                [LIZ_OTTOMAN]: true
             }
         },
         cubes: LIZ_COUCH_SEAT_KEY,
@@ -274,7 +275,8 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH__ROOM]: true
+                [LIZ_COUCH__ROOM]: true,
+                [LIZ_OTTOMAN]: true
             }
         },
         cubes: LIZ_COUCH_SEAT_KEY,

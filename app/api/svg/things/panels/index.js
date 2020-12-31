@@ -35,6 +35,7 @@ import atticArmrest from '../../../../../assets/svgs/panels/atticArmrest'
 import volkswagen from '../../../../../assets/svgs/panels/volkswagen'
 import crowdSide from '../../../../../assets/svgs/panels/crowdSide'
 import lizCouch from '../../../../../assets/svgs/panels/lizCouch'
+import lizOttoman from '../../../../../assets/svgs/panels/lizOttoman'
 import snowglobe from '../../../../../assets/svgs/panels/snowglobe'
 import reattaInterior from '../../../../../assets/svgs/panels/reattaInterior'
 import reattaSeatBottom from '../../../../../assets/svgs/panels/reattaSeatBottom'
@@ -102,6 +103,7 @@ import {
     LIZ_COUCH__ROOM,
     LIZ_COUCH__PRESENT,
     LIZ_COUCH__FUTURE,
+    LIZ_OTTOMAN,
     WIDE_COUCH_MIRIAM,
     WIDE_ARMREST_MIRIAM__LEFT,
     WIDE_ARMREST_MIRIAM__RIGHT,
@@ -178,6 +180,7 @@ export default {
     [LIZ_COUCH__ROOM]: lizCouch,
     [LIZ_COUCH__PRESENT]: lizCouch,
     [LIZ_COUCH__FUTURE]: lizCouch,
+    [LIZ_OTTOMAN]: lizOttoman,
     [WIDE_COUCH_MIRIAM]: wideCouch,
     [WIDE_ARMREST_MIRIAM__LEFT]: wideArmrest,
     [WIDE_ARMREST_MIRIAM__RIGHT]: wideArmrest,
