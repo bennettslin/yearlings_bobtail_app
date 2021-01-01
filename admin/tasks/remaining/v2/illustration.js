@@ -31,9 +31,14 @@ export default [
         neededHours: 1,
     },
     {
-        taskName: `Couch fronts and mattresses.`,
+        taskName: `Couch fronts. (Attic, Liz, waiting, wide.)`,
         workedHours: 0,
-        neededHours: 3,
+        neededHours: 2,
+    },
+    {
+        taskName: `Mattresses. (Bennett, captain, hospital, Liz.)`,
+        workedHours: 0,
+        neededHours: 2,
     },
     {
         taskName: `El Torito logo.`,
