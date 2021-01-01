@@ -11,6 +11,7 @@ import {
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
     NIGHT_COLOUR as Z,
+    LIZ_NIGHTSTAND_COLOUR as P,
     LIZ_BED_COLOUR as U,
 } from '../../../../../app/constants/scene/cubes/colours'
 
@@ -19,7 +20,7 @@ import { e, g, k } from '../../../../../app/constants/scene/cubes/zIndices'
 const DEFAULT_CEILING = {
     hslaColours: [
         [W, F, F, F, F, F, F, F, F, F, F, W],
-        [W, W, D, U, U, U, U, U, W],
+        [W, W, P, U, U, U, U, U, W],
         [W],
     ],
     zIndices: [
@@ -35,7 +36,7 @@ const DEFAULT_FLOOR = {
         [F, F, F, U, U, U, U, U, F],
         [F, F, F, U, U, U, U, U, F],
         [F, F, F, U, U, U, U, U, F],
-        [F, F, D, U, U, U, U, U, F],
+        [F, F, P, U, U, U, U, U, F],
         [F],
     ],
     zIndices: [
@@ -51,7 +52,7 @@ const DEFAULT_FLOOR = {
 const OPEN_CEILING = {
     hslaColours: [
         [D, F, F, F, F, F, F, F, F, F, F, D],
-        [D, D, D, U, U, U, U, U, D],
+        [D, D, P, U, U, U, U, U, D],
         [D],
     ],
     zIndices: [
@@ -74,7 +75,7 @@ export default {
                 [G, F, F, U, U, U, U, U, F, F, F, G],
                 [G, F, F, U, U, U, U, U, F, F, F, G],
                 [G, F, F, U, U, U, U, U, F, F, F, G],
-                [G, F, D, U, U, U, U, U, F, F, F, G],
+                [G, F, P, U, U, U, U, U, F, F, F, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G],
             ],
             zIndices: [
@@ -95,7 +96,7 @@ export default {
                 [G, F, F, U, U, U, U, U, F, F, F, G],
                 [G, F, F, U, U, U, U, U, F, F, F, G],
                 [G, F, F, U, U, U, U, U, F, F, F, G],
-                [G, F, D, U, U, U, U, U, F, F, D, G],
+                [G, F, P, U, U, U, U, U, F, F, D, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G],
             ],
             zIndices: [
@@ -112,18 +113,11 @@ export default {
         ceiling: {
             hslaColours: [
                 [Z],
-                [Z, Z, D, Z],
-                [Z],
             ],
             zIndices: DEFAULT_CEILING.zIndices,
         },
         floor: {
             hslaColours: [
-                [Z],
-                [Z],
-                [Z],
-                [Z],
-                [Z, Z, D, Z],
                 [Z],
             ],
             zIndices: DEFAULT_FLOOR.zIndices,

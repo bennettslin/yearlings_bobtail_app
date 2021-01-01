@@ -30,6 +30,7 @@ import {
 } from '../../../../../app/constants/scene/things/furnitures'
 import {
     LIZ_BED,
+    LIZ_NIGHTSTAND,
     MILK_CRATE__VEGAN,
     PHONE_CALL_PANEL,
 } from '../../../../../app/constants/scene/things/panels'
@@ -96,6 +97,10 @@ export default {
             yIndex: 5,
             xPosition: 5,
             scaleFactor: 0.25,
+        },
+        [LIZ_NIGHTSTAND]: {
+            yIndex: 5,
+            xPosition: 2,
         },
     },
 }

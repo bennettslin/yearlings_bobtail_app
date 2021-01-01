@@ -85,6 +85,7 @@ import {
 import {
     CROWD_SIDE,
     LIZ_BED,
+    LIZ_NIGHTSTAND,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -264,6 +265,7 @@ export default [
                 [LIZ_PILLOWS_REFLECTION]: true,
             },
             [PANEL]: {
+                [LIZ_NIGHTSTAND]: true,
                 [LIZ_BED]: true,
             },
         },
@@ -315,6 +317,7 @@ export default [
                 [LIZ_PILLOWS_REFLECTION]: true,
             },
             [PANEL]: {
+                [LIZ_NIGHTSTAND]: true,
                 [LIZ_BED]: true,
             },
         },

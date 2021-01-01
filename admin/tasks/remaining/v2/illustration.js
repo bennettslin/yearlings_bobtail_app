@@ -5,16 +5,6 @@ export default [
         neededHours: 5,
     },
     {
-        taskName: `Make mermaid and serpent colours the same.`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
-        taskName: `Backdrops for Uncanny road scenes.`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
         taskName: `Buddha stand`,
         reference: `https://www.harpgallery.com/shop/item33895.html`,
         workedHours: 0,
@@ -24,16 +14,6 @@ export default [
         taskName: `Keyboard support. (Books?)`,
         workedHours: 0,
         neededHours: 2,
-    },
-    {
-        taskName: `Liz nightstand and reflection.`,
-        workedHours: 0,
-        neededHours: 3,
-    },
-    {
-        taskName: `Principal bench.`,
-        workedHours: 0,
-        neededHours: 1,
     },
     {
         taskName: `Bennett record stand.`,
@@ -74,6 +54,16 @@ export default [
         taskName: `Final gravestone. (Move Bennett and Liz to left.)`,
         workedHours: 0,
         neededHours: 2,
+    },
+    {
+        taskName: `Make mermaid and serpent colours the same.`,
+        workedHours: 0,
+        neededHours: 2,
+    },
+    {
+        taskName: `Backdrops for Uncanny road scenes.`,
+        workedHours: 0,
+        neededHours: 1,
     },
     {
         taskName: `Constellation shadows.`,
@@ -141,7 +131,7 @@ export default [
         neededHours: 3,
     },
     {
-        taskName: `Liz couch scene space fillers?`,
+        taskName: `Liz couch scene space fillers? Litter box?`,
         workedHours: 0,
         neededHours: 3,
     },

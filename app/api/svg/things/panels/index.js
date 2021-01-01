@@ -16,6 +16,7 @@ import goKartSeat from '../../../../../assets/svgs/panels/goKartSeat'
 import hospitalBed from '../../../../../assets/svgs/panels/hospitalBed'
 import lizBed from '../../../../../assets/svgs/panels/lizBed'
 import lizCouch from '../../../../../assets/svgs/panels/lizCouch'
+import lizNightstand from '../../../../../assets/svgs/panels/lizNightstand'
 import lizOttoman from '../../../../../assets/svgs/panels/lizOttoman'
 import milkCrate from '../../../../../assets/svgs/panels/milkCrate'
 import nurseBench from '../../../../../assets/svgs/panels/nurseBench'
@@ -23,6 +24,7 @@ import oceanCaveExterior from '../../../../../assets/svgs/panels/oceanCaveExteri
 import oceanCaveInterior from '../../../../../assets/svgs/panels/oceanCaveInterior'
 import oceanWaves from '../../../../../assets/svgs/panels/oceanWaves'
 import phoneCallPanel from '../../../../../assets/svgs/panels/phoneCallPanel'
+import principalBench from '../../../../../assets/svgs/panels/principalBench'
 import reattaExteriorFront from '../../../../../assets/svgs/panels/reattaExteriorFront'
 import reattaExteriorRear from '../../../../../assets/svgs/panels/reattaExteriorRear'
 import reattaInterior from '../../../../../assets/svgs/panels/reattaInterior'
@@ -75,6 +77,7 @@ import {
     LIZ_COUCH__FUTURE,
     LIZ_COUCH__PRESENT,
     LIZ_COUCH__ROOM,
+    LIZ_NIGHTSTAND,
     LIZ_OTTOMAN,
     MILK_CRATE__ANA,
     MILK_CRATE__BENNETT,
@@ -90,6 +93,7 @@ import {
     OCEAN_WAVES__MIDDLE_REAR,
     OCEAN_WAVES__REAR,
     PHONE_CALL_PANEL,
+    PRINCIPAL_BENCH,
     REATTA_EXTERIOR_FRONT,
     REATTA_EXTERIOR_REAR,
     REATTA_INTERIOR,
@@ -158,6 +162,7 @@ export default {
     [LIZ_COUCH__FUTURE]: lizCouch,
     [LIZ_COUCH__PRESENT]: lizCouch,
     [LIZ_COUCH__ROOM]: lizCouch,
+    [LIZ_NIGHTSTAND]: lizNightstand,
     [LIZ_OTTOMAN]: lizOttoman,
     [MILK_CRATE__ANA]: milkCrate,
     [MILK_CRATE__BENNETT]: milkCrate,
@@ -173,6 +178,7 @@ export default {
     [OCEAN_WAVES__MIDDLE_REAR]: oceanWaves,
     [OCEAN_WAVES__REAR]: oceanWaves,
     [PHONE_CALL_PANEL]: phoneCallPanel,
+    [PRINCIPAL_BENCH]: principalBench,
     [REATTA_EXTERIOR_FRONT]: reattaExteriorFront,
     [REATTA_EXTERIOR_REAR]: reattaExteriorRear,
     [REATTA_INTERIOR]: reattaInterior,

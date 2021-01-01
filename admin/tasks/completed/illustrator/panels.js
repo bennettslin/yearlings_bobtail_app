@@ -175,4 +175,12 @@ export default [
         taskName: `Nurse bench.`,
         workedHours: 1,
     },
+    {
+        taskName: `Principal bench.`,
+        workedHours: 1,
+    },
+    {
+        taskName: `Liz nightstand.`,
+        workedHours: 1,
+    },
 ]

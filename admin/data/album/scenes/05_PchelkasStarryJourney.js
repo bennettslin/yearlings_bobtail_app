@@ -64,31 +64,31 @@ import {
     VALLEY_FURTHER_BACKDROP,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
-    SKETCH_DOGS_ROCKET,
     SKETCHBOOK__DOGS_ROCKET,
-    SKETCH_ESCAPE_POD,
     SKETCHBOOK__ESCAPE_POD,
+    SKETCH_DOGS_ROCKET,
+    SKETCH_ESCAPE_POD,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
     BLOOM_COUNTY_POSTER,
+    CORKBOARD,
     DOGS_ROCKET,
     EARTH__ROCKET,
     EARTH__STATION,
     SPACE_STATION,
     VAN_NUYS_PAINTING,
-    CORKBOARD,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
-    LOCKER_BANK,
-    TRASH_CAN__LOCKERS,
-    TRASH_CAN__QUAD,
-    BUSH_SINGLE__LOCKERS,
-    BUSH_SINGLE__QUAD,
     BUSH_DOUBLE__LOCKERS,
     BUSH_DOUBLE__QUAD,
+    BUSH_SINGLE__LOCKERS,
+    BUSH_SINGLE__QUAD,
     LEMON_TREE__BEDROOM,
+    LOCKER_BANK,
     ROSEBUSH_SLANTED_DOUBLE,
     ROSEBUSH_SLANTED_SINGLE,
+    TRASH_CAN__LOCKERS,
+    TRASH_CAN__QUAD,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS,
@@ -97,15 +97,15 @@ import {
     PRINCIPAL_DOOR,
 } from '../../../../app/constants/scene/things/doors'
 import {
+    BALLED_FOIL__LOCKERS,
     BEDROOM_LAMP__BED,
     BEDROOM_LAMP__DESK,
-    LETTER_SCRAPS__BENNETT,
-    TORN_MAGAZINES__BENNETT,
     BENNETT_LETTERS,
-    RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
+    LETTER_SCRAPS__BENNETT,
+    RED_ENVELOPE_MONEY,
     THROWN_FRUIT,
-    BALLED_FOIL__LOCKERS,
+    TORN_MAGAZINES__BENNETT,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     BEDROOM_BUS,
@@ -116,6 +116,7 @@ import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
     CAPTAIN_BED,
+    PRINCIPAL_BENCH,
 } from '../../../../app/constants/scene/things/panels'
 
 /**
@@ -408,6 +409,9 @@ export default [
             },
             [DOOR]: {
                 [PRINCIPAL_DOOR]: true,
+            },
+            [PANEL]: {
+                [PRINCIPAL_BENCH]: true,
             },
         },
         cubes: VAN_NUYS_HALLWAY_KEY,

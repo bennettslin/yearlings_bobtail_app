@@ -17,6 +17,7 @@ import {
     HOSPITAL_BED,
     LIZ_BED,
     LIZ_COUCH,
+    LIZ_NIGHTSTAND,
     LIZ_OTTOMAN,
     MILK_CRATE,
     NURSE_BENCH,
@@ -24,6 +25,7 @@ import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_WAVES,
     PHONE_CALL_PANEL,
+    PRINCIPAL_BENCH,
     REATTA_EXTERIOR_FRONT,
     REATTA_EXTERIOR_REAR,
     REATTA_INTERIOR,
@@ -160,6 +162,11 @@ export default {
         OAK__SHARED,
         SHADOW__SHARED,
     ],
+    [LIZ_NIGHTSTAND]: [
+        IRON__SHARED,
+        MAPLE__SHARED,
+        SHADOW__SHARED,
+    ],
     [LIZ_OTTOMAN]: [
         LIZ_LINENS__SHARED,
         OAK__SHARED,
@@ -179,6 +186,11 @@ export default {
     ],
     [OCEAN_WAVES]: null,
     [PHONE_CALL_PANEL]: null,
+    [PRINCIPAL_BENCH]: [
+        MAPLE__SHARED,
+        IRON__SHARED,
+        RUBBER__SHARED,
+    ],
     [REATTA_EXTERIOR_FRONT]: [
         ALL_VEHICLES__SHARED,
         REATTA__SHARED,
