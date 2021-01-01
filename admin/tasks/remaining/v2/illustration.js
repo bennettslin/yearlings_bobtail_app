@@ -31,11 +31,6 @@ export default [
         neededHours: 3,
     },
     {
-        taskName: `Nurse bench.`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
         taskName: `Principal bench.`,
         workedHours: 0,
         neededHours: 1,

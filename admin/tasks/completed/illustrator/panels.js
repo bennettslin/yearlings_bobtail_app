@@ -168,7 +168,11 @@ export default [
         workedHours: 1,
     },
     {
-        taskName: `Basement milk crates, also for Vegan phone scene.`,
+        taskName: `Basement milk crates.`,
         workedHours: 2,
+    },
+    {
+        taskName: `Nurse bench.`,
+        workedHours: 1,
     },
 ]

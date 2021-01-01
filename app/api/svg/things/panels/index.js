@@ -18,6 +18,7 @@ import lizBed from '../../../../../assets/svgs/panels/lizBed'
 import lizCouch from '../../../../../assets/svgs/panels/lizCouch'
 import lizOttoman from '../../../../../assets/svgs/panels/lizOttoman'
 import milkCrate from '../../../../../assets/svgs/panels/milkCrate'
+import nurseBench from '../../../../../assets/svgs/panels/nurseBench'
 import oceanCaveExterior from '../../../../../assets/svgs/panels/oceanCaveExterior'
 import oceanCaveInterior from '../../../../../assets/svgs/panels/oceanCaveInterior'
 import oceanWaves from '../../../../../assets/svgs/panels/oceanWaves'
@@ -80,6 +81,7 @@ import {
     MILK_CRATE__JACOB,
     MILK_CRATE__MARA,
     MILK_CRATE__VEGAN,
+    NURSE_BENCH,
     OCEAN_CAVE_EXTERIOR,
     OCEAN_CAVE_INTERIOR,
     OCEAN_WAVES__FRONT,
@@ -162,6 +164,7 @@ export default {
     [MILK_CRATE__JACOB]: milkCrate,
     [MILK_CRATE__MARA]: milkCrate,
     [MILK_CRATE__VEGAN]: milkCrate,
+    [NURSE_BENCH]: nurseBench,
     [OCEAN_CAVE_EXTERIOR]: oceanCaveExterior,
     [OCEAN_CAVE_INTERIOR]: oceanCaveInterior,
     [OCEAN_WAVES__FRONT]: oceanWaves,

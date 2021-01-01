@@ -4,6 +4,7 @@ import {
     DOOR,
     FIXTURE,
     FLAT,
+    PANEL,
 } from '../../../../../app/constants/scene/things'
 import { ESTHER_SPEECH } from '../../../../../app/constants/scene/things/bubbles'
 import { PLAYGROUND_SLIDE } from '../../../../../app/constants/scene/things/cutouts'
@@ -13,6 +14,7 @@ import {
     SAFEWAY_BAG,
 } from '../../../../../app/constants/scene/things/fixtures'
 import { NEAR_BUILDINGS } from '../../../../../app/constants/scene/things/flats'
+import { NURSE_BENCH } from '../../../../../app/constants/scene/things/panels'
 
 export default {
     [BUBBLE]: {
@@ -46,7 +48,7 @@ export default {
         },
         [SAFEWAY_BAG]: {
             yIndex: 5,
-            xPosition: 10,
+            xPosition: 9.8,
             scaleFactor: 0.25,
         },
     },
@@ -54,6 +56,13 @@ export default {
         [NEAR_BUILDINGS]: {
             scaleFactor: 0.66,
             trimBottom: 0.05,
+        },
+    },
+    [PANEL]: {
+        [NURSE_BENCH]: {
+            yIndex: 5,
+            xPosition: 9.88,
+            zOffset: 0.08,
         },
     },
 }

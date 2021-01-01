@@ -73,7 +73,10 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
 } from '../../../../app/constants/scene/things/flats'
-import { BATHTUB } from '../../../../app/constants/scene/things/panels'
+import {
+    BATHTUB,
+    NURSE_BENCH,
+} from '../../../../app/constants/scene/things/panels'
 
 export default [
     {
@@ -164,6 +167,9 @@ export default [
             },
             [FLAT]: {
                 [NEAR_BUILDINGS]: true,
+            },
+            [PANEL]: {
+                [NURSE_BENCH]: true,
             },
         },
         cubes: NOHO_SCHOOL_KEY,
