@@ -106,11 +106,6 @@ export default [
         neededHours: 2,
     },
     {
-        taskName: `Patina colours. (Conveyor belt.)`,
-        workedHours: 1,
-        neededHours: 2,
-    },
-    {
         taskName: `Marble colours. Campanile, mirrored sink.`,
         workedHours: 0,
         neededHours: 2,

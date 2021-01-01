@@ -5019,4 +5019,9 @@ export default [
         taskName: `Wires on dogs.`,
         workedHours: 1,
     },
+    {
+        taskName: `Patina colours.`,
+        workedHours: 2,
+        neededHours: 2,
+    },
 ]
