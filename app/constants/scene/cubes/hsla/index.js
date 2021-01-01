@@ -83,7 +83,7 @@ import {
 
 export default {
     /* D. */
-    [DEFAULT_CLEAR_COLOUR]: { h: 0, s: 0, l: 100, a: 0.1 },
+    [DEFAULT_CLEAR_COLOUR]: { h: 0, s: 0, l: 100, a: 0.2 },
     /* G. */
     [GROUND_CLEAR_COLOUR]: { h: 0, s: 0, l: 0, a: 0.2 },
     /* H. */

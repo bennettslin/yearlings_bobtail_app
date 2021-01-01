@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Pitch content.`,
-        workedHours: 53,
+        workedHours: 55,
     },
     {
         taskName: `Night colour work.`,

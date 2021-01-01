@@ -5,6 +5,21 @@ export default [
         neededHours: 5,
     },
     {
+        taskName: `Wedding platform and chairs.`,
+        workedHours: 0,
+        neededHours: 2,
+    },
+    {
+        taskName: `Trash chute to dumpster.`,
+        workedHours: 0,
+        neededHours: 2,
+    },
+    {
+        taskName: `El Torito logo.`,
+        workedHours: 0,
+        neededHours: 1,
+    },
+    {
         taskName: `Buddha stand`,
         reference: `https://www.harpgallery.com/shop/item33895.html`,
         workedHours: 0,
@@ -37,26 +52,6 @@ export default [
     },
     {
         taskName: `Mattresses. (Bennett, captain, hospital, Liz.)`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
-        taskName: `El Torito logo.`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
-        taskName: `Wedding platform and chairs.`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
-        taskName: `Trash chute to dumpster.`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
-        taskName: `Final gravestone. (Move Bennett and Liz to left.)`,
         workedHours: 0,
         neededHours: 2,
     },
@@ -139,6 +134,11 @@ export default [
         taskName: `Liz couch scene space fillers? Litter box?`,
         workedHours: 0,
         neededHours: 3,
+    },
+    {
+        taskName: `Final gravestone. (Move Bennett and Liz to left.)`,
+        workedHours: 0,
+        neededHours: 2,
     },
     {
         taskName: `Theatre binoculars.`,
