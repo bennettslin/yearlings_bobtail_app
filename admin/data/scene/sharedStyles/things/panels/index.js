@@ -5,6 +5,7 @@ import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
     BENNETT_BED,
+    BENNETT_NIGHTSTAND,
     CAPTAIN_BED,
     CAVE_SHADOWS,
     CONVEYOR_BELT,
@@ -124,6 +125,11 @@ export default {
         MAPLE__SHARED,
         OAK__SHARED,
         SHADOW__SHARED,
+    ],
+    [BENNETT_NIGHTSTAND]: [
+        OAK__SHARED,
+        SHADOW__SHARED,
+        STEEL__SHARED,
     ],
     [CAPTAIN_BED]: [
         OAK__SHARED,

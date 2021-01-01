@@ -4,6 +4,7 @@ import bathtub from '../../../../../assets/svgs/panels/bathtub'
 import bedroomDesk from '../../../../../assets/svgs/panels/bedroomDesk'
 import bedroomStool from '../../../../../assets/svgs/panels/bedroomStool'
 import bennettBed from '../../../../../assets/svgs/panels/bennettBed'
+import bennettNightstand from '../../../../../assets/svgs/panels/bennettNightstand'
 import captainBed from '../../../../../assets/svgs/panels/captainBed'
 import caveShadows from '../../../../../assets/svgs/panels/caveShadows'
 import conveyorBelt from '../../../../../assets/svgs/panels/conveyorBelt'
@@ -61,6 +62,7 @@ import {
     BEDROOM_DESK,
     BEDROOM_STOOL,
     BENNETT_BED,
+    BENNETT_NIGHTSTAND,
     CAPTAIN_BED,
     CAVE_SHADOWS,
     CONVEYOR_BELT,
@@ -146,6 +148,7 @@ export default {
     [BEDROOM_DESK]: bedroomDesk,
     [BEDROOM_STOOL]: bedroomStool,
     [BENNETT_BED]: bennettBed,
+    [BENNETT_NIGHTSTAND]: bennettNightstand,
     [CAPTAIN_BED]: captainBed,
     [CAVE_SHADOWS]: caveShadows,
     [CONVEYOR_BELT]: conveyorBelt,

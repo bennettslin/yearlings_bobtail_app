@@ -94,6 +94,7 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
+    BENNETT_NIGHTSTAND,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -163,6 +164,7 @@ export default [
                 [ELECTRIC_GUITAR]: true,
             },
             [PANEL]: {
+                [BENNETT_NIGHTSTAND]: true,
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
                 [WIDE_ARMREST_BENNETT__RIGHT]: true,

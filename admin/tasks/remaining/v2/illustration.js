@@ -36,11 +36,6 @@ export default [
         neededHours: 1,
     },
     {
-        taskName: `Bennett couch lamp stand.`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
         taskName: `Victrola stand.`,
         workedHours: 0,
         neededHours: 1,

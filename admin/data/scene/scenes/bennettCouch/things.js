@@ -5,12 +5,12 @@ import {
     PANEL,
 } from '../../../../../app/constants/scene/things'
 import {
-    POLICE_ALBUM,
-    NIRVANA_POSTER,
     LEONARD_COHEN_POSTER,
-    TELEVISION_ALBUM,
+    NIRVANA_POSTER,
+    POLICE_ALBUM,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
+    TELEVISION_ALBUM,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
     BENNETT_RECORD_PLAYER,
@@ -20,9 +20,10 @@ import {
 } from '../../../../../app/constants/scene/things/fixtures'
 import { BENNETT_PILLOW__COUCH } from '../../../../../app/constants/scene/things/furnitures'
 import {
-    WIDE_COUCH_BENNETT,
+    BENNETT_NIGHTSTAND,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
+    WIDE_COUCH_BENNETT,
 } from '../../../../../app/constants/scene/things/panels'
 
 export default {
@@ -49,6 +50,12 @@ export default {
         },
     },
     [PANEL]: {
+        [BENNETT_NIGHTSTAND]: {
+            yIndex: 2,
+            xPosition: 0.88,
+            zOffset: -2.08,
+            onlyOne: true,
+        },
         [WIDE_COUCH_BENNETT]: {
             yIndex: 2,
             xPosition: 4,

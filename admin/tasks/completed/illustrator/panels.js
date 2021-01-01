@@ -183,4 +183,8 @@ export default [
         taskName: `Liz nightstand.`,
         workedHours: 1,
     },
+    {
+        taskName: `Bennett nightstand.`,
+        workedHours: 1,
+    },
 ]
