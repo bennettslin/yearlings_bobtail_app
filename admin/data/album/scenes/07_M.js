@@ -120,6 +120,7 @@ import {
 import { BENNETT_PILLOW__COUCH } from '../../../../app/constants/scene/things/furnitures'
 import {
     BENNETT_NIGHTSTAND,
+    BENNETT_RECORD_STAND,
     MILK_CRATE__ANA,
     MILK_CRATE__BENNETT,
     MILK_CRATE__JACOB,
@@ -150,6 +151,7 @@ export default [
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,
+                [BENNETT_RECORD_STAND]: true,
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
                 [WIDE_ARMREST_BENNETT__RIGHT]: true,
@@ -182,6 +184,7 @@ export default [
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,
+                [BENNETT_RECORD_STAND]: true,
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
                 [WIDE_ARMREST_BENNETT__RIGHT]: true,
@@ -217,6 +220,7 @@ export default [
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,
+                [BENNETT_RECORD_STAND]: true,
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
                 [WIDE_ARMREST_BENNETT__RIGHT]: true,

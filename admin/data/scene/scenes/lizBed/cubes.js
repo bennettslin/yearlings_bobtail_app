@@ -11,7 +11,7 @@ import {
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
     NIGHT_COLOUR as Z,
-    LIZ_NIGHTSTAND_COLOUR as P,
+    FURNITURE_PLATFORM_COLOUR as P,
     LIZ_BED_COLOUR as U,
 } from '../../../../../app/constants/scene/cubes/colours'
 

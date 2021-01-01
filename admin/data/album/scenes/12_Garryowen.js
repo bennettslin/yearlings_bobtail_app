@@ -82,6 +82,7 @@ import {
     WIDE_ARMREST_BENNETT__RIGHT,
     LIZ_COUCH__ROOM,
     BENNETT_NIGHTSTAND,
+    BENNETT_RECORD_STAND,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -171,6 +172,7 @@ export default [
             },
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,
+                [BENNETT_RECORD_STAND]: true,
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
                 [WIDE_ARMREST_BENNETT__RIGHT]: true,

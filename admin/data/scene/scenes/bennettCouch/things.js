@@ -21,6 +21,7 @@ import {
 import { BENNETT_PILLOW__COUCH } from '../../../../../app/constants/scene/things/furnitures'
 import {
     BENNETT_NIGHTSTAND,
+    BENNETT_RECORD_STAND,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
     WIDE_COUCH_BENNETT,
@@ -54,6 +55,12 @@ export default {
             yIndex: 2,
             xPosition: 0.88,
             zOffset: -2.08,
+            onlyOne: true,
+        },
+        [BENNETT_RECORD_STAND]: {
+            yIndex: 1,
+            xPosition: 8.55,
+            zOffset: -1.58,
             onlyOne: true,
         },
         [WIDE_COUCH_BENNETT]: {

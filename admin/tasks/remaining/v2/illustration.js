@@ -31,24 +31,9 @@ export default [
         neededHours: 2,
     },
     {
-        taskName: `Bennett record stand.`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
         taskName: `Victrola stand.`,
         workedHours: 0,
         neededHours: 1,
-    },
-    {
-        taskName: `Couch fronts. (Attic, Liz, waiting, wide.)`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
-        taskName: `Mattresses. (Bennett, captain, hospital, Liz.)`,
-        workedHours: 0,
-        neededHours: 2,
     },
     {
         taskName: `Make mermaid and serpent colours the same.`,

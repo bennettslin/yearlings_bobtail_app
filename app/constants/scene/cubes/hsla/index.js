@@ -50,7 +50,7 @@ import {
     LIZ_EXTERIOR_COLOUR,
     LIZ_FLOOR_COLOUR,
     LIZ_GATE_COLOUR,
-    LIZ_NIGHTSTAND_COLOUR,
+    FURNITURE_PLATFORM_COLOUR,
     LIZ_WALL_COLOUR,
     MIRIAM_COUCH_COLOUR,
     NIGHT_COLOUR,
@@ -152,7 +152,7 @@ export default {
     [CONCRETE_PLATFORM_COLOUR]: { h: 220, s: 14, l: 69 },
     [PLATFORM_COLOUR]: { h: 13, s: 16, l: 33 },
     [SNOWGLOBE_PLATFORM_COLOUR]: { h: parseInt(HUE_SNOWGLOBE), s: 42, l: 55 },
-    [LIZ_NIGHTSTAND_COLOUR]: { h: 23, s: 23, l: 42 },
+    [FURNITURE_PLATFORM_COLOUR]: { h: 30, s: 23, l: 42 },
     /* U. */
     [BENNETT_COUCH_COLOUR]: { h: parseInt(HUE_BENNETT_LINENS), s: 25, l: 45 },
     [BENNETT_BED_COLOUR]: { h: parseInt(HUE_BENNETT_LINENS), s: 35, l: 60 },
