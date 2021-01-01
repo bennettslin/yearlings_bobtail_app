@@ -10,11 +10,6 @@ export default [
         neededHours: 2,
     },
     {
-        taskName: `Make Uncanny roads fork.`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
         taskName: `Backdrops for Uncanny road scenes.`,
         workedHours: 0,
         neededHours: 1,

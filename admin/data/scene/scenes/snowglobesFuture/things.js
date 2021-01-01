@@ -26,7 +26,7 @@ export default {
         [SNOWGLOBE_SMALL__FUTURE]: {
             yIndex: 0,
             xPosition: 0.54,
-            zOffset: 5.92,
+            zOffset: 6.25,
             scaleFactor: 0.15,
             rotate: -5,
         },

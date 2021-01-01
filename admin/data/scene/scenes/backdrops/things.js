@@ -69,15 +69,12 @@ export default {
         [OCEAN_FLOOR_FAR]: {
             scaleFactor: 0.7,
         },
-        [ROAD_FUTURE]: {
-            scaleFactor: 0.6,
-        },
+        [ROAD_FUTURE]: {},
         [ROAD_PAST]: {
             yIndex: 0,
-            scaleFactor: 0.6,
         },
         [ROAD_PRESENT]: {
-            scaleFactor: 0.6,
+            xPosition: 5.2,
         },
         [SHORE_BUOY_BACKDROP]: {
             scaleFactor: 0.7,
