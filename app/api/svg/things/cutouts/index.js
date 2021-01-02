@@ -9,6 +9,8 @@ import campfire from '../../../../../assets/svgs/cutouts/campfire'
 import campusTreeDouble from '../../../../../assets/svgs/cutouts/campusTreeDouble'
 import campusTreeSingle from '../../../../../assets/svgs/cutouts/campusTreeSingle'
 import cavemanBones from '../../../../../assets/svgs/cutouts/cavemanBones'
+import chuteGarbage from '../../../../../assets/svgs/cutouts/chuteGarbage'
+import chuteRecycling from '../../../../../assets/svgs/cutouts/chuteRecycling'
 import cliffTree from '../../../../../assets/svgs/cutouts/cliffTree'
 import cypressDouble from '../../../../../assets/svgs/cutouts/cypressDouble'
 import cypressSingle from '../../../../../assets/svgs/cutouts/cypressSingle'
@@ -88,6 +90,8 @@ import {
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_SINGLE__TETHERBALL,
     CAVEMAN_BONES,
+    CHUTE_GARBAGE,
+    CHUTE_RECYCLING,
     CLIFF_TREE,
     CYPRESS_DOUBLE__LIZ_COUCH,
     CYPRESS_DOUBLE__LIZ_GATE,
@@ -185,6 +189,8 @@ export default {
     [CAMPUS_TREE_SINGLE__CAMPANILE]: campusTreeSingle,
     [CAMPUS_TREE_SINGLE__TETHERBALL]: campusTreeSingle,
     [CAVEMAN_BONES]: cavemanBones,
+    [CHUTE_GARBAGE]: chuteGarbage,
+    [CHUTE_RECYCLING]: chuteRecycling,
     [CLIFF_TREE]: cliffTree,
     [CYPRESS_DOUBLE__LIZ_COUCH]: cypressDouble,
     [CYPRESS_DOUBLE__LIZ_GATE]: cypressDouble,

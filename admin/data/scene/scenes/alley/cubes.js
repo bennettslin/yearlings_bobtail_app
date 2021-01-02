@@ -9,7 +9,7 @@ import {
     PLATFORM_COLOUR as P,
 } from '../../../../../app/constants/scene/cubes/colours'
 
-import { e, k } from '../../../../../app/constants/scene/cubes/zIndices'
+import { d, e, k } from '../../../../../app/constants/scene/cubes/zIndices'
 
 export default {
     [ALLEY_KEY]: {
@@ -17,11 +17,15 @@ export default {
             hslaColours: [
                 [W],
                 [X],
+                [D, D, D, D, D, D, D, X, D, D, D, X],
+                [D, D, D, D, D, D, D, X, X, X, X, X],
                 [D],
             ],
             zIndices: [
                 [0],
                 [4, e, e, e, e, e, 4, 1],
+                [k, k, k, k, k, k, k, d, k, k, k, d],
+                [k, k, k, k, k, k, k, d, d, d, d, d],
                 [k],
             ],
         },

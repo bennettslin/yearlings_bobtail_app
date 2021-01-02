@@ -1,4 +1,6 @@
 .steel#{$suffix} {
+    .steelDarkest { fill: hsl(190, 8%, 37%); }
+    .steelDarker { fill: hsl(190, 8%, 42%); }
     .steelDark { fill: hsl(190, 8%, 47%); }
     .steelMediumDark { fill: hsl(190, 8%, 52%); }
     .steelMedium { fill: hsl(190, 8%, 57%); }

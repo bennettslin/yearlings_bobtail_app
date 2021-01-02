@@ -1,13 +1,13 @@
 export default [
     {
         taskName: `Ghost tail for Bennett.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 5,
     },
     {
-        taskName: `Wedding platform and chairs.`,
-        workedHours: 0,
-        neededHours: 2,
+        taskName: `Wedding platform chair, plus styling revision.`,
+        workedHours: 1,
+        neededHours: 3,
     },
     {
         taskName: `Trash chute to dumpster.`,
@@ -16,8 +16,8 @@ export default [
     },
     {
         taskName: `El Torito logo.`,
-        workedHours: 0,
-        neededHours: 1,
+        workedHours: 1,
+        neededHours: 2,
     },
     {
         taskName: `Buddha stand`,

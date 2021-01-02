@@ -61,6 +61,8 @@ import {
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
     DUMPSTER,
+    CHUTE_RECYCLING,
+    CHUTE_GARBAGE,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BANCROFT_DOOR,
@@ -179,6 +181,8 @@ export default [
                 [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
+                [CHUTE_GARBAGE]: true,
+                [CHUTE_RECYCLING]: true,
                 [DUMPSTER]: true,
             },
             [DOOR]: {
