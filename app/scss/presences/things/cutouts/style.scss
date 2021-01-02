@@ -43,15 +43,8 @@
 }
 
 .dumpster {
-.bodyOuterDark { fill: hsl(141, 36%, 33%); }
-.bodyOuterLight { fill: hsl(143, 36%, 43%); }
-.bodyInnerDark { fill: hsl(143, 36%, 45%); }
-.bodyInnerLight { fill: hsl(143, 36%, 48%); }
-.warningLabel { fill: hsl(56, 50%, 50%); }
-.warningField { fill: hsl(0, 50%, 50%); }
-.lidTop { fill: hsl(252, 4%, 24%); }
-.lidRidge { fill: hsl(249, 4%, 34%); }
-.lidRim { fill: hsl(240, 11%, 7%); }
+    .warningLabel { fill: hsl(56, 40%, 50%); }
+    .warningField { fill: hsl(0, 40%, 50%); }
 }
 
 .fireHydrant {
@@ -213,13 +206,6 @@
     .spokes { fill: hsl(30, 40%, 50%); }
     .wheel { fill: hsl(0, 30%, 45%); }
     .cap { fill: hsl(60, 100%, 40%); }
-}
-
-.storageBoxes {
-    .boxDark { fill: hsl(30, 22%, 45%); }
-    .boxMedium { fill: hsl(30, 26%, 54%); }
-    .boxLight { fill: hsl(29, 36%, 63%); }
-    .boxInner { fill: hsl(30, 22%, 38%); }
 }
 
 .trashCan {

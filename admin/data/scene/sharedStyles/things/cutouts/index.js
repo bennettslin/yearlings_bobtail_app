@@ -155,6 +155,7 @@ export default {
     [DUMPSTER]: [
         ALL_VEHICLES__SHARED,
         GARBAGE_BAG__SHARED,
+        PATINA__SHARED,
         RUBBER__SHARED,
         STEEL__SHARED,
     ],

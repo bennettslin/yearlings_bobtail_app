@@ -22,12 +22,12 @@ export default {
         },
         [CHUTE_GARBAGE]: {
             yIndex: 2,
-            xPosition: 10,
+            xPosition: 9.95,
             zOffset: 5,
         },
         [CHUTE_RECYCLING]: {
             yIndex: 2,
-            xPosition: 8,
+            xPosition: 8.05,
             zOffset: 5,
         },
     },
