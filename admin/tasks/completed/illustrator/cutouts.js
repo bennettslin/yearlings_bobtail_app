@@ -279,4 +279,8 @@ export default [
         taskName: 'fix storageBoxes',
         workedHours: 1,
     },
+    {
+        taskName: `Trash chutes.`,
+        workedHours: 2,
+    },
 ]

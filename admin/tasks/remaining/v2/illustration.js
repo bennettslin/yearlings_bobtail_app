@@ -10,11 +10,6 @@ export default [
         neededHours: 3,
     },
     {
-        taskName: `Trash chute to dumpster.`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
         taskName: `El Torito logo.`,
         workedHours: 1,
         neededHours: 2,

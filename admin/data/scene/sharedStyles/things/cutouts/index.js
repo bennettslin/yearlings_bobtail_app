@@ -76,6 +76,7 @@ import {
     DISH__SHARED,
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
+import { WHITE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
 import {
     BANANA__SHARED,
     CIGARETTE__SHARED,
@@ -130,9 +131,11 @@ export default {
     [CAVEMAN_BONES]: STEEL__SHARED,
     [CHUTE_GARBAGE]: [
         STEEL__SHARED,
+        WHITE__SHARED,
     ],
     [CHUTE_RECYCLING]: [
         STEEL__SHARED,
+        WHITE__SHARED,
     ],
     [CLIFF_TREE]: FOLIAGE__SHARED,
     [CYPRESS_DOUBLE]: FOLIAGE__SHARED,
