@@ -17,6 +17,8 @@ import {
     GO_KART_EXTERIOR,
     GO_KART_SEAT,
     HOSPITAL_BED,
+    KEYBOARD_STAND_LEFT,
+    KEYBOARD_STAND_RIGHT,
     LIZ_BED,
     LIZ_COUCH,
     LIZ_NIGHTSTAND,
@@ -65,6 +67,7 @@ import {
     DISH__SHARED,
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
+import { DULL__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
 import { DRAWING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
     ATTIC_LINENS__SHARED,
@@ -90,6 +93,7 @@ import {
     FOLIAGE__SHARED,
     OCEAN_CAVE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
+import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
     SHADOW__SHARED,
     SNOWGLOBE__SHARED,
@@ -167,6 +171,14 @@ export default {
     ],
     [GO_KART_SEAT]: GO_KART__SHARED,
     [HOSPITAL_BED]: null,
+    [KEYBOARD_STAND_LEFT]: [
+        BOOK__SHARED,
+        DULL__SHARED,
+    ],
+    [KEYBOARD_STAND_RIGHT]: [
+        BOOK__SHARED,
+        DULL__SHARED,
+    ],
     [LIZ_BED]: [
         OAK__SHARED,
         SHADOW__SHARED,

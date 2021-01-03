@@ -22,6 +22,8 @@ import { BENNETT_PILLOW__COUCH } from '../../../../../app/constants/scene/things
 import {
     BENNETT_NIGHTSTAND,
     BENNETT_RECORD_STAND,
+    KEYBOARD_STAND_LEFT,
+    KEYBOARD_STAND_RIGHT,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
     WIDE_COUCH_BENNETT,
@@ -55,13 +57,21 @@ export default {
             yIndex: 2,
             xPosition: 0.88,
             zOffset: -2.08,
-            onlyOne: true,
         },
         [BENNETT_RECORD_STAND]: {
             yIndex: 1,
             xPosition: 8.55,
             zOffset: -1.58,
-            onlyOne: true,
+        },
+        [KEYBOARD_STAND_LEFT]: {
+            yIndex: 4,
+            xPosition: 5,
+            zOffset: -0.59,
+        },
+        [KEYBOARD_STAND_RIGHT]: {
+            yIndex: 4,
+            xPosition: 8,
+            zOffset: -0.59,
         },
         [WIDE_COUCH_BENNETT]: {
             yIndex: 2,
@@ -144,7 +154,7 @@ export const THINGS_BENNETT_COUCH_READING = {
         [KEYBOARD]: {
             yIndex: 4,
             xPosition: 6.5,
-            zOffset: 0.5,
+            zOffset: 0.42,
         },
     },
 }

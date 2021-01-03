@@ -21,14 +21,9 @@ export default [
         neededHours: 2,
     },
     {
-        taskName: `Keyboard support. (Books?)`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
         taskName: `Victrola stand.`,
         workedHours: 0,
-        neededHours: 1,
+        neededHours: 2,
     },
     {
         taskName: `Make mermaid and serpent colours the same.`,

@@ -16,6 +16,8 @@ import freewayFence from '../../../../../assets/svgs/panels/freewayFence'
 import goKartExterior from '../../../../../assets/svgs/panels/goKartExterior'
 import goKartSeat from '../../../../../assets/svgs/panels/goKartSeat'
 import hospitalBed from '../../../../../assets/svgs/panels/hospitalBed'
+import keyboardStandLeft from '../../../../../assets/svgs/panels/keyboardStandLeft'
+import keyboardStandRight from '../../../../../assets/svgs/panels/keyboardStandRight'
 import lizBed from '../../../../../assets/svgs/panels/lizBed'
 import lizCouch from '../../../../../assets/svgs/panels/lizCouch'
 import lizNightstand from '../../../../../assets/svgs/panels/lizNightstand'
@@ -77,6 +79,8 @@ import {
     GO_KART_SEAT__LEFT,
     GO_KART_SEAT__RIGHT,
     HOSPITAL_BED,
+    KEYBOARD_STAND_LEFT,
+    KEYBOARD_STAND_RIGHT,
     LIZ_BED,
     LIZ_COUCH__FUTURE,
     LIZ_COUCH__PRESENT,
@@ -164,6 +168,8 @@ export default {
     [GO_KART_SEAT__LEFT]: goKartSeat,
     [GO_KART_SEAT__RIGHT]: goKartSeat,
     [HOSPITAL_BED]: hospitalBed,
+    [KEYBOARD_STAND_LEFT]: keyboardStandLeft,
+    [KEYBOARD_STAND_RIGHT]: keyboardStandRight,
     [LIZ_BED]: lizBed,
     [LIZ_COUCH__FUTURE]: lizCouch,
     [LIZ_COUCH__PRESENT]: lizCouch,

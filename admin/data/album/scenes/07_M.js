@@ -121,6 +121,8 @@ import { BENNETT_PILLOW__COUCH } from '../../../../app/constants/scene/things/fu
 import {
     BENNETT_NIGHTSTAND,
     BENNETT_RECORD_STAND,
+    KEYBOARD_STAND_LEFT,
+    KEYBOARD_STAND_RIGHT,
     MILK_CRATE__ANA,
     MILK_CRATE__BENNETT,
     MILK_CRATE__JACOB,
@@ -221,6 +223,8 @@ export default [
             [PANEL]: {
                 [BENNETT_NIGHTSTAND]: true,
                 [BENNETT_RECORD_STAND]: true,
+                [KEYBOARD_STAND_LEFT]: true,
+                [KEYBOARD_STAND_RIGHT]: true,
                 [WIDE_COUCH_BENNETT]: true,
                 [WIDE_ARMREST_BENNETT__LEFT]: true,
                 [WIDE_ARMREST_BENNETT__RIGHT]: true,
