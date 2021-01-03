@@ -15,12 +15,6 @@ export default [
         neededHours: 2,
     },
     {
-        taskName: `Buddha stand`,
-        reference: `https://www.harpgallery.com/shop/item33895.html`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
         taskName: `Victrola stand.`,
         workedHours: 0,
         neededHours: 2,

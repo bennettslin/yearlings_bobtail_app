@@ -40,28 +40,28 @@ import {
 } from '../../../../app/constants/scene/actors/preteenBennett'
 import { MERMAID } from '../../../../app/constants/scene/actors/sashaBennett'
 import {
-    TAIWAN_STAIRS_BACKDROP,
     MOUNTAIN_TAIWAN_BACKDROP,
-    SHORE_RICKSHAW_BACKDROP,
-    SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
+    SHORE_BUOY_BACKDROP,
+    SHORE_RICKSHAW_BACKDROP,
+    TAIWAN_STAIRS_BACKDROP,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
-    BENNETT_TAIWAN_STAIRS,
-    ODIN_TAIWAN_STAIRS,
-    BENNETT_TAIWAN_GATE,
-    ODIN_TAIWAN_GATE,
-    BENNETT_ODIN_RICKSHAW,
-    BENNETT_SHORE,
-    ODIN_SHORE,
+    BENNETT_MAT,
     BENNETT_ODIN_BUOY,
     BENNETT_ODIN_DEPTHS,
+    BENNETT_ODIN_OCEAN_FLOOR,
+    BENNETT_ODIN_RICKSHAW,
+    BENNETT_SHORE,
+    BENNETT_TAIWAN_GATE,
+    BENNETT_TAIWAN_STAIRS,
+    ODIN_MAT,
+    ODIN_SHORE,
+    ODIN_TAIWAN_GATE,
+    ODIN_TAIWAN_STAIRS,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
-    BENNETT_ODIN_OCEAN_FLOOR,
-    BENNETT_MAT,
-    ODIN_MAT,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     BUDDHA_SHRINE,
@@ -75,23 +75,24 @@ import {
 } from '../../../../app/constants/scene/things/doors'
 import { FRIDGE_DRAWINGS } from '../../../../app/constants/scene/things/fixtures'
 import {
+    FERRIS_WHEEL,
+    OCEAN_BOTTOM_MIDDLE,
+    OCEAN_BOTTOM_NEAR,
+    RICKSHAW_TOWN,
+    ROLLER_COASTER,
     TAIWAN_HOUSES_CENTRE,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
-    RICKSHAW_TOWN,
-    FERRIS_WHEEL,
-    ROLLER_COASTER,
-    OCEAN_BOTTOM_MIDDLE,
-    OCEAN_BOTTOM_NEAR,
 } from '../../../../app/constants/scene/things/flats'
 import {
-    OCEAN_WAVES__REAR,
-    OCEAN_WAVES__MIDDLE_REAR,
+    BUDDHA_STAND,
+    OCEAN_CAVE_EXTERIOR,
+    OCEAN_CAVE_INTERIOR,
+    OCEAN_WAVES__FRONT,
     OCEAN_WAVES__MIDDLE,
     OCEAN_WAVES__MIDDLE_FRONT,
-    OCEAN_WAVES__FRONT,
-    OCEAN_CAVE_INTERIOR,
-    OCEAN_CAVE_EXTERIOR,
+    OCEAN_WAVES__MIDDLE_REAR,
+    OCEAN_WAVES__REAR,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [
@@ -115,6 +116,9 @@ export default [
             },
             [FIXTURE]: {
                 [FRIDGE_DRAWINGS]: true,
+            },
+            [PANEL]: {
+                [BUDDHA_STAND]: true,
             },
         },
         cubes: TAIWAN_ROOM_KEY,

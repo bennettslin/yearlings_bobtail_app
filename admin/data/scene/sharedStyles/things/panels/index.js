@@ -7,6 +7,7 @@ import {
     BENNETT_BED,
     BENNETT_NIGHTSTAND,
     BENNETT_RECORD_STAND,
+    BUDDHA_STAND,
     CAPTAIN_BED,
     CAVE_SHADOWS,
     CONVEYOR_BELT,
@@ -136,6 +137,10 @@ export default {
         SHADOW__SHARED,
     ],
     [BENNETT_RECORD_STAND]: [
+        OAK__SHARED,
+        SHADOW__SHARED,
+    ],
+    [BUDDHA_STAND]: [
         OAK__SHARED,
         SHADOW__SHARED,
     ],

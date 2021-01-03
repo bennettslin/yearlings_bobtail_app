@@ -195,4 +195,9 @@ export default [
         taskName: `Keyboard stand. (Books.)`,
         workedHours: 2,
     },
+    {
+        taskName: `Buddha stand`,
+        reference: `https://www.harpgallery.com/shop/item33895.html`,
+        workedHours: 1,
+    },
 ]

@@ -2,6 +2,7 @@ import {
     CUTOUT,
     CARDBOARD,
     FIXTURE,
+    PANEL,
 } from '../../../../../app/constants/scene/things'
 import {
     BENNETT_TAIWAN_STAIRS,
@@ -12,6 +13,7 @@ import {
     TAIWAN_FRIDGE,
 } from '../../../../../app/constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../../../../app/constants/scene/things/fixtures'
+import { BUDDHA_STAND } from '../../../../../app/constants/scene/things/panels'
 
 export default {
     [CARDBOARD]: {
@@ -43,6 +45,13 @@ export default {
             xPosition: 9,
             zOffset: 1.25,
             scaleFactor: 0.35,
+        },
+    },
+    [PANEL]: {
+        [BUDDHA_STAND]: {
+            yIndex: 4,
+            xPosition: 5.5,
+            zOffset: -1.54,
         },
     },
 }

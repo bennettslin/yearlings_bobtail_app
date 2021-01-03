@@ -1,6 +1,5 @@
 import { TAIWAN_ROOM_KEY } from '../../../../../app/constants/scene/scenes'
 import {
-    DEFAULT_CLEAR_COLOUR as D,
     NIGHT_COLOUR as Z,
 } from '../../../../../app/constants/scene/cubes/colours'
 import { e, g } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -22,11 +21,6 @@ export default {
         },
         floor: {
             hslaColours: [
-                [Z],
-                [Z],
-                [Z],
-                [Z],
-                [Z, Z, Z, Z, Z, D, D, Z],
                 [Z],
             ],
             zIndices: [
