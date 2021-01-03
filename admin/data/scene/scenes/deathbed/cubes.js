@@ -56,7 +56,7 @@ export default {
             hslaColours: [
                 [G],
                 [F, D, F, F, F, F, F, G],
-                [F, D, D, D, F, F, D, F, G, K, G],
+                [F, D, D, D, F, F, H, F, G, K, G],
                 [F, F, D, D, D, D, F, F, G, K],
                 [F, F, F, D, D, F, F, G, K, V, V, K],
                 [F, F, F, F, F, F, G, G, K, V],

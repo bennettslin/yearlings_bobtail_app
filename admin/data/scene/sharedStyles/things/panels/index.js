@@ -18,6 +18,7 @@ import {
     GO_KART_EXTERIOR,
     GO_KART_SEAT,
     HOSPITAL_BED,
+    HOSPITAL_RECORD_STAND,
     KEYBOARD_STAND_LEFT,
     KEYBOARD_STAND_RIGHT,
     LIZ_BED,
@@ -176,6 +177,7 @@ export default {
     ],
     [GO_KART_SEAT]: GO_KART__SHARED,
     [HOSPITAL_BED]: null,
+    [HOSPITAL_RECORD_STAND]: null,
     [KEYBOARD_STAND_LEFT]: [
         BOOK__SHARED,
         DULL__SHARED,

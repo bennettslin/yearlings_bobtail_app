@@ -78,6 +78,7 @@ import {
     REATTA_EXTERIOR_FRONT,
     REATTA_EXTERIOR_REAR,
     HOSPITAL_BED,
+    HOSPITAL_RECORD_STAND,
 } from '../../../../app/constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../../app/constants/scene/things/puppets'
 
@@ -225,6 +226,7 @@ export default [
             },
             [PANEL]: {
                 [HOSPITAL_BED]: true,
+                [HOSPITAL_RECORD_STAND]: true,
             },
         },
         cubes: EL_CERRITO_DEATHBED_KEY,
@@ -270,6 +272,7 @@ export default [
             },
             [PANEL]: {
                 [HOSPITAL_BED]: true,
+                [HOSPITAL_RECORD_STAND]: true,
             },
         },
         cubes: EL_CERRITO_TENNIS_KEY,

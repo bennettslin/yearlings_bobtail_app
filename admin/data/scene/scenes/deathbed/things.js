@@ -12,15 +12,15 @@ import {
     THOUGHT_SMALL,
 } from '../../../../../app/constants/scene/things/backdrops'
 import {
-    BUBBLE_SMALL__DEATHBED,
-    BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
-    BUBBLE_SMALL__TENNIS,
-    BUBBLE_MEDIUM__TENNIS,
-    BUBBLE_LARGE__TENNIS,
-    BUBBLE_SMALL__INVERSE,
-    BUBBLE_MEDIUM__INVERSE,
     BUBBLE_LARGE__INVERSE,
+    BUBBLE_LARGE__TENNIS,
+    BUBBLE_MEDIUM__DEATHBED,
+    BUBBLE_MEDIUM__INVERSE,
+    BUBBLE_MEDIUM__TENNIS,
+    BUBBLE_SMALL__DEATHBED,
+    BUBBLE_SMALL__INVERSE,
+    BUBBLE_SMALL__TENNIS,
 } from '../../../../../app/constants/scene/things/bubbles'
 import { IV_DRIP } from '../../../../../app/constants/scene/things/cutouts'
 import { HOSPITAL_RECORD_PLAYER } from '../../../../../app/constants/scene/things/fixtures'
@@ -29,7 +29,10 @@ import {
     DEATHBED_BLANKET,
     DEATHBED_PILLOW,
 } from '../../../../../app/constants/scene/things/furnitures'
-import { HOSPITAL_BED } from '../../../../../app/constants/scene/things/panels'
+import {
+    HOSPITAL_BED,
+    HOSPITAL_RECORD_STAND,
+} from '../../../../../app/constants/scene/things/panels'
 
 export default {
     [BACKDROP]: {
@@ -85,6 +88,11 @@ export default {
     },
     [PANEL]: {
         [HOSPITAL_BED]: {
+            yIndex: 5,
+            xPosition: 3.03,
+            scaleFactor: 0.27,
+        },
+        [HOSPITAL_RECORD_STAND]: {
             yIndex: 5,
             xPosition: 3.03,
             scaleFactor: 0.27,

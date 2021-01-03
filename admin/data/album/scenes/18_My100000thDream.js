@@ -87,6 +87,7 @@ import {
     WEDDING_PLATFORM_FRONT,
     WEDDING_PLATFORM_REAR,
     HOSPITAL_BED,
+    HOSPITAL_RECORD_STAND,
 } from '../../../../app/constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../../app/constants/scene/things/puppets'
 
@@ -258,6 +259,7 @@ export default [
             },
             [PANEL]: {
                 [HOSPITAL_BED]: true,
+                [HOSPITAL_RECORD_STAND]: true,
             },
         },
         cubes: CLIFF_DEATHBED_KEY,
