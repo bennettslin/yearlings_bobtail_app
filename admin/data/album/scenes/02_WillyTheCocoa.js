@@ -12,30 +12,30 @@ import {
 import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,
-    FREEWAY_KEY,
-    PORCH_KEY,
-    NOHO_HOUSES_KEY,
     CHANGELING_CAVE_KEY,
+    FREEWAY_KEY,
+    NOHO_HOUSES_KEY,
+    PORCH_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
-    TIME_TWILIGHT,
-    TIME_DAWN,
-    TIME_MORNING,
-    TIME_NOON,
-    TIME_EVENING,
-    TIME_NIGHT,
-    SEASON_SUMMER,
     SEASON_NIGHT_MAGIC,
+    SEASON_SUMMER,
+    TIME_DAWN,
+    TIME_EVENING,
+    TIME_MORNING,
+    TIME_NIGHT,
+    TIME_NOON,
+    TIME_TWILIGHT,
 } from '../../../../app/constants/scene/sky'
 import {
-    PRETEEN_BENNETT,
-    WILLY,
-    MOTHER,
-    FATHER,
     CHRISTOPHER,
     CHRISTOPHER_BENNETT_WILLY,
+    FATHER,
     HOWIE_WILLY,
+    MOTHER,
+    PRETEEN_BENNETT,
     TOMER,
+    WILLY,
 } from '../../../../app/constants/scene/actors'
 import {
     CAUTIOUS,
@@ -47,13 +47,13 @@ import {
     DUCKING,
 } from '../../../../app/constants/scene/actors/willy'
 import {
-    STOOPING,
     COMFORTING,
+    STOOPING,
 } from '../../../../app/constants/scene/actors/mother'
 import { ROARING } from '../../../../app/constants/scene/actors/father'
 import {
-    TANTRUM,
     SOBBING,
+    TANTRUM,
 } from '../../../../app/constants/scene/actors/christopher'
 import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
 import { GANGBANGER } from '../../../../app/constants/scene/actors/songs'
@@ -64,12 +64,12 @@ import {
 } from '../../../../app/constants/scene/things/backdrops'
 import { TINTIN_POSTER } from '../../../../app/constants/scene/things/cardboards'
 import {
-    SHOPPING_CART,
-    OVERPASS_SIGN_BACK,
     CACTUS_DOUBLE__PORCH,
     CACTUS_SINGLE__PORCH,
-    FIRE_HYDRANT,
     CAMPFIRE,
+    FIRE_HYDRANT,
+    OVERPASS_SIGN_BACK,
+    SHOPPING_CART,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     BEDROOM_BLINDS_OPEN,
@@ -79,30 +79,30 @@ import {
 } from '../../../../app/constants/scene/things/doors'
 import {
     BEDROOM_LAMP__DESK,
-    LETTER_SCRAPS__CHRISTOPHER,
-    TORN_MAGAZINES__CHRISTOPHER,
     CHRISTOPHER_LETTERS,
     HAIRCUT_SCISSORS,
+    LETTER_SCRAPS__CHRISTOPHER,
+    TORN_MAGAZINES__CHRISTOPHER,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
-    VALLEY_FREEWAY,
+    BEDROOM_SIREN,
+    FAMILY_HOUSE,
     NEAR_HOUSES,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-    FAMILY_HOUSE,
-    BEDROOM_SIREN,
+    VALLEY_FREEWAY,
 } from '../../../../app/constants/scene/things/flats'
 import { CAPTAIN_BED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
+    BEDROOM_STOOL,
     CAPTAIN_BED,
     CAVE_SHADOWS,
     FREEWAY_FENCE,
+    STALACTITES,
+    TROLL_SHADOW_FAR,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
-    TROLL_SHADOW_FAR,
-    STALACTITES,
-    BEDROOM_STOOL,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [

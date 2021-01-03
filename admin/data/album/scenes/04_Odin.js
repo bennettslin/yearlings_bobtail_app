@@ -9,34 +9,34 @@ import {
     PANEL,
 } from '../../../../app/constants/scene/things'
 import {
-    TAIWAN_ROOM_KEY,
-    TAIWAN_STAIRS_KEY,
-    TAIWAN_GATE_KEY,
-    RICKSHAW_KEY,
-    SHORE_KEY,
     BUOY_KEY,
     OCEAN_DEPTHS_KEY,
     OCEAN_FLOOR_KEY,
+    RICKSHAW_KEY,
+    SHORE_KEY,
+    TAIWAN_GATE_KEY,
+    TAIWAN_ROOM_KEY,
+    TAIWAN_STAIRS_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
+    SEASON_AUTUMN,
+    SEASON_OCEAN_SIDE,
+    SEASON_OCEAN_TOP,
     TIME_NIGHT_TAIWAN,
     TIME_TWILIGHT_TAIWAN,
-    SEASON_AUTUMN,
-    SEASON_OCEAN_TOP,
-    SEASON_OCEAN_SIDE,
 } from '../../../../app/constants/scene/sky'
 import {
     PRETEEN_BENNETT,
     SASHA_BENNETT,
 } from '../../../../app/constants/scene/actors'
 import {
-    MAT,
-    STAIRS,
+    BUOY,
     GATE,
+    MAT,
+    OCEAN_FLOOR,
     RICKSHAW,
     SHORE,
-    BUOY,
-    OCEAN_FLOOR,
+    STAIRS,
 } from '../../../../app/constants/scene/actors/preteenBennett'
 import { MERMAID } from '../../../../app/constants/scene/actors/sashaBennett'
 import {

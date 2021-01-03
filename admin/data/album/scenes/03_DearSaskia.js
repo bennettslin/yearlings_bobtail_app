@@ -18,11 +18,11 @@ import {
     SEASON_THOUGHT,
 } from '../../../../app/constants/scene/sky'
 import {
-    PRETEEN_BENNETT,
-    SASHA,
     ANDREW,
     BRAD_BENNETT,
     BRAD_SASHA,
+    PRETEEN_BENNETT,
+    SASHA,
 } from '../../../../app/constants/scene/actors'
 import { FEIGNING_FEAR } from '../../../../app/constants/scene/actors/andrew'
 import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett'
@@ -30,62 +30,62 @@ import { CHARMED_SCHOOLBUS } from '../../../../app/constants/scene/actors/bradSa
 import { PANICKED } from '../../../../app/constants/scene/actors/preteenBennett'
 import { INDIGNANT } from '../../../../app/constants/scene/actors/sasha'
 import {
+    TAIWAN_MOUNTAINS_BACKDROP,
     THOUGHT_LARGE__LEFT,
     THOUGHT_LARGE__RIGHT,
-    TAIWAN_MOUNTAINS_BACKDROP,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
-    SKETCH_TOGETHER,
-    SKETCHBOOK__TOGETHER,
-    BUBBLE_SMALL__LEFT,
-    BUBBLE_MEDIUM__LEFT,
     BUBBLE_LARGE__LEFT,
-    BUBBLE_SMALL__RIGHT,
-    BUBBLE_MEDIUM__RIGHT,
     BUBBLE_LARGE__RIGHT,
-    SKETCH_APART,
+    BUBBLE_MEDIUM__LEFT,
+    BUBBLE_MEDIUM__RIGHT,
+    BUBBLE_SMALL__LEFT,
+    BUBBLE_SMALL__RIGHT,
     SKETCHBOOK__APART,
+    SKETCHBOOK__TOGETHER,
+    SKETCH_APART,
+    SKETCH_TOGETHER,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
-    CAMPUS_TREE_SINGLE__TETHERBALL,
     CAMPUS_TREE_DOUBLE__TETHERBALL,
+    CAMPUS_TREE_SINGLE__TETHERBALL,
 } from '../../../../app/constants/scene/things/cutouts'
 import { BACKPACK_BENNETT } from '../../../../app/constants/scene/things/fixtures'
 import {
+    DISTANT_HOUSES,
+    DRIVING_HOUSE_LEFT,
+    DRIVING_HOUSE__RIGHT,
+    NEAR_BUILDINGS,
+    SCHOOL_BUNGALOW,
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
-    DRIVING_HOUSE_LEFT,
-    DRIVING_HOUSE__RIGHT,
-    SCHOOL_BUNGALOW,
-    NEAR_BUILDINGS,
-    DISTANT_HOUSES,
 } from '../../../../app/constants/scene/things/flats'
 import {
-    TAIWAN_BRIDGE,
-    TAIWAN_HAZE__CLOUD,
-    TAIWAN_HAZE__FOG,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
     SCHOOLBUS_SEAT__LEFT,
     SCHOOLBUS_SEAT__RIGHT,
+    TAIWAN_BRIDGE,
+    TAIWAN_HAZE__CLOUD,
+    TAIWAN_HAZE__FOG,
 } from '../../../../app/constants/scene/things/panels'
 import {
-    PUPPET_BENNETT_BEGIN,
     PUPPET_ANITA_BEGIN,
-    PUPPET_CHRISTOPHER_BEGIN,
-    PUPPET_FATHER_BEGIN,
-    PUPPET_MOTHER_BEGIN,
-    PUPPET_BENNETT_MIDDLE,
-    PUPPET_ANITA_MIDDLE,
-    PUPPET_CHRISTOPHER_MIDDLE,
-    PUPPET_FATHER_MIDDLE,
-    PUPPET_MOTHER_MIDDLE,
-    PUPPET_BENNETT_END,
     PUPPET_ANITA_END,
+    PUPPET_ANITA_MIDDLE,
+    PUPPET_BENNETT_BEGIN,
+    PUPPET_BENNETT_END,
+    PUPPET_BENNETT_MIDDLE,
+    PUPPET_CHRISTOPHER_BEGIN,
     PUPPET_CHRISTOPHER_END,
+    PUPPET_CHRISTOPHER_MIDDLE,
+    PUPPET_FATHER_BEGIN,
     PUPPET_FATHER_END,
+    PUPPET_FATHER_MIDDLE,
+    PUPPET_MOTHER_BEGIN,
     PUPPET_MOTHER_END,
+    PUPPET_MOTHER_MIDDLE,
 } from '../../../../app/constants/scene/things/puppets'
 
 export default [

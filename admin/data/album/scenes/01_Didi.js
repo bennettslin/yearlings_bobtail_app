@@ -10,34 +10,34 @@ import {
     PANEL,
 } from '../../../../app/constants/scene/things'
 import {
-    NOHO_HOUSES_KEY,
-    NOHO_SCHOOL_KEY,
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY,
+    NOHO_HOUSES_KEY,
+    NOHO_SCHOOL_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
+    SEASON_PAST,
+    SEASON_SPRING,
+    TIME_AFTERNOON,
     TIME_DAWN,
     TIME_MORNING,
     TIME_NOON,
-    TIME_AFTERNOON,
-    SEASON_SPRING,
-    SEASON_PAST,
 } from '../../../../app/constants/scene/sky'
 import {
-    YOUNG_BENNETT,
     ANITA,
     ESTHER,
+    YOUNG_BENNETT,
 } from '../../../../app/constants/scene/actors'
 import {
-    PANICKED,
-    FLUSTERED,
     BATHING,
+    FLUSTERED,
+    PANICKED,
     SINGING,
 } from '../../../../app/constants/scene/actors/youngBennett'
 import {
-    EXASPERATED,
-    CONCERNED,
     CHEERING,
+    CONCERNED,
+    EXASPERATED,
 } from '../../../../app/constants/scene/actors/anita'
 import {
     CURIOUS,
@@ -51,12 +51,12 @@ import { ESTHER_SPEECH } from '../../../../app/constants/scene/things/bubbles'
 import { JOHNNY_HORTON_ALBUM } from '../../../../app/constants/scene/things/cardboards'
 import {
     FIRE_HYDRANT,
-    PLAYGROUND_SLIDE,
-    MIRRORED_SINK,
-    TOWEL_RACK,
     LEMON_TREE__BATHROOM,
+    MIRRORED_SINK,
+    PLAYGROUND_SLIDE,
     ROSEBUSH_DOUBLE_BATHROOM,
     ROSEBUSH_SINGLE_BATHROOM,
+    TOWEL_RACK,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
     DEFAULT_FENCE_BATHROOM,
@@ -64,8 +64,8 @@ import {
 } from '../../../../app/constants/scene/things/doors'
 import {
     PLAYGROUND_BALL,
-    SAFEWAY_BAG,
     RECORD_PLAYER_STOOL,
+    SAFEWAY_BAG,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     NEAR_BUILDINGS,
