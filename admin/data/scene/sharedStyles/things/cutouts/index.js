@@ -76,7 +76,7 @@ import {
     DISH__SHARED,
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
-import { WHITE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
+import { PLASTIC__SHARED, WHITE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
 import {
     BANANA__SHARED,
     CIGARETTE__SHARED,
@@ -206,7 +206,7 @@ export default {
         PATINA__SHARED,
         STEEL__SHARED,
     ],
-    [RECYCLABLES]: null,
+    [RECYCLABLES]: PLASTIC__SHARED,
     [ROSEBUSH_DOUBLE_BATHROOM]: [
         FAMILY_HOUSE__SHARED,
         FOLIAGE__SHARED,

@@ -1,0 +1,10 @@
+.plastic#{$suffix} {
+    .plasticBlueDark { fill: hsl(219, 38%, 47%); }
+    .plasticBlueMedium { fill: hsl(219, 38%, 57%); }
+
+    .dark__indoor
+    & {
+        .plasticBlueDark { fill: hsl(219, 38%, 5%); }
+        .plasticBlueMedium { fill: hsl(219, 38%, 5%); }
+    }
+}
