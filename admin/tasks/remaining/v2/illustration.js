@@ -20,6 +20,11 @@ export default [
         neededHours: 2,
     },
     {
+        taskName: `Move snowglobes to the side on road paths.`,
+        workedHours: 0,
+        neededHours: 1,
+    },
+    {
         taskName: `Make mermaid and serpent colours the same.`,
         workedHours: 0,
         neededHours: 2,
