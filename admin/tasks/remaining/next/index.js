@@ -20,6 +20,10 @@ export default [
         taskName: `Audit scenes.`,
         workedHours: 1,
     },
+    {
+        taskName: `Move snowglobes to the side on road paths.`,
+        workedHours: 1,
+    },
 
     /* Ongoing. */
     {

@@ -32,14 +32,14 @@ export default {
         },
         [SNOWGLOBE_FUTURE_CORD]: {
             yIndex: 0,
-            xPosition: 7.3,
+            xPosition: 7,
             zOffset: 5.45,
             scaleFactor: 0.5,
             rotate: 8,
         },
         [SNOWGLOBE_FUTURE_REATTA]: {
             yIndex: 0,
-            xPosition: 2.5,
+            xPosition: 2.6,
             zOffset: 5,
             scaleFactor: 0.7,
             rotate: -7,

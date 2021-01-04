@@ -20,11 +20,6 @@ export default [
         neededHours: 2,
     },
     {
-        taskName: `Move snowglobes to the side on road paths.`,
-        workedHours: 0,
-        neededHours: 1,
-    },
-    {
         taskName: `Make mermaid and serpent colours the same.`,
         workedHours: 0,
         neededHours: 2,
@@ -33,6 +28,11 @@ export default [
         taskName: `Backdrops for Uncanny road scenes.`,
         workedHours: 0,
         neededHours: 1,
+    },
+    {
+        taskName: `Liz couch scene space fillers? Litter box?`,
+        workedHours: 0,
+        neededHours: 3,
     },
     {
         taskName: `Constellation shadows.`,
@@ -91,11 +91,6 @@ export default [
     },
     {
         taskName: `Remove depth shading from slant direction cubes?`,
-        workedHours: 0,
-        neededHours: 3,
-    },
-    {
-        taskName: `Liz couch scene space fillers? Litter box?`,
         workedHours: 0,
         neededHours: 3,
     },

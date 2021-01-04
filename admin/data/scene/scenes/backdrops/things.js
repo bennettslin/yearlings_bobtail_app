@@ -72,9 +72,10 @@ export default {
         [ROAD_FUTURE]: {},
         [ROAD_PAST]: {
             yIndex: 0,
+            xPosition: 5.6,
         },
         [ROAD_PRESENT]: {
-            xPosition: 5.2,
+            xPosition: 5.3,
         },
         [SHORE_BUOY_BACKDROP]: {
             scaleFactor: 0.7,

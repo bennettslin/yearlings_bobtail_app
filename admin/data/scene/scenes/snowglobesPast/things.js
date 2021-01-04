@@ -15,13 +15,13 @@ export default {
         [SNOWGLOBE_SMALL__PAST]: {
             yIndex: 0,
             xPosition: 6.5,
-            zOffset: 7.6,
+            zOffset: 7.5,
             scaleFactor: 0.15,
             rotate: -5,
         },
         [SNOWGLOBE_PAST]: {
             yIndex: 0,
-            xPosition: 10.2,
+            xPosition: 9,
             zOffset: 6.1,
             scaleFactor: 0.82,
             rotate: 10,
