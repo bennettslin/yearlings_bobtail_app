@@ -27,7 +27,7 @@ export default {
     [MOTHER]: {
         [FUTURE]: {
             yIndex: 0,
-            xPosition: 8,
+            xPosition: 8.3,
             zOffset: 3.4,
         },
     },

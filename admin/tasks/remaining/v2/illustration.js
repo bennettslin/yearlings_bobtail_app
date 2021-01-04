@@ -1,6 +1,6 @@
 export default [
     {
-        taskName: `Ghost tail for Bennett.`,
+        taskName: `Ghost shackles for Bennett.`,
         workedHours: 1,
         neededHours: 5,
     },
@@ -15,7 +15,7 @@ export default [
         neededHours: 2,
     },
     {
-        taskName: `Victrola stand.`,
+        taskName: `Hospital record stand.`,
         workedHours: 0,
         neededHours: 2,
     },
