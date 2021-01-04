@@ -37,7 +37,7 @@ import overpassSignBack from '../../../../../assets/svgs/cutouts/overpassSignBac
 import peachTree from '../../../../../assets/svgs/cutouts/peachTree'
 import pharmacyAisle from '../../../../../assets/svgs/cutouts/pharmacyAisle'
 import playgroundSlide from '../../../../../assets/svgs/cutouts/playgroundSlide'
-import recyclables from '../../../../../assets/svgs/cutouts/recyclables'
+import recyclingBin from '../../../../../assets/svgs/cutouts/recyclingBin'
 import rosebushDouble from '../../../../../assets/svgs/cutouts/rosebushDouble'
 import rosebushSingle from '../../../../../assets/svgs/cutouts/rosebushSingle'
 import rosebushSlantedDouble from '../../../../../assets/svgs/cutouts/rosebushSlantedDouble'
@@ -127,8 +127,8 @@ import {
     PEACH_TREE,
     PHARMACY_AISLE,
     PLAYGROUND_SLIDE,
-    RECYCLABLES__BENNETT,
-    RECYCLABLES__NEIGHBOUR,
+    RECYCLING_BIN__BENNETT,
+    RECYCLING_BIN__NEIGHBOUR,
     ROSEBUSH_DOUBLE_BASEMENT,
     ROSEBUSH_DOUBLE_BATHROOM,
     ROSEBUSH_SINGLE_BASEMENT,
@@ -226,8 +226,8 @@ export default {
     [PEACH_TREE]: peachTree,
     [PHARMACY_AISLE]: pharmacyAisle,
     [PLAYGROUND_SLIDE]: playgroundSlide,
-    [RECYCLABLES__BENNETT]: recyclables,
-    [RECYCLABLES__NEIGHBOUR]: recyclables,
+    [RECYCLING_BIN__BENNETT]: recyclingBin,
+    [RECYCLING_BIN__NEIGHBOUR]: recyclingBin,
     [ROSEBUSH_DOUBLE_BASEMENT]: rosebushDouble,
     [ROSEBUSH_DOUBLE_BATHROOM]: rosebushDouble,
     [ROSEBUSH_SINGLE_BASEMENT]: rosebushSingle,

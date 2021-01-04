@@ -19,13 +19,13 @@ import {
     LINGERIE_DRAWING,
     VASELINE,
 } from '../../../../../app/constants/scene/things/fixtures'
-import { RECYCLABLES__NEIGHBOUR } from '../../../../../app/constants/scene/things/cutouts'
+import { RECYCLING_BIN__NEIGHBOUR } from '../../../../../app/constants/scene/things/cutouts'
 import { BENNETT_PILLOW__BED } from '../../../../../app/constants/scene/things/furnitures'
 import { BENNETT_BED } from '../../../../../app/constants/scene/things/panels'
 
 export default {
     [CUTOUT]: {
-        [RECYCLABLES__NEIGHBOUR]: {
+        [RECYCLING_BIN__NEIGHBOUR]: {
             yIndex: 1,
             xPosition: 3.5,
             scaleFactor: 0.3,

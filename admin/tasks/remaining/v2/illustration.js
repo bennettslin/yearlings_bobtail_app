@@ -45,8 +45,8 @@ export default [
         neededHours: 1,
     },
     {
-        taskName: `Young children head edits.`,
-        workedHours: 0,
+        taskName: `Young children heads and other edits.`,
+        workedHours: 1,
         neededHours: 5,
     },
     {

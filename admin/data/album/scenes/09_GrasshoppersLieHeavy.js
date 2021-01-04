@@ -93,7 +93,7 @@ import {
     GLASS_RACK__DOLLY,
     GLASS_RACK__SINK,
     LAMPPOST__LIZ_GATE,
-    RECYCLABLES__NEIGHBOUR,
+    RECYCLING_BIN__NEIGHBOUR,
     TRAFFIC_LIGHT_FRONT,
     TRAY_PILE,
     WAITING_ROOM_PLANT,
@@ -375,7 +375,7 @@ export default [
                 },
             },
             [CUTOUT]: {
-                [RECYCLABLES__NEIGHBOUR]: true,
+                [RECYCLING_BIN__NEIGHBOUR]: true,
             },
             [DOOR]: {
                 [NEIGHBOUR_DOOR]: true,
@@ -416,7 +416,7 @@ export default [
                 },
             },
             [CUTOUT]: {
-                [RECYCLABLES__NEIGHBOUR]: true,
+                [RECYCLING_BIN__NEIGHBOUR]: true,
             },
             [DOOR]: {
                 [NEIGHBOUR_DOOR]: true,

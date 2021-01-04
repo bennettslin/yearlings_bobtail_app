@@ -57,7 +57,7 @@ import {
     NIRVANA_POSTER,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
-    RECYCLABLES__BENNETT,
+    RECYCLING_BIN__BENNETT,
     BUSH_SINGLE__COURTYARD,
     BUSH_DOUBLE__COURTYARD,
     LAMPPOST__CHURCH,
@@ -117,7 +117,7 @@ export default [
                 [OAKLAND_SIDE__LEVEL]: true,
             },
             [CUTOUT]: {
-                [RECYCLABLES__BENNETT]: true,
+                [RECYCLING_BIN__BENNETT]: true,
                 [BUSH_SINGLE__COURTYARD]: true,
                 [BUSH_DOUBLE__COURTYARD]: true,
             },

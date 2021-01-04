@@ -3,7 +3,7 @@ import {
     DOOR,
 } from '../../../../../app/constants/scene/things'
 import {
-    RECYCLABLES__BENNETT,
+    RECYCLING_BIN__BENNETT,
     BUSH_SINGLE__COURTYARD,
     BUSH_DOUBLE__COURTYARD,
 } from '../../../../../app/constants/scene/things/cutouts'
@@ -15,7 +15,7 @@ import {
 
 export default {
     [CUTOUT]: {
-        [RECYCLABLES__BENNETT]: {
+        [RECYCLING_BIN__BENNETT]: {
             yIndex: 2,
             xPosition: 5,
             scaleFactor: 0.35,
