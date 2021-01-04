@@ -9,31 +9,31 @@ import {
     PANEL,
 } from '../../../../app/constants/scene/things'
 import {
-    MUSEUM_KEY,
     BACKSTAGE_KEY,
+    GO_KARTS_KEY,
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
-    GO_KARTS_KEY,
+    MUSEUM_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
-    TIME_EVENING,
-    TIME_AFTERNOON,
     SEASON_AUTUMN,
+    TIME_AFTERNOON,
+    TIME_EVENING,
 } from '../../../../app/constants/scene/sky'
 import {
     BENNETT,
-    LIZ,
     KHARI,
+    LIZ,
     STEPHANIE,
 } from '../../../../app/constants/scene/actors'
 import { DOUBLE_ALBERT } from '../../../../app/constants/scene/actors/khari'
 import { FLAPPER } from '../../../../app/constants/scene/actors/stephanie'
 import {
-    DATE_ENDING,
-    MUSEUM,
     BACKSTAGE,
-    GO_KARTS,
     DATE_ENDED,
+    DATE_ENDING,
+    GO_KARTS,
+    MUSEUM,
 } from '../../../../app/constants/scene/actors/songs'
 import {
     DRIVING_BACKDROP,
@@ -41,35 +41,35 @@ import {
     OAKLAND_SIDE__LEVEL,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
-    BUBBLE_SMALL__GO_KART,
-    BUBBLE_MEDIUM__GO_KART,
     BUBBLE_LARGE__GO_KART,
+    BUBBLE_MEDIUM__GO_KART,
+    BUBBLE_SMALL__GO_KART,
     THOUGHT_GO_KART,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
-    CACTUS_SINGLE__LIZ_ENDING,
-    CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
+    CACTUS_SINGLE__LIZ_ENDED,
+    CACTUS_SINGLE__LIZ_ENDING,
+    CAVEMAN_BONES,
     CYPRESS_DOUBLE__LIZ_GATE,
     CYPRESS_SINGLE__LIZ_ENDED,
     CYPRESS_SINGLE__LIZ_ENDING,
     LAMPPOST__LIZ_GATE,
     MUSEUM_DISPLAY,
-    CAVEMAN_BONES,
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT_FRONT,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
-    LIZ_BLINDS_OUTSIDE__ENDING,
     LIZ_BLINDS_OUTSIDE__ENDED,
+    LIZ_BLINDS_OUTSIDE__ENDING,
     LIZ_GATE_OUTSIDE,
     LIZ_GATE_OUTSIDE_OPEN,
 } from '../../../../app/constants/scene/things/doors'
 import {
+    MANNEQUIN,
     PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
-    MANNEQUIN,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     DISTANT_BUILDINGS,
@@ -78,10 +78,10 @@ import {
     PUBLIC_NEAR__LIZ_GATE,
 } from '../../../../app/constants/scene/things/flats'
 import {
-    GO_KART_SEAT__LEFT,
-    GO_KART_SEAT__RIGHT,
     GO_KART_EXTERIOR__LEFT,
     GO_KART_EXTERIOR__RIGHT,
+    GO_KART_SEAT__LEFT,
+    GO_KART_SEAT__RIGHT,
 } from '../../../../app/constants/scene/things/panels'
 
 export default [

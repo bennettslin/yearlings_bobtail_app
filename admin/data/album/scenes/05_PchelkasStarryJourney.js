@@ -11,36 +11,36 @@ import {
     PANEL,
 } from '../../../../app/constants/scene/things'
 import {
+    BEDROOM_DOGS_KEY,
     BEDROOM_KEY,
     BEDROOM_OPEN_KEY,
-    BEDROOM_DOGS_KEY,
     BEDROOM_SPACE_KEY,
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY,
 } from '../../../../app/constants/scene/scenes'
 import {
-    TIME_MORNING,
-    TIME_NOON,
-    TIME_AFTERNOON,
-    TIME_EVENING,
-    SEASON_WINTER,
     SEASON_FUTURE,
     SEASON_NIGHT_MAGIC,
+    SEASON_WINTER,
+    TIME_AFTERNOON,
+    TIME_EVENING,
+    TIME_MORNING,
+    TIME_NOON,
 } from '../../../../app/constants/scene/sky'
 import {
-    PRETEEN_BENNETT,
-    MOTHER,
-    CHRISTOPHER,
-    SASHA,
-    BRAD,
     ANDREW,
-    TRISTAN,
+    BRAD,
+    CHRISTOPHER,
     CHRISTOPHER_BENNETT,
+    MOTHER,
+    PRETEEN_BENNETT,
+    SASHA,
+    TRISTAN,
 } from '../../../../app/constants/scene/actors'
 import {
-    THROWING,
     NOODLING,
+    THROWING,
 } from '../../../../app/constants/scene/actors/andrew'
 import {
     GESTURING,
@@ -52,9 +52,9 @@ import { ARGUING } from '../../../../app/constants/scene/actors/mother'
 import {
     FEIGNING_SICK,
     SHAKEN,
+    SHEEPISH,
     STOIC,
     WISTFUL,
-    SHEEPISH,
 } from '../../../../app/constants/scene/actors/preteenBennett'
 import { POPULAR_GIRL } from '../../../../app/constants/scene/actors/sasha'
 import { ASLEEP } from '../../../../app/constants/scene/actors/songs'

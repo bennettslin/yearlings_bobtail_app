@@ -6,7 +6,7 @@ import {
 } from '../../../../../app/constants/scene/things'
 import {
     WEDDING_CHAIR,
-    WEDDING_CROWD
+    WEDDING_CROWD,
 } from '../../../../../app/constants/scene/things/cutouts'
 import {
     FOREBODING_TREES__FAR,
