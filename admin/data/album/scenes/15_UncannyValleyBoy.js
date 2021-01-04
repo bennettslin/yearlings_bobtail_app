@@ -89,6 +89,7 @@ import {
     RECORDING_MIC,
     RECORDING_BEERS,
     CRACKED_PICTURE,
+    GHOST_SHACKLES,
 } from '../../../../app/constants/scene/things/fixtures'
 import { BENNETT_PILLOW__BED } from '../../../../app/constants/scene/things/furnitures'
 import {
@@ -338,6 +339,7 @@ export default [
             },
             [FIXTURE]: {
                 [CRACKED_PICTURE]: true,
+                [GHOST_SHACKLES]: true,
             },
             [FURNITURE]: {
                 [BENNETT_PILLOW__BED]: true,
