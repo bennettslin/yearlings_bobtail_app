@@ -4,7 +4,7 @@
     * https://github.com/gatsbyjs/gatsby/issues/3446
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
-* Change plastic colour to flat. (Recyclables, Vaseline, milk crate.)
+
 # Performance TODO:
 * Performance. (Redux.)
 * Be smarter about memo.

@@ -69,7 +69,7 @@ import {
     DISH__SHARED,
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
-import { DULL__SHARED, PLASTIC__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
+import { DULL__SHARED, FLAT__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
 import { DRAWING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
     ATTIC_LINENS__SHARED,
@@ -205,7 +205,7 @@ export default {
         OAK__SHARED,
         SHADOW__SHARED,
     ],
-    [MILK_CRATE]: PLASTIC__SHARED,
+    [MILK_CRATE]: FLAT__SHARED,
     [NURSE_BENCH]: [
         OAK__SHARED,
         RUBBER__SHARED,

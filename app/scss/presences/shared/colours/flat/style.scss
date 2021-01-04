@@ -1,0 +1,10 @@
+.flat#{$suffix} {
+    .flatBlueDark { fill: hsl(219, 33%, 47%); }
+    .flatBlueMedium { fill: hsl(219, 33%, 57%); }
+
+    .dark__indoor
+    & {
+        .flatBlueDark { fill: hsl(219, 33%, 5%); }
+        .flatBlueMedium { fill: hsl(219, 33%, 5%); }
+    }
+}
