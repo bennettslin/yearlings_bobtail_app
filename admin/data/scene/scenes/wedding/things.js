@@ -4,11 +4,14 @@ import {
     PANEL,
     PUPPET,
 } from '../../../../../app/constants/scene/things'
-import { WEDDING_CROWD } from '../../../../../app/constants/scene/things/cutouts'
 import {
-    FOREBODING_TREES__NEAR,
-    FOREBODING_TREES__MIDDLE,
+    WEDDING_CHAIR,
+    WEDDING_CROWD
+} from '../../../../../app/constants/scene/things/cutouts'
+import {
     FOREBODING_TREES__FAR,
+    FOREBODING_TREES__MIDDLE,
+    FOREBODING_TREES__NEAR,
 } from '../../../../../app/constants/scene/things/flats'
 import {
     WEDDING_PLATFORM_FRONT,
@@ -18,6 +21,13 @@ import { PUPPET_KHARI_LIZ } from '../../../../../app/constants/scene/things/pupp
 
 export default {
     [CUTOUT]: {
+        [WEDDING_CHAIR]: {
+            yIndex: 3,
+            xPosition: 4.5,
+            zOffset: -0.1,
+            scaleFactor: 0.25,
+            layerYIndex: 5,
+        },
         [WEDDING_CROWD]: {
             yIndex: 3,
             xPosition: 4.5,

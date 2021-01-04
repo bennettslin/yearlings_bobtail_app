@@ -66,6 +66,7 @@ import {
     WAITING_ROOM_PLANT,
     WALL_SPEAKER_FRONT,
     WALL_SPEAKER_SIDE,
+    WEDDING_CHAIR,
     WEDDING_CROWD,
     YELLOW_TAPED_GRILL,
 } from '../../../../../../app/constants/scene/things/cutouts'
@@ -289,6 +290,7 @@ export default {
     [WAITING_ROOM_PLANT]: FOLIAGE__SHARED,
     [WALL_SPEAKER_FRONT]: MONITOR__SHARED,
     [WALL_SPEAKER_SIDE]: MONITOR__SHARED,
+    [WEDDING_CHAIR]: null,
     [WEDDING_CROWD]: [
         FOLIAGE__SHARED,
         WEDDING__SHARED,

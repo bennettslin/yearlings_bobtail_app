@@ -67,6 +67,7 @@ import {
     DISPENSER_RIGHT,
     HOSTESS_STAND,
     IV_DRIP,
+    WEDDING_CHAIR,
     WEDDING_CROWD,
 } from '../../../../app/constants/scene/things/cutouts'
 import { EL_TORITO_DOORS } from '../../../../app/constants/scene/things/doors'
@@ -180,6 +181,7 @@ export default [
                 },
             },
             [CUTOUT]: {
+                [WEDDING_CHAIR]: true,
                 [WEDDING_CROWD]: true,
             },
             [BACKDROP]: {

@@ -161,6 +161,7 @@ import {
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
     WALL_SPEAKER_SIDE,
+    WEDDING_CHAIR,
     WEDDING_CROWD,
     YELLOW_TAPED_GRILL,
 } from '../../../../constants/scene/things/cutouts'
@@ -260,6 +261,7 @@ export default {
     [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,
     [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
     [WALL_SPEAKER_SIDE]: wallSpeakerSide,
+    [WEDDING_CHAIR]: weddingCrowd,
     [WEDDING_CROWD]: weddingCrowd,
     [YELLOW_TAPED_GRILL]: yellowTapedGrill,
 }
