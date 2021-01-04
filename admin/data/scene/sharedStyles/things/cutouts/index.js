@@ -77,7 +77,10 @@ import {
     DISH__SHARED,
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
-import { FLAT__SHARED, WHITE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
+import {
+    FLAT__SHARED,
+    WHITE__SHARED,
+} from '../../../../../../app/constants/scene/sharedStyles/colours'
 import {
     BANANA__SHARED,
     CIGARETTE__SHARED,
@@ -207,7 +210,10 @@ export default {
         PATINA__SHARED,
         STEEL__SHARED,
     ],
-    [RECYCLING_BIN]: FLAT__SHARED,
+    [RECYCLING_BIN]: [
+        FLAT__SHARED,
+        WHITE__SHARED,
+    ],
     [ROSEBUSH_DOUBLE_BATHROOM]: [
         FAMILY_HOUSE__SHARED,
         FOLIAGE__SHARED,
@@ -234,7 +240,10 @@ export default {
     ],
     [SANDBAGS]: null,
     [SHOPPING_CART]: GARBAGE_BAG__SHARED,
-    [SIGNPOST]: STEEL__SHARED,
+    [SIGNPOST]: [
+        STEEL__SHARED,
+        WHITE__SHARED,
+    ],
     [STAGE_LIGHTS]: [
         OAK__SHARED,
         STEEL__SHARED,

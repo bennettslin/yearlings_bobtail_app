@@ -167,9 +167,7 @@
     .sheetDark { fill: hsl(305, 29%, 85%); }
     .sheetMedium { fill: hsl(305, 33%, 85%); }
     .sheetLight { fill: hsl(305, 33%, 86%); }
-    .vaselineLight { fill: hsl(46, 43%, 67%); }
-    .vaselineLightest { fill: hsl(46, 52%, 77%); }
-    .vaselineLabel { fill: hsl(197, 66%, 64%); }
+    .vaselineLabel { fill: hsl(197, 53%, 64%); }
 
     .dark__indoor
     & {
@@ -178,8 +176,6 @@
         .sheetDark { fill: hsl(305, 29%, 5%); }
         .sheetMedium { fill: hsl(305, 33%, 5%); }
         .sheetLight { fill: hsl(305, 33%, 5%); }
-        .vaselineLight { fill: hsl(46, 43%, 5%); }
-        .vaselineLightest { fill: hsl(43, 48%, 5%); }
         .vaselineLabel { fill: hsl(197, 66%, 5%); }
     }
 }

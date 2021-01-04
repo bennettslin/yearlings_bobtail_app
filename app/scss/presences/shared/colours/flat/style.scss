@@ -1,4 +1,7 @@
 .flat#{$suffix} {
+    .flatRedDark { fill: hsl(1, 33%, 47%); }
+    .flatAmberLight { fill: hsl(46, 33%, 67%); }
+    .flatAmberLightest { fill: hsl(46, 33%, 77%); }
     .flatBlueDark { fill: hsl(219, 33%, 47%); }
     .flatBlueMedium { fill: hsl(219, 33%, 57%); }
 
