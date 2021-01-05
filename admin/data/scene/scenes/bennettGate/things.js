@@ -23,7 +23,6 @@ export default {
         [APARTMENT_PLANT]: {
             yIndex: 3,
             xPosition: 1,
-            scaleFactor: 0.35,
         },
         [BUSH_SINGLE__BENNETT_GATE]: {
             yIndex: 3,

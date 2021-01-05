@@ -65,7 +65,6 @@ export default {
         [WAITING_ROOM_PLANT]: {
             yIndex: 2,
             xPosition: 7.5,
-            scaleFactor: 0.45,
         },
     },
     [DOOR]: {

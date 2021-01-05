@@ -1,10 +1,15 @@
 .dull#{$suffix} {
-    .dullBlueDarker { fill: hsl(210, 20%, 42%); }
-
-    .dullGreenDarker { fill: hsl(120, 20%, 42%); }
-
     .dullRedDarker { fill: hsl(0, 20%, 42%); }
     .dullRedDark { fill: hsl(0, 20%, 47%); }
 
+    .dullYellowDark { fill: hsl(60, 20%, 47%); }
+
+    .dullGreenDarker { fill: hsl(120, 20%, 42%); }
+
+    .dullBlueDarker { fill: hsl(210, 20%, 42%); }
+
     .dullPurpleDarker { fill: hsl(270, 20%, 42%); }
+
+    .dullMagentaDarker { fill: hsl(330, 20%, 42%); }
+    .dullMagentaDark { fill: hsl(330, 20%, 47%); }
 }

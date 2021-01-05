@@ -8,6 +8,8 @@
 # Immediate TODO:
 * Allow for shared things (checkered flag, conveyor belt, dishroom sink, Bennett couch, Bennett lamp, Bennett bed, Bennett nightstand, stage lights, dishroom stuff, dishroom door, lancet pen)
 * Previewer presence has minimum size
+* Figure out macros!
+    * https://marketplace.visualstudio.com/items?itemName=jpsnee.vscode-editor-macros
 
 # Performance TODO:
 * Performance. (Redux.)

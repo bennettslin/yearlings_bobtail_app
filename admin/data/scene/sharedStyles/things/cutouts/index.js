@@ -78,6 +78,7 @@ import {
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
+    DULL__SHARED,
     FLAT__SHARED,
     WHITE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/colours'
@@ -118,7 +119,10 @@ import {
 import { ALL_VEHICLES__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
 
 export default {
-    [APARTMENT_PLANT]: FOLIAGE__SHARED,
+    [APARTMENT_PLANT]: [
+        DULL__SHARED,
+        FOLIAGE__SHARED,
+    ],
     [ASH_CAN]: CIGARETTE__SHARED,
     [STINK_PLANT]: FOLIAGE__SHARED,
     [BUDDHA_SHRINE]: COPPER__SHARED,
@@ -296,7 +300,10 @@ export default {
         STEEL__SHARED,
     ],
     [UCLA_TREE]: FOLIAGE__SHARED,
-    [WAITING_ROOM_PLANT]: FOLIAGE__SHARED,
+    [WAITING_ROOM_PLANT]: [
+        DULL__SHARED,
+        FOLIAGE__SHARED,
+    ],
     [WALL_SPEAKER_FRONT]: MONITOR__SHARED,
     [WALL_SPEAKER_SIDE]: MONITOR__SHARED,
     [WEDDING_CHAIR]: null,

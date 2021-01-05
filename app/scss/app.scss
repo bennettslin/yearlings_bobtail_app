@@ -11,11 +11,6 @@
 @import './presences/style';
 
 /* Next to remove. */
-.apartmentPlant {
-    .pot { fill: hsl(333, 20%, 46%); }
-    .brim { fill: hsl(333, 20%, 42%); }
-}
-
 .trashCan {
     .boxLeft { fill: hsl(0, 36%, 51%); }
     .boxRear { fill: hsl(126, 36%, 58%); }
@@ -26,16 +21,12 @@
 }
 
 .steamPipes {
-    .flange { fill: hsl(0, 20%, 50%); }
     .flangeSide { fill: hsl(0, 33%, 30%); }
+    .wheel { fill: hsl(0, 30%, 45%); }
+    .flange { fill: hsl(0, 20%, 50%); }
+    .mount { fill: hsl(0, 0%, 40%); }
     .pipeLarge { fill: hsl(60, 33%, 30%); }
     .pipeSmall { fill: hsl(60, 20%, 50%); }
-    .mount { fill: hsl(0, 0%, 40%); }
     .spokes { fill: hsl(30, 40%, 50%); }
-    .wheel { fill: hsl(0, 30%, 45%); }
     .cap { fill: hsl(60, 100%, 40%); }
-}
-
-.waitingRoomPlant {
-    .vase { fill: hsl(59, 31%, 46%); }
 }

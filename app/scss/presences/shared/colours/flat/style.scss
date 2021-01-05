@@ -1,20 +1,20 @@
 .flat#{$suffix} {
-    .flatRedDarker { fill: hsl(1, 33%, 42%); }
-    .flatRedDark { fill: hsl(1, 33%, 47%); }
-    .flatRedMediumDark { fill: hsl(1, 33%, 52%); }
+    .flatRedDarker { fill: hsl(0, 33%, 42%); }
+    .flatRedDark { fill: hsl(0, 33%, 47%); }
+    .flatRedMediumDark { fill: hsl(0, 33%, 52%); }
 
-    .flatAmberLight { fill: hsl(46, 33%, 67%); }
-    .flatAmberLightest { fill: hsl(46, 33%, 77%); }
+    .flatAmberLight { fill: hsl(45, 33%, 67%); }
+    .flatAmberLightest { fill: hsl(45, 33%, 77%); }
 
-    .flatBlueDark { fill: hsl(219, 33%, 47%); }
-    .flatBlueMediumDark { fill: hsl(219, 33%, 52%); }
-    .flatBlueMedium { fill: hsl(219, 33%, 57%); }
+    .flatBlueDark { fill: hsl(210, 33%, 47%); }
+    .flatBlueMediumDark { fill: hsl(210, 33%, 52%); }
+    .flatBlueMedium { fill: hsl(210, 33%, 57%); }
 
     .flatMagentaDarkest { fill: hsl(330, 33%, 37%); }
 
     .dark__indoor
     & {
-        .flatBlueDark { fill: hsl(219, 33%, 5%); }
-        .flatBlueMedium { fill: hsl(219, 33%, 5%); }
+        .flatBlueDark { fill: hsl(210, 33%, 5%); }
+        .flatBlueMedium { fill: hsl(210, 33%, 5%); }
     }
 }
