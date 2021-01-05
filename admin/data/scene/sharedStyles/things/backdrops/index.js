@@ -31,6 +31,7 @@ import {
 import { DOOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
+    MARBLE__SHARED,
     RUBBER__SHARED,
     RUST__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/material'
@@ -84,6 +85,7 @@ export default {
         SHORE__SHARED,
     ],
     [SHORE_RICKSHAW_BACKDROP]: [
+        MARBLE__SHARED,
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,
         SHORE__SHARED,

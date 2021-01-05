@@ -80,9 +80,7 @@ export default {
         [SHORE_BUOY_BACKDROP]: {
             scaleFactor: 0.7,
         },
-        [SHORE_RICKSHAW_BACKDROP]: {
-            scaleFactor: 0.7,
-        },
+        [SHORE_RICKSHAW_BACKDROP]: {},
         [TAIWAN_MOUNTAINS_BACKDROP]: {
             scaleFactor: 0.6,
         },
