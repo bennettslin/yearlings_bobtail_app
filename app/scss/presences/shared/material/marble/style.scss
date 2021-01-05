@@ -1,0 +1,12 @@
+// Skews light.
+.marble#{$suffix} {
+    .marbleDarkest { fill: hsl(60, 10%, 57%); }
+    .marbleDarker { fill: hsl(60, 10%, 62%); }
+    .marbleDark { fill: hsl(60, 10%, 67%); }
+    .marbleMediumDark { fill: hsl(60, 10%, 72%); }
+    .marbleMedium { fill: hsl(60, 10%, 77%); }
+    .marbleMediumLight { fill: hsl(60, 10%, 82%); }
+    .marbleLight { fill: hsl(60, 10%, 87%); }
+    // .marbleLighter { fill: hsl(60, 10%, 92%); }
+    // .marbleLightest { fill: hsl(60, 10%, 97%); }
+}

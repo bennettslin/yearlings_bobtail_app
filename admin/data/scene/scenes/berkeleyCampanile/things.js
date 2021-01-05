@@ -43,7 +43,6 @@ export default {
         [CAMPANILE]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.42,
         },
         [BERKELEY_BUILDING_TALL]: {
             yIndex: 2,

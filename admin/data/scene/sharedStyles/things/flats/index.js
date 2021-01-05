@@ -69,6 +69,7 @@ import {
     OAKLAND_HOUSE_RIGHT__SHARED,
     TAIWAN_HOUSE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/buildings'
+import { BLACK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
 import {
     DOOR__SHARED,
     FAMILY_HOUSE__SHARED,
@@ -78,6 +79,7 @@ import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles
 import {
     BRONZE__SHARED,
     IRON__SHARED,
+    MARBLE__SHARED,
     OAK__SHARED,
     PATINA__SHARED,
     ROCK__SHARED,
@@ -118,7 +120,9 @@ export default {
         WINDOW__SHARED,
     ],
     [CAMPANILE]: [
+        BLACK__SHARED,
         FOLIAGE__SHARED,
+        MARBLE__SHARED,
         PATINA__SHARED,
     ],
     [CEMETERY_HILLS_LEFT]: [
