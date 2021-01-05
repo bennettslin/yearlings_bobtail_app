@@ -59,7 +59,7 @@ import {
     MOUNTAIN__SHARED,
     WALL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
-import { FLAT__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
+import { DULL__SHARED, FLAT__SHARED, WHITE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
 
 export default {
     [BANCROFT_DOOR]: [
@@ -157,7 +157,9 @@ export default {
         BRASS__SHARED,
         BRONZE__SHARED,
         DOOR__SHARED,
+        DULL__SHARED,
         STEEL__SHARED,
+        WHITE__SHARED,
         WINDOW__SHARED,
     ],
     [IRON_GATE]: IRON__SHARED,

@@ -2,7 +2,6 @@ import { ACTOR } from '../../../../app/constants/scene'
 import {
     BACKDROP,
     BUBBLE,
-    CARDBOARD,
     CUTOUT,
     DOOR,
     FIXTURE,
@@ -92,7 +91,6 @@ import {
     HOSPITAL_RECORD_STAND,
 } from '../../../../app/constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../../app/constants/scene/things/puppets'
-import { EL_TORITO_SIGN } from '../../../../app/constants/scene/things/cardboards'
 
 export default [
     {
@@ -113,9 +111,6 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE__LEVEL]: true,
-            },
-            [CARDBOARD]: {
-                [EL_TORITO_SIGN]: true,
             },
             [CUTOUT]: {
                 [DISPENSER_LEFT]: true,

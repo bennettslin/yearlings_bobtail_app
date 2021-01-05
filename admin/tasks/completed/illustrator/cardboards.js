@@ -151,4 +151,8 @@ export default [
         taskName: 'fix progress charts',
         workedHours: 2,
     },
+    {
+        taskName: `El Torito logo.`,
+        workedHours: 2,
+    },
 ]

@@ -1,9 +1,7 @@
 import {
-    CARDBOARD,
     CUTOUT,
     DOOR,
 } from '../../../../../app/constants/scene/things'
-import { EL_TORITO_SIGN } from '../../../../../app/constants/scene/things/cardboards'
 import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
@@ -12,13 +10,6 @@ import {
 import { EL_TORITO_DOORS } from '../../../../../app/constants/scene/things/doors'
 
 export default {
-    [CARDBOARD]: {
-        [EL_TORITO_SIGN]: {
-            yIndex: 2,
-            xPosition: 5.675,
-            zOffset: -0.035,
-        },
-    },
     [CUTOUT]: {
         [DISPENSER_LEFT]: {
             yIndex: 5,
