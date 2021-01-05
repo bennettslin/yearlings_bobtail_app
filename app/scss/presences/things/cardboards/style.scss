@@ -25,17 +25,6 @@
     .labelTop { fill: hsl(0, 33%, 70%); }
 }
 
-.codeBox {
-    .boxTop { fill: hsl(0, 0%, 40%); }
-    .boxSide { fill: hsl(0, 0%, 50%); }
-    .boxBottom { fill: hsl(0, 0%, 60%); }
-    .boxBack { fill: hsl(0, 0%, 65%); }
-    .boxFront { fill: hsl(0, 0%, 70%); }
-    .slit { fill: hsl(20, 12%, 29%); }
-    .keypad { fill: hsl(28, 15%, 53%); }
-    .key { fill: hsl(33, 29%, 69%); }
-}
-
 .corkboard {
     .cork { fill: hsl(0, 0%, 80%); }
     .frame { fill: hsl(30, 50%, 40%); }
@@ -236,11 +225,4 @@
     .coat { fill: hsl(31, 12%, 46%); }
     .lapel { fill: hsl(31, 11%, 45%); }
     .sleeve { fill: hsl(177, 21%, 58%); }
-}
-
-.vanNuysPainting {
-    .gray { fill: hsl(0, 0%, 40%); }
-    .beige { fill: hsl(0, 0%, 80%); }
-    .logo,
-    .magenta { fill: hsl(330, 30%, 40%); }
 }

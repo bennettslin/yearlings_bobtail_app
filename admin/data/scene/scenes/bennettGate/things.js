@@ -17,7 +17,6 @@ export default {
             yIndex: 2,
             xPosition: 4,
             zOffset: 3,
-            scaleFactor: 0.275,
         },
     },
     [CUTOUT]: {
