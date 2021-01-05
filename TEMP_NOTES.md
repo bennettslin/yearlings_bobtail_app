@@ -5,6 +5,10 @@
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
 
+# Immediate TODO:
+* Allow for shared things (checkered flag, conveyor belt, dishroom sink, Bennett couch, Bennett lamp, Bennett bed, Bennett nightstand, stage lights, dishroom stuff, dishroom door, lancet pen)
+* Previewer presence has minimum size
+
 # Performance TODO:
 * Performance. (Redux.)
 * Be smarter about memo.

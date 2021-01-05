@@ -26,7 +26,6 @@ export default {
         [OAKLAND_FLAG]: {
             yIndex: 3,
             xPosition: 11,
-            scaleFactor: 0.5,
         },
     },
 }
