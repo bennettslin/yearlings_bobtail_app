@@ -92,6 +92,7 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     BRASS__SHARED,
+    BRONZE__SHARED,
     CHROME__SHARED,
     IRON__SHARED,
     MAPLE__SHARED,
@@ -191,6 +192,7 @@ export default {
     [HAIRCUT_SCISSORS]: SCISSORS__SHARED,
     [HOSPITAL_RECORD_PLAYER]: [
         BRASS__SHARED,
+        BRONZE__SHARED,
         MAPLE__SHARED,
         OAK__SHARED,
         RUBBER__SHARED,
