@@ -23,16 +23,13 @@ export default {
     [CUTOUT]: {
         [WEDDING_CHAIR]: {
             yIndex: 3,
-            xPosition: 4.5,
-            zOffset: -0.1,
-            scaleFactor: 0.25,
-            layerYIndex: 5,
+            xPosition: 0.65,
+            zOffset: -0.03,
         },
         [WEDDING_CROWD]: {
             yIndex: 3,
             xPosition: 4.5,
             zOffset: -0.1,
-            scaleFactor: 0.25,
             layerYIndex: 5,
         },
     },
@@ -59,14 +56,12 @@ export default {
             yIndex: 3,
             xPosition: 1.4,
             zOffset: -0.12,
-            scaleFactor: 0.55,
             layerYIndex: 4,
         },
         [WEDDING_PLATFORM_REAR]: {
             yIndex: 2,
             xPosition: 1.6,
             zOffset: 0.05,
-            scaleFactor: 0.55,
         },
     },
     [PUPPET]: {

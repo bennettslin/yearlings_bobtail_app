@@ -63,6 +63,7 @@ import uclaTree from '../../../../../assets/svgs/cutouts/uclaTree'
 import waitingRoomPlant from '../../../../../assets/svgs/cutouts/waitingRoomPlant'
 import wallSpeakerFront from '../../../../../assets/svgs/cutouts/wallSpeakerFront'
 import wallSpeakerSide from '../../../../../assets/svgs/cutouts/wallSpeakerSide'
+import weddingChair from '../../../../../assets/svgs/cutouts/weddingChair'
 import weddingCrowd from '../../../../../assets/svgs/cutouts/weddingCrowd'
 import yellowTapedGrill from '../../../../../assets/svgs/cutouts/yellowTapedGrill'
 
@@ -261,7 +262,7 @@ export default {
     [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,
     [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
     [WALL_SPEAKER_SIDE]: wallSpeakerSide,
-    [WEDDING_CHAIR]: weddingCrowd,
+    [WEDDING_CHAIR]: weddingChair,
     [WEDDING_CROWD]: weddingCrowd,
     [YELLOW_TAPED_GRILL]: yellowTapedGrill,
 }

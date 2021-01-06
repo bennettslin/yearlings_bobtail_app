@@ -71,7 +71,6 @@ import {
     YELLOW_TAPED_GRILL,
 } from '../../../../../../app/constants/scene/things/cutouts'
 import { ALL_PEOPLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
-import { WEDDING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/buildings'
 import {
     CUP__SHARED,
     DISH__SHARED,
@@ -89,11 +88,11 @@ import {
     PAPER_BAG__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/food'
 import { BENNETT_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
-import { FAMILY_HOUSE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
     BRASS__SHARED,
+    BRONZE__SHARED,
     COPPER__SHARED,
     IRON__SHARED,
     MAPLE__SHARED,
@@ -108,9 +107,10 @@ import {
 import {
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
+    ROSE_PINK__SHARED,
+    ROSE_RED__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TRAFFIC_LIGHT__SHARED,
-    WALL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
@@ -219,28 +219,28 @@ export default {
         WHITE__SHARED,
     ],
     [ROSEBUSH_DOUBLE_BATHROOM]: [
-        FAMILY_HOUSE__SHARED,
         FOLIAGE__SHARED,
+        ROSE_RED__SHARED,
     ],
     [ROSEBUSH_DOUBLE_BASEMENT]: [
-        WALL__SHARED,
         FOLIAGE__SHARED,
+        ROSE_PINK__SHARED,
     ],
     [ROSEBUSH_SINGLE_BATHROOM]: [
-        FAMILY_HOUSE__SHARED,
         FOLIAGE__SHARED,
+        ROSE_RED__SHARED,
     ],
     [ROSEBUSH_SINGLE_BASEMENT]: [
-        WALL__SHARED,
         FOLIAGE__SHARED,
+        ROSE_PINK__SHARED,
     ],
     [ROSEBUSH_SLANTED_DOUBLE]: [
-        FAMILY_HOUSE__SHARED,
         FOLIAGE__SHARED,
+        ROSE_RED__SHARED,
     ],
     [ROSEBUSH_SLANTED_SINGLE]: [
-        FAMILY_HOUSE__SHARED,
         FOLIAGE__SHARED,
+        ROSE_RED__SHARED,
     ],
     [SANDBAGS]: null,
     [SHOPPING_CART]: GARBAGE_BAG__SHARED,
@@ -306,10 +306,19 @@ export default {
     ],
     [WALL_SPEAKER_FRONT]: MONITOR__SHARED,
     [WALL_SPEAKER_SIDE]: MONITOR__SHARED,
-    [WEDDING_CHAIR]: null,
+    [WEDDING_CHAIR]: [
+        BRONZE__SHARED,
+        DULL__SHARED,
+        FLAT__SHARED,
+        ROSE_RED__SHARED,
+        TAIWAN_FOLIAGE__SHARED,
+    ],
     [WEDDING_CROWD]: [
-        FOLIAGE__SHARED,
-        WEDDING__SHARED,
+        DULL__SHARED,
+        FLAT__SHARED,
+        ROSE_RED__SHARED,
+        TAIWAN_FOLIAGE__SHARED,
+        WHITE__SHARED,
     ],
     [YELLOW_TAPED_GRILL]: STEEL__SHARED,
 }

@@ -283,4 +283,8 @@ export default [
         taskName: `Trash chutes.`,
         workedHours: 2,
     },
+    {
+        taskName: `Wedding platform chair, plus styling revision.`,
+        workedHours: 4,
+    },
 ]

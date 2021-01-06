@@ -63,13 +63,12 @@ import {
     WIDE_COUCH_MIRIAM,
 } from '../../../../../../app/constants/scene/things/panels'
 import { OCEAN_LIFE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/animals'
-import { WEDDING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/buildings'
 import {
     CUP__SHARED,
     DISH__SHARED,
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
-import { DULL__SHARED, FLAT__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
+import { DULL__SHARED, FLAT__SHARED, WHITE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
 import { DRAWING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
     ATTIC_LINENS__SHARED,
@@ -92,8 +91,9 @@ import {
     STEEL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
-    FOLIAGE__SHARED,
     OCEAN_CAVE__SHARED,
+    ROSE_RED__SHARED,
+    TAIWAN_FOLIAGE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
@@ -282,12 +282,13 @@ export default {
         WAITING_ARMCHAIR__SHARED,
     ],
     [WEDDING_PLATFORM_FRONT]: [
-        FOLIAGE__SHARED,
-        WEDDING__SHARED,
+        ROSE_RED__SHARED,
+        TAIWAN_FOLIAGE__SHARED,
+        WHITE__SHARED,
     ],
     [WEDDING_PLATFORM_REAR]: [
-        FOLIAGE__SHARED,
-        WEDDING__SHARED,
+        TAIWAN_FOLIAGE__SHARED,
+        WHITE__SHARED,
     ],
     [WIDE_ARMREST_BENNETT]: BENNETT_LINENS__SHARED,
     [WIDE_ARMREST_MIRIAM]: MIRIAM_LINENS__SHARED,

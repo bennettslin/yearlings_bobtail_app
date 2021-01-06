@@ -5,11 +5,6 @@ export default [
         neededHours: 5,
     },
     {
-        taskName: `Wedding platform chair, plus styling revision.`,
-        workedHours: 1,
-        neededHours: 3,
-    },
-    {
         taskName: `Hospital record stand.`,
         workedHours: 0,
         neededHours: 2,
@@ -70,9 +65,9 @@ export default [
         neededHours: 2,
     },
     {
-        taskName: `Marble colours. Campanile, mirrored sink.`,
+        taskName: `Marble colours. Mirrored sink.`,
         workedHours: 0,
-        neededHours: 2,
+        neededHours: 1,
     },
     {
         taskName: `Fruit colours. Painting, trees, garbage can.`,
