@@ -9,9 +9,7 @@ export default {
     [CUTOUT]: {
         [STEAM_PIPES]: {
             yIndex: 1,
-            xPosition: 5.5,
             zOffset: 1,
-            scaleFactor: 0.425,
         },
     },
     [FIXTURE]: {

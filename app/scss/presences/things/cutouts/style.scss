@@ -22,26 +22,6 @@
     .appendageFront { fill: hsl(57, 15%, 71%); }
 }
 
-.dispenserLeft {
-    .dispenserLight { fill: hsl(9, 67%, 70%); }
-    .dispenserDark { fill: hsl(9, 52%, 65%); }
-    .panel { fill: hsl(9, 29%, 72%); }
-}
-
-.dispenserRight {
-    .dispenserDark { fill: hsl(150, 28%, 52%); }
-    .panel { fill: hsl(150, 14%, 41%); }
-    .dispenserLight { fill: hsl(150, 36%, 58%); }
-    .dispenserDoor { fill: hsl(152, 27%, 71%); }
-    .suit { fill: hsl(225, 28%, 52%); }
-    .shirt { fill: hsl(44, 49%, 63%); }
-}
-
-.dumpster {
-    .warningLabel { fill: hsl(56, 40%, 50%); }
-    .warningField { fill: hsl(0, 40%, 50%); }
-}
-
 .fireHydrant {
     .valveInner { fill: hsl(0, 45%, 52%); }
     .valveInnerLight { fill: hsl(0, 45%, 53%); }

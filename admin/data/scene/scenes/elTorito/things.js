@@ -14,12 +14,10 @@ export default {
         [DISPENSER_LEFT]: {
             yIndex: 5,
             xPosition: 1,
-            scaleFactor: 0.3,
         },
         [DISPENSER_RIGHT]: {
             yIndex: 5,
             xPosition: 10,
-            scaleFactor: 0.3,
         },
         [HOSTESS_STAND]: {
             yIndex: 1,

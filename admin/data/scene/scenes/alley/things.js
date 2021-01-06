@@ -18,7 +18,6 @@ export default {
         [DUMPSTER]: {
             yIndex: 2,
             xPosition: 9,
-            scaleFactor: 0.3,
         },
         [CHUTE_GARBAGE]: {
             yIndex: 2,

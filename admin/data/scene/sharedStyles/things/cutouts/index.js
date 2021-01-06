@@ -96,6 +96,7 @@ import {
     COPPER__SHARED,
     IRON__SHARED,
     MAPLE__SHARED,
+    MARBLE__SHARED,
     OAK__SHARED,
     PATINA__SHARED,
     PORCELAIN__SHARED,
@@ -155,13 +156,20 @@ export default {
         STEEL__SHARED,
     ],
     [DISH_PILE]: DISH__SHARED,
-    [DISPENSER_LEFT]: NEWSPAPER__SHARED,
-    [DISPENSER_RIGHT]: [
-        NEWSPAPER__SHARED,
+    [DISPENSER_LEFT]: [
         ALL_PEOPLE__SHARED,
+        DULL__SHARED,
+        NEWSPAPER__SHARED,
+        STEEL__SHARED,
+    ],
+    [DISPENSER_RIGHT]: [
+        DULL__SHARED,
+        NEWSPAPER__SHARED,
+        STEEL__SHARED,
     ],
     [DUMPSTER]: [
         ALL_VEHICLES__SHARED,
+        FLAT__SHARED,
         GARBAGE_BAG__SHARED,
         PATINA__SHARED,
         RUBBER__SHARED,
@@ -196,8 +204,8 @@ export default {
     [MIRRORED_SINK]: [
         ALL_PEOPLE__SHARED,
         MAPLE__SHARED,
+        MARBLE__SHARED,
         OAK__SHARED,
-        PORCELAIN__SHARED,
         STEEL__SHARED,
     ],
     [MONITOR_FRONT]: MONITOR__SHARED,
@@ -252,7 +260,12 @@ export default {
         OAK__SHARED,
         STEEL__SHARED,
     ],
-    [STEAM_PIPES]: null,
+    [STEAM_PIPES]: [
+        DULL__SHARED,
+        IRON__SHARED,
+        RUBBER__SHARED,
+        STEEL__SHARED,
+    ],
     [STORAGE_BOXES]: OAK__SHARED,
     [STORAGE_CHEST]: [
         BRASS__SHARED,
