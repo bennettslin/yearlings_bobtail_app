@@ -43,7 +43,6 @@ export default {
         [TRASH_CAN__QUAD]: {
             yIndex: 3,
             xPosition: 0.5,
-            scaleFactor: 0.27,
             flipHorizontal: true,
         },
         [BUSH_DOUBLE__QUAD]: {

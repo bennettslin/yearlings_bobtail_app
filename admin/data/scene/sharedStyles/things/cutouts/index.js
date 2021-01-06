@@ -277,20 +277,21 @@ export default {
         STEEL__SHARED,
     ],
     [TRAFFIC_LIGHT_FRONT]: [
-        TRAFFIC_LIGHT__SHARED,
         BRASS__SHARED,
         STEEL__SHARED,
+        TRAFFIC_LIGHT__SHARED,
     ],
     [TRAFFIC_LIGHT_REAR]: [
-        TRAFFIC_LIGHT__SHARED,
         BRASS__SHARED,
         STEEL__SHARED,
+        TRAFFIC_LIGHT__SHARED,
     ],
     [TRASH_CAN]: [
         BANANA__SHARED,
+        FLAT__SHARED,
         GARBAGE_BAG__SHARED,
-        PAPER_BAG__SHARED,
         IRON__SHARED,
+        PAPER_BAG__SHARED,
     ],
     [TRAY_PILE]: TRAY__SHARED,
     [TWIN_STREETLAMP]: [
