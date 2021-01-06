@@ -22,15 +22,6 @@
     .appendageFront { fill: hsl(57, 15%, 71%); }
 }
 
-.fireHydrant {
-    .valveInner { fill: hsl(0, 45%, 52%); }
-    .valveInnerLight { fill: hsl(0, 45%, 53%); }
-    .valveOuter { fill: hsl(0, 45%, 54%); }
-    .valveOuterLight { fill: hsl(0, 45%, 55%); }
-    .ridge { fill: hsl(0, 45%, 53%); }
-    .hydrant { fill: hsl(0, 45%, 55%); }
-}
-
 .ivDrip {
     .boxLight { fill: hsl(270, 57%, 77%); }
     .boxMedium { fill: hsl(268, 37%, 68%); }
@@ -126,30 +117,6 @@
     .shelf { fill: hsl(60, 18%, 69%); }
 }
 
-.sandbags {
-    .ropeDark { fill: hsl(36, 33%, 57%); }
-    .post { fill: hsl(30, 26%, 47%); }
-    .ropeLight { fill: hsl(36, 48%, 65%); }
-    .spindle { fill: hsl(60, 21%, 68%); }
-    .sandbag { fill: hsl(60, 32%, 71%); }
-    .sandbagInner { fill: hsl(60, 20%, 50%); }
-    .string { fill: hsl(60, 51%, 88%); }
-}
-
-.shoppingCart {
-    .wheelRear {fill: hsl(221, 14%, 26%); }
-    .hubRear {fill: hsl(221, 14%, 44%); }
-    .swivelRear {fill: hsl(221, 23%, 61%); }
-    .mountRear {fill: hsl(111, 10%, 51%); }
-    .barRear {fill: hsl(229, 7%, 54%); }
-    .wheelFront {fill: hsl(221, 14%, 31%); }
-    .hubFront {fill: hsl(220, 14%, 50%); }
-    .swivelFront {fill: hsl(221, 26%, 65%); }
-    .cart {fill: hsl(227, 8%, 58%); }
-    .mountFront {fill: hsl(111, 13%, 56%); }
-    .barFront {fill: hsl(225, 11%, 64%); }
-}
-
 .stageLights {
     .hangerDarker { fill: hsl(0, 0%, 49%); }
     .shutterMiddle { fill: hsl(233, 8%, 21%); }
@@ -162,15 +129,3 @@
     .hangerScrew { fill: hsl(0, 0%, 45%); }
 }
 
-.yellowTapedGrill {
-    .tapeDark { fill: hsl(60, 32%, 45%); }
-    .tapeLight { fill: hsl(60, 34%, 50%); }
-    .grillInnerLight { fill: hsl(70, 10%, 46%); }
-    .grillInnerDark { fill: hsl(71, 10%, 42%); }
-    .grillLight { fill: hsl(174, 12%, 55%); }
-    .grillMedium { fill: hsl(173, 10%, 48%); }
-    .grillDark { fill: hsl(174, 10%, 42%); }
-    .coal { fill: hsl(60, 5%, 35%); }
-    .rack { fill: hsl(60, 7%, 57%); }
-    .handle { fill: hsl(203, 7%, 57%); }
-}
