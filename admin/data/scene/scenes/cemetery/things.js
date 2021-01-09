@@ -13,7 +13,6 @@ export default {
         [GRAVESTONE]: {
             yIndex: 5,
             xPosition: 5.5,
-            scaleFactor: 0.35,
         },
     },
     [FLAT]: {

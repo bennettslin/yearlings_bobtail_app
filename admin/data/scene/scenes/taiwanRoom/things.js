@@ -32,7 +32,6 @@ export default {
         [BUDDHA_SHRINE]: {
             yIndex: 4,
             xPosition: 5.5,
-            scaleFactor: 0.15,
         },
         [TAIWAN_FRIDGE]: {
             yIndex: 1,

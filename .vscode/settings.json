@@ -1,0 +1,38 @@
+{
+    "[json]": {
+
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    },
+    "macros": {
+        "commentDown": [
+            "editor.action.copyLinesDownAction",
+            "cursorUp",
+            "editor.action.addCommentLine",
+            "cursorDown"
+        ],
+        "removeClass": [
+            "cursorWordLeft",
+            "cursorWordRightSelect",
+            "cursorWordRightSelect",
+            "editor.action.selectHighlights",
+            "cursorWordRightSelect",
+            "cursorWordRightSelect",
+            "cursorWordRightSelect",
+            "cursorRightSelect",
+            "deleteLeft"
+        ],
+        "removeId": [
+            "cursorWordLeft",
+            "cursorWordRightSelect",
+            "cursorWordRightSelect",
+            "editor.action.selectHighlights",
+            {"command": "type", "args": {"text": "class=\""}}
+        ],
+    }
+}
