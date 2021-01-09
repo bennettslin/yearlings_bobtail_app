@@ -77,11 +77,6 @@ import {
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
 import {
-    DULL__SHARED,
-    FLAT__SHARED,
-    WHITE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/colours'
-import {
     BANANA__SHARED,
     CIGARETTE__SHARED,
     GARBAGE_BAG__SHARED,
@@ -121,10 +116,7 @@ import {
 import { ALL_VEHICLES__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
 
 export default {
-    [APARTMENT_PLANT]: [
-        DULL__SHARED,
-        FOLIAGE__SHARED,
-    ],
+    [APARTMENT_PLANT]: FOLIAGE__SHARED,
     [ASH_CAN]: CIGARETTE__SHARED,
     [STINK_PLANT]: FOLIAGE__SHARED,
     [BUDDHA_SHRINE]: COPPER__SHARED,
@@ -139,14 +131,8 @@ export default {
     [CAMPUS_TREE_DOUBLE]: FOLIAGE__SHARED,
     [CAMPUS_TREE_SINGLE]: FOLIAGE__SHARED,
     [CAVEMAN_BONES]: STEEL__SHARED,
-    [CHUTE_GARBAGE]: [
-        STEEL__SHARED,
-        WHITE__SHARED,
-    ],
-    [CHUTE_RECYCLING]: [
-        STEEL__SHARED,
-        WHITE__SHARED,
-    ],
+    [CHUTE_GARBAGE]: STEEL__SHARED,
+    [CHUTE_RECYCLING]: STEEL__SHARED,
     [CLIFF_TREE]: FOLIAGE__SHARED,
     [CYPRESS_DOUBLE]: FOLIAGE__SHARED,
     [CYPRESS_SINGLE]: FOLIAGE__SHARED,
@@ -159,25 +145,22 @@ export default {
     [DISH_PILE]: DISH__SHARED,
     [DISPENSER_LEFT]: [
         ALL_PEOPLE__SHARED,
-        DULL__SHARED,
         NEWSPAPER__SHARED,
         STEEL__SHARED,
     ],
     [DISPENSER_RIGHT]: [
-        DULL__SHARED,
         NEWSPAPER__SHARED,
         STEEL__SHARED,
     ],
     [DUMPSTER]: [
         ALL_VEHICLES__SHARED,
-        FLAT__SHARED,
         GARBAGE_BAG__SHARED,
         PATINA__SHARED,
         RUBBER__SHARED,
         STEEL__SHARED,
     ],
     [EL_CERRITO_TREE]: FOLIAGE__SHARED,
-    [FIRE_HYDRANT]: FLAT__SHARED,
+    [FIRE_HYDRANT]: null,
     [GLASS_RACK]: CUP__SHARED,
     [GRAVESTONE]: [
         ROCK__SHARED,
@@ -223,10 +206,7 @@ export default {
         PATINA__SHARED,
         STEEL__SHARED,
     ],
-    [RECYCLING_BIN]: [
-        FLAT__SHARED,
-        WHITE__SHARED,
-    ],
+    [RECYCLING_BIN]: null,
     [ROSEBUSH_DOUBLE_BATHROOM]: [
         FOLIAGE__SHARED,
         ROSE_RED__SHARED,
@@ -255,7 +235,6 @@ export default {
         FIBER__SHARED,
         MAPLE__SHARED,
         OAK__SHARED,
-        WHITE__SHARED,
     ],
     [SHOPPING_CART]: [
         BRASS__SHARED,
@@ -263,16 +242,12 @@ export default {
         RUBBER__SHARED,
         STEEL__SHARED,
     ],
-    [SIGNPOST]: [
-        STEEL__SHARED,
-        WHITE__SHARED,
-    ],
+    [SIGNPOST]: STEEL__SHARED,
     [STAGE_LIGHTS]: [
         OAK__SHARED,
         STEEL__SHARED,
     ],
     [STEAM_PIPES]: [
-        DULL__SHARED,
         IRON__SHARED,
         RUBBER__SHARED,
         STEEL__SHARED,
@@ -312,7 +287,6 @@ export default {
     ],
     [TRASH_CAN]: [
         BANANA__SHARED,
-        FLAT__SHARED,
         GARBAGE_BAG__SHARED,
         IRON__SHARED,
         PAPER_BAG__SHARED,
@@ -325,29 +299,20 @@ export default {
         STEEL__SHARED,
     ],
     [UCLA_TREE]: FOLIAGE__SHARED,
-    [WAITING_ROOM_PLANT]: [
-        DULL__SHARED,
-        FOLIAGE__SHARED,
-    ],
+    [WAITING_ROOM_PLANT]: FOLIAGE__SHARED,
     [WALL_SPEAKER_FRONT]: MONITOR__SHARED,
     [WALL_SPEAKER_SIDE]: MONITOR__SHARED,
     [WEDDING_CHAIR]: [
         BRONZE__SHARED,
-        DULL__SHARED,
-        FLAT__SHARED,
         ROSE_RED__SHARED,
         TAIWAN_FOLIAGE__SHARED,
     ],
     [WEDDING_CROWD]: [
-        DULL__SHARED,
-        FLAT__SHARED,
         ROSE_RED__SHARED,
         TAIWAN_FOLIAGE__SHARED,
-        WHITE__SHARED,
     ],
     [YELLOW_TAPED_GRILL]: [
         BRASS__SHARED,
-        FLAT__SHARED,
         IRON__SHARED,
         PATINA__SHARED,
         RUBBER__SHARED,

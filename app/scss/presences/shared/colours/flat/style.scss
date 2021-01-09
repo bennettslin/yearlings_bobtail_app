@@ -1,35 +1,27 @@
-.flat#{$suffix} {
-    .flatRedDarker { fill: hsl(0, 33%, 42%); }
-    .flatRedDark { fill: hsl(0, 33%, 47%); }
-    .flatRedMediumDark { fill: hsl(0, 33%, 52%); }
-    .flatRedMedium { fill: hsl(0, 33%, 57%); }
-    
-    .flatAmberDarker { fill: hsl(45, 33%, 42%); }
-    .flatAmberDark { fill: hsl(45, 33%, 47%); }
-    .flatAmberMediumDark { fill: hsl(45, 33%, 52%); }
-    .flatAmberLight { fill: hsl(45, 33%, 67%); }
-    .flatAmberLightest { fill: hsl(45, 33%, 77%); }
-    
-    .flatYellowDarker { fill: hsl(60, 33%, 42%); }
-    .flatYellowMediumDark { fill: hsl(60, 33%, 52%); }
+.flatRedDarker { fill: hsl(0, 33%, 42%); }
+.flatRedDark { fill: hsl(0, 33%, 47%); }
+.flatRedMediumDark { fill: hsl(0, 33%, 52%); }
+.flatRedMedium { fill: hsl(0, 33%, 57%); }
 
-    .flatGreenMedium { fill: hsl(120, 33%, 57%); }
+.flatAmberDarker { fill: hsl(45, 33%, 42%); }
+.flatAmberDark { fill: hsl(45, 33%, 47%); }
+.flatAmberMediumDark { fill: hsl(45, 33%, 52%); }
+.flatAmberLight { fill: hsl(45, 33%, 67%); }
+.flatAmberLightest { fill: hsl(45, 33%, 77%); }
 
-    .flatTurquoiseMediumDark { fill: hsl(150, 33%, 52%); }
-    .flatTurquoiseMedium { fill: hsl(150, 33%, 57%); }
-    .flatTurquoiseMediumLight { fill: hsl(150, 33%, 62%); }
+.flatYellowDarker { fill: hsl(60, 33%, 42%); }
+.flatYellowMediumDark { fill: hsl(60, 33%, 52%); }
 
-    .flatBlueDark { fill: hsl(210, 33%, 47%); }
-    .flatBlueMediumDark { fill: hsl(210, 33%, 52%); }
-    .flatBlueMedium { fill: hsl(210, 33%, 57%); }
+.flatGreenMedium { fill: hsl(120, 33%, 57%); }
 
-    .flatPurpleMedium { fill: hsl(270, 33%, 57%); }
+.flatTurquoiseMediumDark { fill: hsl(150, 33%, 52%); }
+.flatTurquoiseMedium { fill: hsl(150, 33%, 57%); }
+.flatTurquoiseMediumLight { fill: hsl(150, 33%, 62%); }
 
-    .flatMagentaDarkest { fill: hsl(330, 33%, 37%); }
+.flatBlueDark { fill: hsl(210, 33%, 47%); }
+.flatBlueMediumDark { fill: hsl(210, 33%, 52%); }
+.flatBlueMedium { fill: hsl(210, 33%, 57%); }
 
-    .dark__indoor
-    & {
-        .flatBlueDark { fill: hsl(210, 33%, 5%); }
-        .flatBlueMedium { fill: hsl(210, 33%, 5%); }
-    }
-}
+.flatPurpleMedium { fill: hsl(270, 33%, 57%); }
+
+.flatMagentaDarkest { fill: hsl(330, 33%, 37%); }

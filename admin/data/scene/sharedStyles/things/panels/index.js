@@ -68,7 +68,6 @@ import {
     DISH__SHARED,
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
-import { DULL__SHARED, FLAT__SHARED, WHITE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
 import { DRAWING__SHARED } from '../../../../../../app/constants/scene/sharedStyles/comic'
 import {
     ATTIC_LINENS__SHARED,
@@ -178,14 +177,8 @@ export default {
     [GO_KART_SEAT]: GO_KART__SHARED,
     [HOSPITAL_BED]: null,
     [HOSPITAL_RECORD_STAND]: null,
-    [KEYBOARD_STAND_LEFT]: [
-        BOOK__SHARED,
-        DULL__SHARED,
-    ],
-    [KEYBOARD_STAND_RIGHT]: [
-        BOOK__SHARED,
-        DULL__SHARED,
-    ],
+    [KEYBOARD_STAND_LEFT]: BOOK__SHARED,
+    [KEYBOARD_STAND_RIGHT]: BOOK__SHARED,
     [LIZ_BED]: [
         OAK__SHARED,
         SHADOW__SHARED,
@@ -205,7 +198,7 @@ export default {
         OAK__SHARED,
         SHADOW__SHARED,
     ],
-    [MILK_CRATE]: FLAT__SHARED,
+    [MILK_CRATE]: null,
     [NURSE_BENCH]: [
         OAK__SHARED,
         RUBBER__SHARED,
@@ -284,12 +277,8 @@ export default {
     [WEDDING_PLATFORM_FRONT]: [
         ROSE_RED__SHARED,
         TAIWAN_FOLIAGE__SHARED,
-        WHITE__SHARED,
     ],
-    [WEDDING_PLATFORM_REAR]: [
-        TAIWAN_FOLIAGE__SHARED,
-        WHITE__SHARED,
-    ],
+    [WEDDING_PLATFORM_REAR]: TAIWAN_FOLIAGE__SHARED,
     [WIDE_ARMREST_BENNETT]: BENNETT_LINENS__SHARED,
     [WIDE_ARMREST_MIRIAM]: MIRIAM_LINENS__SHARED,
     [WIDE_COUCH_BENNETT]: BENNETT_LINENS__SHARED,

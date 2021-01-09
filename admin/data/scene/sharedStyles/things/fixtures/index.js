@@ -119,7 +119,6 @@ import {
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
-import { FLAT__SHARED } from '../../../../../../app/constants/scene/sharedStyles/colours'
 
 export default {
     [BACKPACK_BENNETT]: BACKPACK__SHARED,
@@ -244,5 +243,5 @@ export default {
     [USED_CONDOM_LIZ]: LIZ_CONDOM__SHARED,
     [USED_CONDOM_REFLECTION]: LIZ_CONDOM__SHARED,
     [USED_CONDOM_MIRIAM]: MIRIAM_CONDOM__SHARED,
-    [VASELINE]: FLAT__SHARED,
+    [VASELINE]: null,
 }

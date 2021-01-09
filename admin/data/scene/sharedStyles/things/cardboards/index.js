@@ -82,11 +82,6 @@ import {
     REATTA__SHARED,
     ALL_VEHICLES__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
-import {
-    BLACK__SHARED,
-    FLAT__SHARED,
-    WHITE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/colours'
 
 export default {
     [BENNETT_MAT]: [
@@ -147,7 +142,6 @@ export default {
     [CODE_BOX]: [
         BRASS__SHARED,
         CHROME__SHARED,
-        BLACK__SHARED,
     ],
     [CORKBOARD]: null,
     [EARTH]: SHORE__SHARED,
@@ -216,10 +210,6 @@ export default {
     [SPACE_STATION]: null,
     [TELEVISION_ALBUM]: ALL_PEOPLE__SHARED,
     [TINTIN_POSTER]: ALL_PEOPLE__SHARED,
-    [VAN_NUYS_PAINTING]: [
-        BLACK__SHARED,
-        FLAT__SHARED,
-        WHITE__SHARED,
-    ],
+    [VAN_NUYS_PAINTING]: null,
 }
 
