@@ -91,16 +91,6 @@ import {
     MICROPHONE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
-    BRASS__SHARED,
-    BRONZE__SHARED,
-    CHROME__SHARED,
-    IRON__SHARED,
-    MAPLE__SHARED,
-    OAK__SHARED,
-    RUBBER__SHARED,
-    STEEL__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/material'
-import {
     FREEWAY_SIGN__SHARED,
     TETHERBALL_POLE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
@@ -122,18 +112,15 @@ import {
 
 export default {
     [BACKPACK_BENNETT]: BACKPACK__SHARED,
-    [BALLED_FOIL]: CHROME__SHARED,
+    [BALLED_FOIL]: null,
     [BASEMENT_BEER_BENNETT]: BUDWEISER__SHARED,
     [BASEMENT_BEER_CASE]: BUDWEISER__SHARED,
     [BASEMENT_BEER_MARA]: BUDWEISER__SHARED,
     [BASS_CASE_UPRIGHT]: BASS_CASE__SHARED,
-    [BEDROOM_LAMP]: [
-        BULB__SHARED,
-        STEEL__SHARED,
-    ],
-    [BENNETT_COUCH_LAMP]: STEEL__SHARED,
+    [BEDROOM_LAMP]: BULB__SHARED,
+    [BENNETT_COUCH_LAMP]: null,
     [BENNETT_LETTERS]: MAGAZINE__SHARED,
-    [BENNETT_RECORD_PLAYER]: RUBBER__SHARED,
+    [BENNETT_RECORD_PLAYER]: null,
     [BENNETT_SHOE]: [
         ALL_CLOTHING__SHARED,
         BENNETT,
@@ -158,27 +145,14 @@ export default {
         LIZ,
     ],
     [DRUMKIT]: [
-        BRASS__SHARED,
-        CHROME__SHARED,
         CYMBAL__SHARED,
         DRUMS__SHARED,
-        STEEL__SHARED,
     ],
-    [DRUMS_STACKED]: [
-        CHROME__SHARED,
-        DRUMS__SHARED,
-        STEEL__SHARED,
-    ],
-    [DRUM_THRONE]: [
-        DRUMS__SHARED,
-        STEEL__SHARED,
-    ],
+    [DRUMS_STACKED]: DRUMS__SHARED,
+    [DRUM_THRONE]: DRUMS__SHARED,
     [ELECTRIC_GUITAR]: ELECTRIC_GUITAR__SHARED,
     [EVIAN_BOTTLES]: EVIAN__SHARED,
-    [FREEWAY_SIGN]: [
-        FREEWAY_SIGN__SHARED,
-        IRON__SHARED,
-    ],
+    [FREEWAY_SIGN]: FREEWAY_SIGN__SHARED,
     [FRIDGE_DRAWINGS]: [
         SKETCHBOOK__SHARED,
         ALL_PEOPLE__SHARED,
@@ -189,22 +163,11 @@ export default {
     [GUITAR_CASE_OPEN]: GUITAR_CASE__SHARED,
     [GUITAR_CASE_UPRIGHT]: GUITAR_CASE__SHARED,
     [HAIRCUT_SCISSORS]: SCISSORS__SHARED,
-    [HOSPITAL_RECORD_PLAYER]: [
-        BRASS__SHARED,
-        BRONZE__SHARED,
-        MAPLE__SHARED,
-        OAK__SHARED,
-        RUBBER__SHARED,
-        STEEL__SHARED,
-    ],
+    [HOSPITAL_RECORD_PLAYER]: null,
     [KEYBOARD]: null,
-    [KICK_DRUM]: [
-        CHROME__SHARED,
-        DRUMS__SHARED,
-        STEEL__SHARED,
-    ],
+    [KICK_DRUM]: DRUMS__SHARED,
     [LETTER_SCRAPS]: MAGAZINE__SHARED,
-    [LIGHT_SWITCH]: OAK__SHARED,
+    [LIGHT_SWITCH]: null,
     [LINGERIE_DRAWING]: [
         BOOK__SHARED,
         DRAWING__SHARED,
@@ -214,27 +177,21 @@ export default {
     [LIZ_PHONE_BASE]: LIZ_PHONE__SHARED,
     [LIZ_PHONE_BASE_REFLECTION]: LIZ_PHONE__SHARED,
     [LIZ_PHONE_REFLECTION]: LIZ_PHONE__SHARED,
-    [MANNEQUIN]: [
-        OAK__SHARED,
-        STEEL__SHARED,
-    ],
+    [MANNEQUIN]: null,
     [PLAYGROUND_BALL]: null,
-    [PUSH_BROOM]: OAK__SHARED,
+    [PUSH_BROOM]: null,
     [RECORDING_BEERS]: HEINEKEN__SHARED,
     [RECORDING_MIC]: MICROPHONE__SHARED,
-    [RECORD_PLAYER_STOOL]: RUBBER__SHARED,
+    [RECORD_PLAYER_STOOL]: null,
     [RED_ENVELOPE_MONEY]: [
         DOLLAR__SHARED,
         LETTER__SHARED,
     ],
     [SAFEWAY_BAG]: PAPER_BAG__SHARED,
     [STAGE_MIC]: MICROPHONE__SHARED,
-    [STEPLADDER]: OAK__SHARED,
+    [STEPLADDER]: null,
     [TCHOTCHKES]: null,
-    [TETHERBALL_POLE]: [
-        STEEL__SHARED,
-        TETHERBALL_POLE__SHARED,
-    ],
+    [TETHERBALL_POLE]: TETHERBALL_POLE__SHARED,
     [THROWN_FRUIT]: [
         BANANA__SHARED,
         PUDDING__SHARED,

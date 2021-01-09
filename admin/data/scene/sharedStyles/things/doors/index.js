@@ -49,12 +49,6 @@ import {
     WINDOW__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
-    BRASS__SHARED,
-    BRONZE__SHARED,
-    IRON__SHARED,
-    STEEL__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/material'
-import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
     WALL__SHARED,
@@ -62,23 +56,12 @@ import {
 
 export default {
     [BANCROFT_DOOR]: [
-        BRONZE__SHARED,
         DOOR__SHARED,
         WINDOW__SHARED,
     ],
-    [BASEMENT_DOOR]: [
-        BRONZE__SHARED,
-        DOOR__SHARED,
-    ],
-    [BASEMENT_DOOR_OPEN]: [
-        BRASS__SHARED,
-        BRONZE__SHARED,
-        DOOR__SHARED,
-    ],
-    [BASEMENT_DOOR_SIDE]: [
-        BRONZE__SHARED,
-        DOOR__SHARED,
-    ],
+    [BASEMENT_DOOR]: DOOR__SHARED,
+    [BASEMENT_DOOR_OPEN]: DOOR__SHARED,
+    [BASEMENT_DOOR_SIDE]: DOOR__SHARED,
     [BEDROOM_BLINDS]: [
         BENNETT_INSIDE__SHARED,
         WINDOW__SHARED,
@@ -94,19 +77,15 @@ export default {
     ],
     [BENNETT_DOOR_INSIDE]: [
         BENNETT_INSIDE__SHARED,
-        BRONZE__SHARED,
         DOOR__SHARED,
     ],
     [BENNETT_DOOR_INSIDE_OPEN]: [
         BENNETT_APARTMENT__SHARED,
         BENNETT_INSIDE__SHARED,
-        BRASS__SHARED,
-        BRONZE__SHARED,
         DOOR__SHARED,
     ],
     [BENNETT_DOOR_OUTSIDE]: [
         BENNETT_APARTMENT__SHARED,
-        BRONZE__SHARED,
         DOOR__SHARED,
     ],
     [BENNETT_GATE_FRONT]: [
@@ -130,15 +109,10 @@ export default {
         WINDOW__SHARED,
     ],
     [CINEMA_DOORS]: [
-        BRONZE__SHARED,
         DOOR__SHARED,
         WINDOW__SHARED,
     ],
-    [CLUB_DOOR_OPEN]: [
-        BRASS__SHARED,
-        BRONZE__SHARED,
-        DOOR__SHARED,
-    ],
+    [CLUB_DOOR_OPEN]: DOOR__SHARED,
     [DEFAULT_FENCE_BASEMENT]: [
         FOLIAGE__SHARED,
         WALL__SHARED,
@@ -149,18 +123,14 @@ export default {
     ],
     [DISHROOM_DOOR]: [
         DOOR__SHARED,
-        STEEL__SHARED,
         WINDOW__SHARED,
     ],
     [EL_TORITO_DOORS]: [
-        BRASS__SHARED,
-        BRONZE__SHARED,
         DOOR__SHARED,
-        STEEL__SHARED,
         WINDOW__SHARED,
     ],
-    [IRON_GATE]: IRON__SHARED,
-    [IRON_GATE_LOW]: IRON__SHARED,
+    [IRON_GATE]: null,
+    [IRON_GATE_LOW]: null,
     [LIZ_BLINDS_INSIDE]: [
         LIZ_APARTMENT__SHARED,
         WINDOW__SHARED,
@@ -174,53 +144,35 @@ export default {
         WINDOW__SHARED,
     ],
     [LIZ_DOOR]: [
-        BRONZE__SHARED,
         DOOR__SHARED,
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_DOOR_OPEN]: [
-        BRASS__SHARED,
-        BRONZE__SHARED,
         DOOR__SHARED,
         LIZ_APARTMENT__SHARED,
     ],
-    [LIZ_GATE_INSIDE]: [
-        LIZ_GATE__SHARED,
-        STEEL__SHARED,
-    ],
+    [LIZ_GATE_INSIDE]: LIZ_GATE__SHARED,
     [LIZ_GATE_OUTSIDE]: LIZ_GATE__SHARED,
     [LIZ_GATE_OUTSIDE_OPEN]: LIZ_GATE__SHARED,
-    [LOADING_DOCK_DOOR]: [
-        DOOR__SHARED,
-        STEEL__SHARED,
-    ],
+    [LOADING_DOCK_DOOR]: DOOR__SHARED,
     [NEIGHBOUR_DOOR]: [
         BENNETT_APARTMENT__SHARED,
-        BRONZE__SHARED,
         DOOR__SHARED,
     ],
     [NURSE_DOOR]: [
-        BRONZE__SHARED,
         DOOR__SHARED,
         WINDOW__SHARED,
     ],
     [PORCH_DOOR]: [
-        BRONZE__SHARED,
         DOOR__SHARED,
         WINDOW__SHARED,
     ],
-    [PRINCIPAL_DOOR]: [
-        BRONZE__SHARED,
-        DOOR__SHARED,
-    ],
+    [PRINCIPAL_DOOR]: DOOR__SHARED,
     [WAITING_ROOM_DOOR]: [
-        BRONZE__SHARED,
         DOOR__SHARED,
         WINDOW__SHARED,
     ],
     [WAITING_ROOM_DOOR_OPEN]: [
-        BRASS__SHARED,
-        BRONZE__SHARED,
         DOOR__SHARED,
         WINDOW__SHARED,
     ],

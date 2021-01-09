@@ -1,18 +1,10 @@
 // Skews dark.
-.rubber#{$suffix} {
-    // .rubberDarkest { fill: hsl(240, 5%, 17%); }
-    .rubberDarker { fill: hsl(240, 5%, 22%); }
-    .rubberDark { fill: hsl(240, 5%, 27%); }
-    .rubberMediumDark { fill: hsl(240, 5%, 32%); }
-    .rubberMedium { fill: hsl(240, 5%, 37%); }
-    .rubberMediumLight { fill: hsl(240, 5%, 42%); }
-    .rubberLight { fill: hsl(240, 5%, 47%); }
-    // .rubberLighter { fill: hsl(240, 5%, 52%); }
-    // .rubberLightest { fill: hsl(240, 5%, 57%); }
-
-    .dark__indoor
-    & {
-        .rubberMedium { fill: hsl(240, 5%, 5%); }
-        .rubberLight { fill: hsl(240, 5%, 5%); }
-    }
-}
+// .rubberDarkest { fill: hsl(240, 5%, 17%); }
+.rubberDarker { fill: hsl(240, 5%, 22%); }
+.rubberDark { fill: hsl(240, 5%, 27%); }
+.rubberMediumDark { fill: hsl(240, 5%, 32%); }
+.rubberMedium { fill: hsl(240, 5%, 37%); }
+.rubberMediumLight { fill: hsl(240, 5%, 42%); }
+.rubberLight { fill: hsl(240, 5%, 47%); }
+// .rubberLighter { fill: hsl(240, 5%, 52%); }
+// .rubberLightest { fill: hsl(240, 5%, 57%); }

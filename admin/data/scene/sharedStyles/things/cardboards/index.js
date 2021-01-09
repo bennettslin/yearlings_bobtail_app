@@ -73,7 +73,6 @@ import {
     BUBBLE__SHARED,
     SNOWGLOBE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/props'
-import { BRASS__SHARED, CHROME__SHARED, RUBBER__SHARED, STEEL__SHARED } from '../../../../../../app/constants/scene/sharedStyles/material'
 import {
     TAIWAN_BUOY__SHARED,
     TAIWAN_RICKSHAW__SHARED,
@@ -116,7 +115,6 @@ export default {
         ALL_VEHICLES__SHARED,
         BENNETT_PAST__SHARED,
         ODIN_PAST__SHARED,
-        RUBBER__SHARED,
         TAIWAN_RICKSHAW__SHARED,
     ],
     [BENNETT_SHORE]: [
@@ -139,10 +137,7 @@ export default {
         MOUNTAIN__SHARED,
     ],
     [CLIPBOARD]: null,
-    [CODE_BOX]: [
-        BRASS__SHARED,
-        CHROME__SHARED,
-    ],
+    [CODE_BOX]: null,
     [CORKBOARD]: null,
     [EARTH]: SHORE__SHARED,
     [ELLIOTT_SMITH_POSTER]: ALL_PEOPLE__SHARED,
@@ -190,9 +185,7 @@ export default {
         BENNETT_FUTURE__SHARED,
         MIRIAM_FUTURE__SHARED,
         REATTA__SHARED,
-        RUBBER__SHARED,
         SNOWGLOBE__SHARED,
-        STEEL__SHARED,
     ],
     [SNOWGLOBE_PAST]: [
         SNOWGLOBE__SHARED,

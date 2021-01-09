@@ -31,11 +31,6 @@ import {
 import { DOOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
-    MARBLE__SHARED,
-    RUBBER__SHARED,
-    RUST__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/material'
-import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
     ROAD__SHARED,
@@ -51,8 +46,6 @@ export default {
     [GOLDEN_GATE_BACKDROP]: [
         BUILDINGS__SHARED,
         MOUNTAIN__SHARED,
-        RUBBER__SHARED,
-        RUST__SHARED,
         SHORE__SHARED,
     ],
     [LOS_ANGELES_BACKDROP]: [
@@ -85,7 +78,6 @@ export default {
         SHORE__SHARED,
     ],
     [SHORE_RICKSHAW_BACKDROP]: [
-        MARBLE__SHARED,
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,
         SHORE__SHARED,

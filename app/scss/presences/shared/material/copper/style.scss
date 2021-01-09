@@ -1,16 +1,7 @@
-.copper#{$suffix} {
-    .copperDarkest { fill: hsl(34, 28%, 37%); }
-    .copperDarker { fill: hsl(34, 28%, 42%); }
-    .copperDark { fill: hsl(34, 28%, 47%); }
-    // .copperMediumDark { fill: hsl(34, 28%, 52%); }
-    // .copperMedium { fill: hsl(34, 28%, 57%); }
-    // .copperMediumLight { fill: hsl(34, 28%, 62%); }
-    // .copperLight { fill: hsl(34, 28%, 67%); }
-
-    .dark__indoor
-    & {
-        .copperDarkest { fill: hsl(34, 28%, 5%); }
-        .copperDarker { fill: hsl(34, 28%, 5%); }
-        .copperDark { fill: hsl(34, 28%, 5%); }
-    }
-}
+.copperDarkest { fill: hsl(34, 28%, 37%); }
+.copperDarker { fill: hsl(34, 28%, 42%); }
+.copperDark { fill: hsl(34, 28%, 47%); }
+// .copperMediumDark { fill: hsl(34, 28%, 52%); }
+// .copperMedium { fill: hsl(34, 28%, 57%); }
+// .copperMediumLight { fill: hsl(34, 28%, 62%); }
+// .copperLight { fill: hsl(34, 28%, 67%); }

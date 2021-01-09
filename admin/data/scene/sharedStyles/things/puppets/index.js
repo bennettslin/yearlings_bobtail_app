@@ -42,10 +42,6 @@ import {
     OPAL__SHARED,
     PEAFOWL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/animals'
-import {
-    RUBBER__SHARED,
-    STEEL__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/material'
 import { SKETCHBOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
     ALL_VEHICLES__SHARED,
@@ -134,7 +130,5 @@ export default {
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED,
         REATTA__SHARED,
-        RUBBER__SHARED,
-        STEEL__SHARED,
     ],
 }

@@ -62,15 +62,6 @@ import {
     MONITOR__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
-    IRON__SHARED,
-    MAPLE__SHARED,
-    OAK__SHARED,
-    PATINA__SHARED,
-    PORCELAIN__SHARED,
-    RUBBER__SHARED,
-    STEEL__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/material'
-import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
@@ -146,8 +137,6 @@ export default {
         DINING_SHARED,
         CUP__SHARED,
         TRAY__SHARED,
-        STEEL__SHARED,
-        OAK__SHARED,
     ],
     [LIZ_THOUGHT_BUSING]: [
         BENNETT,
@@ -159,9 +148,6 @@ export default {
         CAFETERIA__SHARED,
         CUP__SHARED,
         DISHROOM_SHARED,
-        IRON__SHARED,
-        PATINA__SHARED,
-        STEEL__SHARED,
         TRAY__SHARED,
     ],
     [LIZ_THOUGHT_DISHROOM]: [
@@ -175,11 +161,7 @@ export default {
         DISHROOM_SHARED,
         DOOR__SHARED,
         HOUSE__SHARED,
-        IRON__SHARED,
         LANCET_PEN__SHARED,
-        PATINA__SHARED,
-        PORCELAIN__SHARED,
-        STEEL__SHARED,
         THOUGHT__SHARED,
         WINDOW__SHARED,
     ],
@@ -194,8 +176,6 @@ export default {
         FOLIAGE__SHARED,
         REATTA__SHARED,
         ROAD__SHARED,
-        RUBBER__SHARED,
-        STEEL__SHARED,
     ],
     [CONSTELLATION_SIBLING]: CONSTELLATION__SHARED,
     [CONSTELLATION_TARPIT]: CONSTELLATION__SHARED,
@@ -213,15 +193,12 @@ export default {
         ALL_PEOPLE__SHARED,
         BENNETT_LINENS__SHARED,
         BENNETT_ROOM_SHARED,
-        MAPLE__SHARED,
-        OAK__SHARED,
         THOUGHT__SHARED,
     ],
     [THOUGHT_GO_KART]: [
         BUBBLE__SHARED,
         CHECKER_FLAG__SHARED,
         FOLIAGE__SHARED,
-        STEEL__SHARED,
     ],
     [WAITING_THOUGHT_SINGING]: [
         BENNETT,
@@ -231,7 +208,6 @@ export default {
         BANJO__SHARED,
         BENNETT_LINENS__SHARED,
         BENNETT_ROOM_SHARED,
-        STEEL__SHARED,
         THOUGHT__SHARED,
     ],
     [WAITING_THOUGHT_STUDYING]: [
@@ -241,8 +217,6 @@ export default {
         ALL_PEOPLE__SHARED,
         THOUGHT__SHARED,
         BOOK__SHARED,
-        STEEL__SHARED,
-        OAK__SHARED,
     ],
     [WAITING_THOUGHT_WALKING]: [
         BENNETT,
@@ -251,7 +225,6 @@ export default {
         THOUGHT__SHARED,
         BUBBLE__SHARED,
         FOLIAGE__SHARED,
-        MAPLE__SHARED,
         MOUNTAIN__SHARED,
         ROAD__SHARED,
         SHORE__SHARED,

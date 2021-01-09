@@ -14,7 +14,7 @@ export default [
     },
     {
         taskName: `Shared styles work.`,
-        workedHours: 33,
+        workedHours: 34,
     },
     {
         taskName: `Audit scenes.`,

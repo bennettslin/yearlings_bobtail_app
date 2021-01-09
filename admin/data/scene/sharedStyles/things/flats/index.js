@@ -76,17 +76,6 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 import {
-    BRONZE__SHARED,
-    IRON__SHARED,
-    MARBLE__SHARED,
-    OAK__SHARED,
-    PATINA__SHARED,
-    ROCK__SHARED,
-    RUBBER__SHARED,
-    STEEL__SHARED,
-    STONE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/material'
-import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
@@ -120,27 +109,20 @@ export default {
     ],
     [CAMPANILE]: [
         FOLIAGE__SHARED,
-        MARBLE__SHARED,
-        PATINA__SHARED,
     ],
     [CEMETERY_HILLS_LEFT]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
-        STONE__SHARED,
     ],
     [CEMETERY_HILLS_RIGHT]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
-        OAK__SHARED,
-        STONE__SHARED,
     ],
     [CLIFF_GRAVES_FAR]: [
         MOUNTAIN__SHARED,
-        STONE__SHARED,
     ],
     [CLIFF_GRAVES_NEAR]: [
         MOUNTAIN__SHARED,
-        STONE__SHARED,
     ],
     [COMMERCIAL_CENTRE]: [
         BUILDING__SHARED,
@@ -221,8 +203,6 @@ export default {
     [GO_KART_TRACK]: [
         ALL_VEHICLES__SHARED,
         CHECKER_FLAG__SHARED,
-        RUBBER__SHARED,
-        STEEL__SHARED,
     ],
     [NEAR_BUILDINGS]: [
         BUILDINGS__SHARED,
@@ -239,7 +219,6 @@ export default {
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         WINDOW__SHARED,
-        IRON__SHARED,
     ],
     [NOHO_HOUSE_RIGHT]: [
         DOOR__SHARED,
@@ -247,10 +226,7 @@ export default {
         HOUSE__SHARED,
         WINDOW__SHARED,
     ],
-    [OAKLAND_FLAG]: [
-        BRONZE__SHARED,
-        STEEL__SHARED,
-    ],
+    [OAKLAND_FLAG]: null,
     [OAKLAND_HOUSE_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
@@ -275,7 +251,6 @@ export default {
     [OCEAN_BOTTOM_MIDDLE]: OCEAN_CAVE__SHARED,
     [OCEAN_BOTTOM_NEAR]: [
         OCEAN_LIFE__SHARED,
-        ROCK__SHARED,
     ],
     [PAMPAS_FAR]: [
         FOLIAGE__SHARED,
@@ -385,14 +360,10 @@ export default {
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,
     ],
-    [TENNIS_COURT]: [
-        FOLIAGE__SHARED,
-        STEEL__SHARED,
-    ],
+    [TENNIS_COURT]: FOLIAGE__SHARED,
     [VALLEY_FREEWAY]: [
         BUILDINGS__SHARED,
         FREEWAY_SIGN__SHARED,
         FOLIAGE__SHARED,
-        IRON__SHARED,
     ],
 }

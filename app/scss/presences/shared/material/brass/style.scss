@@ -1,16 +1,7 @@
-.brass#{$suffix} {
-    .brassDarkest { fill: hsl(61, 18%, 37%); }
-    .brassDarker { fill: hsl(61, 18%, 42%); }
-    .brassDark { fill: hsl(61, 18%, 47%); }
-    // .brassMediumDark { fill: hsl(61, 18%, 52%); }
-    .brassMedium { fill: hsl(61, 18%, 57%); }
-    // .brassMediumLight { fill: hsl(61, 18%, 62%); }
-    .brassLight { fill: hsl(61, 18%, 67%); }
-
-    .dark__indoor
-    & {
-        .brassDarkest { fill: hsl(61, 18%, 5%); }
-        .brassDark { fill: hsl(61, 18%, 5%); }
-        .brassMedium { fill: hsl(61, 18%, 5%); }
-    }
-}
+.brassDarkest { fill: hsl(61, 18%, 37%); }
+.brassDarker { fill: hsl(61, 18%, 42%); }
+.brassDark { fill: hsl(61, 18%, 47%); }
+// .brassMediumDark { fill: hsl(61, 18%, 52%); }
+.brassMedium { fill: hsl(61, 18%, 57%); }
+// .brassMediumLight { fill: hsl(61, 18%, 62%); }
+.brassLight { fill: hsl(61, 18%, 67%); }
