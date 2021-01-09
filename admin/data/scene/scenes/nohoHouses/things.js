@@ -12,8 +12,7 @@ export default {
     [CUTOUT]: {
         [FIRE_HYDRANT]: {
             yIndex: 5,
-            xPosition: 0.75,
-            scaleFactor: 0.3,
+            xPosition: 1,
         },
     },
     [FLAT]: {

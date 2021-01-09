@@ -176,7 +176,7 @@ export default {
         STEEL__SHARED,
     ],
     [EL_CERRITO_TREE]: FOLIAGE__SHARED,
-    [FIRE_HYDRANT]: null,
+    [FIRE_HYDRANT]: FLAT__SHARED,
     [GLASS_RACK]: CUP__SHARED,
     [GRAVESTONE]: [
         ROCK__SHARED,
