@@ -1,16 +1,16 @@
 .steel#{$suffix} {
-    .steelDarkest { fill: hsl(190, 8%, 37%); }
-    .steelDarker { fill: hsl(190, 8%, 42%); }
-    .steelDark { fill: hsl(190, 8%, 47%); }
-    .steelMediumDark { fill: hsl(190, 8%, 52%); }
-    .steelMedium { fill: hsl(190, 8%, 57%); }
-    .steelMediumLight { fill: hsl(190, 8%, 62%); }
-    .steelLight { fill: hsl(190, 8%, 67%); }
+    .steelDarkest { fill: hsl(195, 8%, 37%); }
+    .steelDarker { fill: hsl(195, 8%, 42%); }
+    .steelDark { fill: hsl(195, 8%, 47%); }
+    .steelMediumDark { fill: hsl(195, 8%, 52%); }
+    .steelMedium { fill: hsl(195, 8%, 57%); }
+    .steelMediumLight { fill: hsl(195, 8%, 62%); }
+    .steelLight { fill: hsl(195, 8%, 67%); }
 
     .dark__indoor
     & {
-        .steelDark { fill: hsl(190, 8%, 5%); }
-        .steelMedium { fill: hsl(190, 8%, 5%); }
-        .steelLight { fill: hsl(190, 8%, 5%); }
+        .steelDark { fill: hsl(195, 8%, 5%); }
+        .steelMedium { fill: hsl(195, 8%, 5%); }
+        .steelLight { fill: hsl(195, 8%, 5%); }
     }
 }

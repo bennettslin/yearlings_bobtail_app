@@ -93,6 +93,7 @@ import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedSty
 import {
     BRASS__SHARED,
     BRONZE__SHARED,
+    CHROME__SHARED,
     COPPER__SHARED,
     IRON__SHARED,
     MAPLE__SHARED,
@@ -251,7 +252,13 @@ export default {
         ROSE_RED__SHARED,
     ],
     [SANDBAGS]: null,
-    [SHOPPING_CART]: GARBAGE_BAG__SHARED,
+    [SHOPPING_CART]: [
+        BRASS__SHARED,
+        CHROME__SHARED,
+        GARBAGE_BAG__SHARED,
+        RUBBER__SHARED,
+        STEEL__SHARED,
+    ],
     [SIGNPOST]: [
         STEEL__SHARED,
         WHITE__SHARED,
