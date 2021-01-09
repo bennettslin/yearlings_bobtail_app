@@ -17,7 +17,6 @@ export default {
         [SANDBAGS]: {
             yIndex: 1,
             xPosition: 2.8,
-            scaleFactor: 0.37,
         },
         [STAGE_LIGHTS]: {
             yIndex: 1,

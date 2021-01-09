@@ -94,6 +94,7 @@ import {
     BRASS__SHARED,
     BRONZE__SHARED,
     COPPER__SHARED,
+    FIBER__SHARED,
     IRON__SHARED,
     MAPLE__SHARED,
     MARBLE__SHARED,
@@ -250,7 +251,12 @@ export default {
         FOLIAGE__SHARED,
         ROSE_RED__SHARED,
     ],
-    [SANDBAGS]: null,
+    [SANDBAGS]: [
+        FIBER__SHARED,
+        MAPLE__SHARED,
+        OAK__SHARED,
+        WHITE__SHARED,
+    ],
     [SHOPPING_CART]: [
         BRASS__SHARED,
         GARBAGE_BAG__SHARED,
