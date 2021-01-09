@@ -5024,4 +5024,8 @@ export default [
         workedHours: 2,
         neededHours: 2,
     },
+    {
+        taskName: `Svg macro.`,
+        workedHours: 4,
+    },
 ]
