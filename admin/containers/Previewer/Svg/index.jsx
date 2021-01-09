@@ -50,7 +50,7 @@ class PreviewerSvg extends PureComponent {
         super(props)
 
         this.state = {
-            adjustedHeight: 0,
+            previewerHeight: 0,
             kilobytes: 0,
             didLoad: false,
         }
@@ -95,7 +95,7 @@ class PreviewerSvg extends PureComponent {
                 })
 
             this.setState({
-                adjustedHeight,
+                previewerHeight: Math.max(50, adjustedHeight),
                 kilobytes,
             })
 
@@ -174,7 +174,7 @@ class PreviewerSvg extends PureComponent {
                 presenceKey,
             } = this.props,
             {
-                adjustedHeight,
+                previewerHeight,
                 kilobytes,
                 didLoad,
             } = this.state,
@@ -206,7 +206,7 @@ class PreviewerSvg extends PureComponent {
                             capitaliseForClassName(presenceType)
                         ),
                         style: {
-                            height: `${adjustedHeight.toFixed(2)}%`,
+                            height: `${previewerHeight.toFixed(2)}%`,
                         },
                         svgClassName: cx(
                             presenceDisplayName,

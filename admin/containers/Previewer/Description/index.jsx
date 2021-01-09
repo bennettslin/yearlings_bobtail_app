@@ -54,16 +54,18 @@ const PreviewerDescription = ({
                     ))
                 )}
             </div>
-            <div
-                {...{
-                    className: cx(
-                        'PreviewerDescription__scaleFactor',
-                        'PreviewerDescription__child'
-                    ),
-                }}
-            >
-                {`scaleFactor: ${scaleFactor}`}
-            </div>
+            {Boolean(scaleFactor) && (
+                <div
+                    {...{
+                        className: cx(
+                            'PreviewerDescription__scaleFactor',
+                            'PreviewerDescription__child'
+                        ),
+                    }}
+                >
+                    {`scaleFactor: ${scaleFactor}`}
+                </div>
+            )}
             <div
                 {...{
                     className: cx(

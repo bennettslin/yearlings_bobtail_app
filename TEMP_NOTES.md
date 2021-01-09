@@ -6,7 +6,6 @@
 * At the very least, get rid of Admin styles
 
 # Immediate TODO:
-* Previewer presence has minimum size
 * Consider getting rid of shared constants for people?
 * Allow for shared things (checkered flag, conveyor belt, dishroom sink, Bennett couch, Bennett lamp, Bennett bed, Bennett nightstand, stage lights, dishroom stuff, dishroom door, lancet pen, wedding)
 * Eventually have system to convert code in class name straight to hsla fill or stroke.
