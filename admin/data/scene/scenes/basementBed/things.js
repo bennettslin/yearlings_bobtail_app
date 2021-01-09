@@ -9,7 +9,10 @@ import {
     ROSEBUSH_SINGLE_BASEMENT,
 } from '../../../../../app/constants/scene/things/cutouts'
 import { BASEMENT_DOOR } from '../../../../../app/constants/scene/things/doors'
-import { CRACKED_PICTURE, GHOST_SHACKLES } from '../../../../../app/constants/scene/things/fixtures'
+import {
+    CRACKED_PICTURE,
+    GHOST_SHACKLES,
+} from '../../../../../app/constants/scene/things/fixtures'
 
 export default {
     [CUTOUT]: {
@@ -45,8 +48,8 @@ export default {
         },
         [GHOST_SHACKLES]: {
             yIndex: 4,
-            xPosition: 0.2,
-            zOffset: 2.7,
+            xPosition: 6,
+            zOffset: 2.9,
         },
     },
 }

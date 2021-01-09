@@ -106,6 +106,7 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/print'
 import {
     BACKPACK__SHARED,
+    GHOST__SHARED,
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
@@ -159,7 +160,7 @@ export default {
         ACOUSTIC_GUITAR__SHARED,
         SASHA,
     ],
-    [GHOST_SHACKLES]: null,
+    [GHOST_SHACKLES]: GHOST__SHARED,
     [GUITAR_CASE_OPEN]: GUITAR_CASE__SHARED,
     [GUITAR_CASE_UPRIGHT]: GUITAR_CASE__SHARED,
     [HAIRCUT_SCISSORS]: SCISSORS__SHARED,

@@ -23,6 +23,7 @@ import electricGuitar from '../../../../../assets/svgs/fixtures/electricGuitar'
 import evianBottles from '../../../../../assets/svgs/fixtures/evianBottles'
 import freewaySign from '../../../../../assets/svgs/fixtures/freewaySign'
 import fridgeDrawings from '../../../../../assets/svgs/fixtures/fridgeDrawings'
+import ghostShackles from '../../../../../assets/svgs/fixtures/ghostShackles'
 import guitarCaseOpen from '../../../../../assets/svgs/fixtures/guitarCaseOpen'
 import guitarCaseUpright from '../../../../../assets/svgs/fixtures/guitarCaseUpright'
 import haircutScissors from '../../../../../assets/svgs/fixtures/haircutScissors'
@@ -153,7 +154,7 @@ export default {
     [EVIAN_BOTTLES]: evianBottles,
     [FREEWAY_SIGN]: freewaySign,
     [FRIDGE_DRAWINGS]: fridgeDrawings,
-    [GHOST_SHACKLES]: guitarCaseOpen,
+    [GHOST_SHACKLES]: ghostShackles,
     [GUITAR_CASE_OPEN]: guitarCaseOpen,
     [GUITAR_CASE_UPRIGHT]: guitarCaseUpright,
     [HAIRCUT_SCISSORS]: haircutScissors,
