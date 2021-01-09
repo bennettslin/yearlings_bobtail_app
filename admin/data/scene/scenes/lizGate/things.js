@@ -94,7 +94,6 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         [TRAFFIC_LIGHT_FRONT]: {
             yIndex: 5,
             xPosition: 8.5,
-            scaleFactor: 0.3,
         },
     },
     [DOOR]: {

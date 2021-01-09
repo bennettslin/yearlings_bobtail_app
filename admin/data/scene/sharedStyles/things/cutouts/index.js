@@ -93,7 +93,6 @@ import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedSty
 import {
     BRASS__SHARED,
     BRONZE__SHARED,
-    CHROME__SHARED,
     COPPER__SHARED,
     IRON__SHARED,
     MAPLE__SHARED,
@@ -254,7 +253,6 @@ export default {
     [SANDBAGS]: null,
     [SHOPPING_CART]: [
         BRASS__SHARED,
-        CHROME__SHARED,
         GARBAGE_BAG__SHARED,
         RUBBER__SHARED,
         STEEL__SHARED,
@@ -341,6 +339,13 @@ export default {
         TAIWAN_FOLIAGE__SHARED,
         WHITE__SHARED,
     ],
-    [YELLOW_TAPED_GRILL]: STEEL__SHARED,
+    [YELLOW_TAPED_GRILL]: [
+        BRASS__SHARED,
+        FLAT__SHARED,
+        IRON__SHARED,
+        PATINA__SHARED,
+        RUBBER__SHARED,
+        STEEL__SHARED,
+    ],
 }
 

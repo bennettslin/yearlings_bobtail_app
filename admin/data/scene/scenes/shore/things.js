@@ -22,7 +22,6 @@ export default {
         [YELLOW_TAPED_GRILL]: {
             yIndex: 5,
             xPosition: 9.5,
-            scaleFactor: 0.3,
         },
     },
     [FLAT]: {
