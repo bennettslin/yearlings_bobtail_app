@@ -5,6 +5,7 @@ import cx from 'classnames'
 const PreviewerDescription = ({
     kilobytes,
     presenceDisplayName,
+    scaleFactor,
     sharedStyle,
     hideInMobile,
     className,
@@ -56,6 +57,16 @@ const PreviewerDescription = ({
             <div
                 {...{
                     className: cx(
+                        'PreviewerDescription__scaleFactor',
+                        'PreviewerDescription__child'
+                    ),
+                }}
+            >
+                {`scaleFactor: ${scaleFactor}`}
+            </div>
+            <div
+                {...{
+                    className: cx(
                         'PreviewerDescription__data',
                         'PreviewerDescription__child'
                     ),
@@ -70,6 +81,7 @@ const PreviewerDescription = ({
 PreviewerDescription.propTypes = {
     kilobytes: PropTypes.number,
     presenceDisplayName: PropTypes.string,
+    scaleFactor: PropTypes.number,
     sharedStyle: PropTypes.oneOfType([
         PropTypes.array,
         PropTypes.string,

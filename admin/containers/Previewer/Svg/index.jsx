@@ -191,7 +191,9 @@ class PreviewerSvg extends PureComponent {
             return null
         }
 
-        const sharedStyle = this.getSharedStyle(),
+        const
+            sharedStyle = this.getSharedStyle(),
+            { scaleFactor } = this.getArrangement(),
             svgChild = (
                 <InlineSvg
                     notAbsoluteFullContainer
@@ -232,6 +234,7 @@ class PreviewerSvg extends PureComponent {
                     {...{
                         kilobytes,
                         presenceDisplayName,
+                        scaleFactor,
                         sharedStyle,
                     }}
                 />
