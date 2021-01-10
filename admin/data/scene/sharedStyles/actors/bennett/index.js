@@ -81,6 +81,7 @@ import { GO_KART__SHARED } from '../../../../../../app/constants/scene/sharedSty
 import {
     BRACELET__SHARED,
     CAFETERIA__SHARED,
+    GHOST__SHARED,
     LIZ_PURSE__SHARED,
     MESSENGER_BAG__SHARED,
     MIRIAM_CONDOM__SHARED,
@@ -148,8 +149,8 @@ export default {
     [LEAVING_CRUMBLED]: null,
     [CORD_SIDE]: BRACELET__SHARED,
     [CORD_REAR]: BRACELET__SHARED,
-    [PAST]: null,
-    [FUTURE]: null,
+    [PAST]: GHOST__SHARED,
+    [FUTURE]: GHOST__SHARED,
     [REMOVING_PANTS]: null,
     [INFIRM]: HOSPITAL_LINENS__SHARED,
     [DISPOSING_CONDOM]: MIRIAM_CONDOM__SHARED,

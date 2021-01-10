@@ -19,12 +19,11 @@
         * Responsive [x]
 
 ## VS Code
-* This section is all handled by the *prepSvg* macro.
-    * In VS Code, stall *macros* extension by geddski.
+* This section is completely handled by the *prepSvg* macro.
     * Apply macro in file. (Command-Shift-Option-J)
 
 1. Delete *id* and *xmlns* attributes in top-level <svg> tag.
-2. Delete entire style (<defs>) section.
+2. Delete entire *<defs>* style section.
 3. Delete all *class* attributes.
     * Select all occurrences of find... (Command-Shift-L)
     * Be careful not to select any closing angle brackets.

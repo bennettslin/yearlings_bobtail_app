@@ -1,6 +1,5 @@
 {
     "[json]": {
-
         "editor.quickSuggestions": {
             "strings": true
         },
@@ -10,8 +9,15 @@
         ]
     },
     "macros": {
+        /**
+         * VS Code extension.
+         * Install *macros* by geddski.
+         * https://github.com/geddski/macros
+         *
+         * List of VS Code commands.
+         * https://gist.github.com/skfarhat/4e88ef386c93b9dceb98121d9457edbf
+         */
         "testMacro": [
-            "editor.action.insertLineBefore"
         ],
         "prepSvg": [
             /* Remove xmlns metadata. */
@@ -47,10 +53,11 @@
             "cursorRightSelect",
             "deleteLeft",
 
-            /* Remove styles. */
+            /* Remove entire styles field. */
             "cursorTop",
             "editor.action.insertLineBefore",
-            {"command": "type", "args": {"text": "      }\n\n"}},
+            "editor.action.insertLineBefore",
+            {"command": "type", "args": {"text": "      }"}},
             "cursorTop",
             "cursorRightSelect",
             "cursorRightSelect",
@@ -61,11 +68,12 @@
             "cursorRightSelect",
             "editor.action.selectHighlights",
             "cursorDownSelect",
-            "cursorDownSelect",
             "editor.action.deleteLines",
+            "editor.action.deleteLines",
+
             "cursorTop",
             "editor.action.insertLineBefore",
-            {"command": "type", "args": {"text": "      "}},
+            {"command": "type", "args": {"text": "      ."}},
             "cursorTop",
             "cursorRightSelect",
             "cursorRightSelect",
@@ -73,17 +81,64 @@
             "cursorRightSelect",
             "cursorRightSelect",
             "cursorRightSelect",
+            "cursorWordRightSelect",
             "editor.action.selectHighlights",
             "editor.action.deleteLines",
+
             "cursorTop",
-            {"command": "type", "args": {"text": "defs>\n"}},
+            "editor.action.insertLineBefore",
+            {"command": "type", "args": {"text": "        fill"}},
+            "cursorTop",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorWordRightSelect",
+            "editor.action.selectHighlights",
+            "editor.action.deleteLines",
+
+            "cursorTop",
+            "editor.action.insertLineBefore",
+            {"command": "type", "args": {"text": "        stroke"}},
+            "cursorTop",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorWordRightSelect",
+            "editor.action.selectHighlights",
+            "editor.action.deleteLines",
+
+            "cursorTop",
+            "editor.action.insertLineBefore",
+            {"command": "type", "args": {"text": "        opacity"}},
+            "cursorTop",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorRightSelect",
+            "cursorWordRightSelect",
+            "editor.action.selectHighlights",
+            "editor.action.deleteLines",
+
+            "cursorTop",
+            "editor.action.insertLineBefore",
+            {"command": "type", "args": {"text": "defs>"}},
             "cursorTop",
             "cursorWordRightSelect",
             "cursorWordRightSelect",
             "editor.action.selectHighlights",
             "editor.action.deleteLines",
+
             "cursorTop",
-            {"command": "type", "args": {"text": "style>\n"}},
+            "editor.action.insertLineBefore",
+            {"command": "type", "args": {"text": "style>"}},
             "cursorTop",
             "cursorWordRightSelect",
             "cursorWordRightSelect",
@@ -134,6 +189,7 @@
             "cursorLeftSelect",
             "deleteLeft",
 
+            /* Save file . */
             "workbench.action.files.save"
         ]
     }
