@@ -20,14 +20,14 @@ export default {
         },
         [STAGE_LIGHTS]: {
             yIndex: 1,
-            xPosition: 3,
-            zOffset: 4,
+            xPosition: 2.8,
+            zOffset: 3.5,
         },
     },
     [FIXTURE]: {
         [STEPLADDER]: {
             yIndex: 1,
-            xPosition: 5.8,
+            xPosition: 6,
         },
         [MANNEQUIN]: {
             yIndex: 1,
@@ -35,7 +35,7 @@ export default {
         },
         [PUSH_BROOM__BACKSTAGE]: {
             yIndex: 1,
-            xPosition: 9.3,
+            xPosition: 9,
         },
     },
 }

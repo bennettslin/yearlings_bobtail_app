@@ -43,13 +43,11 @@ export default {
         [PLAYGROUND_BALL]: {
             yIndex: 4,
             xPosition: 1.5,
-            scaleFactor: 0.25,
             zOffset: 1,
         },
         [SAFEWAY_BAG]: {
             yIndex: 5,
             xPosition: 9.8,
-            scaleFactor: 0.25,
         },
     },
     [FLAT]: {

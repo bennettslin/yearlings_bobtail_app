@@ -80,7 +80,6 @@ export const THINGS_BATHROOM_SINGING = {
         [RECORD_PLAYER_STOOL]: {
             yIndex: 4,
             xPosition: 7.7,
-            scaleFactor: 0.25,
         },
     },
 }

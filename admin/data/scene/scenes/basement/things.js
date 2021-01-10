@@ -15,7 +15,6 @@ import {
     DRUMS_STACKED__BASEMENT,
     GUITAR_CASE_UPRIGHT,
 } from '../../../../../app/constants/scene/things/fixtures'
-import { ACTOR_DEFAULT_SCALE_FACTOR } from '../../../../../app/constants/scene'
 import {
     MILK_CRATE__ANA,
     MILK_CRATE__BENNETT,
@@ -52,17 +51,14 @@ export default {
         [BASEMENT_BEER_CASE]: {
             yIndex: 5,
             xPosition: 1.5,
-            scaleFactor: ACTOR_DEFAULT_SCALE_FACTOR,
         },
         [BASEMENT_BEER_MARA]: {
             yIndex: 5,
             xPosition: 4.1,
-            scaleFactor: ACTOR_DEFAULT_SCALE_FACTOR,
         },
         [BASEMENT_BEER_BENNETT]: {
             yIndex: 5,
             xPosition: 7.1,
-            scaleFactor: ACTOR_DEFAULT_SCALE_FACTOR,
         },
     },
     [PANEL]: {
