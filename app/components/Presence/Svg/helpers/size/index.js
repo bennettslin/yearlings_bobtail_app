@@ -4,18 +4,39 @@ import {
     ACTOR,
     ACTOR_DEFAULT_SCALE_FACTOR,
 } from '../../../../../constants/scene'
-import { FURNITURE } from '../../../../../constants/scene/things'
+import {
+    // BACKDROP,
+    // BUBBLE,
+    // CARDBOARD,
+    // CUTOUT,
+    // DOOR,
+    // FIXTURE,
+    // FLAT,
+    FURNITURE,
+    // PANEL,
+    // PUPPET,
+} from '../../../../../constants/scene/things'
 
-const getPresenceScaleFactor = ({ presenceType, scaleFactor = 1 }) => {
+const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
     if (presenceType === ACTOR) {
         return ACTOR_DEFAULT_SCALE_FACTOR / 16.23
     }
 
     // TODO: Get rid of this once all things have had scale factors adjusted.
     if (
+        // presenceType === BACKDROP ||
+        // presenceType === BUBBLE ||
+        // presenceType === CARDBOARD ||
+        // presenceType === CUTOUT ||
+        // presenceType === DOOR ||
+        // presenceType === FIXTURE ||
+        // presenceType === FLAT ||
         presenceType === FURNITURE
+        // presenceType === PANEL ||
+        // presenceType === PUPPET
     ) {
-        return scaleFactor
+        // Illustrator files are 10x scale.
+        return scaleFactor / 10
     }
 
     return scaleFactor / 16.23
@@ -26,7 +47,7 @@ export const getSizeForPresence = ({
     viewBoxWidth,
     viewBoxHeight,
     yIndex,
-    scaleFactor,
+    scaleFactor = 1,
     trimBottom = 0,
 
 }) => {
