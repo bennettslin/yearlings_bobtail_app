@@ -14,7 +14,7 @@ export default {
     },
     [FIXTURE]: {
         [PUSH_BROOM__TUNNEL]: {
-            yIndex: 2,
+            yIndex: 1,
             xPosition: 4,
         },
     },

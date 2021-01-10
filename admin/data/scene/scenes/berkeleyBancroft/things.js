@@ -50,7 +50,6 @@ export const THINGS_BERKELEY_BANCROFT_VEGAN = {
         [GHOST_ODIN_CAMPUS]: {
             yIndex: 5,
             xPosition: 6,
-            scaleFactor: 0.2,
         },
     },
 }

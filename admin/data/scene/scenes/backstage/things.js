@@ -21,7 +21,6 @@ export default {
         [STAGE_LIGHTS]: {
             yIndex: 1,
             xPosition: 3,
-            scaleFactor: 0.28,
             zOffset: 4,
         },
     },
@@ -29,12 +28,10 @@ export default {
         [STEPLADDER]: {
             yIndex: 1,
             xPosition: 5.8,
-            scaleFactor: 0.4,
         },
         [MANNEQUIN]: {
             yIndex: 1,
             xPosition: 7.5,
-            scaleFactor: 0.35,
         },
         [PUSH_BROOM__BACKSTAGE]: {
             yIndex: 1,

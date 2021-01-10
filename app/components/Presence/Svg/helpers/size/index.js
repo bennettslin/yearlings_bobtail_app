@@ -5,13 +5,13 @@ import {
     ACTOR_DEFAULT_SCALE_FACTOR,
     BUBBLE_DEFAULT_SCALE_FACTOR,
     DOOR_DEFAULT_SCALE_FACTOR,
-    FIXTURE_DEFAULT_SCALE_FACTOR,
+    // FIXTURE_DEFAULT_SCALE_FACTOR,
     FURNITURE_DEFAULT_SCALE_FACTOR,
 } from '../../../../../constants/scene'
 import {
     BUBBLE,
     DOOR,
-    FIXTURE,
+    // FIXTURE,
     FURNITURE,
 } from '../../../../../constants/scene/things'
 
@@ -38,9 +38,9 @@ const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
         return DOOR_DEFAULT_SCALE_FACTOR
     }
 
-    if (presenceType === FIXTURE) {
-        return FIXTURE_DEFAULT_SCALE_FACTOR
-    }
+    // if (presenceType === FIXTURE) {
+    //     return FIXTURE_DEFAULT_SCALE_FACTOR
+    // }
 
     if (presenceType === FURNITURE) {
         return FURNITURE_DEFAULT_SCALE_FACTOR

@@ -47,7 +47,6 @@ export default {
         [GHOST_ODIN_ALLEY]: {
             yIndex: 5,
             xPosition: 8,
-            scaleFactor: 0.2,
         },
     },
 }

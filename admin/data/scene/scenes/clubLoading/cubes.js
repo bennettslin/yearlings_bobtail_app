@@ -33,7 +33,6 @@ export default {
             hslaColours: [
                 [G],
                 [V, F],
-                [V, F],
                 [V],
             ],
             zIndices: [

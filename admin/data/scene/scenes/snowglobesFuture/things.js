@@ -19,7 +19,6 @@ import {
     LIZ_COUCH__FUTURE,
 } from '../../../../../app/constants/scene/things/panels'
 import { OPAL_COUCH__FUTURE } from '../../../../../app/constants/scene/things/puppets'
-import { ACTOR_DEFAULT_SCALE_FACTOR } from '../../../../../app/constants/scene'
 
 export default {
     [CARDBOARD]: {
@@ -53,7 +52,6 @@ export default {
         [RECORDING_BEERS]: {
             yIndex: 1,
             xPosition: 7.2,
-            scaleFactor: ACTOR_DEFAULT_SCALE_FACTOR,
         },
     },
     [PANEL]: {

@@ -17,7 +17,6 @@ export default {
         [GHOST_ODIN_CLUB]: {
             yIndex: 5,
             xPosition: 3.3,
-            scaleFactor: 0.2,
         },
     },
 }

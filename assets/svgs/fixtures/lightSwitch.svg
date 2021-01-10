@@ -1,6 +1,6 @@
-<svg viewBox="0 0 152.63 264.68">
-  <rect class="oakLighter" x="1" y="1" width="150.63" height="262.68"/>
-  <rect class="oakMediumLight" x="67.44" y="96.71" width="17.75" height="71.25"/>
-  <polygon class="oakLight" points="65.44 110.15 87.19 110.15 85.19 137.22 67.44 137.22 65.44 110.15"/>
-  <polygon class="oakLightest" points="65.44 110.15 87.19 110.15 85.19 96.72 67.44 96.72 65.44 110.15"/>
+<svg viewBox="0 0 47.19 80.8">
+  <rect class="oakLighter" x="1" y="1" width="45.19" height="78.8"/>
+  <rect class="oakMediumLight" x="20.93" y="29.71" width="5.32" height="21.38"/>
+  <polygon class="oakLight" points="20.33 33.75 26.86 33.75 26.26 41.87 20.93 41.87 20.33 33.75"/>
+  <polygon class="oakLightest" points="20.33 33.75 26.86 33.75 26.26 29.71 20.93 29.71 20.33 33.75"/>
 </svg>

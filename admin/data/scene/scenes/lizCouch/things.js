@@ -242,12 +242,10 @@ export const THINGS_LIZ_COUCH_PEAFOWL = {
         [PEACOCK]: {
             yIndex: 4,
             xPosition: 8,
-            scaleFactor: 0.25,
         },
         [PEAHEN]: {
             yIndex: 4,
             xPosition: 6,
-            scaleFactor: 0.25,
         },
     },
 }
