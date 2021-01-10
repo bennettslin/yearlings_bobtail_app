@@ -96,7 +96,6 @@ export default {
         [BENNETT_BED]: {
             yIndex: 5,
             xPosition: 7.5,
-            scaleFactor: 0.25,
         },
     },
 }

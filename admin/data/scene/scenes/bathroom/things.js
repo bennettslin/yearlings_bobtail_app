@@ -44,7 +44,6 @@ export default {
         [BATHTUB]: {
             yIndex: 4,
             xPosition: 4.5,
-            scaleFactor: 0.3,
         },
     },
 }

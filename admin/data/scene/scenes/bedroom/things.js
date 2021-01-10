@@ -133,18 +133,15 @@ export default {
             yIndex: 4,
             xPosition: 3.15,
             zOffset: 0.01,
-            scaleFactor: 0.225,
             layerYIndex: 3,
         },
         [BEDROOM_STOOL]: {
             yIndex: 5,
             xPosition: 4.6,
-            scaleFactor: 0.4,
         },
         [CAPTAIN_BED]: {
             yIndex: 5,
             xPosition: 7.5,
-            scaleFactor: 0.2,
         },
     },
 }

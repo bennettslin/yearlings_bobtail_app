@@ -32,7 +32,6 @@ export default {
         [CAVE_SHADOWS]: {
             yIndex: 2,
             xPosition: 5.9,
-            scaleFactor: 0.69,
         },
         [STALACTITES]: {
             yIndex: 5,
