@@ -5,13 +5,18 @@
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
 
+# Bugs
+* Carousel annotation title access keys have large font size.
+
 # Immediate TODO:
 * Make all small bubbles use bubble configs.
+* Make j, k, n, m letters just navigate directly.
 * One more audit.
 * Show all instances of a presence in previewer.
 * Get rid of 16.23 magic number!
     * Make border 1px
     * Scale by 6.1614%
+
 * Consider getting rid of shared constants for people?
 * Allow for shared things (checkered flag, conveyor belt, dishroom sink, Bennett couch, Bennett lamp, Bennett bed, Bennett nightstand, stage lights, dishroom stuff, dishroom door, lancet pen, wedding)
 
