@@ -29,7 +29,10 @@ import {
 } from '../../../../app/components/Presence/Svg/helpers/size'
 import { getCompoundActorStyleIfNeeded } from '../../../../app/components/Presence/Svg/helpers/sharedStyle'
 
-import { ACTOR } from '../../../../app/constants/scene'
+import {
+    ACTOR,
+    ILLUSTRATOR_SCALE_FACTOR,
+} from '../../../../app/constants/scene'
 import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'
 import { CUSTOM_THING_INSTANCES } from '../../../constants/things'
 
@@ -95,7 +98,7 @@ class PreviewerSvg extends PureComponent {
                 })
 
             this.setState({
-                previewerHeight: Math.max(50, adjustedHeight),
+                previewerHeight: adjustedHeight / ILLUSTRATOR_SCALE_FACTOR,
                 kilobytes,
             })
 

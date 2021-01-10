@@ -3,6 +3,7 @@ import { Y_INDEX_SCALE_FACTORS } from '../../../../../constants/cubeRender'
 import {
     ACTOR,
     ACTOR_DEFAULT_SCALE_FACTOR,
+    ILLUSTRATOR_SCALE_FACTOR,
 } from '../../../../../constants/scene'
 import {
     // BACKDROP,
@@ -35,8 +36,7 @@ const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
         // presenceType === PANEL ||
         // presenceType === PUPPET
     ) {
-        // Illustrator files are 10x scale.
-        return scaleFactor / 10
+        return scaleFactor * ILLUSTRATOR_SCALE_FACTOR
     }
 
     return scaleFactor / 16.23
