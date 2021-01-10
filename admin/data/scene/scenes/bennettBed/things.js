@@ -36,12 +36,11 @@ export default {
             yIndex: 1,
             xPosition: 5,
             zOffset: 1.875,
-            scaleFactor: 0.6,
+            scaleFactor: 0.86,
         },
         [NEIGHBOUR_DOOR]: {
             yIndex: 1,
             xPosition: 1,
-            scaleFactor: 0.6,
         },
         [BLINDS_INSIDE_OPEN]: {
             yIndex: 3,

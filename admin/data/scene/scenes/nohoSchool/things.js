@@ -34,7 +34,6 @@ export default {
         [NURSE_DOOR]: {
             yIndex: 3,
             xPosition: 8,
-            scaleFactor: 0.4,
             layerYIndex: 4,
         },
     },

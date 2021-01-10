@@ -30,7 +30,6 @@ export default {
             yIndex: 5,
             xPosition: 10.14,
             zOffset: 1.56,
-            scaleFactor: 0.6,
         },
     },
 }

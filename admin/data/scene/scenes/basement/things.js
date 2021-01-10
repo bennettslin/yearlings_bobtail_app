@@ -27,12 +27,9 @@ export default {
         [BASEMENT_DOOR_OPEN]: {
             yIndex: 2,
             xPosition: 2.275,
-            scaleFactor: 0.6,
             zOffset: 0.45,
         },
-        [DEFAULT_FENCE_BASEMENT]: {
-            scaleFactor: 0.5,
-        },
+        [DEFAULT_FENCE_BASEMENT]: {},
     },
     [FIXTURE]: {
         [BASS_CASE_UPRIGHT]: {

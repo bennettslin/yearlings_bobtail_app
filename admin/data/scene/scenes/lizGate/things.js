@@ -108,13 +108,11 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             yIndex: 4,
             xPosition: 6,
             zOffset: 0.09,
-            scaleFactor: 0.69,
         },
         [LIZ_GATE_OUTSIDE_OPEN]: {
             yIndex: 4,
             xPosition: 3.3,
             zOffset: -0.07,
-            scaleFactor: 0.69,
         },
     },
     [FLAT]: {

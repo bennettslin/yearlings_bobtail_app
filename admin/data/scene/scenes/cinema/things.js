@@ -43,7 +43,6 @@ export default {
         [CINEMA_DOORS]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.675,
         },
     },
 }

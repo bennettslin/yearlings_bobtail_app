@@ -37,7 +37,6 @@ export default {
             yIndex: 2,
             xPosition: 2.5,
             zOffset: 0.5,
-            scaleFactor: 0.6,
         },
     },
     [FIXTURE]: {

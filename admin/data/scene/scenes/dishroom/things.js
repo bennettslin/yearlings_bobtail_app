@@ -57,7 +57,6 @@ export default {
         [DISHROOM_DOOR]: {
             yIndex: 2,
             xPosition: 9,
-            scaleFactor: 0.6,
         },
     },
     [PANEL]: {

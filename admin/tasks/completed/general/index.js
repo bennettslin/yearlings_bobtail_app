@@ -5022,7 +5022,6 @@ export default [
     {
         taskName: `Patina colours.`,
         workedHours: 2,
-        neededHours: 2,
     },
     {
         taskName: `Svg macro.`,

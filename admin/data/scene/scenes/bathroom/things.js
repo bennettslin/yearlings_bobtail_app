@@ -36,9 +36,7 @@ export default {
         },
     },
     [DOOR]: {
-        [DEFAULT_FENCE_BATHROOM]: {
-            scaleFactor: 0.5,
-        },
+        [DEFAULT_FENCE_BATHROOM]: {},
     },
     [PANEL]: {
         [BATHTUB]: {

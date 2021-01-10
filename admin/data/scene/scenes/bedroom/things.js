@@ -99,19 +99,16 @@ export default {
     [DOOR]: {
         [BEDROOM_FENCE]: {
             zOffset: -0.5,
-            scaleFactor: 0.5,
         },
         [BEDROOM_BLINDS]: {
             yIndex: 3,
             xPosition: 2.8,
             zOffset: 0.125,
-            scaleFactor: 0.65,
         },
         [BEDROOM_BLINDS_OPEN]: {
             yIndex: 3,
             xPosition: 2.8,
             zOffset: 0.125,
-            scaleFactor: 0.65,
         },
     },
     [FIXTURE]: {
