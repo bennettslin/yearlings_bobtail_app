@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Ghost shackles for Bennett.`,
-        workedHours: 1,
-        neededHours: 5,
-    },
-    {
         taskName: `Hospital record stand.`,
         workedHours: 0,
         neededHours: 2,

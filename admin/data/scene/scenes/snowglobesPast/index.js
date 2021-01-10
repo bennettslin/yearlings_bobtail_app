@@ -10,8 +10,8 @@ export default {
     [BENNETT]: {
         [PAST]: {
             yIndex: 0,
-            xPosition: 1,
-            zOffset: 2.4,
+            xPosition: 0.6,
+            zOffset: 2.9,
         },
     },
     [FATHER]: {

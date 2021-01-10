@@ -11,7 +11,7 @@ export default {
     [ESTHER_MOTHER]: {
         [SOBBING_SHIELDING]: {
             yIndex: 4,
-            xPosition: 2.4,
+            xPosition: 2.2,
             zOffset: 2.6,
         },
     },

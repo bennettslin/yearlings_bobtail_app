@@ -48,8 +48,8 @@ export default {
         },
         [GHOST_SHACKLES]: {
             yIndex: 4,
-            xPosition: 6,
-            zOffset: 2.9,
+            xPosition: 6.2,
+            zOffset: 2.8,
         },
     },
 }

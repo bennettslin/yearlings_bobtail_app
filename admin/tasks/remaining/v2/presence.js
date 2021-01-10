@@ -34,4 +34,9 @@ export default [
         workedHours: 0,
         neededHours: 5,
     },
+    {
+        taskName: `Eventually have system to convert code in class name straight to hsla fill or stroke? Is this even possible?`,
+        workedHours: 0,
+        neededHours: 20,
+    },
 ]
