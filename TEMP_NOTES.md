@@ -7,7 +7,7 @@
 
 # Immediate TODO:
 * Make all small bubbles use bubble configs
-* Make sense of getSizeForPresence before doing rest of scale factor refactoring
+* Get rid of 16.23 magic number!
 * Consider getting rid of shared constants for people?
 * Allow for shared things (checkered flag, conveyor belt, dishroom sink, Bennett couch, Bennett lamp, Bennett bed, Bennett nightstand, stage lights, dishroom stuff, dishroom door, lancet pen, wedding)
 

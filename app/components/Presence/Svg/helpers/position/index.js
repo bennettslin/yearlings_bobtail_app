@@ -36,16 +36,17 @@ const _getTileCentreForPresence = ({
 }
 
 export const getXYForPresence = ({
-    zIndex,
-
     // Where to centre on the xIndex axis. Can be a float.
     xPosition = 5.5,
 
     // Where to position on the yIndex axis.
     yIndex,
+    adjustedHeight,
 
     // Where to position above the given zIndex. Default is the zIndex.
+    zIndex,
     zOffset,
+
 }) => {
 
     const {
@@ -60,7 +61,7 @@ export const getXYForPresence = ({
         }),
 
         x = xPercentage,
-        y = yPercentage
+        y = yPercentage - adjustedHeight / 2
 
     return {
         x,

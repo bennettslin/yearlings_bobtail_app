@@ -4,18 +4,14 @@ import {
     ACTOR,
     ACTOR_DEFAULT_SCALE_FACTOR,
 } from '../../../../../constants/scene'
-
-// Illustrator artboards are 1623 by 1082.
-const
-    ARTBOARD_WIDTH = 1623 / 100,
-    ARTBOARD_HEIGHT = 1082 / 100
+// import { DOOR } from '../../../../../constants/scene/things'
 
 const getPresenceScaleFactor = ({ presenceType, scaleFactor = 1 }) => {
     if (presenceType === ACTOR) {
-        return ACTOR_DEFAULT_SCALE_FACTOR
+        return ACTOR_DEFAULT_SCALE_FACTOR / 16.23
     }
 
-    return scaleFactor
+    return scaleFactor / 16.23
 }
 
 export const getSizeForPresence = ({
@@ -28,23 +24,14 @@ export const getSizeForPresence = ({
 
 }) => {
     const
-        validYIndex = getValidYIndex(yIndex),
-        presenceScaleFactor = getPresenceScaleFactor({
+        finalScaleFactor = getPresenceScaleFactor({
             presenceType,
             scaleFactor,
-        }),
-        finalScaleFactor = presenceScaleFactor * Y_INDEX_SCALE_FACTORS[validYIndex],
-        adjustedWidth = viewBoxWidth * finalScaleFactor / ARTBOARD_WIDTH,
-        adjustedHeight =
-            viewBoxHeight *
-            finalScaleFactor / ARTBOARD_HEIGHT *
-
-            // Don't show this much of the presence.
-            (1 - trimBottom)
+        }) * Y_INDEX_SCALE_FACTORS[getValidYIndex(yIndex)]
 
     return {
-        adjustedWidth,
-        adjustedHeight,
+        adjustedWidth: viewBoxWidth * finalScaleFactor,
+        adjustedHeight: viewBoxHeight * finalScaleFactor * (1 - trimBottom),
     }
 }
 

@@ -71,9 +71,10 @@ const PresenceSvg = ({
             x: adjustedLeft,
             y: adjustedTop,
         } = getXYForPresence({
-            zIndex: finalZIndex,
-            yIndex,
             xPosition,
+            yIndex,
+            adjustedHeight,
+            zIndex: finalZIndex,
             zOffset,
         }),
         presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
