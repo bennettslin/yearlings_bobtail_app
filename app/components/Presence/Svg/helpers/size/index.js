@@ -4,11 +4,18 @@ import {
     ACTOR,
     ACTOR_DEFAULT_SCALE_FACTOR,
 } from '../../../../../constants/scene'
-// import { DOOR } from '../../../../../constants/scene/things'
+import { FURNITURE } from '../../../../../constants/scene/things'
 
 const getPresenceScaleFactor = ({ presenceType, scaleFactor = 1 }) => {
     if (presenceType === ACTOR) {
         return ACTOR_DEFAULT_SCALE_FACTOR / 16.23
+    }
+
+    // TODO: Get rid of this once all things have had scale factors adjusted.
+    if (
+        presenceType === FURNITURE
+    ) {
+        return scaleFactor
     }
 
     return scaleFactor / 16.23
