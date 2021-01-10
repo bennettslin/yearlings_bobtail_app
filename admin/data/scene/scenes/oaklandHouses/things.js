@@ -54,16 +54,19 @@ export const THINGS_OAKLAND_HOUSES_GOLDEN = {
             yIndex: 2,
             xPosition: 2.19,
             zOffset: 7.3,
+            scaleFactor: 1.33,
         },
         [BUBBLE_MEDIUM__GOLDEN]: {
             yIndex: 2,
             xPosition: 1.65,
             zOffset: 7.3,
+            scaleFactor: 1.33,
         },
         [BUBBLE_LARGE__GOLDEN]: {
             yIndex: 2,
             xPosition: 0.75,
             zOffset: 6.63,
+            scaleFactor: 1.33,
         },
     },
 }

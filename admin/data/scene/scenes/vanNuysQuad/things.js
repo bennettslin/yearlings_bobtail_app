@@ -22,14 +22,12 @@ export default {
             xPosition: 2.75,
             zOffset: 2.5,
             rotate: 270,
-            scaleFactor: 0.25,
             flipHorizontal: true,
         },
         [SKETCH_ESCAPE_POD]: {
             ...SKETCH_CONFIG,
             xPosition: 2.75,
             zOffset: 3.5,
-            scaleFactor: 0.3,
         },
     },
     [CARDBOARD]: {

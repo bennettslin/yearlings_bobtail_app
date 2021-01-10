@@ -180,7 +180,6 @@ export const THINGS_BEDROOM_GUILTY = {
             yIndex: 5,
             xPosition: 3,
             zOffset: 1.5,
-            scaleFactor: 0.25,
         },
         [SKETCH_DOGS_ROCKET]: {
             ...SKETCH_CONFIG,

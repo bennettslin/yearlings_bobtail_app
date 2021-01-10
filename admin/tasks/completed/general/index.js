@@ -5028,8 +5028,4 @@ export default [
         taskName: `Svg macro.`,
         workedHours: 4,
     },
-    {
-        taskName: `Ghost shackles for Bennett.`,
-        workedHours: 5,
-    },
 ]

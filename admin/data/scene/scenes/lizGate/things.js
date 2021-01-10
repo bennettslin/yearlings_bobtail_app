@@ -37,19 +37,16 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             yIndex: 5,
             xPosition: 6.72,
             zOffset: 5.7,
-            scaleFactor: 0.3,
         },
         [BUBBLE_MEDIUM__GO_KART]: {
             yIndex: 5,
             xPosition: 7.44,
             zOffset: 5.5,
-            scaleFactor: 0.3,
         },
         [BUBBLE_SMALL__GO_KART]: {
             yIndex: 5,
             xPosition: 7.4,
             zOffset: 5.2,
-            scaleFactor: 0.3,
         },
         [THOUGHT_GO_KART]: {
             yIndex: 5,

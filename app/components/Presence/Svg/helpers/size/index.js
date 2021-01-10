@@ -3,15 +3,9 @@ import { Y_INDEX_SCALE_FACTORS } from '../../../../../constants/cubeRender'
 import {
     ACTOR,
     ACTOR_DEFAULT_SCALE_FACTOR,
-    BUBBLE_DEFAULT_SCALE_FACTOR,
     DOOR_DEFAULT_SCALE_FACTOR,
-    FURNITURE_DEFAULT_SCALE_FACTOR,
 } from '../../../../../constants/scene'
-import {
-    BUBBLE,
-    DOOR,
-    FURNITURE,
-} from '../../../../../constants/scene/things'
+import { DOOR } from '../../../../../constants/scene/things'
 
 // Illustrator artboards are 1623 by 1082.
 const
@@ -28,16 +22,8 @@ const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
         return ACTOR_DEFAULT_SCALE_FACTOR
     }
 
-    if (presenceType === BUBBLE) {
-        return BUBBLE_DEFAULT_SCALE_FACTOR
-    }
-
     if (presenceType === DOOR) {
         return DOOR_DEFAULT_SCALE_FACTOR
-    }
-
-    if (presenceType === FURNITURE) {
-        return FURNITURE_DEFAULT_SCALE_FACTOR
     }
 
     return 1

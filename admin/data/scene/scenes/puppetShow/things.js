@@ -117,13 +117,11 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             xPosition: 8.25,
             zOffset: 1.5,
             rotate: 270,
-            scaleFactor: 0.25,
         },
         [SKETCH_TOGETHER]: {
             ...SKETCH_CONFIG,
             xPosition: 8.25,
             zOffset: 2.375,
-            scaleFactor: 0.35,
         },
     },
     [PUPPET]: {
@@ -162,13 +160,11 @@ export const THINGS_PUPPET_SHOW_END = {
             xPosition: 2.75,
             zOffset: 1.5,
             rotate: 270,
-            scaleFactor: 0.25,
         },
         [SKETCH_APART]: {
             ...SKETCH_CONFIG,
             xPosition: 2.75,
             zOffset: 2.5,
-            scaleFactor: 0.4,
         },
     },
     [PUPPET]: {

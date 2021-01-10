@@ -21,7 +21,6 @@ export default {
         [ESTHER_SPEECH]: {
             yIndex: 3,
             xPosition: 8.2,
-            scaleFactor: 0.45,
         },
     },
     [CUTOUT]: {

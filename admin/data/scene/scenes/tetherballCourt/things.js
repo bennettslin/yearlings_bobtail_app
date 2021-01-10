@@ -20,16 +20,19 @@ export default {
             yIndex: 0,
             xPosition: 10.2,
             zOffset: 8,
+            scaleFactor: 1.33,
         },
         [BUBBLE_MEDIUM__RIGHT]: {
             yIndex: 0,
             xPosition: 10.7,
             zOffset: 7.6,
+            scaleFactor: 1.33,
         },
         [BUBBLE_LARGE__RIGHT]: {
             yIndex: 0,
             xPosition: 11,
             zOffset: 6.45,
+            scaleFactor: 1.33,
         },
     },
     [CUTOUT]: {

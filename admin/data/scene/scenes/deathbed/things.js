@@ -47,16 +47,19 @@ export default {
             yIndex: 0,
             xPosition: 2.51,
             zOffset: 7,
+            scaleFactor: 1.33,
         },
         [BUBBLE_MEDIUM__DEATHBED]: {
             yIndex: 0,
             xPosition: 2,
             zOffset: 7,
+            scaleFactor: 1.33,
         },
         [BUBBLE_LARGE__DEATHBED]: {
             yIndex: 0,
             xPosition: 1.1,
             zOffset: 6.42,
+            scaleFactor: 1.33,
         },
     },
     [CUTOUT]: {
@@ -113,16 +116,19 @@ export const THINGS_DEATHBED_CREMATED = {
             yIndex: 0,
             xPosition: 7,
             zOffset: 4.65,
+            scaleFactor: 1.33,
         },
         [BUBBLE_MEDIUM__TENNIS]: {
             yIndex: 0,
             xPosition: 7.5,
             zOffset: 4.25,
+            scaleFactor: 1.33,
         },
         [BUBBLE_LARGE__TENNIS]: {
             yIndex: 0,
             xPosition: 8.2,
             zOffset: 3.35,
+            scaleFactor: 1.33,
         },
     },
     [FLAT]: {
@@ -140,16 +146,19 @@ export const THINGS_DEATHBED_DREAM = {
             yIndex: 0,
             xPosition: 7,
             zOffset: 5,
+            scaleFactor: 1.33,
         },
         [BUBBLE_MEDIUM__INVERSE]: {
             yIndex: 0,
             xPosition: 7.95,
             zOffset: 5,
+            scaleFactor: 1.33,
         },
         [BUBBLE_SMALL__INVERSE]: {
             yIndex: 0,
             xPosition: 8.43,
             zOffset: 4.9,
+            scaleFactor: 1.33,
         },
     },
 }

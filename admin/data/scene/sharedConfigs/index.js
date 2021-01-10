@@ -2,7 +2,6 @@ import { TOP } from '../../../../app/constants/transition'
 
 const BUBBLE_CONFIG = {
     yIndex: 5,
-    scaleFactor: 0.3,
     transitionKey: TOP,
 }
 

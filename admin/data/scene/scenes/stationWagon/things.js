@@ -23,7 +23,6 @@ export default {
             yIndex: 1,
             xPosition: 2.2,
             zOffset: 4.6,
-            scaleFactor: 0.46,
         },
         [CONSTELLATION_SIBLING]: {
             yIndex: 1,

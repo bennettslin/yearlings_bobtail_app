@@ -27,16 +27,19 @@ export default {
             yIndex: 0,
             xPosition: 0,
             zOffset: 6.5,
+            scaleFactor: 1.33,
         },
         [BUBBLE_MEDIUM__LEFT]: {
             yIndex: 0,
             xPosition: 0.3,
             zOffset: 7.6,
+            scaleFactor: 1.33,
         },
         [BUBBLE_SMALL__LEFT]: {
             yIndex: 0,
             xPosition: 0.8,
             zOffset: 8,
+            scaleFactor: 1.33,
         },
     },
     [FIXTURE]: {
