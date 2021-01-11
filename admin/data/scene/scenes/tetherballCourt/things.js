@@ -13,26 +13,28 @@ import {
     CAMPUS_TREE_DOUBLE__TETHERBALL,
 } from '../../../../../app/constants/scene/things/cutouts'
 import { SCHOOL_BUNGALOW } from '../../../../../app/constants/scene/things/flats'
+import {
+    BUBBLE_LARGE_CONFIG,
+    BUBBLE_MEDIUM_CONFIG,
+    BUBBLE_SMALL_CONFIG
+} from '../../sharedConfigs'
 
 export default {
     [BUBBLE]: {
-        [BUBBLE_SMALL__RIGHT]: {
-            yIndex: 0,
-            xPosition: 10.2,
-            zOffset: 8,
-            scaleFactor: 1.33,
+        [BUBBLE_LARGE__RIGHT]: {
+            ...BUBBLE_LARGE_CONFIG,
+            xPosition: 9.92,
+            zOffset: 5.3,
         },
         [BUBBLE_MEDIUM__RIGHT]: {
-            yIndex: 0,
-            xPosition: 10.7,
-            zOffset: 7.6,
-            scaleFactor: 1.33,
+            ...BUBBLE_MEDIUM_CONFIG,
+            xPosition: 9.73,
+            zOffset: 6.25,
         },
-        [BUBBLE_LARGE__RIGHT]: {
-            yIndex: 0,
-            xPosition: 11,
-            zOffset: 6.45,
-            scaleFactor: 1.33,
+        [BUBBLE_SMALL__RIGHT]: {
+            ...BUBBLE_SMALL_CONFIG,
+            xPosition: 9.3,
+            zOffset: 6.6,
         },
     },
     [CUTOUT]: {

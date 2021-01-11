@@ -20,26 +20,28 @@ import {
     SCHOOLBUS_SEAT__RIGHT,
     SCHOOLBUS_EXTERIOR,
 } from '../../../../../app/constants/scene/things/panels'
+import {
+    BUBBLE_LARGE_CONFIG,
+    BUBBLE_MEDIUM_CONFIG,
+    BUBBLE_SMALL_CONFIG,
+} from '../../sharedConfigs'
 
 export default {
     [BUBBLE]: {
         [BUBBLE_LARGE__LEFT]: {
-            yIndex: 0,
-            xPosition: 0,
-            zOffset: 6.5,
-            scaleFactor: 1.33,
+            ...BUBBLE_LARGE_CONFIG,
+            xPosition: 1.05,
+            zOffset: 5.8,
         },
         [BUBBLE_MEDIUM__LEFT]: {
-            yIndex: 0,
-            xPosition: 0.3,
-            zOffset: 7.6,
-            scaleFactor: 1.33,
+            ...BUBBLE_MEDIUM_CONFIG,
+            xPosition: 1.3,
+            zOffset: 6.71,
         },
         [BUBBLE_SMALL__LEFT]: {
-            yIndex: 0,
-            xPosition: 0.8,
-            zOffset: 8,
-            scaleFactor: 1.33,
+            ...BUBBLE_SMALL_CONFIG,
+            xPosition: 1.7,
+            zOffset: 7.1,
         },
     },
     [FIXTURE]: {
