@@ -30,23 +30,28 @@ import {
     PUBLIC_FAR__LIZ_GATE,
     PUBLIC_NEAR__LIZ_GATE,
 } from '../../../../../app/constants/scene/things/flats'
+import {
+    BUBBLE_LARGE_CONFIG,
+    BUBBLE_MEDIUM_CONFIG,
+    BUBBLE_SMALL_CONFIG
+} from '../../sharedConfigs'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BUBBLE]: {
         [BUBBLE_LARGE__GO_KART]: {
-            yIndex: 5,
-            xPosition: 6.72,
-            zOffset: 5.7,
+            ...BUBBLE_LARGE_CONFIG,
+            xPosition: 6.70,
+            zOffset: 5.65,
         },
         [BUBBLE_MEDIUM__GO_KART]: {
-            yIndex: 5,
-            xPosition: 7.44,
-            zOffset: 5.5,
+            ...BUBBLE_MEDIUM_CONFIG,
+            xPosition: 7.4,
+            zOffset: 5.44,
         },
         [BUBBLE_SMALL__GO_KART]: {
-            yIndex: 5,
-            xPosition: 7.4,
-            zOffset: 5.2,
+            ...BUBBLE_SMALL_CONFIG,
+            xPosition: 7.39,
+            zOffset: 5.16,
         },
         [THOUGHT_GO_KART]: {
             yIndex: 5,
