@@ -33,6 +33,11 @@ import {
     HOSPITAL_BED,
     HOSPITAL_RECORD_STAND,
 } from '../../../../../app/constants/scene/things/panels'
+import {
+    BUBBLE_LARGE_CONFIG,
+    BUBBLE_MEDIUM_CONFIG,
+    BUBBLE_SMALL_CONFIG,
+} from '../../sharedConfigs'
 
 export default {
     [BACKDROP]: {
@@ -43,23 +48,20 @@ export default {
         },
     },
     [BUBBLE]: {
-        [BUBBLE_SMALL__DEATHBED]: {
-            yIndex: 0,
-            xPosition: 2.51,
-            zOffset: 7,
-            scaleFactor: 1.33,
+        [BUBBLE_LARGE__DEATHBED]: {
+            ...BUBBLE_LARGE_CONFIG,
+            xPosition: 1.6,
+            zOffset: 5.2,
         },
         [BUBBLE_MEDIUM__DEATHBED]: {
-            yIndex: 0,
-            xPosition: 2,
-            zOffset: 7,
-            scaleFactor: 1.33,
+            ...BUBBLE_MEDIUM_CONFIG,
+            xPosition: 2.25,
+            zOffset: 5.9,
         },
-        [BUBBLE_LARGE__DEATHBED]: {
-            yIndex: 0,
-            xPosition: 1.1,
-            zOffset: 6.42,
-            scaleFactor: 1.33,
+        [BUBBLE_SMALL__DEATHBED]: {
+            ...BUBBLE_SMALL_CONFIG,
+            xPosition: 2.7,
+            zOffset: 5.9,
         },
     },
     [CUTOUT]: {
@@ -112,23 +114,21 @@ export const THINGS_DEATHBED_CREMATED = {
         },
     },
     [BUBBLE]: {
-        [BUBBLE_SMALL__TENNIS]: {
-            yIndex: 0,
-            xPosition: 7,
-            zOffset: 4.65,
-            scaleFactor: 1.33,
+        [BUBBLE_LARGE__TENNIS]: {
+            ...BUBBLE_LARGE_CONFIG,
+            xPosition: 7.63,
+            zOffset: 3.42,
+            layerYIndex: 0,
         },
         [BUBBLE_MEDIUM__TENNIS]: {
-            yIndex: 0,
-            xPosition: 7.5,
-            zOffset: 4.25,
-            scaleFactor: 1.33,
+            ...BUBBLE_MEDIUM_CONFIG,
+            xPosition: 6.97,
+            zOffset: 4.1,
         },
-        [BUBBLE_LARGE__TENNIS]: {
-            yIndex: 0,
-            xPosition: 8.2,
-            zOffset: 3.35,
-            scaleFactor: 1.33,
+        [BUBBLE_SMALL__TENNIS]: {
+            ...BUBBLE_SMALL_CONFIG,
+            xPosition: 6.54,
+            zOffset: 4.4,
         },
     },
     [FLAT]: {
@@ -143,22 +143,19 @@ export const THINGS_DEATHBED_CREMATED = {
 export const THINGS_DEATHBED_DREAM = {
     [BUBBLE]: {
         [BUBBLE_LARGE__INVERSE]: {
-            yIndex: 0,
-            xPosition: 7,
-            zOffset: 5,
-            scaleFactor: 1.33,
+            ...BUBBLE_LARGE_CONFIG,
+            xPosition: 6.92,
+            zOffset: 3.8,
         },
         [BUBBLE_MEDIUM__INVERSE]: {
-            yIndex: 0,
-            xPosition: 7.95,
-            zOffset: 5,
-            scaleFactor: 1.33,
+            ...BUBBLE_MEDIUM_CONFIG,
+            xPosition: 7.72,
+            zOffset: 4.1,
         },
         [BUBBLE_SMALL__INVERSE]: {
-            yIndex: 0,
-            xPosition: 8.43,
-            zOffset: 4.9,
-            scaleFactor: 1.33,
+            ...BUBBLE_SMALL_CONFIG,
+            xPosition: 8.17,
+            zOffset: 4.1,
         },
     },
 }

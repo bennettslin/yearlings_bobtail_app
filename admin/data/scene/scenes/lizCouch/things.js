@@ -120,8 +120,8 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
         },
         [BUBBLE_MEDIUM__TCHOTCHKES]: {
             ...BUBBLE_MEDIUM_CONFIG,
-            xPosition: 4.1,
-            zOffset: 2.26,
+            xPosition: 4.07,
+            zOffset: 2.23,
         },
         [BUBBLE_SMALL__TCHOTCHKES]: {
             ...BUBBLE_SMALL_CONFIG,
@@ -161,22 +161,22 @@ export const THINGS_LIZ_COUCH_OPENING = {
         [BUBBLE_LARGE__DISHROOM]: {
             ...BUBBLE_LARGE_CONFIG,
             xPosition: 4.95,
-            zOffset: 5.55,
+            zOffset: 5.52,
         },
         [BUBBLE_MEDIUM__DISHROOM]: {
             ...BUBBLE_MEDIUM_CONFIG,
             xPosition: 5.62,
-            zOffset: 5.3,
+            zOffset: 5.27,
         },
         [BUBBLE_SMALL__DISHROOM]: {
             ...BUBBLE_SMALL_CONFIG,
             xPosition: 5.75,
-            zOffset: 5,
+            zOffset: 4.97,
         },
         [LIZ_THOUGHT_DISHROOM]: {
             yIndex: 5,
-            xPosition: 2.8,
-            zOffset: 3.1,
+            xPosition: 2.82,
+            zOffset: 3.08,
         },
     },
 }
@@ -202,17 +202,17 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
     [BUBBLE]: {
         [BUBBLE_LARGE__REUNION]: {
             ...BUBBLE_LARGE_CONFIG,
-            xPosition: 5.1,
+            xPosition: 5,
             zOffset: 2.1,
         },
         [BUBBLE_MEDIUM__REUNION]: {
             ...BUBBLE_MEDIUM_CONFIG,
-            xPosition: 4.45,
-            zOffset: 1.8,
+            xPosition: 4.38,
+            zOffset: 1.78,
         },
         [BUBBLE_SMALL__REUNION]: {
             ...BUBBLE_SMALL_CONFIG,
-            xPosition: 4,
+            xPosition: 3.93,
             zOffset: 1.8,
         },
         [LIZ_THOUGHT_REUNION]: {
