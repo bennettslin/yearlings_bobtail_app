@@ -7,11 +7,10 @@
 
 # Bugs
 * Carousel annotation title access keys have large font size.
+* Fix trim bottom logic.
 
 # Immediate TODO:
-* Make thought medium align with inverse bubbles. Also reunion thought. Also adjust Amy, cinema, and waiting bubbles.
 * Make j, k, n, m letters just navigate directly.
-* Fix trim bottom logic.
 * One more audit.
 * Show all instances of a presence in previewer.
 * Get rid of 16.23 magic number!

@@ -217,8 +217,8 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
         },
         [LIZ_THOUGHT_REUNION]: {
             yIndex: 5,
-            xPosition: 4.5,
-            zOffset: 3,
+            xPosition: 4.28,
+            zOffset: 2.9,
             layerYIndex: 4,
         },
     },

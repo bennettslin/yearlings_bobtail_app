@@ -44,7 +44,6 @@ export default {
         [THOUGHT_MEDIUM__DEATHBED]: {
             yIndex: 0,
             xPosition: 3.25,
-            scaleFactor: 0.55,
         },
     },
     [BUBBLE]: {
@@ -110,25 +109,24 @@ export const THINGS_DEATHBED_CREMATED = {
         [THOUGHT_SMALL]: {
             yIndex: 0,
             xPosition: 9.5,
-            scaleFactor: 0.5,
         },
     },
     [BUBBLE]: {
         [BUBBLE_LARGE__TENNIS]: {
             ...BUBBLE_LARGE_CONFIG,
-            xPosition: 7.63,
-            zOffset: 3.42,
+            xPosition: 7.71,
+            zOffset: 3.37,
             layerYIndex: 0,
         },
         [BUBBLE_MEDIUM__TENNIS]: {
             ...BUBBLE_MEDIUM_CONFIG,
-            xPosition: 6.97,
-            zOffset: 4.1,
+            xPosition: 7.06,
+            zOffset: 4.05,
         },
         [BUBBLE_SMALL__TENNIS]: {
             ...BUBBLE_SMALL_CONFIG,
-            xPosition: 6.54,
-            zOffset: 4.4,
+            xPosition: 6.63,
+            zOffset: 4.35,
         },
     },
     [FLAT]: {

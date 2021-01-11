@@ -109,23 +109,23 @@ export const THINGS_LIZ_BED_LOOK_BACK = {
     [BUBBLE]: {
         [BUBBLE_LARGE__AMY]: {
             ...BUBBLE_LARGE_CONFIG,
-            xPosition: 5.7,
-            zOffset: 3.19,
+            xPosition: 5.85,
+            zOffset: 3.25,
         },
         [BUBBLE_MEDIUM__AMY]: {
             ...BUBBLE_MEDIUM_CONFIG,
-            xPosition: 6.45,
-            zOffset: 3.1,
+            xPosition: 6.6,
+            zOffset: 3.18,
         },
         [BUBBLE_SMALL__AMY]: {
             ...BUBBLE_SMALL_CONFIG,
-            xPosition: 6.9,
-            zOffset: 3.35,
+            xPosition: 7.05,
+            zOffset: 3.43,
         },
         [THOUGHT_AMY]: {
             yIndex: 5,
-            xPosition: 5,
-            zOffset: 4,
+            xPosition: 5.1,
+            zOffset: 4.05,
         },
     },
     [FIXTURE]: {

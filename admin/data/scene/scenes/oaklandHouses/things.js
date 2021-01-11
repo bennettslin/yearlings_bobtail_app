@@ -51,7 +51,6 @@ export const THINGS_OAKLAND_HOUSES_GOLDEN = {
         [THOUGHT_MEDIUM__GOLDEN]: {
             yIndex: 2,
             xPosition: 3.25,
-            scaleFactor: 0.55,
         },
     },
     [BUBBLE]: {
