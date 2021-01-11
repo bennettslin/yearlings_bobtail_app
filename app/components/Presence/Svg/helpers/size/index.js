@@ -7,7 +7,7 @@ import {
 } from '../../../../../constants/scene'
 import {
     // BACKDROP,
-    // BUBBLE,
+    BUBBLE,
     // CARDBOARD,
     // CUTOUT,
     // DOOR,
@@ -26,7 +26,7 @@ const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
     // TODO: Get rid of this once all things have had scale factors adjusted.
     if (
         // presenceType === BACKDROP ||
-        // presenceType === BUBBLE ||
+        presenceType === BUBBLE ||
         // presenceType === CARDBOARD ||
         // presenceType === CUTOUT ||
         // presenceType === DOOR ||

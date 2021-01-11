@@ -15,7 +15,7 @@
 * Show all instances of a presence in previewer.
 * Get rid of 16.23 magic number!
     * Make border 1px
-    * Scale by 6.1614%
+    * Scale by 61.6143%
 
 * Consider getting rid of shared constants for people?
 * Allow for shared things (checkered flag, conveyor belt, dishroom sink, Bennett couch, Bennett lamp, Bennett bed, Bennett nightstand, stage lights, dishroom stuff, dishroom door, lancet pen, wedding)
