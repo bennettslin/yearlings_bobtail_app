@@ -15,6 +15,11 @@ import {
     OAKLAND_HOUSE_RIGHT,
 } from '../../../../../app/constants/scene/things/flats'
 import { VOLKSWAGEN } from '../../../../../app/constants/scene/things/panels'
+import {
+    BUBBLE_LARGE_CONFIG,
+    BUBBLE_MEDIUM_CONFIG,
+    BUBBLE_SMALL_CONFIG,
+} from '../../sharedConfigs'
 
 export default {
     [FLAT]: {
@@ -50,23 +55,20 @@ export const THINGS_OAKLAND_HOUSES_GOLDEN = {
         },
     },
     [BUBBLE]: {
-        [BUBBLE_SMALL__GOLDEN]: {
-            yIndex: 2,
-            xPosition: 2.19,
-            zOffset: 7.3,
-            scaleFactor: 1.33,
+        [BUBBLE_LARGE__GOLDEN]: {
+            ...BUBBLE_SMALL_CONFIG,
+            xPosition: 1.2,
+            zOffset: 5.63,
         },
         [BUBBLE_MEDIUM__GOLDEN]: {
-            yIndex: 2,
-            xPosition: 1.65,
-            zOffset: 7.3,
-            scaleFactor: 1.33,
+            ...BUBBLE_MEDIUM_CONFIG,
+            xPosition: 1.86,
+            zOffset: 6.3,
         },
-        [BUBBLE_LARGE__GOLDEN]: {
-            yIndex: 2,
-            xPosition: 0.75,
-            zOffset: 6.63,
-            scaleFactor: 1.33,
+        [BUBBLE_SMALL__GOLDEN]: {
+            ...BUBBLE_LARGE_CONFIG,
+            xPosition: 2.31,
+            zOffset: 6.3,
         },
     },
 }
