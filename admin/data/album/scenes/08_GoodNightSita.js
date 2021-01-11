@@ -72,7 +72,6 @@ import {
     STEPLADDER,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
-    DISTANT_BUILDINGS,
     GO_KART_TRACK,
     PUBLIC_FAR__LIZ_GATE,
     PUBLIC_NEAR__LIZ_GATE,
@@ -198,11 +197,10 @@ export default [
                 },
             },
             [BACKDROP]: {
-                [DRIVING_BACKDROP]: true,
                 [OAKLAND_SIDE__LEVEL]: true,
+                [DRIVING_BACKDROP]: true,
             },
             [FLAT]: {
-                [DISTANT_BUILDINGS]: true,
                 [GO_KART_TRACK]: true,
             },
             [PANEL]: {
