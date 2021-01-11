@@ -4,12 +4,10 @@ import cx from 'classnames'
 import scrollIntoView from 'scroll-into-view'
 import PreviewerSvg from './Svg'
 import PreviewerDashboard from './Dashboard'
-import {
-    capitaliseForClassName,
-    convertPresenceKeyToClassName,
-} from '../../../app/helpers/format'
+import { capitaliseForClassName } from '../../../app/helpers/format'
 import { getDocument } from '../../../app/utils/browser'
 import { accessPresence } from '../../utils/access'
+import { logSvgCount } from '../../utils/log'
 import {
     getPresenceFromStorage,
     getPresenceFromQueryStrings,
@@ -48,6 +46,8 @@ class Previewer extends PureComponent {
 
     componentDidMount() {
         logMount('Previewer')
+        logSvgCount()
+
         this.focusPreviewerElement()
 
         // TODO: Scrolling doesn't always work because svg hasn't rendered yet.
@@ -125,7 +125,7 @@ class Previewer extends PureComponent {
         presenceKey = this.state.presenceKey,
     } = {}) => {
         const element = getDocument().querySelector(
-            `.${capitaliseForClassName(presenceType)} .${convertPresenceKeyToClassName(presenceKey)}`
+            `.${capitaliseForClassName(presenceType)} .${presenceKey}`
         )
 
         scrollIntoView(element, { time: 100 })

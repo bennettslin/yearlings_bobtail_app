@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 const PreviewerDescription = ({
     kilobytes,
-    presenceDisplayName,
+    presenceKey,
     scaleFactor,
     sharedStyle,
     hideInMobile,
@@ -34,7 +34,7 @@ const PreviewerDescription = ({
                     ),
                 }}
             >
-                {presenceDisplayName}
+                {presenceKey}
             </div>
             <div
                 {...{
@@ -82,7 +82,7 @@ const PreviewerDescription = ({
 
 PreviewerDescription.propTypes = {
     kilobytes: PropTypes.number,
-    presenceDisplayName: PropTypes.string,
+    presenceKey: PropTypes.string,
     scaleFactor: PropTypes.number,
     sharedStyle: PropTypes.oneOfType([
         PropTypes.array,

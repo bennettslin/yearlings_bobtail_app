@@ -12,7 +12,6 @@
 # Immediate TODO:
 * Make j, k, n, m letters just navigate directly.
 * One more audit.
-* Show all instances of a presence in previewer.
 * Get rid of 16.23 magic number!
     * Make border 1px
     * Scale by 61.6143%

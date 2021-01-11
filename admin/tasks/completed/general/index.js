@@ -5027,4 +5027,8 @@ export default [
         taskName: `Svg macro.`,
         workedHours: 4,
     },
+    {
+        taskName: `Show duplicate instances in previewer.`,
+        workedHours: 1,
+    },
 ]

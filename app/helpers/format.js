@@ -28,6 +28,7 @@ const discardAfterDoubleUnderscore = word => {
     return word.split('__')[0]
 }
 
+// TODO: This won't be needed once no presence has its own custom styling.
 export const convertPresenceKeyToClassName = (word = '') => {
     return discardAfterDoubleUnderscore(word)
 }

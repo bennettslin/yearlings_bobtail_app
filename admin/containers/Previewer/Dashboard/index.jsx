@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import PreviewerDescription from '../Description'
-import { convertPresenceKeyToClassName } from '../../../../app/helpers/format'
 import {
     getPreviewerSvgMapForActor,
     getPreviewerSvgMapForThing,
@@ -39,9 +38,7 @@ const PreviewerDashboard = ({
     return (
         <div
             {...{
-                className: cx(
-                    'PreviewerDashboard'
-                ),
+                className: 'PreviewerDashboard',
             }}
         >
             <select
@@ -77,7 +74,7 @@ const PreviewerDashboard = ({
                                 value: presenceKey,
                             }}
                         >
-                            {convertPresenceKeyToClassName(presenceKey)}
+                            {presenceKey}
                         </option>
                     ))}
             </select>

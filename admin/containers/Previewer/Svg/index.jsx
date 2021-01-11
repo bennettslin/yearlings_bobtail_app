@@ -74,7 +74,7 @@ class PreviewerSvg extends PureComponent {
         const { presenceKey } = this.props,
 
             element = getDocument().getElementsByClassName(
-                convertPresenceKeyToClassName(presenceKey)
+                presenceKey
             )[0]
 
         if (element) {
@@ -85,7 +85,7 @@ class PreviewerSvg extends PureComponent {
                     viewBoxHeight,
                 } = getViewBoxSize(svgString),
                 {
-                    scaleFactor,
+                    scaleFactor = 1,
                     trimBottom,
                 } = this.getArrangement(),
                 { adjustedHeight } = getSizeForPresence({
@@ -98,7 +98,10 @@ class PreviewerSvg extends PureComponent {
                 })
 
             this.setState({
-                previewerHeight: adjustedHeight / ILLUSTRATOR_SCALE_FACTOR,
+                previewerHeight:
+                    adjustedHeight *
+                    scaleFactor /
+                    ILLUSTRATOR_SCALE_FACTOR,
                 kilobytes,
             })
 
@@ -182,8 +185,6 @@ class PreviewerSvg extends PureComponent {
                 didLoad,
             } = this.state,
 
-            presenceDisplayName = convertPresenceKeyToClassName(presenceKey),
-
             svgMap = isActor ?
                 getPreviewerSvgMapForActor(presenceType) :
                 getPreviewerSvgMapForThing(presenceType),
@@ -212,7 +213,8 @@ class PreviewerSvg extends PureComponent {
                             height: `${previewerHeight.toFixed(2)}%`,
                         },
                         svgClassName: cx(
-                            presenceDisplayName,
+                            presenceKey,
+                            convertPresenceKeyToClassName(presenceKey),
                             getSharedClassNames(sharedStyle)
                         ),
                         title: convertPresenceKeyToTitle(presenceKey),
@@ -236,7 +238,7 @@ class PreviewerSvg extends PureComponent {
                 <PreviewerDescription
                     {...{
                         kilobytes,
-                        presenceDisplayName,
+                        presenceKey,
                         scaleFactor,
                         sharedStyle,
                     }}

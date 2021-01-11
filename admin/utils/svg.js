@@ -6,8 +6,6 @@ import {
 import { WHOLE_ACTOR_INSTANCES } from '../constants/actors'
 import { CUSTOM_THING_INSTANCES } from '../constants/things'
 
-import { convertPresenceKeyToClassName } from '../../app/helpers/format'
-
 const getSvgMapForMultipleTypes = ({ isActor, presenceType }) => {
     // Actors and custom lists may include difference presence types.
     const
@@ -44,25 +42,5 @@ export const getPreviewerSvgMapForThing = (presenceType) => {
         return getSvgMapForMultipleTypes({ presenceType })
     }
 
-    const presenceMap = getSvgMapForThing(presenceType)
-    if (!presenceMap) {
-        return null
-    }
-
-    const
-        duplicateKeys = {},
-        svgMap = {}
-
-    // Ensure that there are no duplicates.
-    Object.keys(presenceMap).forEach(rawPresenceKey => {
-        const presenceKey = convertPresenceKeyToClassName(rawPresenceKey)
-
-        // Only add one presence per duplicate.
-        if (!duplicateKeys[presenceKey]) {
-            svgMap[rawPresenceKey] = presenceMap[rawPresenceKey]
-            duplicateKeys[presenceKey] = true
-        }
-    })
-
-    return svgMap
+    return getSvgMapForThing(presenceType) || null
 }

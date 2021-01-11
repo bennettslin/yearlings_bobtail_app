@@ -7,7 +7,6 @@ import {
     getPreviewerSvgMapForThing,
 } from './svg'
 import { getWindow } from '../../app/utils/browser'
-import { convertPresenceKeyToClassName } from '../../app/helpers/format'
 import WHOLE_ACTORS_LIST from '../constants/actors'
 import THINGS_LIST from '../constants/things'
 
@@ -88,7 +87,7 @@ export const setPresenceInStorage = ({
     }
     if (presenceKey) {
         setInStorage(
-            `${prefix}Key`, convertPresenceKeyToClassName(presenceKey)
+            `${prefix}Key`, presenceKey
         )
     }
 }
@@ -97,7 +96,7 @@ export const setPresenceInQueryStrings = ({ presenceType, presenceKey }) => {
     const urlParams = new URLSearchParams(getWindow().location.search)
 
     urlParams.set('type', presenceType)
-    urlParams.set('key', convertPresenceKeyToClassName(presenceKey))
+    urlParams.set('key', presenceKey)
 
     getWindow().history.replaceState({}, '', `${getWindow().location.pathname}?${urlParams}`)
 }
