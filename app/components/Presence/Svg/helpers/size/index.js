@@ -6,7 +6,7 @@ import {
     ILLUSTRATOR_SCALE_FACTOR,
 } from '../../../../../constants/scene'
 import {
-    // BACKDROP,
+    BACKDROP,
     BUBBLE,
     // CARDBOARD,
     // CUTOUT,
@@ -25,7 +25,7 @@ const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
 
     // TODO: Get rid of this once all things have had scale factors adjusted.
     if (
-        // presenceType === BACKDROP ||
+        presenceType === BACKDROP ||
         presenceType === BUBBLE ||
         // presenceType === CARDBOARD ||
         // presenceType === CUTOUT ||

@@ -19,6 +19,7 @@
         * Responsive [x]
 
 ## VS Code
+
 * This section is completely handled by the *prepSvg* macro.
     * Apply macro in file. (Command-Shift-Option-J)
 
