@@ -69,7 +69,6 @@ export default {
             yIndex: 2,
             xPosition: 2,
             zOffset: -0.07,
-            scaleFactor: 0.25,
             layerYIndex: 3,
         },
     },

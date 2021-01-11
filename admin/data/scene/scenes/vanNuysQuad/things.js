@@ -22,11 +22,10 @@ export default {
             xPosition: 2.75,
             zOffset: 2.5,
             rotate: 270,
-            flipHorizontal: true,
         },
         [SKETCH_ESCAPE_POD]: {
             ...SKETCH_CONFIG,
-            xPosition: 2.75,
+            xPosition: 2.7,
             zOffset: 3.5,
         },
     },

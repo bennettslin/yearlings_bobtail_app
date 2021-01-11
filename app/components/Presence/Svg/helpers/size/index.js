@@ -15,7 +15,7 @@ import {
     // FLAT,
     FURNITURE,
     // PANEL,
-    // PUPPET,
+    PUPPET,
 } from '../../../../../constants/scene/things'
 
 const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
@@ -32,9 +32,9 @@ const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
         presenceType === DOOR ||
         // presenceType === FIXTURE ||
         // presenceType === FLAT ||
-        presenceType === FURNITURE
+        presenceType === FURNITURE ||
         // presenceType === PANEL ||
-        // presenceType === PUPPET
+        presenceType === PUPPET
     ) {
         return scaleFactor * ILLUSTRATOR_SCALE_FACTOR
     }

@@ -75,7 +75,6 @@ export default {
         [OPAL_COUCH__FUTURE]: {
             yIndex: 1,
             xPosition: 1,
-            scaleFactor: 0.2,
         },
     },
 }

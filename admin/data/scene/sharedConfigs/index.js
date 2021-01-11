@@ -26,5 +26,4 @@ export const SKETCH_CONFIG = {
 
 export const PUPPET_FAMILY_CONFIG = {
     yIndex: 3,
-    scaleFactor: 0.25,
 }

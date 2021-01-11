@@ -69,7 +69,6 @@ export default {
         [TRAFFIC_LIGHT_REAR]: {
             xPosition: 1.5,
             zOffset: -3,
-            flipHorizontal: true,
         },
     },
     [DOOR]: {
@@ -151,7 +150,6 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
         [OPAL_COUCH__ROOM]: {
             yIndex: 3,
             xPosition: 1,
-            scaleFactor: 0.2,
         },
     },
 }
@@ -230,8 +228,6 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
             yIndex: 2,
             xPosition: 7.85,
             zOffset: 2.5,
-            scaleFactor: 0.2,
-            flipHorizontal: true,
         },
     },
 }
