@@ -304,15 +304,15 @@ export default [
         workedHours: 1,
     },
     {
-        taskName: `tintinPoster`,
+        taskName: `posterTintin`,
         workedHours: 2,
     },
     {
-        taskName: 'nirvanaPoster',
+        taskName: 'posterNirvana',
         workedHours: 2,
     },
     {
-        taskName: 'leonardCohenPoster',
+        taskName: 'posterLeonardCohen',
         workedHours: 2,
     },
     {
@@ -432,7 +432,7 @@ export default [
         workedHours: 2,
     },
     {
-        taskName: 'earth and spaceStation',
+        taskName: 'earth and dogsSpaceStation',
         workedHours: 2,
     },
     {
@@ -498,7 +498,7 @@ export default [
         workedHours: 1,
     },
     {
-        taskName: `elliottSmithPoster`,
+        taskName: `posterElliottSmith`,
         workedHours: 2,
     },
     {

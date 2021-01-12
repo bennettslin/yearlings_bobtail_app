@@ -1,32 +1,32 @@
 import { CARDBOARD } from '../../../../app/constants/scene/things'
 
 import {
-    TINTIN_POSTER,
-    BLOOM_COUNTY_POSTER,
-    NIRVANA_POSTER,
-    LEONARD_COHEN_POSTER,
-    ELLIOTT_SMITH_POSTER,
+    POSTER_TINTIN,
+    POSTER_BLOOM_COUNTY,
+    POSTER_NIRVANA,
+    POSTER_LEONARD_COHEN,
+    POSTER_ELLIOTT_SMITH,
 } from '../../../../app/constants/scene/things/cardboards'
 
 export default [
     {
         type: CARDBOARD,
-        instance: TINTIN_POSTER,
+        instance: POSTER_TINTIN,
     },
     {
         type: CARDBOARD,
-        instance: BLOOM_COUNTY_POSTER,
+        instance: POSTER_BLOOM_COUNTY,
     },
     {
         type: CARDBOARD,
-        instance: NIRVANA_POSTER,
+        instance: POSTER_NIRVANA,
     },
     {
         type: CARDBOARD,
-        instance: LEONARD_COHEN_POSTER,
+        instance: POSTER_LEONARD_COHEN,
     },
     {
         type: CARDBOARD,
-        instance: ELLIOTT_SMITH_POSTER,
+        instance: POSTER_ELLIOTT_SMITH,
     },
 ]

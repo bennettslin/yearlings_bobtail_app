@@ -48,8 +48,8 @@ import {
     OAKLAND_SIDE__LIZ_COUCH,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
-    NAS_ALBUM,
-    ELLIOTT_SMITH_POSTER,
+    ALBUM_NAS,
+    POSTER_ELLIOTT_SMITH,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     MONITOR_FRONT__LEFT,
@@ -159,8 +159,8 @@ export default [
                 },
             },
             [CARDBOARD]: {
-                [NAS_ALBUM]: true,
-                [ELLIOTT_SMITH_POSTER]: true,
+                [ALBUM_NAS]: true,
+                [POSTER_ELLIOTT_SMITH]: true,
             },
             [DOOR]: {
                 [BASEMENT_DOOR_SIDE]: true,

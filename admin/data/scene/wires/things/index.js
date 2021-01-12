@@ -25,7 +25,7 @@ import {
     BENNETT_ODIN_DEPTHS,
     EARTH,
     DOGS_ROCKET,
-    SPACE_STATION,
+    DOGS_SPACE_STATION,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
     GHOST_ODIN_ALLEY,
@@ -120,7 +120,7 @@ export default {
                 { x: 0.69 },
             ],
         },
-        [SPACE_STATION]: {
+        [DOGS_SPACE_STATION]: {
             wires: [
                 { x: 0.275, y: 0.28 },
                 { x: 0.85, y: 0.28 },

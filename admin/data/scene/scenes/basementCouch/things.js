@@ -3,14 +3,14 @@ import {
     DOOR,
 } from '../../../../../app/constants/scene/things'
 import {
-    NAS_ALBUM,
-    ELLIOTT_SMITH_POSTER,
+    ALBUM_NAS,
+    POSTER_ELLIOTT_SMITH,
 } from '../../../../../app/constants/scene/things/cardboards'
 import { BASEMENT_DOOR_SIDE } from '../../../../../app/constants/scene/things/doors'
 
 export default {
     [CARDBOARD]: {
-        [NAS_ALBUM]: {
+        [ALBUM_NAS]: {
             yIndex: 2,
             xPosition: 8,
             scaleFactor: 0.15,
@@ -18,7 +18,7 @@ export default {
             rotateX: 10,
             skewX: 4,
         },
-        [ELLIOTT_SMITH_POSTER]: {
+        [POSTER_ELLIOTT_SMITH]: {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,

@@ -53,8 +53,8 @@ import {
     BUBBLE_SMALL__RIGHT,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
-    NIRVANA_POSTER,
-    POLICE_ALBUM,
+    POSTER_NIRVANA,
+    ALBUM_POLICE,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     ASH_CAN,
@@ -156,8 +156,8 @@ export default [
                 [BUBBLE_LARGE__RIGHT]: true,
             },
             [CARDBOARD]: {
-                [POLICE_ALBUM]: true,
-                [NIRVANA_POSTER]: true,
+                [ALBUM_POLICE]: true,
+                [POSTER_NIRVANA]: true,
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,

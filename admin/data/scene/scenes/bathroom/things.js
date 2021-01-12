@@ -5,7 +5,7 @@ import {
     FIXTURE,
     PANEL,
 } from '../../../../../app/constants/scene/things'
-import { JOHNNY_HORTON_ALBUM } from '../../../../../app/constants/scene/things/cardboards'
+import { ALBUM_JOHNNY_HORTON } from '../../../../../app/constants/scene/things/cardboards'
 import {
     MIRRORED_SINK,
     TOWEL_RACK,
@@ -59,7 +59,7 @@ export const THINGS_BATHROOM_BATHING = {
 
 export const THINGS_BATHROOM_SINGING = {
     [CARDBOARD]: {
-        [JOHNNY_HORTON_ALBUM]: {
+        [ALBUM_JOHNNY_HORTON]: {
             yIndex: 4,
             xPosition: 9,
             scaleFactor: 0.15,

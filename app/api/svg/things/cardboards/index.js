@@ -1,3 +1,7 @@
+import albumJohnnyHorton from '../../../../../assets/svgs/cardboards/albumJohnnyHorton'
+import albumNas from '../../../../../assets/svgs/cardboards/albumNas'
+import albumPolice from '../../../../../assets/svgs/cardboards/albumPolice'
+import albumTelevision from '../../../../../assets/svgs/cardboards/albumTelevision'
 import bennettMat from '../../../../../assets/svgs/cardboards/bennettMat'
 import bennettOdinBuoy from '../../../../../assets/svgs/cardboards/bennettOdinBuoy'
 import bennettOdinDepths from '../../../../../assets/svgs/cardboards/bennettOdinDepths'
@@ -6,27 +10,26 @@ import bennettOdinRickshaw from '../../../../../assets/svgs/cardboards/bennettOd
 import bennettShore from '../../../../../assets/svgs/cardboards/bennettShore'
 import bennettTaiwanGate from '../../../../../assets/svgs/cardboards/bennettTaiwanGate'
 import bennettTaiwanStairs from '../../../../../assets/svgs/cardboards/bennettTaiwanStairs'
-import bloomCountyPoster from '../../../../../assets/svgs/cardboards/bloomCountyPoster'
 import clipboard from '../../../../../assets/svgs/cardboards/clipboard'
 import codeBox from '../../../../../assets/svgs/cardboards/codeBox'
 import corkboard from '../../../../../assets/svgs/cardboards/corkboard'
 import dogsRocket from '../../../../../assets/svgs/cardboards/dogsRocket'
+import dogsSpaceStation from '../../../../../assets/svgs/cardboards/dogsSpaceStation'
 import earth from '../../../../../assets/svgs/cardboards/earth'
-import elliottSmithPoster from '../../../../../assets/svgs/cardboards/elliottSmithPoster'
-import gladiatorPoster from '../../../../../assets/svgs/cardboards/gladiatorPoster'
-import johnnyHortonAlbum from '../../../../../assets/svgs/cardboards/johnnyHortonAlbum'
-import leonardCohenPoster from '../../../../../assets/svgs/cardboards/leonardCohenPoster'
-import maraGladiatorPoster from '../../../../../assets/svgs/cardboards/maraGladiatorPoster'
-import maraMementoPoster from '../../../../../assets/svgs/cardboards/maraMementoPoster'
 import marqueeFrame from '../../../../../assets/svgs/cardboards/marqueeFrame'
-import nasAlbum from '../../../../../assets/svgs/cardboards/nasAlbum'
-import nirvanaPoster from '../../../../../assets/svgs/cardboards/nirvanaPoster'
 import odinMat from '../../../../../assets/svgs/cardboards/odinMat'
 import odinShore from '../../../../../assets/svgs/cardboards/odinShore'
 import odinTaiwanGate from '../../../../../assets/svgs/cardboards/odinTaiwanGate'
 import odinTaiwanStairs from '../../../../../assets/svgs/cardboards/odinTaiwanStairs'
 import painting from '../../../../../assets/svgs/cardboards/painting'
-import policeAlbum from '../../../../../assets/svgs/cardboards/policeAlbum'
+import posterBloomCounty from '../../../../../assets/svgs/cardboards/posterBloomCounty'
+import posterElliottSmith from '../../../../../assets/svgs/cardboards/posterElliottSmith'
+import posterGladiator from '../../../../../assets/svgs/cardboards/posterGladiator'
+import posterLeonardCohen from '../../../../../assets/svgs/cardboards/posterLeonardCohen'
+import posterMaraGladiator from '../../../../../assets/svgs/cardboards/posterMaraGladiator'
+import posterMaraMemento from '../../../../../assets/svgs/cardboards/posterMaraMemento'
+import posterNirvana from '../../../../../assets/svgs/cardboards/posterNirvana'
+import posterTintin from '../../../../../assets/svgs/cardboards/posterTintin'
 import progressChartEarly from '../../../../../assets/svgs/cardboards/progressChartEarly'
 import progressChartLate from '../../../../../assets/svgs/cardboards/progressChartLate'
 import seaSerpentLeft from '../../../../../assets/svgs/cardboards/seaSerpentLeft'
@@ -36,12 +39,13 @@ import snowglobeFutureReatta from '../../../../../assets/svgs/cardboards/snowglo
 import snowglobePast from '../../../../../assets/svgs/cardboards/snowglobePast'
 import snowglobePresent from '../../../../../assets/svgs/cardboards/snowglobePresent'
 import snowglobeSmall from '../../../../../assets/svgs/cardboards/snowglobeSmall'
-import spaceStation from '../../../../../assets/svgs/cardboards/spaceStation'
-import televisionAlbum from '../../../../../assets/svgs/cardboards/televisionAlbum'
-import tintinPoster from '../../../../../assets/svgs/cardboards/tintinPoster'
 import vanNuysPainting from '../../../../../assets/svgs/cardboards/vanNuysPainting'
 
 import {
+    ALBUM_JOHNNY_HORTON,
+    ALBUM_NAS,
+    ALBUM_POLICE,
+    ALBUM_TELEVISION,
     BENNETT_MAT,
     BENNETT_ODIN_BUOY,
     BENNETT_ODIN_DEPTHS,
@@ -50,30 +54,29 @@ import {
     BENNETT_SHORE,
     BENNETT_TAIWAN_GATE,
     BENNETT_TAIWAN_STAIRS,
-    BLOOM_COUNTY_POSTER,
     CLIPBOARD,
     CODE_BOX,
     CORKBOARD,
     DOGS_ROCKET,
+    DOGS_SPACE_STATION,
     EARTH__ROCKET,
     EARTH__STATION,
-    ELLIOTT_SMITH_POSTER,
-    GLADIATOR_POSTER,
-    JOHNNY_HORTON_ALBUM,
-    LEONARD_COHEN_POSTER,
-    MARA_GLADIATOR_POSTER,
-    MARA_MEMENTO_POSTER,
     MARQUEE_FRAME__GLADIATOR,
     MARQUEE_FRAME__MARA_GLADIATOR,
     MARQUEE_FRAME__MARA_MEMENTO,
-    NAS_ALBUM,
-    NIRVANA_POSTER,
     ODIN_MAT,
     ODIN_SHORE,
     ODIN_TAIWAN_GATE,
     ODIN_TAIWAN_STAIRS,
     PAINTING,
-    POLICE_ALBUM,
+    POSTER_BLOOM_COUNTY,
+    POSTER_ELLIOTT_SMITH,
+    POSTER_GLADIATOR,
+    POSTER_LEONARD_COHEN,
+    POSTER_MARA_GLADIATOR,
+    POSTER_MARA_MEMENTO,
+    POSTER_NIRVANA,
+    POSTER_TINTIN,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
     SEA_SERPENT_LEFT,
@@ -85,13 +88,14 @@ import {
     SNOWGLOBE_SMALL__FUTURE,
     SNOWGLOBE_SMALL__PAST,
     SNOWGLOBE_SMALL__PRESENT,
-    SPACE_STATION,
-    TELEVISION_ALBUM,
-    TINTIN_POSTER,
     VAN_NUYS_PAINTING,
 } from '../../../../constants/scene/things/cardboards'
 
 export default {
+    [ALBUM_JOHNNY_HORTON]: albumJohnnyHorton,
+    [ALBUM_NAS]: albumNas,
+    [ALBUM_POLICE]: albumPolice,
+    [ALBUM_TELEVISION]: albumTelevision,
     [BENNETT_MAT]: bennettMat,
     [BENNETT_ODIN_BUOY]: bennettOdinBuoy,
     [BENNETT_ODIN_DEPTHS]: bennettOdinDepths,
@@ -100,30 +104,29 @@ export default {
     [BENNETT_SHORE]: bennettShore,
     [BENNETT_TAIWAN_GATE]: bennettTaiwanGate,
     [BENNETT_TAIWAN_STAIRS]: bennettTaiwanStairs,
-    [BLOOM_COUNTY_POSTER]: bloomCountyPoster,
     [CLIPBOARD]: clipboard,
     [CODE_BOX]: codeBox,
     [CORKBOARD]: corkboard,
     [DOGS_ROCKET]: dogsRocket,
+    [DOGS_SPACE_STATION]: dogsSpaceStation,
     [EARTH__ROCKET]: earth,
     [EARTH__STATION]: earth,
-    [ELLIOTT_SMITH_POSTER]: elliottSmithPoster,
-    [GLADIATOR_POSTER]: gladiatorPoster,
-    [JOHNNY_HORTON_ALBUM]: johnnyHortonAlbum,
-    [LEONARD_COHEN_POSTER]: leonardCohenPoster,
-    [MARA_GLADIATOR_POSTER]: maraGladiatorPoster,
-    [MARA_MEMENTO_POSTER]: maraMementoPoster,
     [MARQUEE_FRAME__GLADIATOR]: marqueeFrame,
     [MARQUEE_FRAME__MARA_GLADIATOR]: marqueeFrame,
     [MARQUEE_FRAME__MARA_MEMENTO]: marqueeFrame,
-    [NAS_ALBUM]: nasAlbum,
-    [NIRVANA_POSTER]: nirvanaPoster,
     [ODIN_MAT]: odinMat,
     [ODIN_SHORE]: odinShore,
     [ODIN_TAIWAN_GATE]: odinTaiwanGate,
     [ODIN_TAIWAN_STAIRS]: odinTaiwanStairs,
     [PAINTING]: painting,
-    [POLICE_ALBUM]: policeAlbum,
+    [POSTER_BLOOM_COUNTY]: posterBloomCounty,
+    [POSTER_ELLIOTT_SMITH]: posterElliottSmith,
+    [POSTER_GLADIATOR]: posterGladiator,
+    [POSTER_LEONARD_COHEN]: posterLeonardCohen,
+    [POSTER_MARA_GLADIATOR]: posterMaraGladiator,
+    [POSTER_MARA_MEMENTO]: posterMaraMemento,
+    [POSTER_NIRVANA]: posterNirvana,
+    [POSTER_TINTIN]: posterTintin,
     [PROGRESS_CHART_EARLY]: progressChartEarly,
     [PROGRESS_CHART_LATE]: progressChartLate,
     [SEA_SERPENT_LEFT]: seaSerpentLeft,
@@ -135,9 +138,6 @@ export default {
     [SNOWGLOBE_SMALL__FUTURE]: snowglobeSmall,
     [SNOWGLOBE_SMALL__PAST]: snowglobeSmall,
     [SNOWGLOBE_SMALL__PRESENT]: snowglobeSmall,
-    [SPACE_STATION]: spaceStation,
-    [TELEVISION_ALBUM]: televisionAlbum,
-    [TINTIN_POSTER]: tintinPoster,
     [VAN_NUYS_PAINTING]: vanNuysPainting,
 }
 

@@ -72,16 +72,16 @@ import {
     CINEMA_THOUGHT_RECORDING,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
-    GLADIATOR_POSTER,
-    LEONARD_COHEN_POSTER,
-    MARA_GLADIATOR_POSTER,
-    MARA_MEMENTO_POSTER,
+    POSTER_GLADIATOR,
+    POSTER_LEONARD_COHEN,
+    POSTER_MARA_GLADIATOR,
+    POSTER_MARA_MEMENTO,
     MARQUEE_FRAME__GLADIATOR,
     MARQUEE_FRAME__MARA_GLADIATOR,
     MARQUEE_FRAME__MARA_MEMENTO,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
-    TELEVISION_ALBUM,
+    ALBUM_TELEVISION,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     MONITOR_FRONT__LEFT,
@@ -144,7 +144,7 @@ export default [
                 },
             },
             [CARDBOARD]: {
-                [LEONARD_COHEN_POSTER]: true,
+                [POSTER_LEONARD_COHEN]: true,
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
@@ -173,7 +173,7 @@ export default [
                 },
             },
             [CARDBOARD]: {
-                [TELEVISION_ALBUM]: true,
+                [ALBUM_TELEVISION]: true,
                 [PROGRESS_CHART_EARLY]: true,
             },
             [FIXTURE]: {
@@ -340,9 +340,9 @@ export default [
                 },
             },
             [CARDBOARD]: {
-                [MARA_MEMENTO_POSTER]: true,
+                [POSTER_MARA_MEMENTO]: true,
                 [MARQUEE_FRAME__MARA_MEMENTO]: true,
-                [MARA_GLADIATOR_POSTER]: true,
+                [POSTER_MARA_GLADIATOR]: true,
                 [MARQUEE_FRAME__MARA_GLADIATOR]: true,
             },
             [DOOR]: {
@@ -375,9 +375,9 @@ export default [
                 },
             },
             [CARDBOARD]: {
-                [MARA_MEMENTO_POSTER]: true,
+                [POSTER_MARA_MEMENTO]: true,
                 [MARQUEE_FRAME__MARA_MEMENTO]: true,
-                [MARA_GLADIATOR_POSTER]: true,
+                [POSTER_MARA_GLADIATOR]: true,
                 [MARQUEE_FRAME__MARA_GLADIATOR]: true,
             },
             [DOOR]: {
@@ -414,7 +414,7 @@ export default [
                 [CINEMA_THOUGHT_RECORDING]: true,
             },
             [CARDBOARD]: {
-                [GLADIATOR_POSTER]: true,
+                [POSTER_GLADIATOR]: true,
                 [MARQUEE_FRAME__GLADIATOR]: true,
             },
             [FLAT]: {

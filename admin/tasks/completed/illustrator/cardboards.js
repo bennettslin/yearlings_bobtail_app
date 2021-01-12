@@ -76,15 +76,15 @@ export default [
         workedHours: 1,
     },
     {
-        taskName: 'johnnyHortonAlbum',
+        taskName: 'albumJohnnyHorton',
         workedHours: 1,
     },
     {
-        taskName: 'policeAlbum',
+        taskName: 'albumPolice',
         workedHours: 1,
     },
     {
-        taskName: 'nasAlbum',
+        taskName: 'albumNas',
         workedHours: 1,
     },
     {
@@ -96,15 +96,15 @@ export default [
         workedHours: 1,
     },
     {
-        taskName: 'maraMementoPoster',
+        taskName: 'posterMaraMemento',
         workedHours: 1.5,
     },
     {
-        taskName: 'gladiatorPoster',
+        taskName: 'posterGladiator',
         workedHours: 1.5,
     },
     {
-        taskName: 'maraGladiatorPoster',
+        taskName: 'posterMaraGladiator',
         workedHours: 1.5,
     },
     {
@@ -112,27 +112,27 @@ export default [
         workedHours: 1,
     },
     {
-        taskName: 'tintinPoster',
+        taskName: 'posterTintin',
         workedHours: 1.5,
     },
     {
-        taskName: 'bloomCountyPoster',
+        taskName: 'posterBloomCounty',
         workedHours: 2,
     },
     {
-        taskName: 'leonardCohenPoster',
+        taskName: 'posterLeonardCohen',
         workedHours: 1.5,
     },
     {
-        taskName: 'nirvanaPoster',
+        taskName: 'posterNirvana',
         workedHours: 1.5,
     },
     {
-        taskName: 'elliottSmithPoster',
+        taskName: 'posterElliottSmith',
         workedHours: 1.5,
     },
     {
-        taskName: 'televisionAlbum',
+        taskName: 'albumTelevision',
         workedHours: 1,
     },
     {
@@ -140,7 +140,7 @@ export default [
         workedHours: 1,
     },
     {
-        taskName: 'spaceStation',
+        taskName: 'dogsSpaceStation',
         workedHours: 1.5,
     },
     {

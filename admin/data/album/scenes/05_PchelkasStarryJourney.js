@@ -70,12 +70,12 @@ import {
     SKETCH_ESCAPE_POD,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
-    BLOOM_COUNTY_POSTER,
+    POSTER_BLOOM_COUNTY,
     CORKBOARD,
     DOGS_ROCKET,
     EARTH__ROCKET,
     EARTH__STATION,
-    SPACE_STATION,
+    DOGS_SPACE_STATION,
     VAN_NUYS_PAINTING,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
@@ -132,7 +132,7 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [BLOOM_COUNTY_POSTER]: true,
+                [POSTER_BLOOM_COUNTY]: true,
             },
             [FURNITURE]: {
                 [CAPTAIN_BED_PILLOW]: true,
@@ -167,7 +167,7 @@ export default [
                 [SKETCH_DOGS_ROCKET]: true,
             },
             [CARDBOARD]: {
-                [BLOOM_COUNTY_POSTER]: true,
+                [POSTER_BLOOM_COUNTY]: true,
             },
             [DOOR]: {
                 [BEDROOM_BLINDS]: true,
@@ -200,7 +200,7 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [BLOOM_COUNTY_POSTER]: true,
+                [POSTER_BLOOM_COUNTY]: true,
             },
             [DOOR]: {
                 [BEDROOM_BLINDS_OPEN]: true,
@@ -274,7 +274,7 @@ export default [
             },
             [CARDBOARD]: {
                 [EARTH__STATION]: true,
-                [SPACE_STATION]: true,
+                [DOGS_SPACE_STATION]: true,
             },
             [CUTOUT]: {
                 [LEMON_TREE__BEDROOM]: true,

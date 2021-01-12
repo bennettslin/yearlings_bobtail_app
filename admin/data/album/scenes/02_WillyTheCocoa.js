@@ -62,7 +62,7 @@ import {
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
 } from '../../../../app/constants/scene/things/backdrops'
-import { TINTIN_POSTER } from '../../../../app/constants/scene/things/cardboards'
+import { POSTER_TINTIN } from '../../../../app/constants/scene/things/cardboards'
 import {
     CACTUS_DOUBLE__PORCH,
     CACTUS_SINGLE__PORCH,
@@ -215,7 +215,7 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [TINTIN_POSTER]: true,
+                [POSTER_TINTIN]: true,
             },
             [DOOR]: {
                 [BEDROOM_FENCE]: true,
@@ -288,7 +288,7 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [TINTIN_POSTER]: true,
+                [POSTER_TINTIN]: true,
             },
             [DOOR]: {
                 [BEDROOM_FENCE]: true,

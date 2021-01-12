@@ -48,7 +48,7 @@ import {
     VALLEY_FURTHER_BACKDROP,
 } from '../../../../app/constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../../../app/constants/scene/things/bubbles'
-import { JOHNNY_HORTON_ALBUM } from '../../../../app/constants/scene/things/cardboards'
+import { ALBUM_JOHNNY_HORTON } from '../../../../app/constants/scene/things/cardboards'
 import {
     FIRE_HYDRANT,
     LEMON_TREE__BATHROOM,
@@ -220,7 +220,7 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true,
             },
             [CARDBOARD]: {
-                [JOHNNY_HORTON_ALBUM]: true,
+                [ALBUM_JOHNNY_HORTON]: true,
             },
             [CUTOUT]: {
                 [LEMON_TREE__BATHROOM]: true,

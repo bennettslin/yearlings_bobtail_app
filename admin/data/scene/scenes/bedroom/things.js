@@ -13,12 +13,12 @@ import {
     SKETCHBOOK__DOGS_ROCKET,
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
-    TINTIN_POSTER,
-    BLOOM_COUNTY_POSTER,
+    POSTER_TINTIN,
+    POSTER_BLOOM_COUNTY,
     EARTH__ROCKET,
     DOGS_ROCKET,
     EARTH__STATION,
-    SPACE_STATION,
+    DOGS_SPACE_STATION,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
     LEMON_TREE__BEDROOM,
@@ -56,7 +56,7 @@ import { SKETCH_CONFIG } from '../../sharedConfigs'
 
 export default {
     [CARDBOARD]: {
-        [TINTIN_POSTER]: {
+        [POSTER_TINTIN]: {
             yIndex: 5,
             xPosition: 10,
             zOffset: 3.5,
@@ -67,7 +67,7 @@ export default {
             skewX: -15,
             skewY: 9,
         },
-        [BLOOM_COUNTY_POSTER]: {
+        [POSTER_BLOOM_COUNTY]: {
             yIndex: 5,
             xPosition: 10,
             zOffset: 3.5,
@@ -254,7 +254,7 @@ export const THINGS_BEDROOM_SHAKEN = {
             zOffset: 5.5,
             scaleFactor: 0.2,
         },
-        [SPACE_STATION]: {
+        [DOGS_SPACE_STATION]: {
             yIndex: 4,
             xPosition: 8,
             zOffset: 1.5,

@@ -10,7 +10,7 @@ import {
     CINEMA_THOUGHT_BUYING,
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
-    GLADIATOR_POSTER,
+    POSTER_GLADIATOR,
     MARQUEE_FRAME__GLADIATOR,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
@@ -48,7 +48,7 @@ export default {
         },
     },
     [CARDBOARD]: {
-        [GLADIATOR_POSTER]: {
+        [POSTER_GLADIATOR]: {
             yIndex: 4,
             xPosition: 1,
             zOffset: 2,

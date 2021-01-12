@@ -3,16 +3,16 @@ import {
     DOOR,
 } from '../../../../../app/constants/scene/things'
 import {
-    MARA_MEMENTO_POSTER,
+    POSTER_MARA_MEMENTO,
     MARQUEE_FRAME__MARA_MEMENTO,
-    MARA_GLADIATOR_POSTER,
+    POSTER_MARA_GLADIATOR,
     MARQUEE_FRAME__MARA_GLADIATOR,
 } from '../../../../../app/constants/scene/things/cardboards'
 import { CINEMA_DOORS } from '../../../../../app/constants/scene/things/doors'
 
 export default {
     [CARDBOARD]: {
-        [MARA_MEMENTO_POSTER]: {
+        [POSTER_MARA_MEMENTO]: {
             yIndex: 4,
             xPosition: 1,
             zOffset: 2,
@@ -25,7 +25,7 @@ export default {
             zOffset: 1.7,
             scaleFactor: 0.36,
         },
-        [MARA_GLADIATOR_POSTER]: {
+        [POSTER_MARA_GLADIATOR]: {
             yIndex: 4,
             xPosition: 10,
             zOffset: 2,

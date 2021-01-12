@@ -5,12 +5,12 @@ import {
     PANEL,
 } from '../../../../../app/constants/scene/things'
 import {
-    LEONARD_COHEN_POSTER,
-    NIRVANA_POSTER,
-    POLICE_ALBUM,
+    POSTER_LEONARD_COHEN,
+    POSTER_NIRVANA,
+    ALBUM_POLICE,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
-    TELEVISION_ALBUM,
+    ALBUM_TELEVISION,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
     BENNETT_RECORD_PLAYER,
@@ -90,7 +90,7 @@ export default {
 
 export const THINGS_BENNETT_COUCH_OPINION = {
     [CARDBOARD]: {
-        [POLICE_ALBUM]: {
+        [ALBUM_POLICE]: {
             yIndex: 2,
             xPosition: 8,
             scaleFactor: 0.15,
@@ -98,7 +98,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
             rotateX: 10,
             skewX: 4,
         },
-        [NIRVANA_POSTER]: {
+        [POSTER_NIRVANA]: {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
@@ -109,7 +109,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
 
 export const THINGS_BENNETT_COUCH_PONDERING = {
     [CARDBOARD]: {
-        [LEONARD_COHEN_POSTER]: {
+        [POSTER_LEONARD_COHEN]: {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
@@ -120,7 +120,7 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
 
 export const THINGS_BENNETT_COUCH_RUBIKS = {
     [CARDBOARD]: {
-        [TELEVISION_ALBUM]: {
+        [ALBUM_TELEVISION]: {
             yIndex: 2,
             xPosition: 8,
             scaleFactor: 0.15,
