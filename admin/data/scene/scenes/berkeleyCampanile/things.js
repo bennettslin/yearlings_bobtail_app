@@ -42,7 +42,6 @@ export default {
     [FLAT]: {
         [CAMPANILE]: {
             yIndex: 1,
-            xPosition: 5.5,
         },
         [BERKELEY_BUILDING_TALL]: {
             yIndex: 2,

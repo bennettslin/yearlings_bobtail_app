@@ -31,7 +31,6 @@ export default {
     [CUTOUT]: {
         [BUDDHA_SHRINE]: {
             yIndex: 4,
-            xPosition: 5.5,
         },
         [TAIWAN_FRIDGE]: {
             yIndex: 1,
@@ -48,7 +47,6 @@ export default {
     [PANEL]: {
         [BUDDHA_STAND]: {
             yIndex: 4,
-            xPosition: 5.5,
             zOffset: -1.54,
         },
     },

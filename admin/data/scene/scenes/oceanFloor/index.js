@@ -5,7 +5,6 @@ export default {
     [PRETEEN_BENNETT]: {
         [OCEAN_FLOOR]: {
             yIndex: 5,
-            xPosition: 5.5,
         },
     },
 }

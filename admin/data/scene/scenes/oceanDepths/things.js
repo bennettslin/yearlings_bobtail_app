@@ -19,11 +19,9 @@ export default {
     [FLAT]: {
         [OCEAN_BOTTOM_MIDDLE]: {
             yIndex: 1,
-            xPosition: 5.5,
         },
         [OCEAN_BOTTOM_NEAR]: {
             yIndex: 2,
-            xPosition: 5.5,
         },
     },
 }

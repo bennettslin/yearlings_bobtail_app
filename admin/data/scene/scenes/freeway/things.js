@@ -25,13 +25,11 @@ export default {
     [FLAT]: {
         [VALLEY_FREEWAY]: {
             yIndex: 1,
-            xPosition: 5.5,
         },
     },
     [PANEL]: {
         [FREEWAY_FENCE]: {
             yIndex: 3,
-            xPosition: 5.5,
         },
     },
 }

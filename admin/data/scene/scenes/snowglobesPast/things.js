@@ -30,7 +30,6 @@ export default {
     [FIXTURE]: {
         [TETHERBALL_POLE]: {
             yIndex: 3,
-            xPosition: 5.5,
         },
     },
     [PANEL]: {

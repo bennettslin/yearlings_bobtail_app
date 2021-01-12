@@ -9,14 +9,12 @@ export default {
     [BACKDROP]: {
         [PHARMACY_CEL]: {
             yIndex: 0,
-            xPosition: 5.5,
             scaleFactor: 0.575,
         },
     },
     [CUTOUT]: {
         [PHARMACY_AISLE]: {
             yIndex: 1,
-            xPosition: 5.5,
             scaleFactor: 0.475,
         },
     },

@@ -60,10 +60,8 @@ export default {
             zOffset: 3,
         },
         [THOUGHT_LARGE__LEFT]: {
-            xPosition: 5.5,
         },
         [THOUGHT_LARGE__RIGHT]: {
-            xPosition: 5.5,
             flipHorizontal: true,
         },
         [VALLEY_CLOSER_BACKDROP]: {},

@@ -43,7 +43,6 @@ export default {
     [FIXTURE]: {
         [DRUMKIT]: {
             yIndex: 1,
-            xPosition: 5.5,
             zOffset: -0.1,
             layerYIndex: 2,
         },

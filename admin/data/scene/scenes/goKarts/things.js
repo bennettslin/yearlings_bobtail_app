@@ -14,7 +14,6 @@ export default {
     [FLAT]: {
         [GO_KART_TRACK]: {
             yIndex: 1,
-            xPosition: 5.5,
         },
     },
     [PANEL]: {

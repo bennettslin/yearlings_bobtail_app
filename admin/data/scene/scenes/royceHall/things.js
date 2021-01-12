@@ -25,7 +25,6 @@ export default {
     [FLAT]: {
         [ROYCE_HALL]: {
             yIndex: 2,
-            xPosition: 5.5,
         },
     },
 }

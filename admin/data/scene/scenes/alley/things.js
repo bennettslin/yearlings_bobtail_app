@@ -39,7 +39,6 @@ export default {
     [FIXTURE]: {
         [BALLED_FOIL__ALLEY]: {
             yIndex: 4,
-            xPosition: 5.5,
             zOffset: 2.5,
         },
     },

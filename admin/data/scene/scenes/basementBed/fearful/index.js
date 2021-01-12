@@ -19,7 +19,6 @@ export default {
     [FATHER]: {
         [ACCUSATORY]: {
             yIndex: 4,
-            xPosition: 5.5,
             zOffset: 0.5,
         },
     },

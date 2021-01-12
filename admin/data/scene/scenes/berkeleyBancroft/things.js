@@ -24,7 +24,6 @@ export default {
         },
         [ASH_CAN]: {
             yIndex: 4,
-            xPosition: 5.5,
         },
     },
     [DOOR]: {

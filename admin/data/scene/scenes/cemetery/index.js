@@ -9,7 +9,6 @@ export default {
     [BENNETT]: {
         [CEMETERY]: {
             yIndex: 4,
-            xPosition: 5.5,
         },
     },
     [ANA_HOWIE]: {

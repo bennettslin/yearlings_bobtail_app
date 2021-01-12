@@ -5,7 +5,6 @@ export default {
     [YOUNG_BENNETT]: {
         [BATHING]: {
             yIndex: 3,
-            xPosition: 5.5,
         },
     },
 }

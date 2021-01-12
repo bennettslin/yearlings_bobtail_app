@@ -39,12 +39,10 @@ export default {
     [PANEL]: {
         [OCEAN_WAVES__REAR]: {
             yIndex: 0,
-            xPosition: 5.5,
             trimBottom: 0.09,
         },
         [OCEAN_WAVES__MIDDLE_REAR]: {
             yIndex: 1,
-            xPosition: 5.5,
             rotate: 180,
             scaleFactor: 1.05,
             trimBottom: 0.04,
@@ -57,7 +55,6 @@ export default {
         },
         [OCEAN_WAVES__MIDDLE_FRONT]: {
             yIndex: 3,
-            xPosition: 5.5,
             rotate: 180,
             scaleFactor: 1.15,
         },

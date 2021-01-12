@@ -12,7 +12,6 @@ export default {
     [CUTOUT]: {
         [GRAVESTONE]: {
             yIndex: 5,
-            xPosition: 5.5,
         },
     },
     [FLAT]: {

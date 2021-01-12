@@ -27,11 +27,9 @@ export default {
     [PANEL]: {
         [OCEAN_CAVE_INTERIOR]: {
             yIndex: 1,
-            xPosition: 5.5,
         },
         [OCEAN_CAVE_EXTERIOR]: {
             yIndex: 3,
-            xPosition: 5.5,
         },
     },
 }

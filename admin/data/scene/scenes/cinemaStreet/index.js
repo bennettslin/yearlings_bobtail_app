@@ -9,7 +9,6 @@ export default {
     [BENNETT]: {
         [MERRILY_DERANGED]: {
             yIndex: 5,
-            xPosition: 5.5,
         },
     },
     [HOWIE]: {

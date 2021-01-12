@@ -74,7 +74,6 @@ export default {
         },
         [WAITING_ARMCHAIR__LIZ]: {
             yIndex: 2,
-            xPosition: 5.5,
             flipHorizontal: true,
         },
         [WAITING_ARMREST__BENNETT_LEFT]: {

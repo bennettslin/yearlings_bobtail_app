@@ -13,7 +13,6 @@ export default {
     [FLAT]: {
         [COMMERCIAL_CENTRE]: {
             yIndex: 1,
-            xPosition: 5.5,
         },
         [COMMERCIAL_FAR_LEFT]: {
             yIndex: 2,

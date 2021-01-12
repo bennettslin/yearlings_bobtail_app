@@ -26,7 +26,6 @@ export default {
         },
         [GLASS_RACK__SINK]: {
             yIndex: 2,
-            xPosition: 5.5,
             scaleFactor: 0.4,
         },
         [TRAY_PILE]: {

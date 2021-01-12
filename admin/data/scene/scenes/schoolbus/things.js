@@ -63,7 +63,6 @@ export default {
     [PANEL]: {
         [SCHOOLBUS_INTERIOR]: {
             yIndex: 1,
-            xPosition: 5.5,
         },
         [SCHOOLBUS_SEAT__LEFT]: {
             yIndex: 4,
@@ -77,7 +76,6 @@ export default {
         },
         [SCHOOLBUS_EXTERIOR]: {
             yIndex: 4,
-            xPosition: 5.5,
         },
     },
 }

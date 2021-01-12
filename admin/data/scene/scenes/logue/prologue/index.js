@@ -5,7 +5,6 @@ export default {
     [OLD_BENNETT]: {
         [PROLOGUE]: {
             yIndex: 4,
-            xPosition: 5.5,
         },
     },
 }

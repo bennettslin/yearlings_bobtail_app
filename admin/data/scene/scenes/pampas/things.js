@@ -5,7 +5,6 @@ export default {
     [FLAT]: {
         [PAMPAS_FAR]: {
             yIndex: 2,
-            xPosition: 5.5,
         },
     },
 }

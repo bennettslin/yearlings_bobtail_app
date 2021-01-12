@@ -42,7 +42,6 @@ export default {
     [DOOR]: {
         [CINEMA_DOORS]: {
             yIndex: 2,
-            xPosition: 5.5,
         },
     },
 }

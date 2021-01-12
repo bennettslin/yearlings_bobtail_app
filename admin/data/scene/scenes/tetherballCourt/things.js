@@ -53,7 +53,6 @@ export default {
     [FLAT]: {
         [SCHOOL_BUNGALOW]: {
             yIndex: 2,
-            xPosition: 5.5,
         },
     },
 }

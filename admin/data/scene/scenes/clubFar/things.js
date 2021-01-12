@@ -9,7 +9,6 @@ export default {
     [PANEL]: {
         [CROWD_BACK]: {
             yIndex: 3,
-            xPosition: 5.5,
         },
     },
     [PUPPET]: {
