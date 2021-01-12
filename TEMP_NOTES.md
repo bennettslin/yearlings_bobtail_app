@@ -10,7 +10,6 @@
 * Fix trim bottom logic.
 
 # Immediate TODO:
-* Remove unneeded trim bottoms.
 * Make j, k, n, m letters just navigate directly.
 * One more audit.
 * Get rid of 16.23 magic number!

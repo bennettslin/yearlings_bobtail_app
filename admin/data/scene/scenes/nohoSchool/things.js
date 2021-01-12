@@ -49,10 +49,7 @@ export default {
         },
     },
     [FLAT]: {
-        [NEAR_BUILDINGS]: {
-            scaleFactor: 0.66,
-            trimBottom: 0.05,
-        },
+        [NEAR_BUILDINGS]: {},
     },
     [PANEL]: {
         [NURSE_BENCH]: {

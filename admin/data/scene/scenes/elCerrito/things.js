@@ -55,13 +55,10 @@ export default {
     [FLAT]: {
         [EL_CERRITO_FAR]: {
             xPosition: 9.8,
-            scaleFactor: 0.47,
-            trimBottom: 0.05,
         },
         [EL_CERRITO_NEAR]: {
             yIndex: 5,
             xPosition: 8.9,
-            scaleFactor: 0.4,
         },
     },
     [PANEL]: {

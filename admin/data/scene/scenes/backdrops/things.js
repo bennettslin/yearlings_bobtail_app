@@ -28,15 +28,9 @@ import {
 
 export default {
     [BACKDROP]: {
-        [DRIVING_BACKDROP]: {
-            trimBottom: 0.45,
-        },
-        [GOLDEN_GATE_BACKDROP]: {
-            trimBottom: 0.25,
-        },
-        [LOS_ANGELES_BACKDROP]: {
-            trimBottom: 0.13,
-        },
+        [DRIVING_BACKDROP]: {},
+        [GOLDEN_GATE_BACKDROP]: {},
+        [LOS_ANGELES_BACKDROP]: {},
         [MOUNTAIN_TAIWAN_BACKDROP]: {},
         [MOUNTAIN_PAMPAS_BACKDROP]: {},
         [OAKLAND_FRONT__LOW]: {
@@ -44,12 +38,9 @@ export default {
             trimBottom: 0.5,
         },
         [OAKLAND_FRONT__HIGH]: {},
-        [OAKLAND_SIDE__LEVEL]: {
-            trimBottom: 0.2,
-        },
+        [OAKLAND_SIDE__LEVEL]: {},
         [OAKLAND_SIDE__LIZ_COUCH]: {
             zOffset: -3,
-            trimBottom: 0.2,
         },
         [OCEAN_BOTTOM_FAR]: {},
         [OCEAN_FLOOR_FAR]: {},
@@ -77,9 +68,7 @@ export default {
         },
         [VALLEY_CLOSER_BACKDROP]: {},
         [VALLEY_FURTHER_BACKDROP]: {},
-        [VALLEY_PANORAMA_BACKDROP]: {
-            trimBottom: 0.02,
-        },
+        [VALLEY_PANORAMA_BACKDROP]: {},
         [WEDDING_BACKDROP]: {},
     },
 }

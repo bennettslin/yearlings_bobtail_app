@@ -40,33 +40,32 @@ export default {
         [OCEAN_WAVES__REAR]: {
             yIndex: 0,
             xPosition: 5.5,
-            trimBottom: 0.1,
+            trimBottom: 0.09,
         },
         [OCEAN_WAVES__MIDDLE_REAR]: {
             yIndex: 1,
             xPosition: 5.5,
             rotate: 180,
             scaleFactor: 1.05,
-            trimBottom: 0.05,
+            trimBottom: 0.04,
         },
         [OCEAN_WAVES__MIDDLE]: {
             yIndex: 2,
             xPosition: 5,
             scaleFactor: 1.1,
-            trimBottom: 0.16,
+            trimBottom: 0.15,
         },
         [OCEAN_WAVES__MIDDLE_FRONT]: {
             yIndex: 3,
             xPosition: 5.5,
             rotate: 180,
             scaleFactor: 1.15,
-            trimBottom: 0.01,
         },
         [OCEAN_WAVES__FRONT]: {
             yIndex: 4,
             xPosition: 6,
             scaleFactor: 1.2,
-            trimBottom: 0.12,
+            trimBottom: 0.11,
         },
     },
 }

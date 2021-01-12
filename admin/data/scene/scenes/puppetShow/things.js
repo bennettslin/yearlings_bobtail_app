@@ -67,14 +67,11 @@ export default {
         [TAIWAN_HAZE__CLOUD]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.5,
-            trimBottom: 0.3,
         },
         [TAIWAN_HAZE__FOG]: {
             yIndex: 4,
             xPosition: 5.5,
-            scaleFactor: 0.5,
-            trimBottom: 0.6,
+            trimBottom: 0.4,
             flipHorizontal: true,
         },
     },

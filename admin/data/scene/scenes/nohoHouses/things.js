@@ -16,10 +16,7 @@ export default {
         },
     },
     [FLAT]: {
-        [NEAR_HOUSES]: {
-            scaleFactor: 0.7,
-            trimBottom: 0.05,
-        },
+        [NEAR_HOUSES]: {},
         [NOHO_HOUSE_LEFT]: {
             yIndex: 1,
             xPosition: 2.5,
