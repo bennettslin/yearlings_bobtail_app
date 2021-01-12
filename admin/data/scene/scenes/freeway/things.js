@@ -19,7 +19,6 @@ export default {
         [OVERPASS_SIGN_BACK]: {
             yIndex: 2,
             xPosition: 2.3,
-            scaleFactor: 0.45,
         },
     },
     [FLAT]: {

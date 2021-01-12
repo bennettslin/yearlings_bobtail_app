@@ -25,7 +25,6 @@ export default {
         [TAIWAN_TREE]: {
             yIndex: 1,
             xPosition: 4,
-            scaleFactor: 0.6,
         },
     },
     [DOOR]: {

@@ -18,7 +18,7 @@ export default [
     },
     {
         taskName: `Scale factor work.`,
-        workedHours: 20,
+        workedHours: 21,
     },
     {
         taskName: `Audit scenes.`,

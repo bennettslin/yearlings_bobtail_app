@@ -18,7 +18,6 @@ export default {
         [CAMPFIRE]: {
             yIndex: 5,
             xPosition: 2.5,
-            scaleFactor: 0.25,
         },
     },
     [FLAT]: {

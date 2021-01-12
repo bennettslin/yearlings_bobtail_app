@@ -57,13 +57,11 @@ export default {
         [CYPRESS_DOUBLE__LIZ_COUCH]: {
             yIndex: 1,
             xPosition: 10.5,
-            scaleFactor: 0.6,
             flipHorizontal: true,
         },
         [CYPRESS_SINGLE__LIZ_COUCH]: {
             yIndex: 1,
             xPosition: 0.5,
-            scaleFactor: 0.6,
             flipHorizontal: true,
         },
         [TRAFFIC_LIGHT_REAR]: {

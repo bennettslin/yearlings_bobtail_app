@@ -9,12 +9,10 @@ export default {
         [MUSEUM_DISPLAY]: {
             yIndex: 1,
             xPosition: 4,
-            scaleFactor: 0.4,
         },
         [CAVEMAN_BONES]: {
             yIndex: 4,
             xPosition: 8.5,
-            scaleFactor: 0.25,
         },
     },
 }

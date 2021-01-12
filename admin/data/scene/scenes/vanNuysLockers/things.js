@@ -18,7 +18,6 @@ export default {
         [LOCKER_BANK]: {
             yIndex: 3,
             xPosition: 3.5,
-            scaleFactor: 0.35,
         },
         [TRASH_CAN__LOCKERS]: {
             yIndex: 2,

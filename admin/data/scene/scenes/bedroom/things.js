@@ -83,17 +83,14 @@ export default {
         [LEMON_TREE__BEDROOM]: {
             xPosition: 6.9,
             zOffset: -0.5,
-            scaleFactor: 0.7,
         },
         [ROSEBUSH_SLANTED_DOUBLE]: {
             xPosition: 1.75,
             zOffset: -0.5,
-            scaleFactor: 0.3,
         },
         [ROSEBUSH_SLANTED_SINGLE]: {
             xPosition: 10.75,
             zOffset: -0.5,
-            scaleFactor: 0.3,
         },
     },
     [DOOR]: {

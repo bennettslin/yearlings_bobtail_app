@@ -67,7 +67,6 @@ export default {
         [IV_DRIP]: {
             yIndex: 1,
             xPosition: 3.7,
-            scaleFactor: 0.35,
         },
     },
     [FIXTURE]: {

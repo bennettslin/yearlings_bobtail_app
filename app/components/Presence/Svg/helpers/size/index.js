@@ -9,7 +9,7 @@ import {
     BACKDROP,
     BUBBLE,
     // CARDBOARD,
-    // CUTOUT,
+    CUTOUT,
     DOOR,
     FIXTURE,
     FLAT,
@@ -34,7 +34,7 @@ const getPresenceScaleFactor = ({
         presenceType === BACKDROP ||
         presenceType === BUBBLE ||
         // presenceType === CARDBOARD ||
-        // presenceType === CUTOUT ||
+        presenceType === CUTOUT ||
         presenceType === DOOR ||
         presenceType === FIXTURE ||
         presenceType === FLAT ||

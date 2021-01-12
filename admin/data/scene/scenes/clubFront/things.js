@@ -18,25 +18,21 @@ export default {
         [MONITOR_FRONT__LEFT]: {
             yIndex: 4,
             xPosition: 2,
-            scaleFactor: 0.3,
         },
         [MONITOR_FRONT__RIGHT]: {
             yIndex: 4,
             xPosition: 9,
-            scaleFactor: 0.3,
             flipHorizontal: true,
         },
         [WALL_SPEAKER_FRONT__LEFT]: {
             yIndex: 1,
             xPosition: 1.5,
             zOffset: 4.5,
-            scaleFactor: 0.3,
         },
         [WALL_SPEAKER_FRONT__RIGHT]: {
             yIndex: 1,
             xPosition: 9.5,
             zOffset: 4.5,
-            scaleFactor: 0.3,
             flipHorizontal: true,
         },
     },

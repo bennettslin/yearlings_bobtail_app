@@ -21,12 +21,10 @@ export default {
         [SIGNPOST]: {
             yIndex: 5,
             xPosition: 10.5,
-            scaleFactor: 0.35,
         },
         [STINK_PLANT]: {
             yIndex: 4,
             xPosition: 1.5,
-            scaleFactor: 0.5,
         },
         [CAMPUS_TREE_SINGLE__CAMPANILE]: {
             yIndex: 1,

@@ -18,13 +18,11 @@ export default {
         [MONITOR_SIDE__STAGE]: {
             yIndex: 4,
             xPosition: 9,
-            scaleFactor: 0.3,
         },
         [WALL_SPEAKER_SIDE]: {
             yIndex: 1,
             xPosition: 1.5,
             zOffset: 4.5,
-            scaleFactor: 0.3,
             rotate: 15,
         },
     },

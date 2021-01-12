@@ -31,7 +31,6 @@ export default {
         [EL_CERRITO_TREE]: {
             yIndex: 1,
             xPosition: 1,
-            scaleFactor: 0.5,
         },
     },
     [FIXTURE]: {

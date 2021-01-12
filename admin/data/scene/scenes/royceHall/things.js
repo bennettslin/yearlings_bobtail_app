@@ -13,13 +13,11 @@ export default {
         [UCLA_TREE__LEFT]: {
             yIndex: 1,
             xPosition: 1,
-            scaleFactor: 0.5,
             flipHorizontal: true,
         },
         [UCLA_TREE__RIGHT]: {
             yIndex: 1,
             xPosition: 10,
-            scaleFactor: 0.5,
         },
     },
     [FLAT]: {

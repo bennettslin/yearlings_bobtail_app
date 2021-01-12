@@ -22,17 +22,14 @@ export default {
         [LEMON_TREE__BATHROOM]: {
             yIndex: 0,
             xPosition: 6.5,
-            scaleFactor: 0.7,
         },
         [ROSEBUSH_DOUBLE_BATHROOM]: {
             yIndex: 0,
             xPosition: 1.5,
-            scaleFactor: 0.3,
         },
         [ROSEBUSH_SINGLE_BATHROOM]: {
             yIndex: 0,
             xPosition: 10.5,
-            scaleFactor: 0.3,
         },
     },
     [DOOR]: {
@@ -52,12 +49,10 @@ export const THINGS_BATHROOM_BATHING = {
             yIndex: 2,
             xPosition: 2.5,
             zOffset: 1.5,
-            scaleFactor: 0.32,
         },
         [MIRRORED_SINK]: {
             yIndex: 2,
             xPosition: 8.5,
-            scaleFactor: 0.32,
         },
     },
 }

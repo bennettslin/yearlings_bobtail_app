@@ -12,7 +12,6 @@ export default {
         [MONITOR_SIDE__CROWD]: {
             yIndex: 4,
             xPosition: 3,
-            scaleFactor: 0.3,
         },
     },
     [FIXTURE]: {

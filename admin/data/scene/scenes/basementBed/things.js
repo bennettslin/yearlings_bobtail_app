@@ -19,17 +19,14 @@ export default {
         [PEACH_TREE]: {
             yIndex: 0,
             xPosition: 4.5,
-            scaleFactor: 0.7,
         },
         [ROSEBUSH_DOUBLE_BASEMENT]: {
             yIndex: 0,
             xPosition: 9.5,
-            scaleFactor: 0.3,
         },
         [ROSEBUSH_SINGLE_BASEMENT]: {
             yIndex: 0,
             xPosition: 0.5,
-            scaleFactor: 0.3,
         },
     },
     [DOOR]: {

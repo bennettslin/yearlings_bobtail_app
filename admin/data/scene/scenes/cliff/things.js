@@ -13,7 +13,6 @@ export default {
         [CLIFF_TREE]: {
             yIndex: 1,
             xPosition: 1,
-            scaleFactor: 0.5,
         },
     },
     [FLAT]: {

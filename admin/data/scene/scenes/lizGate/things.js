@@ -63,17 +63,14 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         [CYPRESS_DOUBLE__LIZ_GATE]: {
             yIndex: 2,
             xPosition: 0.5,
-            scaleFactor: 0.6,
         },
         [CYPRESS_SINGLE__LIZ_ENDED]: {
             yIndex: 2,
             xPosition: 7.5,
-            scaleFactor: 0.6,
         },
         [CYPRESS_SINGLE__LIZ_ENDING]: {
             yIndex: 2,
             xPosition: 10.5,
-            scaleFactor: 0.6,
         },
         [CACTUS_SINGLE__LIZ_ENDING]: {
             yIndex: 4,

@@ -27,7 +27,6 @@ export default {
         [PLAYGROUND_SLIDE]: {
             yIndex: 2,
             xPosition: 1,
-            scaleFactor: 0.3,
         },
     },
     [DOOR]: {
