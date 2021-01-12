@@ -26,7 +26,6 @@ export default {
             yIndex: 0,
             xPosition: 0.54,
             zOffset: 6.25,
-            scaleFactor: 0.15,
             rotate: -5,
         },
         [SNOWGLOBE_FUTURE_CORD]: {

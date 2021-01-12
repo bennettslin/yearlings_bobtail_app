@@ -13,7 +13,6 @@ export default {
             yIndex: 4,
             xPosition: 7.5,
             zOffset: 1.5,
-            scaleFactor: 0.35,
         },
     },
     [DOOR]: {

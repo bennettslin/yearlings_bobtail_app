@@ -21,7 +21,6 @@ export default {
             yIndex: 0,
             xPosition: 1,
             zOffset: 0.5,
-            scaleFactor: 0.2,
         },
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 0,
@@ -33,7 +32,6 @@ export default {
             yIndex: 0,
             xPosition: 4,
             zOffset: 1,
-            scaleFactor: 0.2,
         },
     },
     [PANEL]: {

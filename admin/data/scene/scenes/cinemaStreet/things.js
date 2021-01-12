@@ -53,13 +53,11 @@ export default {
             xPosition: 1,
             zOffset: 2,
             noShadow: true,
-            scaleFactor: 0.25,
         },
         [MARQUEE_FRAME__GLADIATOR]: {
             yIndex: 4,
             xPosition: 1,
             zOffset: 1.7,
-            scaleFactor: 0.36,
         },
     },
 }

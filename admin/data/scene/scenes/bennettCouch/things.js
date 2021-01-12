@@ -93,7 +93,6 @@ export const THINGS_BENNETT_COUCH_OPINION = {
         [ALBUM_POLICE]: {
             yIndex: 2,
             xPosition: 8,
-            scaleFactor: 0.15,
             perspective: 50,
             rotateX: 10,
             skewX: 4,
@@ -102,7 +101,6 @@ export const THINGS_BENNETT_COUCH_OPINION = {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
-            scaleFactor: 0.25,
         },
     },
 }
@@ -113,7 +111,6 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
-            scaleFactor: 0.25,
         },
     },
 }
@@ -123,7 +120,6 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
         [ALBUM_TELEVISION]: {
             yIndex: 2,
             xPosition: 8,
-            scaleFactor: 0.15,
             perspective: 50,
             rotateX: 10,
             skewX: 4,
@@ -132,7 +128,6 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
-            scaleFactor: 0.25,
         },
     },
 }
@@ -143,7 +138,6 @@ export const THINGS_BENNETT_COUCH_READING = {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
-            scaleFactor: 0.25,
         },
     },
     [FIXTURE]: {

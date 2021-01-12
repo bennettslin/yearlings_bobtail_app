@@ -42,12 +42,10 @@ export default {
             yIndex: 2,
             xPosition: 9.5,
             zOffset: 2,
-            scaleFactor: 0.45,
         },
         [PAINTING]: {
             yIndex: 2,
             xPosition: 4,
-            scaleFactor: 0.5,
             zOffset: 4,
         },
     },

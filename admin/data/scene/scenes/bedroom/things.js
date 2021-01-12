@@ -60,7 +60,6 @@ export default {
             yIndex: 5,
             xPosition: 10,
             zOffset: 3.5,
-            scaleFactor: 0.225,
             perspective: 140,
             rotate: -15,
             rotateY: 300,
@@ -71,7 +70,6 @@ export default {
             yIndex: 5,
             xPosition: 10,
             zOffset: 3.5,
-            scaleFactor: 0.225,
             perspective: 140,
             rotate: -15,
             rotateY: 300,
@@ -234,7 +232,6 @@ export const THINGS_BEDROOM_ASLEEP = {
             yIndex: 4,
             xPosition: 2.5,
             zOffset: 2.9,
-            scaleFactor: 0.25,
         },
     },
 }
@@ -258,7 +255,6 @@ export const THINGS_BEDROOM_SHAKEN = {
             yIndex: 4,
             xPosition: 8,
             zOffset: 1.5,
-            scaleFactor: 0.35,
         },
     },
 }

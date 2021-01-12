@@ -5,18 +5,6 @@ import {
     ACTOR_DEFAULT_SCALE_FACTOR,
     ILLUSTRATOR_SCALE_FACTOR,
 } from '../../../../../constants/scene'
-import {
-    BACKDROP,
-    BUBBLE,
-    // CARDBOARD,
-    CUTOUT,
-    DOOR,
-    FIXTURE,
-    FLAT,
-    FURNITURE,
-    PANEL,
-    PUPPET,
-} from '../../../../../constants/scene/things'
 import { STAGE_ASPECT_RATIO } from '../../../../../constants/stage'
 
 const getPresenceScaleFactor = ({
@@ -26,26 +14,10 @@ const getPresenceScaleFactor = ({
 }) => {
     // TODO: Get rid of this method once all actors have had scale factors adjusted.
     if (presenceType === ACTOR) {
-        return ACTOR_DEFAULT_SCALE_FACTOR / 16.23
+        return ACTOR_DEFAULT_SCALE_FACTOR
     }
 
-    // TODO: Get rid of this once all things have had scale factors adjusted.
-    if (
-        presenceType === BACKDROP ||
-        presenceType === BUBBLE ||
-        // presenceType === CARDBOARD ||
-        presenceType === CUTOUT ||
-        presenceType === DOOR ||
-        presenceType === FIXTURE ||
-        presenceType === FLAT ||
-        presenceType === FURNITURE ||
-        presenceType === PANEL ||
-        presenceType === PUPPET
-    ) {
-        return scaleFactor / ILLUSTRATOR_SCALE_FACTOR
-    }
-
-    return scaleFactor / 16.23
+    return scaleFactor / ILLUSTRATOR_SCALE_FACTOR
 }
 
 export const getDimensionsForPresence = ({

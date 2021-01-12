@@ -13,7 +13,6 @@ export default {
         [ALBUM_NAS]: {
             yIndex: 2,
             xPosition: 8,
-            scaleFactor: 0.15,
             perspective: 50,
             rotateX: 10,
             skewX: 4,
@@ -22,7 +21,6 @@ export default {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 2,
-            scaleFactor: 0.25,
         },
     },
     [DOOR]: {

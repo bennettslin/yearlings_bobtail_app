@@ -17,26 +17,22 @@ export default {
             xPosition: 1,
             zOffset: 2,
             noShadow: true,
-            scaleFactor: 0.25,
         },
         [MARQUEE_FRAME__MARA_MEMENTO]: {
             yIndex: 4,
             xPosition: 1,
             zOffset: 1.7,
-            scaleFactor: 0.36,
         },
         [POSTER_MARA_GLADIATOR]: {
             yIndex: 4,
             xPosition: 10,
             zOffset: 2,
             noShadow: true,
-            scaleFactor: 0.25,
         },
         [MARQUEE_FRAME__MARA_GLADIATOR]: {
             yIndex: 4,
             xPosition: 10,
             zOffset: 1.7,
-            scaleFactor: 0.36,
         },
     },
     [DOOR]: {
