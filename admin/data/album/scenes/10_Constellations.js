@@ -254,10 +254,10 @@ export default [
                 [DRIVING_HOUSE__SINGLE]: true,
             },
             [PANEL]: {
-                [SATURN_EXTERIOR]: true,
                 [SATURN_INTERIOR]: true,
                 [SATURN_SEAT]: true,
                 [SATURN_SEAT_DOWN]: true,
+                [SATURN_EXTERIOR]: true,
             },
         },
         cubes: STATION_WAGON_KEY,

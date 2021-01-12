@@ -75,17 +75,14 @@ export default {
         [WIDE_COUCH_BENNETT]: {
             yIndex: 2,
             xPosition: 4,
-            scaleFactor: 0.25,
         },
         [WIDE_ARMREST_BENNETT__LEFT]: {
             yIndex: 4,
             xPosition: 1.1,
-            scaleFactor: 0.3,
         },
         [WIDE_ARMREST_BENNETT__RIGHT]: {
             yIndex: 4,
             xPosition: 6.9,
-            scaleFactor: 0.3,
             flipHorizontal: true,
         },
     },

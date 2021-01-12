@@ -46,24 +46,20 @@ export default {
         [LIZ_COUCH__PRESENT]: {
             yIndex: 2,
             xPosition: 2.075,
-            scaleFactor: 0.23,
         },
         [WIDE_COUCH_MIRIAM]: {
             yIndex: 1,
             xPosition: 8,
-            scaleFactor: 0.25,
         },
         [WIDE_ARMREST_MIRIAM__LEFT]: {
             yIndex: 3,
             xPosition: 5.1,
             zOffset: 1.5,
-            scaleFactor: 0.3,
         },
         [WIDE_ARMREST_MIRIAM__RIGHT]: {
             yIndex: 3,
             xPosition: 10.9,
             zOffset: 1.5,
-            scaleFactor: 0.3,
             flipHorizontal: true,
         },
     },

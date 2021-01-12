@@ -94,12 +94,10 @@ export default {
         [HOSPITAL_BED]: {
             yIndex: 5,
             xPosition: 3.03,
-            scaleFactor: 0.27,
         },
         [HOSPITAL_RECORD_STAND]: {
             yIndex: 5,
             xPosition: 3.03,
-            scaleFactor: 0.27,
         },
     },
 }

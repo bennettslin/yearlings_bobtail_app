@@ -33,7 +33,6 @@ export default {
         [FREEWAY_FENCE]: {
             yIndex: 3,
             xPosition: 5.5,
-            scaleFactor: 0.76,
         },
     },
 }

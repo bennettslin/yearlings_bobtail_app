@@ -9,6 +9,7 @@
 * Carousel annotation title access keys have large font size.
 
 # Immediate TODO:
+* Deal with Reatta layer Y indices.
 * Make j, k, n, m letters just navigate directly.
 * One more audit.
 * Get rid of 16.23 magic number!

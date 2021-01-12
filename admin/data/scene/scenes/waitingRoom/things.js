@@ -36,16 +36,6 @@ import {
     BUBBLE_SMALL_CONFIG,
 } from '../../sharedConfigs'
 
-const
-    WAITING_ARMCHAIR_CONFIG = {
-        yIndex: 2,
-        scaleFactor: 0.3,
-    },
-    WAITING_ARMREST_CONFIG = {
-        yIndex: 4,
-        scaleFactor: 0.23,
-    }
-
 export default {
     [CARDBOARD]: {
         [CLIPBOARD]: {
@@ -79,30 +69,30 @@ export default {
     },
     [PANEL]: {
         [WAITING_ARMCHAIR__BENNETT]: {
-            ...WAITING_ARMCHAIR_CONFIG,
+            yIndex: 2,
             xPosition: 2.5,
         },
         [WAITING_ARMCHAIR__LIZ]: {
-            ...WAITING_ARMCHAIR_CONFIG,
+            yIndex: 2,
             xPosition: 5.5,
             flipHorizontal: true,
         },
         [WAITING_ARMREST__BENNETT_LEFT]: {
-            ...WAITING_ARMREST_CONFIG,
+            yIndex: 4,
             xPosition: 1.3,
         },
         [WAITING_ARMREST__BENNETT_RIGHT]: {
-            ...WAITING_ARMREST_CONFIG,
+            yIndex: 4,
             xPosition: 3.7,
             flipHorizontal: true,
             layerYIndex: 5,
         },
         [WAITING_ARMREST__LIZ_LEFT]: {
-            ...WAITING_ARMREST_CONFIG,
+            yIndex: 4,
             xPosition: 4.3,
         },
         [WAITING_ARMREST__LIZ_RIGHT]: {
-            ...WAITING_ARMREST_CONFIG,
+            yIndex: 4,
             xPosition: 6.7,
             flipHorizontal: true,
         },

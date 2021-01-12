@@ -23,23 +23,19 @@ export default {
             yIndex: 3,
             xPosition: 1.6,
             zOffset: 0.75,
-            scaleFactor: 0.4,
         },
         [GO_KART_SEAT__RIGHT]: {
             yIndex: 3,
             xPosition: 7.9,
             zOffset: 0.75,
-            scaleFactor: 0.4,
         },
         [GO_KART_EXTERIOR__LEFT]: {
             yIndex: 3,
             xPosition: 2.4,
-            scaleFactor: 0.32,
         },
         [GO_KART_EXTERIOR__RIGHT]: {
             yIndex: 3,
             xPosition: 8.4,
-            scaleFactor: 0.32,
         },
     },
 }

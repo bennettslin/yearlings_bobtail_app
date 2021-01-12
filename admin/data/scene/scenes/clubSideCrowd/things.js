@@ -25,7 +25,6 @@ export default {
         [CROWD_SIDE]: {
             yIndex: 2,
             xPosition: 7,
-            scaleFactor: 0.325,
         },
     },
 }

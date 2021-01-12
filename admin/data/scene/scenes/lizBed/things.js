@@ -96,7 +96,6 @@ export default {
         [LIZ_BED]: {
             yIndex: 5,
             xPosition: 5,
-            scaleFactor: 0.25,
         },
         [LIZ_NIGHTSTAND]: {
             yIndex: 5,
@@ -158,7 +157,6 @@ export const THINGS_LIZ_BED_VEGAN = {
         [PHONE_CALL_PANEL]: {
             yIndex: 3,
             xPosition: 9.5,
-            scaleFactor: 0.325,
         },
         [MILK_CRATE__VEGAN]: {
             yIndex: 4,

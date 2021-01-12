@@ -63,13 +63,11 @@ export default {
         [CONVEYOR_BELT]: {
             yIndex: 1,
             xPosition: 4.1,
-            scaleFactor: 0.39,
             zOffset: -1.8,
         },
         [DISHROOM_SINK]: {
             yIndex: 3,
             xPosition: 4,
-            scaleFactor: 0.47,
         },
     },
 }

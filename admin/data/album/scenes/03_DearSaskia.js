@@ -181,9 +181,9 @@ export default [
             },
             [PANEL]: {
                 [SCHOOLBUS_INTERIOR]: true,
-                [SCHOOLBUS_EXTERIOR]: true,
                 [SCHOOLBUS_SEAT__LEFT]: true,
                 [SCHOOLBUS_SEAT__RIGHT]: true,
+                [SCHOOLBUS_EXTERIOR]: true,
             },
         },
         cubes: SCHOOLBUS_KEY,

@@ -28,12 +28,10 @@ export default {
         [OCEAN_CAVE_INTERIOR]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.6,
         },
         [OCEAN_CAVE_EXTERIOR]: {
             yIndex: 3,
             xPosition: 5.5,
-            scaleFactor: 0.6,
         },
     },
 }

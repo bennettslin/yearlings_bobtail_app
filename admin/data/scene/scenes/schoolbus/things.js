@@ -66,24 +66,20 @@ export default {
         [SCHOOLBUS_INTERIOR]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.5,
         },
         [SCHOOLBUS_SEAT__LEFT]: {
             yIndex: 4,
             xPosition: 1.9,
             zOffset: 2,
-            scaleFactor: 0.4,
         },
         [SCHOOLBUS_SEAT__RIGHT]: {
             yIndex: 4,
             xPosition: 4.9,
             zOffset: 2,
-            scaleFactor: 0.4,
         },
         [SCHOOLBUS_EXTERIOR]: {
             yIndex: 4,
             xPosition: 5.5,
-            scaleFactor: 0.5,
         },
     },
 }

@@ -14,7 +14,7 @@ import {
     // FIXTURE,
     // FLAT,
     FURNITURE,
-    // PANEL,
+    PANEL,
     PUPPET,
 } from '../../../../../constants/scene/things'
 import { STAGE_ASPECT_RATIO } from '../../../../../constants/stage'
@@ -24,6 +24,7 @@ const getPresenceScaleFactor = ({
     scaleFactor,
 
 }) => {
+    // TODO: Get rid of this method once all actors have had scale factors adjusted.
     if (presenceType === ACTOR) {
         return ACTOR_DEFAULT_SCALE_FACTOR / 16.23
     }
@@ -38,7 +39,7 @@ const getPresenceScaleFactor = ({
         // presenceType === FIXTURE ||
         // presenceType === FLAT ||
         presenceType === FURNITURE ||
-        // presenceType === PANEL ||
+        presenceType === PANEL ||
         presenceType === PUPPET
     ) {
         return scaleFactor / ILLUSTRATOR_SCALE_FACTOR

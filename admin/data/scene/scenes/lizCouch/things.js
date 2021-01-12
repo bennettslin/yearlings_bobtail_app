@@ -100,12 +100,10 @@ export default {
         [LIZ_COUCH__ROOM]: {
             yIndex: 5,
             xPosition: 2.075,
-            scaleFactor: 0.23,
         },
         [LIZ_OTTOMAN]: {
             yIndex: 5,
             xPosition: 8.5,
-            scaleFactor: 0.23,
         },
     },
 }

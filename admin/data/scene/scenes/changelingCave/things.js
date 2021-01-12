@@ -37,22 +37,18 @@ export default {
             yIndex: 5,
             xPosition: 2,
             zOffset: 6,
-            scaleFactor: 0.35,
         },
         [TROLL_SHADOW_LEFT]: {
             yIndex: 5,
             xPosition: 1,
-            scaleFactor: 0.35,
         },
         [TROLL_SHADOW_RIGHT]: {
             yIndex: 5,
             xPosition: 9.9,
-            scaleFactor: 0.35,
         },
         [TROLL_SHADOW_FAR]: {
             yIndex: 4,
             xPosition: 9.9,
-            scaleFactor: 0.35,
         },
     },
 }

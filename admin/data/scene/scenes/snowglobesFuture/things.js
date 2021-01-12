@@ -68,7 +68,6 @@ export default {
         [LIZ_COUCH__FUTURE]: {
             yIndex: 3,
             xPosition: 2.075,
-            scaleFactor: 0.23,
         },
     },
     [PUPPET]: {

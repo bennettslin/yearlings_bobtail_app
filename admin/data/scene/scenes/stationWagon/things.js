@@ -47,24 +47,20 @@ export default {
         [SATURN_INTERIOR]: {
             yIndex: 1,
             xPosition: 5.3,
-            scaleFactor: 0.5,
         },
         [SATURN_SEAT]: {
             yIndex: 4,
             xPosition: 2.8,
             zOffset: 0.8,
-            scaleFactor: 0.4,
         },
         [SATURN_SEAT_DOWN]: {
             yIndex: 4,
             xPosition: 5.39,
             zOffset: 0.8,
-            scaleFactor: 0.4,
         },
         [SATURN_EXTERIOR]: {
             yIndex: 4,
             xPosition: 5.3,
-            scaleFactor: 0.5,
         },
     },
 }
