@@ -24,6 +24,27 @@ export const SKETCH_CONFIG = {
     transitionKey: TOP,
 }
 
-export const PUPPET_FAMILY_CONFIG = {
+const PUPPET_FAMILY_CONFIG = {
     yIndex: 3,
+}
+
+export const PUPPET_CHRISTOPHER_CONFIG = {
+    ...PUPPET_FAMILY_CONFIG,
+    transitionIndex: 1,
+}
+export const PUPPET_BENNETT_CONFIG = {
+    ...PUPPET_FAMILY_CONFIG,
+    transitionIndex: 2,
+}
+export const PUPPET_ANITA_CONFIG = {
+    ...PUPPET_FAMILY_CONFIG,
+    transitionIndex: 3,
+}
+export const PUPPET_MOTHER_CONFIG = {
+    ...PUPPET_FAMILY_CONFIG,
+    transitionIndex: 4,
+}
+export const PUPPET_FATHER_CONFIG = {
+    ...PUPPET_FAMILY_CONFIG,
+    transitionIndex: 5,
 }
