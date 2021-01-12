@@ -131,7 +131,6 @@ export const THINGS_DEATHBED_CREMATED = {
         [TENNIS_COURT]: {
             yIndex: 1,
             xPosition: 10,
-            scaleFactor: 0.4,
         },
     },
 }

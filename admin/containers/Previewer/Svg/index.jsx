@@ -101,7 +101,7 @@ class PreviewerSvg extends PureComponent {
                 previewerHeight:
                     adjustedHeight *
                     scaleFactor *
-                    ILLUSTRATOR_SCALE_FACTOR,
+                    ILLUSTRATOR_SCALE_FACTOR * 0.5,
                 kilobytes,
             })
 

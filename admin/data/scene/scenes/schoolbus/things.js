@@ -54,12 +54,10 @@ export default {
         [DRIVING_HOUSE_LEFT]: {
             yIndex: 1,
             xPosition: 1.7,
-            scaleFactor: 0.6,
         },
         [DRIVING_HOUSE__RIGHT]: {
             yIndex: 1,
             xPosition: 9.3,
-            scaleFactor: 0.6,
         },
     },
     [PANEL]: {

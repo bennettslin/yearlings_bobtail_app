@@ -20,12 +20,10 @@ export default {
         [OCEAN_BOTTOM_MIDDLE]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.65,
         },
         [OCEAN_BOTTOM_NEAR]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.5,
         },
     },
 }

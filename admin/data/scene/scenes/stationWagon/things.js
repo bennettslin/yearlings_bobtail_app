@@ -40,7 +40,6 @@ export default {
         [DRIVING_HOUSE__SINGLE]: {
             yIndex: 1,
             xPosition: 6.5,
-            scaleFactor: 0.6,
         },
     },
     [PANEL]: {

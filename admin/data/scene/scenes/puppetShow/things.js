@@ -50,33 +50,26 @@ export default {
     [FLAT]: {
         [TAIWAN_MOUNTAINS_BRIDGED]: {
             yIndex: 3,
-            xPosition: 5.5,
-            scaleFactor: 0.575,
         },
         [TAIWAN_MOUNTAIN_LEFT]: {
             yIndex: 5,
             xPosition: 1.3,
-            scaleFactor: 0.4,
         },
         [TAIWAN_MOUNTAIN_RIGHT]: {
             yIndex: 5,
             xPosition: 9.2,
-            scaleFactor: 0.4,
         },
     },
     [PANEL]: {
         [TAIWAN_BRIDGE]: {
             yIndex: 4,
-            xPosition: 5.5,
             zOffset: 3.3,
         },
         [TAIWAN_HAZE__CLOUD]: {
             yIndex: 2,
-            xPosition: 5.5,
         },
         [TAIWAN_HAZE__FOG]: {
             yIndex: 4,
-            xPosition: 5.5,
             trimBottom: 0.43,
             flipHorizontal: true,
         },

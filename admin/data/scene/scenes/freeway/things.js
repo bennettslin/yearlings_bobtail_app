@@ -26,7 +26,6 @@ export default {
         [VALLEY_FREEWAY]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.625,
         },
     },
     [PANEL]: {

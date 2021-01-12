@@ -33,7 +33,7 @@ import {
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,
-    BUBBLE_SMALL_CONFIG
+    BUBBLE_SMALL_CONFIG,
 } from '../../sharedConfigs'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
@@ -124,13 +124,11 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         [PUBLIC_FAR__LIZ_GATE]: {
             yIndex: 1,
             xPosition: 10.95,
-            scaleFactor: 0.4,
             flipHorizontal: true,
         },
         [PUBLIC_NEAR__LIZ_GATE]: {
             yIndex: 2,
             xPosition: 12,
-            scaleFactor: 0.5,
             flipHorizontal: true,
         },
     },

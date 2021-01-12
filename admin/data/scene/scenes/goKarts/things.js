@@ -15,7 +15,6 @@ export default {
         [GO_KART_TRACK]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.66,
         },
     },
     [PANEL]: {

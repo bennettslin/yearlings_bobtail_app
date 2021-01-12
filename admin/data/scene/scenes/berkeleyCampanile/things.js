@@ -47,12 +47,10 @@ export default {
         [BERKELEY_BUILDING_TALL]: {
             yIndex: 2,
             xPosition: 9,
-            scaleFactor: 0.35,
         },
         [BERKELEY_BUILDING_WIDE__CAMPANILE]: {
             yIndex: 3,
             xPosition: 10,
-            scaleFactor: 0.4,
         },
     },
 }

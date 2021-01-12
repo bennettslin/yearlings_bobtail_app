@@ -166,7 +166,6 @@ export const THINGS_BEDROOM_FEARFUL = {
         [BEDROOM_SIREN]: {
             xPosition: 2,
             zOffset: 2.25,
-            scaleFactor: 0.425,
         },
     },
 }
@@ -221,7 +220,6 @@ export const THINGS_BEDROOM_FEIGNING = {
         [BEDROOM_BUS]: {
             xPosition: 2,
             zOffset: 2.25,
-            scaleFactor: 0.5,
         },
     },
 }

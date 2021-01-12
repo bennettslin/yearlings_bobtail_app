@@ -25,7 +25,6 @@ export default {
         [FAMILY_HOUSE]: {
             yIndex: 1,
             xPosition: 1.8,
-            scaleFactor: 0.6,
         },
     },
     [PANEL]: {

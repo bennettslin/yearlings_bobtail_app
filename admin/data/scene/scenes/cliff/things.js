@@ -19,12 +19,10 @@ export default {
     [FLAT]: {
         [CLIFF_GRAVES_FAR]: {
             xPosition: 9.8,
-            scaleFactor: 0.48,
         },
         [CLIFF_GRAVES_NEAR]: {
             yIndex: 5,
             xPosition: 8.6,
-            scaleFactor: 0.4,
         },
     },
 }

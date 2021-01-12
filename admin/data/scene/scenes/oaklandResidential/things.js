@@ -39,32 +39,26 @@ export default {
         [RESIDENTIAL_FAR_LEFT]: {
             yIndex: 1,
             xPosition: 2.75,
-            scaleFactor: 0.36,
         },
         [RESIDENTIAL_FAR_RIGHT]: {
             yIndex: 1,
             xPosition: 8,
-            scaleFactor: 0.36,
         },
         [RESIDENTIAL_MIDDLE_LEFT]: {
             yIndex: 2,
             xPosition: 1.75,
-            scaleFactor: 0.42,
         },
         [RESIDENTIAL_MIDDLE_RIGHT]: {
             yIndex: 2,
             xPosition: 9.25,
-            scaleFactor: 0.42,
         },
         [RESIDENTIAL_NEAR_LEFT]: {
             yIndex: 3,
             xPosition: 0.75,
-            scaleFactor: 0.5,
         },
         [RESIDENTIAL_NEAR_RIGHT]: {
             yIndex: 3,
             xPosition: 10.25,
-            scaleFactor: 0.5,
         },
     },
 }

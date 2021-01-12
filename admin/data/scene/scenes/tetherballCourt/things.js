@@ -16,7 +16,7 @@ import { SCHOOL_BUNGALOW } from '../../../../../app/constants/scene/things/flats
 import {
     BUBBLE_LARGE_CONFIG,
     BUBBLE_MEDIUM_CONFIG,
-    BUBBLE_SMALL_CONFIG
+    BUBBLE_SMALL_CONFIG,
 } from '../../sharedConfigs'
 
 export default {
@@ -54,7 +54,6 @@ export default {
         [SCHOOL_BUNGALOW]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.7,
         },
     },
 }

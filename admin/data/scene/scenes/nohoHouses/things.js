@@ -20,12 +20,10 @@ export default {
         [NOHO_HOUSE_LEFT]: {
             yIndex: 1,
             xPosition: 2.5,
-            scaleFactor: 0.6,
         },
         [NOHO_HOUSE_RIGHT]: {
             yIndex: 1,
             xPosition: 8.5,
-            scaleFactor: 0.6,
         },
     },
 }

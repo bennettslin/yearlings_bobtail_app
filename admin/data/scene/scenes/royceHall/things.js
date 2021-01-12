@@ -26,7 +26,6 @@ export default {
         [ROYCE_HALL]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.535,
         },
     },
 }

@@ -28,12 +28,10 @@ export default {
         [FERRIS_WHEEL]: {
             yIndex: 2,
             xPosition: 2,
-            scaleFactor: 0.5,
         },
         [ROLLER_COASTER]: {
             yIndex: 1,
             xPosition: 1.1,
-            scaleFactor: 0.5,
         },
     },
 }

@@ -25,7 +25,6 @@ export default {
         [RICKSHAW_TOWN]: {
             yIndex: 1,
             xPosition: 9.75,
-            scaleFactor: 0.6,
         },
     },
 }

@@ -34,13 +34,10 @@ export default {
         },
     },
     [FLAT]: {
-        [DISTANT_BUILDINGS]: {
-            scaleFactor: 0.45,
-        },
+        [DISTANT_BUILDINGS]: {},
         [BERKELEY_BUILDING_WIDE__BANCROFT]: {
             yIndex: 2,
             xPosition: 2.5,
-            scaleFactor: 0.4,
         },
     },
 }

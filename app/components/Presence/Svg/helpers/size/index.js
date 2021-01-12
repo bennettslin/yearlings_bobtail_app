@@ -12,7 +12,7 @@ import {
     // CUTOUT,
     DOOR,
     FIXTURE,
-    // FLAT,
+    FLAT,
     FURNITURE,
     PANEL,
     PUPPET,
@@ -37,7 +37,7 @@ const getPresenceScaleFactor = ({
         // presenceType === CUTOUT ||
         presenceType === DOOR ||
         presenceType === FIXTURE ||
-        // presenceType === FLAT ||
+        presenceType === FLAT ||
         presenceType === FURNITURE ||
         presenceType === PANEL ||
         presenceType === PUPPET

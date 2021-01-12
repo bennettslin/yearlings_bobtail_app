@@ -26,12 +26,10 @@ export default {
         [OAKLAND_HOUSE_LEFT]: {
             yIndex: 1,
             xPosition: 2.25,
-            scaleFactor: 0.5,
         },
         [OAKLAND_HOUSE_RIGHT]: {
             yIndex: 1,
             xPosition: 9,
-            scaleFactor: 0.5,
         },
     },
 }
