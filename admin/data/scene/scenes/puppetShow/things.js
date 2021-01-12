@@ -71,7 +71,7 @@ export default {
         [TAIWAN_HAZE__FOG]: {
             yIndex: 4,
             xPosition: 5.5,
-            trimBottom: 0.4,
+            trimBottom: 0.43,
             flipHorizontal: true,
         },
     },

@@ -7,7 +7,6 @@
 
 # Bugs
 * Carousel annotation title access keys have large font size.
-* Fix trim bottom logic.
 
 # Immediate TODO:
 * Make j, k, n, m letters just navigate directly.

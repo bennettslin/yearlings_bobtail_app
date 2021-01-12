@@ -17,8 +17,13 @@ import {
     // PANEL,
     PUPPET,
 } from '../../../../../constants/scene/things'
+import { STAGE_ASPECT_RATIO } from '../../../../../constants/stage'
 
-const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
+const getPresenceScaleFactor = ({
+    presenceType,
+    scaleFactor,
+
+}) => {
     if (presenceType === ACTOR) {
         return ACTOR_DEFAULT_SCALE_FACTOR / 16.23
     }
@@ -36,13 +41,13 @@ const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
         // presenceType === PANEL ||
         presenceType === PUPPET
     ) {
-        return scaleFactor * ILLUSTRATOR_SCALE_FACTOR
+        return scaleFactor / ILLUSTRATOR_SCALE_FACTOR
     }
 
     return scaleFactor / 16.23
 }
 
-export const getSizeForPresence = ({
+export const getDimensionsForPresence = ({
     presenceType,
     viewBoxWidth,
     viewBoxHeight,
@@ -59,11 +64,15 @@ export const getSizeForPresence = ({
 
     return {
         adjustedWidth: viewBoxWidth * finalScaleFactor,
-        adjustedHeight: viewBoxHeight * finalScaleFactor * (1 - trimBottom),
+        adjustedHeight:
+            viewBoxHeight *
+            finalScaleFactor *
+            STAGE_ASPECT_RATIO *
+            (1 - trimBottom),
     }
 }
 
-export const getViewBoxSize = (svgString) => {
+export const getViewBoxSize = svgString => {
     const
         startIndex = svgString.indexOf('viewBox="'),
         endIndex = svgString.indexOf('">', startIndex + 1),

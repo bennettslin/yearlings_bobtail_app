@@ -18,10 +18,10 @@ import {
 import { getWirePlacedFront } from '../../../api/scene/wires'
 import { getSvgForPresence } from '../../../api/svg'
 import { getMapZIndexForPresence } from '../../../redux/presence/selector'
-import { getXYForPresence } from './helpers/position'
+import { getCoordinatesForPresence } from './helpers/position'
 import { getCompoundActorStyleIfNeeded } from './helpers/sharedStyle'
 import {
-    getSizeForPresence,
+    getDimensionsForPresence,
     getViewBoxSize,
 } from './helpers/size'
 import { setSvgTransform } from './helpers/transform'
@@ -68,12 +68,11 @@ const PresenceSvg = ({
         }),
         finalZIndex = useSelector(getMapZIndexForPresence(zIndex, zIndices)),
         {
-            x: adjustedLeft,
-            y: adjustedTop,
-        } = getXYForPresence({
+            adjustedLeft,
+            adjustedTop,
+        } = getCoordinatesForPresence({
             xPosition,
             yIndex,
-            adjustedHeight,
             zIndex: finalZIndex,
             zOffset,
         }),
@@ -111,7 +110,7 @@ const PresenceSvg = ({
                 {
                     adjustedWidth,
                     adjustedHeight,
-                } = getSizeForPresence({
+                } = getDimensionsForPresence({
                     presenceType,
                     viewBoxWidth,
                     viewBoxHeight,

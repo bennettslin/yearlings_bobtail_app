@@ -25,7 +25,7 @@ import {
 
 import {
     getViewBoxSize,
-    getSizeForPresence,
+    getDimensionsForPresence,
 } from '../../../../app/components/Presence/Svg/helpers/size'
 import { getCompoundActorStyleIfNeeded } from '../../../../app/components/Presence/Svg/helpers/sharedStyle'
 
@@ -64,13 +64,13 @@ class PreviewerSvg extends PureComponent {
         setTimeout(() => this.setState({ didLoad: true }), 250)
     }
 
-    processSvg = (svgString) => {
+    processSvg = svgString => {
         // Set timeout to wait until next lifecycle before setting state.
         setTimeout(() => this.handleProcessSvg(svgString), 0)
         return svgString
     }
 
-    handleProcessSvg = (svgString) => {
+    handleProcessSvg = svgString => {
         const { presenceKey } = this.props,
 
             element = getDocument().getElementsByClassName(
@@ -88,7 +88,7 @@ class PreviewerSvg extends PureComponent {
                     scaleFactor = 1,
                     trimBottom,
                 } = this.getArrangement(),
-                { adjustedHeight } = getSizeForPresence({
+                { adjustedHeight } = getDimensionsForPresence({
                     presenceType: ACTOR,
                     viewBoxWidth,
                     viewBoxHeight,
@@ -100,7 +100,7 @@ class PreviewerSvg extends PureComponent {
             this.setState({
                 previewerHeight:
                     adjustedHeight *
-                    scaleFactor /
+                    scaleFactor *
                     ILLUSTRATOR_SCALE_FACTOR,
                 kilobytes,
             })
