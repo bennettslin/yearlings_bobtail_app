@@ -115,6 +115,8 @@ import {
     WAITING_ROOM_DOOR_OPEN,
 } from '../../../../app/constants/scene/things/doors'
 import {
+    CONDOM_LIZ,
+    CONDOM_REFLECTION,
     CONDOM_WRAPPER_LIZ,
     CONDOM_WRAPPER_REFLECTION,
     LIGHT_SWITCH__OFF,
@@ -122,8 +124,6 @@ import {
     LINGERIE_DRAWING,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
-    USED_CONDOM_LIZ,
-    USED_CONDOM_REFLECTION,
     VASELINE,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
@@ -598,10 +598,10 @@ export default [
             [FIXTURE]: {
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true,
+                [CONDOM_LIZ]: true,
+                [CONDOM_REFLECTION]: true,
                 [CONDOM_WRAPPER_LIZ]: true,
                 [CONDOM_WRAPPER_REFLECTION]: true,
-                [USED_CONDOM_LIZ]: true,
-                [USED_CONDOM_REFLECTION]: true,
             },
             [FURNITURE]: {
                 [LIZ_PILLOWS]: true,

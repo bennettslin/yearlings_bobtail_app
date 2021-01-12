@@ -43,7 +43,6 @@ export default {
             yIndex: 1,
             xPosition: 9,
             zOffset: 1.25,
-            scaleFactor: 0.35,
         },
     },
     [PANEL]: {

@@ -8,8 +8,8 @@ import {
 import { EL_CERRITO_TREE } from '../../../../../app/constants/scene/things/cutouts'
 import {
     FREEWAY_SIGN,
+    CONDOM_MIRIAM,
     CONDOM_WRAPPER_MIRIAM,
-    USED_CONDOM_MIRIAM,
 } from '../../../../../app/constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
@@ -39,17 +39,16 @@ export default {
             yIndex: 2,
             xPosition: 8.5,
             zOffset: -0.1,
-            scaleFactor: 0.7,
+        },
+        [CONDOM_MIRIAM]: {
+            yIndex: 5,
+            xPosition: 1.8,
+            zOffset: 0.05,
         },
         [CONDOM_WRAPPER_MIRIAM]: {
             yIndex: 5,
             xPosition: 1.25,
             zOffset: 0.11,
-        },
-        [USED_CONDOM_MIRIAM]: {
-            yIndex: 5,
-            xPosition: 1.8,
-            zOffset: 0.05,
         },
     },
     [FLAT]: {

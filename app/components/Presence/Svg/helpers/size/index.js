@@ -11,7 +11,7 @@ import {
     // CARDBOARD,
     // CUTOUT,
     DOOR,
-    // FIXTURE,
+    FIXTURE,
     // FLAT,
     FURNITURE,
     PANEL,
@@ -36,7 +36,7 @@ const getPresenceScaleFactor = ({
         // presenceType === CARDBOARD ||
         // presenceType === CUTOUT ||
         presenceType === DOOR ||
-        // presenceType === FIXTURE ||
+        presenceType === FIXTURE ||
         // presenceType === FLAT ||
         presenceType === FURNITURE ||
         presenceType === PANEL ||

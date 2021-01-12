@@ -13,6 +13,8 @@ import bennettShoeReflection from '../../../../../assets/svgs/fixtures/bennettSh
 import beyonderEnvelope from '../../../../../assets/svgs/fixtures/beyonderEnvelope'
 import cashBox from '../../../../../assets/svgs/fixtures/cashBox'
 import christopherLetters from '../../../../../assets/svgs/fixtures/christopherLetters'
+import condom from '../../../../../assets/svgs/fixtures/condom'
+import condomReflection from '../../../../../assets/svgs/fixtures/condomReflection'
 import condomWrapper from '../../../../../assets/svgs/fixtures/condomWrapper'
 import condomWrapperReflection from '../../../../../assets/svgs/fixtures/condomWrapperReflection'
 import crackedPicture from '../../../../../assets/svgs/fixtures/crackedPicture'
@@ -51,8 +53,6 @@ import tchotchkes from '../../../../../assets/svgs/fixtures/tchotchkes'
 import tetherballPole from '../../../../../assets/svgs/fixtures/tetherballPole'
 import thrownFruit from '../../../../../assets/svgs/fixtures/thrownFruit'
 import tornMagazines from '../../../../../assets/svgs/fixtures/tornMagazines'
-import usedCondom from '../../../../../assets/svgs/fixtures/usedCondom'
-import usedCondomReflection from '../../../../../assets/svgs/fixtures/usedCondomReflection'
 import vaseline from '../../../../../assets/svgs/fixtures/vaseline'
 
 import {
@@ -73,6 +73,9 @@ import {
     BEYONDER_ENVELOPE,
     CASH_BOX,
     CHRISTOPHER_LETTERS,
+    CONDOM_LIZ,
+    CONDOM_MIRIAM,
+    CONDOM_REFLECTION,
     CONDOM_WRAPPER_LIZ,
     CONDOM_WRAPPER_MIRIAM,
     CONDOM_WRAPPER_REFLECTION,
@@ -118,9 +121,6 @@ import {
     THROWN_FRUIT,
     TORN_MAGAZINES__BENNETT,
     TORN_MAGAZINES__CHRISTOPHER,
-    USED_CONDOM_LIZ,
-    USED_CONDOM_MIRIAM,
-    USED_CONDOM_REFLECTION,
     VASELINE,
 } from '../../../../constants/scene/things/fixtures'
 
@@ -142,6 +142,9 @@ export default {
     [BEYONDER_ENVELOPE]: beyonderEnvelope,
     [CASH_BOX]: cashBox,
     [CHRISTOPHER_LETTERS]: christopherLetters,
+    [CONDOM_LIZ]: condom,
+    [CONDOM_MIRIAM]: condom,
+    [CONDOM_REFLECTION]: condomReflection,
     [CONDOM_WRAPPER_LIZ]: condomWrapper,
     [CONDOM_WRAPPER_MIRIAM]: condomWrapper,
     [CONDOM_WRAPPER_REFLECTION]: condomWrapperReflection,
@@ -187,8 +190,5 @@ export default {
     [THROWN_FRUIT]: thrownFruit,
     [TORN_MAGAZINES__BENNETT]: tornMagazines,
     [TORN_MAGAZINES__CHRISTOPHER]: tornMagazines,
-    [USED_CONDOM_LIZ]: usedCondom,
-    [USED_CONDOM_MIRIAM]: usedCondom,
-    [USED_CONDOM_REFLECTION]: usedCondomReflection,
     [VASELINE]: vaseline,
 }

@@ -58,10 +58,10 @@ import {
     IV_DRIP,
 } from '../../../../app/constants/scene/things/cutouts'
 import {
-    HOSPITAL_RECORD_PLAYER,
-    FREEWAY_SIGN,
+    CONDOM_MIRIAM,
     CONDOM_WRAPPER_MIRIAM,
-    USED_CONDOM_MIRIAM,
+    FREEWAY_SIGN,
+    HOSPITAL_RECORD_PLAYER,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
@@ -329,8 +329,8 @@ export default [
             },
             [FIXTURE]: {
                 [FREEWAY_SIGN]: true,
+                [CONDOM_MIRIAM]: true,
                 [CONDOM_WRAPPER_MIRIAM]: true,
-                [USED_CONDOM_MIRIAM]: true,
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,

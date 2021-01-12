@@ -31,7 +31,6 @@ export default {
         [TETHERBALL_POLE]: {
             yIndex: 3,
             xPosition: 5.5,
-            scaleFactor: 0.225,
         },
     },
     [PANEL]: {
