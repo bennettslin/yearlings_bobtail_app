@@ -25,7 +25,6 @@ import {
     BRAD,
     BRAD_BENNETT,
     BRAD_SASHA,
-    ANDREW,
     CATHERINE,
     MARA,
     JACOB,
@@ -60,7 +59,7 @@ const getPresenceScaleFactor = ({
     scaleFactor,
 
 }) => {
-    // TODO: Get rid of this method once all actors have had scale factors adjusted.
+    // TODO: Get rid of this method once all actors have had scale factors adjusted. Scale to 15.4036.
     if (
         actorKey === YOUNG_BENNETT ||
         actorKey === PRETEEN_BENNETT ||
@@ -80,7 +79,6 @@ const getPresenceScaleFactor = ({
         actorKey === BRAD ||
         actorKey === BRAD_BENNETT ||
         actorKey === BRAD_SASHA ||
-        actorKey === ANDREW ||
         actorKey === CATHERINE ||
         actorKey === MARA ||
         actorKey === JACOB ||
