@@ -27,12 +27,11 @@ export default {
         [BUSH_SINGLE__BENNETT_GATE]: {
             yIndex: 3,
             xPosition: 10.4,
-            scaleFactor: 0.3,
         },
         [BUSH_DOUBLE__BENNETT_GATE]: {
             yIndex: 2,
             xPosition: 3.9,
-            scaleFactor: 0.23,
+            scaleFactor: 0.92,
         },
     },
     [DOOR]: {

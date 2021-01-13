@@ -18,17 +18,14 @@ export default {
         [RECYCLING_BIN__BENNETT]: {
             yIndex: 2,
             xPosition: 5,
-            scaleFactor: 0.35,
         },
         [BUSH_SINGLE__COURTYARD]: {
             yIndex: 2,
             xPosition: 10.5,
-            scaleFactor: 0.3,
         },
         [BUSH_DOUBLE__COURTYARD]: {
             yIndex: 2,
             xPosition: 2.25,
-            scaleFactor: 0.25,
         },
     },
     [DOOR]: {

@@ -29,12 +29,12 @@ export default {
         [CAMPUS_TREE_SINGLE__CAMPANILE]: {
             yIndex: 1,
             xPosition: 8.9,
-            scaleFactor: 0.5,
+            scaleFactor: 0.7,
         },
         [CAMPUS_TREE_DOUBLE__CAMPANILE]: {
             yIndex: 2,
             xPosition: 10.8,
-            scaleFactor: 0.5,
+            scaleFactor: 0.7,
         },
     },
     [FLAT]: {

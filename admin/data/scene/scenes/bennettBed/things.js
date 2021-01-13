@@ -28,7 +28,7 @@ export default {
         [RECYCLING_BIN__NEIGHBOUR]: {
             yIndex: 1,
             xPosition: 3.5,
-            scaleFactor: 0.3,
+            scaleFactor: 0.85,
         },
     },
     [DOOR]: {

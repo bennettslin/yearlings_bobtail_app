@@ -21,18 +21,18 @@ export default {
         [TWIN_STREETLAMP__FAR]: {
             yIndex: 1,
             xPosition: 5.45,
-            scaleFactor: 0.2,
+            scaleFactor: 0.67,
         },
         [TWIN_STREETLAMP__MIDDLE]: {
             yIndex: 2,
             xPosition: 5.55,
-            scaleFactor: 0.25,
+            scaleFactor: 0.83,
             flipHorizontal: true,
         },
         [TWIN_STREETLAMP__NEAR]: {
             yIndex: 3,
             xPosition: 5.4,
-            scaleFactor: 0.3,
+
         },
     },
     [FLAT]: {

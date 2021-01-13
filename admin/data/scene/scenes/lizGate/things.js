@@ -88,7 +88,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         [LAMPPOST__LIZ_GATE]: {
             yIndex: 3,
             xPosition: 11,
-            scaleFactor: 0.15,
+            scaleFactor: 0.5,
         },
         [TRAFFIC_LIGHT_FRONT]: {
             yIndex: 5,

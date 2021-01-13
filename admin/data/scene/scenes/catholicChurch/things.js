@@ -14,7 +14,6 @@ export default {
         [LAMPPOST__CHURCH]: {
             yIndex: 4,
             xPosition: 1,
-            scaleFactor: 0.3,
         },
     },
     [FLAT]: {

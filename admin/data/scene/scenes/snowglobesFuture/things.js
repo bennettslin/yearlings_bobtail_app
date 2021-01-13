@@ -57,12 +57,11 @@ export default {
         [SNOWGLOBE__LIZ_KHARI]: {
             yIndex: 5,
             xPosition: 3,
-            scaleFactor: 0.44,
         },
         [SNOWGLOBE__BENNETT_ALONE]: {
             yIndex: 4,
             xPosition: 8.5,
-            scaleFactor: 0.35,
+            scaleFactor: 0.8,
         },
         [LIZ_COUCH__FUTURE]: {
             yIndex: 3,

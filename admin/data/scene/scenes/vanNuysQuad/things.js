@@ -45,12 +45,11 @@ export default {
         [BUSH_DOUBLE__QUAD]: {
             yIndex: 4,
             xPosition: 3.5,
-            scaleFactor: 0.25,
         },
         [BUSH_SINGLE__QUAD]: {
             yIndex: 4,
             xPosition: 10.5,
-            scaleFactor: 0.25,
+            scaleFactor: 0.83,
         },
     },
 }

@@ -35,12 +35,12 @@ export default {
         [SNOWGLOBE__LIZ_ALONE]: {
             yIndex: 4,
             xPosition: 2.5,
-            scaleFactor: 0.38,
+            scaleFactor: 0.86,
         },
         [SNOWGLOBE__BENNETT_MIRIAM]: {
             yIndex: 5,
             xPosition: 8,
-            scaleFactor: 0.43,
+            scaleFactor: 0.98,
         },
         [LIZ_COUCH__PRESENT]: {
             yIndex: 2,

@@ -20,7 +20,7 @@ export default {
         [CAMPUS_TREE_SINGLE__BANCROFT]: {
             yIndex: 1,
             xPosition: 1.1,
-            scaleFactor: 0.5,
+            scaleFactor: 0.7,
         },
         [ASH_CAN]: {
             yIndex: 4,

@@ -41,13 +41,11 @@ export default {
         [CAMPUS_TREE_DOUBLE__TETHERBALL]: {
             yIndex: 1,
             xPosition: 1.75,
-            scaleFactor: 0.7,
             flipHorizontal: true,
         },
         [CAMPUS_TREE_SINGLE__TETHERBALL]: {
             yIndex: 1,
             xPosition: 9,
-            scaleFactor: 0.7,
         },
     },
     [FLAT]: {

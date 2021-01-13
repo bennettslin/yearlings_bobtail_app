@@ -34,7 +34,7 @@ export default {
         [SNOWGLOBE__TETHERBALL]: {
             yIndex: 5,
             xPosition: 7,
-            scaleFactor: 0.42,
+            scaleFactor: 0.95,
         },
     },
 }

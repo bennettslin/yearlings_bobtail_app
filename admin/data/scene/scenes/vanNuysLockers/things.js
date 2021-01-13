@@ -26,12 +26,11 @@ export default {
         [BUSH_SINGLE__LOCKERS]: {
             yIndex: 1,
             xPosition: 0.5,
-            scaleFactor: 0.25,
+            scaleFactor: 0.83,
         },
         [BUSH_DOUBLE__LOCKERS]: {
             yIndex: 1,
             xPosition: 7.5,
-            scaleFactor: 0.25,
         },
     },
     [FIXTURE]: {
