@@ -42,12 +42,7 @@ import {
     MIRIAM_STEPHANIE,
     MIRIAM_TRISTAN,
     TRISTAN,
-    NESTOR,
-    AMY,
-    AMY_STEPHANIE,
-    AMY_NESTOR_TOMER,
     STEPHANIE,
-    WADE,
     BENNETT_REFLECTION,
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
@@ -96,12 +91,7 @@ const getPresenceScaleFactor = ({
         actorKey === MIRIAM_STEPHANIE ||
         actorKey === MIRIAM_TRISTAN ||
         actorKey === TRISTAN ||
-        actorKey === NESTOR ||
-        actorKey === AMY ||
-        actorKey === AMY_STEPHANIE ||
-        actorKey === AMY_NESTOR_TOMER ||
         actorKey === STEPHANIE ||
-        actorKey === WADE ||
         actorKey === BENNETT_REFLECTION ||
         actorKey === BENNETT_LIZ_REFLECTION ||
         actorKey === LIZ_REFLECTION ||
