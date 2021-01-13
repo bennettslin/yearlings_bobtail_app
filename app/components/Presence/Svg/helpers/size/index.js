@@ -33,7 +33,6 @@ import {
     ANA_HOWIE,
     HOWIE,
     HOWIE_WILLY,
-    TOMER,
     LIZ,
     KHARI,
     KHARI_LIZ,
@@ -82,7 +81,6 @@ const getPresenceScaleFactor = ({
         actorKey === ANA_HOWIE ||
         actorKey === HOWIE ||
         actorKey === HOWIE_WILLY ||
-        actorKey === TOMER ||
         actorKey === LIZ ||
         actorKey === KHARI ||
         actorKey === KHARI_LIZ ||
