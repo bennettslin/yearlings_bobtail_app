@@ -80,13 +80,12 @@ const AnnotationTitle = ({
                     isSelected ?
                         'boxShadow__annotationTab__selected' :
                         'boxShadow__annotationTab',
-
-                    'fontSize__smallTitle'
                 ),
             }}
         >
             <Anchor
                 {...{
+                    className: 'fontSize__smallTitle',
                     ...isDot ? {
                     } : {
                         isAnnotationTitle: true,

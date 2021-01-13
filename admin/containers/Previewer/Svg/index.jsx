@@ -77,6 +77,8 @@ class PreviewerSvg extends PureComponent {
         if (element) {
             const kilobytes = svgString.length / 1024
 
+            console.log('presenceType', presenceType)
+
             const {
                     viewBoxWidth,
                     viewBoxHeight,

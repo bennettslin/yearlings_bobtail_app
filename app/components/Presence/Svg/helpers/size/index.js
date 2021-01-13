@@ -12,7 +12,6 @@ import {
     BENNETT_FATHER,
     BENNETT_LIZ,
     BENNETT_STEPHANIE,
-    BENNETTS_CHRISTOPHER_LIZ,
     OLD_BENNETT,
     ANITA,
     ANITA_BENNETT,
@@ -21,9 +20,6 @@ import {
     WILLY,
     MOTHER,
     FATHER,
-    CHRISTOPHER,
-    CHRISTOPHER_BENNETT,
-    CHRISTOPHER_BENNETT_WILLY,
     SASHA,
     SASHA_BENNETT,
     BRAD,
@@ -71,7 +67,6 @@ const getPresenceScaleFactor = ({
         actorKey === BENNETT_FATHER ||
         actorKey === BENNETT_LIZ ||
         actorKey === BENNETT_STEPHANIE ||
-        actorKey === BENNETTS_CHRISTOPHER_LIZ ||
         actorKey === OLD_BENNETT ||
         actorKey === ANITA ||
         actorKey === ANITA_BENNETT ||
@@ -80,9 +75,6 @@ const getPresenceScaleFactor = ({
         actorKey === WILLY ||
         actorKey === MOTHER ||
         actorKey === FATHER ||
-        actorKey === CHRISTOPHER ||
-        actorKey === CHRISTOPHER_BENNETT ||
-        actorKey === CHRISTOPHER_BENNETT_WILLY ||
         actorKey === SASHA ||
         actorKey === SASHA_BENNETT ||
         actorKey === BRAD ||

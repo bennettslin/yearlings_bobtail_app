@@ -5,16 +5,13 @@
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
 
-# Bugs
-* Carousel annotation title access keys have large font size.
-
 # Immediate TODO:
 * Deal with Reatta layer Y indices.
 * Make j, k, n, m letters just navigate directly.
 * One more audit.
 * Get rid of 16.23 magic number!
-    * Make border 1px
-    * Scale actors by 15.403575%
+    * Make border 1px for things, 0.5px for actors
+    * Scale actors by 15.4036%
 
 * Consider getting rid of shared constants for people?
 * Allow for shared things (checkered flag, conveyor belt, dishroom sink, Bennett couch, Bennett lamp, Bennett bed, Bennett nightstand, stage lights, dishroom stuff, dishroom door, lancet pen, wedding)
