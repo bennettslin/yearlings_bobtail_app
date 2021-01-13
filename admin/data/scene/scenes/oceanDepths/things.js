@@ -13,7 +13,7 @@ export default {
         [BENNETT_ODIN_OCEAN_FLOOR]: {
             yIndex: 4,
             xPosition: 8,
-            scaleFactor: 0.2,
+            scaleFactor: 0.8,
         },
     },
     [FLAT]: {

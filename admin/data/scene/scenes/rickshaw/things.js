@@ -13,12 +13,12 @@ export default {
         [BENNETT_SHORE]: {
             yIndex: 2,
             xPosition: 1.5,
-            scaleFactor: 0.2,
+            scaleFactor: 0.8,
         },
         [ODIN_SHORE]: {
             yIndex: 2,
             xPosition: 2,
-            scaleFactor: 0.2,
+            scaleFactor: 0.8,
         },
     },
     [FLAT]: {

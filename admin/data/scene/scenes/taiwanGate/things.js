@@ -18,7 +18,7 @@ export default {
         [BENNETT_ODIN_RICKSHAW]: {
             yIndex: 2,
             xPosition: 6.75,
-            scaleFactor: 0.225,
+            scaleFactor: 0.9,
         },
     },
     [CUTOUT]: {

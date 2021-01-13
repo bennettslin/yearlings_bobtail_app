@@ -225,7 +225,6 @@ export const THINGS_BEDROOM_ASLEEP = {
             yIndex: 4,
             xPosition: 1.9,
             zOffset: 1.7,
-            scaleFactor: 0.6,
             rotate: 180,
         },
         [DOGS_ROCKET]: {
@@ -249,7 +248,7 @@ export const THINGS_BEDROOM_SHAKEN = {
             yIndex: 4,
             xPosition: 6.7,
             zOffset: 5.5,
-            scaleFactor: 0.2,
+            scaleFactor: 0.33,
         },
         [DOGS_SPACE_STATION]: {
             yIndex: 4,

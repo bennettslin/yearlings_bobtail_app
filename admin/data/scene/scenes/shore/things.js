@@ -15,7 +15,7 @@ export default {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,
             xPosition: 8,
-            scaleFactor: 0.15,
+            scaleFactor: 0.6,
         },
     },
     [CUTOUT]: {

@@ -27,7 +27,7 @@ export default {
             yIndex: 0,
             xPosition: 8.7,
             zOffset: 2.7,
-            scaleFactor: 0.7,
+            scaleFactor: 0.85,
             rotate: 10,
         },
     },

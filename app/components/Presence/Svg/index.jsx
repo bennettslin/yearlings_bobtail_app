@@ -111,7 +111,7 @@ const PresenceSvg = ({
                     adjustedWidth,
                     adjustedHeight,
                 } = getDimensionsForPresence({
-                    presenceType,
+                    actorKey,
                     viewBoxWidth,
                     viewBoxHeight,
                     yIndex,

@@ -29,10 +29,7 @@ import {
 } from '../../../../app/components/Presence/Svg/helpers/size'
 import { getCompoundActorStyleIfNeeded } from '../../../../app/components/Presence/Svg/helpers/sharedStyle'
 
-import {
-    ACTOR,
-    ILLUSTRATOR_SCALE_FACTOR,
-} from '../../../../app/constants/scene'
+import { ACTOR } from '../../../../app/constants/scene'
 import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'
 import { CUSTOM_THING_INSTANCES } from '../../../constants/things'
 
@@ -71,7 +68,7 @@ class PreviewerSvg extends PureComponent {
     }
 
     handleProcessSvg = svgString => {
-        const { presenceKey } = this.props,
+        const { presenceType, presenceKey } = this.props,
 
             element = getDocument().getElementsByClassName(
                 presenceKey
@@ -89,7 +86,7 @@ class PreviewerSvg extends PureComponent {
                     trimBottom,
                 } = this.getArrangement(),
                 { adjustedHeight } = getDimensionsForPresence({
-                    presenceType: ACTOR,
+                    actorKey: presenceType,
                     viewBoxWidth,
                     viewBoxHeight,
                     yIndex: 5,
@@ -98,10 +95,7 @@ class PreviewerSvg extends PureComponent {
                 })
 
             this.setState({
-                previewerHeight:
-                    adjustedHeight *
-                    scaleFactor *
-                    ILLUSTRATOR_SCALE_FACTOR * 0.5,
+                previewerHeight: adjustedHeight,
                 kilobytes,
             })
 

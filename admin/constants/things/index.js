@@ -16,9 +16,6 @@ import {
 const POSTER = 'poster'
 
 export default [
-    // Custom lists.
-    POSTER,
-
     BACKDROP,
     BUBBLE,
     CARDBOARD,
@@ -29,6 +26,9 @@ export default [
     FURNITURE,
     PANEL,
     PUPPET,
+
+    // Custom lists.
+    POSTER,
 ]
 
 export const CUSTOM_THING_INSTANCES = {

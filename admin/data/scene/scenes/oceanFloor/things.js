@@ -16,12 +16,12 @@ export default {
         [BENNETT_MAT]: {
             yIndex: 2,
             xPosition: 2.6,
-            scaleFactor: 0.2,
+            scaleFactor: 0.8,
         },
         [ODIN_MAT]: {
             yIndex: 2,
             xPosition: 0.8,
-            scaleFactor: 0.2,
+            scaleFactor: 0.8,
         },
     },
     [PANEL]: {

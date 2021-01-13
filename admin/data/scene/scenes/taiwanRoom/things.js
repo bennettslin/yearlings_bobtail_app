@@ -20,12 +20,10 @@ export default {
         [BENNETT_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 7.75,
-            scaleFactor: 0.25,
         },
         [ODIN_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 1.5,
-            scaleFactor: 0.25,
         },
     },
     [CUTOUT]: {
