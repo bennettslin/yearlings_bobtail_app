@@ -6,7 +6,6 @@
 * At the very least, get rid of Admin styles
 
 # Immediate TODO:
-* Deal with Reatta layer Y indices.
 * Make j, k, n, m letters just navigate directly.
 * One more audit.
 * Get rid of 16.23 magic number!

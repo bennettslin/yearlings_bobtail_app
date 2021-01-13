@@ -19,8 +19,7 @@ import {
     REATTA_EXTERIOR_FRONT,
     REATTA_EXTERIOR_REAR,
     REATTA_INTERIOR,
-    REATTA_SEAT_BOTTOM__FRONT,
-    REATTA_SEAT_BOTTOM__REAR,
+    REATTA_SEAT_BOTTOM,
     REATTA_SEAT_BACK,
     REATTA_SEAT_BACK_DOWN,
 } from '../../../../../app/constants/scene/things/panels'
@@ -64,13 +63,7 @@ export default {
             yIndex: 1,
             xPosition: 4.1,
         },
-        [REATTA_SEAT_BOTTOM__FRONT]: {
-            yIndex: 5,
-            xPosition: 2.07,
-            zOffset: 0.79,
-            layerYIndex: 4,
-        },
-        [REATTA_SEAT_BOTTOM__REAR]: {
+        [REATTA_SEAT_BOTTOM]: {
             yIndex: 5,
             xPosition: 2.07,
             zOffset: 0.79,
@@ -86,7 +79,7 @@ export default {
             yIndex: 5,
             xPosition: 1.26,
             zOffset: 1.3,
-            layerYIndex: 4,
+            layerYIndex: 3,
         },
         [REATTA_EXTERIOR_FRONT]: {
             yIndex: 5,

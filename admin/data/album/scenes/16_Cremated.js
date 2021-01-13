@@ -71,8 +71,7 @@ import {
 import { DEATHBED_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
     REATTA_INTERIOR,
-    REATTA_SEAT_BOTTOM__FRONT,
-    REATTA_SEAT_BOTTOM__REAR,
+    REATTA_SEAT_BOTTOM,
     REATTA_SEAT_BACK,
     REATTA_SEAT_BACK_DOWN,
     REATTA_EXTERIOR_FRONT,
@@ -112,7 +111,7 @@ export default [
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT_BOTTOM__FRONT]: true,
+                [REATTA_SEAT_BOTTOM]: true,
                 [REATTA_SEAT_BACK]: true,
                 [REATTA_EXTERIOR_FRONT]: true,
                 [REATTA_EXTERIOR_REAR]: true,
@@ -147,7 +146,7 @@ export default [
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT_BOTTOM__REAR]: true,
+                [REATTA_SEAT_BOTTOM]: true,
                 [REATTA_SEAT_BACK_DOWN]: true,
                 [REATTA_EXTERIOR_FRONT]: true,
                 [REATTA_EXTERIOR_REAR]: true,
@@ -182,7 +181,7 @@ export default [
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT_BOTTOM__FRONT]: true,
+                [REATTA_SEAT_BOTTOM]: true,
                 [REATTA_SEAT_BACK_DOWN]: true,
                 [REATTA_EXTERIOR_FRONT]: true,
                 [REATTA_EXTERIOR_REAR]: true,
@@ -308,7 +307,7 @@ export default [
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT_BOTTOM__REAR]: true,
+                [REATTA_SEAT_BOTTOM]: true,
                 [REATTA_SEAT_BACK]: true,
                 [REATTA_EXTERIOR_FRONT]: true,
                 [REATTA_EXTERIOR_REAR]: true,
