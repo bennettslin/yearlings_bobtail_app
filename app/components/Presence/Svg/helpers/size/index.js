@@ -20,11 +20,6 @@ import {
     WILLY,
     MOTHER,
     FATHER,
-    SASHA,
-    SASHA_BENNETT,
-    BRAD,
-    BRAD_BENNETT,
-    BRAD_SASHA,
     CATHERINE,
     MARA,
     JACOB,
@@ -68,11 +63,6 @@ const getPresenceScaleFactor = ({
         actorKey === WILLY ||
         actorKey === MOTHER ||
         actorKey === FATHER ||
-        actorKey === SASHA ||
-        actorKey === SASHA_BENNETT ||
-        actorKey === BRAD ||
-        actorKey === BRAD_BENNETT ||
-        actorKey === BRAD_SASHA ||
         actorKey === CATHERINE ||
         actorKey === MARA ||
         actorKey === JACOB ||
