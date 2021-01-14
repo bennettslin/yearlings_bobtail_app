@@ -10,14 +10,10 @@ import {
     PRETEEN_BENNETT,
     BENNETT,
     BENNETT_LIZ,
-    BENNETT_STEPHANIE,
     OLD_BENNETT,
     ANITA,
     ANITA_BENNETT,
     LIZ,
-    MIRIAM,
-    MIRIAM_BENNETT,
-    STEPHANIE,
     BENNETT_REFLECTION,
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
@@ -33,14 +29,10 @@ const getPresenceScaleFactor = ({
         actorKey === YOUNG_BENNETT ||
         actorKey === PRETEEN_BENNETT ||
         actorKey === BENNETT_LIZ ||
-        actorKey === BENNETT_STEPHANIE ||
         actorKey === OLD_BENNETT ||
         actorKey === ANITA ||
         actorKey === ANITA_BENNETT ||
         actorKey === LIZ ||
-        actorKey === MIRIAM ||
-        actorKey === MIRIAM_BENNETT ||
-        actorKey === STEPHANIE ||
         actorKey === BENNETT_REFLECTION ||
         actorKey === BENNETT_LIZ_REFLECTION ||
         actorKey === LIZ_REFLECTION ||
