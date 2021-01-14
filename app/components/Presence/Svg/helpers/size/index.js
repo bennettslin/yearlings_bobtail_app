@@ -9,35 +9,18 @@ import {
     YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
-    BENNETT_FATHER,
     BENNETT_LIZ,
     BENNETT_STEPHANIE,
     OLD_BENNETT,
     ANITA,
     ANITA_BENNETT,
-    ESTHER,
-    ESTHER_MOTHER,
-    WILLY,
-    MOTHER,
-    FATHER,
-    CATHERINE,
-    ANA,
-    ANA_HOWIE,
-    HOWIE,
-    HOWIE_WILLY,
     LIZ,
-    KHARI,
-    KHARI_LIZ,
     MIRIAM,
     MIRIAM_BENNETT,
-    MIRIAM_STEPHANIE,
-    MIRIAM_TRISTAN,
-    TRISTAN,
     STEPHANIE,
     BENNETT_REFLECTION,
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
-    KHARI_LIZ_REFLECTION,
 } from '../../../../../constants/scene/actors'
 
 const getPresenceScaleFactor = ({
@@ -49,35 +32,18 @@ const getPresenceScaleFactor = ({
     if (
         actorKey === YOUNG_BENNETT ||
         actorKey === PRETEEN_BENNETT ||
-        actorKey === BENNETT_FATHER ||
         actorKey === BENNETT_LIZ ||
         actorKey === BENNETT_STEPHANIE ||
         actorKey === OLD_BENNETT ||
         actorKey === ANITA ||
         actorKey === ANITA_BENNETT ||
-        actorKey === ESTHER ||
-        actorKey === ESTHER_MOTHER ||
-        actorKey === WILLY ||
-        actorKey === MOTHER ||
-        actorKey === FATHER ||
-        actorKey === CATHERINE ||
-        actorKey === ANA ||
-        actorKey === ANA_HOWIE ||
-        actorKey === HOWIE ||
-        actorKey === HOWIE_WILLY ||
         actorKey === LIZ ||
-        actorKey === KHARI ||
-        actorKey === KHARI_LIZ ||
         actorKey === MIRIAM ||
         actorKey === MIRIAM_BENNETT ||
-        actorKey === MIRIAM_STEPHANIE ||
-        actorKey === MIRIAM_TRISTAN ||
-        actorKey === TRISTAN ||
         actorKey === STEPHANIE ||
         actorKey === BENNETT_REFLECTION ||
         actorKey === BENNETT_LIZ_REFLECTION ||
         actorKey === LIZ_REFLECTION ||
-        actorKey === KHARI_LIZ_REFLECTION ||
         actorKey === BENNETT
     ) {
         return ACTOR_DEFAULT_SCALE_FACTOR

@@ -17,24 +17,17 @@
          * List of VS Code commands.
          * https://gist.github.com/skfarhat/4e88ef386c93b9dceb98121d9457edbf
          */
-        "testMacro": [],
+        "testMacro": [
+
+        ],
         "prepSvg": [
+            /* Focus in text editor. */
+            "workbench.action.focusFirstEditorGroup",
+
             /* Remove xmlns metadata. */
             "cursorTop",
-            {"command": "type", "args": {"text": "id=\"presence\" xmlns=\"http://www.w3.org/2000/svg\" "}},
-            "cursorLineStart",
             "cursorWordRight",
-            "cursorWordRight",
-            "cursorWordRight",
-            "cursorWordRight",
-            "cursorWordRightSelect",
-            "cursorWordRightSelect",
-            "editor.action.selectHighlights",
-            "cursorWordLeft",
-            "cursorWordLeft",
-            "cursorWordLeft",
-            "cursorWordLeft",
-            "cursorWordLeft",
+            "cursorRight",
             "cursorWordRightSelect",
             "cursorWordRightSelect",
             "cursorWordRightSelect",
@@ -189,7 +182,10 @@
             "deleteLeft",
 
             /* Save file . */
-            "workbench.action.files.save"
+            "workbench.action.files.save",
+
+            /* Focus in side bar. */
+            "workbench.action.focusSideBar"
         ]
     }
 }
