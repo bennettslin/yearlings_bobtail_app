@@ -200,4 +200,8 @@ export default [
         reference: `https://www.harpgallery.com/shop/item33895.html`,
         workedHours: 1,
     },
+    {
+        taskName: `Hospital record stand.`,
+        workedHours: 2,
+    },
 ]

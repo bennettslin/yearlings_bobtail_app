@@ -17,6 +17,7 @@ import freewayFence from '../../../../../assets/svgs/panels/freewayFence'
 import goKartExterior from '../../../../../assets/svgs/panels/goKartExterior'
 import goKartSeat from '../../../../../assets/svgs/panels/goKartSeat'
 import hospitalBed from '../../../../../assets/svgs/panels/hospitalBed'
+import hospitalRecordStand from '../../../../../assets/svgs/panels/hospitalRecordStand'
 import keyboardStandLeft from '../../../../../assets/svgs/panels/keyboardStandLeft'
 import keyboardStandRight from '../../../../../assets/svgs/panels/keyboardStandRight'
 import lizBed from '../../../../../assets/svgs/panels/lizBed'
@@ -171,7 +172,7 @@ export default {
     [GO_KART_SEAT__LEFT]: goKartSeat,
     [GO_KART_SEAT__RIGHT]: goKartSeat,
     [HOSPITAL_BED]: hospitalBed,
-    [HOSPITAL_RECORD_STAND]: hospitalBed,
+    [HOSPITAL_RECORD_STAND]: hospitalRecordStand,
     [KEYBOARD_STAND_LEFT]: keyboardStandLeft,
     [KEYBOARD_STAND_RIGHT]: keyboardStandRight,
     [LIZ_BED]: lizBed,

@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Hospital record stand.`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
         taskName: `Make mermaid and serpent colours the same.`,
         workedHours: 0,
         neededHours: 2,

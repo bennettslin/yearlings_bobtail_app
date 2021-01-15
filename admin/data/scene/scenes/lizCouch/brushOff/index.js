@@ -4,7 +4,7 @@ import { BRUSH_OFF } from '../../../../../../app/constants/scene/actors/bennettL
 export default {
     [BENNETT_LIZ]: {
         [BRUSH_OFF]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: 6.5,
         },
     },
