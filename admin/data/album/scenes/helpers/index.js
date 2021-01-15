@@ -72,7 +72,7 @@ const _addPresenceToSceneLayer = ({
         {
             yIndex: arrangedYIndex = -1,
             layerYIndex,
-            xPosition,
+            xPosition = 5.5,
         } = arrangementObject,
 
         /**
