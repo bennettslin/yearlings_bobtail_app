@@ -6,13 +6,8 @@ import {
 } from '../../../../../constants/scene'
 import { STAGE_ASPECT_RATIO } from '../../../../../constants/stage'
 import {
-    YOUNG_BENNETT,
-    PRETEEN_BENNETT,
     BENNETT,
     BENNETT_LIZ,
-    OLD_BENNETT,
-    ANITA,
-    ANITA_BENNETT,
     LIZ,
     BENNETT_REFLECTION,
     BENNETT_LIZ_REFLECTION,
@@ -26,12 +21,7 @@ const getPresenceScaleFactor = ({
 }) => {
     // TODO: Get rid of this method once all actors have had scale factors adjusted. Scale to 15.4036.
     if (
-        actorKey === YOUNG_BENNETT ||
-        actorKey === PRETEEN_BENNETT ||
         actorKey === BENNETT_LIZ ||
-        actorKey === OLD_BENNETT ||
-        actorKey === ANITA ||
-        actorKey === ANITA_BENNETT ||
         actorKey === LIZ ||
         actorKey === BENNETT_REFLECTION ||
         actorKey === BENNETT_LIZ_REFLECTION ||
