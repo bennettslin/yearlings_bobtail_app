@@ -68,7 +68,7 @@ class PreviewerSvg extends PureComponent {
     }
 
     handleProcessSvg = svgString => {
-        const { presenceType, presenceKey } = this.props,
+        const { presenceKey } = this.props,
 
             element = getDocument().getElementsByClassName(
                 presenceKey
@@ -76,8 +76,6 @@ class PreviewerSvg extends PureComponent {
 
         if (element) {
             const kilobytes = svgString.length / 1024
-
-            console.log('presenceType', presenceType)
 
             const {
                     viewBoxWidth,
@@ -88,7 +86,6 @@ class PreviewerSvg extends PureComponent {
                     trimBottom,
                 } = this.getArrangement(),
                 { adjustedHeight } = getDimensionsForPresence({
-                    actorKey: presenceType,
                     viewBoxWidth,
                     viewBoxHeight,
                     yIndex: 5,

@@ -5031,4 +5031,8 @@ export default [
         taskName: `Show duplicate instances in previewer.`,
         workedHours: 1,
     },
+    {
+        taskName: `Scale factor work.`,
+        workedHours: 28,
+    },
 ]
