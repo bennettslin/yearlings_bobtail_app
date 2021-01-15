@@ -5035,4 +5035,8 @@ export default [
         taskName: `Scale factor work.`,
         workedHours: 28,
     },
+    {
+        taskName: `Move snowglobes to the side on road paths.`,
+        workedHours: 1,
+    },
 ]

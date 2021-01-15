@@ -21,8 +21,9 @@ export default [
         workedHours: 1,
     },
     {
-        taskName: `Move snowglobes to the side on road paths.`,
-        workedHours: 1,
+        taskName: `Liz couch scene space fillers? Litter box?`,
+        workedHours: 0,
+        neededHours: 3,
     },
 
     /* Ongoing. */
