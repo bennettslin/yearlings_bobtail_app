@@ -96,7 +96,7 @@ export default {
         },
         [HOSPITAL_RECORD_STAND]: {
             yIndex: 5,
-            xPosition: 6.3,
+            xPosition: 6.4,
             zIndex: 1.1,
         },
     },

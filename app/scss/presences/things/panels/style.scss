@@ -2,37 +2,8 @@
     .suds { fill: hsl(0, 0%, 100%); }
 }
 
-.dishroomSink {
-    .disposalInner { fill: hsl(180, 33%, 30%); }
-    .disposalOuter { fill: hsl(150, 33%, 40%); }
-    .panelOuter { fill: hsl(200, 30%, 50%); }
-    .panelInner { fill: hsl(200, 30%, 70%); }
-    .buttonStop { fill: hsl(0, 40%, 50%); }
-    .buttonGo { fill: hsl(120, 40%, 50%); }
-}
-
 .freewayFence {
     .wire { stroke: hsla(348, 2%, 40%, 0.25); }
-}
-
-.hospitalBed {
-    .swivel { fill: hsl(240, 3%, 59%); }
-    .wheelSide { fill: hsl(0, 0%, 22%); }
-    .wheelFront { fill: hsl(240, 1%, 28%); }
-    .headBoardEdge { fill: hsl(30, 24%, 34%); }
-    .headBoardSurface { fill: hsl(28, 35%, 52%); }
-    .platformBelowTop { fill: hsl(174, 12%, 50%); }
-    .platformBelowSide { fill: hsl(183, 13%, 34%); }
-    .platformBelowFront { fill: hsl(178, 16%, 60%); }
-    .frameSide { fill: hsl(267, 16%, 48%); }
-    .frameFront { fill: hsl(230, 12%, 58%); }
-    .platformAboveSide { fill: hsl(186, 14%, 41%); }
-    .platformAboveFront { fill: hsl(179, 26%, 69%); }
-    .platformAboveTop { fill: hsl(174, 16%, 55%); }
-    .mattressSide { fill: hsl(334, 11%, 45%); }
-    .mattressFront { fill: hsl(335, 14%, 53%); }
-    .footBoardEdge { fill: hsl(31, 26%, 40%); }
-    .footBoardSurface { fill: hsl(30, 47%, 58%); }
 }
 
 .oceanWaves {
@@ -60,11 +31,11 @@
 }
 
 .volkswagen {
-    .handleRecess { fill: hsl(68, 25%, 64%); }
     .window { fill: hsl(160, 17%, 61%); }
     .windowTrim { fill: hsl(63, 24%, 29%); }
-    .bodyDark { fill: hsl(72, 48%, 56%); }
-    .body { fill: hsl(72, 52%, 64%); }
-    .bodyLight { fill: hsl(72, 53%, 65%); }
+    .handleRecess { fill: hsl(90, 33%, 57%); }
+    .bodyDark { fill: hsl(90, 33%, 57%); }
+    .body { fill: hsl(90, 33%, 62%); }
+    .bodyLight { fill: hsl(90, 33%, 67%); }
 
 }
