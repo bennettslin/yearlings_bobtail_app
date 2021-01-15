@@ -11,26 +11,6 @@
 @import './presences/style';
 
 /* Next to remove. */
-.cavemanBones {
-    .placardBottom { fill: hsl(60, 20%, 45%); }
-    .placardSide { fill: hsl(54, 14%, 56%); }
-    .placardFront { fill: hsl(253, 20%, 64%); }
-    .appendageRear { fill: hsl(57, 11%, 63%); }
-    .centreInner { fill: hsl(57, 11%, 65%); }
-    .spine { fill: hsl(57, 12%, 67%); }
-    .centreOuter { fill: hsl(57, 14%, 70%); }
-    .appendageFront { fill: hsl(57, 15%, 71%); }
-}
-
-.lockerBank {
-    .frame { fill: hsl(64, 13%, 52%); }
-    .door { fill: hsl(193, 39%, 64%); }
-    .label { fill: hsl(45, 18%, 60%); }
-    .lips { fill: hsl(344, 34%, 45%); }
-    .teeth { fill: hsl(0, 0%, 100%); }
-    .kiss { fill: hsl(280, 38%, 56%); }
-}
-
 .mirroredSink {
     .mirror { fill: hsl(180, 100%, 80%); }
     .reflection { fill: hsl(180, 100%, 90%); }
@@ -52,4 +32,23 @@
     .cable { fill: hsl(228, 28%, 42%); }
     .hanger { fill: hsl(0, 0%, 60%); }
     .hangerScrew { fill: hsl(0, 0%, 45%); }
+}
+
+.museumDisplay {
+    .displayBack { fill: hsl(60, 100%, 90%); }
+    .case { fill: hsl(13, 16%, 33%); }
+    .displayInnerDark { fill: hsl(13, 16%, 43%); }
+    .displayInnerLight { fill: hsl(13, 16%, 48%); }
+    .land { fill: hsl(30, 50%, 60%); }
+    .routes { fill: hsl(0, 50%, 60%); }
+    .oar { fill: hsl(30, 50%, 40%); }
+    .axeHandle { fill: hsl(30, 50%, 40%); }
+    .axeBlade { fill: hsl(0, 0%, 60%); }
+    .axeTwine { fill: hsl(0, 100%, 90%); }
+    .pot { fill: hsl(60, 20%, 50%); }
+    .vaseLeg { fill: hsl(180, 33%, 30%); }
+    .vase { fill: hsl(180, 20%, 50%); }
+    .vaseBand { fill: hsl(120, 33%, 70%); }
+    .pitcher { fill: hsl(240, 33%, 70%); }
+    .pitcherBand { fill: hsl(300, 33%, 70%); }
 }
