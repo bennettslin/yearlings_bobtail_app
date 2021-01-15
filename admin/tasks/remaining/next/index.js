@@ -14,16 +14,11 @@ export default [
     },
     {
         taskName: `Shared styles work.`,
-        workedHours: 37,
+        workedHours: 38,
     },
     {
         taskName: `Audit scenes.`,
         workedHours: 1,
-    },
-    {
-        taskName: `Liz couch scene space fillers? Litter box?`,
-        workedHours: 0,
-        neededHours: 3,
     },
 
     /* Ongoing. */

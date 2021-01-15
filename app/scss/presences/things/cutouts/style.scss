@@ -4,3 +4,70 @@
     .flameInner { fill: hsla(56, 95%, 68%, 0.9); }
     .wood { fill: hsl(40, 42%, 52%); }
 }
+
+.mirroredSink {
+    .mirror { fill: hsl(180, 100%, 80%); }
+    .reflection { fill: hsl(180, 100%, 90%); }
+    .debbieShirt { fill: hsl(204, 100%, 37%); }
+    .debbieHat { fill: hsl(270, 50%, 60%); }
+    .photoBackground { fill: hsl(0, 0%, 40%); }
+    .nkotbShirtDark { fill: hsl(210, 50%, 40%); }
+    .nkotbShirtLight { fill: hsl(176, 100%, 33%); }
+    .nkotbShirtAverage { fill: hsl(153, 68%, 42%); }
+}
+
+.ivDrip {
+    .boxLight { fill: hsl(270, 57%, 77%); }
+    .boxMedium { fill: hsl(268, 37%, 68%); }
+    .boxDark { fill: hsl(270, 25%, 60%); }
+    .console { fill: hsl(150, 37%, 68%); }
+    .button { fill: hsl(60, 47%, 77%); }
+    .bar { fill: hsl(180, 20%, 61%); }
+    .bagCap { fill: hsl(0, 0%, 100%); }
+    .bagFull { fill: hsl(180, 60%, 75%); }
+    .bagEmpty { fill: hsl(180, 51%, 90%); }
+}
+
+.pharmacyAisle {
+    .rackFront { fill: hsl(60, 12%, 60%); }
+    .rackBack { fill: hsl(60, 8%, 51%); }
+    .plasticCap { fill: hsl(0, 0%, 85%); }
+    .metalCap { fill: hsl(176, 14%, 61%); }
+    .boxCap { fill: hsl(0, 0%, 76%); }
+    .boxTopFirst { fill: hsl(330, 47%, 62%); }
+    .labelTopFirst { fill: hsl(207, 5%, 67%); }
+    .bottleTopSecond { fill: hsl(30, 50%, 60%); }
+    .boxTopThird { fill: hsl(60, 50%, 60%); }
+    .labelTopThird { fill: hsl(27, 49%, 61%); }
+    .boxTopFourth { fill: hsl(222, 50%, 60%); }
+    .boxTopFifth { fill: hsl(180, 50%, 60%); }
+    .boxTopMiddleFirst { fill: hsl(270, 50%, 60%); }
+    .boxTopMiddleSecond { fill: hsl(0, 51%, 59%); }
+    .bottleTopMiddleThird { fill: hsl(30, 34%, 49%); }
+    .boxTopMiddleThird { fill: hsl(187, 32%, 47%); }
+    .labelTopMiddleThird { fill: hsl(60, 19%, 75%); }
+    .boxTopMiddleFourth { fill: hsl(227, 7%, 76%); }
+    .labelTopMiddleFourth { fill: hsl(228, 26%, 51%); }
+    .boxMiddleFirst { fill: hsl(210, 43%, 58%); }
+    .boxMiddleSecond { fill: hsl(225, 14%, 77%); }
+    .labelMiddleSecond { fill: hsl(224, 52%, 58%); }
+    .boxMiddleThird { fill: hsl(36, 47%, 58%); }
+    .bottleMiddleThird { fill: hsl(31, 13%, 54%); }
+    .labelBottomMiddleFirst { fill: hsl(36, 52%, 58%); }
+    .boxMiddleFourth { fill: hsl(358, 32%, 51%); }
+    .labelMiddleFourth { fill: hsl(188, 60%, 71%); }
+    .boxMiddleFifth { fill: hsl(60, 50%, 60%); }
+    .boxBottomMiddleFirst { fill: hsl(88, 21%, 68%); }
+    .boxBottomMiddleSecond { fill: hsl(142, 50%, 60%); }
+    .boxBottomMiddleThird { fill: hsl(179, 54%, 57%); }
+    .boxBottomMiddleFourth { fill: hsl(211, 58%, 71%); }
+    .labelBottomMiddleFourth { fill: hsl(270, 49%, 60%); }
+    .boxBottomFirst { fill: hsl(359, 42%, 55%); }
+    .boxBottomSecond { fill: hsl(60, 34%, 70%); }
+    .labelBottomSecond { fill: hsl(252, 26%, 56%); }
+    .boxBottomThird { fill: hsl(207, 39%, 60%); }
+    .labelBottomThird { fill: hsl(205, 9%, 73%); }
+    .boxBottomFourth { fill: hsl(233, 49%, 60%); }
+    .labelWhite { fill: hsl(0, 0%, 86%); }
+    .shelf { fill: hsl(60, 18%, 69%); }
+}
