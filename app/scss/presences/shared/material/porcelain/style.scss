@@ -9,6 +9,7 @@
 // .porcelainLighter { fill: hsl(180, 28%, 92%); }
 // .porcelainLightest { fill: hsl(180, 28%, 97%); }
 
-.dark__indoor {
+.dark__indoor
+.darkens#{$suffix} {
     .porcelainDarkest { fill: hsl(180, 14%, 34%); }
 }

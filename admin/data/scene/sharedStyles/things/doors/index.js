@@ -53,13 +53,17 @@ import {
     MOUNTAIN__SHARED,
     WALL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
+import { DARKENS } from '../../../../../../app/constants/scene/sharedStyles'
 
 export default {
     [BANCROFT_DOOR]: [
         DOOR__SHARED,
         WINDOW__SHARED,
     ],
-    [BASEMENT_DOOR]: DOOR__SHARED,
+    [BASEMENT_DOOR]: [
+        DARKENS,
+        DOOR__SHARED,
+    ],
     [BASEMENT_DOOR_OPEN]: DOOR__SHARED,
     [BASEMENT_DOOR_SIDE]: DOOR__SHARED,
     [BEDROOM_BLINDS]: [
@@ -77,6 +81,7 @@ export default {
     ],
     [BENNETT_DOOR_INSIDE]: [
         BENNETT_INSIDE__SHARED,
+        DARKENS,
         DOOR__SHARED,
     ],
     [BENNETT_DOOR_INSIDE_OPEN]: [
@@ -102,6 +107,7 @@ export default {
     ],
     [BLINDS_INSIDE_OPEN]: [
         BENNETT_INSIDE__SHARED,
+        DARKENS,
         WINDOW__SHARED,
     ],
     [BLINDS_OUTSIDE]: [
@@ -136,6 +142,7 @@ export default {
         WINDOW__SHARED,
     ],
     [LIZ_BLINDS_INSIDE_OPEN]: [
+        DARKENS,
         LIZ_APARTMENT__SHARED,
         WINDOW__SHARED,
     ],
@@ -144,6 +151,7 @@ export default {
         WINDOW__SHARED,
     ],
     [LIZ_DOOR]: [
+        DARKENS,
         DOOR__SHARED,
         LIZ_APARTMENT__SHARED,
     ],

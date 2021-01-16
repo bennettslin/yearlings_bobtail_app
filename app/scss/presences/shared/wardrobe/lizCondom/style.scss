@@ -5,7 +5,7 @@
     .wrapperInner { fill: hsl(128, 52%, 80%); }
 
     .dark__indoor
-    & {
+    &.darkens#{$suffix} {
         .condomRing { fill: hsl(128, 17%, 37%); }
         .condomBag { fill: hsl(128, 9%, 42%); }
         .wrapperOuter { fill: hsl(128, 33%, 41%); }

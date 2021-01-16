@@ -17,7 +17,7 @@ export default {
         },
         [ODIN_SHORE]: {
             yIndex: 2,
-            xPosition: 2,
+            xPosition: 1,
             scaleFactor: 0.8,
         },
     },

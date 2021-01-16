@@ -110,6 +110,7 @@ import {
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
+import { DARKENS } from '../../../../../../app/constants/scene/sharedStyles'
 
 export default {
     [BACKPACK_BENNETT]: BACKPACK__SHARED,
@@ -132,11 +133,23 @@ export default {
     ],
     [BEYONDER_ENVELOPE]: LETTER__SHARED,
     [CASH_BOX]: DOLLAR__SHARED,
-    [CONDOM_LIZ]: LIZ_CONDOM__SHARED,
-    [CONDOM_REFLECTION]: LIZ_CONDOM__SHARED,
+    [CONDOM_LIZ]: [
+        DARKENS,
+        LIZ_CONDOM__SHARED,
+    ],
+    [CONDOM_REFLECTION]: [
+        DARKENS,
+        LIZ_CONDOM__SHARED,
+    ],
     [CONDOM_MIRIAM]: MIRIAM_CONDOM__SHARED,
-    [CONDOM_WRAPPER_LIZ]: LIZ_CONDOM__SHARED,
-    [CONDOM_WRAPPER_REFLECTION]: LIZ_CONDOM__SHARED,
+    [CONDOM_WRAPPER_LIZ]: [
+        DARKENS,
+        LIZ_CONDOM__SHARED,
+    ],
+    [CONDOM_WRAPPER_REFLECTION]: [
+        DARKENS,
+        LIZ_CONDOM__SHARED,
+    ],
     [CONDOM_WRAPPER_MIRIAM]: MIRIAM_CONDOM__SHARED,
     [CHRISTOPHER_LETTERS]: [
         MAGAZINE__SHARED,
@@ -171,16 +184,23 @@ export default {
     [KEYBOARD]: null,
     [KICK_DRUM]: DRUMS__SHARED,
     [LETTER_SCRAPS]: MAGAZINE__SHARED,
-    [LIGHT_SWITCH]: null,
+    [LIGHT_SWITCH]: DARKENS,
     [LINGERIE_DRAWING]: [
         BOOK__SHARED,
+        DARKENS,
         DRAWING__SHARED,
         SKETCHBOOK__SHARED,
     ],
-    [LIZ_PHONE]: LIZ_PHONE__SHARED,
+    [LIZ_PHONE]: [
+        DARKENS,
+        LIZ_PHONE__SHARED,
+    ],
     [LIZ_PHONE_BASE]: LIZ_PHONE__SHARED,
     [LIZ_PHONE_BASE_REFLECTION]: LIZ_PHONE__SHARED,
-    [LIZ_PHONE_REFLECTION]: LIZ_PHONE__SHARED,
+    [LIZ_PHONE_REFLECTION]: [
+        DARKENS,
+        LIZ_PHONE__SHARED,
+    ],
     [MANNEQUIN]: null,
     [PLAYGROUND_BALL]: null,
     [PUSH_BROOM]: null,
@@ -201,5 +221,5 @@ export default {
         PUDDING__SHARED,
     ],
     [TORN_MAGAZINES]: MAGAZINE__SHARED,
-    [VASELINE]: null,
+    [VASELINE]: DARKENS,
 }

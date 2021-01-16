@@ -9,7 +9,8 @@
 // .rubberLighter { fill: hsl(240, 5%, 52%); }
 // .rubberLightest { fill: hsl(240, 5%, 57%); }
 
-.dark__indoor {
+.dark__indoor
+.darkens#{$suffix} {
     .rubberMedium { fill: hsl(240, 3%, 24%); }
     .rubberLight { fill: hsl(240, 3%, 29%); }
 }

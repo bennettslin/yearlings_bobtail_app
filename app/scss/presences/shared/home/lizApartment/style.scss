@@ -13,7 +13,7 @@
     .rail { fill: hsl($HUE_LIZ_ROOM, 17%, 66%); }
 
     .dark__indoor
-    & {
+    &.darkens#{$suffix} {
         .frameSide { fill: hsl($HUE_LIZ_ROOM, 9%, 32%); }
         .frameFront { fill: hsl($HUE_LIZ_ROOM, 9%, 35%); }
         .doorSide { fill: hsl($HUE_LIZ_ROOM + 20, 11%, 30%); }

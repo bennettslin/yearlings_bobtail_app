@@ -5,7 +5,7 @@
     .blanketInner { fill: hsl($hue__attic__linens + 20, 26%, 50%); }
 
     .dark__indoor
-    & {
+    &.darkens#{$suffix} {
         .cushion { fill: hsl($hue__attic__linens, 8%, 26%); }
     }
 }

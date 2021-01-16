@@ -10,6 +10,7 @@ import {
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_PILLOWS_REFLECTION,
 } from '../../../../../../app/constants/scene/things/furnitures'
+import { DARKENS } from '../../../../../../app/constants/scene/sharedStyles'
 import {
     ATTIC_LINENS__SHARED,
     BENNETT_LINENS__SHARED,
@@ -20,7 +21,10 @@ import {
 export default {
     [ATTIC_PILLOW]: ATTIC_LINENS__SHARED,
     [BASEMENT_PILLOW]: BENNETT_LINENS__SHARED,
-    [BENNETT_PILLOW]: BENNETT_LINENS__SHARED,
+    [BENNETT_PILLOW]: [
+        BENNETT_LINENS__SHARED,
+        DARKENS,
+    ],
     [CAPTAIN_BED_PILLOW]: BENNETT_LINENS__SHARED,
     [DEATHBED_PILLOW]: HOSPITAL_LINENS__SHARED,
     [DEATHBED_BLANKET]: HOSPITAL_LINENS__SHARED,

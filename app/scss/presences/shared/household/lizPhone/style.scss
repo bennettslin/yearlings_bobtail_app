@@ -8,7 +8,7 @@
     .buttonLarge { fill: hsl(210, 42%, 59%); }
 
     .dark__indoor
-    & {
+    &.darkens#{$suffix} {
         .antennaMedium { fill: hsl(210, 13%, 37%); }
         .antennaLight { fill: hsl(210, 16%, 35%); }
         .phoneDark { fill: hsl(188, 21%, 33%); }

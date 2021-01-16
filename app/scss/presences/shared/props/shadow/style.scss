@@ -3,7 +3,7 @@
     .shadowLight { fill: hsl(0, 0%, 27%); }
 
     .dark__indoor
-    & {
+    &.darkens#{$suffix} {
         .shadow { fill: hsl(0, 0%, 16%); }
     }
 }

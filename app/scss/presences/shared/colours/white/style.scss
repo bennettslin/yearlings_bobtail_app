@@ -8,7 +8,8 @@
 // .whiteLighter { fill: hsl(0, 0%, 92%); }
 // .whiteLightest { fill: hsl(0, 0%, 97%); }
 
-.dark__indoor {
+.dark__indoor
+.darkens#{$suffix} {
     .whiteMedium { fill: hsl(0, 0%, 44%); }
     .whiteMediumLight { fill: hsl(0, 0%, 46%); }
     .whiteLight { fill: hsl(0, 0%, 49%); }
