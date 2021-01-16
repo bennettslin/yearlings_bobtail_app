@@ -35,14 +35,9 @@ export default [
         neededHours: 2,
     },
     {
-        taskName: `Cork/rope/linen colours. (Lampshade, sandbags, cork, mannequin, push broom.)`,
+        taskName: `Cork/rope/linen colours. (mannequin, push broom.)`,
         workedHours: 0,
         neededHours: 2,
-    },
-    {
-        taskName: `Marble colours. Mirrored sink.`,
-        workedHours: 0,
-        neededHours: 1,
     },
     {
         taskName: `Fruit colours. Painting, trees, garbage can.`,

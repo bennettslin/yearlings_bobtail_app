@@ -7,7 +7,6 @@ import {
     ROOF_COLOUR as C,
     PAVEMENT_COLOUR as V,
     FAMILY_EXTERIOR_COLOUR as X,
-    UNDERGROUND_WALL_COLOUR as W,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 import { e, f, k } from '../../../../../app/constants/scene/cubes/zIndices'
@@ -20,7 +19,7 @@ export default {
                 [X],
                 [C],
                 [D, D, C, C, C, C, C, C, C, C, C, D],
-                [D, D, C, W, C, C, C, C, C, W, C, D],
+                [D, D, C, X, C, C, C, C, C, X, C, D],
                 [D, D, C, C, C, C, C, C, C, C, C, D],
             ],
             zIndices: [

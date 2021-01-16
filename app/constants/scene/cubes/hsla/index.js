@@ -127,7 +127,7 @@ export default {
     /* W, B, E */
     [BENNETT_WALL_COLOUR]: { h: parseInt(HUE_BENNETT_ROOM), s: 15, l: 81 },
     [LIZ_WALL_COLOUR]: { h: parseInt(HUE_LIZ_ROOM), s: 15, l: 81 },
-    [UNDERGROUND_WALL_COLOUR]: { h: 61, s: 18, l: 65 },
+    [UNDERGROUND_WALL_COLOUR]: { h: 31, s: 18, l: 65 },
     [SOFT_WALL_COLOUR]: { h: 68, s: 31, l: 87 },
     [INDUSTRIAL_WALL_COLOUR]: { h: 96, s: 13, l: 77 },
     [CLUB_FRONT_PRIMARY_COLOUR]: { h: 221, s: 23, l: 65 },
