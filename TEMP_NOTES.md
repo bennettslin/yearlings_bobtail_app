@@ -6,6 +6,7 @@
 * At the very least, get rid of Admin styles
 
 # Immediate TODO:
+* Make only presences darken that need to darken.
 * Make j, k, n, m letters just navigate directly.
 * One more audit.
 * Brick, clay materials.

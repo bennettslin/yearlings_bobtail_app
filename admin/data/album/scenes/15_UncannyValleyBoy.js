@@ -91,7 +91,7 @@ import {
     CRACKED_PICTURE,
     GHOST_SHACKLES,
 } from '../../../../app/constants/scene/things/fixtures'
-import { BENNETT_PILLOW__BED } from '../../../../app/constants/scene/things/furnitures'
+import { BASEMENT_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
     SNOWGLOBE__TETHERBALL,
     SNOWGLOBE__LIZ_ALONE,
@@ -126,7 +126,7 @@ export default [
                 [BASEMENT_DOOR]: true,
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW__BED]: true,
+                [BASEMENT_PILLOW]: true,
             },
             [PANEL]: {
                 [BENNETT_BED]: true,
@@ -167,7 +167,7 @@ export default [
                 [DEFAULT_FENCE_BASEMENT]: true,
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW__BED]: true,
+                [BASEMENT_PILLOW]: true,
             },
             [PANEL]: {
                 [BENNETT_BED]: true,
@@ -342,7 +342,7 @@ export default [
                 [GHOST_SHACKLES]: true,
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW__BED]: true,
+                [BASEMENT_PILLOW]: true,
             },
             [PANEL]: {
                 [BENNETT_BED]: true,
