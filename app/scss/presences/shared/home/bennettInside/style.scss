@@ -13,12 +13,12 @@
 
     .dark__indoor
     & {
-        .frameFront { fill: hsl($HUE_BENNETT_ROOM, 17%, 5%); }
-        .doorFront { fill: hsl($HUE_BENNETT_ROOM + 20, 22%, 5%); }
+        .frameFront { fill: hsl($HUE_BENNETT_ROOM, 9%, 38%); }
+        .doorFront { fill: hsl($HUE_BENNETT_ROOM + 20, 11%, 33%); }
     
-        .sill { fill: hsl($HUE_BENNETT_ROOM, 13%, 5%); }    
-        .paneStill { fill: hsl($HUE_BENNETT_ROOM, 12%, 5%); }
-        .blinds { fill: hsl($HUE_BENNETT_ROOM, 5%, 5%); }
-        .rail { fill: hsl($HUE_BENNETT_ROOM, 17%, 5%); }
+        .sill { fill: hsl($HUE_BENNETT_ROOM, 7%, 37%); }
+        .paneStill { fill: hsl($HUE_BENNETT_ROOM, 6%, 36%); }
+        .blinds { fill: hsl($HUE_BENNETT_ROOM, 3%, 42%); }
+        .rail { fill: hsl($HUE_BENNETT_ROOM, 9%, 38%); }
     }
 }

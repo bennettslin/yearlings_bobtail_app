@@ -9,9 +9,8 @@
     
     .dark__indoor
     & {
-        .sketchPaperLight { fill: hsl(44, 25%, 5%); }
-        .wireDisplayLine { stroke: hsl(348, 2%, 5%); }
-        .pencilBody { fill: hsl(89, 44%, 5%); }
-        .pencilMetal { fill: hsl(167, 14%, 5%); }
+        .sketchPaperLight { fill: hsl(44, 13%, 45%); }
+        .pencilBody { fill: hsl(89, 22%, 37%); }
+        .pencilMetal { fill: hsl(167, 7%, 42%); }
     }
 }

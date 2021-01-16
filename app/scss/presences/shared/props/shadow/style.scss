@@ -1,9 +1,9 @@
 .shadow#{$suffix} {
-    .shadowLight { fill: hsl(0, 0%, 22%); }
-    .shadow { fill: hsl(0, 0%, 17%); }
+    .shadow { fill: hsl(0, 0%, 22%); }
+    .shadowLight { fill: hsl(0, 0%, 27%); }
 
     .dark__indoor
     & {
-        .shadow { fill: hsl(0, 0%, 5%); }
+        .shadow { fill: hsl(0, 0%, 16%); }
     }
 }

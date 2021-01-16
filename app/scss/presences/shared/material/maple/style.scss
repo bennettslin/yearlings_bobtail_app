@@ -1,9 +1,17 @@
-.mapleDarkest { fill: hsl(23, 13%, 37%); }
-.mapleDarker { fill: hsl(23, 23%, 42%); }
-.mapleDark { fill: hsl(23, 23%, 47%); }
-.mapleMediumDark { fill: hsl(23, 23%, 52%); }
-.mapleMedium { fill: hsl(23, 23%, 57%); }
-.mapleMediumLight { fill: hsl(23, 23%, 62%); }
-.mapleLight { fill: hsl(23, 23%, 67%); }
-// .mapleLighter { fill: hsl(23, 23%, 72%); }
+.mapleDarkest { fill: hsl(23, 15%, 37%); }
+.mapleDarker { fill: hsl(23, 16%, 42%); }
+.mapleDark { fill: hsl(23, 17%, 47%); }
+.mapleMediumDark { fill: hsl(23, 18%, 52%); }
+.mapleMedium { fill: hsl(23, 19%, 57%); }
+.mapleMediumLight { fill: hsl(23, 20%, 62%); }
+.mapleLight { fill: hsl(23, 21%, 67%); }
+// .mapleLighter { fill: hsl(23, 22%, 72%); }
 .mapleLightest { fill: hsl(23, 23%, 77%); }
+
+.dark__indoor {
+    .mapleDarkest { fill: hsl(23, 8%, 24%); }
+    .mapleDarker { fill: hsl(23, 8%, 26%); }
+    .mapleDark { fill: hsl(23, 9%, 29%); }
+    .mapleMediumDark { fill: hsl(23, 9%, 31%); }
+    .mapleMedium { fill: hsl(23, 10%, 34%); }
+}
