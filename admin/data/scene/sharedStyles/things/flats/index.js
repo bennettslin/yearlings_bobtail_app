@@ -72,7 +72,6 @@ import {
 import {
     DOOR__SHARED,
     FAMILY_HOUSE__SHARED,
-    WINDOW__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 import {
@@ -100,12 +99,10 @@ export default {
     [BERKELEY_BUILDING_TALL]: [
         CAMPUS__SHARED,
         BUILDING__SHARED,
-        WINDOW__SHARED,
     ],
     [BERKELEY_BUILDING_WIDE]: [
         CAMPUS__SHARED,
         BUILDING__SHARED,
-        WINDOW__SHARED,
     ],
     [CAMPANILE]: [
         FOLIAGE__SHARED,
@@ -166,13 +163,11 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         BUILDING__SHARED,
-        WINDOW__SHARED,
     ],
     [DRIVING_HOUSE_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         BUILDING__SHARED,
-        WINDOW__SHARED,
     ],
     [EL_CERRITO_FAR]: [
         BUILDINGS__SHARED,
@@ -182,14 +177,12 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [FAMILY_HOUSE]: [
         FAMILY_HOUSE__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [FERRIS_WHEEL]: null,
     [FOREBODING_TREES]: FOLIAGE__SHARED,
@@ -211,13 +204,11 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [NOHO_HOUSE_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [OAKLAND_FLAG]: null,
     [OAKLAND_HOUSE_LEFT]: [
@@ -225,21 +216,18 @@ export default {
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_LEFT__SHARED,
-        WINDOW__SHARED,
     ],
     [OAKLAND_HOUSE_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_RIGHT__SHARED,
-        WINDOW__SHARED,
     ],
     [OAKLAND_SCHOOL]: [
         BUILDING__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [OCEAN_BOTTOM_MIDDLE]: OCEAN_CAVE__SHARED,
     [OCEAN_BOTTOM_NEAR]: [
@@ -253,13 +241,11 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [PUBLIC_NEAR]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [RESIDENTIAL_FAR_LEFT]: [
         DOOR__SHARED,
@@ -304,7 +290,6 @@ export default {
         BUILDING__SHARED,
         DOOR__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [ST_JOSEPHS_ANNEX]: [
         DOOR__SHARED,

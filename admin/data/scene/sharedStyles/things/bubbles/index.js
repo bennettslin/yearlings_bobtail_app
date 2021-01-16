@@ -50,10 +50,7 @@ import {
     LANCET_PEN__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/food'
 import { BENNETT_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
-import {
-    DOOR__SHARED,
-    WINDOW__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/home'
+import { DOOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BANJO__SHARED,
@@ -163,7 +160,6 @@ export default {
         HOUSE__SHARED,
         LANCET_PEN__SHARED,
         THOUGHT__SHARED,
-        WINDOW__SHARED,
     ],
     [LIZ_THOUGHT_REUNION]: [
         BENNETT,

@@ -77,7 +77,6 @@ import {
     MIRIAM_LINENS__SHARED,
     WAITING_ARMCHAIR__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/furniture'
-import { WINDOW__SHARED } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     OCEAN_CAVE__SHARED,
     ROSE_RED__SHARED,
@@ -158,7 +157,6 @@ export default {
     [REATTA_EXTERIOR_REAR]: [
         ALL_VEHICLES__SHARED,
         REATTA__SHARED,
-        WINDOW__SHARED,
     ],
     [REATTA_INTERIOR]: INTERIOR__SHARED,
     [REATTA_SEAT_BOTTOM]: REATTA__SHARED,

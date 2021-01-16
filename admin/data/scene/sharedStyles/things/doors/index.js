@@ -46,7 +46,6 @@ import {
     FAMILY_HOUSE__SHARED,
     LIZ_APARTMENT__SHARED,
     LIZ_GATE__SHARED,
-    WINDOW__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import {
     FOLIAGE__SHARED,
@@ -56,10 +55,7 @@ import {
 import { DARKENS } from '../../../../../../app/constants/scene/sharedStyles'
 
 export default {
-    [BANCROFT_DOOR]: [
-        DOOR__SHARED,
-        WINDOW__SHARED,
-    ],
+    [BANCROFT_DOOR]: DOOR__SHARED,
     [BASEMENT_DOOR]: [
         DARKENS,
         DOOR__SHARED,
@@ -68,11 +64,9 @@ export default {
     [BASEMENT_DOOR_SIDE]: DOOR__SHARED,
     [BEDROOM_BLINDS]: [
         BENNETT_INSIDE__SHARED,
-        WINDOW__SHARED,
     ],
     [BEDROOM_BLINDS_OPEN]: [
         BENNETT_INSIDE__SHARED,
-        WINDOW__SHARED,
     ],
     [BEDROOM_FENCE]: [
         FOLIAGE__SHARED,
@@ -108,16 +102,9 @@ export default {
     [BLINDS_INSIDE_OPEN]: [
         BENNETT_INSIDE__SHARED,
         DARKENS,
-        WINDOW__SHARED,
     ],
-    [BLINDS_OUTSIDE]: [
-        BENNETT_APARTMENT__SHARED,
-        WINDOW__SHARED,
-    ],
-    [CINEMA_DOORS]: [
-        DOOR__SHARED,
-        WINDOW__SHARED,
-    ],
+    [BLINDS_OUTSIDE]: BENNETT_APARTMENT__SHARED,
+    [CINEMA_DOORS]: DOOR__SHARED,
     [CLUB_DOOR_OPEN]: DOOR__SHARED,
     [DEFAULT_FENCE_BASEMENT]: [
         FOLIAGE__SHARED,
@@ -127,28 +114,17 @@ export default {
         FOLIAGE__SHARED,
         FAMILY_HOUSE__SHARED,
     ],
-    [DISHROOM_DOOR]: [
-        DOOR__SHARED,
-        WINDOW__SHARED,
-    ],
-    [EL_TORITO_DOORS]: [
-        DOOR__SHARED,
-        WINDOW__SHARED,
-    ],
+    [DISHROOM_DOOR]: DOOR__SHARED,
+    [EL_TORITO_DOORS]: DOOR__SHARED,
     [IRON_GATE]: null,
     [IRON_GATE_LOW]: null,
-    [LIZ_BLINDS_INSIDE]: [
-        LIZ_APARTMENT__SHARED,
-        WINDOW__SHARED,
-    ],
+    [LIZ_BLINDS_INSIDE]: LIZ_APARTMENT__SHARED,
     [LIZ_BLINDS_INSIDE_OPEN]: [
         DARKENS,
         LIZ_APARTMENT__SHARED,
-        WINDOW__SHARED,
     ],
     [LIZ_BLINDS_OUTSIDE]: [
         LIZ_APARTMENT__SHARED,
-        WINDOW__SHARED,
     ],
     [LIZ_DOOR]: [
         DARKENS,
@@ -167,21 +143,9 @@ export default {
         BENNETT_APARTMENT__SHARED,
         DOOR__SHARED,
     ],
-    [NURSE_DOOR]: [
-        DOOR__SHARED,
-        WINDOW__SHARED,
-    ],
-    [PORCH_DOOR]: [
-        DOOR__SHARED,
-        WINDOW__SHARED,
-    ],
+    [NURSE_DOOR]: DOOR__SHARED,
+    [PORCH_DOOR]: DOOR__SHARED,
     [PRINCIPAL_DOOR]: DOOR__SHARED,
-    [WAITING_ROOM_DOOR]: [
-        DOOR__SHARED,
-        WINDOW__SHARED,
-    ],
-    [WAITING_ROOM_DOOR_OPEN]: [
-        DOOR__SHARED,
-        WINDOW__SHARED,
-    ],
+    [WAITING_ROOM_DOOR]: DOOR__SHARED,
+    [WAITING_ROOM_DOOR_OPEN]: DOOR__SHARED,
 }

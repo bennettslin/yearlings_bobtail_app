@@ -1,4 +1,4 @@
-// .glassDarkest { fill: hsl(175, 23%, 37%); }
+.glassDarkest { fill: hsl(175, 23%, 37%); }
 // .glassDarker { fill: hsl(175, 24%, 42%); }
 .glassDark { fill: hsl(175, 23%, 47%); }
 .glassMediumDark { fill: hsl(175, 24%, 52%); }
@@ -6,3 +6,10 @@
 // .glassMediumLight { fill: hsl(175, 26%, 62%); }
 .glassLight { fill: hsl(175, 27%, 67%); }
 .glassLightest { fill: hsl(175, 28%, 77%); }
+
+.glassClear { fill: hsla(175, 25%, 75%, 0.25); }
+
+.dark__indoor
+.darkens#{$suffix} {
+    .glassDarkest { fill: hsl(175, 12%, 24%); }
+}
