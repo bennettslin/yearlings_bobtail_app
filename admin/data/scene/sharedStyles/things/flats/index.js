@@ -127,37 +127,30 @@ export default {
     [COMMERCIAL_CENTRE]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED,
     ],
     [COMMERCIAL_FAR_LEFT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED,
     ],
     [COMMERCIAL_FAR_RIGHT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED,
     ],
     [COMMERCIAL_MIDDLE_LEFT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED,
     ],
     [COMMERCIAL_MIDDLE_RIGHT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED,
     ],
     [COMMERCIAL_NEAR_LEFT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED,
     ],
     [COMMERCIAL_NEAR_RIGHT]: [
         BUILDING__SHARED,
         DOOR__SHARED,
-        WINDOW__SHARED,
     ],
     [DISTANT_BUILDINGS]: [
         BUILDINGS__SHARED,
@@ -272,39 +265,33 @@ export default {
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [RESIDENTIAL_FAR_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [RESIDENTIAL_MIDDLE_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_RIGHT__SHARED,
-        WINDOW__SHARED,
     ],
     [RESIDENTIAL_MIDDLE_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [RESIDENTIAL_NEAR_LEFT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
         OAKLAND_HOUSE_LEFT__SHARED,
-        WINDOW__SHARED,
     ],
     [RESIDENTIAL_NEAR_RIGHT]: [
         DOOR__SHARED,
         FOLIAGE__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [RICKSHAW_TOWN]: [
         DOOR__SHARED,
@@ -312,10 +299,7 @@ export default {
         TAIWAN_HOUSE__SHARED,
     ],
     [ROLLER_COASTER]: null,
-    [ROYCE_HALL]: [
-        DOOR__SHARED,
-        WINDOW__SHARED,
-    ],
+    [ROYCE_HALL]: DOOR__SHARED,
     [SCHOOL_BUNGALOW]: [
         BUILDING__SHARED,
         DOOR__SHARED,
@@ -325,13 +309,11 @@ export default {
     [ST_JOSEPHS_ANNEX]: [
         DOOR__SHARED,
         HOUSE__SHARED,
-        WINDOW__SHARED,
     ],
     [ST_JOSEPHS_CHURCH]: [
         BULB__SHARED,
         DOOR__SHARED,
         FOLIAGE__SHARED,
-        WINDOW__SHARED,
     ],
     [TAIWAN_HOUSES_CENTRE]: [
         DOOR__SHARED,

@@ -84,10 +84,7 @@ import {
     TAIWAN_FOLIAGE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
-import {
-    SHADOW__SHARED,
-    SNOWGLOBE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/props'
+import { SNOWGLOBE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 import {
     ALL_VEHICLES__SHARED,
     GO_KART__SHARED,
@@ -114,13 +111,11 @@ export default {
     ],
     [BENNETT_BED]: [
         DARKENS,
-        SHADOW__SHARED,
     ],
-    [BENNETT_NIGHTSTAND]: SHADOW__SHARED,
-    [BENNETT_RECORD_STAND]: SHADOW__SHARED,
+    [BENNETT_NIGHTSTAND]: null,
+    [BENNETT_RECORD_STAND]: null,
     [BUDDHA_STAND]: [
         DARKENS,
-        SHADOW__SHARED,
     ],
     [CAPTAIN_BED]: DARKENS,
     [CAVE_SHADOWS]: DRAWING__SHARED,
@@ -129,8 +124,8 @@ export default {
         DISH__SHARED,
         TRAY__SHARED,
     ],
-    [CROWD_BACK]: SHADOW__SHARED,
-    [CROWD_SIDE]: SHADOW__SHARED,
+    [CROWD_BACK]: null,
+    [CROWD_SIDE]: null,
     [DISHROOM_SINK]: null,
     [FREEWAY_FENCE]: null,
     [GO_KART_EXTERIOR]: [
@@ -142,23 +137,13 @@ export default {
     [HOSPITAL_RECORD_STAND]: null,
     [KEYBOARD_STAND_LEFT]: BOOK__SHARED,
     [KEYBOARD_STAND_RIGHT]: BOOK__SHARED,
-    [LIZ_BED]: [
-        DARKENS,
-        SHADOW__SHARED,
-    ],
+    [LIZ_BED]: DARKENS,
     [LIZ_COUCH]: [
         DARKENS,
         LIZ_LINENS__SHARED,
-        SHADOW__SHARED,
     ],
-    [LIZ_NIGHTSTAND]: [
-        DARKENS,
-        SHADOW__SHARED,
-    ],
-    [LIZ_OTTOMAN]: [
-        LIZ_LINENS__SHARED,
-        SHADOW__SHARED,
-    ],
+    [LIZ_NIGHTSTAND]: DARKENS,
+    [LIZ_OTTOMAN]: LIZ_LINENS__SHARED,
     [MILK_CRATE]: null,
     [NURSE_BENCH]: null,
     [OCEAN_CAVE_EXTERIOR]: OCEAN_CAVE__SHARED,
@@ -193,12 +178,12 @@ export default {
     [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
     [SCHOOLBUS_SEAT]: null,
     [SNOWGLOBE]: SNOWGLOBE__SHARED,
-    [STALACTITES]: SHADOW__SHARED,
+    [STALACTITES]: null,
     [TAIWAN_BRIDGE]: null,
     [TAIWAN_HAZE]: null,
-    [TROLL_SHADOW_FAR]: SHADOW__SHARED,
-    [TROLL_SHADOW_LEFT]: SHADOW__SHARED,
-    [TROLL_SHADOW_RIGHT]: SHADOW__SHARED,
+    [TROLL_SHADOW_FAR]: null,
+    [TROLL_SHADOW_LEFT]: null,
+    [TROLL_SHADOW_RIGHT]: null,
     [VOLKSWAGEN]: ALL_VEHICLES__SHARED,
     [WAITING_ARMCHAIR]: WAITING_ARMCHAIR__SHARED,
     [WAITING_ARMREST]: WAITING_ARMCHAIR__SHARED,
