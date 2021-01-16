@@ -1,31 +1,44 @@
 export default [
+    // Needed.
     {
-        taskName: `Pitch content.`,
-        workedHours: 55,
+        taskName: `Pitch images.`,
+        workedHours: 0,
+        neededHours: 20,
+    },
+    {
+        taskName: `Rethink past and future colours. Make snowglobes have past and future colours instead of people?`,
+        workedHours: 0,
+        neededHours: 5,
+    },
+    {
+        taskName: `More seamless transition between shared presences, like open vs closed doors, light switch, Bennett and Miriam asleep.`,
+        workedHours: 0,
+        neededHours: 5,
     },
     {
         taskName: `Night colour work.`,
         workedHours: 47,
+        neededHours: 50,
     },
-    {
-        taskName: `Shared styles work.`,
-        workedHours: 43,
-    },
-    {
-        taskName: `Audit scenes.`,
-        workedHours: 1,
-    },
-
-    /* Ongoing. */
     {
         taskName: `Finish annotation edits.`,
         workedHours: 5,
+        neededHours: 25,
     },
-
-    // Do at same time as Zillow analytics work.
     {
         taskName: `Be smarter about what I want analytics to measure. Selected indices. About links. When wiki links are broken? Create notes.`,
         workedHours: 0,
         neededHours: 5,
+    },
+    {
+        taskName: `Audit scenes.`,
+        workedHours: 1,
+        neededHours: 1,
+    },
+
+    // Ongoing, only nice to have.
+    {
+        taskName: `Shared styles work.`,
+        workedHours: 43,
     },
 ]

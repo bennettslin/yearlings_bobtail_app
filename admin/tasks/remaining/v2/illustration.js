@@ -40,6 +40,11 @@ export default [
         neededHours: 2,
     },
     {
+        taskName: `Brick and clay materials`,
+        workedHours: 0,
+        neededHours: 3,
+    },
+    {
         taskName: `Remove depth shading from slant direction cubes?`,
         workedHours: 0,
         neededHours: 3,
@@ -53,5 +58,10 @@ export default [
         taskName: `Theatre binoculars.`,
         workedHours: 0,
         neededHours: 3,
+    },
+    {
+        taskName: `Should mountain and meadow far and near be reversed?`,
+        workedHours: 0,
+        neededHours: 2,
     },
 ]

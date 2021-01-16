@@ -98,4 +98,14 @@ export default [
         workedHours: 0,
         neededHours: 10,
     },
+    {
+        taskName: `Make j, k, n, m letters just select directly?`,
+        workedHours: 0,
+        neededHours: 3,
+    },
+    {
+        taskName: `Tab align all colours in scss files for readability.`,
+        workedHours: 0,
+        neededHours: 5,
+    },
 ]

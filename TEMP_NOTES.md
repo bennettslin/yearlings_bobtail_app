@@ -5,18 +5,6 @@
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
 
-# Immediate TODO:
-* Make j, k, n, m letters just navigate directly.
-* One more audit.
-* Brick, clay materials.
-* Make snowglobes have past and future colours instead of people.
-* More seamless transition between shared presences, like open vs closed doors.
-<!-- * Tab align all colours. -->
-* Make shared styles global by putting in class names.
-<!-- * Should mountain and meadow far and near be reversed? -->
-* Consider getting rid of shared constants for people?
-* Allow for shared things (checkered flag, conveyor belt, dishroom sink, Bennett couch, Bennett lamp, Bennett bed, Bennett nightstand, stage lights, dishroom stuff, dishroom door, lancet pen, wedding)
-
 # Investigative TODO:
 * Why does Google search have show text as title?
 

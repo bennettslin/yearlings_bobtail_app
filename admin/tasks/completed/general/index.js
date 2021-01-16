@@ -5039,4 +5039,8 @@ export default [
         taskName: `Move snowglobes to the side on road paths.`,
         workedHours: 1,
     },
+    {
+        taskName: `Pitch content.`,
+        workedHours: 55,
+    },
 ]
