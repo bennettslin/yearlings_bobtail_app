@@ -24,7 +24,7 @@
     <polygon class="patinaDark" points="148.21 139.88 139.39 142.35 139.39 62.92 148.21 65.39 148.21 139.88"/>
     <line class="carDisplayLine" x1="139.39" y1="102.63" x2="92.5" y2="102.63"/>
   </g>
-  <polygon class="cup" points="106.22 142.09 114.96 142.09 116.93 119.33 104.25 119.33 106.22 142.09"/>
+  <polygon class="glassLight" points="106.22 142.09 114.96 142.09 116.93 119.33 104.25 119.33 106.22 142.09"/>
   <g class="tray">
     <polygon class="trayBasinDark" points="133.96 142.09 139.39 141.57 139.39 136.41 136.42 136.4 133.96 142.09"/>
     <polygon class="trayBasinMedium" points="90.59 142.09 133.96 142.09 136.42 136.4 88.13 136.4 90.59 142.09"/>

@@ -30,16 +30,6 @@ export default [
         neededHours: 1,
     },
     {
-        taskName: `Consolidate glass colours. (Window, peephole, cup.)`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
-        taskName: `Cork/rope/linen colours. (mannequin, push broom.)`,
-        workedHours: 0,
-        neededHours: 2,
-    },
-    {
         taskName: `Fruit colours. Painting, trees, garbage can.`,
         workedHours: 0,
         neededHours: 2,

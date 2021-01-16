@@ -72,7 +72,6 @@ import {
 } from '../../../../../../app/constants/scene/things/cutouts'
 import { ALL_PEOPLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/actors'
 import {
-    CUP__SHARED,
     DISH__SHARED,
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
@@ -131,7 +130,7 @@ export default {
     ],
     [EL_CERRITO_TREE]: FOLIAGE__SHARED,
     [FIRE_HYDRANT]: null,
-    [GLASS_RACK]: CUP__SHARED,
+    [GLASS_RACK]: null,
     [GRAVESTONE]: null,
     [HOSTESS_STAND]: BOOK__SHARED,
     [HOWIE_FRIDGE]: DARKENS,

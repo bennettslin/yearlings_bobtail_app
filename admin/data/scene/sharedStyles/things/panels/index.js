@@ -65,7 +65,6 @@ import {
 import { DARKENS } from '../../../../../../app/constants/scene/sharedStyles'
 import { OCEAN_LIFE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/animals'
 import {
-    CUP__SHARED,
     DISH__SHARED,
     TRAY__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/cafeteria'
@@ -119,7 +118,6 @@ export default {
     [CAPTAIN_BED]: DARKENS,
     [CAVE_SHADOWS]: DRAWING__SHARED,
     [CONVEYOR_BELT]: [
-        CUP__SHARED,
         DISH__SHARED,
         TRAY__SHARED,
     ],
