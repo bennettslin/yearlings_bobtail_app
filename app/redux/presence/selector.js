@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { getIsShownInSceneForPresence } from '../../api/scene/presences'
+import { getIsPresenceShownInScene } from '../../api/scene/presences'
 import { mapCanTransitionAfterSceneChange } from '../entrance/selector'
 import {
     mapSceneSongIndex,
@@ -31,7 +31,7 @@ export const getMapIsPresenceShownInScene = ({
         sceneSceneIndex
     ) => {
         const
-            isShownInCurrentScene = getIsShownInSceneForPresence({
+            isShownInCurrentScene = getIsPresenceShownInScene({
                 songIndex: sceneSongIndex,
                 sceneIndex: sceneSceneIndex,
                 yIndex,
@@ -39,7 +39,7 @@ export const getMapIsPresenceShownInScene = ({
                 actorKey,
                 presenceKey,
             }),
-            isShownInNextScene = getIsShownInSceneForPresence({
+            isShownInNextScene = getIsPresenceShownInScene({
                 songIndex: selectedSongIndex,
                 sceneIndex: selectedSceneIndex,
                 yIndex,

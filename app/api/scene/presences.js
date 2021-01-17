@@ -45,7 +45,7 @@ export const getArrangementForPresence = ({
     return arrangement
 }
 
-export const getIsShownInSceneForPresence = ({
+export const getIsPresenceShownInScene = ({
     songIndex,
     sceneIndex,
     yIndex,
