@@ -1,10 +1,5 @@
 export default [
-    // Needed.
-    {
-        taskName: `Pitch images.`,
-        workedHours: 0,
-        neededHours: 20,
-    },
+    // Next.
     {
         taskName: `Rethink past and future colours. Make snowglobes have past and future colours instead of people?`,
         workedHours: 0,
@@ -12,8 +7,20 @@ export default [
     },
     {
         taskName: `Night colour work.`,
-        workedHours: 47,
+        workedHours: 48,
         neededHours: 50,
+    },
+    {
+        taskName: `Audit scenes.`,
+        workedHours: 1,
+        neededHours: 2,
+    },
+
+    // Needed.
+    {
+        taskName: `Pitch images.`,
+        workedHours: 0,
+        neededHours: 20,
     },
     {
         taskName: `Finish annotation edits.`,
@@ -24,11 +31,6 @@ export default [
         taskName: `Be smarter about what I want analytics to measure. Selected indices. About links. When wiki links are broken? Create notes.`,
         workedHours: 0,
         neededHours: 5,
-    },
-    {
-        taskName: `Audit scenes.`,
-        workedHours: 1,
-        neededHours: 1,
     },
 
     // Ongoing, only nice to have.

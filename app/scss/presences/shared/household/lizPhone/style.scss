@@ -1,20 +1,20 @@
 .lizPhone#{$suffix} {
-    .antennaMedium { fill: hsl(210, 25%, 63%); }
-    .antennaLight { fill: hsl(210, 32%, 69%); }
-    .phoneDark { fill: hsl(188, 41%, 66%); }
-    .phoneMedium { fill: hsl(188, 49%, 71%); }
-    .phoneLight { fill: hsl(188, 63%, 75%); }
-    .buttonSmall { fill: hsl(126, 40%, 58%); }
-    .buttonLarge { fill: hsl(210, 42%, 59%); }
+    .antennaMedium { fill: hsl(210, 33%, 62%); }
+    .antennaLight { fill: hsl(210, 33%, 67%); }
+    .phoneDark { fill: hsl(188, 43%, 62%); }
+    .phoneMedium { fill: hsl(188, 43%, 67%); }
+    .phoneLight { fill: hsl(188, 43%, 72%); }
+    .buttonSmall { fill: hsl(126, 33%, 57%); }
+    .buttonLarge { fill: hsl(210, 33%, 57%); }
 
     .dark__indoor
     &.darkens#{$suffix} {
-        .antennaMedium { fill: hsl(210, 13%, 37%); }
-        .antennaLight { fill: hsl(210, 16%, 35%); }
-        .phoneDark { fill: hsl(188, 21%, 33%); }
-        .phoneMedium { fill: hsl(188, 25%, 36%); }
-        .phoneLight { fill: hsl(188, 32%, 38%); }
-        .buttonSmall { fill: hsl(126, 20%, 29%); }
-        .buttonLarge { fill: hsl(210, 21%, 30%); }
+        .antennaMedium { fill: hsl(210, 17%, 36%); }
+        .antennaLight { fill: hsl(210, 17%, 39%); }
+        .phoneDark { fill: hsl(188, 22%, 36%); }
+        .phoneMedium { fill: hsl(188, 22%, 39%); }
+        .phoneLight { fill: hsl(188, 22%, 41%); }
+        .buttonSmall { fill: hsl(126, 17%, 34%); }
+        .buttonLarge { fill: hsl(210, 17%, 34%); }
     }
 }
