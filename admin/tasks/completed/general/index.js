@@ -5047,4 +5047,8 @@ export default [
         taskName: `More seamless transition between counterpart presences.`,
         workedHours: 1,
     },
+    {
+        taskName: `Night colour work.`,
+        workedHours: 48,
+    },
 ]
