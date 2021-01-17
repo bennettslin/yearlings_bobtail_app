@@ -9,39 +9,11 @@
 }
 
 .commercialNearLeft {
-    .signOuter { fill: hsl(180, 18%, 42%); }
-    .signInner { fill: hsl(180, 26%, 80%); }
-    .letterLarge { fill: hsl(180, 29%, 58%); }
     .letterDisplayLine { stroke: hsl(180, 14%, 44%); }
 }
 
-.elCerritoFar {
-    .antennaWhite { fill: hsl(0, 0%, 82%); }
-    .antennaRed { fill: hsl(14, 52%, 53%); }
-    .antennaBuilding { fill: hsl(51, 20%, 64%); }
-    .antennaRoof { fill: hsl(90, 5%, 82%); }
-}
-
 .ferrisWheel {
-    .foundation { fill: hsl(0, 0%, 40%); }
-    .towerLeftTopBottom { fill: hsl(59, 51%, 57%); }
-    .towerLeftFront { fill: hsl(22, 51%, 57%); }
-    .spokes { fill: hsla(0, 0%, 80%, 0.5); }
-    .car { fill: hsl(1, 48%, 54%); }
-    .wheel { fill: hsl(1, 33%, 52%); }
-    .support { fill: hsl(1, 20%, 50%); }
-    .hub { fill: hsl(1, 20%, 42%); }
-    .tentLeftWall { fill: hsl(270, 34%, 40%); }
-    .tentRightWall { fill: hsl(127, 33%, 41%); }
-    .tentWallLight { fill: hsl(0, 1%, 55%); }
-    .towerRightFront { fill: hsl(200, 100%, 30%); }
-    .tentRightFront { fill: hsl(127, 33%, 48%); }
-    .tentLeftFront { fill: hsl(270, 34%, 47%); }
-    .tentFrontLight { fill: hsl(0, 2%, 65%); }
-    .towerRightTop { fill: hsl(200, 60%, 50%); }
-    .tentRightTop { fill: hsl(127, 50%, 60%); }
-    .tentLeftTop { fill: hsl(270, 50%, 60%); }
-    .tentTopLight { fill: hsl(15, 4%, 79%); }
+    .spokes { fill: hsla(0, 20%, 57%, 0.5); }
 }
 
 .nohoHouseLeft {
@@ -56,8 +28,6 @@
 .oaklandSchool {
     .wallSide { fill: hsl(0, 19%, 60%); }
     .wallFront { fill: hsl(0, 25%, 69%); }
-    .clockSide { fill: hsl(60, 28%, 65%); }
-    .clockFront { fill: hsl(60, 38%, 73%); }
     .handDisplayLine { stroke: hsl(0, 0%, 53%); }
 }
 
@@ -92,11 +62,8 @@
 }
 
 .rollerCoaster {
-    .platformBack { fill: hsla(30, 50%, 40%, 0.5); }
-    .trackBack { fill: hsl(31, 9%, 55%); }
-    .platformFront { fill: hsla(30, 50%, 60%, 0.5); }
-    .trackFront { fill: hsl(29, 11%, 60%); }
-    .flag { fill: hsl(320, 50%, 70%); }
+    .platformBack { fill: hsla(35, 20%, 47%, 0.5); }
+    .platformFront { fill: hsla(35, 20%, 52%, 0.5); }
 }
 
 .royceHall {
@@ -156,7 +123,7 @@
 
 .tennisCourt {
     .court { fill: hsl($HUE_TENNIS, 51%, 55%); }
-    .stripeDisplayLine { stroke: hsl(0, 0%, 100%); }
+    .stripeDisplayLine { stroke: hsl(0, 0%, 77%); }
     .mesh { fill: hsla(78, 24%, 66%, 0.5); }
     .net { fill: hsl(78, 12%, 28%); }
 }
