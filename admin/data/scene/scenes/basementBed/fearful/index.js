@@ -27,11 +27,13 @@ export default {
             yIndex: 4,
             xPosition: 7.4,
             zOffset: -0.2,
+            counterpart: ASLEEP_FEARFUL,
         },
         [ASLEEP_FEARFUL]: {
             yIndex: 4,
             xPosition: 7.4,
             zOffset: -0.2,
+            counterpart: ASLEEP,
         },
     },
 }

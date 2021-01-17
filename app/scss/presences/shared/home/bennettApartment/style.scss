@@ -6,4 +6,9 @@
     .paneSliding { fill: hsl($HUE_APARTMENT, 9%, 52%); }
     .blinds { fill: hsl($HUE_APARTMENT, 5%, 70%); }
     .rail { fill: hsl($HUE_APARTMENT, 17%, 62%); }
+
+    .dark__indoor
+    &.darkens#{$suffix} {
+        .doorExterior { fill: hsl($HUE_APARTMENT + 20, 5%, 33%); }
+    }
 }

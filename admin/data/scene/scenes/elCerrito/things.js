@@ -74,12 +74,14 @@ export default {
             xPosition: 1.68,
             zOffset: 1.47,
             layerYIndex: 3,
+            counterpart: REATTA_SEAT_BACK_DOWN,
         },
         [REATTA_SEAT_BACK_DOWN]: {
             yIndex: 5,
             xPosition: 1.26,
             zOffset: 1.3,
             layerYIndex: 3,
+            counterpart: REATTA_SEAT_BACK,
         },
         [REATTA_EXTERIOR_FRONT]: {
             yIndex: 5,

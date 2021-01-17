@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect'
-import { getIsPresenceShownInScene } from '../../api/scene/presences'
+import { getIsPresenceShown } from '../../helpers/presence'
 import { mapCanTransitionAfterSceneChange } from '../entrance/selector'
 import {
     mapSceneSongIndex,
@@ -11,7 +11,7 @@ import {
     mapSelectedSongIndex,
 } from '../selected/selector'
 
-export const getMapIsPresenceShownInScene = ({
+export const getMapIsPresenceShown = ({
     yIndex,
     presenceType,
     actorKey,
@@ -29,37 +29,17 @@ export const getMapIsPresenceShownInScene = ({
         selectedSceneIndex,
         sceneSongIndex,
         sceneSceneIndex
-    ) => {
-        const
-            isShownInCurrentScene = getIsPresenceShownInScene({
-                songIndex: sceneSongIndex,
-                sceneIndex: sceneSceneIndex,
-                yIndex,
-                presenceType,
-                actorKey,
-                presenceKey,
-            }),
-            isShownInNextScene = getIsPresenceShownInScene({
-                songIndex: selectedSongIndex,
-                sceneIndex: selectedSceneIndex,
-                yIndex,
-                presenceType,
-                actorKey,
-                presenceKey,
-            })
-
-        return (
-            isShownInCurrentScene && (
-                canTransitionAfterSceneChange ||
-
-                /**
-                 * If presence is also in next scene, then it should continue
-                 * to show even during scene change.
-                 */
-                isShownInNextScene
-            )
-        )
-    }
+    ) => getIsPresenceShown({
+        canTransitionAfterSceneChange,
+        selectedSongIndex,
+        selectedSceneIndex,
+        sceneSongIndex,
+        sceneSceneIndex,
+        yIndex,
+        presenceType,
+        actorKey,
+        presenceKey,
+    })
 )
 
 export const getMapZIndexForPresence = (zIndex, zIndices) => createSelector(

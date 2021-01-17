@@ -11,11 +11,6 @@ export default [
         neededHours: 5,
     },
     {
-        taskName: `More seamless transition between shared presences, like open vs closed doors, light switch, Bennett and Miriam asleep.`,
-        workedHours: 0,
-        neededHours: 5,
-    },
-    {
         taskName: `Night colour work.`,
         workedHours: 47,
         neededHours: 50,

@@ -83,10 +83,12 @@ export default {
         [LIZ_DOOR]: {
             yIndex: 5,
             xPosition: 10.16,
+            counterpart: LIZ_DOOR_OPEN,
         },
         [LIZ_DOOR_OPEN]: {
             yIndex: 5,
             xPosition: 8.875,
+            counterpart: LIZ_DOOR,
         },
         [LIZ_GATE_INSIDE]: {
             yIndex: 0,

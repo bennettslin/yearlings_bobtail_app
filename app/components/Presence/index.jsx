@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from './Svg'
-import { getMapIsPresenceShownInScene } from '../../redux/presence/selector'
+import { getMapIsPresenceShown } from '../../redux/presence/selector'
 import './style'
 
 const Presence = ({
@@ -13,7 +13,7 @@ const Presence = ({
     presenceKey,
 
 }) => {
-    const isPresenceShownInScene = useSelector(getMapIsPresenceShownInScene({
+    const isPresenceShown = useSelector(getMapIsPresenceShown({
         yIndex,
         presenceType,
         actorKey,
@@ -26,7 +26,7 @@ const Presence = ({
             unmountOnExit
             mountOnEnter
             {...{
-                in: isPresenceShownInScene,
+                in: isPresenceShown,
                 timeout: {
                     // Timeout allows presences to transition before unmount.
                     exit: 5000,

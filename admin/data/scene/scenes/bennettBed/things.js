@@ -50,11 +50,13 @@ export default {
         [BENNETT_DOOR_INSIDE]: {
             yIndex: 3,
             xPosition: 3,
+            counterpart: BENNETT_DOOR_INSIDE_OPEN,
         },
         [BENNETT_DOOR_INSIDE_OPEN]: {
             yIndex: 3,
             xPosition: 2.76,
             zOffset: -0.07,
+            counterpart: BENNETT_DOOR_INSIDE,
         },
         [BENNETT_GATE_SIDE_OPEN]: {
             yIndex: 1,
@@ -68,11 +70,13 @@ export default {
             xPosition: 5,
             zOffset: 3.2,
             rotate: 180,
+            counterpart: LIGHT_SWITCH__ON,
         },
         [LIGHT_SWITCH__ON]: {
             yIndex: 3,
             xPosition: 5,
             zOffset: 3.2,
+            counterpart: LIGHT_SWITCH__OFF,
         },
         [LINGERIE_DRAWING]: {
             yIndex: 4,

@@ -81,6 +81,7 @@ export default {
     [BENNETT_DOOR_INSIDE_OPEN]: [
         BENNETT_APARTMENT__SHARED,
         BENNETT_INSIDE__SHARED,
+        DARKENS,
         DOOR__SHARED,
     ],
     [BENNETT_DOOR_OUTSIDE]: [
@@ -132,6 +133,7 @@ export default {
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_DOOR_OPEN]: [
+        DARKENS,
         DOOR__SHARED,
         LIZ_APARTMENT__SHARED,
     ],

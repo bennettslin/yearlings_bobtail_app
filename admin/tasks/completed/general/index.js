@@ -5043,4 +5043,8 @@ export default [
         taskName: `Pitch content.`,
         workedHours: 55,
     },
+    {
+        taskName: `More seamless transition between counterpart presences.`,
+        workedHours: 1,
+    },
 ]

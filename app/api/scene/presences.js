@@ -62,3 +62,18 @@ export const getIsPresenceShownInScene = ({
         layerEntity[actorKey] === presenceKey :
         Boolean(layerEntity[presenceKey])
 }
+
+export const getCounterpartForPresence = ({
+    presenceType,
+    actorKey,
+    presenceKey,
+
+}) => {
+    const { counterpart = '' } = getArrangementForPresence({
+        presenceType,
+        actorKey,
+        presenceKey,
+    })
+
+    return counterpart
+}

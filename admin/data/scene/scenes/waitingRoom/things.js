@@ -59,10 +59,12 @@ export default {
         [WAITING_ROOM_DOOR]: {
             yIndex: 5,
             xPosition: 10.16,
+            counterpart: WAITING_ROOM_DOOR_OPEN,
         },
         [WAITING_ROOM_DOOR_OPEN]: {
             yIndex: 5,
             xPosition: 8.81,
+            counterpart: WAITING_ROOM_DOOR,
         },
     },
     [PANEL]: {
