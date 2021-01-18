@@ -85,9 +85,9 @@ import {
     SNOWGLOBE_COWGIRL,
     SNOWGLOBE_ENRAGED_SOBBING,
     SNOWGLOBE_LEAVING_CRUMBLED,
-    SNOWGLOBE_SMALL__FUTURE,
-    SNOWGLOBE_SMALL__PAST,
-    SNOWGLOBE_SMALL__PRESENT,
+    SNOWGLOBE_SMALL_FUTURE,
+    SNOWGLOBE_SMALL_PAST,
+    SNOWGLOBE_SMALL_PRESENT,
     VAN_NUYS_PAINTING,
 } from '../../../../constants/scene/things/cardboards'
 
@@ -135,9 +135,9 @@ export default {
     [SNOWGLOBE_COWGIRL]: snowglobeCowgirl,
     [SNOWGLOBE_ENRAGED_SOBBING]: snowglobeEnragedSobbing,
     [SNOWGLOBE_LEAVING_CRUMBLED]: snowglobeLeavingCrumbled,
-    [SNOWGLOBE_SMALL__FUTURE]: snowglobeSmall,
-    [SNOWGLOBE_SMALL__PAST]: snowglobeSmall,
-    [SNOWGLOBE_SMALL__PRESENT]: snowglobeSmall,
+    [SNOWGLOBE_SMALL_FUTURE]: snowglobeSmall,
+    [SNOWGLOBE_SMALL_PAST]: snowglobeSmall,
+    [SNOWGLOBE_SMALL_PRESENT]: snowglobeSmall,
     [VAN_NUYS_PAINTING]: vanNuysPainting,
 }
 

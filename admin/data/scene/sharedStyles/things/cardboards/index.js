@@ -39,7 +39,9 @@ import {
     SNOWGLOBE_COWGIRL,
     SNOWGLOBE_ENRAGED_SOBBING,
     SNOWGLOBE_LEAVING_CRUMBLED,
-    SNOWGLOBE_SMALL,
+    SNOWGLOBE_SMALL_PAST,
+    SNOWGLOBE_SMALL_PRESENT,
+    SNOWGLOBE_SMALL_FUTURE,
     VAN_NUYS_PAINTING,
 } from '../../../../../../app/constants/scene/things/cardboards'
 import {
@@ -69,7 +71,6 @@ import {
     POSTER_GLADIATOR__SHARED,
     PROGRESS_CHART__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/print'
-import { SNOWGLOBE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 import {
     TAIWAN_BUOY__SHARED,
     TAIWAN_RICKSHAW__SHARED,
@@ -177,7 +178,6 @@ export default {
     [SEA_SERPENT_LEFT]: SEA_SERPENT__SHARED,
     [SEA_SERPENT_RIGHT]: SEA_SERPENT__SHARED,
     [SNOWGLOBE_CORD]: [
-        SNOWGLOBE__SHARED,
         BENNETT_FUTURE__SHARED,
         ALL_PEOPLE__SHARED,
         FUTURE__SHARED,
@@ -188,24 +188,23 @@ export default {
         BENNETT_FUTURE__SHARED,
         MIRIAM_FUTURE__SHARED,
         REATTA__SHARED,
-        SNOWGLOBE__SHARED,
         FUTURE__SHARED,
     ],
     [SNOWGLOBE_ENRAGED_SOBBING]: [
-        SNOWGLOBE__SHARED,
         BENNETT_PAST__SHARED,
         CHRISTOPHER_PAST__SHARED,
         ALL_PEOPLE__SHARED,
         PAST__SHARED,
     ],
     [SNOWGLOBE_LEAVING_CRUMBLED]: [
-        SNOWGLOBE__SHARED,
         BENNETT,
         LIZ,
         ALL_PEOPLE__SHARED,
         PRESENT__SHARED,
     ],
-    [SNOWGLOBE_SMALL]: SNOWGLOBE__SHARED,
+    [SNOWGLOBE_SMALL_PAST]: PAST__SHARED,
+    [SNOWGLOBE_SMALL_PRESENT]: PRESENT__SHARED,
+    [SNOWGLOBE_SMALL_FUTURE]: FUTURE__SHARED,
     [VAN_NUYS_PAINTING]: null,
 }
 

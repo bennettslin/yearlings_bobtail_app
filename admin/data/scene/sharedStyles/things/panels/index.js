@@ -84,7 +84,6 @@ import {
     TAIWAN_FOLIAGE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
-import { SNOWGLOBE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 import {
     ALL_VEHICLES__SHARED,
     GO_KART__SHARED,
@@ -175,18 +174,9 @@ export default {
     ],
     [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
     [SCHOOLBUS_SEAT]: null,
-    [SNOWGLOBE_PAST]: [
-        PAST__SHARED,
-        SNOWGLOBE__SHARED,
-    ],
-    [SNOWGLOBE_PRESENT]: [
-        PRESENT__SHARED,
-        SNOWGLOBE__SHARED,
-    ],
-    [SNOWGLOBE_FUTURE]: [
-        FUTURE__SHARED,
-        SNOWGLOBE__SHARED,
-    ],
+    [SNOWGLOBE_PAST]: PAST__SHARED,
+    [SNOWGLOBE_PRESENT]: PRESENT__SHARED,
+    [SNOWGLOBE_FUTURE]: FUTURE__SHARED,
     [STALACTITES]: null,
     [TAIWAN_BRIDGE]: null,
     [TAIWAN_HAZE]: null,

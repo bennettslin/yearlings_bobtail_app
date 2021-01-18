@@ -1,11 +1,6 @@
 export default [
     // Next.
     {
-        taskName: `Rethink past and future colours. Make snowglobes have past and future colours instead of people?`,
-        workedHours: 0,
-        neededHours: 5,
-    },
-    {
         taskName: `Audit scenes.`,
         workedHours: 1,
         neededHours: 2,

@@ -5,7 +5,7 @@ import {
     PUPPET,
 } from '../../../../../app/constants/scene/things'
 import {
-    SNOWGLOBE_SMALL__FUTURE,
+    SNOWGLOBE_SMALL_FUTURE,
     SNOWGLOBE_CORD,
     SNOWGLOBE_COWGIRL,
 } from '../../../../../app/constants/scene/things/cardboards'
@@ -22,7 +22,7 @@ import { OPAL_COUCH__FUTURE } from '../../../../../app/constants/scene/things/pu
 
 export default {
     [CARDBOARD]: {
-        [SNOWGLOBE_SMALL__FUTURE]: {
+        [SNOWGLOBE_SMALL_FUTURE]: {
             yIndex: 0,
             xPosition: 0.54,
             zOffset: 6.25,

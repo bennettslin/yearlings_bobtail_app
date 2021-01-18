@@ -5051,4 +5051,8 @@ export default [
         taskName: `Night colour work.`,
         workedHours: 48,
     },
+    {
+        taskName: `Make snowglobes have past and future colours.`,
+        workedHours: 3,
+    },
 ]

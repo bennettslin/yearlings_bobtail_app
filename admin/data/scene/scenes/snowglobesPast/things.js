@@ -4,7 +4,7 @@ import {
     PANEL,
 } from '../../../../../app/constants/scene/things'
 import {
-    SNOWGLOBE_SMALL__PAST,
+    SNOWGLOBE_SMALL_PAST,
     SNOWGLOBE_ENRAGED_SOBBING,
 } from '../../../../../app/constants/scene/things/cardboards'
 import { TETHERBALL_POLE } from '../../../../../app/constants/scene/things/fixtures'
@@ -12,7 +12,7 @@ import { SNOWGLOBE_PAST } from '../../../../../app/constants/scene/things/panels
 
 export default {
     [CARDBOARD]: {
-        [SNOWGLOBE_SMALL__PAST]: {
+        [SNOWGLOBE_SMALL_PAST]: {
             yIndex: 0,
             xPosition: 6.5,
             zOffset: 7.5,

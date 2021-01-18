@@ -67,11 +67,11 @@ import {
     ROAD_FUTURE,
 } from '../../../../app/constants/scene/things/backdrops'
 import {
-    SNOWGLOBE_SMALL__PAST,
+    SNOWGLOBE_SMALL_PAST,
     SNOWGLOBE_ENRAGED_SOBBING,
-    SNOWGLOBE_SMALL__PRESENT,
+    SNOWGLOBE_SMALL_PRESENT,
     SNOWGLOBE_LEAVING_CRUMBLED,
-    SNOWGLOBE_SMALL__FUTURE,
+    SNOWGLOBE_SMALL_FUTURE,
     SNOWGLOBE_CORD,
     SNOWGLOBE_COWGIRL,
 } from '../../../../app/constants/scene/things/cardboards'
@@ -198,7 +198,7 @@ export default [
                 [ROAD_PAST]: true,
             },
             [CARDBOARD]: {
-                [SNOWGLOBE_SMALL__PAST]: true,
+                [SNOWGLOBE_SMALL_PAST]: true,
                 [SNOWGLOBE_ENRAGED_SOBBING]: true,
             },
             [FIXTURE]: {
@@ -239,7 +239,7 @@ export default [
                 [ROAD_PRESENT]: true,
             },
             [CARDBOARD]: {
-                [SNOWGLOBE_SMALL__PRESENT]: true,
+                [SNOWGLOBE_SMALL_PRESENT]: true,
                 [SNOWGLOBE_LEAVING_CRUMBLED]: true,
             },
             [PANEL]: {
@@ -286,7 +286,7 @@ export default [
                 [ROAD_FUTURE]: true,
             },
             [CARDBOARD]: {
-                [SNOWGLOBE_SMALL__FUTURE]: true,
+                [SNOWGLOBE_SMALL_FUTURE]: true,
                 [SNOWGLOBE_CORD]: true,
                 [SNOWGLOBE_COWGIRL]: true,
             },

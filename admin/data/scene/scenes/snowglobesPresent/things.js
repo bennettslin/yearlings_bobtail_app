@@ -3,7 +3,7 @@ import {
     PANEL,
 } from '../../../../../app/constants/scene/things'
 import {
-    SNOWGLOBE_SMALL__PRESENT,
+    SNOWGLOBE_SMALL_PRESENT,
     SNOWGLOBE_LEAVING_CRUMBLED,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
@@ -17,7 +17,7 @@ import {
 
 export default {
     [CARDBOARD]: {
-        [SNOWGLOBE_SMALL__PRESENT]: {
+        [SNOWGLOBE_SMALL_PRESENT]: {
             yIndex: 0,
             xPosition: 10.4,
             zOffset: 3.9,
