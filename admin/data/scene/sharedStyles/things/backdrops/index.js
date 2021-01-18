@@ -33,7 +33,6 @@ import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
-    SHORE__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
     VOLCANO__SHARED,
@@ -45,7 +44,6 @@ export default {
     [GOLDEN_GATE_BACKDROP]: [
         BUILDINGS__SHARED,
         MOUNTAIN__SHARED,
-        SHORE__SHARED,
     ],
     [LOS_ANGELES_BACKDROP]: [
         BUILDINGS__SHARED,
@@ -71,12 +69,10 @@ export default {
     [SHORE_BUOY_BACKDROP]: [
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,
-        SHORE__SHARED,
     ],
     [SHORE_RICKSHAW_BACKDROP]: [
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,
-        SHORE__SHARED,
     ],
     [TAIWAN_MOUNTAINS_BACKDROP]: TAIWAN_MOUNTAIN__SHARED,
     [TAIWAN_STAIRS_BACKDROP]: [

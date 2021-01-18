@@ -95,7 +95,7 @@ export default {
     /* T. */
     [STREET_COLOUR]: { h: 0, s: 0, l: 39 },
     /* V. */
-    [OCEAN_COLOUR]: { h: parseInt(HUE_OCEAN), s: 46, l: 38 },
+    [OCEAN_COLOUR]: { h: parseInt(HUE_OCEAN), s: 46, l: 42 },
     [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 61 },
     [TENNIS_COLOUR]: { h: parseInt(HUE_TENNIS), s: 51, l: 55 },
     /* K. */

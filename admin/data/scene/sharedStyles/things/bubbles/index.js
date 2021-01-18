@@ -58,7 +58,6 @@ import {
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
-    SHORE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
@@ -161,7 +160,6 @@ export default {
         ALL_PEOPLE__SHARED,
         THOUGHT__SHARED,
         ALL_VEHICLES__SHARED,
-        BUBBLE__SHARED,
         FOLIAGE__SHARED,
         REATTA__SHARED,
     ],
@@ -183,10 +181,7 @@ export default {
         BENNETT_ROOM_SHARED,
         THOUGHT__SHARED,
     ],
-    [THOUGHT_GO_KART]: [
-        BUBBLE__SHARED,
-        FOLIAGE__SHARED,
-    ],
+    [THOUGHT_GO_KART]: FOLIAGE__SHARED,
     [WAITING_THOUGHT_SINGING]: [
         BENNETT,
         LIZ,
@@ -210,10 +205,8 @@ export default {
         LIZ,
         ALL_PEOPLE__SHARED,
         THOUGHT__SHARED,
-        BUBBLE__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
-        SHORE__SHARED,
     ],
 }
 

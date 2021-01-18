@@ -64,16 +64,12 @@ import { TAIWAN_LINENS__SHARED } from '../../../../../../app/constants/scene/sha
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
-    SHORE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
     POSTER_GLADIATOR__SHARED,
     PROGRESS_CHART__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/print'
-import {
-    BUBBLE__SHARED,
-    SNOWGLOBE__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/props'
+import { SNOWGLOBE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 import {
     TAIWAN_BUOY__SHARED,
     TAIWAN_RICKSHAW__SHARED,
@@ -87,7 +83,6 @@ import { FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../..
 export default {
     [ALBUM_JOHNNY_HORTON]: [
         ALL_PEOPLE__SHARED,
-        BUBBLE__SHARED,
         FOLIAGE__SHARED,
     ],
     [ALBUM_NAS]: null,
@@ -104,7 +99,6 @@ export default {
         ALL_PEOPLE__SHARED,
         BENNETT_PAST__SHARED,
         ODIN_PAST__SHARED,
-        SHORE__SHARED,
         TAIWAN_BUOY__SHARED,
     ],
     [BENNETT_ODIN_DEPTHS]: [
@@ -147,7 +141,7 @@ export default {
     [CORKBOARD]: null,
     [DOGS_ROCKET]: null,
     [DOGS_SPACE_STATION]: null,
-    [EARTH]: SHORE__SHARED,
+    [EARTH]: null,
     [MARQUEE_FRAME]: null,
     [ODIN_MAT]: ODIN_PAST__SHARED,
     [ODIN_SHORE]: ODIN_PAST__SHARED,
