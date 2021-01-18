@@ -9,12 +9,14 @@ import {
 } from '../../../../../redux/access/selector'
 import { mapSelectedSongIndex } from '../../../../../redux/selected/selector'
 import { mapIsDotsSlideShown } from '../../../../../redux/toggle/selector'
+import { getMapNavStatus } from '../../../../../redux/nav/selector'
 
 const NavButtonIndexed = ({ songIndex, ...other }) => {
     const
         isAccessOn = useSelector(mapIsAccessOn),
         accessedNavIndex = useSelector(mapAccessedNavIndex),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
+        navStatus = useSelector(getMapNavStatus(songIndex)),
         isDotsSlideShown = useSelector(mapIsDotsSlideShown)
 
     const
@@ -33,6 +35,7 @@ const NavButtonIndexed = ({ songIndex, ...other }) => {
                 songIndex,
                 isSelected,
                 isAccessed,
+                navStatus,
             }}
         />
     )

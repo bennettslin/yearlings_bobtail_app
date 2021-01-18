@@ -1,8 +1,11 @@
 import { createSelector } from 'reselect'
+import { getBeforeOnOrAfter } from '../../helpers/cursor'
 import {
     getShowShrunkNavIcon,
     getShowSingleNavBook,
 } from '../../helpers/resize/nav'
+import { mapAccessedNavIndex } from '../access/selector'
+import { mapSelectedSongIndex } from '../selected/selector'
 import { mapShownNavBookIndex } from '../session/selector'
 import {
     mapDeviceWidthIndex,
@@ -42,5 +45,19 @@ export const getMapIsNavColumnShown = bookIndex => createSelector(
     ) => (
         !showSingleNavBook ||
         shownNavBookIndex === bookIndex
+    )
+)
+
+export const getMapNavStatus = songIndex => createSelector(
+    mapAccessedNavIndex,
+    mapSelectedSongIndex,
+    (
+        accessedNavIndex,
+        selectedSongIndex
+    ) => (
+        getBeforeOnOrAfter(
+            accessedNavIndex > -1 ? accessedNavIndex : selectedSongIndex,
+            songIndex
+        )
     )
 )

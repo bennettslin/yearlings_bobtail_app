@@ -54,6 +54,7 @@ import {
     CHRISTOPHER_PAST__SHARED,
     BENNETT_FUTURE__SHARED,
     MIRIAM_FUTURE__SHARED,
+    ALL_CLOTHING__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/actors'
 import {
     ODIN_PAST__SHARED,
@@ -156,7 +157,10 @@ export default {
         ALL_PEOPLE__SHARED,
         MOUNTAIN__SHARED,
     ],
-    [POSTER_ELLIOTT_SMITH]: ALL_PEOPLE__SHARED,
+    [POSTER_ELLIOTT_SMITH]: [
+        ALL_CLOTHING__SHARED,
+        ALL_PEOPLE__SHARED,
+    ],
     [POSTER_GLADIATOR]: [
         POSTER_GLADIATOR__SHARED,
         ALL_PEOPLE__SHARED,

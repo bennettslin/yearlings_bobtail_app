@@ -12,7 +12,7 @@ import {
     TAIWAN_STAIRS_KEY,
 } from '../constants/scene/scenes'
 
-export const getIsDarkIndoorScene = sceneCubesKey => {
+export const getIsDarkScene = sceneCubesKey => {
     switch (sceneCubesKey) {
         // Night scenes.
         case TAIWAN_ROOM_KEY:

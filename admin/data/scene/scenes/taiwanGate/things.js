@@ -5,7 +5,10 @@ import {
     FLAT,
 } from '../../../../../app/constants/scene/things'
 import { BENNETT_ODIN_RICKSHAW } from '../../../../../app/constants/scene/things/cardboards'
-import { TAIWAN_TREE } from '../../../../../app/constants/scene/things/cutouts'
+import {
+    TAIWAN_SHRUB,
+    TAIWAN_TREE,
+} from '../../../../../app/constants/scene/things/cutouts'
 import { IRON_GATE } from '../../../../../app/constants/scene/things/doors'
 import {
     TAIWAN_HOUSES_CENTRE,
@@ -22,6 +25,10 @@ export default {
         },
     },
     [CUTOUT]: {
+        [TAIWAN_SHRUB]: {
+            yIndex: 3,
+            xPosition: 11.3,
+        },
         [TAIWAN_TREE]: {
             yIndex: 1,
             xPosition: 4,

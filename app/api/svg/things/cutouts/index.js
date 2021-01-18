@@ -51,6 +51,7 @@ import stinkPlant from '../../../../../assets/svgs/cutouts/stinkPlant'
 import storageBoxes from '../../../../../assets/svgs/cutouts/storageBoxes'
 import storageChest from '../../../../../assets/svgs/cutouts/storageChest'
 import taiwanFridge from '../../../../../assets/svgs/cutouts/taiwanFridge'
+import taiwanShrub from '../../../../../assets/svgs/cutouts/taiwanShrub'
 import taiwanTree from '../../../../../assets/svgs/cutouts/taiwanTree'
 import television from '../../../../../assets/svgs/cutouts/television'
 import towelRack from '../../../../../assets/svgs/cutouts/towelRack'
@@ -145,6 +146,7 @@ import {
     STORAGE_BOXES,
     STORAGE_CHEST,
     TAIWAN_FRIDGE,
+    TAIWAN_SHRUB,
     TAIWAN_TREE,
     TELEVISION,
     TOWEL_RACK,
@@ -245,6 +247,7 @@ export default {
     [STORAGE_BOXES]: storageBoxes,
     [STORAGE_CHEST]: storageChest,
     [TAIWAN_FRIDGE]: taiwanFridge,
+    [TAIWAN_SHRUB]: taiwanShrub,
     [TAIWAN_TREE]: taiwanTree,
     [TELEVISION]: television,
     [TOWEL_RACK]: towelRack,

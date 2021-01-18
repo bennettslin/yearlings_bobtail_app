@@ -20,6 +20,7 @@ import './style'
 const NavButton = ({
     isAccessed,
     isSelected,
+    navStatus,
     isInShownColumn,
     isToggle,
     bookIndex,
@@ -68,7 +69,9 @@ const NavButton = ({
     return (
         <div
             className={cx(
-                'NavButton'
+                'NavButton',
+                navStatus === -1 && 'NavButton__past',
+                navStatus === 1 && 'NavButton__future',
             )}
         >
             <Button
@@ -113,6 +116,7 @@ NavButton.propTypes = {
     isToggle: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
+    navStatus: PropTypes.number,
     isInShownColumn: PropTypes.bool,
 
     bookIndex: PropTypes.number,

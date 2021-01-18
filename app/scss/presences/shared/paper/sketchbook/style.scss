@@ -7,8 +7,8 @@
     .blueDisplayLine { stroke: hsl(200, 20%, 80%); }
     .redDisplayLine { stroke: hsl(0, 20%, 80%); }
     
-    .dark__indoor
-    &.darkens#{$suffix} {
+    .dark__parent
+    &.dark__child#{$suffix} {
         .sketchPaperLight { fill: hsl(44, 13%, 45%); }
         .pencilBody { fill: hsl(89, 22%, 37%); }
         .pencilMetal { fill: hsl(167, 7%, 42%); }

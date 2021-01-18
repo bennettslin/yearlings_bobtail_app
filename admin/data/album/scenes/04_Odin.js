@@ -66,6 +66,7 @@ import {
 import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
+    TAIWAN_SHRUB,
     TAIWAN_TREE,
     YELLOW_TAPED_GRILL,
 } from '../../../../app/constants/scene/things/cutouts'
@@ -165,6 +166,7 @@ export default [
                 [BENNETT_ODIN_RICKSHAW]: true,
             },
             [CUTOUT]: {
+                [TAIWAN_SHRUB]: true,
                 [TAIWAN_TREE]: true,
             },
             [DOOR]: {

@@ -1,1 +1,1 @@
-export const DARKENS = 'darkens'
+export const DARKENS = 'dark__child'
