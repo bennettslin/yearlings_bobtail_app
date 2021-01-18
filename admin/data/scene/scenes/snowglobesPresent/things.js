@@ -7,8 +7,8 @@ import {
     SNOWGLOBE_LEAVING_CRUMBLED,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
-    SNOWGLOBE__LIZ_ALONE,
-    SNOWGLOBE__BENNETT_MIRIAM,
+    SNOWGLOBE_PRESENT__LIZ,
+    SNOWGLOBE_PRESENT__BENNETT,
     LIZ_COUCH__PRESENT,
     WIDE_COUCH_MIRIAM,
     WIDE_ARMREST_MIRIAM__LEFT,
@@ -32,12 +32,12 @@ export default {
         },
     },
     [PANEL]: {
-        [SNOWGLOBE__LIZ_ALONE]: {
+        [SNOWGLOBE_PRESENT__LIZ]: {
             yIndex: 4,
             xPosition: 2.5,
             scaleFactor: 0.86,
         },
-        [SNOWGLOBE__BENNETT_MIRIAM]: {
+        [SNOWGLOBE_PRESENT__BENNETT]: {
             yIndex: 5,
             xPosition: 8,
             scaleFactor: 0.98,

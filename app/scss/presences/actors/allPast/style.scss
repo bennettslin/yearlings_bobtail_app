@@ -1,5 +1,5 @@
 .allPast#{$suffix} {
-    .shirtWhite { fill: hsl($hue__past, 20%, 90%); }
-    .soleWhite { fill: hsl($hue__past, 20%, 80%); }
-    .soleWhiteDark { fill: hsl($hue__past, 20%, 70%); }
+    .shirtWhite { fill: hsl($HUE_PAST, 20%, 90%); }
+    .soleWhite { fill: hsl($HUE_PAST, 20%, 80%); }
+    .soleWhiteDark { fill: hsl($HUE_PAST, 20%, 70%); }
 }

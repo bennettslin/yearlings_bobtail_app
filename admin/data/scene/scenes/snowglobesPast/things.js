@@ -8,7 +8,7 @@ import {
     SNOWGLOBE_ENRAGED_SOBBING,
 } from '../../../../../app/constants/scene/things/cardboards'
 import { TETHERBALL_POLE } from '../../../../../app/constants/scene/things/fixtures'
-import { SNOWGLOBE__TETHERBALL } from '../../../../../app/constants/scene/things/panels'
+import { SNOWGLOBE_PAST } from '../../../../../app/constants/scene/things/panels'
 
 export default {
     [CARDBOARD]: {
@@ -31,7 +31,7 @@ export default {
         },
     },
     [PANEL]: {
-        [SNOWGLOBE__TETHERBALL]: {
+        [SNOWGLOBE_PAST]: {
             yIndex: 5,
             xPosition: 7,
             scaleFactor: 0.95,

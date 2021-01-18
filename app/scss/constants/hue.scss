@@ -1,19 +1,19 @@
 /* App. */
-$hue__past: 36;
-$hue__present: 156;
-$hue__future: 276;
+$HUE_PAST: 36;
+$HUE_PRESENT: 156;
+$HUE_FUTURE: 276;
 
 $hue__playing: 156;
 $hue__paused: 216;
 
-$hue__backstory: $hue__past;
-$hue__narrative: $hue__present;
+$hue__backstory: $HUE_PAST;
+$hue__narrative: $HUE_PRESENT;
 $hue__observation: 236;
 $hue__pun: 196;
 $hue__reference: 66;
 $hue__wormhole: 106;
 $hue__songcraft: 356;
-$hue__afterword: $hue__future;
+$hue__afterword: $HUE_FUTURE;
 
 $hue__link: 6;
 $hue__select: 66;
@@ -38,5 +38,4 @@ $HUE_OCEAN: 204;
 $HUE_ROOF: 7;
 $HUE_SAND: 60;
 $HUE_SNOW: 186;
-$HUE_SNOWGLOBE: 3;
 $HUE_TENNIS: 220;

@@ -3,7 +3,7 @@ import { SNOWGLOBES_PAST_KEY } from '../../../../../app/constants/scene/scenes'
 import {
     GROUND_CLEAR_COLOUR as G,
     SNOW_FLOOR_COLOUR as F,
-    SNOWGLOBE_PLATFORM_COLOUR as P,
+    PAST_PLATFORM_COLOUR as P,
 } from '../../../../../app/constants/scene/cubes/colours'
 
 export default {

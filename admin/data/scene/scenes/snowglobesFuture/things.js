@@ -14,8 +14,8 @@ import {
     RECORDING_BEERS,
 } from '../../../../../app/constants/scene/things/fixtures'
 import {
-    SNOWGLOBE__LIZ_KHARI,
-    SNOWGLOBE__BENNETT_ALONE,
+    SNOWGLOBE_FUTURE__LIZ,
+    SNOWGLOBE_FUTURE__BENNETT,
     LIZ_COUCH__FUTURE,
 } from '../../../../../app/constants/scene/things/panels'
 import { OPAL_COUCH__FUTURE } from '../../../../../app/constants/scene/things/puppets'
@@ -54,11 +54,11 @@ export default {
         },
     },
     [PANEL]: {
-        [SNOWGLOBE__LIZ_KHARI]: {
+        [SNOWGLOBE_FUTURE__LIZ]: {
             yIndex: 5,
             xPosition: 3,
         },
-        [SNOWGLOBE__BENNETT_ALONE]: {
+        [SNOWGLOBE_FUTURE__BENNETT]: {
             yIndex: 4,
             xPosition: 8.5,
             scaleFactor: 0.8,

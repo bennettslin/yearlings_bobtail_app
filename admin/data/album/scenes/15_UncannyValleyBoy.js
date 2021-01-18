@@ -93,11 +93,11 @@ import {
 } from '../../../../app/constants/scene/things/fixtures'
 import { BASEMENT_PILLOW } from '../../../../app/constants/scene/things/furnitures'
 import {
-    SNOWGLOBE__TETHERBALL,
-    SNOWGLOBE__LIZ_ALONE,
-    SNOWGLOBE__BENNETT_MIRIAM,
-    SNOWGLOBE__LIZ_KHARI,
-    SNOWGLOBE__BENNETT_ALONE,
+    SNOWGLOBE_PAST,
+    SNOWGLOBE_PRESENT__LIZ,
+    SNOWGLOBE_PRESENT__BENNETT,
+    SNOWGLOBE_FUTURE__LIZ,
+    SNOWGLOBE_FUTURE__BENNETT,
     BENNETT_BED,
     LIZ_COUCH__PRESENT,
     LIZ_COUCH__FUTURE,
@@ -205,7 +205,7 @@ export default [
                 [TETHERBALL_POLE]: true,
             },
             [PANEL]: {
-                [SNOWGLOBE__TETHERBALL]: true,
+                [SNOWGLOBE_PAST]: true,
             },
         },
         cubes: SNOWGLOBES_PAST_KEY,
@@ -243,8 +243,8 @@ export default [
                 [SNOWGLOBE_LEAVING_CRUMBLED]: true,
             },
             [PANEL]: {
-                [SNOWGLOBE__LIZ_ALONE]: true,
-                [SNOWGLOBE__BENNETT_MIRIAM]: true,
+                [SNOWGLOBE_PRESENT__LIZ]: true,
+                [SNOWGLOBE_PRESENT__BENNETT]: true,
                 [LIZ_COUCH__PRESENT]: true,
                 [WIDE_COUCH_MIRIAM]: true,
                 [WIDE_ARMREST_MIRIAM__LEFT]: true,
@@ -295,8 +295,8 @@ export default [
                 [RECORDING_BEERS]: true,
             },
             [PANEL]: {
-                [SNOWGLOBE__LIZ_KHARI]: true,
-                [SNOWGLOBE__BENNETT_ALONE]: true,
+                [SNOWGLOBE_FUTURE__LIZ]: true,
+                [SNOWGLOBE_FUTURE__BENNETT]: true,
                 [LIZ_COUCH__FUTURE]: true,
             },
             [PUPPET]: {

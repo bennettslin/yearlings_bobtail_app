@@ -13,16 +13,16 @@
 .snowglobeBase { fill: hsl(0, 0%, 62%); }
 
 .past__shared {
-    .snowglobeRim { fill: hsl($hue__past, 42%, 52%); }
-    .snowglobeBase { fill: hsl($hue__past, 42%, 57%); }
+    .snowglobeRim { fill: hsl($HUE_PAST, 42%, 52%); }
+    .snowglobeBase { fill: hsl($HUE_PAST, 42%, 57%); }
 }
 
 .present__shared {
-    .snowglobeRim { fill: hsl($hue__present, 42%, 52%); }
-    .snowglobeBase { fill: hsl($hue__present, 42%, 57%); }
+    .snowglobeRim { fill: hsl($HUE_PRESENT, 42%, 52%); }
+    .snowglobeBase { fill: hsl($HUE_PRESENT, 42%, 57%); }
 }
 
 .future__shared {
-    .snowglobeRim { fill: hsl($hue__future, 42%, 52%); }
-    .snowglobeBase { fill: hsl($hue__future, 42%, 57%); }
+    .snowglobeRim { fill: hsl($HUE_FUTURE, 42%, 52%); }
+    .snowglobeBase { fill: hsl($HUE_FUTURE, 42%, 57%); }
 }

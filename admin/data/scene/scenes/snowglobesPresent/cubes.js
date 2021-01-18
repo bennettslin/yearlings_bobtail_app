@@ -3,7 +3,7 @@ import { SNOWGLOBES_PRESENT_KEY } from '../../../../../app/constants/scene/scene
 import {
     GROUND_CLEAR_COLOUR as G,
     SNOW_FLOOR_COLOUR as F,
-    SNOWGLOBE_PLATFORM_COLOUR as P,
+    PRESENT_PLATFORM_COLOUR as P,
     LIZ_COUCH_COLOUR as U,
     MIRIAM_COUCH_COLOUR as Z,
 } from '../../../../../app/constants/scene/cubes/colours'

@@ -1,8 +1,8 @@
 .bennettFuture#{$suffix} {
-    .bennettJacket { fill: hsl($hue__future, 10%, 38%); }
-    .bennettSleeves { fill: hsl($hue__future, 37%, 52%); }
-    .bennettUnderwear { fill: hsl($hue__future, 39%, 61%); }
-    .bennettWaistband { fill: hsl($hue__future, 47%, 72%); }
-    .bennettJeans { fill: hsl($hue__future, 27%, 47%); }
-    .bennettShoe { fill: hsl($hue__future, 11%, 41%); }
+    .bennettJacket { fill: hsl($HUE_FUTURE, 10%, 38%); }
+    .bennettSleeves { fill: hsl($HUE_FUTURE, 37%, 52%); }
+    .bennettUnderwear { fill: hsl($HUE_FUTURE, 39%, 61%); }
+    .bennettWaistband { fill: hsl($HUE_FUTURE, 47%, 72%); }
+    .bennettJeans { fill: hsl($HUE_FUTURE, 27%, 47%); }
+    .bennettShoe { fill: hsl($HUE_FUTURE, 11%, 41%); }
 }

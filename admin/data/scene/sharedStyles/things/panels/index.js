@@ -45,7 +45,9 @@ import {
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
     SCHOOLBUS_SEAT,
-    SNOWGLOBE,
+    SNOWGLOBE_FUTURE,
+    SNOWGLOBE_PAST,
+    SNOWGLOBE_PRESENT,
     STALACTITES,
     TAIWAN_BRIDGE,
     TAIWAN_HAZE,
@@ -62,7 +64,7 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_COUCH_MIRIAM,
 } from '../../../../../../app/constants/scene/things/panels'
-import { DARKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
+import { DARKEN__SHARED, FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
 import { OCEAN_LIFE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/animals'
 import {
     DISH__SHARED,
@@ -173,7 +175,18 @@ export default {
     ],
     [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
     [SCHOOLBUS_SEAT]: null,
-    [SNOWGLOBE]: SNOWGLOBE__SHARED,
+    [SNOWGLOBE_PAST]: [
+        PAST__SHARED,
+        SNOWGLOBE__SHARED,
+    ],
+    [SNOWGLOBE_PRESENT]: [
+        PRESENT__SHARED,
+        SNOWGLOBE__SHARED,
+    ],
+    [SNOWGLOBE_FUTURE]: [
+        FUTURE__SHARED,
+        SNOWGLOBE__SHARED,
+    ],
     [STALACTITES]: null,
     [TAIWAN_BRIDGE]: null,
     [TAIWAN_HAZE]: null,
