@@ -155,9 +155,9 @@ export default {
     /* P. */
     [CONCRETE_PLATFORM_COLOUR]: { h: 220, s: 14, l: 69 },
     [PLATFORM_COLOUR]: { h: 13, s: 16, l: 33 },
-    [PAST_PLATFORM_COLOUR]: { h: parseInt(HUE_PAST), s: 42, l: 55 },
-    [PRESENT_PLATFORM_COLOUR]: { h: parseInt(HUE_PRESENT), s: 42, l: 55 },
-    [FUTURE_PLATFORM_COLOUR]: { h: parseInt(HUE_FUTURE), s: 42, l: 55 },
+    [PAST_PLATFORM_COLOUR]: { h: parseInt(HUE_PAST), s: 33, l: 57 },
+    [PRESENT_PLATFORM_COLOUR]: { h: parseInt(HUE_PRESENT), s: 33, l: 57 },
+    [FUTURE_PLATFORM_COLOUR]: { h: parseInt(HUE_FUTURE), s: 33, l: 57 },
     [FURNITURE_PLATFORM_COLOUR]: { h: 30, s: 23, l: 42 },
     /* U. */
     [BENNETT_COUCH_COLOUR]: { h: parseInt(HUE_BENNETT_LINENS), s: 25, l: 45 },

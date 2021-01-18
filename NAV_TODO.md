@@ -11,7 +11,7 @@
     * Accessed is present
     * Selected is gray, unless it is also accessed
 * Also change base colour of snowglobe panels and cardboards (/)
-* Tweak colours of snowglobe bases and cubes
+* Tweak colours of snowglobe bases and cubes (/)
 * Change road colour to be red
 
 # Past, present, and future work
