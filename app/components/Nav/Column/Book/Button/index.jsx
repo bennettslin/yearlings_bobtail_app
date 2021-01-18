@@ -68,11 +68,14 @@ const NavButton = ({
 
     return (
         <div
-            className={cx(
-                'NavButton',
-                navStatus === -1 && 'NavButton__past',
-                navStatus === 1 && 'NavButton__future',
-            )}
+            {...{
+                className: cx(
+                    'NavButton',
+                    navStatus === 0 && 'present__shared',
+                    navStatus === -1 && !isSelected && 'past__shared',
+                    navStatus === 1 && !isSelected && 'future__shared',
+                ),
+            }}
         >
             <Button
                 hoverOnParent

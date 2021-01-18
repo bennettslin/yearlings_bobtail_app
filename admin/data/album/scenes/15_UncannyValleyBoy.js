@@ -68,12 +68,12 @@ import {
 } from '../../../../app/constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__PAST,
-    SNOWGLOBE_PAST,
+    SNOWGLOBE_ENRAGED_SOBBING,
     SNOWGLOBE_SMALL__PRESENT,
-    SNOWGLOBE_PRESENT,
+    SNOWGLOBE_LEAVING_CRUMBLED,
     SNOWGLOBE_SMALL__FUTURE,
-    SNOWGLOBE_FUTURE_CORD,
-    SNOWGLOBE_FUTURE_REATTA,
+    SNOWGLOBE_CORD,
+    SNOWGLOBE_COWGIRL,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
     PEACH_TREE,
@@ -199,7 +199,7 @@ export default [
             },
             [CARDBOARD]: {
                 [SNOWGLOBE_SMALL__PAST]: true,
-                [SNOWGLOBE_PAST]: true,
+                [SNOWGLOBE_ENRAGED_SOBBING]: true,
             },
             [FIXTURE]: {
                 [TETHERBALL_POLE]: true,
@@ -240,7 +240,7 @@ export default [
             },
             [CARDBOARD]: {
                 [SNOWGLOBE_SMALL__PRESENT]: true,
-                [SNOWGLOBE_PRESENT]: true,
+                [SNOWGLOBE_LEAVING_CRUMBLED]: true,
             },
             [PANEL]: {
                 [SNOWGLOBE__LIZ_ALONE]: true,
@@ -287,8 +287,8 @@ export default [
             },
             [CARDBOARD]: {
                 [SNOWGLOBE_SMALL__FUTURE]: true,
-                [SNOWGLOBE_FUTURE_CORD]: true,
-                [SNOWGLOBE_FUTURE_REATTA]: true,
+                [SNOWGLOBE_CORD]: true,
+                [SNOWGLOBE_COWGIRL]: true,
             },
             [FIXTURE]: {
                 [RECORDING_MIC]: true,

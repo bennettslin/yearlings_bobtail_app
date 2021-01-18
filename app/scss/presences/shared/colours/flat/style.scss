@@ -60,8 +60,8 @@
 
 .flatMaroonMedium { fill: hsl(330, 33%, 57%); }
 
-.dark__parent
-.dark__child#{$suffix} {
+.darken__parent
+.darken#{$suffix} {
     .flatRedMedium { fill: hsl(0, 17%, 34%); }
     .flatRedLight { fill: hsl(0, 17%, 39%); }
     .flatAmberLight { fill: hsl(45, 17%, 39%); }

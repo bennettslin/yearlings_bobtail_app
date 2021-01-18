@@ -6,8 +6,8 @@
 .steelMediumLight { fill: hsl(195, 8%, 62%); }
 .steelLight { fill: hsl(195, 8%, 67%); }
 
-.dark__parent
-.dark__child#{$suffix} {
+.darken__parent
+.darken#{$suffix} {
     .steelDark { fill: hsl(195, 4%, 29%); }
     .steelMedium { fill: hsl(195, 4%, 34%); }
     .steelLight { fill: hsl(195, 4%, 39%); }

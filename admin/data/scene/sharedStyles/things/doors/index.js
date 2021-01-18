@@ -52,12 +52,12 @@ import {
     MOUNTAIN__SHARED,
     WALL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
-import { DARKENS } from '../../../../../../app/constants/scene/sharedStyles'
+import { DARKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
 
 export default {
     [BANCROFT_DOOR]: DOOR__SHARED,
     [BASEMENT_DOOR]: [
-        DARKENS,
+        DARKEN__SHARED,
         DOOR__SHARED,
     ],
     [BASEMENT_DOOR_OPEN]: DOOR__SHARED,
@@ -75,13 +75,13 @@ export default {
     ],
     [BENNETT_DOOR_INSIDE]: [
         BENNETT_INSIDE__SHARED,
-        DARKENS,
+        DARKEN__SHARED,
         DOOR__SHARED,
     ],
     [BENNETT_DOOR_INSIDE_OPEN]: [
         BENNETT_APARTMENT__SHARED,
         BENNETT_INSIDE__SHARED,
-        DARKENS,
+        DARKEN__SHARED,
         DOOR__SHARED,
     ],
     [BENNETT_DOOR_OUTSIDE]: [
@@ -102,7 +102,7 @@ export default {
     ],
     [BLINDS_INSIDE_OPEN]: [
         BENNETT_INSIDE__SHARED,
-        DARKENS,
+        DARKEN__SHARED,
     ],
     [BLINDS_OUTSIDE]: BENNETT_APARTMENT__SHARED,
     [CINEMA_DOORS]: DOOR__SHARED,
@@ -121,19 +121,19 @@ export default {
     [IRON_GATE_LOW]: null,
     [LIZ_BLINDS_INSIDE]: LIZ_APARTMENT__SHARED,
     [LIZ_BLINDS_INSIDE_OPEN]: [
-        DARKENS,
+        DARKEN__SHARED,
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_BLINDS_OUTSIDE]: [
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_DOOR]: [
-        DARKENS,
+        DARKEN__SHARED,
         DOOR__SHARED,
         LIZ_APARTMENT__SHARED,
     ],
     [LIZ_DOOR_OPEN]: [
-        DARKENS,
+        DARKEN__SHARED,
         DOOR__SHARED,
         LIZ_APARTMENT__SHARED,
     ],

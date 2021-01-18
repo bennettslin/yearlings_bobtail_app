@@ -4,8 +4,8 @@
     .wrapperOuter { fill: hsl(128, 33%, 62%); }
     .wrapperInner { fill: hsl(128, 33%, 72%); }
 
-    .dark__parent
-    &.dark__child#{$suffix} {
+    .darken__parent
+    &.darken#{$suffix} {
         .condomRing { fill: hsl(128, 10%, 36%); }
         .condomBag { fill: hsl(128, 10%, 41%); }
         .wrapperOuter { fill: hsl(128, 17%, 36%); }

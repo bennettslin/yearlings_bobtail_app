@@ -82,7 +82,7 @@ import {
     GARBAGE_BAG__SHARED,
     PAPER_BAG__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/food'
-import { DARKENS } from '../../../../../../app/constants/scene/sharedStyles'
+import { DARKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
 import { BENNETT_LINENS__SHARED } from '../../../../../../app/constants/scene/sharedStyles/furniture'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 import { MONITOR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/instruments'
@@ -104,7 +104,7 @@ export default {
     [APARTMENT_PLANT]: FOLIAGE__SHARED,
     [ASH_CAN]: CIGARETTE__SHARED,
     [STINK_PLANT]: FOLIAGE__SHARED,
-    [BUDDHA_SHRINE]: DARKENS,
+    [BUDDHA_SHRINE]: DARKEN__SHARED,
     [BUSH_DOUBLE]: FOLIAGE__SHARED,
     [BUSH_SINGLE]: FOLIAGE__SHARED,
     [CACTUS_DOUBLE]: FOLIAGE__SHARED,
@@ -134,7 +134,7 @@ export default {
     [GLASS_RACK]: null,
     [GRAVESTONE]: null,
     [HOSTESS_STAND]: BOOK__SHARED,
-    [HOWIE_FRIDGE]: DARKENS,
+    [HOWIE_FRIDGE]: DARKEN__SHARED,
     [IV_DRIP]: null,
     [LAMPPOST]: BULB__SHARED,
     [LEMON_TREE]: FOLIAGE__SHARED,
@@ -177,12 +177,12 @@ export default {
     [SIGNPOST]: null,
     [STAGE_LIGHTS]: null,
     [STEAM_PIPES]: null,
-    [STORAGE_BOXES]: DARKENS,
-    [STORAGE_CHEST]: DARKENS,
-    [TAIWAN_FRIDGE]: DARKENS,
+    [STORAGE_BOXES]: DARKEN__SHARED,
+    [STORAGE_CHEST]: DARKEN__SHARED,
+    [TAIWAN_FRIDGE]: DARKEN__SHARED,
     [TAIWAN_SHRUB]: TAIWAN_FOLIAGE__SHARED,
     [TAIWAN_TREE]: TAIWAN_FOLIAGE__SHARED,
-    [TELEVISION]: DARKENS,
+    [TELEVISION]: DARKEN__SHARED,
     [TOWEL_RACK]: BENNETT_LINENS__SHARED,
     [TRAFFIC_LIGHT_FRONT]: TRAFFIC_LIGHT__SHARED,
     [TRAFFIC_LIGHT_REAR]: TRAFFIC_LIGHT__SHARED,

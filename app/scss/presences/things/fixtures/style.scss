@@ -43,8 +43,8 @@
     // TODO: Not the best approach. Duplicate styling.
     .bulbOn { fill: hsla(240, 100%, 94%, 0.7); }
 
-    .dark__parent
-    &.dark__child#{$suffix} {
+    .darken__parent
+    &.darken#{$suffix} {
         .bulbOn { fill: hsla(240, 25%, 52%, 0.7); }
     }
 }

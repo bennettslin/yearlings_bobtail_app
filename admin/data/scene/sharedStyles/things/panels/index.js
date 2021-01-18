@@ -62,7 +62,7 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_COUCH_MIRIAM,
 } from '../../../../../../app/constants/scene/things/panels'
-import { DARKENS } from '../../../../../../app/constants/scene/sharedStyles'
+import { DARKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
 import { OCEAN_LIFE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/animals'
 import {
     DISH__SHARED,
@@ -94,28 +94,28 @@ import {
 
 export default {
     [ATTIC_ARMREST]: [
-        DARKENS,
+        DARKEN__SHARED,
         ATTIC_LINENS__SHARED,
     ],
     [ATTIC_COUCH]: [
-        DARKENS,
+        DARKEN__SHARED,
         ATTIC_LINENS__SHARED,
     ],
     [BATHTUB]: null,
-    [BEDROOM_DESK]: DARKENS,
+    [BEDROOM_DESK]: DARKEN__SHARED,
     [BEDROOM_STOOL]: [
         BENNETT_LINENS__SHARED,
-        DARKENS,
+        DARKEN__SHARED,
     ],
     [BENNETT_BED]: [
-        DARKENS,
+        DARKEN__SHARED,
     ],
     [BENNETT_NIGHTSTAND]: null,
     [BENNETT_RECORD_STAND]: null,
     [BUDDHA_STAND]: [
-        DARKENS,
+        DARKEN__SHARED,
     ],
-    [CAPTAIN_BED]: DARKENS,
+    [CAPTAIN_BED]: DARKEN__SHARED,
     [CAVE_SHADOWS]: DRAWING__SHARED,
     [CONVEYOR_BELT]: [
         DISH__SHARED,
@@ -134,12 +134,12 @@ export default {
     [HOSPITAL_RECORD_STAND]: null,
     [KEYBOARD_STAND_LEFT]: BOOK__SHARED,
     [KEYBOARD_STAND_RIGHT]: BOOK__SHARED,
-    [LIZ_BED]: DARKENS,
+    [LIZ_BED]: DARKEN__SHARED,
     [LIZ_COUCH]: [
-        DARKENS,
+        DARKEN__SHARED,
         LIZ_LINENS__SHARED,
     ],
-    [LIZ_NIGHTSTAND]: DARKENS,
+    [LIZ_NIGHTSTAND]: DARKEN__SHARED,
     [LIZ_OTTOMAN]: LIZ_LINENS__SHARED,
     [MILK_CRATE]: null,
     [NURSE_BENCH]: null,

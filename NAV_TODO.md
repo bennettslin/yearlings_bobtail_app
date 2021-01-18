@@ -1,16 +1,17 @@
 # Nav todo
 
-* Have past, present, and future parent class
-* Have snowglobe base class
+* Have past, present, and future parent class (/)
+* Have snowglobe base class (/)
     * past is amber
     * present is turquoise (default)
     * future is violet
-* When normal
+* When normal (/)
     * selected is present
-* When activated
+* When activated (/)
     * Accessed is present
     * Selected is gray, unless it is also accessed
 * Also change base colour of snowglobe panels and cardboards
+* Change road colour to be red
 
 # Past, present, and future work
 * People do not change colour, only their clothes.

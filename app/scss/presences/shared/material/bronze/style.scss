@@ -6,8 +6,8 @@
     // .bronzeMediumLight { fill: hsl(47, 39%, 62%); }
     // .bronzeLight { fill: hsl(47, 39%, 67%); }
 
-    .dark__parent
-.dark__child#{$suffix} {
+    .darken__parent
+.darken#{$suffix} {
         .bronzeDarker { fill: hsl(47, 20%, 26%); }
         .bronzeDark { fill: hsl(47, 20%, 29%); }
         .bronzeMediumDark { fill: hsl(47, 20%, 31%); }

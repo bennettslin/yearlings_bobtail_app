@@ -5,7 +5,7 @@ import {
 } from '../../../../../app/constants/scene/things'
 import {
     SNOWGLOBE_SMALL__PAST,
-    SNOWGLOBE_PAST,
+    SNOWGLOBE_ENRAGED_SOBBING,
 } from '../../../../../app/constants/scene/things/cardboards'
 import { TETHERBALL_POLE } from '../../../../../app/constants/scene/things/fixtures'
 import { SNOWGLOBE__TETHERBALL } from '../../../../../app/constants/scene/things/panels'
@@ -18,7 +18,7 @@ export default {
             zOffset: 7.5,
             rotate: -5,
         },
-        [SNOWGLOBE_PAST]: {
+        [SNOWGLOBE_ENRAGED_SOBBING]: {
             yIndex: 0,
             xPosition: 9,
             zOffset: 6.1,

@@ -34,10 +34,10 @@ import progressChartEarly from '../../../../../assets/svgs/cardboards/progressCh
 import progressChartLate from '../../../../../assets/svgs/cardboards/progressChartLate'
 import seaSerpentLeft from '../../../../../assets/svgs/cardboards/seaSerpentLeft'
 import seaSerpentRight from '../../../../../assets/svgs/cardboards/seaSerpentRight'
-import snowglobeFutureCord from '../../../../../assets/svgs/cardboards/snowglobeFutureCord'
-import snowglobeFutureReatta from '../../../../../assets/svgs/cardboards/snowglobeFutureReatta'
-import snowglobePast from '../../../../../assets/svgs/cardboards/snowglobePast'
-import snowglobePresent from '../../../../../assets/svgs/cardboards/snowglobePresent'
+import snowglobeCord from '../../../../../assets/svgs/cardboards/snowglobeCord'
+import snowglobeCowgirl from '../../../../../assets/svgs/cardboards/snowglobeCowgirl'
+import snowglobeEnragedSobbing from '../../../../../assets/svgs/cardboards/snowglobeEnragedSobbing'
+import snowglobeLeavingCrumbled from '../../../../../assets/svgs/cardboards/snowglobeLeavingCrumbled'
 import snowglobeSmall from '../../../../../assets/svgs/cardboards/snowglobeSmall'
 import vanNuysPainting from '../../../../../assets/svgs/cardboards/vanNuysPainting'
 
@@ -81,10 +81,10 @@ import {
     PROGRESS_CHART_LATE,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
-    SNOWGLOBE_FUTURE_CORD,
-    SNOWGLOBE_FUTURE_REATTA,
-    SNOWGLOBE_PAST,
-    SNOWGLOBE_PRESENT,
+    SNOWGLOBE_CORD,
+    SNOWGLOBE_COWGIRL,
+    SNOWGLOBE_ENRAGED_SOBBING,
+    SNOWGLOBE_LEAVING_CRUMBLED,
     SNOWGLOBE_SMALL__FUTURE,
     SNOWGLOBE_SMALL__PAST,
     SNOWGLOBE_SMALL__PRESENT,
@@ -131,10 +131,10 @@ export default {
     [PROGRESS_CHART_LATE]: progressChartLate,
     [SEA_SERPENT_LEFT]: seaSerpentLeft,
     [SEA_SERPENT_RIGHT]: seaSerpentRight,
-    [SNOWGLOBE_FUTURE_CORD]: snowglobeFutureCord,
-    [SNOWGLOBE_FUTURE_REATTA]: snowglobeFutureReatta,
-    [SNOWGLOBE_PAST]: snowglobePast,
-    [SNOWGLOBE_PRESENT]: snowglobePresent,
+    [SNOWGLOBE_CORD]: snowglobeCord,
+    [SNOWGLOBE_COWGIRL]: snowglobeCowgirl,
+    [SNOWGLOBE_ENRAGED_SOBBING]: snowglobeEnragedSobbing,
+    [SNOWGLOBE_LEAVING_CRUMBLED]: snowglobeLeavingCrumbled,
     [SNOWGLOBE_SMALL__FUTURE]: snowglobeSmall,
     [SNOWGLOBE_SMALL__PAST]: snowglobeSmall,
     [SNOWGLOBE_SMALL__PRESENT]: snowglobeSmall,

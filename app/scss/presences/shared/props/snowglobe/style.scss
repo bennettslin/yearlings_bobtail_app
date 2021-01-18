@@ -1,12 +1,28 @@
 .snowglobe#{$suffix} {
-    .base { fill: hsl($HUE_SNOWGLOBE, 42%, 55%); }
-    .rim { fill: hsl($HUE_SNOWGLOBE, 42%, 51%); }
-    .globeOuter {fill: hsla(240, 100%, 94%, 0.7); stroke: none; }
-    .globeCentre {fill: hsla(240, 100%, 94%, 0.5); stroke: none; }
     .globeInner { fill: hsla(180, 100%, 89%, 0.4); stroke: none; }
+    .globeCentre {fill: hsla(240, 100%, 94%, 0.5); stroke: none; }
+    .globeOuter {fill: hsla(240, 100%, 94%, 0.7); stroke: none; }
     .reflectionOuter {fill: hsla(240, 100%, 94%, 0.2); stroke: none; }
     .reflectionCentre {fill: hsla(240, 100%, 94%, 0.4); stroke: none; }
     .reflectionInner {fill: hsla(240, 100%, 94%, 0.6); stroke: none; }
     .snowSide { fill: hsl($HUE_SNOW, 30%, 72%); }
     .snowTop { fill: hsl($HUE_SNOW, 30%, 82%); }
+}
+
+.snowglobeRim { fill: hsl(0, 0%, 57%); }
+.snowglobeBase { fill: hsl(0, 0%, 62%); }
+
+.past__shared {
+    .snowglobeRim { fill: hsl($hue__past, 42%, 52%); }
+    .snowglobeBase { fill: hsl($hue__past, 42%, 57%); }
+}
+
+.present__shared {
+    .snowglobeRim { fill: hsl($hue__present, 42%, 52%); }
+    .snowglobeBase { fill: hsl($hue__present, 42%, 57%); }
+}
+
+.future__shared {
+    .snowglobeRim { fill: hsl($hue__future, 42%, 52%); }
+    .snowglobeBase { fill: hsl($hue__future, 42%, 57%); }
 }

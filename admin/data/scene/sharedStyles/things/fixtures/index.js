@@ -110,7 +110,7 @@ import {
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
-import { DARKENS } from '../../../../../../app/constants/scene/sharedStyles'
+import { DARKEN__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
 
 export default {
     [BACKPACK_BENNETT]: BACKPACK__SHARED,
@@ -121,7 +121,7 @@ export default {
     [BASS_CASE_UPRIGHT]: BASS_CASE__SHARED,
     [BEDROOM_LAMP]: [
         BULB__SHARED,
-        DARKENS,
+        DARKEN__SHARED,
     ],
     [BENNETT_COUCH_LAMP]: null,
     [BENNETT_LETTERS]: MAGAZINE__SHARED,
@@ -137,20 +137,20 @@ export default {
     [BEYONDER_ENVELOPE]: LETTER__SHARED,
     [CASH_BOX]: DOLLAR__SHARED,
     [CONDOM_LIZ]: [
-        DARKENS,
+        DARKEN__SHARED,
         LIZ_CONDOM__SHARED,
     ],
     [CONDOM_REFLECTION]: [
-        DARKENS,
+        DARKEN__SHARED,
         LIZ_CONDOM__SHARED,
     ],
     [CONDOM_MIRIAM]: MIRIAM_CONDOM__SHARED,
     [CONDOM_WRAPPER_LIZ]: [
-        DARKENS,
+        DARKEN__SHARED,
         LIZ_CONDOM__SHARED,
     ],
     [CONDOM_WRAPPER_REFLECTION]: [
-        DARKENS,
+        DARKEN__SHARED,
         LIZ_CONDOM__SHARED,
     ],
     [CONDOM_WRAPPER_MIRIAM]: MIRIAM_CONDOM__SHARED,
@@ -187,21 +187,21 @@ export default {
     [KEYBOARD]: null,
     [KICK_DRUM]: DRUMS__SHARED,
     [LETTER_SCRAPS]: MAGAZINE__SHARED,
-    [LIGHT_SWITCH]: DARKENS,
+    [LIGHT_SWITCH]: DARKEN__SHARED,
     [LINGERIE_DRAWING]: [
         BOOK__SHARED,
-        DARKENS,
+        DARKEN__SHARED,
         DRAWING__SHARED,
         SKETCHBOOK__SHARED,
     ],
     [LIZ_PHONE]: [
-        DARKENS,
+        DARKEN__SHARED,
         LIZ_PHONE__SHARED,
     ],
     [LIZ_PHONE_BASE]: LIZ_PHONE__SHARED,
     [LIZ_PHONE_BASE_REFLECTION]: LIZ_PHONE__SHARED,
     [LIZ_PHONE_REFLECTION]: [
-        DARKENS,
+        DARKEN__SHARED,
         LIZ_PHONE__SHARED,
     ],
     [MANNEQUIN]: null,
@@ -224,5 +224,5 @@ export default {
         PUDDING__SHARED,
     ],
     [TORN_MAGAZINES]: MAGAZINE__SHARED,
-    [VASELINE]: DARKENS,
+    [VASELINE]: DARKEN__SHARED,
 }

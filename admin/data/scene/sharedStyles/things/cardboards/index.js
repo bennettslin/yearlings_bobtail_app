@@ -35,10 +35,10 @@ import {
     PROGRESS_CHART_LATE,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
-    SNOWGLOBE_FUTURE_CORD,
-    SNOWGLOBE_FUTURE_REATTA,
-    SNOWGLOBE_PAST,
-    SNOWGLOBE_PRESENT,
+    SNOWGLOBE_CORD,
+    SNOWGLOBE_COWGIRL,
+    SNOWGLOBE_ENRAGED_SOBBING,
+    SNOWGLOBE_LEAVING_CRUMBLED,
     SNOWGLOBE_SMALL,
     VAN_NUYS_PAINTING,
 } from '../../../../../../app/constants/scene/things/cardboards'
@@ -82,6 +82,7 @@ import {
     REATTA__SHARED,
     ALL_VEHICLES__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
+import { PAST__SHARED, PRESENT__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
 
 export default {
     [ALBUM_JOHNNY_HORTON]: [
@@ -181,12 +182,12 @@ export default {
     [PROGRESS_CHART_LATE]: PROGRESS_CHART__SHARED,
     [SEA_SERPENT_LEFT]: SEA_SERPENT__SHARED,
     [SEA_SERPENT_RIGHT]: SEA_SERPENT__SHARED,
-    [SNOWGLOBE_FUTURE_CORD]: [
+    [SNOWGLOBE_CORD]: [
         SNOWGLOBE__SHARED,
         BENNETT_FUTURE__SHARED,
         ALL_PEOPLE__SHARED,
     ],
-    [SNOWGLOBE_FUTURE_REATTA]: [
+    [SNOWGLOBE_COWGIRL]: [
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED,
         BENNETT_FUTURE__SHARED,
@@ -194,17 +195,19 @@ export default {
         REATTA__SHARED,
         SNOWGLOBE__SHARED,
     ],
-    [SNOWGLOBE_PAST]: [
+    [SNOWGLOBE_ENRAGED_SOBBING]: [
         SNOWGLOBE__SHARED,
         BENNETT_PAST__SHARED,
         CHRISTOPHER_PAST__SHARED,
         ALL_PEOPLE__SHARED,
+        PAST__SHARED,
     ],
-    [SNOWGLOBE_PRESENT]: [
+    [SNOWGLOBE_LEAVING_CRUMBLED]: [
         SNOWGLOBE__SHARED,
         BENNETT,
         LIZ,
         ALL_PEOPLE__SHARED,
+        PRESENT__SHARED,
     ],
     [SNOWGLOBE_SMALL]: SNOWGLOBE__SHARED,
     [VAN_NUYS_PAINTING]: null,

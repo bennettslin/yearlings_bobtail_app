@@ -6,8 +6,8 @@ import {
 } from '../../../../../app/constants/scene/things'
 import {
     SNOWGLOBE_SMALL__FUTURE,
-    SNOWGLOBE_FUTURE_CORD,
-    SNOWGLOBE_FUTURE_REATTA,
+    SNOWGLOBE_CORD,
+    SNOWGLOBE_COWGIRL,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
     RECORDING_MIC,
@@ -28,14 +28,14 @@ export default {
             zOffset: 6.25,
             rotate: -5,
         },
-        [SNOWGLOBE_FUTURE_CORD]: {
+        [SNOWGLOBE_CORD]: {
             yIndex: 0,
             xPosition: 7,
             zOffset: 5.45,
             scaleFactor: 0.6,
             rotate: 8,
         },
-        [SNOWGLOBE_FUTURE_REATTA]: {
+        [SNOWGLOBE_COWGIRL]: {
             yIndex: 0,
             xPosition: 2.6,
             zOffset: 5,

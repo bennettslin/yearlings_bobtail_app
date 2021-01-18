@@ -7,8 +7,8 @@
     .blinds { fill: hsl($HUE_APARTMENT, 5%, 70%); }
     .rail { fill: hsl($HUE_APARTMENT, 17%, 62%); }
 
-    .dark__parent
-    &.dark__child#{$suffix} {
+    .darken__parent
+    &.darken#{$suffix} {
         .doorExterior { fill: hsl($HUE_APARTMENT + 20, 5%, 33%); }
     }
 }

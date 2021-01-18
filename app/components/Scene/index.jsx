@@ -46,7 +46,7 @@ const Scene = () => {
                 {...{
                     className: cx(
                         'Scene',
-                        isDarkScene && 'dark__parent',
+                        isDarkScene && 'darken__parent',
                         'abF'
                     ),
                 }}

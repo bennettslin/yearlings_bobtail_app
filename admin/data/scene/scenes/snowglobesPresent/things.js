@@ -4,7 +4,7 @@ import {
 } from '../../../../../app/constants/scene/things'
 import {
     SNOWGLOBE_SMALL__PRESENT,
-    SNOWGLOBE_PRESENT,
+    SNOWGLOBE_LEAVING_CRUMBLED,
 } from '../../../../../app/constants/scene/things/cardboards'
 import {
     SNOWGLOBE__LIZ_ALONE,
@@ -23,7 +23,7 @@ export default {
             zOffset: 3.9,
             rotate: -10,
         },
-        [SNOWGLOBE_PRESENT]: {
+        [SNOWGLOBE_LEAVING_CRUMBLED]: {
             yIndex: 0,
             xPosition: 8.7,
             zOffset: 2.7,
