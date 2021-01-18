@@ -56,10 +56,8 @@ import {
     MONITOR__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
 import {
-    CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
-    ROAD__SHARED,
     SHORE__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
@@ -166,7 +164,6 @@ export default {
         BUBBLE__SHARED,
         FOLIAGE__SHARED,
         REATTA__SHARED,
-        ROAD__SHARED,
     ],
     [CONSTELLATION_SIBLING]: CONSTELLATION__SHARED,
     [CONSTELLATION_TARPIT]: CONSTELLATION__SHARED,
@@ -188,7 +185,6 @@ export default {
     ],
     [THOUGHT_GO_KART]: [
         BUBBLE__SHARED,
-        CHECKER_FLAG__SHARED,
         FOLIAGE__SHARED,
     ],
     [WAITING_THOUGHT_SINGING]: [
@@ -217,7 +213,6 @@ export default {
         BUBBLE__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
-        ROAD__SHARED,
         SHORE__SHARED,
     ],
 }

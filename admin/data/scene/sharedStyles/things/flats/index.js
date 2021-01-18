@@ -75,12 +75,10 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/home'
 import { BULB__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 import {
-    CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
     MOUNTAIN__SHARED,
     OCEAN_CAVE__SHARED,
-    ROAD__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
     WALL__SHARED,
@@ -186,10 +184,7 @@ export default {
     ],
     [FERRIS_WHEEL]: null,
     [FOREBODING_TREES]: FOLIAGE__SHARED,
-    [GO_KART_TRACK]: [
-        ALL_VEHICLES__SHARED,
-        CHECKER_FLAG__SHARED,
-    ],
+    [GO_KART_TRACK]: ALL_VEHICLES__SHARED,
     [NEAR_BUILDINGS]: [
         BUILDINGS__SHARED,
         FOLIAGE__SHARED,
@@ -314,7 +309,6 @@ export default {
     ],
     [TAIWAN_MOUNTAINS_BRIDGED]: [
         DOOR__SHARED,
-        ROAD__SHARED,
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_HOUSE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,

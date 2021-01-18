@@ -82,7 +82,7 @@ import {
     REATTA__SHARED,
     ALL_VEHICLES__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
-import { PAST__SHARED, PRESENT__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
+import { FUTURE__SHARED, PAST__SHARED, PRESENT__SHARED } from '../../../../../../app/constants/scene/sharedStyles'
 
 export default {
     [ALBUM_JOHNNY_HORTON]: [
@@ -186,6 +186,7 @@ export default {
         SNOWGLOBE__SHARED,
         BENNETT_FUTURE__SHARED,
         ALL_PEOPLE__SHARED,
+        FUTURE__SHARED,
     ],
     [SNOWGLOBE_COWGIRL]: [
         ALL_PEOPLE__SHARED,
@@ -194,6 +195,7 @@ export default {
         MIRIAM_FUTURE__SHARED,
         REATTA__SHARED,
         SNOWGLOBE__SHARED,
+        FUTURE__SHARED,
     ],
     [SNOWGLOBE_ENRAGED_SOBBING]: [
         SNOWGLOBE__SHARED,

@@ -1,7 +1,7 @@
 .mountain#{$suffix} {
-    .mountainFar { fill: hsl(340, 12%, 51%); }
-    .mountain { fill: hsl(340, 13%, 47%); }
     .mountainNear { fill: hsl(340, 14%, 43%); }
+    .mountain { fill: hsl(340, 13%, 47%); }
+    .mountainFar { fill: hsl(340, 12%, 51%); }
 
     .meadowFar { fill: hsl(92, 28%, 44%); }
     .meadowMiddle { fill: hsl(92, 28%, 41%); }

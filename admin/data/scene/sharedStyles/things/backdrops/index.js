@@ -33,7 +33,6 @@ import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
-    ROAD__SHARED,
     SHORE__SHARED,
     TAIWAN_FOLIAGE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
@@ -66,12 +65,9 @@ export default {
     [OCEAN_BOTTOM_FAR]: VOLCANO__SHARED,
     [OCEAN_FLOOR_FAR]: VOLCANO__SHARED,
     [PHARMACY_CEL]: BOOK__SHARED,
-    [ROAD_FUTURE]: ROAD__SHARED,
-    [ROAD_PAST]: [
-        BOOK__SHARED,
-        ROAD__SHARED,
-    ],
-    [ROAD_PRESENT]: ROAD__SHARED,
+    [ROAD_FUTURE]: null,
+    [ROAD_PAST]: BOOK__SHARED,
+    [ROAD_PRESENT]: null,
     [SHORE_BUOY_BACKDROP]: [
         TAIWAN_FOLIAGE__SHARED,
         TAIWAN_MOUNTAIN__SHARED,
