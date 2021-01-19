@@ -28,4 +28,8 @@ export default [
         taskName: `Shared styles work.`,
         workedHours: 49,
     },
+    {
+        taskName: `Face fixes. (Do Anita exasperated next.)`,
+        workedHours: 2,
+    },
 ]
