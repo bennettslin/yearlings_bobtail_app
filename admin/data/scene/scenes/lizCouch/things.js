@@ -24,6 +24,8 @@ import {
     LIZ_THOUGHT_REUNION,
 } from '../../../../../app/constants/scene/things/bubbles'
 import {
+    CAT_FOOD_DISHES,
+    CAT_LITTER_BOX,
     CYPRESS_DOUBLE__LIZ_COUCH,
     CYPRESS_SINGLE__LIZ_COUCH,
     TRAFFIC_LIGHT_REAR,
@@ -54,6 +56,14 @@ import {
 
 export default {
     [CUTOUT]: {
+        [CAT_FOOD_DISHES]: {
+            yIndex: 2,
+            xPosition: 6.5,
+        },
+        [CAT_LITTER_BOX]: {
+            yIndex: 2,
+            xPosition: 8.25,
+        },
         [CYPRESS_DOUBLE__LIZ_COUCH]: {
             yIndex: 1,
             xPosition: 10.5,

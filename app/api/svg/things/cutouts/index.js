@@ -8,6 +8,8 @@ import cactusSingle from '../../../../../assets/svgs/cutouts/cactusSingle'
 import campfire from '../../../../../assets/svgs/cutouts/campfire'
 import campusTreeDouble from '../../../../../assets/svgs/cutouts/campusTreeDouble'
 import campusTreeSingle from '../../../../../assets/svgs/cutouts/campusTreeSingle'
+import catFoodDishes from '../../../../../assets/svgs/cutouts/catFoodDishes'
+import catLitterBox from '../../../../../assets/svgs/cutouts/catLitterBox'
 import cavemanBones from '../../../../../assets/svgs/cutouts/cavemanBones'
 import chuteGarbage from '../../../../../assets/svgs/cutouts/chuteGarbage'
 import chuteRecycling from '../../../../../assets/svgs/cutouts/chuteRecycling'
@@ -91,6 +93,8 @@ import {
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_SINGLE__TETHERBALL,
+    CAT_FOOD_DISHES,
+    CAT_LITTER_BOX,
     CAVEMAN_BONES,
     CHUTE_GARBAGE,
     CHUTE_RECYCLING,
@@ -192,6 +196,8 @@ export default {
     [CAMPUS_TREE_SINGLE__BANCROFT]: campusTreeSingle,
     [CAMPUS_TREE_SINGLE__CAMPANILE]: campusTreeSingle,
     [CAMPUS_TREE_SINGLE__TETHERBALL]: campusTreeSingle,
+    [CAT_FOOD_DISHES]: catFoodDishes,
+    [CAT_LITTER_BOX]: catLitterBox,
     [CAVEMAN_BONES]: cavemanBones,
     [CHUTE_GARBAGE]: chuteGarbage,
     [CHUTE_RECYCLING]: chuteRecycling,

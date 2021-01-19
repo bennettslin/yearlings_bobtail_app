@@ -223,8 +223,8 @@ export const THINGS_BEDROOM_ASLEEP = {
     [CARDBOARD]: {
         [EARTH__ROCKET]: {
             yIndex: 4,
-            xPosition: 1.9,
-            zOffset: 1.7,
+            xPosition: 1.7,
+            zOffset: 1.6,
             rotate: 180,
         },
         [DOGS_ROCKET]: {

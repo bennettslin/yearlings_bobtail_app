@@ -287,4 +287,8 @@ export default [
         taskName: `Wedding platform chair, plus styling revision.`,
         workedHours: 4,
     },
+    {
+        taskName: `Cat food dishes and litter box.`,
+        workedHours: 1,
+    },
 ]

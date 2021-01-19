@@ -61,6 +61,8 @@ import {
     LIZ_THOUGHT_REUNION,
 } from '../../../../app/constants/scene/things/bubbles'
 import {
+    CAT_FOOD_DISHES,
+    CAT_LITTER_BOX,
     CYPRESS_DOUBLE__LIZ_COUCH,
     CYPRESS_SINGLE__LIZ_COUCH,
     TRAFFIC_LIGHT_REAR,
@@ -72,7 +74,10 @@ import {
     LIZ_GATE_INSIDE,
 } from '../../../../app/constants/scene/things/doors'
 import { TCHOTCHKES } from '../../../../app/constants/scene/things/fixtures'
-import { LIZ_COUCH__ROOM, LIZ_OTTOMAN } from '../../../../app/constants/scene/things/panels'
+import {
+    LIZ_COUCH__ROOM,
+    LIZ_OTTOMAN,
+} from '../../../../app/constants/scene/things/panels'
 import {
     OPAL_COUCH__ROOM,
     OPAL_GAZING,
@@ -95,6 +100,10 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE__LIZ_COUCH]: true,
+            },
+            [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -122,6 +131,10 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE__LIZ_COUCH]: true,
+            },
+            [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -156,6 +169,10 @@ export default [
                 [BUBBLE_LARGE__TCHOTCHKES]: true,
                 [LIZ_THOUGHT_DINING]: true,
                 [LIZ_THOUGHT_BUSING]: true,
+            },
+            [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -200,6 +217,10 @@ export default [
                 [BUBBLE_LARGE__DISHROOM]: true,
                 [LIZ_THOUGHT_DISHROOM]: true,
             },
+            [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
+            },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR_OPEN]: true,
@@ -233,6 +254,10 @@ export default [
             },
             [BUBBLE]: {
                 [KHARI_SPEECH_ATTACK]: true,
+            },
+            [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -269,6 +294,10 @@ export default [
             [BUBBLE]: {
                 [LIZ_SPEECH_DEFENCE]: true,
             },
+            [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
+            },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
@@ -300,6 +329,10 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE__LIZ_COUCH]: true,
+            },
+            [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -333,6 +366,10 @@ export default [
                 [BUBBLE_MEDIUM__REUNION]: true,
                 [BUBBLE_LARGE__REUNION]: true,
                 [LIZ_THOUGHT_REUNION]: true,
+            },
+            [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,

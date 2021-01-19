@@ -52,6 +52,8 @@ import {
     POSTER_ELLIOTT_SMITH,
 } from '../../../../app/constants/scene/things/cardboards'
 import {
+    CAT_FOOD_DISHES,
+    CAT_LITTER_BOX,
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
@@ -98,6 +100,10 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE__LIZ_COUCH]: true,
+            },
+            [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,
@@ -230,6 +236,10 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE__LIZ_COUCH]: true,
+            },
+            [CUTOUT]: {
+                [CAT_FOOD_DISHES]: true,
+                [CAT_LITTER_BOX]: true,
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,
