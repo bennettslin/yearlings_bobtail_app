@@ -5,6 +5,12 @@
     * https://github.com/gatsbyjs/gatsby/issues/14333
 * At the very least, get rid of Admin styles
 
+# TODO:
+* Hospital record stand is in front of El Cerrito buildings.
+* Tennis ball.
+* Freeway panel.
+* Stagger cube transitions?
+
 # Investigative TODO:
 * Why does Google search have show text as title?
 
