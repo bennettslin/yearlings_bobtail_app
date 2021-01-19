@@ -79,7 +79,6 @@ import {
 import {
     BULB__SHARED,
     LIZ_PHONE__SHARED,
-    SCISSORS__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/household'
 import {
     ACOUSTIC_GUITAR__SHARED,
@@ -154,10 +153,7 @@ export default {
         LIZ_CONDOM__SHARED,
     ],
     [CONDOM_WRAPPER_MIRIAM]: MIRIAM_CONDOM__SHARED,
-    [CHRISTOPHER_LETTERS]: [
-        MAGAZINE__SHARED,
-        SCISSORS__SHARED,
-    ],
+    [CHRISTOPHER_LETTERS]: MAGAZINE__SHARED,
     [CRACKED_PICTURE]: [
         PROMISE_PHOTO__SHARED,
         ALL_PEOPLE__SHARED,
@@ -182,7 +178,7 @@ export default {
     [GHOST_SHACKLES]: GHOST__SHARED,
     [GUITAR_CASE_OPEN]: GUITAR_CASE__SHARED,
     [GUITAR_CASE_UPRIGHT]: GUITAR_CASE__SHARED,
-    [HAIRCUT_SCISSORS]: SCISSORS__SHARED,
+    [HAIRCUT_SCISSORS]: null,
     [HOSPITAL_RECORD_PLAYER]: null,
     [KEYBOARD]: null,
     [KICK_DRUM]: DRUMS__SHARED,

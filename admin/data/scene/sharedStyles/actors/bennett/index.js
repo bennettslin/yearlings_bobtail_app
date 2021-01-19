@@ -63,7 +63,6 @@ import {
     ATTIC_LINENS__SHARED,
     HOSPITAL_LINENS__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/furniture'
-import { RUBIKS_CUBE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/household'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BASS_CASE__SHARED,
@@ -99,7 +98,7 @@ export default {
     [PIOUS]: MESSENGER_BAG__SHARED,
     [PONDERING]: null,
     [COUCH_READING]: BOOK__SHARED,
-    [RUBIKS_CUBE]: RUBIKS_CUBE__SHARED,
+    [RUBIKS_CUBE]: null,
     [DISTRACTED]: DOLLAR__SHARED,
     [EATING]: BASEMENT_TAKEOUT__SHARED,
     [HOPELESSLY_CRUSHED]: null,
