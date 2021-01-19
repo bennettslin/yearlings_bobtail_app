@@ -1,3 +1,4 @@
-.bubble#{$suffix} {
-    .bubble { fill: hsl(60, 5%, 82%); }
-}
+.bubble { fill: hsl(60, 5%, 82%); }
+.bubbleClear { fill: hsla(60, 5%, 82%, 0.75); }
+.bubbleClearer { fill: hsla(60, 5%, 82%, 0.5); }
+.bubbleClearest { fill: hsla(60, 5%, 82%, 0.25); }

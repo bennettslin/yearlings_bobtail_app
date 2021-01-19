@@ -1,11 +1,10 @@
-.globeInner { fill: hsla(180, 100%, 89%, 0.4); stroke: none; }
-.globeCentre {fill: hsla(240, 100%, 94%, 0.5); stroke: none; }
-.globeOuter {fill: hsla(240, 100%, 94%, 0.7); stroke: none; }
-.reflectionOuter {fill: hsla(240, 100%, 94%, 0.2); stroke: none; }
-.reflectionCentre {fill: hsla(240, 100%, 94%, 0.4); stroke: none; }
-.reflectionInner {fill: hsla(240, 100%, 94%, 0.6); stroke: none; }
-.snowSide { fill: hsl($HUE_SNOW, 30%, 72%); }
-.snowTop { fill: hsl($HUE_SNOW, 30%, 82%); }
+.snowglobe {fill: hsla(240, 100%, 94%, 0.7); stroke: none; }
+.snowglobeClear {fill: hsla(240, 100%, 94%, 0.5); stroke: none; }
+.snowglobeClearer {fill: hsla(240, 100%, 94%, 0.3); stroke: none; }
+.snowglobeClearest { fill: hsla(240, 100%, 94%, 0.1); stroke: none; }
+
+.snowSide { fill: hsl($HUE_SNOW, 30%, 77%); }
+.snowTop { fill: hsl($HUE_SNOW, 30%, 87%); }
 
 .snowglobeRoadDark { fill: $colour__road__dark; }
 .snowglobeRoadMedium { fill: $colour__road__medium; }

@@ -37,7 +37,6 @@ import {
     TAIWAN_MOUNTAIN__SHARED,
     VOLCANO__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
-import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 
 export default {
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
@@ -81,9 +80,9 @@ export default {
         TAIWAN_MOUNTAIN__SHARED,
         TAIWAN_HOUSE__SHARED,
     ],
-    [THOUGHT_LARGE]: BUBBLE__SHARED,
-    [THOUGHT_MEDIUM]: BUBBLE__SHARED,
-    [THOUGHT_SMALL]: BUBBLE__SHARED,
+    [THOUGHT_LARGE]: null,
+    [THOUGHT_MEDIUM]: null,
+    [THOUGHT_SMALL]: null,
     [VALLEY_CLOSER_BACKDROP]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,

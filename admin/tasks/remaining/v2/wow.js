@@ -4,4 +4,9 @@ export default [
         workedHours: 0,
         neededHours: 30,
     },
+    {
+        taskName: `Time passage work in Odin, and elsewhere.`,
+        workedHours: 0,
+        neededHours: 30,
+    },
 ]

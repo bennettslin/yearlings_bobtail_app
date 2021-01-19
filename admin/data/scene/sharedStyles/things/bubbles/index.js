@@ -69,7 +69,6 @@ import {
     BUSING_SHARED,
     DISHROOM_SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/room'
-import { BUBBLE__SHARED } from '../../../../../../app/constants/scene/sharedStyles/props'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED,
@@ -77,9 +76,9 @@ import {
 import { CAFETERIA__SHARED } from '../../../../../../app/constants/scene/sharedStyles/wardrobe'
 
 export default {
-    [BUBBLE_LARGE]: BUBBLE__SHARED,
-    [BUBBLE_MEDIUM]: BUBBLE__SHARED,
-    [BUBBLE_SMALL]: BUBBLE__SHARED,
+    [BUBBLE_LARGE]: null,
+    [BUBBLE_MEDIUM]: null,
+    [BUBBLE_SMALL]: null,
     [CINEMA_THOUGHT_BUYING]: [
         MARA,
         ALL_PEOPLE__SHARED,
@@ -95,7 +94,7 @@ export default {
         ALL_PEOPLE__SHARED,
         THOUGHT__SHARED,
     ],
-    [ESTHER_SPEECH]: BUBBLE__SHARED,
+    [ESTHER_SPEECH]: null,
     [KHARI_SPEECH_ATTACK]: [
         BENNETT,
         LIZ,
