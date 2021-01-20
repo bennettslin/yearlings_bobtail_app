@@ -7,7 +7,6 @@
 
 # TODO:
 * Hospital record stand is in front of El Cerrito buildings.
-* Tennis ball.
 * Freeway panel.
 * Stagger cube transitions?
 

@@ -50,6 +50,7 @@ import safewayBag from '../../../../../assets/svgs/fixtures/safewayBag'
 import stageMic from '../../../../../assets/svgs/fixtures/stageMic'
 import stepladder from '../../../../../assets/svgs/fixtures/stepladder'
 import tchotchkes from '../../../../../assets/svgs/fixtures/tchotchkes'
+import tennisBall from '../../../../../assets/svgs/fixtures/tennisBall'
 import tetherballPole from '../../../../../assets/svgs/fixtures/tetherballPole'
 import thrownFruit from '../../../../../assets/svgs/fixtures/thrownFruit'
 import tornMagazines from '../../../../../assets/svgs/fixtures/tornMagazines'
@@ -117,6 +118,7 @@ import {
     STAGE_MIC__STAGE,
     STEPLADDER,
     TCHOTCHKES,
+    TENNIS_BALL,
     TETHERBALL_POLE,
     THROWN_FRUIT,
     TORN_MAGAZINES__BENNETT,
@@ -186,6 +188,7 @@ export default {
     [STAGE_MIC__STAGE]: stageMic,
     [STEPLADDER]: stepladder,
     [TCHOTCHKES]: tchotchkes,
+    [TENNIS_BALL]: tennisBall,
     [TETHERBALL_POLE]: tetherballPole,
     [THROWN_FRUIT]: thrownFruit,
     [TORN_MAGAZINES__BENNETT]: tornMagazines,

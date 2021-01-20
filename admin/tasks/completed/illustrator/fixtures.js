@@ -399,4 +399,8 @@ export default [
         taskName: `Ghost shackles for Bennett.`,
         workedHours: 5,
     },
+    {
+        taskName: `Tennis ball.`,
+        workedHours: 1,
+    },
 ]

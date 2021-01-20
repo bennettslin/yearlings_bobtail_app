@@ -62,6 +62,7 @@ import {
     CONDOM_WRAPPER_MIRIAM,
     FREEWAY_SIGN,
     HOSPITAL_RECORD_PLAYER,
+    TENNIS_BALL,
 } from '../../../../app/constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
@@ -262,6 +263,7 @@ export default [
             },
             [FIXTURE]: {
                 [HOSPITAL_RECORD_PLAYER]: true,
+                [TENNIS_BALL]: true,
             },
             [FLAT]: {
                 [TENNIS_COURT]: true,

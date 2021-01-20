@@ -53,6 +53,7 @@ import {
     STAGE_MIC,
     STEPLADDER,
     TCHOTCHKES,
+    TENNIS_BALL,
     TETHERBALL_POLE,
     THROWN_FRUIT,
     TORN_MAGAZINES,
@@ -214,6 +215,7 @@ export default {
     [STAGE_MIC]: MICROPHONE__SHARED,
     [STEPLADDER]: null,
     [TCHOTCHKES]: null,
+    [TENNIS_BALL]: null,
     [TETHERBALL_POLE]: TETHERBALL_POLE__SHARED,
     [THROWN_FRUIT]: [
         BANANA__SHARED,

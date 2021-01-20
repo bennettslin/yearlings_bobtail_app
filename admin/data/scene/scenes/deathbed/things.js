@@ -23,7 +23,7 @@ import {
     BUBBLE_SMALL__TENNIS,
 } from '../../../../../app/constants/scene/things/bubbles'
 import { IV_DRIP } from '../../../../../app/constants/scene/things/cutouts'
-import { HOSPITAL_RECORD_PLAYER } from '../../../../../app/constants/scene/things/fixtures'
+import { HOSPITAL_RECORD_PLAYER, TENNIS_BALL } from '../../../../../app/constants/scene/things/fixtures'
 import { TENNIS_COURT } from '../../../../../app/constants/scene/things/flats'
 import {
     DEATHBED_BLANKET,
@@ -75,6 +75,11 @@ export default {
             xPosition: 6.4,
             zOffset: -0.15,
             layerYIndex: 5,
+        },
+        [TENNIS_BALL]: {
+            yIndex: 3,
+            xPosition: 10.6,
+            zOffset: 7,
         },
     },
     [FURNITURE]: {
