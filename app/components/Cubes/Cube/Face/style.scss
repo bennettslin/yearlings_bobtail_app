@@ -5,7 +5,6 @@
     .TrW__isSongChangeDone.TrW__canTransitionAfterSceneChange
     & {
         transition:
-            stroke $transitionDuration__cubes,
             fill $transitionDuration__cubes,
             d $transitionDuration__cubes;
     }
