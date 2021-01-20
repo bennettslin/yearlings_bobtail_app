@@ -6,7 +6,6 @@
 * At the very least, get rid of Admin styles
 
 # TODO:
-* Hospital record stand is in front of El Cerrito buildings.
 * Freeway panel.
 * Stagger cube transitions?
 

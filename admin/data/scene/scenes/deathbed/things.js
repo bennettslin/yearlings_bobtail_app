@@ -103,6 +103,7 @@ export default {
             yIndex: 5,
             xPosition: 6.4,
             zIndex: 1.1,
+            layerYIndex: 4,
         },
     },
 }
