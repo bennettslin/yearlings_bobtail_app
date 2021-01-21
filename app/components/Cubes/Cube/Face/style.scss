@@ -1,8 +1,7 @@
 @import '../../../../scss/constants/transition';
 
 .Face {
-    .DW__userAgentDesktop
-    .TrW__isSongChangeDone.TrW__canTransitionAfterSceneChange
+    .TrW__canCubesTransition
     & {
         transition:
             fill $transitionDuration__cubes,

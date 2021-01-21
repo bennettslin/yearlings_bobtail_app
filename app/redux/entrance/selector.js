@@ -34,6 +34,19 @@ export const mapCanTransitionAfterSceneChange = (
     { [ENTRANCE_STORE]: { canTransitionAfterSceneChange } }
 ) => canTransitionAfterSceneChange
 
+export const mapCanCubesTransition = createSelector(
+    mapIsSongChangeDone,
+    mapCanTransitionAfterSceneChange,
+    (
+        isSongChangeDone,
+        canTransitionAfterSceneChange
+    ) => (
+        IS_USER_AGENT_DESKTOP &&
+        isSongChangeDone &&
+        canTransitionAfterSceneChange
+    )
+)
+
 export const mapCanPresenceTransitionExit = createSelector(
     mapIsSongChangeDone,
     mapCanTransitionAfterSceneChange,

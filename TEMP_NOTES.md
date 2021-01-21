@@ -9,7 +9,6 @@
 * Freeway panel.
 * Stagger cube transitions?
     * Centre front cubes animate first.
-    * Have single parent class.
     * Create stylesheet. Use Face classes for x and y.
 
 # Investigative TODO:
