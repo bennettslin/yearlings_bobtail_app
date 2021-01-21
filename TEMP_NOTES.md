@@ -8,10 +8,9 @@
 # TODO:
 * Freeway panel.
 * Stagger cube transitions?
-    * Lower yIndices animate first. End xIndices animate first.
+    * Centre front cubes animate first.
     * Have single parent class.
     * Create stylesheet. Use Face classes for x and y.
-    * Rename presence stylesheets for clarity.
 
 # Investigative TODO:
 * Why does Google search have show text as title?

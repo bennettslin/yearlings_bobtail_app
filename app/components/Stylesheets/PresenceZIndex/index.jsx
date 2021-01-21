@@ -6,10 +6,10 @@ import {
     CUBE_Y_INDICES,
 } from '../../../constants/cubeIndex'
 
-const PresenceStylesheet = () => (
+const PresenceZIndexStylesheet = () => (
     <Stylesheet
         {...{
-            className: 'PresenceStylesheet',
+            className: 'PresenceZIndexStylesheet',
             indices: CUBE_Y_INDICES,
             childPrefix: 'Presences.y',
             getStyle: yIndex => ({
@@ -20,4 +20,4 @@ const PresenceStylesheet = () => (
     />
 )
 
-export default memo(PresenceStylesheet)
+export default memo(PresenceZIndexStylesheet)

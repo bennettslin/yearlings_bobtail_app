@@ -10,7 +10,7 @@ import {
     ENTER,
 } from '../../../constants/transition'
 
-const TransitionStylesheets = () => (
+const PresenceTransitionStylesheets = () => (
     <>
         {PRESENCE_TRANSITION_CONFIGS.map(({
             transitionKey,
@@ -53,4 +53,4 @@ const TransitionStylesheets = () => (
     </>
 )
 
-export default memo(TransitionStylesheets)
+export default memo(PresenceTransitionStylesheets)
