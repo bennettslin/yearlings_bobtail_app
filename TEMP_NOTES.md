@@ -9,7 +9,6 @@
 * Freeway panel.
 * Stagger cube transitions?
     * Centre front cubes animate first.
-    * Create stylesheet. Use Face classes for x and y.
 
 # Investigative TODO:
 * Why does Google search have show text as title?

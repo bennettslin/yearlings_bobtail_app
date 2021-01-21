@@ -7,6 +7,7 @@ import { getStyleString } from './helper'
 const Stylesheet = ({
     className,
     indices,
+    showHexIndices,
     parentPrefix,
     childPrefix,
     getStyle,
@@ -20,6 +21,7 @@ const Stylesheet = ({
     >
         {getStyleString({
             indices,
+            showHexIndices,
             parentPrefix,
             childPrefix,
             getStyle,
@@ -30,6 +32,7 @@ const Stylesheet = ({
 Stylesheet.propTypes = {
     className: PropTypes.string.isRequired,
     indices: PropTypes.array.isRequired,
+    showHexIndices: PropTypes.bool,
     parentPrefix: PropTypes.string,
     childPrefix: PropTypes.string.isRequired,
     getStyle: PropTypes.func.isRequired,

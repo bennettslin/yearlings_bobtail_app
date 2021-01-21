@@ -14,7 +14,7 @@ export default [
     },
     {
         taskName: `Work to stagger cube transitions.`,
-        workedHours: 1,
+        workedHours: 2,
         neededHours: 5,
     },
     {

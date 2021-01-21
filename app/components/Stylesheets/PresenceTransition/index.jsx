@@ -28,7 +28,7 @@ const PresenceTransitionStylesheets = () => (
                     <Stylesheet
                         {...{
                             key: stylesheetKey,
-                            className: `TransitionStylesheet__${transitionKey}${stylesheetKey}`,
+                            className: `PresenceTransitionStylesheet__${transitionKey}${stylesheetKey}`,
                             indices,
                             childPrefix: `TrW__canPresenceTransition${stylesheetKey} .${transitionKey}__transitionIndex__`,
                             getStyle: yIndex => ({

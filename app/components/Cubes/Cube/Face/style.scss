@@ -1,13 +1,6 @@
 @import '../../../../scss/constants/transition';
 
 .Face {
-    .TrW__canCubesTransition
-    & {
-        transition:
-            fill $transitionDuration__cubes,
-            d $transitionDuration__cubes;
-    }
-
     stroke: hsla(60, 45%, 78%, 0.05);
     stroke-width: 1px;
 }
