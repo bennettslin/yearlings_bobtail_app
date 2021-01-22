@@ -5055,4 +5055,8 @@ export default [
         taskName: `Make snowglobes have past and future colours.`,
         workedHours: 3,
     },
+    {
+        taskName: `Work to stagger cube transitions.`,
+        workedHours: 3,
+    },
 ]

@@ -7,8 +7,7 @@
 
 # TODO:
 * Freeway panel.
-* Stagger cube transitions?
-    * Centre front cubes animate first.
+* Figure out if cube staggering is a performance hit.
 
 # Investigative TODO:
 * Why does Google search have show text as title?

@@ -13,11 +13,6 @@ export default [
         neededHours: 20,
     },
     {
-        taskName: `Work to stagger cube transitions.`,
-        workedHours: 2,
-        neededHours: 5,
-    },
-    {
         taskName: `Finish annotation edits.`,
         workedHours: 5,
         neededHours: 25,

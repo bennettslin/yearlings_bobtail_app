@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import Stylesheet from '../../../modules/Stylesheet'
-
+import { getTransitionStyle } from './helper'
 import {
     CUBE_Y_INDICES,
     CUBE_X_INDICES,
@@ -15,8 +15,9 @@ const CubeTransitionStylesheets = () => (
                 indices: CUBE_X_INDICES,
                 showHexIndices: true,
                 childPrefix: `TrW__canCubesTransition .Face.y${yIndex}.x`,
-                getStyle: () => ({
-                    'transition': `fill 1s, d 1s`,
+                getStyle: xIndex => getTransitionStyle({
+                    yIndex,
+                    xIndex,
                 }),
             }}
         />
