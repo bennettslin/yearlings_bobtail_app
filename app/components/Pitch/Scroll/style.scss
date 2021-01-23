@@ -29,18 +29,18 @@
     display: flex;
     align-items: center;
 
-    & > :not(:last-child) {
-        margin-right: $margin__thick * 2;
-    }
+    // & > :not(:last-child) {
+    //     margin-right: $margin__thick * 2;
+    // }
 
-    .DW__phoneOrMiniWidth
-    & {
-        flex-direction: column;
-        & > :not(:last-child) {
-            margin-right: 0;
-            margin-bottom: $margin__thick;
-        }
-    }
+    // .DW__phoneOrMiniWidth
+    // & {
+    //     flex-direction: column;
+    //     & > :not(:last-child) {
+    //         margin-right: 0;
+    //         margin-bottom: $margin__thick;
+    //     }
+    // }
 }
 
 .gradientMask__pitch {

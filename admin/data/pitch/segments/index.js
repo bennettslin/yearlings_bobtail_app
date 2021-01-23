@@ -18,7 +18,7 @@ export default [
         path: `introduction`,
         title: `Introduction`,
         description: [
-            `Hi, we're the Bobtail Yearlings! We'd love to hear from ambitious musicians, record labels and the music press, and anyone else interested in working with us.`,
+            `Hi, we're the Bobtail Yearlings! We'd love to hear from ambitious musicians, record labels and the music press, and anyone interested in working with us.`,
             `Are you thinking to get in touch, but feeling unsure about our unconventional way of doing things? Read on, and I'll convince you that we're as reasonable to bet on as any artist you've worked with before.`,
         ],
         contactEmail: true,

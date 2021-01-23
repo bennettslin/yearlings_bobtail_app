@@ -9,7 +9,7 @@ export default [
     // Needed.
     {
         taskName: `Pitch images.`,
-        workedHours: 0,
+        workedHours: 2,
         neededHours: 20,
     },
     {

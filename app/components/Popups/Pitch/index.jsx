@@ -24,6 +24,7 @@ const PitchPopup = forwardRef(({ didMount }, ref) => {
             mountOnEnter
             unmountOnExit
             isFullPopup
+            isPitchPopup
             shrinkAnimate
             displaysInOverlay
             {...{

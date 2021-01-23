@@ -7,15 +7,18 @@ import ButtonCharacter from '../../Button/Character'
 import { getPitchImageKeyForIndex } from '../../../api/pitch/segments'
 import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
 import { PITCH_SEGMENT_BUTTON_KEY } from '../../../constants/buttons'
-import { mapIsDesktopWidth, mapIsMonitorWidth } from '../../../redux/device/selector'
+import {
+    mapIsMonitorWidth,
+    mapIsPhoneOrMiniWidth,
+} from '../../../redux/device/selector'
 
 const PitchNavButton = ({
     pitchIndex,
     handleButtonClick,
 }) => {
     const
-        isDesktopWidth = useSelector(mapIsDesktopWidth),
         isMonitorWidth = useSelector(mapIsMonitorWidth),
+        isPhoneOrMiniWidth = useSelector(mapIsPhoneOrMiniWidth),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex),
         isSelected = pitchIndex === pitchSegmentIndex
 
@@ -28,7 +31,7 @@ const PitchNavButton = ({
             hoverOnParent
             {...{
                 isLargeSize: isMonitorWidth,
-                isSmallSize: !isDesktopWidth,
+                isSmallSize: isPhoneOrMiniWidth,
                 buttonName: PITCH_SEGMENT_BUTTON_KEY,
                 buttonIdentifier: getPitchImageKeyForIndex(pitchIndex),
                 isClickDisabled: isSelected,

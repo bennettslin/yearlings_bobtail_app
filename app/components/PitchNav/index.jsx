@@ -5,9 +5,15 @@ import { useSelector } from 'react-redux'
 import Button from '../Button'
 import PitchDispatcher from '../../dispatchers/Pitch'
 import PitchNavButton from './Button'
-import { mapIsDesktopWidth, mapIsTabletWidth } from '../../redux/device/selector'
+import {
+    mapIsPhoneOrMiniWidth,
+    mapIsPhoneWidth,
+} from '../../redux/device/selector'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
-import { getPitchSegmentIndices, getPitchSegmentsCount } from '../../api/pitch/segments'
+import {
+    getPitchSegmentIndices,
+    getPitchSegmentsCount,
+} from '../../api/pitch/segments'
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
@@ -21,8 +27,8 @@ import './style'
 const PitchNav = () => {
     const
         dispatchPitch = useRef(),
-        isDesktopWidth = useSelector(mapIsDesktopWidth),
-        isTabletWidth = useSelector(mapIsTabletWidth),
+        isPhoneOrMiniWidth = useSelector(mapIsPhoneOrMiniWidth),
+        isPhoneWidth = useSelector(mapIsPhoneWidth),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
     const handlePreviousClick = () => {
@@ -46,33 +52,28 @@ const PitchNav = () => {
         >
             <Button
                 {...{
-                    isLargeSize: isDesktopWidth,
+                    isLargeSize: !isPhoneOrMiniWidth,
                     buttonName: PITCH_PREVIOUS_BUTTON_KEY,
                     accessKey: ARROW_LEFT,
                     isDisabled: pitchSegmentIndex === 1,
                     handleButtonClick: handlePreviousClick,
                 }}
             />
-            {(isDesktopWidth || isTabletWidth) && (
-                getPitchSegmentIndices().map(pitchIndex => {
-                    return (
-                        <PitchNavButton
-                            {...{
-                                key: pitchIndex,
-                                pitchIndex,
-                                handleButtonClick,
-                            }}
-                        />
-                    )
-                })
-            )}
+            {!isPhoneWidth && getPitchSegmentIndices().map(pitchIndex => (
+                <PitchNavButton
+                    {...{
+                        key: pitchIndex,
+                        pitchIndex,
+                        handleButtonClick,
+                    }}
+                />
+            ))}
             <Button
                 {...{
-                    isLargeSize: isDesktopWidth,
+                    isLargeSize: !isPhoneOrMiniWidth,
                     buttonName: PITCH_NEXT_BUTTON_KEY,
                     accessKey: ARROW_RIGHT,
-                    isDisabled:
-                        pitchSegmentIndex === getPitchSegmentsCount(),
+                    isDisabled: pitchSegmentIndex === getPitchSegmentsCount(),
                     handleButtonClick: handleNextClick,
                 }}
             />

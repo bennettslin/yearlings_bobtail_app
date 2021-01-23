@@ -13,6 +13,7 @@ const PopupView = ({
     shrinkAnimate,
     isCardSize,
     isFullPopup,
+    isPitchPopup,
     canBeFullHeight,
     hasNarrowPadding,
     hasWidePadding,
@@ -36,6 +37,7 @@ const PopupView = ({
                         'PopupView__cardSize': isCardSize,
                         'popupView__fullWidth': isFullPopup,
                         'popupView__fullHeight': isFullPopup,
+                        'popupView__pitchWidth': isPitchPopup,
                         'PopupView__canBeFullHeight':
                             canBeFullHeight || isFullPopup,
                     },
@@ -103,6 +105,7 @@ PopupView.propTypes = {
     shrinkAnimate: PropTypes.bool,
     isCardSize: PropTypes.bool,
     isFullPopup: PropTypes.bool,
+    isPitchPopup: PropTypes.bool,
     canBeFullHeight: PropTypes.bool,
     hasNarrowPadding: PropTypes.bool,
     hasWidePadding: PropTypes.bool,

@@ -3,7 +3,7 @@ import React, { forwardRef, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import PitchTitle from './Title'
-import PitchImage from './Image'
+// import PitchImage from './Image'
 import PitchDescription from './Description'
 import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
 import './style'
@@ -45,7 +45,7 @@ const PitchScroll = forwardRef((props, ref) => {
                         ),
                     }}
                 >
-                    <PitchImage />
+                    {/* <PitchImage /> */}
                     <PitchDescription />
                 </div>
             </div>

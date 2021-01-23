@@ -1,4 +1,9 @@
 @import '../../../scss/constants/icon';
+@import '../../../scss/constants/pitch';
+
+.popupView__pitchWidth {
+    max-width: $width__pitchContainer + $margin__thick * 2;
+}
 
 .PitchPopupViewContent {
     background-color: hsl(47, 21%, 61%);
