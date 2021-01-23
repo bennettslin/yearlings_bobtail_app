@@ -7,6 +7,7 @@
 
 # TODO:
 * Freeway panel.
+* Delay presence transitions to accommodate longer cube transitions?
 * Figure out if cube staggering is a performance hit.
 
 # Investigative TODO:

@@ -24,9 +24,9 @@ export const getTransitionStyle = ({
         Math.abs((CUBE_X_AXIS_LENGTH / 2 - 0.5 - xIndex)) - 0.5
     )
 
-    delay = delay.toFixed(1)
+    const durationDelay = `0.5s ${delay.toFixed(1)}s`
 
     return {
-        transition: `fill 0.5s ${delay}s, d 0.5s ${delay}s`,
+        transition: `fill ${durationDelay}, d ${durationDelay}`,
     }
 }
