@@ -26,7 +26,7 @@ export default [
     // Ongoing, only nice to have.
     {
         taskName: `Shared styles work.`,
-        workedHours: 50,
+        workedHours: 51,
     },
     {
         taskName: `Face fixes. (Do Anita exasperated next.)`,
