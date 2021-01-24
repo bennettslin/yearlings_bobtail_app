@@ -7,8 +7,9 @@
 
 # TODO:
 * Freeway panel.
-* Delay presence transitions to accommodate longer cube transitions?
-* Figure out if cube staggering is a performance hit.
+* Delay presence exit opacity transitions for non-opacity transitions.
+* Only prolong realistic presence transitions on enter, not exit.
+* Delay cubes for presence transition exit. Need to first calculate presence exit transition times.
 
 # Investigative TODO:
 * Why does Google search have show text as title?

@@ -5,11 +5,11 @@ import {
     OPACITY,
     LEFT,
     RIGHT,
-    PATH,
+    REALISTIC,
     TOP,
 } from '../../../../../constants/transition'
 
-const getIsPathTransition = presenceType => {
+const getIsRealisticTransition = presenceType => {
     switch (presenceType) {
         case ACTOR:
         case FIXTURE:
@@ -27,7 +27,7 @@ const getTransitionDelayIndex = ({
     isWire,
 }) => {
     if (
-        getIsPathTransition(presenceType) ||
+        getIsRealisticTransition(presenceType) ||
         isWire
     ) {
         return CUBE_Y_AXIS_LENGTH
@@ -54,8 +54,8 @@ const getTransitionDelayPrefix = ({
         return OPACITY
     }
 
-    if (getIsPathTransition(presenceType)) {
-        return PATH
+    if (getIsRealisticTransition(presenceType)) {
+        return REALISTIC
     }
 
     // If it has wires, it should come from the top.

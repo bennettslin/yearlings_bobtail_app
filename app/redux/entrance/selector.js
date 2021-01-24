@@ -30,20 +30,7 @@ export const mapCanTransitionAfterSceneChange = (
     { [ENTRANCE_STORE]: { canTransitionAfterSceneChange } }
 ) => canTransitionAfterSceneChange
 
-export const mapCanCubesTransition = createSelector(
-    mapIsSongChangeDone,
-    mapCanTransitionAfterSceneChange,
-    (
-        isSongChangeDone,
-        canTransitionAfterSceneChange
-    ) => (
-        IS_USER_AGENT_DESKTOP &&
-        isSongChangeDone &&
-        canTransitionAfterSceneChange
-    )
-)
-
-export const mapCanPresenceTransitionExit = createSelector(
+export const mapCanTransitionForSceneExit = createSelector(
     mapIsSongChangeDone,
     mapCanTransitionAfterSceneChange,
     (
@@ -56,7 +43,7 @@ export const mapCanPresenceTransitionExit = createSelector(
     )
 )
 
-export const mapCanPresenceTransitionEnter = createSelector(
+export const mapCanTransitionForSceneEnter = createSelector(
     mapIsSongChangeDone,
     mapCanTransitionAfterSceneChange,
     (

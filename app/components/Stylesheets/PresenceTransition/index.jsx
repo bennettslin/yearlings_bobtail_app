@@ -22,6 +22,11 @@ const PresenceTransitionStylesheets = () => (
         }) => (
             <Fragment {...{ key: transitionKey }}>
                 {TRANSITION_STYLESHEET_CONFIGS.map(({
+                    /**
+                     * Presences are staggered differently between entrance and
+                     * exit, so entrance and exit each have a different
+                     * stylesheet.
+                     */
                     stylesheetKey,
                     getTransitionDelay,
                 }) => (
@@ -37,7 +42,10 @@ const PresenceTransitionStylesheets = () => (
                                     transitionStyles:
                                         noAdditionalOpacity ?
                                             [transitionStyle] :
-                                            [OPACITY, transitionStyle],
+                                            [
+                                                OPACITY,
+                                                transitionStyle,
+                                            ],
                                     ...stylesheetKey === ENTER && {
                                         transitionEase: transitionEaseEnter,
                                     },

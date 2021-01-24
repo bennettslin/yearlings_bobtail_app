@@ -5,17 +5,15 @@ import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../components/DidMountHoc'
 import {
     mapIsSongChangeDone,
-    mapCanPresenceTransitionExit,
-    mapCanPresenceTransitionEnter,
-    mapCanCubesTransition,
+    mapCanTransitionForSceneExit,
+    mapCanTransitionForSceneEnter,
 } from '../../redux/entrance/selector'
 
 const TransitionWrapper = ({ didMount, children }) => {
     const
         isSongChangeDone = useSelector(mapIsSongChangeDone),
-        canCubesTransition = useSelector(mapCanCubesTransition),
-        canPresenceTransitionExit = useSelector(mapCanPresenceTransitionExit),
-        canPresenceTransitionEnter = useSelector(mapCanPresenceTransitionEnter)
+        canTransitionForSceneExit = useSelector(mapCanTransitionForSceneExit),
+        canTransitionForSceneEnter = useSelector(mapCanTransitionForSceneEnter)
 
     return (
         <div
@@ -24,14 +22,13 @@ const TransitionWrapper = ({ didMount, children }) => {
                     className: cx(
                         'TransitionWrapper',
 
-                        canCubesTransition &&
-                            'TrW__canCubesTransition',
-
                         // These are used in transition stylesheets.
-                        canPresenceTransitionExit &&
+                        canTransitionForSceneExit &&
                             'TrW__canPresenceTransitionExit',
-                        canPresenceTransitionEnter &&
+                        canTransitionForSceneEnter && [
                             'TrW__canPresenceTransitionEnter',
+                            'TrW__canCubesTransition',
+                        ],
 
                         isSongChangeDone ?
                             'TrW__isSongChangeDone' :

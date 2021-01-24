@@ -221,3 +221,7 @@ export const getCharStringForNumber = myNumber => {
 export const getJsFromSass = (sassVariable = '') => {
     return parseFloat(sassVariable.replace(/[^\d.-]/g, ''))
 }
+
+export const convertToMilliseconds = seconds => (
+    getJsFromSass(seconds) * 1000
+)

@@ -3,30 +3,38 @@ import {
     CUBE_Y_INDICES,
 } from '../../../constants/cubeIndex'
 import {
+    CONVERTED_TRANSITION_DURATION_PRESENCE,
+    CUBES_TRANSITIONED_DURATION,
+    LYRICS_SCROLLED_DURATION,
+} from '../../../constants/entrance'
+import {
     OPACITY,
     LEFT,
     RIGHT,
-    PATH,
+    REALISTIC,
     TOP,
     EXIT,
     ENTER,
 } from '../../../constants/transition'
 
 const
-    TRANSITION_DURATION = 0.275,
     TRANSITION_DELAY_INCREMENT = 0.075,
-    TRANSITION_BOUNCE_ENTER = 'cubic-bezier(0.2, 0.9, 0.3, 1.1)',
-    LYRIC_SCROLL_DURATION = 0.8,
-    CUBES_TRANSITION_DURATION = 0.55
+    TRANSITION_BOUNCE_ENTER = 'cubic-bezier(0.2, 0.9, 0.3, 1.1)'
 
 export const TRANSITION_STYLESHEET_CONFIGS = [
     {
         stylesheetKey: EXIT,
-        getTransitionDelay: yIndex => (LYRIC_SCROLL_DURATION + (CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT).toFixed(1),
+        getTransitionDelay: yIndex => (
+            LYRICS_SCROLLED_DURATION +
+            (CUBE_Y_AXIS_LENGTH - yIndex) * TRANSITION_DELAY_INCREMENT
+        ).toFixed(1),
     },
     {
         stylesheetKey: ENTER,
-        getTransitionDelay: yIndex => (CUBES_TRANSITION_DURATION + yIndex * TRANSITION_DELAY_INCREMENT).toFixed(1),
+        getTransitionDelay: yIndex => (
+            CUBES_TRANSITIONED_DURATION +
+            yIndex * TRANSITION_DELAY_INCREMENT
+        ).toFixed(1),
     },
 ]
 
@@ -57,10 +65,10 @@ export const PRESENCE_TRANSITION_CONFIGS = [
         transitionEaseEnter: TRANSITION_BOUNCE_ENTER,
     },
     {
-        transitionKey: PATH,
+        transitionKey: REALISTIC,
         indices: [CUBE_Y_AXIS_LENGTH],
         transitionStyle: OPACITY,
-        transitionDuration: 0.5,
+        transitionDuration: CONVERTED_TRANSITION_DURATION_PRESENCE + 0.25,
         noAdditionalOpacity: true,
     },
 ]
@@ -69,10 +77,11 @@ export const getTransitionStyles = ({
     yIndex,
     transitionStyles,
     transitionEase = 'ease-out',
-    transitionDuration = TRANSITION_DURATION,
+    transitionDuration = CONVERTED_TRANSITION_DURATION_PRESENCE,
     getTransitionDelay,
 }) => (
-    transitionStyles.map(transitionStyle => (
-        `${transitionStyle} ${transitionDuration}s ${transitionEase} ${getTransitionDelay(yIndex)}s`
-    )).join(',')
+    transitionStyles.map(transitionStyle => ([
+        `${transitionStyle} ${transitionDuration}s`,
+        `${transitionEase} ${getTransitionDelay(yIndex)}s`,
+    ].join(' '))).join(',')
 )

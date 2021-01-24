@@ -13,6 +13,7 @@ import {
     mapIsScrollLyricForVerseSelect,
 } from '../../../redux/scrollLyric/selector'
 import { mapCanLyricScroll } from '../../../redux/scroll/selector'
+import { SCROLL_BUFFER } from '../../../constants/entrance'
 import {
     ANCHOR_SCROLL,
     VERSE_SCROLL,
@@ -65,7 +66,10 @@ const ScrollLyricListener = ({
             noDuration: isScrollLyricForSongSelect,
 
             // Set timeout to ensure that scroll is truly complete.
-            callback: () => setTimeout(() => dispatchCallback(index), 25),
+            callback: () => setTimeout(
+                () => dispatchCallback(index),
+                SCROLL_BUFFER
+            ),
         })
     }
 
@@ -78,7 +82,7 @@ const ScrollLyricListener = ({
              */
             setTimeout(
                 dispatchScroll,
-                25
+                SCROLL_BUFFER
             )
         }
         dispatch(resetScrollLyricStore())

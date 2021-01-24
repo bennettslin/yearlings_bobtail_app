@@ -4,8 +4,8 @@
     opacity: 0;
     & * {
         transition:
-            fill $transitionDuration__default,
-            stroke $transitionDuration__default;
+            fill $TRANSITION_DURATION_PRESENCE,
+            stroke $TRANSITION_DURATION_PRESENCE;
     }
 
     .PresenceContainer__shown
