@@ -8,7 +8,7 @@
 
     .DW__userAgentDesktop
     & {
-        transition: opacity $transitionDuration__slow;
+        transition: opacity $TRANSITION_DURATION_CURTAINS;
     }
 
     display: flex;

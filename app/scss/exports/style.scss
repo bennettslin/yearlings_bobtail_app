@@ -6,6 +6,7 @@
 @import '../constants/popup';
 @import '../constants/responsive';
 @import '../constants/slider';
+@import '../constants/transition';
 
 // Sass constants are uppercase when exported to JavaScript.
 :export {
@@ -55,4 +56,6 @@
     COLOUR__FUTURE__LIGHT: $COLOUR__FUTURE__LIGHT;
     COLOUR__FUTURE__DARK: $COLOUR__FUTURE__DARK;
     COLOUR__FUTURE__DARKER: $COLOUR__FUTURE__DARKER;
+
+    TRANSITION_DURATION_CURTAINS: $TRANSITION_DURATION_CURTAINS;
 }

@@ -20,7 +20,7 @@
 
     .DW__userAgentDesktop
     & {
-        transition: left $transitionDuration__slow;
+        transition: left $TRANSITION_DURATION_CURTAINS;
     }
 
     .Curtains__parted
@@ -35,7 +35,7 @@
 
     .DW__userAgentDesktop
     & {
-        transition: right $transitionDuration__slow;
+        transition: right $TRANSITION_DURATION_CURTAINS;
     }
 
     .Curtains__parted

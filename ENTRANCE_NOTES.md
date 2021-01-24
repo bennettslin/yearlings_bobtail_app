@@ -24,7 +24,7 @@
 * didCurtainsClose
     * timeout after curtains exit sets to true
 * sceneSceneIndex
-    * timeout after curtains exit sets to -1
+    * timeout after curtains exit also sets to -1
         * cubes and sky are default
         * no presences are shown
 * canStageReset scene selector

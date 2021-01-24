@@ -6,10 +6,6 @@ export const mapIsWindowResizeDone = (
     { [ENTRANCE_STORE]: { isWindowResizeDone } }
 ) => isWindowResizeDone
 
-export const mapDidCurtainsClose = (
-    { [ENTRANCE_STORE]: { didCurtainsClose } }
-) => didCurtainsClose
-
 export const mapDidStageReset = (
     { [ENTRANCE_STORE]: { didStageReset } }
 ) => didStageReset

@@ -6,4 +6,3 @@ export const PATH = 'path'
 
 export const EXIT = 'Exit'
 export const ENTER = 'Enter'
-

@@ -11,6 +11,10 @@ import {
     mapSelectedVerseIndex,
     mapSelectedAnnotationIndex,
 } from '../../redux/selected/selector'
+import {
+    SONG_SELECT_COMPLETE_DURATION,
+    STAGE_DID_RESET_AFTER_STAGE_COULD_RESET_DURATION,
+} from '../../constants/entrance'
 
 const SongChangeManager = () => {
     const
@@ -41,7 +45,7 @@ const SongChangeManager = () => {
                      * this to true here and now.
                      */
                     isSceneScrollComplete: true,
-                })), 200)
+                })), SONG_SELECT_COMPLETE_DURATION)
             )
 
         } else {
@@ -54,9 +58,7 @@ const SongChangeManager = () => {
             if (canStageReset) {
                 setTimeout(() => dispatch(updateEntranceStore({
                     didStageReset: true,
-
-                // This seems to be the time needed for presences to unmount.
-                })), 150)
+                })), STAGE_DID_RESET_AFTER_STAGE_COULD_RESET_DURATION)
             }
         } else {
             setDidMount(true)

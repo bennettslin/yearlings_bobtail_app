@@ -12,6 +12,7 @@ import { updateEntranceStore } from '../../redux/entrance/action'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { getFinalSideKey } from '../../utils/server'
+import { CAROUSEL_LYRICS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION } from '../../constants/entrance'
 import './style'
 
 const Carousel = ({ didMount, pageSongIndex }) => {
@@ -41,7 +42,8 @@ const Carousel = ({ didMount, pageSongIndex }) => {
                 appear
                 {...{
                     in: isSongChangeDone,
-                    timeout: 250,
+                    timeout:
+                        CAROUSEL_LYRICS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION,
                     classNames: { enterDone: 'Carousel__visible' },
                     onExit,
                     onEntered,

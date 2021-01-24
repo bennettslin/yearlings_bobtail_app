@@ -11,6 +11,10 @@ import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
 import { mapIsSongChangeDone } from '../../../redux/entrance/selector'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateSceneStore } from '../../../redux/scene/action'
+import {
+    CURTAINS_DID_CLOSE_AFTER_SONG_CHANGE_BEGAN_DURATION,
+    CURTAINS_PARTED_AFTER_SONG_CHANGE_DONE_DURATION,
+} from '../../../constants/entrance'
 import './style'
 
 const Curtains = ({ style }) => {
@@ -21,14 +25,11 @@ const Curtains = ({ style }) => {
     const onExited = () => {
         logTransition('Curtains did close.')
 
-        /**
-         * This timeout allows the curtains to close completely, making the
-         * transition between songs less janky.
-         */
         setTimeout(() => {
             dispatch(updateEntranceStore({ didCurtainsClose: true }))
+            // This sets cubes and sky to default.
             dispatch(updateSceneStore({ sceneSceneIndex: -1 }))
-        }, 50)
+        }, CURTAINS_DID_CLOSE_AFTER_SONG_CHANGE_BEGAN_DURATION)
     }
 
     const onEntered = () => {
@@ -40,8 +41,7 @@ const Curtains = ({ style }) => {
             appear
             {...{
                 in: isSongChangeDone,
-                // Allow for CSS transition of 0.25s.
-                timeout: 275,
+                timeout: CURTAINS_PARTED_AFTER_SONG_CHANGE_DONE_DURATION,
                 classNames: { enterDone: 'Curtains__parted' },
                 onExited,
                 onEntered,

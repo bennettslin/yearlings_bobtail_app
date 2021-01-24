@@ -30,8 +30,8 @@ $height__carouselHidden: $height__chivalry;
     .DW__userAgentDesktop.DW__desktopWidth
     & {
         transition:
-            opacity $transitionDuration__slow,
-            bottom $transitionDuration__slow;
+            opacity $TRANSITION_DURATION_CURTAINS,
+            bottom $TRANSITION_DURATION_CURTAINS;
     }
 
 
@@ -44,8 +44,8 @@ $height__carouselHidden: $height__chivalry;
     .DW__userAgentDesktop.DW__mobileWidth
     & {
         transition:
-            opacity $transitionDuration__slow,
-            top $transitionDuration__slow;
+            opacity $TRANSITION_DURATION_CURTAINS,
+            top $TRANSITION_DURATION_CURTAINS;
     }
 
     .RW__navShowable

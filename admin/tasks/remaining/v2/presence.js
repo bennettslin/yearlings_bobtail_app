@@ -25,11 +25,6 @@ export default [
         neededHours: 5,
     },
     {
-        taskName: `Have all entrance store transition durations be constants in a single file? Presence exit timeout, Stylesheet durations, Curtain, Cubes.`,
-        workedHours: 0,
-        neededHours: 5,
-    },
-    {
         taskName: `Eventually have system to convert code in class name straight to hsla fill or stroke? Is this even possible?`,
         workedHours: 0,
         neededHours: 20,

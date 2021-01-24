@@ -5,6 +5,11 @@ export default [
         workedHours: 1,
         neededHours: 2,
     },
+    {
+        taskName: `Have all entrance store transition durations be constants in a single file? Presence exit timeout, Stylesheet durations, Curtain, Cubes.`,
+        workedHours: 0,
+        neededHours: 5,
+    },
 
     // Needed.
     {
