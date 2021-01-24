@@ -71,10 +71,7 @@ import {
     GUITAR_CASE__SHARED,
     MANDOLIN__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/instruments'
-import {
-    BOOK__SHARED,
-    SKETCHBOOK__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/paper'
+import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import { DOLLAR__SHARED } from '../../../../../../app/constants/scene/sharedStyles/print'
 import { GO_KART__SHARED } from '../../../../../../app/constants/scene/sharedStyles/vehicles'
 import {
@@ -89,10 +86,7 @@ import {
 
 export default {
     [BREAKUP_DEJECTED]: null,
-    [SOLICITING_OPINION]: [
-        ACOUSTIC_GUITAR__SHARED,
-        SKETCHBOOK__SHARED,
-    ],
+    [SOLICITING_OPINION]: ACOUSTIC_GUITAR__SHARED,
     [CATHOLIC_PENSIVE]: null,
     [CATHOLIC_IDEA]: MESSENGER_BAG__SHARED,
     [PIOUS]: MESSENGER_BAG__SHARED,

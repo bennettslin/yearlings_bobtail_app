@@ -61,11 +61,11 @@ $colour__neutral__light: hsl(0, 0%, $lum__light);
 $colour__neutral__medium: hsl(0, 0%, $lum__medium);
 $colour__neutral__dark: hsl(0, 0%, $lum__dark);
 
-$lum__link__dark: 43%;
-$lum__hover__dark: 54%;
+$lum__link__dark: 45%;
+$lum__hover__dark: 55%;
 $lum__active: 65%;
-$lum__hover__light: 76%;
-$lum__link__light: 87%;
+$lum__hover__light: 75%;
+$lum__link__light: 85%;
 
 $colour__link__dark: hsl($hue__link, $sat__darker, $lum__link__dark);
 $colour__linkHover__dark: hsl($hue__link, $sat__darker, $lum__hover__dark);
@@ -80,10 +80,10 @@ $colour__accessHover__light: hsl($hue__access, $sat__light, $lum__hover__light);
 $colour__access__light: hsl($hue__access, $sat__light, $lum__link__light);
 
 $colour__select__dark: hsl($hue__select, $sat__darker, $lum__link__dark);
-$colour__select__light: hsl($hue__select, $sat__light, $lum__link__light);
 
-// Just used by nav title.
+// Just used by nav and pitch.
 $colour__select__medium: hsl($hue__select, $sat__medium, $lum__active);
+$colour__select__light: hsl($hue__select, $sat__light, $lum__link__light);
 
 // Underline colours.
 $colour__underline: hsl($hue__link, $sat__darker, $lum__medium);

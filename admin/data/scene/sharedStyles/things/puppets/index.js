@@ -42,7 +42,6 @@ import {
     OPAL__SHARED,
     PEAFOWL__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/animals'
-import { SKETCHBOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED,
@@ -73,19 +72,16 @@ export default {
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
-        SKETCHBOOK__SHARED,
     ],
     [PUPPET_BENNETT_END]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
-        SKETCHBOOK__SHARED,
     ],
     [PUPPET_BENNETT_MIDDLE]: [
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
-        SKETCHBOOK__SHARED,
     ],
     [PUPPET_CHRISTOPHER_BEGIN]: [
         ALL_PEOPLE__SHARED,

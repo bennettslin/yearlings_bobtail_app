@@ -98,7 +98,6 @@ import {
     BOOK__SHARED,
     LETTER__SHARED,
     MAGAZINE__SHARED,
-    SKETCHBOOK__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
     DOLLAR__SHARED,
@@ -171,7 +170,6 @@ export default {
     [EVIAN_BOTTLES]: EVIAN__SHARED,
     [FREEWAY_SIGN]: FREEWAY_SIGN__SHARED,
     [FRIDGE_DRAWINGS]: [
-        SKETCHBOOK__SHARED,
         ALL_PEOPLE__SHARED,
         ACOUSTIC_GUITAR__SHARED,
         SASHA,
@@ -189,7 +187,6 @@ export default {
         BOOK__SHARED,
         DARKEN__SHARED,
         DRAWING__SHARED,
-        SKETCHBOOK__SHARED,
     ],
     [LIZ_PHONE]: [
         DARKEN__SHARED,

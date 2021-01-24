@@ -5,7 +5,15 @@
     height: $height__pitchNav;
     width: 100%;
 
-    & > :not(:last-child) {
-        margin-right: $MARGIN_THIN;
+    // & > :not(:last-child) {
+    //     margin-right: $MARGIN_THIN;
+    // }
+
+    & > :first-child {
+        margin-right: $MARGIN_THIN * 1.5;
+    }
+
+    & > :last-child {
+        margin-left: $MARGIN_THIN * 1.5;
     }
 }

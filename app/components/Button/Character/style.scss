@@ -7,6 +7,10 @@
 
 .button__text__selected {
     color: $colour__select__medium;
+
+    &.textShadow__light {
+        color: $colour__select__dark;
+    }
 }
 
 .button__text__interactable {

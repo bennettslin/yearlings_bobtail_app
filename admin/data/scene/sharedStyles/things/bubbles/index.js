@@ -61,7 +61,6 @@ import {
 } from '../../../../../../app/constants/scene/sharedStyles/outdoor'
 import {
     BOOK__SHARED,
-    SKETCHBOOK__SHARED,
 } from '../../../../../../app/constants/scene/sharedStyles/paper'
 import {
     BENNETT_ROOM_SHARED,
@@ -164,10 +163,7 @@ export default {
     ],
     [CONSTELLATION_SIBLING]: CONSTELLATION__SHARED,
     [CONSTELLATION_TARPIT]: CONSTELLATION__SHARED,
-    [SKETCHBOOK]: [
-        BOOK__SHARED,
-        SKETCHBOOK__SHARED,
-    ],
+    [SKETCHBOOK]: BOOK__SHARED,
     [SKETCH_APART]: DRAWING__SHARED,
     [SKETCH_DOGS_ROCKET]: DRAWING__SHARED,
     [SKETCH_ESCAPE_POD]: DRAWING__SHARED,

@@ -8,11 +8,6 @@ export default [
 
     // Needed.
     {
-        taskName: `Pitch images.`,
-        workedHours: 2,
-        neededHours: 20,
-    },
-    {
         taskName: `Finish annotation edits.`,
         workedHours: 5,
         neededHours: 25,

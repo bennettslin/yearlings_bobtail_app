@@ -1,12 +1,6 @@
 import { BLISSFUL_GUILTY } from '../../../../../../app/constants/scene/actors/christopherBennett'
-import {
-    BOOK__SHARED,
-    SKETCHBOOK__SHARED,
-} from '../../../../../../app/constants/scene/sharedStyles/paper'
+import { BOOK__SHARED } from '../../../../../../app/constants/scene/sharedStyles/paper'
 
 export default {
-    [BLISSFUL_GUILTY]: [
-        BOOK__SHARED,
-        SKETCHBOOK__SHARED,
-    ],
+    [BLISSFUL_GUILTY]: BOOK__SHARED,
 }

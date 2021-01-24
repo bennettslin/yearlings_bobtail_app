@@ -48,20 +48,22 @@ const Popup = ({
             }}
         >
             <div
-                className={cx(
-                    'Popup',
-                    popupName,
-                    didMount && [
-                        isFullPopup && 'Popup__fullHeight',
+                {...{
+                    className: cx(
+                        'Popup',
+                        popupName,
+                        didMount && [
+                            isFullPopup && 'Popup__fullHeight',
 
-                        // For animation styling.
-                        {
-                            'Popup__notInOverlay': !displaysInOverlay,
-                            'fCC': !noFlexCentre,
-                            'abF': !noAbsoluteFull,
-                        },
-                    ]
-                )}
+                            // For animation styling.
+                            {
+                                'Popup__notInOverlay': !displaysInOverlay,
+                                'fCC': !noFlexCentre,
+                                'abF': !noAbsoluteFull,
+                            },
+                        ]
+                    ),
+                }}
             >
                 <PopupView {...other}
                     {...{

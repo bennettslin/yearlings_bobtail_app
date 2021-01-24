@@ -33,9 +33,9 @@ export const getShowContactEmailForPitch = pitchSegmentIndex => (
     Boolean(SEGMENTS[pitchSegmentIndex - 1].contactEmail)
 )
 
-export const getPitchImageKeyForIndex = pitchSegmentIndex => (
-    SEGMENTS[pitchSegmentIndex - 1].imageKey
-)
+// export const getPitchImageKeyForIndex = pitchSegmentIndex => (
+//     SEGMENTS[pitchSegmentIndex - 1].imageKey
+// )
 
 export const getPitchDescriptionForIndex = pitchSegmentIndex => (
     SEGMENTS[pitchSegmentIndex - 1].description

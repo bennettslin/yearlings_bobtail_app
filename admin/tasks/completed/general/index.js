@@ -5059,4 +5059,8 @@ export default [
         taskName: `Work to stagger cube transitions.`,
         workedHours: 3,
     },
+    {
+        taskName: `Work to remove pitch images.`,
+        workedHours: 4,
+    },
 ]
