@@ -11,6 +11,7 @@ import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'
 import Presences from '../Presences'
 import { CUBE_Y_INDICES } from '../../constants/cubeIndex'
+import { CURTAINS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION } from '../../constants/entrance'
 
 const Scene = () => {
     const
@@ -36,8 +37,7 @@ const Scene = () => {
         <Transition
             {...{
                 in: isSongChangeDone && isSceneChangeDone,
-                // Allow for CSS transition of 0.25s.
-                timeout: 275,
+                timeout: CURTAINS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION,
                 onExited,
                 onEntered,
             }}

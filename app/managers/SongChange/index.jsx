@@ -13,7 +13,7 @@ import {
 } from '../../redux/selected/selector'
 import {
     SONG_SELECT_COMPLETE_DURATION,
-    STAGE_DID_RESET_AFTER_STAGE_COULD_RESET_DURATION,
+    STAGE_RESET_AFTER_STAGE_COULD_RESET_DURATION,
 } from '../../constants/entrance'
 
 const SongChangeManager = () => {
@@ -58,7 +58,7 @@ const SongChangeManager = () => {
             if (canStageReset) {
                 setTimeout(() => dispatch(updateEntranceStore({
                     didStageReset: true,
-                })), STAGE_DID_RESET_AFTER_STAGE_COULD_RESET_DURATION)
+                })), STAGE_RESET_AFTER_STAGE_COULD_RESET_DURATION)
             }
         } else {
             setDidMount(true)

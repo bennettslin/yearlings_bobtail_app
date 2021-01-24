@@ -12,8 +12,8 @@ import { mapIsSongChangeDone } from '../../../redux/entrance/selector'
 import { updateEntranceStore } from '../../../redux/entrance/action'
 import { updateSceneStore } from '../../../redux/scene/action'
 import {
-    CURTAINS_DID_CLOSE_AFTER_SONG_CHANGE_BEGAN_DURATION,
-    CURTAINS_PARTED_AFTER_SONG_CHANGE_DONE_DURATION,
+    CURTAINS_EXITED_AFTER_SONG_CHANGE_BEGAN_BUFFER,
+    CURTAINS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION,
 } from '../../../constants/entrance'
 import './style'
 
@@ -29,7 +29,7 @@ const Curtains = ({ style }) => {
             dispatch(updateEntranceStore({ didCurtainsClose: true }))
             // This sets cubes and sky to default.
             dispatch(updateSceneStore({ sceneSceneIndex: -1 }))
-        }, CURTAINS_DID_CLOSE_AFTER_SONG_CHANGE_BEGAN_DURATION)
+        }, CURTAINS_EXITED_AFTER_SONG_CHANGE_BEGAN_BUFFER)
     }
 
     const onEntered = () => {
@@ -41,7 +41,7 @@ const Curtains = ({ style }) => {
             appear
             {...{
                 in: isSongChangeDone,
-                timeout: CURTAINS_PARTED_AFTER_SONG_CHANGE_DONE_DURATION,
+                timeout: CURTAINS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION,
                 classNames: { enterDone: 'Curtains__parted' },
                 onExited,
                 onEntered,

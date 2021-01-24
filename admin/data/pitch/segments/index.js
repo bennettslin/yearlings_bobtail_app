@@ -207,7 +207,7 @@ export default [
                 },
                 `do when measured as the work of an artup?`,
             ],
-            `If you're convinced to bet on us, let's talk! We're flexible and open-minded, and we've got plenty of creative ideas up our sleeves.`,
+            `If you're convinced to bet on us, let's talk! We're flexible and open-minded, and we've got plenty more creative ideas up our sleeves.`,
         ],
         contactEmail: true,
         // tempImageDescription: `Old Bennett with arm raised`,
