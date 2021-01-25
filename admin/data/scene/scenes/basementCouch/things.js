@@ -20,7 +20,7 @@ export default {
         [POSTER_ELLIOTT_SMITH]: {
             yIndex: 1,
             xPosition: 8.5,
-            zOffset: 2,
+            zOffset: 1.5,
         },
     },
     [DOOR]: {

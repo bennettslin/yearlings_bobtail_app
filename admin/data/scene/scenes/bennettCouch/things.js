@@ -100,7 +100,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
         [POSTER_NIRVANA]: {
             yIndex: 1,
             xPosition: 8.5,
-            zOffset: 2,
+            zOffset: 1.5,
         },
     },
 }
@@ -110,7 +110,7 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
         [POSTER_LEONARD_COHEN]: {
             yIndex: 1,
             xPosition: 8.5,
-            zOffset: 2,
+            zOffset: 1.5,
         },
     },
 }
@@ -127,7 +127,7 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
             xPosition: 8.5,
-            zOffset: 2,
+            zOffset: 1.5,
         },
     },
 }
@@ -137,7 +137,7 @@ export const THINGS_BENNETT_COUCH_READING = {
         [PROGRESS_CHART_LATE]: {
             yIndex: 1,
             xPosition: 8.5,
-            zOffset: 2,
+            zOffset: 1.5,
         },
     },
     [FIXTURE]: {

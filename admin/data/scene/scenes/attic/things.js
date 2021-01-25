@@ -56,6 +56,7 @@ export default {
         [ATTIC_ARMREST__RIGHT]: {
             yIndex: 3,
             xPosition: 5.75,
+            zOffset: 0.5,
             flipHorizontal: true,
         },
     },

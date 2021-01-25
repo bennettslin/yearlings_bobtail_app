@@ -6,7 +6,6 @@
 * At the very least, get rid of Admin styles
 
 # TODO:
-* Cross beams in attic, basement.
 * Freeway panel.
 * Delay presence exit opacity transitions for non-opacity transitions.
 * Only prolong realistic presence transitions on enter, not exit.

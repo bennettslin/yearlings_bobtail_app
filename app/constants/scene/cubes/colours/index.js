@@ -1,6 +1,7 @@
 export const APARTMENT_EXTERIOR_COLOUR = 'apartmentExterior'
 export const BANCROFT_EXTERIOR_COLOUR = 'bancroftExterior'
 export const BANCROFT_GATE_COLOUR = 'bancroftGate'
+export const BASEMENT_CEILING_COLOUR = 'basementCeiling'
 export const BENNETT_BED_COLOUR = 'bennettBed'
 export const BENNETT_CARPET_COLOUR = 'bennettCarpet'
 export const BENNETT_COUCH_COLOUR = 'bennettCouch'

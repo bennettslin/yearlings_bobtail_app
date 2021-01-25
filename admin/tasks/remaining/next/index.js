@@ -2,8 +2,8 @@ export default [
     // Next.
     {
         taskName: `Audit scenes.`,
-        workedHours: 1,
-        neededHours: 2,
+        workedHours: 2,
+        neededHours: 3,
     },
     {
         taskName: `Have all entrance store transition durations be constants in a single file.`,

@@ -21,6 +21,7 @@ import {
     APARTMENT_EXTERIOR_COLOUR,
     BANCROFT_EXTERIOR_COLOUR,
     BANCROFT_GATE_COLOUR,
+    BASEMENT_CEILING_COLOUR,
     BENNETT_BED_COLOUR,
     BENNETT_CARPET_COLOUR,
     BENNETT_COUCH_COLOUR,
@@ -103,6 +104,7 @@ export default {
     [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },
     /* C. */
     [ROOF_COLOUR]: { h: parseInt(HUE_ROOF), s: 24, l: 51 },
+    [BASEMENT_CEILING_COLOUR]: { h: 23, s: 19, l: 57 }, // Same as maple colour.
     /* F. */
     [BENNETT_CARPET_COLOUR]: { h: parseInt(HUE_BENNETT_ROOM), s: 25, l: 57 },
     [BENNETT_FLOOR_COLOUR]: { h: parseInt(HUE_BENNETT_ROOM) + 15, s: 15, l: 69 },
@@ -131,7 +133,7 @@ export default {
     /* W, B, E */
     [BENNETT_WALL_COLOUR]: { h: parseInt(HUE_BENNETT_ROOM), s: 15, l: 81 },
     [LIZ_WALL_COLOUR]: { h: parseInt(HUE_LIZ_ROOM), s: 15, l: 81 },
-    [UNDERGROUND_WALL_COLOUR]: { h: 31, s: 18, l: 65 },
+    [UNDERGROUND_WALL_COLOUR]: { h: 41, s: 18, l: 65 },
     [SOFT_WALL_COLOUR]: { h: 68, s: 31, l: 87 },
     [INDUSTRIAL_WALL_COLOUR]: { h: 96, s: 13, l: 77 },
     [CLUB_FRONT_PRIMARY_COLOUR]: { h: 221, s: 23, l: 65 },
