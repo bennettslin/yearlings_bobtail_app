@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect'
 import {
     getIsPhoneWidth,
+    getIsMiniWidth,
     getIsTabletWidth,
     getIsMonitorWidth,
     getIsDesktopWidth,
@@ -10,6 +11,11 @@ import { mapDeviceWidthIndex } from '../viewport/selector'
 export const mapIsPhoneWidth = createSelector(
     mapDeviceWidthIndex,
     deviceWidthIndex => getIsPhoneWidth(deviceWidthIndex)
+)
+
+export const mapIsMiniWidth = createSelector(
+    mapDeviceWidthIndex,
+    deviceWidthIndex => getIsMiniWidth(deviceWidthIndex)
 )
 
 export const mapIsTabletWidth = createSelector(

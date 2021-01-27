@@ -7,6 +7,7 @@
 
 # TODO:
 * Freeway panel.
+* Make pitch button big in phone.
 * Delay presence exit opacity transitions for non-opacity transitions.
 * Only prolong realistic presence transitions on enter, not exit.
 * Delay cubes for presence transition exit. Need to first calculate presence exit transition times.

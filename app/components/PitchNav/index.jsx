@@ -6,8 +6,8 @@ import Button from '../Button'
 import PitchDispatcher from '../../dispatchers/Pitch'
 import PitchNavButton from './Button'
 import {
+    mapIsMiniWidth,
     mapIsMonitorWidth,
-    mapIsPhoneOrMiniWidth,
     mapIsPhoneWidth,
 } from '../../redux/device/selector'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
@@ -29,7 +29,7 @@ const PitchNav = () => {
     const
         dispatchPitch = useRef(),
         isMonitorWidth = useSelector(mapIsMonitorWidth),
-        isPhoneOrMiniWidth = useSelector(mapIsPhoneOrMiniWidth),
+        isMiniWidth = useSelector(mapIsMiniWidth),
         isPhoneWidth = useSelector(mapIsPhoneWidth),
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
@@ -54,8 +54,8 @@ const PitchNav = () => {
         >
             <Button
                 {...{
-                    isLargeSize: isMonitorWidth,
-                    isSmallSize: isPhoneOrMiniWidth,
+                    isLargeSize: isMonitorWidth || isPhoneWidth,
+                    isSmallSize: isMiniWidth,
                     buttonName: PITCH_PREVIOUS_BUTTON_KEY,
                     accessKey: ARROW_LEFT,
                     isDisabled: pitchSegmentIndex === 1,
@@ -73,8 +73,8 @@ const PitchNav = () => {
             ))}
             <Button
                 {...{
-                    isLargeSize: isMonitorWidth,
-                    isSmallSize: isPhoneOrMiniWidth,
+                    isLargeSize: isMonitorWidth || isPhoneWidth,
+                    isSmallSize: isMiniWidth,
                     buttonName: PITCH_NEXT_BUTTON_KEY,
                     accessKey: ARROW_RIGHT,
                     isDisabled: pitchSegmentIndex === getPitchSegmentsCount(),
