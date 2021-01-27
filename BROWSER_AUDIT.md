@@ -2,7 +2,6 @@
 * Pitch layout is off.
 
 # Safari
-* Pitch layout is off.
 * Filmstrip doesn't have perforations.
 * Performance is terrible.
 
