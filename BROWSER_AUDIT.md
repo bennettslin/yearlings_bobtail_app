@@ -1,5 +1,6 @@
 # iOS Chrome, Safari
-* Pitch layout is off.
+* About doesn't scroll.
+* Chrome does the blank footer issue.
 
 # Safari
 * Filmstrip doesn't have perforations.
