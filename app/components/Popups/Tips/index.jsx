@@ -18,6 +18,7 @@ const TipsPopup = () => {
             bounceAnimate
             hasNarrowPadding
             noAbsoluteFull
+            noOverflowHidden
             {...{
                 popupName: 'TipsPopup',
                 isVisible: isTipsPopupVisible,

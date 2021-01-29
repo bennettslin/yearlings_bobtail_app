@@ -18,6 +18,7 @@ const PopupView = ({
     hasNarrowPadding,
     hasWidePadding,
     noBoxShadow,
+    noOverflowHidden,
     handleCloseClick,
     handlePreviousClick,
     handleNextClick,
@@ -87,6 +88,7 @@ const PopupView = ({
                             'PopupViewContent__widePadding': hasWidePadding,
                         },
                         !noBoxShadow && 'boxShadow__popupView',
+                        !noOverflowHidden && 'ovH',
                     ]
                 ),
                 onClick: handleContainerClick,
@@ -110,6 +112,7 @@ PopupView.propTypes = {
     hasNarrowPadding: PropTypes.bool,
     hasWidePadding: PropTypes.bool,
     noBoxShadow: PropTypes.bool,
+    noOverflowHidden: PropTypes.bool,
     handleCloseClick: PropTypes.func,
     handlePreviousClick: PropTypes.func,
     handleNextClick: PropTypes.func,
