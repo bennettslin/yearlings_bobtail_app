@@ -40,7 +40,7 @@ export default {
         [OAKLAND_FRONT__HIGH]: {},
         [OAKLAND_SIDE__LEVEL]: {},
         [OAKLAND_SIDE__LIZ_COUCH]: {
-            zOffset: -3,
+            zOffset: -0.5,
         },
         [OCEAN_BOTTOM_FAR]: {},
         [OCEAN_FLOOR_FAR]: {},
