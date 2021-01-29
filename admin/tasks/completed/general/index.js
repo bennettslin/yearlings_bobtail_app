@@ -5063,4 +5063,8 @@ export default [
         taskName: `Work to remove pitch images.`,
         workedHours: 4,
     },
+    {
+        taskName: `Have all entrance store transition durations be constants in a single file.`,
+        workedHours: 5,
+    },
 ]

@@ -6,13 +6,8 @@ export default [
         neededHours: 3,
     },
     {
-        taskName: `Have all entrance store transition durations be constants in a single file.`,
-        workedHours: 5,
-        neededHours: 10,
-    },
-    {
         taskName: `Browser work.`,
-        workedHours: 1,
+        workedHours: 3,
         neededHours: 5,
     },
 
