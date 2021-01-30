@@ -16,6 +16,7 @@ import {
     logPlayPromiseFailure,
     logEndByPlayer,
     logEndByFinalVerse,
+    getShownErrorMessage,
 } from './helper'
 import {
     updateAudioStore,
@@ -31,6 +32,7 @@ import { getMapPlayerPausedTime } from '../../../redux/players/selector'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
 import { getMp3ForSong } from '../../../api/mp3'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
+import { updateErrorMessage } from '../../../redux/error/action'
 
 const Player = ({
     songIndex,
@@ -95,7 +97,11 @@ const Player = ({
                     dispatchIsPlayingIfSelected(true)
                 })
                 .catch(error => {
-                    logPlayPromiseFailure(songIndex, error)
+                    const errorMessage = getShownErrorMessage(error)
+                    if (errorMessage) {
+                        logPlayPromiseFailure(songIndex, errorMessage)
+                        dispatch(updateErrorMessage(errorMessage))
+                    }
                 })
                 .finally(() => {
                     setIsPromisingToPlay(false)

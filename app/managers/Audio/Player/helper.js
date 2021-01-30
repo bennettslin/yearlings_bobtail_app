@@ -33,7 +33,7 @@ export const logPlayPromiseSuccess = songIndex => {
 
 export const logPlayPromiseFailure = (songIndex, error) => {
     logPlayer({
-        log: `Promise to play ${songIndex} failed: ${error}.`,
+        log: `Promise to play ${songIndex} failed: ${error}`,
         action: 'playPromiseFailure',
         label: songIndex,
     })
@@ -53,4 +53,8 @@ export const logEndByFinalVerse = songIndex => {
         action: 'endByFinalVerse',
         label: songIndex,
     })
+}
+
+export const getShownErrorMessage = ({ name, message }) => {
+    return `${name}: ${message}`
 }

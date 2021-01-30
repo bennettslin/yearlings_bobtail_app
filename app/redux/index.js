@@ -7,6 +7,7 @@ import BannerReducer from './banner/reducer'
 import { getDotsReducer } from './dots/reducer'
 import DotsSlideReducer from './dotsSlide/reducer'
 import EntranceReducer from './entrance/reducer'
+import ErrorReducer from './error/reducer'
 import FocusReducer from './focus/reducer'
 import HoverReducer from './hover/reducer'
 import { getLyricReducer } from './lyric/reducer'
@@ -32,6 +33,7 @@ import {
     DOTS_STORE,
     DOTS_SLIDE_STORE,
     ENTRANCE_STORE,
+    ERROR_STORE,
     FOCUS_STORE,
     HOVER_STORE,
     LYRIC_STORE,
@@ -58,6 +60,7 @@ export const getAlbumReducers = songIndex => combineReducers({
     [DOTS_STORE]: getDotsReducer(songIndex),
     [DOTS_SLIDE_STORE]: DotsSlideReducer,
     [ENTRANCE_STORE]: EntranceReducer,
+    [ERROR_STORE]: ErrorReducer,
     [FOCUS_STORE]: FocusReducer,
     [HOVER_STORE]: HoverReducer,
     [LYRIC_STORE]: getLyricReducer(songIndex),
