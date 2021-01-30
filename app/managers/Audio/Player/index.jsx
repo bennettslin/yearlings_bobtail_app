@@ -108,12 +108,7 @@ const Player = ({
         setIsPromisingToPlay(true)
     }
 
-    const onCanPlayThrough = () => {
-        /**
-         * TODO: Confirm that this works for iOS, because in the old code, this
-         * was attached to the suspend event, because iOS doesn't recognise
-         * canPlayThrough.
-         */
+    const onLoadedMetadata = () => {
         dispatch(updateCanPlayThroughForSong(songIndex))
     }
 
@@ -210,7 +205,12 @@ const Player = ({
             {...{
                 ref: setRef,
                 listenInterval: 50,
-                onCanPlayThrough,
+
+                /**
+                 * This was originally onCanPlayThrough, but Firefox and Safari
+                 * don't support it, unfortunately.
+                 */
+                onLoadedMetadata,
                 onListen,
                 onEnded,
                 src: getMp3ForSong(songIndex),

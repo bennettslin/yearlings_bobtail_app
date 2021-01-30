@@ -1,15 +1,18 @@
+# TODO
+* Need loading indicator.
+* Need error banner when audio doesn't play.
+
 # iOS Chrome, Safari
-* Chrome does the blank footer issue.
-* Audio files don't load at all.
+* Audio files don't play?
 
 # Safari
 * Filmstrip doesn't have perforations.
 * Performance is terrible.
-* Audio files don't load at all.
+* Audio files don't play.
 
 # Firefox
 * Performance is not great.
-* Only first few audio files seem to load? Or else not at all.
+* Kyon? is offset.
 
 # Edge
 
