@@ -6,9 +6,9 @@
 * Audio files don't play?
 
 # Safari
-* Filmstrip doesn't have perforations.
 * Performance is terrible.
 * Audio files don't play.
+* Hovering over Filmstrip isn't immediately registered.
 
 # Firefox
 * Performance is not great.

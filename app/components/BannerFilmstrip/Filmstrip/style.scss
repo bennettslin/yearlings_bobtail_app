@@ -16,7 +16,7 @@ $colour__filmReel: hsl(0, 0%, 20%);
 
     // Film perforations.
     background-image: linear-gradient(to right, $colour__filmReel 50%, transparent 50%);
-    background-size: $length__filmPerf * 3;
+    background-size: $length__filmPerf * 4;
     background-position: $length__filmPerf;
 
     // Inner cell borders.
