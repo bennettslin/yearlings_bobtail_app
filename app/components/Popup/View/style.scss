@@ -7,6 +7,10 @@
 
 .PopupView {
     position: relative;
+
+    // Needed for iOS browsers.
+    display: flex;
+    height: 100%;
 }
 
 .PopupView__canBeFullHeight {

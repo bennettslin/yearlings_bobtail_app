@@ -1,5 +1,4 @@
 # iOS Chrome, Safari
-* About doesn't scroll.
 * Chrome does the blank footer issue.
 * Audio files don't load at all.
 
