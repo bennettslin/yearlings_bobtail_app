@@ -106,6 +106,12 @@ const PitchContainer = ({ children }) => {
         >
             <Helmet>
                 <title>{`Pitch | Yearling's Bobtail`}</title>
+                <meta
+                    {...{
+                        name: 'description',
+                        content: 'Pitch for the Bobtail Yearlings album.',
+                    }}
+                />
             </Helmet>
             <ResizeManager
                 isInPitch

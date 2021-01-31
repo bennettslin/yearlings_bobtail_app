@@ -1,15 +1,16 @@
 import {
     getFaviconFileName,
-    getIsStagingEnvironment
+    getIsStagingEnvironment,
 } from './app/utils/node'
 import {
     GA_ACCOUNT__STAGING,
-    GA_ACCOUNT__PRODUCTION
+    GA_ACCOUNT__PRODUCTION,
 } from './app/constants/analytics'
 
 export default {
     plugins: [
         `gatsby-plugin-postcss`,
+        `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
         `gatsby-plugin-remove-trailing-slashes`,
         {
@@ -22,24 +23,24 @@ export default {
                 background_color: '#8c4848',
                 theme_color: '#c9c2a5',
                 display: 'standalone',
-                icon: `assets/favicon/${getFaviconFileName()}.png`
-            }
+                icon: `assets/favicon/${getFaviconFileName()}.png`,
+            },
         },
         ...getIsStagingEnvironment() ? [
             {
                 // Include admin pages only in staging environment.
                 resolve: `gatsby-plugin-page-creator`,
                 options: {
-                    path: `${__dirname}/admin/pages`
-                }
-            }
+                    path: `${__dirname}/admin/pages`,
+                },
+            },
         ] : [],
         {
             // Always include app pages.
             resolve: `gatsby-plugin-page-creator`,
             options: {
-                path: `${__dirname}/app/pages`
-            }
+                path: `${__dirname}/app/pages`,
+            },
         },
         {
             resolve: `gatsby-plugin-web-font-loader`,
@@ -48,18 +49,18 @@ export default {
                     families: [
                         'Rancho',
                         'PT Sans Narrow',
-                        'Neuton'
-                    ]
-                }
-            }
+                        'Neuton',
+                    ],
+                },
+            },
         },
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
                 trackingId: getIsStagingEnvironment() ?
                     GA_ACCOUNT__STAGING :
-                    GA_ACCOUNT__PRODUCTION
-            }
-        }
-    ]
+                    GA_ACCOUNT__PRODUCTION,
+            },
+        },
+    ],
 }

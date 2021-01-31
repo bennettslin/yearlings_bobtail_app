@@ -5,5 +5,5 @@ import './app/scss/app'
 // App styles must be imported after global styles.
 export {
     wrapRootElement,
-    wrapPageElement
+    wrapPageElement,
 } from './app/utils/gatsby'

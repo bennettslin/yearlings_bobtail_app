@@ -49,6 +49,12 @@ const UrlManager = () => {
     return (
         <Helmet>
             <title>{getDocumentHead(lyricSongIndex)}</title>
+            <meta
+                {...{
+                    name: 'description',
+                    content: 'Audio webcomic for the Bobtail Yearlings album.',
+                }}
+            />
         </Helmet>
     )
 }

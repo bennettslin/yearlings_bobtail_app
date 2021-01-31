@@ -7,7 +7,7 @@ import pitch from './admin/data/pitch'
 
 import {
     getIsLocalDevelopment,
-    getIsStagingEnvironment
+    getIsStagingEnvironment,
 } from './app/utils/node'
 
 export const onCreateWebpackConfig = ({ actions }) => {
@@ -24,13 +24,13 @@ export const onCreateWebpackConfig = ({ actions }) => {
                 ...!getIsLocalDevelopment() && {
                     SCENE: JSON.stringify(scene),
                     ALBUM: JSON.stringify(album),
-                    PITCH: JSON.stringify(pitch)
+                    PITCH: JSON.stringify(pitch),
                 },
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
                 ),
-                IS_STAGING: getIsStagingEnvironment()
-            })
+                IS_STAGING: getIsStagingEnvironment(),
+            }),
         ],
         resolve: {
             // Import from files without specifying extensions.
@@ -39,8 +39,8 @@ export const onCreateWebpackConfig = ({ actions }) => {
                 // Grab data from admin folder in local development.
                 data: getIsLocalDevelopment() ?
                     path.resolve(__dirname, './admin/data') :
-                    path.resolve(__dirname, './app/data')
-            }
-        }
+                    path.resolve(__dirname, './app/data'),
+            },
+        },
     })
 }
