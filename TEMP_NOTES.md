@@ -11,6 +11,7 @@
 * Only prolong realistic presence transitions on enter, not exit.
 * Delay cubes for presence transition exit. Need to first calculate presence exit transition times.
 * Don't bother with timing transitions in mobile.
+* Still need error message logic?
 
 # Performance TODO:
 * Performance. (Redux.)

@@ -1,5 +1,6 @@
 # TODO
 * Need error banner when audio doesn't play.
+* Put lyric expand button in centre when heightless lyric.
 
 # iOS Chrome, Safari
 * Audio files don't play?

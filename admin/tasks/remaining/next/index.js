@@ -7,8 +7,8 @@ export default [
     },
     {
         taskName: `Browser work.`,
-        workedHours: 7,
-        neededHours: 10,
+        workedHours: 14,
+        neededHours: 20,
     },
 
     // Needed.
