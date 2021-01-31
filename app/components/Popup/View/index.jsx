@@ -8,6 +8,7 @@ import './style'
 const PopupView = ({
     didMount,
     popupName,
+    popupMaxHeight,
     displaysInOverlay,
     bounceAnimate,
     shrinkAnimate,
@@ -91,6 +92,11 @@ const PopupView = ({
                         !noOverflowHidden && 'ovH',
                     ]
                 ),
+                ...Number.isFinite(popupMaxHeight) && {
+                    style: {
+                        maxHeight: `${popupMaxHeight}px`,
+                    },
+                },
                 onClick: handleContainerClick,
             }}
         >
@@ -102,6 +108,7 @@ const PopupView = ({
 PopupView.propTypes = {
     didMount: PropTypes.bool.isRequired,
     popupName: PropTypes.string.isRequired,
+    popupMaxHeight: PropTypes.number,
     displaysInOverlay: PropTypes.bool,
     bounceAnimate: PropTypes.bool,
     shrinkAnimate: PropTypes.bool,

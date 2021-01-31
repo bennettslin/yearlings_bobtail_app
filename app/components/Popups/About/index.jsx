@@ -5,11 +5,13 @@ import { updateIsAboutShown } from '../../../redux/toggle/action'
 import About from '../../About'
 import Popup from '../../Popup'
 import { mapIsAboutShown } from '../../../redux/toggle/selector'
+import { mapPopupMaxHeight } from '../../../redux/viewport/selector'
 
 const AboutPopup = () => {
     const
         dispatch = useDispatch(),
-        isAboutShown = useSelector(mapIsAboutShown)
+        isAboutShown = useSelector(mapIsAboutShown),
+        popupMaxHeight = useSelector(mapPopupMaxHeight)
 
     const handleCloseClick = () => {
         dispatch(updateIsAboutShown())
@@ -25,6 +27,7 @@ const AboutPopup = () => {
             {...{
                 popupName: 'AboutPopup',
                 isVisible: isAboutShown,
+                popupMaxHeight,
                 handleCloseClick,
             }}
         >

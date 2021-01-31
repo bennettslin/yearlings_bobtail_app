@@ -10,6 +10,10 @@
 }
 
 .PopupView__canBeFullHeight {
+    /**
+     * This styling is duplicated in the getPopupMaxHeight logic used by the
+     * About popup.
+     */
     max-height: calc(
         100%
         - #{$LENGTH_ICON_LARGE * 1.25}

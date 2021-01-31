@@ -2,6 +2,7 @@ import { createSelector } from 'reselect'
 import {
     getCanScoreMount,
     getCanSliderMount,
+    getPopupMaxHeight,
 } from '../../helpers/resize/mount'
 import { VIEWPORT_STORE } from '../../constants/store'
 
@@ -58,3 +59,18 @@ export const mapCeilingHeight = (
 export const mapFloorHeight = (
     { [VIEWPORT_STORE]: { floorHeight } }
 ) => floorHeight
+
+export const mapPopupMaxHeight = createSelector(
+    mapWindowHeight,
+    mapMenuHeight,
+    mapDeviceWidthIndex,
+    (
+        windowHeight,
+        menuHeight,
+        deviceWidthIndex
+    ) => getPopupMaxHeight({
+        windowHeight,
+        menuHeight,
+        deviceWidthIndex,
+    })
+)
