@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { navigate } from 'gatsby'
 import { useSelector } from 'react-redux'
-import { Helmet } from 'react-helmet'
 import {
     mapLyricSongIndex,
     mapLyricVerseIndex,
@@ -12,7 +11,6 @@ import { mapIsPitchShown } from '../../redux/toggle/selector'
 import {
     getPathForIndices,
     getPathForPitchPage,
-    getDocumentHead,
 } from '../../helpers/url'
 
 const UrlManager = () => {
@@ -46,17 +44,7 @@ const UrlManager = () => {
         }
     }, [isPitchShown, pitchSegmentIndex])
 
-    return (
-        <Helmet>
-            <title>{getDocumentHead(lyricSongIndex)}</title>
-            <meta
-                {...{
-                    name: 'description',
-                    content: 'Audio webcomic for the Bobtail Yearlings album.',
-                }}
-            />
-        </Helmet>
-    )
+    return null
 }
 
 export default UrlManager

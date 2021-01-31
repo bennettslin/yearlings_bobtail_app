@@ -6,6 +6,7 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import PageSongIndexContext from '../../contexts/PageSongIndex'
 import getDidMountHoc from '../DidMountHoc'
 import LyricAccess from './Access'
+import LyricHelmet from './Helmet'
 import LyricScroll from './Scroll'
 import LyricToggles from './Toggles'
 import CarouselAccess from '../Carousel/Access'
@@ -66,6 +67,7 @@ const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
                     <CarouselAccess inLyric />
                 </div>
             </CSSTransition>
+            <LyricHelmet />
         </PageSongIndexContext.Provider>
     )
 })
