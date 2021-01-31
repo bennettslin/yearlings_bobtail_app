@@ -1,10 +1,10 @@
 .LoadingContainer {
     background-color: hsl(47, 21%, 61%);
-}
 
-.dramaMasks {
-    .LoadingContainer
-    & {
-        width: 33.3%;
+    & > * {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

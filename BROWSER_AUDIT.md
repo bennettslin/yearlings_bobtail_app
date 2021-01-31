@@ -1,5 +1,4 @@
 # TODO
-* Need loading indicator.
 * Need error banner when audio doesn't play.
 
 # iOS Chrome, Safari

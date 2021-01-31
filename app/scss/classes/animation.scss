@@ -99,6 +99,15 @@
     }
 }
 
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
 .pulsateAnimated {
     animation: pulse $transitionDuration__pulse infinite;
     animation-timing-function: ease-in-out;
