@@ -32,7 +32,7 @@ const PitchScroll = forwardRef((props, ref) => {
                     className: cx(
                         'PitchScroll',
                         'foN',
-                        'gradientMask__pitch'
+                        'gradientMask__scrollBottom'
                     ),
                     tabIndex: -1,
                 }}

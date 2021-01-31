@@ -1,0 +1,9 @@
+.gradientMask__scrollBottom {
+    $gradient__scrollBottom: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 1) 96%,
+        rgba(0, 0, 0, 0)
+    );
+    mask-image: $gradient__scrollBottom;
+}

@@ -7,10 +7,6 @@
 
 .PopupView {
     position: relative;
-
-    // Needed for iOS browsers.
-    display: flex;
-    height: 100%;
 }
 
 .PopupView__canBeFullHeight {
@@ -102,7 +98,8 @@
     width: 100%;
     height: 100%;
     background-color: $colour__foreground;
-    
+    overflow-y: scroll;
+
     .DW__tabletOrDesktopWidth
     & {
         border-radius: $borderRadius__wide;
