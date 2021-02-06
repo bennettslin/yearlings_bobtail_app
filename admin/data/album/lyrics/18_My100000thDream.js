@@ -26,6 +26,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `I read once that we typically have four dreams per night. Over a lifetime, that's about a hundred thousand dreams. This song, then, is about the very last dream I'll ever dream.`,
                     dotKeys: {
@@ -49,6 +50,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `This is the second song on this album that was an original Yearlings staple. It might be telling that when Sita and I were still together, the one song I wrote for her was about the regret I'd feel as an old man at having lost her. As with "M," I changed the orchestration but kept the original lyrics.`,
                     dotKeys: {
@@ -82,6 +84,7 @@ export default {
                         {
                             anchor: `El Torito.`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Sita worked as a hostess at`,
@@ -105,6 +108,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `During the years I was trying hard to be good again, I kept digging further into my past to figure out where things went wrong. And so while the Yearlings performed this song as a`,
@@ -136,6 +140,7 @@ export default {
                         `Did I`,
                         {
                             anchor: `ever live another life?`,
+                            todo: true,
                             card: {
                                 description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. It's obvious we haven't stayed together, yet I don't recall any time spent apart. Of course, according to the Buddhist and Hindu faiths, I've lived many other lives quite literally, in past incarnations.`,
                                 dotKeys: {
@@ -161,6 +166,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `The pulsating organ and slide mandolin from "Kyon?" make a reappearance here, along with the tremolo banjo and rubato recorders from "Uncanny Valley Boy."`,
                     dotKeys: {
@@ -185,6 +191,7 @@ export default {
                         {
                             anchor: `Pampas`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -211,6 +218,7 @@ export default {
                         `where the`,
                         {
                             anchor: `gopis`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Hindu mythology, the`,
@@ -254,6 +262,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `We now hear the plucked mandolin and tin whistle from "Garryowen," followed by the high-pitched synth and recorder from "Look Back in Anger."`,
                     dotKeys: {
@@ -290,6 +299,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `For the second chorus, we bring back the electric sitar and 8-bit sound from "Constellations," along with the carillon and wah-wah pedal from "Good Night, Sita."`,
                     dotKeys: {
@@ -313,6 +323,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `The chord progression here, which I call Sita's theme, first appeared during the bridge in "Grasshoppers Lie Heavy." Musical texture is provided by the arpeggiated Spanish guitar from "M," followed by the melodicas evoking brass fanfare heard in "Pchelka's Starry Journey."`,
                     dotKeys: {
@@ -347,6 +358,7 @@ export default {
                         `My hundred thousandth dream, on the`,
                         {
                             anchor: `cliffs of El Cerrito,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The city of`,
@@ -377,6 +389,7 @@ export default {
                         `Why does my`,
                         {
                             anchor: `last thought`,
+                            todo: true,
                             card: {
                                 description: `As Sita's ominous tone wrenches me from my bliss, I realize I'm in a dream. And moreover, it may be my last.`,
                                 dotKeys: {
@@ -394,6 +407,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `The third verse revisits the bowed guitars ending on scratch tones first heard in "Dear Saskia," along with the four-note motif that I call Sasha's theme. These are then followed by the shrieking whistles and pitch-shifted instruments from "Ash Wednesday."`,
                     dotKeys: {
@@ -413,6 +427,7 @@ export default {
                         `She'll always`,
                         {
                             anchor: `come to take me,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `I now understand that Sita is my most cherished memory. And as such, she was always going to be the one chosen by my subconscious to ease my fears as I part from this world.`,
@@ -449,6 +464,7 @@ export default {
                     lyric: [
                         {
                             anchor: `When you'll be mine?`,
+                            todo: true,
                             card: {
                                 description: `If this is only a dream, then what I'm holding onto is not really Sita, but only a memory of her. And if all I have left is a memory, then somewhere along the way I must have lost the real Sita. As I exit this world, then, I hold onto the possibility that I may find her again in the next.`,
                                 dotKeys: {
@@ -462,6 +478,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `The electric mandolin and saturated tape effect from "Odin" return in the third and final chorus, as well as the legato slides on muted instruments from "Willy the Cocoa."`,
                     dotKeys: {
@@ -485,6 +502,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `And so this final song of the album ends, with the same autoharp and glockenspiel that opened "Didi."`,
                     dotKeys: {
@@ -497,6 +515,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `In New York City I met Liz, with whom things ended no less painfully. So in making this audio webcomic, I was faced with a dilemma. I wanted to stay genuine to the album, given how fresh my wounds were when I made it, while being honest that I'd since moved on and was now devastated over a different breakup. My solution was to depict the events as a stage play, with the role of Sita played by an Indian version of Liz. The resulting character looks like neither, which should come as a relief to both.`,
                     dotKeys: {

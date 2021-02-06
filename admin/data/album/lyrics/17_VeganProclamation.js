@@ -28,6 +28,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
@@ -58,6 +59,7 @@ export default {
                                 `"If you're just starting out, you need to decide right now: Either you stick with quality vinyl, or you buy only the bargain bin LPs. You`,
                                 {
                                     anchor: `can't have both.`,
+                                    todo: true,
                                     card: {
                                         description: `This advice was offered by a friend when I bought a used turntable. And as it turns out, what he had to say about vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my thoughtful deeds were always being negated by my hurtful ones. I couldn't keep two separate selves, where one gets praised for my kindness and the other takes the blame for all my selfish desires. I couldn't be both kinds of people.`,
                                         dotKeys: {
@@ -74,6 +76,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `With the previous song having provided a glimpse of me fading away while listening to old records, the crackle of a needle on vinyl now introduces the third and final song of the medley.`,
                     dotKeys: {
@@ -94,6 +97,7 @@ export default {
                         {
                             anchor: `Odin,`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: `As a child, I never paid much thought to our pet cat Odin. It was like he came with the house. So after Sita and I adopted a cat together, I marveled at how this instinct to nurture a pet just seemed to turn on inside me at the flick of a switch. Years later when my failure to nurture the relationship with Sita led to our final breakup, I thought of Odin often.`,
                                 dotKeys: {
@@ -111,6 +115,7 @@ export default {
                         `past the`,
                         {
                             anchor: `rape racks`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -127,6 +132,7 @@ export default {
                         `where our`,
                         {
                             anchor: `furor`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Or else, our`,
@@ -166,6 +172,7 @@ export default {
                         `to a soiled girl fouled on the`,
                         {
                             anchor: `false rib`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The lower five`,
@@ -179,6 +186,7 @@ export default {
                         },
                         {
                             anchor: `from our chest?`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In the Book of Genesis, God gave life to`,
@@ -199,6 +207,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `As a child, I sat with my mother as she watched an old movie set in`,
@@ -241,6 +250,7 @@ export default {
                         `set to rock this pout from`,
                         {
                             anchor: `horse to chair,`,
+                            todo: true,
                             card: {
                                 description: `That is to say, I was ready to brim with resentment for the entire span of my life, from rocking horse to rocking chair.`,
                                 dotKeys: {
@@ -267,6 +277,7 @@ export default {
                         `Well,`,
                         {
                             anchor: `first pets`,
+                            todo: true,
                             card: {
                                 description: `It blew my mind that I could hurt Sita for as long as I did and still live with myself. But in hindsight, it's because I accepted at face value the facade of sanity she had constructed as a means to cope. I allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly all she ever needed.`,
                                 dotKeys: {
@@ -288,6 +299,7 @@ export default {
                         `and now I know why the`,
                         {
                             anchor: `battered kitten purrs…`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, she realized that her kitten had believed it was being crushed to death. She lived in guilt over this ever since.`,
@@ -334,6 +346,7 @@ export default {
                                 {
                                     anchor: `Big Crunch.`,
                                     properNoun: true,
+                                    todo: true,
                                     card: {
                                         description: [
                                             `The`,
@@ -356,6 +369,7 @@ export default {
                                 `And meanwhile, the universe is a`,
                                 {
                                     anchor: `cyanided box.`,
+                                    todo: true,
                                     card: {
                                         description: [
                                             `In`,
@@ -380,6 +394,7 @@ export default {
                                 ` Because if we can't ever be`,
                                 {
                                     anchor: `known to be dead,`,
+                                    todo: true,
                                     card: {
                                         description: `I liked the idea that if something greater than ourselves cannot observe us, then much like Schrödinger's battered cat, some part of us must always live on.`,
                                         dotKeys: {
@@ -395,6 +410,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `Sasha recited these lines for me over the phone. We recorded multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't write them with that concern in mind.`,
                     dotKeys: {
@@ -415,6 +431,7 @@ export default {
                         `Torn straps`,
                         {
                             anchor: `unsalvaged sows have chewed,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -442,6 +459,7 @@ export default {
                         `form a trail which leads to a`,
                         {
                             anchor: `bloody broom,`,
+                            todo: true,
                             card: {
                                 description: `Understandably, factory farm workers become inured to the daily violence, which would otherwise cast a pall over even mundane tasks like sweeping the floor.`,
                                 dotKeys: {
@@ -470,6 +488,7 @@ export default {
                         `Through an alley strewn with`,
                         {
                             anchor: `burger shrouds,`,
+                            todo: true,
                             card: {
                                 description: `As a vegan, I became hypersensitive to seeing anything that was remotely a byproduct of the meat industry. Even something as commonplace as a crumpled fast food wrapper would serve to remind me of how much our society has commoditized animal suffering.`,
                                 dotKeys: {
@@ -486,6 +505,7 @@ export default {
                         `a`,
                         {
                             anchor: `lone rallied youth`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Having spent years playing shows, I saw firsthand how an audience can be whipped into a single-minded frenzy. But as that world now drifts away, I puzzle over what drew me to those crowds, and why I so longed to be adored by them. I question everything I've valued up to this point, like a reformed`,
@@ -507,6 +527,7 @@ export default {
                         },
                         {
                             anchor: `strikes himself from his cloud,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The insignia of the`,
@@ -532,6 +553,7 @@ export default {
                     lyric: [
                         {
                             anchor: `reversing his stomach`,
+                            todo: true,
                             card: {
                                 description: `It seemed so vulgar that anything should have to suffer and die just to satisfy my hunger. And once I came to that conclusion, I literally couldn't stomach the taste of meat.`,
                                 dotKeys: {
@@ -543,6 +565,7 @@ export default {
                         `and his`,
                         {
                             anchor: `swastikas`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -579,6 +602,7 @@ export default {
                         `then`,
                         {
                             anchor: `none by us now,`,
+                            todo: true,
                             card: {
                                 description: `And so, vowing never again to be the cause of hurt to anyone or anything, I decide to become a vegan.`,
                                 dotKeys: {
@@ -599,6 +623,7 @@ export default {
                         `and to be`,
                         {
                             anchor: `good again…`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Upon becoming a vegan, I joined`,
@@ -632,6 +657,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `When Sita and I first met, she asked to hear some of my music. I had just bought a multi-effects processor and was playing around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                     dotKeys: {
@@ -652,6 +678,7 @@ export default {
                         `"So all your`,
                         {
                             anchor: `leads have left`,
+                            todo: true,
                             card: {
                                 description: `For several years, my modus operandi was to stay with Sita right up until I had another option to pursue. Each time I left, Sita would languish for a few months before finally summoning the courage to contact me. Then, upon learning that things hadn't worked out with the other woman, she would cajole me back. But now our situations were reversed. I had no more options coming down the pike, while Sita had met someone with whom she fully intended to stay.`,
                                 dotKeys: {
@@ -668,6 +695,7 @@ export default {
                         `Someday you'll breathe again; for one,`,
                         {
                             anchor: `you have to…`,
+                            todo: true,
                             card: {
                                 description: `Overcome with jealousy and heartbreak, I had no excuse to complain. I'd caused Sita this exact same torment countless times. So in our last phone conversation, I just asked her meekly how she'd managed it. She replied that she didn't know. There were days when she just didn't want to live. And yet, each day would pass just the same, pushing her into the next. Slowly, days would add up to weeks, then weeks would turn into months, until the excruciating pain dulled into an aching sadness.`,
                                 dotKeys: {
@@ -687,6 +715,7 @@ export default {
                         `I still love you for the`,
                         {
                             anchor: `airholes,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Nirvana's`,
@@ -732,6 +761,7 @@ export default {
                         `The stardust marks us, Odin,`,
                         {
                             anchor: `sparks zip through our heads…`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -763,6 +793,7 @@ export default {
                         `The`,
                         {
                             anchor: `diapered white dwarf,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `As we come upon a`,
@@ -786,6 +817,7 @@ export default {
                         [
                             {
                                 anchor: `gurgling, curls up`,
+                                todo: true,
                                 cards: [
                                     {
                                         description: `With ignorance being as old as time itself, I'm comforted to know we always correct our past mistakes. And yet, it's just as dispiriting that those coming after us have yet to make theirs. The universe never truly learns, and I was partly to blame. I had this same thought as a child, when I wondered if I was the reason my brother would never get better. It made me realize that all I could do was love him and then do better for him.`,
@@ -813,6 +845,7 @@ export default {
                         {
                             anchor: `chivalry to our Siva's feet…`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -859,6 +892,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `I stayed vegan for about five years, but then I quit after moving to New York City, since Sasha ate meat. I guess it's just the nature of who I am that my social identity is the first thing I'll jettison whenever the chance for romance is at stake. Still, these days I mostly eat vegetarian. It's just easier and healthier.`,
                     dotKeys: {

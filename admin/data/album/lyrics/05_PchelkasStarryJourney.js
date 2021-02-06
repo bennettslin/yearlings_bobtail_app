@@ -34,6 +34,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `Pchelka and Mushka were dogs sent into orbit under the`,
@@ -62,6 +63,7 @@ export default {
                             `But F., that man is the`,
                             {
                                 anchor: `worst nuisance on the beach.`,
+                                todo: true,
                                 card: {
                                     description: [
                                         `Being in a mail-order cult was a traumatic experience, but there was a comic absurdity to it as well. When I read this line from`,
@@ -91,6 +93,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `I wanted a kid to recite this line, but no one I knew at the time was having kids just yet. So I had my sister do it.`,
                     dotKeys: {
@@ -114,6 +117,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `In keeping with the`,
@@ -164,6 +168,7 @@ export default {
                         `"Why'd you`,
                         {
                             anchor: `hit your baby brother,`,
+                            todo: true,
                             card: {
                                 description: `The times that I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or acknowledge my remorse, I could never truly feel forgiven.`,
                                 dotKeys: {
@@ -195,6 +200,7 @@ export default {
                         `when you wanted to`,
                         {
                             anchor: `buy a fortress`,
+                            todo: true,
                             card: {
                                 description: `As a child, I always liked to hole up somewhere to work on projects undisturbed. So one year, I asked my parents for a lifesize wooden fort as a combined birthday and Christmas gift, since my birthday is in November. Unfortunately, some toys are too pricey to count for even two gifts.`,
                                 dotKeys: {
@@ -227,6 +233,7 @@ export default {
                         `You stowed away`,
                         {
                             anchor: `beneath your captain bed.`,
+                            todo: true,
                             card: {
                                 description: `I slept in a captain bed that rested atop a dresser on one side, with the other side flush against the wall. By entering through a side panel, I could squeeze into the crawl space underneath and stay hidden.`,
                                 dotKeys: {
@@ -242,6 +249,7 @@ export default {
                         `We`,
                         {
                             anchor: `didn't hear a peep`,
+                            todo: true,
                             card: {
                                 description: `My brother would play alongside me for hours without once speaking or interacting. It was a strange closeness we shared.`,
                                 dotKeys: {
@@ -261,6 +269,7 @@ export default {
                         isEmphasis: true,
                         lyric: {
                             anchor: `Poor Sam Peabody!`,
+                            todo: true,
                             card: {
                                 description: [
                                     `When my family visited Canada one late summer, the`,
@@ -295,6 +304,7 @@ export default {
                         `Oh brother, when all you`,
                         {
                             anchor: `know is bleat,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Unfortunately, shrill protests against the injustice of being bullied are about as effective as the bleating of a calf being led to slaughter.`,
@@ -315,6 +325,7 @@ export default {
                         `they'll catch you by`,
                         {
                             anchor: `your cape`,
+                            todo: true,
                             card: {
                                 description: `I was well-liked in elementary school despite being small in stature and absorbed in my art projects. Besides being cute and harmless, I eagerly made drawings for anyone who asked. But these very traits that had once made me a hero now marked me as easy prey in middle school, and I was ill-prepared.`,
                                 dotKeys: {
@@ -336,6 +347,7 @@ export default {
                         `till you`,
                         {
                             anchor: `learn to kick it back.`,
+                            todo: true,
                             card: {
                                 description: `The most popular kids in middle school were the ones least concerned about being liked. This ran counter to my understanding that anything worth having needs to be pursued wholeheartedly. And yet, trying things their way didn't make me any more likable either.`,
                                 dotKeys: {
@@ -358,6 +370,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Feigning sick,`,
+                            todo: true,
                             card: {
                                 description: `In earlier years, I was proud of my perfect attendance record. After the bullying began, I would skip school by faking illness. My mother noticed the change, but trusted me enough not to press too deeply on it.`,
                                 dotKeys: {
@@ -378,6 +391,7 @@ export default {
                         `"Are you`,
                         {
                             anchor: `tired of being the weakling?"…`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In a well-known advertisement seen in comic books at the time, a scrawny guy builds up his muscles by sending away for`,
@@ -413,6 +427,7 @@ export default {
                         `Soon`,
                         {
                             anchor: `send-away offers`,
+                            todo: true,
                             card: {
                                 description: `Since I had no friends, I would amuse myself by sending away for free samples and mail order purchases. As a result, I got flooded with junk mail, which exposed me to even more advertisements. At some point, I received a letter from RI Research, Special Human Being Laboratory.`,
                                 dotKeys: {
@@ -432,6 +447,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Red pouches unspent`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In East Asian cultures, relatives give money to children in sealed`,
@@ -465,6 +481,7 @@ export default {
                     lyric: [
                         {
                             anchor: `"Are you a Beyonder`,
+                            todo: true,
                             card: {
                                 description: `According to RI Research, Beyonders are an ancient race of beings born from the stars, who were scattered across the universe with no memory of their true origin. Those who made it to Earth adopted the likeness of human beings, yet they are beset by a nagging disquiet that they do not truly belong.`,
                                 dotKeys: {
@@ -481,6 +498,7 @@ export default {
                         `Do you often feel like a`,
                         {
                             anchor: `wanderer lost?"`,
+                            todo: true,
                             card: {
                                 description: `Hitting all the right nerves, the letter addressed my yearning to belong, while speaking to my frustration that this desired end should so elude me. It then shared its hopeful news. RI Research believed I might be a Beyonder, and after searching for so long, they had found me.`,
                                 dotKeys: {
@@ -496,6 +514,7 @@ export default {
                         `But`,
                         {
                             anchor: `waiting for Goddard,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -551,6 +570,7 @@ export default {
                         {
                             anchor: `Gogo and his Didi,`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -592,6 +612,7 @@ export default {
                         `Till`,
                         {
                             anchor: `in hunger they were led`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Some of the dogs chosen for the Soviet space program were strays found on the streets of Moscow. This includes`,
@@ -610,6 +631,7 @@ export default {
                         {
                             anchor: `Huntsville`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -634,6 +656,7 @@ export default {
                         `dragged to sled by`,
                         {
                             anchor: `hunter's belt`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -683,6 +706,7 @@ export default {
                         `Beyonders bleed the most, their`,
                         {
                             anchor: `roots unknown to them.`,
+                            todo: true,
                             card: {
                                 description: [
                                     `I didn't know this at the time, but the notion of`,
@@ -715,6 +739,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `The sound of rocket circuitry in the background was made by banging an electric guitar against the carpet floor while bending its whammy bar. It took countless tries, and I kept having to retune because the tuning would get messed up each time.`,
                     dotKeys: {
@@ -735,6 +760,7 @@ export default {
                         `Is this`,
                         {
                             anchor: `too much at once?`,
+                            todo: true,
                             card: {
                                 description: `I sobbed when I finally got the letter that confirmed I was a Beyonder. While I was relieved to have an explanation for my torment, the last thing I wanted was the burden of being different from everyone else.`,
                                 dotKeys: {
@@ -762,6 +788,7 @@ export default {
                         `one they'll find only once we build the`,
                         {
                             anchor: `mothership.`,
+                            todo: true,
                             card: {
                                 description: `To present the appearance of legitimacy, the letters from RI Research were peppered with pseudo-scientific terms, as they promised to keep me abreast of their ongoing technological developments. This included spacecraft that would allow us to make contact with extraplanetary kin.`,
                                 dotKeys: {
@@ -781,6 +808,7 @@ export default {
                         `But till then, here's`,
                         {
                             anchor: `how you're to live…"`,
+                            todo: true,
                             card: {
                                 description: `The letters cautioned me to keep myself separate from society. I realized that my brother had been doing this all along, and so I adopted a stoic composure based on his.`,
                                 dotKeys: {
@@ -793,6 +821,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `I decided to learn Tuvan throat singing after my first girlfriend Catherine took me to see a documentary called`,
@@ -837,6 +866,7 @@ export default {
                         `So thus we learned to`,
                         {
                             anchor: `act the dunce`,
+                            todo: true,
                             card: {
                                 description: `By failing to acknowledge or respond to fellow students, I came across as an imbecile.`,
                                 dotKeys: {
@@ -856,6 +886,7 @@ export default {
                         `twin friars`,
                         {
                             anchor: `cast here in pollens`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Greek mythology,`,
@@ -901,6 +932,7 @@ export default {
                         `twits daily`,
                         {
                             anchor: `murdered for their virtue.`,
+                            todo: true,
                             card: {
                                 description: `Like all ordeals, mine was more bearable because I could tie it to a greater purpose. But ironically, behaving as such only invited more abuse.`,
                                 dotKeys: {
@@ -920,6 +952,7 @@ export default {
                         `as`,
                         {
                             anchor: `omerta`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -958,6 +991,7 @@ export default {
                         `We knew the`,
                         {
                             anchor: `shortest cyphers`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The lengthier the`,
@@ -981,6 +1015,7 @@ export default {
                         `But`,
                         {
                             anchor: `every hero has a heel,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The Greek hero`,
@@ -1004,6 +1039,7 @@ export default {
                         `The only`,
                         {
                             anchor: `spies who get to feel love`,
+                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -1027,6 +1063,7 @@ export default {
                         `first`,
                         {
                             anchor: `unearth their own plots!`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Figuratively, this refers to revealing one's secret plans. Literally, it means digging one's own grave.`,
@@ -1050,6 +1087,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Mushing onward,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1097,6 +1135,7 @@ export default {
                         {
                             anchor: `Mushka's`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `While Pchelka and Mushka successfully spent a day in orbit aboard`,
@@ -1120,6 +1159,7 @@ export default {
                         `to`,
                         {
                             anchor: `his slaughter`,
+                            todo: true,
                             card: {
                                 description: [
                                     `I wrote this song during the peak of my activism within the`,
@@ -1142,6 +1182,7 @@ export default {
                         `under`,
                         {
                             anchor: `undying dawn.`,
+                            todo: true,
                             card: {
                                 description: [
                                     `During summer in the`,
@@ -1166,6 +1207,7 @@ export default {
                         `Choked, he's soon a goner,`,
                         {
                             anchor: `no one heard his hollers,`,
+                            todo: true,
                             card: {
                                 description: `I always had to wonder if my brother was screaming on the inside, as I certainly was during this time.`,
                                 dotKeys: {
@@ -1181,6 +1223,7 @@ export default {
                         `this pack honors only the`,
                         {
                             anchor: `idiot's rod.`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -1208,6 +1251,7 @@ export default {
                         `Next cabins come equipped with`,
                         {
                             anchor: `pentobarbitone syringe,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -1243,6 +1287,7 @@ export default {
                         `I'm`,
                         {
                             anchor: `sorry I bailed,`,
+                            todo: true,
                             card: {
                                 description: `By wanting to rejoin the company of others, I felt like I was betraying my brother somehow. Unlike me, he wasn't a tourist in the land of autism. He wasn't free to come and go as he pleased.`,
                                 dotKeys: {
@@ -1254,6 +1299,7 @@ export default {
                         {
                             anchor: `Xiao Xiang,`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: `Mushka means "little fly" in Russian, and by coincidence, my brother's Chinese name, Xiao Xiang, literally means "little fly." (Though in his case, the second word is a verb, not a noun.) Incidentally, Pchelka means "little bee," which maybe also makes sense, given that my name starts with the letter B?`,
                                 dotKeys: {
@@ -1271,6 +1317,7 @@ export default {
                         `I couldn't ditch my wails, I`,
                         {
                             anchor: `needed the pod.`,
+                            todo: true,
                             card: {
                                 description: [
                                     `A group of`,
@@ -1292,6 +1339,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         {
@@ -1322,6 +1370,7 @@ export default {
                         `"Kids say you're`,
                         {
                             anchor: `hopped on drugs,`,
+                            todo: true,
                             card: {
                                 description: `Eventually a classmate suspected me of taking drugs, and I was sent to the principal's office. When my mother came to pick me up, she chewed out the principal for even suspecting that I could do such a thing. Since I was more responsive around authority figures, he agreed that the accusation didn't make sense and dropped the issue.`,
                                 dotKeys: {
@@ -1338,6 +1387,7 @@ export default {
                         `Mushka,`,
                         {
                             anchor: `per their bargain,`,
+                            todo: true,
                             card: {
                                 description: `Though I faked autism for only a year or so, the social repercussions lasted much longer, since I was now and forever the kid who once did that really weird thing. It's not that I lacked the will to repair my standing. But I was as baffled as anyone else about the psychological forces that prompted such behavior in the first place, and there were no guide books telling me where to go from there.`,
                                 dotKeys: {
@@ -1349,6 +1399,7 @@ export default {
                         `I`,
                         {
                             anchor: `can't ever return.`,
+                            todo: true,
                             card: {
                                 description: [
                                     `I'd grown disillusioned with RI Research by this point anyway, as the letters inexplicably began to take on`,
@@ -1371,6 +1422,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `My brother currently lives in his own apartment and gets round-the-clock care through a`,

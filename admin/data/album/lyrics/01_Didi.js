@@ -30,6 +30,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `In the`,
@@ -79,6 +80,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `Toy instruments abound in this song sung from the perspective of my sister as a child. Here, autoharp and glockenspiel lead into an intro that recalls the first few measures of`,
@@ -138,6 +140,7 @@ export default {
                         `wondering to himself, who would`,
                         {
                             anchor: `tie his shoes?`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -173,6 +176,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `My ambition for this album was to do for rock music what`,
@@ -207,6 +211,7 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here.`,
+                            todo: true,
                             card: {
                                 description: `I often tagged along with my sister, who was fiercely protective of me. But there were times when she and her friends would go off to do girl stuff by themselves. This always left me in a panic, since I had few playmates of my own.`,
                                 dotKeys: {
@@ -233,6 +238,7 @@ export default {
                         `Cause I get sick of hearing,`,
                         {
                             anchor: `"Zeizei,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Chinese,`,
@@ -258,6 +264,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `I wanted the music here to evoke the flurry of activity and transience of emotion that a child experiences from one day to the next. And so the rhythm lurches to and from a`,
@@ -289,6 +296,7 @@ export default {
                         `Didi`,
                         {
                             anchor: `made an "accident"`,
+                            todo: true,
                             card: {
                                 description: `After I poop my pants while quietly seated at my desk, a classmate politely informs the teacher.`,
                                 dotKeys: {
@@ -310,6 +318,7 @@ export default {
                         {
                             anchor: `Safeway paper bag,`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -336,6 +345,7 @@ export default {
                     lyric: [
                         {
                             anchor: `decked in overalls`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Since I'm the smallest child in my grade, the only item of clothing that fits me is an abandoned pair of girls'`,
@@ -366,6 +376,7 @@ export default {
                         `Didi, you've`,
                         {
                             anchor: `been in the bath`,
+                            todo: true,
                             card: {
                                 description: `My mother came to pick me up and dropped me off at home with my grandparents. I remember taking a long while to bathe myself.`,
                                 dotKeys: {
@@ -409,6 +420,7 @@ export default {
                     lyric: [
                         {
                             anchor: `crooked thieves`,
+                            todo: true,
                             card: {
                                 description: ``,
                                 wormhole: `crooked_thieves`,
@@ -417,6 +429,7 @@ export default {
                         `with your`,
                         {
                             anchor: `sheriff's badge and gun…`,
+                            todo: true,
                             card: {
                                 description: `Though my mother and other Taiwanese teenagers of her generation prized all things American, they had no way to know what that entailed. Their only exposure to American culture was through a native bootleg industry that mostly recycled the relics of America's past. And so my sister and I grew up listening to my mother's old country records and sharing her fondness for old Westerns.`,
                                 dotKeys: {
@@ -429,6 +442,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `"Wouldn't It Be Nice" is once again evoked here, this time by modulating down a minor third to segue into the bridge.`,
                     dotKeys: {
@@ -453,6 +467,7 @@ export default {
                         `taped to all the`,
                         {
                             anchor: `girls' mirrors.`,
+                            todo: true,
                             card: {
                                 description: `My sister used to cut out pictures of pop stars from teenybopper magazines and tape them to our bathroom mirror.`,
                                 dotKeys: {
@@ -472,6 +487,7 @@ export default {
                         `you'd`,
                         {
                             anchor: `finally become someone?`,
+                            todo: true,
                             card: {
                                 wormhole: `finally_become_someone`,
                             },
@@ -481,6 +497,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: `To mimic the subdued twangs of music boxes and thumb pianos that characterize children's music, I dampened the lead guitar strings by wrapping strips of tissue around them near the bridge.`,
                     dotKeys: {
@@ -550,6 +567,7 @@ export default {
             ],
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `A, C, and E\u2011flat, the three distantly related major keys heard thus far, also comprise three of the four triads of an`,
@@ -583,6 +601,7 @@ export default {
             unitMap: {},
             unitDot: {
                 anchor: IS_UNIT_DOT,
+                todo: true,
                 card: {
                     description: [
                         `As home studios became more affordable in the early 2000s, I sensed that a wave of artists would soon take the field of`,
