@@ -6,6 +6,7 @@ import {
     getPathname,
     getIsValidAdminPath,
     getIsValidPitchPagePath,
+    getIsStorePath,
 } from '../../helpers/pathname'
 import { getRoutingSongIndex } from '../../helpers/routing'
 import { getIsAlbumSession } from '../browser'
@@ -30,8 +31,7 @@ export const getNeedsStoreProvider = element => {
         return true
     }
 
-    // If it's not a valid admin path, then it needs the store provider.
-    return !getIsValidAdminPath(element)
+    return getIsStorePath(element)
 }
 
 export const getReducers = element => (

@@ -4,14 +4,14 @@ import { getWindow } from '../utils/browser'
 export const VERSE_QUERY_FIELD = 'verse'
 export const ANNOTATION_QUERY_FIELD = 'annotation'
 
-const VALID_ADMIN_PATHS = [
-    'actors',
-    'annotations',
-    'previewer',
-    'progress',
-    'skies',
-    'things',
-]
+const VALID_ADMIN_PATHS = {
+    actors: true,
+    annotations: true,
+    previewer: true,
+    progress: true,
+    skies: true,
+    things: true,
+}
 
 const PITCH_PATH = 'pitch'
 
@@ -37,8 +37,13 @@ export const getIndexFromPath = pathname => (
 
 export const getIsValidAdminPath = element => (
     // Admin paths are only valid in staging.
-    IS_STAGING && VALID_ADMIN_PATHS.some(
-        route => route === getPathname(element)
+    IS_STAGING && VALID_ADMIN_PATHS[getPathname(element)]
+)
+
+export const getIsStorePath = element => (
+    !VALID_ADMIN_PATHS[getPathname(element)] || (
+        IS_STAGING &&
+        getPathname(element) === 'annotations'
     )
 )
 
