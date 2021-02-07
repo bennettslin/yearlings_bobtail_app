@@ -1,17 +1,16 @@
 # Things to take on Sunday
     * Wacom 16
     * Instruments
-    * Garage fluids
 
 # TODO
 * Contact mover
 * Put pole back in box
-* Put doll back in box
-* Put Wacom 24 back in box
-* Prepare old computers
-    * Remove hard drives
-* Throw stuff away
-* Take down guitar mount
+* Tape Wacom box
+* Hazardous waste disposal
+    * Garage fluids
+    * Light bulbs
+    * Electronics box
+        * Destroy hard drives
 
 # In car
 * Mirror

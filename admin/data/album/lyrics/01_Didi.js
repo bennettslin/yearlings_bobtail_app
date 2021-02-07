@@ -47,7 +47,7 @@ export default {
                             anchor: `Taiwan,`,
                             wiki: `Taiwan`,
                         },
-                        `a Pacific island that was taken over by the`,
+                        `an island that was taken over by the`,
                         {
                             anchor: `Chinese`,
                             wiki: `China`,
