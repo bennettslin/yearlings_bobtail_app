@@ -1,9 +1,12 @@
-# Things to take on Sunday
-
 # TODO
+* Confirm with apartment
 * Contact mover
 * Put pole back in box
 * Tape Wacom box
+* Sort through music books
+* Sell drums
+* Get rid of everything
+* Order shower curtain
 
 # In car
 * Mirror
@@ -30,3 +33,11 @@
 * Glute developer
 * Fitness block
 * Hard-case instruments
+
+# Friday
+* Sign lease?
+# Saturday
+* Move day?
+
+# Sunday
+* Junk day?
