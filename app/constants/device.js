@@ -1,15 +1,32 @@
-import MobileDetect from 'mobile-detect'
+import Bowser from 'bowser'
 import { getWindow } from '../utils/browser'
 
-const md = new MobileDetect(getWindow().navigator.userAgent)
+export const {
+    browser: {
+        name: BROWSER_NAME,
+        version: BROWSER_VERSION,
+    } = {},
+    engine: {
+        name: ENGINE_NAME,
+        version: ENGINE_VERSION,
+    } = {},
+    os: {
+        name: OS_NAME,
+        version: OS_VERSION,
+    } = {},
+    platform: {
+        type: PLATFORM_TYPE,
+        vendor: PLATFORM_VENDOR,
+    } = {},
+} = Bowser.parse(getWindow().navigator.userAgent) || {}
 
 /**
- * FIXME: This uses user agent sniffing to detect whether this is a
- * mobile device, assuming that mobile devices have lower processing
- * power. This approach is not accurate to begin with, and very much
- * not future-proof!
+ * NOTE: This uses user agent sniffing to detect whether this is a desktop and
+ * not a mobile device, assuming that mobile devices have lower processing
+ * power. This approach is not accurate to begin with, and very much not
+ * future-proof!
  */
-export const IS_USER_AGENT_DESKTOP = !md.mobile()
+export const IS_USER_AGENT_DESKTOP = PLATFORM_TYPE === 'desktop'
 
 // http://www.javascriptkit.com/dhtmltutors/sticky-hover-issue-solutions.shtml
 export const IS_TOUCH_SUPPORTED =
@@ -17,7 +34,6 @@ export const IS_TOUCH_SUPPORTED =
     getWindow().navigator.maxTouchPoints > 0 ||
     getWindow().navigator.msMaxTouchPoints > 0
 
-// https://stackoverflow.com/a/19999868
-export const IS_DEPRECATED_BROWSER =
-    getWindow().navigator.userAgent.indexOf('MSIE ') > 0 ||
-    Boolean(getWindow().navigator.userAgent.match(/Trident.*rv:11\./))
+export const logDevice = () => {
+    logServe(`${BROWSER_NAME ? BROWSER_NAME : ''}${BROWSER_VERSION ? ` ${BROWSER_VERSION}` : ''},${ENGINE_NAME ? ` ${ENGINE_NAME}` : ''}${ENGINE_VERSION ? ` ${ENGINE_VERSION}` : ''},${OS_NAME ? ` ${OS_NAME}` : ''}${OS_VERSION ? ` ${OS_VERSION}` : ''},${PLATFORM_VENDOR ? ` ${PLATFORM_VENDOR}` : ''}${PLATFORM_TYPE ? ` ${PLATFORM_TYPE}` : ''}.`)
+}

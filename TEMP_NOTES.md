@@ -7,9 +7,7 @@
 
 # TODO:
 * Analytics
-    * When wiki links are broken
     * Custom dimension for IP? Is that possible?
-    * Custom dimension for device?
 * Home icon on pitch.
 * Freeway panel.
 * Loading song from number in URL shows verse scroll bar.

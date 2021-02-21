@@ -10,7 +10,6 @@ import {
     getStoredSongIndex,
     getStoredVerseIndex,
 } from '../../helpers/storage'
-import { getInitialGaLog } from '../analytics'
 import {
     logAccess,
     logAdmin,
@@ -60,14 +59,12 @@ export const globaliseLogs = () => {
     global.logError = logError
 }
 
-export const logInitialLogs = () => {
+export const logBuild = () => {
     logServe(
-        `Built ${BUILD_DATE_TIME}.`,
+        `App built ${BUILD_DATE_TIME}.`,
         {
             action: 'build',
             label: BUILD_DATE_TIME,
         }
     )
-
-    logServe(getInitialGaLog())
 }
