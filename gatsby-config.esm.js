@@ -14,6 +14,13 @@ export default {
         `gatsby-plugin-sass`,
         `gatsby-plugin-remove-trailing-slashes`,
         {
+            resolve: `gatsby-plugin-webpack-bundle-analyzer`,
+            options: {
+                analyzerPort: 1114,
+                openAnalyzer: false,
+            }
+        },
+        {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `Yearling's Bobtail`,
