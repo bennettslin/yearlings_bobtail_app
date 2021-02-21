@@ -32,7 +32,6 @@ module.exports = {
         'logEvent': true,
         'logFocus': true,
         'logMount': true,
-        'logServe': true,
         'logPlayer': true,
         'logScroll': true,
         'logSelect': true,

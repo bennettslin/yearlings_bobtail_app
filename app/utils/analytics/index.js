@@ -17,8 +17,8 @@ export const getInitialGaLog = () => {
 }
 
 export const sendToGa = ({
-    category = 'category',
-    action = 'action',
+    category,
+    action,
     label,
     value,
 

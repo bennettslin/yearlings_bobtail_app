@@ -15,6 +15,6 @@ export const updateLyricStore = payload => {
 
     return ({
         type: LYRIC_STORE,
-        payload: getDefinedOnlyPayload(payload),
+        payload: getDefinedOnlyPayload(payload, LYRIC_STORE),
     })
 }

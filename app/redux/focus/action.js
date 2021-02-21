@@ -4,5 +4,5 @@ import { FOCUS_STORE } from '../../constants/store'
 
 export const updateFocusStore = payload => ({
     type: FOCUS_STORE,
-    payload: getDefinedOnlyPayload(payload),
+    payload: getDefinedOnlyPayload(payload, FOCUS_STORE),
 })

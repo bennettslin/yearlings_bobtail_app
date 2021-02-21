@@ -1,4 +1,20 @@
+export const ACCESS = 'access'
+export const ADMIN = 'admin'
+export const ANALYTICS__FAILURE = 'analyticsFailure'
+export const ANALYTICS__SUCCESS = 'analyticsSuccess'
+export const ERROR = 'error'
+export const EVENT = 'event'
+export const FOCUS = 'focus'
+export const MOUNT = 'mount'
+export const PLAYER = 'player'
+export const SCROLL = 'scroll'
+export const SELECT = 'select'
+export const SERVE = 'serve'
+export const SUCCESS = 'style'
+export const TRANSITION = 'transition'
+
 const BASE_STYLES = {
+    // Show turquoise background by default.
     backgroundColor: '#f0ffff',
     color: '#888',
     padding: '6px 8px',
@@ -9,6 +25,7 @@ const BASE_STYLES = {
 }
 
 const GA_STYLE = {
+    // If log sends to analytics, show yellow background instead.
     backgroundColor: '#fffff0',
 }
 
@@ -25,20 +42,6 @@ const _getStyles = (styles) => {
     return stylesArray.join(' ')
 }
 
-export const ACCESS = 'access'
-export const ADMIN = 'admin'
-export const ANALYTICS = 'analytics'
-export const ERROR = 'error'
-export const EVENT = 'event'
-export const FOCUS = 'focus'
-export const MOUNT = 'mount'
-export const PLAYER = 'player'
-export const SCROLL = 'scroll'
-export const SELECT = 'select'
-export const SERVE = 'serve'
-export const SUCCESS = 'style'
-export const TRANSITION = 'transition'
-
 const LOG_STYLES = {
     [ACCESS]: {
         color: '#b82',
@@ -48,8 +51,12 @@ const LOG_STYLES = {
         color: '#2b8',
         fontSize: '2em',
     },
-    [ANALYTICS]: {
-        color: '#888',
+    [ANALYTICS__FAILURE]: {
+        color: '#b44',
+        fontSize: '0.6em',
+    },
+    [ANALYTICS__SUCCESS]: {
+        color: '#4b4',
         fontSize: '0.6em',
     },
     [ERROR]: {
@@ -95,12 +102,16 @@ const LOG_STYLES = {
 
 export const getStyleForCategory = ({
     category,
-    isGaCall,
+    action,
 
 }) => (
     _getStyles({
-        ...category !== ANALYTICS && BASE_STYLES,
+        ...(
+            category !== ANALYTICS__SUCCESS &&
+            category !== ANALYTICS__FAILURE
+        ) && BASE_STYLES,
         ...LOG_STYLES[category],
-        ...isGaCall && GA_STYLE,
+        // It's a GA call if it has an action.
+        ...Boolean(action) && GA_STYLE,
     })
 )

@@ -46,6 +46,7 @@ import {
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY,
     PITCH_TOGGLE_KEY,
+    ERROR_LOG_TOGGLE_KEY,
 } from '../../../constants/access'
 import { HIDDEN } from '../../../constants/options'
 import { mapIsOverviewShown } from '../../../redux/overview/selector'
@@ -150,6 +151,10 @@ const LetterManager = forwardRef((props, ref) => {
                 break
             case PITCH_TOGGLE_KEY:
                 dispatch(toggleIsPitchShown())
+                keyWasRegistered = true
+                break
+            case ERROR_LOG_TOGGLE_KEY:
+                logError('Error log for debugging!')
                 keyWasRegistered = true
                 break
             default:

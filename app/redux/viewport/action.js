@@ -77,7 +77,7 @@ export const updateViewportStore = payload => {
 
     return ({
         type: VIEWPORT_STORE,
-        payload: getDefinedOnlyPayload(payload),
+        payload: getDefinedOnlyPayload(payload, VIEWPORT_STORE),
     })
 }
 
@@ -94,6 +94,6 @@ export const updateViewportPitchStore = payload => {
 
     return ({
         type: VIEWPORT_STORE,
-        payload: getDefinedOnlyPayload(payload),
+        payload: getDefinedOnlyPayload(payload, VIEWPORT_STORE),
     })
 }

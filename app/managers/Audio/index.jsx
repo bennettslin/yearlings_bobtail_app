@@ -89,11 +89,13 @@ const AudioManager = () => {
              * it does!
              */
             if (!isEndOfSong) {
-                logError({
-                    log: `Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`,
-                    action: 'syncTimeAndVerse',
-                    label: `song: ${selectedSongIndex}, verse: ${selectedVerseIndex}, time: ${currentTime}`,
-                })
+                logError(
+                    `Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`,
+                    {
+                        action: 'syncTimeAndVerse',
+                        label: `song: ${selectedSongIndex}, verse: ${selectedVerseIndex}, time: ${currentTime}`,
+                    }
+                )
             }
 
             return {

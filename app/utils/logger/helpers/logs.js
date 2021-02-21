@@ -1,13 +1,9 @@
-import pino from 'pino'
-import { sendToGa } from '../../analytics'
 import { getSceneIndexForVerse } from '../../../api/album/verses'
-
+import { sendToGaFromLog } from './analytics'
 import { getTimeDifference } from './time'
-
 import {
     ACCESS,
     ADMIN,
-    ANALYTICS,
     EVENT,
     FOCUS,
     MOUNT,
@@ -21,8 +17,6 @@ import {
     getStyleForCategory,
 } from './styles'
 
-export const logger = pino()
-
 const _logInfo = ({
     log,
     styles,
@@ -35,41 +29,30 @@ const _logInfo = ({
     useTimeForValue,
 
 }) => {
-    const
-        isGaCall = Boolean(category && action),
-        timeDifference = getTimeDifference(),
-        finalValue = parseInt(
-            useTimeForValue ?
-                // Send to analytics as milliseconds.
-                timeDifference * 1000 :
-                value
-        )
+    const timeDifference = getTimeDifference()
 
     if (log) {
-        logger[level](
+        console[level](
             `%c${log}`,
             styles || getStyleForCategory({
                 category: styleCategory || category,
-                isGaCall,
+                action,
             }),
             timeDifference
         )
     }
 
-    if (isGaCall) {
-        const didGaSucceed = sendToGa({
-            category,
-            action,
-            label,
-            value: finalValue,
-        })
-
-        if (IS_STAGING && didGaSucceed) {
-            // Log analytics parameters to make data analysis easier.
-            logger.info(`%c${`category: ${category}\naction: ${action}${label ? `\nlabel: ${label}` : ''}${finalValue ? `\nvalue: ${finalValue}` : ''}`}`, getStyleForCategory({ category: ANALYTICS }))
-        }
-
-    }
+    sendToGaFromLog({
+        category,
+        action,
+        label,
+        value: parseInt(
+            useTimeForValue ?
+                // Send to analytics as milliseconds.
+                timeDifference * 1000 :
+                value
+        ),
+    })
 }
 
 /** Analytics events */
@@ -163,12 +146,10 @@ export const logServe = ({
         ...props,
     })
 }
-export const logError = ({
-    log,
-    ...props
-}) => {
+export const logError = (log, props) => {
     _logInfo({
         log,
+        level: 'error',
         category: ERROR,
         ...props,
     })

@@ -122,13 +122,15 @@ const PresenceSvg = ({
             setAdjustedHeight(adjustedHeight)
 
         } catch (error) {
-            logError({
-                log: 'Error parsing viewBox!',
-                action: 'parseSvg',
-                label: actorKey ?
-                    `actor: ${actorKey}, instance: ${presenceKey}` :
-                    `thing: ${presenceType}, instance: ${presenceKey}`,
-            })
+            logError(
+                'Error parsing viewBox!',
+                {
+                    action: 'parseSvg',
+                    label: actorKey ?
+                        `actor: ${actorKey}, instance: ${presenceKey}` :
+                        `thing: ${presenceType}, instance: ${presenceKey}`,
+                }
+            )
         }
     }
 

@@ -32,6 +32,6 @@ export const updateSelectedStore = payload => {
 
     return {
         type: SELECTED_STORE,
-        payload: getDefinedOnlyPayload(payload),
+        payload: getDefinedOnlyPayload(payload, SELECTED_STORE),
     }
 }

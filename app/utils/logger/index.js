@@ -23,47 +23,47 @@ import {
     logSelect,
     logTransition,
     logError,
-    logger,
 } from './helpers/logs'
 
-// Allow access to album in local delivery.
-if (IS_STAGING) {
-    global.album = getAlbum()
-    global.scene = getScene()
-    global.pitch = getPitch()
-    global.s = () => getSong(getStoredSongIndex())
-    global.z = () => getLayersForScene(
-        getStoredSongIndex(),
-        getSceneIndexForVerse(
+const initialiseLogger = () => {
+    // Allow access to album in local delivery.
+    if (IS_STAGING) {
+        global.album = getAlbum()
+        global.scene = getScene()
+        global.pitch = getPitch()
+        global.s = () => getSong(getStoredSongIndex())
+        global.z = () => getLayersForScene(
             getStoredSongIndex(),
-            getStoredVerseIndex(
-                getStoredSongIndex()
+            getSceneIndexForVerse(
+                getStoredSongIndex(),
+                getStoredVerseIndex(
+                    getStoredSongIndex()
+                )
             )
         )
-    )
+    }
+
+    logServe({
+        log: `Built ${BUILD_DATE_TIME}.`,
+        action: 'load',
+        label: BUILD_DATE_TIME,
+    })
+
+    logServe({
+        log: getInitialGaLog(),
+        action: 'ga',
+    })
+
+    global.logAccess = logAccess
+    global.logAdmin = logAdmin
+    global.logEvent = logEvent
+    global.logFocus = logFocus
+    global.logMount = logMount
+    global.logPlayer = logPlayer
+    global.logScroll = logScroll
+    global.logSelect = logSelect
+    global.logTransition = logTransition
+    global.logError = logError
 }
 
-logServe({
-    log: `Built ${BUILD_DATE_TIME}.`,
-    action: 'load',
-    label: BUILD_DATE_TIME,
-})
-
-logServe({
-    log: getInitialGaLog(),
-    action: 'ga',
-})
-
-global.logAccess = logAccess
-global.logAdmin = logAdmin
-global.logEvent = logEvent
-global.logFocus = logFocus
-global.logMount = logMount
-global.logServe = logServe
-global.logPlayer = logPlayer
-global.logScroll = logScroll
-global.logSelect = logSelect
-global.logTransition = logTransition
-global.logError = logError
-
-export default logger
+export default initialiseLogger

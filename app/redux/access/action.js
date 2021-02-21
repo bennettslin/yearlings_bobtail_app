@@ -23,7 +23,7 @@ export const updateAccessStore = payload => {
 
     return {
         type: ACCESS_STORE,
-        payload: getDefinedOnlyPayload(payload),
+        payload: getDefinedOnlyPayload(payload, ACCESS_STORE),
     }
 }
 

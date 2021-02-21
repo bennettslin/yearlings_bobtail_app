@@ -5,5 +5,5 @@ import { SLIDER_DEFAULTS } from './default'
 
 export const updateSliderStore = (payload = SLIDER_DEFAULTS) => ({
     type: SLIDER_STORE,
-    payload: getDefinedOnlyPayload(payload),
+    payload: getDefinedOnlyPayload(payload, SLIDER_STORE),
 })

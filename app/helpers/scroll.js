@@ -79,11 +79,13 @@ export const getSafeScrollChild = ({
     index,
 
 }) => {
-    logError({
-        log: `${log}\nNo ref found, scrolled by selector: ${selector}`,
-        action: 'scroll',
-        label: `class: ${scrollClass}, index: ${index}`,
-    })
+    logError(
+        `${log}\nNo ref found, scrolled by selector: ${selector}`,
+        {
+            action: 'scroll',
+            label: `class: ${scrollClass}, index: ${index}`,
+        }
+    )
 
     /**
      * This is a fallback. As long as all refs have been set, it should

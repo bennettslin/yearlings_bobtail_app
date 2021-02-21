@@ -6,7 +6,7 @@ import { ANNOTATION_DEFAULTS } from './default'
 
 export const updateAnnotationStore = payload => ({
     type: ANNOTATION_STORE,
-    payload: getDefinedOnlyPayload(payload),
+    payload: getDefinedOnlyPayload(payload, ANNOTATION_STORE),
 })
 
 export const resetAnnotationQueue = () => ({

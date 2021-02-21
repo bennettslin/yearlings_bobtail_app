@@ -37,6 +37,6 @@ export const updateOptionStore = payload => {
 
     return {
         type: OPTION_STORE,
-        payload: getDefinedOnlyPayload(payload),
+        payload: getDefinedOnlyPayload(payload, OPTION_STORE),
     }
 }
