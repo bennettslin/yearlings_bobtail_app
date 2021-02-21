@@ -18,10 +18,9 @@ const AboutPopup = () => {
     }
 
     useEffect(() => {
-        logState(
-            'About',
-            isAboutShown
-        )
+        if (isAboutShown) {
+            logState('isAboutShown')
+        }
     }, [isAboutShown])
 
     return (

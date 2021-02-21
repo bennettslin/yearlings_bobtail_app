@@ -1,5 +1,5 @@
 // Toggle button to show, hide, and disable tips section.
-import React, { useRef, memo } from 'react'
+import React, { useRef, memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
@@ -26,6 +26,12 @@ const TipsToggle = ({
     const handleButtonClick = () => {
         dispatchTips.current({ isFromToggle: true })
     }
+
+    useEffect(() => {
+        if (!inPopup) {
+            logState('selectedTipsOption', selectedTipsOption)
+        }
+    }, [selectedTipsOption])
 
     return (
         <div

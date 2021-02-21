@@ -1,5 +1,5 @@
 // Popup container for score section.
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import getDidMountHoc from '../../DidMountHoc'
@@ -18,6 +18,12 @@ const ScorePopup = ({ didMount }) => {
     const handleCloseClick = () => {
         dispatch(updateIsScoreShown())
     }
+
+    useEffect(() => {
+        if (isScoreShown) {
+            logState('isScoreShown')
+        }
+    }, [isScoreShown])
 
     return didMount && canScoreMount && (
         <Popup

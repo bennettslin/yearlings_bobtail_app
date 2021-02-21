@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -48,6 +48,30 @@ const ShownWrapper = ({ didMount, children }) => {
         songOverviewShown =
             !isLyricLogue && isOverviewShown,
         tipType = getSongTipType(lyricSongIndex)
+
+    useEffect(() => {
+        if (isCarouselShown) {
+            logState('isCarouselShown')
+        }
+    }, [isCarouselShown])
+
+    useEffect(() => {
+        if (isDotsSlideShown) {
+            logState('isDotsSlideShown')
+        }
+    }, [isDotsSlideShown])
+
+    useEffect(() => {
+        if (isLyricExpanded) {
+            logState('isLyricExpanded')
+        }
+    }, [isLyricExpanded])
+
+    useEffect(() => {
+        if (isNavExpanded) {
+            logState('isNavExpanded')
+        }
+    }, [isNavExpanded])
 
     return (
         <div

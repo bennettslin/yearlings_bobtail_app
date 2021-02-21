@@ -1,5 +1,5 @@
 // Component to show buttons for audio navigation.
-import React, { useRef, memo } from 'react'
+import React, { useRef, memo, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import PlayDispatcher from '../../dispatchers/Play'
 import SongDispatcher from '../../dispatchers/Song'
@@ -119,6 +119,10 @@ const Audio = () => {
                 dynamicButtonConfigs
         )
     }
+
+    useEffect(() => {
+        logState('audioOptionIndex', audioOptionIndex)
+    }, [audioOptionIndex])
 
     return (
         <div {...{ className: 'Audio' }}>

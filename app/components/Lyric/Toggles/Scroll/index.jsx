@@ -1,6 +1,4 @@
-// Button to toggle between left and right columns.
-
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
@@ -20,6 +18,12 @@ const LyricToggleScroll = () => {
     const handleButtonClick = () => {
         dispatch(updateIsAutoScroll(true))
     }
+
+    useEffect(() => {
+        if (isAutoScroll) {
+            logState('isAutoScroll')
+        }
+    }, [isAutoScroll])
 
     return (
         <CSSTransition

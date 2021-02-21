@@ -1,5 +1,5 @@
 // Popup container for pitch section.
-import React, { forwardRef, memo } from 'react'
+import React, { forwardRef, memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import getDidMountHoc from '../../DidMountHoc'
@@ -18,6 +18,12 @@ const PitchPopup = forwardRef(({ didMount }, ref) => {
     const handleCloseClick = () => {
         dispatch(updateIsPitchShown())
     }
+
+    useEffect(() => {
+        if (isPitchShown) {
+            logState('isPitchShown')
+        }
+    }, [isPitchShown])
 
     return didMount && (
         <Popup

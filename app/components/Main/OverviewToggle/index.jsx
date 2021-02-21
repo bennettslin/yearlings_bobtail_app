@@ -1,5 +1,5 @@
 // Toggle button to show, hide, and disable overview section.
-import React, { useRef, memo } from 'react'
+import React, { useRef, memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
@@ -23,6 +23,10 @@ const OverviewToggle = ({ className }) => {
     const handleButtonClick = () => {
         dispatchOverview.current({ isFromToggle: true })
     }
+
+    useEffect(() => {
+        logState('selectedOverviewOption', selectedOverviewOption)
+    }, [selectedOverviewOption])
 
     return (
         <div className={cx(
