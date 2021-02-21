@@ -9,6 +9,7 @@
 * Analytics
     * Custom dimension for IP? Is that possible?
 * Home icon on pitch.
+* Kyon tips hand
 * Freeway panel.
 * Loading song from number in URL shows verse scroll bar.
 * Delay presence exit opacity transitions for non-opacity transitions.

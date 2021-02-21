@@ -1,6 +1,7 @@
 import Bowser from 'bowser'
 import { getWindow } from '../utils/browser'
 
+const { userAgent } = getWindow().navigator
 export const {
     browser: {
         name: BROWSER_NAME,
@@ -18,7 +19,7 @@ export const {
         type: PLATFORM_TYPE,
         vendor: PLATFORM_VENDOR,
     } = {},
-} = Bowser.parse(getWindow().navigator.userAgent) || {}
+} = userAgent ? Bowser.parse(userAgent) : {}
 
 /**
  * NOTE: This uses user agent sniffing to detect whether this is a desktop and
