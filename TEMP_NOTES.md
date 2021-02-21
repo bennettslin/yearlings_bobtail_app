@@ -8,6 +8,7 @@
 # TODO:
 * Home icon on pitch.
 * Freeway panel.
+* Loading song from number in URL shows verse scroll bar.
 * Delay presence exit opacity transitions for non-opacity transitions.
 * Only prolong realistic presence transitions on enter, not exit.
 * Delay cubes for presence transition exit. Need to first calculate presence exit transition times.

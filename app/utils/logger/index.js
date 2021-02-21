@@ -8,6 +8,7 @@ import { getLayersForScene } from '../../api/album/scenes'
 import { getSceneIndexForVerse } from '../../api/album/verses'
 import { getInitialGaLog } from '../analytics'
 import {
+    getInitialIndicesFromRoutingOrStorage,
     getStoredSongIndex,
     getStoredVerseIndex,
 } from '../../helpers/storage'
@@ -24,6 +25,7 @@ import {
     logTransition,
     logError,
 } from './helpers/logs'
+import { getRoutingSongIndex } from '../../helpers/routing'
 
 const initialiseLogger = () => {
     // Allow access to album in local delivery.
@@ -43,15 +45,26 @@ const initialiseLogger = () => {
         )
     }
 
-    logServe({
-        log: `Built ${BUILD_DATE_TIME}.`,
-        action: 'load',
-        label: BUILD_DATE_TIME,
-    })
+    logServe(
+        `Built ${BUILD_DATE_TIME}.`,
+        {
+            action: 'build',
+            label: BUILD_DATE_TIME,
+        }
+    )
 
-    logServe({
-        log: getInitialGaLog(),
-        action: 'ga',
+    logServe(getInitialGaLog())
+
+    const {
+        initialSongIndex,
+        initialVerseIndex,
+        initialAnnotationIndex,
+    } = getInitialIndicesFromRoutingOrStorage(getRoutingSongIndex())
+    logSelect({
+        action: 'load',
+        song: initialSongIndex,
+        verse: initialVerseIndex,
+        annotation: initialAnnotationIndex,
     })
 
     global.logAccess = logAccess

@@ -17,7 +17,7 @@ import {
     getStyleForCategory,
 } from './styles'
 
-const _logInfo = ({
+const _log = ({
     log,
     styles,
     level = 'info',
@@ -60,7 +60,7 @@ export const logAccess = ({
     log,
     label,
 }) => {
-    _logInfo({
+    _log({
         log,
         styleCategory: ACCESS,
         // Only send to GA if the key was registered.
@@ -77,7 +77,7 @@ export const logEvent = ({
     e: { type },
     analyticsIdentifier,
 }) => {
-    _logInfo({
+    _log({
         log: `Event "${type}" from ${componentName}.`,
         category: EVENT,
         ...Boolean(analyticsIdentifier) && {
@@ -87,7 +87,7 @@ export const logEvent = ({
     })
 }
 export const logMount = (componentName) => {
-    _logInfo({
+    _log({
         log: `${componentName} mounted.`,
         styleCategory: MOUNT,
         category: 'lifecycle',
@@ -101,7 +101,7 @@ export const logPlayer = ({
     success,
     ...props
 }) => {
-    _logInfo({
+    _log({
         log,
         styleCategory: success ? SUCCESS : PLAYER,
         category: PLAYER,
@@ -114,32 +114,25 @@ export const logSelect = ({
     verse,
     annotation,
 }) => {
-    if (verse !== undefined) {
-        const
-            scene = getSceneIndexForVerse(song, verse),
-            message = `song: ${song}, scene: ${scene}, verse: ${verse}.`
-        _logInfo({
-            log: message,
-            category: SELECT,
-            action,
-            label: message,
-        })
+    let message = `song: ${song}`
+
+    if (Number.isFinite(verse)) {
+        const scene = getSceneIndexForVerse(song, verse)
+        message += `, scene: ${scene}, verse: ${verse}`
     }
     if (annotation) {
-        const message = `song: ${song}, annotation: ${annotation}`
-        _logInfo({
-            log: message,
-            category: SELECT,
-            action,
-            label: message,
-        })
+        message += `, annotation: ${annotation}`
     }
+
+    _log({
+        log: message,
+        category: SELECT,
+        action,
+        label: message,
+    })
 }
-export const logServe = ({
-    log,
-    ...props
-}) => {
-    _logInfo({
+export const logServe = (log, props) => {
+    _log({
         log,
         category: SERVE,
         useTimeForValue: true,
@@ -147,7 +140,7 @@ export const logServe = ({
     })
 }
 export const logError = (log, props) => {
-    _logInfo({
+    _log({
         log,
         level: 'error',
         category: ERROR,
@@ -158,13 +151,13 @@ export const logError = (log, props) => {
 /** Non-analytics events */
 
 export const logAdmin = log => {
-    _logInfo({
+    _log({
         log,
         category: ADMIN,
     })
 }
 export const logFocus = log => {
-    _logInfo({
+    _log({
         log,
         category: FOCUS,
     })
@@ -180,13 +173,13 @@ export const logScroll = ({
     } else if (isAnchor) {
         scrollType = 'anchor'
     }
-    _logInfo({
+    _log({
         log: `Scroll ${scrollType}: ${log}`,
         category: SCROLL,
     })
 }
 export const logTransition = log => {
-    _logInfo({
+    _log({
         log,
         category: TRANSITION,
     })
