@@ -1,82 +1,177 @@
-import {
-    getAlbum,
-    getPitch,
-    getScene,
-} from '../../api/builds'
-import { getSong } from '../../api/album/songs'
-import { getLayersForScene } from '../../api/album/scenes'
 import { getSceneIndexForVerse } from '../../api/album/verses'
-import { getInitialGaLog } from '../analytics'
+import { sendToGaFromLog } from './helpers/analytics'
+import { getTimeDifference } from './helpers/time'
 import {
-    getInitialIndicesFromRoutingOrStorage,
-    getStoredSongIndex,
-    getStoredVerseIndex,
-} from '../../helpers/storage'
-import {
-    logAccess,
-    logAdmin,
-    logEvent,
-    logFocus,
-    logMount,
-    logServe,
-    logPlayer,
-    logScroll,
-    logSelect,
-    logTransition,
-    logError,
-} from './helpers/logs'
-import { getRoutingSongIndex } from '../../helpers/routing'
+    ACCESS,
+    ADMIN,
+    EVENT,
+    FOCUS,
+    MOUNT,
+    PLAYER,
+    SCROLL,
+    SELECT,
+    SERVE,
+    TRANSITION,
+    SUCCESS,
+    ERROR,
+    getStyleForCategory,
+    STATE,
+} from './helpers/styles'
 
-const initialiseLogger = () => {
-    // Allow access to album in local delivery.
-    if (IS_STAGING) {
-        global.album = getAlbum()
-        global.scene = getScene()
-        global.pitch = getPitch()
-        global.s = () => getSong(getStoredSongIndex())
-        global.z = () => getLayersForScene(
-            getStoredSongIndex(),
-            getSceneIndexForVerse(
-                getStoredSongIndex(),
-                getStoredVerseIndex(
-                    getStoredSongIndex()
-                )
-            )
+const _log = ({
+    log,
+    styles,
+    level = 'info',
+    category,
+    styleCategory,
+    action,
+    label,
+    value,
+    useTimeForValue,
+
+}) => {
+    const timeDifference = getTimeDifference()
+
+    if (log) {
+        console[level](
+            `%c${log}`,
+            styles || getStyleForCategory({
+                category: styleCategory || category,
+                action,
+            }),
+            timeDifference
         )
     }
 
-    logServe(
-        `Built ${BUILD_DATE_TIME}.`,
-        {
-            action: 'build',
-            label: BUILD_DATE_TIME,
-        }
-    )
-
-    logServe(getInitialGaLog())
-
-    const {
-        initialSongIndex,
-        initialVerseIndex,
-        initialAnnotationIndex,
-    } = getInitialIndicesFromRoutingOrStorage(getRoutingSongIndex())
-    logSelect({
-        action: 'load',
-        song: initialSongIndex,
-        verse: initialVerseIndex,
-        annotation: initialAnnotationIndex,
+    sendToGaFromLog({
+        category,
+        action,
+        label,
+        value: parseInt(
+            useTimeForValue ?
+                // Send to analytics as milliseconds.
+                timeDifference * 1000 :
+                value
+        ),
     })
-
-    global.logAccess = logAccess
-    global.logAdmin = logAdmin
-    global.logEvent = logEvent
-    global.logFocus = logFocus
-    global.logMount = logMount
-    global.logPlayer = logPlayer
-    global.logScroll = logScroll
-    global.logSelect = logSelect
-    global.logTransition = logTransition
-    global.logError = logError
 }
 
-export default initialiseLogger
+/** Analytics events */
+export const logAccess = (log, keyName) => {
+    _log({
+        log,
+        styleCategory: ACCESS,
+        // Only send to GA if the key was registered.
+        ...Boolean(keyName) && {
+            // Send to GA as an event category.
+            category: EVENT,
+            action: 'Key',
+            label: keyName,
+        },
+    })
+}
+export const logEvent = (componentName, { label } = {}) => {
+    _log({
+        log: `Event "${label || 'click'}" from ${componentName}.`,
+        category: EVENT,
+        action: componentName,
+        label,
+    })
+}
+export const logPlayer = (log, { success, ...props }) => {
+    _log({
+        log,
+        styleCategory: success ? SUCCESS : PLAYER,
+        category: PLAYER,
+        ...props,
+    })
+}
+export const logSelect = ({
+    action,
+    song,
+    verse,
+    annotation,
+}) => {
+    let message = `song: ${song}`
+
+    if (Number.isFinite(verse)) {
+        const scene = getSceneIndexForVerse(song, verse)
+        message += `, scene: ${scene}, verse: ${verse}`
+    }
+    if (annotation) {
+        message += `, annotation: ${annotation}`
+    }
+
+    _log({
+        log: message,
+        category: SELECT,
+        action,
+        label: message,
+    })
+}
+export const logServe = (log, props) => {
+    _log({
+        log,
+        category: SERVE,
+        useTimeForValue: true,
+        ...props,
+    })
+}
+export const logState = (log, props) => {
+    _log({
+        log,
+        category: STATE,
+        ...props,
+    })
+}
+export const logError = (log, props) => {
+    _log({
+        log,
+        level: 'error',
+        category: ERROR,
+        ...props,
+    })
+}
+
+/** Non-analytics events */
+
+export const logAdmin = log => {
+    _log({
+        log,
+        category: ADMIN,
+    })
+}
+export const logFocus = log => {
+    _log({
+        log,
+        category: FOCUS,
+    })
+}
+export const logMount = componentName => {
+    _log({
+        log: `${componentName} mounted.`,
+        category: MOUNT,
+    })
+}
+export const logScroll = ({
+    isCarousel,
+    isAnchor,
+    log,
+}) => {
+    let scrollType = 'verse'
+    if (isCarousel) {
+        scrollType = 'carousel'
+    } else if (isAnchor) {
+        scrollType = 'anchor'
+    }
+    _log({
+        log: `Scroll ${scrollType}: ${log}`,
+        category: SCROLL,
+    })
+}
+export const logTransition = log => {
+    _log({
+        log,
+        category: TRANSITION,
+    })
+}

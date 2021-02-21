@@ -1,8 +1,14 @@
 // Import these here just to make them available.
-import initialiseLogger from './app/utils/logger'
+import {
+    initialiseGlobalAdminObjects,
+    globaliseLogs,
+    logInitialLogs,
+} from './app/utils/global'
 import './app/scss/app'
 
-initialiseLogger()
+initialiseGlobalAdminObjects()
+globaliseLogs()
+logInitialLogs()
 
 // App styles must be imported after global styles.
 export {

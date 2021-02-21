@@ -35,6 +35,8 @@ module.exports = {
         'logPlayer': true,
         'logScroll': true,
         'logSelect': true,
+        'logServe': true,
+        'logState': true,
         'logTransition': true,
         'logError': true,
         'process': true

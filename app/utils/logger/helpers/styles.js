@@ -10,6 +10,7 @@ export const PLAYER = 'player'
 export const SCROLL = 'scroll'
 export const SELECT = 'select'
 export const SERVE = 'serve'
+export const STATE = 'state'
 export const SUCCESS = 'style'
 export const TRANSITION = 'transition'
 
@@ -89,6 +90,10 @@ const LOG_STYLES = {
     },
     [SERVE]: {
         fontSize: '1.1em',
+    },
+    [STATE]: {
+        color: '#ad8',
+        fontSize: '0.8em',
     },
     [SUCCESS]: {
         color: '#4b4',
