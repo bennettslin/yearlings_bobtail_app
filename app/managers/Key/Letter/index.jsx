@@ -162,10 +162,10 @@ const LetterManager = forwardRef((props, ref) => {
                 break
         }
 
-        logAccess({
-            log: `Key "${keyName}" was ${keyWasRegistered ? '' : 'NOT '}registered.`,
-            ...keyWasRegistered && { label: keyName },
-        })
+        logAccess(
+            `Key "${keyName}" was ${keyWasRegistered ? '' : 'NOT '}registered.`,
+            keyWasRegistered && keyName
+        )
 
         return {
             annotationIndexWasAccessed,

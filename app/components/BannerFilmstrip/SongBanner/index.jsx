@@ -87,6 +87,7 @@ const SongBanner = () => {
             return
         }
 
+        logEvent('SongBanner')
         _updateBannerHoverStatus(e)
     }
 

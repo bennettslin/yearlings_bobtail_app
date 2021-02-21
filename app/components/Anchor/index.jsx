@@ -24,7 +24,7 @@ const Anchor = forwardRef(({
     isWikiTextAnchor,
     text,
     textConfig,
-    analyticsIdentifier,
+    analyticsLabel,
     handleAnchorClick = () => {},
     handleAnchorMouse = () => {},
 
@@ -52,11 +52,12 @@ const Anchor = forwardRef(({
         isAccessed = isAccessedBeforeDesktop && IS_USER_AGENT_DESKTOP
 
     const onClick = e => {
-        logEvent({
-            e,
-            componentName: 'Anchor',
-            analyticsIdentifier,
-        })
+        logEvent(
+            'Anchor',
+            {
+                label: analyticsLabel,
+            }
+        )
 
         handleAnchorClick(e)
     }
@@ -143,7 +144,7 @@ Anchor.propTypes = {
     dotsBit: PropTypes.number,
     text: PropTypes.any,
     textConfig: PropTypes.any,
-    analyticsIdentifier: PropTypes.string,
+    analyticsLabel: PropTypes.string,
     handleAnchorClick: PropTypes.func,
     handleAnchorMouse: PropTypes.func,
 }

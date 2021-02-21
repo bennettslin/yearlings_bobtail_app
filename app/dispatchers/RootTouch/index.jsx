@@ -15,10 +15,9 @@ const RootTouchManager = forwardRef((props, ref) => {
         dispatchSliderTouch.current.move(e)
     }
 
-    const dispatchTouchEnd = e => {
+    const dispatchTouchEnd = () => {
         // If this returns true, then slider touch is ending.
         if (dispatchSliderTouch.current.end()) {
-            logEvent({ e, componentName: 'RootTouchManager' })
             /**
              * Ignore body click event that gets triggered after touch end on
              * slider, to prevent it from closing out of overlay.
@@ -32,8 +31,6 @@ const RootTouchManager = forwardRef((props, ref) => {
         if (isEmailFocused()) {
             return false
         }
-
-        logEvent({ e, componentName: 'RootTouchManager' })
 
         stopPropagation.current(e)
 

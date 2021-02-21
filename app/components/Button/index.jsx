@@ -62,11 +62,12 @@ const Button = ({
             stopPropagation.current(e)
 
             if (!isClickDisabled) {
-                logEvent({
-                    e,
-                    componentName: `Button`,
-                    analyticsIdentifier: buttonName,
-                })
+                logEvent(
+                    `Button`,
+                    {
+                        label: buttonName,
+                    }
+                )
 
                 handleButtonClick(e)
             }

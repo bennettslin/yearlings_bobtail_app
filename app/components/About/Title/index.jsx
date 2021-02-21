@@ -45,7 +45,7 @@ const AboutTitle = ({ didMount }) => {
                         {...{
                             href: BOBTAIL_YEARLINGS_WEBSITE,
                             text: 'Bobtail Yearlings',
-                            analyticsIdentifier: 'BobtailYearlings',
+                            analyticsLabel: 'band',
                             handleAnchorClick,
                         }}
                     />

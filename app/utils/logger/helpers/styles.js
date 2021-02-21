@@ -85,7 +85,7 @@ const LOG_STYLES = {
     },
     [SELECT]: {
         color: '#82b',
-        fontSize: '1.2em',
+        fontSize: '1.275em',
     },
     [SERVE]: {
         fontSize: '1.1em',

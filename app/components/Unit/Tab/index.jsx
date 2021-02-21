@@ -23,8 +23,8 @@ const UnitTab = ({
         formType = getFormTypeForUnit(lyricSongIndex, unitIndex),
         formTypeIndex = getFormTypeIndexForUnit(lyricSongIndex, unitIndex)
 
-    const onClick = e => {
-        logEvent({ e, componentName: 'UnitCard' })
+    const onClick = () => {
+        logEvent('UnitTab')
         handleVerseSelect({
             scrollLog: 'Stanza tab selected',
             verseIndex,

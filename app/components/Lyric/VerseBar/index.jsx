@@ -45,8 +45,8 @@ const VerseBarContainer = ({
         isLyricLogue = useSelector(mapIsLyricLogue),
         isVerseBarShown = useSelector(getMapIsVerseBarShown(isAbove))
 
-    const onClick = e => {
-        logEvent({ e, componentName: 'VerseBar' })
+    const onClick = () => {
+        logEvent('VerseBar')
         if (isVerseBarShown) {
             dispatch(updateIsAutoScroll(true))
         }

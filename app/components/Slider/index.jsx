@@ -22,7 +22,7 @@ const Slider = () => {
         isSongChangeDone = useSelector(mapIsSongChangeDone)
 
     const onTouchStart = e => {
-        logEvent({ e, componentName: 'Slider' })
+        logEvent('Slider')
         dispatchSliderTouch.current.begin(e, sliderElement.current)
     }
 

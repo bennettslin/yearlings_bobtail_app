@@ -91,6 +91,7 @@ const AnnotationTitle = ({
                         isAnnotationTitle: true,
                         text: `\u201c${annotationTitle}\u201d`,
                     },
+                    analyticsLabel: 'annotationTitle',
                     dotsBit,
                     isAccessed,
                     isSelected,

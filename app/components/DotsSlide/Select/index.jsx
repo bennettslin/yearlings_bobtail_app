@@ -96,6 +96,7 @@ const DotsSlideSelect = ({
                         isAccessed,
                         isSelected: isActivated,
                         text: dotKey,
+                        analyticsLabel: 'dotsSlideSelect',
                         handleAnchorClick,
                     }}
                 />

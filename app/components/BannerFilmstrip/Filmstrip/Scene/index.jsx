@@ -24,7 +24,7 @@ const FilmstripScene = ({
         )
 
     const onClick = e => {
-        logEvent({ e, componentName: 'FilmstripScene' })
+        logEvent('FilmstripScene')
         stopPropagation.current(e)
         dispatchSceneIndex.current(sceneIndex)
     }

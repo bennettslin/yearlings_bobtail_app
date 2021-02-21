@@ -22,8 +22,6 @@ const Annotation = ({
     const stopPropagation = useRef()
 
     const onClick = e => {
-        logEvent({ e, componentName: `Annotation ${annotationIndex}` })
-
         if (isSelected) {
             stopPropagation.current(e)
         }

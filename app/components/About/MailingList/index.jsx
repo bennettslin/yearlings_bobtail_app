@@ -16,20 +16,22 @@ const MailingList = ({ didMount }) => {
         [isValidEmail, setIsValidEmail] = useState(false),
         [emailValue, setEmailValue] = useState('')
 
-    const onFocus = e => {
-        logEvent({
-            e,
-            componentName: 'MailingList',
-            analyticsIdentifier: 'email',
-        })
+    const onFocus = () => {
+        logEvent(
+            'MailingList',
+            {
+                label: 'email',
+            }
+        )
     }
 
-    const onClick = e => {
-        logEvent({
-            e,
-            componentName: 'MailingList',
-            analyticsIdentifier: 'submit',
-        })
+    const onClick = () => {
+        logEvent(
+            'MailingList',
+            {
+                label: 'submit',
+            }
+        )
     }
 
     const onChange = ({ target: { value } }) => {

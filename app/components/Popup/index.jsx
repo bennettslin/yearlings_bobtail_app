@@ -28,7 +28,6 @@ const Popup = ({
         { isFullPopup } = other
 
     const handleContainerClick = e => {
-        logEvent({ e, componentName: popupName })
         stopPropagation.current(e)
     }
 

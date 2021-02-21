@@ -113,6 +113,7 @@ const TextLyricAnchor = forwardRef(({
 
                         wikiIndex && `wiki__${wikiIndex}`
                     ),
+                    analyticsLabel: wikiIndex ? 'wiki' : 'lyric',
                     isAccessed,
                     isSelected,
                     isLyric: !isWikiTextAnchor,

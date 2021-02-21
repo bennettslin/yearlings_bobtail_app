@@ -64,6 +64,7 @@ const Text = forwardRef(({
                             {...{
                                 href,
                                 text,
+                                analyticsLabel: 'pitchAnchor',
                             }}
                         />
                     </>

@@ -56,51 +56,28 @@ const _log = ({
 }
 
 /** Analytics events */
-export const logAccess = ({
-    log,
-    label,
-}) => {
+export const logAccess = (log, keyName) => {
     _log({
         log,
         styleCategory: ACCESS,
         // Only send to GA if the key was registered.
-        ...Boolean(label) && {
+        ...Boolean(keyName) && {
             // Send to GA as an event category.
             category: EVENT,
-            action: 'key',
-            label,
+            action: 'Key',
+            label: keyName,
         },
     })
 }
-export const logEvent = ({
-    componentName,
-    e: { type },
-    analyticsIdentifier,
-}) => {
+export const logEvent = (componentName, { label } = {}) => {
     _log({
-        log: `Event "${type}" from ${componentName}.`,
+        log: `Event "${label}" from ${componentName}.`,
         category: EVENT,
-        ...Boolean(analyticsIdentifier) && {
-            action: type,
-            label: `${componentName} ${analyticsIdentifier}`,
-        },
+        action: componentName,
+        label,
     })
 }
-export const logMount = (componentName) => {
-    _log({
-        log: `${componentName} mounted.`,
-        styleCategory: MOUNT,
-        category: 'lifecycle',
-        action: MOUNT,
-        label: componentName,
-        useTimeForValue: true,
-    })
-}
-export const logPlayer = ({
-    log,
-    success,
-    ...props
-}) => {
+export const logPlayer = (log, { success, ...props }) => {
     _log({
         log,
         styleCategory: success ? SUCCESS : PLAYER,
@@ -160,6 +137,12 @@ export const logFocus = log => {
     _log({
         log,
         category: FOCUS,
+    })
+}
+export const logMount = componentName => {
+    _log({
+        log: `${componentName} mounted.`,
+        category: MOUNT,
     })
 }
 export const logScroll = ({

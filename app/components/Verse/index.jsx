@@ -32,7 +32,7 @@ const Verse = forwardRef(({
         isInteractable = Number.isFinite(verseIndex) && !inVerseBar
 
     const onClick = e => {
-        logEvent({ e, componentName: `Verse ${verseIndex}` })
+        logEvent('Verse')
 
         // Allow clicks on interactable verses.
         if (isInteractable) {

@@ -21,7 +21,7 @@ const SocialMedia = () => {
                 {...{
                     href: FACEBOOK_PAGE,
                     text: 'Facebook',
-                    analyticsIdentifier: 'facebook',
+                    analyticsLabel: 'facebook',
                     handleAnchorClick: handleFacebookClick,
                 }}
             />
@@ -29,7 +29,7 @@ const SocialMedia = () => {
                 {...{
                     href: INSTAGRAM_PAGE,
                     text: 'Instagram',
-                    analyticsIdentifier: 'Instagram',
+                    analyticsLabel: 'instagram',
                     handleAnchorClick: handleInstagramClick,
                 }}
             />

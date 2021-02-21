@@ -32,7 +32,6 @@ const DotsSlide = () => {
         activatedDotKeys = getDotKeysFromBit(dotsSlideBit)
 
     const onClick = e => {
-        logEvent({ e, componentName: 'DotsSlide' })
         stopPropagation.current(e)
         dispatch(resetActivatedDots())
     }

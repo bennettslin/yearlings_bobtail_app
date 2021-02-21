@@ -68,6 +68,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
                 isLyric
                 {...{
                     ref: setRef,
+                    analyticsLabel: 'unitDot',
                     dotsBit,
                     isSelected,
                     isAccessed,
