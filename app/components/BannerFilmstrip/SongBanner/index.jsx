@@ -87,7 +87,6 @@ const SongBanner = () => {
             return
         }
 
-        logEvent('SongBanner')
         _updateBannerHoverStatus(e)
     }
 
@@ -107,6 +106,8 @@ const SongBanner = () => {
             // Do nothing if lyrics locked, but still register click.
             return
         }
+
+        logEvent('SongBanner')
 
         const verseIndex =
             IS_USER_AGENT_DESKTOP ?

@@ -22,6 +22,15 @@ const UrlManager = () => {
         pitchSegmentIndex = useSelector(mapPitchSegmentIndex)
 
     useEffect(() => {
+        logSelect({
+            action: 'load',
+            song: lyricSongIndex,
+            verse: lyricVerseIndex,
+            annotation: lyricAnnotationIndex,
+        })
+    }, [])
+
+    useEffect(() => {
         if (!isPitchShown) {
             navigate(
                 getPathForIndices(

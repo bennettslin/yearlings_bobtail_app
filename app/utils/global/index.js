@@ -6,9 +6,7 @@ import {
 import { getSong } from '../../api/album/songs'
 import { getLayersForScene } from '../../api/album/scenes'
 import { getSceneIndexForVerse } from '../../api/album/verses'
-import { getRoutingSongIndex } from '../../helpers/routing'
 import {
-    getInitialIndicesFromRoutingOrStorage,
     getStoredSongIndex,
     getStoredVerseIndex,
 } from '../../helpers/storage'
@@ -72,17 +70,4 @@ export const logInitialLogs = () => {
     )
 
     logServe(getInitialGaLog())
-
-    // Log initially selected indices.
-    const {
-        initialSongIndex,
-        initialVerseIndex,
-        initialAnnotationIndex,
-    } = getInitialIndicesFromRoutingOrStorage(getRoutingSongIndex())
-    logSelect({
-        action: 'load',
-        song: initialSongIndex,
-        verse: initialVerseIndex,
-        annotation: initialAnnotationIndex,
-    })
 }

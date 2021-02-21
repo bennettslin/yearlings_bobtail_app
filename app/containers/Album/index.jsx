@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import AlbumPageElementContext from '../../contexts/AlbumPageElement'
 import PlayerTimeContext from '../../contexts/PlayerTime'
@@ -13,6 +13,16 @@ const AlbumContainer = ({ children }) => {
 
     // Establish that session started from album, not pitch page.
     setIsAlbumSession()
+
+    useEffect(() => {
+        logServe(
+            'Album container loaded.',
+            {
+                action: 'container',
+                label: 'album',
+            }
+        )
+    }, [])
 
     return (
         <AlbumPageElementContext.Provider {...{ value: children }}>

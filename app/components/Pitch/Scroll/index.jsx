@@ -14,6 +14,7 @@ const PitchScroll = forwardRef((props, ref) => {
     useEffect(() => {
         // Scroll back to top upon page change.
         ref.current.scrollTop = 0
+        logState('pitchSegmentIndex', pitchSegmentIndex)
     }, [pitchSegmentIndex])
 
     return (

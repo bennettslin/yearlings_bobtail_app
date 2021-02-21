@@ -7,12 +7,7 @@
 
 # TODO:
 * Analytics
-    * Don't log device width key until it's known for sure
-    * Distinguish loading from app versus pitch
-    * Don't log select load when loading from pitch
-    * Log page segment shown of pitch
     * When wiki links are broken
-    * Only log song banner when clicked
     * Custom dimension for IP? Is that possible?
     * Custom dimension for device?
 * Home icon on pitch.

@@ -78,6 +78,16 @@ const PitchContainer = ({ children }) => {
     }
 
     useEffect(() => {
+        logServe(
+            'Pitch container loaded.',
+            {
+                action: 'container',
+                label: 'pitch',
+            }
+        )
+    }, [])
+
+    useEffect(() => {
         navigate(
             getPathForPitchPage(pitchSegmentIndex),
             { replace: true }

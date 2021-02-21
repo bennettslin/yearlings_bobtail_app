@@ -26,7 +26,10 @@ const DeviceWrapper = ({ didMount, children }) => {
             DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey
 
     useEffect(() => {
-        logState('deviceWidthKey', deviceWidthKey)
+        // This ensures we start logging only once the device width is known.
+        if (didMount) {
+            logState('deviceWidthKey', deviceWidthKey)
+        }
     }, [deviceWidthKey])
 
     return (
