@@ -1,5 +1,5 @@
 // Wrapper for user agent.
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -24,6 +24,10 @@ const DeviceWrapper = ({ didMount, children }) => {
         deviceWidthKey =
             DEVICE_WIDTH_CONFIGS[deviceWidthIndex] &&
             DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey
+
+    useEffect(() => {
+        logState('deviceWidthKey', deviceWidthKey)
+    }, [deviceWidthKey])
 
     return (
         <div

@@ -26,6 +26,7 @@ const Score = () => {
         }
 
         if (scoreUrl) {
+            logState('selectedScore', lyricSongIndex)
             setIsLoading(true)
         }
     }, [lyricSongIndex, isScoreShown])

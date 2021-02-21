@@ -18,9 +18,9 @@ export default [
         neededHours: 25,
     },
     {
-        taskName: `Be smarter about what I want analytics to measure. Selected indices. About links. When wiki links are broken? Create notes.`,
-        workedHours: 0,
-        neededHours: 5,
+        taskName: `Be smarter about what I want analytics to measure. About links. When wiki links are broken? Create notes.`,
+        workedHours: 11,
+        neededHours: 16,
     },
 
     // Ongoing, only nice to have.

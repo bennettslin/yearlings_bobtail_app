@@ -52,6 +52,10 @@ const Anchor = forwardRef(({
         isAccessed = isAccessedBeforeDesktop && IS_USER_AGENT_DESKTOP
 
     const onClick = e => {
+        if (isSelected) {
+            return
+        }
+
         logEvent(
             'Anchor',
             analyticsLabel

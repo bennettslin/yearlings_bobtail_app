@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -13,9 +13,13 @@ import Wall from './Wall'
 import Ceiling from './Ceiling'
 import Floor from './Floor'
 import './style'
+import { mapLyricSongIndex } from '../../redux/lyric/selector'
 
 const Theatre = ({ didMount }) => {
-    const isWindowResizeDone = useSelector(mapIsWindowResizeDone)
+    const
+        isWindowResizeDone = useSelector(mapIsWindowResizeDone),
+        lyricSongIndex = useSelector(mapLyricSongIndex),
+        [didInitialEnter, setDidInitialEnter] = useState(false)
 
     const onExit = () => {
         logTransition('Theatre did exit.')
@@ -23,11 +27,24 @@ const Theatre = ({ didMount }) => {
 
     const onEntered = () => {
         logTransition('Theatre did enter.')
+        setDidInitialEnter(true)
     }
 
     useEffect(() => {
         logMount('Theatre')
     }, [])
+
+    useEffect(() => {
+        if (didInitialEnter) {
+            logServe(
+                'First meaningful paint.',
+                {
+                    action: 'paint',
+                    label: lyricSongIndex,
+                }
+            )
+        }
+    }, [didInitialEnter])
 
     return didMount && (
         <CSSTransition
