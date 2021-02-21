@@ -13,7 +13,7 @@ export const getDefinedOnlyPayload = (payload, storeName) => {
             logError(
                 'Payload tried to pass undefined value!',
                 {
-                    action: `undefinedPayloadValue`,
+                    action: `payload`,
                     label: `store: ${storeName}, key: ${key}`,
                 },
             )

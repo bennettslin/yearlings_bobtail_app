@@ -123,12 +123,11 @@ const PresenceSvg = ({
 
         } catch (error) {
             logError(
-                'Error parsing viewBox!',
+                'Error parsing svg!',
                 {
-                    action: 'parseSvg',
-                    label: actorKey ?
-                        `actor: ${actorKey}, instance: ${presenceKey}` :
-                        `thing: ${presenceType}, instance: ${presenceKey}`,
+                    action: 'svg',
+                    label:
+                        `${actorKey ? `actor: ${actorKey}` : `thing: ${presenceType}`}, instance: ${presenceKey}, error: ${error.message}`,
                 }
             )
         }

@@ -92,7 +92,7 @@ const AudioManager = () => {
                 logError(
                     `Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`,
                     {
-                        action: 'syncTimeAndVerse',
+                        action: 'sync',
                         label: `song: ${selectedSongIndex}, verse: ${selectedVerseIndex}, time: ${currentTime}`,
                     }
                 )
