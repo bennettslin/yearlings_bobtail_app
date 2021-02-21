@@ -92,7 +92,7 @@ const LOG_STYLES = {
         fontSize: '1.1em',
     },
     [STATE]: {
-        color: '#ad8',
+        color: '#da8',
         fontSize: '0.8em',
     },
     [SUCCESS]: {

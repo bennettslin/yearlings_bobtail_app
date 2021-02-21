@@ -119,14 +119,17 @@ export const logServe = (log, props) => {
 }
 export const logState = (stateName, label) => {
     let labelText = label
-    if (Number.isFinite(label)) {
+    if (!label) {
+        labelText = 'on'
+    }
+    if (typeof label === 'boolean' || Number.isFinite(label)) {
         labelText = label ? 'on' : 'off'
     }
     _log({
-        log: `${stateName} state is now ${labelText}.`,
+        log: `"${stateName}" is now ${labelText}.`,
         category: STATE,
         action: stateName,
-        label: labelText,
+        label,
     })
 }
 export const logError = (log, props) => {

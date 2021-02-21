@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import Iframe from '../../modules/Iframe'
 import { mapSelectedWikiUrl } from '../../redux/wiki/selector'
+import { logState } from '../../utils/logger'
 
 const Wiki = () => {
     const
@@ -20,6 +21,7 @@ const Wiki = () => {
         }
 
         if (selectedWikiUrl) {
+            logState('selectedWiki', selectedWikiUrl.split('wiki/')[1])
             setIsLoading(true)
         }
     }, [selectedWikiUrl])
