@@ -64,9 +64,7 @@ const Button = ({
             if (!isClickDisabled) {
                 logEvent(
                     `Button`,
-                    {
-                        label: buttonName,
-                    }
+                    buttonName
                 )
 
                 handleButtonClick(e)

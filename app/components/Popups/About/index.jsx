@@ -1,5 +1,5 @@
 // Popup container for about section.
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateIsAboutShown } from '../../../redux/toggle/action'
 import About from '../../About'
@@ -16,6 +16,13 @@ const AboutPopup = () => {
     const handleCloseClick = () => {
         dispatch(updateIsAboutShown())
     }
+
+    useEffect(() => {
+        logState(
+            'About',
+            isAboutShown
+        )
+    }, [isAboutShown])
 
     return (
         <Popup

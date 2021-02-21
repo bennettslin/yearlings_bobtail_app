@@ -19,18 +19,14 @@ const MailingList = ({ didMount }) => {
     const onFocus = () => {
         logEvent(
             'MailingList',
-            {
-                label: 'email',
-            }
+            'email'
         )
     }
 
     const onClick = () => {
         logEvent(
             'MailingList',
-            {
-                label: 'submit',
-            }
+            'submit'
         )
     }
 

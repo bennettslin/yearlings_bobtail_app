@@ -54,9 +54,7 @@ const Anchor = forwardRef(({
     const onClick = e => {
         logEvent(
             'Anchor',
-            {
-                label: analyticsLabel,
-            }
+            analyticsLabel
         )
 
         handleAnchorClick(e)

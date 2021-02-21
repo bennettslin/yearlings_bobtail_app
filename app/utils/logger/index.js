@@ -70,7 +70,7 @@ export const logAccess = (log, keyName) => {
         },
     })
 }
-export const logEvent = (componentName, { label } = {}) => {
+export const logEvent = (componentName, label) => {
     _log({
         log: `Event "${label || 'click'}" from ${componentName}.`,
         category: EVENT,
@@ -117,11 +117,16 @@ export const logServe = (log, props) => {
         ...props,
     })
 }
-export const logState = (log, props) => {
+export const logState = (stateName, label) => {
+    let labelText = label
+    if (typeof label === 'boolean') {
+        labelText = label ? 'on' : 'off'
+    }
     _log({
-        log,
+        log: `${stateName} state is now ${labelText}.`,
         category: STATE,
-        ...props,
+        action: stateName,
+        label: labelText,
     })
 }
 export const logError = (log, props) => {
