@@ -14,8 +14,8 @@ import './app/scss/app'
 
 initialiseGlobalAdminObjects()
 globaliseLogs()
-setAsyncGaCustomDimensions()
 setGaCustomDimensions()
+setAsyncGaCustomDimensions()
 
 logBuild()
 logDevice()

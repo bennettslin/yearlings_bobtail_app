@@ -7,7 +7,7 @@ export const getPublicIp = () => (
     ])
         .then(ip => {
             if (IS_STAGING) {
-                logServe(`IP is ${ip}.`)
+                logServe(`Public IP address is ${ip}.`)
             }
             return ip
         })

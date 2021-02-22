@@ -1,6 +1,7 @@
 export const ACCESS = 'access'
 export const ADMIN = 'admin'
 export const ANALYTICS__FAILURE = 'analyticsFailure'
+export const ANALYTICS__PENDING = 'analyticsPending'
 export const ANALYTICS__SUCCESS = 'analyticsSuccess'
 export const ERROR = 'error'
 export const EVENT = 'event'
@@ -54,6 +55,10 @@ const LOG_STYLES = {
     },
     [ANALYTICS__FAILURE]: {
         color: '#b44',
+        fontSize: '0.6em',
+    },
+    [ANALYTICS__PENDING]: {
+        color: '#bb4',
         fontSize: '0.6em',
     },
     [ANALYTICS__SUCCESS]: {
@@ -113,6 +118,7 @@ export const getStyleForCategory = ({
     _getStyles({
         ...(
             category !== ANALYTICS__SUCCESS &&
+            category !== ANALYTICS__PENDING &&
             category !== ANALYTICS__FAILURE
         ) && BASE_STYLES,
         ...LOG_STYLES[category],

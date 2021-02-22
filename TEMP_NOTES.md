@@ -6,8 +6,9 @@
 * At the very least, get rid of Admin styles
 
 # TODO:
-* Analytics
-    * Custom dimension for IP? Is that possible?
+* Delay GA calls until IP custom dimension is set. Set intervals and have limit.
+* Take care of IP errors. (Maybe it will be fine in production?)
+* Running locally, getWindowDimensions initially has wrong root element height.
 * Home icon on pitch.
 * Kyon tips hand
 * Freeway panel.
