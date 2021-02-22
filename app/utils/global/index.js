@@ -61,7 +61,7 @@ export const globaliseLogs = () => {
 
 export const logBuild = () => {
     logServe(
-        `App built ${BUILD_DATE_TIME}.`,
+        `Serving app built on ${BUILD_DATE_TIME}.`,
         {
             action: 'build',
             label: BUILD_DATE_TIME,

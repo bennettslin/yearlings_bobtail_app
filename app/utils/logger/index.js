@@ -103,7 +103,7 @@ export const logSelect = ({
     }
 
     _log({
-        log: message,
+        log: `Selected ${message}.`,
         category: SELECT,
         action,
         label: message,

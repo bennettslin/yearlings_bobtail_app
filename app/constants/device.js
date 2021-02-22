@@ -36,5 +36,7 @@ export const IS_TOUCH_SUPPORTED =
     getWindow().navigator.msMaxTouchPoints > 0
 
 export const logDevice = () => {
-    logServe(`${BROWSER_NAME ? BROWSER_NAME : ''}${BROWSER_VERSION ? ` ${BROWSER_VERSION}` : ''},${ENGINE_NAME ? ` ${ENGINE_NAME}` : ''}${ENGINE_VERSION ? ` ${ENGINE_VERSION}` : ''},${OS_NAME ? ` ${OS_NAME}` : ''}${OS_VERSION ? ` ${OS_VERSION}` : ''},${PLATFORM_VENDOR ? ` ${PLATFORM_VENDOR}` : ''}${PLATFORM_TYPE ? ` ${PLATFORM_TYPE}` : ''}.`)
+    if (IS_STAGING) {
+        logServe(`${BROWSER_NAME ? BROWSER_NAME : ''}${BROWSER_VERSION ? ` ${BROWSER_VERSION}` : ''},${ENGINE_NAME ? ` ${ENGINE_NAME}` : ''}${ENGINE_VERSION ? ` ${ENGINE_VERSION}` : ''},${OS_NAME ? ` ${OS_NAME}` : ''}${OS_VERSION ? ` ${OS_VERSION}` : ''},${PLATFORM_VENDOR ? ` ${PLATFORM_VENDOR}` : ''}${PLATFORM_TYPE ? ` ${PLATFORM_TYPE}` : ''}.`)
+    }
 }

@@ -1,12 +1,15 @@
-import publicIp from 'public-ip'
+import PublicIp from 'public-ip'
 
-function getPublicIp() {
+export const getPublicIp = () => (
     Promise.any([
-        publicIp.v4(),
-        publicIp.v6(),
+        PublicIp.v4(),
+        PublicIp.v6(),
     ])
         .then(ip => {
-            console.log(ip)
+            if (IS_STAGING) {
+                logServe(`IP is ${ip}.`)
+            }
+            return ip
         })
         .catch(error => {
             logError(
@@ -16,9 +19,6 @@ function getPublicIp() {
                     label: error.message,
                 }
             )
+            return null
         })
-}
-
-getPublicIp()
-
-export const IP_ADDRESS = ''
+)

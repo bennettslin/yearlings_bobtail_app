@@ -2,6 +2,7 @@
 import { logDevice } from './app/constants/device'
 import {
     logGa,
+    setAsyncGaCustomDimensions,
     setGaCustomDimensions,
 } from './app/utils/analytics'
 import {
@@ -10,16 +11,15 @@ import {
     logBuild,
 } from './app/utils/global'
 import './app/scss/app'
-import { IP_ADDRESS } from './app/utils/ip'
 
 initialiseGlobalAdminObjects()
-setGaCustomDimensions()
 globaliseLogs()
+setAsyncGaCustomDimensions()
+setGaCustomDimensions()
 
 logBuild()
 logDevice()
 logGa()
-logServe(IP_ADDRESS)
 
 // App styles must be imported after global styles.
 export {
