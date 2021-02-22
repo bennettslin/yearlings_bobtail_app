@@ -6,8 +6,8 @@
 * At the very least, get rid of Admin styles
 
 # TODO:
-* Delay GA calls until IP custom dimension is set. Set intervals and have limit.
 * Take care of IP errors. (Maybe it will be fine in production?)
+* Make build number just dots, and in order.
 * Running locally, getWindowDimensions initially has wrong root element height.
 * Home icon on pitch.
 * Kyon tips hand

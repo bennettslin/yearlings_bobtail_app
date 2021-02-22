@@ -4,7 +4,12 @@ import {
 } from '../../constants/device'
 import { getPublicIp } from '../ip'
 
-let isIpReady = false
+/**
+ * NOTE: This is kind of a quick workaround for now, to delay the initial GA
+ * calls until the async custom dimensions are ready. I may want to make this
+ * logic more robust in the future.
+ */
+let isAsyncPromiseComplete = false
 
 const isGaUndefined = () => (
     typeof ga === 'undefined'
@@ -32,7 +37,7 @@ export const setAsyncGaCustomDimensions = async () => {
         return
     }
     ga('set', 'dimension12', await getPublicIp())
-    isIpReady = true
+    isAsyncPromiseComplete = true
 }
 
 export const sendToGa = ({
@@ -40,13 +45,18 @@ export const sendToGa = ({
     action,
     label,
     value,
+    count = 0,
 
 }) => {
     if (isGaUndefined()) {
         return 'failure'
     }
 
-    if (!isIpReady) {
+    /**
+     * If after five seconds the promise hasn't completed, just go ahead and
+     * send the GA event without the async custom dimensions.
+     */
+    if (!isAsyncPromiseComplete && count < 50) {
         setTimeout(
             () => {
                 sendToGa({
@@ -54,6 +64,7 @@ export const sendToGa = ({
                     action,
                     label,
                     value,
+                    count: count + 1,
                 })
             }, 100
         )
