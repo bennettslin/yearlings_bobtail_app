@@ -10,7 +10,6 @@
 * Make build number just dots, and in order.
 * Running locally, getWindowDimensions initially has wrong root element height.
 * Home icon on pitch.
-* Kyon tips hand
 * Freeway panel.
 * Loading song from number in URL shows verse scroll bar.
 * Delay presence exit opacity transitions for non-opacity transitions.

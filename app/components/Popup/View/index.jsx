@@ -89,7 +89,7 @@ const PopupView = ({
                             'PopupViewContent__widePadding': hasWidePadding,
                         },
                         !noBoxShadow && 'boxShadow__popupView',
-                        !noOverflowHidden && 'ovH',
+                        !noOverflowHidden && 'PopupViewContent__noOverflowHidden',
                     ]
                 ),
                 ...Number.isFinite(popupMaxHeight) && {

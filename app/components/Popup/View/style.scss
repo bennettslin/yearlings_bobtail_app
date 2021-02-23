@@ -38,7 +38,7 @@
     max-width: $WIDTH_LAPTOP;
     width: 100%;
 
-    
+
     .DW__tabletOrDesktopWidth
     & {
         width: calc(
@@ -102,7 +102,6 @@
     width: 100%;
     height: 100%;
     background-color: $colour__foreground;
-    overflow-y: scroll;
 
     .DW__tabletOrDesktopWidth
     & {
@@ -117,4 +116,8 @@
 .PopupViewContent__widePadding {
     // Wider padding to accommodate popup buttons.
     padding: $PADDING_POPUP_CONTENT_WIDE;
+}
+
+.PopupViewContent__noOverflowHidden {
+    overflow-y: scroll;
 }
