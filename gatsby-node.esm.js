@@ -1,6 +1,5 @@
 import webpack from 'webpack'
 import path from 'path'
-import format from 'date-fns/format'
 import scene from './admin/data/scene'
 import album from './admin/data/album'
 import pitch from './admin/data/pitch'
@@ -16,7 +15,8 @@ export const onCreateWebpackConfig = ({ actions }) => {
     album._build = 'compiled'
     pitch._build = 'compiled'
 
-    const buildDateTime = new Date()
+    // Get primitive value of current date and time.
+    const buildDateTime = new Date().valueOf()
 
     actions.setWebpackConfig({
         plugins: [
@@ -28,9 +28,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
                     ALBUM: JSON.stringify(album),
                     PITCH: JSON.stringify(pitch),
                 },
-                BUILD_DATE_TIME: JSON.stringify(
-                    `${format(buildDateTime, 'MMMM d, yyyy, h:mmaaaaa')}m`
-                ),
+                BUILD_DATE_TIME: buildDateTime,
                 IS_STAGING: getIsStagingEnvironment(),
             }),
         ],

@@ -58,13 +58,3 @@ export const globaliseLogs = () => {
     global.logTransition = logTransition
     global.logError = logError
 }
-
-export const logBuild = () => {
-    logServe(
-        `Serving app built on ${BUILD_DATE_TIME}.`,
-        {
-            action: 'build',
-            label: BUILD_DATE_TIME,
-        }
-    )
-}

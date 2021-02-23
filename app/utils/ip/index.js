@@ -5,12 +5,7 @@ export const getPublicIp = () => (
         PublicIp.v4(),
         PublicIp.v6(),
     ])
-        .then(ip => {
-            if (IS_STAGING) {
-                logServe(`Public IP address is ${ip}.`)
-            }
-            return ip
-        })
+        .then(ip => ip)
         .catch(error => {
             logError(
                 error,

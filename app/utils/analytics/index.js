@@ -2,6 +2,7 @@ import { GA_ACCOUNT__STAGING } from '../../constants/analytics'
 import {
     BROWSER_NAME, BROWSER_VERSION, ENGINE_NAME, ENGINE_VERSION, IS_TOUCH_SUPPORTED, IS_USER_AGENT_DESKTOP, OS_NAME, OS_VERSION, PLATFORM_TYPE, PLATFORM_VENDOR,
 } from '../../constants/device'
+import { getDateTimeForGa } from '../build'
 import { getPublicIp } from '../ip'
 
 /**
@@ -19,7 +20,7 @@ export const setGaCustomDimensions = () => {
     if (isGaUndefined()) {
         return
     }
-    ga('set', 'dimension1', BUILD_DATE_TIME)
+    ga('set', 'dimension1', getDateTimeForGa(BUILD_DATE_TIME))
     ga('set', 'dimension2', IS_USER_AGENT_DESKTOP)
     ga('set', 'dimension3', IS_TOUCH_SUPPORTED)
     ga('set', 'dimension4', BROWSER_NAME)
@@ -36,8 +37,19 @@ export const setAsyncGaCustomDimensions = async () => {
     if (isGaUndefined()) {
         return
     }
-    ga('set', 'dimension12', await getPublicIp())
+    const ip = await getPublicIp()
+    ga('set', 'dimension12', ip)
     isAsyncPromiseComplete = true
+
+    logServe(
+        IS_STAGING ?
+            `Public IP address is ${ip}.` :
+            `Asynchronous promises complete for custom dimensions.`,
+        {
+            action: 'ip',
+            label: ip,
+        }
+    )
 }
 
 export const sendToGa = ({
@@ -84,18 +96,17 @@ export const sendToGa = ({
 }
 
 export const logGa = () => {
-    let gaLog
-
     if (isGaUndefined()) {
-        gaLog = 'GA did not initialise.'
+        logServe('GA did not initialise.')
 
     } else {
-        if (IS_STAGING) {
-            gaLog = `GA initialised with staging id ${GA_ACCOUNT__STAGING}.`
-        } else {
-            gaLog = 'GA initialised with production id.'
-        }
+        logServe(
+            IS_STAGING ?
+                `GA initialised with staging id ${GA_ACCOUNT__STAGING}.` :
+                'GA initialised with production id.',
+            {
+                action: 'ga',
+            }
+        )
     }
-
-    logServe(gaLog)
 }

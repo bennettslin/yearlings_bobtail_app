@@ -5,10 +5,10 @@ import {
     setAsyncGaCustomDimensions,
     setGaCustomDimensions,
 } from './app/utils/analytics'
+import { logBuild } from './app/utils/build'
 import {
     initialiseGlobalAdminObjects,
     globaliseLogs,
-    logBuild,
 } from './app/utils/global'
 import './app/scss/app'
 
