@@ -16,6 +16,8 @@ export const onCreateWebpackConfig = ({ actions }) => {
     album._build = 'compiled'
     pitch._build = 'compiled'
 
+    const buildDateTime = new Date()
+
     actions.setWebpackConfig({
         plugins: [
             // Define global constant at compile time.
@@ -27,7 +29,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
                     PITCH: JSON.stringify(pitch),
                 },
                 BUILD_DATE_TIME: JSON.stringify(
-                    `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
+                    `${format(buildDateTime, 'MMMM d, yyyy, h:mmaaaaa')}m`
                 ),
                 IS_STAGING: getIsStagingEnvironment(),
             }),
