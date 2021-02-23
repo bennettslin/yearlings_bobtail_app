@@ -82,7 +82,12 @@ const ResizeManager = ({
 
     useEffect(() => {
         // Once we have access to the window object, update the viewport store.
-        beginEnterTransition()
+
+        /**
+         * NOTE: The timeout is needed for proper resizing in local development
+         * only, but it probably doesn't hurt to just do it always.
+         */
+        setTimeout(() => beginEnterTransition(), 0)
 
         getWindow().onresize = beginExitTransition
         return () => {
