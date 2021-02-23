@@ -17,11 +17,6 @@ export default [
         workedHours: 5,
         neededHours: 25,
     },
-    {
-        taskName: `Analytics work.`,
-        workedHours: 17,
-        neededHours: 20,
-    },
 
     // Ongoing, only nice to have.
     {

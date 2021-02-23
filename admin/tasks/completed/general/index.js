@@ -5067,4 +5067,8 @@ export default [
         taskName: `Have all entrance store transition durations be constants in a single file.`,
         workedHours: 5,
     },
+    {
+        taskName: `Analytics work.`,
+        workedHours: 20,
+    },
 ]
