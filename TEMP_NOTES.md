@@ -9,7 +9,9 @@
 * Take care of IP errors. (Maybe it will be fine in production?)
 * Home icon on pitch.
 * Freeway panel.
-* Loading song from number in URL shows verse scroll bar.
+* Loading song in local development shows verse scroll bar.
+* Loading pitch or song from number just plain doesn't work in production.
+* Changing verse and annotation through URL also doesn't work?!
 * Delay presence exit opacity transitions for non-opacity transitions.
 * Only prolong realistic presence transitions on enter, not exit.
 * Delay cubes for presence transition exit. Need to first calculate presence exit transition times.
