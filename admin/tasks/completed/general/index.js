@@ -5071,4 +5071,8 @@ export default [
         taskName: `Analytics work.`,
         workedHours: 20,
     },
+    {
+        taskName: `Build environment work.`,
+        workedHours: 5,
+    },
 ]
