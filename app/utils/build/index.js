@@ -16,4 +16,7 @@ export const logBuild = () => {
             label: getDateTimeForGa(BUILD_DATE_TIME),
         }
     )
+    logServe(
+        `IS_RUNTIME is ${IS_RUNTIME ? 'true' : 'false'}, IS_PRODUCTION is ${IS_PRODUCTION ? 'true' : 'false'}.`
+    )
 }

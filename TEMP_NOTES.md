@@ -9,8 +9,8 @@
 * Take care of IP errors. (Maybe it will be fine in production?)
 * Home icon on pitch.
 * Freeway panel.
-* Loading pitch or song from number just plain doesn't work in production.
-* Changing verse and annotation through URL also doesn't work?!
+* Loading pitch or song from number doesn't work when deployed, but does when staging locally?!
+* Changing verse and annotation through URL doesn't work when deployed, but does when staging locally?!
 * Delay presence exit opacity transitions for non-opacity transitions.
 * Only prolong realistic presence transitions on enter, not exit.
 * Delay cubes for presence transition exit. Need to first calculate presence exit transition times.

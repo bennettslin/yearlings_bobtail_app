@@ -5,8 +5,8 @@ import album from './admin/data/album'
 import pitch from './admin/data/pitch'
 
 import {
-    getIsLocalDevelopment,
-    getIsStagingEnvironment,
+    getIsRuntimeBuild,
+    getIsProductionBuild,
 } from './app/utils/node'
 
 export const onCreateWebpackConfig = ({ actions }) => {
@@ -22,23 +22,23 @@ export const onCreateWebpackConfig = ({ actions }) => {
         plugins: [
             // Define global constant at compile time.
             new webpack.DefinePlugin({
-                // Grab album from global env in staging and production.
-                ...!getIsLocalDevelopment() && {
+                // Grab from global data in compiled builds.
+                ...!getIsRuntimeBuild() && {
                     SCENE: JSON.stringify(scene),
                     ALBUM: JSON.stringify(album),
                     PITCH: JSON.stringify(pitch),
                 },
                 BUILD_DATE_TIME: buildDateTime,
-                IS_LOCAL: getIsLocalDevelopment(),
-                IS_STAGING: getIsStagingEnvironment(),
+                IS_RUNTIME: getIsRuntimeBuild(),
+                IS_PRODUCTION: getIsProductionBuild(),
             }),
         ],
         resolve: {
             // Import from files without specifying extensions.
             extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
             alias: {
-                // Grab data from admin folder in local development.
-                data: getIsLocalDevelopment() ?
+                // Grab data from admin folder in runtime builds.
+                data: getIsRuntimeBuild() ?
                     path.resolve(__dirname, './admin/data') :
                     path.resolve(__dirname, './app/data'),
             },

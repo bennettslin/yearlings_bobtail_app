@@ -26,8 +26,8 @@ import {
 } from '../logger'
 
 export const initialiseGlobalAdminObjects = () => {
-    // Allow access to album in local delivery.
-    if (IS_STAGING) {
+    // Allow console access to album when not in production build.
+    if (!IS_PRODUCTION) {
         global.album = getAlbum()
         global.scene = getScene()
         global.pitch = getPitch()

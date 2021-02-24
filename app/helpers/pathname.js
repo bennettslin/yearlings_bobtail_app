@@ -36,13 +36,13 @@ export const getIndexFromPath = pathname => (
 )
 
 export const getIsValidAdminPath = element => (
-    // Admin paths are only valid in staging.
-    IS_STAGING && VALID_ADMIN_PATHS[getPathname(element)]
+    // Admin paths are only valid when not in production build.
+    !IS_PRODUCTION && VALID_ADMIN_PATHS[getPathname(element)]
 )
 
 export const getIsStorePath = element => (
     !VALID_ADMIN_PATHS[getPathname(element)] || (
-        IS_STAGING &&
+        !IS_PRODUCTION &&
         getPathname(element) === 'annotations'
     )
 )

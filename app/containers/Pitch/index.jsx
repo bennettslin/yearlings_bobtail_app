@@ -99,7 +99,7 @@ const PitchContainer = ({ didMount, children }) => {
         focusElement()
     }, [pitchSegmentIndex])
 
-    return didMount ? (
+    return didMount && (
         <div
             {...{
                 ref: pitchContainerElement,
@@ -139,7 +139,7 @@ const PitchContainer = ({ didMount, children }) => {
             <PitchNav />
             <PitchNavigation {...{ ref: navigatePitch }} />
         </div>
-    ) : null
+    )
 }
 
 PitchContainer.propTypes = {

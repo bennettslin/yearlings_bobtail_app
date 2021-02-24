@@ -1,6 +1,6 @@
 import {
     getFaviconFileName,
-    getIsStagingEnvironment,
+    getIsProductionBuild,
 } from './app/utils/node'
 import {
     GA_ACCOUNT__STAGING,
@@ -18,7 +18,7 @@ export default {
             options: {
                 analyzerPort: 1114,
                 openAnalyzer: false,
-            }
+            },
         },
         {
             resolve: `gatsby-plugin-manifest`,
@@ -33,15 +33,17 @@ export default {
                 icon: `assets/favicon/${getFaviconFileName()}.png`,
             },
         },
-        ...getIsStagingEnvironment() ? [
-            {
-                // Include admin pages only in staging environment.
-                resolve: `gatsby-plugin-page-creator`,
-                options: {
-                    path: `${__dirname}/admin/pages`,
+        ...getIsProductionBuild() ?
+            [] :
+            [
+                {
+                    // Include admin pages if not production build.
+                    resolve: `gatsby-plugin-page-creator`,
+                    options: {
+                        path: `${__dirname}/admin/pages`,
+                    },
                 },
-            },
-        ] : [],
+            ],
         {
             // Always include app pages.
             resolve: `gatsby-plugin-page-creator`,
@@ -64,9 +66,9 @@ export default {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: getIsStagingEnvironment() ?
-                    GA_ACCOUNT__STAGING :
-                    GA_ACCOUNT__PRODUCTION,
+                trackingId: getIsProductionBuild() ?
+                    GA_ACCOUNT__PRODUCTION :
+                    GA_ACCOUNT__STAGING,
             },
         },
     ],

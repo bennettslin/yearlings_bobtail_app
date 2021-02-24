@@ -12,10 +12,10 @@ const getDidMountHoc = (DidMountComponent, localTimeoutDuration) => {
         useEffect(() => {
             /**
              * Page element containers need to set a timeout to prevent wonky
-             * loading that only affects local development. This only started
-             * happening with the latest Gatsby version.
+             * loading that only affects local runtime development. This only
+             * started happening with the latest Gatsby version.
              */
-            if (IS_LOCAL && Number.isFinite(localTimeoutDuration)) {
+            if (IS_RUNTIME && Number.isFinite(localTimeoutDuration)) {
                 setTimeout(() => setDidMount(true), localTimeoutDuration)
             } else {
                 setDidMount(true)

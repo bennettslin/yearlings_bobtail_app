@@ -24,7 +24,7 @@ export const sendToGaFromLog = ({
         value,
     })
 
-    if (IS_STAGING) {
+    if (!IS_PRODUCTION) {
         let categoryStyle
 
         switch (gaStatus) {
