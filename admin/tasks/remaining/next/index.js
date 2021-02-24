@@ -11,6 +11,12 @@ export default [
         neededHours: 20,
     },
 
+    {
+        taskName: `Path and query string fixes.`,
+        workedHours: 1,
+        neededHours: 2,
+    },
+
     // Needed.
     {
         taskName: `Finish annotation edits.`,
