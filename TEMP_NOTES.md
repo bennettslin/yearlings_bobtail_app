@@ -9,7 +9,6 @@
 * Take care of IP errors. (Maybe it will be fine in production?)
 * Home icon on pitch.
 * Freeway panel.
-* Loading song in local development shows verse scroll bar.
 * Loading pitch or song from number just plain doesn't work in production.
 * Changing verse and annotation through URL also doesn't work?!
 * Delay presence exit opacity transitions for non-opacity transitions.

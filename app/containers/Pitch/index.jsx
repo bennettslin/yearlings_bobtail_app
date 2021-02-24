@@ -4,6 +4,7 @@ import cx from 'classnames'
 import { useDispatch, useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet'
 import { navigate } from 'gatsby'
+import getDidMountHoc from '../../components/DidMountHoc'
 import AccessStylesheet from '../../components/Stylesheets/Access'
 import Pitch from '../../components/Pitch'
 import PitchNav from '../../components/PitchNav'
@@ -21,7 +22,7 @@ import AccessWrapper from '../../wrappers/AccessWrapper'
 import ResizeManager from '../../managers/Resize'
 import './style'
 
-const PitchContainer = ({ children }) => {
+const PitchContainer = ({ didMount, children }) => {
     const
         dispatch = useDispatch(),
         pitchContainerElement = useRef(),
@@ -40,7 +41,9 @@ const PitchContainer = ({ children }) => {
     }
 
     const focusElement = () => {
-        pitchScrollElement.current.focus()
+        if (pitchScrollElement.current) {
+            pitchScrollElement.current.focus()
+        }
     }
 
     const onKeyDown = e => {
@@ -96,7 +99,7 @@ const PitchContainer = ({ children }) => {
         focusElement()
     }, [pitchSegmentIndex])
 
-    return (
+    return didMount ? (
         <div
             {...{
                 ref: pitchContainerElement,
@@ -136,17 +139,18 @@ const PitchContainer = ({ children }) => {
             <PitchNav />
             <PitchNavigation {...{ ref: navigatePitch }} />
         </div>
-    )
+    ) : null
 }
 
 PitchContainer.propTypes = {
     children: PropTypes.node.isRequired,
+    didMount: PropTypes.bool.isRequired,
 }
 
-const ParentPitchContainer = ({ children }) => (
+const ParentPitchContainer = ({ didMount, children }) => (
     <DeviceWrapper>
         <AccessWrapper>
-            <PitchContainer>
+            <PitchContainer {...{ didMount }}>
                 {children}
             </PitchContainer>
             <AccessStylesheet />
@@ -156,6 +160,8 @@ const ParentPitchContainer = ({ children }) => (
 
 ParentPitchContainer.propTypes = {
     children: PropTypes.node.isRequired,
+    didMount: PropTypes.bool.isRequired,
 }
 
-export default ParentPitchContainer
+// Eyeballed timeout duration to prevent wonky loading in local development.
+export default getDidMountHoc(ParentPitchContainer, 100)

@@ -25,6 +25,7 @@ module.exports = {
         'SCENE': true,
         'PITCH': true,
         'BUILD_DATE_TIME': true,
+        'IS_LOCAL': true,
         'IS_STAGING': true,
         'ga': true,
         'logAccess': true,

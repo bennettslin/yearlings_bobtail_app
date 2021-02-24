@@ -1,5 +1,6 @@
-import React, { memo, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import getDidMountHoc from '../../components/DidMountHoc'
 import AlbumPageElementContext from '../../contexts/AlbumPageElement'
 import PlayerTimeContext from '../../contexts/PlayerTime'
 import AudioManager from '../../managers/Audio'
@@ -8,7 +9,7 @@ import RootContainer from '../Root'
 import StylesheetContainer from '../Stylesheet'
 import { setIsAlbumSession } from '../../utils/browser'
 
-const AlbumContainer = ({ children }) => {
+const AlbumContainer = ({ didMount, children }) => {
     const [playerTime, setPlayerTime] = useState(0)
 
     // Establish that session started from album, not pitch page.
@@ -24,7 +25,7 @@ const AlbumContainer = ({ children }) => {
         )
     }, [])
 
-    return (
+    return didMount && (
         <AlbumPageElementContext.Provider {...{ value: children }}>
             <PlayerTimeContext.Provider
                 {...{
@@ -45,6 +46,8 @@ const AlbumContainer = ({ children }) => {
 
 AlbumContainer.propTypes = {
     children: PropTypes.node.isRequired,
+    didMount: PropTypes.bool.isRequired,
 }
 
-export default memo(AlbumContainer)
+// Eyeballed timeout duration to prevent wonky loading in local development.
+export default getDidMountHoc(AlbumContainer, 100)

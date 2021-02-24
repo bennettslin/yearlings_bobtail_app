@@ -29,6 +29,7 @@ export const onCreateWebpackConfig = ({ actions }) => {
                     PITCH: JSON.stringify(pitch),
                 },
                 BUILD_DATE_TIME: buildDateTime,
+                IS_LOCAL: getIsLocalDevelopment(),
                 IS_STAGING: getIsStagingEnvironment(),
             }),
         ],
