@@ -53,7 +53,7 @@ import {
 import {
     getInitialSelectedIndices,
     getInitialPitchIndex,
-} from '../utils/routing/routing'
+} from '../utils/routing/indices'
 
 export const getAlbumReducers = (pathname, search) => {
     const {

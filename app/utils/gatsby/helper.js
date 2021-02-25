@@ -6,7 +6,7 @@ import {
     getIsValidAdminPath,
     getIsValidPitchPagePath,
     getIsStorePath,
-} from '../routing/pathname'
+} from '../routing/path'
 import { getIsAlbumSession } from '../browser'
 import { getIsServerSide } from '../server'
 

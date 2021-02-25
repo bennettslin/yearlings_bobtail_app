@@ -1,4 +1,5 @@
 import { getIsPitchSegmentValid } from '../../api/pitch/segments'
+import { PITCH_PATH } from '../../constants/routing'
 
 const VALID_ADMIN_PATHS = {
     actors: true,
@@ -8,8 +9,6 @@ const VALID_ADMIN_PATHS = {
     skies: true,
     things: true,
 }
-
-const PITCH_PATH = 'pitch'
 
 export const getPathname = rawPathname => (
     rawPathname

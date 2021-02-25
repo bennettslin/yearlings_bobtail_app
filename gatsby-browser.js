@@ -10,7 +10,7 @@ import {
     initialiseGlobalAdminObjects,
     globaliseLogs,
 } from './app/utils/global'
-import { getPathname } from './app/utils/routing/pathname'
+import { getPathname } from './app/utils/routing/path'
 import './app/scss/app'
 // App styles must be imported after global styles.
 import {

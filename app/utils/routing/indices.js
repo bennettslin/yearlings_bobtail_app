@@ -5,7 +5,7 @@ import { getIsAnnotationValid } from '../../api/album/annotations'
 import {
     getIndexFromPath,
     getValidPitchIndex,
-} from './pathname'
+} from './path'
 import {
     getStoredAnnotationIndex,
     getStoredSongIndex,
