@@ -20,6 +20,9 @@ setAsyncGaCustomDimensions()
 logBuild()
 logDevice()
 logGa()
+logServe(`origin: ${window.location.origin}`)
+logServe(`pathname: ${window.location.pathname}`)
+logServe(`search: ${window.location.search}`)
 
 // App styles must be imported after global styles.
 export {
