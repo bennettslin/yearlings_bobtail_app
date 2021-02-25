@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import getSongServerClientHoc from '../../SongHoc'
 import { getOverviewForSong } from '../../../api/album/songs'
-import { getDocumentHead } from '../../../helpers/url'
+import { getDocumentHead } from './helper'
 
 const LyricHelmet = ({ serverClientSongIndex }) => (
     <Helmet>
@@ -22,4 +22,3 @@ LyricHelmet.propTypes = {
 }
 
 export default getSongServerClientHoc(LyricHelmet)
-

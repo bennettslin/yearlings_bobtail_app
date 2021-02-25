@@ -1,11 +1,6 @@
 import qs from 'qs'
-import {
-    getSongIsLogue,
-    getPathForSong,
-    getTitleForSong,
-} from '../api/album/songs'
+import { getPathForSong } from '../api/album/songs'
 import { getPathForPitchSegment } from '../api/pitch/segments'
-import { ALBUM_TITLE } from '../constants/paths'
 import {
     VERSE_QUERY_FIELD,
     ANNOTATION_QUERY_FIELD,
@@ -48,9 +43,3 @@ export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {
         }`
     )
 }
-
-export const getDocumentHead = songIndex => (
-    getSongIsLogue(songIndex) ?
-        ALBUM_TITLE :
-        `${getTitleForSong(songIndex)} | ${ALBUM_TITLE}`
-)
