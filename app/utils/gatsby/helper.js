@@ -12,8 +12,8 @@ import { getRoutingSongIndex } from '../../helpers/routing'
 import { getIsAlbumSession } from '../browser'
 import { getIsServerSide } from '../server'
 
-export const getIsPitchPage = element => (
-    getIsValidPitchPagePath(getPathname(element)) &&
+export const getIsPitchPage = () => (
+    getIsValidPitchPagePath(getPathname()) &&
 
     /**
      * Ensure that we are not in the pitch popup, since it will also show the
@@ -22,7 +22,7 @@ export const getIsPitchPage = element => (
     !getIsAlbumSession()
 )
 
-export const getNeedsStoreProvider = element => {
+export const getNeedsStoreProvider = () => {
     /**
      * If we're on the server side, then we don't have access to the pathname,
      * so just always wrap it in the store provider.
@@ -31,16 +31,16 @@ export const getNeedsStoreProvider = element => {
         return true
     }
 
-    return getIsStorePath(element)
+    return getIsStorePath()
 }
 
-export const getReducers = element => (
-    getIsPitchPage(element) ?
+export const getReducers = () => (
+    getIsPitchPage() ?
         getPitchReducers() :
         getAlbumReducers(getRoutingSongIndex())
 )
 
-export const getNeedsAlbumContext = element => (
-    !getIsPitchPage(element) &&
-    !getIsValidAdminPath(element)
+export const getNeedsAlbumContext = () => (
+    !getIsPitchPage() &&
+    !getIsValidAdminPath()
 )

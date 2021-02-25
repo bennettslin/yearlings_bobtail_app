@@ -15,13 +15,9 @@ const VALID_ADMIN_PATHS = {
 
 const PITCH_PATH = 'pitch'
 
-export const getPathname = (element = {}) => {
-    const pathname =
-        // If called from Gatsby, element is passed.
-        element?.props?.location?.pathname ||
-
-        // Otherwise, get from window location.
-        getWindow().location.pathname,
+export const getPathname = () => {
+    const
+        pathname = getWindow().location.pathname,
 
         // Split by slashes and remove empty strings.
         pathnames = pathname.split('/').filter(name => Boolean(name))
@@ -35,15 +31,15 @@ export const getIndexFromPath = pathname => (
     parseInt(pathname.replace(/\D/g, ''))
 )
 
-export const getIsValidAdminPath = element => (
+export const getIsValidAdminPath = () => (
     // Admin paths are only valid when not in production build.
-    !IS_PRODUCTION && VALID_ADMIN_PATHS[getPathname(element)]
+    !IS_PRODUCTION && VALID_ADMIN_PATHS[getPathname()]
 )
 
-export const getIsStorePath = element => (
-    !VALID_ADMIN_PATHS[getPathname(element)] || (
+export const getIsStorePath = () => (
+    !VALID_ADMIN_PATHS[getPathname()] || (
         !IS_PRODUCTION &&
-        getPathname(element) === 'annotations'
+        getPathname() === 'annotations'
     )
 )
 

@@ -15,9 +15,9 @@ import {
 import { getIsServerSide } from '../server'
 
 export const wrapRootElement = ({ element }) => {
-    if (getNeedsStoreProvider(element)) {
+    if (getNeedsStoreProvider()) {
         const store = createStore(
-            getReducers(element),
+            getReducers(),
             getIsServerSide() ?
                 undefined :
                 devToolsEnhancer()
@@ -36,13 +36,13 @@ export const wrapRootElement = ({ element }) => {
 }
 
 export const wrapPageElement = ({ element }) => {
-    if (getNeedsAlbumContext(element)) {
+    if (getNeedsAlbumContext()) {
         return (
             <AlbumContainer>
                 {element}
             </AlbumContainer>
         )
-    } else if (getIsPitchPage(element)) {
+    } else if (getIsPitchPage()) {
         return (
             <PitchContainer>
                 {element}
