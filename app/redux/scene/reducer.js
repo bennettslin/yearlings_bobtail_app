@@ -2,8 +2,14 @@
 import { SCENE_STORE } from '../../constants/store'
 import { getSceneDefaults } from './default'
 
-export const getSceneReducer = songIndex => (
-    state = getSceneDefaults(songIndex),
+export const getSceneReducer = ({
+    initialSongIndex,
+    initialVerseIndex,
+}) => (
+    state = getSceneDefaults({
+        initialSongIndex,
+        initialVerseIndex,
+    }),
     { type, payload }
 ) => {
     switch (type) {

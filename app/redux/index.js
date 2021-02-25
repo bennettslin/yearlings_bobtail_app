@@ -50,32 +50,54 @@ import {
     VERSE_BARS_STORE,
     VIEWPORT_STORE,
 } from '../constants/store'
-import { getInitialPitchIndex } from '../utils/routing/routing'
+import {
+    getInitialSelectedIndices,
+    getInitialPitchIndex,
+} from '../utils/routing/routing'
 
 export const getAlbumReducers = songIndex => {
-    const initialPitchIndex = getInitialPitchIndex()
+    const {
+            initialSongIndex,
+            initialVerseIndex,
+            initialAnnotationIndex,
+        } = getInitialSelectedIndices(songIndex),
+        initialPitchIndex = getInitialPitchIndex()
 
     return combineReducers({
-        [ACCESS_STORE]: getAccessReducer(songIndex),
+        [ACCESS_STORE]: getAccessReducer(initialAnnotationIndex),
         [ACTIVATED_STORE]: ActivatedReducer,
         [ANNOTATION_STORE]: AnnotationReducer,
         [AUDIO_STORE]: AudioReducer,
         [BANNER_STORE]: BannerReducer,
-        [DOTS_STORE]: getDotsReducer(songIndex),
+        [DOTS_STORE]: getDotsReducer(initialAnnotationIndex),
         [DOTS_SLIDE_STORE]: DotsSlideReducer,
         [ENTRANCE_STORE]: EntranceReducer,
         [ERROR_STORE]: ErrorReducer,
         [FOCUS_STORE]: FocusReducer,
         [HOVER_STORE]: HoverReducer,
-        [LYRIC_STORE]: getLyricReducer(songIndex),
-        [OPTION_STORE]: getOptionReducer(songIndex),
+        [LYRIC_STORE]: getLyricReducer({
+            initialSongIndex,
+            initialVerseIndex,
+            initialAnnotationIndex,
+        }),
+        [OPTION_STORE]: getOptionReducer(initialSongIndex),
         [PITCH_STORE]: getPitchReducer(initialPitchIndex),
         [PLAYERS_STORE]: PlayersReducer,
-        [SCENE_STORE]: getSceneReducer(songIndex),
+        [SCENE_STORE]: getSceneReducer({
+            initialSongIndex,
+            initialVerseIndex,
+        }),
         [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
         [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
-        [SELECTED_STORE]: getSelectedReducer(songIndex),
-        [SESSION_STORE]: getSessionReducer(songIndex),
+        [SELECTED_STORE]: getSelectedReducer({
+            initialSongIndex,
+            initialVerseIndex,
+            initialAnnotationIndex,
+        }),
+        [SESSION_STORE]: getSessionReducer({
+            initialSongIndex,
+            initialAnnotationIndex,
+        }),
         [SLIDER_STORE]: SliderReducer,
         [TOGGLE_STORE]: ToggleReducer,
         [VERSE_BARS_STORE]: VerseBarsReducer,

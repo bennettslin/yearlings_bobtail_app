@@ -1,4 +1,3 @@
-import { getInitialIndicesFromRoutingOrStorage } from '../../utils/routing/routing'
 import { getBoolFromStorage } from '../../utils/storage'
 import { IS_ACCESS_ON } from '../../constants/store'
 
@@ -12,20 +11,14 @@ export const ACCESS_NAV_DEFAULTS = {
     accessedNavIndex: -1,
 }
 
-export const getAccessDefaults = songIndex => {
-    const {
-        initialAnnotationIndex,
-    } = getInitialIndicesFromRoutingOrStorage(songIndex)
-
-    return {
-        ...ACCESS_DOT_DEFAULTS,
-        ...ACCESS_NAV_DEFAULTS,
-        isAccessOn: IS_STORED_ACCESS_ON,
-        accessedKey: '',
-        accessedAnnotationIndex: initialAnnotationIndex,
-        accessedWikiWormholeIndex: 0,
-    }
-}
+export const getAccessDefaults = initialAnnotationIndex => ({
+    ...ACCESS_DOT_DEFAULTS,
+    ...ACCESS_NAV_DEFAULTS,
+    isAccessOn: IS_STORED_ACCESS_ON,
+    accessedKey: '',
+    accessedAnnotationIndex: initialAnnotationIndex,
+    accessedWikiWormholeIndex: 0,
+})
 
 export const ACCESS_PITCH_PAGE_DEFAULTS = {
     isAccessOn: IS_STORED_ACCESS_ON,

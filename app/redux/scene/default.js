@@ -1,17 +1,12 @@
 import { getSceneIndexForVerse } from '../../api/album/verses'
-import { getInitialIndicesFromRoutingOrStorage } from '../../utils/routing/routing'
 
-export const getSceneDefaults = songIndex => {
-    const {
+export const getSceneDefaults = ({
+    initialSongIndex,
+    initialVerseIndex,
+}) => ({
+    sceneSongIndex: initialSongIndex,
+    sceneSceneIndex: getSceneIndexForVerse(
         initialSongIndex,
-        initialVerseIndex,
-    } = getInitialIndicesFromRoutingOrStorage(songIndex)
-
-    return {
-        sceneSongIndex: initialSongIndex,
-        sceneSceneIndex: getSceneIndexForVerse(
-            initialSongIndex,
-            initialVerseIndex
-        ),
-    }
-}
+        initialVerseIndex
+    ),
+})

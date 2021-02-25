@@ -14,8 +14,8 @@ import {
     getAccessDefaults,
 } from './default'
 
-export const getAccessReducer = songIndex => (
-    state = getAccessDefaults(songIndex),
+export const getAccessReducer = initialAnnotationIndex => (
+    state = getAccessDefaults(initialAnnotationIndex),
     { type, payload }
 ) => {
     switch (type) {

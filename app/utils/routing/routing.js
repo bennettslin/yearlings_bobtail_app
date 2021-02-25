@@ -61,7 +61,7 @@ export const getRoutingPitchIndex = () => (
     getValidPitchIndex(getPathname())
 )
 
-export const getInitialIndicesFromRoutingOrStorage = pageSongIndex => {
+export const getInitialSelectedIndices = pageSongIndex => {
     const
         storedSongIndex = getStoredSongIndex(),
         isPageSongValid = Number.isFinite(pageSongIndex),
@@ -105,7 +105,7 @@ export const getInitialIndicesFromRoutingOrStorage = pageSongIndex => {
         }
     }
 
-    // Save upon initial retrieval.
+    // Save once upon initial retrieval.
     setInStorage(SELECTED_SONG_INDEX, initialSongIndex)
     setInStorage(SELECTED_VERSE_INDEX, initialVerseIndex)
     setInStorage(SELECTED_ANNOTATION_INDEX, initialAnnotationIndex)

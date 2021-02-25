@@ -3,8 +3,16 @@ import { hasKey } from '../../helpers/action'
 import { LYRIC_STORE, SELECTED_STORE } from '../../constants/store'
 import { getLyricDefaults } from './default'
 
-export const getLyricReducer = songIndex => (
-    state = getLyricDefaults(songIndex),
+export const getLyricReducer = ({
+    initialSongIndex,
+    initialVerseIndex,
+    initialAnnotationIndex,
+}) => (
+    state = getLyricDefaults({
+        initialSongIndex,
+        initialVerseIndex,
+        initialAnnotationIndex,
+    }),
     { type, payload }
 ) => {
     switch (type) {

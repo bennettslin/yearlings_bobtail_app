@@ -8,8 +8,14 @@ import {
     AUDIO_OPTION_INDEX,
 } from '../../constants/store'
 
-export const getSessionReducer = songIndex => (
-    state = getSessionDefaults(songIndex),
+export const getSessionReducer = ({
+    initialSongIndex,
+    initialAnnotationIndex,
+}) => (
+    state = getSessionDefaults({
+        initialSongIndex,
+        initialAnnotationIndex,
+    }),
     { type, payload }
 ) => {
     switch (type) {

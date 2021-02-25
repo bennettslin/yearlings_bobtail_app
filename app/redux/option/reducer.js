@@ -7,8 +7,8 @@ import {
 } from '../../constants/store'
 import { getOptionDefaults } from './default'
 
-export const getOptionReducer = songIndex => (
-    state = getOptionDefaults(songIndex),
+export const getOptionReducer = initialSongIndex => (
+    state = getOptionDefaults(initialSongIndex),
     { type, payload }
 ) => {
     switch (type) {

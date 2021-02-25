@@ -11,8 +11,8 @@ import {
 import { getDotsDefaults } from './default'
 import { setInStorage } from '../../utils/storage'
 
-export const getDotsReducer = songIndex => (
-    state = getDotsDefaults(songIndex),
+export const getDotsReducer = initialAnnotationIndex => (
+    state = getDotsDefaults(initialAnnotationIndex),
     { type, payload }
 ) => {
     switch (type) {
