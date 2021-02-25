@@ -5075,4 +5075,8 @@ export default [
         taskName: `Build environment work.`,
         workedHours: 5,
     },
+    {
+        taskName: `Path and query string fixes.`,
+        workedHours: 7,
+    },
 ]
