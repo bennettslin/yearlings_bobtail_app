@@ -14,10 +14,13 @@ import {
 } from './helper'
 import { getIsServerSide } from '../server'
 
-export const wrapRootElement = ({ element }) => {
+export const getWrapRootElement = (
+    pathname = '',
+    search = ''
+) => ({ element }) => {
     if (getNeedsStoreProvider()) {
         const store = createStore(
-            getReducers(),
+            getReducers(pathname, search),
             getIsServerSide() ?
                 undefined :
                 devToolsEnhancer()

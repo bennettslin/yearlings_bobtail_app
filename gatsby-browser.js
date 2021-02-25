@@ -6,6 +6,7 @@ import {
     setGaCustomDimensions,
 } from './app/utils/analytics'
 import { logBuild } from './app/utils/build'
+import { getWrapRootElement } from './app/utils/gatsby'
 import {
     initialiseGlobalAdminObjects,
     globaliseLogs,
@@ -21,8 +22,12 @@ logBuild()
 logDevice()
 logGa()
 
+logAdmin(`pathname: ${window.location.pathname}`)
+logAdmin(`search: ${window.location.search}`)
+
 // App styles must be imported after global styles.
-export {
-    wrapRootElement,
-    wrapPageElement,
-} from './app/utils/gatsby'
+export const wrapRootElement = getWrapRootElement(
+    window.location.pathname,
+    window.location.search,
+)
+export { wrapPageElement } from './app/utils/gatsby'

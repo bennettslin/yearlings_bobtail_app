@@ -55,13 +55,17 @@ import {
     getInitialPitchIndex,
 } from '../utils/routing/routing'
 
-export const getAlbumReducers = songIndex => {
+export const getAlbumReducers = (pathname, search) => {
     const {
             initialSongIndex,
             initialVerseIndex,
             initialAnnotationIndex,
-        } = getInitialSelectedIndices(songIndex),
+        } = getInitialSelectedIndices(pathname, search),
         initialPitchIndex = getInitialPitchIndex()
+
+    console.log(`initialSongIndex: ${initialSongIndex}`)
+    console.log(`initialVerseIndex: ${initialVerseIndex}`)
+    console.log(`initialAnnotationIndex: ${initialAnnotationIndex}`)
 
     return combineReducers({
         [ACCESS_STORE]: getAccessReducer(initialAnnotationIndex),
@@ -105,8 +109,8 @@ export const getAlbumReducers = songIndex => {
     })
 }
 
-export const getPitchReducers = () => {
-    const initialPitchIndex = getInitialPitchIndex({ forPitchPage: true })
+export const getPitchReducers = pathname => {
+    const initialPitchIndex = getInitialPitchIndex(pathname)
 
     return combineReducers({
         [DOTS_STORE]: getDotsReducer(0),

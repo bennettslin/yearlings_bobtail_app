@@ -8,7 +8,6 @@ import {
     getIsValidPitchPagePath,
     getIsStorePath,
 } from '../routing/pathname'
-import { getRoutingSongIndex } from '../routing/routing'
 import { getIsAlbumSession } from '../browser'
 import { getIsServerSide } from '../server'
 
@@ -34,10 +33,10 @@ export const getNeedsStoreProvider = () => {
     return getIsStorePath()
 }
 
-export const getReducers = () => (
+export const getReducers = (pathname, search) => (
     getIsPitchPage() ?
-        getPitchReducers() :
-        getAlbumReducers(getRoutingSongIndex())
+        getPitchReducers(pathname) :
+        getAlbumReducers(pathname, search)
 )
 
 export const getNeedsAlbumContext = () => (
