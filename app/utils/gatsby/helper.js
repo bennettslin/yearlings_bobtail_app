@@ -3,7 +3,6 @@ import {
     getPitchReducers,
 } from '../../redux'
 import {
-    getPathname,
     getIsValidAdminPath,
     getIsValidPitchPagePath,
     getIsStorePath,
@@ -11,8 +10,8 @@ import {
 import { getIsAlbumSession } from '../browser'
 import { getIsServerSide } from '../server'
 
-export const getIsPitchPage = () => (
-    getIsValidPitchPagePath(getPathname()) &&
+export const getIsPitchPage = pathname => (
+    getIsValidPitchPagePath(pathname) &&
 
     /**
      * Ensure that we are not in the pitch popup, since it will also show the
@@ -21,7 +20,7 @@ export const getIsPitchPage = () => (
     !getIsAlbumSession()
 )
 
-export const getNeedsStoreProvider = () => {
+export const getNeedsStoreProvider = pathname => {
     /**
      * If we're on the server side, then we don't have access to the pathname,
      * so just always wrap it in the store provider.
@@ -30,16 +29,16 @@ export const getNeedsStoreProvider = () => {
         return true
     }
 
-    return getIsStorePath()
+    return getIsStorePath(pathname)
 }
 
 export const getReducers = (pathname, search) => (
-    getIsPitchPage() ?
+    getIsPitchPage(pathname) ?
         getPitchReducers(pathname) :
         getAlbumReducers(pathname, search)
 )
 
-export const getNeedsAlbumContext = () => (
-    !getIsPitchPage() &&
-    !getIsValidAdminPath()
+export const getNeedsAlbumContext = pathname => (
+    !getIsPitchPage(pathname) &&
+    !getIsValidAdminPath(pathname)
 )

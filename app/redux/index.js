@@ -63,10 +63,6 @@ export const getAlbumReducers = (pathname, search) => {
         } = getInitialSelectedIndices(pathname, search),
         initialPitchIndex = getInitialPitchIndex()
 
-    console.log(`initialSongIndex: ${initialSongIndex}`)
-    console.log(`initialVerseIndex: ${initialVerseIndex}`)
-    console.log(`initialAnnotationIndex: ${initialAnnotationIndex}`)
-
     return combineReducers({
         [ACCESS_STORE]: getAccessReducer(initialAnnotationIndex),
         [ACTIVATED_STORE]: ActivatedReducer,

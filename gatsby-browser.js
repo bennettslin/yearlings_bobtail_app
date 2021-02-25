@@ -10,10 +10,13 @@ import {
     initialiseGlobalAdminObjects,
     globaliseLogs,
 } from './app/utils/global'
-
+import { getPathname } from './app/utils/routing/pathname'
 import './app/scss/app'
 // App styles must be imported after global styles.
-import { getWrapRootElement } from './app/utils/gatsby'
+import {
+    getWrapRootElement,
+    getWrapPageElement,
+} from './app/utils/gatsby'
 
 initialiseGlobalAdminObjects()
 globaliseLogs()
@@ -24,11 +27,9 @@ logBuild()
 logDevice()
 logGa()
 
-logAdmin(`pathname: ${window.location.pathname}`)
-logAdmin(`search: ${window.location.search}`)
+const
+    { pathname: rawPathname, search } = window.location,
+    pathname = getPathname(rawPathname)
 
-export const wrapRootElement = getWrapRootElement(
-    window.location.pathname,
-    window.location.search,
-)
-export { wrapPageElement } from './app/utils/gatsby'
+export const wrapRootElement = getWrapRootElement(pathname, search)
+export const wrapPageElement = getWrapPageElement(pathname)

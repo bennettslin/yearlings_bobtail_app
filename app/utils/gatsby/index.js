@@ -18,7 +18,7 @@ export const getWrapRootElement = (
     pathname = '',
     search = ''
 ) => ({ element }) => {
-    if (getNeedsStoreProvider()) {
+    if (getNeedsStoreProvider(pathname)) {
         const store = createStore(
             getReducers(pathname, search),
             getIsServerSide() ?
@@ -38,14 +38,16 @@ export const getWrapRootElement = (
     }
 }
 
-export const wrapPageElement = ({ element }) => {
-    if (getNeedsAlbumContext()) {
+export const getWrapPageElement = (
+    pathname = ''
+) => ({ element }) => {
+    if (getNeedsAlbumContext(pathname)) {
         return (
             <AlbumContainer>
                 {element}
             </AlbumContainer>
         )
-    } else if (getIsPitchPage()) {
+    } else if (getIsPitchPage(pathname)) {
         return (
             <PitchContainer>
                 {element}

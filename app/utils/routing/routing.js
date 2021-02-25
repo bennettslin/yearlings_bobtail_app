@@ -81,9 +81,6 @@ export const getInitialSelectedIndices = (pathname, search) => {
         storedAnnotationIndex = getStoredAnnotationIndex(initialSongIndex),
         isRoutingAnnotationValid = Number.isFinite(routingAnnotationIndex)
 
-    console.log(`routingSongIndex: ${routingSongIndex}`)
-    console.log(`storedSongIndex: ${storedSongIndex}`)
-
     // Initialise with stored verse and annotation, which default to 0.
     let initialVerseIndex = storedVerseIndex
     let initialAnnotationIndex = storedAnnotationIndex

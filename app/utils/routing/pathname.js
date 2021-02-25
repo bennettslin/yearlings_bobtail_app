@@ -1,5 +1,4 @@
 import { getIsPitchSegmentValid } from '../../api/pitch/segments'
-import { getWindow } from '../browser'
 
 const VALID_ADMIN_PATHS = {
     actors: true,
@@ -12,31 +11,33 @@ const VALID_ADMIN_PATHS = {
 
 const PITCH_PATH = 'pitch'
 
-export const getPathname = () => {
-    const
-        pathname = getWindow().location.pathname,
-
+export const getPathname = rawPathname => (
+    rawPathname
         // Split by slashes and remove empty strings.
-        pathnames = pathname.split('/').filter(name => Boolean(name))
-
-    // Get rid of beginning and end slashes.
-    return pathnames.join('/')
-}
+        .split('/')
+        .filter(name => Boolean(name))
+        // Get rid of beginning and end slashes.
+        .join('/')
+)
 
 export const getIndexFromPath = pathname => (
     // Remove all non-digits.
     parseInt(pathname.replace(/\D/g, ''))
 )
 
-export const getIsValidAdminPath = () => (
+export const getIsValidAdminPath = pathname => (
     // Admin paths are only valid when not in production build.
-    !IS_PRODUCTION && VALID_ADMIN_PATHS[getPathname()]
+    !IS_PRODUCTION && VALID_ADMIN_PATHS[pathname]
 )
 
-export const getIsStorePath = () => (
-    !VALID_ADMIN_PATHS[getPathname()] || (
+export const getIsStorePath = pathname => (
+    // It's a store path if it's an album page...
+    !VALID_ADMIN_PATHS[pathname] ||
+
+    // Or if it's on the global annotations page and not in production build.
+    (
         !IS_PRODUCTION &&
-        getPathname() === 'annotations'
+        pathname === 'annotations'
     )
 )
 
