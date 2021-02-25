@@ -9,7 +9,7 @@ import { getSceneIndexForVerse } from '../../api/album/verses'
 import {
     getStoredSongIndex,
     getStoredVerseIndex,
-} from '../../helpers/storage'
+} from '../../utils/storage'
 import {
     logAccess,
     logAdmin,

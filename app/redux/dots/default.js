@@ -1,8 +1,6 @@
 import { getDotKeysFromBit } from '../../helpers/dot'
-import {
-    getDotsBitFromStorage,
-    getInitialIndicesFromRoutingOrStorage,
-} from '../../helpers/storage'
+import { getInitialIndicesFromRoutingOrStorage } from '../../utils/routing/routing'
+import { getDotsBitFromStorage } from '../../utils/storage'
 
 export const getDotsDefaults = songIndex => {
     const {

@@ -1,8 +1,5 @@
-import { getIsPitchSegmentValid } from '../api/pitch/segments'
-import { getWindow } from '../utils/browser'
-
-export const VERSE_QUERY_FIELD = 'verse'
-export const ANNOTATION_QUERY_FIELD = 'annotation'
+import { getIsPitchSegmentValid } from '../../api/pitch/segments'
+import { getWindow } from '../browser'
 
 const VALID_ADMIN_PATHS = {
     actors: true,

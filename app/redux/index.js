@@ -12,7 +12,7 @@ import FocusReducer from './focus/reducer'
 import HoverReducer from './hover/reducer'
 import { getLyricReducer } from './lyric/reducer'
 import { getOptionReducer } from './option/reducer'
-import PitchReducer from './pitch/reducer'
+import { getPitchReducer } from './pitch/reducer'
 import PlayersReducer from './players/reducer'
 import { getSceneReducer } from './scene/reducer'
 import ScrollCarouselReducer from './scrollCarousel/reducer'
@@ -50,37 +50,46 @@ import {
     VERSE_BARS_STORE,
     VIEWPORT_STORE,
 } from '../constants/store'
+import { getInitialPitchIndex } from '../utils/routing/routing'
 
-export const getAlbumReducers = songIndex => combineReducers({
-    [ACCESS_STORE]: getAccessReducer(songIndex),
-    [ACTIVATED_STORE]: ActivatedReducer,
-    [ANNOTATION_STORE]: AnnotationReducer,
-    [AUDIO_STORE]: AudioReducer,
-    [BANNER_STORE]: BannerReducer,
-    [DOTS_STORE]: getDotsReducer(songIndex),
-    [DOTS_SLIDE_STORE]: DotsSlideReducer,
-    [ENTRANCE_STORE]: EntranceReducer,
-    [ERROR_STORE]: ErrorReducer,
-    [FOCUS_STORE]: FocusReducer,
-    [HOVER_STORE]: HoverReducer,
-    [LYRIC_STORE]: getLyricReducer(songIndex),
-    [OPTION_STORE]: getOptionReducer(songIndex),
-    [PITCH_STORE]: PitchReducer,
-    [PLAYERS_STORE]: PlayersReducer,
-    [SCENE_STORE]: getSceneReducer(songIndex),
-    [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
-    [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
-    [SELECTED_STORE]: getSelectedReducer(songIndex),
-    [SESSION_STORE]: getSessionReducer(songIndex),
-    [SLIDER_STORE]: SliderReducer,
-    [TOGGLE_STORE]: ToggleReducer,
-    [VERSE_BARS_STORE]: VerseBarsReducer,
-    [VIEWPORT_STORE]: ViewportReducer,
-})
+export const getAlbumReducers = songIndex => {
+    const initialPitchIndex = getInitialPitchIndex()
 
-export const getPitchReducers = () => combineReducers({
-    [DOTS_STORE]: getDotsReducer(0),
-    [ACCESS_STORE]: AccessPitchPageReducer,
-    [PITCH_STORE]: PitchReducer,
-    [VIEWPORT_STORE]: ViewportPitchPageReducer,
-})
+    return combineReducers({
+        [ACCESS_STORE]: getAccessReducer(songIndex),
+        [ACTIVATED_STORE]: ActivatedReducer,
+        [ANNOTATION_STORE]: AnnotationReducer,
+        [AUDIO_STORE]: AudioReducer,
+        [BANNER_STORE]: BannerReducer,
+        [DOTS_STORE]: getDotsReducer(songIndex),
+        [DOTS_SLIDE_STORE]: DotsSlideReducer,
+        [ENTRANCE_STORE]: EntranceReducer,
+        [ERROR_STORE]: ErrorReducer,
+        [FOCUS_STORE]: FocusReducer,
+        [HOVER_STORE]: HoverReducer,
+        [LYRIC_STORE]: getLyricReducer(songIndex),
+        [OPTION_STORE]: getOptionReducer(songIndex),
+        [PITCH_STORE]: getPitchReducer(initialPitchIndex),
+        [PLAYERS_STORE]: PlayersReducer,
+        [SCENE_STORE]: getSceneReducer(songIndex),
+        [SCROLL_CAROUSEL_STORE]: ScrollCarouselReducer,
+        [SCROLL_LYRIC_STORE]: ScrollLyricReducer,
+        [SELECTED_STORE]: getSelectedReducer(songIndex),
+        [SESSION_STORE]: getSessionReducer(songIndex),
+        [SLIDER_STORE]: SliderReducer,
+        [TOGGLE_STORE]: ToggleReducer,
+        [VERSE_BARS_STORE]: VerseBarsReducer,
+        [VIEWPORT_STORE]: ViewportReducer,
+    })
+}
+
+export const getPitchReducers = () => {
+    const initialPitchIndex = getInitialPitchIndex({ forPitchPage: true })
+
+    return combineReducers({
+        [DOTS_STORE]: getDotsReducer(0),
+        [ACCESS_STORE]: AccessPitchPageReducer,
+        [PITCH_STORE]: getPitchReducer(initialPitchIndex),
+        [VIEWPORT_STORE]: ViewportPitchPageReducer,
+    })
+}

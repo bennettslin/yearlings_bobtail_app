@@ -1,5 +1,5 @@
 // Actions for song state.
-import { setInStorage } from '../../helpers/storage'
+import { setInStorage } from '../../utils/storage'
 import {
     hasKey,
     getDefinedOnlyPayload,

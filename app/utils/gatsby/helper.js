@@ -7,8 +7,8 @@ import {
     getIsValidAdminPath,
     getIsValidPitchPagePath,
     getIsStorePath,
-} from '../../helpers/pathname'
-import { getRoutingSongIndex } from '../../helpers/routing'
+} from '../routing/pathname'
+import { getRoutingSongIndex } from '../routing/routing'
 import { getIsAlbumSession } from '../browser'
 import { getIsServerSide } from '../server'
 

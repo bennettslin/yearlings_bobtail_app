@@ -9,7 +9,7 @@ import {
     SELECTED_DOTS_BIT,
 } from '../../constants/store'
 import { getDotsDefaults } from './default'
-import { setInStorage } from '../../helpers/storage'
+import { setInStorage } from '../../utils/storage'
 
 export const getDotsReducer = songIndex => (
     state = getDotsDefaults(songIndex),

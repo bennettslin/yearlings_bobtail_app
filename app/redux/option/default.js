@@ -1,7 +1,5 @@
-import {
-    getOptionFromStorage,
-    getInitialIndicesFromRoutingOrStorage,
-} from '../../helpers/storage'
+import { getInitialIndicesFromRoutingOrStorage } from '../../utils/routing/routing'
+import { getOptionFromStorage } from '../../utils/storage'
 import { getOverviewTipsForNewSong } from '../../helpers/options'
 import {
     SELECTED_OVERVIEW_OPTION,

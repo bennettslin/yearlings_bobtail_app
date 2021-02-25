@@ -1,9 +1,9 @@
 // Reducers for pitch.
 import { PITCH_STORE } from '../../constants/store'
-import { PITCH_DEFAULTS } from './default'
+import { getPitchDefaults } from './default'
 
-export default (
-    state = PITCH_DEFAULTS,
+export const getPitchReducer = initialPitchIndex => (
+    state = getPitchDefaults(initialPitchIndex),
     { type, payload }
 ) => {
     switch (type) {

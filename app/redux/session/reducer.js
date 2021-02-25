@@ -1,6 +1,6 @@
 // Reducers for session values.
 import { hasKey } from '../../helpers/action'
-import { setInStorage } from '../../helpers/storage'
+import { setInStorage } from '../../utils/storage'
 import { getSessionDefaults } from './default'
 import { AUDIO_OPTIONS } from '../../constants/options'
 import {

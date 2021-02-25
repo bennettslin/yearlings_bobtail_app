@@ -1,9 +1,7 @@
 import { getColumnIndexForAnnotation } from '../../api/album/annotations'
 import { getBookForSongIndex } from '../../api/album/songs'
-import {
-    getAudioOptionFromStorage,
-    getInitialIndicesFromRoutingOrStorage,
-} from '../../helpers/storage'
+import { getInitialIndicesFromRoutingOrStorage } from '../../utils/routing/routing'
+import { getAudioOptionFromStorage } from '../../utils/storage'
 
 const STORED_AUDIO_OPTION_INDEX = getAudioOptionFromStorage()
 

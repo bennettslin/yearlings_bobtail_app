@@ -1,5 +1,5 @@
 // Actions for toggled views.
-import { setBoolInStorage } from '../../helpers/storage'
+import { setBoolInStorage } from '../../utils/storage'
 import {
     TOGGLE_STORE,
     IS_CAROUSEL_EXPANDED,

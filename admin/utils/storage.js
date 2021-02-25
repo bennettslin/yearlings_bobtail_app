@@ -1,7 +1,7 @@
 import {
     getWindowStorage,
     setInStorage,
-} from '../../app/helpers/storage'
+} from '../../app/utils/storage'
 import {
     getPreviewerSvgMapForActor,
     getPreviewerSvgMapForThing,

@@ -1,5 +1,5 @@
 import { getSceneIndexForVerse } from '../../api/album/verses'
-import { getInitialIndicesFromRoutingOrStorage } from '../../helpers/storage'
+import { getInitialIndicesFromRoutingOrStorage } from '../../utils/routing/routing'
 
 export const getSceneDefaults = songIndex => {
     const {

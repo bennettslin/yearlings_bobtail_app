@@ -1,5 +1,5 @@
 // Actions for accessed values.
-import { setBoolInStorage } from '../../helpers/storage'
+import { setBoolInStorage } from '../../utils/storage'
 import {
     hasKey,
     getDefinedOnlyPayload,

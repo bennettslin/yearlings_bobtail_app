@@ -1,5 +1,5 @@
 import { getSongIsLogue } from '../../api/album/songs'
-import { getInitialIndicesFromRoutingOrStorage } from '../../helpers/storage'
+import { getInitialIndicesFromRoutingOrStorage } from '../../utils/routing/routing'
 
 export const {
     initialSongIndex: INITIAL_SONG_INDEX,

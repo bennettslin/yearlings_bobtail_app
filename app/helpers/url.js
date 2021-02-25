@@ -2,9 +2,9 @@ import qs from 'qs'
 import { getPathForSong } from '../api/album/songs'
 import { getPathForPitchSegment } from '../api/pitch/segments'
 import {
-    VERSE_QUERY_FIELD,
     ANNOTATION_QUERY_FIELD,
-} from './routing'
+    VERSE_QUERY_FIELD,
+} from '../constants/routing'
 
 const getPathForSongPage = songIndex => (
     `/${songIndex}-${getPathForSong(songIndex)}`

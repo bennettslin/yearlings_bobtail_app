@@ -1,4 +1,4 @@
-import { getBoolFromStorage } from '../../helpers/storage'
+import { getBoolFromStorage } from '../../utils/storage'
 import { IS_CAROUSEL_EXPANDED } from '../../constants/store'
 
 const IS_STORED_CAROUSEL_EXPANDED = getBoolFromStorage(IS_CAROUSEL_EXPANDED)

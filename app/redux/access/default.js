@@ -1,7 +1,5 @@
-import {
-    getBoolFromStorage,
-    getInitialIndicesFromRoutingOrStorage,
-} from '../../helpers/storage'
+import { getInitialIndicesFromRoutingOrStorage } from '../../utils/routing/routing'
+import { getBoolFromStorage } from '../../utils/storage'
 import { IS_ACCESS_ON } from '../../constants/store'
 
 const IS_STORED_ACCESS_ON = getBoolFromStorage(IS_ACCESS_ON)
