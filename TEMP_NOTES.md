@@ -1,11 +1,4 @@
 # TODO:
-* Why do styles show for admin pages in build?
-    * Look into https://www.gatsbyjs.com/tutorial/part-two/#css-modules?
-    * https://github.com/gatsbyjs/gatsby/issues/3446
-    * https://github.com/gatsbyjs/gatsby/issues/14333
-* At the very least, get rid of Admin styles
-
-# TODO:
 * Take care of IP errors. (Maybe it will be fine in production?)
 * Home icon on pitch.
 * Freeway panel.

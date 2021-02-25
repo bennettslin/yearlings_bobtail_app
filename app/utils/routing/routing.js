@@ -124,7 +124,6 @@ export const getInitialSelectedIndices = (pathname, search) => {
 }
 
 export const getInitialPitchIndex = pathname => {
-    console.log(`getInitialPitchIndex pathname: ${pathname}`)
     const initialPitchIndex =
         pathname !== undefined ?
             getRoutingPitchIndex(pathname) :
