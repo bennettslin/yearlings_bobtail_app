@@ -108,6 +108,9 @@ export const getAlbumReducers = (pathname, search) => {
 export const getPitchReducers = pathname => {
     const initialPitchIndex = getInitialPitchIndex(pathname)
 
+    console.log('pathname', pathname)
+    console.log('initialPitchIndex', initialPitchIndex)
+
     return combineReducers({
         [DOTS_STORE]: getDotsReducer(0),
         [ACCESS_STORE]: AccessPitchPageReducer,

@@ -119,7 +119,7 @@ export const getDotsBitFromStorage = (initialAnnotationIndex) => {
     return savedDotsBit
 }
 
-export const getPitchSegmentIndexFromStorage = () => {
+export const getStoredPitchIndex = () => {
     const storedPitchSegmentIndex = getValidPitchSegmentIndex(
         _getParsedStoredInteger(PITCH_SEGMENT_INDEX)
     )

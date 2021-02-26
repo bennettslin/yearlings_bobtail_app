@@ -10,7 +10,7 @@ import {
     getStoredAnnotationIndex,
     getStoredSongIndex,
     getStoredVerseIndex,
-    getPitchSegmentIndexFromStorage,
+    getStoredPitchIndex,
     setInStorage,
 } from '../storage'
 import {
@@ -121,10 +121,13 @@ export const getInitialSelectedIndices = (pathname, search) => {
 }
 
 export const getInitialPitchIndex = pathname => {
-    const initialPitchIndex =
-        pathname !== undefined ?
-            getRoutingPitchIndex(pathname) :
-            getPitchSegmentIndexFromStorage()
+    const
+        routingPitchIndex = getRoutingPitchIndex(pathname),
+        storedPitchIndex = getStoredPitchIndex(),
+        isRoutingPitchValid = Number.isFinite(routingPitchIndex),
+        initialPitchIndex = isRoutingPitchValid ?
+            routingPitchIndex :
+            storedPitchIndex
 
     // Save once upon initial retrieval.
     setInStorage(PITCH_SEGMENT_INDEX, initialPitchIndex)

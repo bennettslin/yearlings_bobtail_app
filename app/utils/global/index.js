@@ -25,6 +25,7 @@ import {
     logError,
 } from '../logger'
 
+// TODO: Preferable to just pass song and verse indices directly.
 export const initialiseGlobalAdminObjects = () => {
     // Allow console access to album when not in production build.
     if (!IS_PRODUCTION) {
