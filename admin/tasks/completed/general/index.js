@@ -5077,6 +5077,6 @@ export default [
     },
     {
         taskName: `Path and query string fixes.`,
-        workedHours: 7,
+        workedHours: 8,
     },
 ]

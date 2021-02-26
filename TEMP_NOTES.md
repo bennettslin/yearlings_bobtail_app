@@ -1,5 +1,4 @@
 # TODO:
-* Pitch page is broken.
 * Take care of IP errors. (Maybe it will be fine in production?)
 * Home icon on pitch.
 * Freeway panel.

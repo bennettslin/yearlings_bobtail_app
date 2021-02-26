@@ -24,20 +24,20 @@ import {
     SELECTED_VERSE_INDEX,
 } from '../../constants/store'
 
-export const getRoutingSongIndex = pathname => {
+const getRoutingSongIndex = pathname => {
     const routingSongIndex = getIndexFromPath(pathname)
 
     return getIsSongValid(routingSongIndex) ? routingSongIndex : NaN
 }
 
-const _getQueryStringIndex = (search, key) => {
+const getQueryStringIndex = (search, key) => {
     return search ?
         parseInt(qs.parse(search, { ignoreQueryPrefix: true })[key]) :
         NaN
 }
 
-export const getRoutingVerseIndex = (search, songIndex) => {
-    const routingVerseIndex = _getQueryStringIndex(
+const getRoutingVerseIndex = (search, songIndex) => {
+    const routingVerseIndex = getQueryStringIndex(
         search,
         VERSE_QUERY_FIELD
     )
@@ -47,8 +47,8 @@ export const getRoutingVerseIndex = (search, songIndex) => {
     ) ? routingVerseIndex : NaN
 }
 
-export const getRoutingAnnotationIndex = (search, songIndex) => {
-    const routingAnnotationIndex = _getQueryStringIndex(
+const getRoutingAnnotationIndex = (search, songIndex) => {
+    const routingAnnotationIndex = getQueryStringIndex(
         search,
         ANNOTATION_QUERY_FIELD
     )
@@ -58,7 +58,7 @@ export const getRoutingAnnotationIndex = (search, songIndex) => {
     ) ? routingAnnotationIndex : NaN
 }
 
-export const getRoutingPitchIndex = pathname => (
+const getRoutingPitchIndex = pathname => (
     getValidPitchIndex(pathname)
 )
 
@@ -120,8 +120,12 @@ export const getInitialSelectedIndices = (pathname, search) => {
     }
 }
 
-export const getInitialPitchIndex = pathname => {
+export const getInitialPitchIndex = (pathname = '') => {
     const
+        /**
+         * When called by album reducer, the pathname is obviously not passed,
+         * so we default to the stored index.
+         */
         routingPitchIndex = getRoutingPitchIndex(pathname),
         storedPitchIndex = getStoredPitchIndex(),
         isRoutingPitchValid = Number.isFinite(routingPitchIndex),
