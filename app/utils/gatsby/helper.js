@@ -7,8 +7,10 @@ import {
     getIsValidPitchPagePath,
     getIsStorePath,
 } from '../routing/path'
-import { getIsAlbumSession } from '../browser'
-import { getIsServerSide } from '../server'
+import {
+    getIsServerSide,
+    getIsAlbumSession,
+} from '../browser'
 
 export const getIsPitchPage = pathname => (
     getIsValidPitchPagePath(pathname) &&

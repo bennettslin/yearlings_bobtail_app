@@ -11,11 +11,11 @@ import {
     SCROLL,
     SELECT,
     SERVE,
+    STATE,
     TRANSITION,
     SUCCESS,
     ERROR,
     getStyleForCategory,
-    STATE,
 } from './helpers/styles'
 
 const _log = ({

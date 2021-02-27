@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import AlbumPageElementContext from '../../../contexts/AlbumPageElement'
 import Overview from '../../Overview'
 import Popup from '../../Popup'
-import { getIsServerSide } from '../../../utils/server'
+import { getIsServerSide } from '../../../utils/browser'
 import { getMapIsOverviewPopupVisible } from '../../../redux/overview/selector'
 import './style'
 

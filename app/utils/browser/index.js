@@ -1,5 +1,3 @@
-import { getIsServerSide } from '../server'
-
 const SAFE_DOCUMENT = {
     activeElement: {},
     getElementById() {},
@@ -25,6 +23,14 @@ const SAFE_WINDOW = {
     },
     onresize() {},
 }
+
+export const getIsServerSide = () => (
+    typeof window === 'undefined'
+)
+
+export const getFinalSideKey = () => (
+    getIsServerSide() ? 'isServerSide' : 'isClientSide'
+)
 
 export const getDocument = () => (
     typeof document === 'undefined' ?

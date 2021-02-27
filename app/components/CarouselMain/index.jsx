@@ -5,7 +5,7 @@ import AlbumPageElementContext from '../../contexts/AlbumPageElement'
 import getDidMountHoc from '../DidMountHoc'
 import getMainHoc from '../MainHoc'
 import Carousel from '../Carousel'
-import { getIsServerSide } from '../../utils/server'
+import { getIsServerSide } from '../../utils/browser'
 
 const CarouselMain = ({ didMount, style }) => {
     const albumPageElement = useContext(AlbumPageElementContext)

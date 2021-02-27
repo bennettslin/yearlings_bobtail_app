@@ -1,11 +1,10 @@
-// Import these here just to make them available.
-import { logDevice } from './app/constants/device'
 import {
     logGa,
     setAsyncGaCustomDimensions,
     setGaCustomDimensions,
 } from './app/utils/analytics'
 import { logBuild } from './app/utils/build'
+import { logDevice } from './app/utils/device'
 import {
     initialiseGlobalAdminObjects,
     globaliseLogs,

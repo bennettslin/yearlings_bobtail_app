@@ -7,7 +7,7 @@ import getDidMountHoc from '../DidMountHoc'
 import { mapLyricOverviewHeightStyle } from '../../redux/lyricHeight/selector'
 import Lyric from '../Lyric'
 import OverviewPopup from '../Popups/Overview'
-import { getIsServerSide } from '../../utils/server'
+import { getIsServerSide } from '../../utils/browser'
 import './style'
 
 const LyricOverview = forwardRef(({ didMount }, ref) => {

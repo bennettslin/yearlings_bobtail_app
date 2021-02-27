@@ -11,7 +11,7 @@ import CarouselScroll from './Scroll'
 import { updateEntranceStore } from '../../redux/entrance/action'
 import { scrollCarouselForSongSelect } from '../../redux/scrollCarousel/action'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
-import { getFinalSideKey } from '../../utils/server'
+import { getFinalSideKey } from '../../utils/browser'
 import { CAROUSEL_LYRICS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION } from '../../constants/entrance'
 import './style'
 

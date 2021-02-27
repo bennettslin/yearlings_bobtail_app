@@ -2,7 +2,7 @@ import React, { forwardRef, useContext } from 'react'
 import { useSelector } from 'react-redux'
 import PagePitchIndexContext from '../../contexts/PagePitchIndex'
 import { mapPitchSegmentIndex } from '../../redux/pitch/selector'
-import { getIsServerSide } from '../../utils/server'
+import { getIsServerSide } from '../../utils/browser'
 
 const getPageServerClientHoc = ServerClientComponent => {
     /**

@@ -1,5 +1,6 @@
 # TODO:
 * Pass indices in gatsby browser?
+* Bobtail Yearlings analytics.
 * Take care of IP errors. (Maybe it will be fine in production?)
 * Home icon on pitch.
 * Freeway panel.

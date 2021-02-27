@@ -1,7 +1,8 @@
 import { GA_ACCOUNT__STAGING } from '../../constants/analytics'
+import { IS_TOUCH_SUPPORTED, IS_USER_AGENT_DESKTOP } from '../../constants/device'
 import {
-    BROWSER_NAME, BROWSER_VERSION, ENGINE_NAME, ENGINE_VERSION, IS_TOUCH_SUPPORTED, IS_USER_AGENT_DESKTOP, OS_NAME, OS_VERSION, PLATFORM_TYPE, PLATFORM_VENDOR,
-} from '../../constants/device'
+    BROWSER_NAME, BROWSER_VERSION, ENGINE_NAME, ENGINE_VERSION, OS_NAME, OS_VERSION, PLATFORM_TYPE, PLATFORM_VENDOR,
+} from '../device'
 import { getDateTimeForGa } from '../build'
 import { getPublicIp } from '../ip'
 

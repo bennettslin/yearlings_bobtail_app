@@ -11,8 +11,8 @@ export default {
     plugins: [
         `gatsby-plugin-postcss`,
         `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-sass`,
         `gatsby-plugin-remove-trailing-slashes`,
+        `gatsby-plugin-sass`,
         {
             resolve: `gatsby-plugin-webpack-bundle-analyzer`,
             options: {

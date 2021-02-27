@@ -12,7 +12,7 @@ import {
     getNeedsAlbumContext,
     getNeedsStoreProvider,
 } from './helper'
-import { getIsServerSide } from '../server'
+import { getIsServerSide } from '../browser'
 
 export const getWrapRootElement = (
     pathname = '',
