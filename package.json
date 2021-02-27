@@ -16,7 +16,7 @@
     "empty:delivery": "aws s3 rm s3://yearlingsbobtail--delivery --recursive",
     "deploy:delivery": "aws s3 sync public/ s3://yearlingsbobtail--delivery",
     "release:delivery": "npm run clean && YB_FAVICON=delivery npm run build:production && npm run empty:delivery && npm run deploy:delivery",
-    "deploy:production": "aws s3 sync public/ s3://yearlingsbobtail",
+    "deploy:production": "aws s3 sync public/ s3://yearlingsbobtail--production",
     "release:production": "npm run clean && YB_FAVICON=production npm run build:production && npm run deploy:production",
     "lint": "eslint --ext js,jsx app",
     "lint:fix": "eslint --ext js,jsx --fix app"
