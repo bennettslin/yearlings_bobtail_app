@@ -40,6 +40,7 @@ module.exports = {
         'logState': true,
         'logTransition': true,
         'logError': true,
+        'logSuccess': true,
         'process': true
     },
     'parser': '@babel/eslint-parser',

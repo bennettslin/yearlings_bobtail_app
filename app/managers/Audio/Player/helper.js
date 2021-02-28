@@ -29,22 +29,21 @@ export const logIgnoreSubsequentPromise = songIndex => {
 }
 
 export const logPlayPromiseSuccess = songIndex => {
-    logPlayer(
+    logSuccess(
         `Promise to play ${songIndex} succeeded.`,
         {
-            action: 'playPromiseSuccess',
+            action: 'playPromise',
             label: songIndex,
-            success: true,
         }
     )
 }
 
-export const logPlayPromiseFailure = (songIndex, error) => {
-    logPlayer(
-        `Promise to play ${songIndex} failed: ${error}`,
+export const logPlayPromiseFailure = (songIndex, errorMessage) => {
+    logError(
+        `Promise to play ${songIndex} failed: ${errorMessage}`,
         {
-            action: 'playPromiseFailure',
-            label: songIndex,
+            action: 'playPromise',
+            label: `song: ${songIndex}, ${errorMessage}`,
         }
     )
 }

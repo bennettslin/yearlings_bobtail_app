@@ -27,7 +27,7 @@ const _log = ({
     action,
     label,
     value,
-    useTimeForValue,
+    useTimeDifferenceForValue,
 
 }) => {
     const timeDifference = getTimeDifference()
@@ -48,7 +48,7 @@ const _log = ({
         action,
         label,
         value: parseInt(
-            useTimeForValue ?
+            useTimeDifferenceForValue ?
                 // Send to analytics as milliseconds.
                 timeDifference * 1000 :
                 value
@@ -113,7 +113,7 @@ export const logServe = (log, props) => {
     _log({
         log,
         category: SERVE,
-        useTimeForValue: true,
+        useTimeDifferenceForValue: true,
         ...props,
     })
 }
@@ -134,6 +134,13 @@ export const logError = (log, props) => {
         log,
         level: 'error',
         category: ERROR,
+        ...props,
+    })
+}
+export const logSuccess = (log, props) => {
+    _log({
+        log,
+        category: SUCCESS,
         ...props,
     })
 }

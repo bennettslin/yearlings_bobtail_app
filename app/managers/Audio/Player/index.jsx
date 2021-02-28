@@ -1,10 +1,5 @@
 // Hidden component to wrap an audio DOM element.
-import React, {
-    useEffect,
-    useRef,
-    useState,
-    memo,
-} from 'react'
+import React, { useEffect, useRef, useState, memo } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import ReactAudioPlayer from 'react-audio-player'
@@ -86,11 +81,13 @@ const Player = ({
         logPromisePlay(songIndex)
         const playPromise = audioPlayerElement.current.play()
 
-        /**
-         * Browser supports the return of a promise:
-         https://developers.google.com/web/updates/2016/03/play-returns-promise
-         */
-        if (playPromise !== undefined) {
+        // Browser does not support the return of a promise.
+        if (playPromise === undefined) {
+            dispatchIsPlayingIfSelected(true)
+
+        } else {
+            setIsPromisingToPlay(true)
+
             playPromise
                 .then(() => {
                     logPlayPromiseSuccess(songIndex)
@@ -98,20 +95,13 @@ const Player = ({
                 })
                 .catch(error => {
                     const errorMessage = getShownErrorMessage(error)
-                    if (errorMessage) {
-                        logPlayPromiseFailure(songIndex, errorMessage)
-                        dispatch(updateErrorMessage(errorMessage))
-                    }
+                    logPlayPromiseFailure(songIndex, errorMessage)
+                    dispatch(updateErrorMessage(errorMessage))
                 })
                 .finally(() => {
                     setIsPromisingToPlay(false)
                 })
-
-        } else {
-            dispatchIsPlayingIfSelected(true)
         }
-
-        setIsPromisingToPlay(true)
     }
 
     const onLoadedMetadata = () => {

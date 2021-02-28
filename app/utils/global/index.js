@@ -23,6 +23,7 @@ import {
     logState,
     logTransition,
     logError,
+    logSuccess,
 } from '../logger'
 
 // TODO: Preferable to just pass song and verse indices directly.
@@ -58,4 +59,5 @@ export const globaliseLogs = () => {
     global.logState = logState
     global.logTransition = logTransition
     global.logError = logError
+    global.logSuccess = logSuccess
 }

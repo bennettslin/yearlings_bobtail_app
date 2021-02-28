@@ -12,7 +12,7 @@ export const SCROLL = 'scroll'
 export const SELECT = 'select'
 export const SERVE = 'serve'
 export const STATE = 'state'
-export const SUCCESS = 'style'
+export const SUCCESS = 'success'
 export const TRANSITION = 'transition'
 
 const BASE_STYLES = {
