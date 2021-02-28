@@ -1,18 +1,3 @@
-// import {
-//     TEMP_PITCH_ICON_1,
-//     TEMP_PITCH_ICON_2,
-//     TEMP_PITCH_ICON_3,
-//     TEMP_PITCH_ICON_4,
-//     TEMP_PITCH_ICON_5,
-//     TEMP_PITCH_ICON_6,
-//     TEMP_PITCH_ICON_7,
-//     TEMP_PITCH_ICON_8,
-//     TEMP_PITCH_ICON_9,
-//     TEMP_PITCH_ICON_10,
-//     TEMP_PITCH_ICON_11,
-//     TEMP_PITCH_ICON_12,
-// } from '../../../../app/constants/pitch'
-
 export default [
     {
         path: `introduction`,
@@ -22,8 +7,6 @@ export default [
             `Are you thinking to get in touch, but feeling unsure about our unconventional way of doing things? Read on, and I'll convince you that the Bobtail Yearlings are as reasonable to bet on as any artist you've worked with before.`,
         ],
         contactEmail: true,
-        // tempImageDescription: `Old Bennett`,
-        // imageKey: TEMP_PITCH_ICON_1,
     },
     {
         path: `stores-profit-then-scale`,
@@ -34,8 +17,6 @@ export default [
             `There's little risk in trying to scale a store, since each new store can repeat the same proven strategy. The downside is that scaling might not be possible. Since stores fulfill a known need, one isn't much different from the next. So wherever one competitor opens a store, there's now less room for others.`,
         ],
         footnote: `In this pitch, let's call any company a store if it sells products or services involving in-person transactions.`,
-        // tempImageDescription: `Walmart stores, linear graph`,
-        // imageKey: TEMP_PITCH_ICON_2,
     },
     {
         path: `startups-scale-then-profit`,
@@ -44,8 +25,6 @@ export default [
             `Unlike stores, a startup seeks to scale first, even if this means going without profit in the short term. A good example is Google, which stayed unprofitable in its first few years until it reached millions of users.`,
             `This means that founding a startup is a risky venture at every step along the way. The upside is that the need to self-differentiate is baked into a startup's business model. So if its founders have correctly identified an unknown need that they can fulfill, then their path to scale and success is probably assured.`,
         ],
-        // tempImageDescription: `Google suite, superlinear graph`,
-        // imageKey: TEMP_PITCH_ICON_3,
     },
     {
         path: `startups-and-the-network-effect`,
@@ -61,8 +40,6 @@ export default [
                 href: `https://en.wikipedia.org/wiki/Network_effect`,
             },
         ],
-        // tempImageDescription: `Facebook nodes`,
-        // imageKey: TEMP_PITCH_ICON_4,
     },
     {
         path: `startups-and-economies-of-scale`,
@@ -78,8 +55,6 @@ export default [
                 href: `https://en.wikipedia.org/wiki/Economies_of_scale`,
             },
         ],
-        // tempImageDescription: `Amazon delivery cycle`,
-        // imageKey: TEMP_PITCH_ICON_5,
     },
     {
         path: `greater-risks-greater-rewards`,
@@ -95,8 +70,6 @@ export default [
                 href: `http://www.paulgraham.com/growth.html`,
             },
         ],
-        // tempImageDescription: `Investor seeing linear and superlinear graphs`,
-        // imageKey: TEMP_PITCH_ICON_6,
     },
     {
         path: `indie-artists-are-like-stores`,
@@ -105,8 +78,6 @@ export default [
             `Let's get back now to music. For the past couple decades, record labels have preferred to sign indie artists, since they pose fewer risks. But it's no wonder why indie artists are less risky; they're the stores of the music world.`,
             `Indie artists typically gain fans by playing live shows. This is possible because audiences for shows already exist, and they arrive with certain expectations. In other words, indie artists fulfill a known need. And once an indie artist has built up a regional fanbase of a thousand, they can repeat their strategy to win over the next thousand fans in another region, and then the next.`,
         ],
-        // tempImageDescription: `Indie artist playing to audiences in different cities, linear graph.`,
-        // imageKey: TEMP_PITCH_ICON_7,
     },
     {
         path: `artups-are-like-startups`,
@@ -123,8 +94,6 @@ export default [
             },
             `from Steve Jobs.`,
         ],
-        // tempImageDescription: `Artist creating works, superlinear graph.`,
-        // imageKey: TEMP_PITCH_ICON_8,
     },
     {
         path: `artups-and-the-network-effect`,
@@ -140,8 +109,6 @@ export default [
                 `is so dense and complex, for example, that if a community of readers hadn't already taken the leap to understand it, most of us wouldn't bother with it. We need to be reassured by others that its difficult passages aren't gibberish but instead hide layers of deeper meaning, and that our patience will be rewarded.`,
             ],
         ],
-        // tempImageDescription: `Ulysses nodes`,
-        // imageKey: TEMP_PITCH_ICON_9,
     },
     {
         path: `artups-and-economies-of-scale`,
@@ -157,8 +124,6 @@ export default [
                 `recording sessions, Brian Wilson didn't hold back on the range of instruments or depth of arrangements that he used. This by itself would have made the songs very difficult to recreate onstage. So once the album sold poorly, the Beach Boys decided not to go on tour to support it at all.`,
             ],
         ],
-        // tempImageDescription: `Pet Sounds, `,
-        // imageKey: TEMP_PITCH_ICON_10,
     },
     {
         path: `our-initial-reception`,
@@ -191,8 +156,6 @@ export default [
                 `But without an existing fanbase, I struggled to find bandmates able to tour in support of an album with so many intricate parts to learn. The stripped-down sets we ended up playing just didn't convey what it was meant to be.`,
             ],
         ],
-        // tempImageDescription: ``,
-        // imageKey: TEMP_PITCH_ICON_11,
     },
     {
         path: `bet-on-the-bobtail-yearlings`,
@@ -210,7 +173,5 @@ export default [
             `If you're convinced to bet on us, let's talk! We're flexible and open-minded, and we've got plenty more creative ideas up our sleeves.`,
         ],
         contactEmail: true,
-        // tempImageDescription: `Old Bennett with arm raised`,
-        // imageKey: TEMP_PITCH_ICON_12,
     },
 ]

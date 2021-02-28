@@ -1,8 +1,7 @@
 # TODO:
 * Pass indices in gatsby browser?
-* Bobtail Yearlings analytics.
+* Tips and audio options send analytics with desktop to mobile resize?
 * Take care of IP errors. (Maybe it will be fine in production?)
-* Home icon on pitch.
 * Freeway panel.
 * Delay presence exit opacity transitions for non-opacity transitions.
 * Only prolong realistic presence transitions on enter, not exit.

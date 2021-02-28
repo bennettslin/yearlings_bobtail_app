@@ -1,7 +1,6 @@
 @import '../../scss/constants/icon';
 @import '../../scss/constants/pitch';
 @import '../../scss/constants/popup';
-// @import '../../scss/constants/responsive';
 
 .Pitch {
     position: relative;
@@ -12,8 +11,6 @@
 
     .PitchContainer
     & {
-        // When in pitch container, width is the same as full popup.
-        // max-width: $WIDTH_LAPTOP;
         max-width: $width__pitchContainer;
         height: calc(100% - #{$height__pitchHeader + $height__pitchNav});
 

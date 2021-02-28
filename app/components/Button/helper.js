@@ -91,7 +91,6 @@ const TOOLTIP_TEXT_MAP = {
             [DISABLED]: 'song overviews disabled',
         }
     },
-    [PITCH_HOME_BUTTON_KEY]: 'reset pitch page',
     [PITCH_PREVIOUS_BUTTON_KEY]: 'previous pitch page',
     [PITCH_NEXT_BUTTON_KEY]: 'next pitch page',
     [POPUP_CLOSE_BUTTON_KEY]: 'close popup',
@@ -112,6 +111,7 @@ export const getShowTooltip = buttonName => {
         case DOTS_SLIDE_SELECT_BUTTON_KEY:
         case NAV_BOOK_BUTTON_KEY:
         case NAV_SONG_BUTTON_KEY:
+        case PITCH_HOME_BUTTON_KEY:
         case PITCH_SEGMENT_BUTTON_KEY:
         case WORMHOLE_BUTTON_KEY:
             return false

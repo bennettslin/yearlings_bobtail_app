@@ -5079,4 +5079,8 @@ export default [
         taskName: `Path and query string fixes.`,
         workedHours: 8,
     },
+    {
+        taskName: `Update Bobtail Yearlings website analytics and builds.`,
+        workedHours: 8,
+    },
 ]

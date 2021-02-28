@@ -4,9 +4,11 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import Button from '../../Button'
 import ButtonCharacter from '../../Button/Character'
-// import { getPitchImageKeyForIndex } from '../../../api/pitch/segments'
 import { mapPitchSegmentIndex } from '../../../redux/pitch/selector'
-import { PITCH_SEGMENT_BUTTON_KEY } from '../../../constants/buttons'
+import {
+    PITCH_HOME_BUTTON_KEY,
+    PITCH_SEGMENT_BUTTON_KEY,
+} from '../../../constants/buttons'
 import {
     mapIsMonitorWidth,
     mapIsPhoneOrMiniWidth,
@@ -32,8 +34,9 @@ const PitchNavButton = ({
             {...{
                 isLargeSize: isMonitorWidth,
                 isSmallSize: isPhoneOrMiniWidth,
-                buttonName: PITCH_SEGMENT_BUTTON_KEY,
-                // buttonIdentifier: getPitchImageKeyForIndex(pitchIndex),
+                buttonName: pitchIndex === 1 ?
+                    PITCH_HOME_BUTTON_KEY :
+                    PITCH_SEGMENT_BUTTON_KEY,
                 isClickDisabled: isSelected,
                 handleButtonClick: _handleButtonClick,
             }}

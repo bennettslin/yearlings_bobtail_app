@@ -74,6 +74,10 @@
     stroke: hsla(0, 0%, 20%, 0.5);
 }
 
+.ButtonIcon__pitchHome {
+    .house { fill: hsl(47, 21%, 61%); }
+}
+
 .ButtonIcon__scores {
     fill: $colour__interact__bold;
 }
