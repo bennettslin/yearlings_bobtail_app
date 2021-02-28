@@ -1,13 +1,13 @@
 export const getIsRuntimeBuild = () => (
-    process.env.YB_ENV === 'runtime'
+    process.env.BUILD === 'runtime'
 )
 
 export const getIsProductionBuild = () => (
-    process.env.YB_ENV === 'production'
+    process.env.BUILD === 'production'
 )
 
 export const getFaviconFileName = () => {
-    switch (process.env.YB_FAVICON) {
+    switch (process.env.FAVICON) {
         case 'local':
             return 'yearlingsBobtail_local'
         case 'candidate':

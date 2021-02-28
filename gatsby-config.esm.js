@@ -9,15 +9,12 @@ import {
 
 export default {
     plugins: [
-        `gatsby-plugin-postcss`,
-        `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-remove-trailing-slashes`,
-        `gatsby-plugin-sass`,
         {
-            resolve: `gatsby-plugin-webpack-bundle-analyzer`,
+            resolve: `gatsby-plugin-google-analytics`,
             options: {
-                analyzerPort: 1114,
-                openAnalyzer: false,
+                trackingId: getIsProductionBuild() ?
+                    GA_ACCOUNT__PRODUCTION :
+                    GA_ACCOUNT__STAGING,
             },
         },
         {
@@ -51,6 +48,10 @@ export default {
                 path: `${__dirname}/app/pages`,
             },
         },
+        `gatsby-plugin-postcss`,
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-remove-trailing-slashes`,
+        `gatsby-plugin-sass`,
         {
             resolve: `gatsby-plugin-web-font-loader`,
             options: {
@@ -64,11 +65,10 @@ export default {
             },
         },
         {
-            resolve: `gatsby-plugin-google-analytics`,
+            resolve: `gatsby-plugin-webpack-bundle-analyzer`,
             options: {
-                trackingId: getIsProductionBuild() ?
-                    GA_ACCOUNT__PRODUCTION :
-                    GA_ACCOUNT__STAGING,
+                analyzerPort: 1114,
+                openAnalyzer: false,
             },
         },
     ],
