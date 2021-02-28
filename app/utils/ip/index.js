@@ -1,6 +1,7 @@
 import PublicIp from 'public-ip'
 
 export const getPublicIp = () => (
+    // This is just for analytics to measure unique users.
     Promise.any([
         PublicIp.v4(),
         PublicIp.v6(),
@@ -14,6 +15,6 @@ export const getPublicIp = () => (
                     label: error.message,
                 }
             )
-            return null
+            return 0
         })
 )

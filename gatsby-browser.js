@@ -1,7 +1,6 @@
 import {
     logGa,
-    setAsyncGaCustomDimensions,
-    setGaCustomDimensions,
+    setCustomDimensions,
 } from './app/utils/analytics'
 import { logBuild } from './app/utils/build'
 import { logDevice } from './app/utils/device'
@@ -19,8 +18,7 @@ import {
 
 initialiseGlobalAdminObjects()
 globaliseLogs()
-setGaCustomDimensions()
-setAsyncGaCustomDimensions()
+setCustomDimensions()
 
 logBuild()
 logDevice()

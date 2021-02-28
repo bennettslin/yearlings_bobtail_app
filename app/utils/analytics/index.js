@@ -17,29 +17,31 @@ const isGaUndefined = () => (
     typeof ga === 'undefined'
 )
 
-export const setGaCustomDimensions = () => {
+export const setCustomDimensions = async () => {
     if (isGaUndefined()) {
         return
     }
-    ga('set', 'dimension1', getDateTimeForGa(BUILD_DATE_TIME))
-    ga('set', 'dimension2', IS_USER_AGENT_DESKTOP)
-    ga('set', 'dimension3', IS_TOUCH_SUPPORTED)
-    ga('set', 'dimension4', BROWSER_NAME)
-    ga('set', 'dimension5', BROWSER_VERSION)
-    ga('set', 'dimension6', ENGINE_NAME)
-    ga('set', 'dimension7', ENGINE_VERSION)
-    ga('set', 'dimension8', OS_NAME)
-    ga('set', 'dimension9', OS_VERSION)
-    ga('set', 'dimension10', PLATFORM_TYPE)
-    ga('set', 'dimension11', PLATFORM_VENDOR)
-}
 
-export const setAsyncGaCustomDimensions = async () => {
-    if (isGaUndefined()) {
-        return
-    }
+    /**
+     * Ensure proper order of custom dimensions. The ones set asynchronously
+     * just have placeholders for now.
+     */
+    ga('set', 'dimension1', 0)
+    ga('set', 'dimension2', getDateTimeForGa(BUILD_DATE_TIME))
+    ga('set', 'dimension3', BROWSER_NAME)
+    ga('set', 'dimension4', BROWSER_VERSION)
+    ga('set', 'dimension5', ENGINE_NAME)
+    ga('set', 'dimension6', ENGINE_VERSION)
+    ga('set', 'dimension7', OS_NAME)
+    ga('set', 'dimension8', OS_VERSION)
+    ga('set', 'dimension9', PLATFORM_TYPE)
+    ga('set', 'dimension10', PLATFORM_VENDOR)
+    ga('set', 'dimension11', IS_USER_AGENT_DESKTOP)
+    ga('set', 'dimension12', IS_TOUCH_SUPPORTED)
+
+    // Set asynchronous custom dimensions.
     const ip = await getPublicIp()
-    ga('set', 'dimension12', ip)
+    ga('set', 'dimension1', ip)
     isAsyncPromiseComplete = true
 
     logServe(
@@ -69,7 +71,7 @@ export const sendToGa = ({
      * If after five seconds the promise hasn't completed, just go ahead and
      * send the GA event without the async custom dimensions.
      */
-    if (!isAsyncPromiseComplete && count < 50) {
+    if (!isAsyncPromiseComplete && count <= 50) {
         setTimeout(
             () => {
                 sendToGa({
