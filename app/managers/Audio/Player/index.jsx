@@ -72,6 +72,7 @@ const Player = ({
     }
 
     const promiseToPlay = time => {
+        // If there's already a promise to play, just return.
         if (isPromisingToPlay) {
             logIgnoreSubsequentPromise(songIndex)
             return
@@ -79,9 +80,14 @@ const Player = ({
 
         setCurrentTime(time)
         logPromisePlay(songIndex)
-        const playPromise = audioPlayerElement.current.play()
+        const
+            playPromise = audioPlayerElement.current.play(),
+            timeFromPromiseToPlay = Date.now()
 
-        // Browser does not support the return of a promise.
+        /**
+         * If no promise is returned, then the browser does not support the
+         * return of a promise, and is already playing the audio element.
+         */
         if (playPromise === undefined) {
             dispatchIsPlayingIfSelected(true)
 
@@ -90,12 +96,19 @@ const Player = ({
 
             playPromise
                 .then(() => {
-                    logPlayPromiseSuccess(songIndex)
+                    logPlayPromiseSuccess({
+                        songIndex,
+                        timeFromPromiseToPlay,
+                    })
                     dispatchIsPlayingIfSelected(true)
                 })
                 .catch(error => {
                     const errorMessage = getShownErrorMessage(error)
-                    logPlayPromiseFailure(songIndex, errorMessage)
+                    logPlayPromiseFailure({
+                        songIndex,
+                        errorMessage,
+                        timeFromPromiseToPlay,
+                    })
                     dispatch(updateErrorMessage(errorMessage))
                 })
                 .finally(() => {

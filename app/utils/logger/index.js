@@ -2,20 +2,7 @@ import { getSceneIndexForVerse } from '../../api/album/verses'
 import { sendToGaFromLog } from './helpers/analytics'
 import { getTimeDifference } from './helpers/time'
 import {
-    ACCESS,
-    ADMIN,
-    EVENT,
-    FOCUS,
-    MOUNT,
-    PLAYER,
-    SCROLL,
-    SELECT,
-    SERVE,
-    STATE,
-    TRANSITION,
-    SUCCESS,
-    ERROR,
-    getStyleForCategory,
+    ACCESS, ADMIN, EVENT, FOCUS, MOUNT, PLAYER, SCROLL, SELECT, SERVE, STATE, TRANSITION, SUCCESS, ERROR, getStyleForCategory,
 } from './helpers/styles'
 
 const _log = ({

@@ -1,3 +1,5 @@
+import { getTimeDifference } from '../../../utils/logger/helpers/time'
+
 export const logPause = songIndex => {
     logPlayer(
         `Player ${songIndex} paused.`,
@@ -28,22 +30,35 @@ export const logIgnoreSubsequentPromise = songIndex => {
     )
 }
 
-export const logPlayPromiseSuccess = songIndex => {
+export const logPlayPromiseSuccess = ({
+    songIndex,
+    timeFromPromiseToPlay,
+}) => {
+    const timeDifference = getTimeDifference(timeFromPromiseToPlay)
+
     logSuccess(
-        `Promise to play ${songIndex} succeeded.`,
+        `Promise to play ${songIndex} succeeded after ${timeDifference}s.`,
         {
             action: 'playPromise',
             label: songIndex,
+            value: timeDifference * 1000,
         }
     )
 }
 
-export const logPlayPromiseFailure = (songIndex, errorMessage) => {
+export const logPlayPromiseFailure = ({
+    songIndex,
+    errorMessage,
+    timeFromPromiseToPlay,
+}) => {
+    const timeDifference = getTimeDifference(timeFromPromiseToPlay)
+
     logError(
-        `Promise to play ${songIndex} failed: ${errorMessage}`,
+        `Promise to play ${songIndex} failed after ${timeDifference}s: ${errorMessage}`,
         {
             action: 'playPromise',
             label: `song: ${songIndex}, ${errorMessage}`,
+            value: timeDifference * 1000,
         }
     )
 }
