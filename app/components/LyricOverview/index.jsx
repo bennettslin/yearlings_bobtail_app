@@ -12,8 +12,8 @@ import './style'
 
 const LyricOverview = forwardRef(({ didMount }, ref) => {
     const
-        lyricOverviewHeightStyle = useSelector(mapLyricOverviewHeightStyle),
-        albumPageElement = useContext(AlbumPageElementContext)
+        albumPageElement = useContext(AlbumPageElementContext),
+        lyricOverviewHeightStyle = useSelector(mapLyricOverviewHeightStyle)
 
     return (
         <div

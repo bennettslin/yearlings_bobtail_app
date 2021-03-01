@@ -11,10 +11,10 @@ import './style'
 
 const OverviewPopup = ({ inMain = false }) => {
     const
+        albumPageElement = useContext(AlbumPageElementContext),
         isOverviewPopupVisible = useSelector(
             getMapIsOverviewPopupVisible(inMain)
-        ),
-        albumPageElement = useContext(AlbumPageElementContext)
+        )
 
     return (
         <Popup

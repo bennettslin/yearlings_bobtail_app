@@ -1,7 +1,9 @@
 // Manager for audio players.
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useRef } from 'react'
+import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
+import getDidMountHoc from '../../components/DidMountHoc'
 import PlayerTimeContext from '../../contexts/PlayerTime'
 import SongDispatcher from '../../dispatchers/Song'
 import VerseDispatcher from '../../dispatchers/Verse'
@@ -17,15 +19,14 @@ import {
 } from '../../redux/selected/selector'
 import { mapAudioOptionIndex } from '../../redux/session/selector'
 
-const AudioManager = () => {
+const AudioManager = ({ didMount }) => {
     const
+        { setPlayerTime } = useContext(PlayerTimeContext),
         dispatchSong = useRef(),
         dispatchVerse = useRef(),
-        { setPlayerTime } = useContext(PlayerTimeContext),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
-        audioOptionIndex = useSelector(mapAudioOptionIndex),
-        [didMount, setDidMount] = useState(false)
+        audioOptionIndex = useSelector(mapAudioOptionIndex)
 
     const handleSongEnd = () => {
         const nextSongIndex = getNextSongIndex(
@@ -107,10 +108,6 @@ const AudioManager = () => {
         return false
     }
 
-    useEffect(() => {
-        setDidMount(true)
-    }, [])
-
     return didMount && (
         <div className={cx(
             'AudioManager',
@@ -132,4 +129,8 @@ const AudioManager = () => {
     )
 }
 
-export default AudioManager
+AudioManager.propTypes = {
+    didMount: PropTypes.bool.isRequired,
+}
+
+export default getDidMountHoc(AudioManager)
