@@ -47,6 +47,10 @@ const Player = ({
         canPromisePlay = useSelector(mapCanPromisePlay),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
+    const onLoadedMetadata = () => {
+        dispatch(updateCanPlayThroughForSong(songIndex))
+    }
+
     const setCurrentTime = (currentTime = playerPausedTime) => {
         audioPlayerElement.current.currentTime = currentTime
         if (isSelected) {
@@ -115,10 +119,6 @@ const Player = ({
                     setIsPromisingToPlay(false)
                 })
         }
-    }
-
-    const onLoadedMetadata = () => {
-        dispatch(updateCanPlayThroughForSong(songIndex))
     }
 
     const _prepareToRepeat = () => {
