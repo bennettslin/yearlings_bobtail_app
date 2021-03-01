@@ -39,7 +39,7 @@ const Player = ({
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
         didMountRef = useRef(),
-        isSelected = useSelector(getMapIsSongSelected(songIndex)),
+        isSongSelected = useSelector(getMapIsSongSelected(songIndex)),
         playerPausedTime = useSelector(getMapPlayerPausedTime(songIndex)),
         isPlaying = useSelector(mapIsPlaying),
         queuedTogglePlay = useSelector(mapQueuedTogglePlay),
@@ -47,42 +47,38 @@ const Player = ({
         canPromisePlay = useSelector(mapCanPromisePlay),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
-    const onLoadedMetadata = () => {
-        dispatch(updateCanPlayThroughForSong(songIndex))
-    }
-
-    const setCurrentTime = (currentTime = playerPausedTime) => {
+    const _setCurrentTime = (currentTime = playerPausedTime) => {
         audioPlayerElement.current.currentTime = currentTime
-        if (isSelected) {
+        if (isSongSelected) {
             updateCurrentTime({ currentTime })
         }
     }
 
-    const dispatchIsPlayingIfSelected = isPlaying => {
-        if (isSelected) {
+    const _dispatchIsPlayingIfSelected = isPlaying => {
+        if (isSongSelected) {
             dispatch(updateAudioStore({ isPlaying }))
         }
     }
 
-    const askToPause = time => {
+    const _askToPause = time => {
         if (audioPlayerElement.current.paused) {
             return
         }
 
-        setCurrentTime(time)
+        _setCurrentTime(time)
         logPause(songIndex)
         audioPlayerElement.current.pause()
-        dispatchIsPlayingIfSelected(false)
+        _dispatchIsPlayingIfSelected(false)
     }
 
-    const promiseToPlay = time => {
+    const _promiseToPlay = time => {
         // If there's already a promise to play, just return.
         if (isPromisingToPlay) {
             logIgnoreSubsequentPromise(songIndex)
             return
         }
 
-        setCurrentTime(time)
+        _setCurrentTime(time)
         logPromisePlay(songIndex)
         const
             playPromise = audioPlayerElement.current.play(),
@@ -93,7 +89,7 @@ const Player = ({
          * return of a promise, and is already playing the audio element.
          */
         if (playPromise === undefined) {
-            dispatchIsPlayingIfSelected(true)
+            _dispatchIsPlayingIfSelected(true)
 
         } else {
             setIsPromisingToPlay(true)
@@ -104,7 +100,7 @@ const Player = ({
                         songIndex,
                         timeFromPromiseToPlay,
                     })
-                    dispatchIsPlayingIfSelected(true)
+                    _dispatchIsPlayingIfSelected(true)
                 })
                 .catch(error => {
                     const errorMessage = getShownErrorMessage(error)
@@ -123,12 +119,16 @@ const Player = ({
 
     const _prepareToRepeat = () => {
         // Explicitly reset time. (Not necessary to do both, but whatever.)
-        askToPause(0)
-        promiseToPlay(0)
+        _askToPause(0)
+        _promiseToPlay(0)
+    }
+
+    const onCanPlayThrough = () => {
+        dispatch(updateCanPlayThroughForSong(songIndex))
     }
 
     const onListen = currentTime => {
-        if (isSelected) {
+        if (isSongSelected) {
             // If this returns true, repeat song.
             const {
                 songEnded,
@@ -163,12 +163,12 @@ const Player = ({
     }
 
     useEffect(() => {
-        if (isSelected && queuedTogglePlay) {
+        if (isSongSelected && queuedTogglePlay) {
             // If now paused, play. If now playing, pause.
             if (!isPlaying) {
-                promiseToPlay()
+                _promiseToPlay()
             } else {
-                askToPause()
+                _askToPause()
             }
             dispatch(updateAudioStore({ queuedTogglePlay: false }))
         }
@@ -176,7 +176,7 @@ const Player = ({
 
     useEffect(() => {
         if (didMountRef.current) {
-            if (isSelected) {
+            if (isSongSelected) {
                 if (
                     /**
                      * Wait for song select to finalise, in case the user is
@@ -192,7 +192,7 @@ const Player = ({
                         queuedPlayFromLogue
                     )
                 ) {
-                    promiseToPlay()
+                    _promiseToPlay()
                 }
 
                 dispatch(resetAudioQueue())
@@ -204,10 +204,10 @@ const Player = ({
 
     useEffect(() => {
         // If no longer selected, pause.
-        if (!isSelected) {
-            askToPause()
+        if (!isSongSelected) {
+            _askToPause()
         }
-    }, [isSelected])
+    }, [isSongSelected])
 
     return (
         <ReactAudioPlayer
@@ -217,9 +217,9 @@ const Player = ({
 
                 /**
                  * This was originally onCanPlayThrough, but Firefox and Safari
-                 * don't support it, unfortunately.
+                 * don't support it.
                  */
-                onLoadedMetadata,
+                onLoadedMetadata: onCanPlayThrough,
                 onListen,
                 onEnded,
                 src: getMp3ForSong(songIndex),
