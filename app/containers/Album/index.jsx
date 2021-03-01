@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import getDidMountHoc from '../../components/DidMountHoc'
 import AlbumPageElementContext from '../../contexts/AlbumPageElement'
 import PlayerTimeContext from '../../contexts/PlayerTime'
-import AudioManager from '../../managers/Audio'
-import ListenContainer from '../Listen'
+import AudioContainer from '../Audio'
+import ListenerContainer from '../Listener'
 import RootContainer from '../Root'
 import StylesheetContainer from '../Stylesheet'
 import { setIsAlbumSession } from '../../utils/browser'
@@ -35,9 +35,10 @@ const AlbumContainer = ({ didMount, children }) => {
                     },
                 }}
             >
-                <AudioManager />
-                <ListenContainer />
-                <RootContainer />
+                <ListenerContainer />
+                <AudioContainer>
+                    <RootContainer />
+                </AudioContainer>
                 <StylesheetContainer />
             </PlayerTimeContext.Provider>
         </AlbumPageElementContext.Provider>

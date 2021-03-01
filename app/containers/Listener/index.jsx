@@ -7,9 +7,9 @@ import SongChangeManager from '../../managers/SongChange'
 import ScrollManager from '../../managers/Scroll'
 import UrlManager from '../../managers/Url'
 
-const ListenContainer = () => {
+const ListenerContainer = () => {
     useEffect(() => {
-        logMount('ListenContainer')
+        logMount('ListenerContainer')
     }, [])
 
     return (
@@ -25,4 +25,4 @@ const ListenContainer = () => {
     )
 }
 
-export default ListenContainer
+export default ListenerContainer
