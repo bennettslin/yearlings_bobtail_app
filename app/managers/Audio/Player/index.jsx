@@ -1,4 +1,4 @@
-// Hidden component to wrap an audio DOM element.
+// Manager for individual audio player.
 import React, {
     forwardRef, useContext, useEffect, useImperativeHandle, useRef, useState,
 } from 'react'
@@ -19,7 +19,7 @@ import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 import { updateErrorMessage } from '../../../redux/error/action'
 import { getMapPlayerCanPlayThrough } from '../../../redux/players/selector'
 
-const Player = forwardRef(({
+const PlayerManager = forwardRef(({
     songIndex,
     // handleSongEnd,
     // updateCurrentTime,
@@ -50,7 +50,7 @@ const Player = forwardRef(({
             )
         ) {
             // TODO: Temp log.
-            logPlayer(`Player ${songIndex} updated isPlaying to ${nextIsPlaying ? 'true' : 'false'}.`)
+            logPlayer(`AudioPlayer ${songIndex} updated isPlaying to ${nextIsPlaying ? 'true' : 'false'}.`)
             dispatch(updateIsPlaying(nextIsPlaying))
         }
     }
@@ -222,20 +222,20 @@ const Player = forwardRef(({
     )
 })
 
-Player.propTypes = {
+PlayerManager.propTypes = {
     songIndex: PropTypes.number.isRequired,
     // handleSongEnd: PropTypes.func.isRequired,
     // updateCurrentTime: PropTypes.func.isRequired,
 }
 
-const PlayerContainer = forwardRef((props, ref) => {
+const PlayerManagerContainer = forwardRef((props, ref) => {
     const setRef = node => {
         ref.current = ref.current || {}
         ref.current[props.songIndex] = node
     }
 
     return (
-        <Player
+        <PlayerManager
             {...{
                 ref: setRef,
                 ...props,
@@ -244,8 +244,8 @@ const PlayerContainer = forwardRef((props, ref) => {
     )
 })
 
-PlayerContainer.propTypes = {
+PlayerManagerContainer.propTypes = {
     songIndex: PropTypes.number.isRequired,
 }
 
-export default PlayerContainer
+export default PlayerManagerContainer

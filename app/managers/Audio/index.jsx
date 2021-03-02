@@ -1,13 +1,12 @@
-// Manager for audio players.
+// Manager for all audio players.
 import React, { useRef, forwardRef, useImperativeHandle } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import getDidMountHoc from '../../components/DidMountHoc'
-// import AudioPlayerContext from '../../contexts/AudioPlayer'
 import SongDispatcher from '../../dispatchers/Song'
 import VerseDispatcher from '../../dispatchers/Verse'
-import Player from './Player'
+import AudioPlayer from './Player'
 import { getSongNotLogueIndices } from '../../api/album/songs'
 import { getStartTimeForVerse } from '../../api/album/time'
 // import {
@@ -26,7 +25,7 @@ import { updateIsPlaying } from '../../redux/audio/action'
 const AudioManager = forwardRef(({ didMount }, ref) => {
     const
         dispatch = useDispatch(),
-        players = useRef(),
+        playerManagers = useRef(),
         dispatchSong = useRef(),
         dispatchVerse = useRef(),
         isPlaying = useSelector(mapIsPlaying),
@@ -104,8 +103,8 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
     //     return false
     // }
 
-    const _getPlayer = songIndex => (
-        players.current[songIndex] ||
+    const getPlayerManager = songIndex => (
+        playerManagers.current[songIndex] ||
         {
             // Ensure these calls don't break for logues.
             askToPause() {},
@@ -130,11 +129,11 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
              * playing.
              */
             if (selectedSongIndex !== songIndex) {
-                _getPlayer(selectedSongIndex).askToPause(true)
+                getPlayerManager(selectedSongIndex).askToPause(true)
             }
 
             // Play the current player.
-            _getPlayer(songIndex).askToPlay(getStartTimeForVerse(
+            getPlayerManager(songIndex).askToPlay(getStartTimeForVerse(
                 songIndex,
                 verseIndex,
             ))
@@ -144,7 +143,7 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
         // If being called to pause...
         } else {
             // Pause the current player.
-            _getPlayer(songIndex).askToPause(true)
+            getPlayerManager(songIndex).askToPause(true)
 
             // Set isPlaying to false here and now.
             dispatch(updateIsPlaying(false))
@@ -161,10 +160,10 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
             'dNC',
         )}>
             {getSongNotLogueIndices().map(songIndex => (
-                <Player
+                <AudioPlayer
                     {...{
                         key: songIndex,
-                        ref: players,
+                        ref: playerManagers,
                         songIndex,
                         // handleSongEnd,
                         // updateCurrentTime,
