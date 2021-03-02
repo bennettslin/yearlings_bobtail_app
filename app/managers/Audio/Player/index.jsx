@@ -1,20 +1,18 @@
 // Manager for individual audio player.
 import React, {
-    forwardRef, useContext, useEffect, useImperativeHandle, useRef, useState,
+    forwardRef, useEffect, useImperativeHandle, useRef, useState,
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import ReactAudioPlayer from 'react-audio-player'
 import {
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
+    getShouldDispatchAfterPlayPromise,
 } from './helper'
-import AudioPlayerContext from '../../../contexts/AudioPlayer'
-import { getFormattedTime } from '../../../helpers/format'
+import AudioPlayerElement from '../Element'
 import { updateIsPlaying } from '../../../redux/audio/action'
 import { getMapIsSongLyric } from '../../../redux/lyric/selector'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
-import { getMp3ForSong } from '../../../api/mp3'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 import { updateErrorMessage } from '../../../redux/error/action'
 import { getMapPlayerCanPlayThrough } from '../../../redux/players/selector'
@@ -26,9 +24,8 @@ const PlayerManager = forwardRef(({
 
 }, ref) => {
     const
-        { setSelectedPlayerTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
-        audioPlayerElement = useRef(),
+        audioPlayer = useRef(),
         playerCanPlayThrough = useSelector(
             getMapPlayerCanPlayThrough(songIndex),
         ),
@@ -38,28 +35,20 @@ const PlayerManager = forwardRef(({
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false),
         [playFromTime, setPlayFromTime] = useState(0)
 
-    const _dispatchIsPlayingAfterPromise = nextIsPlaying => {
-        if (
-            nextIsPlaying ||
-            (
-                /**
-                 * Triggered by player failure, so only dispatch if player is
-                 * the one selected.
-                 */
-                !nextIsPlaying && isSongSelected
-            )
-        ) {
+    const _dispatchIsPlayingAfterPromise = didPromiseSucceed => {
+        if (getShouldDispatchAfterPlayPromise({
+            didPromiseSucceed,
+            isSongSelected,
+        })) {
             // TODO: Temp log.
-            logPlayer(`AudioPlayer ${songIndex} updated isPlaying to ${nextIsPlaying ? 'true' : 'false'}.`)
-            dispatch(updateIsPlaying(nextIsPlaying))
+            logPlayer(`AudioPlayer ${songIndex} updated isPlaying to ${didPromiseSucceed ? 'true' : 'false'}.`)
+            dispatch(updateIsPlaying(didPromiseSucceed))
         }
     }
 
     const promiseToPlay = () => {
-        logPlayer(`Promising to play ${songIndex}\u2026`)
-
         const
-            playPromise = audioPlayerElement.current.play(),
+            playPromise = audioPlayer.current.play(),
             timePromisedToPlay = Date.now()
 
         /**
@@ -118,76 +107,37 @@ const PlayerManager = forwardRef(({
         setPlayFromTime(time)
 
         // Only play if currently paused.
-        if (audioPlayerElement.current.paused) {
+        if (audioPlayer.current.getIsPaused()) {
             /**
              * This registers the user gesture token. This is needed by Safari,
              * and possibly other browsers in the future, for their measures to
              * prevent autoplay.
              */
-            audioPlayerElement.current.load()
+            audioPlayer.current.load()
             setIsLoadedToPromise(true)
 
         // If currently playing, just set new time.
         } else {
-            logPlayer(`Player ${songIndex} updated to ${getFormattedTime(time)}.`)
-            audioPlayerElement.current.currentTime = time
+            audioPlayer.current.setCurrentTime(time, true)
         }
     }
 
-    const askToPause = () => {
-        if (audioPlayerElement.current.paused) {
-            return
+    const askToPause = ({ nextIsPaused } = {}) => {
+        audioPlayer.current.pause()
+        if (nextIsPaused) {
+            dispatch(updateIsPlaying(false))
         }
-
-        audioPlayerElement.current.pause()
-        logPlayer(`Player ${songIndex} paused.`)
     }
 
     const onLoadedMetadata = () => {
         // This is being called upon load before promise to play.
         if (playerCanPlayThrough) {
             // Set current time of player to time passed by audio manager.
-            audioPlayerElement.current.currentTime = playFromTime
-            logPlayer(`Player ${songIndex} loaded at ${getFormattedTime(audioPlayerElement.current.currentTime)}.`)
+            audioPlayer.current.setCurrentTime(playFromTime)
 
         // This is being called upon initial load.
         } else {
             dispatch(updateCanPlayThroughForSong(songIndex))
-        }
-    }
-
-    const onListen = time => {
-        // Update selected player time displayed in song banner.
-        setSelectedPlayerTime(time)
-
-        // if (isSongSelected) {
-        //     // If this returns true, repeat song.
-        //     const {
-        //         songEnded,
-        //         doRepeat,
-        //     } = updateCurrentTime(time)
-
-        //     if (songEnded) {
-        //         logPlayer(`Player ${songIndex} reached end of final verse.`)
-        //     }
-
-        //     if (doRepeat) {
-        //         askToPlay(0)
-        //     }
-        // }
-    }
-
-    const onEnded = () => {
-        logPlayer(`Player for ${songIndex} ended itself.`)
-        // If this returns true, repeat song.
-        // if (handleSongEnd()) {
-        //     askToPlay(0)
-        // }
-    }
-
-    const setRef = node => {
-        if (node) {
-            audioPlayerElement.current = node.audioEl.current
         }
     }
 
@@ -204,19 +154,11 @@ const PlayerManager = forwardRef(({
     }))
 
     return (
-        <ReactAudioPlayer
+        <AudioPlayerElement
             {...{
-                ref: setRef,
-                listenInterval: 50,
-
-                /**
-                 * This was originally onCanPlayThrough, but Firefox and Safari
-                 * don't support it.
-                 */
+                ref: audioPlayer,
+                songIndex,
                 onLoadedMetadata,
-                onListen,
-                onEnded,
-                src: getMp3ForSong(songIndex),
             }}
         />
     )

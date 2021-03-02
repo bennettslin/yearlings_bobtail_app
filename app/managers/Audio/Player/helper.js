@@ -1,5 +1,20 @@
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
 
+export const getShouldDispatchAfterPlayPromise = ({
+    didPromiseSucceed,
+    isSongSelected,
+}) => (
+    // A promise can succeed only from the selected player.
+    didPromiseSucceed ||
+    (
+        /**
+         * A promise can fail from any player, so only dispatch if it's the
+         * selected player.
+         */
+        !didPromiseSucceed && isSongSelected
+    )
+)
+
 export const logPlayPromiseSuccess = ({
     songIndex,
     timePromisedToPlay,

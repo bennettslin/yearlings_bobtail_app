@@ -7,12 +7,13 @@
     * Confirm that quickly navigating through songs is not a problem. (Seems fine so far, other than AbortError message.)
     * Weird time flash in song banner when selecting verse while song is playing.
     * Filmstrip transition is weird when selecting verse while song is playing.
+    * Figure out exact division between player manager and element.
 
-* Player
-    * Should know its own end time.
-    <!-- * Handles updating selected player time directly. -->
+* Player element
+    * Should just keep track of its own verse index and start time.
     * Handles selecting next verse within same song.
     * Handles selecting next song.
+        * Should know its own end time.
     * Handle its own repeat play.
 
 * Is single mp3 needed to solve these potential problems?
