@@ -1,4 +1,4 @@
-import { getTimeDifference } from '../../../../utils/logger/helpers/time'
+import { getTimeDifference } from '../../../utils/logger/helpers/time'
 
 export const logPlayPromiseSuccess = ({
     songIndex,

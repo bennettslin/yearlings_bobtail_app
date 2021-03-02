@@ -8,7 +8,7 @@ import ReactAudioPlayer from 'react-audio-player'
 import {
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
-} from './helpers/log'
+} from './helper'
 import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateIsPlaying } from '../../../redux/audio/action'
@@ -157,6 +157,7 @@ const Player = forwardRef(({
     }
 
     const onListen = time => {
+        // Update selected player time displayed in song banner.
         setSelectedPlayerTime(time)
 
         // if (isSongSelected) {

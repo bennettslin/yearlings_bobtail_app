@@ -17,7 +17,7 @@ export const TRANSITION = 'transition'
 
 const BASE_STYLES = {
     // Show turquoise background by default.
-    backgroundColor: '#f0ffff',
+    backgroundColor: '#f8ffff',
     color: '#888',
     padding: '6px 8px',
     margin: '2px 0',
@@ -28,7 +28,7 @@ const BASE_STYLES = {
 
 const GA_STYLE = {
     // If log sends to analytics, show yellow background instead.
-    backgroundColor: '#fffff0',
+    backgroundColor: '#fffff8',
 }
 
 const _getStyles = (styles) => {
@@ -83,7 +83,7 @@ const LOG_STYLES = {
     },
     [PLAYER]: {
         color: '#487',
-        fontSize: '1.35em',
+        fontSize: '1.6em',
     },
     [SCROLL]: {
         color: '#748',
