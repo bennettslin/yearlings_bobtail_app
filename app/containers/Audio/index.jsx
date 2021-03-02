@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import AudioManager from '../../managers/Audio'
 
-const AudioContainer = ({ children }) => (
+const AudioContainer = forwardRef(({ children }, ref) => (
     <>
-        <AudioManager />
+        <AudioManager {...{ ref }} />
         {children}
     </>
-)
+))
 
 AudioContainer.propTypes = {
     children: PropTypes.node.isRequired,

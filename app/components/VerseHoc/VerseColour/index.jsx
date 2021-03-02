@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
 import getDidMountHoc from '../../DidMountHoc'
-import PlayerTimeContext from '../../../contexts/PlayerTime'
+import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import Tracker from '../../Tracker'
 import { getMapVerseTrackerLength } from '../../../redux/tracker/selector'
 import { VERSE_CURSOR_CHILD_PREFIX } from '../../../constants/cursor'
@@ -18,9 +18,9 @@ const VerseColour = ({
 
 }) => {
     const
-        { playerTime } = useContext(PlayerTimeContext),
+        { selectedPlayerTime } = useContext(AudioPlayerContext),
         verseTrackerLength = useSelector(getMapVerseTrackerLength({
-            playerTime,
+            selectedPlayerTime,
             verseIndex,
         }))
 

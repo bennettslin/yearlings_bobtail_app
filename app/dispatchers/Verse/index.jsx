@@ -1,6 +1,6 @@
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useContext, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-// import { updateAudioStore } from '../../redux/audio/action'
+import AudioPlayerContext from '../../contexts/AudioPlayer'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { mapLyricVerseIndex } from '../../redux/lyric/selector'
@@ -13,6 +13,7 @@ import { mapIsAutoScroll } from '../../redux/toggle/selector'
 
 const VerseDispatcher = forwardRef((props, ref) => {
     const
+        { callPlayer } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
@@ -46,6 +47,7 @@ const VerseDispatcher = forwardRef((props, ref) => {
                     dispatch(scrollLyricForPlayAutoScroll(verseIndex))
                 }
             } else {
+                callPlayer({ verseIndex })
                 dispatch(scrollLyricForVerseSelect(
                     scrollLog,
                     verseIndex

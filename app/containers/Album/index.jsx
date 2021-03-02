@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import getDidMountHoc from '../../components/DidMountHoc'
 import AlbumPageElementContext from '../../contexts/AlbumPageElement'
-import PlayerTimeContext from '../../contexts/PlayerTime'
+import AudioPlayerContext from '../../contexts/AudioPlayer'
 import AudioContainer from '../Audio'
 import ListenerContainer from '../Listener'
 import RootContainer from '../Root'
@@ -10,7 +10,13 @@ import StylesheetContainer from '../Stylesheet'
 import { setIsAlbumSession } from '../../utils/browser'
 
 const AlbumContainer = ({ didMount, children }) => {
-    const [playerTime, setPlayerTime] = useState(0)
+    const
+        audioContainer = useRef(),
+        [selectedPlayerTime, setSelectedPlayerTime] = useState(0)
+
+    const callPlayer = props => {
+        audioContainer.current.callPlayer(props)
+    }
 
     // Establish that session started from album, not pitch page.
     setIsAlbumSession()
@@ -27,20 +33,21 @@ const AlbumContainer = ({ didMount, children }) => {
 
     return didMount && (
         <AlbumPageElementContext.Provider {...{ value: children }}>
-            <PlayerTimeContext.Provider
+            <AudioPlayerContext.Provider
                 {...{
                     value: {
-                        playerTime,
-                        setPlayerTime,
+                        selectedPlayerTime,
+                        setSelectedPlayerTime,
+                        callPlayer,
                     },
                 }}
             >
                 <ListenerContainer />
-                <AudioContainer>
+                <AudioContainer {...{ ref: audioContainer }}>
                     <RootContainer />
                 </AudioContainer>
                 <StylesheetContainer />
-            </PlayerTimeContext.Provider>
+            </AudioPlayerContext.Provider>
         </AlbumPageElementContext.Provider>
     )
 }

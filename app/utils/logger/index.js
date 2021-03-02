@@ -65,14 +65,6 @@ export const logEvent = (componentName, label) => {
         label,
     })
 }
-export const logPlayer = (log, { success, ...props }) => {
-    _log({
-        log,
-        styleCategory: success ? SUCCESS : PLAYER,
-        category: PLAYER,
-        ...props,
-    })
-}
 export const logSelect = ({
     action,
     song,
@@ -150,6 +142,12 @@ export const logMount = componentName => {
     _log({
         log: `${componentName} mounted.`,
         category: MOUNT,
+    })
+}
+export const logPlayer = log => {
+    _log({
+        log,
+        category: PLAYER,
     })
 }
 export const logScroll = ({

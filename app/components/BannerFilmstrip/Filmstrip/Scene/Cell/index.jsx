@@ -2,7 +2,7 @@ import React, { useContext, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
-import PlayerTimeContext from '../../../../../contexts/PlayerTime'
+import AudioPlayerContext from '../../../../../contexts/AudioPlayer'
 import Tracker from '../../../../Tracker'
 import { getMapIsSceneCursor } from '../../../../../redux/cursor/selector'
 import { getMapSceneTrackerWidth } from '../../../../../redux/tracker/selector'
@@ -11,11 +11,11 @@ import './style'
 
 const FilmstripCell = ({ sceneIndex }) => {
     const
-        { playerTime } = useContext(PlayerTimeContext),
+        { selectedPlayerTime } = useContext(AudioPlayerContext),
         isSceneCursor = useSelector(getMapIsSceneCursor(sceneIndex)),
         sceneTrackerWidth = useSelector(getMapSceneTrackerWidth({
             sceneIndex,
-            playerTime,
+            selectedPlayerTime,
         }))
 
     return (

@@ -1,40 +1,10 @@
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
 
-export const logPause = songIndex => {
-    logPlayer(
-        `Player ${songIndex} paused.`,
-        {
-            action: 'pause',
-            label: songIndex,
-        }
-    )
-}
-
-export const logPromisePlay = songIndex => {
-    logPlayer(
-        `Promising to play ${songIndex}\u2026`,
-        {
-            action: 'promisePlay',
-            label: songIndex,
-        }
-    )
-}
-
-export const logIgnoreSubsequentPromise = songIndex => {
-    logPlayer(
-        `Ignoring subsequent promise to play ${songIndex}.`,
-        {
-            action: 'ignoreSubsequentPromise',
-            label: songIndex,
-        }
-    )
-}
-
 export const logPlayPromiseSuccess = ({
     songIndex,
-    timeFromPromiseToPlay,
+    timePromisedToPlay,
 }) => {
-    const timeDifference = getTimeDifference(timeFromPromiseToPlay)
+    const timeDifference = getTimeDifference(timePromisedToPlay)
 
     logSuccess(
         `Promise to play ${songIndex} succeeded after ${timeDifference}s.`,
@@ -49,9 +19,9 @@ export const logPlayPromiseSuccess = ({
 export const logPlayPromiseFailure = ({
     songIndex,
     errorMessage,
-    timeFromPromiseToPlay,
+    timePromisedToPlay,
 }) => {
-    const timeDifference = getTimeDifference(timeFromPromiseToPlay)
+    const timeDifference = getTimeDifference(timePromisedToPlay)
 
     logError(
         `Promise to play ${songIndex} failed after ${timeDifference}s: ${errorMessage}`,
@@ -61,28 +31,4 @@ export const logPlayPromiseFailure = ({
             value: timeDifference * 1000,
         }
     )
-}
-
-export const logEndByPlayer = songIndex => {
-    logPlayer(
-        `Player for ${songIndex} ended itself.`,
-        {
-            action: 'endByPlayer',
-            label: songIndex,
-        }
-    )
-}
-
-export const logEndByFinalVerse = songIndex => {
-    logPlayer(
-        `Player for ${songIndex} reached end of final verse.`,
-        {
-            action: 'endByFinalVerse',
-            label: songIndex,
-        }
-    )
-}
-
-export const getShownErrorMessage = ({ name, message }) => {
-    return `${name}: ${message}`
 }

@@ -1,29 +1,34 @@
 // Manager for audio players.
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useRef, forwardRef, useImperativeHandle } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import getDidMountHoc from '../../components/DidMountHoc'
-import PlayerTimeContext from '../../contexts/PlayerTime'
+import AudioPlayerContext from '../../contexts/AudioPlayer'
 import SongDispatcher from '../../dispatchers/Song'
 import VerseDispatcher from '../../dispatchers/Verse'
 import Player from './Player'
 import { getSongNotLogueIndices } from '../../api/album/songs'
+import { getStartTimeForVerse } from '../../api/album/time'
 import {
     getNextSongIndex,
     getTimeInVerseStatus,
 } from './helper'
+import { mapIsPlaying } from '../../redux/audio/selector'
 import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
 } from '../../redux/selected/selector'
 import { mapAudioOptionIndex } from '../../redux/session/selector'
+import { logPlayer } from '../../utils/logger'
 
-const AudioManager = ({ didMount }) => {
+const AudioManager = forwardRef(({ didMount }, ref) => {
     const
-        { setPlayerTime } = useContext(PlayerTimeContext),
+        { setSelectedPlayerTime } = useContext(AudioPlayerContext),
+        players = useRef(),
         dispatchSong = useRef(),
         dispatchVerse = useRef(),
+        isPlaying = useSelector(mapIsPlaying),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex),
         audioOptionIndex = useSelector(mapAudioOptionIndex)
@@ -54,7 +59,7 @@ const AudioManager = ({ didMount }) => {
     }) => {
         if (!fromListen) {
             // If not from listen, just set player time and return.
-            setPlayerTime(currentTime)
+            setSelectedPlayerTime(currentTime)
             return
         }
 
@@ -71,7 +76,7 @@ const AudioManager = ({ didMount }) => {
 
         if (isTimeInSelectedVerse || isTimeInNextVerse) {
             // Update time if in selected verse or next verse.
-            setPlayerTime(currentTime)
+            setSelectedPlayerTime(currentTime)
 
             // If in next verse, also select next verse.
             if (isTimeInNextVerse) {
@@ -108,6 +113,27 @@ const AudioManager = ({ didMount }) => {
         return false
     }
 
+    const callPlayer = ({
+        isPlaying: nextIsPlaying = isPlaying,
+        songIndex = selectedSongIndex,
+        verseIndex = selectedVerseIndex,
+
+    } = {}) => {
+        // Only call player if about to play. Player knows to pause itself.
+        if (nextIsPlaying) {
+            logPlayer(`Calling with isPlaying: ${nextIsPlaying}, songIndex: ${songIndex}, verseIndex: ${verseIndex}.`)
+
+            players.current[songIndex].playFromTime(getStartTimeForVerse(
+                selectedSongIndex,
+                selectedVerseIndex
+            ))
+        }
+    }
+
+    useImperativeHandle(ref, () => ({
+        callPlayer,
+    }))
+
     return didMount && (
         <div className={cx(
             'AudioManager',
@@ -117,6 +143,7 @@ const AudioManager = ({ didMount }) => {
                 <Player
                     {...{
                         key: songIndex,
+                        ref: players,
                         songIndex,
                         handleSongEnd,
                         updateCurrentTime,
@@ -127,7 +154,7 @@ const AudioManager = ({ didMount }) => {
             <VerseDispatcher {...{ ref: dispatchVerse }} />
         </div>
     )
-}
+})
 
 AudioManager.propTypes = {
     didMount: PropTypes.bool.isRequired,

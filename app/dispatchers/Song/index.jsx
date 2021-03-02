@@ -1,12 +1,7 @@
-/**
- * TODO: This is rendered nine times. Consider whether to just listen for a
- * promised song change event instead. For now, there doesn't seem to be any
- * issues.
- */
-import { forwardRef, useImperativeHandle } from 'react'
+import { forwardRef, useContext, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import AudioPlayerContext from '../../contexts/AudioPlayer'
 import { updateAccessStore } from '../../redux/access/action'
-import { updateAudioStore } from '../../redux/audio/action'
 import { resetSongChange } from '../../redux/entrance/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import {
@@ -20,17 +15,18 @@ import { mapSelectedSongIndex } from '../../redux/selected/selector'
 
 const SongDispatcher = forwardRef((props, ref) => {
     const
+        { callPlayer } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         isSongChangeDone = useSelector(mapIsSongChangeDone),
         selectedSongIndex = useSelector(mapSelectedSongIndex)
 
     const dispatchSong = ({
-        isPlayFromLogue = false,
         selectedSongIndex: nextSongIndex = 0,
         selectedVerseIndex = 0,
         selectedAnnotationIndex = 0,
         earColumnIndex,
         destinationWormholeIndex,
+        nextIsPlaying, // Passed from play dispatcher.
         direction,
     }) => {
         const isWormholeSelected = Boolean(destinationWormholeIndex)
@@ -56,16 +52,17 @@ const SongDispatcher = forwardRef((props, ref) => {
             dispatch(resetSongChange())
         }
 
-        dispatch(updateAudioStore({
-            queuedPlayFromLogue: isPlayFromLogue,
-            queuedSongIndex: nextSongIndex,
-        }))
-
         dispatch(updateWikiIndices())
 
         if (Number.isFinite(earColumnIndex)) {
             dispatch(updateEarColumnIndex(earColumnIndex))
         }
+
+        callPlayer({
+            isPlaying: nextIsPlaying,
+            songIndex: nextSongIndex,
+            verseIndex: selectedVerseIndex,
+        })
 
         dispatch(updateSelectedStore({
             selectedSongIndex: nextSongIndex,

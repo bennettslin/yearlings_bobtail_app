@@ -103,7 +103,7 @@ export const mapCursorTime = createSelector(
     )
 )
 
-export const getMapSongCursorTime = playerTime => createSelector(
+export const getMapSongCursorTime = selectedPlayerTime => createSelector(
     mapCanTransitionAfterSongChange,
     mapBannerHoverTime,
     mapCursorTime,
@@ -117,7 +117,7 @@ export const getMapSongCursorTime = playerTime => createSelector(
         canTransitionAfterSongChange,
         bannerHoverTime,
         cursorTime,
-        playerTime,
+        selectedPlayerTime,
         isPlaying,
     })
 )

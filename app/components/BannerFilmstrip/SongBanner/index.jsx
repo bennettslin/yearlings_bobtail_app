@@ -1,7 +1,7 @@
 import React, { memo, useContext, useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
-import PlayerTimeContext from '../../../contexts/PlayerTime'
+import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import { updateBannerStore } from '../../../redux/banner/action'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import VerseDispatcher from '../../../dispatchers/Verse'
@@ -28,7 +28,7 @@ import './style'
 
 const SongBanner = () => {
     const
-        { playerTime } = useContext(PlayerTimeContext),
+        { selectedPlayerTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         songBannerElement = useRef(),
         stopPropagation = useRef(),
@@ -37,7 +37,7 @@ const SongBanner = () => {
         isPlaying = useSelector(mapIsPlaying),
         isBannerHovering = useSelector(mapIsBannerHovering),
         bannerHoverVerseIndex = useSelector(mapBannerHoverVerseIndex),
-        songTrackerWidth = useSelector(getMapSongTrackerWidth(playerTime)),
+        songTrackerWidth = useSelector(getMapSongTrackerWidth(selectedPlayerTime)),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         isLyricsLocked = useSelector(mapIsLyricsLocked),

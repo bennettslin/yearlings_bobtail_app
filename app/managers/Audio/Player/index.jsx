@@ -1,88 +1,86 @@
 // Hidden component to wrap an audio DOM element.
-import React, { useEffect, useRef, useState, memo } from 'react'
+import React, {
+    forwardRef, useImperativeHandle, useEffect, useRef, useState,
+} from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import ReactAudioPlayer from 'react-audio-player'
 import {
-    logPause,
-    logPromisePlay,
-    logIgnoreSubsequentPromise,
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
-    logEndByPlayer,
-    logEndByFinalVerse,
-    getShownErrorMessage,
 } from './helper'
-import {
-    updateAudioStore,
-    resetAudioQueue,
-} from '../../../redux/audio/action'
-import {
-    mapIsPlaying,
-    mapQueuedTogglePlay,
-    mapQueuedPlayFromLogue,
-    mapCanPromisePlay,
-} from '../../../redux/audio/selector'
-import { getMapPlayerPausedTime } from '../../../redux/players/selector'
+import { updateAudioStore } from '../../../redux/audio/action'
+import { mapIsPlaying } from '../../../redux/audio/selector'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
 import { getMp3ForSong } from '../../../api/mp3'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 import { updateErrorMessage } from '../../../redux/error/action'
 
-const Player = ({
+const Player = forwardRef(({
     songIndex,
     handleSongEnd,
     updateCurrentTime,
 
-}) => {
+}, ref) => {
     const
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
-        didMountRef = useRef(),
-        isSongSelected = useSelector(getMapIsSongSelected(songIndex)),
-        playerPausedTime = useSelector(getMapPlayerPausedTime(songIndex)),
         isPlaying = useSelector(mapIsPlaying),
-        queuedTogglePlay = useSelector(mapQueuedTogglePlay),
-        queuedPlayFromLogue = useSelector(mapQueuedPlayFromLogue),
-        canPromisePlay = useSelector(mapCanPromisePlay),
+        isSongSelected = useSelector(getMapIsSongSelected(songIndex)),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
-    const _setCurrentTime = (currentTime = playerPausedTime) => {
-        audioPlayerElement.current.currentTime = currentTime
-        if (isSongSelected) {
-            updateCurrentTime({ currentTime })
-        }
+    // TODO: No default value, audio manager should always give specific time.
+    const _setPlayStartTime = startPlayTime => {
+        audioPlayerElement.current.currentTime = startPlayTime
     }
 
     const _dispatchIsPlayingIfSelected = isPlaying => {
-        if (isSongSelected) {
+        if (
+            // Triggered by player success, so it's definitely playing.
+            isPlaying ||
+            (
+                /**
+                 * Triggered by player pause or failure, so only dispatch if
+                 * player is selected.
+                 */
+                !isPlaying && isSongSelected
+            )
+        ) {
             dispatch(updateAudioStore({ isPlaying }))
         }
     }
 
-    const _askToPause = time => {
+    // Player handles pausing itself.
+    const _pause = () => {
         if (audioPlayerElement.current.paused) {
             return
         }
 
-        _setCurrentTime(time)
-        logPause(songIndex)
         audioPlayerElement.current.pause()
+        logPlayer(`Player ${songIndex} paused.`)
         _dispatchIsPlayingIfSelected(false)
     }
 
-    const _promiseToPlay = time => {
+    // Player can only be made to play through direct user interaction.
+    const playFromTime = time => {
         // If there's already a promise to play, just return.
         if (isPromisingToPlay) {
-            logIgnoreSubsequentPromise(songIndex)
+            logPlayer(`Ignoring subsequent promise to play ${songIndex}.`)
             return
         }
 
-        _setCurrentTime(time)
-        logPromisePlay(songIndex)
+        _setPlayStartTime(time)
+
+        // If already playing, just set current time and return.
+        if (!audioPlayerElement.current.paused) {
+            logPlayer(`Already playing ${songIndex}.`)
+            return
+        }
+
+        logPlayer(`Promising to play ${songIndex}\u2026`)
         const
             playPromise = audioPlayerElement.current.play(),
-            timeFromPromiseToPlay = Date.now()
+            timePromisedToPlay = Date.now()
 
         /**
          * If no promise is returned, then the browser does not support the
@@ -98,29 +96,24 @@ const Player = ({
                 .then(() => {
                     logPlayPromiseSuccess({
                         songIndex,
-                        timeFromPromiseToPlay,
+                        timePromisedToPlay,
                     })
                     _dispatchIsPlayingIfSelected(true)
                 })
                 .catch(error => {
-                    const errorMessage = getShownErrorMessage(error)
+                    const errorMessage = `${error.name}: ${error.message}`
                     logPlayPromiseFailure({
                         songIndex,
                         errorMessage,
-                        timeFromPromiseToPlay,
+                        timePromisedToPlay,
                     })
                     dispatch(updateErrorMessage(errorMessage))
+                    _dispatchIsPlayingIfSelected(false)
                 })
                 .finally(() => {
                     setIsPromisingToPlay(false)
                 })
         }
-    }
-
-    const _prepareToRepeat = () => {
-        // Explicitly reset time. (Not necessary to do both, but whatever.)
-        _askToPause(0)
-        _promiseToPlay(0)
     }
 
     const onCanPlayThrough = () => {
@@ -139,20 +132,20 @@ const Player = ({
             })
 
             if (songEnded) {
-                logEndByFinalVerse(songIndex)
+                logPlayer(`Player for ${songIndex} reached end of final verse.`)
             }
 
             if (doRepeat) {
-                _prepareToRepeat()
+                playFromTime(0)
             }
         }
     }
 
     const onEnded = () => {
-        logEndByPlayer(songIndex)
+        logPlayer(`Player for ${songIndex} ended itself.`)
         // If this returns true, repeat song.
         if (handleSongEnd()) {
-            _prepareToRepeat()
+            playFromTime(0)
         }
     }
 
@@ -163,51 +156,22 @@ const Player = ({
     }
 
     useEffect(() => {
-        if (isSongSelected && queuedTogglePlay) {
-            // If now paused, play. If now playing, pause.
-            if (!isPlaying) {
-                _promiseToPlay()
-            } else {
-                _askToPause()
-            }
-            dispatch(updateAudioStore({ queuedTogglePlay: false }))
-        }
-    }, [queuedTogglePlay])
-
-    useEffect(() => {
-        if (didMountRef.current) {
-            if (isSongSelected) {
-                if (
-                    /**
-                     * Wait for song select to finalise, in case the user is
-                     * cycling through songs in quick succession.
-                     */
-                    canPromisePlay && (
-
-                        /**
-                         * Play only if audio is already playing, or if play
-                         * toggled from logue.
-                         */
-                        isPlaying ||
-                        queuedPlayFromLogue
-                    )
-                ) {
-                    _promiseToPlay()
-                }
-
-                dispatch(resetAudioQueue())
-            }
-        } else {
-            didMountRef.current = true
-        }
-    }, [canPromisePlay])
-
-    useEffect(() => {
-        // If no longer selected, pause.
+        // Pause if audio is no longer playing.
         if (!isSongSelected) {
-            _askToPause()
+            _pause()
         }
     }, [isSongSelected])
+
+    useEffect(() => {
+        // Pause if song is no longer selected.
+        if (!isPlaying) {
+            _pause()
+        }
+    }, [isPlaying])
+
+    useImperativeHandle(ref, () => ({
+        playFromTime,
+    }))
 
     return (
         <ReactAudioPlayer
@@ -226,7 +190,7 @@ const Player = ({
             }}
         />
     )
-}
+})
 
 Player.propTypes = {
     songIndex: PropTypes.number.isRequired,
@@ -234,4 +198,24 @@ Player.propTypes = {
     updateCurrentTime: PropTypes.func.isRequired,
 }
 
-export default memo(Player)
+const PlayerContainer = forwardRef((props, ref) => {
+    const setRef = node => {
+        ref.current = ref.current || {}
+        ref.current[props.songIndex] = node
+    }
+
+    return (
+        <Player
+            {...{
+                ref: setRef,
+                ...props,
+            }}
+        />
+    )
+})
+
+PlayerContainer.propTypes = {
+    songIndex: PropTypes.number.isRequired,
+}
+
+export default PlayerContainer
