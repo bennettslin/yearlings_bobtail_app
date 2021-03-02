@@ -7,7 +7,15 @@ export const mapPlayersBit = (
     { [PLAYERS_STORE]: { playersBit } },
 ) => playersBit
 
-export const mapPlayerCanPlayThrough = createSelector(
+export const getMapPlayerCanPlayThrough = songIndex => createSelector(
+    mapPlayersBit,
+    playersBit => getPlayerCanPlayThroughFromBit(
+        songIndex,
+        playersBit,
+    ),
+)
+
+export const mapSelectedPlayerCanPlayThrough = createSelector(
     mapSelectedSongIndex,
     mapPlayersBit,
     (

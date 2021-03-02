@@ -2,23 +2,23 @@ import { createSelector } from 'reselect'
 import { mapLyricSongIndex } from '../lyric/selector'
 import { mapSelectedSongIndex } from '../selected/selector'
 import { AUDIO_STORE } from '../../constants/store'
-import { mapPlayerCanPlayThrough } from '../players/selector'
+import { mapSelectedPlayerCanPlayThrough } from '../players/selector'
 
 export const mapIsPlaying = (
     { [AUDIO_STORE]: { isPlaying } },
 ) => isPlaying
 
 export const mapIsPlayButtonEnabled = createSelector(
-    mapPlayerCanPlayThrough,
+    mapSelectedPlayerCanPlayThrough,
     mapIsPlaying,
     mapSelectedSongIndex,
     mapLyricSongIndex,
     (
-        playerCanPlayThrough,
+        selectedPlayerCanPlayThrough,
         isPlaying,
         selectedSongIndex,
         lyricSongIndex,
-    ) => playerCanPlayThrough && (
+    ) => selectedPlayerCanPlayThrough && (
         selectedSongIndex === lyricSongIndex ||
         isPlaying
     ),

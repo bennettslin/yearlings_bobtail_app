@@ -9,11 +9,13 @@ import {
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
 } from './helper'
+import { getFormattedTime } from '../../../helpers/format'
 import { updateIsPlaying } from '../../../redux/audio/action'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
 import { getMp3ForSong } from '../../../api/mp3'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 import { updateErrorMessage } from '../../../redux/error/action'
+import { getMapPlayerCanPlayThrough } from '../../../redux/players/selector'
 
 const Player = forwardRef(({
     songIndex,
@@ -24,8 +26,12 @@ const Player = forwardRef(({
     const
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
+        playerCanPlayThrough = useSelector(
+            getMapPlayerCanPlayThrough(songIndex),
+        ),
         isSongSelected = useSelector(getMapIsSongSelected(songIndex)),
-        [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
+        [isPromisingToPlay, setIsPromisingToPlay] = useState(false),
+        [playFromTime, setPlayFromTime] = useState(0)
 
     const _dispatchIsPlayingAfterPromise = nextIsPlaying => {
         if (
@@ -85,12 +91,18 @@ const Player = forwardRef(({
     }
 
     // Player only plays through direct user interaction.
-    const askToPlay = time => {
+    const askToPlay = playFromTime => {
         // If there's already a promise to play, just return.
         if (isPromisingToPlay) {
             logPlayer(`Ignoring subsequent promise to play ${songIndex}.`)
             return
         }
+
+        /**
+         * Set this in state for now, because current time of player will reset
+         * after load.
+         */
+        setPlayFromTime(playFromTime)
 
         // Only play if currently paused.
         if (audioPlayerElement.current.paused) {
@@ -106,8 +118,6 @@ const Player = forwardRef(({
         } else {
             logPlayer(`Already playing ${songIndex}.`)
         }
-
-        audioPlayerElement.current.currentTime = time
     }
 
     const askToPause = () => {
@@ -119,8 +129,18 @@ const Player = forwardRef(({
         logPlayer(`Player ${songIndex} paused.`)
     }
 
-    const onCanPlayThrough = () => {
-        dispatch(updateCanPlayThroughForSong(songIndex))
+    const onLoadedMetadata = () => {
+        // This is being called upon load before promise to play.
+        if (playerCanPlayThrough) {
+            // Set current time of player to time passed by audio manager.
+            audioPlayerElement.current.currentTime = playFromTime
+
+            logPlayer(`Player ${songIndex} loaded at ${getFormattedTime(audioPlayerElement.current.currentTime)}.`)
+
+        // This is being called upon initial load.
+        } else {
+            dispatch(updateCanPlayThroughForSong(songIndex))
+        }
     }
 
     const onListen = currentTime => {
@@ -170,7 +190,7 @@ const Player = forwardRef(({
                  * This was originally onCanPlayThrough, but Firefox and Safari
                  * don't support it.
                  */
-                onLoadedMetadata: onCanPlayThrough,
+                onLoadedMetadata,
                 onListen,
                 onEnded,
                 src: getMp3ForSong(songIndex),
