@@ -132,7 +132,7 @@ export const getCanLyricScroll = ({
     isPlaying,
     isLyricLogue,
     scrollLyricAlways,
-    scrollLyricFromAutoScroll,
+    isAutoScrollLyricForPlay,
     isAutoScroll,
     isLyricExpanded,
     isHeightlessLyric,
@@ -152,6 +152,6 @@ export const getCanLyricScroll = ({
          * If autoScroll is on, only scroll from autoScroll, or else if
          * autoScroll is off, scroll from everything *but* autoScroll.
          */
-        scrollLyricFromAutoScroll === isAutoScroll
+        isAutoScrollLyricForPlay === isAutoScroll
     )
 )

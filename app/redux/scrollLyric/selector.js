@@ -20,9 +20,9 @@ export const mapIsScrollLyricForSongSelect = (
     { [SCROLL_LYRIC_STORE]: { isScrollLyricForSongSelect } },
 ) => isScrollLyricForSongSelect
 
-export const mapScrollLyricFromAutoScroll = (
-    { [SCROLL_LYRIC_STORE]: { scrollLyricFromAutoScroll } },
-) => scrollLyricFromAutoScroll
+export const mapIsAutoScrollLyricForPlay = (
+    { [SCROLL_LYRIC_STORE]: { isAutoScrollLyricForPlay } },
+) => isAutoScrollLyricForPlay
 
 export const mapIsScrollLyricForVerseSelect = (
     { [SCROLL_LYRIC_STORE]: { isScrollLyricForVerseSelect } },

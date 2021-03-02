@@ -6,10 +6,11 @@ import { updateActivatedVerseIndex } from '../../redux/activated/action'
 import { mapLyricVerseIndex } from '../../redux/lyric/selector'
 import {
     scrollLyricForVerseSelect,
-    scrollLyricForPlayAutoScroll,
+    autoScrollLyricForPlay,
 } from '../../redux/scrollLyric/action'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 import { mapIsAutoScroll } from '../../redux/toggle/selector'
+import { updateEntranceStore } from '../../redux/entrance/action'
 
 const VerseDispatcher = forwardRef((props, ref) => {
     const
@@ -44,7 +45,13 @@ const VerseDispatcher = forwardRef((props, ref) => {
             if (fromPlayer) {
                 // If autoScroll is on, scroll to selected verse.
                 if (isAutoScroll) {
-                    dispatch(scrollLyricForPlayAutoScroll(verseIndex))
+                    dispatch(autoScrollLyricForPlay(verseIndex))
+                } else {
+                    /**
+                     * Since there will be no lyric scroll to block the scene
+                     * transition, go ahead and unblock it now.
+                     */
+                    dispatch(updateEntranceStore({ isSceneScrollComplete: true }))
                 }
             } else {
                 callAudioManager({ verseIndex })

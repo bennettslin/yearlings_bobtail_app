@@ -7,9 +7,6 @@
     * Confirm that quickly navigating through songs is not a problem. (Seems fine so far, other than AbortError message.)
     * Weird time flash when selecting verse from song banner.
 
-* Problems
-    * Scene doesn't update when verse dispatched from audio.
-
 * Player
     * Updates selected player time directly.
     * Should know its own end time, and handle its own repeat play.

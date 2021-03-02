@@ -16,7 +16,7 @@ import {
 } from '../lyric/selector'
 import {
     mapScrollLyricAlways,
-    mapScrollLyricFromAutoScroll,
+    mapIsAutoScrollLyricForPlay,
 } from '../scrollLyric/selector'
 import {
     mapIsAutoScroll,
@@ -77,7 +77,7 @@ export const mapCanLyricScroll = createSelector(
     mapIsPlaying,
     mapIsLyricLogue,
     mapScrollLyricAlways,
-    mapScrollLyricFromAutoScroll,
+    mapIsAutoScrollLyricForPlay,
     mapIsAutoScroll,
     mapIsLyricExpanded,
     mapIsHeightlessLyric,
@@ -85,7 +85,7 @@ export const mapCanLyricScroll = createSelector(
         isPlaying,
         isLyricLogue,
         scrollLyricAlways,
-        scrollLyricFromAutoScroll,
+        isAutoScrollLyricForPlay,
         isAutoScroll,
         isLyricExpanded,
         isHeightlessLyric,
@@ -93,7 +93,7 @@ export const mapCanLyricScroll = createSelector(
         isPlaying,
         isLyricLogue,
         scrollLyricAlways,
-        scrollLyricFromAutoScroll,
+        isAutoScrollLyricForPlay,
         isAutoScroll,
         isLyricExpanded,
         isHeightlessLyric,
