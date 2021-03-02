@@ -12,7 +12,7 @@ import PopupOverlay from '../../components/Overlays/PopupOverlay'
 import TouchOverlay from '../../components/Overlays/TouchOverlay'
 import WrapperContainer from '../Wrapper'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateFocusStore } from '../../redux/focus/action'
+import { updateQueuedFocus } from '../../redux/focus/action'
 import RootTouchDispatcher from '../../dispatchers/RootTouch'
 import KeyManager from '../../managers/Key'
 import { isEmailFocused } from '../../utils/email'
@@ -76,7 +76,7 @@ const RootContainer = () => {
     useEffect(() => {
         if (queuedFocus) {
             _focusElementForAccess()
-            dispatch(updateFocusStore({ queuedFocus: false }))
+            dispatch(updateQueuedFocus())
         }
     }, [queuedFocus])
 

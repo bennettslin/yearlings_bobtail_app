@@ -1,7 +1,7 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAccessStore } from '../../../redux/access/action'
-import { updateActivatedStore } from '../../../redux/activated/action'
+import { updateActivatedVerseIndex } from '../../../redux/activated/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import {
     updateIsCarouselExpanded,
@@ -220,7 +220,7 @@ const LetterManager = forwardRef((props, ref) => {
         // Turn access off.
         } else {
             dispatch(updateAccessStore({ isAccessOn: false }))
-            dispatch(updateActivatedStore())
+            dispatch(updateActivatedVerseIndex())
         }
     }
 

@@ -4,7 +4,7 @@
  */
 import { forwardRef, useImperativeHandle, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateActivatedStore } from '../../redux/activated/action'
+import { updateActivatedVerseIndex } from '../../redux/activated/action'
 import { updateOptionStore } from '../../redux/option/action'
 import { updateWikiIndices } from '../../redux/session/action'
 import { updateSelectedStore } from '../../redux/selected/action'
@@ -129,7 +129,7 @@ const CloseHandler = forwardRef((props, ref) => {
         }
 
         if (!exemptActivatedVerse) {
-            dispatch(updateActivatedStore())
+            dispatch(updateActivatedVerseIndex())
         }
     }
 

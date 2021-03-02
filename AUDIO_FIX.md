@@ -4,27 +4,13 @@
 
 * TODO
     * dispatchPlay checks for player canPlayThrough. Does this account for logue?
+    * Confirm that quickly navigating through songs is not a problem.
 
 * Problems
-    * Calling from verse dispatcher.
+    * Calling from verse dispatcher while isPlaying.
     * Scene doesn't update.
 
-* Audio manager API
-    <!-- * Each player forwards ref to audio manager for pausing and playing. -->
-    <!-- * Audio manager makes handlers available through context. -->
-    <!-- * Audio manager knows isPlaying and selectedSongIndex. -->
-    * When handler to toggle play is called:
-        * If not isPlaying:
-            * Play selected song. If successful, set isPlaying true.
-    * When handler to select song and verse is called:
-        * If isPlaying and song changed:
-            * Play new selected song. If not successful, set isPlaying false.
-        * If isPlaying and only verse changed:
-            * Change player time.
-
 * Player
-    <!-- * Knows when to pause itself. -->
-    <!-- * Turns on/off isPlaying. -->
     * Should know its own end time, and handle its own repeat play.
         * Only when handling next song does it need to concern audio manager.
 

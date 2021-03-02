@@ -2,7 +2,7 @@ import React, { forwardRef, useContext, useImperativeHandle, useRef } from 'reac
 import { useDispatch, useSelector } from 'react-redux'
 import SongDispatcher from '../Song'
 import AudioPlayerContext from '../../contexts/AudioPlayer'
-import { updateAudioStore } from '../../redux/audio/action'
+import { updateIsPlaying } from '../../redux/audio/action'
 import { scrollLyricBackToSelectedVerse } from '../../redux/scrollLyric/action'
 import { mapIsPlaying } from '../../redux/audio/selector'
 import { mapPlayerCanPlayThrough } from '../../redux/players/selector'
@@ -44,7 +44,7 @@ const PlayDispatcher = forwardRef((props, ref) => {
             }
 
         } else {
-            dispatch(updateAudioStore({ isPlaying: false }))
+            dispatch(updateIsPlaying())
         }
 
         return true

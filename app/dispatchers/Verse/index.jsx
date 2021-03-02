@@ -2,7 +2,7 @@ import { forwardRef, useContext, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import AudioPlayerContext from '../../contexts/AudioPlayer'
 import { updateSelectedStore } from '../../redux/selected/action'
-import { updateActivatedStore } from '../../redux/activated/action'
+import { updateActivatedVerseIndex } from '../../redux/activated/action'
 import { mapLyricVerseIndex } from '../../redux/lyric/selector'
 import {
     scrollLyricForVerseSelect,
@@ -38,7 +38,7 @@ const VerseDispatcher = forwardRef((props, ref) => {
             })
 
             if (fromActivated) {
-                dispatch(updateActivatedStore())
+                dispatch(updateActivatedVerseIndex())
             }
 
             if (fromPlayer) {

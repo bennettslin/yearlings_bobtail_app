@@ -2,7 +2,7 @@
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { scrollLyricToVerse } from '../../../redux/scrollLyric/action'
-import { updateActivatedStore } from '../../../redux/activated/action'
+import { updateActivatedVerseIndex } from '../../../redux/activated/action'
 import { updateIsAutoScroll } from '../../../redux/toggle/action'
 import { getActivatedVerseForDirection } from './helper'
 import { mapActivatedVerseIndex } from '../../../redux/activated/selector'
@@ -35,9 +35,7 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
             return
         }
 
-        dispatch(updateActivatedStore({
-            activatedVerseIndex: nextVerseIndex,
-        }))
+        dispatch(updateActivatedVerseIndex(nextVerseIndex))
 
         // Turn off auto scroll once verse or scene is activated.
         dispatch(updateIsAutoScroll())

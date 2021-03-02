@@ -9,7 +9,7 @@ import {
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
 } from './helper'
-import { updateAudioStore } from '../../../redux/audio/action'
+import { updateIsPlaying } from '../../../redux/audio/action'
 import { mapIsPlaying } from '../../../redux/audio/selector'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
 import { getMp3ForSong } from '../../../api/mp3'
@@ -46,7 +46,7 @@ const Player = forwardRef(({
                 !isPlaying && isSongSelected
             )
         ) {
-            dispatch(updateAudioStore({ isPlaying }))
+            dispatch(updateIsPlaying(isPlaying))
         }
     }
 

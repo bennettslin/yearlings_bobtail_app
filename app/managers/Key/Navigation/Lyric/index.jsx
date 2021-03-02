@@ -1,6 +1,6 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateActivatedStore } from '../../../../redux/activated/action'
+import { updateActivatedVerseIndex } from '../../../../redux/activated/action'
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Dispatcher'
 import {
@@ -65,7 +65,7 @@ const LyricNavigation = forwardRef((props, ref) => {
             })
 
             if (isActivated) {
-                dispatch(updateActivatedStore())
+                dispatch(updateActivatedVerseIndex())
             }
 
         /**

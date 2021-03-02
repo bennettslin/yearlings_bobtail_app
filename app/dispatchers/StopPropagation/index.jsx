@@ -1,7 +1,7 @@
 // Child that knows rules to stop propagation.
 import { forwardRef, useImperativeHandle } from 'react'
 import { useDispatch } from 'react-redux'
-import { updateFocusStore } from '../../redux/focus/action'
+import { updateQueuedFocus } from '../../redux/focus/action'
 import { updateAccessStore } from '../../redux/access/action'
 
 const StopPropagationDispatcher = forwardRef((props, ref) => {
@@ -19,7 +19,7 @@ const StopPropagationDispatcher = forwardRef((props, ref) => {
             if (e.stopPropagation) {
                 e.stopPropagation()
 
-                dispatch(updateFocusStore({ queuedFocus: true }))
+                dispatch(updateQueuedFocus(true))
             }
         }
     }
