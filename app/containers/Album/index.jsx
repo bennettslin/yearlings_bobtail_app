@@ -14,8 +14,8 @@ const AlbumContainer = ({ didMount, children }) => {
         audioContainer = useRef(),
         [selectedPlayerTime, setSelectedPlayerTime] = useState(0)
 
-    const callPlayer = props => {
-        audioContainer.current.callPlayer(props)
+    const callAudioManager = props => {
+        audioContainer.current.callAudioManager(props)
     }
 
     // Establish that session started from album, not pitch page.
@@ -38,7 +38,7 @@ const AlbumContainer = ({ didMount, children }) => {
                     value: {
                         selectedPlayerTime,
                         setSelectedPlayerTime,
-                        callPlayer,
+                        callAudioManager,
                     },
                 }}
             >

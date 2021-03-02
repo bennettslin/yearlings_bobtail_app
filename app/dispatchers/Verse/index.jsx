@@ -13,7 +13,7 @@ import { mapIsAutoScroll } from '../../redux/toggle/selector'
 
 const VerseDispatcher = forwardRef((props, ref) => {
     const
-        { callPlayer } = useContext(AudioPlayerContext),
+        { callAudioManager } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         lyricVerseIndex = useSelector(mapLyricVerseIndex),
@@ -47,7 +47,7 @@ const VerseDispatcher = forwardRef((props, ref) => {
                     dispatch(scrollLyricForPlayAutoScroll(verseIndex))
                 }
             } else {
-                callPlayer({ verseIndex })
+                callAudioManager({ verseIndex })
                 dispatch(scrollLyricForVerseSelect(
                     scrollLog,
                     verseIndex

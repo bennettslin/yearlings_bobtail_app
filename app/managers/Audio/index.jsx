@@ -52,17 +52,7 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
         }
     }
 
-    const updateCurrentTime = ({
-        currentTime,
-        fromListen,
-
-    }) => {
-        if (!fromListen) {
-            // If not from listen, just set player time and return.
-            setSelectedPlayerTime(currentTime)
-            return
-        }
-
+    const updateCurrentTime = currentTime => {
         const {
             isTimeInSelectedVerse,
             isTimeInNextVerse,
@@ -113,25 +103,25 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
         return false
     }
 
-    const callPlayer = ({
+    const callAudioManager = ({
         isPlaying: nextIsPlaying = isPlaying,
         songIndex = selectedSongIndex,
         verseIndex = selectedVerseIndex,
 
     } = {}) => {
-        // Only call player if about to play. Player knows to pause itself.
         if (nextIsPlaying) {
             logPlayer(`Calling with isPlaying: ${nextIsPlaying}, songIndex: ${songIndex}, verseIndex: ${verseIndex}.`)
 
+            // Ask player to play.
             players.current[songIndex].playFromTime(getStartTimeForVerse(
-                selectedSongIndex,
-                selectedVerseIndex
+                songIndex,
+                verseIndex
             ))
         }
     }
 
     useImperativeHandle(ref, () => ({
-        callPlayer,
+        callAudioManager,
     }))
 
     return didMount && (

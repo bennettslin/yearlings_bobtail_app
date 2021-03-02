@@ -10,7 +10,7 @@ import { mapIsSelectedLogue } from '../../redux/selected/selector'
 
 const PlayDispatcher = forwardRef((props, ref) => {
     const
-        { callPlayer } = useContext(AudioPlayerContext),
+        { callAudioManager } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         dispatchSong = useRef(),
         isPlaying = useSelector(mapIsPlaying),
@@ -23,23 +23,22 @@ const PlayDispatcher = forwardRef((props, ref) => {
             return false
         }
 
-        /**
-         * Select first song if play button in logue is toggled on. In order
-         * to keep player and song in sync, only dispatch song, and let song
-         * handler send queued event to toggle play.
-         */
+        callAudioManager({
+            isPlaying: nextIsPlaying,
+            // If in logue, play the first song.
+            ...isSelectedLogue && {
+                songIndex: 1,
+            },
+        })
+
         if (nextIsPlaying) {
             dispatch(scrollLyricBackToSelectedVerse('Play toggled'))
 
+            // If in logue, select the first song.
             if (isSelectedLogue) {
-                // If playing from logue, let song dispatcher call player.
                 dispatchSong.current({
-                    nextIsPlaying: true,
+                    fromPlayDispatcher: true,
                     selectedSongIndex: 1,
-                })
-            } else {
-                callPlayer({
-                    isPlaying: nextIsPlaying,
                 })
             }
 
