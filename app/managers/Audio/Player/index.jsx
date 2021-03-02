@@ -152,7 +152,7 @@ const Player = forwardRef(({
             } = updateCurrentTime(currentTime)
 
             if (songEnded) {
-                logPlayer(`Player for ${songIndex} reached end of final verse.`)
+                logPlayer(`Player ${songIndex} reached end of final verse.`)
             }
 
             if (doRepeat) {

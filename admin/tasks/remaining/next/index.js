@@ -2,7 +2,7 @@ export default [
     // Next.
     {
         taskName: `Audio fix.`,
-        workedHours: 8,
+        workedHours: 19,
     },
     {
         taskName: `Audit scenes.`,
