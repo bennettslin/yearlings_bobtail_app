@@ -1,6 +1,6 @@
 // Hidden component to wrap an audio DOM element.
 import React, {
-    forwardRef, useImperativeHandle, useRef, useState,
+    forwardRef, useContext, useEffect, useImperativeHandle, useRef, useState,
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
@@ -9,8 +9,10 @@ import {
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
 } from './helpers/log'
+import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateIsPlaying } from '../../../redux/audio/action'
+import { getMapIsSongLyric } from '../../../redux/lyric/selector'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
 import { getMp3ForSong } from '../../../api/mp3'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
@@ -19,17 +21,20 @@ import { getMapPlayerCanPlayThrough } from '../../../redux/players/selector'
 
 const Player = forwardRef(({
     songIndex,
-    handleSongEnd,
-    updateCurrentTime,
+    // handleSongEnd,
+    // updateCurrentTime,
 
 }, ref) => {
     const
+        { setSelectedPlayerTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
         playerCanPlayThrough = useSelector(
             getMapPlayerCanPlayThrough(songIndex),
         ),
+        isSongLyric = useSelector(getMapIsSongLyric(songIndex)),
         isSongSelected = useSelector(getMapIsSongSelected(songIndex)),
+        [isLoadedToPromise, setIsLoadedToPromise] = useState(false),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false),
         [playFromTime, setPlayFromTime] = useState(0)
 
@@ -52,6 +57,7 @@ const Player = forwardRef(({
 
     const promiseToPlay = () => {
         logPlayer(`Promising to play ${songIndex}\u2026`)
+
         const
             playPromise = audioPlayerElement.current.play(),
             timePromisedToPlay = Date.now()
@@ -88,13 +94,20 @@ const Player = forwardRef(({
                     setIsPromisingToPlay(false)
                 })
         }
+
+        /**
+         * Until we're actually playing, the player status is always either
+         * loaded or promising. So we will set loaded to false only after
+         * setting promising to true.
+         */
+        setIsLoadedToPromise(false)
     }
 
     // Player only plays through direct user interaction.
     const askToPlay = time => {
-        // If there's already a promise to play, just return.
-        if (isPromisingToPlay) {
-            logPlayer(`Ignoring subsequent promise to play ${songIndex}.`)
+        // If we're already preparing to play, just return.
+        if (isLoadedToPromise || isPromisingToPlay) {
+            logPlayer(`Ignoring subsequent ask to play ${songIndex}.`)
             return
         }
 
@@ -112,11 +125,12 @@ const Player = forwardRef(({
              * prevent autoplay.
              */
             audioPlayerElement.current.load()
-            promiseToPlay()
+            setIsLoadedToPromise(true)
 
         // If currently playing, just set new time.
         } else {
-            logPlayer(`Already playing ${songIndex}.`)
+            logPlayer(`Player ${songIndex} updated to ${getFormattedTime(time)}.`)
+            audioPlayerElement.current.currentTime = time
         }
     }
 
@@ -143,29 +157,31 @@ const Player = forwardRef(({
     }
 
     const onListen = time => {
-        if (isSongSelected) {
-            // If this returns true, repeat song.
-            const {
-                songEnded,
-                doRepeat,
-            } = updateCurrentTime(time)
+        setSelectedPlayerTime(time)
 
-            if (songEnded) {
-                logPlayer(`Player ${songIndex} reached end of final verse.`)
-            }
+        // if (isSongSelected) {
+        //     // If this returns true, repeat song.
+        //     const {
+        //         songEnded,
+        //         doRepeat,
+        //     } = updateCurrentTime(time)
 
-            if (doRepeat) {
-                askToPlay(0)
-            }
-        }
+        //     if (songEnded) {
+        //         logPlayer(`Player ${songIndex} reached end of final verse.`)
+        //     }
+
+        //     if (doRepeat) {
+        //         askToPlay(0)
+        //     }
+        // }
     }
 
     const onEnded = () => {
         logPlayer(`Player for ${songIndex} ended itself.`)
         // If this returns true, repeat song.
-        if (handleSongEnd()) {
-            askToPlay(0)
-        }
+        // if (handleSongEnd()) {
+        //     askToPlay(0)
+        // }
     }
 
     const setRef = node => {
@@ -173,6 +189,13 @@ const Player = forwardRef(({
             audioPlayerElement.current = node.audioEl.current
         }
     }
+
+    useEffect(() => {
+        // Ensure that player only plays once it's the lyric song.
+        if (isSongLyric && isLoadedToPromise) {
+            promiseToPlay()
+        }
+    }, [isSongLyric, isLoadedToPromise])
 
     useImperativeHandle(ref, () => ({
         askToPause,
@@ -200,8 +223,8 @@ const Player = forwardRef(({
 
 Player.propTypes = {
     songIndex: PropTypes.number.isRequired,
-    handleSongEnd: PropTypes.func.isRequired,
-    updateCurrentTime: PropTypes.func.isRequired,
+    // handleSongEnd: PropTypes.func.isRequired,
+    // updateCurrentTime: PropTypes.func.isRequired,
 }
 
 const PlayerContainer = forwardRef((props, ref) => {

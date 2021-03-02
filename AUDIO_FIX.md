@@ -5,15 +5,12 @@
 * TODO
     * dispatchPlay checks for player canPlayThrough. Does this account for logue?
     * Confirm that quickly navigating through songs is not a problem. (Seems fine so far, other than AbortError message.)
-    * Weird time flash when selecting verse from song banner.
-
-* FIXME
-    * Safari thinks time is out of sync upon loaded?!
-    * Not just Safari. Time is out of sync when just setting time in general.
+    * Weird time flash in song banner when selecting verse while song is playing.
+    * Filmstrip transition is weird when selecting verse while song is playing.
 
 * Player
     * Should know its own end time.
-    * Handles updating selected player time directly.
+    <!-- * Handles updating selected player time directly. -->
     * Handles selecting next verse within same song.
     * Handles selecting next song.
     * Handle its own repeat play.

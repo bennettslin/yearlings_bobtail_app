@@ -5,6 +5,11 @@ export const mapLyricSongIndex = (
     { [LYRIC_STORE]: { lyricSongIndex } },
 ) => lyricSongIndex
 
+export const getMapIsSongLyric = songIndex => createSelector(
+    mapLyricSongIndex,
+    lyricSongIndex => songIndex === lyricSongIndex,
+)
+
 export const mapLyricVerseIndex = (
     { [LYRIC_STORE]: { lyricVerseIndex } },
 ) => lyricVerseIndex
