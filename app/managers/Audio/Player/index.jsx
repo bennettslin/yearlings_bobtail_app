@@ -34,8 +34,8 @@ const Player = forwardRef(({
             nextIsPlaying ||
             (
                 /**
-                 * Triggered by player pause or failure, so only dispatch if
-                 * player is selected.
+                 * Triggered by player failure, so only dispatch if player is
+                 * selected.
                  */
                 !nextIsPlaying && isSongSelected
             )
@@ -45,14 +45,14 @@ const Player = forwardRef(({
         }
     }
 
-    const _pause = () => {
+    const pausePlayer = byAudioManager => {
         if (audioPlayerElement.current.paused) {
             return
         }
 
         audioPlayerElement.current.pause()
-        logPlayer(`Player ${songIndex} paused.`)
-        _dispatchIsPlayingIfSelected(false)
+        logPlayer(`Player ${songIndex} paused ${byAudioManager ? 'by audio manager' : 'itself'}.`)
+        // _dispatchIsPlayingIfSelected(false)
     }
 
     // Player only plays through direct user interaction.
@@ -149,18 +149,19 @@ const Player = forwardRef(({
     useEffect(() => {
         // Pause if audio is no longer playing.
         if (!isSongSelected) {
-            _pause()
+            pausePlayer()
         }
     }, [isSongSelected])
 
     useEffect(() => {
         // Pause if song is no longer selected.
         if (!isPlaying) {
-            _pause()
+            pausePlayer()
         }
     }, [isPlaying])
 
     useImperativeHandle(ref, () => ({
+        pausePlayer,
         playFromTime,
     }))
 

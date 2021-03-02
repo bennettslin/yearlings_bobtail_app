@@ -1,7 +1,7 @@
 // Manager for audio players.
 import React, { useContext, useRef, forwardRef, useImperativeHandle } from 'react'
 import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import cx from 'classnames'
 import getDidMountHoc from '../../components/DidMountHoc'
 import AudioPlayerContext from '../../contexts/AudioPlayer'
@@ -21,10 +21,12 @@ import {
 } from '../../redux/selected/selector'
 import { mapAudioOptionIndex } from '../../redux/session/selector'
 import { logPlayer } from '../../utils/logger'
+import { updateIsPlaying } from '../../redux/audio/action'
 
 const AudioManager = forwardRef(({ didMount }, ref) => {
     const
         { setSelectedPlayerTime } = useContext(AudioPlayerContext),
+        dispatch = useDispatch(),
         players = useRef(),
         dispatchSong = useRef(),
         dispatchVerse = useRef(),
@@ -36,7 +38,7 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
     const handleSongEnd = () => {
         const nextSongIndex = getNextSongIndex(
             selectedSongIndex,
-            audioOptionIndex
+            audioOptionIndex,
         )
 
         // If repeating the song, just reset time and verse.
@@ -112,11 +114,21 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
         if (nextIsPlaying) {
             logPlayer(`Calling with isPlaying: ${nextIsPlaying}, songIndex: ${songIndex}, verseIndex: ${verseIndex}.`)
 
+            // If playing another song, pause the selected player.
+            if (selectedSongIndex !== songIndex) {
+                players.current[selectedSongIndex].pausePlayer(true)
+            }
+
             // Ask player to play.
             players.current[songIndex].playFromTime(getStartTimeForVerse(
                 songIndex,
                 verseIndex
             ))
+
+        // Pause the current player.
+        } else {
+            players.current[songIndex].pausePlayer(true)
+            dispatch(updateIsPlaying(false))
         }
     }
 

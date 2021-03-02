@@ -9,7 +9,7 @@ import {
     updateWikiIndices,
 } from '../../redux/session/action'
 import { updateIsNavExpanded } from '../../redux/toggle/action'
-import { getSongIsLogue, getSongsAndLoguesCount } from '../../api/album/songs'
+import { getSongsAndLoguesCount } from '../../api/album/songs'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 
@@ -59,7 +59,7 @@ const SongDispatcher = forwardRef((props, ref) => {
         }
 
         // If from play dispatcher, audio was already called.
-        if (!fromPlayDispatcher && !getSongIsLogue(nextSongIndex)) {
+        if (!fromPlayDispatcher) {
             callAudioManager({
                 songIndex: nextSongIndex,
                 verseIndex: selectedVerseIndex,
