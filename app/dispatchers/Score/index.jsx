@@ -15,7 +15,7 @@ const ScoreDispatcher = forwardRef((props, ref) => {
 
     const dispatchScore = (
         // Just toggle unless parent specifies value.
-        triedIsScoreShown = !isScoreShown
+        triedIsScoreShown = !isScoreShown,
     ) => {
         // Turning off is always successful.
         const isScoreShown = triedIsScoreShown &&

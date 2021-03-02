@@ -20,7 +20,7 @@ const SliderVerses = ({
         lyricSongIndex = useSelector(mapLyricSongIndex),
         stanzaVerseIndices = getVerseIndicesForStanza(
             lyricSongIndex,
-            stanzaIndex
+            stanzaIndex,
         ),
         stanzaStartTime = getStartTimeForStanza(lyricSongIndex, stanzaIndex)
 
@@ -35,11 +35,11 @@ const SliderVerses = ({
                 const
                     verseStartTime = getStartTimeForVerse(
                         lyricSongIndex,
-                        verseIndex
+                        verseIndex,
                     ),
                     verseDuration = getDurationForVerse(
                         lyricSongIndex,
-                        verseIndex
+                        verseIndex,
                     ),
 
                     relativeStartTime = verseStartTime - stanzaStartTime,

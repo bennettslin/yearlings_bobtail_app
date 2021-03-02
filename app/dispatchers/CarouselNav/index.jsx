@@ -40,7 +40,7 @@ const CarouselNavDispatcher = forwardRef((props, ref) => {
             dispatch(scrollCarouselToAnnotation(
                 'Toggle carousel',
                 selectedAnnotationIndex ||
-                accessedAnnotationIndex
+                accessedAnnotationIndex,
             ))
 
         /**

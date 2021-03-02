@@ -7,6 +7,6 @@ export const getSceneDefaults = ({
     sceneSongIndex: initialSongIndex,
     sceneSceneIndex: getSceneIndexForVerse(
         initialSongIndex,
-        initialVerseIndex
+        initialVerseIndex,
     ),
 })

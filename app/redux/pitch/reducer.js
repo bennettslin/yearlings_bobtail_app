@@ -4,7 +4,7 @@ import { getPitchDefaults } from './default'
 
 export const getPitchReducer = initialPitchIndex => (
     state = getPitchDefaults(initialPitchIndex),
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case PITCH_STORE:

@@ -6,7 +6,7 @@ const Wood = () => (
     <div
         className={cx(
             'Wood',
-            'abF'
+            'abF',
         )}
     />
 )

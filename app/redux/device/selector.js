@@ -10,27 +10,27 @@ import { mapDeviceWidthIndex } from '../viewport/selector'
 
 export const mapIsPhoneWidth = createSelector(
     mapDeviceWidthIndex,
-    deviceWidthIndex => getIsPhoneWidth(deviceWidthIndex)
+    deviceWidthIndex => getIsPhoneWidth(deviceWidthIndex),
 )
 
 export const mapIsMiniWidth = createSelector(
     mapDeviceWidthIndex,
-    deviceWidthIndex => getIsMiniWidth(deviceWidthIndex)
+    deviceWidthIndex => getIsMiniWidth(deviceWidthIndex),
 )
 
 export const mapIsTabletWidth = createSelector(
     mapDeviceWidthIndex,
-    deviceWidthIndex => getIsTabletWidth(deviceWidthIndex)
+    deviceWidthIndex => getIsTabletWidth(deviceWidthIndex),
 )
 
 export const mapIsMonitorWidth = createSelector(
     mapDeviceWidthIndex,
-    deviceWidthIndex => getIsMonitorWidth(deviceWidthIndex)
+    deviceWidthIndex => getIsMonitorWidth(deviceWidthIndex),
 )
 
 export const mapIsDesktopWidth = createSelector(
     mapDeviceWidthIndex,
-    deviceWidthIndex => getIsDesktopWidth(deviceWidthIndex)
+    deviceWidthIndex => getIsDesktopWidth(deviceWidthIndex),
 )
 
 export const mapIsPhoneOrMiniWidth = createSelector(
@@ -38,8 +38,8 @@ export const mapIsPhoneOrMiniWidth = createSelector(
     mapIsDesktopWidth,
     (
         isTabletWidth,
-        isDesktopWidth
+        isDesktopWidth,
     ) => (
         !isDesktopWidth && !isTabletWidth
-    )
+    ),
 )

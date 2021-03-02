@@ -18,7 +18,7 @@ const SongBannerTimer = () => {
         <div className={cx(
             'SongBannerTimer',
             'fCC',
-            'abF'
+            'abF',
         )}>
             {getFormattedTime(bannerCursorTime)}
         </div>

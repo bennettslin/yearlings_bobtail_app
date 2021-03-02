@@ -12,7 +12,7 @@ const NavBookToggle = ({
 }) => (
     <div className={cx(
         'NavBookToggle',
-        'NavBook'
+        'NavBook',
     )}>
         <NavButton
             isToggle

@@ -6,7 +6,7 @@ import { PLAYERS_DEFAULTS } from './default'
 
 export default (
     state = PLAYERS_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case PLAYERS_STORE: {

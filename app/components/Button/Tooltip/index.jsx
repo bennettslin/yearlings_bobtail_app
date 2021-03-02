@@ -27,7 +27,7 @@ const Tooltip = ({ buttonName }) => {
             {...{
                 className: cx(
                     'ReactTooltip',
-                    'dropShadow'
+                    'dropShadow',
                 ),
                 id: buttonName,
                 effect: 'solid',

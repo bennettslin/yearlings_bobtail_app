@@ -34,8 +34,8 @@ export const getStartTimeForStanza = (songIndex, stanzaIndex) => (
         songIndex,
         getVerseIndicesForStanza(
             songIndex,
-            stanzaIndex
-        )[0]
+            stanzaIndex,
+        )[0],
     )
 )
 

@@ -62,7 +62,7 @@ const TextSpan = ({
         <Tag
             {...{
                 className: cx(
-                    isWormholeDestinationAnchor && 'text__wormholeDestinationAnchor'
+                    isWormholeDestinationAnchor && 'text__wormholeDestinationAnchor',
                 ),
             }}
         >

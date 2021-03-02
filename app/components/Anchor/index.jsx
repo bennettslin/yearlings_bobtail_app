@@ -58,7 +58,7 @@ const Anchor = forwardRef(({
 
         logEvent(
             'Anchor',
-            analyticsLabel
+            analyticsLabel,
         )
 
         handleAnchorClick(e)
@@ -87,7 +87,7 @@ const Anchor = forwardRef(({
                             !isLyric && 'Anchor__selectableNotLyric',
                         ],
                         !isWikiTextAnchor && 'Anchor__noWrap',
-                        className
+                        className,
                     ),
                 },
                 ...href && {

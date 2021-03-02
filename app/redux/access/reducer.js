@@ -16,7 +16,7 @@ import {
 
 export const getAccessReducer = initialAnnotationIndex => (
     state = getAccessDefaults(initialAnnotationIndex),
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case ACCESS_STORE:
@@ -62,7 +62,7 @@ export const getAccessReducer = initialAnnotationIndex => (
 
 export const AccessPitchPageReducer = (
     state = ACCESS_PITCH_PAGE_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case ACCESS_STORE:

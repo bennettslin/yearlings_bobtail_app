@@ -100,7 +100,7 @@ export const getCompoundActorStyleIfNeeded = (actor, sharedStyle) => {
     if (isString(styledActorOrActors)) {
         return addStyleToSharedStyle(
             sharedStyle,
-            getStyledActorOrActors(styledActorOrActors)
+            getStyledActorOrActors(styledActorOrActors),
         )
     }
 

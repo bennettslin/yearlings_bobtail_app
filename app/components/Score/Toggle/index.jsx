@@ -28,7 +28,7 @@ const ScoreToggle = ({ className }) => {
             {...{
                 className: cx(
                     'ScoreToggle',
-                    className
+                    className,
                 ),
             }}
         >

@@ -24,7 +24,7 @@ const LyricOverview = forwardRef(({ didMount }, ref) => {
                         'width__lyricColumn__desktop',
                         'position__lyricColumn__desktop',
                         'position__lyricColumn__mobile',
-                        'fCC'
+                        'fCC',
                     ),
                     style: {
                         height: lyricOverviewHeightStyle,

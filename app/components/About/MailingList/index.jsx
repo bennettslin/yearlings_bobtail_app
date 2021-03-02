@@ -19,14 +19,14 @@ const MailingList = ({ didMount }) => {
     const onFocus = () => {
         logEvent(
             'MailingList',
-            'email'
+            'email',
         )
     }
 
     const onClick = () => {
         logEvent(
             'MailingList',
-            'submit'
+            'submit',
         )
     }
 
@@ -42,7 +42,7 @@ const MailingList = ({ didMount }) => {
             noValidate
             {...{
                 className: cx(
-                    'MailingList'
+                    'MailingList',
                 ),
                 action: EMAIL_ACTION,
                 method: 'post',
@@ -56,7 +56,7 @@ const MailingList = ({ didMount }) => {
                         'MailingList__emailField',
                         'MailingList__input',
                         'PtSansNarrow',
-                        'foN'
+                        'foN',
                     ),
                     id: EMAIL_ID,
                     name: EMAIL_NAME,
@@ -94,7 +94,7 @@ const MailingList = ({ didMount }) => {
                         'MailingList__submitButton',
                         'MailingList__input',
                         'PtSansNarrow',
-                        'foN'
+                        'foN',
                     ),
                     type: 'submit',
                     value: 'Sign up!',

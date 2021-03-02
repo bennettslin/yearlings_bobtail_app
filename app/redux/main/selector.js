@@ -36,14 +36,14 @@ export const mapMainHeightStyle = createSelector(
         lyricDynamicHeight,
         isHeightlessLyric,
         menuHeight,
-        isDesktopWidth
+        isDesktopWidth,
     ) => getMainHeightStyle({
         canCarouselNavMount,
         lyricDynamicHeight,
         isHeightlessLyric,
         menuHeight,
         isDesktopWidth,
-    })
+    }),
 )
 
 export const mapIsShelfLeftShown = createSelector(
@@ -67,7 +67,7 @@ export const mapIsShelfLeftShown = createSelector(
         lyricAnnotationIndex,
         isLyricLogue,
         isOverviewShown,
-        isTipsShown
+        isTipsShown,
     ) => getIsShelfLeftShown({
         isPhoneWidth,
         isDotsSlideShown,
@@ -79,5 +79,5 @@ export const mapIsShelfLeftShown = createSelector(
         isLyricLogue,
         isOverviewShown,
         isTipsShown,
-    })
+    }),
 )

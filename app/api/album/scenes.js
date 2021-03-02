@@ -15,7 +15,7 @@ export const getSceneIndices = songIndex => (
         [] :
         getArrayOfLength(
             // Which scene array we use is arbitrary.
-            getSong(songIndex).sceneDurations.length
+            getSong(songIndex).sceneDurations.length,
         )
 )
 

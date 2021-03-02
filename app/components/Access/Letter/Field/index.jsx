@@ -10,7 +10,7 @@ const AccessField = () => (
         {...{
             svgClassName: cx(
                 'AccessField',
-                'dropShadow__small'
+                'dropShadow__small',
             ),
         }}
     >

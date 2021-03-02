@@ -68,7 +68,7 @@ const UnitCard = forwardRef(({
                     className: cx(
                         'UnitCard',
                         isSubVerse && 'UnitCard__subVerse',
-                        isTabbed && 'UnitCard__tabbed'
+                        isTabbed && 'UnitCard__tabbed',
                     ),
                 },
             }}
@@ -80,7 +80,7 @@ const UnitCard = forwardRef(({
                             'UnitCard__sheet',
                             'boxShadow__stanza',
                             'bgColour__unit__pattern',
-                            `bgColour__formType__${formType}`
+                            `bgColour__formType__${formType}`,
                         ),
                     },
                 }}
@@ -105,7 +105,7 @@ const UnitCard = forwardRef(({
                             }}
                         />
                     )
-                }
+                },
                 )}
             </div>
 

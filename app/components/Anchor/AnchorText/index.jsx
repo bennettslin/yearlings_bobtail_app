@@ -49,7 +49,7 @@ const AnchorText = ({
                             {...{
                                 ...didMount && {
                                     className: cx(
-                                        'TextAnchor__plainText'
+                                        'TextAnchor__plainText',
                                     ),
                                 },
                             }}
@@ -69,7 +69,7 @@ const AnchorText = ({
                                             'TextAnchor__linkText__default',
 
                                         isSelected &&
-                                            'TextAnchor__linkText__selected'
+                                            'TextAnchor__linkText__selected',
                                     ),
                                 }}
                             >

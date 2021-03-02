@@ -19,7 +19,7 @@ const SliderTimes = () => {
     return (
         <div className={cx(
             'SliderTimes',
-            'abF'
+            'abF',
         )}>
 
             <SliderTime

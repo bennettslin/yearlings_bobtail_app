@@ -14,7 +14,7 @@ const PitchTitle = ({ serverClientPitchIndex }) => (
                 'PitchTitle',
                 'fontColour__title',
                 'fontSize__largeTitle',
-                'Rancho'
+                'Rancho',
             ),
         }}
     >

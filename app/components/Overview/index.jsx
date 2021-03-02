@@ -21,7 +21,7 @@ const Overview = ({ pageSongIndex }) => {
                         'Overview',
                         'fontSize__verse',
                         isToggleInOverview && 'Overview__toggleInOverview',
-                        getFinalSideKey()
+                        getFinalSideKey(),
                     ),
                 }}
             >

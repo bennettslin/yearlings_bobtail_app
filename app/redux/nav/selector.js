@@ -17,11 +17,11 @@ export const mapShowShrunkNavIcon = createSelector(
     mapWindowWidth,
     (
         deviceWidthIndex,
-        windowWidth
+        windowWidth,
     ) => getShowShrunkNavIcon({
         deviceWidthIndex,
         windowWidth,
-    })
+    }),
 )
 
 export const mapShowSingleNavBook = createSelector(
@@ -29,11 +29,11 @@ export const mapShowSingleNavBook = createSelector(
     mapWindowWidth,
     (
         deviceWidthIndex,
-        windowWidth
+        windowWidth,
     ) => getShowSingleNavBook({
         deviceWidthIndex,
         windowWidth,
-    })
+    }),
 )
 
 export const getMapIsNavColumnShown = bookIndex => createSelector(
@@ -41,11 +41,11 @@ export const getMapIsNavColumnShown = bookIndex => createSelector(
     mapShownNavBookIndex,
     (
         showSingleNavBook,
-        shownNavBookIndex
+        shownNavBookIndex,
     ) => (
         !showSingleNavBook ||
         shownNavBookIndex === bookIndex
-    )
+    ),
 )
 
 export const getMapNavStatus = songIndex => createSelector(
@@ -53,11 +53,11 @@ export const getMapNavStatus = songIndex => createSelector(
     mapSelectedSongIndex,
     (
         accessedNavIndex,
-        selectedSongIndex
+        selectedSongIndex,
     ) => (
         getBeforeOnOrAfter(
             accessedNavIndex > -1 ? accessedNavIndex : selectedSongIndex,
-            songIndex
+            songIndex,
         )
-    )
+    ),
 )

@@ -26,7 +26,7 @@ const LogicWrapper = ({ didMount, children }) => {
 
                         getPrefixedSceneClassNames(sceneCursorIndex),
                         getPrefixedVerseClassNames(verseCursorIndex),
-                        'abF'
+                        'abF',
                     ),
                 },
             }}

@@ -27,7 +27,7 @@ const AlbumContainer = ({ didMount, children }) => {
             {
                 action: 'container',
                 label: 'album',
-            }
+            },
         )
     }, [])
 

@@ -19,11 +19,11 @@ export const mapIsOverlayingAnnotation = createSelector(
     mapIsLyricExpanded,
     (
         isPhoneWidth,
-        isLyricExpanded
+        isLyricExpanded,
     ) => getIsOverlayingAnnotation({
         isPhoneWidth,
         isLyricExpanded,
-    })
+    }),
 )
 
 export const getMapIsPopupAnnotationShown = inMain => createSelector(
@@ -45,7 +45,7 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         isCarouselShown,
         canCarouselNavMount,
         isOverlayingAnnotation,
-        isWikiShown
+        isWikiShown,
     ) => getIsPopupAnnotationShown({
         inMain,
         isSongChangeDone,
@@ -57,5 +57,5 @@ export const getMapIsPopupAnnotationShown = inMain => createSelector(
         canCarouselNavMount,
         isOverlayingAnnotation,
         isWikiShown,
-    })
+    }),
 )

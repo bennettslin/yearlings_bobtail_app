@@ -22,7 +22,7 @@ const SeatShade = ({
             },
             svgClassName: cx(
                 'fillTransition__dimTheatre',
-                className
+                className,
             ),
         }}
     >

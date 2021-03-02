@@ -61,7 +61,7 @@ const AnnotationNavigation = forwardRef((props, ref) => {
                 const wikiWormholeEntity = getWikiWormholeEntity(
                     selectedSongIndex,
                     selectedAnnotationIndex,
-                    nextWikiWormholeIndex
+                    nextWikiWormholeIndex,
                 )
 
                 if (nextWikiWormholeIndex && wikiWormholeEntity) {
@@ -76,7 +76,7 @@ const AnnotationNavigation = forwardRef((props, ref) => {
                             dispatchSong.current(getWormholeLinkForWikiWormhole(
                                 selectedSongIndex,
                                 selectedAnnotationIndex,
-                                wikiWormholeEntity
+                                wikiWormholeEntity,
                             ))
 
                         /**

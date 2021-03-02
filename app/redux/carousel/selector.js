@@ -19,8 +19,8 @@ export const mapIsCarouselNotShowable = createSelector(
     mapSelectedDotsBit,
     (
         isLyricLogue,
-        selectedDotsBit
-    ) => isLyricLogue || selectedDotsBit === 0
+        selectedDotsBit,
+    ) => isLyricLogue || selectedDotsBit === 0,
 )
 
 const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
@@ -36,7 +36,7 @@ const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
         isOverviewShown,
         isTipsShown,
         isLyricExpanded,
-        isActivated
+        isActivated,
     ) => getIsCarouselOrNavShowable({
         checkForNav,
         isCarouselNotShowable,
@@ -45,7 +45,7 @@ const getMapIsCarouselOrNavShowable = checkForNav => createSelector(
         isTipsShown,
         isLyricExpanded,
         isActivated,
-    })
+    }),
 )
 
 // Needed for right shelf.
@@ -59,8 +59,8 @@ export const mapIsOnlyNavShowable = createSelector(
     mapIsNavShowable,
     (
         isCarouselNavShowable,
-        isNavShowable
-    ) => isNavShowable && !isCarouselNavShowable
+        isNavShowable,
+    ) => isNavShowable && !isCarouselNavShowable,
 )
 
 export const mapCarouselNavIdentifier = createSelector(
@@ -70,10 +70,10 @@ export const mapCarouselNavIdentifier = createSelector(
     (
         isCarouselNotShowable,
         isCarouselShown,
-        isNavExpanded
+        isNavExpanded,
     ) => getCarouselNavIdentifier({
         isCarouselNotShowable,
         isCarouselShown,
         isNavExpanded,
-    })
+    }),
 )

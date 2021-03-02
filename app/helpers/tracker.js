@@ -45,11 +45,11 @@ export const getSceneTrackerWidth = ({
     const
         sceneStartTime = getStartTimeForScene(
             selectedSongIndex,
-            sceneIndex
+            sceneIndex,
         ),
         sceneDuration = getDurationForScene(
             selectedSongIndex,
-            sceneIndex
+            sceneIndex,
         ),
         trackerTime = isPlaying ? selectedPlayerTime : cursorTime
 
@@ -75,11 +75,11 @@ export const getVerseTrackerLength = ({
     const
         verseStartTime = getStartTimeForVerse(
             selectedSongIndex,
-            verseIndex
+            verseIndex,
         ),
         verseDuration = getDurationForVerse(
             selectedSongIndex,
-            verseIndex
+            verseIndex,
         ),
         trackerTime = isPlaying ? selectedPlayerTime : cursorTime
 

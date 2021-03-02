@@ -13,7 +13,7 @@ const LyricAccess = () => {
 
         showIfAccessOn = Boolean(
             !isDotsSlideShown &&
-            !lyricAnnotationIndex
+            !lyricAnnotationIndex,
         )
 
     return (

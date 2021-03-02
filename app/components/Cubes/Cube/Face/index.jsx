@@ -24,7 +24,7 @@ const Face = ({
                 face,
                 `y${yIndex}`,
                 `x${getCharStringForNumber(xIndex)}`,
-                `z${zIndex}`
+                `z${zIndex}`,
             ),
             d: getSvgDataPathForFace({
                 slantDirection,

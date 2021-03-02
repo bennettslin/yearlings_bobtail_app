@@ -60,11 +60,11 @@ const AnnotationAccessDispatcher = forwardRef((props, ref) => {
         if (direction && accessedAnnotationIndex > 0) {
             dispatch(scrollLyricToAnchor(
                 'Direction accessed',
-                accessedAnnotationIndex
+                accessedAnnotationIndex,
             ))
             dispatch(scrollCarouselToAnnotation(
                 'Direction accessed',
-                accessedAnnotationIndex
+                accessedAnnotationIndex,
             ))
         }
 

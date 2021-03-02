@@ -8,9 +8,9 @@ export const mapIsEarShown = createSelector(
     mapDeviceWidthIndex,
     (
         lyricSongIndex,
-        deviceWidthIndex
+        deviceWidthIndex,
     ) => getIsDoublespeakerShown({
         songIndex: lyricSongIndex,
         deviceWidthIndex,
-    })
+    }),
 )

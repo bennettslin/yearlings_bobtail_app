@@ -92,7 +92,7 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
                     {
                         action: 'sync',
                         label: `song: ${selectedSongIndex}, verse: ${selectedVerseIndex}, time: ${currentTime}`,
-                    }
+                    },
                 )
             }
 
@@ -122,7 +122,7 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
             // Ask player to play.
             players.current[songIndex].playFromTime(getStartTimeForVerse(
                 songIndex,
-                verseIndex
+                verseIndex,
             ))
 
         // Pause the current player.
@@ -139,7 +139,7 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
     return didMount && (
         <div className={cx(
             'AudioManager',
-            'dNC'
+            'dNC',
         )}>
             {getSongNotLogueIndices().map(songIndex => (
                 <Player

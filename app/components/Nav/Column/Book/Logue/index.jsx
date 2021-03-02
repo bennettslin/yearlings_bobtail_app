@@ -17,7 +17,7 @@ const NavBookLogue = ({
     return (
         <div className={cx(
             'NavBookLogue',
-            'NavBook'
+            'NavBook',
         )}>
             <NavRoad />
             <NavButtonIndexed {...other}

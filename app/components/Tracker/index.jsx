@@ -24,7 +24,7 @@ const Tracker = ({
             {...{
                 className: cx(
                     'Tracker',
-                    'abF'
+                    'abF',
                 ),
                 style: {
                     [isVertical ? 'height' : 'width']: `${trackerLength}%`,

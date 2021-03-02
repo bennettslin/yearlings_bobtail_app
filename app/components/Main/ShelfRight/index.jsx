@@ -15,7 +15,7 @@ const ShelfRight = () => {
     return !isDesktopWidth && (
         <div className={cx(
             'ShelfRight',
-            'flex__mainSideButtons'
+            'flex__mainSideButtons',
         )}>
             <TipsToggle {...{ className: CHILD_CLASS_NAME }} />
             <ScoreToggle {...{ className: CHILD_CLASS_NAME }} />

@@ -43,7 +43,7 @@ const PopupView = ({
                         'PopupView__canBeFullHeight':
                             canBeFullHeight || isFullPopup,
                     },
-                ]
+                ],
             ),
         }}
     >
@@ -90,7 +90,7 @@ const PopupView = ({
                         },
                         !noBoxShadow && 'boxShadow__popupView',
                         !noOverflowHidden && 'PopupViewContent__noOverflowHidden',
-                    ]
+                    ],
                 ),
                 ...Number.isFinite(popupMaxHeight) && {
                     style: {

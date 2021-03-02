@@ -14,7 +14,7 @@ import { mapIsWikiShown } from '../wiki/selector'
 import { getCanNavigateByKey } from '../../helpers/key'
 
 export const mapQueuedFocus = (
-    { [FOCUS_STORE]: { queuedFocus } }
+    { [FOCUS_STORE]: { queuedFocus } },
 ) => queuedFocus
 
 export const mapCanNavigateByKey = createSelector(
@@ -28,14 +28,14 @@ export const mapCanNavigateByKey = createSelector(
         isAboutShown,
         isPitchShown,
         isScoreShown,
-        isWikiShown
+        isWikiShown,
     ) => getCanNavigateByKey({
         isSelectedLogue,
         isAboutShown,
         isPitchShown,
         isScoreShown,
         isWikiShown,
-    })
+    }),
 )
 
 export const mapShouldNavigateLyric = createSelector(
@@ -43,8 +43,8 @@ export const mapShouldNavigateLyric = createSelector(
     mapIsLyricExpanded,
     (
         isHeightlessLyric,
-        isLyricExpanded
-    ) => !isHeightlessLyric || isLyricExpanded
+        isLyricExpanded,
+    ) => !isHeightlessLyric || isLyricExpanded,
 )
 
 export const mapShouldNavigateNav = createSelector(
@@ -54,10 +54,10 @@ export const mapShouldNavigateNav = createSelector(
     (
         isActivated,
         isLyricExpanded,
-        isNavExpanded
+        isNavExpanded,
     ) => (
         !isActivated &&
         !isLyricExpanded &&
         isNavExpanded
-    )
+    ),
 )

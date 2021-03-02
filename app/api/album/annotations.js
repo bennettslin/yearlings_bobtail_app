@@ -10,7 +10,7 @@ export const getAnnotationIndices = (songIndex = 0) => (
         [] :
         getArrayOfLength(
             // Which annotation array we use is arbitrary.
-            getSong(songIndex).annotationDotsBits.length
+            getSong(songIndex).annotationDotsBits.length,
         )
 )
 
@@ -35,7 +35,7 @@ export const getDotsBitForAnnotation = (songIndex, annotationIndex) => {
 export const getDotKeysForAnnotation = (songIndex, annotationIndex) => {
     return getDotKeysFromBit(getDotsBitForAnnotation(
         songIndex,
-        annotationIndex
+        annotationIndex,
     ))
 }
 
@@ -78,12 +78,12 @@ export const getWikiWormholesForAnnotation = (songIndex, annotationIndex) => {
 export const getWikiWormholeEntity = (
     songIndex,
     annotationIndex,
-    wikiWormholeIndex
+    wikiWormholeIndex,
 
 ) => {
     const annotationWikiWormholes = getWikiWormholesForAnnotation(
         songIndex,
-        annotationIndex
+        annotationIndex,
     )
 
     return annotationWikiWormholes ?

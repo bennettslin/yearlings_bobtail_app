@@ -12,7 +12,7 @@ export const getSelectedReducer = ({
         initialVerseIndex,
         initialAnnotationIndex,
     }),
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case SELECTED_STORE:

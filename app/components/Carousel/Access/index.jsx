@@ -8,7 +8,7 @@ import './style'
 
 const CarouselAccess = ({ inLyric }) => {
     const canCarouselAccessShow = useSelector(
-        getMapCanCarouselAccessShow(inLyric)
+        getMapCanCarouselAccessShow(inLyric),
     )
 
     return (

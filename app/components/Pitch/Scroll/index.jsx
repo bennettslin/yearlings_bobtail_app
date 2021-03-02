@@ -22,7 +22,7 @@ const PitchScroll = forwardRef((props, ref) => {
                 className: cx(
                     // Box shadow and gradient mask cannot be on same element.
                     'PitchScroll__container',
-                    'abF'
+                    'abF',
                 ),
             }}
         >
@@ -32,7 +32,7 @@ const PitchScroll = forwardRef((props, ref) => {
                     className: cx(
                         'PitchScroll',
                         'foN',
-                        'gradientMask__scrollBottom'
+                        'gradientMask__scrollBottom',
                     ),
                     tabIndex: -1,
                 }}
@@ -41,7 +41,7 @@ const PitchScroll = forwardRef((props, ref) => {
                 <div
                     {...{
                         className: cx(
-                            'PitchScroll__content'
+                            'PitchScroll__content',
                         ),
                     }}
                 >

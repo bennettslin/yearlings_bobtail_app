@@ -28,7 +28,7 @@ const NavBookSongs = ({
     return (
         <div className={cx(
             'NavBookSongs',
-            'NavBook'
+            'NavBook',
         )}>
             <NavRoad />
             {getArrayOfLength(endArrayIndex - beginArrayIndex).map(currentIndex => {

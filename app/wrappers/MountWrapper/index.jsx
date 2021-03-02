@@ -25,7 +25,7 @@ const MountWrapper = ({ didMount, children }) => {
                             'MW__cannotCarouselShow',
                         canSliderMount &&
                             'MW__canSliderMount',
-                        'abF'
+                        'abF',
                     ),
                 },
             }}

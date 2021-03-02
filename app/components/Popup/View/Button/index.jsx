@@ -35,7 +35,7 @@ const PopupViewButton = ({
         }
 
         handlePopupButtonClick(
-            e, direction && { direction }
+            e, direction && { direction },
         )
     }
 
@@ -79,7 +79,7 @@ const PopupViewButton = ({
                      * Because popup button has absolute position, it must have
                      * a width and height as well.
                      */
-                    'Button__largeSize'
+                    'Button__largeSize',
                 ),
             }}
         >
@@ -88,7 +88,7 @@ const PopupViewButton = ({
                 isPopupButton
                 {...{
                     className: cx(
-                        'Button__popup'
+                        'Button__popup',
                     ),
                     buttonName,
                     accessKey,

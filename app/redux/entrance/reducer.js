@@ -3,7 +3,7 @@ import { ENTRANCE_DEFAULTS } from './default'
 
 export default (
     state = ENTRANCE_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case ENTRANCE_STORE: {

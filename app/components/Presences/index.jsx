@@ -11,7 +11,7 @@ const Presences = ({ yIndex }) => {
                 className: cx(
                     'Presences',
                     `y${yIndex}`,
-                    'abF'
+                    'abF',
                 ),
             }}
         >

@@ -26,7 +26,7 @@ const LyricScroll = forwardRef(({ didMount }, ref) => {
 
     const onWheel = e => {
         determineAutoScroll.current(
-            e, lyricScrollElement.current
+            e, lyricScrollElement.current,
         )
     }
 
@@ -88,7 +88,7 @@ const LyricScroll = forwardRef(({ didMount }, ref) => {
                              * toggle buttons.
                              */
                             'gradientMask__lyricScroll',
-                        ]
+                        ],
                     ),
                     tabIndex: -1,
                     onScroll,

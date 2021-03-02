@@ -4,7 +4,7 @@ import { BANNER_DEFAULTS } from './default'
 
 export default (
     state = BANNER_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case BANNER_STORE:

@@ -16,7 +16,7 @@ const CarouselMain = ({ didMount, style }) => {
                 ...didMount && {
                     className: cx(
                         'CarouselMain',
-                        'abF'
+                        'abF',
                     ),
                     style,
                 },

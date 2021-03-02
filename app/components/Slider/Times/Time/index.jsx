@@ -13,7 +13,7 @@ const SliderTime = ({
         isSpent ?
             'SliderTime__spent' :
             'SliderTime__remain',
-        'textShadow__dark'
+        'textShadow__dark',
     )}>
         {time}
     </div>

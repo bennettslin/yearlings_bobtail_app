@@ -11,7 +11,7 @@ const BannerFilmstrip = () => (
         {...{
             className: cx(
                 'BannerFilmstrip',
-                'flexAlignContainer'
+                'flexAlignContainer',
             ),
         }}
     >

@@ -8,7 +8,7 @@ import {
 
 export const mapIsLyricExpandable = createSelector(
     mapDeviceWidthIndex,
-    deviceWidthIndex => getIsLyricExpandable(deviceWidthIndex)
+    deviceWidthIndex => getIsLyricExpandable(deviceWidthIndex),
 )
 
 export const getMapIsExpandToggleShown = inMain => createSelector(
@@ -18,11 +18,11 @@ export const getMapIsExpandToggleShown = inMain => createSelector(
     (
         isLyricExpandable,
         isHeightlessLyric,
-        isLyricExpanded
+        isLyricExpanded,
     ) => (
         isLyricExpandable &&
 
         // Render button in main if lyric column is heightless.
         Boolean(inMain) === (isHeightlessLyric && !isLyricExpanded)
-    )
+    ),
 )

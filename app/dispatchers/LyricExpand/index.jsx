@@ -15,7 +15,7 @@ const LyricExpandDispatcher = forwardRef((props, ref) => {
 
     const dispatchLyricExpand = (
         // Just toggle unless parent specifies value.
-        attemptedIsLyricExpanded = !isLyricExpanded
+        attemptedIsLyricExpanded = !isLyricExpanded,
     ) => {
         // Turning off is always successful.
         const nextIsLyricExpanded = attemptedIsLyricExpanded &&

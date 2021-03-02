@@ -45,7 +45,7 @@ const SongChangeManager = () => {
                      * this to true here and now.
                      */
                     isSceneScrollComplete: true,
-                })), SONG_SELECT_COMPLETE_DURATION)
+                })), SONG_SELECT_COMPLETE_DURATION),
             )
 
         } else {

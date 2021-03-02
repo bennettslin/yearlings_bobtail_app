@@ -25,7 +25,7 @@ export const getTransitionStyle = ({
      * xIndices 0 and 11.
      */
     delay += getDelayForValueFrom0To5(
-        Math.abs((CUBE_X_AXIS_LENGTH / 2 - 0.5 - xIndex)) - 0.5
+        Math.abs((CUBE_X_AXIS_LENGTH / 2 - 0.5 - xIndex)) - 0.5,
     )
 
     const durationDelay = `${CUBE_TRANSITION_DURATION}s ${delay.toFixed(1)}s`

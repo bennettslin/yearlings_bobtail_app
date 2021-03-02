@@ -30,7 +30,7 @@ const Ceiling = () => {
             {...{
                 className: cx(
                     'Ceiling',
-                    'Theatre__field'
+                    'Theatre__field',
                 ),
                 style: {
                     width: `${windowWidth}px`,

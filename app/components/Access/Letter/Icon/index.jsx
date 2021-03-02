@@ -51,7 +51,7 @@ const AccessIcon = ({ accessKey }) => {
         <div
             className={cx(
                 'AccessIcon',
-                `AccessIcon__${accessKey}`
+                `AccessIcon__${accessKey}`,
             )}
         >
             {shownKey}

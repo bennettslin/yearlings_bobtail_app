@@ -21,7 +21,7 @@ const ButtonIcon = ({
         <InlineSvg
             {...{
                 className: cx(
-                    'ButtonIcon'
+                    'ButtonIcon',
                 ),
                 svgClassName: cx(
                     `ButtonIcon__${buttonName}`,
@@ -33,7 +33,7 @@ const ButtonIcon = ({
                     getButtonIconClassNames({
                         buttonName,
                         buttonIdentifier,
-                    })
+                    }),
                 ),
             }}
         >

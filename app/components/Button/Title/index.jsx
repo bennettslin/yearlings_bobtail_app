@@ -14,7 +14,7 @@ const ButtonTitle = ({
             {...{
                 className: cx(
                     'ButtonTitle',
-                    'abF'
+                    'abF',
                 ),
             }}
         >
@@ -27,7 +27,7 @@ const ButtonTitle = ({
                             'button__text__interactable',
                         'Rancho',
                         'textShadow__dark',
-                        'fCC'
+                        'fCC',
                     ),
                 }}
             >

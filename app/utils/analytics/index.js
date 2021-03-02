@@ -51,7 +51,7 @@ export const setCustomDimensions = async () => {
         {
             action: 'ip',
             label: ip,
-        }
+        },
     )
 }
 
@@ -81,7 +81,7 @@ export const sendToGa = ({
                     value,
                     count: count + 1,
                 })
-            }, 100
+            }, 100,
         )
 
         return 'pending'
@@ -109,7 +109,7 @@ export const logGa = () => {
                 `GA initialised with staging id ${GA_ACCOUNT__STAGING}.`,
             {
                 action: 'ga',
-            }
+            },
         )
     }
 }

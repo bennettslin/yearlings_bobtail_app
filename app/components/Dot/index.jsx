@@ -40,7 +40,7 @@ const Dot = ({
                         isSelected && `dropShadow__selected`,
                     ],
 
-                    className
+                    className,
                 ),
             }}
         >

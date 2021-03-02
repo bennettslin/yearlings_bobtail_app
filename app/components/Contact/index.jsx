@@ -11,7 +11,7 @@ const Contact = ({ didMount }) => (
             {...{
                 className: cx(
                     'Contact',
-                    'Rancho'
+                    'Rancho',
                 ),
             }}
         >
@@ -19,7 +19,7 @@ const Contact = ({ didMount }) => (
                 <Fragment {...{ key: index }}>
                     <span {...{ className: 'dNC' }}>
                         {String.fromCharCode(
-                            character.charCodeAt(0) + 1
+                            character.charCodeAt(0) + 1,
                         )}
                     </span>
                     <span>{character}</span>

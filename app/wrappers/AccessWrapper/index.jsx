@@ -25,7 +25,7 @@ const AccessWrapper = ({ didMount, children }) => {
                             'AcW__accessOff',
                         accessedKey &&
                             `${PARENT_ACCESS_PREFIX}${accessedKey}`,
-                        'abF'
+                        'abF',
                     ),
                 },
             }}

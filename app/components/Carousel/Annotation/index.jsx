@@ -24,11 +24,11 @@ const CarouselAnnotation = forwardRef(({
         isSelected = useSelector(getMapIsLyricAnnotation(annotationIndex)),
         dotsBit = getDotsBitForAnnotation(
             serverClientSongIndex,
-            annotationIndex
+            annotationIndex,
         ),
         columnKey = getCarouselAnnotationData(
             serverClientSongIndex,
-            annotationIndex
+            annotationIndex,
         ),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit))
 
@@ -51,7 +51,7 @@ const CarouselAnnotation = forwardRef(({
 
                         columnKey &&
                             `CarouselAnnotation__inEarColumn__${columnKey}`,
-                        'ovH'
+                        'ovH',
                     ),
                 },
             }}

@@ -12,7 +12,7 @@ import { getIsDesktopWidth } from '../responsive'
 const _getLyricColumnHeight = (
     deviceWidthIndex,
     isHeightlessLyric,
-    windowHeight
+    windowHeight,
 ) => {
     return (
         isHeightlessLyric || getIsDesktopWidth(deviceWidthIndex)
@@ -29,7 +29,7 @@ export const getCentreFieldHeight = ({
         lyricColumnHeight = _getLyricColumnHeight(
             deviceWidthIndex,
             isHeightlessLyric,
-            windowHeight
+            windowHeight,
         ),
 
         menuHeight =
@@ -58,7 +58,7 @@ export const getCeilingFloorHeight = ({
         lyricColumnHeight = _getLyricColumnHeight(
             deviceWidthIndex,
             isHeightlessLyric,
-            windowHeight
+            windowHeight,
         ),
 
         centreFieldHeight = getCentreFieldHeight({

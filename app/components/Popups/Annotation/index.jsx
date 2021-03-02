@@ -19,7 +19,7 @@ const AnnotationPopup = ({ didMount, inMain }) => {
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
         isOverlayingAnnotation = useSelector(mapIsOverlayingAnnotation),
         isPopupAnnotationShown = useSelector(
-            getMapIsPopupAnnotationShown(inMain)
+            getMapIsPopupAnnotationShown(inMain),
         ),
         [annotationIndex, setAnnotationIndex] = useState(lyricAnnotationIndex)
 

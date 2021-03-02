@@ -27,7 +27,7 @@ const FilmstripCell = ({ sceneIndex }) => {
                     isSceneCursor ?
                         'FilmstripCell__cursor' :
                         'FilmstripCell__notCursor',
-                    'ovH'
+                    'ovH',
                 ),
             }}
         >
@@ -36,7 +36,7 @@ const FilmstripCell = ({ sceneIndex }) => {
                     {...{
                         className: cx(
                             'FilmstripCell__trackerContainer',
-                            'abF'
+                            'abF',
                         ),
                     }}
                 >

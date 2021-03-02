@@ -25,7 +25,7 @@ export const mapLyricSectionRect = createSelector(
         windowHeight,
         isLyricExpanded,
         lyricDynamicHeight,
-        menuHeight
+        menuHeight,
     ) => getLyricSectionRect({
         isLyricExpandable,
         canSliderMount,
@@ -34,5 +34,5 @@ export const mapLyricSectionRect = createSelector(
         isLyricExpanded,
         lyricDynamicHeight,
         menuHeight,
-    })
+    }),
 )

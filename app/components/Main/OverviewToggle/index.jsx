@@ -31,7 +31,7 @@ const OverviewToggle = ({ className }) => {
     return (
         <div className={cx(
             'OverviewToggle',
-            className
+            className,
         )}>
             <Button
                 isCustomSize

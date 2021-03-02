@@ -38,7 +38,7 @@ const Underline = ({
                 isSelected &&
                     'Underline__selected',
 
-                'ovH'
+                'ovH',
             ),
         }}
     />

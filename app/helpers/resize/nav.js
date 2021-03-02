@@ -11,7 +11,7 @@ import {
 
 const _getShowShrunkNavIconForDeviceObject = (
     windowWidth,
-    deviceWidthConfig
+    deviceWidthConfig,
 ) => {
     const {
         doubleColumnStaticBreakpoint,
@@ -44,7 +44,7 @@ export const getShowShrunkNavIcon = ({
         windowWidth,
         isPhoneOrMini ?
             MINI_WIDTH_CONFIG :
-            DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
+            DEVICE_WIDTH_CONFIGS[deviceWidthIndex],
     )
 }
 

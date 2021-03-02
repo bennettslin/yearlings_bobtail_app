@@ -18,6 +18,6 @@ export const getSessionDefaults = ({
     shownNavBookIndex: getBookForSongIndex(initialSongIndex),
     earColumnIndex: getColumnIndexForAnnotation(
         initialSongIndex,
-        initialAnnotationIndex
+        initialAnnotationIndex,
     ) || 0,
 })

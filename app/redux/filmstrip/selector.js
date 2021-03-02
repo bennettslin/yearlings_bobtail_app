@@ -6,6 +6,6 @@ export const getMapSceneDimensionCoordinate = sceneIndex => createSelector(
     mapSelectedSongIndex,
     selectedSongIndex => getSceneDimensionCoordinate(
         selectedSongIndex,
-        sceneIndex
-    )
+        sceneIndex,
+    ),
 )

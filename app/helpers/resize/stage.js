@@ -53,7 +53,7 @@ const _getLeftShelfOverflow = (deviceWidthIndex) => {
 
 const _getCentreFieldWidth = (
     deviceWidthIndex,
-    windowWidth
+    windowWidth,
 ) => {
     let lyricWidth = 0,
         overflowPercentage = 1
@@ -88,7 +88,7 @@ export const getStageDimensionCoordinates = ({
 
         centreFieldWidth = _getCentreFieldWidth(
             deviceWidthIndex,
-            windowWidth
+            windowWidth,
         ) - leftShelfOverflow,
 
         navHeight = canCarouselNavMount && isDesktopWidth ? CSS_HEIGHT_NAV : 0,

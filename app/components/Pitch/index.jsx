@@ -12,7 +12,7 @@ const Pitch = forwardRef(({ pagePitchIndex }, ref) => (
             {...{
                 className: cx(
                     'Pitch',
-                    'fCC'
+                    'fCC',
                 ),
             }}
         >

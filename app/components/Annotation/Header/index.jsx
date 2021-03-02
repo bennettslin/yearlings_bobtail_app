@@ -19,7 +19,7 @@ const AnnotationHeader = ({
                 'AnnotationHeader',
                 // Annotation header needs to be hideable in carousel.
                 inCarousel && 'AnnotationHeaderAnimatable',
-                'abF'
+                'abF',
             ),
         }}
     >

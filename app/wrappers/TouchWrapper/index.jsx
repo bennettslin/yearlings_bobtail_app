@@ -41,7 +41,7 @@ const TouchWrapper = ({ didMount, children }) => {
                         isLyricsLocked ?
                             'TW__lyricsLocked' :
                             'TW__lyricsUnlocked',
-                        'abF'
+                        'abF',
                     ),
                 },
             }}

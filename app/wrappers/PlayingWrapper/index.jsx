@@ -23,7 +23,7 @@ const PlayingWrapper = ({ didMount, children }) => {
                         isPlaying ?
                             'PlW__isPlaying' :
                             'PlW__isPaused',
-                        'abF'
+                        'abF',
                     ),
                 },
             }}

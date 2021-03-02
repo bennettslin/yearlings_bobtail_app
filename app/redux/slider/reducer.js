@@ -4,7 +4,7 @@ import { SLIDER_DEFAULTS } from './default'
 
 export default (
     state = SLIDER_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case SLIDER_STORE:

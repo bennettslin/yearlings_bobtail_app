@@ -28,7 +28,7 @@ export const getMapIsPresenceShown = ({
         selectedSongIndex,
         selectedSceneIndex,
         sceneSongIndex,
-        sceneSceneIndex
+        sceneSceneIndex,
     ) => getIsPresenceShown({
         canTransitionAfterSceneChange,
         selectedSongIndex,
@@ -39,7 +39,7 @@ export const getMapIsPresenceShown = ({
         presenceType,
         actorKey,
         presenceKey,
-    })
+    }),
 )
 
 export const getMapZIndexForPresence = (zIndex, zIndices) => createSelector(
@@ -55,5 +55,5 @@ export const getMapZIndexForPresence = (zIndex, zIndices) => createSelector(
         } else {
             return 0
         }
-    }
+    },
 )

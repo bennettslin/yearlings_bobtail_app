@@ -13,7 +13,7 @@ export const getLyricReducer = ({
         initialVerseIndex,
         initialAnnotationIndex,
     }),
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case LYRIC_STORE:

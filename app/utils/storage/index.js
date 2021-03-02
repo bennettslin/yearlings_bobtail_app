@@ -56,14 +56,14 @@ export const getStoredSongIndex = () => (
 export const getStoredVerseIndex = songIndex => (
     getValidVerseIndex(
         songIndex,
-        _getParsedStoredInteger(SELECTED_VERSE_INDEX)
+        _getParsedStoredInteger(SELECTED_VERSE_INDEX),
     )
 )
 
 export const getStoredAnnotationIndex = songIndex => (
     getValidAnnotationIndex(
         songIndex,
-        _getParsedStoredInteger(SELECTED_ANNOTATION_INDEX)
+        _getParsedStoredInteger(SELECTED_ANNOTATION_INDEX),
     )
 )
 
@@ -74,7 +74,7 @@ export const getAudioOptionFromStorage = () => {
 
         savedOptionIndex =
             getArrayOfLength(AUDIO_OPTIONS.length).some(
-                index => index === storedOptionIndex
+                index => index === storedOptionIndex,
             ) ?
                 storedOptionIndex :
                 0
@@ -121,7 +121,7 @@ export const getDotsBitFromStorage = (initialAnnotationIndex) => {
 
 export const getStoredPitchIndex = () => {
     const storedPitchSegmentIndex = getValidPitchSegmentIndex(
-        _getParsedStoredInteger(PITCH_SEGMENT_INDEX)
+        _getParsedStoredInteger(PITCH_SEGMENT_INDEX),
     )
 
     return storedPitchSegmentIndex

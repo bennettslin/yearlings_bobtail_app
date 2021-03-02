@@ -26,7 +26,7 @@ const _log = ({
                 category: styleCategory || category,
                 action,
             }),
-            timeDifference
+            timeDifference,
         )
     }
 
@@ -38,7 +38,7 @@ const _log = ({
             useTimeDifferenceForValue ?
                 // Send to analytics as milliseconds.
                 timeDifference * 1000 :
-                value
+                value,
         ),
     })
 }

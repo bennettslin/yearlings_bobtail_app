@@ -4,7 +4,7 @@ import { HOVER_DEFAULTS } from './default'
 
 export default (
     state = HOVER_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case HOVER_STORE:

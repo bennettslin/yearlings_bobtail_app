@@ -38,7 +38,7 @@ const TipsToggle = ({
             {...{
                 className: cx(
                     'TipsToggle',
-                    className
+                    className,
                 ),
             }}
         >

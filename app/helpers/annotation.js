@@ -14,7 +14,7 @@ export const getShowAnnotationForColumn = ({
 
     const columnIndex = getColumnIndexForAnnotation(
             selectedSongIndex,
-            selectedAnnotationIndex
+            selectedAnnotationIndex,
         ),
 
         /**
@@ -112,9 +112,9 @@ export const getAnnotationIndexForDirection = ({
             hasSelectedDot = getHasSelectedDot(
                 getDotsBitForAnnotation(
                     selectedSongIndex,
-                    returnIndex
+                    returnIndex,
                 ),
-                selectedDotsBit
+                selectedDotsBit,
             )
 
             returnToLoop =

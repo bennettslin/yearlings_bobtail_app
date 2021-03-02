@@ -2,15 +2,15 @@ import { TOGGLE_STORE } from '../../constants/store'
 import { createSelector } from 'reselect'
 
 export const mapIsAutoScroll = (
-    { [TOGGLE_STORE]: { isAutoScroll } }
+    { [TOGGLE_STORE]: { isAutoScroll } },
 ) => isAutoScroll
 
 export const mapIsCarouselExpanded = (
-    { [TOGGLE_STORE]: { isCarouselExpanded } }
+    { [TOGGLE_STORE]: { isCarouselExpanded } },
 ) => isCarouselExpanded
 
 export const mapIsNavExpanded = (
-    { [TOGGLE_STORE]: { isNavExpanded } }
+    { [TOGGLE_STORE]: { isNavExpanded } },
 ) => isNavExpanded
 
 export const mapIsCarouselShown = createSelector(
@@ -18,26 +18,26 @@ export const mapIsCarouselShown = createSelector(
     mapIsNavExpanded,
     (
         isCarouselExpanded,
-        isNavExpanded
-    ) => isCarouselExpanded && !isNavExpanded
+        isNavExpanded,
+    ) => isCarouselExpanded && !isNavExpanded,
 )
 
 export const mapIsDotsSlideShown = (
-    { [TOGGLE_STORE]: { isDotsSlideShown } }
+    { [TOGGLE_STORE]: { isDotsSlideShown } },
 ) => isDotsSlideShown
 
 export const mapIsLyricExpanded = (
-    { [TOGGLE_STORE]: { isLyricExpanded } }
+    { [TOGGLE_STORE]: { isLyricExpanded } },
 ) => isLyricExpanded
 
 export const mapIsScoreShown = (
-    { [TOGGLE_STORE]: { isScoreShown } }
+    { [TOGGLE_STORE]: { isScoreShown } },
 ) => isScoreShown
 
 export const mapIsPitchShown = (
-    { [TOGGLE_STORE]: { isPitchShown } }
+    { [TOGGLE_STORE]: { isPitchShown } },
 ) => isPitchShown
 
 export const mapIsAboutShown = (
-    { [TOGGLE_STORE]: { isAboutShown } }
+    { [TOGGLE_STORE]: { isAboutShown } },
 ) => isAboutShown

@@ -84,7 +84,7 @@ export const getSafeScrollChild = ({
         {
             action: 'scroll',
             label: `class: ${scrollClass}, index: ${index}`,
-        }
+        },
     )
 
     /**
@@ -125,7 +125,7 @@ export const getCanCarouselAccessShow = ({
             // ... or else have lyric expanded.
             isLyricExpanded
         )
-    )
+    ),
 )
 
 export const getCanLyricScroll = ({

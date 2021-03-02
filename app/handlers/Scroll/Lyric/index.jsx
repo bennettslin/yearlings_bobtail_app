@@ -68,7 +68,7 @@ const ScrollLyricListener = ({
             // Set timeout to ensure that scroll is truly complete.
             callback: () => setTimeout(
                 () => dispatchCallback(index),
-                SCROLL_BUFFER
+                SCROLL_BUFFER,
             ),
         })
     }
@@ -82,7 +82,7 @@ const ScrollLyricListener = ({
              */
             setTimeout(
                 dispatchScroll,
-                SCROLL_BUFFER
+                SCROLL_BUFFER,
             )
         }
         dispatch(resetScrollLyricStore())

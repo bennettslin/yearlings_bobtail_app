@@ -30,13 +30,13 @@ const AnnotationCard = ({
         dotsBit = getDotsBitForAnnotationCard(
             serverClientSongIndex,
             annotationIndex,
-            cardIndex
+            cardIndex,
         ),
         hasSelectedDot = useSelector(getMapHasSelectedDot(dotsBit)),
         description = getDescriptionForAnnotationCard(
             serverClientSongIndex,
             annotationIndex,
-            cardIndex
+            cardIndex,
         )
 
     return (
@@ -47,7 +47,7 @@ const AnnotationCard = ({
                         'AnnotationCardContainer',
                         hasSelectedDot && 'AnnotationCardContainer__shown',
                         inCarousel && 'AnnotationCardContainer__animated',
-                        'ovH'
+                        'ovH',
                     ),
                 },
             }}
@@ -69,7 +69,7 @@ const AnnotationCard = ({
                                 ] :
                                 'AnnotationCard__wormhole',
                             'fontSize__verse',
-                        ]
+                        ],
                     ),
                 }}
             >

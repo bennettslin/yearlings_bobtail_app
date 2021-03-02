@@ -12,10 +12,10 @@ export const isString = (string) => (
 
 export const getArrayOfLength = (
     length,
-    indexBase = 0
+    indexBase = 0,
 ) => (
     Array.from(
         { length },
-        (nothing, i) => i + indexBase
+        (nothing, i) => i + indexBase,
     )
 )

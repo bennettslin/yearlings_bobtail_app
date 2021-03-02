@@ -20,7 +20,7 @@ const FilmstripScene = ({
         } = JSON.parse(useSelector(getMapSceneDimensionCoordinate(sceneIndex))),
 
         isSceneQueuedOrSelected = useSelector(
-            getMapIsSceneSelected(sceneIndex)
+            getMapIsSceneSelected(sceneIndex),
         )
 
     const onClick = e => {
@@ -37,7 +37,7 @@ const FilmstripScene = ({
                     isSceneQueuedOrSelected ?
                         'FilmstripScene__selected' :
                         'FilmstripScene__interactable',
-                    'abF'
+                    'abF',
                 ),
                 style: {
                     left: `${sceneLeft}%`,

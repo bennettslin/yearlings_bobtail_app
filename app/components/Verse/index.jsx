@@ -72,7 +72,7 @@ const Verse = forwardRef(({
                             isInteractable && 'Verse__interactable',
 
                             className,
-                        ]
+                        ],
                     ),
                     onClick,
                 }}

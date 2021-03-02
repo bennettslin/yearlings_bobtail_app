@@ -44,7 +44,7 @@ const LyricToggleExpand = ({ inMain }) => {
                 inMain ?
                     'LyricToggleExpand__inMain' :
                     'LyricToggleExpand__inLyric',
-                'length__buttonLarge'
+                'length__buttonLarge',
             )}>
                 <Button
                     isLargeSize

@@ -9,7 +9,7 @@ export const getStanzaIndices = songIndex => (
         [] :
         getArrayOfLength(
             // Which stanza array we use is arbitrary.
-            getSong(songIndex).stanzaFormTypes.length
+            getSong(songIndex).stanzaFormTypes.length,
         )
 )
 

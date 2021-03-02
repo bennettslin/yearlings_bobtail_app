@@ -59,7 +59,7 @@ export const UnitDot = forwardRef(({ unitIndex }, ref) => {
                     hasSelectedDot && 'UnitDot__shown',
 
                     // Scroll to dot stanza block upon annotation selection.
-                    `${ANCHOR_SCROLL}__${annotationIndex}`
+                    `${ANCHOR_SCROLL}__${annotationIndex}`,
                 ),
             }}
         >

@@ -3,12 +3,12 @@ import { EAR_COLUMN_KEYS } from '../../../constants/lyrics'
 
 export const getCarouselAnnotationData = (
     songIndex,
-    annotationIndex
+    annotationIndex,
 ) => {
 
     const columnIndex = getColumnIndexForAnnotation(
             songIndex,
-            annotationIndex
+            annotationIndex,
         ),
 
         columnKey = Number.isFinite(columnIndex) ?

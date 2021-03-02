@@ -40,7 +40,7 @@ const Cube = ({
                     'Cube',
                     `y${yIndex}`,
                     `x${getCharStringForNumber(xIndex)}`,
-                    'abF'
+                    'abF',
                 ),
                 zIndex: getCssZIndexForCube({
                     slantDirection,

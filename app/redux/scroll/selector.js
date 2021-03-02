@@ -38,14 +38,14 @@ export const getMapAlignForScroll = isCarousel => createSelector(
         windowWidth,
         isDesktopWidth,
         isMonitorWidth,
-        isLyricExpanded
+        isLyricExpanded,
     ) => getAlignForScroll({
         isCarousel,
         windowWidth,
         isDesktopWidth,
         isMonitorWidth,
         isLyricExpanded,
-    })
+    }),
 )
 
 export const getMapCanCarouselAccessShow = inLyric => createSelector(
@@ -61,7 +61,7 @@ export const getMapCanCarouselAccessShow = inLyric => createSelector(
         isLyricLogue,
         lyricAnnotationIndex,
         isDotsSlideShown,
-        isLyricExpanded
+        isLyricExpanded,
     ) => getCanCarouselAccessShow({
         inLyric,
         isCarouselShown,
@@ -70,7 +70,7 @@ export const getMapCanCarouselAccessShow = inLyric => createSelector(
         lyricAnnotationIndex,
         isDotsSlideShown,
         isLyricExpanded,
-    })
+    }),
 )
 
 export const mapCanLyricScroll = createSelector(
@@ -88,7 +88,7 @@ export const mapCanLyricScroll = createSelector(
         scrollLyricFromAutoScroll,
         isAutoScroll,
         isLyricExpanded,
-        isHeightlessLyric
+        isHeightlessLyric,
     ) => getCanLyricScroll({
         isPlaying,
         isLyricLogue,
@@ -97,5 +97,5 @@ export const mapCanLyricScroll = createSelector(
         isAutoScroll,
         isLyricExpanded,
         isHeightlessLyric,
-    })
+    }),
 )

@@ -33,7 +33,7 @@ const Annotation = ({
             <div
                 {...{
                     className: cx(
-                        'Annotation'
+                        'Annotation',
                     ),
                     onClick,
                 }}
@@ -47,7 +47,7 @@ const Annotation = ({
                                 'bgColour__annotation__pattern',
                                 isSelected && 'bgColour__annotation__selected',
                                 'boxShadow__annotation',
-                                'abF'
+                                'abF',
                             ),
                         },
                     }}
@@ -64,7 +64,7 @@ const Annotation = ({
 
                 {getAnnotationCardIndices(
                     serverClientSongIndex,
-                    annotationIndex
+                    annotationIndex,
                 ).map(cardIndex => (
                     <AnnotationCard
                         {...{

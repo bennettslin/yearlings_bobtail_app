@@ -41,7 +41,7 @@ const Theatre = ({ didMount }) => {
                 {
                     action: 'paint',
                     label: lyricSongIndex,
-                }
+                },
             )
         }
     }, [didInitialEnter])
@@ -60,7 +60,7 @@ const Theatre = ({ didMount }) => {
             <div className={cx(
                 'Theatre',
                 'abF',
-                'ovH'
+                'ovH',
             )}>
                 <Stage />
                 <Curtains />

@@ -23,7 +23,7 @@ const Nav = () => {
                 'Nav',
                 showSingleNavBook ?
                     'Nav__showSingleBook' :
-                    'Nav__showDoubleBook'
+                    'Nav__showDoubleBook',
             )}
         >
             <NavListener />
@@ -33,7 +33,7 @@ const Nav = () => {
             <div
                 {...{
                     className: cx(
-                        'NavColumnContainer'
+                        'NavColumnContainer',
                     ),
                 }}
             >

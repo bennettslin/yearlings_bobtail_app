@@ -22,7 +22,7 @@ const ShelfLeft = () => {
         <div className={cx(
             'ShelfLeft',
             isShelfLeftShown && 'ShelfLeft__shown',
-            'flex__mainSideButtons'
+            'flex__mainSideButtons',
         )}>
             <OverviewToggle {...{ className: CHILD_CLASS_NAME }} />
             <DotsSlideToggle {...{ className: CHILD_CLASS_NAME }} />

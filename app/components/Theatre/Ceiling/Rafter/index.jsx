@@ -22,7 +22,7 @@ const CeilingRafter = ({
     <InlineSvg
         {...{
             className: cx(
-                'CeilingRafter'
+                'CeilingRafter',
             ),
             style: {
                 top: `${top}px`,
@@ -32,7 +32,7 @@ const CeilingRafter = ({
             },
             svgClassName: cx(
                 'ceilingRafter',
-                'fillTransition__dimTheatre'
+                'fillTransition__dimTheatre',
             ),
         }}
     >

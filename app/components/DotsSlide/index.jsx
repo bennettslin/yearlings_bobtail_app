@@ -65,7 +65,7 @@ const DotsSlide = () => {
                              * will prevent mouse from hovering, but this
                              * is an acceptable tradeoff, at least for now.
                              */
-                            !IS_TOUCH_SUPPORTED && 'DotsSlide__canHover'
+                            !IS_TOUCH_SUPPORTED && 'DotsSlide__canHover',
                         ),
                         onClick,
                     }}

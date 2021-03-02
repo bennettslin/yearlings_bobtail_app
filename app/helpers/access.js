@@ -15,6 +15,6 @@ export const getIsAccessedIndexedAnchorShown = ({
             !isNavExpanded ||
             isLyricExpanded ||
             lyricAnnotationIndex
-        )
+        ),
     )
 )

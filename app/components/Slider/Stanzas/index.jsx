@@ -13,7 +13,7 @@ const SliderStanzas = () => {
     return (
         <div className={cx(
             'SliderStanzas',
-            'abF'
+            'abF',
         )}>
             {getStanzaIndices(lyricSongIndex).map(stanzaIndex => (
                 <SliderStanza

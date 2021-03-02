@@ -39,9 +39,9 @@ export const initialiseGlobalAdminObjects = () => {
             getSceneIndexForVerse(
                 getStoredSongIndex(),
                 getStoredVerseIndex(
-                    getStoredSongIndex()
-                )
-            )
+                    getStoredSongIndex(),
+                ),
+            ),
         )
     }
 }

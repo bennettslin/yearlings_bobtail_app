@@ -5,5 +5,5 @@ export const mapStageHeight = createSelector(
     mapStageDimensionCoordinates,
     stageDimensionCoordinates => (
         JSON.parse(stageDimensionCoordinates).stageHeight
-    )
+    ),
 )

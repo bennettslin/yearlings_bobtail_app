@@ -33,7 +33,7 @@ const TransitionWrapper = ({ didMount, children }) => {
                         isSongChangeDone ?
                             'TrW__isSongChangeDone' :
                             'TrW__isSongChangeNotDone',
-                        'abF'
+                        'abF',
                     ),
                 },
             }}

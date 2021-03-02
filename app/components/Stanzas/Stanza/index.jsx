@@ -18,13 +18,13 @@ const Stanza = forwardRef(({
 }, ref) => {
     const stanzaUnitIndices = getUnitIndicesForStanza(
         serverClientSongIndex,
-        stanzaIndex
+        stanzaIndex,
     )
 
     return (
         <div
             className={cx(
-                'Stanza'
+                'Stanza',
             )}
         >
             {stanzaUnitIndices.map(unitIndex => (

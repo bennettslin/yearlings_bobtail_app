@@ -10,11 +10,11 @@ import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import { SCENE_STORE } from '../../constants/store'
 
 export const mapSceneSongIndex = (
-    { [SCENE_STORE]: { sceneSongIndex } }
+    { [SCENE_STORE]: { sceneSongIndex } },
 ) => sceneSongIndex
 
 export const mapSceneSceneIndex = (
-    { [SCENE_STORE]: { sceneSceneIndex } }
+    { [SCENE_STORE]: { sceneSceneIndex } },
 ) => sceneSceneIndex
 
 export const mapSceneCubesKey = createSelector(
@@ -22,8 +22,8 @@ export const mapSceneCubesKey = createSelector(
     mapSceneSceneIndex,
     (
         sceneSongIndex,
-        sceneSceneIndex
-    ) => getCubesKeyForScene(sceneSongIndex, sceneSceneIndex)
+        sceneSceneIndex,
+    ) => getCubesKeyForScene(sceneSongIndex, sceneSceneIndex),
 )
 
 export const mapSceneSkyTime = createSelector(
@@ -31,8 +31,8 @@ export const mapSceneSkyTime = createSelector(
     mapSceneSceneIndex,
     (
         sceneSongIndex,
-        sceneSceneIndex
-    ) => getSkyTimeForScene(sceneSongIndex, sceneSceneIndex)
+        sceneSceneIndex,
+    ) => getSkyTimeForScene(sceneSongIndex, sceneSceneIndex),
 )
 
 export const mapSceneSkySeason = createSelector(
@@ -40,15 +40,15 @@ export const mapSceneSkySeason = createSelector(
     mapSceneSceneIndex,
     (
         sceneSongIndex,
-        sceneSceneIndex
-    ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex)
+        sceneSceneIndex,
+    ) => getSeasonForScene(sceneSongIndex, sceneSceneIndex),
 )
 
 export const mapIsDarkScene = createSelector(
     mapSceneCubesKey,
     (
-        sceneCubesKey
-    ) => getIsDarkScene(sceneCubesKey)
+        sceneCubesKey,
+    ) => getIsDarkScene(sceneCubesKey),
 )
 
 export const mapCanStageReset = createSelector(
@@ -56,6 +56,6 @@ export const mapCanStageReset = createSelector(
     mapIsSongSelectComplete,
     (
         sceneCubesKey,
-        isSongSelectComplete
-    ) => sceneCubesKey === DEFAULT_STAGE_KEY && isSongSelectComplete
+        isSongSelectComplete,
+    ) => sceneCubesKey === DEFAULT_STAGE_KEY && isSongSelectComplete,
 )

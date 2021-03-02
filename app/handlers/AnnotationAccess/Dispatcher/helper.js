@@ -31,11 +31,11 @@ export const getAnnotationIndexForVerseIndex = ({
     const
         lastAnnotationIndex = getLastAnnotationIndexForVerse(
             selectedSongIndex,
-            verseIndex
+            verseIndex,
         ),
         verseAnnotationIndices = getAnnotationIndicesForVerse(
             selectedSongIndex,
-            verseIndex
+            verseIndex,
         )
 
     if (verseAnnotationIndices) {
@@ -59,7 +59,7 @@ export const getAnnotationIndexForVerseIndex = ({
 
             const dotsBit = getDotsBitForAnnotation(
                     selectedSongIndex,
-                    returnIndex
+                    returnIndex,
                 ),
                 showAnnotationForColumn = getShowAnnotationForColumn({
                     selectedSongIndex,
@@ -69,7 +69,7 @@ export const getAnnotationIndexForVerseIndex = ({
                 }),
                 hasSelectedDot = getHasSelectedDot(
                     dotsBit,
-                    selectedDotsBit
+                    selectedDotsBit,
                 )
 
             /**

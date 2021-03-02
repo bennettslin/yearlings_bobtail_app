@@ -12,7 +12,7 @@ const About = () => (
     <div
         {...{
             className: cx(
-                'About'
+                'About',
             ),
         }}
     >

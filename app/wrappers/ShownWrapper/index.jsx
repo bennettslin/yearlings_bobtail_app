@@ -119,7 +119,7 @@ const ShownWrapper = ({ didMount, children }) => {
                         isOverlayShown ?
                             'ShW__overlayShown' :
                             'ShW__overlayHidden',
-                        'abF'
+                        'abF',
                     ),
                 },
             }}

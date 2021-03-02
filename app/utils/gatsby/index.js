@@ -16,14 +16,14 @@ import { getIsServerSide } from '../browser'
 
 export const getWrapRootElement = (
     pathname = '',
-    search = ''
+    search = '',
 ) => ({ element }) => {
     if (getNeedsStoreProvider(pathname)) {
         const store = createStore(
             getReducers(pathname, search),
             getIsServerSide() ?
                 undefined :
-                devToolsEnhancer()
+                devToolsEnhancer(),
         )
 
         return (
@@ -39,7 +39,7 @@ export const getWrapRootElement = (
 }
 
 export const getWrapPageElement = (
-    pathname = ''
+    pathname = '',
 ) => ({ element }) => {
     if (getNeedsAlbumContext(pathname)) {
         return (

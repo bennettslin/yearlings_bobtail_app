@@ -13,8 +13,8 @@ export const getMapCubeCeilingHsla = (yIndex, xIndex) => createSelector(
     sceneCubesKey => getCeilingHslaForCube(
         sceneCubesKey,
         yIndex,
-        xIndex
-    )
+        xIndex,
+    ),
 )
 
 export const getMapCubeCeilingZIndex = (yIndex, xIndex) => createSelector(
@@ -22,8 +22,8 @@ export const getMapCubeCeilingZIndex = (yIndex, xIndex) => createSelector(
     sceneCubesKey => getCeilingZIndexForCube(
         sceneCubesKey,
         yIndex,
-        xIndex
-    )
+        xIndex,
+    ),
 )
 
 export const getMapCubeFloorHsla = (yIndex, xIndex) => createSelector(
@@ -31,8 +31,8 @@ export const getMapCubeFloorHsla = (yIndex, xIndex) => createSelector(
     sceneCubesKey => getFloorHslaForCube(
         sceneCubesKey,
         yIndex,
-        xIndex
-    )
+        xIndex,
+    ),
 )
 
 export const getMapCubeFloorZIndex = (yIndex, xIndex) => createSelector(
@@ -40,11 +40,11 @@ export const getMapCubeFloorZIndex = (yIndex, xIndex) => createSelector(
     sceneCubesKey => getFloorZIndexForCube(
         sceneCubesKey,
         yIndex,
-        xIndex
-    )
+        xIndex,
+    ),
 )
 
 export const mapCubeSlantDirection = createSelector(
     mapSceneCubesKey,
-    sceneCubesKey => getSlantDirectionForCube(sceneCubesKey)
+    sceneCubesKey => getSlantDirectionForCube(sceneCubesKey),
 )

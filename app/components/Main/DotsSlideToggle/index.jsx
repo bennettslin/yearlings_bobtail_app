@@ -26,7 +26,7 @@ const DotsSlideToggle = ({ className }) => {
             {...{
                 className: cx(
                     'DotsSlideToggle',
-                    className
+                    className,
                 ),
             }}
         >

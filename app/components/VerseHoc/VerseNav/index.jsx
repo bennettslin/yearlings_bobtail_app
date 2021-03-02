@@ -20,7 +20,7 @@ const VerseNav = ({
 
 }) => {
     const verseSelectedStatus = useSelector(
-        getMapVerseSelectedStatus(verseIndex)
+        getMapVerseSelectedStatus(verseIndex),
     )
 
     const handleButtonClick = () => {
@@ -35,7 +35,7 @@ const VerseNav = ({
         <div className={cx(
             'VerseNav',
             'padding__verseInLyric',
-            'fCC'
+            'fCC',
         )}>
             <Button
                 isSmallSize

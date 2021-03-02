@@ -34,7 +34,7 @@ const NavColumn = ({ bookIndex }) => {
             `NavColumn__${bookIndex ? 'right' : 'left'}`,
             isNavColumnShown ?
                 'NavColumn__shown' :
-                'NavColumn__hidden'
+                'NavColumn__hidden',
         )}>
             {/* Nav book. */}
             <NavBookSongs

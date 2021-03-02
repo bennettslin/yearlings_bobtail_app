@@ -22,7 +22,7 @@ const SliderStanza = ({ stanzaIndex }) => {
         stanzaFormType = getFormTypeForStanza(lyricSongIndex, stanzaIndex),
         stanzaStartTime = getStartTimeForStanza(
             lyricSongIndex,
-            stanzaIndex
+            stanzaIndex,
         ),
 
         songDuration = getDurationForSong(lyricSongIndex),
@@ -65,7 +65,7 @@ const SliderStanza = ({ stanzaIndex }) => {
                 className: cx(
                     'SliderStanza',
                     `SliderStanza__${stanzaFormType}`,
-                    isCursorStanza && 'SliderStanza__cursor'
+                    isCursorStanza && 'SliderStanza__cursor',
                 ),
                 style: stanzaStyle,
             }}
@@ -74,7 +74,7 @@ const SliderStanza = ({ stanzaIndex }) => {
                 'SliderStanza__sheet',
                 'bgColour__sliderStanza__pattern',
                 `bgColour__formType__${stanzaFormType}`,
-                'abF'
+                'abF',
             )}>
                 <SliderVerses
                     {...{
@@ -89,7 +89,7 @@ const SliderStanza = ({ stanzaIndex }) => {
                 'SliderStanza__tab',
                 'bgColour__sliderStanza__pattern',
                 'bgColour__sliderStanza__pattern__reverse',
-                `bgColour__formType__${stanzaFormType}`
+                `bgColour__formType__${stanzaFormType}`,
             )}/>
         </div>
     )

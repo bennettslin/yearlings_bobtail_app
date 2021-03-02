@@ -13,7 +13,7 @@ import { setInStorage } from '../../utils/storage'
 
 export const getDotsReducer = initialAnnotationIndex => (
     state = getDotsDefaults(initialAnnotationIndex),
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case DOTS_STORE: {

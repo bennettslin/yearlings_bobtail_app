@@ -9,7 +9,7 @@ import { ACTIVATED_DEFAULTS } from './default'
 
 export default (
     state = ACTIVATED_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case ACTIVATED_STORE:

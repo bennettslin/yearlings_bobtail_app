@@ -43,7 +43,7 @@ const LyricToggleEar = () => {
             <div className={cx(
                 'LyricToggleEar',
                 'LyricToggle',
-                'length__buttonLarge'
+                'length__buttonLarge',
             )}>
                 <Button
                     isLargeSize

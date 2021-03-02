@@ -21,7 +21,7 @@ const SongBannerTitle = () => {
                      * Make absolute so that song title length doesn't
                      * affect song banner width.
                      */
-                    'abF'
+                    'abF',
                 ),
             }}
         >

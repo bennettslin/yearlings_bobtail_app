@@ -28,7 +28,7 @@ const NavListener = () => {
                     accessedNavIndex: selectedSongIndex,
                 }))
                 dispatch(updateShownNavBookIndex(
-                    getBookForSongIndex(selectedSongIndex)
+                    getBookForSongIndex(selectedSongIndex),
                 ))
 
             } else {

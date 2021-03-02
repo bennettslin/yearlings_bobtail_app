@@ -23,7 +23,7 @@ const ButtonCharacter = ({
                     'abF',
                     'fCC',
                     'textShadow__dark',
-                    hasTextShadowLight && 'textShadow__light'
+                    hasTextShadowLight && 'textShadow__light',
                 ),
             }}
         >

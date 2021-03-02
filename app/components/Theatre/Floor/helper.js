@@ -12,14 +12,14 @@ const _zipTwoArrays = (leftArray, rightArray) => {
     for (let i = 0; i < minLength; i++) {
         zippedArray.push(
             rightArray[i],
-            leftArray[i]
+            leftArray[i],
         )
     }
 
     // Push the remainder of whichever was the lengthier array.
     zippedArray.push(
         ...rightArray.slice(minLength),
-        ...leftArray.slice(minLength)
+        ...leftArray.slice(minLength),
     )
 
     return zippedArray
@@ -97,7 +97,7 @@ export const getSeatingRowCoordinates = ({
 
             seatsArray = _zipTwoArrays(
                 leftSeatsArray,
-                rightSeatsArray
+                rightSeatsArray,
 
             // Reverse so that seats in centre are rendered last.
             ).reverse()

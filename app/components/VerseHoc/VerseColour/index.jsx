@@ -34,7 +34,7 @@ const VerseColour = ({
                         'VerseColour__inVerseBar' :
                         'VerseColour__notVerseBar',
                     'ovH',
-                    'abF'
+                    'abF',
                 ),
             }}
         >

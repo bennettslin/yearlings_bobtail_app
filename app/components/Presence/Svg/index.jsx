@@ -86,7 +86,7 @@ const PresenceSvg = ({
                 getSharedStyleForActor({
                     actorKey,
                     presenceKey,
-                })
+                }),
             ) :
             getSharedStyleForThing({
                 presenceType,
@@ -128,7 +128,7 @@ const PresenceSvg = ({
                     action: 'svg',
                     label:
                         `${actorKey ? `actor: ${actorKey}` : `thing: ${presenceType}`}, instance: ${presenceKey}, error: ${error.message}`,
-                }
+                },
             )
         }
     }
@@ -158,7 +158,7 @@ const PresenceSvg = ({
         <div
             {...{
                 className: cx(
-                    'PresenceContainer'
+                    'PresenceContainer',
                 ),
             }}
         >
@@ -184,7 +184,7 @@ const PresenceSvg = ({
                             }),
                             'presence__position',
                             !noShadow && 'presence__shadow',
-                            trimBottom && 'presence__trimBottom'
+                            trimBottom && 'presence__trimBottom',
                         ),
                         style: {
                             left: `${adjustedLeft.toFixed(2)}%`,
@@ -198,7 +198,7 @@ const PresenceSvg = ({
                         svgClassName: cx(
                             presenceKeyClassName,
                             duplicateKeyClassName,
-                            getSharedClassNames(sharedStyle)
+                            getSharedClassNames(sharedStyle),
                         ),
                         title: convertPresenceKeyToTitle(presenceKey),
                         preProcessor: preProcessSvg,
@@ -215,7 +215,7 @@ const PresenceSvg = ({
                                             }),
                                             getTransitionDelayIndexClass({
                                                 isWire: true,
-                                            })
+                                            }),
                                         ),
                                         actorKey,
                                         presenceType,

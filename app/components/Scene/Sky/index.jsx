@@ -16,7 +16,7 @@ const Sky = () => {
     return (
         <div className={cx(
             'Sky',
-            'abF'
+            'abF',
         )}>
             <div
                 {...{
@@ -25,7 +25,7 @@ const Sky = () => {
                         'TimeOfDay__space',
                         'Sky__filter',
                         'abF',
-                        sceneSkyTime
+                        sceneSkyTime,
                     ),
                 }}
             />
@@ -36,7 +36,7 @@ const Sky = () => {
                         'TimeOfDay__horizon',
                         'Sky__filter',
                         'abF',
-                        sceneSkyTime
+                        sceneSkyTime,
                     ),
                 }}
             />
@@ -47,7 +47,7 @@ const Sky = () => {
                         'Season__space',
                         'Sky__filter',
                         'abF',
-                        sceneSeason
+                        sceneSeason,
                     ),
                 }}
             />
@@ -58,7 +58,7 @@ const Sky = () => {
                         'Season__horizon',
                         'Sky__filter',
                         'abF',
-                        sceneSeason
+                        sceneSeason,
                     ),
                 }}
             />

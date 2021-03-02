@@ -4,7 +4,7 @@ import { ERROR_DEFAULTS } from './default'
 
 export default (
     state = ERROR_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case ERROR_STORE:

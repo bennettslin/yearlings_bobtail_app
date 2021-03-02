@@ -16,7 +16,7 @@ import {
 
 export const mapIsWikiShown = createSelector(
     mapSelectedWikiIndex,
-    selectedWikiIndex => Boolean(selectedWikiIndex)
+    selectedWikiIndex => Boolean(selectedWikiIndex),
 )
 
 const mapIsMobileWiki = createSelector(
@@ -24,11 +24,11 @@ const mapIsMobileWiki = createSelector(
     mapWindowWidth,
     (
         deviceWidthIndex,
-        windowWidth
+        windowWidth,
     ) => getIsMobileWiki({
         deviceWidthIndex,
         windowWidth,
-    })
+    }),
 )
 
 export const mapSelectedWikiUrl = createSelector(
@@ -42,12 +42,12 @@ export const mapSelectedWikiUrl = createSelector(
         wikiAnnotationIndex,
         selectedSongIndex,
         selectedAnnotationIndex,
-        isMobileWiki
+        isMobileWiki,
     ) => getWikiUrl({
         selectedWikiIndex,
         wikiAnnotationIndex,
         selectedSongIndex,
         selectedAnnotationIndex,
         isMobileWiki,
-    })
+    }),
 )

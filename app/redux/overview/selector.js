@@ -17,11 +17,11 @@ export const mapIsOverviewShown = createSelector(
     mapIsTipsShown,
     (
         selectedOverviewOption,
-        isTipsShown
+        isTipsShown,
     ) => (
         getIsShown(selectedOverviewOption) &&
         !isTipsShown
-    )
+    ),
 )
 
 export const mapIsToggleInOverview = createSelector(
@@ -31,12 +31,12 @@ export const mapIsToggleInOverview = createSelector(
     (
         isPhoneWidth,
         isHeightlessLyric,
-        isLyricLogue
+        isLyricLogue,
     ) => getIsToggleInOverview({
         isPhoneWidth,
         isHeightlessLyric,
         isLyricLogue,
-    })
+    }),
 )
 
 export const getMapIsOverviewPopupVisible = inMain => createSelector(
@@ -48,12 +48,12 @@ export const getMapIsOverviewPopupVisible = inMain => createSelector(
         isSongChangeDone,
         isLyricLogue,
         isOverlayShown,
-        isOverviewShown
+        isOverviewShown,
     ) => getIsOverviewPopupVisible({
         inMain,
         isSongChangeDone,
         isLyricLogue,
         isOverlayShown,
         isOverviewShown,
-    })
+    }),
 )

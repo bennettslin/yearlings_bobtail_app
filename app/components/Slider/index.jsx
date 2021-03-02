@@ -33,7 +33,7 @@ const Slider = () => {
                 className: cx(
                     'Slider',
                     isSongChangeDone && 'Slider__visible',
-                    'Rancho'
+                    'Rancho',
                 ),
                 onMouseDown: onTouchStart,
                 onTouchStart,

@@ -24,7 +24,7 @@ export const getNextSongIndex = (songIndex, audioOptionIndex) => {
 
 const getNextVerseIndex = (
     songIndex,
-    verseIndex
+    verseIndex,
 ) => {
     const songVersesCount = getVerseCountForSong(songIndex)
 
@@ -40,7 +40,7 @@ const getNextVerseIndex = (
 const getTimeRelativeToVerseIndex = (
     songIndex,
     verseIndex,
-    time
+    time,
 ) => {
     /**
      * Note that when time is valid, this method returns -1 if time is before
@@ -71,7 +71,7 @@ export const getTimeInVerseStatus = ({
         timeRelativeToSelectedVerse = getTimeRelativeToVerseIndex(
             selectedSongIndex,
             selectedVerseIndex,
-            currentTime
+            currentTime,
         ),
 
         isTimeInSelectedVerse = timeRelativeToSelectedVerse === 0
@@ -87,13 +87,13 @@ export const getTimeInVerseStatus = ({
 
         nextVerseIndex = getNextVerseIndex(
             selectedSongIndex,
-            selectedVerseIndex
+            selectedVerseIndex,
         )
 
         isTimeInNextVerse = nextVerseIndex && getTimeRelativeToVerseIndex(
             selectedSongIndex,
             nextVerseIndex,
-            currentTime
+            currentTime,
         ) === 0
     }
 

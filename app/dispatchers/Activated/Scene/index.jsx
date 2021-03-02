@@ -23,18 +23,18 @@ const ActivatedSceneDispatcher = forwardRef((props, ref) => {
 
     const _queueScrollToActivatedVerse = (
         nextSceneIndex,
-        activatedVerseIndex
+        activatedVerseIndex,
     ) => {
         dispatch(scrollLyricToVerse(
             `Filmstrip scene ${nextSceneIndex} activated`,
-            activatedVerseIndex
+            activatedVerseIndex,
         ))
     }
 
     const _activateSceneIndex = nextSceneIndex => {
         const activatedVerseIndex = getVerseIndexForScene(
             selectedSongIndex,
-            nextSceneIndex
+            nextSceneIndex,
         )
 
         dispatch(updateActivatedVerseIndex(activatedVerseIndex))
@@ -44,7 +44,7 @@ const ActivatedSceneDispatcher = forwardRef((props, ref) => {
 
         _queueScrollToActivatedVerse(
             nextSceneIndex,
-            activatedVerseIndex
+            activatedVerseIndex,
         )
     }
 

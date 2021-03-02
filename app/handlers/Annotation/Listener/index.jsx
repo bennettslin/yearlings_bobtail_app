@@ -47,7 +47,7 @@ const AnnotationListener = () => {
             if (queuedAnnotationFromLyricVerse && !canDispatchAnnotation) {
                 const annotationVerseIndex = getVerseIndexForAnnotation(
                     selectedSongIndex,
-                    queuedAnnotationIndex
+                    queuedAnnotationIndex,
                 )
 
                 if (Number.isFinite(annotationVerseIndex)) {

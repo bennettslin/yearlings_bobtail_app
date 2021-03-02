@@ -27,7 +27,7 @@ export const mapLyricDynamicHeight = createSelector(
         menuHeight,
         stageHeight,
         deviceWidthIndex,
-        windowHeight
+        windowHeight,
     ) => getLyricDynamicHeight({
         canCarouselNavMount,
         isHeightlessLyric,
@@ -35,7 +35,7 @@ export const mapLyricDynamicHeight = createSelector(
         stageHeight,
         deviceWidthIndex,
         windowHeight,
-    })
+    }),
 )
 
 export const mapLyricOverviewHeightStyle = createSelector(
@@ -49,12 +49,12 @@ export const mapLyricOverviewHeightStyle = createSelector(
         isLyricLogue,
         isHeightlessLyric,
         menuHeight,
-        isLyricExpanded
+        isLyricExpanded,
     ) => getLyricOverviewHeightStyle({
         lyricDynamicHeight,
         isLyricLogue,
         isHeightlessLyric,
         menuHeight,
         isLyricExpanded,
-    })
+    }),
 )

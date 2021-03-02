@@ -8,7 +8,7 @@ const LoadingSpinner = ({ width, spin }) => (
         {...{
             className: cx(
                 'LoadingSpinner',
-                `LoadingSpinner__spin${spin}`
+                `LoadingSpinner__spin${spin}`,
             ),
             style: {
                 width: `${width}%`,

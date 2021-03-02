@@ -4,7 +4,7 @@ import { getPlayerCanPlayThroughFromBit } from '../../helpers/player'
 import { PLAYERS_STORE } from '../../constants/store'
 
 export const mapPlayersBit = (
-    { [PLAYERS_STORE]: { playersBit } }
+    { [PLAYERS_STORE]: { playersBit } },
 ) => playersBit
 
 export const mapPlayerCanPlayThrough = createSelector(
@@ -12,9 +12,9 @@ export const mapPlayerCanPlayThrough = createSelector(
     mapPlayersBit,
     (
         selectedSongIndex,
-        playersBit
+        playersBit,
     ) => getPlayerCanPlayThroughFromBit(
         selectedSongIndex,
-        playersBit
-    )
+        playersBit,
+    ),
 )

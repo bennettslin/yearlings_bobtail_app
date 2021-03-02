@@ -41,7 +41,7 @@ const VerseLine = forwardRef(({
                             // Lyric, left, centre, right.
                             `VerseLine__${columnKey}`,
 
-                            { 'VerseLine__truncatable': isTruncatable }
+                            { 'VerseLine__truncatable': isTruncatable },
                         ),
                     },
                 }}

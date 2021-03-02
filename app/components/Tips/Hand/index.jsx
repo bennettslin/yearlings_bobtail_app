@@ -74,7 +74,7 @@ const TipsHand = ({
                         `TipsHand__${tipType}`,
                         isPointedAtDots && 'TipsHand__pointedAtDots',
                         reverse && 'TipsHand__reverse',
-                        'abF'
+                        'abF',
                     ),
                 }}
             >
@@ -82,10 +82,10 @@ const TipsHand = ({
                     {...{
                         className: cx(
                             'TipsHand__animatable',
-                            'pulsateAnimated'
+                            'pulsateAnimated',
                         ),
                         svgClassName: cx(
-                            'tipsHand'
+                            'tipsHand',
                         ),
                     }}
                 >

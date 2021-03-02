@@ -31,7 +31,7 @@ const AnnotationWormhole = ({
         wormholeLink = getWormholeLinkForWormhole(
             lyricSongIndex,
             annotationIndex,
-            wormholeLinkIndex
+            wormholeLinkIndex,
         ),
         {
             selectedSongIndex: wormholeSongIndex,
@@ -62,7 +62,7 @@ const AnnotationWormhole = ({
             <div
                 {...{
                     className: cx(
-                        'AnnotationWormhole__button'
+                        'AnnotationWormhole__button',
                     ),
                 }}
             >

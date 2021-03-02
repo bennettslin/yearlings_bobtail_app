@@ -41,7 +41,7 @@ const UnitTab = ({
                     'textShadow__dark',
                     'bgColour__unit__pattern',
                     'bgColour__unit__pattern__reverse',
-                    `bgColour__formType__${formType}`
+                    `bgColour__formType__${formType}`,
                 ),
                 onClick,
             }}
@@ -50,7 +50,7 @@ const UnitTab = ({
                 {...{
                     className: cx(
                         'UnitTab__text',
-                        'Neuton'
+                        'Neuton',
                     ),
                 }}
             >

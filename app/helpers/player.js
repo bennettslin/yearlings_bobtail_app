@@ -17,7 +17,7 @@ export const getPlayersCanPlayThroughFromBit = (bit) => {
 
 export const getPlayerCanPlayThroughFromBit = (
     songIndex,
-    playersBit
+    playersBit,
 ) => (
     getObjectFromBit({
         keysCount: getSongsNotLoguesCount(),

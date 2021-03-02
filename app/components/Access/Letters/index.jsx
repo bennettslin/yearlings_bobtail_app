@@ -18,7 +18,7 @@ const AccessLetters = ({
         'AccessLetters',
         accessIconsName &&
             `AccessLetters__${accessIconsName}`,
-        className
+        className,
     )}>
         {accessKeys.map(accessKey => (
             <AccessLetter
@@ -38,7 +38,7 @@ AccessLetters.propTypes = {
     accessIconsName: PropTypes.string,
     showIfAccessOn: PropTypes.bool,
     accessKeys: PropTypes.arrayOf(
-        PropTypes.string.isRequired
+        PropTypes.string.isRequired,
     ).isRequired,
     className: PropTypes.string,
 }

@@ -52,7 +52,7 @@ const ResponsiveWrapper = ({ didMount, children }) => {
                         isLyricExpandable ?
                             'RW__lyricExpandable' :
                             'RW__lyricNotExpandable',
-                        'abF'
+                        'abF',
                     ),
                 },
             }}

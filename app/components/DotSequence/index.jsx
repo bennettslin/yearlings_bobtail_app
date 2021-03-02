@@ -27,7 +27,7 @@ const DotSequence = ({
                         'DotSequence__absolute',
                         'gradientMask__dotSequence',
                     ],
-                    inTextAnchor && 'DotSequence__inTextAnchor'
+                    inTextAnchor && 'DotSequence__inTextAnchor',
                 ),
             }}
         >

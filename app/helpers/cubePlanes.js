@@ -6,7 +6,7 @@ import {
 } from '../constants/scene/cubes'
 
 const _getHorizontalPlaneFractionsForDefault = (
-    xIndex, yIndex, zIndex, xOffset, zOffset
+    xIndex, yIndex, zIndex, xOffset, zOffset,
 ) => {
 
     /**
@@ -33,7 +33,7 @@ const _getHorizontalPlaneFractionsForDefault = (
 const SLANTED_LEFT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
 
 const _getHorizontalPlaneFractionsForSlantedLeft = (
-    xIndex, yIndex, zIndex, xOffset, zOffset
+    xIndex, yIndex, zIndex, xOffset, zOffset,
 ) => {
 
     /**
@@ -91,18 +91,18 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
     return {
         left: {
             back: getXYPercentages(
-                refXIndex, refYIndex + 1, refZIndex, LEFT
+                refXIndex, refYIndex + 1, refZIndex, LEFT,
             ),
             front: getXYPercentages(
-                refXIndex + 1, refYIndex + 3, refZIndex, LEFT
+                refXIndex + 1, refYIndex + 3, refZIndex, LEFT,
             ),
         },
         right: {
             back: getXYPercentages(
-                refXIndex + 2, refYIndex, refZIndex, LEFT
+                refXIndex + 2, refYIndex, refZIndex, LEFT,
             ),
             front: getXYPercentages(
-                refXIndex + 3, refYIndex + 2, refZIndex, LEFT
+                refXIndex + 3, refYIndex + 2, refZIndex, LEFT,
             ),
         },
     }
@@ -111,7 +111,7 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
 const SLANTED_RIGHT_X_CONSTANTS = [0, 2, 1, 0, 1, 0]
 
 const _getHorizontalPlaneFractionsForSlantedRight = (
-    xIndex, yIndex, zIndex, xOffset, zOffset
+    xIndex, yIndex, zIndex, xOffset, zOffset,
 ) => {
 
     /**
@@ -146,18 +146,18 @@ const _getHorizontalPlaneFractionsForSlantedRight = (
     return {
         left: {
             back: getXYPercentages(
-                refXIndex + 1, refYIndex, refZIndex, RIGHT
+                refXIndex + 1, refYIndex, refZIndex, RIGHT,
             ),
             front: getXYPercentages(
-                refXIndex, refYIndex + 2, refZIndex, RIGHT
+                refXIndex, refYIndex + 2, refZIndex, RIGHT,
             ),
         },
         right: {
             back: getXYPercentages(
-                refXIndex + 3, refYIndex + 1, refZIndex, RIGHT
+                refXIndex + 3, refYIndex + 1, refZIndex, RIGHT,
             ),
             front: getXYPercentages(
-                refXIndex + 2, refYIndex + 3, refZIndex, RIGHT
+                refXIndex + 2, refYIndex + 3, refZIndex, RIGHT,
             ),
         },
     }
@@ -182,17 +182,17 @@ export const getHorizontalPlaneFractions = ({
 
     if (slantDirection === LEFT) {
         return _getHorizontalPlaneFractionsForSlantedLeft(
-            xIndex, validYIndex, zIndex, xOffset, adjustedZOffset
+            xIndex, validYIndex, zIndex, xOffset, adjustedZOffset,
         )
 
     } else if (slantDirection === RIGHT) {
         return _getHorizontalPlaneFractionsForSlantedRight(
-            xIndex, validYIndex, zIndex, xOffset, adjustedZOffset
+            xIndex, validYIndex, zIndex, xOffset, adjustedZOffset,
         )
 
     } else {
         return _getHorizontalPlaneFractionsForDefault(
-            xIndex, validYIndex, zIndex, xOffset, adjustedZOffset
+            xIndex, validYIndex, zIndex, xOffset, adjustedZOffset,
         )
     }
 }

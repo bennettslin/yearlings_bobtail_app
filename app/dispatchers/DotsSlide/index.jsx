@@ -13,7 +13,7 @@ const DotsSlideDispatcher = forwardRef((props, ref) => {
 
     const dispatchDotsSlide = (
         // Just toggle unless parent specifies value.
-        triedIsDotsSlideShown = !isDotsSlideShown
+        triedIsDotsSlideShown = !isDotsSlideShown,
     ) => {
         // Turning off is always successful.
         const newIsDotsSlideShown = triedIsDotsSlideShown &&

@@ -2,19 +2,19 @@ import { createSelector } from 'reselect'
 import { LYRIC_STORE } from '../../constants/store'
 
 export const mapLyricSongIndex = (
-    { [LYRIC_STORE]: { lyricSongIndex } }
+    { [LYRIC_STORE]: { lyricSongIndex } },
 ) => lyricSongIndex
 
 export const mapLyricVerseIndex = (
-    { [LYRIC_STORE]: { lyricVerseIndex } }
+    { [LYRIC_STORE]: { lyricVerseIndex } },
 ) => lyricVerseIndex
 
 export const mapLyricAnnotationIndex = (
-    { [LYRIC_STORE]: { lyricAnnotationIndex } }
+    { [LYRIC_STORE]: { lyricAnnotationIndex } },
 ) => lyricAnnotationIndex
 
 export const mapIsLyricLogue = (
-    { [LYRIC_STORE]: { isLyricLogue } }
+    { [LYRIC_STORE]: { isLyricLogue } },
 ) => isLyricLogue
 
 export const getMapIsLyricAnnotation = annotationIndex => (
@@ -22,6 +22,6 @@ export const getMapIsLyricAnnotation = annotationIndex => (
         mapLyricAnnotationIndex,
         lyricAnnotationIndex => (
             lyricAnnotationIndex === annotationIndex
-        )
+        ),
     )
 )

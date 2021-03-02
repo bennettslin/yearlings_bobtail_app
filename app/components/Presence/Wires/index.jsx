@@ -59,7 +59,7 @@ const Wires = ({
                             className: cx(
                                 'Wire',
                                 'presence__position',
-                                className
+                                className,
                             ),
                             style: {
                                 left: `${left.toFixed(2)}%`,

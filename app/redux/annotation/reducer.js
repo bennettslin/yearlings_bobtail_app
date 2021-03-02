@@ -4,7 +4,7 @@ import { ANNOTATION_DEFAULTS } from './default'
 
 export default (
     state = ANNOTATION_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case ANNOTATION_STORE:

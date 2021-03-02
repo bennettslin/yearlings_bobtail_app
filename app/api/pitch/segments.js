@@ -13,7 +13,7 @@ export const getPitchSegmentIndices = () => (
 
 export const getIsPitchSegmentValid = pitchSegmentIndex => (
     getPitchSegmentIndices().some(
-        index => index === pitchSegmentIndex
+        index => index === pitchSegmentIndex,
     )
 )
 

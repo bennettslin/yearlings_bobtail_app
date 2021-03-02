@@ -9,7 +9,7 @@ import { getOptionDefaults } from './default'
 
 export const getOptionReducer = initialSongIndex => (
     state = getOptionDefaults(initialSongIndex),
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case OPTION_STORE:

@@ -36,10 +36,10 @@ const UrlManager = () => {
                 getPathForIndices(
                     lyricSongIndex,
                     lyricVerseIndex,
-                    lyricAnnotationIndex
+                    lyricAnnotationIndex,
                 ),
                 // Replace, not push, in history.
-                { replace: true }
+                { replace: true },
             )
         }
     }, [lyricSongIndex, lyricVerseIndex, lyricAnnotationIndex, isPitchShown])
@@ -48,7 +48,7 @@ const UrlManager = () => {
         if (isPitchShown) {
             navigate(
                 getPathForPitchPage(pitchSegmentIndex),
-                { replace: true }
+                { replace: true },
             )
         }
     }, [isPitchShown, pitchSegmentIndex])

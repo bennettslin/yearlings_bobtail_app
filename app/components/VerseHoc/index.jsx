@@ -53,7 +53,7 @@ const getVerseHoc = VerseComponent => {
                     className: cx(
                         isShownVerseCursor ? 'Verse__cursor' : 'Verse__notCursor',
                         isSelectedVerse ? 'Verse__selected' : 'Verse__notSelected',
-                        inLyric ? 'Verse__text' : 'Verse__slider'
+                        inLyric ? 'Verse__text' : 'Verse__slider',
                     ),
                 }}
             >

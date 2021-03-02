@@ -26,7 +26,7 @@ const ScrollDispatcher = forwardRef(({
         const element =
             getScrollChild(
                 index,
-                scrollClass
+                scrollClass,
             ) ||
             getSafeScrollChild({
                 log,

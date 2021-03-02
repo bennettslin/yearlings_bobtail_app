@@ -22,7 +22,7 @@ export const mapIsOverlayShown = createSelector(
         isScoreShown,
         isAboutShown,
         isPitchShown,
-        isWikiShown
+        isWikiShown,
     ) => getIsOverlayShown({
         isOverlayingAnnotation,
         lyricAnnotationIndex,
@@ -30,5 +30,5 @@ export const mapIsOverlayShown = createSelector(
         isAboutShown,
         isPitchShown,
         isWikiShown,
-    })
+    }),
 )

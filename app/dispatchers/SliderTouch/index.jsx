@@ -42,7 +42,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
             left: sliderLeft,
             width: sliderWidth,
         },
-        clientX
+        clientX,
     ) => {
         const sliderRatio = getElementRatioForClientX({
             clientX,
@@ -56,7 +56,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
             sliderWidth,
             sliderVerseIndex: getVerseIndexforRatio(
                 selectedSongIndex,
-                sliderRatio
+                sliderRatio,
             ),
         }))
 
@@ -80,7 +80,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
         if (Number.isFinite(clientX)) {
             _touchSliderBegin(
                 clientRect,
-                clientX
+                clientX,
             )
         }
     }
@@ -95,7 +95,7 @@ const SliderTouchDispatcher = forwardRef((props, ref) => {
 
             nextVerseIndex = getVerseIndexforRatio(
                 selectedSongIndex,
-                sliderRatio
+                sliderRatio,
             )
 
         // For better performance, only set in Redux upon actual change.

@@ -17,7 +17,7 @@ export const getWikiWormholeIndexForDirection = ({
 }) => {
     const annotationWikiWormholes = getWikiWormholesForAnnotation(
         selectedSongIndex,
-        selectedAnnotationIndex
+        selectedAnnotationIndex,
     )
 
     if (annotationWikiWormholes) {

@@ -15,7 +15,7 @@ export const getAccessibleWikiWormholesCount = ({
 
     const annotationWikiWormholes = getWikiWormholesForAnnotation(
         songIndex,
-        annotationIndex
+        annotationIndex,
     )
 
     if (annotationWikiWormholes) {

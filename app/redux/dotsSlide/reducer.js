@@ -9,7 +9,7 @@ import { DOTS_SLIDE_DEFAULTS } from './default'
 
 export default (
     state = DOTS_SLIDE_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case DOTS_SLIDE_STORE: {

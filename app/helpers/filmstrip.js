@@ -6,18 +6,18 @@ import {
 
 export const getSceneDimensionCoordinate = (
     songIndex,
-    sceneIndex
+    sceneIndex,
 
 ) => {
     const
         songDuration = getDurationForSong(songIndex),
         sceneStartTime = getStartTimeForScene(
             songIndex,
-            sceneIndex
+            sceneIndex,
         ),
         sceneDuration = getDurationForScene(
             songIndex,
-            sceneIndex
+            sceneIndex,
         ),
         left = sceneStartTime / songDuration * 100,
         width = sceneDuration / songDuration * 100

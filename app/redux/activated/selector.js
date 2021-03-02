@@ -4,17 +4,17 @@ import { mapSelectedSongIndex } from '../selected/selector'
 import { ACTIVATED_STORE } from '../../constants/store'
 
 export const mapActivatedVerseIndex = (
-    { [ACTIVATED_STORE]: { activatedVerseIndex } }
+    { [ACTIVATED_STORE]: { activatedVerseIndex } },
 ) => activatedVerseIndex
 
 export const mapIsActivated = createSelector(
     mapActivatedVerseIndex,
-    activatedVerseIndex => activatedVerseIndex > -1
+    activatedVerseIndex => activatedVerseIndex > -1,
 )
 
 export const getMapIsVerseActivated = verseIndex => createSelector(
     mapActivatedVerseIndex,
-    activatedVerseIndex => verseIndex === activatedVerseIndex
+    activatedVerseIndex => verseIndex === activatedVerseIndex,
 )
 
 export const mapActivatedSceneIndex = createSelector(
@@ -22,9 +22,9 @@ export const mapActivatedSceneIndex = createSelector(
     mapActivatedVerseIndex,
     (
         selectedSongIndex,
-        activatedVerseIndex
+        activatedVerseIndex,
     ) => getSceneIndexForVerse(
         selectedSongIndex,
-        activatedVerseIndex
-    )
+        activatedVerseIndex,
+    ),
 )

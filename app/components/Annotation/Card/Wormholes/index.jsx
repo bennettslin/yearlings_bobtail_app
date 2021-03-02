@@ -25,7 +25,7 @@ const AnnotationWormholes = ({
      */
     return didMount && getSourceWormholeIndices(
         lyricSongIndex,
-        annotationIndex
+        annotationIndex,
 
     ).map((sourceWormholeIndex, wormholeLinkIndex) => {
         const isAccessed = accessedWikiWormholeIndex === sourceWormholeIndex

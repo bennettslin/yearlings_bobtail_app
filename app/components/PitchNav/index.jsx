@@ -48,7 +48,7 @@ const PitchNav = () => {
             {...{
                 className: cx(
                     'PitchNav',
-                    'fCC'
+                    'fCC',
                 ),
             }}
         >

@@ -32,7 +32,7 @@ const Main = ({ didMount, style }) => didMount && (
                  * which avoids screen jumpiness when zooming.
                  */
                 'width__mainColumn',
-                'abF'
+                'abF',
             ),
             style,
         }}

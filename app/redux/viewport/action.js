@@ -46,7 +46,7 @@ export const updateViewportStore = payload => {
                 canCarouselNavMount,
             }),
             prosceniumDimensionCoordinates = getProsceniumDimensionCoordinates(
-                stageDimensionCoordinates
+                stageDimensionCoordinates,
             ),
             {
                 ceilingHeight,

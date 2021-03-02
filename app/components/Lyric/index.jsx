@@ -56,7 +56,7 @@ const Lyric = forwardRef(({ didMount, pageSongIndex }, ref) => {
                                 'abF',
                                 'ovH',
                             ],
-                            getFinalSideKey()
+                            getFinalSideKey(),
                         ),
                     }}
                 >

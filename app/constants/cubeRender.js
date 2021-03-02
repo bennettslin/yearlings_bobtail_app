@@ -85,7 +85,7 @@ const _getTileYPercentages = (base, STAGE_Y_PERCENTAGE, exponent) => {
             */
 
         tileYPercentages = _getArrayOfIncreasingSums(
-            base, exponent - 1, unit
+            base, exponent - 1, unit,
         )
 
     return tileYPercentages
@@ -103,15 +103,15 @@ const BASE = 1.069913193933663,
     SLANTED_TILE_Y_UNITS_LENGTH = 14
 
 export const TILE_Y_PERCENTAGES = _getTileYPercentages(
-    BASE, STAGE_Y_PERCENTAGE, CUBE_Y_AXIS_LENGTH
+    BASE, STAGE_Y_PERCENTAGE, CUBE_Y_AXIS_LENGTH,
 ).reverse()
 
 export const SLANTED_TILE_Y_PERCENTAGES = _getTileYPercentages(
-    BASE, STAGE_Y_PERCENTAGE, SLANTED_TILE_Y_UNITS_LENGTH
+    BASE, STAGE_Y_PERCENTAGE, SLANTED_TILE_Y_UNITS_LENGTH,
 ).reverse()
 
 export const Y_INDEX_SCALE_FACTORS = _getArrayOfIncreasingScaleFactors(
-    1 / BASE, CUBE_Y_AXIS_LENGTH
+    1 / BASE, CUBE_Y_AXIS_LENGTH,
 ).reverse()
 
 // This really can't be any other value.

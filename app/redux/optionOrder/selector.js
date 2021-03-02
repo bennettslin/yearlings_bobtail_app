@@ -27,7 +27,7 @@ export const mapIsOverviewShownNext = createSelector(
         isDotsSlideShown,
         isOverlayShown,
         isLyricExpanded,
-        isActivated
+        isActivated,
     ) => getIsOverviewShownNext({
         isTipsShown,
         lyricAnnotationIndex,
@@ -35,7 +35,7 @@ export const mapIsOverviewShownNext = createSelector(
         isOverlayShown,
         isLyricExpanded,
         isActivated,
-    })
+    }),
 )
 
 export const mapIsTipsShownNext = createSelector(
@@ -53,7 +53,7 @@ export const mapIsTipsShownNext = createSelector(
         isDotsSlideShown,
         isOverlayShown,
         isLyricExpanded,
-        isActivated
+        isActivated,
     ) => getIsTipsShownNext({
         isOverviewShown,
         isTipsShown,
@@ -62,5 +62,5 @@ export const mapIsTipsShownNext = createSelector(
         isOverlayShown,
         isLyricExpanded,
         isActivated,
-    })
+    }),
 )

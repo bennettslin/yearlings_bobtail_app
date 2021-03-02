@@ -12,7 +12,7 @@ const LoadingContainer = ({ didMount }) => !didMount && (
             className: cx(
                 'LoadingContainer',
                 'abF',
-                'fCC'
+                'fCC',
             ),
         }}
     >

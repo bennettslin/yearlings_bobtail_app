@@ -44,7 +44,7 @@ const VerseBarHandler = forwardRef(({ getScrollVerseChild }, ref) => {
 
     useImperativeHandle(ref, () => determineVerseBars)
     return null
-}
+},
 )
 
 VerseBarHandler.propTypes = {

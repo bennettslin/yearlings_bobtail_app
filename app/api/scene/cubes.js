@@ -28,7 +28,7 @@ export const getCeilingHslaForCube = (cubesKey, yIndex, xIndex) => (
     getValueInAbridgedMatrix(
         getCubesForKey(cubesKey).ceiling.hslaColours,
         yIndex,
-        xIndex
+        xIndex,
     )
 )
 
@@ -36,7 +36,7 @@ export const getCeilingZIndexForCube = (cubesKey, yIndex, xIndex) => (
     getValueInAbridgedMatrix(
         getCubesForKey(cubesKey).ceiling.zIndices,
         yIndex,
-        xIndex
+        xIndex,
     )
 )
 
@@ -44,7 +44,7 @@ export const getFloorHslaForCube = (cubesKey, yIndex, xIndex) => (
     getValueInAbridgedMatrix(
         getCubesForKey(cubesKey).floor.hslaColours,
         yIndex,
-        xIndex
+        xIndex,
     )
 )
 
@@ -52,7 +52,7 @@ export const getFloorZIndexForCube = (cubesKey, yIndex, xIndex) => (
     getValueInAbridgedMatrix(
         getCubesForKey(cubesKey).floor.zIndices,
         yIndex,
-        xIndex
+        xIndex,
     )
 )
 

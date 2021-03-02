@@ -64,7 +64,7 @@ const Button = ({
             if (!isClickDisabled) {
                 logEvent(
                     `Button`,
-                    buttonName
+                    buttonName,
                 )
 
                 handleButtonClick(e)
@@ -93,7 +93,7 @@ const Button = ({
                         'Button__largeSize': isLargeSize,
                     },
                     isPulsateAnimated && 'pulsateAnimated',
-                    className
+                    className,
                 ),
                 ...showTooltip && {
                     'data-for': buttonName,
@@ -120,7 +120,7 @@ const Button = ({
 
                         isAccessEnter && showIfAccessOn && 'dropShadow__accessed',
                         isPopupButton && 'ButtonAnimatable__popup',
-                        'abF'
+                        'abF',
                     ),
                 }}
             >

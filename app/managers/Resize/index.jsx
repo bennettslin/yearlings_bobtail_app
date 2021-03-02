@@ -75,7 +75,7 @@ const ResizeManager = ({
 
             // Wait for window resize to finish.
             setWindowResizeTimeoutId(setTimeout(
-                beginEnterTransition, 250
+                beginEnterTransition, 250,
             ))
         }
     }

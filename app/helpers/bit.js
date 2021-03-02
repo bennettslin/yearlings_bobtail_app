@@ -26,7 +26,7 @@ export const getBitFromObject = ({
     // If no keys array is given, assume 1-based indices.
     keysList = keysList || getArrayOfLength(
         Object.keys(trueFalseObject).length,
-        1
+        1,
     )
 
     /**

@@ -111,7 +111,7 @@ const TextLyricAnchor = forwardRef(({
                         annotationIndex &&
                             `${ANCHOR_SCROLL}__${annotationIndex}`,
 
-                        wikiIndex && `wiki__${wikiIndex}`
+                        wikiIndex && `wiki__${wikiIndex}`,
                     ),
                     analyticsLabel: wikiIndex ? 'wiki' : 'lyric',
                     isAccessed,

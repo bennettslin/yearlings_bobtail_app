@@ -48,7 +48,7 @@ const DeviceWrapper = ({ didMount, children }) => {
                             'DW__phoneOrMiniWidth',
                         !isDesktopWidth && !isPhoneWidth &&
                             'DW__miniOrTabletWidth',
-                        'abF'
+                        'abF',
                     ),
                 },
             }}

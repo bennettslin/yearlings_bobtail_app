@@ -38,7 +38,7 @@ const FloorSeat = ({
             {...{
                 className: cx(
                     'FloorSeat',
-                    chairIndexString
+                    chairIndexString,
                 ),
             }}
         >

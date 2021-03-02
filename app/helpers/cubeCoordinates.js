@@ -24,7 +24,7 @@ const _roundPercentage = (rawPercentage) => {
 const _getXPercentage = (
     xCornerIndex,
     yCornerIndex,
-    slantDirection
+    slantDirection,
 
 ) => {
 
@@ -36,7 +36,7 @@ const _getXPercentage = (
 
         // Get x-coordinate percentage at zIndex 0.
         baseYPercentage = _getYPercentage(
-            yCornerIndex, 0, isSlanted
+            yCornerIndex, 0, isSlanted,
         ),
 
         tilesWidthPercentage =
@@ -73,7 +73,7 @@ const _getXPercentage = (
 const _getYPercentage = (
     yCornerIndex,
     zIndex,
-    slantDirection
+    slantDirection,
 
 ) => {
 
@@ -120,7 +120,7 @@ export const getXYPercentages = (
      */
     zIndex = 0,
 
-    slantDirection
+    slantDirection,
 
 ) => {
 
@@ -128,12 +128,12 @@ export const getXYPercentages = (
         x: _getXPercentage(
             xCornerIndex,
             yCornerIndex,
-            slantDirection
+            slantDirection,
         ),
         y: _getYPercentage(
             yCornerIndex,
             zIndex,
-            slantDirection
+            slantDirection,
         ),
     }
 }

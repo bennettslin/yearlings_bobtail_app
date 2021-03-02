@@ -21,7 +21,7 @@ const AccessDirectionLetter = ({
                 className: cx(
                     'AccessDirectionLetter',
                     alignTop && 'AccessDirectionLetter__alignTop',
-                    `AccessDirectionLetter__${isNext ? 'next' : 'previous'}`
+                    `AccessDirectionLetter__${isNext ? 'next' : 'previous'}`,
                 ),
             }}
         >

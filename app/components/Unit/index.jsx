@@ -31,14 +31,14 @@ const Unit = forwardRef(({
     const
         isEarShown = useSelector(mapIsEarShown),
         unitVerseIndices = getVerseIndicesForUnit(
-            serverClientSongIndex, unitIndex
+            serverClientSongIndex, unitIndex,
         ),
         isBottomSideCard = getIsSideCardOnBottomForUnit(
-            serverClientSongIndex, unitIndex
+            serverClientSongIndex, unitIndex,
         ),
         hasMainVerses = Boolean(unitVerseIndices.length),
         hasSideCards = Boolean(getSideCardForUnit(
-            serverClientSongIndex, unitIndex
+            serverClientSongIndex, unitIndex,
         )),
         isSubsequent = getSubsequentForUnit(serverClientSongIndex, unitIndex)
 
@@ -57,7 +57,7 @@ const Unit = forwardRef(({
                         isSubsequent ?
                             'Unit__subsequent' :
                             'Unit__notSubsequent',
-                    ]
+                    ],
                 ),
             }}
         >
@@ -71,7 +71,7 @@ const Unit = forwardRef(({
                             className: cx(
                                 'Unit__column__text',
                                 'Unit__column',
-                                'Unit__column__main'
+                                'Unit__column__main',
                             ),
                         },
                     }}
@@ -104,7 +104,7 @@ const Unit = forwardRef(({
                                 'Unit__column__side',
 
                                 // This happens only once, in Golden Cord.
-                                isBottomSideCard && 'Unit__column__hasBottomSideCard'
+                                isBottomSideCard && 'Unit__column__hasBottomSideCard',
                             ),
                         },
                     }}

@@ -38,12 +38,12 @@ const AnnotationTitle = ({
 
         dotsBit = getDotsBitForAnnotation(
             serverClientSongIndex,
-            annotationIndex
+            annotationIndex,
         ),
 
         annotationTitle = getTitleForAnnotation(
             serverClientSongIndex,
-            annotationIndex
+            annotationIndex,
         ),
 
         showUpDown = isSelected && accessibleWikiWormholesLength > 1,

@@ -44,7 +44,7 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
             // If selecting an annotation, make sure that its dots intersect.
             const dotsBit = getDotsBitForAnnotation(
                 selectedSongIndex,
-                annotationIndex
+                annotationIndex,
             )
 
             if (!getHasSelectedDot(dotsBit, selectedDotsBit)) {
@@ -59,14 +59,14 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
             if (fromCarousel) {
                 dispatch(scrollLyricToAnchor(
                     'Carousel selected',
-                    annotationIndex
+                    annotationIndex,
                 ))
 
             // If selecting from lyric, scroll carousel.
             } else {
                 dispatch(scrollCarouselToAnnotation(
                     'Lyric selected',
-                    annotationIndex
+                    annotationIndex,
                 ))
             }
         }
@@ -91,11 +91,11 @@ const AnnotationDispatcher = forwardRef((props, ref) => {
         if (nextAnnotationIndex) {
             dispatch(scrollLyricToAnchor(
                 'Direction selected',
-                nextAnnotationIndex
+                nextAnnotationIndex,
             ))
             dispatch(scrollCarouselToAnnotation(
                 'Direction selected',
-                nextAnnotationIndex
+                nextAnnotationIndex,
             ))
         }
 

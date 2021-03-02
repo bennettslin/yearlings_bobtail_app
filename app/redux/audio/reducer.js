@@ -8,7 +8,7 @@ import { AUDIO_DEFAULTS } from './default'
 
 export default (
     state = AUDIO_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case AUDIO_STORE:

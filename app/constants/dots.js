@@ -48,5 +48,5 @@ export const EMPTY_DOT_KEYS = getObjectFromBit({
 })
 
 export const FULL_DOTS_BIT = getTwoToThePowerOfN(
-    ORDERED_DOT_KEYS.length
+    ORDERED_DOT_KEYS.length,
 ) - 1

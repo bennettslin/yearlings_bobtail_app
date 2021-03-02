@@ -3,7 +3,7 @@ import { getSong } from './songs'
 export const getSourceWormholeIndices = (songIndex, annotationIndex) => {
     const wormholeLinks = getWormholeLinksForAnnotation(
         songIndex,
-        annotationIndex
+        annotationIndex,
     )
 
     return wormholeLinks.map(wormholeLink => (
@@ -33,7 +33,7 @@ const mapWormholeLinkForDispatch = wormholeLink => {
 
 const getWormholeLinksForAnnotation = (
     songIndex,
-    annotationIndex
+    annotationIndex,
 ) => {
     const
         { annotationCardsWormholeLinksList } = getSong(songIndex),
@@ -47,12 +47,12 @@ const getWormholeLinksForAnnotation = (
 export const getWormholeLinkForWormhole = (
     songIndex,
     annotationIndex,
-    wormholeIndex
+    wormholeIndex,
 
 ) => {
     const wormholeLinks = getWormholeLinksForAnnotation(
         songIndex,
-        annotationIndex
+        annotationIndex,
     )
 
     return mapWormholeLinkForDispatch(wormholeLinks[wormholeIndex])
@@ -61,12 +61,12 @@ export const getWormholeLinkForWormhole = (
 export const getWormholeLinkForWikiWormhole = (
     songIndex,
     annotationIndex,
-    wikiWormholeIndex
+    wikiWormholeIndex,
 
 ) => {
     const wormholeLinks = getWormholeLinksForAnnotation(
         songIndex,
-        annotationIndex
+        annotationIndex,
     )
 
     const wormholeLink = wormholeLinks.find(wormholeLink => (

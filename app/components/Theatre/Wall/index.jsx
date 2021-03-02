@@ -47,7 +47,7 @@ const Wall = ({ isRight }) => {
             {...{
                 className: cx(
                     'Wall',
-                    'Theatre__field'
+                    'Theatre__field',
                 ),
                 style: {
                     width: `${wallWidth}px`,

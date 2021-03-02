@@ -10,7 +10,7 @@ const WikiDispatcher = forwardRef((props, ref) => {
 
     const dispatchWiki = (
         selectedWikiIndex,
-        wikiAnnotationIndex = 0
+        wikiAnnotationIndex = 0,
     ) => {
         // Don't register click if reference dot is deselected.
         if (!isWikiDotSelected) {

@@ -54,7 +54,7 @@ const AccessLetter = ({
                         'AccessLetter__inButtonOrDotAnchor',
 
                     'fCC',
-                    'Neuton'
+                    'Neuton',
                 )}
             >
                 <AccessField />

@@ -25,7 +25,7 @@ const SliderVerse = ({
         ),
 
         verseWidth = Math.ceil(
-            verseDuration / stanzaDuration * 100
+            verseDuration / stanzaDuration * 100,
         ),
 
         /**
@@ -51,7 +51,7 @@ const SliderVerse = ({
 
                     'abF',
 
-                    className
+                    className,
                 ),
                 style: verseStyle,
             }}

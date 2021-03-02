@@ -17,7 +17,7 @@ export const getWikiUrl = ({
 
             annotationWikiWormholes = getWikiWormholesForAnnotation(
                 selectedSongIndex,
-                annotationIndex
+                annotationIndex,
             ),
 
             partialPath = annotationWikiWormholes[selectedWikiIndex - 1],

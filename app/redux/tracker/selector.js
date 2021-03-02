@@ -22,14 +22,14 @@ export const getMapSongTrackerWidth = selectedPlayerTime => createSelector(
         selectedSongIndex,
         bannerHoverTime,
         cursorTime,
-        isPlaying
+        isPlaying,
     ) => getSongTrackerWidth({
         selectedSongIndex,
         bannerHoverTime,
         cursorTime,
         selectedPlayerTime,
         isPlaying,
-    })
+    }),
 )
 
 export const getMapSceneTrackerWidth = ({
@@ -44,7 +44,7 @@ export const getMapSceneTrackerWidth = ({
         sceneCursorIndex,
         selectedSongIndex,
         cursorTime,
-        isPlaying
+        isPlaying,
     ) => getSceneTrackerWidth({
         sceneIndex,
         sceneCursorIndex,
@@ -52,7 +52,7 @@ export const getMapSceneTrackerWidth = ({
         cursorTime,
         selectedPlayerTime,
         isPlaying,
-    })
+    }),
 )
 
 export const getMapVerseTrackerLength = ({
@@ -67,7 +67,7 @@ export const getMapVerseTrackerLength = ({
         verseCursorIndex,
         selectedSongIndex,
         cursorTime,
-        isPlaying
+        isPlaying,
     ) => getVerseTrackerLength({
         verseIndex,
         verseCursorIndex,
@@ -75,5 +75,5 @@ export const getMapVerseTrackerLength = ({
         cursorTime,
         selectedPlayerTime,
         isPlaying,
-    })
+    }),
 )

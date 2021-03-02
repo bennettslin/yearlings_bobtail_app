@@ -22,13 +22,13 @@ export const mapCanTipsShowForDevice = createSelector(
         lyricSongIndex,
         isPhoneWidth,
         isTabletWidth,
-        isDesktopWidth
+        isDesktopWidth,
     ) => getShowTipForDevice({
         songIndex: lyricSongIndex,
         isPhoneWidth,
         isTabletWidth,
         isDesktopWidth,
-    })
+    }),
 )
 
 export const mapIsTipsShown = createSelector(
@@ -36,11 +36,11 @@ export const mapIsTipsShown = createSelector(
     mapCanTipsShowForDevice,
     (
         selectedTipsOption,
-        canTipsShowForDevice
+        canTipsShowForDevice,
     ) => (
         getIsShown(selectedTipsOption) &&
         canTipsShowForDevice
-    )
+    ),
 )
 
 export const mapIsTipsPopupVisible = createSelector(
@@ -50,10 +50,10 @@ export const mapIsTipsPopupVisible = createSelector(
     (
         isSongChangeDone,
         isLyricLogue,
-        isTipsShown
+        isTipsShown,
     ) => (
         isSongChangeDone &&
         !isLyricLogue &&
         isTipsShown
-    )
+    ),
 )

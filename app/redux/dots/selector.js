@@ -6,33 +6,33 @@ import {
 import { DOTS_STORE } from '../../constants/store'
 
 export const mapSelectedDotsBit = (
-    { [DOTS_STORE]: { selectedDotsBit } }
+    { [DOTS_STORE]: { selectedDotsBit } },
 ) => selectedDotsBit
 
 export const getMapFirstSelectedDotKey = dotsBit => createSelector(
     mapSelectedDotsBit,
     selectedDotsBit => getFirstSelectedDotKey(
         dotsBit,
-        selectedDotsBit
-    )
+        selectedDotsBit,
+    ),
 )
 
 export const getMapHasSelectedDot = dotsBit => createSelector(
     mapSelectedDotsBit,
     selectedDotsBit => getHasSelectedDot(
         dotsBit,
-        selectedDotsBit
-    )
+        selectedDotsBit,
+    ),
 )
 
 export const getMapIsSelectedDot = dotKey => (
-    { [DOTS_STORE]: { [dotKey]: value } }
+    { [DOTS_STORE]: { [dotKey]: value } },
 ) => value
 
 export const mapReferenceDot = (
-    { [DOTS_STORE]: { reference } }
+    { [DOTS_STORE]: { reference } },
 ) => reference
 
 export const mapWormholeDot = (
-    { [DOTS_STORE]: { wormhole } }
+    { [DOTS_STORE]: { wormhole } },
 ) => wormhole

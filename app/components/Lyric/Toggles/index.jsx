@@ -20,7 +20,7 @@ const LyricToggles = ({
             [
                 'LyricToggles__leftOrTop',
                 'top__lyricChild',
-            ]
+            ],
     )}>
         {isBottomRight ? (
             <LyricToggleScroll />

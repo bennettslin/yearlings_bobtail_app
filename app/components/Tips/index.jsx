@@ -15,7 +15,7 @@ const Tips = () => {
 
         <div className={cx(
             'Tips',
-            'fontSize__verse'
+            'fontSize__verse',
         )}>
             <TipsToggle inPopup />
             <Texts {...{ text: getSongTipText(lyricSongIndex) }} />

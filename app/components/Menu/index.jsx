@@ -39,7 +39,7 @@ const Menu = ({ didMount }) => {
             {...{
                 className: cx(
                     'Menu',
-                    'abF'
+                    'abF',
                 ),
                 style: {
                     height: `${menuHeight}px`,
@@ -51,7 +51,7 @@ const Menu = ({ didMount }) => {
                     className: cx(
                         'Menu__main',
                         'width__mainColumn',
-                        'abF'
+                        'abF',
                     ),
                     style: {
                         /**
@@ -68,7 +68,7 @@ const Menu = ({ didMount }) => {
                         className: cx(
                             'Menu__mainTop',
                             'Menu__topField',
-                            'abF'
+                            'abF',
                         ),
                     }}
                 >
@@ -84,7 +84,7 @@ const Menu = ({ didMount }) => {
                         {...{
                             className: cx(
                                 'Menu__mainBottom',
-                                'abF'
+                                'abF',
                             ),
                         }}
                     >
@@ -98,7 +98,7 @@ const Menu = ({ didMount }) => {
                         'Menu__lyricTop',
                         'Menu__topField',
                         'width__lyricColumn__desktop',
-                        'abF'
+                        'abF',
                     )}
                 >
                     <Slider />

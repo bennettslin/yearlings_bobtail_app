@@ -16,7 +16,7 @@ export const getSessionReducer = ({
         initialSongIndex,
         initialAnnotationIndex,
     }),
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case SESSION_STORE: {

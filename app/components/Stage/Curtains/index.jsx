@@ -52,7 +52,7 @@ const Curtains = ({ style }) => {
                     className: cx(
                         'Curtains',
                         'abF',
-                        'ovH'
+                        'ovH',
                     ),
                     style,
                 }}
@@ -61,11 +61,11 @@ const Curtains = ({ style }) => {
                     {...{
                         className: cx(
                             'Curtains__left',
-                            'Curtains__side'
+                            'Curtains__side',
                         ),
                         svgClassName: cx(
                             'curtainSide',
-                            'fillTransition__dimTheatre'
+                            'fillTransition__dimTheatre',
                         ),
                     }}
                 >
@@ -75,11 +75,11 @@ const Curtains = ({ style }) => {
                     {...{
                         className: cx(
                             'Curtains__right',
-                            'Curtains__side'
+                            'Curtains__side',
                         ),
                         svgClassName: cx(
                             'curtainSide',
-                            'fillTransition__dimTheatre'
+                            'fillTransition__dimTheatre',
                         ),
                     }}
                 >
@@ -88,11 +88,11 @@ const Curtains = ({ style }) => {
                 <InlineSvg
                     {...{
                         className: cx(
-                            'Curtains__top'
+                            'Curtains__top',
                         ),
                         svgClassName: cx(
                             'curtainTop',
-                            'fillTransition__dimTheatre'
+                            'fillTransition__dimTheatre',
                         ),
                     }}
                 >

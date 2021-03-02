@@ -4,7 +4,7 @@ export const getCursorIndex = (
     canTransitionAfterSongChange,
     sliderIndex,
     activatedIndex,
-    defaultIndex
+    defaultIndex,
 ) => {
     if (!canTransitionAfterSongChange) {
         return -1
@@ -20,7 +20,7 @@ export const getCursorIndex = (
 export const getBeforeOnOrAfter = (
     cursorIndex,
     index,
-    isCursorShown = true
+    isCursorShown = true,
 
 ) => {
     if (index < cursorIndex) {
@@ -34,7 +34,7 @@ export const getBeforeOnOrAfter = (
 
 export const getCursorTime = (
     songIndex,
-    verseIndex
+    verseIndex,
 
 ) => getStartTimeForVerse(songIndex, verseIndex)
 

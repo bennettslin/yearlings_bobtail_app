@@ -24,7 +24,7 @@ const ActivatedVerseDispatcher = forwardRef((props, ref) => {
         if (nextVerseIndex !== -1) {
             dispatch(scrollLyricToVerse(
                 'Activated',
-                nextVerseIndex
+                nextVerseIndex,
             ))
         }
     }

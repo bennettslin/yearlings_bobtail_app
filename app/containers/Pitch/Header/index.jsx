@@ -15,7 +15,7 @@ const PitchHeader = ({
     <div
         {...{
             className: cx(
-                'PitchHeader'
+                'PitchHeader',
             ),
         }}
     >
@@ -23,7 +23,7 @@ const PitchHeader = ({
             isCustomSize
             {...{
                 className: cx(
-                    'dramaMasks'
+                    'dramaMasks',
                 ),
                 buttonName: PITCH_RETURN_BUTTON_KEY,
                 accessKey: PITCH_TOGGLE_KEY,

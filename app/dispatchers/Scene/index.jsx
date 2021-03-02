@@ -14,7 +14,7 @@ const SceneDispatcher = forwardRef((props, ref) => {
             scrollLog: `Filmstrip scene ${selectedSceneIndex} selected`,
             verseIndex: getVerseIndexForScene(
                 selectedSongIndex,
-                selectedSceneIndex
+                selectedSceneIndex,
             ),
         })
     }

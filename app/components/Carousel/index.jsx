@@ -56,7 +56,7 @@ const Carousel = ({ didMount, pageSongIndex }) => {
                             didMount && [
                                 'gradientMask__carousel__desktop',
                             ],
-                            getFinalSideKey()
+                            getFinalSideKey(),
                         ),
                     }}
                 >

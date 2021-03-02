@@ -7,7 +7,7 @@ import {
 
 export default (
     state = VIEWPORT_DEFAULTS,
-    action
+    action,
 ) => {
     switch (action.type) {
         case VIEWPORT_STORE:
@@ -22,7 +22,7 @@ export default (
 
 export const ViewportPitchPageReducer = (
     state = VIEWPORT_PITCH_PAGE_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case VIEWPORT_STORE:

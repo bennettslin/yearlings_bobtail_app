@@ -23,7 +23,7 @@ const ScrollOverlayDispatcher = forwardRef(({ getLyricScrollElement }, ref) => {
 
         setScrollTimeoutId(setTimeout(
             () => _dispatchScrollOverlay(prevScrollTop),
-            timeoutDuration
+            timeoutDuration,
         ))
 
         // If isScrolling is already on, don't bother to dispatch again.

@@ -17,7 +17,7 @@ const AboutChild = ({
                 className: cx(
                     'AboutChild',
                     'fontSize__verse',
-                    className
+                    className,
                 ),
             },
         }}
@@ -29,7 +29,7 @@ const AboutChild = ({
                         className: cx(
                             'AboutChild__header',
                             'fontColour__title',
-                            'Rancho'
+                            'Rancho',
                         ),
                     },
                 }}

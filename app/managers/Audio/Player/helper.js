@@ -12,7 +12,7 @@ export const logPlayPromiseSuccess = ({
             action: 'playPromise',
             label: songIndex,
             value: timeDifference * 1000,
-        }
+        },
     )
 }
 
@@ -29,6 +29,6 @@ export const logPlayPromiseFailure = ({
             action: 'playPromise',
             label: `song: ${songIndex}, ${errorMessage}`,
             value: timeDifference * 1000,
-        }
+        },
     )
 }

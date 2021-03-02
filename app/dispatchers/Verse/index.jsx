@@ -50,7 +50,7 @@ const VerseDispatcher = forwardRef((props, ref) => {
                 callAudioManager({ verseIndex })
                 dispatch(scrollLyricForVerseSelect(
                     scrollLog,
-                    verseIndex
+                    verseIndex,
                 ))
             }
         }

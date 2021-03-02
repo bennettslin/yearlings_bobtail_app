@@ -11,7 +11,7 @@ const Cubes = ({ yIndex }) => yIndex <= DEV_MAXIMUM_Y_INDEX_CUBES && (
         className={cx(
             'Cubes',
             `y${yIndex}`,
-            'abF'
+            'abF',
         )}
     >
         {CUBE_X_INDICES.map(xIndex => (

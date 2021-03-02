@@ -18,7 +18,7 @@ const Proscenium = () => {
         <InlineSvg
             {...{
                 className: cx(
-                    'Proscenium'
+                    'Proscenium',
                 ),
                 style: {
                     top: `${prosceniumTop}px`,
@@ -28,7 +28,7 @@ const Proscenium = () => {
                 },
                 svgClassName: cx(
                     'proscenium',
-                    'fillTransition__dimTheatre'
+                    'fillTransition__dimTheatre',
                 ),
             }}
         >

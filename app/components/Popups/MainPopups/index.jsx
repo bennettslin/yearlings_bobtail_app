@@ -20,7 +20,7 @@ const MainPopups = forwardRef(({ didMount }, ref) => {
                 ...didMount && {
                     className: cx(
                         'MainPopups',
-                        'abF'
+                        'abF',
                     ),
                     style: {
                         top: `${menuHeight}px`,

@@ -33,7 +33,7 @@ const Filmstrip = () => {
                     'BannerFilmstrip__child',
 
                     'dropShadow',
-                    !isSelectedLogue && 'dropShadow__lightHover'
+                    !isSelectedLogue && 'dropShadow__lightHover',
                 ),
             }}
         >

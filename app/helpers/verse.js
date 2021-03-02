@@ -11,7 +11,7 @@ import {
 
 export const getVerseIndexforRatio = (
     songIndex,
-    touchInElementRatio
+    touchInElementRatio,
 
 ) => {
     const stanzaIndices = getStanzaIndices(songIndex),
@@ -35,11 +35,11 @@ export const getVerseIndexforRatio = (
                     isTouchInStanza = endRatio > touchInElementRatio
 
                 return isTouchInStanza
-            }
+            },
         ),
         stanzaVerseIndices = getVerseIndicesForStanza(
             songIndex,
-            stanzaIndex
+            stanzaIndex,
         ),
 
         // Get needed values for stanza.
@@ -86,7 +86,7 @@ export const getVerseIndexforRatio = (
                     isTouchInVerse = verseEndRatio > touchInStanzaRatio
 
                 return isTouchInVerse
-            }
+            },
         ),
 
         // Add stanza's first verse index with the returned verse times index.

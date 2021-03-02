@@ -10,27 +10,27 @@ import {
 import { ACCESS_STORE } from '../../constants/store'
 
 export const mapIsAccessOn = (
-    { [ACCESS_STORE]: { isAccessOn } }
+    { [ACCESS_STORE]: { isAccessOn } },
 ) => isAccessOn
 
 export const mapAccessedDotIndex = (
-    { [ACCESS_STORE]: { accessedDotIndex } }
+    { [ACCESS_STORE]: { accessedDotIndex } },
 ) => accessedDotIndex
 
 export const mapAccessedNavIndex = (
-    { [ACCESS_STORE]: { accessedNavIndex } }
+    { [ACCESS_STORE]: { accessedNavIndex } },
 ) => accessedNavIndex
 
 export const mapAccessedKey = (
-    { [ACCESS_STORE]: { accessedKey } }
+    { [ACCESS_STORE]: { accessedKey } },
 ) => accessedKey
 
 export const mapAccessedAnnotationIndex = (
-    { [ACCESS_STORE]: { accessedAnnotationIndex } }
+    { [ACCESS_STORE]: { accessedAnnotationIndex } },
 ) => accessedAnnotationIndex
 
 export const mapAccessedWikiWormholeIndex = (
-    { [ACCESS_STORE]: { accessedWikiWormholeIndex } }
+    { [ACCESS_STORE]: { accessedWikiWormholeIndex } },
 ) => accessedWikiWormholeIndex
 
 export const mapIsAccessedIndexedAnchorShown = createSelector(
@@ -46,7 +46,7 @@ export const mapIsAccessedIndexedAnchorShown = createSelector(
         isNavExpanded,
         isLyricExpanded,
         lyricAnnotationIndex,
-        isActivated
+        isActivated,
     ) => getIsAccessedIndexedAnchorShown({
         isAccessOn,
         isDotsSlideShown,
@@ -54,7 +54,7 @@ export const mapIsAccessedIndexedAnchorShown = createSelector(
         isLyricExpanded,
         lyricAnnotationIndex,
         isActivated,
-    })
+    }),
 )
 
 export const getMapIsAnnotationAccessed = annotationIndex => createSelector(
@@ -62,9 +62,9 @@ export const getMapIsAnnotationAccessed = annotationIndex => createSelector(
     mapAccessedAnnotationIndex,
     (
         isAccessedIndexedAnchorShown,
-        accessedAnnotationIndex
+        accessedAnnotationIndex,
     ) => (
         isAccessedIndexedAnchorShown &&
         annotationIndex === accessedAnnotationIndex
-    )
+    ),
 )

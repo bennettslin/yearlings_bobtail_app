@@ -27,7 +27,7 @@ const SequenceDot = ({
                     'SequenceDot',
                     isDotShown && 'SequenceDot__shown',
                     inTextAnchor && 'SequenceDot__textAnchor',
-                    inAnnotationCard && 'SequenceDot__annotationCard'
+                    inAnnotationCard && 'SequenceDot__annotationCard',
                 ),
                 dotKey,
                 ...other,

@@ -16,7 +16,7 @@ const Stylesheet = ({
     <style
         className={cx(
             'Stylesheet',
-            className
+            className,
         )}
     >
         {getStyleString({

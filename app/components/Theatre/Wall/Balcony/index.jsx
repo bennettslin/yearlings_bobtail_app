@@ -16,7 +16,7 @@ const WallBalcony = ({
     <InlineSvg
         {...{
             className: cx(
-                'WallBalcony'
+                'WallBalcony',
             ),
             style: {
                 top: `${top}px`,
@@ -27,7 +27,7 @@ const WallBalcony = ({
             svgClassName: cx(
                 'wallBalcony',
                 isLeft && 'wallBalcony__left',
-                'fillTransition__dimTheatre'
+                'fillTransition__dimTheatre',
             ),
         }}
     >

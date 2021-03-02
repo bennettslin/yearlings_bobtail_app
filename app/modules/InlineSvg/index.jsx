@@ -32,7 +32,7 @@ const InlineSvg = ({
                 className: cx(
                     className,
                     // When not in previewer, make position absolute.
-                    !notAbsoluteFullContainer && 'abF'
+                    !notAbsoluteFullContainer && 'abF',
                 ),
                 style,
             }}

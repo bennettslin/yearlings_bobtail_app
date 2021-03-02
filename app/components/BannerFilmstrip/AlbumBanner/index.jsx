@@ -11,7 +11,7 @@ const AlbumBanner = () => (
                 'BannerFilmstrip__child',
                 'textShadow__dark',
                 'ovH',
-                'Rancho'
+                'Rancho',
             ),
         }}
     >

@@ -14,7 +14,7 @@ const Iframe = forwardRef(({
         {...{
             className: cx(
                 className,
-                'iframeContainer'
+                'iframeContainer',
             ),
         }}
     >
@@ -24,7 +24,7 @@ const Iframe = forwardRef(({
                     className: cx(
                         'iframeContainer__spinner',
                         'abF',
-                        'fCC'
+                        'fCC',
                     ),
                 }}
             >
@@ -37,7 +37,7 @@ const Iframe = forwardRef(({
                     ref,
                     className: cx(
                         'iframeContainer__iframe',
-                        !isLoading && 'iframeContainer__iframe__loaded'
+                        !isLoading && 'iframeContainer__iframe__loaded',
                     ),
                     tabIndex: -1,
                     onLoad,

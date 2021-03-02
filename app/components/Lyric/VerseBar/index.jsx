@@ -27,7 +27,7 @@ const VerseBar = () => {
                 verseIndex: verseCursorIndex,
                 verseObject: getVerse(
                     lyricSongIndex,
-                    verseCursorIndex
+                    verseCursorIndex,
                 ),
             }}
         />
@@ -64,7 +64,7 @@ const VerseBarContainer = ({
                         'VerseBar__above' :
                         'VerseBar__below',
 
-                    isVerseBarShown && 'VerseBar__shown'
+                    isVerseBarShown && 'VerseBar__shown',
                 ),
                 onWheel,
                 onClick,
@@ -75,7 +75,7 @@ const VerseBarContainer = ({
                     'VerseBar__animatable',
                     isAbove ?
                         'VerseBar__animatable__above' :
-                        'VerseBar__animatable__below'
+                        'VerseBar__animatable__below',
                 )}
             >
                 <VerseBar />

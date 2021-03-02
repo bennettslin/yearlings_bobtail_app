@@ -29,14 +29,14 @@ export const getMapVerseCursorIndex = inVerseBar => createSelector(
         canTransitionAfterSongChange,
         sliderVerseIndex,
         activatedVerseIndex,
-        lyricVerseIndex
+        lyricVerseIndex,
     ) => getCursorIndex(
         // Verse bar always shows indexed verse even if song is changing.
         inVerseBar || canTransitionAfterSongChange,
         sliderVerseIndex,
         activatedVerseIndex,
-        lyricVerseIndex
-    )
+        lyricVerseIndex,
+    ),
 )
 
 export const getMapIsShownVerseCursor = ({
@@ -48,14 +48,14 @@ export const getMapIsShownVerseCursor = ({
     mapIsEitherVerseBarShown,
     (
         verseCursorIndex,
-        isEitherVerseBarShown
+        isEitherVerseBarShown,
     ) => getIsVerseCursor({
         verseIndex,
         verseCursorIndex,
         inSlider,
         inVerseBar,
         isEitherVerseBarShown,
-    })
+    }),
 )
 
 export const mapSceneCursorIndex = createSelector(
@@ -63,18 +63,18 @@ export const mapSceneCursorIndex = createSelector(
     getMapVerseCursorIndex(),
     (
         mapLyricSongIndex,
-        verseCursorIndex
+        verseCursorIndex,
     ) => getSceneIndexForVerse(
         mapLyricSongIndex,
-        verseCursorIndex
-    )
+        verseCursorIndex,
+    ),
 )
 
 export const getMapIsSceneCursor = sceneIndex => createSelector(
     mapSceneCursorIndex,
     (
-        sceneCursorIndex
-    ) => sceneIndex === sceneCursorIndex
+        sceneCursorIndex,
+    ) => sceneIndex === sceneCursorIndex,
 )
 
 export const getMapIsStanzaCursor = stanzaIndex => createSelector(
@@ -82,13 +82,13 @@ export const getMapIsStanzaCursor = stanzaIndex => createSelector(
     getMapVerseCursorIndex(),
     (
         mapLyricSongIndex,
-        verseCursorIndex
+        verseCursorIndex,
     ) => (
         stanzaIndex === getStanzaIndexForVerse(
             mapLyricSongIndex,
-            verseCursorIndex
+            verseCursorIndex,
         )
-    )
+    ),
 )
 
 export const mapCursorTime = createSelector(
@@ -96,11 +96,11 @@ export const mapCursorTime = createSelector(
     getMapVerseCursorIndex(),
     (
         lyricSongIndex,
-        verseCursorIndex
+        verseCursorIndex,
     ) => getCursorTime(
         lyricSongIndex,
-        verseCursorIndex
-    )
+        verseCursorIndex,
+    ),
 )
 
 export const getMapSongCursorTime = selectedPlayerTime => createSelector(
@@ -112,12 +112,12 @@ export const getMapSongCursorTime = selectedPlayerTime => createSelector(
         canTransitionAfterSongChange,
         bannerHoverTime,
         cursorTime,
-        isPlaying
+        isPlaying,
     ) => getSongCursorTime({
         canTransitionAfterSongChange,
         bannerHoverTime,
         cursorTime,
         selectedPlayerTime,
         isPlaying,
-    })
+    }),
 )

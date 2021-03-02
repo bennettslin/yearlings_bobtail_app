@@ -39,22 +39,22 @@ const getQueryStringIndex = (search, key) => {
 const getRoutingVerseIndex = (search, songIndex) => {
     const routingVerseIndex = getQueryStringIndex(
         search,
-        VERSE_QUERY_FIELD
+        VERSE_QUERY_FIELD,
     )
     return getIsVerseValid(
         songIndex,
-        routingVerseIndex
+        routingVerseIndex,
     ) ? routingVerseIndex : NaN
 }
 
 const getRoutingAnnotationIndex = (search, songIndex) => {
     const routingAnnotationIndex = getQueryStringIndex(
         search,
-        ANNOTATION_QUERY_FIELD
+        ANNOTATION_QUERY_FIELD,
     )
     return getIsAnnotationValid(
         songIndex,
-        routingAnnotationIndex
+        routingAnnotationIndex,
     ) ? routingAnnotationIndex : NaN
 }
 

@@ -60,7 +60,7 @@ const Popup = ({
                                 'fCC': !noFlexCentre,
                                 'abF': !noAbsoluteFull,
                             },
-                        ]
+                        ],
                     ),
                 }}
             >

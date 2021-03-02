@@ -18,7 +18,7 @@ const AboutToggle = () => {
 
     return (
         <div className={cx(
-            'AboutToggle'
+            'AboutToggle',
         )}>
             <Button
                 isCustomSize

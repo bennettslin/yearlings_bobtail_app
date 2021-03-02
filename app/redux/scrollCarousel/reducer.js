@@ -5,7 +5,7 @@ import { hasKey } from '../../helpers/action'
 
 export default (
     state = SCROLL_CAROUSEL_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case SCROLL_CAROUSEL_STORE: {

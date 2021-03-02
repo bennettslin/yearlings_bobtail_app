@@ -92,7 +92,7 @@ const RootContainer = () => {
                     'RootContainer',
                     'abF',
                     'ovH',
-                    'PtSansNarrow'
+                    'PtSansNarrow',
                 ),
                 tabIndex: -1,
                 onClick,

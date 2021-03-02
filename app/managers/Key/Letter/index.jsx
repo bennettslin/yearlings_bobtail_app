@@ -164,7 +164,7 @@ const LetterManager = forwardRef((props, ref) => {
 
         logAccess(
             `Key "${keyName}" was ${keyWasRegistered ? '' : 'NOT '}registered.`,
-            keyWasRegistered && keyName
+            keyWasRegistered && keyName,
         )
 
         return {

@@ -42,7 +42,7 @@ const LyricToggleScroll = () => {
             <div className={cx(
                 'LyricToggleScroll',
                 'LyricToggle',
-                'length__buttonLarge'
+                'length__buttonLarge',
             )}>
                 <Button
                     isLargeSize

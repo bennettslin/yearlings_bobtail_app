@@ -3,23 +3,23 @@ import { mapIsActivated } from '../activated/selector'
 import { SLIDER_STORE } from '../../constants/store'
 
 export const mapSliderLeft = (
-    { [SLIDER_STORE]: { sliderLeft } }
+    { [SLIDER_STORE]: { sliderLeft } },
 ) => sliderLeft
 
 export const mapSliderWidth = (
-    { [SLIDER_STORE]: { sliderWidth } }
+    { [SLIDER_STORE]: { sliderWidth } },
 ) => sliderWidth
 
 export const mapIsSliderMoving = (
-    { [SLIDER_STORE]: { isSliderMoving } }
+    { [SLIDER_STORE]: { isSliderMoving } },
 ) => isSliderMoving
 
 export const mapIsSliderTouched = (
-    { [SLIDER_STORE]: { isSliderTouched } }
+    { [SLIDER_STORE]: { isSliderTouched } },
 ) => isSliderTouched
 
 export const mapSliderVerseIndex = (
-    { [SLIDER_STORE]: { sliderVerseIndex } }
+    { [SLIDER_STORE]: { sliderVerseIndex } },
 ) => sliderVerseIndex
 
 export const mapIsLyricsLocked = createSelector(
@@ -27,6 +27,6 @@ export const mapIsLyricsLocked = createSelector(
     mapIsSliderMoving,
     (
         isActivated,
-        isSliderMoving
-    ) => isActivated || isSliderMoving
+        isSliderMoving,
+    ) => isActivated || isSliderMoving,
 )

@@ -17,7 +17,7 @@ const Stage = ({ style }) => {
                 className: cx(
                     'Stage',
                     'abF',
-                    'ovH'
+                    'ovH',
                 ),
                 style,
             }}

@@ -85,14 +85,14 @@ const PitchContainer = ({ didMount, children }) => {
             {
                 action: 'container',
                 label: 'pitch',
-            }
+            },
         )
     }, [])
 
     useEffect(() => {
         navigate(
             getPathForPitchPage(pitchSegmentIndex),
-            { replace: true }
+            { replace: true },
         )
 
         focusElement()
@@ -109,7 +109,7 @@ const PitchContainer = ({ didMount, children }) => {
                     'RootContainer',
                     'abF',
                     'fCC',
-                    'PtSansNarrow'
+                    'PtSansNarrow',
                 ),
                 onClick,
                 onKeyDown,

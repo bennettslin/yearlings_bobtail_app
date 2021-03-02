@@ -11,7 +11,7 @@ import { mapCanScoreMount } from '../viewport/selector'
 
 export default (
     state = TOGGLE_DEFAULTS,
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case TOGGLE_STORE: {

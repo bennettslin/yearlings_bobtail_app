@@ -29,7 +29,7 @@ const VerseLines = forwardRef(({
                         // Allow anchor in a verse line to know it's in a cursor verse.
                         !inVerseBar && 'sibling__verseCursor',
 
-                        'fontSize__lyricMultipleColumns'
+                        'fontSize__lyricMultipleColumns',
                     ),
                 },
             }}

@@ -43,7 +43,7 @@ const DotsSlideSelect = ({
             <div
                 {...{
                     className: cx(
-                        'DotsSlideSelect'
+                        'DotsSlideSelect',
                     ),
                 }}
             >
@@ -85,7 +85,7 @@ const DotsSlideSelect = ({
                             'SlideSelectDescription__activated',
 
                         'abF',
-                        'fCC'
+                        'fCC',
                     )}>
                         {DOT_DESCRIPTIONS[dotKey]}
                     </div>

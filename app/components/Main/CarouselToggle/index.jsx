@@ -24,7 +24,7 @@ const CarouselToggle = () => {
 
     return canCarouselNavMount && (
         <div className={cx(
-            'CarouselToggle'
+            'CarouselToggle',
         )}>
             <Button
                 isLargeSize

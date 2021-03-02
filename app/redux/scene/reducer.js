@@ -10,7 +10,7 @@ export const getSceneReducer = ({
         initialSongIndex,
         initialVerseIndex,
     }),
-    { type, payload }
+    { type, payload },
 ) => {
     switch (type) {
         case SCENE_STORE:

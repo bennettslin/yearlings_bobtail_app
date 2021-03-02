@@ -5,7 +5,7 @@ import { AUDIO_STORE } from '../../constants/store'
 import { mapPlayerCanPlayThrough } from '../players/selector'
 
 export const mapIsPlaying = (
-    { [AUDIO_STORE]: { isPlaying } }
+    { [AUDIO_STORE]: { isPlaying } },
 ) => isPlaying
 
 export const mapIsPlayButtonEnabled = createSelector(
@@ -17,9 +17,9 @@ export const mapIsPlayButtonEnabled = createSelector(
         playerCanPlayThrough,
         isPlaying,
         selectedSongIndex,
-        lyricSongIndex
+        lyricSongIndex,
     ) => playerCanPlayThrough && (
         selectedSongIndex === lyricSongIndex ||
         isPlaying
-    )
+    ),
 )

@@ -13,7 +13,7 @@ export const getPublicIp = () => (
                 {
                     action: 'ip',
                     label: error.message,
-                }
+                },
             )
             return 0
         })

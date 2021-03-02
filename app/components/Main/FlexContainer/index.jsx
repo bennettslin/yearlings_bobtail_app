@@ -34,7 +34,7 @@ const MainFlexContainer = ({
                         'mainFlexContainer__side',
                     isRight && isDesktopWidth && 'fCC',
                     isRight && !isDesktopWidth && 'mainFlexContainer__right',
-                    'abF'
+                    'abF',
                 ),
             }}
         >
