@@ -105,29 +105,48 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
         return false
     }
 
+    const _getPlayer = songIndex => (
+        players.current[songIndex] ||
+        {
+            // Ensure these calls don't break for logues.
+            askToPause() {},
+            askToPlay() {},
+        }
+    )
+
     const callAudioManager = ({
         isPlaying: nextIsPlaying = isPlaying,
         songIndex = selectedSongIndex,
         verseIndex = selectedVerseIndex,
 
     } = {}) => {
+        // If being called to play...
         if (nextIsPlaying) {
+            // TODO: Temp log.
             logPlayer(`Calling with isPlaying: ${nextIsPlaying}, songIndex: ${songIndex}, verseIndex: ${verseIndex}.`)
 
-            // If playing another song, pause the selected player.
+            /**
+             * If playing a new song, pause the previously selected player.
+             * This is handled here to ensure a smooth transfer.
+             */
             if (selectedSongIndex !== songIndex) {
-                players.current[selectedSongIndex].pausePlayer(true)
+                _getPlayer(selectedSongIndex).askToPause(true)
             }
 
-            // Ask player to play.
-            players.current[songIndex].playFromTime(getStartTimeForVerse(
+            // Play the current player.
+            _getPlayer(songIndex).askToPlay(getStartTimeForVerse(
                 songIndex,
                 verseIndex,
             ))
 
-        // Pause the current player.
+            // Player will set isPlaying to true if successful.
+
+        // If being called to pause...
         } else {
-            players.current[songIndex].pausePlayer(true)
+            // Pause the current player.
+            _getPlayer(songIndex).askToPause(true)
+
+            // Set isPlaying to false now.
             dispatch(updateIsPlaying(false))
         }
     }

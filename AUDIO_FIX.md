@@ -5,6 +5,7 @@
 * TODO
     * dispatchPlay checks for player canPlayThrough. Does this account for logue?
     * Confirm that quickly navigating through songs is not a problem. (Seems fine so far, other than AbortError message.)
+    * Weird time flash when selecting verse from song banner.
 
 * Problems
     * Scene doesn't update when verse dispatched from audio.

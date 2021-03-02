@@ -1,6 +1,6 @@
 // Hidden component to wrap an audio DOM element.
 import React, {
-    forwardRef, useImperativeHandle, useEffect, useRef, useState,
+    forwardRef, useImperativeHandle, useRef, useState,
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
@@ -10,7 +10,6 @@ import {
     logPlayPromiseFailure,
 } from './helper'
 import { updateIsPlaying } from '../../../redux/audio/action'
-import { mapIsPlaying } from '../../../redux/audio/selector'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
 import { getMp3ForSong } from '../../../api/mp3'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
@@ -25,11 +24,10 @@ const Player = forwardRef(({
     const
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
-        isPlaying = useSelector(mapIsPlaying),
         isSongSelected = useSelector(getMapIsSongSelected(songIndex)),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
-    const _dispatchIsPlayingIfSelected = nextIsPlaying => {
+    const _dispatchIsPlayingAfterPromise = nextIsPlaying => {
         if (
             nextIsPlaying ||
             (
@@ -40,37 +38,13 @@ const Player = forwardRef(({
                 !nextIsPlaying && isSongSelected
             )
         ) {
+            // TODO: Temp log.
             logPlayer(`Player ${songIndex} updated isPlaying to ${nextIsPlaying ? 'true' : 'false'}.`)
             dispatch(updateIsPlaying(nextIsPlaying))
         }
     }
 
-    const pausePlayer = byAudioManager => {
-        if (audioPlayerElement.current.paused) {
-            return
-        }
-
-        audioPlayerElement.current.pause()
-        logPlayer(`Player ${songIndex} paused ${byAudioManager ? 'by audio manager' : 'itself'}.`)
-        // _dispatchIsPlayingIfSelected(false)
-    }
-
-    // Player only plays through direct user interaction.
-    const playFromTime = time => {
-        // If there's already a promise to play, just return.
-        if (isPromisingToPlay) {
-            logPlayer(`Ignoring subsequent promise to play ${songIndex}.`)
-            return
-        }
-
-        audioPlayerElement.current.currentTime = time
-
-        // If already playing, just set current time and return.
-        if (!audioPlayerElement.current.paused) {
-            logPlayer(`Already playing ${songIndex}.`)
-            return
-        }
-
+    const promiseToPlay = () => {
         logPlayer(`Promising to play ${songIndex}\u2026`)
         const
             playPromise = audioPlayerElement.current.play(),
@@ -81,7 +55,7 @@ const Player = forwardRef(({
          * return of a promise, and is already playing the audio element.
          */
         if (playPromise === undefined) {
-            _dispatchIsPlayingIfSelected(true)
+            _dispatchIsPlayingAfterPromise(true)
 
         } else {
             setIsPromisingToPlay(true)
@@ -92,7 +66,7 @@ const Player = forwardRef(({
                         songIndex,
                         timePromisedToPlay,
                     })
-                    _dispatchIsPlayingIfSelected(true)
+                    _dispatchIsPlayingAfterPromise(true)
                 })
                 .catch(error => {
                     const errorMessage = `${error.name}: ${error.message}`
@@ -102,12 +76,47 @@ const Player = forwardRef(({
                         timePromisedToPlay,
                     })
                     dispatch(updateErrorMessage(errorMessage))
-                    _dispatchIsPlayingIfSelected(false)
+                    _dispatchIsPlayingAfterPromise(false)
                 })
                 .finally(() => {
                     setIsPromisingToPlay(false)
                 })
         }
+    }
+
+    // Player only plays through direct user interaction.
+    const askToPlay = time => {
+        // If there's already a promise to play, just return.
+        if (isPromisingToPlay) {
+            logPlayer(`Ignoring subsequent promise to play ${songIndex}.`)
+            return
+        }
+
+        // Only play if currently paused.
+        if (audioPlayerElement.current.paused) {
+            /**
+             * This registers the user gesture token. This is needed by Safari,
+             * and possibly other browsers in the future, for their measures to
+             * prevent autoplay.
+             */
+            audioPlayerElement.current.load()
+            promiseToPlay()
+
+        // If currently playing, just set new time.
+        } else {
+            logPlayer(`Already playing ${songIndex}.`)
+        }
+
+        audioPlayerElement.current.currentTime = time
+    }
+
+    const askToPause = () => {
+        if (audioPlayerElement.current.paused) {
+            return
+        }
+
+        audioPlayerElement.current.pause()
+        logPlayer(`Player ${songIndex} paused.`)
     }
 
     const onCanPlayThrough = () => {
@@ -127,7 +136,7 @@ const Player = forwardRef(({
             }
 
             if (doRepeat) {
-                playFromTime(0)
+                askToPlay(0)
             }
         }
     }
@@ -136,7 +145,7 @@ const Player = forwardRef(({
         logPlayer(`Player for ${songIndex} ended itself.`)
         // If this returns true, repeat song.
         if (handleSongEnd()) {
-            playFromTime(0)
+            askToPlay(0)
         }
     }
 
@@ -146,23 +155,9 @@ const Player = forwardRef(({
         }
     }
 
-    useEffect(() => {
-        // Pause if audio is no longer playing.
-        if (!isSongSelected) {
-            pausePlayer()
-        }
-    }, [isSongSelected])
-
-    useEffect(() => {
-        // Pause if song is no longer selected.
-        if (!isPlaying) {
-            pausePlayer()
-        }
-    }, [isPlaying])
-
     useImperativeHandle(ref, () => ({
-        pausePlayer,
-        playFromTime,
+        askToPause,
+        askToPlay,
     }))
 
     return (
