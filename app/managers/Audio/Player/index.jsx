@@ -8,7 +8,7 @@ import ReactAudioPlayer from 'react-audio-player'
 import {
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
-} from './helper'
+} from './helpers/log'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateIsPlaying } from '../../../redux/audio/action'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
@@ -39,7 +39,7 @@ const Player = forwardRef(({
             (
                 /**
                  * Triggered by player failure, so only dispatch if player is
-                 * selected.
+                 * the one selected.
                  */
                 !nextIsPlaying && isSongSelected
             )
@@ -91,7 +91,7 @@ const Player = forwardRef(({
     }
 
     // Player only plays through direct user interaction.
-    const askToPlay = playFromTime => {
+    const askToPlay = time => {
         // If there's already a promise to play, just return.
         if (isPromisingToPlay) {
             logPlayer(`Ignoring subsequent promise to play ${songIndex}.`)
@@ -102,7 +102,7 @@ const Player = forwardRef(({
          * Set this in state for now, because current time of player will reset
          * after load.
          */
-        setPlayFromTime(playFromTime)
+        setPlayFromTime(time)
 
         // Only play if currently paused.
         if (audioPlayerElement.current.paused) {
@@ -134,7 +134,6 @@ const Player = forwardRef(({
         if (playerCanPlayThrough) {
             // Set current time of player to time passed by audio manager.
             audioPlayerElement.current.currentTime = playFromTime
-
             logPlayer(`Player ${songIndex} loaded at ${getFormattedTime(audioPlayerElement.current.currentTime)}.`)
 
         // This is being called upon initial load.
@@ -143,13 +142,13 @@ const Player = forwardRef(({
         }
     }
 
-    const onListen = currentTime => {
+    const onListen = time => {
         if (isSongSelected) {
             // If this returns true, repeat song.
             const {
                 songEnded,
                 doRepeat,
-            } = updateCurrentTime(currentTime)
+            } = updateCurrentTime(time)
 
             if (songEnded) {
                 logPlayer(`Player ${songIndex} reached end of final verse.`)

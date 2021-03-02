@@ -126,8 +126,9 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
             logPlayer(`Calling with isPlaying: ${nextIsPlaying}, songIndex: ${songIndex}, verseIndex: ${verseIndex}.`)
 
             /**
-             * If playing a new song, pause the previously selected player.
-             * This is handled here to ensure a smooth transfer.
+             * If playing a new song, pause the previously selected player
+             * here. This ensures that only the player meant to be selected is
+             * ever playing.
              */
             if (selectedSongIndex !== songIndex) {
                 _getPlayer(selectedSongIndex).askToPause(true)

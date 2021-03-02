@@ -9,11 +9,14 @@
 
 * FIXME
     * Safari thinks time is out of sync upon loaded?!
+    * Not just Safari. Time is out of sync when just setting time in general.
 
 * Player
-    * Updates selected player time directly.
-    * Should know its own end time, and handle its own repeat play.
-        * Only when handling next song does it need to concern audio manager.
+    * Should know its own end time.
+    * Handles updating selected player time directly.
+    * Handles selecting next verse within same song.
+    * Handles selecting next song.
+    * Handle its own repeat play.
 
 * Is single mp3 needed to solve these potential problems?
     * Can audio repeat?
