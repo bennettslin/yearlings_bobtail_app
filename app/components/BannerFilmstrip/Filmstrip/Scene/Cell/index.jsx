@@ -11,11 +11,11 @@ import './style'
 
 const FilmstripCell = ({ sceneIndex }) => {
     const
-        { selectedPlayerTime } = useContext(AudioPlayerContext),
+        { currentPlayerTime } = useContext(AudioPlayerContext),
         isSceneCursor = useSelector(getMapIsSceneCursor(sceneIndex)),
         sceneTrackerWidth = useSelector(getMapSceneTrackerWidth({
             sceneIndex,
-            selectedPlayerTime,
+            currentPlayerTime,
         }))
 
     return (

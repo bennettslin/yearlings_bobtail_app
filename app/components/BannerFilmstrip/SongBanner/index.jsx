@@ -28,7 +28,7 @@ import './style'
 
 const SongBanner = () => {
     const
-        { selectedPlayerTime } = useContext(AudioPlayerContext),
+        { currentPlayerTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         songBannerElement = useRef(),
         stopPropagation = useRef(),
@@ -37,7 +37,7 @@ const SongBanner = () => {
         isPlaying = useSelector(mapIsPlaying),
         isBannerHovering = useSelector(mapIsBannerHovering),
         bannerHoverVerseIndex = useSelector(mapBannerHoverVerseIndex),
-        songTrackerWidth = useSelector(getMapSongTrackerWidth(selectedPlayerTime)),
+        songTrackerWidth = useSelector(getMapSongTrackerWidth(currentPlayerTime)),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         isLyricsLocked = useSelector(mapIsLyricsLocked),

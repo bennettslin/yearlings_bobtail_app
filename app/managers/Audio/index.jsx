@@ -29,19 +29,19 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
     )
 
     const callAudioManager = ({
-        isPlaying: nextIsPlaying = isPlaying,
-        songIndex = selectedSongIndex,
-        verseIndex = selectedVerseIndex,
+        isPlaying: currentIsPlaying = isPlaying,
+        songIndex: currentSongIndex = selectedSongIndex,
+        verseIndex: currentVerseIndex = selectedVerseIndex,
 
     } = {}) => {
         // If being called to play...
-        if (nextIsPlaying) {
+        if (currentIsPlaying) {
             /**
              * If playing a new song, pause the previously selected player
              * here and now. This ensures that only the player meant to be
              * played is ever playing.
              */
-            if (selectedSongIndex !== songIndex) {
+            if (currentSongIndex !== selectedSongIndex) {
                 getPlayerManager(selectedSongIndex).askToPause()
             }
 
@@ -49,12 +49,12 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
              * Play the current player. If already playing, it will just set
              * the new verse.
              */
-            getPlayerManager(songIndex).askToPlay({ verseIndex })
+            getPlayerManager(currentSongIndex).askToPlay(currentVerseIndex)
 
         // If being called to pause...
         } else {
             // Pause the current player.
-            getPlayerManager(songIndex).askToPause({ nextIsPaused: true })
+            getPlayerManager(currentSongIndex).askToPause(true)
         }
     }
 

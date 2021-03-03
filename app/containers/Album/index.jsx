@@ -12,7 +12,7 @@ import { setIsAlbumSession } from '../../utils/browser'
 const AlbumContainer = ({ didMount, children }) => {
     const
         audioContainer = useRef(),
-        [selectedPlayerTime, setSelectedPlayerTime] = useState(0)
+        [currentPlayerTime, setCurrentPlayerTime] = useState(0)
 
     const callAudioManager = props => {
         audioContainer.current.callAudioManager(props)
@@ -36,8 +36,8 @@ const AlbumContainer = ({ didMount, children }) => {
             <AudioPlayerContext.Provider
                 {...{
                     value: {
-                        selectedPlayerTime,
-                        setSelectedPlayerTime,
+                        currentPlayerTime,
+                        setCurrentPlayerTime,
                         callAudioManager,
                     },
                 }}

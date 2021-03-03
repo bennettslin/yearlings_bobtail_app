@@ -7,37 +7,37 @@ import { getFormattedTime } from '../../../helpers/format'
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
 
 export const getVerseForTimeFromListen = ({
-    currentTime,
     songIndex,
-    verseIndex,
+    currentVerseIndex,
+    currentTime,
 }) => {
     const
-        verseStartTime = getStartTimeForVerse(songIndex, verseIndex),
-        verseEndTime = getEndTimeForVerse(songIndex, verseIndex)
+        verseStartTime = getStartTimeForVerse(songIndex, currentVerseIndex),
+        verseEndTime = getEndTimeForVerse(songIndex, currentVerseIndex)
 
     // Time is in a previous verse. But this should never happen from listen!
     if (currentTime < verseStartTime) {
         logError(
-            `Out of sync! Time ${getFormattedTime(currentTime)} is before verse ${verseIndex}!`,
+            `Out of sync! Time ${getFormattedTime(currentTime)} is before verse ${currentVerseIndex}!`,
             {
                 action: 'playListen',
-                label: `song: ${songIndex}, verse: ${verseIndex}, time: ${currentTime}`,
+                label: `song: ${songIndex}, verse: ${currentVerseIndex}, time: ${currentTime}`,
             },
         )
         return null
 
     // Time is still in the current verse.
     } else if (currentTime < verseEndTime) {
-        return verseIndex
+        return currentVerseIndex
 
     // Time is in the next verse, or the current verse is the last verse.
     } else {
         return (
-            verseIndex < getVerseCountForSong(songIndex) - 1 ?
+            currentVerseIndex < getVerseCountForSong(songIndex) - 1 ?
                 // Return the next verse.
-                verseIndex + 1 :
+                currentVerseIndex + 1 :
                 // Return the same verse, and let the player end itself.
-                verseIndex
+                currentVerseIndex
         )
     }
 }

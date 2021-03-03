@@ -23,7 +23,7 @@ const AudioPlayerElement = forwardRef(({
     onPlayerError,
 }, ref) => {
     const
-        { setSelectedPlayerTime } = useContext(AudioPlayerContext),
+        { setCurrentPlayerTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
         dispatchSong = useRef(),
@@ -38,8 +38,8 @@ const AudioPlayerElement = forwardRef(({
 
     const getIsPaused = () => audioPlayerElement.current.paused
 
-    const load = verseIndex => {
-        setCurrentVerse(verseIndex)
+    const load = currentVerseIndex => {
+        setCurrentVerse(currentVerseIndex)
 
         // Only load if needed.
         if (getIsPaused()) {
@@ -67,8 +67,8 @@ const AudioPlayerElement = forwardRef(({
         logPlayer(`Player ${songIndex} ${uponLoad ? 'set' : 'updated'} to ${getFormattedTime(audioPlayerElement.current.currentTime)}.`)
     }
 
-    const setCurrentVerse = (verseIndex, fromListen) => {
-        audioPlayerElement.current.verseIndex = verseIndex
+    const setCurrentVerse = (currentVerseIndex, fromListen) => {
+        audioPlayerElement.current.verseIndex = currentVerseIndex
         /**
          * If player is already playing, set current time here and now.
          * Otherwise, wait for player to load first.
@@ -105,27 +105,27 @@ const AudioPlayerElement = forwardRef(({
 
     const onListen = currentTime => {
         // Update current player time displayed in song banner.
-        setSelectedPlayerTime(currentTime)
+        setCurrentPlayerTime(currentTime)
 
-        const nextVerseIndex = getVerseForTimeFromListen({
-            currentTime,
+        const currentVerseIndex = getVerseForTimeFromListen({
             songIndex,
-            verseIndex: getCurrentVerse(),
+            currentVerseIndex: getCurrentVerse(),
+            currentTime,
         })
 
         // Player is out of sync, so pause and tell player manager.
-        if (nextVerseIndex === null) {
+        if (currentVerseIndex === null) {
             pause()
             onPlayerError()
 
         // It's now the next verse.
-        } else if (nextVerseIndex > getCurrentVerse()) {
+        } else if (currentVerseIndex > getCurrentVerse()) {
             // Update the player's current verse.
-            setCurrentVerse(nextVerseIndex, true)
+            setCurrentVerse(currentVerseIndex, true)
 
             // Dispatch the next verse.
             dispatchVerse.current({
-                verseIndex: nextVerseIndex,
+                verseIndex: currentVerseIndex,
                 fromPlayerListen: true,
             })
         }

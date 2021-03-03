@@ -24,12 +24,12 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
         [isLoadedToPromise, setIsLoadedToPromise] = useState(false),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
-    const dispatchIsPlayingAfterPromise = (nextIsPlaying = false) => {
+    const dispatchIsPlayingAfterPromise = (currentIsPlaying = false) => {
         if (getShouldDispatchIsPlaying({
-            nextIsPlaying,
+            currentIsPlaying,
             isSongSelected,
         })) {
-            dispatch(updateIsPlaying(nextIsPlaying))
+            dispatch(updateIsPlaying(currentIsPlaying))
         }
     }
 
@@ -80,7 +80,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
     }
 
     // Player only plays through direct user interaction.
-    const askToPlay = ({ verseIndex }) => {
+    const askToPlay = currentVerseIndex => {
         // If we're already preparing to play, just return.
         if (isLoadedToPromise || isPromisingToPlay) {
             logPlayer(`Ignoring subsequent ask to play ${songIndex}.`)
@@ -92,12 +92,12 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
          * and possibly other browsers in the future, for their measures to
          * prevent autoplay.
          */
-        audioPlayer.current.load(verseIndex)
+        audioPlayer.current.load(currentVerseIndex)
     }
 
-    const askToPause = ({ nextIsPaused } = {}) => {
+    const askToPause = currentIsPaused => {
         audioPlayer.current.pause()
-        if (nextIsPaused) {
+        if (currentIsPaused) {
             dispatch(updateIsPlaying(false))
         }
     }

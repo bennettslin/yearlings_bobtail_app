@@ -1,17 +1,17 @@
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
 
 export const getShouldDispatchIsPlaying = ({
-    nextIsPlaying,
+    currentIsPlaying,
     isSongSelected,
 }) => (
     // A promise can succeed only from the selected player.
-    nextIsPlaying ||
+    currentIsPlaying ||
     (
         /**
          * A promise can fail from any player, so only dispatch if it's the
          * selected player.
          */
-        !nextIsPlaying && isSongSelected
+        !currentIsPlaying && isSongSelected
     )
 )
 
