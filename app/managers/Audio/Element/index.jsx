@@ -13,9 +13,14 @@ import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 import { getMapPlayerCanPlayThrough } from '../../../redux/players/selector'
+import { mapAudioOptionIndex } from '../../../redux/session/selector'
 import { getVerseForTimeFromListen } from './helper'
+import { AUDIO_OPTIONS, CONTINUE } from '../../../constants/options'
 
-const AudioPlayerElement = forwardRef(({ songIndex, onError }, ref) => {
+const AudioPlayerElement = forwardRef(({
+    songIndex,
+    onSyncError,
+}, ref) => {
     const
         { setSelectedPlayerTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
@@ -24,7 +29,8 @@ const AudioPlayerElement = forwardRef(({ songIndex, onError }, ref) => {
         dispatchVerse = useRef(),
         playerCanPlayThrough = useSelector(
             getMapPlayerCanPlayThrough(songIndex),
-        )
+        ),
+        audioOptionIndex = useSelector(mapAudioOptionIndex)
 
     const getCurrentVerse = () => audioPlayerElement.current.verseIndex
 
@@ -92,7 +98,7 @@ const AudioPlayerElement = forwardRef(({ songIndex, onError }, ref) => {
         // Player is out of sync, so pause and tell player manager.
         if (nextVerseIndex === null) {
             pause()
-            onError()
+            onSyncError()
 
         // It's now the next verse.
         } else if (nextVerseIndex > getCurrentVerse()) {
@@ -102,17 +108,25 @@ const AudioPlayerElement = forwardRef(({ songIndex, onError }, ref) => {
             // Dispatch the next verse.
             dispatchVerse.current({
                 verseIndex: nextVerseIndex,
-                fromPlayer: true,
+                fromPlayerListen: true,
             })
         }
     }
 
     const onEnded = () => {
         logPlayer(`Player for ${songIndex} ended itself.`)
-        // If this returns true, repeat song.
-        // if (handleSongEnd()) {
-        //     askToPlay(0)
-        // }
+
+        // Advance to next song.
+        if (AUDIO_OPTIONS[audioOptionIndex] === CONTINUE) {
+            dispatchSong.current({
+                selectedSongIndex: songIndex + 1,
+                fromPlayerContinue: true,
+            })
+
+        // Repeat current song.
+        } else {
+            dispatchVerse.current({ fromPlayerRepeat: true })
+        }
     }
 
     const setRef = node => {
@@ -149,26 +163,7 @@ const AudioPlayerElement = forwardRef(({ songIndex, onError }, ref) => {
 
 AudioPlayerElement.propTypes = {
     songIndex: PropTypes.number.isRequired,
-    onError: PropTypes.func.isRequired,
+    onSyncError: PropTypes.func.isRequired,
 }
 
 export default AudioPlayerElement
-
-// const handleSongEnd = () => {
-//     const nextSongIndex = getNextSongIndex(
-//         selectedSongIndex,
-//         audioOptionIndex,
-//     )
-
-//     // If repeating the song, just reset time and verse.
-//     if (nextSongIndex === selectedSongIndex) {
-//         dispatchVerse.current({ fromPlayer: true })
-//         return true
-
-//     } else {
-//         dispatchSong.current({
-//             selectedSongIndex: nextSongIndex,
-//         })
-//         return false
-//     }
-// }

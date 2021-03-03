@@ -9,6 +9,9 @@
 * Delay cubes for presence transition exit. Need to first calculate presence exit transition times.
 * Don't bother with timing transitions in mobile.
 
+# BUG:
+* Wormhole doesn't hide in annotation.
+
 # Performance TODO:
 * Performance. (Redux.)
 * Be smarter about memo.

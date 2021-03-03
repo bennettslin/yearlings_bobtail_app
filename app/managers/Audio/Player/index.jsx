@@ -29,8 +29,6 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
             nextIsPlaying,
             isSongSelected,
         })) {
-            // TODO: Temp log.
-            logPlayer(`AudioPlayer ${songIndex} updated isPlaying to ${nextIsPlaying ? 'true' : 'false'}.`)
             dispatch(updateIsPlaying(nextIsPlaying))
         }
     }
@@ -131,7 +129,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
             {...{
                 ref: audioPlayer,
                 songIndex,
-                onError: dispatchIsPlayingAfterPromise,
+                onSyncError: dispatchIsPlayingAfterPromise,
             }}
         />
     )

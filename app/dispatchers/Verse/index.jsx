@@ -11,6 +11,7 @@ import {
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 import { mapIsAutoScroll } from '../../redux/toggle/selector'
 import { updateEntranceStore } from '../../redux/entrance/action'
+import { logVerseSelect } from './helper'
 
 const VerseDispatcher = forwardRef((props, ref) => {
     const
@@ -24,25 +25,28 @@ const VerseDispatcher = forwardRef((props, ref) => {
         scrollLog,
         verseIndex = 0,
         fromActivated,
-        fromPlayer,
-    }) => {
+        fromPlayerListen,
+        fromPlayerRepeat,
+
+    } = {}) => {
         // Only dispatch if verse has changed.
         if (lyricVerseIndex !== verseIndex) {
             dispatch(updateSelectedStore({
                 selectedVerseIndex: verseIndex,
             }))
 
-            logSelect({
-                action: fromPlayer ? 'playerVerse' : 'verse',
-                song: selectedSongIndex,
-                verse: verseIndex,
+            logVerseSelect({
+                selectedSongIndex,
+                verseIndex,
+                fromPlayerListen,
+                fromPlayerRepeat,
             })
 
             if (fromActivated) {
                 dispatch(updateActivatedVerseIndex())
             }
 
-            if (fromPlayer) {
+            if (fromPlayerListen) {
                 // If autoScroll is on, scroll to selected verse.
                 if (isAutoScroll) {
                     dispatch(autoScrollLyricForPlay(verseIndex))

@@ -27,6 +27,7 @@ const SongDispatcher = forwardRef((props, ref) => {
         earColumnIndex,
         destinationWormholeIndex,
         fromPlayDispatcher,
+        fromPlayerContinue,
         direction,
     }) => {
         const isWormholeSelected = Boolean(destinationWormholeIndex)
@@ -73,7 +74,7 @@ const SongDispatcher = forwardRef((props, ref) => {
         }))
 
         logSelect({
-            action: 'song',
+            action: fromPlayerContinue ? 'playerContinue' : 'song',
             song: nextSongIndex,
             verse: selectedVerseIndex,
             annotation: selectedAnnotationIndex,

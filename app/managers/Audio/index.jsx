@@ -11,7 +11,6 @@ import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
 } from '../../redux/selected/selector'
-import { logPlayer } from '../../utils/logger'
 
 const AudioManager = forwardRef(({ didMount }, ref) => {
     const
@@ -37,9 +36,6 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
     } = {}) => {
         // If being called to play...
         if (nextIsPlaying) {
-            // TODO: Temp log.
-            logPlayer(`Calling with isPlaying: ${nextIsPlaying}, songIndex: ${songIndex}, verseIndex: ${verseIndex}.`)
-
             /**
              * If playing a new song, pause the previously selected player
              * here and now. This ensures that only the player meant to be
