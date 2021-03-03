@@ -4,8 +4,8 @@
 
 # TODO
 * dispatchPlay checks for player canPlayThrough. Does this account for logue?
-* Confirm that quickly navigating through songs is not a problem. (Seems fine so far, other than AbortError message.)
 * Weird time flash in song banner when selecting verse while song is playing.
+    * Instead of setting state, use ref?
 * Filmstrip transition is weird when selecting verse while song is playing.
 
 * Is single mp3 needed to solve these potential problems?

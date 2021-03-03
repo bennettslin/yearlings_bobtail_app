@@ -5085,6 +5085,6 @@ export default [
     },
     {
         taskName: `Audio fix.`,
-        workedHours: 29,
+        workedHours: 30,
     },
 ]

@@ -1,6 +1,6 @@
 // Manager for individual audio player.
 import React, {
-    forwardRef, useEffect, useImperativeHandle, useRef, useState,
+    forwardRef, useContext, useEffect, useImperativeHandle, useRef, useState,
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
@@ -9,6 +9,7 @@ import {
     logPlayPromiseFailure,
     getShouldDispatchIsPlaying,
 } from './helper'
+import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import AudioPlayerElement from '../Element'
 import { updateIsPlaying } from '../../../redux/audio/action'
 import { getMapIsSongLyric } from '../../../redux/lyric/selector'
@@ -17,6 +18,7 @@ import { updateErrorMessage } from '../../../redux/error/action'
 
 const PlayerManager = forwardRef(({ songIndex }, ref) => {
     const
+        { setCurrentPlayerTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         audioPlayer = useRef(),
         isSongLyric = useSelector(getMapIsSongLyric(songIndex)),
@@ -102,12 +104,29 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
         }
     }
 
+    const onPlayerListen = currentTime => {
+        // Verify that audio player is current before setting current time.
+        if (isSongSelected && isSongLyric) {
+            setCurrentPlayerTime(currentTime)
+            return true
+        } else {
+            logError(
+                `Player ${songIndex} is no longer the current player!`,
+                {
+                    action: 'playCurrent',
+                    label: `song: ${songIndex}, time: ${currentTime}`,
+                },
+            )
+            return false
+        }
+    }
+
     const onPlayerLoaded = () => setIsLoadedToPromise(true)
 
     const onPlayerError = () => dispatchIsPlayingAfterPromise(false)
 
     useEffect(() => {
-        // Ensure that player only plays once it's the lyric song.
+        // Ensure that player only promises to play once it's the lyric song.
         if (isSongLyric && isLoadedToPromise) {
             promiseToPlay()
         }
@@ -123,6 +142,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
             {...{
                 ref: audioPlayer,
                 songIndex,
+                onPlayerListen,
                 onPlayerLoaded,
                 onPlayerError,
             }}

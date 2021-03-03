@@ -1,6 +1,6 @@
 // Component for individual audio element.
 import React, {
-    forwardRef, useContext, useImperativeHandle, useRef, useState,
+    forwardRef, useImperativeHandle, useRef, useState,
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
@@ -9,7 +9,6 @@ import SongDispatcher from '../../../dispatchers/Song'
 import VerseDispatcher from '../../../dispatchers/Verse'
 import { getMp3ForSong } from '../../../api/mp3'
 import { getStartTimeForVerse } from '../../../api/album/time'
-import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 import { getMapPlayerCanPlayThrough } from '../../../redux/players/selector'
@@ -19,11 +18,11 @@ import { AUDIO_OPTIONS, CONTINUE } from '../../../constants/options'
 
 const AudioPlayerElement = forwardRef(({
     songIndex,
+    onPlayerListen,
     onPlayerLoaded,
     onPlayerError,
 }, ref) => {
     const
-        { setCurrentPlayerTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         audioPlayerElement = useRef(),
         dispatchSong = useRef(),
@@ -104,8 +103,12 @@ const AudioPlayerElement = forwardRef(({
     }
 
     const onListen = currentTime => {
-        // Update current player time displayed in song banner.
-        setCurrentPlayerTime(currentTime)
+        // Verify with player manager that audio player is current.
+        if (!onPlayerListen(currentTime)) {
+            // Audio player is no longer current and may not continue.
+            pause()
+            return
+        }
 
         const currentVerseIndex = getVerseForTimeFromListen({
             songIndex,
@@ -179,6 +182,7 @@ const AudioPlayerElement = forwardRef(({
 
 AudioPlayerElement.propTypes = {
     songIndex: PropTypes.number.isRequired,
+    onPlayerListen: PropTypes.func.isRequired,
     onPlayerLoaded: PropTypes.func.isRequired,
     onPlayerError: PropTypes.func.isRequired,
 }
