@@ -7,7 +7,7 @@ import { updateIsAnchorMoused } from '../../../../redux/hover/action'
 import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
 import WikiDispatcher from '../../../../dispatchers/Wiki'
 import Anchor from '../../../Anchor'
-import { REFERENCE_BIT } from '../../../../constants/dots'
+import { REFERENCE_BIT } from '../../../../helpers/dot'
 import { ANCHOR_SCROLL } from '../../../../constants/scroll'
 import {
     mapIsAccessedIndexedAnchorShown,

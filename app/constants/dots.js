@@ -32,15 +32,10 @@ export const DOT_DESCRIPTIONS = {
     [OBSERVATION]: 'Just my two cents.',
     [PUN]: 'Both the "literary" and "bad" variety.',
     [REFERENCE]: 'Link to a Wikipedia page.',
-    [WORMHOLE]: 'Portal to another song.',
     [SONGCRAFT]: 'How the music was made.',
+    [WORMHOLE]: 'Portal to another song.',
     [AFTERWORD]: 'My life since then.',
 }
-
-// Hard-coded because it fails staging otherwise. Haven't investigated why.
-export const INITIAL_DOTS_BIT = 7
-export const REFERENCE_BIT = 16
-export const WORMHOLE_BIT = 32
 
 export const EMPTY_DOT_KEYS = getObjectFromBit({
     keysList: ORDERED_DOT_KEYS,

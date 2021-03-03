@@ -1,7 +1,6 @@
 import { getSong } from './songs'
-import { getDotKeysFromBit } from '../../helpers/dot'
+import { getDotKeysFromBit, WORMHOLE_BIT } from '../../helpers/dot'
 import { getArrayOfLength } from '../../helpers/general'
-import { WORMHOLE_BIT } from '../../constants/dots'
 
 export const getAnnotationCardIndices = (songIndex, annotationIndex) => {
     const { annotationCardsDescriptionsList } = getSong(songIndex)

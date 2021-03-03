@@ -3,7 +3,9 @@ import {
     getObjectFromBit,
     getBitFromObject,
 } from './bit'
-import { ORDERED_DOT_KEYS } from '../constants/dots'
+import {
+    BACKSTORY, NARRATIVE, OBSERVATION, ORDERED_DOT_KEYS, REFERENCE, WORMHOLE,
+} from '../constants/dots'
 
 export const getDotKeysFromBit = bit => (
     getObjectFromBit({
@@ -17,6 +19,18 @@ export const getDotsBitFromKeys = dotKeys => (
         trueFalseObject: dotKeys,
     }) : null
 )
+
+export const INITIAL_DOTS_BIT = getDotsBitFromKeys({
+    [BACKSTORY]: true,
+    [NARRATIVE]: true,
+    [OBSERVATION]: true,
+})
+export const REFERENCE_BIT = getDotsBitFromKeys({
+    [REFERENCE]: true,
+})
+export const WORMHOLE_BIT = getDotsBitFromKeys({
+    [WORMHOLE]: true,
+})
 
 export const getDotsBitHasKey = (dotsBit, key) => (
     Boolean(getDotKeysFromBit(dotsBit)[key])

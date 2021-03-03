@@ -5,10 +5,8 @@ import { getValidAnnotationIndex } from '../../api/album/annotations'
 import { getValidPitchSegmentIndex } from '../../api/pitch/segments'
 import { getArrayOfLength } from '../../helpers/general'
 import { getWindow } from '../browser'
-import {
-    INITIAL_DOTS_BIT,
-    FULL_DOTS_BIT,
-} from '../../constants/dots'
+import { INITIAL_DOTS_BIT } from '../../helpers/dot'
+import { FULL_DOTS_BIT } from '../../constants/dots'
 import {
     SHOWN,
     AUDIO_OPTIONS,
