@@ -13,27 +13,16 @@ import AudioPlayerElement from '../Element'
 import { updateIsPlaying } from '../../../redux/audio/action'
 import { getMapIsSongLyric } from '../../../redux/lyric/selector'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
-import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 import { updateErrorMessage } from '../../../redux/error/action'
-import { getMapPlayerCanPlayThrough } from '../../../redux/players/selector'
 
-const PlayerManager = forwardRef(({
-    songIndex,
-    // handleSongEnd,
-    // updateCurrentTime,
-
-}, ref) => {
+const PlayerManager = forwardRef(({ songIndex }, ref) => {
     const
         dispatch = useDispatch(),
         audioPlayer = useRef(),
-        playerCanPlayThrough = useSelector(
-            getMapPlayerCanPlayThrough(songIndex),
-        ),
         isSongLyric = useSelector(getMapIsSongLyric(songIndex)),
         isSongSelected = useSelector(getMapIsSongSelected(songIndex)),
         [isLoadedToPromise, setIsLoadedToPromise] = useState(false),
-        [isPromisingToPlay, setIsPromisingToPlay] = useState(false),
-        [playFromTime, setPlayFromTime] = useState(0)
+        [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
     const _dispatchIsPlayingAfterPromise = didPromiseSucceed => {
         if (getShouldDispatchAfterPlayPromise({
@@ -93,7 +82,7 @@ const PlayerManager = forwardRef(({
     }
 
     // Player only plays through direct user interaction.
-    const askToPlay = time => {
+    const askToPlay = ({ verseIndex }) => {
         // If we're already preparing to play, just return.
         if (isLoadedToPromise || isPromisingToPlay) {
             logPlayer(`Ignoring subsequent ask to play ${songIndex}.`)
@@ -101,10 +90,10 @@ const PlayerManager = forwardRef(({
         }
 
         /**
-         * Set this in state for now, because current time of player will reset
-         * after load.
+         * Update audio player's current verse. Audio player knows how and when
+         * to set its current time from the current verse.
          */
-        setPlayFromTime(time)
+        audioPlayer.current.setCurrentVerse(verseIndex)
 
         // Only play if currently paused.
         if (audioPlayer.current.getIsPaused()) {
@@ -115,10 +104,6 @@ const PlayerManager = forwardRef(({
              */
             audioPlayer.current.load()
             setIsLoadedToPromise(true)
-
-        // If currently playing, just set new time.
-        } else {
-            audioPlayer.current.setCurrentTime(time, true)
         }
     }
 
@@ -126,18 +111,6 @@ const PlayerManager = forwardRef(({
         audioPlayer.current.pause()
         if (nextIsPaused) {
             dispatch(updateIsPlaying(false))
-        }
-    }
-
-    const onLoadedMetadata = () => {
-        // This is being called upon load before promise to play.
-        if (playerCanPlayThrough) {
-            // Set current time of player to time passed by audio manager.
-            audioPlayer.current.setCurrentTime(playFromTime)
-
-        // This is being called upon initial load.
-        } else {
-            dispatch(updateCanPlayThroughForSong(songIndex))
         }
     }
 
@@ -158,7 +131,6 @@ const PlayerManager = forwardRef(({
             {...{
                 ref: audioPlayer,
                 songIndex,
-                onLoadedMetadata,
             }}
         />
     )
@@ -166,8 +138,6 @@ const PlayerManager = forwardRef(({
 
 PlayerManager.propTypes = {
     songIndex: PropTypes.number.isRequired,
-    // handleSongEnd: PropTypes.func.isRequired,
-    // updateCurrentTime: PropTypes.func.isRequired,
 }
 
 const PlayerManagerContainer = forwardRef((props, ref) => {

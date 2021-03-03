@@ -4,11 +4,8 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import getDidMountHoc from '../../components/DidMountHoc'
-import SongDispatcher from '../../dispatchers/Song'
-import VerseDispatcher from '../../dispatchers/Verse'
 import AudioPlayer from './Player'
 import { getSongNotLogueIndices } from '../../api/album/songs'
-import { getStartTimeForVerse } from '../../api/album/time'
 import { mapIsPlaying } from '../../redux/audio/selector'
 import {
     mapSelectedSongIndex,
@@ -19,81 +16,9 @@ import { logPlayer } from '../../utils/logger'
 const AudioManager = forwardRef(({ didMount }, ref) => {
     const
         playerManagers = useRef(),
-        dispatchSong = useRef(),
-        dispatchVerse = useRef(),
         isPlaying = useSelector(mapIsPlaying),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex)
-
-    // const handleSongEnd = () => {
-    //     const nextSongIndex = getNextSongIndex(
-    //         selectedSongIndex,
-    //         audioOptionIndex,
-    //     )
-
-    //     // If repeating the song, just reset time and verse.
-    //     if (nextSongIndex === selectedSongIndex) {
-    //         dispatchVerse.current({ fromPlayer: true })
-    //         return true
-
-    //     } else {
-    //         dispatchSong.current({
-    //             selectedSongIndex: nextSongIndex,
-    //         })
-    //         return false
-    //     }
-    // }
-
-    // const updateCurrentTime = currentTime => {
-    //     const {
-    //         isTimeInSelectedVerse,
-    //         isTimeInNextVerse,
-    //         nextVerseIndex,
-    //         isEndOfSong,
-    //     } = getTimeInVerseStatus({
-    //         currentTime,
-    //         selectedSongIndex,
-    //         selectedVerseIndex,
-    //     })
-
-    //     if (isTimeInSelectedVerse || isTimeInNextVerse) {
-    //         // Update time if in selected verse or next verse.
-    //         setSelectedPlayerTime(currentTime)
-
-    //         // If in next verse, also select next verse.
-    //         if (isTimeInNextVerse) {
-    //             dispatchVerse.current({
-    //                 verseIndex: nextVerseIndex,
-    //                 fromPlayer: true,
-    //             })
-    //         }
-
-    //     } else {
-    //         /**
-    //          * If time is after current verse but there is no next verse, then
-    //          * this should mean we have reached the end of the song. If this is
-    //          * not reflected by the time in verse status, then something weird
-    //          * has happened. This should never get called, so fix the code if
-    //          * it does!
-    //          */
-    //         if (!isEndOfSong) {
-    //             logError(
-    //                 `Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`,
-    //                 {
-    //                     action: 'sync',
-    //                     label: `song: ${selectedSongIndex}, verse: ${selectedVerseIndex}, time: ${currentTime}`,
-    //                 },
-    //             )
-    //         }
-
-    //         return {
-    //             songEnded: true,
-    //             doRepeat: handleSongEnd(),
-    //         }
-    //     }
-
-    //     return false
-    // }
 
     const getPlayerManager = songIndex => (
         playerManagers.current[songIndex] ||
@@ -117,18 +42,18 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
 
             /**
              * If playing a new song, pause the previously selected player
-             * here. This ensures that only the player meant to be play is ever
-             * playing.
+             * here and now. This ensures that only the player meant to be
+             * played is ever playing.
              */
             if (selectedSongIndex !== songIndex) {
                 getPlayerManager(selectedSongIndex).askToPause()
             }
 
-            // Play the current player.
-            getPlayerManager(songIndex).askToPlay(getStartTimeForVerse(
-                songIndex,
-                verseIndex,
-            ))
+            /**
+             * Play the current player. If already playing, it will just set
+             * the new verse.
+             */
+            getPlayerManager(songIndex).askToPlay({ verseIndex })
 
         // If being called to pause...
         } else {
@@ -155,8 +80,6 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
                     }}
                 />
             ))}
-            <SongDispatcher {...{ ref: dispatchSong }} />
-            <VerseDispatcher {...{ ref: dispatchVerse }} />
         </div>
     )
 })

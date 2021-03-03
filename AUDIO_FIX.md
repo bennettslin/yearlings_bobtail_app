@@ -8,9 +8,9 @@
     * Weird time flash in song banner when selecting verse while song is playing.
     * Filmstrip transition is weird when selecting verse while song is playing.
     * Figure out exact division between player manager and element.
+    * Use "current" nomenclature.
 
 * Player element
-    * Should just keep track of its own verse index and start time.
     * Handles selecting next verse within same song.
     * Handles selecting next song.
         * Should know its own end time.
