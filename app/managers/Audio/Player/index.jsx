@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import {
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
-    getShouldDispatchAfterPlayPromise,
+    getShouldDispatchIsPlaying,
 } from './helper'
 import AudioPlayerElement from '../Element'
 import { updateIsPlaying } from '../../../redux/audio/action'
@@ -24,14 +24,14 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
         [isLoadedToPromise, setIsLoadedToPromise] = useState(false),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
 
-    const _dispatchIsPlayingAfterPromise = didPromiseSucceed => {
-        if (getShouldDispatchAfterPlayPromise({
-            didPromiseSucceed,
+    const dispatchIsPlayingAfterPromise = (nextIsPlaying = false) => {
+        if (getShouldDispatchIsPlaying({
+            nextIsPlaying,
             isSongSelected,
         })) {
             // TODO: Temp log.
-            logPlayer(`AudioPlayer ${songIndex} updated isPlaying to ${didPromiseSucceed ? 'true' : 'false'}.`)
-            dispatch(updateIsPlaying(didPromiseSucceed))
+            logPlayer(`AudioPlayer ${songIndex} updated isPlaying to ${nextIsPlaying ? 'true' : 'false'}.`)
+            dispatch(updateIsPlaying(nextIsPlaying))
         }
     }
 
@@ -45,7 +45,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
          * return of a promise, and is already playing the audio element.
          */
         if (playPromise === undefined) {
-            _dispatchIsPlayingAfterPromise(true)
+            dispatchIsPlayingAfterPromise(true)
 
         } else {
             setIsPromisingToPlay(true)
@@ -56,7 +56,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
                         songIndex,
                         timePromisedToPlay,
                     })
-                    _dispatchIsPlayingAfterPromise(true)
+                    dispatchIsPlayingAfterPromise(true)
                 })
                 .catch(error => {
                     const errorMessage = `${error.name}: ${error.message}`
@@ -66,7 +66,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
                         timePromisedToPlay,
                     })
                     dispatch(updateErrorMessage(errorMessage))
-                    _dispatchIsPlayingAfterPromise(false)
+                    dispatchIsPlayingAfterPromise()
                 })
                 .finally(() => {
                     setIsPromisingToPlay(false)
@@ -131,6 +131,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
             {...{
                 ref: audioPlayer,
                 songIndex,
+                onError: dispatchIsPlayingAfterPromise,
             }}
         />
     )

@@ -9,6 +9,7 @@
     * Filmstrip transition is weird when selecting verse while song is playing.
     * Figure out exact division between player manager and element.
     * Use "current" nomenclature.
+        * For selectedPlayerTime
 
 * Player element
     * Handles selecting next verse within same song.

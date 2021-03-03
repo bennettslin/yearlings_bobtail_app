@@ -13,8 +13,9 @@ import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 import { getMapPlayerCanPlayThrough } from '../../../redux/players/selector'
+import { getVerseForTimeFromListen } from './helper'
 
-const AudioPlayerElement = forwardRef(({ songIndex }, ref) => {
+const AudioPlayerElement = forwardRef(({ songIndex, onError }, ref) => {
     const
         { setSelectedPlayerTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
@@ -24,6 +25,8 @@ const AudioPlayerElement = forwardRef(({ songIndex }, ref) => {
         playerCanPlayThrough = useSelector(
             getMapPlayerCanPlayThrough(songIndex),
         )
+
+    const getCurrentVerse = () => audioPlayerElement.current.verseIndex
 
     const getIsPaused = () => audioPlayerElement.current.paused
 
@@ -46,15 +49,16 @@ const AudioPlayerElement = forwardRef(({ songIndex }, ref) => {
         logPlayer(`Player ${songIndex} ${uponLoad ? 'loaded at' : 'updated to'} ${getFormattedTime(audioPlayerElement.current.currentTime)}.`)
     }
 
-    const setCurrentVerse = verseIndex => {
+    const setCurrentVerse = (verseIndex, fromListen) => {
         audioPlayerElement.current.verseIndex = verseIndex
-        logPlayer(`Player ${songIndex} set to verse ${verseIndex}.`)
+
+        logPlayer(`Player ${songIndex} set to verse ${verseIndex} ${fromListen ? 'from listen' : 'upon load'}.`)
 
         /**
          * If player is already playing, set current time here and now.
          * Otherwise, wait for player to load first.
          */
-        if (!getIsPaused()) {
+        if (!getIsPaused() && !fromListen) {
             setCurrentTime()
         }
     }
@@ -67,29 +71,40 @@ const AudioPlayerElement = forwardRef(({ songIndex }, ref) => {
 
         // This is being called upon initial load.
         } else {
+            /**
+             * This was originally dispatched from onCanPlayThrough, but
+             * Firefox and Safari don't support it.
+             */
             dispatch(updateCanPlayThroughForSong(songIndex))
         }
     }
 
-    const onListen = time => {
-        // Update selected player time displayed in song banner.
-        setSelectedPlayerTime(time)
+    const onListen = currentTime => {
+        // Update current player time displayed in song banner.
+        setSelectedPlayerTime(currentTime)
 
-        // if (isSongSelected) {
-        //     // If this returns true, repeat song.
-        //     const {
-        //         songEnded,
-        //         doRepeat,
-        //     } = updateCurrentTime(time)
+        const nextVerseIndex = getVerseForTimeFromListen({
+            currentTime,
+            songIndex,
+            verseIndex: getCurrentVerse(),
+        })
 
-        //     if (songEnded) {
-        //         logPlayer(`Player ${songIndex} reached end of final verse.`)
-        //     }
+        // Player is out of sync, so pause and tell player manager.
+        if (nextVerseIndex === null) {
+            pause()
+            onError()
 
-        //     if (doRepeat) {
-        //         askToPlay(0)
-        //     }
-        // }
+        // It's now the next verse.
+        } else if (nextVerseIndex > getCurrentVerse()) {
+            // Update the player's current verse.
+            setCurrentVerse(nextVerseIndex, true)
+
+            // Dispatch the next verse.
+            dispatchVerse.current({
+                verseIndex: nextVerseIndex,
+                fromPlayer: true,
+            })
+        }
     }
 
     const onEnded = () => {
@@ -120,11 +135,6 @@ const AudioPlayerElement = forwardRef(({ songIndex }, ref) => {
                 {...{
                     ref: setRef,
                     listenInterval: 50,
-
-                    /**
-                     * This was originally onCanPlayThrough, but Firefox and Safari
-                     * don't support it.
-                     */
                     onLoadedMetadata,
                     onListen,
                     onEnded,
@@ -139,6 +149,7 @@ const AudioPlayerElement = forwardRef(({ songIndex }, ref) => {
 
 AudioPlayerElement.propTypes = {
     songIndex: PropTypes.number.isRequired,
+    onError: PropTypes.func.isRequired,
 }
 
 export default AudioPlayerElement
@@ -160,55 +171,4 @@ export default AudioPlayerElement
 //         })
 //         return false
 //     }
-// }
-
-// const updateCurrentTime = currentTime => {
-//     const {
-//         isTimeInSelectedVerse,
-//         isTimeInNextVerse,
-//         nextVerseIndex,
-//         isEndOfSong,
-//     } = getTimeInVerseStatus({
-//         currentTime,
-//         selectedSongIndex,
-//         selectedVerseIndex,
-//     })
-
-//     if (isTimeInSelectedVerse || isTimeInNextVerse) {
-//         // Update time if in selected verse or next verse.
-//         setSelectedPlayerTime(currentTime)
-
-//         // If in next verse, also select next verse.
-//         if (isTimeInNextVerse) {
-//             dispatchVerse.current({
-//                 verseIndex: nextVerseIndex,
-//                 fromPlayer: true,
-//             })
-//         }
-
-//     } else {
-//         /**
-//          * If time is after current verse but there is no next verse, then
-//          * this should mean we have reached the end of the song. If this is
-//          * not reflected by the time in verse status, then something weird
-//          * has happened. This should never get called, so fix the code if
-//          * it does!
-//          */
-//         if (!isEndOfSong) {
-//             logError(
-//                 `Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`,
-//                 {
-//                     action: 'sync',
-//                     label: `song: ${selectedSongIndex}, verse: ${selectedVerseIndex}, time: ${currentTime}`,
-//                 },
-//             )
-//         }
-
-//         return {
-//             songEnded: true,
-//             doRepeat: handleSongEnd(),
-//         }
-//     }
-
-//     return false
 // }
