@@ -81,7 +81,6 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
         setIsLoadedToPromise(false)
     }
 
-    // Player only plays through direct user interaction.
     const askToPlay = currentVerseIndex => {
         // If we're already preparing to play, just return.
         if (isLoadedToPromise || isPromisingToPlay) {
