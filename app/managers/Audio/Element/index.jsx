@@ -1,6 +1,6 @@
 // Component for individual audio element.
 import React, {
-    forwardRef, useContext, useImperativeHandle, useRef,
+    forwardRef, useContext, useImperativeHandle, useRef, useState,
 } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
@@ -14,12 +14,13 @@ import { getFormattedTime } from '../../../helpers/format'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 import { getMapPlayerCanPlayThrough } from '../../../redux/players/selector'
 import { mapAudioOptionIndex } from '../../../redux/session/selector'
-import { getVerseForTimeFromListen } from './helper'
+import { getVerseForTimeFromListen, logLoaded } from './helper'
 import { AUDIO_OPTIONS, CONTINUE } from '../../../constants/options'
 
 const AudioPlayerElement = forwardRef(({
     songIndex,
-    onSyncError,
+    onPlayerLoaded,
+    onPlayerError,
 }, ref) => {
     const
         { setSelectedPlayerTime } = useContext(AudioPlayerContext),
@@ -30,20 +31,31 @@ const AudioPlayerElement = forwardRef(({
         playerCanPlayThrough = useSelector(
             getMapPlayerCanPlayThrough(songIndex),
         ),
-        audioOptionIndex = useSelector(mapAudioOptionIndex)
+        audioOptionIndex = useSelector(mapAudioOptionIndex),
+        [loadStartTime, setLoadStartTime] = useState(null)
 
     const getCurrentVerse = () => audioPlayerElement.current.verseIndex
 
     const getIsPaused = () => audioPlayerElement.current.paused
 
-    const load = () => audioPlayerElement.current.load()
+    const load = verseIndex => {
+        setCurrentVerse(verseIndex)
+
+        // Only load if needed.
+        if (getIsPaused()) {
+            setLoadStartTime(Date.now())
+            audioPlayerElement.current.load()
+            logPlayer(`Player ${songIndex} loading\u2026`)
+        }
+    }
 
     const play = () => {
-        logPlayer(`Promising to play ${songIndex}\u2026`)
+        logPlayer(`Player ${songIndex} promising to play\u2026`)
         return audioPlayerElement.current.play()
     }
 
     const pause = () => {
+        // Only pause if needed.
         if (!getIsPaused()) {
             audioPlayerElement.current.pause()
             logPlayer(`Player ${songIndex} paused.`)
@@ -52,14 +64,11 @@ const AudioPlayerElement = forwardRef(({
 
     const setCurrentTime = uponLoad => {
         audioPlayerElement.current.currentTime = getStartTimeForVerse(songIndex, audioPlayerElement.current.verseIndex)
-        logPlayer(`Player ${songIndex} ${uponLoad ? 'loaded at' : 'updated to'} ${getFormattedTime(audioPlayerElement.current.currentTime)}.`)
+        logPlayer(`Player ${songIndex} ${uponLoad ? 'set' : 'updated'} to ${getFormattedTime(audioPlayerElement.current.currentTime)}.`)
     }
 
     const setCurrentVerse = (verseIndex, fromListen) => {
         audioPlayerElement.current.verseIndex = verseIndex
-
-        logPlayer(`Player ${songIndex} set to verse ${verseIndex} ${fromListen ? 'from listen' : 'upon load'}.`)
-
         /**
          * If player is already playing, set current time here and now.
          * Otherwise, wait for player to load first.
@@ -72,8 +81,17 @@ const AudioPlayerElement = forwardRef(({
     const onLoadedMetadata = () => {
         // This is being called upon load before promise to play.
         if (playerCanPlayThrough) {
+            logLoaded({
+                songIndex,
+                loadStartTime,
+            })
+            setLoadStartTime(null)
+
             // Set current time of player, since it was reset by load.
             setCurrentTime(true)
+
+            // Tell player manager it can now promise to play.
+            onPlayerLoaded()
 
         // This is being called upon initial load.
         } else {
@@ -98,7 +116,7 @@ const AudioPlayerElement = forwardRef(({
         // Player is out of sync, so pause and tell player manager.
         if (nextVerseIndex === null) {
             pause()
-            onSyncError()
+            onPlayerError()
 
         // It's now the next verse.
         } else if (nextVerseIndex > getCurrentVerse()) {
@@ -136,11 +154,9 @@ const AudioPlayerElement = forwardRef(({
     }
 
     useImperativeHandle(ref, () => ({
-        getIsPaused,
         load,
         play,
         pause,
-        setCurrentVerse,
     }))
 
     return (
@@ -163,7 +179,8 @@ const AudioPlayerElement = forwardRef(({
 
 AudioPlayerElement.propTypes = {
     songIndex: PropTypes.number.isRequired,
-    onSyncError: PropTypes.func.isRequired,
+    onPlayerLoaded: PropTypes.func.isRequired,
+    onPlayerError: PropTypes.func.isRequired,
 }
 
 export default AudioPlayerElement

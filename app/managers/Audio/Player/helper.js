@@ -17,12 +17,12 @@ export const getShouldDispatchIsPlaying = ({
 
 export const logPlayPromiseSuccess = ({
     songIndex,
-    timePromisedToPlay,
+    promiseStartTime,
 }) => {
-    const timeDifference = getTimeDifference(timePromisedToPlay)
+    const timeDifference = getTimeDifference(promiseStartTime)
 
     logSuccess(
-        `Promise to play ${songIndex} succeeded after ${timeDifference}s.`,
+        `Player ${songIndex} promised to play after ${timeDifference}s.`,
         {
             action: 'playPromise',
             label: songIndex,
@@ -34,9 +34,9 @@ export const logPlayPromiseSuccess = ({
 export const logPlayPromiseFailure = ({
     songIndex,
     errorMessage,
-    timePromisedToPlay,
+    promiseStartTime,
 }) => {
-    const timeDifference = getTimeDifference(timePromisedToPlay)
+    const timeDifference = getTimeDifference(promiseStartTime)
 
     logError(
         `Promise to play ${songIndex} failed after ${timeDifference}s: ${errorMessage}`,

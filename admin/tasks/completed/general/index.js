@@ -5083,4 +5083,8 @@ export default [
         taskName: `Update Bobtail Yearlings website analytics and builds.`,
         workedHours: 8,
     },
+    {
+        taskName: `Audio fix.`,
+        workedHours: 29,
+    },
 ]

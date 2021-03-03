@@ -4,6 +4,7 @@ import {
 } from '../../../api/album/time'
 import { getVerseCountForSong } from '../../../api/album/verses'
 import { getFormattedTime } from '../../../helpers/format'
+import { getTimeDifference } from '../../../utils/logger/helpers/time'
 
 export const getVerseForTimeFromListen = ({
     currentTime,
@@ -39,4 +40,19 @@ export const getVerseForTimeFromListen = ({
                 verseIndex
         )
     }
+}
+
+export const logLoaded = ({
+    songIndex,
+    loadStartTime,
+}) => {
+    const timeDifference = getTimeDifference(loadStartTime)
+    logSuccess(
+        `Player ${songIndex} loaded after ${timeDifference}s.`,
+        {
+            action: 'playLoad',
+            label: songIndex,
+            value: timeDifference * 1000,
+        },
+    )
 }

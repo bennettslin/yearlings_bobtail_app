@@ -36,7 +36,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
     const promiseToPlay = () => {
         const
             playPromise = audioPlayer.current.play(),
-            timePromisedToPlay = Date.now()
+            promiseStartTime = Date.now()
 
         /**
          * If no promise is returned, then the browser does not support the
@@ -52,7 +52,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
                 .then(() => {
                     logPlayPromiseSuccess({
                         songIndex,
-                        timePromisedToPlay,
+                        promiseStartTime,
                     })
                     dispatchIsPlayingAfterPromise(true)
                 })
@@ -61,7 +61,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
                     logPlayPromiseFailure({
                         songIndex,
                         errorMessage,
-                        timePromisedToPlay,
+                        promiseStartTime,
                     })
                     dispatch(updateErrorMessage(errorMessage))
                     dispatchIsPlayingAfterPromise()
@@ -88,21 +88,11 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
         }
 
         /**
-         * Update audio player's current verse. Audio player knows how and when
-         * to set its current time from the current verse.
+         * This registers the user gesture token. This is needed by Safari,
+         * and possibly other browsers in the future, for their measures to
+         * prevent autoplay.
          */
-        audioPlayer.current.setCurrentVerse(verseIndex)
-
-        // Only play if currently paused.
-        if (audioPlayer.current.getIsPaused()) {
-            /**
-             * This registers the user gesture token. This is needed by Safari,
-             * and possibly other browsers in the future, for their measures to
-             * prevent autoplay.
-             */
-            audioPlayer.current.load()
-            setIsLoadedToPromise(true)
-        }
+        audioPlayer.current.load(verseIndex)
     }
 
     const askToPause = ({ nextIsPaused } = {}) => {
@@ -111,6 +101,10 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
             dispatch(updateIsPlaying(false))
         }
     }
+
+    const onPlayerLoaded = () => setIsLoadedToPromise(true)
+
+    const onPlayerError = () => dispatchIsPlayingAfterPromise(false)
 
     useEffect(() => {
         // Ensure that player only plays once it's the lyric song.
@@ -129,7 +123,8 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
             {...{
                 ref: audioPlayer,
                 songIndex,
-                onSyncError: dispatchIsPlayingAfterPromise,
+                onPlayerLoaded,
+                onPlayerError,
             }}
         />
     )
