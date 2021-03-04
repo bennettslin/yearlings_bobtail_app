@@ -35,5 +35,5 @@ export default [
     score_15,
     score_16,
     score_17,
-    score_18
+    score_18,
 ]

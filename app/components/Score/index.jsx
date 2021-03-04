@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import Iframe from '../../modules/Iframe'
 import { mapLyricSongIndex } from '../../redux/lyric/selector'
 import { mapIsScoreShown } from '../../redux/toggle/selector'
-import { getSongScore } from './helper'
+import { getSongScore } from '../../api/score'
 
 const Score = () => {
     const

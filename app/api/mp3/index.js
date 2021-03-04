@@ -1,5 +1,4 @@
-import mp3s from '../../../assets/mp3s'
+import mp3 from '../../../assets/mp3s'
 
-export const getMp3ForSong = songIndex => (
-    mp3s[songIndex - 1]
-)
+// Songs are now just in a single mp3.
+export const getMp3ForSong = () => mp3
