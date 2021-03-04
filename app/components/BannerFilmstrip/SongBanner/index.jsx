@@ -59,7 +59,12 @@ const SongBanner = () => {
     }
 
     const onMouseLeave = () => {
-        dispatch(updateBannerStore())
+        /**
+         * This timeout is needed to prevent the display time from briefly
+         * reverting back to the previous time when a new verse is selected
+         * from the banner but not yet updated in the store.
+         */
+        setTimeout(() => dispatch(updateBannerStore()), 0)
     }
 
     const _updateBannerHoverStatus = e => {

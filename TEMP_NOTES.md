@@ -1,4 +1,5 @@
 # TODO:
+* Clarify logState labels?
 * Fix preteen Bennett enraged left sleeve
 * Pass indices in gatsby browser?
 * Tips and audio options send analytics with desktop to mobile resize?
