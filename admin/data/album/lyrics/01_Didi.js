@@ -117,7 +117,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 11,
+                    time: 11.5,
                     lyricCentre: {
                         isItalic: true,
                         lyric: `(whistles)`,
@@ -131,7 +131,7 @@ export default {
             },
             mainVerses: [
                 {
-                    time: 17,
+                    time: 17.2,
                     lyric: `Didi left the house this morning`,
                 },
                 {

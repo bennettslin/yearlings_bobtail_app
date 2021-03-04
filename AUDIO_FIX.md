@@ -9,6 +9,11 @@
 * Tracker transition is weird when selecting verse while song is playing.
     * Need something similar to canTransitionAfterSongChange.
 
-* Is single mp3 needed to solve these potential problems?
-    * Can audio repeat?
-    * Can audio automatically play next song?
+# Todo today
+* Rip single mp3 from CD
+
+# Work to have shared mp3 file for all songs.
+* Single player for all songs.
+* Audio player knows to start song at correct time.
+* Audio player knows to trigger song continue.
+* Audio player knows to trigger song repeat.
