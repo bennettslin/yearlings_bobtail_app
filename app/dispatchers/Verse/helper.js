@@ -2,14 +2,17 @@ export const logVerseSelect = ({
     selectedSongIndex,
     verseIndex,
     fromPlayerListen,
-    fromPlayerRepeat,
+    fromPlayerEndRepeat,
 
 }) => {
     let action = 'verse'
     if (fromPlayerListen) {
-        action = 'playerListen'
-    } else if (fromPlayerRepeat) {
-        action = 'playerRepeat'
+        action = verseIndex === 0 ?
+            'playerRepeat' :
+            'playerListen'
+
+    } else if (fromPlayerEndRepeat) {
+        action = 'playerEndRepeat'
     }
 
     logSelect({

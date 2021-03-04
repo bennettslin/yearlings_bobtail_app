@@ -1,48 +1,26 @@
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
 
-export const getShouldDispatchIsPlaying = ({
-    currentIsPlaying,
-    isSongSelected,
-}) => (
-    // A promise can succeed only from the selected player.
-    currentIsPlaying ||
-    (
-        /**
-         * A promise can fail from any player, so only dispatch if it's the
-         * selected player.
-         */
-        !currentIsPlaying && isSongSelected
-    )
-)
-
-export const logPlayPromiseSuccess = ({
-    songIndex,
-    promiseStartTime,
-}) => {
+export const logPlayPromiseSuccess = promiseStartTime => {
     const timeDifference = getTimeDifference(promiseStartTime)
 
     logSuccess(
-        `Player ${songIndex} promised to play after ${timeDifference}s.`,
+        `Player promised to play after ${timeDifference}s.`,
         {
-            action: 'playPromise',
-            label: songIndex,
+            action: 'player',
+            label: 'play',
             value: timeDifference * 1000,
         },
     )
 }
 
-export const logPlayPromiseFailure = ({
-    songIndex,
-    errorMessage,
-    promiseStartTime,
-}) => {
+export const logPlayPromiseFailure = (promiseStartTime, errorMessage) => {
     const timeDifference = getTimeDifference(promiseStartTime)
 
     logError(
-        `Promise to play ${songIndex} failed after ${timeDifference}s: ${errorMessage}`,
+        `Promise to play failed after ${timeDifference}s: ${errorMessage}`,
         {
-            action: 'playPromise',
-            label: `song: ${songIndex}, ${errorMessage}`,
+            action: 'playerPromise',
+            label: errorMessage,
             value: timeDifference * 1000,
         },
     )

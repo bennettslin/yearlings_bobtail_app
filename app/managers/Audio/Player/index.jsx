@@ -1,40 +1,22 @@
 // Manager for individual audio player.
 import React, {
-    forwardRef, useContext, useEffect, useImperativeHandle, useRef, useState,
+    forwardRef, useEffect, useImperativeHandle, useRef, useState,
 } from 'react'
-import PropTypes from 'prop-types'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import {
     logPlayPromiseSuccess,
     logPlayPromiseFailure,
-    getShouldDispatchIsPlaying,
 } from './helper'
-import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import AudioPlayerElement from '../Element'
-import { getAudioTimeFromCurrentTime } from '../../../api/album/time'
 import { updateIsPlaying } from '../../../redux/audio/action'
-import { getMapIsSongLyric } from '../../../redux/lyric/selector'
-import { getMapIsSongSelected } from '../../../redux/selected/selector'
 import { updateErrorMessage } from '../../../redux/error/action'
 
-const PlayerManager = forwardRef(({ songIndex }, ref) => {
+const PlayerManager = forwardRef((props, ref) => {
     const
-        { setAudioTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         audioPlayer = useRef(),
-        isSongLyric = useSelector(getMapIsSongLyric(songIndex)),
-        isSongSelected = useSelector(getMapIsSongSelected(songIndex)),
         [isLoadedToPromise, setIsLoadedToPromise] = useState(false),
         [isPromisingToPlay, setIsPromisingToPlay] = useState(false)
-
-    const dispatchIsPlayingAfterPromise = (currentIsPlaying = false) => {
-        if (getShouldDispatchIsPlaying({
-            currentIsPlaying,
-            isSongSelected,
-        })) {
-            dispatch(updateIsPlaying(currentIsPlaying))
-        }
-    }
 
     const promiseToPlay = () => {
         const
@@ -46,28 +28,21 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
          * return of a promise, and is already playing the audio element.
          */
         if (playPromise === undefined) {
-            dispatchIsPlayingAfterPromise(true)
+            dispatch(updateIsPlaying(true))
 
         } else {
             setIsPromisingToPlay(true)
 
             playPromise
                 .then(() => {
-                    logPlayPromiseSuccess({
-                        songIndex,
-                        promiseStartTime,
-                    })
-                    dispatchIsPlayingAfterPromise(true)
+                    logPlayPromiseSuccess(promiseStartTime)
+                    dispatch(updateIsPlaying(true))
                 })
                 .catch(error => {
                     const errorMessage = `${error.name}: ${error.message}`
-                    logPlayPromiseFailure({
-                        songIndex,
-                        errorMessage,
-                        promiseStartTime,
-                    })
+                    logPlayPromiseFailure(promiseStartTime, errorMessage)
                     dispatch(updateErrorMessage(errorMessage))
-                    dispatchIsPlayingAfterPromise()
+                    dispatch(updateIsPlaying(false))
                 })
                 .finally(() => {
                     setIsPromisingToPlay(false)
@@ -82,10 +57,10 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
         setIsLoadedToPromise(false)
     }
 
-    const askToPlay = currentVerseIndex => {
+    const askToPlay = (currentSongIndex, currentVerseIndex) => {
         // If we're already preparing to play, just return.
         if (isLoadedToPromise || isPromisingToPlay) {
-            logPlayer(`Ignoring subsequent ask to play ${songIndex}.`)
+            logPlayer(`Ignoring subsequent ask to play.`)
             return
         }
 
@@ -94,7 +69,7 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
          * and possibly other browsers in the future, for their measures to
          * prevent autoplay.
          */
-        audioPlayer.current.load(currentVerseIndex)
+        audioPlayer.current.load(currentSongIndex, currentVerseIndex)
     }
 
     const askToPause = currentIsPaused => {
@@ -104,35 +79,16 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
         }
     }
 
-    const onPlayerListen = currentTime => {
-        const audioTime = getAudioTimeFromCurrentTime(songIndex, currentTime)
-
-        // Verify that audio player is current before setting current time.
-        if (isSongSelected && isSongLyric) {
-            setAudioTime(audioTime)
-            return true
-        } else {
-            logError(
-                `Player ${songIndex} is no longer the current player!`,
-                {
-                    action: 'playCurrent',
-                    label: `song: ${songIndex}, time: ${currentTime}`,
-                },
-            )
-            return false
-        }
-    }
-
     const onPlayerLoaded = () => setIsLoadedToPromise(true)
 
-    const onPlayerError = () => dispatchIsPlayingAfterPromise(false)
+    const onPlayerError = () => dispatch(updateIsPlaying(false))
 
     useEffect(() => {
-        // Ensure that player only promises to play once it's the lyric song.
-        if (isSongLyric && isLoadedToPromise) {
+        // Ensure that player only promises to play once it's loaded.
+        if (isLoadedToPromise) {
             promiseToPlay()
         }
-    }, [isSongLyric, isLoadedToPromise])
+    }, [isLoadedToPromise])
 
     useImperativeHandle(ref, () => ({
         askToPause,
@@ -143,8 +99,6 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
         <AudioPlayerElement
             {...{
                 ref: audioPlayer,
-                songIndex,
-                onPlayerListen,
                 onPlayerLoaded,
                 onPlayerError,
             }}
@@ -152,28 +106,4 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
     )
 })
 
-PlayerManager.propTypes = {
-    songIndex: PropTypes.number.isRequired,
-}
-
-const PlayerManagerContainer = forwardRef((props, ref) => {
-    const setRef = node => {
-        ref.current = ref.current || {}
-        ref.current[props.songIndex] = node
-    }
-
-    return (
-        <PlayerManager
-            {...{
-                ref: setRef,
-                ...props,
-            }}
-        />
-    )
-})
-
-PlayerManagerContainer.propTypes = {
-    songIndex: PropTypes.number.isRequired,
-}
-
-export default PlayerManagerContainer
+export default PlayerManager

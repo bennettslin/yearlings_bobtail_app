@@ -1,11 +1,10 @@
 // Manager for all audio players.
-import React, { useRef, forwardRef, useImperativeHandle } from 'react'
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 import getDidMountHoc from '../../components/DidMountHoc'
 import AudioPlayer from './Player'
-import { getSongNotLogueIndices } from '../../api/album/songs'
 import { mapIsPlaying } from '../../redux/audio/selector'
 import {
     mapSelectedSongIndex,
@@ -14,13 +13,13 @@ import {
 
 const AudioManager = forwardRef(({ didMount }, ref) => {
     const
-        playerManagers = useRef(),
+        audioPlayer = useRef(),
         isPlaying = useSelector(mapIsPlaying),
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         selectedVerseIndex = useSelector(mapSelectedVerseIndex)
 
-    const getPlayerManager = songIndex => (
-        playerManagers.current[songIndex] ||
+    const getAudioPlayer = () => (
+        audioPlayer.current ||
         {
             // Ensure these calls don't break for logues.
             askToPause() {},
@@ -41,41 +40,31 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
              * here and now. This ensures that only the player meant to be
              * played is ever playing.
              */
-            if (currentSongIndex !== selectedSongIndex) {
-                getPlayerManager(selectedSongIndex).askToPause()
-            }
+            // if (currentSongIndex !== selectedSongIndex) {
+            //     getAudioPlayer().askToPause()
+            // }
 
             /**
              * Play the current player. If already playing, it will just set
-             * the new verse.
+             * the new song and verse.
              */
-            getPlayerManager(currentSongIndex).askToPlay(currentVerseIndex)
+            getAudioPlayer().askToPlay(currentSongIndex, currentVerseIndex)
 
         // If being called to pause...
         } else {
             // Pause the current player.
-            getPlayerManager(currentSongIndex).askToPause(true)
+            getAudioPlayer().askToPause(true)
         }
     }
 
-    useImperativeHandle(ref, () => ({
-        callAudioManager,
-    }))
+    useImperativeHandle(ref, () => ({ callAudioManager }))
 
     return didMount && (
         <div className={cx(
             'AudioManager',
             'dNC',
         )}>
-            {getSongNotLogueIndices().map(songIndex => (
-                <AudioPlayer
-                    {...{
-                        key: songIndex,
-                        ref: playerManagers,
-                        songIndex,
-                    }}
-                />
-            ))}
+            <AudioPlayer {...{ ref: audioPlayer }} />
         </div>
     )
 })

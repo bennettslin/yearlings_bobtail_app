@@ -5,7 +5,7 @@ import AudioPlayerContext from '../../contexts/AudioPlayer'
 import { updateIsPlaying } from '../../redux/audio/action'
 import { scrollLyricBackToSelectedVerse } from '../../redux/scrollLyric/action'
 import { mapIsPlaying } from '../../redux/audio/selector'
-import { mapSelectedPlayerCanPlayThrough } from '../../redux/players/selector'
+import { mapCanPlayThrough } from '../../redux/players/selector'
 import { mapIsSelectedLogue } from '../../redux/selected/selector'
 
 const PlayDispatcher = forwardRef((props, ref) => {
@@ -14,12 +14,12 @@ const PlayDispatcher = forwardRef((props, ref) => {
         dispatch = useDispatch(),
         dispatchSong = useRef(),
         isPlaying = useSelector(mapIsPlaying),
-        selectedPlayerCanPlayThrough = useSelector(mapSelectedPlayerCanPlayThrough),
+        canPlayThrough = useSelector(mapCanPlayThrough),
         isSelectedLogue = useSelector(mapIsSelectedLogue)
 
     const dispatchPlay = (nextIsPlaying = !isPlaying) => {
         // Do not toggle play if player is not ready to play through.
-        if (!selectedPlayerCanPlayThrough) {
+        if (!canPlayThrough) {
             return false
         }
 

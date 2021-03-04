@@ -26,7 +26,7 @@ const VerseDispatcher = forwardRef((props, ref) => {
         verseIndex = 0,
         fromActivated,
         fromPlayerListen,
-        fromPlayerRepeat,
+        fromPlayerEndRepeat,
 
     } = {}) => {
         // Only dispatch if verse has changed.
@@ -39,14 +39,14 @@ const VerseDispatcher = forwardRef((props, ref) => {
                 selectedSongIndex,
                 verseIndex,
                 fromPlayerListen,
-                fromPlayerRepeat,
+                fromPlayerEndRepeat,
             })
 
             if (fromActivated) {
                 dispatch(updateActivatedVerseIndex())
             }
 
-            if (fromPlayerListen || fromPlayerRepeat) {
+            if (fromPlayerListen || fromPlayerEndRepeat) {
                 // If autoScroll is on, scroll to selected verse.
                 if (isAutoScroll) {
                     dispatch(autoScrollLyricForPlay(verseIndex))
@@ -67,9 +67,8 @@ const VerseDispatcher = forwardRef((props, ref) => {
             /**
              * When dispatched from player listen, isPlaying is still true, so
              * audio manager doesn't need to be called again. When dispatched
-             * from player repeat, however, the player has ended, which set
-             * isPlaying back to false. So the whole process of loading the
-             * player needs to begin anew.
+             * because the player has ended, isPlaying is set back to false. So
+             * the whole process of loading the player needs to begin anew.
              */
             if (!fromPlayerListen) {
                 callAudioManager({ verseIndex })

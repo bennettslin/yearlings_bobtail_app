@@ -1,59 +1,66 @@
 import {
-    getAudioTimeFromCurrentTime,
+    getAudioTimeForSong,
     getEndTimeForVerse,
     getStartTimeForVerse,
 } from '../../../api/album/time'
 import { getVerseCountForSong } from '../../../api/album/verses'
 import { getFormattedTime } from '../../../helpers/format'
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
+// import { AUDIO_OPTIONS, CONTINUE } from '../../../constants/options'
 
-export const getVerseForTimeFromListen = ({
+export const getCurrentIndicesForTime = ({
     songIndex,
-    currentVerseIndex,
-    currentTime,
+    verseIndex,
+    time,
+    // audioOptionIndex,
 }) => {
     const
-        audioTime = getAudioTimeFromCurrentTime(songIndex, currentTime),
-        verseStartTime = getStartTimeForVerse(songIndex, currentVerseIndex),
-        verseEndTime = getEndTimeForVerse(songIndex, currentVerseIndex)
+        audioTime = getAudioTimeForSong(songIndex, time),
+        verseStartTime = getStartTimeForVerse(songIndex, verseIndex),
+        verseEndTime = getEndTimeForVerse(songIndex, verseIndex)
+        // isContinueOption = AUDIO_OPTIONS[audioOptionIndex] === CONTINUE
 
     // Time is in a previous verse. But this should never happen from listen!
     if (audioTime < verseStartTime) {
         logError(
-            `Out of sync! Time ${getFormattedTime(audioTime)} is before verse ${currentVerseIndex}!`,
+            `Out of sync! Time ${getFormattedTime(audioTime)} is before verse ${verseIndex}!`,
             {
                 action: 'playListen',
-                label: `song: ${songIndex}, verse: ${currentVerseIndex}, time: ${audioTime}`,
+                label: `song: ${songIndex}, verse: ${verseIndex}, time: ${audioTime}`,
             },
         )
         return null
 
     // Time is still in the current verse.
     } else if (audioTime < verseEndTime) {
-        return currentVerseIndex
+        return {
+            currentSongIndex: songIndex,
+            currentVerseIndex: verseIndex,
+        }
 
-    // Time is in the next verse, or the current verse is the last verse.
+    /**
+     * Time is in the next verse, the next song, or the last verse in the last
+     * song.
+     */
     } else {
-        return (
-            currentVerseIndex < getVerseCountForSong(songIndex) - 1 ?
+        return {
+            currentSongIndex: songIndex,
+            currentVerseIndex: verseIndex < getVerseCountForSong(songIndex) - 1 ?
                 // Return the next verse.
-                currentVerseIndex + 1 :
+                verseIndex + 1 :
                 // Return the same verse, and let the player end itself.
-                currentVerseIndex
-        )
+                verseIndex,
+        }
     }
 }
 
-export const logLoaded = ({
-    songIndex,
-    loadStartTime,
-}) => {
+export const logLoaded = loadStartTime => {
     const timeDifference = getTimeDifference(loadStartTime)
     logSuccess(
-        `Player ${songIndex} loaded after ${timeDifference}s.`,
+        `Player loaded after ${timeDifference}s.`,
         {
-            action: 'playLoad',
-            label: songIndex,
+            action: 'player',
+            label: 'load',
             value: timeDifference * 1000,
         },
     )

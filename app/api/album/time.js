@@ -7,7 +7,7 @@ export const getAlbumTimeForSong = songIndex => {
     return songAlbumTime || Number.MAX_SAFE_INTEGER
 }
 
-export const getAudioTimeFromCurrentTime = (songIndex, currentTime) => (
+export const getAudioTimeForSong = (songIndex, currentTime) => (
     currentTime - getAlbumTimeForSong(songIndex)
 )
 

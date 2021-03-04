@@ -1,6 +1,4 @@
 // Reducers for players values.
-import { hasKey } from '../../helpers/action'
-import { getBitFromPlayerCanPlayThrough } from '../../helpers/player'
 import { PLAYERS_STORE } from '../../constants/store'
 import { PLAYERS_DEFAULTS } from './default'
 
@@ -9,20 +7,11 @@ export default (
     { type, payload },
 ) => {
     switch (type) {
-        case PLAYERS_STORE: {
-            const
-                { songIndex } = payload,
-                { playersBit } = state
+        case PLAYERS_STORE:
             return {
                 ...state,
-                ...hasKey(songIndex) ? {
-                    playersBit: getBitFromPlayerCanPlayThrough({
-                        bit: playersBit,
-                        key: songIndex,
-                    }),
-                } : payload,
+                ...payload,
             }
-        }
         default:
             return state
     }
