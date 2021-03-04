@@ -14,6 +14,7 @@
 
 # Work to have shared mp3 file for all songs.
 * Single player for all songs.
+    * Songs know their starting point.
 * Audio player knows to start song at correct time.
 * Audio player knows to trigger song continue.
 * Audio player knows to trigger song repeat.

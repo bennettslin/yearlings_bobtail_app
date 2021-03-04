@@ -10,6 +10,11 @@ export default [
         workedHours: 14,
         neededHours: 20,
     },
+    {
+        taskName: `Move audio to single file.`,
+        workedHours: 10,
+        neededHours: 20,
+    },
 
     // Needed.
     {

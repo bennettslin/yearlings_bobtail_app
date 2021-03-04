@@ -1,6 +1,3 @@
-# Blocker:
-* Website in production keeps refreshing?!
-
 # TODO:
 * Clarify logState labels?
 * Fix preteen Bennett enraged left sleeve
