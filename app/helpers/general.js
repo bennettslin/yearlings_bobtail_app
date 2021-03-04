@@ -19,3 +19,5 @@ export const getArrayOfLength = (
         (nothing, i) => i + indexBase,
     )
 )
+
+export const getFloatWithTenth = number => parseFloat(number.toFixed(1))

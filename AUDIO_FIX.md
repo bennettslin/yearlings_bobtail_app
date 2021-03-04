@@ -10,11 +10,9 @@
     * Need something similar to canTransitionAfterSongChange.
 
 # Todo today
-* Rip single mp3 from CD
+* Switch Pchelka and Ash in mp3 file.
 
 # Work to have shared mp3 file for all songs.
-* Single player for all songs.
-    * Songs know their starting point.
-* Audio player knows to start song at correct time.
+* Only single audio player.
 * Audio player knows to trigger song continue.
 * Audio player knows to trigger song repeat.

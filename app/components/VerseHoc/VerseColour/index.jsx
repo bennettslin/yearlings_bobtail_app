@@ -18,9 +18,9 @@ const VerseColour = ({
 
 }) => {
     const
-        { currentPlayerTime } = useContext(AudioPlayerContext),
+        { audioTime } = useContext(AudioPlayerContext),
         verseTrackerLength = useSelector(getMapVerseTrackerLength({
-            currentPlayerTime,
+            audioTime,
             verseIndex,
         }))
 

@@ -1,8 +1,8 @@
 import { createContext } from 'react'
 
 const AudioPlayerContext = createContext({
-    currentPlayerTime: 0,
-    setCurrentPlayerTime() {},
+    audioTime: 0,
+    setAudioTime() {},
     callAudioManager() {},
 })
 

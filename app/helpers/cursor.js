@@ -42,7 +42,7 @@ export const getSongCursorTime = ({
     canTransitionAfterSongChange,
     bannerHoverTime,
     cursorTime,
-    currentPlayerTime,
+    audioTime,
     isPlaying,
 
 }) => {
@@ -50,7 +50,7 @@ export const getSongCursorTime = ({
         if (bannerHoverTime > -1) {
             return bannerHoverTime
         } else if (isPlaying) {
-            return currentPlayerTime
+            return audioTime
         }
     }
     return cursorTime

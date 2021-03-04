@@ -11,7 +11,7 @@ export const getSongTrackerWidth = ({
     selectedSongIndex,
     bannerHoverTime,
     cursorTime,
-    currentPlayerTime,
+    audioTime,
     isPlaying,
 
 }) => {
@@ -23,7 +23,7 @@ export const getSongTrackerWidth = ({
         trackerTime = bannerHoverTime
 
     } else if (isPlaying) {
-        trackerTime = currentPlayerTime
+        trackerTime = audioTime
     }
 
     return trackerTime / songDuration * 100
@@ -34,7 +34,7 @@ export const getSceneTrackerWidth = ({
     sceneCursorIndex,
     selectedSongIndex,
     cursorTime,
-    currentPlayerTime,
+    audioTime,
     isPlaying,
 
 }) => {
@@ -51,7 +51,7 @@ export const getSceneTrackerWidth = ({
             selectedSongIndex,
             sceneIndex,
         ),
-        trackerTime = isPlaying ? currentPlayerTime : cursorTime
+        trackerTime = isPlaying ? audioTime : cursorTime
 
     return (trackerTime - sceneStartTime) / sceneDuration * 100
 }
@@ -61,7 +61,7 @@ export const getVerseTrackerLength = ({
     verseCursorIndex,
     selectedSongIndex,
     cursorTime,
-    currentPlayerTime,
+    audioTime,
     isPlaying,
 
 }) => {
@@ -81,7 +81,7 @@ export const getVerseTrackerLength = ({
             selectedSongIndex,
             verseIndex,
         ),
-        trackerTime = isPlaying ? currentPlayerTime : cursorTime
+        trackerTime = isPlaying ? audioTime : cursorTime
 
     return (trackerTime - verseStartTime) / verseDuration * 100
 }

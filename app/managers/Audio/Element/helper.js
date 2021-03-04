@@ -1,4 +1,5 @@
 import {
+    getAudioTimeFromCurrentTime,
     getEndTimeForVerse,
     getStartTimeForVerse,
 } from '../../../api/album/time'
@@ -12,22 +13,23 @@ export const getVerseForTimeFromListen = ({
     currentTime,
 }) => {
     const
+        audioTime = getAudioTimeFromCurrentTime(songIndex, currentTime),
         verseStartTime = getStartTimeForVerse(songIndex, currentVerseIndex),
         verseEndTime = getEndTimeForVerse(songIndex, currentVerseIndex)
 
     // Time is in a previous verse. But this should never happen from listen!
-    if (currentTime < verseStartTime) {
+    if (audioTime < verseStartTime) {
         logError(
-            `Out of sync! Time ${getFormattedTime(currentTime)} is before verse ${currentVerseIndex}!`,
+            `Out of sync! Time ${getFormattedTime(audioTime)} is before verse ${currentVerseIndex}!`,
             {
                 action: 'playListen',
-                label: `song: ${songIndex}, verse: ${currentVerseIndex}, time: ${currentTime}`,
+                label: `song: ${songIndex}, verse: ${currentVerseIndex}, time: ${audioTime}`,
             },
         )
         return null
 
     // Time is still in the current verse.
-    } else if (currentTime < verseEndTime) {
+    } else if (audioTime < verseEndTime) {
         return currentVerseIndex
 
     // Time is in the next verse, or the current verse is the last verse.

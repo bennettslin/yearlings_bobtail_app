@@ -10,9 +10,9 @@ import './style'
 
 const SongBannerTimer = () => {
     const
-        { currentPlayerTime } = useContext(AudioPlayerContext),
+        { audioTime } = useContext(AudioPlayerContext),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
-        bannerCursorTime = useSelector(getMapSongCursorTime(currentPlayerTime))
+        bannerCursorTime = useSelector(getMapSongCursorTime(audioTime))
 
     return !isSelectedLogue && (
         <div className={cx(

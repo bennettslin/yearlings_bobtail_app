@@ -13,7 +13,7 @@ import {
 } from '../cursor/selector'
 import { mapIsPlaying } from '../audio/selector'
 
-export const getMapSongTrackerWidth = currentPlayerTime => createSelector(
+export const getMapSongTrackerWidth = audioTime => createSelector(
     mapSelectedSongIndex,
     mapBannerHoverTime,
     mapCursorTime,
@@ -27,14 +27,14 @@ export const getMapSongTrackerWidth = currentPlayerTime => createSelector(
         selectedSongIndex,
         bannerHoverTime,
         cursorTime,
-        currentPlayerTime,
+        audioTime,
         isPlaying,
     }),
 )
 
 export const getMapSceneTrackerWidth = ({
     sceneIndex,
-    currentPlayerTime,
+    audioTime,
 }) => createSelector(
     mapSceneCursorIndex,
     mapSelectedSongIndex,
@@ -50,14 +50,14 @@ export const getMapSceneTrackerWidth = ({
         sceneCursorIndex,
         selectedSongIndex,
         cursorTime,
-        currentPlayerTime,
+        audioTime,
         isPlaying,
     }),
 )
 
 export const getMapVerseTrackerLength = ({
     verseIndex,
-    currentPlayerTime,
+    audioTime,
 }) => createSelector(
     getMapVerseCursorIndex(),
     mapSelectedSongIndex,
@@ -73,7 +73,7 @@ export const getMapVerseTrackerLength = ({
         verseCursorIndex,
         selectedSongIndex,
         cursorTime,
-        currentPlayerTime,
+        audioTime,
         isPlaying,
     }),
 )

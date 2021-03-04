@@ -11,6 +11,7 @@ import {
 } from './helper'
 import AudioPlayerContext from '../../../contexts/AudioPlayer'
 import AudioPlayerElement from '../Element'
+import { getAudioTimeFromCurrentTime } from '../../../api/album/time'
 import { updateIsPlaying } from '../../../redux/audio/action'
 import { getMapIsSongLyric } from '../../../redux/lyric/selector'
 import { getMapIsSongSelected } from '../../../redux/selected/selector'
@@ -18,7 +19,7 @@ import { updateErrorMessage } from '../../../redux/error/action'
 
 const PlayerManager = forwardRef(({ songIndex }, ref) => {
     const
-        { setCurrentPlayerTime } = useContext(AudioPlayerContext),
+        { setAudioTime } = useContext(AudioPlayerContext),
         dispatch = useDispatch(),
         audioPlayer = useRef(),
         isSongLyric = useSelector(getMapIsSongLyric(songIndex)),
@@ -104,9 +105,11 @@ const PlayerManager = forwardRef(({ songIndex }, ref) => {
     }
 
     const onPlayerListen = currentTime => {
+        const audioTime = getAudioTimeFromCurrentTime(songIndex, currentTime)
+
         // Verify that audio player is current before setting current time.
         if (isSongSelected && isSongLyric) {
-            setCurrentPlayerTime(currentTime)
+            setAudioTime(audioTime)
             return true
         } else {
             logError(

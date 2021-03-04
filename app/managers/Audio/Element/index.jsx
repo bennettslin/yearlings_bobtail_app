@@ -8,7 +8,7 @@ import ReactAudioPlayer from 'react-audio-player'
 import SongDispatcher from '../../../dispatchers/Song'
 import VerseDispatcher from '../../../dispatchers/Verse'
 import { getMp3ForSong } from '../../../api/mp3'
-import { getStartTimeForVerse } from '../../../api/album/time'
+import { getAlbumTimeForVerse, getAudioTimeFromCurrentTime } from '../../../api/album/time'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateCanPlayThroughForSong } from '../../../redux/players/action'
 import { getMapPlayerCanPlayThrough } from '../../../redux/players/selector'
@@ -62,8 +62,11 @@ const AudioPlayerElement = forwardRef(({
     }
 
     const setCurrentTime = uponLoad => {
-        audioPlayerElement.current.currentTime = getStartTimeForVerse(songIndex, audioPlayerElement.current.verseIndex)
-        logPlayer(`Player ${songIndex} ${uponLoad ? 'set' : 'updated'} to ${getFormattedTime(audioPlayerElement.current.currentTime)}.`)
+        const currentTime = getAlbumTimeForVerse(
+            songIndex, audioPlayerElement.current.verseIndex,
+        )
+        audioPlayerElement.current.currentTime = currentTime
+        logPlayer(`Player ${songIndex} ${uponLoad ? 'set' : 'updated'} to audio ${getFormattedTime(getAudioTimeFromCurrentTime(songIndex, currentTime))}, current ${getFormattedTime(currentTime)}.`)
     }
 
     const setCurrentVerse = (currentVerseIndex, fromListen) => {
