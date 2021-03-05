@@ -41,8 +41,6 @@ const AudioPlayerElement = forwardRef(({
     const load = (currentSongIndex, currentVerseIndex) => {
         setCurrentIndices(currentSongIndex, currentVerseIndex, true)
 
-        logPlayer(`Load ${currentSongIndex}, ${currentVerseIndex}`)
-
         // Only load if needed.
         if (getIsPaused()) {
             setLoadStartTime(Date.now())
@@ -66,15 +64,12 @@ const AudioPlayerElement = forwardRef(({
     const setCurrentIndices = (
         currentSongIndex,
         currentVerseIndex,
-        fromLoad,
+        shouldUpdateCurrentTime,
     ) => {
         audioPlayerElement.current.songIndex = currentSongIndex
         audioPlayerElement.current.verseIndex = currentVerseIndex
-        /**
-         * If this is from the audio manager call to load, set the current time
-         * here and now. Otherwise, this is from the player listen callback.
-         */
-        if (fromLoad) {
+
+        if (shouldUpdateCurrentTime) {
             setCurrentTime()
         }
     }
@@ -114,6 +109,7 @@ const AudioPlayerElement = forwardRef(({
         const {
             currentSongIndex,
             currentVerseIndex,
+            shouldUpdateCurrentTime,
         } = getCurrentIndicesForTime({
             songIndex: getCurrentSong(),
             verseIndex: getCurrentVerse(),
@@ -136,9 +132,6 @@ const AudioPlayerElement = forwardRef(({
             currentSongIndex !== getCurrentSong() ||
             currentVerseIndex !== getCurrentVerse()
         ) {
-            // Update the player's current song and verse.
-            setCurrentIndices(currentSongIndex, currentVerseIndex)
-
             /**
              * We're in a different verse of the same song. It doesn't make a
              * difference whether we're advancing to the next verse, or we're
@@ -157,6 +150,13 @@ const AudioPlayerElement = forwardRef(({
                     fromPlayerContinue: true,
                 })
             }
+
+            // Update the player's current song and verse, and time if needed.
+            setCurrentIndices(
+                currentSongIndex,
+                currentVerseIndex,
+                shouldUpdateCurrentTime,
+            )
         }
     }
 

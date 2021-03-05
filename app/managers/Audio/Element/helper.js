@@ -6,7 +6,7 @@ import {
 import { getVerseCountForSong } from '../../../api/album/verses'
 import { getFormattedTime } from '../../../helpers/format'
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
-import { AUDIO_OPTIONS, CONTINUE } from '../../../constants/options'
+import { AUDIO_OPTIONS, REPEAT } from '../../../constants/options'
 import { getSongsAndLoguesCount } from '../../../api/album/songs'
 
 export const getCurrentIndicesForTime = ({
@@ -19,7 +19,7 @@ export const getCurrentIndicesForTime = ({
         audioTime = getAudioTimeForCurrentTime(songIndex, time),
         verseStartTime = getStartTimeForVerse(songIndex, verseIndex),
         verseEndTime = getEndTimeForVerse(songIndex, verseIndex),
-        isContinueOption = AUDIO_OPTIONS[audioOptionIndex] === CONTINUE
+        isRepeatOption = AUDIO_OPTIONS[audioOptionIndex] === REPEAT
 
     /**
      * Time is before the current verse. But this should never happen from
@@ -48,11 +48,12 @@ export const getCurrentIndicesForTime = ({
                 currentVerseIndex: verseIndex + 1,
             }
 
-        // We will repeat this song.
-        } else if (!isContinueOption) {
+        // We will repeat this song. Also need to update current time.
+        } else if (isRepeatOption) {
             return {
                 currentSongIndex: songIndex,
                 currentVerseIndex: 0,
+                shouldUpdateCurrentTime: true,
             }
 
         // There is a next song, and we will continue on to it.
