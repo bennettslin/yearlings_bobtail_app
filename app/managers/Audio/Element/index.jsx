@@ -75,11 +75,16 @@ const AudioPlayerElement = forwardRef(({
     }
 
     const setCurrentTime = () => {
-        const currentTime = getPlayerTimeForVerse(
-            getCurrentSong(),
-            getCurrentVerse(),
-        )
-        logPlayer(`Player set to audio time ${getFormattedTime(getAudioTimeForCurrentTime(getCurrentSong(), currentTime))}, current time ${getFormattedTime(currentTime)}.`)
+        const
+            currentTime = getPlayerTimeForVerse(
+                getCurrentSong(),
+                getCurrentVerse(),
+            ),
+            audioTime = getAudioTimeForCurrentTime(
+                getCurrentSong(),
+                currentTime,
+            )
+        logPlayer(`Player set to audio time ${getFormattedTime(audioTime)}, current time ${getFormattedTime(currentTime)}.`)
         audioPlayerElement.current.currentTime = currentTime
     }
 

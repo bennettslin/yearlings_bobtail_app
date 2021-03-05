@@ -6,7 +6,6 @@
 # Bugs
 * Tracker transition is weird when selecting verse while song is playing.
     * Need something similar to canTransitionAfterSongChange.
-* Last verse of Saskia
 
 # Todo today
 * Switch Pchelka and Ash in mp3 file.

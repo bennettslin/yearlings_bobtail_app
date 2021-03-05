@@ -1,3 +1,4 @@
+import { getFloatToHundredth } from '../../helpers/general'
 import { getSong } from './songs'
 import { getVerseIndicesForStanza } from './stanzas'
 import { getVerseCountForSong } from './verses'
@@ -12,19 +13,22 @@ export const getStartTimeForVerse = (songIndex, verseIndex) => {
     return verseStartTimes[verseIndex] || 0
 }
 
-export const getPlayerTimeForSong = songIndex => {
+const getPlayerTimeForSong = songIndex => {
     const { playerTime } = getSong(songIndex)
     return playerTime
 }
 
-export const getPlayerTimeForVerse = (songIndex, verseIndex) => (
-    getPlayerTimeForSong(songIndex) +
-    getStartTimeForVerse(songIndex, verseIndex)
-)
+export const getPlayerTimeForVerse = (songIndex, verseIndex) =>
+    getFloatToHundredth(
+        getPlayerTimeForSong(songIndex) +
+        getStartTimeForVerse(songIndex, verseIndex),
+    )
 
-export const getAudioTimeForCurrentTime = (songIndex, currentTime) => (
-    currentTime - getPlayerTimeForSong(songIndex)
-)
+export const getAudioTimeForCurrentTime = (songIndex, currentTime) =>
+    getFloatToHundredth(
+        currentTime -
+        getPlayerTimeForSong(songIndex),
+    )
 
 export const getEndTimeForVerse = (songIndex, verseIndex) => {
     const verseCount = getVerseCountForSong(songIndex)

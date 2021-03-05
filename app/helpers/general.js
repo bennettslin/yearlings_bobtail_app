@@ -20,4 +20,4 @@ export const getArrayOfLength = (
     )
 )
 
-export const getFloatWithTenth = number => parseFloat(number.toFixed(1))
+export const getFloatToHundredth = number => parseFloat(number.toFixed(2))

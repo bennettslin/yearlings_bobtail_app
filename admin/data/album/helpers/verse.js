@@ -1,3 +1,5 @@
+import { getFloatToHundredth } from '../../../../app/helpers/general'
+
 export const addVerseDurations = ({
     songDuration,
     verseStartTimes,
@@ -18,7 +20,7 @@ export const addVerseDurations = ({
             nextTime = songDuration
         }
 
-        verseDurations.push(nextTime - verseStartTime)
+        verseDurations.push(getFloatToHundredth(nextTime - verseStartTime))
     })
 
     song.verseDurations = verseDurations

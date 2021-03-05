@@ -1,4 +1,4 @@
-import { getFloatWithTenth } from '../../../../app/helpers/general'
+import { getFloatToHundredth } from '../../../../app/helpers/general'
 
 export const addSongAlbumTimes = songs => {
     songs.forEach((song, songIndex) => {
@@ -10,7 +10,7 @@ export const addSongAlbumTimes = songs => {
 
             // Add previous song's player time to its duration.
             song.playerTime =
-                getFloatWithTenth(playerTime + songDuration)
+                getFloatToHundredth(playerTime + songDuration)
         }
     })
 }

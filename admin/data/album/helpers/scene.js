@@ -1,6 +1,7 @@
 import { albumScenes } from '../scenes'
 
 import { TIME_STAGE } from '../../../../app/constants/scene/sky'
+import { getFloatToHundredth } from '../../../../app/helpers/general'
 
 const _addDurationsToSceneConfigs = ({
     songDuration,
@@ -22,7 +23,7 @@ const _addDurationsToSceneConfigs = ({
             nextTime = songDuration
         }
 
-        sceneDurations.push(nextTime - sceneStartTime)
+        sceneDurations.push(getFloatToHundredth(nextTime - sceneStartTime))
     })
 
     song.sceneDurations = sceneDurations
