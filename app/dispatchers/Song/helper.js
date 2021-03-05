@@ -1,15 +1,14 @@
-export const logVerseSelect = ({
+export const logSongSelect = ({
     songIndex,
     verseIndex,
-    fromPlayerListen,
+    annotationIndex,
+    fromPlayerContinue,
     fromPlayerEnd,
 
 }) => {
-    let action = 'verse'
-    if (fromPlayerListen) {
-        action = verseIndex === 0 ?
-            'playerRepeat' :
-            'playerListen'
+    let action = 'song'
+    if (fromPlayerContinue) {
+        action = 'playerContinue'
 
     } else if (fromPlayerEnd) {
         action = 'playerEnd'
@@ -19,5 +18,6 @@ export const logVerseSelect = ({
         action,
         song: songIndex,
         verse: verseIndex,
+        annotation: annotationIndex,
     })
 }

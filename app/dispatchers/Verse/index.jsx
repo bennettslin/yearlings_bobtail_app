@@ -26,7 +26,7 @@ const VerseDispatcher = forwardRef((props, ref) => {
         verseIndex = 0,
         fromActivated,
         fromPlayerListen,
-        fromPlayerEndRepeat,
+        fromPlayerEnd,
 
     } = {}) => {
         // Only dispatch if verse has changed.
@@ -36,17 +36,17 @@ const VerseDispatcher = forwardRef((props, ref) => {
             }))
 
             logVerseSelect({
-                selectedSongIndex,
+                songIndex: selectedSongIndex,
                 verseIndex,
                 fromPlayerListen,
-                fromPlayerEndRepeat,
+                fromPlayerEnd,
             })
 
             if (fromActivated) {
                 dispatch(updateActivatedVerseIndex())
             }
 
-            if (fromPlayerListen || fromPlayerEndRepeat) {
+            if (fromPlayerListen || fromPlayerEnd) {
                 // If autoScroll is on, scroll to selected verse.
                 if (isAutoScroll) {
                     dispatch(autoScrollLyricForPlay(verseIndex))

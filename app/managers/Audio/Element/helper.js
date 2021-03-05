@@ -7,7 +7,7 @@ import { getVerseCountForSong } from '../../../api/album/verses'
 import { getFormattedTime } from '../../../helpers/format'
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
 import { AUDIO_OPTIONS, REPEAT } from '../../../constants/options'
-import { getSongsAndLoguesCount } from '../../../api/album/songs'
+import { getSongsNotLoguesCount } from '../../../api/album/songs'
 
 export const getCurrentIndicesForTime = ({
     songIndex,
@@ -57,7 +57,7 @@ export const getCurrentIndicesForTime = ({
             }
 
         // There is a next song, and we will continue on to it.
-        } else if (songIndex < getSongsAndLoguesCount() - 1) {
+        } else if (songIndex < getSongsNotLoguesCount()) {
             return {
                 currentSongIndex: songIndex + 1,
                 currentVerseIndex: 0,

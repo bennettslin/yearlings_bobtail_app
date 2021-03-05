@@ -90,6 +90,7 @@ const AudioPlayerElement = forwardRef(({
             setLoadStartTime(null)
 
             // Set current time of player, since it was reset by load.
+
             setCurrentTime()
 
             // Tell player manager it can now promise to play.
@@ -167,13 +168,13 @@ const AudioPlayerElement = forwardRef(({
         if (AUDIO_OPTIONS[audioOptionIndex] === CONTINUE) {
             dispatchSong.current({
                 selectedSongIndex: getCurrentSong() + 1,
-                fromPlayerContinue: true,
+                fromPlayerEnd: true,
             })
 
         // Treat as a song repeat.
         } else {
             dispatchVerse.current({
-                fromPlayerEndRepeat: true,
+                fromPlayerEnd: true,
             })
         }
     }

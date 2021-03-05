@@ -12,6 +12,7 @@ import { updateIsNavExpanded } from '../../redux/toggle/action'
 import { getSongsAndLoguesCount } from '../../api/album/songs'
 import { mapIsSongChangeDone } from '../../redux/entrance/selector'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
+import { logSongSelect } from './helper'
 
 const SongDispatcher = forwardRef((props, ref) => {
     const
@@ -28,6 +29,7 @@ const SongDispatcher = forwardRef((props, ref) => {
         destinationWormholeIndex,
         fromPlayDispatcher,
         fromPlayerContinue,
+        fromPlayerEnd,
         direction,
     }) => {
         const isWormholeSelected = Boolean(destinationWormholeIndex)
@@ -60,7 +62,11 @@ const SongDispatcher = forwardRef((props, ref) => {
         }
 
         // If from play dispatcher, audio was already called.
-        if (!fromPlayDispatcher) {
+        if (
+            !fromPlayDispatcher &&
+            !fromPlayerContinue &&
+            !fromPlayerEnd
+        ) {
             callAudioManager({
                 songIndex: nextSongIndex,
                 verseIndex: selectedVerseIndex,
@@ -73,11 +79,12 @@ const SongDispatcher = forwardRef((props, ref) => {
             selectedAnnotationIndex,
         }))
 
-        logSelect({
-            action: fromPlayerContinue ? 'playerContinue' : 'song',
-            song: nextSongIndex,
-            verse: selectedVerseIndex,
-            annotation: selectedAnnotationIndex,
+        logSongSelect({
+            songIndex: nextSongIndex,
+            verseIndex: selectedVerseIndex,
+            annotationIndex: selectedAnnotationIndex,
+            fromPlayerContinue,
+            fromPlayerEnd,
         })
 
         dispatch(updateAccessStore({

@@ -10,6 +10,7 @@ import {
     mapSelectedSongIndex,
     mapSelectedVerseIndex,
 } from '../../redux/selected/selector'
+import { getSongIsLogue } from '../../api/album/songs'
 
 const AudioManager = forwardRef(({ didMount }, ref) => {
     const
@@ -32,7 +33,7 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
         songIndex: currentSongIndex = selectedSongIndex,
         verseIndex: currentVerseIndex = selectedVerseIndex,
     } = {}) => {
-        if (currentIsPlaying) {
+        if (currentIsPlaying && !getSongIsLogue(currentSongIndex)) {
             /**
              * Ask player to play. If already playing, it will just set the new
              * song and verse.
@@ -41,7 +42,7 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
 
         } else {
             // Pause the current player.
-            getAudioPlayer().askToPause(true)
+            getAudioPlayer().askToPause()
         }
     }
 
