@@ -10,8 +10,8 @@ import SongDispatcher from '../../../dispatchers/Song'
 import VerseDispatcher from '../../../dispatchers/Verse'
 import { getMp3 } from '../../../api/mp3'
 import {
-    getAlbumTimeForVerse,
-    getAudioTimeForSong,
+    getPlayerTimeForVerse,
+    getAudioTimeForCurrentTime,
 } from '../../../api/album/time'
 import { getFormattedTime } from '../../../helpers/format'
 import { updateCanPlayThrough } from '../../../redux/players/action'
@@ -39,13 +39,15 @@ const AudioPlayerElement = forwardRef(({
     const getCurrentVerse = () => audioPlayerElement.current.verseIndex
 
     const load = (currentSongIndex, currentVerseIndex) => {
-        setCurrentIndices(currentSongIndex, currentVerseIndex)
+        setCurrentIndices(currentSongIndex, currentVerseIndex, true)
+
+        logPlayer(`Load ${currentSongIndex}, ${currentVerseIndex}`)
 
         // Only load if needed.
         if (getIsPaused()) {
             setLoadStartTime(Date.now())
-            audioPlayerElement.current.load()
             logPlayer(`Player loading\u2026`)
+            audioPlayerElement.current.load()
         }
     }
 
@@ -55,36 +57,35 @@ const AudioPlayerElement = forwardRef(({
     }
 
     const pause = () => {
-        // Only pause if needed.
         if (!getIsPaused()) {
-            audioPlayerElement.current.pause()
             logPlayer(`Player paused.`)
+            audioPlayerElement.current.pause()
         }
-    }
-
-    const setCurrentTime = uponLoad => {
-        const currentTime = getAlbumTimeForVerse(
-            getCurrentSong(),
-            getCurrentVerse(),
-        )
-        audioPlayerElement.current.currentTime = currentTime
-        logPlayer(`Player ${uponLoad ? 'set' : 'updated'} to audio ${getFormattedTime(getAudioTimeForSong(getCurrentSong(), currentTime))}, current ${getFormattedTime(currentTime)}.`)
     }
 
     const setCurrentIndices = (
         currentSongIndex,
         currentVerseIndex,
-        fromListen,
+        fromLoad,
     ) => {
         audioPlayerElement.current.songIndex = currentSongIndex
         audioPlayerElement.current.verseIndex = currentVerseIndex
         /**
-         * If player is already playing, set current time here and now.
-         * Otherwise, wait for player to load first.
+         * If this is from the audio manager call to load, set the current time
+         * here and now. Otherwise, this is from the player listen callback.
          */
-        if (!getIsPaused() && !fromListen) {
+        if (fromLoad) {
             setCurrentTime()
         }
+    }
+
+    const setCurrentTime = () => {
+        const currentTime = getPlayerTimeForVerse(
+            getCurrentSong(),
+            getCurrentVerse(),
+        )
+        logPlayer(`Player set to audio time ${getFormattedTime(getAudioTimeForCurrentTime(getCurrentSong(), currentTime))}, current time ${getFormattedTime(currentTime)}.`)
+        audioPlayerElement.current.currentTime = currentTime
     }
 
     const onLoadedMetadata = () => {
@@ -94,7 +95,7 @@ const AudioPlayerElement = forwardRef(({
             setLoadStartTime(null)
 
             // Set current time of player, since it was reset by load.
-            setCurrentTime(true)
+            setCurrentTime()
 
             // Tell player manager it can now promise to play.
             onPlayerLoaded()
@@ -128,7 +129,7 @@ const AudioPlayerElement = forwardRef(({
         }
 
         // Tell app the new current time.
-        setAudioTime(getAudioTimeForSong(currentSongIndex, currentTime))
+        setAudioTime(getAudioTimeForCurrentTime(currentSongIndex, currentTime))
 
         if (
             // We've changed verses.
@@ -136,7 +137,7 @@ const AudioPlayerElement = forwardRef(({
             currentVerseIndex !== getCurrentVerse()
         ) {
             // Update the player's current song and verse.
-            setCurrentIndices(currentSongIndex, currentVerseIndex, true)
+            setCurrentIndices(currentSongIndex, currentVerseIndex)
 
             /**
              * We're in a different verse of the same song. It doesn't make a

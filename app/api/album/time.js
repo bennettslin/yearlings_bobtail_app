@@ -2,15 +2,6 @@ import { getSong } from './songs'
 import { getVerseIndicesForStanza } from './stanzas'
 import { getVerseCountForSong } from './verses'
 
-export const getAlbumTimeForSong = songIndex => {
-    const { songAlbumTime } = getSong(songIndex)
-    return songAlbumTime || Number.MAX_SAFE_INTEGER
-}
-
-export const getAudioTimeForSong = (songIndex, currentTime) => (
-    currentTime - getAlbumTimeForSong(songIndex)
-)
-
 export const getDurationForSong = songIndex => {
     const { songDuration } = getSong(songIndex)
     return songDuration || Number.MAX_SAFE_INTEGER
@@ -21,9 +12,18 @@ export const getStartTimeForVerse = (songIndex, verseIndex) => {
     return verseStartTimes[verseIndex] || 0
 }
 
-export const getAlbumTimeForVerse = (songIndex, verseIndex) => (
-    getAlbumTimeForSong(songIndex) +
+export const getPlayerTimeForSong = songIndex => {
+    const { playerTime } = getSong(songIndex)
+    return playerTime
+}
+
+export const getPlayerTimeForVerse = (songIndex, verseIndex) => (
+    getPlayerTimeForSong(songIndex) +
     getStartTimeForVerse(songIndex, verseIndex)
+)
+
+export const getAudioTimeForCurrentTime = (songIndex, currentTime) => (
+    currentTime - getPlayerTimeForSong(songIndex)
 )
 
 export const getEndTimeForVerse = (songIndex, verseIndex) => {

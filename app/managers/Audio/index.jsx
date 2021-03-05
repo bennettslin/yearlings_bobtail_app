@@ -31,26 +31,14 @@ const AudioManager = forwardRef(({ didMount }, ref) => {
         isPlaying: currentIsPlaying = isPlaying,
         songIndex: currentSongIndex = selectedSongIndex,
         verseIndex: currentVerseIndex = selectedVerseIndex,
-
     } = {}) => {
-        // If being called to play...
         if (currentIsPlaying) {
             /**
-             * If playing a new song, pause the previously selected player
-             * here and now. This ensures that only the player meant to be
-             * played is ever playing.
-             */
-            // if (currentSongIndex !== selectedSongIndex) {
-            //     getAudioPlayer().askToPause()
-            // }
-
-            /**
-             * Play the current player. If already playing, it will just set
-             * the new song and verse.
+             * Ask player to play. If already playing, it will just set the new
+             * song and verse.
              */
             getAudioPlayer().askToPlay(currentSongIndex, currentVerseIndex)
 
-        // If being called to pause...
         } else {
             // Pause the current player.
             getAudioPlayer().askToPause(true)

@@ -7,7 +7,7 @@ export const logPlayPromiseSuccess = promiseStartTime => {
         `Player promised to play after ${timeDifference}s.`,
         {
             action: 'player',
-            label: 'play',
+            label: 'promise',
             value: timeDifference * 1000,
         },
     )

@@ -72,11 +72,9 @@ const PlayerManager = forwardRef((props, ref) => {
         audioPlayer.current.load(currentSongIndex, currentVerseIndex)
     }
 
-    const askToPause = currentIsPaused => {
+    const askToPause = () => {
         audioPlayer.current.pause()
-        if (currentIsPaused) {
-            dispatch(updateIsPlaying(false))
-        }
+        dispatch(updateIsPlaying(false))
     }
 
     const onPlayerLoaded = () => setIsLoadedToPromise(true)

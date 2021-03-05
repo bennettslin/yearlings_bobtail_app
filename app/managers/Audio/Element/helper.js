@@ -1,26 +1,30 @@
 import {
-    getAudioTimeForSong,
+    getAudioTimeForCurrentTime,
     getEndTimeForVerse,
     getStartTimeForVerse,
 } from '../../../api/album/time'
 import { getVerseCountForSong } from '../../../api/album/verses'
 import { getFormattedTime } from '../../../helpers/format'
 import { getTimeDifference } from '../../../utils/logger/helpers/time'
-// import { AUDIO_OPTIONS, CONTINUE } from '../../../constants/options'
+import { AUDIO_OPTIONS, CONTINUE } from '../../../constants/options'
+import { getSongsAndLoguesCount } from '../../../api/album/songs'
 
 export const getCurrentIndicesForTime = ({
     songIndex,
     verseIndex,
     time,
-    // audioOptionIndex,
+    audioOptionIndex,
 }) => {
     const
-        audioTime = getAudioTimeForSong(songIndex, time),
+        audioTime = getAudioTimeForCurrentTime(songIndex, time),
         verseStartTime = getStartTimeForVerse(songIndex, verseIndex),
-        verseEndTime = getEndTimeForVerse(songIndex, verseIndex)
-        // isContinueOption = AUDIO_OPTIONS[audioOptionIndex] === CONTINUE
+        verseEndTime = getEndTimeForVerse(songIndex, verseIndex),
+        isContinueOption = AUDIO_OPTIONS[audioOptionIndex] === CONTINUE
 
-    // Time is in a previous verse. But this should never happen from listen!
+    /**
+     * Time is before the current verse. But this should never happen from
+     * listen, so log an error!
+     */
     if (audioTime < verseStartTime) {
         logError(
             `Out of sync! Time ${getFormattedTime(audioTime)} is before verse ${verseIndex}!`,
@@ -31,26 +35,43 @@ export const getCurrentIndicesForTime = ({
         )
         return null
 
-    // Time is still in the current verse.
-    } else if (audioTime < verseEndTime) {
-        return {
-            currentSongIndex: songIndex,
-            currentVerseIndex: verseIndex,
+    /**
+     * Time is after the current verse. This means it's in the next verse, in
+     * the next song, or in the last verse of the last song.
+     */
+    } else if (audioTime > verseEndTime) {
+
+        // There is a next verse. We're still in the same song.
+        if (verseIndex < getVerseCountForSong(songIndex) - 1) {
+            return {
+                currentSongIndex: songIndex,
+                currentVerseIndex: verseIndex + 1,
+            }
+
+        // We will repeat this song.
+        } else if (!isContinueOption) {
+            return {
+                currentSongIndex: songIndex,
+                currentVerseIndex: 0,
+            }
+
+        // There is a next song, and we will continue on to it.
+        } else if (songIndex < getSongsAndLoguesCount() - 1) {
+            return {
+                currentSongIndex: songIndex + 1,
+                currentVerseIndex: 0,
+            }
         }
+    }
 
     /**
-     * Time is in the next verse, the next song, or the last verse in the last
-     * song.
+     * Either time is still in the current verse, or we are in the last verse
+     * of the last song and will continue on to the epilogue by letting the
+     * player end itself.
      */
-    } else {
-        return {
-            currentSongIndex: songIndex,
-            currentVerseIndex: verseIndex < getVerseCountForSong(songIndex) - 1 ?
-                // Return the next verse.
-                verseIndex + 1 :
-                // Return the same verse, and let the player end itself.
-                verseIndex,
-        }
+    return {
+        currentSongIndex: songIndex,
+        currentVerseIndex: verseIndex,
     }
 }
 
