@@ -18,12 +18,15 @@ import {
     mapBannerHoverVerseIndex,
     mapIsSmallBannerText,
 } from '../../../redux/banner/selector'
+import { updateEntranceStore } from '../../../redux/entrance/action'
+import { mapCanTransitionAfterVerseChange } from '../../../redux/entrance/selector'
 import {
     mapSelectedSongIndex,
     mapIsSelectedLogue,
 } from '../../../redux/selected/selector'
 import { mapIsLyricsLocked } from '../../../redux/slider/selector'
 import { getMapSongTrackerWidth } from '../../../redux/tracker/selector'
+import { CAROUSEL_LYRICS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION } from '../../../constants/entrance'
 import './style'
 
 const SongBanner = () => {
@@ -41,7 +44,10 @@ const SongBanner = () => {
         selectedSongIndex = useSelector(mapSelectedSongIndex),
         isSelectedLogue = useSelector(mapIsSelectedLogue),
         isLyricsLocked = useSelector(mapIsLyricsLocked),
-        [clientX, setClientX] = useState(0)
+        canTransitionAfterVerseChange =
+            useSelector(mapCanTransitionAfterVerseChange),
+        [clientX, setClientX] = useState(0),
+        [transitionTimeoutId, setTransitionTimeoutId] = useState(-1)
 
     const getVerseIndexFromEvent = e => {
         const nextClientX = e ? getClientX(e) : clientX
@@ -135,6 +141,23 @@ const SongBanner = () => {
         // On the off chance that the song banner is still being hovered.
         onMouseMove()
     }, [selectedSongIndex])
+
+    useEffect(() => {
+        if (!canTransitionAfterVerseChange) {
+            // Clear previous timeout.
+            clearTimeout(transitionTimeoutId)
+
+            setTransitionTimeoutId(
+                setTimeout(() => {
+                    dispatch(updateEntranceStore({
+                        canTransitionAfterVerseChange: true,
+                    }))
+
+                // Arbitrary value that's not too short or long.
+                }, CAROUSEL_LYRICS_ENTERED_AFTER_SONG_CHANGE_DONE_DURATION),
+            )
+        }
+    }, [canTransitionAfterVerseChange])
 
     return (
         <div

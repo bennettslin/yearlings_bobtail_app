@@ -21,3 +21,8 @@ export const resetSceneChange = () => ({
     type: ENTRANCE_STORE,
     payload: getSceneChangeDefaults(false),
 })
+
+export const resetVerseChange = () => ({
+    type: ENTRANCE_STORE,
+    payload: { canTransitionAfterVerseChange: false },
+})

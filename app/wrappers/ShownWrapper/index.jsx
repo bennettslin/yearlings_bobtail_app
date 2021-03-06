@@ -12,6 +12,7 @@ import {
 import {
     mapIsSongChangeDone,
     mapCanTransitionAfterSongChange,
+    mapCanTransitionAfterVerseChange,
 } from '../../redux/entrance/selector'
 import {
     mapIsLyricLogue,
@@ -35,6 +36,8 @@ const ShownWrapper = ({ didMount, children }) => {
         isSongChangeDone = useSelector(mapIsSongChangeDone),
         canTransitionAfterSongChange =
             useSelector(mapCanTransitionAfterSongChange),
+        canTransitionAfterVerseChange =
+            useSelector(mapCanTransitionAfterVerseChange),
         isLyricLogue = useSelector(mapIsLyricLogue),
         lyricSongIndex = useSelector(mapLyricSongIndex),
         lyricAnnotationIndex = useSelector(mapLyricAnnotationIndex),
@@ -82,6 +85,9 @@ const ShownWrapper = ({ didMount, children }) => {
 
                         canTransitionAfterSongChange &&
                             'ShW__canTransitionAfterSongChange',
+
+                        canTransitionAfterVerseChange &&
+                            'ShW__canTransitionAfterVerseChange',
 
                         lyricAnnotationIndex ?
                             'ShW__annotationShown' :

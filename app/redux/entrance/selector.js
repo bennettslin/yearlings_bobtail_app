@@ -55,3 +55,7 @@ export const mapCanTransitionForSceneEnter = createSelector(
         canTransitionAfterSceneChange
     ),
 )
+
+export const mapCanTransitionAfterVerseChange = (
+    { [ENTRANCE_STORE]: { canTransitionAfterVerseChange } },
+) => canTransitionAfterVerseChange

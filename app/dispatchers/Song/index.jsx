@@ -2,7 +2,7 @@ import { forwardRef, useContext, useImperativeHandle } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import AudioPlayerContext from '../../contexts/AudioPlayer'
 import { updateAccessStore } from '../../redux/access/action'
-import { resetSongChange } from '../../redux/entrance/action'
+import { resetSongChange, resetVerseChange } from '../../redux/entrance/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import {
     updateEarColumnIndex,
@@ -72,6 +72,8 @@ const SongDispatcher = forwardRef((props, ref) => {
                 verseIndex: selectedVerseIndex,
             })
         }
+
+        dispatch(resetVerseChange())
 
         dispatch(updateSelectedStore({
             selectedSongIndex: nextSongIndex,

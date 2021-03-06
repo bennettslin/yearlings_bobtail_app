@@ -10,7 +10,7 @@ import {
 } from '../../redux/scrollLyric/action'
 import { mapSelectedSongIndex } from '../../redux/selected/selector'
 import { mapIsAutoScroll } from '../../redux/toggle/selector'
-import { updateEntranceStore } from '../../redux/entrance/action'
+import { resetVerseChange, updateEntranceStore } from '../../redux/entrance/action'
 import { logVerseSelect } from './helper'
 
 const VerseDispatcher = forwardRef((props, ref) => {
@@ -29,6 +29,8 @@ const VerseDispatcher = forwardRef((props, ref) => {
         fromPlayerEnd,
 
     } = {}) => {
+        dispatch(resetVerseChange())
+
         // Only dispatch if verse has changed.
         if (lyricVerseIndex !== verseIndex) {
             dispatch(updateSelectedStore({

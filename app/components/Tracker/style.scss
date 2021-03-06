@@ -6,7 +6,7 @@
     background-color: $colour__paused__filled;
 
     .DW__userAgentDesktop
-    .ShW__canTransitionAfterSongChange
+    .ShW__canTransitionAfterSongChange.ShW__canTransitionAfterVerseChange
     & {
         transition:
             opacity $transitionDuration__instant,

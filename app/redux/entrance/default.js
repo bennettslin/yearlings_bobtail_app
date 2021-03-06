@@ -19,6 +19,13 @@ export const ENTRANCE_DEFAULTS = {
      * as it doesn't have access to the window object until then.
      */
     isWindowResizeDone: false,
+
     ...getSongChangeDefaults(true),
     ...getSceneChangeDefaults(true),
+
+    /**
+     * We set this to false in order to prevent trackers from animating right
+     * after a verse change.
+     */
+    canTransitionAfterVerseChange: true,
 }
